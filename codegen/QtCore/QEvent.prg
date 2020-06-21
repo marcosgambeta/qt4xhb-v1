@@ -36,8 +36,7 @@ $prototypeV2=void ignore()
 
 $prototypeV2=bool isAccepted() const
 
-$prototype=void setAccepted ( bool accepted )
-$method=|void|setAccepted|bool
+$prototypeV2=void setAccepted( bool accepted )
 
 $prototypeV2=bool spontaneous() const
 

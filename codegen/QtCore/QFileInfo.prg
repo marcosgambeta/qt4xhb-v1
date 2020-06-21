@@ -150,15 +150,13 @@ $prototypeV2=uint ownerId() const
 
 $prototypeV2=QString path() const
 
-$prototype=bool permission(QFile::Permissions permissions) const
-$method=|bool|permission|QFile::Permissions
+$prototypeV2=bool permission( QFile::Permissions permissions ) const
 
 $prototypeV2=QFile::Permissions permissions() const
 
 $prototypeV2=void refresh()
 
-$prototype=void setCaching(bool enable)
-$method=|void|setCaching|bool
+$prototypeV2=void setCaching( bool enable )
 
 $prototype=void setFile(const QString & file)
 $internalMethod=|void|setFile,setFile1|const QString &

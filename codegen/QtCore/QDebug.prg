@@ -72,14 +72,11 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QDebug & maybeSpace ()
-$method=|QDebug &|maybeSpace|
+$prototypeV2=QDebug & maybeSpace()
 
-$prototype=QDebug & nospace ()
-$method=|QDebug &|nospace|
+$prototypeV2=QDebug & nospace()
 
-$prototype=QDebug & space ()
-$method=|QDebug &|space|
+$prototypeV2=QDebug & space()
 
 $extraMethods
 

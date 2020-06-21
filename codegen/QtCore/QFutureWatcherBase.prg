@@ -49,16 +49,13 @@ $prototypeV2=bool isPaused() const
 
 $prototypeV2=void waitForFinished()
 
-$prototype=void setPendingResultsLimit(int limit)
-$method=|void|setPendingResultsLimit|int
+$prototypeV2=void setPendingResultsLimit( int limit )
 
-$prototype=bool event(QEvent *event)
-$method=|bool|event|QEvent *
+$prototypeV2=bool event( QEvent * event )
 
 $prototypeV2=void cancel()
 
-$prototype=void setPaused(bool paused)
-$method=|void|setPaused|bool
+$prototypeV2=void setPaused( bool paused )
 
 $prototypeV2=void pause()
 

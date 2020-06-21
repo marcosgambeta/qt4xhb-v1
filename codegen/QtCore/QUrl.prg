@@ -82,8 +82,7 @@ $method=|void|addQueryItem|const QString &,const QString &
 $prototype=QList<QByteArray> allEncodedQueryItemValues ( const QByteArray & key ) const
 $method=|QList<QByteArray>|allEncodedQueryItemValues|const QByteArray &
 
-$prototype=QStringList allQueryItemValues ( const QString & key ) const
-$method=|QStringList|allQueryItemValues|const QString &
+$prototypeV2=QStringList allQueryItemValues( const QString & key ) const
 
 $prototypeV2=QString authority() const
 
@@ -99,8 +98,7 @@ $prototypeV2=QByteArray encodedPath() const
 
 $prototypeV2=QByteArray encodedQuery() const
 
-$prototype=QByteArray encodedQueryItemValue ( const QByteArray & key ) const
-$method=|QByteArray|encodedQueryItemValue|const QByteArray &
+$prototypeV2=QByteArray encodedQueryItemValue( const QByteArray & key ) const
 
 $prototypeV2=QByteArray encodedUserName() const
 
@@ -108,15 +106,13 @@ $prototypeV2=QString errorString() const
 
 $prototypeV2=QString fragment() const
 
-$prototype=bool hasEncodedQueryItem ( const QByteArray & key ) const
-$method=|bool|hasEncodedQueryItem|const QByteArray &
+$prototypeV2=bool hasEncodedQueryItem( const QByteArray & key ) const
 
 $prototypeV2=bool hasFragment() const
 
 $prototypeV2=bool hasQuery() const
 
-$prototype=bool hasQueryItem ( const QString & key ) const
-$method=|bool|hasQueryItem|const QString &
+$prototypeV2=bool hasQueryItem( const QString & key ) const
 
 $prototypeV2=QString host() const
 
@@ -124,8 +120,7 @@ $prototypeV2=bool isEmpty() const
 
 $prototypeV2=bool isLocalFile() const
 
-$prototype=bool isParentOf ( const QUrl & childUrl ) const
-$method=|bool|isParentOf|const QUrl &
+$prototypeV2=bool isParentOf( const QUrl & childUrl ) const
 
 $prototypeV2=bool isRelative() const
 
@@ -163,43 +158,31 @@ HB_FUNC_STATIC( QURL_PORT )
 }
 $addMethod=port
 
-$prototype=QString queryItemValue ( const QString & key ) const
-$method=|QString|queryItemValue|const QString &
+$prototypeV2=QString queryItemValue( const QString & key ) const
 
-$prototype=void removeAllEncodedQueryItems ( const QByteArray & key )
-$method=|void|removeAllEncodedQueryItems|const QByteArray &
+$prototypeV2=void removeAllEncodedQueryItems( const QByteArray & key )
 
-$prototype=void removeAllQueryItems ( const QString & key )
-$method=|void|removeAllQueryItems|const QString &
+$prototypeV2=void removeAllQueryItems( const QString & key )
 
-$prototype=void removeEncodedQueryItem ( const QByteArray & key )
-$method=|void|removeEncodedQueryItem|const QByteArray &
+$prototypeV2=void removeEncodedQueryItem( const QByteArray & key )
 
-$prototype=void removeQueryItem ( const QString & key )
-$method=|void|removeQueryItem|const QString &
+$prototypeV2=void removeQueryItem( const QString & key )
 
-$prototype=QUrl resolved ( const QUrl & relative ) const
-$method=|QUrl|resolved|const QUrl &
+$prototypeV2=QUrl resolved( const QUrl & relative ) const
 
 $prototypeV2=QString scheme() const
 
-$prototype=void setAuthority ( const QString & authority )
-$method=|void|setAuthority|const QString &
+$prototypeV2=void setAuthority( const QString & authority )
 
-$prototype=void setEncodedFragment ( const QByteArray & fragment )
-$method=|void|setEncodedFragment|const QByteArray &
+$prototypeV2=void setEncodedFragment( const QByteArray & fragment )
 
-$prototype=void setEncodedHost ( const QByteArray & host )
-$method=|void|setEncodedHost|const QByteArray &
+$prototypeV2=void setEncodedHost( const QByteArray & host )
 
-$prototype=void setEncodedPassword ( const QByteArray & password )
-$method=|void|setEncodedPassword|const QByteArray &
+$prototypeV2=void setEncodedPassword( const QByteArray & password )
 
-$prototype=void setEncodedPath ( const QByteArray & path )
-$method=|void|setEncodedPath|const QByteArray &
+$prototypeV2=void setEncodedPath( const QByteArray & path )
 
-$prototype=void setEncodedQuery ( const QByteArray & query )
-$method=|void|setEncodedQuery|const QByteArray &
+$prototypeV2=void setEncodedQuery( const QByteArray & query )
 
 $prototype=void setEncodedUrl ( const QByteArray & encodedUrl )
 $internalMethod=|void|setEncodedUrl,setEncodedUrl1|const QByteArray &
@@ -229,29 +212,22 @@ HB_FUNC_STATIC( QURL_SETENCODEDURL )
 }
 $addMethod=setEncodedUrl
 
-$prototype=void setEncodedUserName ( const QByteArray & userName )
-$method=|void|setEncodedUserName|const QByteArray &
+$prototypeV2=void setEncodedUserName( const QByteArray & userName )
 
-$prototype=void setFragment ( const QString & fragment )
-$method=|void|setFragment|const QString &
+$prototypeV2=void setFragment( const QString & fragment )
 
-$prototype=void setHost ( const QString & host )
-$method=|void|setHost|const QString &
+$prototypeV2=void setHost( const QString & host )
 
-$prototype=void setPassword ( const QString & password )
-$method=|void|setPassword|const QString &
+$prototypeV2=void setPassword( const QString & password )
 
-$prototype=void setPath ( const QString & path )
-$method=|void|setPath|const QString &
+$prototypeV2=void setPath( const QString & path )
 
-$prototype=void setPort ( int port )
-$method=|void|setPort|int
+$prototypeV2=void setPort( int port )
 
 $prototype=void setQueryDelimiters ( char valueDelimiter, char pairDelimiter )
 $method=|void|setQueryDelimiters|char,char
 
-$prototype=void setScheme ( const QString & scheme )
-$method=|void|setScheme|const QString &
+$prototypeV2=void setScheme( const QString & scheme )
 
 $prototype=void setUrl ( const QString & url )
 $internalMethod=|void|setUrl,setUrl1|const QString &
@@ -281,14 +257,11 @@ HB_FUNC_STATIC( QURL_SETURL )
 }
 $addMethod=setUrl
 
-$prototype=void setUserInfo ( const QString & userInfo )
-$method=|void|setUserInfo|const QString &
+$prototypeV2=void setUserInfo( const QString & userInfo )
 
-$prototype=void setUserName ( const QString & userName )
-$method=|void|setUserName|const QString &
+$prototypeV2=void setUserName( const QString & userName )
 
-$prototype=void swap ( QUrl & other )
-$method=|void|swap|QUrl &
+$prototypeV2=void swap( QUrl & other )
 
 $prototype=QByteArray toEncoded ( FormattingOptions options = None ) const
 $method=|QByteArray|toEncoded|QUrl::FormattingOptions=QUrl::None
@@ -304,8 +277,7 @@ $prototypeV2=QString userInfo() const
 
 $prototypeV2=QString userName() const
 
-$prototype=static QString fromAce ( const QByteArray & domain )
-$staticMethod=|QString|fromAce|const QByteArray &
+$prototypeV2=static QString fromAce( const QByteArray & domain )
 
 $prototype=static QUrl fromEncoded ( const QByteArray & input )
 $internalStaticMethod=|QUrl|fromEncoded,fromEncoded1|const QByteArray &
@@ -335,22 +307,17 @@ HB_FUNC_STATIC( QURL_FROMENCODED )
 }
 $addMethod=fromEncoded
 
-$prototype=static QUrl fromLocalFile ( const QString & localFile )
-$staticMethod=|QUrl|fromLocalFile|const QString &
+$prototypeV2=static QUrl fromLocalFile( const QString & localFile )
 
-$prototype=static QString fromPercentEncoding ( const QByteArray & input )
-$staticMethod=|QString|fromPercentEncoding|const QByteArray &
+$prototypeV2=static QString fromPercentEncoding( const QByteArray & input )
 
-$prototype=static QUrl fromUserInput ( const QString & userInput )
-$staticMethod=|QUrl|fromUserInput|const QString &
+$prototypeV2=static QUrl fromUserInput( const QString & userInput )
 
 $prototypeV2=static QStringList idnWhitelist()
 
-$prototype=static void setIdnWhitelist ( const QStringList & list )
-$staticMethod=|void|setIdnWhitelist|const QStringList &
+$prototypeV2=static void setIdnWhitelist( const QStringList & list )
 
-$prototype=static QByteArray toAce ( const QString & domain )
-$staticMethod=|QByteArray|toAce|const QString &
+$prototypeV2=static QByteArray toAce( const QString & domain )
 
 $prototype=static QByteArray toPercentEncoding ( const QString & input, const QByteArray & exclude = QByteArray(), const QByteArray & include = QByteArray() )
 $staticMethod=|QByteArray|toPercentEncoding|const QString &,const QByteArray &=QByteArray(),const QByteArray &=QByteArray()

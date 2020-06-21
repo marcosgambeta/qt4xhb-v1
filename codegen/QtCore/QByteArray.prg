@@ -130,13 +130,11 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND )
 }
 $addMethod=append
 
-$prototype=char at ( int i ) const
-$method=|char|at|int
+$prototypeV2=char at( int i ) const
 
 $prototypeV2=int capacity() const
 
-$prototype=void chop ( int n )
-$method=|void|chop|int
+$prototypeV2=void chop( int n )
 
 $prototypeV2=void clear()
 
@@ -412,8 +410,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF )
 }
 $addMethod=lastIndexOf
 
-$prototype=QByteArray left ( int len ) const
-$method=|QByteArray|left|int
+$prototypeV2=QByteArray left( int len ) const
 
 $prototype=QByteArray leftJustified ( int width, char fill = ' ', bool truncate = false ) const
 $method=|QByteArray|leftJustified|int,char=' ',bool=false
@@ -542,8 +539,7 @@ $addMethod=push_front
 $prototype=QByteArray & remove ( int pos, int len )
 $method=|QByteArray &|remove|int,int
 
-$prototype=QByteArray repeated ( int times ) const
-$method=|QByteArray|repeated|int
+$prototypeV2=QByteArray repeated( int times ) const
 
 $prototype=QByteArray & replace ( int pos, int len, const QByteArray & after )
 $method=|QByteArray &|replace,replace1|int,int,const QByteArray &
@@ -669,14 +665,11 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE )
 }
 $addMethod=replace
 
-$prototype=void reserve ( int size )
-$method=|void|reserve|int
+$prototypeV2=void reserve( int size )
 
-$prototype=void resize ( int size )
-$method=|void|resize|int
+$prototypeV2=void resize( int size )
 
-$prototype=QByteArray right ( int len ) const
-$method=|QByteArray|right|int
+$prototypeV2=QByteArray right( int len ) const
 
 $prototype=QByteArray rightJustified ( int width, char fill = ' ', bool truncate = false ) const
 $method=|QByteArray|rightJustified|int,char=' ',bool=false
@@ -766,8 +759,7 @@ $prototypeV2=QByteArray simplified() const
 
 $prototypeV2=int size() const
 
-$prototype=QList<QByteArray> split ( char sep ) const
-$method=|QList<QByteArray>|split|char
+$prototypeV2=QList<QByteArray> split( char sep ) const
 
 $prototypeV2=void squeeze()
 
@@ -850,14 +842,11 @@ $prototypeV2=QByteArray toUpper() const
 
 $prototypeV2=QByteArray trimmed() const
 
-$prototype=void truncate ( int pos )
-$method=|void|truncate|int
+$prototypeV2=void truncate( int pos )
 
-$prototype=static QByteArray fromBase64 ( const QByteArray & base64 )
-$staticMethod=|QByteArray|fromBase64|const QByteArray &
+$prototypeV2=static QByteArray fromBase64( const QByteArray & base64 )
 
-$prototype=static QByteArray fromHex ( const QByteArray & hexEncoded )
-$staticMethod=|QByteArray|fromHex|const QByteArray &
+$prototypeV2=static QByteArray fromHex( const QByteArray & hexEncoded )
 
 $prototype=static QByteArray fromPercentEncoding ( const QByteArray & input, char percent = '%' )
 $staticMethod=|QByteArray|fromPercentEncoding|const QByteArray &,char='%'

@@ -77,8 +77,7 @@ $prototypeV2=bool unload()
 
 $prototypeV2=bool isLoaded() const
 
-$prototype=void setFileName(const QString &fileName)
-$method=|void|setFileName|const QString &
+$prototypeV2=void setFileName( const QString & fileName )
 
 $prototypeV2=QString fileName() const
 
@@ -112,8 +111,7 @@ $addMethod=setFileNameAndVersion
 
 $prototypeV2=QString errorString() const
 
-$prototype=void setLoadHints(LoadHints hints)
-$method=|void|setLoadHints|QLibrary::LoadHints
+$prototypeV2=void setLoadHints( QLibrary::LoadHints hints )
 
 $prototypeV2=QLibrary::LoadHints loadHints() const
 
@@ -161,7 +159,6 @@ HB_FUNC_STATIC( QLIBRARY_RESOLVE )
 }
 $addMethod=resolve
 
-$prototype=static bool isLibrary(const QString &fileName)
-$staticMethod=|bool|isLibrary|const QString &
+$prototypeV2=static bool isLibrary( const QString & fileName )
 
 #pragma ENDDUMP

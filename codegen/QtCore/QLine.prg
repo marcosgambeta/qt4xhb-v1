@@ -81,11 +81,9 @@ $prototypeV2=int dy() const
 
 $prototypeV2=bool isNull() const
 
-$prototype=void setP1(const QPoint & p1)
-$method=|void|setP1|const QPoint &
+$prototypeV2=void setP1( const QPoint & p1 )
 
-$prototype=void setP2(const QPoint & p2)
-$method=|void|setP2|const QPoint &
+$prototypeV2=void setP2( const QPoint & p2 )
 
 $prototype=void setLine(int x1, int y1, int x2, int y2)
 $method=|void|setLine|int,int,int,int

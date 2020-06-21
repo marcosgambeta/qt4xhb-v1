@@ -137,11 +137,9 @@ $method=|void|getRect|int *,int *,int *,int *
 
 $prototypeV2=int height() const
 
-$prototype=QRect intersected ( const QRect & rectangle ) const
-$method=|QRect|intersected|const QRect &
+$prototypeV2=QRect intersected( const QRect & rectangle ) const
 
-$prototype=bool intersects ( const QRect & rectangle ) const
-$method=|bool|intersects|const QRect &
+$prototypeV2=bool intersects( const QRect & rectangle ) const
 
 $prototypeV2=bool isEmpty() const
 
@@ -151,23 +149,17 @@ $prototypeV2=bool isValid() const
 
 $prototypeV2=int left() const
 
-$prototype=void moveBottom ( int y )
-$method=|void|moveBottom|int
+$prototypeV2=void moveBottom( int y )
 
-$prototype=void moveBottomLeft ( const QPoint & position )
-$method=|void|moveBottomLeft|const QPoint &
+$prototypeV2=void moveBottomLeft( const QPoint & position )
 
-$prototype=void moveBottomRight ( const QPoint & position )
-$method=|void|moveBottomRight|const QPoint &
+$prototypeV2=void moveBottomRight( const QPoint & position )
 
-$prototype=void moveCenter ( const QPoint & position )
-$method=|void|moveCenter|const QPoint &
+$prototypeV2=void moveCenter( const QPoint & position )
 
-$prototype=void moveLeft ( int x )
-$method=|void|moveLeft|int
+$prototypeV2=void moveLeft( int x )
 
-$prototype=void moveRight ( int x )
-$method=|void|moveRight|int
+$prototypeV2=void moveRight( int x )
 
 $prototype=void moveTo ( int x, int y )
 $internalMethod=|void|moveTo,moveTo1|int,int
@@ -197,63 +189,47 @@ HB_FUNC_STATIC( QRECT_MOVETO )
 }
 $addMethod=moveTo
 
-$prototype=void moveTop ( int y )
-$method=|void|moveTop|int
+$prototypeV2=void moveTop( int y )
 
-$prototype=void moveTopLeft ( const QPoint & position )
-$method=|void|moveTopLeft|const QPoint &
+$prototypeV2=void moveTopLeft( const QPoint & position )
 
-$prototype=void moveTopRight ( const QPoint & position )
-$method=|void|moveTopRight|const QPoint &
+$prototypeV2=void moveTopRight( const QPoint & position )
 
 $prototypeV2=QRect normalized() const
 
 $prototypeV2=int right() const
 
-$prototype=void setBottom ( int y )
-$method=|void|setBottom|int
+$prototypeV2=void setBottom( int y )
 
-$prototype=void setBottomLeft ( const QPoint & position )
-$method=|void|setBottomLeft|const QPoint &
+$prototypeV2=void setBottomLeft( const QPoint & position )
 
-$prototype=void setBottomRight ( const QPoint & position )
-$method=|void|setBottomRight|const QPoint &
+$prototypeV2=void setBottomRight( const QPoint & position )
 
 $prototype=void setCoords ( int x1, int y1, int x2, int y2 )
 $method=|void|setCoords|int,int,int,int
 
-$prototype=void setHeight ( int height )
-$method=|void|setHeight|int
+$prototypeV2=void setHeight( int height )
 
-$prototype=void setLeft ( int x )
-$method=|void|setLeft|int
+$prototypeV2=void setLeft( int x )
 
 $prototype=void setRect ( int x, int y, int width, int height )
 $method=|void|setRect|int,int,int,int
 
-$prototype=void setRight ( int x )
-$method=|void|setRight|int
+$prototypeV2=void setRight( int x )
 
-$prototype=void setSize ( const QSize & size )
-$method=|void|setSize|const QSize &
+$prototypeV2=void setSize( const QSize & size )
 
-$prototype=void setTop ( int y )
-$method=|void|setTop|int
+$prototypeV2=void setTop( int y )
 
-$prototype=void setTopLeft ( const QPoint & position )
-$method=|void|setTopLeft|const QPoint &
+$prototypeV2=void setTopLeft( const QPoint & position )
 
-$prototype=void setTopRight ( const QPoint & position )
-$method=|void|setTopRight|const QPoint &
+$prototypeV2=void setTopRight( const QPoint & position )
 
-$prototype=void setWidth ( int width )
-$method=|void|setWidth|int
+$prototypeV2=void setWidth( int width )
 
-$prototype=void setX ( int x )
-$method=|void|setX|int
+$prototypeV2=void setX( int x )
 
-$prototype=void setY ( int y )
-$method=|void|setY|int
+$prototypeV2=void setY( int y )
 
 $prototypeV2=QSize size() const
 
@@ -319,8 +295,7 @@ HB_FUNC_STATIC( QRECT_TRANSLATED )
 }
 $addMethod=translated
 
-$prototype=QRect united ( const QRect & rectangle ) const
-$method=|QRect|united|const QRect &
+$prototypeV2=QRect united( const QRect & rectangle ) const
 
 $prototypeV2=int width() const
 

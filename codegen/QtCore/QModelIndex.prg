@@ -67,13 +67,11 @@ $prototypeV2=Qt::ItemFlags flags() const
 
 $prototypeV2=qint64 internalId() const
 
-$prototype=void * internalPointer () const
-$method=|void *|internalPointer|
+$prototypeV2=void * internalPointer() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=const QAbstractItemModel * model () const
-$method=|const QAbstractItemModel *|model|
+$prototypeV2=const QAbstractItemModel * model() const
 
 $prototypeV2=QModelIndex parent() const
 

@@ -61,17 +61,13 @@ $prototypeV2=qreal overshoot() const
 
 $prototypeV2=qreal period() const
 
-$prototype=void setAmplitude ( qreal amplitude )
-$method=|void|setAmplitude|qreal
+$prototypeV2=void setAmplitude( qreal amplitude )
 
-$prototype=void setOvershoot ( qreal overshoot )
-$method=|void|setOvershoot|qreal
+$prototypeV2=void setOvershoot( qreal overshoot )
 
-$prototype=void setPeriod ( qreal period )
-$method=|void|setPeriod|qreal
+$prototypeV2=void setPeriod( qreal period )
 
-$prototype=void setType ( Type type )
-$method=|void|setType|QEasingCurve::Type
+$prototypeV2=void setType( QEasingCurve::Type type )
 
 $prototypeV2=QEasingCurve::Type type() const
 

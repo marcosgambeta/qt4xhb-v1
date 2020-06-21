@@ -71,11 +71,9 @@ $prototypeV2=bool flush()
 
 $prototypeV2=int handle() const
 
-$prototype=void setFileName ( const QString & name )
-$method=|void|setFileName|const QString &
+$prototypeV2=void setFileName( const QString & name )
 
-$prototype=bool unmap ( uchar * address )
-$method=|bool|unmap|uchar *
+$prototypeV2=bool unmap( uchar * address )
 
 $prototypeV2=void unsetError()
 
@@ -143,8 +141,7 @@ $addMethod=open
 
 $prototypeV2=virtual qint64 pos() const
 
-$prototype=virtual bool seek ( qint64 pos )
-$virtualMethod=|bool|seek|qint64
+$prototypeV2=virtual bool seek( qint64 pos )
 
 $prototypeV2=virtual qint64 size() const
 
@@ -204,8 +201,7 @@ HB_FUNC_STATIC( QFILE_DECODENAME )
 }
 $addMethod=decodeName
 
-$prototype=static QByteArray encodeName ( const QString & fileName )
-$staticMethod=|QByteArray|encodeName|const QString &
+$prototypeV2=static QByteArray encodeName( const QString & fileName )
 
 $prototype=bool exists () const
 $internalMethod=|bool|exists,exists1|

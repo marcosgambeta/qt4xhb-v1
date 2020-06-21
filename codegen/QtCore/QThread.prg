@@ -41,16 +41,13 @@ $prototypeV2=bool isRunning() const
 
 $prototypeV2=QThread::Priority priority() const
 
-$prototype=void setPriority(Priority priority)
-$method=|void|setPriority|QThread::Priority
+$prototypeV2=void setPriority( QThread::Priority priority )
 
-$prototype=void setStackSize(uint stackSize)
-$method=|void|setStackSize|uint
+$prototypeV2=void setStackSize( uint stackSize )
 
 $prototypeV2=uint stackSize() const
 
-$prototype=virtual bool event(QEvent * event)
-$virtualMethod=|bool|event|QEvent *
+$prototypeV2=virtual bool event( QEvent * event )
 
 $prototypeV2=void quit()
 

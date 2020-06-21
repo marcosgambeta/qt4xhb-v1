@@ -55,13 +55,11 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void setKey(const QString &key)
-$method=|void|setKey|const QString &
+$prototypeV2=void setKey( const QString & key )
 
 $prototypeV2=QString key() const
 
-$prototype=void setNativeKey(const QString &key)
-$method=|void|setNativeKey|const QString &
+$prototypeV2=void setNativeKey( const QString & key )
 
 $prototypeV2=QString nativeKey() const
 
@@ -77,8 +75,7 @@ $prototypeV2=bool isAttached() const
 
 $prototypeV2=bool detach()
 
-$prototype=void *data()
-$method=|void *|data|
+$prototypeV2=void * data()
 
 $prototypeV2=bool lock()
 

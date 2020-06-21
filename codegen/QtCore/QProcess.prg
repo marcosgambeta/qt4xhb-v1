@@ -32,13 +32,12 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=void closeReadChannel ( ProcessChannel channel )
-$method=|void|closeReadChannel|QProcess::ProcessChannel
+$prototypeV2=void closeReadChannel( QProcess::ProcessChannel channel )
 
 $prototypeV2=void closeWriteChannel()
 
-$prototype=QStringList environment () const (deprecated)
-$method=|QStringList|environment|
+%% deprecated
+$prototypeV2=QStringList environment() const
 
 $prototypeV2=QProcess::ProcessError error() const
 
@@ -59,35 +58,29 @@ $prototypeV2=QByteArray readAllStandardOutput()
 
 $prototypeV2=QProcess::ProcessChannel readChannel() const
 
-$prototype=void setEnvironment ( const QStringList & environment ) (deprecated)
-$method=|void|setEnvironment|const QStringList &
+%% deprecated
+$prototypeV2=void setEnvironment( const QStringList & environment )
 
 $prototype=void setNativeArguments ( const QString & arguments )
 $method=|void|setNativeArguments|const QString &|#if defined(Q_OS_WIN) || defined(Q_OS_SYMBIAN)
 
-$prototype=void setProcessChannelMode ( ProcessChannelMode mode )
-$method=|void|setProcessChannelMode|QProcess::ProcessChannelMode
+$prototypeV2=void setProcessChannelMode( QProcess::ProcessChannelMode mode )
 
-$prototype=void setProcessEnvironment ( const QProcessEnvironment & environment )
-$method=|void|setProcessEnvironment|const QProcessEnvironment &
+$prototypeV2=void setProcessEnvironment( const QProcessEnvironment & environment )
 
-$prototype=void setReadChannel ( ProcessChannel channel )
-$method=|void|setReadChannel|QProcess::ProcessChannel
+$prototypeV2=void setReadChannel( QProcess::ProcessChannel channel )
 
 $prototype=void setStandardErrorFile ( const QString & fileName, OpenMode mode = Truncate )
 $method=|void|setStandardErrorFile|const QString &,QIODevice::OpenMode=QIODevice::Truncate
 
-$prototype=void setStandardInputFile ( const QString & fileName )
-$method=|void|setStandardInputFile|const QString &
+$prototypeV2=void setStandardInputFile( const QString & fileName )
 
 $prototype=void setStandardOutputFile ( const QString & fileName, OpenMode mode = Truncate )
 $method=|void|setStandardOutputFile|const QString &,QIODevice::OpenMode=QIODevice::Truncate
 
-$prototype=void setStandardOutputProcess ( QProcess * destination )
-$method=|void|setStandardOutputProcess|QProcess *
+$prototypeV2=void setStandardOutputProcess( QProcess * destination )
 
-$prototype=void setWorkingDirectory ( const QString & dir )
-$method=|void|setWorkingDirectory|const QString &
+$prototypeV2=void setWorkingDirectory( const QString & dir )
 
 $prototype=void start ( const QString & program, const QStringList & arguments, OpenMode mode = ReadWrite )
 $internalMethod=|void|start,start1|const QString &,const QStringList &,QIODevice::OpenMode=QIODevice::ReadWrite

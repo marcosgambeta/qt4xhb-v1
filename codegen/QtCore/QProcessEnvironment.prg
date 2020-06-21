@@ -59,11 +59,9 @@ $prototypeV2=bool isEmpty() const
 
 $prototypeV2=void clear()
 
-$prototype=bool contains(const QString &name) const
-$method=|bool|contains|const QString &
+$prototypeV2=bool contains( const QString & name ) const
 
-$prototype=void remove(const QString &name)
-$method=|void|remove|const QString &
+$prototypeV2=void remove( const QString & name )
 
 $prototype=QString value(const QString &name, const QString &defaultValue = QString()) const
 $method=|QString|value|const QString &,const QString &=QString()

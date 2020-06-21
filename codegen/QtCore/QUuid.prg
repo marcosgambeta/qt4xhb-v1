@@ -93,8 +93,7 @@ $prototypeV2=QUuid::Variant variant() const
 
 $prototypeV2=QUuid::Version version() const
 
-$prototype=static QUuid fromRfc4122(const QByteArray &)
-$staticMethod=|QUuid|fromRfc4122|const QByteArray &
+$prototypeV2=static QUuid fromRfc4122( const QByteArray & )
 
 $prototypeV2=static QUuid createUuid()
 

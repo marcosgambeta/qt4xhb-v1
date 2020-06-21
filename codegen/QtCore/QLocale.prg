@@ -86,8 +86,7 @@ $prototypeV2=QString bcp47Name() const
 
 $prototypeV2=QLocale::Country country() const
 
-$prototype=QString createSeparatedList ( const QStringList & list ) const
-$method=|QString|createSeparatedList|const QStringList &
+$prototypeV2=QString createSeparatedList( const QStringList & list ) const
 
 $prototype=QString currencySymbol ( CurrencySymbolFormat format = CurrencySymbol ) const
 $method=|QString|currencySymbol|QLocale::CurrencySymbolFormat=QLocale::CurrencySymbol
@@ -162,8 +161,7 @@ $addMethod=quoteString
 
 $prototypeV2=QLocale::Script script() const
 
-$prototype=void setNumberOptions ( NumberOptions options )
-$method=|void|setNumberOptions|QLocale::NumberOptions
+$prototypeV2=void setNumberOptions( QLocale::NumberOptions options )
 
 $prototype=QString standaloneDayName ( int day, FormatType type = LongFormat ) const
 $method=|QString|standaloneDayName|int,QLocale::FormatType=QLocale::LongFormat
@@ -286,8 +284,7 @@ $method=|int|toInt|const QString &,bool *=0,int=0
 $prototype=qlonglong toLongLong ( const QString & s, bool * ok = 0, int base = 0 ) const
 $method=|qlonglong|toLongLong|const QString &,bool *=0,int=0
 
-$prototype=QString toLower ( const QString & str ) const
-$method=|QString|toLower|const QString &
+$prototypeV2=QString toLower( const QString & str ) const
 
 $prototype=short toShort ( const QString & s, bool * ok = 0, int base = 0 ) const
 $method=|short|toShort|const QString &,bool *=0,int=0
@@ -395,8 +392,7 @@ $method=|qlonglong|toULongLong|const QString &,bool *=0,int=0
 $prototype=ushort toUShort ( const QString & s, bool * ok = 0, int base = 0 ) const
 $method=|ushort|toUShort|const QString &,bool *=0,int=0
 
-$prototype=QString toUpper ( const QString & str ) const
-$method=|QString|toUpper|const QString &
+$prototypeV2=QString toUpper( const QString & str ) const
 
 $prototypeV2=QStringList uiLanguages() const
 
@@ -404,20 +400,16 @@ $prototypeV2=QList<Qt::DayOfWeek> weekdays() const
 
 $prototypeV2=static QLocale c()
 
-$prototype=static QString countryToString ( Country country )
-$staticMethod=|QString|countryToString|QLocale::Country
+$prototypeV2=static QString countryToString( QLocale::Country country )
 
-$prototype=static QString languageToString ( Language language )
-$staticMethod=|QString|languageToString|QLocale::Language
+$prototypeV2=static QString languageToString( QLocale::Language language )
 
 $prototype=static QList<QLocale> matchingLocales ( QLocale::Language language, QLocale::Script script, QLocale::Country country )
 $staticMethod=|QList<QLocale>|matchingLocales|QLocale::Language,QLocale::Script,QLocale::Country
 
-$prototype=static QString scriptToString ( Script script )
-$staticMethod=|QString|scriptToString|QLocale::Script
+$prototypeV2=static QString scriptToString( QLocale::Script script )
 
-$prototype=static void setDefault ( const QLocale & locale )
-$staticMethod=|void|setDefault|const QLocale &
+$prototypeV2=static void setDefault( const QLocale & locale )
 
 $prototypeV2=static QLocale system()
 

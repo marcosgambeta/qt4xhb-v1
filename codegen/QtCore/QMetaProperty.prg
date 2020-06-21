@@ -30,11 +30,9 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=const char *name() const
-$method=|const char *|name|
+$prototypeV2=const char * name() const
 
-$prototype=const char *typeName() const
-$method=|const char *|typeName|
+$prototypeV2=const char * typeName() const
 
 $prototypeV2=QVariant::Type type() const
 
@@ -81,21 +79,18 @@ $prototypeV2=int notifySignalIndex() const
 
 $prototypeV2=int revision() const
 
-$prototype=QVariant read(const QObject *obj) const
-$method=|QVariant|read|const QObject *
+$prototypeV2=QVariant read( const QObject * obj ) const
 
 $prototype=bool write(QObject *obj, const QVariant &value) const
 $method=|bool|write|QObject *,const QVariant &
 
-$prototype=bool reset(QObject *obj) const
-$method=|bool|reset|QObject *
+$prototypeV2=bool reset( QObject * obj ) const
 
 $prototypeV2=bool hasStdCppSet() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=const QMetaObject *enclosingMetaObject() const
-$method=|const QMetaObject *|enclosingMetaObject|
+$prototypeV2=const QMetaObject * enclosingMetaObject() const
 
 $extraMethods
 

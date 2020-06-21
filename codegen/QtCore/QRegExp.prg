@@ -76,8 +76,7 @@ $prototypeV2=Qt::CaseSensitivity caseSensitivity() const
 
 $prototypeV2=QString errorString() const
 
-$prototype=bool exactMatch ( const QString & str ) const
-$method=|bool|exactMatch|const QString &
+$prototypeV2=bool exactMatch ( const QString & str ) const
 
 $prototype=int indexIn ( const QString & str, int offset = 0, CaretMode caretMode = CaretAtZero ) const
 $method=|int|indexIn|const QString &,int=0,QRegExp::CaretMode=QRegExp::CaretAtZero
@@ -100,20 +99,15 @@ $prototypeV2=QRegExp::PatternSyntax patternSyntax() const
 $prototype=int pos ( int nth = 0 ) const
 $method=|int|pos|int=0
 
-$prototype=void setCaseSensitivity ( Qt::CaseSensitivity cs )
-$method=|void|setCaseSensitivity|Qt::CaseSensitivity
+$prototypeV2=void setCaseSensitivity( Qt::CaseSensitivity cs )
 
-$prototype=void setMinimal ( bool minimal )
-$method=|void|setMinimal|bool
+$prototypeV2=void setMinimal( bool minimal )
 
-$prototype=void setPattern ( const QString & pattern )
-$method=|void|setPattern|const QString &
+$prototypeV2=void setPattern( const QString & pattern )
 
-$prototype=void setPatternSyntax ( PatternSyntax syntax )
-$method=|void|setPatternSyntax|QRegExp::PatternSyntax
+$prototypeV2=void setPatternSyntax( QRegExp::PatternSyntax syntax )
 
-$prototype=static QString escape ( const QString & str )
-$staticMethod=|QString|escape|const QString &
+$prototypeV2=static QString escape( const QString & str )
 
 $extraMethods
 

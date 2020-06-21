@@ -27,8 +27,7 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QAbstractFileEngine * create ( const QString & fileName ) const = 0
-$virtualMethod=|QAbstractFileEngine *|create|const QString &
+$prototypeV2=virtual QAbstractFileEngine * create( const QString & fileName ) const = 0
 
 $extraMethods
 

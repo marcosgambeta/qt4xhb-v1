@@ -106,17 +106,13 @@ $prototypeV2=QAbstractState * errorState() const
 
 $prototypeV2=QAbstractState * initialState() const
 
-$prototype=void removeTransition ( QAbstractTransition * transition )
-$method=|void|removeTransition|QAbstractTransition *
+$prototypeV2=void removeTransition( QAbstractTransition * transition )
 
-$prototype=void setChildMode ( ChildMode mode )
-$method=|void|setChildMode|QState::ChildMode
+$prototypeV2=void setChildMode( QState::ChildMode mode )
 
-$prototype=void setErrorState ( QAbstractState * state )
-$method=|void|setErrorState|QAbstractState *
+$prototypeV2=void setErrorState( QAbstractState * state )
 
-$prototype=void setInitialState ( QAbstractState * state )
-$method=|void|setInitialState|QAbstractState *
+$prototypeV2=void setInitialState( QAbstractState * state )
 
 $prototypeV2=QList<QAbstractTransition *> transitions() const
 

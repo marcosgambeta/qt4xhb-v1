@@ -71,50 +71,37 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QDateTime addDays ( int ndays ) const
-$method=|QDateTime|addDays|int
+$prototypeV2=QDateTime addDays( int ndays ) const
 
-$prototype=QDateTime addMSecs ( qint64 msecs ) const
-$method=|QDateTime|addMSecs|qint64
+$prototypeV2=QDateTime addMSecs( qint64 msecs ) const
 
-$prototype=QDateTime addMonths ( int nmonths ) const
-$method=|QDateTime|addMonths|int
+$prototypeV2=QDateTime addMonths( int nmonths ) const
 
-$prototype=QDateTime addSecs ( int s ) const
-$method=|QDateTime|addSecs|int
+$prototypeV2=QDateTime addSecs( int s ) const
 
-$prototype=QDateTime addYears ( int nyears ) const
-$method=|QDateTime|addYears|int
+$prototypeV2=QDateTime addYears( int nyears ) const
 
 $prototypeV2=QDate date() const
 
-$prototype=int daysTo ( const QDateTime & other ) const
-$method=|int|daysTo|const QDateTime &
+$prototypeV2=int daysTo( const QDateTime & other ) const
 
 $prototypeV2=bool isNull() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=qint64 msecsTo ( const QDateTime & other ) const
-$method=|qint64|msecsTo|const QDateTime &
+$prototypeV2=qint64 msecsTo( const QDateTime & other ) const
 
-$prototype=int secsTo ( const QDateTime & other ) const
-$method=|int|secsTo|const QDateTime &
+$prototypeV2=int secsTo( const QDateTime & other ) const
 
-$prototype=void setDate ( const QDate & date )
-$method=|void|setDate|const QDate &
+$prototypeV2=void setDate( const QDate & date )
 
-$prototype=void setMSecsSinceEpoch ( qint64 msecs )
-$method=|void|setMSecsSinceEpoch|qint64
+$prototypeV2=void setMSecsSinceEpoch( qint64 msecs )
 
-$prototype=void setTime ( const QTime & time )
-$method=|void|setTime|const QTime &
+$prototypeV2=void setTime( const QTime & time )
 
-$prototype=void setTimeSpec ( Qt::TimeSpec spec )
-$method=|void|setTimeSpec|Qt::TimeSpec
+$prototypeV2=void setTimeSpec( Qt::TimeSpec spec )
 
-$prototype=void setTime_t ( uint seconds )
-$method=|void|setTime_t|uint
+$prototypeV2=void setTime_t( uint seconds )
 
 $prototypeV2=QTime time() const
 
@@ -152,8 +139,7 @@ HB_FUNC_STATIC( QDATETIME_TOSTRING )
 }
 $addMethod=toString
 
-$prototype=QDateTime toTimeSpec ( Qt::TimeSpec specification ) const
-$method=|QDateTime|toTimeSpec|Qt::TimeSpec
+$prototypeV2=QDateTime toTimeSpec( Qt::TimeSpec specification ) const
 
 $prototypeV2=uint toTime_t() const
 
@@ -165,8 +151,7 @@ $prototypeV2=static QDateTime currentDateTimeUtc()
 
 $prototypeV2=static qint64 currentMSecsSinceEpoch()
 
-$prototype=static QDateTime fromMSecsSinceEpoch ( qint64 msecs )
-$staticMethod=|QDateTime|fromMSecsSinceEpoch|qint64
+$prototypeV2=static QDateTime fromMSecsSinceEpoch( qint64 msecs )
 
 $prototype=static QDateTime fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
 $internalStaticMethod=|QDateTime|fromString,fromString1|const QString &,Qt::DateFormat=Qt::TextDate
@@ -196,8 +181,7 @@ HB_FUNC_STATIC( QDATETIME_FROMSTRING )
 }
 $addMethod=fromString
 
-$prototype=static QDateTime fromTime_t ( uint seconds )
-$staticMethod=|QDateTime|fromTime_t|uint
+$prototypeV2=static QDateTime fromTime_t( uint seconds )
 
 $extraMethods
 

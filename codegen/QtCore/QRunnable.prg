@@ -31,8 +31,7 @@ $prototypeV2=bool autoDelete() const
 
 $prototypeV2=virtual void run() = 0
 
-$prototype=void setAutoDelete ( bool autoDelete )
-$method=|void|setAutoDelete|bool
+$prototypeV2=void setAutoDelete( bool autoDelete )
 
 $extraMethods
 

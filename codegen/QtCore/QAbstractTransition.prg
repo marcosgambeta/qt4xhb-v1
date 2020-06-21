@@ -33,21 +33,17 @@ $includes
 
 $deleteMethod
 
-$prototype=void addAnimation ( QAbstractAnimation * animation )
-$method=|void|addAnimation|QAbstractAnimation *
+$prototypeV2=void addAnimation( QAbstractAnimation * animation )
 
 $prototypeV2=QList<QAbstractAnimation *> animations() const
 
 $prototypeV2=QStateMachine * machine() const
 
-$prototype=void removeAnimation ( QAbstractAnimation * animation )
-$method=|void|removeAnimation|QAbstractAnimation *
+$prototypeV2=void removeAnimation( QAbstractAnimation * animation )
 
-$prototype=void setTargetState ( QAbstractState * target )
-$method=|void|setTargetState|QAbstractState *
+$prototypeV2=void setTargetState( QAbstractState * target )
 
-$prototype=void setTargetStates ( const QList<QAbstractState *> & targets )
-$method=|void|setTargetStates|const QList<QAbstractState *> &
+$prototypeV2=void setTargetStates( const QList<QAbstractState *> & targets )
 
 $prototypeV2=QState * sourceState() const
 

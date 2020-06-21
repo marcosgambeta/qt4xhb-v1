@@ -32,8 +32,7 @@ $deleteMethod
 
 $prototypeV2=QString absoluteFilePath() const
 
-$prototype=const uchar * data () const
-$method=|const uchar *|data|
+$prototypeV2=const uchar * data() const
 
 $prototypeV2=QString fileName() const
 
@@ -43,11 +42,9 @@ $prototypeV2=bool isValid() const
 
 $prototypeV2=QLocale locale() const
 
-$prototype=void setFileName ( const QString & file )
-$method=|void|setFileName|const QString &
+$prototypeV2=void setFileName( const QString & file )
 
-$prototype=void setLocale ( const QLocale & locale )
-$method=|void|setLocale|const QLocale &
+$prototypeV2=void setLocale( const QLocale & locale )
 
 $prototypeV2=qint64 size() const
 

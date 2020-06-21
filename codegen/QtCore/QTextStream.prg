@@ -115,26 +115,21 @@ $addMethod=setCodec
 
 $prototypeV2=QTextCodec * codec() const
 
-$prototype=void setAutoDetectUnicode(bool enabled)
-$method=|void|setAutoDetectUnicode|bool
+$prototypeV2=void setAutoDetectUnicode( bool enabled )
 
 $prototypeV2=bool autoDetectUnicode() const
 
-$prototype=void setGenerateByteOrderMark(bool generate)
-$method=|void|setGenerateByteOrderMark|bool
+$prototypeV2=void setGenerateByteOrderMark( bool generate )
 
 $prototypeV2=bool generateByteOrderMark() const
 
-$prototype=void setLocale(const QLocale &locale)
-$method=|void|setLocale|const QLocale &
+$prototypeV2=void setLocale( const QLocale & locale )
 
 $prototypeV2=QLocale locale() const
 
-$prototype=void setDevice(QIODevice *device)
-$method=|void|setDevice|QIODevice *
+$prototypeV2=void setDevice( QIODevice * device )
 
-$prototype=QIODevice *device() const
-$method=|QIODevice *|device|
+$prototypeV2=QIODevice * device() const
 
 $prototype=void setString(QString *string, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
 %% TODO: implementar
@@ -146,8 +141,7 @@ $prototype=QString *string() const
 
 $prototypeV2=QTextStream::Status status() const
 
-$prototype=void setStatus(Status status)
-$method=|void|setStatus|QTextStream::Status
+$prototypeV2=void setStatus( QTextStream::Status status )
 
 $prototypeV2=void resetStatus()
 
@@ -157,8 +151,7 @@ $prototypeV2=void reset()
 
 $prototypeV2=void flush()
 
-$prototype=bool seek(qint64 pos)
-$method=|bool|seek|qint64
+$prototypeV2=bool seek( qint64 pos )
 
 $prototypeV2=qint64 pos() const
 
@@ -169,42 +162,33 @@ $method=|QString|readLine|qint64=0
 
 $prototypeV2=QString readAll()
 
-$prototype=QString read(qint64 maxlen)
-$method=|QString|read|qint64
+$prototypeV2=QString read( qint64 maxlen )
 
-$prototype=void setFieldAlignment(FieldAlignment alignment)
-$method=|void|setFieldAlignment|QTextStream::FieldAlignment
+$prototypeV2=void setFieldAlignment( QTextStream::FieldAlignment alignment )
 
 $prototypeV2=QTextStream::FieldAlignment fieldAlignment() const
 
-$prototype=void setPadChar(QChar ch)
-$method=|void|setPadChar|QChar
+$prototypeV2=void setPadChar( QChar ch )
 
 $prototypeV2=QChar padChar() const
 
-$prototype=void setFieldWidth(int width)
-$method=|void|setFieldWidth|int
+$prototypeV2=void setFieldWidth( int width )
 
 $prototypeV2=int fieldWidth() const
 
-$prototype=void setNumberFlags(NumberFlags flags)
-$method=|void|setNumberFlags|QTextStream::NumberFlags
+$prototypeV2=void setNumberFlags( QTextStream::NumberFlags flags )
 
 $prototypeV2=QTextStream::NumberFlags numberFlags() const
 
-$prototype=void setIntegerBase(int base)
-$method=|void|setIntegerBase|int
+$prototypeV2=void setIntegerBase( int base )
 
 $prototypeV2=int integerBase() const
 
-$prototype=void setRealNumberNotation(RealNumberNotation notation)
-$method=|void|setRealNumberNotation|QTextStream::RealNumberNotation
+$prototypeV2=void setRealNumberNotation( QTextStream::RealNumberNotation notation )
 
-$prototype=RealNumberNotation realNumberNotation() const
-$method=|QTextStream::RealNumberNotation|realNumberNotation|
+$prototypeV2=QTextStream::RealNumberNotation realNumberNotation() const
 
-$prototype=void setRealNumberPrecision(int precision)
-$method=|void|setRealNumberPrecision|int
+$prototypeV2=void setRealNumberPrecision( int precision )
 
 $prototypeV2=int realNumberPrecision() const
 

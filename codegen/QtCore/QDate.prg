@@ -155,8 +155,7 @@ HB_FUNC_STATIC( QDATE_FROMSTRING )
 }
 $addMethod=fromString
 
-$prototype=static bool isLeapYear ( int year )
-$staticMethod=|bool|isLeapYear|int
+$prototypeV2=static bool isLeapYear( int year )
 
 $prototype=bool isValid () const
 $internalMethod=|bool|isValid,isValid1|

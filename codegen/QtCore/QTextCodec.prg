@@ -205,8 +205,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORNAME )
 }
 $addMethod=codecForName
 
-$prototype=static QTextCodec* codecForMib(int mib)
-$staticMethod=|QTextCodec *|codecForMib|int
+$prototypeV2=static QTextCodec * codecForMib( int mib )
 
 $prototypeV2=static QList<QByteArray> availableCodecs()
 
@@ -214,18 +213,15 @@ $prototypeV2=static QList<int> availableMibs()
 
 $prototypeV2=static QTextCodec * codecForLocale()
 
-$prototype=static void setCodecForLocale(QTextCodec *c)
-$staticMethod=|void|setCodecForLocale|QTextCodec *
+$prototypeV2=static void setCodecForLocale( QTextCodec * c )
 
 $prototypeV2=static QTextCodec * codecForTr()
 
-$prototype=static void setCodecForTr(QTextCodec *c)
-$staticMethod=|void|setCodecForTr|QTextCodec *
+$prototypeV2=static void setCodecForTr( QTextCodec * c )
 
 $prototypeV2=static QTextCodec * codecForCStrings()
 
-$prototype=static void setCodecForCStrings(QTextCodec *c)
-$staticMethod=|void|setCodecForCStrings|QTextCodec *
+$prototypeV2=static void setCodecForCStrings( QTextCodec * c )
 
 $prototype=static QTextCodec *codecForHtml(const QByteArray &ba)
 $internalStaticMethod=|QTextCodec *|codecForHtml,codecForHtml1|const QByteArray &

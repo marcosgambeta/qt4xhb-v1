@@ -33,11 +33,9 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QModelIndex buddy ( const QModelIndex & index ) const
-$virtualMethod=|QModelIndex|buddy|const QModelIndex &
+$prototypeV2=virtual QModelIndex buddy( const QModelIndex & index ) const
 
-$prototype=virtual bool canFetchMore ( const QModelIndex & parent ) const
-$virtualMethod=|bool|canFetchMore|const QModelIndex &
+$prototypeV2=virtual bool canFetchMore( const QModelIndex & parent ) const
 
 $prototype=virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const = 0
 $virtualMethod=|int|columnCount|const QModelIndex &=QModelIndex()
@@ -48,11 +46,9 @@ $virtualMethod=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
 $prototype=virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 $virtualMethod=|bool|dropMimeData|const QMimeData *,Qt::DropAction,int,int,const QModelIndex &
 
-$prototype=virtual void fetchMore ( const QModelIndex & parent )
-$virtualMethod=|void|fetchMore|const QModelIndex &
+$prototypeV2=virtual void fetchMore( const QModelIndex & parent )
 
-$prototype=virtual Qt::ItemFlags flags ( const QModelIndex & index ) const
-$virtualMethod=|Qt::ItemFlags|flags|const QModelIndex &
+$prototypeV2=virtual Qt::ItemFlags flags( const QModelIndex & index ) const
 
 $prototype=virtual bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
 $virtualMethod=|bool|hasChildren|const QModelIndex &=QModelIndex()
@@ -81,13 +77,11 @@ $virtualMethod=|bool|insertRows|int,int,const QModelIndex &=QModelIndex()
 $prototype=virtual QModelIndexList match ( const QModelIndex & start, int role, const QVariant & value, int hits = 1, Qt::MatchFlags flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
 $virtualMethod=|QModelIndexList|match|const QModelIndex &,int,const QVariant &,int=1,Qt::MatchFlags=Qt::MatchFlags( Qt::MatchStartsWith OR Qt::MatchWrap )
 
-$prototype=virtual QMimeData * mimeData ( const QModelIndexList & indexes ) const
-$virtualMethod=|QMimeData *|mimeData|const QModelIndexList &
+$prototypeV2=virtual QMimeData * mimeData( const QModelIndexList & indexes ) const
 
 $prototypeV2=virtual QStringList mimeTypes() const
 
-$prototype=virtual QModelIndex parent ( const QModelIndex & index ) const = 0
-$virtualMethod=|QModelIndex|parent|const QModelIndex &
+$prototypeV2=virtual QModelIndex parent( const QModelIndex & index ) const = 0
 
 $prototype=bool removeColumn ( int column, const QModelIndex & parent = QModelIndex() )
 $method=|bool|removeColumn|int,const QModelIndex &=QModelIndex()
@@ -110,8 +104,7 @@ $virtualMethod=|bool|setData|const QModelIndex &,const QVariant &,int=Qt::EditRo
 $prototype=virtual bool setHeaderData ( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole )
 $virtualMethod=|bool|setHeaderData|int,Qt::Orientation,const QVariant &,int=Qt::EditRole
 
-$prototype=void setSupportedDragActions ( Qt::DropActions actions )
-$method=|void|setSupportedDragActions|Qt::DropActions
+$prototypeV2=void setSupportedDragActions( Qt::DropActions actions )
 
 $prototype=QModelIndex sibling ( int row, int column, const QModelIndex & index ) const
 $method=|QModelIndex|sibling|int,int,const QModelIndex &
@@ -119,8 +112,7 @@ $method=|QModelIndex|sibling|int,int,const QModelIndex &
 $prototype=virtual void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
 $virtualMethod=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
 
-$prototype=virtual QSize span ( const QModelIndex & index ) const
-$virtualMethod=|QSize|span|const QModelIndex &
+$prototypeV2=virtual QSize span( const QModelIndex & index ) const
 
 $prototypeV2=Qt::DropActions supportedDragActions() const
 

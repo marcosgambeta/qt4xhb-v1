@@ -32,14 +32,11 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=void addDefaultAnimation ( QAbstractAnimation * animation )
-$method=|void|addDefaultAnimation|QAbstractAnimation *
+$prototypeV2=void addDefaultAnimation( QAbstractAnimation * animation )
 
-$prototype=void addState ( QAbstractState * state )
-$method=|void|addState|QAbstractState *
+$prototypeV2=void addState( QAbstractState * state )
 
-$prototype=bool cancelDelayedEvent ( int id )
-$method=|bool|cancelDelayedEvent|int
+$prototypeV2=bool cancelDelayedEvent( int id )
 
 $prototypeV2=void clearError()
 
@@ -61,17 +58,13 @@ $method=|int|postDelayedEvent|QEvent *,int
 $prototype=void postEvent ( QEvent * event, EventPriority priority = NormalPriority )
 $method=|void|postEvent|QEvent *,QStateMachine::EventPriority=QStateMachine::NormalPriority
 
-$prototype=void removeDefaultAnimation ( QAbstractAnimation * animation )
-$method=|void|removeDefaultAnimation|QAbstractAnimation *
+$prototypeV2=void removeDefaultAnimation( QAbstractAnimation * animation )
 
-$prototype=void removeState ( QAbstractState * state )
-$method=|void|removeState|QAbstractState *
+$prototypeV2=void removeState( QAbstractState * state )
 
-$prototype=void setAnimated ( bool enabled )
-$method=|void|setAnimated|bool
+$prototypeV2=void setAnimated( bool enabled )
 
-$prototype=void setGlobalRestorePolicy ( QStateMachine::RestorePolicy restorePolicy )
-$method=|void|setGlobalRestorePolicy|QStateMachine::RestorePolicy
+$prototypeV2=void setGlobalRestorePolicy( QStateMachine::RestorePolicy restorePolicy )
 
 $prototype=virtual bool eventFilter ( QObject * watched, QEvent * event )
 $virtualMethod=|bool|eventFilter|QObject *,QEvent *

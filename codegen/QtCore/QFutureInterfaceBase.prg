@@ -64,11 +64,9 @@ $prototypeV2=void reportCanceled()
 $prototype=void reportResultsReady(int beginIndex, int endIndex)
 $method=|void|reportResultsReady|int,int
 
-$prototype=void setRunnable(QRunnable *runnable)
-$method=|void|setRunnable|QRunnable *
+$prototypeV2=void setRunnable( QRunnable * runnable )
 
-$prototype=void setFilterMode(bool enable)
-$method=|void|setFilterMode|bool
+$prototypeV2=void setFilterMode( bool enable )
 
 $prototype=void setProgressRange(int minimum, int maximum)
 $method=|void|setProgressRange|int,int
@@ -79,8 +77,7 @@ $prototypeV2=int progressMaximum() const
 
 $prototypeV2=bool isProgressUpdateNeeded() const
 
-$prototype=void setProgressValue(int progressValue)
-$method=|void|setProgressValue|int
+$prototypeV2=void setProgressValue( int progressValue )
 
 $prototypeV2=int progressValue() const
 
@@ -89,15 +86,13 @@ $method=|void|setProgressValueAndText|int,const QString &
 
 $prototypeV2=QString progressText() const
 
-$prototype=void setExpectedResultCount(int resultCount)
-$method=|void|setExpectedResultCount|int
+$prototypeV2=void setExpectedResultCount( int resultCount )
 
 $prototypeV2=int expectedResultCount()
 
 $prototypeV2=int resultCount() const
 
-$prototype=bool queryState(State state) const
-$method=|bool|queryState|QFutureInterfaceBase::State
+$prototypeV2=bool queryState( QFutureInterfaceBase::State state ) const
 
 $prototypeV2=bool isRunning() const
 
@@ -111,25 +106,21 @@ $prototypeV2=bool isPaused() const
 
 $prototypeV2=bool isThrottled() const
 
-$prototype=bool isResultReadyAt(int index) const
-$method=|bool|isResultReadyAt|int
+$prototypeV2=bool isResultReadyAt( int index ) const
 
 $prototypeV2=void cancel()
 
-$prototype=void setPaused(bool paused)
-$method=|void|setPaused|bool
+$prototypeV2=void setPaused( bool paused )
 
 $prototypeV2=void togglePaused()
 
-$prototype=void setThrottled(bool enable)
-$method=|void|setThrottled|bool
+$prototypeV2=void setThrottled( bool enable )
 
 $prototypeV2=void waitForFinished()
 
 $prototypeV2=bool waitForNextResult()
 
-$prototype=void waitForResult(int resultIndex)
-$method=|void|waitForResult|int
+$prototypeV2=void waitForResult( int resultIndex )
 
 $prototypeV2=void waitForResume()
 

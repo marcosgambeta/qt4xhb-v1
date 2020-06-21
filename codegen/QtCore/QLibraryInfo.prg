@@ -33,8 +33,7 @@ $prototypeV2=static QString buildKey()
 
 $prototypeV2=static QDate buildDate()
 
-$prototype=static QString location(LibraryLocation)
-$staticMethod=|QString|location|QLibraryInfo::LibraryLocation
+$prototypeV2=static QString location( QLibraryInfo::LibraryLocation )
 
 $extraMethods
 

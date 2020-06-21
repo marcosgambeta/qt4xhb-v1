@@ -29,8 +29,7 @@ $includes
 
 $deleteMethod
 
-$prototype=bool filterEvent ( void * message )
-$method=|bool|filterEvent|void *
+$prototypeV2=bool filterEvent( void * message )
 
 $prototypeV2=virtual void flush() = 0
 
@@ -38,11 +37,9 @@ $prototypeV2=virtual bool hasPendingEvents() = 0
 
 $prototypeV2=virtual void interrupt() = 0
 
-$prototype=virtual bool processEvents ( QEventLoop::ProcessEventsFlags flags ) = 0
-$virtualMethod=|bool|processEvents|QEventLoop::ProcessEventsFlags
+$prototypeV2=virtual bool processEvents( QEventLoop::ProcessEventsFlags flags ) = 0
 
-$prototype=virtual void registerSocketNotifier ( QSocketNotifier * notifier ) = 0
-$virtualMethod=|void|registerSocketNotifier|QSocketNotifier *
+$prototypeV2=virtual void registerSocketNotifier( QSocketNotifier * notifier ) = 0
 
 $prototype=int registerTimer ( int interval, QObject * object )
 $internalMethod=|int|registerTimer,registerTimer1|int,QObject *
@@ -72,14 +69,11 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER )
 }
 $addMethod=registerTimer
 
-$prototype=virtual void unregisterSocketNotifier ( QSocketNotifier * notifier ) = 0
-$virtualMethod=|void|unregisterSocketNotifier|QSocketNotifier *
+$prototypeV2=virtual void unregisterSocketNotifier( QSocketNotifier * notifier ) = 0
 
-$prototype=virtual bool unregisterTimer ( int timerId ) = 0
-$virtualMethod=|bool|unregisterTimer|int
+$prototypeV2=virtual bool unregisterTimer( int timerId ) = 0
 
-$prototype=virtual bool unregisterTimers ( QObject * object ) = 0
-$virtualMethod=|bool|unregisterTimers|QObject *
+$prototypeV2=virtual bool unregisterTimers( QObject * object ) = 0
 
 $prototypeV2=virtual void wakeUp() = 0
 

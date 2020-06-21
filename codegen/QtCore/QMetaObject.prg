@@ -33,51 +33,39 @@ $includes
 
 $deleteMethod
 
-$prototype=QMetaClassInfo classInfo ( int index ) const
-$method=|QMetaClassInfo|classInfo|int
+$prototypeV2=QMetaClassInfo classInfo( int index ) const
 
 $prototypeV2=int classInfoCount() const
 
 $prototypeV2=int classInfoOffset() const
 
-$prototype=const char * className () const
-$method=|const char *|className|
+$prototypeV2=const char * className() const
 
-$prototype=QMetaMethod constructor ( int index ) const
-$method=|QMetaMethod|constructor|int
+$prototypeV2=QMetaMethod constructor( int index ) const
 
 $prototypeV2=int constructorCount() const
 
-$prototype=QMetaEnum enumerator ( int index ) const
-$method=|QMetaEnum|enumerator|int
+$prototypeV2=QMetaEnum enumerator( int index ) const
 
 $prototypeV2=int enumeratorCount() const
 
 $prototypeV2=int enumeratorOffset() const
 
-$prototype=int indexOfClassInfo ( const char * name ) const
-$method=|int|indexOfClassInfo|const char *
+$prototypeV2=int indexOfClassInfo( const char * name ) const
 
-$prototype=int indexOfConstructor ( const char * constructor ) const
-$method=|int|indexOfConstructor|const char *
+$prototypeV2=int indexOfConstructor( const char * constructor ) const
 
-$prototype=int indexOfEnumerator ( const char * name ) const
-$method=|int|indexOfEnumerator|const char *
+$prototypeV2=int indexOfEnumerator( const char * name ) const
 
-$prototype=int indexOfMethod ( const char * method ) const
-$method=|int|indexOfMethod|const char *
+$prototypeV2=int indexOfMethod( const char * method ) const
 
-$prototype=int indexOfProperty ( const char * name ) const
-$method=|int|indexOfProperty|const char *
+$prototypeV2=int indexOfProperty( const char * name ) const
 
-$prototype=int indexOfSignal ( const char * signal ) const
-$method=|int|indexOfSignal|const char *
+$prototypeV2=int indexOfSignal( const char * signal ) const
 
-$prototype=int indexOfSlot ( const char * slot ) const
-$method=|int|indexOfSlot|const char *
+$prototypeV2=int indexOfSlot( const char * slot ) const
 
-$prototype=QMetaMethod method ( int index ) const
-$method=|QMetaMethod|method|int
+$prototypeV2=QMetaMethod method( int index ) const
 
 $prototypeV2=int methodCount() const
 
@@ -87,23 +75,20 @@ $prototype=QObject * newInstance ( QGenericArgument val0 = QGenericArgument( 0 )
 %% TODO: implementar
 %% $method=|QObject *|newInstance|QGenericArgument=QGenericArgument( 0 ),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument(),QGenericArgument=QGenericArgument()
 
-$prototype=QMetaProperty property ( int index ) const
-$method=|QMetaProperty|property|int
+$prototypeV2=QMetaProperty property( int index ) const
 
 $prototypeV2=int propertyCount() const
 
 $prototypeV2=int propertyOffset() const
 
-$prototype=const QMetaObject * superClass () const
-$method=|const QMetaObject *|superClass|
+$prototypeV2=const QMetaObject * superClass() const
 
 $prototypeV2=QMetaProperty userProperty() const
 
 $prototype=static bool checkConnectArgs ( const char * signal, const char * method )
 $staticMethod=|bool|checkConnectArgs|const char *,const char *
 
-$prototype=static void connectSlotsByName ( QObject * object )
-$staticMethod=|void|connectSlotsByName|QObject *
+$prototypeV2=static void connectSlotsByName( QObject * object )
 
 $prototype=static bool invokeMethod ( QObject * obj, const char * member, Qt::ConnectionType type, QGenericReturnArgument ret, QGenericArgument val0 = QGenericArgument( 0 ), QGenericArgument val1 = QGenericArgument(), QGenericArgument val2 = QGenericArgument(), QGenericArgument val3 = QGenericArgument(), QGenericArgument val4 = QGenericArgument(), QGenericArgument val5 = QGenericArgument(), QGenericArgument val6 = QGenericArgument(), QGenericArgument val7 = QGenericArgument(), QGenericArgument val8 = QGenericArgument(), QGenericArgument val9 = QGenericArgument() )
 %% TODO: implementar
@@ -153,11 +138,9 @@ HB_FUNC_STATIC( QMETAOBJECT_INVOKEMETHOD )
 }
 $addMethod=invokeMethod
 
-$prototype=static QByteArray normalizedSignature ( const char * method )
-$staticMethod=|QByteArray|normalizedSignature|const char *
+$prototypeV2=static QByteArray normalizedSignature( const char * method )
 
-$prototype=static QByteArray normalizedType ( const char * type )
-$staticMethod=|QByteArray|normalizedType|const char *
+$prototypeV2=static QByteArray normalizedType( const char * type )
 
 $extraMethods
 

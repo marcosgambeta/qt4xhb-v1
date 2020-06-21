@@ -84,23 +84,17 @@ $method=|int|readRawData|char *,int
 
 $prototypeV2=void resetStatus()
 
-$prototype=void setByteOrder ( ByteOrder bo )
-$method=|void|setByteOrder|QDataStream::ByteOrder
+$prototypeV2=void setByteOrder( QDataStream::ByteOrder bo )
 
-$prototype=void setDevice ( QIODevice * d )
-$method=|void|setDevice|QIODevice *
+$prototypeV2=void setDevice( QIODevice * d )
 
-$prototype=void setFloatingPointPrecision ( FloatingPointPrecision precision )
-$method=|void|setFloatingPointPrecision|QDataStream::FloatingPointPrecision
+$prototypeV2=void setFloatingPointPrecision( QDataStream::FloatingPointPrecision precision )
 
-$prototype=void setStatus ( Status status )
-$method=|void|setStatus|QDataStream::Status
+$prototypeV2=void setStatus( QDataStream::Status status )
 
-$prototype=void setVersion ( int v )
-$method=|void|setVersion|int
+$prototypeV2=void setVersion( int v )
 
-$prototype=int skipRawData ( int len )
-$method=|int|skipRawData|int
+$prototypeV2=int skipRawData( int len )
 
 $prototypeV2=QDataStream::Status status() const
 

@@ -28,14 +28,11 @@ $includes
 $prototype=static int registerTypedef(const char *typeName, int aliasId)
 $staticMethod=|int|registerTypedef|const char *,int
 
-$prototype=static int type(const char *typeName)
-$staticMethod=|int|type|const char *
+$prototypeV2=static int type( const char * typeName )
 
-$prototype=static const char *typeName(int type)
-$staticMethod=|const char *|typeName|int
+$prototypeV2=static const char * typeName( int type )
 
-$prototype=static bool isRegistered(int type)
-$staticMethod=|bool|isRegistered|int
+$prototypeV2=static bool isRegistered( int type )
 
 $prototype=static void *construct(int type, const void *copy = 0)
 $staticMethod=|void *|construct|int,const void *=0
@@ -43,8 +40,7 @@ $staticMethod=|void *|construct|int,const void *=0
 $prototype=static void destroy(int type, void *data)
 $staticMethod=|void|destroy|int,void *
 
-$prototype=static void unregisterType(const char *typeName)
-$staticMethod=|void|unregisterType|const char *
+$prototypeV2=static void unregisterType( const char * typeName )
 
 $prototype=static bool save(QDataStream &stream, int type, const void *data)
 $staticMethod=|bool|save|QDataStream &,int,const void *

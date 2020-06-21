@@ -30,36 +30,27 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=const char *name() const
-$method=|const char *|name|
+$prototypeV2=const char * name() const
 
 $prototypeV2=bool isFlag() const
 
 $prototypeV2=int keyCount() const
 
-$prototype=const char *key(int index) const
-$method=|const char *|key|int
+$prototypeV2=const char * key( int index ) const
 
-$prototype=int value(int index) const
-$method=|int|value|int
+$prototypeV2=int value( int index ) const
 
-$prototype=const char *scope() const
-$method=|const char *|scope|
+$prototypeV2=const char * scope() const
 
-$prototype=int keyToValue(const char *key) const
-$method=|int|keyToValue|const char *
+$prototypeV2=int keyToValue( const char * key ) const
 
-$prototype=const char* valueToKey(int value) const
-$method=|const char *|valueToKey|int
+$prototypeV2=const char * valueToKey( int value ) const
 
-$prototype=int keysToValue(const char * keys) const
-$method=|int|keysToValue|const char *
+$prototypeV2=int keysToValue( const char * keys ) const
 
-$prototype=QByteArray valueToKeys(int value) const
-$method=|QByteArray|valueToKeys|int
+$prototypeV2=QByteArray valueToKeys( int value ) const
 
-$prototype=const QMetaObject *enclosingMetaObject() const
-$method=|const QMetaObject *|enclosingMetaObject|
+$prototypeV2=const QMetaObject * enclosingMetaObject() const
 
 $prototypeV2=bool isValid() const
 

@@ -63,17 +63,13 @@ $prototypeV2=int left() const
 
 $prototypeV2=int right() const
 
-$prototype=void setBottom ( int bottom )
-$method=|void|setBottom|int
+$prototypeV2=void setBottom( int bottom )
 
-$prototype=void setLeft ( int left )
-$method=|void|setLeft|int
+$prototypeV2=void setLeft( int left )
 
-$prototype=void setRight ( int right )
-$method=|void|setRight|int
+$prototypeV2=void setRight( int right )
 
-$prototype=void setTop ( int Top )
-$method=|void|setTop|int
+$prototypeV2=void setTop( int Top )
 
 $prototypeV2=int top() const
 

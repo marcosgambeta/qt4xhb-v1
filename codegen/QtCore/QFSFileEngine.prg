@@ -109,17 +109,13 @@ $prototypeV2=virtual bool caseSensitive() const
 
 $prototypeV2=virtual bool close()
 
-$prototype=virtual bool copy ( const QString & copyName )
-$virtualMethod=|bool|copy|const QString &
+$prototypeV2=virtual bool copy( const QString & copyName )
 
-$prototype=virtual FileFlags fileFlags ( FileFlags type ) const
-$virtualMethod=|QAbstractFileEngine::FileFlags|fileFlags|QAbstractFileEngine::FileFlags
+$prototypeV2=virtual QAbstractFileEngine::FileFlags fileFlags( QAbstractFileEngine::FileFlags type ) const
 
-$prototype=virtual QString fileName ( FileName file ) const
-$virtualMethod=|QString|fileName|QAbstractFileEngine::FileName
+$prototypeV2=virtual QString fileName( QAbstractFileEngine::FileName file ) const
 
-$prototype=virtual QDateTime fileTime ( FileTime time ) const
-$virtualMethod=|QDateTime|fileTime|QAbstractFileEngine::FileTime
+$prototypeV2=virtual QDateTime fileTime( QAbstractFileEngine::FileTime time ) const
 
 $prototypeV2=virtual bool flush()
 
@@ -129,17 +125,14 @@ $prototypeV2=virtual bool isRelativePath() const
 
 $prototypeV2=virtual bool isSequential() const
 
-$prototype=virtual bool link ( const QString & newName )
-$virtualMethod=|bool|link|const QString &
+$prototypeV2=virtual bool link( const QString & newName )
 
 $prototype=virtual bool mkdir ( const QString & name, bool createParentDirectories ) const
 $virtualMethod=|bool|mkdir|const QString &,bool
 
-$prototype=virtual QString owner ( FileOwner own ) const
-$virtualMethod=|QString|owner|QAbstractFileEngine::FileOwner
+$prototypeV2=virtual QString owner( QAbstractFileEngine::FileOwner own ) const
 
-$prototype=virtual uint ownerId ( FileOwner own ) const
-$virtualMethod=|uint|ownerId|QAbstractFileEngine::FileOwner
+$prototypeV2=virtual uint ownerId( QAbstractFileEngine::FileOwner own ) const
 
 $prototypeV2=virtual qint64 pos() const
 
@@ -151,8 +144,7 @@ $virtualMethod=|qint64|readLine|char *,qint64
 
 $prototypeV2=virtual bool remove()
 
-$prototype=virtual bool rename ( const QString & newName )
-$virtualMethod=|bool|rename|const QString &
+$prototypeV2=virtual bool rename( const QString & newName )
 
 $prototype=virtual bool rmdir ( const QString & name, bool recurseParentDirectories ) const
 $virtualMethod=|bool|rmdir|const QString &,bool
@@ -160,19 +152,15 @@ $virtualMethod=|bool|rmdir|const QString &,bool
 $prototype=virtual bool seek ( qint64 pos )
 $virtualMethod=|bool|seek|qint64
 
-$prototype=virtual void setFileName ( const QString & file )
-$virtualMethod=|void|setFileName|const QString &
+$prototypeV2=virtual void setFileName( const QString & file )
 
-$prototype=virtual bool setPermissions ( uint perms )
-$virtualMethod=|bool|setPermissions|uint
+$prototypeV2=virtual bool setPermissions( uint perms )
 
-$prototype=virtual bool setSize ( qint64 size )
-$virtualMethod=|bool|setSize|qint64
+$prototypeV2=virtual bool setSize( qint64 size )
 
 $prototypeV2=virtual qint64 size() const
 
-$prototype=virtual bool supportsExtension ( Extension extension ) const
-$virtualMethod=|bool|supportsExtension|QAbstractFileEngine::Extension
+$prototypeV2=virtual bool supportsExtension( QAbstractFileEngine::Extension extension ) const
 
 $prototype=virtual qint64 write ( const char * data, qint64 len )
 $virtualMethod=|qint64|write|const char *,qint64
@@ -186,8 +174,7 @@ $prototypeV2=static QString homePath()
 
 $prototypeV2=static QString rootPath()
 
-$prototype=static bool setCurrentPath ( const QString & path )
-$staticMethod=|bool|setCurrentPath|const QString &
+$prototypeV2=static bool setCurrentPath( const QString & path )
 
 $prototypeV2=static QString tempPath()
 

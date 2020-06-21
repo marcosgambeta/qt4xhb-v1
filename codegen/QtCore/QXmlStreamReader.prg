@@ -207,14 +207,11 @@ $prototypeV2=QXmlStreamReader::TokenType readNext()
 
 $prototypeV2=bool readNextStartElement()
 
-$prototype=void setDevice(QIODevice * device)
-$method=|void|setDevice|QIODevice *
+$prototypeV2=void setDevice( QIODevice * device )
 
-$prototype=void setEntityResolver(QXmlStreamEntityResolver * resolver)
-$method=|void|setEntityResolver|QXmlStreamEntityResolver *
+$prototypeV2=void setEntityResolver( QXmlStreamEntityResolver * resolver )
 
-$prototype=void setNamespaceProcessing(bool)
-$method=|void|setNamespaceProcessing|bool
+$prototypeV2=void setNamespaceProcessing( bool )
 
 $prototypeV2=void skipCurrentElement()
 

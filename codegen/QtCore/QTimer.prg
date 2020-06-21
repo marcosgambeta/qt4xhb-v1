@@ -38,11 +38,9 @@ $prototypeV2=bool isActive() const
 
 $prototypeV2=bool isSingleShot() const
 
-$prototype=void setInterval ( int msec )
-$method=|void|setInterval|int
+$prototypeV2=void setInterval( int msec )
 
-$prototype=void setSingleShot ( bool singleShot )
-$method=|void|setSingleShot|bool
+$prototypeV2=void setSingleShot( bool singleShot )
 
 $prototypeV2=int timerId() const
 

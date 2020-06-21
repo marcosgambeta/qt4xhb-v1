@@ -59,21 +59,17 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void addPath ( const QString & path )
-$method=|void|addPath|const QString &
+$prototypeV2=void addPath( const QString & path )
 
-$prototype=void addPaths ( const QStringList & paths )
-$method=|void|addPaths|const QStringList &
+$prototypeV2=void addPaths( const QStringList & paths )
 
 $prototypeV2=QStringList directories() const
 
 $prototypeV2=QStringList files() const
 
-$prototype=void removePath ( const QString & path )
-$method=|void|removePath|const QString &
+$prototypeV2=void removePath( const QString & path )
 
-$prototype=void removePaths ( const QStringList & paths )
-$method=|void|removePaths|const QStringList &
+$prototypeV2=void removePaths( const QStringList & paths )
 
 $beginSignals
 $signal=|directoryChanged(QString)

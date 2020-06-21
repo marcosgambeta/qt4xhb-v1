@@ -63,11 +63,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QSizeF boundedTo ( const QSizeF & otherSize ) const
-$method=|QSizeF|boundedTo|const QSizeF &
+$prototypeV2=QSizeF boundedTo( const QSizeF & otherSize ) const
 
-$prototype=QSizeF expandedTo ( const QSizeF & otherSize ) const
-$method=|QSizeF|expandedTo|const QSizeF &
+$prototypeV2=QSizeF expandedTo( const QSizeF & otherSize ) const
 
 $prototypeV2=qreal height() const
 
@@ -105,11 +103,9 @@ HB_FUNC_STATIC( QSIZEF_SCALE )
 }
 $addMethod=scale
 
-$prototype=void setHeight ( qreal height )
-$method=|void|setHeight|qreal
+$prototypeV2=void setHeight( qreal height )
 
-$prototype=void setWidth ( qreal width )
-$method=|void|setWidth|qreal
+$prototypeV2=void setWidth( qreal width )
 
 $prototypeV2=QSize toSize() const
 

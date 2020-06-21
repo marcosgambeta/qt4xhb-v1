@@ -331,8 +331,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool canConvert ( Type t ) const
-$method=|bool|canConvert|QVariant::Type
+$prototypeV2=bool canConvert( QVariant::Type t ) const
 
 %% $prototype=bool canConvert ( Type t ) const
 %% $method=|bool|canConvert,canConvert1|QVariant::Type
@@ -363,8 +362,7 @@ $method=|bool|canConvert|QVariant::Type
 
 $prototypeV2=void clear()
 
-$prototype=bool convert ( Type t )
-$method=|bool|convert|QVariant::Type
+$prototypeV2=bool convert( QVariant::Type t )
 
 $prototypeV2=bool isNull() const
 
@@ -424,11 +422,9 @@ $prototypeV2=const char * typeName() const
 
 $prototypeV2=int userType() const
 
-$prototype=static Type nameToType ( const char * name )
-$staticMethod=|QVariant::Type|nameToType|const char *
+$prototypeV2=static QVariant::Type nameToType( const char * name )
 
-$prototype=static const char * typeToName ( Type typ )
-$staticMethod=|const char *|typeToName|QVariant::Type
+$prototypeV2=static const char * typeToName( QVariant::Type typ )
 
 $extraMethods
 

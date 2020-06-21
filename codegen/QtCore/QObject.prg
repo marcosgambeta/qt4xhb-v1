@@ -194,8 +194,7 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=bool blockSignals ( bool block )
-$method=|bool|blockSignals|bool
+$prototypeV2=bool blockSignals( bool block )
 
 $prototypeV2=const QObjectList & children() const
 
@@ -205,8 +204,7 @@ $prototypeV2=void dumpObjectTree()
 
 $prototypeV2=QList<QByteArray> dynamicPropertyNames() const
 
-$prototype=virtual bool event ( QEvent * e )
-$virtualMethod=|bool|event|QEvent *
+$prototypeV2=virtual bool event( QEvent * e )
 
 $prototype=virtual bool eventFilter ( QObject * watched, QEvent * event )
 $virtualMethod=|bool|eventFilter|QObject *,QEvent *
@@ -242,45 +240,36 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
 }
 $addMethod=findChildren
 
-$prototype=bool inherits ( const char * className ) const
-$method=|bool|inherits|const char *
+$prototypeV2=bool inherits( const char * className ) const
 
-$prototype=void installEventFilter ( QObject * filterObj )
-$method=|void|installEventFilter|QObject *
+$prototypeV2=void installEventFilter( QObject * filterObj )
 
 $prototypeV2=bool isWidgetType() const
 
-$prototype=void killTimer ( int id )
-$method=|void|killTimer|int
+$prototypeV2=void killTimer( int id )
 
 $prototypeV2=virtual const QMetaObject * metaObject() const
 
-$prototype=void moveToThread ( QThread * targetThread )
-$method=|void|moveToThread|QThread *
+$prototypeV2=void moveToThread( QThread * targetThread )
 
 $prototypeV2=QString objectName() const
 
 $prototypeV2=QObject * parent() const
 
-$prototype=QVariant property ( const char * name ) const
-$method=|QVariant|property|const char *
+$prototypeV2=QVariant property( const char * name ) const
 
-$prototype=void removeEventFilter ( QObject * obj )
-$method=|void|removeEventFilter|QObject *
+$prototypeV2=void removeEventFilter( QObject * obj )
 
-$prototype=void setObjectName ( const QString & name )
-$method=|void|setObjectName|const QString &
+$prototypeV2=void setObjectName( const QString & name )
 
-$prototype=void setParent ( QObject * parent )
-$method=|void|setParent|QObject *
+$prototypeV2=void setParent( QObject * parent )
 
 $prototype=bool setProperty ( const char * name, const QVariant & value )
 $method=|bool|setProperty|const char *,const QVariant &
 
 $prototypeV2=bool signalsBlocked() const
 
-$prototype=int startTimer ( int interval )
-$method=|int|startTimer|int
+$prototypeV2=int startTimer( int interval )
 
 $prototypeV2=QThread * thread() const
 

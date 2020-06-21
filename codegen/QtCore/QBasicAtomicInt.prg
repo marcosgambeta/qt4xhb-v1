@@ -43,29 +43,21 @@ $method=|bool|testAndSetRelease|int,int
 $prototype=bool testAndSetOrdered(int expectedValue, int newValue)
 $method=|bool|testAndSetOrdered|int,int
 
-$prototype=int fetchAndStoreRelaxed(int newValue)
-$method=|int|fetchAndStoreRelaxed|int
+$prototypeV2=int fetchAndStoreRelaxed( int newValue )
 
-$prototype=int fetchAndStoreAcquire(int newValue)
-$method=|int|fetchAndStoreAcquire|int
+$prototypeV2=int fetchAndStoreAcquire( int newValue )
 
-$prototype=int fetchAndStoreRelease(int newValue)
-$method=|int|fetchAndStoreRelease|int
+$prototypeV2=int fetchAndStoreRelease( int newValue )
 
-$prototype=int fetchAndStoreOrdered(int newValue)
-$method=|int|fetchAndStoreOrdered|int
+$prototypeV2=int fetchAndStoreOrdered( int newValue )
 
-$prototype=int fetchAndAddRelaxed(int valueToAdd)
-$method=|int|fetchAndAddRelaxed|int
+$prototypeV2=int fetchAndAddRelaxed( int valueToAdd )
 
-$prototype=int fetchAndAddAcquire(int valueToAdd)
-$method=|int|fetchAndAddAcquire|int
+$prototypeV2=int fetchAndAddAcquire( int valueToAdd )
 
-$prototype=int fetchAndAddRelease(int valueToAdd)
-$method=|int|fetchAndAddRelease|int
+$prototypeV2=int fetchAndAddRelease( int valueToAdd )
 
-$prototype=int fetchAndAddOrdered(int valueToAdd)
-$method=|int|fetchAndAddOrdered|int
+$prototypeV2=int fetchAndAddOrdered( int valueToAdd )
 
 $prototypeV2=static bool isReferenceCountingNative()
 

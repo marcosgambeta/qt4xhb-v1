@@ -57,12 +57,10 @@ $deleteMethod
 
 $prototypeV2=QObject * senderObject() const
 
-$prototype=void setSenderObject(QObject *sender)
-$method=|void|setSenderObject|QObject *
+$prototypeV2=void setSenderObject( QObject * sender )
 
 $prototypeV2=QByteArray signal() const
 
-$prototype=void setSignal(const QByteArray &signal)
-$method=|void|setSignal|const QByteArray &
+$prototypeV2=void setSignal( const QByteArray & signal )
 
 #pragma ENDDUMP
