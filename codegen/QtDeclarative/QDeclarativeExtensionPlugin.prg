@@ -28,7 +28,6 @@ $includes
 $prototype=virtual void initializeEngine ( QDeclarativeEngine * engine, const char * uri )
 $virtualMethod=|void|initializeEngine|QDeclarativeEngine *,const char *
 
-$prototype=virtual void registerTypes ( const char * uri ) = 0
-$virtualMethod=|void|registerTypes|const char *
+$prototypeV2=virtual void registerTypes( const char * uri ) = 0
 
 #pragma ENDDUMP

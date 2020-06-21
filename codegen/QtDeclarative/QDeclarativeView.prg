@@ -74,11 +74,9 @@ $prototypeV2=QDeclarativeContext * rootContext() const
 
 $prototypeV2=QGraphicsObject * rootObject() const
 
-$prototype=void setResizeMode ( ResizeMode )
-$method=|void|setResizeMode|QDeclarativeView::ResizeMode
+$prototypeV2=void setResizeMode( QDeclarativeView::ResizeMode )
 
-$prototype=void setSource ( const QUrl & url )
-$method=|void|setSource|const QUrl &
+$prototypeV2=void setSource( const QUrl & url )
 
 $prototypeV2=QUrl source() const
 

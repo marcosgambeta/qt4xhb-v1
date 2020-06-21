@@ -55,23 +55,17 @@ $method=|QScriptValue|mapToItem|const QScriptValue &,qreal,qreal
 
 $prototypeV2=QDeclarativeItem * parentItem() const
 
-$prototype=void setBaselineOffset ( qreal )
-$method=|void|setBaselineOffset|qreal
+$prototypeV2=void setBaselineOffset( qreal )
 
-$prototype=void setClip ( bool )
-$method=|void|setClip|bool
+$prototypeV2=void setClip( bool )
 
-$prototype=void setKeepMouseGrab ( bool keep )
-$method=|void|setKeepMouseGrab|bool
+$prototypeV2=void setKeepMouseGrab( bool keep )
 
-$prototype=void setParentItem ( QDeclarativeItem * parent )
-$method=|void|setParentItem|QDeclarativeItem *
+$prototypeV2=void setParentItem( QDeclarativeItem * parent )
 
-$prototype=void setSmooth ( bool smooth )
-$method=|void|setSmooth|bool
+$prototypeV2=void setSmooth( bool smooth )
 
-$prototype=void setTransformOrigin ( TransformOrigin origin )
-$method=|void|setTransformOrigin|QDeclarativeItem::TransformOrigin
+$prototypeV2=void setTransformOrigin ( QDeclarativeItem::TransformOrigin origin )
 
 $prototypeV2=bool smooth() const
 

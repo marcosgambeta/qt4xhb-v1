@@ -27,8 +27,7 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual void setTarget ( const QDeclarativeProperty & property ) = 0
-$virtualMethod=|void|setTarget|const QDeclarativeProperty &
+$prototypeV2=virtual void setTarget( const QDeclarativeProperty & property ) = 0
 
 $extraMethods
 

@@ -32,11 +32,9 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=void clear ( const QString & key )
-$method=|void|clear|const QString &
+$prototypeV2=void clear( const QString & key )
 
-$prototype=bool contains ( const QString & key ) const
-$method=|bool|contains|const QString &
+$prototypeV2=bool contains( const QString & key ) const
 
 $prototypeV2=int count() const
 
@@ -49,8 +47,7 @@ $prototypeV2=QStringList keys() const
 
 $prototypeV2=int size() const
 
-$prototype=QVariant value ( const QString & key ) const
-$method=|QVariant|value|const QString &
+$prototypeV2=QVariant value( const QString & key ) const
 
 $beginSignals
 $signal=|valueChanged(QString,QVariant)

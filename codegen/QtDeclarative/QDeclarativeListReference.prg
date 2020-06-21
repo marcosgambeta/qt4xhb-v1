@@ -53,11 +53,9 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW )
 }
 $addMethod=new
 
-$prototype=bool append ( QObject * object ) const
-$method=|bool|append|QObject *
+$prototypeV2=bool append( QObject * object ) const
 
-$prototype=QObject * at ( int index ) const
-$method=|QObject *|at|int
+$prototypeV2=QObject * at( int index ) const
 
 $prototypeV2=bool canAppend() const
 
@@ -73,8 +71,7 @@ $prototypeV2=int count() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=const QMetaObject * listElementType () const
-$method=|const QMetaObject *|listElementType|
+$prototypeV2=const QMetaObject * listElementType() const
 
 $prototypeV2=QObject * object() const
 

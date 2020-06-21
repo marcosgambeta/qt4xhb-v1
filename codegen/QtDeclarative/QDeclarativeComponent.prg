@@ -75,8 +75,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=virtual QObject * beginCreate ( QDeclarativeContext * context )
-$virtualMethod=|QObject *|beginCreate|QDeclarativeContext *
+$prototypeV2=virtual QObject * beginCreate( QDeclarativeContext * context )
 
 $prototypeV2=virtual void completeCreate()
 
@@ -95,8 +94,7 @@ $prototypeV2=bool isNull() const
 
 $prototypeV2=bool isReady() const
 
-$prototype=void loadUrl ( const QUrl & url )
-$method=|void|loadUrl|const QUrl &
+$prototypeV2=void loadUrl( const QUrl & url )
 
 $prototypeV2=qreal progress() const
 

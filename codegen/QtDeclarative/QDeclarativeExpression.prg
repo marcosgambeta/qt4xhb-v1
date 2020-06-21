@@ -81,11 +81,9 @@ $prototypeV2=bool notifyOnValueChanged() const
 
 $prototypeV2=QObject * scopeObject() const
 
-$prototype=void setExpression ( const QString & expression )
-$method=|void|setExpression|const QString &
+$prototypeV2=void setExpression( const QString & expression )
 
-$prototype=void setNotifyOnValueChanged ( bool notifyOnChange )
-$method=|void|setNotifyOnValueChanged|bool
+$prototypeV2=void setNotifyOnValueChanged( bool notifyOnChange )
 
 $prototype=void setSourceLocation ( const QString & url, int line )
 $method=|void|setSourceLocation|const QString &,int
