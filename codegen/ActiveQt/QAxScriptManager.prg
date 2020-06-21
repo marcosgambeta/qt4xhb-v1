@@ -121,8 +121,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_LOAD )
 }
 $addMethod=load
 
-$prototype=QAxScript * script ( const QString & name ) const
-$method=|QAxScript *|script|const QString &
+$prototypeV2=QAxScript * script( const QString & name ) const
 
 $prototypeV2=QStringList scriptNames() const
 

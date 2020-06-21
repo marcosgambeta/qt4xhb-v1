@@ -38,8 +38,7 @@ $virtualMethod=|bool|readData|QIODevice *,const QString &
 $prototype=void reportError ( int code, const QString & src, const QString & desc, const QString & context = QString() )
 $method=|void|reportError|int,const QString &,const QString &,const QString &=QString()
 
-$prototype=virtual bool writeData ( QIODevice * sink )
-$virtualMethod=|bool|writeData|QIODevice *
+$prototypeV2=virtual bool writeData( QIODevice * sink )
 
 $extraMethods
 
