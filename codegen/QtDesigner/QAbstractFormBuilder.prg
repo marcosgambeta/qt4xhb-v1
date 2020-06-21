@@ -36,8 +36,7 @@ $virtualMethod=|QWidget *|load|QIODevice *,QWidget *=0
 $prototype=virtual void save ( QIODevice * device, QWidget * widget )
 $virtualMethod=|void|save|QIODevice *,QWidget *
 
-$prototype=void setWorkingDirectory ( const QDir & directory )
-$method=|void|setWorkingDirectory|const QDir &
+$prototypeV2=void setWorkingDirectory( const QDir & directory )
 
 $prototypeV2=QDir workingDirectory() const
 

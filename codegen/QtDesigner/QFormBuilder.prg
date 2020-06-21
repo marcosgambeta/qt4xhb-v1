@@ -30,8 +30,7 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=void addPluginPath ( const QString & pluginPath )
-$method=|void|addPluginPath|const QString &
+$prototypeV2=void addPluginPath( const QString & pluginPath )
 
 $prototypeV2=void clearPluginPaths()
 
@@ -39,7 +38,6 @@ $prototypeV2=QList<QDesignerCustomWidgetInterface *> customWidgets() const
 
 $prototypeV2=QStringList pluginPaths() const
 
-$prototype=void setPluginPath ( const QStringList & pluginPaths )
-$method=|void|setPluginPath|const QStringList &
+$prototypeV2=void setPluginPath( const QStringList & pluginPaths )
 
 #pragma ENDDUMP

@@ -39,14 +39,12 @@ $prototypeV2=virtual bool isReadOnly() const = 0
 
 $prototypeV2=virtual QObject * object() const = 0
 
-$prototype=virtual void setObject ( QObject * object ) = 0
-$virtualMethod=|void|setObject|QObject *
+$prototypeV2=virtual void setObject( QObject * object ) = 0
 
 $prototype=virtual void setPropertyValue ( const QString & name, const QVariant & value, bool changed = true ) = 0
 $virtualMethod=|void|setPropertyValue|const QString &,const QVariant &,bool=true
 
-$prototype=virtual void setReadOnly ( bool readOnly ) = 0
-$virtualMethod=|void|setReadOnly|bool
+$prototypeV2=virtual void setReadOnly( bool readOnly ) = 0
 
 $beginSignals
 $signal=|propertyChanged(QString,QVariant)
