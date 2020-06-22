@@ -156,8 +156,7 @@ $addMethod=querySubObject
 
 $prototypeV2=bool setControl( const QString & )
 
-$prototype=virtual void setPropertyWritable ( const char * prop, bool ok )
-$virtualMethod=|void|setPropertyWritable|const char *,bool
+$prototypeV2=virtual void setPropertyWritable( const char * prop, bool ok )
 
 $prototypeV2=QStringList verbs() const
 

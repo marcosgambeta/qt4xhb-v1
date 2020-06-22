@@ -47,18 +47,15 @@ $prototypeV2=virtual bool isService() const
 
 $prototypeV2=virtual const QMetaObject * metaObject( const QString & key ) const = 0
 
-$prototype=virtual void registerClass ( const QString & key, QSettings * settings ) const
-$virtualMethod=|void|registerClass|const QString &,QSettings *
+$prototypeV2=virtual void registerClass( const QString & key, QSettings * settings ) const
 
 $prototypeV2=virtual bool stayTopLevel( const QString & key ) const
 
 $prototypeV2=virtual QUuid typeLibID() const
 
-$prototype=virtual void unregisterClass ( const QString & key, QSettings * settings ) const
-$virtualMethod=|void|unregisterClass|const QString &,QSettings *
+$prototypeV2=virtual void unregisterClass( const QString & key, QSettings * settings ) const
 
-$prototype=virtual bool validateLicenseKey ( const QString & key, const QString & licenseKey ) const
-$virtualMethod=|bool|validateLicenseKey|const QString &,const QString &
+$prototypeV2=virtual bool validateLicenseKey( const QString & key, const QString & licenseKey ) const
 
 $prototypeV2=static bool isServer()
 
@@ -68,7 +65,7 @@ $prototypeV2=static QString serverDirPath()
 
 $prototypeV2=static QString serverFilePath()
 
-$prototype=static bool startServer ( ServerType type = MultipleInstances )
+$prototype=static bool startServer( QAxFactory::ServerType type = QAxFactory::MultipleInstances )
 $staticMethod=|bool|startServer|QAxFactory::ServerType=QAxFactory::MultipleInstances
 
 $prototypeV2=static bool stopServer()

@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QAXSCRIPT_CALL )
 }
 $addMethod=call
 
-$prototype=QStringList functions ( FunctionFlags flags = FunctionNames ) const
+$prototype=QStringList functions( QAxScript::FunctionFlags flags = QAxScript::FunctionNames ) const
 $method=|QStringList|functions|QAxScript::FunctionFlags=QAxScript::FunctionNames
 
 $prototype=bool load ( const QString & code, const QString & language = QString() )
