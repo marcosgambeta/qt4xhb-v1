@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_CALL )
 }
 
 /*
-QStringList functions ( QAxScript::FunctionFlags flags = QAxScript::FunctionNames ) const
+QStringList functions( QAxScript::FunctionFlags flags = QAxScript::FunctionNames ) const
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_FUNCTIONS )
 {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_LOAD )
 }
 
 /*
-QAxScript * script ( const QString & name ) const
+QAxScript * script( const QString & name ) const
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPT )
 {

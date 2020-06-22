@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QAXBASE_ISNULL )
 }
 
 /*
-virtual bool propertyWritable ( const char * prop ) const
+virtual bool propertyWritable( const char * prop ) const
 */
 HB_FUNC_STATIC( QAXBASE_PROPERTYWRITABLE )
 {
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QAXBASE_QUERYSUBOBJECT )
 }
 
 /*
-bool setControl ( const QString & )
+bool setControl( const QString & )
 */
 HB_FUNC_STATIC( QAXBASE_SETCONTROL )
 {
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QAXBASE_SETCONTROL )
 }
 
 /*
-virtual void setPropertyWritable ( const char * prop, bool ok )
+virtual void setPropertyWritable( const char * prop, bool ok )
 */
 HB_FUNC_STATIC( QAXBASE_SETPROPERTYWRITABLE )
 {

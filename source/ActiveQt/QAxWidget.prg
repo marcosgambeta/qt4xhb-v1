@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QAXWIDGET_CREATEAGGREGATE )
 }
 
 /*
-bool doVerb ( const QString & verb )
+bool doVerb( const QString & verb )
 */
 HB_FUNC_STATIC( QAXWIDGET_DOVERB )
 {
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QAXWIDGET_ISNULL )
 }
 
 /*
-virtual bool propertyWritable ( const char * prop ) const
+virtual bool propertyWritable( const char * prop ) const
 */
 HB_FUNC_STATIC( QAXWIDGET_PROPERTYWRITABLE )
 {
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QAXWIDGET_QUERYSUBOBJECT )
 }
 
 /*
-bool setControl ( const QString & )
+bool setControl( const QString & )
 */
 HB_FUNC_STATIC( QAXWIDGET_SETCONTROL )
 {
@@ -592,7 +592,7 @@ HB_FUNC_STATIC( QAXWIDGET_SETCONTROL )
 }
 
 /*
-virtual void setPropertyWritable ( const char * prop, bool ok )
+virtual void setPropertyWritable( const char * prop, bool ok )
 */
 HB_FUNC_STATIC( QAXWIDGET_SETPROPERTYWRITABLE )
 {

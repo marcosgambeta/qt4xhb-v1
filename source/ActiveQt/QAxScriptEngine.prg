@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_DELETE )
 }
 
 /*
-void addItem ( const QString & name )
+void addItem( const QString & name )
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_ADDITEM )
 {
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_SCRIPTLANGUAGE )
 }
 
 /*
-void setState ( State st )
+void setState( QAxScriptEngine::State st )
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_SETSTATE )
 {
