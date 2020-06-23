@@ -36,7 +36,7 @@ $prototypeV2=void registerEditor( QVariant::Type type, QItemEditorCreatorBase * 
 
 $prototypeV2=virtual QByteArray valuePropertyName( QVariant::Type type ) const
 
-$prototypeV2=static const QItemEditorFactory * defaultFactory ()
+$prototypeV2=static const QItemEditorFactory * defaultFactory()
 
 $prototypeV2=static void setDefaultFactory( QItemEditorFactory * factory )
 
