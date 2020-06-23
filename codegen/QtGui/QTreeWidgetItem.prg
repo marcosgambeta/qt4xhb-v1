@@ -221,7 +221,7 @@ $prototypeV2=int type() const
 
 $prototypeV2=QString whatsThis( int column ) const
 
-$prototypeV2=prototype=virtual void write( QDataStream & out ) const
+$prototypeV2=virtual void write( QDataStream & out ) const
 
 $extraMethods
 
