@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QVALIDATOR_LOCALE )
 }
 
 /*
-void setLocale ( const QLocale & locale )
+void setLocale( const QLocale & locale )
 */
 HB_FUNC_STATIC( QVALIDATOR_SETLOCALE )
 {

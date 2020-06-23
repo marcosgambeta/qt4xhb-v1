@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QTEXTTABLECELL_ROWSPAN )
 }
 
 /*
-void setFormat ( const QTextCharFormat & format )
+void setFormat( const QTextCharFormat & format )
 */
 HB_FUNC_STATIC( QTEXTTABLECELL_SETFORMAT )
 {

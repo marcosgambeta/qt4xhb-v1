@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_RIGHTPADDING )
 }
 
 /*
-void setBottomPadding ( qreal padding )
+void setBottomPadding( qreal padding )
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETBOTTOMPADDING )
 {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETBOTTOMPADDING )
 }
 
 /*
-void setLeftPadding ( qreal padding )
+void setLeftPadding( qreal padding )
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETLEFTPADDING )
 {
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETLEFTPADDING )
 }
 
 /*
-void setPadding ( qreal padding )
+void setPadding( qreal padding )
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETPADDING )
 {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETPADDING )
 }
 
 /*
-void setRightPadding ( qreal padding )
+void setRightPadding( qreal padding )
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETRIGHTPADDING )
 {
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETRIGHTPADDING )
 }
 
 /*
-void setTopPadding ( qreal padding )
+void setTopPadding( qreal padding )
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETTOPPADDING )
 {

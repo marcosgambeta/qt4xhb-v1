@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_RIGHTMARGIN )
 }
 
 /*
-void setBorder ( qreal width )
+void setBorder( qreal width )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBORDER )
 {
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBORDER )
 }
 
 /*
-void setBorderBrush ( const QBrush & brush )
+void setBorderBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBORDERBRUSH )
 {
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBORDERBRUSH )
 }
 
 /*
-void setBorderStyle ( BorderStyle style )
+void setBorderStyle( QTextFrameFormat::BorderStyle style )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBORDERSTYLE )
 {
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBORDERSTYLE )
 }
 
 /*
-void setBottomMargin ( qreal margin )
+void setBottomMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBOTTOMMARGIN )
 {
@@ -546,7 +546,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETHEIGHT )
 }
 
 /*
-void setLeftMargin ( qreal margin )
+void setLeftMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETLEFTMARGIN )
 {
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETLEFTMARGIN )
 }
 
 /*
-void setMargin ( qreal margin )
+void setMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETMARGIN )
 {
@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETMARGIN )
 }
 
 /*
-void setPadding ( qreal width )
+void setPadding( qreal width )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPADDING )
 {
@@ -624,7 +624,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPADDING )
 }
 
 /*
-void setPageBreakPolicy ( PageBreakFlags policy )
+void setPageBreakPolicy( QTextFormat::PageBreakFlags policy )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPAGEBREAKPOLICY )
 {
@@ -650,7 +650,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPAGEBREAKPOLICY )
 }
 
 /*
-void setPosition ( Position policy )
+void setPosition( QTextFrameFormat::Position policy )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPOSITION )
 {
@@ -676,7 +676,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETPOSITION )
 }
 
 /*
-void setRightMargin ( qreal margin )
+void setRightMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETRIGHTMARGIN )
 {
@@ -702,7 +702,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETRIGHTMARGIN )
 }
 
 /*
-void setTopMargin ( qreal margin )
+void setTopMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETTOPMARGIN )
 {

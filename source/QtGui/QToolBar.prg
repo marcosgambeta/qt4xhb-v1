@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDSEPARATOR )
 }
 
 /*
-QAction * addWidget ( QWidget * widget )
+QAction * addWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QTOOLBAR_ADDWIDGET )
 {
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QTOOLBAR_ICONSIZE )
 }
 
 /*
-QAction * insertSeparator ( QAction * before )
+QAction * insertSeparator( QAction * before )
 */
 HB_FUNC_STATIC( QTOOLBAR_INSERTSEPARATOR )
 {
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QTOOLBAR_INSERTSEPARATOR )
 }
 
 /*
-QAction * insertWidget ( QAction * before, QWidget * widget )
+QAction * insertWidget( QAction * before, QWidget * widget )
 */
 HB_FUNC_STATIC( QTOOLBAR_INSERTWIDGET )
 {
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QTOOLBAR_INSERTWIDGET )
 }
 
 /*
-bool isAreaAllowed ( Qt::ToolBarArea area ) const
+bool isAreaAllowed( Qt::ToolBarArea area ) const
 */
 HB_FUNC_STATIC( QTOOLBAR_ISAREAALLOWED )
 {
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QTOOLBAR_ORIENTATION )
 }
 
 /*
-void setAllowedAreas ( Qt::ToolBarAreas areas )
+void setAllowedAreas( Qt::ToolBarAreas areas )
 */
 HB_FUNC_STATIC( QTOOLBAR_SETALLOWEDAREAS )
 {
@@ -614,7 +614,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETALLOWEDAREAS )
 }
 
 /*
-void setFloatable ( bool floatable )
+void setFloatable( bool floatable )
 */
 HB_FUNC_STATIC( QTOOLBAR_SETFLOATABLE )
 {
@@ -640,7 +640,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETFLOATABLE )
 }
 
 /*
-void setMovable ( bool movable )
+void setMovable( bool movable )
 */
 HB_FUNC_STATIC( QTOOLBAR_SETMOVABLE )
 {
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETMOVABLE )
 }
 
 /*
-void setOrientation ( Qt::Orientation orientation )
+void setOrientation( Qt::Orientation orientation )
 */
 HB_FUNC_STATIC( QTOOLBAR_SETORIENTATION )
 {
@@ -741,7 +741,7 @@ HB_FUNC_STATIC( QTOOLBAR_TOOLBUTTONSTYLE )
 }
 
 /*
-QWidget * widgetForAction ( QAction * action ) const
+QWidget * widgetForAction( QAction * action ) const
 */
 HB_FUNC_STATIC( QTOOLBAR_WIDGETFORACTION )
 {
@@ -766,7 +766,7 @@ HB_FUNC_STATIC( QTOOLBAR_WIDGETFORACTION )
 }
 
 /*
-void setIconSize ( const QSize & iconSize )
+void setIconSize( const QSize & iconSize )
 */
 HB_FUNC_STATIC( QTOOLBAR_SETICONSIZE )
 {
@@ -792,7 +792,7 @@ HB_FUNC_STATIC( QTOOLBAR_SETICONSIZE )
 }
 
 /*
-void setToolButtonStyle ( Qt::ToolButtonStyle toolButtonStyle )
+void setToolButtonStyle( Qt::ToolButtonStyle toolButtonStyle )
 */
 HB_FUNC_STATIC( QTOOLBAR_SETTOOLBUTTONSTYLE )
 {

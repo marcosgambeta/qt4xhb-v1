@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_NEW )
 }
 
 /*
-static qreal levelOfDetailFromTransform(const QTransform &worldTransform)
+static qreal levelOfDetailFromTransform( const QTransform & worldTransform )
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAILFROMTRANSFORM )
 {

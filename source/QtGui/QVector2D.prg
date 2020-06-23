@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QVECTOR2D_NORMALIZED )
 }
 
 /*
-void setX ( qreal x )
+void setX( qreal x )
 */
 HB_FUNC_STATIC( QVECTOR2D_SETX )
 {
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QVECTOR2D_SETX )
 }
 
 /*
-void setY ( qreal y )
+void setY( qreal y )
 */
 HB_FUNC_STATIC( QVECTOR2D_SETY )
 {
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QVECTOR2D_Y )
 }
 
 /*
-static qreal dotProduct ( const QVector2D & v1, const QVector2D & v2 )
+static qreal dotProduct( const QVector2D & v1, const QVector2D & v2 )
 */
 HB_FUNC_STATIC( QVECTOR2D_DOTPRODUCT )
 {

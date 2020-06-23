@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SETSUPPORTED )
 }
 
 /*
-bool supported ( QFontDatabase::WritingSystem writingSystem ) const
+bool supported( QFontDatabase::WritingSystem writingSystem ) const
 */
 HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SUPPORTED )
 {

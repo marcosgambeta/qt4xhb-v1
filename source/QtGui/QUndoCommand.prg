@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_DELETE )
 }
 
 /*
-const QUndoCommand * child ( int index ) const
+const QUndoCommand * child( int index ) const
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_CHILD )
 {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_ID )
 }
 
 /*
-virtual bool mergeWith ( const QUndoCommand * command )
+virtual bool mergeWith( const QUndoCommand * command )
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_MERGEWITH )
 {
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_REDO )
 }
 
 /*
-void setText ( const QString & text )
+void setText( const QString & text )
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_SETTEXT )
 {

@@ -883,7 +883,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTBLOCK )
 }
 
 /*
-void insertFragment ( const QTextDocumentFragment & fragment )
+void insertFragment( const QTextDocumentFragment & fragment )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTFRAGMENT )
 {
@@ -909,7 +909,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTFRAGMENT )
 }
 
 /*
-QTextFrame * insertFrame ( const QTextFrameFormat & format )
+QTextFrame * insertFrame( const QTextFrameFormat & format )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTFRAME )
 {
@@ -934,7 +934,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTFRAME )
 }
 
 /*
-void insertHtml ( const QString & html )
+void insertHtml( const QString & html )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTHTML )
 {
@@ -1200,7 +1200,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTTEXT )
 }
 
 /*
-bool isCopyOf ( const QTextCursor & other ) const
+bool isCopyOf( const QTextCursor & other ) const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ISCOPYOF )
 {
@@ -1298,7 +1298,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_KEEPPOSITIONONINSERT )
 }
 
 /*
-void mergeBlockCharFormat ( const QTextCharFormat & modifier )
+void mergeBlockCharFormat( const QTextCharFormat & modifier )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_MERGEBLOCKCHARFORMAT )
 {
@@ -1324,7 +1324,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_MERGEBLOCKCHARFORMAT )
 }
 
 /*
-void mergeBlockFormat ( const QTextBlockFormat & modifier )
+void mergeBlockFormat( const QTextBlockFormat & modifier )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_MERGEBLOCKFORMAT )
 {
@@ -1350,7 +1350,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_MERGEBLOCKFORMAT )
 }
 
 /*
-void mergeCharFormat ( const QTextCharFormat & modifier )
+void mergeCharFormat( const QTextCharFormat & modifier )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_MERGECHARFORMAT )
 {
@@ -1474,7 +1474,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_REMOVESELECTEDTEXT )
 }
 
 /*
-void select ( SelectionType selection )
+void select( QTextCursor::SelectionType selection )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SELECT )
 {
@@ -1631,7 +1631,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SELECTIONSTART )
 }
 
 /*
-void setBlockCharFormat ( const QTextCharFormat & format )
+void setBlockCharFormat( const QTextCharFormat & format )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETBLOCKCHARFORMAT )
 {
@@ -1657,7 +1657,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SETBLOCKCHARFORMAT )
 }
 
 /*
-void setBlockFormat ( const QTextBlockFormat & format )
+void setBlockFormat( const QTextBlockFormat & format )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETBLOCKFORMAT )
 {
@@ -1683,7 +1683,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SETBLOCKFORMAT )
 }
 
 /*
-void setCharFormat ( const QTextCharFormat & format )
+void setCharFormat( const QTextCharFormat & format )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETCHARFORMAT )
 {
@@ -1709,7 +1709,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SETCHARFORMAT )
 }
 
 /*
-void setKeepPositionOnInsert ( bool b )
+void setKeepPositionOnInsert( bool b )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETKEEPPOSITIONONINSERT )
 {
@@ -1761,7 +1761,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SETPOSITION )
 }
 
 /*
-void setVerticalMovementX ( int x )
+void setVerticalMovementX( int x )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETVERTICALMOVEMENTX )
 {
@@ -1787,7 +1787,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SETVERTICALMOVEMENTX )
 }
 
 /*
-void setVisualNavigation ( bool b )
+void setVisualNavigation( bool b )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETVISUALNAVIGATION )
 {

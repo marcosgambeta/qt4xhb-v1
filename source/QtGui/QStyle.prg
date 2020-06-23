@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QSTYLE_DRAWCONTROL )
 }
 
 /*
-virtual void drawItemPixmap ( QPainter * painter, const QRect & rectangle, int alignment, const QPixmap & pixmap ) const
+virtual void drawItemPixmap( QPainter * painter, const QRect & rectangle, int alignment, const QPixmap & pixmap ) const
 */
 HB_FUNC_STATIC( QSTYLE_DRAWITEMPIXMAP )
 {
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QSTYLE_DRAWPRIMITIVE )
 }
 
 /*
-virtual QPixmap generatedIconPixmap ( QIcon::Mode iconMode, const QPixmap & pixmap, const QStyleOption * option ) const = 0
+virtual QPixmap generatedIconPixmap( QIcon::Mode iconMode, const QPixmap & pixmap, const QStyleOption * option ) const = 0
 */
 HB_FUNC_STATIC( QSTYLE_GENERATEDICONPIXMAP )
 {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QSTYLE_HITTESTCOMPLEXCONTROL )
 }
 
 /*
-virtual QRect itemPixmapRect ( const QRect & rectangle, int alignment, const QPixmap & pixmap ) const
+virtual QRect itemPixmapRect( const QRect & rectangle, int alignment, const QPixmap & pixmap ) const
 */
 HB_FUNC_STATIC( QSTYLE_ITEMPIXMAPRECT )
 {
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QSTYLE_ITEMPIXMAPRECT )
 }
 
 /*
-virtual QRect itemTextRect ( const QFontMetrics & metrics, const QRect & rectangle, int alignment, bool enabled, const QString & text ) const
+virtual QRect itemTextRect( const QFontMetrics & metrics, const QRect & rectangle, int alignment, bool enabled, const QString & text ) const
 */
 HB_FUNC_STATIC( QSTYLE_ITEMTEXTRECT )
 {
@@ -717,7 +717,7 @@ HB_FUNC_STATIC( QSTYLE_UNPOLISH )
 }
 
 /*
-QRect alignedRect ( Qt::LayoutDirection direction, Qt::Alignment alignment, const QSize & size, const QRect & rectangle )
+QRect alignedRect( Qt::LayoutDirection direction, Qt::Alignment alignment, const QSize & size, const QRect & rectangle )
 */
 HB_FUNC_STATIC( QSTYLE_ALIGNEDRECT )
 {
@@ -780,7 +780,7 @@ HB_FUNC_STATIC( QSTYLE_SLIDERVALUEFROMPOSITION )
 }
 
 /*
-static Qt::Alignment visualAlignment ( Qt::LayoutDirection direction, Qt::Alignment alignment )
+static Qt::Alignment visualAlignment( Qt::LayoutDirection direction, Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QSTYLE_VISUALALIGNMENT )
 {
@@ -799,7 +799,7 @@ HB_FUNC_STATIC( QSTYLE_VISUALALIGNMENT )
 }
 
 /*
-static QPoint visualPos ( Qt::LayoutDirection direction, const QRect & boundingRectangle, const QPoint & logicalPosition )
+static QPoint visualPos( Qt::LayoutDirection direction, const QRect & boundingRectangle, const QPoint & logicalPosition )
 */
 HB_FUNC_STATIC( QSTYLE_VISUALPOS )
 {
@@ -819,7 +819,7 @@ HB_FUNC_STATIC( QSTYLE_VISUALPOS )
 }
 
 /*
-static QRect visualRect ( Qt::LayoutDirection direction, const QRect & boundingRectangle, const QRect & logicalRectangle )
+static QRect visualRect( Qt::LayoutDirection direction, const QRect & boundingRectangle, const QRect & logicalRectangle )
 */
 HB_FUNC_STATIC( QSTYLE_VISUALRECT )
 {

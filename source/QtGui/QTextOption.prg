@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QTEXTOPTION_FLAGS )
 }
 
 /*
-void setAlignment ( Qt::Alignment alignment )
+void setAlignment( Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETALIGNMENT )
 {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETALIGNMENT )
 }
 
 /*
-void setFlags ( Flags flags )
+void setFlags( QTextOption::Flags flags )
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETFLAGS )
 {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETFLAGS )
 }
 
 /*
-void setTabArray ( QList<qreal> tabStops )
+void setTabArray( QList<qreal> tabStops )
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETTABARRAY )
 {
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETTABARRAY )
 }
 
 /*
-void setTabStop ( qreal tabStop )
+void setTabStop( qreal tabStop )
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETTABSTOP )
 {
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETTABSTOP )
 }
 
 /*
-void setTextDirection ( Qt::LayoutDirection direction )
+void setTextDirection( Qt::LayoutDirection direction )
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETTEXTDIRECTION )
 {
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETTEXTDIRECTION )
 }
 
 /*
-void setUseDesignMetrics ( bool enable )
+void setUseDesignMetrics( bool enable )
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETUSEDESIGNMETRICS )
 {
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QTEXTOPTION_SETUSEDESIGNMETRICS )
 }
 
 /*
-void setWrapMode ( WrapMode mode )
+void setWrapMode( QTextOption::WrapMode mode )
 */
 HB_FUNC_STATIC( QTEXTOPTION_SETWRAPMODE )
 {

@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_FORMAT )
 }
 
 /*
-void setCodec ( QTextCodec * codec )
+void setCodec( QTextCodec * codec )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETCODEC )
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETCODEC )
 }
 
 /*
-void setDevice ( QIODevice * device )
+void setDevice( QIODevice * device )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETDEVICE )
 {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETDEVICE )
 }
 
 /*
-void setFileName ( const QString & fileName )
+void setFileName( const QString & fileName )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETFILENAME )
 {
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETFILENAME )
 }
 
 /*
-void setFormat ( const QByteArray & format )
+void setFormat( const QByteArray & format )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETFORMAT )
 {

@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERSUFFIX )
 }
 
 /*
-void setIndent ( int indentation )
+void setIndent( int indentation )
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_SETINDENT )
 {
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_SETINDENT )
 }
 
 /*
-void setNumberPrefix ( const QString & numberPrefix )
+void setNumberPrefix( const QString & numberPrefix )
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_SETNUMBERPREFIX )
 {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_SETNUMBERPREFIX )
 }
 
 /*
-void setNumberSuffix ( const QString & numberSuffix )
+void setNumberSuffix( const QString & numberSuffix )
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_SETNUMBERSUFFIX )
 {
@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_SETNUMBERSUFFIX )
 }
 
 /*
-void setStyle ( Style style )
+void setStyle( QTextListFormat::Style style )
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_SETSTYLE )
 {

@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_FORWARDHISTORYCOUNT )
 }
 
 /*
-QString historyTitle ( int i ) const
+QString historyTitle( int i ) const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_HISTORYTITLE )
 {
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_HISTORYTITLE )
 }
 
 /*
-QUrl historyUrl ( int i ) const
+QUrl historyUrl( int i ) const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_HISTORYURL )
 {
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SEARCHPATHS )
 }
 
 /*
-void setOpenExternalLinks ( bool open )
+void setOpenExternalLinks( bool open )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_SETOPENEXTERNALLINKS )
 {
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SETOPENEXTERNALLINKS )
 }
 
 /*
-void setOpenLinks ( bool open )
+void setOpenLinks( bool open )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_SETOPENLINKS )
 {
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SETOPENLINKS )
 }
 
 /*
-void setSearchPaths ( const QStringList & paths )
+void setSearchPaths( const QStringList & paths )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_SETSEARCHPATHS )
 {
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SOURCE )
 }
 
 /*
-virtual QVariant loadResource ( int type, const QUrl & name )
+virtual QVariant loadResource( int type, const QUrl & name )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_LOADRESOURCE )
 {
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_RELOAD )
 }
 
 /*
-virtual void setSource ( const QUrl & name )
+virtual void setSource( const QUrl & name )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_SETSOURCE )
 {

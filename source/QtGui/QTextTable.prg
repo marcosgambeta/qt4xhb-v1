@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QTEXTTABLE_DELETE )
 }
 
 /*
-void appendColumns ( int count )
+void appendColumns( int count )
 */
 HB_FUNC_STATIC( QTEXTTABLE_APPENDCOLUMNS )
 {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QTEXTTABLE_APPENDCOLUMNS )
 }
 
 /*
-void appendRows ( int count )
+void appendRows( int count )
 */
 HB_FUNC_STATIC( QTEXTTABLE_APPENDROWS )
 {
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QTEXTTABLE_FORMAT )
 }
 
 /*
-void insertColumns ( int index, int columns )
+void insertColumns( int index, int columns )
 */
 HB_FUNC_STATIC( QTEXTTABLE_INSERTCOLUMNS )
 {
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QTEXTTABLE_INSERTCOLUMNS )
 }
 
 /*
-void insertRows ( int index, int rows )
+void insertRows( int index, int rows )
 */
 HB_FUNC_STATIC( QTEXTTABLE_INSERTROWS )
 {
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QTEXTTABLE_MERGECELLS )
 }
 
 /*
-void removeColumns ( int index, int columns )
+void removeColumns( int index, int columns )
 */
 HB_FUNC_STATIC( QTEXTTABLE_REMOVECOLUMNS )
 {
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QTEXTTABLE_REMOVECOLUMNS )
 }
 
 /*
-void removeRows ( int index, int rows )
+void removeRows( int index, int rows )
 */
 HB_FUNC_STATIC( QTEXTTABLE_REMOVEROWS )
 {
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QTEXTTABLE_REMOVEROWS )
 }
 
 /*
-void resize ( int rows, int columns )
+void resize( int rows, int columns )
 */
 HB_FUNC_STATIC( QTEXTTABLE_RESIZE )
 {
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QTEXTTABLE_RESIZE )
 }
 
 /*
-QTextCursor rowEnd ( const QTextCursor & cursor ) const
+QTextCursor rowEnd( const QTextCursor & cursor ) const
 */
 HB_FUNC_STATIC( QTEXTTABLE_ROWEND )
 {
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QTEXTTABLE_ROWEND )
 }
 
 /*
-QTextCursor rowStart ( const QTextCursor & cursor ) const
+QTextCursor rowStart( const QTextCursor & cursor ) const
 */
 HB_FUNC_STATIC( QTEXTTABLE_ROWSTART )
 {
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QTEXTTABLE_ROWS )
 }
 
 /*
-void setFormat ( const QTextTableFormat & format )
+void setFormat( const QTextTableFormat & format )
 */
 HB_FUNC_STATIC( QTEXTTABLE_SETFORMAT )
 {
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QTEXTTABLE_SETFORMAT )
 }
 
 /*
-void splitCell ( int row, int column, int numRows, int numCols )
+void splitCell( int row, int column, int numRows, int numCols )
 */
 HB_FUNC_STATIC( QTEXTTABLE_SPLITCELL )
 {

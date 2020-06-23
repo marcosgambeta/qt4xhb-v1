@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMHTML )
 }
 
 /*
-static QTextDocumentFragment fromPlainText ( const QString & plainText )
+static QTextDocumentFragment fromPlainText( const QString & plainText )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMPLAINTEXT )
 {

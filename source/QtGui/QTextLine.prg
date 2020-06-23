@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QTEXTLINE_RECT )
 }
 
 /*
-void setLeadingIncluded ( bool included )
+void setLeadingIncluded( bool included )
 */
 HB_FUNC_STATIC( QTEXTLINE_SETLEADINGINCLUDED )
 {
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QTEXTLINE_SETLEADINGINCLUDED )
 }
 
 /*
-void setLineWidth ( qreal width )
+void setLineWidth( qreal width )
 */
 HB_FUNC_STATIC( QTEXTLINE_SETLINEWIDTH )
 {
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS )
 }
 
 /*
-void setPosition ( const QPointF & pos )
+void setPosition( const QPointF & pos )
 */
 HB_FUNC_STATIC( QTEXTLINE_SETPOSITION )
 {

@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMATINDEX )
 }
 
 /*
-bool contains ( int position ) const
+bool contains( int position ) const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_CONTAINS )
 {

@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QUNDOVIEW_GROUP )
 }
 
 /*
-void setCleanIcon ( const QIcon & icon )
+void setCleanIcon( const QIcon & icon )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETCLEANICON )
 {
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QUNDOVIEW_SETCLEANICON )
 }
 
 /*
-void setEmptyLabel ( const QString & label )
+void setEmptyLabel( const QString & label )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETEMPTYLABEL )
 {
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QUNDOVIEW_STACK )
 }
 
 /*
-void setGroup ( QUndoGroup * group )
+void setGroup( QUndoGroup * group )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETGROUP )
 {
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QUNDOVIEW_SETGROUP )
 }
 
 /*
-void setStack ( QUndoStack * stack )
+void setStack( QUndoStack * stack )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETSTACK )
 {

@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QVECTOR3D_DELETE )
 }
 
 /*
-qreal distanceToLine ( const QVector3D & point, const QVector3D & direction ) const
+qreal distanceToLine( const QVector3D & point, const QVector3D & direction ) const
 */
 HB_FUNC_STATIC( QVECTOR3D_DISTANCETOLINE )
 {
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QVECTOR3D_NORMALIZED )
 }
 
 /*
-void setX ( qreal x )
+void setX( qreal x )
 */
 HB_FUNC_STATIC( QVECTOR3D_SETX )
 {
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QVECTOR3D_SETX )
 }
 
 /*
-void setY ( qreal y )
+void setY( qreal y )
 */
 HB_FUNC_STATIC( QVECTOR3D_SETY )
 {
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QVECTOR3D_SETY )
 }
 
 /*
-void setZ ( qreal z )
+void setZ( qreal z )
 */
 HB_FUNC_STATIC( QVECTOR3D_SETZ )
 {
@@ -645,7 +645,7 @@ HB_FUNC_STATIC( QVECTOR3D_Z )
 }
 
 /*
-static QVector3D crossProduct ( const QVector3D & v1, const QVector3D & v2 )
+static QVector3D crossProduct( const QVector3D & v1, const QVector3D & v2 )
 */
 HB_FUNC_STATIC( QVECTOR3D_CROSSPRODUCT )
 {
@@ -665,7 +665,7 @@ HB_FUNC_STATIC( QVECTOR3D_CROSSPRODUCT )
 }
 
 /*
-static qreal dotProduct ( const QVector3D & v1, const QVector3D & v2 )
+static qreal dotProduct( const QVector3D & v1, const QVector3D & v2 )
 */
 HB_FUNC_STATIC( QVECTOR3D_DOTPRODUCT )
 {

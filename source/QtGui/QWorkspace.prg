@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QWORKSPACE_SCROLLBARSENABLED )
 }
 
 /*
-void setBackground ( const QBrush & background )
+void setBackground( const QBrush & background )
 */
 HB_FUNC_STATIC( QWORKSPACE_SETBACKGROUND )
 {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QWORKSPACE_SETBACKGROUND )
 }
 
 /*
-void setScrollBarsEnabled ( bool enable )
+void setScrollBarsEnabled( bool enable )
 */
 HB_FUNC_STATIC( QWORKSPACE_SETSCROLLBARSENABLED )
 {
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QWORKSPACE_CLOSEALLWINDOWS )
 }
 
 /*
-void setActiveWindow ( QWidget * w )
+void setActiveWindow( QWidget * w )
 */
 HB_FUNC_STATIC( QWORKSPACE_SETACTIVEWINDOW )
 {

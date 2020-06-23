@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_GLYPHRUNS )
 }
 
 /*
-bool isValidCursorPosition ( int pos ) const
+bool isValidCursorPosition( int pos ) const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_ISVALIDCURSORPOSITION )
 {
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_ISVALIDCURSORPOSITION )
 }
 
 /*
-int leftCursorPosition ( int oldPos ) const
+int leftCursorPosition( int oldPos ) const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_LEFTCURSORPOSITION )
 {
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LEFTCURSORPOSITION )
 }
 
 /*
-QTextLine lineAt ( int i ) const
+QTextLine lineAt( int i ) const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_LINEAT )
 {
@@ -584,7 +584,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LINECOUNT )
 }
 
 /*
-QTextLine lineForTextPosition ( int pos ) const
+QTextLine lineForTextPosition( int pos ) const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_LINEFORTEXTPOSITION )
 {
@@ -778,7 +778,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_PREVIOUSCURSORPOSITION )
 }
 
 /*
-int rightCursorPosition ( int oldPos ) const
+int rightCursorPosition( int oldPos ) const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_RIGHTCURSORPOSITION )
 {
@@ -802,7 +802,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_RIGHTCURSORPOSITION )
 }
 
 /*
-void setCacheEnabled ( bool enable )
+void setCacheEnabled( bool enable )
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETCACHEENABLED )
 {
@@ -828,7 +828,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETCACHEENABLED )
 }
 
 /*
-void setCursorMoveStyle ( Qt::CursorMoveStyle style )
+void setCursorMoveStyle( Qt::CursorMoveStyle style )
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETCURSORMOVESTYLE )
 {
@@ -854,7 +854,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETCURSORMOVESTYLE )
 }
 
 /*
-void setFont ( const QFont & font )
+void setFont( const QFont & font )
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETFONT )
 {
@@ -880,7 +880,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETFONT )
 }
 
 /*
-void setPosition ( const QPointF & p )
+void setPosition( const QPointF & p )
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETPOSITION )
 {
@@ -906,7 +906,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETPOSITION )
 }
 
 /*
-void setPreeditArea ( int position, const QString & text )
+void setPreeditArea( int position, const QString & text )
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETPREEDITAREA )
 {
@@ -932,7 +932,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETPREEDITAREA )
 }
 
 /*
-void setText ( const QString & string )
+void setText( const QString & string )
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETTEXT )
 {
@@ -958,7 +958,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETTEXT )
 }
 
 /*
-void setTextOption ( const QTextOption & option )
+void setTextOption( const QTextOption & option )
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETTEXTOPTION )
 {

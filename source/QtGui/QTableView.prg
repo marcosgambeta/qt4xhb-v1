@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QTABLEVIEW_CLEARSPANS )
 }
 
 /*
-int columnAt ( int x ) const
+int columnAt( int x ) const
 */
 HB_FUNC_STATIC( QTABLEVIEW_COLUMNAT )
 {
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QTABLEVIEW_COLUMNAT )
 }
 
 /*
-int columnSpan ( int row, int column ) const
+int columnSpan( int row, int column ) const
 */
 HB_FUNC_STATIC( QTABLEVIEW_COLUMNSPAN )
 {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QTABLEVIEW_COLUMNSPAN )
 }
 
 /*
-int columnViewportPosition ( int column ) const
+int columnViewportPosition( int column ) const
 */
 HB_FUNC_STATIC( QTABLEVIEW_COLUMNVIEWPORTPOSITION )
 {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QTABLEVIEW_COLUMNVIEWPORTPOSITION )
 }
 
 /*
-int columnWidth ( int column ) const
+int columnWidth( int column ) const
 */
 HB_FUNC_STATIC( QTABLEVIEW_COLUMNWIDTH )
 {
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QTABLEVIEW_HORIZONTALHEADER )
 }
 
 /*
-bool isColumnHidden ( int column ) const
+bool isColumnHidden( int column ) const
 */
 HB_FUNC_STATIC( QTABLEVIEW_ISCOLUMNHIDDEN )
 {
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ISCORNERBUTTONENABLED )
 }
 
 /*
-bool isRowHidden ( int row ) const
+bool isRowHidden( int row ) const
 */
 HB_FUNC_STATIC( QTABLEVIEW_ISROWHIDDEN )
 {
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ISSORTINGENABLED )
 }
 
 /*
-int rowAt ( int y ) const
+int rowAt( int y ) const
 */
 HB_FUNC_STATIC( QTABLEVIEW_ROWAT )
 {
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ROWAT )
 }
 
 /*
-int rowHeight ( int row ) const
+int rowHeight( int row ) const
 */
 HB_FUNC_STATIC( QTABLEVIEW_ROWHEIGHT )
 {
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ROWHEIGHT )
 }
 
 /*
-int rowSpan ( int row, int column ) const
+int rowSpan( int row, int column ) const
 */
 HB_FUNC_STATIC( QTABLEVIEW_ROWSPAN )
 {
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ROWSPAN )
 }
 
 /*
-int rowViewportPosition ( int row ) const
+int rowViewportPosition( int row ) const
 */
 HB_FUNC_STATIC( QTABLEVIEW_ROWVIEWPORTPOSITION )
 {
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QTABLEVIEW_ROWVIEWPORTPOSITION )
 }
 
 /*
-void setColumnHidden ( int column, bool hide )
+void setColumnHidden( int column, bool hide )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETCOLUMNHIDDEN )
 {
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETCOLUMNHIDDEN )
 }
 
 /*
-void setColumnWidth ( int column, int width )
+void setColumnWidth( int column, int width )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETCOLUMNWIDTH )
 {
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETCOLUMNWIDTH )
 }
 
 /*
-void setCornerButtonEnabled ( bool enable )
+void setCornerButtonEnabled( bool enable )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETCORNERBUTTONENABLED )
 {
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETCORNERBUTTONENABLED )
 }
 
 /*
-void setGridStyle ( Qt::PenStyle style )
+void setGridStyle( Qt::PenStyle style )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETGRIDSTYLE )
 {
@@ -592,7 +592,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETGRIDSTYLE )
 }
 
 /*
-void setHorizontalHeader ( QHeaderView * header )
+void setHorizontalHeader( QHeaderView * header )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETHORIZONTALHEADER )
 {
@@ -618,7 +618,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETHORIZONTALHEADER )
 }
 
 /*
-void setRowHeight ( int row, int height )
+void setRowHeight( int row, int height )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETROWHEIGHT )
 {
@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETROWHEIGHT )
 }
 
 /*
-void setRowHidden ( int row, bool hide )
+void setRowHidden( int row, bool hide )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETROWHIDDEN )
 {
@@ -670,7 +670,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETROWHIDDEN )
 }
 
 /*
-void setSortingEnabled ( bool enable )
+void setSortingEnabled( bool enable )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETSORTINGENABLED )
 {
@@ -696,7 +696,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETSORTINGENABLED )
 }
 
 /*
-void setSpan ( int row, int column, int rowSpanCount, int columnSpanCount )
+void setSpan( int row, int column, int rowSpanCount, int columnSpanCount )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETSPAN )
 {
@@ -722,7 +722,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETSPAN )
 }
 
 /*
-void setVerticalHeader ( QHeaderView * header )
+void setVerticalHeader( QHeaderView * header )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETVERTICALHEADER )
 {
@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETVERTICALHEADER )
 }
 
 /*
-void setWordWrap ( bool on )
+void setWordWrap( bool on )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETWORDWRAP )
 {
@@ -798,7 +798,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SHOWGRID )
 }
 
 /*
-void sortByColumn ( int column, Qt::SortOrder order )
+void sortByColumn( int column, Qt::SortOrder order )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SORTBYCOLUMN )
 {
@@ -873,7 +873,7 @@ HB_FUNC_STATIC( QTABLEVIEW_WORDWRAP )
 }
 
 /*
-virtual QModelIndex indexAt ( const QPoint & pos ) const
+virtual QModelIndex indexAt( const QPoint & pos ) const
 */
 HB_FUNC_STATIC( QTABLEVIEW_INDEXAT )
 {
@@ -898,7 +898,7 @@ HB_FUNC_STATIC( QTABLEVIEW_INDEXAT )
 }
 
 /*
-virtual void setModel ( QAbstractItemModel * model )
+virtual void setModel( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETMODEL )
 {
@@ -924,7 +924,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETMODEL )
 }
 
 /*
-virtual void setRootIndex ( const QModelIndex & index )
+virtual void setRootIndex( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETROOTINDEX )
 {
@@ -950,7 +950,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETROOTINDEX )
 }
 
 /*
-virtual void setSelectionModel ( QItemSelectionModel * selectionModel )
+virtual void setSelectionModel( QItemSelectionModel * selectionModel )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETSELECTIONMODEL )
 {
@@ -976,7 +976,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETSELECTIONMODEL )
 }
 
 /*
-void hideColumn ( int column )
+void hideColumn( int column )
 */
 HB_FUNC_STATIC( QTABLEVIEW_HIDECOLUMN )
 {
@@ -1002,7 +1002,7 @@ HB_FUNC_STATIC( QTABLEVIEW_HIDECOLUMN )
 }
 
 /*
-void hideRow ( int row )
+void hideRow( int row )
 */
 HB_FUNC_STATIC( QTABLEVIEW_HIDEROW )
 {
@@ -1028,7 +1028,7 @@ HB_FUNC_STATIC( QTABLEVIEW_HIDEROW )
 }
 
 /*
-void resizeColumnToContents ( int column )
+void resizeColumnToContents( int column )
 */
 HB_FUNC_STATIC( QTABLEVIEW_RESIZECOLUMNTOCONTENTS )
 {
@@ -1080,7 +1080,7 @@ HB_FUNC_STATIC( QTABLEVIEW_RESIZECOLUMNSTOCONTENTS )
 }
 
 /*
-void resizeRowToContents ( int row )
+void resizeRowToContents( int row )
 */
 HB_FUNC_STATIC( QTABLEVIEW_RESIZEROWTOCONTENTS )
 {
@@ -1132,7 +1132,7 @@ HB_FUNC_STATIC( QTABLEVIEW_RESIZEROWSTOCONTENTS )
 }
 
 /*
-void selectColumn ( int column )
+void selectColumn( int column )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SELECTCOLUMN )
 {
@@ -1158,7 +1158,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SELECTCOLUMN )
 }
 
 /*
-void selectRow ( int row )
+void selectRow( int row )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SELECTROW )
 {
@@ -1184,7 +1184,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SELECTROW )
 }
 
 /*
-void setShowGrid ( bool show )
+void setShowGrid( bool show )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETSHOWGRID )
 {
@@ -1210,7 +1210,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SETSHOWGRID )
 }
 
 /*
-void showColumn ( int column )
+void showColumn( int column )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SHOWCOLUMN )
 {
@@ -1236,7 +1236,7 @@ HB_FUNC_STATIC( QTABLEVIEW_SHOWCOLUMN )
 }
 
 /*
-void showRow ( int row )
+void showRow( int row )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SHOWROW )
 {

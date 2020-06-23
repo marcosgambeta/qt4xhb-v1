@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_POPUPMODE )
 }
 
 /*
-void setArrowType ( Qt::ArrowType type )
+void setArrowType( Qt::ArrowType type )
 */
 HB_FUNC_STATIC( QTOOLBUTTON_SETARROWTYPE )
 {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETARROWTYPE )
 }
 
 /*
-void setAutoRaise ( bool enable )
+void setAutoRaise( bool enable )
 */
 HB_FUNC_STATIC( QTOOLBUTTON_SETAUTORAISE )
 {
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETAUTORAISE )
 }
 
 /*
-void setMenu ( QMenu * menu )
+void setMenu( QMenu * menu )
 */
 HB_FUNC_STATIC( QTOOLBUTTON_SETMENU )
 {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETMENU )
 }
 
 /*
-void setPopupMode ( ToolButtonPopupMode mode )
+void setPopupMode( QToolButton::ToolButtonPopupMode mode )
 */
 HB_FUNC_STATIC( QTOOLBUTTON_SETPOPUPMODE )
 {
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SIZEHINT )
 }
 
 /*
-void setDefaultAction ( QAction * action )
+void setDefaultAction( QAction * action )
 */
 HB_FUNC_STATIC( QTOOLBUTTON_SETDEFAULTACTION )
 {
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETDEFAULTACTION )
 }
 
 /*
-void setToolButtonStyle ( Qt::ToolButtonStyle style )
+void setToolButtonStyle( Qt::ToolButtonStyle style )
 */
 HB_FUNC_STATIC( QTOOLBUTTON_SETTOOLBUTTONSTYLE )
 {

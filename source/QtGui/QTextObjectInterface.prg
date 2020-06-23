@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_DELETE )
 }
 
 /*
-virtual void drawObject ( QPainter * painter, const QRectF & rect, QTextDocument * doc, int posInDocument, const QTextFormat & format ) = 0
+virtual void drawObject( QPainter * painter, const QRectF & rect, QTextDocument * doc, int posInDocument, const QTextFormat & format ) = 0
 */
 HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_DRAWOBJECT )
 {
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_DRAWOBJECT )
 }
 
 /*
-virtual QSizeF intrinsicSize ( QTextDocument * doc, int posInDocument, const QTextFormat & format ) = 0
+virtual QSizeF intrinsicSize( QTextDocument * doc, int posInDocument, const QTextFormat & format ) = 0
 */
 HB_FUNC_STATIC( QTEXTOBJECTINTERFACE_INTRINSICSIZE )
 {

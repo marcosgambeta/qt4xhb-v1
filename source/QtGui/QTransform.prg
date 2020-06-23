@@ -942,7 +942,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAPRECT )
 }
 
 /*
-QPolygon mapToPolygon ( const QRect & rectangle ) const
+QPolygon mapToPolygon( const QRect & rectangle ) const
 */
 HB_FUNC_STATIC( QTRANSFORM_MAPTOPOLYGON )
 {
@@ -993,7 +993,7 @@ HB_FUNC_STATIC( QTRANSFORM_RESET )
 }
 
 /*
-void setMatrix ( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 )
+void setMatrix( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 )
 */
 HB_FUNC_STATIC( QTRANSFORM_SETMATRIX )
 {
@@ -1068,7 +1068,7 @@ HB_FUNC_STATIC( QTRANSFORM_TYPE )
 }
 
 /*
-static QTransform fromScale ( qreal sx, qreal sy )
+static QTransform fromScale( qreal sx, qreal sy )
 */
 HB_FUNC_STATIC( QTRANSFORM_FROMSCALE )
 {
@@ -1088,7 +1088,7 @@ HB_FUNC_STATIC( QTRANSFORM_FROMSCALE )
 }
 
 /*
-static QTransform fromTranslate ( qreal dx, qreal dy )
+static QTransform fromTranslate( qreal dx, qreal dy )
 */
 HB_FUNC_STATIC( QTRANSFORM_FROMTRANSLATE )
 {
@@ -1108,7 +1108,7 @@ HB_FUNC_STATIC( QTRANSFORM_FROMTRANSLATE )
 }
 
 /*
-static bool quadToQuad ( const QPolygonF & one, const QPolygonF & two, QTransform & trans )
+static bool quadToQuad( const QPolygonF & one, const QPolygonF & two, QTransform & trans )
 */
 HB_FUNC_STATIC( QTRANSFORM_QUADTOQUAD )
 {
@@ -1127,7 +1127,7 @@ HB_FUNC_STATIC( QTRANSFORM_QUADTOQUAD )
 }
 
 /*
-static bool quadToSquare ( const QPolygonF & quad, QTransform & trans )
+static bool quadToSquare( const QPolygonF & quad, QTransform & trans )
 */
 HB_FUNC_STATIC( QTRANSFORM_QUADTOSQUARE )
 {
@@ -1146,7 +1146,7 @@ HB_FUNC_STATIC( QTRANSFORM_QUADTOSQUARE )
 }
 
 /*
-static bool squareToQuad ( const QPolygonF & quad, QTransform & trans )
+static bool squareToQuad( const QPolygonF & quad, QTransform & trans )
 */
 HB_FUNC_STATIC( QTRANSFORM_SQUARETOQUAD )
 {

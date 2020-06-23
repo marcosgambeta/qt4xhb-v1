@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QTOOLBOX_CURRENTWIDGET )
 }
 
 /*
-int indexOf ( QWidget * widget ) const
+int indexOf( QWidget * widget ) const
 */
 HB_FUNC_STATIC( QTOOLBOX_INDEXOF )
 {
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QTOOLBOX_INSERTITEM )
 }
 
 /*
-bool isItemEnabled ( int index ) const
+bool isItemEnabled( int index ) const
 */
 HB_FUNC_STATIC( QTOOLBOX_ISITEMENABLED )
 {
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QTOOLBOX_ISITEMENABLED )
 }
 
 /*
-QIcon itemIcon ( int index ) const
+QIcon itemIcon( int index ) const
 */
 HB_FUNC_STATIC( QTOOLBOX_ITEMICON )
 {
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMICON )
 }
 
 /*
-QString itemText ( int index ) const
+QString itemText( int index ) const
 */
 HB_FUNC_STATIC( QTOOLBOX_ITEMTEXT )
 {
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMTEXT )
 }
 
 /*
-QString itemToolTip ( int index ) const
+QString itemToolTip( int index ) const
 */
 HB_FUNC_STATIC( QTOOLBOX_ITEMTOOLTIP )
 {
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMTOOLTIP )
 }
 
 /*
-void removeItem ( int index )
+void removeItem( int index )
 */
 HB_FUNC_STATIC( QTOOLBOX_REMOVEITEM )
 {
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QTOOLBOX_REMOVEITEM )
 }
 
 /*
-void setItemEnabled ( int index, bool enabled )
+void setItemEnabled( int index, bool enabled )
 */
 HB_FUNC_STATIC( QTOOLBOX_SETITEMENABLED )
 {
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMENABLED )
 }
 
 /*
-void setItemIcon ( int index, const QIcon & icon )
+void setItemIcon( int index, const QIcon & icon )
 */
 HB_FUNC_STATIC( QTOOLBOX_SETITEMICON )
 {
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMICON )
 }
 
 /*
-void setItemText ( int index, const QString & text )
+void setItemText( int index, const QString & text )
 */
 HB_FUNC_STATIC( QTOOLBOX_SETITEMTEXT )
 {
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMTEXT )
 }
 
 /*
-void setItemToolTip ( int index, const QString & toolTip )
+void setItemToolTip( int index, const QString & toolTip )
 */
 HB_FUNC_STATIC( QTOOLBOX_SETITEMTOOLTIP )
 {
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMTOOLTIP )
 }
 
 /*
-QWidget * widget ( int index ) const
+QWidget * widget( int index ) const
 */
 HB_FUNC_STATIC( QTOOLBOX_WIDGET )
 {
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QTOOLBOX_WIDGET )
 }
 
 /*
-void setCurrentIndex ( int index )
+void setCurrentIndex( int index )
 */
 HB_FUNC_STATIC( QTOOLBOX_SETCURRENTINDEX )
 {
@@ -567,7 +567,7 @@ HB_FUNC_STATIC( QTOOLBOX_SETCURRENTINDEX )
 }
 
 /*
-void setCurrentWidget ( QWidget * widget )
+void setCurrentWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QTOOLBOX_SETCURRENTWIDGET )
 {

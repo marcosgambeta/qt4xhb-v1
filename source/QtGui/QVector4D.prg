@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QVECTOR4D_NORMALIZED )
 }
 
 /*
-void setW ( qreal w )
+void setW( qreal w )
 */
 HB_FUNC_STATIC( QVECTOR4D_SETW )
 {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QVECTOR4D_SETW )
 }
 
 /*
-void setX ( qreal x )
+void setX( qreal x )
 */
 HB_FUNC_STATIC( QVECTOR4D_SETX )
 {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QVECTOR4D_SETX )
 }
 
 /*
-void setY ( qreal y )
+void setY( qreal y )
 */
 HB_FUNC_STATIC( QVECTOR4D_SETY )
 {
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QVECTOR4D_SETY )
 }
 
 /*
-void setZ ( qreal z )
+void setZ( qreal z )
 */
 HB_FUNC_STATIC( QVECTOR4D_SETZ )
 {
@@ -688,7 +688,7 @@ HB_FUNC_STATIC( QVECTOR4D_Z )
 }
 
 /*
-static qreal dotProduct ( const QVector4D & v1, const QVector4D & v2 )
+static qreal dotProduct( const QVector4D & v1, const QVector4D & v2 )
 */
 HB_FUNC_STATIC( QVECTOR4D_DOTPRODUCT )
 {

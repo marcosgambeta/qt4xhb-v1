@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_TYPE )
 }
 
 /*
-qreal value ( qreal maximumLength ) const
+qreal value( qreal maximumLength ) const
 */
 HB_FUNC_STATIC( QTEXTLENGTH_VALUE )
 {

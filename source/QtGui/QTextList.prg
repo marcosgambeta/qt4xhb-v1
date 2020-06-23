@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QTEXTLIST_DELETE )
 }
 
 /*
-void add ( const QTextBlock & block )
+void add( const QTextBlock & block )
 */
 HB_FUNC_STATIC( QTEXTLIST_ADD )
 {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QTEXTLIST_FORMAT )
 }
 
 /*
-QTextBlock item ( int i ) const
+QTextBlock item( int i ) const
 */
 HB_FUNC_STATIC( QTEXTLIST_ITEM )
 {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QTEXTLIST_ITEM )
 }
 
 /*
-int itemNumber ( const QTextBlock & block ) const
+int itemNumber( const QTextBlock & block ) const
 */
 HB_FUNC_STATIC( QTEXTLIST_ITEMNUMBER )
 {
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QTEXTLIST_ITEMNUMBER )
 }
 
 /*
-QString itemText ( const QTextBlock & block ) const
+QString itemText( const QTextBlock & block ) const
 */
 HB_FUNC_STATIC( QTEXTLIST_ITEMTEXT )
 {
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QTEXTLIST_ITEMTEXT )
 }
 
 /*
-void remove ( const QTextBlock & block )
+void remove( const QTextBlock & block )
 */
 HB_FUNC_STATIC( QTEXTLIST_REMOVE )
 {
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QTEXTLIST_REMOVE )
 }
 
 /*
-void removeItem ( int i )
+void removeItem( int i )
 */
 HB_FUNC_STATIC( QTEXTLIST_REMOVEITEM )
 {
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QTEXTLIST_REMOVEITEM )
 }
 
 /*
-void setFormat ( const QTextListFormat & format )
+void setFormat( const QTextListFormat & format )
 */
 HB_FUNC_STATIC( QTEXTLIST_SETFORMAT )
 {

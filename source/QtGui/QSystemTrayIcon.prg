@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ISVISIBLE )
 }
 
 /*
-void setContextMenu ( QMenu * menu )
+void setContextMenu( QMenu * menu )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETCONTEXTMENU )
 {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETCONTEXTMENU )
 }
 
 /*
-void setIcon ( const QIcon & icon )
+void setIcon( const QIcon & icon )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETICON )
 {
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETICON )
 }
 
 /*
-void setToolTip ( const QString & tip )
+void setToolTip( const QString & tip )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETTOOLTIP )
 {
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_HIDE )
 }
 
 /*
-void setVisible ( bool visible )
+void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETVISIBLE )
 {

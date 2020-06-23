@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ACTIVESTACK )
 }
 
 /*
-void addStack ( QUndoStack * stack )
+void addStack( QUndoStack * stack )
 */
 HB_FUNC_STATIC( QUNDOGROUP_ADDSTACK )
 {
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QUNDOGROUP_REDOTEXT )
 }
 
 /*
-void removeStack ( QUndoStack * stack )
+void removeStack( QUndoStack * stack )
 */
 HB_FUNC_STATIC( QUNDOGROUP_REMOVESTACK )
 {
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QUNDOGROUP_REDO )
 }
 
 /*
-void setActiveStack ( QUndoStack * stack )
+void setActiveStack( QUndoStack * stack )
 */
 HB_FUNC_STATIC( QUNDOGROUP_SETACTIVESTACK )
 {

@@ -605,7 +605,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ISVALID )
 }
 
 /*
-void setAnchor ( bool anchor )
+void setAnchor( bool anchor )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETANCHOR )
 {
@@ -631,7 +631,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETANCHOR )
 }
 
 /*
-void setAnchorHref ( const QString & value )
+void setAnchorHref( const QString & value )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETANCHORHREF )
 {
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETANCHORHREF )
 }
 
 /*
-void setAnchorNames ( const QStringList & names )
+void setAnchorNames( const QStringList & names )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETANCHORNAMES )
 {
@@ -683,7 +683,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETANCHORNAMES )
 }
 
 /*
-void setFont ( const QFont & font )
+void setFont( const QFont & font )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONT )
 {
@@ -709,7 +709,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONT )
 }
 
 /*
-void setFontCapitalization ( QFont::Capitalization capitalization )
+void setFontCapitalization( QFont::Capitalization capitalization )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTCAPITALIZATION )
 {
@@ -735,7 +735,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTCAPITALIZATION )
 }
 
 /*
-void setFontFamily ( const QString & family )
+void setFontFamily( const QString & family )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTFAMILY )
 {
@@ -761,7 +761,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTFAMILY )
 }
 
 /*
-void setFontFixedPitch ( bool fixedPitch )
+void setFontFixedPitch( bool fixedPitch )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTFIXEDPITCH )
 {
@@ -787,7 +787,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTFIXEDPITCH )
 }
 
 /*
-void setFontHintingPreference ( QFont::HintingPreference hintingPreference )
+void setFontHintingPreference( QFont::HintingPreference hintingPreference )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTHINTINGPREFERENCE )
 {
@@ -813,7 +813,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTHINTINGPREFERENCE )
 }
 
 /*
-void setFontItalic ( bool italic )
+void setFontItalic( bool italic )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTITALIC )
 {
@@ -839,7 +839,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTITALIC )
 }
 
 /*
-void setFontKerning ( bool enable )
+void setFontKerning( bool enable )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTKERNING )
 {
@@ -865,7 +865,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTKERNING )
 }
 
 /*
-void setFontLetterSpacing ( qreal spacing )
+void setFontLetterSpacing( qreal spacing )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTLETTERSPACING )
 {
@@ -891,7 +891,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTLETTERSPACING )
 }
 
 /*
-void setFontOverline ( bool overline )
+void setFontOverline( bool overline )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTOVERLINE )
 {
@@ -917,7 +917,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTOVERLINE )
 }
 
 /*
-void setFontPointSize ( qreal size )
+void setFontPointSize( qreal size )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTPOINTSIZE )
 {
@@ -943,7 +943,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTPOINTSIZE )
 }
 
 /*
-void setFontStrikeOut ( bool strikeOut )
+void setFontStrikeOut( bool strikeOut )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTRIKEOUT )
 {
@@ -995,7 +995,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTYLEHINT )
 }
 
 /*
-void setFontStyleStrategy ( QFont::StyleStrategy strategy )
+void setFontStyleStrategy( QFont::StyleStrategy strategy )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTYLESTRATEGY )
 {
@@ -1021,7 +1021,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTYLESTRATEGY )
 }
 
 /*
-void setFontUnderline ( bool underline )
+void setFontUnderline( bool underline )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTUNDERLINE )
 {
@@ -1047,7 +1047,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTUNDERLINE )
 }
 
 /*
-void setFontWeight ( int weight )
+void setFontWeight( int weight )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTWEIGHT )
 {
@@ -1073,7 +1073,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTWEIGHT )
 }
 
 /*
-void setFontWordSpacing ( qreal spacing )
+void setFontWordSpacing( qreal spacing )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTWORDSPACING )
 {
@@ -1099,7 +1099,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTWORDSPACING )
 }
 
 /*
-void setTextOutline ( const QPen & pen )
+void setTextOutline( const QPen & pen )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETTEXTOUTLINE )
 {
@@ -1125,7 +1125,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETTEXTOUTLINE )
 }
 
 /*
-void setToolTip ( const QString & text )
+void setToolTip( const QString & text )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETTOOLTIP )
 {
@@ -1151,7 +1151,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETTOOLTIP )
 }
 
 /*
-void setUnderlineColor ( const QColor & color )
+void setUnderlineColor( const QColor & color )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETUNDERLINECOLOR )
 {
@@ -1177,7 +1177,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETUNDERLINECOLOR )
 }
 
 /*
-void setUnderlineStyle ( UnderlineStyle style )
+void setUnderlineStyle( QTextCharFormat::UnderlineStyle style )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETUNDERLINESTYLE )
 {
@@ -1203,7 +1203,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETUNDERLINESTYLE )
 }
 
 /*
-void setVerticalAlignment ( VerticalAlignment alignment )
+void setVerticalAlignment( QTextCharFormat::VerticalAlignment alignment )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETVERTICALALIGNMENT )
 {

@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QSWIPEGESTURE_HORIZONTALDIRECTION )
 }
 
 /*
-void setSwipeAngle ( qreal value )
+void setSwipeAngle( qreal value )
 */
 HB_FUNC_STATIC( QSWIPEGESTURE_SETSWIPEANGLE )
 {

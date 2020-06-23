@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QUNDOSTACK_DELETE )
 }
 
 /*
-void beginMacro ( const QString & text )
+void beginMacro( const QString & text )
 */
 HB_FUNC_STATIC( QUNDOSTACK_BEGINMACRO )
 {
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CLEAR )
 }
 
 /*
-const QUndoCommand * command ( int index ) const
+const QUndoCommand * command( int index ) const
 */
 HB_FUNC_STATIC( QUNDOSTACK_COMMAND )
 {
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QUNDOSTACK_ISCLEAN )
 }
 
 /*
-void push ( QUndoCommand * cmd )
+void push( QUndoCommand * cmd )
 */
 HB_FUNC_STATIC( QUNDOSTACK_PUSH )
 {
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QUNDOSTACK_REDOTEXT )
 }
 
 /*
-void setUndoLimit ( int limit )
+void setUndoLimit( int limit )
 */
 HB_FUNC_STATIC( QUNDOSTACK_SETUNDOLIMIT )
 {
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QUNDOSTACK_SETUNDOLIMIT )
 }
 
 /*
-QString text ( int idx ) const
+QString text( int idx ) const
 */
 HB_FUNC_STATIC( QUNDOSTACK_TEXT )
 {
@@ -658,7 +658,7 @@ HB_FUNC_STATIC( QUNDOSTACK_SETCLEAN )
 }
 
 /*
-void setIndex ( int idx )
+void setIndex( int idx )
 */
 HB_FUNC_STATIC( QUNDOSTACK_SETINDEX )
 {
