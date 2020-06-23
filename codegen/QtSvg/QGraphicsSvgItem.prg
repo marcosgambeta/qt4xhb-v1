@@ -61,14 +61,11 @@ $prototypeV2=QSize maximumCacheSize() const
 
 $prototypeV2=QSvgRenderer * renderer() const
 
-$prototype=void setElementId ( const QString & id )
-$method=|void|setElementId|const QString &
+$prototypeV2=void setElementId( const QString & id )
 
-$prototype=void setMaximumCacheSize ( const QSize & size )
-$method=|void|setMaximumCacheSize|const QSize &
+$prototypeV2=void setMaximumCacheSize( const QSize & size )
 
-$prototype=void setSharedRenderer ( QSvgRenderer * renderer )
-$method=|void|setSharedRenderer|QSvgRenderer *
+$prototypeV2=void setSharedRenderer( QSvgRenderer * renderer )
 
 $prototypeV2=virtual QRectF boundingRect() const
 

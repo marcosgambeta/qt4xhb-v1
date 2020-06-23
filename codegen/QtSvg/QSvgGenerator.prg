@@ -38,23 +38,17 @@ $prototypeV2=QIODevice * outputDevice() const
 
 $prototypeV2=int resolution() const
 
-$prototype=void setDescription ( const QString & description )
-$method=|void|setDescription|const QString &
+$prototypeV2=void setDescription( const QString & description )
 
-$prototype=void setFileName ( const QString & fileName )
-$method=|void|setFileName|const QString &
+$prototypeV2=void setFileName( const QString & fileName )
 
-$prototype=void setOutputDevice ( QIODevice * outputDevice )
-$method=|void|setOutputDevice|QIODevice *
+$prototypeV2=void setOutputDevice( QIODevice * outputDevice )
 
-$prototype=void setResolution ( int dpi )
-$method=|void|setResolution|int
+$prototypeV2=void setResolution( int dpi )
 
-$prototype=void setSize ( const QSize & size )
-$method=|void|setSize|const QSize &
+$prototypeV2=void setSize( const QSize & size )
 
-$prototype=void setTitle ( const QString & title )
-$method=|void|setTitle|const QString &
+$prototypeV2=void setTitle( const QString & title )
 
 $prototype=void setViewBox ( const QRect & viewBox )
 $internalMethod=|void|setViewBox,setViewBox1|const QRect &

@@ -75,23 +75,19 @@ $deleteMethod
 
 $prototypeV2=bool animated() const
 
-$prototype=QRectF boundsOnElement ( const QString & id ) const
-$method=|QRectF|boundsOnElement|const QString &
+$prototypeV2=QRectF boundsOnElement( const QString & id ) const
 
 $prototypeV2=QSize defaultSize() const
 
-$prototype=bool elementExists ( const QString & id ) const
-$method=|bool|elementExists|const QString &
+$prototypeV2=bool elementExists( const QString & id ) const
 
 $prototypeV2=int framesPerSecond() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=QMatrix matrixForElement ( const QString & id ) const
-$method=|QMatrix|matrixForElement|const QString &
+$prototypeV2=QMatrix matrixForElement( const QString & id ) const
 
-$prototype=void setFramesPerSecond ( int num )
-$method=|void|setFramesPerSecond|int
+$prototypeV2=void setFramesPerSecond( int num )
 
 $prototype=void setViewBox ( const QRect & viewbox )
 $internalMethod=|void|setViewBox,setViewBox1|const QRect &
