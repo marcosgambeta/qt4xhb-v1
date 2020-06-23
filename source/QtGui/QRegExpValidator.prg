@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
 }
 
 /*
-void setRegExp ( const QRegExp & rx )
+void setRegExp( const QRegExp & rx )
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_SETREGEXP )
 {

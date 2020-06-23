@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QSTATICTEXT_PREPARE )
 }
 
 /*
-void setPerformanceHint ( PerformanceHint performanceHint )
+void setPerformanceHint( QStaticText::PerformanceHint performanceHint )
 */
 HB_FUNC_STATIC( QSTATICTEXT_SETPERFORMANCEHINT )
 {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SETPERFORMANCEHINT )
 }
 
 /*
-void setText ( const QString & text )
+void setText( const QString & text )
 */
 HB_FUNC_STATIC( QSTATICTEXT_SETTEXT )
 {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SETTEXT )
 }
 
 /*
-void setTextFormat ( Qt::TextFormat textFormat )
+void setTextFormat( Qt::TextFormat textFormat )
 */
 HB_FUNC_STATIC( QSTATICTEXT_SETTEXTFORMAT )
 {
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SETTEXTFORMAT )
 }
 
 /*
-void setTextOption ( const QTextOption & textOption )
+void setTextOption( const QTextOption & textOption )
 */
 HB_FUNC_STATIC( QSTATICTEXT_SETTEXTOPTION )
 {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QSTATICTEXT_SETTEXTOPTION )
 }
 
 /*
-void setTextWidth ( qreal textWidth )
+void setTextWidth( qreal textWidth )
 */
 HB_FUNC_STATIC( QSTATICTEXT_SETTEXTWIDTH )
 {

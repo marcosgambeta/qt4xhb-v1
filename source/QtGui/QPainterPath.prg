@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDELLIPSE )
 }
 
 /*
-void addPath ( const QPainterPath & path )
+void addPath( const QPainterPath & path )
 */
 HB_FUNC_STATIC( QPAINTERPATH_ADDPATH )
 {
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDPATH )
 }
 
 /*
-void addPolygon ( const QPolygonF & polygon )
+void addPolygon( const QPolygonF & polygon )
 */
 HB_FUNC_STATIC( QPAINTERPATH_ADDPOLYGON )
 {
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDRECT )
 }
 
 /*
-void addRegion ( const QRegion & region )
+void addRegion( const QRegion & region )
 */
 HB_FUNC_STATIC( QPAINTERPATH_ADDREGION )
 {
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDTEXT )
 }
 
 /*
-qreal angleAtPercent ( qreal t ) const
+qreal angleAtPercent( qreal t ) const
 */
 HB_FUNC_STATIC( QPAINTERPATH_ANGLEATPERCENT )
 {
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CLOSESUBPATH )
 }
 
 /*
-void connectPath ( const QPainterPath & path )
+void connectPath( const QPainterPath & path )
 */
 HB_FUNC_STATIC( QPAINTERPATH_CONNECTPATH )
 {
@@ -881,7 +881,7 @@ HB_FUNC_STATIC( QPAINTERPATH_FILLRULE )
 }
 
 /*
-QPainterPath intersected ( const QPainterPath & p ) const
+QPainterPath intersected( const QPainterPath & p ) const
 */
 HB_FUNC_STATIC( QPAINTERPATH_INTERSECTED )
 {
@@ -1103,7 +1103,7 @@ HB_FUNC_STATIC( QPAINTERPATH_MOVETO )
 }
 
 /*
-qreal percentAtLength ( qreal len ) const
+qreal percentAtLength( qreal len ) const
 */
 HB_FUNC_STATIC( QPAINTERPATH_PERCENTATLENGTH )
 {
@@ -1127,7 +1127,7 @@ HB_FUNC_STATIC( QPAINTERPATH_PERCENTATLENGTH )
 }
 
 /*
-QPointF pointAtPercent ( qreal t ) const
+QPointF pointAtPercent( qreal t ) const
 */
 HB_FUNC_STATIC( QPAINTERPATH_POINTATPERCENT )
 {
@@ -1203,7 +1203,7 @@ HB_FUNC_STATIC( QPAINTERPATH_QUADTO )
 }
 
 /*
-void setElementPositionAt ( int index, qreal x, qreal y )
+void setElementPositionAt( int index, qreal x, qreal y )
 */
 HB_FUNC_STATIC( QPAINTERPATH_SETELEMENTPOSITIONAT )
 {
@@ -1229,7 +1229,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SETELEMENTPOSITIONAT )
 }
 
 /*
-void setFillRule ( Qt::FillRule fillRule )
+void setFillRule( Qt::FillRule fillRule )
 */
 HB_FUNC_STATIC( QPAINTERPATH_SETFILLRULE )
 {
@@ -1280,7 +1280,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SIMPLIFIED )
 }
 
 /*
-qreal slopeAtPercent ( qreal t ) const
+qreal slopeAtPercent( qreal t ) const
 */
 HB_FUNC_STATIC( QPAINTERPATH_SLOPEATPERCENT )
 {
@@ -1304,7 +1304,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SLOPEATPERCENT )
 }
 
 /*
-QPainterPath subtracted ( const QPainterPath & p ) const
+QPainterPath subtracted( const QPainterPath & p ) const
 */
 HB_FUNC_STATIC( QPAINTERPATH_SUBTRACTED )
 {
@@ -1329,7 +1329,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SUBTRACTED )
 }
 
 /*
-void swap ( QPainterPath & other )
+void swap( QPainterPath & other )
 */
 HB_FUNC_STATIC( QPAINTERPATH_SWAP )
 {
@@ -1735,7 +1735,7 @@ HB_FUNC_STATIC( QPAINTERPATH_TRANSLATED )
 }
 
 /*
-QPainterPath united ( const QPainterPath & p ) const
+QPainterPath united( const QPainterPath & p ) const
 */
 HB_FUNC_STATIC( QPAINTERPATH_UNITED )
 {

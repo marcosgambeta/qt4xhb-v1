@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QPALETTE_HIGHLIGHTEDTEXT )
 }
 
 /*
-bool isBrushSet ( ColorGroup cg, ColorRole cr ) const
+bool isBrushSet( QPalette::ColorGroup cg, QPalette::ColorRole cr ) const
 */
 HB_FUNC_STATIC( QPALETTE_ISBRUSHSET )
 {
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QPALETTE_ISBRUSHSET )
 }
 
 /*
-bool isCopyOf ( const QPalette & p ) const
+bool isCopyOf( const QPalette & p ) const
 */
 HB_FUNC_STATIC( QPALETTE_ISCOPYOF )
 {
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QPALETTE_ISCOPYOF )
 }
 
 /*
-bool isEqual ( ColorGroup cg1, ColorGroup cg2 ) const
+bool isEqual( QPalette::ColorGroup cg1, QPalette::ColorGroup cg2 ) const
 */
 HB_FUNC_STATIC( QPALETTE_ISEQUAL )
 {
@@ -736,7 +736,7 @@ HB_FUNC_STATIC( QPALETTE_MIDLIGHT )
 }
 
 /*
-QPalette resolve ( const QPalette & other ) const
+QPalette resolve( const QPalette & other ) const
 */
 HB_FUNC_STATIC( QPALETTE_RESOLVE )
 {
@@ -863,7 +863,7 @@ HB_FUNC_STATIC( QPALETTE_SETCOLOR )
 }
 
 /*
-void setColorGroup ( ColorGroup cg, const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window )
+void setColorGroup( QPalette::ColorGroup cg, const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window )
 */
 HB_FUNC_STATIC( QPALETTE_SETCOLORGROUP )
 {
@@ -889,7 +889,7 @@ HB_FUNC_STATIC( QPALETTE_SETCOLORGROUP )
 }
 
 /*
-void setCurrentColorGroup ( ColorGroup cg )
+void setCurrentColorGroup( QPalette::ColorGroup cg )
 */
 HB_FUNC_STATIC( QPALETTE_SETCURRENTCOLORGROUP )
 {

@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_ISFLAT )
 }
 
 /*
-void setAutoDefault ( bool )
+void setAutoDefault( bool )
 */
 HB_FUNC_STATIC( QPUSHBUTTON_SETAUTODEFAULT )
 {
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETAUTODEFAULT )
 }
 
 /*
-void setDefault ( bool )
+void setDefault( bool )
 */
 HB_FUNC_STATIC( QPUSHBUTTON_SETDEFAULT )
 {
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETDEFAULT )
 }
 
 /*
-void setFlat ( bool )
+void setFlat( bool )
 */
 HB_FUNC_STATIC( QPUSHBUTTON_SETFLAT )
 {

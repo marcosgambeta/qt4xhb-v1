@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW )
 }
 
 /*
-void setStringList(const QStringList & strings)
+void setStringList( const QStringList & strings )
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_SETSTRINGLIST )
 {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_STRINGLIST )
 }
 
 /*
-virtual QVariant data(const QModelIndex & index, int role) const
+virtual QVariant data( const QModelIndex & index, int role ) const
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_DATA )
 {
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_DATA )
 }
 
 /*
-virtual Qt::ItemFlags flags(const QModelIndex & index) const
+virtual Qt::ItemFlags flags( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_FLAGS )
 {

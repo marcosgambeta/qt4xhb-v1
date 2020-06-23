@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QSOUND_LOOPSREMAINING )
 }
 
 /*
-void setLoops ( int number )
+void setLoops( int number )
 */
 HB_FUNC_STATIC( QSOUND_SETLOOPS )
 {

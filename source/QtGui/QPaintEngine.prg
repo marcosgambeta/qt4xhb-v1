@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DELETE )
 }
 
 /*
-virtual bool begin ( QPaintDevice * pdev ) = 0
+virtual bool begin( QPaintDevice * pdev ) = 0
 */
 HB_FUNC_STATIC( QPAINTENGINE_BEGIN )
 {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWLINES )
 }
 
 /*
-virtual void drawPath ( const QPainterPath & path )
+virtual void drawPath( const QPainterPath & path )
 */
 HB_FUNC_STATIC( QPAINTENGINE_DRAWPATH )
 {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWRECTS )
 }
 
 /*
-virtual void drawTextItem ( const QPointF & p, const QTextItem & textItem )
+virtual void drawTextItem( const QPointF & p, const QTextItem & textItem )
 */
 HB_FUNC_STATIC( QPAINTENGINE_DRAWTEXTITEM )
 {
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWTEXTITEM )
 }
 
 /*
-virtual void drawTiledPixmap ( const QRectF & rect, const QPixmap & pixmap, const QPointF & p )
+virtual void drawTiledPixmap( const QRectF & rect, const QPixmap & pixmap, const QPointF & p )
 */
 HB_FUNC_STATIC( QPAINTENGINE_DRAWTILEDPIXMAP )
 {
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QPAINTENGINE_END )
 }
 
 /*
-bool hasFeature ( PaintEngineFeatures feature ) const
+bool hasFeature( QPaintEngine::PaintEngineFeatures feature ) const
 */
 HB_FUNC_STATIC( QPAINTENGINE_HASFEATURE )
 {
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QPAINTENGINE_PAINTER )
 }
 
 /*
-void setActive ( bool state )
+void setActive( bool state )
 */
 HB_FUNC_STATIC( QPAINTENGINE_SETACTIVE )
 {
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QPAINTENGINE_TYPE )
 }
 
 /*
-virtual void updateState ( const QPaintEngineState & state ) = 0
+virtual void updateState( const QPaintEngineState & state ) = 0
 */
 HB_FUNC_STATIC( QPAINTENGINE_UPDATESTATE )
 {

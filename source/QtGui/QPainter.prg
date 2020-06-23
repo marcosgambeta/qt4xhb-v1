@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QPAINTER_BACKGROUNDMODE )
 }
 
 /*
-bool begin ( QPaintDevice * device )
+bool begin( QPaintDevice * device )
 */
 HB_FUNC_STATIC( QPAINTER_BEGIN )
 {
@@ -1389,7 +1389,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWLINES )
 }
 
 /*
-void drawPath ( const QPainterPath & path )
+void drawPath( const QPainterPath & path )
 */
 HB_FUNC_STATIC( QPAINTER_DRAWPATH )
 {
@@ -2685,7 +2685,7 @@ HB_FUNC_STATIC( QPAINTER_ERASERECT )
 }
 
 /*
-void fillPath ( const QPainterPath & path, const QBrush & brush )
+void fillPath( const QPainterPath & path, const QBrush & brush )
 */
 HB_FUNC_STATIC( QPAINTER_FILLPATH )
 {
@@ -3193,7 +3193,7 @@ HB_FUNC_STATIC( QPAINTER_HASCLIPPING )
 }
 
 /*
-void initFrom ( const QWidget * widget )
+void initFrom( const QWidget * widget )
 */
 HB_FUNC_STATIC( QPAINTER_INITFROM )
 {
@@ -3417,7 +3417,7 @@ HB_FUNC_STATIC( QPAINTER_RESTORE )
 }
 
 /*
-void rotate ( qreal angle )
+void rotate( qreal angle )
 */
 HB_FUNC_STATIC( QPAINTER_ROTATE )
 {
@@ -3469,7 +3469,7 @@ HB_FUNC_STATIC( QPAINTER_SAVE )
 }
 
 /*
-void scale ( qreal sx, qreal sy )
+void scale( qreal sx, qreal sy )
 */
 HB_FUNC_STATIC( QPAINTER_SCALE )
 {
@@ -3495,7 +3495,7 @@ HB_FUNC_STATIC( QPAINTER_SCALE )
 }
 
 /*
-void setBackground ( const QBrush & brush )
+void setBackground( const QBrush & brush )
 */
 HB_FUNC_STATIC( QPAINTER_SETBACKGROUND )
 {
@@ -3521,7 +3521,7 @@ HB_FUNC_STATIC( QPAINTER_SETBACKGROUND )
 }
 
 /*
-void setBackgroundMode ( Qt::BGMode mode )
+void setBackgroundMode( Qt::BGMode mode )
 */
 HB_FUNC_STATIC( QPAINTER_SETBACKGROUNDMODE )
 {
@@ -3792,7 +3792,7 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPREGION )
 }
 
 /*
-void setClipping ( bool enable )
+void setClipping( bool enable )
 */
 HB_FUNC_STATIC( QPAINTER_SETCLIPPING )
 {
@@ -3818,7 +3818,7 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPPING )
 }
 
 /*
-void setCompositionMode ( CompositionMode mode )
+void setCompositionMode( QPainter::CompositionMode mode )
 */
 HB_FUNC_STATIC( QPAINTER_SETCOMPOSITIONMODE )
 {
@@ -3844,7 +3844,7 @@ HB_FUNC_STATIC( QPAINTER_SETCOMPOSITIONMODE )
 }
 
 /*
-void setFont ( const QFont & font )
+void setFont( const QFont & font )
 */
 HB_FUNC_STATIC( QPAINTER_SETFONT )
 {
@@ -3870,7 +3870,7 @@ HB_FUNC_STATIC( QPAINTER_SETFONT )
 }
 
 /*
-void setLayoutDirection ( Qt::LayoutDirection direction )
+void setLayoutDirection( Qt::LayoutDirection direction )
 */
 HB_FUNC_STATIC( QPAINTER_SETLAYOUTDIRECTION )
 {
@@ -3896,7 +3896,7 @@ HB_FUNC_STATIC( QPAINTER_SETLAYOUTDIRECTION )
 }
 
 /*
-void setOpacity ( qreal opacity )
+void setOpacity( qreal opacity )
 */
 HB_FUNC_STATIC( QPAINTER_SETOPACITY )
 {
@@ -4071,7 +4071,7 @@ HB_FUNC_STATIC( QPAINTER_SETTRANSFORM )
 }
 
 /*
-void setViewTransformEnabled ( bool enable )
+void setViewTransformEnabled( bool enable )
 */
 HB_FUNC_STATIC( QPAINTER_SETVIEWTRANSFORMENABLED )
 {
@@ -4199,7 +4199,7 @@ HB_FUNC_STATIC( QPAINTER_SETWINDOW )
 }
 
 /*
-void setWorldMatrixEnabled ( bool enable )
+void setWorldMatrixEnabled( bool enable )
 */
 HB_FUNC_STATIC( QPAINTER_SETWORLDMATRIXENABLED )
 {
@@ -4251,7 +4251,7 @@ HB_FUNC_STATIC( QPAINTER_SETWORLDTRANSFORM )
 }
 
 /*
-void shear ( qreal sh, qreal sv )
+void shear( qreal sh, qreal sv )
 */
 HB_FUNC_STATIC( QPAINTER_SHEAR )
 {
@@ -4277,7 +4277,7 @@ HB_FUNC_STATIC( QPAINTER_SHEAR )
 }
 
 /*
-void strokePath ( const QPainterPath & path, const QPen & pen )
+void strokePath( const QPainterPath & path, const QPen & pen )
 */
 HB_FUNC_STATIC( QPAINTER_STROKEPATH )
 {
@@ -4303,7 +4303,7 @@ HB_FUNC_STATIC( QPAINTER_STROKEPATH )
 }
 
 /*
-bool testRenderHint ( RenderHint hint ) const
+bool testRenderHint( QPainter::RenderHint hint ) const
 */
 HB_FUNC_STATIC( QPAINTER_TESTRENDERHINT )
 {

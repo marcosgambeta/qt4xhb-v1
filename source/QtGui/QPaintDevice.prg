@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_LOGICALDPIY )
 }
 
 /*
-int numColors () const (deprecated)
+int numColors() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_NUMCOLORS )
 {

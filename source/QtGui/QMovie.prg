@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QMOVIE_ISVALID )
 }
 
 /*
-bool jumpToFrame ( int frameNumber )
+bool jumpToFrame( int frameNumber )
 */
 HB_FUNC_STATIC( QMOVIE_JUMPTOFRAME )
 {
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QMOVIE_SCALEDSIZE )
 }
 
 /*
-void  setBackgroundColor ( const QColor & color )
+void setBackgroundColor( const QColor & color )
 */
 HB_FUNC_STATIC( QMOVIE_SETBACKGROUNDCOLOR )
 {
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QMOVIE_SETBACKGROUNDCOLOR )
 }
 
 /*
-void  setCacheMode ( CacheMode mode )
+void setCacheMode( QMovie::CacheMode mode )
 */
 HB_FUNC_STATIC( QMOVIE_SETCACHEMODE )
 {
@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QMOVIE_SETCACHEMODE )
 }
 
 /*
-void  setDevice ( QIODevice * device )
+void setDevice( QIODevice * device )
 */
 HB_FUNC_STATIC( QMOVIE_SETDEVICE )
 {
@@ -605,7 +605,7 @@ HB_FUNC_STATIC( QMOVIE_SETDEVICE )
 }
 
 /*
-void  setFileName ( const QString & fileName )
+void setFileName( const QString & fileName )
 */
 HB_FUNC_STATIC( QMOVIE_SETFILENAME )
 {
@@ -631,7 +631,7 @@ HB_FUNC_STATIC( QMOVIE_SETFILENAME )
 }
 
 /*
-void  setFormat ( const QByteArray & format )
+void setFormat( const QByteArray & format )
 */
 HB_FUNC_STATIC( QMOVIE_SETFORMAT )
 {
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QMOVIE_SETFORMAT )
 }
 
 /*
-void  setScaledSize ( const QSize & size )
+void setScaledSize( const QSize & size )
 */
 HB_FUNC_STATIC( QMOVIE_SETSCALEDSIZE )
 {
@@ -755,7 +755,7 @@ HB_FUNC_STATIC( QMOVIE_JUMPTONEXTFRAME )
 }
 
 /*
-void setPaused ( bool paused )
+void setPaused( bool paused )
 */
 HB_FUNC_STATIC( QMOVIE_SETPAUSED )
 {
@@ -781,7 +781,7 @@ HB_FUNC_STATIC( QMOVIE_SETPAUSED )
 }
 
 /*
-void setSpeed ( int percentSpeed )
+void setSpeed( int percentSpeed )
 */
 HB_FUNC_STATIC( QMOVIE_SETSPEED )
 {

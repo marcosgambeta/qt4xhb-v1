@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSLIDER_DELETE )
 }
 
 /*
-void setTickInterval ( int ti )
+void setTickInterval( int ti )
 */
 HB_FUNC_STATIC( QSLIDER_SETTICKINTERVAL )
 {
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QSLIDER_SETTICKINTERVAL )
 }
 
 /*
-void setTickPosition ( TickPosition position )
+void setTickPosition( QSlider::TickPosition position )
 */
 HB_FUNC_STATIC( QSLIDER_SETTICKPOSITION )
 {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QSLIDER_TICKPOSITION )
 }
 
 /*
-virtual bool event ( QEvent * event )
+virtual bool event( QEvent * event )
 */
 HB_FUNC_STATIC( QSLIDER_EVENT )
 {

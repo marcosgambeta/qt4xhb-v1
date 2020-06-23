@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_DELETE )
 }
 
 /*
-void open ( QObject * receiver, const char * member )
+void open( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_OPEN )
 {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_PRINTER )
 }
 
 /*
-virtual void done ( int result )
+virtual void done( int result )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_DONE )
 {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_DONE )
 }
 
 /*
-virtual void setVisible ( bool visible )
+virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_SETVISIBLE )
 {

@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QSCROLLBAR_DELETE )
 }
 
 /*
-virtual bool event ( QEvent * event )
+virtual bool event( QEvent * event )
 */
 HB_FUNC_STATIC( QSCROLLBAR_EVENT )
 {

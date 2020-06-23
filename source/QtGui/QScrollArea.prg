@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QSCROLLAREA_ENSUREWIDGETVISIBLE )
 }
 
 /*
-void setAlignment ( Qt::Alignment )
+void setAlignment( Qt::Alignment )
 */
 HB_FUNC_STATIC( QSCROLLAREA_SETALIGNMENT )
 {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QSCROLLAREA_SETALIGNMENT )
 }
 
 /*
-void setWidget ( QWidget * widget )
+void setWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QSCROLLAREA_SETWIDGET )
 {
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QSCROLLAREA_SETWIDGET )
 }
 
 /*
-void setWidgetResizable ( bool resizable )
+void setWidgetResizable( bool resizable )
 */
 HB_FUNC_STATIC( QSCROLLAREA_SETWIDGETRESIZABLE )
 {
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QSCROLLAREA_WIDGETRESIZABLE )
 }
 
 /*
-virtual bool focusNextPrevChild ( bool next )
+virtual bool focusNextPrevChild( bool next )
 */
 HB_FUNC_STATIC( QSCROLLAREA_FOCUSNEXTPREVCHILD )
 {

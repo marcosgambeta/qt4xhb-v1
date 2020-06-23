@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QMDIAREA_DOCUMENTMODE )
 }
 
 /*
-void removeSubWindow ( QWidget * widget )
+void removeSubWindow( QWidget * widget )
 */
 HB_FUNC_STATIC( QMDIAREA_REMOVESUBWINDOW )
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QMDIAREA_REMOVESUBWINDOW )
 }
 
 /*
-void setActivationOrder ( WindowOrder order )
+void setActivationOrder( QMdiArea::WindowOrder order )
 */
 HB_FUNC_STATIC( QMDIAREA_SETACTIVATIONORDER )
 {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QMDIAREA_SETACTIVATIONORDER )
 }
 
 /*
-void setBackground ( const QBrush & background )
+void setBackground( const QBrush & background )
 */
 HB_FUNC_STATIC( QMDIAREA_SETBACKGROUND )
 {
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QMDIAREA_SETBACKGROUND )
 }
 
 /*
-void setDocumentMode ( bool enabled )
+void setDocumentMode( bool enabled )
 */
 HB_FUNC_STATIC( QMDIAREA_SETDOCUMENTMODE )
 {
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QMDIAREA_SETOPTION )
 }
 
 /*
-void setTabPosition ( QTabWidget::TabPosition position )
+void setTabPosition( QTabWidget::TabPosition position )
 */
 HB_FUNC_STATIC( QMDIAREA_SETTABPOSITION )
 {
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QMDIAREA_SETTABPOSITION )
 }
 
 /*
-void setTabShape ( QTabWidget::TabShape shape )
+void setTabShape( QTabWidget::TabShape shape )
 */
 HB_FUNC_STATIC( QMDIAREA_SETTABSHAPE )
 {
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QMDIAREA_SETTABSHAPE )
 }
 
 /*
-void setViewMode ( ViewMode mode )
+void setViewMode( QMdiArea::ViewMode mode )
 */
 HB_FUNC_STATIC( QMDIAREA_SETVIEWMODE )
 {
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QMDIAREA_TABSHAPE )
 }
 
 /*
-bool testOption ( AreaOption option ) const
+bool testOption( QMdiArea::AreaOption option ) const
 */
 HB_FUNC_STATIC( QMDIAREA_TESTOPTION )
 {
@@ -791,7 +791,7 @@ HB_FUNC_STATIC( QMDIAREA_CLOSEALLSUBWINDOWS )
 }
 
 /*
-void setActiveSubWindow ( QMdiSubWindow * window )
+void setActiveSubWindow( QMdiSubWindow * window )
 */
 HB_FUNC_STATIC( QMDIAREA_SETACTIVESUBWINDOW )
 {

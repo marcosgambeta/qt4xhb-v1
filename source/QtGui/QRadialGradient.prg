@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_RADIUS )
 }
 
 /*
-void setRadius(qreal radius)
+void setRadius( qreal radius )
 */
 HB_FUNC_STATIC( QRADIALGRADIENT_SETRADIUS )
 {
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_CENTERRADIUS )
 }
 
 /*
-void setCenterRadius(qreal radius)
+void setCenterRadius( qreal radius )
 */
 HB_FUNC_STATIC( QRADIALGRADIENT_SETCENTERRADIUS )
 {
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QRADIALGRADIENT_FOCALRADIUS )
 }
 
 /*
-void setFocalRadius(qreal radius)
+void setFocalRadius( qreal radius )
 */
 HB_FUNC_STATIC( QRADIALGRADIENT_SETFOCALRADIUS )
 {

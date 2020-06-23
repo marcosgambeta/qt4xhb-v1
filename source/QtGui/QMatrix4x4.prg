@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QMATRIX4X4_DELETE )
 }
 
 /*
-QVector4D column ( int index ) const
+QVector4D column( int index ) const
 */
 HB_FUNC_STATIC( QMATRIX4X4_COLUMN )
 {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QMATRIX4X4_DETERMINANT )
 }
 
 /*
-void fill ( qreal value )
+void fill( qreal value )
 */
 HB_FUNC_STATIC( QMATRIX4X4_FILL )
 {
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QMATRIX4X4_FLIPCOORDINATES )
 }
 
 /*
-void frustum ( qreal left, qreal right, qreal bottom, qreal top, qreal nearPlane, qreal farPlane )
+void frustum( qreal left, qreal right, qreal bottom, qreal top, qreal nearPlane, qreal farPlane )
 */
 HB_FUNC_STATIC( QMATRIX4X4_FRUSTUM )
 {
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QMATRIX4X4_ISIDENTITY )
 }
 
 /*
-void lookAt ( const QVector3D & eye, const QVector3D & center, const QVector3D & up )
+void lookAt( const QVector3D & eye, const QVector3D & center, const QVector3D & up )
 */
 HB_FUNC_STATIC( QMATRIX4X4_LOOKAT )
 {
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QMATRIX4X4_LOOKAT )
 }
 
 /*
-QPoint map ( const QPoint & point ) const
+QPoint map( const QPoint & point ) const
 */
 void QMatrix4x4_map1()
 {
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QMATRIX4X4_MAPRECT )
 }
 
 /*
-QVector3D mapVector ( const QVector3D & vector ) const
+QVector3D mapVector( const QVector3D & vector ) const
 */
 HB_FUNC_STATIC( QMATRIX4X4_MAPVECTOR )
 {
@@ -658,7 +658,7 @@ HB_FUNC_STATIC( QMATRIX4X4_ORTHO )
 }
 
 /*
-void perspective ( qreal angle, qreal aspect, qreal nearPlane, qreal farPlane )
+void perspective( qreal angle, qreal aspect, qreal nearPlane, qreal farPlane )
 */
 HB_FUNC_STATIC( QMATRIX4X4_PERSPECTIVE )
 {
@@ -755,7 +755,7 @@ HB_FUNC_STATIC( QMATRIX4X4_ROTATE )
 }
 
 /*
-QVector4D row ( int index ) const
+QVector4D row( int index ) const
 */
 HB_FUNC_STATIC( QMATRIX4X4_ROW )
 {
@@ -871,7 +871,7 @@ HB_FUNC_STATIC( QMATRIX4X4_SCALE )
 }
 
 /*
-void setColumn ( int index, const QVector4D & value )
+void setColumn( int index, const QVector4D & value )
 */
 HB_FUNC_STATIC( QMATRIX4X4_SETCOLUMN )
 {
@@ -897,7 +897,7 @@ HB_FUNC_STATIC( QMATRIX4X4_SETCOLUMN )
 }
 
 /*
-void setRow ( int index, const QVector4D & value )
+void setRow( int index, const QVector4D & value )
 */
 HB_FUNC_STATIC( QMATRIX4X4_SETROW )
 {

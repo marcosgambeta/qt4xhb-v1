@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_ORIENTATION )
 }
 
 /*
-void setOrientation ( Qt::Orientation orientation )
+void setOrientation( Qt::Orientation orientation )
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_SETORIENTATION )
 {

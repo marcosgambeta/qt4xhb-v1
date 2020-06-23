@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_MDIAREA )
 }
 
 /*
-void setKeyboardPageStep ( int step )
+void setKeyboardPageStep( int step )
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDPAGESTEP )
 {
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDPAGESTEP )
 }
 
 /*
-void setKeyboardSingleStep ( int step )
+void setKeyboardSingleStep( int step )
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDSINGLESTEP )
 {
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETOPTION )
 }
 
 /*
-void setSystemMenu ( QMenu * systemMenu )
+void setSystemMenu( QMenu * systemMenu )
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SETSYSTEMMENU )
 {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETSYSTEMMENU )
 }
 
 /*
-void setWidget ( QWidget * widget )
+void setWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SETWIDGET )
 {
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SYSTEMMENU )
 }
 
 /*
-bool testOption ( SubWindowOption option ) const
+bool testOption( QMdiSubWindow::SubWindowOption option ) const
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_TESTOPTION )
 {

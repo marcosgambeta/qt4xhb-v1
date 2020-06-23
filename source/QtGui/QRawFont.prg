@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QRAWFONT_FAMILYNAME )
 }
 
 /*
-QByteArray fontTable ( const char * tagName ) const
+QByteArray fontTable( const char * tagName ) const
 */
 HB_FUNC_STATIC( QRAWFONT_FONTTABLE )
 {
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QRAWFONT_FONTTABLE )
 }
 
 /*
-QVector<quint32> glyphIndexesForString ( const QString & text ) const
+QVector<quint32> glyphIndexesForString( const QString & text ) const
 */
 HB_FUNC_STATIC( QRAWFONT_GLYPHINDEXESFORSTRING )
 {
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QRAWFONT_LEADING )
 }
 
 /*
-void loadFromData ( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference )
+void loadFromData( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference )
 */
 HB_FUNC_STATIC( QRAWFONT_LOADFROMDATA )
 {
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QRAWFONT_LOADFROMDATA )
 }
 
 /*
-void loadFromFile ( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference )
+void loadFromFile( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference )
 */
 HB_FUNC_STATIC( QRAWFONT_LOADFROMFILE )
 {
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QRAWFONT_MAXCHARWIDTH )
 }
 
 /*
-QPainterPath pathForGlyph ( quint32 glyphIndex ) const
+QPainterPath pathForGlyph( quint32 glyphIndex ) const
 */
 HB_FUNC_STATIC( QRAWFONT_PATHFORGLYPH )
 {
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( QRAWFONT_PIXELSIZE )
 }
 
 /*
-void setPixelSize ( qreal pixelSize )
+void setPixelSize( qreal pixelSize )
 */
 HB_FUNC_STATIC( QRAWFONT_SETPIXELSIZE )
 {

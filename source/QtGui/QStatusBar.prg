@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QSTATUSBAR_ISSIZEGRIPENABLED )
 }
 
 /*
-void removeWidget ( QWidget * widget )
+void removeWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QSTATUSBAR_REMOVEWIDGET )
 {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QSTATUSBAR_REMOVEWIDGET )
 }
 
 /*
-void setSizeGripEnabled ( bool )
+void setSizeGripEnabled( bool )
 */
 HB_FUNC_STATIC( QSTATUSBAR_SETSIZEGRIPENABLED )
 {

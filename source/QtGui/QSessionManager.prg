@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONKEY )
 }
 
 /*
-void setDiscardCommand ( const QStringList & list )
+void setDiscardCommand( const QStringList & list )
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_SETDISCARDCOMMAND )
 {
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY )
 }
 
 /*
-void setRestartCommand ( const QStringList & command )
+void setRestartCommand( const QStringList & command )
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTCOMMAND )
 {
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTCOMMAND )
 }
 
 /*
-void setRestartHint ( RestartHint hint )
+void setRestartHint( QSessionManager::RestartHint hint )
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTHINT )
 {

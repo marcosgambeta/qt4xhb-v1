@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_REMOVECOLUMNS )
 }
 
 /*
-Qt::ItemFlags flags(const QModelIndex &index) const
+Qt::ItemFlags flags( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_FLAGS )
 {
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SORT )
 }
 
 /*
-QStandardItem *itemFromIndex(const QModelIndex &index) const
+QStandardItem * itemFromIndex( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_ITEMFROMINDEX )
 {
@@ -620,7 +620,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_ITEMFROMINDEX )
 }
 
 /*
-QModelIndex indexFromItem(const QStandardItem *item) const
+QModelIndex indexFromItem( const QStandardItem * item ) const
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_INDEXFROMITEM )
 {
@@ -746,7 +746,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INVISIBLEROOTITEM )
 }
 
 /*
-QStandardItem *horizontalHeaderItem(int column) const
+QStandardItem * horizontalHeaderItem( int column ) const
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_HORIZONTALHEADERITEM )
 {
@@ -771,7 +771,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_HORIZONTALHEADERITEM )
 }
 
 /*
-void setHorizontalHeaderItem(int column, QStandardItem *item)
+void setHorizontalHeaderItem( int column, QStandardItem * item )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETHORIZONTALHEADERITEM )
 {
@@ -797,7 +797,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETHORIZONTALHEADERITEM )
 }
 
 /*
-QStandardItem *verticalHeaderItem(int row) const
+QStandardItem * verticalHeaderItem( int row ) const
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_VERTICALHEADERITEM )
 {
@@ -822,7 +822,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_VERTICALHEADERITEM )
 }
 
 /*
-void setVerticalHeaderItem(int row, QStandardItem *item)
+void setVerticalHeaderItem( int row, QStandardItem * item )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETVERTICALHEADERITEM )
 {
@@ -848,7 +848,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETVERTICALHEADERITEM )
 }
 
 /*
-void setHorizontalHeaderLabels(const QStringList &labels)
+void setHorizontalHeaderLabels( const QStringList & labels )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETHORIZONTALHEADERLABELS )
 {
@@ -874,7 +874,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETHORIZONTALHEADERLABELS )
 }
 
 /*
-void setVerticalHeaderLabels(const QStringList &labels)
+void setVerticalHeaderLabels( const QStringList & labels )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETVERTICALHEADERLABELS )
 {
@@ -900,7 +900,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETVERTICALHEADERLABELS )
 }
 
 /*
-void setRowCount(int rows)
+void setRowCount( int rows )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETROWCOUNT )
 {
@@ -926,7 +926,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETROWCOUNT )
 }
 
 /*
-void setColumnCount(int columns)
+void setColumnCount( int columns )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETCOLUMNCOUNT )
 {
@@ -1011,7 +1011,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_APPENDROW )
 }
 
 /*
-void appendColumn(const QList<QStandardItem*> &items)
+void appendColumn( const QList<QStandardItem *> & items )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_APPENDCOLUMN )
 {
@@ -1204,7 +1204,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEITEM )
 }
 
 /*
-QList<QStandardItem*> takeRow(int row)
+QList<QStandardItem *> takeRow( int row )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEROW )
 {
@@ -1252,7 +1252,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEROW )
 }
 
 /*
-QList<QStandardItem*> takeColumn(int column)
+QList<QStandardItem *> takeColumn( int column )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKECOLUMN )
 {
@@ -1300,7 +1300,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKECOLUMN )
 }
 
 /*
-QStandardItem *takeHorizontalHeaderItem(int column)
+QStandardItem * takeHorizontalHeaderItem( int column )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEHORIZONTALHEADERITEM )
 {
@@ -1325,7 +1325,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEHORIZONTALHEADERITEM )
 }
 
 /*
-QStandardItem *takeVerticalHeaderItem(int row)
+QStandardItem * takeVerticalHeaderItem( int row )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEVERTICALHEADERITEM )
 {
@@ -1375,7 +1375,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_ITEMPROTOTYPE )
 }
 
 /*
-void setItemPrototype(const QStandardItem *item)
+void setItemPrototype( const QStandardItem * item )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETITEMPROTOTYPE )
 {
@@ -1473,7 +1473,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_SORTROLE )
 }
 
 /*
-void setSortRole(int role)
+void setSortRole( int role )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETSORTROLE )
 {
@@ -1523,7 +1523,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_MIMETYPES )
 }
 
 /*
-QMimeData *mimeData(const QModelIndexList &indexes) const
+QMimeData * mimeData( const QModelIndexList & indexes ) const
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_MIMEDATA )
 {
@@ -1556,7 +1556,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_MIMEDATA )
 }
 
 /*
-bool dropMimeData (const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent)
+bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_DROPMIMEDATA )
 {

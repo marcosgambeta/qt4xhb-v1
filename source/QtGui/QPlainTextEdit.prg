@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_DELETE )
 }
 
 /*
-QString anchorAt ( const QPoint & pos ) const
+QString anchorAt( const QPoint & pos ) const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ANCHORAT )
 {
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CURRENTCHARFORMAT )
 }
 
 /*
-QTextCursor cursorForPosition ( const QPoint & pos ) const
+QTextCursor cursorForPosition( const QPoint & pos ) const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORFORPOSITION )
 {
@@ -613,7 +613,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_LINEWRAPMODE )
 }
 
 /*
-virtual QVariant loadResource ( int type, const QUrl & name )
+virtual QVariant loadResource( int type, const QUrl & name )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_LOADRESOURCE )
 {
@@ -662,7 +662,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_MAXIMUMBLOCKCOUNT )
 }
 
 /*
-void mergeCurrentCharFormat ( const QTextCharFormat & modifier )
+void mergeCurrentCharFormat( const QTextCharFormat & modifier )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_MERGECURRENTCHARFORMAT )
 {
@@ -738,7 +738,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_OVERWRITEMODE )
 }
 
 /*
-void print ( QPrinter * printer ) const
+void print( QPrinter * printer ) const
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_PRINT )
 {
@@ -764,7 +764,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_PRINT )
 }
 
 /*
-void setBackgroundVisible ( bool visible )
+void setBackgroundVisible( bool visible )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETBACKGROUNDVISIBLE )
 {
@@ -790,7 +790,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETBACKGROUNDVISIBLE )
 }
 
 /*
-void setCenterOnScroll ( bool enabled )
+void setCenterOnScroll( bool enabled )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETCENTERONSCROLL )
 {
@@ -816,7 +816,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETCENTERONSCROLL )
 }
 
 /*
-void setCurrentCharFormat ( const QTextCharFormat & format )
+void setCurrentCharFormat( const QTextCharFormat & format )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETCURRENTCHARFORMAT )
 {
@@ -842,7 +842,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETCURRENTCHARFORMAT )
 }
 
 /*
-void setCursorWidth ( int width )
+void setCursorWidth( int width )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETCURSORWIDTH )
 {
@@ -868,7 +868,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETCURSORWIDTH )
 }
 
 /*
-void setDocument ( QTextDocument * document )
+void setDocument( QTextDocument * document )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETDOCUMENT )
 {
@@ -894,7 +894,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETDOCUMENT )
 }
 
 /*
-void setDocumentTitle ( const QString & title )
+void setDocumentTitle( const QString & title )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETDOCUMENTTITLE )
 {
@@ -920,7 +920,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETDOCUMENTTITLE )
 }
 
 /*
-void setLineWrapMode ( LineWrapMode mode )
+void setLineWrapMode( QPlainTextEdit::LineWrapMode mode )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETLINEWRAPMODE )
 {
@@ -946,7 +946,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETLINEWRAPMODE )
 }
 
 /*
-void setMaximumBlockCount ( int maximum )
+void setMaximumBlockCount( int maximum )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETMAXIMUMBLOCKCOUNT )
 {
@@ -972,7 +972,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETMAXIMUMBLOCKCOUNT )
 }
 
 /*
-void setOverwriteMode ( bool overwrite )
+void setOverwriteMode( bool overwrite )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETOVERWRITEMODE )
 {
@@ -998,7 +998,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETOVERWRITEMODE )
 }
 
 /*
-void setReadOnly ( bool ro )
+void setReadOnly( bool ro )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETREADONLY )
 {
@@ -1024,7 +1024,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETREADONLY )
 }
 
 /*
-void setTabChangesFocus ( bool b )
+void setTabChangesFocus( bool b )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETTABCHANGESFOCUS )
 {
@@ -1050,7 +1050,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETTABCHANGESFOCUS )
 }
 
 /*
-void setTabStopWidth ( int width )
+void setTabStopWidth( int width )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETTABSTOPWIDTH )
 {
@@ -1076,7 +1076,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETTABSTOPWIDTH )
 }
 
 /*
-void setTextCursor ( const QTextCursor & cursor )
+void setTextCursor( const QTextCursor & cursor )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETTEXTCURSOR )
 {
@@ -1102,7 +1102,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETTEXTCURSOR )
 }
 
 /*
-void setTextInteractionFlags ( Qt::TextInteractionFlags flags )
+void setTextInteractionFlags( Qt::TextInteractionFlags flags )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETTEXTINTERACTIONFLAGS )
 {
@@ -1128,7 +1128,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETTEXTINTERACTIONFLAGS )
 }
 
 /*
-void setUndoRedoEnabled ( bool enable )
+void setUndoRedoEnabled( bool enable )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETUNDOREDOENABLED )
 {
@@ -1154,7 +1154,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SETUNDOREDOENABLED )
 }
 
 /*
-void setWordWrapMode ( QTextOption::WrapMode policy )
+void setWordWrapMode( QTextOption::WrapMode policy )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETWORDWRAPMODE )
 {
@@ -1325,7 +1325,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_WORDWRAPMODE )
 }
 
 /*
-void appendHtml ( const QString & html )
+void appendHtml( const QString & html )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_APPENDHTML )
 {
@@ -1351,7 +1351,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_APPENDHTML )
 }
 
 /*
-void appendPlainText ( const QString & text )
+void appendPlainText( const QString & text )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_APPENDPLAINTEXT )
 {
@@ -1481,7 +1481,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CUT )
 }
 
 /*
-void insertPlainText ( const QString & text )
+void insertPlainText( const QString & text )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_INSERTPLAINTEXT )
 {
@@ -1585,7 +1585,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_SELECTALL )
 }
 
 /*
-void setPlainText ( const QString & text )
+void setPlainText( const QString & text )
 */
 HB_FUNC_STATIC( QPLAINTEXTEDIT_SETPLAINTEXT )
 {

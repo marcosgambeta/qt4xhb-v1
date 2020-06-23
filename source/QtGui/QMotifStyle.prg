@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QMOTIFSTYLE_DELETE )
 }
 
 /*
-void setUseHighlightColors ( bool arg )
+void setUseHighlightColors( bool arg )
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_SETUSEHIGHLIGHTCOLORS )
 {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QMOTIFSTYLE_DRAWPRIMITIVE )
 }
 
 /*
-virtual bool event ( QEvent * e )
+virtual bool event( QEvent * e )
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_EVENT )
 {
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QMOTIFSTYLE_PIXELMETRIC )
 }
 
 /*
-virtual void polish ( QPalette & pal )
+virtual void polish( QPalette & pal )
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_POLISH )
 {

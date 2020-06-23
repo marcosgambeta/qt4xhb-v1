@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QMENU_DELETE )
 }
 
 /*
-QAction * actionAt ( const QPoint & pt ) const
+QAction * actionAt( const QPoint & pt ) const
 */
 HB_FUNC_STATIC( QMENU_ACTIONAT )
 {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QMENU_ACTIONAT )
 }
 
 /*
-QRect actionGeometry ( QAction * act ) const
+QRect actionGeometry( QAction * act ) const
 */
 HB_FUNC_STATIC( QMENU_ACTIONGEOMETRY )
 {
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QMENU_ICON )
 }
 
 /*
-QAction * insertMenu ( QAction * before, QMenu * menu )
+QAction * insertMenu( QAction * before, QMenu * menu )
 */
 HB_FUNC_STATIC( QMENU_INSERTMENU )
 {
@@ -565,7 +565,7 @@ HB_FUNC_STATIC( QMENU_INSERTMENU )
 }
 
 /*
-QAction * insertSeparator ( QAction * before )
+QAction * insertSeparator( QAction * before )
 */
 HB_FUNC_STATIC( QMENU_INSERTSEPARATOR )
 {
@@ -737,7 +737,7 @@ HB_FUNC_STATIC( QMENU_SEPARATORSCOLLAPSIBLE )
 }
 
 /*
-void setActiveAction ( QAction * act )
+void setActiveAction( QAction * act )
 */
 HB_FUNC_STATIC( QMENU_SETACTIVEACTION )
 {
@@ -763,7 +763,7 @@ HB_FUNC_STATIC( QMENU_SETACTIVEACTION )
 }
 
 /*
-void setDefaultAction ( QAction * act )
+void setDefaultAction( QAction * act )
 */
 HB_FUNC_STATIC( QMENU_SETDEFAULTACTION )
 {
@@ -789,7 +789,7 @@ HB_FUNC_STATIC( QMENU_SETDEFAULTACTION )
 }
 
 /*
-void setIcon ( const QIcon & icon )
+void setIcon( const QIcon & icon )
 */
 HB_FUNC_STATIC( QMENU_SETICON )
 {
@@ -815,7 +815,7 @@ HB_FUNC_STATIC( QMENU_SETICON )
 }
 
 /*
-void setSeparatorsCollapsible ( bool collapse )
+void setSeparatorsCollapsible( bool collapse )
 */
 HB_FUNC_STATIC( QMENU_SETSEPARATORSCOLLAPSIBLE )
 {
@@ -841,7 +841,7 @@ HB_FUNC_STATIC( QMENU_SETSEPARATORSCOLLAPSIBLE )
 }
 
 /*
-void setTearOffEnabled ( bool )
+void setTearOffEnabled( bool )
 */
 HB_FUNC_STATIC( QMENU_SETTEAROFFENABLED )
 {
@@ -867,7 +867,7 @@ HB_FUNC_STATIC( QMENU_SETTEAROFFENABLED )
 }
 
 /*
-void setTitle ( const QString & title )
+void setTitle( const QString & title )
 */
 HB_FUNC_STATIC( QMENU_SETTITLE )
 {

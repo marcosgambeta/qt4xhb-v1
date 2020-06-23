@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QREGION_RECTCOUNT )
 }
 
 /*
-QVector<QRect> rects () const
+QVector<QRect> rects() const
 */
 HB_FUNC_STATIC( QREGION_RECTS )
 {
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QREGION_RECTS )
 }
 
 /*
-QRegion subtracted ( const QRegion & r ) const
+QRegion subtracted( const QRegion & r ) const
 */
 HB_FUNC_STATIC( QREGION_SUBTRACTED )
 {
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QREGION_SUBTRACTED )
 }
 
 /*
-void swap ( QRegion & other )
+void swap( QRegion & other )
 */
 HB_FUNC_STATIC( QREGION_SWAP )
 {
@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QREGION_UNITED )
 }
 
 /*
-QRegion xored ( const QRegion & r ) const
+QRegion xored( const QRegion & r ) const
 */
 HB_FUNC_STATIC( QREGION_XORED )
 {

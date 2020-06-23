@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QPICTURE_LOAD )
 }
 
 /*
-bool play ( QPainter * painter )
+bool play( QPainter * painter )
 */
 HB_FUNC_STATIC( QPICTURE_PLAY )
 {
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QPICTURE_SAVE )
 }
 
 /*
-void setBoundingRect ( const QRect & r )
+void setBoundingRect( const QRect & r )
 */
 HB_FUNC_STATIC( QPICTURE_SETBOUNDINGRECT )
 {
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QPICTURE_SETBOUNDINGRECT )
 }
 
 /*
-virtual void setData ( const char * data, uint size )
+virtual void setData( const char * data, uint size )
 */
 HB_FUNC_STATIC( QPICTURE_SETDATA )
 {
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QPICTURE_SIZE )
 }
 
 /*
-void swap ( QPicture & other )
+void swap( QPicture & other )
 */
 HB_FUNC_STATIC( QPICTURE_SWAP )
 {

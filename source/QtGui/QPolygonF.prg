@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QPOLYGONF_BOUNDINGRECT )
 }
 
 /*
-bool containsPoint ( const QPointF & point, Qt::FillRule fillRule ) const
+bool containsPoint( const QPointF & point, Qt::FillRule fillRule ) const
 */
 HB_FUNC_STATIC( QPOLYGONF_CONTAINSPOINT )
 {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QPOLYGONF_CONTAINSPOINT )
 }
 
 /*
-QPolygonF intersected ( const QPolygonF & r ) const
+QPolygonF intersected( const QPolygonF & r ) const
 */
 HB_FUNC_STATIC( QPOLYGONF_INTERSECTED )
 {
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QPOLYGONF_ISCLOSED )
 }
 
 /*
-QPolygonF subtracted ( const QPolygonF & r ) const
+QPolygonF subtracted( const QPolygonF & r ) const
 */
 HB_FUNC_STATIC( QPOLYGONF_SUBTRACTED )
 {
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QPOLYGONF_SUBTRACTED )
 }
 
 /*
-void swap ( QPolygonF & other )
+void swap( QPolygonF & other )
 */
 HB_FUNC_STATIC( QPOLYGONF_SWAP )
 {
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QPOLYGONF_TRANSLATED )
 }
 
 /*
-QPolygonF united ( const QPolygonF & r ) const
+QPolygonF united( const QPolygonF & r ) const
 */
 HB_FUNC_STATIC( QPOLYGONF_UNITED )
 {

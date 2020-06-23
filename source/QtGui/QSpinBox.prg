@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QSPINBOX_PREFIX )
 }
 
 /*
-void setMaximum ( int max )
+void setMaximum( int max )
 */
 HB_FUNC_STATIC( QSPINBOX_SETMAXIMUM )
 {
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QSPINBOX_SETMAXIMUM )
 }
 
 /*
-void setMinimum ( int min )
+void setMinimum( int min )
 */
 HB_FUNC_STATIC( QSPINBOX_SETMINIMUM )
 {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QSPINBOX_SETMINIMUM )
 }
 
 /*
-void setPrefix ( const QString & prefix )
+void setPrefix( const QString & prefix )
 */
 HB_FUNC_STATIC( QSPINBOX_SETPREFIX )
 {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QSPINBOX_SETPREFIX )
 }
 
 /*
-void setRange ( int minimum, int maximum )
+void setRange( int minimum, int maximum )
 */
 HB_FUNC_STATIC( QSPINBOX_SETRANGE )
 {
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QSPINBOX_SETRANGE )
 }
 
 /*
-void setSingleStep ( int val )
+void setSingleStep( int val )
 */
 HB_FUNC_STATIC( QSPINBOX_SETSINGLESTEP )
 {
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QSPINBOX_SETSINGLESTEP )
 }
 
 /*
-void setSuffix ( const QString & suffix )
+void setSuffix( const QString & suffix )
 */
 HB_FUNC_STATIC( QSPINBOX_SETSUFFIX )
 {
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QSPINBOX_VALUE )
 }
 
 /*
-void setValue ( int val )
+void setValue( int val )
 */
 HB_FUNC_STATIC( QSPINBOX_SETVALUE )
 {

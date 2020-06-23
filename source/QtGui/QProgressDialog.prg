@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_MINIMUMDURATION )
 }
 
 /*
-void open ( QObject * receiver, const char * member )
+void open( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_OPEN )
 {
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_OPEN )
 }
 
 /*
-void setAutoClose ( bool close )
+void setAutoClose( bool close )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETAUTOCLOSE )
 {
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETAUTOCLOSE )
 }
 
 /*
-void setAutoReset ( bool reset )
+void setAutoReset( bool reset )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETAUTORESET )
 {
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETAUTORESET )
 }
 
 /*
-void setBar ( QProgressBar * bar )
+void setBar( QProgressBar * bar )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETBAR )
 {
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETBAR )
 }
 
 /*
-void setCancelButton ( QPushButton * cancelButton )
+void setCancelButton( QPushButton * cancelButton )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETCANCELBUTTON )
 {
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETCANCELBUTTON )
 }
 
 /*
-void setLabel ( QLabel * label )
+void setLabel( QLabel * label )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETLABEL )
 {
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_RESET )
 }
 
 /*
-void setCancelButtonText ( const QString & cancelButtonText )
+void setCancelButtonText( const QString & cancelButtonText )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETCANCELBUTTONTEXT )
 {
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETCANCELBUTTONTEXT )
 }
 
 /*
-void setLabelText ( const QString & text )
+void setLabelText( const QString & text )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETLABELTEXT )
 {
@@ -603,7 +603,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETLABELTEXT )
 }
 
 /*
-void setMaximum ( int maximum )
+void setMaximum( int maximum )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETMAXIMUM )
 {
@@ -629,7 +629,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETMAXIMUM )
 }
 
 /*
-void setMinimum ( int minimum )
+void setMinimum( int minimum )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETMINIMUM )
 {
@@ -655,7 +655,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETMINIMUM )
 }
 
 /*
-void setMinimumDuration ( int ms )
+void setMinimumDuration( int ms )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETMINIMUMDURATION )
 {
@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETMINIMUMDURATION )
 }
 
 /*
-void setRange ( int minimum, int maximum )
+void setRange( int minimum, int maximum )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETRANGE )
 {
@@ -707,7 +707,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETRANGE )
 }
 
 /*
-void setValue ( int progress )
+void setValue( int progress )
 */
 HB_FUNC_STATIC( QPROGRESSDIALOG_SETVALUE )
 {

@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QPEN_DASHOFFSET )
 }
 
 /*
-QVector<qreal> dashPattern () const
+QVector<qreal> dashPattern() const
 */
 HB_FUNC_STATIC( QPEN_DASHPATTERN )
 {
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QPEN_MITERLIMIT )
 }
 
 /*
-void setBrush ( const QBrush & brush )
+void setBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QPEN_SETBRUSH )
 {
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QPEN_SETBRUSH )
 }
 
 /*
-void setCapStyle ( Qt::PenCapStyle style )
+void setCapStyle( Qt::PenCapStyle style )
 */
 HB_FUNC_STATIC( QPEN_SETCAPSTYLE )
 {
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QPEN_SETCAPSTYLE )
 }
 
 /*
-void setColor ( const QColor & color )
+void setColor( const QColor & color )
 */
 HB_FUNC_STATIC( QPEN_SETCOLOR )
 {
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QPEN_SETCOLOR )
 }
 
 /*
-void setCosmetic ( bool cosmetic )
+void setCosmetic( bool cosmetic )
 */
 HB_FUNC_STATIC( QPEN_SETCOSMETIC )
 {
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QPEN_SETCOSMETIC )
 }
 
 /*
-void setDashOffset ( qreal offset )
+void setDashOffset( qreal offset )
 */
 HB_FUNC_STATIC( QPEN_SETDASHOFFSET )
 {
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QPEN_SETDASHOFFSET )
 }
 
 /*
-void setDashPattern ( const QVector<qreal> & pattern )
+void setDashPattern( const QVector<qreal> & pattern )
 */
 HB_FUNC_STATIC( QPEN_SETDASHPATTERN )
 {
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QPEN_SETDASHPATTERN )
 }
 
 /*
-void setJoinStyle ( Qt::PenJoinStyle style )
+void setJoinStyle( Qt::PenJoinStyle style )
 */
 HB_FUNC_STATIC( QPEN_SETJOINSTYLE )
 {
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QPEN_SETJOINSTYLE )
 }
 
 /*
-void setMiterLimit ( qreal limit )
+void setMiterLimit( qreal limit )
 */
 HB_FUNC_STATIC( QPEN_SETMITERLIMIT )
 {
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QPEN_SETMITERLIMIT )
 }
 
 /*
-void setStyle ( Qt::PenStyle style )
+void setStyle( Qt::PenStyle style )
 */
 HB_FUNC_STATIC( QPEN_SETSTYLE )
 {
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QPEN_SETSTYLE )
 }
 
 /*
-void setWidth ( int width )
+void setWidth( int width )
 */
 HB_FUNC_STATIC( QPEN_SETWIDTH )
 {
@@ -667,7 +667,7 @@ HB_FUNC_STATIC( QPEN_SETWIDTH )
 }
 
 /*
-void setWidthF ( qreal width )
+void setWidthF( qreal width )
 */
 HB_FUNC_STATIC( QPEN_SETWIDTHF )
 {

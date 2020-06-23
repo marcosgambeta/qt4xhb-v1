@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_DELETE )
 }
 
 /*
-int addWidget ( QWidget * widget )
+int addWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_ADDWIDGET )
 {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTWIDGET )
 }
 
 /*
-int insertWidget ( int index, QWidget * widget )
+int insertWidget( int index, QWidget * widget )
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_INSERTWIDGET )
 {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_INSERTWIDGET )
 }
 
 /*
-void setStackingMode ( StackingMode stackingMode )
+void setStackingMode( QStackedLayout::StackingMode stackingMode )
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_SETSTACKINGMODE )
 {
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_STACKINGMODE )
 }
 
 /*
-QWidget * widget ( int index ) const
+QWidget * widget( int index ) const
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_WIDGET )
 {
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_WIDGET )
 }
 
 /*
-void setCurrentIndex ( int index )
+void setCurrentIndex( int index )
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_SETCURRENTINDEX )
 {
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_SETCURRENTINDEX )
 }
 
 /*
-void setCurrentWidget ( QWidget * widget )
+void setCurrentWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_SETCURRENTWIDGET )
 {

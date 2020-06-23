@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QSIZEGRIP_DELETE )
 }
 
 /*
-virtual void setVisible ( bool visible )
+virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QSIZEGRIP_SETVISIBLE )
 {

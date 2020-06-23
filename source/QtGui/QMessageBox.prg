@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON )
 }
 
 /*
-QAbstractButton * button ( StandardButton which ) const
+QAbstractButton * button( QMessageBox::StandardButton which ) const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_BUTTON )
 {
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTON )
 }
 
 /*
-ButtonRole buttonRole ( QAbstractButton * button ) const
+QMessageBox::ButtonRole buttonRole( QAbstractButton * button ) const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_BUTTONROLE )
 {
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_INFORMATIVETEXT )
 }
 
 /*
-void open ( QObject * receiver, const char * member )
+void open( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_OPEN )
 {
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_OPEN )
 }
 
 /*
-void removeButton ( QAbstractButton * button )
+void removeButton( QAbstractButton * button )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_REMOVEBUTTON )
 {
@@ -584,7 +584,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETDEFAULTBUTTON )
 }
 
 /*
-void setDetailedText ( const QString & text )
+void setDetailedText( const QString & text )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETDETAILEDTEXT )
 {
@@ -661,7 +661,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETESCAPEBUTTON )
 }
 
 /*
-void setIcon ( Icon )
+void setIcon( QMessageBox::Icon )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETICON )
 {
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETICON )
 }
 
 /*
-void setIconPixmap ( const QPixmap & pixmap )
+void setIconPixmap( const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETICONPIXMAP )
 {
@@ -713,7 +713,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETICONPIXMAP )
 }
 
 /*
-void setInformativeText ( const QString & text )
+void setInformativeText( const QString & text )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETINFORMATIVETEXT )
 {
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETINFORMATIVETEXT )
 }
 
 /*
-void setStandardButtons ( StandardButtons buttons )
+void setStandardButtons( QMessageBox::StandardButtons buttons )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETSTANDARDBUTTONS )
 {
@@ -765,7 +765,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETSTANDARDBUTTONS )
 }
 
 /*
-void setText ( const QString & text )
+void setText( const QString & text )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETTEXT )
 {
@@ -791,7 +791,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETTEXT )
 }
 
 /*
-void setTextFormat ( Qt::TextFormat format )
+void setTextFormat( Qt::TextFormat format )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETTEXTFORMAT )
 {
@@ -817,7 +817,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETTEXTFORMAT )
 }
 
 /*
-void setWindowModality ( Qt::WindowModality windowModality )
+void setWindowModality( Qt::WindowModality windowModality )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETWINDOWMODALITY )
 {
@@ -843,7 +843,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETWINDOWMODALITY )
 }
 
 /*
-void setWindowTitle ( const QString & title )
+void setWindowTitle( const QString & title )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETWINDOWTITLE )
 {
@@ -869,7 +869,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETWINDOWTITLE )
 }
 
 /*
-StandardButton standardButton ( QAbstractButton * button ) const
+QMessageBox::StandardButton standardButton( QAbstractButton * button ) const
 */
 HB_FUNC_STATIC( QMESSAGEBOX_STANDARDBUTTON )
 {
@@ -965,7 +965,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_TEXTFORMAT )
 }
 
 /*
-virtual void setVisible ( bool visible )
+virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_SETVISIBLE )
 {
@@ -1015,7 +1015,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_EXEC )
 }
 
 /*
-static void about ( QWidget * parent, const QString & title, const QString & text )
+static void about( QWidget * parent, const QString & title, const QString & text )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_ABOUT )
 {

@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QMENUBAR_CLEAR )
 }
 
 /*
-QAction * insertMenu ( QAction * before, QMenu * menu )
+QAction * insertMenu( QAction * before, QMenu * menu )
 */
 HB_FUNC_STATIC( QMENUBAR_INSERTMENU )
 {
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QMENUBAR_INSERTMENU )
 }
 
 /*
-QAction * insertSeparator ( QAction * before )
+QAction * insertSeparator( QAction * before )
 */
 HB_FUNC_STATIC( QMENUBAR_INSERTSEPARATOR )
 {
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QMENUBAR_ISNATIVEMENUBAR )
 }
 
 /*
-void setActiveAction ( QAction * act )
+void setActiveAction( QAction * act )
 */
 HB_FUNC_STATIC( QMENUBAR_SETACTIVEACTION )
 {
@@ -435,7 +435,7 @@ HB_FUNC_STATIC( QMENUBAR_SETACTIVEACTION )
 }
 
 /*
-void setDefaultUp ( bool )
+void setDefaultUp( bool )
 */
 HB_FUNC_STATIC( QMENUBAR_SETDEFAULTUP )
 {
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QMENUBAR_SETDEFAULTUP )
 }
 
 /*
-void setNativeMenuBar ( bool nativeMenuBar )
+void setNativeMenuBar( bool nativeMenuBar )
 */
 HB_FUNC_STATIC( QMENUBAR_SETNATIVEMENUBAR )
 {
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QMENUBAR_SETNATIVEMENUBAR )
 }
 
 /*
-virtual int heightForWidth ( int ) const
+virtual int heightForWidth( int ) const
 */
 HB_FUNC_STATIC( QMENUBAR_HEIGHTFORWIDTH )
 {
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QMENUBAR_SIZEHINT )
 }
 
 /*
-virtual void setVisible ( bool visible )
+virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QMENUBAR_SETVISIBLE )
 {

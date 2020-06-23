@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_DELETE )
 }
 
 /*
-void finish ( QWidget * mainWin )
+void finish( QWidget * mainWin )
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_FINISH )
 {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_REPAINT )
 }
 
 /*
-void setPixmap ( const QPixmap & pixmap )
+void setPixmap( const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_SETPIXMAP )
 {

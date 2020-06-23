@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_ISSORTLOCALEAWARE )
 }
 
 /*
-void setDynamicSortFilter ( bool enable )
+void setDynamicSortFilter( bool enable )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETDYNAMICSORTFILTER )
 {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETDYNAMICSORTFILTER )
 }
 
 /*
-void setFilterCaseSensitivity ( Qt::CaseSensitivity cs )
+void setFilterCaseSensitivity( Qt::CaseSensitivity cs )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERCASESENSITIVITY )
 {
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERCASESENSITIVITY )
 }
 
 /*
-void setFilterKeyColumn ( int column )
+void setFilterKeyColumn( int column )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERKEYCOLUMN )
 {
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERKEYCOLUMN )
 }
 
 /*
-void setFilterRole ( int role )
+void setFilterRole( int role )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERROLE )
 {
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERROLE )
 }
 
 /*
-void setSortCaseSensitivity ( Qt::CaseSensitivity cs )
+void setSortCaseSensitivity( Qt::CaseSensitivity cs )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETSORTCASESENSITIVITY )
 {
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETSORTCASESENSITIVITY )
 }
 
 /*
-void setSortLocaleAware ( bool on )
+void setSortLocaleAware( bool on )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETSORTLOCALEAWARE )
 {
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETSORTLOCALEAWARE )
 }
 
 /*
-void setSortRole ( int role )
+void setSortRole( int role )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETSORTROLE )
 {
@@ -560,7 +560,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTROLE )
 }
 
 /*
-virtual QModelIndex buddy ( const QModelIndex & index ) const
+virtual QModelIndex buddy( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_BUDDY )
 {
@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_BUDDY )
 }
 
 /*
-virtual bool canFetchMore ( const QModelIndex & parent ) const
+virtual bool canFetchMore( const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_CANFETCHMORE )
 {
@@ -658,7 +658,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_DATA )
 }
 
 /*
-virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
+virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_DROPMIMEDATA )
 {
@@ -682,7 +682,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_DROPMIMEDATA )
 }
 
 /*
-virtual void fetchMore ( const QModelIndex & parent )
+virtual void fetchMore( const QModelIndex & parent )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FETCHMORE )
 {
@@ -708,7 +708,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FETCHMORE )
 }
 
 /*
-virtual Qt::ItemFlags flags ( const QModelIndex & index ) const
+virtual Qt::ItemFlags flags( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FLAGS )
 {
@@ -854,7 +854,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_INSERTROWS )
 }
 
 /*
-virtual QModelIndex mapFromSource ( const QModelIndex & sourceIndex ) const
+virtual QModelIndex mapFromSource( const QModelIndex & sourceIndex ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MAPFROMSOURCE )
 {
@@ -879,7 +879,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MAPFROMSOURCE )
 }
 
 /*
-virtual QItemSelection mapSelectionFromSource ( const QItemSelection & sourceSelection ) const
+virtual QItemSelection mapSelectionFromSource( const QItemSelection & sourceSelection ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MAPSELECTIONFROMSOURCE )
 {
@@ -904,7 +904,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MAPSELECTIONFROMSOURCE )
 }
 
 /*
-virtual QItemSelection mapSelectionToSource ( const QItemSelection & proxySelection ) const
+virtual QItemSelection mapSelectionToSource( const QItemSelection & proxySelection ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MAPSELECTIONTOSOURCE )
 {
@@ -929,7 +929,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MAPSELECTIONTOSOURCE )
 }
 
 /*
-virtual QModelIndex mapToSource ( const QModelIndex & proxyIndex ) const
+virtual QModelIndex mapToSource( const QModelIndex & proxyIndex ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MAPTOSOURCE )
 {
@@ -1006,7 +1006,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MATCH )
 }
 
 /*
-virtual QMimeData * mimeData ( const QModelIndexList & indexes ) const
+virtual QMimeData * mimeData( const QModelIndexList & indexes ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MIMEDATA )
 {
@@ -1063,7 +1063,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MIMETYPES )
 }
 
 /*
-virtual QModelIndex parent ( const QModelIndex & child ) const
+virtual QModelIndex parent( const QModelIndex & child ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_PARENT )
 {
@@ -1208,7 +1208,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETHEADERDATA )
 }
 
 /*
-virtual void setSourceModel ( QAbstractItemModel * sourceModel )
+virtual void setSourceModel( QAbstractItemModel * sourceModel )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETSOURCEMODEL )
 {
@@ -1260,7 +1260,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORT )
 }
 
 /*
-virtual QSize span ( const QModelIndex & index ) const
+virtual QSize span( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SPAN )
 {
@@ -1335,7 +1335,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_INVALIDATE )
 }
 
 /*
-void setFilterFixedString ( const QString & pattern )
+void setFilterFixedString( const QString & pattern )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERFIXEDSTRING )
 {
@@ -1412,7 +1412,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERREGEXP )
 }
 
 /*
-void setFilterWildcard ( const QString & pattern )
+void setFilterWildcard( const QString & pattern )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERWILDCARD )
 {

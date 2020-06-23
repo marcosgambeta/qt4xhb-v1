@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_DELETE )
 }
 
 /*
-int addWidget ( QWidget * widget )
+int addWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_ADDWIDGET )
 {
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_CURRENTWIDGET )
 }
 
 /*
-int indexOf ( QWidget * widget ) const
+int indexOf( QWidget * widget ) const
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_INDEXOF )
 {
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_INDEXOF )
 }
 
 /*
-int insertWidget ( int index, QWidget * widget )
+int insertWidget( int index, QWidget * widget )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_INSERTWIDGET )
 {
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_INSERTWIDGET )
 }
 
 /*
-void removeWidget ( QWidget * widget )
+void removeWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_REMOVEWIDGET )
 {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_REMOVEWIDGET )
 }
 
 /*
-QWidget * widget ( int index ) const
+QWidget * widget( int index ) const
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_WIDGET )
 {
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_WIDGET )
 }
 
 /*
-void setCurrentIndex ( int index )
+void setCurrentIndex( int index )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_SETCURRENTINDEX )
 {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_SETCURRENTINDEX )
 }
 
 /*
-void setCurrentWidget ( QWidget * widget )
+void setCurrentWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_SETCURRENTWIDGET )
 {

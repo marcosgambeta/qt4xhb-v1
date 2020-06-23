@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
 }
 
 /*
-void open ( QObject * receiver, const char * member )
+void open( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_OPEN )
 {
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_SETOPTION )
 }
 
 /*
-void setOptions ( PageSetupDialogOptions options )
+void setOptions( QPageSetupDialog::PageSetupDialogOptions options )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_SETOPTIONS )
 {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_SETOPTIONS )
 }
 
 /*
-bool testOption ( PageSetupDialogOption option ) const
+bool testOption( QPageSetupDialog::PageSetupDialogOption option ) const
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_TESTOPTION )
 {
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_TESTOPTION )
 }
 
 /*
-virtual void setVisible ( bool visible )
+virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_SETVISIBLE )
 {

@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMMODE )
 }
 
 /*
-virtual void setVisible ( bool visible )
+virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETVISIBLE )
 {
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETALLPAGESVIEWMODE )
 }
 
 /*
-void setCurrentPage ( int page )
+void setCurrentPage( int page )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETCURRENTPAGE )
 {
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETLANDSCAPEORIENTATION )
 }
 
 /*
-void setOrientation ( QPrinter::Orientation orientation )
+void setOrientation( QPrinter::Orientation orientation )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETORIENTATION )
 {
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETSINGLEPAGEVIEWMODE )
 }
 
 /*
-void setViewMode ( ViewMode mode )
+void setViewMode( QPrintPreviewWidget::ViewMode mode )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETVIEWMODE )
 {
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETVIEWMODE )
 }
 
 /*
-void setZoomFactor ( qreal factor )
+void setZoomFactor( qreal factor )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETZOOMFACTOR )
 {
@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETZOOMFACTOR )
 }
 
 /*
-void setZoomMode ( ZoomMode zoomMode )
+void setZoomMode( QPrintPreviewWidget::ZoomMode zoomMode )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_SETZOOMMODE )
 {

@@ -922,7 +922,7 @@ HB_FUNC_STATIC( QPIXMAP_SCROLL )
 }
 
 /*
-void setMask ( const QBitmap & mask )
+void setMask( const QBitmap & mask )
 */
 HB_FUNC_STATIC( QPIXMAP_SETMASK )
 {
@@ -973,7 +973,7 @@ HB_FUNC_STATIC( QPIXMAP_SIZE )
 }
 
 /*
-void swap ( QPixmap & other )
+void swap( QPixmap & other )
 */
 HB_FUNC_STATIC( QPIXMAP_SWAP )
 {

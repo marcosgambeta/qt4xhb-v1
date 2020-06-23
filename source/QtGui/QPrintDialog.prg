@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_DELETE )
 }
 
 /*
-void open ( QObject * receiver, const char * member )
+void open( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_OPEN )
 {
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_SETOPTION )
 }
 
 /*
-void setOptions ( PrintDialogOptions options )
+void setOptions( QPrintDialog::PrintDialogOptions options )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_SETOPTIONS )
 {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_SETOPTIONS )
 }
 
 /*
-bool testOption ( PrintDialogOption option ) const
+bool testOption( QPrintDialog::PrintDialogOption option ) const
 */
 HB_FUNC_STATIC( QPRINTDIALOG_TESTOPTION )
 {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_TESTOPTION )
 }
 
 /*
-virtual void done ( int result )
+virtual void done( int result )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_DONE )
 {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_EXEC )
 }
 
 /*
-virtual void setVisible ( bool visible )
+virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_SETVISIBLE )
 {
