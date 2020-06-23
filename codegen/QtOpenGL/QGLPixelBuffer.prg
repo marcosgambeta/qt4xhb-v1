@@ -91,11 +91,9 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTEXTURE )
 }
 $addMethod=bindTexture
 
-$prototype=bool bindToDynamicTexture ( GLuint texture_id )
-$method=|bool|bindToDynamicTexture|GLuint
+$prototypeV2=bool bindToDynamicTexture( GLuint texture_id )
 
-$prototype=void deleteTexture ( GLuint texture_id )
-$method=|void|deleteTexture|GLuint
+$prototypeV2=void deleteTexture( GLuint texture_id )
 
 $prototypeV2=bool doneCurrent()
 
@@ -141,8 +139,7 @@ $prototypeV2=QSize size() const
 
 $prototypeV2=QImage toImage() const
 
-$prototype=void updateDynamicTexture ( GLuint texture_id ) const
-$method=|void|updateDynamicTexture|GLuint
+$prototypeV2=void updateDynamicTexture( GLuint texture_id ) const
 
 $prototypeV2=virtual QPaintEngine * paintEngine() const
 

@@ -120,8 +120,7 @@ $prototypeV2=const QGLColormap & colormap() const
 
 $prototypeV2=const QGLContext * context() const
 
-$prototype=void deleteTexture ( GLuint id )
-$method=|void|deleteTexture|GLuint
+$prototypeV2=void deleteTexture( GLuint id )
 
 $prototypeV2=void doneCurrent()
 
@@ -170,11 +169,9 @@ $prototypeV2=void makeOverlayCurrent()
 
 $prototypeV2=const QGLContext * overlayContext() const
 
-$prototype=void qglClearColor ( const QColor & c ) const
-$method=|void|qglClearColor|const QColor &
+$prototypeV2=void qglClearColor( const QColor & c ) const
 
-$prototype=void qglColor ( const QColor & c ) const
-$method=|void|qglColor|const QColor &
+$prototypeV2=void qglColor( const QColor & c ) const
 
 $prototype=QPixmap renderPixmap ( int w = 0, int h = 0, bool useContext = false )
 $method=|QPixmap|renderPixmap|int=0,int=0,bool=false
@@ -207,11 +204,9 @@ HB_FUNC_STATIC( QGLWIDGET_RENDERTEXT )
 }
 $addMethod=renderText
 
-$prototype=void setColormap ( const QGLColormap & cmap )
-$method=|void|setColormap|const QGLColormap &
+$prototypeV2=void setColormap( const QGLColormap & cmap )
 
-$prototype=void setMouseTracking ( bool enable )
-$method=|void|setMouseTracking|bool
+$prototypeV2=void setMouseTracking( bool enable )
 
 $prototypeV2=void swapBuffers()
 
@@ -219,7 +214,6 @@ $prototypeV2=virtual void updateGL()
 
 $prototypeV2=virtual void updateOverlayGL()
 
-$prototype=static QImage convertToGLFormat ( const QImage & img )
-$staticMethod=|QImage|convertToGLFormat|const QImage &
+$prototypeV2=static QImage convertToGLFormat( const QImage & img )
 
 #pragma ENDDUMP

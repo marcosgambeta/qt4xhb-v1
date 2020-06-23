@@ -102,74 +102,51 @@ $prototypeV2=bool sampleBuffers() const
 
 $prototypeV2=int samples() const
 
-$prototype=void setAccum ( bool enable )
-$method=|void|setAccum|bool
+$prototypeV2=void setAccum( bool enable )
 
-$prototype=void setAccumBufferSize ( int size )
-$method=|void|setAccumBufferSize|int
+$prototypeV2=void setAccumBufferSize( int size )
 
-$prototype=void setAlpha ( bool enable )
-$method=|void|setAlpha|bool
+$prototypeV2=void setAlpha( bool enable )
 
-$prototype=void setAlphaBufferSize ( int size )
-$method=|void|setAlphaBufferSize|int
+$prototypeV2=void setAlphaBufferSize( int size )
 
-$prototype=void setBlueBufferSize ( int size )
-$method=|void|setBlueBufferSize|int
+$prototypeV2=void setBlueBufferSize( int size )
 
-$prototype=void setDepth ( bool enable )
-$method=|void|setDepth|bool
+$prototypeV2=void setDepth( bool enable )
 
-$prototype=void setDepthBufferSize ( int size )
-$method=|void|setDepthBufferSize|int
+$prototypeV2=void setDepthBufferSize( int size )
 
-$prototype=void setDirectRendering ( bool enable )
-$method=|void|setDirectRendering|bool
+$prototypeV2=void setDirectRendering( bool enable )
 
-$prototype=void setDoubleBuffer ( bool enable )
-$method=|void|setDoubleBuffer|bool
+$prototypeV2=void setDoubleBuffer( bool enable )
 
-$prototype=void setGreenBufferSize ( int size )
-$method=|void|setGreenBufferSize|int
+$prototypeV2=void setGreenBufferSize( int size )
 
-$prototype=void setOption ( QGL::FormatOptions opt )
-$method=|void|setOption|QGL::FormatOptions
+$prototypeV2=void setOption( QGL::FormatOptions opt )
 
-$prototype=void setOverlay ( bool enable )
-$method=|void|setOverlay|bool
+$prototypeV2=void setOverlay( bool enable )
 
-$prototype=void setPlane ( int plane )
-$method=|void|setPlane|int
+$prototypeV2=void setPlane( int plane )
 
-$prototype=void setProfile ( OpenGLContextProfile profile )
-$method=|void|setProfile|QGLFormat::OpenGLContextProfile
+$prototypeV2=void setProfile( QGLFormat::OpenGLContextProfile profile )
 
-$prototype=void setRedBufferSize ( int size )
-$method=|void|setRedBufferSize|int
+$prototypeV2=void setRedBufferSize( int size )
 
-$prototype=void setRgba ( bool enable )
-$method=|void|setRgba|bool
+$prototypeV2=void setRgba( bool enable )
 
-$prototype=void setSampleBuffers ( bool enable )
-$method=|void|setSampleBuffers|bool
+$prototypeV2=void setSampleBuffers( bool enable )
 
-$prototype=void setSamples ( int numSamples )
-$method=|void|setSamples|int
+$prototypeV2=void setSamples( int numSamples )
 
-$prototype=void setStencil ( bool enable )
-$method=|void|setStencil|bool
+$prototypeV2=void setStencil( bool enable )
 
-$prototype=void setStencilBufferSize ( int size )
-$method=|void|setStencilBufferSize|int
+$prototypeV2=void setStencilBufferSize( int size )
 
-$prototype=void setStereo ( bool enable )
-$method=|void|setStereo|bool
+$prototypeV2=void setStereo( bool enable )
 
-$prototype=void setSwapInterval ( int interval )
-$method=|void|setSwapInterval|int
+$prototypeV2=void setSwapInterval( int interval )
 
-$prototype=void setVersion ( int major, int minor )
-$method=|void|setVersion|int,int
+$prototypeV2=void setVersion( int major, int minor )
 
 $prototypeV2=bool stencil() const
 
@@ -179,8 +156,7 @@ $prototypeV2=bool stereo() const
 
 $prototypeV2=int swapInterval() const
 
-$prototype=bool testOption ( QGL::FormatOptions opt ) const
-$method=|bool|testOption|QGL::FormatOptions
+$prototypeV2=bool testOption( QGL::FormatOptions opt ) const
 
 $prototypeV2=static QGLFormat defaultFormat()
 
@@ -192,11 +168,9 @@ $prototypeV2=static bool hasOpenGLOverlays()
 
 $prototypeV2=static QGLFormat::OpenGLVersionFlags openGLVersionFlags()
 
-$prototype=static void setDefaultFormat ( const QGLFormat & f )
-$staticMethod=|void|setDefaultFormat|const QGLFormat &
+$prototypeV2=static void setDefaultFormat( const QGLFormat & f )
 
-$prototype=static void setDefaultOverlayFormat ( const QGLFormat & f )
-$staticMethod=|void|setDefaultOverlayFormat|const QGLFormat &
+$prototypeV2=static void setDefaultOverlayFormat( const QGLFormat & f )
 
 %% #if defined(Q_WS_QPA)
 

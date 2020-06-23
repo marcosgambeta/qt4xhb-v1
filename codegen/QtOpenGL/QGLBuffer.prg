@@ -101,14 +101,11 @@ $prototypeV2=void destroy()
 
 $prototypeV2=bool isCreated() const
 
-$prototype=void * map ( QGLBuffer::Access access )
-$method=|void *|map|QGLBuffer::Access
+$prototypeV2=void * map( QGLBuffer::Access access )
 
-$prototype=bool read ( int offset, void * data, int count )
-$method=|bool|read|int,void *,int
+$prototypeV2=bool read( int offset, void * data, int count )
 
-$prototype=void setUsagePattern ( QGLBuffer::UsagePattern value )
-$method=|void|setUsagePattern|QGLBuffer::UsagePattern
+$prototypeV2=void setUsagePattern( QGLBuffer::UsagePattern value )
 
 $prototypeV2=int size() const
 

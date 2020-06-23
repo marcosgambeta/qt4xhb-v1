@@ -55,8 +55,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool addShader ( QGLShader * shader )
-$method=|bool|addShader|QGLShader *
+$prototypeV2=bool addShader( QGLShader * shader )
 
 $prototype=bool addShaderFromSourceCode ( QGLShader::ShaderType type, const char * source )
 $method=|bool|addShaderFromSourceCode,addShaderFromSourceCode1|QGLShader::ShaderType,const char *
@@ -94,8 +93,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE )
 }
 $addMethod=addShaderFromSourceCode
 
-$prototype=bool addShaderFromSourceFile ( QGLShader::ShaderType type, const QString & fileName )
-$method=|bool|addShaderFromSourceFile|QGLShader::ShaderType,const QString &
+$prototypeV2=bool addShaderFromSourceFile( QGLShader::ShaderType type, const QString & fileName )
 
 $prototype=int attributeLocation ( const char * name ) const
 $method=|int|attributeLocation,attributeLocation1|const char *
@@ -247,8 +245,7 @@ $prototypeV2=void release()
 
 $prototypeV2=void removeAllShaders()
 
-$prototype=void removeShader ( QGLShader * shader )
-$method=|void|removeShader|QGLShader *
+$prototypeV2=void removeShader( QGLShader * shader )
 
 /*
 [01]void setAttributeArray ( int location, const GLfloat * values, int tupleSize, int stride = 0 )
@@ -399,14 +396,11 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE )
 }
 $addMethod=setAttributeValue
 
-$prototype=void setGeometryInputType ( GLenum inputType )
-$method=|void|setGeometryInputType|GLenum
+$prototypeV2=void setGeometryInputType( GLenum inputType )
 
-$prototype=void setGeometryOutputType ( GLenum outputType )
-$method=|void|setGeometryOutputType|GLenum
+$prototypeV2=void setGeometryOutputType( GLenum outputType )
 
-$prototype=void setGeometryOutputVertexCount ( int count )
-$method=|void|setGeometryOutputVertexCount|int
+$prototypeV2=void setGeometryOutputVertexCount( int count )
 
 $prototype=void setUniformValue ( int location, GLfloat value )
 $method=|void|setUniformValue,setUniformValue1|int,GLfloat
@@ -596,8 +590,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUEARRAY )
 }
 $addMethod=setUniformValueArray
 
-$prototype=QList<QGLShader *> shaders () const
-$method=|QList<QGLShader *>|shaders|
+$prototypeV2=QList<QGLShader *> shaders() const
 
 $prototype=int uniformLocation ( const char * name ) const
 $method=|int|uniformLocation,uniformLocation1|const char *

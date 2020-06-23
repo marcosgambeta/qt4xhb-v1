@@ -91,8 +91,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE )
 }
 $addMethod=compileSourceCode
 
-$prototype=bool compileSourceFile ( const QString & fileName )
-$method=|bool|compileSourceFile|const QString &
+$prototypeV2=bool compileSourceFile( const QString & fileName )
 
 $prototypeV2=bool isCompiled() const
 

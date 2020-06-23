@@ -55,17 +55,13 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QColor entryColor ( int idx ) const
-$method=|QColor|entryColor|int
+$prototypeV2=QColor entryColor( int idx ) const
 
-$prototype=QRgb entryRgb ( int idx ) const
-$method=|QRgb|entryRgb|int
+$prototypeV2=QRgb entryRgb( int idx ) const
 
-$prototype=int find ( QRgb color ) const
-$method=|int|find|QRgb
+$prototypeV2=int find( QRgb color ) const
 
-$prototype=int findNearest ( QRgb color ) const
-$method=|int|findNearest|QRgb
+$prototypeV2=int findNearest( QRgb color ) const
 
 $prototypeV2=bool isEmpty() const
 

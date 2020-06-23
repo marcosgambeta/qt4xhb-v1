@@ -55,171 +55,117 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void glActiveTexture ( GLenum texture )
-$method=|void|glActiveTexture|GLenum
+$prototypeV2=void glActiveTexture( GLenum texture )
 
-$prototype=void glAttachShader ( GLuint program, GLuint shader )
-$method=|void|glAttachShader|GLuint,GLuint
+$prototypeV2=void glAttachShader( GLuint program, GLuint shader )
 
-$prototype=void glBindAttribLocation ( GLuint program, GLuint index, const char * name )
-$method=|void|glBindAttribLocation|GLuint,GLuint,const char *
+$prototypeV2=void glBindAttribLocation( GLuint program, GLuint index, const char * name )
 
-$prototype=void glBindBuffer ( GLenum target, GLuint buffer )
-$method=|void|glBindBuffer|GLenum,GLuint
+$prototypeV2=void glBindBuffer( GLenum target, GLuint buffer )
 
-$prototype=void glBindFramebuffer ( GLenum target, GLuint framebuffer )
-$method=|void|glBindFramebuffer|GLenum,GLuint
+$prototypeV2=void glBindFramebuffer( GLenum target, GLuint framebuffer )
 
-$prototype=void glBindRenderbuffer ( GLenum target, GLuint renderbuffer )
-$method=|void|glBindRenderbuffer|GLenum,GLuint
+$prototypeV2=void glBindRenderbuffer( GLenum target, GLuint renderbuffer )
 
-$prototype=void glBlendColor ( GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha )
-$method=|void|glBlendColor|GLclampf,GLclampf,GLclampf,GLclampf
+$prototypeV2=void glBlendColor( GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha )
 
-$prototype=void glBlendEquation ( GLenum mode )
-$method=|void|glBlendEquation|GLenum
+$prototypeV2=void glBlendEquation( GLenum mode )
 
-$prototype=void glBlendEquationSeparate ( GLenum modeRGB, GLenum modeAlpha )
-$method=|void|glBlendEquationSeparate|GLenum,GLenum
+$prototypeV2=void glBlendEquationSeparate( GLenum modeRGB, GLenum modeAlpha )
 
-$prototype=void glBlendFuncSeparate ( GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha )
-$method=|void|glBlendFuncSeparate|GLenum,GLenum,GLenum,GLenum
+$prototypeV2=void glBlendFuncSeparate( GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha )
 
-$prototype=GLenum glCheckFramebufferStatus ( GLenum target )
-$method=|GLenum|glCheckFramebufferStatus|GLenum
+$prototypeV2=GLenum glCheckFramebufferStatus( GLenum target )
 
-$prototype=void glClearDepthf ( GLclampf depth )
-$method=|void|glClearDepthf|GLclampf
+$prototypeV2=void glClearDepthf( GLclampf depth )
 
-$prototype=void glCompileShader ( GLuint shader )
-$method=|void|glCompileShader|GLuint
+$prototypeV2=void glCompileShader( GLuint shader )
 
-$prototype=void glCompressedTexImage2D ( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const void * data )
-$method=|void|glCompressedTexImage2D|GLenum,GLint,GLenum,GLsizei,GLsizei,GLint,GLsizei,const void *
+$prototypeV2=void glCompressedTexImage2D( GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const void * data )
 
-$prototype=void glCompressedTexSubImage2D ( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const void * data )
-$method=|void|glCompressedTexSubImage2D|GLenum,GLint,GLint,GLint,GLsizei,GLsizei,GLenum,GLsizei,const void *
+$prototypeV2=void glCompressedTexSubImage2D( GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const void * data )
 
 $prototypeV2=GLuint glCreateProgram()
 
-$prototype=GLuint glCreateShader ( GLenum type )
-$method=|GLuint|glCreateShader|GLenum
+$prototypeV2=GLuint glCreateShader( GLenum type )
 
-$prototype=void glDeleteProgram ( GLuint program )
-$method=|void|glDeleteProgram|GLuint
+$prototypeV2=void glDeleteProgram( GLuint program )
 
-$prototype=void glDeleteShader ( GLuint shader )
-$method=|void|glDeleteShader|GLuint
+$prototypeV2=void glDeleteShader( GLuint shader )
 
-$prototype=void glDepthRangef ( GLclampf zNear, GLclampf zFar )
-$method=|void|glDepthRangef|GLclampf,GLclampf
+$prototypeV2=void glDepthRangef( GLclampf zNear, GLclampf zFar )
 
-$prototype=void glDetachShader ( GLuint program, GLuint shader )
-$method=|void|glDetachShader|GLuint,GLuint
+$prototypeV2=void glDetachShader( GLuint program, GLuint shader )
 
-$prototype=void glDisableVertexAttribArray ( GLuint index )
-$method=|void|glDisableVertexAttribArray|GLuint
+$prototypeV2=void glDisableVertexAttribArray( GLuint index )
 
-$prototype=void glEnableVertexAttribArray ( GLuint index )
-$method=|void|glEnableVertexAttribArray|GLuint
+$prototypeV2=void glEnableVertexAttribArray( GLuint index )
 
-$prototype=void glFramebufferRenderbuffer ( GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer )
-$method=|void|glFramebufferRenderbuffer|GLenum,GLenum,GLenum,GLuint
+$prototypeV2=void glFramebufferRenderbuffer( GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer )
 
-$prototype=void glFramebufferTexture2D ( GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level )
-$method=|void|glFramebufferTexture2D|GLenum,GLenum,GLenum,GLuint,GLint
+$prototypeV2=void glFramebufferTexture2D( GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level )
 
-$prototype=void glGenerateMipmap ( GLenum target )
-$method=|void|glGenerateMipmap|GLenum
+$prototypeV2=void glGenerateMipmap( GLenum target )
 
-$prototype=int glGetAttribLocation ( GLuint program, const char * name )
-$method=|int|glGetAttribLocation|GLuint,const char *
+$prototypeV2=int glGetAttribLocation( GLuint program, const char * name )
 
-$prototype=int glGetUniformLocation ( GLuint program, const char * name )
-$method=|int|glGetUniformLocation|GLuint,const char *
+$prototypeV2=int glGetUniformLocation( GLuint program, const char * name )
 
-$prototype=GLboolean glIsBuffer ( GLuint buffer )
-$method=|GLboolean|glIsBuffer|GLuint
+$prototypeV2=GLboolean glIsBuffer( GLuint buffer )
 
-$prototype=GLboolean glIsFramebuffer ( GLuint framebuffer )
-$method=|GLboolean|glIsFramebuffer|GLuint
+$prototypeV2=GLboolean glIsFramebuffer( GLuint framebuffer )
 
-$prototype=GLboolean glIsProgram ( GLuint program )
-$method=|GLboolean|glIsProgram|GLuint
+$prototypeV2=GLboolean glIsProgram( GLuint program )
 
-$prototype=GLboolean glIsRenderbuffer ( GLuint renderbuffer )
-$method=|GLboolean|glIsRenderbuffer|GLuint
+$prototypeV2=GLboolean glIsRenderbuffer( GLuint renderbuffer )
 
-$prototype=GLboolean glIsShader ( GLuint shader )
-$method=|GLboolean|glIsShader|GLuint
+$prototypeV2=GLboolean glIsShader( GLuint shader )
 
-$prototype=void glLinkProgram ( GLuint program )
-$method=|void|glLinkProgram|GLuint
+$prototypeV2=void glLinkProgram( GLuint program )
 
 $prototypeV2=void glReleaseShaderCompiler()
 
-$prototype=void glRenderbufferStorage ( GLenum target, GLenum internalformat, GLsizei width, GLsizei height )
-$method=|void|glRenderbufferStorage|GLenum,GLenum,GLsizei,GLsizei
+$prototypeV2=void glRenderbufferStorage( GLenum target, GLenum internalformat, GLsizei width, GLsizei height )
 
-$prototype=void glSampleCoverage ( GLclampf value, GLboolean invert )
-$method=|void|glSampleCoverage|GLclampf,GLboolean
+$prototypeV2=void glSampleCoverage( GLclampf value, GLboolean invert )
 
-$prototype=void glStencilFuncSeparate ( GLenum face, GLenum func, GLint ref, GLuint mask )
-$method=|void|glStencilFuncSeparate|GLenum,GLenum,GLint,GLuint
+$prototypeV2=void glStencilFuncSeparate( GLenum face, GLenum func, GLint ref, GLuint mask )
 
-$prototype=void glStencilMaskSeparate ( GLenum face, GLuint mask )
-$method=|void|glStencilMaskSeparate|GLenum,GLuint
+$prototypeV2=void glStencilMaskSeparate( GLenum face, GLuint mask )
 
-$prototype=void glStencilOpSeparate ( GLenum face, GLenum fail, GLenum zfail, GLenum zpass )
-$method=|void|glStencilOpSeparate|GLenum,GLenum,GLenum,GLenum
+$prototypeV2=void glStencilOpSeparate( GLenum face, GLenum fail, GLenum zfail, GLenum zpass )
 
-$prototype=void glUniform1f ( GLint location, GLfloat x )
-$method=|void|glUniform1f|GLint,GLfloat
+$prototypeV2=void glUniform1f( GLint location, GLfloat x )
 
-$prototype=void glUniform1i ( GLint location, GLint x )
-$method=|void|glUniform1i|GLint,GLint
+$prototypeV2=void glUniform1i( GLint location, GLint x )
 
-$prototype=void glUniform2f ( GLint location, GLfloat x, GLfloat y )
-$method=|void|glUniform2f|GLint,GLfloat,GLfloat
+$prototypeV2=void glUniform2f( GLint location, GLfloat x, GLfloat y )
 
-$prototype=void glUniform2i ( GLint location, GLint x, GLint y )
-$method=|void|glUniform2i|GLint,GLint,GLint
+$prototypeV2=void glUniform2i( GLint location, GLint x, GLint y )
 
-$prototype=void glUniform3f ( GLint location, GLfloat x, GLfloat y, GLfloat z )
-$method=|void|glUniform3f|GLint,GLfloat,GLfloat,GLfloat
+$prototypeV2=void glUniform3f( GLint location, GLfloat x, GLfloat y, GLfloat z )
 
-$prototype=void glUniform3i ( GLint location, GLint x, GLint y, GLint z )
-$method=|void|glUniform3i|GLint,GLint,GLint,GLint
+$prototypeV2=void glUniform3i( GLint location, GLint x, GLint y, GLint z )
 
-$prototype=void glUniform4f ( GLint location, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
-$method=|void|glUniform4f|GLint,GLfloat,GLfloat,GLfloat,GLfloat
+$prototypeV2=void glUniform4f( GLint location, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
 
-$prototype=void glUniform4i ( GLint location, GLint x, GLint y, GLint z, GLint w )
-$method=|void|glUniform4i|GLint,GLint,GLint,GLint,GLint
+$prototypeV2=void glUniform4i( GLint location, GLint x, GLint y, GLint z, GLint w )
 
-$prototype=void glUseProgram ( GLuint program )
-$method=|void|glUseProgram|GLuint
+$prototypeV2=void glUseProgram( GLuint program )
 
-$prototype=void glValidateProgram ( GLuint program )
-$method=|void|glValidateProgram|GLuint
+$prototypeV2=void glValidateProgram( GLuint program )
 
-$prototype=void glVertexAttrib1f ( GLuint indx, GLfloat x )
-$method=|void|glVertexAttrib1f|GLuint,GLfloat
+$prototypeV2=void glVertexAttrib1f( GLuint indx, GLfloat x )
 
-$prototype=void glVertexAttrib2f ( GLuint indx, GLfloat x, GLfloat y )
-$method=|void|glVertexAttrib2f|GLuint,GLfloat,GLfloat
+$prototypeV2=void glVertexAttrib2f( GLuint indx, GLfloat x, GLfloat y )
 
-$prototype=void glVertexAttrib3f ( GLuint indx, GLfloat x, GLfloat y, GLfloat z )
-$method=|void|glVertexAttrib3f|GLuint,GLfloat,GLfloat,GLfloat
+$prototypeV2=void glVertexAttrib3f( GLuint indx, GLfloat x, GLfloat y, GLfloat z )
 
-$prototype=void glVertexAttrib4f ( GLuint indx, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
-$method=|void|glVertexAttrib4f|GLuint,GLfloat,GLfloat,GLfloat,GLfloat
+$prototypeV2=void glVertexAttrib4f( GLuint indx, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
 
-$prototype=void glVertexAttribPointer ( GLuint indx, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const void * ptr )
-$method=|void|glVertexAttribPointer|GLuint,GLint,GLenum,GLboolean,GLsizei,const void *
+$prototypeV2=void glVertexAttribPointer( GLuint indx, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const void * ptr )
 
-$prototype=bool hasOpenGLFeature ( QGLFunctions::OpenGLFeature feature ) const
-$method=|bool|hasOpenGLFeature|QGLFunctions::OpenGLFeature
+$prototypeV2=bool hasOpenGLFeature( QGLFunctions::OpenGLFeature feature ) const
 
 $prototype=void initializeGLFunctions ( const QGLContext * context = 0 )
 $method=|void|initializeGLFunctions|const QGLContext *=0

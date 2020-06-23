@@ -85,8 +85,7 @@ $addMethod=bindTexture
 $prototype=virtual bool create ( const QGLContext * shareContext = 0 )
 $virtualMethod=|bool|create|const QGLContext *=0
 
-$prototype=void deleteTexture ( GLuint id )
-$method=|void|deleteTexture|GLuint
+$prototypeV2=void deleteTexture( GLuint id )
 
 $prototypeV2=QPaintDevice * device() const
 
@@ -122,8 +121,7 @@ $addMethod=drawTexture
 
 $prototypeV2=QGLFormat format() const
 
-$prototype=void * getProcAddress ( const QString & proc ) const
-$method=|void *|getProcAddress|const QString &
+$prototypeV2=void * getProcAddress( const QString & proc ) const
 
 $prototypeV2=bool isSharing() const
 
@@ -137,18 +135,15 @@ $prototypeV2=QGLFormat requestedFormat() const
 
 $prototypeV2=void reset()
 
-$prototype=void setFormat ( const QGLFormat & format )
-$method=|void|setFormat|const QGLFormat &
+$prototypeV2=void setFormat( const QGLFormat & format )
 
 $prototypeV2=virtual void swapBuffers() const
 
-$prototype=static bool areSharing ( const QGLContext * context1, const QGLContext * context2 )
-$staticMethod=|bool|areSharing|const QGLContext *,const QGLContext *
+$prototypeV2=static bool areSharing( const QGLContext * context1, const QGLContext * context2 )
 
 $prototypeV2=static const QGLContext * currentContext()
 
-$prototype=static void setTextureCacheLimit ( int size )
-$staticMethod=|void|setTextureCacheLimit|int
+$prototypeV2=static void setTextureCacheLimit( int size )
 
 $prototypeV2=static int textureCacheLimit()
 
