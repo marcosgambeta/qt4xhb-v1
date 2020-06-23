@@ -101,7 +101,7 @@ $prototypeV2=bool isIdentity() const
 
 $prototypeV2=void lookAt( const QVector3D & eye, const QVector3D & center, const QVector3D & up )
 
-$prototypeV2=QPoint map( const QPoint & point ) const
+$prototype=QPoint map( const QPoint & point ) const
 $internalMethod=|QPoint|map,map1|const QPoint &
 
 $prototype=QPointF map ( const QPointF & point ) const
