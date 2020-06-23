@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_DELETE )
 }
 
 /*
-bool columnIntersectsSelection ( int column, const QModelIndex & parent ) const
+bool columnIntersectsSelection( int column, const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_COLUMNINTERSECTSSELECTION )
 {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_HASSELECTION )
 }
 
 /*
-bool isColumnSelected ( int column, const QModelIndex & parent ) const
+bool isColumnSelected( int column, const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISCOLUMNSELECTED )
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISCOLUMNSELECTED )
 }
 
 /*
-bool isRowSelected ( int row, const QModelIndex & parent ) const
+bool isRowSelected( int row, const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISROWSELECTED )
 {
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISROWSELECTED )
 }
 
 /*
-bool isSelected ( const QModelIndex & index ) const
+bool isSelected( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISSELECTED )
 {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISSELECTED )
 }
 
 /*
-const QAbstractItemModel * model () const
+const QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_MODEL )
 {
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_MODEL )
 }
 
 /*
-bool rowIntersectsSelection ( int row, const QModelIndex & parent ) const
+bool rowIntersectsSelection( int row, const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ROWINTERSECTSSELECTION )
 {
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDROWS )
 }
 
 /*
-const QItemSelection selection () const
+const QItemSelection selection() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTION )
 {
@@ -628,7 +628,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECT )
 }
 
 /*
-void setCurrentIndex ( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
+void setCurrentIndex( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_SETCURRENTINDEX )
 {

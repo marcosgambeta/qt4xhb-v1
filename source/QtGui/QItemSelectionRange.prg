@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INDEXES )
 }
 
 /*
-QItemSelectionRange intersected ( const QItemSelectionRange & other ) const
+QItemSelectionRange intersected( const QItemSelectionRange & other ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTED )
 {
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTED )
 }
 
 /*
-bool intersects ( const QItemSelectionRange & other ) const
+bool intersects( const QItemSelectionRange & other ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTS )
 {
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_LEFT )
 }
 
 /*
-const QAbstractItemModel * model () const
+const QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_MODEL )
 {

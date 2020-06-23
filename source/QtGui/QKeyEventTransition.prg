@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_MODIFIERMASK )
 }
 
 /*
-void setKey ( int key )
+void setKey( int key )
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETKEY )
 {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETKEY )
 }
 
 /*
-void setModifierMask ( Qt::KeyboardModifiers modifierMask )
+void setModifierMask( Qt::KeyboardModifiers modifierMask )
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETMODIFIERMASK )
 {

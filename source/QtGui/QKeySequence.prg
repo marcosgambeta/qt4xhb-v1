@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_ISEMPTY )
 }
 
 /*
-SequenceMatch matches ( const QKeySequence & seq ) const
+QKeySequence::SequenceMatch matches( const QKeySequence & seq ) const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_MATCHES )
 {
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_FROMSTRING )
 }
 
 /*
-static QList<QKeySequence> keyBindings ( StandardKey key )
+static QList<QKeySequence> keyBindings( QKeySequence::StandardKey key )
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_KEYBINDINGS )
 {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_KEYBINDINGS )
 }
 
 /*
-static QKeySequence mnemonic ( const QString & text )
+static QKeySequence mnemonic( const QString & text )
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_MNEMONIC )
 {

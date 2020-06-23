@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QMAINWINDOW_CENTRALWIDGET )
 }
 
 /*
-Qt::DockWidgetArea corner ( Qt::Corner corner ) const
+Qt::DockWidgetArea corner( Qt::Corner corner ) const
 */
 HB_FUNC_STATIC( QMAINWINDOW_CORNER )
 {
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QMAINWINDOW_DOCKOPTIONS )
 }
 
 /*
-Qt::DockWidgetArea dockWidgetArea ( QDockWidget * dockwidget ) const
+Qt::DockWidgetArea dockWidgetArea( QDockWidget * dockwidget ) const
 */
 HB_FUNC_STATIC( QMAINWINDOW_DOCKWIDGETAREA )
 {
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ICONSIZE )
 }
 
 /*
-void insertToolBar ( QToolBar * before, QToolBar * toolbar )
+void insertToolBar( QToolBar * before, QToolBar * toolbar )
 */
 HB_FUNC_STATIC( QMAINWINDOW_INSERTTOOLBAR )
 {
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QMAINWINDOW_INSERTTOOLBAR )
 }
 
 /*
-void insertToolBarBreak ( QToolBar * before )
+void insertToolBarBreak( QToolBar * before )
 */
 HB_FUNC_STATIC( QMAINWINDOW_INSERTTOOLBARBREAK )
 {
@@ -604,7 +604,7 @@ HB_FUNC_STATIC( QMAINWINDOW_MENUWIDGET )
 }
 
 /*
-void removeDockWidget ( QDockWidget * dockwidget )
+void removeDockWidget( QDockWidget * dockwidget )
 */
 HB_FUNC_STATIC( QMAINWINDOW_REMOVEDOCKWIDGET )
 {
@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QMAINWINDOW_REMOVEDOCKWIDGET )
 }
 
 /*
-void removeToolBar ( QToolBar * toolbar )
+void removeToolBar( QToolBar * toolbar )
 */
 HB_FUNC_STATIC( QMAINWINDOW_REMOVETOOLBAR )
 {
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QMAINWINDOW_REMOVETOOLBAR )
 }
 
 /*
-void removeToolBarBreak ( QToolBar * before )
+void removeToolBarBreak( QToolBar * before )
 */
 HB_FUNC_STATIC( QMAINWINDOW_REMOVETOOLBARBREAK )
 {
@@ -682,7 +682,7 @@ HB_FUNC_STATIC( QMAINWINDOW_REMOVETOOLBARBREAK )
 }
 
 /*
-bool restoreDockWidget ( QDockWidget * dockwidget )
+bool restoreDockWidget( QDockWidget * dockwidget )
 */
 HB_FUNC_STATIC( QMAINWINDOW_RESTOREDOCKWIDGET )
 {
@@ -755,7 +755,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SAVESTATE )
 }
 
 /*
-void setCentralWidget ( QWidget * widget )
+void setCentralWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETCENTRALWIDGET )
 {
@@ -781,7 +781,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETCENTRALWIDGET )
 }
 
 /*
-void setCorner ( Qt::Corner corner, Qt::DockWidgetArea area )
+void setCorner( Qt::Corner corner, Qt::DockWidgetArea area )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETCORNER )
 {
@@ -807,7 +807,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETCORNER )
 }
 
 /*
-void setDockOptions ( DockOptions options )
+void setDockOptions( QMainWindow::DockOptions options )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETDOCKOPTIONS )
 {
@@ -833,7 +833,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETDOCKOPTIONS )
 }
 
 /*
-void setDocumentMode ( bool enabled )
+void setDocumentMode( bool enabled )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETDOCUMENTMODE )
 {
@@ -859,7 +859,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETDOCUMENTMODE )
 }
 
 /*
-void setIconSize ( const QSize & iconSize )
+void setIconSize( const QSize & iconSize )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETICONSIZE )
 {
@@ -885,7 +885,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETICONSIZE )
 }
 
 /*
-void setMenuBar ( QMenuBar * menuBar )
+void setMenuBar( QMenuBar * menuBar )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETMENUBAR )
 {
@@ -911,7 +911,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETMENUBAR )
 }
 
 /*
-void setMenuWidget ( QWidget * menuBar )
+void setMenuWidget( QWidget * menuBar )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETMENUWIDGET )
 {
@@ -937,7 +937,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETMENUWIDGET )
 }
 
 /*
-void setStatusBar ( QStatusBar * statusbar )
+void setStatusBar( QStatusBar * statusbar )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETSTATUSBAR )
 {
@@ -963,7 +963,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETSTATUSBAR )
 }
 
 /*
-void setTabPosition ( Qt::DockWidgetAreas areas, QTabWidget::TabPosition tabPosition )
+void setTabPosition( Qt::DockWidgetAreas areas, QTabWidget::TabPosition tabPosition )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETTABPOSITION )
 {
@@ -989,7 +989,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETTABPOSITION )
 }
 
 /*
-void setTabShape ( QTabWidget::TabShape tabShape )
+void setTabShape( QTabWidget::TabShape tabShape )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETTABSHAPE )
 {
@@ -1015,7 +1015,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETTABSHAPE )
 }
 
 /*
-void setToolButtonStyle ( Qt::ToolButtonStyle toolButtonStyle )
+void setToolButtonStyle( Qt::ToolButtonStyle toolButtonStyle )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETTOOLBUTTONSTYLE )
 {
@@ -1041,7 +1041,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETTOOLBUTTONSTYLE )
 }
 
 /*
-void splitDockWidget ( QDockWidget * first, QDockWidget * second, Qt::Orientation orientation )
+void splitDockWidget( QDockWidget * first, QDockWidget * second, Qt::Orientation orientation )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SPLITDOCKWIDGET )
 {
@@ -1092,7 +1092,7 @@ HB_FUNC_STATIC( QMAINWINDOW_STATUSBAR )
 }
 
 /*
-QTabWidget::TabPosition tabPosition ( Qt::DockWidgetArea area ) const
+QTabWidget::TabPosition tabPosition( Qt::DockWidgetArea area ) const
 */
 HB_FUNC_STATIC( QMAINWINDOW_TABPOSITION )
 {
@@ -1140,7 +1140,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TABSHAPE )
 }
 
 /*
-QList<QDockWidget *> tabifiedDockWidgets ( QDockWidget * dockwidget ) const
+QList<QDockWidget *> tabifiedDockWidgets( QDockWidget * dockwidget ) const
 */
 HB_FUNC_STATIC( QMAINWINDOW_TABIFIEDDOCKWIDGETS )
 {
@@ -1188,7 +1188,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TABIFIEDDOCKWIDGETS )
 }
 
 /*
-void tabifyDockWidget ( QDockWidget * first, QDockWidget * second )
+void tabifyDockWidget( QDockWidget * first, QDockWidget * second )
 */
 HB_FUNC_STATIC( QMAINWINDOW_TABIFYDOCKWIDGET )
 {
@@ -1214,7 +1214,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TABIFYDOCKWIDGET )
 }
 
 /*
-Qt::ToolBarArea toolBarArea ( QToolBar * toolbar ) const
+Qt::ToolBarArea toolBarArea( QToolBar * toolbar ) const
 */
 HB_FUNC_STATIC( QMAINWINDOW_TOOLBARAREA )
 {
@@ -1238,7 +1238,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TOOLBARAREA )
 }
 
 /*
-bool toolBarBreak ( QToolBar * toolbar ) const
+bool toolBarBreak( QToolBar * toolbar ) const
 */
 HB_FUNC_STATIC( QMAINWINDOW_TOOLBARBREAK )
 {
@@ -1286,7 +1286,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TOOLBUTTONSTYLE )
 }
 
 /*
-void setAnimated ( bool enabled )
+void setAnimated( bool enabled )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETANIMATED )
 {
@@ -1312,7 +1312,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SETANIMATED )
 }
 
 /*
-void setDockNestingEnabled ( bool enabled ) const
+void setDockNestingEnabled( bool enabled ) const
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETDOCKNESTINGENABLED )
 {

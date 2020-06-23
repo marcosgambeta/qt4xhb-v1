@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QKEYEVENT_KEY )
 }
 
 /*
-bool matches ( QKeySequence::StandardKey key ) const
+bool matches( QKeySequence::StandardKey key ) const
 */
 HB_FUNC_STATIC( QKEYEVENT_MATCHES )
 {
