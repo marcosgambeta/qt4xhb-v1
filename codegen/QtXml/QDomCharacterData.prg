@@ -53,28 +53,22 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW )
 }
 $addMethod=new
 
-$prototype=void appendData ( const QString & arg )
-$method=|void|appendData|const QString &
+$prototypeV2=void appendData( const QString & arg )
 
 $prototypeV2=QString data() const
 
-$prototype=void deleteData ( unsigned long offset, unsigned long count )
-$method=|void|deleteData|unsigned long,unsigned long
+$prototypeV2=void deleteData( unsigned long offset, unsigned long count )
 
-$prototype=void insertData ( unsigned long offset, const QString & arg )
-$method=|void|insertData|unsigned long,const QString &
+$prototypeV2=void insertData( unsigned long offset, const QString & arg )
 
 $prototypeV2=uint length() const
 
 $prototypeV2=QDomNode::NodeType nodeType() const
 
-$prototype=void replaceData ( unsigned long offset, unsigned long count, const QString & arg )
-$method=|void|replaceData|unsigned long,unsigned long,const QString &
+$prototypeV2=void replaceData( unsigned long offset, unsigned long count, const QString & arg )
 
-$prototype=void setData ( const QString & v )
-$method=|void|setData|const QString &
+$prototypeV2=void setData( const QString & v )
 
-$prototype=QString substringData ( unsigned long offset, unsigned long count )
-$method=|QString|substringData|unsigned long,unsigned long
+$prototypeV2=QString substringData( unsigned long offset, unsigned long count )
 
 #pragma ENDDUMP

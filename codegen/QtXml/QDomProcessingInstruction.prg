@@ -57,8 +57,7 @@ $prototypeV2=QString data() const
 
 $prototypeV2=QDomNode::NodeType nodeType() const
 
-$prototype=void setData ( const QString & d )
-$method=|void|setData|const QString &
+$prototypeV2=void setData( const QString & d )
 
 $prototypeV2=QString target() const
 

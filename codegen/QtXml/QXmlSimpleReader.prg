@@ -30,8 +30,7 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=virtual bool parse ( const QXmlInputSource * input, bool incremental )
-$virtualMethod=|bool|parse|const QXmlInputSource *,bool
+$prototypeV2=virtual bool parse( const QXmlInputSource * input, bool incremental )
 
 $prototypeV2=virtual bool parseContinue()
 

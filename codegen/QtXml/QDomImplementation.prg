@@ -55,21 +55,17 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QDomDocument createDocument ( const QString & nsURI, const QString & qName, const QDomDocumentType & doctype )
-$method=|QDomDocument|createDocument|const QString &,const QString &,const QDomDocumentType &
+$prototypeV2=QDomDocument createDocument( const QString & nsURI, const QString & qName, const QDomDocumentType & doctype )
 
-$prototype=QDomDocumentType createDocumentType ( const QString & qName, const QString & publicId, const QString & systemId )
-$method=|QDomDocumentType|createDocumentType|const QString &,const QString &,const QString &
+$prototypeV2=QDomDocumentType createDocumentType( const QString & qName, const QString & publicId, const QString & systemId )
 
-$prototype=bool hasFeature ( const QString & feature, const QString & version ) const
-$method=|bool|hasFeature|const QString &,const QString &
+$prototypeV2=bool hasFeature( const QString & feature, const QString & version ) const
 
 $prototypeV2=bool isNull()
 
 $prototypeV2=static QDomImplementation::InvalidDataPolicy invalidDataPolicy()
 
-$prototype=static void setInvalidDataPolicy ( InvalidDataPolicy policy )
-$staticMethod=|void|setInvalidDataPolicy|QDomImplementation::InvalidDataPolicy
+$prototypeV2=static void setInvalidDataPolicy( QDomImplementation::InvalidDataPolicy policy )
 
 $extraMethods
 

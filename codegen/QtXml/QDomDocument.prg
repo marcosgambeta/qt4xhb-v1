@@ -71,52 +71,39 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QDomAttr createAttribute ( const QString & name )
-$method=|QDomAttr|createAttribute|const QString &
+$prototypeV2=QDomAttr createAttribute( const QString & name )
 
-$prototype=QDomAttr createAttributeNS ( const QString & nsURI, const QString & qName )
-$method=|QDomAttr|createAttributeNS|const QString &,const QString &
+$prototypeV2=QDomAttr createAttributeNS( const QString & nsURI, const QString & qName )
 
-$prototype=QDomCDATASection createCDATASection ( const QString & value )
-$method=|QDomCDATASection|createCDATASection|const QString &
+$prototypeV2=QDomCDATASection createCDATASection( const QString & value )
 
-$prototype=QDomComment createComment ( const QString & value )
-$method=|QDomComment|createComment|const QString &
+$prototypeV2=QDomComment createComment( const QString & value )
 
 $prototypeV2=QDomDocumentFragment createDocumentFragment()
 
-$prototype=QDomElement createElement ( const QString & tagName )
-$method=|QDomElement|createElement|const QString &
+$prototypeV2=QDomElement createElement( const QString & tagName )
 
-$prototype=QDomElement createElementNS ( const QString & nsURI, const QString & qName )
-$method=|QDomElement|createElementNS|const QString &,const QString &
+$prototypeV2=QDomElement createElementNS( const QString & nsURI, const QString & qName )
 
-$prototype=QDomEntityReference createEntityReference ( const QString & name )
-$method=|QDomEntityReference|createEntityReference|const QString &
+$prototypeV2=QDomEntityReference createEntityReference( const QString & name )
 
-$prototype=QDomProcessingInstruction createProcessingInstruction ( const QString & target, const QString & data )
-$method=|QDomProcessingInstruction|createProcessingInstruction|const QString &,const QString &
+$prototypeV2=QDomProcessingInstruction createProcessingInstruction( const QString & target, const QString & data )
 
-$prototype=QDomText createTextNode ( const QString & value )
-$method=|QDomText|createTextNode|const QString &
+$prototypeV2=QDomText createTextNode( const QString & value )
 
 $prototypeV2=QDomDocumentType doctype() const
 
 $prototypeV2=QDomElement documentElement() const
 
-$prototype=QDomElement elementById ( const QString & elementId )
-$method=|QDomElement|elementById|const QString &
+$prototypeV2=QDomElement elementById( const QString & elementId )
 
-$prototype=QDomNodeList elementsByTagName ( const QString & tagname ) const
-$method=|QDomNodeList|elementsByTagName|const QString &
+$prototypeV2=QDomNodeList elementsByTagName( const QString & tagname ) const
 
-$prototype=QDomNodeList elementsByTagNameNS ( const QString & nsURI, const QString & localName )
-$method=|QDomNodeList|elementsByTagNameNS|const QString &,const QString &
+$prototypeV2=QDomNodeList elementsByTagNameNS( const QString & nsURI, const QString & localName )
 
 $prototypeV2=QDomImplementation implementation() const
 
-$prototype=QDomNode importNode ( const QDomNode & importedNode, bool deep )
-$method=|QDomNode|importNode|const QDomNode &,bool
+$prototypeV2=QDomNode importNode( const QDomNode & importedNode, bool deep )
 
 $prototypeV2=QDomNode::NodeType nodeType() const
 

@@ -55,15 +55,13 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QDomNode at ( int index ) const
-$method=|QDomNode|at|int
+$prototypeV2=QDomNode at( int index ) const
 
 $prototypeV2=int count() const
 
 $prototypeV2=bool isEmpty() const
 
-$prototype=QDomNode item ( int index ) const
-$method=|QDomNode|item|int
+$prototypeV2=QDomNode item( int index ) const
 
 $prototypeV2=uint length() const
 

@@ -55,35 +55,27 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool contains ( const QString & name ) const
-$method=|bool|contains|const QString &
+$prototypeV2=bool contains( const QString & name ) const
 
 $prototypeV2=int count() const
 
 $prototypeV2=bool isEmpty() const
 
-$prototype=QDomNode item ( int index ) const
-$method=|QDomNode|item|int
+$prototypeV2=QDomNode item( int index ) const
 
 $prototypeV2=uint length() const
 
-$prototype=QDomNode namedItem ( const QString & name ) const
-$method=|QDomNode|namedItem|const QString &
+$prototypeV2=QDomNode namedItem( const QString & name ) const
 
-$prototype=QDomNode namedItemNS ( const QString & nsURI, const QString & localName ) const
-$method=|QDomNode|namedItemNS|const QString &,const QString &
+$prototypeV2=QDomNode namedItemNS( const QString & nsURI, const QString & localName ) const
 
-$prototype=QDomNode removeNamedItem ( const QString & name )
-$method=|QDomNode|removeNamedItem|const QString &
+$prototypeV2=QDomNode removeNamedItem( const QString & name )
 
-$prototype=QDomNode removeNamedItemNS ( const QString & nsURI, const QString & localName )
-$method=|QDomNode|removeNamedItemNS|const QString &,const QString &
+$prototypeV2=QDomNode removeNamedItemNS( const QString & nsURI, const QString & localName )
 
-$prototype=QDomNode setNamedItem ( const QDomNode & newNode )
-$method=|QDomNode|setNamedItem|const QDomNode &
+$prototypeV2=QDomNode setNamedItem( const QDomNode & newNode )
 
-$prototype=QDomNode setNamedItemNS ( const QDomNode & newNode )
-$method=|QDomNode|setNamedItemNS|const QDomNode &
+$prototypeV2=QDomNode setNamedItemNS( const QDomNode & newNode )
 
 $prototypeV2=int size() const
 

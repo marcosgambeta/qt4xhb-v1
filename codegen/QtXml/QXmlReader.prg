@@ -40,43 +40,32 @@ $prototypeV2=virtual QXmlErrorHandler * errorHandler() const = 0
 $prototype=virtual bool feature ( const QString & name, bool * ok = 0 ) const = 0
 $virtualMethod=|bool|feature|const QString &,bool *=0
 
-$prototype=virtual bool hasFeature ( const QString & name ) const = 0
-$virtualMethod=|bool|hasFeature|const QString &
+$prototypeV2=virtual bool hasFeature( const QString & name ) const = 0
 
-$prototype=virtual bool hasProperty ( const QString & name ) const = 0
-$virtualMethod=|bool|hasProperty|const QString &
+$prototypeV2=virtual bool hasProperty( const QString & name ) const = 0
 
 $prototypeV2=virtual QXmlLexicalHandler * lexicalHandler() const = 0
 
-$prototype=virtual bool parse ( const QXmlInputSource * input ) = 0
-$virtualMethod=|bool|parse|const QXmlInputSource *
+$prototypeV2=virtual bool parse( const QXmlInputSource * input ) = 0
 
 $prototype=virtual void * property ( const QString & name, bool * ok = 0 ) const = 0
 $virtualMethod=|void *|property|const QString &,bool *=0
 
-$prototype=virtual void setContentHandler ( QXmlContentHandler * handler ) = 0
-$virtualMethod=|void|setContentHandler|QXmlContentHandler *
+$prototypeV2=virtual void setContentHandler( QXmlContentHandler * handler ) = 0
 
-$prototype=virtual void setDTDHandler ( QXmlDTDHandler * handler ) = 0
-$virtualMethod=|void|setDTDHandler|QXmlDTDHandler *
+$prototypeV2=virtual void setDTDHandler( QXmlDTDHandler * handler ) = 0
 
-$prototype=virtual void setDeclHandler ( QXmlDeclHandler * handler ) = 0
-$virtualMethod=|void|setDeclHandler|QXmlDeclHandler *
+$prototypeV2=virtual void setDeclHandler( QXmlDeclHandler * handler ) = 0
 
-$prototype=virtual void setEntityResolver ( QXmlEntityResolver * handler ) = 0
-$virtualMethod=|void|setEntityResolver|QXmlEntityResolver *
+$prototypeV2=virtual void setEntityResolver( QXmlEntityResolver * handler ) = 0
 
-$prototype=virtual void setErrorHandler ( QXmlErrorHandler * handler ) = 0
-$virtualMethod=|void|setErrorHandler|QXmlErrorHandler *
+$prototypeV2=virtual void setErrorHandler( QXmlErrorHandler * handler ) = 0
 
-$prototype=virtual void setFeature ( const QString & name, bool value ) = 0
-$virtualMethod=|void|setFeature|const QString &,bool
+$prototypeV2=virtual void setFeature( const QString & name, bool value ) = 0
 
-$prototype=virtual void setLexicalHandler ( QXmlLexicalHandler * handler ) = 0
-$virtualMethod=|void|setLexicalHandler|QXmlLexicalHandler *
+$prototypeV2=virtual void setLexicalHandler( QXmlLexicalHandler * handler ) = 0
 
-$prototype=virtual void setProperty ( const QString & name, void * value ) = 0
-$virtualMethod=|void|setProperty|const QString &,void *
+$prototypeV2=virtual void setProperty( const QString & name, void * value ) = 0
 
 $extraMethods
 

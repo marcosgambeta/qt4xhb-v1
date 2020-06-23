@@ -27,16 +27,13 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual bool error ( const QXmlParseException & exception ) = 0
-$virtualMethod=|bool|error|const QXmlParseException &
+$prototypeV2=virtual bool error( const QXmlParseException & exception ) = 0
 
 $prototypeV2=virtual QString errorString() const = 0
 
-$prototype=virtual bool fatalError ( const QXmlParseException & exception ) = 0
-$virtualMethod=|bool|fatalError|const QXmlParseException &
+$prototypeV2=virtual bool fatalError( const QXmlParseException & exception ) = 0
 
-$prototype=virtual bool warning ( const QXmlParseException & exception ) = 0
-$virtualMethod=|bool|warning|const QXmlParseException &
+$prototypeV2=virtual bool warning( const QXmlParseException & exception ) = 0
 
 $extraMethods
 

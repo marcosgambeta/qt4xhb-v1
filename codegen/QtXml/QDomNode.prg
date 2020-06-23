@@ -55,8 +55,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QDomNode appendChild ( const QDomNode & newChild )
-$method=|QDomNode|appendChild|const QDomNode &
+$prototypeV2=QDomNode appendChild( const QDomNode & newChild )
 
 $prototypeV2=QDomNamedNodeMap attributes() const
 
@@ -78,11 +77,9 @@ $prototypeV2=bool hasAttributes() const
 
 $prototypeV2=bool hasChildNodes() const
 
-$prototype=QDomNode insertAfter ( const QDomNode & newChild, const QDomNode & refChild )
-$method=|QDomNode|insertAfter|const QDomNode &,const QDomNode &
+$prototypeV2=QDomNode insertAfter( const QDomNode & newChild, const QDomNode & refChild )
 
-$prototype=QDomNode insertBefore ( const QDomNode & newChild, const QDomNode & refChild )
-$method=|QDomNode|insertBefore|const QDomNode &,const QDomNode &
+$prototypeV2=QDomNode insertBefore( const QDomNode & newChild, const QDomNode & refChild )
 
 $prototypeV2=bool isAttr() const
 
@@ -110,8 +107,7 @@ $prototypeV2=bool isNull() const
 
 $prototypeV2=bool isProcessingInstruction() const
 
-$prototype=bool isSupported ( const QString & feature, const QString & version ) const
-$method=|bool|isSupported|const QString &,const QString &
+$prototypeV2=bool isSupported( const QString & feature, const QString & version ) const
 
 $prototypeV2=bool isText() const
 
@@ -124,8 +120,7 @@ $prototypeV2=int lineNumber() const
 
 $prototypeV2=QString localName() const
 
-$prototype=QDomNode namedItem ( const QString & name ) const
-$method=|QDomNode|namedItem|const QString &
+$prototypeV2=QDomNode namedItem( const QString & name ) const
 
 $prototypeV2=QString namespaceURI() const
 
@@ -153,11 +148,9 @@ $prototypeV2=QDomNode previousSibling() const
 $prototype=QDomElement previousSiblingElement ( const QString & tagName = QString() ) const
 $method=|QDomElement|previousSiblingElement|const QString &=QString()
 
-$prototype=QDomNode removeChild ( const QDomNode & oldChild )
-$method=|QDomNode|removeChild|const QDomNode &
+$prototypeV2=QDomNode removeChild( const QDomNode & oldChild )
 
-$prototype=QDomNode replaceChild ( const QDomNode & newChild, const QDomNode & oldChild )
-$method=|QDomNode|replaceChild|const QDomNode &,const QDomNode &
+$prototypeV2=QDomNode replaceChild( const QDomNode & newChild, const QDomNode & oldChild )
 
 $prototype=void save ( QTextStream & str, int indent ) const
 $internalMethod=|void|save,save1|QTextStream &,int
@@ -187,11 +180,9 @@ HB_FUNC_STATIC( QDOMNODE_SAVE )
 }
 $addMethod=save
 
-$prototype=void setNodeValue ( const QString & v )
-$method=|void|setNodeValue|const QString &
+$prototypeV2=void setNodeValue( const QString & v )
 
-$prototype=void setPrefix ( const QString & pre )
-$method=|void|setPrefix|const QString &
+$prototypeV2=void setPrefix( const QString & pre )
 
 $prototypeV2=QDomAttr toAttr() const
 

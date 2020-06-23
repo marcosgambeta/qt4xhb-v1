@@ -32,8 +32,7 @@ $deleteMethod
 
 $prototypeV2=void popContext()
 
-$prototype=QString prefix ( const QString & uri ) const
-$method=|QString|prefix|const QString &
+$prototypeV2=QString prefix( const QString & uri ) const
 
 $prototype=QStringList prefixes () const
 $internalMethod=|QStringList|prefixes,prefixes1|
@@ -71,15 +70,13 @@ $prototypeV2=void pushContext()
 
 $prototypeV2=void reset()
 
-$prototype=void setPrefix ( const QString & pre, const QString & uri )
-$method=|void|setPrefix|const QString &,const QString &
+$prototypeV2=void setPrefix( const QString & pre, const QString & uri )
 
 $prototype=void splitName ( const QString & qname, QString & prefix, QString & localname ) const
 %% TODO: implementar 'QString &'
 %% $method=|void|splitName|const QString &,QString &,QString &
 
-$prototype=QString uri ( const QString & prefix ) const
-$method=|QString|uri|const QString &
+$prototypeV2=QString uri( const QString & prefix ) const
 
 $extraMethods
 

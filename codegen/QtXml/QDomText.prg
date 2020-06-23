@@ -55,7 +55,6 @@ $addMethod=new
 
 $prototypeV2=QDomNode::NodeType nodeType() const
 
-$prototype=QDomText splitText ( int offset )
-$method=|QDomText|splitText|int
+$prototypeV2=QDomText splitText( int offset )
 
 #pragma ENDDUMP

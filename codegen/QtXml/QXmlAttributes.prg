@@ -30,8 +30,7 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=void append ( const QString & qName, const QString & uri, const QString & localPart, const QString & value )
-$method=|void|append|const QString &,const QString &,const QString &,const QString &
+$prototypeV2=void append( const QString & qName, const QString & uri, const QString & localPart, const QString & value )
 
 $prototypeV2=void clear()
 
@@ -75,11 +74,9 @@ $addMethod=index
 
 $prototypeV2=int length() const
 
-$prototype=QString localName ( int index ) const
-$method=|QString|localName|int
+$prototypeV2=QString localName( int index ) const
 
-$prototype=QString qName ( int index ) const
-$method=|QString|qName|int
+$prototypeV2=QString qName( int index ) const
 
 $prototype=QString type ( int index ) const
 $internalMethod=|QString|type,type1|int
@@ -117,8 +114,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE )
 }
 $addMethod=type
 
-$prototype=QString uri ( int index ) const
-$method=|QString|uri|int
+$prototypeV2=QString uri( int index ) const
 
 $prototype=QString value ( int index ) const
 $internalMethod=|QString|value,value1|int

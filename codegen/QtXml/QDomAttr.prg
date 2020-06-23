@@ -59,8 +59,7 @@ $prototypeV2=QDomNode::NodeType nodeType() const
 
 $prototypeV2=QDomElement ownerElement() const
 
-$prototype=void setValue ( const QString & v )
-$method=|void|setValue|const QString &
+$prototypeV2=void setValue( const QString & v )
 
 $prototypeV2=bool specified() const
 

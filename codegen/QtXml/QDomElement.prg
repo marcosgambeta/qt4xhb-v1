@@ -59,36 +59,27 @@ $method=|QString|attribute|const QString &,const QString &=QString()
 $prototype=QString attributeNS ( const QString nsURI, const QString & localName, const QString & defValue = QString() ) const
 $method=|QString|attributeNS|const QString,const QString &,const QString &=QString()
 
-$prototype=QDomAttr attributeNode ( const QString & name )
-$method=|QDomAttr|attributeNode|const QString &
+$prototypeV2=QDomAttr attributeNode( const QString & name )
 
-$prototype=QDomAttr attributeNodeNS ( const QString & nsURI, const QString & localName )
-$method=|QDomAttr|attributeNodeNS|const QString &,const QString &
+$prototypeV2=QDomAttr attributeNodeNS( const QString & nsURI, const QString & localName )
 
 $prototypeV2=QDomNamedNodeMap attributes() const
 
-$prototype=QDomNodeList elementsByTagName ( const QString & tagname ) const
-$method=|QDomNodeList|elementsByTagName|const QString &
+$prototypeV2=QDomNodeList elementsByTagName( const QString & tagname ) const
 
-$prototype=QDomNodeList elementsByTagNameNS ( const QString & nsURI, const QString & localName ) const
-$method=|QDomNodeList|elementsByTagNameNS|const QString &,const QString &
+$prototypeV2=QDomNodeList elementsByTagNameNS( const QString & nsURI, const QString & localName ) const
 
-$prototype=bool hasAttribute ( const QString & name ) const
-$method=|bool|hasAttribute|const QString &
+$prototypeV2=bool hasAttribute( const QString & name ) const
 
-$prototype=bool hasAttributeNS ( const QString & nsURI, const QString & localName ) const
-$method=|bool|hasAttributeNS|const QString &,const QString &
+$prototypeV2=bool hasAttributeNS( const QString & nsURI, const QString & localName ) const
 
 $prototypeV2=QDomNode::NodeType nodeType() const
 
-$prototype=void removeAttribute ( const QString & name )
-$method=|void|removeAttribute|const QString &
+$prototypeV2=void removeAttribute( const QString & name )
 
-$prototype=void removeAttributeNS ( const QString & nsURI, const QString & localName )
-$method=|void|removeAttributeNS|const QString &,const QString &
+$prototypeV2=void removeAttributeNS( const QString & nsURI, const QString & localName )
 
-$prototype=QDomAttr removeAttributeNode ( const QDomAttr & oldAttr )
-$method=|QDomAttr|removeAttributeNode|const QDomAttr &
+$prototypeV2=QDomAttr removeAttributeNode( const QDomAttr & oldAttr )
 
 $prototype=void setAttribute ( const QString & name, const QString & value )
 $method=|void|setAttribute,setAttribute1|const QString &,const QString &
@@ -183,14 +174,11 @@ HB_FUNC_STATIC( QDOMELEMENT_SETATTRIBUTENS )
 }
 $addMethod=setAttributeNS
 
-$prototype=QDomAttr setAttributeNode ( const QDomAttr & newAttr )
-$method=|QDomAttr|setAttributeNode|const QDomAttr &
+$prototypeV2=QDomAttr setAttributeNode( const QDomAttr & newAttr )
 
-$prototype=QDomAttr setAttributeNodeNS ( const QDomAttr & newAttr )
-$method=|QDomAttr|setAttributeNodeNS|const QDomAttr &
+$prototypeV2=QDomAttr setAttributeNodeNS( const QDomAttr & newAttr )
 
-$prototype=void setTagName ( const QString & name )
-$method=|void|setTagName|const QString &
+$prototypeV2=void setTagName( const QString & name )
 
 $prototypeV2=QString tagName() const
 
