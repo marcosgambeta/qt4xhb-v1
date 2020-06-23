@@ -63,7 +63,7 @@ $prototypeV2=void removePage( int id )
 
 $prototypeV2=void setButton( QWizard::WizardButton which, QAbstractButton * button )
 
-$prototypeV2=void setButtonLayout( const QList<WizardButton> & layout )
+$prototypeV2=void setButtonLayout( const QList<QWizard::WizardButton> & layout )
 
 $prototypeV2=void setButtonText( QWizard::WizardButton which, const QString & text )
 
@@ -71,7 +71,7 @@ $prototypeV2=void setDefaultProperty( const char * className, const char * prope
 
 $prototypeV2=void setField( const QString & name, const QVariant & value )
 
-$prototype=void setOption ( WizardOption option, bool on = true )
+$prototype=void setOption ( QWizard::WizardOption option, bool on = true )
 $method=|void|setOption|QWizard::WizardOption,bool=true
 
 $prototypeV2=void setOptions( QWizard::WizardOptions options )
