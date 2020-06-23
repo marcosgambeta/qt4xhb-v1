@@ -57,23 +57,17 @@ $addMethod=new
 
 $prototypeV2=bool isNull() const
 
-$prototype=QString localName ( const QXmlNamePool & namePool ) const
-$method=|QString|localName|const QXmlNamePool &
+$prototypeV2=QString localName( const QXmlNamePool & namePool ) const
 
-$prototype=QString namespaceUri ( const QXmlNamePool & namePool ) const
-$method=|QString|namespaceUri|const QXmlNamePool &
+$prototypeV2=QString namespaceUri( const QXmlNamePool & namePool ) const
 
-$prototype=QString prefix ( const QXmlNamePool & namePool ) const
-$method=|QString|prefix|const QXmlNamePool &
+$prototypeV2=QString prefix( const QXmlNamePool & namePool ) const
 
-$prototype=QString toClarkName ( const QXmlNamePool & namePool ) const
-$method=|QString|toClarkName|const QXmlNamePool &
+$prototypeV2=QString toClarkName( const QXmlNamePool & namePool ) const
 
-$prototype=static QXmlName fromClarkName ( const QString & clarkName, const QXmlNamePool & namePool )
-$staticMethod=|QXmlName|fromClarkName|const QString &,const QXmlNamePool &
+$prototypeV2=static QXmlName fromClarkName( const QString & clarkName, const QXmlNamePool & namePool )
 
-$prototype=static bool isNCName ( const QString & candidate )
-$staticMethod=|bool|isNCName|const QString &
+$prototypeV2=static bool isNCName( const QString & candidate )
 
 $extraMethods
 

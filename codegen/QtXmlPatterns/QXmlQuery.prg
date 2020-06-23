@@ -273,11 +273,9 @@ HB_FUNC_STATIC( QXMLQUERY_SETINITIALTEMPLATENAME )
 }
 $addMethod=setInitialTemplateName
 
-$prototype=void setMessageHandler ( QAbstractMessageHandler * aMessageHandler )
-$method=|void|setMessageHandler|QAbstractMessageHandler *
+$prototypeV2=void setMessageHandler( QAbstractMessageHandler * aMessageHandler )
 
-$prototype=void setNetworkAccessManager ( QNetworkAccessManager * newManager )
-$method=|void|setNetworkAccessManager|QNetworkAccessManager *
+$prototypeV2=void setNetworkAccessManager( QNetworkAccessManager * newManager )
 
 $prototype=void setQuery ( QIODevice * sourceCode, const QUrl & documentURI = QUrl() )
 $internalMethod=|void|setQuery,setQuery1|QIODevice *,const QUrl &=QUrl()
@@ -315,8 +313,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETQUERY )
 }
 $addMethod=setQuery
 
-$prototype=void setUriResolver ( const QAbstractUriResolver * resolver )
-$method=|void|setUriResolver|const QAbstractUriResolver *
+$prototypeV2=void setUriResolver( const QAbstractUriResolver * resolver )
 
 $prototypeV2=const QAbstractUriResolver * uriResolver() const
 

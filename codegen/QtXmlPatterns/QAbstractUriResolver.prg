@@ -29,7 +29,6 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QUrl resolve ( const QUrl & relative, const QUrl & baseURI ) const = 0
-$virtualMethod=|QUrl|resolve|const QUrl &,const QUrl &
+$prototypeV2=virtual QUrl resolve( const QUrl & relative, const QUrl & baseURI ) const = 0
 
 #pragma ENDDUMP

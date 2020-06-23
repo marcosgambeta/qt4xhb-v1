@@ -69,14 +69,11 @@ $prototypeV2=bool isNull() const
 
 $prototypeV2=qint64 line() const
 
-$prototype=void setColumn ( qint64 newColumn )
-$method=|void|setColumn|qint64
+$prototypeV2=void setColumn( qint64 newColumn )
 
-$prototype=void setLine ( qint64 newLine )
-$method=|void|setLine|qint64
+$prototypeV2=void setLine( qint64 newLine )
 
-$prototype=void setUri ( const QUrl & newUri )
-$method=|void|setUri|const QUrl &
+$prototypeV2=void setUri( const QUrl & newUri )
 
 $prototypeV2=QUrl uri() const
 

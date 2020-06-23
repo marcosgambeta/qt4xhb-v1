@@ -27,17 +27,13 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual void atomicValue ( const QVariant & value ) = 0
-$virtualMethod=|void|atomicValue|const QVariant &
+$prototypeV2=virtual void atomicValue( const QVariant & value ) = 0
 
-$prototype=virtual void attribute ( const QXmlName & name, const QStringRef & value ) = 0
-$virtualMethod=|void|attribute|const QXmlName &,const QStringRef &
+$prototypeV2=virtual void attribute( const QXmlName & name, const QStringRef & value ) = 0
 
-$prototype=virtual void characters ( const QStringRef & value ) = 0
-$virtualMethod=|void|characters|const QStringRef &
+$prototypeV2=virtual void characters( const QStringRef & value ) = 0
 
-$prototype=virtual void comment ( const QString & value ) = 0
-$virtualMethod=|void|comment|const QString &
+$prototypeV2=virtual void comment( const QString & value ) = 0
 
 $prototypeV2=virtual void endDocument() = 0
 
@@ -45,16 +41,13 @@ $prototypeV2=virtual void endElement() = 0
 
 $prototypeV2=virtual void endOfSequence() = 0
 
-$prototype=virtual void namespaceBinding ( const QXmlName & name ) = 0
-$virtualMethod=|void|namespaceBinding|const QXmlName &
+$prototypeV2=virtual void namespaceBinding( const QXmlName & name ) = 0
 
-$prototype=virtual void processingInstruction ( const QXmlName & target, const QString & value ) = 0
-$virtualMethod=|void|processingInstruction|const QXmlName &,const QString &
+$prototypeV2=virtual void processingInstruction( const QXmlName & target, const QString & value ) = 0
 
 $prototypeV2=virtual void startDocument() = 0
 
-$prototype=virtual void startElement ( const QXmlName & name ) = 0
-$virtualMethod=|void|startElement|const QXmlName &
+$prototypeV2=virtual void startElement( const QXmlName & name ) = 0
 
 $prototypeV2=virtual void startOfSequence() = 0
 

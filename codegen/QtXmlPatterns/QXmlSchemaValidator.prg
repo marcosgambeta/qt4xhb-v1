@@ -68,17 +68,13 @@ $prototypeV2=QNetworkAccessManager * networkAccessManager() const
 
 $prototypeV2=QXmlSchema schema() const
 
-$prototype=void setMessageHandler ( QAbstractMessageHandler * handler )
-$method=|void|setMessageHandler|QAbstractMessageHandler *
+$prototypeV2=void setMessageHandler( QAbstractMessageHandler * handler )
 
-$prototype=void setNetworkAccessManager ( QNetworkAccessManager * manager )
-$method=|void|setNetworkAccessManager|QNetworkAccessManager *
+$prototypeV2=void setNetworkAccessManager( QNetworkAccessManager * manager )
 
-$prototype=void setSchema ( const QXmlSchema & schema )
-$method=|void|setSchema|const QXmlSchema &
+$prototypeV2=void setSchema( const QXmlSchema & schema )
 
-$prototype=void setUriResolver ( const QAbstractUriResolver * resolver )
-$method=|void|setUriResolver|const QAbstractUriResolver *
+$prototypeV2=void setUriResolver( const QAbstractUriResolver * resolver )
 
 $prototypeV2=const QAbstractUriResolver * uriResolver() const
 

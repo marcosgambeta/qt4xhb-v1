@@ -31,19 +31,14 @@ $deleteMethod
 
 $prototypeV2=QXmlNamePool & namePool() const
 
-$prototype=virtual QUrl baseUri ( const QXmlNodeModelIndex & node ) const
-$virtualMethod=|QUrl|baseUri|const QXmlNodeModelIndex &
+$prototypeV2=virtual QUrl baseUri( const QXmlNodeModelIndex & node ) const
 
-$prototype=virtual QXmlNodeModelIndex elementById ( const QXmlName & id ) const
-$virtualMethod=|QXmlNodeModelIndex|elementById|const QXmlName &
+$prototypeV2=virtual QXmlNodeModelIndex elementById( const QXmlName & id ) const
 
-$prototype=virtual QVector<QXmlName> namespaceBindings ( const QXmlNodeModelIndex & node ) const
-$virtualMethod=|QVector<QXmlName>|namespaceBindings|const QXmlNodeModelIndex &
+$prototypeV2=virtual QVector<QXmlName> namespaceBindings( const QXmlNodeModelIndex & node ) const
 
-$prototype=virtual QVector<QXmlNodeModelIndex> nodesByIdref ( const QXmlName & idref ) const
-$virtualMethod=|QVector<QXmlNodeModelIndex>|nodesByIdref|const QXmlName &
+$prototypeV2=virtual QVector<QXmlNodeModelIndex> nodesByIdref( const QXmlName & idref ) const
 
-$prototype=virtual QString stringValue ( const QXmlNodeModelIndex & node ) const
-$virtualMethod=|QString|stringValue|const QXmlNodeModelIndex &
+$prototypeV2=virtual QString stringValue( const QXmlNodeModelIndex & node ) const
 
 #pragma ENDDUMP
