@@ -76,7 +76,7 @@ $prototypeV2=Qt::CaseSensitivity caseSensitivity() const
 
 $prototypeV2=QString errorString() const
 
-$prototypeV2=bool exactMatch ( const QString & str ) const
+$prototypeV2=bool exactMatch( const QString & str ) const
 
 $prototype=int indexIn ( const QString & str, int offset = 0, CaretMode caretMode = CaretAtZero ) const
 $method=|int|indexIn|const QString &,int=0,QRegExp::CaretMode=QRegExp::CaretAtZero
