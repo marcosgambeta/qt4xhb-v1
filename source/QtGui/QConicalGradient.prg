@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_CENTER )
 }
 
 /*
-void setAngle ( qreal angle )
+void setAngle( qreal angle )
 */
 HB_FUNC_STATIC( QCONICALGRADIENT_SETANGLE )
 {

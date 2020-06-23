@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_PAGESTEP )
 }
 
 /*
-void setInvertedAppearance ( bool )
+void setInvertedAppearance( bool )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SETINVERTEDAPPEARANCE )
 {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETINVERTEDAPPEARANCE )
 }
 
 /*
-void setInvertedControls ( bool )
+void setInvertedControls( bool )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SETINVERTEDCONTROLS )
 {
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETINVERTEDCONTROLS )
 }
 
 /*
-void setMaximum ( int )
+void setMaximum( int )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SETMAXIMUM )
 {
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETMAXIMUM )
 }
 
 /*
-void setMinimum ( int )
+void setMinimum( int )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SETMINIMUM )
 {
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETMINIMUM )
 }
 
 /*
-void setPageStep ( int )
+void setPageStep( int )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SETPAGESTEP )
 {
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETPAGESTEP )
 }
 
 /*
-void setRange ( int min, int max )
+void setRange( int min, int max )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SETRANGE )
 {
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETRANGE )
 }
 
 /*
-void setSingleStep ( int )
+void setSingleStep( int )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SETSINGLESTEP )
 {
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETSINGLESTEP )
 }
 
 /*
-void setSliderDown ( bool )
+void setSliderDown( bool )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SETSLIDERDOWN )
 {
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETSLIDERDOWN )
 }
 
 /*
-void setSliderPosition ( int )
+void setSliderPosition( int )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SETSLIDERPOSITION )
 {
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETSLIDERPOSITION )
 }
 
 /*
-void setTracking ( bool enable )
+void setTracking( bool enable )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SETTRACKING )
 {
@@ -590,7 +590,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SLIDERPOSITION )
 }
 
 /*
-void triggerAction ( SliderAction action )
+void triggerAction( QAbstractSlider::SliderAction action )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_TRIGGERACTION )
 {
@@ -640,7 +640,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_VALUE )
 }
 
 /*
-void setOrientation ( Qt::Orientation )
+void setOrientation( Qt::Orientation )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SETORIENTATION )
 {
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QABSTRACTSLIDER_SETORIENTATION )
 }
 
 /*
-void setValue ( int )
+void setValue( int )
 */
 HB_FUNC_STATIC( QABSTRACTSLIDER_SETVALUE )
 {

@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_DELETE )
 }
 
 /*
-const QPoint & globalPos () const
+const QPoint & globalPos() const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALPOS )
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QCONTEXTMENUEVENT_GLOBALY )
 }
 
 /*
-const QPoint & pos () const
+const QPoint & pos() const
 */
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_POS )
 {

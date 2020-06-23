@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_DELETE )
 }
 
 /*
-void addScrollBarWidget ( QWidget * widget, Qt::Alignment alignment )
+void addScrollBarWidget( QWidget * widget, Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_ADDSCROLLBARWIDGET )
 {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_MAXIMUMVIEWPORTSIZE )
 }
 
 /*
-QWidgetList scrollBarWidgets ( Qt::Alignment alignment )
+QWidgetList scrollBarWidgets( Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SCROLLBARWIDGETS )
 {
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SCROLLBARWIDGETS )
 }
 
 /*
-void setCornerWidget ( QWidget * widget )
+void setCornerWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETCORNERWIDGET )
 {
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETCORNERWIDGET )
 }
 
 /*
-void setHorizontalScrollBar ( QScrollBar * scrollBar )
+void setHorizontalScrollBar( QScrollBar * scrollBar )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBAR )
 {
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBAR )
 }
 
 /*
-void setHorizontalScrollBarPolicy ( Qt::ScrollBarPolicy )
+void setHorizontalScrollBarPolicy( Qt::ScrollBarPolicy )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBARPOLICY )
 {
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBARPOLICY )
 }
 
 /*
-void setVerticalScrollBar ( QScrollBar * scrollBar )
+void setVerticalScrollBar( QScrollBar * scrollBar )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBAR )
 {
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBAR )
 }
 
 /*
-void setVerticalScrollBarPolicy ( Qt::ScrollBarPolicy )
+void setVerticalScrollBarPolicy( Qt::ScrollBarPolicy )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBARPOLICY )
 {
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBARPOLICY )
 }
 
 /*
-void setViewport ( QWidget * widget )
+void setViewport( QWidget * widget )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVIEWPORT )
 {

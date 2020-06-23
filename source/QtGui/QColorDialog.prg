@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SELECTEDCOLOR )
 }
 
 /*
-void setCurrentColor ( const QColor & color )
+void setCurrentColor( const QColor & color )
 */
 HB_FUNC_STATIC( QCOLORDIALOG_SETCURRENTCOLOR )
 {
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETOPTION )
 }
 
 /*
-void setOptions ( ColorDialogOptions options )
+void setOptions( QColorDialog::ColorDialogOptions options )
 */
 HB_FUNC_STATIC( QCOLORDIALOG_SETOPTIONS )
 {
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETOPTIONS )
 }
 
 /*
-bool testOption ( ColorDialogOption option ) const
+bool testOption( QColorDialog::ColorDialogOption option ) const
 */
 HB_FUNC_STATIC( QCOLORDIALOG_TESTOPTION )
 {
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_TESTOPTION )
 }
 
 /*
-virtual void setVisible ( bool visible )
+virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QCOLORDIALOG_SETVISIBLE )
 {
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETVISIBLE )
 }
 
 /*
-static QRgb customColor ( int index )
+static QRgb customColor( int index )
 */
 HB_FUNC_STATIC( QCOLORDIALOG_CUSTOMCOLOR )
 {
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR )
 }
 
 /*
-static void setCustomColor ( int index, QRgb color )
+static void setCustomColor( int index, QRgb color )
 */
 HB_FUNC_STATIC( QCOLORDIALOG_SETCUSTOMCOLOR )
 {
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETCUSTOMCOLOR )
 }
 
 /*
-static void setStandardColor ( int index, QRgb color
+static void setStandardColor( int index, QRgb color )
 */
 HB_FUNC_STATIC( QCOLORDIALOG_SETSTANDARDCOLOR )
 {

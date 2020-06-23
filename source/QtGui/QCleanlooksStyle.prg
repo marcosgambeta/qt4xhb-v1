@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_DELETE )
 }
 
 /*
-virtual void drawComplexControl ( ComplexControl control, const QStyleOptionComplex * option, QPainter * painter, const QWidget * widget ) const
+virtual void drawComplexControl( QStyle::ComplexControl control, const QStyleOptionComplex * option, QPainter * painter, const QWidget * widget ) const
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_DRAWCOMPLEXCONTROL )
 {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_DRAWCOMPLEXCONTROL )
 }
 
 /*
-virtual void drawControl ( ControlElement element, const QStyleOption * option, QPainter * painter, const QWidget * widget ) const
+virtual void drawControl( QStyle::ControlElement element, const QStyleOption * option, QPainter * painter, const QWidget * widget ) const
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_DRAWCONTROL )
 {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_DRAWCONTROL )
 }
 
 /*
-virtual void drawItemPixmap ( QPainter * painter, const QRect & rect, int alignment, const QPixmap & pixmap ) const
+virtual void drawItemPixmap( QPainter * painter, const QRect & rect, int alignment, const QPixmap & pixmap ) const
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_DRAWITEMPIXMAP )
 {
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_DRAWPRIMITIVE )
 }
 
 /*
-virtual QPixmap generatedIconPixmap ( QIcon::Mode iconMode, const QPixmap & pixmap, const QStyleOption * opt ) const
+virtual QPixmap generatedIconPixmap( QIcon::Mode iconMode, const QPixmap & pixmap, const QStyleOption * opt ) const
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_GENERATEDICONPIXMAP )
 {
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_HITTESTCOMPLEXCONTROL )
 }
 
 /*
-virtual QRect itemPixmapRect ( const QRect & r, int flags, const QPixmap & pixmap ) const
+virtual QRect itemPixmapRect( const QRect & r, int flags, const QPixmap & pixmap ) const
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_ITEMPIXMAPRECT )
 {
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_POLISH )
 }
 
 /*
-virtual QSize sizeFromContents ( ContentsType type, const QStyleOption * option, const QSize & size, const QWidget * widget ) const
+virtual QSize sizeFromContents( QStyle::ContentsType type, const QStyleOption * option, const QSize & size, const QWidget * widget ) const
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_SIZEFROMCONTENTS )
 {
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_STYLEHINT )
 }
 
 /*
-virtual QRect subControlRect ( ComplexControl control, const QStyleOptionComplex * option, SubControl subControl, const QWidget * widget ) const
+virtual QRect subControlRect( QStyle::ComplexControl control, const QStyleOptionComplex * option, QStyle::SubControl subControl, const QWidget * widget ) const
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_SUBCONTROLRECT )
 {

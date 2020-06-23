@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QCURSOR_DELETE )
 }
 
 /*
-const QBitmap * bitmap () const
+const QBitmap * bitmap() const
 */
 HB_FUNC_STATIC( QCURSOR_BITMAP )
 {
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QCURSOR_HOTSPOT )
 }
 
 /*
-const QBitmap * mask () const
+const QBitmap * mask() const
 */
 HB_FUNC_STATIC( QCURSOR_MASK )
 {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QCURSOR_PIXMAP )
 }
 
 /*
-void setShape ( Qt::CursorShape shape )
+void setShape( Qt::CursorShape shape )
 */
 HB_FUNC_STATIC( QCURSOR_SETSHAPE )
 {

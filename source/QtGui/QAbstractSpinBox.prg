@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_KEYBOARDTRACKING )
 }
 
 /*
-void setAccelerated ( bool on )
+void setAccelerated( bool on )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETACCELERATED )
 {
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETACCELERATED )
 }
 
 /*
-void setAlignment ( Qt::Alignment flag )
+void setAlignment( Qt::Alignment flag )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETALIGNMENT )
 {
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETALIGNMENT )
 }
 
 /*
-void setButtonSymbols ( ButtonSymbols bs )
+void setButtonSymbols( QAbstractSpinBox::ButtonSymbols bs )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETBUTTONSYMBOLS )
 {
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETBUTTONSYMBOLS )
 }
 
 /*
-void setCorrectionMode ( CorrectionMode cm )
+void setCorrectionMode( QAbstractSpinBox::CorrectionMode cm )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETCORRECTIONMODE )
 {
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETCORRECTIONMODE )
 }
 
 /*
-void setFrame ( bool )
+void setFrame( bool )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETFRAME )
 {
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETFRAME )
 }
 
 /*
-void setKeyboardTracking ( bool kt )
+void setKeyboardTracking( bool kt )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETKEYBOARDTRACKING )
 {
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETKEYBOARDTRACKING )
 }
 
 /*
-void setReadOnly ( bool r )
+void setReadOnly( bool r )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETREADONLY )
 {
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETREADONLY )
 }
 
 /*
-void setSpecialValueText ( const QString & txt )
+void setSpecialValueText( const QString & txt )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETSPECIALVALUETEXT )
 {
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SETSPECIALVALUETEXT )
 }
 
 /*
-void setWrapping ( bool w )
+void setWrapping( bool w )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETWRAPPING )
 {
@@ -604,7 +604,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_SPECIALVALUETEXT )
 }
 
 /*
-virtual void stepBy ( int steps )
+virtual void stepBy( int steps )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPBY )
 {
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_WRAPPING )
 }
 
 /*
-virtual bool event ( QEvent * event )
+virtual bool event( QEvent * event )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_EVENT )
 {
@@ -717,7 +717,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_EVENT )
 }
 
 /*
-virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
+virtual QVariant inputMethodQuery( Qt::InputMethodQuery query ) const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_INPUTMETHODQUERY )
 {

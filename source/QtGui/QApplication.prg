@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QAPPLICATION_DELETE )
 }
 
 /*
-virtual void commitData ( QSessionManager & manager )
+virtual void commitData( QSessionManager & manager )
 */
 HB_FUNC_STATIC( QAPPLICATION_COMMITDATA )
 {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QAPPLICATION_ISSESSIONRESTORED )
 }
 
 /*
-virtual void saveState ( QSessionManager & manager )
+virtual void saveState( QSessionManager & manager )
 */
 HB_FUNC_STATIC( QAPPLICATION_SAVESTATE )
 {
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QAPPLICATION_SESSIONKEY )
 }
 
 /*
-void setInputContext ( QInputContext * inputContext )
+void setInputContext( QInputContext * inputContext )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETINPUTCONTEXT )
 {
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QAPPLICATION_CLOSEALLWINDOWS )
 }
 
 /*
-void setStyleSheet ( const QString & sheet )
+void setStyleSheet( const QString & sheet )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETSTYLESHEET )
 {
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QAPPLICATION_BEEP )
 }
 
 /*
-static void changeOverrideCursor ( const QCursor & cursor )
+static void changeOverrideCursor( const QCursor & cursor )
 */
 HB_FUNC_STATIC( QAPPLICATION_CHANGEOVERRIDECURSOR )
 {
@@ -904,7 +904,7 @@ HB_FUNC_STATIC( QAPPLICATION_GLOBALSTRUT )
 }
 
 /*
-static bool isEffectEnabled ( Qt::UIEffect effect )
+static bool isEffectEnabled( Qt::UIEffect effect )
 */
 HB_FUNC_STATIC( QAPPLICATION_ISEFFECTENABLED )
 {
@@ -1211,7 +1211,7 @@ HB_FUNC_STATIC( QAPPLICATION_RESTOREOVERRIDECURSOR )
 }
 
 /*
-static void setActiveWindow ( QWidget * active )
+static void setActiveWindow( QWidget * active )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETACTIVEWINDOW )
 {
@@ -1232,7 +1232,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETACTIVEWINDOW )
 }
 
 /*
-static void setColorSpec ( int spec )
+static void setColorSpec( int spec )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETCOLORSPEC )
 {
@@ -1253,7 +1253,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETCOLORSPEC )
 }
 
 /*
-static void setCursorFlashTime ( int )
+static void setCursorFlashTime( int )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETCURSORFLASHTIME )
 {
@@ -1274,7 +1274,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETCURSORFLASHTIME )
 }
 
 /*
-static void setDesktopSettingsAware ( bool on )
+static void setDesktopSettingsAware( bool on )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETDESKTOPSETTINGSAWARE )
 {
@@ -1295,7 +1295,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETDESKTOPSETTINGSAWARE )
 }
 
 /*
-static void setDoubleClickInterval ( int )
+static void setDoubleClickInterval( int )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETDOUBLECLICKINTERVAL )
 {
@@ -1358,7 +1358,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETFONT )
 }
 
 /*
-static void setGlobalStrut ( const QSize & )
+static void setGlobalStrut( const QSize & )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETGLOBALSTRUT )
 {
@@ -1379,7 +1379,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETGLOBALSTRUT )
 }
 
 /*
-static void setGraphicsSystem ( const QString & system )
+static void setGraphicsSystem( const QString & system )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETGRAPHICSSYSTEM )
 {
@@ -1400,7 +1400,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETGRAPHICSSYSTEM )
 }
 
 /*
-static void setKeyboardInputInterval ( int )
+static void setKeyboardInputInterval( int )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETKEYBOARDINPUTINTERVAL )
 {
@@ -1421,7 +1421,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETKEYBOARDINPUTINTERVAL )
 }
 
 /*
-static void setLayoutDirection ( Qt::LayoutDirection direction )
+static void setLayoutDirection( Qt::LayoutDirection direction )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETLAYOUTDIRECTION )
 {
@@ -1442,7 +1442,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETLAYOUTDIRECTION )
 }
 
 /*
-static void setOverrideCursor ( const QCursor & cursor )
+static void setOverrideCursor( const QCursor & cursor )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETOVERRIDECURSOR )
 {
@@ -1484,7 +1484,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETPALETTE )
 }
 
 /*
-static void setQuitOnLastWindowClosed ( bool quit )
+static void setQuitOnLastWindowClosed( bool quit )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETQUITONLASTWINDOWCLOSED )
 {
@@ -1505,7 +1505,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETQUITONLASTWINDOWCLOSED )
 }
 
 /*
-static void setStartDragDistance ( int l )
+static void setStartDragDistance( int l )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETSTARTDRAGDISTANCE )
 {
@@ -1526,7 +1526,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETSTARTDRAGDISTANCE )
 }
 
 /*
-static void setStartDragTime ( int ms )
+static void setStartDragTime( int ms )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETSTARTDRAGTIME )
 {
@@ -1589,7 +1589,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETSTYLE )
 }
 
 /*
-static void setWheelScrollLines ( int )
+static void setWheelScrollLines( int )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETWHEELSCROLLLINES )
 {
@@ -1610,7 +1610,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETWHEELSCROLLLINES )
 }
 
 /*
-static void setWindowIcon ( const QIcon & icon )
+static void setWindowIcon( const QIcon & icon )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETWINDOWICON )
 {

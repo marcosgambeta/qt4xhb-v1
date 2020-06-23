@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_PREFIX )
 }
 
 /*
-void setDecimals ( int prec )
+void setDecimals( int prec )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETDECIMALS )
 {
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETDECIMALS )
 }
 
 /*
-void setMaximum ( double max )
+void setMaximum( double max )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETMAXIMUM )
 {
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETMAXIMUM )
 }
 
 /*
-void setMinimum ( double min )
+void setMinimum( double min )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETMINIMUM )
 {
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETMINIMUM )
 }
 
 /*
-void setPrefix ( const QString & prefix )
+void setPrefix( const QString & prefix )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETPREFIX )
 {
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETPREFIX )
 }
 
 /*
-void setRange ( double minimum, double maximum )
+void setRange( double minimum, double maximum )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETRANGE )
 {
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETRANGE )
 }
 
 /*
-void setSingleStep ( double val )
+void setSingleStep( double val )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETSINGLESTEP )
 {
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETSINGLESTEP )
 }
 
 /*
-void setSuffix ( const QString & suffix )
+void setSuffix( const QString & suffix )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETSUFFIX )
 {
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SUFFIX )
 }
 
 /*
-virtual QString textFromValue ( double value ) const
+virtual QString textFromValue( double value ) const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_TEXTFROMVALUE )
 {
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_VALUE )
 }
 
 /*
-virtual double valueFromText ( const QString & text ) const
+virtual double valueFromText( const QString & text ) const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_VALUEFROMTEXT )
 {
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_VALIDATE )
 }
 
 /*
-void setValue ( double val )
+void setValue( double val )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETVALUE )
 {

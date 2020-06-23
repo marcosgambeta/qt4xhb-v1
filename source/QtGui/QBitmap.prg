@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QBITMAP_CLEAR )
 }
 
 /*
-QBitmap transformed ( const QTransform & matrix ) const
+QBitmap transformed( const QTransform & matrix ) const
 */
 HB_FUNC_STATIC( QBITMAP_TRANSFORMED )
 {

@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QDIALOG_RESULT )
 }
 
 /*
-void setModal ( bool modal )
+void setModal( bool modal )
 */
 HB_FUNC_STATIC( QDIALOG_SETMODAL )
 {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QDIALOG_SETMODAL )
 }
 
 /*
-void setResult ( int i )
+void setResult( int i )
 */
 HB_FUNC_STATIC( QDIALOG_SETRESULT )
 {
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QDIALOG_SETRESULT )
 }
 
 /*
-void setSizeGripEnabled ( bool )
+void setSizeGripEnabled( bool )
 */
 HB_FUNC_STATIC( QDIALOG_SETSIZEGRIPENABLED )
 {
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QDIALOG_MINIMUMSIZEHINT )
 }
 
 /*
-virtual void setVisible ( bool visible )
+virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QDIALOG_SETVISIBLE )
 {
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QDIALOG_ACCEPT )
 }
 
 /*
-virtual void done ( int r )
+virtual void done( int r )
 */
 HB_FUNC_STATIC( QDIALOG_DONE )
 {

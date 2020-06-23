@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISDOWN )
 }
 
 /*
-void setAutoExclusive ( bool )
+void setAutoExclusive( bool )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOEXCLUSIVE )
 {
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOEXCLUSIVE )
 }
 
 /*
-void setAutoRepeat ( bool )
+void setAutoRepeat( bool )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEAT )
 {
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEAT )
 }
 
 /*
-void setAutoRepeatDelay ( int )
+void setAutoRepeatDelay( int )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATDELAY )
 {
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATDELAY )
 }
 
 /*
-void setAutoRepeatInterval ( int )
+void setAutoRepeatInterval( int )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATINTERVAL )
 {
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATINTERVAL )
 }
 
 /*
-void setCheckable ( bool )
+void setCheckable( bool )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKABLE )
 {
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKABLE )
 }
 
 /*
-void setDown ( bool )
+void setDown( bool )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETDOWN )
 {
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETDOWN )
 }
 
 /*
-void setIcon ( const QIcon & icon )
+void setIcon( const QIcon & icon )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETICON )
 {
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETICON )
 }
 
 /*
-void setShortcut ( const QKeySequence & key )
+void setShortcut( const QKeySequence & key )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETSHORTCUT )
 {
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETSHORTCUT )
 }
 
 /*
-void setText ( const QString & text )
+void setText( const QString & text )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETTEXT )
 {
@@ -674,7 +674,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_CLICK )
 }
 
 /*
-void setChecked ( bool )
+void setChecked( bool )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKED )
 {
@@ -700,7 +700,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKED )
 }
 
 /*
-void setIconSize ( const QSize & size )
+void setIconSize( const QSize & size )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETICONSIZE )
 {

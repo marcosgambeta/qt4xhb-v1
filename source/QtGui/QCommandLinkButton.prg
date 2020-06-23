@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DESCRIPTION )
 }
 
 /*
-void setDescription ( const QString & description )
+void setDescription( const QString & description )
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETDESCRIPTION )
 {
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QCOMMANDLINKBUTTON_ISFLAT )
 }
 
 /*
-void setFlat ( bool )
+void setFlat( bool )
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETFLAT )
 {

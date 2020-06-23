@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDLAYOUT )
 }
 
 /*
-void addSpacerItem ( QSpacerItem * spacerItem )
+void addSpacerItem( QSpacerItem * spacerItem )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDSPACERITEM )
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDSPACERITEM )
 }
 
 /*
-void addSpacing ( int size )
+void addSpacing( int size )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDSPACING )
 {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDSTRETCH )
 }
 
 /*
-void addStrut ( int size )
+void addStrut( int size )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDSTRUT )
 {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTLAYOUT )
 }
 
 /*
-void insertSpacerItem ( int index, QSpacerItem * spacerItem )
+void insertSpacerItem( int index, QSpacerItem * spacerItem )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_INSERTSPACERITEM )
 {
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTSPACERITEM )
 }
 
 /*
-void insertSpacing ( int index, int size )
+void insertSpacing( int index, int size )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_INSERTSPACING )
 {
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTWIDGET )
 }
 
 /*
-void setDirection ( Direction direction )
+void setDirection( QBoxLayout::Direction direction )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_SETDIRECTION )
 {
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SETDIRECTION )
 }
 
 /*
-void setSpacing ( int spacing )
+void setSpacing( int spacing )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_SETSPACING )
 {
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SETSPACING )
 }
 
 /*
-void setStretch ( int index, int stretch )
+void setStretch( int index, int stretch )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_SETSTRETCH )
 {
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SPACING )
 }
 
 /*
-int stretch ( int index ) const
+int stretch( int index ) const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_STRETCH )
 {
@@ -592,7 +592,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_STRETCH )
 }
 
 /*
-virtual void addItem ( QLayoutItem * item )
+virtual void addItem( QLayoutItem * item )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDITEM )
 {
@@ -690,7 +690,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_HASHEIGHTFORWIDTH )
 }
 
 /*
-virtual int heightForWidth ( int w ) const
+virtual int heightForWidth( int w ) const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_HEIGHTFORWIDTH )
 {
@@ -740,7 +740,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INVALIDATE )
 }
 
 /*
-virtual QLayoutItem * itemAt ( int index ) const
+virtual QLayoutItem * itemAt( int index ) const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ITEMAT )
 {
@@ -790,7 +790,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_MAXIMUMSIZE )
 }
 
 /*
-virtual int minimumHeightForWidth ( int w ) const
+virtual int minimumHeightForWidth( int w ) const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_MINIMUMHEIGHTFORWIDTH )
 {
@@ -839,7 +839,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_MINIMUMSIZE )
 }
 
 /*
-virtual void setGeometry ( const QRect & r )
+virtual void setGeometry( const QRect & r )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_SETGEOMETRY )
 {
@@ -890,7 +890,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SIZEHINT )
 }
 
 /*
-virtual QLayoutItem * takeAt ( int index )
+virtual QLayoutItem * takeAt( int index )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_TAKEAT )
 {

@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_ICON )
 }
 
 /*
-virtual QString type(const QFileInfo & info) const
+virtual QString type( const QFileInfo & info ) const
 */
 HB_FUNC_STATIC( QFILEICONPROVIDER_TYPE )
 {

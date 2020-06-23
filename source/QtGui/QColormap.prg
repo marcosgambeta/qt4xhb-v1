@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QCOLORMAP_DELETE )
 }
 
 /*
-const QColor colorAt ( uint pixel ) const
+const QColor colorAt( uint pixel ) const
 */
 HB_FUNC_STATIC( QCOLORMAP_COLORAT )
 {
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QCOLORMAP_COLORAT )
 }
 
 /*
-const QVector<QColor> colormap () const
+const QVector<QColor> colormap() const
 */
 HB_FUNC_STATIC( QCOLORMAP_COLORMAP )
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QCOLORMAP_MODE )
 }
 
 /*
-uint pixel ( const QColor & color ) const
+uint pixel( const QColor & color ) const
 */
 HB_FUNC_STATIC( QCOLORMAP_PIXEL )
 {

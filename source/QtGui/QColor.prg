@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QCOLOR_BLUEF )
 }
 
 /*
-QColor convertTo ( Spec colorSpec ) const
+QColor convertTo( QColor::Spec colorSpec ) const
 */
 HB_FUNC_STATIC( QCOLOR_CONVERTTO )
 {
@@ -1382,7 +1382,7 @@ HB_FUNC_STATIC( QCOLOR_SATURATIONF )
 }
 
 /*
-void setAlpha ( int alpha )
+void setAlpha( int alpha )
 */
 HB_FUNC_STATIC( QCOLOR_SETALPHA )
 {
@@ -1408,7 +1408,7 @@ HB_FUNC_STATIC( QCOLOR_SETALPHA )
 }
 
 /*
-void setAlphaF ( qreal alpha )
+void setAlphaF( qreal alpha )
 */
 HB_FUNC_STATIC( QCOLOR_SETALPHAF )
 {
@@ -1434,7 +1434,7 @@ HB_FUNC_STATIC( QCOLOR_SETALPHAF )
 }
 
 /*
-void setBlue ( int blue )
+void setBlue( int blue )
 */
 HB_FUNC_STATIC( QCOLOR_SETBLUE )
 {
@@ -1460,7 +1460,7 @@ HB_FUNC_STATIC( QCOLOR_SETBLUE )
 }
 
 /*
-void setBlueF ( qreal blue )
+void setBlueF( qreal blue )
 */
 HB_FUNC_STATIC( QCOLOR_SETBLUEF )
 {
@@ -1538,7 +1538,7 @@ HB_FUNC_STATIC( QCOLOR_SETCMYKF )
 }
 
 /*
-void setGreen ( int green )
+void setGreen( int green )
 */
 HB_FUNC_STATIC( QCOLOR_SETGREEN )
 {
@@ -1564,7 +1564,7 @@ HB_FUNC_STATIC( QCOLOR_SETGREEN )
 }
 
 /*
-void setGreenF ( qreal green )
+void setGreenF( qreal green )
 */
 HB_FUNC_STATIC( QCOLOR_SETGREENF )
 {
@@ -1694,7 +1694,7 @@ HB_FUNC_STATIC( QCOLOR_SETHSVF )
 }
 
 /*
-void setNamedColor ( const QString & name )
+void setNamedColor( const QString & name )
 */
 HB_FUNC_STATIC( QCOLOR_SETNAMEDCOLOR )
 {
@@ -1720,7 +1720,7 @@ HB_FUNC_STATIC( QCOLOR_SETNAMEDCOLOR )
 }
 
 /*
-void setRed ( int red )
+void setRed( int red )
 */
 HB_FUNC_STATIC( QCOLOR_SETRED )
 {
@@ -1746,7 +1746,7 @@ HB_FUNC_STATIC( QCOLOR_SETRED )
 }
 
 /*
-void setRedF ( qreal red )
+void setRedF( qreal red )
 */
 HB_FUNC_STATIC( QCOLOR_SETREDF )
 {
@@ -1849,7 +1849,7 @@ HB_FUNC_STATIC( QCOLOR_SETRGBF )
 }
 
 /*
-void setRgba ( QRgb rgba )
+void setRgba( QRgb rgba )
 */
 HB_FUNC_STATIC( QCOLOR_SETRGBA )
 {
@@ -2295,7 +2295,7 @@ HB_FUNC_STATIC( QCOLOR_FROMRGBF )
 }
 
 /*
-static QColor fromRgba ( QRgb rgba )
+static QColor fromRgba( QRgb rgba )
 */
 HB_FUNC_STATIC( QCOLOR_FROMRGBA )
 {
@@ -2315,7 +2315,7 @@ HB_FUNC_STATIC( QCOLOR_FROMRGBA )
 }
 
 /*
-static bool isValidColor ( const QString & name )
+static bool isValidColor( const QString & name )
 */
 HB_FUNC_STATIC( QCOLOR_ISVALIDCOLOR )
 {

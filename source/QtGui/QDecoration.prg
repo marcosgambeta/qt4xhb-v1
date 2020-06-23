@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QDECORATION_DELETE )
 }
 
 /*
-virtual void buildSysMenu ( QWidget * widget, QMenu * menu )
+virtual void buildSysMenu( QWidget * widget, QMenu * menu )
 */
 HB_FUNC_STATIC( QDECORATION_BUILDSYSMENU )
 {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QDECORATION_BUILDSYSMENU )
 }
 
 /*
-void menuTriggered ( QWidget * widget, QAction * action )
+void menuTriggered( QWidget * widget, QAction * action )
 */
 HB_FUNC_STATIC( QDECORATION_MENUTRIGGERED )
 {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QDECORATION_REGION )
 }
 
 /*
-virtual int regionAt ( const QWidget * widget, const QPoint & point )
+virtual int regionAt( const QWidget * widget, const QPoint & point )
 */
 HB_FUNC_STATIC( QDECORATION_REGIONAT )
 {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QDECORATION_REGIONAT )
 }
 
 /*
-virtual void regionClicked ( QWidget * widget, int region )
+virtual void regionClicked( QWidget * widget, int region )
 */
 HB_FUNC_STATIC( QDECORATION_REGIONCLICKED )
 {
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QDECORATION_REGIONCLICKED )
 }
 
 /*
-virtual void regionDoubleClicked ( QWidget * widget, int region )
+virtual void regionDoubleClicked( QWidget * widget, int region )
 */
 HB_FUNC_STATIC( QDECORATION_REGIONDOUBLECLICKED )
 {
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QDECORATION_REGIONDOUBLECLICKED )
 }
 
 /*
-static void startMove ( QWidget * widget )
+static void startMove( QWidget * widget )
 */
 HB_FUNC_STATIC( QDECORATION_STARTMOVE )
 {
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QDECORATION_STARTMOVE )
 }
 
 /*
-static void startResize ( QWidget * widget )
+static void startResize( QWidget * widget )
 */
 HB_FUNC_STATIC( QDECORATION_STARTRESIZE )
 {

@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_DELETE )
 }
 
 /*
-virtual QModelIndex mapFromSource ( const QModelIndex & sourceIndex ) const = 0
+virtual QModelIndex mapFromSource( const QModelIndex & sourceIndex ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPFROMSOURCE )
 {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPFROMSOURCE )
 }
 
 /*
-virtual QItemSelection mapSelectionFromSource ( const QItemSelection & sourceSelection ) const
+virtual QItemSelection mapSelectionFromSource( const QItemSelection & sourceSelection ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPSELECTIONFROMSOURCE )
 {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPSELECTIONFROMSOURCE )
 }
 
 /*
-virtual QItemSelection mapSelectionToSource ( const QItemSelection & proxySelection ) const
+virtual QItemSelection mapSelectionToSource( const QItemSelection & proxySelection ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPSELECTIONTOSOURCE )
 {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPSELECTIONTOSOURCE )
 }
 
 /*
-virtual QModelIndex mapToSource ( const QModelIndex & proxyIndex ) const = 0
+virtual QModelIndex mapToSource( const QModelIndex & proxyIndex ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPTOSOURCE )
 {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPTOSOURCE )
 }
 
 /*
-virtual void setSourceModel ( QAbstractItemModel * sourceModel )
+virtual void setSourceModel( QAbstractItemModel * sourceModel )
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SETSOURCEMODEL )
 {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SOURCEMODEL )
 }
 
 /*
-virtual QModelIndex buddy ( const QModelIndex & index ) const
+virtual QModelIndex buddy( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_BUDDY )
 {
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_BUDDY )
 }
 
 /*
-virtual bool canFetchMore ( const QModelIndex & parent ) const
+virtual bool canFetchMore( const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_CANFETCHMORE )
 {
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_DATA )
 }
 
 /*
-virtual void fetchMore ( const QModelIndex & parent )
+virtual void fetchMore( const QModelIndex & parent )
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_FETCHMORE )
 {
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_FETCHMORE )
 }
 
 /*
-virtual Qt::ItemFlags flags ( const QModelIndex & index ) const
+virtual Qt::ItemFlags flags( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_FLAGS )
 {
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_HASCHILDREN )
 }
 
 /*
-virtual QVariant headerData ( int section, Qt::Orientation orientation, int role ) const
+virtual QVariant headerData( int section, Qt::Orientation orientation, int role ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_HEADERDATA )
 {
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_HEADERDATA )
 }
 
 /*
-virtual QMimeData * mimeData ( const QModelIndexList & indexes ) const
+virtual QMimeData * mimeData( const QModelIndexList & indexes ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MIMEDATA )
 {
@@ -573,7 +573,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SORT )
 }
 
 /*
-virtual QSize span ( const QModelIndex & index ) const
+virtual QSize span( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SPAN )
 {

@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QDROPEVENT_KEYBOARDMODIFIERS )
 }
 
 /*
-const QMimeData * mimeData () const
+const QMimeData * mimeData() const
 */
 HB_FUNC_STATIC( QDROPEVENT_MIMEDATA )
 {
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QDROPEVENT_MOUSEBUTTONS )
 }
 
 /*
-const QPoint & pos () const
+const QPoint & pos() const
 */
 HB_FUNC_STATIC( QDROPEVENT_POS )
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QDROPEVENT_PROPOSEDACTION )
 }
 
 /*
-void setDropAction ( Qt::DropAction action )
+void setDropAction( Qt::DropAction action )
 */
 HB_FUNC_STATIC( QDROPEVENT_SETDROPACTION )
 {
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QDROPEVENT_SOURCE )
 }
 
 /*
-virtual QByteArray encodedData ( const char * format ) const
+virtual QByteArray encodedData( const char * format ) const
 */
 HB_FUNC_STATIC( QDROPEVENT_ENCODEDDATA )
 {
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QDROPEVENT_FORMAT )
 }
 
 /*
-virtual bool provides ( const char * mimeType ) const
+virtual bool provides( const char * mimeType ) const
 */
 HB_FUNC_STATIC( QDROPEVENT_PROVIDES )
 {

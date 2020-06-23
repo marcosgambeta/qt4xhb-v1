@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QCHECKBOX_ISTRISTATE )
 }
 
 /*
-void setCheckState ( Qt::CheckState state )
+void setCheckState( Qt::CheckState state )
 */
 HB_FUNC_STATIC( QCHECKBOX_SETCHECKSTATE )
 {

@@ -60,7 +60,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QString anchorAt ( const QPointF & position ) const
+QString anchorAt( const QPointF & position ) const
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT )
 {
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT )
 }
 
 /*
-virtual QRectF blockBoundingRect ( const QTextBlock & block ) const = 0
+virtual QRectF blockBoundingRect( const QTextBlock & block ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT )
 {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENTSIZE )
 }
 
 /*
-virtual QRectF frameBoundingRect ( QTextFrame * frame ) const = 0
+virtual QRectF frameBoundingRect( QTextFrame * frame ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT )
 {
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT )
 }
 
 /*
-QTextObjectInterface * handlerForObject ( int objectType ) const
+QTextObjectInterface * handlerForObject( int objectType ) const
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT )
 {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT )
 }
 
 /*
-virtual int hitTest ( const QPointF & point, Qt::HitTestAccuracy accuracy ) const = 0
+virtual int hitTest( const QPointF & point, Qt::HitTestAccuracy accuracy ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HITTEST )
 {
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_PAINTDEVICE )
 }
 
 /*
-void registerHandler ( int objectType, QObject * component )
+void registerHandler( int objectType, QObject * component )
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_REGISTERHANDLER )
 {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_REGISTERHANDLER )
 }
 
 /*
-void setPaintDevice ( QPaintDevice * device )
+void setPaintDevice( QPaintDevice * device )
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_SETPAINTDEVICE )
 {

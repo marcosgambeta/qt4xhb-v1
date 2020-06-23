@@ -46,7 +46,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-virtual QString actionText ( int action, Text t, int child ) const
+virtual QString actionText( int action, QAccessibleObject::Text t, int child ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_ACTIONTEXT )
 {
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_ACTIONTEXT )
 }
 
 /*
-virtual bool doAction ( int action, int child, const QVariantList & params )
+virtual bool doAction( int action, int child, const QVariantList & params )
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_DOACTION )
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_OBJECT )
 }
 
 /*
-virtual QRect rect ( int child ) const
+virtual QRect rect( int child ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_RECT )
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_RECT )
 }
 
 /*
-virtual void setText ( Text t, int child, const QString & text )
+virtual void setText( QAccessibleObject::Text t, int child, const QString & text )
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_SETTEXT )
 {
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_SETTEXT )
 }
 
 /*
-virtual int userActionCount ( int child ) const
+virtual int userActionCount( int child ) const
 */
 HB_FUNC_STATIC( QACCESSIBLEOBJECT_USERACTIONCOUNT )
 {

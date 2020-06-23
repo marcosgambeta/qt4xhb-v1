@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QBRUSH_DELETE )
 }
 
 /*
-const QColor & color () const
+const QColor & color() const
 */
 HB_FUNC_STATIC( QBRUSH_COLOR )
 {
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QBRUSH_COLOR )
 }
 
 /*
-const QGradient * gradient () const
+const QGradient * gradient() const
 */
 HB_FUNC_STATIC( QBRUSH_GRADIENT )
 {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QBRUSH_ISOPAQUE )
 }
 
 /*
-const QMatrix & matrix () const
+const QMatrix & matrix() const
 */
 HB_FUNC_STATIC( QBRUSH_MATRIX )
 {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QBRUSH_SETCOLOR )
 }
 
 /*
-void setMatrix ( const QMatrix & matrix )
+void setMatrix( const QMatrix & matrix )
 */
 HB_FUNC_STATIC( QBRUSH_SETMATRIX )
 {
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QBRUSH_SETMATRIX )
 }
 
 /*
-void setStyle ( Qt::BrushStyle style )
+void setStyle( Qt::BrushStyle style )
 */
 HB_FUNC_STATIC( QBRUSH_SETSTYLE )
 {
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QBRUSH_SETSTYLE )
 }
 
 /*
-void setTexture ( const QPixmap & pixmap )
+void setTexture( const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QBRUSH_SETTEXTURE )
 {
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QBRUSH_SETTEXTURE )
 }
 
 /*
-void setTextureImage ( const QImage & image )
+void setTextureImage( const QImage & image )
 */
 HB_FUNC_STATIC( QBRUSH_SETTEXTUREIMAGE )
 {
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QBRUSH_SETTEXTUREIMAGE )
 }
 
 /*
-void setTransform ( const QTransform & matrix )
+void setTransform( const QTransform & matrix )
 */
 HB_FUNC_STATIC( QBRUSH_SETTRANSFORM )
 {

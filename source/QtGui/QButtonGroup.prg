@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ADDBUTTON )
 }
 
 /*
-QAbstractButton * button ( int id ) const
+QAbstractButton * button( int id ) const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_BUTTON )
 {
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_EXCLUSIVE )
 }
 
 /*
-int id ( QAbstractButton * button ) const
+int id( QAbstractButton * button ) const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_ID )
 {
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ID )
 }
 
 /*
-void removeButton ( QAbstractButton * button )
+void removeButton( QAbstractButton * button )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_REMOVEBUTTON )
 {
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_REMOVEBUTTON )
 }
 
 /*
-void setExclusive ( bool )
+void setExclusive( bool )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_SETEXCLUSIVE )
 {
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_SETEXCLUSIVE )
 }
 
 /*
-void setId ( QAbstractButton * button, int id )
+void setId( QAbstractButton * button, int id )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_SETID )
 {

@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_DELETE )
 }
 
 /*
-virtual QString actionText ( int action, Text t, int child ) const = 0
+virtual QString actionText( int action, QAccessible::Text t, int child ) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ACTIONTEXT )
 {
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ACTIONTEXT )
 }
 
 /*
-virtual int childAt ( int x, int y ) const = 0
+virtual int childAt( int x, int y ) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_CHILDAT )
 {
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_DOACTION )
 }
 
 /*
-virtual int indexOfChild ( const QAccessibleInterface * child ) const = 0
+virtual int indexOfChild( const QAccessibleInterface * child ) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_INDEXOFCHILD )
 {
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_OBJECT )
 }
 
 /*
-virtual QRect rect ( int child ) const = 0
+virtual QRect rect( int child ) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_RECT )
 {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_RECT )
 }
 
 /*
-virtual Relation relationTo ( int child, const QAccessibleInterface * other, int otherChild ) const = 0
+virtual QAccessible::Relation relationTo( int child, const QAccessibleInterface * other, int otherChild ) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_RELATIONTO )
 {
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_RELATIONTO )
 }
 
 /*
-virtual Role role ( int child ) const = 0
+virtual QAccessible::Role role( int child ) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ROLE )
 {
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_ROLE )
 }
 
 /*
-virtual void setText ( Text t, int child, const QString & text ) = 0
+virtual void setText( QAccessible::Text t, int child, const QString & text ) = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_SETTEXT )
 {
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_SETTEXT )
 }
 
 /*
-virtual State state ( int child ) const = 0
+virtual QAccessible::State state( int child ) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_STATE )
 {
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_STATE )
 }
 
 /*
-virtual QString text ( Text t, int child ) const = 0
+virtual QString text( QAccessible::Text t, int child ) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_TEXT )
 {
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_TEXT )
 }
 
 /*
-virtual int userActionCount ( int child ) const = 0
+virtual int userActionCount( int child ) const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_USERACTIONCOUNT )
 {

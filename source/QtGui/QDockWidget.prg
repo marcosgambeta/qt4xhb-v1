@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_FEATURES )
 }
 
 /*
-bool isAreaAllowed ( Qt::DockWidgetArea area ) const
+bool isAreaAllowed( Qt::DockWidgetArea area ) const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ISAREAALLOWED )
 {
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ISFLOATING )
 }
 
 /*
-void setAllowedAreas ( Qt::DockWidgetAreas areas )
+void setAllowedAreas( Qt::DockWidgetAreas areas )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_SETALLOWEDAREAS )
 {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETALLOWEDAREAS )
 }
 
 /*
-void setFeatures ( DockWidgetFeatures features )
+void setFeatures( QDockWidget::DockWidgetFeatures features )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_SETFEATURES )
 {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETFEATURES )
 }
 
 /*
-void setFloating ( bool floating )
+void setFloating( bool floating )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_SETFLOATING )
 {
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETFLOATING )
 }
 
 /*
-void setTitleBarWidget ( QWidget * widget )
+void setTitleBarWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_SETTITLEBARWIDGET )
 {
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_SETTITLEBARWIDGET )
 }
 
 /*
-void setWidget ( QWidget * widget )
+void setWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_SETWIDGET )
 {

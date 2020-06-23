@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QCOMMONSTYLE_DRAWPRIMITIVE )
 }
 
 /*
-virtual QPixmap generatedIconPixmap ( QIcon::Mode iconMode, const QPixmap & pixmap, const QStyleOption * opt ) const
+virtual QPixmap generatedIconPixmap( QIcon::Mode iconMode, const QPixmap & pixmap, const QStyleOption * opt ) const
 */
 HB_FUNC_STATIC( QCOMMONSTYLE_GENERATEDICONPIXMAP )
 {

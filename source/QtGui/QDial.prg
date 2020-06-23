@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QDIAL_NOTCHESVISIBLE )
 }
 
 /*
-void setNotchTarget ( double target )
+void setNotchTarget( double target )
 */
 HB_FUNC_STATIC( QDIAL_SETNOTCHTARGET )
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QDIAL_SIZEHINT )
 }
 
 /*
-void setNotchesVisible ( bool visible )
+void setNotchesVisible( bool visible )
 */
 HB_FUNC_STATIC( QDIAL_SETNOTCHESVISIBLE )
 {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QDIAL_SETNOTCHESVISIBLE )
 }
 
 /*
-void setWrapping ( bool on )
+void setWrapping( bool on )
 */
 HB_FUNC_STATIC( QDIAL_SETWRAPPING )
 {

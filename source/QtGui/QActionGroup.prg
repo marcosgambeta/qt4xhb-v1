@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ISVISIBLE )
 }
 
 /*
-void removeAction ( QAction * action )
+void removeAction( QAction * action )
 */
 HB_FUNC_STATIC( QACTIONGROUP_REMOVEACTION )
 {
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QACTIONGROUP_REMOVEACTION )
 }
 
 /*
-void setDisabled ( bool b )
+void setDisabled( bool b )
 */
 HB_FUNC_STATIC( QACTIONGROUP_SETDISABLED )
 {
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QACTIONGROUP_SETDISABLED )
 }
 
 /*
-void setEnabled ( bool )
+void setEnabled( bool )
 */
 HB_FUNC_STATIC( QACTIONGROUP_SETENABLED )
 {
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QACTIONGROUP_SETENABLED )
 }
 
 /*
-void setExclusive ( bool )
+void setExclusive( bool )
 */
 HB_FUNC_STATIC( QACTIONGROUP_SETEXCLUSIVE )
 {
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QACTIONGROUP_SETEXCLUSIVE )
 }
 
 /*
-void setVisible ( bool )
+void setVisible( bool )
 */
 HB_FUNC_STATIC( QACTIONGROUP_SETVISIBLE )
 {

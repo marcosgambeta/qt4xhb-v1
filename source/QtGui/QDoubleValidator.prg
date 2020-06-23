@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_NOTATION )
 }
 
 /*
-void setBottom ( double )
+void setBottom( double )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETBOTTOM )
 {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETBOTTOM )
 }
 
 /*
-void setDecimals ( int )
+void setDecimals( int )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETDECIMALS )
 {
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETDECIMALS )
 }
 
 /*
-void setNotation ( Notation )
+void setNotation( QDoubleValidator::Notation )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETNOTATION )
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETRANGE )
 }
 
 /*
-void setTop ( double )
+void setTop( double )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETTOP )
 {

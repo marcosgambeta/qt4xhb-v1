@@ -95,7 +95,7 @@ virtual bool convertStringToGlyphIndices ( const QChar * string, int length, uin
 */
 
 /*
-virtual QVariant fontProperty ( FontProperty property ) const = 0
+virtual QVariant fontProperty( QAbstractFontEngine::FontProperty property ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTFONTENGINE_FONTPROPERTY )
 {
@@ -124,7 +124,7 @@ virtual void getGlyphAdvances ( const uint * glyphs, int numGlyphs, Fixed * adva
 */
 
 /*
-virtual bool renderGlyph ( uint glyph, int depth, int bytesPerLine, int height, uchar * buffer )
+virtual bool renderGlyph( uint glyph, int depth, int bytesPerLine, int height, uchar * buffer )
 */
 HB_FUNC_STATIC( QABSTRACTFONTENGINE_RENDERGLYPH )
 {
