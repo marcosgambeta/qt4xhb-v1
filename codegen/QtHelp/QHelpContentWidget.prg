@@ -27,8 +27,7 @@ $destructor
 
 $includes
 
-$prototype=QModelIndex indexOf ( const QUrl & link )
-$method=|QModelIndex|indexOf|const QUrl &
+$prototypeV2=QModelIndex indexOf( const QUrl & link )
 
 $beginSignals
 $signal=|linkActivated(QUrl)

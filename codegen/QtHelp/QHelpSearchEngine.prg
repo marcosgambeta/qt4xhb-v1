@@ -49,8 +49,7 @@ $prototypeV2=void cancelSearching()
 
 $prototypeV2=void reindexDocumentation()
 
-$prototype=void search ( const QList<QHelpSearchQuery> & queryList )
-$method=|void|search|const QList<QHelpSearchQuery> &
+$prototypeV2=void search( const QList<QHelpSearchQuery> & queryList )
 
 $beginSignals
 $signal=|indexingFinished()
