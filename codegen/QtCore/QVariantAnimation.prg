@@ -43,8 +43,7 @@ $prototypeV2=void setEasingCurve( const QEasingCurve & easing )
 
 $prototypeV2=void setEndValue( const QVariant & value )
 
-$prototype=void setKeyValueAt ( qreal step, const QVariant & value )
-$method=|void|setKeyValueAt|qreal,const QVariant &
+$prototypeV2=void setKeyValueAt( qreal step, const QVariant & value )
 
 $prototypeV2=void setStartValue( const QVariant & value )
 

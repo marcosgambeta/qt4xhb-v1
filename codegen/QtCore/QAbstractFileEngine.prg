@@ -37,17 +37,16 @@ $prototypeV2=virtual bool close()
 
 $prototypeV2=virtual bool copy( const QString & newName )
 
-$prototype=virtual QStringList entryList ( QDir::Filters filters, const QStringList & filterNames ) const
-$virtualMethod=|QStringList|entryList|QDir::Filters,const QStringList &
+$prototypeV2=virtual QStringList entryList( QDir::Filters filters, const QStringList & filterNames ) const
 
 $prototypeV2=QFile::FileError error() const
 
 $prototypeV2=QString errorString() const
 
-$prototype=virtual FileFlags fileFlags ( FileFlags type = FileInfoAll ) const
+$prototype=virtual QAbstractFileEngine::FileFlags fileFlags( QAbstractFileEngine::FileFlags type = QAbstractFileEngine::FileInfoAll ) const
 $virtualMethod=|QAbstractFileEngine::FileFlags|fileFlags|QAbstractFileEngine::FileFlags=QAbstractFileEngine::FileInfoAll
 
-$prototype=virtual QString fileName ( FileName file = DefaultName ) const
+$prototype=virtual QString fileName( QAbstractFileEngine::FileName file = QAbstractFileEngine::DefaultName ) const
 $virtualMethod=|QString|fileName|QAbstractFileEngine::FileName=QAbstractFileEngine::DefaultName
 
 $prototypeV2=virtual QDateTime fileTime( QAbstractFileEngine::FileTime time ) const
@@ -62,8 +61,7 @@ $prototypeV2=virtual bool isSequential() const
 
 $prototypeV2=virtual bool link( const QString & newName )
 
-$prototype=virtual bool mkdir ( const QString & dirName, bool createParentDirectories ) const
-$virtualMethod=|bool|mkdir|const QString &,bool
+$prototypeV2=virtual bool mkdir( const QString & dirName, bool createParentDirectories ) const
 
 $prototypeV2=virtual bool open( QIODevice::OpenMode mode )
 
@@ -81,11 +79,9 @@ $prototypeV2=virtual bool remove()
 
 $prototypeV2=virtual bool rename( const QString & newName )
 
-$prototype=virtual bool rmdir ( const QString & dirName, bool recurseParentDirectories ) const
-$virtualMethod=|bool|rmdir|const QString &,bool
+$prototypeV2=virtual bool rmdir( const QString & dirName, bool recurseParentDirectories ) const
 
-$prototype=virtual bool seek ( qint64 offset )
-$virtualMethod=|bool|seek|qint64
+$prototypeV2=virtual bool seek( qint64 offset )
 
 $prototypeV2=virtual void setFileName( const QString & file )
 
@@ -97,8 +93,7 @@ $prototypeV2=virtual qint64 size() const
 
 $prototypeV2=virtual bool supportsExtension( QAbstractFileEngine::Extension extension ) const
 
-$prototype=virtual qint64 write ( const char * data, qint64 len )
-$virtualMethod=|qint64|write|const char *,qint64
+$prototypeV2=virtual qint64 write( const char * data, qint64 len )
 
 $prototypeV2=static QAbstractFileEngine * create( const QString & fileName )
 

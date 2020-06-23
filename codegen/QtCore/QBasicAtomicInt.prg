@@ -31,17 +31,13 @@ $prototypeV2=bool ref()
 
 $prototypeV2=bool deref()
 
-$prototype=bool testAndSetRelaxed(int expectedValue, int newValue)
-$method=|bool|testAndSetRelaxed|int,int
+$prototypeV2=bool testAndSetRelaxed( int expectedValue, int newValue )
 
-$prototype=bool testAndSetAcquire(int expectedValue, int newValue)
-$method=|bool|testAndSetAcquire|int,int
+$prototypeV2=bool testAndSetAcquire( int expectedValue, int newValue )
 
-$prototype=bool testAndSetRelease(int expectedValue, int newValue)
-$method=|bool|testAndSetRelease|int,int
+$prototypeV2=bool testAndSetRelease( int expectedValue, int newValue )
 
-$prototype=bool testAndSetOrdered(int expectedValue, int newValue)
-$method=|bool|testAndSetOrdered|int,int
+$prototypeV2=bool testAndSetOrdered( int expectedValue, int newValue )
 
 $prototypeV2=int fetchAndStoreRelaxed( int newValue )
 

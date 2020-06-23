@@ -55,14 +55,11 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QDate addDays ( int ndays ) const
-$method=|QDate|addDays|int
+$prototypeV2=QDate addDays( int ndays ) const
 
-$prototype=QDate addMonths ( int nmonths ) const
-$method=|QDate|addMonths|int
+$prototypeV2=QDate addMonths( int nmonths ) const
 
-$prototype=QDate addYears ( int nyears ) const
-$method=|QDate|addYears|int
+$prototypeV2=QDate addYears( int nyears ) const
 
 $prototypeV2=int day() const
 
@@ -74,18 +71,15 @@ $prototypeV2=int daysInMonth() const
 
 $prototypeV2=int daysInYear() const
 
-$prototype=int daysTo ( const QDate & d ) const
-$method=|int|daysTo|const QDate &
+$prototypeV2=int daysTo( const QDate & d ) const
 
-$prototype=void getDate ( int * year, int * month, int * day )
-$method=|void|getDate|int *,int *,int *
+$prototypeV2=void getDate( int * year, int * month, int * day )
 
 $prototypeV2=bool isNull() const
 
 $prototypeV2=int month() const
 
-$prototype=bool setDate ( int year, int month, int day )
-$method=|bool|setDate|int,int,int
+$prototypeV2=bool setDate( int year, int month, int day )
 
 $prototypeV2=int toJulianDay() const
 
@@ -124,8 +118,7 @@ $prototypeV2=int year() const
 
 $prototypeV2=static QDate currentDate()
 
-$prototype=static QDate fromJulianDay ( int jd )
-$staticMethod=|QDate|fromJulianDay|int
+$prototypeV2=static QDate fromJulianDay( int jd )
 
 $prototype=static QDate fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
 $internalStaticMethod=|QDate|fromString,fromString1|const QString &,Qt::DateFormat=Qt::TextDate

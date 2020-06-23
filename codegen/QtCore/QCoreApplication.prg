@@ -43,11 +43,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool filterEvent ( void * message, long * result )
-$method=|bool|filterEvent|void *,long *
+$prototypeV2=bool filterEvent( void * message, long * result )
 
-$prototype=virtual bool notify ( QObject * receiver, QEvent * event )
-$virtualMethod=|bool|notify|QObject *,QEvent *
+$prototypeV2=virtual bool notify( QObject * receiver, QEvent * event )
 
 $prototypeV2=void quit()
 
@@ -174,8 +172,7 @@ $addMethod=removePostedEvents
 
 $prototypeV2=static void removeTranslator( QTranslator * translationFile )
 
-$prototype=static bool sendEvent ( QObject * receiver, QEvent * event )
-$staticMethod=|bool|sendEvent|QObject *,QEvent *
+$prototypeV2=static bool sendEvent( QObject * receiver, QEvent * event )
 
 $prototype=static void sendPostedEvents ( QObject * receiver, int event_type )
 $internalStaticMethod=|void|sendPostedEvents,sendPostedEvents1|QObject *,int

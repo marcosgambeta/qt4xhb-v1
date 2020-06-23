@@ -85,8 +85,7 @@ $prototypeV2=const QMetaObject * superClass() const
 
 $prototypeV2=QMetaProperty userProperty() const
 
-$prototype=static bool checkConnectArgs ( const char * signal, const char * method )
-$staticMethod=|bool|checkConnectArgs|const char *,const char *
+$prototypeV2=static bool checkConnectArgs( const char * signal, const char * method )
 
 $prototypeV2=static void connectSlotsByName( QObject * object )
 

@@ -74,8 +74,7 @@ $addMethod=start
 
 $prototypeV2=void stop()
 
-$prototype=static void singleShot ( int msec, QObject * receiver, const char * member )
-$staticMethod=|void|singleShot|int,QObject *,const char *
+$prototypeV2=static void singleShot( int msec, QObject * receiver, const char * member )
 
 $beginSignals
 $signal=|timeout()

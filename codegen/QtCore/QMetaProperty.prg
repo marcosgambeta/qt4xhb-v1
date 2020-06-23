@@ -81,8 +81,7 @@ $prototypeV2=int revision() const
 
 $prototypeV2=QVariant read( const QObject * obj ) const
 
-$prototype=bool write(QObject *obj, const QVariant &value) const
-$method=|bool|write|QObject *,const QVariant &
+$prototypeV2=bool write( QObject * obj, const QVariant & value ) const
 
 $prototypeV2=bool reset( QObject * obj ) const
 

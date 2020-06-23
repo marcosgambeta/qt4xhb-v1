@@ -43,8 +43,7 @@ $virtualMethod=|int|columnCount|const QModelIndex &=QModelIndex()
 $prototype=virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const = 0
 $virtualMethod=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
 
-$prototype=virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
-$virtualMethod=|bool|dropMimeData|const QMimeData *,Qt::DropAction,int,int,const QModelIndex &
+$prototypeV2=virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 
 $prototypeV2=virtual void fetchMore( const QModelIndex & parent )
 
@@ -106,8 +105,7 @@ $virtualMethod=|bool|setHeaderData|int,Qt::Orientation,const QVariant &,int=Qt::
 
 $prototypeV2=void setSupportedDragActions( Qt::DropActions actions )
 
-$prototype=QModelIndex sibling ( int row, int column, const QModelIndex & index ) const
-$method=|QModelIndex|sibling|int,int,const QModelIndex &
+$prototypeV2=QModelIndex sibling( int row, int column, const QModelIndex & index ) const
 
 $prototype=virtual void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
 $virtualMethod=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder

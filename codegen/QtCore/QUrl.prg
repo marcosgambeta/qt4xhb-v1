@@ -73,14 +73,11 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void addEncodedQueryItem ( const QByteArray & key, const QByteArray & value )
-$method=|void|addEncodedQueryItem|const QByteArray &,const QByteArray &
+$prototypeV2=void addEncodedQueryItem( const QByteArray & key, const QByteArray & value )
 
-$prototype=void addQueryItem ( const QString & key, const QString & value )
-$method=|void|addQueryItem|const QString &,const QString &
+$prototypeV2=void addQueryItem( const QString & key, const QString & value )
 
-$prototype=QList<QByteArray> allEncodedQueryItemValues ( const QByteArray & key ) const
-$method=|QList<QByteArray>|allEncodedQueryItemValues|const QByteArray &
+$prototypeV2=QList<QByteArray> allEncodedQueryItemValues( const QByteArray & key ) const
 
 $prototypeV2=QStringList allQueryItemValues( const QString & key ) const
 
@@ -224,8 +221,7 @@ $prototypeV2=void setPath( const QString & path )
 
 $prototypeV2=void setPort( int port )
 
-$prototype=void setQueryDelimiters ( char valueDelimiter, char pairDelimiter )
-$method=|void|setQueryDelimiters|char,char
+$prototypeV2=void setQueryDelimiters( char valueDelimiter, char pairDelimiter )
 
 $prototypeV2=void setScheme( const QString & scheme )
 

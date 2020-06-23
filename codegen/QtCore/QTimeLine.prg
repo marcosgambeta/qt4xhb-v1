@@ -60,8 +60,7 @@ $prototypeV2=void setEasingCurve( const QEasingCurve & curve )
 
 $prototypeV2=void setEndFrame( int frame )
 
-$prototype=void setFrameRange ( int startFrame, int endFrame )
-$method=|void|setFrameRange|int,int
+$prototypeV2=void setFrameRange( int startFrame, int endFrame )
 
 $prototypeV2=void setLoopCount( int count )
 

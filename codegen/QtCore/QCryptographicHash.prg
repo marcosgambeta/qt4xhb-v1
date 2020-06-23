@@ -62,8 +62,7 @@ $prototypeV2=void reset()
 
 $prototypeV2=QByteArray result() const
 
-$prototype=static QByteArray hash ( const QByteArray & data, Algorithm method )
-$staticMethod=|QByteArray|hash|const QByteArray &,QCryptographicHash::Algorithm
+$prototypeV2=static QByteArray hash( const QByteArray & data, QCryptographicHash::Algorithm method )
 
 $extraMethods
 

@@ -189,8 +189,7 @@ $prototypeV2=QString relativeFilePath( const QString & fileName ) const
 
 $prototypeV2=bool remove( const QString & fileName )
 
-$prototype=bool rename(const QString & oldName, const QString & newName)
-$method=|bool|rename|const QString &,const QString &
+$prototypeV2=bool rename( const QString & oldName, const QString & newName )
 
 $prototypeV2=bool rmdir( const QString & dirName ) const
 
@@ -206,8 +205,7 @@ $prototypeV2=void setSorting( QDir::SortFlags sort )
 
 $prototypeV2=QDir::SortFlags sorting() const
 
-$prototype=static void addSearchPath(const QString & prefix, const QString & path)
-$staticMethod=|void|addSearchPath|const QString &,const QString &
+$prototypeV2=static void addSearchPath( const QString & prefix, const QString & path )
 
 $prototypeV2=static QString cleanPath( const QString & path )
 
@@ -265,8 +263,7 @@ $prototypeV2=static QChar separator()
 
 $prototypeV2=static bool setCurrent( const QString & path )
 
-$prototype=static void setSearchPaths(const QString & prefix, const QStringList & searchPaths)
-$staticMethod=|void|setSearchPaths|const QString &,const QStringList &
+$prototypeV2=static void setSearchPaths( const QString & prefix, const QStringList & searchPaths )
 
 $prototypeV2=static QDir temp()
 

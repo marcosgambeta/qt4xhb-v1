@@ -61,8 +61,7 @@ $prototypeV2=void removeFormat( const QString & mimeType )
 
 $prototypeV2=void setColorData( const QVariant & color )
 
-$prototype=void setData ( const QString & mimeType, const QByteArray & data )
-$method=|void|setData|const QString &,const QByteArray &
+$prototypeV2=void setData( const QString & mimeType, const QByteArray & data )
 
 $prototypeV2=void setHtml( const QString & html )
 

@@ -25,8 +25,7 @@ $destructor
 
 $includes
 
-$prototype=static int registerTypedef(const char *typeName, int aliasId)
-$staticMethod=|int|registerTypedef|const char *,int
+$prototypeV2=static int registerTypedef( const char * typeName, int aliasId )
 
 $prototypeV2=static int type( const char * typeName )
 
@@ -37,16 +36,13 @@ $prototypeV2=static bool isRegistered( int type )
 $prototype=static void *construct(int type, const void *copy = 0)
 $staticMethod=|void *|construct|int,const void *=0
 
-$prototype=static void destroy(int type, void *data)
-$staticMethod=|void|destroy|int,void *
+$prototypeV2=static void destroy( int type, void * data )
 
 $prototypeV2=static void unregisterType( const char * typeName )
 
-$prototype=static bool save(QDataStream &stream, int type, const void *data)
-$staticMethod=|bool|save|QDataStream &,int,const void *
+$prototypeV2=static bool save( QDataStream & stream, int type, const void * data )
 
-$prototype=static bool load(QDataStream &stream, int type, void *data)
-$staticMethod=|bool|load|QDataStream &,int,void *
+$prototypeV2=static bool load( QDataStream & stream, int type, void * data )
 
 $extraMethods
 

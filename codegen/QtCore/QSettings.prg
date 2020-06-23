@@ -154,8 +154,7 @@ HB_FUNC_STATIC( QSETTINGS_SETINICODEC )
 }
 $addMethod=setIniCodec
 
-$prototype=void setValue ( const QString & key, const QVariant & value )
-$method=|void|setValue|const QString &,const QVariant &
+$prototypeV2=void setValue( const QString & key, const QVariant & value )
 
 $prototypeV2=QSettings::Status status() const
 
@@ -168,7 +167,6 @@ $prototypeV2=static QSettings::Format defaultFormat()
 
 $prototypeV2=static void setDefaultFormat( QSettings::Format format )
 
-$prototype=static void setPath ( Format format, Scope scope, const QString & path )
-$staticMethod=|void|setPath|QSettings::Format,QSettings::Scope,const QString &
+$prototypeV2=static void setPath( QSettings::Format format, QSettings::Scope scope, const QString & path )
 
 #pragma ENDDUMP

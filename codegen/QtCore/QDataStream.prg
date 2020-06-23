@@ -79,8 +79,7 @@ $prototypeV2=QIODevice * device() const
 
 $prototypeV2=QDataStream::FloatingPointPrecision floatingPointPrecision() const
 
-$prototype=int readRawData ( char * s, int len )
-$method=|int|readRawData|char *,int
+$prototypeV2=int readRawData( char * s, int len )
 
 $prototypeV2=void resetStatus()
 
@@ -100,8 +99,7 @@ $prototypeV2=QDataStream::Status status() const
 
 $prototypeV2=int version() const
 
-$prototype=int writeRawData ( const char * s, int len )
-$method=|int|writeRawData|const char *,int
+$prototypeV2=int writeRawData( const char * s, int len )
 
 $extraMethods
 

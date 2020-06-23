@@ -115,11 +115,9 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ADDDATA )
 }
 $addMethod=addData
 
-$prototype=void addExtraNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & extraNamespaceDeclaration)
-$method=|void|addExtraNamespaceDeclaration|const QXmlStreamNamespaceDeclaration &
+$prototypeV2=void addExtraNamespaceDeclaration( const QXmlStreamNamespaceDeclaration & extraNamespaceDeclaration )
 
-$prototype=void addExtraNamespaceDeclarations(const QXmlStreamNamespaceDeclarations & extraNamespaceDeclarations)
-$method=|void|addExtraNamespaceDeclarations|const QXmlStreamNamespaceDeclarations &
+$prototypeV2=void addExtraNamespaceDeclarations( const QXmlStreamNamespaceDeclarations & extraNamespaceDeclarations )
 
 $prototypeV2=bool atEnd() const
 

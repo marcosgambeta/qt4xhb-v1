@@ -97,8 +97,7 @@ HB_FUNC_STATIC( QSTATE_ADDTRANSITION )
 }
 $addMethod=addTransition
 
-$prototype=void assignProperty ( QObject * object, const char * name, const QVariant & value )
-$method=|void|assignProperty|QObject *,const char *,const QVariant &
+$prototypeV2=void assignProperty( QObject * object, const char * name, const QVariant & value )
 
 $prototypeV2=QState::ChildMode childMode() const
 

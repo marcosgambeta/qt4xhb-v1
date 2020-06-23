@@ -404,8 +404,7 @@ $prototypeV2=static QString countryToString( QLocale::Country country )
 
 $prototypeV2=static QString languageToString( QLocale::Language language )
 
-$prototype=static QList<QLocale> matchingLocales ( QLocale::Language language, QLocale::Script script, QLocale::Country country )
-$staticMethod=|QList<QLocale>|matchingLocales|QLocale::Language,QLocale::Script,QLocale::Country
+$prototypeV2=static QList<QLocale> matchingLocales( QLocale::Language language, QLocale::Script script, QLocale::Country country )
 
 $prototypeV2=static QString scriptToString( QLocale::Script script )
 

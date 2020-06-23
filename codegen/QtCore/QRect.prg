@@ -71,11 +71,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void adjust ( int dx1, int dy1, int dx2, int dy2 )
-$method=|void|adjust|int,int,int,int
+$prototypeV2=void adjust( int dx1, int dy1, int dx2, int dy2 )
 
-$prototype=QRect adjusted ( int dx1, int dy1, int dx2, int dy2 ) const
-$method=|QRect|adjusted|int,int,int,int
+$prototypeV2=QRect adjusted( int dx1, int dy1, int dx2, int dy2 ) const
 
 $prototypeV2=int bottom() const
 
@@ -129,11 +127,9 @@ HB_FUNC_STATIC( QRECT_CONTAINS )
 }
 $addMethod=contains
 
-$prototype=void getCoords ( int * x1, int * y1, int * x2, int * y2 ) const
-$method=|void|getCoords|int *,int *,int *,int *
+$prototypeV2=void getCoords( int * x1, int * y1, int * x2, int * y2 ) const
 
-$prototype=void getRect ( int * x, int * y, int * width, int * height ) const
-$method=|void|getRect|int *,int *,int *,int *
+$prototypeV2=void getRect( int * x, int * y, int * width, int * height ) const
 
 $prototypeV2=int height() const
 
@@ -205,15 +201,13 @@ $prototypeV2=void setBottomLeft( const QPoint & position )
 
 $prototypeV2=void setBottomRight( const QPoint & position )
 
-$prototype=void setCoords ( int x1, int y1, int x2, int y2 )
-$method=|void|setCoords|int,int,int,int
+$prototypeV2=void setCoords( int x1, int y1, int x2, int y2 )
 
 $prototypeV2=void setHeight( int height )
 
 $prototypeV2=void setLeft( int x )
 
-$prototype=void setRect ( int x, int y, int width, int height )
-$method=|void|setRect|int,int,int,int
+$prototypeV2=void setRect( int x, int y, int width, int height )
 
 $prototypeV2=void setRight( int x )
 

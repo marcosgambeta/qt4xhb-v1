@@ -206,8 +206,7 @@ $prototypeV2=QList<QByteArray> dynamicPropertyNames() const
 
 $prototypeV2=virtual bool event( QEvent * e )
 
-$prototype=virtual bool eventFilter ( QObject * watched, QEvent * event )
-$virtualMethod=|bool|eventFilter|QObject *,QEvent *
+$prototypeV2=virtual bool eventFilter( QObject * watched, QEvent * event )
 
 $prototype=T findChild ( const QString & name = QString() ) const
 $method=|QObject *|findChild<QObject *>,findChild|const QString &=QString()
@@ -264,8 +263,7 @@ $prototypeV2=void setObjectName( const QString & name )
 
 $prototypeV2=void setParent( QObject * parent )
 
-$prototype=bool setProperty ( const char * name, const QVariant & value )
-$method=|bool|setProperty|const char *,const QVariant &
+$prototypeV2=bool setProperty( const char * name, const QVariant & value )
 
 $prototypeV2=bool signalsBlocked() const
 

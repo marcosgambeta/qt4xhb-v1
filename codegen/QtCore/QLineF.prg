@@ -107,11 +107,9 @@ $prototypeV2=void setAngle( qreal angle )
 
 $prototypeV2=void setLength( qreal length )
 
-$prototype=void setLine(qreal x1, qreal y1, qreal x2, qreal y2)
-$method=|void|setLine|qreal,qreal,qreal,qreal
+$prototypeV2=void setLine( qreal x1, qreal y1, qreal x2, qreal y2 )
 
-$prototype=void setPoints(const QPointF & p1, const QPointF & p2)
-$method=|void|setPoints|const QPointF &,const QPointF &
+$prototypeV2=void setPoints( const QPointF & p1, const QPointF & p2 )
 
 $prototypeV2=QLine toLine() const
 
@@ -173,8 +171,7 @@ $addMethod=translated
 
 $prototypeV2=QLineF unitVector() const
 
-$prototype=static QLineF fromPolar(qreal length, qreal angle)
-$staticMethod=|QLineF|fromPolar|qreal,qreal
+$prototypeV2=static QLineF fromPolar( qreal length, qreal angle )
 
 $extraMethods
 

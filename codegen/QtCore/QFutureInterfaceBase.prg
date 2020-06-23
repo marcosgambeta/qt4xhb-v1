@@ -61,15 +61,13 @@ $prototypeV2=void reportFinished()
 
 $prototypeV2=void reportCanceled()
 
-$prototype=void reportResultsReady(int beginIndex, int endIndex)
-$method=|void|reportResultsReady|int,int
+$prototypeV2=void reportResultsReady( int beginIndex, int endIndex )
 
 $prototypeV2=void setRunnable( QRunnable * runnable )
 
 $prototypeV2=void setFilterMode( bool enable )
 
-$prototype=void setProgressRange(int minimum, int maximum)
-$method=|void|setProgressRange|int,int
+$prototypeV2=void setProgressRange( int minimum, int maximum )
 
 $prototypeV2=int progressMinimum() const
 
@@ -81,8 +79,7 @@ $prototypeV2=void setProgressValue( int progressValue )
 
 $prototypeV2=int progressValue() const
 
-$prototype=void setProgressValueAndText(int progressValue, const QString &progressText)
-$method=|void|setProgressValueAndText|int,const QString &
+$prototypeV2=void setProgressValueAndText( int progressValue, const QString & progressText )
 
 $prototypeV2=QString progressText() const
 

@@ -52,8 +52,7 @@ $prototypeV2=bool isAnimated() const
 
 $prototypeV2=bool isRunning() const
 
-$prototype=int postDelayedEvent ( QEvent * event, int delay )
-$method=|int|postDelayedEvent|QEvent *,int
+$prototypeV2=int postDelayedEvent( QEvent * event, int delay )
 
 $prototype=void postEvent ( QEvent * event, EventPriority priority = NormalPriority )
 $method=|void|postEvent|QEvent *,QStateMachine::EventPriority=QStateMachine::NormalPriority
@@ -66,8 +65,7 @@ $prototypeV2=void setAnimated( bool enabled )
 
 $prototypeV2=void setGlobalRestorePolicy( QStateMachine::RestorePolicy restorePolicy )
 
-$prototype=virtual bool eventFilter ( QObject * watched, QEvent * event )
-$virtualMethod=|bool|eventFilter|QObject *,QEvent *
+$prototypeV2=virtual bool eventFilter( QObject * watched, QEvent * event )
 
 $prototypeV2=void start()
 

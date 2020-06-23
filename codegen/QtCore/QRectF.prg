@@ -79,11 +79,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void adjust ( qreal dx1, qreal dy1, qreal dx2, qreal dy2 )
-$method=|void|adjust|qreal,qreal,qreal,qreal
+$prototypeV2=void adjust( qreal dx1, qreal dy1, qreal dx2, qreal dy2 )
 
-$prototype=QRectF adjusted ( qreal dx1, qreal dy1, qreal dx2, qreal dy2 ) const
-$method=|QRectF|adjusted|qreal,qreal,qreal,qreal
+$prototypeV2=QRectF adjusted( qreal dx1, qreal dy1, qreal dx2, qreal dy2 ) const
 
 $prototypeV2=qreal bottom() const
 
@@ -129,11 +127,9 @@ HB_FUNC_STATIC( QRECTF_CONTAINS )
 }
 $addMethod=contains
 
-$prototype=void getCoords ( qreal * x1, qreal * y1, qreal * x2, qreal * y2 ) const
-$method=|void|getCoords|qreal *,qreal *,qreal *,qreal *
+$prototypeV2=void getCoords( qreal * x1, qreal * y1, qreal * x2, qreal * y2 ) const
 
-$prototype=void getRect ( qreal * x, qreal * y, qreal * width, qreal * height ) const
-$method=|void|getRect|qreal *,qreal *,qreal *,qreal *
+$prototypeV2=void getRect( qreal * x, qreal * y, qreal * width, qreal * height ) const
 
 $prototypeV2=qreal height() const
 
@@ -205,15 +201,13 @@ $prototypeV2=void setBottomLeft( const QPointF & position )
 
 $prototypeV2=void setBottomRight( const QPointF & position )
 
-$prototype=void setCoords ( qreal x1, qreal y1, qreal x2, qreal y2 )
-$method=|void|setCoords|qreal,qreal,qreal,qreal
+$prototypeV2=void setCoords( qreal x1, qreal y1, qreal x2, qreal y2 )
 
 $prototypeV2=void setHeight( qreal height )
 
 $prototypeV2=void setLeft( qreal x )
 
-$prototype=void setRect ( qreal x, qreal y, qreal width, qreal height )
-$method=|void|setRect|qreal,qreal,qreal,qreal
+$prototypeV2=void setRect( qreal x, qreal y, qreal width, qreal height )
 
 $prototypeV2=void setRight( qreal x )
 

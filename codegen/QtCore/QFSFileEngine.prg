@@ -127,8 +127,7 @@ $prototypeV2=virtual bool isSequential() const
 
 $prototypeV2=virtual bool link( const QString & newName )
 
-$prototype=virtual bool mkdir ( const QString & name, bool createParentDirectories ) const
-$virtualMethod=|bool|mkdir|const QString &,bool
+$prototypeV2=virtual bool mkdir( const QString & name, bool createParentDirectories ) const
 
 $prototypeV2=virtual QString owner( QAbstractFileEngine::FileOwner own ) const
 
@@ -136,21 +135,17 @@ $prototypeV2=virtual uint ownerId( QAbstractFileEngine::FileOwner own ) const
 
 $prototypeV2=virtual qint64 pos() const
 
-$prototype=virtual qint64 read ( char * data, qint64 maxlen )
-$virtualMethod=|qint64|read|char *,qint64
+$prototypeV2=virtual qint64 read( char * data, qint64 maxlen )
 
-$prototype=virtual qint64 readLine ( char * data, qint64 maxlen )
-$virtualMethod=|qint64|readLine|char *,qint64
+$prototypeV2=virtual qint64 readLine( char * data, qint64 maxlen )
 
 $prototypeV2=virtual bool remove()
 
 $prototypeV2=virtual bool rename( const QString & newName )
 
-$prototype=virtual bool rmdir ( const QString & name, bool recurseParentDirectories ) const
-$virtualMethod=|bool|rmdir|const QString &,bool
+$prototypeV2=virtual bool rmdir( const QString & name, bool recurseParentDirectories ) const
 
-$prototype=virtual bool seek ( qint64 pos )
-$virtualMethod=|bool|seek|qint64
+$prototypeV2=virtual bool seek( qint64 pos )
 
 $prototypeV2=virtual void setFileName( const QString & file )
 
@@ -162,8 +157,7 @@ $prototypeV2=virtual qint64 size() const
 
 $prototypeV2=virtual bool supportsExtension( QAbstractFileEngine::Extension extension ) const
 
-$prototype=virtual qint64 write ( const char * data, qint64 len )
-$virtualMethod=|qint64|write|const char *,qint64
+$prototypeV2=virtual qint64 write( const char * data, qint64 len )
 
 $prototype=static QString currentPath ( const QString & fileName = QString() )
 $staticMethod=|QString|currentPath|const QString &=QString()

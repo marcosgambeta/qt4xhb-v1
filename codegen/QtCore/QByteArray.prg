@@ -536,8 +536,7 @@ HB_FUNC_STATIC( QBYTEARRAY_PUSH_FRONT )
 }
 $addMethod=push_front
 
-$prototype=QByteArray & remove ( int pos, int len )
-$method=|QByteArray &|remove|int,int
+$prototypeV2=QByteArray & remove( int pos, int len )
 
 $prototypeV2=QByteArray repeated( int times ) const
 
@@ -752,8 +751,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM )
 }
 $addMethod=setNum
 
-$prototype=QByteArray & setRawData ( const char * data, uint size )
-$method=|QByteArray &|setRawData|const char *,uint
+$prototypeV2=QByteArray & setRawData( const char * data, uint size )
 
 $prototypeV2=QByteArray simplified() const
 

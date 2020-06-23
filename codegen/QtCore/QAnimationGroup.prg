@@ -37,8 +37,7 @@ $prototypeV2=void clear()
 
 $prototypeV2=int indexOfAnimation( QAbstractAnimation * animation ) const
 
-$prototype=void insertAnimation ( int index, QAbstractAnimation * animation )
-$method=|void|insertAnimation|int,QAbstractAnimation *
+$prototypeV2=void insertAnimation( int index, QAbstractAnimation * animation )
 
 $prototypeV2=void removeAnimation( QAbstractAnimation * animation )
 

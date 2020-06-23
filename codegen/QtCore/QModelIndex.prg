@@ -55,8 +55,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QModelIndex child ( int row, int column ) const
-$method=|QModelIndex|child|int,int
+$prototypeV2=QModelIndex child( int row, int column ) const
 
 $prototypeV2=int column() const
 
@@ -77,8 +76,7 @@ $prototypeV2=QModelIndex parent() const
 
 $prototypeV2=int row() const
 
-$prototype=QModelIndex sibling ( int row, int column ) const
-$method=|QModelIndex|sibling|int,int
+$prototypeV2=QModelIndex sibling( int row, int column ) const
 
 $extraMethods
 

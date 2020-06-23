@@ -30,8 +30,7 @@ $constructor=|new|
 
 $prototypeV2=virtual QLocale fallbackLocale() const
 
-$prototype=virtual QVariant query ( QueryType type, QVariant in ) const
-$virtualMethod=|QVariant|query|QSystemLocale::QueryType,QVariant
+$prototypeV2=virtual QVariant query( QSystemLocale::QueryType type, QVariant in ) const
 
 $extraMethods
 
