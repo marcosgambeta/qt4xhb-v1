@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_DELETE )
 }
 
 /*
-virtual QObject * extension ( QObject * object, const QString & iid ) const
+virtual QObject * extension( QObject * object, const QString & iid ) const
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_EXTENSION )
 {

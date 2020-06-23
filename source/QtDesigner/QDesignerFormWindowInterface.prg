@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ABSOLUTEDIR )
 }
 
 /*
-virtual void addResourceFile ( const QString & path ) = 0
+virtual void addResourceFile( const QString & path ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ADDRESOURCEFILE )
 {
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_GRID )
 }
 
 /*
-virtual bool hasFeature ( Feature feature ) const = 0
+virtual bool hasFeature( QDesignerFormWindowInterface::Feature feature ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_HASFEATURE )
 {
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ISDIRTY )
 }
 
 /*
-virtual bool isManaged ( QWidget * widget ) const = 0
+virtual bool isManaged( QWidget * widget ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ISMANAGED )
 {
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ISMANAGED )
 }
 
 /*
-virtual void layoutDefault ( int * margin, int * spacing ) = 0
+virtual void layoutDefault( int * margin, int * spacing ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_LAYOUTDEFAULT )
 {
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_PIXMAPFUNCTION )
 }
 
 /*
-virtual void removeResourceFile ( const QString & path ) = 0
+virtual void removeResourceFile( const QString & path ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_REMOVERESOURCEFILE )
 {
@@ -641,7 +641,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_RESOURCEFILES )
 }
 
 /*
-virtual void setAuthor ( const QString & author ) = 0
+virtual void setAuthor( const QString & author ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETAUTHOR )
 {
@@ -667,7 +667,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETAUTHOR )
 }
 
 /*
-virtual void setComment ( const QString & comment ) = 0
+virtual void setComment( const QString & comment ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETCOMMENT )
 {
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETCOMMENT )
 }
 
 /*
-virtual void setExportMacro ( const QString & exportMacro ) = 0
+virtual void setExportMacro( const QString & exportMacro ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETEXPORTMACRO )
 {
@@ -719,7 +719,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETEXPORTMACRO )
 }
 
 /*
-virtual void setIncludeHints ( const QStringList & includeHints ) = 0
+virtual void setIncludeHints( const QStringList & includeHints ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETINCLUDEHINTS )
 {
@@ -745,7 +745,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETINCLUDEHINTS )
 }
 
 /*
-virtual void setLayoutDefault ( int margin, int spacing ) = 0
+virtual void setLayoutDefault( int margin, int spacing ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETLAYOUTDEFAULT )
 {
@@ -771,7 +771,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETLAYOUTDEFAULT )
 }
 
 /*
-virtual void setLayoutFunction ( const QString & margin, const QString & spacing ) = 0
+virtual void setLayoutFunction( const QString & margin, const QString & spacing ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETLAYOUTFUNCTION )
 {
@@ -797,7 +797,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETLAYOUTFUNCTION )
 }
 
 /*
-virtual void setMainContainer ( QWidget * mainContainer ) = 0
+virtual void setMainContainer( QWidget * mainContainer ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETMAINCONTAINER )
 {
@@ -823,7 +823,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETMAINCONTAINER )
 }
 
 /*
-virtual void setPixmapFunction ( const QString & pixmapFunction ) = 0
+virtual void setPixmapFunction( const QString & pixmapFunction ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETPIXMAPFUNCTION )
 {
@@ -875,7 +875,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CLEARSELECTION )
 }
 
 /*
-virtual void manageWidget ( QWidget * widget ) = 0
+virtual void manageWidget( QWidget * widget ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_MANAGEWIDGET )
 {
@@ -978,7 +978,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS )
 }
 
 /*
-virtual void setDirty ( bool dirty ) = 0
+virtual void setDirty( bool dirty ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETDIRTY )
 {
@@ -1004,7 +1004,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETDIRTY )
 }
 
 /*
-virtual void setFeatures ( Feature features ) = 0
+virtual void setFeatures( QDesignerFormWindowInterface::Feature features ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETFEATURES )
 {
@@ -1030,7 +1030,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETFEATURES )
 }
 
 /*
-virtual void setFileName ( const QString & fileName ) = 0
+virtual void setFileName( const QString & fileName ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETFILENAME )
 {
@@ -1056,7 +1056,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETFILENAME )
 }
 
 /*
-virtual void setGrid ( const QPoint & grid ) = 0
+virtual void setGrid( const QPoint & grid ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETGRID )
 {
@@ -1082,7 +1082,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETGRID )
 }
 
 /*
-virtual void unmanageWidget ( QWidget * widget ) = 0
+virtual void unmanageWidget( QWidget * widget ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_UNMANAGEWIDGET )
 {

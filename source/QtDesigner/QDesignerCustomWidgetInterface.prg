@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_CODETEMPLATE )
 }
 
 /*
-virtual QWidget * createWidget ( QWidget * parent ) = 0
+virtual QWidget * createWidget( QWidget * parent ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_CREATEWIDGET )
 {
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_INCLUDEFILE )
 }
 
 /*
-virtual void initialize ( QDesignerFormEditorInterface * formEditor )
+virtual void initialize( QDesignerFormEditorInterface * formEditor )
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_INITIALIZE )
 {

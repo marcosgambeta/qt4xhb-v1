@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_PROPERTYEDITOR )
 }
 
 /*
-void setActionEditor ( QDesignerActionEditorInterface * actionEditor )
+void setActionEditor( QDesignerActionEditorInterface * actionEditor )
 */
 HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETACTIONEDITOR )
 {
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETACTIONEDITOR )
 }
 
 /*
-void setObjectInspector ( QDesignerObjectInspectorInterface * objectInspector )
+void setObjectInspector( QDesignerObjectInspectorInterface * objectInspector )
 */
 HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETOBJECTINSPECTOR )
 {
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETOBJECTINSPECTOR )
 }
 
 /*
-void setPropertyEditor ( QDesignerPropertyEditorInterface * propertyEditor )
+void setPropertyEditor( QDesignerPropertyEditorInterface * propertyEditor )
 */
 HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETPROPERTYEDITOR )
 {
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETPROPERTYEDITOR )
 }
 
 /*
-void setWidgetBox ( QDesignerWidgetBoxInterface * widgetBox )
+void setWidgetBox( QDesignerWidgetBoxInterface * widgetBox )
 */
 HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_SETWIDGETBOX )
 {

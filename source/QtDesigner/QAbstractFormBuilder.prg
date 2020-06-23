@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_LOAD )
 }
 
 /*
-virtual void save ( QIODevice * device, QWidget * widget )
+virtual void save( QIODevice * device, QWidget * widget )
 */
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SAVE )
 {
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SAVE )
 }
 
 /*
-void setWorkingDirectory ( const QDir & directory )
+void setWorkingDirectory( const QDir & directory )
 */
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_SETWORKINGDIRECTORY )
 {
