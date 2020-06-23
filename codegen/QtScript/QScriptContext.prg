@@ -32,8 +32,7 @@ $deleteMethod
 
 $prototypeV2=QScriptValue activationObject() const
 
-$prototype=QScriptValue argument ( int index ) const
-$method=|QScriptValue|argument|int
+$prototypeV2=QScriptValue argument( int index ) const
 
 $prototypeV2=int argumentCount() const
 
@@ -49,11 +48,9 @@ $prototypeV2=bool isCalledAsConstructor() const
 
 $prototypeV2=QScriptContext * parentContext() const
 
-$prototype=void setActivationObject ( const QScriptValue & activation )
-$method=|void|setActivationObject|const QScriptValue &
+$prototypeV2=void setActivationObject( const QScriptValue & activation )
 
-$prototype=void setThisObject ( const QScriptValue & thisObject )
-$method=|void|setThisObject|const QScriptValue &
+$prototypeV2=void setThisObject( const QScriptValue & thisObject )
 
 $prototypeV2=QScriptContext::ExecutionState state() const
 
@@ -87,8 +84,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWERROR )
 }
 $addMethod=throwError
 
-$prototype=QScriptValue throwValue ( const QScriptValue & value )
-$method=|QScriptValue|throwValue|const QScriptValue &
+$prototypeV2=QScriptValue throwValue( const QScriptValue & value )
 
 $prototypeV2=QString toString() const
 

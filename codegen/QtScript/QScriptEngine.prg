@@ -72,8 +72,7 @@ $prototypeV2=void collectGarbage()
 
 $prototypeV2=QScriptContext * currentContext() const
 
-$prototype=QScriptValue defaultPrototype ( int metaTypeId ) const
-$method=|QScriptValue|defaultPrototype|int
+$prototypeV2=QScriptValue defaultPrototype( int metaTypeId ) const
 
 $prototype=QScriptValue evaluate ( const QString & program, const QString & fileName = QString(), int lineNumber = 1 )
 $internalMethod=|QScriptValue|evaluate,evaluate1|const QString &,const QString &=QString(),int=1
@@ -107,8 +106,7 @@ $prototypeV2=QScriptValue globalObject() const
 
 $prototypeV2=bool hasUncaughtException() const
 
-$prototype=QScriptValue importExtension ( const QString & extension )
-$method=|QScriptValue|importExtension|const QString &
+$prototypeV2=QScriptValue importExtension( const QString & extension )
 
 $prototypeV2=QStringList importedExtensions() const
 
@@ -184,26 +182,19 @@ $prototypeV2=int processEventsInterval() const
 
 $prototypeV2=QScriptContext * pushContext()
 
-$prototype=void reportAdditionalMemoryCost ( int size )
-$method=|void|reportAdditionalMemoryCost|int
+$prototypeV2=void reportAdditionalMemoryCost( int size )
 
-$prototype=void setAgent ( QScriptEngineAgent * agent )
-$method=|void|setAgent|QScriptEngineAgent *
+$prototypeV2=void setAgent( QScriptEngineAgent * agent )
 
-$prototype=void setDefaultPrototype ( int metaTypeId, const QScriptValue & prototype )
-$method=|void|setDefaultPrototype|int,const QScriptValue &
+$prototypeV2=void setDefaultPrototype( int metaTypeId, const QScriptValue & prototype )
 
-$prototype=void setGlobalObject ( const QScriptValue & object )
-$method=|void|setGlobalObject|const QScriptValue &
+$prototypeV2=void setGlobalObject( const QScriptValue & object )
 
-$prototype=void setProcessEventsInterval ( int interval )
-$method=|void|setProcessEventsInterval|int
+$prototypeV2=void setProcessEventsInterval( int interval )
 
-$prototype=QScriptValue toObject ( const QScriptValue & value )
-$method=|QScriptValue|toObject|const QScriptValue &
+$prototypeV2=QScriptValue toObject( const QScriptValue & value )
 
-$prototype=QScriptString toStringHandle ( const QString & str )
-$method=|QScriptString|toStringHandle|const QString &
+$prototypeV2=QScriptString toStringHandle( const QString & str )
 
 $prototypeV2=QScriptValue uncaughtException() const
 
@@ -213,8 +204,7 @@ $prototypeV2=int uncaughtExceptionLineNumber() const
 
 $prototypeV2=QScriptValue undefinedValue()
 
-$prototype=static QScriptSyntaxCheckResult checkSyntax ( const QString & program )
-$staticMethod=|QScriptSyntaxCheckResult|checkSyntax|const QString &
+$prototypeV2=static QScriptSyntaxCheckResult checkSyntax( const QString & program )
 
 $beginSignals
 $signal=|signalHandlerException(QScriptValue)

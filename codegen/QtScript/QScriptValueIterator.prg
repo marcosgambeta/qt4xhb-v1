@@ -48,8 +48,7 @@ $prototypeV2=void remove()
 
 $prototypeV2=QScriptString scriptName() const
 
-$prototype=void setValue ( const QScriptValue & value )
-$method=|void|setValue|const QScriptValue &
+$prototypeV2=void setValue( const QScriptValue & value )
 
 $prototypeV2=void toBack()
 

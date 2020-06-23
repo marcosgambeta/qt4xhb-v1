@@ -38,32 +38,24 @@ $prototypeV2=virtual void contextPush()
 
 $prototypeV2=QScriptEngine * engine() const
 
-$prototype=virtual void exceptionCatch ( qint64 scriptId, const QScriptValue & exception )
-$virtualMethod=|void|exceptionCatch|qint64,const QScriptValue &
+$prototypeV2=virtual void exceptionCatch( qint64 scriptId, const QScriptValue & exception )
 
-$prototype=virtual void exceptionThrow ( qint64 scriptId, const QScriptValue & exception, bool hasHandler )
-$virtualMethod=|void|exceptionThrow|qint64,const QScriptValue &,bool
+$prototypeV2=virtual void exceptionThrow( qint64 scriptId, const QScriptValue & exception, bool hasHandler )
 
 $prototype=virtual QVariant extension ( Extension extension, const QVariant & argument = QVariant() )
 $virtualMethod=|QVariant|extension|QScriptEngineAgent::Extension,const QVariant &=QVariant()
 
-$prototype=virtual void functionEntry ( qint64 scriptId )
-$virtualMethod=|void|functionEntry|qint64
+$prototypeV2=virtual void functionEntry( qint64 scriptId )
 
-$prototype=virtual void functionExit ( qint64 scriptId, const QScriptValue & returnValue )
-$virtualMethod=|void|functionExit|qint64,const QScriptValue &
+$prototypeV2=virtual void functionExit( qint64 scriptId, const QScriptValue & returnValue )
 
-$prototype=virtual void positionChange ( qint64 scriptId, int lineNumber, int columnNumber )
-$virtualMethod=|void|positionChange|qint64,int,int
+$prototypeV2=virtual void positionChange( qint64 scriptId, int lineNumber, int columnNumber )
 
-$prototype=virtual void scriptLoad ( qint64 id, const QString & program, const QString & fileName, int baseLineNumber )
-$virtualMethod=|void|scriptLoad|qint64,const QString &,const QString &,int
+$prototypeV2=virtual void scriptLoad( qint64 id, const QString & program, const QString & fileName, int baseLineNumber )
 
-$prototype=virtual void scriptUnload ( qint64 id )
-$virtualMethod=|void|scriptUnload|qint64
+$prototypeV2=virtual void scriptUnload( qint64 id )
 
-$prototype=virtual bool supportsExtension ( Extension extension ) const
-$virtualMethod=|bool|supportsExtension|QScriptEngineAgent::Extension
+$prototypeV2=virtual bool supportsExtension( QScriptEngineAgent::Extension extension ) const
 
 $extraMethods
 

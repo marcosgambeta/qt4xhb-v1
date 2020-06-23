@@ -209,11 +209,9 @@ $prototypeV2=QScriptValue data() const
 $prototype=QScriptEngine * engine () const
 %% TODO: $method=|QScriptEngine *|engine|
 
-$prototype=bool equals ( const QScriptValue & other ) const
-$method=|bool|equals|const QScriptValue &
+$prototypeV2=bool equals( const QScriptValue & other ) const
 
-$prototype=bool instanceOf ( const QScriptValue & other ) const
-$method=|bool|instanceOf|const QScriptValue &
+$prototypeV2=bool instanceOf( const QScriptValue & other ) const
 
 $prototypeV2=bool isArray() const
 
@@ -245,24 +243,19 @@ $prototypeV2=bool isValid() const
 
 $prototypeV2=bool isVariant() const
 
-$prototype=bool lessThan ( const QScriptValue & other ) const
-$method=|bool|lessThan|const QScriptValue &
+$prototypeV2=bool lessThan( const QScriptValue & other ) const
 
 $prototypeV2=QScriptValue prototype() const
 
 $prototypeV2=QScriptClass * scriptClass() const
 
-$prototype=void setData ( const QScriptValue & data )
-$method=|void|setData|const QScriptValue &
+$prototypeV2=void setData( const QScriptValue & data )
 
-$prototype=void setPrototype ( const QScriptValue & prototype )
-$method=|void|setPrototype|const QScriptValue &
+$prototypeV2=void setPrototype( const QScriptValue & prototype )
 
-$prototype=void setScriptClass ( QScriptClass * scriptClass )
-$method=|void|setScriptClass|QScriptClass *
+$prototypeV2=void setScriptClass( QScriptClass * scriptClass )
 
-$prototype=bool strictlyEquals ( const QScriptValue & other ) const
-$method=|bool|strictlyEquals|const QScriptValue &
+$prototypeV2=bool strictlyEquals( const QScriptValue & other ) const
 
 $prototypeV2=bool toBool() const
 

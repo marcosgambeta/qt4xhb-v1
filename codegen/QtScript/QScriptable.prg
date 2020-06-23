@@ -30,8 +30,7 @@ $includes
 
 $deleteMethod
 
-$prototype=QScriptValue argument ( int index ) const
-$method=|QScriptValue|argument|int
+$prototypeV2=QScriptValue argument( int index ) const
 
 $prototypeV2=int argumentCount() const
 

@@ -38,25 +38,20 @@ $virtualMethod=|QVariant|extension|QScriptClass::Extension,const QVariant &=QVar
 
 $prototypeV2=virtual QString name() const
 
-$prototype=virtual QScriptClassPropertyIterator * newIterator ( const QScriptValue & object )
-$virtualMethod=|QScriptClassPropertyIterator *|newIterator|const QScriptValue &
+$prototypeV2=virtual QScriptClassPropertyIterator * newIterator( const QScriptValue & object )
 
-$prototype=virtual QScriptValue property ( const QScriptValue & object, const QScriptString & name, uint id )
-$virtualMethod=|QScriptValue|property|const QScriptValue &,const QScriptString &,uint
+$prototypeV2=virtual QScriptValue property( const QScriptValue & object, const QScriptString & name, uint id )
 
-$prototype=virtual QScriptValue::PropertyFlags propertyFlags ( const QScriptValue & object, const QScriptString & name, uint id )
-$virtualMethod=|QScriptValue::PropertyFlags|propertyFlags|const QScriptValue &,const QScriptString &,uint
+$prototypeV2=virtual QScriptValue::PropertyFlags propertyFlags( const QScriptValue & object, const QScriptString & name, uint id )
 
 $prototypeV2=virtual QScriptValue prototype() const
 
 $prototype=virtual QueryFlags queryProperty ( const QScriptValue & object, const QScriptString & name, QueryFlags flags, uint * id )
 %% TODO: $virtualMethod=|QScriptClass::QueryFlags|queryProperty|const QScriptValue &,const QScriptString &,QScriptClass::QueryFlags,uint *
 
-$prototype=virtual void setProperty ( QScriptValue & object, const QScriptString & name, uint id, const QScriptValue & value )
-$virtualMethod=|void|setProperty|QScriptValue &,const QScriptString &,uint,const QScriptValue &
+$prototypeV2=virtual void setProperty( QScriptValue & object, const QScriptString & name, uint id, const QScriptValue & value )
 
-$prototype=virtual bool supportsExtension ( Extension extension ) const
-$virtualMethod=|bool|supportsExtension|QScriptClass::Extension
+$prototypeV2=virtual bool supportsExtension( QScriptClass::Extension extension ) const
 
 $extraMethods
 
