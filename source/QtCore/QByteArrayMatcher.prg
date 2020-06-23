@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_PATTERN )
 }
 
 /*
-void setPattern ( const QByteArray & pattern )
+void setPattern( const QByteArray & pattern )
 */
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_SETPATTERN )
 {

@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QMODELINDEX_DELETE )
 }
 
 /*
-QModelIndex child ( int row, int column ) const
+QModelIndex child( int row, int column ) const
 */
 HB_FUNC_STATIC( QMODELINDEX_CHILD )
 {
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QMODELINDEX_INTERNALID )
 }
 
 /*
-void * internalPointer () const
+void * internalPointer() const
 */
 HB_FUNC_STATIC( QMODELINDEX_INTERNALPOINTER )
 {
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QMODELINDEX_ISVALID )
 }
 
 /*
-const QAbstractItemModel * model () const
+const QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QMODELINDEX_MODEL )
 {
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QMODELINDEX_ROW )
 }
 
 /*
-QModelIndex sibling ( int row, int column ) const
+QModelIndex sibling( int row, int column ) const
 */
 HB_FUNC_STATIC( QMODELINDEX_SIBLING )
 {

@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QDIR_DELETE )
 }
 
 /*
-QString absoluteFilePath(const QString & fileName) const
+QString absoluteFilePath( const QString & fileName ) const
 */
 HB_FUNC_STATIC( QDIR_ABSOLUTEFILEPATH )
 {
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QDIR_CANONICALPATH )
 }
 
 /*
-bool cd(const QString & dirName)
+bool cd( const QString & dirName )
 */
 HB_FUNC_STATIC( QDIR_CD )
 {
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QDIR_EXISTS )
 }
 
 /*
-QString filePath(const QString & fileName) const
+QString filePath( const QString & fileName ) const
 */
 HB_FUNC_STATIC( QDIR_FILEPATH )
 {
@@ -705,7 +705,7 @@ HB_FUNC_STATIC( QDIR_MAKEABSOLUTE )
 }
 
 /*
-bool mkdir(const QString & dirName) const
+bool mkdir( const QString & dirName ) const
 */
 HB_FUNC_STATIC( QDIR_MKDIR )
 {
@@ -729,7 +729,7 @@ HB_FUNC_STATIC( QDIR_MKDIR )
 }
 
 /*
-bool mkpath(const QString & dirPath) const
+bool mkpath( const QString & dirPath ) const
 */
 HB_FUNC_STATIC( QDIR_MKPATH )
 {
@@ -827,7 +827,7 @@ HB_FUNC_STATIC( QDIR_REFRESH )
 }
 
 /*
-QString relativeFilePath(const QString & fileName) const
+QString relativeFilePath( const QString & fileName ) const
 */
 HB_FUNC_STATIC( QDIR_RELATIVEFILEPATH )
 {
@@ -851,7 +851,7 @@ HB_FUNC_STATIC( QDIR_RELATIVEFILEPATH )
 }
 
 /*
-bool remove(const QString & fileName)
+bool remove( const QString & fileName )
 */
 HB_FUNC_STATIC( QDIR_REMOVE )
 {
@@ -875,7 +875,7 @@ HB_FUNC_STATIC( QDIR_REMOVE )
 }
 
 /*
-bool rename(const QString & oldName, const QString & newName)
+bool rename( const QString & oldName, const QString & newName )
 */
 HB_FUNC_STATIC( QDIR_RENAME )
 {
@@ -899,7 +899,7 @@ HB_FUNC_STATIC( QDIR_RENAME )
 }
 
 /*
-bool rmdir(const QString & dirName) const
+bool rmdir( const QString & dirName ) const
 */
 HB_FUNC_STATIC( QDIR_RMDIR )
 {
@@ -923,7 +923,7 @@ HB_FUNC_STATIC( QDIR_RMDIR )
 }
 
 /*
-bool rmpath(const QString & dirPath) const
+bool rmpath( const QString & dirPath ) const
 */
 HB_FUNC_STATIC( QDIR_RMPATH )
 {
@@ -947,7 +947,7 @@ HB_FUNC_STATIC( QDIR_RMPATH )
 }
 
 /*
-void setFilter(Filters filters)
+void setFilter( QDir::Filters filters )
 */
 HB_FUNC_STATIC( QDIR_SETFILTER )
 {
@@ -973,7 +973,7 @@ HB_FUNC_STATIC( QDIR_SETFILTER )
 }
 
 /*
-void setNameFilters(const QStringList & nameFilters)
+void setNameFilters( const QStringList & nameFilters )
 */
 HB_FUNC_STATIC( QDIR_SETNAMEFILTERS )
 {
@@ -999,7 +999,7 @@ HB_FUNC_STATIC( QDIR_SETNAMEFILTERS )
 }
 
 /*
-void setPath(const QString & path)
+void setPath( const QString & path )
 */
 HB_FUNC_STATIC( QDIR_SETPATH )
 {
@@ -1025,7 +1025,7 @@ HB_FUNC_STATIC( QDIR_SETPATH )
 }
 
 /*
-void setSorting(SortFlags sort)
+void setSorting( QDir::SortFlags sort )
 */
 HB_FUNC_STATIC( QDIR_SETSORTING )
 {
@@ -1075,7 +1075,7 @@ HB_FUNC_STATIC( QDIR_SORTING )
 }
 
 /*
-static void addSearchPath(const QString & prefix, const QString & path)
+static void addSearchPath( const QString & prefix, const QString & path )
 */
 HB_FUNC_STATIC( QDIR_ADDSEARCHPATH )
 {
@@ -1096,7 +1096,7 @@ HB_FUNC_STATIC( QDIR_ADDSEARCHPATH )
 }
 
 /*
-static QString cleanPath(const QString & path)
+static QString cleanPath( const QString & path )
 */
 HB_FUNC_STATIC( QDIR_CLEANPATH )
 {
@@ -1201,7 +1201,7 @@ HB_FUNC_STATIC( QDIR_DRIVES )
 }
 
 /*
-static QString fromNativeSeparators(const QString & pathName)
+static QString fromNativeSeparators( const QString & pathName )
 */
 HB_FUNC_STATIC( QDIR_FROMNATIVESEPARATORS )
 {
@@ -1259,7 +1259,7 @@ HB_FUNC_STATIC( QDIR_HOMEPATH )
 }
 
 /*
-static bool isAbsolutePath(const QString & path)
+static bool isAbsolutePath( const QString & path )
 */
 HB_FUNC_STATIC( QDIR_ISABSOLUTEPATH )
 {
@@ -1278,7 +1278,7 @@ HB_FUNC_STATIC( QDIR_ISABSOLUTEPATH )
 }
 
 /*
-static bool isRelativePath(const QString & path)
+static bool isRelativePath( const QString & path )
 */
 HB_FUNC_STATIC( QDIR_ISRELATIVEPATH )
 {
@@ -1375,7 +1375,7 @@ HB_FUNC_STATIC( QDIR_ROOTPATH )
 }
 
 /*
-static QStringList searchPaths(const QString & prefix)
+static QStringList searchPaths( const QString & prefix )
 */
 HB_FUNC_STATIC( QDIR_SEARCHPATHS )
 {
@@ -1414,7 +1414,7 @@ HB_FUNC_STATIC( QDIR_SEPARATOR )
 }
 
 /*
-static bool setCurrent(const QString & path)
+static bool setCurrent( const QString & path )
 */
 HB_FUNC_STATIC( QDIR_SETCURRENT )
 {
@@ -1433,7 +1433,7 @@ HB_FUNC_STATIC( QDIR_SETCURRENT )
 }
 
 /*
-static void setSearchPaths(const QString & prefix, const QStringList & searchPaths)
+static void setSearchPaths( const QString & prefix, const QStringList & searchPaths )
 */
 HB_FUNC_STATIC( QDIR_SETSEARCHPATHS )
 {
@@ -1493,7 +1493,7 @@ HB_FUNC_STATIC( QDIR_TEMPPATH )
 }
 
 /*
-static QString toNativeSeparators(const QString & pathName)
+static QString toNativeSeparators( const QString & pathName )
 */
 HB_FUNC_STATIC( QDIR_TONATIVESEPARATORS )
 {

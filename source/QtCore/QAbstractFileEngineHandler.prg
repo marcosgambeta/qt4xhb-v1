@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINEHANDLER_DELETE )
 }
 
 /*
-virtual QAbstractFileEngine * create ( const QString & fileName ) const = 0
+virtual QAbstractFileEngine * create( const QString & fileName ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTFILEENGINEHANDLER_CREATE )
 {

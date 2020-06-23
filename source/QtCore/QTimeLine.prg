@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QTIMELINE_ENDFRAME )
 }
 
 /*
-int frameForTime ( int msec ) const
+int frameForTime( int msec ) const
 */
 HB_FUNC_STATIC( QTIMELINE_FRAMEFORTIME )
 {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QTIMELINE_LOOPCOUNT )
 }
 
 /*
-void setCurveShape ( CurveShape shape )
+void setCurveShape( QTimeLine::CurveShape shape )
 */
 HB_FUNC_STATIC( QTIMELINE_SETCURVESHAPE )
 {
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QTIMELINE_SETCURVESHAPE )
 }
 
 /*
-void setDirection ( Direction direction )
+void setDirection( QTimeLine::Direction direction )
 */
 HB_FUNC_STATIC( QTIMELINE_SETDIRECTION )
 {
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QTIMELINE_SETDIRECTION )
 }
 
 /*
-void setDuration ( int duration )
+void setDuration( int duration )
 */
 HB_FUNC_STATIC( QTIMELINE_SETDURATION )
 {
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QTIMELINE_SETDURATION )
 }
 
 /*
-void setEasingCurve ( const QEasingCurve & curve )
+void setEasingCurve( const QEasingCurve & curve )
 */
 HB_FUNC_STATIC( QTIMELINE_SETEASINGCURVE )
 {
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QTIMELINE_SETEASINGCURVE )
 }
 
 /*
-void setEndFrame ( int frame )
+void setEndFrame( int frame )
 */
 HB_FUNC_STATIC( QTIMELINE_SETENDFRAME )
 {
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QTIMELINE_SETENDFRAME )
 }
 
 /*
-void setFrameRange ( int startFrame, int endFrame )
+void setFrameRange( int startFrame, int endFrame )
 */
 HB_FUNC_STATIC( QTIMELINE_SETFRAMERANGE )
 {
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QTIMELINE_SETFRAMERANGE )
 }
 
 /*
-void setLoopCount ( int count )
+void setLoopCount( int count )
 */
 HB_FUNC_STATIC( QTIMELINE_SETLOOPCOUNT )
 {
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QTIMELINE_SETLOOPCOUNT )
 }
 
 /*
-void setStartFrame ( int frame )
+void setStartFrame( int frame )
 */
 HB_FUNC_STATIC( QTIMELINE_SETSTARTFRAME )
 {
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QTIMELINE_SETSTARTFRAME )
 }
 
 /*
-void setUpdateInterval ( int interval )
+void setUpdateInterval( int interval )
 */
 HB_FUNC_STATIC( QTIMELINE_SETUPDATEINTERVAL )
 {
@@ -631,7 +631,7 @@ HB_FUNC_STATIC( QTIMELINE_UPDATEINTERVAL )
 }
 
 /*
-virtual qreal valueForTime ( int msec ) const
+virtual qreal valueForTime( int msec ) const
 */
 HB_FUNC_STATIC( QTIMELINE_VALUEFORTIME )
 {
@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QTIMELINE_RESUME )
 }
 
 /*
-void setCurrentTime ( int msec )
+void setCurrentTime( int msec )
 */
 HB_FUNC_STATIC( QTIMELINE_SETCURRENTTIME )
 {
@@ -707,7 +707,7 @@ HB_FUNC_STATIC( QTIMELINE_SETCURRENTTIME )
 }
 
 /*
-void setPaused ( bool paused )
+void setPaused( bool paused )
 */
 HB_FUNC_STATIC( QTIMELINE_SETPAUSED )
 {

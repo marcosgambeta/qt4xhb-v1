@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_HASERROR )
 }
 
 /*
-void setAutoFormatting(bool enable)
+void setAutoFormatting( bool enable )
 */
 HB_FUNC_STATIC( QXMLSTREAMWRITER_SETAUTOFORMATTING )
 {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETAUTOFORMATTING )
 }
 
 /*
-void setAutoFormattingIndent(int spacesOrTabs)
+void setAutoFormattingIndent( int spacesOrTabs )
 */
 HB_FUNC_STATIC( QXMLSTREAMWRITER_SETAUTOFORMATTINGINDENT )
 {
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETCODEC )
 }
 
 /*
-void setDevice(QIODevice * device)
+void setDevice( QIODevice * device )
 */
 HB_FUNC_STATIC( QXMLSTREAMWRITER_SETDEVICE )
 {
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEATTRIBUTE )
 }
 
 /*
-void writeAttributes(const QXmlStreamAttributes & attributes)
+void writeAttributes( const QXmlStreamAttributes & attributes )
 */
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEATTRIBUTES )
 {
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEATTRIBUTES )
 }
 
 /*
-void writeCDATA(const QString & text)
+void writeCDATA( const QString & text )
 */
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECDATA )
 {
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECDATA )
 }
 
 /*
-void writeCharacters(const QString & text)
+void writeCharacters( const QString & text )
 */
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECHARACTERS )
 {
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECHARACTERS )
 }
 
 /*
-void writeComment(const QString & text)
+void writeComment( const QString & text )
 */
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECOMMENT )
 {
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECOMMENT )
 }
 
 /*
-void writeCurrentToken(const QXmlStreamReader & reader)
+void writeCurrentToken( const QXmlStreamReader & reader )
 */
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECURRENTTOKEN )
 {
@@ -603,7 +603,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITECURRENTTOKEN )
 }
 
 /*
-void writeDTD(const QString & dtd)
+void writeDTD( const QString & dtd )
 */
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEDTD )
 {
@@ -629,7 +629,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEDTD )
 }
 
 /*
-void writeDefaultNamespace(const QString & namespaceUri)
+void writeDefaultNamespace( const QString & namespaceUri )
 */
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEDEFAULTNAMESPACE )
 {
@@ -758,7 +758,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEENDELEMENT )
 }
 
 /*
-void writeEntityReference(const QString & name)
+void writeEntityReference( const QString & name )
 */
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEENTITYREFERENCE )
 {

@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QOBJECT_DELETE )
 }
 
 /*
-bool blockSignals ( bool block )
+bool blockSignals( bool block )
 */
 HB_FUNC_STATIC( QOBJECT_BLOCKSIGNALS )
 {
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QOBJECT_DYNAMICPROPERTYNAMES )
 }
 
 /*
-virtual bool event ( QEvent * e )
+virtual bool event( QEvent * e )
 */
 HB_FUNC_STATIC( QOBJECT_EVENT )
 {
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QOBJECT_EVENT )
 }
 
 /*
-virtual bool eventFilter ( QObject * watched, QEvent * event )
+virtual bool eventFilter( QObject * watched, QEvent * event )
 */
 HB_FUNC_STATIC( QOBJECT_EVENTFILTER )
 {
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
 }
 
 /*
-bool inherits ( const char * className ) const
+bool inherits( const char * className ) const
 */
 HB_FUNC_STATIC( QOBJECT_INHERITS )
 {
@@ -639,7 +639,7 @@ HB_FUNC_STATIC( QOBJECT_INHERITS )
 }
 
 /*
-void installEventFilter ( QObject * filterObj )
+void installEventFilter( QObject * filterObj )
 */
 HB_FUNC_STATIC( QOBJECT_INSTALLEVENTFILTER )
 {
@@ -689,7 +689,7 @@ HB_FUNC_STATIC( QOBJECT_ISWIDGETTYPE )
 }
 
 /*
-void killTimer ( int id )
+void killTimer( int id )
 */
 HB_FUNC_STATIC( QOBJECT_KILLTIMER )
 {
@@ -740,7 +740,7 @@ HB_FUNC_STATIC( QOBJECT_METAOBJECT )
 }
 
 /*
-void moveToThread ( QThread * targetThread )
+void moveToThread( QThread * targetThread )
 */
 HB_FUNC_STATIC( QOBJECT_MOVETOTHREAD )
 {
@@ -815,7 +815,7 @@ HB_FUNC_STATIC( QOBJECT_PARENT )
 }
 
 /*
-QVariant property ( const char * name ) const
+QVariant property( const char * name ) const
 */
 HB_FUNC_STATIC( QOBJECT_PROPERTY )
 {
@@ -840,7 +840,7 @@ HB_FUNC_STATIC( QOBJECT_PROPERTY )
 }
 
 /*
-void removeEventFilter ( QObject * obj )
+void removeEventFilter( QObject * obj )
 */
 HB_FUNC_STATIC( QOBJECT_REMOVEEVENTFILTER )
 {
@@ -866,7 +866,7 @@ HB_FUNC_STATIC( QOBJECT_REMOVEEVENTFILTER )
 }
 
 /*
-void setObjectName ( const QString & name )
+void setObjectName( const QString & name )
 */
 HB_FUNC_STATIC( QOBJECT_SETOBJECTNAME )
 {
@@ -892,7 +892,7 @@ HB_FUNC_STATIC( QOBJECT_SETOBJECTNAME )
 }
 
 /*
-void setParent ( QObject * parent )
+void setParent( QObject * parent )
 */
 HB_FUNC_STATIC( QOBJECT_SETPARENT )
 {
@@ -918,7 +918,7 @@ HB_FUNC_STATIC( QOBJECT_SETPARENT )
 }
 
 /*
-bool setProperty ( const char * name, const QVariant & value )
+bool setProperty( const char * name, const QVariant & value )
 */
 HB_FUNC_STATIC( QOBJECT_SETPROPERTY )
 {
@@ -966,7 +966,7 @@ HB_FUNC_STATIC( QOBJECT_SIGNALSBLOCKED )
 }
 
 /*
-int startTimer ( int interval )
+int startTimer( int interval )
 */
 HB_FUNC_STATIC( QOBJECT_STARTTIMER )
 {

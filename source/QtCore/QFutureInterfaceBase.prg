@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_REPORTCANCELED )
 }
 
 /*
-void reportResultsReady(int beginIndex, int endIndex)
+void reportResultsReady( int beginIndex, int endIndex )
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_REPORTRESULTSREADY )
 {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_REPORTRESULTSREADY )
 }
 
 /*
-void setRunnable(QRunnable *runnable)
+void setRunnable( QRunnable * runnable )
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETRUNNABLE )
 {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETRUNNABLE )
 }
 
 /*
-void setFilterMode(bool enable)
+void setFilterMode( bool enable )
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETFILTERMODE )
 {
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETFILTERMODE )
 }
 
 /*
-void setProgressRange(int minimum, int maximum)
+void setProgressRange( int minimum, int maximum )
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPROGRESSRANGE )
 {
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISPROGRESSUPDATENEEDED )
 }
 
 /*
-void setProgressValue(int progressValue)
+void setProgressValue( int progressValue )
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPROGRESSVALUE )
 {
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_PROGRESSVALUE )
 }
 
 /*
-void setProgressValueAndText(int progressValue, const QString &progressText)
+void setProgressValueAndText( int progressValue, const QString & progressText )
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPROGRESSVALUEANDTEXT )
 {
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_PROGRESSTEXT )
 }
 
 /*
-void setExpectedResultCount(int resultCount)
+void setExpectedResultCount( int resultCount )
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETEXPECTEDRESULTCOUNT )
 {
@@ -567,7 +567,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_RESULTCOUNT )
 }
 
 /*
-bool queryState(State state) const
+bool queryState( QFutureInterfaceBase::State state ) const
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_QUERYSTATE )
 {
@@ -735,7 +735,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISTHROTTLED )
 }
 
 /*
-bool isResultReadyAt(int index) const
+bool isResultReadyAt( int index ) const
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISRESULTREADYAT )
 {
@@ -785,7 +785,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_CANCEL )
 }
 
 /*
-void setPaused(bool paused)
+void setPaused( bool paused )
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPAUSED )
 {
@@ -837,7 +837,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_TOGGLEPAUSED )
 }
 
 /*
-void setThrottled(bool enable)
+void setThrottled( bool enable )
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETTHROTTLED )
 {
@@ -913,7 +913,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_WAITFORNEXTRESULT )
 }
 
 /*
-void waitForResult(int resultIndex)
+void waitForResult( int resultIndex )
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_WAITFORRESULT )
 {

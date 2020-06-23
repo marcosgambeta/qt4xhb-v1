@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QUUID_VERSION )
 }
 
 /*
-static QUuid fromRfc4122(const QByteArray &)
+static QUuid fromRfc4122( const QByteArray & )
 */
 HB_FUNC_STATIC( QUUID_FROMRFC4122 )
 {

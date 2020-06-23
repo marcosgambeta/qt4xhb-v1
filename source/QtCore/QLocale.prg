@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QLOCALE_COUNTRY )
 }
 
 /*
-QString createSeparatedList ( const QStringList & list ) const
+QString createSeparatedList( const QStringList & list ) const
 */
 HB_FUNC_STATIC( QLOCALE_CREATESEPARATEDLIST )
 {
@@ -840,7 +840,7 @@ HB_FUNC_STATIC( QLOCALE_SCRIPT )
 }
 
 /*
-void setNumberOptions ( NumberOptions options )
+void setNumberOptions( QLocale::NumberOptions options )
 */
 HB_FUNC_STATIC( QLOCALE_SETNUMBEROPTIONS )
 {
@@ -1371,7 +1371,7 @@ HB_FUNC_STATIC( QLOCALE_TOLONGLONG )
 }
 
 /*
-QString toLower ( const QString & str ) const
+QString toLower( const QString & str ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOLOWER )
 {
@@ -1905,7 +1905,7 @@ HB_FUNC_STATIC( QLOCALE_TOUSHORT )
 }
 
 /*
-QString toUpper ( const QString & str ) const
+QString toUpper( const QString & str ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOUPPER )
 {
@@ -2005,7 +2005,7 @@ HB_FUNC_STATIC( QLOCALE_C )
 }
 
 /*
-static QString countryToString ( Country country )
+static QString countryToString( QLocale::Country country )
 */
 HB_FUNC_STATIC( QLOCALE_COUNTRYTOSTRING )
 {
@@ -2024,7 +2024,7 @@ HB_FUNC_STATIC( QLOCALE_COUNTRYTOSTRING )
 }
 
 /*
-static QString languageToString ( Language language )
+static QString languageToString( QLocale::Language language )
 */
 HB_FUNC_STATIC( QLOCALE_LANGUAGETOSTRING )
 {
@@ -2043,7 +2043,7 @@ HB_FUNC_STATIC( QLOCALE_LANGUAGETOSTRING )
 }
 
 /*
-static QList<QLocale> matchingLocales ( QLocale::Language language, QLocale::Script script, QLocale::Country country )
+static QList<QLocale> matchingLocales( QLocale::Language language, QLocale::Script script, QLocale::Country country )
 */
 HB_FUNC_STATIC( QLOCALE_MATCHINGLOCALES )
 {
@@ -2090,7 +2090,7 @@ HB_FUNC_STATIC( QLOCALE_MATCHINGLOCALES )
 }
 
 /*
-static QString scriptToString ( Script script )
+static QString scriptToString( QLocale::Script script )
 */
 HB_FUNC_STATIC( QLOCALE_SCRIPTTOSTRING )
 {
@@ -2109,7 +2109,7 @@ HB_FUNC_STATIC( QLOCALE_SCRIPTTOSTRING )
 }
 
 /*
-static void setDefault ( const QLocale & locale )
+static void setDefault( const QLocale & locale )
 */
 HB_FUNC_STATIC( QLOCALE_SETDEFAULT )
 {

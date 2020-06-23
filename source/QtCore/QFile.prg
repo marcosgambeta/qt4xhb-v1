@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QFILE_HANDLE )
 }
 
 /*
-void setFileName ( const QString & name )
+void setFileName( const QString & name )
 */
 HB_FUNC_STATIC( QFILE_SETFILENAME )
 {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QFILE_SETFILENAME )
 }
 
 /*
-bool unmap ( uchar * address )
+bool unmap( uchar * address )
 */
 HB_FUNC_STATIC( QFILE_UNMAP )
 {
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QFILE_POS )
 }
 
 /*
-virtual bool seek ( qint64 pos )
+virtual bool seek( qint64 pos )
 */
 HB_FUNC_STATIC( QFILE_SEEK )
 {
@@ -645,7 +645,7 @@ HB_FUNC_STATIC( QFILE_DECODENAME )
 }
 
 /*
-static QByteArray encodeName ( const QString & fileName )
+static QByteArray encodeName( const QString & fileName )
 */
 HB_FUNC_STATIC( QFILE_ENCODENAME )
 {

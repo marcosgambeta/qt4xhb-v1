@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_OPEN )
 }
 
 /*
-void setAutoRemove(bool b)
+void setAutoRemove( bool b )
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_SETAUTOREMOVE )
 {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_SETAUTOREMOVE )
 }
 
 /*
-void setFileTemplate(const QString & name)
+void setFileTemplate( const QString & name )
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_SETFILETEMPLATE )
 {

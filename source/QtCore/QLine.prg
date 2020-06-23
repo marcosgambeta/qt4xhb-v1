@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QLINE_ISNULL )
 }
 
 /*
-void setP1(const QPoint & p1)
+void setP1( const QPoint & p1 )
 */
 HB_FUNC_STATIC( QLINE_SETP1 )
 {
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QLINE_SETP1 )
 }
 
 /*
-void setP2(const QPoint & p2)
+void setP2( const QPoint & p2 )
 */
 HB_FUNC_STATIC( QLINE_SETP2 )
 {
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QLINE_SETP2 )
 }
 
 /*
-void setLine(int x1, int y1, int x2, int y2)
+void setLine( int x1, int y1, int x2, int y2 )
 */
 HB_FUNC_STATIC( QLINE_SETLINE )
 {
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QLINE_SETLINE )
 }
 
 /*
-void setPoints(const QPoint & p1, const QPoint & p2)
+void setPoints( const QPoint & p1, const QPoint & p2 )
 */
 HB_FUNC_STATIC( QLINE_SETPOINTS )
 {

@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QPROCESS_DELETE )
 }
 
 /*
-void closeReadChannel ( ProcessChannel channel )
+void closeReadChannel( QProcess::ProcessChannel channel )
 */
 HB_FUNC_STATIC( QPROCESS_CLOSEREADCHANNEL )
 {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QPROCESS_CLOSEWRITECHANNEL )
 }
 
 /*
-QStringList environment () const (deprecated)
+QStringList environment() const
 */
 HB_FUNC_STATIC( QPROCESS_ENVIRONMENT )
 {
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QPROCESS_READCHANNEL )
 }
 
 /*
-void setEnvironment ( const QStringList & environment ) (deprecated)
+void setEnvironment( const QStringList & environment )
 */
 HB_FUNC_STATIC( QPROCESS_SETENVIRONMENT )
 {
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QPROCESS_SETNATIVEARGUMENTS )
 }
 
 /*
-void setProcessChannelMode ( ProcessChannelMode mode )
+void setProcessChannelMode( QProcess::ProcessChannelMode mode )
 */
 HB_FUNC_STATIC( QPROCESS_SETPROCESSCHANNELMODE )
 {
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QPROCESS_SETPROCESSCHANNELMODE )
 }
 
 /*
-void setProcessEnvironment ( const QProcessEnvironment & environment )
+void setProcessEnvironment( const QProcessEnvironment & environment )
 */
 HB_FUNC_STATIC( QPROCESS_SETPROCESSENVIRONMENT )
 {
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QPROCESS_SETPROCESSENVIRONMENT )
 }
 
 /*
-void setReadChannel ( ProcessChannel channel )
+void setReadChannel( QProcess::ProcessChannel channel )
 */
 HB_FUNC_STATIC( QPROCESS_SETREADCHANNEL )
 {
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDERRORFILE )
 }
 
 /*
-void setStandardInputFile ( const QString & fileName )
+void setStandardInputFile( const QString & fileName )
 */
 HB_FUNC_STATIC( QPROCESS_SETSTANDARDINPUTFILE )
 {
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTFILE )
 }
 
 /*
-void setStandardOutputProcess ( QProcess * destination )
+void setStandardOutputProcess( QProcess * destination )
 */
 HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTPROCESS )
 {
@@ -658,7 +658,7 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTPROCESS )
 }
 
 /*
-void setWorkingDirectory ( const QString & dir )
+void setWorkingDirectory( const QString & dir )
 */
 HB_FUNC_STATIC( QPROCESS_SETWORKINGDIRECTORY )
 {

@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QTHREAD_PRIORITY )
 }
 
 /*
-void setPriority(Priority priority)
+void setPriority( QThread::Priority priority )
 */
 HB_FUNC_STATIC( QTHREAD_SETPRIORITY )
 {
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QTHREAD_SETPRIORITY )
 }
 
 /*
-void setStackSize(uint stackSize)
+void setStackSize( uint stackSize )
 */
 HB_FUNC_STATIC( QTHREAD_SETSTACKSIZE )
 {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QTHREAD_STACKSIZE )
 }
 
 /*
-virtual bool event(QEvent * event)
+virtual bool event( QEvent * event )
 */
 HB_FUNC_STATIC( QTHREAD_EVENT )
 {

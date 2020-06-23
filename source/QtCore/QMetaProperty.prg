@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_DELETE )
 }
 
 /*
-const char *name() const
+const char * name() const
 */
 HB_FUNC_STATIC( QMETAPROPERTY_NAME )
 {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_NAME )
 }
 
 /*
-const char *typeName() const
+const char * typeName() const
 */
 HB_FUNC_STATIC( QMETAPROPERTY_TYPENAME )
 {
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_REVISION )
 }
 
 /*
-QVariant read(const QObject *obj) const
+QVariant read( const QObject * obj ) const
 */
 HB_FUNC_STATIC( QMETAPROPERTY_READ )
 {
@@ -668,7 +668,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_READ )
 }
 
 /*
-bool write(QObject *obj, const QVariant &value) const
+bool write( QObject * obj, const QVariant & value ) const
 */
 HB_FUNC_STATIC( QMETAPROPERTY_WRITE )
 {
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_WRITE )
 }
 
 /*
-bool reset(QObject *obj) const
+bool reset( QObject * obj ) const
 */
 HB_FUNC_STATIC( QMETAPROPERTY_RESET )
 {
@@ -764,7 +764,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISVALID )
 }
 
 /*
-const QMetaObject *enclosingMetaObject() const
+const QMetaObject * enclosingMetaObject() const
 */
 HB_FUNC_STATIC( QMETAPROPERTY_ENCLOSINGMETAOBJECT )
 {

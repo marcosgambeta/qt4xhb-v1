@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_DELETE )
 }
 
 /*
-void setPattern(const QString &pattern)
+void setPattern( const QString & pattern )
 */
 HB_FUNC_STATIC( QSTRINGMATCHER_SETPATTERN )
 {
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_SETPATTERN )
 }
 
 /*
-void setCaseSensitivity(Qt::CaseSensitivity cs)
+void setCaseSensitivity( Qt::CaseSensitivity cs )
 */
 HB_FUNC_STATIC( QSTRINGMATCHER_SETCASESENSITIVITY )
 {

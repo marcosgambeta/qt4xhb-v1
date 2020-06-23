@@ -55,7 +55,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-static int registerTypedef(const char *typeName, int aliasId)
+static int registerTypedef( const char * typeName, int aliasId )
 */
 HB_FUNC_STATIC( QMETATYPE_REGISTERTYPEDEF )
 {
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QMETATYPE_REGISTERTYPEDEF )
 }
 
 /*
-static int type(const char *typeName)
+static int type( const char * typeName )
 */
 HB_FUNC_STATIC( QMETATYPE_TYPE )
 {
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QMETATYPE_TYPE )
 }
 
 /*
-static const char *typeName(int type)
+static const char * typeName( int type )
 */
 HB_FUNC_STATIC( QMETATYPE_TYPENAME )
 {
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QMETATYPE_TYPENAME )
 }
 
 /*
-static bool isRegistered(int type)
+static bool isRegistered( int type )
 */
 HB_FUNC_STATIC( QMETATYPE_ISREGISTERED )
 {
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QMETATYPE_CONSTRUCT )
 }
 
 /*
-static void destroy(int type, void *data)
+static void destroy( int type, void * data )
 */
 HB_FUNC_STATIC( QMETATYPE_DESTROY )
 {
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QMETATYPE_DESTROY )
 }
 
 /*
-static void unregisterType(const char *typeName)
+static void unregisterType( const char * typeName )
 */
 HB_FUNC_STATIC( QMETATYPE_UNREGISTERTYPE )
 {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QMETATYPE_UNREGISTERTYPE )
 }
 
 /*
-static bool save(QDataStream &stream, int type, const void *data)
+static bool save( QDataStream & stream, int type, const void * data )
 */
 HB_FUNC_STATIC( QMETATYPE_SAVE )
 {
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QMETATYPE_SAVE )
 }
 
 /*
-static bool load(QDataStream &stream, int type, void *data)
+static bool load( QDataStream & stream, int type, void * data )
 */
 HB_FUNC_STATIC( QMETATYPE_LOAD )
 {

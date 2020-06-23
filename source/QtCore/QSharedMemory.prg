@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_DELETE )
 }
 
 /*
-void setKey(const QString &key)
+void setKey( const QString & key )
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_SETKEY )
 {
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_KEY )
 }
 
 /*
-void setNativeKey(const QString &key)
+void setNativeKey( const QString & key )
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_SETNATIVEKEY )
 {
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_DETACH )
 }
 
 /*
-void *data()
+void * data()
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_DATA )
 {

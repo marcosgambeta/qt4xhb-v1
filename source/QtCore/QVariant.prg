@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QVARIANT_DELETE )
 }
 
 /*
-bool canConvert ( Type t ) const
+bool canConvert( QVariant::Type t ) const
 */
 HB_FUNC_STATIC( QVARIANT_CANCONVERT )
 {
@@ -731,7 +731,7 @@ HB_FUNC_STATIC( QVARIANT_CLEAR )
 }
 
 /*
-bool convert ( Type t )
+bool convert( QVariant::Type t )
 */
 HB_FUNC_STATIC( QVARIANT_CONVERT )
 {
@@ -1447,7 +1447,7 @@ HB_FUNC_STATIC( QVARIANT_USERTYPE )
 }
 
 /*
-static Type nameToType ( const char * name )
+static QVariant::Type nameToType( const char * name )
 */
 HB_FUNC_STATIC( QVARIANT_NAMETOTYPE )
 {
@@ -1466,7 +1466,7 @@ HB_FUNC_STATIC( QVARIANT_NAMETOTYPE )
 }
 
 /*
-static const char * typeToName ( Type typ )
+static const char * typeToName( QVariant::Type typ )
 */
 HB_FUNC_STATIC( QVARIANT_TYPETONAME )
 {

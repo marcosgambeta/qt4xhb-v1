@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QEASINGCURVE_PERIOD )
 }
 
 /*
-void setAmplitude ( qreal amplitude )
+void setAmplitude( qreal amplitude )
 */
 HB_FUNC_STATIC( QEASINGCURVE_SETAMPLITUDE )
 {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETAMPLITUDE )
 }
 
 /*
-void setOvershoot ( qreal overshoot )
+void setOvershoot( qreal overshoot )
 */
 HB_FUNC_STATIC( QEASINGCURVE_SETOVERSHOOT )
 {
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETOVERSHOOT )
 }
 
 /*
-void setPeriod ( qreal period )
+void setPeriod( qreal period )
 */
 HB_FUNC_STATIC( QEASINGCURVE_SETPERIOD )
 {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QEASINGCURVE_SETPERIOD )
 }
 
 /*
-void setType ( Type type )
+void setType( QEasingCurve::Type type )
 */
 HB_FUNC_STATIC( QEASINGCURVE_SETTYPE )
 {

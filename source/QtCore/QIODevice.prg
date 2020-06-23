@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QIODEVICE_ERRORSTRING )
 }
 
 /*
-bool getChar ( char * c )
+bool getChar( char * c )
 */
 HB_FUNC_STATIC( QIODEVICE_GETCHAR )
 {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QIODEVICE_ISWRITABLE )
 }
 
 /*
-virtual bool open ( OpenMode mode )
+virtual bool open( QIODevice::OpenMode mode )
 */
 HB_FUNC_STATIC( QIODEVICE_OPEN )
 {
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QIODEVICE_OPEN )
 }
 
 /*
-OpenMode openMode () const
+QIODevice::OpenMode openMode() const
 */
 HB_FUNC_STATIC( QIODEVICE_OPENMODE )
 {
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QIODEVICE_POS )
 }
 
 /*
-bool putChar ( char c )
+bool putChar( char c )
 */
 HB_FUNC_STATIC( QIODEVICE_PUTCHAR )
 {
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QIODEVICE_RESET )
 }
 
 /*
-virtual bool seek ( qint64 pos )
+virtual bool seek( qint64 pos )
 */
 HB_FUNC_STATIC( QIODEVICE_SEEK )
 {
@@ -696,7 +696,7 @@ HB_FUNC_STATIC( QIODEVICE_SEEK )
 }
 
 /*
-void setTextModeEnabled ( bool enabled )
+void setTextModeEnabled( bool enabled )
 */
 HB_FUNC_STATIC( QIODEVICE_SETTEXTMODEENABLED )
 {
@@ -746,7 +746,7 @@ HB_FUNC_STATIC( QIODEVICE_SIZE )
 }
 
 /*
-void ungetChar ( char c )
+void ungetChar( char c )
 */
 HB_FUNC_STATIC( QIODEVICE_UNGETCHAR )
 {
@@ -772,7 +772,7 @@ HB_FUNC_STATIC( QIODEVICE_UNGETCHAR )
 }
 
 /*
-virtual bool waitForBytesWritten ( int msecs )
+virtual bool waitForBytesWritten( int msecs )
 */
 HB_FUNC_STATIC( QIODEVICE_WAITFORBYTESWRITTEN )
 {
@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QIODEVICE_WAITFORBYTESWRITTEN )
 }
 
 /*
-virtual bool waitForReadyRead ( int msecs )
+virtual bool waitForReadyRead( int msecs )
 */
 HB_FUNC_STATIC( QIODEVICE_WAITFORREADYREAD )
 {

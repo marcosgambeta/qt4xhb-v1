@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND )
 }
 
 /*
-char at ( int i ) const
+char at( int i ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_AT )
 {
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QBYTEARRAY_CAPACITY )
 }
 
 /*
-void chop ( int n )
+void chop( int n )
 */
 HB_FUNC_STATIC( QBYTEARRAY_CHOP )
 {
@@ -1233,7 +1233,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF )
 }
 
 /*
-QByteArray left ( int len ) const
+QByteArray left( int len ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_LEFT )
 {
@@ -1605,7 +1605,7 @@ HB_FUNC_STATIC( QBYTEARRAY_PUSH_FRONT )
 }
 
 /*
-QByteArray & remove ( int pos, int len )
+QByteArray & remove( int pos, int len )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REMOVE )
 {
@@ -1630,7 +1630,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REMOVE )
 }
 
 /*
-QByteArray repeated ( int times ) const
+QByteArray repeated( int times ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPEATED )
 {
@@ -2086,7 +2086,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE )
 }
 
 /*
-void reserve ( int size )
+void reserve( int size )
 */
 HB_FUNC_STATIC( QBYTEARRAY_RESERVE )
 {
@@ -2112,7 +2112,7 @@ HB_FUNC_STATIC( QBYTEARRAY_RESERVE )
 }
 
 /*
-void resize ( int size )
+void resize( int size )
 */
 HB_FUNC_STATIC( QBYTEARRAY_RESIZE )
 {
@@ -2138,7 +2138,7 @@ HB_FUNC_STATIC( QBYTEARRAY_RESIZE )
 }
 
 /*
-QByteArray right ( int len ) const
+QByteArray right( int len ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_RIGHT )
 {
@@ -2439,7 +2439,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM )
 }
 
 /*
-QByteArray & setRawData ( const char * data, uint size )
+QByteArray & setRawData( const char * data, uint size )
 */
 HB_FUNC_STATIC( QBYTEARRAY_SETRAWDATA )
 {
@@ -2513,7 +2513,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SIZE )
 }
 
 /*
-QList<QByteArray> split ( char sep ) const
+QList<QByteArray> split( char sep ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_SPLIT )
 {
@@ -3066,7 +3066,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TRIMMED )
 }
 
 /*
-void truncate ( int pos )
+void truncate( int pos )
 */
 HB_FUNC_STATIC( QBYTEARRAY_TRUNCATE )
 {
@@ -3092,7 +3092,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TRUNCATE )
 }
 
 /*
-static QByteArray fromBase64 ( const QByteArray & base64 )
+static QByteArray fromBase64( const QByteArray & base64 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_FROMBASE64 )
 {
@@ -3112,7 +3112,7 @@ HB_FUNC_STATIC( QBYTEARRAY_FROMBASE64 )
 }
 
 /*
-static QByteArray fromHex ( const QByteArray & hexEncoded )
+static QByteArray fromHex( const QByteArray & hexEncoded )
 */
 HB_FUNC_STATIC( QBYTEARRAY_FROMHEX )
 {

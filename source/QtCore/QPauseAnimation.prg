@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QPAUSEANIMATION_DELETE )
 }
 
 /*
-void setDuration ( int msecs )
+void setDuration( int msecs )
 */
 HB_FUNC_STATIC( QPAUSEANIMATION_SETDURATION )
 {

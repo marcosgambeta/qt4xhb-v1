@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QEVENT_ISACCEPTED )
 }
 
 /*
-void setAccepted ( bool accepted )
+void setAccepted( bool accepted )
 */
 HB_FUNC_STATIC( QEVENT_SETACCEPTED )
 {

@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QBUFFER_BUFFER )
 }
 
 /*
-const QByteArray & data () const
+const QByteArray & data() const
 */
 HB_FUNC_STATIC( QBUFFER_DATA )
 {
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QBUFFER_DATA )
 }
 
 /*
-void setBuffer ( QByteArray * byteArray )
+void setBuffer( QByteArray * byteArray )
 */
 HB_FUNC_STATIC( QBUFFER_SETBUFFER )
 {
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QBUFFER_CLOSE )
 }
 
 /*
-virtual bool open ( OpenMode flags )
+virtual bool open( QBuffer::OpenMode flags )
 */
 HB_FUNC_STATIC( QBUFFER_OPEN )
 {
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QBUFFER_POS )
 }
 
 /*
-virtual bool seek ( qint64 pos )
+virtual bool seek( qint64 pos )
 */
 HB_FUNC_STATIC( QBUFFER_SEEK )
 {

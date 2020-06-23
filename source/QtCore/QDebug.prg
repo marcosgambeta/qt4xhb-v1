@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QDEBUG_DELETE )
 }
 
 /*
-QDebug & maybeSpace ()
+QDebug & maybeSpace()
 */
 HB_FUNC_STATIC( QDEBUG_MAYBESPACE )
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QDEBUG_MAYBESPACE )
 }
 
 /*
-QDebug & nospace ()
+QDebug & nospace()
 */
 HB_FUNC_STATIC( QDEBUG_NOSPACE )
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QDEBUG_NOSPACE )
 }
 
 /*
-QDebug & space ()
+QDebug & space()
 */
 HB_FUNC_STATIC( QDEBUG_SPACE )
 {

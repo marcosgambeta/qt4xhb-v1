@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_ISENABLED )
 }
 
 /*
-void setEnabled(bool)
+void setEnabled( bool )
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_SETENABLED )
 {

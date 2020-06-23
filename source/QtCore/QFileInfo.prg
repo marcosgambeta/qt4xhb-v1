@@ -1014,7 +1014,7 @@ HB_FUNC_STATIC( QFILEINFO_PATH )
 }
 
 /*
-bool permission(QFile::Permissions permissions) const
+bool permission( QFile::Permissions permissions ) const
 */
 HB_FUNC_STATIC( QFILEINFO_PERMISSION )
 {
@@ -1088,7 +1088,7 @@ HB_FUNC_STATIC( QFILEINFO_REFRESH )
 }
 
 /*
-void setCaching(bool enable)
+void setCaching( bool enable )
 */
 HB_FUNC_STATIC( QFILEINFO_SETCACHING )
 {

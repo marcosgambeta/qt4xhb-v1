@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QMIMEDATA_COLORDATA )
 }
 
 /*
-QByteArray data ( const QString & mimeType ) const
+QByteArray data( const QString & mimeType ) const
 */
 HB_FUNC_STATIC( QMIMEDATA_DATA )
 {
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASCOLOR )
 }
 
 /*
-virtual bool hasFormat ( const QString & mimeType ) const
+virtual bool hasFormat( const QString & mimeType ) const
 */
 HB_FUNC_STATIC( QMIMEDATA_HASFORMAT )
 {
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QMIMEDATA_IMAGEDATA )
 }
 
 /*
-void removeFormat ( const QString & mimeType )
+void removeFormat( const QString & mimeType )
 */
 HB_FUNC_STATIC( QMIMEDATA_REMOVEFORMAT )
 {
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QMIMEDATA_REMOVEFORMAT )
 }
 
 /*
-void setColorData ( const QVariant & color )
+void setColorData( const QVariant & color )
 */
 HB_FUNC_STATIC( QMIMEDATA_SETCOLORDATA )
 {
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETCOLORDATA )
 }
 
 /*
-void setData ( const QString & mimeType, const QByteArray & data )
+void setData( const QString & mimeType, const QByteArray & data )
 */
 HB_FUNC_STATIC( QMIMEDATA_SETDATA )
 {
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETDATA )
 }
 
 /*
-void setHtml ( const QString & html )
+void setHtml( const QString & html )
 */
 HB_FUNC_STATIC( QMIMEDATA_SETHTML )
 {
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETHTML )
 }
 
 /*
-void setImageData ( const QVariant & image )
+void setImageData( const QVariant & image )
 */
 HB_FUNC_STATIC( QMIMEDATA_SETIMAGEDATA )
 {
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETIMAGEDATA )
 }
 
 /*
-void setText ( const QString & text )
+void setText( const QString & text )
 */
 HB_FUNC_STATIC( QMIMEDATA_SETTEXT )
 {
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETTEXT )
 }
 
 /*
-void setUrls ( const QList<QUrl> & urls )
+void setUrls( const QList<QUrl> & urls )
 */
 HB_FUNC_STATIC( QMIMEDATA_SETURLS )
 {

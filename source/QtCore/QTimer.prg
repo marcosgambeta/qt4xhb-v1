@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QTIMER_ISSINGLESHOT )
 }
 
 /*
-void setInterval ( int msec )
+void setInterval( int msec )
 */
 HB_FUNC_STATIC( QTIMER_SETINTERVAL )
 {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QTIMER_SETINTERVAL )
 }
 
 /*
-void setSingleShot ( bool singleShot )
+void setSingleShot( bool singleShot )
 */
 HB_FUNC_STATIC( QTIMER_SETSINGLESHOT )
 {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QTIMER_STOP )
 }
 
 /*
-static void singleShot ( int msec, QObject * receiver, const char * member )
+static void singleShot( int msec, QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QTIMER_SINGLESHOT )
 {

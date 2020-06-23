@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QDATE_DELETE )
 }
 
 /*
-QDate addDays ( int ndays ) const
+QDate addDays( int ndays ) const
 */
 HB_FUNC_STATIC( QDATE_ADDDAYS )
 {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QDATE_ADDDAYS )
 }
 
 /*
-QDate addMonths ( int nmonths ) const
+QDate addMonths( int nmonths ) const
 */
 HB_FUNC_STATIC( QDATE_ADDMONTHS )
 {
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QDATE_ADDMONTHS )
 }
 
 /*
-QDate addYears ( int nyears ) const
+QDate addYears( int nyears ) const
 */
 HB_FUNC_STATIC( QDATE_ADDYEARS )
 {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QDATE_DAYSINYEAR )
 }
 
 /*
-int daysTo ( const QDate & d ) const
+int daysTo( const QDate & d ) const
 */
 HB_FUNC_STATIC( QDATE_DAYSTO )
 {
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QDATE_DAYSTO )
 }
 
 /*
-void getDate ( int * year, int * month, int * day )
+void getDate( int * year, int * month, int * day )
 */
 HB_FUNC_STATIC( QDATE_GETDATE )
 {
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QDATE_MONTH )
 }
 
 /*
-bool setDate ( int year, int month, int day )
+bool setDate( int year, int month, int day )
 */
 HB_FUNC_STATIC( QDATE_SETDATE )
 {
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QDATE_CURRENTDATE )
 }
 
 /*
-static QDate fromJulianDay ( int jd )
+static QDate fromJulianDay( int jd )
 */
 HB_FUNC_STATIC( QDATE_FROMJULIANDAY )
 {
@@ -655,7 +655,7 @@ HB_FUNC_STATIC( QDATE_FROMSTRING )
 }
 
 /*
-static bool isLeapYear ( int year )
+static bool isLeapYear( int year )
 */
 HB_FUNC_STATIC( QDATE_ISLEAPYEAR )
 {

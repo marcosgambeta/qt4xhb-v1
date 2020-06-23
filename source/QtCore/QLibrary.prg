@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QLIBRARY_ISLOADED )
 }
 
 /*
-void setFileName(const QString &fileName)
+void setFileName( const QString & fileName )
 */
 HB_FUNC_STATIC( QLIBRARY_SETFILENAME )
 {
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QLIBRARY_ERRORSTRING )
 }
 
 /*
-void setLoadHints(LoadHints hints)
+void setLoadHints( QLibrary::LoadHints hints )
 */
 HB_FUNC_STATIC( QLIBRARY_SETLOADHINTS )
 {
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QLIBRARY_RESOLVE )
 }
 
 /*
-static bool isLibrary(const QString &fileName)
+static bool isLibrary( const QString & fileName )
 */
 HB_FUNC_STATIC( QLIBRARY_ISLIBRARY )
 {

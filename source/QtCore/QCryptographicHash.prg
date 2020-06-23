@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESULT )
 }
 
 /*
-static QByteArray hash ( const QByteArray & data, Algorithm method )
+static QByteArray hash( const QByteArray & data, QCryptographicHash::Algorithm method )
 */
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_HASH )
 {

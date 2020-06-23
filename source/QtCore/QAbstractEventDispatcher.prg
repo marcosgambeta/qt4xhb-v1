@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_DELETE )
 }
 
 /*
-bool filterEvent ( void * message )
+bool filterEvent( void * message )
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FILTEREVENT )
 {
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INTERRUPT )
 }
 
 /*
-virtual bool processEvents ( QEventLoop::ProcessEventsFlags flags ) = 0
+virtual bool processEvents( QEventLoop::ProcessEventsFlags flags ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_PROCESSEVENTS )
 {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_PROCESSEVENTS )
 }
 
 /*
-virtual void registerSocketNotifier ( QSocketNotifier * notifier ) = 0
+virtual void registerSocketNotifier( QSocketNotifier * notifier ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERSOCKETNOTIFIER )
 {
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER )
 }
 
 /*
-virtual void unregisterSocketNotifier ( QSocketNotifier * notifier ) = 0
+virtual void unregisterSocketNotifier( QSocketNotifier * notifier ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERSOCKETNOTIFIER )
 {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERSOCKETNOTIFIER )
 }
 
 /*
-virtual bool unregisterTimer ( int timerId ) = 0
+virtual bool unregisterTimer( int timerId ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMER )
 {
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMER )
 }
 
 /*
-virtual bool unregisterTimers ( QObject * object ) = 0
+virtual bool unregisterTimers( QObject * object ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMERS )
 {

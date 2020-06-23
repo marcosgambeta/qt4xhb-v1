@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_DELETE )
 }
 
 /*
-virtual QModelIndex buddy ( const QModelIndex & index ) const
+virtual QModelIndex buddy( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_BUDDY )
 {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_BUDDY )
 }
 
 /*
-virtual bool canFetchMore ( const QModelIndex & parent ) const
+virtual bool canFetchMore( const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_CANFETCHMORE )
 {
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_DATA )
 }
 
 /*
-virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
+virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_DROPMIMEDATA )
 {
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_DROPMIMEDATA )
 }
 
 /*
-virtual void fetchMore ( const QModelIndex & parent )
+virtual void fetchMore( const QModelIndex & parent )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_FETCHMORE )
 {
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_FETCHMORE )
 }
 
 /*
-virtual Qt::ItemFlags flags ( const QModelIndex & index ) const
+virtual Qt::ItemFlags flags( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_FLAGS )
 {
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MATCH )
 }
 
 /*
-virtual QMimeData * mimeData ( const QModelIndexList & indexes ) const
+virtual QMimeData * mimeData( const QModelIndexList & indexes ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_MIMEDATA )
 {
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MIMETYPES )
 }
 
 /*
-virtual QModelIndex parent ( const QModelIndex & index ) const = 0
+virtual QModelIndex parent( const QModelIndex & index ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_PARENT )
 {
@@ -788,7 +788,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETHEADERDATA )
 }
 
 /*
-void setSupportedDragActions ( Qt::DropActions actions )
+void setSupportedDragActions( Qt::DropActions actions )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETSUPPORTEDDRAGACTIONS )
 {
@@ -814,7 +814,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETSUPPORTEDDRAGACTIONS )
 }
 
 /*
-QModelIndex sibling ( int row, int column, const QModelIndex & index ) const
+QModelIndex sibling( int row, int column, const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_SIBLING )
 {
@@ -865,7 +865,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SORT )
 }
 
 /*
-virtual QSize span ( const QModelIndex & index ) const
+virtual QSize span( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_SPAN )
 {

@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QRECTF_DELETE )
 }
 
 /*
-void adjust ( qreal dx1, qreal dy1, qreal dx2, qreal dy2 )
+void adjust( qreal dx1, qreal dy1, qreal dx2, qreal dy2 )
 */
 HB_FUNC_STATIC( QRECTF_ADJUST )
 {
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QRECTF_ADJUST )
 }
 
 /*
-QRectF adjusted ( qreal dx1, qreal dy1, qreal dx2, qreal dy2 ) const
+QRectF adjusted( qreal dx1, qreal dy1, qreal dx2, qreal dy2 ) const
 */
 HB_FUNC_STATIC( QRECTF_ADJUSTED )
 {
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QRECTF_CONTAINS )
 }
 
 /*
-void getCoords ( qreal * x1, qreal * y1, qreal * x2, qreal * y2 ) const
+void getCoords( qreal * x1, qreal * y1, qreal * x2, qreal * y2 ) const
 */
 HB_FUNC_STATIC( QRECTF_GETCOORDS )
 {
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QRECTF_GETCOORDS )
 }
 
 /*
-void getRect ( qreal * x, qreal * y, qreal * width, qreal * height ) const
+void getRect( qreal * x, qreal * y, qreal * width, qreal * height ) const
 */
 HB_FUNC_STATIC( QRECTF_GETRECT )
 {
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QRECTF_HEIGHT )
 }
 
 /*
-QRectF intersected ( const QRectF & rectangle ) const
+QRectF intersected( const QRectF & rectangle ) const
 */
 HB_FUNC_STATIC( QRECTF_INTERSECTED )
 {
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QRECTF_INTERSECTED )
 }
 
 /*
-bool intersects ( const QRectF & rectangle ) const
+bool intersects( const QRectF & rectangle ) const
 */
 HB_FUNC_STATIC( QRECTF_INTERSECTS )
 {
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QRECTF_LEFT )
 }
 
 /*
-void moveBottom ( qreal y )
+void moveBottom( qreal y )
 */
 HB_FUNC_STATIC( QRECTF_MOVEBOTTOM )
 {
@@ -682,7 +682,7 @@ HB_FUNC_STATIC( QRECTF_MOVEBOTTOM )
 }
 
 /*
-void moveBottomLeft ( const QPointF & position )
+void moveBottomLeft( const QPointF & position )
 */
 HB_FUNC_STATIC( QRECTF_MOVEBOTTOMLEFT )
 {
@@ -708,7 +708,7 @@ HB_FUNC_STATIC( QRECTF_MOVEBOTTOMLEFT )
 }
 
 /*
-void moveBottomRight ( const QPointF & position )
+void moveBottomRight( const QPointF & position )
 */
 HB_FUNC_STATIC( QRECTF_MOVEBOTTOMRIGHT )
 {
@@ -734,7 +734,7 @@ HB_FUNC_STATIC( QRECTF_MOVEBOTTOMRIGHT )
 }
 
 /*
-void moveCenter ( const QPointF & position )
+void moveCenter( const QPointF & position )
 */
 HB_FUNC_STATIC( QRECTF_MOVECENTER )
 {
@@ -760,7 +760,7 @@ HB_FUNC_STATIC( QRECTF_MOVECENTER )
 }
 
 /*
-void moveLeft ( qreal x )
+void moveLeft( qreal x )
 */
 HB_FUNC_STATIC( QRECTF_MOVELEFT )
 {
@@ -786,7 +786,7 @@ HB_FUNC_STATIC( QRECTF_MOVELEFT )
 }
 
 /*
-void moveRight ( qreal x )
+void moveRight( qreal x )
 */
 HB_FUNC_STATIC( QRECTF_MOVERIGHT )
 {
@@ -863,7 +863,7 @@ HB_FUNC_STATIC( QRECTF_MOVETO )
 }
 
 /*
-void moveTop ( qreal y )
+void moveTop( qreal y )
 */
 HB_FUNC_STATIC( QRECTF_MOVETOP )
 {
@@ -889,7 +889,7 @@ HB_FUNC_STATIC( QRECTF_MOVETOP )
 }
 
 /*
-void moveTopLeft ( const QPointF & position )
+void moveTopLeft( const QPointF & position )
 */
 HB_FUNC_STATIC( QRECTF_MOVETOPLEFT )
 {
@@ -915,7 +915,7 @@ HB_FUNC_STATIC( QRECTF_MOVETOPLEFT )
 }
 
 /*
-void moveTopRight ( const QPointF & position )
+void moveTopRight( const QPointF & position )
 */
 HB_FUNC_STATIC( QRECTF_MOVETOPRIGHT )
 {
@@ -990,7 +990,7 @@ HB_FUNC_STATIC( QRECTF_RIGHT )
 }
 
 /*
-void setBottom ( qreal y )
+void setBottom( qreal y )
 */
 HB_FUNC_STATIC( QRECTF_SETBOTTOM )
 {
@@ -1016,7 +1016,7 @@ HB_FUNC_STATIC( QRECTF_SETBOTTOM )
 }
 
 /*
-void setBottomLeft ( const QPointF & position )
+void setBottomLeft( const QPointF & position )
 */
 HB_FUNC_STATIC( QRECTF_SETBOTTOMLEFT )
 {
@@ -1042,7 +1042,7 @@ HB_FUNC_STATIC( QRECTF_SETBOTTOMLEFT )
 }
 
 /*
-void setBottomRight ( const QPointF & position )
+void setBottomRight( const QPointF & position )
 */
 HB_FUNC_STATIC( QRECTF_SETBOTTOMRIGHT )
 {
@@ -1068,7 +1068,7 @@ HB_FUNC_STATIC( QRECTF_SETBOTTOMRIGHT )
 }
 
 /*
-void setCoords ( qreal x1, qreal y1, qreal x2, qreal y2 )
+void setCoords( qreal x1, qreal y1, qreal x2, qreal y2 )
 */
 HB_FUNC_STATIC( QRECTF_SETCOORDS )
 {
@@ -1094,7 +1094,7 @@ HB_FUNC_STATIC( QRECTF_SETCOORDS )
 }
 
 /*
-void setHeight ( qreal height )
+void setHeight( qreal height )
 */
 HB_FUNC_STATIC( QRECTF_SETHEIGHT )
 {
@@ -1120,7 +1120,7 @@ HB_FUNC_STATIC( QRECTF_SETHEIGHT )
 }
 
 /*
-void setLeft ( qreal x )
+void setLeft( qreal x )
 */
 HB_FUNC_STATIC( QRECTF_SETLEFT )
 {
@@ -1146,7 +1146,7 @@ HB_FUNC_STATIC( QRECTF_SETLEFT )
 }
 
 /*
-void setRect ( qreal x, qreal y, qreal width, qreal height )
+void setRect( qreal x, qreal y, qreal width, qreal height )
 */
 HB_FUNC_STATIC( QRECTF_SETRECT )
 {
@@ -1172,7 +1172,7 @@ HB_FUNC_STATIC( QRECTF_SETRECT )
 }
 
 /*
-void setRight ( qreal x )
+void setRight( qreal x )
 */
 HB_FUNC_STATIC( QRECTF_SETRIGHT )
 {
@@ -1198,7 +1198,7 @@ HB_FUNC_STATIC( QRECTF_SETRIGHT )
 }
 
 /*
-void setSize ( const QSizeF & size )
+void setSize( const QSizeF & size )
 */
 HB_FUNC_STATIC( QRECTF_SETSIZE )
 {
@@ -1224,7 +1224,7 @@ HB_FUNC_STATIC( QRECTF_SETSIZE )
 }
 
 /*
-void setTop ( qreal y )
+void setTop( qreal y )
 */
 HB_FUNC_STATIC( QRECTF_SETTOP )
 {
@@ -1250,7 +1250,7 @@ HB_FUNC_STATIC( QRECTF_SETTOP )
 }
 
 /*
-void setTopLeft ( const QPointF & position )
+void setTopLeft( const QPointF & position )
 */
 HB_FUNC_STATIC( QRECTF_SETTOPLEFT )
 {
@@ -1276,7 +1276,7 @@ HB_FUNC_STATIC( QRECTF_SETTOPLEFT )
 }
 
 /*
-void setTopRight ( const QPointF & position )
+void setTopRight( const QPointF & position )
 */
 HB_FUNC_STATIC( QRECTF_SETTOPRIGHT )
 {
@@ -1302,7 +1302,7 @@ HB_FUNC_STATIC( QRECTF_SETTOPRIGHT )
 }
 
 /*
-void setWidth ( qreal width )
+void setWidth( qreal width )
 */
 HB_FUNC_STATIC( QRECTF_SETWIDTH )
 {
@@ -1328,7 +1328,7 @@ HB_FUNC_STATIC( QRECTF_SETWIDTH )
 }
 
 /*
-void setX ( qreal x )
+void setX( qreal x )
 */
 HB_FUNC_STATIC( QRECTF_SETX )
 {
@@ -1354,7 +1354,7 @@ HB_FUNC_STATIC( QRECTF_SETX )
 }
 
 /*
-void setY ( qreal y )
+void setY( qreal y )
 */
 HB_FUNC_STATIC( QRECTF_SETY )
 {
@@ -1380,7 +1380,7 @@ HB_FUNC_STATIC( QRECTF_SETY )
 }
 
 /*
-QSizeF size () const
+QSizeF size() const
 */
 HB_FUNC_STATIC( QRECTF_SIZE )
 {
@@ -1629,7 +1629,7 @@ HB_FUNC_STATIC( QRECTF_TRANSLATED )
 }
 
 /*
-QRectF united ( const QRectF & rectangle ) const
+QRectF united( const QRectF & rectangle ) const
 */
 HB_FUNC_STATIC( QRECTF_UNITED )
 {

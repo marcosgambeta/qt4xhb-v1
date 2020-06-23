@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_DELETE )
 }
 
 /*
-QPauseAnimation * addPause ( int msecs )
+QPauseAnimation * addPause( int msecs )
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ADDPAUSE )
 {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION )
 }
 
 /*
-QPauseAnimation * insertPause ( int index, int msecs )
+QPauseAnimation * insertPause( int index, int msecs )
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_INSERTPAUSE )
 {

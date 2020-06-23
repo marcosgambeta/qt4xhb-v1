@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_LOOPCOUNT )
 }
 
 /*
-void  setDirection ( Direction direction )
+void setDirection( QAbstractAnimation::Direction direction )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_SETDIRECTION )
 {
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_SETDIRECTION )
 }
 
 /*
-void setLoopCount ( int loopCount )
+void setLoopCount( int loopCount )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_SETLOOPCOUNT )
 {
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_RESUME )
 }
 
 /*
-void setCurrentTime ( int msecs )
+void setCurrentTime( int msecs )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_SETCURRENTTIME )
 {
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_SETCURRENTTIME )
 }
 
 /*
-void setPaused ( bool paused )
+void setPaused( bool paused )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_SETPAUSED )
 {

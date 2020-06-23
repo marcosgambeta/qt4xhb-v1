@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QURL_DELETE )
 }
 
 /*
-void addEncodedQueryItem ( const QByteArray & key, const QByteArray & value )
+void addEncodedQueryItem( const QByteArray & key, const QByteArray & value )
 */
 HB_FUNC_STATIC( QURL_ADDENCODEDQUERYITEM )
 {
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QURL_ADDENCODEDQUERYITEM )
 }
 
 /*
-void addQueryItem ( const QString & key, const QString & value )
+void addQueryItem( const QString & key, const QString & value )
 */
 HB_FUNC_STATIC( QURL_ADDQUERYITEM )
 {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QURL_ADDQUERYITEM )
 }
 
 /*
-QList<QByteArray> allEncodedQueryItemValues ( const QByteArray & key ) const
+QList<QByteArray> allEncodedQueryItemValues( const QByteArray & key ) const
 */
 HB_FUNC_STATIC( QURL_ALLENCODEDQUERYITEMVALUES )
 {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QURL_ALLENCODEDQUERYITEMVALUES )
 }
 
 /*
-QStringList allQueryItemValues ( const QString & key ) const
+QStringList allQueryItemValues( const QString & key ) const
 */
 HB_FUNC_STATIC( QURL_ALLQUERYITEMVALUES )
 {
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QURL_ENCODEDQUERY )
 }
 
 /*
-QByteArray encodedQueryItemValue ( const QByteArray & key ) const
+QByteArray encodedQueryItemValue( const QByteArray & key ) const
 */
 HB_FUNC_STATIC( QURL_ENCODEDQUERYITEMVALUE )
 {
@@ -605,7 +605,7 @@ HB_FUNC_STATIC( QURL_FRAGMENT )
 }
 
 /*
-bool hasEncodedQueryItem ( const QByteArray & key ) const
+bool hasEncodedQueryItem( const QByteArray & key ) const
 */
 HB_FUNC_STATIC( QURL_HASENCODEDQUERYITEM )
 {
@@ -677,7 +677,7 @@ HB_FUNC_STATIC( QURL_HASQUERY )
 }
 
 /*
-bool hasQueryItem ( const QString & key ) const
+bool hasQueryItem( const QString & key ) const
 */
 HB_FUNC_STATIC( QURL_HASQUERYITEM )
 {
@@ -773,7 +773,7 @@ HB_FUNC_STATIC( QURL_ISLOCALFILE )
 }
 
 /*
-bool isParentOf ( const QUrl & childUrl ) const
+bool isParentOf( const QUrl & childUrl ) const
 */
 HB_FUNC_STATIC( QURL_ISPARENTOF )
 {
@@ -940,7 +940,7 @@ HB_FUNC_STATIC( QURL_PORT )
 }
 
 /*
-QString queryItemValue ( const QString & key ) const
+QString queryItemValue( const QString & key ) const
 */
 HB_FUNC_STATIC( QURL_QUERYITEMVALUE )
 {
@@ -964,7 +964,7 @@ HB_FUNC_STATIC( QURL_QUERYITEMVALUE )
 }
 
 /*
-void removeAllEncodedQueryItems ( const QByteArray & key )
+void removeAllEncodedQueryItems( const QByteArray & key )
 */
 HB_FUNC_STATIC( QURL_REMOVEALLENCODEDQUERYITEMS )
 {
@@ -990,7 +990,7 @@ HB_FUNC_STATIC( QURL_REMOVEALLENCODEDQUERYITEMS )
 }
 
 /*
-void removeAllQueryItems ( const QString & key )
+void removeAllQueryItems( const QString & key )
 */
 HB_FUNC_STATIC( QURL_REMOVEALLQUERYITEMS )
 {
@@ -1016,7 +1016,7 @@ HB_FUNC_STATIC( QURL_REMOVEALLQUERYITEMS )
 }
 
 /*
-void removeEncodedQueryItem ( const QByteArray & key )
+void removeEncodedQueryItem( const QByteArray & key )
 */
 HB_FUNC_STATIC( QURL_REMOVEENCODEDQUERYITEM )
 {
@@ -1042,7 +1042,7 @@ HB_FUNC_STATIC( QURL_REMOVEENCODEDQUERYITEM )
 }
 
 /*
-void removeQueryItem ( const QString & key )
+void removeQueryItem( const QString & key )
 */
 HB_FUNC_STATIC( QURL_REMOVEQUERYITEM )
 {
@@ -1068,7 +1068,7 @@ HB_FUNC_STATIC( QURL_REMOVEQUERYITEM )
 }
 
 /*
-QUrl resolved ( const QUrl & relative ) const
+QUrl resolved( const QUrl & relative ) const
 */
 HB_FUNC_STATIC( QURL_RESOLVED )
 {
@@ -1117,7 +1117,7 @@ HB_FUNC_STATIC( QURL_SCHEME )
 }
 
 /*
-void setAuthority ( const QString & authority )
+void setAuthority( const QString & authority )
 */
 HB_FUNC_STATIC( QURL_SETAUTHORITY )
 {
@@ -1143,7 +1143,7 @@ HB_FUNC_STATIC( QURL_SETAUTHORITY )
 }
 
 /*
-void setEncodedFragment ( const QByteArray & fragment )
+void setEncodedFragment( const QByteArray & fragment )
 */
 HB_FUNC_STATIC( QURL_SETENCODEDFRAGMENT )
 {
@@ -1169,7 +1169,7 @@ HB_FUNC_STATIC( QURL_SETENCODEDFRAGMENT )
 }
 
 /*
-void setEncodedHost ( const QByteArray & host )
+void setEncodedHost( const QByteArray & host )
 */
 HB_FUNC_STATIC( QURL_SETENCODEDHOST )
 {
@@ -1195,7 +1195,7 @@ HB_FUNC_STATIC( QURL_SETENCODEDHOST )
 }
 
 /*
-void setEncodedPassword ( const QByteArray & password )
+void setEncodedPassword( const QByteArray & password )
 */
 HB_FUNC_STATIC( QURL_SETENCODEDPASSWORD )
 {
@@ -1221,7 +1221,7 @@ HB_FUNC_STATIC( QURL_SETENCODEDPASSWORD )
 }
 
 /*
-void setEncodedPath ( const QByteArray & path )
+void setEncodedPath( const QByteArray & path )
 */
 HB_FUNC_STATIC( QURL_SETENCODEDPATH )
 {
@@ -1247,7 +1247,7 @@ HB_FUNC_STATIC( QURL_SETENCODEDPATH )
 }
 
 /*
-void setEncodedQuery ( const QByteArray & query )
+void setEncodedQuery( const QByteArray & query )
 */
 HB_FUNC_STATIC( QURL_SETENCODEDQUERY )
 {
@@ -1324,7 +1324,7 @@ HB_FUNC_STATIC( QURL_SETENCODEDURL )
 }
 
 /*
-void setEncodedUserName ( const QByteArray & userName )
+void setEncodedUserName( const QByteArray & userName )
 */
 HB_FUNC_STATIC( QURL_SETENCODEDUSERNAME )
 {
@@ -1350,7 +1350,7 @@ HB_FUNC_STATIC( QURL_SETENCODEDUSERNAME )
 }
 
 /*
-void setFragment ( const QString & fragment )
+void setFragment( const QString & fragment )
 */
 HB_FUNC_STATIC( QURL_SETFRAGMENT )
 {
@@ -1376,7 +1376,7 @@ HB_FUNC_STATIC( QURL_SETFRAGMENT )
 }
 
 /*
-void setHost ( const QString & host )
+void setHost( const QString & host )
 */
 HB_FUNC_STATIC( QURL_SETHOST )
 {
@@ -1402,7 +1402,7 @@ HB_FUNC_STATIC( QURL_SETHOST )
 }
 
 /*
-void setPassword ( const QString & password )
+void setPassword( const QString & password )
 */
 HB_FUNC_STATIC( QURL_SETPASSWORD )
 {
@@ -1428,7 +1428,7 @@ HB_FUNC_STATIC( QURL_SETPASSWORD )
 }
 
 /*
-void setPath ( const QString & path )
+void setPath( const QString & path )
 */
 HB_FUNC_STATIC( QURL_SETPATH )
 {
@@ -1454,7 +1454,7 @@ HB_FUNC_STATIC( QURL_SETPATH )
 }
 
 /*
-void setPort ( int port )
+void setPort( int port )
 */
 HB_FUNC_STATIC( QURL_SETPORT )
 {
@@ -1480,7 +1480,7 @@ HB_FUNC_STATIC( QURL_SETPORT )
 }
 
 /*
-void setQueryDelimiters ( char valueDelimiter, char pairDelimiter )
+void setQueryDelimiters( char valueDelimiter, char pairDelimiter )
 */
 HB_FUNC_STATIC( QURL_SETQUERYDELIMITERS )
 {
@@ -1506,7 +1506,7 @@ HB_FUNC_STATIC( QURL_SETQUERYDELIMITERS )
 }
 
 /*
-void setScheme ( const QString & scheme )
+void setScheme( const QString & scheme )
 */
 HB_FUNC_STATIC( QURL_SETSCHEME )
 {
@@ -1583,7 +1583,7 @@ HB_FUNC_STATIC( QURL_SETURL )
 }
 
 /*
-void setUserInfo ( const QString & userInfo )
+void setUserInfo( const QString & userInfo )
 */
 HB_FUNC_STATIC( QURL_SETUSERINFO )
 {
@@ -1609,7 +1609,7 @@ HB_FUNC_STATIC( QURL_SETUSERINFO )
 }
 
 /*
-void setUserName ( const QString & userName )
+void setUserName( const QString & userName )
 */
 HB_FUNC_STATIC( QURL_SETUSERNAME )
 {
@@ -1635,7 +1635,7 @@ HB_FUNC_STATIC( QURL_SETUSERNAME )
 }
 
 /*
-void swap ( QUrl & other )
+void swap( QUrl & other )
 */
 HB_FUNC_STATIC( QURL_SWAP )
 {
@@ -1806,7 +1806,7 @@ HB_FUNC_STATIC( QURL_USERNAME )
 }
 
 /*
-static QString fromAce ( const QByteArray & domain )
+static QString fromAce( const QByteArray & domain )
 */
 HB_FUNC_STATIC( QURL_FROMACE )
 {
@@ -1866,7 +1866,7 @@ HB_FUNC_STATIC( QURL_FROMENCODED )
 }
 
 /*
-static QUrl fromLocalFile ( const QString & localFile )
+static QUrl fromLocalFile( const QString & localFile )
 */
 HB_FUNC_STATIC( QURL_FROMLOCALFILE )
 {
@@ -1886,7 +1886,7 @@ HB_FUNC_STATIC( QURL_FROMLOCALFILE )
 }
 
 /*
-static QString fromPercentEncoding ( const QByteArray & input )
+static QString fromPercentEncoding( const QByteArray & input )
 */
 HB_FUNC_STATIC( QURL_FROMPERCENTENCODING )
 {
@@ -1905,7 +1905,7 @@ HB_FUNC_STATIC( QURL_FROMPERCENTENCODING )
 }
 
 /*
-static QUrl fromUserInput ( const QString & userInput )
+static QUrl fromUserInput( const QString & userInput )
 */
 HB_FUNC_STATIC( QURL_FROMUSERINPUT )
 {
@@ -1944,7 +1944,7 @@ HB_FUNC_STATIC( QURL_IDNWHITELIST )
 }
 
 /*
-static void setIdnWhitelist ( const QStringList & list )
+static void setIdnWhitelist( const QStringList & list )
 */
 HB_FUNC_STATIC( QURL_SETIDNWHITELIST )
 {
@@ -1965,7 +1965,7 @@ HB_FUNC_STATIC( QURL_SETIDNWHITELIST )
 }
 
 /*
-static QByteArray toAce ( const QString & domain )
+static QByteArray toAce( const QString & domain )
 */
 HB_FUNC_STATIC( QURL_TOACE )
 {

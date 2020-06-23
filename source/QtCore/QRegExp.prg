@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QREGEXP_ERRORSTRING )
 }
 
 /*
-bool exactMatch ( const QString & str ) const
+bool exactMatch( const QString & str ) const
 */
 HB_FUNC_STATIC( QREGEXP_EXACTMATCH )
 {
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QREGEXP_POS )
 }
 
 /*
-void setCaseSensitivity ( Qt::CaseSensitivity cs )
+void setCaseSensitivity( Qt::CaseSensitivity cs )
 */
 HB_FUNC_STATIC( QREGEXP_SETCASESENSITIVITY )
 {
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QREGEXP_SETCASESENSITIVITY )
 }
 
 /*
-void setMinimal ( bool minimal )
+void setMinimal( bool minimal )
 */
 HB_FUNC_STATIC( QREGEXP_SETMINIMAL )
 {
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QREGEXP_SETMINIMAL )
 }
 
 /*
-void setPattern ( const QString & pattern )
+void setPattern( const QString & pattern )
 */
 HB_FUNC_STATIC( QREGEXP_SETPATTERN )
 {
@@ -578,7 +578,7 @@ HB_FUNC_STATIC( QREGEXP_SETPATTERN )
 }
 
 /*
-void setPatternSyntax ( PatternSyntax syntax )
+void setPatternSyntax( QRegExp::PatternSyntax syntax )
 */
 HB_FUNC_STATIC( QREGEXP_SETPATTERNSYNTAX )
 {
@@ -604,7 +604,7 @@ HB_FUNC_STATIC( QREGEXP_SETPATTERNSYNTAX )
 }
 
 /*
-static QString escape ( const QString & str )
+static QString escape( const QString & str )
 */
 HB_FUNC_STATIC( QREGEXP_ESCAPE )
 {

@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_PROPERTYNAME )
 }
 
 /*
-void setPropertyName ( const QByteArray & propertyName )
+void setPropertyName( const QByteArray & propertyName )
 */
 HB_FUNC_STATIC( QPROPERTYANIMATION_SETPROPERTYNAME )
 {
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_SETPROPERTYNAME )
 }
 
 /*
-void setTargetObject ( QObject * target )
+void setTargetObject( QObject * target )
 */
 HB_FUNC_STATIC( QPROPERTYANIMATION_SETTARGETOBJECT )
 {

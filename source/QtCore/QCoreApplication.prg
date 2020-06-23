@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_DELETE )
 }
 
 /*
-bool filterEvent ( void * message, long * result )
+bool filterEvent( void * message, long * result )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_FILTEREVENT )
 {
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_FILTEREVENT )
 }
 
 /*
-virtual bool notify ( QObject * receiver, QEvent * event )
+virtual bool notify( QObject * receiver, QEvent * event )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_NOTIFY )
 {
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_QUIT )
 }
 
 /*
-static void addLibraryPath ( const QString & path )
+static void addLibraryPath( const QString & path )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_ADDLIBRARYPATH )
 {
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_HASPENDINGEVENTS )
 }
 
 /*
-static void installTranslator ( QTranslator * translationFile )
+static void installTranslator( QTranslator * translationFile )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_INSTALLTRANSLATOR )
 {
@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_PROCESSEVENTS )
 }
 
 /*
-static void removeLibraryPath ( const QString & path )
+static void removeLibraryPath( const QString & path )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_REMOVELIBRARYPATH )
 {
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS )
 }
 
 /*
-static void removeTranslator ( QTranslator * translationFile )
+static void removeTranslator( QTranslator * translationFile )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_REMOVETRANSLATOR )
 {
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_REMOVETRANSLATOR )
 }
 
 /*
-static bool sendEvent ( QObject * receiver, QEvent * event )
+static bool sendEvent( QObject * receiver, QEvent * event )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_SENDEVENT )
 {
@@ -754,7 +754,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SENDPOSTEDEVENTS )
 }
 
 /*
-static void setApplicationName ( const QString & application )
+static void setApplicationName( const QString & application )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_SETAPPLICATIONNAME )
 {
@@ -775,7 +775,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SETAPPLICATIONNAME )
 }
 
 /*
-static void setApplicationVersion ( const QString & version )
+static void setApplicationVersion( const QString & version )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_SETAPPLICATIONVERSION )
 {
@@ -817,7 +817,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SETATTRIBUTE )
 }
 
 /*
-static void setLibraryPaths ( const QStringList & paths )
+static void setLibraryPaths( const QStringList & paths )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_SETLIBRARYPATHS )
 {
@@ -838,7 +838,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SETLIBRARYPATHS )
 }
 
 /*
-static void setOrganizationDomain ( const QString & orgDomain )
+static void setOrganizationDomain( const QString & orgDomain )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_SETORGANIZATIONDOMAIN )
 {
@@ -859,7 +859,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SETORGANIZATIONDOMAIN )
 }
 
 /*
-static void setOrganizationName ( const QString & orgName )
+static void setOrganizationName( const QString & orgName )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_SETORGANIZATIONNAME )
 {
@@ -899,7 +899,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_STARTINGUP )
 }
 
 /*
-static bool testAttribute ( Qt::ApplicationAttribute attribute )
+static bool testAttribute( Qt::ApplicationAttribute attribute )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_TESTATTRIBUTE )
 {

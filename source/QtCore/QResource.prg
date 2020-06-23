@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QRESOURCE_ABSOLUTEFILEPATH )
 }
 
 /*
-const uchar * data () const
+const uchar * data() const
 */
 HB_FUNC_STATIC( QRESOURCE_DATA )
 {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QRESOURCE_LOCALE )
 }
 
 /*
-void setFileName ( const QString & file )
+void setFileName( const QString & file )
 */
 HB_FUNC_STATIC( QRESOURCE_SETFILENAME )
 {
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QRESOURCE_SETFILENAME )
 }
 
 /*
-void setLocale ( const QLocale & locale )
+void setLocale( const QLocale & locale )
 */
 HB_FUNC_STATIC( QRESOURCE_SETLOCALE )
 {

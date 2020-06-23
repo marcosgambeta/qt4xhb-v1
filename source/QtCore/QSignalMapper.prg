@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING )
 }
 
 /*
-void removeMappings(QObject *sender)
+void removeMappings( QObject * sender )
 */
 HB_FUNC_STATIC( QSIGNALMAPPER_REMOVEMAPPINGS )
 {

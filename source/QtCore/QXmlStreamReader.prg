@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ADDDATA )
 }
 
 /*
-void addExtraNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & extraNamespaceDeclaration)
+void addExtraNamespaceDeclaration( const QXmlStreamNamespaceDeclaration & extraNamespaceDeclaration )
 */
 HB_FUNC_STATIC( QXMLSTREAMREADER_ADDEXTRANAMESPACEDECLARATION )
 {
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_ADDEXTRANAMESPACEDECLARATION )
 }
 
 /*
-void addExtraNamespaceDeclarations(const QXmlStreamNamespaceDeclarations & extraNamespaceDeclarations)
+void addExtraNamespaceDeclarations( const QXmlStreamNamespaceDeclarations & extraNamespaceDeclarations )
 */
 HB_FUNC_STATIC( QXMLSTREAMREADER_ADDEXTRANAMESPACEDECLARATIONS )
 {
@@ -1442,7 +1442,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_READNEXTSTARTELEMENT )
 }
 
 /*
-void setDevice(QIODevice * device)
+void setDevice( QIODevice * device )
 */
 HB_FUNC_STATIC( QXMLSTREAMREADER_SETDEVICE )
 {
@@ -1468,7 +1468,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_SETDEVICE )
 }
 
 /*
-void setEntityResolver(QXmlStreamEntityResolver * resolver)
+void setEntityResolver( QXmlStreamEntityResolver * resolver )
 */
 HB_FUNC_STATIC( QXMLSTREAMREADER_SETENTITYRESOLVER )
 {
@@ -1494,7 +1494,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_SETENTITYRESOLVER )
 }
 
 /*
-void setNamespaceProcessing(bool)
+void setNamespaceProcessing( bool )
 */
 HB_FUNC_STATIC( QXMLSTREAMREADER_SETNAMESPACEPROCESSING )
 {

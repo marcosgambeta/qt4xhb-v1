@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_CLEAR )
 }
 
 /*
-bool contains(const QString &name) const
+bool contains( const QString & name ) const
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_CONTAINS )
 {
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_CONTAINS )
 }
 
 /*
-void remove(const QString &name)
+void remove( const QString & name )
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_REMOVE )
 {

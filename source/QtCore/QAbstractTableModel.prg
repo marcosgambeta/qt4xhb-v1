@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QABSTRACTTABLEMODEL_DELETE )
 }
 
 /*
-virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
+virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 */
 HB_FUNC_STATIC( QABSTRACTTABLEMODEL_DROPMIMEDATA )
 {

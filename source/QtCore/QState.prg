@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QSTATE_ADDTRANSITION )
 }
 
 /*
-void assignProperty ( QObject * object, const char * name, const QVariant & value )
+void assignProperty( QObject * object, const char * name, const QVariant & value )
 */
 HB_FUNC_STATIC( QSTATE_ASSIGNPROPERTY )
 {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QSTATE_INITIALSTATE )
 }
 
 /*
-void removeTransition ( QAbstractTransition * transition )
+void removeTransition( QAbstractTransition * transition )
 */
 HB_FUNC_STATIC( QSTATE_REMOVETRANSITION )
 {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QSTATE_REMOVETRANSITION )
 }
 
 /*
-void setChildMode ( ChildMode mode )
+void setChildMode( QState::ChildMode mode )
 */
 HB_FUNC_STATIC( QSTATE_SETCHILDMODE )
 {
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QSTATE_SETCHILDMODE )
 }
 
 /*
-void setErrorState ( QAbstractState * state )
+void setErrorState( QAbstractState * state )
 */
 HB_FUNC_STATIC( QSTATE_SETERRORSTATE )
 {
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QSTATE_SETERRORSTATE )
 }
 
 /*
-void setInitialState ( QAbstractState * state )
+void setInitialState( QAbstractState * state )
 */
 HB_FUNC_STATIC( QSTATE_SETINITIALSTATE )
 {

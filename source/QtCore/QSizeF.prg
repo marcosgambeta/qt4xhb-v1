@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QSIZEF_DELETE )
 }
 
 /*
-QSizeF boundedTo ( const QSizeF & otherSize ) const
+QSizeF boundedTo( const QSizeF & otherSize ) const
 */
 HB_FUNC_STATIC( QSIZEF_BOUNDEDTO )
 {
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QSIZEF_BOUNDEDTO )
 }
 
 /*
-QSizeF expandedTo ( const QSizeF & otherSize ) const
+QSizeF expandedTo( const QSizeF & otherSize ) const
 */
 HB_FUNC_STATIC( QSIZEF_EXPANDEDTO )
 {
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QSIZEF_SCALE )
 }
 
 /*
-void setHeight ( qreal height )
+void setHeight( qreal height )
 */
 HB_FUNC_STATIC( QSIZEF_SETHEIGHT )
 {
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QSIZEF_SETHEIGHT )
 }
 
 /*
-void setWidth ( qreal width )
+void setWidth( qreal width )
 */
 HB_FUNC_STATIC( QSIZEF_SETWIDTH )
 {

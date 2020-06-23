@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QBASICTIMER_ISACTIVE )
 }
 
 /*
-void start ( int msec, QObject * object )
+void start( int msec, QObject * object )
 */
 HB_FUNC_STATIC( QBASICTIMER_START )
 {

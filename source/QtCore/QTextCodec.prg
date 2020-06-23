@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORNAME )
 }
 
 /*
-static QTextCodec* codecForMib(int mib)
+static QTextCodec * codecForMib( int mib )
 */
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORMIB )
 {
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORLOCALE )
 }
 
 /*
-static void setCodecForLocale(QTextCodec *c)
+static void setCodecForLocale( QTextCodec * c )
 */
 HB_FUNC_STATIC( QTEXTCODEC_SETCODECFORLOCALE )
 {
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORTR )
 }
 
 /*
-static void setCodecForTr(QTextCodec *c)
+static void setCodecForTr( QTextCodec * c )
 */
 HB_FUNC_STATIC( QTEXTCODEC_SETCODECFORTR )
 {
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORCSTRINGS )
 }
 
 /*
-static void setCodecForCStrings(QTextCodec *c)
+static void setCodecForCStrings( QTextCodec * c )
 */
 HB_FUNC_STATIC( QTEXTCODEC_SETCODECFORCSTRINGS )
 {

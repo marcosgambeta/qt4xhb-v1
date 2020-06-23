@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QTHREADPOOL_RESERVETHREAD )
 }
 
 /*
-void setExpiryTimeout ( int expiryTimeout )
+void setExpiryTimeout( int expiryTimeout )
 */
 HB_FUNC_STATIC( QTHREADPOOL_SETEXPIRYTIMEOUT )
 {
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QTHREADPOOL_SETEXPIRYTIMEOUT )
 }
 
 /*
-void setMaxThreadCount ( int maxThreadCount )
+void setMaxThreadCount( int maxThreadCount )
 */
 HB_FUNC_STATIC( QTHREADPOOL_SETMAXTHREADCOUNT )
 {
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QTHREADPOOL_START )
 }
 
 /*
-bool tryStart ( QRunnable * runnable )
+bool tryStart( QRunnable * runnable )
 */
 HB_FUNC_STATIC( QTHREADPOOL_TRYSTART )
 {

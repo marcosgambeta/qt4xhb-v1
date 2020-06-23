@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QTIME_DELETE )
 }
 
 /*
-QTime addMSecs(int ms) const
+QTime addMSecs( int ms ) const
 */
 HB_FUNC_STATIC( QTIME_ADDMSECS )
 {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QTIME_ADDMSECS )
 }
 
 /*
-QTime addSecs(int s) const
+QTime addSecs( int s ) const
 */
 HB_FUNC_STATIC( QTIME_ADDSECS )
 {
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QTIME_MSEC )
 }
 
 /*
-int msecsTo(const QTime & t) const
+int msecsTo( const QTime & t ) const
 */
 HB_FUNC_STATIC( QTIME_MSECSTO )
 {
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QTIME_SECOND )
 }
 
 /*
-int secsTo(const QTime & t) const
+int secsTo( const QTime & t ) const
 */
 HB_FUNC_STATIC( QTIME_SECSTO )
 {

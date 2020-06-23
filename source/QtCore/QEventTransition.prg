@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_EVENTTYPE )
 }
 
 /*
-void setEventSource(QObject * object)
+void setEventSource( QObject * object )
 */
 HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTSOURCE )
 {
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTSOURCE )
 }
 
 /*
-void setEventType(QEvent::Type type)
+void setEventType( QEvent::Type type )
 */
 HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTTYPE )
 {

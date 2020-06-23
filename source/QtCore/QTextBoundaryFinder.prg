@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_POSITION )
 }
 
 /*
-void setPosition(int position)
+void setPosition( int position )
 */
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_SETPOSITION )
 {

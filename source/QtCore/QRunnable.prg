@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QRUNNABLE_RUN )
 }
 
 /*
-void setAutoDelete ( bool autoDelete )
+void setAutoDelete( bool autoDelete )
 */
 HB_FUNC_STATIC( QRUNNABLE_SETAUTODELETE )
 {

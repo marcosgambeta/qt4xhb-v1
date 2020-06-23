@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_LOADHINTS )
 }
 
 /*
-void setFileName ( const QString & fileName )
+void setFileName( const QString & fileName )
 */
 HB_FUNC_STATIC( QPLUGINLOADER_SETFILENAME )
 {
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_SETFILENAME )
 }
 
 /*
-void setLoadHints ( QLibrary::LoadHints loadHints )
+void setLoadHints( QLibrary::LoadHints loadHints )
 */
 HB_FUNC_STATIC( QPLUGINLOADER_SETLOADHINTS )
 {

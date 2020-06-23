@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QPOINTF_MANHATTANLENGTH )
 }
 
 /*
-void setX(qreal x)
+void setX( qreal x )
 */
 HB_FUNC_STATIC( QPOINTF_SETX )
 {
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QPOINTF_SETX )
 }
 
 /*
-void setY(qreal y)
+void setY( qreal y )
 */
 HB_FUNC_STATIC( QPOINTF_SETY )
 {

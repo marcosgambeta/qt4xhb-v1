@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SENDEROBJECT )
 }
 
 /*
-void setSenderObject(QObject *sender)
+void setSenderObject( QObject * sender )
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SETSENDEROBJECT )
 {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SIGNAL )
 }
 
 /*
-void setSignal(const QByteArray &signal)
+void setSignal( const QByteArray & signal )
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SETSIGNAL )
 {

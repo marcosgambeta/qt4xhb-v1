@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QSIZE_DELETE )
 }
 
 /*
-QSize boundedTo ( const QSize & otherSize ) const
+QSize boundedTo( const QSize & otherSize ) const
 */
 HB_FUNC_STATIC( QSIZE_BOUNDEDTO )
 {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QSIZE_BOUNDEDTO )
 }
 
 /*
-QSize expandedTo ( const QSize & otherSize ) const
+QSize expandedTo( const QSize & otherSize ) const
 */
 HB_FUNC_STATIC( QSIZE_EXPANDEDTO )
 {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QSIZE_SCALE )
 }
 
 /*
-void setHeight ( int height )
+void setHeight( int height )
 */
 HB_FUNC_STATIC( QSIZE_SETHEIGHT )
 {
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QSIZE_SETHEIGHT )
 }
 
 /*
-void setWidth ( int width )
+void setWidth( int width )
 */
 HB_FUNC_STATIC( QSIZE_SETWIDTH )
 {

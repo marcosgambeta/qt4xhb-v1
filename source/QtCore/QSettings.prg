@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QSETTINGS_APPLICATIONNAME )
 }
 
 /*
-void beginGroup ( const QString & prefix )
+void beginGroup( const QString & prefix )
 */
 HB_FUNC_STATIC( QSETTINGS_BEGINGROUP )
 {
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QSETTINGS_BEGINGROUP )
 }
 
 /*
-int beginReadArray ( const QString & prefix )
+int beginReadArray( const QString & prefix )
 */
 HB_FUNC_STATIC( QSETTINGS_BEGINREADARRAY )
 {
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QSETTINGS_CLEAR )
 }
 
 /*
-bool contains ( const QString & key ) const
+bool contains( const QString & key ) const
 */
 HB_FUNC_STATIC( QSETTINGS_CONTAINS )
 {
@@ -618,7 +618,7 @@ HB_FUNC_STATIC( QSETTINGS_ORGANIZATIONNAME )
 }
 
 /*
-void remove ( const QString & key )
+void remove( const QString & key )
 */
 HB_FUNC_STATIC( QSETTINGS_REMOVE )
 {
@@ -668,7 +668,7 @@ HB_FUNC_STATIC( QSETTINGS_SCOPE )
 }
 
 /*
-void setArrayIndex ( int i )
+void setArrayIndex( int i )
 */
 HB_FUNC_STATIC( QSETTINGS_SETARRAYINDEX )
 {
@@ -694,7 +694,7 @@ HB_FUNC_STATIC( QSETTINGS_SETARRAYINDEX )
 }
 
 /*
-void setFallbacksEnabled ( bool b )
+void setFallbacksEnabled( bool b )
 */
 HB_FUNC_STATIC( QSETTINGS_SETFALLBACKSENABLED )
 {
@@ -771,7 +771,7 @@ HB_FUNC_STATIC( QSETTINGS_SETINICODEC )
 }
 
 /*
-void setValue ( const QString & key, const QVariant & value )
+void setValue( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QSETTINGS_SETVALUE )
 {
@@ -891,7 +891,7 @@ HB_FUNC_STATIC( QSETTINGS_DEFAULTFORMAT )
 }
 
 /*
-static void setDefaultFormat ( Format format )
+static void setDefaultFormat( QSettings::Format format )
 */
 HB_FUNC_STATIC( QSETTINGS_SETDEFAULTFORMAT )
 {
@@ -912,7 +912,7 @@ HB_FUNC_STATIC( QSETTINGS_SETDEFAULTFORMAT )
 }
 
 /*
-static void setPath ( Format format, Scope scope, const QString & path )
+static void setPath( QSettings::Format format, QSettings::Scope scope, const QString & path )
 */
 HB_FUNC_STATIC( QSETTINGS_SETPATH )
 {

@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_DELETE )
 }
 
 /*
-void addPath ( const QString & path )
+void addPath( const QString & path )
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATH )
 {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATH )
 }
 
 /*
-void addPaths ( const QStringList & paths )
+void addPaths( const QStringList & paths )
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_ADDPATHS )
 {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_FILES )
 }
 
 /*
-void removePath ( const QString & path )
+void removePath( const QString & path )
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATH )
 {
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATH )
 }
 
 /*
-void removePaths ( const QStringList & paths )
+void removePaths( const QStringList & paths )
 */
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATHS )
 {

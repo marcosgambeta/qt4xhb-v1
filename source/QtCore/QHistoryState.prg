@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_DEFAULTSTATE )
 }
 
 /*
-void setDefaultState(QAbstractState *state)
+void setDefaultState( QAbstractState * state )
 */
 HB_FUNC_STATIC( QHISTORYSTATE_SETDEFAULTSTATE )
 {
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_HISTORYTYPE )
 }
 
 /*
-void setHistoryType(HistoryType type)
+void setHistoryType( QHistoryState::HistoryType type )
 */
 HB_FUNC_STATIC( QHISTORYSTATE_SETHISTORYTYPE )
 {
