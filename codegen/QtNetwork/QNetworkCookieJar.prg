@@ -30,10 +30,8 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=virtual QList<QNetworkCookie> cookiesForUrl ( const QUrl & url ) const
-$virtualMethod=|QList<QNetworkCookie>|cookiesForUrl|const QUrl &
+$prototypeV2=virtual QList<QNetworkCookie> cookiesForUrl( const QUrl & url ) const
 
-$prototype=virtual bool setCookiesFromUrl ( const QList<QNetworkCookie> & cookieList, const QUrl & url )
-$virtualMethod=|bool|setCookiesFromUrl|const QList<QNetworkCookie> &,const QUrl &
+$prototypeV2=virtual bool setCookiesFromUrl( const QList<QNetworkCookie> & cookieList, const QUrl & url )
 
 #pragma ENDDUMP

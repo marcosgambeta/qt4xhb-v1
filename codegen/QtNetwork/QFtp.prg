@@ -34,8 +34,7 @@ $deleteMethod
 
 $prototypeV2=qint64 bytesAvailable() const
 
-$prototype=int cd ( const QString & dir )
-$method=|int|cd|const QString &
+$prototypeV2=int cd( const QString & dir )
 
 $prototypeV2=void clearPendingCommands()
 
@@ -65,8 +64,7 @@ $method=|int|list|const QString &=QString()
 $prototype=int login ( const QString & user = QString(), const QString & password = QString() )
 $method=|int|login|const QString &=QString(),const QString &=QString()
 
-$prototype=int mkdir ( const QString & dir )
-$method=|int|mkdir|const QString &
+$prototypeV2=int mkdir( const QString & dir )
 
 $prototype=int put ( QIODevice * dev, const QString & file, TransferType type = Binary )
 $internalMethod=|int|put,put1|QIODevice *,const QString &,QFtp::TransferType=QFtp::Binary
@@ -96,29 +94,22 @@ HB_FUNC_STATIC( QFTP_PUT )
 }
 $addMethod=put
 
-$prototype=int rawCommand ( const QString & command )
-$method=|int|rawCommand|const QString &
+$prototypeV2=int rawCommand( const QString & command )
 
-$prototype=qint64 read ( char * data, qint64 maxlen )
+$prototypeV2=qint64 read( char * data, qint64 maxlen )
 %% TODO: corrigir 'char *'
-$method=|qint64|read|char *,qint64
 
 $prototypeV2=QByteArray readAll()
 
-$prototype=int remove ( const QString & file )
-$method=|int|remove|const QString &
+$prototypeV2=int remove( const QString & file )
 
-$prototype=int rename ( const QString & oldname, const QString & newname )
-$method=|int|rename|const QString &,const QString &
+$prototypeV2=int rename( const QString & oldname, const QString & newname )
 
-$prototype=int rmdir ( const QString & dir )
-$method=|int|rmdir|const QString &
+$prototypeV2=int rmdir( const QString & dir )
 
-$prototype=int setProxy ( const QString & host, quint16 port )
-$method=|int|setProxy|const QString &,quint16
+$prototypeV2=int setProxy( const QString & host, quint16 port )
 
-$prototype=int setTransferMode ( TransferMode mode )
-$method=|int|setTransferMode|QFtp::TransferMode
+$prototypeV2=int setTransferMode( QFtp::TransferMode mode )
 
 $prototypeV2=QFtp::State state() const
 

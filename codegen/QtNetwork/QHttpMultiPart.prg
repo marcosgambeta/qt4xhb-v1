@@ -55,15 +55,12 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void append ( const QHttpPart & httpPart )
-$method=|void|append|const QHttpPart &
+$prototypeV2=void append( const QHttpPart & httpPart )
 
 $prototypeV2=QByteArray boundary() const
 
-$prototype=void setBoundary ( const QByteArray & boundary )
-$method=|void|setBoundary|const QByteArray &
+$prototypeV2=void setBoundary( const QByteArray & boundary )
 
-$prototype=void setContentType ( ContentType contentType )
-$method=|void|setContentType|QHttpMultiPart::ContentType
+$prototypeV2=void setContentType( QHttpMultiPart::ContentType contentType )
 
 #pragma ENDDUMP

@@ -58,14 +58,11 @@ $prototypeV2=QAbstractSocket::SocketError serverError() const
 
 $prototypeV2=quint16 serverPort() const
 
-$prototype=void setMaxPendingConnections ( int numConnections )
-$method=|void|setMaxPendingConnections|int
+$prototypeV2=void setMaxPendingConnections( int numConnections )
 
-$prototype=void setProxy ( const QNetworkProxy & networkProxy )
-$method=|void|setProxy|const QNetworkProxy &
+$prototypeV2=void setProxy( const QNetworkProxy & networkProxy )
 
-$prototype=bool setSocketDescriptor ( int socketDescriptor )
-$method=|bool|setSocketDescriptor|int
+$prototypeV2=bool setSocketDescriptor( int socketDescriptor )
 
 $prototypeV2=int socketDescriptor() const
 

@@ -80,31 +80,23 @@ $prototypeV2=QSsl::SslProtocol protocol() const
 
 $prototypeV2=QSslCipher sessionCipher() const
 
-$prototype=void setCaCertificates ( const QList<QSslCertificate> & certificates )
-$method=|void|setCaCertificates|const QList<QSslCertificate> &
+$prototypeV2=void setCaCertificates( const QList<QSslCertificate> & certificates )
 
-$prototype=void setCiphers ( const QList<QSslCipher> & ciphers )
-$method=|void|setCiphers|const QList<QSslCipher> &
+$prototypeV2=void setCiphers( const QList<QSslCipher> & ciphers )
 
-$prototype=void setLocalCertificate ( const QSslCertificate & certificate )
-$method=|void|setLocalCertificate|const QSslCertificate &
+$prototypeV2=void setLocalCertificate( const QSslCertificate & certificate )
 
-$prototype=void setPeerVerifyDepth ( int depth )
-$method=|void|setPeerVerifyDepth|int
+$prototypeV2=void setPeerVerifyDepth( int depth )
 
-$prototype=void setPeerVerifyMode ( QSslSocket::PeerVerifyMode mode )
-$method=|void|setPeerVerifyMode|QSslSocket::PeerVerifyMode
+$prototypeV2=void setPeerVerifyMode( QSslSocket::PeerVerifyMode mode )
 
-$prototype=void setPrivateKey ( const QSslKey & key )
-$method=|void|setPrivateKey|const QSslKey &
+$prototypeV2=void setPrivateKey( const QSslKey & key )
 
-$prototype=void setProtocol ( QSsl::SslProtocol protocol )
-$method=|void|setProtocol|QSsl::SslProtocol
+$prototypeV2=void setProtocol( QSsl::SslProtocol protocol )
 
 $prototypeV2=static QSslConfiguration defaultConfiguration()
 
-$prototype=static void setDefaultConfiguration ( const QSslConfiguration & configuration )
-$staticMethod=|void|setDefaultConfiguration|const QSslConfiguration &
+$prototypeV2=static void setDefaultConfiguration( const QSslConfiguration & configuration )
 
 $extraMethods
 

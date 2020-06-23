@@ -155,8 +155,7 @@ $prototypeV2=QSsl::SslProtocol protocol() const
 
 $prototypeV2=QSslCipher sessionCipher() const
 
-$prototype=void setCaCertificates ( const QList<QSslCertificate> & certificates )
-$method=|void|setCaCertificates|const QList<QSslCertificate> &
+$prototypeV2=void setCaCertificates( const QList<QSslCertificate> & certificates )
 
 $prototype=void setCiphers ( const QList<QSslCipher> & ciphers )
 $internalMethod=|void|setCiphers,setCiphers1|const QList<QSslCipher> &
@@ -214,11 +213,9 @@ HB_FUNC_STATIC( QSSLSOCKET_SETLOCALCERTIFICATE )
 }
 $addMethod=setLocalCertificate
 
-$prototype=void setPeerVerifyDepth ( int depth )
-$method=|void|setPeerVerifyDepth|int
+$prototypeV2=void setPeerVerifyDepth( int depth )
 
-$prototype=void setPeerVerifyMode ( QSslSocket::PeerVerifyMode mode )
-$method=|void|setPeerVerifyMode|QSslSocket::PeerVerifyMode
+$prototypeV2=void setPeerVerifyMode( QSslSocket::PeerVerifyMode mode )
 
 $prototype=void setPrivateKey ( const QSslKey & key )
 $internalMethod=|void|setPrivateKey,setPrivateKey1|const QSslKey &
@@ -248,23 +245,18 @@ HB_FUNC_STATIC( QSSLSOCKET_SETPRIVATEKEY )
 }
 $addMethod=setPrivateKey
 
-$prototype=void setProtocol ( QSsl::SslProtocol protocol )
-$method=|void|setProtocol|QSsl::SslProtocol
+$prototypeV2=void setProtocol( QSsl::SslProtocol protocol )
 
-$prototype=void setReadBufferSize ( qint64 size )
-$method=|void|setReadBufferSize|qint64
+$prototypeV2=void setReadBufferSize( qint64 size )
 
 $prototype=bool setSocketDescriptor ( int socketDescriptor, SocketState state = ConnectedState, OpenMode openMode = ReadWrite )
 $method=|bool|setSocketDescriptor|int,QAbstractSocket::SocketState=QAbstractSocket::ConnectedState,QIODevice::OpenMode=QIODevice::ReadWrite
 
-$prototype=void setSocketOption ( QAbstractSocket::SocketOption option, const QVariant & value )
-$method=|void|setSocketOption|QAbstractSocket::SocketOption,const QVariant &
+$prototypeV2=void setSocketOption( QAbstractSocket::SocketOption option, const QVariant & value )
 
-$prototype=void setSslConfiguration ( const QSslConfiguration & configuration )
-$method=|void|setSslConfiguration|const QSslConfiguration &
+$prototypeV2=void setSslConfiguration( const QSslConfiguration & configuration )
 
-$prototype=QVariant socketOption ( QAbstractSocket::SocketOption option )
-$method=|QVariant|socketOption|QAbstractSocket::SocketOption
+$prototypeV2=QVariant socketOption( QAbstractSocket::SocketOption option )
 
 $prototypeV2=QSslConfiguration sslConfiguration() const
 
@@ -299,8 +291,7 @@ $prototypeV2=void startClientEncryption()
 
 $prototypeV2=void startServerEncryption()
 
-$prototype=static void addDefaultCaCertificate ( const QSslCertificate & certificate )
-$staticMethod=|void|addDefaultCaCertificate|const QSslCertificate &
+$prototypeV2=static void addDefaultCaCertificate( const QSslCertificate & certificate )
 
 $prototype=static bool addDefaultCaCertificates ( const QString & path, QSsl::EncodingFormat encoding = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
 $internalStaticMethod=|bool|addDefaultCaCertificates,addDefaultCaCertificates1|const QString &,QSsl::EncodingFormat=QSsl::Pem,QRegExp::PatternSyntax=QRegExp::FixedString
@@ -334,11 +325,9 @@ $prototypeV2=QList<QSslCertificate> defaultCaCertificates()
 
 $prototypeV2=QList<QSslCipher> defaultCiphers()
 
-$prototype=void setDefaultCaCertificates ( const QList<QSslCertificate> & certificates )
-$method=|void|setDefaultCaCertificates|const QList<QSslCertificate> &
+$prototypeV2=void setDefaultCaCertificates( const QList<QSslCertificate> & certificates )
 
-$prototype=void setDefaultCiphers ( const QList<QSslCipher> & ciphers )
-$method=|void|setDefaultCiphers|const QList<QSslCipher> &
+$prototypeV2=void setDefaultCiphers( const QList<QSslCipher> & ciphers )
 
 $prototypeV2=QList<QSslCipher> supportedCiphers()
 

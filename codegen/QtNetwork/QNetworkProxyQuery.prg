@@ -115,23 +115,17 @@ $prototypeV2=QString protocolTag() const
 
 $prototypeV2=QNetworkProxyQuery::QueryType queryType() const
 
-$prototype=void setLocalPort ( int port )
-$method=|void|setLocalPort|int
+$prototypeV2=void setLocalPort( int port )
 
-$prototype=void setPeerHostName ( const QString & hostname )
-$method=|void|setPeerHostName|const QString &
+$prototypeV2=void setPeerHostName( const QString & hostname )
 
-$prototype=void setPeerPort ( int port )
-$method=|void|setPeerPort|int
+$prototypeV2=void setPeerPort( int port )
 
-$prototype=void setProtocolTag ( const QString & protocolTag )
-$method=|void|setProtocolTag|const QString &
+$prototypeV2=void setProtocolTag( const QString & protocolTag )
 
-$prototype=void setQueryType ( QueryType type )
-$method=|void|setQueryType|QNetworkProxyQuery::QueryType
+$prototypeV2=void setQueryType( QNetworkProxyQuery::QueryType type )
 
-$prototype=void setUrl ( const QUrl & url )
-$method=|void|setUrl|const QUrl &
+$prototypeV2=void setUrl( const QUrl & url )
 
 $prototypeV2=QUrl url() const
 

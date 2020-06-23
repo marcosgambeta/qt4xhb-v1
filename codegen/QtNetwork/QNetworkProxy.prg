@@ -75,33 +75,25 @@ $prototypeV2=QString password() const
 
 $prototypeV2=quint16 port() const
 
-$prototype=void setCapabilities ( Capabilities capabilities )
-$method=|void|setCapabilities|QNetworkProxy::Capabilities
+$prototypeV2=void setCapabilities( QNetworkProxy::Capabilities capabilities )
 
-$prototype=void setHostName ( const QString & hostName )
-$method=|void|setHostName|const QString &
+$prototypeV2=void setHostName( const QString & hostName )
 
-$prototype=void setPassword ( const QString & password )
-$method=|void|setPassword|const QString &
+$prototypeV2=void setPassword( const QString & password )
 
-$prototype=void setPort ( quint16 port )
-$method=|void|setPort|quint16
+$prototypeV2=void setPort( quint16 port )
 
-$prototype=void setType ( QNetworkProxy::ProxyType type )
-$method=|void|setType|QNetworkProxy::ProxyType
+$prototypeV2=void setType( QNetworkProxy::ProxyType type )
 
-$prototype=void setUser ( const QString & user )
-$method=|void|setUser|const QString &
+$prototypeV2=void setUser( const QString & user )
 
-$prototype=QNetworkProxy::ProxyType type () const
-$method=|QNetworkProxy::ProxyType|type|
+$prototypeV2=QNetworkProxy::ProxyType type() const
 
 $prototypeV2=QString user() const
 
 $prototypeV2=static QNetworkProxy applicationProxy()
 
-$prototype=static void setApplicationProxy ( const QNetworkProxy & networkProxy )
-$staticMethod=|void|setApplicationProxy|const QNetworkProxy &
+$prototypeV2=static void setApplicationProxy( const QNetworkProxy & networkProxy )
 
 $extraMethods
 

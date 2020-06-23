@@ -51,8 +51,7 @@ $prototypeV2=qint64 readBufferSize() const
 
 $prototypeV2=QString serverName() const
 
-$prototype=void setReadBufferSize ( qint64 size )
-$method=|void|setReadBufferSize|qint64
+$prototypeV2=void setReadBufferSize( qint64 size )
 
 $prototypeV2=QLocalSocket::LocalSocketState state() const
 

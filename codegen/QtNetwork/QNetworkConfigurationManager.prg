@@ -37,8 +37,7 @@ $method=|QList<QNetworkConfiguration>|allConfigurations|QNetworkConfiguration::S
 
 $prototypeV2=QNetworkConfigurationManager::Capabilities capabilities() const
 
-$prototype=QNetworkConfiguration configurationFromIdentifier ( const QString & identifier ) const
-$method=|QNetworkConfiguration|configurationFromIdentifier|const QString &
+$prototypeV2=QNetworkConfiguration configurationFromIdentifier( const QString & identifier ) const
 
 $prototypeV2=QNetworkConfiguration defaultConfiguration() const
 

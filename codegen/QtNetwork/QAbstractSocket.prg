@@ -43,6 +43,12 @@ $method=|void|connectToHost,connectToHost1|const QString &,quint16,QIODevice::Op
 $prototype=void connectToHost ( const QHostAddress & address, quint16 port, OpenMode openMode = ReadWrite )
 $method=|void|connectToHost,connectToHost2|const QHostAddress &,quint16,QIODevice::OpenMode=QIODevice::ReadWrite
 
+%% TODO:
+/*
+[1]void connectToHost ( const QString & hostName, quint16 port, OpenMode openMode = ReadWrite )
+[2]void connectToHost ( const QHostAddress & address, quint16 port, OpenMode openMode = ReadWrite )
+*/
+
 $prototypeV2=void disconnectFromHost()
 
 $prototypeV2=QAbstractSocket::SocketError error() const
@@ -65,22 +71,18 @@ $prototypeV2=QNetworkProxy proxy() const
 
 $prototypeV2=qint64 readBufferSize() const
 
-$prototype=void setProxy ( const QNetworkProxy & networkProxy )
-$method=|void|setProxy|const QNetworkProxy &
+$prototypeV2=void setProxy( const QNetworkProxy & networkProxy )
 
-$prototype=void setReadBufferSize ( qint64 size )
-$method=|void|setReadBufferSize|qint64
+$prototypeV2=void setReadBufferSize( qint64 size )
 
 $prototype=bool setSocketDescriptor ( int socketDescriptor, SocketState socketState = ConnectedState, OpenMode openMode = ReadWrite )
 $method=|bool|setSocketDescriptor|int,QAbstractSocket::SocketState=QAbstractSocket::ConnectedState,QIODevice::OpenMode=QIODevice::ReadWrite
 
-$prototype=void setSocketOption ( QAbstractSocket::SocketOption option, const QVariant & value )
-$method=|void|setSocketOption|QAbstractSocket::SocketOption,const QVariant &
+$prototypeV2=void setSocketOption( QAbstractSocket::SocketOption option, const QVariant & value )
 
 $prototypeV2=int socketDescriptor() const
 
-$prototype=QVariant socketOption ( QAbstractSocket::SocketOption option )
-$method=|QVariant|socketOption|QAbstractSocket::SocketOption
+$prototypeV2=QVariant socketOption( QAbstractSocket::SocketOption option )
 
 $prototypeV2=QAbstractSocket::SocketType socketType() const
 

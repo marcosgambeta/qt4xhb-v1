@@ -32,36 +32,27 @@ $deleteMethod
 
 $prototypeV2=QString cacheDirectory() const
 
-$prototype=QNetworkCacheMetaData fileMetaData ( const QString & fileName ) const
-$method=|QNetworkCacheMetaData|fileMetaData|const QString &
+$prototypeV2=QNetworkCacheMetaData fileMetaData( const QString & fileName ) const
 
 $prototypeV2=qint64 maximumCacheSize() const
 
-$prototype=void setCacheDirectory ( const QString & cacheDir )
-$method=|void|setCacheDirectory|const QString &
+$prototypeV2=void setCacheDirectory( const QString & cacheDir )
 
-$prototype=void setMaximumCacheSize ( qint64 size )
-$method=|void|setMaximumCacheSize|qint64
+$prototypeV2=void setMaximumCacheSize( qint64 size )
 
 $prototypeV2=virtual qint64 cacheSize() const
 
-$prototype=virtual QIODevice * data ( const QUrl & url )
-$virtualMethod=|QIODevice *|data|const QUrl &
+$prototypeV2=virtual QIODevice * data( const QUrl & url )
 
-$prototype=virtual void insert ( QIODevice * device )
-$virtualMethod=|void|insert|QIODevice *
+$prototypeV2=virtual void insert( QIODevice * device )
 
-$prototype=virtual QNetworkCacheMetaData metaData ( const QUrl & url )
-$virtualMethod=|QNetworkCacheMetaData|metaData|const QUrl &
+$prototypeV2=virtual QNetworkCacheMetaData metaData( const QUrl & url )
 
-$prototype=virtual QIODevice * prepare ( const QNetworkCacheMetaData & metaData )
-$virtualMethod=|QIODevice *|prepare|const QNetworkCacheMetaData &
+$prototypeV2=virtual QIODevice * prepare( const QNetworkCacheMetaData & metaData )
 
-$prototype=virtual bool remove ( const QUrl & url )
-$virtualMethod=|bool|remove|const QUrl &
+$prototypeV2=virtual bool remove( const QUrl & url )
 
-$prototype=virtual void updateMetaData ( const QNetworkCacheMetaData & metaData )
-$virtualMethod=|void|updateMetaData|const QNetworkCacheMetaData &
+$prototypeV2=virtual void updateMetaData( const QNetworkCacheMetaData & metaData )
 
 $prototypeV2=virtual void clear()
 

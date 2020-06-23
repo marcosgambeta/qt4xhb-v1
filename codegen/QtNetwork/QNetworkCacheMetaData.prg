@@ -65,17 +65,13 @@ $prototypeV2=QDateTime lastModified() const
 
 $prototypeV2=bool saveToDisk() const
 
-$prototype=void setExpirationDate ( const QDateTime & dateTime )
-$method=|void|setExpirationDate|const QDateTime &
+$prototypeV2=void setExpirationDate( const QDateTime & dateTime )
 
-$prototype=void setLastModified ( const QDateTime & dateTime )
-$method=|void|setLastModified|const QDateTime &
+$prototypeV2=void setLastModified( const QDateTime & dateTime )
 
-$prototype=void setSaveToDisk ( bool allow )
-$method=|void|setSaveToDisk|bool
+$prototypeV2=void setSaveToDisk( bool allow )
 
-$prototype=void setUrl ( const QUrl & url )
-$method=|void|setUrl|const QUrl &
+$prototypeV2=void setUrl( const QUrl & url )
 
 $prototypeV2=QUrl url() const
 

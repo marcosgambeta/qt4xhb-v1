@@ -63,17 +63,13 @@ $prototypeV2=QHostAddress netmask() const
 
 $prototypeV2=int prefixLength() const
 
-$prototype=void setBroadcast ( const QHostAddress & newBroadcast )
-$method=|void|setBroadcast|const QHostAddress &
+$prototypeV2=void setBroadcast( const QHostAddress & newBroadcast )
 
-$prototype=void setIp ( const QHostAddress & newIp )
-$method=|void|setIp|const QHostAddress &
+$prototypeV2=void setIp( const QHostAddress & newIp )
 
-$prototype=void setNetmask ( const QHostAddress & newNetmask )
-$method=|void|setNetmask|const QHostAddress &
+$prototypeV2=void setNetmask( const QHostAddress & newNetmask )
 
-$prototype=void setPrefixLength ( int length )
-$method=|void|setPrefixLength|int
+$prototypeV2=void setPrefixLength( int length )
 
 $extraMethods
 

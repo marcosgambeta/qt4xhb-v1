@@ -44,8 +44,7 @@ $prototypeV2=virtual bool hasPendingConnections() const
 
 $prototypeV2=bool isListening() const
 
-$prototype=bool listen ( const QString & name )
-$method=|bool|listen|const QString &
+$prototypeV2=bool listen( const QString & name )
 
 $prototypeV2=int maxPendingConnections() const
 
@@ -55,14 +54,12 @@ $prototypeV2=QAbstractSocket::SocketError serverError() const
 
 $prototypeV2=QString serverName() const
 
-$prototype=void setMaxPendingConnections ( int numConnections )
-$method=|void|setMaxPendingConnections|int
+$prototypeV2=void setMaxPendingConnections( int numConnections )
 
 $prototype=bool waitForNewConnection ( int msec = 0, bool * timedOut = 0 )
 $method=|bool|waitForNewConnection|int=0,bool *=0
 
-$prototype=static bool removeServer ( const QString & name )
-$staticMethod=|bool|removeServer|const QString &
+$prototypeV2=static bool removeServer( const QString & name )
 
 $beginSignals
 $signal=|newConnection()

@@ -29,23 +29,17 @@ $deleteMethod
 
 $prototypeV2=virtual qint64 cacheSize() const = 0
 
-$prototype=virtual QIODevice * data ( const QUrl & url ) = 0
-$virtualMethod=|QIODevice *|data|const QUrl &
+$prototypeV2=virtual QIODevice * data( const QUrl & url ) = 0
 
-$prototype=virtual void insert ( QIODevice * device ) = 0
-$virtualMethod=|void|insert|QIODevice *
+$prototypeV2=virtual void insert( QIODevice * device ) = 0
 
-$prototype=virtual QNetworkCacheMetaData metaData ( const QUrl & url ) = 0
-$virtualMethod=|QNetworkCacheMetaData|metaData|const QUrl &
+$prototypeV2=virtual QNetworkCacheMetaData metaData( const QUrl & url ) = 0
 
-$prototype=virtual QIODevice * prepare ( const QNetworkCacheMetaData & metaData ) = 0
-$virtualMethod=|QIODevice *|prepare|const QNetworkCacheMetaData &
+$prototypeV2=virtual QIODevice * prepare( const QNetworkCacheMetaData & metaData ) = 0
 
-$prototype=virtual bool remove ( const QUrl & url ) = 0
-$virtualMethod=|bool|remove|const QUrl &
+$prototypeV2=virtual bool remove( const QUrl & url ) = 0
 
-$prototype=virtual void updateMetaData ( const QNetworkCacheMetaData & metaData ) = 0
-$virtualMethod=|void|updateMetaData|const QNetworkCacheMetaData &
+$prototypeV2=virtual void updateMetaData( const QNetworkCacheMetaData & metaData ) = 0
 
 $prototypeV2=virtual void clear() = 0
 

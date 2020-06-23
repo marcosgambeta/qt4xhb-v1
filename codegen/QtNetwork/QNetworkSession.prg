@@ -48,11 +48,9 @@ $prototypeV2=QNetworkInterface interface() const
 
 $prototypeV2=bool isOpen() const
 
-$prototype=QVariant sessionProperty ( const QString & key ) const
-$method=|QVariant|sessionProperty|const QString &
+$prototypeV2=QVariant sessionProperty( const QString & key ) const
 
-$prototype=void setSessionProperty ( const QString & key, const QVariant & value )
-$method=|void|setSessionProperty|const QString &,const QVariant &
+$prototypeV2=void setSessionProperty( const QString & key, const QVariant & value )
 
 $prototypeV2=QNetworkSession::State state() const
 

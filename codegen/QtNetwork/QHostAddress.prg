@@ -175,8 +175,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS )
 }
 $addMethod=setAddress
 
-$prototype=void setScopeId ( const QString & id )
-$method=|void|setScopeId|const QString &
+$prototypeV2=void setScopeId( const QString & id )
 
 $prototypeV2=quint32 toIPv4Address() const
 

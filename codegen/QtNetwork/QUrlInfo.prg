@@ -103,8 +103,7 @@ $virtualMethod=|void|setDir|bool
 $prototype=virtual void setFile ( bool b )
 $virtualMethod=|void|setFile|bool
 
-$prototype=virtual void setGroup ( const QString & s )
-$virtualMethod=|void|setGroup|const QString &
+$prototypeV2=virtual void setGroup( const QString & s )
 
 $prototype=virtual void setLastModified ( const QDateTime & dt )
 $virtualMethod=|void|setLastModified|const QDateTime &
@@ -112,11 +111,9 @@ $virtualMethod=|void|setLastModified|const QDateTime &
 $prototype=void setLastRead ( const QDateTime & dt )
 $method=|void|setLastRead|const QDateTime &
 
-$prototype=virtual void setName ( const QString & name )
-$virtualMethod=|void|setName|const QString &
+$prototypeV2=virtual void setName( const QString & name )
 
-$prototype=virtual void setOwner ( const QString & s )
-$virtualMethod=|void|setOwner|const QString &
+$prototypeV2=virtual void setOwner( const QString & s )
 
 $prototype=virtual void setPermissions ( int p )
 $virtualMethod=|void|setPermissions|int

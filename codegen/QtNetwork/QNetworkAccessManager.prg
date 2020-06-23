@@ -46,14 +46,11 @@ $prototypeV2=QNetworkConfiguration configuration() const
 
 $prototypeV2=QNetworkCookieJar * cookieJar() const
 
-$prototype=QNetworkReply * deleteResource ( const QNetworkRequest & request )
-$method=|QNetworkReply *|deleteResource|const QNetworkRequest &
+$prototypeV2=QNetworkReply * deleteResource( const QNetworkRequest & request )
 
-$prototype=QNetworkReply * get ( const QNetworkRequest & request )
-$method=|QNetworkReply *|get|const QNetworkRequest &
+$prototypeV2=QNetworkReply * get( const QNetworkRequest & request )
 
-$prototype=QNetworkReply * head ( const QNetworkRequest & request )
-$method=|QNetworkReply *|head|const QNetworkRequest &
+$prototypeV2=QNetworkReply * head( const QNetworkRequest & request )
 
 $prototypeV2=QNetworkAccessManager::NetworkAccessibility networkAccessible() const
 
@@ -120,23 +117,17 @@ $addMethod=put
 $prototype=QNetworkReply * sendCustomRequest ( const QNetworkRequest & request, const QByteArray & verb, QIODevice * data = 0 )
 $method=|QNetworkReply *|sendCustomRequest|const QNetworkRequest &,const QByteArray &,QIODevice *=0
 
-$prototype=void setCache ( QAbstractNetworkCache * cache )
-$method=|void|setCache|QAbstractNetworkCache *
+$prototypeV2=void setCache( QAbstractNetworkCache * cache )
 
-$prototype=void setConfiguration ( const QNetworkConfiguration & config )
-$method=|void|setConfiguration|const QNetworkConfiguration &
+$prototypeV2=void setConfiguration( const QNetworkConfiguration & config )
 
-$prototype=void setCookieJar ( QNetworkCookieJar * cookieJar )
-$method=|void|setCookieJar|QNetworkCookieJar *
+$prototypeV2=void setCookieJar( QNetworkCookieJar * cookieJar )
 
-$prototype=void setNetworkAccessible ( NetworkAccessibility accessible )
-$method=|void|setNetworkAccessible|QNetworkAccessManager::NetworkAccessibility
+$prototypeV2=void setNetworkAccessible( QNetworkAccessManager::NetworkAccessibility accessible )
 
-$prototype=void setProxy ( const QNetworkProxy & proxy )
-$method=|void|setProxy|const QNetworkProxy &
+$prototypeV2=void setProxy( const QNetworkProxy & proxy )
 
-$prototype=void setProxyFactory ( QNetworkProxyFactory * factory )
-$method=|void|setProxyFactory|QNetworkProxyFactory *
+$prototypeV2=void setProxyFactory( QNetworkProxyFactory * factory )
 
 $beginSignals
 $signal=|authenticationRequired(QNetworkReply*,QAuthenticator*)

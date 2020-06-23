@@ -71,34 +71,26 @@ $prototypeV2=QByteArray name() const
 
 $prototypeV2=QString path() const
 
-$prototype=void setDomain ( const QString & domain )
-$method=|void|setDomain|const QString &
+$prototypeV2=void setDomain( const QString & domain )
 
-$prototype=void setExpirationDate ( const QDateTime & date )
-$method=|void|setExpirationDate|const QDateTime &
+$prototypeV2=void setExpirationDate( const QDateTime & date )
 
-$prototype=void setHttpOnly ( bool enable )
-$method=|void|setHttpOnly|bool
+$prototypeV2=void setHttpOnly( bool enable )
 
-$prototype=void setName ( const QByteArray & cookieName )
-$method=|void|setName|const QByteArray &
+$prototypeV2=void setName( const QByteArray & cookieName )
 
-$prototype=void setPath ( const QString & path )
-$method=|void|setPath|const QString &
+$prototypeV2=void setPath( const QString & path )
 
-$prototype=void setSecure ( bool enable )
-$method=|void|setSecure|bool
+$prototypeV2=void setSecure( bool enable )
 
-$prototype=void setValue ( const QByteArray & value )
-$method=|void|setValue|const QByteArray &
+$prototypeV2=void setValue( const QByteArray & value )
 
 $prototype=QByteArray toRawForm ( RawForm form = Full ) const
 $method=|QByteArray|toRawForm|QNetworkCookie::RawForm=QNetworkCookie::Full
 
 $prototypeV2=QByteArray value() const
 
-$prototype=QList<QNetworkCookie> parseCookies ( const QByteArray & cookieString )
-$method=|QList<QNetworkCookie>|parseCookies|const QByteArray &
+$prototypeV2=QList<QNetworkCookie> parseCookies( const QByteArray & cookieString )
 
 $extraMethods
 

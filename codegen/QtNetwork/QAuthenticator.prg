@@ -57,8 +57,7 @@ $deleteMethod
 
 $prototypeV2=bool isNull() const
 
-$prototype=QVariant option ( const QString & opt ) const
-$method=|QVariant|option|const QString &
+$prototypeV2=QVariant option( const QString & opt ) const
 
 $prototype=QVariantHash options () const
 %% TODO: implementar 'QVariantHash'
@@ -68,14 +67,11 @@ $prototypeV2=QString password() const
 
 $prototypeV2=QString realm() const
 
-$prototype=void setOption ( const QString & opt, const QVariant & value )
-$method=|void|setOption|const QString &,const QVariant &
+$prototypeV2=void setOption( const QString & opt, const QVariant & value )
 
-$prototype=void setPassword ( const QString & password )
-$method=|void|setPassword|const QString &
+$prototypeV2=void setPassword( const QString & password )
 
-$prototype=void setUser ( const QString & user )
-$method=|void|setUser|const QString &
+$prototypeV2=void setUser( const QString & user )
 
 $prototypeV2=QString user() const
 

@@ -55,17 +55,13 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void setBody ( const QByteArray & body )
-$method=|void|setBody|const QByteArray &
+$prototypeV2=void setBody( const QByteArray & body )
 
-$prototype=void setBodyDevice ( QIODevice * device )
-$method=|void|setBodyDevice|QIODevice *
+$prototypeV2=void setBodyDevice( QIODevice * device )
 
-$prototype=void setHeader ( QNetworkRequest::KnownHeaders header, const QVariant & value )
-$method=|void|setHeader|QNetworkRequest::KnownHeaders,const QVariant &
+$prototypeV2=void setHeader( QNetworkRequest::KnownHeaders header, const QVariant & value )
 
-$prototype=void setRawHeader ( const QByteArray & headerName, const QByteArray & headerValue )
-$method=|void|setRawHeader|const QByteArray &,const QByteArray &
+$prototypeV2=void setRawHeader( const QByteArray & headerName, const QByteArray & headerValue )
 
 $extraMethods
 

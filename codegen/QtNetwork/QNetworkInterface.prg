@@ -73,11 +73,9 @@ $prototypeV2=QList<QHostAddress> allAddresses()
 
 $prototypeV2=QList<QNetworkInterface> allInterfaces()
 
-$prototype=static QNetworkInterface interfaceFromIndex ( int index )
-$staticMethod=|QNetworkInterface|interfaceFromIndex|int
+$prototypeV2=static QNetworkInterface interfaceFromIndex( int index )
 
-$prototype=static QNetworkInterface interfaceFromName ( const QString & name )
-$staticMethod=|QNetworkInterface|interfaceFromName|const QString &
+$prototypeV2=static QNetworkInterface interfaceFromName( const QString & name )
 
 $extraMethods
 

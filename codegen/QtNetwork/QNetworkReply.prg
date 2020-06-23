@@ -33,16 +33,13 @@ $deleteMethod
 
 $prototypeV2=virtual void abort() = 0
 
-$prototype=QVariant attribute ( QNetworkRequest::Attribute code ) const
-$method=|QVariant|attribute|QNetworkRequest::Attribute
+$prototypeV2=QVariant attribute( QNetworkRequest::Attribute code ) const
 
 $prototypeV2=QNetworkReply::NetworkError error() const
 
-$prototype=bool hasRawHeader ( const QByteArray & headerName ) const
-$method=|bool|hasRawHeader|const QByteArray &
+$prototypeV2=bool hasRawHeader( const QByteArray & headerName ) const
 
-$prototype=QVariant header ( QNetworkRequest::KnownHeaders header ) const
-$method=|QVariant|header|QNetworkRequest::KnownHeaders
+$prototypeV2=QVariant header( QNetworkRequest::KnownHeaders header ) const
 
 $prototype=void ignoreSslErrors ( const QList<QSslError> & errors )
 $internalMethod=|void|ignoreSslErrors,ignoreSslErrors1|const QList<QSslError> &
@@ -80,8 +77,7 @@ $prototypeV2=QNetworkAccessManager * manager() const
 
 $prototypeV2=QNetworkAccessManager::Operation operation() const
 
-$prototype=QByteArray rawHeader ( const QByteArray & headerName ) const
-$method=|QByteArray|rawHeader|const QByteArray &
+$prototypeV2=QByteArray rawHeader( const QByteArray & headerName ) const
 
 $prototypeV2=QList<QByteArray> rawHeaderList() const
 
@@ -89,11 +85,9 @@ $prototypeV2=qint64 readBufferSize() const
 
 $prototypeV2=QNetworkRequest request() const
 
-$prototype=virtual void setReadBufferSize ( qint64 size )
-$virtualMethod=|void|setReadBufferSize|qint64
+$prototypeV2=virtual void setReadBufferSize( qint64 size )
 
-$prototype=void setSslConfiguration ( const QSslConfiguration & config )
-$method=|void|setSslConfiguration|const QSslConfiguration &
+$prototypeV2=void setSslConfiguration( const QSslConfiguration & config )
 
 $prototypeV2=QSslConfiguration sslConfiguration() const
 

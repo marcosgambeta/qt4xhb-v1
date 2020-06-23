@@ -60,41 +60,31 @@ $deleteMethod
 $prototype=QVariant attribute ( Attribute code, const QVariant & defaultValue = QVariant() ) const
 $method=|QVariant|attribute|QNetworkRequest::Attribute,const QVariant &=QVariant()
 
-$prototype=bool hasRawHeader ( const QByteArray & headerName ) const
-$method=|bool|hasRawHeader|const QByteArray &
+$prototypeV2=bool hasRawHeader( const QByteArray & headerName ) const
 
-$prototype=QVariant header ( KnownHeaders header ) const
-$method=|QVariant|header|QNetworkRequest::KnownHeaders
+$prototypeV2=QVariant header( QNetworkRequest::KnownHeaders header ) const
 
 $prototypeV2=QObject * originatingObject() const
 
 $prototypeV2=QNetworkRequest::Priority priority() const
 
-$prototype=QByteArray rawHeader ( const QByteArray & headerName ) const
-$method=|QByteArray|rawHeader|const QByteArray &
+$prototypeV2=QByteArray rawHeader( const QByteArray & headerName ) const
 
 $prototypeV2=QList<QByteArray> rawHeaderList() const
 
-$prototype=void setAttribute ( Attribute code, const QVariant & value )
-$method=|void|setAttribute|QNetworkRequest::Attribute,const QVariant &
+$prototypeV2=void setAttribute( QNetworkRequest::Attribute code, const QVariant & value )
 
-$prototype=void setHeader ( KnownHeaders header, const QVariant & value )
-$method=|void|setHeader|QNetworkRequest::KnownHeaders,const QVariant &
+$prototypeV2=void setHeader( QNetworkRequest::KnownHeaders header, const QVariant & value )
 
-$prototype=void setOriginatingObject ( QObject * object )
-$method=|void|setOriginatingObject|QObject *
+$prototypeV2=void setOriginatingObject( QObject * object )
 
-$prototype=void setPriority ( Priority priority )
-$method=|void|setPriority|QNetworkRequest::Priority
+$prototypeV2=void setPriority( QNetworkRequest::Priority priority )
 
-$prototype=void setRawHeader ( const QByteArray & headerName, const QByteArray & headerValue )
-$method=|void|setRawHeader|const QByteArray &,const QByteArray &
+$prototypeV2=void setRawHeader( const QByteArray & headerName, const QByteArray & headerValue )
 
-$prototype=void setSslConfiguration ( const QSslConfiguration & config )
-$method=|void|setSslConfiguration|const QSslConfiguration &
+$prototypeV2=void setSslConfiguration( const QSslConfiguration & config )
 
-$prototype=void setUrl ( const QUrl & url )
-$method=|void|setUrl|const QUrl &
+$prototypeV2=void setUrl( const QUrl & url )
 
 $prototypeV2=QSslConfiguration sslConfiguration() const
 
