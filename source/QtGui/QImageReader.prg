@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QIMAGEREADER_IMAGECOUNT )
 }
 
 /*
-bool jumpToImage ( int imageNumber )
+bool jumpToImage( int imageNumber )
 */
 HB_FUNC_STATIC( QIMAGEREADER_JUMPTOIMAGE )
 {
@@ -699,7 +699,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SCALEDSIZE )
 }
 
 /*
-void setAutoDetectImageFormat ( bool enabled )
+void setAutoDetectImageFormat( bool enabled )
 */
 HB_FUNC_STATIC( QIMAGEREADER_SETAUTODETECTIMAGEFORMAT )
 {
@@ -725,7 +725,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETAUTODETECTIMAGEFORMAT )
 }
 
 /*
-void setBackgroundColor ( const QColor & color )
+void setBackgroundColor( const QColor & color )
 */
 HB_FUNC_STATIC( QIMAGEREADER_SETBACKGROUNDCOLOR )
 {
@@ -751,7 +751,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETBACKGROUNDCOLOR )
 }
 
 /*
-void setClipRect ( const QRect & rect )
+void setClipRect( const QRect & rect )
 */
 HB_FUNC_STATIC( QIMAGEREADER_SETCLIPRECT )
 {
@@ -777,7 +777,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETCLIPRECT )
 }
 
 /*
-void setDecideFormatFromContent ( bool ignored )
+void setDecideFormatFromContent( bool ignored )
 */
 HB_FUNC_STATIC( QIMAGEREADER_SETDECIDEFORMATFROMCONTENT )
 {
@@ -803,7 +803,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETDECIDEFORMATFROMCONTENT )
 }
 
 /*
-void setDevice ( QIODevice * device )
+void setDevice( QIODevice * device )
 */
 HB_FUNC_STATIC( QIMAGEREADER_SETDEVICE )
 {
@@ -829,7 +829,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETDEVICE )
 }
 
 /*
-void setFileName ( const QString & fileName )
+void setFileName( const QString & fileName )
 */
 HB_FUNC_STATIC( QIMAGEREADER_SETFILENAME )
 {
@@ -855,7 +855,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETFILENAME )
 }
 
 /*
-void setFormat ( const QByteArray & format )
+void setFormat( const QByteArray & format )
 */
 HB_FUNC_STATIC( QIMAGEREADER_SETFORMAT )
 {
@@ -881,7 +881,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETFORMAT )
 }
 
 /*
-void setQuality ( int quality )
+void setQuality( int quality )
 */
 HB_FUNC_STATIC( QIMAGEREADER_SETQUALITY )
 {
@@ -907,7 +907,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETQUALITY )
 }
 
 /*
-void setScaledClipRect ( const QRect & rect )
+void setScaledClipRect( const QRect & rect )
 */
 HB_FUNC_STATIC( QIMAGEREADER_SETSCALEDCLIPRECT )
 {
@@ -933,7 +933,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SETSCALEDCLIPRECT )
 }
 
 /*
-void setScaledSize ( const QSize & size )
+void setScaledSize( const QSize & size )
 */
 HB_FUNC_STATIC( QIMAGEREADER_SETSCALEDSIZE )
 {
@@ -1008,7 +1008,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SUPPORTSANIMATION )
 }
 
 /*
-bool supportsOption ( QImageIOHandler::ImageOption option ) const
+bool supportsOption( QImageIOHandler::ImageOption option ) const
 */
 HB_FUNC_STATIC( QIMAGEREADER_SUPPORTSOPTION )
 {
@@ -1032,7 +1032,7 @@ HB_FUNC_STATIC( QIMAGEREADER_SUPPORTSOPTION )
 }
 
 /*
-QString text ( const QString & key ) const
+QString text( const QString & key ) const
 */
 HB_FUNC_STATIC( QIMAGEREADER_TEXT )
 {

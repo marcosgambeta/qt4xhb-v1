@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_IMAGECOUNT )
 }
 
 /*
-virtual bool jumpToImage ( int imageNumber )
+virtual bool jumpToImage( int imageNumber )
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTOIMAGE )
 {
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_NEXTIMAGEDELAY )
 }
 
 /*
-virtual QVariant option ( ImageOption option ) const
+virtual QVariant option( QImageIOHandler::ImageOption option ) const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_OPTION )
 {
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_OPTION )
 }
 
 /*
-virtual bool read ( QImage * image ) = 0
+virtual bool read( QImage * image ) = 0
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_READ )
 {
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_READ )
 }
 
 /*
-void setDevice ( QIODevice * device )
+void setDevice( QIODevice * device )
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_SETDEVICE )
 {
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SETDEVICE )
 }
 
 /*
-void setFormat ( const QByteArray & format )
+void setFormat( const QByteArray & format )
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_SETFORMAT )
 {
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SETFORMAT )
 }
 
 /*
-virtual void setOption ( ImageOption option, const QVariant & value )
+virtual void setOption( QImageIOHandler::ImageOption option, const QVariant & value )
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_SETOPTION )
 {
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SETOPTION )
 }
 
 /*
-virtual bool supportsOption ( ImageOption option ) const
+virtual bool supportsOption( QImageIOHandler::ImageOption option ) const
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_SUPPORTSOPTION )
 {
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SUPPORTSOPTION )
 }
 
 /*
-virtual bool write ( const QImage & image )
+virtual bool write( const QImage & image )
 */
 HB_FUNC_STATIC( QIMAGEIOHANDLER_WRITE )
 {

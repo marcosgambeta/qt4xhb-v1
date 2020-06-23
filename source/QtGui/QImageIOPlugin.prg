@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_DELETE )
 }
 
 /*
-virtual Capabilities capabilities ( QIODevice * device, const QByteArray & format ) const = 0
+virtual QImageIOPlugin::Capabilities capabilities( QIODevice * device, const QByteArray & format ) const = 0
 */
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_CAPABILITIES )
 {

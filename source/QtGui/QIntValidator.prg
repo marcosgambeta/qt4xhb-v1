@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_BOTTOM )
 }
 
 /*
-void setBottom ( int )
+void setBottom( int )
 */
 HB_FUNC_STATIC( QINTVALIDATOR_SETBOTTOM )
 {
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETBOTTOM )
 }
 
 /*
-virtual void setRange ( int bottom, int top )
+virtual void setRange( int bottom, int top )
 */
 HB_FUNC_STATIC( QINTVALIDATOR_SETRANGE )
 {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETRANGE )
 }
 
 /*
-void setTop ( int )
+void setTop( int )
 */
 HB_FUNC_STATIC( QINTVALIDATOR_SETTOP )
 {

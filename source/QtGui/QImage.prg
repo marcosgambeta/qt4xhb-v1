@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QIMAGE_CACHEKEY )
 }
 
 /*
-QRgb color ( int i ) const
+QRgb color( int i ) const
 */
 HB_FUNC_STATIC( QIMAGE_COLOR )
 {
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QIMAGE_COLORCOUNT )
 }
 
 /*
-QVector<QRgb> colorTable () const
+QVector<QRgb> colorTable() const
 */
 HB_FUNC_STATIC( QIMAGE_COLORTABLE )
 {
@@ -1416,7 +1416,7 @@ HB_FUNC_STATIC( QIMAGE_SCALEDTOWIDTH )
 }
 
 /*
-void setColor ( int index, QRgb colorValue )
+void setColor( int index, QRgb colorValue )
 */
 HB_FUNC_STATIC( QIMAGE_SETCOLOR )
 {
@@ -1442,7 +1442,7 @@ HB_FUNC_STATIC( QIMAGE_SETCOLOR )
 }
 
 /*
-void setColorCount ( int colorCount )
+void setColorCount( int colorCount )
 */
 HB_FUNC_STATIC( QIMAGE_SETCOLORCOUNT )
 {
@@ -1468,7 +1468,7 @@ HB_FUNC_STATIC( QIMAGE_SETCOLORCOUNT )
 }
 
 /*
-void setColorTable ( const QVector<QRgb> colors )
+void setColorTable( const QVector<QRgb> colors )
 */
 HB_FUNC_STATIC( QIMAGE_SETCOLORTABLE )
 {
@@ -1504,7 +1504,7 @@ HB_FUNC_STATIC( QIMAGE_SETCOLORTABLE )
 }
 
 /*
-void setDotsPerMeterX ( int x )
+void setDotsPerMeterX( int x )
 */
 HB_FUNC_STATIC( QIMAGE_SETDOTSPERMETERX )
 {
@@ -1530,7 +1530,7 @@ HB_FUNC_STATIC( QIMAGE_SETDOTSPERMETERX )
 }
 
 /*
-void setDotsPerMeterY ( int y )
+void setDotsPerMeterY( int y )
 */
 HB_FUNC_STATIC( QIMAGE_SETDOTSPERMETERY )
 {
@@ -1556,7 +1556,7 @@ HB_FUNC_STATIC( QIMAGE_SETDOTSPERMETERY )
 }
 
 /*
-void setOffset ( const QPoint & offset )
+void setOffset( const QPoint & offset )
 */
 HB_FUNC_STATIC( QIMAGE_SETOFFSET )
 {
@@ -1633,7 +1633,7 @@ HB_FUNC_STATIC( QIMAGE_SETPIXEL )
 }
 
 /*
-void setText ( const QString & key, const QString & text )
+void setText( const QString & key, const QString & text )
 */
 HB_FUNC_STATIC( QIMAGE_SETTEXT )
 {
@@ -1684,7 +1684,7 @@ HB_FUNC_STATIC( QIMAGE_SIZE )
 }
 
 /*
-void swap ( QImage & other )
+void swap( QImage & other )
 */
 HB_FUNC_STATIC( QIMAGE_SWAP )
 {

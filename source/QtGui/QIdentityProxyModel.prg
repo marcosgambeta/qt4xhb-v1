@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_COLUMNCOUNT )
 }
 
 /*
-virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
+virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_DROPMIMEDATA )
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INSERTROWS )
 }
 
 /*
-virtual QModelIndex mapFromSource ( const QModelIndex & sourceIndex ) const
+virtual QModelIndex mapFromSource( const QModelIndex & sourceIndex ) const
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPFROMSOURCE )
 {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPFROMSOURCE )
 }
 
 /*
-virtual QItemSelection mapSelectionFromSource ( const QItemSelection & selection ) const
+virtual QItemSelection mapSelectionFromSource( const QItemSelection & selection ) const
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPSELECTIONFROMSOURCE )
 {
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPSELECTIONFROMSOURCE )
 }
 
 /*
-virtual QItemSelection mapSelectionToSource ( const QItemSelection & selection ) const
+virtual QItemSelection mapSelectionToSource( const QItemSelection & selection ) const
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPSELECTIONTOSOURCE )
 {
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPSELECTIONTOSOURCE )
 }
 
 /*
-virtual QModelIndex mapToSource ( const QModelIndex & proxyIndex ) const
+virtual QModelIndex mapToSource( const QModelIndex & proxyIndex ) const
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPTOSOURCE )
 {
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MATCH )
 }
 
 /*
-virtual QModelIndex parent ( const QModelIndex & child ) const
+virtual QModelIndex parent( const QModelIndex & child ) const
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_PARENT )
 {
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_ROWCOUNT )
 }
 
 /*
-virtual void setSourceModel ( QAbstractItemModel * newSourceModel )
+virtual void setSourceModel( QAbstractItemModel * newSourceModel )
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_SETSOURCEMODEL )
 {

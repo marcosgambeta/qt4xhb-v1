@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_ITEMEDITORFACTORY )
 }
 
 /*
-void setClipping ( bool clip )
+void setClipping( bool clip )
 */
 HB_FUNC_STATIC( QITEMDELEGATE_SETCLIPPING )
 {
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_SETCLIPPING )
 }
 
 /*
-void setItemEditorFactory ( QItemEditorFactory * factory )
+void setItemEditorFactory( QItemEditorFactory * factory )
 */
 HB_FUNC_STATIC( QITEMDELEGATE_SETITEMEDITORFACTORY )
 {

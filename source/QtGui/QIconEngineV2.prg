@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QICONENGINEV2_KEY )
 }
 
 /*
-virtual bool read ( QDataStream & in )
+virtual bool read( QDataStream & in )
 */
 HB_FUNC_STATIC( QICONENGINEV2_READ )
 {
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QICONENGINEV2_READ )
 }
 
 /*
-virtual void virtual_hook ( int id, void * data )
+virtual void virtual_hook( int id, void * data )
 */
 HB_FUNC_STATIC( QICONENGINEV2_VIRTUAL_HOOK )
 {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QICONENGINEV2_VIRTUAL_HOOK )
 }
 
 /*
-virtual bool write ( QDataStream & out ) const
+virtual bool write( QDataStream & out ) const
 */
 HB_FUNC_STATIC( QICONENGINEV2_WRITE )
 {

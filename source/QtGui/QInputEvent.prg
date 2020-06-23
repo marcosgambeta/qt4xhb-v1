@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QINPUTEVENT_MODIFIERS )
 }
 
 /*
-void setModifiers(Qt::KeyboardModifiers amodifiers)
+void setModifiers( Qt::KeyboardModifiers amodifiers )
 */
 HB_FUNC_STATIC( QINPUTEVENT_SETMODIFIERS )
 {
