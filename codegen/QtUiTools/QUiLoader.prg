@@ -35,8 +35,7 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=void addPluginPath ( const QString & path )
-$method=|void|addPluginPath|const QString &
+$prototypeV2=void addPluginPath( const QString & path )
 
 $prototypeV2=QStringList availableLayouts() const
 
@@ -63,11 +62,9 @@ $method=|QWidget *|load|QIODevice *,QWidget *=0
 
 $prototypeV2=QStringList pluginPaths() const
 
-$prototype=void setLanguageChangeEnabled ( bool enabled )
-$method=|void|setLanguageChangeEnabled|bool
+$prototypeV2=void setLanguageChangeEnabled( bool enabled )
 
-$prototype=void setWorkingDirectory ( const QDir & dir )
-$method=|void|setWorkingDirectory|const QDir &
+$prototypeV2=void setWorkingDirectory( const QDir & dir )
 
 $prototypeV2=QDir workingDirectory() const
 
