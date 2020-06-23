@@ -136,7 +136,7 @@ $addMethod=getColor
 
 $prototypeV2=static void setCustomColor( int index, QRgb color )
 
-$prototypeV2=static void setStandardColor( int index, QRgb color
+$prototypeV2=static void setStandardColor( int index, QRgb color )
 
 $beginSignals
 $signal=|colorSelected(QColor)
