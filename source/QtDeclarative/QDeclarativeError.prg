@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_LINE )
 }
 
 /*
-void setColumn ( int column )
+void setColumn( int column )
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_SETCOLUMN )
 {
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETCOLUMN )
 }
 
 /*
-void setDescription ( const QString & description )
+void setDescription( const QString & description )
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_SETDESCRIPTION )
 {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETDESCRIPTION )
 }
 
 /*
-void setLine ( int line )
+void setLine( int line )
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_SETLINE )
 {
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_SETLINE )
 }
 
 /*
-void setUrl ( const QUrl & url )
+void setUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_SETURL )
 {

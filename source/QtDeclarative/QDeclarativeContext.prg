@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_CONTEXTOBJECT )
 }
 
 /*
-QVariant contextProperty ( const QString & name ) const
+QVariant contextProperty( const QString & name ) const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_CONTEXTPROPERTY )
 {
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_PARENTCONTEXT )
 }
 
 /*
-QUrl resolvedUrl ( const QUrl & src )
+QUrl resolvedUrl( const QUrl & src )
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_RESOLVEDURL )
 {
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_RESOLVEDURL )
 }
 
 /*
-void setBaseUrl ( const QUrl & baseUrl )
+void setBaseUrl( const QUrl & baseUrl )
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETBASEURL )
 {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETBASEURL )
 }
 
 /*
-void setContextObject ( QObject * object )
+void setContextObject( QObject * object )
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTOBJECT )
 {

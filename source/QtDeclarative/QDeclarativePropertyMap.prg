@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_DELETE )
 }
 
 /*
-void clear ( const QString & key )
+void clear( const QString & key )
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_CLEAR )
 {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_CLEAR )
 }
 
 /*
-bool contains ( const QString & key ) const
+bool contains( const QString & key ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_CONTAINS )
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_COUNT )
 }
 
 /*
-void insert ( const QString & key, const QVariant & value )
+void insert( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_INSERT )
 {
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_SIZE )
 }
 
 /*
-QVariant value ( const QString & key ) const
+QVariant value( const QString & key ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_VALUE )
 {

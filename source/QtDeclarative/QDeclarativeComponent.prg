@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_DELETE )
 }
 
 /*
-virtual QObject * beginCreate ( QDeclarativeContext * context )
+virtual QObject * beginCreate( QDeclarativeContext * context )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_BEGINCREATE )
 {
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISREADY )
 }
 
 /*
-void loadUrl ( const QUrl & url )
+void loadUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_LOADURL )
 {
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_PROGRESS )
 }
 
 /*
-void setData ( const QByteArray & data, const QUrl & url )
+void setData( const QByteArray & data, const QUrl & url )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_SETDATA )
 {

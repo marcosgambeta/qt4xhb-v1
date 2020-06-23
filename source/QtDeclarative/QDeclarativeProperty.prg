@@ -605,7 +605,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTYTYPECATEGORY )
 }
 
 /*
-const char * propertyTypeName () const
+const char * propertyTypeName() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTYTYPENAME )
 {
