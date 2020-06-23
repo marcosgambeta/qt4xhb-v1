@@ -1346,3 +1346,4 @@ QFileInfoList                                    |QList
 QWidgetList                                      |QList
 QModelIndexList                                  |QList
 QObjectList                                      |QList
+QVariantList                                     |QList
