@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QFONTENGINEPLUGIN_AVAILABLEFONTENGINES )
 }
 
 /*
-virtual QAbstractFontEngine * create ( const QFontEngineInfo & info ) = 0
+virtual QAbstractFontEngine * create( const QFontEngineInfo & info ) = 0
 */
 HB_FUNC_STATIC( QFONTENGINEPLUGIN_CREATE )
 {

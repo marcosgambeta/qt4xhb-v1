@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QFONTMETRICS_HEIGHT )
 }
 
 /*
-bool inFont ( QChar ch ) const
+bool inFont( QChar ch ) const
 */
 HB_FUNC_STATIC( QFONTMETRICS_INFONT )
 {
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QFONTMETRICS_INFONT )
 }
 
 /*
-bool inFontUcs4 ( uint character ) const
+bool inFontUcs4( uint character ) const
 */
 HB_FUNC_STATIC( QFONTMETRICS_INFONTUCS4 )
 {
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QFONTMETRICS_LEADING )
 }
 
 /*
-int leftBearing ( QChar ch ) const
+int leftBearing( QChar ch ) const
 */
 HB_FUNC_STATIC( QFONTMETRICS_LEFTBEARING )
 {
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QFONTMETRICS_OVERLINEPOS )
 }
 
 /*
-int rightBearing ( QChar ch ) const
+int rightBearing( QChar ch ) const
 */
 HB_FUNC_STATIC( QFONTMETRICS_RIGHTBEARING )
 {
@@ -669,7 +669,7 @@ HB_FUNC_STATIC( QFONTMETRICS_STRIKEOUTPOS )
 }
 
 /*
-QRect tightBoundingRect ( const QString & text ) const
+QRect tightBoundingRect( const QString & text ) const
 */
 HB_FUNC_STATIC( QFONTMETRICS_TIGHTBOUNDINGRECT )
 {

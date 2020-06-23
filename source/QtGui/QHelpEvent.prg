@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QHELPEVENT_DELETE )
 }
 
 /*
-const QPoint & globalPos () const
+const QPoint & globalPos() const
 */
 HB_FUNC_STATIC( QHELPEVENT_GLOBALPOS )
 {
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QHELPEVENT_GLOBALY )
 }
 
 /*
-const QPoint & pos () const
+const QPoint & pos() const
 */
 HB_FUNC_STATIC( QHELPEVENT_POS )
 {

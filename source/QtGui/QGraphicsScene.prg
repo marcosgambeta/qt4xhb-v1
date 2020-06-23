@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDELLIPSE )
 }
 
 /*
-void addItem ( QGraphicsItem * item )
+void addItem( QGraphicsItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ADDITEM )
 {
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDPATH )
 }
 
 /*
-QGraphicsPixmapItem * addPixmap ( const QPixmap & pixmap )
+QGraphicsPixmapItem * addPixmap( const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_ADDPIXMAP )
 {
@@ -702,7 +702,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_COLLIDINGITEMS )
 }
 
 /*
-QGraphicsItemGroup * createItemGroup ( const QList<QGraphicsItem *> & items )
+QGraphicsItemGroup * createItemGroup( const QList<QGraphicsItem *> & items )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_CREATEITEMGROUP )
 {
@@ -735,7 +735,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_CREATEITEMGROUP )
 }
 
 /*
-void destroyItemGroup ( QGraphicsItemGroup * group )
+void destroyItemGroup( QGraphicsItemGroup * group )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_DESTROYITEMGROUP )
 {
@@ -884,7 +884,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_HEIGHT )
 }
 
 /*
-virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
+virtual QVariant inputMethodQuery( Qt::InputMethodQuery query ) const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_INPUTMETHODQUERY )
 {
@@ -1461,7 +1461,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_PALETTE )
 }
 
 /*
-void removeItem ( QGraphicsItem * item )
+void removeItem( QGraphicsItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_REMOVEITEM )
 {
@@ -1611,7 +1611,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SELECTIONAREA )
 }
 
 /*
-bool sendEvent ( QGraphicsItem * item, QEvent * event )
+bool sendEvent( QGraphicsItem * item, QEvent * event )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SENDEVENT )
 {
@@ -1635,7 +1635,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SENDEVENT )
 }
 
 /*
-void setActivePanel ( QGraphicsItem * item )
+void setActivePanel( QGraphicsItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETACTIVEPANEL )
 {
@@ -1661,7 +1661,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETACTIVEPANEL )
 }
 
 /*
-void setActiveWindow ( QGraphicsWidget * widget )
+void setActiveWindow( QGraphicsWidget * widget )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETACTIVEWINDOW )
 {
@@ -1687,7 +1687,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETACTIVEWINDOW )
 }
 
 /*
-void setBackgroundBrush ( const QBrush & brush )
+void setBackgroundBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETBACKGROUNDBRUSH )
 {
@@ -1713,7 +1713,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETBACKGROUNDBRUSH )
 }
 
 /*
-void setBspTreeDepth ( int depth )
+void setBspTreeDepth( int depth )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETBSPTREEDEPTH )
 {
@@ -1791,7 +1791,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETFOCUSITEM )
 }
 
 /*
-void setFont ( const QFont & font )
+void setFont( const QFont & font )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETFONT )
 {
@@ -1817,7 +1817,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETFONT )
 }
 
 /*
-void setForegroundBrush ( const QBrush & brush )
+void setForegroundBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETFOREGROUNDBRUSH )
 {
@@ -1843,7 +1843,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETFOREGROUNDBRUSH )
 }
 
 /*
-void setItemIndexMethod ( ItemIndexMethod method )
+void setItemIndexMethod( QGraphicsScene::ItemIndexMethod method )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETITEMINDEXMETHOD )
 {
@@ -1869,7 +1869,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETITEMINDEXMETHOD )
 }
 
 /*
-void setPalette ( const QPalette & palette )
+void setPalette( const QPalette & palette )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETPALETTE )
 {
@@ -1997,7 +1997,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETSELECTIONAREA )
 }
 
 /*
-void setSortCacheEnabled ( bool enabled )
+void setSortCacheEnabled( bool enabled )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETSORTCACHEENABLED )
 {
@@ -2023,7 +2023,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETSORTCACHEENABLED )
 }
 
 /*
-void setStickyFocus ( bool enabled )
+void setStickyFocus( bool enabled )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETSTICKYFOCUS )
 {
@@ -2049,7 +2049,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETSTICKYFOCUS )
 }
 
 /*
-void setStyle ( QStyle * style )
+void setStyle( QStyle * style )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETSTYLE )
 {

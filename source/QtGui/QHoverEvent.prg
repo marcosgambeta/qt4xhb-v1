@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QHOVEREVENT_DELETE )
 }
 
 /*
-const QPoint & pos () const
+const QPoint & pos() const
 */
 HB_FUNC_STATIC( QHOVEREVENT_POS )
 {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QHOVEREVENT_POS )
 }
 
 /*
-const QPoint & oldPos () const
+const QPoint & oldPos() const
 */
 HB_FUNC_STATIC( QHOVEREVENT_OLDPOS )
 {

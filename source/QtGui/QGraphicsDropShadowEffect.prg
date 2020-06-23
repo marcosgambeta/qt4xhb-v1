@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_YOFFSET )
 }
 
 /*
-virtual QRectF boundingRectFor ( const QRectF & rect ) const
+virtual QRectF boundingRectFor( const QRectF & rect ) const
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BOUNDINGRECTFOR )
 {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BOUNDINGRECTFOR )
 }
 
 /*
-void setBlurRadius ( qreal blurRadius )
+void setBlurRadius( qreal blurRadius )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETBLURRADIUS )
 {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETBLURRADIUS )
 }
 
 /*
-void setColor ( const QColor & color )
+void setColor( const QColor & color )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETCOLOR )
 {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET )
 }
 
 /*
-void setXOffset ( qreal dx )
+void setXOffset( qreal dx )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETXOFFSET )
 {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETXOFFSET )
 }
 
 /*
-void setYOffset ( qreal dy )
+void setYOffset( qreal dy )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETYOFFSET )
 {

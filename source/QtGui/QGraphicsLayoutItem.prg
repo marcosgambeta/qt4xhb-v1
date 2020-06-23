@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GEOMETRY )
 }
 
 /*
-virtual void getContentsMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
+virtual void getContentsMargins( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GETCONTENTSMARGINS )
 {
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PREFERREDWIDTH )
 }
 
 /*
-virtual void setGeometry ( const QRectF & rect )
+virtual void setGeometry( const QRectF & rect )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETGEOMETRY )
 {
@@ -542,7 +542,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETGEOMETRY )
 }
 
 /*
-void setMaximumHeight ( qreal height )
+void setMaximumHeight( qreal height )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMHEIGHT )
 {
@@ -619,7 +619,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE )
 }
 
 /*
-void setMaximumWidth ( qreal width )
+void setMaximumWidth( qreal width )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMWIDTH )
 {
@@ -645,7 +645,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMWIDTH )
 }
 
 /*
-void setMinimumHeight ( qreal height )
+void setMinimumHeight( qreal height )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMHEIGHT )
 {
@@ -722,7 +722,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE )
 }
 
 /*
-void setMinimumWidth ( qreal width )
+void setMinimumWidth( qreal width )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMWIDTH )
 {
@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMWIDTH )
 }
 
 /*
-void setParentLayoutItem ( QGraphicsLayoutItem * parent )
+void setParentLayoutItem( QGraphicsLayoutItem * parent )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPARENTLAYOUTITEM )
 {
@@ -774,7 +774,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPARENTLAYOUTITEM )
 }
 
 /*
-void setPreferredHeight ( qreal height )
+void setPreferredHeight( qreal height )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDHEIGHT )
 {
@@ -851,7 +851,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE )
 }
 
 /*
-void setPreferredWidth ( qreal width )
+void setPreferredWidth( qreal width )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDWIDTH )
 {

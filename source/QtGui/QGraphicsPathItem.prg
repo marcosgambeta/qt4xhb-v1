@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_PATH )
 }
 
 /*
-void setPath ( const QPainterPath & path )
+void setPath( const QPainterPath & path )
 */
 HB_FUNC_STATIC( QGRAPHICSPATHITEM_SETPATH )
 {
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_BOUNDINGRECT )
 }
 
 /*
-virtual bool contains ( const QPointF & point ) const
+virtual bool contains( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSPATHITEM_CONTAINS )
 {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_CONTAINS )
 }
 
 /*
-virtual bool isObscuredBy ( const QGraphicsItem * item ) const
+virtual bool isObscuredBy( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSPATHITEM_ISOBSCUREDBY )
 {

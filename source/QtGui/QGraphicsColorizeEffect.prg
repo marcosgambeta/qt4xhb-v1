@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_STRENGTH )
 }
 
 /*
-void setColor ( const QColor & c )
+void setColor( const QColor & c )
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETCOLOR )
 {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETCOLOR )
 }
 
 /*
-void setStrength ( qreal strength )
+void setStrength( qreal strength )
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETSTRENGTH )
 {

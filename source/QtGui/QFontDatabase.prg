@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QFONTDATABASE_NEW )
 }
 
 /*
-bool bold ( const QString & family, const QString & style ) const
+bool bold( const QString & family, const QString & style ) const
 */
 HB_FUNC_STATIC( QFONTDATABASE_BOLD )
 {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QFONTDATABASE_FAMILIES )
 }
 
 /*
-QFont font ( const QString & family, const QString & style, int pointSize ) const
+QFont font( const QString & family, const QString & style, int pointSize ) const
 */
 HB_FUNC_STATIC( QFONTDATABASE_FONT )
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISSMOOTHLYSCALABLE )
 }
 
 /*
-bool italic ( const QString & family, const QString & style ) const
+bool italic( const QString & family, const QString & style ) const
 */
 HB_FUNC_STATIC( QFONTDATABASE_ITALIC )
 {
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QFONTDATABASE_POINTSIZES )
 }
 
 /*
-QList<int> smoothSizes ( const QString & family, const QString & style )
+QList<int> smoothSizes( const QString & family, const QString & style )
 */
 HB_FUNC_STATIC( QFONTDATABASE_SMOOTHSIZES )
 {
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING )
 }
 
 /*
-QStringList styles ( const QString & family ) const
+QStringList styles( const QString & family ) const
 */
 HB_FUNC_STATIC( QFONTDATABASE_STYLES )
 {
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QFONTDATABASE_STYLES )
 }
 
 /*
-int weight ( const QString & family, const QString & style ) const
+int weight( const QString & family, const QString & style ) const
 */
 HB_FUNC_STATIC( QFONTDATABASE_WEIGHT )
 {
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMS )
 }
 
 /*
-static int addApplicationFont ( const QString & fileName )
+static int addApplicationFont( const QString & fileName )
 */
 HB_FUNC_STATIC( QFONTDATABASE_ADDAPPLICATIONFONT )
 {
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ADDAPPLICATIONFONT )
 }
 
 /*
-static int addApplicationFontFromData ( const QByteArray & fontData )
+static int addApplicationFontFromData( const QByteArray & fontData )
 */
 HB_FUNC_STATIC( QFONTDATABASE_ADDAPPLICATIONFONTFROMDATA )
 {
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ADDAPPLICATIONFONTFROMDATA )
 }
 
 /*
-static QStringList applicationFontFamilies ( int id )
+static QStringList applicationFontFamilies( int id )
 */
 HB_FUNC_STATIC( QFONTDATABASE_APPLICATIONFONTFAMILIES )
 {
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QFONTDATABASE_REMOVEALLAPPLICATIONFONTS )
 }
 
 /*
-static bool removeApplicationFont ( int id )
+static bool removeApplicationFont( int id )
 */
 HB_FUNC_STATIC( QFONTDATABASE_REMOVEAPPLICATIONFONT )
 {
@@ -624,7 +624,7 @@ HB_FUNC_STATIC( QFONTDATABASE_SUPPORTSTHREADEDFONTRENDERING )
 }
 
 /*
-static QString writingSystemName ( WritingSystem writingSystem )
+static QString writingSystemName( QFontDatabase::WritingSystem writingSystem )
 */
 HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMNAME )
 {
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMNAME )
 }
 
 /*
-static QString writingSystemSample ( WritingSystem writingSystem )
+static QString writingSystemSample( QFontDatabase::WritingSystem writingSystem )
 */
 HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMSAMPLE )
 {

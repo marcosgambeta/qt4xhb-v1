@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETOFFSET )
 }
 
 /*
-void setPixmap ( const QPixmap & pixmap )
+void setPixmap( const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETPIXMAP )
 {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETPIXMAP )
 }
 
 /*
-void setShapeMode ( ShapeMode mode )
+void setShapeMode( QGraphicsPixmapItem::ShapeMode mode )
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETSHAPEMODE )
 {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETSHAPEMODE )
 }
 
 /*
-void setTransformationMode ( Qt::TransformationMode mode )
+void setTransformationMode( Qt::TransformationMode mode )
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETTRANSFORMATIONMODE )
 {
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_BOUNDINGRECT )
 }
 
 /*
-virtual bool contains ( const QPointF & point ) const
+virtual bool contains( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_CONTAINS )
 {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_CONTAINS )
 }
 
 /*
-virtual bool isObscuredBy ( const QGraphicsItem * item ) const
+virtual bool isObscuredBy( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_ISOBSCUREDBY )
 {
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_OPAQUEAREA )
 }
 
 /*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
+virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_PAINT )
 {

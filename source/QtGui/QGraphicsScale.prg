@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ORIGIN )
 }
 
 /*
-void setOrigin ( const QVector3D & point )
+void setOrigin( const QVector3D & point )
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_SETORIGIN )
 {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_SETORIGIN )
 }
 
 /*
-void setXScale ( qreal )
+void setXScale( qreal )
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_SETXSCALE )
 {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_SETXSCALE )
 }
 
 /*
-void setYScale ( qreal )
+void setYScale( qreal )
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_SETYSCALE )
 {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_SETYSCALE )
 }
 
 /*
-void setZScale ( qreal )
+void setZScale( qreal )
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_SETZSCALE )
 {
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ZSCALE )
 }
 
 /*
-virtual void applyTo ( QMatrix4x4 * matrix ) const
+virtual void applyTo( QMatrix4x4 * matrix ) const
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_APPLYTO )
 {

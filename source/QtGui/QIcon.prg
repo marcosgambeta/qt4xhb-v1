@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QICON_FROMTHEME )
 }
 
 /*
-static bool hasThemeIcon ( const QString & name )
+static bool hasThemeIcon( const QString & name )
 */
 HB_FUNC_STATIC( QICON_HASTHEMEICON )
 {
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QICON_HASTHEMEICON )
 }
 
 /*
-static void setThemeName ( const QString & name )
+static void setThemeName( const QString & name )
 */
 HB_FUNC_STATIC( QICON_SETTHEMENAME )
 {
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QICON_SETTHEMENAME )
 }
 
 /*
-static void setThemeSearchPaths ( const QStringList & paths )
+static void setThemeSearchPaths( const QStringList & paths )
 */
 HB_FUNC_STATIC( QICON_SETTHEMESEARCHPATHS )
 {

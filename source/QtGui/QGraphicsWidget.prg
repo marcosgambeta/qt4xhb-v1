@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_ACTIONS )
 }
 
 /*
-void addAction ( QAction * action )
+void addAction( QAction * action )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_ADDACTION )
 {
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_ADDACTION )
 }
 
 /*
-void addActions ( QList<QAction *> actions )
+void addActions( QList<QAction *> actions )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_ADDACTIONS )
 {
@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_GRABSHORTCUT )
 }
 
 /*
-void insertAction ( QAction * before, QAction * action )
+void insertAction( QAction * before, QAction * action )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_INSERTACTION )
 {
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_INSERTACTION )
 }
 
 /*
-void insertActions ( QAction * before, QList<QAction *> actions )
+void insertActions( QAction * before, QList<QAction *> actions )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_INSERTACTIONS )
 {
@@ -640,7 +640,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_RECT )
 }
 
 /*
-void releaseShortcut ( int id )
+void releaseShortcut( int id )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_RELEASESHORTCUT )
 {
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_RELEASESHORTCUT )
 }
 
 /*
-void removeAction ( QAction * action )
+void removeAction( QAction * action )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_REMOVEACTION )
 {
@@ -769,7 +769,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETATTRIBUTE )
 }
 
 /*
-void setAutoFillBackground ( bool enabled )
+void setAutoFillBackground( bool enabled )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETAUTOFILLBACKGROUND )
 {
@@ -795,7 +795,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETAUTOFILLBACKGROUND )
 }
 
 /*
-void setContentsMargins ( qreal left, qreal top, qreal right, qreal bottom )
+void setContentsMargins( qreal left, qreal top, qreal right, qreal bottom )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETCONTENTSMARGINS )
 {
@@ -821,7 +821,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETCONTENTSMARGINS )
 }
 
 /*
-void setFocusPolicy ( Qt::FocusPolicy policy )
+void setFocusPolicy( Qt::FocusPolicy policy )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETFOCUSPOLICY )
 {
@@ -847,7 +847,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETFOCUSPOLICY )
 }
 
 /*
-void setFont ( const QFont & font )
+void setFont( const QFont & font )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETFONT )
 {
@@ -873,7 +873,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETFONT )
 }
 
 /*
-void setLayout ( QGraphicsLayout * layout )
+void setLayout( QGraphicsLayout * layout )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETLAYOUT )
 {
@@ -899,7 +899,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETLAYOUT )
 }
 
 /*
-void setLayoutDirection ( Qt::LayoutDirection direction )
+void setLayoutDirection( Qt::LayoutDirection direction )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETLAYOUTDIRECTION )
 {
@@ -925,7 +925,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETLAYOUTDIRECTION )
 }
 
 /*
-void setPalette ( const QPalette & palette )
+void setPalette( const QPalette & palette )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETPALETTE )
 {
@@ -1003,7 +1003,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETSHORTCUTENABLED )
 }
 
 /*
-void setStyle ( QStyle * style )
+void setStyle( QStyle * style )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETSTYLE )
 {
@@ -1029,7 +1029,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETSTYLE )
 }
 
 /*
-void setWindowFlags ( Qt::WindowFlags wFlags )
+void setWindowFlags( Qt::WindowFlags wFlags )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETWINDOWFLAGS )
 {
@@ -1055,7 +1055,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETWINDOWFLAGS )
 }
 
 /*
-void setWindowFrameMargins ( qreal left, qreal top, qreal right, qreal bottom )
+void setWindowFrameMargins( qreal left, qreal top, qreal right, qreal bottom )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETWINDOWFRAMEMARGINS )
 {
@@ -1081,7 +1081,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETWINDOWFRAMEMARGINS )
 }
 
 /*
-void setWindowTitle ( const QString & title )
+void setWindowTitle( const QString & title )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETWINDOWTITLE )
 {
@@ -1157,7 +1157,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_STYLE )
 }
 
 /*
-bool testAttribute ( Qt::WidgetAttribute attribute ) const
+bool testAttribute( Qt::WidgetAttribute attribute ) const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_TESTATTRIBUTE )
 {
@@ -1564,7 +1564,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_CLOSE )
 }
 
 /*
-static void setTabOrder ( QGraphicsWidget * first, QGraphicsWidget * second )
+static void setTabOrder( QGraphicsWidget * first, QGraphicsWidget * second )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETTABORDER )
 {

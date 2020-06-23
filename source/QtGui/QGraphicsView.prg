@@ -1358,7 +1358,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RESIZEANCHOR )
 }
 
 /*
-void rotate ( qreal angle )
+void rotate( qreal angle )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_ROTATE )
 {
@@ -1408,7 +1408,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_RUBBERBANDSELECTIONMODE )
 }
 
 /*
-void scale ( qreal sx, qreal sy )
+void scale( qreal sx, qreal sy )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SCALE )
 {
@@ -1484,7 +1484,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SCENERECT )
 }
 
 /*
-void setAlignment ( Qt::Alignment alignment )
+void setAlignment( Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETALIGNMENT )
 {
@@ -1510,7 +1510,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETALIGNMENT )
 }
 
 /*
-void setBackgroundBrush ( const QBrush & brush )
+void setBackgroundBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETBACKGROUNDBRUSH )
 {
@@ -1536,7 +1536,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETBACKGROUNDBRUSH )
 }
 
 /*
-void setCacheMode ( CacheMode mode )
+void setCacheMode( QGraphicsView::CacheMode mode )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETCACHEMODE )
 {
@@ -1562,7 +1562,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETCACHEMODE )
 }
 
 /*
-void setDragMode ( DragMode mode )
+void setDragMode( QGraphicsView::DragMode mode )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETDRAGMODE )
 {
@@ -1588,7 +1588,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETDRAGMODE )
 }
 
 /*
-void setForegroundBrush ( const QBrush & brush )
+void setForegroundBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETFOREGROUNDBRUSH )
 {
@@ -1614,7 +1614,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETFOREGROUNDBRUSH )
 }
 
 /*
-void setInteractive ( bool allowed )
+void setInteractive( bool allowed )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETINTERACTIVE )
 {
@@ -1692,7 +1692,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAG )
 }
 
 /*
-void setOptimizationFlags ( OptimizationFlags flags )
+void setOptimizationFlags( QGraphicsView::OptimizationFlags flags )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAGS )
 {
@@ -1744,7 +1744,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETRENDERHINT )
 }
 
 /*
-void setRenderHints ( QPainter::RenderHints hints )
+void setRenderHints( QPainter::RenderHints hints )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETRENDERHINTS )
 {
@@ -1770,7 +1770,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETRENDERHINTS )
 }
 
 /*
-void setResizeAnchor ( ViewportAnchor anchor )
+void setResizeAnchor( QGraphicsView::ViewportAnchor anchor )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETRESIZEANCHOR )
 {
@@ -1796,7 +1796,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETRESIZEANCHOR )
 }
 
 /*
-void setRubberBandSelectionMode ( Qt::ItemSelectionMode mode )
+void setRubberBandSelectionMode( Qt::ItemSelectionMode mode )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETRUBBERBANDSELECTIONMODE )
 {
@@ -1822,7 +1822,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETRUBBERBANDSELECTIONMODE )
 }
 
 /*
-void setScene ( QGraphicsScene * scene )
+void setScene( QGraphicsScene * scene )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETSCENE )
 {
@@ -1925,7 +1925,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETTRANSFORM )
 }
 
 /*
-void setTransformationAnchor ( ViewportAnchor anchor )
+void setTransformationAnchor( QGraphicsView::ViewportAnchor anchor )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETTRANSFORMATIONANCHOR )
 {
@@ -1951,7 +1951,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETTRANSFORMATIONANCHOR )
 }
 
 /*
-void setViewportUpdateMode ( ViewportUpdateMode mode )
+void setViewportUpdateMode( QGraphicsView::ViewportUpdateMode mode )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETVIEWPORTUPDATEMODE )
 {
@@ -1977,7 +1977,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETVIEWPORTUPDATEMODE )
 }
 
 /*
-void shear ( qreal sh, qreal sv )
+void shear( qreal sh, qreal sv )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SHEAR )
 {
@@ -2052,7 +2052,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSFORMATIONANCHOR )
 }
 
 /*
-void translate ( qreal dx, qreal dy )
+void translate( qreal dx, qreal dy )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSLATE )
 {
@@ -2127,7 +2127,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_VIEWPORTUPDATEMODE )
 }
 
 /*
-virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
+virtual QVariant inputMethodQuery( Qt::InputMethodQuery query ) const
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_INPUTMETHODQUERY )
 {
@@ -2203,7 +2203,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_INVALIDATESCENE )
 }
 
 /*
-void updateScene ( const QList<QRectF> & rects )
+void updateScene( const QList<QRectF> & rects )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_UPDATESCENE )
 {
@@ -2237,7 +2237,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_UPDATESCENE )
 }
 
 /*
-void updateSceneRect ( const QRectF & rect )
+void updateSceneRect( const QRectF & rect )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_UPDATESCENERECT )
 {

@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ORIGIN )
 }
 
 /*
-void setAngle ( qreal )
+void setAngle( qreal )
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_SETANGLE )
 {
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS )
 }
 
 /*
-void setOrigin ( const QVector3D & point )
+void setOrigin( const QVector3D & point )
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_SETORIGIN )
 {
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETORIGIN )
 }
 
 /*
-virtual void applyTo ( QMatrix4x4 * matrix ) const
+virtual void applyTo( QMatrix4x4 * matrix ) const
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_APPLYTO )
 {

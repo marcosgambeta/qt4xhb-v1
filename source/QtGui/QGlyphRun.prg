@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QGLYPHRUN_CLEAR )
 }
 
 /*
-QVector<quint32> glyphIndexes () const
+QVector<quint32> glyphIndexes() const
 */
 HB_FUNC_STATIC( QGLYPHRUN_GLYPHINDEXES )
 {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QGLYPHRUN_OVERLINE )
 }
 
 /*
-QVector<QPointF> positions () const
+QVector<QPointF> positions() const
 */
 HB_FUNC_STATIC( QGLYPHRUN_POSITIONS )
 {
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QGLYPHRUN_RAWFONT )
 }
 
 /*
-void setGlyphIndexes ( const QVector<quint32> & glyphIndexes )
+void setGlyphIndexes( const QVector<quint32> & glyphIndexes )
 */
 HB_FUNC_STATIC( QGLYPHRUN_SETGLYPHINDEXES )
 {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QGLYPHRUN_SETGLYPHINDEXES )
 }
 
 /*
-void setOverline ( bool overline )
+void setOverline( bool overline )
 */
 HB_FUNC_STATIC( QGLYPHRUN_SETOVERLINE )
 {
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QGLYPHRUN_SETOVERLINE )
 }
 
 /*
-void setPositions ( const QVector<QPointF> & positions )
+void setPositions( const QVector<QPointF> & positions )
 */
 HB_FUNC_STATIC( QGLYPHRUN_SETPOSITIONS )
 {
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QGLYPHRUN_SETPOSITIONS )
 }
 
 /*
-void setRawFont ( const QRawFont & rawFont )
+void setRawFont( const QRawFont & rawFont )
 */
 HB_FUNC_STATIC( QGLYPHRUN_SETRAWFONT )
 {
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QGLYPHRUN_SETRAWFONT )
 }
 
 /*
-void setStrikeOut ( bool strikeOut )
+void setStrikeOut( bool strikeOut )
 */
 HB_FUNC_STATIC( QGLYPHRUN_SETSTRIKEOUT )
 {
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QGLYPHRUN_SETSTRIKEOUT )
 }
 
 /*
-void setUnderline ( bool underline )
+void setUnderline( bool underline )
 */
 HB_FUNC_STATIC( QGLYPHRUN_SETUNDERLINE )
 {

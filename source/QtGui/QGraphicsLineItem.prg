@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETLINE )
 }
 
 /*
-void setPen ( const QPen & pen )
+void setPen( const QPen & pen )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETPEN )
 {
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_BOUNDINGRECT )
 }
 
 /*
-virtual bool contains ( const QPointF & point ) const
+virtual bool contains( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_CONTAINS )
 {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_CONTAINS )
 }
 
 /*
-virtual bool isObscuredBy ( const QGraphicsItem * item ) const
+virtual bool isObscuredBy( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_ISOBSCUREDBY )
 {

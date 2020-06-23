@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_BOUNDINGRECT )
 }
 
 /*
-virtual bool contains ( const QPointF & point ) const
+virtual bool contains( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSRECTITEM_CONTAINS )
 {
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_CONTAINS )
 }
 
 /*
-virtual bool isObscuredBy ( const QGraphicsItem * item ) const
+virtual bool isObscuredBy( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSRECTITEM_ISOBSCUREDBY )
 {

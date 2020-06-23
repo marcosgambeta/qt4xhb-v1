@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_DELETE )
 }
 
 /*
-void addToGroup ( QGraphicsItem * item )
+void addToGroup( QGraphicsItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_ADDTOGROUP )
 {
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_ADDTOGROUP )
 }
 
 /*
-void removeFromGroup ( QGraphicsItem * item )
+void removeFromGroup( QGraphicsItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_REMOVEFROMGROUP )
 {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_BOUNDINGRECT )
 }
 
 /*
-virtual bool isObscuredBy ( const QGraphicsItem * item ) const
+virtual bool isObscuredBy( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_ISOBSCUREDBY )
 {

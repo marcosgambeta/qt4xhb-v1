@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_POLYGON )
 }
 
 /*
-void setFillRule ( Qt::FillRule rule )
+void setFillRule( Qt::FillRule rule )
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SETFILLRULE )
 {
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SETFILLRULE )
 }
 
 /*
-void setPolygon ( const QPolygonF & polygon )
+void setPolygon( const QPolygonF & polygon )
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SETPOLYGON )
 {
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_BOUNDINGRECT )
 }
 
 /*
-virtual bool contains ( const QPointF & point ) const
+virtual bool contains( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_CONTAINS )
 {
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_CONTAINS )
 }
 
 /*
-virtual bool isObscuredBy ( const QGraphicsItem * item ) const
+virtual bool isObscuredBy( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_ISOBSCUREDBY )
 {

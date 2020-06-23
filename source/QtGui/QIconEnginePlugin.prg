@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QICONENGINEPLUGIN_DELETE )
 }
 
 /*
-virtual QIconEngine * create ( const QString & filename ) = 0
+virtual QIconEngine * create( const QString & filename ) = 0
 */
 HB_FUNC_STATIC( QICONENGINEPLUGIN_CREATE )
 {

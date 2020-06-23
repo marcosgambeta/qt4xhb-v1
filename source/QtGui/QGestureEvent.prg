@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_CANCELEDGESTURES )
 }
 
 /*
-QGesture * gesture ( Qt::GestureType type ) const
+QGesture * gesture( Qt::GestureType type ) const
 */
 HB_FUNC_STATIC( QGESTUREEVENT_GESTURE )
 {
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED )
 }
 
 /*
-QPointF mapToGraphicsScene ( const QPointF & gesturePoint ) const
+QPointF mapToGraphicsScene( const QPointF & gesturePoint ) const
 */
 HB_FUNC_STATIC( QGESTUREEVENT_MAPTOGRAPHICSSCENE )
 {
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED )
 }
 
 /*
-void setWidget(QWidget *widget)
+void setWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QGESTUREEVENT_SETWIDGET )
 {

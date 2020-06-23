@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETRECT )
 }
 
 /*
-void setSpanAngle ( int angle )
+void setSpanAngle( int angle )
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETSPANANGLE )
 {
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETSPANANGLE )
 }
 
 /*
-void setStartAngle ( int angle )
+void setStartAngle( int angle )
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETSTARTANGLE )
 {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_BOUNDINGRECT )
 }
 
 /*
-virtual bool contains ( const QPointF & point ) const
+virtual bool contains( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_CONTAINS )
 {
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_CONTAINS )
 }
 
 /*
-virtual bool isObscuredBy ( const QGraphicsItem * item ) const
+virtual bool isObscuredBy( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_ISOBSCUREDBY )
 {

@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QGROUPBOX_ISFLAT )
 }
 
 /*
-void setAlignment ( int alignment )
+void setAlignment( int alignment )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETALIGNMENT )
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QGROUPBOX_SETALIGNMENT )
 }
 
 /*
-void setCheckable ( bool checkable )
+void setCheckable( bool checkable )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETCHECKABLE )
 {
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QGROUPBOX_SETCHECKABLE )
 }
 
 /*
-void setFlat ( bool flat )
+void setFlat( bool flat )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETFLAT )
 {
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QGROUPBOX_SETFLAT )
 }
 
 /*
-void setTitle ( const QString & title )
+void setTitle( const QString & title )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETTITLE )
 {
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QGROUPBOX_MINIMUMSIZEHINT )
 }
 
 /*
-void setChecked ( bool checked )
+void setChecked( bool checked )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETCHECKED )
 {

@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_DROPACTION )
 }
 
 /*
-const QMimeData * mimeData () const
+const QMimeData * mimeData() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_MIMEDATA )
 {
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SCREENPOS )
 }
 
 /*
-void setDropAction ( Qt::DropAction action )
+void setDropAction( Qt::DropAction action )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SETDROPACTION )
 {

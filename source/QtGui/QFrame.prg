@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QFRAME_MIDLINEWIDTH )
 }
 
 /*
-void setFrameRect ( const QRect & )
+void setFrameRect( const QRect & )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMERECT )
 {
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QFRAME_SETFRAMERECT )
 }
 
 /*
-void setFrameShadow ( Shadow )
+void setFrameShadow( QFrame::Shadow )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMESHADOW )
 {
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QFRAME_SETFRAMESHADOW )
 }
 
 /*
-void setFrameShape ( Shape )
+void setFrameShape( QFrame::Shape )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMESHAPE )
 {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QFRAME_SETFRAMESHAPE )
 }
 
 /*
-void setFrameStyle ( int style )
+void setFrameStyle( int style )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMESTYLE )
 {
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QFRAME_SETFRAMESTYLE )
 }
 
 /*
-void setLineWidth ( int )
+void setLineWidth( int )
 */
 HB_FUNC_STATIC( QFRAME_SETLINEWIDTH )
 {
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QFRAME_SETLINEWIDTH )
 }
 
 /*
-void setMidLineWidth ( int )
+void setMidLineWidth( int )
 */
 HB_FUNC_STATIC( QFRAME_SETMIDLINEWIDTH )
 {
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QFRAME_SETMIDLINEWIDTH )
 }
 
 /*
-virtual QSize sizeHint () const
+virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QFRAME_SIZEHINT )
 {

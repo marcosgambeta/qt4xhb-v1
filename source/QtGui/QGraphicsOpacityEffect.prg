@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITYMASK )
 }
 
 /*
-void setOpacity ( qreal opacity )
+void setOpacity( qreal opacity )
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITY )
 {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITY )
 }
 
 /*
-void setOpacityMask ( const QBrush & mask )
+void setOpacityMask( const QBrush & mask )
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITYMASK )
 {

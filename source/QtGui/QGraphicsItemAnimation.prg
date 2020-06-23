@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_CLEAR )
 }
 
 /*
-qreal horizontalScaleAt ( qreal step ) const
+qreal horizontalScaleAt( qreal step ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_HORIZONTALSCALEAT )
 {
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_HORIZONTALSCALEAT )
 }
 
 /*
-qreal horizontalShearAt ( qreal step ) const
+qreal horizontalShearAt( qreal step ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_HORIZONTALSHEARAT )
 {
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_ITEM )
 }
 
 /*
-QMatrix matrixAt ( qreal step ) const
+QMatrix matrixAt( qreal step ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_MATRIXAT )
 {
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_MATRIXAT )
 }
 
 /*
-QPointF posAt ( qreal step ) const
+QPointF posAt( qreal step ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_POSAT )
 {
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_POSAT )
 }
 
 /*
-qreal rotationAt ( qreal step ) const
+qreal rotationAt( qreal step ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_ROTATIONAT )
 {
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_ROTATIONAT )
 }
 
 /*
-void setItem ( QGraphicsItem * item )
+void setItem( QGraphicsItem * item )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETITEM )
 {
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETITEM )
 }
 
 /*
-void setPosAt ( qreal step, const QPointF & point )
+void setPosAt( qreal step, const QPointF & point )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETPOSAT )
 {
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETPOSAT )
 }
 
 /*
-void setRotationAt ( qreal step, qreal angle )
+void setRotationAt( qreal step, qreal angle )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETROTATIONAT )
 {
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETROTATIONAT )
 }
 
 /*
-void setScaleAt ( qreal step, qreal sx, qreal sy )
+void setScaleAt( qreal step, qreal sx, qreal sy )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETSCALEAT )
 {
@@ -381,7 +381,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETSCALEAT )
 }
 
 /*
-void setShearAt ( qreal step, qreal sh, qreal sv )
+void setShearAt( qreal step, qreal sh, qreal sv )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETSHEARAT )
 {
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETSHEARAT )
 }
 
 /*
-void setTimeLine ( QTimeLine * timeLine )
+void setTimeLine( QTimeLine * timeLine )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETTIMELINE )
 {
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETTIMELINE )
 }
 
 /*
-void setTranslationAt ( qreal step, qreal dx, qreal dy )
+void setTranslationAt( qreal step, qreal dx, qreal dy )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETTRANSLATIONAT )
 {
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_TIMELINE )
 }
 
 /*
-qreal verticalScaleAt ( qreal step ) const
+qreal verticalScaleAt( qreal step ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_VERTICALSCALEAT )
 {
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_VERTICALSCALEAT )
 }
 
 /*
-qreal verticalShearAt ( qreal step ) const
+qreal verticalShearAt( qreal step ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_VERTICALSHEARAT )
 {
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_VERTICALSHEARAT )
 }
 
 /*
-qreal xTranslationAt ( qreal step ) const
+qreal xTranslationAt( qreal step ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_XTRANSLATIONAT )
 {
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_XTRANSLATIONAT )
 }
 
 /*
-qreal yTranslationAt ( qreal step ) const
+qreal yTranslationAt( qreal step ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_YTRANSLATIONAT )
 {
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_YTRANSLATIONAT )
 }
 
 /*
-void setStep ( qreal step )
+void setStep( qreal step )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_SETSTEP )
 {

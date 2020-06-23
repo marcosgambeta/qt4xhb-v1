@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QGESTURE_HOTSPOT )
 }
 
 /*
-void setGestureCancelPolicy ( GestureCancelPolicy policy )
+void setGestureCancelPolicy( QGesture::GestureCancelPolicy policy )
 */
 HB_FUNC_STATIC( QGESTURE_SETGESTURECANCELPOLICY )
 {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QGESTURE_SETGESTURECANCELPOLICY )
 }
 
 /*
-void setHotSpot ( const QPointF & value )
+void setHotSpot( const QPointF & value )
 */
 HB_FUNC_STATIC( QGESTURE_SETHOTSPOT )
 {

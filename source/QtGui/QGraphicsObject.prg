@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QGRAPHICSOBJECT_GRABGESTURE )
 }
 
 /*
-void ungrabGesture ( Qt::GestureType gesture )
+void ungrabGesture( Qt::GestureType gesture )
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_UNGRABGESTURE )
 {

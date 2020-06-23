@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QFOCUSFRAME_NEW )
 }
 
 /*
-void setWidget ( QWidget * widget )
+void setWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QFOCUSFRAME_SETWIDGET )
 {

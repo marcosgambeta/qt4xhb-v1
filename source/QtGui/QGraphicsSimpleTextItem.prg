@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_FONT )
 }
 
 /*
-void setFont ( const QFont & font )
+void setFont( const QFont & font )
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SETFONT )
 {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SETFONT )
 }
 
 /*
-void setText ( const QString & text )
+void setText( const QString & text )
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SETTEXT )
 {
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_BOUNDINGRECT )
 }
 
 /*
-virtual bool contains ( const QPointF & point ) const
+virtual bool contains( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_CONTAINS )
 {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_CONTAINS )
 }
 
 /*
-virtual bool isObscuredBy ( const QGraphicsItem * item ) const
+virtual bool isObscuredBy( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_ISOBSCUREDBY )
 {
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_OPAQUEAREA )
 }
 
 /*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
+virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_PAINT )
 {

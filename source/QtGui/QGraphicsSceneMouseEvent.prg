@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTON )
 }
 
 /*
-QPointF buttonDownPos ( Qt::MouseButton button ) const
+QPointF buttonDownPos( Qt::MouseButton button ) const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNPOS )
 {
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNPOS )
 }
 
 /*
-QPointF buttonDownScenePos ( Qt::MouseButton button ) const
+QPointF buttonDownScenePos( Qt::MouseButton button ) const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCENEPOS )
 {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCENEPOS )
 }
 
 /*
-QPoint buttonDownScreenPos ( Qt::MouseButton button ) const
+QPoint buttonDownScreenPos( Qt::MouseButton button ) const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCREENPOS )
 {

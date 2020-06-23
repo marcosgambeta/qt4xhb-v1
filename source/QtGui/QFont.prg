@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QFONT_FIXEDPITCH )
 }
 
 /*
-bool fromString ( const QString & descrip )
+bool fromString( const QString & descrip )
 */
 HB_FUNC_STATIC( QFONT_FROMSTRING )
 {
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QFONT_FROMSTRING )
 }
 
 /*
-bool isCopyOf ( const QFont & f ) const
+bool isCopyOf( const QFont & f ) const
 */
 HB_FUNC_STATIC( QFONT_ISCOPYOF )
 {
@@ -699,7 +699,7 @@ HB_FUNC_STATIC( QFONT_RAWNAME )
 }
 
 /*
-QFont resolve ( const QFont & other ) const
+QFont resolve( const QFont & other ) const
 */
 HB_FUNC_STATIC( QFONT_RESOLVE )
 {
@@ -724,7 +724,7 @@ HB_FUNC_STATIC( QFONT_RESOLVE )
 }
 
 /*
-void setBold ( bool enable )
+void setBold( bool enable )
 */
 HB_FUNC_STATIC( QFONT_SETBOLD )
 {
@@ -750,7 +750,7 @@ HB_FUNC_STATIC( QFONT_SETBOLD )
 }
 
 /*
-void setCapitalization ( Capitalization caps )
+void setCapitalization( QFont::Capitalization caps )
 */
 HB_FUNC_STATIC( QFONT_SETCAPITALIZATION )
 {
@@ -776,7 +776,7 @@ HB_FUNC_STATIC( QFONT_SETCAPITALIZATION )
 }
 
 /*
-void setFamily ( const QString & family )
+void setFamily( const QString & family )
 */
 HB_FUNC_STATIC( QFONT_SETFAMILY )
 {
@@ -802,7 +802,7 @@ HB_FUNC_STATIC( QFONT_SETFAMILY )
 }
 
 /*
-void setFixedPitch ( bool enable )
+void setFixedPitch( bool enable )
 */
 HB_FUNC_STATIC( QFONT_SETFIXEDPITCH )
 {
@@ -828,7 +828,7 @@ HB_FUNC_STATIC( QFONT_SETFIXEDPITCH )
 }
 
 /*
-void setItalic ( bool enable )
+void setItalic( bool enable )
 */
 HB_FUNC_STATIC( QFONT_SETITALIC )
 {
@@ -854,7 +854,7 @@ HB_FUNC_STATIC( QFONT_SETITALIC )
 }
 
 /*
-void setKerning ( bool enable )
+void setKerning( bool enable )
 */
 HB_FUNC_STATIC( QFONT_SETKERNING )
 {
@@ -880,7 +880,7 @@ HB_FUNC_STATIC( QFONT_SETKERNING )
 }
 
 /*
-void setLetterSpacing ( SpacingType type, qreal spacing )
+void setLetterSpacing( QFont::SpacingType type, qreal spacing )
 */
 HB_FUNC_STATIC( QFONT_SETLETTERSPACING )
 {
@@ -906,7 +906,7 @@ HB_FUNC_STATIC( QFONT_SETLETTERSPACING )
 }
 
 /*
-void setOverline ( bool enable )
+void setOverline( bool enable )
 */
 HB_FUNC_STATIC( QFONT_SETOVERLINE )
 {
@@ -932,7 +932,7 @@ HB_FUNC_STATIC( QFONT_SETOVERLINE )
 }
 
 /*
-void setPixelSize ( int pixelSize )
+void setPixelSize( int pixelSize )
 */
 HB_FUNC_STATIC( QFONT_SETPIXELSIZE )
 {
@@ -958,7 +958,7 @@ HB_FUNC_STATIC( QFONT_SETPIXELSIZE )
 }
 
 /*
-void setPointSize ( int pointSize )
+void setPointSize( int pointSize )
 */
 HB_FUNC_STATIC( QFONT_SETPOINTSIZE )
 {
@@ -984,7 +984,7 @@ HB_FUNC_STATIC( QFONT_SETPOINTSIZE )
 }
 
 /*
-void setPointSizeF ( qreal pointSize )
+void setPointSizeF( qreal pointSize )
 */
 HB_FUNC_STATIC( QFONT_SETPOINTSIZEF )
 {
@@ -1010,7 +1010,7 @@ HB_FUNC_STATIC( QFONT_SETPOINTSIZEF )
 }
 
 /*
-void setRawMode ( bool enable )
+void setRawMode( bool enable )
 */
 HB_FUNC_STATIC( QFONT_SETRAWMODE )
 {
@@ -1036,7 +1036,7 @@ HB_FUNC_STATIC( QFONT_SETRAWMODE )
 }
 
 /*
-void setRawName ( const QString & name )
+void setRawName( const QString & name )
 */
 HB_FUNC_STATIC( QFONT_SETRAWNAME )
 {
@@ -1062,7 +1062,7 @@ HB_FUNC_STATIC( QFONT_SETRAWNAME )
 }
 
 /*
-void setStretch ( int factor )
+void setStretch( int factor )
 */
 HB_FUNC_STATIC( QFONT_SETSTRETCH )
 {
@@ -1088,7 +1088,7 @@ HB_FUNC_STATIC( QFONT_SETSTRETCH )
 }
 
 /*
-void setStrikeOut ( bool enable )
+void setStrikeOut( bool enable )
 */
 HB_FUNC_STATIC( QFONT_SETSTRIKEOUT )
 {
@@ -1114,7 +1114,7 @@ HB_FUNC_STATIC( QFONT_SETSTRIKEOUT )
 }
 
 /*
-void setStyle ( Style style )
+void setStyle( QFont::Style style )
 */
 HB_FUNC_STATIC( QFONT_SETSTYLE )
 {
@@ -1166,7 +1166,7 @@ HB_FUNC_STATIC( QFONT_SETSTYLEHINT )
 }
 
 /*
-void setStyleStrategy ( StyleStrategy s )
+void setStyleStrategy( QFont::StyleStrategy s )
 */
 HB_FUNC_STATIC( QFONT_SETSTYLESTRATEGY )
 {
@@ -1192,7 +1192,7 @@ HB_FUNC_STATIC( QFONT_SETSTYLESTRATEGY )
 }
 
 /*
-void setUnderline ( bool enable )
+void setUnderline( bool enable )
 */
 HB_FUNC_STATIC( QFONT_SETUNDERLINE )
 {
@@ -1218,7 +1218,7 @@ HB_FUNC_STATIC( QFONT_SETUNDERLINE )
 }
 
 /*
-void setWeight ( int weight )
+void setWeight( int weight )
 */
 HB_FUNC_STATIC( QFONT_SETWEIGHT )
 {
@@ -1244,7 +1244,7 @@ HB_FUNC_STATIC( QFONT_SETWEIGHT )
 }
 
 /*
-void setWordSpacing ( qreal spacing )
+void setWordSpacing( qreal spacing )
 */
 HB_FUNC_STATIC( QFONT_SETWORDSPACING )
 {
@@ -1486,7 +1486,7 @@ HB_FUNC_STATIC( QFONT_WORDSPACING )
 }
 
 /*
-static void insertSubstitution ( const QString & familyName, const QString & substituteName )
+static void insertSubstitution( const QString & familyName, const QString & substituteName )
 */
 HB_FUNC_STATIC( QFONT_INSERTSUBSTITUTION )
 {
@@ -1507,7 +1507,7 @@ HB_FUNC_STATIC( QFONT_INSERTSUBSTITUTION )
 }
 
 /*
-static void insertSubstitutions ( const QString & familyName, const QStringList & substituteNames )
+static void insertSubstitutions( const QString & familyName, const QStringList & substituteNames )
 */
 HB_FUNC_STATIC( QFONT_INSERTSUBSTITUTIONS )
 {
@@ -1528,7 +1528,7 @@ HB_FUNC_STATIC( QFONT_INSERTSUBSTITUTIONS )
 }
 
 /*
-static void removeSubstitution ( const QString & familyName )
+static void removeSubstitution( const QString & familyName )
 */
 HB_FUNC_STATIC( QFONT_REMOVESUBSTITUTION )
 {
@@ -1549,7 +1549,7 @@ HB_FUNC_STATIC( QFONT_REMOVESUBSTITUTION )
 }
 
 /*
-static QString substitute ( const QString & familyName )
+static QString substitute( const QString & familyName )
 */
 HB_FUNC_STATIC( QFONT_SUBSTITUTE )
 {
@@ -1568,7 +1568,7 @@ HB_FUNC_STATIC( QFONT_SUBSTITUTE )
 }
 
 /*
-static QStringList substitutes ( const QString & familyName )
+static QStringList substitutes( const QString & familyName )
 */
 HB_FUNC_STATIC( QFONT_SUBSTITUTES )
 {
