@@ -126,8 +126,7 @@ $prototypeV2=bool isValid() const
 
 $prototypeV2=bool isWritable() const
 
-$prototype=bool map ( QAbstractVideoBuffer::MapMode mode )
-$method=|bool|map|QAbstractVideoBuffer::MapMode
+$prototypeV2=bool map( QAbstractVideoBuffer::MapMode mode )
 
 $prototypeV2=QAbstractVideoBuffer::MapMode mapMode() const
 
@@ -135,14 +134,11 @@ $prototypeV2=int mappedBytes() const
 
 $prototypeV2=QVideoFrame::PixelFormat pixelFormat() const
 
-$prototype=void setEndTime ( qint64 time )
-$method=|void|setEndTime|qint64
+$prototypeV2=void setEndTime( qint64 time )
 
-$prototype=void setFieldType ( FieldType field )
-$method=|void|setFieldType|QVideoFrame::FieldType
+$prototypeV2=void setFieldType( QVideoFrame::FieldType field )
 
-$prototype=void setStartTime ( qint64 time )
-$method=|void|setStartTime|qint64
+$prototypeV2=void setStartTime( qint64 time )
 
 $prototypeV2=QSize size() const
 
@@ -152,11 +148,9 @@ $prototypeV2=void unmap()
 
 $prototypeV2=int width() const
 
-$prototype=static QImage::Format imageFormatFromPixelFormat ( PixelFormat format )
-$staticMethod=|QImage::Format|imageFormatFromPixelFormat|QVideoFrame::PixelFormat
+$prototypeV2=static QImage::Format imageFormatFromPixelFormat( QVideoFrame::PixelFormat format )
 
-$prototype=static PixelFormat pixelFormatFromImageFormat ( QImage::Format format )
-$staticMethod=|QVideoFrame::PixelFormat|pixelFormatFromImageFormat|QImage::Format
+$prototypeV2=static QVideoFrame::PixelFormat pixelFormatFromImageFormat( QImage::Format format )
 
 $extraMethods
 

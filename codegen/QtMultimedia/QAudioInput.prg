@@ -77,11 +77,9 @@ $prototypeV2=void reset()
 
 $prototypeV2=void resume()
 
-$prototype=void setBufferSize ( int value )
-$method=|void|setBufferSize|int
+$prototypeV2=void setBufferSize( int value )
 
-$prototype=void setNotifyInterval ( int ms )
-$method=|void|setNotifyInterval|int
+$prototypeV2=void setNotifyInterval( int ms )
 
 $prototype=void start ( QIODevice * device )
 $internalMethod=|void|start,start1|QIODevice *

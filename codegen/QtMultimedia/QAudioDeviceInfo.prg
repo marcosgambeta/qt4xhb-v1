@@ -57,13 +57,11 @@ $deleteMethod
 
 $prototypeV2=QString deviceName() const
 
-$prototype=bool isFormatSupported ( const QAudioFormat & settings ) const
-$method=|bool|isFormatSupported|const QAudioFormat &
+$prototypeV2=bool isFormatSupported( const QAudioFormat & settings ) const
 
 $prototypeV2=bool isNull() const
 
-$prototype=QAudioFormat nearestFormat ( const QAudioFormat & settings ) const
-$method=|QAudioFormat|nearestFormat|const QAudioFormat &
+$prototypeV2=QAudioFormat nearestFormat( const QAudioFormat & settings ) const
 
 $prototypeV2=QAudioFormat preferredFormat() const
 
@@ -83,8 +81,7 @@ $prototypeV2=QList<QAudioFormat::SampleType> supportedSampleTypes() const
 
 $prototypeV2=QStringList supportedCodecs() const
 
-$prototype=static QList<QAudioDeviceInfo> availableDevices ( QAudio::Mode mode )
-$staticMethod=|QList<QAudioDeviceInfo>|availableDevices|QAudio::Mode
+$prototypeV2=static QList<QAudioDeviceInfo> availableDevices( QAudio::Mode mode )
 
 $prototypeV2=static QAudioDeviceInfo defaultInputDevice()
 

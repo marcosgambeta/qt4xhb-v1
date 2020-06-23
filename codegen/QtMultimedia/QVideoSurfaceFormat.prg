@@ -81,15 +81,13 @@ $prototypeV2=QSize pixelAspectRatio() const
 
 $prototypeV2=QVideoFrame::PixelFormat pixelFormat() const
 
-$prototype=QVariant property ( const char * name ) const
-$method=|QVariant|property|const char *
+$prototypeV2=QVariant property( const char * name ) const
 
 $prototypeV2=QList<QByteArray> propertyNames() const
 
 $prototypeV2=QVideoSurfaceFormat::Direction scanLineDirection() const
 
-$prototype=void setFrameRate ( qreal rate )
-$method=|void|setFrameRate|qreal
+$prototypeV2=void setFrameRate( qreal rate )
 
 $prototype=void setFrameSize ( const QSize & size )
 $internalMethod=|void|setFrameSize,setFrameSize1|const QSize &
@@ -147,17 +145,13 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETPIXELASPECTRATIO )
 }
 $addMethod=setPixelAspectRatio
 
-$prototype=void setProperty ( const char * name, const QVariant & value )
-$method=|void|setProperty|const char *,const QVariant &
+$prototypeV2=void setProperty( const char * name, const QVariant & value )
 
-$prototype=void setScanLineDirection ( Direction direction )
-$method=|void|setScanLineDirection|QVideoSurfaceFormat::Direction
+$prototypeV2=void setScanLineDirection( QVideoSurfaceFormat::Direction direction )
 
-$prototype=void setViewport ( const QRect & viewport )
-$method=|void|setViewport|const QRect &
+$prototypeV2=void setViewport( const QRect & viewport )
 
-$prototype=void setYCbCrColorSpace ( YCbCrColorSpace space )
-$method=|void|setYCbCrColorSpace|QVideoSurfaceFormat::YCbCrColorSpace
+$prototypeV2=void setYCbCrColorSpace( QVideoSurfaceFormat::YCbCrColorSpace space )
 
 $prototypeV2=QSize sizeHint() const
 

@@ -57,45 +57,37 @@ $deleteMethod
 
 $prototypeV2=bool isValid() const
 
-$prototype=void setFrequency(int frequency)
-$method=|void|setFrequency|int
+$prototypeV2=void setFrequency( int frequency )
 
 $prototypeV2=int frequency() const
 
-$prototype=void setSampleRate ( int samplerate )
-$method=|void|setSampleRate|int
+$prototypeV2=void setSampleRate( int samplerate )
 
 $prototypeV2=int sampleRate() const
 
-$prototype=void setChannels(int channels)
-$method=|void|setChannels|int
+$prototypeV2=void setChannels( int channels )
 
 $prototypeV2=int channels() const
 
-$prototype=void setChannelCount(int channelCount)
-$method=|void|setChannelCount|int
+$prototypeV2=void setChannelCount( int channelCount )
 
 $prototypeV2=int channelCount() const
 
-$prototype=void setSampleSize ( int sampleSize )
-$method=|void|setSampleSize|int
+$prototypeV2=void setSampleSize( int sampleSize )
 
 $prototypeV2=int sampleSize() const
 
-$prototype=void setCodec ( const QString & codec )
-$method=|void|setCodec|const QString &
+$prototypeV2=void setCodec( const QString & codec )
 
 $prototypeV2=QString codec() const
 
-$prototype=void setByteOrder ( QAudioFormat::Endian byteOrder )
-$method=|void|setByteOrder|QAudioFormat::Endian
+$prototypeV2=void setByteOrder( QAudioFormat::Endian byteOrder )
 
 $prototypeV2=QAudioFormat::Endian byteOrder() const
 
 $prototypeV2=QAudioFormat::SampleType sampleType() const
 
-$prototype=void setSampleType ( QAudioFormat::SampleType sampleType )
-$method=|void|setSampleType|QAudioFormat::SampleType
+$prototypeV2=void setSampleType( QAudioFormat::SampleType sampleType )
 
 $extraMethods
 
