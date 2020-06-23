@@ -55,8 +55,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void addDelay ( int msecs )
-$method=|void|addDelay|int
+$prototypeV2=void addDelay( int msecs )
 
 $prototype=void addKeyClick ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 $method=|void|addKeyClick,addKeyClick1|Qt::Key,Qt::KeyboardModifiers=Qt::NoModifier,int=-1
@@ -162,8 +161,7 @@ $method=|void|addMouseRelease|Qt::MouseButton,Qt::KeyboardModifiers=0,QPoint=QPo
 
 $prototypeV2=void clear()
 
-$prototype=void simulate ( QWidget * w )
-$method=|void|simulate|QWidget *
+$prototypeV2=void simulate( QWidget * w )
 
 $extraMethods
 
