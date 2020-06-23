@@ -37,11 +37,9 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=QAction * action ( DebuggerAction action ) const
-$method=|QAction *|action|QScriptEngineDebugger::DebuggerAction
+$prototypeV2=QAction * action( QScriptEngineDebugger::DebuggerAction action ) const
 
-$prototype=void attachTo ( QScriptEngine * engine )
-$method=|void|attachTo|QScriptEngine *
+$prototypeV2=void attachTo( QScriptEngine * engine )
 
 $prototypeV2=bool autoShowStandardWindow() const
 
@@ -53,15 +51,13 @@ $method=|QToolBar *|createStandardToolBar|QWidget *=0
 
 $prototypeV2=void detach()
 
-$prototype=void setAutoShowStandardWindow ( bool autoShow )
-$method=|void|setAutoShowStandardWindow|bool
+$prototypeV2=void setAutoShowStandardWindow( bool autoShow )
 
 $prototypeV2=QMainWindow * standardWindow() const
 
 $prototypeV2=QScriptEngineDebugger::DebuggerState state() const
 
-$prototype=QWidget * widget ( DebuggerWidget widget ) const
-$method=|QWidget *|widget|QScriptEngineDebugger::DebuggerWidget
+$prototypeV2=QWidget * widget( QScriptEngineDebugger::DebuggerWidget widget ) const
 
 $beginSignals
 $signal=|evaluationResumed()
