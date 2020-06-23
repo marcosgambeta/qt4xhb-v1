@@ -56,11 +56,9 @@ $addMethod=new
 $prototype=~QStyleOption()
 $deleteMethod
 
-$prototype=void init(const QWidget *w)
-$method=|void|init|const QWidget *
+$prototypeV2=void init( const QWidget * w )
 
-$prototype=void initFrom(const QWidget *w)
-$method=|void|initFrom|const QWidget *
+$prototypeV2=void initFrom( const QWidget * w )
 
 $prototype=int version
 $variableMethod=|int|version|

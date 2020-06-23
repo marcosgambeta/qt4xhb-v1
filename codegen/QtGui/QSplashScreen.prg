@@ -57,15 +57,13 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void finish ( QWidget * mainWin )
-$method=|void|finish|QWidget *
+$prototypeV2=void finish( QWidget * mainWin )
 
 $prototypeV2=const QPixmap pixmap() const
 
 $prototypeV2=void repaint()
 
-$prototype=void setPixmap ( const QPixmap & pixmap )
-$method=|void|setPixmap|const QPixmap &
+$prototypeV2=void setPixmap( const QPixmap & pixmap )
 
 $prototypeV2=void clearMessage()
 

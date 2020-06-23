@@ -57,27 +57,21 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=bool columnIntersectsSelection ( int column, const QModelIndex & parent ) const
-$method=|bool|columnIntersectsSelection|int,const QModelIndex &
+$prototypeV2=bool columnIntersectsSelection( int column, const QModelIndex & parent ) const
 
 $prototypeV2=QModelIndex currentIndex() const
 
 $prototypeV2=bool hasSelection() const
 
-$prototype=bool isColumnSelected ( int column, const QModelIndex & parent ) const
-$method=|bool|isColumnSelected|int,const QModelIndex &
+$prototypeV2=bool isColumnSelected( int column, const QModelIndex & parent ) const
 
-$prototype=bool isRowSelected ( int row, const QModelIndex & parent ) const
-$method=|bool|isRowSelected|int,const QModelIndex &
+$prototypeV2=bool isRowSelected( int row, const QModelIndex & parent ) const
 
-$prototype=bool isSelected ( const QModelIndex & index ) const
-$method=|bool|isSelected|const QModelIndex &
+$prototypeV2=bool isSelected( const QModelIndex & index ) const
 
-$prototype=const QAbstractItemModel * model () const
-$method=|const QAbstractItemModel *|model|
+$prototypeV2=const QAbstractItemModel * model() const
 
-$prototype=bool rowIntersectsSelection ( int row, const QModelIndex & parent ) const
-$method=|bool|rowIntersectsSelection|int,const QModelIndex &
+$prototypeV2=bool rowIntersectsSelection( int row, const QModelIndex & parent ) const
 
 $prototype=QModelIndexList selectedColumns ( int row = 0 ) const
 $method=|QModelIndexList|selectedColumns|int=0
@@ -87,8 +81,7 @@ $prototypeV2=QModelIndexList selectedIndexes() const
 $prototype=QModelIndexList selectedRows ( int column = 0 ) const
 $method=|QModelIndexList|selectedRows|int=0
 
-$prototype=const QItemSelection selection () const
-$method=|const QItemSelection|selection|
+$prototypeV2=const QItemSelection selection() const
 
 $prototypeV2=virtual void clear()
 
@@ -124,8 +117,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECT )
 }
 $addMethod=select
 
-$prototype=void setCurrentIndex ( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
-$method=|void|setCurrentIndex|const QModelIndex &,QItemSelectionModel::SelectionFlags
+$prototypeV2=void setCurrentIndex( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
 
 $beginSignals
 $signal=|currentChanged(QModelIndex,QModelIndex)

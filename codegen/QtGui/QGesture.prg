@@ -38,11 +38,9 @@ $prototypeV2=bool hasHotSpot() const
 
 $prototypeV2=QPointF hotSpot() const
 
-$prototype=void setGestureCancelPolicy ( GestureCancelPolicy policy )
-$method=|void|setGestureCancelPolicy|QGesture::GestureCancelPolicy
+$prototypeV2=void setGestureCancelPolicy( QGesture::GestureCancelPolicy policy )
 
-$prototype=void setHotSpot ( const QPointF & value )
-$method=|void|setHotSpot|const QPointF &
+$prototypeV2=void setHotSpot( const QPointF & value )
 
 $prototypeV2=Qt::GestureState state() const
 

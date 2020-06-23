@@ -84,11 +84,9 @@ $prototypeV2=QPointF position() const
 
 $prototypeV2=QRectF rect() const
 
-$prototype=void setLeadingIncluded ( bool included )
-$method=|void|setLeadingIncluded|bool
+$prototypeV2=void setLeadingIncluded( bool included )
 
-$prototype=void setLineWidth ( qreal width )
-$method=|void|setLineWidth|qreal
+$prototypeV2=void setLineWidth( qreal width )
 
 $prototype=void setNumColumns ( int numColumns )
 $method=|void|setNumColumns,setNumColumns1|int
@@ -118,8 +116,7 @@ HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS )
 }
 $addMethod=setNumColumns
 
-$prototype=void setPosition ( const QPointF & pos )
-$method=|void|setPosition|const QPointF &
+$prototypeV2=void setPosition( const QPointF & pos )
 
 $prototypeV2=int textLength() const
 

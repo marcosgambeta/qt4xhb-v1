@@ -98,11 +98,9 @@ $prototypeV2=qreal descent() const
 
 $prototypeV2=QString familyName() const
 
-$prototype=QByteArray fontTable ( const char * tagName ) const
-$method=|QByteArray|fontTable|const char *
+$prototypeV2=QByteArray fontTable( const char * tagName ) const
 
-$prototype=QVector<quint32> glyphIndexesForString ( const QString & text ) const
-$method=|QVector<quint32>|glyphIndexesForString|const QString &
+$prototypeV2=QVector<quint32> glyphIndexesForString( const QString & text ) const
 
 $prototypeV2=QFont::HintingPreference hintingPreference() const
 
@@ -110,21 +108,17 @@ $prototypeV2=bool isValid() const
 
 $prototypeV2=qreal leading() const
 
-$prototype=void loadFromData ( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference )
-$method=|void|loadFromData|const QByteArray &,qreal,QFont::HintingPreference
+$prototypeV2=void loadFromData( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference )
 
-$prototype=void loadFromFile ( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference )
-$method=|void|loadFromFile|const QString &,qreal,QFont::HintingPreference
+$prototypeV2=void loadFromFile( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference )
 
 $prototypeV2=qreal maxCharWidth() const
 
-$prototype=QPainterPath pathForGlyph ( quint32 glyphIndex ) const
-$method=|QPainterPath|pathForGlyph|quint32
+$prototypeV2=QPainterPath pathForGlyph( quint32 glyphIndex ) const
 
 $prototypeV2=qreal pixelSize() const
 
-$prototype=void setPixelSize ( qreal pixelSize )
-$method=|void|setPixelSize|qreal
+$prototypeV2=void setPixelSize( qreal pixelSize )
 
 $prototypeV2=QFont::Style style() const
 

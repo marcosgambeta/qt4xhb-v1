@@ -30,16 +30,13 @@ $constructor=|new|QGraphicsItem *=0
 
 $deleteMethod
 
-$prototype=void addToGroup ( QGraphicsItem * item )
-$method=|void|addToGroup|QGraphicsItem *
+$prototypeV2=void addToGroup( QGraphicsItem * item )
 
-$prototype=void removeFromGroup ( QGraphicsItem * item )
-$method=|void|removeFromGroup|QGraphicsItem *
+$prototypeV2=void removeFromGroup( QGraphicsItem * item )
 
 $prototypeV2=virtual QRectF boundingRect() const
 
-$prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
-$virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
+$prototypeV2=virtual bool isObscuredBy( const QGraphicsItem * item ) const
 
 $prototypeV2=virtual QPainterPath opaqueArea() const
 

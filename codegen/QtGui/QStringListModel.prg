@@ -53,16 +53,13 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW )
 }
 $addMethod=new
 
-$prototype=void setStringList(const QStringList & strings)
-$method=|void|setStringList|const QStringList &
+$prototypeV2=void setStringList( const QStringList & strings )
 
 $prototypeV2=QStringList stringList() const
 
-$prototype=virtual QVariant data(const QModelIndex & index, int role) const
-$virtualMethod=|QVariant|data|const QModelIndex &,int
+$prototypeV2=virtual QVariant data( const QModelIndex & index, int role ) const
 
-$prototype=virtual Qt::ItemFlags flags(const QModelIndex & index) const
-$virtualMethod=|Qt::ItemFlags|flags|const QModelIndex &
+$prototypeV2=virtual Qt::ItemFlags flags( const QModelIndex & index ) const
 
 $prototype=virtual bool insertRows(int row, int count, const QModelIndex & parent = QModelIndex())
 $virtualMethod=|bool|insertRows|int,int,const QModelIndex &=QModelIndex()

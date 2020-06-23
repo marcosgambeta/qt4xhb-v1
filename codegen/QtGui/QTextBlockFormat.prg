@@ -76,35 +76,25 @@ $prototypeV2=QTextFormat::PageBreakFlags pageBreakPolicy() const
 
 $prototypeV2=qreal rightMargin() const
 
-$prototype=void setAlignment ( Qt::Alignment alignment )
-$method=|void|setAlignment|Qt::Alignment
+$prototypeV2=void setAlignment( Qt::Alignment alignment )
 
-$prototype=void setBottomMargin ( qreal margin )
-$method=|void|setBottomMargin|qreal
+$prototypeV2=void setBottomMargin( qreal margin )
 
-$prototype=void setIndent ( int indentation )
-$method=|void|setIndent|int
+$prototypeV2=void setIndent( int indentation )
 
-$prototype=void setLeftMargin ( qreal margin )
-$method=|void|setLeftMargin|qreal
+$prototypeV2=void setLeftMargin( qreal margin )
 
-$prototype=void setLineHeight ( qreal height, int heightType )
-$method=|void|setLineHeight|qreal,int
+$prototypeV2=void setLineHeight( qreal height, int heightType )
 
-$prototype=void setNonBreakableLines ( bool b )
-$method=|void|setNonBreakableLines|bool
+$prototypeV2=void setNonBreakableLines( bool b )
 
-$prototype=void setPageBreakPolicy ( PageBreakFlags policy )
-$method=|void|setPageBreakPolicy|QTextFormat::PageBreakFlags
+$prototypeV2=void setPageBreakPolicy( QTextFormat::PageBreakFlags policy )
 
-$prototype=void setRightMargin ( qreal margin )
-$method=|void|setRightMargin|qreal
+$prototypeV2=void setRightMargin( qreal margin )
 
-$prototype=void setTextIndent ( qreal indent )
-$method=|void|setTextIndent|qreal
+$prototypeV2=void setTextIndent( qreal indent )
 
-$prototype=void setTopMargin ( qreal margin )
-$method=|void|setTopMargin|qreal
+$prototypeV2=void setTopMargin( qreal margin )
 
 $prototypeV2=qreal textIndent() const
 

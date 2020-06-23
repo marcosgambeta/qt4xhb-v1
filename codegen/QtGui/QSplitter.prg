@@ -57,29 +57,23 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void addWidget ( QWidget * widget )
-$method=|void|addWidget|QWidget *
+$prototypeV2=void addWidget( QWidget * widget )
 
 $prototypeV2=bool childrenCollapsible() const
 
 $prototypeV2=int count() const
 
-$prototype=void getRange ( int index, int * min, int * max ) const
-$method=|void|getRange|int,int *,int *
+$prototypeV2=void getRange( int index, int * min, int * max ) const
 
-$prototype=QSplitterHandle * handle ( int index ) const
-$method=|QSplitterHandle *|handle|int
+$prototypeV2=QSplitterHandle * handle( int index ) const
 
 $prototypeV2=int handleWidth() const
 
-$prototype=int indexOf ( QWidget * widget ) const
-$method=|int|indexOf|QWidget *
+$prototypeV2=int indexOf( QWidget * widget ) const
 
-$prototype=void insertWidget ( int index, QWidget * widget )
-$method=|void|insertWidget|int,QWidget *
+$prototypeV2=void insertWidget( int index, QWidget * widget )
 
-$prototype=bool isCollapsible ( int index ) const
-$method=|bool|isCollapsible|int
+$prototypeV2=bool isCollapsible( int index ) const
 
 $prototypeV2=bool opaqueResize() const
 
@@ -87,36 +81,28 @@ $prototypeV2=Qt::Orientation orientation() const
 
 $prototypeV2=void refresh()
 
-$prototype=bool restoreState ( const QByteArray & state )
-$method=|bool|restoreState|const QByteArray &
+$prototypeV2=bool restoreState( const QByteArray & state )
 
 $prototypeV2=QByteArray saveState() const
 
-$prototype=void setChildrenCollapsible ( bool )
-$method=|void|setChildrenCollapsible|bool
+$prototypeV2=void setChildrenCollapsible( bool )
 
-$prototype=void setCollapsible ( int index, bool collapse )
-$method=|void|setCollapsible|int,bool
+$prototypeV2=void setCollapsible( int index, bool collapse )
 
-$prototype=void setHandleWidth ( int )
-$method=|void|setHandleWidth|int
+$prototypeV2=void setHandleWidth( int )
 
 $prototype=void setOpaqueResize ( bool opaque = true )
 $method=|void|setOpaqueResize|bool=true
 
-$prototype=void setOrientation ( Qt::Orientation )
-$method=|void|setOrientation|Qt::Orientation
+$prototypeV2=void setOrientation( Qt::Orientation )
 
-$prototype=void setSizes ( const QList<int> & list )
-$method=|void|setSizes|const QList<int> &
+$prototypeV2=void setSizes( const QList<int> & list )
 
-$prototype=void setStretchFactor ( int index, int stretch )
-$method=|void|setStretchFactor|int,int
+$prototypeV2=void setStretchFactor( int index, int stretch )
 
 $prototypeV2=QList<int> sizes() const
 
-$prototype=QWidget * widget ( int index ) const
-$method=|QWidget *|widget|int
+$prototypeV2=QWidget * widget( int index ) const
 
 $prototypeV2=virtual QSize minimumSizeHint() const
 

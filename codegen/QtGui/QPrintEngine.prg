@@ -29,18 +29,15 @@ $deleteMethod
 
 $prototypeV2=virtual bool abort() = 0
 
-$prototype=virtual int metric ( QPaintDevice::PaintDeviceMetric id ) const = 0
-$virtualMethod=|int|metric|QPaintDevice::PaintDeviceMetric
+$prototypeV2=virtual int metric( QPaintDevice::PaintDeviceMetric id ) const = 0
 
 $prototypeV2=virtual bool newPage() = 0
 
 $prototypeV2=virtual QPrinter::PrinterState printerState() const = 0
 
-$prototype=virtual QVariant property ( PrintEnginePropertyKey key ) const = 0
-$virtualMethod=|QVariant|property|QPrintEngine::PrintEnginePropertyKey
+$prototypeV2=virtual QVariant property( QPrintEngine::PrintEnginePropertyKey key ) const = 0
 
-$prototype=virtual void setProperty ( PrintEnginePropertyKey key, const QVariant & value ) = 0
-$virtualMethod=|void|setProperty|QPrintEngine::PrintEnginePropertyKey,const QVariant &
+$prototypeV2=virtual void setProperty( QPrintEngine::PrintEnginePropertyKey key, const QVariant & value ) = 0
 
 $extraMethods
 

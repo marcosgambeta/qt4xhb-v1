@@ -59,8 +59,7 @@ $prototypeV2=qreal rawValue() const
 
 $prototypeV2=QTextLength::Type type() const
 
-$prototype=qreal value ( qreal maximumLength ) const
-$method=|qreal|value|qreal
+$prototypeV2=qreal value( qreal maximumLength ) const
 
 $extraMethods
 

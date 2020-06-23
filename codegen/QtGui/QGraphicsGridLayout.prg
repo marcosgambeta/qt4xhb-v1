@@ -58,28 +58,21 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ADDITEM )
 }
 $addMethod=addItem
 
-$prototype=Qt::Alignment alignment ( QGraphicsLayoutItem * item ) const
-$method=|Qt::Alignment|alignment|QGraphicsLayoutItem *
+$prototypeV2=Qt::Alignment alignment( QGraphicsLayoutItem * item ) const
 
-$prototype=Qt::Alignment columnAlignment ( int column ) const
-$method=|Qt::Alignment|columnAlignment|int
+$prototypeV2=Qt::Alignment columnAlignment( int column ) const
 
 $prototypeV2=int columnCount() const
 
-$prototype=qreal columnMaximumWidth ( int column ) const
-$method=|qreal|columnMaximumWidth|int
+$prototypeV2=qreal columnMaximumWidth( int column ) const
 
-$prototype=qreal columnMinimumWidth ( int column ) const
-$method=|qreal|columnMinimumWidth|int
+$prototypeV2=qreal columnMinimumWidth( int column ) const
 
-$prototype=qreal columnPreferredWidth ( int column ) const
-$method=|qreal|columnPreferredWidth|int
+$prototypeV2=qreal columnPreferredWidth( int column ) const
 
-$prototype=qreal columnSpacing ( int column ) const
-$method=|qreal|columnSpacing|int
+$prototypeV2=qreal columnSpacing( int column ) const
 
-$prototype=int columnStretchFactor ( int column ) const
-$method=|int|columnStretchFactor|int
+$prototypeV2=int columnStretchFactor( int column ) const
 
 $prototypeV2=qreal horizontalSpacing() const
 
@@ -111,82 +104,57 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ITEMAT )
 }
 $addMethod=itemAt
 
-$prototype=void removeItem ( QGraphicsLayoutItem * item )
-$method=|void|removeItem|QGraphicsLayoutItem *
+$prototypeV2=void removeItem( QGraphicsLayoutItem * item )
 
-$prototype=Qt::Alignment rowAlignment ( int row ) const
-$method=|Qt::Alignment|rowAlignment|int
+$prototypeV2=Qt::Alignment rowAlignment( int row ) const
 
 $prototypeV2=int rowCount() const
 
-$prototype=qreal rowMaximumHeight ( int row ) const
-$method=|qreal|rowMaximumHeight|int
+$prototypeV2=qreal rowMaximumHeight( int row ) const
 
-$prototype=qreal rowMinimumHeight ( int row ) const
-$method=|qreal|rowMinimumHeight|int
+$prototypeV2=qreal rowMinimumHeight( int row ) const
 
-$prototype=qreal rowPreferredHeight ( int row ) const
-$method=|qreal|rowPreferredHeight|int
+$prototypeV2=qreal rowPreferredHeight( int row ) const
 
-$prototype=qreal rowSpacing ( int row ) const
-$method=|qreal|rowSpacing|int
+$prototypeV2=qreal rowSpacing( int row ) const
 
-$prototype=int rowStretchFactor ( int row ) const
-$method=|int|rowStretchFactor|int
+$prototypeV2=int rowStretchFactor( int row ) const
 
-$prototype=void setAlignment ( QGraphicsLayoutItem * item, Qt::Alignment alignment )
-$method=|void|setAlignment|QGraphicsLayoutItem *,Qt::Alignment
+$prototypeV2=void setAlignment( QGraphicsLayoutItem * item, Qt::Alignment alignment )
 
-$prototype=void setColumnAlignment ( int column, Qt::Alignment alignment )
-$method=|void|setColumnAlignment|int,Qt::Alignment
+$prototypeV2=void setColumnAlignment( int column, Qt::Alignment alignment )
 
-$prototype=void setColumnFixedWidth ( int column, qreal width )
-$method=|void|setColumnFixedWidth|int,qreal
+$prototypeV2=void setColumnFixedWidth( int column, qreal width )
 
-$prototype=void setColumnMaximumWidth ( int column, qreal width )
-$method=|void|setColumnMaximumWidth|int,qreal
+$prototypeV2=void setColumnMaximumWidth( int column, qreal width )
 
-$prototype=void setColumnMinimumWidth ( int column, qreal width )
-$method=|void|setColumnMinimumWidth|int,qreal
+$prototypeV2=void setColumnMinimumWidth( int column, qreal width )
 
-$prototype=void setColumnPreferredWidth ( int column, qreal width )
-$method=|void|setColumnPreferredWidth|int,qreal
+$prototypeV2=void setColumnPreferredWidth( int column, qreal width )
 
-$prototype=void setColumnSpacing ( int column, qreal spacing )
-$method=|void|setColumnSpacing|int,qreal
+$prototypeV2=void setColumnSpacing( int column, qreal spacing )
 
-$prototype=void setColumnStretchFactor ( int column, int stretch )
-$method=|void|setColumnStretchFactor|int,int
+$prototypeV2=void setColumnStretchFactor( int column, int stretch )
 
-$prototype=void setHorizontalSpacing ( qreal spacing )
-$method=|void|setHorizontalSpacing|qreal
+$prototypeV2=void setHorizontalSpacing( qreal spacing )
 
-$prototype=void setRowAlignment ( int row, Qt::Alignment alignment )
-$method=|void|setRowAlignment|int,Qt::Alignment
+$prototypeV2=void setRowAlignment( int row, Qt::Alignment alignment )
 
-$prototype=void setRowFixedHeight ( int row, qreal height )
-$method=|void|setRowFixedHeight|int,qreal
+$prototypeV2=void setRowFixedHeight( int row, qreal height )
 
-$prototype=void setRowMaximumHeight ( int row, qreal height )
-$method=|void|setRowMaximumHeight|int,qreal
+$prototypeV2=void setRowMaximumHeight( int row, qreal height )
 
-$prototype=void setRowMinimumHeight ( int row, qreal height )
-$method=|void|setRowMinimumHeight|int,qreal
+$prototypeV2=void setRowMinimumHeight( int row, qreal height )
 
-$prototype=void setRowPreferredHeight ( int row, qreal height )
-$method=|void|setRowPreferredHeight|int,qreal
+$prototypeV2=void setRowPreferredHeight( int row, qreal height )
 
-$prototype=void setRowSpacing ( int row, qreal spacing )
-$method=|void|setRowSpacing|int,qreal
+$prototypeV2=void setRowSpacing( int row, qreal spacing )
 
-$prototype=void setRowStretchFactor ( int row, int stretch )
-$method=|void|setRowStretchFactor|int,int
+$prototypeV2=void setRowStretchFactor( int row, int stretch )
 
-$prototype=void setSpacing ( qreal spacing )
-$method=|void|setSpacing|qreal
+$prototypeV2=void setSpacing( qreal spacing )
 
-$prototype=void setVerticalSpacing ( qreal spacing )
-$method=|void|setVerticalSpacing|qreal
+$prototypeV2=void setVerticalSpacing( qreal spacing )
 
 $prototypeV2=qreal verticalSpacing() const
 
@@ -194,11 +162,9 @@ $prototypeV2=virtual int count() const
 
 $prototypeV2=virtual void invalidate()
 
-$prototype=virtual void removeAt ( int index )
-$virtualMethod=|void|removeAt|int
+$prototypeV2=virtual void removeAt( int index )
 
-$prototype=virtual void setGeometry ( const QRectF & rect )
-$virtualMethod=|void|setGeometry|const QRectF &
+$prototypeV2=virtual void setGeometry( const QRectF & rect )
 
 $prototype=virtual QSizeF sizeHint ( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
 $virtualMethod=|QSizeF|sizeHint|Qt::SizeHint,const QSizeF &=QSizeF()

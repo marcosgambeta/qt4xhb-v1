@@ -55,8 +55,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=virtual bool event ( QEvent * event )
-$virtualMethod=|bool|event|QEvent *
+$prototypeV2=virtual bool event( QEvent * event )
 
 $prototypeV2=virtual QSize sizeHint() const
 

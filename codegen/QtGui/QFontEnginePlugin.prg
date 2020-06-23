@@ -29,8 +29,7 @@ $deleteMethod
 
 $prototypeV2=virtual QList<QFontEngineInfo> availableFontEngines() const = 0
 
-$prototype=virtual QAbstractFontEngine * create ( const QFontEngineInfo & info ) = 0
-$virtualMethod=|QAbstractFontEngine *|create|const QFontEngineInfo &
+$prototypeV2=virtual QAbstractFontEngine * create( const QFontEngineInfo & info ) = 0
 
 $prototypeV2=virtual QStringList keys() const
 

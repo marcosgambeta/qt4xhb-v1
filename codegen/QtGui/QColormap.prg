@@ -32,18 +32,15 @@ $constructor=|new|const QColormap &
 
 $deleteMethod
 
-$prototype=const QColor colorAt ( uint pixel ) const
-$method=|const QColor|colorAt|uint
+$prototypeV2=const QColor colorAt( uint pixel ) const
 
-$prototype=const QVector<QColor> colormap () const
-$method=|const QVector<QColor>|colormap|
+$prototypeV2=const QVector<QColor> colormap() const
 
 $prototypeV2=int depth() const
 
 $prototypeV2=QColormap::Mode mode() const
 
-$prototype=uint pixel ( const QColor & color ) const
-$method=|uint|pixel|const QColor &
+$prototypeV2=uint pixel( const QColor & color ) const
 
 $prototypeV2=int size() const
 

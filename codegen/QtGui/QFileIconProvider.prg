@@ -58,8 +58,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_ICON )
 }
 $addMethod=icon
 
-$prototype=virtual QString type(const QFileInfo & info) const
-$virtualMethod=|QString|type|const QFileInfo &
+$prototypeV2=virtual QString type( const QFileInfo & info ) const
 
 $extraMethods
 

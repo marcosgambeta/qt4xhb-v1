@@ -329,13 +329,11 @@ HB_FUNC_STATIC( QPIXMAP_SCROLL )
 }
 $addMethod=scroll
 
-$prototype=void setMask ( const QBitmap & mask )
-$method=|void|setMask|const QBitmap &
+$prototypeV2=void setMask( const QBitmap & mask )
 
 $prototypeV2=QSize size() const
 
-$prototype=void swap ( QPixmap & other )
-$method=|void|swap|QPixmap &
+$prototypeV2=void swap( QPixmap & other )
 
 $prototypeV2=QImage toImage() const
 

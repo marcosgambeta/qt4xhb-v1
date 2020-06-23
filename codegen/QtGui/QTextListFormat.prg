@@ -38,17 +38,13 @@ $prototypeV2=QString numberPrefix() const
 
 $prototypeV2=QString numberSuffix() const
 
-$prototype=void setIndent ( int indentation )
-$method=|void|setIndent|int
+$prototypeV2=void setIndent( int indentation )
 
-$prototype=void setNumberPrefix ( const QString & numberPrefix )
-$method=|void|setNumberPrefix|const QString &
+$prototypeV2=void setNumberPrefix( const QString & numberPrefix )
 
-$prototype=void setNumberSuffix ( const QString & numberSuffix )
-$method=|void|setNumberSuffix|const QString &
+$prototypeV2=void setNumberSuffix( const QString & numberSuffix )
 
-$prototype=void setStyle ( Style style )
-$method=|void|setStyle|QTextListFormat::Style
+$prototypeV2=void setStyle( QTextListFormat::Style style )
 
 $prototypeV2=QTextListFormat::Style style() const
 

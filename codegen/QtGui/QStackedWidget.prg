@@ -32,8 +32,7 @@ $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-$prototype=int addWidget ( QWidget * widget )
-$method=|int|addWidget|QWidget *
+$prototypeV2=int addWidget( QWidget * widget )
 
 $prototypeV2=int count() const
 
@@ -41,23 +40,17 @@ $prototypeV2=int currentIndex() const
 
 $prototypeV2=QWidget * currentWidget() const
 
-$prototype=int indexOf ( QWidget * widget ) const
-$method=|int|indexOf|QWidget *
+$prototypeV2=int indexOf( QWidget * widget ) const
 
-$prototype=int insertWidget ( int index, QWidget * widget )
-$method=|int|insertWidget|int,QWidget *
+$prototypeV2=int insertWidget( int index, QWidget * widget )
 
-$prototype=void removeWidget ( QWidget * widget )
-$method=|void|removeWidget|QWidget *
+$prototypeV2=void removeWidget( QWidget * widget )
 
-$prototype=QWidget * widget ( int index ) const
-$method=|QWidget *|widget|int
+$prototypeV2=QWidget * widget( int index ) const
 
-$prototype=void setCurrentIndex ( int index )
-$method=|void|setCurrentIndex|int
+$prototypeV2=void setCurrentIndex( int index )
 
-$prototype=void setCurrentWidget ( QWidget * widget )
-$method=|void|setCurrentWidget|QWidget *
+$prototypeV2=void setCurrentWidget( QWidget * widget )
 
 $beginSignals
 $signal=|currentChanged(int)

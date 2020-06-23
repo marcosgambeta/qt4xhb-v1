@@ -71,35 +71,25 @@ $prototypeV2=QFont font() const
 
 $prototypeV2=bool openExternalLinks() const
 
-$prototype=void setDefaultTextColor ( const QColor & col )
-$method=|void|setDefaultTextColor|const QColor &
+$prototypeV2=void setDefaultTextColor( const QColor & col )
 
-$prototype=void setDocument ( QTextDocument * document )
-$method=|void|setDocument|QTextDocument *
+$prototypeV2=void setDocument( QTextDocument * document )
 
-$prototype=void setFont ( const QFont & font )
-$method=|void|setFont|const QFont &
+$prototypeV2=void setFont( const QFont & font )
 
-$prototype=void setHtml ( const QString & text )
-$method=|void|setHtml|const QString &
+$prototypeV2=void setHtml( const QString & text )
 
-$prototype=void setOpenExternalLinks ( bool open )
-$method=|void|setOpenExternalLinks|bool
+$prototypeV2=void setOpenExternalLinks( bool open )
 
-$prototype=void setPlainText ( const QString & text )
-$method=|void|setPlainText|const QString &
+$prototypeV2=void setPlainText( const QString & text )
 
-$prototype=void setTabChangesFocus ( bool b )
-$method=|void|setTabChangesFocus|bool
+$prototypeV2=void setTabChangesFocus( bool b )
 
-$prototype=void setTextCursor ( const QTextCursor & cursor )
-$method=|void|setTextCursor|const QTextCursor &
+$prototypeV2=void setTextCursor( const QTextCursor & cursor )
 
-$prototype=void setTextInteractionFlags ( Qt::TextInteractionFlags flags )
-$method=|void|setTextInteractionFlags|Qt::TextInteractionFlags
+$prototypeV2=void setTextInteractionFlags( Qt::TextInteractionFlags flags )
 
-$prototype=void setTextWidth ( qreal width )
-$method=|void|setTextWidth|qreal
+$prototypeV2=void setTextWidth( qreal width )
 
 $prototypeV2=bool tabChangesFocus() const
 
@@ -115,16 +105,13 @@ $prototypeV2=QString toPlainText() const
 
 $prototypeV2=virtual QRectF boundingRect() const
 
-$prototype=virtual bool contains ( const QPointF & point ) const
-$virtualMethod=|bool|contains|const QPointF &
+$prototypeV2=virtual bool contains( const QPointF & point ) const
 
-$prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
-$virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
+$prototypeV2=virtual bool isObscuredBy( const QGraphicsItem * item ) const
 
 $prototypeV2=virtual QPainterPath opaqueArea() const
 
-$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
-$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *
+$prototypeV2=virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
 
 $prototypeV2=virtual QPainterPath shape() const
 

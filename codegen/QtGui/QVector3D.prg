@@ -98,8 +98,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=qreal distanceToLine ( const QVector3D & point, const QVector3D & direction ) const
-$method=|qreal|distanceToLine|const QVector3D &,const QVector3D &
+$prototypeV2=qreal distanceToLine( const QVector3D & point, const QVector3D & direction ) const
 
 $prototype=qreal distanceToPlane ( const QVector3D & plane, const QVector3D & normal ) const
 $internalMethod=|qreal|distanceToPlane,distanceToPlane1|const QVector3D &,const QVector3D &
@@ -139,14 +138,11 @@ $prototypeV2=void normalize()
 
 $prototypeV2=QVector3D normalized() const
 
-$prototype=void setX ( qreal x )
-$method=|void|setX|qreal
+$prototypeV2=void setX( qreal x )
 
-$prototype=void setY ( qreal y )
-$method=|void|setY|qreal
+$prototypeV2=void setY( qreal y )
 
-$prototype=void setZ ( qreal z )
-$method=|void|setZ|qreal
+$prototypeV2=void setZ( qreal z )
 
 $prototypeV2=QPoint toPoint() const
 
@@ -162,11 +158,9 @@ $prototypeV2=qreal y() const
 
 $prototypeV2=qreal z() const
 
-$prototype=static QVector3D crossProduct ( const QVector3D & v1, const QVector3D & v2 )
-$staticMethod=|QVector3D|crossProduct|const QVector3D &,const QVector3D &
+$prototypeV2=static QVector3D crossProduct( const QVector3D & v1, const QVector3D & v2 )
 
-$prototype=static qreal dotProduct ( const QVector3D & v1, const QVector3D & v2 )
-$staticMethod=|qreal|dotProduct|const QVector3D &,const QVector3D &
+$prototypeV2=static qreal dotProduct( const QVector3D & v1, const QVector3D & v2 )
 
 $prototype=static QVector3D normal ( const QVector3D & v1, const QVector3D & v2 )
 $internalStaticMethod=|QVector3D|normal,normal1|const QVector3D &,const QVector3D &

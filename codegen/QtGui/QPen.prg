@@ -87,8 +87,7 @@ $prototypeV2=QColor color() const
 
 $prototypeV2=qreal dashOffset() const
 
-$prototype=QVector<qreal> dashPattern () const
-$method=|QVector<qreal>|dashPattern|
+$prototypeV2=QVector<qreal> dashPattern() const
 
 $prototypeV2=bool isCosmetic() const
 
@@ -98,38 +97,27 @@ $prototypeV2=Qt::PenJoinStyle joinStyle() const
 
 $prototypeV2=qreal miterLimit() const
 
-$prototype=void setBrush ( const QBrush & brush )
-$method=|void|setBrush|const QBrush &
+$prototypeV2=void setBrush( const QBrush & brush )
 
-$prototype=void setCapStyle ( Qt::PenCapStyle style )
-$method=|void|setCapStyle|Qt::PenCapStyle
+$prototypeV2=void setCapStyle( Qt::PenCapStyle style )
 
-$prototype=void setColor ( const QColor & color )
-$method=|void|setColor|const QColor &
+$prototypeV2=void setColor( const QColor & color )
 
-$prototype=void setCosmetic ( bool cosmetic )
-$method=|void|setCosmetic|bool
+$prototypeV2=void setCosmetic( bool cosmetic )
 
-$prototype=void setDashOffset ( qreal offset )
-$method=|void|setDashOffset|qreal
+$prototypeV2=void setDashOffset( qreal offset )
 
-$prototype=void setDashPattern ( const QVector<qreal> & pattern )
-$method=|void|setDashPattern|const QVector<qreal> &
+$prototypeV2=void setDashPattern( const QVector<qreal> & pattern )
 
-$prototype=void setJoinStyle ( Qt::PenJoinStyle style )
-$method=|void|setJoinStyle|Qt::PenJoinStyle
+$prototypeV2=void setJoinStyle( Qt::PenJoinStyle style )
 
-$prototype=void setMiterLimit ( qreal limit )
-$method=|void|setMiterLimit|qreal
+$prototypeV2=void setMiterLimit( qreal limit )
 
-$prototype=void setStyle ( Qt::PenStyle style )
-$method=|void|setStyle|Qt::PenStyle
+$prototypeV2=void setStyle( Qt::PenStyle style )
 
-$prototype=void setWidth ( int width )
-$method=|void|setWidth|int
+$prototypeV2=void setWidth( int width )
 
-$prototype=void setWidthF ( qreal width )
-$method=|void|setWidthF|qreal
+$prototypeV2=void setWidthF( qreal width )
 
 $prototypeV2=Qt::PenStyle style() const
 

@@ -111,8 +111,7 @@ $prototypeV2=int blue() const
 
 $prototypeV2=qreal blueF() const
 
-$prototype=QColor convertTo ( Spec colorSpec ) const
-$method=|QColor|convertTo|QColor::Spec
+$prototypeV2=QColor convertTo( QColor::Spec colorSpec ) const
 
 $prototypeV2=int cyan() const
 
@@ -196,17 +195,13 @@ $prototypeV2=int saturation() const
 
 $prototypeV2=qreal saturationF() const
 
-$prototype=void setAlpha ( int alpha )
-$method=|void|setAlpha|int
+$prototypeV2=void setAlpha( int alpha )
 
-$prototype=void setAlphaF ( qreal alpha )
-$method=|void|setAlphaF|qreal
+$prototypeV2=void setAlphaF( qreal alpha )
 
-$prototype=void setBlue ( int blue )
-$method=|void|setBlue|int
+$prototypeV2=void setBlue( int blue )
 
-$prototype=void setBlueF ( qreal blue )
-$method=|void|setBlueF|qreal
+$prototypeV2=void setBlueF( qreal blue )
 
 $prototype=void setCmyk ( int c, int m, int y, int k, int a = 255 )
 $method=|void|setCmyk|int,int,int,int,int=255
@@ -214,11 +209,9 @@ $method=|void|setCmyk|int,int,int,int,int=255
 $prototype=void setCmykF ( qreal c, qreal m, qreal y, qreal k, qreal a = 1.0 )
 $method=|void|setCmykF|qreal,qreal,qreal,qreal,qreal=1.0
 
-$prototype=void setGreen ( int green )
-$method=|void|setGreen|int
+$prototypeV2=void setGreen( int green )
 
-$prototype=void setGreenF ( qreal green )
-$method=|void|setGreenF|qreal
+$prototypeV2=void setGreenF( qreal green )
 
 $prototype=void setHsl ( int h, int s, int l, int a = 255 )
 $method=|void|setHsl|int,int,int,int=255
@@ -232,14 +225,11 @@ $method=|void|setHsv|int,int,int,int=255
 $prototype=void setHsvF ( qreal h, qreal s, qreal v, qreal a = 1.0 )
 $method=|void|setHsvF|qreal,qreal,qreal,qreal=1.0
 
-$prototype=void setNamedColor ( const QString & name )
-$method=|void|setNamedColor|const QString &
+$prototypeV2=void setNamedColor( const QString & name )
 
-$prototype=void setRed ( int red )
-$method=|void|setRed|int
+$prototypeV2=void setRed( int red )
 
-$prototype=void setRedF ( qreal red )
-$method=|void|setRedF|qreal
+$prototypeV2=void setRedF( qreal red )
 
 $prototype=void setRgb ( int r, int g, int b, int a = 255 )
 $internalMethod=|void|setRgb,setRgb1|int,int,int,int=255
@@ -272,8 +262,7 @@ $addMethod=setRgb
 $prototype=void setRgbF ( qreal r, qreal g, qreal b, qreal a = 1.0 )
 $method=|void|setRgbF|qreal,qreal,qreal,qreal=1.0
 
-$prototype=void setRgba ( QRgb rgba )
-$method=|void|setRgba|QRgb
+$prototypeV2=void setRgba( QRgb rgba )
 
 $prototypeV2=QColor::Spec spec() const
 
@@ -344,11 +333,9 @@ $addMethod=fromRgb
 $prototype=static QColor fromRgbF ( qreal r, qreal g, qreal b, qreal a = 1.0 )
 $staticMethod=|QColor|fromRgbF|qreal,qreal,qreal,qreal=1.0
 
-$prototype=static QColor fromRgba ( QRgb rgba )
-$staticMethod=|QColor|fromRgba|QRgb
+$prototypeV2=static QColor fromRgba( QRgb rgba )
 
-$prototype=static bool isValidColor ( const QString & name )
-$staticMethod=|bool|isValidColor|const QString &
+$prototypeV2=static bool isValidColor( const QString & name )
 
 %% TODO implementar $function=
 

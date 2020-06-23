@@ -93,71 +93,49 @@ $prototypeV2=bool sampleBuffers() const
 
 $prototypeV2=int samples() const
 
-$prototype=void setAccum ( bool enable )
-$method=|void|setAccum|bool
+$prototypeV2=void setAccum( bool enable )
 
-$prototype=void setAccumBufferSize ( int size )
-$method=|void|setAccumBufferSize|int
+$prototypeV2=void setAccumBufferSize( int size )
 
-$prototype=void setAlpha ( bool enable )
-$method=|void|setAlpha|bool
+$prototypeV2=void setAlpha( bool enable )
 
-$prototype=void setAlphaBufferSize ( int size )
-$method=|void|setAlphaBufferSize|int
+$prototypeV2=void setAlphaBufferSize( int size )
 
-$prototype=void setBlueBufferSize ( int size )
-$method=|void|setBlueBufferSize|int
+$prototypeV2=void setBlueBufferSize( int size )
 
-$prototype=void setDepth ( bool enable )
-$method=|void|setDepth|bool
+$prototypeV2=void setDepth( bool enable )
 
-$prototype=void setDepthBufferSize ( int size )
-$method=|void|setDepthBufferSize|int
+$prototypeV2=void setDepthBufferSize( int size )
 
-$prototype=void setDirectRendering ( bool enable )
-$method=|void|setDirectRendering|bool
+$prototypeV2=void setDirectRendering( bool enable )
 
-$prototype=void setDoubleBuffer ( bool enable )
-$method=|void|setDoubleBuffer|bool
+$prototypeV2=void setDoubleBuffer( bool enable )
 
-$prototype=void setGreenBufferSize ( int size )
-$method=|void|setGreenBufferSize|int
+$prototypeV2=void setGreenBufferSize( int size )
 
-$prototype=void setOption ( QPlatformWindowFormat::FormatOptions opt )
-$method=|void|setOption|QPlatformWindowFormat::FormatOptions
+$prototypeV2=void setOption( QPlatformWindowFormat::FormatOptions opt )
 
-$prototype=void setRedBufferSize ( int size )
-$method=|void|setRedBufferSize|int
+$prototypeV2=void setRedBufferSize( int size )
 
-$prototype=void setRgba ( bool enable )
-$method=|void|setRgba|bool
+$prototypeV2=void setRgba( bool enable )
 
-$prototype=void setSampleBuffers ( bool enable )
-$method=|void|setSampleBuffers|bool
+$prototypeV2=void setSampleBuffers( bool enable )
 
-$prototype=void setSamples ( int numSamples )
-$method=|void|setSamples|int
+$prototypeV2=void setSamples( int numSamples )
 
-$prototype=void setSharedContext ( QPlatformGLContext * context )
-$method=|void|setSharedContext|QPlatformGLContext *
+$prototypeV2=void setSharedContext( QPlatformGLContext * context )
 
-$prototype=void setStencil ( bool enable )
-$method=|void|setStencil|bool
+$prototypeV2=void setStencil( bool enable )
 
-$prototype=void setStencilBufferSize ( int size )
-$method=|void|setStencilBufferSize|int
+$prototypeV2=void setStencilBufferSize( int size )
 
-$prototype=void setStereo ( bool enable )
-$method=|void|setStereo|bool
+$prototypeV2=void setStereo( bool enable )
 
-$prototype=void setSwapInterval ( int interval )
-$method=|void|setSwapInterval|int
+$prototypeV2=void setSwapInterval( int interval )
 
-$prototype=void setWindowApi ( QPlatformWindowFormat::WindowApi api )
-$method=|void|setWindowApi|QPlatformWindowFormat::WindowApi
+$prototypeV2=void setWindowApi( QPlatformWindowFormat::WindowApi api )
 
-$prototype=void setWindowSurface ( bool enable )
-$method=|void|setWindowSurface|bool
+$prototypeV2=void setWindowSurface( bool enable )
 
 $prototypeV2=QPlatformGLContext * sharedGLContext() const
 
@@ -169,15 +147,13 @@ $prototypeV2=bool stereo() const
 
 $prototypeV2=int swapInterval() const
 
-$prototype=bool testOption ( QPlatformWindowFormat::FormatOptions opt ) const
-$method=|bool|testOption|QPlatformWindowFormat::FormatOptions
+$prototypeV2=bool testOption( QPlatformWindowFormat::FormatOptions opt ) const
 
 $prototypeV2=QPlatformWindowFormat::WindowApi windowApi() const
 
 $prototypeV2=static QPlatformWindowFormat defaultFormat()
 
-$prototype=static void setDefaultFormat ( const QPlatformWindowFormat & f )
-$staticMethod=|void|setDefaultFormat|const QPlatformWindowFormat &
+$prototypeV2=static void setDefaultFormat( const QPlatformWindowFormat & f )
 
 $extraMethods
 

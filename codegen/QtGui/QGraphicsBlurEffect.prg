@@ -36,14 +36,11 @@ $prototypeV2=QGraphicsBlurEffect::BlurHints blurHints() const
 
 $prototypeV2=qreal blurRadius() const
 
-$prototype=virtual QRectF boundingRectFor ( const QRectF & rect ) const
-$virtualMethod=|QRectF|boundingRectFor|const QRectF &
+$prototypeV2=virtual QRectF boundingRectFor( const QRectF & rect ) const
 
-$prototype=void setBlurHints ( BlurHints hints )
-$method=|void|setBlurHints|QGraphicsBlurEffect::BlurHints
+$prototypeV2=void setBlurHints( QGraphicsBlurEffect::BlurHints hints )
 
-$prototype=void setBlurRadius ( qreal blurRadius )
-$method=|void|setBlurRadius|qreal
+$prototypeV2=void setBlurRadius( qreal blurRadius )
 
 $beginSignals
 $signal=|blurHintsChanged(QGraphicsBlurEffect::BlurHints)

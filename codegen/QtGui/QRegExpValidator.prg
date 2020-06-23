@@ -57,8 +57,7 @@ $deleteMethod
 
 $prototypeV2=const QRegExp & regExp() const
 
-$prototype=void setRegExp ( const QRegExp & rx )
-$method=|void|setRegExp|const QRegExp &
+$prototypeV2=void setRegExp( const QRegExp & rx )
 
 $prototype=virtual QValidator::State validate ( QString & input, int & pos ) const
 %% TODO: revisar implementacao e corrigir

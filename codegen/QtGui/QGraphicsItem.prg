@@ -40,13 +40,11 @@ $prototypeV2=bool acceptTouchEvents() const
 
 $prototypeV2=Qt::MouseButtons acceptedMouseButtons() const
 
-$prototype=virtual void advance ( int phase )
-$virtualMethod=|void|advance|int
+$prototypeV2=virtual void advance( int phase )
 
 $prototypeV2=virtual QRectF boundingRect() const = 0
 
-$prototype=QRegion boundingRegion ( const QTransform & itemToDeviceTransform ) const
-$method=|QRegion|boundingRegion|const QTransform &
+$prototypeV2=QRegion boundingRegion( const QTransform & itemToDeviceTransform ) const
 
 $prototypeV2=qreal boundingRegionGranularity() const
 
@@ -69,19 +67,15 @@ $virtualMethod=|bool|collidesWithPath|const QPainterPath &,Qt::ItemSelectionMode
 $prototype=QList<QGraphicsItem *> collidingItems ( Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
 $method=|QList<QGraphicsItem *>|collidingItems|Qt::ItemSelectionMode=Qt::IntersectsItemShape
 
-$prototype=QGraphicsItem * commonAncestorItem ( const QGraphicsItem * other ) const
-$method=|QGraphicsItem *|commonAncestorItem|const QGraphicsItem *
+$prototypeV2=QGraphicsItem * commonAncestorItem( const QGraphicsItem * other ) const
 
-$prototype=virtual bool contains ( const QPointF & point ) const
-$virtualMethod=|bool|contains|const QPointF &
+$prototypeV2=virtual bool contains( const QPointF & point ) const
 
 $prototypeV2=QCursor cursor() const
 
-$prototype=QVariant data ( int key ) const
-$method=|QVariant|data|int
+$prototypeV2=QVariant data( int key ) const
 
-$prototype=QTransform deviceTransform ( const QTransform & viewportTransform ) const
-$method=|QTransform|deviceTransform|const QTransform &
+$prototypeV2=QTransform deviceTransform( const QTransform & viewportTransform ) const
 
 $prototypeV2=qreal effectiveOpacity() const
 
@@ -137,13 +131,11 @@ $prototypeV2=void hide()
 
 $prototypeV2=Qt::InputMethodHints inputMethodHints() const
 
-$prototype=void installSceneEventFilter ( QGraphicsItem * filterItem )
-$method=|void|installSceneEventFilter|QGraphicsItem *
+$prototypeV2=void installSceneEventFilter( QGraphicsItem * filterItem )
 
 $prototypeV2=bool isActive() const
 
-$prototype=bool isAncestorOf ( const QGraphicsItem * child ) const
-$method=|bool|isAncestorOf|const QGraphicsItem *
+$prototypeV2=bool isAncestorOf( const QGraphicsItem * child ) const
 
 $prototypeV2=bool isClipped() const
 
@@ -185,8 +177,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCURED )
 }
 $addMethod=isObscured
 
-$prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
-$virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
+$prototypeV2=virtual bool isObscuredBy( const QGraphicsItem * item ) const
 
 $prototypeV2=bool isPanel() const
 
@@ -196,8 +187,7 @@ $prototypeV2=bool isUnderMouse() const
 
 $prototypeV2=bool isVisible() const
 
-$prototype=bool isVisibleTo ( const QGraphicsItem * parent ) const
-$method=|bool|isVisibleTo|const QGraphicsItem *
+$prototypeV2=bool isVisibleTo( const QGraphicsItem * parent ) const
 
 $prototypeV2=bool isWidget() const
 
@@ -756,8 +746,7 @@ $prototypeV2=QGraphicsWidget * parentWidget() const
 
 $prototypeV2=QPointF pos() const
 
-$prototype=void removeSceneEventFilter ( QGraphicsItem * filterItem )
-$method=|void|removeSceneEventFilter|QGraphicsItem *
+$prototypeV2=void removeSceneEventFilter( QGraphicsItem * filterItem )
 
 $prototypeV2=void resetTransform()
 
@@ -776,68 +765,50 @@ $prototypeV2=QTransform sceneTransform() const
 $prototype=void scroll ( qreal dx, qreal dy, const QRectF & rect = QRectF() )
 $method=|void|scroll|qreal,qreal,const QRectF &=QRectF()
 
-$prototype=void setAcceptDrops ( bool on )
-$method=|void|setAcceptDrops|bool
+$prototypeV2=void setAcceptDrops( bool on )
 
-$prototype=void setAcceptHoverEvents ( bool enabled )
-$method=|void|setAcceptHoverEvents|bool
+$prototypeV2=void setAcceptHoverEvents( bool enabled )
 
-$prototype=void setAcceptTouchEvents ( bool enabled )
-$method=|void|setAcceptTouchEvents|bool
+$prototypeV2=void setAcceptTouchEvents( bool enabled )
 
-$prototype=void setAcceptedMouseButtons ( Qt::MouseButtons buttons )
-$method=|void|setAcceptedMouseButtons|Qt::MouseButtons
+$prototypeV2=void setAcceptedMouseButtons( Qt::MouseButtons buttons )
 
-$prototype=void setActive ( bool active )
-$method=|void|setActive|bool
+$prototypeV2=void setActive( bool active )
 
-$prototype=void setBoundingRegionGranularity ( qreal granularity )
-$method=|void|setBoundingRegionGranularity|qreal
+$prototypeV2=void setBoundingRegionGranularity( qreal granularity )
 
 $prototype=void setCacheMode ( CacheMode mode, const QSize & logicalCacheSize = QSize() )
 $method=|void|setCacheMode|QGraphicsItem::CacheMode,const QSize &=QSize()
 
-$prototype=void setCursor ( const QCursor & cursor )
-$method=|void|setCursor|const QCursor &
+$prototypeV2=void setCursor( const QCursor & cursor )
 
-$prototype=void setData ( int key, const QVariant & value )
-$method=|void|setData|int,const QVariant &
+$prototypeV2=void setData( int key, const QVariant & value )
 
-$prototype=void setEnabled ( bool enabled )
-$method=|void|setEnabled|bool
+$prototypeV2=void setEnabled( bool enabled )
 
-$prototype=void setFiltersChildEvents ( bool enabled )
-$method=|void|setFiltersChildEvents|bool
+$prototypeV2=void setFiltersChildEvents( bool enabled )
 
 $prototype=void setFlag ( GraphicsItemFlag flag, bool enabled = true )
 $method=|void|setFlag|QGraphicsItem::GraphicsItemFlag,bool=true
 
-$prototype=void setFlags ( GraphicsItemFlags flags )
-$method=|void|setFlags|QGraphicsItem::GraphicsItemFlags
+$prototypeV2=void setFlags( QGraphicsItem::GraphicsItemFlags flags )
 
 $prototype=void setFocus ( Qt::FocusReason focusReason = Qt::OtherFocusReason )
 $method=|void|setFocus|Qt::FocusReason=Qt::OtherFocusReason
 
-$prototype=void setFocusProxy ( QGraphicsItem * item )
-$method=|void|setFocusProxy|QGraphicsItem *
+$prototypeV2=void setFocusProxy( QGraphicsItem * item )
 
-$prototype=void setGraphicsEffect ( QGraphicsEffect * effect )
-$method=|void|setGraphicsEffect|QGraphicsEffect *
+$prototypeV2=void setGraphicsEffect( QGraphicsEffect * effect )
 
-$prototype=void setGroup ( QGraphicsItemGroup * group )
-$method=|void|setGroup|QGraphicsItemGroup *
+$prototypeV2=void setGroup( QGraphicsItemGroup * group )
 
-$prototype=void setInputMethodHints ( Qt::InputMethodHints hints )
-$method=|void|setInputMethodHints|Qt::InputMethodHints
+$prototypeV2=void setInputMethodHints( Qt::InputMethodHints hints )
 
-$prototype=void setOpacity ( qreal opacity )
-$method=|void|setOpacity|qreal
+$prototypeV2=void setOpacity( qreal opacity )
 
-$prototype=void setPanelModality ( PanelModality panelModality )
-$method=|void|setPanelModality|QGraphicsItem::PanelModality
+$prototypeV2=void setPanelModality( QGraphicsItem::PanelModality panelModality )
 
-$prototype=void setParentItem ( QGraphicsItem * newParent )
-$method=|void|setParentItem|QGraphicsItem *
+$prototypeV2=void setParentItem( QGraphicsItem * newParent )
 
 $prototype=void setPos ( const QPointF & pos )
 $internalMethod=|void|setPos,setPos1|const QPointF &
@@ -867,17 +838,13 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETPOS )
 }
 $addMethod=setPos
 
-$prototype=void setRotation ( qreal angle )
-$method=|void|setRotation|qreal
+$prototypeV2=void setRotation( qreal angle )
 
-$prototype=void setScale ( qreal factor )
-$method=|void|setScale|qreal
+$prototypeV2=void setScale( qreal factor )
 
-$prototype=void setSelected ( bool selected )
-$method=|void|setSelected|bool
+$prototypeV2=void setSelected( bool selected )
 
-$prototype=void setToolTip ( const QString & toolTip )
-$method=|void|setToolTip|const QString &
+$prototypeV2=void setToolTip( const QString & toolTip )
 
 $prototype=void setTransform ( const QTransform & matrix, bool combine = false )
 $method=|void|setTransform|const QTransform &,bool=false
@@ -910,27 +877,21 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORMORIGINPOINT )
 }
 $addMethod=setTransformOriginPoint
 
-$prototype=void setTransformations ( const QList<QGraphicsTransform *> & transformations )
-$method=|void|setTransformations|const QList<QGraphicsTransform *> &
+$prototypeV2=void setTransformations( const QList<QGraphicsTransform *> & transformations )
 
-$prototype=void setVisible ( bool visible )
-$method=|void|setVisible|bool
+$prototypeV2=void setVisible( bool visible )
 
-$prototype=void setX ( qreal x )
-$method=|void|setX|qreal
+$prototypeV2=void setX( qreal x )
 
-$prototype=void setY ( qreal y )
-$method=|void|setY|qreal
+$prototypeV2=void setY( qreal y )
 
-$prototype=void setZValue ( qreal z )
-$method=|void|setZValue|qreal
+$prototypeV2=void setZValue( qreal z )
 
 $prototypeV2=virtual QPainterPath shape() const
 
 $prototypeV2=void show()
 
-$prototype=void stackBefore ( const QGraphicsItem * sibling )
-$method=|void|stackBefore|const QGraphicsItem *
+$prototypeV2=void stackBefore( const QGraphicsItem * sibling )
 
 $prototype=QGraphicsObject * toGraphicsObject ()
 $method=|QGraphicsObject *|toGraphicsObject,toGraphicsObject1|

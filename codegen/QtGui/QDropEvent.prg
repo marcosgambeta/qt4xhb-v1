@@ -36,30 +36,25 @@ $prototypeV2=Qt::DropAction dropAction() const
 
 $prototypeV2=Qt::KeyboardModifiers keyboardModifiers() const
 
-$prototype=const QMimeData * mimeData () const
-$method=|const QMimeData *|mimeData|
+$prototypeV2=const QMimeData * mimeData() const
 
 $prototypeV2=Qt::MouseButtons mouseButtons() const
 
-$prototype=const QPoint & pos () const
-$method=|const QPoint &|pos|
+$prototypeV2=const QPoint & pos() const
 
 $prototypeV2=Qt::DropActions possibleActions() const
 
 $prototypeV2=Qt::DropAction proposedAction() const
 
-$prototype=void setDropAction ( Qt::DropAction action )
-$method=|void|setDropAction|Qt::DropAction
+$prototypeV2=void setDropAction( Qt::DropAction action )
 
 $prototypeV2=QWidget * source() const
 
-$prototype=virtual QByteArray encodedData ( const char * format ) const
-$virtualMethod=|QByteArray|encodedData|const char *
+$prototypeV2=virtual QByteArray encodedData( const char * format ) const
 
 $prototype=virtual const char * format ( int n = 0 ) const
 $virtualMethod=|const char *|format|int=0
 
-$prototype=virtual bool provides ( const char * mimeType ) const
-$virtualMethod=|bool|provides|const char *
+$prototypeV2=virtual bool provides( const char * mimeType ) const
 
 #pragma ENDDUMP

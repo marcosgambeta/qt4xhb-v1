@@ -31,8 +31,7 @@ $deleteMethod
 
 $prototypeV2=virtual QList<QAction *> actions()
 
-$prototype=virtual bool filterEvent ( const QEvent * event )
-$virtualMethod=|bool|filterEvent|const QEvent *
+$prototypeV2=virtual bool filterEvent( const QEvent * event )
 
 $prototypeV2=QWidget * focusWidget() const
 
@@ -44,23 +43,18 @@ $prototypeV2=virtual bool isComposing() const = 0
 
 $prototypeV2=virtual QString language() = 0
 
-$prototype=virtual void mouseHandler ( int x, QMouseEvent * event )
-$virtualMethod=|void|mouseHandler|int,QMouseEvent *
+$prototypeV2=virtual void mouseHandler( int x, QMouseEvent * event )
 
 $prototypeV2=virtual void reset() = 0
 
-$prototype=void sendEvent ( const QInputMethodEvent & event )
-$method=|void|sendEvent|const QInputMethodEvent &
+$prototypeV2=void sendEvent( const QInputMethodEvent & event )
 
-$prototype=virtual void setFocusWidget ( QWidget * widget )
-$virtualMethod=|void|setFocusWidget|QWidget *
+$prototypeV2=virtual void setFocusWidget( QWidget * widget )
 
-$prototype=QTextFormat standardFormat ( StandardFormat s ) const
-$method=|QTextFormat|standardFormat|QInputContext::StandardFormat
+$prototypeV2=QTextFormat standardFormat( QInputContext::StandardFormat s ) const
 
 $prototypeV2=virtual void update()
 
-$prototype=virtual void widgetDestroyed ( QWidget * widget )
-$virtualMethod=|void|widgetDestroyed|QWidget *
+$prototypeV2=virtual void widgetDestroyed( QWidget * widget )
 
 #pragma ENDDUMP

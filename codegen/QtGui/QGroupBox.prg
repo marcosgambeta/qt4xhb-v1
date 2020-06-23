@@ -63,24 +63,19 @@ $prototypeV2=bool isChecked() const
 
 $prototypeV2=bool isFlat() const
 
-$prototype=void setAlignment ( int alignment )
-$method=|void|setAlignment|int
+$prototypeV2=void setAlignment( int alignment )
 
-$prototype=void setCheckable ( bool checkable )
-$method=|void|setCheckable|bool
+$prototypeV2=void setCheckable( bool checkable )
 
-$prototype=void setFlat ( bool flat )
-$method=|void|setFlat|bool
+$prototypeV2=void setFlat( bool flat )
 
-$prototype=void setTitle ( const QString & title )
-$method=|void|setTitle|const QString &
+$prototypeV2=void setTitle( const QString & title )
 
 $prototypeV2=QString title() const
 
 $prototypeV2=virtual QSize minimumSizeHint() const
 
-$prototype=void setChecked ( bool checked )
-$method=|void|setChecked|bool
+$prototypeV2=void setChecked( bool checked )
 
 $beginSignals
 $signal=|clicked(bool)

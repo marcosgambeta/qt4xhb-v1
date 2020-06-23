@@ -57,8 +57,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void open ( QObject * receiver, const char * member )
-$method=|void|open|QObject *,const char *
+$prototypeV2=void open( QObject * receiver, const char * member )
 
 $prototypeV2=QPrintDialog::PrintDialogOptions options() const
 
@@ -67,19 +66,15 @@ $prototypeV2=QPrinter * printer()
 $prototype=void setOption ( PrintDialogOption option, bool on = true )
 $method=|void|setOption|QPrintDialog::PrintDialogOption,bool=true
 
-$prototype=void setOptions ( PrintDialogOptions options )
-$method=|void|setOptions|QPrintDialog::PrintDialogOptions
+$prototypeV2=void setOptions( QPrintDialog::PrintDialogOptions options )
 
-$prototype=bool testOption ( PrintDialogOption option ) const
-$method=|bool|testOption|QPrintDialog::PrintDialogOption
+$prototypeV2=bool testOption( QPrintDialog::PrintDialogOption option ) const
 
-$prototype=virtual void done ( int result )
-$virtualMethod=|void|done|int
+$prototypeV2=virtual void done( int result )
 
 $prototypeV2=virtual int exec()
 
-$prototype=virtual void setVisible ( bool visible )
-$virtualMethod=|void|setVisible|bool
+$prototypeV2=virtual void setVisible( bool visible )
 
 $beginSignals
 $signal=|accepted(QPrinter*)

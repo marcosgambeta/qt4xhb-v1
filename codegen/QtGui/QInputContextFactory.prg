@@ -29,19 +29,15 @@ $includes
 
 $deleteMethod
 
-$prototype=QInputContext * create ( const QString & key, QObject * parent )
-$method=|QInputContext *|create|const QString &,QObject *
+$prototypeV2=QInputContext * create( const QString & key, QObject * parent )
 
-$prototype=static QString description ( const QString & key )
-$staticMethod=|QString|description|const QString &
+$prototypeV2=static QString description( const QString & key )
 
-$prototype=static QString displayName ( const QString & key )
-$staticMethod=|QString|displayName|const QString &
+$prototypeV2=static QString displayName( const QString & key )
 
 $prototypeV2=static QStringList keys()
 
-$prototype=static QStringList languages ( const QString & key )
-$staticMethod=|QStringList|languages|const QString &
+$prototypeV2=static QStringList languages( const QString & key )
 
 $extraMethods
 

@@ -47,12 +47,10 @@ $deleteMethod
 
 $prototypeV2=QTextDocument * document() const
 
-$prototype=void setDocument ( QTextDocument * doc )
-$method=|void|setDocument|QTextDocument *
+$prototypeV2=void setDocument( QTextDocument * doc )
 
 $prototypeV2=void rehighlight()
 
-$prototype=void rehighlightBlock ( const QTextBlock & block )
-$method=|void|rehighlightBlock|const QTextBlock &
+$prototypeV2=void rehighlightBlock( const QTextBlock & block )
 
 #pragma ENDDUMP

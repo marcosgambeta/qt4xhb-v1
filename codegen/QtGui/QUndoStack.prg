@@ -34,8 +34,7 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=void beginMacro ( const QString & text )
-$method=|void|beginMacro|const QString &
+$prototypeV2=void beginMacro( const QString & text )
 
 $prototypeV2=bool canRedo() const
 
@@ -45,8 +44,7 @@ $prototypeV2=int cleanIndex() const
 
 $prototypeV2=void clear()
 
-$prototype=const QUndoCommand * command ( int index ) const
-$method=|const QUndoCommand *|command|int
+$prototypeV2=const QUndoCommand * command( int index ) const
 
 $prototypeV2=int count() const
 
@@ -64,16 +62,13 @@ $prototypeV2=bool isActive() const
 
 $prototypeV2=bool isClean() const
 
-$prototype=void push ( QUndoCommand * cmd )
-$method=|void|push|QUndoCommand *
+$prototypeV2=void push( QUndoCommand * cmd )
 
 $prototypeV2=QString redoText() const
 
-$prototype=void setUndoLimit ( int limit )
-$method=|void|setUndoLimit|int
+$prototypeV2=void setUndoLimit( int limit )
 
-$prototype=QString text ( int idx ) const
-$method=|QString|text|int
+$prototypeV2=QString text( int idx ) const
 
 $prototypeV2=int undoLimit() const
 
@@ -86,8 +81,7 @@ $method=|void|setActive|bool=true
 
 $prototypeV2=void setClean()
 
-$prototype=void setIndex ( int idx )
-$method=|void|setIndex|int
+$prototypeV2=void setIndex( int idx )
 
 $prototypeV2=void undo()
 

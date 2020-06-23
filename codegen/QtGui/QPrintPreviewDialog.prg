@@ -57,16 +57,13 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void open ( QObject * receiver, const char * member )
-$method=|void|open|QObject *,const char *
+$prototypeV2=void open( QObject * receiver, const char * member )
 
 $prototypeV2=QPrinter * printer()
 
-$prototype=virtual void done ( int result )
-$virtualMethod=|void|done|int
+$prototypeV2=virtual void done( int result )
 
-$prototype=virtual void setVisible ( bool visible )
-$virtualMethod=|void|setVisible|bool
+$prototypeV2=virtual void setVisible( bool visible )
 
 $beginSignals
 $signal=|paintRequested(QPrinter*)

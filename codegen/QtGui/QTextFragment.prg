@@ -59,8 +59,7 @@ $prototypeV2=QTextCharFormat charFormat() const
 
 $prototypeV2=int charFormatIndex() const
 
-$prototype=bool contains ( int position ) const
-$method=|bool|contains|int
+$prototypeV2=bool contains( int position ) const
 
 $prototypeV2=QList<QGlyphRun> glyphRuns() const
 

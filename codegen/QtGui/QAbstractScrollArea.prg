@@ -29,8 +29,7 @@ $includes
 
 $deleteMethod
 
-$prototype=void addScrollBarWidget ( QWidget * widget, Qt::Alignment alignment )
-$method=|void|addScrollBarWidget|QWidget *,Qt::Alignment
+$prototypeV2=void addScrollBarWidget( QWidget * widget, Qt::Alignment alignment )
 
 $prototypeV2=QWidget * cornerWidget() const
 
@@ -40,26 +39,19 @@ $prototypeV2=Qt::ScrollBarPolicy horizontalScrollBarPolicy() const
 
 $prototypeV2=QSize maximumViewportSize() const
 
-$prototype=QWidgetList scrollBarWidgets ( Qt::Alignment alignment )
-$method=|QWidgetList|scrollBarWidgets|Qt::Alignment
+$prototypeV2=QWidgetList scrollBarWidgets( Qt::Alignment alignment )
 
-$prototype=void setCornerWidget ( QWidget * widget )
-$method=|void|setCornerWidget|QWidget *
+$prototypeV2=void setCornerWidget( QWidget * widget )
 
-$prototype=void setHorizontalScrollBar ( QScrollBar * scrollBar )
-$method=|void|setHorizontalScrollBar|QScrollBar *
+$prototypeV2=void setHorizontalScrollBar( QScrollBar * scrollBar )
 
-$prototype=void setHorizontalScrollBarPolicy ( Qt::ScrollBarPolicy )
-$method=|void|setHorizontalScrollBarPolicy|Qt::ScrollBarPolicy
+$prototypeV2=void setHorizontalScrollBarPolicy( Qt::ScrollBarPolicy )
 
-$prototype=void setVerticalScrollBar ( QScrollBar * scrollBar )
-$method=|void|setVerticalScrollBar|QScrollBar *
+$prototypeV2=void setVerticalScrollBar( QScrollBar * scrollBar )
 
-$prototype=void setVerticalScrollBarPolicy ( Qt::ScrollBarPolicy )
-$method=|void|setVerticalScrollBarPolicy|Qt::ScrollBarPolicy
+$prototypeV2=void setVerticalScrollBarPolicy( Qt::ScrollBarPolicy )
 
-$prototype=void setViewport ( QWidget * widget )
-$method=|void|setViewport|QWidget *
+$prototypeV2=void setViewport( QWidget * widget )
 
 $prototypeV2=QScrollBar * verticalScrollBar() const
 

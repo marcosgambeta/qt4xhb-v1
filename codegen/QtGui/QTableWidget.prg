@@ -57,14 +57,11 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QWidget * cellWidget ( int row, int column ) const
-$method=|QWidget *|cellWidget|int,int
+$prototypeV2=QWidget * cellWidget( int row, int column ) const
 
-$prototype=void closePersistentEditor ( QTableWidgetItem * item )
-$method=|void|closePersistentEditor|QTableWidgetItem *
+$prototypeV2=void closePersistentEditor( QTableWidgetItem * item )
 
-$prototype=int column ( const QTableWidgetItem * item ) const
-$method=|int|column|const QTableWidgetItem *
+$prototypeV2=int column( const QTableWidgetItem * item ) const
 
 $prototypeV2=int columnCount() const
 
@@ -74,17 +71,13 @@ $prototypeV2=QTableWidgetItem * currentItem() const
 
 $prototypeV2=int currentRow() const
 
-$prototype=void editItem ( QTableWidgetItem * item )
-$method=|void|editItem|QTableWidgetItem *
+$prototypeV2=void editItem( QTableWidgetItem * item )
 
-$prototype=QList<QTableWidgetItem *> findItems ( const QString & text, Qt::MatchFlags flags ) const
-$method=|QList<QTableWidgetItem *>|findItems|const QString &,Qt::MatchFlags
+$prototypeV2=QList<QTableWidgetItem *> findItems( const QString & text, Qt::MatchFlags flags ) const
 
-$prototype=QTableWidgetItem * horizontalHeaderItem ( int column ) const
-$method=|QTableWidgetItem *|horizontalHeaderItem|int
+$prototypeV2=QTableWidgetItem * horizontalHeaderItem( int column ) const
 
-$prototype=QTableWidgetItem * item ( int row, int column ) const
-$method=|QTableWidgetItem *|item|int,int
+$prototypeV2=QTableWidgetItem * item( int row, int column ) const
 
 $prototype=QTableWidgetItem * itemAt ( const QPoint & point ) const
 $internalMethod=|QTableWidgetItem *|itemAt,itemAt1|const QPoint &
@@ -114,14 +107,11 @@ HB_FUNC_STATIC( QTABLEWIDGET_ITEMAT )
 }
 $addMethod=itemAt
 
-$prototype=void openPersistentEditor ( QTableWidgetItem * item )
-$method=|void|openPersistentEditor|QTableWidgetItem *
+$prototypeV2=void openPersistentEditor( QTableWidgetItem * item )
 
-$prototype=void removeCellWidget ( int row, int column )
-$method=|void|removeCellWidget|int,int
+$prototypeV2=void removeCellWidget( int row, int column )
 
-$prototype=int row ( const QTableWidgetItem * item ) const
-$method=|int|row|const QTableWidgetItem *
+$prototypeV2=int row( const QTableWidgetItem * item ) const
 
 $prototypeV2=int rowCount() const
 
@@ -129,11 +119,9 @@ $prototypeV2=QList<QTableWidgetItem *> selectedItems()
 
 $prototypeV2=QList<QTableWidgetSelectionRange> selectedRanges() const
 
-$prototype=void setCellWidget ( int row, int column, QWidget * widget )
-$method=|void|setCellWidget|int,int,QWidget *
+$prototypeV2=void setCellWidget( int row, int column, QWidget * widget )
 
-$prototype=void setColumnCount ( int columns )
-$method=|void|setColumnCount|int
+$prototypeV2=void setColumnCount( int columns )
 
 $prototype=void setCurrentCell ( int row, int column )
 $internalMethod=|void|setCurrentCell,setCurrentCell1|int,int
@@ -191,69 +179,50 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETCURRENTITEM )
 }
 $addMethod=setCurrentItem
 
-$prototype=void setHorizontalHeaderItem ( int column, QTableWidgetItem * item )
-$method=|void|setHorizontalHeaderItem|int,QTableWidgetItem *
+$prototypeV2=void setHorizontalHeaderItem( int column, QTableWidgetItem * item )
 
-$prototype=void setHorizontalHeaderLabels ( const QStringList & labels )
-$method=|void|setHorizontalHeaderLabels|const QStringList &
+$prototypeV2=void setHorizontalHeaderLabels( const QStringList & labels )
 
-$prototype=void setItem ( int row, int column, QTableWidgetItem * item )
-$method=|void|setItem|int,int,QTableWidgetItem *
+$prototypeV2=void setItem( int row, int column, QTableWidgetItem * item )
 
-$prototype=void setItemPrototype ( const QTableWidgetItem * item )
-$method=|void|setItemPrototype|const QTableWidgetItem *
+$prototypeV2=void setItemPrototype( const QTableWidgetItem * item )
 
-$prototype=void setRangeSelected ( const QTableWidgetSelectionRange & range, bool select )
-$method=|void|setRangeSelected|const QTableWidgetSelectionRange &,bool
+$prototypeV2=void setRangeSelected( const QTableWidgetSelectionRange & range, bool select )
 
-$prototype=void setRowCount ( int rows )
-$method=|void|setRowCount|int
+$prototypeV2=void setRowCount( int rows )
 
-$prototype=void setVerticalHeaderItem ( int row, QTableWidgetItem * item )
-$method=|void|setVerticalHeaderItem|int,QTableWidgetItem *
+$prototypeV2=void setVerticalHeaderItem( int row, QTableWidgetItem * item )
 
-$prototype=void setVerticalHeaderLabels ( const QStringList & labels )
-$method=|void|setVerticalHeaderLabels|const QStringList &
+$prototypeV2=void setVerticalHeaderLabels( const QStringList & labels )
 
 $prototype=void sortItems ( int column, Qt::SortOrder order = Qt::AscendingOrder )
 $method=|void|sortItems|int,Qt::SortOrder=Qt::AscendingOrder
 
-$prototype=QTableWidgetItem * takeHorizontalHeaderItem ( int column )
-$method=|QTableWidgetItem *|takeHorizontalHeaderItem|int
+$prototypeV2=QTableWidgetItem * takeHorizontalHeaderItem( int column )
 
-$prototype=QTableWidgetItem * takeItem ( int row, int column )
-$method=|QTableWidgetItem *|takeItem|int,int
+$prototypeV2=QTableWidgetItem * takeItem( int row, int column )
 
-$prototype=QTableWidgetItem * takeVerticalHeaderItem ( int row )
-$method=|QTableWidgetItem *|takeVerticalHeaderItem|int
+$prototypeV2=QTableWidgetItem * takeVerticalHeaderItem( int row )
 
-$prototype=QTableWidgetItem * verticalHeaderItem ( int row ) const
-$method=|QTableWidgetItem *|verticalHeaderItem|int
+$prototypeV2=QTableWidgetItem * verticalHeaderItem( int row ) const
 
-$prototype=int visualColumn ( int logicalColumn ) const
-$method=|int|visualColumn|int
+$prototypeV2=int visualColumn( int logicalColumn ) const
 
-$prototype=QRect visualItemRect ( const QTableWidgetItem * item ) const
-$method=|QRect|visualItemRect|const QTableWidgetItem *
+$prototypeV2=QRect visualItemRect( const QTableWidgetItem * item ) const
 
-$prototype=int visualRow ( int logicalRow ) const
-$method=|int|visualRow|int
+$prototypeV2=int visualRow( int logicalRow ) const
 
 $prototypeV2=void clear()
 
 $prototypeV2=void clearContents()
 
-$prototype=void insertColumn ( int column )
-$method=|void|insertColumn|int
+$prototypeV2=void insertColumn( int column )
 
-$prototype=void insertRow ( int row )
-$method=|void|insertRow|int
+$prototypeV2=void insertRow( int row )
 
-$prototype=void removeColumn ( int column )
-$method=|void|removeColumn|int
+$prototypeV2=void removeColumn( int column )
 
-$prototype=void removeRow ( int row )
-$method=|void|removeRow|int
+$prototypeV2=void removeRow( int row )
 
 $prototype=void scrollToItem ( const QTableWidgetItem * item, QAbstractItemView::ScrollHint hint = EnsureVisible )
 $method=|void|scrollToItem|const QTableWidgetItem *,QAbstractItemView::ScrollHint=QAbstractItemView::EnsureVisible

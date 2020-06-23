@@ -45,8 +45,7 @@ $addMethod=fixup
 
 $prototypeV2=QLocale locale() const
 
-$prototype=void setLocale ( const QLocale & locale )
-$method=|void|setLocale|const QLocale &
+$prototypeV2=void setLocale( const QLocale & locale )
 
 $prototype=virtual State validate ( QString & input, int & pos ) const = 0
 %% TODO: revisar a implementacao e corrigir

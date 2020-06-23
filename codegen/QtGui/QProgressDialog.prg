@@ -69,23 +69,17 @@ $prototypeV2=int minimum() const
 
 $prototypeV2=int minimumDuration() const
 
-$prototype=void open ( QObject * receiver, const char * member )
-$method=|void|open|QObject *,const char *
+$prototypeV2=void open( QObject * receiver, const char * member )
 
-$prototype=void setAutoClose ( bool close )
-$method=|void|setAutoClose|bool
+$prototypeV2=void setAutoClose( bool close )
 
-$prototype=void setAutoReset ( bool reset )
-$method=|void|setAutoReset|bool
+$prototypeV2=void setAutoReset( bool reset )
 
-$prototype=void setBar ( QProgressBar * bar )
-$method=|void|setBar|QProgressBar *
+$prototypeV2=void setBar( QProgressBar * bar )
 
-$prototype=void setCancelButton ( QPushButton * cancelButton )
-$method=|void|setCancelButton|QPushButton *
+$prototypeV2=void setCancelButton( QPushButton * cancelButton )
 
-$prototype=void setLabel ( QLabel * label )
-$method=|void|setLabel|QLabel *
+$prototypeV2=void setLabel( QLabel * label )
 
 $prototypeV2=int value() const
 
@@ -97,26 +91,19 @@ $prototypeV2=void cancel()
 
 $prototypeV2=void reset()
 
-$prototype=void setCancelButtonText ( const QString & cancelButtonText )
-$method=|void|setCancelButtonText|const QString &
+$prototypeV2=void setCancelButtonText( const QString & cancelButtonText )
 
-$prototype=void setLabelText ( const QString & text )
-$method=|void|setLabelText|const QString &
+$prototypeV2=void setLabelText( const QString & text )
 
-$prototype=void setMaximum ( int maximum )
-$method=|void|setMaximum|int
+$prototypeV2=void setMaximum( int maximum )
 
-$prototype=void setMinimum ( int minimum )
-$method=|void|setMinimum|int
+$prototypeV2=void setMinimum( int minimum )
 
-$prototype=void setMinimumDuration ( int ms )
-$method=|void|setMinimumDuration|int
+$prototypeV2=void setMinimumDuration( int ms )
 
-$prototype=void setRange ( int minimum, int maximum )
-$method=|void|setRange|int,int
+$prototypeV2=void setRange( int minimum, int maximum )
 
-$prototype=void setValue ( int progress )
-$method=|void|setValue|int
+$prototypeV2=void setValue( int progress )
 
 $beginSignals
 $signal=|canceled()

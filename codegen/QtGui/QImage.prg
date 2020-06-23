@@ -141,13 +141,11 @@ $prototypeV2=int bytesPerLine() const
 
 $prototypeV2=qint64 cacheKey() const
 
-$prototype=QRgb color ( int i ) const
-$method=|QRgb|color|int
+$prototypeV2=QRgb color( int i ) const
 
 $prototypeV2=int colorCount() const
 
-$prototype=QVector<QRgb> colorTable () const
-$method=|QVector<QRgb>|colorTable|
+$prototypeV2=QVector<QRgb> colorTable() const
 
 $prototype=QImage convertToFormat ( Format format, Qt::ImageConversionFlags flags = Qt::AutoColor ) const
 $internalMethod=|QImage|convertToFormat,convertToFormat1|QImage::Format,Qt::ImageConversionFlags=Qt::AutoColor
@@ -465,23 +463,17 @@ $method=|QImage|scaledToWidth|int,Qt::TransformationMode=Qt::FastTransformation
 %% //  HB_FUNC_EXEC( QIMAGE_SCANLINE1 );
 %% //}
 
-$prototype=void setColor ( int index, QRgb colorValue )
-$method=|void|setColor|int,QRgb
+$prototypeV2=void setColor( int index, QRgb colorValue )
 
-$prototype=void setColorCount ( int colorCount )
-$method=|void|setColorCount|int
+$prototypeV2=void setColorCount( int colorCount )
 
-$prototype=void setColorTable ( const QVector<QRgb> colors )
-$method=|void|setColorTable|const QVector<QRgb>
+$prototypeV2=void setColorTable( const QVector<QRgb> colors )
 
-$prototype=void setDotsPerMeterX ( int x )
-$method=|void|setDotsPerMeterX|int
+$prototypeV2=void setDotsPerMeterX( int x )
 
-$prototype=void setDotsPerMeterY ( int y )
-$method=|void|setDotsPerMeterY|int
+$prototypeV2=void setDotsPerMeterY( int y )
 
-$prototype=void setOffset ( const QPoint & offset )
-$method=|void|setOffset|const QPoint &
+$prototypeV2=void setOffset( const QPoint & offset )
 
 $prototype=void setPixel ( const QPoint & position, uint index_or_rgb )
 $internalMethod=|void|setPixel,setPixel1|const QPoint &,uint
@@ -511,13 +503,11 @@ HB_FUNC_STATIC( QIMAGE_SETPIXEL )
 }
 $addMethod=setPixel
 
-$prototype=void setText ( const QString & key, const QString & text )
-$method=|void|setText|const QString &,const QString &
+$prototypeV2=void setText( const QString & key, const QString & text )
 
 $prototypeV2=QSize size() const
 
-$prototype=void swap ( QImage & other )
-$method=|void|swap|QImage &
+$prototypeV2=void swap( QImage & other )
 
 $prototype=QString text ( const QString & key = QString() ) const
 $method=|QString|text|const QString &=QString()

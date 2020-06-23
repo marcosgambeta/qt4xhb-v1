@@ -65,32 +65,25 @@ $deleteMethod
 
 $prototypeV2=QBrush background() const
 
-$prototype=bool boolProperty ( int propertyId ) const
-$method=|bool|boolProperty|int
+$prototypeV2=bool boolProperty( int propertyId ) const
 
-$prototype=QBrush brushProperty ( int propertyId ) const
-$method=|QBrush|brushProperty|int
+$prototypeV2=QBrush brushProperty( int propertyId ) const
 
 $prototypeV2=void clearBackground()
 
 $prototypeV2=void clearForeground()
 
-$prototype=void clearProperty ( int propertyId )
-$method=|void|clearProperty|int
+$prototypeV2=void clearProperty( int propertyId )
 
-$prototype=QColor colorProperty ( int propertyId ) const
-$method=|QColor|colorProperty|int
+$prototypeV2=QColor colorProperty( int propertyId ) const
 
-$prototype=qreal doubleProperty ( int propertyId ) const
-$method=|qreal|doubleProperty|int
+$prototypeV2=qreal doubleProperty( int propertyId ) const
 
 $prototypeV2=QBrush foreground() const
 
-$prototype=bool hasProperty ( int propertyId ) const
-$method=|bool|hasProperty|int
+$prototypeV2=bool hasProperty( int propertyId ) const
 
-$prototype=int intProperty ( int propertyId ) const
-$method=|int|intProperty|int
+$prototypeV2=int intProperty( int propertyId ) const
 
 $prototypeV2=bool isBlockFormat() const
 
@@ -110,41 +103,31 @@ $prototypeV2=bool isValid() const
 
 $prototypeV2=Qt::LayoutDirection layoutDirection() const
 
-$prototype=QTextLength lengthProperty ( int propertyId ) const
-$method=|QTextLength|lengthProperty|int
+$prototypeV2=QTextLength lengthProperty( int propertyId ) const
 
-$prototype=QVector<QTextLength> lengthVectorProperty ( int propertyId ) const
-$method=|QVector<QTextLength>|lengthVectorProperty|int
+$prototypeV2=QVector<QTextLength> lengthVectorProperty( int propertyId ) const
 
-$prototype=void merge ( const QTextFormat & other )
-$method=|void|merge|const QTextFormat &
+$prototypeV2=void merge( const QTextFormat & other )
 
 $prototypeV2=int objectIndex() const
 
 $prototypeV2=int objectType() const
 
-$prototype=QPen penProperty ( int propertyId ) const
-$method=|QPen|penProperty|int
+$prototypeV2=QPen penProperty( int propertyId ) const
 
-$prototype=QVariant property ( int propertyId ) const
-$method=|QVariant|property|int
+$prototypeV2=QVariant property( int propertyId ) const
 
 $prototypeV2=int propertyCount() const
 
-$prototype=void setBackground ( const QBrush & brush )
-$method=|void|setBackground|const QBrush &
+$prototypeV2=void setBackground( const QBrush & brush )
 
-$prototype=void setForeground ( const QBrush & brush )
-$method=|void|setForeground|const QBrush &
+$prototypeV2=void setForeground( const QBrush & brush )
 
-$prototype=void setLayoutDirection ( Qt::LayoutDirection direction )
-$method=|void|setLayoutDirection|Qt::LayoutDirection
+$prototypeV2=void setLayoutDirection( Qt::LayoutDirection direction )
 
-$prototype=void setObjectIndex ( int index )
-$method=|void|setObjectIndex|int
+$prototypeV2=void setObjectIndex( int index )
 
-$prototype=void setObjectType ( int type )
-$method=|void|setObjectType|int
+$prototypeV2=void setObjectType( int type )
 
 $prototype=void setProperty ( int propertyId, const QVariant & value )
 $internalMethod=|void|setProperty,setProperty1|int,const QVariant &
@@ -174,8 +157,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_SETPROPERTY )
 }
 $addMethod=setProperty
 
-$prototype=QString stringProperty ( int propertyId ) const
-$method=|QString|stringProperty|int
+$prototypeV2=QString stringProperty( int propertyId ) const
 
 $prototypeV2=QTextBlockFormat toBlockFormat() const
 

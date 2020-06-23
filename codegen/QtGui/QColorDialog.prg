@@ -91,23 +91,18 @@ $prototypeV2=QColorDialog::ColorDialogOptions options() const
 
 $prototypeV2=QColor selectedColor() const
 
-$prototype=void setCurrentColor ( const QColor & color )
-$method=|void|setCurrentColor|const QColor &
+$prototypeV2=void setCurrentColor( const QColor & color )
 
 $prototype=void setOption ( ColorDialogOption option, bool on = true )
 $method=|void|setOption|QColorDialog::ColorDialogOption,bool=true
 
-$prototype=void setOptions ( ColorDialogOptions options )
-$method=|void|setOptions|QColorDialog::ColorDialogOptions
+$prototypeV2=void setOptions( QColorDialog::ColorDialogOptions options )
 
-$prototype=bool testOption ( ColorDialogOption option ) const
-$method=|bool|testOption|QColorDialog::ColorDialogOption
+$prototypeV2=bool testOption( QColorDialog::ColorDialogOption option ) const
 
-$prototype=virtual void setVisible ( bool visible )
-$virtualMethod=|void|setVisible|bool
+$prototypeV2=virtual void setVisible( bool visible )
 
-$prototype=static QRgb customColor ( int index )
-$staticMethod=|QRgb|customColor|int
+$prototypeV2=static QRgb customColor( int index )
 
 $prototypeV2=static int customCount()
 
@@ -139,11 +134,9 @@ HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR )
 }
 $addMethod=getColor
 
-$prototype=static void setCustomColor ( int index, QRgb color )
-$staticMethod=|void|setCustomColor|int,QRgb
+$prototypeV2=static void setCustomColor( int index, QRgb color )
 
-$prototype=static void setStandardColor ( int index, QRgb color
-$staticMethod=|void|setStandardColor|int,QRgb
+$prototypeV2=static void setStandardColor( int index, QRgb color
 
 $beginSignals
 $signal=|colorSelected(QColor)

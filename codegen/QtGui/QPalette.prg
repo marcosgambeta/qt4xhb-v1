@@ -163,14 +163,11 @@ $prototypeV2=const QBrush & highlight() const
 
 $prototypeV2=const QBrush & highlightedText() const
 
-$prototype=bool isBrushSet ( ColorGroup cg, ColorRole cr ) const
-$method=|bool|isBrushSet|QPalette::ColorGroup,QPalette::ColorRole
+$prototypeV2=bool isBrushSet( QPalette::ColorGroup cg, QPalette::ColorRole cr ) const
 
-$prototype=bool isCopyOf ( const QPalette & p ) const
-$method=|bool|isCopyOf|const QPalette &
+$prototypeV2=bool isCopyOf( const QPalette & p ) const
 
-$prototype=bool isEqual ( ColorGroup cg1, ColorGroup cg2 ) const
-$method=|bool|isEqual|QPalette::ColorGroup,QPalette::ColorGroup
+$prototypeV2=bool isEqual( QPalette::ColorGroup cg1, QPalette::ColorGroup cg2 ) const
 
 $prototypeV2=const QBrush & light() const
 
@@ -182,8 +179,7 @@ $prototypeV2=const QBrush & mid() const
 
 $prototypeV2=const QBrush & midlight() const
 
-$prototype=QPalette resolve ( const QPalette & other ) const
-$method=|QPalette|resolve|const QPalette &
+$prototypeV2=QPalette resolve( const QPalette & other ) const
 
 $prototype=void setBrush ( ColorRole role, const QBrush & brush )
 $internalMethod=|void|setBrush,setBrush1|QPalette::ColorRole,const QBrush &
@@ -241,11 +237,9 @@ HB_FUNC_STATIC( QPALETTE_SETCOLOR )
 }
 $addMethod=setColor
 
-$prototype=void setColorGroup ( ColorGroup cg, const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window )
-$method=|void|setColorGroup|QPalette::ColorGroup,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &,const QBrush &
+$prototypeV2=void setColorGroup( QPalette::ColorGroup cg, const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window )
 
-$prototype=void setCurrentColorGroup ( ColorGroup cg )
-$method=|void|setCurrentColorGroup|QPalette::ColorGroup
+$prototypeV2=void setCurrentColorGroup( QPalette::ColorGroup cg )
 
 $prototypeV2=const QBrush & shadow() const
 

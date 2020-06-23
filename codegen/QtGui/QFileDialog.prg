@@ -83,13 +83,11 @@ $prototypeV2=bool isReadOnly() const
 
 $prototypeV2=QAbstractItemDelegate * itemDelegate() const
 
-$prototype=QString labelText ( DialogLabel label ) const
-$method=|QString|labelText|QFileDialog::DialogLabel
+$prototypeV2=QString labelText( QFileDialog::DialogLabel label ) const
 
 $prototypeV2=QStringList nameFilters() const
 
-$prototype=void open ( QObject * receiver, const char * member )
-$method=|void|open|QObject *,const char *
+$prototypeV2=void open( QObject * receiver, const char * member )
 
 $prototypeV2=QFileDialog::Options options() const
 
@@ -97,29 +95,23 @@ $prototypeV2=QAbstractProxyModel * proxyModel() const
 
 $prototypeV2=bool resolveSymlinks() const
 
-$prototype=bool restoreState ( const QByteArray & state )
-$method=|bool|restoreState|const QByteArray &
+$prototypeV2=bool restoreState( const QByteArray & state )
 
 $prototypeV2=QByteArray saveState() const
 
-$prototype=void selectFile ( const QString & filename )
-$method=|void|selectFile|const QString &
+$prototypeV2=void selectFile( const QString & filename )
 
-$prototype=void selectNameFilter ( const QString & filter )
-$method=|void|selectNameFilter|const QString &
+$prototypeV2=void selectNameFilter( const QString & filter )
 
 $prototypeV2=QStringList selectedFiles() const
 
 $prototypeV2=QString selectedNameFilter() const
 
-$prototype=void setAcceptMode ( AcceptMode mode )
-$method=|void|setAcceptMode|QFileDialog::AcceptMode
+$prototypeV2=void setAcceptMode( QFileDialog::AcceptMode mode )
 
-$prototype=void setConfirmOverwrite ( bool enabled )
-$method=|void|setConfirmOverwrite|bool
+$prototypeV2=void setConfirmOverwrite( bool enabled )
 
-$prototype=void setDefaultSuffix ( const QString & suffix )
-$method=|void|setDefaultSuffix|const QString &
+$prototypeV2=void setDefaultSuffix( const QString & suffix )
 
 $prototype=void setDirectory ( const QString & directory )
 $internalMethod=|void|setDirectory,setDirectory1|const QString &
@@ -149,63 +141,46 @@ HB_FUNC_STATIC( QFILEDIALOG_SETDIRECTORY )
 }
 $addMethod=setDirectory
 
-$prototype=void setFileMode ( FileMode mode )
-$method=|void|setFileMode|QFileDialog::FileMode
+$prototypeV2=void setFileMode( QFileDialog::FileMode mode )
 
-$prototype=void setFilter ( QDir::Filters filters )
-$method=|void|setFilter|QDir::Filters
+$prototypeV2=void setFilter( QDir::Filters filters )
 
-$prototype=void setHistory ( const QStringList & paths )
-$method=|void|setHistory|const QStringList &
+$prototypeV2=void setHistory( const QStringList & paths )
 
-$prototype=void setIconProvider ( QFileIconProvider * provider )
-$method=|void|setIconProvider|QFileIconProvider *
+$prototypeV2=void setIconProvider( QFileIconProvider * provider )
 
-$prototype=void setItemDelegate ( QAbstractItemDelegate * delegate )
-$method=|void|setItemDelegate|QAbstractItemDelegate *
+$prototypeV2=void setItemDelegate( QAbstractItemDelegate * delegate )
 
-$prototype=void setLabelText ( DialogLabel label, const QString & text )
-$method=|void|setLabelText|QFileDialog::DialogLabel,const QString &
+$prototypeV2=void setLabelText( QFileDialog::DialogLabel label, const QString & text )
 
-$prototype=void setNameFilter ( const QString & filter )
-$method=|void|setNameFilter|const QString &
+$prototypeV2=void setNameFilter( const QString & filter )
 
-$prototype=void setNameFilterDetailsVisible ( bool enabled )
-$method=|void|setNameFilterDetailsVisible|bool
+$prototypeV2=void setNameFilterDetailsVisible( bool enabled )
 
-$prototype=void setNameFilters ( const QStringList & filters )
-$method=|void|setNameFilters|const QStringList &
+$prototypeV2=void setNameFilters( const QStringList & filters )
 
 $prototype=void setOption ( Option option, bool on = true )
 $method=|void|setOption|QFileDialog::Option,bool=true
 
-$prototype=void setOptions ( Options options )
-$method=|void|setOptions|QFileDialog::Options
+$prototypeV2=void setOptions( QFileDialog::Options options )
 
-$prototype=void setProxyModel ( QAbstractProxyModel * proxyModel )
-$method=|void|setProxyModel|QAbstractProxyModel *
+$prototypeV2=void setProxyModel( QAbstractProxyModel * proxyModel )
 
-$prototype=void setReadOnly ( bool enabled )
-$method=|void|setReadOnly|bool
+$prototypeV2=void setReadOnly( bool enabled )
 
-$prototype=void setResolveSymlinks ( bool enabled )
-$method=|void|setResolveSymlinks|bool
+$prototypeV2=void setResolveSymlinks( bool enabled )
 
-$prototype=void setSidebarUrls ( const QList<QUrl> & urls )
-$method=|void|setSidebarUrls|const QList<QUrl> &
+$prototypeV2=void setSidebarUrls( const QList<QUrl> & urls )
 
-$prototype=void setViewMode ( ViewMode mode )
-$method=|void|setViewMode|QFileDialog::ViewMode
+$prototypeV2=void setViewMode( QFileDialog::ViewMode mode )
 
 $prototypeV2=QList<QUrl> sidebarUrls() const
 
-$prototype=bool testOption ( Option option ) const
-$method=|bool|testOption|QFileDialog::Option
+$prototypeV2=bool testOption( QFileDialog::Option option ) const
 
 $prototypeV2=QFileDialog::ViewMode viewMode() const
 
-$prototype=virtual void setVisible ( bool visible )
-$virtualMethod=|void|setVisible|bool
+$prototypeV2=virtual void setVisible( bool visible )
 
 $prototype=static QString getExistingDirectory ( QWidget * parent = 0, const QString & caption = QString(), const QString & dir = QString(), Options options = ShowDirsOnly )
 $staticMethod=|QString|getExistingDirectory|QWidget *=0,const QString &=QString(),const QString &=QString(),QFileDialog::Options=QFileDialog::ShowDirsOnly

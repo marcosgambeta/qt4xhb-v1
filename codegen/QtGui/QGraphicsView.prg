@@ -412,35 +412,27 @@ $prototypeV2=void resetTransform()
 
 $prototypeV2=QGraphicsView::ViewportAnchor resizeAnchor() const
 
-$prototype=void rotate ( qreal angle )
-$method=|void|rotate|qreal
+$prototypeV2=void rotate( qreal angle )
 
 $prototypeV2=Qt::ItemSelectionMode rubberBandSelectionMode() const
 
-$prototype=void scale ( qreal sx, qreal sy )
-$method=|void|scale|qreal,qreal
+$prototypeV2=void scale( qreal sx, qreal sy )
 
 $prototypeV2=QGraphicsScene * scene() const
 
 $prototypeV2=QRectF sceneRect() const
 
-$prototype=void setAlignment ( Qt::Alignment alignment )
-$method=|void|setAlignment|Qt::Alignment
+$prototypeV2=void setAlignment( Qt::Alignment alignment )
 
-$prototype=void setBackgroundBrush ( const QBrush & brush )
-$method=|void|setBackgroundBrush|const QBrush &
+$prototypeV2=void setBackgroundBrush( const QBrush & brush )
 
-$prototype=void setCacheMode ( CacheMode mode )
-$method=|void|setCacheMode|QGraphicsView::CacheMode
+$prototypeV2=void setCacheMode( QGraphicsView::CacheMode mode )
 
-$prototype=void setDragMode ( DragMode mode )
-$method=|void|setDragMode|QGraphicsView::DragMode
+$prototypeV2=void setDragMode( QGraphicsView::DragMode mode )
 
-$prototype=void setForegroundBrush ( const QBrush & brush )
-$method=|void|setForegroundBrush|const QBrush &
+$prototypeV2=void setForegroundBrush( const QBrush & brush )
 
-$prototype=void setInteractive ( bool allowed )
-$method=|void|setInteractive|bool
+$prototypeV2=void setInteractive( bool allowed )
 
 $prototype=void setMatrix ( const QMatrix & matrix, bool combine = false )
 $method=|void|setMatrix|const QMatrix &,bool=false
@@ -448,23 +440,18 @@ $method=|void|setMatrix|const QMatrix &,bool=false
 $prototype=void setOptimizationFlag ( OptimizationFlag flag, bool enabled = true )
 $method=|void|setOptimizationFlag|QGraphicsView::OptimizationFlag,bool=true
 
-$prototype=void setOptimizationFlags ( OptimizationFlags flags )
-$method=|void|setOptimizationFlags|QGraphicsView::OptimizationFlags
+$prototypeV2=void setOptimizationFlags( QGraphicsView::OptimizationFlags flags )
 
 $prototype=void setRenderHint ( QPainter::RenderHint hint, bool enabled = true )
 $method=|void|setRenderHint|QPainter::RenderHint,bool=true
 
-$prototype=void setRenderHints ( QPainter::RenderHints hints )
-$method=|void|setRenderHints|QPainter::RenderHints
+$prototypeV2=void setRenderHints( QPainter::RenderHints hints )
 
-$prototype=void setResizeAnchor ( ViewportAnchor anchor )
-$method=|void|setResizeAnchor|QGraphicsView::ViewportAnchor
+$prototypeV2=void setResizeAnchor( QGraphicsView::ViewportAnchor anchor )
 
-$prototype=void setRubberBandSelectionMode ( Qt::ItemSelectionMode mode )
-$method=|void|setRubberBandSelectionMode|Qt::ItemSelectionMode
+$prototypeV2=void setRubberBandSelectionMode( Qt::ItemSelectionMode mode )
 
-$prototype=void setScene ( QGraphicsScene * scene )
-$method=|void|setScene|QGraphicsScene *
+$prototypeV2=void setScene( QGraphicsScene * scene )
 
 $prototype=void setSceneRect ( const QRectF & rect )
 $internalMethod=|void|setSceneRect,setSceneRect1|const QRectF &
@@ -497,38 +484,31 @@ $addMethod=setSceneRect
 $prototype=void setTransform ( const QTransform & matrix, bool combine = false )
 $method=|void|setTransform|const QTransform &,bool=false
 
-$prototype=void setTransformationAnchor ( ViewportAnchor anchor )
-$method=|void|setTransformationAnchor|QGraphicsView::ViewportAnchor
+$prototypeV2=void setTransformationAnchor( QGraphicsView::ViewportAnchor anchor )
 
-$prototype=void setViewportUpdateMode ( ViewportUpdateMode mode )
-$method=|void|setViewportUpdateMode|QGraphicsView::ViewportUpdateMode
+$prototypeV2=void setViewportUpdateMode( QGraphicsView::ViewportUpdateMode mode )
 
-$prototype=void shear ( qreal sh, qreal sv )
-$method=|void|shear|qreal,qreal
+$prototypeV2=void shear( qreal sh, qreal sv )
 
 $prototypeV2=QTransform transform() const
 
 $prototypeV2=QGraphicsView::ViewportAnchor transformationAnchor() const
 
-$prototype=void translate ( qreal dx, qreal dy )
-$method=|void|translate|qreal,qreal
+$prototypeV2=void translate( qreal dx, qreal dy )
 
 $prototypeV2=QTransform viewportTransform() const
 
 $prototypeV2=QGraphicsView::ViewportUpdateMode viewportUpdateMode() const
 
-$prototype=virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
-$virtualMethod=|QVariant|inputMethodQuery|Qt::InputMethodQuery
+$prototypeV2=virtual QVariant inputMethodQuery( Qt::InputMethodQuery query ) const
 
 $prototypeV2=virtual QSize sizeHint() const
 
 $prototype=void invalidateScene ( const QRectF & rect = QRectF(), QGraphicsScene::SceneLayers layers = QGraphicsScene::AllLayers )
 $method=|void|invalidateScene|const QRectF &=QRectF(),QGraphicsScene::SceneLayers=QGraphicsScene::AllLayers
 
-$prototype=void updateScene ( const QList<QRectF> & rects )
-$method=|void|updateScene|const QList<QRectF> &
+$prototypeV2=void updateScene( const QList<QRectF> & rects )
 
-$prototype=void updateSceneRect ( const QRectF & rect )
-$method=|void|updateSceneRect|const QRectF &
+$prototypeV2=void updateSceneRect( const QRectF & rect )
 
 #pragma ENDDUMP

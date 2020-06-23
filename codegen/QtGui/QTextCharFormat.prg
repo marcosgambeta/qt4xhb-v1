@@ -70,77 +70,54 @@ $prototypeV2=bool isAnchor() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=void setAnchor ( bool anchor )
-$method=|void|setAnchor|bool
+$prototypeV2=void setAnchor( bool anchor )
 
-$prototype=void setAnchorHref ( const QString & value )
-$method=|void|setAnchorHref|const QString &
+$prototypeV2=void setAnchorHref( const QString & value )
 
-$prototype=void setAnchorNames ( const QStringList & names )
-$method=|void|setAnchorNames|const QStringList &
+$prototypeV2=void setAnchorNames( const QStringList & names )
 
-$prototype=void setFont ( const QFont & font )
-$method=|void|setFont|const QFont &
+$prototypeV2=void setFont( const QFont & font )
 
-$prototype=void setFontCapitalization ( QFont::Capitalization capitalization )
-$method=|void|setFontCapitalization|QFont::Capitalization
+$prototypeV2=void setFontCapitalization( QFont::Capitalization capitalization )
 
-$prototype=void setFontFamily ( const QString & family )
-$method=|void|setFontFamily|const QString &
+$prototypeV2=void setFontFamily( const QString & family )
 
-$prototype=void setFontFixedPitch ( bool fixedPitch )
-$method=|void|setFontFixedPitch|bool
+$prototypeV2=void setFontFixedPitch( bool fixedPitch )
 
-$prototype=void setFontHintingPreference ( QFont::HintingPreference hintingPreference )
-$method=|void|setFontHintingPreference|QFont::HintingPreference
+$prototypeV2=void setFontHintingPreference( QFont::HintingPreference hintingPreference )
 
-$prototype=void setFontItalic ( bool italic )
-$method=|void|setFontItalic|bool
+$prototypeV2=void setFontItalic( bool italic )
 
-$prototype=void setFontKerning ( bool enable )
-$method=|void|setFontKerning|bool
+$prototypeV2=void setFontKerning( bool enable )
 
-$prototype=void setFontLetterSpacing ( qreal spacing )
-$method=|void|setFontLetterSpacing|qreal
+$prototypeV2=void setFontLetterSpacing( qreal spacing )
 
-$prototype=void setFontOverline ( bool overline )
-$method=|void|setFontOverline|bool
+$prototypeV2=void setFontOverline( bool overline )
 
-$prototype=void setFontPointSize ( qreal size )
-$method=|void|setFontPointSize|qreal
+$prototypeV2=void setFontPointSize( qreal size )
 
-$prototype=void setFontStrikeOut ( bool strikeOut )
-$method=|void|setFontStrikeOut|bool
+$prototypeV2=void setFontStrikeOut( bool strikeOut )
 
 $prototype=void setFontStyleHint ( QFont::StyleHint hint, QFont::StyleStrategy strategy = QFont::PreferDefault )
 $method=|void|setFontStyleHint|QFont::StyleHint,QFont::StyleStrategy=QFont::PreferDefault
 
-$prototype=void setFontStyleStrategy ( QFont::StyleStrategy strategy )
-$method=|void|setFontStyleStrategy|QFont::StyleStrategy
+$prototypeV2=void setFontStyleStrategy( QFont::StyleStrategy strategy )
 
-$prototype=void setFontUnderline ( bool underline )
-$method=|void|setFontUnderline|bool
+$prototypeV2=void setFontUnderline( bool underline )
 
-$prototype=void setFontWeight ( int weight )
-$method=|void|setFontWeight|int
+$prototypeV2=void setFontWeight( int weight )
 
-$prototype=void setFontWordSpacing ( qreal spacing )
-$method=|void|setFontWordSpacing|qreal
+$prototypeV2=void setFontWordSpacing( qreal spacing )
 
-$prototype=void setTextOutline ( const QPen & pen )
-$method=|void|setTextOutline|const QPen &
+$prototypeV2=void setTextOutline( const QPen & pen )
 
-$prototype=void setToolTip ( const QString & text )
-$method=|void|setToolTip|const QString &
+$prototypeV2=void setToolTip( const QString & text )
 
-$prototype=void setUnderlineColor ( const QColor & color )
-$method=|void|setUnderlineColor|const QColor &
+$prototypeV2=void setUnderlineColor( const QColor & color )
 
-$prototype=void setUnderlineStyle ( UnderlineStyle style )
-$method=|void|setUnderlineStyle|QTextCharFormat::UnderlineStyle
+$prototypeV2=void setUnderlineStyle( QTextCharFormat::UnderlineStyle style )
 
-$prototype=void setVerticalAlignment ( VerticalAlignment alignment )
-$method=|void|setVerticalAlignment|QTextCharFormat::VerticalAlignment
+$prototypeV2=void setVerticalAlignment( QTextCharFormat::VerticalAlignment alignment )
 
 $prototypeV2=QPen textOutline() const
 

@@ -86,44 +86,31 @@ $prototypeV2=QDate selectedDate() const
 
 $prototypeV2=QCalendarWidget::SelectionMode selectionMode() const
 
-$prototype=void setDateEditAcceptDelay ( int delay )
-$method=|void|setDateEditAcceptDelay|int
+$prototypeV2=void setDateEditAcceptDelay( int delay )
 
-$prototype=void setDateEditEnabled ( bool enable )
-$method=|void|setDateEditEnabled|bool
+$prototypeV2=void setDateEditEnabled( bool enable )
 
-$prototype=void setDateTextFormat ( const QDate & date, const QTextCharFormat & format )
-$method=|void|setDateTextFormat|const QDate &,const QTextCharFormat &
+$prototypeV2=void setDateTextFormat( const QDate & date, const QTextCharFormat & format )
 
-$prototype=void setFirstDayOfWeek ( Qt::DayOfWeek dayOfWeek )
-$method=|void|setFirstDayOfWeek|Qt::DayOfWeek
+$prototypeV2=void setFirstDayOfWeek( Qt::DayOfWeek dayOfWeek )
 
-$prototype=void setHeaderTextFormat ( const QTextCharFormat & format )
-$method=|void|setHeaderTextFormat|const QTextCharFormat &
+$prototypeV2=void setHeaderTextFormat( const QTextCharFormat & format )
 
-$prototype=void setHorizontalHeaderFormat ( HorizontalHeaderFormat format )
-$method=|void|setHorizontalHeaderFormat|QCalendarWidget::HorizontalHeaderFormat
+$prototypeV2=void setHorizontalHeaderFormat( QCalendarWidget::HorizontalHeaderFormat format )
 
-$prototype=void setMaximumDate ( const QDate & date )
-$method=|void|setMaximumDate|const QDate &
+$prototypeV2=void setMaximumDate( const QDate & date )
 
-$prototype=void setMinimumDate ( const QDate & date )
-$method=|void|setMinimumDate|const QDate &
+$prototypeV2=void setMinimumDate( const QDate & date )
 
-$prototype=void setSelectionMode ( SelectionMode mode )
-$method=|void|setSelectionMode|QCalendarWidget::SelectionMode
+$prototypeV2=void setSelectionMode( QCalendarWidget::SelectionMode mode )
 
-$prototype=void setVerticalHeaderFormat ( VerticalHeaderFormat format )
-$method=|void|setVerticalHeaderFormat|QCalendarWidget::VerticalHeaderFormat
+$prototypeV2=void setVerticalHeaderFormat( QCalendarWidget::VerticalHeaderFormat format )
 
-$prototype=void setWeekdayTextFormat ( Qt::DayOfWeek dayOfWeek, const QTextCharFormat & format )
-$method=|void|setWeekdayTextFormat|Qt::DayOfWeek,const QTextCharFormat &
+$prototypeV2=void setWeekdayTextFormat( Qt::DayOfWeek dayOfWeek, const QTextCharFormat & format )
 
-$prototype=VerticalHeaderFormat verticalHeaderFormat () const
-$method=|QCalendarWidget::VerticalHeaderFormat|verticalHeaderFormat|
+$prototypeV2=QCalendarWidget::VerticalHeaderFormat verticalHeaderFormat() const
 
-$prototype=QTextCharFormat weekdayTextFormat ( Qt::DayOfWeek dayOfWeek ) const
-$method=|QTextCharFormat|weekdayTextFormat|Qt::DayOfWeek
+$prototypeV2=QTextCharFormat weekdayTextFormat( Qt::DayOfWeek dayOfWeek ) const
 
 $prototypeV2=int yearShown() const
 
@@ -131,20 +118,15 @@ $prototypeV2=virtual QSize minimumSizeHint() const
 
 $prototypeV2=virtual QSize sizeHint() const
 
-$prototype=void setCurrentPage ( int year, int month )
-$method=|void|setCurrentPage|int,int
+$prototypeV2=void setCurrentPage( int year, int month )
 
-$prototype=void setDateRange ( const QDate & min, const QDate & max )
-$method=|void|setDateRange|const QDate &,const QDate &
+$prototypeV2=void setDateRange( const QDate & min, const QDate & max )
 
-$prototype=void setGridVisible ( bool show )
-$method=|void|setGridVisible|bool
+$prototypeV2=void setGridVisible( bool show )
 
-$prototype=void setNavigationBarVisible ( bool visible )
-$method=|void|setNavigationBarVisible|bool
+$prototypeV2=void setNavigationBarVisible( bool visible )
 
-$prototype=void setSelectedDate ( const QDate & date )
-$method=|void|setSelectedDate|const QDate &
+$prototypeV2=void setSelectedDate( const QDate & date )
 
 $prototypeV2=void showNextMonth()
 

@@ -110,34 +110,27 @@ $prototypeV2=QAction * addSeparator()
 
 $prototypeV2=void clear()
 
-$prototype=QAction * insertMenu ( QAction * before, QMenu * menu )
-$method=|QAction *|insertMenu|QAction *,QMenu *
+$prototypeV2=QAction * insertMenu( QAction * before, QMenu * menu )
 
-$prototype=QAction * insertSeparator ( QAction * before )
-$method=|QAction *|insertSeparator|QAction *
+$prototypeV2=QAction * insertSeparator( QAction * before )
 
 $prototypeV2=bool isDefaultUp() const
 
 $prototypeV2=bool isNativeMenuBar() const
 
-$prototype=void setActiveAction ( QAction * act )
-$method=|void|setActiveAction|QAction *
+$prototypeV2=void setActiveAction( QAction * act )
 
-$prototype=void setDefaultUp ( bool )
-$method=|void|setDefaultUp|bool
+$prototypeV2=void setDefaultUp( bool )
 
-$prototype=void setNativeMenuBar ( bool nativeMenuBar )
-$method=|void|setNativeMenuBar|bool
+$prototypeV2=void setNativeMenuBar( bool nativeMenuBar )
 
-$prototype=virtual int heightForWidth ( int ) const
-$virtualMethod=|int|heightForWidth|int
+$prototypeV2=virtual int heightForWidth( int ) const
 
 $prototypeV2=virtual QSize minimumSizeHint() const
 
 $prototypeV2=virtual QSize sizeHint() const
 
-$prototype=virtual void setVisible ( bool visible )
-$virtualMethod=|void|setVisible|bool
+$prototypeV2=virtual void setVisible( bool visible )
 
 $beginSignals
 $signal=|hovered(QAction*)

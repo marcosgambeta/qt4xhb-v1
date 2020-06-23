@@ -199,42 +199,31 @@ $prototypeV2=int rowCount() const
 
 $prototypeV2=QFormLayout::RowWrapPolicy rowWrapPolicy() const
 
-$prototype=void setFieldGrowthPolicy ( FieldGrowthPolicy policy )
-$method=|void|setFieldGrowthPolicy|QFormLayout::FieldGrowthPolicy
+$prototypeV2=void setFieldGrowthPolicy( QFormLayout::FieldGrowthPolicy policy )
 
-$prototype=void setFormAlignment ( Qt::Alignment alignment )
-$method=|void|setFormAlignment|Qt::Alignment
+$prototypeV2=void setFormAlignment( Qt::Alignment alignment )
 
-$prototype=void setHorizontalSpacing ( int spacing )
-$method=|void|setHorizontalSpacing|int
+$prototypeV2=void setHorizontalSpacing( int spacing )
 
-$prototype=void setItem ( int row, ItemRole role, QLayoutItem * item )
-$method=|void|setItem|int,QFormLayout::ItemRole,QLayoutItem *
+$prototypeV2=void setItem( int row, QFormLayout::ItemRole role, QLayoutItem * item )
 
-$prototype=void setLabelAlignment ( Qt::Alignment alignment )
-$method=|void|setLabelAlignment|Qt::Alignment
+$prototypeV2=void setLabelAlignment( Qt::Alignment alignment )
 
-$prototype=void setLayout ( int row, ItemRole role, QLayout * layout )
-$method=|void|setLayout|int,QFormLayout::ItemRole,QLayout *
+$prototypeV2=void setLayout( int row, QFormLayout::ItemRole role, QLayout * layout )
 
-$prototype=void setRowWrapPolicy ( RowWrapPolicy policy )
-$method=|void|setRowWrapPolicy|QFormLayout::RowWrapPolicy
+$prototypeV2=void setRowWrapPolicy( QFormLayout::RowWrapPolicy policy )
 
-$prototype=void setSpacing ( int spacing )
-$method=|void|setSpacing|int
+$prototypeV2=void setSpacing( int spacing )
 
-$prototype=void setVerticalSpacing ( int spacing )
-$method=|void|setVerticalSpacing|int
+$prototypeV2=void setVerticalSpacing( int spacing )
 
-$prototype=void setWidget ( int row, ItemRole role, QWidget * widget )
-$method=|void|setWidget|int,QFormLayout::ItemRole,QWidget *
+$prototypeV2=void setWidget( int row, QFormLayout::ItemRole role, QWidget * widget )
 
 $prototypeV2=int spacing() const
 
 $prototypeV2=int verticalSpacing() const
 
-$prototype=virtual void addItem ( QLayoutItem * item )
-$virtualMethod=|void|addItem|QLayoutItem *
+$prototypeV2=virtual void addItem( QLayoutItem * item )
 
 $prototypeV2=virtual int count() const
 
@@ -242,8 +231,7 @@ $prototypeV2=virtual Qt::Orientations expandingDirections() const
 
 $prototypeV2=virtual bool hasHeightForWidth() const
 
-$prototype=virtual int heightForWidth ( int width ) const
-$virtualMethod=|int|heightForWidth|int
+$prototypeV2=virtual int heightForWidth( int width ) const
 
 $prototypeV2=virtual void invalidate()
 
@@ -277,12 +265,10 @@ $addMethod=itemAt
 
 $prototypeV2=virtual QSize minimumSize() const
 
-$prototype=virtual void setGeometry ( const QRect & rect )
-$virtualMethod=|void|setGeometry|const QRect &
+$prototypeV2=virtual void setGeometry( const QRect & rect )
 
 $prototypeV2=virtual QSize sizeHint() const
 
-$prototype=virtual QLayoutItem * takeAt ( int index )
-$virtualMethod=|QLayoutItem *|takeAt|int
+$prototypeV2=virtual QLayoutItem * takeAt( int index )
 
 #pragma ENDDUMP

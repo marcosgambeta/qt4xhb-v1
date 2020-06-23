@@ -69,14 +69,11 @@ $prototypeV2=bool isDefault() const
 
 $prototypeV2=bool isFlat() const
 
-$prototype=void setAutoDefault ( bool )
-$method=|void|setAutoDefault|bool
+$prototypeV2=void setAutoDefault( bool )
 
-$prototype=void setDefault ( bool )
-$method=|void|setDefault|bool
+$prototypeV2=void setDefault( bool )
 
-$prototype=void setFlat ( bool )
-$method=|void|setFlat|bool
+$prototypeV2=void setFlat( bool )
 
 $prototypeV2=void showMenu()
 

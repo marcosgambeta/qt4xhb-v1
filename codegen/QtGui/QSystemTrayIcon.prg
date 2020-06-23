@@ -67,14 +67,11 @@ $prototypeV2=QIcon icon() const
 
 $prototypeV2=bool isVisible() const
 
-$prototype=void setContextMenu ( QMenu * menu )
-$method=|void|setContextMenu|QMenu *
+$prototypeV2=void setContextMenu( QMenu * menu )
 
-$prototype=void setIcon ( const QIcon & icon )
-$method=|void|setIcon|const QIcon &
+$prototypeV2=void setIcon( const QIcon & icon )
 
-$prototype=void setToolTip ( const QString & tip )
-$method=|void|setToolTip|const QString &
+$prototypeV2=void setToolTip( const QString & tip )
 
 $prototype=void showMessage ( const QString & title, const QString & message, MessageIcon icon = Information, int millisecondsTimeoutHint = 10000 )
 $method=|void|showMessage|const QString &,const QString &,QSystemTrayIcon::MessageIcon=QSystemTrayIcon::Information,int=10000
@@ -83,8 +80,7 @@ $prototypeV2=QString toolTip() const
 
 $prototypeV2=void hide()
 
-$prototype=void setVisible ( bool visible )
-$method=|void|setVisible|bool
+$prototypeV2=void setVisible( bool visible )
 
 $prototypeV2=void show()
 

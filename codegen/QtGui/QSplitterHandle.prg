@@ -32,8 +32,7 @@ $prototypeV2=bool opaqueResize() const
 
 $prototypeV2=Qt::Orientation orientation() const
 
-$prototype=void setOrientation ( Qt::Orientation orientation )
-$method=|void|setOrientation|Qt::Orientation
+$prototypeV2=void setOrientation( Qt::Orientation orientation )
 
 $prototypeV2=QSplitter * splitter() const
 

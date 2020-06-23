@@ -29,20 +29,15 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QGesture * create ( QObject * target )
-$virtualMethod=|QGesture *|create|QObject *
+$prototypeV2=virtual QGesture * create( QObject * target )
 
-$prototype=virtual Result recognize ( QGesture * gesture, QObject * watched, QEvent * event ) = 0
-$virtualMethod=|QGestureRecognizer::Result|recognize|QGesture *,QObject *,QEvent *
+$prototypeV2=virtual QGestureRecognizer::Result recognize( QGesture * gesture, QObject * watched, QEvent * event ) = 0
 
-$prototype=virtual void reset ( QGesture * gesture )
-$virtualMethod=|void|reset|QGesture *
+$prototypeV2=virtual void reset( QGesture * gesture )
 
-$prototype=static Qt::GestureType registerRecognizer ( QGestureRecognizer * recognizer )
-$staticMethod=|Qt::GestureType|registerRecognizer|QGestureRecognizer *
+$prototypeV2=static Qt::GestureType registerRecognizer( QGestureRecognizer * recognizer )
 
-$prototype=static void unregisterRecognizer ( Qt::GestureType type )
-$staticMethod=|void|unregisterRecognizer|Qt::GestureType
+$prototypeV2=static void unregisterRecognizer( Qt::GestureType type )
 
 $extraMethods
 

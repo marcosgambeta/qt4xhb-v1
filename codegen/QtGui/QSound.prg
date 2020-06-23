@@ -38,8 +38,7 @@ $prototypeV2=int loops() const
 
 $prototypeV2=int loopsRemaining() const
 
-$prototype=void setLoops ( int number )
-$method=|void|setLoops|int
+$prototypeV2=void setLoops( int number )
 
 $prototypeV2=void stop()
 

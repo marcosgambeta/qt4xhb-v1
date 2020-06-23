@@ -57,16 +57,13 @@ $deleteMethod
 
 $prototypeV2=QPainterPath path() const
 
-$prototype=void setPath ( const QPainterPath & path )
-$method=|void|setPath|const QPainterPath &
+$prototypeV2=void setPath( const QPainterPath & path )
 
 $prototypeV2=virtual QRectF boundingRect() const
 
-$prototype=virtual bool contains ( const QPointF & point ) const
-$virtualMethod=|bool|contains|const QPointF &
+$prototypeV2=virtual bool contains( const QPointF & point ) const
 
-$prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
-$virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
+$prototypeV2=virtual bool isObscuredBy( const QGraphicsItem * item ) const
 
 $prototypeV2=virtual QPainterPath opaqueArea() const
 

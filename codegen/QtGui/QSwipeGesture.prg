@@ -29,8 +29,7 @@ $deleteMethod
 
 $prototypeV2=QSwipeGesture::SwipeDirection horizontalDirection() const
 
-$prototype=void setSwipeAngle ( qreal value )
-$method=|void|setSwipeAngle|qreal
+$prototypeV2=void setSwipeAngle( qreal value )
 
 $prototypeV2=qreal swipeAngle() const
 

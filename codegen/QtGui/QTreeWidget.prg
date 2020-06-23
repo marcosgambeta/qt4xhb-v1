@@ -32,11 +32,9 @@ $constructor=|new|QWidget *=0
 
 $deleteMethod
 
-$prototype=void addTopLevelItem ( QTreeWidgetItem * item )
-$method=|void|addTopLevelItem|QTreeWidgetItem *
+$prototypeV2=void addTopLevelItem( QTreeWidgetItem * item )
 
-$prototype=void addTopLevelItems ( const QList<QTreeWidgetItem *> & items )
-$method=|void|addTopLevelItems|const QList<QTreeWidgetItem *> &
+$prototypeV2=void addTopLevelItems( const QList<QTreeWidgetItem *> & items )
 
 $prototype=void closePersistentEditor ( QTreeWidgetItem * item, int column = 0 )
 $method=|void|closePersistentEditor|QTreeWidgetItem *,int=0
@@ -55,22 +53,17 @@ $method=|QList<QTreeWidgetItem *>|findItems|const QString &,Qt::MatchFlags,int=0
 
 $prototypeV2=QTreeWidgetItem * headerItem() const
 
-$prototype=int indexOfTopLevelItem ( QTreeWidgetItem * item ) const
-$method=|int|indexOfTopLevelItem|QTreeWidgetItem *
+$prototypeV2=int indexOfTopLevelItem( QTreeWidgetItem * item ) const
 
-$prototype=void insertTopLevelItem ( int index, QTreeWidgetItem * item )
-$method=|void|insertTopLevelItem|int,QTreeWidgetItem *
+$prototypeV2=void insertTopLevelItem( int index, QTreeWidgetItem * item )
 
-$prototype=void insertTopLevelItems ( int index, const QList<QTreeWidgetItem *> & items )
-$method=|void|insertTopLevelItems|int,const QList<QTreeWidgetItem *> &
+$prototypeV2=void insertTopLevelItems( int index, const QList<QTreeWidgetItem *> & items )
 
 $prototypeV2=QTreeWidgetItem * invisibleRootItem() const
 
-$prototype=bool isFirstItemColumnSpanned ( const QTreeWidgetItem * item ) const
-$method=|bool|isFirstItemColumnSpanned|const QTreeWidgetItem *
+$prototypeV2=bool isFirstItemColumnSpanned( const QTreeWidgetItem * item ) const
 
-$prototype=QTreeWidgetItem * itemAbove ( const QTreeWidgetItem * item ) const
-$method=|QTreeWidgetItem *|itemAbove|const QTreeWidgetItem *
+$prototypeV2=QTreeWidgetItem * itemAbove( const QTreeWidgetItem * item ) const
 
 $prototype=QTreeWidgetItem * itemAt ( const QPoint & p ) const
 $internalMethod=|QTreeWidgetItem *|itemAt,itemAt1|const QPoint &
@@ -100,22 +93,18 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMAT )
 }
 $addMethod=itemAt
 
-$prototype=QTreeWidgetItem *  itemBelow ( const QTreeWidgetItem * item ) const
-$method=|QTreeWidgetItem *|itemBelow|const QTreeWidgetItem *
+$prototypeV2=QTreeWidgetItem * itemBelow( const QTreeWidgetItem * item ) const
 
-$prototype=QWidget * itemWidget ( QTreeWidgetItem * item, int column ) const
-$method=|QWidget *|itemWidget|QTreeWidgetItem *,int
+$prototypeV2=QWidget * itemWidget( QTreeWidgetItem * item, int column ) const
 
 $prototype=void openPersistentEditor ( QTreeWidgetItem * item, int column = 0 )
 $method=|void|openPersistentEditor|QTreeWidgetItem *,int=0
 
-$prototype=void removeItemWidget ( QTreeWidgetItem * item, int column )
-$method=|void|removeItemWidget|QTreeWidgetItem *,int
+$prototypeV2=void removeItemWidget( QTreeWidgetItem * item, int column )
 
 $prototypeV2=QList<QTreeWidgetItem *> selectedItems() const
 
-$prototype=void setColumnCount ( int columns )
-$method=|void|setColumnCount|int
+$prototypeV2=void setColumnCount( int columns )
 
 $prototype=void setCurrentItem ( QTreeWidgetItem * item )
 $internalMethod=|void|setCurrentItem,setCurrentItem1|QTreeWidgetItem *
@@ -153,47 +142,35 @@ HB_FUNC_STATIC( QTREEWIDGET_SETCURRENTITEM )
 }
 $addMethod=setCurrentItem
 
-$prototype=void setFirstItemColumnSpanned ( const QTreeWidgetItem * item, bool span )
-$method=|void|setFirstItemColumnSpanned|const QTreeWidgetItem *,bool
+$prototypeV2=void setFirstItemColumnSpanned( const QTreeWidgetItem * item, bool span )
 
-$prototype=void setHeaderItem ( QTreeWidgetItem * item )
-$method=|void|setHeaderItem|QTreeWidgetItem *
+$prototypeV2=void setHeaderItem( QTreeWidgetItem * item )
 
-$prototype=void setHeaderLabel ( const QString & label )
-$method=|void|setHeaderLabel|const QString &
+$prototypeV2=void setHeaderLabel( const QString & label )
 
-$prototype=void setHeaderLabels ( const QStringList & labels )
-$method=|void|setHeaderLabels|const QStringList &
+$prototypeV2=void setHeaderLabels( const QStringList & labels )
 
-$prototype=void setItemWidget ( QTreeWidgetItem * item, int column, QWidget * widget )
-$method=|void|setItemWidget|QTreeWidgetItem *,int,QWidget *
+$prototypeV2=void setItemWidget( QTreeWidgetItem * item, int column, QWidget * widget )
 
 $prototypeV2=int sortColumn() const
 
-$prototype=void sortItems ( int column, Qt::SortOrder order )
-$method=|void|sortItems|int,Qt::SortOrder
+$prototypeV2=void sortItems( int column, Qt::SortOrder order )
 
-$prototype=QTreeWidgetItem *  takeTopLevelItem ( int index )
-$method=|QTreeWidgetItem *|takeTopLevelItem|int
+$prototypeV2=QTreeWidgetItem * takeTopLevelItem( int index )
 
-$prototype=QTreeWidgetItem *  topLevelItem ( int index ) const
-$method=|QTreeWidgetItem *|topLevelItem|int
+$prototypeV2=QTreeWidgetItem * topLevelItem( int index ) const
 
 $prototypeV2=int topLevelItemCount() const
 
-$prototype=QRect visualItemRect ( const QTreeWidgetItem * item ) const
-$method=|QRect|visualItemRect|const QTreeWidgetItem *
+$prototypeV2=QRect visualItemRect( const QTreeWidgetItem * item ) const
 
-$prototype=virtual void setSelectionModel ( QItemSelectionModel * selectionModel )
-$virtualMethod=|void|setSelectionModel|QItemSelectionModel *
+$prototypeV2=virtual void setSelectionModel( QItemSelectionModel * selectionModel )
 
 $prototypeV2=void clear()
 
-$prototype=void collapseItem ( const QTreeWidgetItem * item )
-$method=|void|collapseItem|const QTreeWidgetItem *
+$prototypeV2=void collapseItem( const QTreeWidgetItem * item )
 
-$prototype=void expandItem ( const QTreeWidgetItem * item )
-$method=|void|expandItem|const QTreeWidgetItem *
+$prototypeV2=void expandItem( const QTreeWidgetItem * item )
 
 $prototype=void scrollToItem ( const QTreeWidgetItem * item, QAbstractItemView::ScrollHint hint = EnsureVisible )
 $method=|void|scrollToItem|const QTreeWidgetItem *,QAbstractItemView::ScrollHint=QAbstractItemView::EnsureVisible

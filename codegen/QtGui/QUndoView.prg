@@ -72,18 +72,14 @@ $prototypeV2=QString emptyLabel() const
 
 $prototypeV2=QUndoGroup * group() const
 
-$prototype=void setCleanIcon ( const QIcon & icon )
-$method=|void|setCleanIcon|const QIcon &
+$prototypeV2=void setCleanIcon( const QIcon & icon )
 
-$prototype=void setEmptyLabel ( const QString & label )
-$method=|void|setEmptyLabel|const QString &
+$prototypeV2=void setEmptyLabel( const QString & label )
 
 $prototypeV2=QUndoStack * stack() const
 
-$prototype=void setGroup ( QUndoGroup * group )
-$method=|void|setGroup|QUndoGroup *
+$prototypeV2=void setGroup( QUndoGroup * group )
 
-$prototype=void setStack ( QUndoStack * stack )
-$method=|void|setStack|QUndoStack *
+$prototypeV2=void setStack( QUndoStack * stack )
 
 #pragma ENDDUMP

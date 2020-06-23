@@ -59,8 +59,7 @@ $prototypeV2=Qt::CheckState checkState() const
 
 $prototypeV2=bool isTristate() const
 
-$prototype=void setCheckState ( Qt::CheckState state )
-$method=|void|setCheckState|Qt::CheckState
+$prototypeV2=void setCheckState( Qt::CheckState state )
 
 $prototype=void setTristate ( bool y = true )
 $method=|void|setTristate|bool=true

@@ -48,11 +48,9 @@ $method=|int|insertWidget|int,QWidget *,int=0
 
 $prototypeV2=bool isSizeGripEnabled() const
 
-$prototype=void removeWidget ( QWidget * widget )
-$method=|void|removeWidget|QWidget *
+$prototypeV2=void removeWidget( QWidget * widget )
 
-$prototype=void setSizeGripEnabled ( bool )
-$method=|void|setSizeGripEnabled|bool
+$prototypeV2=void setSizeGripEnabled( bool )
 
 $prototypeV2=void clearMessage()
 

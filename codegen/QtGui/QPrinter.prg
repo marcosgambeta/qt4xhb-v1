@@ -193,50 +193,35 @@ $prototypeV2=QPrinter::PrinterState printerState() const
 
 $prototypeV2=int resolution() const
 
-$prototype=void setCollateCopies ( bool collate )
-$method=|void|setCollateCopies|bool
+$prototypeV2=void setCollateCopies( bool collate )
 
-$prototype=void setColorMode ( ColorMode newColorMode )
-$method=|void|setColorMode|QPrinter::ColorMode
+$prototypeV2=void setColorMode( QPrinter::ColorMode newColorMode )
 
-$prototype=void setCopyCount ( int count )
-$method=|void|setCopyCount|int
+$prototypeV2=void setCopyCount( int count )
 
-$prototype=void setCreator ( const QString & creator )
-$method=|void|setCreator|const QString &
+$prototypeV2=void setCreator( const QString & creator )
 
-$prototype=void setDocName ( const QString & name )
-$method=|void|setDocName|const QString &
+$prototypeV2=void setDocName( const QString & name )
 
-$prototype=void setDoubleSidedPrinting ( bool doubleSided )
-$method=|void|setDoubleSidedPrinting|bool
+$prototypeV2=void setDoubleSidedPrinting( bool doubleSided )
 
-$prototype=void setDuplex ( DuplexMode duplex )
-$method=|void|setDuplex|QPrinter::DuplexMode
+$prototypeV2=void setDuplex( QPrinter::DuplexMode duplex )
 
-$prototype=void setFontEmbeddingEnabled ( bool enable )
-$method=|void|setFontEmbeddingEnabled|bool
+$prototypeV2=void setFontEmbeddingEnabled( bool enable )
 
-$prototype=void setFromTo ( int from, int to )
-$method=|void|setFromTo|int,int
+$prototypeV2=void setFromTo( int from, int to )
 
-$prototype=void setFullPage ( bool fp )
-$method=|void|setFullPage|bool
+$prototypeV2=void setFullPage( bool fp )
 
-$prototype=void setOrientation ( Orientation orientation )
-$method=|void|setOrientation|QPrinter::Orientation
+$prototypeV2=void setOrientation( QPrinter::Orientation orientation )
 
-$prototype=void setOutputFileName ( const QString & fileName )
-$method=|void|setOutputFileName|const QString &
+$prototypeV2=void setOutputFileName( const QString & fileName )
 
-$prototype=void setOutputFormat ( OutputFormat format )
-$method=|void|setOutputFormat|QPrinter::OutputFormat
+$prototypeV2=void setOutputFormat( QPrinter::OutputFormat format )
 
-$prototype=void setPageMargins ( qreal left, qreal top, qreal right, qreal bottom, Unit unit )
-$method=|void|setPageMargins|qreal,qreal,qreal,qreal,QPrinter::Unit
+$prototypeV2=void setPageMargins( qreal left, qreal top, qreal right, qreal bottom, QPrinter::Unit unit )
 
-$prototype=void setPageOrder ( PageOrder pageOrder )
-$method=|void|setPageOrder|QPrinter::PageOrder
+$prototypeV2=void setPageOrder( QPrinter::PageOrder pageOrder )
 
 $prototype=void setPaperSize ( PaperSize newPaperSize )
 $internalMethod=|void|setPaperSize,setPaperSize1|QPrinter::PaperSize
@@ -266,20 +251,15 @@ HB_FUNC_STATIC( QPRINTER_SETPAPERSIZE )
 }
 $addMethod=setPaperSize
 
-$prototype=void setPaperSource ( PaperSource source )
-$method=|void|setPaperSource|QPrinter::PaperSource
+$prototypeV2=void setPaperSource( QPrinter::PaperSource source )
 
-$prototype=void setPrintProgram ( const QString & printProg )
-$method=|void|setPrintProgram|const QString &
+$prototypeV2=void setPrintProgram( const QString & printProg )
 
-$prototype=void setPrintRange ( PrintRange range )
-$method=|void|setPrintRange|QPrinter::PrintRange
+$prototypeV2=void setPrintRange( QPrinter::PrintRange range )
 
-$prototype=void setPrinterName ( const QString & name )
-$method=|void|setPrinterName|const QString &
+$prototypeV2=void setPrinterName( const QString & name )
 
-$prototype=void setResolution ( int dpi )
-$method=|void|setResolution|int
+$prototypeV2=void setResolution( int dpi )
 
 $prototype=void setWinPageSize ( int pageSize )
 $method=|void|setWinPageSize|int|#ifdef Q_WS_WIN

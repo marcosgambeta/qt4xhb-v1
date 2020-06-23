@@ -89,19 +89,15 @@ $deleteMethod
 
 $prototypeV2=QRectF boundingRect() const
 
-$prototype=bool containsPoint ( const QPointF & point, Qt::FillRule fillRule ) const
-$method=|bool|containsPoint|const QPointF &,Qt::FillRule
+$prototypeV2=bool containsPoint( const QPointF & point, Qt::FillRule fillRule ) const
 
-$prototype=QPolygonF intersected ( const QPolygonF & r ) const
-$method=|QPolygonF|intersected|const QPolygonF &
+$prototypeV2=QPolygonF intersected( const QPolygonF & r ) const
 
 $prototypeV2=bool isClosed() const
 
-$prototype=QPolygonF subtracted ( const QPolygonF & r ) const
-$method=|QPolygonF|subtracted|const QPolygonF &
+$prototypeV2=QPolygonF subtracted( const QPolygonF & r ) const
 
-$prototype=void swap ( QPolygonF & other )
-$method=|void|swap|QPolygonF &
+$prototypeV2=void swap( QPolygonF & other )
 
 $prototypeV2=QPolygon toPolygon() const
 
@@ -161,8 +157,7 @@ HB_FUNC_STATIC( QPOLYGONF_TRANSLATED )
 }
 $addMethod=translated
 
-$prototype=QPolygonF united ( const QPolygonF & r ) const
-$method=|QPolygonF|united|const QPolygonF &
+$prototypeV2=QPolygonF united( const QPolygonF & r ) const
 
 $extraMethods
 

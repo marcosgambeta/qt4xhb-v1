@@ -55,18 +55,15 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void setTickInterval ( int ti )
-$method=|void|setTickInterval|int
+$prototypeV2=void setTickInterval( int ti )
 
-$prototype=void setTickPosition ( TickPosition position )
-$method=|void|setTickPosition|QSlider::TickPosition
+$prototypeV2=void setTickPosition( QSlider::TickPosition position )
 
 $prototypeV2=int tickInterval() const
 
 $prototypeV2=QSlider::TickPosition tickPosition() const
 
-$prototype=virtual bool event ( QEvent * event )
-$virtualMethod=|bool|event|QEvent *
+$prototypeV2=virtual bool event( QEvent * event )
 
 $prototypeV2=virtual QSize minimumSizeHint() const
 

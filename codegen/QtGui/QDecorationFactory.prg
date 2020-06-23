@@ -25,8 +25,7 @@ $destructor
 
 $includes
 
-$prototype=static QDecoration * create ( const QString & key )
-$staticMethod=|QDecoration *|create|const QString &
+$prototypeV2=static QDecoration * create( const QString & key )
 
 $prototypeV2=static QStringList keys()
 

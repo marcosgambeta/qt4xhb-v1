@@ -73,17 +73,13 @@ $prototypeV2=QString fileName() const
 
 $prototypeV2=QByteArray format() const
 
-$prototype=void setCodec ( QTextCodec * codec )
-$method=|void|setCodec|QTextCodec *
+$prototypeV2=void setCodec( QTextCodec * codec )
 
-$prototype=void setDevice ( QIODevice * device )
-$method=|void|setDevice|QIODevice *
+$prototypeV2=void setDevice( QIODevice * device )
 
-$prototype=void setFileName ( const QString & fileName )
-$method=|void|setFileName|const QString &
+$prototypeV2=void setFileName( const QString & fileName )
 
-$prototype=void setFormat ( const QByteArray & format )
-$method=|void|setFormat|const QByteArray &
+$prototypeV2=void setFormat( const QByteArray & format )
 
 $prototype=bool write ( const QTextDocument * document )
 $internalMethod=|bool|write,write1|const QTextDocument *

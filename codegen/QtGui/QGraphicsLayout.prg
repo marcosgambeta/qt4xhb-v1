@@ -35,26 +35,20 @@ $prototypeV2=virtual void invalidate()
 
 $prototypeV2=bool isActivated() const
 
-$prototype=virtual QGraphicsLayoutItem * itemAt ( int i ) const = 0
-$virtualMethod=|QGraphicsLayoutItem *|itemAt|int
+$prototypeV2=virtual QGraphicsLayoutItem * itemAt( int i ) const = 0
 
-$prototype=virtual void removeAt ( int index ) = 0
-$virtualMethod=|void|removeAt|int
+$prototypeV2=virtual void removeAt( int index ) = 0
 
-$prototype=void setContentsMargins ( qreal left, qreal top, qreal right, qreal bottom )
-$method=|void|setContentsMargins|qreal,qreal,qreal,qreal
+$prototypeV2=void setContentsMargins( qreal left, qreal top, qreal right, qreal bottom )
 
-$prototype=virtual void widgetEvent ( QEvent * e )
-$virtualMethod=|void|widgetEvent|QEvent *
+$prototypeV2=virtual void widgetEvent( QEvent * e )
 
-$prototype=virtual void getContentsMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
-$virtualMethod=|void|getContentsMargins|qreal *,qreal *,qreal *,qreal *
+$prototypeV2=virtual void getContentsMargins( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
 
 $prototypeV2=virtual void updateGeometry()
 
 $prototypeV2=static bool instantInvalidatePropagation()
 
-$prototype=static void setInstantInvalidatePropagation ( bool enable )
-$staticMethod=|void|setInstantInvalidatePropagation|bool
+$prototypeV2=static void setInstantInvalidatePropagation( bool enable )
 
 #pragma ENDDUMP

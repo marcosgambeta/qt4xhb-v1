@@ -32,7 +32,6 @@ $deleteMethod
 
 $prototypeV2=Qt::KeyboardModifiers modifiers() const
 
-$prototype=void setModifiers(Qt::KeyboardModifiers amodifiers)
-$method=|void|setModifiers|Qt::KeyboardModifiers
+$prototypeV2=void setModifiers( Qt::KeyboardModifiers amodifiers )
 
 #pragma ENDDUMP

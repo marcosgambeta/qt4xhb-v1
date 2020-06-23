@@ -63,13 +63,10 @@ $prototypeV2=QPainterPath hitTestPath() const
 
 $prototypeV2=Qt::KeyboardModifiers modifierMask() const
 
-$prototype=void setButton ( Qt::MouseButton button )
-$method=|void|setButton|Qt::MouseButton
+$prototypeV2=void setButton( Qt::MouseButton button )
 
-$prototype=void setHitTestPath ( const QPainterPath & path )
-$method=|void|setHitTestPath|const QPainterPath &
+$prototypeV2=void setHitTestPath( const QPainterPath & path )
 
-$prototype=void setModifierMask ( Qt::KeyboardModifiers modifierMask )
-$method=|void|setModifierMask|Qt::KeyboardModifiers
+$prototypeV2=void setModifierMask( Qt::KeyboardModifiers modifierMask )
 
 #pragma ENDDUMP

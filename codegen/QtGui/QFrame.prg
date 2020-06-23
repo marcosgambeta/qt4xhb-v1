@@ -44,25 +44,18 @@ $prototypeV2=int lineWidth() const
 
 $prototypeV2=int midLineWidth() const
 
-$prototype=void setFrameRect ( const QRect & )
-$method=|void|setFrameRect|const QRect &
+$prototypeV2=void setFrameRect( const QRect & )
 
-$prototype=void setFrameShadow ( Shadow )
-$method=|void|setFrameShadow|QFrame::Shadow
+$prototypeV2=void setFrameShadow( QFrame::Shadow )
 
-$prototype=void setFrameShape ( Shape )
-$method=|void|setFrameShape|QFrame::Shape
+$prototypeV2=void setFrameShape( QFrame::Shape )
 
-$prototype=void setFrameStyle ( int style )
-$method=|void|setFrameStyle|int
+$prototypeV2=void setFrameStyle( int style )
 
-$prototype=void setLineWidth ( int )
-$method=|void|setLineWidth|int
+$prototypeV2=void setLineWidth( int )
 
-$prototype=void setMidLineWidth ( int )
-$method=|void|setMidLineWidth|int
+$prototypeV2=void setMidLineWidth( int )
 
-$prototype=virtual QSize sizeHint () const
-$virtualMethod=|QSize|sizeHint|
+$prototypeV2=virtual QSize sizeHint() const
 
 #pragma ENDDUMP

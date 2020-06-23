@@ -103,11 +103,9 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON )
 }
 $addMethod=addButton
 
-$prototype=QPushButton * button ( StandardButton which ) const
-$method=|QPushButton *|button|QDialogButtonBox::StandardButton
+$prototypeV2=QPushButton * button( QDialogButtonBox::StandardButton which ) const
 
-$prototype=ButtonRole buttonRole ( QAbstractButton * button ) const
-$method=|QDialogButtonBox::ButtonRole|buttonRole|QAbstractButton *
+$prototypeV2=QDialogButtonBox::ButtonRole buttonRole( QAbstractButton * button ) const
 
 $prototypeV2=QList<QAbstractButton *> buttons() const
 
@@ -117,20 +115,15 @@ $prototypeV2=void clear()
 
 $prototypeV2=Qt::Orientation orientation() const
 
-$prototype=void removeButton ( QAbstractButton * button )
-$method=|void|removeButton|QAbstractButton *
+$prototypeV2=void removeButton( QAbstractButton * button )
 
-$prototype=void setCenterButtons ( bool center )
-$method=|void|setCenterButtons|bool
+$prototypeV2=void setCenterButtons( bool center )
 
-$prototype=void setOrientation ( Qt::Orientation orientation )
-$method=|void|setOrientation|Qt::Orientation
+$prototypeV2=void setOrientation( Qt::Orientation orientation )
 
-$prototype=void setStandardButtons ( StandardButtons buttons )
-$method=|void|setStandardButtons|QDialogButtonBox::StandardButtons
+$prototypeV2=void setStandardButtons( QDialogButtonBox::StandardButtons buttons )
 
-$prototype=StandardButton standardButton ( QAbstractButton * button ) const
-$method=|QDialogButtonBox::StandardButton|standardButton|QAbstractButton *
+$prototypeV2=QDialogButtonBox::StandardButton standardButton( QAbstractButton * button ) const
 
 $prototypeV2=QDialogButtonBox::StandardButtons standardButtons() const
 

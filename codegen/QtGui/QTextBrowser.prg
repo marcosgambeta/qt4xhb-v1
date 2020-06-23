@@ -36,11 +36,9 @@ $prototypeV2=void clearHistory()
 
 $prototypeV2=int forwardHistoryCount() const
 
-$prototype=QString historyTitle ( int i ) const
-$method=|QString|historyTitle|int
+$prototypeV2=QString historyTitle( int i ) const
 
-$prototype=QUrl historyUrl ( int i ) const
-$method=|QUrl|historyUrl|int
+$prototypeV2=QUrl historyUrl( int i ) const
 
 $prototypeV2=bool isBackwardAvailable() const
 
@@ -52,19 +50,15 @@ $prototypeV2=bool openLinks() const
 
 $prototypeV2=QStringList searchPaths() const
 
-$prototype=void setOpenExternalLinks ( bool open )
-$method=|void|setOpenExternalLinks|bool
+$prototypeV2=void setOpenExternalLinks( bool open )
 
-$prototype=void setOpenLinks ( bool open )
-$method=|void|setOpenLinks|bool
+$prototypeV2=void setOpenLinks( bool open )
 
-$prototype=void setSearchPaths ( const QStringList & paths )
-$method=|void|setSearchPaths|const QStringList &
+$prototypeV2=void setSearchPaths( const QStringList & paths )
 
 $prototypeV2=QUrl source() const
 
-$prototype=virtual QVariant loadResource ( int type, const QUrl & name )
-$virtualMethod=|QVariant|loadResource|int,const QUrl &
+$prototypeV2=virtual QVariant loadResource( int type, const QUrl & name )
 
 $prototypeV2=virtual void backward()
 
@@ -74,8 +68,7 @@ $prototypeV2=virtual void home()
 
 $prototypeV2=virtual void reload()
 
-$prototype=virtual void setSource ( const QUrl & name )
-$virtualMethod=|void|setSource|const QUrl &
+$prototypeV2=virtual void setSource( const QUrl & name )
 
 $beginSignals
 $signal=|anchorClicked(QUrl)

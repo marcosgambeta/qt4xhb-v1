@@ -89,8 +89,7 @@ HB_FUNC_STATIC( QPICTURE_LOAD )
 }
 $addMethod=load
 
-$prototype=bool play ( QPainter * painter )
-$method=|bool|play|QPainter *
+$prototypeV2=bool play( QPainter * painter )
 
 $prototype=bool save ( const QString & fileName, const char * format = 0 )
 $internalMethod=|bool|save,save1|const QString &,const char *=0
@@ -120,15 +119,12 @@ HB_FUNC_STATIC( QPICTURE_SAVE )
 }
 $addMethod=save
 
-$prototype=void setBoundingRect ( const QRect & r )
-$method=|void|setBoundingRect|const QRect &
+$prototypeV2=void setBoundingRect( const QRect & r )
 
-$prototype=virtual void setData ( const char * data, uint size )
-$virtualMethod=|void|setData|const char *,uint
+$prototypeV2=virtual void setData( const char * data, uint size )
 
 $prototypeV2=uint size() const
 
-$prototype=void swap ( QPicture & other )
-$method=|void|swap|QPicture &
+$prototypeV2=void swap( QPicture & other )
 
 #pragma ENDDUMP

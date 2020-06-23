@@ -27,11 +27,9 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual void buildSysMenu ( QWidget * widget, QMenu * menu )
-$virtualMethod=|void|buildSysMenu|QWidget *,QMenu *
+$prototypeV2=virtual void buildSysMenu( QWidget * widget, QMenu * menu )
 
-$prototype=void menuTriggered ( QWidget * widget, QAction * action )
-$method=|void|menuTriggered|QWidget *,QAction *
+$prototypeV2=void menuTriggered( QWidget * widget, QAction * action )
 
 $prototype=virtual bool paint ( QPainter * painter, const QWidget * widget, int decorationRegion = All, DecorationState state = Normal ) = 0
 $virtualMethod=|bool|paint|QPainter *,const QWidget *,int=QDecoration::All,QDecoration::DecorationState=QDecoration::Normal
@@ -64,20 +62,15 @@ HB_FUNC_STATIC( QDECORATION_REGION )
 }
 $addMethod=region
 
-$prototype=virtual int regionAt ( const QWidget * widget, const QPoint & point )
-$virtualMethod=|int|regionAt|const QWidget *,const QPoint &
+$prototypeV2=virtual int regionAt( const QWidget * widget, const QPoint & point )
 
-$prototype=virtual void regionClicked ( QWidget * widget, int region )
-$virtualMethod=|void|regionClicked|QWidget *,int
+$prototypeV2=virtual void regionClicked( QWidget * widget, int region )
 
-$prototype=virtual void regionDoubleClicked ( QWidget * widget, int region )
-$virtualMethod=|void|regionDoubleClicked|QWidget *,int
+$prototypeV2=virtual void regionDoubleClicked( QWidget * widget, int region )
 
-$prototype=static void startMove ( QWidget * widget )
-$staticMethod=|void|startMove|QWidget *
+$prototypeV2=static void startMove( QWidget * widget )
 
-$prototype=static void startResize ( QWidget * widget )
-$staticMethod=|void|startResize|QWidget *
+$prototypeV2=static void startResize( QWidget * widget )
 
 $extraMethods
 

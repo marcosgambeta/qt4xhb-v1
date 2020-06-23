@@ -60,85 +60,62 @@ $prototypeV2=QString labelText() const
 
 $prototypeV2=QString okButtonText() const
 
-$prototype=void open ( QObject * receiver, const char * member )
-$method=|void|open|QObject *,const char *
+$prototypeV2=void open( QObject * receiver, const char * member )
 
 $prototypeV2=QInputDialog::InputDialogOptions options() const
 
-$prototype=void setCancelButtonText ( const QString & text )
-$method=|void|setCancelButtonText|const QString &
+$prototypeV2=void setCancelButtonText( const QString & text )
 
-$prototype=void setComboBoxEditable ( bool editable )
-$method=|void|setComboBoxEditable|bool
+$prototypeV2=void setComboBoxEditable( bool editable )
 
-$prototype=void setComboBoxItems ( const QStringList & items )
-$method=|void|setComboBoxItems|const QStringList &
+$prototypeV2=void setComboBoxItems( const QStringList & items )
 
-$prototype=void setDoubleDecimals ( int decimals )
-$method=|void|setDoubleDecimals|int
+$prototypeV2=void setDoubleDecimals( int decimals )
 
-$prototype=void setDoubleMaximum ( double max )
-$method=|void|setDoubleMaximum|double
+$prototypeV2=void setDoubleMaximum( double max )
 
-$prototype=void setDoubleMinimum ( double min )
-$method=|void|setDoubleMinimum|double
+$prototypeV2=void setDoubleMinimum( double min )
 
-$prototype=void setDoubleRange ( double min, double max )
-$method=|void|setDoubleRange|double,double
+$prototypeV2=void setDoubleRange( double min, double max )
 
-$prototype=void setDoubleValue ( double value )
-$method=|void|setDoubleValue|double
+$prototypeV2=void setDoubleValue( double value )
 
-$prototype=void setInputMode ( InputMode mode )
-$method=|void|setInputMode|QInputDialog::InputMode
+$prototypeV2=void setInputMode( QInputDialog::InputMode mode )
 
-$prototype=void setIntMaximum ( int max )
-$method=|void|setIntMaximum|int
+$prototypeV2=void setIntMaximum( int max )
 
-$prototype=void setIntMinimum ( int min )
-$method=|void|setIntMinimum|int
+$prototypeV2=void setIntMinimum( int min )
 
-$prototype=void setIntRange ( int min, int max )
-$method=|void|setIntRange|int,int
+$prototypeV2=void setIntRange( int min, int max )
 
-$prototype=void setIntStep ( int step )
-$method=|void|setIntStep|int
+$prototypeV2=void setIntStep( int step )
 
-$prototype=void setIntValue ( int value )
-$method=|void|setIntValue|int
+$prototypeV2=void setIntValue( int value )
 
-$prototype=void setLabelText ( const QString & text )
-$method=|void|setLabelText|const QString &
+$prototypeV2=void setLabelText( const QString & text )
 
-$prototype=void setOkButtonText ( const QString & text )
-$method=|void|setOkButtonText|const QString &
+$prototypeV2=void setOkButtonText( const QString & text )
 
 $prototype=void setOption ( InputDialogOption option, bool on = true )
 $method=|void|setOption|QInputDialog::InputDialogOption,bool=true
 
-$prototype=void setOptions ( InputDialogOptions options )
-$method=|void|setOptions|QInputDialog::InputDialogOptions
+$prototypeV2=void setOptions( QInputDialog::InputDialogOptions options )
 
-$prototype=void setTextEchoMode ( QLineEdit::EchoMode mode )
-$method=|void|setTextEchoMode|QLineEdit::EchoMode
+$prototypeV2=void setTextEchoMode( QLineEdit::EchoMode mode )
 
-$prototype=void setTextValue ( const QString & text )
-$method=|void|setTextValue|const QString &
+$prototypeV2=void setTextValue( const QString & text )
 
-$prototype=bool testOption ( InputDialogOption option ) const
-$method=|bool|testOption|QInputDialog::InputDialogOption
+$prototypeV2=bool testOption( QInputDialog::InputDialogOption option ) const
 
 $prototypeV2=QLineEdit::EchoMode textEchoMode() const
 
 $prototypeV2=QString textValue() const
 
-$prototype=virtual void done ( int result )
-$virtualMethod=|void|done|int
+$prototypeV2=virtual void done( int result )
 
 $prototypeV2=virtual QSize minimumSizeHint() const
 
-$prototype=virtual void setVisible ( bool visible )
-$virtualMethod=|void|setVisible|bool
+$prototypeV2=virtual void setVisible( bool visible )
 
 $prototypeV2=virtual QSize sizeHint() const
 

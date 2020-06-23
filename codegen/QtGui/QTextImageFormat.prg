@@ -36,14 +36,11 @@ $prototypeV2=bool isValid() const
 
 $prototypeV2=QString name() const
 
-$prototype=void setHeight ( qreal height )
-$method=|void|setHeight|qreal
+$prototypeV2=void setHeight( qreal height )
 
-$prototype=void setName ( const QString & name )
-$method=|void|setName|const QString &
+$prototypeV2=void setName( const QString & name )
 
-$prototype=void setWidth ( qreal width )
-$method=|void|setWidth|qreal
+$prototypeV2=void setWidth( qreal width )
 
 $prototypeV2=qreal width() const
 

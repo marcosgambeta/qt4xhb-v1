@@ -96,11 +96,9 @@ HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON )
 }
 $addMethod=addButton
 
-$prototype=QAbstractButton * button ( StandardButton which ) const
-$method=|QAbstractButton *|button|QMessageBox::StandardButton
+$prototypeV2=QAbstractButton * button( QMessageBox::StandardButton which ) const
 
-$prototype=ButtonRole buttonRole ( QAbstractButton * button ) const
-$method=|QMessageBox::ButtonRole|buttonRole|QAbstractButton *
+$prototypeV2=QMessageBox::ButtonRole buttonRole( QAbstractButton * button ) const
 
 $prototypeV2=QList<QAbstractButton *> buttons() const
 
@@ -118,11 +116,9 @@ $prototypeV2=QPixmap iconPixmap() const
 
 $prototypeV2=QString informativeText() const
 
-$prototype=void open ( QObject * receiver, const char * member )
-$method=|void|open|QObject *,const char *
+$prototypeV2=void open( QObject * receiver, const char * member )
 
-$prototype=void removeButton ( QAbstractButton * button )
-$method=|void|removeButton|QAbstractButton *
+$prototypeV2=void removeButton( QAbstractButton * button )
 
 $prototype=void setDefaultButton ( QPushButton * button )
 $internalMethod=|void|setDefaultButton,setDefaultButton1|QPushButton *
@@ -152,8 +148,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETDEFAULTBUTTON )
 }
 $addMethod=setDefaultButton
 
-$prototype=void setDetailedText ( const QString & text )
-$method=|void|setDetailedText|const QString &
+$prototypeV2=void setDetailedText( const QString & text )
 
 $prototype=void setEscapeButton ( QAbstractButton * button )
 $internalMethod=|void|setEscapeButton,setEscapeButton1|QAbstractButton *
@@ -183,32 +178,23 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETESCAPEBUTTON )
 }
 $addMethod=setEscapeButton
 
-$prototype=void setIcon ( Icon )
-$method=|void|setIcon|QMessageBox::Icon
+$prototypeV2=void setIcon( QMessageBox::Icon )
 
-$prototype=void setIconPixmap ( const QPixmap & pixmap )
-$method=|void|setIconPixmap|const QPixmap &
+$prototypeV2=void setIconPixmap( const QPixmap & pixmap )
 
-$prototype=void setInformativeText ( const QString & text )
-$method=|void|setInformativeText|const QString &
+$prototypeV2=void setInformativeText( const QString & text )
 
-$prototype=void setStandardButtons ( StandardButtons buttons )
-$method=|void|setStandardButtons|QMessageBox::StandardButtons
+$prototypeV2=void setStandardButtons( QMessageBox::StandardButtons buttons )
 
-$prototype=void setText ( const QString & text )
-$method=|void|setText|const QString &
+$prototypeV2=void setText( const QString & text )
 
-$prototype=void setTextFormat ( Qt::TextFormat format )
-$method=|void|setTextFormat|Qt::TextFormat
+$prototypeV2=void setTextFormat( Qt::TextFormat format )
 
-$prototype=void setWindowModality ( Qt::WindowModality windowModality )
-$method=|void|setWindowModality|Qt::WindowModality
+$prototypeV2=void setWindowModality( Qt::WindowModality windowModality )
 
-$prototype=void setWindowTitle ( const QString & title )
-$method=|void|setWindowTitle|const QString &
+$prototypeV2=void setWindowTitle( const QString & title )
 
-$prototype=StandardButton standardButton ( QAbstractButton * button ) const
-$method=|QMessageBox::StandardButton|standardButton|QAbstractButton *
+$prototypeV2=QMessageBox::StandardButton standardButton( QAbstractButton * button ) const
 
 $prototypeV2=QMessageBox::StandardButtons standardButtons() const
 
@@ -216,13 +202,11 @@ $prototypeV2=QString text() const
 
 $prototypeV2=Qt::TextFormat textFormat() const
 
-$prototype=virtual void setVisible ( bool visible )
-$virtualMethod=|void|setVisible|bool
+$prototypeV2=virtual void setVisible( bool visible )
 
 $prototypeV2=int exec()
 
-$prototype=static void about ( QWidget * parent, const QString & title, const QString & text )
-$staticMethod=|void|about|QWidget *,const QString &,const QString &
+$prototypeV2=static void about( QWidget * parent, const QString & title, const QString & text )
 
 $prototype=static void aboutQt ( QWidget * parent, const QString & title = QString() )
 $staticMethod=|void|aboutQt|QWidget *,const QString &=QString()

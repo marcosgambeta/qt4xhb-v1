@@ -29,18 +29,14 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QInputContext * create ( const QString & key ) = 0
-$virtualMethod=|QInputContext *|create|const QString &
+$prototypeV2=virtual QInputContext * create( const QString & key ) = 0
 
-$prototype=virtual QString description ( const QString & key ) = 0
-$virtualMethod=|QString|description|const QString &
+$prototypeV2=virtual QString description( const QString & key ) = 0
 
-$prototype=virtual QString displayName ( const QString & key ) = 0
-$virtualMethod=|QString|displayName|const QString &
+$prototypeV2=virtual QString displayName( const QString & key ) = 0
 
 $prototypeV2=virtual QStringList keys() const = 0
 
-$prototype=virtual QStringList languages ( const QString & key ) = 0
-$virtualMethod=|QStringList|languages|const QString &
+$prototypeV2=virtual QStringList languages( const QString & key ) = 0
 
 #pragma ENDDUMP

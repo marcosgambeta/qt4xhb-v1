@@ -84,28 +84,24 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QVector4D column ( int index ) const
-$method=|QVector4D|column|int
+$prototypeV2=QVector4D column( int index ) const
 
 $prototypeV2=qreal determinant() const
 
-$prototype=void fill ( qreal value )
-$method=|void|fill|qreal
+$prototypeV2=void fill( qreal value )
 
 $prototypeV2=void flipCoordinates()
 
-$prototype=void frustum ( qreal left, qreal right, qreal bottom, qreal top, qreal nearPlane, qreal farPlane )
-$method=|void|frustum|qreal,qreal,qreal,qreal,qreal,qreal
+$prototypeV2=void frustum( qreal left, qreal right, qreal bottom, qreal top, qreal nearPlane, qreal farPlane )
 
 $prototype=QMatrix4x4 inverted ( bool * invertible = 0 ) const
 $method=|QMatrix4x4|inverted|bool *=0
 
 $prototypeV2=bool isIdentity() const
 
-$prototype=void lookAt ( const QVector3D & eye, const QVector3D & center, const QVector3D & up )
-$method=|void|lookAt|const QVector3D &,const QVector3D &,const QVector3D &
+$prototypeV2=void lookAt( const QVector3D & eye, const QVector3D & center, const QVector3D & up )
 
-$prototype=QPoint map ( const QPoint & point ) const
+$prototypeV2=QPoint map( const QPoint & point ) const
 $internalMethod=|QPoint|map,map1|const QPoint &
 
 $prototype=QPointF map ( const QPointF & point ) const
@@ -177,8 +173,7 @@ HB_FUNC_STATIC( QMATRIX4X4_MAPRECT )
 }
 $addMethod=mapRect
 
-$prototype=QVector3D mapVector ( const QVector3D & vector ) const
-$method=|QVector3D|mapVector|const QVector3D &
+$prototypeV2=QVector3D mapVector( const QVector3D & vector ) const
 
 $prototypeV2=QMatrix3x3 normalMatrix() const
 
@@ -220,8 +215,7 @@ HB_FUNC_STATIC( QMATRIX4X4_ORTHO )
 }
 $addMethod=ortho
 
-$prototype=void perspective ( qreal angle, qreal aspect, qreal nearPlane, qreal farPlane )
-$method=|void|perspective|qreal,qreal,qreal,qreal
+$prototypeV2=void perspective( qreal angle, qreal aspect, qreal nearPlane, qreal farPlane )
 
 $prototype=void rotate ( qreal angle, const QVector3D & vector )
 $internalMethod=|void|rotate,rotate1|qreal,const QVector3D &
@@ -259,8 +253,7 @@ HB_FUNC_STATIC( QMATRIX4X4_ROTATE )
 }
 $addMethod=rotate
 
-$prototype=QVector4D row ( int index ) const
-$method=|QVector4D|row|int
+$prototypeV2=QVector4D row( int index ) const
 
 $prototype=void scale ( const QVector3D & vector )
 $internalMethod=|void|scale,scale1|const QVector3D &
@@ -306,11 +299,9 @@ HB_FUNC_STATIC( QMATRIX4X4_SCALE )
 }
 $addMethod=scale
 
-$prototype=void setColumn ( int index, const QVector4D & value )
-$method=|void|setColumn|int,const QVector4D &
+$prototypeV2=void setColumn( int index, const QVector4D & value )
 
-$prototype=void setRow ( int index, const QVector4D & value )
-$method=|void|setRow|int,const QVector4D &
+$prototypeV2=void setRow( int index, const QVector4D & value )
 
 $prototypeV2=void setToIdentity()
 

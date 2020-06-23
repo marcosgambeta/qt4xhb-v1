@@ -27,19 +27,16 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QString actionText ( int action, Text t, int child ) const = 0
-$virtualMethod=|QString|actionText|int,QAccessible::Text,int
+$prototypeV2=virtual QString actionText( int action, QAccessible::Text t, int child ) const = 0
 
-$prototype=virtual int childAt ( int x, int y ) const = 0
-$virtualMethod=|int|childAt|int,int
+$prototypeV2=virtual int childAt( int x, int y ) const = 0
 
 $prototypeV2=virtual int childCount() const = 0
 
 $prototype=virtual bool doAction ( int action, int child, const QVariantList & params = QVariantList() ) = 0
 $virtualMethod=|bool|doAction|int,int,const QVariantList &=QVariantList()
 
-$prototype=virtual int indexOfChild ( const QAccessibleInterface * child ) const = 0
-$virtualMethod=|int|indexOfChild|const QAccessibleInterface *
+$prototypeV2=virtual int indexOfChild( const QAccessibleInterface * child ) const = 0
 
 $prototype=QVariant invokeMethod ( Method method, int child = 0, const QVariantList & params = QVariantList() )
 $method=|QVariant|invokeMethod|QAccessible::Method,int=0,const QVariantList &=QVariantList()
@@ -48,25 +45,18 @@ $prototypeV2=virtual bool isValid() const = 0
 
 $prototypeV2=virtual QObject * object() const = 0
 
-$prototype=virtual QRect rect ( int child ) const = 0
-$virtualMethod=|QRect|rect|int
+$prototypeV2=virtual QRect rect( int child ) const = 0
 
-$prototype=virtual Relation relationTo ( int child, const QAccessibleInterface * other, int otherChild ) const = 0
-$virtualMethod=|QAccessible::Relation|relationTo|int,const QAccessibleInterface *,int
+$prototypeV2=virtual QAccessible::Relation relationTo( int child, const QAccessibleInterface * other, int otherChild ) const = 0
 
-$prototype=virtual Role role ( int child ) const = 0
-$virtualMethod=|QAccessible::Role|role|int
+$prototypeV2=virtual QAccessible::Role role( int child ) const = 0
 
-$prototype=virtual void setText ( Text t, int child, const QString & text ) = 0
-$virtualMethod=|void|setText|QAccessible::Text,int,const QString &
+$prototypeV2=virtual void setText( QAccessible::Text t, int child, const QString & text ) = 0
 
-$prototype=virtual State state ( int child ) const = 0
-$virtualMethod=|QAccessible::State|state|int
+$prototypeV2=virtual QAccessible::State state( int child ) const = 0
 
-$prototype=virtual QString text ( Text t, int child ) const = 0
-$virtualMethod=|QString|text|QAccessible::Text,int
+$prototypeV2=virtual QString text( QAccessible::Text t, int child ) const = 0
 
-$prototype=virtual int userActionCount ( int child ) const = 0
-$virtualMethod=|int|userActionCount|int
+$prototypeV2=virtual int userActionCount( int child ) const = 0
 
 #pragma ENDDUMP

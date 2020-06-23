@@ -30,30 +30,22 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=virtual QString displayText ( const QVariant & value, const QLocale & locale ) const
-$virtualMethod=|QString|displayText|const QVariant &,const QLocale &
+$prototypeV2=virtual QString displayText( const QVariant & value, const QLocale & locale ) const
 
 $prototypeV2=QItemEditorFactory * itemEditorFactory() const
 
-$prototype=void setItemEditorFactory ( QItemEditorFactory * factory )
-$method=|void|setItemEditorFactory|QItemEditorFactory *
+$prototypeV2=void setItemEditorFactory( QItemEditorFactory * factory )
 
-$prototype=virtual QWidget * createEditor ( QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index ) const
-$virtualMethod=|QWidget *|createEditor|QWidget *,const QStyleOptionViewItem &,const QModelIndex &
+$prototypeV2=virtual QWidget * createEditor( QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index ) const
 
-$prototype=virtual void paint ( QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index ) const
-$virtualMethod=|void|paint|QPainter *,const QStyleOptionViewItem &,const QModelIndex &
+$prototypeV2=virtual void paint( QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index ) const
 
-$prototype=virtual void setEditorData ( QWidget * editor, const QModelIndex & index ) const
-$virtualMethod=|void|setEditorData|QWidget *,const QModelIndex &
+$prototypeV2=virtual void setEditorData( QWidget * editor, const QModelIndex & index ) const
 
-$prototype=virtual void setModelData ( QWidget * editor, QAbstractItemModel * model, const QModelIndex & index ) const
-$virtualMethod=|void|setModelData|QWidget *,QAbstractItemModel *,const QModelIndex &
+$prototypeV2=virtual void setModelData( QWidget * editor, QAbstractItemModel * model, const QModelIndex & index ) const
 
-$prototype=virtual QSize sizeHint ( const QStyleOptionViewItem & option, const QModelIndex & index ) const
-$virtualMethod=|QSize|sizeHint|const QStyleOptionViewItem &,const QModelIndex &
+$prototypeV2=virtual QSize sizeHint( const QStyleOptionViewItem & option, const QModelIndex & index ) const
 
-$prototype=virtual void updateEditorGeometry ( QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index ) const
-$virtualMethod=|void|updateEditorGeometry|QWidget *,const QStyleOptionViewItem &,const QModelIndex &
+$prototypeV2=virtual void updateEditorGeometry( QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index ) const
 
 #pragma ENDDUMP

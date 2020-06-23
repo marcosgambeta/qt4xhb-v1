@@ -51,32 +51,23 @@ $prototypeV2=bool isChecked() const
 
 $prototypeV2=bool isDown() const
 
-$prototype=void setAutoExclusive ( bool )
-$method=|void|setAutoExclusive|bool
+$prototypeV2=void setAutoExclusive( bool )
 
-$prototype=void setAutoRepeat ( bool )
-$method=|void|setAutoRepeat|bool
+$prototypeV2=void setAutoRepeat( bool )
 
-$prototype=void setAutoRepeatDelay ( int )
-$method=|void|setAutoRepeatDelay|int
+$prototypeV2=void setAutoRepeatDelay( int )
 
-$prototype=void setAutoRepeatInterval ( int )
-$method=|void|setAutoRepeatInterval|int
+$prototypeV2=void setAutoRepeatInterval( int )
 
-$prototype=void setCheckable ( bool )
-$method=|void|setCheckable|bool
+$prototypeV2=void setCheckable( bool )
 
-$prototype=void setDown ( bool )
-$method=|void|setDown|bool
+$prototypeV2=void setDown( bool )
 
-$prototype=void setIcon ( const QIcon & icon )
-$method=|void|setIcon|const QIcon &
+$prototypeV2=void setIcon( const QIcon & icon )
 
-$prototype=void setShortcut ( const QKeySequence & key )
-$method=|void|setShortcut|const QKeySequence &
+$prototypeV2=void setShortcut( const QKeySequence & key )
 
-$prototype=void setText ( const QString & text )
-$method=|void|setText|const QString &
+$prototypeV2=void setText( const QString & text )
 
 $prototypeV2=QKeySequence shortcut() const
 
@@ -87,11 +78,9 @@ $method=|void|animateClick|int=100
 
 $prototypeV2=void click()
 
-$prototype=void setChecked ( bool )
-$method=|void|setChecked|bool
+$prototypeV2=void setChecked( bool )
 
-$prototype=void setIconSize ( const QSize & size )
-$method=|void|setIconSize|const QSize &
+$prototypeV2=void setIconSize( const QSize & size )
 
 $prototypeV2=void toggle()
 

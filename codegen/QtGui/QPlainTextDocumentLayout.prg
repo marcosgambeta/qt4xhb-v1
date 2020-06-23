@@ -32,24 +32,19 @@ $deleteMethod
 
 $prototypeV2=int cursorWidth() const
 
-$prototype=void ensureBlockLayout ( const QTextBlock & block ) const
-$method=|void|ensureBlockLayout|const QTextBlock &
+$prototypeV2=void ensureBlockLayout( const QTextBlock & block ) const
 
 $prototypeV2=void requestUpdate()
 
-$prototype=void setCursorWidth ( int width )
-$method=|void|setCursorWidth|int
+$prototypeV2=void setCursorWidth( int width )
 
-$prototype=virtual QRectF blockBoundingRect ( const QTextBlock & block ) const
-$virtualMethod=|QRectF|blockBoundingRect|const QTextBlock &
+$prototypeV2=virtual QRectF blockBoundingRect( const QTextBlock & block ) const
 
 $prototypeV2=virtual QSizeF documentSize() const
 
-$prototype=virtual QRectF frameBoundingRect ( QTextFrame * ) const
-$virtualMethod=|QRectF|frameBoundingRect|QTextFrame *
+$prototypeV2=virtual QRectF frameBoundingRect( QTextFrame * ) const
 
-$prototype=virtual int hitTest ( const QPointF &, Qt::HitTestAccuracy ) const
-$virtualMethod=|int|hitTest|const QPointF &,Qt::HitTestAccuracy
+$prototypeV2=virtual int hitTest( const QPointF &, Qt::HitTestAccuracy ) const
 
 $prototypeV2=virtual int pageCount() const
 

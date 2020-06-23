@@ -30,20 +30,15 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=virtual QWidget * createEditor ( QVariant::Type type, QWidget * parent ) const
-$virtualMethod=|QWidget *|createEditor|QVariant::Type,QWidget *
+$prototypeV2=virtual QWidget * createEditor( QVariant::Type type, QWidget * parent ) const
 
-$prototype=void registerEditor ( QVariant::Type type, QItemEditorCreatorBase * creator )
-$method=|void|registerEditor|QVariant::Type,QItemEditorCreatorBase *
+$prototypeV2=void registerEditor( QVariant::Type type, QItemEditorCreatorBase * creator )
 
-$prototype=virtual QByteArray valuePropertyName ( QVariant::Type type ) const
-$virtualMethod=|QByteArray|valuePropertyName|QVariant::Type
+$prototypeV2=virtual QByteArray valuePropertyName( QVariant::Type type ) const
 
-$prototype=static const QItemEditorFactory * defaultFactory ()
-$staticMethod=|const QItemEditorFactory *|defaultFactory|
+$prototypeV2=static const QItemEditorFactory * defaultFactory ()
 
-$prototype=static void setDefaultFactory ( QItemEditorFactory * factory )
-$staticMethod=|void|setDefaultFactory|QItemEditorFactory *
+$prototypeV2=static void setDefaultFactory( QItemEditorFactory * factory )
 
 $extraMethods
 

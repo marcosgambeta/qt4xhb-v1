@@ -59,10 +59,8 @@ $prototypeV2=int key() const
 
 $prototypeV2=Qt::KeyboardModifiers modifierMask() const
 
-$prototype=void setKey ( int key )
-$method=|void|setKey|int
+$prototypeV2=void setKey( int key )
 
-$prototype=void setModifierMask ( Qt::KeyboardModifiers modifierMask )
-$method=|void|setModifierMask|Qt::KeyboardModifiers
+$prototypeV2=void setModifierMask( Qt::KeyboardModifiers modifierMask )
 
 #pragma ENDDUMP

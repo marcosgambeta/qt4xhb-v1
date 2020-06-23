@@ -38,14 +38,11 @@ $method=|void|ensureVisible|int,int,int=50,int=50
 $prototype=void ensureWidgetVisible ( QWidget * childWidget, int xmargin = 50, int ymargin = 50 )
 $method=|void|ensureWidgetVisible|QWidget *,int=50,int=50
 
-$prototype=void setAlignment ( Qt::Alignment )
-$method=|void|setAlignment|Qt::Alignment
+$prototypeV2=void setAlignment( Qt::Alignment )
 
-$prototype=void setWidget ( QWidget * widget )
-$method=|void|setWidget|QWidget *
+$prototypeV2=void setWidget( QWidget * widget )
 
-$prototype=void setWidgetResizable ( bool resizable )
-$method=|void|setWidgetResizable|bool
+$prototypeV2=void setWidgetResizable( bool resizable )
 
 $prototypeV2=QWidget * takeWidget()
 
@@ -53,8 +50,7 @@ $prototypeV2=QWidget * widget() const
 
 $prototypeV2=bool widgetResizable() const
 
-$prototype=virtual bool focusNextPrevChild ( bool next )
-$virtualMethod=|bool|focusNextPrevChild|bool
+$prototypeV2=virtual bool focusNextPrevChild( bool next )
 
 $prototypeV2=virtual QSize sizeHint() const
 

@@ -67,26 +67,19 @@ $prototypeV2=Qt::Alignment alignment() const
 
 $prototypeV2=QTextOption::Flags flags() const
 
-$prototype=void setAlignment ( Qt::Alignment alignment )
-$method=|void|setAlignment|Qt::Alignment
+$prototypeV2=void setAlignment( Qt::Alignment alignment )
 
-$prototype=void setFlags ( Flags flags )
-$method=|void|setFlags|QTextOption::Flags
+$prototypeV2=void setFlags( QTextOption::Flags flags )
 
-$prototype=void setTabArray ( QList<qreal> tabStops )
-$method=|void|setTabArray|QList<qreal>
+$prototypeV2=void setTabArray( QList<qreal> tabStops )
 
-$prototype=void setTabStop ( qreal tabStop )
-$method=|void|setTabStop|qreal
+$prototypeV2=void setTabStop( qreal tabStop )
 
-$prototype=void setTextDirection ( Qt::LayoutDirection direction )
-$method=|void|setTextDirection|Qt::LayoutDirection
+$prototypeV2=void setTextDirection( Qt::LayoutDirection direction )
 
-$prototype=void setUseDesignMetrics ( bool enable )
-$method=|void|setUseDesignMetrics|bool
+$prototypeV2=void setUseDesignMetrics( bool enable )
 
-$prototype=void setWrapMode ( WrapMode mode )
-$method=|void|setWrapMode|QTextOption::WrapMode
+$prototypeV2=void setWrapMode( QTextOption::WrapMode mode )
 
 $prototypeV2=QList<qreal> tabArray() const
 

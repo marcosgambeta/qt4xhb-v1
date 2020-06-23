@@ -83,8 +83,7 @@ $deleteMethod
 
 $prototypeV2=void clear()
 
-$prototype=QBitmap transformed ( const QTransform & matrix ) const
-$method=|QBitmap|transformed|const QTransform &
+$prototypeV2=QBitmap transformed( const QTransform & matrix ) const
 
 $prototype=static QBitmap fromData ( const QSize & size, const uchar * bits, QImage::Format monoFormat = QImage::Format_MonoLSB )
 $staticMethod=|QBitmap|fromData|const QSize &,const uchar *,QImage::Format=QImage::Format_MonoLSB

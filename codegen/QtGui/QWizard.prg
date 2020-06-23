@@ -35,82 +35,60 @@ $constructor=|new|QWidget *=0,Qt::WindowFlags=0
 
 $deleteMethod
 
-$prototype=int addPage ( QWizardPage * page )
-$method=|int|addPage|QWizardPage *
+$prototypeV2=int addPage( QWizardPage * page )
 
-$prototype=QAbstractButton * button ( WizardButton which ) const
-$method=|QAbstractButton *|button|QWizard::WizardButton
+$prototypeV2=QAbstractButton * button( QWizard::WizardButton which ) const
 
-$prototype=QString buttonText ( WizardButton which ) const
-$method=|QString|buttonText|QWizard::WizardButton
+$prototypeV2=QString buttonText( QWizard::WizardButton which ) const
 
 $prototypeV2=int currentId() const
 
 $prototypeV2=QWizardPage * currentPage() const
 
-$prototype=QVariant field ( const QString & name ) const
-$method=|QVariant|field|const QString &
+$prototypeV2=QVariant field( const QString & name ) const
 
-$prototype=bool hasVisitedPage ( int id ) const
-$method=|bool|hasVisitedPage|int
+$prototypeV2=bool hasVisitedPage( int id ) const
 
 $prototypeV2=virtual int nextId() const
 
 $prototypeV2=QWizard::WizardOptions options() const
 
-$prototype=QWizardPage * page ( int id ) const
-$method=|QWizardPage *|page|int
+$prototypeV2=QWizardPage * page( int id ) const
 
-$prototype=QList<int> pageIds () const
-$method=|QList<int>|pageIds|
+$prototypeV2=QList<int> pageIds() const
 
-$prototype=QPixmap pixmap ( WizardPixmap which ) const
-$method=|QPixmap|pixmap|QWizard::WizardPixmap
+$prototypeV2=QPixmap pixmap( QWizard::WizardPixmap which ) const
 
-$prototype=void removePage ( int id )
-$method=|void|removePage|int
+$prototypeV2=void removePage( int id )
 
-$prototype=void setButton ( WizardButton which, QAbstractButton * button )
-$method=|void|setButton|QWizard::WizardButton,QAbstractButton *
+$prototypeV2=void setButton( QWizard::WizardButton which, QAbstractButton * button )
 
-$prototype=void setButtonLayout ( const QList<WizardButton> & layout )
-$method=|void|setButtonLayout|const QList<QWizard::WizardButton> &
+$prototypeV2=void setButtonLayout( const QList<WizardButton> & layout )
 
-$prototype=void setButtonText ( WizardButton which, const QString & text )
-$method=|void|setButtonText|QWizard::WizardButton,const QString &
+$prototypeV2=void setButtonText( QWizard::WizardButton which, const QString & text )
 
-$prototype=void setDefaultProperty ( const char * className, const char * property, const char * changedSignal )
-$method=|void|setDefaultProperty|const char *,const char *,const char *
+$prototypeV2=void setDefaultProperty( const char * className, const char * property, const char * changedSignal )
 
-$prototype=void setField ( const QString & name, const QVariant & value )
-$method=|void|setField|const QString &,const QVariant &
+$prototypeV2=void setField( const QString & name, const QVariant & value )
 
 $prototype=void setOption ( WizardOption option, bool on = true )
 $method=|void|setOption|QWizard::WizardOption,bool=true
 
-$prototype=void setOptions ( WizardOptions options )
-$method=|void|setOptions|QWizard::WizardOptions
+$prototypeV2=void setOptions( QWizard::WizardOptions options )
 
-$prototype=void setPage ( int id, QWizardPage * page )
-$method=|void|setPage|int,QWizardPage *
+$prototypeV2=void setPage( int id, QWizardPage * page )
 
-$prototype=void setPixmap ( WizardPixmap which, const QPixmap & pixmap )
-$method=|void|setPixmap|QWizard::WizardPixmap,const QPixmap &
+$prototypeV2=void setPixmap( QWizard::WizardPixmap which, const QPixmap & pixmap )
 
-$prototype=void setSideWidget ( QWidget * widget )
-$method=|void|setSideWidget|QWidget *
+$prototypeV2=void setSideWidget( QWidget * widget )
 
-$prototype=void setStartId ( int id )
-$method=|void|setStartId|int
+$prototypeV2=void setStartId( int id )
 
-$prototype=void setSubTitleFormat ( Qt::TextFormat format )
-$method=|void|setSubTitleFormat|Qt::TextFormat
+$prototypeV2=void setSubTitleFormat( Qt::TextFormat format )
 
-$prototype=void setTitleFormat ( Qt::TextFormat format )
-$method=|void|setTitleFormat|Qt::TextFormat
+$prototypeV2=void setTitleFormat( Qt::TextFormat format )
 
-$prototype=void setWizardStyle ( WizardStyle style )
-$method=|void|setWizardStyle|QWizard::WizardStyle
+$prototypeV2=void setWizardStyle( QWizard::WizardStyle style )
 
 $prototypeV2=QWidget * sideWidget() const
 
@@ -118,8 +96,7 @@ $prototypeV2=int startId() const
 
 $prototypeV2=Qt::TextFormat subTitleFormat() const
 
-$prototype=bool testOption ( WizardOption option ) const
-$method=|bool|testOption|QWizard::WizardOption
+$prototypeV2=bool testOption( QWizard::WizardOption option ) const
 
 $prototypeV2=Qt::TextFormat titleFormat() const
 
@@ -129,8 +106,7 @@ $prototypeV2=QList<int> visitedPages() const
 
 $prototypeV2=QWizard::WizardStyle wizardStyle() const
 
-$prototype=virtual void setVisible ( bool visible )
-$virtualMethod=|void|setVisible|bool
+$prototypeV2=virtual void setVisible( bool visible )
 
 $prototypeV2=virtual QSize sizeHint() const
 

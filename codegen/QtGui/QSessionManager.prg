@@ -47,8 +47,7 @@ $prototypeV2=QString sessionId() const
 
 $prototypeV2=QString sessionKey() const
 
-$prototype=void setDiscardCommand ( const QStringList & list )
-$method=|void|setDiscardCommand|const QStringList &
+$prototypeV2=void setDiscardCommand( const QStringList & list )
 
 $prototype=void setManagerProperty ( const QString & name, const QStringList & value )
 $internalMethod=|void|setManagerProperty,setManagerProperty1|const QString &,const QStringList &
@@ -78,10 +77,8 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY )
 }
 $addMethod=setManagerProperty
 
-$prototype=void setRestartCommand ( const QStringList & command )
-$method=|void|setRestartCommand|const QStringList &
+$prototypeV2=void setRestartCommand( const QStringList & command )
 
-$prototype=void setRestartHint ( RestartHint hint )
-$method=|void|setRestartHint|QSessionManager::RestartHint
+$prototypeV2=void setRestartHint( QSessionManager::RestartHint hint )
 
 #pragma ENDDUMP

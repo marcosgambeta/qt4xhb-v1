@@ -30,8 +30,7 @@ $includes
 $prototype=QWizardPage ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 
-$prototype=QString buttonText ( QWizard::WizardButton which ) const
-$method=|QString|buttonText|QWizard::WizardButton
+$prototypeV2=QString buttonText( QWizard::WizardButton which ) const
 
 $prototypeV2=virtual void cleanupPage()
 
@@ -45,26 +44,19 @@ $prototypeV2=bool isFinalPage() const
 
 $prototypeV2=virtual int nextId() const
 
-$prototype=QPixmap pixmap ( QWizard::WizardPixmap which ) const
-$method=|QPixmap|pixmap|QWizard::WizardPixmap
+$prototypeV2=QPixmap pixmap( QWizard::WizardPixmap which ) const
 
-$prototype=void setButtonText ( QWizard::WizardButton which, const QString & text )
-$method=|void|setButtonText|QWizard::WizardButton,const QString &
+$prototypeV2=void setButtonText( QWizard::WizardButton which, const QString & text )
 
-$prototype=void setCommitPage ( bool commitPage )
-$method=|void|setCommitPage|bool
+$prototypeV2=void setCommitPage( bool commitPage )
 
-$prototype=void setFinalPage ( bool finalPage )
-$method=|void|setFinalPage|bool
+$prototypeV2=void setFinalPage( bool finalPage )
 
-$prototype=void setPixmap ( QWizard::WizardPixmap which, const QPixmap & pixmap )
-$method=|void|setPixmap|QWizard::WizardPixmap,const QPixmap &
+$prototypeV2=void setPixmap( QWizard::WizardPixmap which, const QPixmap & pixmap )
 
-$prototype=void setSubTitle ( const QString & subTitle )
-$method=|void|setSubTitle|const QString &
+$prototypeV2=void setSubTitle( const QString & subTitle )
 
-$prototype=void setTitle ( const QString & title )
-$method=|void|setTitle|const QString &
+$prototypeV2=void setTitle( const QString & title )
 
 $prototypeV2=QString subTitle() const
 

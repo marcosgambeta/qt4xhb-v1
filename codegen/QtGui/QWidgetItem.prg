@@ -36,8 +36,7 @@ $prototypeV2=virtual QRect geometry() const
 
 $prototypeV2=virtual bool hasHeightForWidth() const
 
-$prototype=virtual int heightForWidth ( int w ) const
-$virtualMethod=|int|heightForWidth|int
+$prototypeV2=virtual int heightForWidth( int w ) const
 
 $prototypeV2=virtual bool isEmpty() const
 
@@ -45,8 +44,7 @@ $prototypeV2=virtual QSize maximumSize() const
 
 $prototypeV2=virtual QSize minimumSize() const
 
-$prototype=virtual void setGeometry ( const QRect & rect )
-$virtualMethod=|void|setGeometry|const QRect &
+$prototypeV2=virtual void setGeometry( const QRect & rect )
 
 $prototypeV2=virtual QSize sizeHint() const
 

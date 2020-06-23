@@ -107,11 +107,9 @@ $prototypeV2=int height() const
 
 $prototypeV2=QModelIndexList indexes() const
 
-$prototype=QItemSelectionRange intersected ( const QItemSelectionRange & other ) const
-$method=|QItemSelectionRange|intersected|const QItemSelectionRange &
+$prototypeV2=QItemSelectionRange intersected( const QItemSelectionRange & other ) const
 
-$prototype=bool intersects ( const QItemSelectionRange & other ) const
-$method=|bool|intersects|const QItemSelectionRange &
+$prototypeV2=bool intersects( const QItemSelectionRange & other ) const
 
 $prototypeV2=bool isEmpty() const
 
@@ -119,8 +117,7 @@ $prototypeV2=bool isValid() const
 
 $prototypeV2=int left() const
 
-$prototype=const QAbstractItemModel * model () const
-$method=|const QAbstractItemModel *|model|
+$prototypeV2=const QAbstractItemModel * model() const
 
 $prototypeV2=QModelIndex parent() const
 

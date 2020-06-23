@@ -93,11 +93,9 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETRECT )
 }
 $addMethod=setRect
 
-$prototype=void setSpanAngle ( int angle )
-$method=|void|setSpanAngle|int
+$prototypeV2=void setSpanAngle( int angle )
 
-$prototype=void setStartAngle ( int angle )
-$method=|void|setStartAngle|int
+$prototypeV2=void setStartAngle( int angle )
 
 $prototypeV2=int spanAngle() const
 
@@ -105,11 +103,9 @@ $prototypeV2=int startAngle() const
 
 $prototypeV2=virtual QRectF boundingRect() const
 
-$prototype=virtual bool contains ( const QPointF & point ) const
-$virtualMethod=|bool|contains|const QPointF &
+$prototypeV2=virtual bool contains( const QPointF & point ) const
 
-$prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
-$virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
+$prototypeV2=virtual bool isObscuredBy( const QGraphicsItem * item ) const
 
 $prototypeV2=virtual QPainterPath opaqueArea() const
 

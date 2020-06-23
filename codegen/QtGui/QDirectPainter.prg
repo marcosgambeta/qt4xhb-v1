@@ -60,8 +60,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_ENDPAINTING )
 }
 $addMethod=endPainting
 
-$prototype=void flush ( const QRegion & region )
-$method=|void|flush|const QRegion &
+$prototypeV2=void flush( const QRegion & region )
 
 $prototypeV2=QRect geometry() const
 
@@ -69,16 +68,13 @@ $prototypeV2=void lower()
 
 $prototypeV2=void raise()
 
-$prototype=virtual void regionChanged ( const QRegion & newRegion )
-$virtualMethod=|void|regionChanged|const QRegion &
+$prototypeV2=virtual void regionChanged( const QRegion & newRegion )
 
 $prototypeV2=QRegion requestedRegion() const
 
-$prototype=void setGeometry ( const QRect & rectangle )
-$method=|void|setGeometry|const QRect &
+$prototypeV2=void setGeometry( const QRect & rectangle )
 
-$prototype=void setRegion ( const QRegion & region )
-$method=|void|setRegion|const QRegion &
+$prototypeV2=void setRegion( const QRegion & region )
 
 $prototype=void startPainting ( bool lockDisplay = true )
 $method=|void|startPainting|bool=true

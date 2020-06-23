@@ -34,8 +34,7 @@ $method=|QSizeF|effectiveSizeHint|Qt::SizeHint,const QSizeF &=QSizeF()
 
 $prototypeV2=QRectF geometry() const
 
-$prototype=virtual void getContentsMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
-$virtualMethod=|void|getContentsMargins|qreal *,qreal *,qreal *,qreal *
+$prototypeV2=virtual void getContentsMargins( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
 
 $prototypeV2=QGraphicsItem * graphicsItem() const
 
@@ -63,11 +62,9 @@ $prototypeV2=QSizeF preferredSize() const
 
 $prototypeV2=qreal preferredWidth() const
 
-$prototype=virtual void setGeometry ( const QRectF & rect )
-$virtualMethod=|void|setGeometry|const QRectF &
+$prototypeV2=virtual void setGeometry( const QRectF & rect )
 
-$prototype=void setMaximumHeight ( qreal height )
-$method=|void|setMaximumHeight|qreal
+$prototypeV2=void setMaximumHeight( qreal height )
 
 $prototype=void setMaximumSize ( const QSizeF & size )
 $internalMethod=|void|setMaximumSize,setMaximumSize1|const QSizeF &
@@ -97,11 +94,9 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMSIZE )
 }
 $addMethod=setMaximumSize
 
-$prototype=void setMaximumWidth ( qreal width )
-$method=|void|setMaximumWidth|qreal
+$prototypeV2=void setMaximumWidth( qreal width )
 
-$prototype=void setMinimumHeight ( qreal height )
-$method=|void|setMinimumHeight|qreal
+$prototypeV2=void setMinimumHeight( qreal height )
 
 $prototype=void setMinimumSize ( const QSizeF & size )
 $internalMethod=|void|setMinimumSize,setMinimumSize1|const QSizeF &
@@ -131,14 +126,11 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMSIZE )
 }
 $addMethod=setMinimumSize
 
-$prototype=void setMinimumWidth ( qreal width )
-$method=|void|setMinimumWidth|qreal
+$prototypeV2=void setMinimumWidth( qreal width )
 
-$prototype=void setParentLayoutItem ( QGraphicsLayoutItem * parent )
-$method=|void|setParentLayoutItem|QGraphicsLayoutItem *
+$prototypeV2=void setParentLayoutItem( QGraphicsLayoutItem * parent )
 
-$prototype=void setPreferredHeight ( qreal height )
-$method=|void|setPreferredHeight|qreal
+$prototypeV2=void setPreferredHeight( qreal height )
 
 $prototype=void setPreferredSize ( const QSizeF & size )
 $internalMethod=|void|setPreferredSize,setPreferredSize1|const QSizeF &
@@ -168,8 +160,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDSIZE )
 }
 $addMethod=setPreferredSize
 
-$prototype=void setPreferredWidth ( qreal width )
-$method=|void|setPreferredWidth|qreal
+$prototypeV2=void setPreferredWidth( qreal width )
 
 $prototype=void setSizePolicy ( const QSizePolicy & policy )
 $internalMethod=|void|setSizePolicy,setSizePolicy1|const QSizePolicy &

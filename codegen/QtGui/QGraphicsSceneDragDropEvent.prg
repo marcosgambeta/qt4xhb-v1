@@ -35,8 +35,7 @@ $prototypeV2=Qt::MouseButtons buttons() const
 
 $prototypeV2=Qt::DropAction dropAction() const
 
-$prototype=const QMimeData * mimeData () const
-$method=|const QMimeData *|mimeData|
+$prototypeV2=const QMimeData * mimeData() const
 
 $prototypeV2=Qt::KeyboardModifiers modifiers() const
 
@@ -50,8 +49,7 @@ $prototypeV2=QPointF scenePos() const
 
 $prototypeV2=QPoint screenPos() const
 
-$prototype=void setDropAction ( Qt::DropAction action )
-$method=|void|setDropAction|Qt::DropAction
+$prototypeV2=void setDropAction( Qt::DropAction action )
 
 $prototypeV2=QWidget * source() const
 

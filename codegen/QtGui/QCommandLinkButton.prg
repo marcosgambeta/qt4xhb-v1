@@ -63,12 +63,10 @@ $addMethod=new
 
 $prototypeV2=QString description() const
 
-$prototype=void setDescription ( const QString & description )
-$method=|void|setDescription|const QString &
+$prototypeV2=void setDescription( const QString & description )
 
 $prototypeV2=bool isFlat() const
 
-$prototype=void setFlat ( bool )
-$method=|void|setFlat|bool
+$prototypeV2=void setFlat( bool )
 
 #pragma ENDDUMP

@@ -114,58 +114,43 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDWIDGET )
 }
 $addMethod=addWidget
 
-$prototype=QRect cellRect ( int row, int column ) const
-$method=|QRect|cellRect|int,int
+$prototypeV2=QRect cellRect( int row, int column ) const
 
 $prototypeV2=int columnCount() const
 
-$prototype=int columnMinimumWidth ( int column ) const
-$method=|int|columnMinimumWidth|int
+$prototypeV2=int columnMinimumWidth( int column ) const
 
-$prototype=int columnStretch ( int column ) const
-$method=|int|columnStretch|int
+$prototypeV2=int columnStretch( int column ) const
 
-$prototype=void getItemPosition ( int index, int * row, int * column, int * rowSpan, int * columnSpan )
-$method=|void|getItemPosition|int,int *,int *,int *,int *
+$prototypeV2=void getItemPosition( int index, int * row, int * column, int * rowSpan, int * columnSpan )
 
 $prototypeV2=int horizontalSpacing() const
 
-$prototype=QLayoutItem * itemAtPosition ( int row, int column ) const
-$method=|QLayoutItem *|itemAtPosition|int,int
+$prototypeV2=QLayoutItem * itemAtPosition( int row, int column ) const
 
 $prototypeV2=Qt::Corner originCorner() const
 
 $prototypeV2=int rowCount() const
 
-$prototype=int rowMinimumHeight ( int row ) const
-$method=|int|rowMinimumHeight|int
+$prototypeV2=int rowMinimumHeight( int row ) const
 
-$prototype=int rowStretch ( int row ) const
-$method=|int|rowStretch|int
+$prototypeV2=int rowStretch( int row ) const
 
-$prototype=void setColumnMinimumWidth ( int column, int minSize )
-$method=|void|setColumnMinimumWidth|int,int
+$prototypeV2=void setColumnMinimumWidth( int column, int minSize )
 
-$prototype=void setColumnStretch ( int column, int stretch )
-$method=|void|setColumnStretch|int,int
+$prototypeV2=void setColumnStretch( int column, int stretch )
 
-$prototype=void setHorizontalSpacing ( int spacing )
-$method=|void|setHorizontalSpacing|int
+$prototypeV2=void setHorizontalSpacing( int spacing )
 
-$prototype=void setOriginCorner ( Qt::Corner corner )
-$method=|void|setOriginCorner|Qt::Corner
+$prototypeV2=void setOriginCorner( Qt::Corner corner )
 
-$prototype=void setRowMinimumHeight ( int row, int minSize )
-$method=|void|setRowMinimumHeight|int,int
+$prototypeV2=void setRowMinimumHeight( int row, int minSize )
 
-$prototype=void setRowStretch ( int row, int stretch )
-$method=|void|setRowStretch|int,int
+$prototypeV2=void setRowStretch( int row, int stretch )
 
-$prototype=void setSpacing ( int spacing )
-$method=|void|setSpacing|int
+$prototypeV2=void setSpacing( int spacing )
 
-$prototype=void setVerticalSpacing ( int spacing )
-$method=|void|setVerticalSpacing|int
+$prototypeV2=void setVerticalSpacing( int spacing )
 
 $prototypeV2=int spacing() const
 
@@ -177,27 +162,22 @@ $prototypeV2=virtual Qt::Orientations expandingDirections() const
 
 $prototypeV2=virtual bool hasHeightForWidth() const
 
-$prototype=virtual int heightForWidth ( int w ) const
-$virtualMethod=|int|heightForWidth|int
+$prototypeV2=virtual int heightForWidth( int w ) const
 
 $prototypeV2=virtual void invalidate()
 
-$prototype=virtual QLayoutItem * itemAt ( int index ) const
-$virtualMethod=|QLayoutItem *|itemAt|int
+$prototypeV2=virtual QLayoutItem * itemAt( int index ) const
 
 $prototypeV2=virtual QSize maximumSize() const
 
-$prototype=virtual int minimumHeightForWidth ( int w ) const
-$virtualMethod=|int|minimumHeightForWidth|int
+$prototypeV2=virtual int minimumHeightForWidth( int w ) const
 
 $prototypeV2=virtual QSize minimumSize() const
 
-$prototype=virtual void setGeometry ( const QRect & rect )
-$virtualMethod=|void|setGeometry|const QRect &
+$prototypeV2=virtual void setGeometry( const QRect & rect )
 
 $prototypeV2=virtual QSize sizeHint() const
 
-$prototype=virtual QLayoutItem * takeAt ( int index )
-$virtualMethod=|QLayoutItem *|takeAt|int
+$prototypeV2=virtual QLayoutItem * takeAt( int index )
 
 #pragma ENDDUMP

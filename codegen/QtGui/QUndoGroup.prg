@@ -37,8 +37,7 @@ $deleteMethod
 
 $prototypeV2=QUndoStack * activeStack() const
 
-$prototype=void addStack ( QUndoStack * stack )
-$method=|void|addStack|QUndoStack *
+$prototypeV2=void addStack( QUndoStack * stack )
 
 $prototypeV2=bool canRedo() const
 
@@ -54,8 +53,7 @@ $prototypeV2=bool isClean() const
 
 $prototypeV2=QString redoText() const
 
-$prototype=void removeStack ( QUndoStack * stack )
-$method=|void|removeStack|QUndoStack *
+$prototypeV2=void removeStack( QUndoStack * stack )
 
 $prototypeV2=QList<QUndoStack *> stacks() const
 
@@ -63,8 +61,7 @@ $prototypeV2=QString undoText() const
 
 $prototypeV2=void redo()
 
-$prototype=void setActiveStack ( QUndoStack * stack )
-$method=|void|setActiveStack|QUndoStack *
+$prototypeV2=void setActiveStack( QUndoStack * stack )
 
 $prototypeV2=void undo()
 

@@ -36,11 +36,9 @@ $deleteMethod
 
 $prototypeV2=QList<QAction *> actions() const
 
-$prototype=void addAction ( QAction * action )
-$method=|void|addAction|QAction *
+$prototypeV2=void addAction( QAction * action )
 
-$prototype=void addActions ( QList<QAction *> actions )
-$method=|void|addActions|QList<QAction *>
+$prototypeV2=void addActions( QList<QAction *> actions )
 
 $prototypeV2=void adjustSize()
 
@@ -58,11 +56,9 @@ $method=|void|getWindowFrameMargins|qreal *,qreal *,qreal *,qreal *
 $prototype=int grabShortcut ( const QKeySequence & sequence, Qt::ShortcutContext context = Qt::WindowShortcut )
 $method=|int|grabShortcut|const QKeySequence &,Qt::ShortcutContext=Qt::WindowShortcut
 
-$prototype=void insertAction ( QAction * before, QAction * action )
-$method=|void|insertAction|QAction *,QAction *
+$prototypeV2=void insertAction( QAction * before, QAction * action )
 
-$prototype=void insertActions ( QAction * before, QList<QAction *> actions )
-$method=|void|insertActions|QAction *,QList<QAction *>
+$prototypeV2=void insertActions( QAction * before, QList<QAction *> actions )
 
 $prototypeV2=bool isActiveWindow() const
 
@@ -77,11 +73,9 @@ $prototypeV2=QPalette palette() const
 
 $prototypeV2=QRectF rect() const
 
-$prototype=void releaseShortcut ( int id )
-$method=|void|releaseShortcut|int
+$prototypeV2=void releaseShortcut( int id )
 
-$prototype=void removeAction ( QAction * action )
-$method=|void|removeAction|QAction *
+$prototypeV2=void removeAction( QAction * action )
 
 $prototype=void resize ( const QSizeF & size )
 $internalMethod=|void|resize,resize1|const QSizeF &
@@ -114,26 +108,19 @@ $addMethod=resize
 $prototype=void setAttribute ( Qt::WidgetAttribute attribute, bool on = true )
 $method=|void|setAttribute|Qt::WidgetAttribute,bool=true
 
-$prototype=void setAutoFillBackground ( bool enabled )
-$method=|void|setAutoFillBackground|bool
+$prototypeV2=void setAutoFillBackground( bool enabled )
 
-$prototype=void setContentsMargins ( qreal left, qreal top, qreal right, qreal bottom )
-$method=|void|setContentsMargins|qreal,qreal,qreal,qreal
+$prototypeV2=void setContentsMargins( qreal left, qreal top, qreal right, qreal bottom )
 
-$prototype=void setFocusPolicy ( Qt::FocusPolicy policy )
-$method=|void|setFocusPolicy|Qt::FocusPolicy
+$prototypeV2=void setFocusPolicy( Qt::FocusPolicy policy )
 
-$prototype=void setFont ( const QFont & font )
-$method=|void|setFont|const QFont &
+$prototypeV2=void setFont( const QFont & font )
 
-$prototype=void setLayout ( QGraphicsLayout * layout )
-$method=|void|setLayout|QGraphicsLayout *
+$prototypeV2=void setLayout( QGraphicsLayout * layout )
 
-$prototype=void setLayoutDirection ( Qt::LayoutDirection direction )
-$method=|void|setLayoutDirection|Qt::LayoutDirection
+$prototypeV2=void setLayoutDirection( Qt::LayoutDirection direction )
 
-$prototype=void setPalette ( const QPalette & palette )
-$method=|void|setPalette|const QPalette &
+$prototypeV2=void setPalette( const QPalette & palette )
 
 $prototype=void setShortcutAutoRepeat ( int id, bool enabled = true )
 $method=|void|setShortcutAutoRepeat|int,bool=true
@@ -141,24 +128,19 @@ $method=|void|setShortcutAutoRepeat|int,bool=true
 $prototype=void setShortcutEnabled ( int id, bool enabled = true )
 $method=|void|setShortcutEnabled|int,bool=true
 
-$prototype=void setStyle ( QStyle * style )
-$method=|void|setStyle|QStyle *
+$prototypeV2=void setStyle( QStyle * style )
 
-$prototype=void setWindowFlags ( Qt::WindowFlags wFlags )
-$method=|void|setWindowFlags|Qt::WindowFlags
+$prototypeV2=void setWindowFlags( Qt::WindowFlags wFlags )
 
-$prototype=void setWindowFrameMargins ( qreal left, qreal top, qreal right, qreal bottom )
-$method=|void|setWindowFrameMargins|qreal,qreal,qreal,qreal
+$prototypeV2=void setWindowFrameMargins( qreal left, qreal top, qreal right, qreal bottom )
 
-$prototype=void setWindowTitle ( const QString & title )
-$method=|void|setWindowTitle|const QString &
+$prototypeV2=void setWindowTitle( const QString & title )
 
 $prototypeV2=QSizeF size() const
 
 $prototypeV2=QStyle * style() const
 
-$prototype=bool testAttribute ( Qt::WidgetAttribute attribute ) const
-$method=|bool|testAttribute|Qt::WidgetAttribute
+$prototypeV2=bool testAttribute( Qt::WidgetAttribute attribute ) const
 
 $prototypeV2=void unsetLayoutDirection()
 
@@ -216,8 +198,7 @@ $prototypeV2=virtual int type() const
 
 $prototypeV2=bool close()
 
-$prototype=static void setTabOrder ( QGraphicsWidget * first, QGraphicsWidget * second )
-$staticMethod=|void|setTabOrder|QGraphicsWidget *,QGraphicsWidget *
+$prototypeV2=static void setTabOrder( QGraphicsWidget * first, QGraphicsWidget * second )
 
 $beginSignals
 $signal=|geometryChanged()

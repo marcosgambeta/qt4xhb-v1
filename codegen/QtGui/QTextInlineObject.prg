@@ -44,14 +44,11 @@ $prototypeV2=bool isValid() const
 
 $prototypeV2=QRectF rect() const
 
-$prototype=void setAscent ( qreal a )
-$method=|void|setAscent|qreal
+$prototypeV2=void setAscent( qreal a )
 
-$prototype=void setDescent ( qreal d )
-$method=|void|setDescent|qreal
+$prototypeV2=void setDescent( qreal d )
 
-$prototype=void setWidth ( qreal w )
-$method=|void|setWidth|qreal
+$prototypeV2=void setWidth( qreal w )
 
 $prototypeV2=Qt::LayoutDirection textDirection() const
 

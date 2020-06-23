@@ -30,28 +30,22 @@ $constructor=|new|QGraphicsLayoutItem *=0
 
 $deleteMethod
 
-$prototype=QGraphicsAnchor * addAnchor ( QGraphicsLayoutItem * firstItem, Qt::AnchorPoint firstEdge, QGraphicsLayoutItem * secondItem, Qt::AnchorPoint secondEdge )
-$method=|QGraphicsAnchor *|addAnchor|QGraphicsLayoutItem *,Qt::AnchorPoint,QGraphicsLayoutItem *,Qt::AnchorPoint
+$prototypeV2=QGraphicsAnchor * addAnchor( QGraphicsLayoutItem * firstItem, Qt::AnchorPoint firstEdge, QGraphicsLayoutItem * secondItem, Qt::AnchorPoint secondEdge )
 
 $prototype=void addAnchors ( QGraphicsLayoutItem * firstItem, QGraphicsLayoutItem * secondItem, Qt::Orientations orientations = Qt::Horizontal | Qt::Vertical )
 $method=|void|addAnchors|QGraphicsLayoutItem *,QGraphicsLayoutItem *,Qt::Orientations=Qt::Horizontal OR Qt::Vertical
 
-$prototype=void addCornerAnchors ( QGraphicsLayoutItem * firstItem, Qt::Corner firstCorner, QGraphicsLayoutItem * secondItem, Qt::Corner secondCorner )
-$method=|void|addCornerAnchors|QGraphicsLayoutItem *,Qt::Corner,QGraphicsLayoutItem *,Qt::Corner
+$prototypeV2=void addCornerAnchors( QGraphicsLayoutItem * firstItem, Qt::Corner firstCorner, QGraphicsLayoutItem * secondItem, Qt::Corner secondCorner )
 
-$prototype=QGraphicsAnchor * anchor ( QGraphicsLayoutItem * firstItem, Qt::AnchorPoint firstEdge, QGraphicsLayoutItem * secondItem, Qt::AnchorPoint secondEdge )
-$method=|QGraphicsAnchor *|anchor|QGraphicsLayoutItem *,Qt::AnchorPoint,QGraphicsLayoutItem *,Qt::AnchorPoint
+$prototypeV2=QGraphicsAnchor * anchor( QGraphicsLayoutItem * firstItem, Qt::AnchorPoint firstEdge, QGraphicsLayoutItem * secondItem, Qt::AnchorPoint secondEdge )
 
 $prototypeV2=qreal horizontalSpacing() const
 
-$prototype=void setHorizontalSpacing ( qreal spacing )
-$method=|void|setHorizontalSpacing|qreal
+$prototypeV2=void setHorizontalSpacing( qreal spacing )
 
-$prototype=void setSpacing ( qreal spacing )
-$method=|void|setSpacing|qreal
+$prototypeV2=void setSpacing( qreal spacing )
 
-$prototype=void setVerticalSpacing ( qreal spacing )
-$method=|void|setVerticalSpacing|qreal
+$prototypeV2=void setVerticalSpacing( qreal spacing )
 
 $prototypeV2=qreal verticalSpacing() const
 
@@ -59,13 +53,10 @@ $prototypeV2=virtual int count() const
 
 $prototypeV2=virtual void invalidate()
 
-$prototype=virtual QGraphicsLayoutItem * itemAt ( int index ) const
-$virtualMethod=|QGraphicsLayoutItem *|itemAt|int
+$prototypeV2=virtual QGraphicsLayoutItem * itemAt( int index ) const
 
-$prototype=virtual void removeAt ( int index )
-$virtualMethod=|void|removeAt|int
+$prototypeV2=virtual void removeAt( int index )
 
-$prototype=virtual void setGeometry ( const QRectF & geom )
-$virtualMethod=|void|setGeometry|const QRectF &
+$prototypeV2=virtual void setGeometry( const QRectF & geom )
 
 #pragma ENDDUMP

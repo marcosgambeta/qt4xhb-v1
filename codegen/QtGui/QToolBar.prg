@@ -142,8 +142,7 @@ $addMethod=addAction
 
 $prototypeV2=QAction * addSeparator()
 
-$prototype=QAction * addWidget ( QWidget * widget )
-$method=|QAction *|addWidget|QWidget *
+$prototypeV2=QAction * addWidget( QWidget * widget )
 
 $prototypeV2=Qt::ToolBarAreas allowedAreas() const
 
@@ -151,14 +150,11 @@ $prototypeV2=void clear()
 
 $prototypeV2=QSize iconSize() const
 
-$prototype=QAction * insertSeparator ( QAction * before )
-$method=|QAction *|insertSeparator|QAction *
+$prototypeV2=QAction * insertSeparator( QAction * before )
 
-$prototype=QAction * insertWidget ( QAction * before, QWidget * widget )
-$method=|QAction *|insertWidget|QAction *,QWidget *
+$prototypeV2=QAction * insertWidget( QAction * before, QWidget * widget )
 
-$prototype=bool isAreaAllowed ( Qt::ToolBarArea area ) const
-$method=|bool|isAreaAllowed|Qt::ToolBarArea
+$prototypeV2=bool isAreaAllowed( Qt::ToolBarArea area ) const
 
 $prototypeV2=bool isFloatable() const
 
@@ -168,30 +164,23 @@ $prototypeV2=bool isMovable() const
 
 $prototypeV2=Qt::Orientation orientation() const
 
-$prototype=void setAllowedAreas ( Qt::ToolBarAreas areas )
-$method=|void|setAllowedAreas|Qt::ToolBarAreas
+$prototypeV2=void setAllowedAreas( Qt::ToolBarAreas areas )
 
-$prototype=void setFloatable ( bool floatable )
-$method=|void|setFloatable|bool
+$prototypeV2=void setFloatable( bool floatable )
 
-$prototype=void setMovable ( bool movable )
-$method=|void|setMovable|bool
+$prototypeV2=void setMovable( bool movable )
 
-$prototype=void setOrientation ( Qt::Orientation orientation )
-$method=|void|setOrientation|Qt::Orientation
+$prototypeV2=void setOrientation( Qt::Orientation orientation )
 
 $prototypeV2=QAction * toggleViewAction() const
 
 $prototypeV2=Qt::ToolButtonStyle toolButtonStyle() const
 
-$prototype=QWidget * widgetForAction ( QAction * action ) const
-$method=|QWidget *|widgetForAction|QAction *
+$prototypeV2=QWidget * widgetForAction( QAction * action ) const
 
-$prototype=void setIconSize ( const QSize & iconSize )
-$method=|void|setIconSize|const QSize &
+$prototypeV2=void setIconSize( const QSize & iconSize )
 
-$prototype=void setToolButtonStyle ( Qt::ToolButtonStyle toolButtonStyle )
-$method=|void|setToolButtonStyle|Qt::ToolButtonStyle
+$prototypeV2=void setToolButtonStyle( Qt::ToolButtonStyle toolButtonStyle )
 
 $beginSignals
 $signal=|actionTriggered(QAction*)

@@ -27,8 +27,7 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QIconEngine * create ( const QString & filename ) = 0
-$virtualMethod=|QIconEngine *|create|const QString &
+$prototypeV2=virtual QIconEngine * create( const QString & filename ) = 0
 
 $prototypeV2=virtual QStringList keys() const = 0
 

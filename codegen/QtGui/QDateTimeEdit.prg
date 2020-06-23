@@ -115,61 +115,43 @@ $prototypeV2=QDateTime minimumDateTime() const
 
 $prototypeV2=QTime minimumTime() const
 
-$prototype=Section sectionAt ( int index ) const
-$method=|QDateTimeEdit::Section|sectionAt|int
+$prototypeV2=QDateTimeEdit::Section sectionAt( int index ) const
 
 $prototypeV2=int sectionCount() const
 
-$prototype=QString sectionText ( Section section ) const
-$method=|QString|sectionText|QDateTimeEdit::Section
+$prototypeV2=QString sectionText( QDateTimeEdit::Section section ) const
 
-$prototype=void setCalendarPopup ( bool enable )
-$method=|void|setCalendarPopup|bool
+$prototypeV2=void setCalendarPopup( bool enable )
 
-$prototype=void setCalendarWidget ( QCalendarWidget * calendarWidget )
-$method=|void|setCalendarWidget|QCalendarWidget *
+$prototypeV2=void setCalendarWidget( QCalendarWidget * calendarWidget )
 
-$prototype=void setCurrentSection ( Section section )
-$method=|void|setCurrentSection|QDateTimeEdit::Section
+$prototypeV2=void setCurrentSection( QDateTimeEdit::Section section )
 
-$prototype=void setCurrentSectionIndex ( int index )
-$method=|void|setCurrentSectionIndex|int
+$prototypeV2=void setCurrentSectionIndex( int index )
 
-$prototype=void setDateRange ( const QDate & min, const QDate & max )
-$method=|void|setDateRange|const QDate &,const QDate &
+$prototypeV2=void setDateRange( const QDate & min, const QDate & max )
 
-$prototype=void setDateTimeRange ( const QDateTime & min, const QDateTime & max )
-$method=|void|setDateTimeRange|const QDateTime &,const QDateTime &
+$prototypeV2=void setDateTimeRange( const QDateTime & min, const QDateTime & max )
 
-$prototype=void setDisplayFormat ( const QString & format )
-$method=|void|setDisplayFormat|const QString &
+$prototypeV2=void setDisplayFormat( const QString & format )
 
-$prototype=void setMaximumDate ( const QDate & max )
-$method=|void|setMaximumDate|const QDate &
+$prototypeV2=void setMaximumDate( const QDate & max )
 
-$prototype=void setMaximumDateTime ( const QDateTime & dt )
-$method=|void|setMaximumDateTime|const QDateTime &
+$prototypeV2=void setMaximumDateTime( const QDateTime & dt )
 
-$prototype=void setMaximumTime ( const QTime & max )
-$method=|void|setMaximumTime|const QTime &
+$prototypeV2=void setMaximumTime( const QTime & max )
 
-$prototype=void setMinimumDate ( const QDate & min )
-$method=|void|setMinimumDate|const QDate &
+$prototypeV2=void setMinimumDate( const QDate & min )
 
-$prototype=void setMinimumDateTime ( const QDateTime & dt )
-$method=|void|setMinimumDateTime|const QDateTime &
+$prototypeV2=void setMinimumDateTime( const QDateTime & dt )
 
-$prototype=void setMinimumTime ( const QTime & min )
-$method=|void|setMinimumTime|const QTime &
+$prototypeV2=void setMinimumTime( const QTime & min )
 
-$prototype=void setSelectedSection ( Section section )
-$method=|void|setSelectedSection|QDateTimeEdit::Section
+$prototypeV2=void setSelectedSection( QDateTimeEdit::Section section )
 
-$prototype=void setTimeRange ( const QTime & min, const QTime & max )
-$method=|void|setTimeRange|const QTime &,const QTime &
+$prototypeV2=void setTimeRange( const QTime & min, const QTime & max )
 
-$prototype=void setTimeSpec ( Qt::TimeSpec spec )
-$method=|void|setTimeSpec|Qt::TimeSpec
+$prototypeV2=void setTimeSpec( Qt::TimeSpec spec )
 
 $prototypeV2=QTime time() const
 
@@ -177,22 +159,17 @@ $prototypeV2=Qt::TimeSpec timeSpec() const
 
 $prototypeV2=virtual void clear()
 
-$prototype=virtual bool event ( QEvent * event )
-$virtualMethod=|bool|event|QEvent *
+$prototypeV2=virtual bool event( QEvent * event )
 
 $prototypeV2=virtual QSize sizeHint() const
 
-$prototype=virtual void stepBy ( int steps )
-$virtualMethod=|void|stepBy|int
+$prototypeV2=virtual void stepBy( int steps )
 
-$prototype=void setDate ( const QDate & date )
-$method=|void|setDate|const QDate &
+$prototypeV2=void setDate( const QDate & date )
 
-$prototype=void setDateTime ( const QDateTime & dateTime )
-$method=|void|setDateTime|const QDateTime &
+$prototypeV2=void setDateTime( const QDateTime & dateTime )
 
-$prototype=void setTime ( const QTime & time )
-$method=|void|setTime|const QTime &
+$prototypeV2=void setTime( const QTime & time )
 
 $beginSignals
 $signal=|dateChanged(QDate)

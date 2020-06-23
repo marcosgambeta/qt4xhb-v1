@@ -30,8 +30,7 @@ $includes
 $prototype=void grabGesture ( Qt::GestureType gesture, Qt::GestureFlags flags = Qt::GestureFlags() )
 $method=|void|grabGesture|Qt::GestureType,Qt::GestureFlags=Qt::GestureFlags()
 
-$prototype=void ungrabGesture ( Qt::GestureType gesture )
-$method=|void|ungrabGesture|Qt::GestureType
+$prototypeV2=void ungrabGesture( Qt::GestureType gesture )
 
 $beginSignals
 $signal=|enabledChanged()

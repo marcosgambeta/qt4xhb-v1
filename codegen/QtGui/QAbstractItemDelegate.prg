@@ -29,29 +29,21 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QWidget * createEditor ( QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index ) const
-$virtualMethod=|QWidget *|createEditor|QWidget *,const QStyleOptionViewItem &,const QModelIndex &
+$prototypeV2=virtual QWidget * createEditor( QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index ) const
 
-$prototype=virtual bool editorEvent ( QEvent * event, QAbstractItemModel * model, const QStyleOptionViewItem & option, const QModelIndex & index )
-$virtualMethod=|bool|editorEvent|QEvent *,QAbstractItemModel *,const QStyleOptionViewItem &,const QModelIndex &
+$prototypeV2=virtual bool editorEvent( QEvent * event, QAbstractItemModel * model, const QStyleOptionViewItem & option, const QModelIndex & index )
 
-$prototype=virtual void paint ( QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index ) const = 0
-$virtualMethod=|void|paint|QPainter *,const QStyleOptionViewItem &,const QModelIndex &
+$prototypeV2=virtual void paint( QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index ) const = 0
 
-$prototype=virtual void setEditorData ( QWidget * editor, const QModelIndex & index ) const
-$virtualMethod=|void|setEditorData|QWidget *,const QModelIndex &
+$prototypeV2=virtual void setEditorData( QWidget * editor, const QModelIndex & index ) const
 
-$prototype=virtual void setModelData ( QWidget * editor, QAbstractItemModel * model, const QModelIndex & index ) const
-$virtualMethod=|void|setModelData|QWidget *,QAbstractItemModel *,const QModelIndex &
+$prototypeV2=virtual void setModelData( QWidget * editor, QAbstractItemModel * model, const QModelIndex & index ) const
 
-$prototype=virtual QSize sizeHint ( const QStyleOptionViewItem & option, const QModelIndex & index ) const = 0
-$virtualMethod=|QSize|sizeHint|const QStyleOptionViewItem &,const QModelIndex &
+$prototypeV2=virtual QSize sizeHint( const QStyleOptionViewItem & option, const QModelIndex & index ) const = 0
 
-$prototype=virtual void updateEditorGeometry ( QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index ) const
-$virtualMethod=|void|updateEditorGeometry|QWidget *,const QStyleOptionViewItem &,const QModelIndex &
+$prototypeV2=virtual void updateEditorGeometry( QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index ) const
 
-$prototype=bool helpEvent ( QHelpEvent * event, QAbstractItemView * view, const QStyleOptionViewItem & option, const QModelIndex & index )
-$method=|bool|helpEvent|QHelpEvent *,QAbstractItemView *,const QStyleOptionViewItem &,const QModelIndex &
+$prototypeV2=bool helpEvent( QHelpEvent * event, QAbstractItemView * view, const QStyleOptionViewItem & option, const QModelIndex & index )
 
 $beginSignals
 $signal=|closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)

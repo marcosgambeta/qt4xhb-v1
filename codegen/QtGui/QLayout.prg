@@ -48,11 +48,9 @@ $includes
 
 $prototypeV2=bool activate()
 
-$prototype=virtual void addItem ( QLayoutItem * item ) = 0
-$virtualMethod=|void|addItem|QLayoutItem *
+$prototypeV2=virtual void addItem( QLayoutItem * item ) = 0
 
-$prototype=void addWidget ( QWidget * w )
-$method=|void|addWidget|QWidget *
+$prototypeV2=void addWidget( QWidget * w )
 
 $prototypeV2=QMargins contentsMargins() const
 
@@ -62,16 +60,13 @@ $prototypeV2=virtual int count() const = 0
 
 $prototypeV2=virtual Qt::Orientations expandingDirections() const
 
-$prototype=void getContentsMargins ( int * left, int * top, int * right, int * bottom ) const
-$method=|void|getContentsMargins|int *,int *,int *,int *
+$prototypeV2=void getContentsMargins( int * left, int * top, int * right, int * bottom ) const
 
-$prototype=virtual int indexOf ( QWidget * widget ) const
-$virtualMethod=|int|indexOf|QWidget *
+$prototypeV2=virtual int indexOf( QWidget * widget ) const
 
 $prototypeV2=bool isEnabled() const
 
-$prototype=virtual QLayoutItem * itemAt ( int index ) const = 0
-$virtualMethod=|QLayoutItem *|itemAt|int
+$prototypeV2=virtual QLayoutItem * itemAt( int index ) const = 0
 
 $prototypeV2=virtual QSize maximumSize() const
 
@@ -81,11 +76,9 @@ $prototypeV2=virtual QSize minimumSize() const
 
 $prototypeV2=QWidget * parentWidget() const
 
-$prototype=void removeItem ( QLayoutItem * item )
-$method=|void|removeItem|QLayoutItem *
+$prototypeV2=void removeItem( QLayoutItem * item )
 
-$prototype=void removeWidget ( QWidget * widget )
-$method=|void|removeWidget|QWidget *
+$prototypeV2=void removeWidget( QWidget * widget )
 
 $prototype=bool setAlignment ( QWidget * w, Qt::Alignment alignment )
 $internalMethod=|bool|setAlignment,setAlignment1|QWidget *,Qt::Alignment
@@ -151,24 +144,19 @@ HB_FUNC_STATIC( QLAYOUT_SETCONTENTSMARGINS )
 }
 $addMethod=setContentsMargins
 
-$prototype=void setEnabled ( bool enable )
-$method=|void|setEnabled|bool
+$prototypeV2=void setEnabled( bool enable )
 
-$prototype=void setMenuBar ( QWidget * widget )
-$method=|void|setMenuBar|QWidget *
+$prototypeV2=void setMenuBar( QWidget * widget )
 
-$prototype=void setSizeConstraint ( SizeConstraint )
-$method=|void|setSizeConstraint|QLayout::SizeConstraint
+$prototypeV2=void setSizeConstraint( QLayout::SizeConstraint )
 
-$prototype=void setSpacing ( int )
-$method=|void|setSpacing|int
+$prototypeV2=void setSpacing( int )
 
 $prototypeV2=QLayout::SizeConstraint sizeConstraint() const
 
 $prototypeV2=int spacing() const
 
-$prototype=virtual QLayoutItem * takeAt ( int index ) = 0
-$virtualMethod=|QLayoutItem *|takeAt|int
+$prototypeV2=virtual QLayoutItem * takeAt( int index ) = 0
 
 $prototypeV2=void update()
 
@@ -180,10 +168,8 @@ $prototypeV2=virtual bool isEmpty() const
 
 $prototypeV2=virtual QLayout * layout()
 
-$prototype=virtual void setGeometry ( const QRect & r )
-$virtualMethod=|void|setGeometry|const QRect &
+$prototypeV2=virtual void setGeometry( const QRect & r )
 
-$prototype=static QSize closestAcceptableSize ( const QWidget * widget, const QSize & size )
-$staticMethod=|QSize|closestAcceptableSize|const QWidget *,const QSize &
+$prototypeV2=static QSize closestAcceptableSize( const QWidget * widget, const QSize & size )
 
 #pragma ENDDUMP

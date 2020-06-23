@@ -41,25 +41,20 @@ $prototypeV2=int keyboardSingleStep() const
 
 $prototypeV2=QMdiArea * mdiArea() const
 
-$prototype=void setKeyboardPageStep ( int step )
-$method=|void|setKeyboardPageStep|int
+$prototypeV2=void setKeyboardPageStep( int step )
 
-$prototype=void setKeyboardSingleStep ( int step )
-$method=|void|setKeyboardSingleStep|int
+$prototypeV2=void setKeyboardSingleStep( int step )
 
 $prototype=void setOption ( SubWindowOption option, bool on = true )
 $method=|void|setOption|QMdiSubWindow::SubWindowOption,bool=true
 
-$prototype=void setSystemMenu ( QMenu * systemMenu )
-$method=|void|setSystemMenu|QMenu *
+$prototypeV2=void setSystemMenu( QMenu * systemMenu )
 
-$prototype=void setWidget ( QWidget * widget )
-$method=|void|setWidget|QWidget *
+$prototypeV2=void setWidget( QWidget * widget )
 
 $prototypeV2=QMenu * systemMenu() const
 
-$prototype=bool testOption ( SubWindowOption option ) const
-$method=|bool|testOption|QMdiSubWindow::SubWindowOption
+$prototypeV2=bool testOption( QMdiSubWindow::SubWindowOption option ) const
 
 $prototypeV2=QWidget * widget() const
 

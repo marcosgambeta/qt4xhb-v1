@@ -54,17 +54,13 @@ $prototypeV2=QTextFrameFormat::Position position() const
 
 $prototypeV2=qreal rightMargin() const
 
-$prototype=void setBorder ( qreal width )
-$method=|void|setBorder|qreal
+$prototypeV2=void setBorder( qreal width )
 
-$prototype=void setBorderBrush ( const QBrush & brush )
-$method=|void|setBorderBrush|const QBrush &
+$prototypeV2=void setBorderBrush( const QBrush & brush )
 
-$prototype=void setBorderStyle ( BorderStyle style )
-$method=|void|setBorderStyle|QTextFrameFormat::BorderStyle
+$prototypeV2=void setBorderStyle( QTextFrameFormat::BorderStyle style )
 
-$prototype=void setBottomMargin ( qreal margin )
-$method=|void|setBottomMargin|qreal
+$prototypeV2=void setBottomMargin( qreal margin )
 
 $prototype=void setHeight ( const QTextLength & height )
 $internalMethod=|void|setHeight,setHeight1|const QTextLength &
@@ -94,26 +90,19 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETHEIGHT )
 }
 $addMethod=setHeight
 
-$prototype=void setLeftMargin ( qreal margin )
-$method=|void|setLeftMargin|qreal
+$prototypeV2=void setLeftMargin( qreal margin )
 
-$prototype=void setMargin ( qreal margin )
-$method=|void|setMargin|qreal
+$prototypeV2=void setMargin( qreal margin )
 
-$prototype=void setPadding ( qreal width )
-$method=|void|setPadding|qreal
+$prototypeV2=void setPadding( qreal width )
 
-$prototype=void setPageBreakPolicy ( PageBreakFlags policy )
-$method=|void|setPageBreakPolicy|QTextFormat::PageBreakFlags
+$prototypeV2=void setPageBreakPolicy( QTextFormat::PageBreakFlags policy )
 
-$prototype=void setPosition ( Position policy )
-$method=|void|setPosition|QTextFrameFormat::Position
+$prototypeV2=void setPosition( QTextFrameFormat::Position policy )
 
-$prototype=void setRightMargin ( qreal margin )
-$method=|void|setRightMargin|qreal
+$prototypeV2=void setRightMargin( qreal margin )
 
-$prototype=void setTopMargin ( qreal margin )
-$method=|void|setTopMargin|qreal
+$prototypeV2=void setTopMargin( qreal margin )
 
 $prototype=void setWidth ( const QTextLength & width )
 $internalMethod=|void|setWidth,setWidth1|const QTextLength &

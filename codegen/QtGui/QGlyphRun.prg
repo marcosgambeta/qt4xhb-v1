@@ -57,33 +57,25 @@ $deleteMethod
 
 $prototypeV2=void clear()
 
-$prototype=QVector<quint32> glyphIndexes () const
-$method=|QVector<quint32>|glyphIndexes|
+$prototypeV2=QVector<quint32> glyphIndexes() const
 
 $prototypeV2=bool overline() const
 
-$prototype=QVector<QPointF> positions () const
-$method=|QVector<QPointF>|positions|
+$prototypeV2=QVector<QPointF> positions() const
 
 $prototypeV2=QRawFont rawFont() const
 
-$prototype=void setGlyphIndexes ( const QVector<quint32> & glyphIndexes )
-$method=|void|setGlyphIndexes|const QVector<quint32> &
+$prototypeV2=void setGlyphIndexes( const QVector<quint32> & glyphIndexes )
 
-$prototype=void setOverline ( bool overline )
-$method=|void|setOverline|bool
+$prototypeV2=void setOverline( bool overline )
 
-$prototype=void setPositions ( const QVector<QPointF> & positions )
-$method=|void|setPositions|const QVector<QPointF> &
+$prototypeV2=void setPositions( const QVector<QPointF> & positions )
 
-$prototype=void setRawFont ( const QRawFont & rawFont )
-$method=|void|setRawFont|const QRawFont &
+$prototypeV2=void setRawFont( const QRawFont & rawFont )
 
-$prototype=void setStrikeOut ( bool strikeOut )
-$method=|void|setStrikeOut|bool
+$prototypeV2=void setStrikeOut( bool strikeOut )
 
-$prototype=void setUnderline ( bool underline )
-$method=|void|setUnderline|bool
+$prototypeV2=void setUnderline( bool underline )
 
 $prototypeV2=bool strikeOut() const
 

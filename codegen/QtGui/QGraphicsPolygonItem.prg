@@ -59,19 +59,15 @@ $prototypeV2=Qt::FillRule fillRule() const
 
 $prototypeV2=QPolygonF polygon() const
 
-$prototype=void setFillRule ( Qt::FillRule rule )
-$method=|void|setFillRule|Qt::FillRule
+$prototypeV2=void setFillRule( Qt::FillRule rule )
 
-$prototype=void setPolygon ( const QPolygonF & polygon )
-$method=|void|setPolygon|const QPolygonF &
+$prototypeV2=void setPolygon( const QPolygonF & polygon )
 
 $prototypeV2=virtual QRectF boundingRect() const
 
-$prototype=virtual bool contains ( const QPointF & point ) const
-$virtualMethod=|bool|contains|const QPointF &
+$prototypeV2=virtual bool contains( const QPointF & point ) const
 
-$prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
-$virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
+$prototypeV2=virtual bool isObscuredBy( const QGraphicsItem * item ) const
 
 $prototypeV2=virtual QPainterPath opaqueArea() const
 

@@ -36,26 +36,21 @@ $prototypeV2=bool isSizeGripEnabled() const
 
 $prototypeV2=int result() const
 
-$prototype=void setModal ( bool modal )
-$method=|void|setModal|bool
+$prototypeV2=void setModal( bool modal )
 
-$prototype=void setResult ( int i )
-$method=|void|setResult|int
+$prototypeV2=void setResult( int i )
 
-$prototype=void setSizeGripEnabled ( bool )
-$method=|void|setSizeGripEnabled|bool
+$prototypeV2=void setSizeGripEnabled( bool )
 
 $prototypeV2=virtual QSize minimumSizeHint() const
 
-$prototype=virtual void setVisible ( bool visible )
-$virtualMethod=|void|setVisible|bool
+$prototypeV2=virtual void setVisible( bool visible )
 
 $prototypeV2=virtual QSize sizeHint() const
 
 $prototypeV2=virtual void accept()
 
-$prototype=virtual void done ( int r )
-$virtualMethod=|void|done|int
+$prototypeV2=virtual void done( int r )
 
 $prototypeV2=int exec()
 

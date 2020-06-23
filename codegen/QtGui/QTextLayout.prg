@@ -111,19 +111,15 @@ $prototypeV2=QFont font() const
 
 $prototypeV2=QList<QGlyphRun> glyphRuns() const
 
-$prototype=bool isValidCursorPosition ( int pos ) const
-$method=|bool|isValidCursorPosition|int
+$prototypeV2=bool isValidCursorPosition( int pos ) const
 
-$prototype=int leftCursorPosition ( int oldPos ) const
-$method=|int|leftCursorPosition|int
+$prototypeV2=int leftCursorPosition( int oldPos ) const
 
-$prototype=QTextLine lineAt ( int i ) const
-$method=|QTextLine|lineAt|int
+$prototypeV2=QTextLine lineAt( int i ) const
 
 $prototypeV2=int lineCount() const
 
-$prototype=QTextLine lineForTextPosition ( int pos ) const
-$method=|QTextLine|lineForTextPosition|int
+$prototypeV2=QTextLine lineForTextPosition( int pos ) const
 
 $prototypeV2=qreal maximumWidth() const
 
@@ -141,29 +137,21 @@ $prototypeV2=QString preeditAreaText() const
 $prototype=int previousCursorPosition ( int oldPos, CursorMode mode = SkipCharacters ) const
 $method=|int|previousCursorPosition|int,QTextLayout::CursorMode=QTextLayout::SkipCharacters
 
-$prototype=int rightCursorPosition ( int oldPos ) const
-$method=|int|rightCursorPosition|int
+$prototypeV2=int rightCursorPosition( int oldPos ) const
 
-$prototype=void setCacheEnabled ( bool enable )
-$method=|void|setCacheEnabled|bool
+$prototypeV2=void setCacheEnabled( bool enable )
 
-$prototype=void setCursorMoveStyle ( Qt::CursorMoveStyle style )
-$method=|void|setCursorMoveStyle|Qt::CursorMoveStyle
+$prototypeV2=void setCursorMoveStyle( Qt::CursorMoveStyle style )
 
-$prototype=void setFont ( const QFont & font )
-$method=|void|setFont|const QFont &
+$prototypeV2=void setFont( const QFont & font )
 
-$prototype=void setPosition ( const QPointF & p )
-$method=|void|setPosition|const QPointF &
+$prototypeV2=void setPosition( const QPointF & p )
 
-$prototype=void setPreeditArea ( int position, const QString & text )
-$method=|void|setPreeditArea|int,const QString &
+$prototypeV2=void setPreeditArea( int position, const QString & text )
 
-$prototype=void setText ( const QString & string )
-$method=|void|setText|const QString &
+$prototypeV2=void setText( const QString & string )
 
-$prototype=void setTextOption ( const QTextOption & option )
-$method=|void|setTextOption|const QTextOption &
+$prototypeV2=void setTextOption( const QTextOption & option )
 
 $prototypeV2=QString text() const
 

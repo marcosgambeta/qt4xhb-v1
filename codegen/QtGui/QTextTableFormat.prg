@@ -38,8 +38,7 @@ $prototypeV2=qreal cellSpacing() const
 
 $prototypeV2=void clearColumnWidthConstraints()
 
-$prototype=QVector<QTextLength> columnWidthConstraints () const
-$method=|QVector<QTextLength>|columnWidthConstraints|
+$prototypeV2=QVector<QTextLength> columnWidthConstraints() const
 
 $prototypeV2=int columns() const
 
@@ -47,19 +46,14 @@ $prototypeV2=int headerRowCount() const
 
 $prototypeV2=bool isValid() const
 
-$prototype=void setAlignment ( Qt::Alignment alignment )
-$method=|void|setAlignment|Qt::Alignment
+$prototypeV2=void setAlignment( Qt::Alignment alignment )
 
-$prototype=void setCellPadding ( qreal padding )
-$method=|void|setCellPadding|qreal
+$prototypeV2=void setCellPadding( qreal padding )
 
-$prototype=void setCellSpacing ( qreal spacing )
-$method=|void|setCellSpacing|qreal
+$prototypeV2=void setCellSpacing( qreal spacing )
 
-$prototype=void setColumnWidthConstraints ( const QVector<QTextLength> & constraints )
-$method=|void|setColumnWidthConstraints|const QVector<QTextLength> &
+$prototypeV2=void setColumnWidthConstraints( const QVector<QTextLength> & constraints )
 
-$prototype=void setHeaderRowCount ( int count )
-$method=|void|setHeaderRowCount|int
+$prototypeV2=void setHeaderRowCount( int count )
 
 #pragma ENDDUMP

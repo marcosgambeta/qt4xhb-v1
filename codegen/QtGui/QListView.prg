@@ -40,8 +40,7 @@ $prototypeV2=QListView::Flow flow() const
 
 $prototypeV2=QSize gridSize() const
 
-$prototype=bool isRowHidden ( int row ) const
-$method=|bool|isRowHidden|int
+$prototypeV2=bool isRowHidden( int row ) const
 
 $prototypeV2=bool isSelectionRectVisible() const
 
@@ -55,47 +54,33 @@ $prototypeV2=QListView::Movement movement() const
 
 $prototypeV2=QListView::ResizeMode resizeMode() const
 
-$prototype=void setBatchSize ( int batchSize )
-$method=|void|setBatchSize|int
+$prototypeV2=void setBatchSize( int batchSize )
 
-$prototype=void setFlow ( Flow flow )
-$method=|void|setFlow|QListView::Flow
+$prototypeV2=void setFlow( QListView::Flow flow )
 
-$prototype=void setGridSize ( const QSize & size )
-$method=|void|setGridSize|const QSize &
+$prototypeV2=void setGridSize( const QSize & size )
 
-$prototype=void setLayoutMode ( LayoutMode mode )
-$method=|void|setLayoutMode|QListView::LayoutMode
+$prototypeV2=void setLayoutMode( QListView::LayoutMode mode )
 
-$prototype=void setModelColumn ( int column )
-$method=|void|setModelColumn|int
+$prototypeV2=void setModelColumn( int column )
 
-$prototype=void setMovement ( Movement movement )
-$method=|void|setMovement|QListView::Movement
+$prototypeV2=void setMovement( QListView::Movement movement )
 
-$prototype=void setResizeMode ( ResizeMode mode )
-$method=|void|setResizeMode|QListView::ResizeMode
+$prototypeV2=void setResizeMode( QListView::ResizeMode mode )
 
-$prototype=void setRowHidden ( int row, bool hide )
-$method=|void|setRowHidden|int,bool
+$prototypeV2=void setRowHidden( int row, bool hide )
 
-$prototype=void setSelectionRectVisible ( bool show )
-$method=|void|setSelectionRectVisible|bool
+$prototypeV2=void setSelectionRectVisible( bool show )
 
-$prototype=void setSpacing ( int space )
-$method=|void|setSpacing|int
+$prototypeV2=void setSpacing( int space )
 
-$prototype=void setUniformItemSizes ( bool enable )
-$method=|void|setUniformItemSizes|bool
+$prototypeV2=void setUniformItemSizes( bool enable )
 
-$prototype=void setViewMode ( ViewMode mode )
-$method=|void|setViewMode|QListView::ViewMode
+$prototypeV2=void setViewMode( QListView::ViewMode mode )
 
-$prototype=void setWordWrap ( bool on )
-$method=|void|setWordWrap|bool
+$prototypeV2=void setWordWrap( bool on )
 
-$prototype=void setWrapping ( bool enable )
-$method=|void|setWrapping|bool
+$prototypeV2=void setWrapping( bool enable )
 
 $prototypeV2=int spacing() const
 
@@ -105,14 +90,12 @@ $prototypeV2=QListView::ViewMode viewMode() const
 
 $prototypeV2=bool wordWrap() const
 
-$prototype=virtual QModelIndex indexAt ( const QPoint & p ) const
-$virtualMethod=|QModelIndex|indexAt|const QPoint &
+$prototypeV2=virtual QModelIndex indexAt( const QPoint & p ) const
 
 $prototype=virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisible )
 $virtualMethod=|void|scrollTo|const QModelIndex &,QListView::ScrollHint=QListView::EnsureVisible
 
-$prototype=virtual QRect visualRect ( const QModelIndex & index ) const
-$virtualMethod=|QRect|visualRect|const QModelIndex &
+$prototypeV2=virtual QRect visualRect( const QModelIndex & index ) const
 
 $beginSignals
 $signal=|indexesMoved(QModelIndexList)

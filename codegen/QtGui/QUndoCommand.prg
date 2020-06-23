@@ -55,20 +55,17 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=const QUndoCommand * child ( int index ) const
-$method=|const QUndoCommand *|child|int
+$prototypeV2=const QUndoCommand * child( int index ) const
 
 $prototypeV2=int childCount() const
 
 $prototypeV2=virtual int id() const
 
-$prototype=virtual bool mergeWith ( const QUndoCommand * command )
-$virtualMethod=|bool|mergeWith|const QUndoCommand *
+$prototypeV2=virtual bool mergeWith( const QUndoCommand * command )
 
 $prototypeV2=virtual void redo()
 
-$prototype=void setText ( const QString & text )
-$method=|void|setText|const QString &
+$prototypeV2=void setText( const QString & text )
 
 $prototypeV2=QString text() const
 

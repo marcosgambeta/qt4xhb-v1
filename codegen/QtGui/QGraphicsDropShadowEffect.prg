@@ -42,14 +42,11 @@ $prototypeV2=qreal xOffset() const
 
 $prototypeV2=qreal yOffset() const
 
-$prototype=virtual QRectF boundingRectFor ( const QRectF & rect ) const
-$virtualMethod=|QRectF|boundingRectFor|const QRectF &
+$prototypeV2=virtual QRectF boundingRectFor( const QRectF & rect ) const
 
-$prototype=void setBlurRadius ( qreal blurRadius )
-$method=|void|setBlurRadius|qreal
+$prototypeV2=void setBlurRadius( qreal blurRadius )
 
-$prototype=void setColor ( const QColor & color )
-$method=|void|setColor|const QColor &
+$prototypeV2=void setColor( const QColor & color )
 
 $prototype=void setOffset ( const QPointF & ofs )
 $internalMethod=|void|setOffset,setOffset1|const QPointF &
@@ -87,11 +84,9 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET )
 }
 $addMethod=setOffset
 
-$prototype=void setXOffset ( qreal dx )
-$method=|void|setXOffset|qreal
+$prototypeV2=void setXOffset( qreal dx )
 
-$prototype=void setYOffset ( qreal dy )
-$method=|void|setYOffset|qreal
+$prototypeV2=void setYOffset( qreal dy )
 
 $beginSignals
 $signal=|blurRadiusChanged(qreal)

@@ -34,127 +34,92 @@ $deleteMethod
 
 $prototypeV2=void clearSpans()
 
-$prototype=int columnAt ( int x ) const
-$method=|int|columnAt|int
+$prototypeV2=int columnAt( int x ) const
 
-$prototype=int columnSpan ( int row, int column ) const
-$method=|int|columnSpan|int,int
+$prototypeV2=int columnSpan( int row, int column ) const
 
-$prototype=int columnViewportPosition ( int column ) const
-$method=|int|columnViewportPosition|int
+$prototypeV2=int columnViewportPosition( int column ) const
 
-$prototype=int columnWidth ( int column ) const
-$method=|int|columnWidth|int
+$prototypeV2=int columnWidth( int column ) const
 
 $prototypeV2=Qt::PenStyle gridStyle() const
 
 $prototypeV2=QHeaderView * horizontalHeader() const
 
-$prototype=bool isColumnHidden ( int column ) const
-$method=|bool|isColumnHidden|int
+$prototypeV2=bool isColumnHidden( int column ) const
 
 $prototypeV2=bool isCornerButtonEnabled() const
 
-$prototype=bool isRowHidden ( int row ) const
-$method=|bool|isRowHidden|int
+$prototypeV2=bool isRowHidden( int row ) const
 
 $prototypeV2=bool isSortingEnabled() const
 
-$prototype=int rowAt ( int y ) const
-$method=|int|rowAt|int
+$prototypeV2=int rowAt( int y ) const
 
-$prototype=int rowHeight ( int row ) const
-$method=|int|rowHeight|int
+$prototypeV2=int rowHeight( int row ) const
 
-$prototype=int rowSpan ( int row, int column ) const
-$method=|int|rowSpan|int,int
+$prototypeV2=int rowSpan( int row, int column ) const
 
-$prototype=int rowViewportPosition ( int row ) const
-$method=|int|rowViewportPosition|int
+$prototypeV2=int rowViewportPosition( int row ) const
 
-$prototype=void setColumnHidden ( int column, bool hide )
-$method=|void|setColumnHidden|int,bool
+$prototypeV2=void setColumnHidden( int column, bool hide )
 
-$prototype=void setColumnWidth ( int column, int width )
-$method=|void|setColumnWidth|int,int
+$prototypeV2=void setColumnWidth( int column, int width )
 
-$prototype=void setCornerButtonEnabled ( bool enable )
-$method=|void|setCornerButtonEnabled|bool
+$prototypeV2=void setCornerButtonEnabled( bool enable )
 
-$prototype=void setGridStyle ( Qt::PenStyle style )
-$method=|void|setGridStyle|Qt::PenStyle
+$prototypeV2=void setGridStyle( Qt::PenStyle style )
 
-$prototype=void setHorizontalHeader ( QHeaderView * header )
-$method=|void|setHorizontalHeader|QHeaderView *
+$prototypeV2=void setHorizontalHeader( QHeaderView * header )
 
-$prototype=void setRowHeight ( int row, int height )
-$method=|void|setRowHeight|int,int
+$prototypeV2=void setRowHeight( int row, int height )
 
-$prototype=void setRowHidden ( int row, bool hide )
-$method=|void|setRowHidden|int,bool
+$prototypeV2=void setRowHidden( int row, bool hide )
 
-$prototype=void setSortingEnabled ( bool enable )
-$method=|void|setSortingEnabled|bool
+$prototypeV2=void setSortingEnabled( bool enable )
 
-$prototype=void setSpan ( int row, int column, int rowSpanCount, int columnSpanCount )
-$method=|void|setSpan|int,int,int,int
+$prototypeV2=void setSpan( int row, int column, int rowSpanCount, int columnSpanCount )
 
-$prototype=void setVerticalHeader ( QHeaderView * header )
-$method=|void|setVerticalHeader|QHeaderView *
+$prototypeV2=void setVerticalHeader( QHeaderView * header )
 
-$prototype=void setWordWrap ( bool on )
-$method=|void|setWordWrap|bool
+$prototypeV2=void setWordWrap( bool on )
 
 $prototypeV2=bool showGrid() const
 
-$prototype=void sortByColumn ( int column, Qt::SortOrder order )
-$method=|void|sortByColumn|int,Qt::SortOrder
+$prototypeV2=void sortByColumn( int column, Qt::SortOrder order )
 
 $prototypeV2=QHeaderView * verticalHeader() const
 
 $prototypeV2=bool wordWrap() const
 
-$prototype=virtual QModelIndex indexAt ( const QPoint & pos ) const
-$virtualMethod=|QModelIndex|indexAt|const QPoint &
+$prototypeV2=virtual QModelIndex indexAt( const QPoint & pos ) const
 
-$prototype=virtual void setModel ( QAbstractItemModel * model )
-$virtualMethod=|void|setModel|QAbstractItemModel *
+$prototypeV2=virtual void setModel( QAbstractItemModel * model )
 
-$prototype=virtual void setRootIndex ( const QModelIndex & index )
-$virtualMethod=|void|setRootIndex|const QModelIndex &
+$prototypeV2=virtual void setRootIndex( const QModelIndex & index )
 
-$prototype=virtual void setSelectionModel ( QItemSelectionModel * selectionModel )
-$virtualMethod=|void|setSelectionModel|QItemSelectionModel *
+$prototypeV2=virtual void setSelectionModel( QItemSelectionModel * selectionModel )
 
-$prototype=void hideColumn ( int column )
-$method=|void|hideColumn|int
+$prototypeV2=void hideColumn( int column )
 
-$prototype=void hideRow ( int row )
-$method=|void|hideRow|int
+$prototypeV2=void hideRow( int row )
 
-$prototype=void resizeColumnToContents ( int column )
-$method=|void|resizeColumnToContents|int
+$prototypeV2=void resizeColumnToContents( int column )
 
 $prototypeV2=void resizeColumnsToContents()
 
-$prototype=void resizeRowToContents ( int row )
-$method=|void|resizeRowToContents|int
+$prototypeV2=void resizeRowToContents( int row )
 
 $prototypeV2=void resizeRowsToContents()
 
-$prototype=void selectColumn ( int column )
-$method=|void|selectColumn|int
+$prototypeV2=void selectColumn( int column )
 
-$prototype=void selectRow ( int row )
-$method=|void|selectRow|int
+$prototypeV2=void selectRow( int row )
 
-$prototype=void setShowGrid ( bool show )
-$method=|void|setShowGrid|bool
+$prototypeV2=void setShowGrid( bool show )
 
-$prototype=void showColumn ( int column )
-$method=|void|showColumn|int
+$prototypeV2=void showColumn( int column )
 
-$prototype=void showRow ( int row )
-$method=|void|showRow|int
+$prototypeV2=void showRow( int row )
 
 #pragma ENDDUMP

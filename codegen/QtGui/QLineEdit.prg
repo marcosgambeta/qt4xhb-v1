@@ -78,14 +78,11 @@ $method=|void|cursorForward|bool,int=1
 
 $prototypeV2=int cursorPosition() const
 
-$prototype=int cursorPositionAt ( const QPoint & pos )
-$method=|int|cursorPositionAt|const QPoint &
+$prototypeV2=int cursorPositionAt( const QPoint & pos )
 
-$prototype=void cursorWordBackward ( bool mark )
-$method=|void|cursorWordBackward|bool
+$prototypeV2=void cursorWordBackward( bool mark )
 
-$prototype=void cursorWordForward ( bool mark )
-$method=|void|cursorWordForward|bool
+$prototypeV2=void cursorWordForward( bool mark )
 
 $prototypeV2=void del()
 
@@ -97,11 +94,9 @@ $prototypeV2=bool dragEnabled() const
 
 $prototypeV2=QLineEdit::EchoMode echoMode() const
 
-$prototype=void end ( bool mark )
-$method=|void|end|bool
+$prototypeV2=void end( bool mark )
 
-$prototype=void getTextMargins ( int * left, int * top, int * right, int * bottom ) const
-$method=|void|getTextMargins|int *,int *,int *,int *
+$prototypeV2=void getTextMargins( int * left, int * top, int * right, int * bottom ) const
 
 $prototypeV2=bool hasAcceptableInput() const
 
@@ -109,13 +104,11 @@ $prototypeV2=bool hasFrame() const
 
 $prototypeV2=bool hasSelectedText() const
 
-$prototype=void home ( bool mark )
-$method=|void|home|bool
+$prototypeV2=void home( bool mark )
 
 $prototypeV2=QString inputMask() const
 
-$prototype=void insert ( const QString & newText )
-$method=|void|insert|const QString &
+$prototypeV2=void insert( const QString & newText )
 
 $prototypeV2=bool isModified() const
 
@@ -135,41 +128,29 @@ $prototypeV2=QString selectedText() const
 
 $prototypeV2=int selectionStart() const
 
-$prototype=void setAlignment ( Qt::Alignment flag )
-$method=|void|setAlignment|Qt::Alignment
+$prototypeV2=void setAlignment( Qt::Alignment flag )
 
-$prototype=void setCompleter ( QCompleter * c )
-$method=|void|setCompleter|QCompleter *
+$prototypeV2=void setCompleter( QCompleter * c )
 
-$prototype=void setCursorPosition ( int )
-$method=|void|setCursorPosition|int
+$prototypeV2=void setCursorPosition( int )
 
-$prototype=void setDragEnabled ( bool b )
-$method=|void|setDragEnabled|bool
+$prototypeV2=void setDragEnabled( bool b )
 
-$prototype=void setEchoMode ( EchoMode )
-$method=|void|setEchoMode|QLineEdit::EchoMode
+$prototypeV2=void setEchoMode( QLineEdit::EchoMode )
 
-$prototype=void setFrame ( bool )
-$method=|void|setFrame|bool
+$prototypeV2=void setFrame( bool )
 
-$prototype=void setInputMask ( const QString & inputMask )
-$method=|void|setInputMask|const QString &
+$prototypeV2=void setInputMask( const QString & inputMask )
 
-$prototype=void setMaxLength ( int )
-$method=|void|setMaxLength|int
+$prototypeV2=void setMaxLength( int )
 
-$prototype=void setModified ( bool )
-$method=|void|setModified|bool
+$prototypeV2=void setModified( bool )
 
-$prototype=void setPlaceholderText ( const QString & )
-$method=|void|setPlaceholderText|const QString &
+$prototypeV2=void setPlaceholderText( const QString & )
 
-$prototype=void setReadOnly ( bool )
-$method=|void|setReadOnly|bool
+$prototypeV2=void setReadOnly( bool )
 
-$prototype=void setSelection ( int start, int length )
-$method=|void|setSelection|int,int
+$prototypeV2=void setSelection( int start, int length )
 
 $prototype=void setTextMargins ( int left, int top, int right, int bottom )
 $internalMethod=|void|setTextMargins,setTextMargins1|int,int,int,int
@@ -199,8 +180,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETTEXTMARGINS )
 }
 $addMethod=setTextMargins
 
-$prototype=void setValidator ( const QValidator * v )
-$method=|void|setValidator|const QValidator *
+$prototypeV2=void setValidator( const QValidator * v )
 
 $prototypeV2=virtual QSize sizeHint() const
 
@@ -210,11 +190,9 @@ $prototypeV2=QMargins textMargins() const
 
 $prototypeV2=const QValidator * validator() const
 
-$prototype=virtual bool event ( QEvent * e )
-$virtualMethod=|bool|event|QEvent *
+$prototypeV2=virtual bool event( QEvent * e )
 
-$prototype=virtual QVariant inputMethodQuery ( Qt::InputMethodQuery property ) const
-$virtualMethod=|QVariant|inputMethodQuery|Qt::InputMethodQuery
+$prototypeV2=virtual QVariant inputMethodQuery( Qt::InputMethodQuery property ) const
 
 $prototypeV2=void copy() const
 
@@ -226,8 +204,7 @@ $prototypeV2=void redo()
 
 $prototypeV2=void selectAll()
 
-$prototype=void setText ( const QString & )
-$method=|void|setText|const QString &
+$prototypeV2=void setText( const QString & )
 
 $prototypeV2=void undo()
 

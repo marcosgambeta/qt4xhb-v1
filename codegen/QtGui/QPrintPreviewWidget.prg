@@ -69,8 +69,7 @@ $prototypeV2=qreal zoomFactor() const
 
 $prototypeV2=QPrintPreviewWidget::ZoomMode zoomMode() const
 
-$prototype=virtual void setVisible ( bool visible )
-$virtualMethod=|void|setVisible|bool
+$prototypeV2=virtual void setVisible( bool visible )
 
 $prototypeV2=void fitInView()
 
@@ -80,28 +79,23 @@ $prototypeV2=void print()
 
 $prototypeV2=void setAllPagesViewMode()
 
-$prototype=void setCurrentPage ( int page )
-$method=|void|setCurrentPage|int
+$prototypeV2=void setCurrentPage( int page )
 
 $prototypeV2=void setFacingPagesViewMode()
 
 $prototypeV2=void setLandscapeOrientation()
 
-$prototype=void setOrientation ( QPrinter::Orientation orientation )
-$method=|void|setOrientation|QPrinter::Orientation
+$prototypeV2=void setOrientation( QPrinter::Orientation orientation )
 
 $prototypeV2=void setPortraitOrientation()
 
 $prototypeV2=void setSinglePageViewMode()
 
-$prototype=void setViewMode ( ViewMode mode )
-$method=|void|setViewMode|QPrintPreviewWidget::ViewMode
+$prototypeV2=void setViewMode( QPrintPreviewWidget::ViewMode mode )
 
-$prototype=void setZoomFactor ( qreal factor )
-$method=|void|setZoomFactor|qreal
+$prototypeV2=void setZoomFactor( qreal factor )
 
-$prototype=void setZoomMode ( ZoomMode zoomMode )
-$method=|void|setZoomMode|QPrintPreviewWidget::ZoomMode
+$prototypeV2=void setZoomMode( QPrintPreviewWidget::ZoomMode zoomMode )
 
 $prototypeV2=void updatePreview()
 

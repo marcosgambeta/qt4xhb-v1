@@ -66,37 +66,27 @@ $prototypeV2=bool isReadOnly() const
 
 $prototypeV2=bool keyboardTracking() const
 
-$prototype=void setAccelerated ( bool on )
-$method=|void|setAccelerated|bool
+$prototypeV2=void setAccelerated( bool on )
 
-$prototype=void setAlignment ( Qt::Alignment flag )
-$method=|void|setAlignment|Qt::Alignment
+$prototypeV2=void setAlignment( Qt::Alignment flag )
 
-$prototype=void setButtonSymbols ( ButtonSymbols bs )
-$method=|void|setButtonSymbols|QAbstractSpinBox::ButtonSymbols
+$prototypeV2=void setButtonSymbols( QAbstractSpinBox::ButtonSymbols bs )
 
-$prototype=void setCorrectionMode ( CorrectionMode cm )
-$method=|void|setCorrectionMode|QAbstractSpinBox::CorrectionMode
+$prototypeV2=void setCorrectionMode( QAbstractSpinBox::CorrectionMode cm )
 
-$prototype=void setFrame ( bool )
-$method=|void|setFrame|bool
+$prototypeV2=void setFrame( bool )
 
-$prototype=void setKeyboardTracking ( bool kt )
-$method=|void|setKeyboardTracking|bool
+$prototypeV2=void setKeyboardTracking( bool kt )
 
-$prototype=void setReadOnly ( bool r )
-$method=|void|setReadOnly|bool
+$prototypeV2=void setReadOnly( bool r )
 
-$prototype=void setSpecialValueText ( const QString & txt )
-$method=|void|setSpecialValueText|const QString &
+$prototypeV2=void setSpecialValueText( const QString & txt )
 
-$prototype=void setWrapping ( bool w )
-$method=|void|setWrapping|bool
+$prototypeV2=void setWrapping( bool w )
 
 $prototypeV2=QString specialValueText() const
 
-$prototype=virtual void stepBy ( int steps )
-$virtualMethod=|void|stepBy|int
+$prototypeV2=virtual void stepBy( int steps )
 
 $prototypeV2=QString text() const
 
@@ -117,11 +107,9 @@ $addMethod=validate
 
 $prototypeV2=bool wrapping() const
 
-$prototype=virtual bool event ( QEvent * event )
-$virtualMethod=|bool|event|QEvent *
+$prototypeV2=virtual bool event( QEvent * event )
 
-$prototype=virtual QVariant inputMethodQuery ( Qt::InputMethodQuery query ) const
-$virtualMethod=|QVariant|inputMethodQuery|Qt::InputMethodQuery
+$prototypeV2=virtual QVariant inputMethodQuery( Qt::InputMethodQuery query ) const
 
 $prototypeV2=virtual QSize minimumSizeHint() const
 

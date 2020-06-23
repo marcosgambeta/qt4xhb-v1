@@ -77,8 +77,7 @@ $prototypeV2=Qt::TextElideMode elideMode() const
 
 $prototypeV2=QSize iconSize() const
 
-$prototype=int indexOf ( QWidget * w ) const
-$method=|int|indexOf|QWidget *
+$prototypeV2=int indexOf( QWidget * w ) const
 
 $prototype=int insertTab ( int index, QWidget * page, const QString & label )
 $internalMethod=|int|insertTab,insertTab1|int,QWidget *,const QString &
@@ -110,86 +109,64 @@ $addMethod=insertTab
 
 $prototypeV2=bool isMovable() const
 
-$prototype=bool isTabEnabled ( int index ) const
-$method=|bool|isTabEnabled|int
+$prototypeV2=bool isTabEnabled( int index ) const
 
-$prototype=void removeTab ( int index )
-$method=|void|removeTab|int
+$prototypeV2=void removeTab( int index )
 
 $prototype=void setCornerWidget ( QWidget * widget, Qt::Corner corner = Qt::TopRightCorner )
 $method=|void|setCornerWidget|QWidget *,Qt::Corner=Qt::TopRightCorner
 
-$prototype=void setDocumentMode ( bool set )
-$method=|void|setDocumentMode|bool
+$prototypeV2=void setDocumentMode( bool set )
 
-$prototype=void setElideMode ( Qt::TextElideMode )
-$method=|void|setElideMode|Qt::TextElideMode
+$prototypeV2=void setElideMode( Qt::TextElideMode )
 
-$prototype=void setIconSize ( const QSize & size )
-$method=|void|setIconSize|const QSize &
+$prototypeV2=void setIconSize( const QSize & size )
 
-$prototype=void setMovable ( bool movable )
-$method=|void|setMovable|bool
+$prototypeV2=void setMovable( bool movable )
 
-$prototype=void setTabEnabled ( int index, bool enable )
-$method=|void|setTabEnabled|int,bool
+$prototypeV2=void setTabEnabled( int index, bool enable )
 
-$prototype=void setTabIcon ( int index, const QIcon & icon )
-$method=|void|setTabIcon|int,const QIcon &
+$prototypeV2=void setTabIcon( int index, const QIcon & icon )
 
-$prototype=void setTabPosition ( TabPosition )
-$method=|void|setTabPosition|QTabWidget::TabPosition
+$prototypeV2=void setTabPosition( QTabWidget::TabPosition )
 
-$prototype=void setTabShape ( TabShape s )
-$method=|void|setTabShape|QTabWidget::TabShape
+$prototypeV2=void setTabShape( QTabWidget::TabShape s )
 
-$prototype=void setTabText ( int index, const QString & label )
-$method=|void|setTabText|int,const QString &
+$prototypeV2=void setTabText( int index, const QString & label )
 
-$prototype=void setTabToolTip ( int index, const QString & tip )
-$method=|void|setTabToolTip|int,const QString &
+$prototypeV2=void setTabToolTip( int index, const QString & tip )
 
-$prototype=void setTabWhatsThis ( int index, const QString & text )
-$method=|void|setTabWhatsThis|int,const QString &
+$prototypeV2=void setTabWhatsThis( int index, const QString & text )
 
-$prototype=void setTabsClosable ( bool closeable )
-$method=|void|setTabsClosable|bool
+$prototypeV2=void setTabsClosable( bool closeable )
 
-$prototype=void setUsesScrollButtons ( bool useButtons )
-$method=|void|setUsesScrollButtons|bool
+$prototypeV2=void setUsesScrollButtons( bool useButtons )
 
-$prototype=QIcon tabIcon ( int index ) const
-$method=|QIcon|tabIcon|int
+$prototypeV2=QIcon tabIcon( int index ) const
 
 $prototypeV2=QTabWidget::TabPosition tabPosition() const
 
 $prototypeV2=QTabWidget::TabShape tabShape() const
 
-$prototype=QString tabText ( int index ) const
-$method=|QString|tabText|int
+$prototypeV2=QString tabText( int index ) const
 
-$prototype=QString tabToolTip ( int index ) const
-$method=|QString|tabToolTip|int
+$prototypeV2=QString tabToolTip( int index ) const
 
-$prototype=QString tabWhatsThis ( int index ) const
-$method=|QString|tabWhatsThis|int
+$prototypeV2=QString tabWhatsThis( int index ) const
 
 $prototypeV2=bool tabsClosable() const
 
 $prototypeV2=bool usesScrollButtons() const
 
-$prototype=QWidget * widget ( int index ) const
-$method=|QWidget *|widget|int
+$prototypeV2=QWidget * widget( int index ) const
 
 $prototypeV2=virtual QSize minimumSizeHint() const
 
 $prototypeV2=virtual QSize sizeHint() const
 
-$prototype=void setCurrentIndex ( int index )
-$method=|void|setCurrentIndex|int
+$prototypeV2=void setCurrentIndex( int index )
 
-$prototype=void setCurrentWidget ( QWidget * widget )
-$method=|void|setCurrentWidget|QWidget *
+$prototypeV2=void setCurrentWidget( QWidget * widget )
 
 $beginSignals
 $signal=|currentChanged(int)

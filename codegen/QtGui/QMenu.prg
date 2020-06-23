@@ -57,11 +57,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QAction * actionAt ( const QPoint & pt ) const
-$method=|QAction *|actionAt|const QPoint &
+$prototypeV2=QAction * actionAt( const QPoint & pt ) const
 
-$prototype=QRect actionGeometry ( QAction * act ) const
-$method=|QRect|actionGeometry|QAction *
+$prototypeV2=QRect actionGeometry( QAction * act ) const
 
 $prototypeV2=QAction * activeAction() const
 
@@ -173,11 +171,9 @@ $prototypeV2=void hideTearOffMenu()
 
 $prototypeV2=QIcon icon() const
 
-$prototype=QAction * insertMenu ( QAction * before, QMenu * menu )
-$method=|QAction *|insertMenu|QAction *,QMenu *
+$prototypeV2=QAction * insertMenu( QAction * before, QMenu * menu )
 
-$prototype=QAction * insertSeparator ( QAction * before )
-$method=|QAction *|insertSeparator|QAction *
+$prototypeV2=QAction * insertSeparator( QAction * before )
 
 $prototypeV2=bool isEmpty() const
 
@@ -192,23 +188,17 @@ $method=|void|popup|const QPoint &,QAction *=0
 
 $prototypeV2=bool separatorsCollapsible() const
 
-$prototype=void setActiveAction ( QAction * act )
-$method=|void|setActiveAction|QAction *
+$prototypeV2=void setActiveAction( QAction * act )
 
-$prototype=void setDefaultAction ( QAction * act )
-$method=|void|setDefaultAction|QAction *
+$prototypeV2=void setDefaultAction( QAction * act )
 
-$prototype=void setIcon ( const QIcon & icon )
-$method=|void|setIcon|const QIcon &
+$prototypeV2=void setIcon( const QIcon & icon )
 
-$prototype=void setSeparatorsCollapsible ( bool collapse )
-$method=|void|setSeparatorsCollapsible|bool
+$prototypeV2=void setSeparatorsCollapsible( bool collapse )
 
-$prototype=void setTearOffEnabled ( bool )
-$method=|void|setTearOffEnabled|bool
+$prototypeV2=void setTearOffEnabled( bool )
 
-$prototype=void setTitle ( const QString & title )
-$method=|void|setTitle|const QString &
+$prototypeV2=void setTitle( const QString & title )
 
 $prototypeV2=QString title() const
 

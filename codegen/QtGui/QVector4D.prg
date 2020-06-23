@@ -116,17 +116,13 @@ $prototypeV2=void normalize()
 
 $prototypeV2=QVector4D normalized() const
 
-$prototype=void setW ( qreal w )
-$method=|void|setW|qreal
+$prototypeV2=void setW( qreal w )
 
-$prototype=void setX ( qreal x )
-$method=|void|setX|qreal
+$prototypeV2=void setX( qreal x )
 
-$prototype=void setY ( qreal y )
-$method=|void|setY|qreal
+$prototypeV2=void setY( qreal y )
 
-$prototype=void setZ ( qreal z )
-$method=|void|setZ|qreal
+$prototypeV2=void setZ( qreal z )
 
 $prototypeV2=QPoint toPoint() const
 
@@ -148,8 +144,7 @@ $prototypeV2=qreal y() const
 
 $prototypeV2=qreal z() const
 
-$prototype=static qreal dotProduct ( const QVector4D & v1, const QVector4D & v2 )
-$staticMethod=|qreal|dotProduct|const QVector4D &,const QVector4D &
+$prototypeV2=static qreal dotProduct( const QVector4D & v1, const QVector4D & v2 )
 
 %% TODO: implementar função
 %% bool qFuzzyCompare ( const QVector4D & v1, const QVector4D & v2 )

@@ -66,8 +66,7 @@ $prototypeV2=int currentIndex() const
 
 $prototypeV2=QWidget * currentWidget() const
 
-$prototype=int indexOf ( QWidget * widget ) const
-$method=|int|indexOf|QWidget *
+$prototypeV2=int indexOf( QWidget * widget ) const
 
 $prototype=int insertItem ( int index, QWidget * widget, const QIcon & icon, const QString & text )
 $internalMethod=|int|insertItem,insertItem1|int,QWidget *,const QIcon &,const QString &
@@ -97,41 +96,29 @@ HB_FUNC_STATIC( QTOOLBOX_INSERTITEM )
 }
 $addMethod=insertItem
 
-$prototype=bool isItemEnabled ( int index ) const
-$method=|bool|isItemEnabled|int
+$prototypeV2=bool isItemEnabled( int index ) const
 
-$prototype=QIcon itemIcon ( int index ) const
-$method=|QIcon|itemIcon|int
+$prototypeV2=QIcon itemIcon( int index ) const
 
-$prototype=QString itemText ( int index ) const
-$method=|QString|itemText|int
+$prototypeV2=QString itemText( int index ) const
 
-$prototype=QString itemToolTip ( int index ) const
-$method=|QString|itemToolTip|int
+$prototypeV2=QString itemToolTip( int index ) const
 
-$prototype=void removeItem ( int index )
-$method=|void|removeItem|int
+$prototypeV2=void removeItem( int index )
 
-$prototype=void setItemEnabled ( int index, bool enabled )
-$method=|void|setItemEnabled|int,bool
+$prototypeV2=void setItemEnabled( int index, bool enabled )
 
-$prototype=void setItemIcon ( int index, const QIcon & icon )
-$method=|void|setItemIcon|int,const QIcon &
+$prototypeV2=void setItemIcon( int index, const QIcon & icon )
 
-$prototype=void setItemText ( int index, const QString & text )
-$method=|void|setItemText|int,const QString &
+$prototypeV2=void setItemText( int index, const QString & text )
 
-$prototype=void setItemToolTip ( int index, const QString & toolTip )
-$method=|void|setItemToolTip|int,const QString &
+$prototypeV2=void setItemToolTip( int index, const QString & toolTip )
 
-$prototype=QWidget * widget ( int index ) const
-$method=|QWidget *|widget|int
+$prototypeV2=QWidget * widget( int index ) const
 
-$prototype=void setCurrentIndex ( int index )
-$method=|void|setCurrentIndex|int
+$prototypeV2=void setCurrentIndex( int index )
 
-$prototype=void setCurrentWidget ( QWidget * widget )
-$method=|void|setCurrentWidget|QWidget *
+$prototypeV2=void setCurrentWidget( QWidget * widget )
 
 $beginSignals
 $signal=|currentChanged(int)

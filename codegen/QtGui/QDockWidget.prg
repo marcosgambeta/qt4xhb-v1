@@ -63,25 +63,19 @@ $prototypeV2=Qt::DockWidgetAreas allowedAreas() const
 
 $prototypeV2=QDockWidget::DockWidgetFeatures features() const
 
-$prototype=bool isAreaAllowed ( Qt::DockWidgetArea area ) const
-$method=|bool|isAreaAllowed|Qt::DockWidgetArea
+$prototypeV2=bool isAreaAllowed( Qt::DockWidgetArea area ) const
 
 $prototypeV2=bool isFloating() const
 
-$prototype=void setAllowedAreas ( Qt::DockWidgetAreas areas )
-$method=|void|setAllowedAreas|Qt::DockWidgetAreas
+$prototypeV2=void setAllowedAreas( Qt::DockWidgetAreas areas )
 
-$prototype=void setFeatures ( DockWidgetFeatures features )
-$method=|void|setFeatures|QDockWidget::DockWidgetFeatures
+$prototypeV2=void setFeatures( QDockWidget::DockWidgetFeatures features )
 
-$prototype=void setFloating ( bool floating )
-$method=|void|setFloating|bool
+$prototypeV2=void setFloating( bool floating )
 
-$prototype=void setTitleBarWidget ( QWidget * widget )
-$method=|void|setTitleBarWidget|QWidget *
+$prototypeV2=void setTitleBarWidget( QWidget * widget )
 
-$prototype=void setWidget ( QWidget * widget )
-$method=|void|setWidget|QWidget *
+$prototypeV2=void setWidget( QWidget * widget )
 
 $prototypeV2=QWidget * titleBarWidget() const
 

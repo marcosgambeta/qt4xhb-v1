@@ -40,23 +40,17 @@ $prototypeV2=int minimum() const
 
 $prototypeV2=QString prefix() const
 
-$prototype=void setMaximum ( int max )
-$method=|void|setMaximum|int
+$prototypeV2=void setMaximum( int max )
 
-$prototype=void setMinimum ( int min )
-$method=|void|setMinimum|int
+$prototypeV2=void setMinimum( int min )
 
-$prototype=void setPrefix ( const QString & prefix )
-$method=|void|setPrefix|const QString &
+$prototypeV2=void setPrefix( const QString & prefix )
 
-$prototype=void setRange ( int minimum, int maximum )
-$method=|void|setRange|int,int
+$prototypeV2=void setRange( int minimum, int maximum )
 
-$prototype=void setSingleStep ( int val )
-$method=|void|setSingleStep|int
+$prototypeV2=void setSingleStep( int val )
 
-$prototype=void setSuffix ( const QString & suffix )
-$method=|void|setSuffix|const QString &
+$prototypeV2=void setSuffix( const QString & suffix )
 
 $prototypeV2=int singleStep() const
 
@@ -64,8 +58,7 @@ $prototypeV2=QString suffix() const
 
 $prototypeV2=int value() const
 
-$prototype=void setValue ( int val )
-$method=|void|setValue|int
+$prototypeV2=void setValue( int val )
 
 $beginSignals
 $beginGroup

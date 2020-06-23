@@ -27,8 +27,7 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QWidget * createWidget ( QWidget * parent ) const = 0
-$virtualMethod=|QWidget *|createWidget|QWidget *
+$prototypeV2=virtual QWidget * createWidget( QWidget * parent ) const = 0
 
 $prototypeV2=virtual QByteArray valuePropertyName() const = 0
 

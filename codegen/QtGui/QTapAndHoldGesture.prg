@@ -29,11 +29,9 @@ $deleteMethod
 
 $prototypeV2=QPointF position() const
 
-$prototype=void setPosition ( const QPointF & pos )
-$method=|void|setPosition|const QPointF &
+$prototypeV2=void setPosition( const QPointF & pos )
 
-$prototype=static void setTimeout ( int msecs )
-$staticMethod=|void|setTimeout|int
+$prototypeV2=static void setTimeout( int msecs )
 
 $prototypeV2=static int timeout()
 

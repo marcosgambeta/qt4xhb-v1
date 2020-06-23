@@ -27,24 +27,19 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QStringList addApplicationFont ( const QByteArray & fontData, const QString & fileName )
-$virtualMethod=|QStringList|addApplicationFont|const QByteArray &,const QString &
+$prototypeV2=virtual QStringList addApplicationFont( const QByteArray & fontData, const QString & fileName )
 
 $prototypeV2=virtual QString fontDir() const
 
-$prototype=virtual QFontEngine * fontEngine ( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference )
-$virtualMethod=|QFontEngine *|fontEngine|const QByteArray &,qreal,QFont::HintingPreference
+$prototypeV2=virtual QFontEngine * fontEngine( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference )
 
 $prototypeV2=virtual void populateFontDatabase()
 
-$prototype=virtual void releaseHandle ( void * handle )
-$virtualMethod=|void|releaseHandle|void *
+$prototypeV2=virtual void releaseHandle( void * handle )
 
-$prototype=static void registerFont ( const QString & familyName, const QString & foundryName, QFont::Weight weight, QFont::Style style, QFont::Stretch stretch, bool antialiased, bool scalable, int pixelSize, const QSupportedWritingSystems & writingSystems, void * usrPtr )
-$staticMethod=|void|registerFont|const QString &,const QString &,QFont::Weight,QFont::Style,QFont::Stretch,bool,bool,int,const QSupportedWritingSystems &,void *
+$prototypeV2=static void registerFont( const QString & familyName, const QString & foundryName, QFont::Weight weight, QFont::Style style, QFont::Stretch stretch, bool antialiased, bool scalable, int pixelSize, const QSupportedWritingSystems & writingSystems, void * usrPtr )
 
-$prototype=static void registerQPF2Font ( const QByteArray & dataArray, void * handle )
-$staticMethod=|void|registerQPF2Font|const QByteArray &,void *
+$prototypeV2=static void registerQPF2Font( const QByteArray & dataArray, void * handle )
 
 $extraMethods
 

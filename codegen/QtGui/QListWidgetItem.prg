@@ -77,8 +77,7 @@ $prototypeV2=Qt::CheckState checkState() const
 
 $prototypeV2=virtual QListWidgetItem * clone() const
 
-$prototype=virtual QVariant data ( int role ) const
-$virtualMethod=|QVariant|data|int
+$prototypeV2=virtual QVariant data( int role ) const
 
 $prototypeV2=Qt::ItemFlags flags() const
 
@@ -94,53 +93,37 @@ $prototypeV2=bool isSelected() const
 
 $prototypeV2=QListWidget * listWidget() const
 
-$prototype=virtual void read ( QDataStream & in )
-$virtualMethod=|void|read|QDataStream &
+$prototypeV2=virtual void read( QDataStream & in )
 
-$prototype=void setBackground ( const QBrush & brush )
-$method=|void|setBackground|const QBrush &
+$prototypeV2=void setBackground( const QBrush & brush )
 
-$prototype=void setCheckState ( Qt::CheckState state )
-$method=|void|setCheckState|Qt::CheckState
+$prototypeV2=void setCheckState( Qt::CheckState state )
 
-$prototype=virtual void setData ( int role, const QVariant & value )
-$virtualMethod=|void|setData|int,const QVariant &
+$prototypeV2=virtual void setData( int role, const QVariant & value )
 
-$prototype=void setFlags ( Qt::ItemFlags flags )
-$method=|void|setFlags|Qt::ItemFlags
+$prototypeV2=void setFlags( Qt::ItemFlags flags )
 
-$prototype=void setFont ( const QFont & font )
-$method=|void|setFont|const QFont &
+$prototypeV2=void setFont( const QFont & font )
 
-$prototype=void setForeground ( const QBrush & brush )
-$method=|void|setForeground|const QBrush &
+$prototypeV2=void setForeground( const QBrush & brush )
 
-$prototype=void setHidden ( bool hide )
-$method=|void|setHidden|bool
+$prototypeV2=void setHidden( bool hide )
 
-$prototype=void setIcon ( const QIcon & icon )
-$method=|void|setIcon|const QIcon &
+$prototypeV2=void setIcon( const QIcon & icon )
 
-$prototype=void setSelected ( bool select )
-$method=|void|setSelected|bool
+$prototypeV2=void setSelected( bool select )
 
-$prototype=void setSizeHint ( const QSize & size )
-$method=|void|setSizeHint|const QSize &
+$prototypeV2=void setSizeHint( const QSize & size )
 
-$prototype=void setStatusTip ( const QString & statusTip )
-$method=|void|setStatusTip|const QString &
+$prototypeV2=void setStatusTip( const QString & statusTip )
 
-$prototype=void setText ( const QString & text )
-$method=|void|setText|const QString &
+$prototypeV2=void setText( const QString & text )
 
-$prototype=void setTextAlignment ( int alignment )
-$method=|void|setTextAlignment|int
+$prototypeV2=void setTextAlignment( int alignment )
 
-$prototype=void setToolTip ( const QString & toolTip )
-$method=|void|setToolTip|const QString &
+$prototypeV2=void setToolTip( const QString & toolTip )
 
-$prototype=void setWhatsThis ( const QString & whatsThis )
-$method=|void|setWhatsThis|const QString &
+$prototypeV2=void setWhatsThis( const QString & whatsThis )
 
 $prototypeV2=QSize sizeHint() const
 
@@ -156,8 +139,7 @@ $prototypeV2=int type() const
 
 $prototypeV2=QString whatsThis() const
 
-$prototype=virtual void write ( QDataStream & out ) const
-$virtualMethod=|void|write|QDataStream &
+$prototypeV2=virtual void write( QDataStream & out ) const
 
 $extraMethods
 

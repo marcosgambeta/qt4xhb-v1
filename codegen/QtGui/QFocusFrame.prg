@@ -28,8 +28,7 @@ $includes
 $prototype=QFocusFrame ( QWidget * parent = 0 )
 $constructor=|new|QWidget *=0
 
-$prototype=void setWidget ( QWidget * widget )
-$method=|void|setWidget|QWidget *
+$prototypeV2=void setWidget( QWidget * widget )
 
 $prototypeV2=QWidget * widget() const
 

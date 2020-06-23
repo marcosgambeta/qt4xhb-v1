@@ -55,61 +55,47 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void addItem ( QGraphicsLayoutItem * item )
-$method=|void|addItem|QGraphicsLayoutItem *
+$prototypeV2=void addItem( QGraphicsLayoutItem * item )
 
 $prototype=void addStretch ( int stretch = 1 )
 $method=|void|addStretch|int=1
 
-$prototype=Qt::Alignment alignment ( QGraphicsLayoutItem * item ) const
-$method=|Qt::Alignment|alignment|QGraphicsLayoutItem *
+$prototypeV2=Qt::Alignment alignment( QGraphicsLayoutItem * item ) const
 
-$prototype=void insertItem ( int index, QGraphicsLayoutItem * item )
-$method=|void|insertItem|int,QGraphicsLayoutItem *
+$prototypeV2=void insertItem( int index, QGraphicsLayoutItem * item )
 
 $prototype=void insertStretch ( int index, int stretch = 1 )
 $method=|void|insertStretch|int,int=1
 
-$prototype=qreal itemSpacing ( int index ) const
-$method=|qreal|itemSpacing|int
+$prototypeV2=qreal itemSpacing( int index ) const
 
 $prototypeV2=Qt::Orientation orientation() const
 
-$prototype=void removeItem ( QGraphicsLayoutItem * item )
-$method=|void|removeItem|QGraphicsLayoutItem *
+$prototypeV2=void removeItem( QGraphicsLayoutItem * item )
 
-$prototype=void setAlignment ( QGraphicsLayoutItem * item, Qt::Alignment alignment )
-$method=|void|setAlignment|QGraphicsLayoutItem *,Qt::Alignment
+$prototypeV2=void setAlignment( QGraphicsLayoutItem * item, Qt::Alignment alignment )
 
-$prototype=void setItemSpacing ( int index, qreal spacing )
-$method=|void|setItemSpacing|int,qreal
+$prototypeV2=void setItemSpacing( int index, qreal spacing )
 
-$prototype=void setOrientation ( Qt::Orientation orientation )
-$method=|void|setOrientation|Qt::Orientation
+$prototypeV2=void setOrientation( Qt::Orientation orientation )
 
-$prototype=void setSpacing ( qreal spacing )
-$method=|void|setSpacing|qreal
+$prototypeV2=void setSpacing( qreal spacing )
 
-$prototype=void setStretchFactor ( QGraphicsLayoutItem * item, int stretch )
-$method=|void|setStretchFactor|QGraphicsLayoutItem *,int
+$prototypeV2=void setStretchFactor( QGraphicsLayoutItem * item, int stretch )
 
 $prototypeV2=qreal spacing() const
 
-$prototype=int stretchFactor ( QGraphicsLayoutItem * item ) const
-$method=|int|stretchFactor|QGraphicsLayoutItem *
+$prototypeV2=int stretchFactor( QGraphicsLayoutItem * item ) const
 
 $prototypeV2=virtual int count() const
 
 $prototypeV2=virtual void invalidate()
 
-$prototype=virtual QGraphicsLayoutItem * itemAt ( int index ) const
-$virtualMethod=|QGraphicsLayoutItem *|itemAt|int
+$prototypeV2=virtual QGraphicsLayoutItem * itemAt( int index ) const
 
-$prototype=virtual void removeAt ( int index )
-$virtualMethod=|void|removeAt|int
+$prototypeV2=virtual void removeAt( int index )
 
-$prototype=virtual void setGeometry ( const QRectF & rect )
-$virtualMethod=|void|setGeometry|const QRectF &
+$prototypeV2=virtual void setGeometry( const QRectF & rect )
 
 $prototype=virtual QSizeF sizeHint ( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
 $virtualMethod=|QSizeF|sizeHint|Qt::SizeHint,const QSizeF &=QSizeF()

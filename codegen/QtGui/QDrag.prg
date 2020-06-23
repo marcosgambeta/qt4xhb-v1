@@ -70,17 +70,13 @@ $prototypeV2=QMimeData * mimeData() const
 
 $prototypeV2=QPixmap pixmap() const
 
-$prototype=void setDragCursor ( const QPixmap & cursor, Qt::DropAction action )
-$method=|void|setDragCursor|const QPixmap &,Qt::DropAction
+$prototypeV2=void setDragCursor( const QPixmap & cursor, Qt::DropAction action )
 
-$prototype=void setHotSpot ( const QPoint & hotspot )
-$method=|void|setHotSpot|const QPoint &
+$prototypeV2=void setHotSpot( const QPoint & hotspot )
 
-$prototype=void setMimeData ( QMimeData * data )
-$method=|void|setMimeData|QMimeData *
+$prototypeV2=void setMimeData( QMimeData * data )
 
-$prototype=void setPixmap ( const QPixmap & pixmap )
-$method=|void|setPixmap|const QPixmap &
+$prototypeV2=void setPixmap( const QPixmap & pixmap )
 
 $prototypeV2=QWidget * source() const
 

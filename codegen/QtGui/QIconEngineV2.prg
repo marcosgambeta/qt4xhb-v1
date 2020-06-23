@@ -36,13 +36,10 @@ $prototypeV2=QString iconName()
 
 $prototypeV2=virtual QString key() const
 
-$prototype=virtual bool read ( QDataStream & in )
-$virtualMethod=|bool|read|QDataStream &
+$prototypeV2=virtual bool read( QDataStream & in )
 
-$prototype=virtual void virtual_hook ( int id, void * data )
-$virtualMethod=|void|virtual_hook|int,void *
+$prototypeV2=virtual void virtual_hook( int id, void * data )
 
-$prototype=virtual bool write ( QDataStream & out ) const
-$virtualMethod=|bool|write|QDataStream &
+$prototypeV2=virtual bool write( QDataStream & out ) const
 
 #pragma ENDDUMP

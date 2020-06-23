@@ -94,43 +94,31 @@ $prototypeV2=QAbstractItemModel * model() const
 
 $prototypeV2=QCompleter::ModelSorting modelSorting() const
 
-$prototype=virtual QString pathFromIndex ( const QModelIndex & index ) const
-$virtualMethod=|QString|pathFromIndex|const QModelIndex &
+$prototypeV2=virtual QString pathFromIndex( const QModelIndex & index ) const
 
 $prototypeV2=QAbstractItemView * popup() const
 
-$prototype=void setCaseSensitivity ( Qt::CaseSensitivity caseSensitivity )
-$method=|void|setCaseSensitivity|Qt::CaseSensitivity
+$prototypeV2=void setCaseSensitivity( Qt::CaseSensitivity caseSensitivity )
 
-$prototype=void setCompletionColumn ( int column )
-$method=|void|setCompletionColumn|int
+$prototypeV2=void setCompletionColumn( int column )
 
-$prototype=void setCompletionMode ( CompletionMode mode )
-$method=|void|setCompletionMode|QCompleter::CompletionMode
+$prototypeV2=void setCompletionMode( QCompleter::CompletionMode mode )
 
-$prototype=void setCompletionRole ( int role )
-$method=|void|setCompletionRole|int
+$prototypeV2=void setCompletionRole( int role )
 
-$prototype=bool setCurrentRow ( int row )
-$method=|bool|setCurrentRow|int
+$prototypeV2=bool setCurrentRow( int row )
 
-$prototype=void setMaxVisibleItems ( int maxItems )
-$method=|void|setMaxVisibleItems|int
+$prototypeV2=void setMaxVisibleItems( int maxItems )
 
-$prototype=void setModel ( QAbstractItemModel * model )
-$method=|void|setModel|QAbstractItemModel *
+$prototypeV2=void setModel( QAbstractItemModel * model )
 
-$prototype=void setModelSorting ( ModelSorting sorting )
-$method=|void|setModelSorting|QCompleter::ModelSorting
+$prototypeV2=void setModelSorting( QCompleter::ModelSorting sorting )
 
-$prototype=void setPopup ( QAbstractItemView * popup )
-$method=|void|setPopup|QAbstractItemView *
+$prototypeV2=void setPopup( QAbstractItemView * popup )
 
-$prototype=void setWidget ( QWidget * widget )
-$method=|void|setWidget|QWidget *
+$prototypeV2=void setWidget( QWidget * widget )
 
-$prototype=virtual QStringList splitPath ( const QString & path ) const
-$virtualMethod=|QStringList|splitPath|const QString &
+$prototypeV2=virtual QStringList splitPath( const QString & path ) const
 
 $prototypeV2=QWidget * widget() const
 
@@ -139,11 +127,9 @@ $prototypeV2=bool wrapAround() const
 $prototype=void complete ( const QRect & rect = QRect() )
 $method=|void|complete|const QRect &=QRect()
 
-$prototype=void setCompletionPrefix ( const QString & prefix )
-$method=|void|setCompletionPrefix|const QString &
+$prototypeV2=void setCompletionPrefix( const QString & prefix )
 
-$prototype=void setWrapAround ( bool wrap )
-$method=|void|setWrapAround|bool
+$prototypeV2=void setWrapAround( bool wrap )
 
 $beginSignals
 $beginGroup

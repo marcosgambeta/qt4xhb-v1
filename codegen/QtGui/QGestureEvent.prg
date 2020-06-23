@@ -72,8 +72,7 @@ $prototypeV2=QList<QGesture *> activeGestures() const
 
 $prototypeV2=QList<QGesture *> canceledGestures() const
 
-$prototype=QGesture * gesture ( Qt::GestureType type ) const
-$method=|QGesture *|gesture|Qt::GestureType
+$prototypeV2=QGesture * gesture( Qt::GestureType type ) const
 
 $prototypeV2=QList<QGesture *> gestures() const
 
@@ -149,8 +148,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED )
 }
 $addMethod=isAccepted
 
-$prototype=QPointF mapToGraphicsScene ( const QPointF & gesturePoint ) const
-$method=|QPointF|mapToGraphicsScene|const QPointF &
+$prototypeV2=QPointF mapToGraphicsScene( const QPointF & gesturePoint ) const
 
 $prototype=void setAccepted ( bool accepted )
 $internalMethod=|void|setAccepted,setAccepted1|bool
@@ -188,8 +186,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_SETACCEPTED )
 }
 $addMethod=setAccepted
 
-$prototype=void setWidget(QWidget *widget)
-$method=|void|setWidget|QWidget *
+$prototypeV2=void setWidget( QWidget * widget )
 
 $prototypeV2=QWidget * widget() const
 

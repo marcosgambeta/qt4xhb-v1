@@ -28,36 +28,26 @@ $includes
 $prototype=QAccessibleWidget ( QWidget * w, Role role = Client, const QString & name = QString() )
 $constructor=|new|QWidget *,QAccessible::Role=QAccessible::Client,const QString &=QString()
 
-$prototype=virtual QString actionText ( int action, Text t, int child ) const
-$virtualMethod=|QString|actionText|int,QAccessible::Text,int
+$prototypeV2=virtual QString actionText( int action, QAccessible::Text t, int child ) const
 
-$prototype=virtual int childAt ( int x, int y ) const
-$virtualMethod=|int|childAt|int,int
+$prototypeV2=virtual int childAt( int x, int y ) const
 
 $prototypeV2=virtual int childCount() const
 
-$prototype=virtual bool doAction ( int action, int child, const QVariantList & params )
-$virtualMethod=|bool|doAction|int,int,const QVariantList &
+$prototypeV2=virtual bool doAction( int action, int child, const QVariantList & params )
 
-$prototype=virtual int indexOfChild ( const QAccessibleInterface * child ) const
-$virtualMethod=|int|indexOfChild|const QAccessibleInterface *
+$prototypeV2=virtual int indexOfChild( const QAccessibleInterface * child ) const
 
-$prototype=virtual QRect rect ( int child ) const
-$virtualMethod=|QRect|rect|int
+$prototypeV2=virtual QRect rect( int child ) const
 
-$prototype=virtual Relation relationTo ( int child, const QAccessibleInterface * other, int otherChild ) const
-$virtualMethod=|QAccessible::Relation|relationTo|int,const QAccessibleInterface *,int
+$prototypeV2=virtual QAccessible::Relation relationTo( int child, const QAccessibleInterface * other, int otherChild ) const
 
-$prototype=virtual Role role ( int child ) const
-$virtualMethod=|QAccessible::Role|role|int
+$prototypeV2=virtual QAccessible::Role role( int child ) const
 
-$prototype=virtual State state ( int child ) const
-$virtualMethod=|QAccessible::State|state|int
+$prototypeV2=virtual QAccessible::State state( int child ) const
 
-$prototype=virtual QString text ( Text t, int child ) const
-$virtualMethod=|QString|text|QAccessible::Text,int
+$prototypeV2=virtual QString text( QAccessible::Text t, int child ) const
 
-$prototype=virtual int userActionCount ( int child ) const
-$virtualMethod=|int|userActionCount|int
+$prototypeV2=virtual int userActionCount( int child ) const
 
 #pragma ENDDUMP

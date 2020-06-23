@@ -38,20 +38,15 @@ $prototypeV2=qreal leftPadding() const
 
 $prototypeV2=qreal rightPadding() const
 
-$prototype=void setBottomPadding ( qreal padding )
-$method=|void|setBottomPadding|qreal
+$prototypeV2=void setBottomPadding( qreal padding )
 
-$prototype=void setLeftPadding ( qreal padding )
-$method=|void|setLeftPadding|qreal
+$prototypeV2=void setLeftPadding( qreal padding )
 
-$prototype=void setPadding ( qreal padding )
-$method=|void|setPadding|qreal
+$prototypeV2=void setPadding( qreal padding )
 
-$prototype=void setRightPadding ( qreal padding )
-$method=|void|setRightPadding|qreal
+$prototypeV2=void setRightPadding( qreal padding )
 
-$prototype=void setTopPadding ( qreal padding )
-$method=|void|setTopPadding|qreal
+$prototypeV2=void setTopPadding( qreal padding )
 
 $prototypeV2=qreal topPadding() const
 

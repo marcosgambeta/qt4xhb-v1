@@ -63,15 +63,13 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=const QPoint & globalPos () const
-$method=|const QPoint &|globalPos|
+$prototypeV2=const QPoint & globalPos() const
 
 $prototypeV2=int globalX() const
 
 $prototypeV2=int globalY() const
 
-$prototype=const QPoint & pos () const
-$method=|const QPoint &|pos|
+$prototypeV2=const QPoint & pos() const
 
 $prototypeV2=QContextMenuEvent::Reason reason() const
 

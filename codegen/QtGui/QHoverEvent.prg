@@ -30,10 +30,8 @@ $constructor=|new|QEvent::Type,const QPoint &,const QPoint &
 
 $deleteMethod
 
-$prototype=const QPoint & pos () const
-$method=|const QPoint &|pos|
+$prototypeV2=const QPoint & pos() const
 
-$prototype=const QPoint & oldPos () const
-$method=|const QPoint &|oldPos|
+$prototypeV2=const QPoint & oldPos() const
 
 #pragma ENDDUMP

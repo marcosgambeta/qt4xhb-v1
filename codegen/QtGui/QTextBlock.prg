@@ -45,8 +45,7 @@ $prototypeV2=int charFormatIndex() const
 
 $prototypeV2=void clearLayout()
 
-$prototype=bool contains ( int position ) const
-$method=|bool|contains|int
+$prototypeV2=bool contains( int position ) const
 
 $prototypeV2=const QTextDocument * document() const
 
@@ -70,20 +69,15 @@ $prototypeV2=QTextBlock previous() const
 
 $prototypeV2=int revision() const
 
-$prototype=void setLineCount ( int count )
-$method=|void|setLineCount|int
+$prototypeV2=void setLineCount( int count )
 
-$prototype=void setRevision ( int rev )
-$method=|void|setRevision|int
+$prototypeV2=void setRevision( int rev )
 
-$prototype=void setUserData ( QTextBlockUserData * data )
-$method=|void|setUserData|QTextBlockUserData *
+$prototypeV2=void setUserData( QTextBlockUserData * data )
 
-$prototype=void setUserState ( int state )
-$method=|void|setUserState|int
+$prototypeV2=void setUserState( int state )
 
-$prototype=void setVisible ( bool visible )
-$method=|void|setVisible|bool
+$prototypeV2=void setVisible( bool visible )
 
 $prototypeV2=QString text() const
 

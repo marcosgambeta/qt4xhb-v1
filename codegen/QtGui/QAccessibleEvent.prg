@@ -30,8 +30,7 @@ $constructor=|new|QAccessibleEvent::Type,int
 
 $prototypeV2=int child() const
 
-$prototype=void setValue ( const QString & text )
-$method=|void|setValue|const QString &
+$prototypeV2=void setValue( const QString & text )
 
 $prototypeV2=QString value() const
 

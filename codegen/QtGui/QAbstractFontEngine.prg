@@ -37,14 +37,12 @@ $prototype=virtual bool convertStringToGlyphIndices ( const QChar * string, int 
 %% TODO: implementar 'uint *'
 %% $virtualMethod=|bool|convertStringToGlyphIndices|const QChar *,int,uint *,int *,QAbstractFontEngine::TextShapingFlags
 
-$prototype=virtual QVariant fontProperty ( FontProperty property ) const = 0
-$virtualMethod=|QVariant|fontProperty|QAbstractFontEngine::FontProperty
+$prototypeV2=virtual QVariant fontProperty( QAbstractFontEngine::FontProperty property ) const = 0
 
 $prototype=virtual void getGlyphAdvances ( const uint * glyphs, int numGlyphs, Fixed * advances, TextShapingFlags flags ) const = 0
 %% TODO: implementar 'uint *'
 %% $virtualMethod=|void|getGlyphAdvances|const uint *,int,QAbstractFontEngine::Fixed *,QAbstractFontEngine::TextShapingFlags
 
-$prototype=virtual bool renderGlyph ( uint glyph, int depth, int bytesPerLine, int height, uchar * buffer )
-$virtualMethod=|bool|renderGlyph|uint,int,int,int,uchar *
+$prototypeV2=virtual bool renderGlyph( uint glyph, int depth, int bytesPerLine, int height, uchar * buffer )
 
 #pragma ENDDUMP

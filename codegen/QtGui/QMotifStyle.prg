@@ -30,8 +30,7 @@ $constructor=|new|bool=false
 
 $deleteMethod
 
-$prototype=void setUseHighlightColors ( bool arg )
-$method=|void|setUseHighlightColors|bool
+$prototypeV2=void setUseHighlightColors( bool arg )
 
 $prototypeV2=bool useHighlightColors() const
 
@@ -44,14 +43,12 @@ $virtualMethod=|void|drawControl|QStyle::ControlElement,const QStyleOption *,QPa
 $prototype=virtual void drawPrimitive ( PrimitiveElement pe, const QStyleOption * opt, QPainter * p, const QWidget * w = 0 ) const
 $virtualMethod=|void|drawPrimitive|QStyle::PrimitiveElement,const QStyleOption *,QPainter *,const QWidget *=0
 
-$prototype=virtual bool event ( QEvent * e )
-$virtualMethod=|bool|event|QEvent *
+$prototypeV2=virtual bool event( QEvent * e )
 
 $prototype=virtual int pixelMetric ( PixelMetric pm, const QStyleOption * opt = 0, const QWidget * widget = 0 ) const
 $virtualMethod=|int|pixelMetric|QStyle::PixelMetric,const QStyleOption *=0,const QWidget *=0
 
-$prototype=virtual void polish ( QPalette & pal )
-$virtualMethod=|void|polish|QPalette &
+$prototypeV2=virtual void polish( QPalette & pal )
 
 $prototype=virtual QSize sizeFromContents ( ContentsType ct, const QStyleOption * opt, const QSize & contentsSize, const QWidget * widget = 0 ) const
 $virtualMethod=|QSize|sizeFromContents|QStyle::ContentsType,const QStyleOption *,const QSize &,const QWidget *=0

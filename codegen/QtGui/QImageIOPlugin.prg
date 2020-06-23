@@ -27,8 +27,7 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual Capabilities capabilities ( QIODevice * device, const QByteArray & format ) const = 0
-$virtualMethod=|QImageIOPlugin::Capabilities|capabilities|QIODevice *,const QByteArray &
+$prototypeV2=virtual QImageIOPlugin::Capabilities capabilities( QIODevice * device, const QByteArray & format ) const = 0
 
 $prototype=virtual QImageIOHandler * create ( QIODevice * device, const QByteArray & format = QByteArray() ) const = 0
 $virtualMethod=|QImageIOHandler *|create|QIODevice *,const QByteArray &=QByteArray()

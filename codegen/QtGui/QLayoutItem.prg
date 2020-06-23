@@ -39,8 +39,7 @@ $prototypeV2=virtual QRect geometry() const = 0
 
 $prototypeV2=virtual bool hasHeightForWidth() const
 
-$prototype=virtual int heightForWidth ( int w ) const
-$virtualMethod=|int|heightForWidth|int
+$prototypeV2=virtual int heightForWidth( int w ) const
 
 $prototypeV2=virtual void invalidate()
 
@@ -50,16 +49,13 @@ $prototypeV2=virtual QLayout * layout()
 
 $prototypeV2=virtual QSize maximumSize() const = 0
 
-$prototype=virtual int minimumHeightForWidth ( int w ) const
-$virtualMethod=|int|minimumHeightForWidth|int
+$prototypeV2=virtual int minimumHeightForWidth( int w ) const
 
 $prototypeV2=virtual QSize minimumSize() const = 0
 
-$prototype=void setAlignment ( Qt::Alignment alignment )
-$method=|void|setAlignment|Qt::Alignment
+$prototypeV2=void setAlignment( Qt::Alignment alignment )
 
-$prototype=virtual void setGeometry ( const QRect & r ) = 0
-$virtualMethod=|void|setGeometry|const QRect &
+$prototypeV2=virtual void setGeometry( const QRect & r ) = 0
 
 $prototypeV2=virtual QSize sizeHint() const = 0
 

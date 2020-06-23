@@ -32,13 +32,10 @@ $deleteMethod
 
 $prototypeV2=QWidget * defaultWidget() const
 
-$prototype=void releaseWidget ( QWidget * widget )
-$method=|void|releaseWidget|QWidget *
+$prototypeV2=void releaseWidget( QWidget * widget )
 
-$prototype=QWidget * requestWidget ( QWidget * parent )
-$method=|QWidget *|requestWidget|QWidget *
+$prototypeV2=QWidget * requestWidget( QWidget * parent )
 
-$prototype=void setDefaultWidget ( QWidget * widget )
-$method=|void|setDefaultWidget|QWidget *
+$prototypeV2=void setDefaultWidget( QWidget * widget )
 
 #pragma ENDDUMP

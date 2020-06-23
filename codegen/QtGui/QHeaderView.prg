@@ -42,8 +42,7 @@ $prototypeV2=int defaultSectionSize() const
 
 $prototypeV2=int hiddenSectionCount() const
 
-$prototype=void hideSection ( int logicalIndex )
-$method=|void|hideSection|int
+$prototypeV2=void hideSection( int logicalIndex )
 
 $prototypeV2=bool highlightSections() const
 
@@ -51,15 +50,13 @@ $prototypeV2=bool isClickable() const
 
 $prototypeV2=bool isMovable() const
 
-$prototype=bool isSectionHidden ( int logicalIndex ) const
-$method=|bool|isSectionHidden|int
+$prototypeV2=bool isSectionHidden( int logicalIndex ) const
 
 $prototypeV2=bool isSortIndicatorShown() const
 
 $prototypeV2=int length() const
 
-$prototype=int logicalIndex ( int visualIndex ) const
-$method=|int|logicalIndex|int
+$prototypeV2=int logicalIndex( int visualIndex ) const
 
 $prototype=int logicalIndexAt ( int position ) const
 $internalMethod=|int|logicalIndexAt,logicalIndexAt1|int
@@ -99,63 +96,47 @@ $addMethod=logicalIndexAt
 
 $prototypeV2=int minimumSectionSize() const
 
-$prototype=void moveSection ( int from, int to )
-$method=|void|moveSection|int,int
+$prototypeV2=void moveSection( int from, int to )
 
 $prototypeV2=int offset() const
 
 $prototypeV2=Qt::Orientation orientation() const
 
-$prototype=ResizeMode resizeMode ( int logicalIndex ) const
-$method=|QHeaderView::ResizeMode|resizeMode|int
+$prototypeV2=QHeaderView::ResizeMode resizeMode( int logicalIndex ) const
 
-$prototype=void resizeSection ( int logicalIndex, int size )
-$method=|void|resizeSection|int,int
+$prototypeV2=void resizeSection( int logicalIndex, int size )
 
-$prototype=void resizeSections ( QHeaderView::ResizeMode mode )
-$method=|void|resizeSections|QHeaderView::ResizeMode
+$prototypeV2=void resizeSections( QHeaderView::ResizeMode mode )
 
-$prototype=bool restoreState ( const QByteArray & state )
-$method=|bool|restoreState|const QByteArray &
+$prototypeV2=bool restoreState( const QByteArray & state )
 
 $prototypeV2=QByteArray saveState() const
 
-$prototype=int sectionPosition ( int logicalIndex ) const
-$method=|int|sectionPosition|int
+$prototypeV2=int sectionPosition( int logicalIndex ) const
 
-$prototype=int sectionSize ( int logicalIndex ) const
-$method=|int|sectionSize|int
+$prototypeV2=int sectionSize( int logicalIndex ) const
 
-$prototype=int sectionSizeHint ( int logicalIndex ) const
-$method=|int|sectionSizeHint|int
+$prototypeV2=int sectionSizeHint( int logicalIndex ) const
 
-$prototype=int sectionViewportPosition ( int logicalIndex ) const
-$method=|int|sectionViewportPosition|int
+$prototypeV2=int sectionViewportPosition( int logicalIndex ) const
 
 $prototypeV2=bool sectionsHidden() const
 
 $prototypeV2=bool sectionsMoved() const
 
-$prototype=void setCascadingSectionResizes ( bool enable )
-$method=|void|setCascadingSectionResizes|bool
+$prototypeV2=void setCascadingSectionResizes( bool enable )
 
-$prototype=void setClickable ( bool clickable )
-$method=|void|setClickable|bool
+$prototypeV2=void setClickable( bool clickable )
 
-$prototype=void setDefaultAlignment ( Qt::Alignment alignment )
-$method=|void|setDefaultAlignment|Qt::Alignment
+$prototypeV2=void setDefaultAlignment( Qt::Alignment alignment )
 
-$prototype=void setDefaultSectionSize ( int size )
-$method=|void|setDefaultSectionSize|int
+$prototypeV2=void setDefaultSectionSize( int size )
 
-$prototype=void setHighlightSections ( bool highlight )
-$method=|void|setHighlightSections|bool
+$prototypeV2=void setHighlightSections( bool highlight )
 
-$prototype=void setMinimumSectionSize ( int size )
-$method=|void|setMinimumSectionSize|int
+$prototypeV2=void setMinimumSectionSize( int size )
 
-$prototype=void setMovable ( bool movable )
-$method=|void|setMovable|bool
+$prototypeV2=void setMovable( bool movable )
 
 $prototype=void setResizeMode ( ResizeMode mode )
 $internalMethod=|void|setResizeMode,setResizeMode1|QHeaderView::ResizeMode
@@ -185,20 +166,15 @@ HB_FUNC_STATIC( QHEADERVIEW_SETRESIZEMODE )
 }
 $addMethod=setResizeMode
 
-$prototype=void setSectionHidden ( int logicalIndex, bool hide )
-$method=|void|setSectionHidden|int,bool
+$prototypeV2=void setSectionHidden( int logicalIndex, bool hide )
 
-$prototype=void setSortIndicator ( int logicalIndex, Qt::SortOrder order )
-$method=|void|setSortIndicator|int,Qt::SortOrder
+$prototypeV2=void setSortIndicator( int logicalIndex, Qt::SortOrder order )
 
-$prototype=void setSortIndicatorShown ( bool show )
-$method=|void|setSortIndicatorShown|bool
+$prototypeV2=void setSortIndicatorShown( bool show )
 
-$prototype=void setStretchLastSection ( bool stretch )
-$method=|void|setStretchLastSection|bool
+$prototypeV2=void setStretchLastSection( bool stretch )
 
-$prototype=void showSection ( int logicalIndex )
-$method=|void|showSection|int
+$prototypeV2=void showSection( int logicalIndex )
 
 $prototypeV2=Qt::SortOrder sortIndicatorOrder() const
 
@@ -208,32 +184,25 @@ $prototypeV2=bool stretchLastSection() const
 
 $prototypeV2=int stretchSectionCount() const
 
-$prototype=void swapSections ( int first, int second )
-$method=|void|swapSections|int,int
+$prototypeV2=void swapSections( int first, int second )
 
-$prototype=int visualIndex ( int logicalIndex ) const
-$method=|int|visualIndex|int
+$prototypeV2=int visualIndex( int logicalIndex ) const
 
-$prototype=int visualIndexAt ( int position ) const
-$method=|int|visualIndexAt|int
+$prototypeV2=int visualIndexAt( int position ) const
 
 $prototypeV2=virtual void reset()
 
-$prototype=virtual void setModel ( QAbstractItemModel * model )
-$virtualMethod=|void|setModel|QAbstractItemModel *
+$prototypeV2=virtual void setModel( QAbstractItemModel * model )
 
 $prototypeV2=virtual QSize sizeHint() const
 
-$prototype=void headerDataChanged ( Qt::Orientation orientation, int logicalFirst, int logicalLast )
-$method=|void|headerDataChanged|Qt::Orientation,int,int
+$prototypeV2=void headerDataChanged( Qt::Orientation orientation, int logicalFirst, int logicalLast )
 
-$prototype=void setOffset ( int offset )
-$method=|void|setOffset|int
+$prototypeV2=void setOffset( int offset )
 
 $prototypeV2=void setOffsetToLastSection()
 
-$prototype=void setOffsetToSectionPosition ( int visualIndex )
-$method=|void|setOffsetToSectionPosition|int
+$prototypeV2=void setOffsetToSectionPosition( int visualIndex )
 
 $beginSignals
 $signal=|geometriesChanged()

@@ -59,8 +59,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QString anchorAt ( const QPoint & pos ) const
-$method=|QString|anchorAt|const QPoint &
+$prototypeV2=QString anchorAt( const QPoint & pos ) const
 
 $prototypeV2=bool backgroundVisible() const
 
@@ -74,8 +73,7 @@ $prototypeV2=QMenu * createStandardContextMenu()
 
 $prototypeV2=QTextCharFormat currentCharFormat() const
 
-$prototype=QTextCursor cursorForPosition ( const QPoint & pos ) const
-$method=|QTextCursor|cursorForPosition|const QPoint &
+$prototypeV2=QTextCursor cursorForPosition( const QPoint & pos ) const
 
 $prototype=QRect cursorRect ( const QTextCursor & cursor ) const
 $internalMethod=|QRect|cursorRect,cursorRect1|const QTextCursor &
@@ -122,69 +120,50 @@ $prototypeV2=bool isUndoRedoEnabled() const
 
 $prototypeV2=QPlainTextEdit::LineWrapMode lineWrapMode() const
 
-$prototype=virtual QVariant loadResource ( int type, const QUrl & name )
-$virtualMethod=|QVariant|loadResource|int,const QUrl &
+$prototypeV2=virtual QVariant loadResource( int type, const QUrl & name )
 
 $prototypeV2=int maximumBlockCount() const
 
-$prototype=void mergeCurrentCharFormat ( const QTextCharFormat & modifier )
-$method=|void|mergeCurrentCharFormat|const QTextCharFormat &
+$prototypeV2=void mergeCurrentCharFormat( const QTextCharFormat & modifier )
 
 $prototype=void moveCursor ( QTextCursor::MoveOperation operation, QTextCursor::MoveMode mode = QTextCursor::MoveAnchor )
 $method=|void|moveCursor|QTextCursor::MoveOperation,QTextCursor::MoveMode=QTextCursor::MoveAnchor
 
 $prototypeV2=bool overwriteMode() const
 
-$prototype=void print ( QPrinter * printer ) const
-$method=|void|print|QPrinter *
+$prototypeV2=void print( QPrinter * printer ) const
 
-$prototype=void setBackgroundVisible ( bool visible )
-$method=|void|setBackgroundVisible|bool
+$prototypeV2=void setBackgroundVisible( bool visible )
 
-$prototype=void setCenterOnScroll ( bool enabled )
-$method=|void|setCenterOnScroll|bool
+$prototypeV2=void setCenterOnScroll( bool enabled )
 
-$prototype=void setCurrentCharFormat ( const QTextCharFormat & format )
-$method=|void|setCurrentCharFormat|const QTextCharFormat &
+$prototypeV2=void setCurrentCharFormat( const QTextCharFormat & format )
 
-$prototype=void setCursorWidth ( int width )
-$method=|void|setCursorWidth|int
+$prototypeV2=void setCursorWidth( int width )
 
-$prototype=void setDocument ( QTextDocument * document )
-$method=|void|setDocument|QTextDocument *
+$prototypeV2=void setDocument( QTextDocument * document )
 
-$prototype=void setDocumentTitle ( const QString & title )
-$method=|void|setDocumentTitle|const QString &
+$prototypeV2=void setDocumentTitle( const QString & title )
 
-$prototype=void setLineWrapMode ( LineWrapMode mode )
-$method=|void|setLineWrapMode|QPlainTextEdit::LineWrapMode
+$prototypeV2=void setLineWrapMode( QPlainTextEdit::LineWrapMode mode )
 
-$prototype=void setMaximumBlockCount ( int maximum )
-$method=|void|setMaximumBlockCount|int
+$prototypeV2=void setMaximumBlockCount( int maximum )
 
-$prototype=void setOverwriteMode ( bool overwrite )
-$method=|void|setOverwriteMode|bool
+$prototypeV2=void setOverwriteMode( bool overwrite )
 
-$prototype=void setReadOnly ( bool ro )
-$method=|void|setReadOnly|bool
+$prototypeV2=void setReadOnly( bool ro )
 
-$prototype=void setTabChangesFocus ( bool b )
-$method=|void|setTabChangesFocus|bool
+$prototypeV2=void setTabChangesFocus( bool b )
 
-$prototype=void setTabStopWidth ( int width )
-$method=|void|setTabStopWidth|int
+$prototypeV2=void setTabStopWidth( int width )
 
-$prototype=void setTextCursor ( const QTextCursor & cursor )
-$method=|void|setTextCursor|const QTextCursor &
+$prototypeV2=void setTextCursor( const QTextCursor & cursor )
 
-$prototype=void setTextInteractionFlags ( Qt::TextInteractionFlags flags )
-$method=|void|setTextInteractionFlags|Qt::TextInteractionFlags
+$prototypeV2=void setTextInteractionFlags( Qt::TextInteractionFlags flags )
 
-$prototype=void setUndoRedoEnabled ( bool enable )
-$method=|void|setUndoRedoEnabled|bool
+$prototypeV2=void setUndoRedoEnabled( bool enable )
 
-$prototype=void setWordWrapMode ( QTextOption::WrapMode policy )
-$method=|void|setWordWrapMode|QTextOption::WrapMode
+$prototypeV2=void setWordWrapMode( QTextOption::WrapMode policy )
 
 $prototypeV2=bool tabChangesFocus() const
 
@@ -198,11 +177,9 @@ $prototypeV2=QString toPlainText() const
 
 $prototypeV2=QTextOption::WrapMode wordWrapMode() const
 
-$prototype=void appendHtml ( const QString & html )
-$method=|void|appendHtml|const QString &
+$prototypeV2=void appendHtml( const QString & html )
 
-$prototype=void appendPlainText ( const QString & text )
-$method=|void|appendPlainText|const QString &
+$prototypeV2=void appendPlainText( const QString & text )
 
 $prototypeV2=void centerCursor()
 
@@ -212,8 +189,7 @@ $prototypeV2=void copy()
 
 $prototypeV2=void cut()
 
-$prototype=void insertPlainText ( const QString & text )
-$method=|void|insertPlainText|const QString &
+$prototypeV2=void insertPlainText( const QString & text )
 
 $prototypeV2=void paste()
 
@@ -221,8 +197,7 @@ $prototypeV2=void redo()
 
 $prototypeV2=void selectAll()
 
-$prototype=void setPlainText ( const QString & text )
-$method=|void|setPlainText|const QString &
+$prototypeV2=void setPlainText( const QString & text )
 
 $prototypeV2=void undo()
 

@@ -25,20 +25,15 @@ $destructor
 
 $includes
 
-$prototype=static QString displayName ( StandardLocation type )
-$staticMethod=|QString|displayName|QDesktopServices::StandardLocation
+$prototypeV2=static QString displayName( QDesktopServices::StandardLocation type )
 
-$prototype=static bool openUrl ( const QUrl & url )
-$staticMethod=|bool|openUrl|const QUrl &
+$prototypeV2=static bool openUrl( const QUrl & url )
 
-$prototype=static void setUrlHandler ( const QString & scheme, QObject * receiver, const char * method )
-$staticMethod=|void|setUrlHandler|const QString &,QObject *,const char *
+$prototypeV2=static void setUrlHandler( const QString & scheme, QObject * receiver, const char * method )
 
-$prototype=static QString storageLocation ( StandardLocation type )
-$staticMethod=|QString|storageLocation|QDesktopServices::StandardLocation
+$prototypeV2=static QString storageLocation( QDesktopServices::StandardLocation type )
 
-$prototype=static void unsetUrlHandler ( const QString & scheme )
-$staticMethod=|void|unsetUrlHandler|const QString &
+$prototypeV2=static void unsetUrlHandler( const QString & scheme )
 
 $extraMethods
 

@@ -27,14 +27,11 @@ $includes
 
 $prototypeV2=static bool isActive()
 
-$prototype=static QAccessibleInterface * queryAccessibleInterface ( QObject * object )
-$staticMethod=|QAccessibleInterface *|queryAccessibleInterface|QObject *
+$prototypeV2=static QAccessibleInterface * queryAccessibleInterface( QObject * object )
 
-$prototype=static void setRootObject ( QObject * object )
-$staticMethod=|void|setRootObject|QObject *
+$prototypeV2=static void setRootObject( QObject * object )
 
-$prototype=static void updateAccessibility ( QObject * object, int child, Event reason )
-$staticMethod=|void|updateAccessibility|QObject *,int,QAccessible::Event
+$prototypeV2=static void updateAccessibility( QObject * object, int child, Event reason )
 
 $extraMethods
 

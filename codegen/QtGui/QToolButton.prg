@@ -45,17 +45,13 @@ $prototypeV2=QMenu * menu() const
 
 $prototypeV2=QToolButton::ToolButtonPopupMode popupMode() const
 
-$prototype=void setArrowType ( Qt::ArrowType type )
-$method=|void|setArrowType|Qt::ArrowType
+$prototypeV2=void setArrowType( Qt::ArrowType type )
 
-$prototype=void setAutoRaise ( bool enable )
-$method=|void|setAutoRaise|bool
+$prototypeV2=void setAutoRaise( bool enable )
 
-$prototype=void setMenu ( QMenu * menu )
-$method=|void|setMenu|QMenu *
+$prototypeV2=void setMenu( QMenu * menu )
 
-$prototype=void setPopupMode ( ToolButtonPopupMode mode )
-$method=|void|setPopupMode|QToolButton::ToolButtonPopupMode
+$prototypeV2=void setPopupMode( QToolButton::ToolButtonPopupMode mode )
 
 $prototypeV2=Qt::ToolButtonStyle toolButtonStyle() const
 
@@ -63,11 +59,9 @@ $prototypeV2=virtual QSize minimumSizeHint() const
 
 $prototypeV2=virtual QSize sizeHint() const
 
-$prototype=void setDefaultAction ( QAction * action )
-$method=|void|setDefaultAction|QAction *
+$prototypeV2=void setDefaultAction( QAction * action )
 
-$prototype=void setToolButtonStyle ( Qt::ToolButtonStyle style )
-$method=|void|setToolButtonStyle|Qt::ToolButtonStyle
+$prototypeV2=void setToolButtonStyle( Qt::ToolButtonStyle style )
 
 $prototypeV2=void showMenu()
 

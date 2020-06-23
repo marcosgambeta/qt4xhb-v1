@@ -30,14 +30,12 @@ $includes
 $prototype=QFontDatabase ()
 $constructor=|new|
 
-$prototype=bool bold ( const QString & family, const QString & style ) const
-$method=|bool|bold|const QString &,const QString &
+$prototypeV2=bool bold( const QString & family, const QString & style ) const
 
 $prototype=QStringList families ( WritingSystem writingSystem = Any ) const
 $method=|QStringList|families|QFontDatabase::WritingSystem=QFontDatabase::Any
 
-$prototype=QFont font ( const QString & family, const QString & style, int pointSize ) const
-$method=|QFont|font|const QString &,const QString &,int
+$prototypeV2=QFont font( const QString & family, const QString & style, int pointSize ) const
 
 $prototype=bool isBitmapScalable ( const QString & family, const QString & style = QString() ) const
 $method=|bool|isBitmapScalable|const QString &,const QString &=QString()
@@ -51,14 +49,12 @@ $method=|bool|isScalable|const QString &,const QString &=QString()
 $prototype=bool isSmoothlyScalable ( const QString & family, const QString & style = QString() ) const
 $method=|bool|isSmoothlyScalable|const QString &,const QString &=QString()
 
-$prototype=bool italic ( const QString & family, const QString & style ) const
-$method=|bool|italic|const QString &,const QString &
+$prototypeV2=bool italic( const QString & family, const QString & style ) const
 
 $prototype=QList<int> pointSizes ( const QString & family, const QString & style = QString() )
 $method=|QList<int>|pointSizes|const QString &,const QString &=QString()
 
-$prototype=QList<int> smoothSizes ( const QString & family, const QString & style )
-$method=|QList<int>|smoothSizes|const QString &,const QString &
+$prototypeV2=QList<int> smoothSizes( const QString & family, const QString & style )
 
 $prototype=QString styleString ( const QFont & font )
 $internalMethod=|QString|styleString,styleString1|const QFont &
@@ -88,11 +84,9 @@ HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING )
 }
 $addMethod=styleString
 
-$prototype=QStringList styles ( const QString & family ) const
-$method=|QStringList|styles|const QString &
+$prototypeV2=QStringList styles( const QString & family ) const
 
-$prototype=int weight ( const QString & family, const QString & style ) const
-$method=|int|weight|const QString &,const QString &
+$prototypeV2=int weight( const QString & family, const QString & style ) const
 
 $prototype=QList<WritingSystem> writingSystems () const
 $internalMethod=|QList<QFontDatabase::WritingSystem>|writingSystems,writingSystems1|
@@ -122,29 +116,23 @@ HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMS )
 }
 $addMethod=writingSystems
 
-$prototype=static int addApplicationFont ( const QString & fileName )
-$staticMethod=|int|addApplicationFont|const QString &
+$prototypeV2=static int addApplicationFont( const QString & fileName )
 
-$prototype=static int addApplicationFontFromData ( const QByteArray & fontData )
-$staticMethod=|int|addApplicationFontFromData|const QByteArray &
+$prototypeV2=static int addApplicationFontFromData( const QByteArray & fontData )
 
-$prototype=static QStringList applicationFontFamilies ( int id )
-$staticMethod=|QStringList|applicationFontFamilies|int
+$prototypeV2=static QStringList applicationFontFamilies( int id )
 
 $prototypeV2=static bool removeAllApplicationFonts()
 
-$prototype=static bool removeApplicationFont ( int id )
-$staticMethod=|bool|removeApplicationFont|int
+$prototypeV2=static bool removeApplicationFont( int id )
 
 $prototypeV2=static QList<int> standardSizes()
 
 $prototypeV2=static bool supportsThreadedFontRendering()
 
-$prototype=static QString writingSystemName ( WritingSystem writingSystem )
-$staticMethod=|QString|writingSystemName|QFontDatabase::WritingSystem
+$prototypeV2=static QString writingSystemName( QFontDatabase::WritingSystem writingSystem )
 
-$prototype=static QString writingSystemSample ( WritingSystem writingSystem )
-$staticMethod=|QString|writingSystemSample|QFontDatabase::WritingSystem
+$prototypeV2=static QString writingSystemSample( QFontDatabase::WritingSystem writingSystem )
 
 $extraMethods
 

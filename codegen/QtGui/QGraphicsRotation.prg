@@ -38,8 +38,7 @@ $prototypeV2=QVector3D axis() const
 
 $prototypeV2=QVector3D origin() const
 
-$prototype=void setAngle ( qreal )
-$method=|void|setAngle|qreal
+$prototypeV2=void setAngle( qreal )
 
 $prototype=void setAxis ( const QVector3D & axis )
 $internalMethod=|void|setAxis,setAxis1|const QVector3D &
@@ -69,11 +68,9 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS )
 }
 $addMethod=setAxis
 
-$prototype=void setOrigin ( const QVector3D & point )
-$method=|void|setOrigin|const QVector3D &
+$prototypeV2=void setOrigin( const QVector3D & point )
 
-$prototype=virtual void applyTo ( QMatrix4x4 * matrix ) const
-$virtualMethod=|void|applyTo|QMatrix4x4 *
+$prototypeV2=virtual void applyTo( QMatrix4x4 * matrix ) const
 
 $beginSignals
 $signal=|angleChanged()

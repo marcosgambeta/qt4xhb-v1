@@ -34,17 +34,13 @@ $deleteMethod
 
 $prototypeV2=QVector3D origin() const
 
-$prototype=void setOrigin ( const QVector3D & point )
-$method=|void|setOrigin|const QVector3D &
+$prototypeV2=void setOrigin( const QVector3D & point )
 
-$prototype=void setXScale ( qreal )
-$method=|void|setXScale|qreal
+$prototypeV2=void setXScale( qreal )
 
-$prototype=void setYScale ( qreal )
-$method=|void|setYScale|qreal
+$prototypeV2=void setYScale( qreal )
 
-$prototype=void setZScale ( qreal )
-$method=|void|setZScale|qreal
+$prototypeV2=void setZScale( qreal )
 
 $prototypeV2=qreal xScale() const
 
@@ -52,8 +48,7 @@ $prototypeV2=qreal yScale() const
 
 $prototypeV2=qreal zScale() const
 
-$prototype=virtual void applyTo ( QMatrix4x4 * matrix ) const
-$virtualMethod=|void|applyTo|QMatrix4x4 *
+$prototypeV2=virtual void applyTo( QMatrix4x4 * matrix ) const
 
 $beginSignals
 $signal=|originChanged()

@@ -38,14 +38,11 @@ $prototypeV2=bool allColumnsShowFocus() const
 
 $prototypeV2=int autoExpandDelay() const
 
-$prototype=int columnAt ( int x ) const
-$method=|int|columnAt|int
+$prototypeV2=int columnAt( int x ) const
 
-$prototype=int columnViewportPosition ( int column ) const
-$method=|int|columnViewportPosition|int
+$prototypeV2=int columnViewportPosition( int column ) const
 
-$prototype=int columnWidth ( int column ) const
-$method=|int|columnWidth|int
+$prototypeV2=int columnWidth( int column ) const
 
 $prototypeV2=bool expandsOnDoubleClick() const
 
@@ -53,27 +50,21 @@ $prototypeV2=QHeaderView * header() const
 
 $prototypeV2=int indentation() const
 
-$prototype=QModelIndex indexAbove ( const QModelIndex & index ) const
-$method=|QModelIndex|indexAbove|const QModelIndex &
+$prototypeV2=QModelIndex indexAbove( const QModelIndex & index ) const
 
-$prototype=QModelIndex indexBelow ( const QModelIndex & index ) const
-$method=|QModelIndex|indexBelow|const QModelIndex &
+$prototypeV2=QModelIndex indexBelow( const QModelIndex & index ) const
 
 $prototypeV2=bool isAnimated() const
 
-$prototype=bool isColumnHidden ( int column ) const
-$method=|bool|isColumnHidden|int
+$prototypeV2=bool isColumnHidden( int column ) const
 
-$prototype=bool isExpanded ( const QModelIndex & index ) const
-$method=|bool|isExpanded|const QModelIndex &
+$prototypeV2=bool isExpanded( const QModelIndex & index ) const
 
-$prototype=bool isFirstColumnSpanned ( int row, const QModelIndex & parent ) const
-$method=|bool|isFirstColumnSpanned|int,const QModelIndex &
+$prototypeV2=bool isFirstColumnSpanned( int row, const QModelIndex & parent ) const
 
 $prototypeV2=bool isHeaderHidden() const
 
-$prototype=bool isRowHidden ( int row, const QModelIndex & parent ) const
-$method=|bool|isRowHidden|int,const QModelIndex &
+$prototypeV2=bool isRowHidden( int row, const QModelIndex & parent ) const
 
 $prototypeV2=bool isSortingEnabled() const
 
@@ -81,72 +72,51 @@ $prototypeV2=bool itemsExpandable() const
 
 $prototypeV2=bool rootIsDecorated() const
 
-$prototype=void setAllColumnsShowFocus ( bool enable )
-$method=|void|setAllColumnsShowFocus|bool
+$prototypeV2=void setAllColumnsShowFocus( bool enable )
 
-$prototype=void setAnimated ( bool enable )
-$method=|void|setAnimated|bool
+$prototypeV2=void setAnimated( bool enable )
 
-$prototype=void setAutoExpandDelay ( int delay )
-$method=|void|setAutoExpandDelay|int
+$prototypeV2=void setAutoExpandDelay( int delay )
 
-$prototype=void setColumnHidden ( int column, bool hide )
-$method=|void|setColumnHidden|int,bool
+$prototypeV2=void setColumnHidden( int column, bool hide )
 
-$prototype=void setColumnWidth ( int column, int width )
-$method=|void|setColumnWidth|int,int
+$prototypeV2=void setColumnWidth( int column, int width )
 
-$prototype=void setExpanded ( const QModelIndex & index, bool expanded )
-$method=|void|setExpanded|const QModelIndex &,bool
+$prototypeV2=void setExpanded( const QModelIndex & index, bool expanded )
 
-$prototype=void setExpandsOnDoubleClick ( bool enable )
-$method=|void|setExpandsOnDoubleClick|bool
+$prototypeV2=void setExpandsOnDoubleClick( bool enable )
 
-$prototype=void setFirstColumnSpanned ( int row, const QModelIndex & parent, bool span )
-$method=|void|setFirstColumnSpanned|int,const QModelIndex &,bool
+$prototypeV2=void setFirstColumnSpanned( int row, const QModelIndex & parent, bool span )
 
-$prototype=void setHeader ( QHeaderView * header )
-$method=|void|setHeader|QHeaderView *
+$prototypeV2=void setHeader( QHeaderView * header )
 
-$prototype=void setHeaderHidden ( bool hide )
-$method=|void|setHeaderHidden|bool
+$prototypeV2=void setHeaderHidden( bool hide )
 
-$prototype=void setIndentation ( int i )
-$method=|void|setIndentation|int
+$prototypeV2=void setIndentation( int i )
 
-$prototype=void setItemsExpandable ( bool enable )
-$method=|void|setItemsExpandable|bool
+$prototypeV2=void setItemsExpandable( bool enable )
 
-$prototype=void setRootIsDecorated ( bool show )
-$method=|void|setRootIsDecorated|bool
+$prototypeV2=void setRootIsDecorated( bool show )
 
-$prototype=void setRowHidden ( int row, const QModelIndex & parent, bool hide )
-$method=|void|setRowHidden|int,const QModelIndex &,bool
+$prototypeV2=void setRowHidden( int row, const QModelIndex & parent, bool hide )
 
-$prototype=void setSortingEnabled ( bool enable )
-$method=|void|setSortingEnabled|bool
+$prototypeV2=void setSortingEnabled( bool enable )
 
-$prototype=void setUniformRowHeights ( bool uniform )
-$method=|void|setUniformRowHeights|bool
+$prototypeV2=void setUniformRowHeights( bool uniform )
 
-$prototype=void setWordWrap ( bool on )
-$method=|void|setWordWrap|bool
+$prototypeV2=void setWordWrap( bool on )
 
-$prototype=void sortByColumn ( int column, Qt::SortOrder order )
-$method=|void|sortByColumn|int,Qt::SortOrder
+$prototypeV2=void sortByColumn( int column, Qt::SortOrder order )
 
 $prototypeV2=bool uniformRowHeights() const
 
 $prototypeV2=bool wordWrap() const
 
-$prototype=virtual void dataChanged ( const QModelIndex & topLeft, const QModelIndex & bottomRight )
-$virtualMethod=|void|dataChanged|const QModelIndex &,const QModelIndex &
+$prototypeV2=virtual void dataChanged( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 
-$prototype=virtual QModelIndex indexAt ( const QPoint & point ) const
-$virtualMethod=|QModelIndex|indexAt|const QPoint &
+$prototypeV2=virtual QModelIndex indexAt( const QPoint & point ) const
 
-$prototype=virtual void keyboardSearch ( const QString & search )
-$virtualMethod=|void|keyboardSearch|const QString &
+$prototypeV2=virtual void keyboardSearch( const QString & search )
 
 $prototypeV2=virtual void reset()
 
@@ -155,39 +125,29 @@ $virtualMethod=|void|scrollTo|const QModelIndex &,QTreeView::ScrollHint=QTreeVie
 
 $prototypeV2=virtual void selectAll()
 
-$prototype=virtual void setModel ( QAbstractItemModel * model )
-$virtualMethod=|void|setModel|QAbstractItemModel *
+$prototypeV2=virtual void setModel( QAbstractItemModel * model )
 
-$prototype=virtual void setRootIndex ( const QModelIndex & index )
-$virtualMethod=|void|setRootIndex|const QModelIndex &
+$prototypeV2=virtual void setRootIndex( const QModelIndex & index )
 
-$prototype=virtual void setSelectionModel ( QItemSelectionModel * selectionModel )
-$virtualMethod=|void|setSelectionModel|QItemSelectionModel *
+$prototypeV2=virtual void setSelectionModel( QItemSelectionModel * selectionModel )
 
-$prototype=virtual QRect visualRect ( const QModelIndex & index ) const
-$virtualMethod=|QRect|visualRect|const QModelIndex &
+$prototypeV2=virtual QRect visualRect( const QModelIndex & index ) const
 
-$prototype=void collapse ( const QModelIndex & index )
-$method=|void|collapse|const QModelIndex &
+$prototypeV2=void collapse( const QModelIndex & index )
 
 $prototypeV2=void collapseAll()
 
-$prototype=void expand ( const QModelIndex & index )
-$method=|void|expand|const QModelIndex &
+$prototypeV2=void expand( const QModelIndex & index )
 
 $prototypeV2=void expandAll()
 
-$prototype=void expandToDepth ( int depth )
-$method=|void|expandToDepth|int
+$prototypeV2=void expandToDepth( int depth )
 
-$prototype=void hideColumn ( int column )
-$method=|void|hideColumn|int
+$prototypeV2=void hideColumn( int column )
 
-$prototype=void resizeColumnToContents ( int column )
-$method=|void|resizeColumnToContents|int
+$prototypeV2=void resizeColumnToContents( int column )
 
-$prototype=void showColumn ( int column )
-$method=|void|showColumn|int
+$prototypeV2=void showColumn( int column )
 
 $beginSignals
 $signal=|collapsed(QModelIndex)

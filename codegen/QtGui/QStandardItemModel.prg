@@ -123,8 +123,7 @@ $method=|bool|removeRows|int,int,const QModelIndex &=QModelIndex()
 $prototype=bool removeColumns(int column, int count, const QModelIndex &parent = QModelIndex())
 $method=|bool|removeColumns|int,int,const QModelIndex &=QModelIndex()
 
-$prototype=Qt::ItemFlags flags(const QModelIndex &index) const
-$method=|Qt::ItemFlags|flags|const QModelIndex &
+$prototypeV2=Qt::ItemFlags flags( const QModelIndex & index ) const
 
 $prototypeV2=Qt::DropActions supportedDropActions() const
 
@@ -133,11 +132,9 @@ $prototypeV2=void clear()
 $prototype=void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
 $method=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
 
-$prototype=QStandardItem *itemFromIndex(const QModelIndex &index) const
-$method=|QStandardItem *|itemFromIndex|const QModelIndex &
+$prototypeV2=QStandardItem * itemFromIndex( const QModelIndex & index ) const
 
-$prototype=QModelIndex indexFromItem(const QStandardItem *item) const
-$method=|QModelIndex|indexFromItem|const QStandardItem *
+$prototypeV2=QModelIndex indexFromItem( const QStandardItem * item ) const
 
 $prototype=QStandardItem *item(int row, int column = 0) const
 $method=|QStandardItem *|item|int,int=0
@@ -172,29 +169,21 @@ $addMethod=setItem
 
 $prototypeV2=QStandardItem * invisibleRootItem() const
 
-$prototype=QStandardItem *horizontalHeaderItem(int column) const
-$method=|QStandardItem *|horizontalHeaderItem|int
+$prototypeV2=QStandardItem * horizontalHeaderItem( int column ) const
 
-$prototype=void setHorizontalHeaderItem(int column, QStandardItem *item)
-$method=|void|setHorizontalHeaderItem|int,QStandardItem *
+$prototypeV2=void setHorizontalHeaderItem( int column, QStandardItem * item )
 
-$prototype=QStandardItem *verticalHeaderItem(int row) const
-$method=|QStandardItem *|verticalHeaderItem|int
+$prototypeV2=QStandardItem * verticalHeaderItem( int row ) const
 
-$prototype=void setVerticalHeaderItem(int row, QStandardItem *item)
-$method=|void|setVerticalHeaderItem|int,QStandardItem *
+$prototypeV2=void setVerticalHeaderItem( int row, QStandardItem * item )
 
-$prototype=void setHorizontalHeaderLabels(const QStringList &labels)
-$method=|void|setHorizontalHeaderLabels|const QStringList &
+$prototypeV2=void setHorizontalHeaderLabels( const QStringList & labels )
 
-$prototype=void setVerticalHeaderLabels(const QStringList &labels)
-$method=|void|setVerticalHeaderLabels|const QStringList &
+$prototypeV2=void setVerticalHeaderLabels( const QStringList & labels )
 
-$prototype=void setRowCount(int rows)
-$method=|void|setRowCount|int
+$prototypeV2=void setRowCount( int rows )
 
-$prototype=void setColumnCount(int columns)
-$method=|void|setColumnCount|int
+$prototypeV2=void setColumnCount( int columns )
 
 $prototype=void appendRow(const QList<QStandardItem*> &items)
 $internalMethod=|void|appendRow,appendRow1|const QList<QStandardItem *> &
@@ -224,8 +213,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_APPENDROW )
 }
 $addMethod=appendRow
 
-$prototype=void appendColumn(const QList<QStandardItem*> &items)
-$method=|void|appendColumn|const QList<QStandardItem *> &
+$prototypeV2=void appendColumn( const QList<QStandardItem *> & items )
 
 $prototype=void insertRow(int row, const QList<QStandardItem*> &items)
 $internalMethod=|void|insertRow,insertRow1|int,const QList<QStandardItem *> &
@@ -294,38 +282,30 @@ $addMethod=insertColumn
 $prototype=QStandardItem *takeItem(int row, int column = 0)
 $method=|QStandardItem *|takeItem|int,int=0
 
-$prototype=QList<QStandardItem*> takeRow(int row)
-$method=|QList<QStandardItem *>|takeRow|int
+$prototypeV2=QList<QStandardItem *> takeRow( int row )
 
-$prototype=QList<QStandardItem*> takeColumn(int column)
-$method=|QList<QStandardItem *>|takeColumn|int
+$prototypeV2=QList<QStandardItem *> takeColumn( int column )
 
-$prototype=QStandardItem *takeHorizontalHeaderItem(int column)
-$method=|QStandardItem *|takeHorizontalHeaderItem|int
+$prototypeV2=QStandardItem * takeHorizontalHeaderItem( int column )
 
-$prototype=QStandardItem *takeVerticalHeaderItem(int row)
-$method=|QStandardItem *|takeVerticalHeaderItem|int
+$prototypeV2=QStandardItem * takeVerticalHeaderItem( int row )
 
 $prototypeV2=const QStandardItem * itemPrototype() const
 
-$prototype=void setItemPrototype(const QStandardItem *item)
-$method=|void|setItemPrototype|const QStandardItem *
+$prototypeV2=void setItemPrototype( const QStandardItem * item )
 
 $prototype=QList<QStandardItem*> findItems(const QString &text,Qt::MatchFlags flags = Qt::MatchExactly,int column = 0) const
 $method=|QList<QStandardItem *>|findItems|const QString &,Qt::MatchFlags=Qt::MatchExactly,int=0
 
 $prototypeV2=int sortRole() const
 
-$prototype=void setSortRole(int role)
-$method=|void|setSortRole|int
+$prototypeV2=void setSortRole( int role )
 
 $prototypeV2=QStringList mimeTypes() const
 
-$prototype=QMimeData *mimeData(const QModelIndexList &indexes) const
-$method=|QMimeData *|mimeData|const QModelIndexList &
+$prototypeV2=QMimeData * mimeData( const QModelIndexList & indexes ) const
 
-$prototype=bool dropMimeData (const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent)
-$method=|bool|dropMimeData|const QMimeData *,Qt::DropAction,int,int,const QModelIndex &
+$prototypeV2=bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 
 $beginSignals
 $signal=|itemChanged(QStandardItem*)

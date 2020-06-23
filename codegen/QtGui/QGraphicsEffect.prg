@@ -31,13 +31,11 @@ $deleteMethod
 
 $prototypeV2=QRectF boundingRect() const
 
-$prototype=virtual QRectF boundingRectFor ( const QRectF & rect ) const
-$virtualMethod=|QRectF|boundingRectFor|const QRectF &
+$prototypeV2=virtual QRectF boundingRectFor( const QRectF & rect ) const
 
 $prototypeV2=bool isEnabled() const
 
-$prototype=void setEnabled ( bool enable )
-$method=|void|setEnabled|bool
+$prototypeV2=void setEnabled( bool enable )
 
 $prototypeV2=void update()
 

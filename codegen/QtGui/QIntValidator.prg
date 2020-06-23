@@ -57,14 +57,11 @@ $deleteMethod
 
 $prototypeV2=int bottom() const
 
-$prototype=void setBottom ( int )
-$method=|void|setBottom|int
+$prototypeV2=void setBottom( int )
 
-$prototype=virtual void setRange ( int bottom, int top )
-$virtualMethod=|void|setRange|int,int
+$prototypeV2=virtual void setRange( int bottom, int top )
 
-$prototype=void setTop ( int )
-$method=|void|setTop|int
+$prototypeV2=void setTop( int )
 
 $prototypeV2=int top() const
 

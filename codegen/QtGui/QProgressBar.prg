@@ -46,20 +46,15 @@ $prototypeV2=int minimum() const
 
 $prototypeV2=Qt::Orientation orientation() const
 
-$prototype=void setAlignment ( Qt::Alignment alignment )
-$method=|void|setAlignment|Qt::Alignment
+$prototypeV2=void setAlignment( Qt::Alignment alignment )
 
-$prototype=void setFormat ( const QString & format )
-$method=|void|setFormat|const QString &
+$prototypeV2=void setFormat( const QString & format )
 
-$prototype=void setInvertedAppearance ( bool invert )
-$method=|void|setInvertedAppearance|bool
+$prototypeV2=void setInvertedAppearance( bool invert )
 
-$prototype=void setTextDirection ( QProgressBar::Direction textDirection )
-$method=|void|setTextDirection|QProgressBar::Direction
+$prototypeV2=void setTextDirection( QProgressBar::Direction textDirection )
 
-$prototype=void setTextVisible ( bool visible )
-$method=|void|setTextVisible|bool
+$prototypeV2=void setTextVisible( bool visible )
 
 $prototypeV2=virtual QString text() const
 
@@ -73,20 +68,15 @@ $prototypeV2=virtual QSize sizeHint() const
 
 $prototypeV2=void reset()
 
-$prototype=void setMaximum ( int maximum )
-$method=|void|setMaximum|int
+$prototypeV2=void setMaximum( int maximum )
 
-$prototype=void setMinimum ( int minimum )
-$method=|void|setMinimum|int
+$prototypeV2=void setMinimum( int minimum )
 
-$prototype=void setOrientation ( Qt::Orientation )
-$method=|void|setOrientation|Qt::Orientation
+$prototypeV2=void setOrientation( Qt::Orientation )
 
-$prototype=void setRange ( int minimum, int maximum )
-$method=|void|setRange|int,int
+$prototypeV2=void setRange( int minimum, int maximum )
 
-$prototype=void setValue ( int value )
-$method=|void|setValue|int
+$prototypeV2=void setValue( int value )
 
 $beginSignals
 $signal=|valueChanged(int)

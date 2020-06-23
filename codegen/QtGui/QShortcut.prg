@@ -69,20 +69,15 @@ $prototypeV2=QKeySequence key() const
 
 $prototypeV2=QWidget * parentWidget() const
 
-$prototype=void setAutoRepeat(bool on)
-$method=|void|setAutoRepeat|bool
+$prototypeV2=void setAutoRepeat( bool on )
 
-$prototype=void setContext(Qt::ShortcutContext context)
-$method=|void|setContext|Qt::ShortcutContext
+$prototypeV2=void setContext( Qt::ShortcutContext context )
 
-$prototype=void setEnabled(bool enable)
-$method=|void|setEnabled|bool
+$prototypeV2=void setEnabled( bool enable )
 
-$prototype=void setKey(const QKeySequence & key)
-$method=|void|setKey|const QKeySequence &
+$prototypeV2=void setKey( const QKeySequence & key )
 
-$prototype=void setWhatsThis(const QString & text)
-$method=|void|setWhatsThis|const QString &
+$prototypeV2=void setWhatsThis( const QString & text )
 
 $prototypeV2=QString whatsThis() const
 

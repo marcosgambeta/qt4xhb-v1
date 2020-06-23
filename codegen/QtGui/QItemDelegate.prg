@@ -34,10 +34,8 @@ $prototypeV2=bool hasClipping() const
 
 $prototypeV2=QItemEditorFactory * itemEditorFactory() const
 
-$prototype=void setClipping ( bool clip )
-$method=|void|setClipping|bool
+$prototypeV2=void setClipping( bool clip )
 
-$prototype=void setItemEditorFactory ( QItemEditorFactory * factory )
-$method=|void|setItemEditorFactory|QItemEditorFactory *
+$prototypeV2=void setItemEditorFactory( QItemEditorFactory * factory )
 
 #pragma ENDDUMP

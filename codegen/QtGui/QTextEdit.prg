@@ -63,8 +63,7 @@ $prototypeV2=bool acceptRichText() const
 
 $prototypeV2=Qt::Alignment alignment() const
 
-$prototype=QString anchorAt ( const QPoint & pos ) const
-$method=|QString|anchorAt|const QPoint &
+$prototypeV2=QString anchorAt( const QPoint & pos ) const
 
 $prototypeV2=QTextEdit::AutoFormatting autoFormatting() const
 
@@ -102,8 +101,7 @@ $prototypeV2=QTextCharFormat currentCharFormat() const
 
 $prototypeV2=QFont currentFont() const
 
-$prototype=QTextCursor cursorForPosition ( const QPoint & pos ) const
-$method=|QTextCursor|cursorForPosition|const QPoint &
+$prototypeV2=QTextCursor cursorForPosition( const QPoint & pos ) const
 
 $prototype=QRect cursorRect ( const QTextCursor & cursor ) const
 $internalMethod=|QRect|cursorRect,cursorRect1|const QTextCursor &
@@ -162,67 +160,48 @@ $prototypeV2=int lineWrapColumnOrWidth() const
 
 $prototypeV2=QTextEdit::LineWrapMode lineWrapMode() const
 
-$prototype=virtual QVariant loadResource ( int type, const QUrl & name )
-$virtualMethod=|QVariant|loadResource|int,const QUrl &
+$prototypeV2=virtual QVariant loadResource( int type, const QUrl & name )
 
-$prototype=void mergeCurrentCharFormat ( const QTextCharFormat & modifier )
-$method=|void|mergeCurrentCharFormat|const QTextCharFormat &
+$prototypeV2=void mergeCurrentCharFormat( const QTextCharFormat & modifier )
 
 $prototype=void moveCursor ( QTextCursor::MoveOperation operation, QTextCursor::MoveMode mode = QTextCursor::MoveAnchor )
 $method=|void|moveCursor|QTextCursor::MoveOperation,QTextCursor::MoveMode=QTextCursor::MoveAnchor
 
 $prototypeV2=bool overwriteMode() const
 
-$prototype=void print ( QPrinter * printer ) const
-$method=|void|print|QPrinter *
+$prototypeV2=void print( QPrinter * printer ) const
 
-$prototype=void setAcceptRichText ( bool accept )
-$method=|void|setAcceptRichText|bool
+$prototypeV2=void setAcceptRichText( bool accept )
 
-$prototype=void setAutoFormatting ( AutoFormatting features )
-$method=|void|setAutoFormatting|QTextEdit::AutoFormatting
+$prototypeV2=void setAutoFormatting( QTextEdit::AutoFormatting features )
 
-$prototype=void setCurrentCharFormat ( const QTextCharFormat & format )
-$method=|void|setCurrentCharFormat|const QTextCharFormat &
+$prototypeV2=void setCurrentCharFormat( const QTextCharFormat & format )
 
-$prototype=void setCursorWidth ( int width )
-$method=|void|setCursorWidth|int
+$prototypeV2=void setCursorWidth( int width )
 
-$prototype=void setDocument ( QTextDocument * document )
-$method=|void|setDocument|QTextDocument *
+$prototypeV2=void setDocument( QTextDocument * document )
 
-$prototype=void setDocumentTitle ( const QString & title )
-$method=|void|setDocumentTitle|const QString &
+$prototypeV2=void setDocumentTitle( const QString & title )
 
-$prototype=void setLineWrapColumnOrWidth ( int w )
-$method=|void|setLineWrapColumnOrWidth|int
+$prototypeV2=void setLineWrapColumnOrWidth( int w )
 
-$prototype=void setLineWrapMode ( LineWrapMode mode )
-$method=|void|setLineWrapMode|QTextEdit::LineWrapMode
+$prototypeV2=void setLineWrapMode( QTextEdit::LineWrapMode mode )
 
-$prototype=void setOverwriteMode ( bool overwrite )
-$method=|void|setOverwriteMode|bool
+$prototypeV2=void setOverwriteMode( bool overwrite )
 
-$prototype=void setReadOnly ( bool ro )
-$method=|void|setReadOnly|bool
+$prototypeV2=void setReadOnly( bool ro )
 
-$prototype=void setTabChangesFocus ( bool b )
-$method=|void|setTabChangesFocus|bool
+$prototypeV2=void setTabChangesFocus( bool b )
 
-$prototype=void setTabStopWidth ( int width )
-$method=|void|setTabStopWidth|int
+$prototypeV2=void setTabStopWidth( int width )
 
-$prototype=void setTextCursor ( const QTextCursor & cursor )
-$method=|void|setTextCursor|const QTextCursor &
+$prototypeV2=void setTextCursor( const QTextCursor & cursor )
 
-$prototype=void setTextInteractionFlags ( Qt::TextInteractionFlags flags )
-$method=|void|setTextInteractionFlags|Qt::TextInteractionFlags
+$prototypeV2=void setTextInteractionFlags( Qt::TextInteractionFlags flags )
 
-$prototype=void setUndoRedoEnabled ( bool enable )
-$method=|void|setUndoRedoEnabled|bool
+$prototypeV2=void setUndoRedoEnabled( bool enable )
 
-$prototype=void setWordWrapMode ( QTextOption::WrapMode policy )
-$method=|void|setWordWrapMode|QTextOption::WrapMode
+$prototypeV2=void setWordWrapMode( QTextOption::WrapMode policy )
 
 $prototypeV2=bool tabChangesFocus() const
 
@@ -242,8 +221,7 @@ $prototypeV2=QString toPlainText() const
 
 $prototypeV2=QTextOption::WrapMode wordWrapMode() const
 
-$prototype=void append ( const QString & text )
-$method=|void|append|const QString &
+$prototypeV2=void append( const QString & text )
 
 $prototypeV2=void clear()
 
@@ -251,56 +229,41 @@ $prototypeV2=void copy()
 
 $prototypeV2=void cut()
 
-$prototype=void insertHtml ( const QString & text )
-$method=|void|insertHtml|const QString &
+$prototypeV2=void insertHtml( const QString & text )
 
-$prototype=void insertPlainText ( const QString & text )
-$method=|void|insertPlainText|const QString &
+$prototypeV2=void insertPlainText( const QString & text )
 
 $prototypeV2=void paste()
 
 $prototypeV2=void redo()
 
-$prototype=void scrollToAnchor ( const QString & name )
-$method=|void|scrollToAnchor|const QString &
+$prototypeV2=void scrollToAnchor( const QString & name )
 
 $prototypeV2=void selectAll()
 
-$prototype=void setAlignment ( Qt::Alignment a )
-$method=|void|setAlignment|Qt::Alignment
+$prototypeV2=void setAlignment( Qt::Alignment a )
 
-$prototype=void setCurrentFont ( const QFont & f )
-$method=|void|setCurrentFont|const QFont &
+$prototypeV2=void setCurrentFont( const QFont & f )
 
-$prototype=void setFontFamily ( const QString & fontFamily )
-$method=|void|setFontFamily|const QString &
+$prototypeV2=void setFontFamily( const QString & fontFamily )
 
-$prototype=void setFontItalic ( bool italic )
-$method=|void|setFontItalic|bool
+$prototypeV2=void setFontItalic( bool italic )
 
-$prototype=void setFontPointSize ( qreal s )
-$method=|void|setFontPointSize|qreal
+$prototypeV2=void setFontPointSize( qreal s )
 
-$prototype=void setFontUnderline ( bool underline )
-$method=|void|setFontUnderline|bool
+$prototypeV2=void setFontUnderline( bool underline )
 
-$prototype=void setFontWeight ( int weight )
-$method=|void|setFontWeight|int
+$prototypeV2=void setFontWeight( int weight )
 
-$prototype=void setHtml ( const QString & text )
-$method=|void|setHtml|const QString &
+$prototypeV2=void setHtml( const QString & text )
 
-$prototype=void setPlainText ( const QString & text )
-$method=|void|setPlainText|const QString &
+$prototypeV2=void setPlainText( const QString & text )
 
-$prototype=void setText ( const QString & text )
-$method=|void|setText|const QString &
+$prototypeV2=void setText( const QString & text )
 
-$prototype=void setTextBackgroundColor ( const QColor & c )
-$method=|void|setTextBackgroundColor|const QColor &
+$prototypeV2=void setTextBackgroundColor( const QColor & c )
 
-$prototype=void setTextColor ( const QColor & c )
-$method=|void|setTextColor|const QColor &
+$prototypeV2=void setTextColor( const QColor & c )
 
 $prototypeV2=void undo()
 

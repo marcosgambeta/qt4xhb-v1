@@ -131,8 +131,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMHTML )
 }
 $addMethod=fromHtml
 
-$prototype=static QTextDocumentFragment fromPlainText ( const QString & plainText )
-$staticMethod=|QTextDocumentFragment|fromPlainText|const QString &
+$prototypeV2=static QTextDocumentFragment fromPlainText( const QString & plainText )
 
 $extraMethods
 

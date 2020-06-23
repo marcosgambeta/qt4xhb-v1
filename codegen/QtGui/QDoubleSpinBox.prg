@@ -40,38 +40,29 @@ $prototypeV2=double minimum() const
 
 $prototypeV2=QString prefix() const
 
-$prototype=void setDecimals ( int prec )
-$method=|void|setDecimals|int
+$prototypeV2=void setDecimals( int prec )
 
-$prototype=void setMaximum ( double max )
-$method=|void|setMaximum|double
+$prototypeV2=void setMaximum( double max )
 
-$prototype=void setMinimum ( double min )
-$method=|void|setMinimum|double
+$prototypeV2=void setMinimum( double min )
 
-$prototype=void setPrefix ( const QString & prefix )
-$method=|void|setPrefix|const QString &
+$prototypeV2=void setPrefix( const QString & prefix )
 
-$prototype=void setRange ( double minimum, double maximum )
-$method=|void|setRange|double,double
+$prototypeV2=void setRange( double minimum, double maximum )
 
-$prototype=void setSingleStep ( double val )
-$method=|void|setSingleStep|double
+$prototypeV2=void setSingleStep( double val )
 
-$prototype=void setSuffix ( const QString & suffix )
-$method=|void|setSuffix|const QString &
+$prototypeV2=void setSuffix( const QString & suffix )
 
 $prototypeV2=double singleStep() const
 
 $prototypeV2=QString suffix() const
 
-$prototype=virtual QString textFromValue ( double value ) const
-$virtualMethod=|QString|textFromValue|double
+$prototypeV2=virtual QString textFromValue( double value ) const
 
 $prototypeV2=double value() const
 
-$prototype=virtual double valueFromText ( const QString & text ) const
-$virtualMethod=|double|valueFromText|const QString &
+$prototypeV2=virtual double valueFromText( const QString & text ) const
 
 $prototype=virtual void fixup ( QString & input ) const
 %% TODO: revisar implementacao e corrigir
@@ -104,8 +95,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_VALIDATE )
 }
 $addMethod=validate
 
-$prototype=void setValue ( double val )
-$method=|void|setValue|double
+$prototypeV2=void setValue( double val )
 
 $beginSignals
 $beginGroup

@@ -29,14 +29,11 @@ $deleteMethod
 
 $prototypeV2=Qt::MouseButton button() const
 
-$prototype=QPointF buttonDownPos ( Qt::MouseButton button ) const
-$method=|QPointF|buttonDownPos|Qt::MouseButton
+$prototypeV2=QPointF buttonDownPos( Qt::MouseButton button ) const
 
-$prototype=QPointF buttonDownScenePos ( Qt::MouseButton button ) const
-$method=|QPointF|buttonDownScenePos|Qt::MouseButton
+$prototypeV2=QPointF buttonDownScenePos( Qt::MouseButton button ) const
 
-$prototype=QPoint buttonDownScreenPos ( Qt::MouseButton button ) const
-$method=|QPoint|buttonDownScreenPos|Qt::MouseButton
+$prototypeV2=QPoint buttonDownScreenPos( Qt::MouseButton button ) const
 
 $prototypeV2=Qt::MouseButtons buttons() const
 

@@ -46,7 +46,6 @@ $prototypeV2=int lastPosition() const
 
 $prototypeV2=QTextFrame * parentFrame() const
 
-$prototype=void setFrameFormat ( const QTextFrameFormat & format )
-$method=|void|setFrameFormat|const QTextFrameFormat &
+$prototypeV2=void setFrameFormat( const QTextFrameFormat & format )
 
 #pragma ENDDUMP

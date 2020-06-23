@@ -34,32 +34,25 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=QIcon fileIcon ( const QModelIndex & index ) const
-$method=|QIcon|fileIcon|const QModelIndex &
+$prototypeV2=QIcon fileIcon( const QModelIndex & index ) const
 
-$prototype=QFileInfo fileInfo ( const QModelIndex & index ) const
-$method=|QFileInfo|fileInfo|const QModelIndex &
+$prototypeV2=QFileInfo fileInfo( const QModelIndex & index ) const
 
-$prototype=QString fileName ( const QModelIndex & index ) const
-$method=|QString|fileName|const QModelIndex &
+$prototypeV2=QString fileName( const QModelIndex & index ) const
 
-$prototype=QString filePath ( const QModelIndex & index ) const
-$method=|QString|filePath|const QModelIndex &
+$prototypeV2=QString filePath( const QModelIndex & index ) const
 
 $prototypeV2=QDir::Filters filter() const
 
 $prototypeV2=QFileIconProvider * iconProvider() const
 
-$prototype=bool isDir ( const QModelIndex & index ) const
-$method=|bool|isDir|const QModelIndex &
+$prototypeV2=bool isDir( const QModelIndex & index ) const
 
 $prototypeV2=bool isReadOnly() const
 
-$prototype=QDateTime lastModified ( const QModelIndex & index ) const
-$method=|QDateTime|lastModified|const QModelIndex &
+$prototypeV2=QDateTime lastModified( const QModelIndex & index ) const
 
-$prototype=QModelIndex mkdir ( const QModelIndex & parent, const QString & name )
-$method=|QModelIndex|mkdir|const QModelIndex &,const QString &
+$prototypeV2=QModelIndex mkdir( const QModelIndex & parent, const QString & name )
 
 $prototype=QVariant myComputer ( int role = Qt::DisplayRole ) const
 $method=|QVariant|myComputer|int=Qt::DisplayRole
@@ -68,50 +61,37 @@ $prototypeV2=bool nameFilterDisables() const
 
 $prototypeV2=QStringList nameFilters() const
 
-$prototype=QFile::Permissions permissions ( const QModelIndex & index ) const
-$method=|QFile::Permissions|permissions|const QModelIndex &
+$prototypeV2=QFile::Permissions permissions( const QModelIndex & index ) const
 
-$prototype=bool remove ( const QModelIndex & index ) const
-$method=|bool|remove|const QModelIndex &
+$prototypeV2=bool remove( const QModelIndex & index ) const
 
 $prototypeV2=bool resolveSymlinks() const
 
-$prototype=bool rmdir ( const QModelIndex & index ) const
-$method=|bool|rmdir|const QModelIndex &
+$prototypeV2=bool rmdir( const QModelIndex & index ) const
 
 $prototypeV2=QDir rootDirectory() const
 
 $prototypeV2=QString rootPath() const
 
-$prototype=void setFilter ( QDir::Filters filters )
-$method=|void|setFilter|QDir::Filters
+$prototypeV2=void setFilter( QDir::Filters filters )
 
-$prototype=void setIconProvider ( QFileIconProvider * provider )
-$method=|void|setIconProvider|QFileIconProvider *
+$prototypeV2=void setIconProvider( QFileIconProvider * provider )
 
-$prototype=void setNameFilterDisables ( bool enable )
-$method=|void|setNameFilterDisables|bool
+$prototypeV2=void setNameFilterDisables( bool enable )
 
-$prototype=void setNameFilters ( const QStringList & filters )
-$method=|void|setNameFilters|const QStringList &
+$prototypeV2=void setNameFilters( const QStringList & filters )
 
-$prototype=void setReadOnly ( bool enable )
-$method=|void|setReadOnly|bool
+$prototypeV2=void setReadOnly( bool enable )
 
-$prototype=void setResolveSymlinks ( bool enable )
-$method=|void|setResolveSymlinks|bool
+$prototypeV2=void setResolveSymlinks( bool enable )
 
-$prototype=QModelIndex setRootPath ( const QString & newPath )
-$method=|QModelIndex|setRootPath|const QString &
+$prototypeV2=QModelIndex setRootPath( const QString & newPath )
 
-$prototype=qint64 size ( const QModelIndex & index ) const
-$method=|qint64|size|const QModelIndex &
+$prototypeV2=qint64 size( const QModelIndex & index ) const
 
-$prototype=QString type ( const QModelIndex & index ) const
-$method=|QString|type|const QModelIndex &
+$prototypeV2=QString type( const QModelIndex & index ) const
 
-$prototype=virtual bool canFetchMore ( const QModelIndex & parent ) const
-$virtualMethod=|bool|canFetchMore|const QModelIndex &
+$prototypeV2=virtual bool canFetchMore( const QModelIndex & parent ) const
 
 $prototype=virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const
 $virtualMethod=|int|columnCount|const QModelIndex &=QModelIndex()
@@ -119,14 +99,11 @@ $virtualMethod=|int|columnCount|const QModelIndex &=QModelIndex()
 $prototype=virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
 $virtualMethod=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
 
-$prototype=virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
-$virtualMethod=|bool|dropMimeData|const QMimeData *,Qt::DropAction,int,int,const QModelIndex &
+$prototypeV2=virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 
-$prototype=virtual void fetchMore ( const QModelIndex & parent )
-$virtualMethod=|void|fetchMore|const QModelIndex &
+$prototypeV2=virtual void fetchMore( const QModelIndex & parent )
 
-$prototype=virtual Qt::ItemFlags flags ( const QModelIndex & index ) const
-$virtualMethod=|Qt::ItemFlags|flags|const QModelIndex &
+$prototypeV2=virtual Qt::ItemFlags flags( const QModelIndex & index ) const
 
 $prototype=virtual bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
 $virtualMethod=|bool|hasChildren|const QModelIndex &=QModelIndex()
@@ -162,25 +139,11 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX )
 }
 $addMethod=index
 
-$prototype=virtual QMimeData * mimeData ( const QModelIndexList & indexes ) const
-%% TODO:
-HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMEDATA )
-{
-  QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-  if( obj )
-  {
-    QModelIndexList * par1 = (QModelIndexList *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QMimeData * ptr = obj->mimeData ( *par1 );
-    Qt4xHb::createReturnClass ( ptr, "QMIMEDATA" );
-  }
-}
-$addMethod=mimeData
+$prototypeV2=virtual QMimeData * mimeData( const QModelIndexList & indexes ) const
 
 $prototypeV2=virtual QStringList mimeTypes() const
 
-$prototype=virtual QModelIndex parent ( const QModelIndex & index ) const
-$virtualMethod=|QModelIndex|parent|const QModelIndex &
+$prototypeV2=virtual QModelIndex parent( const QModelIndex & index ) const
 
 $prototype=virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
 $virtualMethod=|int|rowCount|const QModelIndex &=QModelIndex()

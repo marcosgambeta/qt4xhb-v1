@@ -29,7 +29,6 @@ $deleteMethod
 
 $prototypeV2=QPointF position() const
 
-$prototype=void setPosition ( const QPointF & pos )
-$method=|void|setPosition|const QPointF &
+$prototypeV2=void setPosition( const QPointF & pos )
 
 #pragma ENDDUMP

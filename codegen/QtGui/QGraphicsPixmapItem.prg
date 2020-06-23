@@ -87,14 +87,11 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETOFFSET )
 }
 $addMethod=setOffset
 
-$prototype=void setPixmap ( const QPixmap & pixmap )
-$method=|void|setPixmap|const QPixmap &
+$prototypeV2=void setPixmap( const QPixmap & pixmap )
 
-$prototype=void setShapeMode ( ShapeMode mode )
-$method=|void|setShapeMode|QGraphicsPixmapItem::ShapeMode
+$prototypeV2=void setShapeMode( QGraphicsPixmapItem::ShapeMode mode )
 
-$prototype=void setTransformationMode ( Qt::TransformationMode mode )
-$method=|void|setTransformationMode|Qt::TransformationMode
+$prototypeV2=void setTransformationMode( Qt::TransformationMode mode )
 
 $prototypeV2=QGraphicsPixmapItem::ShapeMode shapeMode() const
 
@@ -102,16 +99,13 @@ $prototypeV2=Qt::TransformationMode transformationMode() const
 
 $prototypeV2=virtual QRectF boundingRect() const
 
-$prototype=virtual bool contains ( const QPointF & point ) const
-$virtualMethod=|bool|contains|const QPointF &
+$prototypeV2=virtual bool contains( const QPointF & point ) const
 
-$prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
-$virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
+$prototypeV2=virtual bool isObscuredBy( const QGraphicsItem * item ) const
 
 $prototypeV2=virtual QPainterPath opaqueArea() const
 
-$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
-$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *
+$prototypeV2=virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
 
 $prototypeV2=virtual QPainterPath shape() const
 

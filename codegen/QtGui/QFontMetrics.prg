@@ -118,16 +118,13 @@ $method=|QString|elidedText|const QString &,Qt::TextElideMode,int,int=0
 
 $prototypeV2=int height() const
 
-$prototype=bool inFont ( QChar ch ) const
-$method=|bool|inFont|QChar
+$prototypeV2=bool inFont( QChar ch ) const
 
-$prototype=bool inFontUcs4 ( uint character ) const
-$method=|bool|inFontUcs4|uint
+$prototypeV2=bool inFontUcs4( uint character ) const
 
 $prototypeV2=int leading() const
 
-$prototype=int leftBearing ( QChar ch ) const
-$method=|int|leftBearing|QChar
+$prototypeV2=int leftBearing( QChar ch ) const
 
 $prototypeV2=int lineSpacing() const
 
@@ -141,16 +138,14 @@ $prototypeV2=int minRightBearing() const
 
 $prototypeV2=int overlinePos() const
 
-$prototype=int rightBearing ( QChar ch ) const
-$method=|int|rightBearing|QChar
+$prototypeV2=int rightBearing( QChar ch ) const
 
 $prototype=QSize size ( int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
 $method=|QSize|size|int,const QString &,int=0,int *=0
 
 $prototypeV2=int strikeOutPos() const
 
-$prototype=QRect tightBoundingRect ( const QString & text ) const
-$method=|QRect|tightBoundingRect|const QString &
+$prototypeV2=QRect tightBoundingRect( const QString & text ) const
 
 $prototypeV2=int underlinePos() const
 

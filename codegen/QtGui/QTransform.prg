@@ -234,32 +234,25 @@ HB_FUNC_STATIC( QTRANSFORM_MAPRECT )
 }
 $addMethod=mapRect
 
-$prototype=QPolygon mapToPolygon ( const QRect & rectangle ) const
-$method=|QPolygon|mapToPolygon|const QRect &
+$prototypeV2=QPolygon mapToPolygon( const QRect & rectangle ) const
 
 $prototypeV2=void reset()
 
-$prototype=void setMatrix ( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 )
-$method=|void|setMatrix|qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal,qreal
+$prototypeV2=void setMatrix( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 )
 
 $prototypeV2=QTransform transposed() const
 
 $prototypeV2=QTransform::TransformationType type() const
 
-$prototype=static QTransform fromScale ( qreal sx, qreal sy )
-$staticMethod=|QTransform|fromScale|qreal,qreal
+$prototypeV2=static QTransform fromScale( qreal sx, qreal sy )
 
-$prototype=static QTransform fromTranslate ( qreal dx, qreal dy )
-$staticMethod=|QTransform|fromTranslate|qreal,qreal
+$prototypeV2=static QTransform fromTranslate( qreal dx, qreal dy )
 
-$prototype=static bool quadToQuad ( const QPolygonF & one, const QPolygonF & two, QTransform & trans )
-$staticMethod=|bool|quadToQuad|const QPolygonF &,const QPolygonF &,QTransform &
+$prototypeV2=static bool quadToQuad( const QPolygonF & one, const QPolygonF & two, QTransform & trans )
 
-$prototype=static bool quadToSquare ( const QPolygonF & quad, QTransform & trans )
-$staticMethod=|bool|quadToSquare|const QPolygonF &,QTransform &
+$prototypeV2=static bool quadToSquare( const QPolygonF & quad, QTransform & trans )
 
-$prototype=static bool squareToQuad ( const QPolygonF & quad, QTransform & trans )
-$staticMethod=|bool|squareToQuad|const QPolygonF &,QTransform &
+$prototypeV2=static bool squareToQuad( const QPolygonF & quad, QTransform & trans )
 
 $extraMethods
 

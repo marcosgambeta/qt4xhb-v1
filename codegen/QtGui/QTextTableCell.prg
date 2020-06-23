@@ -73,8 +73,7 @@ $prototypeV2=int row() const
 
 $prototypeV2=int rowSpan() const
 
-$prototype=void setFormat ( const QTextCharFormat & format )
-$method=|void|setFormat|const QTextCharFormat &
+$prototypeV2=void setFormat( const QTextCharFormat & format )
 
 $prototypeV2=int tableCellFormatIndex() const
 

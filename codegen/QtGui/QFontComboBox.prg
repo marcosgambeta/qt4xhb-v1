@@ -36,18 +36,15 @@ $prototypeV2=QFont currentFont() const
 
 $prototypeV2=QFontComboBox::FontFilters fontFilters() const
 
-$prototype=void setFontFilters ( FontFilters filters )
-$method=|void|setFontFilters|QFontComboBox::FontFilters
+$prototypeV2=void setFontFilters( QFontComboBox::FontFilters filters )
 
-$prototype=void setWritingSystem ( QFontDatabase::WritingSystem script )
-$method=|void|setWritingSystem|QFontDatabase::WritingSystem
+$prototypeV2=void setWritingSystem( QFontDatabase::WritingSystem script )
 
 $prototypeV2=QFontDatabase::WritingSystem writingSystem() const
 
 $prototypeV2=virtual QSize sizeHint() const
 
-$prototype=void setCurrentFont ( const QFont & font )
-$method=|void|setCurrentFont|const QFont &
+$prototypeV2=void setCurrentFont( const QFont & font )
 
 $beginSignals
 $signal=|currentFontChanged(QFont)

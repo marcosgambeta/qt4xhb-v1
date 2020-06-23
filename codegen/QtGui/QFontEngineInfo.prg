@@ -67,20 +67,15 @@ $prototypeV2=QString family() const
 
 $prototypeV2=qreal pixelSize() const
 
-$prototype=void setFamily ( const QString & name )
-$method=|void|setFamily|const QString &
+$prototypeV2=void setFamily( const QString & name )
 
-$prototype=void setPixelSize ( qreal size )
-$method=|void|setPixelSize|qreal
+$prototypeV2=void setPixelSize( qreal size )
 
-$prototype=void setStyle ( QFont::Style style )
-$method=|void|setStyle|QFont::Style
+$prototypeV2=void setStyle( QFont::Style style )
 
-$prototype=void setWeight ( int weight )
-$method=|void|setWeight|int
+$prototypeV2=void setWeight( int weight )
 
-$prototype=void setWritingSystems ( const QList<QFontDatabase::WritingSystem> & writingSystems )
-$method=|void|setWritingSystems|QList<QFontDatabase::WritingSystem>
+$prototypeV2=void setWritingSystems( const QList<QFontDatabase::WritingSystem> & writingSystems )
 
 $prototypeV2=QFont::Style style() const
 

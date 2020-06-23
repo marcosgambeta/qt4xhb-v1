@@ -179,14 +179,11 @@ $prototypeV2=bool isEmpty() const
 
 $prototypeV2=int rectCount() const
 
-$prototype=QVector<QRect> rects () const
-$method=|QVector<QRect>|rects|
+$prototypeV2=QVector<QRect> rects() const
 
-$prototype=QRegion subtracted ( const QRegion & r ) const
-$method=|QRegion|subtracted|const QRegion &
+$prototypeV2=QRegion subtracted( const QRegion & r ) const
 
-$prototype=void swap ( QRegion & other )
-$method=|void|swap|QRegion &
+$prototypeV2=void swap( QRegion & other )
 
 $prototype=void translate ( int dx, int dy )
 $internalMethod=|void|translate,translate1|int,int
@@ -272,8 +269,7 @@ HB_FUNC_STATIC( QREGION_UNITED )
 }
 $addMethod=united
 
-$prototype=QRegion xored ( const QRegion & r ) const
-$method=|QRegion|xored|const QRegion &
+$prototypeV2=QRegion xored( const QRegion & r ) const
 
 $extraMethods
 

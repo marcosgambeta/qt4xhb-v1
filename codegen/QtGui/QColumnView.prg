@@ -38,36 +38,28 @@ $prototypeV2=QWidget * previewWidget() const
 
 $prototypeV2=bool resizeGripsVisible() const
 
-$prototype=void setColumnWidths ( const QList<int> & list )
-$method=|void|setColumnWidths|QList<int>
+$prototypeV2=void setColumnWidths( const QList<int> & list )
 
-$prototype=void setPreviewWidget ( QWidget * widget )
-$method=|void|setPreviewWidget|QWidget *
+$prototypeV2=void setPreviewWidget( QWidget * widget )
 
-$prototype=void setResizeGripsVisible ( bool visible )
-$method=|void|setResizeGripsVisible|bool
+$prototypeV2=void setResizeGripsVisible( bool visible )
 
-$prototype=virtual QModelIndex indexAt ( const QPoint & point ) const
-$virtualMethod=|QModelIndex|indexAt|const QPoint &
+$prototypeV2=virtual QModelIndex indexAt( const QPoint & point ) const
 
 $prototype=virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisible )
 $virtualMethod=|void|scrollTo|const QModelIndex &,QColumnView::ScrollHint=QColumnView::EnsureVisible
 
 $prototypeV2=virtual void selectAll()
 
-$prototype=virtual void setModel ( QAbstractItemModel * model )
-$virtualMethod=|void|setModel|QAbstractItemModel *
+$prototypeV2=virtual void setModel( QAbstractItemModel * model )
 
-$prototype=virtual void setRootIndex ( const QModelIndex & index )
-$virtualMethod=|void|setRootIndex|const QModelIndex &
+$prototypeV2=virtual void setRootIndex( const QModelIndex & index )
 
-$prototype=virtual void setSelectionModel ( QItemSelectionModel * newSelectionModel )
-$virtualMethod=|void|setSelectionModel|QItemSelectionModel *
+$prototypeV2=virtual void setSelectionModel( QItemSelectionModel * newSelectionModel )
 
 $prototypeV2=virtual QSize sizeHint() const
 
-$prototype=virtual QRect visualRect ( const QModelIndex & index ) const
-$virtualMethod=|QRect|visualRect|const QModelIndex &
+$prototypeV2=virtual QRect visualRect( const QModelIndex & index ) const
 
 $beginSignals
 $signal=|updatePreviewWidget(QModelIndex)

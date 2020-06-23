@@ -100,11 +100,9 @@ $prototypeV2=void normalize()
 
 $prototypeV2=QVector2D normalized() const
 
-$prototype=void setX ( qreal x )
-$method=|void|setX|qreal
+$prototypeV2=void setX( qreal x )
 
-$prototype=void setY ( qreal y )
-$method=|void|setY|qreal
+$prototypeV2=void setY( qreal y )
 
 $prototypeV2=QPoint toPoint() const
 
@@ -118,8 +116,7 @@ $prototypeV2=qreal x() const
 
 $prototypeV2=qreal y() const
 
-$prototype=static qreal dotProduct ( const QVector2D & v1, const QVector2D & v2 )
-$staticMethod=|qreal|dotProduct|const QVector2D &,const QVector2D &
+$prototypeV2=static qreal dotProduct( const QVector2D & v1, const QVector2D & v2 )
 
 %% TODO: implementar função
 %% bool qFuzzyCompare ( const QVector2D & v1, const QVector2D & v2 )

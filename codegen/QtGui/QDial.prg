@@ -36,8 +36,7 @@ $prototypeV2=qreal notchTarget() const
 
 $prototypeV2=bool notchesVisible() const
 
-$prototype=void setNotchTarget ( double target )
-$method=|void|setNotchTarget|double
+$prototypeV2=void setNotchTarget( double target )
 
 $prototypeV2=bool wrapping() const
 
@@ -45,10 +44,8 @@ $prototypeV2=virtual QSize minimumSizeHint() const
 
 $prototypeV2=virtual QSize sizeHint() const
 
-$prototype=void setNotchesVisible ( bool visible )
-$method=|void|setNotchesVisible|bool
+$prototypeV2=void setNotchesVisible( bool visible )
 
-$prototype=void setWrapping ( bool on )
-$method=|void|setWrapping|bool
+$prototypeV2=void setWrapping( bool on )
 
 #pragma ENDDUMP

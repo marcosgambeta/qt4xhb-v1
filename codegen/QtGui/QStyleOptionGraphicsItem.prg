@@ -58,8 +58,7 @@ $addMethod=new
 
 %% $deleteMethod
 
-$prototype=static qreal levelOfDetailFromTransform(const QTransform &worldTransform)
-$staticMethod=|qreal|levelOfDetailFromTransform|const QTransform &
+$prototypeV2=static qreal levelOfDetailFromTransform( const QTransform & worldTransform )
 
 $prototype=QRectF exposedRect
 $variableMethod=|QRectF|exposedRect|

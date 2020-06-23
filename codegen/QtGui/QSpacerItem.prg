@@ -41,8 +41,7 @@ $prototypeV2=virtual QSize maximumSize() const
 
 $prototypeV2=virtual QSize minimumSize() const
 
-$prototype=virtual void setGeometry ( const QRect & r )
-$virtualMethod=|void|setGeometry|const QRect &
+$prototypeV2=virtual void setGeometry( const QRect & r )
 
 $prototypeV2=virtual QSize sizeHint() const
 

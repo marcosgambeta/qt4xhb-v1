@@ -69,49 +69,37 @@ $prototypeV2=int currentIndex() const
 
 $prototypeV2=QAbstractItemDelegate * itemDelegate() const
 
-$prototype=QByteArray mappedPropertyName ( QWidget * widget ) const
-$method=|QByteArray|mappedPropertyName|QWidget *
+$prototypeV2=QByteArray mappedPropertyName( QWidget * widget ) const
 
-$prototype=int mappedSection ( QWidget * widget ) const
-$method=|int|mappedSection|QWidget *
+$prototypeV2=int mappedSection( QWidget * widget ) const
 
-$prototype=QWidget * mappedWidgetAt ( int section ) const
-$method=|QWidget *|mappedWidgetAt|int
+$prototypeV2=QWidget * mappedWidgetAt( int section ) const
 
 $prototypeV2=QAbstractItemModel * model() const
 
 $prototypeV2=Qt::Orientation orientation() const
 
-$prototype=void removeMapping ( QWidget * widget )
-$method=|void|removeMapping|QWidget *
+$prototypeV2=void removeMapping( QWidget * widget )
 
 $prototypeV2=QModelIndex rootIndex() const
 
-$prototype=void setItemDelegate ( QAbstractItemDelegate * delegate )
-$method=|void|setItemDelegate|QAbstractItemDelegate *
+$prototypeV2=void setItemDelegate( QAbstractItemDelegate * delegate )
 
-$prototype=void setModel ( QAbstractItemModel * model )
-$method=|void|setModel|QAbstractItemModel *
+$prototypeV2=void setModel( QAbstractItemModel * model )
 
-$prototype=void setOrientation ( Qt::Orientation aOrientation )
-$method=|void|setOrientation|Qt::Orientation
+$prototypeV2=void setOrientation( Qt::Orientation aOrientation )
 
-$prototype=void setRootIndex ( const QModelIndex & index )
-$method=|void|setRootIndex|const QModelIndex &
+$prototypeV2=void setRootIndex( const QModelIndex & index )
 
-$prototype=void setSubmitPolicy ( SubmitPolicy policy )
-$method=|void|setSubmitPolicy|QDataWidgetMapper::SubmitPolicy
+$prototypeV2=void setSubmitPolicy( QDataWidgetMapper::SubmitPolicy policy )
 
-$prototype=SubmitPolicy submitPolicy () const
-$method=|QDataWidgetMapper::SubmitPolicy|submitPolicy|
+$prototypeV2=QDataWidgetMapper::SubmitPolicy submitPolicy() const
 
 $prototypeV2=void revert()
 
-$prototype=virtual void setCurrentIndex ( int index )
-$virtualMethod=|void|setCurrentIndex|int
+$prototypeV2=virtual void setCurrentIndex( int index )
 
-$prototype=void setCurrentModelIndex ( const QModelIndex & index )
-$method=|void|setCurrentModelIndex|const QModelIndex &
+$prototypeV2=void setCurrentModelIndex( const QModelIndex & index )
 
 $prototypeV2=bool submit()
 

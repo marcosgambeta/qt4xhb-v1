@@ -90,14 +90,11 @@ $prototypeV2=QLCDNumber::Mode mode() const
 
 $prototypeV2=QLCDNumber::SegmentStyle segmentStyle() const
 
-$prototype=void setDigitCount ( int numDigits )
-$method=|void|setDigitCount|int
+$prototypeV2=void setDigitCount( int numDigits )
 
-$prototype=void setMode ( Mode )
-$method=|void|setMode|QLCDNumber::Mode
+$prototypeV2=void setMode( QLCDNumber::Mode )
 
-$prototype=void setSegmentStyle ( SegmentStyle )
-$method=|void|setSegmentStyle|QLCDNumber::SegmentStyle
+$prototypeV2=void setSegmentStyle( QLCDNumber::SegmentStyle )
 
 $prototypeV2=bool smallDecimalPoint() const
 
@@ -147,8 +144,7 @@ $prototypeV2=void setHexMode()
 
 $prototypeV2=void setOctMode()
 
-$prototype=void setSmallDecimalPoint ( bool )
-$method=|void|setSmallDecimalPoint|bool
+$prototypeV2=void setSmallDecimalPoint( bool )
 
 $beginSignals
 $signal=|overflow()

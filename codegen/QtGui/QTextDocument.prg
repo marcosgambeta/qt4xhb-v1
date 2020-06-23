@@ -63,13 +63,11 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void addResource ( int type, const QUrl & name, const QVariant & resource )
-$method=|void|addResource|int,const QUrl &,const QVariant &
+$prototypeV2=void addResource( int type, const QUrl & name, const QVariant & resource )
 
 $prototypeV2=void adjustSize()
 
-$prototype=QVector<QTextFormat> allFormats () const
-$method=|QVector<QTextFormat>|allFormats|
+$prototypeV2=QVector<QTextFormat> allFormats() const
 
 $prototypeV2=int availableRedoSteps() const
 
@@ -79,8 +77,7 @@ $prototypeV2=QTextBlock begin() const
 
 $prototypeV2=int blockCount() const
 
-$prototype=QChar characterAt ( int pos ) const
-$method=|QChar|characterAt|int
+$prototypeV2=QChar characterAt( int pos ) const
 
 $prototypeV2=int characterCount() const
 
@@ -153,14 +150,11 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_FIND )
 }
 $addMethod=find
 
-$prototype=QTextBlock findBlock ( int pos ) const
-$method=|QTextBlock|findBlock|int
+$prototypeV2=QTextBlock findBlock( int pos ) const
 
-$prototype=QTextBlock findBlockByLineNumber ( int lineNumber ) const
-$method=|QTextBlock|findBlockByLineNumber|int
+$prototypeV2=QTextBlock findBlockByLineNumber( int lineNumber ) const
 
-$prototype=QTextBlock findBlockByNumber ( int blockNumber ) const
-$method=|QTextBlock|findBlockByNumber|int
+$prototypeV2=QTextBlock findBlockByNumber( int blockNumber ) const
 
 $prototypeV2=QTextBlock firstBlock() const
 
@@ -182,78 +176,57 @@ $prototypeV2=QTextBlock lastBlock() const
 
 $prototypeV2=int lineCount() const
 
-$prototype=void markContentsDirty ( int position, int length )
-$method=|void|markContentsDirty|int,int
+$prototypeV2=void markContentsDirty( int position, int length )
 
 $prototypeV2=int maximumBlockCount() const
 
-$prototype=QString metaInformation ( MetaInformation info ) const
-$method=|QString|metaInformation|QTextDocument::MetaInformation
+$prototypeV2=QString metaInformation( QTextDocument::MetaInformation info ) const
 
-$prototype=QTextObject * object ( int objectIndex ) const
-$method=|QTextObject *|object|int
+$prototypeV2=QTextObject * object( int objectIndex ) const
 
-$prototype=QTextObject * objectForFormat ( const QTextFormat & f ) const
-$method=|QTextObject *|objectForFormat|const QTextFormat &
+$prototypeV2=QTextObject * objectForFormat( const QTextFormat & f ) const
 
 $prototypeV2=int pageCount() const
 
 $prototypeV2=QSizeF pageSize() const
 
-$prototype=void print ( QPrinter * printer ) const
-$method=|void|print|QPrinter *
+$prototypeV2=void print( QPrinter * printer ) const
 
-$prototype=QVariant resource ( int type, const QUrl & name ) const
-$method=|QVariant|resource|int,const QUrl &
+$prototypeV2=QVariant resource( int type, const QUrl & name ) const
 
 $prototypeV2=int revision() const
 
 $prototypeV2=QTextFrame * rootFrame() const
 
-$prototype=void setDefaultCursorMoveStyle ( Qt::CursorMoveStyle style )
-$method=|void|setDefaultCursorMoveStyle|Qt::CursorMoveStyle
+$prototypeV2=void setDefaultCursorMoveStyle( Qt::CursorMoveStyle style )
 
-$prototype=void setDefaultFont ( const QFont & font )
-$method=|void|setDefaultFont|const QFont &
+$prototypeV2=void setDefaultFont( const QFont & font )
 
-$prototype=void setDefaultStyleSheet ( const QString & sheet )
-$method=|void|setDefaultStyleSheet|const QString &
+$prototypeV2=void setDefaultStyleSheet( const QString & sheet )
 
-$prototype=void setDefaultTextOption ( const QTextOption & option )
-$method=|void|setDefaultTextOption|const QTextOption &
+$prototypeV2=void setDefaultTextOption( const QTextOption & option )
 
-$prototype=void setDocumentLayout ( QAbstractTextDocumentLayout * layout )
-$method=|void|setDocumentLayout|QAbstractTextDocumentLayout *
+$prototypeV2=void setDocumentLayout( QAbstractTextDocumentLayout * layout )
 
-$prototype=void setDocumentMargin ( qreal margin )
-$method=|void|setDocumentMargin|qreal
+$prototypeV2=void setDocumentMargin( qreal margin )
 
-$prototype=void setHtml ( const QString & html )
-$method=|void|setHtml|const QString &
+$prototypeV2=void setHtml( const QString & html )
 
-$prototype=void setIndentWidth ( qreal width )
-$method=|void|setIndentWidth|qreal
+$prototypeV2=void setIndentWidth( qreal width )
 
-$prototype=void setMaximumBlockCount ( int maximum )
-$method=|void|setMaximumBlockCount|int
+$prototypeV2=void setMaximumBlockCount( int maximum )
 
-$prototype=void setMetaInformation ( MetaInformation info, const QString & string )
-$method=|void|setMetaInformation|QTextDocument::MetaInformation,const QString &
+$prototypeV2=void setMetaInformation( QTextDocument::MetaInformation info, const QString & string )
 
-$prototype=void setPageSize ( const QSizeF & size )
-$method=|void|setPageSize|const QSizeF &
+$prototypeV2=void setPageSize( const QSizeF & size )
 
-$prototype=void setPlainText ( const QString & text )
-$method=|void|setPlainText|const QString &
+$prototypeV2=void setPlainText( const QString & text )
 
-$prototype=void setTextWidth ( qreal width )
-$method=|void|setTextWidth|qreal
+$prototypeV2=void setTextWidth( qreal width )
 
-$prototype=void setUndoRedoEnabled ( bool enable )
-$method=|void|setUndoRedoEnabled|bool
+$prototypeV2=void setUndoRedoEnabled( bool enable )
 
-$prototype=void setUseDesignMetrics ( bool b )
-$method=|void|setUseDesignMetrics|bool
+$prototypeV2=void setUseDesignMetrics( bool b )
 
 $prototypeV2=QSizeF size() const
 

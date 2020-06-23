@@ -34,14 +34,11 @@ $prototypeV2=QBrush brush() const
 
 $prototypeV2=QPen pen() const
 
-$prototype=void setBrush ( const QBrush & brush )
-$method=|void|setBrush|const QBrush &
+$prototypeV2=void setBrush( const QBrush & brush )
 
-$prototype=void setPen ( const QPen & pen )
-$method=|void|setPen|const QPen &
+$prototypeV2=void setPen( const QPen & pen )
 
-$prototype=virtual bool isObscuredBy ( const QGraphicsItem * item ) const
-$virtualMethod=|bool|isObscuredBy|const QGraphicsItem *
+$prototypeV2=virtual bool isObscuredBy( const QGraphicsItem * item ) const
 
 $prototypeV2=virtual QPainterPath opaqueArea() const
 

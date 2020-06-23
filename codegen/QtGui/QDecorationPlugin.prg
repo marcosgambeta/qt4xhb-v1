@@ -27,8 +27,7 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QDecoration * create ( const QString & key ) = 0
-$virtualMethod=|QDecoration *|create|const QString &
+$prototypeV2=virtual QDecoration * create( const QString & key ) = 0
 
 $prototypeV2=virtual QStringList keys() const = 0
 

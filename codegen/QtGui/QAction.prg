@@ -69,8 +69,7 @@ $deleteMethod
 
 $prototypeV2=QActionGroup * actionGroup() const
 
-$prototype=void activate ( ActionEvent event )
-$method=|void|activate|QAction::ActionEvent
+$prototypeV2=void activate( QAction::ActionEvent event )
 
 $prototypeV2=QList<QGraphicsWidget *> associatedGraphicsWidgets() const
 
@@ -106,47 +105,33 @@ $prototypeV2=QWidget * parentWidget() const
 
 $prototypeV2=QAction::Priority priority() const
 
-$prototype=void setActionGroup ( QActionGroup * group )
-$method=|void|setActionGroup|QActionGroup *
+$prototypeV2=void setActionGroup( QActionGroup * group )
 
-$prototype=void setAutoRepeat ( bool )
-$method=|void|setAutoRepeat|bool
+$prototypeV2=void setAutoRepeat( bool )
 
-$prototype=void setCheckable ( bool )
-$method=|void|setCheckable|bool
+$prototypeV2=void setCheckable( bool )
 
-$prototype=void setData ( const QVariant & userData )
-$method=|void|setData|const QVariant &
+$prototypeV2=void setData( const QVariant & userData )
 
-$prototype=void setFont ( const QFont & font )
-$method=|void|setFont|const QFont &
+$prototypeV2=void setFont( const QFont & font )
 
-$prototype=void setIcon ( const QIcon & icon )
-$method=|void|setIcon|const QIcon &
+$prototypeV2=void setIcon( const QIcon & icon )
 
-$prototype=void setIconText ( const QString & text )
-$method=|void|setIconText|const QString &
+$prototypeV2=void setIconText( const QString & text )
 
-$prototype=void setIconVisibleInMenu ( bool visible )
-$method=|void|setIconVisibleInMenu|bool
+$prototypeV2=void setIconVisibleInMenu( bool visible )
 
-$prototype=void setMenu ( QMenu * menu )
-$method=|void|setMenu|QMenu *
+$prototypeV2=void setMenu( QMenu * menu )
 
-$prototype=void setMenuRole ( MenuRole menuRole )
-$method=|void|setMenuRole|QAction::MenuRole
+$prototypeV2=void setMenuRole( QAction::MenuRole menuRole )
 
-$prototype=void setPriority ( Priority priority )
-$method=|void|setPriority|QAction::Priority
+$prototypeV2=void setPriority( QAction::Priority priority )
 
-$prototype=void setSeparator ( bool b )
-$method=|void|setSeparator|bool
+$prototypeV2=void setSeparator( bool b )
 
-$prototype=void setShortcut ( const QKeySequence & shortcut )
-$method=|void|setShortcut|const QKeySequence &
+$prototypeV2=void setShortcut( const QKeySequence & shortcut )
 
-$prototype=void setShortcutContext ( Qt::ShortcutContext context )
-$method=|void|setShortcutContext|Qt::ShortcutContext
+$prototypeV2=void setShortcutContext( Qt::ShortcutContext context )
 
 $prototype=void setShortcuts ( const QList<QKeySequence> & shortcuts )
 $internalMethod=|void|setShortcuts,setShortcuts1|const QList<QKeySequence> &
@@ -176,20 +161,15 @@ HB_FUNC_STATIC( QACTION_SETSHORTCUTS )
 }
 $addMethod=setShortcuts
 
-$prototype=void setSoftKeyRole ( SoftKeyRole softKeyRole )
-$method=|void|setSoftKeyRole|QAction::SoftKeyRole
+$prototypeV2=void setSoftKeyRole( QAction::SoftKeyRole softKeyRole )
 
-$prototype=void setStatusTip ( const QString & statusTip )
-$method=|void|setStatusTip|const QString &
+$prototypeV2=void setStatusTip( const QString & statusTip )
 
-$prototype=void setText ( const QString & text )
-$method=|void|setText|const QString &
+$prototypeV2=void setText( const QString & text )
 
-$prototype=void setToolTip ( const QString & tip )
-$method=|void|setToolTip|const QString &
+$prototypeV2=void setToolTip( const QString & tip )
 
-$prototype=void setWhatsThis ( const QString & what )
-$method=|void|setWhatsThis|const QString &
+$prototypeV2=void setWhatsThis( const QString & what )
 
 $prototypeV2=QKeySequence shortcut() const
 
@@ -212,17 +192,13 @@ $prototypeV2=QString whatsThis() const
 
 $prototypeV2=void hover()
 
-$prototype=void setChecked ( bool )
-$method=|void|setChecked|bool
+$prototypeV2=void setChecked( bool )
 
-$prototype=void setDisabled ( bool b )
-$method=|void|setDisabled|bool
+$prototypeV2=void setDisabled( bool b )
 
-$prototype=void setEnabled ( bool )
-$method=|void|setEnabled|bool
+$prototypeV2=void setEnabled( bool )
 
-$prototype=void setVisible ( bool )
-$method=|void|setVisible|bool
+$prototypeV2=void setVisible( bool )
 
 $prototypeV2=void toggle()
 

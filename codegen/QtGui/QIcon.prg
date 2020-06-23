@@ -175,14 +175,11 @@ $addMethod=pixmap
 $prototype=QIcon fromTheme ( const QString & name, const QIcon & fallback = QIcon() )
 $method=|QIcon|fromTheme|const QString &,const QIcon &=QIcon()
 
-$prototype=static bool hasThemeIcon ( const QString & name )
-$staticMethod=|bool|hasThemeIcon|const QString &
+$prototypeV2=static bool hasThemeIcon( const QString & name )
 
-$prototype=static void setThemeName ( const QString & name )
-$staticMethod=|void|setThemeName|const QString &
+$prototypeV2=static void setThemeName( const QString & name )
 
-$prototype=static void setThemeSearchPaths ( const QStringList & paths )
-$staticMethod=|void|setThemeSearchPaths|const QStringList &
+$prototypeV2=static void setThemeSearchPaths( const QStringList & paths )
 
 $prototypeV2=static QString themeName()
 

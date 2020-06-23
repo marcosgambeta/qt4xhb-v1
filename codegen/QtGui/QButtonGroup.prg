@@ -62,8 +62,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ADDBUTTON )
 }
 $addMethod=addButton
 
-$prototype=QAbstractButton * button ( int id ) const
-$method=|QAbstractButton *|button|int
+$prototypeV2=QAbstractButton * button( int id ) const
 
 $prototypeV2=QList<QAbstractButton *> buttons() const
 
@@ -73,17 +72,13 @@ $prototypeV2=int checkedId() const
 
 $prototypeV2=bool exclusive() const
 
-$prototype=int id ( QAbstractButton * button ) const
-$method=|int|id|QAbstractButton *
+$prototypeV2=int id( QAbstractButton * button ) const
 
-$prototype=void removeButton ( QAbstractButton * button )
-$method=|void|removeButton|QAbstractButton *
+$prototypeV2=void removeButton( QAbstractButton * button )
 
-$prototype=void setExclusive ( bool )
-$method=|void|setExclusive|bool
+$prototypeV2=void setExclusive( bool )
 
-$prototype=void setId ( QAbstractButton * button, int id )
-$method=|void|setId|QAbstractButton *,int
+$prototypeV2=void setId( QAbstractButton * button, int id )
 
 $beginSignals
 $beginGroup

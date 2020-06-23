@@ -47,26 +47,19 @@ $prototypeV2=int filterRole() const
 
 $prototypeV2=bool isSortLocaleAware() const
 
-$prototype=void setDynamicSortFilter ( bool enable )
-$method=|void|setDynamicSortFilter|bool
+$prototypeV2=void setDynamicSortFilter( bool enable )
 
-$prototype=void setFilterCaseSensitivity ( Qt::CaseSensitivity cs )
-$method=|void|setFilterCaseSensitivity|Qt::CaseSensitivity
+$prototypeV2=void setFilterCaseSensitivity( Qt::CaseSensitivity cs )
 
-$prototype=void setFilterKeyColumn ( int column )
-$method=|void|setFilterKeyColumn|int
+$prototypeV2=void setFilterKeyColumn( int column )
 
-$prototype=void setFilterRole ( int role )
-$method=|void|setFilterRole|int
+$prototypeV2=void setFilterRole( int role )
 
-$prototype=void setSortCaseSensitivity ( Qt::CaseSensitivity cs )
-$method=|void|setSortCaseSensitivity|Qt::CaseSensitivity
+$prototypeV2=void setSortCaseSensitivity( Qt::CaseSensitivity cs )
 
-$prototype=void setSortLocaleAware ( bool on )
-$method=|void|setSortLocaleAware|bool
+$prototypeV2=void setSortLocaleAware( bool on )
 
-$prototype=void setSortRole ( int role )
-$method=|void|setSortRole|int
+$prototypeV2=void setSortRole( int role )
 
 $prototypeV2=Qt::CaseSensitivity sortCaseSensitivity() const
 
@@ -76,11 +69,9 @@ $prototypeV2=Qt::SortOrder sortOrder() const
 
 $prototypeV2=int sortRole() const
 
-$prototype=virtual QModelIndex buddy ( const QModelIndex & index ) const
-$virtualMethod=|QModelIndex|buddy|const QModelIndex &
+$prototypeV2=virtual QModelIndex buddy( const QModelIndex & index ) const
 
-$prototype=virtual bool canFetchMore ( const QModelIndex & parent ) const
-$virtualMethod=|bool|canFetchMore|const QModelIndex &
+$prototypeV2=virtual bool canFetchMore( const QModelIndex & parent ) const
 
 $prototype=virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const
 $virtualMethod=|int|columnCount|const QModelIndex &=QModelIndex()
@@ -88,14 +79,11 @@ $virtualMethod=|int|columnCount|const QModelIndex &=QModelIndex()
 $prototype=virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
 $virtualMethod=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
 
-$prototype=virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
-$virtualMethod=|bool|dropMimeData|const QMimeData *,Qt::DropAction,int,int,const QModelIndex &
+$prototypeV2=virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 
-$prototype=virtual void fetchMore ( const QModelIndex & parent )
-$virtualMethod=|void|fetchMore|const QModelIndex &
+$prototypeV2=virtual void fetchMore( const QModelIndex & parent )
 
-$prototype=virtual Qt::ItemFlags flags ( const QModelIndex & index ) const
-$virtualMethod=|Qt::ItemFlags|flags|const QModelIndex &
+$prototypeV2=virtual Qt::ItemFlags flags( const QModelIndex & index ) const
 
 $prototype=virtual bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
 $virtualMethod=|bool|hasChildren|const QModelIndex &=QModelIndex()
@@ -112,28 +100,22 @@ $virtualMethod=|bool|insertColumns|int,int,const QModelIndex &=QModelIndex()
 $prototype=virtual bool insertRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
 $virtualMethod=|bool|insertRows|int,int,const QModelIndex &=QModelIndex()
 
-$prototype=virtual QModelIndex mapFromSource ( const QModelIndex & sourceIndex ) const
-$virtualMethod=|QModelIndex|mapFromSource|const QModelIndex &
+$prototypeV2=virtual QModelIndex mapFromSource( const QModelIndex & sourceIndex ) const
 
-$prototype=virtual QItemSelection mapSelectionFromSource ( const QItemSelection & sourceSelection ) const
-$virtualMethod=|QItemSelection|mapSelectionFromSource|const QItemSelection &
+$prototypeV2=virtual QItemSelection mapSelectionFromSource( const QItemSelection & sourceSelection ) const
 
-$prototype=virtual QItemSelection mapSelectionToSource ( const QItemSelection & proxySelection ) const
-$virtualMethod=|QItemSelection|mapSelectionToSource|const QItemSelection &
+$prototypeV2=virtual QItemSelection mapSelectionToSource( const QItemSelection & proxySelection ) const
 
-$prototype=virtual QModelIndex mapToSource ( const QModelIndex & proxyIndex ) const
-$virtualMethod=|QModelIndex|mapToSource|const QModelIndex &
+$prototypeV2=virtual QModelIndex mapToSource( const QModelIndex & proxyIndex ) const
 
 $prototype=virtual QModelIndexList match ( const QModelIndex & start, int role, const QVariant & value, int hits = 1, Qt::MatchFlags flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
 $virtualMethod=|QModelIndexList|match|const QModelIndex &,int,const QVariant &,int=1,Qt::MatchFlags=Qt::MatchFlags( Qt::MatchStartsWith OR Qt::MatchWrap )
 
-$prototype=virtual QMimeData * mimeData ( const QModelIndexList & indexes ) const
-$virtualMethod=|QMimeData *|mimeData|const QModelIndexList &
+$prototypeV2=virtual QMimeData * mimeData( const QModelIndexList & indexes ) const
 
 $prototypeV2=virtual QStringList mimeTypes() const
 
-$prototype=virtual QModelIndex parent ( const QModelIndex & child ) const
-$virtualMethod=|QModelIndex|parent|const QModelIndex &
+$prototypeV2=virtual QModelIndex parent( const QModelIndex & child ) const
 
 $prototype=virtual bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
 $virtualMethod=|bool|removeColumns|int,int,const QModelIndex &=QModelIndex()
@@ -150,21 +132,18 @@ $virtualMethod=|bool|setData|const QModelIndex &,const QVariant &,int=Qt::EditRo
 $prototype=virtual bool setHeaderData ( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole )
 $virtualMethod=|bool|setHeaderData|int,Qt::Orientation,const QVariant &,int=Qt::EditRole
 
-$prototype=virtual void setSourceModel ( QAbstractItemModel * sourceModel )
-$virtualMethod=|void|setSourceModel|QAbstractItemModel *
+$prototypeV2=virtual void setSourceModel( QAbstractItemModel * sourceModel )
 
 $prototype=virtual void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
 $virtualMethod=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
 
-$prototype=virtual QSize span ( const QModelIndex & index ) const
-$virtualMethod=|QSize|span|const QModelIndex &
+$prototypeV2=virtual QSize span( const QModelIndex & index ) const
 
 $prototypeV2=virtual Qt::DropActions supportedDropActions() const
 
 $prototypeV2=void invalidate()
 
-$prototype=void setFilterFixedString ( const QString & pattern )
-$method=|void|setFilterFixedString|const QString &
+$prototypeV2=void setFilterFixedString( const QString & pattern )
 
 $prototype=void setFilterRegExp ( const QRegExp & regExp )
 $internalMethod=|void|setFilterRegExp,setFilterRegExp1|const QRegExp &
@@ -194,7 +173,6 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERREGEXP )
 }
 $addMethod=setFilterRegExp
 
-$prototype=void setFilterWildcard ( const QString & pattern )
-$method=|void|setFilterWildcard|const QString &
+$prototypeV2=void setFilterWildcard( const QString & pattern )
 
 #pragma ENDDUMP

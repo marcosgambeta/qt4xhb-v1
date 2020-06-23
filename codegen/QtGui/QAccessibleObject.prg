@@ -25,23 +25,18 @@ $destructor
 
 $includes
 
-$prototype=virtual QString actionText ( int action, Text t, int child ) const
-$virtualMethod=|QString|actionText|int,QAccessibleObject::Text,int
+$prototypeV2=virtual QString actionText( int action, QAccessibleObject::Text t, int child ) const
 
-$prototype=virtual bool doAction ( int action, int child, const QVariantList & params )
-$virtualMethod=|bool|doAction|int,int,const QVariantList &
+$prototypeV2=virtual bool doAction( int action, int child, const QVariantList & params )
 
 $prototypeV2=virtual bool isValid() const
 
 $prototypeV2=virtual QObject * object() const
 
-$prototype=virtual QRect rect ( int child ) const
-$virtualMethod=|QRect|rect|int
+$prototypeV2=virtual QRect rect( int child ) const
 
-$prototype=virtual void setText ( Text t, int child, const QString & text )
-$virtualMethod=|void|setText|QAccessibleObject::Text,int,const QString &
+$prototypeV2=virtual void setText( QAccessibleObject::Text t, int child, const QString & text )
 
-$prototype=virtual int userActionCount ( int child ) const
-$virtualMethod=|int|userActionCount|int
+$prototypeV2=virtual int userActionCount( int child ) const
 
 #pragma ENDDUMP

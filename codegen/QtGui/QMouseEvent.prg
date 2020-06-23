@@ -75,7 +75,6 @@ $prototypeV2=bool hasExtendedInfo() const
 
 $prototypeV2=QPointF posF() const
 
-$prototype=static QMouseEvent *createExtendedMouseEvent(Type type, const QPointF &pos,const QPoint &globalPos, Qt::MouseButton button,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers)
-$staticMethod=|QMouseEvent *|createExtendedMouseEvent|QEvent::Type,const QPointF &,const QPoint &,Qt::MouseButton,Qt::MouseButtons,Qt::KeyboardModifiers
+$prototypeV2=static QMouseEvent * createExtendedMouseEvent( QEvent::Type type, const QPointF & pos, const QPoint & globalPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
 
 #pragma ENDDUMP

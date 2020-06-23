@@ -57,27 +57,22 @@ $addMethod=new
 
 $prototypeV2=QFont currentFont() const
 
-$prototype=void open ( QObject * receiver, const char * member )
-$method=|void|open|QObject *,const char *
+$prototypeV2=void open( QObject * receiver, const char * member )
 
 $prototypeV2=QFontDialog::FontDialogOptions options() const
 
 $prototypeV2=QFont selectedFont() const
 
-$prototype=void setCurrentFont ( const QFont & font )
-$method=|void|setCurrentFont|const QFont &
+$prototypeV2=void setCurrentFont( const QFont & font )
 
 $prototype=void setOption ( FontDialogOption option, bool on = true )
 $method=|void|setOption|QFontDialog::FontDialogOption,bool=true
 
-$prototype=void setOptions ( FontDialogOptions options )
-$method=|void|setOptions|QFontDialog::FontDialogOptions
+$prototypeV2=void setOptions( QFontDialog::FontDialogOptions options )
 
-$prototype=bool testOption ( FontDialogOption option ) const
-$method=|bool|testOption|QFontDialog::FontDialogOption
+$prototypeV2=bool testOption( QFontDialog::FontDialogOption option ) const
 
-$prototype=virtual void setVisible ( bool visible )
-$virtualMethod=|void|setVisible|bool
+$prototypeV2=virtual void setVisible( bool visible )
 
 $prototype=static QFont getFont(bool *ok, const QFont &initial, QWidget *parent, const QString &title,FontDialogOptions options)
 $internalStaticMethod=|QFont|getFont,getFont1|bool *,const QFont &,QWidget *,const QString &,QFontDialog::FontDialogOptions

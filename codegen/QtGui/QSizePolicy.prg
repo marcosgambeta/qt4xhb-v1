@@ -75,26 +75,19 @@ $prototypeV2=QSizePolicy::Policy horizontalPolicy() const
 
 $prototypeV2=int horizontalStretch() const
 
-$prototype=void setControlType ( ControlType type )
-$method=|void|setControlType|QSizePolicy::ControlType
+$prototypeV2=void setControlType( QSizePolicy::ControlType type )
 
-$prototype=void setHeightForWidth ( bool dependent )
-$method=|void|setHeightForWidth|bool
+$prototypeV2=void setHeightForWidth( bool dependent )
 
-$prototype=void setHorizontalPolicy ( Policy policy )
-$method=|void|setHorizontalPolicy|QSizePolicy::Policy
+$prototypeV2=void setHorizontalPolicy( QSizePolicy::Policy policy )
 
-$prototype=void setHorizontalStretch ( uchar stretchFactor )
-$method=|void|setHorizontalStretch|uchar
+$prototypeV2=void setHorizontalStretch( uchar stretchFactor )
 
-$prototype=void setVerticalPolicy ( Policy policy )
-$method=|void|setVerticalPolicy|QSizePolicy::Policy
+$prototypeV2=void setVerticalPolicy( QSizePolicy::Policy policy )
 
-$prototype=void setVerticalStretch ( uchar stretchFactor )
-$method=|void|setVerticalStretch|uchar
+$prototypeV2=void setVerticalStretch( uchar stretchFactor )
 
-$prototype=void setWidthForHeight ( bool dependent )
-$method=|void|setWidthForHeight|bool
+$prototypeV2=void setWidthForHeight( bool dependent )
 
 $prototypeV2=void transpose()
 

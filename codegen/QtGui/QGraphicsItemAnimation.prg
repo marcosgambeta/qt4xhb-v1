@@ -36,59 +36,42 @@ $deleteMethod
 
 $prototypeV2=void clear()
 
-$prototype=qreal horizontalScaleAt ( qreal step ) const
-$method=|qreal|horizontalScaleAt|qreal
+$prototypeV2=qreal horizontalScaleAt( qreal step ) const
 
-$prototype=qreal horizontalShearAt ( qreal step ) const
-$method=|qreal|horizontalShearAt|qreal
+$prototypeV2=qreal horizontalShearAt( qreal step ) const
 
 $prototypeV2=QGraphicsItem * item() const
 
-$prototype=QMatrix matrixAt ( qreal step ) const
-$method=|QMatrix|matrixAt|qreal
+$prototypeV2=QMatrix matrixAt( qreal step ) const
 
-$prototype=QPointF posAt ( qreal step ) const
-$method=|QPointF|posAt|qreal
+$prototypeV2=QPointF posAt( qreal step ) const
 
-$prototype=qreal rotationAt ( qreal step ) const
-$method=|qreal|rotationAt|qreal
+$prototypeV2=qreal rotationAt( qreal step ) const
 
-$prototype=void setItem ( QGraphicsItem * item )
-$method=|void|setItem|QGraphicsItem *
+$prototypeV2=void setItem( QGraphicsItem * item )
 
-$prototype=void setPosAt ( qreal step, const QPointF & point )
-$method=|void|setPosAt|qreal,const QPointF &
+$prototypeV2=void setPosAt( qreal step, const QPointF & point )
 
-$prototype=void setRotationAt ( qreal step, qreal angle )
-$method=|void|setRotationAt|qreal,qreal
+$prototypeV2=void setRotationAt( qreal step, qreal angle )
 
-$prototype=void setScaleAt ( qreal step, qreal sx, qreal sy )
-$method=|void|setScaleAt|qreal,qreal,qreal
+$prototypeV2=void setScaleAt( qreal step, qreal sx, qreal sy )
 
-$prototype=void setShearAt ( qreal step, qreal sh, qreal sv )
-$method=|void|setShearAt|qreal,qreal,qreal
+$prototypeV2=void setShearAt( qreal step, qreal sh, qreal sv )
 
-$prototype=void setTimeLine ( QTimeLine * timeLine )
-$method=|void|setTimeLine|QTimeLine *
+$prototypeV2=void setTimeLine( QTimeLine * timeLine )
 
-$prototype=void setTranslationAt ( qreal step, qreal dx, qreal dy )
-$method=|void|setTranslationAt|qreal,qreal,qreal
+$prototypeV2=void setTranslationAt( qreal step, qreal dx, qreal dy )
 
 $prototypeV2=QTimeLine * timeLine() const
 
-$prototype=qreal verticalScaleAt ( qreal step ) const
-$method=|qreal|verticalScaleAt|qreal
+$prototypeV2=qreal verticalScaleAt( qreal step ) const
 
-$prototype=qreal verticalShearAt ( qreal step ) const
-$method=|qreal|verticalShearAt|qreal
+$prototypeV2=qreal verticalShearAt( qreal step ) const
 
-$prototype=qreal xTranslationAt ( qreal step ) const
-$method=|qreal|xTranslationAt|qreal
+$prototypeV2=qreal xTranslationAt( qreal step ) const
 
-$prototype=qreal yTranslationAt ( qreal step ) const
-$method=|qreal|yTranslationAt|qreal
+$prototypeV2=qreal yTranslationAt( qreal step ) const
 
-$prototype=void setStep ( qreal step )
-$method=|void|setStep|qreal
+$prototypeV2=void setStep( qreal step )
 
 #pragma ENDDUMP

@@ -75,43 +75,31 @@ $prototypeV2=QMovie * movie() const
 
 $prototypeV2=bool openExternalLinks() const
 
-$prototype=const QPicture * picture () const
-$method=|const QPicture *|picture|
+$prototypeV2=const QPicture * picture() const
 
-$prototype=const QPixmap * pixmap () const
-$method=|const QPixmap *|pixmap|
+$prototypeV2=const QPixmap * pixmap() const
 
 $prototypeV2=QString selectedText() const
 
-$prototype=void setAlignment ( Qt::Alignment )
-$method=|void|setAlignment|Qt::Alignment
+$prototypeV2=void setAlignment( Qt::Alignment )
 
-$prototype=void setBuddy ( QWidget * buddy )
-$method=|void|setBuddy|QWidget *
+$prototypeV2=void setBuddy( QWidget * buddy )
 
-$prototype=void setIndent ( int )
-$method=|void|setIndent|int
+$prototypeV2=void setIndent( int )
 
-$prototype=void setMargin ( int )
-$method=|void|setMargin|int
+$prototypeV2=void setMargin( int )
 
-$prototype=void setOpenExternalLinks ( bool open )
-$method=|void|setOpenExternalLinks|bool
+$prototypeV2=void setOpenExternalLinks( bool open )
 
-$prototype=void setScaledContents ( bool )
-$method=|void|setScaledContents|bool
+$prototypeV2=void setScaledContents( bool )
 
-$prototype=void setSelection ( int start, int length )
-$method=|void|setSelection|int,int
+$prototypeV2=void setSelection( int start, int length )
 
-$prototype=void setTextFormat ( Qt::TextFormat )
-$method=|void|setTextFormat|Qt::TextFormat
+$prototypeV2=void setTextFormat( Qt::TextFormat )
 
-$prototype=void setTextInteractionFlags ( Qt::TextInteractionFlags flags )
-$method=|void|setTextInteractionFlags|Qt::TextInteractionFlags
+$prototypeV2=void setTextInteractionFlags( Qt::TextInteractionFlags flags )
 
-$prototype=void setWordWrap ( bool on )
-$method=|void|setWordWrap|bool
+$prototypeV2=void setWordWrap( bool on )
 
 $prototypeV2=QString text() const
 
@@ -121,8 +109,7 @@ $prototypeV2=Qt::TextInteractionFlags textInteractionFlags() const
 
 $prototypeV2=bool wordWrap() const
 
-$prototype=virtual int heightForWidth ( int w ) const
-$virtualMethod=|int|heightForWidth|int
+$prototypeV2=virtual int heightForWidth( int w ) const
 
 $prototypeV2=virtual QSize minimumSizeHint() const
 
@@ -130,8 +117,7 @@ $prototypeV2=virtual QSize sizeHint() const
 
 $prototypeV2=void clear()
 
-$prototype=void setMovie ( QMovie * movie )
-$method=|void|setMovie|QMovie *
+$prototypeV2=void setMovie( QMovie * movie )
 
 $prototype=void setNum ( int num )
 $method=|void|setNum,setNum1|int
@@ -158,14 +144,11 @@ HB_FUNC_STATIC( QLABEL_SETNUM )
 }
 $addMethod=setNum
 
-$prototype=void setPicture ( const QPicture & picture )
-$method=|void|setPicture|const QPicture &
+$prototypeV2=void setPicture( const QPicture & picture )
 
-$prototype=void setPixmap ( const QPixmap & )
-$method=|void|setPixmap|const QPixmap &
+$prototypeV2=void setPixmap( const QPixmap & )
 
-$prototype=void setText ( const QString & )
-$method=|void|setText|const QString
+$prototypeV2=void setText( const QString & )
 
 $beginSignals
 $signal=|linkActivated(QString)

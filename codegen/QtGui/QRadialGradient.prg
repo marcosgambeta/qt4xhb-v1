@@ -157,17 +157,14 @@ $addMethod=setFocalPoint
 
 $prototypeV2=qreal radius() const
 
-$prototype=void setRadius(qreal radius)
-$method=|void|setRadius|qreal
+$prototypeV2=void setRadius( qreal radius )
 
 $prototypeV2=qreal centerRadius() const
 
-$prototype=void setCenterRadius(qreal radius)
-$method=|void|setCenterRadius|qreal
+$prototypeV2=void setCenterRadius( qreal radius )
 
 $prototypeV2=qreal focalRadius() const
 
-$prototype=void setFocalRadius(qreal radius)
-$method=|void|setFocalRadius|qreal
+$prototypeV2=void setFocalRadius( qreal radius )
 
 #pragma ENDDUMP

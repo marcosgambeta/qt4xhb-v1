@@ -60,11 +60,9 @@ HB_FUNC_STATIC( QLISTWIDGET_ADDITEM )
 }
 $addMethod=addItem
 
-$prototype=void addItems ( const QStringList & labels )
-$method=|void|addItems|const QStringList &
+$prototypeV2=void addItems( const QStringList & labels )
 
-$prototype=void closePersistentEditor ( QListWidgetItem * item )
-$method=|void|closePersistentEditor|QListWidgetItem *
+$prototypeV2=void closePersistentEditor( QListWidgetItem * item )
 
 $prototypeV2=int count() const
 
@@ -72,11 +70,9 @@ $prototypeV2=QListWidgetItem * currentItem() const
 
 $prototypeV2=int currentRow() const
 
-$prototype=void editItem ( QListWidgetItem * item )
-$method=|void|editItem|QListWidgetItem *
+$prototypeV2=void editItem( QListWidgetItem * item )
 
-$prototype=QList<QListWidgetItem *> findItems ( const QString & text, Qt::MatchFlags flags ) const
-$method=|QList<QListWidgetItem *>|findItems|const QString &,Qt::MatchFlags
+$prototypeV2=QList<QListWidgetItem *> findItems( const QString & text, Qt::MatchFlags flags ) const
 
 $prototype=void insertItem ( int row, QListWidgetItem * item )
 $internalMethod=|void|insertItem,insertItem1|int,QListWidgetItem *
@@ -106,13 +102,11 @@ HB_FUNC_STATIC( QLISTWIDGET_INSERTITEM )
 }
 $addMethod=insertItem
 
-$prototype=void insertItems ( int row, const QStringList & labels )
-$method=|void|insertItems|int,const QStringList &
+$prototypeV2=void insertItems( int row, const QStringList & labels )
 
 $prototypeV2=bool isSortingEnabled() const
 
-$prototype=QListWidgetItem * item ( int row ) const
-$method=|QListWidgetItem *|item|int
+$prototypeV2=QListWidgetItem * item( int row ) const
 
 $prototype=QListWidgetItem * itemAt ( const QPoint & p ) const
 $internalMethod=|QListWidgetItem *|itemAt,itemAt1|const QPoint &
@@ -142,17 +136,13 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMAT )
 }
 $addMethod=itemAt
 
-$prototype=QWidget * itemWidget ( QListWidgetItem * item ) const
-$method=|QWidget *|itemWidget|QListWidgetItem *
+$prototypeV2=QWidget * itemWidget( QListWidgetItem * item ) const
 
-$prototype=void openPersistentEditor ( QListWidgetItem * item )
-$method=|void|openPersistentEditor|QListWidgetItem *
+$prototypeV2=void openPersistentEditor( QListWidgetItem * item )
 
-$prototype=void removeItemWidget ( QListWidgetItem * item )
-$method=|void|removeItemWidget|QListWidgetItem *
+$prototypeV2=void removeItemWidget( QListWidgetItem * item )
 
-$prototype=int row ( const QListWidgetItem * item ) const
-$method=|int|row|const QListWidgetItem *
+$prototypeV2=int row( const QListWidgetItem * item ) const
 
 $prototypeV2=QList<QListWidgetItem *> selectedItems() const
 
@@ -212,23 +202,18 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTROW )
 }
 $addMethod=setCurrentRow
 
-$prototype=void setItemWidget ( QListWidgetItem * item, QWidget * widget )
-$method=|void|setItemWidget|QListWidgetItem *,QWidget *
+$prototypeV2=void setItemWidget( QListWidgetItem * item, QWidget * widget )
 
-$prototype=void setSortingEnabled ( bool enable )
-$method=|void|setSortingEnabled|bool
+$prototypeV2=void setSortingEnabled( bool enable )
 
 $prototype=void sortItems ( Qt::SortOrder order = Qt::AscendingOrder )
 $method=|void|sortItems|Qt::SortOrder=Qt::AscendingOrder
 
-$prototype=QListWidgetItem * takeItem ( int row )
-$method=|QListWidgetItem *|takeItem|int
+$prototypeV2=QListWidgetItem * takeItem( int row )
 
-$prototype=QRect visualItemRect ( const QListWidgetItem * item ) const
-$method=|QRect|visualItemRect|const QListWidgetItem *
+$prototypeV2=QRect visualItemRect( const QListWidgetItem * item ) const
 
-$prototype=virtual void dropEvent ( QDropEvent * event )
-$virtualMethod=|void|dropEvent|QDropEvent *
+$prototypeV2=virtual void dropEvent( QDropEvent * event )
 
 $prototypeV2=void clear()
 

@@ -37,14 +37,11 @@ $prototypeV2=QAbstractPrintDialog::PrintRange printRange() const
 
 $prototypeV2=QPrinter * printer() const
 
-$prototype=void setFromTo ( int from, int to )
-$method=|void|setFromTo|int,int
+$prototypeV2=void setFromTo( int from, int to )
 
-$prototype=void setMinMax ( int min, int max )
-$method=|void|setMinMax|int,int
+$prototypeV2=void setMinMax( int min, int max )
 
-$prototype=void setPrintRange ( PrintRange range )
-$method=|void|setPrintRange|QAbstractPrintDialog::PrintRange
+$prototypeV2=void setPrintRange( QAbstractPrintDialog::PrintRange range )
 
 $prototypeV2=int toPage() const
 

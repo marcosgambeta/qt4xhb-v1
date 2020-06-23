@@ -78,20 +78,15 @@ $prototypeV2=bool isExclusive() const
 
 $prototypeV2=bool isVisible() const
 
-$prototype=void removeAction ( QAction * action )
-$method=|void|removeAction|QAction *
+$prototypeV2=void removeAction( QAction * action )
 
-$prototype=void setDisabled ( bool b )
-$method=|void|setDisabled|bool
+$prototypeV2=void setDisabled( bool b )
 
-$prototype=void setEnabled ( bool )
-$method=|void|setEnabled|bool
+$prototypeV2=void setEnabled( bool )
 
-$prototype=void setExclusive ( bool )
-$method=|void|setExclusive|bool
+$prototypeV2=void setExclusive( bool )
 
-$prototype=void setVisible ( bool )
-$method=|void|setVisible|bool
+$prototypeV2=void setVisible( bool )
 
 $beginSignals
 $signal=|hovered(QAction*)

@@ -41,11 +41,9 @@ $prototypeV2=QBrush background() const
 
 $prototypeV2=bool scrollBarsEnabled() const
 
-$prototype=void setBackground ( const QBrush & background )
-$method=|void|setBackground|const QBrush &
+$prototypeV2=void setBackground( const QBrush & background )
 
-$prototype=void setScrollBarsEnabled ( bool enable )
-$method=|void|setScrollBarsEnabled|bool
+$prototypeV2=void setScrollBarsEnabled( bool enable )
 
 $prototype=QWidgetList windowList ( WindowOrder order = CreationOrder ) const
 $method=|QWidgetList|windowList|QWorkspace::WindowOrder=QWorkspace::CreationOrder
@@ -64,8 +62,7 @@ $prototypeV2=void closeActiveWindow()
 
 $prototypeV2=void closeAllWindows()
 
-$prototype=void setActiveWindow ( QWidget * w )
-$method=|void|setActiveWindow|QWidget *
+$prototypeV2=void setActiveWindow( QWidget * w )
 
 $prototypeV2=void tile()
 
