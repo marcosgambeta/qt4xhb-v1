@@ -39,8 +39,7 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=QAction * action ( WebAction action ) const
-$method=|QAction *|action|QWebPage::WebAction
+$prototypeV2=QAction * action( QWebPage::WebAction action ) const
 
 $prototypeV2=quint64 bytesReceived() const
 
@@ -56,18 +55,15 @@ $prototype=virtual bool extension ( Extension extension, const ExtensionOption *
 $prototype=bool findText ( const QString & subString, FindFlags options = 0 )
 $method=|bool|findText|const QString &,QWebPage::FindFlags=0
 
-$prototype=bool focusNextPrevChild ( bool next )
-$method=|bool|focusNextPrevChild|bool
+$prototypeV2=bool focusNextPrevChild( bool next )
 
 $prototypeV2=bool forwardUnsupportedContent() const
 
-$prototype=QWebFrame * frameAt ( const QPoint & pos ) const
-$method=|QWebFrame *|frameAt|const QPoint &
+$prototypeV2=QWebFrame * frameAt( const QPoint & pos ) const
 
 $prototypeV2=QWebHistory * history() const
 
-$prototype=QVariant inputMethodQuery ( Qt::InputMethodQuery property ) const
-$method=|QVariant|inputMethodQuery|Qt::InputMethodQuery
+$prototypeV2=QVariant inputMethodQuery( Qt::InputMethodQuery property ) const
 
 $prototypeV2=bool isContentEditable() const
 
@@ -87,40 +83,29 @@ $prototypeV2=QSize preferredContentsSize() const
 
 $prototypeV2=QString selectedText() const
 
-$prototype=void setContentEditable ( bool editable )
-$method=|void|setContentEditable|bool
+$prototypeV2=void setContentEditable( bool editable )
 
-$prototype=void setForwardUnsupportedContent ( bool forward )
-$method=|void|setForwardUnsupportedContent|bool
+$prototypeV2=void setForwardUnsupportedContent( bool forward )
 
-$prototype=void setLinkDelegationPolicy ( LinkDelegationPolicy policy )
-$method=|void|setLinkDelegationPolicy|QWebPage::LinkDelegationPolicy
+$prototypeV2=void setLinkDelegationPolicy( QWebPage::LinkDelegationPolicy policy )
 
-$prototype=void setNetworkAccessManager ( QNetworkAccessManager * manager )
-$method=|void|setNetworkAccessManager|QNetworkAccessManager *
+$prototypeV2=void setNetworkAccessManager( QNetworkAccessManager * manager )
 
-$prototype=void setPalette ( const QPalette & palette )
-$method=|void|setPalette|const QPalette &
+$prototypeV2=void setPalette( const QPalette & palette )
 
-$prototype=void setPluginFactory ( QWebPluginFactory * factory )
-$method=|void|setPluginFactory|QWebPluginFactory *
+$prototypeV2=void setPluginFactory( QWebPluginFactory * factory )
 
-$prototype=void setPreferredContentsSize ( const QSize & size ) const
-$method=|void|setPreferredContentsSize|const QSize &
+$prototypeV2=void setPreferredContentsSize( const QSize & size ) const
 
-$prototype=void setView ( QWidget * view )
-$method=|void|setView|QWidget *
+$prototypeV2=void setView( QWidget * view )
 
-$prototype=void setViewportSize ( const QSize & size ) const
-$method=|void|setViewportSize|const QSize &
+$prototypeV2=void setViewportSize( const QSize & size ) const
 
 $prototypeV2=QWebSettings * settings() const
 
-$prototype=virtual bool supportsExtension ( Extension extension ) const
-$virtualMethod=|bool|supportsExtension|QWebPage::Extension
+$prototypeV2=virtual bool supportsExtension( QWebPage::Extension extension ) const
 
-$prototype=bool swallowContextMenuEvent ( QContextMenuEvent * event )
-$method=|bool|swallowContextMenuEvent|QContextMenuEvent *
+$prototypeV2=bool swallowContextMenuEvent( QContextMenuEvent * event )
 
 $prototypeV2=quint64 totalBytes() const
 
@@ -129,15 +114,13 @@ $virtualMethod=|void|triggerAction|QWebPage::WebAction,bool=false
 
 $prototypeV2=QUndoStack * undoStack() const
 
-$prototype=void updatePositionDependentActions ( const QPoint & pos )
-$method=|void|updatePositionDependentActions|const QPoint &
+$prototypeV2=void updatePositionDependentActions( const QPoint & pos )
 
 $prototypeV2=QWidget * view() const
 
 $prototypeV2=QSize viewportSize() const
 
-$prototype=virtual bool event ( QEvent * ev )
-$virtualMethod=|bool|event|QEvent *
+$prototypeV2=virtual bool event( QEvent * ev )
 
 $prototypeV2=bool shouldInterruptJavaScript()
 

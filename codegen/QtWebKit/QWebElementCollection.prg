@@ -63,11 +63,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void append ( const QWebElementCollection & other )
-$method=|void|append|const QWebElementCollection &
+$prototypeV2=void append( const QWebElementCollection & other )
 
-$prototype=QWebElement at ( int i ) const
-$method=|QWebElement|at|int
+$prototypeV2=QWebElement at( int i ) const
 
 $prototypeV2=int count() const
 

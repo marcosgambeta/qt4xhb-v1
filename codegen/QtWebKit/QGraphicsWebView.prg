@@ -75,8 +75,7 @@ $addMethod=load
 
 $prototypeV2=QWebPage * page() const
 
-$prototype=QAction * pageAction ( QWebPage::WebAction action ) const
-$method=|QAction *|pageAction|QWebPage::WebAction
+$prototypeV2=QAction * pageAction( QWebPage::WebAction action ) const
 
 $prototypeV2=bool resizesToContents() const
 
@@ -86,20 +85,15 @@ $method=|void|setContent|const QByteArray &,const QString &=QString(),const QUrl
 $prototype=void setHtml ( const QString & html, const QUrl & baseUrl = QUrl() )
 $method=|void|setHtml|const QString &,const QUrl &=QUrl()
 
-$prototype=void setPage ( QWebPage * page )
-$method=|void|setPage|QWebPage *
+$prototypeV2=void setPage( QWebPage * page )
 
-$prototype=void setResizesToContents ( bool enabled )
-$method=|void|setResizesToContents|bool
+$prototypeV2=void setResizesToContents( bool enabled )
 
-$prototype=void setTiledBackingStoreFrozen ( bool frozen )
-$method=|void|setTiledBackingStoreFrozen|bool
+$prototypeV2=void setTiledBackingStoreFrozen( bool frozen )
 
-$prototype=void setUrl ( const QUrl & )
-$method=|void|setUrl|const QUrl &
+$prototypeV2=void setUrl( const QUrl & )
 
-$prototype=void setZoomFactor ( qreal )
-$method=|void|setZoomFactor|qreal
+$prototypeV2=void setZoomFactor( qreal )
 
 $prototypeV2=QWebSettings * settings() const
 

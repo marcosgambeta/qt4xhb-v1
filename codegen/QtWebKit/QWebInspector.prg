@@ -32,11 +32,9 @@ $deleteMethod
 
 $prototypeV2=QWebPage * page() const
 
-$prototype=void setPage ( QWebPage * page )
-$method=|void|setPage|QWebPage *
+$prototypeV2=void setPage( QWebPage * page )
 
-$prototype=virtual bool event ( QEvent * ev )
-$virtualMethod=|bool|event|QEvent *
+$prototypeV2=virtual bool event( QEvent * ev )
 
 $prototypeV2=virtual QSize sizeHint() const
 

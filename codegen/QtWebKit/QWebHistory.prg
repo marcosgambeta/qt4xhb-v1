@@ -29,8 +29,7 @@ $prototypeV2=void back()
 
 $prototypeV2=QWebHistoryItem backItem() const
 
-$prototype=QList<QWebHistoryItem> backItems ( int maxItems ) const
-$method=|QList<QWebHistoryItem>|backItems|int
+$prototypeV2=QList<QWebHistoryItem> backItems( int maxItems ) const
 
 $prototypeV2=bool canGoBack() const
 
@@ -48,21 +47,17 @@ $prototypeV2=void forward()
 
 $prototypeV2=QWebHistoryItem forwardItem() const
 
-$prototype=QList<QWebHistoryItem> forwardItems ( int maxItems ) const
-$method=|QList<QWebHistoryItem>|forwardItems|int
+$prototypeV2=QList<QWebHistoryItem> forwardItems( int maxItems ) const
 
-$prototype=void goToItem ( const QWebHistoryItem & item )
-$method=|void|goToItem|const QWebHistoryItem &
+$prototypeV2=void goToItem( const QWebHistoryItem & item )
 
-$prototype=QWebHistoryItem itemAt ( int i ) const
-$method=|QWebHistoryItem|itemAt|int
+$prototypeV2=QWebHistoryItem itemAt( int i ) const
 
 $prototypeV2=QList<QWebHistoryItem> items() const
 
 $prototypeV2=int maximumItemCount() const
 
-$prototype=void setMaximumItemCount ( int count )
-$method=|void|setMaximumItemCount|int
+$prototypeV2=void setMaximumItemCount( int count )
 
 $extraMethods
 

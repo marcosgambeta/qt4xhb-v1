@@ -40,8 +40,7 @@ $prototypeV2=QDateTime lastVisited() const
 
 $prototypeV2=QUrl originalUrl() const
 
-$prototype=void setUserData ( const QVariant & userData )
-$method=|void|setUserData|const QVariant &
+$prototypeV2=void setUserData( const QVariant & userData )
 
 $prototypeV2=QString title() const
 

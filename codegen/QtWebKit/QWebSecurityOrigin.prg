@@ -45,18 +45,15 @@ $prototypeV2=int port() const
 
 $prototypeV2=QString scheme() const
 
-$prototype=void setDatabaseQuota ( qint64 quota )
-$method=|void|setDatabaseQuota|qint64
+$prototypeV2=void setDatabaseQuota( qint64 quota )
 
-$prototype=static void addLocalScheme ( const QString & scheme )
-$staticMethod=|void|addLocalScheme|const QString &
+$prototypeV2=static void addLocalScheme( const QString & scheme )
 
 $prototypeV2=QList<QWebSecurityOrigin> allOrigins()
 
 $prototypeV2=static QStringList localSchemes()
 
-$prototype=static void removeLocalScheme ( const QString & scheme )
-$staticMethod=|void|removeLocalScheme|const QString &
+$prototypeV2=static void removeLocalScheme( const QString & scheme )
 
 $extraMethods
 

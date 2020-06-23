@@ -67,11 +67,9 @@ $prototypeV2=QSize contentsSize() const
 
 $prototypeV2=QWebElement documentElement() const
 
-$prototype=QWebElementCollection findAllElements ( const QString & selectorQuery ) const
-$method=|QWebElementCollection|findAllElements|const QString &
+$prototypeV2=QWebElementCollection findAllElements( const QString & selectorQuery ) const
 
-$prototype=QWebElement findFirstElement ( const QString & selectorQuery ) const
-$method=|QWebElement|findFirstElement|const QString &
+$prototypeV2=QWebElement findFirstElement( const QString & selectorQuery ) const
 
 $prototypeV2=QString frameName() const
 
@@ -79,8 +77,7 @@ $prototypeV2=QRect geometry() const
 
 $prototypeV2=bool hasFocus() const
 
-$prototype=QWebHitTestResult hitTestContent ( const QPoint & pos ) const
-$method=|QWebHitTestResult|hitTestContent|const QPoint &
+$prototypeV2=QWebHitTestResult hitTestContent( const QPoint & pos ) const
 
 $prototypeV2=QIcon icon() const
 
@@ -158,28 +155,21 @@ $prototypeV2=QString renderTreeDump() const
 
 $prototypeV2=QUrl requestedUrl() const
 
-$prototype=void scroll ( int dx, int dy )
-$method=|void|scroll|int,int
+$prototypeV2=void scroll( int dx, int dy )
 
-$prototype=QRect scrollBarGeometry ( Qt::Orientation orientation ) const
-$method=|QRect|scrollBarGeometry|Qt::Orientation
+$prototypeV2=QRect scrollBarGeometry( Qt::Orientation orientation ) const
 
-$prototype=int scrollBarMaximum ( Qt::Orientation orientation ) const
-$method=|int|scrollBarMaximum|Qt::Orientation
+$prototypeV2=int scrollBarMaximum( Qt::Orientation orientation ) const
 
-$prototype=int scrollBarMinimum ( Qt::Orientation orientation ) const
-$method=|int|scrollBarMinimum|Qt::Orientation
+$prototypeV2=int scrollBarMinimum( Qt::Orientation orientation ) const
 
-$prototype=Qt::ScrollBarPolicy scrollBarPolicy ( Qt::Orientation orientation ) const
-$method=|Qt::ScrollBarPolicy|scrollBarPolicy|Qt::Orientation
+$prototypeV2=Qt::ScrollBarPolicy scrollBarPolicy( Qt::Orientation orientation ) const
 
-$prototype=int scrollBarValue ( Qt::Orientation orientation ) const
-$method=|int|scrollBarValue|Qt::Orientation
+$prototypeV2=int scrollBarValue( Qt::Orientation orientation ) const
 
 $prototypeV2=QPoint scrollPosition() const
 
-$prototype=void scrollToAnchor ( const QString & anchor )
-$method=|void|scrollToAnchor|const QString &
+$prototypeV2=void scrollToAnchor( const QString & anchor )
 
 $prototypeV2=QWebSecurityOrigin securityOrigin() const
 
@@ -191,23 +181,17 @@ $prototypeV2=void setFocus()
 $prototype=void setHtml ( const QString & html, const QUrl & baseUrl = QUrl() )
 $method=|void|setHtml|const QString &,const QUrl &=QUrl()
 
-$prototype=void setScrollBarPolicy ( Qt::Orientation orientation, Qt::ScrollBarPolicy policy )
-$method=|void|setScrollBarPolicy|Qt::Orientation,Qt::ScrollBarPolicy
+$prototypeV2=void setScrollBarPolicy( Qt::Orientation orientation, Qt::ScrollBarPolicy policy )
 
-$prototype=void setScrollBarValue ( Qt::Orientation orientation, int value )
-$method=|void|setScrollBarValue|Qt::Orientation,int
+$prototypeV2=void setScrollBarValue( Qt::Orientation orientation, int value )
 
-$prototype=void setScrollPosition ( const QPoint & pos )
-$method=|void|setScrollPosition|const QPoint &
+$prototypeV2=void setScrollPosition( const QPoint & pos )
 
-$prototype=void setTextSizeMultiplier ( qreal factor )
-$method=|void|setTextSizeMultiplier|qreal
+$prototypeV2=void setTextSizeMultiplier( qreal factor )
 
-$prototype=void setUrl ( const QUrl & url )
-$method=|void|setUrl|const QUrl &
+$prototypeV2=void setUrl( const QUrl & url )
 
-$prototype=void setZoomFactor ( qreal factor )
-$method=|void|setZoomFactor|qreal
+$prototypeV2=void setZoomFactor( qreal factor )
 
 $prototypeV2=qreal textSizeMultiplier() const
 
@@ -221,11 +205,9 @@ $prototypeV2=QUrl url() const
 
 $prototypeV2=qreal zoomFactor() const
 
-$prototype=QVariant evaluateJavaScript ( const QString & scriptSource )
-$method=|QVariant|evaluateJavaScript|const QString &
+$prototypeV2=QVariant evaluateJavaScript( const QString & scriptSource )
 
-$prototype=void print ( QPrinter * printer ) const
-$method=|void|print|QPrinter *
+$prototypeV2=void print( QPrinter * printer ) const
 
 $beginSignals
 $signal=|contentsSizeChanged(QSize)

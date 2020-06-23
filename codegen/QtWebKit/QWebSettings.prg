@@ -29,43 +29,31 @@ $includes
 
 $prototypeV2=QString defaultTextEncoding() const
 
-$prototype=QString fontFamily ( FontFamily which ) const
-$method=|QString|fontFamily|QWebSettings::FontFamily
+$prototypeV2=QString fontFamily( QWebSettings::FontFamily which ) const
 
-$prototype=int fontSize ( FontSize type ) const
-$method=|int|fontSize|QWebSettings::FontSize
+$prototypeV2=int fontSize( QWebSettings::FontSize type ) const
 
 $prototypeV2=QString localStoragePath() const
 
-$prototype=void resetAttribute ( WebAttribute attribute )
-$method=|void|resetAttribute|QWebSettings::WebAttribute
+$prototypeV2=void resetAttribute( QWebSettings::WebAttribute attribute )
 
-$prototype=void resetFontFamily ( FontFamily which )
-$method=|void|resetFontFamily|QWebSettings::FontFamily
+$prototypeV2=void resetFontFamily( QWebSettings::FontFamily which )
 
-$prototype=void resetFontSize ( FontSize type )
-$method=|void|resetFontSize|QWebSettings::FontSize
+$prototypeV2=void resetFontSize( QWebSettings::FontSize type )
 
-$prototype=void setAttribute ( WebAttribute attribute, bool on )
-$method=|void|setAttribute|QWebSettings::WebAttribute,bool
+$prototypeV2=void setAttribute( QWebSettings::WebAttribute attribute, bool on )
 
-$prototype=void setDefaultTextEncoding ( const QString & encoding )
-$method=|void|setDefaultTextEncoding|const QString &
+$prototypeV2=void setDefaultTextEncoding( const QString & encoding )
 
-$prototype=void setFontFamily ( FontFamily which, const QString & family )
-$method=|void|setFontFamily|QWebSettings::FontFamily,const QString &
+$prototypeV2=void setFontFamily( QWebSettings::FontFamily which, const QString & family )
 
-$prototype=void setFontSize ( FontSize type, int size )
-$method=|void|setFontSize|QWebSettings::FontSize,int
+$prototypeV2=void setFontSize( QWebSettings::FontSize type, int size )
 
-$prototype=void setLocalStoragePath ( const QString & path )
-$method=|void|setLocalStoragePath|const QString &
+$prototypeV2=void setLocalStoragePath( const QString & path )
 
-$prototype=void setUserStyleSheetUrl ( const QUrl & location )
-$method=|void|setUserStyleSheetUrl|const QUrl &
+$prototypeV2=void setUserStyleSheetUrl( const QUrl & location )
 
-$prototype=bool testAttribute ( WebAttribute attribute ) const
-$method=|bool|testAttribute|QWebSettings::WebAttribute
+$prototypeV2=bool testAttribute( QWebSettings::WebAttribute attribute ) const
 
 $prototypeV2=QUrl userStyleSheetUrl() const
 
@@ -80,8 +68,7 @@ $prototypeV2=static QWebSettings * globalSettings()
 
 $prototypeV2=static QString iconDatabasePath()
 
-$prototype=static QIcon iconForUrl ( const QUrl & url )
-$staticMethod=|QIcon|iconForUrl|const QUrl &
+$prototypeV2=static QIcon iconForUrl( const QUrl & url )
 
 $prototypeV2=static int maximumPagesInCache()
 
@@ -93,32 +80,23 @@ $prototypeV2=static QString offlineWebApplicationCachePath()
 
 $prototypeV2=static qint64 offlineWebApplicationCacheQuota()
 
-$prototype=static void setIconDatabasePath ( const QString & path )
-$staticMethod=|void|setIconDatabasePath|const QString &
+$prototypeV2=static void setIconDatabasePath( const QString & path )
 
-$prototype=static void setMaximumPagesInCache ( int pages )
-$staticMethod=|void|setMaximumPagesInCache|int
+$prototypeV2=static void setMaximumPagesInCache( int pages )
 
-$prototype=static void setObjectCacheCapacities ( int cacheMinDeadCapacity, int cacheMaxDead, int totalCapacity )
-$staticMethod=|void|setObjectCacheCapacities|int,int,int
+$prototypeV2=static void setObjectCacheCapacities( int cacheMinDeadCapacity, int cacheMaxDead, int totalCapacity )
 
-$prototype=static void setOfflineStorageDefaultQuota ( qint64 maximumSize )
-$staticMethod=|void|setOfflineStorageDefaultQuota|qint64
+$prototypeV2=static void setOfflineStorageDefaultQuota( qint64 maximumSize )
 
-$prototype=static void setOfflineStoragePath ( const QString & path )
-$staticMethod=|void|setOfflineStoragePath|const QString &
+$prototypeV2=static void setOfflineStoragePath( const QString & path )
 
-$prototype=static void setOfflineWebApplicationCachePath ( const QString & path )
-$staticMethod=|void|setOfflineWebApplicationCachePath|const QString &
+$prototypeV2=static void setOfflineWebApplicationCachePath( const QString & path )
 
-$prototype=static void setOfflineWebApplicationCacheQuota ( qint64 maximumSize )
-$staticMethod=|void|setOfflineWebApplicationCacheQuota|qint64
+$prototypeV2=static void setOfflineWebApplicationCacheQuota( qint64 maximumSize )
 
-$prototype=static void setWebGraphic ( WebGraphic type, const QPixmap & graphic )
-$staticMethod=|void|setWebGraphic|QWebSettings::WebGraphic,const QPixmap &
+$prototypeV2=static void setWebGraphic( QWebSettings::WebGraphic type, const QPixmap & graphic )
 
-$prototype=static QPixmap webGraphic ( WebGraphic type )
-$staticMethod=|QPixmap|webGraphic|QWebSettings::WebGraphic
+$prototypeV2=static QPixmap webGraphic( QWebSettings::WebGraphic type )
 
 $extraMethods
 

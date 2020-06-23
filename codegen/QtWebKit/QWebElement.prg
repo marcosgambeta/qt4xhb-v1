@@ -57,8 +57,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void addClass ( const QString & name )
-$method=|void|addClass|const QString &
+$prototypeV2=void addClass( const QString & name )
 
 $prototype=void appendInside ( const QString & markup )
 $internalMethod=|void|appendInside,appendInside1|const QString &
@@ -187,29 +186,23 @@ HB_FUNC_STATIC( QWEBELEMENT_ENCLOSEWITH )
 }
 $addMethod=encloseWith
 
-$prototype=QVariant evaluateJavaScript ( const QString & scriptSource )
-$method=|QVariant|evaluateJavaScript|const QString &
+$prototypeV2=QVariant evaluateJavaScript( const QString & scriptSource )
 
-$prototype=QWebElementCollection findAll ( const QString & selectorQuery ) const
-$method=|QWebElementCollection|findAll|const QString &
+$prototypeV2=QWebElementCollection findAll( const QString & selectorQuery ) const
 
-$prototype=QWebElement findFirst ( const QString & selectorQuery ) const
-$method=|QWebElement|findFirst|const QString &
+$prototypeV2=QWebElement findFirst( const QString & selectorQuery ) const
 
 $prototypeV2=QWebElement firstChild() const
 
 $prototypeV2=QRect geometry() const
 
-$prototype=bool hasAttribute ( const QString & name ) const
-$method=|bool|hasAttribute|const QString &
+$prototypeV2=bool hasAttribute( const QString & name ) const
 
-$prototype=bool hasAttributeNS ( const QString & namespaceUri, const QString & name ) const
-$method=|bool|hasAttributeNS|const QString &,const QString &
+$prototypeV2=bool hasAttributeNS( const QString & namespaceUri, const QString & name ) const
 
 $prototypeV2=bool hasAttributes() const
 
-$prototype=bool hasClass ( const QString & name ) const
-$method=|bool|hasClass|const QString &
+$prototypeV2=bool hasClass( const QString & name ) const
 
 $prototypeV2=bool hasFocus() const
 
@@ -287,14 +280,11 @@ $prototypeV2=QWebElement previousSibling() const
 
 $prototypeV2=void removeAllChildren()
 
-$prototype=void removeAttribute ( const QString & name )
-$method=|void|removeAttribute|const QString &
+$prototypeV2=void removeAttribute( const QString & name )
 
-$prototype=void removeAttributeNS ( const QString & namespaceUri, const QString & name )
-$method=|void|removeAttributeNS|const QString &,const QString &
+$prototypeV2=void removeAttributeNS( const QString & namespaceUri, const QString & name )
 
-$prototype=void removeClass ( const QString & name )
-$method=|void|removeClass|const QString &
+$prototypeV2=void removeClass( const QString & name )
 
 $prototypeV2=void removeFromDocument()
 
@@ -354,28 +344,21 @@ HB_FUNC_STATIC( QWEBELEMENT_REPLACE )
 }
 $addMethod=replace
 
-$prototype=void setAttribute ( const QString & name, const QString & value )
-$method=|void|setAttribute|const QString &,const QString &
+$prototypeV2=void setAttribute( const QString & name, const QString & value )
 
-$prototype=void setAttributeNS ( const QString & namespaceUri, const QString & name, const QString & value )
-$method=|void|setAttributeNS|const QString &,const QString &,const QString &
+$prototypeV2=void setAttributeNS( const QString & namespaceUri, const QString & name, const QString & value )
 
 $prototypeV2=void setFocus()
 
-$prototype=void setInnerXml ( const QString & markup )
-$method=|void|setInnerXml|const QString &
+$prototypeV2=void setInnerXml( const QString & markup )
 
-$prototype=void setOuterXml ( const QString & markup )
-$method=|void|setOuterXml|const QString &
+$prototypeV2=void setOuterXml( const QString & markup )
 
-$prototype=void setPlainText ( const QString & text )
-$method=|void|setPlainText|const QString &
+$prototypeV2=void setPlainText( const QString & text )
 
-$prototype=void setStyleProperty ( const QString & name, const QString & value )
-$method=|void|setStyleProperty|const QString &,const QString &
+$prototypeV2=void setStyleProperty( const QString & name, const QString & value )
 
-$prototype=QString styleProperty ( const QString & name, StyleResolveStrategy strategy ) const
-$method=|QString|styleProperty|const QString &,QWebElement::StyleResolveStrategy
+$prototypeV2=QString styleProperty( const QString & name, QWebElement::StyleResolveStrategy strategy ) const
 
 $prototypeV2=QString tagName() const
 
@@ -387,8 +370,7 @@ $prototypeV2=QString toOuterXml() const
 
 $prototypeV2=QString toPlainText() const
 
-$prototype=void toggleClass ( const QString & name )
-$method=|void|toggleClass|const QString &
+$prototypeV2=void toggleClass( const QString & name )
 
 $prototypeV2=QWebFrame * webFrame() const
 

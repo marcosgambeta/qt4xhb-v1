@@ -27,15 +27,12 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual void addHistoryEntry ( const QString & url ) = 0
-$virtualMethod=|void|addHistoryEntry|const QString &
+$prototypeV2=virtual void addHistoryEntry( const QString & url ) = 0
 
-$prototype=virtual bool historyContains ( const QString & url ) const = 0
-$virtualMethod=|bool|historyContains|const QString &
+$prototypeV2=virtual bool historyContains( const QString & url ) const = 0
 
 $prototypeV2=static QWebHistoryInterface * defaultInterface()
 
-$prototype=static void setDefaultInterface ( QWebHistoryInterface * defaultInterface )
-$staticMethod=|void|setDefaultInterface|QWebHistoryInterface *
+$prototypeV2=static void setDefaultInterface( QWebHistoryInterface * defaultInterface )
 
 #pragma ENDDUMP

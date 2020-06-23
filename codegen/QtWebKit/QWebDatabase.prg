@@ -46,8 +46,7 @@ $prototypeV2=qint64 size() const
 
 $prototypeV2=static void removeAllDatabases()
 
-$prototype=static void removeDatabase ( const QWebDatabase & db )
-$staticMethod=|void|removeDatabase|const QWebDatabase &
+$prototypeV2=static void removeDatabase( const QWebDatabase & db )
 
 $extraMethods
 

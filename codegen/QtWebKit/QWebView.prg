@@ -75,8 +75,7 @@ $addMethod=load
 
 $prototypeV2=QWebPage * page() const
 
-$prototype=QAction * pageAction ( QWebPage::WebAction action ) const
-$method=|QAction *|pageAction|QWebPage::WebAction
+$prototypeV2=QAction * pageAction( QWebPage::WebAction action ) const
 
 $prototypeV2=QPainter::RenderHints renderHints() const
 
@@ -88,23 +87,18 @@ $method=|void|setContent|const QByteArray &,const QString &=QString(),const QUrl
 $prototype=void setHtml ( const QString & html, const QUrl & baseUrl = QUrl() )
 $method=|void|setHtml|const QString &,const QUrl &=QUrl()
 
-$prototype=void setPage ( QWebPage * page )
-$method=|void|setPage|QWebPage *
+$prototypeV2=void setPage( QWebPage * page )
 
 $prototype=void setRenderHint ( QPainter::RenderHint hint, bool enabled = true )
 $method=|void|setRenderHint|QPainter::RenderHint,bool=true
 
-$prototype=void setRenderHints ( QPainter::RenderHints hints )
-$method=|void|setRenderHints|QPainter::RenderHints
+$prototypeV2=void setRenderHints( QPainter::RenderHints hints )
 
-$prototype=void setTextSizeMultiplier ( qreal factor )
-$method=|void|setTextSizeMultiplier|qreal
+$prototypeV2=void setTextSizeMultiplier( qreal factor )
 
-$prototype=void setUrl ( const QUrl & url )
-$method=|void|setUrl|const QUrl &
+$prototypeV2=void setUrl( const QUrl & url )
 
-$prototype=void setZoomFactor ( qreal factor )
-$method=|void|setZoomFactor|qreal
+$prototypeV2=void setZoomFactor( qreal factor )
 
 $prototypeV2=QWebSettings * settings() const
 
@@ -123,8 +117,7 @@ $prototypeV2=void back()
 
 $prototypeV2=void forward()
 
-$prototype=void print ( QPrinter * printer ) const
-$method=|void|print|QPrinter *
+$prototypeV2=void print( QPrinter * printer ) const
 
 $prototypeV2=void reload()
 
