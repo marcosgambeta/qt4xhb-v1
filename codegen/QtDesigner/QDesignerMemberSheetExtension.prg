@@ -49,11 +49,9 @@ $prototypeV2=virtual QList<QByteArray> parameterNames( int index ) const = 0
 
 $prototypeV2=virtual QList<QByteArray> parameterTypes( int index ) const = 0
 
-$prototype=virtual void setMemberGroup ( int index, const QString & group ) = 0
-$virtualMethod=|void|setMemberGroup|int,const QString &
+$prototypeV2=virtual void setMemberGroup( int index, const QString & group ) = 0
 
-$prototype=virtual void setVisible ( int index, bool visible ) = 0
-$virtualMethod=|void|setVisible|int,bool
+$prototypeV2=virtual void setVisible( int index, bool visible ) = 0
 
 $prototypeV2=virtual QString signature( int index ) const = 0
 

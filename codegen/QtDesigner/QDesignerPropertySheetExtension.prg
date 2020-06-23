@@ -49,20 +49,15 @@ $prototypeV2=virtual QString propertyName( int index ) const = 0
 
 $prototypeV2=virtual bool reset( int index ) = 0
 
-$prototype=virtual void setAttribute ( int index, bool attribute ) = 0
-$virtualMethod=|void|setAttribute|int,bool
+$prototypeV2=virtual void setAttribute( int index, bool attribute ) = 0
 
-$prototype=virtual void setChanged ( int index, bool changed ) = 0
-$virtualMethod=|void|setChanged|int,bool
+$prototypeV2=virtual void setChanged( int index, bool changed ) = 0
 
-$prototype=virtual void setProperty ( int index, const QVariant & value ) = 0
-$virtualMethod=|void|setProperty|int,const QVariant &
+$prototypeV2=virtual void setProperty( int index, const QVariant & value ) = 0
 
-$prototype=virtual void setPropertyGroup ( int index, const QString & group ) = 0
-$virtualMethod=|void|setPropertyGroup|int,const QString &
+$prototypeV2=virtual void setPropertyGroup( int index, const QString & group ) = 0
 
-$prototype=virtual void setVisible ( int index, bool visible ) = 0
-$virtualMethod=|void|setVisible|int,bool
+$prototypeV2=virtual void setVisible( int index, bool visible ) = 0
 
 $extraMethods
 

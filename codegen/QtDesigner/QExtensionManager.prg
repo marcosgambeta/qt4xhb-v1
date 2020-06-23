@@ -30,8 +30,7 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=virtual QObject * extension ( QObject * object, const QString & iid ) const
-$virtualMethod=|QObject *|extension|QObject *,const QString &
+$prototypeV2=virtual QObject * extension( QObject * object, const QString & iid ) const
 
 $prototype=virtual void registerExtensions ( QAbstractExtensionFactory * factory, const QString & iid = QString() )
 $virtualMethod=|void|registerExtensions|QAbstractExtensionFactory *,const QString &=QString()

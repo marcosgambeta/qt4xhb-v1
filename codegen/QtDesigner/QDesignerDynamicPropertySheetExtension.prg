@@ -27,8 +27,7 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual int addDynamicProperty ( const QString & propertyName, const QVariant & value ) = 0
-$virtualMethod=|int|addDynamicProperty|const QString &,const QVariant &
+$prototypeV2=virtual int addDynamicProperty( const QString & propertyName, const QVariant & value ) = 0
 
 $prototypeV2=virtual bool canAddDynamicProperty( const QString & propertyName ) const = 0
 

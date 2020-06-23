@@ -33,8 +33,7 @@ $prototypeV2=virtual int count() const = 0
 
 $prototypeV2=virtual int currentIndex() const = 0
 
-$prototype=virtual void insertWidget ( int index, QWidget * page ) = 0
-$virtualMethod=|void|insertWidget|int,QWidget *
+$prototypeV2=virtual void insertWidget( int index, QWidget * page ) = 0
 
 $prototypeV2=virtual void remove( int index ) = 0
 

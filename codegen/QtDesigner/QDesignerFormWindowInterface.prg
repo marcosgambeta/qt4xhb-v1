@@ -64,8 +64,7 @@ $prototypeV2=virtual bool isDirty() const = 0
 
 $prototypeV2=virtual bool isManaged( QWidget * widget ) const = 0
 
-$prototype=virtual void layoutDefault ( int * margin, int * spacing ) = 0
-$virtualMethod=|void|layoutDefault|int *,int *
+$prototypeV2=virtual void layoutDefault( int * margin, int * spacing ) = 0
 
 $prototypeV2=virtual QWidget * mainContainer() const = 0
 
@@ -83,11 +82,9 @@ $prototypeV2=virtual void setExportMacro( const QString & exportMacro ) = 0
 
 $prototypeV2=virtual void setIncludeHints( const QStringList & includeHints ) = 0
 
-$prototype=virtual void setLayoutDefault ( int margin, int spacing ) = 0
-$virtualMethod=|void|setLayoutDefault|int,int
+$prototypeV2=virtual void setLayoutDefault( int margin, int spacing ) = 0
 
-$prototype=virtual void setLayoutFunction ( const QString & margin, const QString & spacing ) = 0
-$virtualMethod=|void|setLayoutFunction|const QString &,const QString &
+$prototypeV2=virtual void setLayoutFunction( const QString & margin, const QString & spacing ) = 0
 
 $prototypeV2=virtual void setMainContainer( QWidget * mainContainer ) = 0
 
