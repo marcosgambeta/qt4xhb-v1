@@ -31,7 +31,7 @@ $prototypeV2=static QAccessibleInterface * queryAccessibleInterface( QObject * o
 
 $prototypeV2=static void setRootObject( QObject * object )
 
-$prototypeV2=static void updateAccessibility( QObject * object, int child, Event reason )
+$prototypeV2=static void updateAccessibility( QObject * object, int child, QAccessible::Event reason )
 
 $extraMethods
 
