@@ -58,15 +58,13 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void append ( const QSqlField & field )
-$method=|void|append|const QSqlField &
+$prototypeV2=void append( const QSqlField & field )
 
 $prototypeV2=void clear()
 
 $prototypeV2=void clearValues()
 
-$prototype=bool contains ( const QString & name ) const
-$method=|bool|contains|const QString &
+$prototypeV2=bool contains( const QString & name ) const
 
 $prototypeV2=int count() const
 
@@ -98,14 +96,11 @@ HB_FUNC_STATIC( QSQLRECORD_FIELD )
 }
 $addMethod=field
 
-$prototype=QString fieldName ( int index ) const
-$method=|QString|fieldName|int
+$prototypeV2=QString fieldName( int index ) const
 
-$prototype=int indexOf ( const QString & name ) const
-$method=|int|indexOf|const QString &
+$prototypeV2=int indexOf( const QString & name ) const
 
-$prototype=void insert ( int pos, const QSqlField & field )
-$method=|void|insert|int,const QSqlField &
+$prototypeV2=void insert( int pos, const QSqlField & field )
 
 $prototypeV2=bool isEmpty() const
 
@@ -165,11 +160,9 @@ HB_FUNC_STATIC( QSQLRECORD_ISNULL )
 }
 $addMethod=isNull
 
-$prototype=void remove ( int pos )
-$method=|void|remove|int
+$prototypeV2=void remove( int pos )
 
-$prototype=void replace ( int pos, const QSqlField & field )
-$method=|void|replace|int,const QSqlField &
+$prototypeV2=void replace( int pos, const QSqlField & field )
 
 $prototype=void setGenerated ( const QString & name, bool generated )
 $internalMethod=|void|setGenerated,setGenerated1|const QString &,bool

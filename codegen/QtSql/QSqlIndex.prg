@@ -85,18 +85,14 @@ $addMethod=append
 
 $prototypeV2=QString cursorName() const
 
-$prototype=bool isDescending ( int i ) const
-$method=|bool|isDescending|int
+$prototypeV2=bool isDescending( int i ) const
 
 $prototypeV2=QString name() const
 
-$prototype=void setCursorName ( const QString & cursorName )
-$method=|void|setCursorName|const QString &
+$prototypeV2=void setCursorName( const QString & cursorName )
 
-$prototype=void setDescending ( int i, bool desc )
-$method=|void|setDescending|int,bool
+$prototypeV2=void setDescending( int i, bool desc )
 
-$prototype=void setName ( const QString & name )
-$method=|void|setName|const QString &
+$prototypeV2=void setName( const QString & name )
 
 #pragma ENDDUMP

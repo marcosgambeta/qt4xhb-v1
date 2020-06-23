@@ -63,17 +63,13 @@ $prototypeV2=bool isValid() const
 
 $prototypeV2=int number() const
 
-$prototype=void setDatabaseText ( const QString & databaseText )
-$method=|void|setDatabaseText|const QString &
+$prototypeV2=void setDatabaseText( const QString & databaseText )
 
-$prototype=void setDriverText ( const QString & driverText )
-$method=|void|setDriverText|const QString &
+$prototypeV2=void setDriverText( const QString & driverText )
 
-$prototype=void setNumber ( int number )
-$method=|void|setNumber|int
+$prototypeV2=void setNumber( int number )
 
-$prototype=void setType ( ErrorType type )
-$method=|void|setType|QSqlError::ErrorType
+$prototypeV2=void setType( QSqlError::ErrorType type )
 
 $prototypeV2=QString text() const
 

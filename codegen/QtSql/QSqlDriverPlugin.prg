@@ -29,8 +29,7 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QSqlDriver * create ( const QString & key ) = 0
-$virtualMethod=|QSqlDriver *|create|const QString &
+$prototypeV2=virtual QSqlDriver * create( const QString & key ) = 0
 
 $prototypeV2=virtual QStringList keys() const = 0
 

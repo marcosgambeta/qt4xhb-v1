@@ -123,34 +123,26 @@ $prototypeV2=QString password() const
 
 $prototypeV2=int port() const
 
-$prototype=QSqlIndex primaryIndex ( const QString & tablename ) const
-$method=|QSqlIndex|primaryIndex|const QString &
+$prototypeV2=QSqlIndex primaryIndex( const QString & tablename ) const
 
-$prototype=QSqlRecord record ( const QString & tablename ) const
-$method=|QSqlRecord|record|const QString &
+$prototypeV2=QSqlRecord record( const QString & tablename ) const
 
 $prototypeV2=bool rollback()
 
 $prototype=void setConnectOptions ( const QString & options = QString() )
 $method=|void|setConnectOptions|const QString &=QString()
 
-$prototype=void setDatabaseName ( const QString & name )
-$method=|void|setDatabaseName|const QString &
+$prototypeV2=void setDatabaseName( const QString & name )
 
-$prototype=void setHostName ( const QString & host )
-$method=|void|setHostName|const QString &
+$prototypeV2=void setHostName( const QString & host )
 
-$prototype=void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolicy )
-$method=|void|setNumericalPrecisionPolicy|QSql::NumericalPrecisionPolicy
+$prototypeV2=void setNumericalPrecisionPolicy( QSql::NumericalPrecisionPolicy precisionPolicy )
 
-$prototype=void setPassword ( const QString & password )
-$method=|void|setPassword|const QString &
+$prototypeV2=void setPassword( const QString & password )
 
-$prototype=void setPort ( int port )
-$method=|void|setPort|int
+$prototypeV2=void setPort( int port )
 
-$prototype=void setUserName ( const QString & name )
-$method=|void|setUserName|const QString &
+$prototypeV2=void setUserName( const QString & name )
 
 $prototype=QStringList tables ( QSql::TableType type = QSql::Tables ) const
 $method=|QStringList|tables|QSql::TableType=QSql::Tables
@@ -244,8 +236,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ADDDATABASE )
 }
 $addMethod=addDatabase
 
-$prototype=static QSqlDatabase cloneDatabase ( const QSqlDatabase & other, const QString & connectionName )
-$staticMethod=|QSqlDatabase|cloneDatabase|const QSqlDatabase &,const QString &
+$prototypeV2=static QSqlDatabase cloneDatabase( const QSqlDatabase & other, const QString & connectionName )
 
 $prototypeV2=static QStringList connectionNames()
 
@@ -298,14 +289,11 @@ $staticMethod=|QSqlDatabase|database|const QString &=QLatin1String( QSqlDatabase
 
 $prototypeV2=static QStringList drivers()
 
-$prototype=static bool isDriverAvailable ( const QString & name )
-$staticMethod=|bool|isDriverAvailable|const QString &
+$prototypeV2=static bool isDriverAvailable( const QString & name )
 
-$prototype=static void registerSqlDriver ( const QString & name, QSqlDriverCreatorBase * creator )
-$staticMethod=|void|registerSqlDriver|const QString &,QSqlDriverCreatorBase *
+$prototypeV2=static void registerSqlDriver( const QString & name, QSqlDriverCreatorBase * creator )
 
-$prototype=static void removeDatabase ( const QString & connectionName )
-$staticMethod=|void|removeDatabase|const QString &
+$prototypeV2=static void removeDatabase( const QString & connectionName )
 
 $extraMethods
 

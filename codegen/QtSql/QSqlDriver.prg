@@ -42,19 +42,16 @@ $prototypeV2=virtual bool commitTransaction()
 
 $prototypeV2=virtual QSqlResult * createResult() const = 0
 
-$prototype=virtual QString escapeIdentifier ( const QString & identifier, IdentifierType type ) const
-$virtualMethod=|QString|escapeIdentifier|const QString &,QSqlDriver::IdentifierType
+$prototypeV2=virtual QString escapeIdentifier( const QString & identifier, QSqlDriver::IdentifierType type ) const
 
 $prototype=virtual QString formatValue ( const QSqlField & field, bool trimStrings = false ) const
 $virtualMethod=|QString|formatValue|const QSqlField &,bool=false
 
 $prototypeV2=virtual QVariant handle() const
 
-$prototype=virtual bool hasFeature ( DriverFeature feature ) const = 0
-$virtualMethod=|bool|hasFeature|QSqlDriver::DriverFeature
+$prototypeV2=virtual bool hasFeature( QSqlDriver::DriverFeature feature ) const = 0
 
-$prototype=bool isIdentifierEscaped ( const QString & identifier, IdentifierType type ) const
-$method=|bool|isIdentifierEscaped|const QString &,QSqlDriver::IdentifierType
+$prototypeV2=bool isIdentifierEscaped( const QString & identifier, QSqlDriver::IdentifierType type ) const
 
 $prototypeV2=virtual bool isOpen() const
 
@@ -67,33 +64,25 @@ $prototypeV2=QSql::NumericalPrecisionPolicy numericalPrecisionPolicy() const
 $prototype=virtual bool open ( const QString & db, const QString & user = QString(), const QString & password = QString(), const QString & host = QString(), int port = -1, const QString & options = QString() ) = 0
 $virtualMethod=|bool|open|const QString &,const QString &=QString(),const QString &=QString(),const QString &=QString(),int=-1,const QString &=QString()
 
-$prototype=virtual QSqlIndex primaryIndex ( const QString & tableName ) const
-$virtualMethod=|QSqlIndex|primaryIndex|const QString &
+$prototypeV2=virtual QSqlIndex primaryIndex( const QString & tableName ) const
 
-$prototype=virtual QSqlRecord record ( const QString & tableName ) const
-$virtualMethod=|QSqlRecord|record|const QString &
+$prototypeV2=virtual QSqlRecord record( const QString & tableName ) const
 
 $prototypeV2=virtual bool rollbackTransaction()
 
-$prototype=void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolicy )
-$method=|void|setNumericalPrecisionPolicy|QSql::NumericalPrecisionPolicy
+$prototypeV2=void setNumericalPrecisionPolicy( QSql::NumericalPrecisionPolicy precisionPolicy )
 
-$prototype=virtual QString sqlStatement ( StatementType type, const QString & tableName, const QSqlRecord & rec, bool preparedStatement ) const
-$virtualMethod=|QString|sqlStatement|QSqlDriver::StatementType,const QString &,const QSqlRecord &,bool
+$prototypeV2=virtual QString sqlStatement( QSqlDriver::StatementType type, const QString & tableName, const QSqlRecord & rec, bool preparedStatement ) const
 
-$prototype=QString stripDelimiters ( const QString & identifier, IdentifierType type ) const
-$method=|QString|stripDelimiters|const QString &,QSqlDriver::IdentifierType
+$prototypeV2=QString stripDelimiters( const QString & identifier, QSqlDriver::IdentifierType type ) const
 
-$prototype=bool subscribeToNotification ( const QString & name )
-$method=|bool|subscribeToNotification|const QString &
+$prototypeV2=bool subscribeToNotification( const QString & name )
 
 $prototypeV2=QStringList subscribedToNotifications() const
 
-$prototype=virtual QStringList tables ( QSql::TableType tableType ) const
-$virtualMethod=|QStringList|tables|QSql::TableType
+$prototypeV2=virtual QStringList tables( QSql::TableType tableType ) const
 
-$prototype=bool unsubscribeFromNotification ( const QString & name )
-$method=|bool|unsubscribeFromNotification|const QString &
+$prototypeV2=bool unsubscribeFromNotification( const QString & name )
 
 $beginSignals
 $signal=|notification(QString)

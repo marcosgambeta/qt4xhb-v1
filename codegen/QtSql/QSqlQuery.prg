@@ -182,8 +182,7 @@ $prototypeV2=bool isActive() const
 
 $prototypeV2=bool isForwardOnly() const
 
-$prototype=bool isNull ( int field ) const
-$method=|bool|isNull|int
+$prototypeV2=bool isNull( int field ) const
 
 $prototypeV2=bool isSelect() const
 
@@ -205,8 +204,7 @@ $prototypeV2=int numRowsAffected() const
 
 $prototypeV2=QSql::NumericalPrecisionPolicy numericalPrecisionPolicy() const
 
-$prototype=bool prepare ( const QString & query )
-$method=|bool|prepare|const QString &
+$prototypeV2=bool prepare( const QString & query )
 
 $prototypeV2=bool previous()
 
@@ -217,16 +215,13 @@ $prototypeV2=const QSqlResult * result() const
 $prototype=bool seek ( int index, bool relative = false )
 $method=|bool|seek|int,bool=false
 
-$prototype=void setForwardOnly ( bool forward )
-$method=|void|setForwardOnly|bool
+$prototypeV2=void setForwardOnly( bool forward )
 
-$prototype=void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolicy )
-$method=|void|setNumericalPrecisionPolicy|QSql::NumericalPrecisionPolicy
+$prototypeV2=void setNumericalPrecisionPolicy( QSql::NumericalPrecisionPolicy precisionPolicy )
 
 $prototypeV2=int size() const
 
-$prototype=QVariant value ( int index ) const
-$method=|QVariant|value|int
+$prototypeV2=QVariant value( int index ) const
 
 $extraMethods
 

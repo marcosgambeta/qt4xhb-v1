@@ -30,13 +30,10 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=virtual QWidget * createEditor ( QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index ) const
-$virtualMethod=|QWidget *|createEditor|QWidget *,const QStyleOptionViewItem &,const QModelIndex &
+$prototypeV2=virtual QWidget * createEditor( QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index ) const
 
-$prototype=virtual void setEditorData ( QWidget * editor, const QModelIndex & index ) const
-$virtualMethod=|void|setEditorData|QWidget *,const QModelIndex &
+$prototypeV2=virtual void setEditorData( QWidget * editor, const QModelIndex & index ) const
 
-$prototype=virtual void setModelData ( QWidget * editor, QAbstractItemModel * model, const QModelIndex & index ) const
-$virtualMethod=|void|setModelData|QWidget *,QAbstractItemModel *,const QModelIndex &
+$prototypeV2=virtual void setModelData( QWidget * editor, QAbstractItemModel * model, const QModelIndex & index ) const
 
 #pragma ENDDUMP

@@ -77,38 +77,27 @@ $prototypeV2=int precision() const
 
 $prototypeV2=QSqlField::RequiredStatus requiredStatus() const
 
-$prototype=void setAutoValue ( bool autoVal )
-$method=|void|setAutoValue|bool
+$prototypeV2=void setAutoValue( bool autoVal )
 
-$prototype=void setDefaultValue ( const QVariant & value )
-$method=|void|setDefaultValue|const QVariant &
+$prototypeV2=void setDefaultValue( const QVariant & value )
 
-$prototype=void setGenerated ( bool gen )
-$method=|void|setGenerated|bool
+$prototypeV2=void setGenerated( bool gen )
 
-$prototype=void setLength ( int fieldLength )
-$method=|void|setLength|int
+$prototypeV2=void setLength( int fieldLength )
 
-$prototype=void setName ( const QString & name )
-$method=|void|setName|const QString &
+$prototypeV2=void setName( const QString & name )
 
-$prototype=void setPrecision ( int precision )
-$method=|void|setPrecision|int
+$prototypeV2=void setPrecision( int precision )
 
-$prototype=void setReadOnly ( bool readOnly )
-$method=|void|setReadOnly|bool
+$prototypeV2=void setReadOnly( bool readOnly )
 
-$prototype=void setRequired ( bool required )
-$method=|void|setRequired|bool
+$prototypeV2=void setRequired( bool required )
 
-$prototype=void setRequiredStatus ( RequiredStatus required )
-$method=|void|setRequiredStatus|QSqlField::RequiredStatus
+$prototypeV2=void setRequiredStatus( QSqlField::RequiredStatus required )
 
-$prototype=void setType ( QVariant::Type type )
-$method=|void|setType|QVariant::Type
+$prototypeV2=void setType( QVariant::Type type )
 
-$prototype=void setValue ( const QVariant & value )
-$method=|void|setValue|const QVariant &
+$prototypeV2=void setValue( const QVariant & value )
 
 $prototypeV2=QVariant::Type type() const
 

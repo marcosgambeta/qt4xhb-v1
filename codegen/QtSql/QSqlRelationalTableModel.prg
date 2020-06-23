@@ -30,14 +30,11 @@ $constructor=|new|QObject *=0,QSqlDatabase=QSqlDatabase()
 
 $deleteMethod
 
-$prototype=QSqlRelation relation ( int column ) const
-$method=|QSqlRelation|relation|int
+$prototypeV2=QSqlRelation relation( int column ) const
 
-$prototype=virtual QSqlTableModel * relationModel ( int column ) const
-$virtualMethod=|QSqlTableModel *|relationModel|int
+$prototypeV2=virtual QSqlTableModel * relationModel( int column ) const
 
-$prototype=virtual void setRelation ( int column, const QSqlRelation & relation )
-$virtualMethod=|void|setRelation|int,const QSqlRelation &
+$prototypeV2=virtual void setRelation( int column, const QSqlRelation & relation )
 
 $prototypeV2=virtual void clear()
 
@@ -52,10 +49,8 @@ $prototypeV2=virtual bool select()
 $prototype=virtual bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 $virtualMethod=|bool|setData|const QModelIndex &,const QVariant &,int=Qt::EditRole
 
-$prototype=virtual void setTable ( const QString & table )
-$virtualMethod=|void|setTable|const QString &
+$prototypeV2=virtual void setTable( const QString & table )
 
-$prototype=virtual void revertRow ( int row )
-$virtualMethod=|void|revertRow|int
+$prototypeV2=virtual void revertRow( int row )
 
 #pragma ENDDUMP
