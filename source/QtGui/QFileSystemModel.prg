@@ -18,6 +18,7 @@ REQUEST QDIR
 REQUEST QFILEICONPROVIDER
 REQUEST QFILEINFO
 REQUEST QICON
+REQUEST QMIMEDATA
 REQUEST QMODELINDEX
 REQUEST QVARIANT
 #endif
@@ -133,7 +134,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_DELETE )
 }
 
 /*
-QIcon fileIcon ( const QModelIndex & index ) const
+QIcon fileIcon( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEICON )
 {
@@ -158,7 +159,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEICON )
 }
 
 /*
-QFileInfo fileInfo ( const QModelIndex & index ) const
+QFileInfo fileInfo( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEINFO )
 {
@@ -183,7 +184,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEINFO )
 }
 
 /*
-QString fileName ( const QModelIndex & index ) const
+QString fileName( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FILENAME )
 {
@@ -207,7 +208,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILENAME )
 }
 
 /*
-QString filePath ( const QModelIndex & index ) const
+QString filePath( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEPATH )
 {
@@ -280,7 +281,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ICONPROVIDER )
 }
 
 /*
-bool isDir ( const QModelIndex & index ) const
+bool isDir( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ISDIR )
 {
@@ -328,7 +329,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ISREADONLY )
 }
 
 /*
-QDateTime lastModified ( const QModelIndex & index ) const
+QDateTime lastModified( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_LASTMODIFIED )
 {
@@ -353,7 +354,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_LASTMODIFIED )
 }
 
 /*
-QModelIndex mkdir ( const QModelIndex & parent, const QString & name )
+QModelIndex mkdir( const QModelIndex & parent, const QString & name )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_MKDIR )
 {
@@ -451,7 +452,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_NAMEFILTERS )
 }
 
 /*
-QFile::Permissions permissions ( const QModelIndex & index ) const
+QFile::Permissions permissions( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_PERMISSIONS )
 {
@@ -475,7 +476,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_PERMISSIONS )
 }
 
 /*
-bool remove ( const QModelIndex & index ) const
+bool remove( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_REMOVE )
 {
@@ -523,7 +524,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_RESOLVESYMLINKS )
 }
 
 /*
-bool rmdir ( const QModelIndex & index ) const
+bool rmdir( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_RMDIR )
 {
@@ -596,7 +597,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTPATH )
 }
 
 /*
-void setFilter ( QDir::Filters filters )
+void setFilter( QDir::Filters filters )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETFILTER )
 {
@@ -622,7 +623,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETFILTER )
 }
 
 /*
-void setIconProvider ( QFileIconProvider * provider )
+void setIconProvider( QFileIconProvider * provider )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETICONPROVIDER )
 {
@@ -648,7 +649,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETICONPROVIDER )
 }
 
 /*
-void setNameFilterDisables ( bool enable )
+void setNameFilterDisables( bool enable )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETNAMEFILTERDISABLES )
 {
@@ -674,7 +675,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETNAMEFILTERDISABLES )
 }
 
 /*
-void setNameFilters ( const QStringList & filters )
+void setNameFilters( const QStringList & filters )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETNAMEFILTERS )
 {
@@ -700,7 +701,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETNAMEFILTERS )
 }
 
 /*
-void setReadOnly ( bool enable )
+void setReadOnly( bool enable )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETREADONLY )
 {
@@ -726,7 +727,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETREADONLY )
 }
 
 /*
-void setResolveSymlinks ( bool enable )
+void setResolveSymlinks( bool enable )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETRESOLVESYMLINKS )
 {
@@ -752,7 +753,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETRESOLVESYMLINKS )
 }
 
 /*
-QModelIndex setRootPath ( const QString & newPath )
+QModelIndex setRootPath( const QString & newPath )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETROOTPATH )
 {
@@ -777,7 +778,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETROOTPATH )
 }
 
 /*
-qint64 size ( const QModelIndex & index ) const
+qint64 size( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SIZE )
 {
@@ -801,7 +802,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SIZE )
 }
 
 /*
-QString type ( const QModelIndex & index ) const
+QString type( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_TYPE )
 {
@@ -825,7 +826,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_TYPE )
 }
 
 /*
-virtual bool canFetchMore ( const QModelIndex & parent ) const
+virtual bool canFetchMore( const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_CANFETCHMORE )
 {
@@ -898,7 +899,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_DATA )
 }
 
 /*
-virtual bool dropMimeData ( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
+virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_DROPMIMEDATA )
 {
@@ -922,7 +923,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_DROPMIMEDATA )
 }
 
 /*
-virtual void fetchMore ( const QModelIndex & parent )
+virtual void fetchMore( const QModelIndex & parent )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FETCHMORE )
 {
@@ -948,7 +949,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FETCHMORE )
 }
 
 /*
-virtual Qt::ItemFlags flags ( const QModelIndex & index ) const
+virtual Qt::ItemFlags flags( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FLAGS )
 {
@@ -1070,17 +1071,35 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX )
 }
 
 /*
-virtual QMimeData * mimeData ( const QModelIndexList & indexes ) const
+virtual QMimeData * mimeData( const QModelIndexList & indexes ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMEDATA )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QModelIndexList * par1 = (QModelIndexList *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-    QMimeData * ptr = obj->mimeData ( *par1 );
-    Qt4xHb::createReturnClass ( ptr, "QMIMEDATA" );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) && ISARRAY(1) )
+    {
+#endif
+      QModelIndexList par1;
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      int i1;
+      int nLen1 = hb_arrayLen(aList1);
+      for (i1=0;i1<nLen1;i1++)
+      {
+        par1 << *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      }
+      QMimeData * ptr = obj->mimeData( par1 );
+      Qt4xHb::createReturnQObjectClass( ptr, "QMIMEDATA" );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
   }
 }
 
@@ -1109,7 +1128,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMETYPES )
 }
 
 /*
-virtual QModelIndex parent ( const QModelIndex & index ) const
+virtual QModelIndex parent( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_PARENT )
 {
