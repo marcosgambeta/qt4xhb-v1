@@ -85,8 +85,7 @@ $prototypeV2=void setExpression( const QString & expression )
 
 $prototypeV2=void setNotifyOnValueChanged( bool notifyOnChange )
 
-$prototype=void setSourceLocation ( const QString & url, int line )
-$method=|void|setSourceLocation|const QString &,int
+$prototypeV2=void setSourceLocation( const QString & url, int line )
 
 $prototypeV2=QString sourceFile() const
 

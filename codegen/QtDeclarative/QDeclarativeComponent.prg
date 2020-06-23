@@ -98,8 +98,7 @@ $prototypeV2=void loadUrl( const QUrl & url )
 
 $prototypeV2=qreal progress() const
 
-$prototype=void setData ( const QByteArray & data, const QUrl & url )
-$method=|void|setData|const QByteArray &,const QUrl &
+$prototypeV2=void setData( const QByteArray & data, const QUrl & url )
 
 $prototypeV2=QDeclarativeComponent::Status status() const
 

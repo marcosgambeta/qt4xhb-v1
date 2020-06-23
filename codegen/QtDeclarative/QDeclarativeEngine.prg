@@ -36,8 +36,7 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=void addImageProvider ( const QString & providerId, QDeclarativeImageProvider * provider )
-$method=|void|addImageProvider|const QString &,QDeclarativeImageProvider *
+$prototypeV2=void addImageProvider( const QString & providerId, QDeclarativeImageProvider * provider )
 
 $prototypeV2=void addImportPath( const QString & path )
 
@@ -51,8 +50,7 @@ $prototypeV2=QDeclarativeImageProvider * imageProvider( const QString & provider
 
 $prototypeV2=QStringList importPathList() const
 
-$prototype=bool importPlugin ( const QString & filePath, const QString & uri, QString * errorString )
-$method=|bool|importPlugin|const QString &,const QString &,QString *
+$prototypeV2=bool importPlugin( const QString & filePath, const QString & uri, QString * errorString )
 
 $prototypeV2=QNetworkAccessManager * networkAccessManager() const
 
@@ -82,13 +80,11 @@ $prototypeV2=void setPluginPathList( const QStringList & paths )
 
 $prototypeV2=static QDeclarativeContext * contextForObject( const QObject * object )
 
-$prototypeV2=static ObjectOwnership objectOwnership( QObject * object )
+$prototypeV2=static QDeclarativeEngine::ObjectOwnership objectOwnership( QObject * object )
 
-$prototype=static void setContextForObject ( QObject * object, QDeclarativeContext * context )
-$staticMethod=|void|setContextForObject|QObject *,QDeclarativeContext *
+$prototypeV2=static void setContextForObject( QObject * object, QDeclarativeContext * context )
 
-$prototype=static void setObjectOwnership ( QObject * object, ObjectOwnership ownership )
-$staticMethod=|void|setObjectOwnership|QObject *,QDeclarativeEngine::ObjectOwnership
+$prototypeV2=static void setObjectOwnership( QObject * object, QDeclarativeEngine::ObjectOwnership ownership )
 
 $beginSignals
 $signal=|quit()

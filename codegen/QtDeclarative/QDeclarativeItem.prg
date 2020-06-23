@@ -32,8 +32,7 @@ $deleteMethod
 
 $prototypeV2=qreal baselineOffset() const
 
-$prototype=QDeclarativeItem * childAt ( qreal x, qreal y ) const
-$method=|QDeclarativeItem *|childAt|qreal,qreal
+$prototypeV2=QDeclarativeItem * childAt( qreal x, qreal y ) const
 
 $prototypeV2=QRectF childrenRect()
 
@@ -47,11 +46,9 @@ $prototypeV2=qreal implicitWidth() const
 
 $prototypeV2=bool keepMouseGrab() const
 
-$prototype=QScriptValue mapFromItem ( const QScriptValue & item, qreal x, qreal y ) const
-$method=|QScriptValue|mapFromItem|const QScriptValue &,qreal,qreal
+$prototypeV2=QScriptValue mapFromItem( const QScriptValue & item, qreal x, qreal y ) const
 
-$prototype=QScriptValue mapToItem ( const QScriptValue & item, qreal x, qreal y ) const
-$method=|QScriptValue|mapToItem|const QScriptValue &,qreal,qreal
+$prototypeV2=QScriptValue mapToItem( const QScriptValue & item, qreal x, qreal y ) const
 
 $prototypeV2=QDeclarativeItem * parentItem() const
 
@@ -65,7 +62,7 @@ $prototypeV2=void setParentItem( QDeclarativeItem * parent )
 
 $prototypeV2=void setSmooth( bool smooth )
 
-$prototypeV2=void setTransformOrigin ( QDeclarativeItem::TransformOrigin origin )
+$prototypeV2=void setTransformOrigin( QDeclarativeItem::TransformOrigin origin )
 
 $prototypeV2=bool smooth() const
 
