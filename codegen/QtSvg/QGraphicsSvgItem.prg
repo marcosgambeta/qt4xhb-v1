@@ -69,8 +69,7 @@ $prototypeV2=void setSharedRenderer( QSvgRenderer * renderer )
 
 $prototypeV2=virtual QRectF boundingRect() const
 
-$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
-$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
+$prototypeV2=virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 
 $prototypeV2=virtual int type() const
 
