@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_DELETE )
 }
 
 /*
-QAction * action ( DebuggerAction action ) const
+QAction * action( QScriptEngineDebugger::DebuggerAction action ) const
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ACTION )
 {
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ACTION )
 }
 
 /*
-void attachTo ( QScriptEngine * engine )
+void attachTo( QScriptEngine * engine )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ATTACHTO )
 {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_DETACH )
 }
 
 /*
-void setAutoShowStandardWindow ( bool autoShow )
+void setAutoShowStandardWindow( bool autoShow )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_SETAUTOSHOWSTANDARDWINDOW )
 {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_STATE )
 }
 
 /*
-QWidget * widget ( DebuggerWidget widget ) const
+QWidget * widget( QScriptEngineDebugger::DebuggerWidget widget ) const
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_WIDGET )
 {
