@@ -173,13 +173,11 @@ $prototypeV2=void scrollToAnchor( const QString & anchor )
 
 $prototypeV2=QWebSecurityOrigin securityOrigin() const
 
-$prototype=void setContent ( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
-$method=|void|setContent|const QByteArray &,const QString &=QString(),const QUrl &=QUrl()
+$prototypeV2=void setContent( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
 
 $prototypeV2=void setFocus()
 
-$prototype=void setHtml ( const QString & html, const QUrl & baseUrl = QUrl() )
-$method=|void|setHtml|const QString &,const QUrl &=QUrl()
+$prototypeV2=void setHtml( const QString & html, const QUrl & baseUrl = QUrl() )
 
 $prototypeV2=void setScrollBarPolicy( Qt::Orientation orientation, Qt::ScrollBarPolicy policy )
 

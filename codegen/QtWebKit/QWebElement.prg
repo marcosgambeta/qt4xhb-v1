@@ -115,14 +115,11 @@ HB_FUNC_STATIC( QWEBELEMENT_APPENDOUTSIDE )
 }
 $addMethod=appendOutside
 
-$prototype=QString attribute ( const QString & name, const QString & defaultValue = QString() ) const
-$method=|QString|attribute|const QString &,const QString &=QString()
+$prototypeV2=QString attribute( const QString & name, const QString & defaultValue = QString() ) const
 
-$prototype=QString attributeNS ( const QString & namespaceUri, const QString & name, const QString & defaultValue = QString() ) const
-$method=|QString|attributeNS|const QString &,const QString &,const QString &=QString()
+$prototypeV2=QString attributeNS( const QString & namespaceUri, const QString & name, const QString & defaultValue = QString() ) const
 
-$prototype=QStringList attributeNames ( const QString & namespaceUri = QString() ) const
-$method=|QStringList|attributeNames|const QString &=QString()
+$prototypeV2=QStringList attributeNames( const QString & namespaceUri = QString() ) const
 
 $prototypeV2=QStringList classes() const
 

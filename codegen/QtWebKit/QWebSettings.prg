@@ -61,8 +61,7 @@ $prototypeV2=static void clearIconDatabase()
 
 $prototypeV2=static void clearMemoryCaches()
 
-$prototype=static void enablePersistentStorage ( const QString & path = QString() )
-$staticMethod=|void|enablePersistentStorage|const QString &=QString()
+$prototypeV2=static void enablePersistentStorage( const QString & path = QString() )
 
 $prototypeV2=static QWebSettings * globalSettings()
 

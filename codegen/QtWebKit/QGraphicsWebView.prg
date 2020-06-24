@@ -34,8 +34,7 @@ $constructor=|new|QGraphicsItem *=0
 
 $deleteMethod
 
-$prototype=bool findText ( const QString & subString, QWebPage::FindFlags options = 0 )
-$method=|bool|findText|const QString &,QWebPage::FindFlags=0
+$prototypeV2=bool findText( const QString & subString, QWebPage::FindFlags options = 0 )
 
 $prototypeV2=QWebHistory * history() const
 
@@ -79,11 +78,9 @@ $prototypeV2=QAction * pageAction( QWebPage::WebAction action ) const
 
 $prototypeV2=bool resizesToContents() const
 
-$prototype=void setContent ( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
-$method=|void|setContent|const QByteArray &,const QString &=QString(),const QUrl &=QUrl()
+$prototypeV2=void setContent( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
 
-$prototype=void setHtml ( const QString & html, const QUrl & baseUrl = QUrl() )
-$method=|void|setHtml|const QString &,const QUrl &=QUrl()
+$prototypeV2=void setHtml( const QString & html, const QUrl & baseUrl = QUrl() )
 
 $prototypeV2=void setPage( QWebPage * page )
 
@@ -99,8 +96,7 @@ $prototypeV2=QWebSettings * settings() const
 
 $prototypeV2=QString title() const
 
-$prototype=void triggerPageAction ( QWebPage::WebAction action, bool checked = false )
-$method=|void|triggerPageAction|QWebPage::WebAction,bool=false
+$prototypeV2=void triggerPageAction( QWebPage::WebAction action, bool checked = false )
 
 $prototypeV2=QUrl url() const
 

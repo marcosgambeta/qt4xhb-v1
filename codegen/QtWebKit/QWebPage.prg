@@ -52,8 +52,7 @@ $prototype=virtual bool extension ( Extension extension, const ExtensionOption *
 %% TODO: QWebPage::ExtensionReturn é uma classe
 %% $virtualMethod=|bool|extension|QWebPage::Extension,const QWebPage::ExtensionOption *=0,QWebPage::ExtensionReturn *=0
 
-$prototype=bool findText ( const QString & subString, FindFlags options = 0 )
-$method=|bool|findText|const QString &,QWebPage::FindFlags=0
+$prototypeV2=bool findText( const QString & subString, QWebPage::FindFlags options = 0 )
 
 $prototypeV2=bool focusNextPrevChild( bool next )
 
@@ -109,8 +108,7 @@ $prototypeV2=bool swallowContextMenuEvent( QContextMenuEvent * event )
 
 $prototypeV2=quint64 totalBytes() const
 
-$prototype=virtual void triggerAction ( WebAction action, bool checked = false )
-$virtualMethod=|void|triggerAction|QWebPage::WebAction,bool=false
+$prototypeV2=virtual void triggerAction( QWebPage::WebAction action, bool checked = false )
 
 $prototypeV2=QUndoStack * undoStack() const
 
