@@ -46,8 +46,7 @@ $prototypeV2=QString currentFilter() const
 
 $prototypeV2=QStringList customFilters() const
 
-$prototype=QVariant customValue ( const QString & key, const QVariant & defaultValue = QVariant() ) const
-$method=|QVariant|customValue|const QString &,const QVariant &=QVariant()
+$prototypeV2=QVariant customValue( const QString & key, const QVariant & defaultValue = QVariant() ) const
 
 $prototypeV2=QString documentationFileName( const QString & namespaceName )
 
@@ -55,8 +54,7 @@ $prototypeV2=QString error() const
 
 $prototypeV2=QByteArray fileData( const QUrl & url ) const
 
-$prototype=QList<QUrl> files ( const QString namespaceName, const QStringList & filterAttributes, const QString & extensionFilter = QString() )
-$method=|QList<QUrl>|files|const QString &,const QStringList &,const QString &=QString()
+$prototypeV2=QList<QUrl> files( const QString namespaceName, const QStringList & filterAttributes, const QString & extensionFilter = QString() )
 
 $prototype=QStringList filterAttributes () const
 $internalMethod=|QStringList|filterAttributes,filterAttributes1|

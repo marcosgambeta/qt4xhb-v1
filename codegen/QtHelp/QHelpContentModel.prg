@@ -35,18 +35,15 @@ $prototypeV2=void createContents( const QString & customFilterName )
 
 $prototypeV2=bool isCreatingContents() const
 
-$prototype=virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const
-$virtualMethod=|int|columnCount|const QModelIndex &=QModelIndex()
+$prototypeV2=virtual int columnCount( const QModelIndex & parent = QModelIndex() ) const
 
 $prototypeV2=virtual QVariant data( const QModelIndex & index, int role ) const
 
-$prototype=virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
-$virtualMethod=|QModelIndex|index|int,int,const QModelIndex &=QModelIndex()
+$prototypeV2=virtual QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 
 $prototypeV2=virtual QModelIndex parent( const QModelIndex & index ) const
 
-$prototype=virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
-$virtualMethod=|int|rowCount|const QModelIndex &=QModelIndex()
+$prototypeV2=virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
 
 $beginSignals
 $signal=|contentsCreated()
