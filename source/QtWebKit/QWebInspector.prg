@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_PAGE )
 }
 
 /*
-void setPage ( QWebPage * page )
+void setPage( QWebPage * page )
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_SETPAGE )
 {
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_SETPAGE )
 }
 
 /*
-virtual bool event ( QEvent * ev )
+virtual bool event( QEvent * ev )
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_EVENT )
 {

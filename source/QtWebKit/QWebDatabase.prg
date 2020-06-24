@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QWEBDATABASE_REMOVEALLDATABASES )
 }
 
 /*
-static void removeDatabase ( const QWebDatabase & db )
+static void removeDatabase( const QWebDatabase & db )
 */
 HB_FUNC_STATIC( QWEBDATABASE_REMOVEDATABASE )
 {

@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QWEBFRAME_DOCUMENTELEMENT )
 }
 
 /*
-QWebElementCollection findAllElements ( const QString & selectorQuery ) const
+QWebElementCollection findAllElements( const QString & selectorQuery ) const
 */
 HB_FUNC_STATIC( QWEBFRAME_FINDALLELEMENTS )
 {
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QWEBFRAME_FINDALLELEMENTS )
 }
 
 /*
-QWebElement findFirstElement ( const QString & selectorQuery ) const
+QWebElement findFirstElement( const QString & selectorQuery ) const
 */
 HB_FUNC_STATIC( QWEBFRAME_FINDFIRSTELEMENT )
 {
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QWEBFRAME_HASFOCUS )
 }
 
 /*
-QWebHitTestResult hitTestContent ( const QPoint & pos ) const
+QWebHitTestResult hitTestContent( const QPoint & pos ) const
 */
 HB_FUNC_STATIC( QWEBFRAME_HITTESTCONTENT )
 {
@@ -702,7 +702,7 @@ HB_FUNC_STATIC( QWEBFRAME_REQUESTEDURL )
 }
 
 /*
-void scroll ( int dx, int dy )
+void scroll( int dx, int dy )
 */
 HB_FUNC_STATIC( QWEBFRAME_SCROLL )
 {
@@ -728,7 +728,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLL )
 }
 
 /*
-QRect scrollBarGeometry ( Qt::Orientation orientation ) const
+QRect scrollBarGeometry( Qt::Orientation orientation ) const
 */
 HB_FUNC_STATIC( QWEBFRAME_SCROLLBARGEOMETRY )
 {
@@ -753,7 +753,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARGEOMETRY )
 }
 
 /*
-int scrollBarMaximum ( Qt::Orientation orientation ) const
+int scrollBarMaximum( Qt::Orientation orientation ) const
 */
 HB_FUNC_STATIC( QWEBFRAME_SCROLLBARMAXIMUM )
 {
@@ -777,7 +777,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARMAXIMUM )
 }
 
 /*
-int scrollBarMinimum ( Qt::Orientation orientation ) const
+int scrollBarMinimum( Qt::Orientation orientation ) const
 */
 HB_FUNC_STATIC( QWEBFRAME_SCROLLBARMINIMUM )
 {
@@ -801,7 +801,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARMINIMUM )
 }
 
 /*
-Qt::ScrollBarPolicy scrollBarPolicy ( Qt::Orientation orientation ) const
+Qt::ScrollBarPolicy scrollBarPolicy( Qt::Orientation orientation ) const
 */
 HB_FUNC_STATIC( QWEBFRAME_SCROLLBARPOLICY )
 {
@@ -825,7 +825,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARPOLICY )
 }
 
 /*
-int scrollBarValue ( Qt::Orientation orientation ) const
+int scrollBarValue( Qt::Orientation orientation ) const
 */
 HB_FUNC_STATIC( QWEBFRAME_SCROLLBARVALUE )
 {
@@ -874,7 +874,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLPOSITION )
 }
 
 /*
-void scrollToAnchor ( const QString & anchor )
+void scrollToAnchor( const QString & anchor )
 */
 HB_FUNC_STATIC( QWEBFRAME_SCROLLTOANCHOR )
 {
@@ -1003,7 +1003,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETHTML )
 }
 
 /*
-void setScrollBarPolicy ( Qt::Orientation orientation, Qt::ScrollBarPolicy policy )
+void setScrollBarPolicy( Qt::Orientation orientation, Qt::ScrollBarPolicy policy )
 */
 HB_FUNC_STATIC( QWEBFRAME_SETSCROLLBARPOLICY )
 {
@@ -1029,7 +1029,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETSCROLLBARPOLICY )
 }
 
 /*
-void setScrollBarValue ( Qt::Orientation orientation, int value )
+void setScrollBarValue( Qt::Orientation orientation, int value )
 */
 HB_FUNC_STATIC( QWEBFRAME_SETSCROLLBARVALUE )
 {
@@ -1055,7 +1055,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETSCROLLBARVALUE )
 }
 
 /*
-void setScrollPosition ( const QPoint & pos )
+void setScrollPosition( const QPoint & pos )
 */
 HB_FUNC_STATIC( QWEBFRAME_SETSCROLLPOSITION )
 {
@@ -1081,7 +1081,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETSCROLLPOSITION )
 }
 
 /*
-void setTextSizeMultiplier ( qreal factor )
+void setTextSizeMultiplier( qreal factor )
 */
 HB_FUNC_STATIC( QWEBFRAME_SETTEXTSIZEMULTIPLIER )
 {
@@ -1107,7 +1107,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETTEXTSIZEMULTIPLIER )
 }
 
 /*
-void setUrl ( const QUrl & url )
+void setUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QWEBFRAME_SETURL )
 {
@@ -1133,7 +1133,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETURL )
 }
 
 /*
-void setZoomFactor ( qreal factor )
+void setZoomFactor( qreal factor )
 */
 HB_FUNC_STATIC( QWEBFRAME_SETZOOMFACTOR )
 {
@@ -1304,7 +1304,7 @@ HB_FUNC_STATIC( QWEBFRAME_ZOOMFACTOR )
 }
 
 /*
-QVariant evaluateJavaScript ( const QString & scriptSource )
+QVariant evaluateJavaScript( const QString & scriptSource )
 */
 HB_FUNC_STATIC( QWEBFRAME_EVALUATEJAVASCRIPT )
 {
@@ -1329,7 +1329,7 @@ HB_FUNC_STATIC( QWEBFRAME_EVALUATEJAVASCRIPT )
 }
 
 /*
-void print ( QPrinter * printer ) const
+void print( QPrinter * printer ) const
 */
 HB_FUNC_STATIC( QWEBFRAME_PRINT )
 {

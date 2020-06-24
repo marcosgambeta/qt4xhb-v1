@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_SCHEME )
 }
 
 /*
-void setDatabaseQuota ( qint64 quota )
+void setDatabaseQuota( qint64 quota )
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_SETDATABASEQUOTA )
 {
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_SETDATABASEQUOTA )
 }
 
 /*
-static void addLocalScheme ( const QString & scheme )
+static void addLocalScheme( const QString & scheme )
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_ADDLOCALSCHEME )
 {
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_LOCALSCHEMES )
 }
 
 /*
-static void removeLocalScheme ( const QString & scheme )
+static void removeLocalScheme( const QString & scheme )
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_REMOVELOCALSCHEME )
 {

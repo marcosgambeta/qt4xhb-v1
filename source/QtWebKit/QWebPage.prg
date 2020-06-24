@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QWEBPAGE_DELETE )
 }
 
 /*
-QAction * action ( WebAction action ) const
+QAction * action( QWebPage::WebAction action ) const
 */
 HB_FUNC_STATIC( QWEBPAGE_ACTION )
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QWEBPAGE_FINDTEXT )
 }
 
 /*
-bool focusNextPrevChild ( bool next )
+bool focusNextPrevChild( bool next )
 */
 HB_FUNC_STATIC( QWEBPAGE_FOCUSNEXTPREVCHILD )
 {
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QWEBPAGE_FORWARDUNSUPPORTEDCONTENT )
 }
 
 /*
-QWebFrame * frameAt ( const QPoint & pos ) const
+QWebFrame * frameAt( const QPoint & pos ) const
 */
 HB_FUNC_STATIC( QWEBPAGE_FRAMEAT )
 {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QWEBPAGE_HISTORY )
 }
 
 /*
-QVariant inputMethodQuery ( Qt::InputMethodQuery property ) const
+QVariant inputMethodQuery( Qt::InputMethodQuery property ) const
 */
 HB_FUNC_STATIC( QWEBPAGE_INPUTMETHODQUERY )
 {
@@ -629,7 +629,7 @@ HB_FUNC_STATIC( QWEBPAGE_SELECTEDTEXT )
 }
 
 /*
-void setContentEditable ( bool editable )
+void setContentEditable( bool editable )
 */
 HB_FUNC_STATIC( QWEBPAGE_SETCONTENTEDITABLE )
 {
@@ -655,7 +655,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETCONTENTEDITABLE )
 }
 
 /*
-void setForwardUnsupportedContent ( bool forward )
+void setForwardUnsupportedContent( bool forward )
 */
 HB_FUNC_STATIC( QWEBPAGE_SETFORWARDUNSUPPORTEDCONTENT )
 {
@@ -681,7 +681,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETFORWARDUNSUPPORTEDCONTENT )
 }
 
 /*
-void setLinkDelegationPolicy ( LinkDelegationPolicy policy )
+void setLinkDelegationPolicy( QWebPage::LinkDelegationPolicy policy )
 */
 HB_FUNC_STATIC( QWEBPAGE_SETLINKDELEGATIONPOLICY )
 {
@@ -707,7 +707,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETLINKDELEGATIONPOLICY )
 }
 
 /*
-void setNetworkAccessManager ( QNetworkAccessManager * manager )
+void setNetworkAccessManager( QNetworkAccessManager * manager )
 */
 HB_FUNC_STATIC( QWEBPAGE_SETNETWORKACCESSMANAGER )
 {
@@ -733,7 +733,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETNETWORKACCESSMANAGER )
 }
 
 /*
-void setPalette ( const QPalette & palette )
+void setPalette( const QPalette & palette )
 */
 HB_FUNC_STATIC( QWEBPAGE_SETPALETTE )
 {
@@ -759,7 +759,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETPALETTE )
 }
 
 /*
-void setPluginFactory ( QWebPluginFactory * factory )
+void setPluginFactory( QWebPluginFactory * factory )
 */
 HB_FUNC_STATIC( QWEBPAGE_SETPLUGINFACTORY )
 {
@@ -785,7 +785,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETPLUGINFACTORY )
 }
 
 /*
-void setPreferredContentsSize ( const QSize & size ) const
+void setPreferredContentsSize( const QSize & size ) const
 */
 HB_FUNC_STATIC( QWEBPAGE_SETPREFERREDCONTENTSSIZE )
 {
@@ -811,7 +811,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETPREFERREDCONTENTSSIZE )
 }
 
 /*
-void setView ( QWidget * view )
+void setView( QWidget * view )
 */
 HB_FUNC_STATIC( QWEBPAGE_SETVIEW )
 {
@@ -837,7 +837,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETVIEW )
 }
 
 /*
-void setViewportSize ( const QSize & size ) const
+void setViewportSize( const QSize & size ) const
 */
 HB_FUNC_STATIC( QWEBPAGE_SETVIEWPORTSIZE )
 {
@@ -888,7 +888,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETTINGS )
 }
 
 /*
-virtual bool supportsExtension ( Extension extension ) const
+virtual bool supportsExtension( QWebPage::Extension extension ) const
 */
 HB_FUNC_STATIC( QWEBPAGE_SUPPORTSEXTENSION )
 {
@@ -912,7 +912,7 @@ HB_FUNC_STATIC( QWEBPAGE_SUPPORTSEXTENSION )
 }
 
 /*
-bool swallowContextMenuEvent ( QContextMenuEvent * event )
+bool swallowContextMenuEvent( QContextMenuEvent * event )
 */
 HB_FUNC_STATIC( QWEBPAGE_SWALLOWCONTEXTMENUEVENT )
 {
@@ -1011,7 +1011,7 @@ HB_FUNC_STATIC( QWEBPAGE_UNDOSTACK )
 }
 
 /*
-void updatePositionDependentActions ( const QPoint & pos )
+void updatePositionDependentActions( const QPoint & pos )
 */
 HB_FUNC_STATIC( QWEBPAGE_UPDATEPOSITIONDEPENDENTACTIONS )
 {
@@ -1087,7 +1087,7 @@ HB_FUNC_STATIC( QWEBPAGE_VIEWPORTSIZE )
 }
 
 /*
-virtual bool event ( QEvent * ev )
+virtual bool event( QEvent * ev )
 */
 HB_FUNC_STATIC( QWEBPAGE_EVENT )
 {

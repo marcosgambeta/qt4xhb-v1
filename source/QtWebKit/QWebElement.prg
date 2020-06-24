@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QWEBELEMENT_DELETE )
 }
 
 /*
-void addClass ( const QString & name )
+void addClass( const QString & name )
 */
 HB_FUNC_STATIC( QWEBELEMENT_ADDCLASS )
 {
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ENCLOSEWITH )
 }
 
 /*
-QVariant evaluateJavaScript ( const QString & scriptSource )
+QVariant evaluateJavaScript( const QString & scriptSource )
 */
 HB_FUNC_STATIC( QWEBELEMENT_EVALUATEJAVASCRIPT )
 {
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QWEBELEMENT_EVALUATEJAVASCRIPT )
 }
 
 /*
-QWebElementCollection findAll ( const QString & selectorQuery ) const
+QWebElementCollection findAll( const QString & selectorQuery ) const
 */
 HB_FUNC_STATIC( QWEBELEMENT_FINDALL )
 {
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QWEBELEMENT_FINDALL )
 }
 
 /*
-QWebElement findFirst ( const QString & selectorQuery ) const
+QWebElement findFirst( const QString & selectorQuery ) const
 */
 HB_FUNC_STATIC( QWEBELEMENT_FINDFIRST )
 {
@@ -664,7 +664,7 @@ HB_FUNC_STATIC( QWEBELEMENT_GEOMETRY )
 }
 
 /*
-bool hasAttribute ( const QString & name ) const
+bool hasAttribute( const QString & name ) const
 */
 HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTE )
 {
@@ -688,7 +688,7 @@ HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTE )
 }
 
 /*
-bool hasAttributeNS ( const QString & namespaceUri, const QString & name ) const
+bool hasAttributeNS( const QString & namespaceUri, const QString & name ) const
 */
 HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTENS )
 {
@@ -736,7 +736,7 @@ HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTES )
 }
 
 /*
-bool hasClass ( const QString & name ) const
+bool hasClass( const QString & name ) const
 */
 HB_FUNC_STATIC( QWEBELEMENT_HASCLASS )
 {
@@ -1108,7 +1108,7 @@ HB_FUNC_STATIC( QWEBELEMENT_REMOVEALLCHILDREN )
 }
 
 /*
-void removeAttribute ( const QString & name )
+void removeAttribute( const QString & name )
 */
 HB_FUNC_STATIC( QWEBELEMENT_REMOVEATTRIBUTE )
 {
@@ -1134,7 +1134,7 @@ HB_FUNC_STATIC( QWEBELEMENT_REMOVEATTRIBUTE )
 }
 
 /*
-void removeAttributeNS ( const QString & namespaceUri, const QString & name )
+void removeAttributeNS( const QString & namespaceUri, const QString & name )
 */
 HB_FUNC_STATIC( QWEBELEMENT_REMOVEATTRIBUTENS )
 {
@@ -1160,7 +1160,7 @@ HB_FUNC_STATIC( QWEBELEMENT_REMOVEATTRIBUTENS )
 }
 
 /*
-void removeClass ( const QString & name )
+void removeClass( const QString & name )
 */
 HB_FUNC_STATIC( QWEBELEMENT_REMOVECLASS )
 {
@@ -1314,7 +1314,7 @@ HB_FUNC_STATIC( QWEBELEMENT_REPLACE )
 }
 
 /*
-void setAttribute ( const QString & name, const QString & value )
+void setAttribute( const QString & name, const QString & value )
 */
 HB_FUNC_STATIC( QWEBELEMENT_SETATTRIBUTE )
 {
@@ -1340,7 +1340,7 @@ HB_FUNC_STATIC( QWEBELEMENT_SETATTRIBUTE )
 }
 
 /*
-void setAttributeNS ( const QString & namespaceUri, const QString & name, const QString & value )
+void setAttributeNS( const QString & namespaceUri, const QString & name, const QString & value )
 */
 HB_FUNC_STATIC( QWEBELEMENT_SETATTRIBUTENS )
 {
@@ -1392,7 +1392,7 @@ HB_FUNC_STATIC( QWEBELEMENT_SETFOCUS )
 }
 
 /*
-void setInnerXml ( const QString & markup )
+void setInnerXml( const QString & markup )
 */
 HB_FUNC_STATIC( QWEBELEMENT_SETINNERXML )
 {
@@ -1418,7 +1418,7 @@ HB_FUNC_STATIC( QWEBELEMENT_SETINNERXML )
 }
 
 /*
-void setOuterXml ( const QString & markup )
+void setOuterXml( const QString & markup )
 */
 HB_FUNC_STATIC( QWEBELEMENT_SETOUTERXML )
 {
@@ -1444,7 +1444,7 @@ HB_FUNC_STATIC( QWEBELEMENT_SETOUTERXML )
 }
 
 /*
-void setPlainText ( const QString & text )
+void setPlainText( const QString & text )
 */
 HB_FUNC_STATIC( QWEBELEMENT_SETPLAINTEXT )
 {
@@ -1470,7 +1470,7 @@ HB_FUNC_STATIC( QWEBELEMENT_SETPLAINTEXT )
 }
 
 /*
-void setStyleProperty ( const QString & name, const QString & value )
+void setStyleProperty( const QString & name, const QString & value )
 */
 HB_FUNC_STATIC( QWEBELEMENT_SETSTYLEPROPERTY )
 {
@@ -1496,7 +1496,7 @@ HB_FUNC_STATIC( QWEBELEMENT_SETSTYLEPROPERTY )
 }
 
 /*
-QString styleProperty ( const QString & name, StyleResolveStrategy strategy ) const
+QString styleProperty( const QString & name, QWebElement::StyleResolveStrategy strategy ) const
 */
 HB_FUNC_STATIC( QWEBELEMENT_STYLEPROPERTY )
 {
@@ -1641,7 +1641,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TOPLAINTEXT )
 }
 
 /*
-void toggleClass ( const QString & name )
+void toggleClass( const QString & name )
 */
 HB_FUNC_STATIC( QWEBELEMENT_TOGGLECLASS )
 {

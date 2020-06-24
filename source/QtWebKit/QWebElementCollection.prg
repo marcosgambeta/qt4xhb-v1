@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_DELETE )
 }
 
 /*
-void append ( const QWebElementCollection & other )
+void append( const QWebElementCollection & other )
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_APPEND )
 {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_APPEND )
 }
 
 /*
-QWebElement at ( int i ) const
+QWebElement at( int i ) const
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_AT )
 {

@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_ORIGINALURL )
 }
 
 /*
-void setUserData ( const QVariant & userData )
+void setUserData( const QVariant & userData )
 */
 HB_FUNC_STATIC( QWEBHISTORYITEM_SETUSERDATA )
 {

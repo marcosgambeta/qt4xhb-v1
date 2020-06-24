@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QWEBVIEW_PAGE )
 }
 
 /*
-QAction * pageAction ( QWebPage::WebAction action ) const
+QAction * pageAction( QWebPage::WebAction action ) const
 */
 HB_FUNC_STATIC( QWEBVIEW_PAGEACTION )
 {
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETHTML )
 }
 
 /*
-void setPage ( QWebPage * page )
+void setPage( QWebPage * page )
 */
 HB_FUNC_STATIC( QWEBVIEW_SETPAGE )
 {
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINT )
 }
 
 /*
-void setRenderHints ( QPainter::RenderHints hints )
+void setRenderHints( QPainter::RenderHints hints )
 */
 HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINTS )
 {
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINTS )
 }
 
 /*
-void setTextSizeMultiplier ( qreal factor )
+void setTextSizeMultiplier( qreal factor )
 */
 HB_FUNC_STATIC( QWEBVIEW_SETTEXTSIZEMULTIPLIER )
 {
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETTEXTSIZEMULTIPLIER )
 }
 
 /*
-void setUrl ( const QUrl & url )
+void setUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QWEBVIEW_SETURL )
 {
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETURL )
 }
 
 /*
-void setZoomFactor ( qreal factor )
+void setZoomFactor( qreal factor )
 */
 HB_FUNC_STATIC( QWEBVIEW_SETZOOMFACTOR )
 {
@@ -779,7 +779,7 @@ HB_FUNC_STATIC( QWEBVIEW_FORWARD )
 }
 
 /*
-void print ( QPrinter * printer ) const
+void print( QPrinter * printer ) const
 */
 HB_FUNC_STATIC( QWEBVIEW_PRINT )
 {

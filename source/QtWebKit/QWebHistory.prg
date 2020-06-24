@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QWEBHISTORY_BACKITEM )
 }
 
 /*
-QList<QWebHistoryItem> backItems ( int maxItems ) const
+QList<QWebHistoryItem> backItems( int maxItems ) const
 */
 HB_FUNC_STATIC( QWEBHISTORY_BACKITEMS )
 {
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QWEBHISTORY_FORWARDITEM )
 }
 
 /*
-QList<QWebHistoryItem> forwardItems ( int maxItems ) const
+QList<QWebHistoryItem> forwardItems( int maxItems ) const
 */
 HB_FUNC_STATIC( QWEBHISTORY_FORWARDITEMS )
 {
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QWEBHISTORY_FORWARDITEMS )
 }
 
 /*
-void goToItem ( const QWebHistoryItem & item )
+void goToItem( const QWebHistoryItem & item )
 */
 HB_FUNC_STATIC( QWEBHISTORY_GOTOITEM )
 {
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QWEBHISTORY_GOTOITEM )
 }
 
 /*
-QWebHistoryItem itemAt ( int i ) const
+QWebHistoryItem itemAt( int i ) const
 */
 HB_FUNC_STATIC( QWEBHISTORY_ITEMAT )
 {
@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QWEBHISTORY_MAXIMUMITEMCOUNT )
 }
 
 /*
-void setMaximumItemCount ( int count )
+void setMaximumItemCount( int count )
 */
 HB_FUNC_STATIC( QWEBHISTORY_SETMAXIMUMITEMCOUNT )
 {

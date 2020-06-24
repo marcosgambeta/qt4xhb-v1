@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_PAGE )
 }
 
 /*
-QAction * pageAction ( QWebPage::WebAction action ) const
+QAction * pageAction( QWebPage::WebAction action ) const
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_PAGEACTION )
 {
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETHTML )
 }
 
 /*
-void setPage ( QWebPage * page )
+void setPage( QWebPage * page )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETPAGE )
 {
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETPAGE )
 }
 
 /*
-void setResizesToContents ( bool enabled )
+void setResizesToContents( bool enabled )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETRESIZESTOCONTENTS )
 {
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETRESIZESTOCONTENTS )
 }
 
 /*
-void setTiledBackingStoreFrozen ( bool frozen )
+void setTiledBackingStoreFrozen( bool frozen )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETTILEDBACKINGSTOREFROZEN )
 {
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETTILEDBACKINGSTOREFROZEN )
 }
 
 /*
-void setUrl ( const QUrl & )
+void setUrl( const QUrl & )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETURL )
 {
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETURL )
 }
 
 /*
-void setZoomFactor ( qreal )
+void setZoomFactor( qreal )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETZOOMFACTOR )
 {
