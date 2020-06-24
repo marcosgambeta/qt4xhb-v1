@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QSQLRECORD_DELETE )
 }
 
 /*
-void append ( const QSqlField & field )
+void append( const QSqlField & field )
 */
 HB_FUNC_STATIC( QSQLRECORD_APPEND )
 {
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QSQLRECORD_CLEARVALUES )
 }
 
 /*
-bool contains ( const QString & name ) const
+bool contains( const QString & name ) const
 */
 HB_FUNC_STATIC( QSQLRECORD_CONTAINS )
 {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QSQLRECORD_FIELD )
 }
 
 /*
-QString fieldName ( int index ) const
+QString fieldName( int index ) const
 */
 HB_FUNC_STATIC( QSQLRECORD_FIELDNAME )
 {
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QSQLRECORD_FIELDNAME )
 }
 
 /*
-int indexOf ( const QString & name ) const
+int indexOf( const QString & name ) const
 */
 HB_FUNC_STATIC( QSQLRECORD_INDEXOF )
 {
@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QSQLRECORD_INDEXOF )
 }
 
 /*
-void insert ( int pos, const QSqlField & field )
+void insert( int pos, const QSqlField & field )
 */
 HB_FUNC_STATIC( QSQLRECORD_INSERT )
 {
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QSQLRECORD_ISNULL )
 }
 
 /*
-void remove ( int pos )
+void remove( int pos )
 */
 HB_FUNC_STATIC( QSQLRECORD_REMOVE )
 {
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QSQLRECORD_REMOVE )
 }
 
 /*
-void replace ( int pos, const QSqlField & field )
+void replace( int pos, const QSqlField & field )
 */
 HB_FUNC_STATIC( QSQLRECORD_REPLACE )
 {

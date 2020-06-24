@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_DELETE )
 }
 
 /*
-QSqlRelation relation ( int column ) const
+QSqlRelation relation( int column ) const
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATION )
 {
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATION )
 }
 
 /*
-virtual QSqlTableModel * relationModel ( int column ) const
+virtual QSqlTableModel * relationModel( int column ) const
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATIONMODEL )
 {
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATIONMODEL )
 }
 
 /*
-virtual void setRelation ( int column, const QSqlRelation & relation )
+virtual void setRelation( int column, const QSqlRelation & relation )
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETRELATION )
 {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETDATA )
 }
 
 /*
-virtual void setTable ( const QString & table )
+virtual void setTable( const QString & table )
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETTABLE )
 {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETTABLE )
 }
 
 /*
-virtual void revertRow ( int row )
+virtual void revertRow( int row )
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_REVERTROW )
 {

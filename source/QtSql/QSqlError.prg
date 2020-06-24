@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QSQLERROR_NUMBER )
 }
 
 /*
-void setDatabaseText ( const QString & databaseText )
+void setDatabaseText( const QString & databaseText )
 */
 HB_FUNC_STATIC( QSQLERROR_SETDATABASETEXT )
 {
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QSQLERROR_SETDATABASETEXT )
 }
 
 /*
-void setDriverText ( const QString & driverText )
+void setDriverText( const QString & driverText )
 */
 HB_FUNC_STATIC( QSQLERROR_SETDRIVERTEXT )
 {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QSQLERROR_SETDRIVERTEXT )
 }
 
 /*
-void setNumber ( int number )
+void setNumber( int number )
 */
 HB_FUNC_STATIC( QSQLERROR_SETNUMBER )
 {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QSQLERROR_SETNUMBER )
 }
 
 /*
-void setType ( ErrorType type )
+void setType( QSqlError::ErrorType type )
 */
 HB_FUNC_STATIC( QSQLERROR_SETTYPE )
 {

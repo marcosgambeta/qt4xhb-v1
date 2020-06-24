@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QSQLDATABASE_PORT )
 }
 
 /*
-QSqlIndex primaryIndex ( const QString & tablename ) const
+QSqlIndex primaryIndex( const QString & tablename ) const
 */
 HB_FUNC_STATIC( QSQLDATABASE_PRIMARYINDEX )
 {
@@ -616,7 +616,7 @@ HB_FUNC_STATIC( QSQLDATABASE_PRIMARYINDEX )
 }
 
 /*
-QSqlRecord record ( const QString & tablename ) const
+QSqlRecord record( const QString & tablename ) const
 */
 HB_FUNC_STATIC( QSQLDATABASE_RECORD )
 {
@@ -691,7 +691,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETCONNECTOPTIONS )
 }
 
 /*
-void setDatabaseName ( const QString & name )
+void setDatabaseName( const QString & name )
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETDATABASENAME )
 {
@@ -717,7 +717,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETDATABASENAME )
 }
 
 /*
-void setHostName ( const QString & host )
+void setHostName( const QString & host )
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETHOSTNAME )
 {
@@ -743,7 +743,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETHOSTNAME )
 }
 
 /*
-void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolicy )
+void setNumericalPrecisionPolicy( QSql::NumericalPrecisionPolicy precisionPolicy )
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETNUMERICALPRECISIONPOLICY )
 {
@@ -769,7 +769,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETNUMERICALPRECISIONPOLICY )
 }
 
 /*
-void setPassword ( const QString & password )
+void setPassword( const QString & password )
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETPASSWORD )
 {
@@ -795,7 +795,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETPASSWORD )
 }
 
 /*
-void setPort ( int port )
+void setPort( int port )
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETPORT )
 {
@@ -821,7 +821,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETPORT )
 }
 
 /*
-void setUserName ( const QString & name )
+void setUserName( const QString & name )
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETUSERNAME )
 {
@@ -960,7 +960,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ADDDATABASE )
 }
 
 /*
-static QSqlDatabase cloneDatabase ( const QSqlDatabase & other, const QString & connectionName )
+static QSqlDatabase cloneDatabase( const QSqlDatabase & other, const QString & connectionName )
 */
 HB_FUNC_STATIC( QSQLDATABASE_CLONEDATABASE )
 {
@@ -1057,7 +1057,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DRIVERS )
 }
 
 /*
-static bool isDriverAvailable ( const QString & name )
+static bool isDriverAvailable( const QString & name )
 */
 HB_FUNC_STATIC( QSQLDATABASE_ISDRIVERAVAILABLE )
 {
@@ -1076,7 +1076,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ISDRIVERAVAILABLE )
 }
 
 /*
-static void registerSqlDriver ( const QString & name, QSqlDriverCreatorBase * creator )
+static void registerSqlDriver( const QString & name, QSqlDriverCreatorBase * creator )
 */
 HB_FUNC_STATIC( QSQLDATABASE_REGISTERSQLDRIVER )
 {
@@ -1097,7 +1097,7 @@ HB_FUNC_STATIC( QSQLDATABASE_REGISTERSQLDRIVER )
 }
 
 /*
-static void removeDatabase ( const QString & connectionName )
+static void removeDatabase( const QString & connectionName )
 */
 HB_FUNC_STATIC( QSQLDATABASE_REMOVEDATABASE )
 {

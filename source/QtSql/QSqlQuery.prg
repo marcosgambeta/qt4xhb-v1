@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISFORWARDONLY )
 }
 
 /*
-bool isNull ( int field ) const
+bool isNull( int field ) const
 */
 HB_FUNC_STATIC( QSQLQUERY_ISNULL )
 {
@@ -835,7 +835,7 @@ HB_FUNC_STATIC( QSQLQUERY_NUMERICALPRECISIONPOLICY )
 }
 
 /*
-bool prepare ( const QString & query )
+bool prepare( const QString & query )
 */
 HB_FUNC_STATIC( QSQLQUERY_PREPARE )
 {
@@ -957,7 +957,7 @@ HB_FUNC_STATIC( QSQLQUERY_SEEK )
 }
 
 /*
-void setForwardOnly ( bool forward )
+void setForwardOnly( bool forward )
 */
 HB_FUNC_STATIC( QSQLQUERY_SETFORWARDONLY )
 {
@@ -983,7 +983,7 @@ HB_FUNC_STATIC( QSQLQUERY_SETFORWARDONLY )
 }
 
 /*
-void setNumericalPrecisionPolicy ( QSql::NumericalPrecisionPolicy precisionPolicy )
+void setNumericalPrecisionPolicy( QSql::NumericalPrecisionPolicy precisionPolicy )
 */
 HB_FUNC_STATIC( QSQLQUERY_SETNUMERICALPRECISIONPOLICY )
 {
@@ -1033,7 +1033,7 @@ HB_FUNC_STATIC( QSQLQUERY_SIZE )
 }
 
 /*
-QVariant value ( int index ) const
+QVariant value( int index ) const
 */
 HB_FUNC_STATIC( QSQLQUERY_VALUE )
 {
