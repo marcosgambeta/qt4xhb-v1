@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_LINE )
 }
 
 /*
-void setColumn ( qint64 newColumn )
+void setColumn( qint64 newColumn )
 */
 HB_FUNC_STATIC( QSOURCELOCATION_SETCOLUMN )
 {
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETCOLUMN )
 }
 
 /*
-void setLine ( qint64 newLine )
+void setLine( qint64 newLine )
 */
 HB_FUNC_STATIC( QSOURCELOCATION_SETLINE )
 {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_SETLINE )
 }
 
 /*
-void setUri ( const QUrl & newUri )
+void setUri( const QUrl & newUri )
 */
 HB_FUNC_STATIC( QSOURCELOCATION_SETURI )
 {

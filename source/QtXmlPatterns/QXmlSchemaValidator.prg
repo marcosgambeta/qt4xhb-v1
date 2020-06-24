@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SCHEMA )
 }
 
 /*
-void setMessageHandler ( QAbstractMessageHandler * handler )
+void setMessageHandler( QAbstractMessageHandler * handler )
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETMESSAGEHANDLER )
 {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETMESSAGEHANDLER )
 }
 
 /*
-void setNetworkAccessManager ( QNetworkAccessManager * manager )
+void setNetworkAccessManager( QNetworkAccessManager * manager )
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETNETWORKACCESSMANAGER )
 {
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETNETWORKACCESSMANAGER )
 }
 
 /*
-void setSchema ( const QXmlSchema & schema )
+void setSchema( const QXmlSchema & schema )
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETSCHEMA )
 {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETSCHEMA )
 }
 
 /*
-void setUriResolver ( const QAbstractUriResolver * resolver )
+void setUriResolver( const QAbstractUriResolver * resolver )
 */
 HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETURIRESOLVER )
 {

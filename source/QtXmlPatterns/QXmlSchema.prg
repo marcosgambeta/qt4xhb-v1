@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_NETWORKACCESSMANAGER )
 }
 
 /*
-void setMessageHandler ( QAbstractMessageHandler * handler )
+void setMessageHandler( QAbstractMessageHandler * handler )
 */
 HB_FUNC_STATIC( QXMLSCHEMA_SETMESSAGEHANDLER )
 {
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_SETMESSAGEHANDLER )
 }
 
 /*
-void setNetworkAccessManager ( QNetworkAccessManager * manager )
+void setNetworkAccessManager( QNetworkAccessManager * manager )
 */
 HB_FUNC_STATIC( QXMLSCHEMA_SETNETWORKACCESSMANAGER )
 {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_SETNETWORKACCESSMANAGER )
 }
 
 /*
-void setUriResolver ( const QAbstractUriResolver * resolver )
+void setUriResolver( const QAbstractUriResolver * resolver )
 */
 HB_FUNC_STATIC( QXMLSCHEMA_SETURIRESOLVER )
 {

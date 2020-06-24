@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMEPOOL )
 }
 
 /*
-virtual QUrl baseUri ( const QXmlNodeModelIndex & node ) const
+virtual QUrl baseUri( const QXmlNodeModelIndex & node ) const
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_BASEURI )
 {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_BASEURI )
 }
 
 /*
-virtual QXmlNodeModelIndex elementById ( const QXmlName & id ) const
+virtual QXmlNodeModelIndex elementById( const QXmlName & id ) const
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_ELEMENTBYID )
 {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_ELEMENTBYID )
 }
 
 /*
-virtual QVector<QXmlName> namespaceBindings ( const QXmlNodeModelIndex & node ) const
+virtual QVector<QXmlName> namespaceBindings( const QXmlNodeModelIndex & node ) const
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMESPACEBINDINGS )
 {
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMESPACEBINDINGS )
 }
 
 /*
-virtual QVector<QXmlNodeModelIndex> nodesByIdref ( const QXmlName & idref ) const
+virtual QVector<QXmlNodeModelIndex> nodesByIdref( const QXmlName & idref ) const
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NODESBYIDREF )
 {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NODESBYIDREF )
 }
 
 /*
-virtual QString stringValue ( const QXmlNodeModelIndex & node ) const
+virtual QString stringValue( const QXmlNodeModelIndex & node ) const
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_STRINGVALUE )
 {

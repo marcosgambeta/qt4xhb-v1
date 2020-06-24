@@ -648,7 +648,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETINITIALTEMPLATENAME )
 }
 
 /*
-void setMessageHandler ( QAbstractMessageHandler * aMessageHandler )
+void setMessageHandler( QAbstractMessageHandler * aMessageHandler )
 */
 HB_FUNC_STATIC( QXMLQUERY_SETMESSAGEHANDLER )
 {
@@ -674,7 +674,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETMESSAGEHANDLER )
 }
 
 /*
-void setNetworkAccessManager ( QNetworkAccessManager * newManager )
+void setNetworkAccessManager( QNetworkAccessManager * newManager )
 */
 HB_FUNC_STATIC( QXMLQUERY_SETNETWORKACCESSMANAGER )
 {
@@ -771,7 +771,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETQUERY )
 }
 
 /*
-void setUriResolver ( const QAbstractUriResolver * resolver )
+void setUriResolver( const QAbstractUriResolver * resolver )
 */
 HB_FUNC_STATIC( QXMLQUERY_SETURIRESOLVER )
 {

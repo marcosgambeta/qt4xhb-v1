@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_OUTPUTDEVICE )
 }
 
 /*
-void setCodec ( const QTextCodec * outputCodec )
+void setCodec( const QTextCodec * outputCodec )
 */
 HB_FUNC_STATIC( QXMLSERIALIZER_SETCODEC )
 {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_SETCODEC )
 }
 
 /*
-virtual void atomicValue ( const QVariant & value )
+virtual void atomicValue( const QVariant & value )
 */
 HB_FUNC_STATIC( QXMLSERIALIZER_ATOMICVALUE )
 {
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_ATOMICVALUE )
 }
 
 /*
-virtual void attribute ( const QXmlName & name, const QStringRef & value )
+virtual void attribute( const QXmlName & name, const QStringRef & value )
 */
 HB_FUNC_STATIC( QXMLSERIALIZER_ATTRIBUTE )
 {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_ATTRIBUTE )
 }
 
 /*
-virtual void characters ( const QStringRef & value )
+virtual void characters( const QStringRef & value )
 */
 HB_FUNC_STATIC( QXMLSERIALIZER_CHARACTERS )
 {
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_CHARACTERS )
 }
 
 /*
-virtual void comment ( const QString & value )
+virtual void comment( const QString & value )
 */
 HB_FUNC_STATIC( QXMLSERIALIZER_COMMENT )
 {
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_ENDOFSEQUENCE )
 }
 
 /*
-virtual void namespaceBinding ( const QXmlName & nb )
+virtual void namespaceBinding( const QXmlName & nb )
 */
 HB_FUNC_STATIC( QXMLSERIALIZER_NAMESPACEBINDING )
 {
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_NAMESPACEBINDING )
 }
 
 /*
-virtual void processingInstruction ( const QXmlName & name, const QString & value )
+virtual void processingInstruction( const QXmlName & name, const QString & value )
 */
 HB_FUNC_STATIC( QXMLSERIALIZER_PROCESSINGINSTRUCTION )
 {
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_STARTDOCUMENT )
 }
 
 /*
-virtual void startElement ( const QXmlName & name )
+virtual void startElement( const QXmlName & name )
 */
 HB_FUNC_STATIC( QXMLSERIALIZER_STARTELEMENT )
 {
