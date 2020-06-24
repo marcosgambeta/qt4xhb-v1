@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ANIMATED )
 }
 
 /*
-QRectF boundsOnElement ( const QString & id ) const
+QRectF boundsOnElement( const QString & id ) const
 */
 HB_FUNC_STATIC( QSVGRENDERER_BOUNDSONELEMENT )
 {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QSVGRENDERER_DEFAULTSIZE )
 }
 
 /*
-bool elementExists ( const QString & id ) const
+bool elementExists( const QString & id ) const
 */
 HB_FUNC_STATIC( QSVGRENDERER_ELEMENTEXISTS )
 {
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ISVALID )
 }
 
 /*
-QMatrix matrixForElement ( const QString & id ) const
+QMatrix matrixForElement( const QString & id ) const
 */
 HB_FUNC_STATIC( QSVGRENDERER_MATRIXFORELEMENT )
 {
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QSVGRENDERER_MATRIXFORELEMENT )
 }
 
 /*
-void setFramesPerSecond ( int num )
+void setFramesPerSecond( int num )
 */
 HB_FUNC_STATIC( QSVGRENDERER_SETFRAMESPERSECOND )
 {

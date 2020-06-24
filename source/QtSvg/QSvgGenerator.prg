@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_RESOLUTION )
 }
 
 /*
-void setDescription ( const QString & description )
+void setDescription( const QString & description )
 */
 HB_FUNC_STATIC( QSVGGENERATOR_SETDESCRIPTION )
 {
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETDESCRIPTION )
 }
 
 /*
-void setFileName ( const QString & fileName )
+void setFileName( const QString & fileName )
 */
 HB_FUNC_STATIC( QSVGGENERATOR_SETFILENAME )
 {
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETFILENAME )
 }
 
 /*
-void setOutputDevice ( QIODevice * outputDevice )
+void setOutputDevice( QIODevice * outputDevice )
 */
 HB_FUNC_STATIC( QSVGGENERATOR_SETOUTPUTDEVICE )
 {
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETOUTPUTDEVICE )
 }
 
 /*
-void setResolution ( int dpi )
+void setResolution( int dpi )
 */
 HB_FUNC_STATIC( QSVGGENERATOR_SETRESOLUTION )
 {
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETRESOLUTION )
 }
 
 /*
-void setSize ( const QSize & size )
+void setSize( const QSize & size )
 */
 HB_FUNC_STATIC( QSVGGENERATOR_SETSIZE )
 {
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETSIZE )
 }
 
 /*
-void setTitle ( const QString & title )
+void setTitle( const QString & title )
 */
 HB_FUNC_STATIC( QSVGGENERATOR_SETTITLE )
 {

@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_RENDERER )
 }
 
 /*
-void setElementId ( const QString & id )
+void setElementId( const QString & id )
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETELEMENTID )
 {
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETELEMENTID )
 }
 
 /*
-void setMaximumCacheSize ( const QSize & size )
+void setMaximumCacheSize( const QSize & size )
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETMAXIMUMCACHESIZE )
 {
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETMAXIMUMCACHESIZE )
 }
 
 /*
-void setSharedRenderer ( QSvgRenderer * renderer )
+void setSharedRenderer( QSvgRenderer * renderer )
 */
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_SETSHAREDRENDERER )
 {
