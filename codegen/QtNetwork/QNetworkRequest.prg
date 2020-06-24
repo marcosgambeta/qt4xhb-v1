@@ -57,8 +57,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QVariant attribute ( Attribute code, const QVariant & defaultValue = QVariant() ) const
-$method=|QVariant|attribute|QNetworkRequest::Attribute,const QVariant &=QVariant()
+$prototypeV2=QVariant attribute( QNetworkRequest::Attribute code, const QVariant & defaultValue = QVariant() ) const
 
 $prototypeV2=bool hasRawHeader( const QByteArray & headerName ) const
 

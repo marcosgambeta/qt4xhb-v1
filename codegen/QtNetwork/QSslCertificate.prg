@@ -68,8 +68,7 @@ $deleteMethod
 
 $prototypeV2=void clear()
 
-$prototype=QByteArray digest ( QCryptographicHash::Algorithm algorithm = QCryptographicHash::Md5 ) const
-$method=|QByteArray|digest|QCryptographicHash::Algorithm=QCryptographicHash::Md5
+$prototypeV2=QByteArray digest( QCryptographicHash::Algorithm algorithm = QCryptographicHash::Md5 ) const
 
 $prototypeV2=QDateTime effectiveDate() const
 
@@ -145,14 +144,11 @@ $prototypeV2=QByteArray toPem() const
 
 $prototypeV2=QByteArray version() const
 
-$prototype=QList<QSslCertificate> fromData ( const QByteArray & data, QSsl::EncodingFormat format = QSsl::Pem )
-$method=|QList<QSslCertificate>|fromData|const QByteArray &,QSsl::EncodingFormat=QSsl::Pem
+$prototypeV2=QList<QSslCertificate> fromData( const QByteArray & data, QSsl::EncodingFormat format = QSsl::Pem )
 
-$prototype=QList<QSslCertificate> fromDevice ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
-$method=|QList<QSslCertificate>|fromDevice|QIODevice *,QSsl::EncodingFormat=QSsl::Pem
+$prototypeV2=QList<QSslCertificate> fromDevice( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
 
-$prototype=QList<QSslCertificate> fromPath ( const QString & path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
-$method=|QList<QSslCertificate>|fromPath|const QString &,QSsl::EncodingFormat=QSsl::Pem,QRegExp::PatternSyntax=QRegExp::FixedString
+$prototypeV2=QList<QSslCertificate> fromPath( const QString & path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
 
 $extraMethods
 

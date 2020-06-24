@@ -40,8 +40,7 @@ $prototypeV2=void clearPendingCommands()
 
 $prototypeV2=int close()
 
-$prototype=int connectToHost ( const QString & host, quint16 port = 21 )
-$method=|int|connectToHost|const QString &,quint16=21
+$prototypeV2=int connectToHost( const QString & host, quint16 port = 21 )
 
 $prototypeV2=QFtp::Command currentCommand() const
 
@@ -53,16 +52,13 @@ $prototypeV2=QFtp::Error error() const
 
 $prototypeV2=QString errorString() const
 
-$prototype=int get ( const QString & file, QIODevice * dev = 0, TransferType type = Binary )
-$method=|int|get|const QString &,QIODevice *=0,QFtp::TransferType=QFtp::Binary
+$prototypeV2=int get( const QString & file, QIODevice * dev = 0, QFtp::TransferType type = QFtp::Binary )
 
 $prototypeV2=bool hasPendingCommands() const
 
-$prototype=int list ( const QString & dir = QString() )
-$method=|int|list|const QString &=QString()
+$prototypeV2=int list( const QString & dir = QString() )
 
-$prototype=int login ( const QString & user = QString(), const QString & password = QString() )
-$method=|int|login|const QString &=QString(),const QString &=QString()
+$prototypeV2=int login( const QString & user = QString(), const QString & password = QString() )
 
 $prototypeV2=int mkdir( const QString & dir )
 

@@ -32,8 +32,7 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=QList<QNetworkConfiguration> allConfigurations ( QNetworkConfiguration::StateFlags filter = 0 ) const
-$method=|QList<QNetworkConfiguration>|allConfigurations|QNetworkConfiguration::StateFlags=0
+$prototypeV2=QList<QNetworkConfiguration> allConfigurations( QNetworkConfiguration::StateFlags filter = 0 ) const
 
 $prototypeV2=QNetworkConfigurationManager::Capabilities capabilities() const
 

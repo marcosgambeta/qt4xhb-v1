@@ -79,11 +79,9 @@ $prototypeV2=bool isNull() const
 
 $prototypeV2=int length() const
 
-$prototype=QByteArray toDer ( const QByteArray & passPhrase = QByteArray() ) const
-$method=|QByteArray|toDer|const QByteArray &=QByteArray()
+$prototypeV2=QByteArray toDer( const QByteArray & passPhrase = QByteArray() ) const
 
-$prototype=QByteArray toPem ( const QByteArray & passPhrase = QByteArray() ) const
-$method=|QByteArray|toPem|const QByteArray &=QByteArray()
+$prototypeV2=QByteArray toPem( const QByteArray & passPhrase = QByteArray() ) const
 
 $prototypeV2=QSsl::KeyType type() const
 

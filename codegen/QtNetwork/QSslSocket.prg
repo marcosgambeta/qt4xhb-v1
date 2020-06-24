@@ -38,8 +38,7 @@ $deleteMethod
 
 $prototypeV2=void abort()
 
-$prototype=void addCaCertificate ( const QSslCertificate & certificate )
-$method=|void|addCaCertificate|const QSslCertificate &
+$prototypeV2=void addCaCertificate( const QSslCertificate & certificate )
 
 $prototype=bool addCaCertificates ( const QString & path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
 $internalMethod=|bool|addCaCertificates,addCaCertificates1|const QString &,QSsl::EncodingFormat=QSsl::Pem,QRegExp::PatternSyntax=QRegExp::FixedString
@@ -249,8 +248,7 @@ $prototypeV2=void setProtocol( QSsl::SslProtocol protocol )
 
 $prototypeV2=void setReadBufferSize( qint64 size )
 
-$prototype=bool setSocketDescriptor ( int socketDescriptor, SocketState state = ConnectedState, OpenMode openMode = ReadWrite )
-$method=|bool|setSocketDescriptor|int,QAbstractSocket::SocketState=QAbstractSocket::ConnectedState,QIODevice::OpenMode=QIODevice::ReadWrite
+$prototypeV2=bool setSocketDescriptor( int socketDescriptor, QAbstractSocket::SocketState state = QAbstractSocket::ConnectedState, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
 
 $prototypeV2=void setSocketOption( QAbstractSocket::SocketOption option, const QVariant & value )
 
@@ -262,14 +260,11 @@ $prototypeV2=QSslConfiguration sslConfiguration() const
 
 $prototypeV2=QList<QSslError> sslErrors() const
 
-$prototype=bool waitForConnected ( int msecs = 30000 )
-$method=|bool|waitForConnected|int=30000
+$prototypeV2=bool waitForConnected( int msecs = 30000 )
 
-$prototype=bool waitForDisconnected ( int msecs = 30000 )
-$method=|bool|waitForDisconnected|int=30000
+$prototypeV2=bool waitForDisconnected( int msecs = 30000 )
 
-$prototype=bool waitForEncrypted ( int msecs = 30000 )
-$method=|bool|waitForEncrypted|int=30000
+$prototypeV2=bool waitForEncrypted( int msecs = 30000 )
 
 $prototypeV2=virtual bool atEnd() const
 
@@ -281,11 +276,9 @@ $prototypeV2=virtual bool canReadLine() const
 
 $prototypeV2=virtual void close()
 
-$prototype=virtual bool waitForBytesWritten ( int msecs = 30000 )
-$virtualMethod=|bool|waitForBytesWritten|int=30000
+$prototypeV2=virtual bool waitForBytesWritten( int msecs = 30000 )
 
-$prototype=virtual bool waitForReadyRead ( int msecs = 30000 )
-$virtualMethod=|bool|waitForReadyRead|int=30000
+$prototypeV2=virtual bool waitForReadyRead( int msecs = 30000 )
 
 $prototypeV2=void startClientEncryption()
 

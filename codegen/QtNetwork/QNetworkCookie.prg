@@ -85,8 +85,7 @@ $prototypeV2=void setSecure( bool enable )
 
 $prototypeV2=void setValue( const QByteArray & value )
 
-$prototype=QByteArray toRawForm ( RawForm form = Full ) const
-$method=|QByteArray|toRawForm|QNetworkCookie::RawForm=QNetworkCookie::Full
+$prototypeV2=QByteArray toRawForm( QNetworkCookie::RawForm form = QNetworkCookie::Full ) const
 
 $prototypeV2=QByteArray value() const
 

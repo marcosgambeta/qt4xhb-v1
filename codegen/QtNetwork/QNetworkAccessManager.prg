@@ -114,8 +114,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PUT )
 }
 $addMethod=put
 
-$prototype=QNetworkReply * sendCustomRequest ( const QNetworkRequest & request, const QByteArray & verb, QIODevice * data = 0 )
-$method=|QNetworkReply *|sendCustomRequest|const QNetworkRequest &,const QByteArray &,QIODevice *=0
+$prototypeV2=QNetworkReply * sendCustomRequest( const QNetworkRequest & request, const QByteArray & verb, QIODevice * data = 0 )
 
 $prototypeV2=void setCache( QAbstractNetworkCache * cache )
 

@@ -43,8 +43,7 @@ $prototypeV2=virtual bool hasPendingConnections() const
 
 $prototypeV2=bool isListening() const
 
-$prototype=bool listen ( const QHostAddress & address = QHostAddress::Any, quint16 port = 0 )
-$method=|bool|listen|const QHostAddress &=QHostAddress::Any,quint16=0
+$prototypeV2=bool listen( const QHostAddress & address = QHostAddress::Any, quint16 port = 0 )
 
 $prototypeV2=int maxPendingConnections() const
 
@@ -66,8 +65,7 @@ $prototypeV2=bool setSocketDescriptor( int socketDescriptor )
 
 $prototypeV2=int socketDescriptor() const
 
-$prototype=bool waitForNewConnection ( int msec = 0, bool * timedOut = 0 )
-$method=|bool|waitForNewConnection|int=0,bool *=0
+$prototypeV2=bool waitForNewConnection( int msec = 0, bool * timedOut = 0 )
 
 $beginSignals
 $signal=|newConnection()

@@ -27,8 +27,7 @@ $includes
 
 $deleteMethod
 
-$prototype=virtual QList<QNetworkProxy> queryProxy ( const QNetworkProxyQuery & query = QNetworkProxyQuery() ) = 0
-$virtualMethod=|QList<QNetworkProxy>|queryProxy|const QNetworkProxyQuery &=QNetworkProxyQuery()
+$prototypeV2=virtual QList<QNetworkProxy> queryProxy( const QNetworkProxyQuery & query = QNetworkProxyQuery() ) = 0
 
 $prototypeV2=static QList<QNetworkProxy> proxyForQuery( const QNetworkProxyQuery & query )
 
@@ -36,8 +35,7 @@ $prototypeV2=static void setApplicationProxyFactory( QNetworkProxyFactory * fact
 
 $prototypeV2=static void setUseSystemConfiguration( bool enable )
 
-$prototype=static QList<QNetworkProxy> systemProxyForQuery ( const QNetworkProxyQuery & query = QNetworkProxyQuery() )
-$staticMethod=|QList<QNetworkProxy>|systemProxyForQuery|const QNetworkProxyQuery &=QNetworkProxyQuery()
+$prototypeV2=static QList<QNetworkProxy> systemProxyForQuery( const QNetworkProxyQuery & query = QNetworkProxyQuery() )
 
 $extraMethods
 

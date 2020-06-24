@@ -97,49 +97,37 @@ $prototypeV2=QString owner() const
 
 $prototypeV2=int permissions() const
 
-$prototype=virtual void setDir ( bool b )
-$virtualMethod=|void|setDir|bool
+$prototypeV2=virtual void setDir( bool b )
 
-$prototype=virtual void setFile ( bool b )
-$virtualMethod=|void|setFile|bool
+$prototypeV2=virtual void setFile( bool b )
 
 $prototypeV2=virtual void setGroup( const QString & s )
 
-$prototype=virtual void setLastModified ( const QDateTime & dt )
-$virtualMethod=|void|setLastModified|const QDateTime &
+$prototypeV2=virtual void setLastModified( const QDateTime & dt )
 
-$prototype=void setLastRead ( const QDateTime & dt )
-$method=|void|setLastRead|const QDateTime &
+$prototypeV2=void setLastRead( const QDateTime & dt )
 
 $prototypeV2=virtual void setName( const QString & name )
 
 $prototypeV2=virtual void setOwner( const QString & s )
 
-$prototype=virtual void setPermissions ( int p )
-$virtualMethod=|void|setPermissions|int
+$prototypeV2=virtual void setPermissions( int p )
 
-$prototype=virtual void setReadable ( bool b )
-$virtualMethod=|void|setReadable|bool
+$prototypeV2=virtual void setReadable( bool b )
 
-$prototype=virtual void setSize ( qint64 size )
-$virtualMethod=|void|setSize|qint64
+$prototypeV2=virtual void setSize( qint64 size )
 
-$prototype=virtual void setSymLink ( bool b )
-$virtualMethod=|void|setSymLink|bool
+$prototypeV2=virtual void setSymLink( bool b )
 
-$prototype=virtual void setWritable ( bool b )
-$virtualMethod=|void|setWritable|bool
+$prototypeV2=virtual void setWritable( bool b )
 
 $prototypeV2=qint64 size() const
 
-$prototype=static bool equal ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
-$staticMethod=|bool|equal|const QUrlInfo &,const QUrlInfo &,int
+$prototypeV2=static bool equal( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 
-$prototype=static bool greaterThan ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
-$staticMethod=|bool|greaterThan|const QUrlInfo &,const QUrlInfo &,int
+$prototypeV2=static bool greaterThan( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 
-$prototype=static bool lessThan ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
-$staticMethod=|bool|lessThan|const QUrlInfo &,const QUrlInfo &,int
+$prototypeV2=static bool lessThan( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 
 $extraMethods
 

@@ -54,8 +54,7 @@ $prototypeV2=void setSessionProperty( const QString & key, const QVariant & valu
 
 $prototypeV2=QNetworkSession::State state() const
 
-$prototype=bool waitForOpened ( int msecs = 30000 )
-$method=|bool|waitForOpened|int=30000
+$prototypeV2=bool waitForOpened( int msecs = 30000 )
 
 $prototypeV2=void accept()
 

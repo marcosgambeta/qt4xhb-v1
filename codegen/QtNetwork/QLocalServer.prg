@@ -56,8 +56,7 @@ $prototypeV2=QString serverName() const
 
 $prototypeV2=void setMaxPendingConnections( int numConnections )
 
-$prototype=bool waitForNewConnection ( int msec = 0, bool * timedOut = 0 )
-$method=|bool|waitForNewConnection|int=0,bool *=0
+$prototypeV2=bool waitForNewConnection( int msec = 0, bool * timedOut = 0 )
 
 $prototypeV2=static bool removeServer( const QString & name )
 
