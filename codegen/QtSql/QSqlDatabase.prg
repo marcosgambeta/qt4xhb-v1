@@ -76,8 +76,7 @@ $prototypeV2=QSqlDriver * driver() const
 
 $prototypeV2=QString driverName() const
 
-$prototype=QSqlQuery exec ( const QString & query = QString() ) const
-$method=|QSqlQuery|exec|const QString &=QString()
+$prototypeV2=QSqlQuery exec( const QString & query = QString() ) const
 
 $prototypeV2=QString hostName() const
 
@@ -129,8 +128,7 @@ $prototypeV2=QSqlRecord record( const QString & tablename ) const
 
 $prototypeV2=bool rollback()
 
-$prototype=void setConnectOptions ( const QString & options = QString() )
-$method=|void|setConnectOptions|const QString &=QString()
+$prototypeV2=void setConnectOptions( const QString & options = QString() )
 
 $prototypeV2=void setDatabaseName( const QString & name )
 
@@ -144,8 +142,7 @@ $prototypeV2=void setPort( int port )
 
 $prototypeV2=void setUserName( const QString & name )
 
-$prototype=QStringList tables ( QSql::TableType type = QSql::Tables ) const
-$method=|QStringList|tables|QSql::TableType=QSql::Tables
+$prototypeV2=QStringList tables( QSql::TableType type = QSql::Tables ) const
 
 $prototypeV2=bool transaction()
 
@@ -153,66 +150,9 @@ $prototypeV2=QString userName() const
 
 $prototype=static QSqlDatabase addDatabase ( const QString & type, const QString & connectionName = QLatin1String( defaultConnection ) )
 $internalStaticMethod=|QSqlDatabase|addDatabase,addDatabase1|const QString &,const QString &=QLatin1String( QSqlDatabase::defaultConnection )
-%% void QSqlDatabase_addDatabase1 ()
-%% {
-%%   QString par2; // TODO: revisar
-%%   if( ISNIL(2) )
-%%   {
-%%     par2 = QLatin1String(QSqlDatabase::defaultConnection);
-%%   }
-%%   else
-%%   {
-%%     par2 = hb_parc(2);
-%%   }
-%%   QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::addDatabase ( PQSTRING(1), par2 ) );
-%%   PHB_DYNS pDynSym = hb_dynsymFindName( "QSQLDATABASE" );
-%%   if( pDynSym )
-%%   {
-%%     hb_vmPushDynSym( pDynSym );
-%%     hb_vmPushNil();
-%%     hb_vmDo( 0 );
-%%     PHB_ITEM pObject = hb_itemNew( NULL );
-%%     hb_itemCopy( pObject, hb_stackReturnItem() );
-%%     PHB_ITEM pItem = hb_itemNew( NULL );
-%%     hb_itemPutPtr( pItem, (QSqlDatabase *) ptr );
-%%     hb_objSendMsg( pObject, "NEWFROMPOINTER", 1, pItem );
-%%     hb_itemReturn( pObject );
-%%     hb_itemRelease( pObject );
-%%     hb_itemRelease( pItem );
-%%   }
-%% }
 
 $prototype=static QSqlDatabase addDatabase ( QSqlDriver * driver, const QString & connectionName = QLatin1String( defaultConnection ) )
 $internalStaticMethod=|QSqlDatabase|addDatabase,addDatabase2|QSqlDriver *,const QString &=QLatin1String( QSqlDatabase::defaultConnection )
-%% void QSqlDatabase_addDatabase2 ()
-%% {
-%%   QSqlDriver * par1 = (QSqlDriver *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
-%%   QString par2; // TODO: revisar
-%%   if( ISNIL(2) )
-%%   {
-%%     par2 = QLatin1String(QSqlDatabase::defaultConnection);
-%%   }
-%%   else
-%%   {
-%%     par2 = hb_parc(2);
-%%   }
-%%   QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::addDatabase ( par1, par2 ) );
-%%   PHB_DYNS pDynSym = hb_dynsymFindName( "QSQLDATABASE" );
-%%   if( pDynSym )
-%%   {
-%%     hb_vmPushDynSym( pDynSym );
-%%     hb_vmPushNil();
-%%     hb_vmDo( 0 );
-%%     PHB_ITEM pObject = hb_itemNew( NULL );
-%%     hb_itemCopy( pObject, hb_stackReturnItem() );
-%%     PHB_ITEM pItem = hb_itemNew( NULL );
-%%     hb_itemPutPtr( pItem, (QSqlDatabase *) ptr );
-%%     hb_objSendMsg( pObject, "NEWFROMPOINTER", 1, pItem );
-%%     hb_itemReturn( pObject );
-%%     hb_itemRelease( pObject );
-%%     hb_itemRelease( pItem );
-%%   }
-%% }
 
 /*
 [1]QSqlDatabase addDatabase ( const QString & type, const QString & connectionName = QLatin1String( defaultConnection ) )
@@ -240,52 +180,9 @@ $prototypeV2=static QSqlDatabase cloneDatabase( const QSqlDatabase & other, cons
 
 $prototypeV2=static QStringList connectionNames()
 
-$prototype=static bool contains ( const QString & connectionName = QLatin1String( defaultConnection ) )
-$staticMethod=|bool|contains|const QString &=QLatin1String( QSqlDatabase::defaultConnection )
-%% HB_FUNC_STATIC( QSQLDATABASE_CONTAINS )
-%% {
-%%   QString par1; // TODO: revisar
-%%   if( ISNIL(1) )
-%%   {
-%%     par1 = QLatin1String(QSqlDatabase::defaultConnection);
-%%   }
-%%   else
-%%   {
-%%     par1 = hb_parc(1);
-%%   }
-%%   RBOOL( QSqlDatabase::contains ( par1 ) );
-%% }
+$prototypeV2=static bool contains( const QString & connectionName = QLatin1String( QSqlDatabase::defaultConnection ) )
 
-$prototype=static QSqlDatabase database ( const QString & connectionName = QLatin1String( defaultConnection ), bool open = true )
-$staticMethod=|QSqlDatabase|database|const QString &=QLatin1String( QSqlDatabase::defaultConnection ),bool=true
-%% HB_FUNC_STATIC( QSQLDATABASE_DATABASE )
-%% {
-%%   QString par1; // TODO: revisar
-%%   if( ISNIL(1) )
-%%   {
-%%     par1 = QLatin1String(QSqlDatabase::defaultConnection);
-%%   }
-%%   else
-%%   {
-%%     par1 = hb_parc(1);
-%%   }
-%%   QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::database ( par1, OPBOOL(2,true) ) );
-%%   PHB_DYNS pDynSym = hb_dynsymFindName( "QSQLDATABASE" );
-%%   if( pDynSym )
-%%   {
-%%     hb_vmPushDynSym( pDynSym );
-%%     hb_vmPushNil();
-%%     hb_vmDo( 0 );
-%%     PHB_ITEM pObject = hb_itemNew( NULL );
-%%     hb_itemCopy( pObject, hb_stackReturnItem() );
-%%     PHB_ITEM pItem = hb_itemNew( NULL );
-%%     hb_itemPutPtr( pItem, (QSqlDatabase *) ptr );
-%%     hb_objSendMsg( pObject, "NEWFROMPOINTER", 1, pItem );
-%%     hb_itemReturn( pObject );
-%%     hb_itemRelease( pObject );
-%%     hb_itemRelease( pItem );
-%%   }
-%% }
+$prototypeV2=static QSqlDatabase database( const QString & connectionName = QLatin1String( QSqlDatabase::defaultConnection ), bool open = true )
 
 $prototypeV2=static QStringList drivers()
 

@@ -96,31 +96,22 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_SETQUERY )
 }
 $addMethod=setQuery
 
-$prototype=virtual bool canFetchMore ( const QModelIndex & parent = QModelIndex() ) const
-$virtualMethod=|bool|canFetchMore|const QModelIndex &=QModelIndex()
+$prototypeV2=virtual bool canFetchMore( const QModelIndex & parent = QModelIndex() ) const
 
-$prototype=virtual int columnCount ( const QModelIndex & index = QModelIndex() ) const
-$virtualMethod=|int|columnCount|const QModelIndex &=QModelIndex()
+$prototypeV2=virtual int columnCount( const QModelIndex & index = QModelIndex() ) const
 
-$prototype=virtual QVariant data ( const QModelIndex & item, int role = Qt::DisplayRole ) const
-$virtualMethod=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
+$prototypeV2=virtual QVariant data( const QModelIndex & item, int role = Qt::DisplayRole ) const
 
-$prototype=virtual void fetchMore ( const QModelIndex & parent = QModelIndex() )
-$virtualMethod=|void|fetchMore|const QModelIndex &=QModelIndex()
+$prototypeV2=virtual void fetchMore( const QModelIndex & parent = QModelIndex() )
 
-$prototype=virtual QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
-$virtualMethod=|QVariant|headerData|int,Qt::Orientation,int=Qt::DisplayRole
+$prototypeV2=virtual QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 
-$prototype=virtual bool insertColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
-$virtualMethod=|bool|insertColumns|int,int,const QModelIndex &=QModelIndex()
+$prototypeV2=virtual bool insertColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
 
-$prototype=virtual bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
-$virtualMethod=|bool|removeColumns|int,int,const QModelIndex &=QModelIndex()
+$prototypeV2=virtual bool removeColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
 
-$prototype=virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
-$virtualMethod=|int|rowCount|const QModelIndex &=QModelIndex()
+$prototypeV2=virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
 
-$prototype=virtual bool setHeaderData ( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole )
-$virtualMethod=|bool|setHeaderData|int,Qt::Orientation,const QVariant &,int=Qt::EditRole
+$prototypeV2=virtual bool setHeaderData( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole )
 
 #pragma ENDDUMP

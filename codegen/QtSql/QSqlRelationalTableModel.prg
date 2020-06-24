@@ -38,16 +38,13 @@ $prototypeV2=virtual void setRelation( int column, const QSqlRelation & relation
 
 $prototypeV2=virtual void clear()
 
-$prototype=virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
-$virtualMethod=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
+$prototypeV2=virtual QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const
 
-$prototype=virtual bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
-$virtualMethod=|bool|removeColumns|int,int,const QModelIndex &=QModelIndex()
+$prototypeV2=virtual bool removeColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
 
 $prototypeV2=virtual bool select()
 
-$prototype=virtual bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
-$virtualMethod=|bool|setData|const QModelIndex &,const QVariant &,int=Qt::EditRole
+$prototypeV2=virtual bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 
 $prototypeV2=virtual void setTable( const QString & table )
 

@@ -44,8 +44,7 @@ $prototypeV2=virtual QSqlResult * createResult() const = 0
 
 $prototypeV2=virtual QString escapeIdentifier( const QString & identifier, QSqlDriver::IdentifierType type ) const
 
-$prototype=virtual QString formatValue ( const QSqlField & field, bool trimStrings = false ) const
-$virtualMethod=|QString|formatValue|const QSqlField &,bool=false
+$prototypeV2=virtual QString formatValue( const QSqlField & field, bool trimStrings = false ) const
 
 $prototypeV2=virtual QVariant handle() const
 
@@ -61,8 +60,7 @@ $prototypeV2=QSqlError lastError() const
 
 $prototypeV2=QSql::NumericalPrecisionPolicy numericalPrecisionPolicy() const
 
-$prototype=virtual bool open ( const QString & db, const QString & user = QString(), const QString & password = QString(), const QString & host = QString(), int port = -1, const QString & options = QString() ) = 0
-$virtualMethod=|bool|open|const QString &,const QString &=QString(),const QString &=QString(),const QString &=QString(),int=-1,const QString &=QString()
+$prototypeV2=virtual bool open( const QString & db, const QString & user = QString(), const QString & password = QString(), const QString & host = QString(), int port = -1, const QString & options = QString() ) = 0
 
 $prototypeV2=virtual QSqlIndex primaryIndex( const QString & tableName ) const
 

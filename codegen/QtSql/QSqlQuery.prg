@@ -76,8 +76,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void addBindValue ( const QVariant & val, QSql::ParamType paramType = QSql::In )
-$method=|void|addBindValue|const QVariant &,QSql::ParamType=QSql::In
+$prototypeV2=void addBindValue( const QVariant & val, QSql::ParamType paramType = QSql::In )
 
 $prototypeV2=int at() const
 
@@ -169,8 +168,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXEC )
 }
 $addMethod=exec
 
-$prototype=bool execBatch ( BatchExecutionMode mode = ValuesAsRows )
-$method=|bool|execBatch|QSqlQuery::BatchExecutionMode=QSqlQuery::ValuesAsRows
+$prototypeV2=bool execBatch( QSqlQuery::BatchExecutionMode mode = QSqlQuery::ValuesAsRows )
 
 $prototypeV2=QString executedQuery() const
 
@@ -212,8 +210,7 @@ $prototypeV2=QSqlRecord record() const
 
 $prototypeV2=const QSqlResult * result() const
 
-$prototype=bool seek ( int index, bool relative = false )
-$method=|bool|seek|int,bool=false
+$prototypeV2=bool seek( int index, bool relative = false )
 
 $prototypeV2=void setForwardOnly( bool forward )
 

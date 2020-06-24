@@ -66,28 +66,21 @@ $prototypeV2=QString tableName() const
 
 $prototypeV2=virtual void clear()
 
-$prototype=virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
-$virtualMethod=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
+$prototypeV2=virtual QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const
 
 $prototypeV2=virtual Qt::ItemFlags flags( const QModelIndex & index ) const
 
-$prototype=virtual QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
-$virtualMethod=|QVariant|headerData|int,Qt::Orientation,int=Qt::DisplayRole
+$prototypeV2=virtual QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 
-$prototype=virtual bool insertRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
-$virtualMethod=|bool|insertRows|int,int,const QModelIndex &=QModelIndex()
+$prototypeV2=virtual bool insertRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 
-$prototype=virtual bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
-$virtualMethod=|bool|removeColumns|int,int,const QModelIndex &=QModelIndex()
+$prototypeV2=virtual bool removeColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
 
-$prototype=virtual bool removeRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
-$virtualMethod=|bool|removeRows|int,int,const QModelIndex &=QModelIndex()
+$prototypeV2=virtual bool removeRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 
-$prototype=virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
-$virtualMethod=|int|rowCount|const QModelIndex &=QModelIndex()
+$prototypeV2=virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
 
-$prototype=virtual bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
-$virtualMethod=|bool|setData|const QModelIndex &,const QVariant &,int=Qt::EditRole
+$prototypeV2=virtual bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 
 $prototypeV2=virtual void sort( int column, Qt::SortOrder order )
 
