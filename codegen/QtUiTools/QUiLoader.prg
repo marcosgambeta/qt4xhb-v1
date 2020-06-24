@@ -43,22 +43,17 @@ $prototypeV2=QStringList availableWidgets() const
 
 $prototypeV2=void clearPluginPaths()
 
-$prototype=virtual QAction * createAction ( QObject * parent = 0, const QString & name = QString() )
-$virtualMethod=|QAction *|createAction|QObject *=0,const QString &=QString()
+$prototypeV2=virtual QAction * createAction( QObject * parent = 0, const QString & name = QString() )
 
-$prototype=virtual QActionGroup * createActionGroup ( QObject * parent = 0, const QString & name = QString() )
-$virtualMethod=|QActionGroup *|createActionGroup|QObject *=0,const QString &=QString()
+$prototypeV2=virtual QActionGroup * createActionGroup( QObject * parent = 0, const QString & name = QString() )
 
-$prototype=virtual QLayout * createLayout ( const QString & className, QObject * parent = 0, const QString & name = QString() )
-$virtualMethod=|QLayout *|createLayout|const QString &,QObject *=0,const QString &=QString()
+$prototypeV2=virtual QLayout * createLayout( const QString & className, QObject * parent = 0, const QString & name = QString() )
 
-$prototype=virtual QWidget * createWidget ( const QString & className, QWidget * parent = 0, const QString & name = QString() )
-$virtualMethod=|QWidget *|createWidget|const QString &,QWidget *=0,const QString &=QString()
+$prototypeV2=virtual QWidget * createWidget( const QString & className, QWidget * parent = 0, const QString & name = QString() )
 
 $prototypeV2=bool isLanguageChangeEnabled() const
 
-$prototype=QWidget * load ( QIODevice * device, QWidget * parentWidget = 0 )
-$method=|QWidget *|load|QIODevice *,QWidget *=0
+$prototypeV2=QWidget * load( QIODevice * device, QWidget * parentWidget = 0 )
 
 $prototypeV2=QStringList pluginPaths() const
 
