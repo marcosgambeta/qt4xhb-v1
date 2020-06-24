@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QDOMTEXT_NODETYPE )
 }
 
 /*
-QDomText splitText ( int offset )
+QDomText splitText( int offset )
 */
 HB_FUNC_STATIC( QDOMTEXT_SPLITTEXT )
 {

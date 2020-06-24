@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QDOMNODELIST_DELETE )
 }
 
 /*
-QDomNode at ( int index ) const
+QDomNode at( int index ) const
 */
 HB_FUNC_STATIC( QDOMNODELIST_AT )
 {
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QDOMNODELIST_ISEMPTY )
 }
 
 /*
-QDomNode item ( int index ) const
+QDomNode item( int index ) const
 */
 HB_FUNC_STATIC( QDOMNODELIST_ITEM )
 {

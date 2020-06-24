@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QDOMNODE_DELETE )
 }
 
 /*
-QDomNode appendChild ( const QDomNode & newChild )
+QDomNode appendChild( const QDomNode & newChild )
 */
 HB_FUNC_STATIC( QDOMNODE_APPENDCHILD )
 {
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QDOMNODE_HASCHILDNODES )
 }
 
 /*
-QDomNode insertAfter ( const QDomNode & newChild, const QDomNode & refChild )
+QDomNode insertAfter( const QDomNode & newChild, const QDomNode & refChild )
 */
 HB_FUNC_STATIC( QDOMNODE_INSERTAFTER )
 {
@@ -454,7 +454,7 @@ HB_FUNC_STATIC( QDOMNODE_INSERTAFTER )
 }
 
 /*
-QDomNode insertBefore ( const QDomNode & newChild, const QDomNode & refChild )
+QDomNode insertBefore( const QDomNode & newChild, const QDomNode & refChild )
 */
 HB_FUNC_STATIC( QDOMNODE_INSERTBEFORE )
 {
@@ -791,7 +791,7 @@ HB_FUNC_STATIC( QDOMNODE_ISPROCESSINGINSTRUCTION )
 }
 
 /*
-bool isSupported ( const QString & feature, const QString & version ) const
+bool isSupported( const QString & feature, const QString & version ) const
 */
 HB_FUNC_STATIC( QDOMNODE_ISSUPPORTED )
 {
@@ -937,7 +937,7 @@ HB_FUNC_STATIC( QDOMNODE_LOCALNAME )
 }
 
 /*
-QDomNode namedItem ( const QString & name ) const
+QDomNode namedItem( const QString & name ) const
 */
 HB_FUNC_STATIC( QDOMNODE_NAMEDITEM )
 {
@@ -1258,7 +1258,7 @@ HB_FUNC_STATIC( QDOMNODE_PREVIOUSSIBLINGELEMENT )
 }
 
 /*
-QDomNode removeChild ( const QDomNode & oldChild )
+QDomNode removeChild( const QDomNode & oldChild )
 */
 HB_FUNC_STATIC( QDOMNODE_REMOVECHILD )
 {
@@ -1283,7 +1283,7 @@ HB_FUNC_STATIC( QDOMNODE_REMOVECHILD )
 }
 
 /*
-QDomNode replaceChild ( const QDomNode & newChild, const QDomNode & oldChild )
+QDomNode replaceChild( const QDomNode & newChild, const QDomNode & oldChild )
 */
 HB_FUNC_STATIC( QDOMNODE_REPLACECHILD )
 {
@@ -1359,7 +1359,7 @@ HB_FUNC_STATIC( QDOMNODE_SAVE )
 }
 
 /*
-void setNodeValue ( const QString & v )
+void setNodeValue( const QString & v )
 */
 HB_FUNC_STATIC( QDOMNODE_SETNODEVALUE )
 {
@@ -1385,7 +1385,7 @@ HB_FUNC_STATIC( QDOMNODE_SETNODEVALUE )
 }
 
 /*
-void setPrefix ( const QString & pre )
+void setPrefix( const QString & pre )
 */
 HB_FUNC_STATIC( QDOMNODE_SETPREFIX )
 {

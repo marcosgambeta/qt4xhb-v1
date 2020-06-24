@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_DELETE )
 }
 
 /*
-QDomDocument createDocument ( const QString & nsURI, const QString & qName, const QDomDocumentType & doctype )
+QDomDocument createDocument( const QString & nsURI, const QString & qName, const QDomDocumentType & doctype )
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENT )
 {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENT )
 }
 
 /*
-QDomDocumentType createDocumentType ( const QString & qName, const QString & publicId, const QString & systemId )
+QDomDocumentType createDocumentType( const QString & qName, const QString & publicId, const QString & systemId )
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE )
 {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE )
 }
 
 /*
-bool hasFeature ( const QString & feature, const QString & version ) const
+bool hasFeature( const QString & feature, const QString & version ) const
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_HASFEATURE )
 {
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_INVALIDDATAPOLICY )
 }
 
 /*
-static void setInvalidDataPolicy ( InvalidDataPolicy policy )
+static void setInvalidDataPolicy( QDomImplementation::InvalidDataPolicy policy )
 */
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_SETINVALIDDATAPOLICY )
 {

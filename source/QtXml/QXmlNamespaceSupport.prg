@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_POPCONTEXT )
 }
 
 /*
-QString prefix ( const QString & uri ) const
+QString prefix( const QString & uri ) const
 */
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIX )
 {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_RESET )
 }
 
 /*
-void setPrefix ( const QString & pre, const QString & uri )
+void setPrefix( const QString & pre, const QString & uri )
 */
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_SETPREFIX )
 {
@@ -271,7 +271,7 @@ void splitName ( const QString & qname, QString & prefix, QString & localname ) 
 */
 
 /*
-QString uri ( const QString & prefix ) const
+QString uri( const QString & prefix ) const
 */
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_URI )
 {

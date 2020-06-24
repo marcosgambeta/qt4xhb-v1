@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_DELETE )
 }
 
 /*
-void append ( const QString & qName, const QString & uri, const QString & localPart, const QString & value )
+void append( const QString & qName, const QString & uri, const QString & localPart, const QString & value )
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_APPEND )
 {
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_LENGTH )
 }
 
 /*
-QString localName ( int index ) const
+QString localName( int index ) const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_LOCALNAME )
 {
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_LOCALNAME )
 }
 
 /*
-QString qName ( int index ) const
+QString qName( int index ) const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_QNAME )
 {
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE )
 }
 
 /*
-QString uri ( int index ) const
+QString uri( int index ) const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_URI )
 {

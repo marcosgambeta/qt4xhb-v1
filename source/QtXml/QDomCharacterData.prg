@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW )
 }
 
 /*
-void appendData ( const QString & arg )
+void appendData( const QString & arg )
 */
 HB_FUNC_STATIC( QDOMCHARACTERDATA_APPENDDATA )
 {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_DATA )
 }
 
 /*
-void deleteData ( unsigned long offset, unsigned long count )
+void deleteData( unsigned long offset, unsigned long count )
 */
 HB_FUNC_STATIC( QDOMCHARACTERDATA_DELETEDATA )
 {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_DELETEDATA )
 }
 
 /*
-void insertData ( unsigned long offset, const QString & arg )
+void insertData( unsigned long offset, const QString & arg )
 */
 HB_FUNC_STATIC( QDOMCHARACTERDATA_INSERTDATA )
 {
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_NODETYPE )
 }
 
 /*
-void replaceData ( unsigned long offset, unsigned long count, const QString & arg )
+void replaceData( unsigned long offset, unsigned long count, const QString & arg )
 */
 HB_FUNC_STATIC( QDOMCHARACTERDATA_REPLACEDATA )
 {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_REPLACEDATA )
 }
 
 /*
-void setData ( const QString & v )
+void setData( const QString & v )
 */
 HB_FUNC_STATIC( QDOMCHARACTERDATA_SETDATA )
 {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_SETDATA )
 }
 
 /*
-QString substringData ( unsigned long offset, unsigned long count )
+QString substringData( unsigned long offset, unsigned long count )
 */
 HB_FUNC_STATIC( QDOMCHARACTERDATA_SUBSTRINGDATA )
 {
