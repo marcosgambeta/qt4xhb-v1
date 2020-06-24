@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_DELETE )
 }
 
 /*
-void addDelay ( int msecs )
+void addDelay( int msecs )
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDDELAY )
 {
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_CLEAR )
 }
 
 /*
-void simulate ( QWidget * w )
+void simulate( QWidget * w )
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_SIMULATE )
 {
