@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_CURRENTCONTEXT )
 }
 
 /*
-QScriptValue defaultPrototype ( int metaTypeId ) const
+QScriptValue defaultPrototype( int metaTypeId ) const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_DEFAULTPROTOTYPE )
 {
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_HASUNCAUGHTEXCEPTION )
 }
 
 /*
-QScriptValue importExtension ( const QString & extension )
+QScriptValue importExtension( const QString & extension )
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_IMPORTEXTENSION )
 {
@@ -738,7 +738,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_PUSHCONTEXT )
 }
 
 /*
-void reportAdditionalMemoryCost ( int size )
+void reportAdditionalMemoryCost( int size )
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_REPORTADDITIONALMEMORYCOST )
 {
@@ -764,7 +764,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_REPORTADDITIONALMEMORYCOST )
 }
 
 /*
-void setAgent ( QScriptEngineAgent * agent )
+void setAgent( QScriptEngineAgent * agent )
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_SETAGENT )
 {
@@ -790,7 +790,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_SETAGENT )
 }
 
 /*
-void setDefaultPrototype ( int metaTypeId, const QScriptValue & prototype )
+void setDefaultPrototype( int metaTypeId, const QScriptValue & prototype )
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_SETDEFAULTPROTOTYPE )
 {
@@ -816,7 +816,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_SETDEFAULTPROTOTYPE )
 }
 
 /*
-void setGlobalObject ( const QScriptValue & object )
+void setGlobalObject( const QScriptValue & object )
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_SETGLOBALOBJECT )
 {
@@ -842,7 +842,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_SETGLOBALOBJECT )
 }
 
 /*
-void setProcessEventsInterval ( int interval )
+void setProcessEventsInterval( int interval )
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_SETPROCESSEVENTSINTERVAL )
 {
@@ -868,7 +868,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_SETPROCESSEVENTSINTERVAL )
 }
 
 /*
-QScriptValue toObject ( const QScriptValue & value )
+QScriptValue toObject( const QScriptValue & value )
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_TOOBJECT )
 {
@@ -893,7 +893,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_TOOBJECT )
 }
 
 /*
-QScriptString toStringHandle ( const QString & str )
+QScriptString toStringHandle( const QString & str )
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_TOSTRINGHANDLE )
 {
@@ -1016,7 +1016,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_UNDEFINEDVALUE )
 }
 
 /*
-static QScriptSyntaxCheckResult checkSyntax ( const QString & program )
+static QScriptSyntaxCheckResult checkSyntax( const QString & program )
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_CHECKSYNTAX )
 {

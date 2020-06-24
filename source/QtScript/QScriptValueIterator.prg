@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_SCRIPTNAME )
 }
 
 /*
-void setValue ( const QScriptValue & value )
+void setValue( const QScriptValue & value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUEITERATOR_SETVALUE )
 {

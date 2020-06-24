@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_ACTIVATIONOBJECT )
 }
 
 /*
-QScriptValue argument ( int index ) const
+QScriptValue argument( int index ) const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENT )
 {
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_PARENTCONTEXT )
 }
 
 /*
-void setActivationObject ( const QScriptValue & activation )
+void setActivationObject( const QScriptValue & activation )
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_SETACTIVATIONOBJECT )
 {
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_SETACTIVATIONOBJECT )
 }
 
 /*
-void setThisObject ( const QScriptValue & thisObject )
+void setThisObject( const QScriptValue & thisObject )
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_SETTHISOBJECT )
 {
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWERROR )
 }
 
 /*
-QScriptValue throwValue ( const QScriptValue & value )
+QScriptValue throwValue( const QScriptValue & value )
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWVALUE )
 {
