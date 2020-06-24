@@ -45,8 +45,7 @@ $prototypeV2=virtual bool start( const QVideoSurfaceFormat & format )
 
 $prototypeV2=virtual void stop()
 
-$prototype=virtual QList<QVideoFrame::PixelFormat> supportedPixelFormats ( QAbstractVideoBuffer::HandleType type = QAbstractVideoBuffer::NoHandle ) const = 0
-$virtualMethod=|QList<QVideoFrame::PixelFormat>|supportedPixelFormats|QAbstractVideoBuffer::HandleType=QAbstractVideoBuffer::NoHandle
+$prototypeV2=virtual QList<QVideoFrame::PixelFormat> supportedPixelFormats( QAbstractVideoBuffer::HandleType type = QAbstractVideoBuffer::NoHandle ) const = 0
 
 $prototypeV2=QVideoSurfaceFormat surfaceFormat() const
 
