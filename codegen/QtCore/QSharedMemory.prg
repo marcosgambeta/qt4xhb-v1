@@ -63,13 +63,11 @@ $prototypeV2=void setNativeKey( const QString & key )
 
 $prototypeV2=QString nativeKey() const
 
-$prototype=bool create(int size, AccessMode mode = ReadWrite)
-$method=|bool|create|int,QSharedMemory::AccessMode=QSharedMemory::ReadWrite
+$prototypeV2=bool create( int size, QSharedMemory::AccessMode mode = QSharedMemory::ReadWrite )
 
 $prototypeV2=int size() const
 
-$prototype=bool attach(AccessMode mode = ReadWrite)
-$method=|bool|attach|QSharedMemory::AccessMode=QSharedMemory::ReadWrite
+$prototypeV2=bool attach( QSharedMemory::AccessMode mode = QSharedMemory::ReadWrite )
 
 $prototypeV2=bool isAttached() const
 

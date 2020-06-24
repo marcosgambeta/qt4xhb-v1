@@ -30,13 +30,11 @@ $constructor=|new|int=0
 
 $deleteMethod
 
-$prototype=void acquire ( int n = 1 )
-$method=|void|acquire|int=1
+$prototypeV2=void acquire( int n = 1 )
 
 $prototypeV2=int available() const
 
-$prototype=void release ( int n = 1 )
-$method=|void|release|int=1
+$prototypeV2=void release( int n = 1 )
 
 $prototype=bool tryAcquire ( int n = 1 )
 $internalMethod=|bool|tryAcquire,tryAcquire1|int=1

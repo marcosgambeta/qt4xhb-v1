@@ -48,11 +48,9 @@ $prototypeV2=void setLocale( const QLocale & locale )
 
 $prototypeV2=qint64 size() const
 
-$prototype=static bool registerResource ( const QString & rccFileName, const QString & mapRoot = QString() )
-$staticMethod=|bool|registerResource|const QString &,const QString &=QString()
+$prototypeV2=static bool registerResource( const QString & rccFileName, const QString & mapRoot = QString() )
 
-$prototype=static bool unregisterResource ( const QString & rccFileName, const QString & mapRoot = QString() )
-$staticMethod=|bool|unregisterResource|const QString &,const QString &=QString()
+$prototypeV2=static bool unregisterResource( const QString & rccFileName, const QString & mapRoot = QString() )
 
 $extraMethods
 

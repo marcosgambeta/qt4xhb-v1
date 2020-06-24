@@ -412,13 +412,11 @@ $addMethod=lastIndexOf
 
 $prototypeV2=QByteArray left( int len ) const
 
-$prototype=QByteArray leftJustified ( int width, char fill = ' ', bool truncate = false ) const
-$method=|QByteArray|leftJustified|int,char=' ',bool=false
+$prototypeV2=QByteArray leftJustified( int width, char fill = ' ', bool truncate = false ) const
 
 $prototypeV2=int length() const
 
-$prototype=QByteArray mid ( int pos, int len = -1 ) const
-$method=|QByteArray|mid|int,int=-1
+$prototypeV2=QByteArray mid( int pos, int len = -1 ) const
 
 $prototype=QByteArray & prepend ( const QByteArray & ba )
 $method=|QByteArray &|prepend,prepend1|const QByteArray &
@@ -670,8 +668,7 @@ $prototypeV2=void resize( int size )
 
 $prototypeV2=QByteArray right( int len ) const
 
-$prototype=QByteArray rightJustified ( int width, char fill = ' ', bool truncate = false ) const
-$method=|QByteArray|rightJustified|int,char=' ',bool=false
+$prototypeV2=QByteArray rightJustified( int width, char fill = ' ', bool truncate = false ) const
 
 $prototype=QByteArray & setNum ( int n, int base = 10 )
 $method=|QByteArray &|setNum,setNum1|int,int=10
@@ -799,42 +796,31 @@ $addMethod=startsWith
 
 $prototypeV2=QByteArray toBase64() const
 
-$prototype=double toDouble ( bool * ok = 0 ) const
-$method=|double|toDouble|bool *=0
+$prototypeV2=double toDouble( bool * ok = 0 ) const
 
-$prototype=float toFloat ( bool * ok = 0 ) const
-$method=|float|toFloat|bool *=0
+$prototypeV2=float toFloat( bool * ok = 0 ) const
 
 $prototypeV2=QByteArray toHex() const
 
-$prototype=int toInt ( bool * ok = 0, int base = 10 ) const
-$method=|int|toInt|bool *=0,int=10
+$prototypeV2=int toInt( bool * ok = 0, int base = 10 ) const
 
-$prototype=long toLong ( bool * ok = 0, int base = 10 ) const
-$method=|long|toLong|bool *=0,int=10
+$prototypeV2=long toLong( bool * ok = 0, int base = 10 ) const
 
-$prototype=qlonglong toLongLong ( bool * ok = 0, int base = 10 ) const
-$method=|qlonglong|toLongLong|bool *=0,int=10
+$prototypeV2=qlonglong toLongLong( bool * ok = 0, int base = 10 ) const
 
 $prototypeV2=QByteArray toLower() const
 
-$prototype=QByteArray toPercentEncoding ( const QByteArray & exclude = QByteArray(), const QByteArray & include = QByteArray(), char percent = '%' ) const
-$method=|QByteArray|toPercentEncoding|const QByteArray &=QByteArray(),const QByteArray &=QByteArray(),char='%'
+$prototypeV2=QByteArray toPercentEncoding( const QByteArray & exclude = QByteArray(), const QByteArray & include = QByteArray(), char percent = '%' ) const
 
-$prototype=short toShort ( bool * ok = 0, int base = 10 ) const
-$method=|short|toShort|bool *=0,int=10
+$prototypeV2=short toShort( bool * ok = 0, int base = 10 ) const
 
-$prototype=uint toUInt ( bool * ok = 0, int base = 10 ) const
-$method=|uint|toUInt|bool *=0,int=10
+$prototypeV2=uint toUInt( bool * ok = 0, int base = 10 ) const
 
-$prototype=ulong toULong ( bool * ok = 0, int base = 10 ) const
-$method=|ulong|toULong|bool *=0,int=10
+$prototypeV2=ulong toULong( bool * ok = 0, int base = 10 ) const
 
-$prototype=qulonglong toULongLong ( bool * ok = 0, int base = 10 ) const
-$method=|qulonglong|toULongLong|bool *=0,int=10
+$prototypeV2=qulonglong toULongLong( bool * ok = 0, int base = 10 ) const
 
-$prototype=ushort toUShort ( bool * ok = 0, int base = 10 ) const
-$method=|ushort|toUShort|bool *=0,int=10
+$prototypeV2=ushort toUShort( bool * ok = 0, int base = 10 ) const
 
 $prototypeV2=QByteArray toUpper() const
 
@@ -846,11 +832,9 @@ $prototypeV2=static QByteArray fromBase64( const QByteArray & base64 )
 
 $prototypeV2=static QByteArray fromHex( const QByteArray & hexEncoded )
 
-$prototype=static QByteArray fromPercentEncoding ( const QByteArray & input, char percent = '%' )
-$staticMethod=|QByteArray|fromPercentEncoding|const QByteArray &,char='%'
+$prototypeV2=static QByteArray fromPercentEncoding( const QByteArray & input, char percent = '%' )
 
-$prototype=static QByteArray fromRawData ( const char * data, int size )
-$staticMethod=|QByteArray|fromRawData|const char *,int
+$prototypeV2=static QByteArray fromRawData( const char * data, int size )
 
 $prototype=static QByteArray number ( int n, int base = 10 )
 $staticMethod=|QByteArray|number,number1|int,int=10

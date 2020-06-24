@@ -54,8 +54,7 @@ $prototypeV2=bool isRunning() const
 
 $prototypeV2=int postDelayedEvent( QEvent * event, int delay )
 
-$prototype=void postEvent ( QEvent * event, EventPriority priority = NormalPriority )
-$method=|void|postEvent|QEvent *,QStateMachine::EventPriority=QStateMachine::NormalPriority
+$prototypeV2=void postEvent( QEvent * event, QStateMachine::EventPriority priority = QStateMachine::NormalPriority )
 
 $prototypeV2=void removeDefaultAnimation( QAbstractAnimation * animation )
 

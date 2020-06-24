@@ -67,8 +67,7 @@ $prototypeV2=static bool closingDown()
 
 $prototypeV2=static int exec()
 
-$prototype=static void exit ( int returnCode = 0 )
-$staticMethod=|void|exit|int=0
+$prototypeV2=static void exit( int returnCode = 0 )
 
 $prototypeV2=static void flush()
 
@@ -206,8 +205,7 @@ $prototypeV2=static void setApplicationName( const QString & application )
 
 $prototypeV2=static void setApplicationVersion( const QString & version )
 
-$prototype=static void setAttribute ( Qt::ApplicationAttribute attribute, bool on = true )
-$staticMethod=|void|setAttribute|Qt::ApplicationAttribute,bool=true
+$prototypeV2=static void setAttribute( Qt::ApplicationAttribute attribute, bool on = true )
 
 $prototypeV2=static void setLibraryPaths( const QStringList & paths )
 

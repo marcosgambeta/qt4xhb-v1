@@ -71,7 +71,6 @@ HB_FUNC_STATIC( QTRANSLATOR_LOAD )
 }
 $addMethod=load
 
-$prototype=virtual QString translate(const char * context, const char * sourceText, const char * disambiguation = 0, int n = -1) const
-$virtualMethod=|QString|translate|const char *,const char *,const char *=0,int=-1
+$prototypeV2=virtual QString translate( const char * context, const char * sourceText, const char * disambiguation = 0, int n = -1 ) const
 
 #pragma ENDDUMP

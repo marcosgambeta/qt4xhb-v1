@@ -43,11 +43,9 @@ $prototypeV2=QFile::FileError error() const
 
 $prototypeV2=QString errorString() const
 
-$prototype=virtual QAbstractFileEngine::FileFlags fileFlags( QAbstractFileEngine::FileFlags type = QAbstractFileEngine::FileInfoAll ) const
-$virtualMethod=|QAbstractFileEngine::FileFlags|fileFlags|QAbstractFileEngine::FileFlags=QAbstractFileEngine::FileInfoAll
+$prototypeV2=virtual QAbstractFileEngine::FileFlags fileFlags( QAbstractFileEngine::FileFlags type = QAbstractFileEngine::FileInfoAll ) const
 
-$prototype=virtual QString fileName( QAbstractFileEngine::FileName file = QAbstractFileEngine::DefaultName ) const
-$virtualMethod=|QString|fileName|QAbstractFileEngine::FileName=QAbstractFileEngine::DefaultName
+$prototypeV2=virtual QString fileName( QAbstractFileEngine::FileName file = QAbstractFileEngine::DefaultName ) const
 
 $prototypeV2=virtual QDateTime fileTime( QAbstractFileEngine::FileTime time ) const
 

@@ -33,8 +33,7 @@ $prototypeV2=static const char * typeName( int type )
 
 $prototypeV2=static bool isRegistered( int type )
 
-$prototype=static void *construct(int type, const void *copy = 0)
-$staticMethod=|void *|construct|int,const void *=0
+$prototypeV2=static void * construct( int type, const void * copy = 0 )
 
 $prototypeV2=static void destroy( int type, void * data )
 

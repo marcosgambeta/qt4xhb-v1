@@ -259,13 +259,11 @@ $prototypeV2=void setUserName( const QString & userName )
 
 $prototypeV2=void swap( QUrl & other )
 
-$prototype=QByteArray toEncoded ( FormattingOptions options = None ) const
-$method=|QByteArray|toEncoded|QUrl::FormattingOptions=QUrl::None
+$prototypeV2=QByteArray toEncoded( QUrl::FormattingOptions options = QUrl::None ) const
 
 $prototypeV2=QString toLocalFile() const
 
-$prototype=QString toString ( FormattingOptions options = None ) const
-$method=|QString|toString|QUrl::FormattingOptions=QUrl::None
+$prototypeV2=QString toString( QUrl::FormattingOptions options = QUrl::None ) const
 
 $prototypeV2=QString topLevelDomain() const
 
@@ -315,8 +313,7 @@ $prototypeV2=static void setIdnWhitelist( const QStringList & list )
 
 $prototypeV2=static QByteArray toAce( const QString & domain )
 
-$prototype=static QByteArray toPercentEncoding ( const QString & input, const QByteArray & exclude = QByteArray(), const QByteArray & include = QByteArray() )
-$staticMethod=|QByteArray|toPercentEncoding|const QString &,const QByteArray &=QByteArray(),const QByteArray &=QByteArray()
+$prototypeV2=static QByteArray toPercentEncoding( const QString & input, const QByteArray & exclude = QByteArray(), const QByteArray & include = QByteArray() )
 
 $extraMethods
 

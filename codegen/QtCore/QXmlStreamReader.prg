@@ -195,11 +195,9 @@ $prototypeV2=QStringRef processingInstructionTarget() const
 
 $prototypeV2=QStringRef qualifiedName() const
 
-$prototype=void raiseError(const QString & message = QString())
-$method=|void|raiseError|const QString &=QString()
+$prototypeV2=void raiseError( const QString & message = QString() )
 
-$prototype=QString readElementText(ReadElementTextBehaviour behaviour = ErrorOnUnexpectedElement)
-$method=|QString|readElementText|QXmlStreamReader::ReadElementTextBehaviour=QXmlStreamReader::ErrorOnUnexpectedElement
+$prototypeV2=QString readElementText( QXmlStreamReader::ReadElementTextBehaviour behaviour = QXmlStreamReader::ErrorOnUnexpectedElement )
 
 $prototypeV2=QXmlStreamReader::TokenType readNext()
 

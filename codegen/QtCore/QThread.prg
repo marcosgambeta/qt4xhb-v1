@@ -32,8 +32,7 @@ $constructor=|new|QObject *=0
 
 $deleteMethod
 
-$prototype=void exit(int returnCode = 0)
-$method=|void|exit|int=0
+$prototypeV2=void exit( int returnCode = 0 )
 
 $prototypeV2=bool isFinished() const
 
@@ -51,8 +50,7 @@ $prototypeV2=virtual bool event( QEvent * event )
 
 $prototypeV2=void quit()
 
-$prototype=void start(Priority priority = InheritPriority)
-$method=|void|start|QThread::Priority=QThread::InheritPriority
+$prototypeV2=void start( QThread::Priority priority = QThread::InheritPriority )
 
 $prototypeV2=void terminate()
 

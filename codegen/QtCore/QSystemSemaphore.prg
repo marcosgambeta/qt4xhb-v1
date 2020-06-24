@@ -38,11 +38,9 @@ $prototypeV2=QString errorString() const
 
 $prototypeV2=QString key() const
 
-$prototype=bool release ( int n = 1 )
-$method=|bool|release|int=1
+$prototypeV2=bool release( int n = 1 )
 
-$prototype=void setKey ( const QString & key, int initialValue = 0, AccessMode mode = Open )
-$method=|void|setKey|const QString &,int=0,QSystemSemaphore::AccessMode=QSystemSemaphore::Open
+$prototypeV2=void setKey( const QString & key, int initialValue = 0, QSystemSemaphore::AccessMode mode = QSystemSemaphore::Open )
 
 $extraMethods
 

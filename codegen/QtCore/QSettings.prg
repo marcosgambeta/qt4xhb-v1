@@ -89,8 +89,7 @@ $prototypeV2=void beginGroup( const QString & prefix )
 
 $prototypeV2=int beginReadArray( const QString & prefix )
 
-$prototype=void beginWriteArray ( const QString & prefix, int size = -1 )
-$method=|void|beginWriteArray|const QString &,int=-1
+$prototypeV2=void beginWriteArray( const QString & prefix, int size = -1 )
 
 $prototypeV2=QStringList childGroups() const
 
@@ -160,8 +159,7 @@ $prototypeV2=QSettings::Status status() const
 
 $prototypeV2=void sync()
 
-$prototype=QVariant value ( const QString & key, const QVariant & defaultValue = QVariant() ) const
-$method=|QVariant|value|const QString &,const QVariant &=QVariant()
+$prototypeV2=QVariant value( const QString & key, const QVariant & defaultValue = QVariant() ) const
 
 $prototypeV2=static QSettings::Format defaultFormat()
 

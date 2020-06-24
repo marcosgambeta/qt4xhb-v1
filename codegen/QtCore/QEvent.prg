@@ -42,8 +42,7 @@ $prototypeV2=bool spontaneous() const
 
 $prototypeV2=QEvent::Type type() const
 
-$prototype=static int registerEventType ( int hint = -1 )
-$staticMethod=|int|registerEventType|int=-1
+$prototypeV2=static int registerEventType( int hint = -1 )
 
 $extraMethods
 

@@ -88,17 +88,13 @@ $prototypeV2=QLocale::Country country() const
 
 $prototypeV2=QString createSeparatedList( const QStringList & list ) const
 
-$prototype=QString currencySymbol ( CurrencySymbolFormat format = CurrencySymbol ) const
-$method=|QString|currencySymbol|QLocale::CurrencySymbolFormat=QLocale::CurrencySymbol
+$prototypeV2=QString currencySymbol( QLocale::CurrencySymbolFormat format = QLocale::CurrencySymbol ) const
 
-$prototype=QString dateFormat ( FormatType format = LongFormat ) const
-$method=|QString|dateFormat|QLocale::FormatType=QLocale::LongFormat
+$prototypeV2=QString dateFormat( QLocale::FormatType format = QLocale::LongFormat ) const
 
-$prototype=QString dateTimeFormat ( FormatType format = LongFormat ) const
-$method=|QString|dateTimeFormat|QLocale::FormatType=QLocale::LongFormat
+$prototypeV2=QString dateTimeFormat( QLocale::FormatType format = QLocale::LongFormat ) const
 
-$prototype=QString dayName ( int day, FormatType type = LongFormat ) const
-$method=|QString|dayName|int,QLocale::FormatType=QLocale::LongFormat
+$prototypeV2=QString dayName( int day, QLocale::FormatType type = QLocale::LongFormat ) const
 
 $prototypeV2=QChar decimalPoint() const
 
@@ -112,8 +108,7 @@ $prototypeV2=QLocale::Language language() const
 
 $prototypeV2=QLocale::MeasurementSystem measurementSystem() const
 
-$prototype=QString monthName ( int month, FormatType type = LongFormat ) const
-$method=|QString|monthName|int,QLocale::FormatType=QLocale::LongFormat
+$prototypeV2=QString monthName( int month, QLocale::FormatType type = QLocale::LongFormat ) const
 
 $prototypeV2=QString name() const
 
@@ -163,16 +158,13 @@ $prototypeV2=QLocale::Script script() const
 
 $prototypeV2=void setNumberOptions( QLocale::NumberOptions options )
 
-$prototype=QString standaloneDayName ( int day, FormatType type = LongFormat ) const
-$method=|QString|standaloneDayName|int,QLocale::FormatType=QLocale::LongFormat
+$prototypeV2=QString standaloneDayName( int day, QLocale::FormatType type = QLocale::LongFormat ) const
 
-$prototype=QString standaloneMonthName ( int month, FormatType type = LongFormat ) const
-$method=|QString|standaloneMonthName|int,QLocale::FormatType=QLocale::LongFormat
+$prototypeV2=QString standaloneMonthName( int month, QLocale::FormatType type = QLocale::LongFormat ) const
 
 $prototypeV2=Qt::LayoutDirection textDirection() const
 
-$prototype=QString timeFormat ( FormatType format = LongFormat ) const
-$method=|QString|timeFormat|QLocale::FormatType=QLocale::LongFormat
+$prototypeV2=QString timeFormat( QLocale::FormatType format = QLocale::LongFormat ) const
 
 $prototype=QString toCurrencyString ( qlonglong value, const QString & symbol = QString() ) const
 $method=|QString|toCurrencyString,toCurrencyString1|qlonglong,const QString &=QString()
@@ -272,22 +264,17 @@ HB_FUNC_STATIC( QLOCALE_TODATETIME )
 }
 $addMethod=toDateTime
 
-$prototype=double toDouble ( const QString & s, bool * ok = 0 ) const
-$method=|double|toDouble|const QString &,bool *=0
+$prototypeV2=double toDouble( const QString & s, bool * ok = 0 ) const
 
-$prototype=float toFloat ( const QString & s, bool * ok = 0 ) const
-$method=|float|toFloat|const QString &,bool *=0
+$prototypeV2=float toFloat( const QString & s, bool * ok = 0 ) const
 
-$prototype=int toInt ( const QString & s, bool * ok = 0, int base = 0 ) const
-$method=|int|toInt|const QString &,bool *=0,int=0
+$prototypeV2=int toInt( const QString & s, bool * ok = 0, int base = 0 ) const
 
-$prototype=qlonglong toLongLong ( const QString & s, bool * ok = 0, int base = 0 ) const
-$method=|qlonglong|toLongLong|const QString &,bool *=0,int=0
+$prototypeV2=qlonglong toLongLong( const QString & s, bool * ok = 0, int base = 0 ) const
 
 $prototypeV2=QString toLower( const QString & str ) const
 
-$prototype=short toShort ( const QString & s, bool * ok = 0, int base = 0 ) const
-$method=|short|toShort|const QString &,bool *=0,int=0
+$prototypeV2=short toShort( const QString & s, bool * ok = 0, int base = 0 ) const
 
 $prototype=QString toString ( qlonglong i ) const
 $method=|QString|toString,toString1|qlonglong
@@ -383,14 +370,11 @@ HB_FUNC_STATIC( QLOCALE_TOTIME )
 }
 $addMethod=toTime
 
-$prototype=uint toUInt ( const QString & s, bool * ok = 0, int base = 0 ) const
-$method=|uint|toUInt|const QString &,bool *=0,int=0
+$prototypeV2=uint toUInt( const QString & s, bool * ok = 0, int base = 0 ) const
 
-$prototype=qlonglong toULongLong ( const QString & s, bool * ok = 0, int base = 0 ) const
-$method=|qlonglong|toULongLong|const QString &,bool *=0,int=0
+$prototypeV2=qlonglong toULongLong( const QString & s, bool * ok = 0, int base = 0 ) const
 
-$prototype=ushort toUShort ( const QString & s, bool * ok = 0, int base = 0 ) const
-$method=|ushort|toUShort|const QString &,bool *=0,int=0
+$prototypeV2=ushort toUShort( const QString & s, bool * ok = 0, int base = 0 ) const
 
 $prototypeV2=QString toUpper( const QString & str ) const
 

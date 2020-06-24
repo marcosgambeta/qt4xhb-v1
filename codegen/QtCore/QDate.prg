@@ -111,8 +111,7 @@ HB_FUNC_STATIC( QDATE_TOSTRING )
 }
 $addMethod=toString
 
-$prototype=int weekNumber ( int * yearNumber = 0 ) const
-$method=|int|weekNumber|int *=0
+$prototypeV2=int weekNumber( int * yearNumber = 0 ) const
 
 $prototypeV2=int year() const
 

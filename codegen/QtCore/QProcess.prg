@@ -70,13 +70,11 @@ $prototypeV2=void setProcessEnvironment( const QProcessEnvironment & environment
 
 $prototypeV2=void setReadChannel( QProcess::ProcessChannel channel )
 
-$prototype=void setStandardErrorFile ( const QString & fileName, OpenMode mode = Truncate )
-$method=|void|setStandardErrorFile|const QString &,QIODevice::OpenMode=QIODevice::Truncate
+$prototypeV2=void setStandardErrorFile( const QString & fileName, QIODevice::OpenMode mode = QIODevice::Truncate )
 
 $prototypeV2=void setStandardInputFile( const QString & fileName )
 
-$prototype=void setStandardOutputFile ( const QString & fileName, OpenMode mode = Truncate )
-$method=|void|setStandardOutputFile|const QString &,QIODevice::OpenMode=QIODevice::Truncate
+$prototypeV2=void setStandardOutputFile( const QString & fileName, QIODevice::OpenMode mode = QIODevice::Truncate )
 
 $prototypeV2=void setStandardOutputProcess( QProcess * destination )
 
@@ -112,11 +110,9 @@ $addMethod=start
 
 $prototypeV2=QProcess::ProcessState state() const
 
-$prototype=bool waitForFinished ( int msecs = 30000 )
-$method=|bool|waitForFinished|int=30000
+$prototypeV2=bool waitForFinished( int msecs = 30000 )
 
-$prototype=bool waitForStarted ( int msecs = 30000 )
-$method=|bool|waitForStarted|int=30000
+$prototypeV2=bool waitForStarted( int msecs = 30000 )
 
 $prototypeV2=QString workingDirectory() const
 
@@ -132,11 +128,9 @@ $prototypeV2=virtual void close()
 
 $prototypeV2=virtual bool isSequential() const
 
-$prototype=virtual bool waitForBytesWritten ( int msecs = 30000 )
-$virtualMethod=|bool|waitForBytesWritten|int=30000
+$prototypeV2=virtual bool waitForBytesWritten( int msecs = 30000 )
 
-$prototype=virtual bool waitForReadyRead ( int msecs = 30000 )
-$virtualMethod=|bool|waitForReadyRead|int=30000
+$prototypeV2=virtual bool waitForReadyRead( int msecs = 30000 )
 
 $prototypeV2=void kill()
 

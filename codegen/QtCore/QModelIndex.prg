@@ -59,8 +59,7 @@ $prototypeV2=QModelIndex child( int row, int column ) const
 
 $prototypeV2=int column() const
 
-$prototype=QVariant data ( int role = Qt::DisplayRole ) const
-$method=|QVariant|data|int=Qt::DisplayRole
+$prototypeV2=QVariant data( int role = Qt::DisplayRole ) const
 
 $prototypeV2=Qt::ItemFlags flags() const
 

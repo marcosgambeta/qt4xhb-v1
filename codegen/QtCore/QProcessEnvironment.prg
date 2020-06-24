@@ -63,8 +63,7 @@ $prototypeV2=bool contains( const QString & name ) const
 
 $prototypeV2=void remove( const QString & name )
 
-$prototype=QString value(const QString &name, const QString &defaultValue = QString()) const
-$method=|QString|value|const QString &,const QString &=QString()
+$prototypeV2=QString value( const QString & name, const QString & defaultValue = QString() ) const
 
 $prototypeV2=QStringList toStringList() const
 

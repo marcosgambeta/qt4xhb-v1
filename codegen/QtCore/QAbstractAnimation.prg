@@ -61,8 +61,7 @@ $prototypeV2=void setCurrentTime( int msecs )
 
 $prototypeV2=void setPaused( bool paused )
 
-$prototype=void start ( QAbstractAnimation::DeletionPolicy policy = KeepWhenStopped )
-$method=|void|start|QAbstractAnimation::DeletionPolicy=QAbstractAnimation::KeepWhenStopped
+$prototypeV2=void start( QAbstractAnimation::DeletionPolicy policy = QAbstractAnimation::KeepWhenStopped )
 
 $prototypeV2=void stop()
 

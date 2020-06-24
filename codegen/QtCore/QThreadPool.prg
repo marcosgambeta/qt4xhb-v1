@@ -44,8 +44,7 @@ $prototypeV2=void setExpiryTimeout( int expiryTimeout )
 
 $prototypeV2=void setMaxThreadCount( int maxThreadCount )
 
-$prototype=void start ( QRunnable * runnable, int priority = 0 )
-$method=|void|start|QRunnable *,int=0
+$prototypeV2=void start( QRunnable * runnable, int priority = 0 )
 
 $prototypeV2=bool tryStart( QRunnable * runnable )
 

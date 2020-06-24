@@ -157,8 +157,7 @@ $prototypeV2=qint64 pos() const
 
 $prototypeV2=void skipWhiteSpace()
 
-$prototype=QString readLine(qint64 maxlen = 0)
-$method=|QString|readLine|qint64=0
+$prototypeV2=QString readLine( qint64 maxlen = 0 )
 
 $prototypeV2=QString readAll()
 

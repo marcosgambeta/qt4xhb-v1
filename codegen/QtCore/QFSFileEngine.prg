@@ -159,8 +159,7 @@ $prototypeV2=virtual bool supportsExtension( QAbstractFileEngine::Extension exte
 
 $prototypeV2=virtual qint64 write( const char * data, qint64 len )
 
-$prototype=static QString currentPath ( const QString & fileName = QString() )
-$staticMethod=|QString|currentPath|const QString &=QString()
+$prototypeV2=static QString currentPath( const QString & fileName = QString() )
 
 $prototypeV2=QFileInfoList drives()
 

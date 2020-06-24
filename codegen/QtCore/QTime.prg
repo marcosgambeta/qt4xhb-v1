@@ -77,8 +77,7 @@ $prototypeV2=int second() const
 
 $prototypeV2=int secsTo( const QTime & t ) const
 
-$prototype=bool setHMS(int h, int m, int s, int ms = 0)
-$method=|bool|setHMS|int,int,int,int=0
+$prototypeV2=bool setHMS( int h, int m, int s, int ms = 0 )
 
 $prototypeV2=void start()
 

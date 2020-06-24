@@ -77,8 +77,7 @@ $prototypeV2=virtual bool unregisterTimers( QObject * object ) = 0
 
 $prototypeV2=virtual void wakeUp() = 0
 
-$prototype=static QAbstractEventDispatcher * instance ( QThread * thread = 0 )
-$staticMethod=|QAbstractEventDispatcher *|instance|QThread *=0
+$prototypeV2=static QAbstractEventDispatcher * instance( QThread * thread = 0 )
 
 $beginSignals
 $signal=|aboutToBlock()
