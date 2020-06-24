@@ -41,8 +41,7 @@ $prototypeV2=virtual QObject * object() const = 0
 
 $prototypeV2=virtual void setObject( QObject * object ) = 0
 
-$prototype=virtual void setPropertyValue ( const QString & name, const QVariant & value, bool changed = true ) = 0
-$virtualMethod=|void|setPropertyValue|const QString &,const QVariant &,bool=true
+$prototypeV2=virtual void setPropertyValue( const QString & name, const QVariant & value, bool changed = true ) = 0
 
 $prototypeV2=virtual void setReadOnly( bool readOnly ) = 0
 

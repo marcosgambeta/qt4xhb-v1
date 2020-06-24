@@ -72,8 +72,7 @@ $prototypeV2=virtual QDesignerFormWindowInterface * activeFormWindow() const
 
 $prototypeV2=virtual QDesignerFormEditorInterface * core() const
 
-$prototype=virtual QDesignerFormWindowInterface * createFormWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
-$virtualMethod=|QDesignerFormWindowInterface *|createFormWindow|QWidget *=0,Qt::WindowFlags=0
+$prototypeV2=virtual QDesignerFormWindowInterface * createFormWindow( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 
 $prototypeV2=virtual QDesignerFormWindowInterface * formWindow( int index ) const
 

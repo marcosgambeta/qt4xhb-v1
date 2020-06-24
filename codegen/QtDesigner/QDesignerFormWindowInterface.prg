@@ -90,13 +90,11 @@ $prototypeV2=virtual void setMainContainer( QWidget * mainContainer ) = 0
 
 $prototypeV2=virtual void setPixmapFunction( const QString & pixmapFunction ) = 0
 
-$prototype=virtual void clearSelection ( bool update = true ) = 0
-$virtualMethod=|void|clearSelection|bool=true
+$prototypeV2=virtual void clearSelection( bool update = true ) = 0
 
 $prototypeV2=virtual void manageWidget( QWidget * widget ) = 0
 
-$prototype=virtual void selectWidget ( QWidget * widget, bool select = true ) = 0
-$virtualMethod=|void|selectWidget|QWidget *,bool=true
+$prototypeV2=virtual void selectWidget( QWidget * widget, bool select = true ) = 0
 
 $prototype=virtual void setContents ( QIODevice * device ) = 0
 $internalVirtualMethod=|void|setContents,setContents1|QIODevice *
