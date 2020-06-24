@@ -34,8 +34,7 @@ $prototypeV2=virtual QAxAggregated * createAggregate()
 
 $prototypeV2=virtual bool readData( QIODevice * source, const QString & format )
 
-$prototype=void reportError ( int code, const QString & src, const QString & desc, const QString & context = QString() )
-$method=|void|reportError|int,const QString &,const QString &,const QString &=QString()
+$prototypeV2=void reportError( int code, const QString & src, const QString & desc, const QString & context = QString() )
 
 $prototypeV2=virtual bool writeData( QIODevice * sink )
 

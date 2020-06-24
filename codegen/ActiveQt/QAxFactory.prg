@@ -65,8 +65,7 @@ $prototypeV2=static QString serverDirPath()
 
 $prototypeV2=static QString serverFilePath()
 
-$prototype=static bool startServer( QAxFactory::ServerType type = QAxFactory::MultipleInstances )
-$staticMethod=|bool|startServer|QAxFactory::ServerType=QAxFactory::MultipleInstances
+$prototypeV2=static bool startServer( QAxFactory::ServerType type = QAxFactory::MultipleInstances )
 
 $prototypeV2=static bool stopServer()
 
