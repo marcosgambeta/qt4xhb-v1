@@ -167,8 +167,7 @@ $prototypeV2=void glVertexAttribPointer( GLuint indx, GLint size, GLenum type, G
 
 $prototypeV2=bool hasOpenGLFeature( QGLFunctions::OpenGLFeature feature ) const
 
-$prototype=void initializeGLFunctions ( const QGLContext * context = 0 )
-$method=|void|initializeGLFunctions|const QGLContext *=0
+$prototypeV2=void initializeGLFunctions( const QGLContext * context = 0 )
 
 $prototypeV2=QGLFunctions::OpenGLFeatures openGLFeatures() const
 

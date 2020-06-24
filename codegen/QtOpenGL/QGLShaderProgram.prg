@@ -628,7 +628,6 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_UNIFORMLOCATION )
 }
 $addMethod=uniformLocation
 
-$prototype=static bool hasOpenGLShaderPrograms ( const QGLContext * context = 0 )
-$staticMethod=|bool|hasOpenGLShaderPrograms|const QGLContext *=0
+$prototypeV2=static bool hasOpenGLShaderPrograms( const QGLContext * context = 0 )
 
 #pragma ENDDUMP

@@ -156,8 +156,7 @@ $addMethod=drawTexture
 
 $prototypeV2=QGLFormat format() const
 
-$prototype=QImage grabFrameBuffer ( bool withAlpha = false )
-$method=|QImage|grabFrameBuffer|bool=false
+$prototypeV2=QImage grabFrameBuffer( bool withAlpha = false )
 
 $prototypeV2=bool isSharing() const
 
@@ -173,8 +172,7 @@ $prototypeV2=void qglClearColor( const QColor & c ) const
 
 $prototypeV2=void qglColor( const QColor & c ) const
 
-$prototype=QPixmap renderPixmap ( int w = 0, int h = 0, bool useContext = false )
-$method=|QPixmap|renderPixmap|int=0,int=0,bool=false
+$prototypeV2=QPixmap renderPixmap( int w = 0, int h = 0, bool useContext = false )
 
 $prototype=void renderText ( int x, int y, const QString & str, const QFont & font = QFont(), int listBase = 2000 )
 $internalMethod=|void|renderText,renderText1|int,int,const QString &,const QFont &=QFont(),int=2000

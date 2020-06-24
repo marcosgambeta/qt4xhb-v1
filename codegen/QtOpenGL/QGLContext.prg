@@ -82,8 +82,7 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE )
 }
 $addMethod=bindTexture
 
-$prototype=virtual bool create ( const QGLContext * shareContext = 0 )
-$virtualMethod=|bool|create|const QGLContext *=0
+$prototypeV2=virtual bool create( const QGLContext * shareContext = 0 )
 
 $prototypeV2=void deleteTexture( GLuint id )
 
