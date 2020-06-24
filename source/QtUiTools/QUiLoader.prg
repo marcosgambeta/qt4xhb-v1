@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QUILOADER_DELETE )
 }
 
 /*
-void addPluginPath ( const QString & path )
+void addPluginPath( const QString & path )
 */
 HB_FUNC_STATIC( QUILOADER_ADDPLUGINPATH )
 {
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QUILOADER_PLUGINPATHS )
 }
 
 /*
-void setLanguageChangeEnabled ( bool enabled )
+void setLanguageChangeEnabled( bool enabled )
 */
 HB_FUNC_STATIC( QUILOADER_SETLANGUAGECHANGEENABLED )
 {
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QUILOADER_SETLANGUAGECHANGEENABLED )
 }
 
 /*
-void setWorkingDirectory ( const QDir & dir )
+void setWorkingDirectory( const QDir & dir )
 */
 HB_FUNC_STATIC( QUILOADER_SETWORKINGDIRECTORY )
 {
