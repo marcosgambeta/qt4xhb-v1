@@ -43,11 +43,9 @@ $prototypeV2=void attachTo( QScriptEngine * engine )
 
 $prototypeV2=bool autoShowStandardWindow() const
 
-$prototype=QMenu * createStandardMenu ( QWidget * parent = 0 )
-$method=|QMenu *|createStandardMenu|QWidget *=0
+$prototypeV2=QMenu * createStandardMenu( QWidget * parent = 0 )
 
-$prototype=QToolBar * createStandardToolBar ( QWidget * parent = 0 )
-$method=|QToolBar *|createStandardToolBar|QWidget *=0
+$prototypeV2=QToolBar * createStandardToolBar( QWidget * parent = 0 )
 
 $prototypeV2=void detach()
 
