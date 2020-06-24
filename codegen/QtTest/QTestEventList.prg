@@ -85,8 +85,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICK )
 }
 $addMethod=addKeyClick
 
-$prototype=void addKeyClicks ( const QString & keys, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
-$method=|void|addKeyClicks|const QString &,Qt::KeyboardModifiers=Qt::NoModifier,int=-1
+$prototypeV2=void addKeyClicks( const QString & keys, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 
 $prototype=void addKeyPress ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 $method=|void|addKeyPress,addKeyPress1|Qt::Key,Qt::KeyboardModifiers=Qt::NoModifier,int=-1
@@ -144,20 +143,15 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYRELEASE )
 }
 $addMethod=addKeyRelease
 
-$prototype=void addMouseClick ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
-$method=|void|addMouseClick|Qt::MouseButton,Qt::KeyboardModifiers=0,QPoint=QPoint(),int=-1
+$prototypeV2=void addMouseClick( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
 
-$prototype=void addMouseDClick ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
-$method=|void|addMouseDClick|Qt::MouseButton,Qt::KeyboardModifiers=0,QPoint=QPoint(),int=-1
+$prototypeV2=void addMouseDClick( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
 
-$prototype=void addMouseMove ( QPoint pos = QPoint(), int delay = -1 )
-$method=|void|addMouseMove|QPoint=QPoint(),int=-1
+$prototypeV2=void addMouseMove( QPoint pos = QPoint(), int delay = -1 )
 
-$prototype=void addMousePress ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
-$method=|void|addMousePress|Qt::MouseButton,Qt::KeyboardModifiers=0,QPoint=QPoint(),int=-1
+$prototypeV2=void addMousePress( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
 
-$prototype=void addMouseRelease ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
-$method=|void|addMouseRelease|Qt::MouseButton,Qt::KeyboardModifiers=0,QPoint=QPoint(),int=-1
+$prototypeV2=void addMouseRelease( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
 
 $prototypeV2=void clear()
 
