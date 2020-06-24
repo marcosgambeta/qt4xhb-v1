@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_SERVERNAME )
 }
 
 /*
-void setReadBufferSize ( qint64 size )
+void setReadBufferSize( qint64 size )
 */
 HB_FUNC_STATIC( QLOCALSOCKET_SETREADBUFFERSIZE )
 {

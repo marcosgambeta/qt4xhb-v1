@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SAVETODISK )
 }
 
 /*
-void setExpirationDate ( const QDateTime & dateTime )
+void setExpirationDate( const QDateTime & dateTime )
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETEXPIRATIONDATE )
 {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETEXPIRATIONDATE )
 }
 
 /*
-void setLastModified ( const QDateTime & dateTime )
+void setLastModified( const QDateTime & dateTime )
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETLASTMODIFIED )
 {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETLASTMODIFIED )
 }
 
 /*
-void setSaveToDisk ( bool allow )
+void setSaveToDisk( bool allow )
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETSAVETODISK )
 {
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETSAVETODISK )
 }
 
 /*
-void setUrl ( const QUrl & url )
+void setUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETURL )
 {

@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QFTP_BYTESAVAILABLE )
 }
 
 /*
-int cd ( const QString & dir )
+int cd( const QString & dir )
 */
 HB_FUNC_STATIC( QFTP_CD )
 {
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QFTP_LOGIN )
 }
 
 /*
-int mkdir ( const QString & dir )
+int mkdir( const QString & dir )
 */
 HB_FUNC_STATIC( QFTP_MKDIR )
 {
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QFTP_PUT )
 }
 
 /*
-int rawCommand ( const QString & command )
+int rawCommand( const QString & command )
 */
 HB_FUNC_STATIC( QFTP_RAWCOMMAND )
 {
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QFTP_RAWCOMMAND )
 }
 
 /*
-qint64 read ( char * data, qint64 maxlen )
+qint64 read( char * data, qint64 maxlen )
 */
 HB_FUNC_STATIC( QFTP_READ )
 {
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( QFTP_READALL )
 }
 
 /*
-int remove ( const QString & file )
+int remove( const QString & file )
 */
 HB_FUNC_STATIC( QFTP_REMOVE )
 {
@@ -620,7 +620,7 @@ HB_FUNC_STATIC( QFTP_REMOVE )
 }
 
 /*
-int rename ( const QString & oldname, const QString & newname )
+int rename( const QString & oldname, const QString & newname )
 */
 HB_FUNC_STATIC( QFTP_RENAME )
 {
@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QFTP_RENAME )
 }
 
 /*
-int rmdir ( const QString & dir )
+int rmdir( const QString & dir )
 */
 HB_FUNC_STATIC( QFTP_RMDIR )
 {
@@ -668,7 +668,7 @@ HB_FUNC_STATIC( QFTP_RMDIR )
 }
 
 /*
-int setProxy ( const QString & host, quint16 port )
+int setProxy( const QString & host, quint16 port )
 */
 HB_FUNC_STATIC( QFTP_SETPROXY )
 {
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QFTP_SETPROXY )
 }
 
 /*
-int setTransferMode ( TransferMode mode )
+int setTransferMode( QFtp::TransferMode mode )
 */
 HB_FUNC_STATIC( QFTP_SETTRANSFERMODE )
 {

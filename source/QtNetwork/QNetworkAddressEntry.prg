@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_PREFIXLENGTH )
 }
 
 /*
-void setBroadcast ( const QHostAddress & newBroadcast )
+void setBroadcast( const QHostAddress & newBroadcast )
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETBROADCAST )
 {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETBROADCAST )
 }
 
 /*
-void setIp ( const QHostAddress & newIp )
+void setIp( const QHostAddress & newIp )
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETIP )
 {
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETIP )
 }
 
 /*
-void setNetmask ( const QHostAddress & newNetmask )
+void setNetmask( const QHostAddress & newNetmask )
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETNETMASK )
 {
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETNETMASK )
 }
 
 /*
-void setPrefixLength ( int length )
+void setPrefixLength( int length )
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETPREFIXLENGTH )
 {

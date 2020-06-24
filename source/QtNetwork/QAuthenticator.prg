@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_ISNULL )
 }
 
 /*
-QVariant option ( const QString & opt ) const
+QVariant option( const QString & opt ) const
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_OPTION )
 {
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_REALM )
 }
 
 /*
-void setOption ( const QString & opt, const QVariant & value )
+void setOption( const QString & opt, const QVariant & value )
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_SETOPTION )
 {
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_SETOPTION )
 }
 
 /*
-void setPassword ( const QString & password )
+void setPassword( const QString & password )
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_SETPASSWORD )
 {
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_SETPASSWORD )
 }
 
 /*
-void setUser ( const QString & user )
+void setUser( const QString & user )
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_SETUSER )
 {

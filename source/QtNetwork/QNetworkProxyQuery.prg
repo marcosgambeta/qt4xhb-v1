@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_QUERYTYPE )
 }
 
 /*
-void setLocalPort ( int port )
+void setLocalPort( int port )
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETLOCALPORT )
 {
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETLOCALPORT )
 }
 
 /*
-void setPeerHostName ( const QString & hostname )
+void setPeerHostName( const QString & hostname )
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETPEERHOSTNAME )
 {
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETPEERHOSTNAME )
 }
 
 /*
-void setPeerPort ( int port )
+void setPeerPort( int port )
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETPEERPORT )
 {
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETPEERPORT )
 }
 
 /*
-void setProtocolTag ( const QString & protocolTag )
+void setProtocolTag( const QString & protocolTag )
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETPROTOCOLTAG )
 {
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETPROTOCOLTAG )
 }
 
 /*
-void setQueryType ( QueryType type )
+void setQueryType( QNetworkProxyQuery::QueryType type )
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETQUERYTYPE )
 {
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETQUERYTYPE )
 }
 
 /*
-void setUrl ( const QUrl & url )
+void setUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_SETURL )
 {

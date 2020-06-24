@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ABORT )
 }
 
 /*
-QVariant attribute ( QNetworkRequest::Attribute code ) const
+QVariant attribute( QNetworkRequest::Attribute code ) const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_ATTRIBUTE )
 {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ERROR )
 }
 
 /*
-bool hasRawHeader ( const QByteArray & headerName ) const
+bool hasRawHeader( const QByteArray & headerName ) const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_HASRAWHEADER )
 {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_HASRAWHEADER )
 }
 
 /*
-QVariant header ( QNetworkRequest::KnownHeaders header ) const
+QVariant header( QNetworkRequest::KnownHeaders header ) const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_HEADER )
 {
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_OPERATION )
 }
 
 /*
-QByteArray rawHeader ( const QByteArray & headerName ) const
+QByteArray rawHeader( const QByteArray & headerName ) const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADER )
 {
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_REQUEST )
 }
 
 /*
-virtual void setReadBufferSize ( qint64 size )
+virtual void setReadBufferSize( qint64 size )
 */
 HB_FUNC_STATIC( QNETWORKREPLY_SETREADBUFFERSIZE )
 {
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_SETREADBUFFERSIZE )
 }
 
 /*
-void setSslConfiguration ( const QSslConfiguration & config )
+void setSslConfiguration( const QSslConfiguration & config )
 */
 HB_FUNC_STATIC( QNETWORKREPLY_SETSSLCONFIGURATION )
 {

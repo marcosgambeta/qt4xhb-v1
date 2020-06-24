@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QURLINFO_SETFILE )
 }
 
 /*
-virtual void setGroup ( const QString & s )
+virtual void setGroup( const QString & s )
 */
 HB_FUNC_STATIC( QURLINFO_SETGROUP )
 {
@@ -606,7 +606,7 @@ HB_FUNC_STATIC( QURLINFO_SETLASTREAD )
 }
 
 /*
-virtual void setName ( const QString & name )
+virtual void setName( const QString & name )
 */
 HB_FUNC_STATIC( QURLINFO_SETNAME )
 {
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QURLINFO_SETNAME )
 }
 
 /*
-virtual void setOwner ( const QString & s )
+virtual void setOwner( const QString & s )
 */
 HB_FUNC_STATIC( QURLINFO_SETOWNER )
 {

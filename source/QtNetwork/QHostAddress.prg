@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS )
 }
 
 /*
-void setScopeId ( const QString & id )
+void setScopeId( const QString & id )
 */
 HB_FUNC_STATIC( QHOSTADDRESS_SETSCOPEID )
 {

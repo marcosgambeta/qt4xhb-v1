@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_QUERYPROXY )
 }
 
 /*
-static QList<QNetworkProxy> proxyForQuery ( const QNetworkProxyQuery & query )
+static QList<QNetworkProxy> proxyForQuery( const QNetworkProxyQuery & query )
 */
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_PROXYFORQUERY )
 {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_PROXYFORQUERY )
 }
 
 /*
-static void setApplicationProxyFactory ( QNetworkProxyFactory * factory )
+static void setApplicationProxyFactory( QNetworkProxyFactory * factory )
 */
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SETAPPLICATIONPROXYFACTORY )
 {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SETAPPLICATIONPROXYFACTORY )
 }
 
 /*
-static void setUseSystemConfiguration ( bool enable )
+static void setUseSystemConfiguration( bool enable )
 */
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SETUSESYSTEMCONFIGURATION )
 {

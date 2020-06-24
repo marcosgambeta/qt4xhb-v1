@@ -199,6 +199,11 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_CONNECTTOHOST2 )
 }
 
 /*
+[1]void connectToHost ( const QString & hostName, quint16 port, OpenMode openMode = ReadWrite )
+[2]void connectToHost ( const QHostAddress & address, quint16 port, OpenMode openMode = ReadWrite )
+*/
+
+/*
 void disconnectFromHost()
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_DISCONNECTFROMHOST )
@@ -468,7 +473,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_READBUFFERSIZE )
 }
 
 /*
-void setProxy ( const QNetworkProxy & networkProxy )
+void setProxy( const QNetworkProxy & networkProxy )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_SETPROXY )
 {
@@ -494,7 +499,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETPROXY )
 }
 
 /*
-void setReadBufferSize ( qint64 size )
+void setReadBufferSize( qint64 size )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_SETREADBUFFERSIZE )
 {
@@ -544,7 +549,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETSOCKETDESCRIPTOR )
 }
 
 /*
-void setSocketOption ( QAbstractSocket::SocketOption option, const QVariant & value )
+void setSocketOption( QAbstractSocket::SocketOption option, const QVariant & value )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_SETSOCKETOPTION )
 {
@@ -594,7 +599,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETDESCRIPTOR )
 }
 
 /*
-QVariant socketOption ( QAbstractSocket::SocketOption option )
+QVariant socketOption( QAbstractSocket::SocketOption option )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETOPTION )
 {

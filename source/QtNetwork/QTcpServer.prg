@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QTCPSERVER_SERVERPORT )
 }
 
 /*
-void setMaxPendingConnections ( int numConnections )
+void setMaxPendingConnections( int numConnections )
 */
 HB_FUNC_STATIC( QTCPSERVER_SETMAXPENDINGCONNECTIONS )
 {
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QTCPSERVER_SETMAXPENDINGCONNECTIONS )
 }
 
 /*
-void setProxy ( const QNetworkProxy & networkProxy )
+void setProxy( const QNetworkProxy & networkProxy )
 */
 HB_FUNC_STATIC( QTCPSERVER_SETPROXY )
 {
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QTCPSERVER_SETPROXY )
 }
 
 /*
-bool setSocketDescriptor ( int socketDescriptor )
+bool setSocketDescriptor( int socketDescriptor )
 */
 HB_FUNC_STATIC( QTCPSERVER_SETSOCKETDESCRIPTOR )
 {

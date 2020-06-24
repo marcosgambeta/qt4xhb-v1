@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ISOPEN )
 }
 
 /*
-QVariant sessionProperty ( const QString & key ) const
+QVariant sessionProperty( const QString & key ) const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_SESSIONPROPERTY )
 {
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_SESSIONPROPERTY )
 }
 
 /*
-void setSessionProperty ( const QString & key, const QVariant & value )
+void setSessionProperty( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QNETWORKSESSION_SETSESSIONPROPERTY )
 {

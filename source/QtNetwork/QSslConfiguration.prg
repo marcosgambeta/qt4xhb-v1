@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SESSIONCIPHER )
 }
 
 /*
-void setCaCertificates ( const QList<QSslCertificate> & certificates )
+void setCaCertificates( const QList<QSslCertificate> & certificates )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETCACERTIFICATES )
 {
@@ -516,7 +516,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETCACERTIFICATES )
 }
 
 /*
-void setCiphers ( const QList<QSslCipher> & ciphers )
+void setCiphers( const QList<QSslCipher> & ciphers )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETCIPHERS )
 {
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETCIPHERS )
 }
 
 /*
-void setLocalCertificate ( const QSslCertificate & certificate )
+void setLocalCertificate( const QSslCertificate & certificate )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETLOCALCERTIFICATE )
 {
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETLOCALCERTIFICATE )
 }
 
 /*
-void setPeerVerifyDepth ( int depth )
+void setPeerVerifyDepth( int depth )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETPEERVERIFYDEPTH )
 {
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETPEERVERIFYDEPTH )
 }
 
 /*
-void setPeerVerifyMode ( QSslSocket::PeerVerifyMode mode )
+void setPeerVerifyMode( QSslSocket::PeerVerifyMode mode )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETPEERVERIFYMODE )
 {
@@ -628,7 +628,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETPEERVERIFYMODE )
 }
 
 /*
-void setPrivateKey ( const QSslKey & key )
+void setPrivateKey( const QSslKey & key )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETPRIVATEKEY )
 {
@@ -654,7 +654,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_SETPRIVATEKEY )
 }
 
 /*
-void setProtocol ( QSsl::SslProtocol protocol )
+void setProtocol( QSsl::SslProtocol protocol )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETPROTOCOL )
 {
@@ -700,7 +700,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_DEFAULTCONFIGURATION )
 }
 
 /*
-static void setDefaultConfiguration ( const QSslConfiguration & configuration )
+static void setDefaultConfiguration( const QSslConfiguration & configuration )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETDEFAULTCONFIGURATION )
 {

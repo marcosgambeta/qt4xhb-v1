@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QHTTPPART_DELETE )
 }
 
 /*
-void setBody ( const QByteArray & body )
+void setBody( const QByteArray & body )
 */
 HB_FUNC_STATIC( QHTTPPART_SETBODY )
 {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QHTTPPART_SETBODY )
 }
 
 /*
-void setBodyDevice ( QIODevice * device )
+void setBodyDevice( QIODevice * device )
 */
 HB_FUNC_STATIC( QHTTPPART_SETBODYDEVICE )
 {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QHTTPPART_SETBODYDEVICE )
 }
 
 /*
-void setHeader ( QNetworkRequest::KnownHeaders header, const QVariant & value )
+void setHeader( QNetworkRequest::KnownHeaders header, const QVariant & value )
 */
 HB_FUNC_STATIC( QHTTPPART_SETHEADER )
 {
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QHTTPPART_SETHEADER )
 }
 
 /*
-void setRawHeader ( const QByteArray & headerName, const QByteArray & headerValue )
+void setRawHeader( const QByteArray & headerName, const QByteArray & headerValue )
 */
 HB_FUNC_STATIC( QHTTPPART_SETRAWHEADER )
 {

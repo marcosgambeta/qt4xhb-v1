@@ -814,7 +814,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SESSIONCIPHER )
 }
 
 /*
-void setCaCertificates ( const QList<QSslCertificate> & certificates )
+void setCaCertificates( const QList<QSslCertificate> & certificates )
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETCACERTIFICATES )
 {
@@ -958,7 +958,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETLOCALCERTIFICATE )
 }
 
 /*
-void setPeerVerifyDepth ( int depth )
+void setPeerVerifyDepth( int depth )
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETPEERVERIFYDEPTH )
 {
@@ -984,7 +984,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETPEERVERIFYDEPTH )
 }
 
 /*
-void setPeerVerifyMode ( QSslSocket::PeerVerifyMode mode )
+void setPeerVerifyMode( QSslSocket::PeerVerifyMode mode )
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETPEERVERIFYMODE )
 {
@@ -1061,7 +1061,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETPRIVATEKEY )
 }
 
 /*
-void setProtocol ( QSsl::SslProtocol protocol )
+void setProtocol( QSsl::SslProtocol protocol )
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETPROTOCOL )
 {
@@ -1087,7 +1087,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETPROTOCOL )
 }
 
 /*
-void setReadBufferSize ( qint64 size )
+void setReadBufferSize( qint64 size )
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETREADBUFFERSIZE )
 {
@@ -1137,7 +1137,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETSOCKETDESCRIPTOR )
 }
 
 /*
-void setSocketOption ( QAbstractSocket::SocketOption option, const QVariant & value )
+void setSocketOption( QAbstractSocket::SocketOption option, const QVariant & value )
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETSOCKETOPTION )
 {
@@ -1163,7 +1163,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETSOCKETOPTION )
 }
 
 /*
-void setSslConfiguration ( const QSslConfiguration & configuration )
+void setSslConfiguration( const QSslConfiguration & configuration )
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETSSLCONFIGURATION )
 {
@@ -1189,7 +1189,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETSSLCONFIGURATION )
 }
 
 /*
-QVariant socketOption ( QAbstractSocket::SocketOption option )
+QVariant socketOption( QAbstractSocket::SocketOption option )
 */
 HB_FUNC_STATIC( QSSLSOCKET_SOCKETOPTION )
 {
@@ -1585,7 +1585,7 @@ HB_FUNC_STATIC( QSSLSOCKET_STARTSERVERENCRYPTION )
 }
 
 /*
-static void addDefaultCaCertificate ( const QSslCertificate & certificate )
+static void addDefaultCaCertificate( const QSslCertificate & certificate )
 */
 HB_FUNC_STATIC( QSSLSOCKET_ADDDEFAULTCACERTIFICATE )
 {
@@ -1763,7 +1763,7 @@ HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCIPHERS )
 }
 
 /*
-void setDefaultCaCertificates ( const QList<QSslCertificate> & certificates )
+void setDefaultCaCertificates( const QList<QSslCertificate> & certificates )
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETDEFAULTCACERTIFICATES )
 {
@@ -1797,7 +1797,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETDEFAULTCACERTIFICATES )
 }
 
 /*
-void setDefaultCiphers ( const QList<QSslCipher> & ciphers )
+void setDefaultCiphers( const QList<QSslCipher> & ciphers )
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETDEFAULTCIPHERS )
 {

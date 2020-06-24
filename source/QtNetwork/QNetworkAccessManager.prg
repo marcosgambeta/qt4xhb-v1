@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_COOKIEJAR )
 }
 
 /*
-QNetworkReply * deleteResource ( const QNetworkRequest & request )
+QNetworkReply * deleteResource( const QNetworkRequest & request )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_DELETERESOURCE )
 {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_DELETERESOURCE )
 }
 
 /*
-QNetworkReply * get ( const QNetworkRequest & request )
+QNetworkReply * get( const QNetworkRequest & request )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_GET )
 {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_GET )
 }
 
 /*
-QNetworkReply * head ( const QNetworkRequest & request )
+QNetworkReply * head( const QNetworkRequest & request )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_HEAD )
 {
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST )
 }
 
 /*
-void setCache ( QAbstractNetworkCache * cache )
+void setCache( QAbstractNetworkCache * cache )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETCACHE )
 {
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETCACHE )
 }
 
 /*
-void setConfiguration ( const QNetworkConfiguration & config )
+void setConfiguration( const QNetworkConfiguration & config )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETCONFIGURATION )
 {
@@ -537,7 +537,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETCONFIGURATION )
 }
 
 /*
-void setCookieJar ( QNetworkCookieJar * cookieJar )
+void setCookieJar( QNetworkCookieJar * cookieJar )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETCOOKIEJAR )
 {
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETCOOKIEJAR )
 }
 
 /*
-void setNetworkAccessible ( NetworkAccessibility accessible )
+void setNetworkAccessible( QNetworkAccessManager::NetworkAccessibility accessible )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETNETWORKACCESSIBLE )
 {
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETNETWORKACCESSIBLE )
 }
 
 /*
-void setProxy ( const QNetworkProxy & proxy )
+void setProxy( const QNetworkProxy & proxy )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETPROXY )
 {
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETPROXY )
 }
 
 /*
-void setProxyFactory ( QNetworkProxyFactory * factory )
+void setProxyFactory( QNetworkProxyFactory * factory )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETPROXYFACTORY )
 {
