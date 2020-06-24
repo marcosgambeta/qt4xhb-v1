@@ -68,8 +68,7 @@ $prototypeV2=QDeclarativeEngine * engine() const
 
 $prototypeV2=QDeclarativeError error() const
 
-$prototype=QVariant evaluate ( bool * valueIsUndefined = 0 )
-$method=|QVariant|evaluate|bool *=0
+$prototypeV2=QVariant evaluate( bool * valueIsUndefined = 0 )
 
 $prototypeV2=QString expression() const
 
