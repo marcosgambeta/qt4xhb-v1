@@ -59,8 +59,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void abortEvaluation ( const QScriptValue & result = QScriptValue() )
-$method=|void|abortEvaluation|const QScriptValue &=QScriptValue()
+$prototypeV2=void abortEvaluation( const QScriptValue & result = QScriptValue() )
 
 $prototypeV2=QScriptEngineAgent * agent() const
 
@@ -110,13 +109,11 @@ $prototypeV2=QScriptValue importExtension( const QString & extension )
 
 $prototypeV2=QStringList importedExtensions() const
 
-$prototype=void installTranslatorFunctions ( const QScriptValue & object = QScriptValue() )
-$method=|void|installTranslatorFunctions|const QScriptValue &=QScriptValue()
+$prototypeV2=void installTranslatorFunctions( const QScriptValue & object = QScriptValue() )
 
 $prototypeV2=bool isEvaluating() const
 
-$prototype=QScriptValue newArray ( uint length = 0 )
-$method=|QScriptValue|newArray|uint=0
+$prototypeV2=QScriptValue newArray( uint length = 0 )
 
 $prototype=QScriptValue newRegExp ( const QRegExp & regexp )
 $internalMethod=|QScriptValue|newRegExp,newRegExp1|const QRegExp &

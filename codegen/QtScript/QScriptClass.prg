@@ -33,8 +33,7 @@ $deleteMethod
 $prototype=QScriptEngine * engine () const
 %% TODO: $method=|QScriptEngine *|engine|
 
-$prototype=virtual QVariant extension ( Extension extension, const QVariant & argument = QVariant() )
-$virtualMethod=|QVariant|extension|QScriptClass::Extension,const QVariant &=QVariant()
+$prototypeV2=virtual QVariant extension( QScriptClass::Extension extension, const QVariant & argument = QVariant() )
 
 $prototypeV2=virtual QString name() const
 

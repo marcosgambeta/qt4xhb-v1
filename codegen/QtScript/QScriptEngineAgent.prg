@@ -42,8 +42,7 @@ $prototypeV2=virtual void exceptionCatch( qint64 scriptId, const QScriptValue & 
 
 $prototypeV2=virtual void exceptionThrow( qint64 scriptId, const QScriptValue & exception, bool hasHandler )
 
-$prototype=virtual QVariant extension ( Extension extension, const QVariant & argument = QVariant() )
-$virtualMethod=|QVariant|extension|QScriptEngineAgent::Extension,const QVariant &=QVariant()
+$prototypeV2=virtual QVariant extension( QScriptEngineAgent::Extension extension, const QVariant & argument = QVariant() )
 
 $prototypeV2=virtual void functionEntry( qint64 scriptId )
 
