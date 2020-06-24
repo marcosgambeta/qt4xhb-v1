@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QGLCONTEXT_CREATE )
 }
 
 /*
-void deleteTexture ( GLuint id )
+void deleteTexture( GLuint id )
 */
 HB_FUNC_STATIC( QGLCONTEXT_DELETETEXTURE )
 {
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QGLCONTEXT_FORMAT )
 }
 
 /*
-void * getProcAddress ( const QString & proc ) const
+void * getProcAddress( const QString & proc ) const
 */
 HB_FUNC_STATIC( QGLCONTEXT_GETPROCADDRESS )
 {
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QGLCONTEXT_RESET )
 }
 
 /*
-void setFormat ( const QGLFormat & format )
+void setFormat( const QGLFormat & format )
 */
 HB_FUNC_STATIC( QGLCONTEXT_SETFORMAT )
 {
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QGLCONTEXT_SWAPBUFFERS )
 }
 
 /*
-static bool areSharing ( const QGLContext * context1, const QGLContext * context2 )
+static bool areSharing( const QGLContext * context1, const QGLContext * context2 )
 */
 HB_FUNC_STATIC( QGLCONTEXT_ARESHARING )
 {
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QGLCONTEXT_CURRENTCONTEXT )
 }
 
 /*
-static void setTextureCacheLimit ( int size )
+static void setTextureCacheLimit( int size )
 */
 HB_FUNC_STATIC( QGLCONTEXT_SETTEXTURECACHELIMIT )
 {

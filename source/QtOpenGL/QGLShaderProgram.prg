@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_DELETE )
 }
 
 /*
-bool addShader ( QGLShader * shader )
+bool addShader( QGLShader * shader )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADER )
 {
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE )
 }
 
 /*
-bool addShaderFromSourceFile ( QGLShader::ShaderType type, const QString & fileName )
+bool addShaderFromSourceFile( QGLShader::ShaderType type, const QString & fileName )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCEFILE )
 {
@@ -894,7 +894,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_REMOVEALLSHADERS )
 }
 
 /*
-void removeShader ( QGLShader * shader )
+void removeShader( QGLShader * shader )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_REMOVESHADER )
 {
@@ -1317,7 +1317,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE )
 }
 
 /*
-void setGeometryInputType ( GLenum inputType )
+void setGeometryInputType( GLenum inputType )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETGEOMETRYINPUTTYPE )
 {
@@ -1343,7 +1343,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETGEOMETRYINPUTTYPE )
 }
 
 /*
-void setGeometryOutputType ( GLenum outputType )
+void setGeometryOutputType( GLenum outputType )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETGEOMETRYOUTPUTTYPE )
 {
@@ -1369,7 +1369,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETGEOMETRYOUTPUTTYPE )
 }
 
 /*
-void setGeometryOutputVertexCount ( int count )
+void setGeometryOutputVertexCount( int count )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETGEOMETRYOUTPUTVERTEXCOUNT )
 {
@@ -2129,7 +2129,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUEARRAY )
 }
 
 /*
-QList<QGLShader *> shaders () const
+QList<QGLShader *> shaders() const
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SHADERS )
 {

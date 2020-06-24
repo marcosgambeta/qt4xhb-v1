@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTEXTURE )
 }
 
 /*
-bool bindToDynamicTexture ( GLuint texture_id )
+bool bindToDynamicTexture( GLuint texture_id )
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTODYNAMICTEXTURE )
 {
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_BINDTODYNAMICTEXTURE )
 }
 
 /*
-void deleteTexture ( GLuint texture_id )
+void deleteTexture( GLuint texture_id )
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_DELETETEXTURE )
 {
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_TOIMAGE )
 }
 
 /*
-void updateDynamicTexture ( GLuint texture_id ) const
+void updateDynamicTexture( GLuint texture_id ) const
 */
 HB_FUNC_STATIC( QGLPIXELBUFFER_UPDATEDYNAMICTEXTURE )
 {

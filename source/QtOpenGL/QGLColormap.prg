@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_DELETE )
 }
 
 /*
-QColor entryColor ( int idx ) const
+QColor entryColor( int idx ) const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_ENTRYCOLOR )
 {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_ENTRYCOLOR )
 }
 
 /*
-QRgb entryRgb ( int idx ) const
+QRgb entryRgb( int idx ) const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_ENTRYRGB )
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_ENTRYRGB )
 }
 
 /*
-int find ( QRgb color ) const
+int find( QRgb color ) const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_FIND )
 {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_FIND )
 }
 
 /*
-int findNearest ( QRgb color ) const
+int findNearest( QRgb color ) const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_FINDNEAREST )
 {

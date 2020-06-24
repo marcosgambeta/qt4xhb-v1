@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE )
 }
 
 /*
-bool compileSourceFile ( const QString & fileName )
+bool compileSourceFile( const QString & fileName )
 */
 HB_FUNC_STATIC( QGLSHADER_COMPILESOURCEFILE )
 {

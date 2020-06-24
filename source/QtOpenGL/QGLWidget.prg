@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QGLWIDGET_CONTEXT )
 }
 
 /*
-void deleteTexture ( GLuint id )
+void deleteTexture( GLuint id )
 */
 HB_FUNC_STATIC( QGLWIDGET_DELETETEXTURE )
 {
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QGLWIDGET_OVERLAYCONTEXT )
 }
 
 /*
-void qglClearColor ( const QColor & c ) const
+void qglClearColor( const QColor & c ) const
 */
 HB_FUNC_STATIC( QGLWIDGET_QGLCLEARCOLOR )
 {
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QGLWIDGET_QGLCLEARCOLOR )
 }
 
 /*
-void qglColor ( const QColor & c ) const
+void qglColor( const QColor & c ) const
 */
 HB_FUNC_STATIC( QGLWIDGET_QGLCOLOR )
 {
@@ -723,7 +723,7 @@ HB_FUNC_STATIC( QGLWIDGET_RENDERTEXT )
 }
 
 /*
-void setColormap ( const QGLColormap & cmap )
+void setColormap( const QGLColormap & cmap )
 */
 HB_FUNC_STATIC( QGLWIDGET_SETCOLORMAP )
 {
@@ -749,7 +749,7 @@ HB_FUNC_STATIC( QGLWIDGET_SETCOLORMAP )
 }
 
 /*
-void setMouseTracking ( bool enable )
+void setMouseTracking( bool enable )
 */
 HB_FUNC_STATIC( QGLWIDGET_SETMOUSETRACKING )
 {
@@ -853,7 +853,7 @@ HB_FUNC_STATIC( QGLWIDGET_UPDATEOVERLAYGL )
 }
 
 /*
-static QImage convertToGLFormat ( const QImage & img )
+static QImage convertToGLFormat( const QImage & img )
 */
 HB_FUNC_STATIC( QGLWIDGET_CONVERTTOGLFORMAT )
 {
