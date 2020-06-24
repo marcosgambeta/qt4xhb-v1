@@ -93,8 +93,7 @@ $prototypeV2=QColor selectedColor() const
 
 $prototypeV2=void setCurrentColor( const QColor & color )
 
-$prototype=void setOption ( ColorDialogOption option, bool on = true )
-$method=|void|setOption|QColorDialog::ColorDialogOption,bool=true
+$prototypeV2=void setOption( QColorDialog::ColorDialogOption option, bool on = true )
 
 $prototypeV2=void setOptions( QColorDialog::ColorDialogOptions options )
 

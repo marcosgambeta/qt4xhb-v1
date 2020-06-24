@@ -206,8 +206,7 @@ $prototypeV2=void setItemWidget( QListWidgetItem * item, QWidget * widget )
 
 $prototypeV2=void setSortingEnabled( bool enable )
 
-$prototype=void sortItems ( Qt::SortOrder order = Qt::AscendingOrder )
-$method=|void|sortItems|Qt::SortOrder=Qt::AscendingOrder
+$prototypeV2=void sortItems( Qt::SortOrder order = Qt::AscendingOrder )
 
 $prototypeV2=QListWidgetItem * takeItem( int row )
 
@@ -217,8 +216,7 @@ $prototypeV2=virtual void dropEvent( QDropEvent * event )
 
 $prototypeV2=void clear()
 
-$prototype=void scrollToItem ( const QListWidgetItem * item, QAbstractItemView::ScrollHint hint = EnsureVisible )
-$method=|void|scrollToItem|const QListWidgetItem *,QAbstractItemView::ScrollHint=QAbstractItemView::EnsureVisible
+$prototypeV2=void scrollToItem( const QListWidgetItem * item, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible )
 
 $beginSignals
 $signal=|currentItemChanged(QListWidgetItem*,QListWidgetItem*)

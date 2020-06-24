@@ -36,8 +36,7 @@ $prototypeV2=void addTopLevelItem( QTreeWidgetItem * item )
 
 $prototypeV2=void addTopLevelItems( const QList<QTreeWidgetItem *> & items )
 
-$prototype=void closePersistentEditor ( QTreeWidgetItem * item, int column = 0 )
-$method=|void|closePersistentEditor|QTreeWidgetItem *,int=0
+$prototypeV2=void closePersistentEditor( QTreeWidgetItem * item, int column = 0 )
 
 $prototypeV2=int columnCount() const
 
@@ -45,11 +44,9 @@ $prototypeV2=int currentColumn() const
 
 $prototypeV2=QTreeWidgetItem * currentItem() const
 
-$prototype=void editItem ( QTreeWidgetItem * item, int column = 0 )
-$method=|void|editItem|QTreeWidgetItem *,int=0
+$prototypeV2=void editItem( QTreeWidgetItem * item, int column = 0 )
 
-$prototype=QList<QTreeWidgetItem *> findItems ( const QString & text, Qt::MatchFlags flags, int column = 0 ) const
-$method=|QList<QTreeWidgetItem *>|findItems|const QString &,Qt::MatchFlags,int=0
+$prototypeV2=QList<QTreeWidgetItem *> findItems( const QString & text, Qt::MatchFlags flags, int column = 0 ) const
 
 $prototypeV2=QTreeWidgetItem * headerItem() const
 
@@ -97,8 +94,7 @@ $prototypeV2=QTreeWidgetItem * itemBelow( const QTreeWidgetItem * item ) const
 
 $prototypeV2=QWidget * itemWidget( QTreeWidgetItem * item, int column ) const
 
-$prototype=void openPersistentEditor ( QTreeWidgetItem * item, int column = 0 )
-$method=|void|openPersistentEditor|QTreeWidgetItem *,int=0
+$prototypeV2=void openPersistentEditor( QTreeWidgetItem * item, int column = 0 )
 
 $prototypeV2=void removeItemWidget( QTreeWidgetItem * item, int column )
 
@@ -172,8 +168,7 @@ $prototypeV2=void collapseItem( const QTreeWidgetItem * item )
 
 $prototypeV2=void expandItem( const QTreeWidgetItem * item )
 
-$prototype=void scrollToItem ( const QTreeWidgetItem * item, QAbstractItemView::ScrollHint hint = EnsureVisible )
-$method=|void|scrollToItem|const QTreeWidgetItem *,QAbstractItemView::ScrollHint=QAbstractItemView::EnsureVisible
+$prototypeV2=void scrollToItem( const QTreeWidgetItem * item, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible )
 
 $beginSignals
 $signal=|currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)

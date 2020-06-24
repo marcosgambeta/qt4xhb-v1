@@ -87,8 +87,7 @@ HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES )
 }
 $addMethod=advancesForGlyphIndexes
 
-$prototype=QImage alphaMapForGlyph ( quint32 glyphIndex, AntialiasingType antialiasingType = SubPixelAntialiasing, const QTransform & transform = QTransform() ) const
-$method=|QImage|alphaMapForGlyph|quint32,QRawFont::AntialiasingType=QRawFont::SubPixelAntialiasing,const QTransform &=QTransform()
+$prototypeV2=QImage alphaMapForGlyph( quint32 glyphIndex, QRawFont::AntialiasingType antialiasingType = QRawFont::SubPixelAntialiasing, const QTransform & transform = QTransform() ) const
 
 $prototypeV2=qreal ascent() const
 
@@ -160,8 +159,7 @@ $prototypeV2=int weight() const
 
 $prototypeV2=qreal xHeight() const
 
-$prototype=static QRawFont fromFont ( const QFont & font, QFontDatabase::WritingSystem writingSystem = QFontDatabase::Any )
-$staticMethod=|QRawFont|fromFont|const QFont &,QFontDatabase::WritingSystem=QFontDatabase::Any
+$prototypeV2=static QRawFont fromFont( const QFont & font, QFontDatabase::WritingSystem writingSystem = QFontDatabase::Any )
 
 $extraMethods
 

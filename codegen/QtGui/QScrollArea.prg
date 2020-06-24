@@ -32,11 +32,9 @@ $deleteMethod
 
 $prototypeV2=Qt::Alignment alignment() const
 
-$prototype=void ensureVisible ( int x, int y, int xmargin = 50, int ymargin = 50 )
-$method=|void|ensureVisible|int,int,int=50,int=50
+$prototypeV2=void ensureVisible( int x, int y, int xmargin = 50, int ymargin = 50 )
 
-$prototype=void ensureWidgetVisible ( QWidget * childWidget, int xmargin = 50, int ymargin = 50 )
-$method=|void|ensureWidgetVisible|QWidget *,int=50,int=50
+$prototypeV2=void ensureWidgetVisible( QWidget * childWidget, int xmargin = 50, int ymargin = 50 )
 
 $prototypeV2=void setAlignment( Qt::Alignment )
 

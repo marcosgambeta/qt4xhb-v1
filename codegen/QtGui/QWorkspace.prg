@@ -34,8 +34,7 @@ $deleteMethod
 
 $prototypeV2=QWidget * activeWindow() const
 
-$prototype=QWidget * addWindow ( QWidget * w, Qt::WindowFlags flags = 0 )
-$method=|QWidget *|addWindow|QWidget *,Qt::WindowFlags=0
+$prototypeV2=QWidget * addWindow( QWidget * w, Qt::WindowFlags flags = 0 )
 
 $prototypeV2=QBrush background() const
 
@@ -45,8 +44,7 @@ $prototypeV2=void setBackground( const QBrush & background )
 
 $prototypeV2=void setScrollBarsEnabled( bool enable )
 
-$prototype=QWidgetList windowList ( WindowOrder order = CreationOrder ) const
-$method=|QWidgetList|windowList|QWorkspace::WindowOrder=QWorkspace::CreationOrder
+$prototypeV2=QWidgetList windowList( QWorkspace::WindowOrder order = QWorkspace::CreationOrder ) const
 
 $prototypeV2=virtual QSize sizeHint() const
 

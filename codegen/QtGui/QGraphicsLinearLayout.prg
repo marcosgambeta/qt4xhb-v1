@@ -57,15 +57,13 @@ $deleteMethod
 
 $prototypeV2=void addItem( QGraphicsLayoutItem * item )
 
-$prototype=void addStretch ( int stretch = 1 )
-$method=|void|addStretch|int=1
+$prototypeV2=void addStretch( int stretch = 1 )
 
 $prototypeV2=Qt::Alignment alignment( QGraphicsLayoutItem * item ) const
 
 $prototypeV2=void insertItem( int index, QGraphicsLayoutItem * item )
 
-$prototype=void insertStretch ( int index, int stretch = 1 )
-$method=|void|insertStretch|int,int=1
+$prototypeV2=void insertStretch( int index, int stretch = 1 )
 
 $prototypeV2=qreal itemSpacing( int index ) const
 
@@ -97,7 +95,6 @@ $prototypeV2=virtual void removeAt( int index )
 
 $prototypeV2=virtual void setGeometry( const QRectF & rect )
 
-$prototype=virtual QSizeF sizeHint ( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
-$virtualMethod=|QSizeF|sizeHint|Qt::SizeHint,const QSizeF &=QSizeF()
+$prototypeV2=virtual QSizeF sizeHint( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
 
 #pragma ENDDUMP

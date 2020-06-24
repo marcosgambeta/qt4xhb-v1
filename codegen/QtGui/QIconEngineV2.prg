@@ -27,8 +27,7 @@ $includes
 
 $deleteMethod
 
-$prototype=QList<QSize> availableSizes ( QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off )
-$method=|QList<QSize>|availableSizes|QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
+$prototypeV2=QList<QSize> availableSizes( QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off )
 
 $prototypeV2=virtual QIconEngineV2 * clone() const
 

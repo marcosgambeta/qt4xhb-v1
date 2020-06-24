@@ -43,11 +43,9 @@ $prototypeV2=bool canRedo() const
 
 $prototypeV2=bool canUndo() const
 
-$prototype=QAction * createRedoAction ( QObject * parent, const QString & prefix = QString() ) const
-$method=|QAction *|createRedoAction|QObject *,const QString &=QString()
+$prototypeV2=QAction * createRedoAction( QObject * parent, const QString & prefix = QString() ) const
 
-$prototype=QAction * createUndoAction ( QObject * parent, const QString & prefix = QString() ) const
-$method=|QAction *|createUndoAction|QObject *,const QString &=QString()
+$prototypeV2=QAction * createUndoAction( QObject * parent, const QString & prefix = QString() ) const
 
 $prototypeV2=bool isClean() const
 

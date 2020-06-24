@@ -150,8 +150,7 @@ $prototypeV2=void setStrikeOut( bool enable )
 
 $prototypeV2=void setStyle( QFont::Style style )
 
-$prototype=void setStyleHint ( StyleHint hint, StyleStrategy strategy = PreferDefault )
-$method=|void|setStyleHint|QFont::StyleHint,QFont::StyleStrategy=QFont::PreferDefault
+$prototypeV2=void setStyleHint( QFont::StyleHint hint, QFont::StyleStrategy strategy = QFont::PreferDefault )
 
 $prototypeV2=void setStyleStrategy( QFont::StyleStrategy s )
 

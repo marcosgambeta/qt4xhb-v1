@@ -166,7 +166,6 @@ $prototypeV2=virtual void removeAt( int index )
 
 $prototypeV2=virtual void setGeometry( const QRectF & rect )
 
-$prototype=virtual QSizeF sizeHint ( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
-$virtualMethod=|QSizeF|sizeHint|Qt::SizeHint,const QSizeF &=QSizeF()
+$prototypeV2=virtual QSizeF sizeHint( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
 
 #pragma ENDDUMP

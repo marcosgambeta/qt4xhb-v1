@@ -85,11 +85,9 @@ $prototypeV2=void clear()
 
 $prototypeV2=QBitmap transformed( const QTransform & matrix ) const
 
-$prototype=static QBitmap fromData ( const QSize & size, const uchar * bits, QImage::Format monoFormat = QImage::Format_MonoLSB )
-$staticMethod=|QBitmap|fromData|const QSize &,const uchar *,QImage::Format=QImage::Format_MonoLSB
+$prototypeV2=static QBitmap fromData( const QSize & size, const uchar * bits, QImage::Format monoFormat = QImage::Format_MonoLSB )
 
-$prototype=static QBitmap fromImage ( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
-$staticMethod=|QBitmap|fromImage|const QImage &,Qt::ImageConversionFlags=Qt::AutoColor
+$prototypeV2=static QBitmap fromImage( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
 
 $variantMethods
 

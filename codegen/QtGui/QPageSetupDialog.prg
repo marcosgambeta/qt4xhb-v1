@@ -34,8 +34,7 @@ $prototypeV2=QPageSetupDialog::PageSetupDialogOptions options() const
 
 $prototypeV2=QPrinter * printer()
 
-$prototype=void setOption ( PageSetupDialogOption option, bool on = true )
-$method=|void|setOption|QPageSetupDialog::PageSetupDialogOption,bool=true
+$prototypeV2=void setOption( QPageSetupDialog::PageSetupDialogOption option, bool on = true )
 
 $prototypeV2=void setOptions( QPageSetupDialog::PageSetupDialogOptions options )
 

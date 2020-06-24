@@ -134,13 +134,11 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDLINE )
 }
 $addMethod=addLine
 
-$prototype=QGraphicsPathItem * addPath ( const QPainterPath & path, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
-$method=|QGraphicsPathItem *|addPath|const QPainterPath &,const QPen &=QPen(),const QBrush &=QBrush()
+$prototypeV2=QGraphicsPathItem * addPath( const QPainterPath & path, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
 
 $prototypeV2=QGraphicsPixmapItem * addPixmap( const QPixmap & pixmap )
 
-$prototype=QGraphicsPolygonItem * addPolygon ( const QPolygonF & polygon, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
-$method=|QGraphicsPolygonItem *|addPolygon|const QPolygonF &,const QPen &=QPen(),const QBrush &=QBrush()
+$prototypeV2=QGraphicsPolygonItem * addPolygon( const QPolygonF & polygon, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
 
 $prototype=QGraphicsRectItem * addRect ( const QRectF & rect, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
 $internalMethod=|QGraphicsRectItem *|addRect,addRect1|const QRectF &,const QPen &=QPen(),const QBrush &=QBrush()
@@ -170,14 +168,11 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDRECT )
 }
 $addMethod=addRect
 
-$prototype=QGraphicsSimpleTextItem * addSimpleText ( const QString & text, const QFont & font = QFont() )
-$method=|QGraphicsSimpleTextItem *|addSimpleText|const QString &,const QFont &=QFont()
+$prototypeV2=QGraphicsSimpleTextItem * addSimpleText( const QString & text, const QFont & font = QFont() )
 
-$prototype=QGraphicsTextItem * addText ( const QString & text, const QFont & font = QFont() )
-$method=|QGraphicsTextItem *|addText|const QString &,const QFont &=QFont()
+$prototypeV2=QGraphicsTextItem * addText( const QString & text, const QFont & font = QFont() )
 
-$prototype=QGraphicsProxyWidget * addWidget ( QWidget * widget, Qt::WindowFlags wFlags = 0 )
-$method=|QGraphicsProxyWidget *|addWidget|QWidget *,Qt::WindowFlags=0
+$prototypeV2=QGraphicsProxyWidget * addWidget( QWidget * widget, Qt::WindowFlags wFlags = 0 )
 
 $prototypeV2=QBrush backgroundBrush() const
 
@@ -185,8 +180,7 @@ $prototypeV2=int bspTreeDepth() const
 
 $prototypeV2=void clearFocus()
 
-$prototype=QList<QGraphicsItem *> collidingItems ( const QGraphicsItem * item, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
-$method=|QList<QGraphicsItem *>|collidingItems|const QGraphicsItem *,Qt::ItemSelectionMode=Qt::IntersectsItemShape
+$prototypeV2=QList<QGraphicsItem *> collidingItems( const QGraphicsItem * item, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
 
 $prototypeV2=QGraphicsItemGroup * createItemGroup( const QList<QGraphicsItem *> & items )
 
@@ -342,8 +336,7 @@ $prototypeV2=QPalette palette() const
 
 $prototypeV2=void removeItem( QGraphicsItem * item )
 
-$prototype=void render ( QPainter * painter, const QRectF & target = QRectF(), const QRectF & source = QRectF(), Qt::AspectRatioMode aspectRatioMode = Qt::KeepAspectRatio )
-$method=|void|render|QPainter *,const QRectF &=QRectF(),const QRectF &=QRectF(),Qt::AspectRatioMode=Qt::KeepAspectRatio
+$prototypeV2=void render( QPainter * painter, const QRectF & target = QRectF(), const QRectF & source = QRectF(), Qt::AspectRatioMode aspectRatioMode = Qt::KeepAspectRatio )
 
 $prototypeV2=QRectF sceneRect() const
 
@@ -361,11 +354,9 @@ $prototypeV2=void setBackgroundBrush( const QBrush & brush )
 
 $prototypeV2=void setBspTreeDepth( int depth )
 
-$prototype=void setFocus ( Qt::FocusReason focusReason = Qt::OtherFocusReason )
-$method=|void|setFocus|Qt::FocusReason=Qt::OtherFocusReason
+$prototypeV2=void setFocus( Qt::FocusReason focusReason = Qt::OtherFocusReason )
 
-$prototype=void setFocusItem ( QGraphicsItem * item, Qt::FocusReason focusReason = Qt::OtherFocusReason )
-$method=|void|setFocusItem|QGraphicsItem *,Qt::FocusReason=Qt::OtherFocusReason
+$prototypeV2=void setFocusItem( QGraphicsItem * item, Qt::FocusReason focusReason = Qt::OtherFocusReason )
 
 $prototypeV2=void setFont( const QFont & font )
 

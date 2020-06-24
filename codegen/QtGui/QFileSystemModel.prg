@@ -28,6 +28,7 @@ $destructor
 $includes
 
 #include <QtCore/QDateTime>
+#include <QtCore/QMimeData>
 
 $prototype=QFileSystemModel(QObject * parent = 0)
 $constructor=|new|QObject *=0
@@ -54,8 +55,7 @@ $prototypeV2=QDateTime lastModified( const QModelIndex & index ) const
 
 $prototypeV2=QModelIndex mkdir( const QModelIndex & parent, const QString & name )
 
-$prototype=QVariant myComputer ( int role = Qt::DisplayRole ) const
-$method=|QVariant|myComputer|int=Qt::DisplayRole
+$prototypeV2=QVariant myComputer( int role = Qt::DisplayRole ) const
 
 $prototypeV2=bool nameFilterDisables() const
 
@@ -93,11 +93,9 @@ $prototypeV2=QString type( const QModelIndex & index ) const
 
 $prototypeV2=virtual bool canFetchMore( const QModelIndex & parent ) const
 
-$prototype=virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const
-$virtualMethod=|int|columnCount|const QModelIndex &=QModelIndex()
+$prototypeV2=virtual int columnCount( const QModelIndex & parent = QModelIndex() ) const
 
-$prototype=virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
-$virtualMethod=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
+$prototypeV2=virtual QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const
 
 $prototypeV2=virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int column, const QModelIndex & parent )
 
@@ -105,11 +103,9 @@ $prototypeV2=virtual void fetchMore( const QModelIndex & parent )
 
 $prototypeV2=virtual Qt::ItemFlags flags( const QModelIndex & index ) const
 
-$prototype=virtual bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
-$virtualMethod=|bool|hasChildren|const QModelIndex &=QModelIndex()
+$prototypeV2=virtual bool hasChildren( const QModelIndex & parent = QModelIndex() ) const
 
-$prototype=virtual QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
-$virtualMethod=|QVariant|headerData|int,Qt::Orientation,int=Qt::DisplayRole
+$prototypeV2=virtual QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 
 $prototype=QModelIndex index ( const QString & path, int column = 0 ) const
 $internalMethod=|QModelIndex|index,index1|const QString &,int=0
@@ -145,14 +141,11 @@ $prototypeV2=virtual QStringList mimeTypes() const
 
 $prototypeV2=virtual QModelIndex parent( const QModelIndex & index ) const
 
-$prototype=virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
-$virtualMethod=|int|rowCount|const QModelIndex &=QModelIndex()
+$prototypeV2=virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
 
-$prototype=virtual bool setData ( const QModelIndex & idx, const QVariant & value, int role = Qt::EditRole )
-$virtualMethod=|bool|setData|const QModelIndex &,const QVariant &,int=Qt::EditRole
+$prototypeV2=virtual bool setData( const QModelIndex & idx, const QVariant & value, int role = Qt::EditRole )
 
-$prototype=virtual void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
-$virtualMethod=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
+$prototypeV2=virtual void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
 
 $prototypeV2=virtual Qt::DropActions supportedDropActions() const
 

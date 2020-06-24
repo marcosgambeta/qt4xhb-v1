@@ -79,8 +79,7 @@ $prototypeV2=void setInputContext( QInputContext * inputContext )
 
 $prototypeV2=QString styleSheet() const
 
-$prototype=virtual bool notify ( QObject * receiver, QEvent * e )
-$virtualMethod=|bool|notify|QObject *,QEvent *
+$prototypeV2=virtual bool notify( QObject * receiver, QEvent * e )
 
 $prototypeV2=void aboutQt()
 
@@ -94,8 +93,7 @@ $prototypeV2=static QWidget * activePopupWidget()
 
 $prototypeV2=static QWidget * activeWindow()
 
-$prototype=static void alert ( QWidget * widget, int msec = 0 )
-$staticMethod=|void|alert|QWidget *,int=0
+$prototypeV2=static void alert( QWidget * widget, int msec = 0 )
 
 $prototypeV2=static QWidgetList allWidgets()
 
@@ -231,11 +229,9 @@ $prototypeV2=static void setDesktopSettingsAware( bool on )
 
 $prototypeV2=static void setDoubleClickInterval( int )
 
-$prototype=static void setEffectEnabled ( Qt::UIEffect effect, bool enable = true )
-$staticMethod=|void|setEffectEnabled|Qt::UIEffect,bool=true
+$prototypeV2=static void setEffectEnabled( Qt::UIEffect effect, bool enable = true )
 
-$prototype=static void setFont ( const QFont & font, const char * className = 0 )
-$staticMethod=|void|setFont|const QFont &,const char *=0
+$prototypeV2=static void setFont( const QFont & font, const char * className = 0 )
 
 $prototypeV2=static void setGlobalStrut( const QSize & )
 
@@ -247,8 +243,7 @@ $prototypeV2=static void setLayoutDirection( Qt::LayoutDirection direction )
 
 $prototypeV2=static void setOverrideCursor( const QCursor & cursor )
 
-$prototype=static void setPalette ( const QPalette & palette, const char * className = 0 )
-$staticMethod=|void|setPalette|const QPalette &,const char *=0
+$prototypeV2=static void setPalette( const QPalette & palette, const char * className = 0 )
 
 $prototypeV2=static void setQuitOnLastWindowClosed( bool quit )
 

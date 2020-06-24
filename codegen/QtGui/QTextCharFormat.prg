@@ -98,8 +98,7 @@ $prototypeV2=void setFontPointSize( qreal size )
 
 $prototypeV2=void setFontStrikeOut( bool strikeOut )
 
-$prototype=void setFontStyleHint ( QFont::StyleHint hint, QFont::StyleStrategy strategy = QFont::PreferDefault )
-$method=|void|setFontStyleHint|QFont::StyleHint,QFont::StyleStrategy=QFont::PreferDefault
+$prototypeV2=void setFontStyleHint( QFont::StyleHint hint, QFont::StyleStrategy strategy = QFont::PreferDefault )
 
 $prototypeV2=void setFontStyleStrategy( QFont::StyleStrategy strategy )
 

@@ -52,8 +52,7 @@ $prototypeV2=QWidget * source() const
 
 $prototypeV2=virtual QByteArray encodedData( const char * format ) const
 
-$prototype=virtual const char * format ( int n = 0 ) const
-$virtualMethod=|const char *|format|int=0
+$prototypeV2=virtual const char * format( int n = 0 ) const
 
 $prototypeV2=virtual bool provides( const char * mimeType ) const
 

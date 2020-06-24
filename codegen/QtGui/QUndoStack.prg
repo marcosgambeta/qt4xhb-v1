@@ -48,11 +48,9 @@ $prototypeV2=const QUndoCommand * command( int index ) const
 
 $prototypeV2=int count() const
 
-$prototype=QAction * createRedoAction ( QObject * parent, const QString & prefix = QString() ) const
-$method=|QAction *|createRedoAction|QObject *,const QString &=QString()
+$prototypeV2=QAction * createRedoAction( QObject * parent, const QString & prefix = QString() ) const
 
-$prototype=QAction * createUndoAction ( QObject * parent, const QString & prefix = QString() ) const
-$method=|QAction *|createUndoAction|QObject *,const QString &=QString()
+$prototypeV2=QAction * createUndoAction( QObject * parent, const QString & prefix = QString() ) const
 
 $prototypeV2=void endMacro()
 
@@ -76,8 +74,7 @@ $prototypeV2=QString undoText() const
 
 $prototypeV2=void redo()
 
-$prototype=void setActive ( bool active = true )
-$method=|void|setActive|bool=true
+$prototypeV2=void setActive( bool active = true )
 
 $prototypeV2=void setClean()
 

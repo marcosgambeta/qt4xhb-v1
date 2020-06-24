@@ -67,8 +67,7 @@ $prototypeV2=void setDecimals( int )
 
 $prototypeV2=void setNotation( QDoubleValidator::Notation )
 
-$prototype=virtual void setRange ( double minimum, double maximum, int decimals = 0 )
-$virtualMethod=|void|setRange|double,double,int=0
+$prototypeV2=virtual void setRange( double minimum, double maximum, int decimals = 0 )
 
 $prototypeV2=void setTop( double )
 

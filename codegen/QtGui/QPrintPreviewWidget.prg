@@ -99,11 +99,9 @@ $prototypeV2=void setZoomMode( QPrintPreviewWidget::ZoomMode zoomMode )
 
 $prototypeV2=void updatePreview()
 
-$prototype=void zoomIn ( qreal factor = 1.1 )
-$method=|void|zoomIn|qreal=1.1
+$prototypeV2=void zoomIn( qreal factor = 1.1 )
 
-$prototype=void zoomOut ( qreal factor = 1.1 )
-$method=|void|zoomOut|qreal=1.1
+$prototypeV2=void zoomOut( qreal factor = 1.1 )
 
 $beginSignals
 $signal=|paintRequested(QPrinter*)

@@ -45,8 +45,7 @@ $prototypeV2=void setKeyboardPageStep( int step )
 
 $prototypeV2=void setKeyboardSingleStep( int step )
 
-$prototype=void setOption ( SubWindowOption option, bool on = true )
-$method=|void|setOption|QMdiSubWindow::SubWindowOption,bool=true
+$prototypeV2=void setOption( QMdiSubWindow::SubWindowOption option, bool on = true )
 
 $prototypeV2=void setSystemMenu( QMenu * systemMenu )
 

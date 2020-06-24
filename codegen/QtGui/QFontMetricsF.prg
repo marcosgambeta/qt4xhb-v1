@@ -113,8 +113,7 @@ $addMethod=boundingRect
 
 $prototypeV2=qreal descent() const
 
-$prototype=QString elidedText ( const QString & text, Qt::TextElideMode mode, qreal width, int flags = 0 ) const
-$method=|QString|elidedText|const QString &,Qt::TextElideMode,qreal,int=0
+$prototypeV2=QString elidedText( const QString & text, Qt::TextElideMode mode, qreal width, int flags = 0 ) const
 
 $prototypeV2=qreal height() const
 
@@ -140,8 +139,7 @@ $prototypeV2=qreal overlinePos() const
 
 $prototypeV2=qreal rightBearing( QChar ch ) const
 
-$prototype=QSizeF size ( int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
-$method=|QSizeF|size|int,const QString &,int=0,int *=0
+$prototypeV2=QSizeF size( int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
 
 $prototypeV2=qreal strikeOutPos() const
 

@@ -1253,8 +1253,7 @@ HB_FUNC_STATIC( QPAINTER_SETBRUSHORIGIN )
 }
 $addMethod=setBrushOrigin
 
-$prototype=void setClipPath ( const QPainterPath & path, Qt::ClipOperation operation = Qt::ReplaceClip )
-$method=|void|setClipPath|const QPainterPath &,Qt::ClipOperation=Qt::ReplaceClip
+$prototypeV2=void setClipPath( const QPainterPath & path, Qt::ClipOperation operation = Qt::ReplaceClip )
 
 $prototype=void setClipRect ( const QRectF & rectangle, Qt::ClipOperation operation = Qt::ReplaceClip )
 $internalMethod=|void|setClipRect,setClipRect1|const QRectF &,Qt::ClipOperation=Qt::ReplaceClip
@@ -1292,8 +1291,7 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPRECT )
 }
 $addMethod=setClipRect
 
-$prototype=void setClipRegion ( const QRegion & region, Qt::ClipOperation operation = Qt::ReplaceClip )
-$method=|void|setClipRegion|const QRegion &,Qt::ClipOperation=Qt::ReplaceClip
+$prototypeV2=void setClipRegion( const QRegion & region, Qt::ClipOperation operation = Qt::ReplaceClip )
 
 $prototypeV2=void setClipping( bool enable )
 
@@ -1341,14 +1339,11 @@ HB_FUNC_STATIC( QPAINTER_SETPEN )
 }
 $addMethod=setPen
 
-$prototype=void setRenderHint ( RenderHint hint, bool on = true )
-$method=|void|setRenderHint|QPainter::RenderHint,bool=true
+$prototypeV2=void setRenderHint( QPainter::RenderHint hint, bool on = true )
 
-$prototype=void setRenderHints ( RenderHints hints, bool on = true )
-$method=|void|setRenderHints|QPainter::RenderHints,bool=true
+$prototypeV2=void setRenderHints( QPainter::RenderHints hints, bool on = true )
 
-$prototype=void setTransform ( const QTransform & transform, bool combine = false )
-$method=|void|setTransform|const QTransform &,bool=false
+$prototypeV2=void setTransform( const QTransform & transform, bool combine = false )
 
 $prototypeV2=void setViewTransformEnabled( bool enable )
 
@@ -1410,8 +1405,7 @@ $addMethod=setWindow
 
 $prototypeV2=void setWorldMatrixEnabled( bool enable )
 
-$prototype=void setWorldTransform ( const QTransform & matrix, bool combine = false )
-$method=|void|setWorldTransform|const QTransform &,bool=false
+$prototypeV2=void setWorldTransform( const QTransform & matrix, bool combine = false )
 
 $prototypeV2=void shear( qreal sh, qreal sv )
 

@@ -30,10 +30,8 @@ $constructor=|new|
 
 $deleteMethod
 
-$prototype=virtual bool paint ( QPainter * painter, const QWidget * widget, int decorationRegion = All, DecorationState state = Normal )
-$virtualMethod=|bool|paint|QPainter *,const QWidget *,int=QDecoration::All,QDecoration::DecorationState=QDecoration::Normal
+$prototypeV2=virtual bool paint( QPainter * painter, const QWidget * widget, int decorationRegion = QDecoration::All, QDecoration::DecorationState state = QDecoration::Normal )
 
-$prototype=virtual QRegion region ( const QWidget * widget, const QRect & rect, int decorationRegion = All )
-$virtualMethod=|QRegion|region|const QWidget *,const QRect &,int=QDecoration::All
+$prototypeV2=virtual QRegion region( const QWidget * widget, const QRect & rect, int decorationRegion = QDecoration::All )
 
 #pragma ENDDUMP

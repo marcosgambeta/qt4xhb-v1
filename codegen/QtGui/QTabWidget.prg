@@ -62,8 +62,7 @@ $addMethod=addTab
 
 $prototypeV2=void clear()
 
-$prototype=QWidget * cornerWidget ( Qt::Corner corner = Qt::TopRightCorner ) const
-$method=|QWidget *|cornerWidget|Qt::Corner=Qt::TopRightCorner
+$prototypeV2=QWidget * cornerWidget( Qt::Corner corner = Qt::TopRightCorner ) const
 
 $prototypeV2=int count() const
 
@@ -113,8 +112,7 @@ $prototypeV2=bool isTabEnabled( int index ) const
 
 $prototypeV2=void removeTab( int index )
 
-$prototype=void setCornerWidget ( QWidget * widget, Qt::Corner corner = Qt::TopRightCorner )
-$method=|void|setCornerWidget|QWidget *,Qt::Corner=Qt::TopRightCorner
+$prototypeV2=void setCornerWidget( QWidget * widget, Qt::Corner corner = Qt::TopRightCorner )
 
 $prototypeV2=void setDocumentMode( bool set )
 

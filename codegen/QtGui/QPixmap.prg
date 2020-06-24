@@ -92,8 +92,7 @@ $deleteMethod
 
 $prototypeV2=qint64 cacheKey() const
 
-$prototype=bool convertFromImage ( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
-$method=|bool|convertFromImage|const QImage &,Qt::ImageConversionFlags=Qt::AutoColor
+$prototypeV2=bool convertFromImage( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
 
 $prototype=QPixmap copy ( const QRect & rectangle = QRect() ) const
 $internalMethod=|QPixmap|copy,copy1|const QRect &=QRect()
@@ -123,8 +122,7 @@ HB_FUNC_STATIC( QPIXMAP_COPY )
 }
 $addMethod=copy
 
-$prototype=QBitmap createHeuristicMask ( bool clipTight = true ) const
-$method=|QBitmap|createHeuristicMask|bool=true
+$prototypeV2=QBitmap createHeuristicMask( bool clipTight = true ) const
 
 $prototype=QBitmap createMaskFromColor ( const QColor & maskColor, Qt::MaskMode mode ) const
 $internalMethod=|QBitmap|createMaskFromColor,createMaskFromColor1|const QColor &,Qt::MaskMode
@@ -204,8 +202,7 @@ $prototypeV2=bool isNull() const
 
 $prototypeV2=bool isQBitmap() const
 
-$prototype=bool load ( const QString & fileName, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor )
-$method=|bool|load|const QString &,const char *=0,Qt::ImageConversionFlags=Qt::AutoColor
+$prototypeV2=bool load( const QString & fileName, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor )
 
 $prototype=bool loadFromData ( const uchar * data, uint len, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor )
 $internalMethod=|bool|loadFromData,loadFromData1|const uchar *,uint,const char *=0,Qt::ImageConversionFlags=Qt::AutoColor
@@ -295,11 +292,9 @@ HB_FUNC_STATIC( QPIXMAP_SCALED )
 }
 $addMethod=scaled
 
-$prototype=QPixmap scaledToHeight ( int height, Qt::TransformationMode mode = Qt::FastTransformation ) const
-$method=|QPixmap|scaledToHeight|int,Qt::TransformationMode=Qt::FastTransformation
+$prototypeV2=QPixmap scaledToHeight( int height, Qt::TransformationMode mode = Qt::FastTransformation ) const
 
-$prototype=QPixmap scaledToWidth ( int width, Qt::TransformationMode mode = Qt::FastTransformation ) const
-$method=|QPixmap|scaledToWidth|int,Qt::TransformationMode=Qt::FastTransformation
+$prototypeV2=QPixmap scaledToWidth( int width, Qt::TransformationMode mode = Qt::FastTransformation ) const
 
 $prototype=void scroll ( int dx, int dy, int x, int y, int width, int height, QRegion * exposed = 0 )
 $internalMethod=|void|scroll,scroll1|int,int,int,int,int,int,QRegion *=0
@@ -369,11 +364,9 @@ $prototypeV2=int width() const
 
 $prototypeV2=static int defaultDepth()
 
-$prototype=static QPixmap fromImage ( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
-$staticMethod=|QPixmap|fromImage|const QImage &,Qt::ImageConversionFlags=Qt::AutoColor
+$prototypeV2=static QPixmap fromImage( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
 
-$prototype=static QPixmap fromImageReader ( QImageReader * imageReader, Qt::ImageConversionFlags flags = Qt::AutoColor )
-$staticMethod=|QPixmap|fromImageReader|QImageReader *,Qt::ImageConversionFlags=Qt::AutoColor
+$prototypeV2=static QPixmap fromImageReader( QImageReader * imageReader, Qt::ImageConversionFlags flags = Qt::AutoColor )
 
 $prototype=static QPixmap grabWidget ( QWidget * widget, const QRect & rectangle )
 $internalStaticMethod=|QPixmap|grabWidget,grabWidget1|QWidget *,const QRect &
@@ -403,15 +396,7 @@ HB_FUNC_STATIC( QPIXMAP_GRABWIDGET )
 }
 $addMethod=grabWidget
 
-$prototype=static QPixmap grabWindow ( WId window, int x = 0, int y = 0, int width = -1, int height = -1 )
-%% TODO: code generator
-HB_FUNC_STATIC( QPIXMAP_GRABWINDOW )
-{
-  WId par1 = (WId) hb_parptr(1);
-  QPixmap * ptr = new QPixmap( QPixmap::grabWindow ( par1, OPINT(2,0), OPINT(3,0), OPINT(4,-1), OPINT(5,-1) ) );
-  Qt4xHb::createReturnClass ( ptr, "QPIXMAP", true );
-}
-$addMethod=grabWindow
+$prototypeV2=static QPixmap grabWindow( WId window, int x = 0, int y = 0, int width = -1, int height = -1 )
 
 $prototype=static QTransform trueMatrix ( const QTransform & matrix, int width, int height )
 $internalStaticMethod=|QTransform|trueMatrix,trueMatrix1|const QTransform &,int,int

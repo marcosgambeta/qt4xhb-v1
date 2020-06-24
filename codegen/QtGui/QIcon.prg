@@ -89,17 +89,13 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QSize actualSize ( const QSize & size, Mode mode = Normal, State state = Off ) const
-$method=|QSize|actualSize|const QSize &,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
+$prototypeV2=QSize actualSize( const QSize & size, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 
-$prototype=void addFile ( const QString & fileName, const QSize & size = QSize(), Mode mode = Normal, State state = Off )
-$method=|void|addFile|const QString &,const QSize &=QSize(),QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
+$prototypeV2=void addFile( const QString & fileName, const QSize & size = QSize(), QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off )
 
-$prototype=void addPixmap ( const QPixmap & pixmap, Mode mode = Normal, State state = Off )
-$method=|void|addPixmap|const QPixmap &,QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
+$prototypeV2=void addPixmap( const QPixmap & pixmap, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off )
 
-$prototype=QList<QSize> availableSizes ( Mode mode = Normal, State state = Off ) const
-$method=|QList<QSize>|availableSizes|QIcon::Mode=QIcon::Normal,QIcon::State=QIcon::Off
+$prototypeV2=QList<QSize> availableSizes( QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 
 $prototypeV2=qint64 cacheKey() const
 
@@ -172,8 +168,7 @@ HB_FUNC_STATIC( QICON_PIXMAP )
 }
 $addMethod=pixmap
 
-$prototype=QIcon fromTheme ( const QString & name, const QIcon & fallback = QIcon() )
-$method=|QIcon|fromTheme|const QString &,const QIcon &=QIcon()
+$prototypeV2=QIcon fromTheme( const QString & name, const QIcon & fallback = QIcon() )
 
 $prototypeV2=static bool hasThemeIcon( const QString & name )
 

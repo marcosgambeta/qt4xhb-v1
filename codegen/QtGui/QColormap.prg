@@ -44,8 +44,7 @@ $prototypeV2=uint pixel( const QColor & color ) const
 
 $prototypeV2=int size() const
 
-$prototype=static QColormap instance ( int screen = -1 )
-$staticMethod=|QColormap|instance|int=-1
+$prototypeV2=static QColormap instance( int screen = -1 )
 
 $extraMethods
 

@@ -67,8 +67,7 @@ $prototypeV2=bool isVirtualDesktop() const
 
 $prototypeV2=int primaryScreen() const
 
-$prototype=QWidget * screen ( int screen = -1 )
-$method=|QWidget *|screen|int=-1
+$prototypeV2=QWidget * screen( int screen = -1 )
 
 $prototypeV2=int screenCount() const
 

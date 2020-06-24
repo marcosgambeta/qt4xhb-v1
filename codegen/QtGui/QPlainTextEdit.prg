@@ -111,8 +111,7 @@ $prototypeV2=QString documentTitle() const
 
 $prototypeV2=void ensureCursorVisible()
 
-$prototype=bool find ( const QString & exp, QTextDocument::FindFlags options = 0 )
-$method=|bool|find|const QString &,QTextDocument::FindFlags=0
+$prototypeV2=bool find( const QString & exp, QTextDocument::FindFlags options = 0 )
 
 $prototypeV2=bool isReadOnly() const
 
@@ -126,8 +125,7 @@ $prototypeV2=int maximumBlockCount() const
 
 $prototypeV2=void mergeCurrentCharFormat( const QTextCharFormat & modifier )
 
-$prototype=void moveCursor ( QTextCursor::MoveOperation operation, QTextCursor::MoveMode mode = QTextCursor::MoveAnchor )
-$method=|void|moveCursor|QTextCursor::MoveOperation,QTextCursor::MoveMode=QTextCursor::MoveAnchor
+$prototypeV2=void moveCursor( QTextCursor::MoveOperation operation, QTextCursor::MoveMode mode = QTextCursor::MoveAnchor )
 
 $prototypeV2=bool overwriteMode() const
 

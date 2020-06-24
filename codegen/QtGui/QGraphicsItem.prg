@@ -58,14 +58,11 @@ $prototypeV2=void clearFocus()
 
 $prototypeV2=QPainterPath clipPath() const
 
-$prototype=virtual bool collidesWithItem ( const QGraphicsItem * other, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
-$virtualMethod=|bool|collidesWithItem|const QGraphicsItem *,Qt::ItemSelectionMode=Qt::IntersectsItemShape
+$prototypeV2=virtual bool collidesWithItem( const QGraphicsItem * other, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
 
-$prototype=virtual bool collidesWithPath ( const QPainterPath & path, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
-$virtualMethod=|bool|collidesWithPath|const QPainterPath &,Qt::ItemSelectionMode=Qt::IntersectsItemShape
+$prototypeV2=virtual bool collidesWithPath( const QPainterPath & path, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
 
-$prototype=QList<QGraphicsItem *> collidingItems ( Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
-$method=|QList<QGraphicsItem *>|collidingItems|Qt::ItemSelectionMode=Qt::IntersectsItemShape
+$prototypeV2=QList<QGraphicsItem *> collidingItems( Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
 
 $prototypeV2=QGraphicsItem * commonAncestorItem( const QGraphicsItem * other ) const
 
@@ -193,8 +190,7 @@ $prototypeV2=bool isWidget() const
 
 $prototypeV2=bool isWindow() const
 
-$prototype=QTransform itemTransform ( const QGraphicsItem * other, bool * ok = 0 ) const
-$method=|QTransform|itemTransform|const QGraphicsItem *,bool *=0
+$prototypeV2=QTransform itemTransform( const QGraphicsItem * other, bool * ok = 0 ) const
 
 $prototype=QPointF mapFromItem ( const QGraphicsItem * item, const QPointF & point ) const
 $internalMethod=|QPointF|mapFromItem,mapFromItem1|const QGraphicsItem *,const QPointF &
@@ -731,8 +727,7 @@ $prototypeV2=qreal opacity() const
 
 $prototypeV2=virtual QPainterPath opaqueArea() const
 
-$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 ) = 0
-$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
+$prototypeV2=virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 ) = 0
 
 $prototypeV2=QGraphicsItem * panel() const
 
@@ -762,8 +757,7 @@ $prototypeV2=QPointF scenePos() const
 
 $prototypeV2=QTransform sceneTransform() const
 
-$prototype=void scroll ( qreal dx, qreal dy, const QRectF & rect = QRectF() )
-$method=|void|scroll|qreal,qreal,const QRectF &=QRectF()
+$prototypeV2=void scroll( qreal dx, qreal dy, const QRectF & rect = QRectF() )
 
 $prototypeV2=void setAcceptDrops( bool on )
 
@@ -777,8 +771,7 @@ $prototypeV2=void setActive( bool active )
 
 $prototypeV2=void setBoundingRegionGranularity( qreal granularity )
 
-$prototype=void setCacheMode ( CacheMode mode, const QSize & logicalCacheSize = QSize() )
-$method=|void|setCacheMode|QGraphicsItem::CacheMode,const QSize &=QSize()
+$prototypeV2=void setCacheMode( QGraphicsItem::CacheMode mode, const QSize & logicalCacheSize = QSize() )
 
 $prototypeV2=void setCursor( const QCursor & cursor )
 
@@ -788,13 +781,11 @@ $prototypeV2=void setEnabled( bool enabled )
 
 $prototypeV2=void setFiltersChildEvents( bool enabled )
 
-$prototype=void setFlag ( GraphicsItemFlag flag, bool enabled = true )
-$method=|void|setFlag|QGraphicsItem::GraphicsItemFlag,bool=true
+$prototypeV2=void setFlag( QGraphicsItem::GraphicsItemFlag flag, bool enabled = true )
 
 $prototypeV2=void setFlags( QGraphicsItem::GraphicsItemFlags flags )
 
-$prototype=void setFocus ( Qt::FocusReason focusReason = Qt::OtherFocusReason )
-$method=|void|setFocus|Qt::FocusReason=Qt::OtherFocusReason
+$prototypeV2=void setFocus( Qt::FocusReason focusReason = Qt::OtherFocusReason )
 
 $prototypeV2=void setFocusProxy( QGraphicsItem * item )
 
@@ -846,8 +837,7 @@ $prototypeV2=void setSelected( bool selected )
 
 $prototypeV2=void setToolTip( const QString & toolTip )
 
-$prototype=void setTransform ( const QTransform & matrix, bool combine = false )
-$method=|void|setTransform|const QTransform &,bool=false
+$prototypeV2=void setTransform( const QTransform & matrix, bool combine = false )
 
 $prototype=void setTransformOriginPoint ( const QPointF & origin )
 $internalMethod=|void|setTransformOriginPoint,setTransformOriginPoint1|const QPointF &

@@ -177,8 +177,7 @@ $prototypeV2=const QRect & geometry() const
 
 $prototypeV2=void getContentsMargins( int * left, int * top, int * right, int * bottom ) const
 
-$prototype=void grabGesture ( Qt::GestureType gesture, Qt::GestureFlags flags = Qt::GestureFlags() )
-$method=|void|grabGesture|Qt::GestureType,Qt::GestureFlags=Qt::GestureFlags()
+$prototypeV2=void grabGesture( Qt::GestureType gesture, Qt::GestureFlags flags = Qt::GestureFlags() )
 
 $prototypeV2=void grabKeyboard()
 
@@ -210,8 +209,7 @@ HB_FUNC_STATIC( QWIDGET_GRABMOUSE )
 }
 $addMethod=grabMouse
 
-$prototype=int grabShortcut ( const QKeySequence & key, Qt::ShortcutContext context = Qt::WindowShortcut )
-$method=|int|grabShortcut|const QKeySequence &,Qt::ShortcutContext=Qt::WindowShortcut
+$prototypeV2=int grabShortcut( const QKeySequence & key, Qt::ShortcutContext context = Qt::WindowShortcut )
 
 $prototypeV2=QGraphicsEffect * graphicsEffect() const
 
@@ -481,8 +479,7 @@ $prototypeV2=void setAccessibleDescription( const QString & description )
 
 $prototypeV2=void setAccessibleName( const QString & name )
 
-$prototype=void setAttribute ( Qt::WidgetAttribute attribute, bool on = true )
-$method=|void|setAttribute|Qt::WidgetAttribute,bool=true
+$prototypeV2=void setAttribute( Qt::WidgetAttribute attribute, bool on = true )
 
 $prototypeV2=void setAutoFillBackground( bool enabled )
 
@@ -780,11 +777,9 @@ HB_FUNC_STATIC( QWIDGET_SETPARENT )
 }
 $addMethod=setParent
 
-$prototype=void setShortcutAutoRepeat ( int id, bool enable = true )
-$method=|void|setShortcutAutoRepeat|int,bool=true
+$prototypeV2=void setShortcutAutoRepeat( int id, bool enable = true )
 
-$prototype=void setShortcutEnabled ( int id, bool enable = true )
-$method=|void|setShortcutEnabled|int,bool=true
+$prototypeV2=void setShortcutEnabled( int id, bool enable = true )
 
 $prototype=void setSizeIncrement ( const QSize & )
 $internalMethod=|void|setSizeIncrement,setSizeIncrement1|const QSize &

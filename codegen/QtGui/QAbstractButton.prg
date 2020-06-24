@@ -73,8 +73,7 @@ $prototypeV2=QKeySequence shortcut() const
 
 $prototypeV2=QString text() const
 
-$prototype=void animateClick ( int msec = 100 )
-$method=|void|animateClick|int=100
+$prototypeV2=void animateClick( int msec = 100 )
 
 $prototypeV2=void click()
 

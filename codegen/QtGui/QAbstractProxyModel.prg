@@ -48,15 +48,13 @@ $prototypeV2=virtual QModelIndex buddy( const QModelIndex & index ) const
 
 $prototypeV2=virtual bool canFetchMore( const QModelIndex & parent ) const
 
-$prototype=virtual QVariant data ( const QModelIndex & proxyIndex, int role = Qt::DisplayRole ) const
-$virtualMethod=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
+$prototypeV2=virtual QVariant data( const QModelIndex & proxyIndex, int role = Qt::DisplayRole ) const
 
 $prototypeV2=virtual void fetchMore( const QModelIndex & parent )
 
 $prototypeV2=virtual Qt::ItemFlags flags( const QModelIndex & index ) const
 
-$prototype=virtual bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
-$virtualMethod=|bool|hasChildren|const QModelIndex &=QModelIndex()
+$prototypeV2=virtual bool hasChildren( const QModelIndex & parent = QModelIndex() ) const
 
 $prototypeV2=virtual QVariant headerData( int section, Qt::Orientation orientation, int role ) const
 
@@ -66,14 +64,11 @@ $prototypeV2=virtual QStringList mimeTypes() const
 
 $prototypeV2=virtual void revert()
 
-$prototype=virtual bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
-$virtualMethod=|bool|setData|const QModelIndex &,const QVariant &,int=Qt::EditRole
+$prototypeV2=virtual bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 
-$prototype=virtual bool setHeaderData ( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole )
-$virtualMethod=|bool|setHeaderData|int,Qt::Orientation,const QVariant &,int=Qt::EditRole
+$prototypeV2=virtual bool setHeaderData( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole )
 
-$prototype=virtual void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
-$virtualMethod=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
+$prototypeV2=virtual void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
 
 $prototypeV2=virtual QSize span( const QModelIndex & index ) const
 

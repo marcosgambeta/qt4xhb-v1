@@ -120,8 +120,7 @@ $prototypeV2=virtual void keyboardSearch( const QString & search )
 
 $prototypeV2=virtual void reset()
 
-$prototype=virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisible )
-$virtualMethod=|void|scrollTo|const QModelIndex &,QTreeView::ScrollHint=QTreeView::EnsureVisible
+$prototypeV2=virtual void scrollTo( const QModelIndex & index, QTreeView::ScrollHint hint = QTreeView::EnsureVisible )
 
 $prototypeV2=virtual void selectAll()
 

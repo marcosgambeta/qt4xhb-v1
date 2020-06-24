@@ -67,8 +67,7 @@ $prototypeV2=void setPixmap( const QPixmap & pixmap )
 
 $prototypeV2=void clearMessage()
 
-$prototype=void showMessage ( const QString & message, int alignment = Qt::AlignLeft, const QColor & color = Qt::black )
-$method=|void|showMessage|const QString &,int=Qt::AlignLeft,const QColor &=Qt::black
+$prototypeV2=void showMessage( const QString & message, int alignment = Qt::AlignLeft, const QColor & color = Qt::black )
 
 $beginSignals
 $signal=|messageChanged(QString)

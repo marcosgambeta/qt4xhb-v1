@@ -94,8 +94,7 @@ $prototypeV2=void flipCoordinates()
 
 $prototypeV2=void frustum( qreal left, qreal right, qreal bottom, qreal top, qreal nearPlane, qreal farPlane )
 
-$prototype=QMatrix4x4 inverted ( bool * invertible = 0 ) const
-$method=|QMatrix4x4|inverted|bool *=0
+$prototypeV2=QMatrix4x4 inverted( bool * invertible = 0 ) const
 
 $prototypeV2=bool isIdentity() const
 

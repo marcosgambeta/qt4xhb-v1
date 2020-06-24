@@ -71,8 +71,7 @@ $prototypeV2=void setDefaultProperty( const char * className, const char * prope
 
 $prototypeV2=void setField( const QString & name, const QVariant & value )
 
-$prototype=void setOption ( QWizard::WizardOption option, bool on = true )
-$method=|void|setOption|QWizard::WizardOption,bool=true
+$prototypeV2=void setOption( QWizard::WizardOption option, bool on = true )
 
 $prototypeV2=void setOptions( QWizard::WizardOptions options )
 

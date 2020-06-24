@@ -69,7 +69,6 @@ $prototypeV2=int replacementLength() const
 
 $prototypeV2=int replacementStart() const
 
-$prototype=void setCommitString ( const QString & commitString, int replaceFrom = 0, int replaceLength = 0 )
-$method=|void|setCommitString|const QString &,int=0,int=0
+$prototypeV2=void setCommitString( const QString & commitString, int replaceFrom = 0, int replaceLength = 0 )
 
 #pragma ENDDUMP

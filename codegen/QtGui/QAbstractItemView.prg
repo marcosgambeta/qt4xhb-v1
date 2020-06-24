@@ -97,8 +97,7 @@ $prototypeV2=void openPersistentEditor( const QModelIndex & index )
 
 $prototypeV2=QModelIndex rootIndex() const
 
-$prototype=virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisible ) = 0
-$virtualMethod=|void|scrollTo|const QModelIndex &,QAbstractItemView::ScrollHint=QAbstractItemView::EnsureVisible
+$prototypeV2=virtual void scrollTo( const QModelIndex & index, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible ) = 0
 
 $prototypeV2=QAbstractItemView::SelectionBehavior selectionBehavior() const
 

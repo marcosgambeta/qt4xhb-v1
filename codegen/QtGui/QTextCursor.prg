@@ -341,8 +341,7 @@ $prototypeV2=void mergeBlockFormat( const QTextBlockFormat & modifier )
 
 $prototypeV2=void mergeCharFormat( const QTextCharFormat & modifier )
 
-$prototype=bool movePosition ( MoveOperation operation, MoveMode mode = MoveAnchor, int n = 1 )
-$method=|bool|movePosition|QTextCursor::MoveOperation,QTextCursor::MoveMode=QTextCursor::MoveAnchor,int=1
+$prototypeV2=bool movePosition( QTextCursor::MoveOperation operation, QTextCursor::MoveMode mode = QTextCursor::MoveAnchor, int n = 1 )
 
 $prototypeV2=int position() const
 
@@ -352,8 +351,7 @@ $prototypeV2=void removeSelectedText()
 
 $prototypeV2=void select( QTextCursor::SelectionType selection )
 
-$prototype=void selectedTableCells ( int * firstRow, int * numRows, int * firstColumn, int * numColumns ) const
-$method=|void|selectedTableCells|int *,int *,int *,int *
+$prototypeV2=void selectedTableCells( int * firstRow, int * numRows, int * firstColumn, int * numColumns ) const
 
 $prototypeV2=QString selectedText() const
 
@@ -371,8 +369,7 @@ $prototypeV2=void setCharFormat( const QTextCharFormat & format )
 
 $prototypeV2=void setKeepPositionOnInsert( bool b )
 
-$prototype=void setPosition ( int pos, MoveMode m = MoveAnchor )
-$method=|void|setPosition|int,QTextCursor::MoveMode=QTextCursor::MoveAnchor
+$prototypeV2=void setPosition( int pos, QTextCursor::MoveMode m = QTextCursor::MoveAnchor )
 
 $prototypeV2=void setVerticalMovementX( int x )
 

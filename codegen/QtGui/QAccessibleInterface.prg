@@ -33,13 +33,11 @@ $prototypeV2=virtual int childAt( int x, int y ) const = 0
 
 $prototypeV2=virtual int childCount() const = 0
 
-$prototype=virtual bool doAction ( int action, int child, const QVariantList & params = QVariantList() ) = 0
-$virtualMethod=|bool|doAction|int,int,const QVariantList &=QVariantList()
+$prototypeV2=virtual bool doAction( int action, int child, const QVariantList & params = QVariantList() ) = 0
 
 $prototypeV2=virtual int indexOfChild( const QAccessibleInterface * child ) const = 0
 
-$prototype=QVariant invokeMethod ( Method method, int child = 0, const QVariantList & params = QVariantList() )
-$method=|QVariant|invokeMethod|QAccessible::Method,int=0,const QVariantList &=QVariantList()
+$prototypeV2=QVariant invokeMethod( QAccessible::Method method, int child = 0, const QVariantList & params = QVariantList() )
 
 $prototypeV2=virtual bool isValid() const = 0
 

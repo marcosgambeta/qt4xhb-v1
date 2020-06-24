@@ -38,8 +38,7 @@ $prototypeV2=QMdiArea::WindowOrder activationOrder() const
 
 $prototypeV2=QMdiSubWindow * activeSubWindow() const
 
-$prototype=QMdiSubWindow * addSubWindow ( QWidget * widget, Qt::WindowFlags windowFlags = 0 )
-$method=|QMdiSubWindow *|addSubWindow|QWidget *,Qt::WindowFlags=0
+$prototypeV2=QMdiSubWindow * addSubWindow( QWidget * widget, Qt::WindowFlags windowFlags = 0 )
 
 $prototypeV2=QBrush background() const
 
@@ -55,8 +54,7 @@ $prototypeV2=void setBackground( const QBrush & background )
 
 $prototypeV2=void setDocumentMode( bool enabled )
 
-$prototype=void setOption ( AreaOption option, bool on = true )
-$method=|void|setOption|QMdiArea::AreaOption,bool=true
+$prototypeV2=void setOption( QMdiArea::AreaOption option, bool on = true )
 
 $prototypeV2=void setTabPosition( QTabWidget::TabPosition position )
 
@@ -64,8 +62,7 @@ $prototypeV2=void setTabShape( QTabWidget::TabShape shape )
 
 $prototypeV2=void setViewMode( QMdiArea::ViewMode mode )
 
-$prototype=QList<QMdiSubWindow *> subWindowList ( WindowOrder order = CreationOrder ) const
-$method=|QList<QMdiSubWindow *>|subWindowList|QMdiArea::WindowOrder=QMdiArea::CreationOrder
+$prototypeV2=QList<QMdiSubWindow *> subWindowList( QMdiArea::WindowOrder order = QMdiArea::CreationOrder ) const
 
 $prototypeV2=QTabWidget::TabPosition tabPosition() const
 

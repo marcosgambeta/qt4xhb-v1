@@ -73,8 +73,7 @@ $prototypeV2=void setIcon( const QIcon & icon )
 
 $prototypeV2=void setToolTip( const QString & tip )
 
-$prototype=void showMessage ( const QString & title, const QString & message, MessageIcon icon = Information, int millisecondsTimeoutHint = 10000 )
-$method=|void|showMessage|const QString &,const QString &,QSystemTrayIcon::MessageIcon=QSystemTrayIcon::Information,int=10000
+$prototypeV2=void showMessage( const QString & title, const QString & message, QSystemTrayIcon::MessageIcon icon = QSystemTrayIcon::Information, int millisecondsTimeoutHint = 10000 )
 
 $prototypeV2=QString toolTip() const
 

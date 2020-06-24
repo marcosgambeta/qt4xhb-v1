@@ -65,8 +65,7 @@ $deleteMethod
 
 $prototypeV2=QStaticText::PerformanceHint performanceHint() const
 
-$prototype=void prepare ( const QTransform & matrix = QTransform(), const QFont & font = QFont() )
-$method=|void|prepare|const QTransform &=QTransform(),const QFont &=QFont()
+$prototypeV2=void prepare( const QTransform & matrix = QTransform(), const QFont & font = QFont() )
 
 $prototypeV2=void setPerformanceHint( QStaticText::PerformanceHint performanceHint )
 

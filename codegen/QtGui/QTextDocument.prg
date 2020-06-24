@@ -83,11 +83,9 @@ $prototypeV2=int characterCount() const
 
 $prototypeV2=virtual void clear()
 
-$prototype=void clearUndoRedoStacks ( Stacks stacksToClear = UndoAndRedoStacks )
-$method=|void|clearUndoRedoStacks|QTextDocument::Stacks=QTextDocument::UndoAndRedoStacks
+$prototypeV2=void clearUndoRedoStacks( QTextDocument::Stacks stacksToClear = QTextDocument::UndoAndRedoStacks )
 
-$prototype=QTextDocument * clone ( QObject * parent = 0 ) const
-$method=|QTextDocument *|clone|QObject *=0
+$prototypeV2=QTextDocument * clone( QObject * parent = 0 ) const
 
 $prototypeV2=Qt::CursorMoveStyle defaultCursorMoveStyle() const
 
@@ -101,8 +99,7 @@ $prototypeV2=QAbstractTextDocumentLayout * documentLayout() const
 
 $prototypeV2=qreal documentMargin() const
 
-$prototype=void drawContents ( QPainter * p, const QRectF & rect = QRectF() )
-$method=|void|drawContents|QPainter *,const QRectF &=QRectF()
+$prototypeV2=void drawContents( QPainter * p, const QRectF & rect = QRectF() )
 
 $prototypeV2=QTextBlock end() const
 
@@ -232,8 +229,7 @@ $prototypeV2=QSizeF size() const
 
 $prototypeV2=qreal textWidth() const
 
-$prototype=QString toHtml ( const QByteArray & encoding = QByteArray() ) const
-$method=|QString|toHtml|const QByteArray &=QByteArray()
+$prototypeV2=QString toHtml( const QByteArray & encoding = QByteArray() ) const
 
 $prototypeV2=QString toPlainText() const
 
@@ -267,8 +263,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_REDO )
 }
 $addMethod=redo
 
-$prototype=void setModified ( bool m = true )
-$method=|void|setModified|bool=true
+$prototypeV2=void setModified( bool m = true )
 
 $prototype=void undo ( QTextCursor * cursor )
 $internalMethod=|void|undo,undo1|QTextCursor *

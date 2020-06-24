@@ -46,8 +46,7 @@ $prototypeV2=void setResizeGripsVisible( bool visible )
 
 $prototypeV2=virtual QModelIndex indexAt( const QPoint & point ) const
 
-$prototype=virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisible )
-$virtualMethod=|void|scrollTo|const QModelIndex &,QColumnView::ScrollHint=QColumnView::EnsureVisible
+$prototypeV2=virtual void scrollTo( const QModelIndex & index, QColumnView::ScrollHint hint = QColumnView::EnsureVisible )
 
 $prototypeV2=virtual void selectAll()
 

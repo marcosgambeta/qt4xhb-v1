@@ -177,8 +177,7 @@ $prototypeV2=Qt::ShortcutContext shortcutContext() const
 
 $prototypeV2=QList<QKeySequence> shortcuts() const
 
-$prototype=bool showStatusText ( QWidget * widget = 0 )
-$method=|bool|showStatusText|QWidget *=0
+$prototypeV2=bool showStatusText( QWidget * widget = 0 )
 
 $prototypeV2=QAction::SoftKeyRole softKeyRole() const
 

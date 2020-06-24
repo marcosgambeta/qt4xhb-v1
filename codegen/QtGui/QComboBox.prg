@@ -83,11 +83,9 @@ $prototypeV2=QString currentText() const
 
 $prototypeV2=bool duplicatesEnabled() const
 
-$prototype=int findData ( const QVariant & data, int role = Qt::UserRole, Qt::MatchFlags flags = Qt::MatchExactly | Qt::MatchCaseSensitive ) const
-$method=|int|findData|const QVariant &,int=Qt::UserRole,Qt::MatchFlags=Qt::MatchExactly OR Qt::MatchCaseSensitive
+$prototypeV2=int findData( const QVariant & data, int role = Qt::UserRole, Qt::MatchFlags flags = Qt::MatchExactly | Qt::MatchCaseSensitive ) const
 
-$prototype=int findText ( const QString & text, Qt::MatchFlags flags = Qt::MatchExactly | Qt::MatchCaseSensitive ) const
-$method=|int|findText|const QString &,Qt::MatchFlags=Qt::MatchExactly OR Qt::MatchCaseSensitive
+$prototypeV2=int findText( const QString & text, Qt::MatchFlags flags = Qt::MatchExactly | Qt::MatchCaseSensitive ) const
 
 $prototypeV2=bool hasFrame() const
 
@@ -131,8 +129,7 @@ $prototypeV2=void insertSeparator( int index )
 
 $prototypeV2=bool isEditable() const
 
-$prototype=QVariant itemData ( int index, int role = Qt::UserRole ) const
-$method=|QVariant|itemData|int,int=Qt::UserRole
+$prototypeV2=QVariant itemData( int index, int role = Qt::UserRole ) const
 
 $prototypeV2=QAbstractItemDelegate * itemDelegate() const
 
@@ -168,8 +165,7 @@ $prototypeV2=void setIconSize( const QSize & size )
 
 $prototypeV2=void setInsertPolicy( QComboBox::InsertPolicy policy )
 
-$prototype=void setItemData ( int index, const QVariant & value, int role = Qt::UserRole )
-$method=|void|setItemData|int,const QVariant &,int=Qt::UserRole
+$prototypeV2=void setItemData( int index, const QVariant & value, int role = Qt::UserRole )
 
 $prototypeV2=void setItemDelegate( QAbstractItemDelegate * delegate )
 

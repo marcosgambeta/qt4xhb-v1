@@ -92,8 +92,7 @@ $prototypeV2=bool wordWrap() const
 
 $prototypeV2=virtual QModelIndex indexAt( const QPoint & p ) const
 
-$prototype=virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisible )
-$virtualMethod=|void|scrollTo|const QModelIndex &,QListView::ScrollHint=QListView::EnsureVisible
+$prototypeV2=virtual void scrollTo( const QModelIndex & index, QListView::ScrollHint hint = QListView::EnsureVisible )
 
 $prototypeV2=virtual QRect visualRect( const QModelIndex & index ) const
 

@@ -97,8 +97,7 @@ $prototypeV2=qreal dx() const
 
 $prototypeV2=qreal dy() const
 
-$prototype=QTransform inverted ( bool * invertible = 0 ) const
-$method=|QTransform|inverted|bool *=0
+$prototypeV2=QTransform inverted( bool * invertible = 0 ) const
 
 $prototypeV2=bool isAffine() const
 

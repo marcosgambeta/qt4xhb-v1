@@ -61,8 +61,7 @@ $prototypeV2=bool isTristate() const
 
 $prototypeV2=void setCheckState( Qt::CheckState state )
 
-$prototype=void setTristate ( bool y = true )
-$method=|void|setTristate|bool=true
+$prototypeV2=void setTristate( bool y = true )
 
 $prototypeV2=virtual QSize minimumSizeHint() const
 

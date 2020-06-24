@@ -63,8 +63,7 @@ $prototypeV2=QPrintDialog::PrintDialogOptions options() const
 
 $prototypeV2=QPrinter * printer()
 
-$prototype=void setOption ( PrintDialogOption option, bool on = true )
-$method=|void|setOption|QPrintDialog::PrintDialogOption,bool=true
+$prototypeV2=void setOption( QPrintDialog::PrintDialogOption option, bool on = true )
 
 $prototypeV2=void setOptions( QPrintDialog::PrintDialogOptions options )
 

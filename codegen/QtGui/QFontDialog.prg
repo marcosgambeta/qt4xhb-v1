@@ -65,8 +65,7 @@ $prototypeV2=QFont selectedFont() const
 
 $prototypeV2=void setCurrentFont( const QFont & font )
 
-$prototype=void setOption ( FontDialogOption option, bool on = true )
-$method=|void|setOption|QFontDialog::FontDialogOption,bool=true
+$prototypeV2=void setOption( QFontDialog::FontDialogOption option, bool on = true )
 
 $prototypeV2=void setOptions( QFontDialog::FontDialogOptions options )
 

@@ -124,8 +124,7 @@ $prototypeV2=QWidget * widget() const
 
 $prototypeV2=bool wrapAround() const
 
-$prototype=void complete ( const QRect & rect = QRect() )
-$method=|void|complete|const QRect &=QRect()
+$prototypeV2=void complete( const QRect & rect = QRect() )
 
 $prototypeV2=void setCompletionPrefix( const QString & prefix )
 

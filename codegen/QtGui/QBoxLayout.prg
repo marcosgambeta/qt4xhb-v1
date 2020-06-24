@@ -30,35 +30,29 @@ $constructor=|new|QBoxLayout::Direction,QWidget *=0
 
 $deleteMethod
 
-$prototype=void addLayout ( QLayout * layout, int stretch = 0 )
-$method=|void|addLayout|QLayout *,int=0
+$prototypeV2=void addLayout( QLayout * layout, int stretch = 0 )
 
 $prototypeV2=void addSpacerItem( QSpacerItem * spacerItem )
 
 $prototypeV2=void addSpacing( int size )
 
-$prototype=void addStretch ( int stretch = 0 )
-$method=|void|addStretch|int=0
+$prototypeV2=void addStretch( int stretch = 0 )
 
 $prototypeV2=void addStrut( int size )
 
-$prototype=void addWidget ( QWidget * widget, int stretch = 0, Qt::Alignment alignment = 0 )
-$method=|void|addWidget|QWidget *,int=0,Qt::Alignment=0
+$prototypeV2=void addWidget( QWidget * widget, int stretch = 0, Qt::Alignment alignment = 0 )
 
 $prototypeV2=QBoxLayout::Direction direction() const
 
-$prototype=void insertLayout ( int index, QLayout * layout, int stretch = 0 )
-$method=|void|insertLayout|int,QLayout *,int=0
+$prototypeV2=void insertLayout( int index, QLayout * layout, int stretch = 0 )
 
 $prototypeV2=void insertSpacerItem( int index, QSpacerItem * spacerItem )
 
 $prototypeV2=void insertSpacing( int index, int size )
 
-$prototype=void insertStretch ( int index, int stretch = 0 )
-$method=|void|insertStretch|int,int=0
+$prototypeV2=void insertStretch( int index, int stretch = 0 )
 
-$prototype=void insertWidget ( int index, QWidget * widget, int stretch = 0, Qt::Alignment alignment = 0 )
-$method=|void|insertWidget|int,QWidget *,int=0,Qt::Alignment=0
+$prototypeV2=void insertWidget( int index, QWidget * widget, int stretch = 0, Qt::Alignment alignment = 0 )
 
 $prototypeV2=void setDirection( QBoxLayout::Direction direction )
 

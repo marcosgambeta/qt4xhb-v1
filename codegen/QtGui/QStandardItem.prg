@@ -71,11 +71,9 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=virtual QVariant data(int role = Qt::UserRole + 1) const
-$virtualMethod=|QVariant|data|int=Qt::UserRole + 1
+$prototypeV2=virtual QVariant data( int role = Qt::UserRole + 1 ) const
 
-$prototype=virtual void setData(const QVariant &value, int role = Qt::UserRole + 1)
-$virtualMethod=|void|setData|const QVariant &,int=Qt::UserRole + 1
+$prototypeV2=virtual void setData( const QVariant & value, int role = Qt::UserRole + 1 )
 
 $prototypeV2=QString text() const
 
@@ -181,8 +179,7 @@ $prototypeV2=void setColumnCount( int columns )
 
 $prototypeV2=bool hasChildren() const
 
-$prototype=QStandardItem *child(int row, int column = 0) const
-$method=|QStandardItem *|child|int,int=0
+$prototypeV2=QStandardItem * child( int row, int column = 0 ) const
 
 $prototype=void setChild(int row, int column, QStandardItem *item)
 $internalMethod=|void|setChild,setChild1|int,int,QStandardItem *
@@ -312,15 +309,13 @@ $prototypeV2=void appendRows( const QList<QStandardItem *> & items )
 
 $prototypeV2=void appendColumn( const QList<QStandardItem *> & items )
 
-$prototype=QStandardItem *takeChild(int row, int column = 0)
-$method=|QStandardItem *|takeChild|int,int=0
+$prototypeV2=QStandardItem * takeChild( int row, int column = 0 )
 
 $prototypeV2=QList<QStandardItem *> takeRow( int row )
 
 $prototypeV2=QList<QStandardItem *> takeColumn( int column )
 
-$prototype=void sortChildren(int column, Qt::SortOrder order = Qt::AscendingOrder)
-$method=|void|sortChildren|int,Qt::SortOrder=Qt::AscendingOrder
+$prototypeV2=void sortChildren( int column, Qt::SortOrder order = Qt::AscendingOrder )
 
 $prototypeV2=QStandardItem * clone() const
 

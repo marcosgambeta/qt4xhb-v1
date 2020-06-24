@@ -70,11 +70,9 @@ $prototypeV2=QCompleter * completer() const
 
 $prototypeV2=QMenu * createStandardContextMenu()
 
-$prototype=void cursorBackward ( bool mark, int steps = 1 )
-$method=|void|cursorBackward|bool,int=1
+$prototypeV2=void cursorBackward( bool mark, int steps = 1 )
 
-$prototype=void cursorForward ( bool mark, int steps = 1 )
-$method=|void|cursorForward|bool,int=1
+$prototypeV2=void cursorForward( bool mark, int steps = 1 )
 
 $prototypeV2=int cursorPosition() const
 

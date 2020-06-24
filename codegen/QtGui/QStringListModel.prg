@@ -61,20 +61,15 @@ $prototypeV2=virtual QVariant data( const QModelIndex & index, int role ) const
 
 $prototypeV2=virtual Qt::ItemFlags flags( const QModelIndex & index ) const
 
-$prototype=virtual bool insertRows(int row, int count, const QModelIndex & parent = QModelIndex())
-$virtualMethod=|bool|insertRows|int,int,const QModelIndex &=QModelIndex()
+$prototypeV2=virtual bool insertRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 
-$prototype=virtual bool removeRows(int row, int count, const QModelIndex & parent = QModelIndex())
-$virtualMethod=|bool|removeRows|int,int,const QModelIndex &=QModelIndex()
+$prototypeV2=virtual bool removeRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 
-$prototype=virtual int rowCount(const QModelIndex & parent = QModelIndex()) const
-$virtualMethod=|int|rowCount|const QModelIndex &=QModelIndex()
+$prototypeV2=virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
 
-$prototype=virtual bool setData(const QModelIndex & index, const QVariant & value, int role = Qt::EditRole)
-$virtualMethod=|bool|setData|const QModelIndex &,const QVariant &,int=Qt::EditRole
+$prototypeV2=virtual bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 
-$prototype=virtual void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
-$virtualMethod=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
+$prototypeV2=virtual void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
 
 $prototypeV2=virtual Qt::DropActions supportedDropActions() const
 

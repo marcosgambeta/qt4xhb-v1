@@ -50,11 +50,9 @@ $prototypeV2=QGraphicsWidget * focusWidget() const
 
 $prototypeV2=QFont font() const
 
-$prototype=void getWindowFrameMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
-$method=|void|getWindowFrameMargins|qreal *,qreal *,qreal *,qreal *
+$prototypeV2=void getWindowFrameMargins( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
 
-$prototype=int grabShortcut ( const QKeySequence & sequence, Qt::ShortcutContext context = Qt::WindowShortcut )
-$method=|int|grabShortcut|const QKeySequence &,Qt::ShortcutContext=Qt::WindowShortcut
+$prototypeV2=int grabShortcut( const QKeySequence & sequence, Qt::ShortcutContext context = Qt::WindowShortcut )
 
 $prototypeV2=void insertAction( QAction * before, QAction * action )
 
@@ -66,8 +64,7 @@ $prototypeV2=QGraphicsLayout * layout() const
 
 $prototypeV2=Qt::LayoutDirection layoutDirection() const
 
-$prototype=virtual void paintWindowFrame ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
-$virtualMethod=|void|paintWindowFrame|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
+$prototypeV2=virtual void paintWindowFrame( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 
 $prototypeV2=QPalette palette() const
 
@@ -105,8 +102,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_RESIZE )
 }
 $addMethod=resize
 
-$prototype=void setAttribute ( Qt::WidgetAttribute attribute, bool on = true )
-$method=|void|setAttribute|Qt::WidgetAttribute,bool=true
+$prototypeV2=void setAttribute( Qt::WidgetAttribute attribute, bool on = true )
 
 $prototypeV2=void setAutoFillBackground( bool enabled )
 
@@ -122,11 +118,9 @@ $prototypeV2=void setLayoutDirection( Qt::LayoutDirection direction )
 
 $prototypeV2=void setPalette( const QPalette & palette )
 
-$prototype=void setShortcutAutoRepeat ( int id, bool enabled = true )
-$method=|void|setShortcutAutoRepeat|int,bool=true
+$prototypeV2=void setShortcutAutoRepeat( int id, bool enabled = true )
 
-$prototype=void setShortcutEnabled ( int id, bool enabled = true )
-$method=|void|setShortcutEnabled|int,bool=true
+$prototypeV2=void setShortcutEnabled( int id, bool enabled = true )
 
 $prototypeV2=void setStyle( QStyle * style )
 
@@ -158,11 +152,9 @@ $prototypeV2=Qt::WindowType windowType() const
 
 $prototypeV2=virtual QRectF boundingRect() const
 
-$prototype=virtual void getContentsMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
-$virtualMethod=|void|getContentsMargins|qreal *,qreal *,qreal *,qreal *
+$prototypeV2=virtual void getContentsMargins( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
 
-$prototype=virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
-$virtualMethod=|void|paint|QPainter *,const QStyleOptionGraphicsItem *,QWidget *=0
+$prototypeV2=virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 
 $prototype=void setGeometry ( qreal x, qreal y, qreal w, qreal h )
 $internalMethod=|void|setGeometry,setGeometry1|qreal,qreal,qreal,qreal

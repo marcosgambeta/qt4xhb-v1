@@ -91,8 +91,7 @@ $prototypeV2=void setCollapsible( int index, bool collapse )
 
 $prototypeV2=void setHandleWidth( int )
 
-$prototype=void setOpaqueResize ( bool opaque = true )
-$method=|void|setOpaqueResize|bool=true
+$prototypeV2=void setOpaqueResize( bool opaque = true )
 
 $prototypeV2=void setOrientation( Qt::Orientation )
 

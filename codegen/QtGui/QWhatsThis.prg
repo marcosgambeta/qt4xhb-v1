@@ -29,8 +29,7 @@ $includes
 
 $deleteMethod
 
-$prototype=static QAction * createAction ( QObject * parent = 0 )
-$staticMethod=|QAction *|createAction|QObject *=0
+$prototypeV2=static QAction * createAction( QObject * parent = 0 )
 
 $prototypeV2=static void enterWhatsThisMode()
 
@@ -40,8 +39,7 @@ $prototypeV2=static bool inWhatsThisMode()
 
 $prototypeV2=static void leaveWhatsThisMode()
 
-$prototype=static void showText ( const QPoint & pos, const QString & text, QWidget * w = 0 )
-$staticMethod=|void|showText|const QPoint &,const QString &,QWidget *=0
+$prototypeV2=static void showText( const QPoint & pos, const QString & text, QWidget * w = 0 )
 
 $extraMethods
 

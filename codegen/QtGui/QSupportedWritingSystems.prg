@@ -55,8 +55,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void setSupported ( QFontDatabase::WritingSystem writingSystem, bool support = true )
-$method=|void|setSupported|QFontDatabase::WritingSystem,bool=true
+$prototypeV2=void setSupported( QFontDatabase::WritingSystem writingSystem, bool support = true )
 
 $prototypeV2=bool supported( QFontDatabase::WritingSystem writingSystem ) const
 

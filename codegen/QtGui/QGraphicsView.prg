@@ -399,8 +399,7 @@ $prototypeV2=QMatrix matrix() const
 
 $prototypeV2=QGraphicsView::OptimizationFlags optimizationFlags() const
 
-$prototype=void render ( QPainter * painter, const QRectF & target = QRectF(), const QRect & source = QRect(), Qt::AspectRatioMode aspectRatioMode = Qt::KeepAspectRatio )
-$method=|void|render|QPainter *,const QRectF &=QRectF(),const QRect &=QRect(),Qt::AspectRatioMode=Qt::KeepAspectRatio
+$prototypeV2=void render( QPainter * painter, const QRectF & target = QRectF(), const QRect & source = QRect(), Qt::AspectRatioMode aspectRatioMode = Qt::KeepAspectRatio )
 
 $prototypeV2=QPainter::RenderHints renderHints() const
 
@@ -434,16 +433,13 @@ $prototypeV2=void setForegroundBrush( const QBrush & brush )
 
 $prototypeV2=void setInteractive( bool allowed )
 
-$prototype=void setMatrix ( const QMatrix & matrix, bool combine = false )
-$method=|void|setMatrix|const QMatrix &,bool=false
+$prototypeV2=void setMatrix( const QMatrix & matrix, bool combine = false )
 
-$prototype=void setOptimizationFlag ( OptimizationFlag flag, bool enabled = true )
-$method=|void|setOptimizationFlag|QGraphicsView::OptimizationFlag,bool=true
+$prototypeV2=void setOptimizationFlag( QGraphicsView::OptimizationFlag flag, bool enabled = true )
 
 $prototypeV2=void setOptimizationFlags( QGraphicsView::OptimizationFlags flags )
 
-$prototype=void setRenderHint ( QPainter::RenderHint hint, bool enabled = true )
-$method=|void|setRenderHint|QPainter::RenderHint,bool=true
+$prototypeV2=void setRenderHint( QPainter::RenderHint hint, bool enabled = true )
 
 $prototypeV2=void setRenderHints( QPainter::RenderHints hints )
 
@@ -481,8 +477,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETSCENERECT )
 }
 $addMethod=setSceneRect
 
-$prototype=void setTransform ( const QTransform & matrix, bool combine = false )
-$method=|void|setTransform|const QTransform &,bool=false
+$prototypeV2=void setTransform( const QTransform & matrix, bool combine = false )
 
 $prototypeV2=void setTransformationAnchor( QGraphicsView::ViewportAnchor anchor )
 
@@ -504,8 +499,7 @@ $prototypeV2=virtual QVariant inputMethodQuery( Qt::InputMethodQuery query ) con
 
 $prototypeV2=virtual QSize sizeHint() const
 
-$prototype=void invalidateScene ( const QRectF & rect = QRectF(), QGraphicsScene::SceneLayers layers = QGraphicsScene::AllLayers )
-$method=|void|invalidateScene|const QRectF &=QRectF(),QGraphicsScene::SceneLayers=QGraphicsScene::AllLayers
+$prototypeV2=void invalidateScene( const QRectF & rect = QRectF(), QGraphicsScene::SceneLayers layers = QGraphicsScene::AllLayers )
 
 $prototypeV2=void updateScene( const QList<QRectF> & rects )
 

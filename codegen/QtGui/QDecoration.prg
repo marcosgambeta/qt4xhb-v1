@@ -31,8 +31,7 @@ $prototypeV2=virtual void buildSysMenu( QWidget * widget, QMenu * menu )
 
 $prototypeV2=void menuTriggered( QWidget * widget, QAction * action )
 
-$prototype=virtual bool paint ( QPainter * painter, const QWidget * widget, int decorationRegion = All, DecorationState state = Normal ) = 0
-$virtualMethod=|bool|paint|QPainter *,const QWidget *,int=QDecoration::All,QDecoration::DecorationState=QDecoration::Normal
+$prototypeV2=virtual bool paint( QPainter * painter, const QWidget * widget, int decorationRegion = QDecoration::All, QDecoration::DecorationState state = QDecoration::Normal ) = 0
 
 $prototype=virtual QRegion region ( const QWidget * widget, const QRect & rectangle, int decorationRegion = All ) = 0
 $internalVirtualMethod=|QRegion|region,region1|const QWidget *,const QRect &,int=QDecoration::All

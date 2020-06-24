@@ -73,13 +73,11 @@ $prototypeV2=const QAbstractItemModel * model() const
 
 $prototypeV2=bool rowIntersectsSelection( int row, const QModelIndex & parent ) const
 
-$prototype=QModelIndexList selectedColumns ( int row = 0 ) const
-$method=|QModelIndexList|selectedColumns|int=0
+$prototypeV2=QModelIndexList selectedColumns( int row = 0 ) const
 
 $prototypeV2=QModelIndexList selectedIndexes() const
 
-$prototype=QModelIndexList selectedRows ( int column = 0 ) const
-$method=|QModelIndexList|selectedRows|int=0
+$prototypeV2=QModelIndexList selectedRows( int column = 0 ) const
 
 $prototypeV2=const QItemSelection selection() const
 

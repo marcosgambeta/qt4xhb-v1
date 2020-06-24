@@ -59,8 +59,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const
-$method=|QModelIndex|index|int,int,const QModelIndex &=QModelIndex()
+$prototypeV2=QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 
 $prototype=QModelIndex parent(const QModelIndex &child) const
 $internalMethod=|QModelIndex|parent,parent1|const QModelIndex &
@@ -90,38 +89,27 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_PARENT )
 }
 $addMethod=parent
 
-$prototype=int rowCount(const QModelIndex &parent = QModelIndex()) const
-$method=|int|rowCount|const QModelIndex &=QModelIndex()
+$prototypeV2=int rowCount( const QModelIndex & parent = QModelIndex() ) const
 
-$prototype=int columnCount(const QModelIndex &parent = QModelIndex()) const
-$method=|int|columnCount|const QModelIndex &=QModelIndex()
+$prototypeV2=int columnCount( const QModelIndex & parent = QModelIndex() ) const
 
-$prototype=bool hasChildren(const QModelIndex &parent = QModelIndex()) const
-$method=|bool|hasChildren|const QModelIndex &=QModelIndex()
+$prototypeV2=bool hasChildren( const QModelIndex & parent = QModelIndex() ) const
 
-$prototype=QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
-$method=|QVariant|data|const QModelIndex &,int=Qt::DisplayRole
+$prototypeV2=QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const
 
-$prototype=bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole)
-$method=|bool|setData|const QModelIndex &,const QVariant &,int=Qt::EditRole
+$prototypeV2=bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 
-$prototype=QVariant headerData(int section, Qt::Orientation orientation,int role = Qt::DisplayRole) const
-$method=|QVariant|headerData|int,Qt::Orientation,int=Qt::DisplayRole
+$prototypeV2=QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 
-$prototype=bool setHeaderData(int section, Qt::Orientation orientation, const QVariant &value,int role = Qt::EditRole)
-$method=|bool|setHeaderData|int,Qt::Orientation,const QVariant &,int=Qt::EditRole
+$prototypeV2=bool setHeaderData( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole )
 
-$prototype=bool insertRows(int row, int count, const QModelIndex &parent = QModelIndex())
-$method=|bool|insertRows|int,int,const QModelIndex &=QModelIndex()
+$prototypeV2=bool insertRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 
-$prototype=bool insertColumns(int column, int count, const QModelIndex &parent = QModelIndex())
-$method=|bool|insertColumns|int,int,const QModelIndex &=QModelIndex()
+$prototypeV2=bool insertColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
 
-$prototype=bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex())
-$method=|bool|removeRows|int,int,const QModelIndex &=QModelIndex()
+$prototypeV2=bool removeRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 
-$prototype=bool removeColumns(int column, int count, const QModelIndex &parent = QModelIndex())
-$method=|bool|removeColumns|int,int,const QModelIndex &=QModelIndex()
+$prototypeV2=bool removeColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
 
 $prototypeV2=Qt::ItemFlags flags( const QModelIndex & index ) const
 
@@ -129,15 +117,13 @@ $prototypeV2=Qt::DropActions supportedDropActions() const
 
 $prototypeV2=void clear()
 
-$prototype=void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
-$method=|void|sort|int,Qt::SortOrder=Qt::AscendingOrder
+$prototypeV2=void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
 
 $prototypeV2=QStandardItem * itemFromIndex( const QModelIndex & index ) const
 
 $prototypeV2=QModelIndex indexFromItem( const QStandardItem * item ) const
 
-$prototype=QStandardItem *item(int row, int column = 0) const
-$method=|QStandardItem *|item|int,int=0
+$prototypeV2=QStandardItem * item( int row, int column = 0 ) const
 
 $prototype=void setItem(int row, int column, QStandardItem *item)
 $internalMethod=|void|setItem,setItem1|int,int,QStandardItem *
@@ -279,8 +265,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INSERTCOLUMN )
 }
 $addMethod=insertColumn
 
-$prototype=QStandardItem *takeItem(int row, int column = 0)
-$method=|QStandardItem *|takeItem|int,int=0
+$prototypeV2=QStandardItem * takeItem( int row, int column = 0 )
 
 $prototypeV2=QList<QStandardItem *> takeRow( int row )
 
@@ -294,8 +279,7 @@ $prototypeV2=const QStandardItem * itemPrototype() const
 
 $prototypeV2=void setItemPrototype( const QStandardItem * item )
 
-$prototype=QList<QStandardItem*> findItems(const QString &text,Qt::MatchFlags flags = Qt::MatchExactly,int column = 0) const
-$method=|QList<QStandardItem *>|findItems|const QString &,Qt::MatchFlags=Qt::MatchExactly,int=0
+$prototypeV2=QList<QStandardItem *> findItems( const QString & text, Qt::MatchFlags flags = Qt::MatchExactly, int column = 0 ) const
 
 $prototypeV2=int sortRole() const
 

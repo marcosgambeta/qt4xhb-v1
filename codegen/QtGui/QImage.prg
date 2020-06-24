@@ -203,14 +203,11 @@ HB_FUNC_STATIC( QIMAGE_COPY )
 }
 $addMethod=copy
 
-$prototype=QImage createAlphaMask ( Qt::ImageConversionFlags flags = Qt::AutoColor ) const
-$method=|QImage|createAlphaMask|Qt::ImageConversionFlags=Qt::AutoColor
+$prototypeV2=QImage createAlphaMask( Qt::ImageConversionFlags flags = Qt::AutoColor ) const
 
-$prototype=QImage createHeuristicMask ( bool clipTight = true ) const
-$method=|QImage|createHeuristicMask|bool=true
+$prototypeV2=QImage createHeuristicMask( bool clipTight = true ) const
 
-$prototype=QImage createMaskFromColor ( QRgb color, Qt::MaskMode mode = Qt::MaskInColor ) const
-$method=|QImage|createMaskFromColor|QRgb,Qt::MaskMode=Qt::MaskInColor
+$prototypeV2=QImage createMaskFromColor( QRgb color, Qt::MaskMode mode = Qt::MaskInColor ) const
 
 $prototypeV2=int depth() const
 
@@ -261,8 +258,7 @@ $prototypeV2=bool hasAlphaChannel() const
 
 $prototypeV2=int height() const
 
-$prototype=void invertPixels ( InvertMode mode = InvertRgb )
-$method=|void|invertPixels|QImage::InvertMode=QImage::InvertRgb
+$prototypeV2=void invertPixels( QImage::InvertMode mode = QImage::InvertRgb )
 
 $prototypeV2=bool isGrayscale() const
 
@@ -324,8 +320,7 @@ HB_FUNC_STATIC( QIMAGE_LOADFROMDATA )
 }
 $addMethod=loadFromData
 
-$prototype=QImage mirrored ( bool horizontal = false, bool vertical = true ) const
-$method=|QImage|mirrored|bool=false,bool=true
+$prototypeV2=QImage mirrored( bool horizontal = false, bool vertical = true ) const
 
 $prototypeV2=QPoint offset() const
 
@@ -445,11 +440,9 @@ HB_FUNC_STATIC( QIMAGE_SCALED )
 }
 $addMethod=scaled
 
-$prototype=QImage scaledToHeight ( int height, Qt::TransformationMode mode = Qt::FastTransformation ) const
-$method=|QImage|scaledToHeight|int,Qt::TransformationMode=Qt::FastTransformation
+$prototypeV2=QImage scaledToHeight( int height, Qt::TransformationMode mode = Qt::FastTransformation ) const
 
-$prototype=QImage scaledToWidth ( int width, Qt::TransformationMode mode = Qt::FastTransformation ) const
-$method=|QImage|scaledToWidth|int,Qt::TransformationMode=Qt::FastTransformation
+$prototypeV2=QImage scaledToWidth( int width, Qt::TransformationMode mode = Qt::FastTransformation ) const
 
 %% TODO: implementar
 
@@ -509,8 +502,7 @@ $prototypeV2=QSize size() const
 
 $prototypeV2=void swap( QImage & other )
 
-$prototype=QString text ( const QString & key = QString() ) const
-$method=|QString|text|const QString &=QString()
+$prototypeV2=QString text( const QString & key = QString() ) const
 
 $prototypeV2=QStringList textKeys() const
 

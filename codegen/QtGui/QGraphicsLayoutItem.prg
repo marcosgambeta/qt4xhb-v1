@@ -29,8 +29,7 @@ $deleteMethod
 
 $prototypeV2=QRectF contentsRect() const
 
-$prototype=QSizeF effectiveSizeHint ( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
-$method=|QSizeF|effectiveSizeHint|Qt::SizeHint,const QSizeF &=QSizeF()
+$prototypeV2=QSizeF effectiveSizeHint( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
 
 $prototypeV2=QRectF geometry() const
 

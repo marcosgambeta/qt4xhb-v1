@@ -195,8 +195,7 @@ $prototypeV2=void setVerticalHeaderItem( int row, QTableWidgetItem * item )
 
 $prototypeV2=void setVerticalHeaderLabels( const QStringList & labels )
 
-$prototype=void sortItems ( int column, Qt::SortOrder order = Qt::AscendingOrder )
-$method=|void|sortItems|int,Qt::SortOrder=Qt::AscendingOrder
+$prototypeV2=void sortItems( int column, Qt::SortOrder order = Qt::AscendingOrder )
 
 $prototypeV2=QTableWidgetItem * takeHorizontalHeaderItem( int column )
 
@@ -224,8 +223,7 @@ $prototypeV2=void removeColumn( int column )
 
 $prototypeV2=void removeRow( int row )
 
-$prototype=void scrollToItem ( const QTableWidgetItem * item, QAbstractItemView::ScrollHint hint = EnsureVisible )
-$method=|void|scrollToItem|const QTableWidgetItem *,QAbstractItemView::ScrollHint=QAbstractItemView::EnsureVisible
+$prototypeV2=void scrollToItem( const QTableWidgetItem * item, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible )
 
 $beginSignals
 $signal=|cellActivated(int,int)

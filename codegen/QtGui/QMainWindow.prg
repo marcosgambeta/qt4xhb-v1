@@ -101,8 +101,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBAR )
 }
 $addMethod=addToolBar
 
-$prototype=void addToolBarBreak ( Qt::ToolBarArea area = Qt::TopToolBarArea )
-$method=|void|addToolBarBreak|Qt::ToolBarArea=Qt::TopToolBarArea
+$prototypeV2=void addToolBarBreak( Qt::ToolBarArea area = Qt::TopToolBarArea )
 
 $prototypeV2=QWidget * centralWidget() const
 
@@ -138,11 +137,9 @@ $prototypeV2=void removeToolBarBreak( QToolBar * before )
 
 $prototypeV2=bool restoreDockWidget( QDockWidget * dockwidget )
 
-$prototype=bool restoreState ( const QByteArray & state, int version = 0 )
-$method=|bool|restoreState|const QByteArray &,int=0
+$prototypeV2=bool restoreState( const QByteArray & state, int version = 0 )
 
-$prototype=QByteArray saveState ( int version = 0 ) const
-$method=|QByteArray|saveState|int=0
+$prototypeV2=QByteArray saveState( int version = 0 ) const
 
 $prototypeV2=void setCentralWidget( QWidget * widget )
 

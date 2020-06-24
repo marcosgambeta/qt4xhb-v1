@@ -76,8 +76,7 @@ $prototypeV2=void setGeometry( const QRect & rectangle )
 
 $prototypeV2=void setRegion( const QRegion & region )
 
-$prototype=void startPainting ( bool lockDisplay = true )
-$method=|void|startPainting|bool=true
+$prototypeV2=void startPainting( bool lockDisplay = true )
 
 $prototype=uchar * frameBuffer ()
 %% TODO: implementar 'uchar *'

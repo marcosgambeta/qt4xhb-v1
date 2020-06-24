@@ -139,8 +139,7 @@ $prototypeV2=QString documentTitle() const
 
 $prototypeV2=void ensureCursorVisible()
 
-$prototype=bool find ( const QString & exp, QTextDocument::FindFlags options = 0 )
-$method=|bool|find|const QString &,QTextDocument::FindFlags=0
+$prototypeV2=bool find( const QString & exp, QTextDocument::FindFlags options = 0 )
 
 $prototypeV2=QString fontFamily() const
 
@@ -164,8 +163,7 @@ $prototypeV2=virtual QVariant loadResource( int type, const QUrl & name )
 
 $prototypeV2=void mergeCurrentCharFormat( const QTextCharFormat & modifier )
 
-$prototype=void moveCursor ( QTextCursor::MoveOperation operation, QTextCursor::MoveMode mode = QTextCursor::MoveAnchor )
-$method=|void|moveCursor|QTextCursor::MoveOperation,QTextCursor::MoveMode=QTextCursor::MoveAnchor
+$prototypeV2=void moveCursor( QTextCursor::MoveOperation operation, QTextCursor::MoveMode mode = QTextCursor::MoveAnchor )
 
 $prototypeV2=bool overwriteMode() const
 
@@ -267,11 +265,9 @@ $prototypeV2=void setTextColor( const QColor & c )
 
 $prototypeV2=void undo()
 
-$prototype=void zoomIn ( int range = 1 )
-$method=|void|zoomIn|int=1
+$prototypeV2=void zoomIn( int range = 1 )
 
-$prototype=void zoomOut ( int range = 1 )
-$method=|void|zoomOut|int=1
+$prototypeV2=void zoomOut( int range = 1 )
 
 $beginSignals
 $signal=|copyAvailable(bool)

@@ -55,8 +55,7 @@ $addMethod=new
 
 $deleteMethod
 
-$prototype=void addItem ( QLayoutItem * item, int row, int column, int rowSpan = 1, int columnSpan = 1, Qt::Alignment alignment = 0 )
-$method=|void|addItem|QLayoutItem *,int,int,int=1,int=1,Qt::Alignment=0
+$prototypeV2=void addItem( QLayoutItem * item, int row, int column, int rowSpan = 1, int columnSpan = 1, Qt::Alignment alignment = 0 )
 
 $prototype=void addLayout ( QLayout * layout, int row, int column, Qt::Alignment alignment = 0 )
 $internalMethod=|void|addLayout,addLayout1|QLayout *,int,int,Qt::Alignment=0

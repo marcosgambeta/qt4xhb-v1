@@ -27,8 +27,7 @@ $destructor
 
 $includes
 
-$prototype=void grabGesture ( Qt::GestureType gesture, Qt::GestureFlags flags = Qt::GestureFlags() )
-$method=|void|grabGesture|Qt::GestureType,Qt::GestureFlags=Qt::GestureFlags()
+$prototypeV2=void grabGesture( Qt::GestureType gesture, Qt::GestureFlags flags = Qt::GestureFlags() )
 
 $prototypeV2=void ungrabGesture( Qt::GestureType gesture )
 

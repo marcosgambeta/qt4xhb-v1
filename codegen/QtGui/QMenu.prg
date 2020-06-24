@@ -183,8 +183,7 @@ $prototypeV2=bool isTearOffMenuVisible() const
 
 $prototypeV2=QAction * menuAction() const
 
-$prototype=void popup ( const QPoint & p, QAction * atAction = 0 )
-$method=|void|popup|const QPoint &,QAction *=0
+$prototypeV2=void popup( const QPoint & p, QAction * atAction = 0 )
 
 $prototypeV2=bool separatorsCollapsible() const
 

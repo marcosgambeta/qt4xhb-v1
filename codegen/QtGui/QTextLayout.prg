@@ -125,8 +125,7 @@ $prototypeV2=qreal maximumWidth() const
 
 $prototypeV2=qreal minimumWidth() const
 
-$prototype=int nextCursorPosition ( int oldPos, CursorMode mode = SkipCharacters ) const
-$method=|int|nextCursorPosition|int,QTextLayout::CursorMode=QTextLayout::SkipCharacters
+$prototypeV2=int nextCursorPosition( int oldPos, QTextLayout::CursorMode mode = QTextLayout::SkipCharacters ) const
 
 $prototypeV2=QPointF position() const
 
@@ -134,8 +133,7 @@ $prototypeV2=int preeditAreaPosition() const
 
 $prototypeV2=QString preeditAreaText() const
 
-$prototype=int previousCursorPosition ( int oldPos, CursorMode mode = SkipCharacters ) const
-$method=|int|previousCursorPosition|int,QTextLayout::CursorMode=QTextLayout::SkipCharacters
+$prototypeV2=int previousCursorPosition( int oldPos, QTextLayout::CursorMode mode = QTextLayout::SkipCharacters ) const
 
 $prototypeV2=int rightCursorPosition( int oldPos ) const
 

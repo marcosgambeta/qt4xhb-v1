@@ -29,8 +29,7 @@ $deleteMethod
 
 $prototypeV2=virtual QByteArray encodedData( const char * format ) const = 0
 
-$prototype=virtual const char * format ( int i = 0 ) const = 0
-$virtualMethod=|const char *|format|int=0
+$prototypeV2=virtual const char * format( int i = 0 ) const = 0
 
 $prototypeV2=virtual bool provides( const char * mimeType ) const
 

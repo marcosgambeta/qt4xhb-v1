@@ -32,27 +32,21 @@ $constructor=|new|
 
 $prototypeV2=bool bold( const QString & family, const QString & style ) const
 
-$prototype=QStringList families ( WritingSystem writingSystem = Any ) const
-$method=|QStringList|families|QFontDatabase::WritingSystem=QFontDatabase::Any
+$prototypeV2=QStringList families( QFontDatabase::WritingSystem writingSystem = QFontDatabase::Any ) const
 
 $prototypeV2=QFont font( const QString & family, const QString & style, int pointSize ) const
 
-$prototype=bool isBitmapScalable ( const QString & family, const QString & style = QString() ) const
-$method=|bool|isBitmapScalable|const QString &,const QString &=QString()
+$prototypeV2=bool isBitmapScalable( const QString & family, const QString & style = QString() ) const
 
-$prototype=bool isFixedPitch ( const QString & family, const QString & style = QString() ) const
-$method=|bool|isFixedPitch|const QString &,const QString &=QString()
+$prototypeV2=bool isFixedPitch( const QString & family, const QString & style = QString() ) const
 
-$prototype=bool isScalable ( const QString & family, const QString & style = QString() ) const
-$method=|bool|isScalable|const QString &,const QString &=QString()
+$prototypeV2=bool isScalable( const QString & family, const QString & style = QString() ) const
 
-$prototype=bool isSmoothlyScalable ( const QString & family, const QString & style = QString() ) const
-$method=|bool|isSmoothlyScalable|const QString &,const QString &=QString()
+$prototypeV2=bool isSmoothlyScalable( const QString & family, const QString & style = QString() ) const
 
 $prototypeV2=bool italic( const QString & family, const QString & style ) const
 
-$prototype=QList<int> pointSizes ( const QString & family, const QString & style = QString() )
-$method=|QList<int>|pointSizes|const QString &,const QString &=QString()
+$prototypeV2=QList<int> pointSizes( const QString & family, const QString & style = QString() )
 
 $prototypeV2=QList<int> smoothSizes( const QString & family, const QString & style )
 

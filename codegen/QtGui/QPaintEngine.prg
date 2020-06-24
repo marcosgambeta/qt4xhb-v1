@@ -57,8 +57,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWELLIPSE )
 }
 $addMethod=drawEllipse
 
-$prototype=virtual void drawImage ( const QRectF & rectangle, const QImage & image, const QRectF & sr, Qt::ImageConversionFlags flags = Qt::AutoColor )
-$virtualMethod=|void|drawImage|const QRectF &,const QImage &,const QRectF &,Qt::ImageConversionFlags=Qt::AutoColor
+$prototypeV2=virtual void drawImage( const QRectF & rectangle, const QImage & image, const QRectF & sr, Qt::ImageConversionFlags flags = Qt::AutoColor )
 
 /*
 [1]virtual void drawLines ( const QLineF * lines, int lineCount )
@@ -72,8 +71,7 @@ $addMethod=drawLines
 
 $prototypeV2=virtual void drawPath( const QPainterPath & path )
 
-$prototype=virtual void drawPixmap ( const QRectF & r, const QPixmap & pm, const QRectF & sr ) = 0
-$virtualMethod=|void|drawPixmap|const QRectF &,const QPixmap &,const QRectF &
+$prototypeV2=virtual void drawPixmap( const QRectF & r, const QPixmap & pm, const QRectF & sr ) = 0
 
 /*
 [1]virtual void drawPoints ( const QPointF * points, int pointCount )

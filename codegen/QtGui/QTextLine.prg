@@ -126,8 +126,7 @@ $prototypeV2=qreal width() const
 
 $prototypeV2=qreal x() const
 
-$prototype=int xToCursor ( qreal x, CursorPosition cpos = CursorBetweenCharacters ) const
-$method=|int|xToCursor|qreal,QTextLine::CursorPosition=QTextLine::CursorBetweenCharacters
+$prototypeV2=int xToCursor( qreal x, QTextLine::CursorPosition cpos = QTextLine::CursorBetweenCharacters ) const
 
 $prototypeV2=qreal y() const
 
