@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_ISWRITABLE )
 }
 
 /*
-bool map ( QAbstractVideoBuffer::MapMode mode )
+bool map( QAbstractVideoBuffer::MapMode mode )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_MAP )
 {
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_PIXELFORMAT )
 }
 
 /*
-void setEndTime ( qint64 time )
+void setEndTime( qint64 time )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_SETENDTIME )
 {
@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_SETENDTIME )
 }
 
 /*
-void setFieldType ( FieldType field )
+void setFieldType( QVideoFrame::FieldType field )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_SETFIELDTYPE )
 {
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_SETFIELDTYPE )
 }
 
 /*
-void setStartTime ( qint64 time )
+void setStartTime( qint64 time )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_SETSTARTTIME )
 {
@@ -695,7 +695,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_WIDTH )
 }
 
 /*
-static QImage::Format imageFormatFromPixelFormat ( PixelFormat format )
+static QImage::Format imageFormatFromPixelFormat( QVideoFrame::PixelFormat format )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_IMAGEFORMATFROMPIXELFORMAT )
 {
@@ -714,7 +714,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_IMAGEFORMATFROMPIXELFORMAT )
 }
 
 /*
-static PixelFormat pixelFormatFromImageFormat ( QImage::Format format )
+static QVideoFrame::PixelFormat pixelFormatFromImageFormat( QImage::Format format )
 */
 HB_FUNC_STATIC( QVIDEOFRAME_PIXELFORMATFROMIMAGEFORMAT )
 {

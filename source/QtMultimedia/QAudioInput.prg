@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_RESUME )
 }
 
 /*
-void setBufferSize ( int value )
+void setBufferSize( int value )
 */
 HB_FUNC_STATIC( QAUDIOINPUT_SETBUFFERSIZE )
 {
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_SETBUFFERSIZE )
 }
 
 /*
-void setNotifyInterval ( int ms )
+void setNotifyInterval( int ms )
 */
 HB_FUNC_STATIC( QAUDIOINPUT_SETNOTIFYINTERVAL )
 {

@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_DEVICENAME )
 }
 
 /*
-bool isFormatSupported ( const QAudioFormat & settings ) const
+bool isFormatSupported( const QAudioFormat & settings ) const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_ISFORMATSUPPORTED )
 {
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_ISNULL )
 }
 
 /*
-QAudioFormat nearestFormat ( const QAudioFormat & settings ) const
+QAudioFormat nearestFormat( const QAudioFormat & settings ) const
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_NEARESTFORMAT )
 {
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDCODECS )
 }
 
 /*
-static QList<QAudioDeviceInfo> availableDevices ( QAudio::Mode mode )
+static QList<QAudioDeviceInfo> availableDevices( QAudio::Mode mode )
 */
 HB_FUNC_STATIC( QAUDIODEVICEINFO_AVAILABLEDEVICES )
 {

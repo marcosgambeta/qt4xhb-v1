@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_ISVALID )
 }
 
 /*
-void setFrequency(int frequency)
+void setFrequency( int frequency )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETFREQUENCY )
 {
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_FREQUENCY )
 }
 
 /*
-void setSampleRate ( int samplerate )
+void setSampleRate( int samplerate )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLERATE )
 {
@@ -245,7 +245,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLERATE )
 }
 
 /*
-void setChannels(int channels)
+void setChannels( int channels )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETCHANNELS )
 {
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_CHANNELS )
 }
 
 /*
-void setChannelCount(int channelCount)
+void setChannelCount( int channelCount )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETCHANNELCOUNT )
 {
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_CHANNELCOUNT )
 }
 
 /*
-void setSampleSize ( int sampleSize )
+void setSampleSize( int sampleSize )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLESIZE )
 {
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLESIZE )
 }
 
 /*
-void setCodec ( const QString & codec )
+void setCodec( const QString & codec )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETCODEC )
 {
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_CODEC )
 }
 
 /*
-void setByteOrder ( QAudioFormat::Endian byteOrder )
+void setByteOrder( QAudioFormat::Endian byteOrder )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETBYTEORDER )
 {
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLETYPE )
 }
 
 /*
-void setSampleType ( QAudioFormat::SampleType sampleType )
+void setSampleType( QAudioFormat::SampleType sampleType )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLETYPE )
 {

@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_PIXELFORMAT )
 }
 
 /*
-QVariant property ( const char * name ) const
+QVariant property( const char * name ) const
 */
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_PROPERTY )
 {
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SCANLINEDIRECTION )
 }
 
 /*
-void setFrameRate ( qreal rate )
+void setFrameRate( qreal rate )
 */
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETFRAMERATE )
 {
@@ -568,7 +568,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETPIXELASPECTRATIO )
 }
 
 /*
-void setProperty ( const char * name, const QVariant & value )
+void setProperty( const char * name, const QVariant & value )
 */
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETPROPERTY )
 {
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETPROPERTY )
 }
 
 /*
-void setScanLineDirection ( Direction direction )
+void setScanLineDirection( QVideoSurfaceFormat::Direction direction )
 */
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETSCANLINEDIRECTION )
 {
@@ -620,7 +620,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETSCANLINEDIRECTION )
 }
 
 /*
-void setViewport ( const QRect & viewport )
+void setViewport( const QRect & viewport )
 */
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETVIEWPORT )
 {
@@ -646,7 +646,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETVIEWPORT )
 }
 
 /*
-void setYCbCrColorSpace ( YCbCrColorSpace space )
+void setYCbCrColorSpace( QVideoSurfaceFormat::YCbCrColorSpace space )
 */
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETYCBCRCOLORSPACE )
 {
