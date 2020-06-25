@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ERROR )
 }
 
 /*
-QVariant evaluate ( bool * valueIsUndefined = 0 )
+QVariant evaluate( bool * valueIsUndefined = 0 )
 */
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EVALUATE )
 {
