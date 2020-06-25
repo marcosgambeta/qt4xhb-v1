@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICK )
 }
 
 /*
-void addKeyClicks ( const QString & keys, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+void addKeyClicks( const QString & keys, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICKS )
 {
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYRELEASE )
 }
 
 /*
-void addMouseClick ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
+void addMouseClick( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSECLICK )
 {
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSECLICK )
 }
 
 /*
-void addMouseDClick ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
+void addMouseDClick( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSEDCLICK )
 {
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSEDCLICK )
 }
 
 /*
-void addMouseMove ( QPoint pos = QPoint(), int delay = -1 )
+void addMouseMove( QPoint pos = QPoint(), int delay = -1 )
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSEMOVE )
 {
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSEMOVE )
 }
 
 /*
-void addMousePress ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
+void addMousePress( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSEPRESS )
 {
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSEPRESS )
 }
 
 /*
-void addMouseRelease ( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
+void addMouseRelease( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0, QPoint pos = QPoint(), int delay = -1 )
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSERELEASE )
 {
