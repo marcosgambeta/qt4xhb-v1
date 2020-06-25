@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_EXEC )
 }
 
 /*
-static void exit ( int returnCode = 0 )
+static void exit( int returnCode = 0 )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_EXIT )
 {
@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SETAPPLICATIONVERSION )
 }
 
 /*
-static void setAttribute ( Qt::ApplicationAttribute attribute, bool on = true )
+static void setAttribute( Qt::ApplicationAttribute attribute, bool on = true )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_SETATTRIBUTE )
 {

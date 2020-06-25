@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QEVENT_TYPE )
 }
 
 /*
-static int registerEventType ( int hint = -1 )
+static int registerEventType( int hint = -1 )
 */
 HB_FUNC_STATIC( QEVENT_REGISTEREVENTTYPE )
 {

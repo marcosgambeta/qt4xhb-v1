@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QRESOURCE_SIZE )
 }
 
 /*
-static bool registerResource ( const QString & rccFileName, const QString & mapRoot = QString() )
+static bool registerResource( const QString & rccFileName, const QString & mapRoot = QString() )
 */
 HB_FUNC_STATIC( QRESOURCE_REGISTERRESOURCE )
 {
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QRESOURCE_REGISTERRESOURCE )
 }
 
 /*
-static bool unregisterResource ( const QString & rccFileName, const QString & mapRoot = QString() )
+static bool unregisterResource( const QString & rccFileName, const QString & mapRoot = QString() )
 */
 HB_FUNC_STATIC( QRESOURCE_UNREGISTERRESOURCE )
 {

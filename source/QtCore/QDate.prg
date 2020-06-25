@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QDATE_TOSTRING )
 }
 
 /*
-int weekNumber ( int * yearNumber = 0 ) const
+int weekNumber( int * yearNumber = 0 ) const
 */
 HB_FUNC_STATIC( QDATE_WEEKNUMBER )
 {

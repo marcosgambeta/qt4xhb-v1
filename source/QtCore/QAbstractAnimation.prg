@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_SETPAUSED )
 }
 
 /*
-void start ( QAbstractAnimation::DeletionPolicy policy = KeepWhenStopped )
+void start( QAbstractAnimation::DeletionPolicy policy = QAbstractAnimation::KeepWhenStopped )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_START )
 {

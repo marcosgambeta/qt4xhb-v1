@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QSETTINGS_BEGINREADARRAY )
 }
 
 /*
-void beginWriteArray ( const QString & prefix, int size = -1 )
+void beginWriteArray( const QString & prefix, int size = -1 )
 */
 HB_FUNC_STATIC( QSETTINGS_BEGINWRITEARRAY )
 {
@@ -847,7 +847,7 @@ HB_FUNC_STATIC( QSETTINGS_SYNC )
 }
 
 /*
-QVariant value ( const QString & key, const QVariant & defaultValue = QVariant() ) const
+QVariant value( const QString & key, const QVariant & defaultValue = QVariant() ) const
 */
 HB_FUNC_STATIC( QSETTINGS_VALUE )
 {

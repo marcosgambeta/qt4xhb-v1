@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_NATIVEKEY )
 }
 
 /*
-bool create(int size, AccessMode mode = ReadWrite)
+bool create( int size, QSharedMemory::AccessMode mode = QSharedMemory::ReadWrite )
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_CREATE )
 {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_SIZE )
 }
 
 /*
-bool attach(AccessMode mode = ReadWrite)
+bool attach( QSharedMemory::AccessMode mode = QSharedMemory::ReadWrite )
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_ATTACH )
 {

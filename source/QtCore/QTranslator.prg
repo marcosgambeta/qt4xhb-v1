@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QTRANSLATOR_LOAD )
 }
 
 /*
-virtual QString translate(const char * context, const char * sourceText, const char * disambiguation = 0, int n = -1) const
+virtual QString translate( const char * context, const char * sourceText, const char * disambiguation = 0, int n = -1 ) const
 */
 HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
 {

@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QEVENTLOOP_DELETE )
 }
 
 /*
-int exec ( ProcessEventsFlags flags = AllEvents )
+int exec( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
 */
 HB_FUNC_STATIC( QEVENTLOOP_EXEC )
 {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QEVENTLOOP_EXEC )
 }
 
 /*
-void exit ( int returnCode = 0 )
+void exit( int returnCode = 0 )
 */
 HB_FUNC_STATIC( QEVENTLOOP_EXIT )
 {

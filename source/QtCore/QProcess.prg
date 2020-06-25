@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QPROCESS_SETREADCHANNEL )
 }
 
 /*
-void setStandardErrorFile ( const QString & fileName, OpenMode mode = Truncate )
+void setStandardErrorFile( const QString & fileName, QIODevice::OpenMode mode = QIODevice::Truncate )
 */
 HB_FUNC_STATIC( QPROCESS_SETSTANDARDERRORFILE )
 {
@@ -606,7 +606,7 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDINPUTFILE )
 }
 
 /*
-void setStandardOutputFile ( const QString & fileName, OpenMode mode = Truncate )
+void setStandardOutputFile( const QString & fileName, QIODevice::OpenMode mode = QIODevice::Truncate )
 */
 HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTFILE )
 {
@@ -759,7 +759,7 @@ HB_FUNC_STATIC( QPROCESS_STATE )
 }
 
 /*
-bool waitForFinished ( int msecs = 30000 )
+bool waitForFinished( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QPROCESS_WAITFORFINISHED )
 {
@@ -783,7 +783,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORFINISHED )
 }
 
 /*
-bool waitForStarted ( int msecs = 30000 )
+bool waitForStarted( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QPROCESS_WAITFORSTARTED )
 {
@@ -977,7 +977,7 @@ HB_FUNC_STATIC( QPROCESS_ISSEQUENTIAL )
 }
 
 /*
-virtual bool waitForBytesWritten ( int msecs = 30000 )
+virtual bool waitForBytesWritten( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QPROCESS_WAITFORBYTESWRITTEN )
 {
@@ -1001,7 +1001,7 @@ HB_FUNC_STATIC( QPROCESS_WAITFORBYTESWRITTEN )
 }
 
 /*
-virtual bool waitForReadyRead ( int msecs = 30000 )
+virtual bool waitForReadyRead( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QPROCESS_WAITFORREADYREAD )
 {

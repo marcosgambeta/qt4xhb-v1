@@ -872,7 +872,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_WRITE )
 }
 
 /*
-static QString currentPath ( const QString & fileName = QString() )
+static QString currentPath( const QString & fileName = QString() )
 */
 HB_FUNC_STATIC( QFSFILEENGINE_CURRENTPATH )
 {

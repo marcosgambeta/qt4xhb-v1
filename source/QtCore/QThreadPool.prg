@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QTHREADPOOL_SETMAXTHREADCOUNT )
 }
 
 /*
-void start ( QRunnable * runnable, int priority = 0 )
+void start( QRunnable * runnable, int priority = 0 )
 */
 HB_FUNC_STATIC( QTHREADPOOL_START )
 {

@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_POSTDELAYEDEVENT )
 }
 
 /*
-void postEvent ( QEvent * event, EventPriority priority = NormalPriority )
+void postEvent( QEvent * event, QStateMachine::EventPriority priority = QStateMachine::NormalPriority )
 */
 HB_FUNC_STATIC( QSTATEMACHINE_POSTEVENT )
 {

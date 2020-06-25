@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_WAKEUP )
 }
 
 /*
-static QAbstractEventDispatcher * instance ( QThread * thread = 0 )
+static QAbstractEventDispatcher * instance( QThread * thread = 0 )
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTANCE )
 {

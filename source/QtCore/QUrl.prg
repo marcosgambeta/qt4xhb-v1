@@ -1661,7 +1661,7 @@ HB_FUNC_STATIC( QURL_SWAP )
 }
 
 /*
-QByteArray toEncoded ( FormattingOptions options = None ) const
+QByteArray toEncoded( QUrl::FormattingOptions options = QUrl::None ) const
 */
 HB_FUNC_STATIC( QURL_TOENCODED )
 {
@@ -1710,7 +1710,7 @@ HB_FUNC_STATIC( QURL_TOLOCALFILE )
 }
 
 /*
-QString toString ( FormattingOptions options = None ) const
+QString toString( QUrl::FormattingOptions options = QUrl::None ) const
 */
 HB_FUNC_STATIC( QURL_TOSTRING )
 {
@@ -1985,7 +1985,7 @@ HB_FUNC_STATIC( QURL_TOACE )
 }
 
 /*
-static QByteArray toPercentEncoding ( const QString & input, const QByteArray & exclude = QByteArray(), const QByteArray & include = QByteArray() )
+static QByteArray toPercentEncoding( const QString & input, const QByteArray & exclude = QByteArray(), const QByteArray & include = QByteArray() )
 */
 HB_FUNC_STATIC( QURL_TOPERCENTENCODING )
 {

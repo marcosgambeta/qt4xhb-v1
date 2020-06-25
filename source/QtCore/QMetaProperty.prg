@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISRESETTABLE )
 }
 
 /*
-bool isDesignable(const QObject *obj = 0) const
+bool isDesignable( const QObject * obj = 0 ) const
 */
 HB_FUNC_STATIC( QMETAPROPERTY_ISDESIGNABLE )
 {
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISDESIGNABLE )
 }
 
 /*
-bool isScriptable(const QObject *obj = 0) const
+bool isScriptable( const QObject * obj = 0 ) const
 */
 HB_FUNC_STATIC( QMETAPROPERTY_ISSCRIPTABLE )
 {
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISSCRIPTABLE )
 }
 
 /*
-bool isStored(const QObject *obj = 0) const
+bool isStored( const QObject * obj = 0 ) const
 */
 HB_FUNC_STATIC( QMETAPROPERTY_ISSTORED )
 {
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISSTORED )
 }
 
 /*
-bool isEditable(const QObject *obj = 0) const
+bool isEditable( const QObject * obj = 0 ) const
 */
 HB_FUNC_STATIC( QMETAPROPERTY_ISEDITABLE )
 {
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISEDITABLE )
 }
 
 /*
-bool isUser(const QObject *obj = 0) const
+bool isUser( const QObject * obj = 0 ) const
 */
 HB_FUNC_STATIC( QMETAPROPERTY_ISUSER )
 {

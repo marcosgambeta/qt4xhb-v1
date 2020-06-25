@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QTIME_SECSTO )
 }
 
 /*
-bool setHMS(int h, int m, int s, int ms = 0)
+bool setHMS( int h, int m, int s, int ms = 0 )
 */
 HB_FUNC_STATIC( QTIME_SETHMS )
 {

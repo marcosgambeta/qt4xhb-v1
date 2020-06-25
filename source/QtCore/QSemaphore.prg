@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QSEMAPHORE_DELETE )
 }
 
 /*
-void acquire ( int n = 1 )
+void acquire( int n = 1 )
 */
 HB_FUNC_STATIC( QSEMAPHORE_ACQUIRE )
 {
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QSEMAPHORE_AVAILABLE )
 }
 
 /*
-void release ( int n = 1 )
+void release( int n = 1 )
 */
 HB_FUNC_STATIC( QSEMAPHORE_RELEASE )
 {

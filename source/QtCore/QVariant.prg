@@ -1126,7 +1126,7 @@ HB_FUNC_STATIC( QVARIANT_TOPOINTF )
 }
 
 /*
-qreal toReal ( bool * ok = 0 ) const
+qreal toReal( bool * ok = 0 ) const
 */
 HB_FUNC_STATIC( QVARIANT_TOREAL )
 {

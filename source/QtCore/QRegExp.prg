@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QREGEXP_DELETE )
 }
 
 /*
-QString cap ( int nth = 0 ) const
+QString cap( int nth = 0 ) const
 */
 HB_FUNC_STATIC( QREGEXP_CAP )
 {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QREGEXP_EXACTMATCH )
 }
 
 /*
-int indexIn ( const QString & str, int offset = 0, CaretMode caretMode = CaretAtZero ) const
+int indexIn( const QString & str, int offset = 0, QRegExp::CaretMode caretMode = QRegExp::CaretAtZero ) const
 */
 HB_FUNC_STATIC( QREGEXP_INDEXIN )
 {
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QREGEXP_ISVALID )
 }
 
 /*
-int lastIndexIn ( const QString & str, int offset = -1, CaretMode caretMode = CaretAtZero ) const
+int lastIndexIn( const QString & str, int offset = -1, QRegExp::CaretMode caretMode = QRegExp::CaretAtZero ) const
 */
 HB_FUNC_STATIC( QREGEXP_LASTINDEXIN )
 {
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QREGEXP_PATTERNSYNTAX )
 }
 
 /*
-int pos ( int nth = 0 ) const
+int pos( int nth = 0 ) const
 */
 HB_FUNC_STATIC( QREGEXP_POS )
 {

@@ -1344,7 +1344,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_QUALIFIEDNAME )
 }
 
 /*
-void raiseError(const QString & message = QString())
+void raiseError( const QString & message = QString() )
 */
 HB_FUNC_STATIC( QXMLSTREAMREADER_RAISEERROR )
 {
@@ -1370,7 +1370,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_RAISEERROR )
 }
 
 /*
-QString readElementText(ReadElementTextBehaviour behaviour = ErrorOnUnexpectedElement)
+QString readElementText( QXmlStreamReader::ReadElementTextBehaviour behaviour = QXmlStreamReader::ErrorOnUnexpectedElement )
 */
 HB_FUNC_STATIC( QXMLSTREAMREADER_READELEMENTTEXT )
 {

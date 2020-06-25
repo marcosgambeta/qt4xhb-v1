@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_REMOVE )
 }
 
 /*
-QString value(const QString &name, const QString &defaultValue = QString()) const
+QString value( const QString & name, const QString & defaultValue = QString() ) const
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_VALUE )
 {

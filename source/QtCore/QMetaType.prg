@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QMETATYPE_ISREGISTERED )
 }
 
 /*
-static void *construct(int type, const void *copy = 0)
+static void * construct( int type, const void * copy = 0 )
 */
 HB_FUNC_STATIC( QMETATYPE_CONSTRUCT )
 {

@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_CANFETCHMORE )
 }
 
 /*
-virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const = 0
+virtual int columnCount( const QModelIndex & parent = QModelIndex() ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_COLUMNCOUNT )
 {
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_COLUMNCOUNT )
 }
 
 /*
-virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const = 0
+virtual QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_DATA )
 {
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_FLAGS )
 }
 
 /*
-virtual bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
+virtual bool hasChildren( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_HASCHILDREN )
 {
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_HASCHILDREN )
 }
 
 /*
-bool hasIndex ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
+bool hasIndex( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_HASINDEX )
 {
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_HASINDEX )
 }
 
 /*
-virtual QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
+virtual QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_HEADERDATA )
 {
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_HEADERDATA )
 }
 
 /*
-virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const = 0
+virtual QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_INDEX )
 {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INDEX )
 }
 
 /*
-bool insertColumn ( int column, const QModelIndex & parent = QModelIndex() )
+bool insertColumn( int column, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTCOLUMN )
 {
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTCOLUMN )
 }
 
 /*
-virtual bool insertColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
+virtual bool insertColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTCOLUMNS )
 {
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTCOLUMNS )
 }
 
 /*
-bool insertRow ( int row, const QModelIndex & parent = QModelIndex() )
+bool insertRow( int row, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTROW )
 {
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTROW )
 }
 
 /*
-virtual bool insertRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
+virtual bool insertRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTROWS )
 {
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INSERTROWS )
 }
 
 /*
-virtual QModelIndexList match ( const QModelIndex & start, int role, const QVariant & value, int hits = 1, Qt::MatchFlags flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
+virtual QModelIndexList match( const QModelIndex & start, int role, const QVariant & value, int hits = 1, Qt::MatchFlags flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_MATCH )
 {
@@ -620,7 +620,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_PARENT )
 }
 
 /*
-bool removeColumn ( int column, const QModelIndex & parent = QModelIndex() )
+bool removeColumn( int column, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVECOLUMN )
 {
@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVECOLUMN )
 }
 
 /*
-virtual bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
+virtual bool removeColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVECOLUMNS )
 {
@@ -668,7 +668,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVECOLUMNS )
 }
 
 /*
-bool removeRow ( int row, const QModelIndex & parent = QModelIndex() )
+bool removeRow( int row, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVEROW )
 {
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVEROW )
 }
 
 /*
-virtual bool removeRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
+virtual bool removeRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVEROWS )
 {
@@ -716,7 +716,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_REMOVEROWS )
 }
 
 /*
-virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const = 0
+virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ROWCOUNT )
 {
@@ -740,7 +740,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_ROWCOUNT )
 }
 
 /*
-virtual bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
+virtual bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETDATA )
 {
@@ -764,7 +764,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETDATA )
 }
 
 /*
-virtual bool setHeaderData ( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole )
+virtual bool setHeaderData( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_SETHEADERDATA )
 {
@@ -839,7 +839,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SIBLING )
 }
 
 /*
-virtual void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
+virtual void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_SORT )
 {

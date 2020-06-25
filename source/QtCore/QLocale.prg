@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QLOCALE_CREATESEPARATEDLIST )
 }
 
 /*
-QString currencySymbol ( CurrencySymbolFormat format = CurrencySymbol ) const
+QString currencySymbol( QLocale::CurrencySymbolFormat format = QLocale::CurrencySymbol ) const
 */
 HB_FUNC_STATIC( QLOCALE_CURRENCYSYMBOL )
 {
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QLOCALE_CURRENCYSYMBOL )
 }
 
 /*
-QString dateFormat ( FormatType format = LongFormat ) const
+QString dateFormat( QLocale::FormatType format = QLocale::LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_DATEFORMAT )
 {
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QLOCALE_DATEFORMAT )
 }
 
 /*
-QString dateTimeFormat ( FormatType format = LongFormat ) const
+QString dateTimeFormat( QLocale::FormatType format = QLocale::LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_DATETIMEFORMAT )
 {
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QLOCALE_DATETIMEFORMAT )
 }
 
 /*
-QString dayName ( int day, FormatType type = LongFormat ) const
+QString dayName( int day, QLocale::FormatType type = QLocale::LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_DAYNAME )
 {
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QLOCALE_MEASUREMENTSYSTEM )
 }
 
 /*
-QString monthName ( int month, FormatType type = LongFormat ) const
+QString monthName( int month, QLocale::FormatType type = QLocale::LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_MONTHNAME )
 {
@@ -866,7 +866,7 @@ HB_FUNC_STATIC( QLOCALE_SETNUMBEROPTIONS )
 }
 
 /*
-QString standaloneDayName ( int day, FormatType type = LongFormat ) const
+QString standaloneDayName( int day, QLocale::FormatType type = QLocale::LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_STANDALONEDAYNAME )
 {
@@ -890,7 +890,7 @@ HB_FUNC_STATIC( QLOCALE_STANDALONEDAYNAME )
 }
 
 /*
-QString standaloneMonthName ( int month, FormatType type = LongFormat ) const
+QString standaloneMonthName( int month, QLocale::FormatType type = QLocale::LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_STANDALONEMONTHNAME )
 {
@@ -938,7 +938,7 @@ HB_FUNC_STATIC( QLOCALE_TEXTDIRECTION )
 }
 
 /*
-QString timeFormat ( FormatType format = LongFormat ) const
+QString timeFormat( QLocale::FormatType format = QLocale::LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_TIMEFORMAT )
 {
@@ -1267,7 +1267,7 @@ HB_FUNC_STATIC( QLOCALE_TODATETIME )
 }
 
 /*
-double toDouble ( const QString & s, bool * ok = 0 ) const
+double toDouble( const QString & s, bool * ok = 0 ) const
 */
 HB_FUNC_STATIC( QLOCALE_TODOUBLE )
 {
@@ -1293,7 +1293,7 @@ HB_FUNC_STATIC( QLOCALE_TODOUBLE )
 }
 
 /*
-float toFloat ( const QString & s, bool * ok = 0 ) const
+float toFloat( const QString & s, bool * ok = 0 ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOFLOAT )
 {
@@ -1319,7 +1319,7 @@ HB_FUNC_STATIC( QLOCALE_TOFLOAT )
 }
 
 /*
-int toInt ( const QString & s, bool * ok = 0, int base = 0 ) const
+int toInt( const QString & s, bool * ok = 0, int base = 0 ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOINT )
 {
@@ -1345,7 +1345,7 @@ HB_FUNC_STATIC( QLOCALE_TOINT )
 }
 
 /*
-qlonglong toLongLong ( const QString & s, bool * ok = 0, int base = 0 ) const
+qlonglong toLongLong( const QString & s, bool * ok = 0, int base = 0 ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOLONGLONG )
 {
@@ -1395,7 +1395,7 @@ HB_FUNC_STATIC( QLOCALE_TOLOWER )
 }
 
 /*
-short toShort ( const QString & s, bool * ok = 0, int base = 0 ) const
+short toShort( const QString & s, bool * ok = 0, int base = 0 ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSHORT )
 {
@@ -1827,7 +1827,7 @@ HB_FUNC_STATIC( QLOCALE_TOTIME )
 }
 
 /*
-uint toUInt ( const QString & s, bool * ok = 0, int base = 0 ) const
+uint toUInt( const QString & s, bool * ok = 0, int base = 0 ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOUINT )
 {
@@ -1853,7 +1853,7 @@ HB_FUNC_STATIC( QLOCALE_TOUINT )
 }
 
 /*
-qlonglong toULongLong ( const QString & s, bool * ok = 0, int base = 0 ) const
+qlonglong toULongLong( const QString & s, bool * ok = 0, int base = 0 ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOULONGLONG )
 {
@@ -1879,7 +1879,7 @@ HB_FUNC_STATIC( QLOCALE_TOULONGLONG )
 }
 
 /*
-ushort toUShort ( const QString & s, bool * ok = 0, int base = 0 ) const
+ushort toUShort( const QString & s, bool * ok = 0, int base = 0 ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOUSHORT )
 {

@@ -694,7 +694,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SKIPWHITESPACE )
 }
 
 /*
-QString readLine(qint64 maxlen = 0)
+QString readLine( qint64 maxlen = 0 )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_READLINE )
 {

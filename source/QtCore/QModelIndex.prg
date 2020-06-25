@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QMODELINDEX_COLUMN )
 }
 
 /*
-QVariant data ( int role = Qt::DisplayRole ) const
+QVariant data( int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QMODELINDEX_DATA )
 {

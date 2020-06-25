@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QTHREAD_DELETE )
 }
 
 /*
-void exit(int returnCode = 0)
+void exit( int returnCode = 0 )
 */
 HB_FUNC_STATIC( QTHREAD_EXIT )
 {
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QTHREAD_QUIT )
 }
 
 /*
-void start(Priority priority = InheritPriority)
+void start( QThread::Priority priority = QThread::InheritPriority )
 */
 HB_FUNC_STATIC( QTHREAD_START )
 {

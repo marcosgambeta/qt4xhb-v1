@@ -1258,7 +1258,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LEFT )
 }
 
 /*
-QByteArray leftJustified ( int width, char fill = ' ', bool truncate = false ) const
+QByteArray leftJustified( int width, char fill = ' ', bool truncate = false ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_LEFTJUSTIFIED )
 {
@@ -1307,7 +1307,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LENGTH )
 }
 
 /*
-QByteArray mid ( int pos, int len = -1 ) const
+QByteArray mid( int pos, int len = -1 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_MID )
 {
@@ -2163,7 +2163,7 @@ HB_FUNC_STATIC( QBYTEARRAY_RIGHT )
 }
 
 /*
-QByteArray rightJustified ( int width, char fill = ' ', bool truncate = false ) const
+QByteArray rightJustified( int width, char fill = ' ', bool truncate = false ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_RIGHTJUSTIFIED )
 {
@@ -2681,7 +2681,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOBASE64 )
 }
 
 /*
-double toDouble ( bool * ok = 0 ) const
+double toDouble( bool * ok = 0 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TODOUBLE )
 {
@@ -2707,7 +2707,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TODOUBLE )
 }
 
 /*
-float toFloat ( bool * ok = 0 ) const
+float toFloat( bool * ok = 0 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOFLOAT )
 {
@@ -2758,7 +2758,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOHEX )
 }
 
 /*
-int toInt ( bool * ok = 0, int base = 10 ) const
+int toInt( bool * ok = 0, int base = 10 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOINT )
 {
@@ -2784,7 +2784,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOINT )
 }
 
 /*
-long toLong ( bool * ok = 0, int base = 10 ) const
+long toLong( bool * ok = 0, int base = 10 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOLONG )
 {
@@ -2810,7 +2810,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOLONG )
 }
 
 /*
-qlonglong toLongLong ( bool * ok = 0, int base = 10 ) const
+qlonglong toLongLong( bool * ok = 0, int base = 10 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOLONGLONG )
 {
@@ -2861,7 +2861,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOLOWER )
 }
 
 /*
-QByteArray toPercentEncoding ( const QByteArray & exclude = QByteArray(), const QByteArray & include = QByteArray(), char percent = '%' ) const
+QByteArray toPercentEncoding( const QByteArray & exclude = QByteArray(), const QByteArray & include = QByteArray(), char percent = '%' ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOPERCENTENCODING )
 {
@@ -2886,7 +2886,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOPERCENTENCODING )
 }
 
 /*
-short toShort ( bool * ok = 0, int base = 10 ) const
+short toShort( bool * ok = 0, int base = 10 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOSHORT )
 {
@@ -2912,7 +2912,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOSHORT )
 }
 
 /*
-uint toUInt ( bool * ok = 0, int base = 10 ) const
+uint toUInt( bool * ok = 0, int base = 10 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOUINT )
 {
@@ -2938,7 +2938,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOUINT )
 }
 
 /*
-ulong toULong ( bool * ok = 0, int base = 10 ) const
+ulong toULong( bool * ok = 0, int base = 10 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOULONG )
 {
@@ -2964,7 +2964,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOULONG )
 }
 
 /*
-qulonglong toULongLong ( bool * ok = 0, int base = 10 ) const
+qulonglong toULongLong( bool * ok = 0, int base = 10 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOULONGLONG )
 {
@@ -2990,7 +2990,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOULONGLONG )
 }
 
 /*
-ushort toUShort ( bool * ok = 0, int base = 10 ) const
+ushort toUShort( bool * ok = 0, int base = 10 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_TOUSHORT )
 {
@@ -3132,7 +3132,7 @@ HB_FUNC_STATIC( QBYTEARRAY_FROMHEX )
 }
 
 /*
-static QByteArray fromPercentEncoding ( const QByteArray & input, char percent = '%' )
+static QByteArray fromPercentEncoding( const QByteArray & input, char percent = '%' )
 */
 HB_FUNC_STATIC( QBYTEARRAY_FROMPERCENTENCODING )
 {
@@ -3152,7 +3152,7 @@ HB_FUNC_STATIC( QBYTEARRAY_FROMPERCENTENCODING )
 }
 
 /*
-static QByteArray fromRawData ( const char * data, int size )
+static QByteArray fromRawData( const char * data, int size )
 */
 HB_FUNC_STATIC( QBYTEARRAY_FROMRAWDATA )
 {
