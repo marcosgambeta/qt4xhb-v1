@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QAXSCRIPT_FUNCTIONS )
 }
 
 /*
-bool load ( const QString & code, const QString & language = QString() )
+bool load( const QString & code, const QString & language = QString() )
 */
 HB_FUNC_STATIC( QAXSCRIPT_LOAD )
 {

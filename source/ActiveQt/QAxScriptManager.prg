@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPTNAMES )
 }
 
 /*
-static bool registerEngine ( const QString & name, const QString & extension, const QString & code = QString() )
+static bool registerEngine( const QString & name, const QString & extension, const QString & code = QString() )
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_REGISTERENGINE )
 {
