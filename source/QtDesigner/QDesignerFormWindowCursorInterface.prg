@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_ISWIDGETSELECTED )
 }
 
 /*
-virtual bool movePosition ( MoveOperation operation, MoveMode mode = MoveAnchor ) = 0
+virtual bool movePosition( QDesignerFormWindowCursorInterface::MoveOperation operation, QDesignerFormWindowCursorInterface::MoveMode mode = QDesignerFormWindowCursorInterface::MoveAnchor ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_MOVEPOSITION )
 {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SELECTEDWIDGETCOUNT )
 }
 
 /*
-virtual void setPosition ( int position, MoveMode mode = MoveAnchor ) = 0
+virtual void setPosition( int position, QDesignerFormWindowCursorInterface::MoveMode mode = QDesignerFormWindowCursorInterface::MoveAnchor ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SETPOSITION )
 {

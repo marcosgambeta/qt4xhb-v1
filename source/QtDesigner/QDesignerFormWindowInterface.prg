@@ -849,7 +849,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETPIXMAPFUNCTION )
 }
 
 /*
-virtual void clearSelection ( bool update = true ) = 0
+virtual void clearSelection( bool update = true ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CLEARSELECTION )
 {
@@ -901,7 +901,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_MANAGEWIDGET )
 }
 
 /*
-virtual void selectWidget ( QWidget * widget, bool select = true ) = 0
+virtual void selectWidget( QWidget * widget, bool select = true ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SELECTWIDGET )
 {

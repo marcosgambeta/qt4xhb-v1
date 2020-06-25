@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_EXTENSION )
 }
 
 /*
-virtual void registerExtensions ( QAbstractExtensionFactory * factory, const QString & iid = QString() )
+virtual void registerExtensions( QAbstractExtensionFactory * factory, const QString & iid = QString() )
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_REGISTEREXTENSIONS )
 {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_REGISTEREXTENSIONS )
 }
 
 /*
-virtual void unregisterExtensions ( QAbstractExtensionFactory * factory, const QString & iid = QString() )
+virtual void unregisterExtensions( QAbstractExtensionFactory * factory, const QString & iid = QString() )
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
 {
