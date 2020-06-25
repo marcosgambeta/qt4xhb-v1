@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QICON_DELETE )
 }
 
 /*
-QSize actualSize ( const QSize & size, Mode mode = Normal, State state = Off ) const
+QSize actualSize( const QSize & size, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 */
 HB_FUNC_STATIC( QICON_ACTUALSIZE )
 {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QICON_ACTUALSIZE )
 }
 
 /*
-void addFile ( const QString & fileName, const QSize & size = QSize(), Mode mode = Normal, State state = Off )
+void addFile( const QString & fileName, const QSize & size = QSize(), QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off )
 */
 HB_FUNC_STATIC( QICON_ADDFILE )
 {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QICON_ADDFILE )
 }
 
 /*
-void addPixmap ( const QPixmap & pixmap, Mode mode = Normal, State state = Off )
+void addPixmap( const QPixmap & pixmap, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off )
 */
 HB_FUNC_STATIC( QICON_ADDPIXMAP )
 {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QICON_ADDPIXMAP )
 }
 
 /*
-QList<QSize> availableSizes ( Mode mode = Normal, State state = Off ) const
+QList<QSize> availableSizes( QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 */
 HB_FUNC_STATIC( QICON_AVAILABLESIZES )
 {
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QICON_PIXMAP )
 }
 
 /*
-QIcon fromTheme ( const QString & name, const QIcon & fallback = QIcon() )
+QIcon fromTheme( const QString & name, const QIcon & fallback = QIcon() )
 */
 HB_FUNC_STATIC( QICON_FROMTHEME )
 {

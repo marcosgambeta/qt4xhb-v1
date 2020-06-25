@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QMENU_MENUACTION )
 }
 
 /*
-void popup ( const QPoint & p, QAction * atAction = 0 )
+void popup( const QPoint & p, QAction * atAction = 0 )
 */
 HB_FUNC_STATIC( QMENU_POPUP )
 {

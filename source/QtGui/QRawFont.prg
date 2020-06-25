@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES )
 }
 
 /*
-QImage alphaMapForGlyph ( quint32 glyphIndex, AntialiasingType antialiasingType = SubPixelAntialiasing, const QTransform & transform = QTransform() ) const
+QImage alphaMapForGlyph( quint32 glyphIndex, QRawFont::AntialiasingType antialiasingType = QRawFont::SubPixelAntialiasing, const QTransform & transform = QTransform() ) const
 */
 HB_FUNC_STATIC( QRAWFONT_ALPHAMAPFORGLYPH )
 {
@@ -836,7 +836,7 @@ HB_FUNC_STATIC( QRAWFONT_XHEIGHT )
 }
 
 /*
-static QRawFont fromFont ( const QFont & font, QFontDatabase::WritingSystem writingSystem = QFontDatabase::Any )
+static QRawFont fromFont( const QFont & font, QFontDatabase::WritingSystem writingSystem = QFontDatabase::Any )
 */
 HB_FUNC_STATIC( QRAWFONT_FROMFONT )
 {

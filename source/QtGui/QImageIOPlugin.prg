@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_CAPABILITIES )
 }
 
 /*
-virtual QImageIOHandler * create ( QIODevice * device, const QByteArray & format = QByteArray() ) const = 0
+virtual QImageIOHandler * create( QIODevice * device, const QByteArray & format = QByteArray() ) const = 0
 */
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_CREATE )
 {

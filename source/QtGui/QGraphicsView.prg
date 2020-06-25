@@ -1206,7 +1206,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_OPTIMIZATIONFLAGS )
 }
 
 /*
-void render ( QPainter * painter, const QRectF & target = QRectF(), const QRect & source = QRect(), Qt::AspectRatioMode aspectRatioMode = Qt::KeepAspectRatio )
+void render( QPainter * painter, const QRectF & target = QRectF(), const QRect & source = QRect(), Qt::AspectRatioMode aspectRatioMode = Qt::KeepAspectRatio )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_RENDER )
 {
@@ -1640,7 +1640,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETINTERACTIVE )
 }
 
 /*
-void setMatrix ( const QMatrix & matrix, bool combine = false )
+void setMatrix( const QMatrix & matrix, bool combine = false )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETMATRIX )
 {
@@ -1666,7 +1666,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETMATRIX )
 }
 
 /*
-void setOptimizationFlag ( OptimizationFlag flag, bool enabled = true )
+void setOptimizationFlag( QGraphicsView::OptimizationFlag flag, bool enabled = true )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAG )
 {
@@ -1718,7 +1718,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETOPTIMIZATIONFLAGS )
 }
 
 /*
-void setRenderHint ( QPainter::RenderHint hint, bool enabled = true )
+void setRenderHint( QPainter::RenderHint hint, bool enabled = true )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETRENDERHINT )
 {
@@ -1899,7 +1899,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SETSCENERECT )
 }
 
 /*
-void setTransform ( const QTransform & matrix, bool combine = false )
+void setTransform( const QTransform & matrix, bool combine = false )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_SETTRANSFORM )
 {
@@ -2177,7 +2177,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SIZEHINT )
 }
 
 /*
-void invalidateScene ( const QRectF & rect = QRectF(), QGraphicsScene::SceneLayers layers = QGraphicsScene::AllLayers )
+void invalidateScene( const QRectF & rect = QRectF(), QGraphicsScene::SceneLayers layers = QGraphicsScene::AllLayers )
 */
 HB_FUNC_STATIC( QGRAPHICSVIEW_INVALIDATESCENE )
 {

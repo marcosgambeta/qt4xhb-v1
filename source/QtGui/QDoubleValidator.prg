@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETNOTATION )
 }
 
 /*
-virtual void setRange ( double minimum, double maximum, int decimals = 0 )
+virtual void setRange( double minimum, double maximum, int decimals = 0 )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETRANGE )
 {

@@ -865,7 +865,7 @@ HB_FUNC_STATIC( QLISTVIEW_INDEXAT )
 }
 
 /*
-virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisible )
+virtual void scrollTo( const QModelIndex & index, QListView::ScrollHint hint = QListView::EnsureVisible )
 */
 HB_FUNC_STATIC( QLISTVIEW_SCROLLTO )
 {

@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QSPLITTER_SETHANDLEWIDTH )
 }
 
 /*
-void setOpaqueResize ( bool opaque = true )
+void setOpaqueResize( bool opaque = true )
 */
 HB_FUNC_STATIC( QSPLITTER_SETOPAQUERESIZE )
 {

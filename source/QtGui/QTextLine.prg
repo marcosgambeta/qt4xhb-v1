@@ -719,7 +719,7 @@ HB_FUNC_STATIC( QTEXTLINE_X )
 }
 
 /*
-int xToCursor ( qreal x, CursorPosition cpos = CursorBetweenCharacters ) const
+int xToCursor( qreal x, QTextLine::CursorPosition cpos = QTextLine::CursorBetweenCharacters ) const
 */
 HB_FUNC_STATIC( QTEXTLINE_XTOCURSOR )
 {

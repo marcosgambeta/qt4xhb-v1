@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QCOLOR_CYANF )
 }
 
 /*
-QColor darker ( int factor = 200 ) const
+QColor darker( int factor = 200 ) const
 */
 HB_FUNC_STATIC( QCOLOR_DARKER )
 {
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QCOLOR_DARKER )
 }
 
 /*
-void getCmyk ( int * c, int * m, int * y, int * k, int * a = 0 )
+void getCmyk( int * c, int * m, int * y, int * k, int * a = 0 )
 */
 HB_FUNC_STATIC( QCOLOR_GETCMYK )
 {
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QCOLOR_GETCMYK )
 }
 
 /*
-void getCmykF ( qreal * c, qreal * m, qreal * y, qreal * k, qreal * a = 0 )
+void getCmykF( qreal * c, qreal * m, qreal * y, qreal * k, qreal * a = 0 )
 */
 HB_FUNC_STATIC( QCOLOR_GETCMYKF )
 {
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QCOLOR_GETCMYKF )
 }
 
 /*
-void getHsl ( int * h, int * s, int * l, int * a = 0 ) const
+void getHsl( int * h, int * s, int * l, int * a = 0 ) const
 */
 HB_FUNC_STATIC( QCOLOR_GETHSL )
 {
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( QCOLOR_GETHSL )
 }
 
 /*
-void getHslF ( qreal * h, qreal * s, qreal * l, qreal * a = 0 ) const
+void getHslF( qreal * h, qreal * s, qreal * l, qreal * a = 0 ) const
 */
 HB_FUNC_STATIC( QCOLOR_GETHSLF )
 {
@@ -645,7 +645,7 @@ HB_FUNC_STATIC( QCOLOR_GETHSLF )
 }
 
 /*
-void getHsv ( int * h, int * s, int * v, int * a = 0 ) const
+void getHsv( int * h, int * s, int * v, int * a = 0 ) const
 */
 HB_FUNC_STATIC( QCOLOR_GETHSV )
 {
@@ -679,7 +679,7 @@ HB_FUNC_STATIC( QCOLOR_GETHSV )
 }
 
 /*
-void getHsvF ( qreal * h, qreal * s, qreal * v, qreal * a = 0 ) const
+void getHsvF( qreal * h, qreal * s, qreal * v, qreal * a = 0 ) const
 */
 HB_FUNC_STATIC( QCOLOR_GETHSVF )
 {
@@ -713,7 +713,7 @@ HB_FUNC_STATIC( QCOLOR_GETHSVF )
 }
 
 /*
-void getRgb ( int * r, int * g, int * b, int * a = 0 ) const
+void getRgb( int * r, int * g, int * b, int * a = 0 ) const
 */
 HB_FUNC_STATIC( QCOLOR_GETRGB )
 {
@@ -747,7 +747,7 @@ HB_FUNC_STATIC( QCOLOR_GETRGB )
 }
 
 /*
-void getRgbF ( qreal * r, qreal * g, qreal * b, qreal * a = 0 ) const
+void getRgbF( qreal * r, qreal * g, qreal * b, qreal * a = 0 ) const
 */
 HB_FUNC_STATIC( QCOLOR_GETRGBF )
 {
@@ -1093,7 +1093,7 @@ HB_FUNC_STATIC( QCOLOR_ISVALID )
 }
 
 /*
-QColor lighter ( int factor = 150 ) const
+QColor lighter( int factor = 150 ) const
 */
 HB_FUNC_STATIC( QCOLOR_LIGHTER )
 {
@@ -1486,7 +1486,7 @@ HB_FUNC_STATIC( QCOLOR_SETBLUEF )
 }
 
 /*
-void setCmyk ( int c, int m, int y, int k, int a = 255 )
+void setCmyk( int c, int m, int y, int k, int a = 255 )
 */
 HB_FUNC_STATIC( QCOLOR_SETCMYK )
 {
@@ -1512,7 +1512,7 @@ HB_FUNC_STATIC( QCOLOR_SETCMYK )
 }
 
 /*
-void setCmykF ( qreal c, qreal m, qreal y, qreal k, qreal a = 1.0 )
+void setCmykF( qreal c, qreal m, qreal y, qreal k, qreal a = 1.0 )
 */
 HB_FUNC_STATIC( QCOLOR_SETCMYKF )
 {
@@ -1590,7 +1590,7 @@ HB_FUNC_STATIC( QCOLOR_SETGREENF )
 }
 
 /*
-void setHsl ( int h, int s, int l, int a = 255 )
+void setHsl( int h, int s, int l, int a = 255 )
 */
 HB_FUNC_STATIC( QCOLOR_SETHSL )
 {
@@ -1616,7 +1616,7 @@ HB_FUNC_STATIC( QCOLOR_SETHSL )
 }
 
 /*
-void setHslF ( qreal h, qreal s, qreal l, qreal a = 1.0 )
+void setHslF( qreal h, qreal s, qreal l, qreal a = 1.0 )
 */
 HB_FUNC_STATIC( QCOLOR_SETHSLF )
 {
@@ -1642,7 +1642,7 @@ HB_FUNC_STATIC( QCOLOR_SETHSLF )
 }
 
 /*
-void setHsv ( int h, int s, int v, int a = 255 )
+void setHsv( int h, int s, int v, int a = 255 )
 */
 HB_FUNC_STATIC( QCOLOR_SETHSV )
 {
@@ -1668,7 +1668,7 @@ HB_FUNC_STATIC( QCOLOR_SETHSV )
 }
 
 /*
-void setHsvF ( qreal h, qreal s, qreal v, qreal a = 1.0 )
+void setHsvF( qreal h, qreal s, qreal v, qreal a = 1.0 )
 */
 HB_FUNC_STATIC( QCOLOR_SETHSVF )
 {
@@ -1823,7 +1823,7 @@ HB_FUNC_STATIC( QCOLOR_SETRGB )
 }
 
 /*
-void setRgbF ( qreal r, qreal g, qreal b, qreal a = 1.0 )
+void setRgbF( qreal r, qreal g, qreal b, qreal a = 1.0 )
 */
 HB_FUNC_STATIC( QCOLOR_SETRGBF )
 {
@@ -2114,7 +2114,7 @@ HB_FUNC_STATIC( QCOLOR_COLORNAMES )
 }
 
 /*
-static QColor fromCmyk ( int c, int m, int y, int k, int a = 255 )
+static QColor fromCmyk( int c, int m, int y, int k, int a = 255 )
 */
 HB_FUNC_STATIC( QCOLOR_FROMCMYK )
 {
@@ -2134,7 +2134,7 @@ HB_FUNC_STATIC( QCOLOR_FROMCMYK )
 }
 
 /*
-static QColor fromCmykF ( qreal c, qreal m, qreal y, qreal k, qreal a = 1.0 )
+static QColor fromCmykF( qreal c, qreal m, qreal y, qreal k, qreal a = 1.0 )
 */
 HB_FUNC_STATIC( QCOLOR_FROMCMYKF )
 {
@@ -2154,7 +2154,7 @@ HB_FUNC_STATIC( QCOLOR_FROMCMYKF )
 }
 
 /*
-static QColor fromHsl ( int h, int s, int l, int a = 255 )
+static QColor fromHsl( int h, int s, int l, int a = 255 )
 */
 HB_FUNC_STATIC( QCOLOR_FROMHSL )
 {
@@ -2174,7 +2174,7 @@ HB_FUNC_STATIC( QCOLOR_FROMHSL )
 }
 
 /*
-static QColor fromHslF ( qreal h, qreal s, qreal l, qreal a = 1.0 )
+static QColor fromHslF( qreal h, qreal s, qreal l, qreal a = 1.0 )
 */
 HB_FUNC_STATIC( QCOLOR_FROMHSLF )
 {
@@ -2194,7 +2194,7 @@ HB_FUNC_STATIC( QCOLOR_FROMHSLF )
 }
 
 /*
-static QColor fromHsv ( int h, int s, int v, int a = 255 )
+static QColor fromHsv( int h, int s, int v, int a = 255 )
 */
 HB_FUNC_STATIC( QCOLOR_FROMHSV )
 {
@@ -2214,7 +2214,7 @@ HB_FUNC_STATIC( QCOLOR_FROMHSV )
 }
 
 /*
-static QColor fromHsvF ( qreal h, qreal s, qreal v, qreal a = 1.0 )
+static QColor fromHsvF( qreal h, qreal s, qreal v, qreal a = 1.0 )
 */
 HB_FUNC_STATIC( QCOLOR_FROMHSVF )
 {
@@ -2275,7 +2275,7 @@ HB_FUNC_STATIC( QCOLOR_FROMRGB )
 }
 
 /*
-static QColor fromRgbF ( qreal r, qreal g, qreal b, qreal a = 1.0 )
+static QColor fromRgbF( qreal r, qreal g, qreal b, qreal a = 1.0 )
 */
 HB_FUNC_STATIC( QCOLOR_FROMRGBF )
 {

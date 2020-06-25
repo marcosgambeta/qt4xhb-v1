@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_DRAWITEMPIXMAP )
 }
 
 /*
-virtual void drawItemText ( QPainter * painter, const QRect & rectangle, int alignment, const QPalette & palette, bool enabled, const QString & text, QPalette::ColorRole textRole = QPalette::NoRole ) const
+virtual void drawItemText( QPainter * painter, const QRect & rectangle, int alignment, const QPalette & palette, bool enabled, const QString & text, QPalette::ColorRole textRole = QPalette::NoRole ) const
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_DRAWITEMTEXT )
 {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_DRAWITEMTEXT )
 }
 
 /*
-virtual void drawPrimitive ( PrimitiveElement elem, const QStyleOption * option, QPainter * painter, const QWidget * widget = 0 ) const
+virtual void drawPrimitive( QStyle::PrimitiveElement elem, const QStyleOption * option, QPainter * painter, const QWidget * widget = 0 ) const
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_DRAWPRIMITIVE )
 {
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_GENERATEDICONPIXMAP )
 }
 
 /*
-virtual SubControl hitTestComplexControl ( ComplexControl cc, const QStyleOptionComplex * opt, const QPoint & pt, const QWidget * w = 0 ) const
+virtual QStyle::SubControl hitTestComplexControl( QStyle::ComplexControl cc, const QStyleOptionComplex * opt, const QPoint & pt, const QWidget * w = 0 ) const
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_HITTESTCOMPLEXCONTROL )
 {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_ITEMPIXMAPRECT )
 }
 
 /*
-virtual int pixelMetric ( PixelMetric metric, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
+virtual int pixelMetric( QStyle::PixelMetric metric, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_PIXELMETRIC )
 {
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_STANDARDPALETTE )
 }
 
 /*
-virtual QPixmap standardPixmap ( StandardPixmap standardPixmap, const QStyleOption * opt, const QWidget * widget = 0 ) const
+virtual QPixmap standardPixmap( QStyle::StandardPixmap standardPixmap, const QStyleOption * opt, const QWidget * widget = 0 ) const
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_STANDARDPIXMAP )
 {
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_STANDARDPIXMAP )
 }
 
 /*
-virtual int styleHint ( StyleHint hint, const QStyleOption * option = 0, const QWidget * widget = 0, QStyleHintReturn * returnData = 0 ) const
+virtual int styleHint( QStyle::StyleHint hint, const QStyleOption * option = 0, const QWidget * widget = 0, QStyleHintReturn * returnData = 0 ) const
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_STYLEHINT )
 {
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_SUBCONTROLRECT )
 }
 
 /*
-virtual QRect subElementRect ( SubElement sr, const QStyleOption * opt, const QWidget * w = 0 ) const
+virtual QRect subElementRect( QStyle::SubElement sr, const QStyleOption * opt, const QWidget * w = 0 ) const
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_SUBELEMENTRECT )
 {

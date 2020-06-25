@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QDECORATIONDEFAULT_DELETE )
 }
 
 /*
-virtual bool paint ( QPainter * painter, const QWidget * widget, int decorationRegion = All, DecorationState state = Normal )
+virtual bool paint( QPainter * painter, const QWidget * widget, int decorationRegion = QDecoration::All, QDecoration::DecorationState state = QDecoration::Normal )
 */
 HB_FUNC_STATIC( QDECORATIONDEFAULT_PAINT )
 {
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QDECORATIONDEFAULT_PAINT )
 }
 
 /*
-virtual QRegion region ( const QWidget * widget, const QRect & rect, int decorationRegion = All )
+virtual QRegion region( const QWidget * widget, const QRect & rect, int decorationRegion = QDecoration::All )
 */
 HB_FUNC_STATIC( QDECORATIONDEFAULT_REGION )
 {

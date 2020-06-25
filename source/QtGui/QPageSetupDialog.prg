@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
 }
 
 /*
-void setOption ( PageSetupDialogOption option, bool on = true )
+void setOption( QPageSetupDialog::PageSetupDialogOption option, bool on = true )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_SETOPTION )
 {

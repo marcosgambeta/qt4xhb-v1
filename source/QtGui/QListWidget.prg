@@ -846,7 +846,7 @@ HB_FUNC_STATIC( QLISTWIDGET_SETSORTINGENABLED )
 }
 
 /*
-void sortItems ( Qt::SortOrder order = Qt::AscendingOrder )
+void sortItems( Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QLISTWIDGET_SORTITEMS )
 {
@@ -974,7 +974,7 @@ HB_FUNC_STATIC( QLISTWIDGET_CLEAR )
 }
 
 /*
-void scrollToItem ( const QListWidgetItem * item, QAbstractItemView::ScrollHint hint = EnsureVisible )
+void scrollToItem( const QListWidgetItem * item, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible )
 */
 HB_FUNC_STATIC( QLISTWIDGET_SCROLLTOITEM )
 {

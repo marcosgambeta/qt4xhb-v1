@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QCOMBOBOX_DUPLICATESENABLED )
 }
 
 /*
-int findData ( const QVariant & data, int role = Qt::UserRole, Qt::MatchFlags flags = Qt::MatchExactly | Qt::MatchCaseSensitive ) const
+int findData( const QVariant & data, int role = Qt::UserRole, Qt::MatchFlags flags = Qt::MatchExactly | Qt::MatchCaseSensitive ) const
 */
 HB_FUNC_STATIC( QCOMBOBOX_FINDDATA )
 {
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QCOMBOBOX_FINDDATA )
 }
 
 /*
-int findText ( const QString & text, Qt::MatchFlags flags = Qt::MatchExactly | Qt::MatchCaseSensitive ) const
+int findText( const QString & text, Qt::MatchFlags flags = Qt::MatchExactly | Qt::MatchCaseSensitive ) const
 */
 HB_FUNC_STATIC( QCOMBOBOX_FINDTEXT )
 {
@@ -637,7 +637,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ISEDITABLE )
 }
 
 /*
-QVariant itemData ( int index, int role = Qt::UserRole ) const
+QVariant itemData( int index, int role = Qt::UserRole ) const
 */
 HB_FUNC_STATIC( QCOMBOBOX_ITEMDATA )
 {
@@ -1089,7 +1089,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SETINSERTPOLICY )
 }
 
 /*
-void setItemData ( int index, const QVariant & value, int role = Qt::UserRole )
+void setItemData( int index, const QVariant & value, int role = Qt::UserRole )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETITEMDATA )
 {

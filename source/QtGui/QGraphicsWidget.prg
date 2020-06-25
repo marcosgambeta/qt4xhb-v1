@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_FONT )
 }
 
 /*
-void getWindowFrameMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
+void getWindowFrameMargins( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_GETWINDOWFRAMEMARGINS )
 {
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_GETWINDOWFRAMEMARGINS )
 }
 
 /*
-int grabShortcut ( const QKeySequence & sequence, Qt::ShortcutContext context = Qt::WindowShortcut )
+int grabShortcut( const QKeySequence & sequence, Qt::ShortcutContext context = Qt::WindowShortcut )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_GRABSHORTCUT )
 {
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_LAYOUTDIRECTION )
 }
 
 /*
-virtual void paintWindowFrame ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
+virtual void paintWindowFrame( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_PAINTWINDOWFRAME )
 {
@@ -743,7 +743,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_RESIZE )
 }
 
 /*
-void setAttribute ( Qt::WidgetAttribute attribute, bool on = true )
+void setAttribute( Qt::WidgetAttribute attribute, bool on = true )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETATTRIBUTE )
 {
@@ -951,7 +951,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETPALETTE )
 }
 
 /*
-void setShortcutAutoRepeat ( int id, bool enabled = true )
+void setShortcutAutoRepeat( int id, bool enabled = true )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETSHORTCUTAUTOREPEAT )
 {
@@ -977,7 +977,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_SETSHORTCUTAUTOREPEAT )
 }
 
 /*
-void setShortcutEnabled ( int id, bool enabled = true )
+void setShortcutEnabled( int id, bool enabled = true )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETSHORTCUTENABLED )
 {
@@ -1380,7 +1380,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_BOUNDINGRECT )
 }
 
 /*
-virtual void getContentsMargins ( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
+virtual void getContentsMargins( qreal * left, qreal * top, qreal * right, qreal * bottom ) const
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_GETCONTENTSMARGINS )
 {
@@ -1414,7 +1414,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_GETCONTENTSMARGINS )
 }
 
 /*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
+virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_PAINT )
 {

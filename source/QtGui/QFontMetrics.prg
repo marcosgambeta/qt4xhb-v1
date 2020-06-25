@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QFONTMETRICS_DESCENT )
 }
 
 /*
-QString elidedText ( const QString & text, Qt::TextElideMode mode, int width, int flags = 0 ) const
+QString elidedText( const QString & text, Qt::TextElideMode mode, int width, int flags = 0 ) const
 */
 HB_FUNC_STATIC( QFONTMETRICS_ELIDEDTEXT )
 {
@@ -618,7 +618,7 @@ HB_FUNC_STATIC( QFONTMETRICS_RIGHTBEARING )
 }
 
 /*
-QSize size ( int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
+QSize size( int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
 */
 HB_FUNC_STATIC( QFONTMETRICS_SIZE )
 {

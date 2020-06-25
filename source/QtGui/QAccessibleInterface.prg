@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_CHILDCOUNT )
 }
 
 /*
-virtual bool doAction ( int action, int child, const QVariantList & params = QVariantList() ) = 0
+virtual bool doAction( int action, int child, const QVariantList & params = QVariantList() ) = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_DOACTION )
 {
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QACCESSIBLEINTERFACE_INDEXOFCHILD )
 }
 
 /*
-QVariant invokeMethod ( Method method, int child = 0, const QVariantList & params = QVariantList() )
+QVariant invokeMethod( QAccessible::Method method, int child = 0, const QVariantList & params = QVariantList() )
 */
 HB_FUNC_STATIC( QACCESSIBLEINTERFACE_INVOKEMETHOD )
 {

@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_DELETE )
 }
 
 /*
-void setSupported ( QFontDatabase::WritingSystem writingSystem, bool support = true )
+void setSupported( QFontDatabase::WritingSystem writingSystem, bool support = true )
 */
 HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SETSUPPORTED )
 {

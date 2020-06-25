@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_DELETE )
 }
 
 /*
-void addLayout ( QLayout * layout, int stretch = 0 )
+void addLayout( QLayout * layout, int stretch = 0 )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDLAYOUT )
 {
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDSPACING )
 }
 
 /*
-void addStretch ( int stretch = 0 )
+void addStretch( int stretch = 0 )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDSTRETCH )
 {
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_ADDSTRUT )
 }
 
 /*
-void addWidget ( QWidget * widget, int stretch = 0, Qt::Alignment alignment = 0 )
+void addWidget( QWidget * widget, int stretch = 0, Qt::Alignment alignment = 0 )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDWIDGET )
 {
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_DIRECTION )
 }
 
 /*
-void insertLayout ( int index, QLayout * layout, int stretch = 0 )
+void insertLayout( int index, QLayout * layout, int stretch = 0 )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_INSERTLAYOUT )
 {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTSPACING )
 }
 
 /*
-void insertStretch ( int index, int stretch = 0 )
+void insertStretch( int index, int stretch = 0 )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_INSERTSTRETCH )
 {
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_INSERTSTRETCH )
 }
 
 /*
-void insertWidget ( int index, QWidget * widget, int stretch = 0, Qt::Alignment alignment = 0 )
+void insertWidget( int index, QWidget * widget, int stretch = 0, Qt::Alignment alignment = 0 )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_INSERTWIDGET )
 {

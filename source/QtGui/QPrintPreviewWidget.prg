@@ -659,7 +659,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_UPDATEPREVIEW )
 }
 
 /*
-void zoomIn ( qreal factor = 1.1 )
+void zoomIn( qreal factor = 1.1 )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMIN )
 {
@@ -685,7 +685,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMIN )
 }
 
 /*
-void zoomOut ( qreal factor = 1.1 )
+void zoomOut( qreal factor = 1.1 )
 */
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMOUT )
 {

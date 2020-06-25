@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QDROPEVENT_ENCODEDDATA )
 }
 
 /*
-virtual const char * format ( int n = 0 ) const
+virtual const char * format( int n = 0 ) const
 */
 HB_FUNC_STATIC( QDROPEVENT_FORMAT )
 {

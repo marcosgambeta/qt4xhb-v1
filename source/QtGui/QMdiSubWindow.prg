@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QMDISUBWINDOW_SETKEYBOARDSINGLESTEP )
 }
 
 /*
-void setOption ( SubWindowOption option, bool on = true )
+void setOption( QMdiSubWindow::SubWindowOption option, bool on = true )
 */
 HB_FUNC_STATIC( QMDISUBWINDOW_SETOPTION )
 {

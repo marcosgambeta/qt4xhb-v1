@@ -851,7 +851,7 @@ HB_FUNC_STATIC( QCOMPLETER_WRAPAROUND )
 }
 
 /*
-void complete ( const QRect & rect = QRect() )
+void complete( const QRect & rect = QRect() )
 */
 HB_FUNC_STATIC( QCOMPLETER_COMPLETE )
 {

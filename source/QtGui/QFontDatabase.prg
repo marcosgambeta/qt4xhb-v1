@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QFONTDATABASE_BOLD )
 }
 
 /*
-QStringList families ( WritingSystem writingSystem = Any ) const
+QStringList families( QFontDatabase::WritingSystem writingSystem = QFontDatabase::Any ) const
 */
 HB_FUNC_STATIC( QFONTDATABASE_FAMILIES )
 {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QFONTDATABASE_FONT )
 }
 
 /*
-bool isBitmapScalable ( const QString & family, const QString & style = QString() ) const
+bool isBitmapScalable( const QString & family, const QString & style = QString() ) const
 */
 HB_FUNC_STATIC( QFONTDATABASE_ISBITMAPSCALABLE )
 {
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISBITMAPSCALABLE )
 }
 
 /*
-bool isFixedPitch ( const QString & family, const QString & style = QString() ) const
+bool isFixedPitch( const QString & family, const QString & style = QString() ) const
 */
 HB_FUNC_STATIC( QFONTDATABASE_ISFIXEDPITCH )
 {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISFIXEDPITCH )
 }
 
 /*
-bool isScalable ( const QString & family, const QString & style = QString() ) const
+bool isScalable( const QString & family, const QString & style = QString() ) const
 */
 HB_FUNC_STATIC( QFONTDATABASE_ISSCALABLE )
 {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ISSCALABLE )
 }
 
 /*
-bool isSmoothlyScalable ( const QString & family, const QString & style = QString() ) const
+bool isSmoothlyScalable( const QString & family, const QString & style = QString() ) const
 */
 HB_FUNC_STATIC( QFONTDATABASE_ISSMOOTHLYSCALABLE )
 {
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ITALIC )
 }
 
 /*
-QList<int> pointSizes ( const QString & family, const QString & style = QString() )
+QList<int> pointSizes( const QString & family, const QString & style = QString() )
 */
 HB_FUNC_STATIC( QFONTDATABASE_POINTSIZES )
 {

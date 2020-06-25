@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETTOOLTIP )
 }
 
 /*
-void showMessage ( const QString & title, const QString & message, MessageIcon icon = Information, int millisecondsTimeoutHint = 10000 )
+void showMessage( const QString & title, const QString & message, QSystemTrayIcon::MessageIcon icon = QSystemTrayIcon::Information, int millisecondsTimeoutHint = 10000 )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOWMESSAGE )
 {

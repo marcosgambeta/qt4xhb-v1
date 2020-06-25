@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ENSURECURSORVISIBLE )
 }
 
 /*
-bool find ( const QString & exp, QTextDocument::FindFlags options = 0 )
+bool find( const QString & exp, QTextDocument::FindFlags options = 0 )
 */
 HB_FUNC_STATIC( QTEXTEDIT_FIND )
 {
@@ -879,7 +879,7 @@ HB_FUNC_STATIC( QTEXTEDIT_MERGECURRENTCHARFORMAT )
 }
 
 /*
-void moveCursor ( QTextCursor::MoveOperation operation, QTextCursor::MoveMode mode = QTextCursor::MoveAnchor )
+void moveCursor( QTextCursor::MoveOperation operation, QTextCursor::MoveMode mode = QTextCursor::MoveAnchor )
 */
 HB_FUNC_STATIC( QTEXTEDIT_MOVECURSOR )
 {
@@ -2188,7 +2188,7 @@ HB_FUNC_STATIC( QTEXTEDIT_UNDO )
 }
 
 /*
-void zoomIn ( int range = 1 )
+void zoomIn( int range = 1 )
 */
 HB_FUNC_STATIC( QTEXTEDIT_ZOOMIN )
 {
@@ -2214,7 +2214,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ZOOMIN )
 }
 
 /*
-void zoomOut ( int range = 1 )
+void zoomOut( int range = 1 )
 */
 HB_FUNC_STATIC( QTEXTEDIT_ZOOMOUT )
 {

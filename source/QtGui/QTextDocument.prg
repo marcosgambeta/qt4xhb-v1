@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CLEAR )
 }
 
 /*
-void clearUndoRedoStacks ( Stacks stacksToClear = UndoAndRedoStacks )
+void clearUndoRedoStacks( QTextDocument::Stacks stacksToClear = QTextDocument::UndoAndRedoStacks )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_CLEARUNDOREDOSTACKS )
 {
@@ -496,7 +496,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_CLEARUNDOREDOSTACKS )
 }
 
 /*
-QTextDocument * clone ( QObject * parent = 0 ) const
+QTextDocument * clone( QObject * parent = 0 ) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_CLONE )
 {
@@ -668,7 +668,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_DOCUMENTMARGIN )
 }
 
 /*
-void drawContents ( QPainter * p, const QRectF & rect = QRectF() )
+void drawContents( QPainter * p, const QRectF & rect = QRectF() )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_DRAWCONTENTS )
 {
@@ -1835,7 +1835,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_TEXTWIDTH )
 }
 
 /*
-QString toHtml ( const QByteArray & encoding = QByteArray() ) const
+QString toHtml( const QByteArray & encoding = QByteArray() ) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_TOHTML )
 {
@@ -1958,7 +1958,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_REDO )
 }
 
 /*
-void setModified ( bool m = true )
+void setModified( bool m = true )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETMODIFIED )
 {

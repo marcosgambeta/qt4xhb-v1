@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QTRANSFORM_DY )
 }
 
 /*
-QTransform inverted ( bool * invertible = 0 ) const
+QTransform inverted( bool * invertible = 0 ) const
 */
 HB_FUNC_STATIC( QTRANSFORM_INVERTED )
 {

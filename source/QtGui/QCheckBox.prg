@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QCHECKBOX_SETCHECKSTATE )
 }
 
 /*
-void setTristate ( bool y = true )
+void setTristate( bool y = true )
 */
 HB_FUNC_STATIC( QCHECKBOX_SETTRISTATE )
 {

@@ -1140,7 +1140,7 @@ HB_FUNC_STATIC( QFONT_SETSTYLE )
 }
 
 /*
-void setStyleHint ( StyleHint hint, StyleStrategy strategy = PreferDefault )
+void setStyleHint( QFont::StyleHint hint, QFont::StyleStrategy strategy = QFont::PreferDefault )
 */
 HB_FUNC_STATIC( QFONT_SETSTYLEHINT )
 {

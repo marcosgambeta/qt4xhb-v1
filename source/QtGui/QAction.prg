@@ -1349,7 +1349,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUTS )
 }
 
 /*
-bool showStatusText ( QWidget * widget = 0 )
+bool showStatusText( QWidget * widget = 0 )
 */
 HB_FUNC_STATIC( QACTION_SHOWSTATUSTEXT )
 {

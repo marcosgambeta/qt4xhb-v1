@@ -1221,7 +1221,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SETGEOMETRY )
 }
 
 /*
-virtual QSizeF sizeHint ( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
+virtual QSizeF sizeHint( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SIZEHINT )
 {

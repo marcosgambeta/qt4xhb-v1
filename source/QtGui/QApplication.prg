@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QAPPLICATION_STYLESHEET )
 }
 
 /*
-virtual bool notify ( QObject * receiver, QEvent * e )
+virtual bool notify( QObject * receiver, QEvent * e )
 */
 HB_FUNC_STATIC( QAPPLICATION_NOTIFY )
 {
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QAPPLICATION_ACTIVEWINDOW )
 }
 
 /*
-static void alert ( QWidget * widget, int msec = 0 )
+static void alert( QWidget * widget, int msec = 0 )
 */
 HB_FUNC_STATIC( QAPPLICATION_ALERT )
 {
@@ -1316,7 +1316,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETDOUBLECLICKINTERVAL )
 }
 
 /*
-static void setEffectEnabled ( Qt::UIEffect effect, bool enable = true )
+static void setEffectEnabled( Qt::UIEffect effect, bool enable = true )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETEFFECTENABLED )
 {
@@ -1337,7 +1337,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETEFFECTENABLED )
 }
 
 /*
-static void setFont ( const QFont & font, const char * className = 0 )
+static void setFont( const QFont & font, const char * className = 0 )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETFONT )
 {
@@ -1463,7 +1463,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETOVERRIDECURSOR )
 }
 
 /*
-static void setPalette ( const QPalette & palette, const char * className = 0 )
+static void setPalette( const QPalette & palette, const char * className = 0 )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETPALETTE )
 {

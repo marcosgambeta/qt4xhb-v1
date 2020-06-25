@@ -1255,7 +1255,7 @@ HB_FUNC_STATIC( QWIDGET_GETCONTENTSMARGINS )
 }
 
 /*
-void grabGesture ( Qt::GestureType gesture, Qt::GestureFlags flags = Qt::GestureFlags() )
+void grabGesture( Qt::GestureType gesture, Qt::GestureFlags flags = Qt::GestureFlags() )
 */
 HB_FUNC_STATIC( QWIDGET_GRABGESTURE )
 {
@@ -1358,7 +1358,7 @@ HB_FUNC_STATIC( QWIDGET_GRABMOUSE )
 }
 
 /*
-int grabShortcut ( const QKeySequence & key, Qt::ShortcutContext context = Qt::WindowShortcut )
+int grabShortcut( const QKeySequence & key, Qt::ShortcutContext context = Qt::WindowShortcut )
 */
 HB_FUNC_STATIC( QWIDGET_GRABSHORTCUT )
 {
@@ -3126,7 +3126,7 @@ HB_FUNC_STATIC( QWIDGET_SETACCESSIBLENAME )
 }
 
 /*
-void setAttribute ( Qt::WidgetAttribute attribute, bool on = true )
+void setAttribute( Qt::WidgetAttribute attribute, bool on = true )
 */
 HB_FUNC_STATIC( QWIDGET_SETATTRIBUTE )
 {
@@ -4183,7 +4183,7 @@ HB_FUNC_STATIC( QWIDGET_SETPARENT )
 }
 
 /*
-void setShortcutAutoRepeat ( int id, bool enable = true )
+void setShortcutAutoRepeat( int id, bool enable = true )
 */
 HB_FUNC_STATIC( QWIDGET_SETSHORTCUTAUTOREPEAT )
 {
@@ -4209,7 +4209,7 @@ HB_FUNC_STATIC( QWIDGET_SETSHORTCUTAUTOREPEAT )
 }
 
 /*
-void setShortcutEnabled ( int id, bool enable = true )
+void setShortcutEnabled( int id, bool enable = true )
 */
 HB_FUNC_STATIC( QWIDGET_SETSHORTCUTENABLED )
 {

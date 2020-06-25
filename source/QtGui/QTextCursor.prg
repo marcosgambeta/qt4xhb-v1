@@ -1376,7 +1376,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_MERGECHARFORMAT )
 }
 
 /*
-bool movePosition ( MoveOperation operation, MoveMode mode = MoveAnchor, int n = 1 )
+bool movePosition( QTextCursor::MoveOperation operation, QTextCursor::MoveMode mode = QTextCursor::MoveAnchor, int n = 1 )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_MOVEPOSITION )
 {
@@ -1500,7 +1500,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SELECT )
 }
 
 /*
-void selectedTableCells ( int * firstRow, int * numRows, int * firstColumn, int * numColumns ) const
+void selectedTableCells( int * firstRow, int * numRows, int * firstColumn, int * numColumns ) const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SELECTEDTABLECELLS )
 {
@@ -1735,7 +1735,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SETKEEPPOSITIONONINSERT )
 }
 
 /*
-void setPosition ( int pos, MoveMode m = MoveAnchor )
+void setPosition( int pos, QTextCursor::MoveMode m = QTextCursor::MoveAnchor )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETPOSITION )
 {

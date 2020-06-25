@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_DELETE )
 }
 
 /*
-virtual void drawComplexControl ( ComplexControl cc, const QStyleOptionComplex * opt, QPainter * p, const QWidget * widget = 0 ) const
+virtual void drawComplexControl( QStyle::ComplexControl cc, const QStyleOptionComplex * opt, QPainter * p, const QWidget * widget = 0 ) const
 */
 HB_FUNC_STATIC( QWINDOWSSTYLE_DRAWCOMPLEXCONTROL )
 {
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_DRAWCOMPLEXCONTROL )
 }
 
 /*
-virtual void drawControl ( ControlElement ce, const QStyleOption * opt, QPainter * p, const QWidget * widget = 0 ) const
+virtual void drawControl( QStyle::ControlElement ce, const QStyleOption * opt, QPainter * p, const QWidget * widget = 0 ) const
 */
 HB_FUNC_STATIC( QWINDOWSSTYLE_DRAWCONTROL )
 {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_DRAWCONTROL )
 }
 
 /*
-virtual void drawPrimitive ( PrimitiveElement pe, const QStyleOption * opt, QPainter * p, const QWidget * w = 0 ) const
+virtual void drawPrimitive( QStyle::PrimitiveElement pe, const QStyleOption * opt, QPainter * p, const QWidget * w = 0 ) const
 */
 HB_FUNC_STATIC( QWINDOWSSTYLE_DRAWPRIMITIVE )
 {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_DRAWPRIMITIVE )
 }
 
 /*
-virtual int pixelMetric ( PixelMetric pm, const QStyleOption * opt = 0, const QWidget * widget = 0 ) const
+virtual int pixelMetric( QStyle::PixelMetric pm, const QStyleOption * opt = 0, const QWidget * widget = 0 ) const
 */
 HB_FUNC_STATIC( QWINDOWSSTYLE_PIXELMETRIC )
 {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_POLISH )
 }
 
 /*
-virtual QSize sizeFromContents ( ContentsType ct, const QStyleOption * opt, const QSize & csz, const QWidget * widget = 0 ) const
+virtual QSize sizeFromContents( QStyle::ContentsType ct, const QStyleOption * opt, const QSize & csz, const QWidget * widget = 0 ) const
 */
 HB_FUNC_STATIC( QWINDOWSSTYLE_SIZEFROMCONTENTS )
 {
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_SIZEFROMCONTENTS )
 }
 
 /*
-virtual QPixmap standardPixmap ( StandardPixmap standardPixmap, const QStyleOption * opt, const QWidget * widget = 0 ) const
+virtual QPixmap standardPixmap( QStyle::StandardPixmap standardPixmap, const QStyleOption * opt, const QWidget * widget = 0 ) const
 */
 HB_FUNC_STATIC( QWINDOWSSTYLE_STANDARDPIXMAP )
 {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_STANDARDPIXMAP )
 }
 
 /*
-virtual int styleHint ( StyleHint hint, const QStyleOption * opt = 0, const QWidget * widget = 0, QStyleHintReturn * returnData = 0 ) const
+virtual int styleHint( QStyle::StyleHint hint, const QStyleOption * opt = 0, const QWidget * widget = 0, QStyleHintReturn * returnData = 0 ) const
 */
 HB_FUNC_STATIC( QWINDOWSSTYLE_STYLEHINT )
 {
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_STYLEHINT )
 }
 
 /*
-virtual QRect subElementRect ( SubElement sr, const QStyleOption * opt, const QWidget * w = 0 ) const
+virtual QRect subElementRect( QStyle::SubElement sr, const QStyleOption * opt, const QWidget * w = 0 ) const
 */
 HB_FUNC_STATIC( QWINDOWSSTYLE_SUBELEMENTRECT )
 {

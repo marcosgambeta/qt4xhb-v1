@@ -97,6 +97,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 #include <QtCore/QDateTime>
+#include <QtCore/QMimeData>
 
 /*
 QFileSystemModel(QObject * parent = 0)
@@ -379,7 +380,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MKDIR )
 }
 
 /*
-QVariant myComputer ( int role = Qt::DisplayRole ) const
+QVariant myComputer( int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_MYCOMPUTER )
 {
@@ -850,7 +851,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_CANFETCHMORE )
 }
 
 /*
-virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const
+virtual int columnCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_COLUMNCOUNT )
 {
@@ -874,7 +875,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_COLUMNCOUNT )
 }
 
 /*
-virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
+virtual QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_DATA )
 {
@@ -973,7 +974,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FLAGS )
 }
 
 /*
-virtual bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
+virtual bool hasChildren( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_HASCHILDREN )
 {
@@ -997,7 +998,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_HASCHILDREN )
 }
 
 /*
-virtual QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
+virtual QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_HEADERDATA )
 {
@@ -1153,7 +1154,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_PARENT )
 }
 
 /*
-virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
+virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ROWCOUNT )
 {
@@ -1177,7 +1178,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ROWCOUNT )
 }
 
 /*
-virtual bool setData ( const QModelIndex & idx, const QVariant & value, int role = Qt::EditRole )
+virtual bool setData( const QModelIndex & idx, const QVariant & value, int role = Qt::EditRole )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETDATA )
 {
@@ -1201,7 +1202,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETDATA )
 }
 
 /*
-virtual void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
+virtual void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SORT )
 {

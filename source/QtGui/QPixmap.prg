@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QPIXMAP_CACHEKEY )
 }
 
 /*
-bool convertFromImage ( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
+bool convertFromImage( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
 HB_FUNC_STATIC( QPIXMAP_CONVERTFROMIMAGE )
 {
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QPIXMAP_COPY )
 }
 
 /*
-QBitmap createHeuristicMask ( bool clipTight = true ) const
+QBitmap createHeuristicMask( bool clipTight = true ) const
 */
 HB_FUNC_STATIC( QPIXMAP_CREATEHEURISTICMASK )
 {
@@ -604,7 +604,7 @@ HB_FUNC_STATIC( QPIXMAP_ISQBITMAP )
 }
 
 /*
-bool load ( const QString & fileName, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor )
+bool load( const QString & fileName, const char * format = 0, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
 HB_FUNC_STATIC( QPIXMAP_LOAD )
 {
@@ -821,7 +821,7 @@ HB_FUNC_STATIC( QPIXMAP_SCALED )
 }
 
 /*
-QPixmap scaledToHeight ( int height, Qt::TransformationMode mode = Qt::FastTransformation ) const
+QPixmap scaledToHeight( int height, Qt::TransformationMode mode = Qt::FastTransformation ) const
 */
 HB_FUNC_STATIC( QPIXMAP_SCALEDTOHEIGHT )
 {
@@ -846,7 +846,7 @@ HB_FUNC_STATIC( QPIXMAP_SCALEDTOHEIGHT )
 }
 
 /*
-QPixmap scaledToWidth ( int width, Qt::TransformationMode mode = Qt::FastTransformation ) const
+QPixmap scaledToWidth( int width, Qt::TransformationMode mode = Qt::FastTransformation ) const
 */
 HB_FUNC_STATIC( QPIXMAP_SCALEDTOWIDTH )
 {
@@ -1116,7 +1116,7 @@ HB_FUNC_STATIC( QPIXMAP_DEFAULTDEPTH )
 }
 
 /*
-static QPixmap fromImage ( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
+static QPixmap fromImage( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
 HB_FUNC_STATIC( QPIXMAP_FROMIMAGE )
 {
@@ -1136,7 +1136,7 @@ HB_FUNC_STATIC( QPIXMAP_FROMIMAGE )
 }
 
 /*
-static QPixmap fromImageReader ( QImageReader * imageReader, Qt::ImageConversionFlags flags = Qt::AutoColor )
+static QPixmap fromImageReader( QImageReader * imageReader, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
 HB_FUNC_STATIC( QPIXMAP_FROMIMAGEREADER )
 {
@@ -1197,13 +1197,23 @@ HB_FUNC_STATIC( QPIXMAP_GRABWIDGET )
 }
 
 /*
-static QPixmap grabWindow ( WId window, int x = 0, int y = 0, int width = -1, int height = -1 )
+static QPixmap grabWindow( WId window, int x = 0, int y = 0, int width = -1, int height = -1 )
 */
 HB_FUNC_STATIC( QPIXMAP_GRABWINDOW )
 {
-  WId par1 = (WId) hb_parptr(1);
-  QPixmap * ptr = new QPixmap( QPixmap::grabWindow ( par1, OPINT(2,0), OPINT(3,0), OPINT(4,-1), OPINT(5,-1) ) );
-  Qt4xHb::createReturnClass ( ptr, "QPIXMAP", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+  if( ISBETWEEN(1,5) && ISPOINTER(1) && ISOPTNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) && ISOPTNUM(5) )
+  {
+#endif
+    QPixmap * ptr = new QPixmap( QPixmap::grabWindow( (WId) hb_parptr(1), OPINT(2,0), OPINT(3,0), OPINT(4,-1), OPINT(5,-1) ) );
+    Qt4xHb::createReturnClass( ptr, "QPIXMAP", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
 }
 
 /*

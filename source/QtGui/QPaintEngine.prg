@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWELLIPSE )
 }
 
 /*
-virtual void drawImage ( const QRectF & rectangle, const QImage & image, const QRectF & sr, Qt::ImageConversionFlags flags = Qt::AutoColor )
+virtual void drawImage( const QRectF & rectangle, const QImage & image, const QRectF & sr, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
 HB_FUNC_STATIC( QPAINTENGINE_DRAWIMAGE )
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWPATH )
 }
 
 /*
-virtual void drawPixmap ( const QRectF & r, const QPixmap & pm, const QRectF & sr ) = 0
+virtual void drawPixmap( const QRectF & r, const QPixmap & pm, const QRectF & sr ) = 0
 */
 HB_FUNC_STATIC( QPAINTENGINE_DRAWPIXMAP )
 {

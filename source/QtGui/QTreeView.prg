@@ -1219,7 +1219,7 @@ HB_FUNC_STATIC( QTREEVIEW_RESET )
 }
 
 /*
-virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisible )
+virtual void scrollTo( const QModelIndex & index, QTreeView::ScrollHint hint = QTreeView::EnsureVisible )
 */
 HB_FUNC_STATIC( QTREEVIEW_SCROLLTO )
 {

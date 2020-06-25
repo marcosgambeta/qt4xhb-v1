@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_FLAGS )
 }
 
 /*
-virtual bool insertRows(int row, int count, const QModelIndex & parent = QModelIndex())
+virtual bool insertRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_INSERTROWS )
 {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_INSERTROWS )
 }
 
 /*
-virtual bool removeRows(int row, int count, const QModelIndex & parent = QModelIndex())
+virtual bool removeRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_REMOVEROWS )
 {
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_REMOVEROWS )
 }
 
 /*
-virtual int rowCount(const QModelIndex & parent = QModelIndex()) const
+virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_ROWCOUNT )
 {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_ROWCOUNT )
 }
 
 /*
-virtual bool setData(const QModelIndex & index, const QVariant & value, int role = Qt::EditRole)
+virtual bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_SETDATA )
 {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_SETDATA )
 }
 
 /*
-virtual void sort(int column, Qt::SortOrder order = Qt::AscendingOrder)
+virtual void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_SORT )
 {

@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_SETCURRENTCOLOR )
 }
 
 /*
-void setOption ( ColorDialogOption option, bool on = true )
+void setOption( QColorDialog::ColorDialogOption option, bool on = true )
 */
 HB_FUNC_STATIC( QCOLORDIALOG_SETOPTION )
 {

@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QSCROLLAREA_ALIGNMENT )
 }
 
 /*
-void ensureVisible ( int x, int y, int xmargin = 50, int ymargin = 50 )
+void ensureVisible( int x, int y, int xmargin = 50, int ymargin = 50 )
 */
 HB_FUNC_STATIC( QSCROLLAREA_ENSUREVISIBLE )
 {
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QSCROLLAREA_ENSUREVISIBLE )
 }
 
 /*
-void ensureWidgetVisible ( QWidget * childWidget, int xmargin = 50, int ymargin = 50 )
+void ensureWidgetVisible( QWidget * childWidget, int xmargin = 50, int ymargin = 50 )
 */
 HB_FUNC_STATIC( QSCROLLAREA_ENSUREWIDGETVISIBLE )
 {

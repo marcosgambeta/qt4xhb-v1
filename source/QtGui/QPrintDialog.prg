@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_PRINTER )
 }
 
 /*
-void setOption ( PrintDialogOption option, bool on = true )
+void setOption( QPrintDialog::PrintDialogOption option, bool on = true )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_SETOPTION )
 {

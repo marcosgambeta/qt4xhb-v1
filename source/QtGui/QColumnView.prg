@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_INDEXAT )
 }
 
 /*
-virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisible )
+virtual void scrollTo( const QModelIndex & index, QColumnView::ScrollHint hint = QColumnView::EnsureVisible )
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_SCROLLTO )
 {

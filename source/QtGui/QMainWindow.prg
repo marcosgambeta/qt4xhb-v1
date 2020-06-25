@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBAR )
 }
 
 /*
-void addToolBarBreak ( Qt::ToolBarArea area = Qt::TopToolBarArea )
+void addToolBarBreak( Qt::ToolBarArea area = Qt::TopToolBarArea )
 */
 HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBARBREAK )
 {
@@ -706,7 +706,7 @@ HB_FUNC_STATIC( QMAINWINDOW_RESTOREDOCKWIDGET )
 }
 
 /*
-bool restoreState ( const QByteArray & state, int version = 0 )
+bool restoreState( const QByteArray & state, int version = 0 )
 */
 HB_FUNC_STATIC( QMAINWINDOW_RESTORESTATE )
 {
@@ -730,7 +730,7 @@ HB_FUNC_STATIC( QMAINWINDOW_RESTORESTATE )
 }
 
 /*
-QByteArray saveState ( int version = 0 ) const
+QByteArray saveState( int version = 0 ) const
 */
 HB_FUNC_STATIC( QMAINWINDOW_SAVESTATE )
 {

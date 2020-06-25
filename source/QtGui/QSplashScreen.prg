@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_CLEARMESSAGE )
 }
 
 /*
-void showMessage ( const QString & message, int alignment = Qt::AlignLeft, const QColor & color = Qt::black )
+void showMessage( const QString & message, int alignment = Qt::AlignLeft, const QColor & color = Qt::black )
 */
 HB_FUNC_STATIC( QSPLASHSCREEN_SHOWMESSAGE )
 {

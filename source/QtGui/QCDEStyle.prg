@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QCDESTYLE_DELETE )
 }
 
 /*
-virtual void drawControl ( ControlElement element, const QStyleOption * opt, QPainter * p, const QWidget * widget = 0 ) const
+virtual void drawControl( QStyle::ControlElement element, const QStyleOption * opt, QPainter * p, const QWidget * widget = 0 ) const
 */
 HB_FUNC_STATIC( QCDESTYLE_DRAWCONTROL )
 {
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QCDESTYLE_DRAWCONTROL )
 }
 
 /*
-virtual void drawPrimitive ( PrimitiveElement pe, const QStyleOption * opt, QPainter * p, const QWidget * widget = 0 ) const
+virtual void drawPrimitive( QStyle::PrimitiveElement pe, const QStyleOption * opt, QPainter * p, const QWidget * widget = 0 ) const
 */
 HB_FUNC_STATIC( QCDESTYLE_DRAWPRIMITIVE )
 {
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QCDESTYLE_DRAWPRIMITIVE )
 }
 
 /*
-virtual int pixelMetric ( PixelMetric metric, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
+virtual int pixelMetric( QStyle::PixelMetric metric, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
 */
 HB_FUNC_STATIC( QCDESTYLE_PIXELMETRIC )
 {

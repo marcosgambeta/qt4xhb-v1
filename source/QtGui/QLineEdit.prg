@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QLINEEDIT_CREATESTANDARDCONTEXTMENU )
 }
 
 /*
-void cursorBackward ( bool mark, int steps = 1 )
+void cursorBackward( bool mark, int steps = 1 )
 */
 HB_FUNC_STATIC( QLINEEDIT_CURSORBACKWARD )
 {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORBACKWARD )
 }
 
 /*
-void cursorForward ( bool mark, int steps = 1 )
+void cursorForward( bool mark, int steps = 1 )
 */
 HB_FUNC_STATIC( QLINEEDIT_CURSORFORWARD )
 {

@@ -51,7 +51,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-void grabGesture ( Qt::GestureType gesture, Qt::GestureFlags flags = Qt::GestureFlags() )
+void grabGesture( Qt::GestureType gesture, Qt::GestureFlags flags = Qt::GestureFlags() )
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_GRABGESTURE )
 {

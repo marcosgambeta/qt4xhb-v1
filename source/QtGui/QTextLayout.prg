@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_MINIMUMWIDTH )
 }
 
 /*
-int nextCursorPosition ( int oldPos, CursorMode mode = SkipCharacters ) const
+int nextCursorPosition( int oldPos, QTextLayout::CursorMode mode = QTextLayout::SkipCharacters ) const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_NEXTCURSORPOSITION )
 {
@@ -754,7 +754,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_PREEDITAREATEXT )
 }
 
 /*
-int previousCursorPosition ( int oldPos, CursorMode mode = SkipCharacters ) const
+int previousCursorPosition( int oldPos, QTextLayout::CursorMode mode = QTextLayout::SkipCharacters ) const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_PREVIOUSCURSORPOSITION )
 {

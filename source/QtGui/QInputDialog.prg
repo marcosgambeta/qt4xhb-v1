@@ -933,7 +933,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SETOKBUTTONTEXT )
 }
 
 /*
-void setOption ( InputDialogOption option, bool on = true )
+void setOption( QInputDialog::InputDialogOption option, bool on = true )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETOPTION )
 {
@@ -1211,7 +1211,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SIZEHINT )
 }
 
 /*
-static double getDouble ( QWidget * parent, const QString & title, const QString & label, double value = 0, double min = -2147483647, double max = 2147483647, int decimals = 1, bool * ok = 0, Qt::WindowFlags flags = 0 )
+static double getDouble( QWidget * parent, const QString & title, const QString & label, double value = 0, double min = -2147483647, double max = 2147483647, int decimals = 1, bool * ok = 0, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_GETDOUBLE )
 {
@@ -1232,7 +1232,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETDOUBLE )
 }
 
 /*
-static int getInt ( QWidget * parent, const QString & title, const QString & label, int value = 0, int min = -2147483647, int max = 2147483647, int step = 1, bool * ok = 0, Qt::WindowFlags flags = 0 )
+static int getInt( QWidget * parent, const QString & title, const QString & label, int value = 0, int min = -2147483647, int max = 2147483647, int step = 1, bool * ok = 0, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_GETINT )
 {
@@ -1253,7 +1253,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETINT )
 }
 
 /*
-static QString getItem ( QWidget * parent, const QString & title, const QString & label, const QStringList & items, int current = 0, bool editable = true, bool * ok = 0, Qt::WindowFlags flags = 0 )
+static QString getItem( QWidget * parent, const QString & title, const QString & label, const QStringList & items, int current = 0, bool editable = true, bool * ok = 0, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_GETITEM )
 {
@@ -1274,7 +1274,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_GETITEM )
 }
 
 /*
-static QString getText ( QWidget * parent, const QString & title, const QString & label, QLineEdit::EchoMode mode = QLineEdit::Normal, const QString & text = QString(), bool * ok = 0, Qt::WindowFlags flags = 0 )
+static QString getText( QWidget * parent, const QString & title, const QString & label, QLineEdit::EchoMode mode = QLineEdit::Normal, const QString & text = QString(), bool * ok = 0, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_GETTEXT )
 {

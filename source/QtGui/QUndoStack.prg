@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QUNDOSTACK_COUNT )
 }
 
 /*
-QAction * createRedoAction ( QObject * parent, const QString & prefix = QString() ) const
+QAction * createRedoAction( QObject * parent, const QString & prefix = QString() ) const
 */
 HB_FUNC_STATIC( QUNDOSTACK_CREATEREDOACTION )
 {
@@ -309,7 +309,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CREATEREDOACTION )
 }
 
 /*
-QAction * createUndoAction ( QObject * parent, const QString & prefix = QString() ) const
+QAction * createUndoAction( QObject * parent, const QString & prefix = QString() ) const
 */
 HB_FUNC_STATIC( QUNDOSTACK_CREATEUNDOACTION )
 {
@@ -606,7 +606,7 @@ HB_FUNC_STATIC( QUNDOSTACK_REDO )
 }
 
 /*
-void setActive ( bool active = true )
+void setActive( bool active = true )
 */
 HB_FUNC_STATIC( QUNDOSTACK_SETACTIVE )
 {

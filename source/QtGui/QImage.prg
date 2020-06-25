@@ -585,7 +585,7 @@ HB_FUNC_STATIC( QIMAGE_COPY )
 }
 
 /*
-QImage createAlphaMask ( Qt::ImageConversionFlags flags = Qt::AutoColor ) const
+QImage createAlphaMask( Qt::ImageConversionFlags flags = Qt::AutoColor ) const
 */
 HB_FUNC_STATIC( QIMAGE_CREATEALPHAMASK )
 {
@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QIMAGE_CREATEALPHAMASK )
 }
 
 /*
-QImage createHeuristicMask ( bool clipTight = true ) const
+QImage createHeuristicMask( bool clipTight = true ) const
 */
 HB_FUNC_STATIC( QIMAGE_CREATEHEURISTICMASK )
 {
@@ -635,7 +635,7 @@ HB_FUNC_STATIC( QIMAGE_CREATEHEURISTICMASK )
 }
 
 /*
-QImage createMaskFromColor ( QRgb color, Qt::MaskMode mode = Qt::MaskInColor ) const
+QImage createMaskFromColor( QRgb color, Qt::MaskMode mode = Qt::MaskInColor ) const
 */
 HB_FUNC_STATIC( QIMAGE_CREATEMASKFROMCOLOR )
 {
@@ -908,7 +908,7 @@ HB_FUNC_STATIC( QIMAGE_HEIGHT )
 }
 
 /*
-void invertPixels ( InvertMode mode = InvertRgb )
+void invertPixels( QImage::InvertMode mode = QImage::InvertRgb )
 */
 HB_FUNC_STATIC( QIMAGE_INVERTPIXELS )
 {
@@ -1076,7 +1076,7 @@ HB_FUNC_STATIC( QIMAGE_LOADFROMDATA )
 }
 
 /*
-QImage mirrored ( bool horizontal = false, bool vertical = true ) const
+QImage mirrored( bool horizontal = false, bool vertical = true ) const
 */
 HB_FUNC_STATIC( QIMAGE_MIRRORED )
 {
@@ -1366,7 +1366,7 @@ HB_FUNC_STATIC( QIMAGE_SCALED )
 }
 
 /*
-QImage scaledToHeight ( int height, Qt::TransformationMode mode = Qt::FastTransformation ) const
+QImage scaledToHeight( int height, Qt::TransformationMode mode = Qt::FastTransformation ) const
 */
 HB_FUNC_STATIC( QIMAGE_SCALEDTOHEIGHT )
 {
@@ -1391,7 +1391,7 @@ HB_FUNC_STATIC( QIMAGE_SCALEDTOHEIGHT )
 }
 
 /*
-QImage scaledToWidth ( int width, Qt::TransformationMode mode = Qt::FastTransformation ) const
+QImage scaledToWidth( int width, Qt::TransformationMode mode = Qt::FastTransformation ) const
 */
 HB_FUNC_STATIC( QIMAGE_SCALEDTOWIDTH )
 {
@@ -1710,7 +1710,7 @@ HB_FUNC_STATIC( QIMAGE_SWAP )
 }
 
 /*
-QString text ( const QString & key = QString() ) const
+QString text( const QString & key = QString() ) const
 */
 HB_FUNC_STATIC( QIMAGE_TEXT )
 {

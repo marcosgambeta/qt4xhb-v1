@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QSPACERITEM_NEW )
 }
 
 /*
-void changeSize ( int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum, QSizePolicy::Policy vPolicy = QSizePolicy::Minimum )
+void changeSize( int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum, QSizePolicy::Policy vPolicy = QSizePolicy::Minimum )
 */
 HB_FUNC_STATIC( QSPACERITEM_CHANGESIZE )
 {

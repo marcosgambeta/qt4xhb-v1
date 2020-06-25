@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_DELETE )
 }
 
 /*
-void addItem ( QLayoutItem * item, int row, int column, int rowSpan = 1, int columnSpan = 1, Qt::Alignment alignment = 0 )
+void addItem( QLayoutItem * item, int row, int column, int rowSpan = 1, int columnSpan = 1, Qt::Alignment alignment = 0 )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ADDITEM )
 {

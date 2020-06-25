@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ADDITEM )
 }
 
 /*
-void addStretch ( int stretch = 1 )
+void addStretch( int stretch = 1 )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ADDSTRETCH )
 {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_INSERTITEM )
 }
 
 /*
-void insertStretch ( int index, int stretch = 1 )
+void insertStretch( int index, int stretch = 1 )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_INSERTSTRETCH )
 {
@@ -625,7 +625,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SETGEOMETRY )
 }
 
 /*
-virtual QSizeF sizeHint ( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
+virtual QSizeF sizeHint( Qt::SizeHint which, const QSizeF & constraint = QSizeF() ) const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SIZEHINT )
 {

@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_DELETE )
 }
 
 /*
-virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const
+virtual int columnCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_COLUMNCOUNT )
 {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_DROPMIMEDATA )
 }
 
 /*
-virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
+virtual QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INDEX )
 {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INDEX )
 }
 
 /*
-virtual bool insertColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
+virtual bool insertColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INSERTCOLUMNS )
 {
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INSERTCOLUMNS )
 }
 
 /*
-virtual bool insertRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
+virtual bool insertRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INSERTROWS )
 {
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPTOSOURCE )
 }
 
 /*
-virtual QModelIndexList match ( const QModelIndex & start, int role, const QVariant & value, int hits = 1, Qt::MatchFlags flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
+virtual QModelIndexList match( const QModelIndex & start, int role, const QVariant & value, int hits = 1, Qt::MatchFlags flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MATCH )
 {
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_PARENT )
 }
 
 /*
-virtual bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
+virtual bool removeColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_REMOVECOLUMNS )
 {
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_REMOVECOLUMNS )
 }
 
 /*
-virtual bool removeRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
+virtual bool removeRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_REMOVEROWS )
 {
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_REMOVEROWS )
 }
 
 /*
-virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
+virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_ROWCOUNT )
 {

@@ -609,7 +609,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_CANFETCHMORE )
 }
 
 /*
-virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const
+virtual int columnCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_COLUMNCOUNT )
 {
@@ -633,7 +633,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_COLUMNCOUNT )
 }
 
 /*
-virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
+virtual QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_DATA )
 {
@@ -732,7 +732,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FLAGS )
 }
 
 /*
-virtual bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
+virtual bool hasChildren( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_HASCHILDREN )
 {
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_HASCHILDREN )
 }
 
 /*
-virtual QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
+virtual QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_HEADERDATA )
 {
@@ -781,7 +781,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_HEADERDATA )
 }
 
 /*
-virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
+virtual QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_INDEX )
 {
@@ -806,7 +806,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_INDEX )
 }
 
 /*
-virtual bool insertColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
+virtual bool insertColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_INSERTCOLUMNS )
 {
@@ -830,7 +830,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_INSERTCOLUMNS )
 }
 
 /*
-virtual bool insertRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
+virtual bool insertRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_INSERTROWS )
 {
@@ -954,7 +954,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MAPTOSOURCE )
 }
 
 /*
-virtual QModelIndexList match ( const QModelIndex & start, int role, const QVariant & value, int hits = 1, Qt::MatchFlags flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
+virtual QModelIndexList match( const QModelIndex & start, int role, const QVariant & value, int hits = 1, Qt::MatchFlags flags = Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MATCH )
 {
@@ -1088,7 +1088,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_PARENT )
 }
 
 /*
-virtual bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
+virtual bool removeColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_REMOVECOLUMNS )
 {
@@ -1112,7 +1112,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_REMOVECOLUMNS )
 }
 
 /*
-virtual bool removeRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
+virtual bool removeRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_REMOVEROWS )
 {
@@ -1136,7 +1136,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_REMOVEROWS )
 }
 
 /*
-virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
+virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_ROWCOUNT )
 {
@@ -1160,7 +1160,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_ROWCOUNT )
 }
 
 /*
-virtual bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
+virtual bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETDATA )
 {
@@ -1184,7 +1184,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETDATA )
 }
 
 /*
-virtual bool setHeaderData ( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole )
+virtual bool setHeaderData( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETHEADERDATA )
 {
@@ -1234,7 +1234,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETSOURCEMODEL )
 }
 
 /*
-virtual void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
+virtual void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORT )
 {

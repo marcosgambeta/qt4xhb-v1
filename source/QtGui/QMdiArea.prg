@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVESUBWINDOW )
 }
 
 /*
-QMdiSubWindow * addSubWindow ( QWidget * widget, Qt::WindowFlags windowFlags = 0 )
+QMdiSubWindow * addSubWindow( QWidget * widget, Qt::WindowFlags windowFlags = 0 )
 */
 HB_FUNC_STATIC( QMDIAREA_ADDSUBWINDOW )
 {
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QMDIAREA_SETDOCUMENTMODE )
 }
 
 /*
-void setOption ( AreaOption option, bool on = true )
+void setOption( QMdiArea::AreaOption option, bool on = true )
 */
 HB_FUNC_STATIC( QMDIAREA_SETOPTION )
 {
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QMDIAREA_SETVIEWMODE )
 }
 
 /*
-QList<QMdiSubWindow *> subWindowList ( WindowOrder order = CreationOrder ) const
+QList<QMdiSubWindow *> subWindowList( QMdiArea::WindowOrder order = QMdiArea::CreationOrder ) const
 */
 HB_FUNC_STATIC( QMDIAREA_SUBWINDOWLIST )
 {

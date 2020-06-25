@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SETCURRENTFONT )
 }
 
 /*
-void setOption ( FontDialogOption option, bool on = true )
+void setOption( QFontDialog::FontDialogOption option, bool on = true )
 */
 HB_FUNC_STATIC( QFONTDIALOG_SETOPTION )
 {

@@ -969,7 +969,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTRIKEOUT )
 }
 
 /*
-void setFontStyleHint ( QFont::StyleHint hint, QFont::StyleStrategy strategy = QFont::PreferDefault )
+void setFontStyleHint( QFont::StyleHint hint, QFont::StyleStrategy strategy = QFont::PreferDefault )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTYLEHINT )
 {

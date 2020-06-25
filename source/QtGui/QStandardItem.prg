@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_DELETE )
 }
 
 /*
-virtual QVariant data(int role = Qt::UserRole + 1) const
+virtual QVariant data( int role = Qt::UserRole + 1 ) const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_DATA )
 {
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_DATA )
 }
 
 /*
-virtual void setData(const QVariant &value, int role = Qt::UserRole + 1)
+virtual void setData( const QVariant & value, int role = Qt::UserRole + 1 )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETDATA )
 {
@@ -1567,7 +1567,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_HASCHILDREN )
 }
 
 /*
-QStandardItem *child(int row, int column = 0) const
+QStandardItem * child( int row, int column = 0 ) const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_CHILD )
 {
@@ -2052,7 +2052,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_APPENDCOLUMN )
 }
 
 /*
-QStandardItem *takeChild(int row, int column = 0)
+QStandardItem * takeChild( int row, int column = 0 )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_TAKECHILD )
 {
@@ -2173,7 +2173,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKECOLUMN )
 }
 
 /*
-void sortChildren(int column, Qt::SortOrder order = Qt::AscendingOrder)
+void sortChildren( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SORTCHILDREN )
 {

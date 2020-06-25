@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QICONENGINEV2_DELETE )
 }
 
 /*
-QList<QSize> availableSizes ( QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off )
+QList<QSize> availableSizes( QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off )
 */
 HB_FUNC_STATIC( QICONENGINEV2_AVAILABLESIZES )
 {

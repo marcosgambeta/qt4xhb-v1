@@ -682,7 +682,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ROOTINDEX )
 }
 
 /*
-virtual void scrollTo ( const QModelIndex & index, ScrollHint hint = EnsureVisible ) = 0
+virtual void scrollTo( const QModelIndex & index, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SCROLLTO )
 {

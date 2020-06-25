@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_CLIPPATH )
 }
 
 /*
-virtual bool collidesWithItem ( const QGraphicsItem * other, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
+virtual bool collidesWithItem( const QGraphicsItem * other, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHITEM )
 {
@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHITEM )
 }
 
 /*
-virtual bool collidesWithPath ( const QPainterPath & path, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
+virtual bool collidesWithPath( const QPainterPath & path, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHPATH )
 {
@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHPATH )
 }
 
 /*
-QList<QGraphicsItem *> collidingItems ( Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
+QList<QGraphicsItem *> collidingItems( Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDINGITEMS )
 {
@@ -1534,7 +1534,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISWINDOW )
 }
 
 /*
-QTransform itemTransform ( const QGraphicsItem * other, bool * ok = 0 ) const
+QTransform itemTransform( const QGraphicsItem * other, bool * ok = 0 ) const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_ITEMTRANSFORM )
 {
@@ -2680,7 +2680,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_OPAQUEAREA )
 }
 
 /*
-virtual void paint ( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 ) = 0
+virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget = 0 ) = 0
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_PAINT )
 {
@@ -3055,7 +3055,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SCENETRANSFORM )
 }
 
 /*
-void scroll ( qreal dx, qreal dy, const QRectF & rect = QRectF() )
+void scroll( qreal dx, qreal dy, const QRectF & rect = QRectF() )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SCROLL )
 {
@@ -3237,7 +3237,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETBOUNDINGREGIONGRANULARITY )
 }
 
 /*
-void setCacheMode ( CacheMode mode, const QSize & logicalCacheSize = QSize() )
+void setCacheMode( QGraphicsItem::CacheMode mode, const QSize & logicalCacheSize = QSize() )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETCACHEMODE )
 {
@@ -3367,7 +3367,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFILTERSCHILDEVENTS )
 }
 
 /*
-void setFlag ( GraphicsItemFlag flag, bool enabled = true )
+void setFlag( QGraphicsItem::GraphicsItemFlag flag, bool enabled = true )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETFLAG )
 {
@@ -3419,7 +3419,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFLAGS )
 }
 
 /*
-void setFocus ( Qt::FocusReason focusReason = Qt::OtherFocusReason )
+void setFocus( Qt::FocusReason focusReason = Qt::OtherFocusReason )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETFOCUS )
 {
@@ -3782,7 +3782,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETTOOLTIP )
 }
 
 /*
-void setTransform ( const QTransform & matrix, bool combine = false )
+void setTransform( const QTransform & matrix, bool combine = false )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORM )
 {

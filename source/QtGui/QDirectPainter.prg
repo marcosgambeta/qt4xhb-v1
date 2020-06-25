@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_SETREGION )
 }
 
 /*
-void startPainting ( bool lockDisplay = true )
+void startPainting( bool lockDisplay = true )
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_STARTPAINTING )
 {

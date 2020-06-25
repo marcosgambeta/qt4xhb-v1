@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QSTATICTEXT_PERFORMANCEHINT )
 }
 
 /*
-void prepare ( const QTransform & matrix = QTransform(), const QFont & font = QFont() )
+void prepare( const QTransform & matrix = QTransform(), const QFont & font = QFont() )
 */
 HB_FUNC_STATIC( QSTATICTEXT_PREPARE )
 {

@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_PRIMARYSCREEN )
 }
 
 /*
-QWidget * screen ( int screen = -1 )
+QWidget * screen( int screen = -1 )
 */
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
 {

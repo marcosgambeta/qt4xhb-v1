@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_MATCHES )
 }
 
 /*
-QString toString ( SequenceFormat format = PortableText ) const
+QString toString( QKeySequence::SequenceFormat format = QKeySequence::PortableText ) const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_TOSTRING )
 {
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_TOSTRING )
 }
 
 /*
-static QKeySequence fromString ( const QString & str, SequenceFormat format = PortableText )
+static QKeySequence fromString( const QString & str, QKeySequence::SequenceFormat format = QKeySequence::PortableText )
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_FROMSTRING )
 {

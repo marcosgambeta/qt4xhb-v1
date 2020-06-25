@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QBITMAP_TRANSFORMED )
 }
 
 /*
-static QBitmap fromData ( const QSize & size, const uchar * bits, QImage::Format monoFormat = QImage::Format_MonoLSB )
+static QBitmap fromData( const QSize & size, const uchar * bits, QImage::Format monoFormat = QImage::Format_MonoLSB )
 */
 HB_FUNC_STATIC( QBITMAP_FROMDATA )
 {
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QBITMAP_FROMDATA )
 }
 
 /*
-static QBitmap fromImage ( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
+static QBitmap fromImage( const QImage & image, Qt::ImageConversionFlags flags = Qt::AutoColor )
 */
 HB_FUNC_STATIC( QBITMAP_FROMIMAGE )
 {

@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QWORKSPACE_ACTIVEWINDOW )
 }
 
 /*
-QWidget * addWindow ( QWidget * w, Qt::WindowFlags flags = 0 )
+QWidget * addWindow( QWidget * w, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC( QWORKSPACE_ADDWINDOW )
 {
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QWORKSPACE_SETSCROLLBARSENABLED )
 }
 
 /*
-QWidgetList windowList ( WindowOrder order = CreationOrder ) const
+QWidgetList windowList( QWorkspace::WindowOrder order = QWorkspace::CreationOrder ) const
 */
 HB_FUNC_STATIC( QWORKSPACE_WINDOWLIST )
 {

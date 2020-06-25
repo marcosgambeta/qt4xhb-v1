@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QCOLORMAP_SIZE )
 }
 
 /*
-static QColormap instance ( int screen = -1 )
+static QColormap instance( int screen = -1 )
 */
 HB_FUNC_STATIC( QCOLORMAP_INSTANCE )
 {

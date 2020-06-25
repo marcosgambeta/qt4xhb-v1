@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ADDTOPLEVELITEMS )
 }
 
 /*
-void closePersistentEditor ( QTreeWidgetItem * item, int column = 0 )
+void closePersistentEditor( QTreeWidgetItem * item, int column = 0 )
 */
 HB_FUNC_STATIC( QTREEWIDGET_CLOSEPERSISTENTEDITOR )
 {
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QTREEWIDGET_CURRENTITEM )
 }
 
 /*
-void editItem ( QTreeWidgetItem * item, int column = 0 )
+void editItem( QTreeWidgetItem * item, int column = 0 )
 */
 HB_FUNC_STATIC( QTREEWIDGET_EDITITEM )
 {
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QTREEWIDGET_EDITITEM )
 }
 
 /*
-QList<QTreeWidgetItem *> findItems ( const QString & text, Qt::MatchFlags flags, int column = 0 ) const
+QList<QTreeWidgetItem *> findItems( const QString & text, Qt::MatchFlags flags, int column = 0 ) const
 */
 HB_FUNC_STATIC( QTREEWIDGET_FINDITEMS )
 {
@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMWIDGET )
 }
 
 /*
-void openPersistentEditor ( QTreeWidgetItem * item, int column = 0 )
+void openPersistentEditor( QTreeWidgetItem * item, int column = 0 )
 */
 HB_FUNC_STATIC( QTREEWIDGET_OPENPERSISTENTEDITOR )
 {
@@ -1224,7 +1224,7 @@ HB_FUNC_STATIC( QTREEWIDGET_EXPANDITEM )
 }
 
 /*
-void scrollToItem ( const QTreeWidgetItem * item, QAbstractItemView::ScrollHint hint = EnsureVisible )
+void scrollToItem( const QTreeWidgetItem * item, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible )
 */
 HB_FUNC_STATIC( QTREEWIDGET_SCROLLTOITEM )
 {

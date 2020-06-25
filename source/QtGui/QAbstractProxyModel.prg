@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_CANFETCHMORE )
 }
 
 /*
-virtual QVariant data ( const QModelIndex & proxyIndex, int role = Qt::DisplayRole ) const
+virtual QVariant data( const QModelIndex & proxyIndex, int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_DATA )
 {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_FLAGS )
 }
 
 /*
-virtual bool hasChildren ( const QModelIndex & parent = QModelIndex() ) const
+virtual bool hasChildren( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_HASCHILDREN )
 {
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_REVERT )
 }
 
 /*
-virtual bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
+virtual bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SETDATA )
 {
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SETDATA )
 }
 
 /*
-virtual bool setHeaderData ( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole )
+virtual bool setHeaderData( int section, Qt::Orientation orientation, const QVariant & value, int role = Qt::EditRole )
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SETHEADERDATA )
 {
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SETHEADERDATA )
 }
 
 /*
-virtual void sort ( int column, Qt::SortOrder order = Qt::AscendingOrder )
+virtual void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SORT )
 {

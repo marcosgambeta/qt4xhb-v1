@@ -1092,7 +1092,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETNAMEFILTERS )
 }
 
 /*
-void setOption ( Option option, bool on = true )
+void setOption( QFileDialog::Option option, bool on = true )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETOPTION )
 {
@@ -1408,7 +1408,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETVISIBLE )
 }
 
 /*
-static QString getExistingDirectory ( QWidget * parent = 0, const QString & caption = QString(), const QString & dir = QString(), Options options = ShowDirsOnly )
+static QString getExistingDirectory( QWidget * parent = 0, const QString & caption = QString(), const QString & dir = QString(), QFileDialog::Options options = QFileDialog::ShowDirsOnly )
 */
 HB_FUNC_STATIC( QFILEDIALOG_GETEXISTINGDIRECTORY )
 {
@@ -1427,7 +1427,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETEXISTINGDIRECTORY )
 }
 
 /*
-static QString getOpenFileName ( QWidget * parent = 0, const QString & caption = QString(), const QString & dir = QString(), const QString & filter = QString(), QString * selectedFilter = 0, Options options = 0 )
+static QString getOpenFileName( QWidget * parent = 0, const QString & caption = QString(), const QString & dir = QString(), const QString & filter = QString(), QString * selectedFilter = 0, QFileDialog::Options options = 0 )
 */
 HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILENAME )
 {
@@ -1446,7 +1446,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILENAME )
 }
 
 /*
-static QStringList getOpenFileNames ( QWidget * parent = 0, const QString & caption = QString(), const QString & dir = QString(), const QString & filter = QString(), QString * selectedFilter = 0, Options options = 0 )
+static QStringList getOpenFileNames( QWidget * parent = 0, const QString & caption = QString(), const QString & dir = QString(), const QString & filter = QString(), QString * selectedFilter = 0, QFileDialog::Options options = 0 )
 */
 HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILENAMES )
 {
@@ -1465,7 +1465,7 @@ HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILENAMES )
 }
 
 /*
-static QString getSaveFileName ( QWidget * parent = 0, const QString & caption = QString(), const QString & dir = QString(), const QString & filter = QString(), QString * selectedFilter = 0, Options options = 0 )
+static QString getSaveFileName( QWidget * parent = 0, const QString & caption = QString(), const QString & dir = QString(), const QString & filter = QString(), QString * selectedFilter = 0, QFileDialog::Options options = 0 )
 */
 HB_FUNC_STATIC( QFILEDIALOG_GETSAVEFILENAME )
 {

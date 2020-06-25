@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QTABWIDGET_CLEAR )
 }
 
 /*
-QWidget * cornerWidget ( Qt::Corner corner = Qt::TopRightCorner ) const
+QWidget * cornerWidget( Qt::Corner corner = Qt::TopRightCorner ) const
 */
 HB_FUNC_STATIC( QTABWIDGET_CORNERWIDGET )
 {
@@ -512,7 +512,7 @@ HB_FUNC_STATIC( QTABWIDGET_REMOVETAB )
 }
 
 /*
-void setCornerWidget ( QWidget * widget, Qt::Corner corner = Qt::TopRightCorner )
+void setCornerWidget( QWidget * widget, Qt::Corner corner = Qt::TopRightCorner )
 */
 HB_FUNC_STATIC( QTABWIDGET_SETCORNERWIDGET )
 {

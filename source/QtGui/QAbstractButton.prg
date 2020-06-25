@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_TEXT )
 }
 
 /*
-void animateClick ( int msec = 100 )
+void animateClick( int msec = 100 )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ANIMATECLICK )
 {

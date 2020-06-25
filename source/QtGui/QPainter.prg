@@ -3669,7 +3669,7 @@ HB_FUNC_STATIC( QPAINTER_SETBRUSHORIGIN )
 }
 
 /*
-void setClipPath ( const QPainterPath & path, Qt::ClipOperation operation = Qt::ReplaceClip )
+void setClipPath( const QPainterPath & path, Qt::ClipOperation operation = Qt::ReplaceClip )
 */
 HB_FUNC_STATIC( QPAINTER_SETCLIPPATH )
 {
@@ -3766,7 +3766,7 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPRECT )
 }
 
 /*
-void setClipRegion ( const QRegion & region, Qt::ClipOperation operation = Qt::ReplaceClip )
+void setClipRegion( const QRegion & region, Qt::ClipOperation operation = Qt::ReplaceClip )
 */
 HB_FUNC_STATIC( QPAINTER_SETCLIPREGION )
 {
@@ -3993,7 +3993,7 @@ HB_FUNC_STATIC( QPAINTER_SETPEN )
 }
 
 /*
-void setRenderHint ( RenderHint hint, bool on = true )
+void setRenderHint( QPainter::RenderHint hint, bool on = true )
 */
 HB_FUNC_STATIC( QPAINTER_SETRENDERHINT )
 {
@@ -4019,7 +4019,7 @@ HB_FUNC_STATIC( QPAINTER_SETRENDERHINT )
 }
 
 /*
-void setRenderHints ( RenderHints hints, bool on = true )
+void setRenderHints( QPainter::RenderHints hints, bool on = true )
 */
 HB_FUNC_STATIC( QPAINTER_SETRENDERHINTS )
 {
@@ -4045,7 +4045,7 @@ HB_FUNC_STATIC( QPAINTER_SETRENDERHINTS )
 }
 
 /*
-void setTransform ( const QTransform & transform, bool combine = false )
+void setTransform( const QTransform & transform, bool combine = false )
 */
 HB_FUNC_STATIC( QPAINTER_SETTRANSFORM )
 {
@@ -4225,7 +4225,7 @@ HB_FUNC_STATIC( QPAINTER_SETWORLDMATRIXENABLED )
 }
 
 /*
-void setWorldTransform ( const QTransform & matrix, bool combine = false )
+void setWorldTransform( const QTransform & matrix, bool combine = false )
 */
 HB_FUNC_STATIC( QPAINTER_SETWORLDTRANSFORM )
 {

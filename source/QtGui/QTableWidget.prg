@@ -1071,7 +1071,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETVERTICALHEADERLABELS )
 }
 
 /*
-void sortItems ( int column, Qt::SortOrder order = Qt::AscendingOrder )
+void sortItems( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_SORTITEMS )
 {
@@ -1426,7 +1426,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_REMOVEROW )
 }
 
 /*
-void scrollToItem ( const QTableWidgetItem * item, QAbstractItemView::ScrollHint hint = EnsureVisible )
+void scrollToItem( const QTableWidgetItem * item, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_SCROLLTOITEM )
 {

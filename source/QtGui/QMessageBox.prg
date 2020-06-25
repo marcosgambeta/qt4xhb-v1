@@ -1036,7 +1036,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ABOUT )
 }
 
 /*
-static void aboutQt ( QWidget * parent, const QString & title = QString() )
+static void aboutQt( QWidget * parent, const QString & title = QString() )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_ABOUTQT )
 {
@@ -1057,7 +1057,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ABOUTQT )
 }
 
 /*
-static StandardButton critical ( QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton )
+static QMessageBox::StandardButton critical( QWidget * parent, const QString & title, const QString & text, QMessageBox::StandardButtons buttons = QMessageBox::Ok, QMessageBox::StandardButton defaultButton = QMessageBox::NoButton )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_CRITICAL )
 {
@@ -1076,7 +1076,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_CRITICAL )
 }
 
 /*
-static StandardButton information ( QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton )
+static QMessageBox::StandardButton information( QWidget * parent, const QString & title, const QString & text, QMessageBox::StandardButtons buttons = QMessageBox::Ok, QMessageBox::StandardButton defaultButton = QMessageBox::NoButton )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_INFORMATION )
 {
@@ -1095,7 +1095,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_INFORMATION )
 }
 
 /*
-static StandardButton question ( QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton )
+static QMessageBox::StandardButton question( QWidget * parent, const QString & title, const QString & text, QMessageBox::StandardButtons buttons = QMessageBox::Ok, QMessageBox::StandardButton defaultButton = QMessageBox::NoButton )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_QUESTION )
 {
@@ -1114,7 +1114,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_QUESTION )
 }
 
 /*
-static StandardButton warning ( QWidget * parent, const QString & title, const QString & text, StandardButtons buttons = Ok, StandardButton defaultButton = NoButton )
+static QMessageBox::StandardButton warning( QWidget * parent, const QString & title, const QString & text, QMessageBox::StandardButtons buttons = QMessageBox::Ok, QMessageBox::StandardButton defaultButton = QMessageBox::NoButton )
 */
 HB_FUNC_STATIC( QMESSAGEBOX_WARNING )
 {

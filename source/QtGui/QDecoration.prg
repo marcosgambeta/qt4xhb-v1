@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QDECORATION_MENUTRIGGERED )
 }
 
 /*
-virtual bool paint ( QPainter * painter, const QWidget * widget, int decorationRegion = All, DecorationState state = Normal ) = 0
+virtual bool paint( QPainter * painter, const QWidget * widget, int decorationRegion = QDecoration::All, QDecoration::DecorationState state = QDecoration::Normal ) = 0
 */
 HB_FUNC_STATIC( QDECORATION_PAINT )
 {

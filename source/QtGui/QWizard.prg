@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QWIZARD_SETFIELD )
 }
 
 /*
-void setOption ( QWizard::WizardOption option, bool on = true )
+void setOption( QWizard::WizardOption option, bool on = true )
 */
 HB_FUNC_STATIC( QWIZARD_SETOPTION )
 {
