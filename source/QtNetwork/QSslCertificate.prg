@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_CLEAR )
 }
 
 /*
-QByteArray digest ( QCryptographicHash::Algorithm algorithm = QCryptographicHash::Md5 ) const
+QByteArray digest( QCryptographicHash::Algorithm algorithm = QCryptographicHash::Md5 ) const
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_DIGEST )
 {
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_VERSION )
 }
 
 /*
-QList<QSslCertificate> fromData ( const QByteArray & data, QSsl::EncodingFormat format = QSsl::Pem )
+QList<QSslCertificate> fromData( const QByteArray & data, QSsl::EncodingFormat format = QSsl::Pem )
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDATA )
 {
@@ -560,7 +560,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDATA )
 }
 
 /*
-QList<QSslCertificate> fromDevice ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
+QList<QSslCertificate> fromDevice( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDEVICE )
 {
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_FROMDEVICE )
 }
 
 /*
-QList<QSslCertificate> fromPath ( const QString & path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
+QList<QSslCertificate> fromPath( const QString & path, QSsl::EncodingFormat format = QSsl::Pem, QRegExp::PatternSyntax syntax = QRegExp::FixedString )
 */
 HB_FUNC_STATIC( QSSLCERTIFICATE_FROMPATH )
 {

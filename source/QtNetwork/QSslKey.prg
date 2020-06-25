@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QSSLKEY_LENGTH )
 }
 
 /*
-QByteArray toDer ( const QByteArray & passPhrase = QByteArray() ) const
+QByteArray toDer( const QByteArray & passPhrase = QByteArray() ) const
 */
 HB_FUNC_STATIC( QSSLKEY_TODER )
 {
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QSSLKEY_TODER )
 }
 
 /*
-QByteArray toPem ( const QByteArray & passPhrase = QByteArray() ) const
+QByteArray toPem( const QByteArray & passPhrase = QByteArray() ) const
 */
 HB_FUNC_STATIC( QSSLKEY_TOPEM )
 {

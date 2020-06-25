@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QLOCALSERVER_SETMAXPENDINGCONNECTIONS )
 }
 
 /*
-bool waitForNewConnection ( int msec = 0, bool * timedOut = 0 )
+bool waitForNewConnection( int msec = 0, bool * timedOut = 0 )
 */
 HB_FUNC_STATIC( QLOCALSERVER_WAITFORNEWCONNECTION )
 {

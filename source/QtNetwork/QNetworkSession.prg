@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_STATE )
 }
 
 /*
-bool waitForOpened ( int msecs = 30000 )
+bool waitForOpened( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QNETWORKSESSION_WAITFOROPENED )
 {

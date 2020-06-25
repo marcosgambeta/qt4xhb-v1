@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ABORT )
 }
 
 /*
-void connectToServer ( const QString & name, OpenMode openMode = ReadWrite )
+void connectToServer( const QString & name, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
 */
 HB_FUNC_STATIC( QLOCALSOCKET_CONNECTTOSERVER )
 {
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_STATE )
 }
 
 /*
-bool waitForConnected ( int msecs = 30000 )
+bool waitForConnected( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QLOCALSOCKET_WAITFORCONNECTED )
 {
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORCONNECTED )
 }
 
 /*
-bool waitForDisconnected ( int msecs = 30000 )
+bool waitForDisconnected( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QLOCALSOCKET_WAITFORDISCONNECTED )
 {
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_ISSEQUENTIAL )
 }
 
 /*
-virtual bool waitForBytesWritten ( int msecs = 30000 )
+virtual bool waitForBytesWritten( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QLOCALSOCKET_WAITFORBYTESWRITTEN )
 {
@@ -567,7 +567,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORBYTESWRITTEN )
 }
 
 /*
-virtual bool waitForReadyRead ( int msecs = 30000 )
+virtual bool waitForReadyRead( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QLOCALSOCKET_WAITFORREADYREAD )
 {

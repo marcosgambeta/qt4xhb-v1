@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QFTP_CLOSE )
 }
 
 /*
-int connectToHost ( const QString & host, quint16 port = 21 )
+int connectToHost( const QString & host, quint16 port = 21 )
 */
 HB_FUNC_STATIC( QFTP_CONNECTTOHOST )
 {
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QFTP_ERRORSTRING )
 }
 
 /*
-int get ( const QString & file, QIODevice * dev = 0, TransferType type = Binary )
+int get( const QString & file, QIODevice * dev = 0, QFtp::TransferType type = QFtp::Binary )
 */
 HB_FUNC_STATIC( QFTP_GET )
 {
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QFTP_HASPENDINGCOMMANDS )
 }
 
 /*
-int list ( const QString & dir = QString() )
+int list( const QString & dir = QString() )
 */
 HB_FUNC_STATIC( QFTP_LIST )
 {
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QFTP_LIST )
 }
 
 /*
-int login ( const QString & user = QString(), const QString & password = QString() )
+int login( const QString & user = QString(), const QString & password = QString() )
 */
 HB_FUNC_STATIC( QFTP_LOGIN )
 {

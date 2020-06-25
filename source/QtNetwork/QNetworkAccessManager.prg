@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PUT )
 }
 
 /*
-QNetworkReply * sendCustomRequest ( const QNetworkRequest & request, const QByteArray & verb, QIODevice * data = 0 )
+QNetworkReply * sendCustomRequest( const QNetworkRequest & request, const QByteArray & verb, QIODevice * data = 0 )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST )
 {

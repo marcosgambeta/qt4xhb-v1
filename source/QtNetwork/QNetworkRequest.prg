@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QNETWORKREQUEST_DELETE )
 }
 
 /*
-QVariant attribute ( Attribute code, const QVariant & defaultValue = QVariant() ) const
+QVariant attribute( QNetworkRequest::Attribute code, const QVariant & defaultValue = QVariant() ) const
 */
 HB_FUNC_STATIC( QNETWORKREQUEST_ATTRIBUTE )
 {

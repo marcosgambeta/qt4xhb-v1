@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SETREADBUFFERSIZE )
 }
 
 /*
-bool setSocketDescriptor ( int socketDescriptor, SocketState socketState = ConnectedState, OpenMode openMode = ReadWrite )
+bool setSocketDescriptor( int socketDescriptor, QAbstractSocket::SocketState socketState = QAbstractSocket::ConnectedState, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_SETSOCKETDESCRIPTOR )
 {
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_STATE )
 }
 
 /*
-bool waitForConnected ( int msecs = 30000 )
+bool waitForConnected( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORCONNECTED )
 {
@@ -696,7 +696,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORCONNECTED )
 }
 
 /*
-bool waitForDisconnected ( int msecs = 30000 )
+bool waitForDisconnected( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORDISCONNECTED )
 {
@@ -866,7 +866,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ISSEQUENTIAL )
 }
 
 /*
-virtual bool waitForBytesWritten ( int msecs = 30000 )
+virtual bool waitForBytesWritten( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORBYTESWRITTEN )
 {
@@ -890,7 +890,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORBYTESWRITTEN )
 }
 
 /*
-virtual bool waitForReadyRead ( int msecs = 30000 )
+virtual bool waitForReadyRead( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORREADYREAD )
 {

@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_SETVALUE )
 }
 
 /*
-QByteArray toRawForm ( RawForm form = Full ) const
+QByteArray toRawForm( QNetworkCookie::RawForm form = QNetworkCookie::Full ) const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_TORAWFORM )
 {

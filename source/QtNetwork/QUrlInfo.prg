@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QURLINFO_PERMISSIONS )
 }
 
 /*
-virtual void setDir ( bool b )
+virtual void setDir( bool b )
 */
 HB_FUNC_STATIC( QURLINFO_SETDIR )
 {
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QURLINFO_SETDIR )
 }
 
 /*
-virtual void setFile ( bool b )
+virtual void setFile( bool b )
 */
 HB_FUNC_STATIC( QURLINFO_SETFILE )
 {
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QURLINFO_SETGROUP )
 }
 
 /*
-virtual void setLastModified ( const QDateTime & dt )
+virtual void setLastModified( const QDateTime & dt )
 */
 HB_FUNC_STATIC( QURLINFO_SETLASTMODIFIED )
 {
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QURLINFO_SETLASTMODIFIED )
 }
 
 /*
-void setLastRead ( const QDateTime & dt )
+void setLastRead( const QDateTime & dt )
 */
 HB_FUNC_STATIC( QURLINFO_SETLASTREAD )
 {
@@ -658,7 +658,7 @@ HB_FUNC_STATIC( QURLINFO_SETOWNER )
 }
 
 /*
-virtual void setPermissions ( int p )
+virtual void setPermissions( int p )
 */
 HB_FUNC_STATIC( QURLINFO_SETPERMISSIONS )
 {
@@ -684,7 +684,7 @@ HB_FUNC_STATIC( QURLINFO_SETPERMISSIONS )
 }
 
 /*
-virtual void setReadable ( bool b )
+virtual void setReadable( bool b )
 */
 HB_FUNC_STATIC( QURLINFO_SETREADABLE )
 {
@@ -710,7 +710,7 @@ HB_FUNC_STATIC( QURLINFO_SETREADABLE )
 }
 
 /*
-virtual void setSize ( qint64 size )
+virtual void setSize( qint64 size )
 */
 HB_FUNC_STATIC( QURLINFO_SETSIZE )
 {
@@ -736,7 +736,7 @@ HB_FUNC_STATIC( QURLINFO_SETSIZE )
 }
 
 /*
-virtual void setSymLink ( bool b )
+virtual void setSymLink( bool b )
 */
 HB_FUNC_STATIC( QURLINFO_SETSYMLINK )
 {
@@ -762,7 +762,7 @@ HB_FUNC_STATIC( QURLINFO_SETSYMLINK )
 }
 
 /*
-virtual void setWritable ( bool b )
+virtual void setWritable( bool b )
 */
 HB_FUNC_STATIC( QURLINFO_SETWRITABLE )
 {
@@ -812,7 +812,7 @@ HB_FUNC_STATIC( QURLINFO_SIZE )
 }
 
 /*
-static bool equal ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
+static bool equal( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 */
 HB_FUNC_STATIC( QURLINFO_EQUAL )
 {
@@ -831,7 +831,7 @@ HB_FUNC_STATIC( QURLINFO_EQUAL )
 }
 
 /*
-static bool greaterThan ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
+static bool greaterThan( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 */
 HB_FUNC_STATIC( QURLINFO_GREATERTHAN )
 {
@@ -850,7 +850,7 @@ HB_FUNC_STATIC( QURLINFO_GREATERTHAN )
 }
 
 /*
-static bool lessThan ( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
+static bool lessThan( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 */
 HB_FUNC_STATIC( QURLINFO_LESSTHAN )
 {

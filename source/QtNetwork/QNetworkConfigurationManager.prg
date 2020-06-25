@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_DELETE )
 }
 
 /*
-QList<QNetworkConfiguration> allConfigurations ( QNetworkConfiguration::StateFlags filter = 0 ) const
+QList<QNetworkConfiguration> allConfigurations( QNetworkConfiguration::StateFlags filter = 0 ) const
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS )
 {

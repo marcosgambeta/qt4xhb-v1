@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QSSLSOCKET_ABORT )
 }
 
 /*
-void addCaCertificate ( const QSslCertificate & certificate )
+void addCaCertificate( const QSslCertificate & certificate )
 */
 HB_FUNC_STATIC( QSSLSOCKET_ADDCACERTIFICATE )
 {
@@ -1113,7 +1113,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SETREADBUFFERSIZE )
 }
 
 /*
-bool setSocketDescriptor ( int socketDescriptor, SocketState state = ConnectedState, OpenMode openMode = ReadWrite )
+bool setSocketDescriptor( int socketDescriptor, QAbstractSocket::SocketState state = QAbstractSocket::ConnectedState, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
 */
 HB_FUNC_STATIC( QSSLSOCKET_SETSOCKETDESCRIPTOR )
 {
@@ -1291,7 +1291,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SSLERRORS )
 }
 
 /*
-bool waitForConnected ( int msecs = 30000 )
+bool waitForConnected( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QSSLSOCKET_WAITFORCONNECTED )
 {
@@ -1315,7 +1315,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORCONNECTED )
 }
 
 /*
-bool waitForDisconnected ( int msecs = 30000 )
+bool waitForDisconnected( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QSSLSOCKET_WAITFORDISCONNECTED )
 {
@@ -1339,7 +1339,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORDISCONNECTED )
 }
 
 /*
-bool waitForEncrypted ( int msecs = 30000 )
+bool waitForEncrypted( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QSSLSOCKET_WAITFORENCRYPTED )
 {
@@ -1485,7 +1485,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CLOSE )
 }
 
 /*
-virtual bool waitForBytesWritten ( int msecs = 30000 )
+virtual bool waitForBytesWritten( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QSSLSOCKET_WAITFORBYTESWRITTEN )
 {
@@ -1509,7 +1509,7 @@ HB_FUNC_STATIC( QSSLSOCKET_WAITFORBYTESWRITTEN )
 }
 
 /*
-virtual bool waitForReadyRead ( int msecs = 30000 )
+virtual bool waitForReadyRead( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QSSLSOCKET_WAITFORREADYREAD )
 {
