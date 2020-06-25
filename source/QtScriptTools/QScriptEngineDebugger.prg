@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_AUTOSHOWSTANDARDWINDOW )
 }
 
 /*
-QMenu * createStandardMenu ( QWidget * parent = 0 )
+QMenu * createStandardMenu( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU )
 {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU )
 }
 
 /*
-QToolBar * createStandardToolBar ( QWidget * parent = 0 )
+QToolBar * createStandardToolBar( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDTOOLBAR )
 {
