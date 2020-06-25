@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_DELETE )
 }
 
 /*
-void abortEvaluation ( const QScriptValue & result = QScriptValue() )
+void abortEvaluation( const QScriptValue & result = QScriptValue() )
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_ABORTEVALUATION )
 {
@@ -465,7 +465,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_IMPORTEDEXTENSIONS )
 }
 
 /*
-void installTranslatorFunctions ( const QScriptValue & object = QScriptValue() )
+void installTranslatorFunctions( const QScriptValue & object = QScriptValue() )
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_INSTALLTRANSLATORFUNCTIONS )
 {
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_ISEVALUATING )
 }
 
 /*
-QScriptValue newArray ( uint length = 0 )
+QScriptValue newArray( uint length = 0 )
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWARRAY )
 {

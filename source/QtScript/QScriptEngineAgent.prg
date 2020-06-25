@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXCEPTIONTHROW )
 }
 
 /*
-virtual QVariant extension ( Extension extension, const QVariant & argument = QVariant() )
+virtual QVariant extension( QScriptEngineAgent::Extension extension, const QVariant & argument = QVariant() )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXTENSION )
 {

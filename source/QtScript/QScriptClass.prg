@@ -96,7 +96,7 @@ QScriptEngine * engine () const
 */
 
 /*
-virtual QVariant extension ( Extension extension, const QVariant & argument = QVariant() )
+virtual QVariant extension( QScriptClass::Extension extension, const QVariant & argument = QVariant() )
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_EXTENSION )
 {
