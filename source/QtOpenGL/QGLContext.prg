@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE )
 }
 
 /*
-virtual bool create ( const QGLContext * shareContext = 0 )
+virtual bool create( const QGLContext * shareContext = 0 )
 */
 HB_FUNC_STATIC( QGLCONTEXT_CREATE )
 {

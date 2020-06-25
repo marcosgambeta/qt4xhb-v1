@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QGLSHADER_SOURCECODE )
 }
 
 /*
-static bool hasOpenGLShaders ( ShaderType type, const QGLContext * context = 0 )
+static bool hasOpenGLShaders( QGLShader::ShaderType type, const QGLContext * context = 0 )
 */
 HB_FUNC_STATIC( QGLSHADER_HASOPENGLSHADERS )
 {

@@ -1596,7 +1596,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_HASOPENGLFEATURE )
 }
 
 /*
-void initializeGLFunctions ( const QGLContext * context = 0 )
+void initializeGLFunctions( const QGLContext * context = 0 )
 */
 HB_FUNC_STATIC( QGLFUNCTIONS_INITIALIZEGLFUNCTIONS )
 {

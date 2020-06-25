@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QGLWIDGET_FORMAT )
 }
 
 /*
-QImage grabFrameBuffer ( bool withAlpha = false )
+QImage grabFrameBuffer( bool withAlpha = false )
 */
 HB_FUNC_STATIC( QGLWIDGET_GRABFRAMEBUFFER )
 {
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QGLWIDGET_QGLCOLOR )
 }
 
 /*
-QPixmap renderPixmap ( int w = 0, int h = 0, bool useContext = false )
+QPixmap renderPixmap( int w = 0, int h = 0, bool useContext = false )
 */
 HB_FUNC_STATIC( QGLWIDGET_RENDERPIXMAP )
 {

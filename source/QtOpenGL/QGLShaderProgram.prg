@@ -2275,7 +2275,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_UNIFORMLOCATION )
 }
 
 /*
-static bool hasOpenGLShaderPrograms ( const QGLContext * context = 0 )
+static bool hasOpenGLShaderPrograms( const QGLContext * context = 0 )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_HASOPENGLSHADERPROGRAMS )
 {
