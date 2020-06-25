@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QUILOADER_CLEARPLUGINPATHS )
 }
 
 /*
-virtual QAction * createAction ( QObject * parent = 0, const QString & name = QString() )
+virtual QAction * createAction( QObject * parent = 0, const QString & name = QString() )
 */
 HB_FUNC_STATIC( QUILOADER_CREATEACTION )
 {
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTION )
 }
 
 /*
-virtual QActionGroup * createActionGroup ( QObject * parent = 0, const QString & name = QString() )
+virtual QActionGroup * createActionGroup( QObject * parent = 0, const QString & name = QString() )
 */
 HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
 {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
 }
 
 /*
-virtual QLayout * createLayout ( const QString & className, QObject * parent = 0, const QString & name = QString() )
+virtual QLayout * createLayout( const QString & className, QObject * parent = 0, const QString & name = QString() )
 */
 HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
 {
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
 }
 
 /*
-virtual QWidget * createWidget ( const QString & className, QWidget * parent = 0, const QString & name = QString() )
+virtual QWidget * createWidget( const QString & className, QWidget * parent = 0, const QString & name = QString() )
 */
 HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
 {
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QUILOADER_ISLANGUAGECHANGEENABLED )
 }
 
 /*
-QWidget * load ( QIODevice * device, QWidget * parentWidget = 0 )
+QWidget * load( QIODevice * device, QWidget * parentWidget = 0 )
 */
 HB_FUNC_STATIC( QUILOADER_LOAD )
 {
