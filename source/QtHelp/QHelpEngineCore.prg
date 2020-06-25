@@ -255,7 +255,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMFILTERS )
 }
 
 /*
-QVariant customValue ( const QString & key, const QVariant & defaultValue = QVariant() ) const
+QVariant customValue( const QString & key, const QVariant & defaultValue = QVariant() ) const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMVALUE )
 {
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILEDATA )
 }
 
 /*
-QList<QUrl> files ( const QString namespaceName, const QStringList & filterAttributes, const QString & extensionFilter = QString() )
+QList<QUrl> files( const QString namespaceName, const QStringList & filterAttributes, const QString & extensionFilter = QString() )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_FILES )
 {

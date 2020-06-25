@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ISCREATINGCONTENTS )
 }
 
 /*
-virtual int columnCount ( const QModelIndex & parent = QModelIndex() ) const
+virtual int columnCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_COLUMNCOUNT )
 {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_DATA )
 }
 
 /*
-virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
+virtual QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_INDEX )
 {
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_PARENT )
 }
 
 /*
-virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
+virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_ROWCOUNT )
 {
