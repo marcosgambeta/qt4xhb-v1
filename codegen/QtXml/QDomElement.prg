@@ -53,11 +53,9 @@ HB_FUNC_STATIC( QDOMELEMENT_NEW )
 }
 $addMethod=new
 
-$prototype=QString attribute ( const QString & name, const QString & defValue = QString() ) const
-$method=|QString|attribute|const QString &,const QString &=QString()
+$prototypeV2=QString attribute( const QString & name, const QString & defValue = QString() ) const
 
-$prototype=QString attributeNS ( const QString nsURI, const QString & localName, const QString & defValue = QString() ) const
-$method=|QString|attributeNS|const QString,const QString &,const QString &=QString()
+$prototypeV2=QString attributeNS( const QString nsURI, const QString & localName, const QString & defValue = QString() ) const
 
 $prototypeV2=QDomAttr attributeNode( const QString & name )
 

@@ -186,10 +186,8 @@ $prototype=bool setContent ( QXmlInputSource * source, QXmlReader * reader, QStr
 %% }
 %% $addMethod=setContext
 
-$prototype=QByteArray toByteArray ( int indent = 1 ) const
-$method=|QByteArray|toByteArray|int=1
+$prototypeV2=QByteArray toByteArray( int indent = 1 ) const
 
-$prototype=QString toString ( int indent = 1 ) const
-$method=|QString|toString|int=1
+$prototypeV2=QString toString( int indent = 1 ) const
 
 #pragma ENDDUMP

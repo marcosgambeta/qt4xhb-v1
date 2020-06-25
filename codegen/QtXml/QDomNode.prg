@@ -63,15 +63,13 @@ $prototypeV2=QDomNodeList childNodes() const
 
 $prototypeV2=void clear()
 
-$prototype=QDomNode cloneNode ( bool deep = true ) const
-$method=|QDomNode|cloneNode|bool=true
+$prototypeV2=QDomNode cloneNode( bool deep = true ) const
 
 $prototypeV2=int columnNumber() const
 
 $prototypeV2=QDomNode firstChild() const
 
-$prototype=QDomElement firstChildElement ( const QString & tagName = QString() ) const
-$method=|QDomElement|firstChildElement|const QString &=QString()
+$prototypeV2=QDomElement firstChildElement( const QString & tagName = QString() ) const
 
 $prototypeV2=bool hasAttributes() const
 
@@ -113,8 +111,7 @@ $prototypeV2=bool isText() const
 
 $prototypeV2=QDomNode lastChild() const
 
-$prototype=QDomElement lastChildElement ( const QString & tagName = QString() ) const
-$method=|QDomElement|lastChildElement|const QString &=QString()
+$prototypeV2=QDomElement lastChildElement( const QString & tagName = QString() ) const
 
 $prototypeV2=int lineNumber() const
 
@@ -126,8 +123,7 @@ $prototypeV2=QString namespaceURI() const
 
 $prototypeV2=QDomNode nextSibling() const
 
-$prototype=QDomElement nextSiblingElement ( const QString & tagName = QString() ) const
-$method=|QDomElement|nextSiblingElement|const QString &=QString()
+$prototypeV2=QDomElement nextSiblingElement( const QString & tagName = QString() ) const
 
 $prototypeV2=QString nodeName() const
 
@@ -145,8 +141,7 @@ $prototypeV2=QString prefix() const
 
 $prototypeV2=QDomNode previousSibling() const
 
-$prototype=QDomElement previousSiblingElement ( const QString & tagName = QString() ) const
-$method=|QDomElement|previousSiblingElement|const QString &=QString()
+$prototypeV2=QDomElement previousSiblingElement( const QString & tagName = QString() ) const
 
 $prototypeV2=QDomNode removeChild( const QDomNode & oldChild )
 
