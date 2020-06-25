@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QDOMELEMENT_NEW )
 }
 
 /*
-QString attribute ( const QString & name, const QString & defValue = QString() ) const
+QString attribute( const QString & name, const QString & defValue = QString() ) const
 */
 HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTE )
 {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTE )
 }
 
 /*
-QString attributeNS ( const QString nsURI, const QString & localName, const QString & defValue = QString() ) const
+QString attributeNS( const QString nsURI, const QString & localName, const QString & defValue = QString() ) const
 */
 HB_FUNC_STATIC( QDOMELEMENT_ATTRIBUTENS )
 {

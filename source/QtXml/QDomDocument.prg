@@ -648,7 +648,7 @@ bool setContent ( QXmlInputSource * source, QXmlReader * reader, QString * error
 */
 
 /*
-QByteArray toByteArray ( int indent = 1 ) const
+QByteArray toByteArray( int indent = 1 ) const
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_TOBYTEARRAY )
 {
@@ -673,7 +673,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_TOBYTEARRAY )
 }
 
 /*
-QString toString ( int indent = 1 ) const
+QString toString( int indent = 1 ) const
 */
 HB_FUNC_STATIC( QDOMDOCUMENT_TOSTRING )
 {

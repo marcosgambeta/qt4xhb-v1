@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QDOMNODE_CLEAR )
 }
 
 /*
-QDomNode cloneNode ( bool deep = true ) const
+QDomNode cloneNode( bool deep = true ) const
 */
 HB_FUNC_STATIC( QDOMNODE_CLONENODE )
 {
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QDOMNODE_FIRSTCHILD )
 }
 
 /*
-QDomElement firstChildElement ( const QString & tagName = QString() ) const
+QDomElement firstChildElement( const QString & tagName = QString() ) const
 */
 HB_FUNC_STATIC( QDOMNODE_FIRSTCHILDELEMENT )
 {
@@ -864,7 +864,7 @@ HB_FUNC_STATIC( QDOMNODE_LASTCHILD )
 }
 
 /*
-QDomElement lastChildElement ( const QString & tagName = QString() ) const
+QDomElement lastChildElement( const QString & tagName = QString() ) const
 */
 HB_FUNC_STATIC( QDOMNODE_LASTCHILDELEMENT )
 {
@@ -1011,7 +1011,7 @@ HB_FUNC_STATIC( QDOMNODE_NEXTSIBLING )
 }
 
 /*
-QDomElement nextSiblingElement ( const QString & tagName = QString() ) const
+QDomElement nextSiblingElement( const QString & tagName = QString() ) const
 */
 HB_FUNC_STATIC( QDOMNODE_NEXTSIBLINGELEMENT )
 {
@@ -1233,7 +1233,7 @@ HB_FUNC_STATIC( QDOMNODE_PREVIOUSSIBLING )
 }
 
 /*
-QDomElement previousSiblingElement ( const QString & tagName = QString() ) const
+QDomElement previousSiblingElement( const QString & tagName = QString() ) const
 */
 HB_FUNC_STATIC( QDOMNODE_PREVIOUSSIBLINGELEMENT )
 {

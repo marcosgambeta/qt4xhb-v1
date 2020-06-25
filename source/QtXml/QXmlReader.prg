@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QXMLREADER_ERRORHANDLER )
 }
 
 /*
-virtual bool feature ( const QString & name, bool * ok = 0 ) const = 0
+virtual bool feature( const QString & name, bool * ok = 0 ) const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_FEATURE )
 {
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QXMLREADER_PARSE )
 }
 
 /*
-virtual void * property ( const QString & name, bool * ok = 0 ) const = 0
+virtual void * property( const QString & name, bool * ok = 0 ) const = 0
 */
 HB_FUNC_STATIC( QXMLREADER_PROPERTY )
 {
