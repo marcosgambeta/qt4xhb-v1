@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_CLEAR )
 }
 
 /*
-virtual QVariant data ( const QModelIndex & index, int role = Qt::DisplayRole ) const
+virtual QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_DATA )
 {
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_FLAGS )
 }
 
 /*
-virtual QVariant headerData ( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
+virtual QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_HEADERDATA )
 {
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_HEADERDATA )
 }
 
 /*
-virtual bool insertRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
+virtual bool insertRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_INSERTROWS )
 {
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_INSERTROWS )
 }
 
 /*
-virtual bool removeColumns ( int column, int count, const QModelIndex & parent = QModelIndex() )
+virtual bool removeColumns( int column, int count, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_REMOVECOLUMNS )
 {
@@ -635,7 +635,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REMOVECOLUMNS )
 }
 
 /*
-virtual bool removeRows ( int row, int count, const QModelIndex & parent = QModelIndex() )
+virtual bool removeRows( int row, int count, const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_REMOVEROWS )
 {
@@ -659,7 +659,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_REMOVEROWS )
 }
 
 /*
-virtual int rowCount ( const QModelIndex & parent = QModelIndex() ) const
+virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_ROWCOUNT )
 {
@@ -683,7 +683,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_ROWCOUNT )
 }
 
 /*
-virtual bool setData ( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
+virtual bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::EditRole )
 */
 HB_FUNC_STATIC( QSQLTABLEMODEL_SETDATA )
 {

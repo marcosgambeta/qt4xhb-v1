@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QSQLQUERY_DELETE )
 }
 
 /*
-void addBindValue ( const QVariant & val, QSql::ParamType paramType = QSql::In )
+void addBindValue( const QVariant & val, QSql::ParamType paramType = QSql::In )
 */
 HB_FUNC_STATIC( QSQLQUERY_ADDBINDVALUE )
 {
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXEC )
 }
 
 /*
-bool execBatch ( BatchExecutionMode mode = ValuesAsRows )
+bool execBatch( QSqlQuery::BatchExecutionMode mode = QSqlQuery::ValuesAsRows )
 */
 HB_FUNC_STATIC( QSQLQUERY_EXECBATCH )
 {
@@ -933,7 +933,7 @@ HB_FUNC_STATIC( QSQLQUERY_RESULT )
 }
 
 /*
-bool seek ( int index, bool relative = false )
+bool seek( int index, bool relative = false )
 */
 HB_FUNC_STATIC( QSQLQUERY_SEEK )
 {

@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QSQLDRIVER_ESCAPEIDENTIFIER )
 }
 
 /*
-virtual QString formatValue ( const QSqlField & field, bool trimStrings = false ) const
+virtual QString formatValue( const QSqlField & field, bool trimStrings = false ) const
 */
 HB_FUNC_STATIC( QSQLDRIVER_FORMATVALUE )
 {
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QSQLDRIVER_NUMERICALPRECISIONPOLICY )
 }
 
 /*
-virtual bool open ( const QString & db, const QString & user = QString(), const QString & password = QString(), const QString & host = QString(), int port = -1, const QString & options = QString() ) = 0
+virtual bool open( const QString & db, const QString & user = QString(), const QString & password = QString(), const QString & host = QString(), int port = -1, const QString & options = QString() ) = 0
 */
 HB_FUNC_STATIC( QSQLDRIVER_OPEN )
 {

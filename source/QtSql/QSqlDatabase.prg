@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DRIVERNAME )
 }
 
 /*
-QSqlQuery exec ( const QString & query = QString() ) const
+QSqlQuery exec( const QString & query = QString() ) const
 */
 HB_FUNC_STATIC( QSQLDATABASE_EXEC )
 {
@@ -665,7 +665,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ROLLBACK )
 }
 
 /*
-void setConnectOptions ( const QString & options = QString() )
+void setConnectOptions( const QString & options = QString() )
 */
 HB_FUNC_STATIC( QSQLDATABASE_SETCONNECTOPTIONS )
 {
@@ -847,7 +847,7 @@ HB_FUNC_STATIC( QSQLDATABASE_SETUSERNAME )
 }
 
 /*
-QStringList tables ( QSql::TableType type = QSql::Tables ) const
+QStringList tables( QSql::TableType type = QSql::Tables ) const
 */
 HB_FUNC_STATIC( QSQLDATABASE_TABLES )
 {
@@ -999,7 +999,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CONNECTIONNAMES )
 }
 
 /*
-static bool contains ( const QString & connectionName = QLatin1String( defaultConnection ) )
+static bool contains( const QString & connectionName = QLatin1String( QSqlDatabase::defaultConnection ) )
 */
 HB_FUNC_STATIC( QSQLDATABASE_CONTAINS )
 {
@@ -1018,7 +1018,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CONTAINS )
 }
 
 /*
-static QSqlDatabase database ( const QString & connectionName = QLatin1String( defaultConnection ), bool open = true )
+static QSqlDatabase database( const QString & connectionName = QLatin1String( QSqlDatabase::defaultConnection ), bool open = true )
 */
 HB_FUNC_STATIC( QSQLDATABASE_DATABASE )
 {
