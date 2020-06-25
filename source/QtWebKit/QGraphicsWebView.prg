@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_DELETE )
 }
 
 /*
-bool findText ( const QString & subString, QWebPage::FindFlags options = 0 )
+bool findText( const QString & subString, QWebPage::FindFlags options = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_FINDTEXT )
 {
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_RESIZESTOCONTENTS )
 }
 
 /*
-void setContent ( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
+void setContent( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETCONTENT )
 {
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETCONTENT )
 }
 
 /*
-void setHtml ( const QString & html, const QUrl & baseUrl = QUrl() )
+void setHtml( const QString & html, const QUrl & baseUrl = QUrl() )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETHTML )
 {
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_TITLE )
 }
 
 /*
-void triggerPageAction ( QWebPage::WebAction action, bool checked = false )
+void triggerPageAction( QWebPage::WebAction action, bool checked = false )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_TRIGGERPAGEACTION )
 {

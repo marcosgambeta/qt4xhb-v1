@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QWEBELEMENT_APPENDOUTSIDE )
 }
 
 /*
-QString attribute ( const QString & name, const QString & defaultValue = QString() ) const
+QString attribute( const QString & name, const QString & defaultValue = QString() ) const
 */
 HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTE )
 {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTE )
 }
 
 /*
-QString attributeNS ( const QString & namespaceUri, const QString & name, const QString & defaultValue = QString() ) const
+QString attributeNS( const QString & namespaceUri, const QString & name, const QString & defaultValue = QString() ) const
 */
 HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENS )
 {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENS )
 }
 
 /*
-QStringList attributeNames ( const QString & namespaceUri = QString() ) const
+QStringList attributeNames( const QString & namespaceUri = QString() ) const
 */
 HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENAMES )
 {

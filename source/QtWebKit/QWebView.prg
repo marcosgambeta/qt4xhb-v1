@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QWEBVIEW_DELETE )
 }
 
 /*
-bool findText ( const QString & subString, QWebPage::FindFlags options = 0 )
+bool findText( const QString & subString, QWebPage::FindFlags options = 0 )
 */
 HB_FUNC_STATIC( QWEBVIEW_FINDTEXT )
 {
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QWEBVIEW_SELECTEDTEXT )
 }
 
 /*
-void setContent ( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
+void setContent( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
 */
 HB_FUNC_STATIC( QWEBVIEW_SETCONTENT )
 {
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETCONTENT )
 }
 
 /*
-void setHtml ( const QString & html, const QUrl & baseUrl = QUrl() )
+void setHtml( const QString & html, const QUrl & baseUrl = QUrl() )
 */
 HB_FUNC_STATIC( QWEBVIEW_SETHTML )
 {
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETPAGE )
 }
 
 /*
-void setRenderHint ( QPainter::RenderHint hint, bool enabled = true )
+void setRenderHint( QPainter::RenderHint hint, bool enabled = true )
 */
 HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINT )
 {
@@ -652,7 +652,7 @@ HB_FUNC_STATIC( QWEBVIEW_TITLE )
 }
 
 /*
-void triggerPageAction ( QWebPage::WebAction action, bool checked = false )
+void triggerPageAction( QWebPage::WebAction action, bool checked = false )
 */
 HB_FUNC_STATIC( QWEBVIEW_TRIGGERPAGEACTION )
 {

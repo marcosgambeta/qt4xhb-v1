@@ -261,7 +261,7 @@ virtual bool extension ( Extension extension, const ExtensionOption * option = 0
 */
 
 /*
-bool findText ( const QString & subString, FindFlags options = 0 )
+bool findText( const QString & subString, QWebPage::FindFlags options = 0 )
 */
 HB_FUNC_STATIC( QWEBPAGE_FINDTEXT )
 {
@@ -960,7 +960,7 @@ HB_FUNC_STATIC( QWEBPAGE_TOTALBYTES )
 }
 
 /*
-virtual void triggerAction ( WebAction action, bool checked = false )
+virtual void triggerAction( QWebPage::WebAction action, bool checked = false )
 */
 HB_FUNC_STATIC( QWEBPAGE_TRIGGERACTION )
 {

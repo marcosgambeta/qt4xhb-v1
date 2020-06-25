@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_CLEARMEMORYCACHES )
 }
 
 /*
-static void enablePersistentStorage ( const QString & path = QString() )
+static void enablePersistentStorage( const QString & path = QString() )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_ENABLEPERSISTENTSTORAGE )
 {

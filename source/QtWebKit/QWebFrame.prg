@@ -925,7 +925,7 @@ HB_FUNC_STATIC( QWEBFRAME_SECURITYORIGIN )
 }
 
 /*
-void setContent ( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
+void setContent( const QByteArray & data, const QString & mimeType = QString(), const QUrl & baseUrl = QUrl() )
 */
 HB_FUNC_STATIC( QWEBFRAME_SETCONTENT )
 {
@@ -977,7 +977,7 @@ HB_FUNC_STATIC( QWEBFRAME_SETFOCUS )
 }
 
 /*
-void setHtml ( const QString & html, const QUrl & baseUrl = QUrl() )
+void setHtml( const QString & html, const QUrl & baseUrl = QUrl() )
 */
 HB_FUNC_STATIC( QWEBFRAME_SETHTML )
 {
