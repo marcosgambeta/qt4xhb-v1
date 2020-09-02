@@ -47,6 +47,7 @@
 #include "QSysInfo.ch"
 #include "QSystemLocale.ch"
 #include "QSystemSemaphore.ch"
+#include "Qt.ch"
 #include "QTextBoundaryFinder.ch"
 #include "QTextCodec.ch"
 #include "QTextStream.ch"
