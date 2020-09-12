@@ -11,10 +11,10 @@
 description=Qt4xHb
 
 # pasta include do Qt4xHb
-{allwin}incpaths=${QT4XHB_INC_DIR}
+{allwin}incpaths=include
 
 # pasta lib do Qt4xHb
-{allwin}libpaths=${QT4XHB_LIB_DIR}
+{allwin}libpaths=lib/${hb_plat}/${hb_comp}
 
 # bibliotecas do Qt4xHb
 {allwin}libs=hbqaxcontainer4
