@@ -70,10 +70,6 @@ void QStyleOptionTab_new2()
   Qt4xHb::returnNewObject( obj, true );
 }
 
-/*
-QStyleOptionTab(int version) [PROTECTED]
-*/
-
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_NEW )
 {
   if( ISNUMPAR(0) )

@@ -57,10 +57,6 @@ void QStyleOptionSizeGrip_new2()
   Qt4xHb::returnNewObject( obj, true );
 }
 
-/*
-QStyleOptionSizeGrip(int version) [PROTECTED]
-*/
-
 HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_NEW )
 {
   if( ISNUMPAR(0) )

@@ -64,10 +64,6 @@ void QStyleOptionTitleBar_new2()
   Qt4xHb::returnNewObject( obj, true );
 }
 
-/*
-QStyleOptionTitleBar(int version) [PROTECTED]
-*/
-
 HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_NEW )
 {
   if( ISNUMPAR(0) )

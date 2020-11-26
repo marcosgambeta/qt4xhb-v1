@@ -68,10 +68,6 @@ void QStyleOptionGroupBox_new2()
   Qt4xHb::returnNewObject( obj, true );
 }
 
-/*
-QStyleOptionGroupBox(int version) [PROTECTED]
-*/
-
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_NEW )
 {
   if( ISNUMPAR(0) )

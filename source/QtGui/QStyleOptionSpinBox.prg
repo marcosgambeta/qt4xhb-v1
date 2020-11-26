@@ -61,10 +61,6 @@ void QStyleOptionSpinBox_new2()
   Qt4xHb::returnNewObject( obj, true );
 }
 
-/*
-QStyleOptionSpinBox(int version) [PROTECTED]
-*/
-
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_NEW )
 {
   if( ISNUMPAR(0) )

@@ -75,10 +75,6 @@ void QStyleOptionToolButton_new2()
   Qt4xHb::returnNewObject( obj, true );
 }
 
-/*
-QStyleOptionToolButton(int version) [PROTECTED]
-*/
-
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_NEW )
 {
   if( ISNUMPAR(0) )

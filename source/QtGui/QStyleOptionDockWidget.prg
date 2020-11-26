@@ -63,10 +63,6 @@ void QStyleOptionDockWidget_new2()
   Qt4xHb::returnNewObject( obj, true );
 }
 
-/*
-QStyleOptionDockWidget(int version) [PROTECTED]
-*/
-
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_NEW )
 {
   if( ISNUMPAR(0) )

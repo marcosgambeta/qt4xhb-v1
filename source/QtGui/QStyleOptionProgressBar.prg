@@ -67,10 +67,6 @@ void QStyleOptionProgressBar_new2()
   Qt4xHb::returnNewObject( obj, true );
 }
 
-/*
-QStyleOptionProgressBar(int version) [PROTECTED]
-*/
-
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_NEW )
 {
   if( ISNUMPAR(0) )

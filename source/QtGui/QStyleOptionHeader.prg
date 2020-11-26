@@ -74,10 +74,6 @@ void QStyleOptionHeader_new2()
   Qt4xHb::returnNewObject( obj, true );
 }
 
-/*
-QStyleOptionHeader(int version) [PROTECTED]
-*/
-
 HB_FUNC_STATIC( QSTYLEOPTIONHEADER_NEW )
 {
   if( ISNUMPAR(0) )

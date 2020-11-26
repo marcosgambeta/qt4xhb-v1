@@ -71,10 +71,6 @@ void QStyleOptionViewItem_new2()
   Qt4xHb::returnNewObject( obj, true );
 }
 
-/*
-QStyleOptionViewItem(int version) [PROTECTED]
-*/
-
 HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_NEW )
 {
   if( ISNUMPAR(0) )

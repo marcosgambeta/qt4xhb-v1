@@ -70,10 +70,6 @@ void QStyleOptionComboBox_new2()
   Qt4xHb::returnNewObject( obj, true );
 }
 
-/*
-QStyleOptionComboBox(int version) [PROTECTED]
-*/
-
 HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_NEW )
 {
   if( ISNUMPAR(0) )

@@ -68,10 +68,6 @@ void QStyleOptionTabWidgetFrame_new2()
   Qt4xHb::returnNewObject( obj, true );
 }
 
-/*
-QStyleOptionTabWidgetFrame(int version) [PROTECTED]
-*/
-
 HB_FUNC_STATIC( QSTYLEOPTIONTABWIDGETFRAME_NEW )
 {
   if( ISNUMPAR(0) )

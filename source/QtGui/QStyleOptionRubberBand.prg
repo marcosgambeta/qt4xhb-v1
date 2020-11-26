@@ -59,10 +59,6 @@ void QStyleOptionRubberBand_new2()
   Qt4xHb::returnNewObject( obj, true );
 }
 
-/*
-QStyleOptionRubberBand(int version) [PROTECTED]
-*/
-
 HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_NEW )
 {
   if( ISNUMPAR(0) )

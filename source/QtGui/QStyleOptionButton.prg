@@ -65,10 +65,6 @@ void QStyleOptionButton_new2()
   Qt4xHb::returnNewObject( obj, true );
 }
 
-/*
-QStyleOptionButton(int version) [PROTECTED]
-*/
-
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_NEW )
 {
   if( ISNUMPAR(0) )

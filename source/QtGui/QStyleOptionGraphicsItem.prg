@@ -64,10 +64,6 @@ void QStyleOptionGraphicsItem_new2()
   Qt4xHb::returnNewObject( obj, true );
 }
 
-/*
-QStyleOptionGraphicsItem(int version) [PROTECTED]
-*/
-
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_NEW )
 {
   if( ISNUMPAR(0) )

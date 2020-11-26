@@ -60,10 +60,6 @@ void QStyleOptionToolBox_new2()
   Qt4xHb::returnNewObject( obj, true );
 }
 
-/*
-QStyleOptionToolBox(int version) [PROTECTED]
-*/
-
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_NEW )
 {
   if( ISNUMPAR(0) )

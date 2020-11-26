@@ -78,10 +78,6 @@ void QStyleOptionMenuItem_new2()
   Qt4xHb::returnNewObject( obj, true );
 }
 
-/*
-QStyleOptionMenuItem(int version) [PROTECTED]
-*/
-
 HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_NEW )
 {
   if( ISNUMPAR(0) )

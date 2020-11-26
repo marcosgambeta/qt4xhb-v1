@@ -59,10 +59,6 @@ void QStyleOptionFrame_new2()
   Qt4xHb::returnNewObject( obj, true );
 }
 
-/*
-QStyleOptionFrame(int version) [PROTECTED]
-*/
-
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_NEW )
 {
   if( ISNUMPAR(0) )

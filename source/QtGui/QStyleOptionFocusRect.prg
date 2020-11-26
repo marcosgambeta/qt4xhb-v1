@@ -58,10 +58,6 @@ void QStyleOptionFocusRect_new2()
   Qt4xHb::returnNewObject( obj, true );
 }
 
-/*
-QStyleOptionFocusRect(int version) [PROTECTED]
-*/
-
 HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_NEW )
 {
   if( ISNUMPAR(0) )

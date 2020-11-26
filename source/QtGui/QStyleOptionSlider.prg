@@ -79,10 +79,6 @@ void QStyleOptionSlider_new2()
   Qt4xHb::returnNewObject( obj, true );
 }
 
-/*
-QStyleOptionSlider(int version) [PROTECTED]
-*/
-
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_NEW )
 {
   if( ISNUMPAR(0) )

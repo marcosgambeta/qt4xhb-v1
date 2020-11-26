@@ -62,10 +62,6 @@ void QStyleOptionTabBarBase_new2()
   Qt4xHb::returnNewObject( obj, true );
 }
 
-/*
-QStyleOptionTabBarBase(int version) [PROTECTED]
-*/
-
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_NEW )
 {
   if( ISNUMPAR(0) )
