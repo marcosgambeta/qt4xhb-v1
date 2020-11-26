@@ -53,7 +53,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QAxBindable ()
+QAxBindable()
 */
 HB_FUNC_STATIC( QAXBINDABLE_NEW )
 {

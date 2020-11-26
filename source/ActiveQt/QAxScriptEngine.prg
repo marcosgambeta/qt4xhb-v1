@@ -47,7 +47,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QAxScriptEngine ( const QString & language, QAxScript * script )
+QAxScriptEngine( const QString & language, QAxScript * script )
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_NEW )
 {

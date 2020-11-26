@@ -55,7 +55,7 @@ RETURN
 #include <QtCore/QStringList>
 
 /*
-QAxScriptManager ( QObject * parent = 0 )
+QAxScriptManager( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_NEW )
 {
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_DELETE )
 }
 
 /*
-void addObject ( QAxBase * object )
+void addObject( QAxBase * object )
 */
 void QAxScriptManager_addObject1()
 {
@@ -105,7 +105,7 @@ void QAxScriptManager_addObject1()
 }
 
 /*
-void addObject ( QObject * object )
+void addObject( QObject * object )
 */
 void QAxScriptManager_addObject2()
 {
@@ -118,11 +118,6 @@ void QAxScriptManager_addObject2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void addObject ( QAxBase * object )
-[2]void addObject ( QObject * object )
-*/
 
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_ADDOBJECT )
 {
@@ -141,7 +136,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_ADDOBJECT )
 }
 
 /*
-QVariant call ( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
+QVariant call( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 */
 void QAxScriptManager_call1()
 {
@@ -155,7 +150,7 @@ void QAxScriptManager_call1()
 }
 
 /*
-QVariant call ( const QString & function, QList<QVariant> & arguments )
+QVariant call( const QString & function, QList<QVariant> & arguments )
 */
 void QAxScriptManager_call2()
 {
@@ -167,11 +162,6 @@ void QAxScriptManager_call2()
     Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
   }
 }
-
-/*
-[1]QVariant call ( const QString & function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
-[2]QVariant call ( const QString & function, QList<QVariant> & arguments )
-*/
 
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_CALL )
 {
@@ -214,7 +204,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_FUNCTIONS )
 }
 
 /*
-QAxScript * load ( const QString & code, const QString & name, const QString & language )
+QAxScript * load( const QString & code, const QString & name, const QString & language )
 */
 void QAxScriptManager_load1()
 {
@@ -228,7 +218,7 @@ void QAxScriptManager_load1()
 }
 
 /*
-QAxScript * load ( const QString & file, const QString & name )
+QAxScript * load( const QString & file, const QString & name )
 */
 void QAxScriptManager_load2()
 {
@@ -240,11 +230,6 @@ void QAxScriptManager_load2()
     Qt4xHb::createReturnQObjectClass( ptr, "QAXSCRIPT" );
   }
 }
-
-/*
-[1]QAxScript * load ( const QString & code, const QString & name, const QString & language )
-[2]QAxScript * load ( const QString & file, const QString & name )
-*/
 
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_LOAD )
 {

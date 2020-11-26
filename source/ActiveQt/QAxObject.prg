@@ -63,7 +63,7 @@ RETURN
 #include <QtCore/QStringList>
 
 /*
-QAxObject ( QObject * parent = 0 )
+QAxObject( QObject * parent = 0 )
 */
 void QAxObject_new1()
 {
@@ -72,7 +72,7 @@ void QAxObject_new1()
 }
 
 /*
-QAxObject ( const QString & c, QObject * parent = 0 )
+QAxObject( const QString & c, QObject * parent = 0 )
 */
 void QAxObject_new2()
 {
@@ -81,19 +81,13 @@ void QAxObject_new2()
 }
 
 /*
-QAxObject ( IUnknown * iface, QObject * parent = 0 )
+QAxObject( IUnknown * iface, QObject * parent = 0 )
 */
 void QAxObject_new3()
 {
   QAxObject * obj = new QAxObject( (IUnknown *) hb_parptr(1), OPQOBJECT(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QAxObject ( QObject * parent = 0 )
-[2]QAxObject ( const QString & c, QObject * parent = 0 )
-[3]QAxObject ( IUnknown * iface, QObject * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QAXOBJECT_NEW )
 {
@@ -315,7 +309,7 @@ HB_FUNC_STATIC( QAXOBJECT_DISABLEMETAOBJECT )
 }
 
 /*
-QVariant dynamicCall ( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
+QVariant dynamicCall( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 */
 void QAxObject_dynamicCall1()
 {
@@ -329,7 +323,7 @@ void QAxObject_dynamicCall1()
 }
 
 /*
-QVariant dynamicCall ( const char * function, QList<QVariant> & vars )
+QVariant dynamicCall( const char * function, QList<QVariant> & vars )
 */
 void QAxObject_dynamicCall2()
 {
@@ -341,11 +335,6 @@ void QAxObject_dynamicCall2()
     Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
   }
 }
-
-/*
-[1]QVariant dynamicCall ( const char * function, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
-[2]QVariant dynamicCall ( const char * function, QList<QVariant> & vars )
-*/
 
 HB_FUNC_STATIC( QAXOBJECT_DYNAMICCALL )
 {
@@ -436,7 +425,7 @@ HB_FUNC_STATIC( QAXOBJECT_PROPERTYWRITABLE )
 }
 
 /*
-QAxObject * querySubObject ( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
+QAxObject * querySubObject( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
 */
 void QAxObject_querySubObject1()
 {
@@ -450,7 +439,7 @@ void QAxObject_querySubObject1()
 }
 
 /*
-QAxObject * querySubObject ( const char * name, QList<QVariant> & vars )
+QAxObject * querySubObject( const char * name, QList<QVariant> & vars )
 */
 void QAxObject_querySubObject2()
 {
@@ -462,11 +451,6 @@ void QAxObject_querySubObject2()
     Qt4xHb::createReturnQObjectClass( ptr, "QAXOBJECT" );
   }
 }
-
-/*
-[1]QAxObject * querySubObject ( const char * name, const QVariant & var1 = QVariant(), const QVariant & var2 = QVariant(), const QVariant & var3 = QVariant(), const QVariant & var4 = QVariant(), const QVariant & var5 = QVariant(), const QVariant & var6 = QVariant(), const QVariant & var7 = QVariant(), const QVariant & var8 = QVariant() )
-[2]QAxObject * querySubObject ( const char * name, QList<QVariant> & vars )
-*/
 
 HB_FUNC_STATIC( QAXOBJECT_QUERYSUBOBJECT )
 {
