@@ -18,7 +18,7 @@
 
 #include "qt4xhb.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oWindow
@@ -34,28 +34,28 @@ PROCEDURE Main ()
    oWindow := QWidget():new()
 
    // define o título da janela
-   oWindow:setWindowTitle("Cálculo da diferença entre datas")
+   oWindow:setWindowTitle( "Cálculo da diferença entre datas" )
 
    // cria dois objetos (calendários) da classe QCalendarWidget
    oCalendar1 := QCalendarWidget():new()
    oCalendar2 := QCalendarWidget():new()
 
    // cria um objeto (botão) da classe QPushButton
-   oButton := QPushButton():new("Calcular diferença")
+   oButton := QPushButton():new( "Calcular diferença" )
 
    // cria um objeto, da classe QGridLayout, tendo o objeto oWindow como "pai"
-   oGrid := QGridLayout():new(oWindow)
+   oGrid := QGridLayout():new( oWindow )
 
    // adiciona os dois calendários e o botão ao objeto oGrid
 
    // primeiro calendário na linha 0 e coluna 0
-   oGrid:addWidget(oCalendar1, 0, 0)
+   oGrid:addWidget( oCalendar1, 0, 0 )
 
    // segundo calendário na linha 0 e coluna 1
-   oGrid:addWidget(oCalendar2, 0, 1)
+   oGrid:addWidget( oCalendar2, 0, 1 )
 
    // botão na linha 1 e coluna 0, ocupando 1 linha e 2 colunas
-   oGrid:addWidget(oButton, 1, 0, 1, 2)
+   oGrid:addWidget( oButton, 1, 0, 1, 2 )
 
    // define a ação executada pelo botão quando clicado:
    // chamar a função CalculaDiferenca, passandos os objetos oCalendar1 e
@@ -82,7 +82,7 @@ RETURN
   mensagem.
 */
 
-STATIC FUNCTION CalculaDiferenca (oCalendar1, oCalendar2)
+STATIC FUNCTION CalculaDiferenca( oCalendar1, oCalendar2 )
 
    LOCAL oMessageBox
    LOCAL oData1
@@ -96,16 +96,16 @@ STATIC FUNCTION CalculaDiferenca (oCalendar1, oCalendar2)
 
    // obtém o número de dias entre as duas datas através do método daysTo
    // da classe QDate
-   nDias := oData1:daysTo(oData2)
+   nDias := oData1:daysTo( oData2 )
 
    // cria um objeto (uma janela de mensagem) da classe QMessageBox
    oMessageBox := QMessageBox():new()
 
    // define o título da janela de mensagem
-   oMessageBox:setWindowTitle("Diferença entre as datas")
+   oMessageBox:setWindowTitle( "Diferença entre as datas" )
 
    // define o texto da janela de mensagem
-   oMessageBox:setInformativeText("A diferença entre as datas é de "+AllTrim(Str(nDias))+" dia(s)")
+   oMessageBox:setInformativeText( "A diferença entre as datas é de " + AllTrim( Str( nDias ) ) + " dia(s)" )
 
    // mostra a janela de mensagem
    oMessageBox:exec()

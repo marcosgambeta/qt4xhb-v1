@@ -22,7 +22,7 @@
 #include "qt4xhb.ch"
 #include "hbclass.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oDialog
@@ -46,29 +46,29 @@ RETURN
 
 CLASS Dialog INHERIT QDialog
 
-   DATA oMenuBar                           // QMenuBar
-   DATA oHorizontalGroupBox                // QGroupBox
-   DATA oGridGroupBox                      // QGroupBox
-   DATA oFormGroupBox                      // QGroupBox
-   DATA oSmallEditor                       // QTextEdit
-   DATA oBigEditor                         // QTextEdit
-   DATA aLabels INIT array(NumGridRows)    // QLabel
-   DATA aLineEdits INIT array(NumGridRows) // QLineEdit
-   DATA aButtons INIT array(NumButtons)    // QPushButton
-   DATA oButtonBox                         // QDialogButtonBox
-   DATA oFileMenu                          // QMenu
-   DATA oExitAction                        // QAction
+   DATA oMenuBar                             // QMenuBar
+   DATA oHorizontalGroupBox                  // QGroupBox
+   DATA oGridGroupBox                        // QGroupBox
+   DATA oFormGroupBox                        // QGroupBox
+   DATA oSmallEditor                         // QTextEdit
+   DATA oBigEditor                           // QTextEdit
+   DATA aLabels INIT array( NumGridRows )    // QLabel
+   DATA aLineEdits INIT array( NumGridRows ) // QLineEdit
+   DATA aButtons INIT array( NumButtons )    // QPushButton
+   DATA oButtonBox                           // QDialogButtonBox
+   DATA oFileMenu                            // QMenu
+   DATA oExitAction                          // QAction
 
-   METHOD new ()
-   METHOD createMenu ()
-   METHOD createHorizontalGroupBox ()
-   METHOD createGridGroupBox ()
-   METHOD createFormGroupBox ()
-   METHOD delete ()
+   METHOD new()
+   METHOD createMenu()
+   METHOD createHorizontalGroupBox()
+   METHOD createGridGroupBox()
+   METHOD createFormGroupBox()
+   METHOD delete()
 
 END CLASS
 
-METHOD new () CLASS Dialog
+METHOD new() CLASS Dialog
 
    LOCAL oMainLayout
 
@@ -80,94 +80,94 @@ METHOD new () CLASS Dialog
    ::createFormGroupBox()
 
    ::oBigEditor := QTextEdit():new()
-   ::oBigEditor:setPlainText("This widget takes up all the remaining space in the top-level layout.")
+   ::oBigEditor:setPlainText( "This widget takes up all the remaining space in the top-level layout." )
 
-   ::oButtonBox := QDialogButtonBox():new(QDialogButtonBox_Ok + QDialogButtonBox_Cancel, Qt_Horizontal)
+   ::oButtonBox := QDialogButtonBox():new( QDialogButtonBox_Ok + QDialogButtonBox_Cancel, Qt_Horizontal )
 
-   ::oButtonBox:onAccepted({||::accept()})
-   ::oButtonBox:onRejected({||::reject()})
+   ::oButtonBox:onAccepted( {||::accept()} )
+   ::oButtonBox:onRejected( {||::reject()} )
 
    oMainLayout := QVBoxLayout():new()
-   oMainLayout:setMenuBar(::oMenuBar)
-   oMainLayout:addWidget(::oHorizontalGroupBox)
-   oMainLayout:addWidget(::oGridGroupBox)
-   oMainLayout:addWidget(::oFormGroupBox)
-   oMainLayout:addWidget(::oBigEditor)
-   oMainLayout:addWidget(::oButtonBox)
-   ::setLayout(oMainLayout)
+   oMainLayout:setMenuBar( ::oMenuBar )
+   oMainLayout:addWidget( ::oHorizontalGroupBox )
+   oMainLayout:addWidget( ::oGridGroupBox )
+   oMainLayout:addWidget( ::oFormGroupBox )
+   oMainLayout:addWidget( ::oBigEditor )
+   oMainLayout:addWidget( ::oButtonBox )
+   ::setLayout( oMainLayout )
 
-   ::setWindowTitle("Basic Layouts")
+   ::setWindowTitle( "Basic Layouts" )
 
 RETURN SELF
 
-METHOD createMenu () CLASS Dialog
+METHOD createMenu() CLASS Dialog
 
    ::oMenuBar := QMenuBar():new()
 
-   ::oFileMenu := QMenu():new("&File", SELF)
-   ::oExitAction := ::oFileMenu:addAction("E&xit")
-   ::oMenuBar:addMenu(::oFileMenu)
+   ::oFileMenu := QMenu():new( "&File", SELF )
+   ::oExitAction := ::oFileMenu:addAction( "E&xit" )
+   ::oMenuBar:addMenu( ::oFileMenu )
 
-   ::oExitAction:onTriggered({||::accept()})
+   ::oExitAction:onTriggered( {||::accept()} )
 
 RETURN NIL
 
-METHOD createHorizontalGroupBox () CLASS Dialog
+METHOD createHorizontalGroupBox() CLASS Dialog
 
    LOCAL oLayout
    LOCAL nIndex
 
-   ::oHorizontalGroupBox := QGroupBox():new("Horizontal layout")
+   ::oHorizontalGroupBox := QGroupBox():new( "Horizontal layout" )
    oLayout := QHBoxLayout():new()
 
    FOR nIndex := 1 TO NumButtons
-      ::aButtons[nIndex] := QPushButton():new("Button "+alltrim(str(nIndex)))
-      oLayout:addWidget(::aButtons[nIndex])
+      ::aButtons[ nIndex ] := QPushButton():new( "Button " + alltrim( str( nIndex ) ) )
+      oLayout:addWidget( ::aButtons[ nIndex ] )
    NEXT nIndex
 
-   ::oHorizontalGroupBox:setLayout(oLayout)
+   ::oHorizontalGroupBox:setLayout( oLayout )
 
 RETURN NIL
 
-METHOD createGridGroupBox () CLASS Dialog
+METHOD createGridGroupBox() CLASS Dialog
 
    LOCAL oLayout
    LOCAL nIndex
 
-   ::oGridGroupBox := QGroupBox():new("Grid layout")
+   ::oGridGroupBox := QGroupBox():new( "Grid layout" )
    oLayout := QGridLayout():new()
 
    FOR nIndex := 1 TO NumGridRows
-      ::aLabels[nIndex] := QLabel():new("Line "+alltrim(str(nIndex))+":")
-      ::aLineEdits[nIndex] := QLineEdit():new()
-      oLayout:addWidget(::aLabels[nIndex], nIndex, 0)
-      oLayout:addWidget(::aLineEdits[nIndex], nIndex, 1)
+      ::aLabels[ nIndex ] := QLabel():new( "Line " + alltrim( str( nIndex ) ) + ":" )
+      ::aLineEdits[ nIndex ] := QLineEdit():new()
+      oLayout:addWidget( ::aLabels[ nIndex ], nIndex, 0 )
+      oLayout:addWidget( ::aLineEdits[ nIndex ], nIndex, 1 )
    NEXT nIndex
 
    ::oSmallEditor := QTextEdit():new()
-   ::oSmallEditor:setPlainText("This widget takes up about two thirds of the grid layout.")
-   oLayout:addWidget(::oSmallEditor, 0, 2, 4, 1)
+   ::oSmallEditor:setPlainText( "This widget takes up about two thirds of the grid layout." )
+   oLayout:addWidget( ::oSmallEditor, 0, 2, 4, 1 )
 
-   oLayout:setColumnStretch(1, 10)
-   oLayout:setColumnStretch(2, 20)
-   ::oGridGroupBox:setLayout(oLayout)
+   oLayout:setColumnStretch( 1, 10 )
+   oLayout:setColumnStretch( 2, 20 )
+   ::oGridGroupBox:setLayout( oLayout )
 
 RETURN NIL
 
-METHOD createFormGroupBox () CLASS Dialog
+METHOD createFormGroupBox() CLASS Dialog
 
    LOCAL oLayout
 
-   ::oFormGroupBox := QGroupBox():new("Form layout")
+   ::oFormGroupBox := QGroupBox():new( "Form layout" )
    oLayout := QFormLayout():new()
-   oLayout:addRow(QLabel():new("Line 1:"), QLineEdit():new())
-   oLayout:addRow(QLabel():new("Line 2, long text:"), QComboBox():new())
-   oLayout:addRow(QLabel():new("Line 3:"), QSpinBox():new())
-   ::oFormGroupBox:setLayout(oLayout)
+   oLayout:addRow(QLabel():new( "Line 1:" ), QLineEdit():new() )
+   oLayout:addRow(QLabel():new( "Line 2, long text:" ), QComboBox():new() )
+   oLayout:addRow(QLabel():new( "Line 3:" ), QSpinBox():new() )
+   ::oFormGroupBox:setLayout( oLayout )
 
 RETURN NIL
 
-METHOD delete () CLASS Dialog
+METHOD delete() CLASS Dialog
 
    // destroi o objeto
    ::super:delete()

@@ -15,7 +15,7 @@
 #include "qt4xhb.ch"
 #include "hbclass.ch"
 
-PROCEDURE Main (cFileName)
+PROCEDURE Main( cFileName )
 
    LOCAL oApp
    LOCAL oTabDialog
@@ -26,7 +26,7 @@ PROCEDURE Main (cFileName)
 
    oApp := QApplication():new()
 
-   oTabDialog := TabDialog():new(cFileName)
+   oTabDialog := TabDialog():new( cFileName )
 
    oTabDialog:show()
 
@@ -42,11 +42,11 @@ RETURN
 
 CLASS GeneralTab INHERIT QWidget
 
-   METHOD new (oFileInfo, oParent)
+   METHOD new( oFileInfo, oParent )
 
 END CLASS
 
-METHOD new (oFileInfo, oParent) CLASS GeneralTab
+METHOD new( oFileInfo, oParent ) CLASS GeneralTab
 
    LOCAL oFileNameLabel
    LOCAL oFileNameEdit
@@ -61,41 +61,41 @@ METHOD new (oFileInfo, oParent) CLASS GeneralTab
    LOCAL oLastModValueLabel
    LOCAL oMainLayout
 
-   ::super:new(oParent)
+   ::super:new( oParent )
 
-   oFileNameLabel :=  QLabel():new("File Name:")
-   oFileNameEdit := QLineEdit():new(oFileInfo:fileName())
+   oFileNameLabel :=  QLabel():new( "File Name:" )
+   oFileNameEdit := QLineEdit():new( oFileInfo:fileName() )
 
-   oPathLabel := QLabel():new("Path:")
-   oPathValueLabel := QLabel():new(oFileInfo:absoluteFilePath())
-   oPathValueLabel:setFrameStyle(QFrame_Panel + QFrame_Sunken)
+   oPathLabel := QLabel():new( "Path:" )
+   oPathValueLabel := QLabel():new( oFileInfo:absoluteFilePath() )
+   oPathValueLabel:setFrameStyle( QFrame_Panel + QFrame_Sunken )
 
-   oSizeLabel := QLabel():new("Size:")
-   nSize := oFileInfo:size()/1024
-   oSizeValueLabel := QLabel():new(alltrim(str(nSize))+" K")
-   oSizeValueLabel:setFrameStyle(QFrame_Panel + QFrame_Sunken)
+   oSizeLabel := QLabel():new( "Size:" )
+   nSize := oFileInfo:size() / 1024
+   oSizeValueLabel := QLabel():new( alltrim( str( nSize ) ) + " K" )
+   oSizeValueLabel:setFrameStyle( QFrame_Panel + QFrame_Sunken )
 
-   oLastReadLabel := QLabel():new("Last Read:")
-   oLastReadValueLabel := QLabel():new(oFileInfo:lastRead():toString())
-   oLastReadValueLabel:setFrameStyle(QFrame_Panel + QFrame_Sunken)
+   oLastReadLabel := QLabel():new( "Last Read:" )
+   oLastReadValueLabel := QLabel():new( oFileInfo:lastRead():toString() )
+   oLastReadValueLabel:setFrameStyle( QFrame_Panel + QFrame_Sunken )
 
-   oLastModLabel := QLabel():new("Last Modified:")
-   oLastModValueLabel := QLabel():new(oFileInfo:lastModified():toString())
-   oLastModValueLabel:setFrameStyle(QFrame_Panel + QFrame_Sunken)
+   oLastModLabel := QLabel():new( "Last Modified:" )
+   oLastModValueLabel := QLabel():new( oFileInfo:lastModified():toString() )
+   oLastModValueLabel:setFrameStyle( QFrame_Panel + QFrame_Sunken )
 
    oMainLayout := QVBoxLayout():new()
-   oMainLayout:addWidget(oFileNameLabel)
-   oMainLayout:addWidget(oFileNameEdit)
-   oMainLayout:addWidget(oPathLabel)
-   oMainLayout:addWidget(oPathValueLabel)
-   oMainLayout:addWidget(oSizeLabel)
-   oMainLayout:addWidget(oSizeValueLabel)
-   oMainLayout:addWidget(oLastReadLabel)
-   oMainLayout:addWidget(oLastReadValueLabel)
-   oMainLayout:addWidget(oLastModLabel)
-   oMainLayout:addWidget(oLastModValueLabel)
-   oMainLayout:addStretch(1)
-   ::setLayout(oMainLayout)
+   oMainLayout:addWidget( oFileNameLabel )
+   oMainLayout:addWidget( oFileNameEdit )
+   oMainLayout:addWidget( oPathLabel )
+   oMainLayout:addWidget( oPathValueLabel )
+   oMainLayout:addWidget( oSizeLabel )
+   oMainLayout:addWidget( oSizeValueLabel )
+   oMainLayout:addWidget( oLastReadLabel )
+   oMainLayout:addWidget( oLastReadValueLabel )
+   oMainLayout:addWidget( oLastModLabel )
+   oMainLayout:addWidget( oLastModValueLabel )
+   oMainLayout:addStretch( 1 )
+   ::setLayout( oMainLayout )
 
 RETURN SELF
 
@@ -103,11 +103,11 @@ RETURN SELF
 
 CLASS PermissionsTab INHERIT QWidget
 
-   METHOD new (oFileInfo, oParent)
+   METHOD new( oFileInfo, oParent )
 
 END CLASS
 
-METHOD new (oFileInfo, oParent) CLASS PermissionsTab
+METHOD new( oFileInfo, oParent ) CLASS PermissionsTab
 
    LOCAL oPermissionsGroup
    LOCAL oReadable
@@ -122,53 +122,53 @@ METHOD new (oFileInfo, oParent) CLASS PermissionsTab
    LOCAL oOwnerLayout
    LOCAL oMainLayout
 
-   ::super:new(oParent)
+   ::super:new( oParent )
 
-   oPermissionsGroup := QGroupBox():new("Permissions")
+   oPermissionsGroup := QGroupBox():new( "Permissions" )
 
-   oReadable := QCheckBox():new("Readable")
+   oReadable := QCheckBox():new( "Readable" )
    IF oFileInfo:isReadable()
-      oReadable:setChecked(.T.)
+      oReadable:setChecked( .T. )
    ENDIF
 
-   oWritable := QCheckBox():new("Writable")
+   oWritable := QCheckBox():new( "Writable" )
    IF oFileInfo:isWritable()
-      oWritable:setChecked(.T.)
+      oWritable:setChecked( .T. )
    ENDIF
 
-   oExecutable := QCheckBox():new("Executable")
+   oExecutable := QCheckBox():new( "Executable" )
    IF oFileInfo:isExecutable()
-      oExecutable:setChecked(.T.)
+      oExecutable:setChecked( .T. )
    ENDIF
 
-   oOwnerGroup := QGroupBox():new("Ownership")
+   oOwnerGroup := QGroupBox():new( "Ownership" )
 
-   oOwnerLabel := QLabel():new("Owner")
-   oOwnerValueLabel := QLabel():new(oFileInfo:owner())
-   oOwnerValueLabel:setFrameStyle(QFrame_Panel + QFrame_Sunken)
+   oOwnerLabel := QLabel():new( "Owner" )
+   oOwnerValueLabel := QLabel():new( oFileInfo:owner() )
+   oOwnerValueLabel:setFrameStyle( QFrame_Panel + QFrame_Sunken )
 
-   oGroupLabel := QLabel():new("Group")
-   oGroupValueLabel := QLabel():new(oFileInfo:group())
-   oGroupValueLabel:setFrameStyle(QFrame_Panel + QFrame_Sunken)
+   oGroupLabel := QLabel():new( "Group" )
+   oGroupValueLabel := QLabel():new( oFileInfo:group() )
+   oGroupValueLabel:setFrameStyle( QFrame_Panel + QFrame_Sunken )
 
    oPermissionsLayout := QVBoxLayout():new()
-   oPermissionsLayout:addWidget(oReadable)
-   oPermissionsLayout:addWidget(oWritable)
-   oPermissionsLayout:addWidget(oExecutable)
-   oPermissionsGroup:setLayout(oPermissionsLayout)
+   oPermissionsLayout:addWidget( oReadable )
+   oPermissionsLayout:addWidget( oWritable )
+   oPermissionsLayout:addWidget( oExecutable )
+   oPermissionsGroup:setLayout( oPermissionsLayout )
 
    oOwnerLayout := QVBoxLayout():new()
-   oOwnerLayout:addWidget(oOwnerLabel)
-   oOwnerLayout:addWidget(oOwnerValueLabel)
-   oOwnerLayout:addWidget(oGroupLabel)
-   oOwnerLayout:addWidget(oGroupValueLabel)
-   oOwnerGroup:setLayout(oOwnerLayout)
+   oOwnerLayout:addWidget( oOwnerLabel )
+   oOwnerLayout:addWidget( oOwnerValueLabel )
+   oOwnerLayout:addWidget( oGroupLabel )
+   oOwnerLayout:addWidget( oGroupValueLabel )
+   oOwnerGroup:setLayout( oOwnerLayout )
 
    oMainLayout := QVBoxLayout():new()
-   oMainLayout:addWidget(oPermissionsGroup)
-   oMainLayout:addWidget(oOwnerGroup)
-   oMainLayout:addStretch(1)
-   ::setLayout(oMainLayout)
+   oMainLayout:addWidget( oPermissionsGroup )
+   oMainLayout:addWidget( oOwnerGroup )
+   oMainLayout:addStretch( 1 )
+   ::setLayout( oMainLayout )
 
 RETURN SELF
 
@@ -176,11 +176,11 @@ RETURN SELF
 
 CLASS ApplicationsTab INHERIT QWidget
 
-   METHOD new (oFileInfo, oParent)
+   METHOD new( oFileInfo, oParent )
 
 END CLASS
 
-METHOD new (oFileInfo, oParent) CLASS ApplicationsTab
+METHOD new( oFileInfo, oParent ) CLASS ApplicationsTab
 
    LOCAL oTopLabel
    LOCAL oApplicationsListBox
@@ -189,31 +189,31 @@ METHOD new (oFileInfo, oParent) CLASS ApplicationsTab
    LOCAL oAlwaysCheckBox
    LOCAL oLayout
 
-   ::super:new(oParent)
+   ::super:new( oParent )
 
-   oTopLabel := QLabel():new("Open with:")
+   oTopLabel := QLabel():new( "Open with:" )
 
    oApplicationsListBox := QListWidget():new()
    aApplications := {}
 
    FOR n := 1 TO 30
-      aadd(aApplications,"Application "+alltrim(str(n)))
+      aadd( aApplications, "Application " + alltrim( str( n ) ) )
    NEXT n
-   oApplicationsListBox:insertItems(0, aApplications)
+   oApplicationsListBox:insertItems( 0, aApplications )
 
    oAlwaysCheckBox := NIL
 
-   IF empty(oFileInfo:suffix())
-      oAlwaysCheckBox := QCheckBox():new("Always use this application to open this type of file")
+   IF empty( oFileInfo:suffix() )
+      oAlwaysCheckBox := QCheckBox():new( "Always use this application to open this type of file" )
    ELSE
-      oAlwaysCheckBox := QCheckBox():new("Always use this application to open files with the extension '"+oFileInfo:suffix()+"'")
+      oAlwaysCheckBox := QCheckBox():new( "Always use this application to open files with the extension '" + oFileInfo:suffix() + "'" )
    ENDIF
 
    oLayout := QVBoxLayout():new()
-   oLayout:addWidget(oTopLabel)
-   oLayout:addWidget(oApplicationsListBox)
-   oLayout:addWidget(oAlwaysCheckBox)
-   ::setLayout(oLayout)
+   oLayout:addWidget( oTopLabel )
+   oLayout:addWidget( oApplicationsListBox )
+   oLayout:addWidget( oAlwaysCheckBox )
+   ::setLayout( oLayout )
 
 RETURN SELF
 
@@ -224,35 +224,35 @@ CLASS TabDialog INHERIT QDialog
    DATA oTabWidget // objeto da classe QTabWidget
    DATA oButtonBox // objeto da classe QDialogButtonBox
 
-   METHOD new (cFileName, oParent)
+   METHOD new( cFileName, oParent )
 
 END CLASS
 
-METHOD new (cFileName, oParent) CLASS TabDialog
+METHOD new( cFileName, oParent ) CLASS TabDialog
 
    LOCAL oFileInfo
    LOCAL oMainLayout
 
-   ::super:new(oParent)
+   ::super:new( oParent )
 
-   oFileInfo := QFileInfo():new(cFileName)
+   oFileInfo := QFileInfo():new( cFileName )
 
    ::oTabWidget := QTabWidget():new()
-   ::oTabWidget:addTab(GeneralTab():new(oFileInfo), "General")
-   ::oTabWidget:addTab(PermissionsTab():new(oFileInfo), "Permissions")
-   ::oTabWidget:addTab(ApplicationsTab():new(oFileInfo), "Applications")
+   ::oTabWidget:addTab( GeneralTab():new( oFileInfo ), "General" )
+   ::oTabWidget:addTab( PermissionsTab():new( oFileInfo ), "Permissions" )
+   ::oTabWidget:addTab( ApplicationsTab():new( oFileInfo ), "Applications" )
 
-   ::oButtonBox := QDialogButtonBox():new(QDialogButtonBox_Ok + QDialogButtonBox_Cancel)
+   ::oButtonBox := QDialogButtonBox():new( QDialogButtonBox_Ok + QDialogButtonBox_Cancel )
 
-   ::oButtonBox:onAccepted({||::accept()})
-   ::oButtonBox:onRejected({||::reject()})
+   ::oButtonBox:onAccepted( {||::accept()} )
+   ::oButtonBox:onRejected( {||::reject()} )
 
    oMainLayout := QVBoxLayout():new()
-   oMainLayout:setSizeConstraint(QLayout_SetNoConstraint)
-   oMainLayout:addWidget(::oTabWidget)
-   oMainLayout:addWidget(::oButtonBox)
-   ::setLayout(oMainLayout)
+   oMainLayout:setSizeConstraint( QLayout_SetNoConstraint )
+   oMainLayout:addWidget( ::oTabWidget )
+   oMainLayout:addWidget( ::oButtonBox )
+   ::setLayout( oMainLayout )
 
-   ::setWindowTitle("Tab Dialog")
+   ::setWindowTitle( "Tab Dialog" )
 
 RETURN SELF

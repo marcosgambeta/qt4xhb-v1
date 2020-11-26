@@ -19,7 +19,7 @@
 #include "qt4xhb.ch"
 #include "hbclass.ch"
 
-PROCEDURE Main ()
+PROCEDURE Main()
 
    LOCAL oApp
    LOCAL oDialog
@@ -52,71 +52,71 @@ CLASS FindDialog INHERIT QDialog
    DATA oMoreButton              // objeto da classe QPushButton
    DATA oExtension               // objeto da classe QWidget
 
-   METHOD new (oParent)
+   METHOD new( oParent )
 
 END CLASS
 
-METHOD new (oParent) CLASS FindDialog
+METHOD new( oParent ) CLASS FindDialog
 
    LOCAL oExtensionLayout
    LOCAL oTopLeftLayout
    LOCAL oLeftLayout
    LOCAL oMainLayout
 
-   ::super:new(oParent)
+   ::super:new( oParent )
 
-   ::oLabel := QLabel():new("Find &what:")
+   ::oLabel := QLabel():new( "Find &what:" )
    ::oLineEdit := QLineEdit():new()
-   ::oLabel:setBuddy(::oLineEdit)
+   ::oLabel:setBuddy( ::oLineEdit )
 
-   ::oCaseCheckBox := QCheckBox():new("Match &case")
-   ::oFromStartCheckBox := QCheckBox():new("Search from &start")
-   ::oFromStartCheckBox:setChecked(.T.)
+   ::oCaseCheckBox := QCheckBox():new( "Match &case" )
+   ::oFromStartCheckBox := QCheckBox():new( "Search from &start" )
+   ::oFromStartCheckBox:setChecked( .T. )
 
-   ::oFindButton := QPushButton():new("&Find")
-   ::oFindButton:setDefault(.T.)
+   ::oFindButton := QPushButton():new( "&Find" )
+   ::oFindButton:setDefault( .T. )
 
-   ::oMoreButton := QPushButton():new("&More")
-   ::oMoreButton:setCheckable(.T.)
-   ::oMoreButton:setAutoDefault(.F.)
+   ::oMoreButton := QPushButton():new( "&More" )
+   ::oMoreButton:setCheckable( .T. )
+   ::oMoreButton:setAutoDefault( .F. )
 
    ::oExtension := QWidget():new()
 
-   ::oWholeWordsCheckBox := QCheckBox():new("&Whole words")
-   ::oBackwardCheckBox := QCheckBox():new("Search &backward")
-   ::oSearchSelectionCheckBox := QCheckBox():new("Search se&lection")
+   ::oWholeWordsCheckBox := QCheckBox():new( "&Whole words" )
+   ::oBackwardCheckBox := QCheckBox():new( "Search &backward" )
+   ::oSearchSelectionCheckBox := QCheckBox():new( "Search se&lection" )
 
-   ::oButtonBox := QDialogButtonBox():new(Qt_Vertical)
-   ::oButtonBox:addButton(::oFindButton, QDialogButtonBox_ActionRole)
-   ::oButtonBox:addButton(::oMoreButton, QDialogButtonBox_ActionRole)
+   ::oButtonBox := QDialogButtonBox():new( Qt_Vertical )
+   ::oButtonBox:addButton( ::oFindButton, QDialogButtonBox_ActionRole )
+   ::oButtonBox:addButton( ::oMoreButton, QDialogButtonBox_ActionRole )
 
-   ::oMoreButton:onToggled({|pWidget,lValue|HB_SYMBOL_UNUSED(pWidget),::oExtension:setVisible(lValue)})
+   ::oMoreButton:onToggled( {|pWidget,lValue|HB_SYMBOL_UNUSED(pWidget),::oExtension:setVisible(lValue)} )
 
    oExtensionLayout := QVBoxLayout():new()
-   oExtensionLayout:addWidget(::oWholeWordsCheckBox)
-   oExtensionLayout:addWidget(::oBackwardCheckBox)
-   oExtensionLayout:addWidget(::oSearchSelectionCheckBox)
-   ::oExtension:setLayout(oExtensionLayout)
+   oExtensionLayout:addWidget( ::oWholeWordsCheckBox )
+   oExtensionLayout:addWidget( ::oBackwardCheckBox )
+   oExtensionLayout:addWidget( ::oSearchSelectionCheckBox )
+   ::oExtension:setLayout( oExtensionLayout )
 
    oTopLeftLayout := QHBoxLayout():new()
-   oTopLeftLayout:addWidget(::oLabel)
-   oTopLeftLayout:addWidget(::oLineEdit)
+   oTopLeftLayout:addWidget( ::oLabel )
+   oTopLeftLayout:addWidget( ::oLineEdit )
 
    oLeftLayout := QVBoxLayout():new()
-   oLeftLayout:addLayout(oTopLeftLayout)
-   oLeftLayout:addWidget(::oCaseCheckBox)
-   oLeftLayout:addWidget(::oFromStartCheckBox)
+   oLeftLayout:addLayout( oTopLeftLayout )
+   oLeftLayout:addWidget( ::oCaseCheckBox )
+   oLeftLayout:addWidget( ::oFromStartCheckBox )
 
    oMainLayout := QGridLayout():new()
-   oMainLayout:setSizeConstraint(QLayout_SetFixedSize)
-   oMainLayout:addLayout(oLeftLayout, 0, 0)
-   oMainLayout:addWidget(::oButtonBox, 0, 1)
-   oMainLayout:addWidget(::oExtension, 1, 0, 1, 2)
-   oMainLayout:setRowStretch(2, 1)
+   oMainLayout:setSizeConstraint( QLayout_SetFixedSize )
+   oMainLayout:addLayout( oLeftLayout, 0, 0 )
+   oMainLayout:addWidget( ::oButtonBox, 0, 1 )
+   oMainLayout:addWidget( ::oExtension, 1, 0, 1, 2 )
+   oMainLayout:setRowStretch( 2, 1 )
 
-   ::setLayout(oMainLayout)
+   ::setLayout( oMainLayout )
 
-   ::setWindowTitle("Extension")
+   ::setWindowTitle( "Extension" )
    ::oExtension:hide()
 
 RETURN SELF
