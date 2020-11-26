@@ -39,7 +39,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QDomEntityReference ()
+QDomEntityReference()
 */
 void QDomEntityReference_new1()
 {
@@ -48,18 +48,13 @@ void QDomEntityReference_new1()
 }
 
 /*
-QDomEntityReference ( const QDomEntityReference & x )
+QDomEntityReference( const QDomEntityReference & x )
 */
 void QDomEntityReference_new2()
 {
   QDomEntityReference * obj = new QDomEntityReference( *PQDOMENTITYREFERENCE(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDomEntityReference ()
-[2]QDomEntityReference ( const QDomEntityReference & x )
-*/
 
 HB_FUNC_STATIC( QDOMENTITYREFERENCE_NEW )
 {

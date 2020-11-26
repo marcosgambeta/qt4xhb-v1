@@ -41,7 +41,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QXmlSimpleReader ()
+QXmlSimpleReader()
 */
 HB_FUNC_STATIC( QXMLSIMPLEREADER_NEW )
 {

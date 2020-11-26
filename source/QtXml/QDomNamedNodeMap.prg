@@ -61,7 +61,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QDomNamedNodeMap ()
+QDomNamedNodeMap()
 */
 void QDomNamedNodeMap_new1()
 {
@@ -70,18 +70,13 @@ void QDomNamedNodeMap_new1()
 }
 
 /*
-QDomNamedNodeMap ( const QDomNamedNodeMap & n )
+QDomNamedNodeMap( const QDomNamedNodeMap & n )
 */
 void QDomNamedNodeMap_new2()
 {
   QDomNamedNodeMap * obj = new QDomNamedNodeMap( *PQDOMNAMEDNODEMAP(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDomNamedNodeMap ()
-[2]QDomNamedNodeMap ( const QDomNamedNodeMap & n )
-*/
 
 HB_FUNC_STATIC( QDOMNAMEDNODEMAP_NEW )
 {

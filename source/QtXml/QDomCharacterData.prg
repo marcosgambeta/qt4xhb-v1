@@ -47,7 +47,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QDomCharacterData ()
+QDomCharacterData()
 */
 void QDomCharacterData_new1()
 {
@@ -56,18 +56,13 @@ void QDomCharacterData_new1()
 }
 
 /*
-QDomCharacterData ( const QDomCharacterData & x )
+QDomCharacterData( const QDomCharacterData & x )
 */
 void QDomCharacterData_new2()
 {
-  QDomCharacterData * obj = new QDomCharacterData();
+  QDomCharacterData * obj = new QDomCharacterData( *PQDOMCHARACTERDATA(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDomCharacterData ()
-[2]QDomCharacterData ( const QDomCharacterData & x )
-*/
 
 HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW )
 {

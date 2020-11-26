@@ -42,7 +42,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QDomEntity ()
+QDomEntity()
 */
 void QDomEntity_new1()
 {
@@ -51,18 +51,13 @@ void QDomEntity_new1()
 }
 
 /*
-QDomEntity ( const QDomEntity & x )
+QDomEntity( const QDomEntity & x )
 */
 void QDomEntity_new2()
 {
   QDomEntity * obj = new QDomEntity( *PQDOMENTITY(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDomEntity ()
-[2]QDomEntity ( const QDomEntity & x )
-*/
 
 HB_FUNC_STATIC( QDOMENTITY_NEW )
 {

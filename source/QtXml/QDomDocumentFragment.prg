@@ -39,7 +39,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QDomDocumentFragment ()
+QDomDocumentFragment()
 */
 void QDomDocumentFragment_new1()
 {
@@ -48,18 +48,13 @@ void QDomDocumentFragment_new1()
 }
 
 /*
-QDomDocumentFragment ( const QDomDocumentFragment & x )
+QDomDocumentFragment( const QDomDocumentFragment & x )
 */
 void QDomDocumentFragment_new2()
 {
   QDomDocumentFragment * obj = new QDomDocumentFragment( *PQDOMDOCUMENTFRAGMENT(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDomDocumentFragment ()
-[2]QDomDocumentFragment ( const QDomDocumentFragment & x )
-*/
 
 HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW )
 {

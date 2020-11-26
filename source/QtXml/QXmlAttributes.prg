@@ -58,7 +58,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QXmlAttributes ()
+QXmlAttributes()
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_NEW )
 {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_COUNT )
 }
 
 /*
-int index ( const QString & qName ) const
+int index( const QString & qName ) const
 */
 void QXmlAttributes_index1()
 {
@@ -180,7 +180,7 @@ void QXmlAttributes_index1()
 }
 
 /*
-int index ( const QLatin1String & qName ) const
+int index( const QLatin1String & qName ) const
 */
 void QXmlAttributes_index2()
 {
@@ -193,7 +193,7 @@ void QXmlAttributes_index2()
 }
 
 /*
-int index ( const QString & uri, const QString & localPart ) const
+int index( const QString & uri, const QString & localPart ) const
 */
 void QXmlAttributes_index3()
 {
@@ -204,12 +204,6 @@ void QXmlAttributes_index3()
     RINT( obj->index( PQSTRING(1), PQSTRING(2) ) );
   }
 }
-
-/*
-[1]int index ( const QString & qName ) const
-[2]int index ( const QLatin1String & qName ) const
-[3]int index ( const QString & uri, const QString & localPart ) const
-*/
 
 HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX )
 {
@@ -304,7 +298,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_QNAME )
 }
 
 /*
-QString type ( int index ) const
+QString type( int index ) const
 */
 void QXmlAttributes_type1()
 {
@@ -317,7 +311,7 @@ void QXmlAttributes_type1()
 }
 
 /*
-QString type ( const QString & qName ) const
+QString type( const QString & qName ) const
 */
 void QXmlAttributes_type2()
 {
@@ -330,7 +324,7 @@ void QXmlAttributes_type2()
 }
 
 /*
-QString type ( const QString & uri, const QString & localName ) const
+QString type( const QString & uri, const QString & localName ) const
 */
 void QXmlAttributes_type3()
 {
@@ -341,12 +335,6 @@ void QXmlAttributes_type3()
     RQSTRING( obj->type( PQSTRING(1), PQSTRING(2) ) );
   }
 }
-
-/*
-[1]QString type ( int index ) const
-[2]QString type ( const QString & qName ) const
-[3]QString type ( const QString & uri, const QString & localName ) const
-*/
 
 HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE )
 {
@@ -393,7 +381,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_URI )
 }
 
 /*
-QString value ( int index ) const
+QString value( int index ) const
 */
 void QXmlAttributes_value1()
 {
@@ -406,7 +394,7 @@ void QXmlAttributes_value1()
 }
 
 /*
-QString value ( const QString & qName ) const
+QString value( const QString & qName ) const
 */
 void QXmlAttributes_value2()
 {
@@ -419,7 +407,7 @@ void QXmlAttributes_value2()
 }
 
 /*
-QString value ( const QLatin1String & qName ) const
+QString value( const QLatin1String & qName ) const
 */
 void QXmlAttributes_value3()
 {
@@ -432,7 +420,7 @@ void QXmlAttributes_value3()
 }
 
 /*
-QString value ( const QString & uri, const QString & localName ) const
+QString value( const QString & uri, const QString & localName ) const
 */
 void QXmlAttributes_value4()
 {
@@ -443,13 +431,6 @@ void QXmlAttributes_value4()
     RQSTRING( obj->value( PQSTRING(1), PQSTRING(2) ) );
   }
 }
-
-/*
-[1]QString value ( int index ) const
-[2]QString value ( const QString & qName ) const
-[3]QString value ( const QLatin1String & qName ) const
-[4]QString value ( const QString & uri, const QString & localName ) const
-*/
 
 HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE )
 {

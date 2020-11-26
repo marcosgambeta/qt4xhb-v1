@@ -55,7 +55,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QDomNodeList ()
+QDomNodeList()
 */
 void QDomNodeList_new1()
 {
@@ -64,18 +64,13 @@ void QDomNodeList_new1()
 }
 
 /*
-QDomNodeList ( const QDomNodeList & n )
+QDomNodeList( const QDomNodeList & n )
 */
 void QDomNodeList_new2()
 {
   QDomNodeList * obj = new QDomNodeList( *PQDOMNODELIST(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDomNodeList ()
-[2]QDomNodeList ( const QDomNodeList & n )
-*/
 
 HB_FUNC_STATIC( QDOMNODELIST_NEW )
 {

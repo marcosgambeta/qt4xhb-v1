@@ -66,7 +66,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QXmlDefaultHandler ()
+QXmlDefaultHandler()
 */
 HB_FUNC_STATIC( QXMLDEFAULTHANDLER_NEW )
 {

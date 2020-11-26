@@ -56,7 +56,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QDomImplementation ()
+QDomImplementation()
 */
 void QDomImplementation_new1()
 {
@@ -65,18 +65,13 @@ void QDomImplementation_new1()
 }
 
 /*
-QDomImplementation ( const QDomImplementation & x )
+QDomImplementation( const QDomImplementation & x )
 */
 void QDomImplementation_new2()
 {
   QDomImplementation * obj = new QDomImplementation( *PQDOMIMPLEMENTATION(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDomImplementation ()
-[2]QDomImplementation ( const QDomImplementation & x )
-*/
 
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW )
 {

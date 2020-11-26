@@ -50,6 +50,8 @@ CLASS QDomDocument INHERIT QDomNode
    METHOD implementation
    METHOD importNode
    METHOD nodeType
+   METHOD setContent
+   METHOD setContext
    METHOD toByteArray
    METHOD toString
 
@@ -72,7 +74,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QDomDocument ()
+QDomDocument()
 */
 void QDomDocument_new1()
 {
@@ -81,7 +83,7 @@ void QDomDocument_new1()
 }
 
 /*
-QDomDocument ( const QString & name )
+QDomDocument( const QString & name )
 */
 void QDomDocument_new2()
 {
@@ -90,7 +92,7 @@ void QDomDocument_new2()
 }
 
 /*
-QDomDocument ( const QDomDocumentType & doctype )
+QDomDocument( const QDomDocumentType & doctype )
 */
 void QDomDocument_new3()
 {
@@ -99,20 +101,13 @@ void QDomDocument_new3()
 }
 
 /*
-QDomDocument ( const QDomDocument & x )
+QDomDocument( const QDomDocument & x )
 */
 void QDomDocument_new4()
 {
   QDomDocument * obj = new QDomDocument( *PQDOMDOCUMENT(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDomDocument ()
-[2]QDomDocument ( const QString & name )
-[3]QDomDocument ( const QDomDocumentType & doctype )
-[4]QDomDocument ( const QDomDocument & x )
-*/
 
 HB_FUNC_STATIC( QDOMDOCUMENT_NEW )
 {
@@ -605,47 +600,180 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NODETYPE )
 }
 
 /*
-bool setContent ( const QByteArray & data, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+bool setContent( const QByteArray & data, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 */
+void QDomDocument_setContent1()
+{
+  QDomDocument * obj = (QDomDocument *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    int par4;
+    int par5;
+    RBOOL( obj->setContent( *PQBYTEARRAY(1), PBOOL(2), NULL, &par4, &par5 ) );
+    hb_storni( par4, 4 );
+    hb_storni( par5, 5 );
+  }
+}
 
 /*
-bool setContent ( const QString & text, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+bool setContent( const QString & text, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 */
+void QDomDocument_setContent2()
+{
+  QDomDocument * obj = (QDomDocument *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    int par4;
+    int par5;
+    RBOOL( obj->setContent( PQSTRING(1), PBOOL(2), NULL, &par4, &par5 ) );
+    hb_storni( par4, 4 );
+    hb_storni( par5, 5 );
+  }
+}
 
 /*
-bool setContent ( QIODevice * dev, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+bool setContent( QIODevice * dev, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 */
+void QDomDocument_setContent3()
+{
+  QDomDocument * obj = (QDomDocument *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    int par4;
+    int par5;
+    RBOOL( obj->setContent( PQIODEVICE(1), PBOOL(2), NULL, &par4, &par5 ) );
+    hb_storni( par4, 4 );
+    hb_storni( par5, 5 );
+  }
+}
 
 /*
-bool setContent ( QXmlInputSource * source, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+bool setContent( QXmlInputSource * source, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 */
+void QDomDocument_setContent4()
+{
+  QDomDocument * obj = (QDomDocument *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    int par4;
+    int par5;
+    RBOOL( obj->setContent( PQXMLINPUTSOURCE(1), PBOOL(2), NULL, &par4, &par5 ) );
+    hb_storni( par4, 4 );
+    hb_storni( par5, 5 );
+  }
+}
 
 /*
-bool setContent ( const QString & text, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+bool setContent( const QString & text, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 */
+void QDomDocument_setContent5()
+{
+  QDomDocument * obj = (QDomDocument *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    int par3;
+    int par4;
+    RBOOL( obj->setContent( PQSTRING(1), NULL, &par3, &par4 ) );
+    hb_storni( par3, 3 );
+    hb_storni( par4, 4 );
+  }
+}
 
 /*
-bool setContent ( const QByteArray & buffer, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+bool setContent( const QByteArray & buffer, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 */
+void QDomDocument_setContent6()
+{
+  QDomDocument * obj = (QDomDocument *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    int par3;
+    int par4;
+    RBOOL( obj->setContent( *PQBYTEARRAY(1), NULL, &par3, &par4 ) );
+    hb_storni( par3, 3 );
+    hb_storni( par4, 4 );
+  }
+}
 
 /*
-bool setContent ( QIODevice * dev, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+bool setContent( QIODevice * dev, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 */
+void QDomDocument_setContent7()
+{
+  QDomDocument * obj = (QDomDocument *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+    int par3;
+    int par4;
+    RBOOL( obj->setContent( PQIODEVICE(1), NULL, &par3, &par4 ) );
+    hb_storni( par3, 3 );
+    hb_storni( par4, 4 );
+  }
+}
 
 /*
-bool setContent ( QXmlInputSource * source, QXmlReader * reader, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
+bool setContent( QXmlInputSource * source, QXmlReader * reader, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
 */
+void QDomDocument_setContent8()
+{
+  QDomDocument * obj = (QDomDocument *) Qt4xHb::itemGetPtrStackSelfItem();
 
-/*
-[1]bool setContent ( const QByteArray & data, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-[2]bool setContent ( const QString & text, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-[3]bool setContent ( QIODevice * dev, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-[4]bool setContent ( QXmlInputSource * source, bool namespaceProcessing, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-[5]bool setContent ( const QString & text, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-[6]bool setContent ( const QByteArray & buffer, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-[7]bool setContent ( QIODevice * dev, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-[8]bool setContent ( QXmlInputSource * source, QXmlReader * reader, QString * errorMsg = 0, int * errorLine = 0, int * errorColumn = 0 )
-*/
+  if( obj )
+  {
+    int par4;
+    int par5;
+    RBOOL( obj->setContent( PQXMLINPUTSOURCE(1), PQXMLREADER(2), NULL, &par4, &par5 ) );
+    hb_storni( par4, 4 );
+    hb_storni( par5, 5 );
+  }
+}
+
+HB_FUNC_STATIC( QDOMDOCUMENT_SETCONTENT )
+{
+  if( ISBETWEEN(2,5) && ISQBYTEARRAY(1) && ISLOG(2) && (ISCHAR(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
+  {
+    QDomDocument_setContent1();
+  }
+  else if( ISBETWEEN(2,5) && ISCHAR(1) && ISLOG(2) && (ISCHAR(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
+  {
+    QDomDocument_setContent2();
+  }
+  else if( ISBETWEEN(2,5) && ISQIODEVICE(1) && ISLOG(2) && (ISCHAR(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
+  {
+    QDomDocument_setContent3();
+  }
+  else if( ISBETWEEN(2,5) && ISQXMLINPUTSOURCE(1) && ISLOG(2) && (ISCHAR(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
+  {
+    QDomDocument_setContent4();
+  }
+  else if( ISBETWEEN(1,4) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
+  {
+    QDomDocument_setContent5();
+  }
+  else if( ISBETWEEN(1,4) && ISQBYTEARRAY(1) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
+  {
+    QDomDocument_setContent6();
+  }
+  else if( ISBETWEEN(1,4) && ISQIODEVICE(1) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
+  {
+    QDomDocument_setContent7();
+  }
+  else if( ISBETWEEN(2,5) && ISQXMLINPUTSOURCE(1) && ISQXMLREADER(2) && (ISCHAR(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
+  {
+    QDomDocument_setContent8();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
 
 /*
 QByteArray toByteArray( int indent = 1 ) const

@@ -45,7 +45,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QDomAttr ()
+QDomAttr()
 */
 void QDomAttr_new1()
 {
@@ -54,18 +54,13 @@ void QDomAttr_new1()
 }
 
 /*
-QDomAttr ( const QDomAttr & x )
+QDomAttr( const QDomAttr & x )
 */
 void QDomAttr_new2()
 {
   QDomAttr * obj = new QDomAttr( *PQDOMATTR(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDomAttr ()
-[2]QDomAttr ( const QDomAttr & x )
-*/
 
 HB_FUNC_STATIC( QDOMATTR_NEW )
 {

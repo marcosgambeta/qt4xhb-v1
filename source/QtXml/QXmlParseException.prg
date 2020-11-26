@@ -53,7 +53,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
+QXmlParseException( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
 */
 void QXmlParseException_new1()
 {
@@ -62,18 +62,13 @@ void QXmlParseException_new1()
 }
 
 /*
-QXmlParseException ( const QXmlParseException & other )
+QXmlParseException( const QXmlParseException & other )
 */
 void QXmlParseException_new2()
 {
   QXmlParseException * obj = new QXmlParseException( *PQXMLPARSEEXCEPTION(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QXmlParseException ( const QString & name = QString(), int c = -1, int l = -1, const QString & p = QString(), const QString & s = QString() )
-[2]QXmlParseException ( const QXmlParseException & other )
-*/
 
 HB_FUNC_STATIC( QXMLPARSEEXCEPTION_NEW )
 {

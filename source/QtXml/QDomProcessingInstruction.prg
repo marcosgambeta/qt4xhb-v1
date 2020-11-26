@@ -42,7 +42,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QDomProcessingInstruction ()
+QDomProcessingInstruction()
 */
 void QDomProcessingInstruction_new1()
 {
@@ -51,18 +51,13 @@ void QDomProcessingInstruction_new1()
 }
 
 /*
-QDomProcessingInstruction ( const QDomProcessingInstruction & x )
+QDomProcessingInstruction( const QDomProcessingInstruction & x )
 */
 void QDomProcessingInstruction_new2()
 {
   QDomProcessingInstruction * obj = new QDomProcessingInstruction( *PQDOMPROCESSINGINSTRUCTION(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDomProcessingInstruction ()
-[2]QDomProcessingInstruction ( const QDomProcessingInstruction & x )
-*/
 
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW )
 {

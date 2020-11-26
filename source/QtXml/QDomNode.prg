@@ -125,7 +125,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QDomNode ()
+QDomNode()
 */
 void QDomNode_new1()
 {
@@ -134,18 +134,13 @@ void QDomNode_new1()
 }
 
 /*
-QDomNode ( const QDomNode & n )
+QDomNode( const QDomNode & n )
 */
 void QDomNode_new2()
 {
   QDomNode * obj = new QDomNode( *PQDOMNODE(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDomNode ()
-[2]QDomNode ( const QDomNode & n )
-*/
 
 HB_FUNC_STATIC( QDOMNODE_NEW )
 {
@@ -1308,7 +1303,7 @@ HB_FUNC_STATIC( QDOMNODE_REPLACECHILD )
 }
 
 /*
-void save ( QTextStream & str, int indent ) const
+void save( QTextStream & str, int indent ) const
 */
 void QDomNode_save1()
 {
@@ -1323,7 +1318,7 @@ void QDomNode_save1()
 }
 
 /*
-void save ( QTextStream & str, int indent, EncodingPolicy encodingPolicy ) const
+void save( QTextStream & str, int indent, QDomNode::EncodingPolicy encodingPolicy ) const
 */
 void QDomNode_save2()
 {
@@ -1336,11 +1331,6 @@ void QDomNode_save2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void save ( QTextStream & str, int indent ) const
-[2]void save ( QTextStream & str, int indent, EncodingPolicy encodingPolicy ) const
-*/
 
 HB_FUNC_STATIC( QDOMNODE_SAVE )
 {

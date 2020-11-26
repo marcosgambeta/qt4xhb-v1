@@ -41,7 +41,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QDomNotation ()
+QDomNotation()
 */
 void QDomNotation_new1()
 {
@@ -50,18 +50,13 @@ void QDomNotation_new1()
 }
 
 /*
-QDomNotation ( const QDomNotation & x )
+QDomNotation( const QDomNotation & x )
 */
 void QDomNotation_new2()
 {
   QDomNotation * obj = new QDomNotation( *PQDOMNOTATION(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDomNotation ()
-[2]QDomNotation ( const QDomNotation & x )
-*/
 
 HB_FUNC_STATIC( QDOMNOTATION_NEW )
 {

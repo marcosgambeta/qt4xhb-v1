@@ -40,7 +40,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QDomText ()
+QDomText()
 */
 void QDomText_new1()
 {
@@ -49,18 +49,13 @@ void QDomText_new1()
 }
 
 /*
-QDomText ( const QDomText & x )
+QDomText( const QDomText & x )
 */
 void QDomText_new2()
 {
   QDomText * obj = new QDomText( *PQDOMTEXT(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDomText ()
-[2]QDomText ( const QDomText & x )
-*/
 
 HB_FUNC_STATIC( QDOMTEXT_NEW )
 {

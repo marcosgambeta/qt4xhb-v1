@@ -54,7 +54,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QXmlInputSource ()
+QXmlInputSource()
 */
 void QXmlInputSource_new1()
 {
@@ -63,18 +63,13 @@ void QXmlInputSource_new1()
 }
 
 /*
-QXmlInputSource ( QIODevice * dev )
+QXmlInputSource( QIODevice * dev )
 */
 void QXmlInputSource_new2()
 {
   QXmlInputSource * obj = new QXmlInputSource( PQIODEVICE(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QXmlInputSource ()
-[2]QXmlInputSource ( QIODevice * dev )
-*/
 
 HB_FUNC_STATIC( QXMLINPUTSOURCE_NEW )
 {
@@ -211,7 +206,7 @@ HB_FUNC_STATIC( QXMLINPUTSOURCE_RESET )
 }
 
 /*
-virtual void setData ( const QString & dat )
+virtual void setData( const QString & dat )
 */
 void QXmlInputSource_setData1()
 {
@@ -226,7 +221,7 @@ void QXmlInputSource_setData1()
 }
 
 /*
-virtual void setData ( const QByteArray & dat )
+virtual void setData( const QByteArray & dat )
 */
 void QXmlInputSource_setData2()
 {
@@ -239,11 +234,6 @@ void QXmlInputSource_setData2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]virtual void setData ( const QString & dat )
-[2]virtual void setData ( const QByteArray & dat )
-*/
 
 HB_FUNC_STATIC( QXMLINPUTSOURCE_SETDATA )
 {

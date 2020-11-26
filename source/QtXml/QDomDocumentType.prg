@@ -46,7 +46,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QDomDocumentType ()
+QDomDocumentType()
 */
 void QDomDocumentType_new1()
 {
@@ -55,18 +55,13 @@ void QDomDocumentType_new1()
 }
 
 /*
-QDomDocumentType ( const QDomDocumentType & n )
+QDomDocumentType( const QDomDocumentType & n )
 */
 void QDomDocumentType_new2()
 {
   QDomDocumentType * obj = new QDomDocumentType( *PQDOMDOCUMENTTYPE(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDomDocumentType ()
-[2]QDomDocumentType ( const QDomDocumentType & n )
-*/
 
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
 {

@@ -39,7 +39,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QDomCDATASection ()
+QDomCDATASection()
 */
 void QDomCDATASection_new1()
 {
@@ -48,18 +48,13 @@ void QDomCDATASection_new1()
 }
 
 /*
-QDomCDATASection ( const QDomCDATASection & x )
+QDomCDATASection( const QDomCDATASection & x )
 */
 void QDomCDATASection_new2()
 {
   QDomCDATASection * obj = new QDomCDATASection( *PQDOMCDATASECTION(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDomCDATASection ()
-[2]QDomCDATASection ( const QDomCDATASection & x )
-*/
 
 HB_FUNC_STATIC( QDOMCDATASECTION_NEW )
 {
