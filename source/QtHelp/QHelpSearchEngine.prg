@@ -60,7 +60,7 @@ RETURN
 #include <QtHelp/QHelpSearchResultWidget>
 
 /*
-QHelpSearchEngine ( QHelpEngineCore * helpEngine, QObject * parent = 0 )
+QHelpSearchEngine( QHelpEngineCore * helpEngine, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_NEW )
 {

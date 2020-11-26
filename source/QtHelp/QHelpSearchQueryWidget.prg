@@ -45,7 +45,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QHelpSearchQueryWidget ( QWidget * parent = 0 )
+QHelpSearchQueryWidget( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_NEW )
 {

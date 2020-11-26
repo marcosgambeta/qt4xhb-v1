@@ -76,7 +76,7 @@ RETURN
 #include <QtCore/QStringList>
 
 /*
-QHelpEngineCore ( const QString & collectionFile, QObject * parent = 0 )
+QHelpEngineCore( const QString & collectionFile, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_NEW )
 {
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILES )
 }
 
 /*
-QStringList filterAttributes () const
+QStringList filterAttributes() const
 */
 void QHelpEngineCore_filterAttributes1()
 {
@@ -418,7 +418,7 @@ void QHelpEngineCore_filterAttributes1()
 }
 
 /*
-QStringList filterAttributes ( const QString & filterName ) const
+QStringList filterAttributes( const QString & filterName ) const
 */
 void QHelpEngineCore_filterAttributes2()
 {
@@ -429,11 +429,6 @@ void QHelpEngineCore_filterAttributes2()
     RQSTRINGLIST( obj->filterAttributes( PQSTRING(1) ) );
   }
 }
-
-/*
-[1]QStringList filterAttributes () const
-[2]QStringList filterAttributes ( const QString & filterName ) const
-*/
 
 HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES )
 {
