@@ -50,7 +50,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QSupportedWritingSystems ()
+QSupportedWritingSystems()
 */
 void QSupportedWritingSystems_new1()
 {
@@ -59,18 +59,13 @@ void QSupportedWritingSystems_new1()
 }
 
 /*
-QSupportedWritingSystems ( const QSupportedWritingSystems & other )
+QSupportedWritingSystems( const QSupportedWritingSystems & other )
 */
 void QSupportedWritingSystems_new2()
 {
   QSupportedWritingSystems * obj = new QSupportedWritingSystems( *PQSUPPORTEDWRITINGSYSTEMS(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QSupportedWritingSystems ()
-[2]QSupportedWritingSystems ( const QSupportedWritingSystems & other )
-*/
 
 HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_NEW )
 {

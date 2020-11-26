@@ -75,7 +75,7 @@ RETURN
 #include <QtGui/QVector4D>
 
 /*
-QVector3D ()
+QVector3D()
 */
 void QVector3D_new1()
 {
@@ -84,7 +84,7 @@ void QVector3D_new1()
 }
 
 /*
-QVector3D ( qreal xpos, qreal ypos, qreal zpos )
+QVector3D( qreal xpos, qreal ypos, qreal zpos )
 */
 void QVector3D_new2()
 {
@@ -93,7 +93,7 @@ void QVector3D_new2()
 }
 
 /*
-QVector3D ( const QPoint & point )
+QVector3D( const QPoint & point )
 */
 void QVector3D_new3()
 {
@@ -102,7 +102,7 @@ void QVector3D_new3()
 }
 
 /*
-QVector3D ( const QPointF & point )
+QVector3D( const QPointF & point )
 */
 void QVector3D_new4()
 {
@@ -111,7 +111,7 @@ void QVector3D_new4()
 }
 
 /*
-QVector3D ( const QVector2D & vector )
+QVector3D( const QVector2D & vector )
 */
 void QVector3D_new5()
 {
@@ -120,7 +120,7 @@ void QVector3D_new5()
 }
 
 /*
-QVector3D ( const QVector2D & vector, qreal zpos )
+QVector3D( const QVector2D & vector, qreal zpos )
 */
 void QVector3D_new6()
 {
@@ -129,23 +129,13 @@ void QVector3D_new6()
 }
 
 /*
-QVector3D ( const QVector4D & vector )
+QVector3D( const QVector4D & vector )
 */
 void QVector3D_new7()
 {
   QVector3D * obj = new QVector3D( *PQVECTOR4D(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QVector3D ()
-[2]QVector3D ( qreal xpos, qreal ypos, qreal zpos )
-[3]QVector3D ( const QPoint & point )
-[4]QVector3D ( const QPointF & point )
-[5]QVector3D ( const QVector2D & vector )
-[6]QVector3D ( const QVector2D & vector, qreal zpos )
-[7]QVector3D ( const QVector4D & vector )
-*/
 
 HB_FUNC_STATIC( QVECTOR3D_NEW )
 {
@@ -225,7 +215,7 @@ HB_FUNC_STATIC( QVECTOR3D_DISTANCETOLINE )
 }
 
 /*
-qreal distanceToPlane ( const QVector3D & plane, const QVector3D & normal ) const
+qreal distanceToPlane( const QVector3D & plane, const QVector3D & normal ) const
 */
 void QVector3D_distanceToPlane1()
 {
@@ -238,7 +228,7 @@ void QVector3D_distanceToPlane1()
 }
 
 /*
-qreal distanceToPlane ( const QVector3D & plane1, const QVector3D & plane2, const QVector3D & plane3 ) const
+qreal distanceToPlane( const QVector3D & plane1, const QVector3D & plane2, const QVector3D & plane3 ) const
 */
 void QVector3D_distanceToPlane2()
 {
@@ -249,11 +239,6 @@ void QVector3D_distanceToPlane2()
     RQREAL( obj->distanceToPlane( *PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3) ) );
   }
 }
-
-/*
-[1]qreal distanceToPlane ( const QVector3D & plane, const QVector3D & normal ) const
-[2]qreal distanceToPlane ( const QVector3D & plane1, const QVector3D & plane2, const QVector3D & plane3 ) const
-*/
 
 HB_FUNC_STATIC( QVECTOR3D_DISTANCETOPLANE )
 {
@@ -684,7 +669,7 @@ HB_FUNC_STATIC( QVECTOR3D_DOTPRODUCT )
 }
 
 /*
-static QVector3D normal ( const QVector3D & v1, const QVector3D & v2 )
+static QVector3D normal( const QVector3D & v1, const QVector3D & v2 )
 */
 void QVector3D_normal1()
 {
@@ -694,7 +679,7 @@ void QVector3D_normal1()
 }
 
 /*
-static QVector3D normal ( const QVector3D & v1, const QVector3D & v2, const QVector3D & v3 )
+static QVector3D normal( const QVector3D & v1, const QVector3D & v2, const QVector3D & v3 )
 */
 void QVector3D_normal2()
 {
@@ -702,11 +687,6 @@ void QVector3D_normal2()
   QVector3D * ptr = new QVector3D( QVector3D::normal( *PQVECTOR3D(1), *PQVECTOR3D(2), *PQVECTOR3D(3) ) );
   Qt4xHb::createReturnClass( ptr, "QVECTOR3D", true );
 }
-
-/*
-[1]QVector3D normal ( const QVector3D & v1, const QVector3D & v2 )
-[2]QVector3D normal ( const QVector3D & v1, const QVector3D & v2, const QVector3D & v3 )
-*/
 
 HB_FUNC_STATIC( QVECTOR3D_NORMAL )
 {

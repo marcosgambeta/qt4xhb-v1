@@ -101,7 +101,7 @@ RETURN
 #include <QtGui/QStatusBar>
 
 /*
-QMainWindow ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+QMainWindow( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC( QMAINWINDOW_NEW )
 {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QMAINWINDOW_DELETE )
 }
 
 /*
-void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget )
+void addDockWidget( Qt::DockWidgetArea area, QDockWidget * dockwidget )
 */
 void QMainWindow_addDockWidget1()
 {
@@ -151,7 +151,7 @@ void QMainWindow_addDockWidget1()
 }
 
 /*
-void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget, Qt::Orientation orientation )
+void addDockWidget( Qt::DockWidgetArea area, QDockWidget * dockwidget, Qt::Orientation orientation )
 */
 void QMainWindow_addDockWidget2()
 {
@@ -164,11 +164,6 @@ void QMainWindow_addDockWidget2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget )
-[2]void addDockWidget ( Qt::DockWidgetArea area, QDockWidget * dockwidget, Qt::Orientation orientation )
-*/
 
 HB_FUNC_STATIC( QMAINWINDOW_ADDDOCKWIDGET )
 {
@@ -187,7 +182,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDDOCKWIDGET )
 }
 
 /*
-void addToolBar ( Qt::ToolBarArea area, QToolBar * toolbar )
+void addToolBar( Qt::ToolBarArea area, QToolBar * toolbar )
 */
 void QMainWindow_addToolBar1()
 {
@@ -202,7 +197,7 @@ void QMainWindow_addToolBar1()
 }
 
 /*
-void addToolBar ( QToolBar * toolbar )
+void addToolBar( QToolBar * toolbar )
 */
 void QMainWindow_addToolBar2()
 {
@@ -217,7 +212,7 @@ void QMainWindow_addToolBar2()
 }
 
 /*
-QToolBar * addToolBar ( const QString & title )
+QToolBar * addToolBar( const QString & title )
 */
 void QMainWindow_addToolBar3()
 {
@@ -229,12 +224,6 @@ void QMainWindow_addToolBar3()
     Qt4xHb::createReturnQObjectClass( ptr, "QTOOLBAR" );
   }
 }
-
-/*
-[1]void addToolBar ( Qt::ToolBarArea area, QToolBar * toolbar )
-[2]void addToolBar ( QToolBar * toolbar )
-[3]QToolBar * addToolBar ( const QString & title )
-*/
 
 HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBAR )
 {

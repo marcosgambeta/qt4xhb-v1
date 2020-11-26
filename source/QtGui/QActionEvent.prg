@@ -44,7 +44,7 @@ RETURN
 #include <QtGui/QAction>
 
 /*
-QActionEvent ( int type, QAction * action, QAction * before = 0 )
+QActionEvent( int type, QAction * action, QAction * before = 0 )
 */
 HB_FUNC_STATIC( QACTIONEVENT_NEW )
 {

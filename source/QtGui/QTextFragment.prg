@@ -58,7 +58,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QTextFragment ()
+QTextFragment()
 */
 void QTextFragment_new1()
 {
@@ -67,18 +67,13 @@ void QTextFragment_new1()
 }
 
 /*
-QTextFragment ( const QTextFragment & other )
+QTextFragment( const QTextFragment & other )
 */
 void QTextFragment_new2()
 {
   QTextFragment * obj = new QTextFragment( *PQTEXTFRAGMENT(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QTextFragment ()
-[2]QTextFragment ( const QTextFragment & other )
-*/
 
 HB_FUNC_STATIC( QTEXTFRAGMENT_NEW )
 {

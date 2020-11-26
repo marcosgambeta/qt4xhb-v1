@@ -56,7 +56,7 @@ RETURN
 #include <QtGui/QPen>
 
 /*
-QGraphicsLineItem ( QGraphicsItem * parent = 0 )
+QGraphicsLineItem( QGraphicsItem * parent = 0 )
 */
 void QGraphicsLineItem_new1()
 {
@@ -65,7 +65,7 @@ void QGraphicsLineItem_new1()
 }
 
 /*
-QGraphicsLineItem ( const QLineF & line, QGraphicsItem * parent = 0 )
+QGraphicsLineItem( const QLineF & line, QGraphicsItem * parent = 0 )
 */
 void QGraphicsLineItem_new2()
 {
@@ -74,19 +74,13 @@ void QGraphicsLineItem_new2()
 }
 
 /*
-QGraphicsLineItem ( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = 0 )
+QGraphicsLineItem( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = 0 )
 */
 void QGraphicsLineItem_new3()
 {
   QGraphicsLineItem * obj = new QGraphicsLineItem( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ISNIL(5)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(5) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QGraphicsLineItem ( QGraphicsItem * parent = 0 )
-[2]QGraphicsLineItem ( const QLineF & line, QGraphicsItem * parent = 0 )
-[3]QGraphicsLineItem ( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW )
 {
@@ -176,7 +170,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_PEN )
 }
 
 /*
-void setLine ( const QLineF & line )
+void setLine( const QLineF & line )
 */
 void QGraphicsLineItem_setLine1()
 {
@@ -191,7 +185,7 @@ void QGraphicsLineItem_setLine1()
 }
 
 /*
-void setLine ( qreal x1, qreal y1, qreal x2, qreal y2 )
+void setLine( qreal x1, qreal y1, qreal x2, qreal y2 )
 */
 void QGraphicsLineItem_setLine2()
 {
@@ -204,11 +198,6 @@ void QGraphicsLineItem_setLine2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setLine ( const QLineF & line )
-[2]void setLine ( qreal x1, qreal y1, qreal x2, qreal y2 )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETLINE )
 {

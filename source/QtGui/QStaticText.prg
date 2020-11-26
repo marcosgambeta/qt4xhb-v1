@@ -62,7 +62,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QStaticText ()
+QStaticText()
 */
 void QStaticText_new1()
 {
@@ -71,7 +71,7 @@ void QStaticText_new1()
 }
 
 /*
-QStaticText ( const QString & text )
+QStaticText( const QString & text )
 */
 void QStaticText_new2()
 {
@@ -80,19 +80,13 @@ void QStaticText_new2()
 }
 
 /*
-QStaticText ( const QStaticText & other )
+QStaticText( const QStaticText & other )
 */
 void QStaticText_new3()
 {
   QStaticText * obj = new QStaticText( *PQSTATICTEXT(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QStaticText ()
-[2]QStaticText ( const QString & text )
-[3]QStaticText ( const QStaticText & other )
-*/
 
 HB_FUNC_STATIC( QSTATICTEXT_NEW )
 {

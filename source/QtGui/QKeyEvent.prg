@@ -49,7 +49,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QKeyEvent ( Type type, int key, Qt::KeyboardModifiers modifiers, const QString & text = QString(), bool autorep = false, ushort count = 1 )
+QKeyEvent( QEvent::Type type, int key, Qt::KeyboardModifiers modifiers, const QString & text = QString(), bool autorep = false, ushort count = 1 )
 */
 HB_FUNC_STATIC( QKEYEVENT_NEW )
 {

@@ -37,10 +37,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QClipboardEvent(QEventPrivate *data)
-*/
-
 HB_FUNC_STATIC( QCLIPBOARDEVENT_DELETE )
 {
   QClipboardEvent * obj = (QClipboardEvent *) Qt4xHb::itemGetPtrStackSelfItem();
@@ -57,9 +53,5 @@ HB_FUNC_STATIC( QCLIPBOARDEVENT_DELETE )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-QEventPrivate *data()
-*/
 
 #pragma ENDDUMP

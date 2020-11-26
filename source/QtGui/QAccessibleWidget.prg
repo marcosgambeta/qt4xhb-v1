@@ -50,7 +50,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QAccessibleWidget ( QWidget * w, Role role = Client, const QString & name = QString() )
+QAccessibleWidget( QWidget * w, QAccessible::Role role = QAccessible::Client, const QString & name = QString() )
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_NEW )
 {

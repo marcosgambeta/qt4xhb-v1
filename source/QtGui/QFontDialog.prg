@@ -54,7 +54,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QFontDialog(QWidget *parent = 0)
+QFontDialog( QWidget * parent = 0 )
 */
 void QFontDialog_new1()
 {
@@ -63,18 +63,13 @@ void QFontDialog_new1()
 }
 
 /*
-QFontDialog(const QFont &initial, QWidget *parent = 0)
+QFontDialog( const QFont & initial, QWidget * parent = 0 )
 */
 void QFontDialog_new2()
 {
   QFontDialog * obj = new QFontDialog( *PQFONT(1), OPQWIDGET(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QFontDialog(QWidget *parent = 0)
-[2]QFontDialog(const QFont &initial, QWidget *parent = 0)
-*/
 
 HB_FUNC_STATIC( QFONTDIALOG_NEW )
 {
@@ -321,7 +316,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SETVISIBLE )
 }
 
 /*
-static QFont getFont(bool *ok, const QFont &initial, QWidget *parent, const QString &title,FontDialogOptions options)
+static QFont getFont( bool * ok, const QFont & initial, QWidget * parent, const QString & title, QFontDialog::FontDialogOptions options )
 */
 void QFontDialog_getFont1()
 {
@@ -333,7 +328,7 @@ void QFontDialog_getFont1()
 }
 
 /*
-static QFont getFont(bool *ok, const QFont &initial, QWidget *parent, const QString &title)
+static QFont getFont( bool * ok, const QFont & initial, QWidget * parent, const QString & title )
 */
 void QFontDialog_getFont2()
 {
@@ -345,7 +340,7 @@ void QFontDialog_getFont2()
 }
 
 /*
-static QFont getFont(bool *ok, const QFont &initial, QWidget *parent = 0)
+static QFont getFont( bool * ok, const QFont & initial, QWidget * parent = 0 )
 */
 void QFontDialog_getFont3()
 {
@@ -357,7 +352,7 @@ void QFontDialog_getFont3()
 }
 
 /*
-static QFont getFont(bool *ok, QWidget *parent = 0)
+static QFont getFont( bool * ok, QWidget * parent = 0 )
 */
 void QFontDialog_getFont4()
 {
@@ -367,13 +362,6 @@ void QFontDialog_getFont4()
   Qt4xHb::createReturnClass( ptr, "QFONT", true );
   hb_storl( par1, 1 );
 }
-
-/*
-[1]static QFont getFont(bool *ok, const QFont &initial, QWidget *parent, const QString &title,FontDialogOptions options)
-[2]static QFont getFont(bool *ok, const QFont &initial, QWidget *parent, const QString &title)
-[3]static QFont getFont(bool *ok, const QFont &initial, QWidget *parent = 0)
-[4]static QFont getFont(bool *ok, QWidget *parent = 0)
-*/
 
 HB_FUNC_STATIC( QFONTDIALOG_GETFONT )
 {

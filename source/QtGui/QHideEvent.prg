@@ -39,7 +39,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QHideEvent ()
+QHideEvent()
 */
 HB_FUNC_STATIC( QHIDEEVENT_NEW )
 {

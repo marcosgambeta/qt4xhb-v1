@@ -50,7 +50,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QGraphicsPathItem ( QGraphicsItem * parent = 0 )
+QGraphicsPathItem( QGraphicsItem * parent = 0 )
 */
 void QGraphicsPathItem_new1()
 {
@@ -59,18 +59,13 @@ void QGraphicsPathItem_new1()
 }
 
 /*
-QGraphicsPathItem ( const QPainterPath & path, QGraphicsItem * parent = 0 )
+QGraphicsPathItem( const QPainterPath & path, QGraphicsItem * parent = 0 )
 */
 void QGraphicsPathItem_new2()
 {
   QGraphicsPathItem * obj = new QGraphicsPathItem( *PQPAINTERPATH(1), ISNIL(2)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(2) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QGraphicsPathItem ( QGraphicsItem * parent = 0 )
-[2]QGraphicsPathItem ( const QPainterPath & path, QGraphicsItem * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSPATHITEM_NEW )
 {

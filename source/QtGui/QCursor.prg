@@ -61,7 +61,7 @@ RETURN
 #include <QtGui/QPixmap>
 
 /*
-QCursor ()
+QCursor()
 */
 void QCursor_new1()
 {
@@ -70,7 +70,7 @@ void QCursor_new1()
 }
 
 /*
-QCursor ( Qt::CursorShape shape )
+QCursor( Qt::CursorShape shape )
 */
 void QCursor_new2()
 {
@@ -79,7 +79,7 @@ void QCursor_new2()
 }
 
 /*
-QCursor ( const QBitmap & bitmap, const QBitmap & mask, int hotX = -1, int hotY = -1 )
+QCursor( const QBitmap & bitmap, const QBitmap & mask, int hotX = -1, int hotY = -1 )
 */
 void QCursor_new3()
 {
@@ -88,7 +88,7 @@ void QCursor_new3()
 }
 
 /*
-QCursor ( const QPixmap & pixmap, int hotX = -1, int hotY = -1 )
+QCursor( const QPixmap & pixmap, int hotX = -1, int hotY = -1 )
 */
 void QCursor_new4()
 {
@@ -97,31 +97,13 @@ void QCursor_new4()
 }
 
 /*
-QCursor ( const QCursor & c )
+QCursor( const QCursor & c )
 */
 void QCursor_new5()
 {
   QCursor * obj = new QCursor( *PQCURSOR(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-QCursor ( HCURSOR cursor )
-*/
-
-/*
-QCursor ( Qt::HANDLE handle )
-*/
-
-/*
-[1]QCursor ()
-[2]QCursor ( Qt::CursorShape shape )
-[3]QCursor ( const QBitmap & bitmap, const QBitmap & mask, int hotX = -1, int hotY = -1 )
-[4]QCursor ( const QPixmap & pixmap, int hotX = -1, int hotY = -1 )
-[5]QCursor ( const QCursor & c )
-[6]QCursor ( HCURSOR cursor )
-[7]QCursor ( Qt::HANDLE handle )
-*/
 
 HB_FUNC_STATIC( QCURSOR_NEW )
 {
@@ -339,7 +321,7 @@ HB_FUNC_STATIC( QCURSOR_POS )
 }
 
 /*
-static void setPos ( int x, int y )
+static void setPos( int x, int y )
 */
 void QCursor_setPos1()
 {
@@ -350,7 +332,7 @@ void QCursor_setPos1()
 }
 
 /*
-static void setPos ( const QPoint & p )
+static void setPos( const QPoint & p )
 */
 void QCursor_setPos2()
 {
@@ -359,11 +341,6 @@ void QCursor_setPos2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setPos ( int x, int y )
-[2]void setPos ( const QPoint & p )
-*/
 
 HB_FUNC_STATIC( QCURSOR_SETPOS )
 {

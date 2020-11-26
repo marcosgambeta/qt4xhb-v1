@@ -80,7 +80,7 @@ RETURN
 #include <QtGui/QImage>
 
 /*
-QRawFont ()
+QRawFont()
 */
 void QRawFont_new1()
 {
@@ -89,7 +89,7 @@ void QRawFont_new1()
 }
 
 /*
-QRawFont ( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
+QRawFont( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
 */
 void QRawFont_new2()
 {
@@ -98,7 +98,7 @@ void QRawFont_new2()
 }
 
 /*
-QRawFont ( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
+QRawFont( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
 */
 void QRawFont_new3()
 {
@@ -107,20 +107,13 @@ void QRawFont_new3()
 }
 
 /*
-QRawFont ( const QRawFont & other )
+QRawFont( const QRawFont & other )
 */
 void QRawFont_new4()
 {
   QRawFont * obj = new QRawFont( *PQRAWFONT(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QRawFont ()
-[2]QRawFont ( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
-[3]QRawFont ( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
-[4]QRawFont ( const QRawFont & other )
-*/
 
 HB_FUNC_STATIC( QRAWFONT_NEW )
 {
@@ -164,7 +157,7 @@ HB_FUNC_STATIC( QRAWFONT_DELETE )
 }
 
 /*
-QVector<QPointF> advancesForGlyphIndexes ( const QVector<quint32> & glyphIndexes ) const
+QVector<QPointF> advancesForGlyphIndexes( const QVector<quint32> & glyphIndexes ) const
 */
 HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES1 )
 {
@@ -224,11 +217,6 @@ HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES1 )
 #endif
   }
 }
-
-/*
-[1]QVector<QPointF> advancesForGlyphIndexes ( const QVector<quint32> & glyphIndexes ) const
-[2]bool advancesForGlyphIndexes ( const quint32 * glyphIndexes, QPointF * advances, int numGlyphs ) const
-*/
 
 HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES )
 {
@@ -717,7 +705,7 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTEDWRITINGSYSTEMS )
 }
 
 /*
-bool supportsCharacter ( QChar character ) const
+bool supportsCharacter( QChar character ) const
 */
 void QRawFont_supportsCharacter1()
 {
@@ -730,7 +718,7 @@ void QRawFont_supportsCharacter1()
 }
 
 /*
-bool supportsCharacter ( quint32 ucs4 ) const
+bool supportsCharacter( quint32 ucs4 ) const
 */
 void QRawFont_supportsCharacter2()
 {
@@ -741,11 +729,6 @@ void QRawFont_supportsCharacter2()
     RBOOL( obj->supportsCharacter( PQUINT32(1) ) );
   }
 }
-
-/*
-[1]bool supportsCharacter ( QChar character ) const
-[2]bool supportsCharacter ( quint32 ucs4 ) const
-*/
 
 HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER )
 {

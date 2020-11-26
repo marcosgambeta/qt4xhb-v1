@@ -73,7 +73,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QFontMetrics ( const QFont & font )
+QFontMetrics( const QFont & font )
 */
 void QFontMetrics_new1()
 {
@@ -82,7 +82,7 @@ void QFontMetrics_new1()
 }
 
 /*
-QFontMetrics ( const QFont & font, QPaintDevice * paintdevice )
+QFontMetrics( const QFont & font, QPaintDevice * paintdevice )
 */
 void QFontMetrics_new2()
 {
@@ -91,19 +91,13 @@ void QFontMetrics_new2()
 }
 
 /*
-QFontMetrics ( const QFontMetrics & fm )
+QFontMetrics( const QFontMetrics & fm )
 */
 void QFontMetrics_new3()
 {
   QFontMetrics * obj = new QFontMetrics( *PQFONTMETRICS(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QFontMetrics ( const QFont & font )
-[2]QFontMetrics ( const QFont & font, QPaintDevice * paintdevice )
-[3]QFontMetrics ( const QFontMetrics & fm )
-*/
 
 HB_FUNC_STATIC( QFONTMETRICS_NEW )
 {
@@ -191,7 +185,7 @@ HB_FUNC_STATIC( QFONTMETRICS_AVERAGECHARWIDTH )
 }
 
 /*
-QRect boundingRect ( QChar ch ) const
+QRect boundingRect( QChar ch ) const
 */
 void QFontMetrics_boundingRect1()
 {
@@ -205,7 +199,7 @@ void QFontMetrics_boundingRect1()
 }
 
 /*
-QRect boundingRect ( const QString & text ) const
+QRect boundingRect( const QString & text ) const
 */
 void QFontMetrics_boundingRect2()
 {
@@ -219,7 +213,7 @@ void QFontMetrics_boundingRect2()
 }
 
 /*
-QRect boundingRect ( int x, int y, int width, int height, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
+QRect boundingRect( int x, int y, int width, int height, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
 */
 void QFontMetrics_boundingRect3()
 {
@@ -235,7 +229,7 @@ void QFontMetrics_boundingRect3()
 }
 
 /*
-QRect boundingRect ( const QRect & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
+QRect boundingRect( const QRect & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
 */
 void QFontMetrics_boundingRect4()
 {
@@ -249,13 +243,6 @@ void QFontMetrics_boundingRect4()
     hb_storni( par5, 5 );
   }
 }
-
-/*
-[1]QRect boundingRect ( QChar ch ) const
-[2]QRect boundingRect ( const QString & text ) const
-[3]QRect boundingRect ( int x, int y, int width, int height, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
-[4]QRect boundingRect ( const QRect & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
-*/
 
 HB_FUNC_STATIC( QFONTMETRICS_BOUNDINGRECT )
 {
@@ -718,7 +705,7 @@ HB_FUNC_STATIC( QFONTMETRICS_UNDERLINEPOS )
 }
 
 /*
-int width ( const QString & text, int len = -1 ) const
+int width( const QString & text, int len = -1 ) const
 */
 void QFontMetrics_width1()
 {
@@ -731,7 +718,7 @@ void QFontMetrics_width1()
 }
 
 /*
-int width ( QChar ch ) const
+int width( QChar ch ) const
 */
 void QFontMetrics_width2()
 {
@@ -742,11 +729,6 @@ void QFontMetrics_width2()
     RINT( obj->width( *PQCHAR(1) ) );
   }
 }
-
-/*
-[1]int width ( const QString & text, int len = -1 ) const
-[2]int width ( QChar ch ) const
-*/
 
 HB_FUNC_STATIC( QFONTMETRICS_WIDTH )
 {

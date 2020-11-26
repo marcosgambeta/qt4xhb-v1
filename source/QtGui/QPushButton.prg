@@ -48,7 +48,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QPushButton ( QWidget * parent = 0 )
+QPushButton( QWidget * parent = 0 )
 */
 void QPushButton_new1()
 {
@@ -57,7 +57,7 @@ void QPushButton_new1()
 }
 
 /*
-QPushButton ( const QString & text, QWidget * parent = 0 )
+QPushButton( const QString & text, QWidget * parent = 0 )
 */
 void QPushButton_new2()
 {
@@ -66,19 +66,13 @@ void QPushButton_new2()
 }
 
 /*
-QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = 0 )
+QPushButton( const QIcon & icon, const QString & text, QWidget * parent = 0 )
 */
 void QPushButton_new3()
 {
   QPushButton * obj = new QPushButton( ISOBJECT(1)? *(QIcon *) Qt4xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), OPQWIDGET(3,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QPushButton ( QWidget * parent = 0 )
-[2]QPushButton ( const QString & text, QWidget * parent = 0 )
-[3]QPushButton ( const QIcon & icon, const QString & text, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QPUSHBUTTON_NEW )
 {

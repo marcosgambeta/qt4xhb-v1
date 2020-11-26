@@ -69,7 +69,7 @@ RETURN
 #include <QtCore/QVariant>
 
 /*
-QIcon ()
+QIcon()
 */
 void QIcon_new1()
 {
@@ -78,7 +78,7 @@ void QIcon_new1()
 }
 
 /*
-QIcon ( const QPixmap & pixmap )
+QIcon( const QPixmap & pixmap )
 */
 void QIcon_new2()
 {
@@ -87,7 +87,7 @@ void QIcon_new2()
 }
 
 /*
-QIcon ( const QIcon & other )
+QIcon( const QIcon & other )
 */
 void QIcon_new3()
 {
@@ -96,7 +96,7 @@ void QIcon_new3()
 }
 
 /*
-QIcon ( const QString & fileName )
+QIcon( const QString & fileName )
 */
 void QIcon_new4()
 {
@@ -105,7 +105,7 @@ void QIcon_new4()
 }
 
 /*
-QIcon ( QIconEngine * engine )
+QIcon( QIconEngine * engine )
 */
 void QIcon_new5()
 {
@@ -114,22 +114,13 @@ void QIcon_new5()
 }
 
 /*
-QIcon ( QIconEngineV2 * engine )
+QIcon( QIconEngineV2 * engine )
 */
 void QIcon_new6()
 {
   QIcon * obj = new QIcon( PQICONENGINEV2(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QIcon ()
-[2]QIcon ( const QPixmap & pixmap )
-[3]QIcon ( const QIcon & other )
-[4]QIcon ( const QString & fileName )
-[5]QIcon ( QIconEngine * engine )
-[6]QIcon ( QIconEngineV2 * engine )
-*/
 
 HB_FUNC_STATIC( QICON_NEW )
 {
@@ -382,7 +373,7 @@ HB_FUNC_STATIC( QICON_NAME )
 }
 
 /*
-void paint ( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
+void paint( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Qt::AlignCenter, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 */
 void QIcon_paint1()
 {
@@ -397,7 +388,7 @@ void QIcon_paint1()
 }
 
 /*
-void paint ( QPainter * painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
+void paint( QPainter * painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 */
 void QIcon_paint2()
 {
@@ -410,11 +401,6 @@ void QIcon_paint2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void paint ( QPainter * painter, const QRect & rect, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
-[2]void paint ( QPainter * painter, int x, int y, int w, int h, Qt::Alignment alignment = Qt::AlignCenter, Mode mode = Normal, State state = Off ) const
-*/
 
 HB_FUNC_STATIC( QICON_PAINT )
 {
@@ -433,7 +419,7 @@ HB_FUNC_STATIC( QICON_PAINT )
 }
 
 /*
-QPixmap pixmap ( const QSize & size, Mode mode = Normal, State state = Off ) const
+QPixmap pixmap( const QSize & size, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 */
 void QIcon_pixmap1()
 {
@@ -447,7 +433,7 @@ void QIcon_pixmap1()
 }
 
 /*
-QPixmap pixmap ( int w, int h, Mode mode = Normal, State state = Off ) const
+QPixmap pixmap( int w, int h, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 */
 void QIcon_pixmap2()
 {
@@ -461,7 +447,7 @@ void QIcon_pixmap2()
 }
 
 /*
-QPixmap pixmap ( int extent, Mode mode = Normal, State state = Off ) const
+QPixmap pixmap( int extent, QIcon::Mode mode = QIcon::Normal, QIcon::State state = QIcon::Off ) const
 */
 void QIcon_pixmap3()
 {
@@ -473,12 +459,6 @@ void QIcon_pixmap3()
     Qt4xHb::createReturnClass( ptr, "QPIXMAP", true );
   }
 }
-
-/*
-[1]QPixmap pixmap ( const QSize & size, Mode mode = Normal, State state = Off ) const
-[2]QPixmap pixmap ( int w, int h, Mode mode = Normal, State state = Off ) const
-[3]QPixmap pixmap ( int extent, Mode mode = Normal, State state = Off ) const
-*/
 
 HB_FUNC_STATIC( QICON_PIXMAP )
 {

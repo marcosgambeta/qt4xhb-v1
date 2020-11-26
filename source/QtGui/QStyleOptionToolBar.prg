@@ -59,7 +59,7 @@ void QStyleOptionToolBar_new1()
 }
 
 /*
-QStyleOptionToolBar(const QStyleOptionToolBar &other)
+QStyleOptionToolBar( const QStyleOptionToolBar & other )
 */
 void QStyleOptionToolBar_new2()
 {
@@ -68,13 +68,7 @@ void QStyleOptionToolBar_new2()
 }
 
 /*
-QStyleOptionToolBar(int version) (protected)
-*/
-
-/*
-[1]QStyleOptionToolBar()
-[2]QStyleOptionToolBar(const QStyleOptionToolBar &other)
-[3]QStyleOptionToolBar(int version) (protected)
+QStyleOptionToolBar(int version) [PROTECTED]
 */
 
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBAR_NEW )

@@ -60,7 +60,7 @@ void QStyleOptionGroupBox_new1()
 }
 
 /*
-QStyleOptionGroupBox(const QStyleOptionGroupBox &other)
+QStyleOptionGroupBox( const QStyleOptionGroupBox & other )
 */
 void QStyleOptionGroupBox_new2()
 {
@@ -69,13 +69,7 @@ void QStyleOptionGroupBox_new2()
 }
 
 /*
-QStyleOptionGroupBox(int version) (protected)
-*/
-
-/*
-[1]QStyleOptionGroupBox()
-[2]QStyleOptionGroupBox(const QStyleOptionGroupBox &other)
-[3]QStyleOptionGroupBox(int version) (protected)
+QStyleOptionGroupBox(int version) [PROTECTED]
 */
 
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_NEW )

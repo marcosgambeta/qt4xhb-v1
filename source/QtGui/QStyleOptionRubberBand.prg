@@ -51,7 +51,7 @@ void QStyleOptionRubberBand_new1()
 }
 
 /*
-QStyleOptionRubberBand(const QStyleOptionRubberBand &other)
+QStyleOptionRubberBand( const QStyleOptionRubberBand & other )
 */
 void QStyleOptionRubberBand_new2()
 {
@@ -60,13 +60,7 @@ void QStyleOptionRubberBand_new2()
 }
 
 /*
-QStyleOptionRubberBand(int version) (protected)
-*/
-
-/*
-[1]QStyleOptionRubberBand()
-[2]QStyleOptionRubberBand(const QStyleOptionRubberBand &other)
-[3]QStyleOptionRubberBand(int version) (protected)
+QStyleOptionRubberBand(int version) [PROTECTED]
 */
 
 HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_NEW )

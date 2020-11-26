@@ -331,7 +331,7 @@ RETURN
 #include <QtGui/QStyle>
 
 /*
-QWidget ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
+QWidget( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QWIDGET_NEW )
 {
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QWIDGET_BASESIZE )
 }
 
 /*
-QWidget * childAt ( int x, int y ) const
+QWidget * childAt( int x, int y ) const
 */
 void QWidget_childAt1()
 {
@@ -685,7 +685,7 @@ void QWidget_childAt1()
 }
 
 /*
-QWidget * childAt ( const QPoint & p ) const
+QWidget * childAt( const QPoint & p ) const
 */
 void QWidget_childAt2()
 {
@@ -697,11 +697,6 @@ void QWidget_childAt2()
     Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
   }
 }
-
-/*
-[1]QWidget * childAt ( int x, int y ) const
-[2]QWidget * childAt ( const QPoint & p ) const
-*/
 
 HB_FUNC_STATIC( QWIDGET_CHILDAT )
 {
@@ -945,7 +940,6 @@ HB_FUNC_STATIC( QWIDGET_EFFECTIVEWINID )
   }
 #endif
 }
-
 /*
 void ensurePolished() const
 */
@@ -1307,7 +1301,7 @@ HB_FUNC_STATIC( QWIDGET_GRABKEYBOARD )
 }
 
 /*
-void grabMouse ()
+void grabMouse()
 */
 void QWidget_grabMouse1()
 {
@@ -1322,7 +1316,7 @@ void QWidget_grabMouse1()
 }
 
 /*
-void grabMouse ( const QCursor & cursor )
+void grabMouse( const QCursor & cursor )
 */
 void QWidget_grabMouse2()
 {
@@ -1335,11 +1329,6 @@ void QWidget_grabMouse2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void grabMouse ()
-[2]void grabMouse ( const QCursor & cursor )
-*/
 
 HB_FUNC_STATIC( QWIDGET_GRABMOUSE )
 {
@@ -2394,7 +2383,7 @@ HB_FUNC_STATIC( QWIDGET_MINIMUMWIDTH )
 }
 
 /*
-void move ( const QPoint & )
+void move( const QPoint & )
 */
 void QWidget_move1()
 {
@@ -2409,7 +2398,7 @@ void QWidget_move1()
 }
 
 /*
-void move ( int x, int y )
+void move( int x, int y )
 */
 void QWidget_move2()
 {
@@ -2422,11 +2411,6 @@ void QWidget_move2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void move ( const QPoint & )
-[2]void move ( int x, int y )
-*/
 
 HB_FUNC_STATIC( QWIDGET_MOVE )
 {
@@ -2775,7 +2759,7 @@ HB_FUNC_STATIC( QWIDGET_REMOVEACTION )
 }
 
 /*
-void render ( QPaintDevice * target, const QPoint & targetOffset = QPoint(), const QRegion & sourceRegion = QRegion(), RenderFlags renderFlags = RenderFlags( DrawWindowBackground | DrawChildren ) )
+void render( QPaintDevice * target, const QPoint & targetOffset = QPoint(), const QRegion & sourceRegion = QRegion(), QWidget::RenderFlags renderFlags = QWidget::RenderFlags( QWidget::DrawWindowBackground | QWidget::DrawChildren ) )
 */
 void QWidget_render1()
 {
@@ -2790,7 +2774,7 @@ void QWidget_render1()
 }
 
 /*
-void render ( QPainter * painter, const QPoint & targetOffset = QPoint(), const QRegion & sourceRegion = QRegion(), RenderFlags renderFlags = RenderFlags( DrawWindowBackground | DrawChildren ) )
+void render( QPainter * painter, const QPoint & targetOffset = QPoint(), const QRegion & sourceRegion = QRegion(), QWidget::RenderFlags renderFlags = QWidget::RenderFlags( QWidget::DrawWindowBackground | QWidget::DrawChildren ) )
 */
 void QWidget_render2()
 {
@@ -2803,11 +2787,6 @@ void QWidget_render2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void render ( QPaintDevice * target, const QPoint & targetOffset = QPoint(), const QRegion & sourceRegion = QRegion(), RenderFlags renderFlags = RenderFlags( DrawWindowBackground | DrawChildren ) )
-[2]void render ( QPainter * painter, const QPoint & targetOffset = QPoint(), const QRegion & sourceRegion = QRegion(), RenderFlags renderFlags = RenderFlags( DrawWindowBackground | DrawChildren ) )
-*/
 
 HB_FUNC_STATIC( QWIDGET_RENDER )
 {
@@ -2826,7 +2805,7 @@ HB_FUNC_STATIC( QWIDGET_RENDER )
 }
 
 /*
-void repaint ( int x, int y, int w, int h )
+void repaint( int x, int y, int w, int h )
 */
 void QWidget_repaint1()
 {
@@ -2841,7 +2820,7 @@ void QWidget_repaint1()
 }
 
 /*
-void repaint ( const QRect & rect )
+void repaint( const QRect & rect )
 */
 void QWidget_repaint2()
 {
@@ -2856,7 +2835,7 @@ void QWidget_repaint2()
 }
 
 /*
-void repaint ( const QRegion & rgn )
+void repaint( const QRegion & rgn )
 */
 void QWidget_repaint3()
 {
@@ -2869,12 +2848,6 @@ void QWidget_repaint3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void repaint ( int x, int y, int w, int h )
-[2]void repaint ( const QRect & rect )
-[3]void repaint ( const QRegion & rgn )
-*/
 
 HB_FUNC_STATIC( QWIDGET_REPAINT )
 {
@@ -2897,7 +2870,7 @@ HB_FUNC_STATIC( QWIDGET_REPAINT )
 }
 
 /*
-void resize ( const QSize & )
+void resize( const QSize & )
 */
 void QWidget_resize1()
 {
@@ -2912,7 +2885,7 @@ void QWidget_resize1()
 }
 
 /*
-void resize ( int w, int h )
+void resize( int w, int h )
 */
 void QWidget_resize2()
 {
@@ -2925,11 +2898,6 @@ void QWidget_resize2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void resize ( const QSize & )
-[2]void resize ( int w, int h )
-*/
 
 HB_FUNC_STATIC( QWIDGET_RESIZE )
 {
@@ -2997,7 +2965,7 @@ HB_FUNC_STATIC( QWIDGET_SAVEGEOMETRY )
 }
 
 /*
-void scroll ( int dx, int dy )
+void scroll( int dx, int dy )
 */
 void QWidget_scroll1()
 {
@@ -3012,7 +2980,7 @@ void QWidget_scroll1()
 }
 
 /*
-void scroll ( int dx, int dy, const QRect & r )
+void scroll( int dx, int dy, const QRect & r )
 */
 void QWidget_scroll2()
 {
@@ -3025,11 +2993,6 @@ void QWidget_scroll2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void scroll ( int dx, int dy )
-[2]void scroll ( int dx, int dy, const QRect & r )
-*/
 
 HB_FUNC_STATIC( QWIDGET_SCROLL )
 {
@@ -3204,7 +3167,7 @@ HB_FUNC_STATIC( QWIDGET_SETBACKGROUNDROLE )
 }
 
 /*
-void setBaseSize ( const QSize & )
+void setBaseSize( const QSize & )
 */
 void QWidget_setBaseSize1()
 {
@@ -3219,7 +3182,7 @@ void QWidget_setBaseSize1()
 }
 
 /*
-void setBaseSize ( int basew, int baseh )
+void setBaseSize( int basew, int baseh )
 */
 void QWidget_setBaseSize2()
 {
@@ -3232,11 +3195,6 @@ void QWidget_setBaseSize2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setBaseSize ( const QSize & )
-[2]void setBaseSize ( int basew, int baseh )
-*/
 
 HB_FUNC_STATIC( QWIDGET_SETBASESIZE )
 {
@@ -3255,7 +3213,7 @@ HB_FUNC_STATIC( QWIDGET_SETBASESIZE )
 }
 
 /*
-void setContentsMargins ( int left, int top, int right, int bottom )
+void setContentsMargins( int left, int top, int right, int bottom )
 */
 void QWidget_setContentsMargins1()
 {
@@ -3270,7 +3228,7 @@ void QWidget_setContentsMargins1()
 }
 
 /*
-void setContentsMargins ( const QMargins & margins )
+void setContentsMargins( const QMargins & margins )
 */
 void QWidget_setContentsMargins2()
 {
@@ -3283,11 +3241,6 @@ void QWidget_setContentsMargins2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setContentsMargins ( int left, int top, int right, int bottom )
-[2]void setContentsMargins ( const QMargins & margins )
-*/
 
 HB_FUNC_STATIC( QWIDGET_SETCONTENTSMARGINS )
 {
@@ -3384,7 +3337,7 @@ HB_FUNC_STATIC( QWIDGET_SETFIXEDHEIGHT )
 }
 
 /*
-void setFixedSize ( const QSize & s )
+void setFixedSize( const QSize & s )
 */
 void QWidget_setFixedSize1()
 {
@@ -3399,7 +3352,7 @@ void QWidget_setFixedSize1()
 }
 
 /*
-void setFixedSize ( int w, int h )
+void setFixedSize( int w, int h )
 */
 void QWidget_setFixedSize2()
 {
@@ -3412,11 +3365,6 @@ void QWidget_setFixedSize2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setFixedSize ( const QSize & s )
-[2]void setFixedSize ( int w, int h )
-*/
 
 HB_FUNC_STATIC( QWIDGET_SETFIXEDSIZE )
 {
@@ -3461,7 +3409,7 @@ HB_FUNC_STATIC( QWIDGET_SETFIXEDWIDTH )
 }
 
 /*
-void setFocus ( Qt::FocusReason reason )
+void setFocus( Qt::FocusReason reason )
 */
 void QWidget_setFocus1()
 {
@@ -3476,7 +3424,7 @@ void QWidget_setFocus1()
 }
 
 /*
-void setFocus ()
+void setFocus()
 */
 void QWidget_setFocus2()
 {
@@ -3489,11 +3437,6 @@ void QWidget_setFocus2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setFocus ( Qt::FocusReason reason )
-[2]void setFocus ()
-*/
 
 HB_FUNC_STATIC( QWIDGET_SETFOCUS )
 {
@@ -3616,7 +3559,7 @@ HB_FUNC_STATIC( QWIDGET_SETFOREGROUNDROLE )
 }
 
 /*
-void setGeometry ( const QRect & )
+void setGeometry( const QRect & )
 */
 void QWidget_setGeometry1()
 {
@@ -3631,7 +3574,7 @@ void QWidget_setGeometry1()
 }
 
 /*
-void setGeometry ( int x, int y, int w, int h )
+void setGeometry( int x, int y, int w, int h )
 */
 void QWidget_setGeometry2()
 {
@@ -3644,11 +3587,6 @@ void QWidget_setGeometry2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setGeometry ( const QRect & )
-[2]void setGeometry ( int x, int y, int w, int h )
-*/
 
 HB_FUNC_STATIC( QWIDGET_SETGEOMETRY )
 {
@@ -3823,7 +3761,7 @@ HB_FUNC_STATIC( QWIDGET_SETLOCALE )
 }
 
 /*
-void setMask ( const QBitmap & bitmap )
+void setMask( const QBitmap & bitmap )
 */
 void QWidget_setMask1()
 {
@@ -3838,7 +3776,7 @@ void QWidget_setMask1()
 }
 
 /*
-void setMask ( const QRegion & region )
+void setMask( const QRegion & region )
 */
 void QWidget_setMask2()
 {
@@ -3851,11 +3789,6 @@ void QWidget_setMask2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setMask ( const QBitmap & bitmap )
-[2]void setMask ( const QRegion & region )
-*/
 
 HB_FUNC_STATIC( QWIDGET_SETMASK )
 {
@@ -3900,7 +3833,7 @@ HB_FUNC_STATIC( QWIDGET_SETMAXIMUMHEIGHT )
 }
 
 /*
-void setMaximumSize ( const QSize & )
+void setMaximumSize( const QSize & )
 */
 void QWidget_setMaximumSize1()
 {
@@ -3915,7 +3848,7 @@ void QWidget_setMaximumSize1()
 }
 
 /*
-void setMaximumSize ( int maxw, int maxh )
+void setMaximumSize( int maxw, int maxh )
 */
 void QWidget_setMaximumSize2()
 {
@@ -3928,11 +3861,6 @@ void QWidget_setMaximumSize2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setMaximumSize ( const QSize & )
-[2]void setMaximumSize ( int maxw, int maxh )
-*/
 
 HB_FUNC_STATIC( QWIDGET_SETMAXIMUMSIZE )
 {
@@ -4003,7 +3931,7 @@ HB_FUNC_STATIC( QWIDGET_SETMINIMUMHEIGHT )
 }
 
 /*
-void setMinimumSize ( const QSize & )
+void setMinimumSize( const QSize & )
 */
 void QWidget_setMinimumSize1()
 {
@@ -4018,7 +3946,7 @@ void QWidget_setMinimumSize1()
 }
 
 /*
-void setMinimumSize ( int minw, int minh )
+void setMinimumSize( int minw, int minh )
 */
 void QWidget_setMinimumSize2()
 {
@@ -4031,11 +3959,6 @@ void QWidget_setMinimumSize2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setMinimumSize ( const QSize & )
-[2]void setMinimumSize ( int minw, int minh )
-*/
 
 HB_FUNC_STATIC( QWIDGET_SETMINIMUMSIZE )
 {
@@ -4132,7 +4055,7 @@ HB_FUNC_STATIC( QWIDGET_SETPALETTE )
 }
 
 /*
-void setParent ( QWidget * parent )
+void setParent( QWidget * parent )
 */
 void QWidget_setParent1()
 {
@@ -4147,7 +4070,7 @@ void QWidget_setParent1()
 }
 
 /*
-void setParent ( QWidget * parent, Qt::WindowFlags f )
+void setParent( QWidget * parent, Qt::WindowFlags f )
 */
 void QWidget_setParent2()
 {
@@ -4160,11 +4083,6 @@ void QWidget_setParent2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setParent ( QWidget * parent )
-[2]void setParent ( QWidget * parent, Qt::WindowFlags f )
-*/
 
 HB_FUNC_STATIC( QWIDGET_SETPARENT )
 {
@@ -4235,7 +4153,7 @@ HB_FUNC_STATIC( QWIDGET_SETSHORTCUTENABLED )
 }
 
 /*
-void setSizeIncrement ( const QSize & )
+void setSizeIncrement( const QSize & )
 */
 void QWidget_setSizeIncrement1()
 {
@@ -4250,7 +4168,7 @@ void QWidget_setSizeIncrement1()
 }
 
 /*
-void setSizeIncrement ( int w, int h )
+void setSizeIncrement( int w, int h )
 */
 void QWidget_setSizeIncrement2()
 {
@@ -4263,11 +4181,6 @@ void QWidget_setSizeIncrement2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setSizeIncrement ( const QSize & )
-[2]void setSizeIncrement ( int w, int h )
-*/
 
 HB_FUNC_STATIC( QWIDGET_SETSIZEINCREMENT )
 {
@@ -4286,7 +4199,7 @@ HB_FUNC_STATIC( QWIDGET_SETSIZEINCREMENT )
 }
 
 /*
-void setSizePolicy ( QSizePolicy & )
+void setSizePolicy( QSizePolicy & )
 */
 void QWidget_setSizePolicy1()
 {
@@ -4301,7 +4214,7 @@ void QWidget_setSizePolicy1()
 }
 
 /*
-void setSizePolicy ( QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical )
+void setSizePolicy( QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical )
 */
 void QWidget_setSizePolicy2()
 {
@@ -4314,11 +4227,6 @@ void QWidget_setSizePolicy2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setSizePolicy ( QSizePolicy & )
-[2]void setSizePolicy ( QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical )
-*/
 
 HB_FUNC_STATIC( QWIDGET_SETSIZEPOLICY )
 {
@@ -5050,7 +4958,7 @@ HB_FUNC_STATIC( QWIDGET_UNSETLOCALE )
 }
 
 /*
-void update ( int x, int y, int w, int h )
+void update( int x, int y, int w, int h )
 */
 void QWidget_update1()
 {
@@ -5065,7 +4973,7 @@ void QWidget_update1()
 }
 
 /*
-void update ( const QRect & rect )
+void update( const QRect & rect )
 */
 void QWidget_update2()
 {
@@ -5080,7 +4988,7 @@ void QWidget_update2()
 }
 
 /*
-void update ( const QRegion & rgn )
+void update( const QRegion & rgn )
 */
 void QWidget_update3()
 {
@@ -5095,7 +5003,7 @@ void QWidget_update3()
 }
 
 /*
-void update ()
+void update()
 */
 void QWidget_update4()
 {
@@ -5108,13 +5016,6 @@ void QWidget_update4()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void update ( int x, int y, int w, int h )
-[2]void update ( const QRect & rect )
-[3]void update ( const QRegion & rgn )
-[4]void update ()
-*/
 
 HB_FUNC_STATIC( QWIDGET_UPDATE )
 {
@@ -5288,7 +5189,6 @@ HB_FUNC_STATIC( QWIDGET_WINID )
   }
 #endif
 }
-
 /*
 QWidget * window() const
 */
@@ -6311,7 +6211,6 @@ HB_FUNC_STATIC( QWIDGET_FIND )
 #endif
 #endif
 }
-
 /*
 static QWidget * keyboardGrabber()
 */

@@ -77,7 +77,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QAbstractSpinBox ( QWidget * parent = 0 )
+QAbstractSpinBox( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_NEW )
 {
@@ -184,16 +184,28 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_CORRECTIONMODE )
 }
 
 /*
-virtual void fixup ( QString & input ) const
+virtual void fixup( QString & input ) const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_FIXUP )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    obj->fixup ( par1 );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(1) && ISCHAR(1) )
+    {
+#endif
+      QString par1 = hb_parc(1);
+      obj->fixup( par1 );
+      hb_storc( QSTRINGTOSTRING(par1), 1);
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -654,17 +666,30 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_TEXT )
 }
 
 /*
-virtual QValidator::State validate ( QString & input, int & pos ) const
+virtual QValidator::State validate( QString & input, int & pos ) const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_VALIDATE )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    int par2 = hb_parni(2);
-    hb_retni( (int) obj->validate ( par1, par2 ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    {
+#endif
+      QString par1 = hb_parc(1);
+      int par2;
+      RENUM( obj->validate( par1, par2 ) );
+      hb_storc( QSTRINGTOSTRING(par1), 1);
+      hb_storni( par2, 2 );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
   }
 }
 

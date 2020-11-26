@@ -50,7 +50,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QGraphicsRectItem ( QGraphicsItem * parent = 0 )
+QGraphicsRectItem( QGraphicsItem * parent = 0 )
 */
 void QGraphicsRectItem_new1()
 {
@@ -59,7 +59,7 @@ void QGraphicsRectItem_new1()
 }
 
 /*
-QGraphicsRectItem ( const QRectF & rect, QGraphicsItem * parent = 0 )
+QGraphicsRectItem( const QRectF & rect, QGraphicsItem * parent = 0 )
 */
 void QGraphicsRectItem_new2()
 {
@@ -68,19 +68,13 @@ void QGraphicsRectItem_new2()
 }
 
 /*
-QGraphicsRectItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = 0 )
+QGraphicsRectItem( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = 0 )
 */
 void QGraphicsRectItem_new3()
 {
   QGraphicsRectItem * obj = new QGraphicsRectItem( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ISNIL(5)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(5) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QGraphicsRectItem ( QGraphicsItem * parent = 0 )
-[2]QGraphicsRectItem ( const QRectF & rect, QGraphicsItem * parent = 0 )
-[3]QGraphicsRectItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSRECTITEM_NEW )
 {
@@ -145,7 +139,7 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_RECT )
 }
 
 /*
-void setRect ( const QRectF & rect )
+void setRect( const QRectF & rect )
 */
 void QGraphicsRectItem_setRect1()
 {
@@ -160,7 +154,7 @@ void QGraphicsRectItem_setRect1()
 }
 
 /*
-void setRect ( qreal x, qreal y, qreal width, qreal height )
+void setRect( qreal x, qreal y, qreal width, qreal height )
 */
 void QGraphicsRectItem_setRect2()
 {
@@ -173,11 +167,6 @@ void QGraphicsRectItem_setRect2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setRect ( const QRectF & rect )
-[2]void setRect ( qreal x, qreal y, qreal width, qreal height )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSRECTITEM_SETRECT )
 {

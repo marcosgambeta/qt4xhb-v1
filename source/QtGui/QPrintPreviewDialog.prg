@@ -48,7 +48,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QPrintPreviewDialog ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+QPrintPreviewDialog( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
 void QPrintPreviewDialog_new1()
 {
@@ -57,18 +57,13 @@ void QPrintPreviewDialog_new1()
 }
 
 /*
-QPrintPreviewDialog ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+QPrintPreviewDialog( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
 void QPrintPreviewDialog_new2()
 {
   QPrintPreviewDialog * obj = new QPrintPreviewDialog( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QPrintPreviewDialog ( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
-[2]QPrintPreviewDialog ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
-*/
 
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_NEW )
 {

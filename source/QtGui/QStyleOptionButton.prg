@@ -57,7 +57,7 @@ void QStyleOptionButton_new1()
 }
 
 /*
-QStyleOptionButton(const QStyleOptionButton &other)
+QStyleOptionButton( const QStyleOptionButton & other )
 */
 void QStyleOptionButton_new2()
 {
@@ -66,13 +66,7 @@ void QStyleOptionButton_new2()
 }
 
 /*
-QStyleOptionButton(int version) (protected)
-*/
-
-/*
-[1]QStyleOptionButton()
-[2]QStyleOptionButton(const QStyleOptionButton &other)
-[3]QStyleOptionButton(int version) (protected)
+QStyleOptionButton(int version) [PROTECTED]
 */
 
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_NEW )

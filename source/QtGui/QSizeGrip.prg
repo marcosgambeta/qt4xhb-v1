@@ -44,7 +44,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QSizeGrip ( QWidget * parent )
+QSizeGrip( QWidget * parent )
 */
 HB_FUNC_STATIC( QSIZEGRIP_NEW )
 {

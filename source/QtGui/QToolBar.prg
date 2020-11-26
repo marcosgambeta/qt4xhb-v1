@@ -79,7 +79,7 @@ RETURN
 #include <QtGui/QAction>
 
 /*
-QToolBar ( const QString & title, QWidget * parent = 0 )
+QToolBar( const QString & title, QWidget * parent = 0 )
 */
 void QToolBar_new1()
 {
@@ -88,18 +88,13 @@ void QToolBar_new1()
 }
 
 /*
-QToolBar ( QWidget * parent = 0 )
+QToolBar( QWidget * parent = 0 )
 */
 void QToolBar_new2()
 {
   QToolBar * obj = new QToolBar( OPQWIDGET(1,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QToolBar ( const QString & title, QWidget * parent = 0 )
-[2]QToolBar ( QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QTOOLBAR_NEW )
 {
@@ -137,7 +132,7 @@ HB_FUNC_STATIC( QTOOLBAR_DELETE )
 }
 
 /*
-QAction * actionAt ( int x, int y ) const
+QAction * actionAt( int x, int y ) const
 */
 void QToolBar_actionAt1()
 {
@@ -151,7 +146,7 @@ void QToolBar_actionAt1()
 }
 
 /*
-QAction * actionAt ( const QPoint & p ) const
+QAction * actionAt( const QPoint & p ) const
 */
 void QToolBar_actionAt2()
 {
@@ -163,11 +158,6 @@ void QToolBar_actionAt2()
     Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
   }
 }
-
-/*
-[1]QAction * actionAt ( int x, int y ) const
-[2]QAction * actionAt ( const QPoint & p ) const
-*/
 
 HB_FUNC_STATIC( QTOOLBAR_ACTIONAT )
 {
@@ -186,7 +176,7 @@ HB_FUNC_STATIC( QTOOLBAR_ACTIONAT )
 }
 
 /*
-void addAction ( QAction * action )
+void addAction( QAction * action )
 */
 void QToolBar_addAction1()
 {
@@ -201,7 +191,7 @@ void QToolBar_addAction1()
 }
 
 /*
-QAction * addAction ( const QString & text )
+QAction * addAction( const QString & text )
 */
 void QToolBar_addAction2()
 {
@@ -215,7 +205,7 @@ void QToolBar_addAction2()
 }
 
 /*
-QAction * addAction ( const QIcon & icon, const QString & text )
+QAction * addAction( const QIcon & icon, const QString & text )
 */
 void QToolBar_addAction3()
 {
@@ -229,7 +219,7 @@ void QToolBar_addAction3()
 }
 
 /*
-QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
+QAction * addAction( const QString & text, const QObject * receiver, const char * member )
 */
 void QToolBar_addAction4()
 {
@@ -243,7 +233,7 @@ void QToolBar_addAction4()
 }
 
 /*
-QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member )
+QAction * addAction( const QIcon & icon, const QString & text, const QObject * receiver, const char * member )
 */
 void QToolBar_addAction5()
 {
@@ -255,14 +245,6 @@ void QToolBar_addAction5()
     Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
   }
 }
-
-/*
-[1]void addAction ( QAction * action )
-[2]QAction * addAction ( const QString & text )
-[3]QAction * addAction ( const QIcon & icon, const QString & text )
-[4]QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
-[5]QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member )
-*/
 
 HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
 {

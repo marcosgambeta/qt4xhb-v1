@@ -47,7 +47,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )
+QContextMenuEvent( QContextMenuEvent::Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )
 */
 void QContextMenuEvent_new1()
 {
@@ -56,7 +56,7 @@ void QContextMenuEvent_new1()
 }
 
 /*
-QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos )
+QContextMenuEvent( QContextMenuEvent::Reason reason, const QPoint & pos, const QPoint & globalPos )
 */
 void QContextMenuEvent_new2()
 {
@@ -65,19 +65,13 @@ void QContextMenuEvent_new2()
 }
 
 /*
-QContextMenuEvent ( Reason reason, const QPoint & pos )
+QContextMenuEvent( QContextMenuEvent::Reason reason, const QPoint & pos )
 */
 void QContextMenuEvent_new3()
 {
   QContextMenuEvent * obj = new QContextMenuEvent( (QContextMenuEvent::Reason) hb_parni(1), *PQPOINT(2) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )
-[2]QContextMenuEvent ( Reason reason, const QPoint & pos, const QPoint & globalPos )
-[3]QContextMenuEvent ( Reason reason, const QPoint & pos )
-*/
 
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW )
 {

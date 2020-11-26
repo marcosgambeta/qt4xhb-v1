@@ -53,7 +53,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QTextDocumentFragment ()
+QTextDocumentFragment()
 */
 void QTextDocumentFragment_new1()
 {
@@ -62,7 +62,7 @@ void QTextDocumentFragment_new1()
 }
 
 /*
-QTextDocumentFragment ( const QTextDocument * document )
+QTextDocumentFragment( const QTextDocument * document )
 */
 void QTextDocumentFragment_new2()
 {
@@ -71,7 +71,7 @@ void QTextDocumentFragment_new2()
 }
 
 /*
-QTextDocumentFragment ( const QTextCursor & cursor )
+QTextDocumentFragment( const QTextCursor & cursor )
 */
 void QTextDocumentFragment_new3()
 {
@@ -80,20 +80,13 @@ void QTextDocumentFragment_new3()
 }
 
 /*
-QTextDocumentFragment ( const QTextDocumentFragment & other )
+QTextDocumentFragment( const QTextDocumentFragment & other )
 */
 void QTextDocumentFragment_new4()
 {
   QTextDocumentFragment * obj = new QTextDocumentFragment( *PQTEXTDOCUMENTFRAGMENT(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QTextDocumentFragment ()
-[2]QTextDocumentFragment ( const QTextDocument * document )
-[3]QTextDocumentFragment ( const QTextCursor & cursor )
-[4]QTextDocumentFragment ( const QTextDocumentFragment & other )
-*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW )
 {
@@ -161,7 +154,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_ISEMPTY )
 }
 
 /*
-QString toHtml ( const QByteArray & encoding ) const
+QString toHtml( const QByteArray & encoding ) const
 */
 void QTextDocumentFragment_toHtml1()
 {
@@ -174,7 +167,7 @@ void QTextDocumentFragment_toHtml1()
 }
 
 /*
-QString toHtml () const
+QString toHtml() const
 */
 void QTextDocumentFragment_toHtml2()
 {
@@ -185,11 +178,6 @@ void QTextDocumentFragment_toHtml2()
     RQSTRING( obj->toHtml() );
   }
 }
-
-/*
-[1]QString toHtml ( const QByteArray & encoding ) const
-[2]QString toHtml () const
-*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOHTML )
 {
@@ -232,7 +220,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOPLAINTEXT )
 }
 
 /*
-static QTextDocumentFragment fromHtml ( const QString & text )
+static QTextDocumentFragment fromHtml( const QString & text )
 */
 void QTextDocumentFragment_fromHtml1()
 {
@@ -242,7 +230,7 @@ void QTextDocumentFragment_fromHtml1()
 }
 
 /*
-static QTextDocumentFragment fromHtml ( const QString & text, const QTextDocument * resourceProvider )
+static QTextDocumentFragment fromHtml( const QString & text, const QTextDocument * resourceProvider )
 */
 void QTextDocumentFragment_fromHtml2()
 {
@@ -250,11 +238,6 @@ void QTextDocumentFragment_fromHtml2()
   QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml( PQSTRING(1), PQTEXTDOCUMENT(2) ) );
   Qt4xHb::createReturnClass( ptr, "QTEXTDOCUMENTFRAGMENT", true );
 }
-
-/*
-[1]QTextDocumentFragment fromHtml ( const QString & text )
-[2]QTextDocumentFragment fromHtml ( const QString & text, const QTextDocument * resourceProvider )
-*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMHTML )
 {

@@ -69,7 +69,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QImageWriter ()
+QImageWriter()
 */
 void QImageWriter_new1()
 {
@@ -78,7 +78,7 @@ void QImageWriter_new1()
 }
 
 /*
-QImageWriter ( QIODevice * device, const QByteArray & format )
+QImageWriter( QIODevice * device, const QByteArray & format )
 */
 void QImageWriter_new2()
 {
@@ -87,19 +87,13 @@ void QImageWriter_new2()
 }
 
 /*
-QImageWriter ( const QString & fileName, const QByteArray & format = QByteArray() )
+QImageWriter( const QString & fileName, const QByteArray & format = QByteArray() )
 */
 void QImageWriter_new3()
 {
   QImageWriter * obj = new QImageWriter( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt4xHb::itemGetPtr(2) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QImageWriter ()
-[2]QImageWriter ( QIODevice * device, const QByteArray & format )
-[3]QImageWriter ( const QString & fileName, const QByteArray & format = QByteArray() )
-*/
 
 HB_FUNC_STATIC( QIMAGEWRITER_NEW )
 {

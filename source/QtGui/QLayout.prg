@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QLAYOUT_REMOVEWIDGET )
 }
 
 /*
-bool setAlignment ( QWidget * w, Qt::Alignment alignment )
+bool setAlignment( QWidget * w, Qt::Alignment alignment )
 */
 void QLayout_setAlignment1()
 {
@@ -523,7 +523,7 @@ void QLayout_setAlignment1()
 }
 
 /*
-void setAlignment ( Qt::Alignment alignment )
+void setAlignment( Qt::Alignment alignment )
 */
 void QLayout_setAlignment2()
 {
@@ -538,7 +538,7 @@ void QLayout_setAlignment2()
 }
 
 /*
-bool setAlignment ( QLayout * l, Qt::Alignment alignment )
+bool setAlignment( QLayout * l, Qt::Alignment alignment )
 */
 void QLayout_setAlignment3()
 {
@@ -549,12 +549,6 @@ void QLayout_setAlignment3()
     RBOOL( obj->setAlignment( PQLAYOUT(1), (Qt::Alignment) hb_parni(2) ) );
   }
 }
-
-/*
-[1]bool setAlignment ( QWidget * w, Qt::Alignment alignment )
-[2]void setAlignment ( Qt::Alignment alignment )
-[3]bool setAlignment ( QLayout * l, Qt::Alignment alignment )
-*/
 
 HB_FUNC_STATIC( QLAYOUT_SETALIGNMENT )
 {
@@ -577,7 +571,7 @@ HB_FUNC_STATIC( QLAYOUT_SETALIGNMENT )
 }
 
 /*
-void setContentsMargins ( int left, int top, int right, int bottom )
+void setContentsMargins( int left, int top, int right, int bottom )
 */
 void QLayout_setContentsMargins1()
 {
@@ -592,7 +586,7 @@ void QLayout_setContentsMargins1()
 }
 
 /*
-void setContentsMargins ( const QMargins & margins )
+void setContentsMargins( const QMargins & margins )
 */
 void QLayout_setContentsMargins2()
 {
@@ -605,11 +599,6 @@ void QLayout_setContentsMargins2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setContentsMargins ( int left, int top, int right, int bottom )
-[2]void setContentsMargins ( const QMargins & margins )
-*/
 
 HB_FUNC_STATIC( QLAYOUT_SETCONTENTSMARGINS )
 {

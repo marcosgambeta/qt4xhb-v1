@@ -54,7 +54,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QItemSelection ()
+QItemSelection()
 */
 void QItemSelection_new1()
 {
@@ -63,18 +63,13 @@ void QItemSelection_new1()
 }
 
 /*
-QItemSelection ( const QModelIndex & topLeft, const QModelIndex & bottomRight )
+QItemSelection( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 */
 void QItemSelection_new2()
 {
   QItemSelection * obj = new QItemSelection( *PQMODELINDEX(1), *PQMODELINDEX(2) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QItemSelection ()
-[2]QItemSelection ( const QModelIndex & topLeft, const QModelIndex & bottomRight )
-*/
 
 HB_FUNC_STATIC( QITEMSELECTION_NEW )
 {

@@ -83,7 +83,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QListWidget ( QWidget * parent = 0 )
+QListWidget( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QLISTWIDGET_NEW )
 {
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QLISTWIDGET_DELETE )
 }
 
 /*
-void addItem ( const QString & label )
+void addItem( const QString & label )
 */
 void QListWidget_addItem1()
 {
@@ -133,7 +133,7 @@ void QListWidget_addItem1()
 }
 
 /*
-void addItem ( QListWidgetItem * item )
+void addItem( QListWidgetItem * item )
 */
 void QListWidget_addItem2()
 {
@@ -146,11 +146,6 @@ void QListWidget_addItem2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void addItem ( const QString & label )
-[2]void addItem ( QListWidgetItem * item )
-*/
 
 HB_FUNC_STATIC( QLISTWIDGET_ADDITEM )
 {
@@ -368,7 +363,7 @@ HB_FUNC_STATIC( QLISTWIDGET_FINDITEMS )
 }
 
 /*
-void insertItem ( int row, QListWidgetItem * item )
+void insertItem( int row, QListWidgetItem * item )
 */
 void QListWidget_insertItem1()
 {
@@ -383,7 +378,7 @@ void QListWidget_insertItem1()
 }
 
 /*
-void insertItem ( int row, const QString & label )
+void insertItem( int row, const QString & label )
 */
 void QListWidget_insertItem2()
 {
@@ -396,11 +391,6 @@ void QListWidget_insertItem2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void insertItem ( int row, QListWidgetItem * item )
-[2]void insertItem ( int row, const QString & label )
-*/
 
 HB_FUNC_STATIC( QLISTWIDGET_INSERTITEM )
 {
@@ -494,7 +484,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEM )
 }
 
 /*
-QListWidgetItem * itemAt ( const QPoint & p ) const
+QListWidgetItem * itemAt( const QPoint & p ) const
 */
 void QListWidget_itemAt1()
 {
@@ -508,7 +498,7 @@ void QListWidget_itemAt1()
 }
 
 /*
-QListWidgetItem * itemAt ( int x, int y ) const
+QListWidgetItem * itemAt( int x, int y ) const
 */
 void QListWidget_itemAt2()
 {
@@ -520,11 +510,6 @@ void QListWidget_itemAt2()
     Qt4xHb::createReturnClass( ptr, "QLISTWIDGETITEM", false );
   }
 }
-
-/*
-[1]QListWidgetItem * itemAt ( const QPoint & p ) const
-[2]QListWidgetItem * itemAt ( int x, int y ) const
-*/
 
 HB_FUNC_STATIC( QLISTWIDGET_ITEMAT )
 {
@@ -692,7 +677,7 @@ HB_FUNC_STATIC( QLISTWIDGET_SELECTEDITEMS )
 }
 
 /*
-void setCurrentItem ( QListWidgetItem * item )
+void setCurrentItem( QListWidgetItem * item )
 */
 void QListWidget_setCurrentItem1()
 {
@@ -707,7 +692,7 @@ void QListWidget_setCurrentItem1()
 }
 
 /*
-void setCurrentItem ( QListWidgetItem * item, QItemSelectionModel::SelectionFlags command )
+void setCurrentItem( QListWidgetItem * item, QItemSelectionModel::SelectionFlags command )
 */
 void QListWidget_setCurrentItem2()
 {
@@ -720,11 +705,6 @@ void QListWidget_setCurrentItem2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setCurrentItem ( QListWidgetItem * item )
-[2]void setCurrentItem ( QListWidgetItem * item, QItemSelectionModel::SelectionFlags command )
-*/
 
 HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTITEM )
 {
@@ -743,7 +723,7 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTITEM )
 }
 
 /*
-void setCurrentRow ( int row )
+void setCurrentRow( int row )
 */
 void QListWidget_setCurrentRow1()
 {
@@ -758,7 +738,7 @@ void QListWidget_setCurrentRow1()
 }
 
 /*
-void setCurrentRow ( int row, QItemSelectionModel::SelectionFlags command )
+void setCurrentRow( int row, QItemSelectionModel::SelectionFlags command )
 */
 void QListWidget_setCurrentRow2()
 {
@@ -771,11 +751,6 @@ void QListWidget_setCurrentRow2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setCurrentRow ( int row )
-[2]void setCurrentRow ( int row, QItemSelectionModel::SelectionFlags command )
-*/
 
 HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTROW )
 {

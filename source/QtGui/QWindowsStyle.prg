@@ -54,7 +54,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QWindowsStyle ()
+QWindowsStyle()
 */
 HB_FUNC_STATIC( QWINDOWSSTYLE_NEW )
 {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_PIXELMETRIC )
 }
 
 /*
-virtual void polish ( QApplication * app )
+virtual void polish( QApplication * app )
 */
 void QWindowsStyle_polish1()
 {
@@ -206,7 +206,7 @@ void QWindowsStyle_polish1()
 }
 
 /*
-virtual void polish ( QWidget * widget )
+virtual void polish( QWidget * widget )
 */
 void QWindowsStyle_polish2()
 {
@@ -221,7 +221,7 @@ void QWindowsStyle_polish2()
 }
 
 /*
-virtual void polish ( QPalette & pal )
+virtual void polish( QPalette & pal )
 */
 void QWindowsStyle_polish3()
 {
@@ -234,12 +234,6 @@ void QWindowsStyle_polish3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]virtual void polish ( QApplication * app )
-[2]virtual void polish ( QWidget * widget )
-[3]virtual void polish ( QPalette & pal )
-*/
 
 HB_FUNC_STATIC( QWINDOWSSTYLE_POLISH )
 {
@@ -361,7 +355,7 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_SUBELEMENTRECT )
 }
 
 /*
-virtual void unpolish ( QApplication * app )
+virtual void unpolish( QApplication * app )
 */
 void QWindowsStyle_unpolish1()
 {
@@ -376,7 +370,7 @@ void QWindowsStyle_unpolish1()
 }
 
 /*
-virtual void unpolish ( QWidget * widget )
+virtual void unpolish( QWidget * widget )
 */
 void QWindowsStyle_unpolish2()
 {
@@ -389,11 +383,6 @@ void QWindowsStyle_unpolish2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]virtual void unpolish ( QApplication * app )
-[2]virtual void unpolish ( QWidget * widget )
-*/
 
 HB_FUNC_STATIC( QWINDOWSSTYLE_UNPOLISH )
 {

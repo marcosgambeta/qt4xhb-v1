@@ -111,7 +111,7 @@ RETURN
 #include <QtGui/QMenu>
 
 /*
-QAction ( QObject * parent )
+QAction( QObject * parent )
 */
 void QAction_new1()
 {
@@ -120,7 +120,7 @@ void QAction_new1()
 }
 
 /*
-QAction ( const QString & text, QObject * parent )
+QAction( const QString & text, QObject * parent )
 */
 void QAction_new2()
 {
@@ -129,19 +129,13 @@ void QAction_new2()
 }
 
 /*
-QAction ( const QIcon & icon, const QString & text, QObject * parent )
+QAction( const QIcon & icon, const QString & text, QObject * parent )
 */
 void QAction_new3()
 {
   QAction * obj = new QAction( ISOBJECT(1)? *(QIcon *) Qt4xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), PQOBJECT(3) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QAction ( QObject * parent )
-[2]QAction ( const QString & text, QObject * parent )
-[3]QAction ( const QIcon & icon, const QString & text, QObject * parent )
-*/
 
 HB_FUNC_STATIC( QACTION_NEW )
 {
@@ -1059,7 +1053,7 @@ HB_FUNC_STATIC( QACTION_SETSHORTCUTCONTEXT )
 }
 
 /*
-void setShortcuts ( const QList<QKeySequence> & shortcuts )
+void setShortcuts( const QList<QKeySequence> & shortcuts )
 */
 void QAction_setShortcuts1()
 {
@@ -1082,7 +1076,7 @@ void QAction_setShortcuts1()
 }
 
 /*
-void setShortcuts ( QKeySequence::StandardKey key )
+void setShortcuts( QKeySequence::StandardKey key )
 */
 void QAction_setShortcuts2()
 {
@@ -1095,11 +1089,6 @@ void QAction_setShortcuts2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setShortcuts ( const QList<QKeySequence> & shortcuts )
-[2]void setShortcuts ( QKeySequence::StandardKey key )
-*/
 
 HB_FUNC_STATIC( QACTION_SETSHORTCUTS )
 {

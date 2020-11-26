@@ -60,7 +60,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QPolygonF ()
+QPolygonF()
 */
 void QPolygonF_new1()
 {
@@ -69,7 +69,7 @@ void QPolygonF_new1()
 }
 
 /*
-QPolygonF ( int size )
+QPolygonF( int size )
 */
 void QPolygonF_new2()
 {
@@ -78,7 +78,7 @@ void QPolygonF_new2()
 }
 
 /*
-QPolygonF ( const QPolygonF & polygon )
+QPolygonF( const QPolygonF & polygon )
 */
 void QPolygonF_new3()
 {
@@ -87,7 +87,7 @@ void QPolygonF_new3()
 }
 
 /*
-QPolygonF ( const QVector<QPointF> & points )
+QPolygonF( const QVector<QPointF> & points )
 */
 void QPolygonF_new4()
 {
@@ -104,7 +104,7 @@ void QPolygonF_new4()
 }
 
 /*
-QPolygonF ( const QRectF & rectangle )
+QPolygonF( const QRectF & rectangle )
 */
 void QPolygonF_new5()
 {
@@ -113,22 +113,13 @@ void QPolygonF_new5()
 }
 
 /*
-QPolygonF ( const QPolygon & polygon )
+QPolygonF( const QPolygon & polygon )
 */
 void QPolygonF_new6()
 {
   QPolygonF * obj = new QPolygonF( *PQPOLYGON(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QPolygonF ()
-[2]QPolygonF ( int size )
-[3]QPolygonF ( const QPolygonF & polygon )
-[4]QPolygonF ( const QVector<QPointF> & points )
-[5]QPolygonF ( const QRectF & rectangle )
-[6]QPolygonF ( const QPolygon & polygon )
-*/
 
 HB_FUNC_STATIC( QPOLYGONF_NEW )
 {
@@ -354,7 +345,7 @@ HB_FUNC_STATIC( QPOLYGONF_TOPOLYGON )
 }
 
 /*
-void translate ( const QPointF & offset )
+void translate( const QPointF & offset )
 */
 void QPolygonF_translate1()
 {
@@ -369,7 +360,7 @@ void QPolygonF_translate1()
 }
 
 /*
-void translate ( qreal dx, qreal dy )
+void translate( qreal dx, qreal dy )
 */
 void QPolygonF_translate2()
 {
@@ -382,11 +373,6 @@ void QPolygonF_translate2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void translate ( const QPointF & offset )
-[2]void translate ( qreal dx, qreal dy )
-*/
 
 HB_FUNC_STATIC( QPOLYGONF_TRANSLATE )
 {
@@ -405,7 +391,7 @@ HB_FUNC_STATIC( QPOLYGONF_TRANSLATE )
 }
 
 /*
-QPolygonF translated ( const QPointF & offset ) const
+QPolygonF translated( const QPointF & offset ) const
 */
 void QPolygonF_translated1()
 {
@@ -419,7 +405,7 @@ void QPolygonF_translated1()
 }
 
 /*
-QPolygonF translated ( qreal dx, qreal dy ) const
+QPolygonF translated( qreal dx, qreal dy ) const
 */
 void QPolygonF_translated2()
 {
@@ -431,11 +417,6 @@ void QPolygonF_translated2()
     Qt4xHb::createReturnClass( ptr, "QPOLYGONF", true );
   }
 }
-
-/*
-[1]QPolygonF translated ( const QPointF & offset ) const
-[2]QPolygonF translated ( qreal dx, qreal dy ) const
-*/
 
 HB_FUNC_STATIC( QPOLYGONF_TRANSLATED )
 {

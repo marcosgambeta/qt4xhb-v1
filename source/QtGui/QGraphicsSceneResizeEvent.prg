@@ -42,7 +42,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QGraphicsSceneMoveEvent ()
+QGraphicsSceneResizeEvent()
 */
 HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEW )
 {

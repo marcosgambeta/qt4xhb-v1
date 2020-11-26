@@ -63,7 +63,7 @@ RETURN
 #include <QtGui/QPushButton>
 
 /*
-QDialogButtonBox ( QWidget * parent = 0 )
+QDialogButtonBox( QWidget * parent = 0 )
 */
 void QDialogButtonBox_new1()
 {
@@ -72,7 +72,7 @@ void QDialogButtonBox_new1()
 }
 
 /*
-QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = 0 )
+QDialogButtonBox( Qt::Orientation orientation, QWidget * parent = 0 )
 */
 void QDialogButtonBox_new2()
 {
@@ -81,19 +81,13 @@ void QDialogButtonBox_new2()
 }
 
 /*
-QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = 0 )
+QDialogButtonBox( QDialogButtonBox::StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = 0 )
 */
 void QDialogButtonBox_new3()
 {
   QDialogButtonBox * obj = new QDialogButtonBox( (QDialogButtonBox::StandardButtons) hb_parni(1), ISNIL(2)? (Qt::Orientation) Qt::Horizontal : (Qt::Orientation) hb_parni(2), OPQWIDGET(3,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QDialogButtonBox ( QWidget * parent = 0 )
-[2]QDialogButtonBox ( Qt::Orientation orientation, QWidget * parent = 0 )
-[3]QDialogButtonBox ( StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW )
 {
@@ -135,7 +129,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_DELETE )
 }
 
 /*
-void addButton ( QAbstractButton * button, ButtonRole role )
+void addButton( QAbstractButton * button, QDialogButtonBox::ButtonRole role )
 */
 void QDialogButtonBox_addButton1()
 {
@@ -150,7 +144,7 @@ void QDialogButtonBox_addButton1()
 }
 
 /*
-QPushButton * addButton ( const QString & text, ButtonRole role )
+QPushButton * addButton( const QString & text, QDialogButtonBox::ButtonRole role )
 */
 void QDialogButtonBox_addButton2()
 {
@@ -164,7 +158,7 @@ void QDialogButtonBox_addButton2()
 }
 
 /*
-QPushButton * addButton ( StandardButton button )
+QPushButton * addButton( QDialogButtonBox::StandardButton button )
 */
 void QDialogButtonBox_addButton3()
 {
@@ -176,12 +170,6 @@ void QDialogButtonBox_addButton3()
     Qt4xHb::createReturnQObjectClass( ptr, "QPUSHBUTTON" );
   }
 }
-
-/*
-[1]void addButton ( QAbstractButton * button, ButtonRole role )
-[2]QPushButton * addButton ( const QString & text, ButtonRole role )
-[3]QPushButton * addButton ( StandardButton button )
-*/
 
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON )
 {

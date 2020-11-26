@@ -54,7 +54,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QPrinterInfo ()
+QPrinterInfo()
 */
 void QPrinterInfo_new1()
 {
@@ -63,7 +63,7 @@ void QPrinterInfo_new1()
 }
 
 /*
-QPrinterInfo ( const QPrinterInfo & src )
+QPrinterInfo( const QPrinterInfo & src )
 */
 void QPrinterInfo_new2()
 {
@@ -72,19 +72,13 @@ void QPrinterInfo_new2()
 }
 
 /*
-QPrinterInfo ( const QPrinter & printer )
+QPrinterInfo( const QPrinter & printer )
 */
 void QPrinterInfo_new3()
 {
   QPrinterInfo * obj = new QPrinterInfo( *PQPRINTER(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QPrinterInfo ()
-[2]QPrinterInfo ( const QPrinterInfo & src )
-[3]QPrinterInfo ( const QPrinter & printer )
-*/
 
 HB_FUNC_STATIC( QPRINTERINFO_NEW )
 {

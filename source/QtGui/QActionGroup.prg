@@ -56,7 +56,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QActionGroup ( QObject * parent )
+QActionGroup( QObject * parent )
 */
 HB_FUNC_STATIC( QACTIONGROUP_NEW )
 {
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ACTIONS )
 }
 
 /*
-QAction * addAction ( QAction * action )
+QAction * addAction( QAction * action )
 */
 void QActionGroup_addAction1()
 {
@@ -153,7 +153,7 @@ void QActionGroup_addAction1()
 }
 
 /*
-QAction * addAction ( const QString & text )
+QAction * addAction( const QString & text )
 */
 void QActionGroup_addAction2()
 {
@@ -167,7 +167,7 @@ void QActionGroup_addAction2()
 }
 
 /*
-QAction * addAction ( const QIcon & icon, const QString & text )
+QAction * addAction( const QIcon & icon, const QString & text )
 */
 void QActionGroup_addAction3()
 {
@@ -179,12 +179,6 @@ void QActionGroup_addAction3()
     Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
   }
 }
-
-/*
-[1]QAction * addAction ( QAction * action )
-[2]QAction * addAction ( const QString & text )
-[3]QAction * addAction ( const QIcon & icon, const QString & text )
-*/
 
 HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
 {

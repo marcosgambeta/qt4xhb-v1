@@ -73,7 +73,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QPen ()
+QPen()
 */
 void QPen_new1()
 {
@@ -82,7 +82,7 @@ void QPen_new1()
 }
 
 /*
-QPen ( Qt::PenStyle style )
+QPen( Qt::PenStyle style )
 */
 void QPen_new2()
 {
@@ -91,7 +91,7 @@ void QPen_new2()
 }
 
 /*
-QPen ( const QColor & color )
+QPen( const QColor & color )
 */
 void QPen_new3()
 {
@@ -100,7 +100,7 @@ void QPen_new3()
 }
 
 /*
-QPen ( const QBrush & brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt::PenCapStyle cap = Qt::SquareCap, Qt::PenJoinStyle join = Qt::BevelJoin )
+QPen( const QBrush & brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt::PenCapStyle cap = Qt::SquareCap, Qt::PenJoinStyle join = Qt::BevelJoin )
 */
 void QPen_new4()
 {
@@ -109,21 +109,13 @@ void QPen_new4()
 }
 
 /*
-QPen ( const QPen & pen )
+QPen( const QPen & pen )
 */
 void QPen_new5()
 {
   QPen * obj = new QPen( *PQPEN(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QPen ()
-[2]QPen ( Qt::PenStyle style )
-[3]QPen ( const QColor & color )
-[4]QPen ( const QBrush & brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt::PenCapStyle cap = Qt::SquareCap, Qt::PenJoinStyle join = Qt::BevelJoin )
-[5]QPen ( const QPen & pen )
-*/
 
 HB_FUNC_STATIC( QPEN_NEW )
 {

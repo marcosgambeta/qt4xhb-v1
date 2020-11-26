@@ -134,7 +134,7 @@ RETURN
 #include <QtGui/QStyle>
 
 /*
-QGraphicsScene ( QObject * parent = 0 )
+QGraphicsScene( QObject * parent = 0 )
 */
 void QGraphicsScene_new1()
 {
@@ -143,7 +143,7 @@ void QGraphicsScene_new1()
 }
 
 /*
-QGraphicsScene ( const QRectF & sceneRect, QObject * parent = 0 )
+QGraphicsScene( const QRectF & sceneRect, QObject * parent = 0 )
 */
 void QGraphicsScene_new2()
 {
@@ -152,19 +152,13 @@ void QGraphicsScene_new2()
 }
 
 /*
-QGraphicsScene ( qreal x, qreal y, qreal width, qreal height, QObject * parent = 0 )
+QGraphicsScene( qreal x, qreal y, qreal width, qreal height, QObject * parent = 0 )
 */
 void QGraphicsScene_new3()
 {
   QGraphicsScene * obj = new QGraphicsScene( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQOBJECT(5,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QGraphicsScene ( QObject * parent = 0 )
-[2]QGraphicsScene ( const QRectF & sceneRect, QObject * parent = 0 )
-[3]QGraphicsScene ( qreal x, qreal y, qreal width, qreal height, QObject * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_NEW )
 {
@@ -256,7 +250,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ACTIVEWINDOW )
 }
 
 /*
-QGraphicsEllipseItem * addEllipse ( const QRectF & rect, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
+QGraphicsEllipseItem * addEllipse( const QRectF & rect, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
 */
 void QGraphicsScene_addEllipse1()
 {
@@ -270,7 +264,7 @@ void QGraphicsScene_addEllipse1()
 }
 
 /*
-QGraphicsEllipseItem * addEllipse ( qreal x, qreal y, qreal w, qreal h, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
+QGraphicsEllipseItem * addEllipse( qreal x, qreal y, qreal w, qreal h, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
 */
 void QGraphicsScene_addEllipse2()
 {
@@ -282,11 +276,6 @@ void QGraphicsScene_addEllipse2()
     Qt4xHb::createReturnClass( ptr, "QGRAPHICSELLIPSEITEM", false );
   }
 }
-
-/*
-[1]QGraphicsEllipseItem * addEllipse ( const QRectF & rect, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
-[2]QGraphicsEllipseItem * addEllipse ( qreal x, qreal y, qreal w, qreal h, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_ADDELLIPSE )
 {
@@ -331,7 +320,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDITEM )
 }
 
 /*
-QGraphicsLineItem * addLine ( const QLineF & line, const QPen & pen = QPen() )
+QGraphicsLineItem * addLine( const QLineF & line, const QPen & pen = QPen() )
 */
 void QGraphicsScene_addLine1()
 {
@@ -345,7 +334,7 @@ void QGraphicsScene_addLine1()
 }
 
 /*
-QGraphicsLineItem * addLine ( qreal x1, qreal y1, qreal x2, qreal y2, const QPen & pen = QPen() )
+QGraphicsLineItem * addLine( qreal x1, qreal y1, qreal x2, qreal y2, const QPen & pen = QPen() )
 */
 void QGraphicsScene_addLine2()
 {
@@ -357,11 +346,6 @@ void QGraphicsScene_addLine2()
     Qt4xHb::createReturnClass( ptr, "QGRAPHICSLINEITEM", false );
   }
 }
-
-/*
-[1]QGraphicsLineItem * addLine ( const QLineF & line, const QPen & pen = QPen() )
-[2]QGraphicsLineItem * addLine ( qreal x1, qreal y1, qreal x2, qreal y2, const QPen & pen = QPen() )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_ADDLINE )
 {
@@ -455,7 +439,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDPOLYGON )
 }
 
 /*
-QGraphicsRectItem * addRect ( const QRectF & rect, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
+QGraphicsRectItem * addRect( const QRectF & rect, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
 */
 void QGraphicsScene_addRect1()
 {
@@ -469,7 +453,7 @@ void QGraphicsScene_addRect1()
 }
 
 /*
-QGraphicsRectItem * addRect ( qreal x, qreal y, qreal w, qreal h, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
+QGraphicsRectItem * addRect( qreal x, qreal y, qreal w, qreal h, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
 */
 void QGraphicsScene_addRect2()
 {
@@ -481,11 +465,6 @@ void QGraphicsScene_addRect2()
     Qt4xHb::createReturnClass( ptr, "QGRAPHICSRECTITEM", false );
   }
 }
-
-/*
-[1]QGraphicsRectItem * addRect ( const QRectF & rect, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
-[2]QGraphicsRectItem * addRect ( qreal x, qreal y, qreal w, qreal h, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_ADDRECT )
 {
@@ -909,7 +888,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_INPUTMETHODQUERY )
 }
 
 /*
-void invalidate ( qreal x, qreal y, qreal w, qreal h, SceneLayers layers = AllLayers )
+void invalidate( qreal x, qreal y, qreal w, qreal h, QGraphicsScene::SceneLayers layers = QGraphicsScene::AllLayers )
 */
 void QGraphicsScene_invalidate1()
 {
@@ -924,7 +903,7 @@ void QGraphicsScene_invalidate1()
 }
 
 /*
-void invalidate ( const QRectF & rect = QRectF(), SceneLayers layers = AllLayers )
+void invalidate( const QRectF & rect = QRectF(), QGraphicsScene::SceneLayers layers = QGraphicsScene::AllLayers )
 */
 void QGraphicsScene_invalidate2()
 {
@@ -937,11 +916,6 @@ void QGraphicsScene_invalidate2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void invalidate ( qreal x, qreal y, qreal w, qreal h, SceneLayers layers = AllLayers )
-[2]void invalidate ( const QRectF & rect = QRectF(), SceneLayers layers = AllLayers )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_INVALIDATE )
 {
@@ -1008,7 +982,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ISSORTCACHEENABLED )
 }
 
 /*
-QGraphicsItem * itemAt ( const QPointF & position, const QTransform & deviceTransform ) const
+QGraphicsItem * itemAt( const QPointF & position, const QTransform & deviceTransform ) const
 */
 void QGraphicsScene_itemAt1()
 {
@@ -1022,7 +996,7 @@ void QGraphicsScene_itemAt1()
 }
 
 /*
-QGraphicsItem * itemAt ( qreal x, qreal y, const QTransform & deviceTransform ) const
+QGraphicsItem * itemAt( qreal x, qreal y, const QTransform & deviceTransform ) const
 */
 void QGraphicsScene_itemAt2()
 {
@@ -1034,11 +1008,6 @@ void QGraphicsScene_itemAt2()
     Qt4xHb::createReturnClass( ptr, "QGRAPHICSITEM", false );
   }
 }
-
-/*
-[1]QGraphicsItem * itemAt ( const QPointF & position, const QTransform & deviceTransform ) const
-[2]QGraphicsItem * itemAt ( qreal x, qreal y, const QTransform & deviceTransform ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMAT )
 {
@@ -1081,7 +1050,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMINDEXMETHOD )
 }
 
 /*
-QList<QGraphicsItem *> items () const
+QList<QGraphicsItem *> items() const
 */
 void QGraphicsScene_items1()
 {
@@ -1118,7 +1087,7 @@ void QGraphicsScene_items1()
 }
 
 /*
-QList<QGraphicsItem *> items ( Qt::SortOrder order ) const
+QList<QGraphicsItem *> items( Qt::SortOrder order ) const
 */
 void QGraphicsScene_items2()
 {
@@ -1155,7 +1124,7 @@ void QGraphicsScene_items2()
 }
 
 /*
-QList<QGraphicsItem *> items ( const QPointF & pos, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
+QList<QGraphicsItem *> items( const QPointF & pos, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
 */
 void QGraphicsScene_items3()
 {
@@ -1192,7 +1161,7 @@ void QGraphicsScene_items3()
 }
 
 /*
-QList<QGraphicsItem *> items ( qreal x, qreal y, qreal w, qreal h, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
+QList<QGraphicsItem *> items( qreal x, qreal y, qreal w, qreal h, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
 */
 void QGraphicsScene_items4()
 {
@@ -1229,7 +1198,7 @@ void QGraphicsScene_items4()
 }
 
 /*
-QList<QGraphicsItem *> items ( const QRectF & rect, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
+QList<QGraphicsItem *> items( const QRectF & rect, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
 */
 void QGraphicsScene_items5()
 {
@@ -1266,7 +1235,7 @@ void QGraphicsScene_items5()
 }
 
 /*
-QList<QGraphicsItem *> items ( const QPolygonF & polygon, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
+QList<QGraphicsItem *> items( const QPolygonF & polygon, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
 */
 void QGraphicsScene_items6()
 {
@@ -1303,7 +1272,7 @@ void QGraphicsScene_items6()
 }
 
 /*
-QList<QGraphicsItem *> items ( const QPainterPath & path, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
+QList<QGraphicsItem *> items( const QPainterPath & path, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
 */
 void QGraphicsScene_items7()
 {
@@ -1338,16 +1307,6 @@ void QGraphicsScene_items7()
     hb_itemReturnRelease(pArray);
   }
 }
-
-/*
-[1]QList<QGraphicsItem *> items () const
-[2]QList<QGraphicsItem *> items ( Qt::SortOrder order ) const
-[3]QList<QGraphicsItem *> items ( const QPointF & pos, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
-[4]QList<QGraphicsItem *> items ( qreal x, qreal y, qreal w, qreal h, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
-[5]QList<QGraphicsItem *> items ( const QRectF & rect, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
-[6]QList<QGraphicsItem *> items ( const QPolygonF & polygon, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
-[7]QList<QGraphicsItem *> items ( const QPainterPath & path, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS )
 {
@@ -1895,7 +1854,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETPALETTE )
 }
 
 /*
-void setSceneRect ( const QRectF & rect )
+void setSceneRect( const QRectF & rect )
 */
 void QGraphicsScene_setSceneRect1()
 {
@@ -1910,7 +1869,7 @@ void QGraphicsScene_setSceneRect1()
 }
 
 /*
-void setSceneRect ( qreal x, qreal y, qreal w, qreal h )
+void setSceneRect( qreal x, qreal y, qreal w, qreal h )
 */
 void QGraphicsScene_setSceneRect2()
 {
@@ -1923,11 +1882,6 @@ void QGraphicsScene_setSceneRect2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setSceneRect ( const QRectF & rect )
-[2]void setSceneRect ( qreal x, qreal y, qreal w, qreal h )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETSCENERECT )
 {
@@ -1946,7 +1900,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETSCENERECT )
 }
 
 /*
-void setSelectionArea ( const QPainterPath & path, const QTransform & deviceTransform )
+void setSelectionArea( const QPainterPath & path, const QTransform & deviceTransform )
 */
 void QGraphicsScene_setSelectionArea1()
 {
@@ -1961,7 +1915,7 @@ void QGraphicsScene_setSelectionArea1()
 }
 
 /*
-void setSelectionArea ( const QPainterPath & path, Qt::ItemSelectionMode mode, const QTransform & deviceTransform )
+void setSelectionArea( const QPainterPath & path, Qt::ItemSelectionMode mode, const QTransform & deviceTransform )
 */
 void QGraphicsScene_setSelectionArea2()
 {
@@ -1974,11 +1928,6 @@ void QGraphicsScene_setSelectionArea2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setSelectionArea ( const QPainterPath & path, const QTransform & deviceTransform )
-[2]void setSelectionArea ( const QPainterPath & path, Qt::ItemSelectionMode mode, const QTransform & deviceTransform )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_SETSELECTIONAREA )
 {
@@ -2124,7 +2073,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_STYLE )
 }
 
 /*
-void update ( qreal x, qreal y, qreal w, qreal h )
+void update( qreal x, qreal y, qreal w, qreal h )
 */
 void QGraphicsScene_update1()
 {
@@ -2139,7 +2088,7 @@ void QGraphicsScene_update1()
 }
 
 /*
-void update ( const QRectF & rect = QRectF() )
+void update( const QRectF & rect = QRectF() )
 */
 void QGraphicsScene_update2()
 {
@@ -2152,11 +2101,6 @@ void QGraphicsScene_update2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void update ( qreal x, qreal y, qreal w, qreal h )
-[2]void update ( const QRectF & rect = QRectF() )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSSCENE_UPDATE )
 {

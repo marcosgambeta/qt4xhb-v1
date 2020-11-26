@@ -66,7 +66,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QItemSelectionRange ()
+QItemSelectionRange()
 */
 void QItemSelectionRange_new1()
 {
@@ -75,7 +75,7 @@ void QItemSelectionRange_new1()
 }
 
 /*
-QItemSelectionRange ( const QItemSelectionRange & other )
+QItemSelectionRange( const QItemSelectionRange & other )
 */
 void QItemSelectionRange_new2()
 {
@@ -84,7 +84,7 @@ void QItemSelectionRange_new2()
 }
 
 /*
-QItemSelectionRange ( const QModelIndex & topLeft, const QModelIndex & bottomRight )
+QItemSelectionRange( const QModelIndex & topLeft, const QModelIndex & bottomRight )
 */
 void QItemSelectionRange_new3()
 {
@@ -93,20 +93,13 @@ void QItemSelectionRange_new3()
 }
 
 /*
-QItemSelectionRange ( const QModelIndex & index )
+QItemSelectionRange( const QModelIndex & index )
 */
 void QItemSelectionRange_new4()
 {
   QItemSelectionRange * obj = new QItemSelectionRange( *PQMODELINDEX(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QItemSelectionRange ()
-[2]QItemSelectionRange ( const QItemSelectionRange & other )
-[3]QItemSelectionRange ( const QModelIndex & topLeft, const QModelIndex & bottomRight )
-[4]QItemSelectionRange ( const QModelIndex & index )
-*/
 
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW )
 {
@@ -199,7 +192,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOMRIGHT )
 }
 
 /*
-bool contains ( const QModelIndex & index ) const
+bool contains( const QModelIndex & index ) const
 */
 void QItemSelectionRange_contains1()
 {
@@ -212,7 +205,7 @@ void QItemSelectionRange_contains1()
 }
 
 /*
-bool contains ( int row, int column, const QModelIndex & parentIndex ) const
+bool contains( int row, int column, const QModelIndex & parentIndex ) const
 */
 void QItemSelectionRange_contains2()
 {
@@ -223,11 +216,6 @@ void QItemSelectionRange_contains2()
     RBOOL( obj->contains( PINT(1), PINT(2), *PQMODELINDEX(3) ) );
   }
 }
-
-/*
-[1]bool contains ( const QModelIndex & index ) const
-[2]bool contains ( int row, int column, const QModelIndex & parentIndex ) const
-*/
 
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS )
 {

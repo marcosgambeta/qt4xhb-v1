@@ -62,7 +62,7 @@ RETURN
 #include <QtCore/QMimeData>
 
 /*
-QDrag ( QWidget * dragSource )
+QDrag( QWidget * dragSource )
 */
 HB_FUNC_STATIC( QDRAG_NEW )
 {
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QDRAG_DELETE )
 }
 
 /*
-Qt::DropAction exec ( Qt::DropActions supportedActions = Qt::MoveAction )
+Qt::DropAction exec( Qt::DropActions supportedActions = Qt::MoveAction )
 */
 void QDrag_exec1()
 {
@@ -110,7 +110,7 @@ void QDrag_exec1()
 }
 
 /*
-Qt::DropAction exec ( Qt::DropActions supportedActions, Qt::DropAction defaultDropAction )
+Qt::DropAction exec( Qt::DropActions supportedActions, Qt::DropAction defaultDropAction )
 */
 void QDrag_exec2()
 {
@@ -121,11 +121,6 @@ void QDrag_exec2()
     RENUM( obj->exec( (Qt::DropActions) hb_parni(1), (Qt::DropAction) hb_parni(2) ) );
   }
 }
-
-/*
-[1]Qt::DropAction exec ( Qt::DropActions supportedActions = Qt::MoveAction )
-[2]Qt::DropAction exec ( Qt::DropActions supportedActions, Qt::DropAction defaultDropAction )
-*/
 
 HB_FUNC_STATIC( QDRAG_EXEC )
 {

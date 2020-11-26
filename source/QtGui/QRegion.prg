@@ -64,7 +64,7 @@ RETURN
 #include <QtCore/QVector>
 
 /*
-QRegion ()
+QRegion()
 */
 void QRegion_new1()
 {
@@ -73,7 +73,7 @@ void QRegion_new1()
 }
 
 /*
-QRegion ( int x, int y, int w, int h, RegionType t = Rectangle )
+QRegion( int x, int y, int w, int h, QRegion::RegionType t = QRegion::Rectangle )
 */
 void QRegion_new2()
 {
@@ -82,7 +82,7 @@ void QRegion_new2()
 }
 
 /*
-QRegion ( const QPolygon & a, Qt::FillRule fillRule = Qt::OddEvenFill )
+QRegion( const QPolygon & a, Qt::FillRule fillRule = Qt::OddEvenFill )
 */
 void QRegion_new3()
 {
@@ -91,7 +91,7 @@ void QRegion_new3()
 }
 
 /*
-QRegion ( const QRegion & r )
+QRegion( const QRegion & r )
 */
 void QRegion_new4()
 {
@@ -100,7 +100,7 @@ void QRegion_new4()
 }
 
 /*
-QRegion ( const QBitmap & bm )
+QRegion( const QBitmap & bm )
 */
 void QRegion_new5()
 {
@@ -109,22 +109,13 @@ void QRegion_new5()
 }
 
 /*
-QRegion ( const QRect & r, RegionType t = Rectangle )
+QRegion( const QRect & r, QRegion::RegionType t = QRegion::Rectangle )
 */
 void QRegion_new6()
 {
   QRegion * obj = new QRegion( *PQRECT(1), ISNIL(2)? (QRegion::RegionType) QRegion::Rectangle : (QRegion::RegionType) hb_parni(2) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QRegion ()
-[2]QRegion ( int x, int y, int w, int h, RegionType t = Rectangle )
-[3]QRegion ( const QPolygon & a, Qt::FillRule fillRule = Qt::OddEvenFill )
-[4]QRegion ( const QRegion & r )
-[5]QRegion ( const QBitmap & bm )
-[6]QRegion ( const QRect & r, RegionType t = Rectangle )
-*/
 
 HB_FUNC_STATIC( QREGION_NEW )
 {
@@ -201,7 +192,7 @@ HB_FUNC_STATIC( QREGION_BOUNDINGRECT )
 }
 
 /*
-bool contains ( const QPoint & p ) const
+bool contains( const QPoint & p ) const
 */
 void QRegion_contains1()
 {
@@ -214,7 +205,7 @@ void QRegion_contains1()
 }
 
 /*
-bool contains ( const QRect & r ) const
+bool contains( const QRect & r ) const
 */
 void QRegion_contains2()
 {
@@ -225,11 +216,6 @@ void QRegion_contains2()
     RBOOL( obj->contains( *PQRECT(1) ) );
   }
 }
-
-/*
-[1]bool contains ( const QPoint & p ) const
-[2]bool contains ( const QRect & r ) const
-*/
 
 HB_FUNC_STATIC( QREGION_CONTAINS )
 {
@@ -248,7 +234,7 @@ HB_FUNC_STATIC( QREGION_CONTAINS )
 }
 
 /*
-QRegion intersected ( const QRegion & r ) const
+QRegion intersected( const QRegion & r ) const
 */
 void QRegion_intersected1()
 {
@@ -262,7 +248,7 @@ void QRegion_intersected1()
 }
 
 /*
-QRegion intersected ( const QRect & rect ) const
+QRegion intersected( const QRect & rect ) const
 */
 void QRegion_intersected2()
 {
@@ -274,11 +260,6 @@ void QRegion_intersected2()
     Qt4xHb::createReturnClass( ptr, "QREGION", true );
   }
 }
-
-/*
-[1]QRegion intersected ( const QRegion & r ) const
-[2]QRegion intersected ( const QRect & rect ) const
-*/
 
 HB_FUNC_STATIC( QREGION_INTERSECTED )
 {
@@ -297,7 +278,7 @@ HB_FUNC_STATIC( QREGION_INTERSECTED )
 }
 
 /*
-bool intersects ( const QRegion & region ) const
+bool intersects( const QRegion & region ) const
 */
 void QRegion_intersects1()
 {
@@ -310,7 +291,7 @@ void QRegion_intersects1()
 }
 
 /*
-bool intersects ( const QRect & rect ) const
+bool intersects( const QRect & rect ) const
 */
 void QRegion_intersects2()
 {
@@ -321,11 +302,6 @@ void QRegion_intersects2()
     RBOOL( obj->intersects( *PQRECT(1) ) );
   }
 }
-
-/*
-[1]bool intersects ( const QRegion & region ) const
-[2]bool intersects ( const QRect & rect ) const
-*/
 
 HB_FUNC_STATIC( QREGION_INTERSECTS )
 {
@@ -495,7 +471,7 @@ HB_FUNC_STATIC( QREGION_SWAP )
 }
 
 /*
-void translate ( int dx, int dy )
+void translate( int dx, int dy )
 */
 void QRegion_translate1()
 {
@@ -510,7 +486,7 @@ void QRegion_translate1()
 }
 
 /*
-void translate ( const QPoint & point )
+void translate( const QPoint & point )
 */
 void QRegion_translate2()
 {
@@ -523,11 +499,6 @@ void QRegion_translate2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void translate ( int dx, int dy )
-[2]void translate ( const QPoint & point )
-*/
 
 HB_FUNC_STATIC( QREGION_TRANSLATE )
 {
@@ -546,7 +517,7 @@ HB_FUNC_STATIC( QREGION_TRANSLATE )
 }
 
 /*
-QRegion translated ( int dx, int dy ) const
+QRegion translated( int dx, int dy ) const
 */
 void QRegion_translated1()
 {
@@ -560,7 +531,7 @@ void QRegion_translated1()
 }
 
 /*
-QRegion translated ( const QPoint & p ) const
+QRegion translated( const QPoint & p ) const
 */
 void QRegion_translated2()
 {
@@ -572,11 +543,6 @@ void QRegion_translated2()
     Qt4xHb::createReturnClass( ptr, "QREGION", true );
   }
 }
-
-/*
-[1]QRegion translated ( int dx, int dy ) const
-[2]QRegion translated ( const QPoint & p ) const
-*/
 
 HB_FUNC_STATIC( QREGION_TRANSLATED )
 {
@@ -595,7 +561,7 @@ HB_FUNC_STATIC( QREGION_TRANSLATED )
 }
 
 /*
-QRegion united ( const QRegion & r ) const
+QRegion united( const QRegion & r ) const
 */
 void QRegion_united1()
 {
@@ -609,7 +575,7 @@ void QRegion_united1()
 }
 
 /*
-QRegion united ( const QRect & rect ) const
+QRegion united( const QRect & rect ) const
 */
 void QRegion_united2()
 {
@@ -621,11 +587,6 @@ void QRegion_united2()
     Qt4xHb::createReturnClass( ptr, "QREGION", true );
   }
 }
-
-/*
-[1]QRegion united ( const QRegion & r ) const
-[2]QRegion united ( const QRect & rect ) const
-*/
 
 HB_FUNC_STATIC( QREGION_UNITED )
 {

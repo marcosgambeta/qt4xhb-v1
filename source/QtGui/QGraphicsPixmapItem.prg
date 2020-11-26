@@ -58,7 +58,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QGraphicsPixmapItem ( QGraphicsItem * parent = 0 )
+QGraphicsPixmapItem( QGraphicsItem * parent = 0 )
 */
 void QGraphicsPixmapItem_new1()
 {
@@ -67,18 +67,13 @@ void QGraphicsPixmapItem_new1()
 }
 
 /*
-QGraphicsPixmapItem ( const QPixmap & pixmap, QGraphicsItem * parent = 0 )
+QGraphicsPixmapItem( const QPixmap & pixmap, QGraphicsItem * parent = 0 )
 */
 void QGraphicsPixmapItem_new2()
 {
   QGraphicsPixmapItem * obj = new QGraphicsPixmapItem( *PQPIXMAP(1), ISNIL(2)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(2) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QGraphicsPixmapItem ( QGraphicsItem * parent = 0 )
-[2]QGraphicsPixmapItem ( const QPixmap & pixmap, QGraphicsItem * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_NEW )
 {
@@ -164,7 +159,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_PIXMAP )
 }
 
 /*
-void setOffset ( const QPointF & offset )
+void setOffset( const QPointF & offset )
 */
 void QGraphicsPixmapItem_setOffset1()
 {
@@ -179,7 +174,7 @@ void QGraphicsPixmapItem_setOffset1()
 }
 
 /*
-void setOffset ( qreal x, qreal y )
+void setOffset( qreal x, qreal y )
 */
 void QGraphicsPixmapItem_setOffset2()
 {
@@ -192,11 +187,6 @@ void QGraphicsPixmapItem_setOffset2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setOffset ( const QPointF & offset )
-[2]void setOffset ( qreal x, qreal y )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETOFFSET )
 {

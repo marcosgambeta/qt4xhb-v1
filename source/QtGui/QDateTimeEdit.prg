@@ -100,7 +100,7 @@ RETURN
 #include <QtGui/QCalendarWidget>
 
 /*
-QDateTimeEdit ( QWidget * parent = 0 )
+QDateTimeEdit( QWidget * parent = 0 )
 */
 void QDateTimeEdit_new1()
 {
@@ -109,7 +109,7 @@ void QDateTimeEdit_new1()
 }
 
 /*
-QDateTimeEdit ( const QDateTime & datetime, QWidget * parent = 0 )
+QDateTimeEdit( const QDateTime & datetime, QWidget * parent = 0 )
 */
 void QDateTimeEdit_new2()
 {
@@ -118,7 +118,7 @@ void QDateTimeEdit_new2()
 }
 
 /*
-QDateTimeEdit ( const QDate & date, QWidget * parent = 0 )
+QDateTimeEdit( const QDate & date, QWidget * parent = 0 )
 */
 void QDateTimeEdit_new3()
 {
@@ -127,20 +127,13 @@ void QDateTimeEdit_new3()
 }
 
 /*
-QDateTimeEdit ( const QTime & time, QWidget * parent = 0 )
+QDateTimeEdit( const QTime & time, QWidget * parent = 0 )
 */
 void QDateTimeEdit_new4()
 {
   QDateTimeEdit * obj = new QDateTimeEdit( *PQTIME(1), OPQWIDGET(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QDateTimeEdit ( QWidget * parent = 0 )
-[2]QDateTimeEdit ( const QDateTime & datetime, QWidget * parent = 0 )
-[3]QDateTimeEdit ( const QDate & date, QWidget * parent = 0 )
-[4]QDateTimeEdit ( const QTime & time, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QDATETIMEEDIT_NEW )
 {

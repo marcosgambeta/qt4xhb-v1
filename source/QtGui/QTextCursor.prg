@@ -119,7 +119,7 @@ RETURN
 #include <QtGui/QTextDocument>
 
 /*
-QTextCursor ()
+QTextCursor()
 */
 void QTextCursor_new1()
 {
@@ -128,7 +128,7 @@ void QTextCursor_new1()
 }
 
 /*
-QTextCursor ( QTextDocument * document )
+QTextCursor( QTextDocument * document )
 */
 void QTextCursor_new2()
 {
@@ -137,7 +137,7 @@ void QTextCursor_new2()
 }
 
 /*
-QTextCursor ( QTextFrame * frame )
+QTextCursor( QTextFrame * frame )
 */
 void QTextCursor_new3()
 {
@@ -146,7 +146,7 @@ void QTextCursor_new3()
 }
 
 /*
-QTextCursor ( const QTextBlock & block )
+QTextCursor( const QTextBlock & block )
 */
 void QTextCursor_new4()
 {
@@ -155,21 +155,13 @@ void QTextCursor_new4()
 }
 
 /*
-QTextCursor ( const QTextCursor & cursor )
+QTextCursor( const QTextCursor & cursor )
 */
 void QTextCursor_new5()
 {
   QTextCursor * obj = new QTextCursor( *PQTEXTCURSOR(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QTextCursor ()
-[2]QTextCursor ( QTextDocument * document )
-[3]QTextCursor ( QTextFrame * frame )
-[4]QTextCursor ( const QTextBlock & block )
-[5]QTextCursor ( const QTextCursor & cursor )
-*/
 
 HB_FUNC_STATIC( QTEXTCURSOR_NEW )
 {
@@ -537,7 +529,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_COLUMNNUMBER )
 }
 
 /*
-QTextList * createList ( const QTextListFormat & format )
+QTextList * createList( const QTextListFormat & format )
 */
 void QTextCursor_createList1()
 {
@@ -551,7 +543,7 @@ void QTextCursor_createList1()
 }
 
 /*
-QTextList * createList ( QTextListFormat::Style style )
+QTextList * createList( QTextListFormat::Style style )
 */
 void QTextCursor_createList2()
 {
@@ -563,11 +555,6 @@ void QTextCursor_createList2()
     Qt4xHb::createReturnQObjectClass( ptr, "QTEXTLIST" );
   }
 }
-
-/*
-[1]QTextList * createList ( const QTextListFormat & format )
-[2]QTextList * createList ( QTextListFormat::Style style )
-*/
 
 HB_FUNC_STATIC( QTEXTCURSOR_CREATELIST )
 {
@@ -812,7 +799,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_HASSELECTION )
 }
 
 /*
-void insertBlock ()
+void insertBlock()
 */
 void QTextCursor_insertBlock1()
 {
@@ -827,7 +814,7 @@ void QTextCursor_insertBlock1()
 }
 
 /*
-void insertBlock ( const QTextBlockFormat & format )
+void insertBlock( const QTextBlockFormat & format )
 */
 void QTextCursor_insertBlock2()
 {
@@ -842,7 +829,7 @@ void QTextCursor_insertBlock2()
 }
 
 /*
-void insertBlock ( const QTextBlockFormat & format, const QTextCharFormat & charFormat )
+void insertBlock( const QTextBlockFormat & format, const QTextCharFormat & charFormat )
 */
 void QTextCursor_insertBlock3()
 {
@@ -855,12 +842,6 @@ void QTextCursor_insertBlock3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void insertBlock ()
-[2]void insertBlock ( const QTextBlockFormat & format )
-[3]void insertBlock ( const QTextBlockFormat & format, const QTextCharFormat & charFormat )
-*/
 
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTBLOCK )
 {
@@ -960,7 +941,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTHTML )
 }
 
 /*
-void insertImage ( const QTextImageFormat & format )
+void insertImage( const QTextImageFormat & format )
 */
 void QTextCursor_insertImage1()
 {
@@ -975,7 +956,7 @@ void QTextCursor_insertImage1()
 }
 
 /*
-void insertImage ( const QTextImageFormat & format, QTextFrameFormat::Position alignment )
+void insertImage( const QTextImageFormat & format, QTextFrameFormat::Position alignment )
 */
 void QTextCursor_insertImage2()
 {
@@ -990,7 +971,7 @@ void QTextCursor_insertImage2()
 }
 
 /*
-void insertImage ( const QString & name )
+void insertImage( const QString & name )
 */
 void QTextCursor_insertImage3()
 {
@@ -1005,7 +986,7 @@ void QTextCursor_insertImage3()
 }
 
 /*
-void insertImage ( const QImage & image, const QString & name = QString() )
+void insertImage( const QImage & image, const QString & name = QString() )
 */
 void QTextCursor_insertImage4()
 {
@@ -1018,13 +999,6 @@ void QTextCursor_insertImage4()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void insertImage ( const QTextImageFormat & format )
-[2]void insertImage ( const QTextImageFormat & format, QTextFrameFormat::Position alignment )
-[3]void insertImage ( const QString & name )
-[4]void insertImage ( const QImage & image, const QString & name = QString() )
-*/
 
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE )
 {
@@ -1051,7 +1025,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE )
 }
 
 /*
-QTextList * insertList ( const QTextListFormat & format )
+QTextList * insertList( const QTextListFormat & format )
 */
 void QTextCursor_insertList1()
 {
@@ -1065,7 +1039,7 @@ void QTextCursor_insertList1()
 }
 
 /*
-QTextList * insertList ( QTextListFormat::Style style )
+QTextList * insertList( QTextListFormat::Style style )
 */
 void QTextCursor_insertList2()
 {
@@ -1077,11 +1051,6 @@ void QTextCursor_insertList2()
     Qt4xHb::createReturnQObjectClass( ptr, "QTEXTLIST" );
   }
 }
-
-/*
-[1]QTextList * insertList ( const QTextListFormat & format )
-[2]QTextList * insertList ( QTextListFormat::Style style )
-*/
 
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTLIST )
 {
@@ -1100,7 +1069,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTLIST )
 }
 
 /*
-QTextTable * insertTable ( int rows, int columns, const QTextTableFormat & format )
+QTextTable * insertTable( int rows, int columns, const QTextTableFormat & format )
 */
 void QTextCursor_insertTable1()
 {
@@ -1114,7 +1083,7 @@ void QTextCursor_insertTable1()
 }
 
 /*
-QTextTable * insertTable ( int rows, int columns )
+QTextTable * insertTable( int rows, int columns )
 */
 void QTextCursor_insertTable2()
 {
@@ -1126,11 +1095,6 @@ void QTextCursor_insertTable2()
     Qt4xHb::createReturnQObjectClass( ptr, "QTEXTTABLE" );
   }
 }
-
-/*
-[1]QTextTable * insertTable ( int rows, int columns, const QTextTableFormat & format )
-[2]QTextTable * insertTable ( int rows, int columns )
-*/
 
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTTABLE )
 {
@@ -1149,7 +1113,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTTABLE )
 }
 
 /*
-void insertText ( const QString & text )
+void insertText( const QString & text )
 */
 void QTextCursor_insertText1()
 {
@@ -1164,7 +1128,7 @@ void QTextCursor_insertText1()
 }
 
 /*
-void insertText ( const QString & text, const QTextCharFormat & format )
+void insertText( const QString & text, const QTextCharFormat & format )
 */
 void QTextCursor_insertText2()
 {
@@ -1177,11 +1141,6 @@ void QTextCursor_insertText2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void insertText ( const QString & text )
-[2]void insertText ( const QString & text, const QTextCharFormat & format )
-*/
 
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTTEXT )
 {

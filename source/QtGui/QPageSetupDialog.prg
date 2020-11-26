@@ -48,7 +48,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QPageSetupDialog ( QPrinter * printer, QWidget * parent = 0 )
+QPageSetupDialog( QPrinter * printer, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
 {

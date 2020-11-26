@@ -116,7 +116,7 @@ RETURN
 #include <QtGui/QMenu>
 
 /*
-QPlainTextEdit ( QWidget * parent = 0 )
+QPlainTextEdit( QWidget * parent = 0 )
 */
 void QPlainTextEdit_new1()
 {
@@ -125,18 +125,13 @@ void QPlainTextEdit_new1()
 }
 
 /*
-QPlainTextEdit ( const QString & text, QWidget * parent = 0 )
+QPlainTextEdit( const QString & text, QWidget * parent = 0 )
 */
 void QPlainTextEdit_new2()
 {
   QPlainTextEdit * obj = new QPlainTextEdit( PQSTRING(1), OPQWIDGET(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QPlainTextEdit ( QWidget * parent = 0 )
-[2]QPlainTextEdit ( const QString & text, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QPLAINTEXTEDIT_NEW )
 {
@@ -369,7 +364,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORFORPOSITION )
 }
 
 /*
-QRect cursorRect ( const QTextCursor & cursor ) const
+QRect cursorRect( const QTextCursor & cursor ) const
 */
 void QPlainTextEdit_cursorRect1()
 {
@@ -383,7 +378,7 @@ void QPlainTextEdit_cursorRect1()
 }
 
 /*
-QRect cursorRect () const
+QRect cursorRect() const
 */
 void QPlainTextEdit_cursorRect2()
 {
@@ -395,11 +390,6 @@ void QPlainTextEdit_cursorRect2()
     Qt4xHb::createReturnClass( ptr, "QRECT", true );
   }
 }
-
-/*
-[1]QRect cursorRect ( const QTextCursor & cursor ) const
-[2]QRect cursorRect () const
-*/
 
 HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORRECT )
 {

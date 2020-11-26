@@ -46,7 +46,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QWidgetAction ( QObject * parent )
+QWidgetAction( QObject * parent )
 */
 HB_FUNC_STATIC( QWIDGETACTION_NEW )
 {

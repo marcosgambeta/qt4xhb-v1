@@ -54,7 +54,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QGraphicsEllipseItem ( QGraphicsItem * parent = 0 )
+QGraphicsEllipseItem( QGraphicsItem * parent = 0 )
 */
 void QGraphicsEllipseItem_new1()
 {
@@ -63,7 +63,7 @@ void QGraphicsEllipseItem_new1()
 }
 
 /*
-QGraphicsEllipseItem ( const QRectF & rect, QGraphicsItem * parent = 0 )
+QGraphicsEllipseItem( const QRectF & rect, QGraphicsItem * parent = 0 )
 */
 void QGraphicsEllipseItem_new2()
 {
@@ -72,19 +72,13 @@ void QGraphicsEllipseItem_new2()
 }
 
 /*
-QGraphicsEllipseItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = 0 )
+QGraphicsEllipseItem( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = 0 )
 */
 void QGraphicsEllipseItem_new3()
 {
   QGraphicsEllipseItem * obj = new QGraphicsEllipseItem( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ISNIL(5)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(5) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QGraphicsEllipseItem ( QGraphicsItem * parent = 0 )
-[2]QGraphicsEllipseItem ( const QRectF & rect, QGraphicsItem * parent = 0 )
-[3]QGraphicsEllipseItem ( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_NEW )
 {
@@ -149,7 +143,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_RECT )
 }
 
 /*
-void setRect ( const QRectF & rect )
+void setRect( const QRectF & rect )
 */
 void QGraphicsEllipseItem_setRect1()
 {
@@ -164,7 +158,7 @@ void QGraphicsEllipseItem_setRect1()
 }
 
 /*
-void setRect ( qreal x, qreal y, qreal width, qreal height )
+void setRect( qreal x, qreal y, qreal width, qreal height )
 */
 void QGraphicsEllipseItem_setRect2()
 {
@@ -177,11 +171,6 @@ void QGraphicsEllipseItem_setRect2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setRect ( const QRectF & rect )
-[2]void setRect ( qreal x, qreal y, qreal width, qreal height )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETRECT )
 {

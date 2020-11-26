@@ -80,7 +80,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QGridLayout ( QWidget * parent )
+QGridLayout( QWidget * parent )
 */
 void QGridLayout_new1()
 {
@@ -89,18 +89,13 @@ void QGridLayout_new1()
 }
 
 /*
-QGridLayout ()
+QGridLayout()
 */
 void QGridLayout_new2()
 {
   QGridLayout * obj = new QGridLayout();
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QGridLayout ( QWidget * parent )
-[2]QGridLayout ()
-*/
 
 HB_FUNC_STATIC( QGRIDLAYOUT_NEW )
 {
@@ -164,7 +159,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDITEM )
 }
 
 /*
-void addLayout ( QLayout * layout, int row, int column, Qt::Alignment alignment = 0 )
+void addLayout( QLayout * layout, int row, int column, Qt::Alignment alignment = 0 )
 */
 void QGridLayout_addLayout1()
 {
@@ -179,7 +174,7 @@ void QGridLayout_addLayout1()
 }
 
 /*
-void addLayout ( QLayout * layout, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
+void addLayout( QLayout * layout, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
 */
 void QGridLayout_addLayout2()
 {
@@ -192,11 +187,6 @@ void QGridLayout_addLayout2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void addLayout ( QLayout * layout, int row, int column, Qt::Alignment alignment = 0 )
-[2]void addLayout ( QLayout * layout, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
-*/
 
 HB_FUNC_STATIC( QGRIDLAYOUT_ADDLAYOUT )
 {
@@ -215,7 +205,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDLAYOUT )
 }
 
 /*
-void addWidget ( QWidget * widget, int row, int column, Qt::Alignment alignment = 0 )
+void addWidget( QWidget * widget, int row, int column, Qt::Alignment alignment = 0 )
 */
 void QGridLayout_addWidget1()
 {
@@ -230,7 +220,7 @@ void QGridLayout_addWidget1()
 }
 
 /*
-void addWidget ( QWidget * widget, int fromRow, int fromColumn, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
+void addWidget( QWidget * widget, int fromRow, int fromColumn, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
 */
 void QGridLayout_addWidget2()
 {
@@ -243,11 +233,6 @@ void QGridLayout_addWidget2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void addWidget ( QWidget * widget, int row, int column, Qt::Alignment alignment = 0 )
-[2]void addWidget ( QWidget * widget, int fromRow, int fromColumn, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
-*/
 
 HB_FUNC_STATIC( QGRIDLAYOUT_ADDWIDGET )
 {

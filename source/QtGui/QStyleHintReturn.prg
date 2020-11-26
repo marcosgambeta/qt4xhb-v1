@@ -48,7 +48,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QStyleHintReturn ( int version = QStyleOption::Version, int type = SH_Default )
+QStyleHintReturn( int version = QStyleOption::Version, int type = QStyleHintReturn::SH_Default )
 */
 HB_FUNC_STATIC( QSTYLEHINTRETURN_NEW )
 {

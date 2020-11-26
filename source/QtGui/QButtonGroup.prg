@@ -61,7 +61,7 @@ RETURN
 #include <QtGui/QAbstractButton>
 
 /*
-QButtonGroup ( QObject * parent = 0 )
+QButtonGroup( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_NEW )
 {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_DELETE )
 }
 
 /*
-void addButton ( QAbstractButton * button )
+void addButton( QAbstractButton * button )
 */
 void QButtonGroup_addButton1()
 {
@@ -111,7 +111,7 @@ void QButtonGroup_addButton1()
 }
 
 /*
-void addButton ( QAbstractButton * button, int id )
+void addButton( QAbstractButton * button, int id )
 */
 void QButtonGroup_addButton2()
 {
@@ -124,11 +124,6 @@ void QButtonGroup_addButton2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void addButton ( QAbstractButton * button )
-[2]void addButton ( QAbstractButton * button, int id )
-*/
 
 HB_FUNC_STATIC( QBUTTONGROUP_ADDBUTTON )
 {

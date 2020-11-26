@@ -55,7 +55,7 @@ void QStyleOptionDockWidget_new1()
 }
 
 /*
-QStyleOptionDockWidget(const QStyleOptionDockWidget &other)
+QStyleOptionDockWidget( const QStyleOptionDockWidget & other )
 */
 void QStyleOptionDockWidget_new2()
 {
@@ -64,13 +64,7 @@ void QStyleOptionDockWidget_new2()
 }
 
 /*
-QStyleOptionDockWidget(int version) (protected)
-*/
-
-/*
-[1]QStyleOptionDockWidget()
-[2]QStyleOptionDockWidget(const QStyleOptionDockWidget &other)
-[3]QStyleOptionDockWidget(int version) (protected)
+QStyleOptionDockWidget(int version) [PROTECTED]
 */
 
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_NEW )

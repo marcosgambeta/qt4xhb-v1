@@ -39,7 +39,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QIconDragEvent ()
+QIconDragEvent()
 */
 HB_FUNC_STATIC( QICONDRAGEVENT_NEW )
 {

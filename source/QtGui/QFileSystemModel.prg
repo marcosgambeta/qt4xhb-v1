@@ -100,7 +100,7 @@ RETURN
 #include <QtCore/QMimeData>
 
 /*
-QFileSystemModel(QObject * parent = 0)
+QFileSystemModel( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_NEW )
 {
@@ -1023,7 +1023,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_HEADERDATA )
 }
 
 /*
-QModelIndex index ( const QString & path, int column = 0 ) const
+QModelIndex index( const QString & path, int column = 0 ) const
 */
 void QFileSystemModel_index1()
 {
@@ -1037,7 +1037,7 @@ void QFileSystemModel_index1()
 }
 
 /*
-virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
+virtual QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const
 */
 void QFileSystemModel_index2()
 {
@@ -1049,11 +1049,6 @@ void QFileSystemModel_index2()
     Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
   }
 }
-
-/*
-[1]QModelIndex index ( const QString & path, int column = 0 ) const
-[2]virtual QModelIndex index ( int row, int column, const QModelIndex & parent = QModelIndex() ) const
-*/
 
 HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX )
 {

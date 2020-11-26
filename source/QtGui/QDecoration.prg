@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QDECORATION_PAINT )
 }
 
 /*
-virtual QRegion region ( const QWidget * widget, const QRect & rectangle, int decorationRegion = All ) = 0
+virtual QRegion region( const QWidget * widget, const QRect & rectangle, int decorationRegion = QDecoration::All ) = 0
 */
 void QDecoration_region1()
 {
@@ -164,7 +164,7 @@ void QDecoration_region1()
 }
 
 /*
-QRegion region ( const QWidget * widget, int decorationRegion = All )
+QRegion region( const QWidget * widget, int decorationRegion = QDecoration::All )
 */
 void QDecoration_region2()
 {
@@ -176,11 +176,6 @@ void QDecoration_region2()
     Qt4xHb::createReturnClass( ptr, "QREGION", true );
   }
 }
-
-/*
-[1]virtual QRegion region ( const QWidget * widget, const QRect & rectangle, int decorationRegion = All ) = 0
-[2]QRegion region ( const QWidget * widget, int decorationRegion = All )
-*/
 
 HB_FUNC_STATIC( QDECORATION_REGION )
 {

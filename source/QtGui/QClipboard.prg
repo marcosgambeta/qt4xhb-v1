@@ -34,7 +34,6 @@ CLASS QClipboard INHERIT QObject
    METHOD supportsFindBuffer
    METHOD supportsSelection
    METHOD text
-   METHOD text2
 
    METHOD onChanged
    METHOD onDataChanged
@@ -391,7 +390,7 @@ HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSSELECTION )
 }
 
 /*
-QString text ( Mode mode = Clipboard ) const
+QString text( QClipboard::Mode mode = QClipboard::Clipboard ) const
 */
 void QClipboard_text1()
 {
@@ -404,23 +403,19 @@ void QClipboard_text1()
 }
 
 /*
-QString text ( QString & subtype, Mode mode = Clipboard ) const
+QString text( QString & subtype, QClipboard::Mode mode = QClipboard::Clipboard ) const
 */
-HB_FUNC_STATIC( QCLIPBOARD_TEXT2 )
+void QClipboard_text2()
 {
-  QClipboard * obj = (QClipboard *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QClipboard * obj = (QClipboard *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QString par1 = hb_parc(1);
-    RQSTRING( obj->text ( par1, (QClipboard::Mode) hb_parni(2) ) );
+    RQSTRING( obj->text( par1, ISNIL(2)? (QClipboard::Mode) QClipboard::Clipboard : (QClipboard::Mode) hb_parni(2) ) );
+    hb_storc( QSTRINGTOSTRING(par1), 1);
   }
 }
-
-/*
-[1]QString text ( Mode mode = Clipboard ) const
-[2]QString text ( QString & subtype, Mode mode = Clipboard ) const
-*/
 
 HB_FUNC_STATIC( QCLIPBOARD_TEXT )
 {
@@ -430,7 +425,7 @@ HB_FUNC_STATIC( QCLIPBOARD_TEXT )
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QCLIPBOARD_TEXT2 );
+    QClipboard_text2();
   }
   else
   {

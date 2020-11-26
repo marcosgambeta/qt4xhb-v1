@@ -61,7 +61,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QTextBlockFormat ()
+QTextBlockFormat()
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_NEW )
 {
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LEFTMARGIN )
 }
 
 /*
-qreal lineHeight ( qreal scriptLineHeight, qreal scaling ) const
+qreal lineHeight( qreal scriptLineHeight, qreal scaling ) const
 */
 void QTextBlockFormat_lineHeight1()
 {
@@ -227,7 +227,7 @@ void QTextBlockFormat_lineHeight1()
 }
 
 /*
-qreal lineHeight () const
+qreal lineHeight() const
 */
 void QTextBlockFormat_lineHeight2()
 {
@@ -238,11 +238,6 @@ void QTextBlockFormat_lineHeight2()
     RQREAL( obj->lineHeight() );
   }
 }
-
-/*
-[1]qreal lineHeight ( qreal scriptLineHeight, qreal scaling ) const
-[2]qreal lineHeight () const
-*/
 
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT )
 {

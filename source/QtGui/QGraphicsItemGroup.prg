@@ -48,7 +48,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QGraphicsItemGroup ( QGraphicsItem * parent = 0 )
+QGraphicsItemGroup( QGraphicsItem * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_NEW )
 {

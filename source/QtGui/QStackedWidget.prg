@@ -55,7 +55,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QStackedWidget ( QWidget * parent = 0 )
+QStackedWidget( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_NEW )
 {

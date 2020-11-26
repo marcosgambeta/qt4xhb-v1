@@ -51,7 +51,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QDoubleValidator ( QObject * parent = 0 )
+QDoubleValidator( QObject * parent = 0 )
 */
 void QDoubleValidator_new1()
 {
@@ -60,18 +60,13 @@ void QDoubleValidator_new1()
 }
 
 /*
-QDoubleValidator ( double bottom, double top, int decimals, QObject * parent )
+QDoubleValidator( double bottom, double top, int decimals, QObject * parent = 0 )
 */
 void QDoubleValidator_new2()
 {
-  QDoubleValidator * obj = new QDoubleValidator( PDOUBLE(1), PDOUBLE(2), PINT(3), PQOBJECT(4) );
+  QDoubleValidator * obj = new QDoubleValidator( PDOUBLE(1), PDOUBLE(2), PINT(3), OPQOBJECT(4,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QDoubleValidator ( QObject * parent = 0 )
-[2]QDoubleValidator ( double bottom, double top, int decimals, QObject * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW )
 {
@@ -335,17 +330,30 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_TOP )
 }
 
 /*
-virtual QValidator::State validate ( QString & input, int & pos ) const
+virtual QValidator::State validate( QString & input, int & pos ) const
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_VALIDATE )
 {
-  QDoubleValidator * obj = (QDoubleValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QDoubleValidator * obj = (QDoubleValidator *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    int par2 = hb_parni(2);
-    hb_retni( (int) obj->validate ( par1, par2 ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    {
+#endif
+      QString par1 = hb_parc(1);
+      int par2;
+      RENUM( obj->validate( par1, par2 ) );
+      hb_storc( QSTRINGTOSTRING(par1), 1);
+      hb_storni( par2, 2 );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
   }
 }
 

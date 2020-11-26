@@ -48,7 +48,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QTextListFormat ()
+QTextListFormat()
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_NEW )
 {

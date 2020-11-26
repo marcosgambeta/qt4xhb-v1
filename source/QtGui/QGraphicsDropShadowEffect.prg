@@ -59,7 +59,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QGraphicsDropShadowEffect ( QObject * parent = 0 )
+QGraphicsDropShadowEffect( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_NEW )
 {
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETCOLOR )
 }
 
 /*
-void setOffset ( const QPointF & ofs )
+void setOffset( const QPointF & ofs )
 */
 void QGraphicsDropShadowEffect_setOffset1()
 {
@@ -308,7 +308,7 @@ void QGraphicsDropShadowEffect_setOffset1()
 }
 
 /*
-void setOffset ( qreal dx, qreal dy )
+void setOffset( qreal dx, qreal dy )
 */
 void QGraphicsDropShadowEffect_setOffset2()
 {
@@ -323,7 +323,7 @@ void QGraphicsDropShadowEffect_setOffset2()
 }
 
 /*
-void setOffset ( qreal d )
+void setOffset( qreal d )
 */
 void QGraphicsDropShadowEffect_setOffset3()
 {
@@ -336,12 +336,6 @@ void QGraphicsDropShadowEffect_setOffset3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setOffset ( const QPointF & ofs )
-[2]void setOffset ( qreal dx, qreal dy )
-[3]void setOffset ( qreal d )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET )
 {

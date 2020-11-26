@@ -73,7 +73,7 @@ RETURN
 #include <QtCore/QStringList>
 
 /*
-QFontDatabase ()
+QFontDatabase()
 */
 HB_FUNC_STATIC( QFONTDATABASE_NEW )
 {
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QFONTDATABASE_SMOOTHSIZES )
 }
 
 /*
-QString styleString ( const QFont & font )
+QString styleString( const QFont & font )
 */
 void QFontDatabase_styleString1()
 {
@@ -345,7 +345,7 @@ void QFontDatabase_styleString1()
 }
 
 /*
-QString styleString ( const QFontInfo & fontInfo )
+QString styleString( const QFontInfo & fontInfo )
 */
 void QFontDatabase_styleString2()
 {
@@ -356,11 +356,6 @@ void QFontDatabase_styleString2()
     RQSTRING( obj->styleString( *PQFONTINFO(1) ) );
   }
 }
-
-/*
-[1]QString styleString ( const QFont & font )
-[2]QString styleString ( const QFontInfo & fontInfo )
-*/
 
 HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING )
 {
@@ -427,7 +422,7 @@ HB_FUNC_STATIC( QFONTDATABASE_WEIGHT )
 }
 
 /*
-QList<WritingSystem> writingSystems () const
+QList<QFontDatabase::WritingSystem> writingSystems() const
 */
 void QFontDatabase_writingSystems1()
 {
@@ -448,7 +443,7 @@ void QFontDatabase_writingSystems1()
 }
 
 /*
-QList<WritingSystem> writingSystems ( const QString & family ) const
+QList<QFontDatabase::WritingSystem> writingSystems( const QString & family ) const
 */
 void QFontDatabase_writingSystems2()
 {
@@ -467,11 +462,6 @@ void QFontDatabase_writingSystems2()
     hb_itemReturnRelease(pArray);
   }
 }
-
-/*
-[1]QList<WritingSystem> writingSystems () const
-[2]QList<WritingSystem> writingSystems ( const QString & family ) const
-*/
 
 HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMS )
 {

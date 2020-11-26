@@ -61,7 +61,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QFontInfo ( const QFont & font )
+QFontInfo( const QFont & font )
 */
 void QFontInfo_new1()
 {
@@ -70,18 +70,13 @@ void QFontInfo_new1()
 }
 
 /*
-QFontInfo ( const QFontInfo & fi )
+QFontInfo( const QFontInfo & fi )
 */
 void QFontInfo_new2()
 {
   QFontInfo * obj = new QFontInfo( *PQFONTINFO(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QFontInfo ( const QFont & font )
-[2]QFontInfo ( const QFontInfo & fi )
-*/
 
 HB_FUNC_STATIC( QFONTINFO_NEW )
 {

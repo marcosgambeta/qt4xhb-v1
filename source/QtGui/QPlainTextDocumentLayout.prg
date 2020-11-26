@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QPlainTextDocumentLayout ( QTextDocument * document )
+QPlainTextDocumentLayout( QTextDocument * document )
 */
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_NEW )
 {

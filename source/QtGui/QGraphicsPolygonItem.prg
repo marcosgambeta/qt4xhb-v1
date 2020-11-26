@@ -53,7 +53,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QGraphicsPolygonItem ( QGraphicsItem * parent = 0 )
+QGraphicsPolygonItem( QGraphicsItem * parent = 0 )
 */
 void QGraphicsPolygonItem_new1()
 {
@@ -62,18 +62,13 @@ void QGraphicsPolygonItem_new1()
 }
 
 /*
-QGraphicsPolygonItem ( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
+QGraphicsPolygonItem( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
 */
 void QGraphicsPolygonItem_new2()
 {
   QGraphicsPolygonItem * obj = new QGraphicsPolygonItem( *PQPOLYGONF(1), ISNIL(2)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(2) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QGraphicsPolygonItem ( QGraphicsItem * parent = 0 )
-[2]QGraphicsPolygonItem ( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW )
 {

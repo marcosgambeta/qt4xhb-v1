@@ -43,7 +43,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QErrorMessage ( QWidget * parent = 0 )
+QErrorMessage( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QERRORMESSAGE_NEW )
 {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QERRORMESSAGE_DELETE )
 }
 
 /*
-void showMessage ( const QString & message )
+void showMessage( const QString & message )
 */
 void QErrorMessage_showMessage1()
 {
@@ -93,7 +93,7 @@ void QErrorMessage_showMessage1()
 }
 
 /*
-void showMessage ( const QString & message, const QString & type )
+void showMessage( const QString & message, const QString & type )
 */
 void QErrorMessage_showMessage2()
 {
@@ -106,11 +106,6 @@ void QErrorMessage_showMessage2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void showMessage ( const QString & message )
-[2]void showMessage ( const QString & message, const QString & type )
-*/
 
 HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE )
 {

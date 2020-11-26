@@ -72,7 +72,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QSplitter ( QWidget * parent = 0 )
+QSplitter( QWidget * parent = 0 )
 */
 void QSplitter_new1()
 {
@@ -81,18 +81,13 @@ void QSplitter_new1()
 }
 
 /*
-QSplitter ( Qt::Orientation orientation, QWidget * parent = 0 )
+QSplitter( Qt::Orientation orientation, QWidget * parent = 0 )
 */
 void QSplitter_new2()
 {
   QSplitter * obj = new QSplitter( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QSplitter ( QWidget * parent = 0 )
-[2]QSplitter ( Qt::Orientation orientation, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QSPLITTER_NEW )
 {

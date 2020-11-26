@@ -63,7 +63,7 @@ RETURN
 #include <QtCore/QList>
 
 /*
-QTextDocumentWriter ()
+QTextDocumentWriter()
 */
 void QTextDocumentWriter_new1()
 {
@@ -72,7 +72,7 @@ void QTextDocumentWriter_new1()
 }
 
 /*
-QTextDocumentWriter ( QIODevice * device, const QByteArray & format )
+QTextDocumentWriter( QIODevice * device, const QByteArray & format )
 */
 void QTextDocumentWriter_new2()
 {
@@ -81,19 +81,13 @@ void QTextDocumentWriter_new2()
 }
 
 /*
-QTextDocumentWriter ( const QString & fileName, const QByteArray & format = QByteArray() )
+QTextDocumentWriter( const QString & fileName, const QByteArray & format = QByteArray() )
 */
 void QTextDocumentWriter_new3()
 {
   QTextDocumentWriter * obj = new QTextDocumentWriter( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt4xHb::itemGetPtr(2) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QTextDocumentWriter ()
-[2]QTextDocumentWriter ( QIODevice * device, const QByteArray & format )
-[3]QTextDocumentWriter ( const QString & fileName, const QByteArray & format = QByteArray() )
-*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEW )
 {
@@ -336,7 +330,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETFORMAT )
 }
 
 /*
-bool write ( const QTextDocument * document )
+bool write( const QTextDocument * document )
 */
 void QTextDocumentWriter_write1()
 {
@@ -349,7 +343,7 @@ void QTextDocumentWriter_write1()
 }
 
 /*
-bool write ( const QTextDocumentFragment & fragment )
+bool write( const QTextDocumentFragment & fragment )
 */
 void QTextDocumentWriter_write2()
 {
@@ -360,11 +354,6 @@ void QTextDocumentWriter_write2()
     RBOOL( obj->write( *PQTEXTDOCUMENTFRAGMENT(1) ) );
   }
 }
-
-/*
-[1]bool write ( const QTextDocument * document )
-[2]bool write ( const QTextDocumentFragment & fragment )
-*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE )
 {

@@ -60,7 +60,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QDirectPainter ( QObject * parent = 0, SurfaceFlag flag = NonReserved )
+QDirectPainter( QObject * parent = 0, QDirectPainter::SurfaceFlag flag = QDirectPainter::NonReserved )
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_NEW )
 {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_ALLOCATEDREGION )
 }
 
 /*
-void endPainting ()
+void endPainting()
 */
 void QDirectPainter_endPainting1()
 {
@@ -135,7 +135,7 @@ void QDirectPainter_endPainting1()
 }
 
 /*
-void endPainting ( const QRegion & region )
+void endPainting( const QRegion & region )
 */
 void QDirectPainter_endPainting2()
 {
@@ -148,11 +148,6 @@ void QDirectPainter_endPainting2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void endPainting ()
-[2]void endPainting ( const QRegion & region )
-*/
 
 HB_FUNC_STATIC( QDIRECTPAINTER_ENDPAINTING )
 {
@@ -401,10 +396,6 @@ HB_FUNC_STATIC( QDIRECTPAINTER_STARTPAINTING )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-uchar * frameBuffer ()
-*/
 
 /*
 static int linestep()

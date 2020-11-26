@@ -91,7 +91,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QTextCharFormat ()
+QTextCharFormat()
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_NEW )
 {

@@ -139,7 +139,7 @@ void QStandardItem_new1()
 }
 
 /*
-QStandardItem(const QString &text)
+QStandardItem( const QString & text )
 */
 void QStandardItem_new2()
 {
@@ -148,7 +148,7 @@ void QStandardItem_new2()
 }
 
 /*
-QStandardItem(const QIcon &icon, const QString &text)
+QStandardItem( const QIcon & icon, const QString & text )
 */
 void QStandardItem_new3()
 {
@@ -157,20 +157,13 @@ void QStandardItem_new3()
 }
 
 /*
-QStandardItem(int rows, int columns = 1)
+QStandardItem( int rows, int columns = 1 )
 */
 void QStandardItem_new4()
 {
   QStandardItem * obj = new QStandardItem( PINT(1), OPINT(2,1) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QStandardItem()
-[2]QStandardItem(const QString &text)
-[3]QStandardItem(const QIcon &icon, const QString &text)
-[4]QStandardItem(int rows, int columns = 1)
-*/
 
 HB_FUNC_STATIC( QSTANDARDITEM_NEW )
 {
@@ -1592,7 +1585,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_CHILD )
 }
 
 /*
-void setChild(int row, int column, QStandardItem *item)
+void setChild( int row, int column, QStandardItem * item )
 */
 void QStandardItem_setChild1()
 {
@@ -1607,7 +1600,7 @@ void QStandardItem_setChild1()
 }
 
 /*
-void setChild(int row, QStandardItem *item)
+void setChild( int row, QStandardItem * item )
 */
 void QStandardItem_setChild2()
 {
@@ -1620,11 +1613,6 @@ void QStandardItem_setChild2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setChild(int row, int column, QStandardItem *item)
-[2]void setChild(int row, QStandardItem *item)
-*/
 
 HB_FUNC_STATIC( QSTANDARDITEM_SETCHILD )
 {
@@ -1643,7 +1631,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETCHILD )
 }
 
 /*
-void insertRow(int row, const QList<QStandardItem*> &items)
+void insertRow( int row, const QList<QStandardItem *> & items )
 */
 void QStandardItem_insertRow1()
 {
@@ -1666,7 +1654,7 @@ void QStandardItem_insertRow1()
 }
 
 /*
-void insertRow(int row, QStandardItem *item)
+void insertRow( int row, QStandardItem * item )
 */
 void QStandardItem_insertRow2()
 {
@@ -1679,11 +1667,6 @@ void QStandardItem_insertRow2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void insertRow(int row, const QList<QStandardItem*> &items)
-[2]void insertRow(int row, QStandardItem *item)
-*/
 
 HB_FUNC_STATIC( QSTANDARDITEM_INSERTROW )
 {
@@ -1736,7 +1719,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_INSERTCOLUMN )
 }
 
 /*
-void insertRows(int row, const QList<QStandardItem*> &items)
+void insertRows( int row, const QList<QStandardItem *> & items )
 */
 void QStandardItem_insertRows1()
 {
@@ -1759,7 +1742,7 @@ void QStandardItem_insertRows1()
 }
 
 /*
-void insertRows(int row, int count)
+void insertRows( int row, int count )
 */
 void QStandardItem_insertRows2()
 {
@@ -1772,11 +1755,6 @@ void QStandardItem_insertRows2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void insertRows(int row, const QList<QStandardItem*> &items)
-[2]void insertRows(int row, int count)
-*/
 
 HB_FUNC_STATIC( QSTANDARDITEM_INSERTROWS )
 {
@@ -1925,7 +1903,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_REMOVECOLUMNS )
 }
 
 /*
-void appendRow(const QList<QStandardItem*> &items)
+void appendRow( const QList<QStandardItem *> & items )
 */
 void QStandardItem_appendRow1()
 {
@@ -1948,7 +1926,7 @@ void QStandardItem_appendRow1()
 }
 
 /*
-void appendRow(QStandardItem *item)
+void appendRow( QStandardItem * item )
 */
 void QStandardItem_appendRow2()
 {
@@ -1961,11 +1939,6 @@ void QStandardItem_appendRow2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void appendRow(const QList<QStandardItem*> &items)
-[2]void appendRow(QStandardItem *item)
-*/
 
 HB_FUNC_STATIC( QSTANDARDITEM_APPENDROW )
 {

@@ -49,7 +49,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QCheckBox ( QWidget * parent = 0 )
+QCheckBox( QWidget * parent = 0 )
 */
 void QCheckBox_new1()
 {
@@ -58,18 +58,13 @@ void QCheckBox_new1()
 }
 
 /*
-QCheckBox ( const QString & text, QWidget * parent = 0 )
+QCheckBox( const QString & text, QWidget * parent = 0 )
 */
 void QCheckBox_new2()
 {
   QCheckBox * obj = new QCheckBox( PQSTRING(1), OPQWIDGET(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QCheckBox ( QWidget * parent = 0 )
-[2]QCheckBox ( const QString & text, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QCHECKBOX_NEW )
 {

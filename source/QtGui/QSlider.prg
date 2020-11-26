@@ -49,7 +49,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QSlider ( QWidget * parent = 0 )
+QSlider( QWidget * parent = 0 )
 */
 void QSlider_new1()
 {
@@ -58,18 +58,13 @@ void QSlider_new1()
 }
 
 /*
-QSlider ( Qt::Orientation orientation, QWidget * parent = 0 )
+QSlider( Qt::Orientation orientation, QWidget * parent = 0 )
 */
 void QSlider_new2()
 {
   QSlider * obj = new QSlider( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QSlider ( QWidget * parent = 0 )
-[2]QSlider ( Qt::Orientation orientation, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QSLIDER_NEW )
 {

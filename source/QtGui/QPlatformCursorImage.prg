@@ -53,7 +53,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QPlatformCursorImage ( const uchar * data, const uchar * mask, int width, int height, int hotX, int hotY )
+QPlatformCursorImage( const uchar * data, const uchar * mask, int width, int height, int hotX, int hotY )
 */
 HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_NEW )
 {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_IMAGE )
 }
 
 /*
-void set ( const uchar * data, const uchar * mask, int width, int height, int hx, int hy )
+void set( const uchar * data, const uchar * mask, int width, int height, int hx, int hy )
 */
 void QPlatformCursorImage_set1()
 {
@@ -151,7 +151,7 @@ void QPlatformCursorImage_set1()
 }
 
 /*
-void set ( const QImage & image, int hx, int hy )
+void set( const QImage & image, int hx, int hy )
 */
 void QPlatformCursorImage_set2()
 {
@@ -166,7 +166,7 @@ void QPlatformCursorImage_set2()
 }
 
 /*
-void set ( Qt::CursorShape id )
+void set( Qt::CursorShape id )
 */
 void QPlatformCursorImage_set3()
 {
@@ -179,12 +179,6 @@ void QPlatformCursorImage_set3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void set ( const uchar * data, const uchar * mask, int width, int height, int hx, int hy )
-[2]void set ( const QImage & image, int hx, int hy )
-[3]void set ( Qt::CursorShape id )
-*/
 
 HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_SET )
 {

@@ -77,7 +77,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QMenu ( QWidget * parent = 0 )
+QMenu( QWidget * parent = 0 )
 */
 void QMenu_new1()
 {
@@ -86,18 +86,13 @@ void QMenu_new1()
 }
 
 /*
-QMenu ( const QString & title, QWidget * parent = 0 )
+QMenu( const QString & title, QWidget * parent = 0 )
 */
 void QMenu_new2()
 {
   QMenu * obj = new QMenu( PQSTRING(1), OPQWIDGET(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QMenu ( QWidget * parent = 0 )
-[2]QMenu ( const QString & title, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QMENU_NEW )
 {
@@ -210,7 +205,7 @@ HB_FUNC_STATIC( QMENU_ACTIVEACTION )
 }
 
 /*
-QAction * addAction ( const QString & text )
+QAction * addAction( const QString & text )
 */
 void QMenu_addAction1()
 {
@@ -224,7 +219,7 @@ void QMenu_addAction1()
 }
 
 /*
-QAction * addAction ( const QIcon & icon, const QString & text )
+QAction * addAction( const QIcon & icon, const QString & text )
 */
 void QMenu_addAction2()
 {
@@ -238,55 +233,35 @@ void QMenu_addAction2()
 }
 
 /*
-QAction * addAction ( const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
+QAction * addAction( const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = *(QKeySequence *) 0 )
 */
-void QMenu_addAction3a()
+void QMenu_addAction3()
 {
   QMenu * obj = (QMenu *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QAction * ptr = obj->addAction( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) );
-    Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
-  }
-}
-void QMenu_addAction3b()
-{
-  QMenu * obj = (QMenu *) Qt4xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->addAction( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3), *PQKEYSEQUENCE(4) );
+    QAction * ptr = obj->addAction( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3), ISNIL(4)? *(QKeySequence *) 0 : *(QKeySequence *) Qt4xHb::itemGetPtr(4) );
     Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
   }
 }
 
 /*
-QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
+QAction * addAction( const QIcon & icon, const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = *(QKeySequence *) 0 )
 */
-void QMenu_addAction4a()
+void QMenu_addAction4()
 {
   QMenu * obj = (QMenu *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QAction * ptr = obj->addAction( ISOBJECT(1)? *(QIcon *) Qt4xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), PQOBJECT(3), PCONSTCHAR(4) );
-    Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
-  }
-}
-void QMenu_addAction4b()
-{
-  QMenu * obj = (QMenu *) Qt4xHb::itemGetPtrStackSelfItem();
-
-  if( obj )
-  {
-    QAction * ptr = obj->addAction( ISOBJECT(1)? *(QIcon *) Qt4xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), PQOBJECT(3), PCONSTCHAR(4), *PQKEYSEQUENCE(5) );
+    QAction * ptr = obj->addAction( ISOBJECT(1)? *(QIcon *) Qt4xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2), PQOBJECT(3), PCONSTCHAR(4), ISNIL(5)? *(QKeySequence *) 0 : *(QKeySequence *) Qt4xHb::itemGetPtr(5) );
     Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
   }
 }
 
 /*
-void addAction ( QAction * action )
+void addAction( QAction * action )
 */
 void QMenu_addAction5()
 {
@@ -300,14 +275,6 @@ void QMenu_addAction5()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]QAction * addAction ( const QString & text )
-[2]QAction * addAction ( const QIcon & icon, const QString & text )
-[3]QAction * addAction ( const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
-[4]QAction * addAction ( const QIcon & icon, const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut = 0 )
-[5]void addAction ( QAction * action )
-*/
-
 HB_FUNC_STATIC( QMENU_ADDACTION )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
@@ -318,21 +285,13 @@ HB_FUNC_STATIC( QMENU_ADDACTION )
   {
     QMenu_addAction2();
   }
-  else if( ISBETWEEN(3,4) && ISCHAR(1) && ISQOBJECT(2) && ISCHAR(3) && ISNIL(4) )
+  else if( ISBETWEEN(3,4) && ISCHAR(1) && ISQOBJECT(2) && ISCHAR(3) && (ISQKEYSEQUENCE(4)||ISNIL(4)) )
   {
-    QMenu_addAction3a();
+    QMenu_addAction3();
   }
-  else if( ISNUMPAR(4) && ISCHAR(1) && ISQOBJECT(2) && ISCHAR(3) && ISQKEYSEQUENCE(4) )
+  else if( ISBETWEEN(4,5) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) && ISQOBJECT(3) && ISCHAR(4) && (ISQKEYSEQUENCE(5)||ISNIL(5)) )
   {
-    QMenu_addAction3b();
-  }
-  else if( ISBETWEEN(4,5) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) && ISQOBJECT(3) && ISCHAR(4) && ISNIL(5) )
-  {
-    QMenu_addAction4a();
-  }
-  else if( ISNUMPAR(5) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) && ISQOBJECT(3) && ISCHAR(4) && ISQKEYSEQUENCE(5) )
-  {
-    QMenu_addAction4b();
+    QMenu_addAction4();
   }
   else if( ISNUMPAR(1) && ISQACTION(1) )
   {
@@ -345,7 +304,7 @@ HB_FUNC_STATIC( QMENU_ADDACTION )
 }
 
 /*
-QAction * addMenu ( QMenu * menu )
+QAction * addMenu( QMenu * menu )
 */
 void QMenu_addMenu1()
 {
@@ -359,7 +318,7 @@ void QMenu_addMenu1()
 }
 
 /*
-QMenu * addMenu ( const QString & title )
+QMenu * addMenu( const QString & title )
 */
 void QMenu_addMenu2()
 {
@@ -373,7 +332,7 @@ void QMenu_addMenu2()
 }
 
 /*
-QMenu * addMenu ( const QIcon & icon, const QString & title )
+QMenu * addMenu( const QIcon & icon, const QString & title )
 */
 void QMenu_addMenu3()
 {
@@ -385,12 +344,6 @@ void QMenu_addMenu3()
     Qt4xHb::createReturnQObjectClass( ptr, "QMENU" );
   }
 }
-
-/*
-[1]QAction * addMenu ( QMenu * menu )
-[2]QMenu * addMenu ( const QString & title )
-[3]QMenu * addMenu ( const QIcon & icon, const QString & title )
-*/
 
 HB_FUNC_STATIC( QMENU_ADDMENU )
 {
@@ -942,7 +895,7 @@ HB_FUNC_STATIC( QMENU_SIZEHINT )
 }
 
 /*
-QAction * exec ()
+QAction * exec()
 */
 void QMenu_exec1()
 {
@@ -956,7 +909,7 @@ void QMenu_exec1()
 }
 
 /*
-QAction * exec ( const QPoint & p, QAction * action = 0 )
+QAction * exec( const QPoint & p, QAction * action = 0 )
 */
 void QMenu_exec2()
 {
@@ -970,7 +923,7 @@ void QMenu_exec2()
 }
 
 /*
-QAction * exec ( QList<QAction *> actions, const QPoint & pos, QAction * at, QWidget * parent )
+QAction * exec( QList<QAction *> actions, const QPoint & pos, QAction * at, QWidget * parent )
 */
 void QMenu_exec3()
 {
@@ -992,7 +945,7 @@ void QMenu_exec3()
 }
 
 /*
-QAction * exec ( QList<QAction *> actions, const QPoint & pos, QAction * at = 0 )
+QAction * exec( QList<QAction *> actions, const QPoint & pos, QAction * at = 0 )
 */
 void QMenu_exec4()
 {
@@ -1012,13 +965,6 @@ void QMenu_exec4()
     Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
   }
 }
-
-/*
-[1]QAction * exec ()
-[2]QAction * exec ( const QPoint & p, QAction * action = 0 )
-[3]QAction * exec ( QList<QAction *> actions, const QPoint & pos, QAction * at, QWidget * parent )
-[4]QAction * exec ( QList<QAction *> actions, const QPoint & pos, QAction * at = 0 )
-*/
 
 HB_FUNC_STATIC( QMENU_EXEC )
 {

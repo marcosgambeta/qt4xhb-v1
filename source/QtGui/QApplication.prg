@@ -145,16 +145,7 @@ RETURN
 #include <QtGui/QStyle>
 
 /*
-QApplication ( int & argc, char ** argv )
-QApplication ( int & argc, char ** argv, bool GUIenabled )
-QApplication ( int & argc, char ** argv, Type type )
-QApplication ( Display * display, Qt::HANDLE visual = 0, Qt::HANDLE colormap = 0 )
-QApplication ( Display * display, int & argc, char ** argv, Qt::HANDLE visual = 0, Qt::HANDLE colormap = 0 )
-QApplication ( QApplication::QS60MainApplicationFactory factory, int & argc, char ** argv )
-*/
-
-/*
-QApplication ( int & argc, char ** argv )
+QApplication( int & argc, char ** argv )
 */
 HB_FUNC_STATIC( QAPPLICATION_NEW )
 {
@@ -808,7 +799,7 @@ HB_FUNC_STATIC( QAPPLICATION_FOCUSWIDGET )
 }
 
 /*
-static QFont font ()
+static QFont font()
 */
 void QApplication_font1()
 {
@@ -818,7 +809,7 @@ void QApplication_font1()
 }
 
 /*
-static QFont font ( const QWidget * widget )
+static QFont font( const QWidget * widget )
 */
 void QApplication_font2()
 {
@@ -828,7 +819,7 @@ void QApplication_font2()
 }
 
 /*
-static QFont font ( const char * className )
+static QFont font( const char * className )
 */
 void QApplication_font3()
 {
@@ -836,12 +827,6 @@ void QApplication_font3()
   QFont * ptr = new QFont( QApplication::font( PCONSTCHAR(1) ) );
   Qt4xHb::createReturnClass( ptr, "QFONT", true );
 }
-
-/*
-[1]QFont font ()
-[2]QFont font ( const QWidget * widget )
-[3]QFont font ( const char * className )
-*/
 
 HB_FUNC_STATIC( QAPPLICATION_FONT )
 {
@@ -1096,7 +1081,7 @@ HB_FUNC_STATIC( QAPPLICATION_OVERRIDECURSOR )
 }
 
 /*
-static QPalette palette ()
+static QPalette palette()
 */
 void QApplication_palette1()
 {
@@ -1106,7 +1091,7 @@ void QApplication_palette1()
 }
 
 /*
-static QPalette palette ( const QWidget * widget )
+static QPalette palette( const QWidget * widget )
 */
 void QApplication_palette2()
 {
@@ -1116,7 +1101,7 @@ void QApplication_palette2()
 }
 
 /*
-static QPalette palette ( const char * className )
+static QPalette palette( const char * className )
 */
 void QApplication_palette3()
 {
@@ -1124,12 +1109,6 @@ void QApplication_palette3()
   QPalette * ptr = new QPalette( QApplication::palette( PCONSTCHAR(1) ) );
   Qt4xHb::createReturnClass( ptr, "QPALETTE", true );
 }
-
-/*
-[1]QPalette palette ()
-[2]QPalette palette ( const QWidget * widget )
-[3]QPalette palette ( const char * className )
-*/
 
 HB_FUNC_STATIC( QAPPLICATION_PALETTE )
 {
@@ -1547,7 +1526,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETSTARTDRAGTIME )
 }
 
 /*
-static void setStyle ( QStyle * style )
+static void setStyle( QStyle * style )
 */
 void QApplication_setStyle1()
 {
@@ -1558,7 +1537,7 @@ void QApplication_setStyle1()
 }
 
 /*
-static QStyle * setStyle ( const QString & style )
+static QStyle * setStyle( const QString & style )
 */
 void QApplication_setStyle2()
 {
@@ -1566,11 +1545,6 @@ void QApplication_setStyle2()
   QStyle * ptr = QApplication::setStyle( PQSTRING(1) );
   Qt4xHb::createReturnQObjectClass( ptr, "QSTYLE" );
 }
-
-/*
-[1]void setStyle ( QStyle * style )
-[2]QStyle * setStyle ( const QString & style )
-*/
 
 HB_FUNC_STATIC( QAPPLICATION_SETSTYLE )
 {
@@ -1710,7 +1684,7 @@ HB_FUNC_STATIC( QAPPLICATION_SYNCX )
 }
 
 /*
-static QWidget * topLevelAt ( const QPoint & point )
+static QWidget * topLevelAt( const QPoint & point )
 */
 void QApplication_topLevelAt1()
 {
@@ -1720,7 +1694,7 @@ void QApplication_topLevelAt1()
 }
 
 /*
-static QWidget * topLevelAt ( int x, int y )
+static QWidget * topLevelAt( int x, int y )
 */
 void QApplication_topLevelAt2()
 {
@@ -1728,11 +1702,6 @@ void QApplication_topLevelAt2()
   QWidget * ptr = QApplication::topLevelAt( PINT(1), PINT(2) );
   Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 }
-
-/*
-[1]QWidget * topLevelAt ( const QPoint & point )
-[2]QWidget * topLevelAt ( int x, int y )
-*/
 
 HB_FUNC_STATIC( QAPPLICATION_TOPLEVELAT )
 {
@@ -1832,7 +1801,7 @@ HB_FUNC_STATIC( QAPPLICATION_WHEELSCROLLLINES )
 }
 
 /*
-static QWidget * widgetAt ( const QPoint & point )
+static QWidget * widgetAt( const QPoint & point )
 */
 void QApplication_widgetAt1()
 {
@@ -1842,7 +1811,7 @@ void QApplication_widgetAt1()
 }
 
 /*
-static QWidget * widgetAt ( int x, int y )
+static QWidget * widgetAt( int x, int y )
 */
 void QApplication_widgetAt2()
 {
@@ -1850,11 +1819,6 @@ void QApplication_widgetAt2()
   QWidget * ptr = QApplication::widgetAt( PINT(1), PINT(2) );
   Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 }
-
-/*
-[1]QWidget * widgetAt ( const QPoint & point )
-[2]QWidget * widgetAt ( int x, int y )
-*/
 
 HB_FUNC_STATIC( QAPPLICATION_WIDGETAT )
 {

@@ -59,7 +59,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QMotifStyle ( bool useHighlightCols = false )
+QMotifStyle( bool useHighlightCols = false )
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_NEW )
 {

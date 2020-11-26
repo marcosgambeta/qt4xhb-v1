@@ -63,7 +63,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QToolBox ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
+QToolBox( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QTOOLBOX_NEW )
 {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QTOOLBOX_DELETE )
 }
 
 /*
-int addItem ( QWidget * widget, const QIcon & iconSet, const QString & text )
+int addItem( QWidget * widget, const QIcon & iconSet, const QString & text )
 */
 void QToolBox_addItem1()
 {
@@ -111,7 +111,7 @@ void QToolBox_addItem1()
 }
 
 /*
-int addItem ( QWidget * w, const QString & text )
+int addItem( QWidget * w, const QString & text )
 */
 void QToolBox_addItem2()
 {
@@ -122,11 +122,6 @@ void QToolBox_addItem2()
     RINT( obj->addItem( PQWIDGET(1), PQSTRING(2) ) );
   }
 }
-
-/*
-[1]int addItem ( QWidget * widget, const QIcon & iconSet, const QString & text )
-[2]int addItem ( QWidget * w, const QString & text )
-*/
 
 HB_FUNC_STATIC( QTOOLBOX_ADDITEM )
 {
@@ -242,7 +237,7 @@ HB_FUNC_STATIC( QTOOLBOX_INDEXOF )
 }
 
 /*
-int insertItem ( int index, QWidget * widget, const QIcon & icon, const QString & text )
+int insertItem( int index, QWidget * widget, const QIcon & icon, const QString & text )
 */
 void QToolBox_insertItem1()
 {
@@ -255,7 +250,7 @@ void QToolBox_insertItem1()
 }
 
 /*
-int insertItem ( int index, QWidget * widget, const QString & text )
+int insertItem( int index, QWidget * widget, const QString & text )
 */
 void QToolBox_insertItem2()
 {
@@ -266,11 +261,6 @@ void QToolBox_insertItem2()
     RINT( obj->insertItem( PINT(1), PQWIDGET(2), PQSTRING(3) ) );
   }
 }
-
-/*
-[1]int insertItem ( int index, QWidget * widget, const QIcon & icon, const QString & text )
-[2]int insertItem ( int index, QWidget * widget, const QString & text )
-*/
 
 HB_FUNC_STATIC( QTOOLBOX_INSERTITEM )
 {

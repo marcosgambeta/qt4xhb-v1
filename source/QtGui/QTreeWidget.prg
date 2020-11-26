@@ -94,7 +94,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QTreeWidget ( QWidget * parent = 0 )
+QTreeWidget( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QTREEWIDGET_NEW )
 {
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMABOVE )
 }
 
 /*
-QTreeWidgetItem * itemAt ( const QPoint & p ) const
+QTreeWidgetItem * itemAt( const QPoint & p ) const
 */
 void QTreeWidget_itemAt1()
 {
@@ -559,7 +559,7 @@ void QTreeWidget_itemAt1()
 }
 
 /*
-QTreeWidgetItem * itemAt ( int x, int y ) const
+QTreeWidgetItem * itemAt( int x, int y ) const
 */
 void QTreeWidget_itemAt2()
 {
@@ -571,11 +571,6 @@ void QTreeWidget_itemAt2()
     Qt4xHb::createReturnClass( ptr, "QTREEWIDGETITEM", false );
   }
 }
-
-/*
-[1]QTreeWidgetItem * itemAt ( const QPoint & p ) const
-[2]QTreeWidgetItem * itemAt ( int x, int y ) const
-*/
 
 HB_FUNC_STATIC( QTREEWIDGET_ITEMAT )
 {
@@ -770,7 +765,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SETCOLUMNCOUNT )
 }
 
 /*
-void setCurrentItem ( QTreeWidgetItem * item )
+void setCurrentItem( QTreeWidgetItem * item )
 */
 void QTreeWidget_setCurrentItem1()
 {
@@ -785,7 +780,7 @@ void QTreeWidget_setCurrentItem1()
 }
 
 /*
-void setCurrentItem ( QTreeWidgetItem * item, int column )
+void setCurrentItem( QTreeWidgetItem * item, int column )
 */
 void QTreeWidget_setCurrentItem2()
 {
@@ -800,7 +795,7 @@ void QTreeWidget_setCurrentItem2()
 }
 
 /*
-void setCurrentItem ( QTreeWidgetItem * item, int column, QItemSelectionModel::SelectionFlags command )
+void setCurrentItem( QTreeWidgetItem * item, int column, QItemSelectionModel::SelectionFlags command )
 */
 void QTreeWidget_setCurrentItem3()
 {
@@ -813,12 +808,6 @@ void QTreeWidget_setCurrentItem3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setCurrentItem ( QTreeWidgetItem * item )
-[2]void setCurrentItem ( QTreeWidgetItem * item, int column )
-[3]void setCurrentItem ( QTreeWidgetItem * item, int column, QItemSelectionModel::SelectionFlags command )
-*/
 
 HB_FUNC_STATIC( QTREEWIDGET_SETCURRENTITEM )
 {

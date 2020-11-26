@@ -57,7 +57,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QGraphicsScale ( QObject * parent = 0 )
+QGraphicsScale( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_NEW )
 {

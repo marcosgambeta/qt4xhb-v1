@@ -51,7 +51,7 @@ void QStyleOptionFrame_new1()
 }
 
 /*
-QStyleOptionFrame(const QStyleOptionFrame &other)
+QStyleOptionFrame( const QStyleOptionFrame & other )
 */
 void QStyleOptionFrame_new2()
 {
@@ -60,13 +60,7 @@ void QStyleOptionFrame_new2()
 }
 
 /*
-QStyleOptionFrame(int version) (protected)
-*/
-
-/*
-[1]QStyleOptionFrame()
-[2]QStyleOptionFrame(const QStyleOptionFrame &other)
-[3]QStyleOptionFrame(int version) (protected)
+QStyleOptionFrame(int version) [PROTECTED]
 */
 
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_NEW )

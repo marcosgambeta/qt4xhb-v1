@@ -49,7 +49,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QWheelEvent(const QPoint &pos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
+QWheelEvent( const QPoint & pos, int delta, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, Qt::Orientation orient = Qt::Vertical )
 */
 void QWheelEvent_new1()
 {
@@ -58,18 +58,13 @@ void QWheelEvent_new1()
 }
 
 /*
-QWheelEvent(const QPoint &pos, const QPoint& globalPos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
+QWheelEvent( const QPoint & pos, const QPoint & globalPos, int delta, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, Qt::Orientation orient = Qt::Vertical )
 */
 void QWheelEvent_new2()
 {
   QWheelEvent * obj = new QWheelEvent( *PQPOINT(1), *PQPOINT(2), PINT(3), (Qt::MouseButtons) hb_parni(4), (Qt::KeyboardModifiers) hb_parni(5), ISNIL(6)? (Qt::Orientation) Qt::Vertical : (Qt::Orientation) hb_parni(6) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QWheelEvent(const QPoint &pos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
-[2]QWheelEvent(const QPoint &pos, const QPoint& globalPos, int delta,Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers,Qt::Orientation orient = Qt::Vertical)
-*/
 
 HB_FUNC_STATIC( QWHEELEVENT_NEW )
 {

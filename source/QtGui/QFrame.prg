@@ -57,7 +57,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QFrame ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
+QFrame( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QFRAME_NEW )
 {

@@ -106,7 +106,7 @@ RETURN
 #include <QtGui/QStyle>
 
 /*
-QGraphicsWidget ( QGraphicsItem * parent = 0, Qt::WindowFlags wFlags = 0 )
+QGraphicsWidget( QGraphicsItem * parent = 0, Qt::WindowFlags wFlags = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSWIDGET_NEW )
 {
@@ -692,7 +692,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_REMOVEACTION )
 }
 
 /*
-void resize ( const QSizeF & size )
+void resize( const QSizeF & size )
 */
 void QGraphicsWidget_resize1()
 {
@@ -707,7 +707,7 @@ void QGraphicsWidget_resize1()
 }
 
 /*
-void resize ( qreal w, qreal h )
+void resize( qreal w, qreal h )
 */
 void QGraphicsWidget_resize2()
 {
@@ -720,11 +720,6 @@ void QGraphicsWidget_resize2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void resize ( const QSizeF & size )
-[2]void resize ( qreal w, qreal h )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSWIDGET_RESIZE )
 {
@@ -1440,7 +1435,7 @@ HB_FUNC_STATIC( QGRAPHICSWIDGET_PAINT )
 }
 
 /*
-void setGeometry ( qreal x, qreal y, qreal w, qreal h )
+void setGeometry( qreal x, qreal y, qreal w, qreal h )
 */
 void QGraphicsWidget_setGeometry1()
 {
@@ -1455,7 +1450,7 @@ void QGraphicsWidget_setGeometry1()
 }
 
 /*
-virtual void setGeometry ( const QRectF & rect )
+virtual void setGeometry( const QRectF & rect )
 */
 void QGraphicsWidget_setGeometry2()
 {
@@ -1468,11 +1463,6 @@ void QGraphicsWidget_setGeometry2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setGeometry ( qreal x, qreal y, qreal w, qreal h )
-[2]virtual void setGeometry ( const QRectF & rect )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSWIDGET_SETGEOMETRY )
 {

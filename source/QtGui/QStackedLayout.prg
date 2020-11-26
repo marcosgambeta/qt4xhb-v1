@@ -54,7 +54,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QStackedLayout ()
+QStackedLayout()
 */
 void QStackedLayout_new1()
 {
@@ -63,7 +63,7 @@ void QStackedLayout_new1()
 }
 
 /*
-QStackedLayout ( QWidget * parent )
+QStackedLayout( QWidget * parent )
 */
 void QStackedLayout_new2()
 {
@@ -72,19 +72,13 @@ void QStackedLayout_new2()
 }
 
 /*
-QStackedLayout ( QLayout * parentLayout )
+QStackedLayout( QLayout * parentLayout )
 */
 void QStackedLayout_new3()
 {
   QStackedLayout * obj = new QStackedLayout( PQLAYOUT(1) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QStackedLayout ()
-[2]QStackedLayout ( QWidget * parent )
-[3]QStackedLayout ( QLayout * parentLayout )
-*/
 
 HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW )
 {

@@ -85,7 +85,7 @@ RETURN
 #include <QtGui/QAbstractButton>
 
 /*
-QMessageBox ( QWidget * parent = 0 )
+QMessageBox( QWidget * parent = 0 )
 */
 void QMessageBox_new1()
 {
@@ -94,18 +94,13 @@ void QMessageBox_new1()
 }
 
 /*
-QMessageBox ( Icon icon, const QString & title, const QString & text, StandardButtons buttons = NoButton, QWidget * parent = 0, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
+QMessageBox( QMessageBox::Icon icon, const QString & title, const QString & text, QMessageBox::StandardButtons buttons = QMessageBox::NoButton, QWidget * parent = 0, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
 */
 void QMessageBox_new2()
 {
   QMessageBox * obj = new QMessageBox( (QMessageBox::Icon) hb_parni(1), PQSTRING(2), PQSTRING(3), ISNIL(4)? (QMessageBox::StandardButtons) QMessageBox::NoButton : (QMessageBox::StandardButtons) hb_parni(4), OPQWIDGET(5,0), ISNIL(6)? (Qt::WindowFlags) Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint : (Qt::WindowFlags) hb_parni(6) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QMessageBox ( QWidget * parent = 0 )
-[2]QMessageBox ( Icon icon, const QString & title, const QString & text, StandardButtons buttons = NoButton, QWidget * parent = 0, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
-*/
 
 HB_FUNC_STATIC( QMESSAGEBOX_NEW )
 {
@@ -143,7 +138,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_DELETE )
 }
 
 /*
-void addButton ( QAbstractButton * button, ButtonRole role )
+void addButton( QAbstractButton * button, QMessageBox::ButtonRole role )
 */
 void QMessageBox_addButton1()
 {
@@ -158,7 +153,7 @@ void QMessageBox_addButton1()
 }
 
 /*
-QPushButton * addButton ( const QString & text, ButtonRole role )
+QPushButton * addButton( const QString & text, QMessageBox::ButtonRole role )
 */
 void QMessageBox_addButton2()
 {
@@ -172,7 +167,7 @@ void QMessageBox_addButton2()
 }
 
 /*
-QPushButton * addButton ( StandardButton button )
+QPushButton * addButton( QMessageBox::StandardButton button )
 */
 void QMessageBox_addButton3()
 {
@@ -184,12 +179,6 @@ void QMessageBox_addButton3()
     Qt4xHb::createReturnQObjectClass( ptr, "QPUSHBUTTON" );
   }
 }
-
-/*
-[1]void addButton ( QAbstractButton * button, ButtonRole role )
-[2]QPushButton * addButton ( const QString & text, ButtonRole role )
-[3]QPushButton * addButton ( StandardButton button )
-*/
 
 HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON )
 {
@@ -533,7 +522,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_REMOVEBUTTON )
 }
 
 /*
-void setDefaultButton ( QPushButton * button )
+void setDefaultButton( QPushButton * button )
 */
 void QMessageBox_setDefaultButton1()
 {
@@ -548,7 +537,7 @@ void QMessageBox_setDefaultButton1()
 }
 
 /*
-void setDefaultButton ( StandardButton button )
+void setDefaultButton( QMessageBox::StandardButton button )
 */
 void QMessageBox_setDefaultButton2()
 {
@@ -561,11 +550,6 @@ void QMessageBox_setDefaultButton2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setDefaultButton ( QPushButton * button )
-[2]void setDefaultButton ( StandardButton button )
-*/
 
 HB_FUNC_STATIC( QMESSAGEBOX_SETDEFAULTBUTTON )
 {
@@ -610,7 +594,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETDETAILEDTEXT )
 }
 
 /*
-void setEscapeButton ( QAbstractButton * button )
+void setEscapeButton( QAbstractButton * button )
 */
 void QMessageBox_setEscapeButton1()
 {
@@ -625,7 +609,7 @@ void QMessageBox_setEscapeButton1()
 }
 
 /*
-void setEscapeButton ( StandardButton button )
+void setEscapeButton( QMessageBox::StandardButton button )
 */
 void QMessageBox_setEscapeButton2()
 {
@@ -638,11 +622,6 @@ void QMessageBox_setEscapeButton2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setEscapeButton ( QAbstractButton * button )
-[2]void setEscapeButton ( StandardButton button )
-*/
 
 HB_FUNC_STATIC( QMESSAGEBOX_SETESCAPEBUTTON )
 {

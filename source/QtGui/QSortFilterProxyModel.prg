@@ -102,7 +102,7 @@ RETURN
 #include <QtCore/QMimeData>
 
 /*
-QSortFilterProxyModel ( QObject * parent = 0 )
+QSortFilterProxyModel( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_NEW )
 {
@@ -1361,7 +1361,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERFIXEDSTRING )
 }
 
 /*
-void setFilterRegExp ( const QRegExp & regExp )
+void setFilterRegExp( const QRegExp & regExp )
 */
 void QSortFilterProxyModel_setFilterRegExp1()
 {
@@ -1376,7 +1376,7 @@ void QSortFilterProxyModel_setFilterRegExp1()
 }
 
 /*
-void setFilterRegExp ( const QString & pattern )
+void setFilterRegExp( const QString & pattern )
 */
 void QSortFilterProxyModel_setFilterRegExp2()
 {
@@ -1389,11 +1389,6 @@ void QSortFilterProxyModel_setFilterRegExp2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setFilterRegExp ( const QRegExp & regExp )
-[2]void setFilterRegExp ( const QString & pattern )
-*/
 
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERREGEXP )
 {

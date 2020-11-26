@@ -45,7 +45,7 @@ RETURN
 #include <QtCore/QUrl>
 
 /*
-QFileOpenEvent(const QString &file)
+QFileOpenEvent( const QString & file )
 */
 void QFileOpenEvent_new1()
 {
@@ -54,18 +54,13 @@ void QFileOpenEvent_new1()
 }
 
 /*
-QFileOpenEvent(const QUrl &url)
+QFileOpenEvent( const QUrl & url )
 */
 void QFileOpenEvent_new2()
 {
   QFileOpenEvent * obj = new QFileOpenEvent( *PQURL(1) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QFileOpenEvent(const QString &file)
-[2]QFileOpenEvent(const QUrl &url)
-*/
 
 HB_FUNC_STATIC( QFILEOPENEVENT_NEW )
 {

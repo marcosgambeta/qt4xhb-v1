@@ -90,7 +90,7 @@ RETURN
 #include <QtGui/QHeaderView>
 
 /*
-QTableView ( QWidget * parent = 0 )
+QTableView( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QTABLEVIEW_NEW )
 {

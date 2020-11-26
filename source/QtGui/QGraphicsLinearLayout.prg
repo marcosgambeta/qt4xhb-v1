@@ -62,7 +62,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QGraphicsLinearLayout ( QGraphicsLayoutItem * parent = 0 )
+QGraphicsLinearLayout( QGraphicsLayoutItem * parent = 0 )
 */
 void QGraphicsLinearLayout_new1()
 {
@@ -71,18 +71,13 @@ void QGraphicsLinearLayout_new1()
 }
 
 /*
-QGraphicsLinearLayout ( Qt::Orientation orientation, QGraphicsLayoutItem * parent = 0 )
+QGraphicsLinearLayout( Qt::Orientation orientation, QGraphicsLayoutItem * parent = 0 )
 */
 void QGraphicsLinearLayout_new2()
 {
   QGraphicsLinearLayout * obj = new QGraphicsLinearLayout( (Qt::Orientation) hb_parni(1), ISNIL(2)? 0 : (QGraphicsLayoutItem *) Qt4xHb::itemGetPtr(2) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QGraphicsLinearLayout ( QGraphicsLayoutItem * parent = 0 )
-[2]QGraphicsLinearLayout ( Qt::Orientation orientation, QGraphicsLayoutItem * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_NEW )
 {

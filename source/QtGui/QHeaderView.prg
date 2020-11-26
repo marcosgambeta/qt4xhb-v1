@@ -111,7 +111,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QHeaderView ( Qt::Orientation orientation, QWidget * parent = 0 )
+QHeaderView( Qt::Orientation orientation, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QHEADERVIEW_NEW )
 {
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEX )
 }
 
 /*
-int logicalIndexAt ( int position ) const
+int logicalIndexAt( int position ) const
 */
 void QHeaderView_logicalIndexAt1()
 {
@@ -473,7 +473,7 @@ void QHeaderView_logicalIndexAt1()
 }
 
 /*
-int logicalIndexAt ( int x, int y ) const
+int logicalIndexAt( int x, int y ) const
 */
 void QHeaderView_logicalIndexAt2()
 {
@@ -486,7 +486,7 @@ void QHeaderView_logicalIndexAt2()
 }
 
 /*
-int logicalIndexAt ( const QPoint & pos ) const
+int logicalIndexAt( const QPoint & pos ) const
 */
 void QHeaderView_logicalIndexAt3()
 {
@@ -497,12 +497,6 @@ void QHeaderView_logicalIndexAt3()
     RINT( obj->logicalIndexAt( *PQPOINT(1) ) );
   }
 }
-
-/*
-[1]int logicalIndexAt ( int position ) const
-[2]int logicalIndexAt ( int x, int y ) const
-[3]int logicalIndexAt ( const QPoint & pos ) const
-*/
 
 HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT )
 {
@@ -1074,7 +1068,7 @@ HB_FUNC_STATIC( QHEADERVIEW_SETMOVABLE )
 }
 
 /*
-void setResizeMode ( ResizeMode mode )
+void setResizeMode( QHeaderView::ResizeMode mode )
 */
 void QHeaderView_setResizeMode1()
 {
@@ -1089,7 +1083,7 @@ void QHeaderView_setResizeMode1()
 }
 
 /*
-void setResizeMode ( int logicalIndex, ResizeMode mode )
+void setResizeMode( int logicalIndex, QHeaderView::ResizeMode mode )
 */
 void QHeaderView_setResizeMode2()
 {
@@ -1102,11 +1096,6 @@ void QHeaderView_setResizeMode2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setResizeMode ( ResizeMode mode )
-[2]void setResizeMode ( int logicalIndex, ResizeMode mode )
-*/
 
 HB_FUNC_STATIC( QHEADERVIEW_SETRESIZEMODE )
 {

@@ -111,7 +111,7 @@ RETURN
 #include <QtCore/QVariant>
 
 /*
-QFont ()
+QFont()
 */
 void QFont_new1()
 {
@@ -120,7 +120,7 @@ void QFont_new1()
 }
 
 /*
-QFont ( const QString & family, int pointSize = -1, int weight = -1, bool italic = false )
+QFont( const QString & family, int pointSize = -1, int weight = -1, bool italic = false )
 */
 void QFont_new2()
 {
@@ -129,7 +129,7 @@ void QFont_new2()
 }
 
 /*
-QFont ( const QFont & font, QPaintDevice * pd )
+QFont( const QFont & font, QPaintDevice * pd )
 */
 void QFont_new3()
 {
@@ -138,20 +138,13 @@ void QFont_new3()
 }
 
 /*
-QFont ( const QFont & font )
+QFont( const QFont & font )
 */
 void QFont_new4()
 {
   QFont * obj = new QFont( *PQFONT(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QFont ()
-[2]QFont ( const QString & family, int pointSize = -1, int weight = -1, bool italic = false )
-[3]QFont ( const QFont & font, QPaintDevice * pd )
-[4]QFont ( const QFont & font )
-*/
 
 HB_FUNC_STATIC( QFONT_NEW )
 {

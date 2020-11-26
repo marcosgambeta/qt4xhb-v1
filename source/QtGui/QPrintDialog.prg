@@ -53,7 +53,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
+QPrintDialog( QPrinter * printer, QWidget * parent = 0 )
 */
 void QPrintDialog_new1()
 {
@@ -62,18 +62,13 @@ void QPrintDialog_new1()
 }
 
 /*
-QPrintDialog ( QWidget * parent = 0 )
+QPrintDialog( QWidget * parent = 0 )
 */
 void QPrintDialog_new2()
 {
   QPrintDialog * obj = new QPrintDialog( OPQWIDGET(1,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QPrintDialog ( QPrinter * printer, QWidget * parent = 0 )
-[2]QPrintDialog ( QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QPRINTDIALOG_NEW )
 {

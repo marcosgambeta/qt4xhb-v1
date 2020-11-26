@@ -50,7 +50,7 @@ void QStyleOptionFocusRect_new1()
 }
 
 /*
-QStyleOptionFocusRect(const QStyleOptionFocusRect &other)
+QStyleOptionFocusRect( const QStyleOptionFocusRect & other )
 */
 void QStyleOptionFocusRect_new2()
 {
@@ -59,13 +59,7 @@ void QStyleOptionFocusRect_new2()
 }
 
 /*
-QStyleOptionFocusRect(int version) (protected)
-*/
-
-/*
-[1]QStyleOptionFocusRect()
-[2]QStyleOptionFocusRect(const QStyleOptionFocusRect &other)
-[3]QStyleOptionFocusRect(int version) (protected)
+QStyleOptionFocusRect(int version) [PROTECTED]
 */
 
 HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_NEW )

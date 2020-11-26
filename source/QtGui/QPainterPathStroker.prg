@@ -64,7 +64,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QPainterPathStroker ()
+QPainterPathStroker()
 */
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_NEW )
 {
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHOFFSET )
 }
 
 /*
-void setDashPattern ( Qt::PenStyle style )
+void setDashPattern( Qt::PenStyle style )
 */
 void QPainterPathStroker_setDashPattern1()
 {
@@ -367,7 +367,7 @@ void QPainterPathStroker_setDashPattern1()
 }
 
 /*
-void setDashPattern ( const QVector<qreal> & dashPattern )
+void setDashPattern( const QVector<qreal> & dashPattern )
 */
 void QPainterPathStroker_setDashPattern2()
 {
@@ -390,11 +390,6 @@ void QPainterPathStroker_setDashPattern2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setDashPattern ( Qt::PenStyle style )
-[2]void setDashPattern ( const QVector<qreal> & dashPattern )
-*/
 
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN )
 {

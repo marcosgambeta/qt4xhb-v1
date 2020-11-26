@@ -108,7 +108,7 @@ RETURN
 #include <QtGui/QAbstractProxyModel>
 
 /*
-QFileDialog ( QWidget * parent, Qt::WindowFlags flags )
+QFileDialog( QWidget * parent, Qt::WindowFlags flags )
 */
 void QFileDialog_new1()
 {
@@ -117,18 +117,13 @@ void QFileDialog_new1()
 }
 
 /*
-QFileDialog ( QWidget * parent = 0, const QString & caption = QString(), const QString & directory = QString(), const QString & filter = QString() )
+QFileDialog( QWidget * parent = 0, const QString & caption = QString(), const QString & directory = QString(), const QString & filter = QString() )
 */
 void QFileDialog_new2()
 {
   QFileDialog * obj = new QFileDialog( OPQWIDGET(1,0), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QFileDialog ( QWidget * parent, Qt::WindowFlags flags )
-[2]QFileDialog ( QWidget * parent = 0, const QString & caption = QString(), const QString & directory = QString(), const QString & filter = QString() )
-*/
 
 HB_FUNC_STATIC( QFILEDIALOG_NEW )
 {
@@ -807,7 +802,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETDEFAULTSUFFIX )
 }
 
 /*
-void setDirectory ( const QString & directory )
+void setDirectory( const QString & directory )
 */
 void QFileDialog_setDirectory1()
 {
@@ -822,7 +817,7 @@ void QFileDialog_setDirectory1()
 }
 
 /*
-void setDirectory ( const QDir & directory )
+void setDirectory( const QDir & directory )
 */
 void QFileDialog_setDirectory2()
 {
@@ -835,11 +830,6 @@ void QFileDialog_setDirectory2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setDirectory ( const QString & directory )
-[2]void setDirectory ( const QDir & directory )
-*/
 
 HB_FUNC_STATIC( QFILEDIALOG_SETDIRECTORY )
 {

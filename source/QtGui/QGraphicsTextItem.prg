@@ -82,7 +82,7 @@ RETURN
 #include <QtGui/QTextDocument>
 
 /*
-QGraphicsTextItem ( QGraphicsItem * parent = 0 )
+QGraphicsTextItem( QGraphicsItem * parent = 0 )
 */
 void QGraphicsTextItem_new1()
 {
@@ -91,18 +91,13 @@ void QGraphicsTextItem_new1()
 }
 
 /*
-QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = 0 )
+QGraphicsTextItem( const QString & text, QGraphicsItem * parent = 0 )
 */
 void QGraphicsTextItem_new2()
 {
   QGraphicsTextItem * obj = new QGraphicsTextItem( PQSTRING(1), ISNIL(2)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(2) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QGraphicsTextItem ( QGraphicsItem * parent = 0 )
-[2]QGraphicsTextItem ( const QString & text, QGraphicsItem * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_NEW )
 {

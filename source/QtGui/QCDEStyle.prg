@@ -46,7 +46,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QCDEStyle ( bool useHighlightCols = false )
+QCDEStyle( bool useHighlightCols = false )
 */
 HB_FUNC_STATIC( QCDESTYLE_NEW )
 {

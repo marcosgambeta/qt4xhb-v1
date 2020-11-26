@@ -54,7 +54,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QScrollArea ( QWidget * parent = 0 )
+QScrollArea( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSCROLLAREA_NEW )
 {

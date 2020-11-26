@@ -51,7 +51,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QTextLength ()
+QTextLength()
 */
 void QTextLength_new1()
 {
@@ -60,18 +60,13 @@ void QTextLength_new1()
 }
 
 /*
-QTextLength ( Type type, qreal value )
+QTextLength( QTextLength::Type type, qreal value )
 */
 void QTextLength_new2()
 {
   QTextLength * obj = new QTextLength( (QTextLength::Type) hb_parni(1), PQREAL(2) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QTextLength ()
-[2]QTextLength ( Type type, qreal value )
-*/
 
 HB_FUNC_STATIC( QTEXTLENGTH_NEW )
 {

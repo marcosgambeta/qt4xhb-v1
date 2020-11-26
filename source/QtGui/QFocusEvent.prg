@@ -42,7 +42,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QFocusEvent ( Type type, Qt::FocusReason reason = Qt::OtherFocusReason )
+QFocusEvent( QEvent::Type type, Qt::FocusReason reason = Qt::OtherFocusReason )
 */
 HB_FUNC_STATIC( QFOCUSEVENT_NEW )
 {

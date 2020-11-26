@@ -63,10 +63,6 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_DELETE )
 }
 
 /*
-virtual void addGlyphOutlinesToPath ( uint * glyphs, int numGlyphs, FixedPoint * positions, QPainterPath * path )
-*/
-
-/*
 virtual QAbstractFontEngine::Capabilities capabilities() const = 0
 */
 HB_FUNC_STATIC( QABSTRACTFONTENGINE_CAPABILITIES )
@@ -89,10 +85,6 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_CAPABILITIES )
 #endif
   }
 }
-
-/*
-virtual bool convertStringToGlyphIndices ( const QChar * string, int length, uint * glyphs, int * numGlyphs, TextShapingFlags flags ) const = 0
-*/
 
 /*
 virtual QVariant fontProperty( QAbstractFontEngine::FontProperty property ) const = 0
@@ -118,10 +110,6 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_FONTPROPERTY )
 #endif
   }
 }
-
-/*
-virtual void getGlyphAdvances ( const uint * glyphs, int numGlyphs, Fixed * advances, TextShapingFlags flags ) const = 0
-*/
 
 /*
 virtual bool renderGlyph( uint glyph, int depth, int bytesPerLine, int height, uchar * buffer )

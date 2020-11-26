@@ -94,7 +94,7 @@ RETURN
 #include <QtGui/QColor>
 
 /*
-QImageReader ()
+QImageReader()
 */
 void QImageReader_new1()
 {
@@ -103,7 +103,7 @@ void QImageReader_new1()
 }
 
 /*
-QImageReader ( QIODevice * device, const QByteArray & format = QByteArray() )
+QImageReader( QIODevice * device, const QByteArray & format = QByteArray() )
 */
 void QImageReader_new2()
 {
@@ -112,19 +112,13 @@ void QImageReader_new2()
 }
 
 /*
-QImageReader ( const QString & fileName, const QByteArray & format = QByteArray() )
+QImageReader( const QString & fileName, const QByteArray & format = QByteArray() )
 */
 void QImageReader_new3()
 {
   QImageReader * obj = new QImageReader( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt4xHb::itemGetPtr(2) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QImageReader ()
-[2]QImageReader ( QIODevice * device, const QByteArray & format = QByteArray() )
-[3]QImageReader ( const QString & fileName, const QByteArray & format = QByteArray() )
-*/
 
 HB_FUNC_STATIC( QIMAGEREADER_NEW )
 {
@@ -601,7 +595,7 @@ HB_FUNC_STATIC( QIMAGEREADER_QUALITY )
 }
 
 /*
-QImage read ()
+QImage read()
 */
 void QImageReader_read1()
 {
@@ -615,7 +609,7 @@ void QImageReader_read1()
 }
 
 /*
-bool read ( QImage * image )
+bool read( QImage * image )
 */
 void QImageReader_read2()
 {
@@ -626,11 +620,6 @@ void QImageReader_read2()
     RBOOL( obj->read( PQIMAGE(1) ) );
   }
 }
-
-/*
-[1]QImage read ()
-[2]bool read ( QImage * image )
-*/
 
 HB_FUNC_STATIC( QIMAGEREADER_READ )
 {
@@ -1080,7 +1069,7 @@ HB_FUNC_STATIC( QIMAGEREADER_TEXTKEYS )
 }
 
 /*
-QImage::Format imageFormat () const
+QImage::Format imageFormat() const
 */
 void QImageReader_imageFormat1()
 {
@@ -1093,7 +1082,7 @@ void QImageReader_imageFormat1()
 }
 
 /*
-static QByteArray imageFormat ( const QString & fileName )
+static QByteArray imageFormat( const QString & fileName )
 */
 void QImageReader_imageFormat2()
 {
@@ -1103,7 +1092,7 @@ void QImageReader_imageFormat2()
 }
 
 /*
-static QByteArray imageFormat ( QIODevice * device )
+static QByteArray imageFormat( QIODevice * device )
 */
 void QImageReader_imageFormat3()
 {
@@ -1111,12 +1100,6 @@ void QImageReader_imageFormat3()
   QByteArray * ptr = new QByteArray( QImageReader::imageFormat( PQIODEVICE(1) ) );
   Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 }
-
-/*
-[1]QImage::Format imageFormat () const
-[2]QByteArray imageFormat ( const QString & fileName )
-[3]QByteArray imageFormat ( QIODevice * device )
-*/
 
 HB_FUNC_STATIC( QIMAGEREADER_IMAGEFORMAT )
 {

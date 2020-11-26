@@ -88,7 +88,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QTabWidget ( QWidget * parent = 0 )
+QTabWidget( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QTABWIDGET_NEW )
 {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QTABWIDGET_DELETE )
 }
 
 /*
-int addTab ( QWidget * page, const QString & label )
+int addTab( QWidget * page, const QString & label )
 */
 void QTabWidget_addTab1()
 {
@@ -136,7 +136,7 @@ void QTabWidget_addTab1()
 }
 
 /*
-int addTab ( QWidget * page, const QIcon & icon, const QString & label )
+int addTab( QWidget * page, const QIcon & icon, const QString & label )
 */
 void QTabWidget_addTab2()
 {
@@ -147,11 +147,6 @@ void QTabWidget_addTab2()
     RINT( obj->addTab( PQWIDGET(1), ISOBJECT(2)? *(QIcon *) Qt4xHb::itemGetPtr(2) : QIcon(hb_parc(2)), PQSTRING(3) ) );
   }
 }
-
-/*
-[1]int addTab ( QWidget * page, const QString & label )
-[2]int addTab ( QWidget * page, const QIcon & icon, const QString & label )
-*/
 
 HB_FUNC_STATIC( QTABWIDGET_ADDTAB )
 {
@@ -391,7 +386,7 @@ HB_FUNC_STATIC( QTABWIDGET_INDEXOF )
 }
 
 /*
-int insertTab ( int index, QWidget * page, const QString & label )
+int insertTab( int index, QWidget * page, const QString & label )
 */
 void QTabWidget_insertTab1()
 {
@@ -404,7 +399,7 @@ void QTabWidget_insertTab1()
 }
 
 /*
-int insertTab ( int index, QWidget * page, const QIcon & icon, const QString & label )
+int insertTab( int index, QWidget * page, const QIcon & icon, const QString & label )
 */
 void QTabWidget_insertTab2()
 {
@@ -415,11 +410,6 @@ void QTabWidget_insertTab2()
     RINT( obj->insertTab( PINT(1), PQWIDGET(2), ISOBJECT(3)? *(QIcon *) Qt4xHb::itemGetPtr(3) : QIcon(hb_parc(3)), PQSTRING(4) ) );
   }
 }
-
-/*
-[1]int insertTab ( int index, QWidget * page, const QString & label )
-[2]int insertTab ( int index, QWidget * page, const QIcon & icon, const QString & label )
-*/
 
 HB_FUNC_STATIC( QTABWIDGET_INSERTTAB )
 {

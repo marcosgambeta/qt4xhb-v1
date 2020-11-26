@@ -89,7 +89,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QListWidgetItem ( QListWidget * parent = 0, int type = Type )
+QListWidgetItem( QListWidget * parent = 0, int type = QListWidgetItem::Type )
 */
 void QListWidgetItem_new1()
 {
@@ -98,7 +98,7 @@ void QListWidgetItem_new1()
 }
 
 /*
-QListWidgetItem ( const QString & text, QListWidget * parent = 0, int type = Type )
+QListWidgetItem( const QString & text, QListWidget * parent = 0, int type = QListWidgetItem::Type )
 */
 void QListWidgetItem_new2()
 {
@@ -107,7 +107,7 @@ void QListWidgetItem_new2()
 }
 
 /*
-QListWidgetItem ( const QIcon & icon, const QString & text, QListWidget * parent = 0, int type = Type )
+QListWidgetItem( const QIcon & icon, const QString & text, QListWidget * parent = 0, int type = QListWidgetItem::Type )
 */
 void QListWidgetItem_new3()
 {
@@ -116,20 +116,13 @@ void QListWidgetItem_new3()
 }
 
 /*
-QListWidgetItem ( const QListWidgetItem & other )
+QListWidgetItem( const QListWidgetItem & other )
 */
 void QListWidgetItem_new4()
 {
   QListWidgetItem * obj = new QListWidgetItem( *PQLISTWIDGETITEM(1) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QListWidgetItem ( QListWidget * parent = 0, int type = Type )
-[2]QListWidgetItem ( const QString & text, QListWidget * parent = 0, int type = Type )
-[3]QListWidgetItem ( const QIcon & icon, const QString & text, QListWidget * parent = 0, int type = Type )
-[4]QListWidgetItem ( const QListWidgetItem & other )
-*/
 
 HB_FUNC_STATIC( QLISTWIDGETITEM_NEW )
 {

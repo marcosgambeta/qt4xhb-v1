@@ -63,7 +63,7 @@ RETURN
 #include <QtGui/QAction>
 
 /*
-QDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+QDockWidget( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
 void QDockWidget_new1()
 {
@@ -72,18 +72,13 @@ void QDockWidget_new1()
 }
 
 /*
-QDockWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+QDockWidget( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
 void QDockWidget_new2()
 {
   QDockWidget * obj = new QDockWidget( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QDockWidget ( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
-[2]QDockWidget ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
-*/
 
 HB_FUNC_STATIC( QDOCKWIDGET_NEW )
 {

@@ -62,7 +62,7 @@ void QStyleOptionTab_new1()
 }
 
 /*
-QStyleOptionTab(const QStyleOptionTab &other)
+QStyleOptionTab( const QStyleOptionTab & other )
 */
 void QStyleOptionTab_new2()
 {
@@ -71,13 +71,7 @@ void QStyleOptionTab_new2()
 }
 
 /*
-QStyleOptionTab(int version) (protected)
-*/
-
-/*
-[1]QStyleOptionTab()
-[2]QStyleOptionTab(const QStyleOptionTab &other)
-[3]QStyleOptionTab(int version) (protected)
+QStyleOptionTab(int version) [PROTECTED]
 */
 
 HB_FUNC_STATIC( QSTYLEOPTIONTAB_NEW )

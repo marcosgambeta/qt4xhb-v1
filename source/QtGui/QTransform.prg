@@ -92,7 +92,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QTransform ()
+QTransform()
 */
 void QTransform_new1()
 {
@@ -101,7 +101,7 @@ void QTransform_new1()
 }
 
 /*
-QTransform ( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 = 1.0 )
+QTransform( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 = 1.0 )
 */
 void QTransform_new2()
 {
@@ -110,7 +110,7 @@ void QTransform_new2()
 }
 
 /*
-QTransform ( qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy )
+QTransform( qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy )
 */
 void QTransform_new3()
 {
@@ -119,20 +119,13 @@ void QTransform_new3()
 }
 
 /*
-QTransform ( const QMatrix & matrix )
+QTransform( const QMatrix & matrix )
 */
 void QTransform_new4()
 {
   QTransform * obj = new QTransform( *PQMATRIX(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QTransform ()
-[2]QTransform ( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 = 1.0 )
-[3]QTransform ( qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy )
-[4]QTransform ( const QMatrix & matrix )
-*/
 
 HB_FUNC_STATIC( QTRANSFORM_NEW )
 {
@@ -660,7 +653,7 @@ HB_FUNC_STATIC( QTRANSFORM_ISTRANSLATING )
 }
 
 /*
-void map ( qreal x, qreal y, qreal * tx, qreal * ty ) const
+void map( qreal x, qreal y, qreal * tx, qreal * ty ) const
 */
 HB_FUNC_STATIC( QTRANSFORM_MAP1 )
 {
@@ -690,7 +683,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP1 )
 }
 
 /*
-QPointF map ( const QPointF & p ) const
+QPointF map( const QPointF & p ) const
 */
 void QTransform_map2()
 {
@@ -704,7 +697,7 @@ void QTransform_map2()
 }
 
 /*
-QPoint map ( const QPoint & point ) const
+QPoint map( const QPoint & point ) const
 */
 void QTransform_map3()
 {
@@ -718,7 +711,7 @@ void QTransform_map3()
 }
 
 /*
-QLine map ( const QLine & l ) const
+QLine map( const QLine & l ) const
 */
 void QTransform_map4()
 {
@@ -732,7 +725,7 @@ void QTransform_map4()
 }
 
 /*
-QLineF map ( const QLineF & line ) const
+QLineF map( const QLineF & line ) const
 */
 void QTransform_map5()
 {
@@ -746,7 +739,7 @@ void QTransform_map5()
 }
 
 /*
-QPolygonF map ( const QPolygonF & polygon ) const
+QPolygonF map( const QPolygonF & polygon ) const
 */
 void QTransform_map6()
 {
@@ -760,7 +753,7 @@ void QTransform_map6()
 }
 
 /*
-QPolygon map ( const QPolygon & polygon ) const
+QPolygon map( const QPolygon & polygon ) const
 */
 void QTransform_map7()
 {
@@ -774,7 +767,7 @@ void QTransform_map7()
 }
 
 /*
-QRegion map ( const QRegion & region ) const
+QRegion map( const QRegion & region ) const
 */
 void QTransform_map8()
 {
@@ -788,7 +781,7 @@ void QTransform_map8()
 }
 
 /*
-QPainterPath map ( const QPainterPath & path ) const
+QPainterPath map( const QPainterPath & path ) const
 */
 void QTransform_map9()
 {
@@ -802,7 +795,7 @@ void QTransform_map9()
 }
 
 /*
-void map ( int x, int y, int * tx, int * ty ) const
+void map( int x, int y, int * tx, int * ty ) const
 */
 HB_FUNC_STATIC( QTRANSFORM_MAP10 )
 {
@@ -830,19 +823,6 @@ HB_FUNC_STATIC( QTRANSFORM_MAP10 )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[01]void map ( qreal x, qreal y, qreal * tx, qreal * ty ) const
-[02]QPointF map ( const QPointF & p ) const
-[03]QPoint map ( const QPoint & point ) const
-[04]QLine map ( const QLine & l ) const
-[05]QLineF map ( const QLineF & line ) const
-[06]QPolygonF map ( const QPolygonF & polygon ) const
-[07]QPolygon map ( const QPolygon & polygon ) const
-[08]QRegion map ( const QRegion & region ) const
-[09]QPainterPath map ( const QPainterPath & path ) const
-[10]void map ( int x, int y, int * tx, int * ty ) const
-*/
 
 HB_FUNC_STATIC( QTRANSFORM_MAP )
 {
@@ -893,7 +873,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP )
 }
 
 /*
-QRectF mapRect ( const QRectF & rectangle ) const
+QRectF mapRect( const QRectF & rectangle ) const
 */
 void QTransform_mapRect1()
 {
@@ -907,7 +887,7 @@ void QTransform_mapRect1()
 }
 
 /*
-QRect mapRect ( const QRect & rectangle ) const
+QRect mapRect( const QRect & rectangle ) const
 */
 void QTransform_mapRect2()
 {
@@ -919,11 +899,6 @@ void QTransform_mapRect2()
     Qt4xHb::createReturnClass( ptr, "QRECT", true );
   }
 }
-
-/*
-[1]QRectF mapRect ( const QRectF & rectangle ) const
-[2]QRect mapRect ( const QRect & rectangle ) const
-*/
 
 HB_FUNC_STATIC( QTRANSFORM_MAPRECT )
 {

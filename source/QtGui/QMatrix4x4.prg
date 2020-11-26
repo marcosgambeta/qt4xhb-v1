@@ -28,9 +28,6 @@ CLASS QMatrix4x4
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new3
-   METHOD new5
    METHOD new
    METHOD delete
    METHOD column
@@ -86,66 +83,45 @@ RETURN
 #include <QtGui/QTransform>
 
 /*
-QMatrix4x4 ()
+QMatrix4x4()
 */
-HB_FUNC_STATIC( QMATRIX4X4_NEW1 )
+void QMatrix4x4_new1()
 {
   QMatrix4x4 * obj = new QMatrix4x4();
   Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
-QMatrix4x4 ( const qreal * values )
+QMatrix4x4( qreal m11, qreal m12, qreal m13, qreal m14, qreal m21, qreal m22, qreal m23, qreal m24, qreal m31, qreal m32, qreal m33, qreal m34, qreal m41, qreal m42, qreal m43, qreal m44 )
 */
-
-/*
-QMatrix4x4 ( qreal m11, qreal m12, qreal m13, qreal m14, qreal m21, qreal m22, qreal m23, qreal m24, qreal m31, qreal m32, qreal m33, qreal m34, qreal m41, qreal m42, qreal m43, qreal m44 )
-*/
-HB_FUNC_STATIC( QMATRIX4X4_NEW3 )
+void QMatrix4x4_new3()
 {
   QMatrix4x4 * obj = new QMatrix4x4( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5), PQREAL(6), PQREAL(7), PQREAL(8), PQREAL(9), PQREAL(10), PQREAL(11), PQREAL(12), PQREAL(13), PQREAL(14), PQREAL(15), PQREAL(16) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 /*
-QMatrix4x4 ( const QGenericMatrix<N, M, qreal> & matrix )
+QMatrix4x4( const QTransform & transform )
 */
-
-/*
-QMatrix4x4 ( const QTransform & transform )
-*/
-HB_FUNC_STATIC( QMATRIX4X4_NEW5 )
+void QMatrix4x4_new5()
 {
   QMatrix4x4 * obj = new QMatrix4x4( *PQTRANSFORM(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
-/*
-QMatrix4x4 ( const QMatrix & matrix )
-*/
-
-/*
-[1]QMatrix4x4 ()
-[2]QMatrix4x4 ( const qreal * values )
-[3]QMatrix4x4 ( qreal m11, qreal m12, qreal m13, qreal m14, qreal m21, qreal m22, qreal m23, qreal m24, qreal m31, qreal m32, qreal m33, qreal m34, qreal m41, qreal m42, qreal m43, qreal m44 )
-[4]QMatrix4x4 ( const QGenericMatrix<N, M, qreal> & matrix )
-[5]QMatrix4x4 ( const QTransform & transform )
-[6]QMatrix4x4 ( const QMatrix & matrix )
-*/
-
 HB_FUNC_STATIC( QMATRIX4X4_NEW )
 {
   if( ISNUMPAR(0) )
   {
-    HB_FUNC_EXEC( QMATRIX4X4_NEW1 );
+    QMatrix4x4_new1();
   }
   else if( ISNUMPAR(16) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) && ISNUM(7) && ISNUM(8) && ISNUM(9) && ISNUM(10) && ISNUM(11) && ISNUM(12) && ISNUM(13) && ISNUM(14) && ISNUM(15) && ISNUM(16) )
   {
-    HB_FUNC_EXEC( QMATRIX4X4_NEW3 );
+    QMatrix4x4_new3();
   }
   else if( ISNUMPAR(1) && ISQTRANSFORM(1) )
   {
-    HB_FUNC_EXEC( QMATRIX4X4_NEW5 );
+    QMatrix4x4_new5();
   }
   else
   {
@@ -389,7 +365,7 @@ void QMatrix4x4_map1()
 }
 
 /*
-QPointF map ( const QPointF & point ) const
+QPointF map( const QPointF & point ) const
 */
 void QMatrix4x4_map2()
 {
@@ -403,7 +379,7 @@ void QMatrix4x4_map2()
 }
 
 /*
-QVector3D map ( const QVector3D & point ) const
+QVector3D map( const QVector3D & point ) const
 */
 void QMatrix4x4_map3()
 {
@@ -417,7 +393,7 @@ void QMatrix4x4_map3()
 }
 
 /*
-QVector4D map ( const QVector4D & point ) const
+QVector4D map( const QVector4D & point ) const
 */
 void QMatrix4x4_map4()
 {
@@ -429,13 +405,6 @@ void QMatrix4x4_map4()
     Qt4xHb::createReturnClass( ptr, "QVECTOR4D", true );
   }
 }
-
-/*
-[1]QPoint map ( const QPoint & point ) const
-[2]QPointF map ( const QPointF & point ) const
-[3]QVector3D map ( const QVector3D & point ) const
-[4]QVector4D map ( const QVector4D & point ) const
-*/
 
 HB_FUNC_STATIC( QMATRIX4X4_MAP )
 {
@@ -462,7 +431,7 @@ HB_FUNC_STATIC( QMATRIX4X4_MAP )
 }
 
 /*
-QRect mapRect ( const QRect & rect ) const
+QRect mapRect( const QRect & rect ) const
 */
 void QMatrix4x4_mapRect1()
 {
@@ -476,7 +445,7 @@ void QMatrix4x4_mapRect1()
 }
 
 /*
-QRectF mapRect ( const QRectF & rect ) const
+QRectF mapRect( const QRectF & rect ) const
 */
 void QMatrix4x4_mapRect2()
 {
@@ -488,11 +457,6 @@ void QMatrix4x4_mapRect2()
     Qt4xHb::createReturnClass( ptr, "QRECTF", true );
   }
 }
-
-/*
-[1]QRect mapRect ( const QRect & rect ) const
-[2]QRectF mapRect ( const QRectF & rect ) const
-*/
 
 HB_FUNC_STATIC( QMATRIX4X4_MAPRECT )
 {
@@ -587,7 +551,7 @@ HB_FUNC_STATIC( QMATRIX4X4_OPTIMIZE )
 }
 
 /*
-void ortho ( qreal left, qreal right, qreal bottom, qreal top, qreal nearPlane, qreal farPlane )
+void ortho( qreal left, qreal right, qreal bottom, qreal top, qreal nearPlane, qreal farPlane )
 */
 void QMatrix4x4_ortho1()
 {
@@ -602,7 +566,7 @@ void QMatrix4x4_ortho1()
 }
 
 /*
-void ortho ( const QRect & rect )
+void ortho( const QRect & rect )
 */
 void QMatrix4x4_ortho2()
 {
@@ -617,7 +581,7 @@ void QMatrix4x4_ortho2()
 }
 
 /*
-void ortho ( const QRectF & rect )
+void ortho( const QRectF & rect )
 */
 void QMatrix4x4_ortho3()
 {
@@ -630,12 +594,6 @@ void QMatrix4x4_ortho3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void ortho ( qreal left, qreal right, qreal bottom, qreal top, qreal nearPlane, qreal farPlane )
-[2]void ortho ( const QRect & rect )
-[3]void ortho ( const QRectF & rect )
-*/
 
 HB_FUNC_STATIC( QMATRIX4X4_ORTHO )
 {
@@ -684,7 +642,7 @@ HB_FUNC_STATIC( QMATRIX4X4_PERSPECTIVE )
 }
 
 /*
-void rotate ( qreal angle, const QVector3D & vector )
+void rotate( qreal angle, const QVector3D & vector )
 */
 void QMatrix4x4_rotate1()
 {
@@ -699,7 +657,7 @@ void QMatrix4x4_rotate1()
 }
 
 /*
-void rotate ( const QQuaternion & quaternion )
+void rotate( const QQuaternion & quaternion )
 */
 void QMatrix4x4_rotate2()
 {
@@ -714,7 +672,7 @@ void QMatrix4x4_rotate2()
 }
 
 /*
-void rotate ( qreal angle, qreal x, qreal y, qreal z = 0.0f )
+void rotate( qreal angle, qreal x, qreal y, qreal z = 0.0f )
 */
 void QMatrix4x4_rotate3()
 {
@@ -727,12 +685,6 @@ void QMatrix4x4_rotate3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void rotate ( qreal angle, const QVector3D & vector )
-[2]void rotate ( const QQuaternion & quaternion )
-[3]void rotate ( qreal angle, qreal x, qreal y, qreal z = 0.0f )
-*/
 
 HB_FUNC_STATIC( QMATRIX4X4_ROTATE )
 {
@@ -780,7 +732,7 @@ HB_FUNC_STATIC( QMATRIX4X4_ROW )
 }
 
 /*
-void scale ( const QVector3D & vector )
+void scale( const QVector3D & vector )
 */
 void QMatrix4x4_scale1()
 {
@@ -795,7 +747,7 @@ void QMatrix4x4_scale1()
 }
 
 /*
-void scale ( qreal x, qreal y )
+void scale( qreal x, qreal y )
 */
 void QMatrix4x4_scale2()
 {
@@ -810,7 +762,7 @@ void QMatrix4x4_scale2()
 }
 
 /*
-void scale ( qreal x, qreal y, qreal z )
+void scale( qreal x, qreal y, qreal z )
 */
 void QMatrix4x4_scale3()
 {
@@ -825,7 +777,7 @@ void QMatrix4x4_scale3()
 }
 
 /*
-void scale ( qreal factor )
+void scale( qreal factor )
 */
 void QMatrix4x4_scale4()
 {
@@ -838,13 +790,6 @@ void QMatrix4x4_scale4()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void scale ( const QVector3D & vector )
-[2]void scale ( qreal x, qreal y )
-[3]void scale ( qreal x, qreal y, qreal z )
-[4]void scale ( qreal factor )
-*/
 
 HB_FUNC_STATIC( QMATRIX4X4_SCALE )
 {
@@ -949,7 +894,7 @@ HB_FUNC_STATIC( QMATRIX4X4_SETTOIDENTITY )
 }
 
 /*
-QTransform toTransform () const
+QTransform toTransform() const
 */
 void QMatrix4x4_toTransform1()
 {
@@ -963,7 +908,7 @@ void QMatrix4x4_toTransform1()
 }
 
 /*
-QTransform toTransform ( qreal distanceToPlane ) const
+QTransform toTransform( qreal distanceToPlane ) const
 */
 void QMatrix4x4_toTransform2()
 {
@@ -975,11 +920,6 @@ void QMatrix4x4_toTransform2()
     Qt4xHb::createReturnClass( ptr, "QTRANSFORM", true );
   }
 }
-
-/*
-[1]QTransform toTransform () const
-[2]QTransform toTransform ( qreal distanceToPlane ) const
-*/
 
 HB_FUNC_STATIC( QMATRIX4X4_TOTRANSFORM )
 {
@@ -998,7 +938,7 @@ HB_FUNC_STATIC( QMATRIX4X4_TOTRANSFORM )
 }
 
 /*
-void translate ( const QVector3D & vector )
+void translate( const QVector3D & vector )
 */
 void QMatrix4x4_translate1()
 {
@@ -1013,7 +953,7 @@ void QMatrix4x4_translate1()
 }
 
 /*
-void translate ( qreal x, qreal y )
+void translate( qreal x, qreal y )
 */
 void QMatrix4x4_translate2()
 {
@@ -1028,7 +968,7 @@ void QMatrix4x4_translate2()
 }
 
 /*
-void translate ( qreal x, qreal y, qreal z )
+void translate( qreal x, qreal y, qreal z )
 */
 void QMatrix4x4_translate3()
 {
@@ -1041,12 +981,6 @@ void QMatrix4x4_translate3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void translate ( const QVector3D & vector )
-[2]void translate ( qreal x, qreal y )
-[3]void translate ( qreal x, qreal y, qreal z )
-*/
 
 HB_FUNC_STATIC( QMATRIX4X4_TRANSLATE )
 {

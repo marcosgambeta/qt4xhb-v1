@@ -49,7 +49,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QSpacerItem ( int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum, QSizePolicy::Policy vPolicy = QSizePolicy::Minimum )
+QSpacerItem( int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum, QSizePolicy::Policy vPolicy = QSizePolicy::Minimum )
 */
 HB_FUNC_STATIC( QSPACERITEM_NEW )
 {

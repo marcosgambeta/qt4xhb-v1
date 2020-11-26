@@ -39,7 +39,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QStyleHintReturnMask ()
+QStyleHintReturnMask()
 */
 HB_FUNC_STATIC( QSTYLEHINTRETURNMASK_NEW )
 {

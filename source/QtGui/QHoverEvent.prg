@@ -42,7 +42,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QHoverEvent ( Type type, const QPoint & pos, const QPoint & oldPos )
+QHoverEvent( QEvent::Type type, const QPoint & pos, const QPoint & oldPos )
 */
 HB_FUNC_STATIC( QHOVEREVENT_NEW )
 {

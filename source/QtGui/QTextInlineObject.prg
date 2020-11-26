@@ -61,10 +61,6 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTextInlineObject ( int i, QTextEngine * e )
-*/
-
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_DELETE )
 {
   QTextInlineObject * obj = (QTextInlineObject *) Qt4xHb::itemGetPtrStackSelfItem();

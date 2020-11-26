@@ -55,7 +55,7 @@ RETURN
 #include <QtGui/QUndoStack>
 
 /*
-QUndoView ( QWidget * parent = 0 )
+QUndoView( QWidget * parent = 0 )
 */
 void QUndoView_new1()
 {
@@ -64,7 +64,7 @@ void QUndoView_new1()
 }
 
 /*
-QUndoView ( QUndoStack * stack, QWidget * parent = 0 )
+QUndoView( QUndoStack * stack, QWidget * parent = 0 )
 */
 void QUndoView_new2()
 {
@@ -73,19 +73,13 @@ void QUndoView_new2()
 }
 
 /*
-QUndoView ( QUndoGroup * group, QWidget * parent = 0 )
+QUndoView( QUndoGroup * group, QWidget * parent = 0 )
 */
 void QUndoView_new3()
 {
   QUndoView * obj = new QUndoView( PQUNDOGROUP(1), OPQWIDGET(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QUndoView ( QWidget * parent = 0 )
-[2]QUndoView ( QUndoStack * stack, QWidget * parent = 0 )
-[3]QUndoView ( QUndoGroup * group, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QUNDOVIEW_NEW )
 {

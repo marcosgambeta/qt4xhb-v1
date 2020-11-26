@@ -87,7 +87,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QTextLayout ()
+QTextLayout()
 */
 void QTextLayout_new1()
 {
@@ -96,7 +96,7 @@ void QTextLayout_new1()
 }
 
 /*
-QTextLayout ( const QString & text )
+QTextLayout( const QString & text )
 */
 void QTextLayout_new2()
 {
@@ -105,19 +105,13 @@ void QTextLayout_new2()
 }
 
 /*
-QTextLayout ( const QString & text, const QFont & font, QPaintDevice * paintdevice = 0 )
+QTextLayout( const QString & text, const QFont & font, QPaintDevice * paintdevice = 0 )
 */
 void QTextLayout_new3()
 {
   QTextLayout * obj = new QTextLayout( PQSTRING(1), *PQFONT(2), ISNIL(3)? 0 : (QPaintDevice *) Qt4xHb::itemGetPtr(3) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QTextLayout ()
-[2]QTextLayout ( const QString & text )
-[3]QTextLayout ( const QString & text, const QFont & font, QPaintDevice * paintdevice = 0 )
-*/
 
 HB_FUNC_STATIC( QTEXTLAYOUT_NEW )
 {
@@ -333,7 +327,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CURSORMOVESTYLE )
 }
 
 /*
-void drawCursor ( QPainter * painter, const QPointF & position, int cursorPosition, int width ) const
+void drawCursor( QPainter * painter, const QPointF & position, int cursorPosition, int width ) const
 */
 void QTextLayout_drawCursor1()
 {
@@ -348,7 +342,7 @@ void QTextLayout_drawCursor1()
 }
 
 /*
-void drawCursor ( QPainter * painter, const QPointF & position, int cursorPosition ) const
+void drawCursor( QPainter * painter, const QPointF & position, int cursorPosition ) const
 */
 void QTextLayout_drawCursor2()
 {
@@ -361,11 +355,6 @@ void QTextLayout_drawCursor2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void drawCursor ( QPainter * painter, const QPointF & position, int cursorPosition, int width ) const
-[2]void drawCursor ( QPainter * painter, const QPointF & position, int cursorPosition ) const
-*/
 
 HB_FUNC_STATIC( QTEXTLAYOUT_DRAWCURSOR )
 {

@@ -49,7 +49,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QTextTableCellFormat ()
+QTextTableCellFormat()
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_NEW )
 {

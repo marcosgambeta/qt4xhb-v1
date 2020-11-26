@@ -55,7 +55,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QGraphicsAnchorLayout ( QGraphicsLayoutItem * parent = 0 )
+QGraphicsAnchorLayout( QGraphicsLayoutItem * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_NEW )
 {

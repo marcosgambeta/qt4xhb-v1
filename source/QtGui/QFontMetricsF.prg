@@ -73,7 +73,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QFontMetricsF ( const QFont & font )
+QFontMetricsF( const QFont & font )
 */
 void QFontMetricsF_new1()
 {
@@ -82,7 +82,7 @@ void QFontMetricsF_new1()
 }
 
 /*
-QFontMetricsF ( const QFont & font, QPaintDevice * paintdevice )
+QFontMetricsF( const QFont & font, QPaintDevice * paintdevice )
 */
 void QFontMetricsF_new2()
 {
@@ -91,7 +91,7 @@ void QFontMetricsF_new2()
 }
 
 /*
-QFontMetricsF ( const QFontMetrics & fontMetrics )
+QFontMetricsF( const QFontMetrics & fontMetrics )
 */
 void QFontMetricsF_new3()
 {
@@ -100,20 +100,13 @@ void QFontMetricsF_new3()
 }
 
 /*
-QFontMetricsF ( const QFontMetricsF & fm )
+QFontMetricsF( const QFontMetricsF & fm )
 */
 void QFontMetricsF_new4()
 {
   QFontMetricsF * obj = new QFontMetricsF( *PQFONTMETRICSF(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QFontMetricsF ( const QFont & font )
-[2]QFontMetricsF ( const QFont & font, QPaintDevice * paintdevice )
-[3]QFontMetricsF ( const QFontMetrics & fontMetrics )
-[4]QFontMetricsF ( const QFontMetricsF & fm )
-*/
 
 HB_FUNC_STATIC( QFONTMETRICSF_NEW )
 {
@@ -205,7 +198,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_AVERAGECHARWIDTH )
 }
 
 /*
-QRectF boundingRect ( const QString & text ) const
+QRectF boundingRect( const QString & text ) const
 */
 void QFontMetricsF_boundingRect1()
 {
@@ -219,7 +212,7 @@ void QFontMetricsF_boundingRect1()
 }
 
 /*
-QRectF boundingRect ( QChar ch ) const
+QRectF boundingRect( QChar ch ) const
 */
 void QFontMetricsF_boundingRect2()
 {
@@ -233,7 +226,7 @@ void QFontMetricsF_boundingRect2()
 }
 
 /*
-QRectF boundingRect ( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
+QRectF boundingRect( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
 */
 void QFontMetricsF_boundingRect3()
 {
@@ -247,12 +240,6 @@ void QFontMetricsF_boundingRect3()
     hb_storni( par5, 5 );
   }
 }
-
-/*
-[1]QRectF boundingRect ( const QString & text ) const
-[2]QRectF boundingRect ( QChar ch ) const
-[3]QRectF boundingRect ( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
-*/
 
 HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT )
 {
@@ -711,7 +698,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_UNDERLINEPOS )
 }
 
 /*
-qreal width ( const QString & text ) const
+qreal width( const QString & text ) const
 */
 void QFontMetricsF_width1()
 {
@@ -724,7 +711,7 @@ void QFontMetricsF_width1()
 }
 
 /*
-qreal width ( QChar ch ) const
+qreal width( QChar ch ) const
 */
 void QFontMetricsF_width2()
 {
@@ -735,11 +722,6 @@ void QFontMetricsF_width2()
     RQREAL( obj->width( *PQCHAR(1) ) );
   }
 }
-
-/*
-[1]qreal width ( const QString & text ) const
-[2]qreal width ( QChar ch ) const
-*/
 
 HB_FUNC_STATIC( QFONTMETRICSF_WIDTH )
 {

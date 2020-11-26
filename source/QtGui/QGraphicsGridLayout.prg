@@ -84,7 +84,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QGraphicsGridLayout ( QGraphicsLayoutItem * parent = 0 )
+QGraphicsGridLayout( QGraphicsLayoutItem * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_NEW )
 {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_DELETE )
 }
 
 /*
-void addItem ( QGraphicsLayoutItem * item, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
+void addItem( QGraphicsLayoutItem * item, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
 */
 void QGraphicsGridLayout_addItem1()
 {
@@ -132,7 +132,7 @@ void QGraphicsGridLayout_addItem1()
 }
 
 /*
-void addItem ( QGraphicsLayoutItem * item, int row, int column, Qt::Alignment alignment = 0 )
+void addItem( QGraphicsLayoutItem * item, int row, int column, Qt::Alignment alignment = 0 )
 */
 void QGraphicsGridLayout_addItem2()
 {
@@ -145,11 +145,6 @@ void QGraphicsGridLayout_addItem2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void addItem ( QGraphicsLayoutItem * item, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
-[2]void addItem ( QGraphicsLayoutItem * item, int row, int column, Qt::Alignment alignment = 0 )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ADDITEM )
 {
@@ -384,7 +379,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_HORIZONTALSPACING )
 }
 
 /*
-QGraphicsLayoutItem * itemAt ( int row, int column ) const
+QGraphicsLayoutItem * itemAt( int row, int column ) const
 */
 void QGraphicsGridLayout_itemAt1()
 {
@@ -398,7 +393,7 @@ void QGraphicsGridLayout_itemAt1()
 }
 
 /*
-virtual QGraphicsLayoutItem * itemAt ( int index ) const
+virtual QGraphicsLayoutItem * itemAt( int index ) const
 */
 void QGraphicsGridLayout_itemAt2()
 {
@@ -410,11 +405,6 @@ void QGraphicsGridLayout_itemAt2()
     Qt4xHb::createReturnClass( ptr, "QGRAPHICSLAYOUTITEM", false );
   }
 }
-
-/*
-[1]QGraphicsLayoutItem * itemAt ( int row, int column ) const
-[2]virtual QGraphicsLayoutItem * itemAt ( int index ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ITEMAT )
 {

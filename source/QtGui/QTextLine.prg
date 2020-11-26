@@ -41,8 +41,6 @@ CLASS QTextLine
    METHOD rect
    METHOD setLeadingIncluded
    METHOD setLineWidth
-   METHOD setNumColumns1
-   METHOD setNumColumns2
    METHOD setNumColumns
    METHOD setPosition
    METHOD textLength
@@ -77,7 +75,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QTextLine ()
+QTextLine()
 */
 HB_FUNC_STATIC( QTEXTLINE_NEW )
 {
@@ -134,7 +132,7 @@ HB_FUNC_STATIC( QTEXTLINE_ASCENT )
 }
 
 /*
-qreal cursorToX ( int * cursorPos, Edge edge = Leading ) const
+qreal cursorToX( int * cursorPos, QTextLine::Edge edge = QTextLine::Leading ) const
 */
 HB_FUNC_STATIC( QTEXTLINE_CURSORTOX1 )
 {
@@ -160,7 +158,7 @@ HB_FUNC_STATIC( QTEXTLINE_CURSORTOX1 )
 }
 
 /*
-qreal cursorToX ( int cursorPos, Edge edge = Leading ) const
+qreal cursorToX( int cursorPos, QTextLine::Edge edge = QTextLine::Leading ) const
 */
 HB_FUNC_STATIC( QTEXTLINE_CURSORTOX2 )
 {
@@ -182,11 +180,6 @@ HB_FUNC_STATIC( QTEXTLINE_CURSORTOX2 )
 #endif
   }
 }
-
-/*
-[1]qreal cursorToX ( int * cursorPos, Edge edge = Leading ) const
-[2]qreal cursorToX ( int cursorPos, Edge edge = Leading ) const
-*/
 
 HB_FUNC_STATIC( QTEXTLINE_CURSORTOX )
 {
@@ -524,71 +517,44 @@ HB_FUNC_STATIC( QTEXTLINE_SETLINEWIDTH )
 }
 
 /*
-void setNumColumns ( int numColumns )
+void setNumColumns( int numColumns )
 */
-HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS1 )
+void QTextLine_setNumColumns1()
 {
   QTextLine * obj = (QTextLine *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
-    {
-#endif
-      obj->setNumColumns( PINT(1) );
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-#endif
+    obj->setNumColumns( PINT(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
-void setNumColumns ( int numColumns, qreal alignmentWidth )
+void setNumColumns( int numColumns, qreal alignmentWidth )
 */
-HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS2 )
+void QTextLine_setNumColumns2()
 {
   QTextLine * obj = (QTextLine *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
-    {
-#endif
-      obj->setNumColumns( PINT(1), PQREAL(2) );
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-#endif
+    obj->setNumColumns( PINT(1), PQREAL(2) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setNumColumns ( int numColumns )
-[2]void setNumColumns ( int numColumns, qreal alignmentWidth )
-*/
 
 HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS )
 {
   if( ISNUMPAR(1) && ISNUM(1) )
   {
-    HB_FUNC_EXEC( QTEXTLINE_SETNUMCOLUMNS1 );
+    QTextLine_setNumColumns1();
   }
   else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
   {
-    HB_FUNC_EXEC( QTEXTLINE_SETNUMCOLUMNS2 );
+    QTextLine_setNumColumns2();
   }
   else
   {

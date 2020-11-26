@@ -130,7 +130,7 @@ RETURN
 #include <QtGui/QAbstractItemView>
 
 /*
-QComboBox ( QWidget * parent = 0 )
+QComboBox( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QCOMBOBOX_NEW )
 {
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QCOMBOBOX_DELETE )
 }
 
 /*
-void addItem ( const QString & text, const QVariant & userData = QVariant() )
+void addItem( const QString & text, const QVariant & userData = QVariant() )
 */
 void QComboBox_addItem1()
 {
@@ -180,7 +180,7 @@ void QComboBox_addItem1()
 }
 
 /*
-void addItem ( const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
+void addItem( const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
 */
 void QComboBox_addItem2()
 {
@@ -193,11 +193,6 @@ void QComboBox_addItem2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void addItem ( const QString & text, const QVariant & userData = QVariant() )
-[2]void addItem ( const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
-*/
 
 HB_FUNC_STATIC( QCOMBOBOX_ADDITEM )
 {
@@ -486,7 +481,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ICONSIZE )
 }
 
 /*
-void insertItem ( int index, const QString & text, const QVariant & userData = QVariant() )
+void insertItem( int index, const QString & text, const QVariant & userData = QVariant() )
 */
 void QComboBox_insertItem1()
 {
@@ -501,7 +496,7 @@ void QComboBox_insertItem1()
 }
 
 /*
-void insertItem ( int index, const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
+void insertItem( int index, const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
 */
 void QComboBox_insertItem2()
 {
@@ -514,11 +509,6 @@ void QComboBox_insertItem2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void insertItem ( int index, const QString & text, const QVariant & userData = QVariant() )
-[2]void insertItem ( int index, const QIcon & icon, const QString & text, const QVariant & userData = QVariant() )
-*/
 
 HB_FUNC_STATIC( QCOMBOBOX_INSERTITEM )
 {

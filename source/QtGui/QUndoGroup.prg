@@ -68,7 +68,7 @@ RETURN
 #include <QtGui/QAction>
 
 /*
-QUndoGroup ( QObject * parent = 0 )
+QUndoGroup( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QUNDOGROUP_NEW )
 {

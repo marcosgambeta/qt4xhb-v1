@@ -106,7 +106,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QTableWidget ( QWidget * parent = 0 )
+QTableWidget( QWidget * parent = 0 )
 */
 void QTableWidget_new1()
 {
@@ -115,18 +115,13 @@ void QTableWidget_new1()
 }
 
 /*
-QTableWidget ( int rows, int columns, QWidget * parent = 0 )
+QTableWidget( int rows, int columns, QWidget * parent = 0 )
 */
 void QTableWidget_new2()
 {
   QTableWidget * obj = new QTableWidget( PINT(1), PINT(2), OPQWIDGET(3,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QTableWidget ( QWidget * parent = 0 )
-[2]QTableWidget ( int rows, int columns, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QTABLEWIDGET_NEW )
 {
@@ -460,7 +455,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ITEM )
 }
 
 /*
-QTableWidgetItem * itemAt ( const QPoint & point ) const
+QTableWidgetItem * itemAt( const QPoint & point ) const
 */
 void QTableWidget_itemAt1()
 {
@@ -474,7 +469,7 @@ void QTableWidget_itemAt1()
 }
 
 /*
-QTableWidgetItem * itemAt ( int ax, int ay ) const
+QTableWidgetItem * itemAt( int ax, int ay ) const
 */
 void QTableWidget_itemAt2()
 {
@@ -486,11 +481,6 @@ void QTableWidget_itemAt2()
     Qt4xHb::createReturnClass( ptr, "QTABLEWIDGETITEM", false );
   }
 }
-
-/*
-[1]QTableWidgetItem * itemAt ( const QPoint & point ) const
-[2]QTableWidgetItem * itemAt ( int ax, int ay ) const
-*/
 
 HB_FUNC_STATIC( QTABLEWIDGET_ITEMAT )
 {
@@ -761,7 +751,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETCOLUMNCOUNT )
 }
 
 /*
-void setCurrentCell ( int row, int column )
+void setCurrentCell( int row, int column )
 */
 void QTableWidget_setCurrentCell1()
 {
@@ -776,7 +766,7 @@ void QTableWidget_setCurrentCell1()
 }
 
 /*
-void setCurrentCell ( int row, int column, QItemSelectionModel::SelectionFlags command )
+void setCurrentCell( int row, int column, QItemSelectionModel::SelectionFlags command )
 */
 void QTableWidget_setCurrentCell2()
 {
@@ -789,11 +779,6 @@ void QTableWidget_setCurrentCell2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setCurrentCell ( int row, int column )
-[2]void setCurrentCell ( int row, int column, QItemSelectionModel::SelectionFlags command )
-*/
 
 HB_FUNC_STATIC( QTABLEWIDGET_SETCURRENTCELL )
 {
@@ -812,7 +797,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SETCURRENTCELL )
 }
 
 /*
-void setCurrentItem ( QTableWidgetItem * item )
+void setCurrentItem( QTableWidgetItem * item )
 */
 void QTableWidget_setCurrentItem1()
 {
@@ -827,7 +812,7 @@ void QTableWidget_setCurrentItem1()
 }
 
 /*
-void setCurrentItem ( QTableWidgetItem * item, QItemSelectionModel::SelectionFlags command )
+void setCurrentItem( QTableWidgetItem * item, QItemSelectionModel::SelectionFlags command )
 */
 void QTableWidget_setCurrentItem2()
 {
@@ -840,11 +825,6 @@ void QTableWidget_setCurrentItem2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setCurrentItem ( QTableWidgetItem * item )
-[2]void setCurrentItem ( QTableWidgetItem * item, QItemSelectionModel::SelectionFlags command )
-*/
 
 HB_FUNC_STATIC( QTABLEWIDGET_SETCURRENTITEM )
 {

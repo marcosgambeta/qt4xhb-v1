@@ -62,7 +62,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QWorkspace ( QWidget * parent = 0 )
+QWorkspace( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QWORKSPACE_NEW )
 {

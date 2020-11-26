@@ -64,7 +64,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QSizePolicy ()
+QSizePolicy()
 */
 void QSizePolicy_new1()
 {
@@ -73,7 +73,7 @@ void QSizePolicy_new1()
 }
 
 /*
-QSizePolicy ( Policy horizontal, Policy vertical )
+QSizePolicy( QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical )
 */
 void QSizePolicy_new2()
 {
@@ -82,19 +82,13 @@ void QSizePolicy_new2()
 }
 
 /*
-QSizePolicy ( Policy horizontal, Policy vertical, ControlType type )
+QSizePolicy( QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical, QSizePolicy::ControlType type )
 */
 void QSizePolicy_new3()
 {
   QSizePolicy * obj = new QSizePolicy( (QSizePolicy::Policy) hb_parni(1), (QSizePolicy::Policy) hb_parni(2), (QSizePolicy::ControlType) hb_parni(3) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QSizePolicy ()
-[2]QSizePolicy ( Policy horizontal, Policy vertical )
-[3]QSizePolicy ( Policy horizontal, Policy vertical, ControlType type )
-*/
 
 HB_FUNC_STATIC( QSIZEPOLICY_NEW )
 {

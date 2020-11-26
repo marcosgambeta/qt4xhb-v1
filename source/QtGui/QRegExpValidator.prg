@@ -45,7 +45,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QRegExpValidator ( QObject * parent = 0 )
+QRegExpValidator( QObject * parent = 0 )
 */
 void QRegExpValidator_new1()
 {
@@ -54,18 +54,13 @@ void QRegExpValidator_new1()
 }
 
 /*
-QRegExpValidator ( const QRegExp & rx, QObject * parent )
+QRegExpValidator( const QRegExp & rx, QObject * parent )
 */
 void QRegExpValidator_new2()
 {
   QRegExpValidator * obj = new QRegExpValidator( *PQREGEXP(1), PQOBJECT(2) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QRegExpValidator ( QObject * parent = 0 )
-[2]QRegExpValidator ( const QRegExp & rx, QObject * parent )
-*/
 
 HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
 {
@@ -154,16 +149,30 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_SETREGEXP )
 }
 
 /*
-virtual QValidator::State validate ( QString & input, int & pos ) const
+virtual QValidator::State validate( QString & input, int & pos ) const
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_VALIDATE )
 {
-  QRegExpValidator * obj = (QRegExpValidator *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+  QRegExpValidator * obj = (QRegExpValidator *) Qt4xHb::itemGetPtrStackSelfItem();
+
   if( obj )
   {
-    QString par1 = hb_parc(1);
-    int par2 = hb_parni(2);
-    hb_retni( (int) obj->validate ( par1, par2 ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    {
+#endif
+      QString par1 = hb_parc(1);
+      int par2;
+      RENUM( obj->validate( par1, par2 ) );
+      hb_storc( QSTRINGTOSTRING(par1), 1);
+      hb_storni( par2, 2 );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
   }
 }
 

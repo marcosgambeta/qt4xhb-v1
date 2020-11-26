@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_DELETE )
 }
 
 /*
-virtual QIcon icon(IconType type) const
+virtual QIcon icon( QFileIconProvider::IconType type ) const
 */
 void QFileIconProvider_icon1()
 {
@@ -98,7 +98,7 @@ void QFileIconProvider_icon1()
 }
 
 /*
-virtual QIcon icon(const QFileInfo & info) const
+virtual QIcon icon( const QFileInfo & info ) const
 */
 void QFileIconProvider_icon2()
 {
@@ -110,11 +110,6 @@ void QFileIconProvider_icon2()
     Qt4xHb::createReturnClass( ptr, "QICON", true );
   }
 }
-
-/*
-[1]virtual QIcon icon(IconType type) const
-[2]virtual QIcon icon(const QFileInfo & info) const
-*/
 
 HB_FUNC_STATIC( QFILEICONPROVIDER_ICON )
 {

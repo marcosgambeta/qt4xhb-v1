@@ -40,7 +40,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QToolBarChangeEvent(bool t)
+QToolBarChangeEvent( bool t )
 */
 HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_NEW )
 {

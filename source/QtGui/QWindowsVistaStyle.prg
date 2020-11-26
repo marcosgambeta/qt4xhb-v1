@@ -41,7 +41,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QWindowsVistaStyle ()
+QWindowsVistaStyle()
 */
 HB_FUNC_STATIC( QWINDOWSVISTASTYLE_NEW )
 {

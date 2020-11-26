@@ -45,7 +45,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QKeyEventTransition ( QState * sourceState = 0 )
+QKeyEventTransition( QState * sourceState = 0 )
 */
 void QKeyEventTransition_new1()
 {
@@ -54,18 +54,13 @@ void QKeyEventTransition_new1()
 }
 
 /*
-QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sourceState = 0 )
+QKeyEventTransition( QObject * object, QEvent::Type type, int key, QState * sourceState = 0 )
 */
 void QKeyEventTransition_new2()
 {
   QKeyEventTransition * obj = new QKeyEventTransition( PQOBJECT(1), (QEvent::Type) hb_parni(2), PINT(3), OPQSTATE(4,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QKeyEventTransition ( QState * sourceState = 0 )
-[2]QKeyEventTransition ( QObject * object, QEvent::Type type, int key, QState * sourceState = 0 )
-*/
 
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW )
 {

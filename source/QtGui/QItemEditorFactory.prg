@@ -55,7 +55,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QItemEditorFactory ()
+QItemEditorFactory()
 */
 HB_FUNC_STATIC( QITEMEDITORFACTORY_NEW )
 {

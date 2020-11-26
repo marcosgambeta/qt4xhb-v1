@@ -74,7 +74,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QBoxLayout ( Direction dir, QWidget * parent = 0 )
+QBoxLayout( QBoxLayout::Direction dir, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_NEW )
 {
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_SETSTRETCH )
 }
 
 /*
-bool setStretchFactor ( QWidget * widget, int stretch )
+bool setStretchFactor( QWidget * widget, int stretch )
 */
 void QBoxLayout_setStretchFactor1()
 {
@@ -510,7 +510,7 @@ void QBoxLayout_setStretchFactor1()
 }
 
 /*
-bool setStretchFactor ( QLayout * layout, int stretch )
+bool setStretchFactor( QLayout * layout, int stretch )
 */
 void QBoxLayout_setStretchFactor2()
 {
@@ -521,11 +521,6 @@ void QBoxLayout_setStretchFactor2()
     RBOOL( obj->setStretchFactor( PQLAYOUT(1), PINT(2) ) );
   }
 }
-
-/*
-[1]bool setStretchFactor ( QWidget * widget, int stretch )
-[2]bool setStretchFactor ( QLayout * layout, int stretch )
-*/
 
 HB_FUNC_STATIC( QBOXLAYOUT_SETSTRETCHFACTOR )
 {

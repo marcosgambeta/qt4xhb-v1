@@ -62,7 +62,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QTextOption ()
+QTextOption()
 */
 void QTextOption_new1()
 {
@@ -71,7 +71,7 @@ void QTextOption_new1()
 }
 
 /*
-QTextOption ( Qt::Alignment alignment )
+QTextOption( Qt::Alignment alignment )
 */
 void QTextOption_new2()
 {
@@ -80,19 +80,13 @@ void QTextOption_new2()
 }
 
 /*
-QTextOption ( const QTextOption & other )
+QTextOption( const QTextOption & other )
 */
 void QTextOption_new3()
 {
   QTextOption * obj = new QTextOption( *PQTEXTOPTION(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QTextOption ()
-[2]QTextOption ( Qt::Alignment alignment )
-[3]QTextOption ( const QTextOption & other )
-*/
 
 HB_FUNC_STATIC( QTEXTOPTION_NEW )
 {

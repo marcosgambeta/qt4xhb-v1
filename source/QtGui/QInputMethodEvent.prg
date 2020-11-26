@@ -42,7 +42,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QInputMethodEvent ()
+QInputMethodEvent()
 */
 void QInputMethodEvent_new1()
 {
@@ -51,23 +51,13 @@ void QInputMethodEvent_new1()
 }
 
 /*
-QInputMethodEvent ( const QString & preeditText, const QList<Attribute> & attributes )
-*/
-
-/*
-QInputMethodEvent ( const QInputMethodEvent & other )
+QInputMethodEvent( const QInputMethodEvent & other )
 */
 void QInputMethodEvent_new3()
 {
   QInputMethodEvent * obj = new QInputMethodEvent( *PQINPUTMETHODEVENT(1) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QInputMethodEvent ()
-[2]QInputMethodEvent ( const QString & preeditText, const QList<Attribute> & attributes )
-[3]QInputMethodEvent ( const QInputMethodEvent & other )
-*/
 
 HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW )
 {
@@ -101,14 +91,6 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_DELETE )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-const QString & commitString () const
-*/
-
-/*
-const QString & preeditString () const
-*/
 
 /*
 int replacementLength() const

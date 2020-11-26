@@ -46,7 +46,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QItemDelegate ( QObject * parent = 0 )
+QItemDelegate( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QITEMDELEGATE_NEW )
 {

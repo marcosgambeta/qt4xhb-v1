@@ -806,7 +806,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_EFFECTIVEOPACITY )
 }
 
 /*
-void ensureVisible ( const QRectF & rect = QRectF(), int xmargin = 50, int ymargin = 50 )
+void ensureVisible( const QRectF & rect = QRectF(), int xmargin = 50, int ymargin = 50 )
 */
 void QGraphicsItem_ensureVisible1()
 {
@@ -821,7 +821,7 @@ void QGraphicsItem_ensureVisible1()
 }
 
 /*
-void ensureVisible ( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
+void ensureVisible( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
 */
 void QGraphicsItem_ensureVisible2()
 {
@@ -834,11 +834,6 @@ void QGraphicsItem_ensureVisible2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void ensureVisible ( const QRectF & rect = QRectF(), int xmargin = 50, int ymargin = 50 )
-[2]void ensureVisible ( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_ENSUREVISIBLE )
 {
@@ -1277,7 +1272,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISENABLED )
 }
 
 /*
-bool isObscured () const
+bool isObscured() const
 */
 void QGraphicsItem_isObscured1()
 {
@@ -1290,7 +1285,7 @@ void QGraphicsItem_isObscured1()
 }
 
 /*
-bool isObscured ( qreal x, qreal y, qreal w, qreal h ) const
+bool isObscured( qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsItem_isObscured2()
 {
@@ -1303,7 +1298,7 @@ void QGraphicsItem_isObscured2()
 }
 
 /*
-bool isObscured ( const QRectF & rect ) const
+bool isObscured( const QRectF & rect ) const
 */
 void QGraphicsItem_isObscured3()
 {
@@ -1314,12 +1309,6 @@ void QGraphicsItem_isObscured3()
     RBOOL( obj->isObscured( *PQRECTF(1) ) );
   }
 }
-
-/*
-[1]bool isObscured () const
-[2]bool isObscured ( qreal x, qreal y, qreal w, qreal h ) const
-[3]bool isObscured ( const QRectF & rect ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCURED )
 {
@@ -1561,7 +1550,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ITEMTRANSFORM )
 }
 
 /*
-QPointF mapFromItem ( const QGraphicsItem * item, const QPointF & point ) const
+QPointF mapFromItem( const QGraphicsItem * item, const QPointF & point ) const
 */
 void QGraphicsItem_mapFromItem1()
 {
@@ -1575,7 +1564,7 @@ void QGraphicsItem_mapFromItem1()
 }
 
 /*
-QPolygonF mapFromItem ( const QGraphicsItem * item, const QRectF & rect ) const
+QPolygonF mapFromItem( const QGraphicsItem * item, const QRectF & rect ) const
 */
 void QGraphicsItem_mapFromItem2()
 {
@@ -1589,7 +1578,7 @@ void QGraphicsItem_mapFromItem2()
 }
 
 /*
-QPolygonF mapFromItem ( const QGraphicsItem * item, const QPolygonF & polygon ) const
+QPolygonF mapFromItem( const QGraphicsItem * item, const QPolygonF & polygon ) const
 */
 void QGraphicsItem_mapFromItem3()
 {
@@ -1603,7 +1592,7 @@ void QGraphicsItem_mapFromItem3()
 }
 
 /*
-QPainterPath mapFromItem ( const QGraphicsItem * item, const QPainterPath & path ) const
+QPainterPath mapFromItem( const QGraphicsItem * item, const QPainterPath & path ) const
 */
 void QGraphicsItem_mapFromItem4()
 {
@@ -1617,7 +1606,7 @@ void QGraphicsItem_mapFromItem4()
 }
 
 /*
-QPolygonF mapFromItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
+QPolygonF mapFromItem( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsItem_mapFromItem5()
 {
@@ -1631,7 +1620,7 @@ void QGraphicsItem_mapFromItem5()
 }
 
 /*
-QPointF mapFromItem ( const QGraphicsItem * item, qreal x, qreal y ) const
+QPointF mapFromItem( const QGraphicsItem * item, qreal x, qreal y ) const
 */
 void QGraphicsItem_mapFromItem6()
 {
@@ -1643,15 +1632,6 @@ void QGraphicsItem_mapFromItem6()
     Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
   }
 }
-
-/*
-[1]QPointF mapFromItem ( const QGraphicsItem * item, const QPointF & point ) const
-[2]QPolygonF mapFromItem ( const QGraphicsItem * item, const QRectF & rect ) const
-[3]QPolygonF mapFromItem ( const QGraphicsItem * item, const QPolygonF & polygon ) const
-[4]QPainterPath mapFromItem ( const QGraphicsItem * item, const QPainterPath & path ) const
-[5]QPolygonF mapFromItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
-[6]QPointF mapFromItem ( const QGraphicsItem * item, qreal x, qreal y ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMITEM )
 {
@@ -1686,7 +1666,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMITEM )
 }
 
 /*
-QPointF mapFromParent ( const QPointF & point ) const
+QPointF mapFromParent( const QPointF & point ) const
 */
 void QGraphicsItem_mapFromParent1()
 {
@@ -1700,7 +1680,7 @@ void QGraphicsItem_mapFromParent1()
 }
 
 /*
-QPolygonF mapFromParent ( const QRectF & rect ) const
+QPolygonF mapFromParent( const QRectF & rect ) const
 */
 void QGraphicsItem_mapFromParent2()
 {
@@ -1714,7 +1694,7 @@ void QGraphicsItem_mapFromParent2()
 }
 
 /*
-QPolygonF mapFromParent ( const QPolygonF & polygon ) const
+QPolygonF mapFromParent( const QPolygonF & polygon ) const
 */
 void QGraphicsItem_mapFromParent3()
 {
@@ -1728,7 +1708,7 @@ void QGraphicsItem_mapFromParent3()
 }
 
 /*
-QPainterPath mapFromParent ( const QPainterPath & path ) const
+QPainterPath mapFromParent( const QPainterPath & path ) const
 */
 void QGraphicsItem_mapFromParent4()
 {
@@ -1742,7 +1722,7 @@ void QGraphicsItem_mapFromParent4()
 }
 
 /*
-QPolygonF mapFromParent ( qreal x, qreal y, qreal w, qreal h ) const
+QPolygonF mapFromParent( qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsItem_mapFromParent5()
 {
@@ -1756,7 +1736,7 @@ void QGraphicsItem_mapFromParent5()
 }
 
 /*
-QPointF mapFromParent ( qreal x, qreal y ) const
+QPointF mapFromParent( qreal x, qreal y ) const
 */
 void QGraphicsItem_mapFromParent6()
 {
@@ -1768,15 +1748,6 @@ void QGraphicsItem_mapFromParent6()
     Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
   }
 }
-
-/*
-[1]QPointF mapFromParent ( const QPointF & point ) const
-[2]QPolygonF mapFromParent ( const QRectF & rect ) const
-[3]QPolygonF mapFromParent ( const QPolygonF & polygon ) const
-[4]QPainterPath mapFromParent ( const QPainterPath & path ) const
-[5]QPolygonF mapFromParent ( qreal x, qreal y, qreal w, qreal h ) const
-[6]QPointF mapFromParent ( qreal x, qreal y ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMPARENT )
 {
@@ -1811,7 +1782,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMPARENT )
 }
 
 /*
-QPointF mapFromScene ( const QPointF & point ) const
+QPointF mapFromScene( const QPointF & point ) const
 */
 void QGraphicsItem_mapFromScene1()
 {
@@ -1825,7 +1796,7 @@ void QGraphicsItem_mapFromScene1()
 }
 
 /*
-QPolygonF mapFromScene ( const QRectF & rect ) const
+QPolygonF mapFromScene( const QRectF & rect ) const
 */
 void QGraphicsItem_mapFromScene2()
 {
@@ -1839,7 +1810,7 @@ void QGraphicsItem_mapFromScene2()
 }
 
 /*
-QPolygonF mapFromScene ( const QPolygonF & polygon ) const
+QPolygonF mapFromScene( const QPolygonF & polygon ) const
 */
 void QGraphicsItem_mapFromScene3()
 {
@@ -1853,7 +1824,7 @@ void QGraphicsItem_mapFromScene3()
 }
 
 /*
-QPainterPath mapFromScene ( const QPainterPath & path ) const
+QPainterPath mapFromScene( const QPainterPath & path ) const
 */
 void QGraphicsItem_mapFromScene4()
 {
@@ -1867,7 +1838,7 @@ void QGraphicsItem_mapFromScene4()
 }
 
 /*
-QPolygonF mapFromScene ( qreal x, qreal y, qreal w, qreal h ) const
+QPolygonF mapFromScene( qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsItem_mapFromScene5()
 {
@@ -1881,7 +1852,7 @@ void QGraphicsItem_mapFromScene5()
 }
 
 /*
-QPointF mapFromScene ( qreal x, qreal y ) const
+QPointF mapFromScene( qreal x, qreal y ) const
 */
 void QGraphicsItem_mapFromScene6()
 {
@@ -1893,15 +1864,6 @@ void QGraphicsItem_mapFromScene6()
     Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
   }
 }
-
-/*
-[1]QPointF mapFromScene ( const QPointF & point ) const
-[2]QPolygonF mapFromScene ( const QRectF & rect ) const
-[3]QPolygonF mapFromScene ( const QPolygonF & polygon ) const
-[4]QPainterPath mapFromScene ( const QPainterPath & path ) const
-[5]QPolygonF mapFromScene ( qreal x, qreal y, qreal w, qreal h ) const
-[6]QPointF mapFromScene ( qreal x, qreal y ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMSCENE )
 {
@@ -1936,7 +1898,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMSCENE )
 }
 
 /*
-QRectF mapRectFromItem ( const QGraphicsItem * item, const QRectF & rect ) const
+QRectF mapRectFromItem( const QGraphicsItem * item, const QRectF & rect ) const
 */
 void QGraphicsItem_mapRectFromItem1()
 {
@@ -1950,7 +1912,7 @@ void QGraphicsItem_mapRectFromItem1()
 }
 
 /*
-QRectF mapRectFromItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
+QRectF mapRectFromItem( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsItem_mapRectFromItem2()
 {
@@ -1962,11 +1924,6 @@ void QGraphicsItem_mapRectFromItem2()
     Qt4xHb::createReturnClass( ptr, "QRECTF", true );
   }
 }
-
-/*
-[1]QRectF mapRectFromItem ( const QGraphicsItem * item, const QRectF & rect ) const
-[2]QRectF mapRectFromItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMITEM )
 {
@@ -1985,7 +1942,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMITEM )
 }
 
 /*
-QRectF mapRectFromParent ( const QRectF & rect ) const
+QRectF mapRectFromParent( const QRectF & rect ) const
 */
 void QGraphicsItem_mapRectFromParent1()
 {
@@ -1999,7 +1956,7 @@ void QGraphicsItem_mapRectFromParent1()
 }
 
 /*
-QRectF mapRectFromParent ( qreal x, qreal y, qreal w, qreal h ) const
+QRectF mapRectFromParent( qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsItem_mapRectFromParent2()
 {
@@ -2011,11 +1968,6 @@ void QGraphicsItem_mapRectFromParent2()
     Qt4xHb::createReturnClass( ptr, "QRECTF", true );
   }
 }
-
-/*
-[1]QRectF mapRectFromParent ( const QRectF & rect ) const
-[2]QRectF mapRectFromParent ( qreal x, qreal y, qreal w, qreal h ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMPARENT )
 {
@@ -2034,7 +1986,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMPARENT )
 }
 
 /*
-QRectF mapRectFromScene ( const QRectF & rect ) const
+QRectF mapRectFromScene( const QRectF & rect ) const
 */
 void QGraphicsItem_mapRectFromScene1()
 {
@@ -2048,7 +2000,7 @@ void QGraphicsItem_mapRectFromScene1()
 }
 
 /*
-QRectF mapRectFromScene ( qreal x, qreal y, qreal w, qreal h ) const
+QRectF mapRectFromScene( qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsItem_mapRectFromScene2()
 {
@@ -2060,11 +2012,6 @@ void QGraphicsItem_mapRectFromScene2()
     Qt4xHb::createReturnClass( ptr, "QRECTF", true );
   }
 }
-
-/*
-[1]QRectF mapRectFromScene ( const QRectF & rect ) const
-[2]QRectF mapRectFromScene ( qreal x, qreal y, qreal w, qreal h ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMSCENE )
 {
@@ -2083,7 +2030,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMSCENE )
 }
 
 /*
-QRectF mapRectToItem ( const QGraphicsItem * item, const QRectF & rect ) const
+QRectF mapRectToItem( const QGraphicsItem * item, const QRectF & rect ) const
 */
 void QGraphicsItem_mapRectToItem1()
 {
@@ -2097,7 +2044,7 @@ void QGraphicsItem_mapRectToItem1()
 }
 
 /*
-QRectF mapRectToItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
+QRectF mapRectToItem( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsItem_mapRectToItem2()
 {
@@ -2109,11 +2056,6 @@ void QGraphicsItem_mapRectToItem2()
     Qt4xHb::createReturnClass( ptr, "QRECTF", true );
   }
 }
-
-/*
-[1]QRectF mapRectToItem ( const QGraphicsItem * item, const QRectF & rect ) const
-[2]QRectF mapRectToItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOITEM )
 {
@@ -2132,7 +2074,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOITEM )
 }
 
 /*
-QRectF mapRectToParent ( const QRectF & rect ) const
+QRectF mapRectToParent( const QRectF & rect ) const
 */
 void QGraphicsItem_mapRectToParent1()
 {
@@ -2146,7 +2088,7 @@ void QGraphicsItem_mapRectToParent1()
 }
 
 /*
-QRectF mapRectToParent ( qreal x, qreal y, qreal w, qreal h ) const
+QRectF mapRectToParent( qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsItem_mapRectToParent2()
 {
@@ -2158,11 +2100,6 @@ void QGraphicsItem_mapRectToParent2()
     Qt4xHb::createReturnClass( ptr, "QRECTF", true );
   }
 }
-
-/*
-[1]QRectF mapRectToParent ( const QRectF & rect ) const
-[2]QRectF mapRectToParent ( qreal x, qreal y, qreal w, qreal h ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOPARENT )
 {
@@ -2181,7 +2118,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOPARENT )
 }
 
 /*
-QRectF mapRectToScene ( const QRectF & rect ) const
+QRectF mapRectToScene( const QRectF & rect ) const
 */
 void QGraphicsItem_mapRectToScene1()
 {
@@ -2195,7 +2132,7 @@ void QGraphicsItem_mapRectToScene1()
 }
 
 /*
-QRectF mapRectToScene ( qreal x, qreal y, qreal w, qreal h ) const
+QRectF mapRectToScene( qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsItem_mapRectToScene2()
 {
@@ -2207,11 +2144,6 @@ void QGraphicsItem_mapRectToScene2()
     Qt4xHb::createReturnClass( ptr, "QRECTF", true );
   }
 }
-
-/*
-[1]QRectF mapRectToScene ( const QRectF & rect ) const
-[2]QRectF mapRectToScene ( qreal x, qreal y, qreal w, qreal h ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOSCENE )
 {
@@ -2230,7 +2162,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOSCENE )
 }
 
 /*
-QPointF mapToItem ( const QGraphicsItem * item, const QPointF & point ) const
+QPointF mapToItem( const QGraphicsItem * item, const QPointF & point ) const
 */
 void QGraphicsItem_mapToItem1()
 {
@@ -2244,7 +2176,7 @@ void QGraphicsItem_mapToItem1()
 }
 
 /*
-QPolygonF mapToItem ( const QGraphicsItem * item, const QRectF & rect ) const
+QPolygonF mapToItem( const QGraphicsItem * item, const QRectF & rect ) const
 */
 void QGraphicsItem_mapToItem2()
 {
@@ -2258,7 +2190,7 @@ void QGraphicsItem_mapToItem2()
 }
 
 /*
-QPolygonF mapToItem ( const QGraphicsItem * item, const QPolygonF & polygon ) const
+QPolygonF mapToItem( const QGraphicsItem * item, const QPolygonF & polygon ) const
 */
 void QGraphicsItem_mapToItem3()
 {
@@ -2272,7 +2204,7 @@ void QGraphicsItem_mapToItem3()
 }
 
 /*
-QPainterPath mapToItem ( const QGraphicsItem * item, const QPainterPath & path ) const
+QPainterPath mapToItem( const QGraphicsItem * item, const QPainterPath & path ) const
 */
 void QGraphicsItem_mapToItem4()
 {
@@ -2286,7 +2218,7 @@ void QGraphicsItem_mapToItem4()
 }
 
 /*
-QPolygonF mapToItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
+QPolygonF mapToItem( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsItem_mapToItem5()
 {
@@ -2300,7 +2232,7 @@ void QGraphicsItem_mapToItem5()
 }
 
 /*
-QPointF mapToItem ( const QGraphicsItem * item, qreal x, qreal y ) const
+QPointF mapToItem( const QGraphicsItem * item, qreal x, qreal y ) const
 */
 void QGraphicsItem_mapToItem6()
 {
@@ -2312,15 +2244,6 @@ void QGraphicsItem_mapToItem6()
     Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
   }
 }
-
-/*
-[1]QPointF mapToItem ( const QGraphicsItem * item, const QPointF & point ) const
-[2]QPolygonF mapToItem ( const QGraphicsItem * item, const QRectF & rect ) const
-[3]QPolygonF mapToItem ( const QGraphicsItem * item, const QPolygonF & polygon ) const
-[4]QPainterPath mapToItem ( const QGraphicsItem * item, const QPainterPath & path ) const
-[5]QPolygonF mapToItem ( const QGraphicsItem * item, qreal x, qreal y, qreal w, qreal h ) const
-[6]QPointF mapToItem ( const QGraphicsItem * item, qreal x, qreal y ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOITEM )
 {
@@ -2355,7 +2278,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOITEM )
 }
 
 /*
-QPointF mapToParent ( const QPointF & point ) const
+QPointF mapToParent( const QPointF & point ) const
 */
 void QGraphicsItem_mapToParent1()
 {
@@ -2369,7 +2292,7 @@ void QGraphicsItem_mapToParent1()
 }
 
 /*
-QPolygonF mapToParent ( const QRectF & rect ) const
+QPolygonF mapToParent( const QRectF & rect ) const
 */
 void QGraphicsItem_mapToParent2()
 {
@@ -2383,7 +2306,7 @@ void QGraphicsItem_mapToParent2()
 }
 
 /*
-QPolygonF mapToParent ( const QPolygonF & polygon ) const
+QPolygonF mapToParent( const QPolygonF & polygon ) const
 */
 void QGraphicsItem_mapToParent3()
 {
@@ -2397,7 +2320,7 @@ void QGraphicsItem_mapToParent3()
 }
 
 /*
-QPainterPath mapToParent ( const QPainterPath & path ) const
+QPainterPath mapToParent( const QPainterPath & path ) const
 */
 void QGraphicsItem_mapToParent4()
 {
@@ -2411,7 +2334,7 @@ void QGraphicsItem_mapToParent4()
 }
 
 /*
-QPolygonF mapToParent ( qreal x, qreal y, qreal w, qreal h ) const
+QPolygonF mapToParent( qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsItem_mapToParent5()
 {
@@ -2425,7 +2348,7 @@ void QGraphicsItem_mapToParent5()
 }
 
 /*
-QPointF mapToParent ( qreal x, qreal y ) const
+QPointF mapToParent( qreal x, qreal y ) const
 */
 void QGraphicsItem_mapToParent6()
 {
@@ -2437,15 +2360,6 @@ void QGraphicsItem_mapToParent6()
     Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
   }
 }
-
-/*
-[1]QPointF mapToParent ( const QPointF & point ) const
-[2]QPolygonF mapToParent ( const QRectF & rect ) const
-[3]QPolygonF mapToParent ( const QPolygonF & polygon ) const
-[4]QPainterPath mapToParent ( const QPainterPath & path ) const
-[5]QPolygonF mapToParent ( qreal x, qreal y, qreal w, qreal h ) const
-[6]QPointF mapToParent ( qreal x, qreal y ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOPARENT )
 {
@@ -2480,7 +2394,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOPARENT )
 }
 
 /*
-QPointF mapToScene ( const QPointF & point ) const
+QPointF mapToScene( const QPointF & point ) const
 */
 void QGraphicsItem_mapToScene1()
 {
@@ -2494,7 +2408,7 @@ void QGraphicsItem_mapToScene1()
 }
 
 /*
-QPolygonF mapToScene ( const QRectF & rect ) const
+QPolygonF mapToScene( const QRectF & rect ) const
 */
 void QGraphicsItem_mapToScene2()
 {
@@ -2508,7 +2422,7 @@ void QGraphicsItem_mapToScene2()
 }
 
 /*
-QPolygonF mapToScene ( const QPolygonF & polygon ) const
+QPolygonF mapToScene( const QPolygonF & polygon ) const
 */
 void QGraphicsItem_mapToScene3()
 {
@@ -2522,7 +2436,7 @@ void QGraphicsItem_mapToScene3()
 }
 
 /*
-QPainterPath mapToScene ( const QPainterPath & path ) const
+QPainterPath mapToScene( const QPainterPath & path ) const
 */
 void QGraphicsItem_mapToScene4()
 {
@@ -2536,7 +2450,7 @@ void QGraphicsItem_mapToScene4()
 }
 
 /*
-QPolygonF mapToScene ( qreal x, qreal y, qreal w, qreal h ) const
+QPolygonF mapToScene( qreal x, qreal y, qreal w, qreal h ) const
 */
 void QGraphicsItem_mapToScene5()
 {
@@ -2550,7 +2464,7 @@ void QGraphicsItem_mapToScene5()
 }
 
 /*
-QPointF mapToScene ( qreal x, qreal y ) const
+QPointF mapToScene( qreal x, qreal y ) const
 */
 void QGraphicsItem_mapToScene6()
 {
@@ -2562,15 +2476,6 @@ void QGraphicsItem_mapToScene6()
     Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
   }
 }
-
-/*
-[1]QPointF mapToScene ( const QPointF & point ) const
-[2]QPolygonF mapToScene ( const QRectF & rect ) const
-[3]QPolygonF mapToScene ( const QPolygonF & polygon ) const
-[4]QPainterPath mapToScene ( const QPainterPath & path ) const
-[5]QPolygonF mapToScene ( qreal x, qreal y, qreal w, qreal h ) const
-[6]QPointF mapToScene ( qreal x, qreal y ) const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOSCENE )
 {
@@ -2605,7 +2510,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOSCENE )
 }
 
 /*
-void moveBy ( qreal dx, qreal dy )
+void moveBy( qreal dx, qreal dy )
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_MOVEBY )
 {
@@ -3627,7 +3532,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETPARENTITEM )
 }
 
 /*
-void setPos ( const QPointF & pos )
+void setPos( const QPointF & pos )
 */
 void QGraphicsItem_setPos1()
 {
@@ -3642,7 +3547,7 @@ void QGraphicsItem_setPos1()
 }
 
 /*
-void setPos ( qreal x, qreal y )
+void setPos( qreal x, qreal y )
 */
 void QGraphicsItem_setPos2()
 {
@@ -3655,11 +3560,6 @@ void QGraphicsItem_setPos2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setPos ( const QPointF & pos )
-[2]void setPos ( qreal x, qreal y )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_SETPOS )
 {
@@ -3808,7 +3708,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORM )
 }
 
 /*
-void setTransformOriginPoint ( const QPointF & origin )
+void setTransformOriginPoint( const QPointF & origin )
 */
 void QGraphicsItem_setTransformOriginPoint1()
 {
@@ -3823,7 +3723,7 @@ void QGraphicsItem_setTransformOriginPoint1()
 }
 
 /*
-void setTransformOriginPoint ( qreal x, qreal y )
+void setTransformOriginPoint( qreal x, qreal y )
 */
 void QGraphicsItem_setTransformOriginPoint2()
 {
@@ -3836,11 +3736,6 @@ void QGraphicsItem_setTransformOriginPoint2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setTransformOriginPoint ( const QPointF & origin )
-[2]void setTransformOriginPoint ( qreal x, qreal y )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORMORIGINPOINT )
 {
@@ -4074,7 +3969,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_STACKBEFORE )
 }
 
 /*
-QGraphicsObject * toGraphicsObject ()
+QGraphicsObject * toGraphicsObject()
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_TOGRAPHICSOBJECT1 )
 {
@@ -4099,7 +3994,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TOGRAPHICSOBJECT1 )
 }
 
 /*
-const QGraphicsObject * toGraphicsObject () const
+const QGraphicsObject * toGraphicsObject() const
 */
 HB_FUNC_STATIC( QGRAPHICSITEM_TOGRAPHICSOBJECT2 )
 {
@@ -4122,11 +4017,6 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TOGRAPHICSOBJECT2 )
 #endif
   }
 }
-
-/*
-[1]QGraphicsObject * toGraphicsObject ()
-[2]const QGraphicsObject * toGraphicsObject () const
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_TOGRAPHICSOBJECT )
 {
@@ -4408,7 +4298,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_UNSETCURSOR )
 }
 
 /*
-void update ( const QRectF & rect = QRectF() )
+void update( const QRectF & rect = QRectF() )
 */
 void QGraphicsItem_update1()
 {
@@ -4423,7 +4313,7 @@ void QGraphicsItem_update1()
 }
 
 /*
-void update ( qreal x, qreal y, qreal width, qreal height )
+void update( qreal x, qreal y, qreal width, qreal height )
 */
 void QGraphicsItem_update2()
 {
@@ -4436,11 +4326,6 @@ void QGraphicsItem_update2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void update ( const QRectF & rect = QRectF() )
-[2]void update ( qreal x, qreal y, qreal width, qreal height )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSITEM_UPDATE )
 {

@@ -58,7 +58,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QFontEngineInfo ()
+QFontEngineInfo()
 */
 void QFontEngineInfo_new1()
 {
@@ -67,7 +67,7 @@ void QFontEngineInfo_new1()
 }
 
 /*
-QFontEngineInfo ( const QString & family )
+QFontEngineInfo( const QString & family )
 */
 void QFontEngineInfo_new2()
 {
@@ -76,19 +76,13 @@ void QFontEngineInfo_new2()
 }
 
 /*
-QFontEngineInfo ( const QFontEngineInfo & other )
+QFontEngineInfo( const QFontEngineInfo & other )
 */
 void QFontEngineInfo_new3()
 {
   QFontEngineInfo * obj = new QFontEngineInfo( *PQFONTENGINEINFO(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QFontEngineInfo ()
-[2]QFontEngineInfo ( const QString & family )
-[3]QFontEngineInfo ( const QFontEngineInfo & other )
-*/
 
 HB_FUNC_STATIC( QFONTENGINEINFO_NEW )
 {

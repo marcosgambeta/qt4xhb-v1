@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-const QRect availableGeometry ( int screen = -1 ) const
+const QRect availableGeometry( int screen = -1 ) const
 */
 void QDesktopWidget_availableGeometry1()
 {
@@ -66,7 +66,7 @@ void QDesktopWidget_availableGeometry1()
 }
 
 /*
-const QRect availableGeometry ( const QWidget * widget ) const
+const QRect availableGeometry( const QWidget * widget ) const
 */
 void QDesktopWidget_availableGeometry2()
 {
@@ -80,7 +80,7 @@ void QDesktopWidget_availableGeometry2()
 }
 
 /*
-const QRect availableGeometry ( const QPoint & p ) const
+const QRect availableGeometry( const QPoint & p ) const
 */
 void QDesktopWidget_availableGeometry3()
 {
@@ -92,12 +92,6 @@ void QDesktopWidget_availableGeometry3()
     Qt4xHb::createReturnClass( ptr, "QRECT", true );
   }
 }
-
-/*
-[1]const QRect availableGeometry ( int screen = -1 ) const
-[2]const QRect availableGeometry ( const QWidget * widget ) const
-[3]const QRect availableGeometry ( const QPoint & p ) const
-*/
 
 HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
 {
@@ -217,7 +211,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENCOUNT )
 }
 
 /*
-const QRect screenGeometry ( int screen = -1 ) const
+const QRect screenGeometry( int screen = -1 ) const
 */
 void QDesktopWidget_screenGeometry1()
 {
@@ -231,7 +225,7 @@ void QDesktopWidget_screenGeometry1()
 }
 
 /*
-const QRect screenGeometry ( const QWidget * widget ) const
+const QRect screenGeometry( const QWidget * widget ) const
 */
 void QDesktopWidget_screenGeometry2()
 {
@@ -245,7 +239,7 @@ void QDesktopWidget_screenGeometry2()
 }
 
 /*
-const QRect screenGeometry ( const QPoint & p ) const
+const QRect screenGeometry( const QPoint & p ) const
 */
 void QDesktopWidget_screenGeometry3()
 {
@@ -257,12 +251,6 @@ void QDesktopWidget_screenGeometry3()
     Qt4xHb::createReturnClass( ptr, "QRECT", true );
   }
 }
-
-/*
-[1]const QRect screenGeometry ( int screen = -1 ) const
-[2]const QRect screenGeometry ( const QWidget * widget ) const
-[3]const QRect screenGeometry ( const QPoint & p ) const
-*/
 
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
 {
@@ -285,7 +273,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
 }
 
 /*
-int screenNumber ( const QWidget * widget = 0 ) const
+int screenNumber( const QWidget * widget = 0 ) const
 */
 void QDesktopWidget_screenNumber1()
 {
@@ -298,7 +286,7 @@ void QDesktopWidget_screenNumber1()
 }
 
 /*
-int screenNumber ( const QPoint & point ) const
+int screenNumber( const QPoint & point ) const
 */
 void QDesktopWidget_screenNumber2()
 {
@@ -309,11 +297,6 @@ void QDesktopWidget_screenNumber2()
     RINT( obj->screenNumber( *PQPOINT(1) ) );
   }
 }
-
-/*
-[1]int screenNumber ( const QWidget * widget = 0 ) const
-[2]int screenNumber ( const QPoint & point ) const
-*/
 
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER )
 {

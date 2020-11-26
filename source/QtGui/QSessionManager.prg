@@ -350,7 +350,7 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETDISCARDCOMMAND )
 }
 
 /*
-void setManagerProperty ( const QString & name, const QStringList & value )
+void setManagerProperty( const QString & name, const QStringList & value )
 */
 void QSessionManager_setManagerProperty1()
 {
@@ -365,7 +365,7 @@ void QSessionManager_setManagerProperty1()
 }
 
 /*
-void setManagerProperty ( const QString & name, const QString & value )
+void setManagerProperty( const QString & name, const QString & value )
 */
 void QSessionManager_setManagerProperty2()
 {
@@ -378,11 +378,6 @@ void QSessionManager_setManagerProperty2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setManagerProperty ( const QString & name, const QStringList & value )
-[2]void setManagerProperty ( const QString & name, const QString & value )
-*/
 
 HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY )
 {

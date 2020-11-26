@@ -59,7 +59,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QColorDialog ( QWidget * parent = 0 )
+QColorDialog( QWidget * parent = 0 )
 */
 void QColorDialog_new1()
 {
@@ -68,18 +68,13 @@ void QColorDialog_new1()
 }
 
 /*
-QColorDialog ( const QColor & initial, QWidget * parent = 0 )
+QColorDialog( const QColor & initial, QWidget * parent = 0 )
 */
 void QColorDialog_new2()
 {
   QColorDialog * obj = new QColorDialog( ISOBJECT(1)? *(QColor *) Qt4xHb::itemGetPtr(1) : QColor(hb_parc(1)), OPQWIDGET(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QColorDialog ( QWidget * parent = 0 )
-[2]QColorDialog ( const QColor & initial, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QCOLORDIALOG_NEW )
 {
@@ -142,7 +137,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_CURRENTCOLOR )
 }
 
 /*
-void open ()
+void open()
 */
 void QColorDialog_open1()
 {
@@ -157,7 +152,7 @@ void QColorDialog_open1()
 }
 
 /*
-void open ( QObject * receiver, const char * member )
+void open( QObject * receiver, const char * member )
 */
 void QColorDialog_open2()
 {
@@ -170,11 +165,6 @@ void QColorDialog_open2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void open ()
-[2]void open ( QObject * receiver, const char * member )
-*/
 
 HB_FUNC_STATIC( QCOLORDIALOG_OPEN )
 {
@@ -408,7 +398,7 @@ HB_FUNC_STATIC( QCOLORDIALOG_CUSTOMCOUNT )
 }
 
 /*
-static QColor getColor ( const QColor & initial, QWidget * parent, const QString & title, ColorDialogOptions options = 0 )
+static QColor getColor( const QColor & initial, QWidget * parent, const QString & title, QColorDialog::ColorDialogOptions options = 0 )
 */
 void QColorDialog_getColor1()
 {
@@ -418,7 +408,7 @@ void QColorDialog_getColor1()
 }
 
 /*
-static QColor getColor ( const QColor & initial = Qt::white, QWidget * parent = 0 )
+static QColor getColor( const QColor & initial = Qt::white, QWidget * parent = 0 )
 */
 void QColorDialog_getColor2()
 {
@@ -426,11 +416,6 @@ void QColorDialog_getColor2()
   QColor * ptr = new QColor( QColorDialog::getColor( ISNIL(1)? Qt::white : *(QColor *) Qt4xHb::itemGetPtr(1), OPQWIDGET(2,0) ) );
   Qt4xHb::createReturnClass( ptr, "QCOLOR", true );
 }
-
-/*
-[1]QColor getColor ( const QColor & initial, QWidget * parent, const QString & title, ColorDialogOptions options = 0 )
-[2]QColor getColor ( const QColor & initial = Qt::white, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR )
 {

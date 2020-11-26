@@ -56,7 +56,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QUndoCommand ( QUndoCommand * parent = 0 )
+QUndoCommand( QUndoCommand * parent = 0 )
 */
 void QUndoCommand_new1()
 {
@@ -65,18 +65,13 @@ void QUndoCommand_new1()
 }
 
 /*
-QUndoCommand ( const QString & text, QUndoCommand * parent = 0 )
+QUndoCommand( const QString & text, QUndoCommand * parent = 0 )
 */
 void QUndoCommand_new2()
 {
   QUndoCommand * obj = new QUndoCommand( PQSTRING(1), ISNIL(2)? 0 : (QUndoCommand *) Qt4xHb::itemGetPtr(2) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QUndoCommand ( QUndoCommand * parent = 0 )
-[2]QUndoCommand ( const QString & text, QUndoCommand * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QUNDOCOMMAND_NEW )
 {

@@ -40,7 +40,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QTimeEdit ( QWidget * parent = 0 )
+QTimeEdit( QWidget * parent = 0 )
 */
 void QTimeEdit_new1()
 {
@@ -49,18 +49,13 @@ void QTimeEdit_new1()
 }
 
 /*
-QTimeEdit ( const QTime & time, QWidget * parent = 0 )
+QTimeEdit( const QTime & time, QWidget * parent = 0 )
 */
 void QTimeEdit_new2()
 {
   QTimeEdit * obj = new QTimeEdit( *PQTIME(1), OPQWIDGET(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QTimeEdit ( QWidget * parent = 0 )
-[2]QTimeEdit ( const QTime & time, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QTIMEEDIT_NEW )
 {

@@ -118,7 +118,7 @@ RETURN
 #include <QtGui/QValidator>
 
 /*
-QLineEdit ( QWidget * parent = 0 )
+QLineEdit( QWidget * parent = 0 )
 */
 void QLineEdit_new1()
 {
@@ -127,18 +127,13 @@ void QLineEdit_new1()
 }
 
 /*
-QLineEdit ( const QString & contents, QWidget * parent = 0 )
+QLineEdit( const QString & contents, QWidget * parent = 0 )
 */
 void QLineEdit_new2()
 {
   QLineEdit * obj = new QLineEdit( PQSTRING(1), OPQWIDGET(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QLineEdit ( QWidget * parent = 0 )
-[2]QLineEdit ( const QString & contents, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QLINEEDIT_NEW )
 {
@@ -1289,7 +1284,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETSELECTION )
 }
 
 /*
-void setTextMargins ( int left, int top, int right, int bottom )
+void setTextMargins( int left, int top, int right, int bottom )
 */
 void QLineEdit_setTextMargins1()
 {
@@ -1304,7 +1299,7 @@ void QLineEdit_setTextMargins1()
 }
 
 /*
-void setTextMargins ( const QMargins & margins )
+void setTextMargins( const QMargins & margins )
 */
 void QLineEdit_setTextMargins2()
 {
@@ -1317,11 +1312,6 @@ void QLineEdit_setTextMargins2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setTextMargins ( int left, int top, int right, int bottom )
-[2]void setTextMargins ( const QMargins & margins )
-*/
 
 HB_FUNC_STATIC( QLINEEDIT_SETTEXTMARGINS )
 {

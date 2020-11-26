@@ -136,7 +136,7 @@ RETURN
 #include <QtGui/QAbstractTextDocumentLayout>
 
 /*
-QTextDocument ( QObject * parent = 0 )
+QTextDocument( QObject * parent = 0 )
 */
 void QTextDocument_new1()
 {
@@ -145,18 +145,13 @@ void QTextDocument_new1()
 }
 
 /*
-QTextDocument ( const QString & text, QObject * parent = 0 )
+QTextDocument( const QString & text, QObject * parent = 0 )
 */
 void QTextDocument_new2()
 {
   QTextDocument * obj = new QTextDocument( PQSTRING(1), OPQOBJECT(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QTextDocument ( QObject * parent = 0 )
-[2]QTextDocument ( const QString & text, QObject * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_NEW )
 {
@@ -719,7 +714,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_END )
 }
 
 /*
-QTextCursor find ( const QString & subString, const QTextCursor & cursor, FindFlags options = 0 ) const
+QTextCursor find( const QString & subString, const QTextCursor & cursor, QTextDocument::FindFlags options = 0 ) const
 */
 void QTextDocument_find1()
 {
@@ -733,7 +728,7 @@ void QTextDocument_find1()
 }
 
 /*
-QTextCursor find ( const QRegExp & expr, const QTextCursor & cursor, FindFlags options = 0 ) const
+QTextCursor find( const QRegExp & expr, const QTextCursor & cursor, QTextDocument::FindFlags options = 0 ) const
 */
 void QTextDocument_find2()
 {
@@ -747,7 +742,7 @@ void QTextDocument_find2()
 }
 
 /*
-QTextCursor find ( const QString & subString, int position = 0, FindFlags options = 0 ) const
+QTextCursor find( const QString & subString, int position = 0, QTextDocument::FindFlags options = 0 ) const
 */
 void QTextDocument_find3()
 {
@@ -761,7 +756,7 @@ void QTextDocument_find3()
 }
 
 /*
-QTextCursor find ( const QRegExp & expr, int position = 0, FindFlags options = 0 ) const
+QTextCursor find( const QRegExp & expr, int position = 0, QTextDocument::FindFlags options = 0 ) const
 */
 void QTextDocument_find4()
 {
@@ -773,13 +768,6 @@ void QTextDocument_find4()
     Qt4xHb::createReturnClass( ptr, "QTEXTCURSOR", true );
   }
 }
-
-/*
-[1]QTextCursor find ( const QString & subString, const QTextCursor & cursor, FindFlags options = 0 ) const
-[2]QTextCursor find ( const QRegExp & expr, const QTextCursor & cursor, FindFlags options = 0 ) const
-[3]QTextCursor find ( const QString & subString, int position = 0, FindFlags options = 0 ) const
-[4]QTextCursor find ( const QRegExp & expr, int position = 0, FindFlags options = 0 ) const
-*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_FIND )
 {
@@ -1907,7 +1895,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_USEDESIGNMETRICS )
 }
 
 /*
-void redo ( QTextCursor * cursor )
+void redo( QTextCursor * cursor )
 */
 void QTextDocument_redo1()
 {
@@ -1922,7 +1910,7 @@ void QTextDocument_redo1()
 }
 
 /*
-void redo ()
+void redo()
 */
 void QTextDocument_redo2()
 {
@@ -1935,11 +1923,6 @@ void QTextDocument_redo2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void redo ( QTextCursor * cursor )
-[2]void redo ()
-*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_REDO )
 {
@@ -1984,7 +1967,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_SETMODIFIED )
 }
 
 /*
-void undo ( QTextCursor * cursor )
+void undo( QTextCursor * cursor )
 */
 void QTextDocument_undo1()
 {
@@ -1999,7 +1982,7 @@ void QTextDocument_undo1()
 }
 
 /*
-void undo ()
+void undo()
 */
 void QTextDocument_undo2()
 {
@@ -2012,11 +1995,6 @@ void QTextDocument_undo2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void undo ( QTextCursor * cursor )
-[2]void undo ()
-*/
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_UNDO )
 {

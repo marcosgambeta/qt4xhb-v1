@@ -102,7 +102,7 @@ RETURN
 #include <QtGui/QIcon>
 
 /*
-QTabBar ( QWidget * parent = 0 )
+QTabBar( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QTABBAR_NEW )
 {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QTABBAR_DELETE )
 }
 
 /*
-int addTab ( const QString & text )
+int addTab( const QString & text )
 */
 void QTabBar_addTab1()
 {
@@ -150,7 +150,7 @@ void QTabBar_addTab1()
 }
 
 /*
-int addTab ( const QIcon & icon, const QString & text )
+int addTab( const QIcon & icon, const QString & text )
 */
 void QTabBar_addTab2()
 {
@@ -161,11 +161,6 @@ void QTabBar_addTab2()
     RINT( obj->addTab( ISOBJECT(1)? *(QIcon *) Qt4xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) ) );
   }
 }
-
-/*
-[1]int addTab ( const QString & text )
-[2]int addTab ( const QIcon & icon, const QString & text )
-*/
 
 HB_FUNC_STATIC( QTABBAR_ADDTAB )
 {
@@ -353,7 +348,7 @@ HB_FUNC_STATIC( QTABBAR_ICONSIZE )
 }
 
 /*
-int insertTab ( int index, const QString & text )
+int insertTab( int index, const QString & text )
 */
 void QTabBar_insertTab1()
 {
@@ -366,7 +361,7 @@ void QTabBar_insertTab1()
 }
 
 /*
-int insertTab ( int index, const QIcon & icon, const QString & text )
+int insertTab( int index, const QIcon & icon, const QString & text )
 */
 void QTabBar_insertTab2()
 {
@@ -377,11 +372,6 @@ void QTabBar_insertTab2()
     RINT( obj->insertTab( PINT(1), ISOBJECT(2)? *(QIcon *) Qt4xHb::itemGetPtr(2) : QIcon(hb_parc(2)), PQSTRING(3) ) );
   }
 }
-
-/*
-[1]int insertTab ( int index, const QString & text )
-[2]int insertTab ( int index, const QIcon & icon, const QString & text )
-*/
 
 HB_FUNC_STATIC( QTABBAR_INSERTTAB )
 {

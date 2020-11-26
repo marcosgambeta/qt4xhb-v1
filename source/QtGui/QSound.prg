@@ -49,7 +49,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QSound ( const QString & filename, QObject * parent = 0 )
+QSound( const QString & filename, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSOUND_NEW )
 {
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QSOUND_ISAVAILABLE )
 }
 
 /*
-void play ()
+void play()
 */
 void QSound_play1()
 {
@@ -266,7 +266,7 @@ void QSound_play1()
 }
 
 /*
-static void play ( const QString & filename )
+static void play( const QString & filename )
 */
 void QSound_play2()
 {
@@ -275,11 +275,6 @@ void QSound_play2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void play ()
-[2]void play ( const QString & filename )
-*/
 
 HB_FUNC_STATIC( QSOUND_PLAY )
 {

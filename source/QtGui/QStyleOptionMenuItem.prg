@@ -70,7 +70,7 @@ void QStyleOptionMenuItem_new1()
 }
 
 /*
-QStyleOptionMenuItem(const QStyleOptionMenuItem &other)
+QStyleOptionMenuItem( const QStyleOptionMenuItem & other )
 */
 void QStyleOptionMenuItem_new2()
 {
@@ -79,13 +79,7 @@ void QStyleOptionMenuItem_new2()
 }
 
 /*
-QStyleOptionMenuItem(int version) (protected)
-*/
-
-/*
-[1]QStyleOptionMenuItem()
-[2]QStyleOptionMenuItem(const QStyleOptionMenuItem &other)
-[3]QStyleOptionMenuItem(int version) (protected)
+QStyleOptionMenuItem(int version) [PROTECTED]
 */
 
 HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_NEW )

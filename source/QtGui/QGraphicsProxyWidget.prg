@@ -50,7 +50,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QGraphicsProxyWidget ( QGraphicsItem * parent = 0, Qt::WindowFlags wFlags = 0 )
+QGraphicsProxyWidget( QGraphicsItem * parent = 0, Qt::WindowFlags wFlags = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_NEW )
 {

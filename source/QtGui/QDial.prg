@@ -51,7 +51,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QDial ( QWidget * parent = 0 )
+QDial( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QDIAL_NEW )
 {

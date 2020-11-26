@@ -58,7 +58,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QShortcut(QWidget * parent)
+QShortcut( QWidget * parent )
 */
 void QShortcut_new1()
 {
@@ -67,18 +67,13 @@ void QShortcut_new1()
 }
 
 /*
-QShortcut(const QKeySequence & key, QWidget * parent, const char * member = 0, const char * ambiguousMember = 0, Qt::ShortcutContext context = Qt::WindowShortcut)
+QShortcut( const QKeySequence & key, QWidget * parent, const char * member = 0, const char * ambiguousMember = 0, Qt::ShortcutContext context = Qt::WindowShortcut )
 */
 void QShortcut_new2()
 {
   QShortcut * obj = new QShortcut( *PQKEYSEQUENCE(1), PQWIDGET(2), OPCONSTCHAR(3,0), OPCONSTCHAR(4,0), ISNIL(5)? (Qt::ShortcutContext) Qt::WindowShortcut : (Qt::ShortcutContext) hb_parni(5) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QShortcut(QWidget * parent)
-[2]QShortcut(const QKeySequence & key, QWidget * parent, const char * member = 0, const char * ambiguousMember = 0, Qt::ShortcutContext context = Qt::WindowShortcut)
-*/
 
 HB_FUNC_STATIC( QSHORTCUT_NEW )
 {

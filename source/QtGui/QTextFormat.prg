@@ -103,7 +103,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QTextFormat ()
+QTextFormat()
 */
 void QTextFormat_new1()
 {
@@ -112,7 +112,7 @@ void QTextFormat_new1()
 }
 
 /*
-QTextFormat ( int type )
+QTextFormat( int type )
 */
 void QTextFormat_new2()
 {
@@ -121,19 +121,13 @@ void QTextFormat_new2()
 }
 
 /*
-QTextFormat ( const QTextFormat & other )
+QTextFormat( const QTextFormat & other )
 */
 void QTextFormat_new3()
 {
   QTextFormat * obj = new QTextFormat( *PQTEXTFORMAT(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QTextFormat ()
-[2]QTextFormat ( int type )
-[3]QTextFormat ( const QTextFormat & other )
-*/
 
 HB_FUNC_STATIC( QTEXTFORMAT_NEW )
 {
@@ -1018,7 +1012,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_SETOBJECTTYPE )
 }
 
 /*
-void setProperty ( int propertyId, const QVariant & value )
+void setProperty( int propertyId, const QVariant & value )
 */
 void QTextFormat_setProperty1()
 {
@@ -1033,7 +1027,7 @@ void QTextFormat_setProperty1()
 }
 
 /*
-void setProperty ( int propertyId, const QVector<QTextLength> & value )
+void setProperty( int propertyId, const QVector<QTextLength> & value )
 */
 void QTextFormat_setProperty2()
 {
@@ -1054,11 +1048,6 @@ void QTextFormat_setProperty2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setProperty ( int propertyId, const QVariant & value )
-[2]void setProperty ( int propertyId, const QVector<QTextLength> & value )
-*/
 
 HB_FUNC_STATIC( QTEXTFORMAT_SETPROPERTY )
 {

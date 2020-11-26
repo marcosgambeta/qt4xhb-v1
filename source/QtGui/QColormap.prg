@@ -58,7 +58,7 @@ RETURN
 #include <QtGui/QColor>
 
 /*
-QColormap ( const QColormap & colormap )
+QColormap( const QColormap & colormap )
 */
 HB_FUNC_STATIC( QCOLORMAP_NEW )
 {

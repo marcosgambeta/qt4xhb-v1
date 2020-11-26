@@ -87,7 +87,7 @@ RETURN
 #include <QtGui/QMovie>
 
 /*
-QLabel ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
+QLabel( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 void QLabel_new1()
 {
@@ -96,18 +96,13 @@ void QLabel_new1()
 }
 
 /*
-QLabel ( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
+QLabel( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 void QLabel_new2()
 {
   QLabel * obj = new QLabel( PQSTRING(1), OPQWIDGET(2,0), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QLabel ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
-[2]QLabel ( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
-*/
 
 HB_FUNC_STATIC( QLABEL_NEW )
 {
@@ -895,7 +890,7 @@ HB_FUNC_STATIC( QLABEL_SETMOVIE )
 }
 
 /*
-void setNum ( int num )
+void setNum( int num )
 */
 HB_FUNC_STATIC( QLABEL_SETNUM1 )
 {
@@ -921,7 +916,7 @@ HB_FUNC_STATIC( QLABEL_SETNUM1 )
 }
 
 /*
-void setNum ( double num )
+void setNum( double num )
 */
 HB_FUNC_STATIC( QLABEL_SETNUM2 )
 {
@@ -945,11 +940,6 @@ HB_FUNC_STATIC( QLABEL_SETNUM2 )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setNum ( int num )
-[2]void setNum ( double num )
-*/
 
 HB_FUNC_STATIC( QLABEL_SETNUM )
 {

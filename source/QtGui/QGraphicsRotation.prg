@@ -53,7 +53,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QGraphicsRotation ( QObject * parent = 0 )
+QGraphicsRotation( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_NEW )
 {
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETANGLE )
 }
 
 /*
-void setAxis ( const QVector3D & axis )
+void setAxis( const QVector3D & axis )
 */
 void QGraphicsRotation_setAxis1()
 {
@@ -203,7 +203,7 @@ void QGraphicsRotation_setAxis1()
 }
 
 /*
-void setAxis ( Qt::Axis axis )
+void setAxis( Qt::Axis axis )
 */
 void QGraphicsRotation_setAxis2()
 {
@@ -216,11 +216,6 @@ void QGraphicsRotation_setAxis2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setAxis ( const QVector3D & axis )
-[2]void setAxis ( Qt::Axis axis )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS )
 {

@@ -61,7 +61,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QColumnView ( QWidget * parent = 0 )
+QColumnView( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_NEW )
 {

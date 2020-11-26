@@ -44,8 +44,6 @@ CLASS QStyle INHERIT QObject
    METHOD styleHint
    METHOD subControlRect
    METHOD subElementRect
-   METHOD unpolish1
-   METHOD unpolish2
    METHOD unpolish
    METHOD alignedRect
    METHOD sliderPositionFromValue
@@ -399,7 +397,7 @@ HB_FUNC_STATIC( QSTYLE_PIXELMETRIC )
 }
 
 /*
-virtual void polish ( QWidget * widget )
+virtual void polish( QWidget * widget )
 */
 void QStyle_polish1()
 {
@@ -414,7 +412,7 @@ void QStyle_polish1()
 }
 
 /*
-virtual void polish ( QApplication * application )
+virtual void polish( QApplication * application )
 */
 void QStyle_polish2()
 {
@@ -429,7 +427,7 @@ void QStyle_polish2()
 }
 
 /*
-virtual void polish ( QPalette & palette )
+virtual void polish( QPalette & palette )
 */
 void QStyle_polish3()
 {
@@ -442,12 +440,6 @@ void QStyle_polish3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]virtual void polish ( QWidget * widget )
-[2]virtual void polish ( QApplication * application )
-[3]virtual void polish ( QPalette & palette )
-*/
 
 HB_FUNC_STATIC( QSTYLE_POLISH )
 {
@@ -644,71 +636,44 @@ HB_FUNC_STATIC( QSTYLE_SUBELEMENTRECT )
 }
 
 /*
-virtual void unpolish ( QWidget * widget )
+virtual void unpolish( QWidget * widget )
 */
-HB_FUNC_STATIC( QSTYLE_UNPOLISH1 )
+void QStyle_unpolish1()
 {
   QStyle * obj = (QStyle *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
-    {
-#endif
-      obj->unpolish( PQWIDGET(1) );
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-#endif
+    obj->unpolish( PQWIDGET(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
-virtual void unpolish ( QApplication * application )
+virtual void unpolish( QApplication * application )
 */
-HB_FUNC_STATIC( QSTYLE_UNPOLISH2 )
+void QStyle_unpolish2()
 {
   QStyle * obj = (QStyle *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQAPPLICATION(1) )
-    {
-#endif
-      obj->unpolish( PQAPPLICATION(1) );
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-#endif
+    obj->unpolish( PQAPPLICATION(1) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]virtual void unpolish ( QWidget * widget )
-[2]virtual void unpolish ( QApplication * application )
-*/
 
 HB_FUNC_STATIC( QSTYLE_UNPOLISH )
 {
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    HB_FUNC_EXEC( QSTYLE_UNPOLISH1 );
+    QStyle_unpolish1();
   }
   else if( ISNUMPAR(1) && ISQAPPLICATION(1) )
   {
-    HB_FUNC_EXEC( QSTYLE_UNPOLISH2 );
+    QStyle_unpolish2();
   }
   else
   {

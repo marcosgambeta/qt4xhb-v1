@@ -101,7 +101,7 @@ RETURN
 #include <QtCore/QList>
 
 /*
-QPrinter ( PrinterMode mode = ScreenResolution )
+QPrinter( QPrinter::PrinterMode mode = QPrinter::ScreenResolution )
 */
 void QPrinter_new1()
 {
@@ -110,18 +110,13 @@ void QPrinter_new1()
 }
 
 /*
-QPrinter ( const QPrinterInfo & printer, PrinterMode mode = ScreenResolution )
+QPrinter( const QPrinterInfo & printer, QPrinter::PrinterMode mode = QPrinter::ScreenResolution )
 */
 void QPrinter_new2()
 {
   QPrinter * obj = new QPrinter( *PQPRINTERINFO(1), ISNIL(2)? (QPrinter::PrinterMode) QPrinter::ScreenResolution : (QPrinter::PrinterMode) hb_parni(2) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QPrinter ( PrinterMode mode = ScreenResolution )
-[2]QPrinter ( const QPrinterInfo & printer, PrinterMode mode = ScreenResolution )
-*/
 
 HB_FUNC_STATIC( QPRINTER_NEW )
 {
@@ -565,7 +560,7 @@ HB_FUNC_STATIC( QPRINTER_PAGEORDER )
 }
 
 /*
-QRect pageRect () const
+QRect pageRect() const
 */
 void QPrinter_pageRect1()
 {
@@ -579,7 +574,7 @@ void QPrinter_pageRect1()
 }
 
 /*
-QRectF pageRect ( Unit unit ) const
+QRectF pageRect( QPrinter::Unit unit ) const
 */
 void QPrinter_pageRect2()
 {
@@ -591,11 +586,6 @@ void QPrinter_pageRect2()
     Qt4xHb::createReturnClass( ptr, "QRECTF", true );
   }
 }
-
-/*
-[1]QRect pageRect () const
-[2]QRectF pageRect ( Unit unit ) const
-*/
 
 HB_FUNC_STATIC( QPRINTER_PAGERECT )
 {
@@ -614,7 +604,7 @@ HB_FUNC_STATIC( QPRINTER_PAGERECT )
 }
 
 /*
-QRect paperRect () const
+QRect paperRect() const
 */
 void QPrinter_paperRect1()
 {
@@ -628,7 +618,7 @@ void QPrinter_paperRect1()
 }
 
 /*
-QRectF paperRect ( Unit unit ) const
+QRectF paperRect( QPrinter::Unit unit ) const
 */
 void QPrinter_paperRect2()
 {
@@ -640,11 +630,6 @@ void QPrinter_paperRect2()
     Qt4xHb::createReturnClass( ptr, "QRECTF", true );
   }
 }
-
-/*
-[1]QRect paperRect () const
-[2]QRectF paperRect ( Unit unit ) const
-*/
 
 HB_FUNC_STATIC( QPRINTER_PAPERRECT )
 {
@@ -663,7 +648,7 @@ HB_FUNC_STATIC( QPRINTER_PAPERRECT )
 }
 
 /*
-PaperSize paperSize () const
+QPrinter::PaperSize paperSize() const
 */
 void QPrinter_paperSize1()
 {
@@ -676,7 +661,7 @@ void QPrinter_paperSize1()
 }
 
 /*
-QSizeF paperSize ( Unit unit ) const
+QSizeF paperSize( QPrinter::Unit unit ) const
 */
 void QPrinter_paperSize2()
 {
@@ -688,11 +673,6 @@ void QPrinter_paperSize2()
     Qt4xHb::createReturnClass( ptr, "QSIZEF", true );
   }
 }
-
-/*
-[1]PaperSize paperSize () const
-[2]QSizeF paperSize ( Unit unit ) const
-*/
 
 HB_FUNC_STATIC( QPRINTER_PAPERSIZE )
 {
@@ -1270,7 +1250,7 @@ HB_FUNC_STATIC( QPRINTER_SETPAGEORDER )
 }
 
 /*
-void setPaperSize ( PaperSize newPaperSize )
+void setPaperSize( QPrinter::PaperSize newPaperSize )
 */
 void QPrinter_setPaperSize1()
 {
@@ -1285,7 +1265,7 @@ void QPrinter_setPaperSize1()
 }
 
 /*
-void setPaperSize ( const QSizeF & paperSize, Unit unit )
+void setPaperSize( const QSizeF & paperSize, QPrinter::Unit unit )
 */
 void QPrinter_setPaperSize2()
 {
@@ -1298,11 +1278,6 @@ void QPrinter_setPaperSize2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setPaperSize ( PaperSize newPaperSize )
-[2]void setPaperSize ( const QSizeF & paperSize, Unit unit )
-*/
 
 HB_FUNC_STATIC( QPRINTER_SETPAPERSIZE )
 {
@@ -1477,7 +1452,6 @@ HB_FUNC_STATIC( QPRINTER_SETWINPAGESIZE )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
 /*
 QList<PaperSource> supportedPaperSources () const
 */
@@ -1511,7 +1485,6 @@ HB_FUNC_STATIC( QPRINTER_SUPPORTEDPAPERSOURCES )
   }
 #endif
 }
-
 /*
 QList<int> supportedResolutions() const
 */
@@ -1610,7 +1583,6 @@ HB_FUNC_STATIC( QPRINTER_WINPAGESIZE )
   }
 #endif
 }
-
 /*
 virtual QPaintEngine * paintEngine() const
 */

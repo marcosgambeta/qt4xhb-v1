@@ -84,7 +84,7 @@ RETURN
 #include <QtGui/QAbstractItemView>
 
 /*
-QCompleter ( QObject * parent = 0 )
+QCompleter( QObject * parent = 0 )
 */
 void QCompleter_new1()
 {
@@ -93,7 +93,7 @@ void QCompleter_new1()
 }
 
 /*
-QCompleter ( QAbstractItemModel * model, QObject * parent = 0 )
+QCompleter( QAbstractItemModel * model, QObject * parent = 0 )
 */
 void QCompleter_new2()
 {
@@ -102,19 +102,13 @@ void QCompleter_new2()
 }
 
 /*
-QCompleter ( const QStringList & list, QObject * parent = 0 )
+QCompleter( const QStringList & list, QObject * parent = 0 )
 */
 void QCompleter_new3()
 {
   QCompleter * obj = new QCompleter( PQSTRINGLIST(1), OPQOBJECT(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QCompleter ( QObject * parent = 0 )
-[2]QCompleter ( QAbstractItemModel * model, QObject * parent = 0 )
-[3]QCompleter ( const QStringList & list, QObject * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QCOMPLETER_NEW )
 {

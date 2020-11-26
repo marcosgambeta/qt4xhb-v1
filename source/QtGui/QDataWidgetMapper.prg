@@ -76,7 +76,7 @@ RETURN
 #include <QtGui/QAbstractItemDelegate>
 
 /*
-QDataWidgetMapper ( QObject * parent = 0 )
+QDataWidgetMapper( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_NEW )
 {
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_DELETE )
 }
 
 /*
-void addMapping ( QWidget * widget, int section )
+void addMapping( QWidget * widget, int section )
 */
 void QDataWidgetMapper_addMapping1()
 {
@@ -126,7 +126,7 @@ void QDataWidgetMapper_addMapping1()
 }
 
 /*
-void addMapping ( QWidget * widget, int section, const QByteArray & propertyName )
+void addMapping( QWidget * widget, int section, const QByteArray & propertyName )
 */
 void QDataWidgetMapper_addMapping2()
 {
@@ -139,11 +139,6 @@ void QDataWidgetMapper_addMapping2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void addMapping ( QWidget * widget, int section )
-[2]void addMapping ( QWidget * widget, int section, const QByteArray & propertyName )
-*/
 
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ADDMAPPING )
 {

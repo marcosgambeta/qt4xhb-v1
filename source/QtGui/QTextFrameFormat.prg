@@ -68,7 +68,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QTextFrameFormat ()
+QTextFrameFormat()
 */
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_NEW )
 {
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBOTTOMMARGIN )
 }
 
 /*
-void setHeight ( const QTextLength & height )
+void setHeight( const QTextLength & height )
 */
 void QTextFrameFormat_setHeight1()
 {
@@ -510,7 +510,7 @@ void QTextFrameFormat_setHeight1()
 }
 
 /*
-void setHeight ( qreal height )
+void setHeight( qreal height )
 */
 void QTextFrameFormat_setHeight2()
 {
@@ -523,11 +523,6 @@ void QTextFrameFormat_setHeight2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setHeight ( const QTextLength & height )
-[2]void setHeight ( qreal height )
-*/
 
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETHEIGHT )
 {
@@ -728,7 +723,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETTOPMARGIN )
 }
 
 /*
-void setWidth ( const QTextLength & width )
+void setWidth( const QTextLength & width )
 */
 void QTextFrameFormat_setWidth1()
 {
@@ -743,7 +738,7 @@ void QTextFrameFormat_setWidth1()
 }
 
 /*
-void setWidth ( qreal width )
+void setWidth( qreal width )
 */
 void QTextFrameFormat_setWidth2()
 {
@@ -756,11 +751,6 @@ void QTextFrameFormat_setWidth2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setWidth ( const QTextLength & width )
-[2]void setWidth ( qreal width )
-*/
 
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETWIDTH )
 {

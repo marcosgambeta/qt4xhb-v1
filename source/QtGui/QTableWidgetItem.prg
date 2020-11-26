@@ -89,7 +89,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QTableWidgetItem ( int type = Type )
+QTableWidgetItem( int type = QTableWidgetItem::Type )
 */
 void QTableWidgetItem_new1()
 {
@@ -98,7 +98,7 @@ void QTableWidgetItem_new1()
 }
 
 /*
-QTableWidgetItem ( const QString & text, int type = Type )
+QTableWidgetItem( const QString & text, int type = QTableWidgetItem::Type )
 */
 void QTableWidgetItem_new2()
 {
@@ -107,7 +107,7 @@ void QTableWidgetItem_new2()
 }
 
 /*
-QTableWidgetItem ( const QIcon & icon, const QString & text, int type = Type )
+QTableWidgetItem( const QIcon & icon, const QString & text, int type = QTableWidgetItem::Type )
 */
 void QTableWidgetItem_new3()
 {
@@ -116,20 +116,13 @@ void QTableWidgetItem_new3()
 }
 
 /*
-QTableWidgetItem ( const QTableWidgetItem & other )
+QTableWidgetItem( const QTableWidgetItem & other )
 */
 void QTableWidgetItem_new4()
 {
   QTableWidgetItem * obj = new QTableWidgetItem( *PQTABLEWIDGETITEM(1) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QTableWidgetItem ( int type = Type )
-[2]QTableWidgetItem ( const QString & text, int type = Type )
-[3]QTableWidgetItem ( const QIcon & icon, const QString & text, int type = Type )
-[4]QTableWidgetItem ( const QTableWidgetItem & other )
-*/
 
 HB_FUNC_STATIC( QTABLEWIDGETITEM_NEW )
 {

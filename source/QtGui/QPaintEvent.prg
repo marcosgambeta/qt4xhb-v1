@@ -43,7 +43,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QPaintEvent ( const QRegion & paintRegion )
+QPaintEvent( const QRegion & paintRegion )
 */
 void QPaintEvent_new1()
 {
@@ -52,18 +52,13 @@ void QPaintEvent_new1()
 }
 
 /*
-QPaintEvent ( const QRect & paintRect )
+QPaintEvent( const QRect & paintRect )
 */
 void QPaintEvent_new2()
 {
   QPaintEvent * obj = new QPaintEvent( *PQRECT(1) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QPaintEvent ( const QRegion & paintRegion )
-[2]QPaintEvent ( const QRect & paintRect )
-*/
 
 HB_FUNC_STATIC( QPAINTEVENT_NEW )
 {

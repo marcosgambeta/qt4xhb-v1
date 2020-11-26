@@ -72,7 +72,7 @@ RETURN
 #include <QtCore/QVariant>
 
 /*
-QBrush ()
+QBrush()
 */
 void QBrush_new1()
 {
@@ -81,7 +81,7 @@ void QBrush_new1()
 }
 
 /*
-QBrush ( Qt::BrushStyle style )
+QBrush( Qt::BrushStyle style )
 */
 void QBrush_new2()
 {
@@ -90,7 +90,7 @@ void QBrush_new2()
 }
 
 /*
-QBrush ( const QColor & color, Qt::BrushStyle style = Qt::SolidPattern )
+QBrush( const QColor & color, Qt::BrushStyle style = Qt::SolidPattern )
 */
 void QBrush_new3()
 {
@@ -99,7 +99,7 @@ void QBrush_new3()
 }
 
 /*
-QBrush ( Qt::GlobalColor color, Qt::BrushStyle style = Qt::SolidPattern )
+QBrush( Qt::GlobalColor color, Qt::BrushStyle style = Qt::SolidPattern )
 */
 void QBrush_new4()
 {
@@ -108,7 +108,7 @@ void QBrush_new4()
 }
 
 /*
-QBrush ( const QColor & color, const QPixmap & pixmap )
+QBrush( const QColor & color, const QPixmap & pixmap )
 */
 void QBrush_new5()
 {
@@ -117,7 +117,7 @@ void QBrush_new5()
 }
 
 /*
-QBrush ( Qt::GlobalColor color, const QPixmap & pixmap )
+QBrush( Qt::GlobalColor color, const QPixmap & pixmap )
 */
 void QBrush_new6()
 {
@@ -126,7 +126,7 @@ void QBrush_new6()
 }
 
 /*
-QBrush ( const QPixmap & pixmap )
+QBrush( const QPixmap & pixmap )
 */
 void QBrush_new7()
 {
@@ -135,7 +135,7 @@ void QBrush_new7()
 }
 
 /*
-QBrush ( const QImage & image )
+QBrush( const QImage & image )
 */
 void QBrush_new8()
 {
@@ -144,7 +144,7 @@ void QBrush_new8()
 }
 
 /*
-QBrush ( const QBrush & other )
+QBrush( const QBrush & other )
 */
 void QBrush_new9()
 {
@@ -153,26 +153,13 @@ void QBrush_new9()
 }
 
 /*
-QBrush ( const QGradient & gradient )
+QBrush( const QGradient & gradient )
 */
 void QBrush_new10()
 {
   QBrush * obj = new QBrush( *PQGRADIENT(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[01]QBrush ()
-[02]QBrush ( Qt::BrushStyle style )
-[03]QBrush ( const QColor & color, Qt::BrushStyle style = Qt::SolidPattern )
-[04]QBrush ( Qt::GlobalColor color, Qt::BrushStyle style = Qt::SolidPattern )
-[05]QBrush ( const QColor & color, const QPixmap & pixmap )
-[06]QBrush ( Qt::GlobalColor color, const QPixmap & pixmap )
-[07]QBrush ( const QPixmap & pixmap )
-[08]QBrush ( const QImage & image )
-[09]QBrush ( const QBrush & other )
-[10]QBrush ( const QGradient & gradient )
-*/
 
 HB_FUNC_STATIC( QBRUSH_NEW )
 {
@@ -339,7 +326,7 @@ HB_FUNC_STATIC( QBRUSH_MATRIX )
 }
 
 /*
-void setColor ( const QColor & color )
+void setColor( const QColor & color )
 */
 void QBrush_setColor1()
 {
@@ -354,7 +341,7 @@ void QBrush_setColor1()
 }
 
 /*
-void setColor ( Qt::GlobalColor color )
+void setColor( Qt::GlobalColor color )
 */
 void QBrush_setColor2()
 {
@@ -367,11 +354,6 @@ void QBrush_setColor2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setColor ( const QColor & color )
-[2]void setColor ( Qt::GlobalColor color )
-*/
 
 HB_FUNC_STATIC( QBRUSH_SETCOLOR )
 {

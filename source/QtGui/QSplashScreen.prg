@@ -50,7 +50,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
+QSplashScreen( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 */
 void QSplashScreen_new1()
 {
@@ -59,18 +59,13 @@ void QSplashScreen_new1()
 }
 
 /*
-QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
+QSplashScreen( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
 */
 void QSplashScreen_new2()
 {
   QSplashScreen * obj = new QSplashScreen( PQWIDGET(1), ISNIL(2)? QPixmap() : *(QPixmap *) Qt4xHb::itemGetPtr(2), ISNIL(3)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(3) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QSplashScreen ( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
-[2]QSplashScreen ( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
-*/
 
 HB_FUNC_STATIC( QSPLASHSCREEN_NEW )
 {

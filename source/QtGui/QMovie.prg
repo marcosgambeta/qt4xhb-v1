@@ -88,7 +88,7 @@ RETURN
 #include <QtGui/QPixmap>
 
 /*
-QMovie ( QObject * parent = 0 )
+QMovie( QObject * parent = 0 )
 */
 void QMovie_new1()
 {
@@ -97,7 +97,7 @@ void QMovie_new1()
 }
 
 /*
-QMovie ( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = 0 )
+QMovie( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = 0 )
 */
 void QMovie_new2()
 {
@@ -106,19 +106,13 @@ void QMovie_new2()
 }
 
 /*
-QMovie ( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = 0 )
+QMovie( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = 0 )
 */
 void QMovie_new3()
 {
   QMovie * obj = new QMovie( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt4xHb::itemGetPtr(2), OPQOBJECT(3,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QMovie ( QObject * parent = 0 )
-[2]QMovie ( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = 0 )
-[3]QMovie ( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QMOVIE_NEW )
 {

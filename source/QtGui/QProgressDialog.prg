@@ -68,7 +68,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QProgressDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
+QProgressDialog( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 void QProgressDialog_new1()
 {
@@ -77,18 +77,13 @@ void QProgressDialog_new1()
 }
 
 /*
-QProgressDialog ( const QString & labelText, const QString & cancelButtonText, int minimum, int maximum, QWidget * parent = 0, Qt::WindowFlags f = 0 )
+QProgressDialog( const QString & labelText, const QString & cancelButtonText, int minimum, int maximum, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 void QProgressDialog_new2()
 {
   QProgressDialog * obj = new QProgressDialog( PQSTRING(1), PQSTRING(2), PINT(3), PINT(4), OPQWIDGET(5,0), ISNIL(6)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(6) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QProgressDialog ( QWidget * parent = 0, Qt::WindowFlags f = 0 )
-[2]QProgressDialog ( const QString & labelText, const QString & cancelButtonText, int minimum, int maximum, QWidget * parent = 0, Qt::WindowFlags f = 0 )
-*/
 
 HB_FUNC_STATIC( QPROGRESSDIALOG_NEW )
 {

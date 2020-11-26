@@ -62,7 +62,7 @@ RETURN
 #include <QtGui/QTextCursor>
 
 /*
-QTextTableCell ()
+QTextTableCell()
 */
 void QTextTableCell_new1()
 {
@@ -71,18 +71,13 @@ void QTextTableCell_new1()
 }
 
 /*
-QTextTableCell ( const QTextTableCell & other )
+QTextTableCell( const QTextTableCell & other )
 */
 void QTextTableCell_new2()
 {
   QTextTableCell * obj = new QTextTableCell( *PQTEXTTABLECELL(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QTextTableCell ()
-[2]QTextTableCell ( const QTextTableCell & other )
-*/
 
 HB_FUNC_STATIC( QTEXTTABLECELL_NEW )
 {

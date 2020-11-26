@@ -138,7 +138,7 @@ RETURN
 #include <QtGui/QMenu>
 
 /*
-QTextEdit ( QWidget * parent = 0 )
+QTextEdit( QWidget * parent = 0 )
 */
 void QTextEdit_new1()
 {
@@ -147,18 +147,13 @@ void QTextEdit_new1()
 }
 
 /*
-QTextEdit ( const QString & text, QWidget * parent = 0 )
+QTextEdit( const QString & text, QWidget * parent = 0 )
 */
 void QTextEdit_new2()
 {
   QTextEdit * obj = new QTextEdit( PQSTRING(1), OPQWIDGET(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QTextEdit ( QWidget * parent = 0 )
-[2]QTextEdit ( const QString & text, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QTEXTEDIT_NEW )
 {
@@ -316,7 +311,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CANPASTE )
 }
 
 /*
-QMenu * createStandardContextMenu ()
+QMenu * createStandardContextMenu()
 */
 void QTextEdit_createStandardContextMenu1()
 {
@@ -330,7 +325,7 @@ void QTextEdit_createStandardContextMenu1()
 }
 
 /*
-QMenu * createStandardContextMenu ( const QPoint & position )
+QMenu * createStandardContextMenu( const QPoint & position )
 */
 void QTextEdit_createStandardContextMenu2()
 {
@@ -342,11 +337,6 @@ void QTextEdit_createStandardContextMenu2()
     Qt4xHb::createReturnQObjectClass( ptr, "QMENU" );
   }
 }
-
-/*
-[1]QMenu * createStandardContextMenu ()
-[2]QMenu * createStandardContextMenu ( const QPoint & position )
-*/
 
 HB_FUNC_STATIC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU )
 {
@@ -440,7 +430,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORFORPOSITION )
 }
 
 /*
-QRect cursorRect ( const QTextCursor & cursor ) const
+QRect cursorRect( const QTextCursor & cursor ) const
 */
 void QTextEdit_cursorRect1()
 {
@@ -454,7 +444,7 @@ void QTextEdit_cursorRect1()
 }
 
 /*
-QRect cursorRect () const
+QRect cursorRect() const
 */
 void QTextEdit_cursorRect2()
 {
@@ -466,11 +456,6 @@ void QTextEdit_cursorRect2()
     Qt4xHb::createReturnClass( ptr, "QRECT", true );
   }
 }
-
-/*
-[1]QRect cursorRect ( const QTextCursor & cursor ) const
-[2]QRect cursorRect () const
-*/
 
 HB_FUNC_STATIC( QTEXTEDIT_CURSORRECT )
 {

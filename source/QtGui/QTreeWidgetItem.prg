@@ -110,7 +110,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QTreeWidgetItem ( int type = Type )
+QTreeWidgetItem( int type = QTreeWidgetItem::Type )
 */
 void QTreeWidgetItem_new1()
 {
@@ -119,7 +119,7 @@ void QTreeWidgetItem_new1()
 }
 
 /*
-QTreeWidgetItem ( const QStringList & strings, int type = Type )
+QTreeWidgetItem( const QStringList & strings, int type = QTreeWidgetItem::Type )
 */
 void QTreeWidgetItem_new2()
 {
@@ -128,7 +128,7 @@ void QTreeWidgetItem_new2()
 }
 
 /*
-QTreeWidgetItem ( QTreeWidget * parent, int type = Type )
+QTreeWidgetItem( QTreeWidget * parent, int type = QTreeWidgetItem::Type )
 */
 void QTreeWidgetItem_new3()
 {
@@ -137,7 +137,7 @@ void QTreeWidgetItem_new3()
 }
 
 /*
-QTreeWidgetItem ( QTreeWidget * parent, const QStringList & strings, int type = Type )
+QTreeWidgetItem( QTreeWidget * parent, const QStringList & strings, int type = QTreeWidgetItem::Type )
 */
 void QTreeWidgetItem_new4()
 {
@@ -146,7 +146,7 @@ void QTreeWidgetItem_new4()
 }
 
 /*
-QTreeWidgetItem ( QTreeWidget * parent, QTreeWidgetItem * preceding, int type = Type )
+QTreeWidgetItem( QTreeWidget * parent, QTreeWidgetItem * preceding, int type = QTreeWidgetItem::Type )
 */
 void QTreeWidgetItem_new5()
 {
@@ -155,7 +155,7 @@ void QTreeWidgetItem_new5()
 }
 
 /*
-QTreeWidgetItem ( QTreeWidgetItem * parent, int type = Type )
+QTreeWidgetItem( QTreeWidgetItem * parent, int type = QTreeWidgetItem::Type )
 */
 void QTreeWidgetItem_new6()
 {
@@ -164,7 +164,7 @@ void QTreeWidgetItem_new6()
 }
 
 /*
-QTreeWidgetItem ( QTreeWidgetItem * parent, const QStringList & strings, int type = Type )
+QTreeWidgetItem( QTreeWidgetItem * parent, const QStringList & strings, int type = QTreeWidgetItem::Type )
 */
 void QTreeWidgetItem_new7()
 {
@@ -173,7 +173,7 @@ void QTreeWidgetItem_new7()
 }
 
 /*
-QTreeWidgetItem ( QTreeWidgetItem * parent, QTreeWidgetItem * preceding, int type = Type )
+QTreeWidgetItem( QTreeWidgetItem * parent, QTreeWidgetItem * preceding, int type = QTreeWidgetItem::Type )
 */
 void QTreeWidgetItem_new8()
 {
@@ -182,25 +182,13 @@ void QTreeWidgetItem_new8()
 }
 
 /*
-QTreeWidgetItem ( const QTreeWidgetItem & other )
+QTreeWidgetItem( const QTreeWidgetItem & other )
 */
 void QTreeWidgetItem_new9()
 {
   QTreeWidgetItem * obj = new QTreeWidgetItem( *PQTREEWIDGETITEM(1) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QTreeWidgetItem ( int type = Type )
-[2]QTreeWidgetItem ( const QStringList & strings, int type = Type )
-[3]QTreeWidgetItem ( QTreeWidget * parent, int type = Type )
-[4]QTreeWidgetItem ( QTreeWidget * parent, const QStringList & strings, int type = Type )
-[5]QTreeWidgetItem ( QTreeWidget * parent, QTreeWidgetItem * preceding, int type = Type )
-[6]QTreeWidgetItem ( QTreeWidgetItem * parent, int type = Type )
-[7]QTreeWidgetItem ( QTreeWidgetItem * parent, const QStringList & strings, int type = Type )
-[8]QTreeWidgetItem ( QTreeWidgetItem * parent, QTreeWidgetItem * preceding, int type = Type )
-[9]QTreeWidgetItem ( const QTreeWidgetItem & other )
-*/
 
 HB_FUNC_STATIC( QTREEWIDGETITEM_NEW )
 {
@@ -238,7 +226,7 @@ HB_FUNC_STATIC( QTREEWIDGETITEM_NEW )
   }
   else if( ISNUMPAR(1) && ISQTREEWIDGETITEM(1) )
   {
-    QTreeWidgetItem_new9(); // WARNING: conflita com [6] quando é apenas 1 parâmetro
+    QTreeWidgetItem_new9();
   }
   else
   {

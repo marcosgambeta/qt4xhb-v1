@@ -63,7 +63,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QMenuBar ( QWidget * parent = 0 )
+QMenuBar( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QMENUBAR_NEW )
 {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QMENUBAR_ACTIVEACTION )
 }
 
 /*
-QAction * addAction ( const QString & text )
+QAction * addAction( const QString & text )
 */
 void QMenuBar_addAction1()
 {
@@ -137,7 +137,7 @@ void QMenuBar_addAction1()
 }
 
 /*
-QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
+QAction * addAction( const QString & text, const QObject * receiver, const char * member )
 */
 void QMenuBar_addAction2()
 {
@@ -151,7 +151,7 @@ void QMenuBar_addAction2()
 }
 
 /*
-void addAction ( QAction * action )
+void addAction( QAction * action )
 */
 void QMenuBar_addAction3()
 {
@@ -164,12 +164,6 @@ void QMenuBar_addAction3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]QAction * addAction ( const QString & text )
-[2]QAction * addAction ( const QString & text, const QObject * receiver, const char * member )
-[3]void addAction ( QAction * action )
-*/
 
 HB_FUNC_STATIC( QMENUBAR_ADDACTION )
 {
@@ -192,7 +186,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDACTION )
 }
 
 /*
-QAction * addMenu ( QMenu * menu )
+QAction * addMenu( QMenu * menu )
 */
 void QMenuBar_addMenu1()
 {
@@ -206,7 +200,7 @@ void QMenuBar_addMenu1()
 }
 
 /*
-QMenu * addMenu ( const QString & title )
+QMenu * addMenu( const QString & title )
 */
 void QMenuBar_addMenu2()
 {
@@ -220,7 +214,7 @@ void QMenuBar_addMenu2()
 }
 
 /*
-QMenu * addMenu ( const QIcon & icon, const QString & title )
+QMenu * addMenu( const QIcon & icon, const QString & title )
 */
 void QMenuBar_addMenu3()
 {
@@ -232,12 +226,6 @@ void QMenuBar_addMenu3()
     Qt4xHb::createReturnQObjectClass( ptr, "QMENU" );
   }
 }
-
-/*
-[1]QAction * addMenu ( QMenu * menu )
-[2]QMenu * addMenu ( const QString & title )
-[3]QMenu * addMenu ( const QIcon & icon, const QString & title )
-*/
 
 HB_FUNC_STATIC( QMENUBAR_ADDMENU )
 {

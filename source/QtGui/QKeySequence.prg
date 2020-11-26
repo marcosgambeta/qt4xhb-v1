@@ -57,7 +57,7 @@ RETURN
 #include <QtCore/QList>
 
 /*
-QKeySequence ()
+QKeySequence()
 */
 void QKeySequence_new1()
 {
@@ -66,7 +66,7 @@ void QKeySequence_new1()
 }
 
 /*
-QKeySequence ( const QString & key )
+QKeySequence( const QString & key )
 */
 void QKeySequence_new2()
 {
@@ -75,7 +75,7 @@ void QKeySequence_new2()
 }
 
 /*
-QKeySequence ( const QString & key, SequenceFormat format )
+QKeySequence( const QString & key, QKeySequence::SequenceFormat format )
 */
 void QKeySequence_new3()
 {
@@ -84,7 +84,7 @@ void QKeySequence_new3()
 }
 
 /*
-QKeySequence ( int k1, int k2 = 0, int k3 = 0, int k4 = 0 )
+QKeySequence( int k1, int k2 = 0, int k3 = 0, int k4 = 0 )
 */
 void QKeySequence_new4()
 {
@@ -93,7 +93,7 @@ void QKeySequence_new4()
 }
 
 /*
-QKeySequence ( const QKeySequence & keysequence )
+QKeySequence( const QKeySequence & keysequence )
 */
 void QKeySequence_new5()
 {
@@ -102,29 +102,13 @@ void QKeySequence_new5()
 }
 
 /*
-QKeySequence ( StandardKey key )
+QKeySequence( QKeySequence::StandardKey key )
 */
 void QKeySequence_new6()
 {
   QKeySequence * obj = new QKeySequence( (QKeySequence::StandardKey) hb_parni(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QKeySequence ()
-[2]QKeySequence ( const QString & key )
-[3]QKeySequence ( const QString & key, SequenceFormat format )
-[4]QKeySequence ( int k1, int k2 = 0, int k3 = 0, int k4 = 0 )
-[5]QKeySequence ( const QKeySequence & keysequence )
-[6]QKeySequence ( StandardKey key )
-*/
-
-/*
-Para resolver o conflito entre [4] e [6], [6] é analisado em
-primeiro lugar, seguido por [4]. Desta forma, se for 1 parâmetro
-numérico, será considerado [6]. Se forem de 2 a 4 parâmetros
-numéricos, será considerado [4].
-*/
 
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW )
 {

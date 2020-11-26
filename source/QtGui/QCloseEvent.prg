@@ -39,7 +39,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QCloseEvent ()
+QCloseEvent()
 */
 HB_FUNC_STATIC( QCLOSEEVENT_NEW )
 {

@@ -62,7 +62,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QCleanlooksStyle ()
+QCleanlooksStyle()
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_NEW )
 {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_PIXELMETRIC )
 }
 
 /*
-virtual void polish ( QWidget * widget )
+virtual void polish( QWidget * widget )
 */
 void QCleanlooksStyle_polish1()
 {
@@ -340,7 +340,7 @@ void QCleanlooksStyle_polish1()
 }
 
 /*
-virtual void polish ( QApplication * app )
+virtual void polish( QApplication * app )
 */
 void QCleanlooksStyle_polish2()
 {
@@ -355,7 +355,7 @@ void QCleanlooksStyle_polish2()
 }
 
 /*
-virtual void polish ( QPalette & pal )
+virtual void polish( QPalette & pal )
 */
 void QCleanlooksStyle_polish3()
 {
@@ -368,12 +368,6 @@ void QCleanlooksStyle_polish3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]virtual void polish ( QWidget * widget )
-[2]virtual void polish ( QApplication * app )
-[3]virtual void polish ( QPalette & pal )
-*/
 
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_POLISH )
 {
@@ -545,7 +539,7 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_SUBELEMENTRECT )
 }
 
 /*
-virtual void unpolish ( QWidget * widget )
+virtual void unpolish( QWidget * widget )
 */
 void QCleanlooksStyle_unpolish1()
 {
@@ -560,7 +554,7 @@ void QCleanlooksStyle_unpolish1()
 }
 
 /*
-virtual void unpolish ( QApplication * app )
+virtual void unpolish( QApplication * app )
 */
 void QCleanlooksStyle_unpolish2()
 {
@@ -573,11 +567,6 @@ void QCleanlooksStyle_unpolish2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]virtual void unpolish ( QWidget * widget )
-[2]virtual void unpolish ( QApplication * app )
-*/
 
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_UNPOLISH )
 {

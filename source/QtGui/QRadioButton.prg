@@ -43,7 +43,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QRadioButton ( QWidget * parent = 0 )
+QRadioButton( QWidget * parent = 0 )
 */
 void QRadioButton_new1()
 {
@@ -52,18 +52,13 @@ void QRadioButton_new1()
 }
 
 /*
-QRadioButton ( const QString & text, QWidget * parent = 0 )
+QRadioButton( const QString & text, QWidget * parent = 0 )
 */
 void QRadioButton_new2()
 {
   QRadioButton * obj = new QRadioButton( PQSTRING(1), OPQWIDGET(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QRadioButton ( QWidget * parent = 0 )
-[2]QRadioButton ( const QString & text, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QRADIOBUTTON_NEW )
 {

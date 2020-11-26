@@ -55,7 +55,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QGroupBox ( QWidget * parent = 0 )
+QGroupBox( QWidget * parent = 0 )
 */
 void QGroupBox_new1()
 {
@@ -64,18 +64,13 @@ void QGroupBox_new1()
 }
 
 /*
-QGroupBox ( const QString & title, QWidget * parent = 0 )
+QGroupBox( const QString & title, QWidget * parent = 0 )
 */
 void QGroupBox_new2()
 {
   QGroupBox * obj = new QGroupBox( PQSTRING(1), OPQWIDGET(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QGroupBox ( QWidget * parent = 0 )
-[2]QGroupBox ( const QString & title, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QGROUPBOX_NEW )
 {

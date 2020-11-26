@@ -42,7 +42,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QGraphicsSceneMoveEvent ()
+QGraphicsSceneMoveEvent()
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEW )
 {

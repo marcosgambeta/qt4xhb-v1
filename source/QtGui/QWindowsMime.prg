@@ -20,6 +20,8 @@ CLASS QWindowsMime
    DATA pointer
    DATA self_destruction INIT .F.
 
+   METHOD registerMimeType
+
    METHOD newFrom
    METHOD newFromObject
    METHOD newFromPointer
@@ -45,8 +47,23 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-static int registerMimeType ( const QString & mime )
+static int registerMimeType( const QString & mime )
 */
+HB_FUNC_STATIC( QWINDOWSMIME_REGISTERMIMETYPE )
+{
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+  if( ISNUMPAR(1) && ISCHAR(1) )
+  {
+#endif
+    RINT( QWindowsMime::registerMimeType( PQSTRING(1) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+#endif
+}
 
 HB_FUNC_STATIC( QWINDOWSMIME_NEWFROM )
 {

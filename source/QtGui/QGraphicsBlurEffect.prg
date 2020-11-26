@@ -50,7 +50,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QGraphicsBlurEffect ( QObject * parent = 0 )
+QGraphicsBlurEffect( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_NEW )
 {

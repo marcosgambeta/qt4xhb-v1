@@ -95,7 +95,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QPlatformWindowFormat ()
+QPlatformWindowFormat()
 */
 void QPlatformWindowFormat_new1()
 {
@@ -104,7 +104,7 @@ void QPlatformWindowFormat_new1()
 }
 
 /*
-QPlatformWindowFormat ( FormatOptions options )
+QPlatformWindowFormat( QPlatformWindowFormat::FormatOptions options )
 */
 void QPlatformWindowFormat_new2()
 {
@@ -113,19 +113,13 @@ void QPlatformWindowFormat_new2()
 }
 
 /*
-QPlatformWindowFormat ( const QPlatformWindowFormat & other )
+QPlatformWindowFormat( const QPlatformWindowFormat & other )
 */
 void QPlatformWindowFormat_new3()
 {
   QPlatformWindowFormat * obj = new QPlatformWindowFormat( *PQPLATFORMWINDOWFORMAT(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QPlatformWindowFormat ()
-[2]QPlatformWindowFormat ( FormatOptions options )
-[3]QPlatformWindowFormat ( const QPlatformWindowFormat & other )
-*/
 
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_NEW )
 {

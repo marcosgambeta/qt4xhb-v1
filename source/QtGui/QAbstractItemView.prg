@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_INDEXWIDGET )
 }
 
 /*
-QAbstractItemDelegate * itemDelegate () const
+QAbstractItemDelegate * itemDelegate() const
 */
 void QAbstractItemView_itemDelegate1()
 {
@@ -495,7 +495,7 @@ void QAbstractItemView_itemDelegate1()
 }
 
 /*
-QAbstractItemDelegate * itemDelegate ( const QModelIndex & index ) const
+QAbstractItemDelegate * itemDelegate( const QModelIndex & index ) const
 */
 void QAbstractItemView_itemDelegate2()
 {
@@ -507,11 +507,6 @@ void QAbstractItemView_itemDelegate2()
     Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMDELEGATE" );
   }
 }
-
-/*
-[1]QAbstractItemDelegate * itemDelegate () const
-[2]QAbstractItemDelegate * itemDelegate ( const QModelIndex & index ) const
-*/
 
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATE )
 {

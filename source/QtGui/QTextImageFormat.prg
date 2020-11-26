@@ -46,7 +46,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QTextImageFormat ()
+QTextImageFormat()
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NEW )
 {

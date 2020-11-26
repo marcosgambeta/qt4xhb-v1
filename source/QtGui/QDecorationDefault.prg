@@ -42,7 +42,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QDecorationDefault ()
+QDecorationDefault()
 */
 HB_FUNC_STATIC( QDECORATIONDEFAULT_NEW )
 {

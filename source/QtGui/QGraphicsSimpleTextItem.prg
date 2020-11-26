@@ -55,7 +55,7 @@ RETURN
 #include <QtGui/QFont>
 
 /*
-QGraphicsSimpleTextItem ( QGraphicsItem * parent = 0 )
+QGraphicsSimpleTextItem( QGraphicsItem * parent = 0 )
 */
 void QGraphicsSimpleTextItem_new1()
 {
@@ -64,18 +64,13 @@ void QGraphicsSimpleTextItem_new1()
 }
 
 /*
-QGraphicsSimpleTextItem ( const QString & text, QGraphicsItem * parent = 0 )
+QGraphicsSimpleTextItem( const QString & text, QGraphicsItem * parent = 0 )
 */
 void QGraphicsSimpleTextItem_new2()
 {
   QGraphicsSimpleTextItem * obj = new QGraphicsSimpleTextItem( PQSTRING(1), ISNIL(2)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(2) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QGraphicsSimpleTextItem ( QGraphicsItem * parent = 0 )
-[2]QGraphicsSimpleTextItem ( const QString & text, QGraphicsItem * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_NEW )
 {

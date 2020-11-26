@@ -63,7 +63,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QGlyphRun ()
+QGlyphRun()
 */
 void QGlyphRun_new1()
 {
@@ -72,18 +72,13 @@ void QGlyphRun_new1()
 }
 
 /*
-QGlyphRun ( const QGlyphRun & other )
+QGlyphRun( const QGlyphRun & other )
 */
 void QGlyphRun_new2()
 {
   QGlyphRun * obj = new QGlyphRun( *PQGLYPHRUN(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QGlyphRun ()
-[2]QGlyphRun ( const QGlyphRun & other )
-*/
 
 HB_FUNC_STATIC( QGLYPHRUN_NEW )
 {

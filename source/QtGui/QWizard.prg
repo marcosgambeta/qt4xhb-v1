@@ -96,7 +96,7 @@ RETURN
 #include <QtGui/QAbstractButton>
 
 /*
-QWizard ( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
+QWizard( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC( QWIZARD_NEW )
 {

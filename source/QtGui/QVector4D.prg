@@ -75,7 +75,7 @@ RETURN
 #include <QtGui/QVector3D>
 
 /*
-QVector4D ()
+QVector4D()
 */
 void QVector4D_new1()
 {
@@ -84,7 +84,7 @@ void QVector4D_new1()
 }
 
 /*
-QVector4D ( qreal xpos, qreal ypos, qreal zpos, qreal wpos )
+QVector4D( qreal xpos, qreal ypos, qreal zpos, qreal wpos )
 */
 void QVector4D_new2()
 {
@@ -93,7 +93,7 @@ void QVector4D_new2()
 }
 
 /*
-QVector4D ( const QPoint & point )
+QVector4D( const QPoint & point )
 */
 void QVector4D_new3()
 {
@@ -102,7 +102,7 @@ void QVector4D_new3()
 }
 
 /*
-QVector4D ( const QPointF & point )
+QVector4D( const QPointF & point )
 */
 void QVector4D_new4()
 {
@@ -111,7 +111,7 @@ void QVector4D_new4()
 }
 
 /*
-QVector4D ( const QVector2D & vector )
+QVector4D( const QVector2D & vector )
 */
 void QVector4D_new5()
 {
@@ -120,7 +120,7 @@ void QVector4D_new5()
 }
 
 /*
-QVector4D ( const QVector2D & vector, qreal zpos, qreal wpos )
+QVector4D( const QVector2D & vector, qreal zpos, qreal wpos )
 */
 void QVector4D_new6()
 {
@@ -129,7 +129,7 @@ void QVector4D_new6()
 }
 
 /*
-QVector4D ( const QVector3D & vector )
+QVector4D( const QVector3D & vector )
 */
 void QVector4D_new7()
 {
@@ -138,24 +138,13 @@ void QVector4D_new7()
 }
 
 /*
-QVector4D ( const QVector3D & vector, qreal wpos )
+QVector4D( const QVector3D & vector, qreal wpos )
 */
 void QVector4D_new8()
 {
   QVector4D * obj = new QVector4D( *PQVECTOR3D(1), PQREAL(2) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QVector4D ()
-[2]QVector4D ( qreal xpos, qreal ypos, qreal zpos, qreal wpos )
-[3]QVector4D ( const QPoint & point )
-[4]QVector4D ( const QPointF & point )
-[5]QVector4D ( const QVector2D & vector )
-[6]QVector4D ( const QVector2D & vector, qreal zpos, qreal wpos )
-[7]QVector4D ( const QVector3D & vector )
-[8]QVector4D ( const QVector3D & vector, qreal wpos )
-*/
 
 HB_FUNC_STATIC( QVECTOR4D_NEW )
 {
