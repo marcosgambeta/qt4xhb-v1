@@ -75,7 +75,7 @@ RETURN
 #include <QtCore/QVariant>
 
 /*
-QVideoFrame ()
+QVideoFrame()
 */
 void QVideoFrame_new1()
 {
@@ -84,7 +84,7 @@ void QVideoFrame_new1()
 }
 
 /*
-QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat format )
+QVideoFrame( QAbstractVideoBuffer * buffer, const QSize & size, QVideoFrame::PixelFormat format )
 */
 void QVideoFrame_new2()
 {
@@ -93,7 +93,7 @@ void QVideoFrame_new2()
 }
 
 /*
-QVideoFrame ( int bytes, const QSize & size, int bytesPerLine, PixelFormat format )
+QVideoFrame( int bytes, const QSize & size, int bytesPerLine, QVideoFrame::PixelFormat format )
 */
 void QVideoFrame_new3()
 {
@@ -102,7 +102,7 @@ void QVideoFrame_new3()
 }
 
 /*
-QVideoFrame ( const QImage & image )
+QVideoFrame( const QImage & image )
 */
 void QVideoFrame_new4()
 {
@@ -111,21 +111,13 @@ void QVideoFrame_new4()
 }
 
 /*
-QVideoFrame ( const QVideoFrame & other )
+QVideoFrame( const QVideoFrame & other )
 */
 void QVideoFrame_new5()
 {
   QVideoFrame * obj = new QVideoFrame( *PQVIDEOFRAME(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QVideoFrame ()
-[2]QVideoFrame ( QAbstractVideoBuffer * buffer, const QSize & size, PixelFormat format )
-[3]QVideoFrame ( int bytes, const QSize & size, int bytesPerLine, PixelFormat format )
-[4]QVideoFrame ( const QImage & image )
-[5]QVideoFrame ( const QVideoFrame & other )
-*/
 
 HB_FUNC_STATIC( QVIDEOFRAME_NEW )
 {
@@ -171,14 +163,6 @@ HB_FUNC_STATIC( QVIDEOFRAME_DELETE )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-uchar * bits ()
-*/
-
-/*
-const uchar * bits () const
-*/
 
 /*
 int bytesPerLine() const

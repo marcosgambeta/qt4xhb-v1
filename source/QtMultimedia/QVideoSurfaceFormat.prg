@@ -75,7 +75,7 @@ RETURN
 #include <QtCore/QVariant>
 
 /*
-QVideoSurfaceFormat ()
+QVideoSurfaceFormat()
 */
 void QVideoSurfaceFormat_new1()
 {
@@ -84,7 +84,7 @@ void QVideoSurfaceFormat_new1()
 }
 
 /*
-QVideoSurfaceFormat ( const QSize & size, QVideoFrame::PixelFormat format, QAbstractVideoBuffer::HandleType type = QAbstractVideoBuffer::NoHandle )
+QVideoSurfaceFormat( const QSize & size, QVideoFrame::PixelFormat format, QAbstractVideoBuffer::HandleType type = QAbstractVideoBuffer::NoHandle )
 */
 void QVideoSurfaceFormat_new2()
 {
@@ -93,19 +93,13 @@ void QVideoSurfaceFormat_new2()
 }
 
 /*
-QVideoSurfaceFormat ( const QVideoSurfaceFormat & other )
+QVideoSurfaceFormat( const QVideoSurfaceFormat & other )
 */
 void QVideoSurfaceFormat_new3()
 {
   QVideoSurfaceFormat * obj = new QVideoSurfaceFormat( *PQVIDEOSURFACEFORMAT(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QVideoSurfaceFormat ()
-[2]QVideoSurfaceFormat ( const QSize & size, QVideoFrame::PixelFormat format, QAbstractVideoBuffer::HandleType type = QAbstractVideoBuffer::NoHandle )
-[3]QVideoSurfaceFormat ( const QVideoSurfaceFormat & other )
-*/
 
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_NEW )
 {
@@ -466,7 +460,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETFRAMERATE )
 }
 
 /*
-void setFrameSize ( const QSize & size )
+void setFrameSize( const QSize & size )
 */
 void QVideoSurfaceFormat_setFrameSize1()
 {
@@ -481,7 +475,7 @@ void QVideoSurfaceFormat_setFrameSize1()
 }
 
 /*
-void setFrameSize ( int width, int height )
+void setFrameSize( int width, int height )
 */
 void QVideoSurfaceFormat_setFrameSize2()
 {
@@ -494,11 +488,6 @@ void QVideoSurfaceFormat_setFrameSize2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setFrameSize ( const QSize & size )
-[2]void setFrameSize ( int width, int height )
-*/
 
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETFRAMESIZE )
 {
@@ -517,7 +506,7 @@ HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETFRAMESIZE )
 }
 
 /*
-void setPixelAspectRatio ( const QSize & ratio )
+void setPixelAspectRatio( const QSize & ratio )
 */
 void QVideoSurfaceFormat_setPixelAspectRatio1()
 {
@@ -532,7 +521,7 @@ void QVideoSurfaceFormat_setPixelAspectRatio1()
 }
 
 /*
-void setPixelAspectRatio ( int horizontal, int vertical )
+void setPixelAspectRatio( int horizontal, int vertical )
 */
 void QVideoSurfaceFormat_setPixelAspectRatio2()
 {
@@ -545,11 +534,6 @@ void QVideoSurfaceFormat_setPixelAspectRatio2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setPixelAspectRatio ( const QSize & ratio )
-[2]void setPixelAspectRatio ( int horizontal, int vertical )
-*/
 
 HB_FUNC_STATIC( QVIDEOSURFACEFORMAT_SETPIXELASPECTRATIO )
 {

@@ -65,7 +65,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QAudioFormat ()
+QAudioFormat()
 */
 void QAudioFormat_new1()
 {
@@ -74,18 +74,13 @@ void QAudioFormat_new1()
 }
 
 /*
-QAudioFormat ( const QAudioFormat & other )
+QAudioFormat( const QAudioFormat & other )
 */
 void QAudioFormat_new2()
 {
   QAudioFormat * obj = new QAudioFormat( *PQAUDIOFORMAT(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QAudioFormat ()
-[2]QAudioFormat ( const QAudioFormat & other )
-*/
 
 HB_FUNC_STATIC( QAUDIOFORMAT_NEW )
 {

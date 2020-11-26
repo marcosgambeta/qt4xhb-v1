@@ -120,10 +120,6 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLETYPE )
 }
 
 /*
-virtual uchar * map ( MapMode mode, int * numBytes, int * bytesPerLine ) = 0
-*/
-
-/*
 virtual QAbstractVideoBuffer::MapMode mapMode() const = 0
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_MAPMODE )

@@ -62,7 +62,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QAudioOutput ( const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
+QAudioOutput( const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
 */
 void QAudioOutput_new1()
 {
@@ -71,18 +71,13 @@ void QAudioOutput_new1()
 }
 
 /*
-QAudioOutput ( const QAudioDeviceInfo & audioDevice, const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
+QAudioOutput( const QAudioDeviceInfo & audioDevice, const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
 */
 void QAudioOutput_new2()
 {
   QAudioOutput * obj = new QAudioOutput( *PQAUDIODEVICEINFO(1), ISNIL(2)? QAudioFormat() : *(QAudioFormat *) Qt4xHb::itemGetPtr(2), OPQOBJECT(3,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QAudioOutput ( const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
-[2]QAudioOutput ( const QAudioDeviceInfo & audioDevice, const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QAUDIOOUTPUT_NEW )
 {
@@ -417,7 +412,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_SETNOTIFYINTERVAL )
 }
 
 /*
-void start ( QIODevice * device )
+void start( QIODevice * device )
 */
 void QAudioOutput_start1()
 {
@@ -432,7 +427,7 @@ void QAudioOutput_start1()
 }
 
 /*
-QIODevice * start ()
+QIODevice * start()
 */
 void QAudioOutput_start2()
 {
@@ -444,11 +439,6 @@ void QAudioOutput_start2()
     Qt4xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
   }
 }
-
-/*
-[1]void start ( QIODevice * device )
-[2]QIODevice * start ()
-*/
 
 HB_FUNC_STATIC( QAUDIOOUTPUT_START )
 {

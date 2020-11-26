@@ -65,7 +65,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QAudioDeviceInfo ()
+QAudioDeviceInfo()
 */
 void QAudioDeviceInfo_new1()
 {
@@ -74,18 +74,13 @@ void QAudioDeviceInfo_new1()
 }
 
 /*
-QAudioDeviceInfo ( const QAudioDeviceInfo & other )
+QAudioDeviceInfo( const QAudioDeviceInfo & other )
 */
 void QAudioDeviceInfo_new2()
 {
   QAudioDeviceInfo * obj = new QAudioDeviceInfo( *PQAUDIODEVICEINFO(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QAudioDeviceInfo ()
-[2]QAudioDeviceInfo ( const QAudioDeviceInfo & other )
-*/
 
 HB_FUNC_STATIC( QAUDIODEVICEINFO_NEW )
 {
