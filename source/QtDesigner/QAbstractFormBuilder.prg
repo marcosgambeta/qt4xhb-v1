@@ -54,7 +54,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QAbstractFormBuilder ()
+QAbstractFormBuilder()
 */
 HB_FUNC_STATIC( QABSTRACTFORMBUILDER_NEW )
 {

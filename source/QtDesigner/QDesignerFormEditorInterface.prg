@@ -66,7 +66,7 @@ RETURN
 #include <QtDesigner/QDesignerWidgetBoxInterface>
 
 /*
-QDesignerFormEditorInterface ( QObject * parent = 0 )
+QDesignerFormEditorInterface( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QDESIGNERFORMEDITORINTERFACE_NEW )
 {

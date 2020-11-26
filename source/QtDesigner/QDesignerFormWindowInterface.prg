@@ -927,7 +927,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SELECTWIDGET )
 }
 
 /*
-virtual void setContents ( QIODevice * device ) = 0
+virtual void setContents( QIODevice * device ) = 0
 */
 void QDesignerFormWindowInterface_setContents1()
 {
@@ -942,7 +942,7 @@ void QDesignerFormWindowInterface_setContents1()
 }
 
 /*
-virtual void setContents ( const QString & contents ) = 0
+virtual void setContents( const QString & contents ) = 0
 */
 void QDesignerFormWindowInterface_setContents2()
 {
@@ -955,11 +955,6 @@ void QDesignerFormWindowInterface_setContents2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]virtual void setContents ( QIODevice * device ) = 0
-[2]virtual void setContents ( const QString & contents ) = 0
-*/
 
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS )
 {
@@ -1108,7 +1103,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_UNMANAGEWIDGET )
 }
 
 /*
-static QDesignerFormWindowInterface * findFormWindow ( QWidget * widget )
+static QDesignerFormWindowInterface * findFormWindow( QWidget * widget )
 */
 void QDesignerFormWindowInterface_findFormWindow1()
 {
@@ -1118,7 +1113,7 @@ void QDesignerFormWindowInterface_findFormWindow1()
 }
 
 /*
-static QDesignerFormWindowInterface * findFormWindow ( QObject * object )
+static QDesignerFormWindowInterface * findFormWindow( QObject * object )
 */
 void QDesignerFormWindowInterface_findFormWindow2()
 {
@@ -1126,11 +1121,6 @@ void QDesignerFormWindowInterface_findFormWindow2()
   QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow( PQOBJECT(1) );
   Qt4xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
 }
-
-/*
-[1]QDesignerFormWindowInterface * findFormWindow ( QWidget * widget )
-[2]QDesignerFormWindowInterface * findFormWindow ( QObject * object )
-*/
 
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW )
 {
