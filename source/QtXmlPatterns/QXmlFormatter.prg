@@ -51,7 +51,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QXmlFormatter ( const QXmlQuery & query, QIODevice * outputDevice )
+QXmlFormatter( const QXmlQuery & query, QIODevice * outputDevice )
 */
 HB_FUNC_STATIC( QXMLFORMATTER_NEW )
 {

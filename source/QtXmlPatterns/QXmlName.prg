@@ -56,7 +56,7 @@ RETURN
 #include <QtXmlPatterns/QXmlNamePool>
 
 /*
-QXmlName ()
+QXmlName()
 */
 void QXmlName_new1()
 {
@@ -65,18 +65,13 @@ void QXmlName_new1()
 }
 
 /*
-QXmlName ( QXmlNamePool & namePool, const QString & localName, const QString & namespaceURI = QString(), const QString & prefix = QString() )
+QXmlName( QXmlNamePool & namePool, const QString & localName, const QString & namespaceURI = QString(), const QString & prefix = QString() )
 */
 void QXmlName_new2()
 {
   QXmlName * obj = new QXmlName( *PQXMLNAMEPOOL(1), PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QXmlName ()
-[2]QXmlName ( QXmlNamePool & namePool, const QString & localName, const QString & namespaceURI = QString(), const QString & prefix = QString() )
-*/
 
 HB_FUNC_STATIC( QXMLNAME_NEW )
 {

@@ -48,7 +48,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QXmlNamePool ()
+QXmlNamePool()
 */
 void QXmlNamePool_new1()
 {
@@ -57,18 +57,13 @@ void QXmlNamePool_new1()
 }
 
 /*
-QXmlNamePool ( const QXmlNamePool & other )
+QXmlNamePool( const QXmlNamePool & other )
 */
 void QXmlNamePool_new2()
 {
   QXmlNamePool * obj = new QXmlNamePool( *PQXMLNAMEPOOL(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QXmlNamePool ()
-[2]QXmlNamePool ( const QXmlNamePool & other )
-*/
 
 HB_FUNC_STATIC( QXMLNAMEPOOL_NEW )
 {

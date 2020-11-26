@@ -56,7 +56,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QSourceLocation ()
+QSourceLocation()
 */
 void QSourceLocation_new1()
 {
@@ -65,7 +65,7 @@ void QSourceLocation_new1()
 }
 
 /*
-QSourceLocation ( const QSourceLocation & other )
+QSourceLocation( const QSourceLocation & other )
 */
 void QSourceLocation_new2()
 {
@@ -74,19 +74,13 @@ void QSourceLocation_new2()
 }
 
 /*
-QSourceLocation ( const QUrl & u, int l = -1, int c = -1 )
+QSourceLocation( const QUrl & u, int l = -1, int c = -1 )
 */
 void QSourceLocation_new3()
 {
   QSourceLocation * obj = new QSourceLocation( *PQURL(1), OPINT(2,-1), OPINT(3,-1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QSourceLocation ()
-[2]QSourceLocation ( const QSourceLocation & other )
-[3]QSourceLocation ( const QUrl & u, int l = -1, int c = -1 )
-*/
 
 HB_FUNC_STATIC( QSOURCELOCATION_NEW )
 {

@@ -53,7 +53,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QXmlNodeModelIndex ()
+QXmlNodeModelIndex()
 */
 void QXmlNodeModelIndex_new1()
 {
@@ -62,18 +62,13 @@ void QXmlNodeModelIndex_new1()
 }
 
 /*
-QXmlNodeModelIndex ( const QXmlNodeModelIndex & other )
+QXmlNodeModelIndex( const QXmlNodeModelIndex & other )
 */
 void QXmlNodeModelIndex_new2()
 {
   QXmlNodeModelIndex * obj = new QXmlNodeModelIndex( *PQXMLNODEMODELINDEX(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QXmlNodeModelIndex ()
-[2]QXmlNodeModelIndex ( const QXmlNodeModelIndex & other )
-*/
 
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW )
 {

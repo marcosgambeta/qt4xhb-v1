@@ -67,7 +67,7 @@ RETURN
 #include <QtXmlPatterns/QAbstractUriResolver>
 
 /*
-QXmlSchema ()
+QXmlSchema()
 */
 void QXmlSchema_new1()
 {
@@ -76,18 +76,13 @@ void QXmlSchema_new1()
 }
 
 /*
-QXmlSchema ( const QXmlSchema & other )
+QXmlSchema( const QXmlSchema & other )
 */
 void QXmlSchema_new2()
 {
   QXmlSchema * obj = new QXmlSchema( *PQXMLSCHEMA(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QXmlSchema ()
-[2]QXmlSchema ( const QXmlSchema & other )
-*/
 
 HB_FUNC_STATIC( QXMLSCHEMA_NEW )
 {
@@ -172,7 +167,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_ISVALID )
 }
 
 /*
-bool load ( const QUrl & source )
+bool load( const QUrl & source )
 */
 void QXmlSchema_load1()
 {
@@ -185,7 +180,7 @@ void QXmlSchema_load1()
 }
 
 /*
-bool load ( QIODevice * source, const QUrl & documentUri = QUrl() )
+bool load( QIODevice * source, const QUrl & documentUri = QUrl() )
 */
 void QXmlSchema_load2()
 {
@@ -198,7 +193,7 @@ void QXmlSchema_load2()
 }
 
 /*
-bool load ( const QByteArray & data, const QUrl & documentUri = QUrl() )
+bool load( const QByteArray & data, const QUrl & documentUri = QUrl() )
 */
 void QXmlSchema_load3()
 {
@@ -209,12 +204,6 @@ void QXmlSchema_load3()
     RBOOL( obj->load( *PQBYTEARRAY(1), ISNIL(2)? QUrl() : *(QUrl *) Qt4xHb::itemGetPtr(2) ) );
   }
 }
-
-/*
-[1]bool load ( const QUrl & source )
-[2]bool load ( QIODevice * source, const QUrl & documentUri = QUrl() )
-[3]bool load ( const QByteArray & data, const QUrl & documentUri = QUrl() )
-*/
 
 HB_FUNC_STATIC( QXMLSCHEMA_LOAD )
 {

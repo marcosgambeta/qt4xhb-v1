@@ -57,7 +57,7 @@ RETURN
 #include <QtCore/QVariant>
 
 /*
-QXmlItem ()
+QXmlItem()
 */
 void QXmlItem_new1()
 {
@@ -66,7 +66,7 @@ void QXmlItem_new1()
 }
 
 /*
-QXmlItem ( const QXmlItem & other )
+QXmlItem( const QXmlItem & other )
 */
 void QXmlItem_new2()
 {
@@ -75,7 +75,7 @@ void QXmlItem_new2()
 }
 
 /*
-QXmlItem ( const QXmlNodeModelIndex & node )
+QXmlItem( const QXmlNodeModelIndex & node )
 */
 void QXmlItem_new3()
 {
@@ -84,20 +84,13 @@ void QXmlItem_new3()
 }
 
 /*
-QXmlItem ( const QVariant & atomicValue )
+QXmlItem( const QVariant & atomicValue )
 */
 void QXmlItem_new4()
 {
   QXmlItem * obj = new QXmlItem( *PQVARIANT(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QXmlItem ()
-[2]QXmlItem ( const QXmlItem & other )
-[3]QXmlItem ( const QXmlNodeModelIndex & node )
-[4]QXmlItem ( const QVariant & atomicValue )
-*/
 
 HB_FUNC_STATIC( QXMLITEM_NEW )
 {
