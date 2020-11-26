@@ -65,7 +65,7 @@ RETURN
 #include <QtGui/QLayout>
 
 /*
-QUiLoader ( QObject * parent = 0 )
+QUiLoader( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QUILOADER_NEW )
 {
