@@ -56,7 +56,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QGLColormap ()
+QGLColormap()
 */
 void QGLColormap_new1()
 {
@@ -65,18 +65,13 @@ void QGLColormap_new1()
 }
 
 /*
-QGLColormap ( const QGLColormap & map )
+QGLColormap( const QGLColormap & map )
 */
 void QGLColormap_new2()
 {
   QGLColormap * obj = new QGLColormap( *PQGLCOLORMAP(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QGLColormap ()
-[2]QGLColormap ( const QGLColormap & map )
-*/
 
 HB_FUNC_STATIC( QGLCOLORMAP_NEW )
 {
@@ -233,7 +228,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_ISEMPTY )
 }
 
 /*
-void setEntry ( int idx, QRgb color )
+void setEntry( int idx, QRgb color )
 */
 void QGLColormap_setEntry1()
 {
@@ -248,7 +243,7 @@ void QGLColormap_setEntry1()
 }
 
 /*
-void setEntry ( int idx, const QColor & color )
+void setEntry( int idx, const QColor & color )
 */
 void QGLColormap_setEntry2()
 {
@@ -261,11 +256,6 @@ void QGLColormap_setEntry2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setEntry ( int idx, QRgb color )
-[2]void setEntry ( int idx, const QColor & color )
-*/
 
 HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY )
 {

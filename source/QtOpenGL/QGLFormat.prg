@@ -105,7 +105,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QGLFormat ()
+QGLFormat()
 */
 void QGLFormat_new1()
 {
@@ -114,7 +114,7 @@ void QGLFormat_new1()
 }
 
 /*
-QGLFormat ( QGL::FormatOptions options, int plane = 0 )
+QGLFormat( QGL::FormatOptions options, int plane = 0 )
 */
 void QGLFormat_new2()
 {
@@ -123,19 +123,13 @@ void QGLFormat_new2()
 }
 
 /*
-QGLFormat ( const QGLFormat & other )
+QGLFormat( const QGLFormat & other )
 */
 void QGLFormat_new3()
 {
   QGLFormat * obj = new QGLFormat( *PQGLFORMAT(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QGLFormat ()
-[2]QGLFormat ( QGL::FormatOptions options, int plane = 0 )
-[3]QGLFormat ( const QGLFormat & other )
-*/
 
 HB_FUNC_STATIC( QGLFORMAT_NEW )
 {
@@ -157,9 +151,7 @@ HB_FUNC_STATIC( QGLFORMAT_NEW )
   }
 }
 
-/*
-~QGLFormat()
-*/
+// ~QGLFormat()
 HB_FUNC_STATIC( QGLFORMAT_DELETE )
 {
   QGLFormat * obj = (QGLFormat *) Qt4xHb::itemGetPtrStackSelfItem();
@@ -1490,9 +1482,7 @@ HB_FUNC_STATIC( QGLFORMAT_SETDEFAULTOVERLAYFORMAT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-static QGLFormat fromPlatformWindowFormat(const QPlatformWindowFormat &format)
-*/
+// static QGLFormat fromPlatformWindowFormat(const QPlatformWindowFormat &format)
 HB_FUNC_STATIC( QGLFORMAT_FROMPLATFORMWINDOWFORMAT )
 {
 #if defined(Q_WS_QPA)
@@ -1511,10 +1501,7 @@ HB_FUNC_STATIC( QGLFORMAT_FROMPLATFORMWINDOWFORMAT )
 #endif
 #endif
 }
-
-/*
-static QPlatformWindowFormat toPlatformWindowFormat(const QGLFormat &format)
-*/
+// static QPlatformWindowFormat toPlatformWindowFormat(const QGLFormat &format)
 HB_FUNC_STATIC( QGLFORMAT_TOPLATFORMWINDOWFORMAT )
 {
 #if defined(Q_WS_QPA)
@@ -1533,10 +1520,7 @@ HB_FUNC_STATIC( QGLFORMAT_TOPLATFORMWINDOWFORMAT )
 #endif
 #endif
 }
-
-/*
-void detach() (private)
-*/
+// void detach() [PRIVATE]
 
 HB_FUNC_STATIC( QGLFORMAT_NEWFROM )
 {

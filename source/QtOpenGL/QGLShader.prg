@@ -53,7 +53,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QGLShader ( QGLShader::ShaderType type, QObject * parent = 0 )
+QGLShader( QGLShader::ShaderType type, QObject * parent = 0 )
 */
 void QGLShader_new1()
 {
@@ -62,18 +62,13 @@ void QGLShader_new1()
 }
 
 /*
-QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = 0 )
+QGLShader( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = 0 )
 */
 void QGLShader_new2()
 {
   QGLShader * obj = new QGLShader( (QGLShader::ShaderType) hb_parni(1), PQGLCONTEXT(2), OPQOBJECT(3,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QGLShader ( QGLShader::ShaderType type, QObject * parent = 0 )
-[2]QGLShader ( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QGLSHADER_NEW )
 {
@@ -111,7 +106,7 @@ HB_FUNC_STATIC( QGLSHADER_DELETE )
 }
 
 /*
-bool compileSourceCode ( const char * source )
+bool compileSourceCode( const char * source )
 */
 HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE1 )
 {
@@ -135,7 +130,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE1 )
 }
 
 /*
-bool compileSourceCode ( const QByteArray & source )
+bool compileSourceCode( const QByteArray & source )
 */
 HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE2 )
 {
@@ -159,7 +154,7 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE2 )
 }
 
 /*
-bool compileSourceCode ( const QString & source )
+bool compileSourceCode( const QString & source )
 */
 HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE3 )
 {
@@ -181,12 +176,6 @@ HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE3 )
 #endif
   }
 }
-
-/*
-[1]bool compileSourceCode ( const char * source )
-[2]bool compileSourceCode ( const QByteArray & source )
-[3]bool compileSourceCode ( const QString & source )
-*/
 
 HB_FUNC_STATIC( QGLSHADER_COMPILESOURCECODE )
 {

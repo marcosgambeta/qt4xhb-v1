@@ -71,7 +71,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QGLContext ( const QGLFormat & format )
+QGLContext( const QGLFormat & format )
 */
 HB_FUNC_STATIC( QGLCONTEXT_NEW )
 {
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QGLCONTEXT_DELETE )
 }
 
 /*
-GLuint bindTexture ( const QImage & image, GLenum target, GLint format, BindOptions options )
+GLuint bindTexture( const QImage & image, GLenum target, GLint format, QGLContext::BindOptions options )
 */
 void QGLContext_bindTexture1()
 {
@@ -117,7 +117,7 @@ void QGLContext_bindTexture1()
 }
 
 /*
-GLuint bindTexture ( const QString & fileName )
+GLuint bindTexture( const QString & fileName )
 */
 void QGLContext_bindTexture2()
 {
@@ -130,7 +130,7 @@ void QGLContext_bindTexture2()
 }
 
 /*
-GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
+GLuint bindTexture( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
 */
 void QGLContext_bindTexture3()
 {
@@ -143,7 +143,7 @@ void QGLContext_bindTexture3()
 }
 
 /*
-GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
+GLuint bindTexture( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
 */
 void QGLContext_bindTexture4()
 {
@@ -156,7 +156,7 @@ void QGLContext_bindTexture4()
 }
 
 /*
-GLuint bindTexture ( const QPixmap & pixmap, GLenum target, GLint format, BindOptions options )
+GLuint bindTexture( const QPixmap & pixmap, GLenum target, GLint format, QGLContext::BindOptions options )
 */
 void QGLContext_bindTexture5()
 {
@@ -167,14 +167,6 @@ void QGLContext_bindTexture5()
     RGLUINT( obj->bindTexture( *PQPIXMAP(1), PGLENUM(2), PGLINT(3), (QGLContext::BindOptions) hb_parni(4) ) );
   }
 }
-
-/*
-[1]GLuint bindTexture ( const QImage & image, GLenum target, GLint format, BindOptions options )
-[2]GLuint bindTexture ( const QString & fileName )
-[3]GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
-[4]GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
-[5]GLuint bindTexture ( const QPixmap & pixmap, GLenum target, GLint format, BindOptions options )
-*/
 
 HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE )
 {
@@ -306,7 +298,7 @@ HB_FUNC_STATIC( QGLCONTEXT_DONECURRENT )
 }
 
 /*
-void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+void drawTexture( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
 void QGLContext_drawTexture1()
 {
@@ -321,7 +313,7 @@ void QGLContext_drawTexture1()
 }
 
 /*
-void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+void drawTexture( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
 void QGLContext_drawTexture2()
 {
@@ -334,11 +326,6 @@ void QGLContext_drawTexture2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-[2]void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-*/
 
 HB_FUNC_STATIC( QGLCONTEXT_DRAWTEXTURE )
 {

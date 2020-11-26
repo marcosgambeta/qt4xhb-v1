@@ -47,7 +47,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QGLFramebufferObjectFormat ()
+QGLFramebufferObjectFormat()
 */
 void QGLFramebufferObjectFormat_new1()
 {
@@ -56,18 +56,13 @@ void QGLFramebufferObjectFormat_new1()
 }
 
 /*
-QGLFramebufferObjectFormat ( const QGLFramebufferObjectFormat & other )
+QGLFramebufferObjectFormat( const QGLFramebufferObjectFormat & other )
 */
 void QGLFramebufferObjectFormat_new2()
 {
   QGLFramebufferObjectFormat * obj = new QGLFramebufferObjectFormat( *PQGLFRAMEBUFFEROBJECTFORMAT(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QGLFramebufferObjectFormat ()
-[2]QGLFramebufferObjectFormat ( const QGLFramebufferObjectFormat & other )
-*/
 
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW )
 {

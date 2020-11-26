@@ -58,7 +58,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QGLFramebufferObject ( const QSize & size, GLenum target = GL_TEXTURE_2D )
+QGLFramebufferObject( const QSize & size, GLenum target = GL_TEXTURE_2D )
 */
 void QGLFramebufferObject_new1()
 {
@@ -67,7 +67,7 @@ void QGLFramebufferObject_new1()
 }
 
 /*
-QGLFramebufferObject ( int width, int height, GLenum target = GL_TEXTURE_2D )
+QGLFramebufferObject( int width, int height, GLenum target = GL_TEXTURE_2D )
 */
 void QGLFramebufferObject_new2()
 {
@@ -76,7 +76,7 @@ void QGLFramebufferObject_new2()
 }
 
 /*
-QGLFramebufferObject ( const QSize & size, const QGLFramebufferObjectFormat & format )
+QGLFramebufferObject( const QSize & size, const QGLFramebufferObjectFormat & format )
 */
 void QGLFramebufferObject_new3()
 {
@@ -85,7 +85,7 @@ void QGLFramebufferObject_new3()
 }
 
 /*
-QGLFramebufferObject ( int width, int height, const QGLFramebufferObjectFormat & format )
+QGLFramebufferObject( int width, int height, const QGLFramebufferObjectFormat & format )
 */
 void QGLFramebufferObject_new4()
 {
@@ -94,7 +94,7 @@ void QGLFramebufferObject_new4()
 }
 
 /*
-QGLFramebufferObject ( int width, int height, Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
+QGLFramebufferObject( int width, int height, QGLFramebufferObject::Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
 */
 void QGLFramebufferObject_new5()
 {
@@ -103,22 +103,13 @@ void QGLFramebufferObject_new5()
 }
 
 /*
-QGLFramebufferObject ( const QSize & size, Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
+QGLFramebufferObject( const QSize & size, QGLFramebufferObject::Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
 */
 void QGLFramebufferObject_new6()
 {
   QGLFramebufferObject * obj = new QGLFramebufferObject( *PQSIZE(1), (QGLFramebufferObject::Attachment) hb_parni(2), OPGLENUM(3,GL_TEXTURE_2D), OPGLENUM(4,GL_RGBA8) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QGLFramebufferObject ( const QSize & size, GLenum target = GL_TEXTURE_2D )
-[2]QGLFramebufferObject ( int width, int height, GLenum target = GL_TEXTURE_2D )
-[3]QGLFramebufferObject ( const QSize & size, const QGLFramebufferObjectFormat & format )
-[4]QGLFramebufferObject ( int width, int height, const QGLFramebufferObjectFormat & format )
-[5]QGLFramebufferObject ( int width, int height, Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
-[6]QGLFramebufferObject ( const QSize & size, Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
-*/
 
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW )
 {
@@ -218,7 +209,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_BIND )
 }
 
 /*
-void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+void drawTexture( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
 void QGLFramebufferObject_drawTexture1()
 {
@@ -233,7 +224,7 @@ void QGLFramebufferObject_drawTexture1()
 }
 
 /*
-void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+void drawTexture( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
 void QGLFramebufferObject_drawTexture2()
 {
@@ -246,11 +237,6 @@ void QGLFramebufferObject_drawTexture2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-[2]void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-*/
 
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_DRAWTEXTURE )
 {

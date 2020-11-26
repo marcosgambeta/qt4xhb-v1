@@ -106,7 +106,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QGLFunctions ()
+QGLFunctions()
 */
 void QGLFunctions_new1()
 {
@@ -115,18 +115,13 @@ void QGLFunctions_new1()
 }
 
 /*
-QGLFunctions ( const QGLContext * context )
+QGLFunctions( const QGLContext * context )
 */
 void QGLFunctions_new2()
 {
   QGLFunctions * obj = new QGLFunctions( PQGLCONTEXT(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QGLFunctions ()
-[2]QGLFunctions ( const QGLContext * context )
-*/
 
 HB_FUNC_STATIC( QGLFUNCTIONS_NEW )
 {

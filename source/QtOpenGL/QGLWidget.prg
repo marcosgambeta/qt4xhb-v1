@@ -70,7 +70,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QGLWidget ( QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
+QGLWidget( QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
 */
 void QGLWidget_new1()
 {
@@ -79,7 +79,7 @@ void QGLWidget_new1()
 }
 
 /*
-QGLWidget ( QGLContext * context, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
+QGLWidget( QGLContext * context, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
 */
 void QGLWidget_new2()
 {
@@ -88,19 +88,13 @@ void QGLWidget_new2()
 }
 
 /*
-QGLWidget ( const QGLFormat & format, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
+QGLWidget( const QGLFormat & format, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
 */
 void QGLWidget_new3()
 {
   QGLWidget * obj = new QGLWidget( *PQGLFORMAT(1), OPQWIDGET(2,0), OPQGLWIDGET(3,0), ISNIL(4)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(4) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QGLWidget ( QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
-[2]QGLWidget ( QGLContext * context, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
-[3]QGLWidget ( const QGLFormat & format, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
-*/
 
 HB_FUNC_STATIC( QGLWIDGET_NEW )
 {
@@ -142,7 +136,7 @@ HB_FUNC_STATIC( QGLWIDGET_DELETE )
 }
 
 /*
-GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
+GLuint bindTexture( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
 */
 void QGLWidget_bindTexture1()
 {
@@ -155,7 +149,7 @@ void QGLWidget_bindTexture1()
 }
 
 /*
-GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
+GLuint bindTexture( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
 */
 void QGLWidget_bindTexture2()
 {
@@ -168,7 +162,7 @@ void QGLWidget_bindTexture2()
 }
 
 /*
-GLuint bindTexture ( const QImage & image, GLenum target, GLint format, QGLContext::BindOptions options )
+GLuint bindTexture( const QImage & image, GLenum target, GLint format, QGLContext::BindOptions options )
 */
 void QGLWidget_bindTexture3()
 {
@@ -181,7 +175,7 @@ void QGLWidget_bindTexture3()
 }
 
 /*
-GLuint bindTexture ( const QPixmap & pixmap, GLenum target, GLint format, QGLContext::BindOptions options )
+GLuint bindTexture( const QPixmap & pixmap, GLenum target, GLint format, QGLContext::BindOptions options )
 */
 void QGLWidget_bindTexture4()
 {
@@ -194,7 +188,7 @@ void QGLWidget_bindTexture4()
 }
 
 /*
-GLuint bindTexture ( const QString & fileName )
+GLuint bindTexture( const QString & fileName )
 */
 void QGLWidget_bindTexture5()
 {
@@ -205,14 +199,6 @@ void QGLWidget_bindTexture5()
     RGLUINT( obj->bindTexture( PQSTRING(1) ) );
   }
 }
-
-/*
-[1]GLuint bindTexture ( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
-[2]GLuint bindTexture ( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint format = GL_RGBA )
-[3]GLuint bindTexture ( const QImage & image, GLenum target, GLint format, QGLContext::BindOptions options )
-[4]GLuint bindTexture ( const QPixmap & pixmap, GLenum target, GLint format, QGLContext::BindOptions options )
-[5]GLuint bindTexture ( const QString & fileName )
-*/
 
 HB_FUNC_STATIC( QGLWIDGET_BINDTEXTURE )
 {
@@ -369,7 +355,7 @@ HB_FUNC_STATIC( QGLWIDGET_DOUBLEBUFFER )
 }
 
 /*
-void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+void drawTexture( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
 void QGLWidget_drawTexture1()
 {
@@ -384,7 +370,7 @@ void QGLWidget_drawTexture1()
 }
 
 /*
-void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
+void drawTexture( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
 */
 void QGLWidget_drawTexture2()
 {
@@ -397,11 +383,6 @@ void QGLWidget_drawTexture2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void drawTexture ( const QRectF & target, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-[2]void drawTexture ( const QPointF & point, GLuint textureId, GLenum textureTarget = GL_TEXTURE_2D )
-*/
 
 HB_FUNC_STATIC( QGLWIDGET_DRAWTEXTURE )
 {
@@ -672,7 +653,7 @@ HB_FUNC_STATIC( QGLWIDGET_RENDERPIXMAP )
 }
 
 /*
-void renderText ( int x, int y, const QString & str, const QFont & font = QFont(), int listBase = 2000 )
+void renderText( int x, int y, const QString & str, const QFont & font = QFont(), int listBase = 2000 )
 */
 void QGLWidget_renderText1()
 {
@@ -687,7 +668,7 @@ void QGLWidget_renderText1()
 }
 
 /*
-void renderText ( double x, double y, double z, const QString & str, const QFont & font = QFont(), int listBase = 2000 )
+void renderText( double x, double y, double z, const QString & str, const QFont & font = QFont(), int listBase = 2000 )
 */
 void QGLWidget_renderText2()
 {
@@ -700,11 +681,6 @@ void QGLWidget_renderText2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void renderText ( int x, int y, const QString & str, const QFont & font = QFont(), int listBase = 2000 )
-[2]void renderText ( double x, double y, double z, const QString & str, const QFont & font = QFont(), int listBase = 2000 )
-*/
 
 HB_FUNC_STATIC( QGLWIDGET_RENDERTEXT )
 {
