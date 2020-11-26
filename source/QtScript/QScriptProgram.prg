@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QScriptProgram ()
+QScriptProgram()
 */
 void QScriptProgram_new1()
 {
@@ -61,23 +61,13 @@ void QScriptProgram_new1()
 }
 
 /*
-QScriptProgram ( const QString & sourceCode, const QString fileName = QString(), int firstLineNumber = 1 )
-*/
-
-/*
-QScriptProgram ( const QScriptProgram & other )
+QScriptProgram( const QScriptProgram & other )
 */
 void QScriptProgram_new3()
 {
   QScriptProgram * obj = new QScriptProgram( *PQSCRIPTPROGRAM(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QScriptProgram ()
-[2]QScriptProgram ( const QString & sourceCode, const QString fileName = QString(), int firstLineNumber = 1 )
-[3]QScriptProgram ( const QScriptProgram & other )
-*/
 
 HB_FUNC_STATIC( QSCRIPTPROGRAM_NEW )
 {

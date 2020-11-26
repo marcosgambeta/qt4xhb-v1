@@ -59,7 +59,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QScriptClass ( QScriptEngine * engine )
+QScriptClass( QScriptEngine * engine )
 */
 HB_FUNC_STATIC( QSCRIPTCLASS_NEW )
 {
@@ -90,10 +90,6 @@ HB_FUNC_STATIC( QSCRIPTCLASS_DELETE )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-QScriptEngine * engine () const
-*/
 
 /*
 virtual QVariant extension( QScriptClass::Extension extension, const QVariant & argument = QVariant() )
@@ -242,10 +238,6 @@ HB_FUNC_STATIC( QSCRIPTCLASS_PROTOTYPE )
 #endif
   }
 }
-
-/*
-virtual QueryFlags queryProperty ( const QScriptValue & object, const QScriptString & name, QueryFlags flags, uint * id )
-*/
 
 /*
 virtual void setProperty( QScriptValue & object, const QScriptString & name, uint id, const QScriptValue & value )

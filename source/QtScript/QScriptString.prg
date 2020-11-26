@@ -50,7 +50,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QScriptString ()
+QScriptString()
 */
 void QScriptString_new1()
 {
@@ -59,18 +59,13 @@ void QScriptString_new1()
 }
 
 /*
-QScriptString ( const QScriptString & other )
+QScriptString( const QScriptString & other )
 */
 void QScriptString_new2()
 {
   QScriptString * obj = new QScriptString( *PQSCRIPTSTRING(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QScriptString ()
-[2]QScriptString ( const QScriptString & other )
-*/
 
 HB_FUNC_STATIC( QSCRIPTSTRING_NEW )
 {

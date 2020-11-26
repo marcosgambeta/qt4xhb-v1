@@ -64,7 +64,7 @@ RETURN
 #include <QtScript/QScriptEngine>
 
 /*
-QScriptEngineAgent ( QScriptEngine * engine )
+QScriptEngineAgent( QScriptEngine * engine )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_NEW )
 {

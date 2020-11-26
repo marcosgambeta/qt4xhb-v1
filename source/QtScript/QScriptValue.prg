@@ -105,7 +105,7 @@ RETURN
 #include <QtCore/QVariant>
 
 /*
-QScriptValue ()
+QScriptValue()
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW1 )
 {
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW1 )
 }
 
 /*
-QScriptValue ( const QScriptValue & other )
+QScriptValue( const QScriptValue & other )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW2 )
 {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW2 )
 }
 
 /*
-QScriptValue ( SpecialValue value )
+QScriptValue( QScriptValue::SpecialValue value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW3 )
 {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW3 )
 }
 
 /*
-QScriptValue ( bool value )
+QScriptValue( bool value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW4 )
 {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW4 )
 }
 
 /*
-QScriptValue ( int value )
+QScriptValue( int value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW5 )
 {
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW5 )
 }
 
 /*
-QScriptValue ( uint value )
+QScriptValue( uint value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW6 )
 {
@@ -159,11 +159,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW6 )
 }
 
 /*
-QScriptValue ( qsreal value )
-*/
-
-/*
-QScriptValue ( const QString & value )
+QScriptValue( const QString & value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW8 )
 {
@@ -172,30 +168,13 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW8 )
 }
 
 /*
-QScriptValue ( const QLatin1String & value )
-*/
-
-/*
-QScriptValue ( const char * value )
+QScriptValue( const char * value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW10 )
 {
   QScriptValue * obj = new QScriptValue( PCONSTCHAR(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[01]QScriptValue ()
-[02]QScriptValue ( const QScriptValue & other )
-[03]QScriptValue ( SpecialValue value )
-[04]QScriptValue ( bool value )
-[05]QScriptValue ( int value )
-[06]QScriptValue ( uint value )
-[07]QScriptValue ( qsreal value )
-[08]QScriptValue ( const QString & value )
-[09]QScriptValue ( const QLatin1String & value )
-[10]QScriptValue ( const char * value )
-*/
 
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
 {
@@ -246,9 +225,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-QScriptValue call ( const QScriptValue & thisObject = QScriptValue(), const QScriptValueList & args = QScriptValueList() )
-*/
+// QScriptValue call ( const QScriptValue & thisObject = QScriptValue(), const QScriptValueList & args = QScriptValueList() )
 HB_FUNC_STATIC( QSCRIPTVALUE_CALL1 )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -270,7 +247,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CALL1 )
 }
 
 /*
-QScriptValue call ( const QScriptValue & thisObject, const QScriptValue & arguments )
+QScriptValue call( const QScriptValue & thisObject, const QScriptValue & arguments )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_CALL2 )
 {
@@ -294,11 +271,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CALL2 )
   }
 }
 
-/*
-[1]QScriptValue call ( const QScriptValue & thisObject = QScriptValue(), const QScriptValueList & args = QScriptValueList() )
-[2]QScriptValue call ( const QScriptValue & thisObject, const QScriptValue & arguments )
-*/
-
 HB_FUNC_STATIC( QSCRIPTVALUE_CALL )
 {
   if( ISBETWEEN(0,2) && (ISQSCRIPTVALUE(1)||ISNIL(1)) && (ISOBJECT(2)||ISNIL(2)) )
@@ -315,9 +287,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CALL )
   }
 }
 
-/*
-QScriptValue construct ( const QScriptValueList & args = QScriptValueList() )
-*/
+// QScriptValue construct ( const QScriptValueList & args = QScriptValueList() )
 HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT1 )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -338,7 +308,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT1 )
 }
 
 /*
-QScriptValue construct ( const QScriptValue & arguments )
+QScriptValue construct( const QScriptValue & arguments )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT2 )
 {
@@ -361,11 +331,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT2 )
 #endif
   }
 }
-
-/*
-[1]QScriptValue construct ( const QScriptValueList & args = QScriptValueList() )
-[2]QScriptValue construct ( const QScriptValue & arguments )
-*/
 
 HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT )
 {
@@ -407,10 +372,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_DATA )
 #endif
   }
 }
-
-/*
-QScriptEngine * engine () const
-*/
 
 /*
 bool equals( const QScriptValue & other ) const
@@ -1068,14 +1029,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOINT32 )
 #endif
   }
 }
-
-/*
-qsreal toInteger () const
-*/
-
-/*
-qsreal toNumber () const
-*/
 
 /*
 QObject * toQObject() const

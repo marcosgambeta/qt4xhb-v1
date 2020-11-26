@@ -83,7 +83,7 @@ RETURN
 #include <QtCore/QStringList>
 
 /*
-QScriptEngine ()
+QScriptEngine()
 */
 void QScriptEngine_new1()
 {
@@ -92,18 +92,13 @@ void QScriptEngine_new1()
 }
 
 /*
-QScriptEngine ( QObject * parent )
+QScriptEngine( QObject * parent )
 */
 void QScriptEngine_new2()
 {
   QScriptEngine * obj = new QScriptEngine( PQOBJECT(1) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QScriptEngine ()
-[2]QScriptEngine ( QObject * parent )
-*/
 
 HB_FUNC_STATIC( QSCRIPTENGINE_NEW )
 {
@@ -318,7 +313,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_DEFAULTPROTOTYPE )
 }
 
 /*
-QScriptValue evaluate ( const QString & program, const QString & fileName = QString(), int lineNumber = 1 )
+QScriptValue evaluate( const QString & program, const QString & fileName = QString(), int lineNumber = 1 )
 */
 void QScriptEngine_evaluate1()
 {
@@ -332,7 +327,7 @@ void QScriptEngine_evaluate1()
 }
 
 /*
-QScriptValue evaluate ( const QScriptProgram & program )
+QScriptValue evaluate( const QScriptProgram & program )
 */
 void QScriptEngine_evaluate2()
 {
@@ -344,11 +339,6 @@ void QScriptEngine_evaluate2()
     Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
   }
 }
-
-/*
-[1]QScriptValue evaluate ( const QString & program, const QString & fileName = QString(), int lineNumber = 1 )
-[2]QScriptValue evaluate ( const QScriptProgram & program )
-*/
 
 HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE )
 {
@@ -540,7 +530,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWARRAY )
 }
 
 /*
-QScriptValue newRegExp ( const QRegExp & regexp )
+QScriptValue newRegExp( const QRegExp & regexp )
 */
 void QScriptEngine_newRegExp1()
 {
@@ -554,7 +544,7 @@ void QScriptEngine_newRegExp1()
 }
 
 /*
-QScriptValue newRegExp ( const QString & pattern, const QString & flags )
+QScriptValue newRegExp( const QString & pattern, const QString & flags )
 */
 void QScriptEngine_newRegExp2()
 {
@@ -566,11 +556,6 @@ void QScriptEngine_newRegExp2()
     Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
   }
 }
-
-/*
-[1]QScriptValue newRegExp ( const QRegExp & regexp )
-[2]QScriptValue newRegExp ( const QString & pattern, const QString & flags )
-*/
 
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP )
 {
@@ -589,7 +574,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP )
 }
 
 /*
-QScriptValue newVariant ( const QVariant & value )
+QScriptValue newVariant( const QVariant & value )
 */
 void QScriptEngine_newVariant1()
 {
@@ -603,7 +588,7 @@ void QScriptEngine_newVariant1()
 }
 
 /*
-QScriptValue newVariant ( const QScriptValue & object, const QVariant & value )
+QScriptValue newVariant( const QScriptValue & object, const QVariant & value )
 */
 void QScriptEngine_newVariant2()
 {
@@ -615,11 +600,6 @@ void QScriptEngine_newVariant2()
     Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
   }
 }
-
-/*
-[1]QScriptValue newVariant ( const QVariant & value )
-[2]QScriptValue newVariant ( const QScriptValue & object, const QVariant & value )
-*/
 
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT )
 {
