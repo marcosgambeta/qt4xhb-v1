@@ -9,7 +9,7 @@
   marcosgambeta AT gmail DOT com
 
   Website:
-  https://github.com/marcosgambeta/Qt4xHb
+  https://github.com/marcosgambeta/qt4xhb
 
 */
 
