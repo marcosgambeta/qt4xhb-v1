@@ -61,7 +61,7 @@ RETURN
 #include <QtCore/QDateTime>
 
 /*
-QNetworkCacheMetaData ()
+QNetworkCacheMetaData()
 */
 void QNetworkCacheMetaData_new1()
 {
@@ -70,18 +70,13 @@ void QNetworkCacheMetaData_new1()
 }
 
 /*
-QNetworkCacheMetaData ( const QNetworkCacheMetaData & other )
+QNetworkCacheMetaData( const QNetworkCacheMetaData & other )
 */
 void QNetworkCacheMetaData_new2()
 {
   QNetworkCacheMetaData * obj = new QNetworkCacheMetaData( *PQNETWORKCACHEMETADATA(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QNetworkCacheMetaData ()
-[2]QNetworkCacheMetaData ( const QNetworkCacheMetaData & other )
-*/
 
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEW )
 {

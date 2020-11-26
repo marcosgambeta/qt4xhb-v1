@@ -54,7 +54,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QNetworkConfigurationManager ( QObject * parent = 0 )
+QNetworkConfigurationManager( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_NEW )
 {

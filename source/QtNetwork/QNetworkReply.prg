@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_HEADER )
 }
 
 /*
-void ignoreSslErrors ( const QList<QSslError> & errors )
+void ignoreSslErrors( const QList<QSslError> & errors )
 */
 void QNetworkReply_ignoreSslErrors1()
 {
@@ -240,7 +240,7 @@ void QNetworkReply_ignoreSslErrors1()
 }
 
 /*
-virtual void ignoreSslErrors ()
+virtual void ignoreSslErrors()
 */
 void QNetworkReply_ignoreSslErrors2()
 {
@@ -253,11 +253,6 @@ void QNetworkReply_ignoreSslErrors2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void ignoreSslErrors ( const QList<QSslError> & errors )
-[2]virtual void ignoreSslErrors ()
-*/
 
 HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS )
 {

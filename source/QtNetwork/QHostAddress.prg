@@ -59,7 +59,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QHostAddress ()
+QHostAddress()
 */
 void QHostAddress_new1()
 {
@@ -68,7 +68,7 @@ void QHostAddress_new1()
 }
 
 /*
-QHostAddress ( quint32 ip4Addr )
+QHostAddress( quint32 ip4Addr )
 */
 HB_FUNC_STATIC( QHOSTADDRESS_NEW2 )
 {
@@ -77,19 +77,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW2 )
 }
 
 /*
-QHostAddress ( quint8 * ip6Addr )
-*/
-
-/*
-QHostAddress ( const Q_IPV6ADDR & ip6Addr )
-*/
-
-/*
-QHostAddress ( const sockaddr * sockaddr )
-*/
-
-/*
-QHostAddress ( const QString & address )
+QHostAddress( const QString & address )
 */
 void QHostAddress_new6()
 {
@@ -98,7 +86,7 @@ void QHostAddress_new6()
 }
 
 /*
-QHostAddress ( const QHostAddress & address )
+QHostAddress( const QHostAddress & address )
 */
 void QHostAddress_new7()
 {
@@ -107,7 +95,7 @@ void QHostAddress_new7()
 }
 
 /*
-QHostAddress ( SpecialAddress address )
+QHostAddress( QHostAddress::SpecialAddress address )
 */
 HB_FUNC_STATIC( QHOSTADDRESS_NEW8 )
 {
@@ -115,22 +103,15 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW8 )
   Qt4xHb::returnNewObject( obj, true );
 }
 
-/*
-[1]QHostAddress ()
-[2]QHostAddress ( quint32 ip4Addr )
-[3]QHostAddress ( quint8 * ip6Addr )
-[4]QHostAddress ( const Q_IPV6ADDR & ip6Addr )
-[5]QHostAddress ( const sockaddr * sockaddr )
-[6]QHostAddress ( const QString & address )
-[7]QHostAddress ( const QHostAddress & address )
-[8]QHostAddress ( SpecialAddress address )
-*/
-
 HB_FUNC_STATIC( QHOSTADDRESS_NEW )
 {
   if( ISNUMPAR(0) )
   {
     QHostAddress_new1();
+  }
+  else if( ISNUMPAR(1) && ISNUM(1) )
+  {
+    HB_FUNC_EXEC( QHOSTADDRESS_NEW2 );
   }
   else if( ISNUMPAR(1) && ISCHAR(1) )
   {
@@ -194,7 +175,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_CLEAR )
 }
 
 /*
-bool isInSubnet ( const QHostAddress & subnet, int netmask ) const
+bool isInSubnet( const QHostAddress & subnet, int netmask ) const
 */
 void QHostAddress_isInSubnet1()
 {
@@ -205,15 +186,6 @@ void QHostAddress_isInSubnet1()
     RBOOL( obj->isInSubnet( *PQHOSTADDRESS(1), PINT(2) ) );
   }
 }
-
-/*
-bool isInSubnet ( const QPair<QHostAddress, int> & subnet ) const
-*/
-
-/*
-[1]bool isInSubnet ( const QHostAddress & subnet, int netmask ) const
-[2]bool isInSubnet ( const QPair<QHostAddress, int> & subnet ) const
-*/
 
 HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET )
 {
@@ -300,7 +272,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SCOPEID )
 }
 
 /*
-void setAddress ( quint32 ip4Addr )
+void setAddress( quint32 ip4Addr )
 */
 void QHostAddress_setAddress1()
 {
@@ -315,15 +287,7 @@ void QHostAddress_setAddress1()
 }
 
 /*
-void setAddress ( quint8 * ip6Addr )
-*/
-
-/*
-void setAddress ( const Q_IPV6ADDR & ip6Addr )
-*/
-
-/*
-bool setAddress ( const QString & address )
+bool setAddress( const QString & address )
 */
 void QHostAddress_setAddress4()
 {
@@ -334,18 +298,6 @@ void QHostAddress_setAddress4()
     RBOOL( obj->setAddress( PQSTRING(1) ) );
   }
 }
-
-/*
-void setAddress ( const sockaddr * sockaddr )
-*/
-
-/*
-[1]void setAddress ( quint32 ip4Addr )
-[2]void setAddress ( quint8 * ip6Addr )
-[3]void setAddress ( const Q_IPV6ADDR & ip6Addr )
-[4]bool setAddress ( const QString & address )
-[5]void setAddress ( const sockaddr * sockaddr )
-*/
 
 HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS )
 {
@@ -412,10 +364,6 @@ HB_FUNC_STATIC( QHOSTADDRESS_TOIPV4ADDRESS )
 #endif
   }
 }
-
-/*
-Q_IPV6ADDR toIPv6Address () const
-*/
 
 /*
 QString toString() const

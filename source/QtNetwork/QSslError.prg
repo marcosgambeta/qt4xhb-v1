@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QSslError ()
+QSslError()
 */
 void QSslError_new1()
 {
@@ -61,7 +61,7 @@ void QSslError_new1()
 }
 
 /*
-QSslError ( SslError error )
+QSslError( QSslError::SslError error )
 */
 void QSslError_new2()
 {
@@ -70,7 +70,7 @@ void QSslError_new2()
 }
 
 /*
-QSslError ( SslError error, const QSslCertificate & certificate )
+QSslError( QSslError::SslError error, const QSslCertificate & certificate )
 */
 void QSslError_new3()
 {
@@ -79,20 +79,13 @@ void QSslError_new3()
 }
 
 /*
-QSslError ( const QSslError & other )
+QSslError( const QSslError & other )
 */
 void QSslError_new4()
 {
   QSslError * obj = new QSslError( *PQSSLERROR(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QSslError ()
-[2]QSslError ( SslError error )
-[3]QSslError ( SslError error, const QSslCertificate & certificate )
-[4]QSslError ( const QSslError & other )
-*/
 
 HB_FUNC_STATIC( QSSLERROR_NEW )
 {

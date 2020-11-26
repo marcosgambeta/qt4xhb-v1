@@ -78,7 +78,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QFtp ( QObject * parent = 0 )
+QFtp( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QFTP_NEW )
 {
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QFTP_MKDIR )
 }
 
 /*
-int put ( QIODevice * dev, const QString & file, TransferType type = Binary )
+int put( QIODevice * dev, const QString & file, QFtp::TransferType type = QFtp::Binary )
 */
 void QFtp_put1()
 {
@@ -489,7 +489,7 @@ void QFtp_put1()
 }
 
 /*
-int put ( const QByteArray & data, const QString & file, TransferType type = Binary )
+int put( const QByteArray & data, const QString & file, QFtp::TransferType type = QFtp::Binary )
 */
 void QFtp_put2()
 {
@@ -500,11 +500,6 @@ void QFtp_put2()
     RINT( obj->put( *PQBYTEARRAY(1), PQSTRING(2), ISNIL(3)? (QFtp::TransferType) QFtp::Binary : (QFtp::TransferType) hb_parni(3) ) );
   }
 }
-
-/*
-[1]int put ( QIODevice * dev, const QString & file, TransferType type = Binary )
-[2]int put ( const QByteArray & data, const QString & file, TransferType type = Binary )
-*/
 
 HB_FUNC_STATIC( QFTP_PUT )
 {

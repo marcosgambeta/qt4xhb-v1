@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QHttpPart ()
+QHttpPart()
 */
 void QHttpPart_new1()
 {
@@ -61,18 +61,13 @@ void QHttpPart_new1()
 }
 
 /*
-QHttpPart ( const QHttpPart & other )
+QHttpPart( const QHttpPart & other )
 */
 void QHttpPart_new2()
 {
   QHttpPart * obj = new QHttpPart( *PQHTTPPART(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QHttpPart ()
-[2]QHttpPart ( const QHttpPart & other )
-*/
 
 HB_FUNC_STATIC( QHTTPPART_NEW )
 {

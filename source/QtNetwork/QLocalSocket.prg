@@ -66,7 +66,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QLocalSocket ( QObject * parent = 0 )
+QLocalSocket( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QLOCALSOCKET_NEW )
 {

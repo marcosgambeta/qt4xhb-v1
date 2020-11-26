@@ -59,7 +59,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QNetworkConfiguration ()
+QNetworkConfiguration()
 */
 void QNetworkConfiguration_new1()
 {
@@ -68,18 +68,13 @@ void QNetworkConfiguration_new1()
 }
 
 /*
-QNetworkConfiguration ( const QNetworkConfiguration & other )
+QNetworkConfiguration( const QNetworkConfiguration & other )
 */
 void QNetworkConfiguration_new2()
 {
   QNetworkConfiguration * obj = new QNetworkConfiguration( *PQNETWORKCONFIGURATION(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QNetworkConfiguration ()
-[2]QNetworkConfiguration ( const QNetworkConfiguration & other )
-*/
 
 HB_FUNC_STATIC( QNETWORKCONFIGURATION_NEW )
 {

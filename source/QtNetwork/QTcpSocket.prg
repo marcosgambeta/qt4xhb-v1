@@ -41,7 +41,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QTcpSocket ( QObject * parent = 0 )
+QTcpSocket( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QTCPSOCKET_NEW )
 {

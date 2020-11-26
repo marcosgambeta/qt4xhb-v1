@@ -78,7 +78,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QUrlInfo ()
+QUrlInfo()
 */
 void QUrlInfo_new1()
 {
@@ -87,7 +87,7 @@ void QUrlInfo_new1()
 }
 
 /*
-QUrlInfo ( const QUrlInfo & ui )
+QUrlInfo( const QUrlInfo & ui )
 */
 void QUrlInfo_new2()
 {
@@ -96,7 +96,7 @@ void QUrlInfo_new2()
 }
 
 /*
-QUrlInfo ( const QString & name, int permissions, const QString & owner, const QString & group, qint64 size, const QDateTime & lastModified, const QDateTime & lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable )
+QUrlInfo( const QString & name, int permissions, const QString & owner, const QString & group, qint64 size, const QDateTime & lastModified, const QDateTime & lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable )
 */
 void QUrlInfo_new3()
 {
@@ -105,20 +105,13 @@ void QUrlInfo_new3()
 }
 
 /*
-QUrlInfo ( const QUrl & url, int permissions, const QString & owner, const QString & group, qint64 size, const QDateTime & lastModified, const QDateTime & lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable )
+QUrlInfo( const QUrl & url, int permissions, const QString & owner, const QString & group, qint64 size, const QDateTime & lastModified, const QDateTime & lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable )
 */
 void QUrlInfo_new4()
 {
   QUrlInfo * obj = new QUrlInfo( *PQURL(1), PINT(2), PQSTRING(3), PQSTRING(4), PQINT64(5), *PQDATETIME(6), *PQDATETIME(7), PBOOL(8), PBOOL(9), PBOOL(10), PBOOL(11), PBOOL(12), PBOOL(13) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QUrlInfo ()
-[2]QUrlInfo ( const QUrlInfo & ui )
-[3]QUrlInfo ( const QString & name, int permissions, const QString & owner, const QString & group, qint64 size, const QDateTime & lastModified, const QDateTime & lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable )
-[4]QUrlInfo ( const QUrl & url, int permissions, const QString & owner, const QString & group, qint64 size, const QDateTime & lastModified, const QDateTime & lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable )
-*/
 
 HB_FUNC_STATIC( QURLINFO_NEW )
 {

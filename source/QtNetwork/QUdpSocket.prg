@@ -45,7 +45,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QUdpSocket ( QObject * parent = 0 )
+QUdpSocket( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QUDPSOCKET_NEW )
 {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QUDPSOCKET_DELETE )
 }
 
 /*
-bool bind ( const QHostAddress & address, quint16 port )
+bool bind( const QHostAddress & address, quint16 port )
 */
 void QUdpSocket_bind1()
 {
@@ -93,7 +93,7 @@ void QUdpSocket_bind1()
 }
 
 /*
-bool bind ( const QHostAddress & address, quint16 port, BindMode mode )
+bool bind( const QHostAddress & address, quint16 port, QUdpSocket::BindMode mode )
 */
 void QUdpSocket_bind2()
 {
@@ -106,7 +106,7 @@ void QUdpSocket_bind2()
 }
 
 /*
-bool bind ( quint16 port = 0 )
+bool bind( quint16 port = 0 )
 */
 void QUdpSocket_bind3()
 {
@@ -119,7 +119,7 @@ void QUdpSocket_bind3()
 }
 
 /*
-bool bind ( quint16 port, BindMode mode )
+bool bind( quint16 port, QUdpSocket::BindMode mode )
 */
 void QUdpSocket_bind4()
 {
@@ -130,13 +130,6 @@ void QUdpSocket_bind4()
     RBOOL( obj->bind( PQUINT16(1), (QUdpSocket::BindMode) hb_parni(2) ) );
   }
 }
-
-/*
-[1]bool bind ( const QHostAddress & address, quint16 port )
-[2]bool bind ( const QHostAddress & address, quint16 port, BindMode mode )
-[3]bool bind ( quint16 port = 0 )
-[4]bool bind ( quint16 port, BindMode mode )
-*/
 
 HB_FUNC_STATIC( QUDPSOCKET_BIND )
 {
@@ -211,11 +204,7 @@ HB_FUNC_STATIC( QUDPSOCKET_PENDINGDATAGRAMSIZE )
 }
 
 /*
-qint64 readDatagram ( char * data, qint64 maxSize, QHostAddress * address = 0, quint16 * port = 0 )
-*/
-
-/*
-qint64 writeDatagram ( const char * data, qint64 size, const QHostAddress & address, quint16 port )
+qint64 writeDatagram( const char * data, qint64 size, const QHostAddress & address, quint16 port )
 */
 void QUdpSocket_writeDatagram1()
 {
@@ -228,7 +217,7 @@ void QUdpSocket_writeDatagram1()
 }
 
 /*
-qint64 writeDatagram ( const QByteArray & datagram, const QHostAddress & host, quint16 port )
+qint64 writeDatagram( const QByteArray & datagram, const QHostAddress & host, quint16 port )
 */
 void QUdpSocket_writeDatagram2()
 {
@@ -239,11 +228,6 @@ void QUdpSocket_writeDatagram2()
     RQINT64( obj->writeDatagram( *PQBYTEARRAY(1), *PQHOSTADDRESS(2), PQUINT16(3) ) );
   }
 }
-
-/*
-[1]qint64 writeDatagram ( const char * data, qint64 size, const QHostAddress & address, quint16 port )
-[2]qint64 writeDatagram ( const QByteArray & datagram, const QHostAddress & host, quint16 port )
-*/
 
 HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM )
 {

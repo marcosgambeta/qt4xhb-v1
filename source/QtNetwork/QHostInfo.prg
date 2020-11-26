@@ -64,7 +64,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QHostInfo ( int id = -1 )
+QHostInfo( int id = -1 )
 */
 void QHostInfo_new1()
 {
@@ -73,18 +73,13 @@ void QHostInfo_new1()
 }
 
 /*
-QHostInfo ( const QHostInfo & other )
+QHostInfo( const QHostInfo & other )
 */
 void QHostInfo_new2()
 {
   QHostInfo * obj = new QHostInfo( *PQHOSTINFO(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QHostInfo ( int id = -1 )
-[2]QHostInfo ( const QHostInfo & other )
-*/
 
 HB_FUNC_STATIC( QHOSTINFO_NEW )
 {

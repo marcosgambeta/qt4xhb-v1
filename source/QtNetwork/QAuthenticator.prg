@@ -57,7 +57,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QAuthenticator ()
+QAuthenticator()
 */
 void QAuthenticator_new1()
 {
@@ -66,18 +66,13 @@ void QAuthenticator_new1()
 }
 
 /*
-QAuthenticator ( const QAuthenticator & other )
+QAuthenticator( const QAuthenticator & other )
 */
 void QAuthenticator_new2()
 {
   QAuthenticator * obj = new QAuthenticator( *PQAUTHENTICATOR(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QAuthenticator ()
-[2]QAuthenticator ( const QAuthenticator & other )
-*/
 
 HB_FUNC_STATIC( QAUTHENTICATOR_NEW )
 {
@@ -160,10 +155,6 @@ HB_FUNC_STATIC( QAUTHENTICATOR_OPTION )
 #endif
   }
 }
-
-/*
-QVariantHash options () const
-*/
 
 /*
 QString password() const

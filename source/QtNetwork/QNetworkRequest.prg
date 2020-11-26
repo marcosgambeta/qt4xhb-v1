@@ -71,7 +71,7 @@ RETURN
 #include <QtNetwork/QSslConfiguration>
 
 /*
-QNetworkRequest ( const QUrl & url = QUrl() )
+QNetworkRequest( const QUrl & url = QUrl() )
 */
 void QNetworkRequest_new1()
 {
@@ -80,18 +80,13 @@ void QNetworkRequest_new1()
 }
 
 /*
-QNetworkRequest ( const QNetworkRequest & other )
+QNetworkRequest( const QNetworkRequest & other )
 */
 void QNetworkRequest_new2()
 {
   QNetworkRequest * obj = new QNetworkRequest( *PQNETWORKREQUEST(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QNetworkRequest ( const QUrl & url = QUrl() )
-[2]QNetworkRequest ( const QNetworkRequest & other )
-*/
 
 HB_FUNC_STATIC( QNETWORKREQUEST_NEW )
 {

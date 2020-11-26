@@ -64,7 +64,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QNetworkProxy ()
+QNetworkProxy()
 */
 void QNetworkProxy_new1()
 {
@@ -73,7 +73,7 @@ void QNetworkProxy_new1()
 }
 
 /*
-QNetworkProxy ( ProxyType type, const QString & hostName = QString(), quint16 port = 0, const QString & user = QString(), const QString & password = QString() )
+QNetworkProxy( QNetworkProxy::ProxyType type, const QString & hostName = QString(), quint16 port = 0, const QString & user = QString(), const QString & password = QString() )
 */
 void QNetworkProxy_new2()
 {
@@ -82,19 +82,13 @@ void QNetworkProxy_new2()
 }
 
 /*
-QNetworkProxy ( const QNetworkProxy & other )
+QNetworkProxy( const QNetworkProxy & other )
 */
 void QNetworkProxy_new3()
 {
   QNetworkProxy * obj = new QNetworkProxy( *PQNETWORKPROXY(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QNetworkProxy ()
-[2]QNetworkProxy ( ProxyType type, const QString & hostName = QString(), quint16 port = 0, const QString & user = QString(), const QString & password = QString() )
-[3]QNetworkProxy ( const QNetworkProxy & other )
-*/
 
 HB_FUNC_STATIC( QNETWORKPROXY_NEW )
 {

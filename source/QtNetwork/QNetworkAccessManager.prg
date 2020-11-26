@@ -78,7 +78,7 @@ RETURN
 #include <QtNetwork/QNetworkReply>
 
 /*
-QNetworkAccessManager ( QObject * parent = 0 )
+QNetworkAccessManager( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_NEW )
 {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_NETWORKACCESSIBLE )
 }
 
 /*
-QNetworkReply * post ( const QNetworkRequest & request, QIODevice * data )
+QNetworkReply * post( const QNetworkRequest & request, QIODevice * data )
 */
 void QNetworkAccessManager_post1()
 {
@@ -326,7 +326,7 @@ void QNetworkAccessManager_post1()
 }
 
 /*
-QNetworkReply * post ( const QNetworkRequest & request, const QByteArray & data )
+QNetworkReply * post( const QNetworkRequest & request, const QByteArray & data )
 */
 void QNetworkAccessManager_post2()
 {
@@ -338,11 +338,6 @@ void QNetworkAccessManager_post2()
     Qt4xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
   }
 }
-
-/*
-[1]QNetworkReply * post ( const QNetworkRequest & request, QIODevice * data )
-[2]QNetworkReply * post ( const QNetworkRequest & request, const QByteArray & data )
-*/
 
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_POST )
 {
@@ -411,7 +406,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PROXYFACTORY )
 }
 
 /*
-QNetworkReply * put ( const QNetworkRequest & request, QIODevice * data )
+QNetworkReply * put( const QNetworkRequest & request, QIODevice * data )
 */
 void QNetworkAccessManager_put1()
 {
@@ -425,7 +420,7 @@ void QNetworkAccessManager_put1()
 }
 
 /*
-QNetworkReply * put ( const QNetworkRequest & request, const QByteArray & data )
+QNetworkReply * put( const QNetworkRequest & request, const QByteArray & data )
 */
 void QNetworkAccessManager_put2()
 {
@@ -437,11 +432,6 @@ void QNetworkAccessManager_put2()
     Qt4xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
   }
 }
-
-/*
-[1]QNetworkReply * put ( const QNetworkRequest & request, QIODevice * data )
-[2]QNetworkReply * put ( const QNetworkRequest & request, const QByteArray & data )
-*/
 
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PUT )
 {

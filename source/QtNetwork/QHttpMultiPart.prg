@@ -46,7 +46,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QHttpMultiPart ( QObject * parent = 0 )
+QHttpMultiPart( QObject * parent = 0 )
 */
 void QHttpMultiPart_new1()
 {
@@ -55,18 +55,13 @@ void QHttpMultiPart_new1()
 }
 
 /*
-QHttpMultiPart ( ContentType contentType, QObject * parent = 0 )
+QHttpMultiPart( QHttpMultiPart::ContentType contentType, QObject * parent = 0 )
 */
 void QHttpMultiPart_new2()
 {
   QHttpMultiPart * obj = new QHttpMultiPart( (QHttpMultiPart::ContentType) hb_parni(1), OPQOBJECT(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QHttpMultiPart ( QObject * parent = 0 )
-[2]QHttpMultiPart ( ContentType contentType, QObject * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QHTTPMULTIPART_NEW )
 {

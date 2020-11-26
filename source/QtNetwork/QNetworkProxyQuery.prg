@@ -63,7 +63,7 @@ RETURN
 #include <QtCore/QUrl>
 
 /*
-QNetworkProxyQuery ()
+QNetworkProxyQuery()
 */
 void QNetworkProxyQuery_new1()
 {
@@ -72,7 +72,7 @@ void QNetworkProxyQuery_new1()
 }
 
 /*
-QNetworkProxyQuery ( const QUrl & requestUrl, QueryType queryType = UrlRequest )
+QNetworkProxyQuery( const QUrl & requestUrl, QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::UrlRequest )
 */
 void QNetworkProxyQuery_new2()
 {
@@ -81,7 +81,7 @@ void QNetworkProxyQuery_new2()
 }
 
 /*
-QNetworkProxyQuery ( const QString & hostname, int port, const QString & protocolTag = QString(), QueryType queryType = TcpSocket )
+QNetworkProxyQuery( const QString & hostname, int port, const QString & protocolTag = QString(), QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::TcpSocket )
 */
 void QNetworkProxyQuery_new3()
 {
@@ -90,7 +90,7 @@ void QNetworkProxyQuery_new3()
 }
 
 /*
-QNetworkProxyQuery ( quint16 bindPort, const QString & protocolTag = QString(), QueryType queryType = TcpServer )
+QNetworkProxyQuery( quint16 bindPort, const QString & protocolTag = QString(), QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::TcpServer )
 */
 void QNetworkProxyQuery_new4()
 {
@@ -99,7 +99,7 @@ void QNetworkProxyQuery_new4()
 }
 
 /*
-QNetworkProxyQuery ( const QNetworkProxyQuery & other )
+QNetworkProxyQuery( const QNetworkProxyQuery & other )
 */
 void QNetworkProxyQuery_new5()
 {
@@ -108,7 +108,7 @@ void QNetworkProxyQuery_new5()
 }
 
 /*
-QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, const QUrl & requestUrl, QueryType queryType = UrlRequest )
+QNetworkProxyQuery( const QNetworkConfiguration & networkConfiguration, const QUrl & requestUrl, QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::UrlRequest )
 */
 void QNetworkProxyQuery_new6()
 {
@@ -117,7 +117,7 @@ void QNetworkProxyQuery_new6()
 }
 
 /*
-QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, const QString & hostname, int port, const QString & protocolTag = QString(), QueryType queryType = TcpSocket )
+QNetworkProxyQuery( const QNetworkConfiguration & networkConfiguration, const QString & hostname, int port, const QString & protocolTag = QString(), QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::TcpSocket )
 */
 void QNetworkProxyQuery_new7()
 {
@@ -126,24 +126,13 @@ void QNetworkProxyQuery_new7()
 }
 
 /*
-QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, quint16 bindPort, const QString & protocolTag = QString(), QueryType queryType = TcpServer )
+QNetworkProxyQuery( const QNetworkConfiguration & networkConfiguration, quint16 bindPort, const QString & protocolTag = QString(), QNetworkProxyQuery::QueryType queryType = QNetworkProxyQuery::TcpServer )
 */
 void QNetworkProxyQuery_new8()
 {
   QNetworkProxyQuery * obj = new QNetworkProxyQuery( *PQNETWORKCONFIGURATION(1), PQUINT16(2), OPQSTRING(3,QString()), ISNIL(4)? (QNetworkProxyQuery::QueryType) QNetworkProxyQuery::TcpServer : (QNetworkProxyQuery::QueryType) hb_parni(4) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QNetworkProxyQuery ()
-[2]QNetworkProxyQuery ( const QUrl & requestUrl, QueryType queryType = UrlRequest )
-[3]QNetworkProxyQuery ( const QString & hostname, int port, const QString & protocolTag = QString(), QueryType queryType = TcpSocket )
-[4]QNetworkProxyQuery ( quint16 bindPort, const QString & protocolTag = QString(), QueryType queryType = TcpServer )
-[5]QNetworkProxyQuery ( const QNetworkProxyQuery & other )
-[6]QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, const QUrl & requestUrl, QueryType queryType = UrlRequest )
-[7]QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, const QString & hostname, int port, const QString & protocolTag = QString(), QueryType queryType = TcpSocket )
-[8]QNetworkProxyQuery ( const QNetworkConfiguration & networkConfiguration, quint16 bindPort, const QString & protocolTag = QString(), QueryType queryType = TcpServer )
-*/
 
 HB_FUNC_STATIC( QNETWORKPROXYQUERY_NEW )
 {

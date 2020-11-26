@@ -57,7 +57,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QSslCipher ()
+QSslCipher()
 */
 void QSslCipher_new1()
 {
@@ -66,7 +66,7 @@ void QSslCipher_new1()
 }
 
 /*
-QSslCipher ( const QString & name, QSsl::SslProtocol protocol )
+QSslCipher( const QString & name, QSsl::SslProtocol protocol )
 */
 void QSslCipher_new2()
 {
@@ -75,19 +75,13 @@ void QSslCipher_new2()
 }
 
 /*
-QSslCipher ( const QSslCipher & other )
+QSslCipher( const QSslCipher & other )
 */
 void QSslCipher_new3()
 {
   QSslCipher * obj = new QSslCipher( *PQSSLCIPHER(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QSslCipher ()
-[2]QSslCipher ( const QString & name, QSsl::SslProtocol protocol )
-[3]QSslCipher ( const QSslCipher & other )
-*/
 
 HB_FUNC_STATIC( QSSLCIPHER_NEW )
 {

@@ -61,7 +61,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QNetworkInterface ()
+QNetworkInterface()
 */
 void QNetworkInterface_new1()
 {
@@ -70,18 +70,13 @@ void QNetworkInterface_new1()
 }
 
 /*
-QNetworkInterface ( const QNetworkInterface & other )
+QNetworkInterface( const QNetworkInterface & other )
 */
 void QNetworkInterface_new2()
 {
   QNetworkInterface * obj = new QNetworkInterface( *PQNETWORKINTERFACE(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QNetworkInterface ()
-[2]QNetworkInterface ( const QNetworkInterface & other )
-*/
 
 HB_FUNC_STATIC( QNETWORKINTERFACE_NEW )
 {

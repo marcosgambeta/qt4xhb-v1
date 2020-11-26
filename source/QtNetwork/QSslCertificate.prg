@@ -70,7 +70,7 @@ RETURN
 #include <QtNetwork/QSslKey>
 
 /*
-QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
+QSslCertificate( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
 */
 void QSslCertificate_new1()
 {
@@ -79,7 +79,7 @@ void QSslCertificate_new1()
 }
 
 /*
-QSslCertificate ( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
+QSslCertificate( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
 */
 void QSslCertificate_new2()
 {
@@ -88,19 +88,13 @@ void QSslCertificate_new2()
 }
 
 /*
-QSslCertificate ( const QSslCertificate & other )
+QSslCertificate( const QSslCertificate & other )
 */
 void QSslCertificate_new3()
 {
   QSslCertificate * obj = new QSslCertificate( *PQSSLCERTIFICATE(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QSslCertificate ( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
-[2]QSslCertificate ( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
-[3]QSslCertificate ( const QSslCertificate & other )
-*/
 
 HB_FUNC_STATIC( QSSLCERTIFICATE_NEW )
 {
@@ -289,7 +283,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISVALID )
 }
 
 /*
-QString issuerInfo ( SubjectInfo subject ) const
+QString issuerInfo( QSslCertificate::SubjectInfo subject ) const
 */
 void QSslCertificate_issuerInfo1()
 {
@@ -302,7 +296,7 @@ void QSslCertificate_issuerInfo1()
 }
 
 /*
-QString issuerInfo ( const QByteArray & tag ) const
+QString issuerInfo( const QByteArray & tag ) const
 */
 void QSslCertificate_issuerInfo2()
 {
@@ -313,11 +307,6 @@ void QSslCertificate_issuerInfo2()
     RQSTRING( obj->issuerInfo( *PQBYTEARRAY(1) ) );
   }
 }
-
-/*
-[1]QString issuerInfo ( SubjectInfo subject ) const
-[2]QString issuerInfo ( const QByteArray & tag ) const
-*/
 
 HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO )
 {
@@ -386,7 +375,7 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SERIALNUMBER )
 }
 
 /*
-QString subjectInfo ( SubjectInfo subject ) const
+QString subjectInfo( QSslCertificate::SubjectInfo subject ) const
 */
 void QSslCertificate_subjectInfo1()
 {
@@ -399,7 +388,7 @@ void QSslCertificate_subjectInfo1()
 }
 
 /*
-QString subjectInfo ( const QByteArray & tag ) const
+QString subjectInfo( const QByteArray & tag ) const
 */
 void QSslCertificate_subjectInfo2()
 {
@@ -410,11 +399,6 @@ void QSslCertificate_subjectInfo2()
     RQSTRING( obj->subjectInfo( *PQBYTEARRAY(1) ) );
   }
 }
-
-/*
-[1]QString subjectInfo ( SubjectInfo subject ) const
-[2]QString subjectInfo ( const QByteArray & tag ) const
-*/
 
 HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFO )
 {

@@ -57,7 +57,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QNetworkAddressEntry ()
+QNetworkAddressEntry()
 */
 void QNetworkAddressEntry_new1()
 {
@@ -66,18 +66,13 @@ void QNetworkAddressEntry_new1()
 }
 
 /*
-QNetworkAddressEntry ( const QNetworkAddressEntry & other )
+QNetworkAddressEntry( const QNetworkAddressEntry & other )
 */
 void QNetworkAddressEntry_new2()
 {
   QNetworkAddressEntry * obj = new QNetworkAddressEntry( *PQNETWORKADDRESSENTRY(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QNetworkAddressEntry ()
-[2]QNetworkAddressEntry ( const QNetworkAddressEntry & other )
-*/
 
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW )
 {

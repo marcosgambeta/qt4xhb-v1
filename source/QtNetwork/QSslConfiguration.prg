@@ -74,7 +74,7 @@ RETURN
 #include <QtNetwork/QSslCipher>
 
 /*
-QSslConfiguration ()
+QSslConfiguration()
 */
 void QSslConfiguration_new1()
 {
@@ -83,18 +83,13 @@ void QSslConfiguration_new1()
 }
 
 /*
-QSslConfiguration ( const QSslConfiguration & other )
+QSslConfiguration( const QSslConfiguration & other )
 */
 void QSslConfiguration_new2()
 {
   QSslConfiguration * obj = new QSslConfiguration( *PQSSLCONFIGURATION(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QSslConfiguration ()
-[2]QSslConfiguration ( const QSslConfiguration & other )
-*/
 
 HB_FUNC_STATIC( QSSLCONFIGURATION_NEW )
 {

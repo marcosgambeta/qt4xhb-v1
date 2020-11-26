@@ -69,7 +69,7 @@ RETURN
 #include <QtCore/QDateTime>
 
 /*
-QNetworkCookie ( const QByteArray & name = QByteArray(), const QByteArray & value = QByteArray() )
+QNetworkCookie( const QByteArray & name = QByteArray(), const QByteArray & value = QByteArray() )
 */
 void QNetworkCookie_new1()
 {
@@ -78,18 +78,13 @@ void QNetworkCookie_new1()
 }
 
 /*
-QNetworkCookie ( const QNetworkCookie & other )
+QNetworkCookie( const QNetworkCookie & other )
 */
 void QNetworkCookie_new2()
 {
   QNetworkCookie * obj = new QNetworkCookie( *PQNETWORKCOOKIE(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QNetworkCookie ( const QByteArray & name = QByteArray(), const QByteArray & value = QByteArray() )
-[2]QNetworkCookie ( const QNetworkCookie & other )
-*/
 
 HB_FUNC_STATIC( QNETWORKCOOKIE_NEW )
 {

@@ -23,8 +23,7 @@ CLASS QAbstractSocket INHERIT QIODevice
    METHOD new
    METHOD delete
    METHOD abort
-   METHOD connectToHost1
-   METHOD connectToHost2
+   METHOD connectToHost
    METHOD disconnectFromHost
    METHOD error
    METHOD flush
@@ -86,7 +85,7 @@ RETURN
 #include <QtNetwork/QNetworkProxy>
 
 /*
-QAbstractSocket ( SocketType socketType, QObject * parent )
+QAbstractSocket( QAbstractSocket::SocketType socketType, QObject * parent )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_NEW )
 {
@@ -147,61 +146,50 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ABORT )
 }
 
 /*
-void connectToHost ( const QString & hostName, quint16 port, OpenMode openMode = ReadWrite )
+void connectToHost( const QString & hostName, quint16 port, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_CONNECTTOHOST1 )
+void QAbstractSocket_connectToHost1()
 {
   QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && ISOPTNUM(3) )
-    {
-#endif
-      obj->connectToHost( PQSTRING(1), PQUINT16(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-#endif
+    obj->connectToHost( PQSTRING(1), PQUINT16(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 /*
-void connectToHost ( const QHostAddress & address, quint16 port, OpenMode openMode = ReadWrite )
+void connectToHost( const QHostAddress & address, quint16 port, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
 */
-HB_FUNC_STATIC( QABSTRACTSOCKET_CONNECTTOHOST2 )
+void QAbstractSocket_connectToHost2()
 {
   QAbstractSocket * obj = (QAbstractSocket *) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISQHOSTADDRESS(1) && ISNUM(2) && ISOPTNUM(3) )
-    {
-#endif
-      obj->connectToHost( *PQHOSTADDRESS(1), PQUINT16(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-#endif
+    obj->connectToHost( *PQHOSTADDRESS(1), PQUINT16(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void connectToHost ( const QString & hostName, quint16 port, OpenMode openMode = ReadWrite )
-[2]void connectToHost ( const QHostAddress & address, quint16 port, OpenMode openMode = ReadWrite )
-*/
+HB_FUNC_STATIC( QABSTRACTSOCKET_CONNECTTOHOST )
+{
+  if( ISBETWEEN(2,3) && ISCHAR(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
+  {
+    QAbstractSocket_connectToHost1();
+  }
+  else if( ISBETWEEN(2,3) && ISQHOSTADDRESS(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
+  {
+    QAbstractSocket_connectToHost2();
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
+}
 
 /*
 void disconnectFromHost()
