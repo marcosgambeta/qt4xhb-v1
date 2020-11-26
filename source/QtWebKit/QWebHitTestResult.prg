@@ -73,7 +73,7 @@ RETURN
 #include <QtWebKit/QWebElement>
 
 /*
-QWebHitTestResult ()
+QWebHitTestResult()
 */
 void QWebHitTestResult_new1()
 {
@@ -82,18 +82,13 @@ void QWebHitTestResult_new1()
 }
 
 /*
-QWebHitTestResult ( const QWebHitTestResult & other )
+QWebHitTestResult( const QWebHitTestResult & other )
 */
 void QWebHitTestResult_new2()
 {
   QWebHitTestResult * obj = new QWebHitTestResult( *PQWEBHITTESTRESULT(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QWebHitTestResult ()
-[2]QWebHitTestResult ( const QWebHitTestResult & other )
-*/
 
 HB_FUNC_STATIC( QWEBHITTESTRESULT_NEW )
 {

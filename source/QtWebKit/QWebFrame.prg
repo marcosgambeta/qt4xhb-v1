@@ -109,7 +109,7 @@ RETURN
 #include <QtWebKit/QWebPage>
 
 /*
-void addToJavaScriptWindowObject ( const QString & name, QObject * object )
+void addToJavaScriptWindowObject( const QString & name, QObject * object )
 */
 void QWebFrame_addToJavaScriptWindowObject1()
 {
@@ -124,7 +124,7 @@ void QWebFrame_addToJavaScriptWindowObject1()
 }
 
 /*
-void addToJavaScriptWindowObject ( const QString & name, QObject * object, QScriptEngine::ValueOwnership own )
+void addToJavaScriptWindowObject( const QString & name, QObject * object, QScriptEngine::ValueOwnership own )
 */
 void QWebFrame_addToJavaScriptWindowObject2()
 {
@@ -137,11 +137,6 @@ void QWebFrame_addToJavaScriptWindowObject2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void addToJavaScriptWindowObject ( const QString & name, QObject * object )
-[2]void addToJavaScriptWindowObject ( const QString & name, QObject * object, QScriptEngine::ValueOwnership own )
-*/
 
 HB_FUNC_STATIC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT )
 {
@@ -456,7 +451,7 @@ HB_FUNC_STATIC( QWEBFRAME_ICON )
 }
 
 /*
-void load ( const QUrl & url )
+void load( const QUrl & url )
 */
 void QWebFrame_load1()
 {
@@ -471,7 +466,7 @@ void QWebFrame_load1()
 }
 
 /*
-void load ( const QNetworkRequest & req, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
+void load( const QNetworkRequest & req, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
 */
 void QWebFrame_load2()
 {
@@ -484,11 +479,6 @@ void QWebFrame_load2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void load ( const QUrl & url )
-[2]void load ( const QNetworkRequest & req, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
-*/
 
 HB_FUNC_STATIC( QWEBFRAME_LOAD )
 {
@@ -582,7 +572,7 @@ HB_FUNC_STATIC( QWEBFRAME_POS )
 }
 
 /*
-void render ( QPainter * painter )
+void render( QPainter * painter )
 */
 void QWebFrame_render1()
 {
@@ -597,7 +587,7 @@ void QWebFrame_render1()
 }
 
 /*
-void render ( QPainter * painter, const QRegion & clip )
+void render( QPainter * painter, const QRegion & clip )
 */
 void QWebFrame_render2()
 {
@@ -612,7 +602,7 @@ void QWebFrame_render2()
 }
 
 /*
-void render ( QPainter * painter, RenderLayer layer, const QRegion & clip = QRegion() )
+void render( QPainter * painter, QWebFrame::RenderLayer layer, const QRegion & clip = QRegion() )
 */
 void QWebFrame_render3()
 {
@@ -625,12 +615,6 @@ void QWebFrame_render3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void render ( QPainter * painter )
-[2]void render ( QPainter * painter, const QRegion & clip )
-[3]void render ( QPainter * painter, RenderLayer layer, const QRegion & clip = QRegion() )
-*/
 
 HB_FUNC_STATIC( QWEBFRAME_RENDER )
 {

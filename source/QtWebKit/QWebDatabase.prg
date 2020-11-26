@@ -59,7 +59,7 @@ RETURN
 #include <QtWebKit/QWebSecurityOrigin>
 
 /*
-QWebDatabase ( const QWebDatabase & other )
+QWebDatabase( const QWebDatabase & other )
 */
 HB_FUNC_STATIC( QWEBDATABASE_NEW )
 {

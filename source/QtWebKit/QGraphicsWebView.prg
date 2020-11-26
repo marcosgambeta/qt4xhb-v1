@@ -83,7 +83,7 @@ RETURN
 #include <QtGui/QAction>
 
 /*
-QGraphicsWebView ( QGraphicsItem * parent = 0 )
+QGraphicsWebView( QGraphicsItem * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_NEW )
 {
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_ISTILEDBACKINGSTOREFROZEN )
 }
 
 /*
-void load ( const QUrl & url )
+void load( const QUrl & url )
 */
 void QGraphicsWebView_load1()
 {
@@ -255,7 +255,7 @@ void QGraphicsWebView_load1()
 }
 
 /*
-void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
+void load( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
 */
 void QGraphicsWebView_load2()
 {
@@ -268,11 +268,6 @@ void QGraphicsWebView_load2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void load ( const QUrl & url )
-[2]void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_LOAD )
 {

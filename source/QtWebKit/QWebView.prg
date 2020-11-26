@@ -89,7 +89,7 @@ RETURN
 #include <QtGui/QAction>
 
 /*
-QWebView ( QWidget * parent = 0 )
+QWebView( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QWEBVIEW_NEW )
 {
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QWEBVIEW_ISMODIFIED )
 }
 
 /*
-void load ( const QUrl & url )
+void load( const QUrl & url )
 */
 void QWebView_load1()
 {
@@ -237,7 +237,7 @@ void QWebView_load1()
 }
 
 /*
-void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
+void load( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
 */
 void QWebView_load2()
 {
@@ -250,11 +250,6 @@ void QWebView_load2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void load ( const QUrl & url )
-[2]void load ( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
-*/
 
 HB_FUNC_STATIC( QWEBVIEW_LOAD )
 {

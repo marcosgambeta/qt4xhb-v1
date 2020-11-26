@@ -55,7 +55,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QWebElementCollection ()
+QWebElementCollection()
 */
 void QWebElementCollection_new1()
 {
@@ -64,7 +64,7 @@ void QWebElementCollection_new1()
 }
 
 /*
-QWebElementCollection ( const QWebElement & contextElement, const QString & query )
+QWebElementCollection( const QWebElement & contextElement, const QString & query )
 */
 void QWebElementCollection_new2()
 {
@@ -73,19 +73,13 @@ void QWebElementCollection_new2()
 }
 
 /*
-QWebElementCollection ( const QWebElementCollection & other )
+QWebElementCollection( const QWebElementCollection & other )
 */
 void QWebElementCollection_new3()
 {
   QWebElementCollection * obj = new QWebElementCollection( *PQWEBELEMENTCOLLECTION(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QWebElementCollection ()
-[2]QWebElementCollection ( const QWebElement & contextElement, const QString & query )
-[3]QWebElementCollection ( const QWebElementCollection & other )
-*/
 
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW )
 {
