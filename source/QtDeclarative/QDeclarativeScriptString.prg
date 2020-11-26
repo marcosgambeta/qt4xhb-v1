@@ -57,7 +57,7 @@ RETURN
 #include <QtDeclarative/QDeclarativeContext>
 
 /*
-QDeclarativeScriptString ()
+QDeclarativeScriptString()
 */
 void QDeclarativeScriptString_new1()
 {
@@ -66,18 +66,13 @@ void QDeclarativeScriptString_new1()
 }
 
 /*
-QDeclarativeScriptString ( const QDeclarativeScriptString & other )
+QDeclarativeScriptString( const QDeclarativeScriptString & other )
 */
 void QDeclarativeScriptString_new2()
 {
   QDeclarativeScriptString * obj = new QDeclarativeScriptString( *PQDECLARATIVESCRIPTSTRING(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDeclarativeScriptString ()
-[2]QDeclarativeScriptString ( const QDeclarativeScriptString & other )
-*/
 
 HB_FUNC_STATIC( QDECLARATIVESCRIPTSTRING_NEW )
 {

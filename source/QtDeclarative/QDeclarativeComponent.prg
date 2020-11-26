@@ -65,7 +65,7 @@ RETURN
 #include <QtDeclarative/QDeclarativeContext>
 
 /*
-QDeclarativeComponent(QObject *parent = 0);
+QDeclarativeComponent( QObject * parent = 0 )
 */
 void QDeclarativeComponent_new1()
 {
@@ -74,7 +74,7 @@ void QDeclarativeComponent_new1()
 }
 
 /*
-QDeclarativeComponent(QDeclarativeEngine *, QObject *parent=0)
+QDeclarativeComponent( QDeclarativeEngine *, QObject * parent = 0 )
 */
 void QDeclarativeComponent_new2()
 {
@@ -83,7 +83,7 @@ void QDeclarativeComponent_new2()
 }
 
 /*
-QDeclarativeComponent(QDeclarativeEngine *, const QString &fileName, QObject *parent = 0)
+QDeclarativeComponent( QDeclarativeEngine *, const QString & fileName, QObject * parent = 0 )
 */
 void QDeclarativeComponent_new3()
 {
@@ -92,20 +92,13 @@ void QDeclarativeComponent_new3()
 }
 
 /*
-QDeclarativeComponent(QDeclarativeEngine *, const QUrl &url, QObject *parent = 0)
+QDeclarativeComponent( QDeclarativeEngine *, const QUrl & url, QObject * parent = 0 )
 */
 void QDeclarativeComponent_new4()
 {
   QDeclarativeComponent * obj = new QDeclarativeComponent( PQDECLARATIVEENGINE(1), *PQURL(2), OPQOBJECT(3,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QDeclarativeComponent(QObject *parent = 0);
-[2]QDeclarativeComponent(QDeclarativeEngine *, QObject *parent=0);
-[3]QDeclarativeComponent(QDeclarativeEngine *, const QString &fileName, QObject *parent = 0);
-[4]QDeclarativeComponent(QDeclarativeEngine *, const QUrl &url, QObject *parent = 0);
-*/
 
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
 {
@@ -202,7 +195,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_COMPLETECREATE )
 }
 
 /*
-virtual QObject * create ( QDeclarativeContext * context = 0 )
+virtual QObject * create( QDeclarativeContext * context = 0 )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATE )
 {
@@ -547,10 +540,6 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORSTRING )
 #endif
   }
 }
-
-/*
-static QDeclarativeComponentAttached *qmlAttachedProperties(QObject *)
-*/
 
 void QDeclarativeComponentSlots_connect_signal( const QString & signal, const QString & slot );
 

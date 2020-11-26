@@ -72,7 +72,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QDeclarativeProperty ()
+QDeclarativeProperty()
 */
 void QDeclarativeProperty_new1()
 {
@@ -81,7 +81,7 @@ void QDeclarativeProperty_new1()
 }
 
 /*
-QDeclarativeProperty ( QObject * obj )
+QDeclarativeProperty( QObject * obj )
 */
 void QDeclarativeProperty_new2()
 {
@@ -90,7 +90,7 @@ void QDeclarativeProperty_new2()
 }
 
 /*
-QDeclarativeProperty ( QObject * obj, QDeclarativeContext * ctxt )
+QDeclarativeProperty( QObject * obj, QDeclarativeContext * ctxt )
 */
 void QDeclarativeProperty_new3()
 {
@@ -99,7 +99,7 @@ void QDeclarativeProperty_new3()
 }
 
 /*
-QDeclarativeProperty ( QObject * obj, QDeclarativeEngine * engine )
+QDeclarativeProperty( QObject * obj, QDeclarativeEngine * engine )
 */
 void QDeclarativeProperty_new4()
 {
@@ -108,7 +108,7 @@ void QDeclarativeProperty_new4()
 }
 
 /*
-QDeclarativeProperty ( QObject * obj, const QString & name )
+QDeclarativeProperty( QObject * obj, const QString & name )
 */
 void QDeclarativeProperty_new5()
 {
@@ -117,7 +117,7 @@ void QDeclarativeProperty_new5()
 }
 
 /*
-QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeContext * ctxt )
+QDeclarativeProperty( QObject * obj, const QString & name, QDeclarativeContext * ctxt )
 */
 void QDeclarativeProperty_new6()
 {
@@ -126,7 +126,7 @@ void QDeclarativeProperty_new6()
 }
 
 /*
-QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeEngine * engine )
+QDeclarativeProperty( QObject * obj, const QString & name, QDeclarativeEngine * engine )
 */
 void QDeclarativeProperty_new7()
 {
@@ -135,24 +135,13 @@ void QDeclarativeProperty_new7()
 }
 
 /*
-QDeclarativeProperty ( const QDeclarativeProperty & other )
+QDeclarativeProperty( const QDeclarativeProperty & other )
 */
 void QDeclarativeProperty_new8()
 {
   QDeclarativeProperty * obj = new QDeclarativeProperty( *PQDECLARATIVEPROPERTY(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDeclarativeProperty ()
-[2]QDeclarativeProperty ( QObject * obj )
-[3]QDeclarativeProperty ( QObject * obj, QDeclarativeContext * ctxt )
-[4]QDeclarativeProperty ( QObject * obj, QDeclarativeEngine * engine )
-[5]QDeclarativeProperty ( QObject * obj, const QString & name )
-[6]QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeContext * ctxt )
-[7]QDeclarativeProperty ( QObject * obj, const QString & name, QDeclarativeEngine * engine )
-[8]QDeclarativeProperty ( const QDeclarativeProperty & other )
-*/
 
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW )
 {
@@ -195,7 +184,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEW )
 }
 
 /*
-bool connectNotifySignal ( QObject * dest, const char * slot ) const
+bool connectNotifySignal( QObject * dest, const char * slot ) const
 */
 void QDeclarativeProperty_connectNotifySignal1()
 {
@@ -208,7 +197,7 @@ void QDeclarativeProperty_connectNotifySignal1()
 }
 
 /*
-bool connectNotifySignal ( QObject * dest, int method ) const
+bool connectNotifySignal( QObject * dest, int method ) const
 */
 void QDeclarativeProperty_connectNotifySignal2()
 {
@@ -219,11 +208,6 @@ void QDeclarativeProperty_connectNotifySignal2()
     RBOOL( obj->connectNotifySignal( PQOBJECT(1), PINT(2) ) );
   }
 }
-
-/*
-[1]bool connectNotifySignal ( QObject * dest, const char * slot ) const
-[2]bool connectNotifySignal ( QObject * dest, int method ) const
-*/
 
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_CONNECTNOTIFYSIGNAL )
 {
@@ -677,7 +661,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_TYPE )
 }
 
 /*
-QVariant read () const
+QVariant read() const
 */
 void QDeclarativeProperty_read1()
 {
@@ -691,7 +675,7 @@ void QDeclarativeProperty_read1()
 }
 
 /*
-static QVariant read ( QObject * object, const QString & name )
+static QVariant read( QObject * object, const QString & name )
 */
 void QDeclarativeProperty_read2()
 {
@@ -701,7 +685,7 @@ void QDeclarativeProperty_read2()
 }
 
 /*
-static QVariant read ( QObject * object, const QString & name, QDeclarativeContext * ctxt )
+static QVariant read( QObject * object, const QString & name, QDeclarativeContext * ctxt )
 */
 void QDeclarativeProperty_read3()
 {
@@ -711,7 +695,7 @@ void QDeclarativeProperty_read3()
 }
 
 /*
-static QVariant read ( QObject * object, const QString & name, QDeclarativeEngine * engine )
+static QVariant read( QObject * object, const QString & name, QDeclarativeEngine * engine )
 */
 void QDeclarativeProperty_read4()
 {
@@ -719,13 +703,6 @@ void QDeclarativeProperty_read4()
   QVariant * ptr = new QVariant( QDeclarativeProperty::read( PQOBJECT(1), PQSTRING(2), PQDECLARATIVEENGINE(3) ) );
   Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 }
-
-/*
-[1]QVariant read () const
-[2]QVariant read ( QObject * object, const QString & name )
-[3]QVariant read ( QObject * object, const QString & name, QDeclarativeContext * ctxt )
-[4]QVariant read ( QObject * object, const QString & name, QDeclarativeEngine * engine )
-*/
 
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_READ )
 {
@@ -752,7 +729,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_READ )
 }
 
 /*
-bool write ( const QVariant & value ) const
+bool write( const QVariant & value ) const
 */
 void QDeclarativeProperty_write1()
 {
@@ -765,7 +742,7 @@ void QDeclarativeProperty_write1()
 }
 
 /*
-static bool write ( QObject * object, const QString & name, const QVariant & value )
+static bool write( QObject * object, const QString & name, const QVariant & value )
 */
 void QDeclarativeProperty_write2()
 {
@@ -774,7 +751,7 @@ void QDeclarativeProperty_write2()
 }
 
 /*
-static bool write ( QObject * object, const QString & name, const QVariant & value, QDeclarativeContext * ctxt )
+static bool write( QObject * object, const QString & name, const QVariant & value, QDeclarativeContext * ctxt )
 */
 void QDeclarativeProperty_write3()
 {
@@ -783,20 +760,13 @@ void QDeclarativeProperty_write3()
 }
 
 /*
-static bool write ( QObject * object, const QString & name, const QVariant & value, QDeclarativeEngine * engine )
+static bool write( QObject * object, const QString & name, const QVariant & value, QDeclarativeEngine * engine )
 */
 void QDeclarativeProperty_write4()
 {
 
   RBOOL( QDeclarativeProperty::write( PQOBJECT(1), PQSTRING(2), *PQVARIANT(3), PQDECLARATIVEENGINE(4) ) );
 }
-
-/*
-[1]bool write ( const QVariant & value ) const
-[2]bool write ( QObject * object, const QString & name, const QVariant & value )
-[3]bool write ( QObject * object, const QString & name, const QVariant & value, QDeclarativeContext * ctxt )
-[4]bool write ( QObject * object, const QString & name, const QVariant & value, QDeclarativeEngine * engine )
-*/
 
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_WRITE )
 {

@@ -53,7 +53,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QDeclarativeImageProvider ( ImageType type )
+QDeclarativeImageProvider( QDeclarativeImageProvider::ImageType type )
 */
 HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_NEW )
 {

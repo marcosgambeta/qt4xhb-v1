@@ -65,7 +65,7 @@ RETURN
 #include <QtGui/QGraphicsObject>
 
 /*
-QDeclarativeView ( QWidget * parent = 0 )
+QDeclarativeView( QWidget * parent = 0 )
 */
 void QDeclarativeView_new1()
 {
@@ -74,18 +74,13 @@ void QDeclarativeView_new1()
 }
 
 /*
-QDeclarativeView ( const QUrl & source, QWidget * parent = 0 )
+QDeclarativeView( const QUrl & source, QWidget * parent = 0 )
 */
 void QDeclarativeView_new2()
 {
   QDeclarativeView * obj = new QDeclarativeView( *PQURL(1), OPQWIDGET(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QDeclarativeView ( QWidget * parent = 0 )
-[2]QDeclarativeView ( const QUrl & source, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
 {

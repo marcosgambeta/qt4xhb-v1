@@ -60,7 +60,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QDeclarativeListReference ()
+QDeclarativeListReference()
 */
 void QDeclarativeListReference_new1()
 {
@@ -69,18 +69,13 @@ void QDeclarativeListReference_new1()
 }
 
 /*
-QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
+QDeclarativeListReference( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
 */
 void QDeclarativeListReference_new2()
 {
   QDeclarativeListReference * obj = new QDeclarativeListReference( PQOBJECT(1), PCONSTCHAR(2), OPQDECLARATIVEENGINE(3,0) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDeclarativeListReference ()
-[2]QDeclarativeListReference ( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
-*/
 
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW )
 {

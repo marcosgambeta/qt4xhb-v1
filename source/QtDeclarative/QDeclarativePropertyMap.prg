@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QDeclarativePropertyMap ( QObject * parent = 0 )
+QDeclarativePropertyMap( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_NEW )
 {

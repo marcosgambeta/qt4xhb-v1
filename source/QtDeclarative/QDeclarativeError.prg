@@ -59,7 +59,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QDeclarativeError ()
+QDeclarativeError()
 */
 void QDeclarativeError_new1()
 {
@@ -68,18 +68,13 @@ void QDeclarativeError_new1()
 }
 
 /*
-QDeclarativeError ( const QDeclarativeError & other )
+QDeclarativeError( const QDeclarativeError & other )
 */
 void QDeclarativeError_new2()
 {
   QDeclarativeError * obj = new QDeclarativeError( *PQDECLARATIVEERROR(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDeclarativeError ()
-[2]QDeclarativeError ( const QDeclarativeError & other )
-*/
 
 HB_FUNC_STATIC( QDECLARATIVEERROR_NEW )
 {

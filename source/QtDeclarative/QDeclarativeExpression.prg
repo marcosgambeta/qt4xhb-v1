@@ -65,7 +65,7 @@ RETURN
 #include <QtDeclarative/QDeclarativeEngine>
 
 /*
-QDeclarativeExpression ()
+QDeclarativeExpression()
 */
 void QDeclarativeExpression_new1()
 {
@@ -74,18 +74,13 @@ void QDeclarativeExpression_new1()
 }
 
 /*
-QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0 )
+QDeclarativeExpression( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0 )
 */
 void QDeclarativeExpression_new2()
 {
   QDeclarativeExpression * obj = new QDeclarativeExpression( PQDECLARATIVECONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT(4,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QDeclarativeExpression ()
-[2]QDeclarativeExpression ( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW )
 {

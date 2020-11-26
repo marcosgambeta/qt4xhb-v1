@@ -57,7 +57,7 @@ RETURN
 #include <QtDeclarative/QDeclarativeEngine>
 
 /*
-QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = 0 )
+QDeclarativeContext( QDeclarativeEngine * engine, QObject * parent = 0 )
 */
 void QDeclarativeContext_new1()
 {
@@ -66,18 +66,13 @@ void QDeclarativeContext_new1()
 }
 
 /*
-QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = 0 )
+QDeclarativeContext( QDeclarativeContext * parentContext, QObject * parent = 0 )
 */
 void QDeclarativeContext_new2()
 {
   QDeclarativeContext * obj = new QDeclarativeContext( PQDECLARATIVECONTEXT(1), OPQOBJECT(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QDeclarativeContext ( QDeclarativeEngine * engine, QObject * parent = 0 )
-[2]QDeclarativeContext ( QDeclarativeContext * parentContext, QObject * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_NEW )
 {
@@ -341,7 +336,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTOBJECT )
 }
 
 /*
-void setContextProperty ( const QString & name, QObject * value )
+void setContextProperty( const QString & name, QObject * value )
 */
 void QDeclarativeContext_setContextProperty1()
 {
@@ -356,7 +351,7 @@ void QDeclarativeContext_setContextProperty1()
 }
 
 /*
-void setContextProperty ( const QString & name, const QVariant & value )
+void setContextProperty( const QString & name, const QVariant & value )
 */
 void QDeclarativeContext_setContextProperty2()
 {
@@ -369,11 +364,6 @@ void QDeclarativeContext_setContextProperty2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setContextProperty ( const QString & name, QObject * value )
-[2]void setContextProperty ( const QString & name, const QVariant & value )
-*/
 
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTPROPERTY )
 {
