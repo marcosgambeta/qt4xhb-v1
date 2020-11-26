@@ -46,7 +46,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QSqlIndex ( const QString & cursorname = QString(), const QString & name = QString() )
+QSqlIndex( const QString & cursorname = QString(), const QString & name = QString() )
 */
 void QSqlIndex_new1()
 {
@@ -55,18 +55,13 @@ void QSqlIndex_new1()
 }
 
 /*
-QSqlIndex ( const QSqlIndex & other )
+QSqlIndex( const QSqlIndex & other )
 */
 void QSqlIndex_new2()
 {
   QSqlIndex * obj = new QSqlIndex( *PQSQLINDEX(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QSqlIndex ( const QString & cursorname = QString(), const QString & name = QString() )
-[2]QSqlIndex ( const QSqlIndex & other )
-*/
 
 HB_FUNC_STATIC( QSQLINDEX_NEW )
 {
@@ -102,7 +97,7 @@ HB_FUNC_STATIC( QSQLINDEX_DELETE )
 }
 
 /*
-void append ( const QSqlField & field )
+void append( const QSqlField & field )
 */
 void QSqlIndex_append1()
 {
@@ -117,7 +112,7 @@ void QSqlIndex_append1()
 }
 
 /*
-void append ( const QSqlField & field, bool desc )
+void append( const QSqlField & field, bool desc )
 */
 void QSqlIndex_append2()
 {
@@ -130,11 +125,6 @@ void QSqlIndex_append2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void append ( const QSqlField & field )
-[2]void append ( const QSqlField & field, bool desc )
-*/
 
 HB_FUNC_STATIC( QSQLINDEX_APPEND )
 {

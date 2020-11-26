@@ -99,7 +99,7 @@ RETURN
 #include <QtSql/QSqlDriver>
 
 /*
-QSqlDatabase ()
+QSqlDatabase()
 */
 void QSqlDatabase_new1()
 {
@@ -108,18 +108,13 @@ void QSqlDatabase_new1()
 }
 
 /*
-QSqlDatabase ( const QSqlDatabase & other )
+QSqlDatabase( const QSqlDatabase & other )
 */
 void QSqlDatabase_new2()
 {
   QSqlDatabase * obj = new QSqlDatabase( *PQSQLDATABASE(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QSqlDatabase ()
-[2]QSqlDatabase ( const QSqlDatabase & other )
-*/
 
 HB_FUNC_STATIC( QSQLDATABASE_NEW )
 {
@@ -496,7 +491,7 @@ HB_FUNC_STATIC( QSQLDATABASE_NUMERICALPRECISIONPOLICY )
 }
 
 /*
-bool open ()
+bool open()
 */
 void QSqlDatabase_open1()
 {
@@ -509,7 +504,7 @@ void QSqlDatabase_open1()
 }
 
 /*
-bool open ( const QString & user, const QString & password )
+bool open( const QString & user, const QString & password )
 */
 void QSqlDatabase_open2()
 {
@@ -520,11 +515,6 @@ void QSqlDatabase_open2()
     RBOOL( obj->open( PQSTRING(1), PQSTRING(2) ) );
   }
 }
-
-/*
-[1]bool open ()
-[2]bool open ( const QString & user, const QString & password )
-*/
 
 HB_FUNC_STATIC( QSQLDATABASE_OPEN )
 {
@@ -919,7 +909,7 @@ HB_FUNC_STATIC( QSQLDATABASE_USERNAME )
 }
 
 /*
-static QSqlDatabase addDatabase ( const QString & type, const QString & connectionName = QLatin1String( defaultConnection ) )
+static QSqlDatabase addDatabase( const QString & type, const QString & connectionName = QLatin1String( QSqlDatabase::defaultConnection ) )
 */
 void QSqlDatabase_addDatabase1()
 {
@@ -929,7 +919,7 @@ void QSqlDatabase_addDatabase1()
 }
 
 /*
-static QSqlDatabase addDatabase ( QSqlDriver * driver, const QString & connectionName = QLatin1String( defaultConnection ) )
+static QSqlDatabase addDatabase( QSqlDriver * driver, const QString & connectionName = QLatin1String( QSqlDatabase::defaultConnection ) )
 */
 void QSqlDatabase_addDatabase2()
 {
@@ -937,11 +927,6 @@ void QSqlDatabase_addDatabase2()
   QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::addDatabase( PQSQLDRIVER(1), OPQSTRING(2,QLatin1String( QSqlDatabase::defaultConnection )) ) );
   Qt4xHb::createReturnClass( ptr, "QSQLDATABASE", true );
 }
-
-/*
-[1]QSqlDatabase addDatabase ( const QString & type, const QString & connectionName = QLatin1String( defaultConnection ) )
-[2]QSqlDatabase addDatabase ( QSqlDriver * driver, const QString & connectionName = QLatin1String( defaultConnection ) )
-*/
 
 HB_FUNC_STATIC( QSQLDATABASE_ADDDATABASE )
 {

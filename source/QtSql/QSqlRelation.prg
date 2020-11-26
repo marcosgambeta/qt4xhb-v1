@@ -51,7 +51,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QSqlRelation ()
+QSqlRelation()
 */
 void QSqlRelation_new1()
 {
@@ -60,18 +60,13 @@ void QSqlRelation_new1()
 }
 
 /*
-QSqlRelation ( const QString & tableName, const QString & indexColumn, const QString & displayColumn )
+QSqlRelation( const QString & tableName, const QString & indexColumn, const QString & displayColumn )
 */
 void QSqlRelation_new2()
 {
   QSqlRelation * obj = new QSqlRelation( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QSqlRelation ()
-[2]QSqlRelation ( const QString & tableName, const QString & indexColumn, const QString & displayColumn )
-*/
 
 HB_FUNC_STATIC( QSQLRELATION_NEW )
 {

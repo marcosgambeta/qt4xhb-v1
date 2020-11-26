@@ -63,7 +63,7 @@ RETURN
 #include <QtSql/QSqlRecord>
 
 /*
-QSqlQueryModel ( QObject * parent = 0 )
+QSqlQueryModel( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_NEW )
 {
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_QUERY )
 }
 
 /*
-QSqlRecord record ( int row ) const
+QSqlRecord record( int row ) const
 */
 void QSqlQueryModel_record1()
 {
@@ -188,7 +188,7 @@ void QSqlQueryModel_record1()
 }
 
 /*
-QSqlRecord record () const
+QSqlRecord record() const
 */
 void QSqlQueryModel_record2()
 {
@@ -200,11 +200,6 @@ void QSqlQueryModel_record2()
     Qt4xHb::createReturnClass( ptr, "QSQLRECORD", true );
   }
 }
-
-/*
-[1]QSqlRecord record ( int row ) const
-[2]QSqlRecord record () const
-*/
 
 HB_FUNC_STATIC( QSQLQUERYMODEL_RECORD )
 {
@@ -223,7 +218,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_RECORD )
 }
 
 /*
-void setQuery ( const QSqlQuery & query )
+void setQuery( const QSqlQuery & query )
 */
 void QSqlQueryModel_setQuery1()
 {
@@ -238,7 +233,7 @@ void QSqlQueryModel_setQuery1()
 }
 
 /*
-void setQuery ( const QString & query, const QSqlDatabase & db = QSqlDatabase() )
+void setQuery( const QString & query, const QSqlDatabase & db = QSqlDatabase() )
 */
 void QSqlQueryModel_setQuery2()
 {
@@ -251,11 +246,6 @@ void QSqlQueryModel_setQuery2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setQuery ( const QSqlQuery & query )
-[2]void setQuery ( const QString & query, const QSqlDatabase & db = QSqlDatabase() )
-*/
 
 HB_FUNC_STATIC( QSQLQUERYMODEL_SETQUERY )
 {

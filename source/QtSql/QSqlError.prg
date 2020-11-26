@@ -58,7 +58,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QSqlError ( const QString & driverText = QString(), const QString & databaseText = QString(), ErrorType type = NoError, int number = -1 )
+QSqlError( const QString & driverText = QString(), const QString & databaseText = QString(), QSqlError::ErrorType type = QSqlError::NoError, int number = -1 )
 */
 void QSqlError_new1()
 {
@@ -67,18 +67,13 @@ void QSqlError_new1()
 }
 
 /*
-QSqlError ( const QSqlError & other )
+QSqlError( const QSqlError & other )
 */
 void QSqlError_new2()
 {
   QSqlError * obj = new QSqlError( *PQSQLERROR(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QSqlError ( const QString & driverText = QString(), const QString & databaseText = QString(), ErrorType type = NoError, int number = -1 )
-[2]QSqlError ( const QSqlError & other )
-*/
 
 HB_FUNC_STATIC( QSQLERROR_NEW )
 {

@@ -73,7 +73,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QSqlField ( const QString & fieldName = QString(), QVariant::Type type = QVariant::Invalid )
+QSqlField( const QString & fieldName = QString(), QVariant::Type type = QVariant::Invalid )
 */
 void QSqlField_new1()
 {
@@ -82,18 +82,13 @@ void QSqlField_new1()
 }
 
 /*
-QSqlField ( const QSqlField & other )
+QSqlField( const QSqlField & other )
 */
 void QSqlField_new2()
 {
   QSqlField * obj = new QSqlField( *PQSQLFIELD(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QSqlField ( const QString & fieldName = QString(), QVariant::Type type = QVariant::Invalid )
-[2]QSqlField ( const QSqlField & other )
-*/
 
 HB_FUNC_STATIC( QSQLFIELD_NEW )
 {

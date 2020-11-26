@@ -45,7 +45,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QSqlRelationalDelegate ( QObject * parent = 0 )
+QSqlRelationalDelegate( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_NEW )
 {

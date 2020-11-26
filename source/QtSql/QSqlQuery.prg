@@ -91,7 +91,7 @@ RETURN
 #include <QtSql/QSqlDriver>
 
 /*
-QSqlQuery ( QSqlResult * result )
+QSqlQuery( QSqlResult * result )
 */
 void QSqlQuery_new1()
 {
@@ -100,7 +100,7 @@ void QSqlQuery_new1()
 }
 
 /*
-QSqlQuery ( const QString & query = QString(), QSqlDatabase db = QSqlDatabase() )
+QSqlQuery( const QString & query = QString(), QSqlDatabase db = QSqlDatabase() )
 */
 void QSqlQuery_new2()
 {
@@ -109,7 +109,7 @@ void QSqlQuery_new2()
 }
 
 /*
-QSqlQuery ( QSqlDatabase db )
+QSqlQuery( QSqlDatabase db )
 */
 void QSqlQuery_new3()
 {
@@ -118,20 +118,13 @@ void QSqlQuery_new3()
 }
 
 /*
-QSqlQuery ( const QSqlQuery & other )
+QSqlQuery( const QSqlQuery & other )
 */
 void QSqlQuery_new4()
 {
   QSqlQuery * obj = new QSqlQuery( *PQSQLQUERY(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QSqlQuery ( QSqlResult * result )
-[2]QSqlQuery ( const QString & query = QString(), QSqlDatabase db = QSqlDatabase() )
-[3]QSqlQuery ( QSqlDatabase db )
-[4]QSqlQuery ( const QSqlQuery & other )
-*/
 
 HB_FUNC_STATIC( QSQLQUERY_NEW )
 {
@@ -225,7 +218,7 @@ HB_FUNC_STATIC( QSQLQUERY_AT )
 }
 
 /*
-void bindValue ( const QString & placeholder, const QVariant & val, QSql::ParamType paramType = QSql::In )
+void bindValue( const QString & placeholder, const QVariant & val, QSql::ParamType paramType = QSql::In )
 */
 void QSqlQuery_bindValue1()
 {
@@ -240,7 +233,7 @@ void QSqlQuery_bindValue1()
 }
 
 /*
-void bindValue ( int pos, const QVariant & val, QSql::ParamType paramType = QSql::In )
+void bindValue( int pos, const QVariant & val, QSql::ParamType paramType = QSql::In )
 */
 void QSqlQuery_bindValue2()
 {
@@ -253,11 +246,6 @@ void QSqlQuery_bindValue2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void bindValue ( const QString & placeholder, const QVariant & val, QSql::ParamType paramType = QSql::In )
-[2]void bindValue ( int pos, const QVariant & val, QSql::ParamType paramType = QSql::In )
-*/
 
 HB_FUNC_STATIC( QSQLQUERY_BINDVALUE )
 {
@@ -276,7 +264,7 @@ HB_FUNC_STATIC( QSQLQUERY_BINDVALUE )
 }
 
 /*
-QVariant boundValue ( const QString & placeholder ) const
+QVariant boundValue( const QString & placeholder ) const
 */
 void QSqlQuery_boundValue1()
 {
@@ -290,7 +278,7 @@ void QSqlQuery_boundValue1()
 }
 
 /*
-QVariant boundValue ( int pos ) const
+QVariant boundValue( int pos ) const
 */
 void QSqlQuery_boundValue2()
 {
@@ -302,11 +290,6 @@ void QSqlQuery_boundValue2()
     Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
   }
 }
-
-/*
-[1]QVariant boundValue ( const QString & placeholder ) const
-[2]QVariant boundValue ( int pos ) const
-*/
 
 HB_FUNC_STATIC( QSQLQUERY_BOUNDVALUE )
 {
@@ -376,7 +359,7 @@ HB_FUNC_STATIC( QSQLQUERY_DRIVER )
 }
 
 /*
-bool exec ( const QString & query )
+bool exec( const QString & query )
 */
 void QSqlQuery_exec1()
 {
@@ -389,7 +372,7 @@ void QSqlQuery_exec1()
 }
 
 /*
-bool exec ()
+bool exec()
 */
 void QSqlQuery_exec2()
 {
@@ -400,11 +383,6 @@ void QSqlQuery_exec2()
     RBOOL( obj->exec() );
   }
 }
-
-/*
-[1]bool exec ( const QString & query )
-[2]bool exec ()
-*/
 
 HB_FUNC_STATIC( QSQLQUERY_EXEC )
 {
