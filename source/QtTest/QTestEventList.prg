@@ -66,7 +66,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QTestEventList ()
+QTestEventList()
 */
 void QTestEventList_new1()
 {
@@ -75,18 +75,13 @@ void QTestEventList_new1()
 }
 
 /*
-QTestEventList ( const QTestEventList & other )
+QTestEventList( const QTestEventList & other )
 */
 void QTestEventList_new2()
 {
   QTestEventList * obj = new QTestEventList( *PQTESTEVENTLIST(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QTestEventList ()
-[2]QTestEventList ( const QTestEventList & other )
-*/
 
 HB_FUNC_STATIC( QTESTEVENTLIST_NEW )
 {
@@ -148,7 +143,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDDELAY )
 }
 
 /*
-void addKeyClick ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+void addKeyClick( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICK1 )
 {
@@ -174,7 +169,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICK1 )
 }
 
 /*
-void addKeyClick ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+void addKeyClick( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICK2 )
 {
@@ -198,11 +193,6 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICK2 )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void addKeyClick ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
-[2]void addKeyClick ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
-*/
 
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICK )
 {
@@ -247,7 +237,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICKS )
 }
 
 /*
-void addKeyPress ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+void addKeyPress( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYPRESS1 )
 {
@@ -273,7 +263,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYPRESS1 )
 }
 
 /*
-void addKeyPress ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+void addKeyPress( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYPRESS2 )
 {
@@ -298,11 +288,6 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYPRESS2 )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void addKeyPress ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
-[2]void addKeyPress ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
-*/
-
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYPRESS )
 {
   if( ISBETWEEN(1,3) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
@@ -320,7 +305,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYPRESS )
 }
 
 /*
-void addKeyRelease ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+void addKeyRelease( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYRELEASE1 )
 {
@@ -346,7 +331,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYRELEASE1 )
 }
 
 /*
-void addKeyRelease ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
+void addKeyRelease( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYRELEASE2 )
 {
@@ -370,11 +355,6 @@ HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYRELEASE2 )
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void addKeyRelease ( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
-[2]void addKeyRelease ( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, int msecs = -1 )
-*/
 
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYRELEASE )
 {
