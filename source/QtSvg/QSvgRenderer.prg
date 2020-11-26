@@ -60,7 +60,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QSvgRenderer ( QObject * parent = 0 )
+QSvgRenderer( QObject * parent = 0 )
 */
 void QSvgRenderer_new1()
 {
@@ -69,7 +69,7 @@ void QSvgRenderer_new1()
 }
 
 /*
-QSvgRenderer ( const QString & filename, QObject * parent = 0 )
+QSvgRenderer( const QString & filename, QObject * parent = 0 )
 */
 void QSvgRenderer_new2()
 {
@@ -78,7 +78,7 @@ void QSvgRenderer_new2()
 }
 
 /*
-QSvgRenderer ( const QByteArray & contents, QObject * parent = 0 )
+QSvgRenderer( const QByteArray & contents, QObject * parent = 0 )
 */
 void QSvgRenderer_new3()
 {
@@ -87,20 +87,13 @@ void QSvgRenderer_new3()
 }
 
 /*
-QSvgRenderer ( QXmlStreamReader * contents, QObject * parent = 0 )
+QSvgRenderer( QXmlStreamReader * contents, QObject * parent = 0 )
 */
 void QSvgRenderer_new4()
 {
   QSvgRenderer * obj = new QSvgRenderer( PQXMLSTREAMREADER(1), OPQOBJECT(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QSvgRenderer ( QObject * parent = 0 )
-[2]QSvgRenderer ( const QString & filename, QObject * parent = 0 )
-[3]QSvgRenderer ( const QByteArray & contents, QObject * parent = 0 )
-[4]QSvgRenderer ( QXmlStreamReader * contents, QObject * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QSVGRENDERER_NEW )
 {
@@ -343,7 +336,7 @@ HB_FUNC_STATIC( QSVGRENDERER_SETFRAMESPERSECOND )
 }
 
 /*
-void setViewBox ( const QRect & viewbox )
+void setViewBox( const QRect & viewbox )
 */
 void QSvgRenderer_setViewBox1()
 {
@@ -358,7 +351,7 @@ void QSvgRenderer_setViewBox1()
 }
 
 /*
-void setViewBox ( const QRectF & viewbox )
+void setViewBox( const QRectF & viewbox )
 */
 void QSvgRenderer_setViewBox2()
 {
@@ -371,11 +364,6 @@ void QSvgRenderer_setViewBox2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setViewBox ( const QRect & viewbox )
-[2]void setViewBox ( const QRectF & viewbox )
-*/
 
 HB_FUNC_STATIC( QSVGRENDERER_SETVIEWBOX )
 {
@@ -444,7 +432,7 @@ HB_FUNC_STATIC( QSVGRENDERER_VIEWBOXF )
 }
 
 /*
-bool load ( const QString & filename )
+bool load( const QString & filename )
 */
 void QSvgRenderer_load1()
 {
@@ -457,7 +445,7 @@ void QSvgRenderer_load1()
 }
 
 /*
-bool load ( const QByteArray & contents )
+bool load( const QByteArray & contents )
 */
 void QSvgRenderer_load2()
 {
@@ -470,7 +458,7 @@ void QSvgRenderer_load2()
 }
 
 /*
-bool load ( QXmlStreamReader * contents )
+bool load( QXmlStreamReader * contents )
 */
 void QSvgRenderer_load3()
 {
@@ -481,12 +469,6 @@ void QSvgRenderer_load3()
     RBOOL( obj->load( PQXMLSTREAMREADER(1) ) );
   }
 }
-
-/*
-[1]bool load ( const QString & filename )
-[2]bool load ( const QByteArray & contents )
-[3]bool load ( QXmlStreamReader * contents )
-*/
 
 HB_FUNC_STATIC( QSVGRENDERER_LOAD )
 {
@@ -509,7 +491,7 @@ HB_FUNC_STATIC( QSVGRENDERER_LOAD )
 }
 
 /*
-void render ( QPainter * painter )
+void render( QPainter * painter )
 */
 void QSvgRenderer_render1()
 {
@@ -524,7 +506,7 @@ void QSvgRenderer_render1()
 }
 
 /*
-void render ( QPainter * painter, const QRectF & bounds )
+void render( QPainter * painter, const QRectF & bounds )
 */
 void QSvgRenderer_render2()
 {
@@ -539,7 +521,7 @@ void QSvgRenderer_render2()
 }
 
 /*
-void render ( QPainter * painter, const QString & elementId, const QRectF & bounds = QRectF() )
+void render( QPainter * painter, const QString & elementId, const QRectF & bounds = QRectF() )
 */
 void QSvgRenderer_render3()
 {
@@ -552,12 +534,6 @@ void QSvgRenderer_render3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void render ( QPainter * painter )
-[2]void render ( QPainter * painter, const QRectF & bounds )
-[3]void render ( QPainter * painter, const QString & elementId, const QRectF & bounds = QRectF() )
-*/
 
 HB_FUNC_STATIC( QSVGRENDERER_RENDER )
 {

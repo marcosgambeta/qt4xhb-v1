@@ -48,7 +48,7 @@ RETURN
 #include <QtSvg/QSvgRenderer>
 
 /*
-QSvgWidget ( QWidget * parent = 0 )
+QSvgWidget( QWidget * parent = 0 )
 */
 void QSvgWidget_new1()
 {
@@ -57,18 +57,13 @@ void QSvgWidget_new1()
 }
 
 /*
-QSvgWidget ( const QString & file, QWidget * parent = 0 )
+QSvgWidget( const QString & file, QWidget * parent = 0 )
 */
 void QSvgWidget_new2()
 {
   QSvgWidget * obj = new QSvgWidget( PQSTRING(1), OPQWIDGET(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QSvgWidget ( QWidget * parent = 0 )
-[2]QSvgWidget ( const QString & file, QWidget * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QSVGWIDGET_NEW )
 {
@@ -156,7 +151,7 @@ HB_FUNC_STATIC( QSVGWIDGET_SIZEHINT )
 }
 
 /*
-void load ( const QString & file )
+void load( const QString & file )
 */
 void QSvgWidget_load1()
 {
@@ -171,7 +166,7 @@ void QSvgWidget_load1()
 }
 
 /*
-void load ( const QByteArray & contents )
+void load( const QByteArray & contents )
 */
 void QSvgWidget_load2()
 {
@@ -184,11 +179,6 @@ void QSvgWidget_load2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void load ( const QString & file )
-[2]void load ( const QByteArray & contents )
-*/
 
 HB_FUNC_STATIC( QSVGWIDGET_LOAD )
 {

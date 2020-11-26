@@ -58,7 +58,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QSvgGenerator ()
+QSvgGenerator()
 */
 HB_FUNC_STATIC( QSVGGENERATOR_NEW )
 {
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SETTITLE )
 }
 
 /*
-void setViewBox ( const QRect & viewBox )
+void setViewBox( const QRect & viewBox )
 */
 void QSvgGenerator_setViewBox1()
 {
@@ -359,7 +359,7 @@ void QSvgGenerator_setViewBox1()
 }
 
 /*
-void setViewBox ( const QRectF & viewBox )
+void setViewBox( const QRectF & viewBox )
 */
 void QSvgGenerator_setViewBox2()
 {
@@ -372,11 +372,6 @@ void QSvgGenerator_setViewBox2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setViewBox ( const QRect & viewBox )
-[2]void setViewBox ( const QRectF & viewBox )
-*/
 
 HB_FUNC_STATIC( QSVGGENERATOR_SETVIEWBOX )
 {

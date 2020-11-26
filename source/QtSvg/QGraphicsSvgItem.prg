@@ -54,7 +54,7 @@ RETURN
 #include <QtSvg/QSvgRenderer>
 
 /*
-QGraphicsSvgItem ( QGraphicsItem * parent = 0 )
+QGraphicsSvgItem( QGraphicsItem * parent = 0 )
 */
 void QGraphicsSvgItem_new1()
 {
@@ -63,18 +63,13 @@ void QGraphicsSvgItem_new1()
 }
 
 /*
-QGraphicsSvgItem ( const QString & fileName, QGraphicsItem * parent = 0 )
+QGraphicsSvgItem( const QString & fileName, QGraphicsItem * parent = 0 )
 */
 void QGraphicsSvgItem_new2()
 {
   QGraphicsSvgItem * obj = new QGraphicsSvgItem( PQSTRING(1), ISNIL(2)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(2) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QGraphicsSvgItem ( QGraphicsItem * parent = 0 )
-[2]QGraphicsSvgItem ( const QString & fileName, QGraphicsItem * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QGRAPHICSSVGITEM_NEW )
 {
