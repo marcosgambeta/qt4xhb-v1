@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QMutexLocker ( QMutex * mutex )
+QMutexLocker( QMutex * mutex )
 */
 HB_FUNC_STATIC( QMUTEXLOCKER_NEW )
 {

@@ -97,7 +97,7 @@ void QTextStream_new1()
 }
 
 /*
-QTextStream(QIODevice *device)
+QTextStream( QIODevice * device )
 */
 void QTextStream_new2()
 {
@@ -106,7 +106,7 @@ void QTextStream_new2()
 }
 
 /*
-QTextStream(FILE *fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
+QTextStream( FILE * fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
 */
 void QTextStream_new3()
 {
@@ -115,30 +115,22 @@ void QTextStream_new3()
 }
 
 /*
-QTextStream(QString *string, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
+QTextStream( QByteArray * array, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
 */
+void QTextStream_new5()
+{
+  QTextStream * obj = new QTextStream( PQBYTEARRAY(1), ISNIL(2)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(2) );
+  Qt4xHb::returnNewObject( obj, true );
+}
 
 /*
-QTextStream(QByteArray *array, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-*/
-
-/*
-QTextStream(const QByteArray &array, QIODevice::OpenMode openMode = QIODevice::ReadOnly)
+QTextStream( const QByteArray & array, QIODevice::OpenMode openMode = QIODevice::ReadOnly )
 */
 void QTextStream_new6()
 {
   QTextStream * obj = new QTextStream( *PQBYTEARRAY(1), ISNIL(2)? (QIODevice::OpenMode) QIODevice::ReadOnly : (QIODevice::OpenMode) hb_parni(2) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QTextStream()
-[2]QTextStream(QIODevice *device)
-[3]QTextStream(FILE *fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-[4]QTextStream(QString *string, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-[5]QTextStream(QByteArray *array, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-[6]QTextStream(const QByteArray &array, QIODevice::OpenMode openMode = QIODevice::ReadOnly)
-*/
 
 HB_FUNC_STATIC( QTEXTSTREAM_NEW )
 {
@@ -153,6 +145,10 @@ HB_FUNC_STATIC( QTEXTSTREAM_NEW )
   else if( ISBETWEEN(1,2) && ISPOINTER(1) && (ISNUM(2)||ISNIL(2)) )
   {
     QTextStream_new3();
+  }
+  else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISNUM(2)||ISNIL(2)) )
+  {
+    QTextStream_new5();
   }
   else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISNUM(2)||ISNIL(2)) )
   {
@@ -182,7 +178,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_DELETE )
 }
 
 /*
-void setCodec(QTextCodec *codec)
+void setCodec( QTextCodec * codec )
 */
 void QTextStream_setCodec1()
 {
@@ -197,7 +193,7 @@ void QTextStream_setCodec1()
 }
 
 /*
-void setCodec(const char *codecName)
+void setCodec( const char * codecName )
 */
 void QTextStream_setCodec2()
 {
@@ -210,11 +206,6 @@ void QTextStream_setCodec2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setCodec(QTextCodec *codec)
-[2]void setCodec(const char *codecName)
-*/
 
 HB_FUNC_STATIC( QTEXTSTREAM_SETCODEC )
 {
@@ -458,14 +449,6 @@ HB_FUNC_STATIC( QTEXTSTREAM_DEVICE )
 #endif
   }
 }
-
-/*
-void setString(QString *string, QIODevice::OpenMode openMode = QIODevice::ReadWrite)
-*/
-
-/*
-QString *string() const
-*/
 
 /*
 QTextStream::Status status() const

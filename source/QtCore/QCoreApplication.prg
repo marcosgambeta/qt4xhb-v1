@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ORGANIZATIONNAME )
 }
 
 /*
-static void postEvent ( QObject * receiver, QEvent * event )
+static void postEvent( QObject * receiver, QEvent * event )
 */
 void QCoreApplication_postEvent1()
 {
@@ -532,7 +532,7 @@ void QCoreApplication_postEvent1()
 }
 
 /*
-static void postEvent ( QObject * receiver, QEvent * event, int priority )
+static void postEvent( QObject * receiver, QEvent * event, int priority )
 */
 void QCoreApplication_postEvent2()
 {
@@ -541,11 +541,6 @@ void QCoreApplication_postEvent2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void postEvent ( QObject * receiver, QEvent * event )
-[2]void postEvent ( QObject * receiver, QEvent * event, int priority )
-*/
 
 HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT )
 {
@@ -564,7 +559,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT )
 }
 
 /*
-static void processEvents ( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
+static void processEvents( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
 */
 void QCoreApplication_processEvents1()
 {
@@ -575,7 +570,7 @@ void QCoreApplication_processEvents1()
 }
 
 /*
-static void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )
+static void processEvents( QEventLoop::ProcessEventsFlags flags, int maxtime )
 */
 void QCoreApplication_processEvents2()
 {
@@ -584,11 +579,6 @@ void QCoreApplication_processEvents2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void processEvents ( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
-[2]void processEvents ( QEventLoop::ProcessEventsFlags flags, int maxtime )
-*/
 
 HB_FUNC_STATIC( QCOREAPPLICATION_PROCESSEVENTS )
 {
@@ -628,7 +618,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_REMOVELIBRARYPATH )
 }
 
 /*
-static void removePostedEvents ( QObject * receiver )
+static void removePostedEvents( QObject * receiver )
 */
 void QCoreApplication_removePostedEvents1()
 {
@@ -639,7 +629,7 @@ void QCoreApplication_removePostedEvents1()
 }
 
 /*
-static void removePostedEvents ( QObject * receiver, int eventType )
+static void removePostedEvents( QObject * receiver, int eventType )
 */
 void QCoreApplication_removePostedEvents2()
 {
@@ -648,11 +638,6 @@ void QCoreApplication_removePostedEvents2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void removePostedEvents ( QObject * receiver )
-[2]void removePostedEvents ( QObject * receiver, int eventType )
-*/
 
 HB_FUNC_STATIC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS )
 {
@@ -711,7 +696,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SENDEVENT )
 }
 
 /*
-static void sendPostedEvents ( QObject * receiver, int event_type )
+static void sendPostedEvents( QObject * receiver, int event_type )
 */
 void QCoreApplication_sendPostedEvents1()
 {
@@ -722,7 +707,7 @@ void QCoreApplication_sendPostedEvents1()
 }
 
 /*
-static void sendPostedEvents ()
+static void sendPostedEvents()
 */
 void QCoreApplication_sendPostedEvents2()
 {
@@ -731,11 +716,6 @@ void QCoreApplication_sendPostedEvents2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void sendPostedEvents ( QObject * receiver, int event_type )
-[2]void sendPostedEvents ()
-*/
 
 HB_FUNC_STATIC( QCOREAPPLICATION_SENDPOSTEDEVENTS )
 {
@@ -918,7 +898,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TESTATTRIBUTE )
 }
 
 /*
-static QString translate ( const char * context, const char * sourceText, const char * disambiguation, Encoding encoding, int n )
+static QString translate( const char * context, const char * sourceText, const char * disambiguation, QCoreApplication::Encoding encoding, int n )
 */
 void QCoreApplication_translate1()
 {
@@ -927,18 +907,13 @@ void QCoreApplication_translate1()
 }
 
 /*
-static QString translate ( const char * context, const char * sourceText, const char * disambiguation = 0, Encoding encoding = CodecForTr )
+static QString translate( const char * context, const char * sourceText, const char * disambiguation = 0, QCoreApplication::Encoding encoding = QCoreApplication::CodecForTr )
 */
 void QCoreApplication_translate2()
 {
 
   RQSTRING( QCoreApplication::translate( PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR(3,0), ISNIL(4)? (QCoreApplication::Encoding) QCoreApplication::CodecForTr : (QCoreApplication::Encoding) hb_parni(4) ) );
 }
-
-/*
-[1]QString translate ( const char * context, const char * sourceText, const char * disambiguation, Encoding encoding, int n )
-[2]QString translate ( const char * context, const char * sourceText, const char * disambiguation = 0, Encoding encoding = CodecForTr )
-*/
 
 HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
 {

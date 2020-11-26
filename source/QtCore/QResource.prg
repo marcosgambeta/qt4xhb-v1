@@ -60,7 +60,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QResource ( const QString & file = QString(), const QLocale & locale = QLocale() )
+QResource( const QString & file = QString(), const QLocale & locale = QLocale() )
 */
 HB_FUNC_STATIC( QRESOURCE_NEW )
 {

@@ -51,7 +51,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QSystemLocale ()
+QSystemLocale()
 */
 HB_FUNC_STATIC( QSYSTEMLOCALE_NEW )
 {

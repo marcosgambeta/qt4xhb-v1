@@ -51,7 +51,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QMutex ( RecursionMode mode = NonRecursive )
+QMutex( QMutex::RecursionMode mode = QMutex::NonRecursive )
 */
 HB_FUNC_STATIC( QMUTEX_NEW )
 {
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QMUTEX_LOCK )
 }
 
 /*
-bool tryLock ()
+bool tryLock()
 */
 void QMutex_tryLock1()
 {
@@ -123,7 +123,7 @@ void QMutex_tryLock1()
 }
 
 /*
-bool tryLock ( int timeout )
+bool tryLock( int timeout )
 */
 void QMutex_tryLock2()
 {
@@ -134,11 +134,6 @@ void QMutex_tryLock2()
     RBOOL( obj->tryLock( PINT(1) ) );
   }
 }
-
-/*
-[1]bool tryLock ()
-[2]bool tryLock ( int timeout )
-*/
 
 HB_FUNC_STATIC( QMUTEX_TRYLOCK )
 {

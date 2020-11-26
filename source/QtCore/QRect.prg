@@ -103,7 +103,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QRect ()
+QRect()
 */
 void QRect_new1()
 {
@@ -112,7 +112,7 @@ void QRect_new1()
 }
 
 /*
-QRect ( const QPoint & topLeft, const QPoint & bottomRight )
+QRect( const QPoint & topLeft, const QPoint & bottomRight )
 */
 void QRect_new2()
 {
@@ -121,7 +121,7 @@ void QRect_new2()
 }
 
 /*
-QRect ( const QPoint & topLeft, const QSize & size )
+QRect( const QPoint & topLeft, const QSize & size )
 */
 void QRect_new3()
 {
@@ -130,20 +130,13 @@ void QRect_new3()
 }
 
 /*
-QRect ( int x, int y, int width, int height )
+QRect( int x, int y, int width, int height )
 */
 void QRect_new4()
 {
   QRect * obj = new QRect( PINT(1), PINT(2), PINT(3), PINT(4) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QRect ()
-[2]QRect ( const QPoint & topLeft, const QPoint & bottomRight )
-[3]QRect ( const QPoint & topLeft, const QSize & size )
-[4]QRect ( int x, int y, int width, int height )
-*/
 
 HB_FUNC_STATIC( QRECT_NEW )
 {
@@ -337,7 +330,7 @@ HB_FUNC_STATIC( QRECT_CENTER )
 }
 
 /*
-bool contains ( const QPoint & point, bool proper = false ) const
+bool contains( const QPoint & point, bool proper = false ) const
 */
 void QRect_contains1()
 {
@@ -350,7 +343,7 @@ void QRect_contains1()
 }
 
 /*
-bool contains ( int x, int y, bool proper ) const
+bool contains( int x, int y, bool proper ) const
 */
 void QRect_contains2()
 {
@@ -363,7 +356,7 @@ void QRect_contains2()
 }
 
 /*
-bool contains ( int x, int y ) const
+bool contains( int x, int y ) const
 */
 void QRect_contains3()
 {
@@ -376,7 +369,7 @@ void QRect_contains3()
 }
 
 /*
-bool contains ( const QRect & rectangle, bool proper = false ) const
+bool contains( const QRect & rectangle, bool proper = false ) const
 */
 void QRect_contains4()
 {
@@ -387,13 +380,6 @@ void QRect_contains4()
     RBOOL( obj->contains( *PQRECT(1), OPBOOL(2,false) ) );
   }
 }
-
-/*
-[1]bool contains ( const QPoint & point, bool proper = false ) const
-[2]bool contains ( int x, int y, bool proper ) const
-[3]bool contains ( int x, int y ) const
-[4]bool contains ( const QRect & rectangle, bool proper = false ) const
-*/
 
 HB_FUNC_STATIC( QRECT_CONTAINS )
 {
@@ -813,7 +799,7 @@ HB_FUNC_STATIC( QRECT_MOVERIGHT )
 }
 
 /*
-void moveTo ( int x, int y )
+void moveTo( int x, int y )
 */
 void QRect_moveTo1()
 {
@@ -828,7 +814,7 @@ void QRect_moveTo1()
 }
 
 /*
-void moveTo ( const QPoint & position )
+void moveTo( const QPoint & position )
 */
 void QRect_moveTo2()
 {
@@ -841,11 +827,6 @@ void QRect_moveTo2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void moveTo ( int x, int y )
-[2]void moveTo ( const QPoint & position )
-*/
 
 HB_FUNC_STATIC( QRECT_MOVETO )
 {
@@ -1480,7 +1461,7 @@ HB_FUNC_STATIC( QRECT_TOPRIGHT )
 }
 
 /*
-void translate ( int dx, int dy )
+void translate( int dx, int dy )
 */
 void QRect_translate1()
 {
@@ -1495,7 +1476,7 @@ void QRect_translate1()
 }
 
 /*
-void translate ( const QPoint & offset )
+void translate( const QPoint & offset )
 */
 void QRect_translate2()
 {
@@ -1508,11 +1489,6 @@ void QRect_translate2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void translate ( int dx, int dy )
-[2]void translate ( const QPoint & offset )
-*/
 
 HB_FUNC_STATIC( QRECT_TRANSLATE )
 {
@@ -1531,7 +1507,7 @@ HB_FUNC_STATIC( QRECT_TRANSLATE )
 }
 
 /*
-QRect translated ( int dx, int dy ) const
+QRect translated( int dx, int dy ) const
 */
 void QRect_translated1()
 {
@@ -1545,7 +1521,7 @@ void QRect_translated1()
 }
 
 /*
-QRect translated ( const QPoint & offset ) const
+QRect translated( const QPoint & offset ) const
 */
 void QRect_translated2()
 {
@@ -1557,11 +1533,6 @@ void QRect_translated2()
     Qt4xHb::createReturnClass( ptr, "QRECT", true );
   }
 }
-
-/*
-[1]QRect translated ( int dx, int dy ) const
-[2]QRect translated ( const QPoint & offset ) const
-*/
 
 HB_FUNC_STATIC( QRECT_TRANSLATED )
 {

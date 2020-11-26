@@ -46,7 +46,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QHistoryState(QState *parent = 0)
+QHistoryState( QState * parent = 0 )
 */
 void QHistoryState_new1()
 {
@@ -55,18 +55,13 @@ void QHistoryState_new1()
 }
 
 /*
-QHistoryState(HistoryType type, QState *parent = 0)
+QHistoryState( QHistoryState::HistoryType type, QState * parent = 0 )
 */
 void QHistoryState_new2()
 {
   QHistoryState * obj = new QHistoryState( (QHistoryState::HistoryType) hb_parni(1), OPQSTATE(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QHistoryState(QState *parent = 0)
-[2]QHistoryState(HistoryType type, QState *parent = 0)
-*/
 
 HB_FUNC_STATIC( QHISTORYSTATE_NEW )
 {

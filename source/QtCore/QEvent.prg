@@ -55,7 +55,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QEvent ( Type type )
+QEvent( QEvent::Type type )
 */
 HB_FUNC_STATIC( QEVENT_NEW )
 {

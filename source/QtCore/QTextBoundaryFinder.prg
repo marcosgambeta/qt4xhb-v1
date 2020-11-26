@@ -68,7 +68,7 @@ void QTextBoundaryFinder_new1()
 }
 
 /*
-QTextBoundaryFinder(const QTextBoundaryFinder &other)
+QTextBoundaryFinder( const QTextBoundaryFinder & other )
 */
 void QTextBoundaryFinder_new2()
 {
@@ -77,24 +77,13 @@ void QTextBoundaryFinder_new2()
 }
 
 /*
-QTextBoundaryFinder(BoundaryType type, const QString &string)
+QTextBoundaryFinder( QTextBoundaryFinder::BoundaryType type, const QString & string )
 */
 void QTextBoundaryFinder_new3()
 {
   QTextBoundaryFinder * obj = new QTextBoundaryFinder( (QTextBoundaryFinder::BoundaryType) hb_parni(1), PQSTRING(2) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-QTextBoundaryFinder(BoundaryType type, const QChar *chars, int length, unsigned char *buffer = 0, int bufferSize = 0)
-*/
-
-/*
-[1]QTextBoundaryFinder()
-[2]QTextBoundaryFinder(const QTextBoundaryFinder &other)
-[3]QTextBoundaryFinder(BoundaryType type, const QString &string)
-[4]QTextBoundaryFinder(BoundaryType type, const QChar *chars, int length, unsigned char *buffer = 0, int bufferSize = 0)
-*/
 
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW )
 {

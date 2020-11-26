@@ -50,7 +50,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QWaitCondition ()
+QWaitCondition()
 */
 HB_FUNC_STATIC( QWAITCONDITION_NEW )
 {

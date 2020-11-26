@@ -158,7 +158,7 @@ RETURN
 #include <QtCore/QUrl>
 
 /*
-QVariant ()
+QVariant()
 */
 HB_FUNC_STATIC( QVARIANT_NEW1 )
 {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QVARIANT_NEW1 )
 }
 
 /*
-QVariant ( const QLocale & l )
+QVariant( const QLocale & l )
 */
 HB_FUNC_STATIC( QVARIANT_NEW2 )
 {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QVARIANT_NEW2 )
 }
 
 /*
-QVariant ( const QRegExp & regExp )
+QVariant( const QRegExp & regExp )
 */
 HB_FUNC_STATIC( QVARIANT_NEW3 )
 {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QVARIANT_NEW3 )
 }
 
 /*
-QVariant ( const QEasingCurve & val )
+QVariant( const QEasingCurve & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW4 )
 {
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QVARIANT_NEW4 )
 }
 
 /*
-QVariant ( Qt::GlobalColor color )
+QVariant( Qt::GlobalColor color )
 */
 HB_FUNC_STATIC( QVARIANT_NEW5 )
 {
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QVARIANT_NEW5 )
 }
 
 /*
-QVariant ( Type type )
+QVariant( QVariant::Type type )
 */
 HB_FUNC_STATIC( QVARIANT_NEW6 )
 {
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QVARIANT_NEW6 )
 }
 
 /*
-QVariant ( int typeOrUserType, const void * copy )
+QVariant( int typeOrUserType, const void * copy )
 */
 HB_FUNC_STATIC( QVARIANT_NEW7 )
 {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QVARIANT_NEW7 )
 }
 
 /*
-QVariant ( const QVariant & p )
+QVariant( const QVariant & p )
 */
 HB_FUNC_STATIC( QVARIANT_NEW8 )
 {
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QVARIANT_NEW8 )
 }
 
 /*
-QVariant ( QDataStream & s )
+QVariant( QDataStream & s )
 */
 HB_FUNC_STATIC( QVARIANT_NEW9 )
 {
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QVARIANT_NEW9 )
 }
 
 /*
-QVariant ( int val )
+QVariant( int val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW10 )
 {
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QVARIANT_NEW10 )
 }
 
 /*
-QVariant ( uint val )
+QVariant( uint val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW11 )
 {
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QVARIANT_NEW11 )
 }
 
 /*
-QVariant ( qlonglong val )
+QVariant( qlonglong val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW12 )
 {
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QVARIANT_NEW12 )
 }
 
 /*
-QVariant ( qulonglong val )
+QVariant( qulonglong val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW13 )
 {
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QVARIANT_NEW13 )
 }
 
 /*
-QVariant ( bool val )
+QVariant( bool val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW14 )
 {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QVARIANT_NEW14 )
 }
 
 /*
-QVariant ( double val )
+QVariant( double val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW15 )
 {
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QVARIANT_NEW15 )
 }
 
 /*
-QVariant ( float val )
+QVariant( float val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW16 )
 {
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QVARIANT_NEW16 )
 }
 
 /*
-QVariant ( const char * val )
+QVariant( const char * val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW17 )
 {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QVARIANT_NEW17 )
 }
 
 /*
-QVariant ( const QByteArray & val )
+QVariant( const QByteArray & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW18 )
 {
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QVARIANT_NEW18 )
 }
 
 /*
-QVariant ( const QBitArray & val )
+QVariant( const QBitArray & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW19 )
 {
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QVARIANT_NEW19 )
 }
 
 /*
-QVariant ( const QString & val )
+QVariant( const QString & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW20 )
 {
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QVARIANT_NEW20 )
 }
 
 /*
-QVariant ( const QLatin1String & val )
+QVariant( const QLatin1String & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW21 )
 {
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QVARIANT_NEW21 )
 }
 
 /*
-QVariant ( const QStringList & val )
+QVariant( const QStringList & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW22 )
 {
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QVARIANT_NEW22 )
 }
 
 /*
-QVariant ( const QChar & c )
+QVariant( const QChar & c )
 */
 HB_FUNC_STATIC( QVARIANT_NEW23 )
 {
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QVARIANT_NEW23 )
 }
 
 /*
-QVariant ( const QDate & val )
+QVariant( const QDate & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW24 )
 {
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QVARIANT_NEW24 )
 }
 
 /*
-QVariant ( const QTime & val )
+QVariant( const QTime & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW25 )
 {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QVARIANT_NEW25 )
 }
 
 /*
-QVariant ( const QDateTime & val )
+QVariant( const QDateTime & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW26 )
 {
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QVARIANT_NEW26 )
 }
 
 /*
-QVariant ( const QList<QVariant> & val )
+QVariant( const QList<QVariant> & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW27 )
 {
@@ -409,15 +409,7 @@ HB_FUNC_STATIC( QVARIANT_NEW27 )
 }
 
 /*
-QVariant ( const QMap<QString, QVariant> & val )
-*/
-
-/*
-QVariant ( const QHash<QString, QVariant> & val )
-*/
-
-/*
-QVariant ( const QSize & val )
+QVariant( const QSize & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW30 )
 {
@@ -426,7 +418,7 @@ HB_FUNC_STATIC( QVARIANT_NEW30 )
 }
 
 /*
-QVariant ( const QSizeF & val )
+QVariant( const QSizeF & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW31 )
 {
@@ -435,7 +427,7 @@ HB_FUNC_STATIC( QVARIANT_NEW31 )
 }
 
 /*
-QVariant ( const QPoint & val )
+QVariant( const QPoint & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW32 )
 {
@@ -444,7 +436,7 @@ HB_FUNC_STATIC( QVARIANT_NEW32 )
 }
 
 /*
-QVariant ( const QPointF & val )
+QVariant( const QPointF & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW33 )
 {
@@ -453,7 +445,7 @@ HB_FUNC_STATIC( QVARIANT_NEW33 )
 }
 
 /*
-QVariant ( const QLine & val )
+QVariant( const QLine & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW34 )
 {
@@ -462,7 +454,7 @@ HB_FUNC_STATIC( QVARIANT_NEW34 )
 }
 
 /*
-QVariant ( const QLineF & val )
+QVariant( const QLineF & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW35 )
 {
@@ -471,7 +463,7 @@ HB_FUNC_STATIC( QVARIANT_NEW35 )
 }
 
 /*
-QVariant ( const QRect & val )
+QVariant( const QRect & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW36 )
 {
@@ -480,7 +472,7 @@ HB_FUNC_STATIC( QVARIANT_NEW36 )
 }
 
 /*
-QVariant ( const QRectF & val )
+QVariant( const QRectF & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW37 )
 {
@@ -489,54 +481,13 @@ HB_FUNC_STATIC( QVARIANT_NEW37 )
 }
 
 /*
-QVariant ( const QUrl & val )
+QVariant( const QUrl & val )
 */
 HB_FUNC_STATIC( QVARIANT_NEW38 )
 {
   QVariant * obj = new QVariant( *PQURL(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QVariant ()
-[2]QVariant ( const QLocale & l )
-[3]QVariant ( const QRegExp & regExp )
-[4]QVariant ( const QEasingCurve & val )
-[5]QVariant ( Qt::GlobalColor color )
-[6]QVariant ( Type type )
-[7]QVariant ( int typeOrUserType, const void * copy )
-[8]QVariant ( const QVariant & p )
-[9]QVariant ( QDataStream & s )
-[10]QVariant ( int val )
-[11]QVariant ( uint val )
-[12]QVariant ( qlonglong val )
-[13]QVariant ( qulonglong val )
-[14]QVariant ( bool val )
-[15]QVariant ( double val )
-[16]QVariant ( float val )
-[17]QVariant ( const char * val )
-[18]QVariant ( const QByteArray & val )
-[19]QVariant ( const QBitArray & val )
-[20]QVariant ( const QString & val )
-[21]QVariant ( const QLatin1String & val )
-[22]QVariant ( const QStringList & val )
-[23]QVariant ( const QChar & c )
-[24]QVariant ( const QDate & val )
-[25]QVariant ( const QTime & val )
-[26]QVariant ( const QDateTime & val )
-[27]QVariant ( const QList<QVariant> & val )
-[28]QVariant ( const QMap<QString, QVariant> & val )
-[29]QVariant ( const QHash<QString, QVariant> & val )
-[30]QVariant ( const QSize & val )
-[31]QVariant ( const QSizeF & val )
-[32]QVariant ( const QPoint & val )
-[33]QVariant ( const QPointF & val )
-[34]QVariant ( const QLine & val )
-[35]QVariant ( const QLineF & val )
-[36]QVariant ( const QRect & val )
-[37]QVariant ( const QRectF & val )
-[38]QVariant ( const QUrl & val )
-*/
 
 HB_FUNC_STATIC( QVARIANT_NEW )
 {

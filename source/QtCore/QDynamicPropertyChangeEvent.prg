@@ -41,7 +41,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QDynamicPropertyChangeEvent ( const QByteArray & name )
+QDynamicPropertyChangeEvent( const QByteArray & name )
 */
 HB_FUNC_STATIC( QDYNAMICPROPERTYCHANGEEVENT_NEW )
 {

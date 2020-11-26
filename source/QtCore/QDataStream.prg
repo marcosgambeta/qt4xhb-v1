@@ -64,7 +64,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QDataStream ()
+QDataStream()
 */
 void QDataStream_new1()
 {
@@ -73,7 +73,7 @@ void QDataStream_new1()
 }
 
 /*
-QDataStream ( QIODevice * d )
+QDataStream( QIODevice * d )
 */
 void QDataStream_new2()
 {
@@ -82,7 +82,7 @@ void QDataStream_new2()
 }
 
 /*
-QDataStream ( QByteArray * a, QIODevice::OpenMode mode )
+QDataStream( QByteArray * a, QIODevice::OpenMode mode )
 */
 void QDataStream_new3()
 {
@@ -91,20 +91,13 @@ void QDataStream_new3()
 }
 
 /*
-QDataStream ( const QByteArray & a )
+QDataStream( const QByteArray & a )
 */
 void QDataStream_new4()
 {
   QDataStream * obj = new QDataStream( *PQBYTEARRAY(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDataStream ()
-[2]QDataStream ( QIODevice * d )
-[3]QDataStream ( QByteArray * a, QIODevice::OpenMode mode )
-[4]QDataStream ( const QByteArray & a )
-*/
 
 HB_FUNC_STATIC( QDATASTREAM_NEW )
 {

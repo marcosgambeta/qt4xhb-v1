@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QTimer ( QObject * parent = 0 )
+QTimer( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QTIMER_NEW )
 {
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QTIMER_TIMERID )
 }
 
 /*
-void start ( int msec )
+void start( int msec )
 */
 void QTimer_start1()
 {
@@ -250,7 +250,7 @@ void QTimer_start1()
 }
 
 /*
-void start ()
+void start()
 */
 void QTimer_start2()
 {
@@ -263,11 +263,6 @@ void QTimer_start2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void start ( int msec )
-[2]void start ()
-*/
 
 HB_FUNC_STATIC( QTIMER_START )
 {

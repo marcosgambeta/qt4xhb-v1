@@ -42,6 +42,7 @@ CLASS QAbstractFileEngine
    METHOD owner
    METHOD ownerId
    METHOD pos
+   METHOD readLine
    METHOD remove
    METHOD rename
    METHOD rmdir
@@ -579,8 +580,28 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_POS )
 }
 
 /*
-virtual qint64 readLine ( char * data, qint64 maxlen )
+virtual qint64 readLine( char * data, qint64 maxlen )
 */
+HB_FUNC_STATIC( QABSTRACTFILEENGINE_READLINE )
+{
+  QAbstractFileEngine * obj = (QAbstractFileEngine *) Qt4xHb::itemGetPtrStackSelfItem();
+
+  if( obj )
+  {
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    {
+#endif
+      RQINT64( obj->readLine( (char *) hb_parc(1), PQINT64(2) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
+  }
+}
 
 /*
 virtual bool remove()

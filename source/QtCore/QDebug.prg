@@ -51,7 +51,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QDebug ( QIODevice * device )
+QDebug( QIODevice * device )
 */
 void QDebug_new1()
 {
@@ -60,11 +60,7 @@ void QDebug_new1()
 }
 
 /*
-QDebug ( QString * string )
-*/
-
-/*
-QDebug ( QtMsgType type )
+QDebug( QtMsgType type )
 */
 void QDebug_new3()
 {
@@ -73,20 +69,13 @@ void QDebug_new3()
 }
 
 /*
-QDebug ( const QDebug & other )
+QDebug( const QDebug & other )
 */
 void QDebug_new4()
 {
   QDebug * obj = new QDebug( *PQDEBUG(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDebug ( QIODevice * device )
-[2]QDebug ( QString * string )
-[3]QDebug ( QtMsgType type )
-[4]QDebug ( const QDebug & other )
-*/
 
 HB_FUNC_STATIC( QDEBUG_NEW )
 {

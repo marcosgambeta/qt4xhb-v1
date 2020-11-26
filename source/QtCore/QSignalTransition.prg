@@ -47,7 +47,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QSignalTransition(QState *sourceState = 0)
+QSignalTransition( QState * sourceState = 0 )
 */
 void QSignalTransition_new1()
 {
@@ -56,18 +56,13 @@ void QSignalTransition_new1()
 }
 
 /*
-QSignalTransition(QObject *sender, const char *signal,QState *sourceState = 0)
+QSignalTransition( QObject * sender, const char * signal, QState * sourceState = 0 )
 */
 void QSignalTransition_new2()
 {
   QSignalTransition * obj = new QSignalTransition( PQOBJECT(1), PCONSTCHAR(2), OPQSTATE(3,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QSignalTransition(QState *sourceState = 0)
-[2]QSignalTransition(QObject *sender, const char *signal,QState *sourceState = 0)
-*/
 
 HB_FUNC_STATIC( QSIGNALTRANSITION_NEW )
 {

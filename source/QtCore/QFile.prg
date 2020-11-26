@@ -67,7 +67,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QFile ( const QString & name )
+QFile( const QString & name )
 */
 void QFile_new1()
 {
@@ -76,7 +76,7 @@ void QFile_new1()
 }
 
 /*
-QFile ( QObject * parent )
+QFile( QObject * parent )
 */
 void QFile_new2()
 {
@@ -85,19 +85,13 @@ void QFile_new2()
 }
 
 /*
-QFile ( const QString & name, QObject * parent )
+QFile( const QString & name, QObject * parent )
 */
 void QFile_new3()
 {
   QFile * obj = new QFile( PQSTRING(1), PQOBJECT(2) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QFile ( const QString & name )
-[2]QFile ( QObject * parent )
-[3]QFile ( const QString & name, QObject * parent )
-*/
 
 HB_FUNC_STATIC( QFILE_NEW )
 {
@@ -385,7 +379,7 @@ HB_FUNC_STATIC( QFILE_ISSEQUENTIAL )
 }
 
 /*
-bool open ( FILE * fh, OpenMode mode )
+bool open( FILE * fh, QIODevice::OpenMode mode )
 */
 void QFile_open1()
 {
@@ -398,7 +392,7 @@ void QFile_open1()
 }
 
 /*
-bool open ( FILE * fh, OpenMode mode, FileHandleFlags handleFlags )
+bool open( FILE * fh, QIODevice::OpenMode mode, QFile::FileHandleFlags handleFlags )
 */
 void QFile_open2()
 {
@@ -411,7 +405,7 @@ void QFile_open2()
 }
 
 /*
-bool open ( int fd, OpenMode mode )
+bool open( int fd, QIODevice::OpenMode mode )
 */
 void QFile_open3()
 {
@@ -424,7 +418,7 @@ void QFile_open3()
 }
 
 /*
-bool open ( int fd, OpenMode mode, FileHandleFlags handleFlags )
+bool open( int fd, QIODevice::OpenMode mode, QFile::FileHandleFlags handleFlags )
 */
 void QFile_open4()
 {
@@ -437,11 +431,7 @@ void QFile_open4()
 }
 
 /*
-bool open ( const RFile & f, OpenMode mode, FileHandleFlags handleFlags = DontCloseHandle )
-*/
-
-/*
-virtual bool open ( OpenMode mode )
+virtual bool open( QIODevice::OpenMode mode )
 */
 void QFile_open6()
 {
@@ -452,15 +442,6 @@ void QFile_open6()
     RBOOL( obj->open( (QIODevice::OpenMode) hb_parni(1) ) );
   }
 }
-
-/*
-[1]bool open ( FILE * fh, OpenMode mode )
-[2]bool open ( FILE * fh, OpenMode mode, FileHandleFlags handleFlags )
-[3]bool open ( int fd, OpenMode mode )
-[4]bool open ( int fd, OpenMode mode, FileHandleFlags handleFlags )
-[5]bool open ( const RFile & f, OpenMode mode, FileHandleFlags handleFlags = DontCloseHandle )
-[6]virtual bool open ( OpenMode mode )
-*/
 
 HB_FUNC_STATIC( QFILE_OPEN )
 {
@@ -563,7 +544,7 @@ HB_FUNC_STATIC( QFILE_SIZE )
 }
 
 /*
-bool copy ( const QString & newName )
+bool copy( const QString & newName )
 */
 void QFile_copy1()
 {
@@ -576,18 +557,13 @@ void QFile_copy1()
 }
 
 /*
-static bool copy ( const QString & fileName, const QString & newName )
+static bool copy( const QString & fileName, const QString & newName )
 */
 void QFile_copy2()
 {
 
   RBOOL( QFile::copy( PQSTRING(1), PQSTRING(2) ) );
 }
-
-/*
-[1]bool copy ( const QString & newName )
-[2]bool copy ( const QString & fileName, const QString & newName )
-*/
 
 HB_FUNC_STATIC( QFILE_COPY )
 {
@@ -606,7 +582,7 @@ HB_FUNC_STATIC( QFILE_COPY )
 }
 
 /*
-static QString decodeName ( const QByteArray & localFileName )
+static QString decodeName( const QByteArray & localFileName )
 */
 void QFile_decodeName1()
 {
@@ -615,18 +591,13 @@ void QFile_decodeName1()
 }
 
 /*
-static QString decodeName ( const char * localFileName )
+static QString decodeName( const char * localFileName )
 */
 void QFile_decodeName2()
 {
 
   RQSTRING( QFile::decodeName( PCONSTCHAR(1) ) );
 }
-
-/*
-[1]QString decodeName ( const QByteArray & localFileName )
-[2]QString decodeName ( const char * localFileName )
-*/
 
 HB_FUNC_STATIC( QFILE_DECODENAME )
 {
@@ -665,7 +636,7 @@ HB_FUNC_STATIC( QFILE_ENCODENAME )
 }
 
 /*
-bool exists () const
+bool exists() const
 */
 void QFile_exists1()
 {
@@ -678,18 +649,13 @@ void QFile_exists1()
 }
 
 /*
-static bool exists ( const QString & fileName )
+static bool exists( const QString & fileName )
 */
 void QFile_exists2()
 {
 
   RBOOL( QFile::exists( PQSTRING(1) ) );
 }
-
-/*
-[1]bool exists () const
-[2]bool exists ( const QString & fileName )
-*/
 
 HB_FUNC_STATIC( QFILE_EXISTS )
 {
@@ -708,7 +674,7 @@ HB_FUNC_STATIC( QFILE_EXISTS )
 }
 
 /*
-bool link ( const QString & linkName )
+bool link( const QString & linkName )
 */
 void QFile_link1()
 {
@@ -721,18 +687,13 @@ void QFile_link1()
 }
 
 /*
-static bool link ( const QString & fileName, const QString & linkName )
+static bool link( const QString & fileName, const QString & linkName )
 */
 void QFile_link2()
 {
 
   RBOOL( QFile::link( PQSTRING(1), PQSTRING(2) ) );
 }
-
-/*
-[1]bool link ( const QString & linkName )
-[2]bool link ( const QString & fileName, const QString & linkName )
-*/
 
 HB_FUNC_STATIC( QFILE_LINK )
 {
@@ -751,7 +712,7 @@ HB_FUNC_STATIC( QFILE_LINK )
 }
 
 /*
-Permissions permissions () const
+QFile::Permissions permissions() const
 */
 void QFile_permissions1()
 {
@@ -764,18 +725,13 @@ void QFile_permissions1()
 }
 
 /*
-static Permissions permissions ( const QString & fileName )
+static QFile::Permissions permissions( const QString & fileName )
 */
 void QFile_permissions2()
 {
 
   RENUM( QFile::permissions( PQSTRING(1) ) );
 }
-
-/*
-[1]Permissions permissions () const
-[2]Permissions permissions ( const QString & fileName )
-*/
 
 HB_FUNC_STATIC( QFILE_PERMISSIONS )
 {
@@ -794,7 +750,7 @@ HB_FUNC_STATIC( QFILE_PERMISSIONS )
 }
 
 /*
-bool remove ()
+bool remove()
 */
 void QFile_remove1()
 {
@@ -807,18 +763,13 @@ void QFile_remove1()
 }
 
 /*
-static bool remove ( const QString & fileName )
+static bool remove( const QString & fileName )
 */
 void QFile_remove2()
 {
 
   RBOOL( QFile::remove( PQSTRING(1) ) );
 }
-
-/*
-[1]bool remove ()
-[2]bool remove ( const QString & fileName )
-*/
 
 HB_FUNC_STATIC( QFILE_REMOVE )
 {
@@ -837,7 +788,7 @@ HB_FUNC_STATIC( QFILE_REMOVE )
 }
 
 /*
-bool rename ( const QString & newName )
+bool rename( const QString & newName )
 */
 void QFile_rename1()
 {
@@ -850,18 +801,13 @@ void QFile_rename1()
 }
 
 /*
-static bool rename ( const QString & oldName, const QString & newName )
+static bool rename( const QString & oldName, const QString & newName )
 */
 void QFile_rename2()
 {
 
   RBOOL( QFile::rename( PQSTRING(1), PQSTRING(2) ) );
 }
-
-/*
-[1]bool rename ( const QString & newName )
-[2]bool rename ( const QString & oldName, const QString & newName )
-*/
 
 HB_FUNC_STATIC( QFILE_RENAME )
 {
@@ -880,7 +826,7 @@ HB_FUNC_STATIC( QFILE_RENAME )
 }
 
 /*
-bool resize ( qint64 sz )
+bool resize( qint64 sz )
 */
 void QFile_resize1()
 {
@@ -893,18 +839,13 @@ void QFile_resize1()
 }
 
 /*
-static bool resize ( const QString & fileName, qint64 sz )
+static bool resize( const QString & fileName, qint64 sz )
 */
 void QFile_resize2()
 {
 
   RBOOL( QFile::resize( PQSTRING(1), PQINT64(2) ) );
 }
-
-/*
-[1]bool resize ( qint64 sz )
-[2]bool resize ( const QString & fileName, qint64 sz )
-*/
 
 HB_FUNC_STATIC( QFILE_RESIZE )
 {
@@ -923,7 +864,7 @@ HB_FUNC_STATIC( QFILE_RESIZE )
 }
 
 /*
-bool setPermissions ( Permissions permissions )
+bool setPermissions( QFile::Permissions permissions )
 */
 void QFile_setPermissions1()
 {
@@ -936,18 +877,13 @@ void QFile_setPermissions1()
 }
 
 /*
-static bool setPermissions ( const QString & fileName, Permissions permissions )
+static bool setPermissions( const QString & fileName, QFile::Permissions permissions )
 */
 void QFile_setPermissions2()
 {
 
   RBOOL( QFile::setPermissions( PQSTRING(1), (QFile::Permissions) hb_parni(2) ) );
 }
-
-/*
-[1]bool setPermissions ( Permissions permissions )
-[2]bool setPermissions ( const QString & fileName, Permissions permissions )
-*/
 
 HB_FUNC_STATIC( QFILE_SETPERMISSIONS )
 {
@@ -966,7 +902,7 @@ HB_FUNC_STATIC( QFILE_SETPERMISSIONS )
 }
 
 /*
-QString symLinkTarget () const
+QString symLinkTarget() const
 */
 void QFile_symLinkTarget1()
 {
@@ -979,18 +915,13 @@ void QFile_symLinkTarget1()
 }
 
 /*
-static QString symLinkTarget ( const QString & fileName )
+static QString symLinkTarget( const QString & fileName )
 */
 void QFile_symLinkTarget2()
 {
 
   RQSTRING( QFile::symLinkTarget( PQSTRING(1) ) );
 }
-
-/*
-[1]QString symLinkTarget () const
-[2]QString symLinkTarget ( const QString & fileName )
-*/
 
 HB_FUNC_STATIC( QFILE_SYMLINKTARGET )
 {

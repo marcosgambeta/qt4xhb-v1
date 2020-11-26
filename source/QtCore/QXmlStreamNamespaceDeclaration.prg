@@ -60,7 +60,7 @@ void QXmlStreamNamespaceDeclaration_new1()
 }
 
 /*
-QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & other)
+QXmlStreamNamespaceDeclaration( const QXmlStreamNamespaceDeclaration & other )
 */
 void QXmlStreamNamespaceDeclaration_new2()
 {
@@ -69,19 +69,13 @@ void QXmlStreamNamespaceDeclaration_new2()
 }
 
 /*
-QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri)
+QXmlStreamNamespaceDeclaration( const QString & prefix, const QString & namespaceUri )
 */
 void QXmlStreamNamespaceDeclaration_new3()
 {
   QXmlStreamNamespaceDeclaration * obj = new QXmlStreamNamespaceDeclaration( PQSTRING(1), PQSTRING(2) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QXmlStreamNamespaceDeclaration()
-[2]QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & other)
-[3]QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri)
-*/
 
 HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW )
 {

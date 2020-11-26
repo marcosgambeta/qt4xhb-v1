@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QThreadPool ( QObject * parent = 0 )
+QThreadPool( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QTHREADPOOL_NEW )
 {
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QTHREADPOOL_TRYSTART )
 }
 
 /*
-void waitForDone ()
+void waitForDone()
 */
 void QThreadPool_waitForDone1()
 {
@@ -328,7 +328,7 @@ void QThreadPool_waitForDone1()
 }
 
 /*
-bool waitForDone ( int msecs )
+bool waitForDone( int msecs )
 */
 void QThreadPool_waitForDone2()
 {
@@ -339,11 +339,6 @@ void QThreadPool_waitForDone2()
     RBOOL( obj->waitForDone( PINT(1) ) );
   }
 }
-
-/*
-[1]void waitForDone ()
-[2]bool waitForDone ( int msecs )
-*/
 
 HB_FUNC_STATIC( QTHREADPOOL_WAITFORDONE )
 {

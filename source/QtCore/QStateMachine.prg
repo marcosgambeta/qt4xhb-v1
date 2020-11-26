@@ -64,7 +64,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QStateMachine ( QObject * parent = 0 )
+QStateMachine( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSTATEMACHINE_NEW )
 {

@@ -74,18 +74,13 @@ void QTime_new1()
 }
 
 /*
-QTime(int h, int m, int s = 0, int ms = 0)
+QTime( int h, int m, int s = 0, int ms = 0 )
 */
 void QTime_new2()
 {
   QTime * obj = new QTime( PINT(1), PINT(2), OPINT(3,0), OPINT(4,0) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QTime()
-[2]QTime(int h, int m, int s = 0, int ms = 0)
-*/
 
 HB_FUNC_STATIC( QTIME_NEW )
 {
@@ -437,7 +432,7 @@ HB_FUNC_STATIC( QTIME_START )
 }
 
 /*
-QString toString(const QString & format) const
+QString toString( const QString & format ) const
 */
 void QTime_toString1()
 {
@@ -450,7 +445,7 @@ void QTime_toString1()
 }
 
 /*
-QString toString(Qt::DateFormat format = Qt::TextDate) const
+QString toString( Qt::DateFormat format = Qt::TextDate ) const
 */
 void QTime_toString2()
 {
@@ -461,11 +456,6 @@ void QTime_toString2()
     RQSTRING( obj->toString( ISNIL(1)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(1) ) );
   }
 }
-
-/*
-[1]QString toString(const QString & format) const
-[2]QString toString(Qt::DateFormat format = Qt::TextDate) const
-*/
 
 HB_FUNC_STATIC( QTIME_TOSTRING )
 {
@@ -504,7 +494,7 @@ HB_FUNC_STATIC( QTIME_CURRENTTIME )
 }
 
 /*
-static QTime fromString(const QString & string, Qt::DateFormat format = Qt::TextDate)
+static QTime fromString( const QString & string, Qt::DateFormat format = Qt::TextDate )
 */
 void QTime_fromString1()
 {
@@ -514,7 +504,7 @@ void QTime_fromString1()
 }
 
 /*
-QTime fromString(const QString & string, const QString & format)
+QTime fromString( const QString & string, const QString & format )
 */
 void QTime_fromString2()
 {
@@ -526,11 +516,6 @@ void QTime_fromString2()
     Qt4xHb::createReturnClass( ptr, "QTIME", true );
   }
 }
-
-/*
-[1]QTime fromString(const QString & string, Qt::DateFormat format = Qt::TextDate)
-[2]QTime fromString(const QString & string, const QString & format)
-*/
 
 HB_FUNC_STATIC( QTIME_FROMSTRING )
 {
@@ -562,18 +547,13 @@ void QTime_isValid1()
 }
 
 /*
-static bool isValid(int h, int m, int s, int ms = 0)
+static bool isValid( int h, int m, int s, int ms = 0 )
 */
 void QTime_isValid2()
 {
 
   RBOOL( QTime::isValid( PINT(1), PINT(2), PINT(3), OPINT(4,0) ) );
 }
-
-/*
-[1]bool isValid() const
-[2]bool isValid(int h, int m, int s, int ms = 0)
-*/
 
 HB_FUNC_STATIC( QTIME_ISVALID )
 {

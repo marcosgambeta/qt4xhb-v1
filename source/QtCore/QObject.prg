@@ -236,7 +236,7 @@ void _qtxhb_processOnEventMethod (QEvent::Type event);
 void _qtxhb_processOnEventMethod2 (QEvent::Type event);
 
 /*
-QObject ( QObject * parent = 0 )
+QObject( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QOBJECT_NEW )
 {
@@ -555,7 +555,6 @@ void QObject_findChildren1()
     hb_itemReturnRelease(pArray);
   }
 }
-
 /*
 QList<T> findChildren ( const QRegExp & regExp ) const
 */
@@ -592,11 +591,6 @@ void QObject_findChildren2()
     hb_itemReturnRelease(pArray);
   }
 }
-
-/*
-[1]QList<T> findChildren ( const QString & name = QString() ) const
-[2]QList<T> findChildren ( const QRegExp & regExp ) const
-*/
 
 HB_FUNC_STATIC( QOBJECT_FINDCHILDREN )
 {

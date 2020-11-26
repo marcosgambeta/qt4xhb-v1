@@ -75,7 +75,7 @@ RETURN
 #include <QtCore/QStringList>
 
 /*
-QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = 0 )
+QSettings( const QString & organization, const QString & application = QString(), QObject * parent = 0 )
 */
 void QSettings_new1()
 {
@@ -84,7 +84,7 @@ void QSettings_new1()
 }
 
 /*
-QSettings ( Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
+QSettings( QSettings::Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
 */
 void QSettings_new2()
 {
@@ -93,7 +93,7 @@ void QSettings_new2()
 }
 
 /*
-QSettings ( Format format, Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
+QSettings( QSettings::Format format, QSettings::Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
 */
 void QSettings_new3()
 {
@@ -102,7 +102,7 @@ void QSettings_new3()
 }
 
 /*
-QSettings ( const QString & fileName, Format format, QObject * parent = 0 )
+QSettings( const QString & fileName, QSettings::Format format, QObject * parent = 0 )
 */
 void QSettings_new4()
 {
@@ -111,21 +111,13 @@ void QSettings_new4()
 }
 
 /*
-QSettings ( QObject * parent = 0 )
+QSettings( QObject * parent = 0 )
 */
 void QSettings_new5()
 {
   QSettings * obj = new QSettings( OPQOBJECT(1,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QSettings ( const QString & organization, const QString & application = QString(), QObject * parent = 0 )
-[2]QSettings ( Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
-[3]QSettings ( Format format, Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
-[4]QSettings ( const QString & fileName, Format format, QObject * parent = 0 )
-[5]QSettings ( QObject * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QSETTINGS_NEW )
 {
@@ -720,7 +712,7 @@ HB_FUNC_STATIC( QSETTINGS_SETFALLBACKSENABLED )
 }
 
 /*
-void setIniCodec ( QTextCodec * codec )
+void setIniCodec( QTextCodec * codec )
 */
 void QSettings_setIniCodec1()
 {
@@ -735,7 +727,7 @@ void QSettings_setIniCodec1()
 }
 
 /*
-void setIniCodec ( const char * codecName )
+void setIniCodec( const char * codecName )
 */
 void QSettings_setIniCodec2()
 {
@@ -748,11 +740,6 @@ void QSettings_setIniCodec2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setIniCodec ( QTextCodec * codec )
-[2]void setIniCodec ( const char * codecName )
-*/
 
 HB_FUNC_STATIC( QSETTINGS_SETINICODEC )
 {

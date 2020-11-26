@@ -57,7 +57,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QMargins ()
+QMargins()
 */
 void QMargins_new1()
 {
@@ -66,18 +66,13 @@ void QMargins_new1()
 }
 
 /*
-QMargins ( int left, int top, int right, int bottom )
+QMargins( int left, int top, int right, int bottom )
 */
 void QMargins_new2()
 {
   QMargins * obj = new QMargins( PINT(1), PINT(2), PINT(3), PINT(4) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QMargins ()
-[2]QMargins ( int left, int top, int right, int bottom )
-*/
 
 HB_FUNC_STATIC( QMARGINS_NEW )
 {

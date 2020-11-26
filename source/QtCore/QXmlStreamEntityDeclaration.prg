@@ -63,18 +63,13 @@ void QXmlStreamEntityDeclaration_new1()
 }
 
 /*
-QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
+QXmlStreamEntityDeclaration( const QXmlStreamEntityDeclaration & other )
 */
 void QXmlStreamEntityDeclaration_new2()
 {
   QXmlStreamEntityDeclaration * obj = new QXmlStreamEntityDeclaration( *PQXMLSTREAMENTITYDECLARATION(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QXmlStreamEntityDeclaration()
-[2]QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & other)
-*/
 
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW )
 {

@@ -43,7 +43,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QPauseAnimation ( QObject * parent = 0 )
+QPauseAnimation( QObject * parent = 0 )
 */
 void QPauseAnimation_new1()
 {
@@ -52,18 +52,13 @@ void QPauseAnimation_new1()
 }
 
 /*
-QPauseAnimation ( int msecs, QObject * parent = 0 )
+QPauseAnimation( int msecs, QObject * parent = 0 )
 */
 void QPauseAnimation_new2()
 {
   QPauseAnimation * obj = new QPauseAnimation( PINT(1), OPQOBJECT(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QPauseAnimation ( QObject * parent = 0 )
-[2]QPauseAnimation ( int msecs, QObject * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QPAUSEANIMATION_NEW )
 {

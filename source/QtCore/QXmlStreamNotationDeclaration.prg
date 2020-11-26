@@ -61,18 +61,13 @@ void QXmlStreamNotationDeclaration_new1()
 }
 
 /*
-QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & other)
+QXmlStreamNotationDeclaration( const QXmlStreamNotationDeclaration & other )
 */
 void QXmlStreamNotationDeclaration_new2()
 {
   QXmlStreamNotationDeclaration * obj = new QXmlStreamNotationDeclaration( *PQXMLSTREAMNOTATIONDECLARATION(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QXmlStreamNotationDeclaration()
-[2]QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & other)
-*/
 
 HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NEW )
 {

@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QByteArrayMatcher ()
+QByteArrayMatcher()
 */
 void QByteArrayMatcher_new1()
 {
@@ -61,7 +61,7 @@ void QByteArrayMatcher_new1()
 }
 
 /*
-QByteArrayMatcher ( const QByteArray & pattern )
+QByteArrayMatcher( const QByteArray & pattern )
 */
 void QByteArrayMatcher_new2()
 {
@@ -70,7 +70,7 @@ void QByteArrayMatcher_new2()
 }
 
 /*
-QByteArrayMatcher ( const char * pattern, int length )
+QByteArrayMatcher( const char * pattern, int length )
 */
 void QByteArrayMatcher_new3()
 {
@@ -79,20 +79,13 @@ void QByteArrayMatcher_new3()
 }
 
 /*
-QByteArrayMatcher ( const QByteArrayMatcher & other )
+QByteArrayMatcher( const QByteArrayMatcher & other )
 */
 void QByteArrayMatcher_new4()
 {
   QByteArrayMatcher * obj = new QByteArrayMatcher( *PQBYTEARRAYMATCHER(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QByteArrayMatcher ()
-[2]QByteArrayMatcher ( const QByteArray & pattern )
-[3]QByteArrayMatcher ( const char * pattern, int length )
-[4]QByteArrayMatcher ( const QByteArrayMatcher & other )
-*/
 
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW )
 {
@@ -136,7 +129,7 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_DELETE )
 }
 
 /*
-int indexIn ( const QByteArray & ba, int from = 0 ) const
+int indexIn( const QByteArray & ba, int from = 0 ) const
 */
 void QByteArrayMatcher_indexIn1()
 {
@@ -149,7 +142,7 @@ void QByteArrayMatcher_indexIn1()
 }
 
 /*
-int indexIn ( const char * str, int len, int from = 0 ) const
+int indexIn( const char * str, int len, int from = 0 ) const
 */
 void QByteArrayMatcher_indexIn2()
 {
@@ -160,11 +153,6 @@ void QByteArrayMatcher_indexIn2()
     RINT( obj->indexIn( PCONSTCHAR(1), PINT(2), OPINT(3,0) ) );
   }
 }
-
-/*
-[1]int indexIn ( const QByteArray & ba, int from = 0 ) const
-[2]int indexIn ( const char * str, int len, int from = 0 ) const
-*/
 
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN )
 {

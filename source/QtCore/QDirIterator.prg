@@ -55,7 +55,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QDirIterator ( const QDir & dir, IteratorFlags flags = NoIteratorFlags )
+QDirIterator( const QDir & dir, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
 */
 void QDirIterator_new1()
 {
@@ -64,7 +64,7 @@ void QDirIterator_new1()
 }
 
 /*
-QDirIterator ( const QString & path, IteratorFlags flags = NoIteratorFlags )
+QDirIterator( const QString & path, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
 */
 void QDirIterator_new2()
 {
@@ -73,7 +73,7 @@ void QDirIterator_new2()
 }
 
 /*
-QDirIterator ( const QString & path, QDir::Filters filters, IteratorFlags flags = NoIteratorFlags )
+QDirIterator( const QString & path, QDir::Filters filters, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
 */
 void QDirIterator_new3()
 {
@@ -82,20 +82,13 @@ void QDirIterator_new3()
 }
 
 /*
-QDirIterator ( const QString & path, const QStringList & nameFilters, QDir::Filters filters = QDir::NoFilter, IteratorFlags flags = NoIteratorFlags )
+QDirIterator( const QString & path, const QStringList & nameFilters, QDir::Filters filters = QDir::NoFilter, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
 */
 void QDirIterator_new4()
 {
   QDirIterator * obj = new QDirIterator( PQSTRING(1), PQSTRINGLIST(2), ISNIL(3)? (QDir::Filters) QDir::NoFilter : (QDir::Filters) hb_parni(3), ISNIL(4)? (QDirIterator::IteratorFlags) QDirIterator::NoIteratorFlags : (QDirIterator::IteratorFlags) hb_parni(4) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDirIterator ( const QDir & dir, IteratorFlags flags = NoIteratorFlags )
-[2]QDirIterator ( const QString & path, IteratorFlags flags = NoIteratorFlags )
-[3]QDirIterator ( const QString & path, QDir::Filters filters, IteratorFlags flags = NoIteratorFlags )
-[4]QDirIterator ( const QString & path, const QStringList & nameFilters, QDir::Filters filters = QDir::NoFilter, IteratorFlags flags = NoIteratorFlags )
-*/
 
 HB_FUNC_STATIC( QDIRITERATOR_NEW )
 {

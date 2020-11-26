@@ -83,7 +83,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QFutureInterfaceBase(State initialState = NoState)
+QFutureInterfaceBase( QFutureInterfaceBase::State initialState = QFutureInterfaceBase::NoState )
 */
 void QFutureInterfaceBase_new1()
 {
@@ -92,18 +92,13 @@ void QFutureInterfaceBase_new1()
 }
 
 /*
-QFutureInterfaceBase(const QFutureInterfaceBase &other)
+QFutureInterfaceBase( const QFutureInterfaceBase & other )
 */
 void QFutureInterfaceBase_new2()
 {
   QFutureInterfaceBase * obj = new QFutureInterfaceBase( *PQFUTUREINTERFACEBASE(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QFutureInterfaceBase(State initialState = NoState)
-[2]QFutureInterfaceBase(const QFutureInterfaceBase &other)
-*/
 
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_NEW )
 {

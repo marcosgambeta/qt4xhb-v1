@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QSemaphore ( int n = 0 )
+QSemaphore( int n = 0 )
 */
 HB_FUNC_STATIC( QSEMAPHORE_NEW )
 {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QSEMAPHORE_RELEASE )
 }
 
 /*
-bool tryAcquire ( int n = 1 )
+bool tryAcquire( int n = 1 )
 */
 void QSemaphore_tryAcquire1()
 {
@@ -174,7 +174,7 @@ void QSemaphore_tryAcquire1()
 }
 
 /*
-bool tryAcquire ( int n, int timeout )
+bool tryAcquire( int n, int timeout )
 */
 void QSemaphore_tryAcquire2()
 {
@@ -185,11 +185,6 @@ void QSemaphore_tryAcquire2()
     RBOOL( obj->tryAcquire( PINT(1), PINT(2) ) );
   }
 }
-
-/*
-[1]bool tryAcquire ( int n = 1 )
-[2]bool tryAcquire ( int n, int timeout )
-*/
 
 HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE )
 {

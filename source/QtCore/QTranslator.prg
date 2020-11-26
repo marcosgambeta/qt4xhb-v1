@@ -46,7 +46,7 @@ RETURN
 #include <QtCore/QLocale>
 
 /*
-QTranslator(QObject * parent = 0)
+QTranslator( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QTRANSLATOR_NEW )
 {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QTRANSLATOR_ISEMPTY )
 }
 
 /*
-bool load(const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString())
+bool load( const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString() )
 */
 void QTranslator_load1()
 {
@@ -118,7 +118,7 @@ void QTranslator_load1()
 }
 
 /*
-bool load(const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString & directory = QString(), const QString & suffix = QString())
+bool load( const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString & directory = QString(), const QString & suffix = QString() )
 */
 void QTranslator_load2()
 {
@@ -129,16 +129,6 @@ void QTranslator_load2()
     RBOOL( obj->load( *PQLOCALE(1), PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()), OPQSTRING(5,QString()) ) );
   }
 }
-
-/*
-bool load(const uchar * data, int len, const QString & directory = QString())
-*/
-
-/*
-[1]bool load(const QString & filename, const QString & directory = QString(), const QString & search_delimiters = QString(), const QString & suffix = QString())
-[2]bool load(const QLocale & locale, const QString & filename, const QString & prefix = QString(), const QString & directory = QString(), const QString & suffix = QString())
-[3]bool load(const uchar * data, int len, const QString & directory = QString())
-*/
 
 HB_FUNC_STATIC( QTRANSLATOR_LOAD )
 {

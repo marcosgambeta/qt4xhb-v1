@@ -53,7 +53,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QReadWriteLock ()
+QReadWriteLock()
 */
 void QReadWriteLock_new1()
 {
@@ -62,18 +62,13 @@ void QReadWriteLock_new1()
 }
 
 /*
-QReadWriteLock ( RecursionMode recursionMode )
+QReadWriteLock( QReadWriteLock::RecursionMode recursionMode )
 */
 void QReadWriteLock_new2()
 {
   QReadWriteLock * obj = new QReadWriteLock( (QReadWriteLock::RecursionMode) hb_parni(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QReadWriteLock ()
-[2]QReadWriteLock ( RecursionMode recursionMode )
-*/
 
 HB_FUNC_STATIC( QREADWRITELOCK_NEW )
 {
@@ -161,7 +156,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORWRITE )
 }
 
 /*
-bool tryLockForRead ()
+bool tryLockForRead()
 */
 void QReadWriteLock_tryLockForRead1()
 {
@@ -174,7 +169,7 @@ void QReadWriteLock_tryLockForRead1()
 }
 
 /*
-bool tryLockForRead ( int timeout )
+bool tryLockForRead( int timeout )
 */
 void QReadWriteLock_tryLockForRead2()
 {
@@ -185,11 +180,6 @@ void QReadWriteLock_tryLockForRead2()
     RBOOL( obj->tryLockForRead( PINT(1) ) );
   }
 }
-
-/*
-[1]bool tryLockForRead ()
-[2]bool tryLockForRead ( int timeout )
-*/
 
 HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD )
 {
@@ -208,7 +198,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD )
 }
 
 /*
-bool tryLockForWrite ()
+bool tryLockForWrite()
 */
 void QReadWriteLock_tryLockForWrite1()
 {
@@ -221,7 +211,7 @@ void QReadWriteLock_tryLockForWrite1()
 }
 
 /*
-bool tryLockForWrite ( int timeout )
+bool tryLockForWrite( int timeout )
 */
 void QReadWriteLock_tryLockForWrite2()
 {
@@ -232,11 +222,6 @@ void QReadWriteLock_tryLockForWrite2()
     RBOOL( obj->tryLockForWrite( PINT(1) ) );
   }
 }
-
-/*
-[1]bool tryLockForWrite ()
-[2]bool tryLockForWrite ( int timeout )
-*/
 
 HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE )
 {

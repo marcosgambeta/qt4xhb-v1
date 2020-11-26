@@ -68,7 +68,7 @@ RETURN
 #include <QtCore/QUrl>
 
 /*
-QMimeData ()
+QMimeData()
 */
 HB_FUNC_STATIC( QMIMEDATA_NEW )
 {

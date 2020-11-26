@@ -66,18 +66,13 @@ void QProcessEnvironment_new1()
 }
 
 /*
-QProcessEnvironment(const QProcessEnvironment &other)
+QProcessEnvironment( const QProcessEnvironment & other )
 */
 void QProcessEnvironment_new2()
 {
   QProcessEnvironment * obj = new QProcessEnvironment( *PQPROCESSENVIRONMENT(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QProcessEnvironment()
-[2]QProcessEnvironment(const QProcessEnvironment &other)
-*/
 
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW )
 {
@@ -285,7 +280,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_KEYS )
 }
 
 /*
-void insert(const QString &name, const QString &value)
+void insert( const QString & name, const QString & value)
 */
 void QProcessEnvironment_insert1()
 {
@@ -300,7 +295,7 @@ void QProcessEnvironment_insert1()
 }
 
 /*
-void insert(const QProcessEnvironment &e)
+void insert( const QProcessEnvironment & e )
 */
 void QProcessEnvironment_insert2()
 {
@@ -313,11 +308,6 @@ void QProcessEnvironment_insert2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void insert(const QString &name, const QString &value)
-[2]void insert(const QProcessEnvironment &e)
-*/
 
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT )
 {

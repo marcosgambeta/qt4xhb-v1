@@ -102,7 +102,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QDir(const QDir & dir)
+QDir( const QDir & dir )
 */
 void QDir_new1()
 {
@@ -111,7 +111,7 @@ void QDir_new1()
 }
 
 /*
-QDir(const QString & path = QString())
+QDir( const QString & path = QString() )
 */
 void QDir_new2()
 {
@@ -120,19 +120,13 @@ void QDir_new2()
 }
 
 /*
-QDir(const QString & path, const QString & nameFilter, SortFlags sort = SortFlags( Name | IgnoreCase ), Filters filters = AllEntries)
+QDir( const QString & path, const QString & nameFilter, QDir::SortFlags sort = QDir::SortFlags( QDir::Name | QDir::IgnoreCase ), QDir::Filters filters = QDir::AllEntries )
 */
 void QDir_new3()
 {
   QDir * obj = new QDir( PQSTRING(1), PQSTRING(2), ISNIL(3)? (QDir::SortFlags) QDir::SortFlags( QDir::Name | QDir::IgnoreCase ) : (QDir::SortFlags) hb_parni(3), ISNIL(4)? (QDir::Filters) QDir::AllEntries : (QDir::Filters) hb_parni(4) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDir(const QDir & dir)
-[2]QDir(const QString & path = QString())
-[3]QDir(const QString & path, const QString & nameFilter, SortFlags sort = SortFlags( Name | IgnoreCase ), Filters filters = AllEntries)
-*/
 
 HB_FUNC_STATIC( QDIR_NEW )
 {
@@ -340,7 +334,7 @@ HB_FUNC_STATIC( QDIR_DIRNAME )
 }
 
 /*
-QFileInfoList entryInfoList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) const
+QFileInfoList entryInfoList( const QStringList & nameFilters, QDir::Filters filters = QDir::NoFilter, QDir::SortFlags sort = QDir::NoSort ) const
 */
 void QDir_entryInfoList1()
 {
@@ -381,7 +375,7 @@ void QDir_entryInfoList1()
 }
 
 /*
-QFileInfoList entryInfoList(Filters filters = NoFilter, SortFlags sort = NoSort) const
+QFileInfoList entryInfoList( QDir::Filters filters = QDir::NoFilter, QDir::SortFlags sort = QDir::NoSort ) const
 */
 void QDir_entryInfoList2()
 {
@@ -421,11 +415,6 @@ void QDir_entryInfoList2()
   }
 }
 
-/*
-[1]QFileInfoList entryInfoList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) const
-[2]QFileInfoList entryInfoList(Filters filters = NoFilter, SortFlags sort = NoSort) const
-*/
-
 HB_FUNC_STATIC( QDIR_ENTRYINFOLIST )
 {
   if( ISBETWEEN(1,3) && ISARRAY(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
@@ -443,7 +432,7 @@ HB_FUNC_STATIC( QDIR_ENTRYINFOLIST )
 }
 
 /*
-QStringList entryList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) const
+QStringList entryList( const QStringList & nameFilters, QDir::Filters filters = QDir::NoFilter, QDir::SortFlags sort = QDir::NoSort ) const
 */
 void QDir_entryList1()
 {
@@ -456,7 +445,7 @@ void QDir_entryList1()
 }
 
 /*
-QStringList entryList(Filters filters = NoFilter, SortFlags sort = NoSort) const
+QStringList entryList( QDir::Filters filters = QDir::NoFilter, QDir::SortFlags sort = QDir::NoSort ) const
 */
 void QDir_entryList2()
 {
@@ -467,11 +456,6 @@ void QDir_entryList2()
     RQSTRINGLIST( obj->entryList( ISNIL(1)? (QDir::Filters) QDir::NoFilter : (QDir::Filters) hb_parni(1), ISNIL(2)? (QDir::SortFlags) QDir::NoSort : (QDir::SortFlags) hb_parni(2) ) );
   }
 }
-
-/*
-[1]QStringList entryList(const QStringList & nameFilters, Filters filters = NoFilter, SortFlags sort = NoSort) const
-[2]QStringList entryList(Filters filters = NoFilter, SortFlags sort = NoSort) const
-*/
 
 HB_FUNC_STATIC( QDIR_ENTRYLIST )
 {
@@ -490,7 +474,7 @@ HB_FUNC_STATIC( QDIR_ENTRYLIST )
 }
 
 /*
-bool exists(const QString & name) const
+bool exists( const QString & name ) const
 */
 void QDir_exists1()
 {
@@ -514,11 +498,6 @@ void QDir_exists2()
     RBOOL( obj->exists() );
   }
 }
-
-/*
-[1]bool exists(const QString & name) const
-[2]bool exists() const
-*/
 
 HB_FUNC_STATIC( QDIR_EXISTS )
 {
@@ -1297,7 +1276,7 @@ HB_FUNC_STATIC( QDIR_ISRELATIVEPATH )
 }
 
 /*
-static bool match(const QString & filter, const QString & fileName)
+static bool match( const QString & filter, const QString & fileName )
 */
 void QDir_match1()
 {
@@ -1306,18 +1285,13 @@ void QDir_match1()
 }
 
 /*
-static bool match(const QStringList & filters, const QString & fileName)
+static bool match( const QStringList & filters, const QString & fileName )
 */
 void QDir_match2()
 {
 
   RBOOL( QDir::match( PQSTRINGLIST(1), PQSTRING(2) ) );
 }
-
-/*
-[1]bool match(const QString & filter, const QString & fileName)
-[2]bool match(const QStringList & filters, const QString & fileName)
-*/
 
 HB_FUNC_STATIC( QDIR_MATCH )
 {

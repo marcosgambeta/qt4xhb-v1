@@ -47,7 +47,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QPropertyAnimation ( QObject * parent = 0 )
+QPropertyAnimation( QObject * parent = 0 )
 */
 void QPropertyAnimation_new1()
 {
@@ -56,18 +56,13 @@ void QPropertyAnimation_new1()
 }
 
 /*
-QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
+QPropertyAnimation( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
 */
 void QPropertyAnimation_new2()
 {
   QPropertyAnimation * obj = new QPropertyAnimation( PQOBJECT(1), *PQBYTEARRAY(2), OPQOBJECT(3,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QPropertyAnimation ( QObject * parent = 0 )
-[2]QPropertyAnimation ( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QPROPERTYANIMATION_NEW )
 {

@@ -128,6 +128,7 @@ CLASS QByteArray
    METHOD number3
    METHOD number4
    METHOD number5
+   METHOD number
 
    METHOD newFrom
    METHOD newFromObject
@@ -157,7 +158,7 @@ RETURN
 #include <QtCore/QList>
 
 /*
-QByteArray ()
+QByteArray()
 */
 void QByteArray_new1()
 {
@@ -166,7 +167,7 @@ void QByteArray_new1()
 }
 
 /*
-QByteArray ( const char * str )
+QByteArray( const char * str )
 */
 void QByteArray_new2()
 {
@@ -175,7 +176,7 @@ void QByteArray_new2()
 }
 
 /*
-QByteArray ( const char * data, int size )
+QByteArray( const char * data, int size )
 */
 void QByteArray_new3()
 {
@@ -184,7 +185,7 @@ void QByteArray_new3()
 }
 
 /*
-QByteArray ( int size, char ch )
+QByteArray( int size, char ch )
 */
 void QByteArray_new4()
 {
@@ -193,21 +194,13 @@ void QByteArray_new4()
 }
 
 /*
-QByteArray ( const QByteArray & other )
+QByteArray( const QByteArray & other )
 */
 void QByteArray_new5()
 {
   QByteArray * obj = new QByteArray( *PQBYTEARRAY(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QByteArray ()
-[2]QByteArray ( const char * str )
-[3]QByteArray ( const char * data, int size )
-[4]QByteArray ( int size, char ch )
-[5]QByteArray ( const QByteArray & other )
-*/
 
 HB_FUNC_STATIC( QBYTEARRAY_NEW )
 {
@@ -255,7 +248,7 @@ HB_FUNC_STATIC( QBYTEARRAY_DELETE )
 }
 
 /*
-QByteArray & append ( const QByteArray & ba )
+QByteArray & append( const QByteArray & ba )
 */
 HB_FUNC_STATIC( QBYTEARRAY_APPEND1 )
 {
@@ -280,7 +273,7 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND1 )
 }
 
 /*
-QByteArray & append ( const QString & str )
+QByteArray & append( const QString & str )
 */
 HB_FUNC_STATIC( QBYTEARRAY_APPEND2 )
 {
@@ -305,7 +298,7 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND2 )
 }
 
 /*
-QByteArray & append ( const char * str )
+QByteArray & append( const char * str )
 */
 HB_FUNC_STATIC( QBYTEARRAY_APPEND3 )
 {
@@ -330,7 +323,7 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND3 )
 }
 
 /*
-QByteArray & append ( const char * str, int len )
+QByteArray & append( const char * str, int len )
 */
 HB_FUNC_STATIC( QBYTEARRAY_APPEND4 )
 {
@@ -355,7 +348,7 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND4 )
 }
 
 /*
-QByteArray & append ( char ch )
+QByteArray & append( char ch )
 */
 HB_FUNC_STATIC( QBYTEARRAY_APPEND5 )
 {
@@ -378,14 +371,6 @@ HB_FUNC_STATIC( QBYTEARRAY_APPEND5 )
 #endif
   }
 }
-
-/*
-[1]QByteArray & append ( const QByteArray & ba )
-[2]QByteArray & append ( const QString & str )
-[3]QByteArray & append ( const char * str )
-[4]QByteArray & append ( const char * str, int len )
-[5]QByteArray & append ( char ch )
-*/
 
 HB_FUNC_STATIC( QBYTEARRAY_APPEND )
 {
@@ -536,7 +521,7 @@ HB_FUNC_STATIC( QBYTEARRAY_CONSTDATA )
 }
 
 /*
-bool contains ( const QByteArray & ba ) const
+bool contains( const QByteArray & ba ) const
 */
 void QByteArray_contains1()
 {
@@ -549,7 +534,7 @@ void QByteArray_contains1()
 }
 
 /*
-bool contains ( const char * str ) const
+bool contains( const char * str ) const
 */
 void QByteArray_contains2()
 {
@@ -562,7 +547,7 @@ void QByteArray_contains2()
 }
 
 /*
-bool contains ( char ch ) const
+bool contains( char ch ) const
 */
 void QByteArray_contains3()
 {
@@ -573,12 +558,6 @@ void QByteArray_contains3()
     RBOOL( obj->contains( PCHAR(1) ) );
   }
 }
-
-/*
-[1]bool contains ( const QByteArray & ba ) const
-[2]bool contains ( const char * str ) const
-[3]bool contains ( char ch ) const
-*/
 
 HB_FUNC_STATIC( QBYTEARRAY_CONTAINS )
 {
@@ -601,7 +580,7 @@ HB_FUNC_STATIC( QBYTEARRAY_CONTAINS )
 }
 
 /*
-int count ( const QByteArray & ba ) const
+int count( const QByteArray & ba ) const
 */
 void QByteArray_count1()
 {
@@ -614,7 +593,7 @@ void QByteArray_count1()
 }
 
 /*
-int count ( const char * str ) const
+int count( const char * str ) const
 */
 void QByteArray_count2()
 {
@@ -627,7 +606,7 @@ void QByteArray_count2()
 }
 
 /*
-int count ( char ch ) const
+int count( char ch ) const
 */
 void QByteArray_count3()
 {
@@ -640,7 +619,7 @@ void QByteArray_count3()
 }
 
 /*
-int count () const
+int count() const
 */
 void QByteArray_count4()
 {
@@ -651,13 +630,6 @@ void QByteArray_count4()
     RINT( obj->count() );
   }
 }
-
-/*
-[1]int count ( const QByteArray & ba ) const
-[2]int count ( const char * str ) const
-[3]int count ( char ch ) const
-[4]int count () const
-*/
 
 HB_FUNC_STATIC( QBYTEARRAY_COUNT )
 {
@@ -684,7 +656,7 @@ HB_FUNC_STATIC( QBYTEARRAY_COUNT )
 }
 
 /*
-bool endsWith ( const QByteArray & ba ) const
+bool endsWith( const QByteArray & ba ) const
 */
 void QByteArray_endsWith1()
 {
@@ -697,7 +669,7 @@ void QByteArray_endsWith1()
 }
 
 /*
-bool endsWith ( const char * str ) const
+bool endsWith( const char * str ) const
 */
 void QByteArray_endsWith2()
 {
@@ -710,7 +682,7 @@ void QByteArray_endsWith2()
 }
 
 /*
-bool endsWith ( char ch ) const
+bool endsWith( char ch ) const
 */
 void QByteArray_endsWith3()
 {
@@ -721,12 +693,6 @@ void QByteArray_endsWith3()
     RBOOL( obj->endsWith( PCHAR(1) ) );
   }
 }
-
-/*
-[1]bool endsWith ( const QByteArray & ba ) const
-[2]bool endsWith ( const char * str ) const
-[3]bool endsWith ( char ch ) const
-*/
 
 HB_FUNC_STATIC( QBYTEARRAY_ENDSWITH )
 {
@@ -749,7 +715,7 @@ HB_FUNC_STATIC( QBYTEARRAY_ENDSWITH )
 }
 
 /*
-QByteArray & fill ( char ch, int size = -1 )
+QByteArray & fill( char ch, int size = -1 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_FILL )
 {
@@ -774,7 +740,7 @@ HB_FUNC_STATIC( QBYTEARRAY_FILL )
 }
 
 /*
-int indexOf ( const QByteArray & ba, int from = 0 ) const
+int indexOf( const QByteArray & ba, int from = 0 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_INDEXOF1 )
 {
@@ -798,7 +764,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF1 )
 }
 
 /*
-int indexOf ( const QString & str, int from = 0 ) const
+int indexOf( const QString & str, int from = 0 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_INDEXOF2 )
 {
@@ -822,7 +788,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF2 )
 }
 
 /*
-int indexOf ( const char * str, int from = 0 ) const
+int indexOf( const char * str, int from = 0 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_INDEXOF3 )
 {
@@ -846,7 +812,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF3 )
 }
 
 /*
-int indexOf ( char ch, int from = 0 ) const
+int indexOf( char ch, int from = 0 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_INDEXOF4 )
 {
@@ -869,13 +835,6 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF4 )
   }
 }
 
-/*
-[1]int indexOf ( const QByteArray & ba, int from = 0 ) const
-[2]int indexOf ( const QString & str, int from = 0 ) const
-[3]int indexOf ( const char * str, int from = 0 ) const
-[4]int indexOf ( char ch, int from = 0 ) const
-*/
-
 HB_FUNC_STATIC( QBYTEARRAY_INDEXOF )
 {
   if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISNUM(2)||ISNIL(2)) )
@@ -888,7 +847,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF )
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QBYTEARRAY_INDEXOF3 ); // WARNING: conflita com [2]
+    HB_FUNC_EXEC( QBYTEARRAY_INDEXOF3 );
   }
   else if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
   {
@@ -901,7 +860,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INDEXOF )
 }
 
 /*
-QByteArray & insert ( int i, const QByteArray & ba )
+QByteArray & insert( int i, const QByteArray & ba )
 */
 HB_FUNC_STATIC( QBYTEARRAY_INSERT1 )
 {
@@ -926,7 +885,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT1 )
 }
 
 /*
-QByteArray & insert ( int i, const QString & str )
+QByteArray & insert( int i, const QString & str )
 */
 HB_FUNC_STATIC( QBYTEARRAY_INSERT2 )
 {
@@ -951,7 +910,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT2 )
 }
 
 /*
-QByteArray & insert ( int i, const char * str )
+QByteArray & insert( int i, const char * str )
 */
 HB_FUNC_STATIC( QBYTEARRAY_INSERT3 )
 {
@@ -976,7 +935,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT3 )
 }
 
 /*
-QByteArray & insert ( int i, const char * str, int len )
+QByteArray & insert( int i, const char * str, int len )
 */
 HB_FUNC_STATIC( QBYTEARRAY_INSERT4 )
 {
@@ -1001,7 +960,7 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT4 )
 }
 
 /*
-QByteArray & insert ( int i, char ch )
+QByteArray & insert( int i, char ch )
 */
 HB_FUNC_STATIC( QBYTEARRAY_INSERT5 )
 {
@@ -1024,14 +983,6 @@ HB_FUNC_STATIC( QBYTEARRAY_INSERT5 )
 #endif
   }
 }
-
-/*
-[1]QByteArray & insert ( int i, const QByteArray & ba )
-[2]QByteArray & insert ( int i, const QString & str )
-[3]QByteArray & insert ( int i, const char * str )
-[4]QByteArray & insert ( int i, const char * str, int len )
-[5]QByteArray & insert ( int i, char ch )
-*/
 
 HB_FUNC_STATIC( QBYTEARRAY_INSERT )
 {
@@ -1106,7 +1057,7 @@ HB_FUNC_STATIC( QBYTEARRAY_ISNULL )
 }
 
 /*
-int lastIndexOf ( const QByteArray & ba, int from = -1 ) const
+int lastIndexOf( const QByteArray & ba, int from = -1 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF1 )
 {
@@ -1130,7 +1081,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF1 )
 }
 
 /*
-int lastIndexOf ( const QString & str, int from = -1 ) const
+int lastIndexOf( const QString & str, int from = -1 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF2 )
 {
@@ -1154,7 +1105,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF2 )
 }
 
 /*
-int lastIndexOf ( const char * str, int from = -1 ) const
+int lastIndexOf( const char * str, int from = -1 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF3 )
 {
@@ -1178,7 +1129,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF3 )
 }
 
 /*
-int lastIndexOf ( char ch, int from = -1 ) const
+int lastIndexOf( char ch, int from = -1 ) const
 */
 HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF4 )
 {
@@ -1201,13 +1152,6 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF4 )
   }
 }
 
-/*
-[1]int lastIndexOf ( const QByteArray & ba, int from = -1 ) const
-[2]int lastIndexOf ( const QString & str, int from = -1 ) const
-[3]int lastIndexOf ( const char * str, int from = -1 ) const
-[4]int lastIndexOf ( char ch, int from = -1 ) const
-*/
-
 HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF )
 {
   if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISNUM(2)||ISNIL(2)) )
@@ -1220,7 +1164,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LASTINDEXOF )
   }
   else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
   {
-    HB_FUNC_EXEC( QBYTEARRAY_LASTINDEXOF3 ); // WARNING: conflita com [2]
+    HB_FUNC_EXEC( QBYTEARRAY_LASTINDEXOF3 );
   }
   else if( ISBETWEEN(1,2) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) )
   {
@@ -1332,7 +1276,7 @@ HB_FUNC_STATIC( QBYTEARRAY_MID )
 }
 
 /*
-QByteArray & prepend ( const QByteArray & ba )
+QByteArray & prepend( const QByteArray & ba )
 */
 HB_FUNC_STATIC( QBYTEARRAY_PREPEND1 )
 {
@@ -1357,7 +1301,7 @@ HB_FUNC_STATIC( QBYTEARRAY_PREPEND1 )
 }
 
 /*
-QByteArray & prepend ( const char * str )
+QByteArray & prepend( const char * str )
 */
 HB_FUNC_STATIC( QBYTEARRAY_PREPEND2 )
 {
@@ -1382,7 +1326,7 @@ HB_FUNC_STATIC( QBYTEARRAY_PREPEND2 )
 }
 
 /*
-QByteArray & prepend ( const char * str, int len )
+QByteArray & prepend( const char * str, int len )
 */
 HB_FUNC_STATIC( QBYTEARRAY_PREPEND3 )
 {
@@ -1407,7 +1351,7 @@ HB_FUNC_STATIC( QBYTEARRAY_PREPEND3 )
 }
 
 /*
-QByteArray & prepend ( char ch )
+QByteArray & prepend( char ch )
 */
 HB_FUNC_STATIC( QBYTEARRAY_PREPEND4 )
 {
@@ -1430,13 +1374,6 @@ HB_FUNC_STATIC( QBYTEARRAY_PREPEND4 )
 #endif
   }
 }
-
-/*
-[1]QByteArray & prepend ( const QByteArray & ba )
-[2]QByteArray & prepend ( const char * str )
-[3]QByteArray & prepend ( const char * str, int len )
-[4]QByteArray & prepend ( char ch )
-*/
 
 HB_FUNC_STATIC( QBYTEARRAY_PREPEND )
 {
@@ -1463,7 +1400,7 @@ HB_FUNC_STATIC( QBYTEARRAY_PREPEND )
 }
 
 /*
-void push_back ( const QByteArray & other )
+void push_back( const QByteArray & other )
 */
 void QByteArray_push_back1()
 {
@@ -1478,7 +1415,7 @@ void QByteArray_push_back1()
 }
 
 /*
-void push_back ( const char * str )
+void push_back( const char * str )
 */
 void QByteArray_push_back2()
 {
@@ -1493,7 +1430,7 @@ void QByteArray_push_back2()
 }
 
 /*
-void push_back ( char ch )
+void push_back( char ch )
 */
 void QByteArray_push_back3()
 {
@@ -1506,12 +1443,6 @@ void QByteArray_push_back3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void push_back ( const QByteArray & other )
-[2]void push_back ( const char * str )
-[3]void push_back ( char ch )
-*/
 
 HB_FUNC_STATIC( QBYTEARRAY_PUSH_BACK )
 {
@@ -1534,7 +1465,7 @@ HB_FUNC_STATIC( QBYTEARRAY_PUSH_BACK )
 }
 
 /*
-void push_front ( const QByteArray & other )
+void push_front( const QByteArray & other )
 */
 void QByteArray_push_front1()
 {
@@ -1549,7 +1480,7 @@ void QByteArray_push_front1()
 }
 
 /*
-void push_front ( const char * str )
+void push_front( const char * str )
 */
 void QByteArray_push_front2()
 {
@@ -1564,7 +1495,7 @@ void QByteArray_push_front2()
 }
 
 /*
-void push_front ( char ch )
+void push_front( char ch )
 */
 void QByteArray_push_front3()
 {
@@ -1577,12 +1508,6 @@ void QByteArray_push_front3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void push_front ( const QByteArray & other )
-[2]void push_front ( const char * str )
-[3]void push_front ( char ch )
-*/
 
 HB_FUNC_STATIC( QBYTEARRAY_PUSH_FRONT )
 {
@@ -1655,7 +1580,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPEATED )
 }
 
 /*
-QByteArray & replace ( int pos, int len, const QByteArray & after )
+QByteArray & replace( int pos, int len, const QByteArray & after )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE1 )
 {
@@ -1680,7 +1605,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE1 )
 }
 
 /*
-QByteArray & replace ( int pos, int len, const char * after )
+QByteArray & replace( int pos, int len, const char * after )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE2 )
 {
@@ -1705,7 +1630,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE2 )
 }
 
 /*
-QByteArray & replace ( int pos, int len, const char * after, int alen )
+QByteArray & replace( int pos, int len, const char * after, int alen )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE3 )
 {
@@ -1730,7 +1655,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE3 )
 }
 
 /*
-QByteArray & replace ( const QByteArray & before, const QByteArray & after )
+QByteArray & replace( const QByteArray & before, const QByteArray & after )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE4 )
 {
@@ -1755,7 +1680,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE4 )
 }
 
 /*
-QByteArray & replace ( const char * before, const QByteArray & after )
+QByteArray & replace( const char * before, const QByteArray & after )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE5 )
 {
@@ -1780,7 +1705,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE5 )
 }
 
 /*
-QByteArray & replace ( const char * before, int bsize, const char * after, int asize )
+QByteArray & replace( const char * before, int bsize, const char * after, int asize )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE6 )
 {
@@ -1805,7 +1730,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE6 )
 }
 
 /*
-QByteArray & replace ( const QByteArray & before, const char * after )
+QByteArray & replace( const QByteArray & before, const char * after )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE7 )
 {
@@ -1830,7 +1755,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE7 )
 }
 
 /*
-QByteArray & replace ( const QString & before, const QByteArray & after )
+QByteArray & replace( const QString & before, const QByteArray & after )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE8 )
 {
@@ -1855,7 +1780,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE8 )
 }
 
 /*
-QByteArray & replace ( const QString & before, const char * after )
+QByteArray & replace( const QString & before, const char * after )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE9 )
 {
@@ -1880,7 +1805,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE9 )
 }
 
 /*
-QByteArray & replace ( const char * before, const char * after )
+QByteArray & replace( const char * before, const char * after )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE10 )
 {
@@ -1905,7 +1830,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE10 )
 }
 
 /*
-QByteArray & replace ( char before, const QByteArray & after )
+QByteArray & replace( char before, const QByteArray & after )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE11 )
 {
@@ -1930,7 +1855,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE11 )
 }
 
 /*
-QByteArray & replace ( char before, const QString & after )
+QByteArray & replace( char before, const QString & after )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE12 )
 {
@@ -1955,7 +1880,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE12 )
 }
 
 /*
-QByteArray & replace ( char before, const char * after )
+QByteArray & replace( char before, const char * after )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE13 )
 {
@@ -1980,7 +1905,7 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE13 )
 }
 
 /*
-QByteArray & replace ( char before, char after )
+QByteArray & replace( char before, char after )
 */
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE14 )
 {
@@ -2003,23 +1928,6 @@ HB_FUNC_STATIC( QBYTEARRAY_REPLACE14 )
 #endif
   }
 }
-
-/*
-[01]QByteArray & replace ( int pos, int len, const QByteArray & after )
-[02]QByteArray & replace ( int pos, int len, const char * after )
-[03]QByteArray & replace ( int pos, int len, const char * after, int alen )
-[04]QByteArray & replace ( const QByteArray & before, const QByteArray & after )
-[05]QByteArray & replace ( const char * before, const QByteArray & after )
-[06]QByteArray & replace ( const char * before, int bsize, const char * after, int asize )
-[07]QByteArray & replace ( const QByteArray & before, const char * after )
-[08]QByteArray & replace ( const QString & before, const QByteArray & after )
-[09]QByteArray & replace ( const QString & before, const char * after )
-[10]QByteArray & replace ( const char * before, const char * after )
-[11]QByteArray & replace ( char before, const QByteArray & after )
-[12]QByteArray & replace ( char before, const QString & after )
-[13]QByteArray & replace ( char before, const char * after )
-[14]QByteArray & replace ( char before, char after )
-*/
 
 HB_FUNC_STATIC( QBYTEARRAY_REPLACE )
 {
@@ -2188,7 +2096,7 @@ HB_FUNC_STATIC( QBYTEARRAY_RIGHTJUSTIFIED )
 }
 
 /*
-QByteArray & setNum ( int n, int base = 10 )
+QByteArray & setNum( int n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_SETNUM1 )
 {
@@ -2213,7 +2121,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM1 )
 }
 
 /*
-QByteArray & setNum ( uint n, int base = 10 )
+QByteArray & setNum( uint n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_SETNUM2 )
 {
@@ -2238,7 +2146,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM2 )
 }
 
 /*
-QByteArray & setNum ( short n, int base = 10 )
+QByteArray & setNum( short n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_SETNUM3 )
 {
@@ -2263,7 +2171,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM3 )
 }
 
 /*
-QByteArray & setNum ( ushort n, int base = 10 )
+QByteArray & setNum( ushort n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_SETNUM4 )
 {
@@ -2288,7 +2196,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM4 )
 }
 
 /*
-QByteArray & setNum ( qlonglong n, int base = 10 )
+QByteArray & setNum( qlonglong n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_SETNUM5 )
 {
@@ -2313,7 +2221,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM5 )
 }
 
 /*
-QByteArray & setNum ( qulonglong n, int base = 10 )
+QByteArray & setNum( qulonglong n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_SETNUM6 )
 {
@@ -2338,7 +2246,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM6 )
 }
 
 /*
-QByteArray & setNum ( double n, char f = 'g', int prec = 6 )
+QByteArray & setNum( double n, char f = 'g', int prec = 6 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_SETNUM7 )
 {
@@ -2363,7 +2271,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM7 )
 }
 
 /*
-QByteArray & setNum ( float n, char f = 'g', int prec = 6 )
+QByteArray & setNum( float n, char f = 'g', int prec = 6 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_SETNUM8 )
 {
@@ -2386,17 +2294,6 @@ HB_FUNC_STATIC( QBYTEARRAY_SETNUM8 )
 #endif
   }
 }
-
-/*
-[1]QByteArray & setNum ( int n, int base = 10 )
-[2]QByteArray & setNum ( uint n, int base = 10 )
-[3]QByteArray & setNum ( short n, int base = 10 )
-[4]QByteArray & setNum ( ushort n, int base = 10 )
-[5]QByteArray & setNum ( qlonglong n, int base = 10 )
-[6]QByteArray & setNum ( qulonglong n, int base = 10 )
-[7]QByteArray & setNum ( double n, char f = 'g', int prec = 6 )
-[8]QByteArray & setNum ( float n, char f = 'g', int prec = 6 )
-*/
 
 HB_FUNC_STATIC( QBYTEARRAY_SETNUM )
 {
@@ -2591,7 +2488,7 @@ HB_FUNC_STATIC( QBYTEARRAY_SQUEEZE )
 }
 
 /*
-bool startsWith ( const QByteArray & ba ) const
+bool startsWith( const QByteArray & ba ) const
 */
 void QByteArray_startsWith1()
 {
@@ -2604,7 +2501,7 @@ void QByteArray_startsWith1()
 }
 
 /*
-bool startsWith ( const char * str ) const
+bool startsWith( const char * str ) const
 */
 void QByteArray_startsWith2()
 {
@@ -2617,7 +2514,7 @@ void QByteArray_startsWith2()
 }
 
 /*
-bool startsWith ( char ch ) const
+bool startsWith( char ch ) const
 */
 void QByteArray_startsWith3()
 {
@@ -2628,12 +2525,6 @@ void QByteArray_startsWith3()
     RBOOL( obj->startsWith( PCHAR(1) ) );
   }
 }
-
-/*
-[1]bool startsWith ( const QByteArray & ba ) const
-[2]bool startsWith ( const char * str ) const
-[3]bool startsWith ( char ch ) const
-*/
 
 HB_FUNC_STATIC( QBYTEARRAY_STARTSWITH )
 {
@@ -3172,7 +3063,7 @@ HB_FUNC_STATIC( QBYTEARRAY_FROMRAWDATA )
 }
 
 /*
-static QByteArray number ( int n, int base = 10 )
+static QByteArray number( int n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER1 )
 {
@@ -3192,7 +3083,7 @@ HB_FUNC_STATIC( QBYTEARRAY_NUMBER1 )
 }
 
 /*
-static QByteArray number ( uint n, int base = 10 )
+static QByteArray number( uint n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER2 )
 {
@@ -3212,7 +3103,7 @@ HB_FUNC_STATIC( QBYTEARRAY_NUMBER2 )
 }
 
 /*
-static QByteArray number ( qlonglong n, int base = 10 )
+static QByteArray number( qlonglong n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER3 )
 {
@@ -3232,7 +3123,7 @@ HB_FUNC_STATIC( QBYTEARRAY_NUMBER3 )
 }
 
 /*
-static QByteArray number ( qulonglong n, int base = 10 )
+static QByteArray number( qulonglong n, int base = 10 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER4 )
 {
@@ -3252,7 +3143,7 @@ HB_FUNC_STATIC( QBYTEARRAY_NUMBER4 )
 }
 
 /*
-static QByteArray number ( double n, char f = 'g', int prec = 6 )
+static QByteArray number( double n, char f = 'g', int prec = 6 )
 */
 HB_FUNC_STATIC( QBYTEARRAY_NUMBER5 )
 {
@@ -3269,6 +3160,18 @@ HB_FUNC_STATIC( QBYTEARRAY_NUMBER5 )
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
 #endif
+}
+
+HB_FUNC_STATIC( QBYTEARRAY_NUMBER )
+{
+  if( ISNUMPAR(1) && ISNUM(1) )
+  {
+    HB_FUNC_EXEC( QBYTEARRAY_NUMBER1 );
+  }
+  else
+  {
+    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+  }
 }
 
 HB_FUNC_STATIC( QBYTEARRAY_NEWFROM )

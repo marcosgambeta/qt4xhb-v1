@@ -59,7 +59,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QSize ()
+QSize()
 */
 void QSize_new1()
 {
@@ -68,18 +68,13 @@ void QSize_new1()
 }
 
 /*
-QSize ( int width, int height )
+QSize( int width, int height )
 */
 void QSize_new2()
 {
   QSize * obj = new QSize( PINT(1), PINT(2) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QSize ()
-[2]QSize ( int width, int height )
-*/
 
 HB_FUNC_STATIC( QSIZE_NEW )
 {
@@ -261,7 +256,7 @@ HB_FUNC_STATIC( QSIZE_ISVALID )
 }
 
 /*
-void scale ( int width, int height, Qt::AspectRatioMode mode )
+void scale( int width, int height, Qt::AspectRatioMode mode )
 */
 void QSize_scale1()
 {
@@ -276,7 +271,7 @@ void QSize_scale1()
 }
 
 /*
-void scale ( const QSize & size, Qt::AspectRatioMode mode )
+void scale( const QSize & size, Qt::AspectRatioMode mode )
 */
 void QSize_scale2()
 {
@@ -289,11 +284,6 @@ void QSize_scale2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void scale ( int width, int height, Qt::AspectRatioMode mode )
-[2]void scale ( const QSize & size, Qt::AspectRatioMode mode )
-*/
 
 HB_FUNC_STATIC( QSIZE_SCALE )
 {

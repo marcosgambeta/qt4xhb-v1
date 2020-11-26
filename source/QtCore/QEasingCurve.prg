@@ -56,7 +56,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QEasingCurve ( Type type = Linear )
+QEasingCurve( QEasingCurve::Type type = QEasingCurve::Linear )
 */
 void QEasingCurve_new1()
 {
@@ -65,18 +65,13 @@ void QEasingCurve_new1()
 }
 
 /*
-QEasingCurve ( const QEasingCurve & other )
+QEasingCurve( const QEasingCurve & other )
 */
 void QEasingCurve_new2()
 {
   QEasingCurve * obj = new QEasingCurve( *PQEASINGCURVE(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QEasingCurve(Type type = Linear)
-[2]QEasingCurve(const QEasingCurve & other)
-*/
 
 HB_FUNC_STATIC( QEASINGCURVE_NEW )
 {

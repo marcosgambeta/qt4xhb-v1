@@ -50,7 +50,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QTextEncoder(const QTextCodec * codec)
+QTextEncoder( const QTextCodec * codec )
 */
 void QTextEncoder_new1()
 {
@@ -59,18 +59,13 @@ void QTextEncoder_new1()
 }
 
 /*
-QTextEncoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
+QTextEncoder( const QTextCodec * codec, QTextCodec::ConversionFlags flags )
 */
 void QTextEncoder_new2()
 {
   QTextEncoder * obj = new QTextEncoder( PQTEXTCODEC(1), (QTextCodec::ConversionFlags) hb_parni(2) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QTextEncoder(const QTextCodec * codec)
-[2]QTextEncoder(const QTextCodec * codec, QTextCodec::ConversionFlags flags)
-*/
 
 HB_FUNC_STATIC( QTEXTENCODER_NEW )
 {
@@ -106,7 +101,7 @@ HB_FUNC_STATIC( QTEXTENCODER_DELETE )
 }
 
 /*
-QByteArray fromUnicode(const QString & str)
+QByteArray fromUnicode( const QString & str )
 */
 void QTextEncoder_fromUnicode1()
 {
@@ -120,7 +115,7 @@ void QTextEncoder_fromUnicode1()
 }
 
 /*
-QByteArray fromUnicode(const QChar * uc, int len)
+QByteArray fromUnicode( const QChar * uc, int len )
 */
 void QTextEncoder_fromUnicode2()
 {
@@ -132,11 +127,6 @@ void QTextEncoder_fromUnicode2()
     Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
   }
 }
-
-/*
-[1]QByteArray fromUnicode(const QString & str)
-[2]QByteArray fromUnicode(const QChar * uc, int len)
-*/
 
 HB_FUNC_STATIC( QTEXTENCODER_FROMUNICODE )
 {

@@ -60,7 +60,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QBitArray ()
+QBitArray()
 */
 void QBitArray_new1()
 {
@@ -69,7 +69,7 @@ void QBitArray_new1()
 }
 
 /*
-QBitArray ( int size, bool value = false )
+QBitArray( int size, bool value = false )
 */
 void QBitArray_new2()
 {
@@ -78,19 +78,13 @@ void QBitArray_new2()
 }
 
 /*
-QBitArray ( const QBitArray & other )
+QBitArray( const QBitArray & other )
 */
 void QBitArray_new3()
 {
   QBitArray * obj = new QBitArray( *PQBITARRAY(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QBitArray ()
-[2]QBitArray ( int size, bool value = false )
-[3]QBitArray ( const QBitArray & other )
-*/
 
 HB_FUNC_STATIC( QBITARRAY_NEW )
 {
@@ -189,7 +183,7 @@ HB_FUNC_STATIC( QBITARRAY_CLEARBIT )
 }
 
 /*
-int count () const
+int count() const
 */
 void QBitArray_count1()
 {
@@ -202,7 +196,7 @@ void QBitArray_count1()
 }
 
 /*
-int count ( bool on ) const
+int count( bool on ) const
 */
 void QBitArray_count2()
 {
@@ -213,11 +207,6 @@ void QBitArray_count2()
     RINT( obj->count( PBOOL(1) ) );
   }
 }
-
-/*
-[1]int count () const
-[2]int count ( bool on ) const
-*/
 
 HB_FUNC_STATIC( QBITARRAY_COUNT )
 {
@@ -236,7 +225,7 @@ HB_FUNC_STATIC( QBITARRAY_COUNT )
 }
 
 /*
-bool fill ( bool value, int size = -1 )
+bool fill( bool value, int size = -1 )
 */
 void QBitArray_fill1()
 {
@@ -249,7 +238,7 @@ void QBitArray_fill1()
 }
 
 /*
-void fill ( bool value, int begin, int end )
+void fill( bool value, int begin, int end )
 */
 void QBitArray_fill2()
 {
@@ -262,11 +251,6 @@ void QBitArray_fill2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]bool fill ( bool value, int size = -1 )
-[2]void fill ( bool value, int begin, int end )
-*/
 
 HB_FUNC_STATIC( QBITARRAY_FILL )
 {
@@ -359,7 +343,7 @@ HB_FUNC_STATIC( QBITARRAY_RESIZE )
 }
 
 /*
-void setBit ( int i )
+void setBit( int i )
 */
 void QBitArray_setBit1()
 {
@@ -374,7 +358,7 @@ void QBitArray_setBit1()
 }
 
 /*
-void setBit ( int i, bool value )
+void setBit( int i, bool value )
 */
 void QBitArray_setBit2()
 {
@@ -387,11 +371,6 @@ void QBitArray_setBit2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setBit ( int i )
-[2]void setBit ( int i, bool value )
-*/
 
 HB_FUNC_STATIC( QBITARRAY_SETBIT )
 {

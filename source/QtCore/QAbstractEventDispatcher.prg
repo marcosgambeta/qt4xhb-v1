@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERSOCKETNOTIFIER )
 }
 
 /*
-int registerTimer ( int interval, QObject * object )
+int registerTimer( int interval, QObject * object )
 */
 void QAbstractEventDispatcher_registerTimer1()
 {
@@ -237,7 +237,7 @@ void QAbstractEventDispatcher_registerTimer1()
 }
 
 /*
-virtual void registerTimer ( int timerId, int interval, QObject * object ) = 0
+virtual void registerTimer( int timerId, int interval, QObject * object ) = 0
 */
 void QAbstractEventDispatcher_registerTimer2()
 {
@@ -250,11 +250,6 @@ void QAbstractEventDispatcher_registerTimer2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]int registerTimer ( int interval, QObject * object )
-[2]virtual void registerTimer ( int timerId, int interval, QObject * object ) = 0
-*/
 
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER )
 {

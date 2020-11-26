@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QBasicTimer ()
+QBasicTimer()
 */
 HB_FUNC_STATIC( QBASICTIMER_NEW )
 {

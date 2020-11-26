@@ -70,7 +70,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QAtomicInt ( int value = 0 )
+QAtomicInt( int value = 0 )
 */
 void QAtomicInt_new1()
 {
@@ -79,18 +79,13 @@ void QAtomicInt_new1()
 }
 
 /*
-QAtomicInt ( const QAtomicInt & other )
+QAtomicInt( const QAtomicInt & other )
 */
 void QAtomicInt_new2()
 {
   QAtomicInt * obj = new QAtomicInt( *PQATOMICINT(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QAtomicInt ( int value = 0 )
-[2]QAtomicInt ( const QAtomicInt & other )
-*/
 
 HB_FUNC_STATIC( QATOMICINT_NEW )
 {

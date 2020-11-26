@@ -106,7 +106,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QRectF ()
+QRectF()
 */
 void QRectF_new1()
 {
@@ -115,7 +115,7 @@ void QRectF_new1()
 }
 
 /*
-QRectF ( const QPointF & topLeft, const QSizeF & size )
+QRectF( const QPointF & topLeft, const QSizeF & size )
 */
 void QRectF_new2()
 {
@@ -124,7 +124,7 @@ void QRectF_new2()
 }
 
 /*
-QRectF ( const QPointF & topLeft, const QPointF & bottomRight )
+QRectF( const QPointF & topLeft, const QPointF & bottomRight )
 */
 void QRectF_new3()
 {
@@ -133,7 +133,7 @@ void QRectF_new3()
 }
 
 /*
-QRectF ( qreal x, qreal y, qreal width, qreal height )
+QRectF( qreal x, qreal y, qreal width, qreal height )
 */
 void QRectF_new4()
 {
@@ -142,21 +142,13 @@ void QRectF_new4()
 }
 
 /*
-QRectF ( const QRect & rectangle )
+QRectF( const QRect & rectangle )
 */
 void QRectF_new5()
 {
   QRectF * obj = new QRectF( *PQRECT(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QRectF ()
-[2]QRectF ( const QPointF & topLeft, const QSizeF & size )
-[3]QRectF ( const QPointF & topLeft, const QPointF & bottomRight )
-[4]QRectF ( qreal x, qreal y, qreal width, qreal height )
-[5]QRectF ( const QRect & rectangle )
-*/
 
 HB_FUNC_STATIC( QRECTF_NEW )
 {
@@ -354,7 +346,7 @@ HB_FUNC_STATIC( QRECTF_CENTER )
 }
 
 /*
-bool contains ( const QPointF & point ) const
+bool contains( const QPointF & point ) const
 */
 void QRectF_contains1()
 {
@@ -367,7 +359,7 @@ void QRectF_contains1()
 }
 
 /*
-bool contains ( qreal x, qreal y ) const
+bool contains( qreal x, qreal y ) const
 */
 void QRectF_contains2()
 {
@@ -380,7 +372,7 @@ void QRectF_contains2()
 }
 
 /*
-bool contains ( const QRectF & rectangle ) const
+bool contains( const QRectF & rectangle ) const
 */
 void QRectF_contains3()
 {
@@ -391,12 +383,6 @@ void QRectF_contains3()
     RBOOL( obj->contains( *PQRECTF(1) ) );
   }
 }
-
-/*
-[1]bool contains ( const QPointF & point ) const
-[2]bool contains ( qreal x, qreal y ) const
-[3]bool contains ( const QRectF & rectangle ) const
-*/
 
 HB_FUNC_STATIC( QRECTF_CONTAINS )
 {
@@ -812,7 +798,7 @@ HB_FUNC_STATIC( QRECTF_MOVERIGHT )
 }
 
 /*
-void moveTo ( qreal x, qreal y )
+void moveTo( qreal x, qreal y )
 */
 void QRectF_moveTo1()
 {
@@ -827,7 +813,7 @@ void QRectF_moveTo1()
 }
 
 /*
-void moveTo ( const QPointF & position )
+void moveTo( const QPointF & position )
 */
 void QRectF_moveTo2()
 {
@@ -840,11 +826,6 @@ void QRectF_moveTo2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void moveTo ( qreal x, qreal y )
-[2]void moveTo ( const QPointF & position )
-*/
 
 HB_FUNC_STATIC( QRECTF_MOVETO )
 {
@@ -1529,7 +1510,7 @@ HB_FUNC_STATIC( QRECTF_TOPRIGHT )
 }
 
 /*
-void translate ( qreal dx, qreal dy )
+void translate( qreal dx, qreal dy )
 */
 void QRectF_translate1()
 {
@@ -1544,7 +1525,7 @@ void QRectF_translate1()
 }
 
 /*
-void translate ( const QPointF & offset )
+void translate( const QPointF & offset )
 */
 void QRectF_translate2()
 {
@@ -1557,11 +1538,6 @@ void QRectF_translate2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void translate ( qreal dx, qreal dy )
-[2]void translate ( const QPointF & offset )
-*/
 
 HB_FUNC_STATIC( QRECTF_TRANSLATE )
 {
@@ -1580,7 +1556,7 @@ HB_FUNC_STATIC( QRECTF_TRANSLATE )
 }
 
 /*
-QRectF translated ( qreal dx, qreal dy ) const
+QRectF translated( qreal dx, qreal dy ) const
 */
 void QRectF_translated1()
 {
@@ -1594,7 +1570,7 @@ void QRectF_translated1()
 }
 
 /*
-QRectF translated ( const QPointF & offset ) const
+QRectF translated( const QPointF & offset ) const
 */
 void QRectF_translated2()
 {
@@ -1606,11 +1582,6 @@ void QRectF_translated2()
     Qt4xHb::createReturnClass( ptr, "QRECTF", true );
   }
 }
-
-/*
-[1]QRectF translated ( qreal dx, qreal dy ) const
-[2]QRectF translated ( const QPointF & offset ) const
-*/
 
 HB_FUNC_STATIC( QRECTF_TRANSLATED )
 {

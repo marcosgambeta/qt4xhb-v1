@@ -61,7 +61,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QSizeF ()
+QSizeF()
 */
 void QSizeF_new1()
 {
@@ -70,7 +70,7 @@ void QSizeF_new1()
 }
 
 /*
-QSizeF ( const QSize & size )
+QSizeF( const QSize & size )
 */
 void QSizeF_new2()
 {
@@ -79,19 +79,13 @@ void QSizeF_new2()
 }
 
 /*
-QSizeF ( qreal width, qreal height )
+QSizeF( qreal width, qreal height )
 */
 void QSizeF_new3()
 {
   QSizeF * obj = new QSizeF( PQREAL(1), PQREAL(2) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QSizeF ()
-[2]QSizeF ( const QSize & size )
-[3]QSizeF ( qreal width, qreal height )
-*/
 
 HB_FUNC_STATIC( QSIZEF_NEW )
 {
@@ -277,7 +271,7 @@ HB_FUNC_STATIC( QSIZEF_ISVALID )
 }
 
 /*
-void scale ( qreal width, qreal height, Qt::AspectRatioMode mode )
+void scale( qreal width, qreal height, Qt::AspectRatioMode mode )
 */
 void QSizeF_scale1()
 {
@@ -292,7 +286,7 @@ void QSizeF_scale1()
 }
 
 /*
-void scale ( const QSizeF & size, Qt::AspectRatioMode mode )
+void scale( const QSizeF & size, Qt::AspectRatioMode mode )
 */
 void QSizeF_scale2()
 {
@@ -305,11 +299,6 @@ void QSizeF_scale2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void scale ( qreal width, qreal height, Qt::AspectRatioMode mode )
-[2]void scale ( const QSizeF & size, Qt::AspectRatioMode mode )
-*/
 
 HB_FUNC_STATIC( QSIZEF_SCALE )
 {

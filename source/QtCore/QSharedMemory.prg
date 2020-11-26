@@ -55,7 +55,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QSharedMemory(QObject *parent = 0)
+QSharedMemory( QObject * parent = 0 )
 */
 void QSharedMemory_new1()
 {
@@ -64,18 +64,13 @@ void QSharedMemory_new1()
 }
 
 /*
-QSharedMemory(const QString &key, QObject *parent = 0)
+QSharedMemory( const QString & key, QObject * parent = 0 )
 */
 void QSharedMemory_new2()
 {
   QSharedMemory * obj = new QSharedMemory( PQSTRING(1), OPQOBJECT(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QSharedMemory(QObject *parent = 0)
-[2]QSharedMemory(const QString &key, QObject *parent = 0)
-*/
 
 HB_FUNC_STATIC( QSHAREDMEMORY_NEW )
 {

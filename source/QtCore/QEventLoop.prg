@@ -47,7 +47,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QEventLoop ( QObject * parent = 0 )
+QEventLoop( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QEVENTLOOP_NEW )
 {
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QEVENTLOOP_ISRUNNING )
 }
 
 /*
-bool processEvents ( ProcessEventsFlags flags = AllEvents )
+bool processEvents( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
 */
 void QEventLoop_processEvents1()
 {
@@ -169,7 +169,7 @@ void QEventLoop_processEvents1()
 }
 
 /*
-void processEvents ( ProcessEventsFlags flags, int maxTime )
+void processEvents( QEventLoop::ProcessEventsFlags flags, int maxTime )
 */
 void QEventLoop_processEvents2()
 {
@@ -182,11 +182,6 @@ void QEventLoop_processEvents2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]bool processEvents ( ProcessEventsFlags flags = AllEvents )
-[2]void processEvents ( ProcessEventsFlags flags, int maxTime )
-*/
 
 HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS )
 {

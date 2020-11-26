@@ -77,7 +77,7 @@ RETURN
 #include <QtCore/QDateTime>
 
 /*
-QFSFileEngine ()
+QFSFileEngine()
 */
 void QFSFileEngine_new1()
 {
@@ -86,18 +86,13 @@ void QFSFileEngine_new1()
 }
 
 /*
-QFSFileEngine ( const QString & file )
+QFSFileEngine( const QString & file )
 */
 void QFSFileEngine_new2()
 {
   QFSFileEngine * obj = new QFSFileEngine( PQSTRING(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QFSFileEngine ()
-[2]QFSFileEngine ( const QString & file )
-*/
 
 HB_FUNC_STATIC( QFSFILEENGINE_NEW )
 {
@@ -133,7 +128,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_DELETE )
 }
 
 /*
-bool open ( QIODevice::OpenMode openMode, FILE * fh )
+bool open( QIODevice::OpenMode openMode, FILE * fh )
 */
 void QFSFileEngine_open1()
 {
@@ -146,7 +141,7 @@ void QFSFileEngine_open1()
 }
 
 /*
-bool open ( QIODevice::OpenMode openMode, int fd )
+bool open( QIODevice::OpenMode openMode, int fd )
 */
 void QFSFileEngine_open2()
 {
@@ -159,7 +154,7 @@ void QFSFileEngine_open2()
 }
 
 /*
-bool open ( QIODevice::OpenMode openMode, int fd, QFile::FileHandleFlags handleFlags )
+bool open( QIODevice::OpenMode openMode, int fd, QFile::FileHandleFlags handleFlags )
 */
 void QFSFileEngine_open3()
 {
@@ -172,7 +167,7 @@ void QFSFileEngine_open3()
 }
 
 /*
-bool open ( QIODevice::OpenMode openMode, FILE * fh, QFile::FileHandleFlags handleFlags )
+bool open( QIODevice::OpenMode openMode, FILE * fh, QFile::FileHandleFlags handleFlags )
 */
 void QFSFileEngine_open4()
 {
@@ -183,18 +178,6 @@ void QFSFileEngine_open4()
     RBOOL( obj->open( (QIODevice::OpenMode) hb_parni(1), (FILE *) hb_parptr(2), (QFile::FileHandleFlags) hb_parni(3) ) );
   }
 }
-
-/*
-bool open ( QIODevice::OpenMode openMode, const RFile & file, QFile::FileHandleFlags handleFlags )
-*/
-
-/*
-[1]bool open ( QIODevice::OpenMode openMode, FILE * fh )
-[2]bool open ( QIODevice::OpenMode openMode, int fd )
-[3]bool open ( QIODevice::OpenMode openMode, int fd, QFile::FileHandleFlags handleFlags )
-[4]bool open ( QIODevice::OpenMode openMode, FILE * fh, QFile::FileHandleFlags handleFlags )
-[5]bool open ( QIODevice::OpenMode openMode, const RFile & file, QFile::FileHandleFlags handleFlags )
-*/
 
 HB_FUNC_STATIC( QFSFILEENGINE_OPEN )
 {

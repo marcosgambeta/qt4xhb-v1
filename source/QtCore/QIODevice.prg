@@ -431,7 +431,7 @@ HB_FUNC_STATIC( QIODEVICE_OPENMODE )
 }
 
 /*
-qint64 peek ( char * data, qint64 maxSize )
+qint64 peek( char * data, qint64 maxSize )
 */
 void QIODevice_peek1()
 {
@@ -444,7 +444,7 @@ void QIODevice_peek1()
 }
 
 /*
-QByteArray peek ( qint64 maxSize )
+QByteArray peek( qint64 maxSize )
 */
 void QIODevice_peek2()
 {
@@ -456,11 +456,6 @@ void QIODevice_peek2()
     Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
   }
 }
-
-/*
-[1]qint64 peek ( char * data, qint64 maxSize )
-[2]QByteArray peek ( qint64 maxSize )
-*/
 
 HB_FUNC_STATIC( QIODEVICE_PEEK )
 {
@@ -527,7 +522,7 @@ HB_FUNC_STATIC( QIODEVICE_PUTCHAR )
 }
 
 /*
-qint64 read ( char * data, qint64 maxSize )
+qint64 read( char * data, qint64 maxSize )
 */
 void QIODevice_read1()
 {
@@ -540,7 +535,7 @@ void QIODevice_read1()
 }
 
 /*
-QByteArray read ( qint64 maxSize )
+QByteArray read( qint64 maxSize )
 */
 void QIODevice_read2()
 {
@@ -552,11 +547,6 @@ void QIODevice_read2()
     Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
   }
 }
-
-/*
-[1]qint64 read ( char * data, qint64 maxSize )
-[2]QByteArray read ( qint64 maxSize )
-*/
 
 HB_FUNC_STATIC( QIODEVICE_READ )
 {
@@ -600,7 +590,7 @@ HB_FUNC_STATIC( QIODEVICE_READALL )
 }
 
 /*
-qint64 readLine ( char * data, qint64 maxSize )
+qint64 readLine( char * data, qint64 maxSize )
 */
 void QIODevice_readLine1()
 {
@@ -613,7 +603,7 @@ void QIODevice_readLine1()
 }
 
 /*
-QByteArray readLine ( qint64 maxSize = 0 )
+QByteArray readLine( qint64 maxSize = 0 )
 */
 void QIODevice_readLine2()
 {
@@ -625,11 +615,6 @@ void QIODevice_readLine2()
     Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
   }
 }
-
-/*
-[1]qint64 readLine ( char * data, qint64 maxSize )
-[2]QByteArray readLine ( qint64 maxSize = 0 )
-*/
 
 HB_FUNC_STATIC( QIODEVICE_READLINE )
 {
@@ -820,7 +805,7 @@ HB_FUNC_STATIC( QIODEVICE_WAITFORREADYREAD )
 }
 
 /*
-qint64 write ( const char * data, qint64 maxSize )
+qint64 write( const char * data, qint64 maxSize )
 */
 void QIODevice_write1()
 {
@@ -833,7 +818,7 @@ void QIODevice_write1()
 }
 
 /*
-qint64 write ( const char * data )
+qint64 write( const char * data )
 */
 void QIODevice_write2()
 {
@@ -846,7 +831,7 @@ void QIODevice_write2()
 }
 
 /*
-qint64 write ( const QByteArray & byteArray )
+qint64 write( const QByteArray & byteArray )
 */
 void QIODevice_write3()
 {
@@ -857,12 +842,6 @@ void QIODevice_write3()
     RQINT64( obj->write( *PQBYTEARRAY(1) ) );
   }
 }
-
-/*
-[1]qint64 write ( const char * data, qint64 maxSize )
-[2]qint64 write ( const char * data )
-[3]qint64 write ( const QByteArray & byteArray )
-*/
 
 HB_FUNC_STATIC( QIODEVICE_WRITE )
 {

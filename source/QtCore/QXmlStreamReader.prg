@@ -116,7 +116,7 @@ void QXmlStreamReader_new1()
 }
 
 /*
-QXmlStreamReader(QIODevice * device)
+QXmlStreamReader( QIODevice * device )
 */
 void QXmlStreamReader_new2()
 {
@@ -125,7 +125,7 @@ void QXmlStreamReader_new2()
 }
 
 /*
-QXmlStreamReader(const QByteArray & data)
+QXmlStreamReader( const QByteArray & data )
 */
 void QXmlStreamReader_new3()
 {
@@ -134,7 +134,7 @@ void QXmlStreamReader_new3()
 }
 
 /*
-QXmlStreamReader(const QString & data)
+QXmlStreamReader( const QString & data )
 */
 void QXmlStreamReader_new4()
 {
@@ -143,21 +143,13 @@ void QXmlStreamReader_new4()
 }
 
 /*
-QXmlStreamReader(const char * data)
+QXmlStreamReader( const char * data )
 */
 void QXmlStreamReader_new5()
 {
   QXmlStreamReader * obj = new QXmlStreamReader( PCONSTCHAR(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QXmlStreamReader()
-[2]QXmlStreamReader(QIODevice * device)
-[3]QXmlStreamReader(const QByteArray & data)
-[4]QXmlStreamReader(const QString & data)
-[5]QXmlStreamReader(const char * data)
-*/
 
 HB_FUNC_STATIC( QXMLSTREAMREADER_NEW )
 {
@@ -205,7 +197,7 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_DELETE )
 }
 
 /*
-void addData(const QByteArray & data)
+void addData( const QByteArray & data )
 */
 void QXmlStreamReader_addData1()
 {
@@ -220,7 +212,7 @@ void QXmlStreamReader_addData1()
 }
 
 /*
-void addData(const QString & data)
+void addData( const QString & data )
 */
 void QXmlStreamReader_addData2()
 {
@@ -235,7 +227,7 @@ void QXmlStreamReader_addData2()
 }
 
 /*
-void addData(const char * data)
+void addData( const char * data )
 */
 void QXmlStreamReader_addData3()
 {
@@ -248,12 +240,6 @@ void QXmlStreamReader_addData3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void addData(const QByteArray & data)
-[2]void addData(const QString & data)
-[3]void addData(const char * data)
-*/
 
 HB_FUNC_STATIC( QXMLSTREAMREADER_ADDDATA )
 {

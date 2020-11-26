@@ -69,7 +69,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-bool canEncode(QChar) const
+bool canEncode( QChar ) const
 */
 void QTextCodec_canEncode1()
 {
@@ -82,7 +82,7 @@ void QTextCodec_canEncode1()
 }
 
 /*
-bool canEncode(const QString&) const
+bool canEncode( const QString & ) const
 */
 void QTextCodec_canEncode2()
 {
@@ -93,11 +93,6 @@ void QTextCodec_canEncode2()
     RBOOL( obj->canEncode( PQSTRING(1) ) );
   }
 }
-
-/*
-[1]bool canEncode(QChar) const
-[2]bool canEncode(const QString&) const
-*/
 
 HB_FUNC_STATIC( QTEXTCODEC_CANENCODE )
 {
@@ -116,7 +111,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CANENCODE )
 }
 
 /*
-QString toUnicode(const QByteArray&) const
+QString toUnicode( const QByteArray & ) const
 */
 void QTextCodec_toUnicode1()
 {
@@ -129,7 +124,7 @@ void QTextCodec_toUnicode1()
 }
 
 /*
-QString toUnicode(const char* chars) const
+QString toUnicode( const char * chars ) const
 */
 void QTextCodec_toUnicode2()
 {
@@ -142,13 +137,7 @@ void QTextCodec_toUnicode2()
 }
 
 /*
-QString toUnicode(const char *in, int length, ConverterState *state = 0) const
-*/
-
-/*
-[1]QString toUnicode(const QByteArray&) const
-[2]QString toUnicode(const char* chars) const
-[3]QString toUnicode(const char *in, int length, ConverterState *state = 0) const
+QString toUnicode( const char * in, int length, QTextCodec::ConverterState * state = 0 ) const
 */
 
 HB_FUNC_STATIC( QTEXTCODEC_TOUNICODE )
@@ -168,7 +157,7 @@ HB_FUNC_STATIC( QTEXTCODEC_TOUNICODE )
 }
 
 /*
-QByteArray fromUnicode(const QString& uc) const
+QByteArray fromUnicode( const QString & uc ) const
 */
 void QTextCodec_fromUnicode1()
 {
@@ -182,12 +171,7 @@ void QTextCodec_fromUnicode1()
 }
 
 /*
-QByteArray fromUnicode(const QChar *in, int length, ConverterState *state = 0) const
-*/
-
-/*
-[1]QByteArray fromUnicode(const QString& uc) const
-[2]QByteArray fromUnicode(const QChar *in, int length, ConverterState *state = 0) const
+QByteArray fromUnicode( const QChar * in, int length, QTextCodec::ConverterState * state = 0 ) const
 */
 
 HB_FUNC_STATIC( QTEXTCODEC_FROMUNICODE )
@@ -203,7 +187,7 @@ HB_FUNC_STATIC( QTEXTCODEC_FROMUNICODE )
 }
 
 /*
-QTextDecoder* makeDecoder() const
+QTextDecoder * makeDecoder() const
 */
 void QTextCodec_makeDecoder1()
 {
@@ -217,7 +201,7 @@ void QTextCodec_makeDecoder1()
 }
 
 /*
-QTextDecoder* makeDecoder(ConversionFlags flags) const
+QTextDecoder * makeDecoder( QTextCodec::ConversionFlags flags ) const
 */
 void QTextCodec_makeDecoder2()
 {
@@ -229,11 +213,6 @@ void QTextCodec_makeDecoder2()
     Qt4xHb::createReturnClass( ptr, "QTEXTDECODER", false );
   }
 }
-
-/*
-[1]QTextDecoder* makeDecoder() const
-[2]QTextDecoder* makeDecoder(ConversionFlags flags) const
-*/
 
 HB_FUNC_STATIC( QTEXTCODEC_MAKEDECODER )
 {
@@ -252,7 +231,7 @@ HB_FUNC_STATIC( QTEXTCODEC_MAKEDECODER )
 }
 
 /*
-QTextEncoder* makeEncoder() const
+QTextEncoder * makeEncoder() const
 */
 void QTextCodec_makeEncoder1()
 {
@@ -266,7 +245,7 @@ void QTextCodec_makeEncoder1()
 }
 
 /*
-QTextEncoder* makeEncoder(ConversionFlags flags) const
+QTextEncoder * makeEncoder( QTextCodec::ConversionFlags flags ) const
 */
 void QTextCodec_makeEncoder2()
 {
@@ -278,11 +257,6 @@ void QTextCodec_makeEncoder2()
     Qt4xHb::createReturnClass( ptr, "QTEXTENCODER", false );
   }
 }
-
-/*
-[1]QTextEncoder* makeEncoder() const
-[2]QTextEncoder* makeEncoder(ConversionFlags flags) const
-*/
 
 HB_FUNC_STATIC( QTEXTCODEC_MAKEENCODER )
 {
@@ -402,7 +376,7 @@ HB_FUNC_STATIC( QTEXTCODEC_MIBENUM )
 }
 
 /*
-static QTextCodec* codecForName(const QByteArray &name)
+static QTextCodec * codecForName( const QByteArray & name )
 */
 void QTextCodec_codecForName1()
 {
@@ -412,7 +386,7 @@ void QTextCodec_codecForName1()
 }
 
 /*
-static QTextCodec* codecForName(const char *name)
+static QTextCodec * codecForName( const char * name )
 */
 void QTextCodec_codecForName2()
 {
@@ -420,11 +394,6 @@ void QTextCodec_codecForName2()
   QTextCodec * ptr = QTextCodec::codecForName( PCONSTCHAR(1) );
   Qt4xHb::createReturnClass( ptr, "QTEXTCODEC", false );
 }
-
-/*
-[1]static QTextCodec* codecForName(const QByteArray &name)
-[2]static QTextCodec* codecForName(const char *name)
-*/
 
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORNAME )
 {
@@ -653,7 +622,7 @@ HB_FUNC_STATIC( QTEXTCODEC_SETCODECFORCSTRINGS )
 }
 
 /*
-static QTextCodec *codecForHtml(const QByteArray &ba)
+static QTextCodec * codecForHtml( const QByteArray & ba )
 */
 void QTextCodec_codecForHtml1()
 {
@@ -663,7 +632,7 @@ void QTextCodec_codecForHtml1()
 }
 
 /*
-static QTextCodec *codecForHtml(const QByteArray &ba, QTextCodec *defaultCodec)
+static QTextCodec * codecForHtml( const QByteArray & ba, QTextCodec * defaultCodec )
 */
 void QTextCodec_codecForHtml2()
 {
@@ -671,11 +640,6 @@ void QTextCodec_codecForHtml2()
   QTextCodec * ptr = QTextCodec::codecForHtml( *PQBYTEARRAY(1), PQTEXTCODEC(2) );
   Qt4xHb::createReturnClass( ptr, "QTEXTCODEC", false );
 }
-
-/*
-[1]static QTextCodec *codecForHtml(const QByteArray &ba)
-[2]static QTextCodec *codecForHtml(const QByteArray &ba, QTextCodec *defaultCodec)
-*/
 
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORHTML )
 {
@@ -694,7 +658,7 @@ HB_FUNC_STATIC( QTEXTCODEC_CODECFORHTML )
 }
 
 /*
-static QTextCodec *codecForUtfText(const QByteArray &ba)
+static QTextCodec * codecForUtfText( const QByteArray & ba )
 */
 void QTextCodec_codecForUtfText1()
 {
@@ -704,7 +668,7 @@ void QTextCodec_codecForUtfText1()
 }
 
 /*
-static QTextCodec *codecForUtfText(const QByteArray &ba, QTextCodec *defaultCodec)
+static QTextCodec * codecForUtfText( const QByteArray & ba, QTextCodec * defaultCodec )
 */
 void QTextCodec_codecForUtfText2()
 {
@@ -712,11 +676,6 @@ void QTextCodec_codecForUtfText2()
   QTextCodec * ptr = QTextCodec::codecForUtfText( *PQBYTEARRAY(1), PQTEXTCODEC(2) );
   Qt4xHb::createReturnClass( ptr, "QTEXTCODEC", false );
 }
-
-/*
-[1]static QTextCodec *codecForUtfText(const QByteArray &ba)
-[2]static QTextCodec *codecForUtfText(const QByteArray &ba, QTextCodec *defaultCodec)
-*/
 
 HB_FUNC_STATIC( QTEXTCODEC_CODECFORUTFTEXT )
 {

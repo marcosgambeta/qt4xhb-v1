@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QReadLocker ( QReadWriteLock * lock )
+QReadLocker( QReadWriteLock * lock )
 */
 HB_FUNC_STATIC( QREADLOCKER_NEW )
 {

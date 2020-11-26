@@ -80,7 +80,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QDateTime ()
+QDateTime()
 */
 void QDateTime_new1()
 {
@@ -89,7 +89,7 @@ void QDateTime_new1()
 }
 
 /*
-QDateTime ( const QDate & date )
+QDateTime( const QDate & date )
 */
 void QDateTime_new2()
 {
@@ -98,7 +98,7 @@ void QDateTime_new2()
 }
 
 /*
-QDateTime ( const QDate & date, const QTime & time, Qt::TimeSpec spec = Qt::LocalTime )
+QDateTime( const QDate & date, const QTime & time, Qt::TimeSpec spec = Qt::LocalTime )
 */
 void QDateTime_new3()
 {
@@ -107,20 +107,13 @@ void QDateTime_new3()
 }
 
 /*
-QDateTime ( const QDateTime & other )
+QDateTime( const QDateTime & other )
 */
 void QDateTime_new4()
 {
   QDateTime * obj = new QDateTime( *PQDATETIME(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QDateTime ()
-[2]QDateTime ( const QDate & date )
-[3]QDateTime ( const QDate & date, const QTime & time, Qt::TimeSpec spec = Qt::LocalTime )
-[4]QDateTime ( const QDateTime & other )
-*/
 
 HB_FUNC_STATIC( QDATETIME_NEW )
 {
@@ -662,7 +655,7 @@ HB_FUNC_STATIC( QDATETIME_TOMSECSSINCEEPOCH )
 }
 
 /*
-QString toString ( const QString & format ) const
+QString toString( const QString & format ) const
 */
 void QDateTime_toString1()
 {
@@ -675,7 +668,7 @@ void QDateTime_toString1()
 }
 
 /*
-QString toString ( Qt::DateFormat format = Qt::TextDate ) const
+QString toString( Qt::DateFormat format = Qt::TextDate ) const
 */
 void QDateTime_toString2()
 {
@@ -686,11 +679,6 @@ void QDateTime_toString2()
     RQSTRING( obj->toString( ISNIL(1)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(1) ) );
   }
 }
-
-/*
-[1]QString toString ( const QString & format ) const
-[2]QString toString ( Qt::DateFormat format = Qt::TextDate ) const
-*/
 
 HB_FUNC_STATIC( QDATETIME_TOSTRING )
 {
@@ -862,7 +850,7 @@ HB_FUNC_STATIC( QDATETIME_FROMMSECSSINCEEPOCH )
 }
 
 /*
-static QDateTime fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
+static QDateTime fromString( const QString & string, Qt::DateFormat format = Qt::TextDate )
 */
 void QDateTime_fromString1()
 {
@@ -872,7 +860,7 @@ void QDateTime_fromString1()
 }
 
 /*
-static QDateTime fromString ( const QString & string, const QString & format )
+static QDateTime fromString( const QString & string, const QString & format )
 */
 void QDateTime_fromString2()
 {
@@ -880,11 +868,6 @@ void QDateTime_fromString2()
   QDateTime * ptr = new QDateTime( QDateTime::fromString( PQSTRING(1), PQSTRING(2) ) );
   Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
 }
-
-/*
-[1]QDateTime fromString ( const QString & string, Qt::DateFormat format = Qt::TextDate )
-[2]QDateTime fromString ( const QString & string, const QString & format )
-*/
 
 HB_FUNC_STATIC( QDATETIME_FROMSTRING )
 {

@@ -70,7 +70,7 @@ RETURN
 #include <QtCore/QStringList>
 
 /*
-QRegExp ()
+QRegExp()
 */
 void QRegExp_new1()
 {
@@ -79,7 +79,7 @@ void QRegExp_new1()
 }
 
 /*
-QRegExp ( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, PatternSyntax syntax = RegExp )
+QRegExp( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, QRegExp::PatternSyntax syntax = QRegExp::RegExp )
 */
 void QRegExp_new2()
 {
@@ -88,19 +88,13 @@ void QRegExp_new2()
 }
 
 /*
-QRegExp ( const QRegExp & rx )
+QRegExp( const QRegExp & rx )
 */
 void QRegExp_new3()
 {
   QRegExp * obj = new QRegExp( *PQREGEXP(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QRegExp ()
-[2]QRegExp ( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, PatternSyntax syntax = RegExp )
-[3]QRegExp ( const QRegExp & rx )
-*/
 
 HB_FUNC_STATIC( QREGEXP_NEW )
 {

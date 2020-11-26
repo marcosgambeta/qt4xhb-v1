@@ -62,7 +62,7 @@ void QStringMatcher_new1()
 }
 
 /*
-QStringMatcher(const QString &pattern,Qt::CaseSensitivity cs = Qt::CaseSensitive)
+QStringMatcher( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive )
 */
 void QStringMatcher_new2()
 {
@@ -71,7 +71,7 @@ void QStringMatcher_new2()
 }
 
 /*
-QStringMatcher(const QChar *uc, int len,Qt::CaseSensitivity cs = Qt::CaseSensitive)
+QStringMatcher( const QChar * uc, int len, Qt::CaseSensitivity cs = Qt::CaseSensitive )
 */
 void QStringMatcher_new3()
 {
@@ -80,20 +80,13 @@ void QStringMatcher_new3()
 }
 
 /*
-QStringMatcher(const QStringMatcher &other)
+QStringMatcher( const QStringMatcher & other )
 */
 void QStringMatcher_new4()
 {
   QStringMatcher * obj = new QStringMatcher( *PQSTRINGMATCHER(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QStringMatcher()
-[2]QStringMatcher(const QString &pattern,Qt::CaseSensitivity cs = Qt::CaseSensitive)
-[3]QStringMatcher(const QChar *uc, int len,Qt::CaseSensitivity cs = Qt::CaseSensitive)
-[4]QStringMatcher(const QStringMatcher &other)
-*/
 
 HB_FUNC_STATIC( QSTRINGMATCHER_NEW )
 {
@@ -189,7 +182,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_SETCASESENSITIVITY )
 }
 
 /*
-int indexIn(const QString &str, int from = 0) const
+int indexIn( const QString & str, int from = 0 ) const
 */
 void QStringMatcher_indexIn1()
 {
@@ -202,7 +195,7 @@ void QStringMatcher_indexIn1()
 }
 
 /*
-int indexIn(const QChar *str, int length, int from = 0) const
+int indexIn( const QChar * str, int length, int from = 0 ) const
 */
 void QStringMatcher_indexIn2()
 {
@@ -213,11 +206,6 @@ void QStringMatcher_indexIn2()
     RINT( obj->indexIn( PQCHAR(1), PINT(2), OPINT(3,0) ) );
   }
 }
-
-/*
-[1]int indexIn(const QString &str, int from = 0) const
-[2]int indexIn(const QChar *str, int length, int from = 0) const
-*/
 
 HB_FUNC_STATIC( QSTRINGMATCHER_INDEXIN )
 {

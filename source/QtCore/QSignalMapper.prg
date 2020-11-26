@@ -51,7 +51,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QSignalMapper(QObject *parent = 0)
+QSignalMapper( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSIGNALMAPPER_NEW )
 {
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_DELETE )
 }
 
 /*
-void setMapping(QObject *sender, int id)
+void setMapping( QObject * sender, int id )
 */
 void QSignalMapper_setMapping1()
 {
@@ -101,7 +101,7 @@ void QSignalMapper_setMapping1()
 }
 
 /*
-void setMapping(QObject *sender, const QString &text)
+void setMapping( QObject * sender, const QString & text )
 */
 void QSignalMapper_setMapping2()
 {
@@ -116,7 +116,7 @@ void QSignalMapper_setMapping2()
 }
 
 /*
-void setMapping(QObject *sender, QWidget *widget)
+void setMapping( QObject * sender, QWidget * widget )
 */
 void QSignalMapper_setMapping3()
 {
@@ -131,7 +131,7 @@ void QSignalMapper_setMapping3()
 }
 
 /*
-void setMapping(QObject *sender, QObject *object)
+void setMapping( QObject * sender, QObject * object )
 */
 void QSignalMapper_setMapping4()
 {
@@ -144,13 +144,6 @@ void QSignalMapper_setMapping4()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setMapping(QObject *sender, int id)
-[2]void setMapping(QObject *sender, const QString &text)
-[3]void setMapping(QObject *sender, QWidget *widget)
-[4]void setMapping(QObject *sender, QObject *object)
-*/
 
 HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING )
 {
@@ -203,7 +196,7 @@ HB_FUNC_STATIC( QSIGNALMAPPER_REMOVEMAPPINGS )
 }
 
 /*
-QObject *mapping(int id) const
+QObject * mapping( int id ) const
 */
 void QSignalMapper_mapping1()
 {
@@ -217,7 +210,7 @@ void QSignalMapper_mapping1()
 }
 
 /*
-QObject *mapping(const QString &text) const
+QObject * mapping( const QString & text ) const
 */
 void QSignalMapper_mapping2()
 {
@@ -231,7 +224,7 @@ void QSignalMapper_mapping2()
 }
 
 /*
-QObject *mapping(QWidget *widget) const
+QObject * mapping( QWidget * widget ) const
 */
 void QSignalMapper_mapping3()
 {
@@ -245,7 +238,7 @@ void QSignalMapper_mapping3()
 }
 
 /*
-QObject *mapping(QObject *object) const
+QObject * mapping( QObject * object ) const
 */
 void QSignalMapper_mapping4()
 {
@@ -257,13 +250,6 @@ void QSignalMapper_mapping4()
     Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
   }
 }
-
-/*
-[1]QObject *mapping(int id) const
-[2]QObject *mapping(const QString &text) const
-[3]QObject *mapping(QWidget *widget) const
-[4]QObject *mapping(QObject *object) const
-*/
 
 HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING )
 {
@@ -305,7 +291,7 @@ void QSignalMapper_map1()
 }
 
 /*
-void map(QObject *sender)
+void map( QObject * sender )
 */
 void QSignalMapper_map2()
 {
@@ -318,11 +304,6 @@ void QSignalMapper_map2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void map()
-[2]void map(QObject *sender)
-*/
 
 HB_FUNC_STATIC( QSIGNALMAPPER_MAP )
 {

@@ -61,7 +61,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QModelIndex ()
+QModelIndex()
 */
 void QModelIndex_new1()
 {
@@ -70,18 +70,13 @@ void QModelIndex_new1()
 }
 
 /*
-QModelIndex ( const QModelIndex & other )
+QModelIndex( const QModelIndex & other )
 */
 void QModelIndex_new2()
 {
   QModelIndex * obj = new QModelIndex( *PQMODELINDEX(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QModelIndex ()
-[2]QModelIndex ( const QModelIndex & other )
-*/
 
 HB_FUNC_STATIC( QMODELINDEX_NEW )
 {

@@ -58,7 +58,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QThread(QObject * parent = 0)
+QThread( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QTHREAD_NEW )
 {

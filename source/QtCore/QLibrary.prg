@@ -52,7 +52,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QLibrary(QObject *parent = 0)
+QLibrary( QObject * parent = 0 )
 */
 void QLibrary_new1()
 {
@@ -61,7 +61,7 @@ void QLibrary_new1()
 }
 
 /*
-QLibrary(const QString& fileName, QObject *parent = 0)
+QLibrary( const QString & fileName, QObject * parent = 0 )
 */
 void QLibrary_new2()
 {
@@ -70,7 +70,7 @@ void QLibrary_new2()
 }
 
 /*
-QLibrary(const QString& fileName, int verNum, QObject *parent = 0)
+QLibrary( const QString & fileName, int verNum, QObject * parent = 0 )
 */
 void QLibrary_new3()
 {
@@ -79,20 +79,13 @@ void QLibrary_new3()
 }
 
 /*
-QLibrary(const QString& fileName, const QString &version, QObject *parent = 0)
+QLibrary( const QString & fileName, const QString & version, QObject * parent = 0 )
 */
 void QLibrary_new4()
 {
   QLibrary * obj = new QLibrary( PQSTRING(1), PQSTRING(2), OPQOBJECT(3,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QLibrary(QObject *parent = 0)
-[2]QLibrary(const QString& fileName, QObject *parent = 0)
-[3]QLibrary(const QString& fileName, int verNum, QObject *parent = 0)
-[4]QLibrary(const QString& fileName, const QString &version, QObject *parent = 0)
-*/
 
 HB_FUNC_STATIC( QLIBRARY_NEW )
 {
@@ -260,7 +253,7 @@ HB_FUNC_STATIC( QLIBRARY_FILENAME )
 }
 
 /*
-void setFileNameAndVersion(const QString &fileName, int verNum)
+void setFileNameAndVersion( const QString & fileName, int verNum )
 */
 void QLibrary_setFileNameAndVersion1()
 {
@@ -275,7 +268,7 @@ void QLibrary_setFileNameAndVersion1()
 }
 
 /*
-void setFileNameAndVersion(const QString &fileName, const QString &version)
+void setFileNameAndVersion( const QString & fileName, const QString & version )
 */
 void QLibrary_setFileNameAndVersion2()
 {
@@ -288,11 +281,6 @@ void QLibrary_setFileNameAndVersion2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setFileNameAndVersion(const QString &fileName, int verNum)
-[2]void setFileNameAndVersion(const QString &fileName, const QString &version)
-*/
 
 HB_FUNC_STATIC( QLIBRARY_SETFILENAMEANDVERSION )
 {
@@ -385,7 +373,7 @@ HB_FUNC_STATIC( QLIBRARY_LOADHINTS )
 }
 
 /*
-void *resolve(const char *symbol)
+void * resolve( const char * symbol )
 */
 void QLibrary_resolve1()
 {
@@ -398,7 +386,7 @@ void QLibrary_resolve1()
 }
 
 /*
-static void *resolve(const QString &fileName, const char *symbol)
+static void * resolve( const QString & fileName, const char * symbol )
 */
 void QLibrary_resolve2()
 {
@@ -407,7 +395,7 @@ void QLibrary_resolve2()
 }
 
 /*
-static void *resolve(const QString &fileName, int verNum, const char *symbol)
+static void * resolve( const QString & fileName, int verNum, const char * symbol )
 */
 void QLibrary_resolve3()
 {
@@ -416,20 +404,13 @@ void QLibrary_resolve3()
 }
 
 /*
-static void *resolve(const QString &fileName, const QString &version, const char *symbol)
+static void * resolve( const QString & fileName, const QString & version, const char * symbol )
 */
 void QLibrary_resolve4()
 {
 
   hb_retptr( (void *) QLibrary::resolve( PQSTRING(1), PQSTRING(2), PCONSTCHAR(3) ) );
 }
-
-/*
-[1]void *resolve(const char *symbol)
-[2]static void *resolve(const QString &fileName, const char *symbol)
-[3]static void *resolve(const QString &fileName, int verNum, const char *symbol)
-[4]static void *resolve(const QString &fileName, const QString &version, const char *symbol)
-*/
 
 HB_FUNC_STATIC( QLIBRARY_RESOLVE )
 {

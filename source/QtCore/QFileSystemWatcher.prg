@@ -52,7 +52,7 @@ RETURN
 #include <QtCore/QStringList>
 
 /*
-QFileSystemWatcher(QObject * parent = 0)
+QFileSystemWatcher( QObject * parent = 0 )
 */
 void QFileSystemWatcher_new1()
 {
@@ -61,18 +61,13 @@ void QFileSystemWatcher_new1()
 }
 
 /*
-QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)
+QFileSystemWatcher( const QStringList & paths, QObject * parent = 0 )
 */
 void QFileSystemWatcher_new2()
 {
   QFileSystemWatcher * obj = new QFileSystemWatcher( PQSTRINGLIST(1), OPQOBJECT(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QFileSystemWatcher(QObject * parent = 0)
-[2]QFileSystemWatcher(const QStringList & paths, QObject * parent = 0)
-*/
 
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW )
 {

@@ -55,7 +55,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QBuffer ( QObject * parent = 0 )
+QBuffer( QObject * parent = 0 )
 */
 void QBuffer_new1()
 {
@@ -64,18 +64,13 @@ void QBuffer_new1()
 }
 
 /*
-QBuffer ( QByteArray * byteArray, QObject * parent = 0 )
+QBuffer( QByteArray * byteArray, QObject * parent = 0 )
 */
 void QBuffer_new2()
 {
   QBuffer * obj = new QBuffer( PQBYTEARRAY(1), OPQOBJECT(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QBuffer ( QObject * parent = 0 )
-[2]QBuffer ( QByteArray * byteArray, QObject * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QBUFFER_NEW )
 {
@@ -113,7 +108,7 @@ HB_FUNC_STATIC( QBUFFER_DELETE )
 }
 
 /*
-QByteArray & buffer ()
+QByteArray & buffer()
 */
 HB_FUNC_STATIC( QBUFFER_BUFFER1 )
 {
@@ -138,7 +133,7 @@ HB_FUNC_STATIC( QBUFFER_BUFFER1 )
 }
 
 /*
-const QByteArray & buffer () const
+const QByteArray & buffer() const
 */
 HB_FUNC_STATIC( QBUFFER_BUFFER2 )
 {
@@ -161,11 +156,6 @@ HB_FUNC_STATIC( QBUFFER_BUFFER2 )
 #endif
   }
 }
-
-/*
-[1]QByteArray & buffer ()
-[2]const QByteArray & buffer () const
-*/
 
 HB_FUNC_STATIC( QBUFFER_BUFFER )
 {
@@ -231,7 +221,7 @@ HB_FUNC_STATIC( QBUFFER_SETBUFFER )
 }
 
 /*
-void setData ( const QByteArray & data )
+void setData( const QByteArray & data )
 */
 void QBuffer_setData1()
 {
@@ -246,7 +236,7 @@ void QBuffer_setData1()
 }
 
 /*
-void setData ( const char * data, int size )
+void setData( const char * data, int size )
 */
 void QBuffer_setData2()
 {
@@ -259,11 +249,6 @@ void QBuffer_setData2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setData ( const QByteArray & data )
-[2]void setData ( const char * data, int size )
-*/
 
 HB_FUNC_STATIC( QBUFFER_SETDATA )
 {

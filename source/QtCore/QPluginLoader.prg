@@ -51,7 +51,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QPluginLoader ( QObject * parent = 0 )
+QPluginLoader( QObject * parent = 0 )
 */
 void QPluginLoader_new1()
 {
@@ -60,18 +60,13 @@ void QPluginLoader_new1()
 }
 
 /*
-QPluginLoader ( const QString & fileName, QObject * parent = 0 )
+QPluginLoader( const QString & fileName, QObject * parent = 0 )
 */
 void QPluginLoader_new2()
 {
   QPluginLoader * obj = new QPluginLoader( PQSTRING(1), OPQOBJECT(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QPluginLoader ( QObject * parent = 0 )
-[2]QPluginLoader ( const QString & fileName, QObject * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QPLUGINLOADER_NEW )
 {

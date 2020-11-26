@@ -130,7 +130,7 @@ RETURN
 #include <QtCore/QStringList>
 
 /*
-QLocale ()
+QLocale()
 */
 void QLocale_new1()
 {
@@ -139,7 +139,7 @@ void QLocale_new1()
 }
 
 /*
-QLocale ( const QString & name )
+QLocale( const QString & name )
 */
 void QLocale_new2()
 {
@@ -148,7 +148,7 @@ void QLocale_new2()
 }
 
 /*
-QLocale ( Language language, Country country = AnyCountry )
+QLocale( QLocale::Language language, QLocale::Country country = QLocale::AnyCountry )
 */
 void QLocale_new3()
 {
@@ -157,7 +157,7 @@ void QLocale_new3()
 }
 
 /*
-QLocale ( Language language, Script script, Country country )
+QLocale( QLocale::Language language, QLocale::Script script, QLocale::Country country )
 */
 void QLocale_new4()
 {
@@ -166,21 +166,13 @@ void QLocale_new4()
 }
 
 /*
-QLocale ( const QLocale & other )
+QLocale( const QLocale & other )
 */
 void QLocale_new5()
 {
   QLocale * obj = new QLocale( *PQLOCALE(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1] QLocale ()
-[2] QLocale ( const QString & name )
-[3] QLocale ( Language language, Country country = AnyCountry )
-[4] QLocale ( Language language, Script script, Country country )
-[5] QLocale ( const QLocale & other )
-*/
 
 HB_FUNC_STATIC( QLOCALE_NEW )
 {
@@ -769,7 +761,7 @@ HB_FUNC_STATIC( QLOCALE_POSITIVESIGN )
 }
 
 /*
-QString quoteString ( const QString & str, QuotationStyle style = StandardQuotation ) const
+QString quoteString( const QString & str, QLocale::QuotationStyle style = QLocale::StandardQuotation ) const
 */
 void QLocale_quoteString1()
 {
@@ -782,7 +774,7 @@ void QLocale_quoteString1()
 }
 
 /*
-QString quoteString ( const QStringRef & str, QuotationStyle style = StandardQuotation ) const
+QString quoteString( const QStringRef & str, QLocale::QuotationStyle style = QLocale::StandardQuotation ) const
 */
 void QLocale_quoteString2()
 {
@@ -793,11 +785,6 @@ void QLocale_quoteString2()
     RQSTRING( obj->quoteString( *PQSTRINGREF(1), ISNIL(2)? (QLocale::QuotationStyle) QLocale::StandardQuotation : (QLocale::QuotationStyle) hb_parni(2) ) );
   }
 }
-
-/*
-[1]QString quoteString ( const QString & str, QuotationStyle style = StandardQuotation ) const
-[2]QString quoteString ( const QStringRef & str, QuotationStyle style = StandardQuotation ) const
-*/
 
 HB_FUNC_STATIC( QLOCALE_QUOTESTRING )
 {
@@ -962,7 +949,7 @@ HB_FUNC_STATIC( QLOCALE_TIMEFORMAT )
 }
 
 /*
-QString toCurrencyString ( qlonglong value, const QString & symbol = QString() ) const
+QString toCurrencyString( qlonglong value, const QString & symbol = QString() ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING1 )
 {
@@ -986,7 +973,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING1 )
 }
 
 /*
-QString toCurrencyString ( short value, const QString & symbol = QString() ) const
+QString toCurrencyString( short value, const QString & symbol = QString() ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING2 )
 {
@@ -1010,7 +997,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING2 )
 }
 
 /*
-QString toCurrencyString ( ushort value, const QString & symbol = QString() ) const
+QString toCurrencyString( ushort value, const QString & symbol = QString() ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING3 )
 {
@@ -1034,7 +1021,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING3 )
 }
 
 /*
-QString toCurrencyString ( int value, const QString & symbol = QString() ) const
+QString toCurrencyString( int value, const QString & symbol = QString() ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING4 )
 {
@@ -1058,7 +1045,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING4 )
 }
 
 /*
-QString toCurrencyString ( uint value, const QString & symbol = QString() ) const
+QString toCurrencyString( uint value, const QString & symbol = QString() ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING5 )
 {
@@ -1082,7 +1069,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING5 )
 }
 
 /*
-QString toCurrencyString ( float value, const QString & symbol = QString() ) const
+QString toCurrencyString( float value, const QString & symbol = QString() ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING6 )
 {
@@ -1106,7 +1093,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING6 )
 }
 
 /*
-QString toCurrencyString ( qulonglong value, const QString & symbol = QString() ) const
+QString toCurrencyString( qulonglong value, const QString & symbol = QString() ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING7 )
 {
@@ -1130,7 +1117,7 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING7 )
 }
 
 /*
-QString toCurrencyString ( double value, const QString & symbol = QString() ) const
+QString toCurrencyString( double value, const QString & symbol = QString() ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING8 )
 {
@@ -1153,23 +1140,12 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING8 )
   }
 }
 
-/*
-[1]QString toCurrencyString ( qlonglong value, const QString & symbol = QString() ) const
-[2]QString toCurrencyString ( short value, const QString & symbol = QString() ) const
-[3]QString toCurrencyString ( ushort value, const QString & symbol = QString() ) const
-[4]QString toCurrencyString ( int value, const QString & symbol = QString() ) const
-[5]QString toCurrencyString ( uint value, const QString & symbol = QString() ) const
-[6]QString toCurrencyString ( float value, const QString & symbol = QString() ) const
-[7]QString toCurrencyString ( qulonglong value, const QString & symbol = QString() ) const
-[8]QString toCurrencyString ( double value, const QString & symbol = QString() ) const
-*/
-
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING )
 {
 }
 
 /*
-QDate toDate ( const QString & string, FormatType format = LongFormat ) const
+QDate toDate( const QString & string, QLocale::FormatType format = QLocale::LongFormat ) const
 */
 void QLocale_toDate1()
 {
@@ -1183,7 +1159,7 @@ void QLocale_toDate1()
 }
 
 /*
-QDate toDate ( const QString & string, const QString & format ) const
+QDate toDate( const QString & string, const QString & format ) const
 */
 void QLocale_toDate2()
 {
@@ -1195,11 +1171,6 @@ void QLocale_toDate2()
     Qt4xHb::createReturnClass( ptr, "QDATE", true );
   }
 }
-
-/*
-[1]QDate toDate ( const QString & string, FormatType format = LongFormat ) const
-[2]QDate toDate ( const QString & string, const QString & format ) const
-*/
 
 HB_FUNC_STATIC( QLOCALE_TODATE )
 {
@@ -1218,7 +1189,7 @@ HB_FUNC_STATIC( QLOCALE_TODATE )
 }
 
 /*
-QDateTime toDateTime ( const QString & string, FormatType format = LongFormat ) const
+QDateTime toDateTime( const QString & string, QLocale::FormatType format = QLocale::LongFormat ) const
 */
 void QLocale_toDateTime1()
 {
@@ -1232,7 +1203,7 @@ void QLocale_toDateTime1()
 }
 
 /*
-QDateTime toDateTime ( const QString & string, const QString & format ) const
+QDateTime toDateTime( const QString & string, const QString & format ) const
 */
 void QLocale_toDateTime2()
 {
@@ -1244,11 +1215,6 @@ void QLocale_toDateTime2()
     Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
   }
 }
-
-/*
-[1]QDateTime toDateTime ( const QString & string, FormatType format = LongFormat ) const
-[2]QDateTime toDateTime ( const QString & string, const QString & format ) const
-*/
 
 HB_FUNC_STATIC( QLOCALE_TODATETIME )
 {
@@ -1421,7 +1387,7 @@ HB_FUNC_STATIC( QLOCALE_TOSHORT )
 }
 
 /*
-QString toString ( qlonglong i ) const
+QString toString( qlonglong i ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING1 )
 {
@@ -1445,7 +1411,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING1 )
 }
 
 /*
-QString toString ( const QDate & date, const QString & format ) const
+QString toString( const QDate & date, const QString & format ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING2 )
 {
@@ -1469,7 +1435,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING2 )
 }
 
 /*
-QString toString ( const QDate & date, FormatType format = LongFormat ) const
+QString toString( const QDate & date, QLocale::FormatType format = QLocale::LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING3 )
 {
@@ -1493,7 +1459,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING3 )
 }
 
 /*
-QString toString ( const QTime & time, const QString & format ) const
+QString toString( const QTime & time, const QString & format ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING4 )
 {
@@ -1517,7 +1483,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING4 )
 }
 
 /*
-QString toString ( const QTime & time, FormatType format = LongFormat ) const
+QString toString( const QTime & time, QLocale::FormatType format = QLocale::LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING5 )
 {
@@ -1541,7 +1507,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING5 )
 }
 
 /*
-QString toString ( const QDateTime & dateTime, FormatType format = LongFormat ) const
+QString toString( const QDateTime & dateTime, QLocale::FormatType format = QLocale::LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING6 )
 {
@@ -1565,7 +1531,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING6 )
 }
 
 /*
-QString toString ( const QDateTime & dateTime, const QString & format ) const
+QString toString( const QDateTime & dateTime, const QString & format ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING7 )
 {
@@ -1589,7 +1555,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING7 )
 }
 
 /*
-QString toString ( short i ) const
+QString toString( short i ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING8 )
 {
@@ -1613,7 +1579,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING8 )
 }
 
 /*
-QString toString ( ushort i ) const
+QString toString( ushort i ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING9 )
 {
@@ -1637,7 +1603,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING9 )
 }
 
 /*
-QString toString ( int i ) const
+QString toString( int i ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING10 )
 {
@@ -1661,7 +1627,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING10 )
 }
 
 /*
-QString toString ( uint i ) const
+QString toString( uint i ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING11 )
 {
@@ -1685,7 +1651,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING11 )
 }
 
 /*
-QString toString ( float i, char f = 'g', int prec = 6 ) const
+QString toString( float i, char f = 'g', int prec = 6 ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING12 )
 {
@@ -1709,7 +1675,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING12 )
 }
 
 /*
-QString toString ( qulonglong i ) const
+QString toString( qulonglong i ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING13 )
 {
@@ -1733,7 +1699,7 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING13 )
 }
 
 /*
-QString toString ( double i, char f = 'g', int prec = 6 ) const
+QString toString( double i, char f = 'g', int prec = 6 ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING14 )
 {
@@ -1756,29 +1722,12 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING14 )
   }
 }
 
-/*
-[01]QString toString ( qlonglong i ) const
-[02]QString toString ( const QDate & date, const QString & format ) const
-[03]QString toString ( const QDate & date, FormatType format = LongFormat ) const
-[04]QString toString ( const QTime & time, const QString & format ) const
-[05]QString toString ( const QTime & time, FormatType format = LongFormat ) const
-[06]QString toString ( const QDateTime & dateTime, FormatType format = LongFormat ) const
-[07]QString toString ( const QDateTime & dateTime, const QString & format ) const
-[08]QString toString ( short i ) const
-[09]QString toString ( ushort i ) const
-[10]QString toString ( int i ) const
-[11]QString toString ( uint i ) const
-[12]QString toString ( float i, char f = 'g', int prec = 6 ) const
-[13]QString toString ( qulonglong i ) const
-[14]QString toString ( double i, char f = 'g', int prec = 6 ) const
-*/
-
 HB_FUNC_STATIC( QLOCALE_TOSTRING )
 {
 }
 
 /*
-QTime toTime ( const QString & string, FormatType format = LongFormat ) const
+QTime toTime( const QString & string, QLocale::FormatType format = QLocale::LongFormat ) const
 */
 void QLocale_toTime1()
 {
@@ -1792,7 +1741,7 @@ void QLocale_toTime1()
 }
 
 /*
-QTime toTime ( const QString & string, const QString & format ) const
+QTime toTime( const QString & string, const QString & format ) const
 */
 void QLocale_toTime2()
 {
@@ -1804,11 +1753,6 @@ void QLocale_toTime2()
     Qt4xHb::createReturnClass( ptr, "QTIME", true );
   }
 }
-
-/*
-[1]QTime toTime ( const QString & string, FormatType format = LongFormat ) const
-[2]QTime toTime ( const QString & string, const QString & format ) const
-*/
 
 HB_FUNC_STATIC( QLOCALE_TOTIME )
 {

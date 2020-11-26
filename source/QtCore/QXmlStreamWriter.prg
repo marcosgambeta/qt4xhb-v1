@@ -85,7 +85,7 @@ void QXmlStreamWriter_new1()
 }
 
 /*
-QXmlStreamWriter(QIODevice * device)
+QXmlStreamWriter( QIODevice * device )
 */
 void QXmlStreamWriter_new2()
 {
@@ -94,24 +94,13 @@ void QXmlStreamWriter_new2()
 }
 
 /*
-QXmlStreamWriter(QByteArray * array)
+QXmlStreamWriter( QByteArray * array )
 */
 void QXmlStreamWriter_new3()
 {
   QXmlStreamWriter * obj = new QXmlStreamWriter( PQBYTEARRAY(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-QXmlStreamWriter(QString * string)
-*/
-
-/*
-[1]QXmlStreamWriter()
-[2]QXmlStreamWriter(QIODevice * device)
-[3]QXmlStreamWriter(QByteArray * array)
-[4]QXmlStreamWriter(QString * string)
-*/
 
 HB_FUNC_STATIC( QXMLSTREAMWRITER_NEW )
 {
@@ -325,7 +314,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETAUTOFORMATTINGINDENT )
 }
 
 /*
-void setCodec(QTextCodec * codec)
+void setCodec( QTextCodec * codec )
 */
 void QXmlStreamWriter_setCodec1()
 {
@@ -340,7 +329,7 @@ void QXmlStreamWriter_setCodec1()
 }
 
 /*
-void setCodec(const char * codecName)
+void setCodec( const char * codecName )
 */
 void QXmlStreamWriter_setCodec2()
 {
@@ -353,11 +342,6 @@ void QXmlStreamWriter_setCodec2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void setCodec(QTextCodec * codec)
-[2]void setCodec(const char * codecName)
-*/
 
 HB_FUNC_STATIC( QXMLSTREAMWRITER_SETCODEC )
 {
@@ -402,7 +386,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_SETDEVICE )
 }
 
 /*
-void writeAttribute(const QString & namespaceUri, const QString & name, const QString & value)
+void writeAttribute( const QString & namespaceUri, const QString & name, const QString & value )
 */
 void QXmlStreamWriter_writeAttribute1()
 {
@@ -417,7 +401,7 @@ void QXmlStreamWriter_writeAttribute1()
 }
 
 /*
-void writeAttribute(const QString & qualifiedName, const QString & value)
+void writeAttribute( const QString & qualifiedName, const QString & value )
 */
 void QXmlStreamWriter_writeAttribute2()
 {
@@ -432,7 +416,7 @@ void QXmlStreamWriter_writeAttribute2()
 }
 
 /*
-void writeAttribute(const QXmlStreamAttribute & attribute)
+void writeAttribute( const QXmlStreamAttribute & attribute )
 */
 void QXmlStreamWriter_writeAttribute3()
 {
@@ -445,12 +429,6 @@ void QXmlStreamWriter_writeAttribute3()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void writeAttribute(const QString & namespaceUri, const QString & name, const QString & value)
-[2]void writeAttribute(const QString & qualifiedName, const QString & value)
-[3]void writeAttribute(const QXmlStreamAttribute & attribute)
-*/
 
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEATTRIBUTE )
 {
@@ -655,7 +633,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEDEFAULTNAMESPACE )
 }
 
 /*
-void writeEmptyElement(const QString & namespaceUri, const QString & name)
+void writeEmptyElement( const QString & namespaceUri, const QString & name )
 */
 void QXmlStreamWriter_writeEmptyElement1()
 {
@@ -670,7 +648,7 @@ void QXmlStreamWriter_writeEmptyElement1()
 }
 
 /*
-void writeEmptyElement(const QString & qualifiedName)
+void writeEmptyElement( const QString & qualifiedName )
 */
 void QXmlStreamWriter_writeEmptyElement2()
 {
@@ -683,11 +661,6 @@ void QXmlStreamWriter_writeEmptyElement2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void writeEmptyElement(const QString & namespaceUri, const QString & name)
-[2]void writeEmptyElement(const QString & qualifiedName)
-*/
 
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEEMPTYELEMENT )
 {
@@ -784,7 +757,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEENTITYREFERENCE )
 }
 
 /*
-void writeNamespace(const QString & namespaceUri, const QString & prefix = QString())
+void writeNamespace( const QString & namespaceUri, const QString & prefix = QString() )
 */
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITENAMESPACE )
 {
@@ -810,7 +783,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITENAMESPACE )
 }
 
 /*
-void writeProcessingInstruction(const QString & target, const QString & data = QString())
+void writeProcessingInstruction( const QString & target, const QString & data = QString() )
 */
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEPROCESSINGINSTRUCTION )
 {
@@ -836,7 +809,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITEPROCESSINGINSTRUCTION )
 }
 
 /*
-void writeStartDocument(const QString & version)
+void writeStartDocument( const QString & version )
 */
 void QXmlStreamWriter_writeStartDocument1()
 {
@@ -851,7 +824,7 @@ void QXmlStreamWriter_writeStartDocument1()
 }
 
 /*
-void writeStartDocument(const QString & version, bool standalone)
+void writeStartDocument( const QString & version, bool standalone )
 */
 void QXmlStreamWriter_writeStartDocument2()
 {
@@ -880,12 +853,6 @@ void QXmlStreamWriter_writeStartDocument3()
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-[1]void writeStartDocument(const QString & version)
-[2]void writeStartDocument(const QString & version, bool standalone)
-[3]void writeStartDocument()
-*/
-
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTDOCUMENT )
 {
   if( ISNUMPAR(1) && ISCHAR(1) )
@@ -907,7 +874,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTDOCUMENT )
 }
 
 /*
-void writeStartElement(const QString & namespaceUri, const QString & name)
+void writeStartElement( const QString & namespaceUri, const QString & name )
 */
 void QXmlStreamWriter_writeStartElement1()
 {
@@ -922,7 +889,7 @@ void QXmlStreamWriter_writeStartElement1()
 }
 
 /*
-void writeStartElement(const QString & qualifiedName)
+void writeStartElement( const QString & qualifiedName )
 */
 void QXmlStreamWriter_writeStartElement2()
 {
@@ -935,11 +902,6 @@ void QXmlStreamWriter_writeStartElement2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void writeStartElement(const QString & namespaceUri, const QString & name)
-[2]void writeStartElement(const QString & qualifiedName)
-*/
 
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTELEMENT )
 {
@@ -958,7 +920,7 @@ HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITESTARTELEMENT )
 }
 
 /*
-void writeTextElement(const QString & namespaceUri, const QString & name, const QString & text)
+void writeTextElement( const QString & namespaceUri, const QString & name, const QString & text )
 */
 void QXmlStreamWriter_writeTextElement1()
 {
@@ -973,7 +935,7 @@ void QXmlStreamWriter_writeTextElement1()
 }
 
 /*
-void writeTextElement(const QString & qualifiedName, const QString & text)
+void writeTextElement( const QString & qualifiedName, const QString & text )
 */
 void QXmlStreamWriter_writeTextElement2()
 {
@@ -986,11 +948,6 @@ void QXmlStreamWriter_writeTextElement2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void writeTextElement(const QString & namespaceUri, const QString & name, const QString & text)
-[2]void writeTextElement(const QString & qualifiedName, const QString & text)
-*/
 
 HB_FUNC_STATIC( QXMLSTREAMWRITER_WRITETEXTELEMENT )
 {

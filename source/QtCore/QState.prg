@@ -61,7 +61,7 @@ RETURN
 #include <QtCore/QAbstractTransition>
 
 /*
-QState ( QState * parent = 0 )
+QState( QState * parent = 0 )
 */
 void QState_new1()
 {
@@ -70,18 +70,13 @@ void QState_new1()
 }
 
 /*
-QState ( ChildMode childMode, QState * parent = 0 )
+QState( QState::ChildMode childMode, QState * parent = 0 )
 */
 void QState_new2()
 {
   QState * obj = new QState( (QState::ChildMode) hb_parni(1), OPQSTATE(2,0) );
   Qt4xHb::returnNewObject( obj, false );
 }
-
-/*
-[1]QState ( QState * parent = 0 )
-[2]QState ( ChildMode childMode, QState * parent = 0 )
-*/
 
 HB_FUNC_STATIC( QSTATE_NEW )
 {
@@ -119,7 +114,7 @@ HB_FUNC_STATIC( QSTATE_DELETE )
 }
 
 /*
-void addTransition ( QAbstractTransition * transition )
+void addTransition( QAbstractTransition * transition )
 */
 void QState_addTransition1()
 {
@@ -134,7 +129,7 @@ void QState_addTransition1()
 }
 
 /*
-QSignalTransition * addTransition ( QObject * sender, const char * signal, QAbstractState * target )
+QSignalTransition * addTransition( QObject * sender, const char * signal, QAbstractState * target )
 */
 void QState_addTransition2()
 {
@@ -148,7 +143,7 @@ void QState_addTransition2()
 }
 
 /*
-QAbstractTransition * addTransition ( QAbstractState * target )
+QAbstractTransition * addTransition( QAbstractState * target )
 */
 void QState_addTransition3()
 {
@@ -160,12 +155,6 @@ void QState_addTransition3()
     Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTTRANSITION" );
   }
 }
-
-/*
-[1]void addTransition ( QAbstractTransition * transition )
-[2]QSignalTransition * addTransition ( QObject * sender, const char * signal, QAbstractState * target )
-[3]QAbstractTransition * addTransition ( QAbstractState * target )
-*/
 
 HB_FUNC_STATIC( QSTATE_ADDTRANSITION )
 {

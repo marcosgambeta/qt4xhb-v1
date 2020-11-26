@@ -90,7 +90,7 @@ RETURN
 #include "qt4xhb_signals.h"
 
 /*
-QProcess ( QObject * parent = 0 )
+QProcess( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QPROCESS_NEW )
 {
@@ -297,7 +297,6 @@ HB_FUNC_STATIC( QPROCESS_NATIVEARGUMENTS )
   }
 #endif
 }
-
 /*
 QProcess::ProcessChannelMode processChannelMode() const
 */
@@ -474,7 +473,6 @@ HB_FUNC_STATIC( QPROCESS_SETNATIVEARGUMENTS )
   hb_itemReturn( hb_stackSelfItem() );
 #endif
 }
-
 /*
 void setProcessChannelMode( QProcess::ProcessChannelMode mode )
 */
@@ -684,7 +682,7 @@ HB_FUNC_STATIC( QPROCESS_SETWORKINGDIRECTORY )
 }
 
 /*
-void start ( const QString & program, const QStringList & arguments, OpenMode mode = ReadWrite )
+void start( const QString & program, const QStringList & arguments, QIODevice::OpenMode mode = QIODevice::ReadWrite )
 */
 void QProcess_start1()
 {
@@ -699,7 +697,7 @@ void QProcess_start1()
 }
 
 /*
-void start ( const QString & program, OpenMode mode = ReadWrite )
+void start( const QString & program, QIODevice::OpenMode mode = QIODevice::ReadWrite )
 */
 void QProcess_start2()
 {
@@ -712,11 +710,6 @@ void QProcess_start2()
 
   hb_itemReturn( hb_stackSelfItem() );
 }
-
-/*
-[1]void start ( const QString & program, const QStringList & arguments, OpenMode mode = ReadWrite )
-[2]void start ( const QString & program, OpenMode mode = ReadWrite )
-*/
 
 HB_FUNC_STATIC( QPROCESS_START )
 {
@@ -1077,7 +1070,7 @@ HB_FUNC_STATIC( QPROCESS_TERMINATE )
 }
 
 /*
-static int execute ( const QString & program, const QStringList & arguments )
+static int execute( const QString & program, const QStringList & arguments )
 */
 void QProcess_execute1()
 {
@@ -1086,18 +1079,13 @@ void QProcess_execute1()
 }
 
 /*
-static int execute ( const QString & program )
+static int execute( const QString & program )
 */
 void QProcess_execute2()
 {
 
   RINT( QProcess::execute( PQSTRING(1) ) );
 }
-
-/*
-[1]int execute ( const QString & program, const QStringList & arguments )
-[2]int execute ( const QString & program )
-*/
 
 HB_FUNC_STATIC( QPROCESS_EXECUTE )
 {
@@ -1116,7 +1104,7 @@ HB_FUNC_STATIC( QPROCESS_EXECUTE )
 }
 
 /*
-static bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0 )
+static bool startDetached( const QString & program, const QStringList & arguments, const QString & workingDirectory, NULL )
 */
 void QProcess_startDetached1()
 {
@@ -1125,7 +1113,7 @@ void QProcess_startDetached1()
 }
 
 /*
-static bool startDetached ( const QString & program, const QStringList & arguments )
+static bool startDetached( const QString & program, const QStringList & arguments )
 */
 void QProcess_startDetached2()
 {
@@ -1134,19 +1122,13 @@ void QProcess_startDetached2()
 }
 
 /*
-static bool startDetached ( const QString & program )
+static bool startDetached( const QString & program )
 */
 void QProcess_startDetached3()
 {
 
   RBOOL( QProcess::startDetached( PQSTRING(1) ) );
 }
-
-/*
-[1]bool startDetached ( const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid = 0 )
-[2]bool startDetached ( const QString & program, const QStringList & arguments )
-[3]bool startDetached ( const QString & program )
-*/
 
 HB_FUNC_STATIC( QPROCESS_STARTDETACHED )
 {

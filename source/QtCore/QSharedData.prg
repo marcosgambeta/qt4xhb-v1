@@ -48,7 +48,7 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QSharedData ()
+QSharedData()
 */
 void QSharedData_new1()
 {
@@ -57,18 +57,13 @@ void QSharedData_new1()
 }
 
 /*
-QSharedData ( const QSharedData & other )
+QSharedData( const QSharedData & other )
 */
 void QSharedData_new2()
 {
   QSharedData * obj = new QSharedData( *PQSHAREDDATA(1) );
   Qt4xHb::returnNewObject( obj, true );
 }
-
-/*
-[1]QSharedData ()
-[2]QSharedData ( const QSharedData & other )
-*/
 
 HB_FUNC_STATIC( QSHAREDDATA_NEW )
 {
