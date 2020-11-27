@@ -23,13 +23,13 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
-   oWindow:resize(640,480)
+   oWindow:setWindowTitle( "Teste" )
+   oWindow:resize( 640, 480 )
    oWindow:show()
 
    oFontComboBox := QFontComboBox():new(oWindow)
-   oFontComboBox:move(20,20)
-   oFontComboBox:setTooltip("Eu sou um FontComboBox")
+   oFontComboBox:move( 20, 20 )
+   oFontComboBox:setTooltip( "Eu sou um FontComboBox" )
    oFontComboBox:show()
 
    oApp:exec()

@@ -23,14 +23,14 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
-   oWindow:resize(640,480)
+   oWindow:setWindowTitle( "Teste" )
+   oWindow:resize( 640, 480 )
    oWindow:show()
 
-   oSlider := QSlider():new(oWindow)
-   oSlider:move(20,20)
-   oSlider:resize(20,400)
-   oSlider:setTooltip("Eu sou um Slider")
+   oSlider := QSlider():new( oWindow )
+   oSlider:move( 20, 20 )
+   oSlider:resize( 20, 400 )
+   oSlider:setTooltip( "Eu sou um Slider" )
    oSlider:onSliderMoved( {|oSender,nValue|test(oSender,nValue)} )
    oSlider:show()
 
@@ -42,10 +42,10 @@ PROCEDURE Main()
 
 RETURN
 
-STATIC FUNCTION test(oSender,nValue)
+STATIC FUNCTION test( oSender, nValue )
 
-   qout("slider moved")
-   qout(oSender)
-   qout(nValue)
+   qout( "slider moved" )
+   qout( oSender )
+   qout( nValue )
 
 RETURN NIL

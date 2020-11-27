@@ -23,13 +23,13 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:resize(640,480)
+   oWindow:resize( 640, 480 )
    oWindow:show()
 
-   oButton := QPushButton():new("Mostrar janela de diálogo",oWindow)
-   oButton:move(20,20)
+   oButton := QPushButton():new( "Mostrar janela de diálogo", oWindow )
+   oButton:move( 20, 20 )
    oButton:show()
-   oButton:onClicked({||ShowDialog()})
+   oButton:onClicked( {||ShowDialog()} )
 
    oApp:exec()
 

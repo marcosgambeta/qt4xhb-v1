@@ -24,21 +24,21 @@ PROCEDURE Main()
    oApp := QApplication():new()
 
    oWindow := QWidget():new()
-   oWindow:setWindowTitle("Teste")
-   oWindow:resize(640,480)
+   oWindow:setWindowTitle( "Teste" )
+   oWindow:resize( 640, 480 )
    oWindow:show()
 
-   oListView := QListView():new(oWindow)
-   oListView:move(20,20)
-   oListView:setTooltip("Eu sou um ListView")
+   oListView := QListView():new( oWindow )
+   oListView:move( 20, 20 )
+   oListView:setTooltip( "Eu sou um ListView" )
    oListView:show()
 
-   oSLM := QStringListModel():new({"um","dois","três","quatro","cinco","seis"})
+   oSLM := QStringListModel():new( { "um", "dois", "três", "quatro", "cinco", "seis" } )
 
-   oListView:setModel(oSLM)
+   oListView:setModel( oSLM )
 
    oApp:exec()
-   
+
    oSLM:delete()
 
    oWindow:delete()
