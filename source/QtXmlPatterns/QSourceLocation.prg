@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -69,7 +69,7 @@ QSourceLocation( const QSourceLocation & other )
 */
 void QSourceLocation_new2()
 {
-  QSourceLocation * obj = new QSourceLocation( *PQSOURCELOCATION(1) );
+  QSourceLocation * obj = new QSourceLocation( *PQSOURCELOCATION( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -78,21 +78,21 @@ QSourceLocation( const QUrl & u, int l = -1, int c = -1 )
 */
 void QSourceLocation_new3()
 {
-  QSourceLocation * obj = new QSourceLocation( *PQURL(1), OPINT(2,-1), OPINT(3,-1) );
+  QSourceLocation * obj = new QSourceLocation( *PQURL( 1 ), OPINT( 2, -1 ), OPINT( 3, -1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QSOURCELOCATION_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QSourceLocation_new1();
   }
-  else if( ISNUMPAR(1) && ISQSOURCELOCATION(1) )
+  else if( ISNUMPAR( 1 ) && ISQSOURCELOCATION( 1 ) )
   {
     QSourceLocation_new2();
   }
-  else if( ISBETWEEN(1,3) && ISQURL(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+  else if( ISBETWEEN( 1, 3 ) && ISQURL( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
   {
     QSourceLocation_new3();
   }
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QSOURCELOCATION_NEW )
 
 HB_FUNC_STATIC( QSOURCELOCATION_DELETE )
 {
-  QSourceLocation * obj = (QSourceLocation *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSourceLocation * obj = ( QSourceLocation * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -124,12 +124,12 @@ qint64 column() const
 */
 HB_FUNC_STATIC( QSOURCELOCATION_COLUMN )
 {
-  QSourceLocation * obj = (QSourceLocation *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSourceLocation * obj = ( QSourceLocation * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQINT64( obj->column() );
@@ -148,12 +148,12 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QSOURCELOCATION_ISNULL )
 {
-  QSourceLocation * obj = (QSourceLocation *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSourceLocation * obj = ( QSourceLocation * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isNull() );
@@ -172,12 +172,12 @@ qint64 line() const
 */
 HB_FUNC_STATIC( QSOURCELOCATION_LINE )
 {
-  QSourceLocation * obj = (QSourceLocation *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSourceLocation * obj = ( QSourceLocation * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQINT64( obj->line() );
@@ -196,15 +196,15 @@ void setColumn( qint64 newColumn )
 */
 HB_FUNC_STATIC( QSOURCELOCATION_SETCOLUMN )
 {
-  QSourceLocation * obj = (QSourceLocation *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSourceLocation * obj = ( QSourceLocation * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setColumn( PQINT64(1) );
+      obj->setColumn( PQINT64( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,15 +222,15 @@ void setLine( qint64 newLine )
 */
 HB_FUNC_STATIC( QSOURCELOCATION_SETLINE )
 {
-  QSourceLocation * obj = (QSourceLocation *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSourceLocation * obj = ( QSourceLocation * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setLine( PQINT64(1) );
+      obj->setLine( PQINT64( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -248,15 +248,15 @@ void setUri( const QUrl & newUri )
 */
 HB_FUNC_STATIC( QSOURCELOCATION_SETURI )
 {
-  QSourceLocation * obj = (QSourceLocation *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSourceLocation * obj = ( QSourceLocation * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
     {
 #endif
-      obj->setUri( *PQURL(1) );
+      obj->setUri( *PQURL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -274,12 +274,12 @@ QUrl uri() const
 */
 HB_FUNC_STATIC( QSOURCELOCATION_URI )
 {
-  QSourceLocation * obj = (QSourceLocation *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSourceLocation * obj = ( QSourceLocation * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QUrl * ptr = new QUrl( obj->uri() );
@@ -298,18 +298,18 @@ HB_FUNC_STATIC( QSOURCELOCATION_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -336,16 +336,16 @@ HB_FUNC_STATIC( QSOURCELOCATION_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QSOURCELOCATION_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QSOURCELOCATION_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

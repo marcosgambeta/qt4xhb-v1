@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -59,9 +59,9 @@ QXmlSerializer( const QXmlQuery & query, QIODevice * outputDevice )
 */
 HB_FUNC_STATIC( QXMLSERIALIZER_NEW )
 {
-  if( ISNUMPAR(2) && ISQXMLQUERY(1) && ISQIODEVICE(2) )
+  if( ISNUMPAR( 2 ) && ISQXMLQUERY( 1 ) && ISQIODEVICE( 2 ) )
   {
-    QXmlSerializer * obj = new QXmlSerializer( *PQXMLQUERY(1), PQIODEVICE(2) );
+    QXmlSerializer * obj = new QXmlSerializer( *PQXMLQUERY( 1 ), PQIODEVICE( 2 ) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
@@ -75,12 +75,12 @@ const QTextCodec * codec() const
 */
 HB_FUNC_STATIC( QXMLSERIALIZER_CODEC )
 {
-  QXmlSerializer * obj = (QXmlSerializer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSerializer * obj = ( QXmlSerializer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QTextCodec * ptr = obj->codec();
@@ -100,12 +100,12 @@ QIODevice * outputDevice() const
 */
 HB_FUNC_STATIC( QXMLSERIALIZER_OUTPUTDEVICE )
 {
-  QXmlSerializer * obj = (QXmlSerializer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSerializer * obj = ( QXmlSerializer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QIODevice * ptr = obj->outputDevice();
@@ -125,15 +125,15 @@ void setCodec( const QTextCodec * outputCodec )
 */
 HB_FUNC_STATIC( QXMLSERIALIZER_SETCODEC )
 {
-  QXmlSerializer * obj = (QXmlSerializer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSerializer * obj = ( QXmlSerializer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTCODEC(1) )
+    if( ISNUMPAR( 1 ) && ISQTEXTCODEC( 1 ) )
     {
 #endif
-      obj->setCodec( PQTEXTCODEC(1) );
+      obj->setCodec( PQTEXTCODEC( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,15 +151,15 @@ virtual void atomicValue( const QVariant & value )
 */
 HB_FUNC_STATIC( QXMLSERIALIZER_ATOMICVALUE )
 {
-  QXmlSerializer * obj = (QXmlSerializer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSerializer * obj = ( QXmlSerializer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQVARIANT(1) )
+    if( ISNUMPAR( 1 ) && ISQVARIANT( 1 ) )
     {
 #endif
-      obj->atomicValue( *PQVARIANT(1) );
+      obj->atomicValue( *PQVARIANT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,15 +177,15 @@ virtual void attribute( const QXmlName & name, const QStringRef & value )
 */
 HB_FUNC_STATIC( QXMLSERIALIZER_ATTRIBUTE )
 {
-  QXmlSerializer * obj = (QXmlSerializer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSerializer * obj = ( QXmlSerializer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQXMLNAME(1) && ISQSTRINGREF(2) )
+    if( ISNUMPAR( 2 ) && ISQXMLNAME( 1 ) && ISQSTRINGREF( 2 ) )
     {
 #endif
-      obj->attribute( *PQXMLNAME(1), *PQSTRINGREF(2) );
+      obj->attribute( *PQXMLNAME( 1 ), *PQSTRINGREF( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -203,15 +203,15 @@ virtual void characters( const QStringRef & value )
 */
 HB_FUNC_STATIC( QXMLSERIALIZER_CHARACTERS )
 {
-  QXmlSerializer * obj = (QXmlSerializer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSerializer * obj = ( QXmlSerializer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSTRINGREF(1) )
+    if( ISNUMPAR( 1 ) && ISQSTRINGREF( 1 ) )
     {
 #endif
-      obj->characters( *PQSTRINGREF(1) );
+      obj->characters( *PQSTRINGREF( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,15 +229,15 @@ virtual void comment( const QString & value )
 */
 HB_FUNC_STATIC( QXMLSERIALIZER_COMMENT )
 {
-  QXmlSerializer * obj = (QXmlSerializer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSerializer * obj = ( QXmlSerializer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->comment( PQSTRING(1) );
+      obj->comment( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,12 +255,12 @@ virtual void endDocument()
 */
 HB_FUNC_STATIC( QXMLSERIALIZER_ENDDOCUMENT )
 {
-  QXmlSerializer * obj = (QXmlSerializer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSerializer * obj = ( QXmlSerializer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->endDocument();
@@ -281,12 +281,12 @@ virtual void endElement()
 */
 HB_FUNC_STATIC( QXMLSERIALIZER_ENDELEMENT )
 {
-  QXmlSerializer * obj = (QXmlSerializer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSerializer * obj = ( QXmlSerializer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->endElement();
@@ -307,12 +307,12 @@ virtual void endOfSequence()
 */
 HB_FUNC_STATIC( QXMLSERIALIZER_ENDOFSEQUENCE )
 {
-  QXmlSerializer * obj = (QXmlSerializer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSerializer * obj = ( QXmlSerializer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->endOfSequence();
@@ -333,15 +333,15 @@ virtual void namespaceBinding( const QXmlName & nb )
 */
 HB_FUNC_STATIC( QXMLSERIALIZER_NAMESPACEBINDING )
 {
-  QXmlSerializer * obj = (QXmlSerializer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSerializer * obj = ( QXmlSerializer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLNAME(1) )
+    if( ISNUMPAR( 1 ) && ISQXMLNAME( 1 ) )
     {
 #endif
-      obj->namespaceBinding( *PQXMLNAME(1) );
+      obj->namespaceBinding( *PQXMLNAME( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -359,15 +359,15 @@ virtual void processingInstruction( const QXmlName & name, const QString & value
 */
 HB_FUNC_STATIC( QXMLSERIALIZER_PROCESSINGINSTRUCTION )
 {
-  QXmlSerializer * obj = (QXmlSerializer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSerializer * obj = ( QXmlSerializer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQXMLNAME(1) && ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && ISQXMLNAME( 1 ) && ISCHAR( 2 ) )
     {
 #endif
-      obj->processingInstruction( *PQXMLNAME(1), PQSTRING(2) );
+      obj->processingInstruction( *PQXMLNAME( 1 ), PQSTRING( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -385,12 +385,12 @@ virtual void startDocument()
 */
 HB_FUNC_STATIC( QXMLSERIALIZER_STARTDOCUMENT )
 {
-  QXmlSerializer * obj = (QXmlSerializer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSerializer * obj = ( QXmlSerializer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->startDocument();
@@ -411,15 +411,15 @@ virtual void startElement( const QXmlName & name )
 */
 HB_FUNC_STATIC( QXMLSERIALIZER_STARTELEMENT )
 {
-  QXmlSerializer * obj = (QXmlSerializer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSerializer * obj = ( QXmlSerializer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLNAME(1) )
+    if( ISNUMPAR( 1 ) && ISQXMLNAME( 1 ) )
     {
 #endif
-      obj->startElement( *PQXMLNAME(1) );
+      obj->startElement( *PQXMLNAME( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -437,12 +437,12 @@ virtual void startOfSequence()
 */
 HB_FUNC_STATIC( QXMLSERIALIZER_STARTOFSEQUENCE )
 {
-  QXmlSerializer * obj = (QXmlSerializer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSerializer * obj = ( QXmlSerializer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->startOfSequence();

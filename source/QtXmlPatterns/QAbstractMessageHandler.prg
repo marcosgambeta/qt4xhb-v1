@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -42,7 +42,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTMESSAGEHANDLER_DELETE )
 {
-  QAbstractMessageHandler * obj = (QAbstractMessageHandler *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractMessageHandler * obj = ( QAbstractMessageHandler * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -64,15 +64,15 @@ void message( QtMsgType type, const QString & description, const QUrl & identifi
 */
 HB_FUNC_STATIC( QABSTRACTMESSAGEHANDLER_MESSAGE )
 {
-  QAbstractMessageHandler * obj = (QAbstractMessageHandler *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractMessageHandler * obj = ( QAbstractMessageHandler * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,4) && ISNUM(1) && ISCHAR(2) && (ISQURL(3)||ISNIL(3)) && (ISQSOURCELOCATION(4)||ISNIL(4)) )
+    if( ISBETWEEN( 2, 4 ) && ISNUM( 1 ) && ISCHAR( 2 ) && ( ISQURL( 3 ) || ISNIL( 3 ) ) && ( ISQSOURCELOCATION( 4 ) || ISNIL( 4 ) ) )
     {
 #endif
-      obj->message( (QtMsgType) hb_parni(1), PQSTRING(2), ISNIL(3)? QUrl() : *(QUrl *) Qt4xHb::itemGetPtr(3), ISNIL(4)? QSourceLocation() : *(QSourceLocation *) Qt4xHb::itemGetPtr(4) );
+      obj->message( ( QtMsgType ) hb_parni( 1 ), PQSTRING( 2 ), ISNIL( 3 )? QUrl() : *( QUrl * ) Qt4xHb::itemGetPtr( 3 ), ISNIL( 4 )? QSourceLocation() : *( QSourceLocation * ) Qt4xHb::itemGetPtr( 4 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -69,17 +69,17 @@ QXmlName( QXmlNamePool & namePool, const QString & localName, const QString & na
 */
 void QXmlName_new2()
 {
-  QXmlName * obj = new QXmlName( *PQXMLNAMEPOOL(1), PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()) );
+  QXmlName * obj = new QXmlName( *PQXMLNAMEPOOL( 1 ), PQSTRING( 2 ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QXMLNAME_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QXmlName_new1();
   }
-  else if( ISBETWEEN(2,4) && ISQXMLNAMEPOOL(1) && ISCHAR(2) && (ISCHAR(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) )
+  else if( ISBETWEEN( 2, 4 ) && ISQXMLNAMEPOOL( 1 ) && ISCHAR( 2 ) && ( ISCHAR( 3 ) || ISNIL( 3 ) ) && ( ISCHAR( 4 ) || ISNIL( 4 ) ) )
   {
     QXmlName_new2();
   }
@@ -94,12 +94,12 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QXMLNAME_ISNULL )
 {
-  QXmlName * obj = (QXmlName *) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlName * obj = ( QXmlName * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isNull() );
@@ -118,15 +118,15 @@ QString localName( const QXmlNamePool & namePool ) const
 */
 HB_FUNC_STATIC( QXMLNAME_LOCALNAME )
 {
-  QXmlName * obj = (QXmlName *) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlName * obj = ( QXmlName * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLNAMEPOOL(1) )
+    if( ISNUMPAR( 1 ) && ISQXMLNAMEPOOL( 1 ) )
     {
 #endif
-      RQSTRING( obj->localName( *PQXMLNAMEPOOL(1) ) );
+      RQSTRING( obj->localName( *PQXMLNAMEPOOL( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,15 +142,15 @@ QString namespaceUri( const QXmlNamePool & namePool ) const
 */
 HB_FUNC_STATIC( QXMLNAME_NAMESPACEURI )
 {
-  QXmlName * obj = (QXmlName *) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlName * obj = ( QXmlName * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLNAMEPOOL(1) )
+    if( ISNUMPAR( 1 ) && ISQXMLNAMEPOOL( 1 ) )
     {
 #endif
-      RQSTRING( obj->namespaceUri( *PQXMLNAMEPOOL(1) ) );
+      RQSTRING( obj->namespaceUri( *PQXMLNAMEPOOL( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,15 +166,15 @@ QString prefix( const QXmlNamePool & namePool ) const
 */
 HB_FUNC_STATIC( QXMLNAME_PREFIX )
 {
-  QXmlName * obj = (QXmlName *) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlName * obj = ( QXmlName * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLNAMEPOOL(1) )
+    if( ISNUMPAR( 1 ) && ISQXMLNAMEPOOL( 1 ) )
     {
 #endif
-      RQSTRING( obj->prefix( *PQXMLNAMEPOOL(1) ) );
+      RQSTRING( obj->prefix( *PQXMLNAMEPOOL( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,15 +190,15 @@ QString toClarkName( const QXmlNamePool & namePool ) const
 */
 HB_FUNC_STATIC( QXMLNAME_TOCLARKNAME )
 {
-  QXmlName * obj = (QXmlName *) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlName * obj = ( QXmlName * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQXMLNAMEPOOL(1) )
+    if( ISNUMPAR( 1 ) && ISQXMLNAMEPOOL( 1 ) )
     {
 #endif
-      RQSTRING( obj->toClarkName( *PQXMLNAMEPOOL(1) ) );
+      RQSTRING( obj->toClarkName( *PQXMLNAMEPOOL( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,10 +215,10 @@ static QXmlName fromClarkName( const QString & clarkName, const QXmlNamePool & n
 HB_FUNC_STATIC( QXMLNAME_FROMCLARKNAME )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(2) && ISCHAR(1) && ISQXMLNAMEPOOL(2) )
+  if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISQXMLNAMEPOOL( 2 ) )
   {
 #endif
-    QXmlName * ptr = new QXmlName( QXmlName::fromClarkName( PQSTRING(1), *PQXMLNAMEPOOL(2) ) );
+    QXmlName * ptr = new QXmlName( QXmlName::fromClarkName( PQSTRING( 1 ), *PQXMLNAMEPOOL( 2 ) ) );
     Qt4xHb::createReturnClass( ptr, "QXMLNAME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
@@ -235,10 +235,10 @@ static bool isNCName( const QString & candidate )
 HB_FUNC_STATIC( QXMLNAME_ISNCNAME )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
 #endif
-    RBOOL( QXmlName::isNCName( PQSTRING(1) ) );
+    RBOOL( QXmlName::isNCName( PQSTRING( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -252,18 +252,18 @@ HB_FUNC_STATIC( QXMLNAME_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -290,16 +290,16 @@ HB_FUNC_STATIC( QXMLNAME_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QXMLNAME_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QXMLNAME_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
