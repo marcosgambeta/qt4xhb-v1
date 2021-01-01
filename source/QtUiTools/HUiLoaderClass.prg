@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( HUILOADER_SETCREATEACTIONCB )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if( ISNUMPAR( 1 ) )
     {
 #endif
       obj->setCreateActionCB( PBLOCKORSYMBOL(1) );
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( HUILOADER_SETCREATEACTIONGROUPCB )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if( ISNUMPAR( 1 ) )
     {
 #endif
       obj->setCreateActionGroupCB( PBLOCKORSYMBOL(1) );
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( HUILOADER_SETCREATELAYOUTCB )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if( ISNUMPAR( 1 ) )
     {
 #endif
       obj->setCreateLayoutCB( PBLOCKORSYMBOL(1) );
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( HUILOADER_SETCREATEWIDGETCB )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if( ISNUMPAR( 1 ) )
     {
 #endif
       obj->setCreateWidgetCB( PBLOCKORSYMBOL(1) );
