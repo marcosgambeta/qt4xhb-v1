@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -55,7 +55,7 @@ QPluginLoader( QObject * parent = 0 )
 */
 void QPluginLoader_new1()
 {
-  QPluginLoader * obj = new QPluginLoader( OPQOBJECT(1,0) );
+  QPluginLoader * obj = new QPluginLoader( OPQOBJECT( 1, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -64,17 +64,17 @@ QPluginLoader( const QString & fileName, QObject * parent = 0 )
 */
 void QPluginLoader_new2()
 {
-  QPluginLoader * obj = new QPluginLoader( PQSTRING(1), OPQOBJECT(2,0) );
+  QPluginLoader * obj = new QPluginLoader( PQSTRING( 1 ), OPQOBJECT( 2, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QPLUGINLOADER_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
     QPluginLoader_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISQOBJECT( 2 ) || ISNIL( 2 ) ) )
   {
     QPluginLoader_new2();
   }
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QPLUGINLOADER_NEW )
 
 HB_FUNC_STATIC( QPLUGINLOADER_DELETE )
 {
-  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPluginLoader * obj = ( QPluginLoader * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,12 +108,12 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QPLUGINLOADER_ERRORSTRING )
 {
-  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPluginLoader * obj = ( QPluginLoader * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->errorString() );
@@ -132,12 +132,12 @@ QString fileName() const
 */
 HB_FUNC_STATIC( QPLUGINLOADER_FILENAME )
 {
-  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPluginLoader * obj = ( QPluginLoader * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->fileName() );
@@ -156,12 +156,12 @@ QObject * instance()
 */
 HB_FUNC_STATIC( QPLUGINLOADER_INSTANCE )
 {
-  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPluginLoader * obj = ( QPluginLoader * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QObject * ptr = obj->instance();
@@ -181,12 +181,12 @@ bool isLoaded() const
 */
 HB_FUNC_STATIC( QPLUGINLOADER_ISLOADED )
 {
-  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPluginLoader * obj = ( QPluginLoader * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isLoaded() );
@@ -205,12 +205,12 @@ bool load()
 */
 HB_FUNC_STATIC( QPLUGINLOADER_LOAD )
 {
-  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPluginLoader * obj = ( QPluginLoader * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->load() );
@@ -229,12 +229,12 @@ QLibrary::LoadHints loadHints() const
 */
 HB_FUNC_STATIC( QPLUGINLOADER_LOADHINTS )
 {
-  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPluginLoader * obj = ( QPluginLoader * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->loadHints() );
@@ -253,15 +253,15 @@ void setFileName( const QString & fileName )
 */
 HB_FUNC_STATIC( QPLUGINLOADER_SETFILENAME )
 {
-  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPluginLoader * obj = ( QPluginLoader * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setFileName( PQSTRING(1) );
+      obj->setFileName( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,15 +279,15 @@ void setLoadHints( QLibrary::LoadHints loadHints )
 */
 HB_FUNC_STATIC( QPLUGINLOADER_SETLOADHINTS )
 {
-  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPluginLoader * obj = ( QPluginLoader * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setLoadHints( (QLibrary::LoadHints) hb_parni(1) );
+      obj->setLoadHints( ( QLibrary::LoadHints ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -305,12 +305,12 @@ bool unload()
 */
 HB_FUNC_STATIC( QPLUGINLOADER_UNLOAD )
 {
-  QPluginLoader * obj = (QPluginLoader *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPluginLoader * obj = ( QPluginLoader * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->unload() );

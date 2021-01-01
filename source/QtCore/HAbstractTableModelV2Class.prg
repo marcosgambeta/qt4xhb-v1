@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -52,7 +52,7 @@ HAbstractTableModelV2( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     HAbstractTableModelV2 * obj = new HAbstractTableModelV2( OPQOBJECT(1,0) );
     Qt4xHb::returnNewObject( obj, false );
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETROWCOUNTCB )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if( ISNUMPAR( 1 ) )
     {
 #endif
       obj->setRowCountCB( PBLOCKORSYMBOL(1) );
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETCOLUMNCOUNTCB )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if( ISNUMPAR( 1 ) )
     {
 #endif
       obj->setColumnCountCB( PBLOCKORSYMBOL(1) );
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETDATACB )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if( ISNUMPAR( 1 ) )
     {
 #endif
       obj->setDataCB( PBLOCKORSYMBOL(1) );
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETHEADERDATACB )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if( ISNUMPAR( 1 ) )
     {
 #endif
       obj->setHeaderDataCB( PBLOCKORSYMBOL(1) );
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETFLAGSCB )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if( ISNUMPAR( 1 ) )
     {
 #endif
       obj->setFlagsCB( PBLOCKORSYMBOL(1) );
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETSETDATACB )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if( ISNUMPAR( 1 ) )
     {
 #endif
       obj->setSetDataCB( PBLOCKORSYMBOL(1) );
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_RELOADDATA )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->reloadData();

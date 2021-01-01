@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -59,7 +59,7 @@ QBuffer( QObject * parent = 0 )
 */
 void QBuffer_new1()
 {
-  QBuffer * obj = new QBuffer( OPQOBJECT(1,0) );
+  QBuffer * obj = new QBuffer( OPQOBJECT( 1, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -68,17 +68,17 @@ QBuffer( QByteArray * byteArray, QObject * parent = 0 )
 */
 void QBuffer_new2()
 {
-  QBuffer * obj = new QBuffer( PQBYTEARRAY(1), OPQOBJECT(2,0) );
+  QBuffer * obj = new QBuffer( PQBYTEARRAY( 1 ), OPQOBJECT( 2, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QBUFFER_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
     QBuffer_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISQBYTEARRAY( 1 ) && ( ISQOBJECT( 2 ) || ISNIL( 2 ) ) )
   {
     QBuffer_new2();
   }
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QBUFFER_NEW )
 
 HB_FUNC_STATIC( QBUFFER_DELETE )
 {
-  QBuffer * obj = (QBuffer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBuffer * obj = ( QBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -112,12 +112,12 @@ QByteArray & buffer()
 */
 HB_FUNC_STATIC( QBUFFER_BUFFER1 )
 {
-  QBuffer * obj = (QBuffer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBuffer * obj = ( QBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QByteArray * ptr = &obj->buffer();
@@ -137,12 +137,12 @@ const QByteArray & buffer() const
 */
 HB_FUNC_STATIC( QBUFFER_BUFFER2 )
 {
-  QBuffer * obj = (QBuffer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBuffer * obj = ( QBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QByteArray * ptr = &obj->buffer();
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QBUFFER_BUFFER2 )
 
 HB_FUNC_STATIC( QBUFFER_BUFFER )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     HB_FUNC_EXEC( QBUFFER_BUFFER1 );
   }
@@ -174,12 +174,12 @@ const QByteArray & data() const
 */
 HB_FUNC_STATIC( QBUFFER_DATA )
 {
-  QBuffer * obj = (QBuffer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBuffer * obj = ( QBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QByteArray * ptr = &obj->data();
@@ -199,15 +199,15 @@ void setBuffer( QByteArray * byteArray )
 */
 HB_FUNC_STATIC( QBUFFER_SETBUFFER )
 {
-  QBuffer * obj = (QBuffer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBuffer * obj = ( QBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
     {
 #endif
-      obj->setBuffer( PQBYTEARRAY(1) );
+      obj->setBuffer( PQBYTEARRAY( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,11 +225,11 @@ void setData( const QByteArray & data )
 */
 void QBuffer_setData1()
 {
-  QBuffer * obj = (QBuffer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBuffer * obj = ( QBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setData( *PQBYTEARRAY(1) );
+    obj->setData( *PQBYTEARRAY( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -240,11 +240,11 @@ void setData( const char * data, int size )
 */
 void QBuffer_setData2()
 {
-  QBuffer * obj = (QBuffer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBuffer * obj = ( QBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setData( PCONSTCHAR(1), PINT(2) );
+    obj->setData( PCONSTCHAR( 1 ), PINT( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -252,11 +252,11 @@ void QBuffer_setData2()
 
 HB_FUNC_STATIC( QBUFFER_SETDATA )
 {
-  if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+  if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
     QBuffer_setData1();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
   {
     QBuffer_setData2();
   }
@@ -271,12 +271,12 @@ virtual bool atEnd() const
 */
 HB_FUNC_STATIC( QBUFFER_ATEND )
 {
-  QBuffer * obj = (QBuffer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBuffer * obj = ( QBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->atEnd() );
@@ -295,12 +295,12 @@ virtual bool canReadLine() const
 */
 HB_FUNC_STATIC( QBUFFER_CANREADLINE )
 {
-  QBuffer * obj = (QBuffer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBuffer * obj = ( QBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->canReadLine() );
@@ -319,12 +319,12 @@ virtual void close()
 */
 HB_FUNC_STATIC( QBUFFER_CLOSE )
 {
-  QBuffer * obj = (QBuffer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBuffer * obj = ( QBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->close();
@@ -345,15 +345,15 @@ virtual bool open( QBuffer::OpenMode flags )
 */
 HB_FUNC_STATIC( QBUFFER_OPEN )
 {
-  QBuffer * obj = (QBuffer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBuffer * obj = ( QBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->open( (QBuffer::OpenMode) hb_parni(1) ) );
+      RBOOL( obj->open( ( QBuffer::OpenMode ) hb_parni( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -369,12 +369,12 @@ virtual qint64 pos() const
 */
 HB_FUNC_STATIC( QBUFFER_POS )
 {
-  QBuffer * obj = (QBuffer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBuffer * obj = ( QBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQINT64( obj->pos() );
@@ -393,15 +393,15 @@ virtual bool seek( qint64 pos )
 */
 HB_FUNC_STATIC( QBUFFER_SEEK )
 {
-  QBuffer * obj = (QBuffer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBuffer * obj = ( QBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->seek( PQINT64(1) ) );
+      RBOOL( obj->seek( PQINT64( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -417,12 +417,12 @@ virtual qint64 size() const
 */
 HB_FUNC_STATIC( QBUFFER_SIZE )
 {
-  QBuffer * obj = (QBuffer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBuffer * obj = ( QBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQINT64( obj->size() );

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -56,9 +56,9 @@ QMutexLocker( QMutex * mutex )
 */
 HB_FUNC_STATIC( QMUTEXLOCKER_NEW )
 {
-  if( ISNUMPAR(1) && ISQMUTEX(1) )
+  if( ISNUMPAR( 1 ) && ISQMUTEX( 1 ) )
   {
-    QMutexLocker * obj = new QMutexLocker( PQMUTEX(1) );
+    QMutexLocker * obj = new QMutexLocker( PQMUTEX( 1 ) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QMUTEXLOCKER_NEW )
 
 HB_FUNC_STATIC( QMUTEXLOCKER_DELETE )
 {
-  QMutexLocker * obj = (QMutexLocker *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMutexLocker * obj = ( QMutexLocker * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -89,12 +89,12 @@ QMutex * mutex() const
 */
 HB_FUNC_STATIC( QMUTEXLOCKER_MUTEX )
 {
-  QMutexLocker * obj = (QMutexLocker *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMutexLocker * obj = ( QMutexLocker * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QMutex * ptr = obj->mutex();
@@ -114,12 +114,12 @@ void relock()
 */
 HB_FUNC_STATIC( QMUTEXLOCKER_RELOCK )
 {
-  QMutexLocker * obj = (QMutexLocker *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMutexLocker * obj = ( QMutexLocker * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->relock();
@@ -140,12 +140,12 @@ void unlock()
 */
 HB_FUNC_STATIC( QMUTEXLOCKER_UNLOCK )
 {
-  QMutexLocker * obj = (QMutexLocker *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMutexLocker * obj = ( QMutexLocker * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->unlock();
@@ -165,18 +165,18 @@ HB_FUNC_STATIC( QMUTEXLOCKER_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -203,16 +203,16 @@ HB_FUNC_STATIC( QMUTEXLOCKER_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QMUTEXLOCKER_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QMUTEXLOCKER_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

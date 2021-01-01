@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -30,7 +30,7 @@ class QSignalMapperSlots: public QObject
 {
   Q_OBJECT
   public:
-  QSignalMapperSlots( QObject *parent = 0 );
+  QSignalMapperSlots( QObject * parent = 0 );
   ~QSignalMapperSlots();
   public slots:
   void mapped( int i );

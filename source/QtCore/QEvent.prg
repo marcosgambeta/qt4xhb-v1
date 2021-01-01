@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -59,9 +59,9 @@ QEvent( QEvent::Type type )
 */
 HB_FUNC_STATIC( QEVENT_NEW )
 {
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
   {
-    QEvent * obj = new QEvent( (QEvent::Type) hb_parni(1) );
+    QEvent * obj = new QEvent( ( QEvent::Type ) hb_parni( 1 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QEVENT_NEW )
 
 HB_FUNC_STATIC( QEVENT_DELETE )
 {
-  QEvent * obj = (QEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QEvent * obj = ( QEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -92,12 +92,12 @@ void accept()
 */
 HB_FUNC_STATIC( QEVENT_ACCEPT )
 {
-  QEvent * obj = (QEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QEvent * obj = ( QEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->accept();
@@ -118,12 +118,12 @@ void ignore()
 */
 HB_FUNC_STATIC( QEVENT_IGNORE )
 {
-  QEvent * obj = (QEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QEvent * obj = ( QEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->ignore();
@@ -144,12 +144,12 @@ bool isAccepted() const
 */
 HB_FUNC_STATIC( QEVENT_ISACCEPTED )
 {
-  QEvent * obj = (QEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QEvent * obj = ( QEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isAccepted() );
@@ -168,15 +168,15 @@ void setAccepted( bool accepted )
 */
 HB_FUNC_STATIC( QEVENT_SETACCEPTED )
 {
-  QEvent * obj = (QEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QEvent * obj = ( QEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setAccepted( PBOOL(1) );
+      obj->setAccepted( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,12 +194,12 @@ bool spontaneous() const
 */
 HB_FUNC_STATIC( QEVENT_SPONTANEOUS )
 {
-  QEvent * obj = (QEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QEvent * obj = ( QEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->spontaneous() );
@@ -218,12 +218,12 @@ QEvent::Type type() const
 */
 HB_FUNC_STATIC( QEVENT_TYPE )
 {
-  QEvent * obj = (QEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QEvent * obj = ( QEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->type() );
@@ -243,10 +243,10 @@ static int registerEventType( int hint = -1 )
 HB_FUNC_STATIC( QEVENT_REGISTEREVENTTYPE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
   {
 #endif
-    RINT( QEvent::registerEventType( OPINT(1,-1) ) );
+    RINT( QEvent::registerEventType( OPINT( 1, -1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -260,18 +260,18 @@ HB_FUNC_STATIC( QEVENT_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -298,16 +298,16 @@ HB_FUNC_STATIC( QEVENT_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QEVENT_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QEVENT_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

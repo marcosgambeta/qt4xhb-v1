@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -48,9 +48,9 @@ QChildEvent( QEvent::Type type, QObject * child )
 */
 HB_FUNC_STATIC( QCHILDEVENT_NEW )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISQOBJECT(2) )
+  if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQOBJECT( 2 ) )
   {
-    QChildEvent * obj = new QChildEvent( (QEvent::Type) hb_parni(1), PQOBJECT(2) );
+    QChildEvent * obj = new QChildEvent( ( QEvent::Type ) hb_parni( 1 ), PQOBJECT( 2 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QCHILDEVENT_NEW )
 
 HB_FUNC_STATIC( QCHILDEVENT_DELETE )
 {
-  QChildEvent * obj = (QChildEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QChildEvent * obj = ( QChildEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -81,12 +81,12 @@ bool added() const
 */
 HB_FUNC_STATIC( QCHILDEVENT_ADDED )
 {
-  QChildEvent * obj = (QChildEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QChildEvent * obj = ( QChildEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->added() );
@@ -105,12 +105,12 @@ QObject * child() const
 */
 HB_FUNC_STATIC( QCHILDEVENT_CHILD )
 {
-  QChildEvent * obj = (QChildEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QChildEvent * obj = ( QChildEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QObject * ptr = obj->child();
@@ -130,12 +130,12 @@ bool polished() const
 */
 HB_FUNC_STATIC( QCHILDEVENT_POLISHED )
 {
-  QChildEvent * obj = (QChildEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QChildEvent * obj = ( QChildEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->polished() );
@@ -154,12 +154,12 @@ bool removed() const
 */
 HB_FUNC_STATIC( QCHILDEVENT_REMOVED )
 {
-  QChildEvent * obj = (QChildEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QChildEvent * obj = ( QChildEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->removed() );

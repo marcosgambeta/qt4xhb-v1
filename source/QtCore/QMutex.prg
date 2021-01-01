@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -55,9 +55,9 @@ QMutex( QMutex::RecursionMode mode = QMutex::NonRecursive )
 */
 HB_FUNC_STATIC( QMUTEX_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+  if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
   {
-    QMutex * obj = new QMutex( ISNIL(1)? (QMutex::RecursionMode) QMutex::NonRecursive : (QMutex::RecursionMode) hb_parni(1) );
+    QMutex * obj = new QMutex( ISNIL( 1 )? ( QMutex::RecursionMode ) QMutex::NonRecursive : ( QMutex::RecursionMode ) hb_parni( 1 ) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QMUTEX_NEW )
 
 HB_FUNC_STATIC( QMUTEX_DELETE )
 {
-  QMutex * obj = (QMutex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMutex * obj = ( QMutex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -88,12 +88,12 @@ void lock()
 */
 HB_FUNC_STATIC( QMUTEX_LOCK )
 {
-  QMutex * obj = (QMutex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMutex * obj = ( QMutex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->lock();
@@ -114,7 +114,7 @@ bool tryLock()
 */
 void QMutex_tryLock1()
 {
-  QMutex * obj = (QMutex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMutex * obj = ( QMutex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -127,21 +127,21 @@ bool tryLock( int timeout )
 */
 void QMutex_tryLock2()
 {
-  QMutex * obj = (QMutex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMutex * obj = ( QMutex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->tryLock( PINT(1) ) );
+    RBOOL( obj->tryLock( PINT( 1 ) ) );
   }
 }
 
 HB_FUNC_STATIC( QMUTEX_TRYLOCK )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QMutex_tryLock1();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
   {
     QMutex_tryLock2();
   }
@@ -156,12 +156,12 @@ void unlock()
 */
 HB_FUNC_STATIC( QMUTEX_UNLOCK )
 {
-  QMutex * obj = (QMutex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMutex * obj = ( QMutex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->unlock();
@@ -181,18 +181,18 @@ HB_FUNC_STATIC( QMUTEX_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -219,16 +219,16 @@ HB_FUNC_STATIC( QMUTEX_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QMUTEX_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QMUTEX_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

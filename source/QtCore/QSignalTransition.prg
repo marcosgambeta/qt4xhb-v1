@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -51,7 +51,7 @@ QSignalTransition( QState * sourceState = 0 )
 */
 void QSignalTransition_new1()
 {
-  QSignalTransition * obj = new QSignalTransition( OPQSTATE(1,0) );
+  QSignalTransition * obj = new QSignalTransition( OPQSTATE( 1, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -60,17 +60,17 @@ QSignalTransition( QObject * sender, const char * signal, QState * sourceState =
 */
 void QSignalTransition_new2()
 {
-  QSignalTransition * obj = new QSignalTransition( PQOBJECT(1), PCONSTCHAR(2), OPQSTATE(3,0) );
+  QSignalTransition * obj = new QSignalTransition( PQOBJECT( 1 ), PCONSTCHAR( 2 ), OPQSTATE( 3, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QSIGNALTRANSITION_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQSTATE(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQSTATE( 1 ) || ISNIL( 1 ) ) )
   {
     QSignalTransition_new1();
   }
-  else if( ISBETWEEN(2,3) && ISQOBJECT(1) && ISCHAR(2) && (ISQSTATE(3)||ISNIL(3)) )
+  else if( ISBETWEEN( 2, 3 ) && ISQOBJECT( 1 ) && ISCHAR( 2 ) && ( ISQSTATE( 3 ) || ISNIL( 3 ) ) )
   {
     QSignalTransition_new2();
   }
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_NEW )
 
 HB_FUNC_STATIC( QSIGNALTRANSITION_DELETE )
 {
-  QSignalTransition * obj = (QSignalTransition *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSignalTransition * obj = ( QSignalTransition * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -104,12 +104,12 @@ QObject * senderObject() const
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SENDEROBJECT )
 {
-  QSignalTransition * obj = (QSignalTransition *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSignalTransition * obj = ( QSignalTransition * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QObject * ptr = obj->senderObject();
@@ -129,15 +129,15 @@ void setSenderObject( QObject * sender )
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SETSENDEROBJECT )
 {
-  QSignalTransition * obj = (QSignalTransition *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSignalTransition * obj = ( QSignalTransition * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
     {
 #endif
-      obj->setSenderObject( PQOBJECT(1) );
+      obj->setSenderObject( PQOBJECT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,12 +155,12 @@ QByteArray signal() const
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SIGNAL )
 {
-  QSignalTransition * obj = (QSignalTransition *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSignalTransition * obj = ( QSignalTransition * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->signal() );
@@ -180,15 +180,15 @@ void setSignal( const QByteArray & signal )
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SETSIGNAL )
 {
-  QSignalTransition * obj = (QSignalTransition *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSignalTransition * obj = ( QSignalTransition * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
     {
 #endif
-      obj->setSignal( *PQBYTEARRAY(1) );
+      obj->setSignal( *PQBYTEARRAY( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

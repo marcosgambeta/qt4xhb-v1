@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -50,9 +50,9 @@ QTranslator( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QTRANSLATOR_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
-    QTranslator * obj = new QTranslator( OPQOBJECT(1,0) );
+    QTranslator * obj = new QTranslator( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QTRANSLATOR_NEW )
 
 HB_FUNC_STATIC( QTRANSLATOR_DELETE )
 {
-  QTranslator * obj = (QTranslator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTranslator * obj = ( QTranslator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -85,12 +85,12 @@ virtual bool isEmpty() const
 */
 HB_FUNC_STATIC( QTRANSLATOR_ISEMPTY )
 {
-  QTranslator * obj = (QTranslator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTranslator * obj = ( QTranslator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isEmpty() );
@@ -109,11 +109,11 @@ bool load( const QString & filename, const QString & directory = QString(), cons
 */
 void QTranslator_load1()
 {
-  QTranslator * obj = (QTranslator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTranslator * obj = ( QTranslator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->load( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()) ) );
+    RBOOL( obj->load( PQSTRING( 1 ), OPQSTRING( 2, QString() ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ) ) );
   }
 }
 
@@ -122,21 +122,21 @@ bool load( const QLocale & locale, const QString & filename, const QString & pre
 */
 void QTranslator_load2()
 {
-  QTranslator * obj = (QTranslator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTranslator * obj = ( QTranslator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->load( *PQLOCALE(1), PQSTRING(2), OPQSTRING(3,QString()), OPQSTRING(4,QString()), OPQSTRING(5,QString()) ) );
+    RBOOL( obj->load( *PQLOCALE( 1 ), PQSTRING( 2 ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ), OPQSTRING( 5, QString() ) ) );
   }
 }
 
 HB_FUNC_STATIC( QTRANSLATOR_LOAD )
 {
-  if( ISBETWEEN(1,4) && ISCHAR(1) && (ISCHAR(2)||ISNIL(2)) && (ISCHAR(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) )
+  if( ISBETWEEN( 1, 4 ) && ISCHAR( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) && ( ISCHAR( 3 ) || ISNIL( 3 ) ) && ( ISCHAR( 4 ) || ISNIL( 4 ) ) )
   {
     QTranslator_load1();
   }
-  else if( ISBETWEEN(2,5) && ISQLOCALE(1) && ISCHAR(2) && (ISCHAR(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) && (ISCHAR(5)||ISNIL(5)) )
+  else if( ISBETWEEN( 2, 5 ) && ISQLOCALE( 1 ) && ISCHAR( 2 ) && ( ISCHAR( 3 ) || ISNIL( 3 ) ) && ( ISCHAR( 4 ) || ISNIL( 4 ) ) && ( ISCHAR( 5 ) || ISNIL( 5 ) ) )
   {
     QTranslator_load2();
   }
@@ -151,15 +151,15 @@ virtual QString translate( const char * context, const char * sourceText, const 
 */
 HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
 {
-  QTranslator * obj = (QTranslator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTranslator * obj = ( QTranslator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,4) && ISCHAR(1) && ISCHAR(2) && ISOPTCHAR(3) && ISOPTNUM(4) )
+    if( ISBETWEEN( 2, 4 ) && ISCHAR( 1 ) && ISCHAR( 2 ) && ISOPTCHAR( 3 ) && ISOPTNUM( 4 ) )
     {
 #endif
-      RQSTRING( obj->translate( PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR(3,0), OPINT(4,-1) ) );
+      RQSTRING( obj->translate( PCONSTCHAR( 1 ), PCONSTCHAR( 2 ), OPCONSTCHAR( 3, 0 ), OPINT( 4, -1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

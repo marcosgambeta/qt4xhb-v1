@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -46,9 +46,9 @@ QParallelAnimationGroup( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
-    QParallelAnimationGroup * obj = new QParallelAnimationGroup( OPQOBJECT(1,0) );
+    QParallelAnimationGroup * obj = new QParallelAnimationGroup( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_NEW )
 
 HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DELETE )
 {
-  QParallelAnimationGroup * obj = (QParallelAnimationGroup *) Qt4xHb::itemGetPtrStackSelfItem();
+  QParallelAnimationGroup * obj = ( QParallelAnimationGroup * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -81,12 +81,12 @@ virtual int duration() const
 */
 HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DURATION )
 {
-  QParallelAnimationGroup * obj = (QParallelAnimationGroup *) Qt4xHb::itemGetPtrStackSelfItem();
+  QParallelAnimationGroup * obj = ( QParallelAnimationGroup * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->duration() );

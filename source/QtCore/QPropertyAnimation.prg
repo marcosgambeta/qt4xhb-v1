@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -51,7 +51,7 @@ QPropertyAnimation( QObject * parent = 0 )
 */
 void QPropertyAnimation_new1()
 {
-  QPropertyAnimation * obj = new QPropertyAnimation( OPQOBJECT(1,0) );
+  QPropertyAnimation * obj = new QPropertyAnimation( OPQOBJECT( 1, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -60,17 +60,17 @@ QPropertyAnimation( QObject * target, const QByteArray & propertyName, QObject *
 */
 void QPropertyAnimation_new2()
 {
-  QPropertyAnimation * obj = new QPropertyAnimation( PQOBJECT(1), *PQBYTEARRAY(2), OPQOBJECT(3,0) );
+  QPropertyAnimation * obj = new QPropertyAnimation( PQOBJECT( 1 ), *PQBYTEARRAY( 2 ), OPQOBJECT( 3, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QPROPERTYANIMATION_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
     QPropertyAnimation_new1();
   }
-  else if( ISBETWEEN(2,3) && ISQOBJECT(1) && ISQBYTEARRAY(2) && (ISQOBJECT(3)||ISNIL(3)) )
+  else if( ISBETWEEN( 2, 3 ) && ISQOBJECT( 1 ) && ISQBYTEARRAY( 2 ) && ( ISQOBJECT( 3 ) || ISNIL( 3 ) ) )
   {
     QPropertyAnimation_new2();
   }
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_NEW )
 
 HB_FUNC_STATIC( QPROPERTYANIMATION_DELETE )
 {
-  QPropertyAnimation * obj = (QPropertyAnimation *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPropertyAnimation * obj = ( QPropertyAnimation * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -104,12 +104,12 @@ QByteArray propertyName() const
 */
 HB_FUNC_STATIC( QPROPERTYANIMATION_PROPERTYNAME )
 {
-  QPropertyAnimation * obj = (QPropertyAnimation *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPropertyAnimation * obj = ( QPropertyAnimation * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->propertyName() );
@@ -129,15 +129,15 @@ void setPropertyName( const QByteArray & propertyName )
 */
 HB_FUNC_STATIC( QPROPERTYANIMATION_SETPROPERTYNAME )
 {
-  QPropertyAnimation * obj = (QPropertyAnimation *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPropertyAnimation * obj = ( QPropertyAnimation * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
     {
 #endif
-      obj->setPropertyName( *PQBYTEARRAY(1) );
+      obj->setPropertyName( *PQBYTEARRAY( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,15 +155,15 @@ void setTargetObject( QObject * target )
 */
 HB_FUNC_STATIC( QPROPERTYANIMATION_SETTARGETOBJECT )
 {
-  QPropertyAnimation * obj = (QPropertyAnimation *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPropertyAnimation * obj = ( QPropertyAnimation * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
     {
 #endif
-      obj->setTargetObject( PQOBJECT(1) );
+      obj->setTargetObject( PQOBJECT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,12 +181,12 @@ QObject * targetObject() const
 */
 HB_FUNC_STATIC( QPROPERTYANIMATION_TARGETOBJECT )
 {
-  QPropertyAnimation * obj = (QPropertyAnimation *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPropertyAnimation * obj = ( QPropertyAnimation * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QObject * ptr = obj->targetObject();

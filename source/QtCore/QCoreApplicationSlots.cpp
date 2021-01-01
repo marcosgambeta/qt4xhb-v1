@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QCoreApplicationSlots.h"
 
-QCoreApplicationSlots::QCoreApplicationSlots( QObject *parent ) : QObject( parent )
+QCoreApplicationSlots::QCoreApplicationSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QCoreApplicationSlots::~QCoreApplicationSlots()
 
 void QCoreApplicationSlots::aboutToQuit()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "aboutToQuit()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QCOREAPPLICATION" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCOREAPPLICATION" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,7 +38,7 @@ void QCoreApplicationSlots::aboutToQuit()
 
 void QCoreApplicationSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCoreApplication * obj = (QCoreApplication *) Qt4xHb::itemGetPtrStackSelfItem();
+  QCoreApplication * obj = ( QCoreApplication * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

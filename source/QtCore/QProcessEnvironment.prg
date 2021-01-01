@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -70,17 +70,17 @@ QProcessEnvironment( const QProcessEnvironment & other )
 */
 void QProcessEnvironment_new2()
 {
-  QProcessEnvironment * obj = new QProcessEnvironment( *PQPROCESSENVIRONMENT(1) );
+  QProcessEnvironment * obj = new QProcessEnvironment( *PQPROCESSENVIRONMENT( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QProcessEnvironment_new1();
   }
-  else if( ISNUMPAR(1) && ISQPROCESSENVIRONMENT(1) )
+  else if( ISNUMPAR( 1 ) && ISQPROCESSENVIRONMENT( 1 ) )
   {
     QProcessEnvironment_new2();
   }
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW )
 
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_DELETE )
 {
-  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = ( QProcessEnvironment * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -112,12 +112,12 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_ISEMPTY )
 {
-  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = ( QProcessEnvironment * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isEmpty() );
@@ -136,12 +136,12 @@ void clear()
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_CLEAR )
 {
-  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = ( QProcessEnvironment * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->clear();
@@ -162,15 +162,15 @@ bool contains( const QString & name ) const
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_CONTAINS )
 {
-  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = ( QProcessEnvironment * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      RBOOL( obj->contains( PQSTRING(1) ) );
+      RBOOL( obj->contains( PQSTRING( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,15 +186,15 @@ void remove( const QString & name )
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_REMOVE )
 {
-  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = ( QProcessEnvironment * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->remove( PQSTRING(1) );
+      obj->remove( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,15 +212,15 @@ QString value( const QString & name, const QString & defaultValue = QString() ) 
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_VALUE )
 {
-  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = ( QProcessEnvironment * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ISOPTCHAR( 2 ) )
     {
 #endif
-      RQSTRING( obj->value( PQSTRING(1), OPQSTRING(2,QString()) ) );
+      RQSTRING( obj->value( PQSTRING( 1 ), OPQSTRING( 2, QString() ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,12 +236,12 @@ QStringList toStringList() const
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_TOSTRINGLIST )
 {
-  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = ( QProcessEnvironment * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->toStringList() );
@@ -260,12 +260,12 @@ QStringList keys() const
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_KEYS )
 {
-  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = ( QProcessEnvironment * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->keys() );
@@ -284,11 +284,11 @@ void insert( const QString & name, const QString & value)
 */
 void QProcessEnvironment_insert1()
 {
-  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = ( QProcessEnvironment * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->insert( PQSTRING(1), PQSTRING(2) );
+    obj->insert( PQSTRING( 1 ), PQSTRING( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -299,11 +299,11 @@ void insert( const QProcessEnvironment & e )
 */
 void QProcessEnvironment_insert2()
 {
-  QProcessEnvironment * obj = (QProcessEnvironment *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = ( QProcessEnvironment * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->insert( *PQPROCESSENVIRONMENT(1) );
+    obj->insert( *PQPROCESSENVIRONMENT( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -311,11 +311,11 @@ void QProcessEnvironment_insert2()
 
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_INSERT )
 {
-  if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+  if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISCHAR( 2 ) )
   {
     QProcessEnvironment_insert1();
   }
-  else if( ISNUMPAR(1) && ISQPROCESSENVIRONMENT(1) )
+  else if( ISNUMPAR( 1 ) && ISQPROCESSENVIRONMENT( 1 ) )
   {
     QProcessEnvironment_insert2();
   }
@@ -331,7 +331,7 @@ static QProcessEnvironment systemEnvironment()
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_SYSTEMENVIRONMENT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QProcessEnvironment * ptr = new QProcessEnvironment( QProcessEnvironment::systemEnvironment() );
@@ -349,18 +349,18 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -387,16 +387,16 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

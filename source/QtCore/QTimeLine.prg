@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -78,9 +78,9 @@ QTimeLine( int duration = 1000, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QTIMELINE_NEW )
 {
-  if( ISBETWEEN(0,2) && ISOPTNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  if( ISBETWEEN( 0, 2 ) && ISOPTNUM( 1 ) && ( ISQOBJECT( 2 ) || ISNIL( 2 ) ) )
   {
-    QTimeLine * obj = new QTimeLine( OPINT(1,1000), OPQOBJECT(2,0) );
+    QTimeLine * obj = new QTimeLine( OPINT( 1, 1000 ), OPQOBJECT( 2, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QTIMELINE_NEW )
 
 HB_FUNC_STATIC( QTIMELINE_DELETE )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -113,12 +113,12 @@ int currentFrame() const
 */
 HB_FUNC_STATIC( QTIMELINE_CURRENTFRAME )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->currentFrame() );
@@ -137,12 +137,12 @@ int currentTime() const
 */
 HB_FUNC_STATIC( QTIMELINE_CURRENTTIME )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->currentTime() );
@@ -161,12 +161,12 @@ qreal currentValue() const
 */
 HB_FUNC_STATIC( QTIMELINE_CURRENTVALUE )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->currentValue() );
@@ -185,12 +185,12 @@ QTimeLine::CurveShape curveShape() const
 */
 HB_FUNC_STATIC( QTIMELINE_CURVESHAPE )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->curveShape() );
@@ -209,12 +209,12 @@ QTimeLine::Direction direction() const
 */
 HB_FUNC_STATIC( QTIMELINE_DIRECTION )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->direction() );
@@ -233,12 +233,12 @@ int duration() const
 */
 HB_FUNC_STATIC( QTIMELINE_DURATION )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->duration() );
@@ -257,12 +257,12 @@ int endFrame() const
 */
 HB_FUNC_STATIC( QTIMELINE_ENDFRAME )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->endFrame() );
@@ -281,15 +281,15 @@ int frameForTime( int msec ) const
 */
 HB_FUNC_STATIC( QTIMELINE_FRAMEFORTIME )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RINT( obj->frameForTime( PINT(1) ) );
+      RINT( obj->frameForTime( PINT( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -305,12 +305,12 @@ int loopCount() const
 */
 HB_FUNC_STATIC( QTIMELINE_LOOPCOUNT )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->loopCount() );
@@ -329,15 +329,15 @@ void setCurveShape( QTimeLine::CurveShape shape )
 */
 HB_FUNC_STATIC( QTIMELINE_SETCURVESHAPE )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setCurveShape( (QTimeLine::CurveShape) hb_parni(1) );
+      obj->setCurveShape( ( QTimeLine::CurveShape ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -355,15 +355,15 @@ void setDirection( QTimeLine::Direction direction )
 */
 HB_FUNC_STATIC( QTIMELINE_SETDIRECTION )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setDirection( (QTimeLine::Direction) hb_parni(1) );
+      obj->setDirection( ( QTimeLine::Direction ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -381,15 +381,15 @@ void setDuration( int duration )
 */
 HB_FUNC_STATIC( QTIMELINE_SETDURATION )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setDuration( PINT(1) );
+      obj->setDuration( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -407,15 +407,15 @@ void setEasingCurve( const QEasingCurve & curve )
 */
 HB_FUNC_STATIC( QTIMELINE_SETEASINGCURVE )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQEASINGCURVE(1) )
+    if( ISNUMPAR( 1 ) && ISQEASINGCURVE( 1 ) )
     {
 #endif
-      obj->setEasingCurve( *PQEASINGCURVE(1) );
+      obj->setEasingCurve( *PQEASINGCURVE( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -433,15 +433,15 @@ void setEndFrame( int frame )
 */
 HB_FUNC_STATIC( QTIMELINE_SETENDFRAME )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setEndFrame( PINT(1) );
+      obj->setEndFrame( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -459,15 +459,15 @@ void setFrameRange( int startFrame, int endFrame )
 */
 HB_FUNC_STATIC( QTIMELINE_SETFRAMERANGE )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      obj->setFrameRange( PINT(1), PINT(2) );
+      obj->setFrameRange( PINT( 1 ), PINT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -485,15 +485,15 @@ void setLoopCount( int count )
 */
 HB_FUNC_STATIC( QTIMELINE_SETLOOPCOUNT )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setLoopCount( PINT(1) );
+      obj->setLoopCount( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -511,15 +511,15 @@ void setStartFrame( int frame )
 */
 HB_FUNC_STATIC( QTIMELINE_SETSTARTFRAME )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setStartFrame( PINT(1) );
+      obj->setStartFrame( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -537,15 +537,15 @@ void setUpdateInterval( int interval )
 */
 HB_FUNC_STATIC( QTIMELINE_SETUPDATEINTERVAL )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setUpdateInterval( PINT(1) );
+      obj->setUpdateInterval( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -563,12 +563,12 @@ int startFrame() const
 */
 HB_FUNC_STATIC( QTIMELINE_STARTFRAME )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->startFrame() );
@@ -587,12 +587,12 @@ QTimeLine::State state() const
 */
 HB_FUNC_STATIC( QTIMELINE_STATE )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->state() );
@@ -611,12 +611,12 @@ int updateInterval() const
 */
 HB_FUNC_STATIC( QTIMELINE_UPDATEINTERVAL )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->updateInterval() );
@@ -635,15 +635,15 @@ virtual qreal valueForTime( int msec ) const
 */
 HB_FUNC_STATIC( QTIMELINE_VALUEFORTIME )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RQREAL( obj->valueForTime( PINT(1) ) );
+      RQREAL( obj->valueForTime( PINT( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -659,12 +659,12 @@ void resume()
 */
 HB_FUNC_STATIC( QTIMELINE_RESUME )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->resume();
@@ -685,15 +685,15 @@ void setCurrentTime( int msec )
 */
 HB_FUNC_STATIC( QTIMELINE_SETCURRENTTIME )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setCurrentTime( PINT(1) );
+      obj->setCurrentTime( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -711,15 +711,15 @@ void setPaused( bool paused )
 */
 HB_FUNC_STATIC( QTIMELINE_SETPAUSED )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setPaused( PBOOL(1) );
+      obj->setPaused( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -737,12 +737,12 @@ void start()
 */
 HB_FUNC_STATIC( QTIMELINE_START )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->start();
@@ -763,12 +763,12 @@ void stop()
 */
 HB_FUNC_STATIC( QTIMELINE_STOP )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->stop();
@@ -789,12 +789,12 @@ void toggleDirection()
 */
 HB_FUNC_STATIC( QTIMELINE_TOGGLEDIRECTION )
 {
-  QTimeLine * obj = (QTimeLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->toggleDirection();

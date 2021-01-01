@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -61,7 +61,7 @@ QTemporaryFile( const QString & templateName )
 */
 void QTemporaryFile_new2()
 {
-  QTemporaryFile * obj = new QTemporaryFile( PQSTRING(1) );
+  QTemporaryFile * obj = new QTemporaryFile( PQSTRING( 1 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -70,7 +70,7 @@ QTemporaryFile( QObject * parent )
 */
 void QTemporaryFile_new3()
 {
-  QTemporaryFile * obj = new QTemporaryFile( PQOBJECT(1) );
+  QTemporaryFile * obj = new QTemporaryFile( PQOBJECT( 1 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -79,25 +79,25 @@ QTemporaryFile( const QString & templateName, QObject * parent )
 */
 void QTemporaryFile_new4()
 {
-  QTemporaryFile * obj = new QTemporaryFile( PQSTRING(1), PQOBJECT(2) );
+  QTemporaryFile * obj = new QTemporaryFile( PQSTRING( 1 ), PQOBJECT( 2 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QTEMPORARYFILE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QTemporaryFile_new1();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
     QTemporaryFile_new2();
   }
-  else if( ISNUMPAR(1) && ISQOBJECT(1) )
+  else if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
   {
     QTemporaryFile_new3();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
+  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISQOBJECT( 2 ) )
   {
     QTemporaryFile_new4();
   }
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW )
 
 HB_FUNC_STATIC( QTEMPORARYFILE_DELETE )
 {
-  QTemporaryFile * obj = (QTemporaryFile *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTemporaryFile * obj = ( QTemporaryFile * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -131,12 +131,12 @@ bool autoRemove() const
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_AUTOREMOVE )
 {
-  QTemporaryFile * obj = (QTemporaryFile *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTemporaryFile * obj = ( QTemporaryFile * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->autoRemove() );
@@ -155,12 +155,12 @@ QString fileTemplate() const
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_FILETEMPLATE )
 {
-  QTemporaryFile * obj = (QTemporaryFile *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTemporaryFile * obj = ( QTemporaryFile * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->fileTemplate() );
@@ -179,12 +179,12 @@ bool open()
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_OPEN )
 {
-  QTemporaryFile * obj = (QTemporaryFile *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTemporaryFile * obj = ( QTemporaryFile * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->open() );
@@ -203,15 +203,15 @@ void setAutoRemove( bool b )
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_SETAUTOREMOVE )
 {
-  QTemporaryFile * obj = (QTemporaryFile *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTemporaryFile * obj = ( QTemporaryFile * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setAutoRemove( PBOOL(1) );
+      obj->setAutoRemove( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,15 +229,15 @@ void setFileTemplate( const QString & name )
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_SETFILETEMPLATE )
 {
-  QTemporaryFile * obj = (QTemporaryFile *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTemporaryFile * obj = ( QTemporaryFile * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setFileTemplate( PQSTRING(1) );
+      obj->setFileTemplate( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,12 +255,12 @@ virtual QString fileName() const
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_FILENAME )
 {
-  QTemporaryFile * obj = (QTemporaryFile *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTemporaryFile * obj = ( QTemporaryFile * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->fileName() );
@@ -280,7 +280,7 @@ static QTemporaryFile * createLocalFile( QFile & file )
 void QTemporaryFile_createLocalFile1()
 {
 
-  QTemporaryFile * ptr = QTemporaryFile::createLocalFile( *PQFILE(1) );
+  QTemporaryFile * ptr = QTemporaryFile::createLocalFile( *PQFILE( 1 ) );
   Qt4xHb::createReturnQObjectClass( ptr, "QTEMPORARYFILE" );
 }
 
@@ -290,17 +290,17 @@ static QTemporaryFile * createLocalFile( const QString & fileName )
 void QTemporaryFile_createLocalFile2()
 {
 
-  QTemporaryFile * ptr = QTemporaryFile::createLocalFile( PQSTRING(1) );
+  QTemporaryFile * ptr = QTemporaryFile::createLocalFile( PQSTRING( 1 ) );
   Qt4xHb::createReturnQObjectClass( ptr, "QTEMPORARYFILE" );
 }
 
 HB_FUNC_STATIC( QTEMPORARYFILE_CREATELOCALFILE )
 {
-  if( ISNUMPAR(1) && ISQFILE(1) )
+  if( ISNUMPAR( 1 ) && ISQFILE( 1 ) )
   {
     QTemporaryFile_createLocalFile1();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
     QTemporaryFile_createLocalFile2();
   }

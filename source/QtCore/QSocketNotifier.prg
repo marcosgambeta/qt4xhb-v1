@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -51,9 +51,9 @@ QSocketNotifier( int socket, QSocketNotifier::Type, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_NEW )
 {
-  if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQOBJECT(3)||ISNIL(3)) )
+  if( ISBETWEEN( 2, 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ( ISQOBJECT( 3 ) || ISNIL( 3 ) ) )
   {
-    QSocketNotifier * obj = new QSocketNotifier( PINT(1), (QSocketNotifier::Type) hb_parni(2), OPQOBJECT(3,0) );
+    QSocketNotifier * obj = new QSocketNotifier( PINT( 1 ), ( QSocketNotifier::Type ) hb_parni( 2 ), OPQOBJECT( 3, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_NEW )
 
 HB_FUNC_STATIC( QSOCKETNOTIFIER_DELETE )
 {
-  QSocketNotifier * obj = (QSocketNotifier *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSocketNotifier * obj = ( QSocketNotifier * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -86,12 +86,12 @@ int socket() const
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_SOCKET )
 {
-  QSocketNotifier * obj = (QSocketNotifier *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSocketNotifier * obj = ( QSocketNotifier * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->socket() );
@@ -110,12 +110,12 @@ QSocketNotifier::Type type() const
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_TYPE )
 {
-  QSocketNotifier * obj = (QSocketNotifier *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSocketNotifier * obj = ( QSocketNotifier * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->type() );
@@ -134,12 +134,12 @@ bool isEnabled() const
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_ISENABLED )
 {
-  QSocketNotifier * obj = (QSocketNotifier *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSocketNotifier * obj = ( QSocketNotifier * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isEnabled() );
@@ -158,15 +158,15 @@ void setEnabled( bool )
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_SETENABLED )
 {
-  QSocketNotifier * obj = (QSocketNotifier *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSocketNotifier * obj = ( QSocketNotifier * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setEnabled( PBOOL(1) );
+      obj->setEnabled( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

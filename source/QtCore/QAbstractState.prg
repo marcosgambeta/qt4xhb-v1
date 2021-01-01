@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -51,7 +51,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTSTATE_DELETE )
 {
-  QAbstractState * obj = (QAbstractState *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractState * obj = ( QAbstractState * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -73,12 +73,12 @@ QStateMachine * machine() const
 */
 HB_FUNC_STATIC( QABSTRACTSTATE_MACHINE )
 {
-  QAbstractState * obj = (QAbstractState *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractState * obj = ( QAbstractState * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QStateMachine * ptr = obj->machine();
@@ -98,12 +98,12 @@ QState * parentState() const
 */
 HB_FUNC_STATIC( QABSTRACTSTATE_PARENTSTATE )
 {
-  QAbstractState * obj = (QAbstractState *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractState * obj = ( QAbstractState * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QState * ptr = obj->parentState();

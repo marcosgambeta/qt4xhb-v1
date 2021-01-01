@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -59,7 +59,7 @@ QSharedMemory( QObject * parent = 0 )
 */
 void QSharedMemory_new1()
 {
-  QSharedMemory * obj = new QSharedMemory( OPQOBJECT(1,0) );
+  QSharedMemory * obj = new QSharedMemory( OPQOBJECT( 1, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -68,17 +68,17 @@ QSharedMemory( const QString & key, QObject * parent = 0 )
 */
 void QSharedMemory_new2()
 {
-  QSharedMemory * obj = new QSharedMemory( PQSTRING(1), OPQOBJECT(2,0) );
+  QSharedMemory * obj = new QSharedMemory( PQSTRING( 1 ), OPQOBJECT( 2, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QSHAREDMEMORY_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
     QSharedMemory_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISQOBJECT( 2 ) || ISNIL( 2 ) ) )
   {
     QSharedMemory_new2();
   }
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_NEW )
 
 HB_FUNC_STATIC( QSHAREDMEMORY_DELETE )
 {
-  QSharedMemory * obj = (QSharedMemory *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSharedMemory * obj = ( QSharedMemory * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -112,15 +112,15 @@ void setKey( const QString & key )
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_SETKEY )
 {
-  QSharedMemory * obj = (QSharedMemory *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSharedMemory * obj = ( QSharedMemory * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setKey( PQSTRING(1) );
+      obj->setKey( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,12 +138,12 @@ QString key() const
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_KEY )
 {
-  QSharedMemory * obj = (QSharedMemory *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSharedMemory * obj = ( QSharedMemory * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->key() );
@@ -162,15 +162,15 @@ void setNativeKey( const QString & key )
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_SETNATIVEKEY )
 {
-  QSharedMemory * obj = (QSharedMemory *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSharedMemory * obj = ( QSharedMemory * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setNativeKey( PQSTRING(1) );
+      obj->setNativeKey( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,12 +188,12 @@ QString nativeKey() const
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_NATIVEKEY )
 {
-  QSharedMemory * obj = (QSharedMemory *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSharedMemory * obj = ( QSharedMemory * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->nativeKey() );
@@ -212,15 +212,15 @@ bool create( int size, QSharedMemory::AccessMode mode = QSharedMemory::ReadWrite
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_CREATE )
 {
-  QSharedMemory * obj = (QSharedMemory *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSharedMemory * obj = ( QSharedMemory * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) )
     {
 #endif
-      RBOOL( obj->create( PINT(1), ISNIL(2)? (QSharedMemory::AccessMode) QSharedMemory::ReadWrite : (QSharedMemory::AccessMode) hb_parni(2) ) );
+      RBOOL( obj->create( PINT( 1 ), ISNIL( 2 )? ( QSharedMemory::AccessMode ) QSharedMemory::ReadWrite : ( QSharedMemory::AccessMode ) hb_parni( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,12 +236,12 @@ int size() const
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_SIZE )
 {
-  QSharedMemory * obj = (QSharedMemory *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSharedMemory * obj = ( QSharedMemory * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->size() );
@@ -260,15 +260,15 @@ bool attach( QSharedMemory::AccessMode mode = QSharedMemory::ReadWrite )
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_ATTACH )
 {
-  QSharedMemory * obj = (QSharedMemory *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSharedMemory * obj = ( QSharedMemory * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->attach( ISNIL(1)? (QSharedMemory::AccessMode) QSharedMemory::ReadWrite : (QSharedMemory::AccessMode) hb_parni(1) ) );
+      RBOOL( obj->attach( ISNIL( 1 )? ( QSharedMemory::AccessMode ) QSharedMemory::ReadWrite : ( QSharedMemory::AccessMode ) hb_parni( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -284,12 +284,12 @@ bool isAttached() const
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_ISATTACHED )
 {
-  QSharedMemory * obj = (QSharedMemory *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSharedMemory * obj = ( QSharedMemory * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isAttached() );
@@ -308,12 +308,12 @@ bool detach()
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_DETACH )
 {
-  QSharedMemory * obj = (QSharedMemory *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSharedMemory * obj = ( QSharedMemory * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->detach() );
@@ -332,15 +332,15 @@ void * data()
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_DATA )
 {
-  QSharedMemory * obj = (QSharedMemory *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSharedMemory * obj = ( QSharedMemory * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
-      hb_retptr( (void *) obj->data() );
+      hb_retptr( ( void * ) obj->data() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -356,12 +356,12 @@ bool lock()
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_LOCK )
 {
-  QSharedMemory * obj = (QSharedMemory *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSharedMemory * obj = ( QSharedMemory * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->lock() );
@@ -380,12 +380,12 @@ bool unlock()
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_UNLOCK )
 {
-  QSharedMemory * obj = (QSharedMemory *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSharedMemory * obj = ( QSharedMemory * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->unlock() );
@@ -404,12 +404,12 @@ QSharedMemory::SharedMemoryError error() const
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_ERROR )
 {
-  QSharedMemory * obj = (QSharedMemory *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSharedMemory * obj = ( QSharedMemory * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->error() );
@@ -428,12 +428,12 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_ERRORSTRING )
 {
-  QSharedMemory * obj = (QSharedMemory *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSharedMemory * obj = ( QSharedMemory * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->errorString() );

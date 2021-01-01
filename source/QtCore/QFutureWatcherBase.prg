@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -69,7 +69,7 @@ RETURN
 
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_DELETE )
 {
-  QFutureWatcherBase * obj = (QFutureWatcherBase *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureWatcherBase * obj = ( QFutureWatcherBase * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -91,12 +91,12 @@ int progressValue() const
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSVALUE )
 {
-  QFutureWatcherBase * obj = (QFutureWatcherBase *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureWatcherBase * obj = ( QFutureWatcherBase * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->progressValue() );
@@ -115,12 +115,12 @@ int progressMinimum() const
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSMINIMUM )
 {
-  QFutureWatcherBase * obj = (QFutureWatcherBase *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureWatcherBase * obj = ( QFutureWatcherBase * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->progressMinimum() );
@@ -139,12 +139,12 @@ int progressMaximum() const
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSMAXIMUM )
 {
-  QFutureWatcherBase * obj = (QFutureWatcherBase *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureWatcherBase * obj = ( QFutureWatcherBase * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->progressMaximum() );
@@ -163,12 +163,12 @@ QString progressText() const
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSTEXT )
 {
-  QFutureWatcherBase * obj = (QFutureWatcherBase *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureWatcherBase * obj = ( QFutureWatcherBase * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->progressText() );
@@ -187,12 +187,12 @@ bool isStarted() const
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISSTARTED )
 {
-  QFutureWatcherBase * obj = (QFutureWatcherBase *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureWatcherBase * obj = ( QFutureWatcherBase * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isStarted() );
@@ -211,12 +211,12 @@ bool isFinished() const
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISFINISHED )
 {
-  QFutureWatcherBase * obj = (QFutureWatcherBase *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureWatcherBase * obj = ( QFutureWatcherBase * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isFinished() );
@@ -235,12 +235,12 @@ bool isRunning() const
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISRUNNING )
 {
-  QFutureWatcherBase * obj = (QFutureWatcherBase *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureWatcherBase * obj = ( QFutureWatcherBase * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isRunning() );
@@ -259,12 +259,12 @@ bool isCanceled() const
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISCANCELED )
 {
-  QFutureWatcherBase * obj = (QFutureWatcherBase *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureWatcherBase * obj = ( QFutureWatcherBase * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isCanceled() );
@@ -283,12 +283,12 @@ bool isPaused() const
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISPAUSED )
 {
-  QFutureWatcherBase * obj = (QFutureWatcherBase *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureWatcherBase * obj = ( QFutureWatcherBase * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isPaused() );
@@ -307,12 +307,12 @@ void waitForFinished()
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_WAITFORFINISHED )
 {
-  QFutureWatcherBase * obj = (QFutureWatcherBase *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureWatcherBase * obj = ( QFutureWatcherBase * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->waitForFinished();
@@ -333,15 +333,15 @@ void setPendingResultsLimit( int limit )
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_SETPENDINGRESULTSLIMIT )
 {
-  QFutureWatcherBase * obj = (QFutureWatcherBase *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureWatcherBase * obj = ( QFutureWatcherBase * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setPendingResultsLimit( PINT(1) );
+      obj->setPendingResultsLimit( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -359,15 +359,15 @@ bool event( QEvent * event )
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_EVENT )
 {
-  QFutureWatcherBase * obj = (QFutureWatcherBase *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureWatcherBase * obj = ( QFutureWatcherBase * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQEVENT(1) )
+    if( ISNUMPAR( 1 ) && ISQEVENT( 1 ) )
     {
 #endif
-      RBOOL( obj->event( PQEVENT(1) ) );
+      RBOOL( obj->event( PQEVENT( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -383,12 +383,12 @@ void cancel()
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_CANCEL )
 {
-  QFutureWatcherBase * obj = (QFutureWatcherBase *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureWatcherBase * obj = ( QFutureWatcherBase * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->cancel();
@@ -409,15 +409,15 @@ void setPaused( bool paused )
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_SETPAUSED )
 {
-  QFutureWatcherBase * obj = (QFutureWatcherBase *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureWatcherBase * obj = ( QFutureWatcherBase * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setPaused( PBOOL(1) );
+      obj->setPaused( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -435,12 +435,12 @@ void pause()
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_PAUSE )
 {
-  QFutureWatcherBase * obj = (QFutureWatcherBase *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureWatcherBase * obj = ( QFutureWatcherBase * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->pause();
@@ -461,12 +461,12 @@ void resume()
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_RESUME )
 {
-  QFutureWatcherBase * obj = (QFutureWatcherBase *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureWatcherBase * obj = ( QFutureWatcherBase * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->resume();
@@ -487,12 +487,12 @@ void togglePaused()
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_TOGGLEPAUSED )
 {
-  QFutureWatcherBase * obj = (QFutureWatcherBase *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureWatcherBase * obj = ( QFutureWatcherBase * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->togglePaused();

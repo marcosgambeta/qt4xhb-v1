@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -62,9 +62,9 @@ QThread( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QTHREAD_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
-    QThread * obj = new QThread( OPQOBJECT(1,0) );
+    QThread * obj = new QThread( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QTHREAD_NEW )
 
 HB_FUNC_STATIC( QTHREAD_DELETE )
 {
-  QThread * obj = (QThread *) Qt4xHb::itemGetPtrStackSelfItem();
+  QThread * obj = ( QThread * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -97,15 +97,15 @@ void exit( int returnCode = 0 )
 */
 HB_FUNC_STATIC( QTHREAD_EXIT )
 {
-  QThread * obj = (QThread *) Qt4xHb::itemGetPtrStackSelfItem();
+  QThread * obj = ( QThread * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
     {
 #endif
-      obj->exit( OPINT(1,0) );
+      obj->exit( OPINT( 1, 0 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -123,12 +123,12 @@ bool isFinished() const
 */
 HB_FUNC_STATIC( QTHREAD_ISFINISHED )
 {
-  QThread * obj = (QThread *) Qt4xHb::itemGetPtrStackSelfItem();
+  QThread * obj = ( QThread * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isFinished() );
@@ -147,12 +147,12 @@ bool isRunning() const
 */
 HB_FUNC_STATIC( QTHREAD_ISRUNNING )
 {
-  QThread * obj = (QThread *) Qt4xHb::itemGetPtrStackSelfItem();
+  QThread * obj = ( QThread * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isRunning() );
@@ -171,12 +171,12 @@ QThread::Priority priority() const
 */
 HB_FUNC_STATIC( QTHREAD_PRIORITY )
 {
-  QThread * obj = (QThread *) Qt4xHb::itemGetPtrStackSelfItem();
+  QThread * obj = ( QThread * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->priority() );
@@ -195,15 +195,15 @@ void setPriority( QThread::Priority priority )
 */
 HB_FUNC_STATIC( QTHREAD_SETPRIORITY )
 {
-  QThread * obj = (QThread *) Qt4xHb::itemGetPtrStackSelfItem();
+  QThread * obj = ( QThread * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setPriority( (QThread::Priority) hb_parni(1) );
+      obj->setPriority( ( QThread::Priority ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,15 +221,15 @@ void setStackSize( uint stackSize )
 */
 HB_FUNC_STATIC( QTHREAD_SETSTACKSIZE )
 {
-  QThread * obj = (QThread *) Qt4xHb::itemGetPtrStackSelfItem();
+  QThread * obj = ( QThread * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setStackSize( PUINT(1) );
+      obj->setStackSize( PUINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,12 +247,12 @@ uint stackSize() const
 */
 HB_FUNC_STATIC( QTHREAD_STACKSIZE )
 {
-  QThread * obj = (QThread *) Qt4xHb::itemGetPtrStackSelfItem();
+  QThread * obj = ( QThread * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RUINT( obj->stackSize() );
@@ -271,15 +271,15 @@ virtual bool event( QEvent * event )
 */
 HB_FUNC_STATIC( QTHREAD_EVENT )
 {
-  QThread * obj = (QThread *) Qt4xHb::itemGetPtrStackSelfItem();
+  QThread * obj = ( QThread * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQEVENT(1) )
+    if( ISNUMPAR( 1 ) && ISQEVENT( 1 ) )
     {
 #endif
-      RBOOL( obj->event( PQEVENT(1) ) );
+      RBOOL( obj->event( PQEVENT( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,12 +295,12 @@ void quit()
 */
 HB_FUNC_STATIC( QTHREAD_QUIT )
 {
-  QThread * obj = (QThread *) Qt4xHb::itemGetPtrStackSelfItem();
+  QThread * obj = ( QThread * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->quit();
@@ -321,15 +321,15 @@ void start( QThread::Priority priority = QThread::InheritPriority )
 */
 HB_FUNC_STATIC( QTHREAD_START )
 {
-  QThread * obj = (QThread *) Qt4xHb::itemGetPtrStackSelfItem();
+  QThread * obj = ( QThread * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
     {
 #endif
-      obj->start( ISNIL(1)? (QThread::Priority) QThread::InheritPriority : (QThread::Priority) hb_parni(1) );
+      obj->start( ISNIL( 1 )? ( QThread::Priority ) QThread::InheritPriority : ( QThread::Priority ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -347,12 +347,12 @@ void terminate()
 */
 HB_FUNC_STATIC( QTHREAD_TERMINATE )
 {
-  QThread * obj = (QThread *) Qt4xHb::itemGetPtrStackSelfItem();
+  QThread * obj = ( QThread * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->terminate();
@@ -374,7 +374,7 @@ static QThread * currentThread()
 HB_FUNC_STATIC( QTHREAD_CURRENTTHREAD )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QThread * ptr = QThread::currentThread();
@@ -394,7 +394,7 @@ static int idealThreadCount()
 HB_FUNC_STATIC( QTHREAD_IDEALTHREADCOUNT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RINT( QThread::idealThreadCount() );
@@ -412,12 +412,12 @@ void yieldCurrentThread()
 */
 HB_FUNC_STATIC( QTHREAD_YIELDCURRENTTHREAD )
 {
-  QThread * obj = (QThread *) Qt4xHb::itemGetPtrStackSelfItem();
+  QThread * obj = ( QThread * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->yieldCurrentThread();

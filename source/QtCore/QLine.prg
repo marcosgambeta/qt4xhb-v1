@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -77,7 +77,7 @@ QLine( const QPoint & p1, const QPoint & p2 )
 */
 void QLine_new2()
 {
-  QLine * obj = new QLine( *PQPOINT(1), *PQPOINT(2) );
+  QLine * obj = new QLine( *PQPOINT( 1 ), *PQPOINT( 2 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -86,21 +86,21 @@ QLine( int x1, int y1, int x2, int y2 )
 */
 void QLine_new3()
 {
-  QLine * obj = new QLine( PINT(1), PINT(2), PINT(3), PINT(4) );
+  QLine * obj = new QLine( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QLINE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QLine_new1();
   }
-  else if( ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2) )
+  else if( ISNUMPAR( 2 ) && ISQPOINT( 1 ) && ISQPOINT( 2 ) )
   {
     QLine_new2();
   }
-  else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+  else if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
   {
     QLine_new3();
   }
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QLINE_NEW )
 
 HB_FUNC_STATIC( QLINE_DELETE )
 {
-  QLine * obj = (QLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLine * obj = ( QLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -132,12 +132,12 @@ QPoint p1() const
 */
 HB_FUNC_STATIC( QLINE_P1 )
 {
-  QLine * obj = (QLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLine * obj = ( QLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPoint * ptr = new QPoint( obj->p1() );
@@ -157,12 +157,12 @@ QPoint p2() const
 */
 HB_FUNC_STATIC( QLINE_P2 )
 {
-  QLine * obj = (QLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLine * obj = ( QLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPoint * ptr = new QPoint( obj->p2() );
@@ -182,12 +182,12 @@ int x1() const
 */
 HB_FUNC_STATIC( QLINE_X1 )
 {
-  QLine * obj = (QLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLine * obj = ( QLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->x1() );
@@ -206,12 +206,12 @@ int x2() const
 */
 HB_FUNC_STATIC( QLINE_X2 )
 {
-  QLine * obj = (QLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLine * obj = ( QLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->x2() );
@@ -230,12 +230,12 @@ int y1() const
 */
 HB_FUNC_STATIC( QLINE_Y1 )
 {
-  QLine * obj = (QLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLine * obj = ( QLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->y1() );
@@ -254,12 +254,12 @@ int y2() const
 */
 HB_FUNC_STATIC( QLINE_Y2 )
 {
-  QLine * obj = (QLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLine * obj = ( QLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->y2() );
@@ -278,12 +278,12 @@ int dx() const
 */
 HB_FUNC_STATIC( QLINE_DX )
 {
-  QLine * obj = (QLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLine * obj = ( QLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->dx() );
@@ -302,12 +302,12 @@ int dy() const
 */
 HB_FUNC_STATIC( QLINE_DY )
 {
-  QLine * obj = (QLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLine * obj = ( QLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->dy() );
@@ -326,12 +326,12 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QLINE_ISNULL )
 {
-  QLine * obj = (QLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLine * obj = ( QLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isNull() );
@@ -350,15 +350,15 @@ void setP1( const QPoint & p1 )
 */
 HB_FUNC_STATIC( QLINE_SETP1 )
 {
-  QLine * obj = (QLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLine * obj = ( QLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINT(1) )
+    if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
     {
 #endif
-      obj->setP1( *PQPOINT(1) );
+      obj->setP1( *PQPOINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -376,15 +376,15 @@ void setP2( const QPoint & p2 )
 */
 HB_FUNC_STATIC( QLINE_SETP2 )
 {
-  QLine * obj = (QLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLine * obj = ( QLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINT(1) )
+    if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
     {
 #endif
-      obj->setP2( *PQPOINT(1) );
+      obj->setP2( *PQPOINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -402,15 +402,15 @@ void setLine( int x1, int y1, int x2, int y2 )
 */
 HB_FUNC_STATIC( QLINE_SETLINE )
 {
-  QLine * obj = (QLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLine * obj = ( QLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+    if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
     {
 #endif
-      obj->setLine( PINT(1), PINT(2), PINT(3), PINT(4) );
+      obj->setLine( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -428,15 +428,15 @@ void setPoints( const QPoint & p1, const QPoint & p2 )
 */
 HB_FUNC_STATIC( QLINE_SETPOINTS )
 {
-  QLine * obj = (QLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLine * obj = ( QLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2) )
+    if( ISNUMPAR( 2 ) && ISQPOINT( 1 ) && ISQPOINT( 2 ) )
     {
 #endif
-      obj->setPoints( *PQPOINT(1), *PQPOINT(2) );
+      obj->setPoints( *PQPOINT( 1 ), *PQPOINT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -454,11 +454,11 @@ void translate( const QPoint & offset )
 */
 void QLine_translate1()
 {
-  QLine * obj = (QLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLine * obj = ( QLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->translate( *PQPOINT(1) );
+    obj->translate( *PQPOINT( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -469,11 +469,11 @@ void translate( int dx, int dy )
 */
 void QLine_translate2()
 {
-  QLine * obj = (QLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLine * obj = ( QLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->translate( PINT(1), PINT(2) );
+    obj->translate( PINT( 1 ), PINT( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -481,11 +481,11 @@ void QLine_translate2()
 
 HB_FUNC_STATIC( QLINE_TRANSLATE )
 {
-  if( ISNUMPAR(1) && ISQPOINT(1) )
+  if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
     QLine_translate1();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
   {
     QLine_translate2();
   }
@@ -500,11 +500,11 @@ QLine translated( const QPoint & offset ) const
 */
 void QLine_translated1()
 {
-  QLine * obj = (QLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLine * obj = ( QLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QLine * ptr = new QLine( obj->translated( *PQPOINT(1) ) );
+    QLine * ptr = new QLine( obj->translated( *PQPOINT( 1 ) ) );
     Qt4xHb::createReturnClass( ptr, "QLINE", true );
   }
 }
@@ -514,22 +514,22 @@ QLine translated( int dx, int dy ) const
 */
 void QLine_translated2()
 {
-  QLine * obj = (QLine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLine * obj = ( QLine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QLine * ptr = new QLine( obj->translated( PINT(1), PINT(2) ) );
+    QLine * ptr = new QLine( obj->translated( PINT( 1 ), PINT( 2 ) ) );
     Qt4xHb::createReturnClass( ptr, "QLINE", true );
   }
 }
 
 HB_FUNC_STATIC( QLINE_TRANSLATED )
 {
-  if( ISNUMPAR(1) && ISQPOINT(1) )
+  if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
     QLine_translated1();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
   {
     QLine_translated2();
   }
@@ -543,18 +543,18 @@ HB_FUNC_STATIC( QLINE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -581,16 +581,16 @@ HB_FUNC_STATIC( QLINE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QLINE_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QLINE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

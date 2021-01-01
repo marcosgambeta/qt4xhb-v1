@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -55,9 +55,9 @@ QSequentialAnimationGroup( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
-    QSequentialAnimationGroup * obj = new QSequentialAnimationGroup( OPQOBJECT(1,0) );
+    QSequentialAnimationGroup * obj = new QSequentialAnimationGroup( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_NEW )
 
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_DELETE )
 {
-  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSequentialAnimationGroup * obj = ( QSequentialAnimationGroup * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -90,15 +90,15 @@ QPauseAnimation * addPause( int msecs )
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_ADDPAUSE )
 {
-  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSequentialAnimationGroup * obj = ( QSequentialAnimationGroup * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QPauseAnimation * ptr = obj->addPause( PINT(1) );
+      QPauseAnimation * ptr = obj->addPause( PINT( 1 ) );
       Qt4xHb::createReturnQObjectClass( ptr, "QPAUSEANIMATION" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -115,12 +115,12 @@ QAbstractAnimation * currentAnimation() const
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_CURRENTANIMATION )
 {
-  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSequentialAnimationGroup * obj = ( QSequentialAnimationGroup * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QAbstractAnimation * ptr = obj->currentAnimation();
@@ -140,15 +140,15 @@ QPauseAnimation * insertPause( int index, int msecs )
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_INSERTPAUSE )
 {
-  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSequentialAnimationGroup * obj = ( QSequentialAnimationGroup * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      QPauseAnimation * ptr = obj->insertPause( PINT(1), PINT(2) );
+      QPauseAnimation * ptr = obj->insertPause( PINT( 1 ), PINT( 2 ) );
       Qt4xHb::createReturnQObjectClass( ptr, "QPAUSEANIMATION" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -165,12 +165,12 @@ virtual int duration() const
 */
 HB_FUNC_STATIC( QSEQUENTIALANIMATIONGROUP_DURATION )
 {
-  QSequentialAnimationGroup * obj = (QSequentialAnimationGroup *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSequentialAnimationGroup * obj = ( QSequentialAnimationGroup * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->duration() );

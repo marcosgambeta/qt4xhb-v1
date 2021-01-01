@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -56,9 +56,9 @@ QThreadPool( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QTHREADPOOL_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
-    QThreadPool * obj = new QThreadPool( OPQOBJECT(1,0) );
+    QThreadPool * obj = new QThreadPool( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QTHREADPOOL_NEW )
 
 HB_FUNC_STATIC( QTHREADPOOL_DELETE )
 {
-  QThreadPool * obj = (QThreadPool *) Qt4xHb::itemGetPtrStackSelfItem();
+  QThreadPool * obj = ( QThreadPool * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -91,12 +91,12 @@ int activeThreadCount() const
 */
 HB_FUNC_STATIC( QTHREADPOOL_ACTIVETHREADCOUNT )
 {
-  QThreadPool * obj = (QThreadPool *) Qt4xHb::itemGetPtrStackSelfItem();
+  QThreadPool * obj = ( QThreadPool * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->activeThreadCount() );
@@ -115,12 +115,12 @@ int expiryTimeout() const
 */
 HB_FUNC_STATIC( QTHREADPOOL_EXPIRYTIMEOUT )
 {
-  QThreadPool * obj = (QThreadPool *) Qt4xHb::itemGetPtrStackSelfItem();
+  QThreadPool * obj = ( QThreadPool * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->expiryTimeout() );
@@ -139,12 +139,12 @@ int maxThreadCount() const
 */
 HB_FUNC_STATIC( QTHREADPOOL_MAXTHREADCOUNT )
 {
-  QThreadPool * obj = (QThreadPool *) Qt4xHb::itemGetPtrStackSelfItem();
+  QThreadPool * obj = ( QThreadPool * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->maxThreadCount() );
@@ -163,12 +163,12 @@ void releaseThread()
 */
 HB_FUNC_STATIC( QTHREADPOOL_RELEASETHREAD )
 {
-  QThreadPool * obj = (QThreadPool *) Qt4xHb::itemGetPtrStackSelfItem();
+  QThreadPool * obj = ( QThreadPool * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->releaseThread();
@@ -189,12 +189,12 @@ void reserveThread()
 */
 HB_FUNC_STATIC( QTHREADPOOL_RESERVETHREAD )
 {
-  QThreadPool * obj = (QThreadPool *) Qt4xHb::itemGetPtrStackSelfItem();
+  QThreadPool * obj = ( QThreadPool * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->reserveThread();
@@ -215,15 +215,15 @@ void setExpiryTimeout( int expiryTimeout )
 */
 HB_FUNC_STATIC( QTHREADPOOL_SETEXPIRYTIMEOUT )
 {
-  QThreadPool * obj = (QThreadPool *) Qt4xHb::itemGetPtrStackSelfItem();
+  QThreadPool * obj = ( QThreadPool * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setExpiryTimeout( PINT(1) );
+      obj->setExpiryTimeout( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -241,15 +241,15 @@ void setMaxThreadCount( int maxThreadCount )
 */
 HB_FUNC_STATIC( QTHREADPOOL_SETMAXTHREADCOUNT )
 {
-  QThreadPool * obj = (QThreadPool *) Qt4xHb::itemGetPtrStackSelfItem();
+  QThreadPool * obj = ( QThreadPool * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setMaxThreadCount( PINT(1) );
+      obj->setMaxThreadCount( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,15 +267,15 @@ void start( QRunnable * runnable, int priority = 0 )
 */
 HB_FUNC_STATIC( QTHREADPOOL_START )
 {
-  QThreadPool * obj = (QThreadPool *) Qt4xHb::itemGetPtrStackSelfItem();
+  QThreadPool * obj = ( QThreadPool * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQRUNNABLE(1) && ISOPTNUM(2) )
+    if( ISBETWEEN( 1, 2 ) && ISQRUNNABLE( 1 ) && ISOPTNUM( 2 ) )
     {
 #endif
-      obj->start( PQRUNNABLE(1), OPINT(2,0) );
+      obj->start( PQRUNNABLE( 1 ), OPINT( 2, 0 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -293,15 +293,15 @@ bool tryStart( QRunnable * runnable )
 */
 HB_FUNC_STATIC( QTHREADPOOL_TRYSTART )
 {
-  QThreadPool * obj = (QThreadPool *) Qt4xHb::itemGetPtrStackSelfItem();
+  QThreadPool * obj = ( QThreadPool * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQRUNNABLE(1) )
+    if( ISNUMPAR( 1 ) && ISQRUNNABLE( 1 ) )
     {
 #endif
-      RBOOL( obj->tryStart( PQRUNNABLE(1) ) );
+      RBOOL( obj->tryStart( PQRUNNABLE( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,7 +317,7 @@ void waitForDone()
 */
 void QThreadPool_waitForDone1()
 {
-  QThreadPool * obj = (QThreadPool *) Qt4xHb::itemGetPtrStackSelfItem();
+  QThreadPool * obj = ( QThreadPool * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -332,21 +332,21 @@ bool waitForDone( int msecs )
 */
 void QThreadPool_waitForDone2()
 {
-  QThreadPool * obj = (QThreadPool *) Qt4xHb::itemGetPtrStackSelfItem();
+  QThreadPool * obj = ( QThreadPool * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->waitForDone( PINT(1) ) );
+    RBOOL( obj->waitForDone( PINT( 1 ) ) );
   }
 }
 
 HB_FUNC_STATIC( QTHREADPOOL_WAITFORDONE )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QThreadPool_waitForDone1();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
   {
     QThreadPool_waitForDone2();
   }
@@ -362,7 +362,7 @@ static QThreadPool * globalInstance()
 HB_FUNC_STATIC( QTHREADPOOL_GLOBALINSTANCE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QThreadPool * ptr = QThreadPool::globalInstance();

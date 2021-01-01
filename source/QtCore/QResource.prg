@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -64,9 +64,9 @@ QResource( const QString & file = QString(), const QLocale & locale = QLocale() 
 */
 HB_FUNC_STATIC( QRESOURCE_NEW )
 {
-  if( ISBETWEEN(0,2) && ISOPTCHAR(1) && (ISQLOCALE(2)||ISNIL(2)) )
+  if( ISBETWEEN( 0, 2 ) && ISOPTCHAR( 1 ) && ( ISQLOCALE( 2 ) || ISNIL( 2 ) ) )
   {
-    QResource * obj = new QResource( OPQSTRING(1,QString()), ISNIL(2)? QLocale() : *(QLocale *) Qt4xHb::itemGetPtr(2) );
+    QResource * obj = new QResource( OPQSTRING( 1, QString() ), ISNIL( 2 )? QLocale() : *( QLocale * ) Qt4xHb::itemGetPtr( 2 ) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QRESOURCE_NEW )
 
 HB_FUNC_STATIC( QRESOURCE_DELETE )
 {
-  QResource * obj = (QResource *) Qt4xHb::itemGetPtrStackSelfItem();
+  QResource * obj = ( QResource * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -97,12 +97,12 @@ QString absoluteFilePath() const
 */
 HB_FUNC_STATIC( QRESOURCE_ABSOLUTEFILEPATH )
 {
-  QResource * obj = (QResource *) Qt4xHb::itemGetPtrStackSelfItem();
+  QResource * obj = ( QResource * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->absoluteFilePath() );
@@ -121,15 +121,15 @@ const uchar * data() const
 */
 HB_FUNC_STATIC( QRESOURCE_DATA )
 {
-  QResource * obj = (QResource *) Qt4xHb::itemGetPtrStackSelfItem();
+  QResource * obj = ( QResource * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
-      hb_retc( (const char *) obj->data() );
+      hb_retc( ( const char * ) obj->data() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,12 +145,12 @@ QString fileName() const
 */
 HB_FUNC_STATIC( QRESOURCE_FILENAME )
 {
-  QResource * obj = (QResource *) Qt4xHb::itemGetPtrStackSelfItem();
+  QResource * obj = ( QResource * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->fileName() );
@@ -169,12 +169,12 @@ bool isCompressed() const
 */
 HB_FUNC_STATIC( QRESOURCE_ISCOMPRESSED )
 {
-  QResource * obj = (QResource *) Qt4xHb::itemGetPtrStackSelfItem();
+  QResource * obj = ( QResource * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isCompressed() );
@@ -193,12 +193,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QRESOURCE_ISVALID )
 {
-  QResource * obj = (QResource *) Qt4xHb::itemGetPtrStackSelfItem();
+  QResource * obj = ( QResource * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -217,12 +217,12 @@ QLocale locale() const
 */
 HB_FUNC_STATIC( QRESOURCE_LOCALE )
 {
-  QResource * obj = (QResource *) Qt4xHb::itemGetPtrStackSelfItem();
+  QResource * obj = ( QResource * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QLocale * ptr = new QLocale( obj->locale() );
@@ -242,15 +242,15 @@ void setFileName( const QString & file )
 */
 HB_FUNC_STATIC( QRESOURCE_SETFILENAME )
 {
-  QResource * obj = (QResource *) Qt4xHb::itemGetPtrStackSelfItem();
+  QResource * obj = ( QResource * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setFileName( PQSTRING(1) );
+      obj->setFileName( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,15 +268,15 @@ void setLocale( const QLocale & locale )
 */
 HB_FUNC_STATIC( QRESOURCE_SETLOCALE )
 {
-  QResource * obj = (QResource *) Qt4xHb::itemGetPtrStackSelfItem();
+  QResource * obj = ( QResource * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQLOCALE(1) )
+    if( ISNUMPAR( 1 ) && ISQLOCALE( 1 ) )
     {
 #endif
-      obj->setLocale( *PQLOCALE(1) );
+      obj->setLocale( *PQLOCALE( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,12 +294,12 @@ qint64 size() const
 */
 HB_FUNC_STATIC( QRESOURCE_SIZE )
 {
-  QResource * obj = (QResource *) Qt4xHb::itemGetPtrStackSelfItem();
+  QResource * obj = ( QResource * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQINT64( obj->size() );
@@ -319,10 +319,10 @@ static bool registerResource( const QString & rccFileName, const QString & mapRo
 HB_FUNC_STATIC( QRESOURCE_REGISTERRESOURCE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
+  if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ISOPTCHAR( 2 ) )
   {
 #endif
-    RBOOL( QResource::registerResource( PQSTRING(1), OPQSTRING(2,QString()) ) );
+    RBOOL( QResource::registerResource( PQSTRING( 1 ), OPQSTRING( 2, QString() ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -338,10 +338,10 @@ static bool unregisterResource( const QString & rccFileName, const QString & map
 HB_FUNC_STATIC( QRESOURCE_UNREGISTERRESOURCE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTCHAR(2) )
+  if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ISOPTCHAR( 2 ) )
   {
 #endif
-    RBOOL( QResource::unregisterResource( PQSTRING(1), OPQSTRING(2,QString()) ) );
+    RBOOL( QResource::unregisterResource( PQSTRING( 1 ), OPQSTRING( 2, QString() ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -355,18 +355,18 @@ HB_FUNC_STATIC( QRESOURCE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -393,16 +393,16 @@ HB_FUNC_STATIC( QRESOURCE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QRESOURCE_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QRESOURCE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

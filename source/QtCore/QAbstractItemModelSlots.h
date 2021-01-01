@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -28,7 +28,7 @@ class QAbstractItemModelSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAbstractItemModelSlots( QObject *parent = 0 );
+  QAbstractItemModelSlots( QObject * parent = 0 );
   ~QAbstractItemModelSlots();
   public slots:
   void columnsAboutToBeInserted( const QModelIndex & parent, int start, int end );

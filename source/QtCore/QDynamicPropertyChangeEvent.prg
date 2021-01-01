@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -45,9 +45,9 @@ QDynamicPropertyChangeEvent( const QByteArray & name )
 */
 HB_FUNC_STATIC( QDYNAMICPROPERTYCHANGEEVENT_NEW )
 {
-  if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+  if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    QDynamicPropertyChangeEvent * obj = new QDynamicPropertyChangeEvent( *PQBYTEARRAY(1) );
+    QDynamicPropertyChangeEvent * obj = new QDynamicPropertyChangeEvent( *PQBYTEARRAY( 1 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QDYNAMICPROPERTYCHANGEEVENT_NEW )
 
 HB_FUNC_STATIC( QDYNAMICPROPERTYCHANGEEVENT_DELETE )
 {
-  QDynamicPropertyChangeEvent * obj = (QDynamicPropertyChangeEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDynamicPropertyChangeEvent * obj = ( QDynamicPropertyChangeEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -78,12 +78,12 @@ QByteArray propertyName() const
 */
 HB_FUNC_STATIC( QDYNAMICPROPERTYCHANGEEVENT_PROPERTYNAME )
 {
-  QDynamicPropertyChangeEvent * obj = (QDynamicPropertyChangeEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDynamicPropertyChangeEvent * obj = ( QDynamicPropertyChangeEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->propertyName() );

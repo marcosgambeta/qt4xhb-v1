@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -93,7 +93,7 @@ QDateTime( const QDate & date )
 */
 void QDateTime_new2()
 {
-  QDateTime * obj = new QDateTime( *PQDATE(1) );
+  QDateTime * obj = new QDateTime( *PQDATE( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -102,7 +102,7 @@ QDateTime( const QDate & date, const QTime & time, Qt::TimeSpec spec = Qt::Local
 */
 void QDateTime_new3()
 {
-  QDateTime * obj = new QDateTime( *PQDATE(1), *PQTIME(2), ISNIL(3)? (Qt::TimeSpec) Qt::LocalTime : (Qt::TimeSpec) hb_parni(3) );
+  QDateTime * obj = new QDateTime( *PQDATE( 1 ), *PQTIME( 2 ), ISNIL( 3 )? ( Qt::TimeSpec ) Qt::LocalTime : ( Qt::TimeSpec ) hb_parni( 3 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -111,25 +111,25 @@ QDateTime( const QDateTime & other )
 */
 void QDateTime_new4()
 {
-  QDateTime * obj = new QDateTime( *PQDATETIME(1) );
+  QDateTime * obj = new QDateTime( *PQDATETIME( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QDATETIME_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QDateTime_new1();
   }
-  else if( ISNUMPAR(1) && ISQDATE(1) )
+  else if( ISNUMPAR( 1 ) && ISQDATE( 1 ) )
   {
     QDateTime_new2();
   }
-  else if( ISBETWEEN(2,3) && ISQDATE(1) && ISQTIME(2) && (ISNUM(3)||ISNIL(3)) )
+  else if( ISBETWEEN( 2, 3 ) && ISQDATE( 1 ) && ISQTIME( 2 ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
   {
     QDateTime_new3();
   }
-  else if( ISNUMPAR(1) && ISQDATETIME(1) )
+  else if( ISNUMPAR( 1 ) && ISQDATETIME( 1 ) )
   {
     QDateTime_new4();
   }
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QDATETIME_NEW )
 
 HB_FUNC_STATIC( QDATETIME_DELETE )
 {
-  QDateTime * obj = (QDateTime *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDateTime * obj = ( QDateTime * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -161,15 +161,15 @@ QDateTime addDays( int ndays ) const
 */
 HB_FUNC_STATIC( QDATETIME_ADDDAYS )
 {
-  QDateTime * obj = (QDateTime *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDateTime * obj = ( QDateTime * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->addDays( PINT(1) ) );
+      QDateTime * ptr = new QDateTime( obj->addDays( PINT( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -186,15 +186,15 @@ QDateTime addMSecs( qint64 msecs ) const
 */
 HB_FUNC_STATIC( QDATETIME_ADDMSECS )
 {
-  QDateTime * obj = (QDateTime *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDateTime * obj = ( QDateTime * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->addMSecs( PQINT64(1) ) );
+      QDateTime * ptr = new QDateTime( obj->addMSecs( PQINT64( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -211,15 +211,15 @@ QDateTime addMonths( int nmonths ) const
 */
 HB_FUNC_STATIC( QDATETIME_ADDMONTHS )
 {
-  QDateTime * obj = (QDateTime *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDateTime * obj = ( QDateTime * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->addMonths( PINT(1) ) );
+      QDateTime * ptr = new QDateTime( obj->addMonths( PINT( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -236,15 +236,15 @@ QDateTime addSecs( int s ) const
 */
 HB_FUNC_STATIC( QDATETIME_ADDSECS )
 {
-  QDateTime * obj = (QDateTime *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDateTime * obj = ( QDateTime * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->addSecs( PINT(1) ) );
+      QDateTime * ptr = new QDateTime( obj->addSecs( PINT( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -261,15 +261,15 @@ QDateTime addYears( int nyears ) const
 */
 HB_FUNC_STATIC( QDATETIME_ADDYEARS )
 {
-  QDateTime * obj = (QDateTime *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDateTime * obj = ( QDateTime * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->addYears( PINT(1) ) );
+      QDateTime * ptr = new QDateTime( obj->addYears( PINT( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -286,12 +286,12 @@ QDate date() const
 */
 HB_FUNC_STATIC( QDATETIME_DATE )
 {
-  QDateTime * obj = (QDateTime *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDateTime * obj = ( QDateTime * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QDate * ptr = new QDate( obj->date() );
@@ -311,15 +311,15 @@ int daysTo( const QDateTime & other ) const
 */
 HB_FUNC_STATIC( QDATETIME_DAYSTO )
 {
-  QDateTime * obj = (QDateTime *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDateTime * obj = ( QDateTime * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATETIME(1) )
+    if( ISNUMPAR( 1 ) && ISQDATETIME( 1 ) )
     {
 #endif
-      RINT( obj->daysTo( *PQDATETIME(1) ) );
+      RINT( obj->daysTo( *PQDATETIME( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -335,12 +335,12 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QDATETIME_ISNULL )
 {
-  QDateTime * obj = (QDateTime *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDateTime * obj = ( QDateTime * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isNull() );
@@ -359,12 +359,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QDATETIME_ISVALID )
 {
-  QDateTime * obj = (QDateTime *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDateTime * obj = ( QDateTime * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -383,15 +383,15 @@ qint64 msecsTo( const QDateTime & other ) const
 */
 HB_FUNC_STATIC( QDATETIME_MSECSTO )
 {
-  QDateTime * obj = (QDateTime *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDateTime * obj = ( QDateTime * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATETIME(1) )
+    if( ISNUMPAR( 1 ) && ISQDATETIME( 1 ) )
     {
 #endif
-      RQINT64( obj->msecsTo( *PQDATETIME(1) ) );
+      RQINT64( obj->msecsTo( *PQDATETIME( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -407,15 +407,15 @@ int secsTo( const QDateTime & other ) const
 */
 HB_FUNC_STATIC( QDATETIME_SECSTO )
 {
-  QDateTime * obj = (QDateTime *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDateTime * obj = ( QDateTime * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATETIME(1) )
+    if( ISNUMPAR( 1 ) && ISQDATETIME( 1 ) )
     {
 #endif
-      RINT( obj->secsTo( *PQDATETIME(1) ) );
+      RINT( obj->secsTo( *PQDATETIME( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -431,15 +431,15 @@ void setDate( const QDate & date )
 */
 HB_FUNC_STATIC( QDATETIME_SETDATE )
 {
-  QDateTime * obj = (QDateTime *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDateTime * obj = ( QDateTime * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATE(1) )
+    if( ISNUMPAR( 1 ) && ISQDATE( 1 ) )
     {
 #endif
-      obj->setDate( *PQDATE(1) );
+      obj->setDate( *PQDATE( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -457,15 +457,15 @@ void setMSecsSinceEpoch( qint64 msecs )
 */
 HB_FUNC_STATIC( QDATETIME_SETMSECSSINCEEPOCH )
 {
-  QDateTime * obj = (QDateTime *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDateTime * obj = ( QDateTime * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setMSecsSinceEpoch( PQINT64(1) );
+      obj->setMSecsSinceEpoch( PQINT64( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -483,15 +483,15 @@ void setTime( const QTime & time )
 */
 HB_FUNC_STATIC( QDATETIME_SETTIME )
 {
-  QDateTime * obj = (QDateTime *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDateTime * obj = ( QDateTime * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTIME(1) )
+    if( ISNUMPAR( 1 ) && ISQTIME( 1 ) )
     {
 #endif
-      obj->setTime( *PQTIME(1) );
+      obj->setTime( *PQTIME( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -509,15 +509,15 @@ void setTimeSpec( Qt::TimeSpec spec )
 */
 HB_FUNC_STATIC( QDATETIME_SETTIMESPEC )
 {
-  QDateTime * obj = (QDateTime *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDateTime * obj = ( QDateTime * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setTimeSpec( (Qt::TimeSpec) hb_parni(1) );
+      obj->setTimeSpec( ( Qt::TimeSpec ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -535,15 +535,15 @@ void setTime_t( uint seconds )
 */
 HB_FUNC_STATIC( QDATETIME_SETTIME_T )
 {
-  QDateTime * obj = (QDateTime *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDateTime * obj = ( QDateTime * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setTime_t( PUINT(1) );
+      obj->setTime_t( PUINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -561,12 +561,12 @@ QTime time() const
 */
 HB_FUNC_STATIC( QDATETIME_TIME )
 {
-  QDateTime * obj = (QDateTime *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDateTime * obj = ( QDateTime * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTime * ptr = new QTime( obj->time() );
@@ -586,12 +586,12 @@ Qt::TimeSpec timeSpec() const
 */
 HB_FUNC_STATIC( QDATETIME_TIMESPEC )
 {
-  QDateTime * obj = (QDateTime *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDateTime * obj = ( QDateTime * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->timeSpec() );
@@ -610,12 +610,12 @@ QDateTime toLocalTime() const
 */
 HB_FUNC_STATIC( QDATETIME_TOLOCALTIME )
 {
-  QDateTime * obj = (QDateTime *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDateTime * obj = ( QDateTime * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->toLocalTime() );
@@ -635,12 +635,12 @@ qint64 toMSecsSinceEpoch() const
 */
 HB_FUNC_STATIC( QDATETIME_TOMSECSSINCEEPOCH )
 {
-  QDateTime * obj = (QDateTime *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDateTime * obj = ( QDateTime * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQINT64( obj->toMSecsSinceEpoch() );
@@ -659,11 +659,11 @@ QString toString( const QString & format ) const
 */
 void QDateTime_toString1()
 {
-  QDateTime * obj = (QDateTime *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDateTime * obj = ( QDateTime * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RQSTRING( obj->toString( PQSTRING(1) ) );
+    RQSTRING( obj->toString( PQSTRING( 1 ) ) );
   }
 }
 
@@ -672,21 +672,21 @@ QString toString( Qt::DateFormat format = Qt::TextDate ) const
 */
 void QDateTime_toString2()
 {
-  QDateTime * obj = (QDateTime *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDateTime * obj = ( QDateTime * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RQSTRING( obj->toString( ISNIL(1)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(1) ) );
+    RQSTRING( obj->toString( ISNIL( 1 )? ( Qt::DateFormat ) Qt::TextDate : ( Qt::DateFormat ) hb_parni( 1 ) ) );
   }
 }
 
 HB_FUNC_STATIC( QDATETIME_TOSTRING )
 {
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
     QDateTime_toString1();
   }
-  else if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+  else if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
   {
     QDateTime_toString2();
   }
@@ -701,15 +701,15 @@ QDateTime toTimeSpec( Qt::TimeSpec specification ) const
 */
 HB_FUNC_STATIC( QDATETIME_TOTIMESPEC )
 {
-  QDateTime * obj = (QDateTime *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDateTime * obj = ( QDateTime * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->toTimeSpec( (Qt::TimeSpec) hb_parni(1) ) );
+      QDateTime * ptr = new QDateTime( obj->toTimeSpec( ( Qt::TimeSpec ) hb_parni( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -726,12 +726,12 @@ uint toTime_t() const
 */
 HB_FUNC_STATIC( QDATETIME_TOTIME_T )
 {
-  QDateTime * obj = (QDateTime *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDateTime * obj = ( QDateTime * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RUINT( obj->toTime_t() );
@@ -750,12 +750,12 @@ QDateTime toUTC() const
 */
 HB_FUNC_STATIC( QDATETIME_TOUTC )
 {
-  QDateTime * obj = (QDateTime *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDateTime * obj = ( QDateTime * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->toUTC() );
@@ -776,7 +776,7 @@ static QDateTime currentDateTime()
 HB_FUNC_STATIC( QDATETIME_CURRENTDATETIME )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QDateTime * ptr = new QDateTime( QDateTime::currentDateTime() );
@@ -796,7 +796,7 @@ static QDateTime currentDateTimeUtc()
 HB_FUNC_STATIC( QDATETIME_CURRENTDATETIMEUTC )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QDateTime * ptr = new QDateTime( QDateTime::currentDateTimeUtc() );
@@ -816,7 +816,7 @@ static qint64 currentMSecsSinceEpoch()
 HB_FUNC_STATIC( QDATETIME_CURRENTMSECSSINCEEPOCH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RQINT64( QDateTime::currentMSecsSinceEpoch() );
@@ -835,10 +835,10 @@ static QDateTime fromMSecsSinceEpoch( qint64 msecs )
 HB_FUNC_STATIC( QDATETIME_FROMMSECSSINCEEPOCH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
   {
 #endif
-    QDateTime * ptr = new QDateTime( QDateTime::fromMSecsSinceEpoch( PQINT64(1) ) );
+    QDateTime * ptr = new QDateTime( QDateTime::fromMSecsSinceEpoch( PQINT64( 1 ) ) );
     Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
@@ -855,7 +855,7 @@ static QDateTime fromString( const QString & string, Qt::DateFormat format = Qt:
 void QDateTime_fromString1()
 {
 
-  QDateTime * ptr = new QDateTime( QDateTime::fromString( PQSTRING(1), ISNIL(2)? (Qt::DateFormat) Qt::TextDate : (Qt::DateFormat) hb_parni(2) ) );
+  QDateTime * ptr = new QDateTime( QDateTime::fromString( PQSTRING( 1 ), ISNIL( 2 )? ( Qt::DateFormat ) Qt::TextDate : ( Qt::DateFormat ) hb_parni( 2 ) ) );
   Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
 }
 
@@ -865,17 +865,17 @@ static QDateTime fromString( const QString & string, const QString & format )
 void QDateTime_fromString2()
 {
 
-  QDateTime * ptr = new QDateTime( QDateTime::fromString( PQSTRING(1), PQSTRING(2) ) );
+  QDateTime * ptr = new QDateTime( QDateTime::fromString( PQSTRING( 1 ), PQSTRING( 2 ) ) );
   Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
 }
 
 HB_FUNC_STATIC( QDATETIME_FROMSTRING )
 {
-  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
   {
     QDateTime_fromString1();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
   {
     QDateTime_fromString2();
   }
@@ -891,10 +891,10 @@ static QDateTime fromTime_t( uint seconds )
 HB_FUNC_STATIC( QDATETIME_FROMTIME_T )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
   {
 #endif
-    QDateTime * ptr = new QDateTime( QDateTime::fromTime_t( PUINT(1) ) );
+    QDateTime * ptr = new QDateTime( QDateTime::fromTime_t( PUINT( 1 ) ) );
     Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
@@ -909,18 +909,18 @@ HB_FUNC_STATIC( QDATETIME_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -947,16 +947,16 @@ HB_FUNC_STATIC( QDATETIME_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QDATETIME_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QDATETIME_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

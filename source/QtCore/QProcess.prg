@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -94,9 +94,9 @@ QProcess( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QPROCESS_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
-    QProcess * obj = new QProcess( OPQOBJECT(1,0) );
+    QProcess * obj = new QProcess( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QPROCESS_NEW )
 
 HB_FUNC_STATIC( QPROCESS_DELETE )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -129,15 +129,15 @@ void closeReadChannel( QProcess::ProcessChannel channel )
 */
 HB_FUNC_STATIC( QPROCESS_CLOSEREADCHANNEL )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->closeReadChannel( (QProcess::ProcessChannel) hb_parni(1) );
+      obj->closeReadChannel( ( QProcess::ProcessChannel ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,12 +155,12 @@ void closeWriteChannel()
 */
 HB_FUNC_STATIC( QPROCESS_CLOSEWRITECHANNEL )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->closeWriteChannel();
@@ -181,12 +181,12 @@ QStringList environment() const
 */
 HB_FUNC_STATIC( QPROCESS_ENVIRONMENT )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->environment() );
@@ -205,12 +205,12 @@ QProcess::ProcessError error() const
 */
 HB_FUNC_STATIC( QPROCESS_ERROR )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->error() );
@@ -229,12 +229,12 @@ int exitCode() const
 */
 HB_FUNC_STATIC( QPROCESS_EXITCODE )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->exitCode() );
@@ -253,12 +253,12 @@ QProcess::ExitStatus exitStatus() const
 */
 HB_FUNC_STATIC( QPROCESS_EXITSTATUS )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->exitStatus() );
@@ -278,12 +278,12 @@ QString nativeArguments () const
 HB_FUNC_STATIC( QPROCESS_NATIVEARGUMENTS )
 {
 #if defined(Q_OS_WIN) 
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->nativeArguments() );
@@ -302,12 +302,12 @@ QProcess::ProcessChannelMode processChannelMode() const
 */
 HB_FUNC_STATIC( QPROCESS_PROCESSCHANNELMODE )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->processChannelMode() );
@@ -326,12 +326,12 @@ QProcessEnvironment processEnvironment() const
 */
 HB_FUNC_STATIC( QPROCESS_PROCESSENVIRONMENT )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QProcessEnvironment * ptr = new QProcessEnvironment( obj->processEnvironment() );
@@ -351,12 +351,12 @@ QByteArray readAllStandardError()
 */
 HB_FUNC_STATIC( QPROCESS_READALLSTANDARDERROR )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->readAllStandardError() );
@@ -376,12 +376,12 @@ QByteArray readAllStandardOutput()
 */
 HB_FUNC_STATIC( QPROCESS_READALLSTANDARDOUTPUT )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->readAllStandardOutput() );
@@ -401,12 +401,12 @@ QProcess::ProcessChannel readChannel() const
 */
 HB_FUNC_STATIC( QPROCESS_READCHANNEL )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->readChannel() );
@@ -425,15 +425,15 @@ void setEnvironment( const QStringList & environment )
 */
 HB_FUNC_STATIC( QPROCESS_SETENVIRONMENT )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISARRAY( 1 ) )
     {
 #endif
-      obj->setEnvironment( PQSTRINGLIST(1) );
+      obj->setEnvironment( PQSTRINGLIST( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -452,15 +452,15 @@ void setNativeArguments ( const QString & arguments )
 HB_FUNC_STATIC( QPROCESS_SETNATIVEARGUMENTS )
 {
 #if defined(Q_OS_WIN) 
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setNativeArguments( PQSTRING(1) );
+      obj->setNativeArguments( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -478,15 +478,15 @@ void setProcessChannelMode( QProcess::ProcessChannelMode mode )
 */
 HB_FUNC_STATIC( QPROCESS_SETPROCESSCHANNELMODE )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setProcessChannelMode( (QProcess::ProcessChannelMode) hb_parni(1) );
+      obj->setProcessChannelMode( ( QProcess::ProcessChannelMode ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -504,15 +504,15 @@ void setProcessEnvironment( const QProcessEnvironment & environment )
 */
 HB_FUNC_STATIC( QPROCESS_SETPROCESSENVIRONMENT )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPROCESSENVIRONMENT(1) )
+    if( ISNUMPAR( 1 ) && ISQPROCESSENVIRONMENT( 1 ) )
     {
 #endif
-      obj->setProcessEnvironment( *PQPROCESSENVIRONMENT(1) );
+      obj->setProcessEnvironment( *PQPROCESSENVIRONMENT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -530,15 +530,15 @@ void setReadChannel( QProcess::ProcessChannel channel )
 */
 HB_FUNC_STATIC( QPROCESS_SETREADCHANNEL )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setReadChannel( (QProcess::ProcessChannel) hb_parni(1) );
+      obj->setReadChannel( ( QProcess::ProcessChannel ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -556,15 +556,15 @@ void setStandardErrorFile( const QString & fileName, QIODevice::OpenMode mode = 
 */
 HB_FUNC_STATIC( QPROCESS_SETSTANDARDERRORFILE )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ISOPTNUM( 2 ) )
     {
 #endif
-      obj->setStandardErrorFile( PQSTRING(1), ISNIL(2)? (QIODevice::OpenMode) QIODevice::Truncate : (QIODevice::OpenMode) hb_parni(2) );
+      obj->setStandardErrorFile( PQSTRING( 1 ), ISNIL( 2 )? ( QIODevice::OpenMode ) QIODevice::Truncate : ( QIODevice::OpenMode ) hb_parni( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -582,15 +582,15 @@ void setStandardInputFile( const QString & fileName )
 */
 HB_FUNC_STATIC( QPROCESS_SETSTANDARDINPUTFILE )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setStandardInputFile( PQSTRING(1) );
+      obj->setStandardInputFile( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -608,15 +608,15 @@ void setStandardOutputFile( const QString & fileName, QIODevice::OpenMode mode =
 */
 HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTFILE )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ISOPTNUM( 2 ) )
     {
 #endif
-      obj->setStandardOutputFile( PQSTRING(1), ISNIL(2)? (QIODevice::OpenMode) QIODevice::Truncate : (QIODevice::OpenMode) hb_parni(2) );
+      obj->setStandardOutputFile( PQSTRING( 1 ), ISNIL( 2 )? ( QIODevice::OpenMode ) QIODevice::Truncate : ( QIODevice::OpenMode ) hb_parni( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -634,15 +634,15 @@ void setStandardOutputProcess( QProcess * destination )
 */
 HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTPROCESS )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPROCESS(1) )
+    if( ISNUMPAR( 1 ) && ISQPROCESS( 1 ) )
     {
 #endif
-      obj->setStandardOutputProcess( PQPROCESS(1) );
+      obj->setStandardOutputProcess( PQPROCESS( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -660,15 +660,15 @@ void setWorkingDirectory( const QString & dir )
 */
 HB_FUNC_STATIC( QPROCESS_SETWORKINGDIRECTORY )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setWorkingDirectory( PQSTRING(1) );
+      obj->setWorkingDirectory( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -686,11 +686,11 @@ void start( const QString & program, const QStringList & arguments, QIODevice::O
 */
 void QProcess_start1()
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->start( PQSTRING(1), PQSTRINGLIST(2), ISNIL(3)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(3) );
+    obj->start( PQSTRING( 1 ), PQSTRINGLIST( 2 ), ISNIL( 3 )? ( QIODevice::OpenMode ) QIODevice::ReadWrite : ( QIODevice::OpenMode ) hb_parni( 3 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -701,11 +701,11 @@ void start( const QString & program, QIODevice::OpenMode mode = QIODevice::ReadW
 */
 void QProcess_start2()
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->start( PQSTRING(1), ISNIL(2)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(2) );
+    obj->start( PQSTRING( 1 ), ISNIL( 2 )? ( QIODevice::OpenMode ) QIODevice::ReadWrite : ( QIODevice::OpenMode ) hb_parni( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -713,11 +713,11 @@ void QProcess_start2()
 
 HB_FUNC_STATIC( QPROCESS_START )
 {
-  if( ISBETWEEN(2,3) && ISCHAR(1) && ISARRAY(2) && (ISNUM(3)||ISNIL(3)) )
+  if( ISBETWEEN( 2, 3 ) && ISCHAR( 1 ) && ISARRAY( 2 ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
   {
     QProcess_start1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
   {
     QProcess_start2();
   }
@@ -732,12 +732,12 @@ QProcess::ProcessState state() const
 */
 HB_FUNC_STATIC( QPROCESS_STATE )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->state() );
@@ -756,15 +756,15 @@ bool waitForFinished( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QPROCESS_WAITFORFINISHED )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->waitForFinished( OPINT(1,30000) ) );
+      RBOOL( obj->waitForFinished( OPINT( 1, 30000 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -780,15 +780,15 @@ bool waitForStarted( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QPROCESS_WAITFORSTARTED )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->waitForStarted( OPINT(1,30000) ) );
+      RBOOL( obj->waitForStarted( OPINT( 1, 30000 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -804,12 +804,12 @@ QString workingDirectory() const
 */
 HB_FUNC_STATIC( QPROCESS_WORKINGDIRECTORY )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->workingDirectory() );
@@ -828,12 +828,12 @@ virtual bool atEnd() const
 */
 HB_FUNC_STATIC( QPROCESS_ATEND )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->atEnd() );
@@ -852,12 +852,12 @@ virtual qint64 bytesAvailable() const
 */
 HB_FUNC_STATIC( QPROCESS_BYTESAVAILABLE )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQINT64( obj->bytesAvailable() );
@@ -876,12 +876,12 @@ virtual qint64 bytesToWrite() const
 */
 HB_FUNC_STATIC( QPROCESS_BYTESTOWRITE )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQINT64( obj->bytesToWrite() );
@@ -900,12 +900,12 @@ virtual bool canReadLine() const
 */
 HB_FUNC_STATIC( QPROCESS_CANREADLINE )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->canReadLine() );
@@ -924,12 +924,12 @@ virtual void close()
 */
 HB_FUNC_STATIC( QPROCESS_CLOSE )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->close();
@@ -950,12 +950,12 @@ virtual bool isSequential() const
 */
 HB_FUNC_STATIC( QPROCESS_ISSEQUENTIAL )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isSequential() );
@@ -974,15 +974,15 @@ virtual bool waitForBytesWritten( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QPROCESS_WAITFORBYTESWRITTEN )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->waitForBytesWritten( OPINT(1,30000) ) );
+      RBOOL( obj->waitForBytesWritten( OPINT( 1, 30000 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -998,15 +998,15 @@ virtual bool waitForReadyRead( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QPROCESS_WAITFORREADYREAD )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->waitForReadyRead( OPINT(1,30000) ) );
+      RBOOL( obj->waitForReadyRead( OPINT( 1, 30000 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1022,12 +1022,12 @@ void kill()
 */
 HB_FUNC_STATIC( QPROCESS_KILL )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->kill();
@@ -1048,12 +1048,12 @@ void terminate()
 */
 HB_FUNC_STATIC( QPROCESS_TERMINATE )
 {
-  QProcess * obj = (QProcess *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcess * obj = ( QProcess * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->terminate();
@@ -1075,7 +1075,7 @@ static int execute( const QString & program, const QStringList & arguments )
 void QProcess_execute1()
 {
 
-  RINT( QProcess::execute( PQSTRING(1), PQSTRINGLIST(2) ) );
+  RINT( QProcess::execute( PQSTRING( 1 ), PQSTRINGLIST( 2 ) ) );
 }
 
 /*
@@ -1084,16 +1084,16 @@ static int execute( const QString & program )
 void QProcess_execute2()
 {
 
-  RINT( QProcess::execute( PQSTRING(1) ) );
+  RINT( QProcess::execute( PQSTRING( 1 ) ) );
 }
 
 HB_FUNC_STATIC( QPROCESS_EXECUTE )
 {
-  if( ISNUMPAR(2) && ISCHAR(1) && ISARRAY(2) )
+  if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISARRAY( 2 ) )
   {
     QProcess_execute1();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
     QProcess_execute2();
   }
@@ -1109,7 +1109,7 @@ static bool startDetached( const QString & program, const QStringList & argument
 void QProcess_startDetached1()
 {
 
-  RBOOL( QProcess::startDetached( PQSTRING(1), PQSTRINGLIST(2), PQSTRING(3), NULL ) );
+  RBOOL( QProcess::startDetached( PQSTRING( 1 ), PQSTRINGLIST( 2 ), PQSTRING( 3 ), NULL ) );
 }
 
 /*
@@ -1118,7 +1118,7 @@ static bool startDetached( const QString & program, const QStringList & argument
 void QProcess_startDetached2()
 {
 
-  RBOOL( QProcess::startDetached( PQSTRING(1), PQSTRINGLIST(2) ) );
+  RBOOL( QProcess::startDetached( PQSTRING( 1 ), PQSTRINGLIST( 2 ) ) );
 }
 
 /*
@@ -1127,20 +1127,20 @@ static bool startDetached( const QString & program )
 void QProcess_startDetached3()
 {
 
-  RBOOL( QProcess::startDetached( PQSTRING(1) ) );
+  RBOOL( QProcess::startDetached( PQSTRING( 1 ) ) );
 }
 
 HB_FUNC_STATIC( QPROCESS_STARTDETACHED )
 {
-  if( ISBETWEEN(3,4) && ISCHAR(1) && ISARRAY(2) && ISCHAR(3) )
+  if( ISBETWEEN( 3, 4 ) && ISCHAR( 1 ) && ISARRAY( 2 ) && ISCHAR( 3 ) )
   {
     QProcess_startDetached1();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISARRAY(2) )
+  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISARRAY( 2 ) )
   {
     QProcess_startDetached2();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
     QProcess_startDetached3();
   }
@@ -1156,7 +1156,7 @@ static QStringList systemEnvironment()
 HB_FUNC_STATIC( QPROCESS_SYSTEMENVIRONMENT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RQSTRINGLIST( QProcess::systemEnvironment() );

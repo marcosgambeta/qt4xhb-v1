@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -43,7 +43,7 @@ HEventFilter( QObject *parent = NULL )
 */
 HB_FUNC_STATIC( HEVENTFILTER_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && (ISQOBJECT(1)||ISNIL(1)) )
   {
     HEventFilter * obj = new HEventFilter( OPQOBJECT(1,NULL) );
     Qt4xHb::returnNewObject( obj, false );
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( HEVENTFILTER_SETEVENTFILTERCB )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if( ISNUMPAR( 1 ) )
     {
 #endif
       obj->setEventFilterCB( PBLOCKORSYMBOL(1) );

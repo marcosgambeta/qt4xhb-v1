@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -56,9 +56,9 @@ QTimer( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QTIMER_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
-    QTimer * obj = new QTimer( OPQOBJECT(1,0) );
+    QTimer * obj = new QTimer( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QTIMER_NEW )
 
 HB_FUNC_STATIC( QTIMER_DELETE )
 {
-  QTimer * obj = (QTimer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimer * obj = ( QTimer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -91,12 +91,12 @@ int interval() const
 */
 HB_FUNC_STATIC( QTIMER_INTERVAL )
 {
-  QTimer * obj = (QTimer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimer * obj = ( QTimer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->interval() );
@@ -115,12 +115,12 @@ bool isActive() const
 */
 HB_FUNC_STATIC( QTIMER_ISACTIVE )
 {
-  QTimer * obj = (QTimer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimer * obj = ( QTimer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isActive() );
@@ -139,12 +139,12 @@ bool isSingleShot() const
 */
 HB_FUNC_STATIC( QTIMER_ISSINGLESHOT )
 {
-  QTimer * obj = (QTimer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimer * obj = ( QTimer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isSingleShot() );
@@ -163,15 +163,15 @@ void setInterval( int msec )
 */
 HB_FUNC_STATIC( QTIMER_SETINTERVAL )
 {
-  QTimer * obj = (QTimer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimer * obj = ( QTimer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setInterval( PINT(1) );
+      obj->setInterval( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,15 +189,15 @@ void setSingleShot( bool singleShot )
 */
 HB_FUNC_STATIC( QTIMER_SETSINGLESHOT )
 {
-  QTimer * obj = (QTimer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimer * obj = ( QTimer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setSingleShot( PBOOL(1) );
+      obj->setSingleShot( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,12 +215,12 @@ int timerId() const
 */
 HB_FUNC_STATIC( QTIMER_TIMERID )
 {
-  QTimer * obj = (QTimer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimer * obj = ( QTimer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->timerId() );
@@ -239,11 +239,11 @@ void start( int msec )
 */
 void QTimer_start1()
 {
-  QTimer * obj = (QTimer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimer * obj = ( QTimer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->start( PINT(1) );
+    obj->start( PINT( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -254,7 +254,7 @@ void start()
 */
 void QTimer_start2()
 {
-  QTimer * obj = (QTimer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimer * obj = ( QTimer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -266,11 +266,11 @@ void QTimer_start2()
 
 HB_FUNC_STATIC( QTIMER_START )
 {
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
   {
     QTimer_start1();
   }
-  else if( ISNUMPAR(0) )
+  else if( ISNUMPAR( 0 ) )
   {
     QTimer_start2();
   }
@@ -285,12 +285,12 @@ void stop()
 */
 HB_FUNC_STATIC( QTIMER_STOP )
 {
-  QTimer * obj = (QTimer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimer * obj = ( QTimer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->stop();
@@ -312,10 +312,10 @@ static void singleShot( int msec, QObject * receiver, const char * member )
 HB_FUNC_STATIC( QTIMER_SINGLESHOT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(3) && ISNUM(1) && ISQOBJECT(2) && ISCHAR(3) )
+  if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISQOBJECT( 2 ) && ISCHAR( 3 ) )
   {
 #endif
-    QTimer::singleShot( PINT(1), PQOBJECT(2), PCONSTCHAR(3) );
+    QTimer::singleShot( PINT( 1 ), PQOBJECT( 2 ), PCONSTCHAR( 3 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

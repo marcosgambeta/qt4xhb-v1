@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -50,7 +50,7 @@ QEventTransition( QState * sourceState = 0 )
 */
 void QEventTransition_new1()
 {
-  QEventTransition * obj = new QEventTransition( OPQSTATE(1,0) );
+  QEventTransition * obj = new QEventTransition( OPQSTATE( 1, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -59,17 +59,17 @@ QEventTransition( QObject * object, QEvent::Type type, QState * sourceState = 0 
 */
 void QEventTransition_new2()
 {
-  QEventTransition * obj = new QEventTransition( PQOBJECT(1), (QEvent::Type) hb_parni(2), OPQSTATE(3,0) );
+  QEventTransition * obj = new QEventTransition( PQOBJECT( 1 ), ( QEvent::Type ) hb_parni( 2 ), OPQSTATE( 3, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QEVENTTRANSITION_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQSTATE(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQSTATE( 1 ) || ISNIL( 1 ) ) )
   {
     QEventTransition_new1();
   }
-  else if( ISBETWEEN(2,3) && ISQOBJECT(1) && ISNUM(2) && (ISQSTATE(3)||ISNIL(3)) )
+  else if( ISBETWEEN( 2, 3 ) && ISQOBJECT( 1 ) && ISNUM( 2 ) && ( ISQSTATE( 3 ) || ISNIL( 3 ) ) )
   {
     QEventTransition_new2();
   }
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_NEW )
 
 HB_FUNC_STATIC( QEVENTTRANSITION_DELETE )
 {
-  QEventTransition * obj = (QEventTransition *) Qt4xHb::itemGetPtrStackSelfItem();
+  QEventTransition * obj = ( QEventTransition * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -103,12 +103,12 @@ QObject * eventSource() const
 */
 HB_FUNC_STATIC( QEVENTTRANSITION_EVENTSOURCE )
 {
-  QEventTransition * obj = (QEventTransition *) Qt4xHb::itemGetPtrStackSelfItem();
+  QEventTransition * obj = ( QEventTransition * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QObject * ptr = obj->eventSource();
@@ -128,12 +128,12 @@ QEvent::Type eventType() const
 */
 HB_FUNC_STATIC( QEVENTTRANSITION_EVENTTYPE )
 {
-  QEventTransition * obj = (QEventTransition *) Qt4xHb::itemGetPtrStackSelfItem();
+  QEventTransition * obj = ( QEventTransition * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->eventType() );
@@ -152,15 +152,15 @@ void setEventSource( QObject * object )
 */
 HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTSOURCE )
 {
-  QEventTransition * obj = (QEventTransition *) Qt4xHb::itemGetPtrStackSelfItem();
+  QEventTransition * obj = ( QEventTransition * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
     {
 #endif
-      obj->setEventSource( PQOBJECT(1) );
+      obj->setEventSource( PQOBJECT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,15 +178,15 @@ void setEventType( QEvent::Type type )
 */
 HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTTYPE )
 {
-  QEventTransition * obj = (QEventTransition *) Qt4xHb::itemGetPtrStackSelfItem();
+  QEventTransition * obj = ( QEventTransition * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setEventType( (QEvent::Type) hb_parni(1) );
+      obj->setEventType( ( QEvent::Type ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -74,17 +74,17 @@ QModelIndex( const QModelIndex & other )
 */
 void QModelIndex_new2()
 {
-  QModelIndex * obj = new QModelIndex( *PQMODELINDEX(1) );
+  QModelIndex * obj = new QModelIndex( *PQMODELINDEX( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QMODELINDEX_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QModelIndex_new1();
   }
-  else if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+  else if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
   {
     QModelIndex_new2();
   }
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QMODELINDEX_NEW )
 
 HB_FUNC_STATIC( QMODELINDEX_DELETE )
 {
-  QModelIndex * obj = (QModelIndex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QModelIndex * obj = ( QModelIndex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -116,15 +116,15 @@ QModelIndex child( int row, int column ) const
 */
 HB_FUNC_STATIC( QMODELINDEX_CHILD )
 {
-  QModelIndex * obj = (QModelIndex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QModelIndex * obj = ( QModelIndex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->child( PINT(1), PINT(2) ) );
+      QModelIndex * ptr = new QModelIndex( obj->child( PINT( 1 ), PINT( 2 ) ) );
       Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -141,12 +141,12 @@ int column() const
 */
 HB_FUNC_STATIC( QMODELINDEX_COLUMN )
 {
-  QModelIndex * obj = (QModelIndex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QModelIndex * obj = ( QModelIndex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->column() );
@@ -165,15 +165,15 @@ QVariant data( int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QMODELINDEX_DATA )
 {
-  QModelIndex * obj = (QModelIndex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QModelIndex * obj = ( QModelIndex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->data( OPINT(1,Qt::DisplayRole) ) );
+      QVariant * ptr = new QVariant( obj->data( OPINT( 1, Qt::DisplayRole ) ) );
       Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -190,12 +190,12 @@ Qt::ItemFlags flags() const
 */
 HB_FUNC_STATIC( QMODELINDEX_FLAGS )
 {
-  QModelIndex * obj = (QModelIndex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QModelIndex * obj = ( QModelIndex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->flags() );
@@ -214,12 +214,12 @@ qint64 internalId() const
 */
 HB_FUNC_STATIC( QMODELINDEX_INTERNALID )
 {
-  QModelIndex * obj = (QModelIndex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QModelIndex * obj = ( QModelIndex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQINT64( obj->internalId() );
@@ -238,15 +238,15 @@ void * internalPointer() const
 */
 HB_FUNC_STATIC( QMODELINDEX_INTERNALPOINTER )
 {
-  QModelIndex * obj = (QModelIndex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QModelIndex * obj = ( QModelIndex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
-      hb_retptr( (void *) obj->internalPointer() );
+      hb_retptr( ( void * ) obj->internalPointer() );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,12 +262,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QMODELINDEX_ISVALID )
 {
-  QModelIndex * obj = (QModelIndex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QModelIndex * obj = ( QModelIndex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -286,12 +286,12 @@ const QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QMODELINDEX_MODEL )
 {
-  QModelIndex * obj = (QModelIndex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QModelIndex * obj = ( QModelIndex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QAbstractItemModel * ptr = obj->model();
@@ -311,12 +311,12 @@ QModelIndex parent() const
 */
 HB_FUNC_STATIC( QMODELINDEX_PARENT )
 {
-  QModelIndex * obj = (QModelIndex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QModelIndex * obj = ( QModelIndex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->parent() );
@@ -336,12 +336,12 @@ int row() const
 */
 HB_FUNC_STATIC( QMODELINDEX_ROW )
 {
-  QModelIndex * obj = (QModelIndex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QModelIndex * obj = ( QModelIndex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->row() );
@@ -360,15 +360,15 @@ QModelIndex sibling( int row, int column ) const
 */
 HB_FUNC_STATIC( QMODELINDEX_SIBLING )
 {
-  QModelIndex * obj = (QModelIndex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QModelIndex * obj = ( QModelIndex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->sibling( PINT(1), PINT(2) ) );
+      QModelIndex * ptr = new QModelIndex( obj->sibling( PINT( 1 ), PINT( 2 ) ) );
       Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -384,18 +384,18 @@ HB_FUNC_STATIC( QMODELINDEX_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -422,16 +422,16 @@ HB_FUNC_STATIC( QMODELINDEX_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QMODELINDEX_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QMODELINDEX_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

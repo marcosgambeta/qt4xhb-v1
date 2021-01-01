@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -44,7 +44,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTLISTMODEL_DELETE )
 {
-  QAbstractListModel * obj = (QAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractListModel * obj = ( QAbstractListModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -66,15 +66,15 @@ virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int ro
 */
 HB_FUNC_STATIC( QABSTRACTLISTMODEL_DROPMIMEDATA )
 {
-  QAbstractListModel * obj = (QAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractListModel * obj = ( QAbstractListModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(5) && ISQMIMEDATA(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISQMODELINDEX(5) )
+    if( ISNUMPAR( 5 ) && ISQMIMEDATA( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISQMODELINDEX( 5 ) )
     {
 #endif
-      RBOOL( obj->dropMimeData( PQMIMEDATA(1), (Qt::DropAction) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5) ) );
+      RBOOL( obj->dropMimeData( PQMIMEDATA( 1 ), ( Qt::DropAction ) hb_parni( 2 ), PINT( 3 ), PINT( 4 ), *PQMODELINDEX( 5 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -90,15 +90,15 @@ virtual QModelIndex index( int row, int column = 0, const QModelIndex & parent =
 */
 HB_FUNC_STATIC( QABSTRACTLISTMODEL_INDEX )
 {
-  QAbstractListModel * obj = (QAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractListModel * obj = ( QAbstractListModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
+    if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) && ( ISQMODELINDEX( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->index( PINT(1), OPINT(2,0), ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt4xHb::itemGetPtr(3) ) );
+      QModelIndex * ptr = new QModelIndex( obj->index( PINT( 1 ), OPINT( 2, 0 ), ISNIL( 3 )? QModelIndex() : *( QModelIndex * ) Qt4xHb::itemGetPtr( 3 ) ) );
       Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

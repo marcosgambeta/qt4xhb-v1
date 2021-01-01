@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QThreadSlots.h"
 
-QThreadSlots::QThreadSlots( QObject *parent ) : QObject( parent )
+QThreadSlots::QThreadSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QThreadSlots::~QThreadSlots()
 
 void QThreadSlots::finished()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "finished()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QTHREAD" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTHREAD" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,13 +38,13 @@ void QThreadSlots::finished()
 
 void QThreadSlots::started()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "started()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QTHREAD" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTHREAD" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -54,7 +54,7 @@ void QThreadSlots::started()
 
 void QThreadSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QThread * obj = (QThread *) Qt4xHb::itemGetPtrStackSelfItem();
+  QThread * obj = ( QThread * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

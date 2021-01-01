@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QStateSlots.h"
 
-QStateSlots::QStateSlots( QObject *parent ) : QObject( parent )
+QStateSlots::QStateSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QStateSlots::~QStateSlots()
 
 void QStateSlots::finished()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "finished()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QSTATE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSTATE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,13 +38,13 @@ void QStateSlots::finished()
 
 void QStateSlots::propertiesAssigned()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "propertiesAssigned()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QSTATE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSTATE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -54,7 +54,7 @@ void QStateSlots::propertiesAssigned()
 
 void QStateSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QState * obj = (QState *) Qt4xHb::itemGetPtrStackSelfItem();
+  QState * obj = ( QState * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
