@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -46,7 +46,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_DELETE )
 {
-  QDesignerObjectInspectorInterface * obj = (QDesignerObjectInspectorInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerObjectInspectorInterface * obj = ( QDesignerObjectInspectorInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -68,12 +68,12 @@ virtual QDesignerFormEditorInterface * core() const
 */
 HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_CORE )
 {
-  QDesignerObjectInspectorInterface * obj = (QDesignerObjectInspectorInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerObjectInspectorInterface * obj = ( QDesignerObjectInspectorInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QDesignerFormEditorInterface * ptr = obj->core();
@@ -93,15 +93,15 @@ virtual void setFormWindow( QDesignerFormWindowInterface * formWindow ) = 0
 */
 HB_FUNC_STATIC( QDESIGNEROBJECTINSPECTORINTERFACE_SETFORMWINDOW )
 {
-  QDesignerObjectInspectorInterface * obj = (QDesignerObjectInspectorInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerObjectInspectorInterface * obj = ( QDesignerObjectInspectorInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDESIGNERFORMWINDOWINTERFACE(1) )
+    if( ISNUMPAR( 1 ) && ISQDESIGNERFORMWINDOWINTERFACE( 1 ) )
     {
 #endif
-      obj->setFormWindow( PQDESIGNERFORMWINDOWINTERFACE(1) );
+      obj->setFormWindow( PQDESIGNERFORMWINDOWINTERFACE( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

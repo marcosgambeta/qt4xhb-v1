@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -45,7 +45,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_DELETE )
 {
-  QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerWidgetBoxInterface * obj = ( QDesignerWidgetBoxInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -67,12 +67,12 @@ virtual QString fileName() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_FILENAME )
 {
-  QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerWidgetBoxInterface * obj = ( QDesignerWidgetBoxInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->fileName() );
@@ -91,12 +91,12 @@ virtual bool load() = 0
 */
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_LOAD )
 {
-  QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerWidgetBoxInterface * obj = ( QDesignerWidgetBoxInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->load() );
@@ -115,12 +115,12 @@ virtual bool save() = 0
 */
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_SAVE )
 {
-  QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerWidgetBoxInterface * obj = ( QDesignerWidgetBoxInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->save() );
@@ -139,15 +139,15 @@ virtual void setFileName( const QString & fileName ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_SETFILENAME )
 {
-  QDesignerWidgetBoxInterface * obj = (QDesignerWidgetBoxInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerWidgetBoxInterface * obj = ( QDesignerWidgetBoxInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setFileName( PQSTRING(1) );
+      obj->setFileName( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

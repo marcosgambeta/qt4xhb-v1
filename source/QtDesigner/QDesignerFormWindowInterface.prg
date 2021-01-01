@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -102,7 +102,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_DELETE )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -124,12 +124,12 @@ virtual QDir absoluteDir() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ABSOLUTEDIR )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QDir * ptr = new QDir( obj->absoluteDir() );
@@ -149,15 +149,15 @@ virtual void addResourceFile( const QString & path ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ADDRESOURCEFILE )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->addResourceFile( PQSTRING(1) );
+      obj->addResourceFile( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,12 +175,12 @@ virtual QString author() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_AUTHOR )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->author() );
@@ -199,12 +199,12 @@ virtual QString comment() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_COMMENT )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->comment() );
@@ -223,12 +223,12 @@ virtual QString contents() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CONTENTS )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->contents() );
@@ -247,12 +247,12 @@ virtual QDesignerFormEditorInterface * core() const
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CORE )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QDesignerFormEditorInterface * ptr = obj->core();
@@ -272,12 +272,12 @@ virtual QDesignerFormWindowCursorInterface * cursor() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CURSOR )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QDesignerFormWindowCursorInterface * ptr = obj->cursor();
@@ -297,12 +297,12 @@ virtual void emitSelectionChanged() = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_EMITSELECTIONCHANGED )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->emitSelectionChanged();
@@ -323,12 +323,12 @@ virtual QString exportMacro() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_EXPORTMACRO )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->exportMacro() );
@@ -347,12 +347,12 @@ virtual QDesignerFormWindowInterface::Feature features() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FEATURES )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->features() );
@@ -371,12 +371,12 @@ virtual QString fileName() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FILENAME )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->fileName() );
@@ -395,12 +395,12 @@ virtual QPoint grid() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_GRID )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPoint * ptr = new QPoint( obj->grid() );
@@ -420,15 +420,15 @@ virtual bool hasFeature( QDesignerFormWindowInterface::Feature feature ) const =
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_HASFEATURE )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->hasFeature( (QDesignerFormWindowInterface::Feature) hb_parni(1) ) );
+      RBOOL( obj->hasFeature( ( QDesignerFormWindowInterface::Feature ) hb_parni( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -444,12 +444,12 @@ virtual QStringList includeHints() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_INCLUDEHINTS )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->includeHints() );
@@ -468,12 +468,12 @@ virtual bool isDirty() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ISDIRTY )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isDirty() );
@@ -492,15 +492,15 @@ virtual bool isManaged( QWidget * widget ) const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ISMANAGED )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      RBOOL( obj->isManaged( PQWIDGET(1) ) );
+      RBOOL( obj->isManaged( PQWIDGET( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -516,12 +516,12 @@ virtual void layoutDefault( int * margin, int * spacing ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_LAYOUTDEFAULT )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
     {
 #endif
       int par1;
@@ -546,12 +546,12 @@ virtual QWidget * mainContainer() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_MAINCONTAINER )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWidget * ptr = obj->mainContainer();
@@ -571,12 +571,12 @@ virtual QString pixmapFunction() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_PIXMAPFUNCTION )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->pixmapFunction() );
@@ -595,15 +595,15 @@ virtual void removeResourceFile( const QString & path ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_REMOVERESOURCEFILE )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->removeResourceFile( PQSTRING(1) );
+      obj->removeResourceFile( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -621,12 +621,12 @@ virtual QStringList resourceFiles() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_RESOURCEFILES )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->resourceFiles() );
@@ -645,15 +645,15 @@ virtual void setAuthor( const QString & author ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETAUTHOR )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setAuthor( PQSTRING(1) );
+      obj->setAuthor( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -671,15 +671,15 @@ virtual void setComment( const QString & comment ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETCOMMENT )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setComment( PQSTRING(1) );
+      obj->setComment( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -697,15 +697,15 @@ virtual void setExportMacro( const QString & exportMacro ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETEXPORTMACRO )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setExportMacro( PQSTRING(1) );
+      obj->setExportMacro( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -723,15 +723,15 @@ virtual void setIncludeHints( const QStringList & includeHints ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETINCLUDEHINTS )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISARRAY( 1 ) )
     {
 #endif
-      obj->setIncludeHints( PQSTRINGLIST(1) );
+      obj->setIncludeHints( PQSTRINGLIST( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -749,15 +749,15 @@ virtual void setLayoutDefault( int margin, int spacing ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETLAYOUTDEFAULT )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      obj->setLayoutDefault( PINT(1), PINT(2) );
+      obj->setLayoutDefault( PINT( 1 ), PINT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -775,15 +775,15 @@ virtual void setLayoutFunction( const QString & margin, const QString & spacing 
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETLAYOUTFUNCTION )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISCHAR( 2 ) )
     {
 #endif
-      obj->setLayoutFunction( PQSTRING(1), PQSTRING(2) );
+      obj->setLayoutFunction( PQSTRING( 1 ), PQSTRING( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -801,15 +801,15 @@ virtual void setMainContainer( QWidget * mainContainer ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETMAINCONTAINER )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      obj->setMainContainer( PQWIDGET(1) );
+      obj->setMainContainer( PQWIDGET( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -827,15 +827,15 @@ virtual void setPixmapFunction( const QString & pixmapFunction ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETPIXMAPFUNCTION )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setPixmapFunction( PQSTRING(1) );
+      obj->setPixmapFunction( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -853,15 +853,15 @@ virtual void clearSelection( bool update = true ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CLEARSELECTION )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN( 0, 1 ) && ISOPTLOG( 1 ) )
     {
 #endif
-      obj->clearSelection( OPBOOL(1,true) );
+      obj->clearSelection( OPBOOL( 1, true ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -879,15 +879,15 @@ virtual void manageWidget( QWidget * widget ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_MANAGEWIDGET )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      obj->manageWidget( PQWIDGET(1) );
+      obj->manageWidget( PQWIDGET( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -905,15 +905,15 @@ virtual void selectWidget( QWidget * widget, bool select = true ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SELECTWIDGET )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQWIDGET(1) && ISOPTLOG(2) )
+    if( ISBETWEEN( 1, 2 ) && ISQWIDGET( 1 ) && ISOPTLOG( 2 ) )
     {
 #endif
-      obj->selectWidget( PQWIDGET(1), OPBOOL(2,true) );
+      obj->selectWidget( PQWIDGET( 1 ), OPBOOL( 2, true ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -931,11 +931,11 @@ virtual void setContents( QIODevice * device ) = 0
 */
 void QDesignerFormWindowInterface_setContents1()
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setContents( PQIODEVICE(1) );
+    obj->setContents( PQIODEVICE( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -946,11 +946,11 @@ virtual void setContents( const QString & contents ) = 0
 */
 void QDesignerFormWindowInterface_setContents2()
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setContents( PQSTRING(1) );
+    obj->setContents( PQSTRING( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -958,11 +958,11 @@ void QDesignerFormWindowInterface_setContents2()
 
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS )
 {
-  if( ISNUMPAR(1) && ISQIODEVICE(1) )
+  if( ISNUMPAR( 1 ) && ISQIODEVICE( 1 ) )
   {
     QDesignerFormWindowInterface_setContents1();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
     QDesignerFormWindowInterface_setContents2();
   }
@@ -977,15 +977,15 @@ virtual void setDirty( bool dirty ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETDIRTY )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setDirty( PBOOL(1) );
+      obj->setDirty( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1003,15 +1003,15 @@ virtual void setFeatures( QDesignerFormWindowInterface::Feature features ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETFEATURES )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setFeatures( (QDesignerFormWindowInterface::Feature) hb_parni(1) );
+      obj->setFeatures( ( QDesignerFormWindowInterface::Feature ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1029,15 +1029,15 @@ virtual void setFileName( const QString & fileName ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETFILENAME )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setFileName( PQSTRING(1) );
+      obj->setFileName( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1055,15 +1055,15 @@ virtual void setGrid( const QPoint & grid ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETGRID )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINT(1) )
+    if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
     {
 #endif
-      obj->setGrid( *PQPOINT(1) );
+      obj->setGrid( *PQPOINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1081,15 +1081,15 @@ virtual void unmanageWidget( QWidget * widget ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_UNMANAGEWIDGET )
 {
-  QDesignerFormWindowInterface * obj = (QDesignerFormWindowInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowInterface * obj = ( QDesignerFormWindowInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      obj->unmanageWidget( PQWIDGET(1) );
+      obj->unmanageWidget( PQWIDGET( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1108,7 +1108,7 @@ static QDesignerFormWindowInterface * findFormWindow( QWidget * widget )
 void QDesignerFormWindowInterface_findFormWindow1()
 {
 
-  QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow( PQWIDGET(1) );
+  QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow( PQWIDGET( 1 ) );
   Qt4xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
 }
 
@@ -1118,17 +1118,17 @@ static QDesignerFormWindowInterface * findFormWindow( QObject * object )
 void QDesignerFormWindowInterface_findFormWindow2()
 {
 
-  QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow( PQOBJECT(1) );
+  QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow( PQOBJECT( 1 ) );
   Qt4xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
 }
 
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW )
 {
-  if( ISNUMPAR(1) && ISQWIDGET(1) )
+  if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
     QDesignerFormWindowInterface_findFormWindow1();
   }
-  else if( ISNUMPAR(1) && ISQOBJECT(1) )
+  else if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
   {
     QDesignerFormWindowInterface_findFormWindow2();
   }

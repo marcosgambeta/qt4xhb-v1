@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -28,7 +28,7 @@ class QDesignerFormWindowInterfaceSlots: public QObject
 {
   Q_OBJECT
   public:
-  QDesignerFormWindowInterfaceSlots( QObject *parent = 0 );
+  QDesignerFormWindowInterfaceSlots( QObject * parent = 0 );
   ~QDesignerFormWindowInterfaceSlots();
   public slots:
   void aboutToUnmanageWidget( QWidget * widget );

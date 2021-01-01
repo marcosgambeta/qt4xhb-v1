@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -51,9 +51,9 @@ QExtensionFactory( QExtensionManager * parent = 0 )
 */
 HB_FUNC_STATIC( QEXTENSIONFACTORY_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQEXTENSIONMANAGER(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQEXTENSIONMANAGER( 1 ) || ISNIL( 1 ) ) )
   {
-    QExtensionFactory * obj = new QExtensionFactory( OPQEXTENSIONMANAGER(1,0) );
+    QExtensionFactory * obj = new QExtensionFactory( OPQEXTENSIONMANAGER( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_NEW )
 
 HB_FUNC_STATIC( QEXTENSIONFACTORY_DELETE )
 {
-  QExtensionFactory * obj = (QExtensionFactory *) Qt4xHb::itemGetPtrStackSelfItem();
+  QExtensionFactory * obj = ( QExtensionFactory * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -86,12 +86,12 @@ QExtensionManager * extensionManager() const
 */
 HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSIONMANAGER )
 {
-  QExtensionFactory * obj = (QExtensionFactory *) Qt4xHb::itemGetPtrStackSelfItem();
+  QExtensionFactory * obj = ( QExtensionFactory * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QExtensionManager * ptr = obj->extensionManager();
@@ -111,15 +111,15 @@ virtual QObject * extension( QObject * object, const QString & iid ) const
 */
 HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSION )
 {
-  QExtensionFactory * obj = (QExtensionFactory *) Qt4xHb::itemGetPtrStackSelfItem();
+  QExtensionFactory * obj = ( QExtensionFactory * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && ISCHAR( 2 ) )
     {
 #endif
-      QObject * ptr = obj->extension( PQOBJECT(1), PQSTRING(2) );
+      QObject * ptr = obj->extension( PQOBJECT( 1 ), PQSTRING( 2 ) );
       Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -54,7 +54,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_DELETE )
 {
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerPropertyEditorInterface * obj = ( QDesignerPropertyEditorInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -76,12 +76,12 @@ virtual QDesignerFormEditorInterface * core() const
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CORE )
 {
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerPropertyEditorInterface * obj = ( QDesignerPropertyEditorInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QDesignerFormEditorInterface * ptr = obj->core();
@@ -101,12 +101,12 @@ virtual QString currentPropertyName() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CURRENTPROPERTYNAME )
 {
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerPropertyEditorInterface * obj = ( QDesignerPropertyEditorInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->currentPropertyName() );
@@ -125,12 +125,12 @@ virtual bool isReadOnly() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ISREADONLY )
 {
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerPropertyEditorInterface * obj = ( QDesignerPropertyEditorInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isReadOnly() );
@@ -149,12 +149,12 @@ virtual QObject * object() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_OBJECT )
 {
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerPropertyEditorInterface * obj = ( QDesignerPropertyEditorInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QObject * ptr = obj->object();
@@ -174,15 +174,15 @@ virtual void setObject( QObject * object ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETOBJECT )
 {
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerPropertyEditorInterface * obj = ( QDesignerPropertyEditorInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQOBJECT(1) )
+    if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
     {
 #endif
-      obj->setObject( PQOBJECT(1) );
+      obj->setObject( PQOBJECT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -200,15 +200,15 @@ virtual void setPropertyValue( const QString & name, const QVariant & value, boo
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETPROPERTYVALUE )
 {
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerPropertyEditorInterface * obj = ( QDesignerPropertyEditorInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISCHAR(1) && ISQVARIANT(2) && ISOPTLOG(3) )
+    if( ISBETWEEN( 2, 3 ) && ISCHAR( 1 ) && ISQVARIANT( 2 ) && ISOPTLOG( 3 ) )
     {
 #endif
-      obj->setPropertyValue( PQSTRING(1), *PQVARIANT(2), OPBOOL(3,true) );
+      obj->setPropertyValue( PQSTRING( 1 ), *PQVARIANT( 2 ), OPBOOL( 3, true ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,15 +226,15 @@ virtual void setReadOnly( bool readOnly ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETREADONLY )
 {
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerPropertyEditorInterface * obj = ( QDesignerPropertyEditorInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setReadOnly( PBOOL(1) );
+      obj->setReadOnly( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

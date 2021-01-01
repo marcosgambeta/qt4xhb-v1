@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QDesignerPropertyEditorInterfaceSlots.h"
 
-QDesignerPropertyEditorInterfaceSlots::QDesignerPropertyEditorInterfaceSlots( QObject *parent ) : QObject( parent )
+QDesignerPropertyEditorInterfaceSlots::QDesignerPropertyEditorInterfaceSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,15 +22,15 @@ QDesignerPropertyEditorInterfaceSlots::~QDesignerPropertyEditorInterfaceSlots()
 
 void QDesignerPropertyEditorInterfaceSlots::propertyChanged( const QString & name, const QVariant & value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "propertyChanged(QString,QVariant)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDESIGNERPROPERTYEDITORINTERFACE" );
-    PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
-    PHB_ITEM pvalue = Qt4xHb::Signals_return_object( (void *) &value, "QVARIANT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDESIGNERPROPERTYEDITORINTERFACE" );
+    PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING( name ) );
+    PHB_ITEM pvalue = Qt4xHb::Signals_return_object( ( void * ) &value, "QVARIANT" );
 
     hb_vmEvalBlockV( cb, 3, psender, pname, pvalue );
 
@@ -42,7 +42,7 @@ void QDesignerPropertyEditorInterfaceSlots::propertyChanged( const QString & nam
 
 void QDesignerPropertyEditorInterfaceSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDesignerPropertyEditorInterface * obj = (QDesignerPropertyEditorInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerPropertyEditorInterface * obj = ( QDesignerPropertyEditorInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
