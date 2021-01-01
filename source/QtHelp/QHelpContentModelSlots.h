@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -28,7 +28,7 @@ class QHelpContentModelSlots: public QObject
 {
   Q_OBJECT
   public:
-  QHelpContentModelSlots( QObject *parent = 0 );
+  QHelpContentModelSlots( QObject * parent = 0 );
   ~QHelpContentModelSlots();
   public slots:
   void contentsCreated();

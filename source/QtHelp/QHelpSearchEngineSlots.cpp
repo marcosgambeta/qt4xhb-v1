@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QHelpSearchEngineSlots.h"
 
-QHelpSearchEngineSlots::QHelpSearchEngineSlots( QObject *parent ) : QObject( parent )
+QHelpSearchEngineSlots::QHelpSearchEngineSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QHelpSearchEngineSlots::~QHelpSearchEngineSlots()
 
 void QHelpSearchEngineSlots::indexingFinished()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "indexingFinished()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QHELPSEARCHENGINE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QHELPSEARCHENGINE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,13 +38,13 @@ void QHelpSearchEngineSlots::indexingFinished()
 
 void QHelpSearchEngineSlots::indexingStarted()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "indexingStarted()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QHELPSEARCHENGINE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QHELPSEARCHENGINE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -54,13 +54,13 @@ void QHelpSearchEngineSlots::indexingStarted()
 
 void QHelpSearchEngineSlots::searchingFinished( int hits )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "searchingFinished(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QHELPSEARCHENGINE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QHELPSEARCHENGINE" );
     PHB_ITEM phits = hb_itemPutNI( NULL, hits );
 
     hb_vmEvalBlockV( cb, 2, psender, phits );
@@ -72,13 +72,13 @@ void QHelpSearchEngineSlots::searchingFinished( int hits )
 
 void QHelpSearchEngineSlots::searchingStarted()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "searchingStarted()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QHELPSEARCHENGINE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QHELPSEARCHENGINE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -88,7 +88,7 @@ void QHelpSearchEngineSlots::searchingStarted()
 
 void QHelpSearchEngineSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpSearchEngine * obj = (QHelpSearchEngine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpSearchEngine * obj = ( QHelpSearchEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

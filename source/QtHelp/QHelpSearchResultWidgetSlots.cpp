@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QHelpSearchResultWidgetSlots.h"
 
-QHelpSearchResultWidgetSlots::QHelpSearchResultWidgetSlots( QObject *parent ) : QObject( parent )
+QHelpSearchResultWidgetSlots::QHelpSearchResultWidgetSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,14 +22,14 @@ QHelpSearchResultWidgetSlots::~QHelpSearchResultWidgetSlots()
 
 void QHelpSearchResultWidgetSlots::requestShowLink( const QUrl & link )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "requestShowLink(QUrl)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QHELPSEARCHRESULTWIDGET" );
-    PHB_ITEM plink = Qt4xHb::Signals_return_object( (void *) &link, "QURL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QHELPSEARCHRESULTWIDGET" );
+    PHB_ITEM plink = Qt4xHb::Signals_return_object( ( void * ) &link, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, plink );
 
@@ -40,7 +40,7 @@ void QHelpSearchResultWidgetSlots::requestShowLink( const QUrl & link )
 
 void QHelpSearchResultWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpSearchResultWidget * obj = (QHelpSearchResultWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpSearchResultWidget * obj = ( QHelpSearchResultWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QHelpContentWidgetSlots.h"
 
-QHelpContentWidgetSlots::QHelpContentWidgetSlots( QObject *parent ) : QObject( parent )
+QHelpContentWidgetSlots::QHelpContentWidgetSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,14 +22,14 @@ QHelpContentWidgetSlots::~QHelpContentWidgetSlots()
 
 void QHelpContentWidgetSlots::linkActivated( const QUrl & link )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "linkActivated(QUrl)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QHELPCONTENTWIDGET" );
-    PHB_ITEM plink = Qt4xHb::Signals_return_object( (void *) &link, "QURL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QHELPCONTENTWIDGET" );
+    PHB_ITEM plink = Qt4xHb::Signals_return_object( ( void * ) &link, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, plink );
 
@@ -40,7 +40,7 @@ void QHelpContentWidgetSlots::linkActivated( const QUrl & link )
 
 void QHelpContentWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpContentWidget * obj = (QHelpContentWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpContentWidget * obj = ( QHelpContentWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

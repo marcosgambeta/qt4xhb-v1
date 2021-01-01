@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QHelpEngineCoreSlots.h"
 
-QHelpEngineCoreSlots::QHelpEngineCoreSlots( QObject *parent ) : QObject( parent )
+QHelpEngineCoreSlots::QHelpEngineCoreSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,14 +22,14 @@ QHelpEngineCoreSlots::~QHelpEngineCoreSlots()
 
 void QHelpEngineCoreSlots::currentFilterChanged( const QString & newFilter )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentFilterChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QHELPENGINECORE" );
-    PHB_ITEM pnewFilter = hb_itemPutC( NULL, QSTRINGTOSTRING(newFilter) );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QHELPENGINECORE" );
+    PHB_ITEM pnewFilter = hb_itemPutC( NULL, QSTRINGTOSTRING( newFilter ) );
 
     hb_vmEvalBlockV( cb, 2, psender, pnewFilter );
 
@@ -40,13 +40,13 @@ void QHelpEngineCoreSlots::currentFilterChanged( const QString & newFilter )
 
 void QHelpEngineCoreSlots::setupFinished()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "setupFinished()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QHELPENGINECORE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QHELPENGINECORE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -56,13 +56,13 @@ void QHelpEngineCoreSlots::setupFinished()
 
 void QHelpEngineCoreSlots::setupStarted()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "setupStarted()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QHELPENGINECORE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QHELPENGINECORE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -72,14 +72,14 @@ void QHelpEngineCoreSlots::setupStarted()
 
 void QHelpEngineCoreSlots::warning( const QString & msg )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "warning(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QHELPENGINECORE" );
-    PHB_ITEM pmsg = hb_itemPutC( NULL, QSTRINGTOSTRING(msg) );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QHELPENGINECORE" );
+    PHB_ITEM pmsg = hb_itemPutC( NULL, QSTRINGTOSTRING( msg ) );
 
     hb_vmEvalBlockV( cb, 2, psender, pmsg );
 
@@ -90,7 +90,7 @@ void QHelpEngineCoreSlots::warning( const QString & msg )
 
 void QHelpEngineCoreSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpEngineCore * obj = (QHelpEngineCore *) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = ( QHelpEngineCore * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

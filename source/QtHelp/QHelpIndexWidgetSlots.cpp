@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QHelpIndexWidgetSlots.h"
 
-QHelpIndexWidgetSlots::QHelpIndexWidgetSlots( QObject *parent ) : QObject( parent )
+QHelpIndexWidgetSlots::QHelpIndexWidgetSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,15 +22,15 @@ QHelpIndexWidgetSlots::~QHelpIndexWidgetSlots()
 
 void QHelpIndexWidgetSlots::linkActivated( const QUrl & link, const QString & keyword )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "linkActivated(QUrl,QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QHELPINDEXWIDGET" );
-    PHB_ITEM plink = Qt4xHb::Signals_return_object( (void *) &link, "QURL" );
-    PHB_ITEM pkeyword = hb_itemPutC( NULL, QSTRINGTOSTRING(keyword) );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QHELPINDEXWIDGET" );
+    PHB_ITEM plink = Qt4xHb::Signals_return_object( ( void * ) &link, "QURL" );
+    PHB_ITEM pkeyword = hb_itemPutC( NULL, QSTRINGTOSTRING( keyword ) );
 
     hb_vmEvalBlockV( cb, 3, psender, plink, pkeyword );
 
@@ -42,7 +42,7 @@ void QHelpIndexWidgetSlots::linkActivated( const QUrl & link, const QString & ke
 
 void QHelpIndexWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpIndexWidget * obj = (QHelpIndexWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpIndexWidget * obj = ( QHelpIndexWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
