@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QMovieSlots.h"
 
-QMovieSlots::QMovieSlots( QObject *parent ) : QObject( parent )
+QMovieSlots::QMovieSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QMovieSlots::~QMovieSlots()
 
 void QMovieSlots::error( QImageReader::ImageReaderError error )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "error(QImageReader::ImageReaderError)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QMOVIE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QMOVIE" );
     PHB_ITEM perror = hb_itemPutNI( NULL, (int) error );
 
     hb_vmEvalBlockV( cb, 2, psender, perror );
@@ -40,13 +40,13 @@ void QMovieSlots::error( QImageReader::ImageReaderError error )
 
 void QMovieSlots::finished()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "finished()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QMOVIE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QMOVIE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -56,13 +56,13 @@ void QMovieSlots::finished()
 
 void QMovieSlots::frameChanged( int frameNumber )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "frameChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QMOVIE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QMOVIE" );
     PHB_ITEM pframeNumber = hb_itemPutNI( NULL, frameNumber );
 
     hb_vmEvalBlockV( cb, 2, psender, pframeNumber );
@@ -74,14 +74,14 @@ void QMovieSlots::frameChanged( int frameNumber )
 
 void QMovieSlots::resized( const QSize & size )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "resized(QSize)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QMOVIE" );
-    PHB_ITEM psize = Qt4xHb::Signals_return_object( (void *) &size, "QSIZE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QMOVIE" );
+    PHB_ITEM psize = Qt4xHb::Signals_return_object( ( void * ) &size, "QSIZE" );
 
     hb_vmEvalBlockV( cb, 2, psender, psize );
 
@@ -92,13 +92,13 @@ void QMovieSlots::resized( const QSize & size )
 
 void QMovieSlots::started()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "started()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QMOVIE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QMOVIE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -108,13 +108,13 @@ void QMovieSlots::started()
 
 void QMovieSlots::stateChanged( QMovie::MovieState state )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "stateChanged(QMovie::MovieState)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QMOVIE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QMOVIE" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
 
     hb_vmEvalBlockV( cb, 2, psender, pstate );
@@ -126,14 +126,14 @@ void QMovieSlots::stateChanged( QMovie::MovieState state )
 
 void QMovieSlots::updated( const QRect & rect )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "updated(QRect)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QMOVIE" );
-    PHB_ITEM prect = Qt4xHb::Signals_return_object( (void *) &rect, "QRECT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QMOVIE" );
+    PHB_ITEM prect = Qt4xHb::Signals_return_object( ( void * ) &rect, "QRECT" );
 
     hb_vmEvalBlockV( cb, 2, psender, prect );
 
@@ -144,7 +144,7 @@ void QMovieSlots::updated( const QRect & rect )
 
 void QMovieSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

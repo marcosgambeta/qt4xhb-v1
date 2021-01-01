@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -61,9 +61,9 @@ QFrame( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QFRAME_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
+  if( ISBETWEEN( 0, 2 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) && ISOPTNUM( 2 ) )
   {
-    QFrame * obj = new QFrame( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+    QFrame * obj = new QFrame( OPQWIDGET( 1, 0 ), ISNIL( 2 )? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 2 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QFRAME_NEW )
 
 HB_FUNC_STATIC( QFRAME_DELETE )
 {
-  QFrame * obj = (QFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFrame * obj = ( QFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -96,12 +96,12 @@ QRect frameRect() const
 */
 HB_FUNC_STATIC( QFRAME_FRAMERECT )
 {
-  QFrame * obj = (QFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFrame * obj = ( QFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QRect * ptr = new QRect( obj->frameRect() );
@@ -121,12 +121,12 @@ QFrame::Shadow frameShadow() const
 */
 HB_FUNC_STATIC( QFRAME_FRAMESHADOW )
 {
-  QFrame * obj = (QFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFrame * obj = ( QFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->frameShadow() );
@@ -145,12 +145,12 @@ QFrame::Shape frameShape() const
 */
 HB_FUNC_STATIC( QFRAME_FRAMESHAPE )
 {
-  QFrame * obj = (QFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFrame * obj = ( QFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->frameShape() );
@@ -169,12 +169,12 @@ int frameStyle() const
 */
 HB_FUNC_STATIC( QFRAME_FRAMESTYLE )
 {
-  QFrame * obj = (QFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFrame * obj = ( QFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->frameStyle() );
@@ -193,12 +193,12 @@ int frameWidth() const
 */
 HB_FUNC_STATIC( QFRAME_FRAMEWIDTH )
 {
-  QFrame * obj = (QFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFrame * obj = ( QFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->frameWidth() );
@@ -217,12 +217,12 @@ int lineWidth() const
 */
 HB_FUNC_STATIC( QFRAME_LINEWIDTH )
 {
-  QFrame * obj = (QFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFrame * obj = ( QFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->lineWidth() );
@@ -241,12 +241,12 @@ int midLineWidth() const
 */
 HB_FUNC_STATIC( QFRAME_MIDLINEWIDTH )
 {
-  QFrame * obj = (QFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFrame * obj = ( QFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->midLineWidth() );
@@ -265,15 +265,15 @@ void setFrameRect( const QRect & )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMERECT )
 {
-  QFrame * obj = (QFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFrame * obj = ( QFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQRECT(1) )
+    if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
     {
 #endif
-      obj->setFrameRect( *PQRECT(1) );
+      obj->setFrameRect( *PQRECT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,15 +291,15 @@ void setFrameShadow( QFrame::Shadow )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMESHADOW )
 {
-  QFrame * obj = (QFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFrame * obj = ( QFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setFrameShadow( (QFrame::Shadow) hb_parni(1) );
+      obj->setFrameShadow( ( QFrame::Shadow ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,15 +317,15 @@ void setFrameShape( QFrame::Shape )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMESHAPE )
 {
-  QFrame * obj = (QFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFrame * obj = ( QFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setFrameShape( (QFrame::Shape) hb_parni(1) );
+      obj->setFrameShape( ( QFrame::Shape ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -343,15 +343,15 @@ void setFrameStyle( int style )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMESTYLE )
 {
-  QFrame * obj = (QFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFrame * obj = ( QFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setFrameStyle( PINT(1) );
+      obj->setFrameStyle( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -369,15 +369,15 @@ void setLineWidth( int )
 */
 HB_FUNC_STATIC( QFRAME_SETLINEWIDTH )
 {
-  QFrame * obj = (QFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFrame * obj = ( QFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setLineWidth( PINT(1) );
+      obj->setLineWidth( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -395,15 +395,15 @@ void setMidLineWidth( int )
 */
 HB_FUNC_STATIC( QFRAME_SETMIDLINEWIDTH )
 {
-  QFrame * obj = (QFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFrame * obj = ( QFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setMidLineWidth( PINT(1) );
+      obj->setMidLineWidth( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -421,12 +421,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QFRAME_SIZEHINT )
 {
-  QFrame * obj = (QFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFrame * obj = ( QFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );

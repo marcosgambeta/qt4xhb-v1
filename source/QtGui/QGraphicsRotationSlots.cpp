@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QGraphicsRotationSlots.h"
 
-QGraphicsRotationSlots::QGraphicsRotationSlots( QObject *parent ) : QObject( parent )
+QGraphicsRotationSlots::QGraphicsRotationSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QGraphicsRotationSlots::~QGraphicsRotationSlots()
 
 void QGraphicsRotationSlots::angleChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "angleChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSROTATION" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSROTATION" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,13 +38,13 @@ void QGraphicsRotationSlots::angleChanged()
 
 void QGraphicsRotationSlots::axisChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "axisChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSROTATION" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSROTATION" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -54,13 +54,13 @@ void QGraphicsRotationSlots::axisChanged()
 
 void QGraphicsRotationSlots::originChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "originChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSROTATION" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSROTATION" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -70,7 +70,7 @@ void QGraphicsRotationSlots::originChanged()
 
 void QGraphicsRotationSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsRotation * obj = (QGraphicsRotation *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsRotation * obj = ( QGraphicsRotation * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

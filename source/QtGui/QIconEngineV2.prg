@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -47,7 +47,7 @@ RETURN
 
 HB_FUNC_STATIC( QICONENGINEV2_DELETE )
 {
-  QIconEngineV2 * obj = (QIconEngineV2 *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIconEngineV2 * obj = ( QIconEngineV2 * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -67,17 +67,17 @@ QList<QSize> availableSizes( QIcon::Mode mode = QIcon::Normal, QIcon::State stat
 */
 HB_FUNC_STATIC( QICONENGINEV2_AVAILABLESIZES )
 {
-  QIconEngineV2 * obj = (QIconEngineV2 *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIconEngineV2 * obj = ( QIconEngineV2 * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN( 0, 2 ) && ISOPTNUM( 1 ) && ISOPTNUM( 2 ) )
     {
 #endif
-      QList<QSize> list = obj->availableSizes( ISNIL(1)? (QIcon::Mode) QIcon::Normal : (QIcon::Mode) hb_parni(1), ISNIL(2)? (QIcon::State) QIcon::Off : (QIcon::State) hb_parni(2) );
+      QList<QSize> list = obj->availableSizes( ISNIL( 1 )? ( QIcon::Mode ) QIcon::Normal : ( QIcon::Mode ) hb_parni( 1 ), ISNIL( 2 )? ( QIcon::State ) QIcon::Off : ( QIcon::State ) hb_parni( 2 ) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSIZE" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QICONENGINEV2_AVAILABLESIZES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QSize *) new QSize( list[i] ) );
+          hb_itemPutPtr( pItem, ( QSize * ) new QSize( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -119,12 +119,12 @@ virtual QIconEngineV2 * clone() const
 */
 HB_FUNC_STATIC( QICONENGINEV2_CLONE )
 {
-  QIconEngineV2 * obj = (QIconEngineV2 *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIconEngineV2 * obj = ( QIconEngineV2 * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QIconEngineV2 * ptr = obj->clone();
@@ -144,12 +144,12 @@ QString iconName()
 */
 HB_FUNC_STATIC( QICONENGINEV2_ICONNAME )
 {
-  QIconEngineV2 * obj = (QIconEngineV2 *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIconEngineV2 * obj = ( QIconEngineV2 * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->iconName() );
@@ -168,12 +168,12 @@ virtual QString key() const
 */
 HB_FUNC_STATIC( QICONENGINEV2_KEY )
 {
-  QIconEngineV2 * obj = (QIconEngineV2 *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIconEngineV2 * obj = ( QIconEngineV2 * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->key() );
@@ -192,15 +192,15 @@ virtual bool read( QDataStream & in )
 */
 HB_FUNC_STATIC( QICONENGINEV2_READ )
 {
-  QIconEngineV2 * obj = (QIconEngineV2 *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIconEngineV2 * obj = ( QIconEngineV2 * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATASTREAM(1) )
+    if( ISNUMPAR( 1 ) && ISQDATASTREAM( 1 ) )
     {
 #endif
-      RBOOL( obj->read( *PQDATASTREAM(1) ) );
+      RBOOL( obj->read( *PQDATASTREAM( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,15 +216,15 @@ virtual void virtual_hook( int id, void * data )
 */
 HB_FUNC_STATIC( QICONENGINEV2_VIRTUAL_HOOK )
 {
-  QIconEngineV2 * obj = (QIconEngineV2 *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIconEngineV2 * obj = ( QIconEngineV2 * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISPOINTER(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISPOINTER( 2 ) )
     {
 #endif
-      obj->virtual_hook( PINT(1), (void *) hb_parptr(2) );
+      obj->virtual_hook( PINT( 1 ), ( void * ) hb_parptr( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -242,15 +242,15 @@ virtual bool write( QDataStream & out ) const
 */
 HB_FUNC_STATIC( QICONENGINEV2_WRITE )
 {
-  QIconEngineV2 * obj = (QIconEngineV2 *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIconEngineV2 * obj = ( QIconEngineV2 * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATASTREAM(1) )
+    if( ISNUMPAR( 1 ) && ISQDATASTREAM( 1 ) )
     {
 #endif
-      RBOOL( obj->write( *PQDATASTREAM(1) ) );
+      RBOOL( obj->write( *PQDATASTREAM( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

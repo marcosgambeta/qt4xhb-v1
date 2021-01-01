@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -82,9 +82,9 @@ QListView( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QLISTVIEW_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
   {
-    QListView * obj = new QListView( OPQWIDGET(1,0) );
+    QListView * obj = new QListView( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QLISTVIEW_NEW )
 
 HB_FUNC_STATIC( QLISTVIEW_DELETE )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -117,12 +117,12 @@ int batchSize() const
 */
 HB_FUNC_STATIC( QLISTVIEW_BATCHSIZE )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->batchSize() );
@@ -141,12 +141,12 @@ void clearPropertyFlags()
 */
 HB_FUNC_STATIC( QLISTVIEW_CLEARPROPERTYFLAGS )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->clearPropertyFlags();
@@ -167,12 +167,12 @@ QListView::Flow flow() const
 */
 HB_FUNC_STATIC( QLISTVIEW_FLOW )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->flow() );
@@ -191,12 +191,12 @@ QSize gridSize() const
 */
 HB_FUNC_STATIC( QLISTVIEW_GRIDSIZE )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->gridSize() );
@@ -216,15 +216,15 @@ bool isRowHidden( int row ) const
 */
 HB_FUNC_STATIC( QLISTVIEW_ISROWHIDDEN )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->isRowHidden( PINT(1) ) );
+      RBOOL( obj->isRowHidden( PINT( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,12 +240,12 @@ bool isSelectionRectVisible() const
 */
 HB_FUNC_STATIC( QLISTVIEW_ISSELECTIONRECTVISIBLE )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isSelectionRectVisible() );
@@ -264,12 +264,12 @@ bool isWrapping() const
 */
 HB_FUNC_STATIC( QLISTVIEW_ISWRAPPING )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isWrapping() );
@@ -288,12 +288,12 @@ QListView::LayoutMode layoutMode() const
 */
 HB_FUNC_STATIC( QLISTVIEW_LAYOUTMODE )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->layoutMode() );
@@ -312,12 +312,12 @@ int modelColumn() const
 */
 HB_FUNC_STATIC( QLISTVIEW_MODELCOLUMN )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->modelColumn() );
@@ -336,12 +336,12 @@ QListView::Movement movement() const
 */
 HB_FUNC_STATIC( QLISTVIEW_MOVEMENT )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->movement() );
@@ -360,12 +360,12 @@ QListView::ResizeMode resizeMode() const
 */
 HB_FUNC_STATIC( QLISTVIEW_RESIZEMODE )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->resizeMode() );
@@ -384,15 +384,15 @@ void setBatchSize( int batchSize )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETBATCHSIZE )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setBatchSize( PINT(1) );
+      obj->setBatchSize( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -410,15 +410,15 @@ void setFlow( QListView::Flow flow )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETFLOW )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setFlow( (QListView::Flow) hb_parni(1) );
+      obj->setFlow( ( QListView::Flow ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -436,15 +436,15 @@ void setGridSize( const QSize & size )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETGRIDSIZE )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZE(1) )
+    if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
     {
 #endif
-      obj->setGridSize( *PQSIZE(1) );
+      obj->setGridSize( *PQSIZE( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -462,15 +462,15 @@ void setLayoutMode( QListView::LayoutMode mode )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETLAYOUTMODE )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setLayoutMode( (QListView::LayoutMode) hb_parni(1) );
+      obj->setLayoutMode( ( QListView::LayoutMode ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -488,15 +488,15 @@ void setModelColumn( int column )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETMODELCOLUMN )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setModelColumn( PINT(1) );
+      obj->setModelColumn( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -514,15 +514,15 @@ void setMovement( QListView::Movement movement )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETMOVEMENT )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setMovement( (QListView::Movement) hb_parni(1) );
+      obj->setMovement( ( QListView::Movement ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -540,15 +540,15 @@ void setResizeMode( QListView::ResizeMode mode )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETRESIZEMODE )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setResizeMode( (QListView::ResizeMode) hb_parni(1) );
+      obj->setResizeMode( ( QListView::ResizeMode ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -566,15 +566,15 @@ void setRowHidden( int row, bool hide )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETROWHIDDEN )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISLOG( 2 ) )
     {
 #endif
-      obj->setRowHidden( PINT(1), PBOOL(2) );
+      obj->setRowHidden( PINT( 1 ), PBOOL( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -592,15 +592,15 @@ void setSelectionRectVisible( bool show )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETSELECTIONRECTVISIBLE )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setSelectionRectVisible( PBOOL(1) );
+      obj->setSelectionRectVisible( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -618,15 +618,15 @@ void setSpacing( int space )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETSPACING )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setSpacing( PINT(1) );
+      obj->setSpacing( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -644,15 +644,15 @@ void setUniformItemSizes( bool enable )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETUNIFORMITEMSIZES )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setUniformItemSizes( PBOOL(1) );
+      obj->setUniformItemSizes( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -670,15 +670,15 @@ void setViewMode( QListView::ViewMode mode )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETVIEWMODE )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setViewMode( (QListView::ViewMode) hb_parni(1) );
+      obj->setViewMode( ( QListView::ViewMode ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -696,15 +696,15 @@ void setWordWrap( bool on )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETWORDWRAP )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setWordWrap( PBOOL(1) );
+      obj->setWordWrap( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -722,15 +722,15 @@ void setWrapping( bool enable )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETWRAPPING )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setWrapping( PBOOL(1) );
+      obj->setWrapping( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -748,12 +748,12 @@ int spacing() const
 */
 HB_FUNC_STATIC( QLISTVIEW_SPACING )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->spacing() );
@@ -772,12 +772,12 @@ bool uniformItemSizes() const
 */
 HB_FUNC_STATIC( QLISTVIEW_UNIFORMITEMSIZES )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->uniformItemSizes() );
@@ -796,12 +796,12 @@ QListView::ViewMode viewMode() const
 */
 HB_FUNC_STATIC( QLISTVIEW_VIEWMODE )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->viewMode() );
@@ -820,12 +820,12 @@ bool wordWrap() const
 */
 HB_FUNC_STATIC( QLISTVIEW_WORDWRAP )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->wordWrap() );
@@ -844,15 +844,15 @@ virtual QModelIndex indexAt( const QPoint & p ) const
 */
 HB_FUNC_STATIC( QLISTVIEW_INDEXAT )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINT(1) )
+    if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->indexAt( *PQPOINT(1) ) );
+      QModelIndex * ptr = new QModelIndex( obj->indexAt( *PQPOINT( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -869,15 +869,15 @@ virtual void scrollTo( const QModelIndex & index, QListView::ScrollHint hint = Q
 */
 HB_FUNC_STATIC( QLISTVIEW_SCROLLTO )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && ISOPTNUM(2) )
+    if( ISBETWEEN( 1, 2 ) && ISQMODELINDEX( 1 ) && ISOPTNUM( 2 ) )
     {
 #endif
-      obj->scrollTo( *PQMODELINDEX(1), ISNIL(2)? (QListView::ScrollHint) QListView::EnsureVisible : (QListView::ScrollHint) hb_parni(2) );
+      obj->scrollTo( *PQMODELINDEX( 1 ), ISNIL( 2 )? ( QListView::ScrollHint ) QListView::EnsureVisible : ( QListView::ScrollHint ) hb_parni( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -895,15 +895,15 @@ virtual QRect visualRect( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QLISTVIEW_VISUALRECT )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      QRect * ptr = new QRect( obj->visualRect( *PQMODELINDEX(1) ) );
+      QRect * ptr = new QRect( obj->visualRect( *PQMODELINDEX( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

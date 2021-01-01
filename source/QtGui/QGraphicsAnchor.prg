@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -46,7 +46,7 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSANCHOR_DELETE )
 {
-  QGraphicsAnchor * obj = (QGraphicsAnchor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsAnchor * obj = ( QGraphicsAnchor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -68,15 +68,15 @@ void setSizePolicy( QSizePolicy::Policy policy )
 */
 HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSIZEPOLICY )
 {
-  QGraphicsAnchor * obj = (QGraphicsAnchor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsAnchor * obj = ( QGraphicsAnchor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setSizePolicy( (QSizePolicy::Policy) hb_parni(1) );
+      obj->setSizePolicy( ( QSizePolicy::Policy ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -94,15 +94,15 @@ void setSpacing( qreal spacing )
 */
 HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSPACING )
 {
-  QGraphicsAnchor * obj = (QGraphicsAnchor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsAnchor * obj = ( QGraphicsAnchor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setSpacing( PQREAL(1) );
+      obj->setSpacing( PQREAL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,12 +120,12 @@ QSizePolicy::Policy sizePolicy() const
 */
 HB_FUNC_STATIC( QGRAPHICSANCHOR_SIZEPOLICY )
 {
-  QGraphicsAnchor * obj = (QGraphicsAnchor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsAnchor * obj = ( QGraphicsAnchor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->sizePolicy() );
@@ -144,12 +144,12 @@ qreal spacing() const
 */
 HB_FUNC_STATIC( QGRAPHICSANCHOR_SPACING )
 {
-  QGraphicsAnchor * obj = (QGraphicsAnchor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsAnchor * obj = ( QGraphicsAnchor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->spacing() );
@@ -168,12 +168,12 @@ void unsetSpacing()
 */
 HB_FUNC_STATIC( QGRAPHICSANCHOR_UNSETSPACING )
 {
-  QGraphicsAnchor * obj = (QGraphicsAnchor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsAnchor * obj = ( QGraphicsAnchor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->unsetSpacing();

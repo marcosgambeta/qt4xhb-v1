@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QGraphicsOpacityEffectSlots.h"
 
-QGraphicsOpacityEffectSlots::QGraphicsOpacityEffectSlots( QObject *parent ) : QObject( parent )
+QGraphicsOpacityEffectSlots::QGraphicsOpacityEffectSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QGraphicsOpacityEffectSlots::~QGraphicsOpacityEffectSlots()
 
 void QGraphicsOpacityEffectSlots::opacityChanged( qreal opacity )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "opacityChanged(qreal)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSOPACITYEFFECT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSOPACITYEFFECT" );
     PHB_ITEM popacity = hb_itemPutND( NULL, opacity );
 
     hb_vmEvalBlockV( cb, 2, psender, popacity );
@@ -40,14 +40,14 @@ void QGraphicsOpacityEffectSlots::opacityChanged( qreal opacity )
 
 void QGraphicsOpacityEffectSlots::opacityMaskChanged( const QBrush & mask )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "opacityMaskChanged(QBrush)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSOPACITYEFFECT" );
-    PHB_ITEM pmask = Qt4xHb::Signals_return_object( (void *) &mask, "QBRUSH" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSOPACITYEFFECT" );
+    PHB_ITEM pmask = Qt4xHb::Signals_return_object( ( void * ) &mask, "QBRUSH" );
 
     hb_vmEvalBlockV( cb, 2, psender, pmask );
 
@@ -58,7 +58,7 @@ void QGraphicsOpacityEffectSlots::opacityMaskChanged( const QBrush & mask )
 
 void QGraphicsOpacityEffectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsOpacityEffect * obj = ( QGraphicsOpacityEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -106,9 +106,9 @@ QTabBar( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QTABBAR_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
   {
-    QTabBar * obj = new QTabBar( OPQWIDGET(1,0) );
+    QTabBar * obj = new QTabBar( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QTABBAR_NEW )
 
 HB_FUNC_STATIC( QTABBAR_DELETE )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -141,11 +141,11 @@ int addTab( const QString & text )
 */
 void QTabBar_addTab1()
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RINT( obj->addTab( PQSTRING(1) ) );
+    RINT( obj->addTab( PQSTRING( 1 ) ) );
   }
 }
 
@@ -154,21 +154,21 @@ int addTab( const QIcon & icon, const QString & text )
 */
 void QTabBar_addTab2()
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RINT( obj->addTab( ISOBJECT(1)? *(QIcon *) Qt4xHb::itemGetPtr(1) : QIcon(hb_parc(1)), PQSTRING(2) ) );
+    RINT( obj->addTab( ISOBJECT( 1 )? *( QIcon * ) Qt4xHb::itemGetPtr( 1 ) : QIcon( hb_parc( 1 ) ), PQSTRING( 2 ) ) );
   }
 }
 
 HB_FUNC_STATIC( QTABBAR_ADDTAB )
 {
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
     QTabBar_addTab1();
   }
-  else if( ISNUMPAR(2) && (ISQICON(1)||ISCHAR(1)) && ISCHAR(2) )
+  else if( ISNUMPAR( 2 ) && ( ISQICON( 1 ) || ISCHAR( 1 ) ) && ISCHAR( 2 ) )
   {
     QTabBar_addTab2();
   }
@@ -183,12 +183,12 @@ int count() const
 */
 HB_FUNC_STATIC( QTABBAR_COUNT )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->count() );
@@ -207,12 +207,12 @@ int currentIndex() const
 */
 HB_FUNC_STATIC( QTABBAR_CURRENTINDEX )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->currentIndex() );
@@ -231,12 +231,12 @@ bool documentMode() const
 */
 HB_FUNC_STATIC( QTABBAR_DOCUMENTMODE )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->documentMode() );
@@ -255,12 +255,12 @@ bool drawBase() const
 */
 HB_FUNC_STATIC( QTABBAR_DRAWBASE )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->drawBase() );
@@ -279,12 +279,12 @@ Qt::TextElideMode elideMode() const
 */
 HB_FUNC_STATIC( QTABBAR_ELIDEMODE )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->elideMode() );
@@ -303,12 +303,12 @@ bool expanding() const
 */
 HB_FUNC_STATIC( QTABBAR_EXPANDING )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->expanding() );
@@ -327,12 +327,12 @@ QSize iconSize() const
 */
 HB_FUNC_STATIC( QTABBAR_ICONSIZE )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->iconSize() );
@@ -352,11 +352,11 @@ int insertTab( int index, const QString & text )
 */
 void QTabBar_insertTab1()
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RINT( obj->insertTab( PINT(1), PQSTRING(2) ) );
+    RINT( obj->insertTab( PINT( 1 ), PQSTRING( 2 ) ) );
   }
 }
 
@@ -365,21 +365,21 @@ int insertTab( int index, const QIcon & icon, const QString & text )
 */
 void QTabBar_insertTab2()
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RINT( obj->insertTab( PINT(1), ISOBJECT(2)? *(QIcon *) Qt4xHb::itemGetPtr(2) : QIcon(hb_parc(2)), PQSTRING(3) ) );
+    RINT( obj->insertTab( PINT( 1 ), ISOBJECT( 2 )? *( QIcon * ) Qt4xHb::itemGetPtr( 2 ) : QIcon( hb_parc( 2 ) ), PQSTRING( 3 ) ) );
   }
 }
 
 HB_FUNC_STATIC( QTABBAR_INSERTTAB )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(1) )
+  if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISCHAR( 1 ) )
   {
     QTabBar_insertTab1();
   }
-  else if( ISNUMPAR(3) && ISNUM(1) && (ISQICON(2)||ISCHAR(2)) && ISCHAR(3) )
+  else if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ( ISQICON( 2 ) || ISCHAR( 2 ) ) && ISCHAR( 3 ) )
   {
     QTabBar_insertTab2();
   }
@@ -394,12 +394,12 @@ bool isMovable() const
 */
 HB_FUNC_STATIC( QTABBAR_ISMOVABLE )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isMovable() );
@@ -418,15 +418,15 @@ bool isTabEnabled( int index ) const
 */
 HB_FUNC_STATIC( QTABBAR_ISTABENABLED )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->isTabEnabled( PINT(1) ) );
+      RBOOL( obj->isTabEnabled( PINT( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -442,15 +442,15 @@ void moveTab( int from, int to )
 */
 HB_FUNC_STATIC( QTABBAR_MOVETAB )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      obj->moveTab( PINT(1), PINT(2) );
+      obj->moveTab( PINT( 1 ), PINT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -468,15 +468,15 @@ void removeTab( int index )
 */
 HB_FUNC_STATIC( QTABBAR_REMOVETAB )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->removeTab( PINT(1) );
+      obj->removeTab( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -494,12 +494,12 @@ QTabBar::SelectionBehavior selectionBehaviorOnRemove() const
 */
 HB_FUNC_STATIC( QTABBAR_SELECTIONBEHAVIORONREMOVE )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->selectionBehaviorOnRemove() );
@@ -518,15 +518,15 @@ void setDocumentMode( bool set )
 */
 HB_FUNC_STATIC( QTABBAR_SETDOCUMENTMODE )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setDocumentMode( PBOOL(1) );
+      obj->setDocumentMode( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -544,15 +544,15 @@ void setDrawBase( bool drawTheBase )
 */
 HB_FUNC_STATIC( QTABBAR_SETDRAWBASE )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setDrawBase( PBOOL(1) );
+      obj->setDrawBase( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -570,15 +570,15 @@ void setElideMode( Qt::TextElideMode )
 */
 HB_FUNC_STATIC( QTABBAR_SETELIDEMODE )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setElideMode( (Qt::TextElideMode) hb_parni(1) );
+      obj->setElideMode( ( Qt::TextElideMode ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -596,15 +596,15 @@ void setExpanding( bool enabled )
 */
 HB_FUNC_STATIC( QTABBAR_SETEXPANDING )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setExpanding( PBOOL(1) );
+      obj->setExpanding( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -622,15 +622,15 @@ void setIconSize( const QSize & size )
 */
 HB_FUNC_STATIC( QTABBAR_SETICONSIZE )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZE(1) )
+    if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
     {
 #endif
-      obj->setIconSize( *PQSIZE(1) );
+      obj->setIconSize( *PQSIZE( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -648,15 +648,15 @@ void setMovable( bool movable )
 */
 HB_FUNC_STATIC( QTABBAR_SETMOVABLE )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setMovable( PBOOL(1) );
+      obj->setMovable( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -674,15 +674,15 @@ void setSelectionBehaviorOnRemove( QTabBar::SelectionBehavior behavior )
 */
 HB_FUNC_STATIC( QTABBAR_SETSELECTIONBEHAVIORONREMOVE )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setSelectionBehaviorOnRemove( (QTabBar::SelectionBehavior) hb_parni(1) );
+      obj->setSelectionBehaviorOnRemove( ( QTabBar::SelectionBehavior ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -700,15 +700,15 @@ void setShape( QTabBar::Shape shape )
 */
 HB_FUNC_STATIC( QTABBAR_SETSHAPE )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setShape( (QTabBar::Shape) hb_parni(1) );
+      obj->setShape( ( QTabBar::Shape ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -726,15 +726,15 @@ void setTabButton( int index, QTabBar::ButtonPosition position, QWidget * widget
 */
 HB_FUNC_STATIC( QTABBAR_SETTABBUTTON )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQWIDGET(3) )
+    if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISQWIDGET( 3 ) )
     {
 #endif
-      obj->setTabButton( PINT(1), (QTabBar::ButtonPosition) hb_parni(2), PQWIDGET(3) );
+      obj->setTabButton( PINT( 1 ), ( QTabBar::ButtonPosition ) hb_parni( 2 ), PQWIDGET( 3 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -752,15 +752,15 @@ void setTabData( int index, const QVariant & data )
 */
 HB_FUNC_STATIC( QTABBAR_SETTABDATA )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQVARIANT(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQVARIANT( 2 ) )
     {
 #endif
-      obj->setTabData( PINT(1), *PQVARIANT(2) );
+      obj->setTabData( PINT( 1 ), *PQVARIANT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -778,15 +778,15 @@ void setTabEnabled( int index, bool enabled )
 */
 HB_FUNC_STATIC( QTABBAR_SETTABENABLED )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISLOG( 2 ) )
     {
 #endif
-      obj->setTabEnabled( PINT(1), PBOOL(2) );
+      obj->setTabEnabled( PINT( 1 ), PBOOL( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -804,15 +804,15 @@ void setTabIcon( int index, const QIcon & icon )
 */
 HB_FUNC_STATIC( QTABBAR_SETTABICON )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && (ISQICON(2)||ISCHAR(2)) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ( ISQICON( 2) || ISCHAR( 2 ) ) )
     {
 #endif
-      obj->setTabIcon( PINT(1), ISOBJECT(2)? *(QIcon *) Qt4xHb::itemGetPtr(2) : QIcon(hb_parc(2)) );
+      obj->setTabIcon( PINT( 1 ), ISOBJECT( 2 )? *( QIcon * ) Qt4xHb::itemGetPtr( 2 ) : QIcon( hb_parc( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -830,15 +830,15 @@ void setTabText( int index, const QString & text )
 */
 HB_FUNC_STATIC( QTABBAR_SETTABTEXT )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISCHAR( 2 ) )
     {
 #endif
-      obj->setTabText( PINT(1), PQSTRING(2) );
+      obj->setTabText( PINT( 1 ), PQSTRING( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -856,15 +856,15 @@ void setTabTextColor( int index, const QColor & color )
 */
 HB_FUNC_STATIC( QTABBAR_SETTABTEXTCOLOR )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && (ISQCOLOR(2)||ISCHAR(2)) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ( ISQCOLOR( 2 ) || ISCHAR( 2 ) ) )
     {
 #endif
-      obj->setTabTextColor( PINT(1), ISOBJECT(2)? *(QColor *) Qt4xHb::itemGetPtr(2) : QColor(hb_parc(2)) );
+      obj->setTabTextColor( PINT( 1 ), ISOBJECT( 2 )? *( QColor * ) Qt4xHb::itemGetPtr( 2 ) : QColor( hb_parc( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -882,15 +882,15 @@ void setTabToolTip( int index, const QString & tip )
 */
 HB_FUNC_STATIC( QTABBAR_SETTABTOOLTIP )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISCHAR( 2 ) )
     {
 #endif
-      obj->setTabToolTip( PINT(1), PQSTRING(2) );
+      obj->setTabToolTip( PINT( 1 ), PQSTRING( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -908,15 +908,15 @@ void setTabWhatsThis( int index, const QString & text )
 */
 HB_FUNC_STATIC( QTABBAR_SETTABWHATSTHIS )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISCHAR( 2 ) )
     {
 #endif
-      obj->setTabWhatsThis( PINT(1), PQSTRING(2) );
+      obj->setTabWhatsThis( PINT( 1 ), PQSTRING( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -934,15 +934,15 @@ void setTabsClosable( bool closable )
 */
 HB_FUNC_STATIC( QTABBAR_SETTABSCLOSABLE )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setTabsClosable( PBOOL(1) );
+      obj->setTabsClosable( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -960,15 +960,15 @@ void setUsesScrollButtons( bool useButtons )
 */
 HB_FUNC_STATIC( QTABBAR_SETUSESSCROLLBUTTONS )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setUsesScrollButtons( PBOOL(1) );
+      obj->setUsesScrollButtons( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -986,12 +986,12 @@ QTabBar::Shape shape() const
 */
 HB_FUNC_STATIC( QTABBAR_SHAPE )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->shape() );
@@ -1010,15 +1010,15 @@ int tabAt( const QPoint & position ) const
 */
 HB_FUNC_STATIC( QTABBAR_TABAT )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINT(1) )
+    if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
     {
 #endif
-      RINT( obj->tabAt( *PQPOINT(1) ) );
+      RINT( obj->tabAt( *PQPOINT( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1034,15 +1034,15 @@ QWidget * tabButton( int index, QTabBar::ButtonPosition position ) const
 */
 HB_FUNC_STATIC( QTABBAR_TABBUTTON )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      QWidget * ptr = obj->tabButton( PINT(1), (QTabBar::ButtonPosition) hb_parni(2) );
+      QWidget * ptr = obj->tabButton( PINT( 1 ), ( QTabBar::ButtonPosition ) hb_parni( 2 ) );
       Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1059,15 +1059,15 @@ QVariant tabData( int index ) const
 */
 HB_FUNC_STATIC( QTABBAR_TABDATA )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->tabData( PINT(1) ) );
+      QVariant * ptr = new QVariant( obj->tabData( PINT( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1084,15 +1084,15 @@ QIcon tabIcon( int index ) const
 */
 HB_FUNC_STATIC( QTABBAR_TABICON )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->tabIcon( PINT(1) ) );
+      QIcon * ptr = new QIcon( obj->tabIcon( PINT( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QICON", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1109,15 +1109,15 @@ QRect tabRect( int index ) const
 */
 HB_FUNC_STATIC( QTABBAR_TABRECT )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QRect * ptr = new QRect( obj->tabRect( PINT(1) ) );
+      QRect * ptr = new QRect( obj->tabRect( PINT( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1134,15 +1134,15 @@ QString tabText( int index ) const
 */
 HB_FUNC_STATIC( QTABBAR_TABTEXT )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RQSTRING( obj->tabText( PINT(1) ) );
+      RQSTRING( obj->tabText( PINT( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1158,15 +1158,15 @@ QColor tabTextColor( int index ) const
 */
 HB_FUNC_STATIC( QTABBAR_TABTEXTCOLOR )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QColor * ptr = new QColor( obj->tabTextColor( PINT(1) ) );
+      QColor * ptr = new QColor( obj->tabTextColor( PINT( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QCOLOR", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1183,15 +1183,15 @@ QString tabToolTip( int index ) const
 */
 HB_FUNC_STATIC( QTABBAR_TABTOOLTIP )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RQSTRING( obj->tabToolTip( PINT(1) ) );
+      RQSTRING( obj->tabToolTip( PINT( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1207,15 +1207,15 @@ QString tabWhatsThis( int index ) const
 */
 HB_FUNC_STATIC( QTABBAR_TABWHATSTHIS )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RQSTRING( obj->tabWhatsThis( PINT(1) ) );
+      RQSTRING( obj->tabWhatsThis( PINT( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1231,12 +1231,12 @@ bool tabsClosable() const
 */
 HB_FUNC_STATIC( QTABBAR_TABSCLOSABLE )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->tabsClosable() );
@@ -1255,12 +1255,12 @@ bool usesScrollButtons() const
 */
 HB_FUNC_STATIC( QTABBAR_USESSCROLLBUTTONS )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->usesScrollButtons() );
@@ -1279,12 +1279,12 @@ virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QTABBAR_MINIMUMSIZEHINT )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
@@ -1304,12 +1304,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QTABBAR_SIZEHINT )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
@@ -1329,15 +1329,15 @@ void setCurrentIndex( int index )
 */
 HB_FUNC_STATIC( QTABBAR_SETCURRENTINDEX )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setCurrentIndex( PINT(1) );
+      obj->setCurrentIndex( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

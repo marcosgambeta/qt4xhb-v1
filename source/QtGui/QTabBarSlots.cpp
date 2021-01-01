@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QTabBarSlots.h"
 
-QTabBarSlots::QTabBarSlots( QObject *parent ) : QObject( parent )
+QTabBarSlots::QTabBarSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QTabBarSlots::~QTabBarSlots()
 
 void QTabBarSlots::currentChanged( int index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QTABBAR" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTABBAR" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -40,13 +40,13 @@ void QTabBarSlots::currentChanged( int index )
 
 void QTabBarSlots::tabCloseRequested( int index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "tabCloseRequested(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QTABBAR" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTABBAR" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -58,13 +58,13 @@ void QTabBarSlots::tabCloseRequested( int index )
 
 void QTabBarSlots::tabMoved( int from, int to )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "tabMoved(int,int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QTABBAR" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTABBAR" );
     PHB_ITEM pfrom = hb_itemPutNI( NULL, from );
     PHB_ITEM pto = hb_itemPutNI( NULL, to );
 
@@ -78,7 +78,7 @@ void QTabBarSlots::tabMoved( int from, int to )
 
 void QTabBarSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTabBar * obj = (QTabBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

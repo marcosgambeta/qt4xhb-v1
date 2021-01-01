@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -58,7 +58,7 @@ QFontDialog( QWidget * parent = 0 )
 */
 void QFontDialog_new1()
 {
-  QFontDialog * obj = new QFontDialog( OPQWIDGET(1,0) );
+  QFontDialog * obj = new QFontDialog( OPQWIDGET( 1, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -67,17 +67,17 @@ QFontDialog( const QFont & initial, QWidget * parent = 0 )
 */
 void QFontDialog_new2()
 {
-  QFontDialog * obj = new QFontDialog( *PQFONT(1), OPQWIDGET(2,0) );
+  QFontDialog * obj = new QFontDialog( *PQFONT( 1 ), OPQWIDGET( 2, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QFONTDIALOG_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
   {
     QFontDialog_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQFONT(1) && (ISQWIDGET(2)||ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISQFONT( 1 ) && ( ISQWIDGET( 2 ) || ISNIL( 2 ) ) )
   {
     QFontDialog_new2();
   }
@@ -92,12 +92,12 @@ QFont currentFont() const
 */
 HB_FUNC_STATIC( QFONTDIALOG_CURRENTFONT )
 {
-  QFontDialog * obj = (QFontDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontDialog * obj = ( QFontDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QFont * ptr = new QFont( obj->currentFont() );
@@ -117,15 +117,15 @@ void open( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QFONTDIALOG_OPEN )
 {
-  QFontDialog * obj = (QFontDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontDialog * obj = ( QFontDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && ISCHAR( 2 ) )
     {
 #endif
-      obj->open( PQOBJECT(1), PCONSTCHAR(2) );
+      obj->open( PQOBJECT( 1 ), PCONSTCHAR( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,12 +143,12 @@ QFontDialog::FontDialogOptions options() const
 */
 HB_FUNC_STATIC( QFONTDIALOG_OPTIONS )
 {
-  QFontDialog * obj = (QFontDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontDialog * obj = ( QFontDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->options() );
@@ -167,12 +167,12 @@ QFont selectedFont() const
 */
 HB_FUNC_STATIC( QFONTDIALOG_SELECTEDFONT )
 {
-  QFontDialog * obj = (QFontDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontDialog * obj = ( QFontDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QFont * ptr = new QFont( obj->selectedFont() );
@@ -192,15 +192,15 @@ void setCurrentFont( const QFont & font )
 */
 HB_FUNC_STATIC( QFONTDIALOG_SETCURRENTFONT )
 {
-  QFontDialog * obj = (QFontDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontDialog * obj = ( QFontDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQFONT(1) )
+    if( ISNUMPAR( 1 ) && ISQFONT( 1 ) )
     {
 #endif
-      obj->setCurrentFont( *PQFONT(1) );
+      obj->setCurrentFont( *PQFONT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -218,15 +218,15 @@ void setOption( QFontDialog::FontDialogOption option, bool on = true )
 */
 HB_FUNC_STATIC( QFONTDIALOG_SETOPTION )
 {
-  QFontDialog * obj = (QFontDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontDialog * obj = ( QFontDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTLOG( 2 ) )
     {
 #endif
-      obj->setOption( (QFontDialog::FontDialogOption) hb_parni(1), OPBOOL(2,true) );
+      obj->setOption( ( QFontDialog::FontDialogOption ) hb_parni( 1 ), OPBOOL( 2, true ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,15 +244,15 @@ void setOptions( QFontDialog::FontDialogOptions options )
 */
 HB_FUNC_STATIC( QFONTDIALOG_SETOPTIONS )
 {
-  QFontDialog * obj = (QFontDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontDialog * obj = ( QFontDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setOptions( (QFontDialog::FontDialogOptions) hb_parni(1) );
+      obj->setOptions( ( QFontDialog::FontDialogOptions ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,15 +270,15 @@ bool testOption( QFontDialog::FontDialogOption option ) const
 */
 HB_FUNC_STATIC( QFONTDIALOG_TESTOPTION )
 {
-  QFontDialog * obj = (QFontDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontDialog * obj = ( QFontDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->testOption( (QFontDialog::FontDialogOption) hb_parni(1) ) );
+      RBOOL( obj->testOption( ( QFontDialog::FontDialogOption ) hb_parni( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,15 +294,15 @@ virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QFONTDIALOG_SETVISIBLE )
 {
-  QFontDialog * obj = (QFontDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontDialog * obj = ( QFontDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setVisible( PBOOL(1) );
+      obj->setVisible( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -322,7 +322,7 @@ void QFontDialog_getFont1()
 {
 
   bool par1;
-  QFont * ptr = new QFont( QFontDialog::getFont( &par1, *PQFONT(2), PQWIDGET(3), PQSTRING(4), (QFontDialog::FontDialogOptions) hb_parni(5) ) );
+  QFont * ptr = new QFont( QFontDialog::getFont( &par1, *PQFONT( 2 ), PQWIDGET( 3 ), PQSTRING( 4 ), ( QFontDialog::FontDialogOptions ) hb_parni( 5 ) ) );
   Qt4xHb::createReturnClass( ptr, "QFONT", true );
   hb_storl( par1, 1 );
 }
@@ -334,7 +334,7 @@ void QFontDialog_getFont2()
 {
 
   bool par1;
-  QFont * ptr = new QFont( QFontDialog::getFont( &par1, *PQFONT(2), PQWIDGET(3), PQSTRING(4) ) );
+  QFont * ptr = new QFont( QFontDialog::getFont( &par1, *PQFONT( 2 ), PQWIDGET( 3 ), PQSTRING( 4 ) ) );
   Qt4xHb::createReturnClass( ptr, "QFONT", true );
   hb_storl( par1, 1 );
 }
@@ -346,7 +346,7 @@ void QFontDialog_getFont3()
 {
 
   bool par1;
-  QFont * ptr = new QFont( QFontDialog::getFont( &par1, *PQFONT(2), OPQWIDGET(3,0) ) );
+  QFont * ptr = new QFont( QFontDialog::getFont( &par1, *PQFONT( 2 ), OPQWIDGET( 3, 0 ) ) );
   Qt4xHb::createReturnClass( ptr, "QFONT", true );
   hb_storl( par1, 1 );
 }
@@ -358,26 +358,26 @@ void QFontDialog_getFont4()
 {
 
   bool par1;
-  QFont * ptr = new QFont( QFontDialog::getFont( &par1, OPQWIDGET(2,0) ) );
+  QFont * ptr = new QFont( QFontDialog::getFont( &par1, OPQWIDGET( 2, 0 ) ) );
   Qt4xHb::createReturnClass( ptr, "QFONT", true );
   hb_storl( par1, 1 );
 }
 
 HB_FUNC_STATIC( QFONTDIALOG_GETFONT )
 {
-  if( ISNUMPAR(5) && ISLOG(1) && ISQFONT(2) && ISQWIDGET(3) && ISCHAR(4) && ISNUM(5) )
+  if( ISNUMPAR( 5 ) && ISLOG( 1 ) && ISQFONT( 2 ) && ISQWIDGET( 3 ) && ISCHAR( 4 ) && ISNUM( 5 ) )
   {
     QFontDialog_getFont1();
   }
-  else if( ISNUMPAR(4) && ISLOG(1) && ISQFONT(2) && ISQWIDGET(3) && ISCHAR(4) )
+  else if( ISNUMPAR( 4 ) && ISLOG( 1 ) && ISQFONT( 2 ) && ISQWIDGET( 3 ) && ISCHAR( 4 ) )
   {
     QFontDialog_getFont2();
   }
-  else if( ISBETWEEN(2,3) && ISLOG(1) && ISQFONT(2) && (ISQWIDGET(3)||ISNIL(3)) )
+  else if( ISBETWEEN( 2, 3 ) && ISLOG( 1 ) && ISQFONT( 2 ) && ( ISQWIDGET( 3 ) || ISNIL( 3 ) ) )
   {
     QFontDialog_getFont3();
   }
-  else if( ISBETWEEN(1,2) && ISLOG(1) && (ISQWIDGET(2)||ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISLOG( 1 ) && ( ISQWIDGET( 2 ) || ISNIL( 2 ) ) )
   {
     QFontDialog_getFont4();
   }

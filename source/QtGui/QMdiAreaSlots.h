@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -30,7 +30,7 @@ class QMdiAreaSlots: public QObject
 {
   Q_OBJECT
   public:
-  QMdiAreaSlots( QObject *parent = 0 );
+  QMdiAreaSlots( QObject * parent = 0 );
   ~QMdiAreaSlots();
   public slots:
   void subWindowActivated( QMdiSubWindow * window );

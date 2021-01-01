@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -44,7 +44,7 @@ RETURN
 
 HB_FUNC_STATIC( QICONENGINEPLUGIN_DELETE )
 {
-  QIconEnginePlugin * obj = (QIconEnginePlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIconEnginePlugin * obj = ( QIconEnginePlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -66,15 +66,15 @@ virtual QIconEngine * create( const QString & filename ) = 0
 */
 HB_FUNC_STATIC( QICONENGINEPLUGIN_CREATE )
 {
-  QIconEnginePlugin * obj = (QIconEnginePlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIconEnginePlugin * obj = ( QIconEnginePlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      QIconEngine * ptr = obj->create( PQSTRING(1) );
+      QIconEngine * ptr = obj->create( PQSTRING( 1 ) );
       Qt4xHb::createReturnClass( ptr, "QICONENGINE", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -91,12 +91,12 @@ virtual QStringList keys() const = 0
 */
 HB_FUNC_STATIC( QICONENGINEPLUGIN_KEYS )
 {
-  QIconEnginePlugin * obj = (QIconEnginePlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIconEnginePlugin * obj = ( QIconEnginePlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->keys() );

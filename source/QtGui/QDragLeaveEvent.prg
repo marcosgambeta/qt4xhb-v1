@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -43,7 +43,7 @@ QDragLeaveEvent()
 */
 HB_FUNC_STATIC( QDRAGLEAVEEVENT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QDragLeaveEvent * obj = new QDragLeaveEvent();
     Qt4xHb::returnNewObject( obj, false );
@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QDRAGLEAVEEVENT_NEW )
 
 HB_FUNC_STATIC( QDRAGLEAVEEVENT_DELETE )
 {
-  QDragLeaveEvent * obj = (QDragLeaveEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDragLeaveEvent * obj = ( QDragLeaveEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

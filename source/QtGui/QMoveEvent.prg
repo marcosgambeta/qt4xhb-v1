@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -46,9 +46,9 @@ QMoveEvent( const QPoint & pos, const QPoint & oldPos )
 */
 HB_FUNC_STATIC( QMOVEEVENT_NEW )
 {
-  if( ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2) )
+  if( ISNUMPAR( 2 ) && ISQPOINT( 1 ) && ISQPOINT( 2 ) )
   {
-    QMoveEvent * obj = new QMoveEvent( *PQPOINT(1), *PQPOINT(2) );
+    QMoveEvent * obj = new QMoveEvent( *PQPOINT( 1 ), *PQPOINT( 2 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QMOVEEVENT_NEW )
 
 HB_FUNC_STATIC( QMOVEEVENT_DELETE )
 {
-  QMoveEvent * obj = (QMoveEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMoveEvent * obj = ( QMoveEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -79,12 +79,12 @@ const QPoint & oldPos() const
 */
 HB_FUNC_STATIC( QMOVEEVENT_OLDPOS )
 {
-  QMoveEvent * obj = (QMoveEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMoveEvent * obj = ( QMoveEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QPoint * ptr = &obj->oldPos();
@@ -104,12 +104,12 @@ const QPoint & pos() const
 */
 HB_FUNC_STATIC( QMOVEEVENT_POS )
 {
-  QMoveEvent * obj = (QMoveEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMoveEvent * obj = ( QMoveEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QPoint * ptr = &obj->pos();

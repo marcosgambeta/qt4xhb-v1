@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -50,7 +50,7 @@ QTextImageFormat()
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QTextImageFormat * obj = new QTextImageFormat();
     Qt4xHb::returnNewObject( obj, true );
@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NEW )
 
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_DELETE )
 {
-  QTextImageFormat * obj = (QTextImageFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextImageFormat * obj = ( QTextImageFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -83,12 +83,12 @@ qreal height() const
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_HEIGHT )
 {
-  QTextImageFormat * obj = (QTextImageFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextImageFormat * obj = ( QTextImageFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->height() );
@@ -107,12 +107,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_ISVALID )
 {
-  QTextImageFormat * obj = (QTextImageFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextImageFormat * obj = ( QTextImageFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -131,12 +131,12 @@ QString name() const
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NAME )
 {
-  QTextImageFormat * obj = (QTextImageFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextImageFormat * obj = ( QTextImageFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->name() );
@@ -155,15 +155,15 @@ void setHeight( qreal height )
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETHEIGHT )
 {
-  QTextImageFormat * obj = (QTextImageFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextImageFormat * obj = ( QTextImageFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setHeight( PQREAL(1) );
+      obj->setHeight( PQREAL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,15 +181,15 @@ void setName( const QString & name )
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETNAME )
 {
-  QTextImageFormat * obj = (QTextImageFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextImageFormat * obj = ( QTextImageFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setName( PQSTRING(1) );
+      obj->setName( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,15 +207,15 @@ void setWidth( qreal width )
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETWIDTH )
 {
-  QTextImageFormat * obj = (QTextImageFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextImageFormat * obj = ( QTextImageFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setWidth( PQREAL(1) );
+      obj->setWidth( PQREAL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -233,12 +233,12 @@ qreal width() const
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_WIDTH )
 {
-  QTextImageFormat * obj = (QTextImageFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextImageFormat * obj = ( QTextImageFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->width() );

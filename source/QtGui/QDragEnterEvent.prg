@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -43,9 +43,9 @@ QDragEnterEvent( const QPoint & point, Qt::DropActions actions, const QMimeData 
 */
 HB_FUNC_STATIC( QDRAGENTEREVENT_NEW )
 {
-  if( ISNUMPAR(5) && ISQPOINT(1) && ISNUM(2) && ISQMIMEDATA(3) && ISNUM(4) && ISNUM(5) )
+  if( ISNUMPAR( 5 ) && ISQPOINT( 1 ) && ISNUM( 2 ) && ISQMIMEDATA( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) )
   {
-    QDragEnterEvent * obj = new QDragEnterEvent( *PQPOINT(1), (Qt::DropActions) hb_parni(2), PQMIMEDATA(3), (Qt::MouseButtons) hb_parni(4), (Qt::KeyboardModifiers) hb_parni(5) );
+    QDragEnterEvent * obj = new QDragEnterEvent( *PQPOINT( 1 ), ( Qt::DropActions ) hb_parni( 2 ), PQMIMEDATA( 3 ), ( Qt::MouseButtons ) hb_parni( 4 ), ( Qt::KeyboardModifiers ) hb_parni( 5 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QDRAGENTEREVENT_NEW )
 
 HB_FUNC_STATIC( QDRAGENTEREVENT_DELETE )
 {
-  QDragEnterEvent * obj = (QDragEnterEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDragEnterEvent * obj = ( QDragEnterEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

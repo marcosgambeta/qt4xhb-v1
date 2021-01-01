@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -81,9 +81,9 @@ QAbstractSpinBox( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
   {
-    QAbstractSpinBox * obj = new QAbstractSpinBox( OPQWIDGET(1,0) );
+    QAbstractSpinBox * obj = new QAbstractSpinBox( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_NEW )
 
 HB_FUNC_STATIC( QABSTRACTSPINBOX_DELETE )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -116,12 +116,12 @@ Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_ALIGNMENT )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->alignment() );
@@ -140,12 +140,12 @@ QAbstractSpinBox::ButtonSymbols buttonSymbols() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_BUTTONSYMBOLS )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->buttonSymbols() );
@@ -164,12 +164,12 @@ QAbstractSpinBox::CorrectionMode correctionMode() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_CORRECTIONMODE )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->correctionMode() );
@@ -188,17 +188,17 @@ virtual void fixup( QString & input ) const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_FIXUP )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      QString par1 = hb_parc(1);
+      QString par1 = hb_parc( 1 );
       obj->fixup( par1 );
-      hb_storc( QSTRINGTOSTRING(par1), 1);
+      hb_storc( QSTRINGTOSTRING( par1 ), 1 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,12 +216,12 @@ bool hasAcceptableInput() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_HASACCEPTABLEINPUT )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->hasAcceptableInput() );
@@ -240,12 +240,12 @@ bool hasFrame() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_HASFRAME )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->hasFrame() );
@@ -264,12 +264,12 @@ void interpretText()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_INTERPRETTEXT )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->interpretText();
@@ -290,12 +290,12 @@ bool isAccelerated() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_ISACCELERATED )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isAccelerated() );
@@ -314,12 +314,12 @@ bool isReadOnly() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_ISREADONLY )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isReadOnly() );
@@ -338,12 +338,12 @@ bool keyboardTracking() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_KEYBOARDTRACKING )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->keyboardTracking() );
@@ -362,15 +362,15 @@ void setAccelerated( bool on )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETACCELERATED )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setAccelerated( PBOOL(1) );
+      obj->setAccelerated( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -388,15 +388,15 @@ void setAlignment( Qt::Alignment flag )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETALIGNMENT )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setAlignment( (Qt::Alignment) hb_parni(1) );
+      obj->setAlignment( ( Qt::Alignment ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -414,15 +414,15 @@ void setButtonSymbols( QAbstractSpinBox::ButtonSymbols bs )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETBUTTONSYMBOLS )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setButtonSymbols( (QAbstractSpinBox::ButtonSymbols) hb_parni(1) );
+      obj->setButtonSymbols( ( QAbstractSpinBox::ButtonSymbols ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -440,15 +440,15 @@ void setCorrectionMode( QAbstractSpinBox::CorrectionMode cm )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETCORRECTIONMODE )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setCorrectionMode( (QAbstractSpinBox::CorrectionMode) hb_parni(1) );
+      obj->setCorrectionMode( ( QAbstractSpinBox::CorrectionMode ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -466,15 +466,15 @@ void setFrame( bool )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETFRAME )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setFrame( PBOOL(1) );
+      obj->setFrame( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -492,15 +492,15 @@ void setKeyboardTracking( bool kt )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETKEYBOARDTRACKING )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setKeyboardTracking( PBOOL(1) );
+      obj->setKeyboardTracking( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -518,15 +518,15 @@ void setReadOnly( bool r )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETREADONLY )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setReadOnly( PBOOL(1) );
+      obj->setReadOnly( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -544,15 +544,15 @@ void setSpecialValueText( const QString & txt )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETSPECIALVALUETEXT )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setSpecialValueText( PQSTRING(1) );
+      obj->setSpecialValueText( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -570,15 +570,15 @@ void setWrapping( bool w )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETWRAPPING )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setWrapping( PBOOL(1) );
+      obj->setWrapping( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -596,12 +596,12 @@ QString specialValueText() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SPECIALVALUETEXT )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->specialValueText() );
@@ -620,15 +620,15 @@ virtual void stepBy( int steps )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPBY )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->stepBy( PINT(1) );
+      obj->stepBy( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -646,12 +646,12 @@ QString text() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_TEXT )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->text() );
@@ -670,18 +670,18 @@ virtual QValidator::State validate( QString & input, int & pos ) const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_VALIDATE )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      QString par1 = hb_parc(1);
+      QString par1 = hb_parc( 1 );
       int par2;
       RENUM( obj->validate( par1, par2 ) );
-      hb_storc( QSTRINGTOSTRING(par1), 1);
+      hb_storc( QSTRINGTOSTRING( par1 ), 1 );
       hb_storni( par2, 2 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -698,12 +698,12 @@ bool wrapping() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_WRAPPING )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->wrapping() );
@@ -722,15 +722,15 @@ virtual bool event( QEvent * event )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_EVENT )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQEVENT(1) )
+    if( ISNUMPAR( 1 ) && ISQEVENT( 1 ) )
     {
 #endif
-      RBOOL( obj->event( PQEVENT(1) ) );
+      RBOOL( obj->event( PQEVENT( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -746,15 +746,15 @@ virtual QVariant inputMethodQuery( Qt::InputMethodQuery query ) const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_INPUTMETHODQUERY )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->inputMethodQuery( (Qt::InputMethodQuery) hb_parni(1) ) );
+      QVariant * ptr = new QVariant( obj->inputMethodQuery( ( Qt::InputMethodQuery ) hb_parni( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -771,12 +771,12 @@ virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_MINIMUMSIZEHINT )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
@@ -796,12 +796,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SIZEHINT )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
@@ -821,12 +821,12 @@ virtual void clear()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_CLEAR )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->clear();
@@ -847,12 +847,12 @@ void selectAll()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SELECTALL )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->selectAll();
@@ -873,12 +873,12 @@ void stepDown()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPDOWN )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->stepDown();
@@ -899,12 +899,12 @@ void stepUp()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPUP )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->stepUp();

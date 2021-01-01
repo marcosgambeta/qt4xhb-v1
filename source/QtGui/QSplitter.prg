@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -76,7 +76,7 @@ QSplitter( QWidget * parent = 0 )
 */
 void QSplitter_new1()
 {
-  QSplitter * obj = new QSplitter( OPQWIDGET(1,0) );
+  QSplitter * obj = new QSplitter( OPQWIDGET( 1, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -85,17 +85,17 @@ QSplitter( Qt::Orientation orientation, QWidget * parent = 0 )
 */
 void QSplitter_new2()
 {
-  QSplitter * obj = new QSplitter( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
+  QSplitter * obj = new QSplitter( ( Qt::Orientation ) hb_parni( 1 ), OPQWIDGET( 2, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QSPLITTER_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
   {
     QSplitter_new1();
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQWIDGET(2)||ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISQWIDGET( 2 ) || ISNIL( 2 ) ) )
   {
     QSplitter_new2();
   }
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSPLITTER_NEW )
 
 HB_FUNC_STATIC( QSPLITTER_DELETE )
 {
-  QSplitter * obj = (QSplitter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitter * obj = ( QSplitter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -129,15 +129,15 @@ void addWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QSPLITTER_ADDWIDGET )
 {
-  QSplitter * obj = (QSplitter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitter * obj = ( QSplitter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      obj->addWidget( PQWIDGET(1) );
+      obj->addWidget( PQWIDGET( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,12 +155,12 @@ bool childrenCollapsible() const
 */
 HB_FUNC_STATIC( QSPLITTER_CHILDRENCOLLAPSIBLE )
 {
-  QSplitter * obj = (QSplitter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitter * obj = ( QSplitter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->childrenCollapsible() );
@@ -179,12 +179,12 @@ int count() const
 */
 HB_FUNC_STATIC( QSPLITTER_COUNT )
 {
-  QSplitter * obj = (QSplitter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitter * obj = ( QSplitter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->count() );
@@ -203,17 +203,17 @@ void getRange( int index, int * min, int * max ) const
 */
 HB_FUNC_STATIC( QSPLITTER_GETRANGE )
 {
-  QSplitter * obj = (QSplitter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitter * obj = ( QSplitter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
+    if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) )
     {
 #endif
       int par2;
       int par3;
-      obj->getRange( PINT(1), &par2, &par3 );
+      obj->getRange( PINT( 1 ), &par2, &par3 );
       hb_storni( par2, 2 );
       hb_storni( par3, 3 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -233,15 +233,15 @@ QSplitterHandle * handle( int index ) const
 */
 HB_FUNC_STATIC( QSPLITTER_HANDLE )
 {
-  QSplitter * obj = (QSplitter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitter * obj = ( QSplitter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QSplitterHandle * ptr = obj->handle( PINT(1) );
+      QSplitterHandle * ptr = obj->handle( PINT( 1 ) );
       Qt4xHb::createReturnQObjectClass( ptr, "QSPLITTERHANDLE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -258,12 +258,12 @@ int handleWidth() const
 */
 HB_FUNC_STATIC( QSPLITTER_HANDLEWIDTH )
 {
-  QSplitter * obj = (QSplitter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitter * obj = ( QSplitter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->handleWidth() );
@@ -282,15 +282,15 @@ int indexOf( QWidget * widget ) const
 */
 HB_FUNC_STATIC( QSPLITTER_INDEXOF )
 {
-  QSplitter * obj = (QSplitter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitter * obj = ( QSplitter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      RINT( obj->indexOf( PQWIDGET(1) ) );
+      RINT( obj->indexOf( PQWIDGET( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -306,15 +306,15 @@ void insertWidget( int index, QWidget * widget )
 */
 HB_FUNC_STATIC( QSPLITTER_INSERTWIDGET )
 {
-  QSplitter * obj = (QSplitter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitter * obj = ( QSplitter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQWIDGET(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQWIDGET( 2 ) )
     {
 #endif
-      obj->insertWidget( PINT(1), PQWIDGET(2) );
+      obj->insertWidget( PINT( 1 ), PQWIDGET( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -332,15 +332,15 @@ bool isCollapsible( int index ) const
 */
 HB_FUNC_STATIC( QSPLITTER_ISCOLLAPSIBLE )
 {
-  QSplitter * obj = (QSplitter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitter * obj = ( QSplitter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->isCollapsible( PINT(1) ) );
+      RBOOL( obj->isCollapsible( PINT( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -356,12 +356,12 @@ bool opaqueResize() const
 */
 HB_FUNC_STATIC( QSPLITTER_OPAQUERESIZE )
 {
-  QSplitter * obj = (QSplitter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitter * obj = ( QSplitter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->opaqueResize() );
@@ -380,12 +380,12 @@ Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QSPLITTER_ORIENTATION )
 {
-  QSplitter * obj = (QSplitter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitter * obj = ( QSplitter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->orientation() );
@@ -404,12 +404,12 @@ void refresh()
 */
 HB_FUNC_STATIC( QSPLITTER_REFRESH )
 {
-  QSplitter * obj = (QSplitter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitter * obj = ( QSplitter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->refresh();
@@ -430,15 +430,15 @@ bool restoreState( const QByteArray & state )
 */
 HB_FUNC_STATIC( QSPLITTER_RESTORESTATE )
 {
-  QSplitter * obj = (QSplitter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitter * obj = ( QSplitter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
     {
 #endif
-      RBOOL( obj->restoreState( *PQBYTEARRAY(1) ) );
+      RBOOL( obj->restoreState( *PQBYTEARRAY( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -454,12 +454,12 @@ QByteArray saveState() const
 */
 HB_FUNC_STATIC( QSPLITTER_SAVESTATE )
 {
-  QSplitter * obj = (QSplitter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitter * obj = ( QSplitter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->saveState() );
@@ -479,15 +479,15 @@ void setChildrenCollapsible( bool )
 */
 HB_FUNC_STATIC( QSPLITTER_SETCHILDRENCOLLAPSIBLE )
 {
-  QSplitter * obj = (QSplitter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitter * obj = ( QSplitter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setChildrenCollapsible( PBOOL(1) );
+      obj->setChildrenCollapsible( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -505,15 +505,15 @@ void setCollapsible( int index, bool collapse )
 */
 HB_FUNC_STATIC( QSPLITTER_SETCOLLAPSIBLE )
 {
-  QSplitter * obj = (QSplitter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitter * obj = ( QSplitter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISLOG( 2 ) )
     {
 #endif
-      obj->setCollapsible( PINT(1), PBOOL(2) );
+      obj->setCollapsible( PINT( 1 ), PBOOL( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -531,15 +531,15 @@ void setHandleWidth( int )
 */
 HB_FUNC_STATIC( QSPLITTER_SETHANDLEWIDTH )
 {
-  QSplitter * obj = (QSplitter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitter * obj = ( QSplitter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setHandleWidth( PINT(1) );
+      obj->setHandleWidth( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -557,15 +557,15 @@ void setOpaqueResize( bool opaque = true )
 */
 HB_FUNC_STATIC( QSPLITTER_SETOPAQUERESIZE )
 {
-  QSplitter * obj = (QSplitter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitter * obj = ( QSplitter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN( 0, 1 ) && ISOPTLOG( 1 ) )
     {
 #endif
-      obj->setOpaqueResize( OPBOOL(1,true) );
+      obj->setOpaqueResize( OPBOOL( 1, true ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -583,15 +583,15 @@ void setOrientation( Qt::Orientation )
 */
 HB_FUNC_STATIC( QSPLITTER_SETORIENTATION )
 {
-  QSplitter * obj = (QSplitter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitter * obj = ( QSplitter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setOrientation( (Qt::Orientation) hb_parni(1) );
+      obj->setOrientation( ( Qt::Orientation ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -609,20 +609,19 @@ void setSizes( const QList<int> & list )
 */
 HB_FUNC_STATIC( QSPLITTER_SETSIZES )
 {
-  QSplitter * obj = (QSplitter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitter * obj = ( QSplitter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISARRAY( 1 ) )
     {
 #endif
       QList<int> par1;
-      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
-      int nLen1 = hb_arrayLen(aList1);
+      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      int nLen1 = hb_arrayLen( aList1 );
       int temp1;
-      for (i1=0;i1<nLen1;i1++)
+      for( int i1 = 0; i1 < nLen1; i1++ )
       {
         temp1 = hb_arrayGetNI(aList1, i1+1);
         par1 << temp1;
@@ -645,15 +644,15 @@ void setStretchFactor( int index, int stretch )
 */
 HB_FUNC_STATIC( QSPLITTER_SETSTRETCHFACTOR )
 {
-  QSplitter * obj = (QSplitter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitter * obj = ( QSplitter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      obj->setStretchFactor( PINT(1), PINT(2) );
+      obj->setStretchFactor( PINT( 1 ), PINT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -671,12 +670,12 @@ QList<int> sizes() const
 */
 HB_FUNC_STATIC( QSPLITTER_SIZES )
 {
-  QSplitter * obj = (QSplitter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitter * obj = ( QSplitter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<int> list = obj->sizes();
@@ -696,15 +695,15 @@ QWidget * widget( int index ) const
 */
 HB_FUNC_STATIC( QSPLITTER_WIDGET )
 {
-  QSplitter * obj = (QSplitter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitter * obj = ( QSplitter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QWidget * ptr = obj->widget( PINT(1) );
+      QWidget * ptr = obj->widget( PINT( 1 ) );
       Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -721,12 +720,12 @@ virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QSPLITTER_MINIMUMSIZEHINT )
 {
-  QSplitter * obj = (QSplitter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitter * obj = ( QSplitter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
@@ -746,12 +745,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSPLITTER_SIZEHINT )
 {
-  QSplitter * obj = (QSplitter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitter * obj = ( QSplitter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );

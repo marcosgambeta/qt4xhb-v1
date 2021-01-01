@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QAbstractTextDocumentLayoutSlots.h"
 
-QAbstractTextDocumentLayoutSlots::QAbstractTextDocumentLayoutSlots( QObject *parent ) : QObject( parent )
+QAbstractTextDocumentLayoutSlots::QAbstractTextDocumentLayoutSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,14 +22,14 @@ QAbstractTextDocumentLayoutSlots::~QAbstractTextDocumentLayoutSlots()
 
 void QAbstractTextDocumentLayoutSlots::documentSizeChanged( const QSizeF & newSize )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "documentSizeChanged(QSizeF)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
-    PHB_ITEM pnewSize = Qt4xHb::Signals_return_object( (void *) &newSize, "QSIZEF" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
+    PHB_ITEM pnewSize = Qt4xHb::Signals_return_object( ( void * ) &newSize, "QSIZEF" );
 
     hb_vmEvalBlockV( cb, 2, psender, pnewSize );
 
@@ -40,13 +40,13 @@ void QAbstractTextDocumentLayoutSlots::documentSizeChanged( const QSizeF & newSi
 
 void QAbstractTextDocumentLayoutSlots::pageCountChanged( int newPages )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "pageCountChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
     PHB_ITEM pnewPages = hb_itemPutNI( NULL, newPages );
 
     hb_vmEvalBlockV( cb, 2, psender, pnewPages );
@@ -58,14 +58,14 @@ void QAbstractTextDocumentLayoutSlots::pageCountChanged( int newPages )
 
 void QAbstractTextDocumentLayoutSlots::update( const QRectF & rect )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "update(QRectF)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
-    PHB_ITEM prect = Qt4xHb::Signals_return_object( (void *) &rect, "QRECTF" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
+    PHB_ITEM prect = Qt4xHb::Signals_return_object( ( void * ) &rect, "QRECTF" );
 
     hb_vmEvalBlockV( cb, 2, psender, prect );
 
@@ -76,14 +76,14 @@ void QAbstractTextDocumentLayoutSlots::update( const QRectF & rect )
 
 void QAbstractTextDocumentLayoutSlots::updateBlock( const QTextBlock & block )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "updateBlock(QTextBlock)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
-    PHB_ITEM pblock = Qt4xHb::Signals_return_object( (void *) &block, "QTEXTBLOCK" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
+    PHB_ITEM pblock = Qt4xHb::Signals_return_object( ( void * ) &block, "QTEXTBLOCK" );
 
     hb_vmEvalBlockV( cb, 2, psender, pblock );
 
@@ -94,7 +94,7 @@ void QAbstractTextDocumentLayoutSlots::updateBlock( const QTextBlock & block )
 
 void QAbstractTextDocumentLayoutSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractTextDocumentLayout * obj = (QAbstractTextDocumentLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractTextDocumentLayout * obj = ( QAbstractTextDocumentLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -57,9 +57,9 @@ QTextFrame( QTextDocument * document )
 */
 HB_FUNC_STATIC( QTEXTFRAME_NEW )
 {
-  if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
+  if( ISNUMPAR( 1 ) && ISQTEXTDOCUMENT( 1 ) )
   {
-    QTextFrame * obj = new QTextFrame( PQTEXTDOCUMENT(1) );
+    QTextFrame * obj = new QTextFrame( PQTEXTDOCUMENT( 1 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QTEXTFRAME_NEW )
 
 HB_FUNC_STATIC( QTEXTFRAME_DELETE )
 {
-  QTextFrame * obj = (QTextFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFrame * obj = ( QTextFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -92,17 +92,17 @@ QList<QTextFrame *> childFrames() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_CHILDFRAMES )
 {
-  QTextFrame * obj = (QTextFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFrame * obj = ( QTextFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QTextFrame *> list = obj->childFrames();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QTEXTFRAME" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QTEXTFRAME_CHILDFRAMES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QTextFrame *) list[i] );
+          hb_itemPutPtr( pItem, ( QTextFrame * ) list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -140,12 +140,12 @@ QTextCursor firstCursorPosition() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_FIRSTCURSORPOSITION )
 {
-  QTextFrame * obj = (QTextFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFrame * obj = ( QTextFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTextCursor * ptr = new QTextCursor( obj->firstCursorPosition() );
@@ -165,12 +165,12 @@ int firstPosition() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_FIRSTPOSITION )
 {
-  QTextFrame * obj = (QTextFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFrame * obj = ( QTextFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->firstPosition() );
@@ -189,12 +189,12 @@ QTextFrameFormat frameFormat() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_FRAMEFORMAT )
 {
-  QTextFrame * obj = (QTextFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFrame * obj = ( QTextFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTextFrameFormat * ptr = new QTextFrameFormat( obj->frameFormat() );
@@ -214,12 +214,12 @@ QTextCursor lastCursorPosition() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_LASTCURSORPOSITION )
 {
-  QTextFrame * obj = (QTextFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFrame * obj = ( QTextFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTextCursor * ptr = new QTextCursor( obj->lastCursorPosition() );
@@ -239,12 +239,12 @@ int lastPosition() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_LASTPOSITION )
 {
-  QTextFrame * obj = (QTextFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFrame * obj = ( QTextFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->lastPosition() );
@@ -263,12 +263,12 @@ QTextFrame * parentFrame() const
 */
 HB_FUNC_STATIC( QTEXTFRAME_PARENTFRAME )
 {
-  QTextFrame * obj = (QTextFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFrame * obj = ( QTextFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTextFrame * ptr = obj->parentFrame();
@@ -288,15 +288,15 @@ void setFrameFormat( const QTextFrameFormat & format )
 */
 HB_FUNC_STATIC( QTEXTFRAME_SETFRAMEFORMAT )
 {
-  QTextFrame * obj = (QTextFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFrame * obj = ( QTextFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTFRAMEFORMAT(1) )
+    if( ISNUMPAR( 1 ) && ISQTEXTFRAMEFORMAT( 1 ) )
     {
 #endif
-      obj->setFrameFormat( *PQTEXTFRAMEFORMAT(1) );
+      obj->setFrameFormat( *PQTEXTFRAMEFORMAT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

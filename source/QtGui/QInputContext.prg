@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -61,7 +61,7 @@ RETURN
 
 HB_FUNC_STATIC( QINPUTCONTEXT_DELETE )
 {
-  QInputContext * obj = (QInputContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputContext * obj = ( QInputContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -83,17 +83,17 @@ virtual QList<QAction *> actions()
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_ACTIONS )
 {
-  QInputContext * obj = (QInputContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputContext * obj = ( QInputContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QAction *> list = obj->actions();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QACTION" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_ACTIONS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QAction *) list[i] );
+          hb_itemPutPtr( pItem, ( QAction * ) list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -131,15 +131,15 @@ virtual bool filterEvent( const QEvent * event )
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_FILTEREVENT )
 {
-  QInputContext * obj = (QInputContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputContext * obj = ( QInputContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQEVENT(1) )
+    if( ISNUMPAR( 1 ) && ISQEVENT( 1 ) )
     {
 #endif
-      RBOOL( obj->filterEvent( PQEVENT(1) ) );
+      RBOOL( obj->filterEvent( PQEVENT( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,12 +155,12 @@ QWidget * focusWidget() const
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_FOCUSWIDGET )
 {
-  QInputContext * obj = (QInputContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputContext * obj = ( QInputContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWidget * ptr = obj->focusWidget();
@@ -180,12 +180,12 @@ virtual QFont font() const
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_FONT )
 {
-  QInputContext * obj = (QInputContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputContext * obj = ( QInputContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QFont * ptr = new QFont( obj->font() );
@@ -205,12 +205,12 @@ virtual QString identifierName() = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_IDENTIFIERNAME )
 {
-  QInputContext * obj = (QInputContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputContext * obj = ( QInputContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->identifierName() );
@@ -229,12 +229,12 @@ virtual bool isComposing() const = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_ISCOMPOSING )
 {
-  QInputContext * obj = (QInputContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputContext * obj = ( QInputContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isComposing() );
@@ -253,12 +253,12 @@ virtual QString language() = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_LANGUAGE )
 {
-  QInputContext * obj = (QInputContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputContext * obj = ( QInputContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->language() );
@@ -277,15 +277,15 @@ virtual void mouseHandler( int x, QMouseEvent * event )
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_MOUSEHANDLER )
 {
-  QInputContext * obj = (QInputContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputContext * obj = ( QInputContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQMOUSEEVENT(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQMOUSEEVENT( 2 ) )
     {
 #endif
-      obj->mouseHandler( PINT(1), PQMOUSEEVENT(2) );
+      obj->mouseHandler( PINT( 1 ), PQMOUSEEVENT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -303,12 +303,12 @@ virtual void reset() = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_RESET )
 {
-  QInputContext * obj = (QInputContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputContext * obj = ( QInputContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->reset();
@@ -329,15 +329,15 @@ void sendEvent( const QInputMethodEvent & event )
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_SENDEVENT )
 {
-  QInputContext * obj = (QInputContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputContext * obj = ( QInputContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQINPUTMETHODEVENT(1) )
+    if( ISNUMPAR( 1 ) && ISQINPUTMETHODEVENT( 1 ) )
     {
 #endif
-      obj->sendEvent( *PQINPUTMETHODEVENT(1) );
+      obj->sendEvent( *PQINPUTMETHODEVENT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -355,15 +355,15 @@ virtual void setFocusWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_SETFOCUSWIDGET )
 {
-  QInputContext * obj = (QInputContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputContext * obj = ( QInputContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      obj->setFocusWidget( PQWIDGET(1) );
+      obj->setFocusWidget( PQWIDGET( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -381,15 +381,15 @@ QTextFormat standardFormat( QInputContext::StandardFormat s ) const
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_STANDARDFORMAT )
 {
-  QInputContext * obj = (QInputContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputContext * obj = ( QInputContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QTextFormat * ptr = new QTextFormat( obj->standardFormat( (QInputContext::StandardFormat) hb_parni(1) ) );
+      QTextFormat * ptr = new QTextFormat( obj->standardFormat( ( QInputContext::StandardFormat ) hb_parni( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QTEXTFORMAT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -406,12 +406,12 @@ virtual void update()
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_UPDATE )
 {
-  QInputContext * obj = (QInputContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputContext * obj = ( QInputContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->update();
@@ -432,15 +432,15 @@ virtual void widgetDestroyed( QWidget * widget )
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_WIDGETDESTROYED )
 {
-  QInputContext * obj = (QInputContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputContext * obj = ( QInputContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      obj->widgetDestroyed( PQWIDGET(1) );
+      obj->widgetDestroyed( PQWIDGET( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

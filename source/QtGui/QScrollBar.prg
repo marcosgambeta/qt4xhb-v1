@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -48,7 +48,7 @@ QScrollBar( QWidget * parent = 0 )
 */
 void QScrollBar_new1()
 {
-  QScrollBar * obj = new QScrollBar( OPQWIDGET(1,0) );
+  QScrollBar * obj = new QScrollBar( OPQWIDGET( 1, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -57,17 +57,17 @@ QScrollBar( Qt::Orientation orientation, QWidget * parent = 0 )
 */
 void QScrollBar_new2()
 {
-  QScrollBar * obj = new QScrollBar( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
+  QScrollBar * obj = new QScrollBar( ( Qt::Orientation ) hb_parni( 1 ), OPQWIDGET( 2, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QSCROLLBAR_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
   {
     QScrollBar_new1();
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQWIDGET(2)||ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISQWIDGET( 2 ) || ISNIL( 2 ) ) )
   {
     QScrollBar_new2();
   }
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QSCROLLBAR_NEW )
 
 HB_FUNC_STATIC( QSCROLLBAR_DELETE )
 {
-  QScrollBar * obj = (QScrollBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollBar * obj = ( QScrollBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -101,15 +101,15 @@ virtual bool event( QEvent * event )
 */
 HB_FUNC_STATIC( QSCROLLBAR_EVENT )
 {
-  QScrollBar * obj = (QScrollBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollBar * obj = ( QScrollBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQEVENT(1) )
+    if( ISNUMPAR( 1 ) && ISQEVENT( 1 ) )
     {
 #endif
-      RBOOL( obj->event( PQEVENT(1) ) );
+      RBOOL( obj->event( PQEVENT( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -125,12 +125,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSCROLLBAR_SIZEHINT )
 {
-  QScrollBar * obj = (QScrollBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollBar * obj = ( QScrollBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );

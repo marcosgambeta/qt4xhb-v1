@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -55,7 +55,7 @@ RETURN
 
 HB_FUNC_STATIC( QICONENGINE_DELETE )
 {
-  QIconEngine * obj = (QIconEngine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIconEngine * obj = ( QIconEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -75,15 +75,15 @@ virtual QSize actualSize( const QSize & size, QIcon::Mode mode, QIcon::State sta
 */
 HB_FUNC_STATIC( QICONENGINE_ACTUALSIZE )
 {
-  QIconEngine * obj = (QIconEngine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIconEngine * obj = ( QIconEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQSIZE(1) && ISNUM(2) && ISNUM(3) )
+    if( ISNUMPAR( 3 ) && ISQSIZE( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) )
     {
 #endif
-      QSize * ptr = new QSize( obj->actualSize( *PQSIZE(1), (QIcon::Mode) hb_parni(2), (QIcon::State) hb_parni(3) ) );
+      QSize * ptr = new QSize( obj->actualSize( *PQSIZE( 1 ), ( QIcon::Mode ) hb_parni( 2 ), ( QIcon::State ) hb_parni( 3 ) ) );
       Qt4xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -100,15 +100,15 @@ virtual void addFile( const QString & fileName, const QSize & size, QIcon::Mode 
 */
 HB_FUNC_STATIC( QICONENGINE_ADDFILE )
 {
-  QIconEngine * obj = (QIconEngine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIconEngine * obj = ( QIconEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISCHAR(1) && ISQSIZE(2) && ISNUM(3) && ISNUM(4) )
+    if( ISNUMPAR( 4 ) && ISCHAR( 1 ) && ISQSIZE( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
     {
 #endif
-      obj->addFile( PQSTRING(1), *PQSIZE(2), (QIcon::Mode) hb_parni(3), (QIcon::State) hb_parni(4) );
+      obj->addFile( PQSTRING( 1 ), *PQSIZE( 2 ), ( QIcon::Mode ) hb_parni( 3 ), ( QIcon::State ) hb_parni( 4 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,15 +126,15 @@ virtual void addPixmap( const QPixmap & pixmap, QIcon::Mode mode, QIcon::State s
 */
 HB_FUNC_STATIC( QICONENGINE_ADDPIXMAP )
 {
-  QIconEngine * obj = (QIconEngine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIconEngine * obj = ( QIconEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQPIXMAP(1) && ISNUM(2) && ISNUM(3) )
+    if( ISNUMPAR( 3 ) && ISQPIXMAP( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) )
     {
 #endif
-      obj->addPixmap( *PQPIXMAP(1), (QIcon::Mode) hb_parni(2), (QIcon::State) hb_parni(3) );
+      obj->addPixmap( *PQPIXMAP( 1 ), ( QIcon::Mode ) hb_parni( 2 ), ( QIcon::State ) hb_parni( 3 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,15 +152,15 @@ virtual void paint( QPainter * painter, const QRect & rect, QIcon::Mode mode, QI
 */
 HB_FUNC_STATIC( QICONENGINE_PAINT )
 {
-  QIconEngine * obj = (QIconEngine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIconEngine * obj = ( QIconEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISQPAINTER(1) && ISQRECT(2) && ISNUM(3) && ISNUM(4) )
+    if( ISNUMPAR( 4 ) && ISQPAINTER( 1 ) && ISQRECT( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
     {
 #endif
-      obj->paint( PQPAINTER(1), *PQRECT(2), (QIcon::Mode) hb_parni(3), (QIcon::State) hb_parni(4) );
+      obj->paint( PQPAINTER( 1 ), *PQRECT( 2 ), ( QIcon::Mode ) hb_parni( 3 ), ( QIcon::State ) hb_parni( 4 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,15 +178,15 @@ virtual QPixmap pixmap( const QSize & size, QIcon::Mode mode, QIcon::State state
 */
 HB_FUNC_STATIC( QICONENGINE_PIXMAP )
 {
-  QIconEngine * obj = (QIconEngine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIconEngine * obj = ( QIconEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQSIZE(1) && ISNUM(2) && ISNUM(3) )
+    if( ISNUMPAR( 3 ) && ISQSIZE( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) )
     {
 #endif
-      QPixmap * ptr = new QPixmap( obj->pixmap( *PQSIZE(1), (QIcon::Mode) hb_parni(2), (QIcon::State) hb_parni(3) ) );
+      QPixmap * ptr = new QPixmap( obj->pixmap( *PQSIZE( 1 ), ( QIcon::Mode ) hb_parni( 2 ), ( QIcon::State ) hb_parni( 3 ) ) );
       Qt4xHb::createReturnClass( ptr, "QPIXMAP", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -202,18 +202,18 @@ HB_FUNC_STATIC( QICONENGINE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -240,16 +240,16 @@ HB_FUNC_STATIC( QICONENGINE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QICONENGINE_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QICONENGINE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

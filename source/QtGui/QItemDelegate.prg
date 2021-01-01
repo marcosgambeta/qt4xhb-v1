@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -50,9 +50,9 @@ QItemDelegate( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QITEMDELEGATE_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
-    QItemDelegate * obj = new QItemDelegate( OPQOBJECT(1,0) );
+    QItemDelegate * obj = new QItemDelegate( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_NEW )
 
 HB_FUNC_STATIC( QITEMDELEGATE_DELETE )
 {
-  QItemDelegate * obj = (QItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemDelegate * obj = ( QItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -85,12 +85,12 @@ bool hasClipping() const
 */
 HB_FUNC_STATIC( QITEMDELEGATE_HASCLIPPING )
 {
-  QItemDelegate * obj = (QItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemDelegate * obj = ( QItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->hasClipping() );
@@ -109,12 +109,12 @@ QItemEditorFactory * itemEditorFactory() const
 */
 HB_FUNC_STATIC( QITEMDELEGATE_ITEMEDITORFACTORY )
 {
-  QItemDelegate * obj = (QItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemDelegate * obj = ( QItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QItemEditorFactory * ptr = obj->itemEditorFactory();
@@ -134,15 +134,15 @@ void setClipping( bool clip )
 */
 HB_FUNC_STATIC( QITEMDELEGATE_SETCLIPPING )
 {
-  QItemDelegate * obj = (QItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemDelegate * obj = ( QItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setClipping( PBOOL(1) );
+      obj->setClipping( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,15 +160,15 @@ void setItemEditorFactory( QItemEditorFactory * factory )
 */
 HB_FUNC_STATIC( QITEMDELEGATE_SETITEMEDITORFACTORY )
 {
-  QItemDelegate * obj = (QItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemDelegate * obj = ( QItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQITEMEDITORFACTORY(1) )
+    if( ISNUMPAR( 1 ) && ISQITEMEDITORFACTORY( 1 ) )
     {
 #endif
-      obj->setItemEditorFactory( PQITEMEDITORFACTORY(1) );
+      obj->setItemEditorFactory( PQITEMEDITORFACTORY( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

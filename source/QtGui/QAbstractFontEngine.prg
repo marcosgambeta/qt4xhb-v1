@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -45,7 +45,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTFONTENGINE_DELETE )
 {
-  QAbstractFontEngine * obj = (QAbstractFontEngine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractFontEngine * obj = ( QAbstractFontEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -67,12 +67,12 @@ virtual QAbstractFontEngine::Capabilities capabilities() const = 0
 */
 HB_FUNC_STATIC( QABSTRACTFONTENGINE_CAPABILITIES )
 {
-  QAbstractFontEngine * obj = (QAbstractFontEngine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractFontEngine * obj = ( QAbstractFontEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->capabilities() );
@@ -91,15 +91,15 @@ virtual QVariant fontProperty( QAbstractFontEngine::FontProperty property ) cons
 */
 HB_FUNC_STATIC( QABSTRACTFONTENGINE_FONTPROPERTY )
 {
-  QAbstractFontEngine * obj = (QAbstractFontEngine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractFontEngine * obj = ( QAbstractFontEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->fontProperty( (QAbstractFontEngine::FontProperty) hb_parni(1) ) );
+      QVariant * ptr = new QVariant( obj->fontProperty( ( QAbstractFontEngine::FontProperty ) hb_parni( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -116,15 +116,15 @@ virtual bool renderGlyph( uint glyph, int depth, int bytesPerLine, int height, u
 */
 HB_FUNC_STATIC( QABSTRACTFONTENGINE_RENDERGLYPH )
 {
-  QAbstractFontEngine * obj = (QAbstractFontEngine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractFontEngine * obj = ( QAbstractFontEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISCHAR(5) )
+    if( ISNUMPAR( 5 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISCHAR( 5 ) )
     {
 #endif
-      RBOOL( obj->renderGlyph( PUINT(1), PINT(2), PINT(3), PINT(4), (uchar *) hb_parc(5) ) );
+      RBOOL( obj->renderGlyph( PUINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), ( uchar * ) hb_parc( 5 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

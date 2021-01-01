@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QLCDNumberSlots.h"
 
-QLCDNumberSlots::QLCDNumberSlots( QObject *parent ) : QObject( parent )
+QLCDNumberSlots::QLCDNumberSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QLCDNumberSlots::~QLCDNumberSlots()
 
 void QLCDNumberSlots::overflow()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "overflow()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QLCDNUMBER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QLCDNUMBER" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,7 +38,7 @@ void QLCDNumberSlots::overflow()
 
 void QLCDNumberSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QLCDNumber * obj = (QLCDNumber *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLCDNumber * obj = ( QLCDNumber * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

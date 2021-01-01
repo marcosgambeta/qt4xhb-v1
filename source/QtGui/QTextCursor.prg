@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -132,7 +132,7 @@ QTextCursor( QTextDocument * document )
 */
 void QTextCursor_new2()
 {
-  QTextCursor * obj = new QTextCursor( PQTEXTDOCUMENT(1) );
+  QTextCursor * obj = new QTextCursor( PQTEXTDOCUMENT( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -141,7 +141,7 @@ QTextCursor( QTextFrame * frame )
 */
 void QTextCursor_new3()
 {
-  QTextCursor * obj = new QTextCursor( PQTEXTFRAME(1) );
+  QTextCursor * obj = new QTextCursor( PQTEXTFRAME( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -150,7 +150,7 @@ QTextCursor( const QTextBlock & block )
 */
 void QTextCursor_new4()
 {
-  QTextCursor * obj = new QTextCursor( *PQTEXTBLOCK(1) );
+  QTextCursor * obj = new QTextCursor( *PQTEXTBLOCK( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -159,29 +159,29 @@ QTextCursor( const QTextCursor & cursor )
 */
 void QTextCursor_new5()
 {
-  QTextCursor * obj = new QTextCursor( *PQTEXTCURSOR(1) );
+  QTextCursor * obj = new QTextCursor( *PQTEXTCURSOR( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QTEXTCURSOR_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QTextCursor_new1();
   }
-  else if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
+  else if( ISNUMPAR( 1 ) && ISQTEXTDOCUMENT( 1 ) )
   {
     QTextCursor_new2();
   }
-  else if( ISNUMPAR(1) && ISQTEXTFRAME(1) )
+  else if( ISNUMPAR( 1 ) && ISQTEXTFRAME( 1 ) )
   {
     QTextCursor_new3();
   }
-  else if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
+  else if( ISNUMPAR( 1 ) && ISQTEXTBLOCK( 1 ) )
   {
     QTextCursor_new4();
   }
-  else if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
+  else if( ISNUMPAR( 1 ) && ISQTEXTCURSOR( 1 ) )
   {
     QTextCursor_new5();
   }
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEW )
 
 HB_FUNC_STATIC( QTEXTCURSOR_DELETE )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -213,12 +213,12 @@ int anchor() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ANCHOR )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->anchor() );
@@ -237,12 +237,12 @@ bool atBlockEnd() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ATBLOCKEND )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->atBlockEnd() );
@@ -261,12 +261,12 @@ bool atBlockStart() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ATBLOCKSTART )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->atBlockStart() );
@@ -285,12 +285,12 @@ bool atEnd() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ATEND )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->atEnd() );
@@ -309,12 +309,12 @@ bool atStart() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ATSTART )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->atStart() );
@@ -333,12 +333,12 @@ void beginEditBlock()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_BEGINEDITBLOCK )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->beginEditBlock();
@@ -359,12 +359,12 @@ QTextBlock block() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_BLOCK )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTextBlock * ptr = new QTextBlock( obj->block() );
@@ -384,12 +384,12 @@ QTextCharFormat blockCharFormat() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_BLOCKCHARFORMAT )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTextCharFormat * ptr = new QTextCharFormat( obj->blockCharFormat() );
@@ -409,12 +409,12 @@ QTextBlockFormat blockFormat() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_BLOCKFORMAT )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTextBlockFormat * ptr = new QTextBlockFormat( obj->blockFormat() );
@@ -434,12 +434,12 @@ int blockNumber() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_BLOCKNUMBER )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->blockNumber() );
@@ -458,12 +458,12 @@ QTextCharFormat charFormat() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_CHARFORMAT )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTextCharFormat * ptr = new QTextCharFormat( obj->charFormat() );
@@ -483,12 +483,12 @@ void clearSelection()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_CLEARSELECTION )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->clearSelection();
@@ -509,12 +509,12 @@ int columnNumber() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_COLUMNNUMBER )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->columnNumber() );
@@ -533,11 +533,11 @@ QTextList * createList( const QTextListFormat & format )
 */
 void QTextCursor_createList1()
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QTextList * ptr = obj->createList( *PQTEXTLISTFORMAT(1) );
+    QTextList * ptr = obj->createList( *PQTEXTLISTFORMAT( 1 ) );
     Qt4xHb::createReturnQObjectClass( ptr, "QTEXTLIST" );
   }
 }
@@ -547,22 +547,22 @@ QTextList * createList( QTextListFormat::Style style )
 */
 void QTextCursor_createList2()
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QTextList * ptr = obj->createList( (QTextListFormat::Style) hb_parni(1) );
+    QTextList * ptr = obj->createList( ( QTextListFormat::Style ) hb_parni( 1 ) );
     Qt4xHb::createReturnQObjectClass( ptr, "QTEXTLIST" );
   }
 }
 
 HB_FUNC_STATIC( QTEXTCURSOR_CREATELIST )
 {
-  if( ISNUMPAR(1) && ISQTEXTLISTFORMAT(1) )
+  if( ISNUMPAR( 1 ) && ISQTEXTLISTFORMAT( 1 ) )
   {
     QTextCursor_createList1();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
   {
     QTextCursor_createList2();
   }
@@ -577,12 +577,12 @@ QTextFrame * currentFrame() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_CURRENTFRAME )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTextFrame * ptr = obj->currentFrame();
@@ -602,12 +602,12 @@ QTextList * currentList() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_CURRENTLIST )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTextList * ptr = obj->currentList();
@@ -627,12 +627,12 @@ QTextTable * currentTable() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_CURRENTTABLE )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTextTable * ptr = obj->currentTable();
@@ -652,12 +652,12 @@ void deleteChar()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_DELETECHAR )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->deleteChar();
@@ -678,12 +678,12 @@ void deletePreviousChar()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_DELETEPREVIOUSCHAR )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->deletePreviousChar();
@@ -704,12 +704,12 @@ QTextDocument * document() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_DOCUMENT )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTextDocument * ptr = obj->document();
@@ -729,12 +729,12 @@ void endEditBlock()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ENDEDITBLOCK )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->endEditBlock();
@@ -755,12 +755,12 @@ bool hasComplexSelection() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_HASCOMPLEXSELECTION )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->hasComplexSelection() );
@@ -779,12 +779,12 @@ bool hasSelection() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_HASSELECTION )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->hasSelection() );
@@ -803,7 +803,7 @@ void insertBlock()
 */
 void QTextCursor_insertBlock1()
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -818,11 +818,11 @@ void insertBlock( const QTextBlockFormat & format )
 */
 void QTextCursor_insertBlock2()
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->insertBlock( *PQTEXTBLOCKFORMAT(1) );
+    obj->insertBlock( *PQTEXTBLOCKFORMAT( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -833,11 +833,11 @@ void insertBlock( const QTextBlockFormat & format, const QTextCharFormat & charF
 */
 void QTextCursor_insertBlock3()
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->insertBlock( *PQTEXTBLOCKFORMAT(1), *PQTEXTCHARFORMAT(2) );
+    obj->insertBlock( *PQTEXTBLOCKFORMAT( 1 ), *PQTEXTCHARFORMAT( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -845,15 +845,15 @@ void QTextCursor_insertBlock3()
 
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTBLOCK )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QTextCursor_insertBlock1();
   }
-  else if( ISNUMPAR(1) && ISQTEXTBLOCKFORMAT(1) )
+  else if( ISNUMPAR( 1 ) && ISQTEXTBLOCKFORMAT( 1 ) )
   {
     QTextCursor_insertBlock2();
   }
-  else if( ISNUMPAR(2) && ISQTEXTBLOCKFORMAT(1) && ISQTEXTCHARFORMAT(2) )
+  else if( ISNUMPAR( 2 ) && ISQTEXTBLOCKFORMAT( 1 ) && ISQTEXTCHARFORMAT( 2 ) )
   {
     QTextCursor_insertBlock3();
   }
@@ -868,15 +868,15 @@ void insertFragment( const QTextDocumentFragment & fragment )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTFRAGMENT )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTDOCUMENTFRAGMENT(1) )
+    if( ISNUMPAR( 1 ) && ISQTEXTDOCUMENTFRAGMENT( 1 ) )
     {
 #endif
-      obj->insertFragment( *PQTEXTDOCUMENTFRAGMENT(1) );
+      obj->insertFragment( *PQTEXTDOCUMENTFRAGMENT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -894,15 +894,15 @@ QTextFrame * insertFrame( const QTextFrameFormat & format )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTFRAME )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTFRAMEFORMAT(1) )
+    if( ISNUMPAR( 1 ) && ISQTEXTFRAMEFORMAT( 1 ) )
     {
 #endif
-      QTextFrame * ptr = obj->insertFrame( *PQTEXTFRAMEFORMAT(1) );
+      QTextFrame * ptr = obj->insertFrame( *PQTEXTFRAMEFORMAT( 1 ) );
       Qt4xHb::createReturnQObjectClass( ptr, "QTEXTFRAME" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -919,15 +919,15 @@ void insertHtml( const QString & html )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTHTML )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->insertHtml( PQSTRING(1) );
+      obj->insertHtml( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -945,11 +945,11 @@ void insertImage( const QTextImageFormat & format )
 */
 void QTextCursor_insertImage1()
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->insertImage( *PQTEXTIMAGEFORMAT(1) );
+    obj->insertImage( *PQTEXTIMAGEFORMAT( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -960,11 +960,11 @@ void insertImage( const QTextImageFormat & format, QTextFrameFormat::Position al
 */
 void QTextCursor_insertImage2()
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->insertImage( *PQTEXTIMAGEFORMAT(1), (QTextFrameFormat::Position) hb_parni(2) );
+    obj->insertImage( *PQTEXTIMAGEFORMAT( 1 ), ( QTextFrameFormat::Position ) hb_parni( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -975,11 +975,11 @@ void insertImage( const QString & name )
 */
 void QTextCursor_insertImage3()
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->insertImage( PQSTRING(1) );
+    obj->insertImage( PQSTRING( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -990,11 +990,11 @@ void insertImage( const QImage & image, const QString & name = QString() )
 */
 void QTextCursor_insertImage4()
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->insertImage( *PQIMAGE(1), OPQSTRING(2,QString()) );
+    obj->insertImage( *PQIMAGE( 1 ), OPQSTRING( 2, QString() ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1002,19 +1002,19 @@ void QTextCursor_insertImage4()
 
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE )
 {
-  if( ISNUMPAR(1) && ISQTEXTIMAGEFORMAT(1) )
+  if( ISNUMPAR( 1 ) && ISQTEXTIMAGEFORMAT( 1 ) )
   {
     QTextCursor_insertImage1();
   }
-  else if( ISNUMPAR(2) && ISQTEXTIMAGEFORMAT(1) && ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && ISQTEXTIMAGEFORMAT( 1 ) && ISNUM( 2 ) )
   {
     QTextCursor_insertImage2();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
     QTextCursor_insertImage3();
   }
-  else if( ISBETWEEN(1,2) && ISQIMAGE(1) && (ISCHAR(2)||ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISQIMAGE( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
   {
     QTextCursor_insertImage4();
   }
@@ -1029,11 +1029,11 @@ QTextList * insertList( const QTextListFormat & format )
 */
 void QTextCursor_insertList1()
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QTextList * ptr = obj->insertList( *PQTEXTLISTFORMAT(1) );
+    QTextList * ptr = obj->insertList( *PQTEXTLISTFORMAT( 1 ) );
     Qt4xHb::createReturnQObjectClass( ptr, "QTEXTLIST" );
   }
 }
@@ -1043,22 +1043,22 @@ QTextList * insertList( QTextListFormat::Style style )
 */
 void QTextCursor_insertList2()
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QTextList * ptr = obj->insertList( (QTextListFormat::Style) hb_parni(1) );
+    QTextList * ptr = obj->insertList( ( QTextListFormat::Style ) hb_parni( 1 ) );
     Qt4xHb::createReturnQObjectClass( ptr, "QTEXTLIST" );
   }
 }
 
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTLIST )
 {
-  if( ISNUMPAR(1) && ISQTEXTLISTFORMAT(1) )
+  if( ISNUMPAR( 1 ) && ISQTEXTLISTFORMAT( 1 ) )
   {
     QTextCursor_insertList1();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
   {
     QTextCursor_insertList2();
   }
@@ -1073,11 +1073,11 @@ QTextTable * insertTable( int rows, int columns, const QTextTableFormat & format
 */
 void QTextCursor_insertTable1()
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QTextTable * ptr = obj->insertTable( PINT(1), PINT(2), *PQTEXTTABLEFORMAT(3) );
+    QTextTable * ptr = obj->insertTable( PINT( 1 ), PINT( 2 ), *PQTEXTTABLEFORMAT( 3 ) );
     Qt4xHb::createReturnQObjectClass( ptr, "QTEXTTABLE" );
   }
 }
@@ -1087,22 +1087,22 @@ QTextTable * insertTable( int rows, int columns )
 */
 void QTextCursor_insertTable2()
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QTextTable * ptr = obj->insertTable( PINT(1), PINT(2) );
+    QTextTable * ptr = obj->insertTable( PINT( 1 ), PINT( 2 ) );
     Qt4xHb::createReturnQObjectClass( ptr, "QTEXTTABLE" );
   }
 }
 
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTTABLE )
 {
-  if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQTEXTTABLEFORMAT(3) )
+  if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISQTEXTTABLEFORMAT( 3 ) )
   {
     QTextCursor_insertTable1();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
   {
     QTextCursor_insertTable2();
   }
@@ -1117,11 +1117,11 @@ void insertText( const QString & text )
 */
 void QTextCursor_insertText1()
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->insertText( PQSTRING(1) );
+    obj->insertText( PQSTRING( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1132,11 +1132,11 @@ void insertText( const QString & text, const QTextCharFormat & format )
 */
 void QTextCursor_insertText2()
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->insertText( PQSTRING(1), *PQTEXTCHARFORMAT(2) );
+    obj->insertText( PQSTRING( 1 ), *PQTEXTCHARFORMAT( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1144,11 +1144,11 @@ void QTextCursor_insertText2()
 
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTTEXT )
 {
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
     QTextCursor_insertText1();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISQTEXTCHARFORMAT(2) )
+  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISQTEXTCHARFORMAT( 2 ) )
   {
     QTextCursor_insertText2();
   }
@@ -1163,15 +1163,15 @@ bool isCopyOf( const QTextCursor & other ) const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ISCOPYOF )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
+    if( ISNUMPAR( 1 ) && ISQTEXTCURSOR( 1 ) )
     {
 #endif
-      RBOOL( obj->isCopyOf( *PQTEXTCURSOR(1) ) );
+      RBOOL( obj->isCopyOf( *PQTEXTCURSOR( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1187,12 +1187,12 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ISNULL )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isNull() );
@@ -1211,12 +1211,12 @@ void joinPreviousEditBlock()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_JOINPREVIOUSEDITBLOCK )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->joinPreviousEditBlock();
@@ -1237,12 +1237,12 @@ bool keepPositionOnInsert() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_KEEPPOSITIONONINSERT )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->keepPositionOnInsert() );
@@ -1261,15 +1261,15 @@ void mergeBlockCharFormat( const QTextCharFormat & modifier )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_MERGEBLOCKCHARFORMAT )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTCHARFORMAT(1) )
+    if( ISNUMPAR( 1 ) && ISQTEXTCHARFORMAT( 1 ) )
     {
 #endif
-      obj->mergeBlockCharFormat( *PQTEXTCHARFORMAT(1) );
+      obj->mergeBlockCharFormat( *PQTEXTCHARFORMAT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1287,15 +1287,15 @@ void mergeBlockFormat( const QTextBlockFormat & modifier )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_MERGEBLOCKFORMAT )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTBLOCKFORMAT(1) )
+    if( ISNUMPAR( 1 ) && ISQTEXTBLOCKFORMAT( 1 ) )
     {
 #endif
-      obj->mergeBlockFormat( *PQTEXTBLOCKFORMAT(1) );
+      obj->mergeBlockFormat( *PQTEXTBLOCKFORMAT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1313,15 +1313,15 @@ void mergeCharFormat( const QTextCharFormat & modifier )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_MERGECHARFORMAT )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTCHARFORMAT(1) )
+    if( ISNUMPAR( 1 ) && ISQTEXTCHARFORMAT( 1 ) )
     {
 #endif
-      obj->mergeCharFormat( *PQTEXTCHARFORMAT(1) );
+      obj->mergeCharFormat( *PQTEXTCHARFORMAT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1339,15 +1339,15 @@ bool movePosition( QTextCursor::MoveOperation operation, QTextCursor::MoveMode m
 */
 HB_FUNC_STATIC( QTEXTCURSOR_MOVEPOSITION )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISNUM(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) && ISOPTNUM( 3 ) )
     {
 #endif
-      RBOOL( obj->movePosition( (QTextCursor::MoveOperation) hb_parni(1), ISNIL(2)? (QTextCursor::MoveMode) QTextCursor::MoveAnchor : (QTextCursor::MoveMode) hb_parni(2), OPINT(3,1) ) );
+      RBOOL( obj->movePosition( ( QTextCursor::MoveOperation ) hb_parni( 1 ), ISNIL( 2 )? ( QTextCursor::MoveMode ) QTextCursor::MoveAnchor : ( QTextCursor::MoveMode ) hb_parni( 2 ), OPINT( 3, 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1363,12 +1363,12 @@ int position() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_POSITION )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->position() );
@@ -1387,12 +1387,12 @@ int positionInBlock() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_POSITIONINBLOCK )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->positionInBlock() );
@@ -1411,12 +1411,12 @@ void removeSelectedText()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_REMOVESELECTEDTEXT )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->removeSelectedText();
@@ -1437,15 +1437,15 @@ void select( QTextCursor::SelectionType selection )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SELECT )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->select( (QTextCursor::SelectionType) hb_parni(1) );
+      obj->select( ( QTextCursor::SelectionType ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1463,12 +1463,12 @@ void selectedTableCells( int * firstRow, int * numRows, int * firstColumn, int *
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SELECTEDTABLECELLS )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+    if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
     {
 #endif
       int par1;
@@ -1497,12 +1497,12 @@ QString selectedText() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SELECTEDTEXT )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->selectedText() );
@@ -1521,12 +1521,12 @@ QTextDocumentFragment selection() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SELECTION )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTextDocumentFragment * ptr = new QTextDocumentFragment( obj->selection() );
@@ -1546,12 +1546,12 @@ int selectionEnd() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SELECTIONEND )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->selectionEnd() );
@@ -1570,12 +1570,12 @@ int selectionStart() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SELECTIONSTART )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->selectionStart() );
@@ -1594,15 +1594,15 @@ void setBlockCharFormat( const QTextCharFormat & format )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETBLOCKCHARFORMAT )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTCHARFORMAT(1) )
+    if( ISNUMPAR( 1 ) && ISQTEXTCHARFORMAT( 1 ) )
     {
 #endif
-      obj->setBlockCharFormat( *PQTEXTCHARFORMAT(1) );
+      obj->setBlockCharFormat( *PQTEXTCHARFORMAT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1620,15 +1620,15 @@ void setBlockFormat( const QTextBlockFormat & format )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETBLOCKFORMAT )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTBLOCKFORMAT(1) )
+    if( ISNUMPAR( 1 ) && ISQTEXTBLOCKFORMAT( 1 ) )
     {
 #endif
-      obj->setBlockFormat( *PQTEXTBLOCKFORMAT(1) );
+      obj->setBlockFormat( *PQTEXTBLOCKFORMAT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1646,15 +1646,15 @@ void setCharFormat( const QTextCharFormat & format )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETCHARFORMAT )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTCHARFORMAT(1) )
+    if( ISNUMPAR( 1 ) && ISQTEXTCHARFORMAT( 1 ) )
     {
 #endif
-      obj->setCharFormat( *PQTEXTCHARFORMAT(1) );
+      obj->setCharFormat( *PQTEXTCHARFORMAT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1672,15 +1672,15 @@ void setKeepPositionOnInsert( bool b )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETKEEPPOSITIONONINSERT )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setKeepPositionOnInsert( PBOOL(1) );
+      obj->setKeepPositionOnInsert( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1698,15 +1698,15 @@ void setPosition( int pos, QTextCursor::MoveMode m = QTextCursor::MoveAnchor )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETPOSITION )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) )
     {
 #endif
-      obj->setPosition( PINT(1), ISNIL(2)? (QTextCursor::MoveMode) QTextCursor::MoveAnchor : (QTextCursor::MoveMode) hb_parni(2) );
+      obj->setPosition( PINT( 1 ), ISNIL( 2 )? ( QTextCursor::MoveMode ) QTextCursor::MoveAnchor : ( QTextCursor::MoveMode ) hb_parni( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1724,15 +1724,15 @@ void setVerticalMovementX( int x )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETVERTICALMOVEMENTX )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setVerticalMovementX( PINT(1) );
+      obj->setVerticalMovementX( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1750,15 +1750,15 @@ void setVisualNavigation( bool b )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETVISUALNAVIGATION )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setVisualNavigation( PBOOL(1) );
+      obj->setVisualNavigation( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1776,12 +1776,12 @@ int verticalMovementX() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_VERTICALMOVEMENTX )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->verticalMovementX() );
@@ -1800,12 +1800,12 @@ bool visualNavigation() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_VISUALNAVIGATION )
 {
-  QTextCursor * obj = (QTextCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->visualNavigation() );
@@ -1823,18 +1823,18 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -1861,16 +1861,16 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QTEXTCURSOR_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QTEXTCURSOR_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

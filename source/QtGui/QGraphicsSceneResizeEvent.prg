@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -46,7 +46,7 @@ QGraphicsSceneResizeEvent()
 */
 HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QGraphicsSceneResizeEvent * obj = new QGraphicsSceneResizeEvent();
     Qt4xHb::returnNewObject( obj, false );
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_DELETE )
 {
-  QGraphicsSceneResizeEvent * obj = (QGraphicsSceneResizeEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneResizeEvent * obj = ( QGraphicsSceneResizeEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -79,12 +79,12 @@ QSizeF newSize() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEWSIZE )
 {
-  QGraphicsSceneResizeEvent * obj = (QGraphicsSceneResizeEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneResizeEvent * obj = ( QGraphicsSceneResizeEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSizeF * ptr = new QSizeF( obj->newSize() );
@@ -104,12 +104,12 @@ QSizeF oldSize() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_OLDSIZE )
 {
-  QGraphicsSceneResizeEvent * obj = (QGraphicsSceneResizeEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneResizeEvent * obj = ( QGraphicsSceneResizeEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSizeF * ptr = new QSizeF( obj->oldSize() );

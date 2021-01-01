@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QPrintPreviewDialogSlots.h"
 
-QPrintPreviewDialogSlots::QPrintPreviewDialogSlots( QObject *parent ) : QObject( parent )
+QPrintPreviewDialogSlots::QPrintPreviewDialogSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,14 +22,14 @@ QPrintPreviewDialogSlots::~QPrintPreviewDialogSlots()
 
 void QPrintPreviewDialogSlots::paintRequested( QPrinter * printer )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "paintRequested(QPrinter*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QPRINTPREVIEWDIALOG" );
-    PHB_ITEM pprinter = Qt4xHb::Signals_return_object( (void *) printer, "QPRINTER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QPRINTPREVIEWDIALOG" );
+    PHB_ITEM pprinter = Qt4xHb::Signals_return_object( ( void * ) printer, "QPRINTER" );
 
     hb_vmEvalBlockV( cb, 2, psender, pprinter );
 
@@ -40,7 +40,7 @@ void QPrintPreviewDialogSlots::paintRequested( QPrinter * printer )
 
 void QPrintPreviewDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QPrintPreviewDialog * obj = (QPrintPreviewDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrintPreviewDialog * obj = ( QPrintPreviewDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

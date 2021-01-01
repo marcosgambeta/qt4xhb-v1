@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -72,9 +72,9 @@ QUndoGroup( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QUNDOGROUP_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
-    QUndoGroup * obj = new QUndoGroup( OPQOBJECT(1,0) );
+    QUndoGroup * obj = new QUndoGroup( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QUNDOGROUP_NEW )
 
 HB_FUNC_STATIC( QUNDOGROUP_DELETE )
 {
-  QUndoGroup * obj = (QUndoGroup *) Qt4xHb::itemGetPtrStackSelfItem();
+  QUndoGroup * obj = ( QUndoGroup * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -107,12 +107,12 @@ QUndoStack * activeStack() const
 */
 HB_FUNC_STATIC( QUNDOGROUP_ACTIVESTACK )
 {
-  QUndoGroup * obj = (QUndoGroup *) Qt4xHb::itemGetPtrStackSelfItem();
+  QUndoGroup * obj = ( QUndoGroup * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QUndoStack * ptr = obj->activeStack();
@@ -132,15 +132,15 @@ void addStack( QUndoStack * stack )
 */
 HB_FUNC_STATIC( QUNDOGROUP_ADDSTACK )
 {
-  QUndoGroup * obj = (QUndoGroup *) Qt4xHb::itemGetPtrStackSelfItem();
+  QUndoGroup * obj = ( QUndoGroup * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQUNDOSTACK(1) )
+    if( ISNUMPAR( 1 ) && ISQUNDOSTACK( 1 ) )
     {
 #endif
-      obj->addStack( PQUNDOSTACK(1) );
+      obj->addStack( PQUNDOSTACK( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,12 +158,12 @@ bool canRedo() const
 */
 HB_FUNC_STATIC( QUNDOGROUP_CANREDO )
 {
-  QUndoGroup * obj = (QUndoGroup *) Qt4xHb::itemGetPtrStackSelfItem();
+  QUndoGroup * obj = ( QUndoGroup * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->canRedo() );
@@ -182,12 +182,12 @@ bool canUndo() const
 */
 HB_FUNC_STATIC( QUNDOGROUP_CANUNDO )
 {
-  QUndoGroup * obj = (QUndoGroup *) Qt4xHb::itemGetPtrStackSelfItem();
+  QUndoGroup * obj = ( QUndoGroup * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->canUndo() );
@@ -206,15 +206,15 @@ QAction * createRedoAction( QObject * parent, const QString & prefix = QString()
 */
 HB_FUNC_STATIC( QUNDOGROUP_CREATEREDOACTION )
 {
-  QUndoGroup * obj = (QUndoGroup *) Qt4xHb::itemGetPtrStackSelfItem();
+  QUndoGroup * obj = ( QUndoGroup * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQOBJECT(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN( 1, 2 ) && ISQOBJECT( 1 ) && ISOPTCHAR( 2 ) )
     {
 #endif
-      QAction * ptr = obj->createRedoAction( PQOBJECT(1), OPQSTRING(2,QString()) );
+      QAction * ptr = obj->createRedoAction( PQOBJECT( 1 ), OPQSTRING( 2, QString() ) );
       Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -231,15 +231,15 @@ QAction * createUndoAction( QObject * parent, const QString & prefix = QString()
 */
 HB_FUNC_STATIC( QUNDOGROUP_CREATEUNDOACTION )
 {
-  QUndoGroup * obj = (QUndoGroup *) Qt4xHb::itemGetPtrStackSelfItem();
+  QUndoGroup * obj = ( QUndoGroup * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQOBJECT(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN( 1, 2 ) && ISQOBJECT( 1 ) && ISOPTCHAR( 2 ) )
     {
 #endif
-      QAction * ptr = obj->createUndoAction( PQOBJECT(1), OPQSTRING(2,QString()) );
+      QAction * ptr = obj->createUndoAction( PQOBJECT( 1 ), OPQSTRING( 2, QString() ) );
       Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -256,12 +256,12 @@ bool isClean() const
 */
 HB_FUNC_STATIC( QUNDOGROUP_ISCLEAN )
 {
-  QUndoGroup * obj = (QUndoGroup *) Qt4xHb::itemGetPtrStackSelfItem();
+  QUndoGroup * obj = ( QUndoGroup * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isClean() );
@@ -280,12 +280,12 @@ QString redoText() const
 */
 HB_FUNC_STATIC( QUNDOGROUP_REDOTEXT )
 {
-  QUndoGroup * obj = (QUndoGroup *) Qt4xHb::itemGetPtrStackSelfItem();
+  QUndoGroup * obj = ( QUndoGroup * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->redoText() );
@@ -304,15 +304,15 @@ void removeStack( QUndoStack * stack )
 */
 HB_FUNC_STATIC( QUNDOGROUP_REMOVESTACK )
 {
-  QUndoGroup * obj = (QUndoGroup *) Qt4xHb::itemGetPtrStackSelfItem();
+  QUndoGroup * obj = ( QUndoGroup * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQUNDOSTACK(1) )
+    if( ISNUMPAR( 1 ) && ISQUNDOSTACK( 1 ) )
     {
 #endif
-      obj->removeStack( PQUNDOSTACK(1) );
+      obj->removeStack( PQUNDOSTACK( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -330,17 +330,17 @@ QList<QUndoStack *> stacks() const
 */
 HB_FUNC_STATIC( QUNDOGROUP_STACKS )
 {
-  QUndoGroup * obj = (QUndoGroup *) Qt4xHb::itemGetPtrStackSelfItem();
+  QUndoGroup * obj = ( QUndoGroup * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QUndoStack *> list = obj->stacks();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QUNDOSTACK" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QUNDOGROUP_STACKS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QUndoStack *) list[i] );
+          hb_itemPutPtr( pItem, ( QUndoStack * ) list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -378,12 +378,12 @@ QString undoText() const
 */
 HB_FUNC_STATIC( QUNDOGROUP_UNDOTEXT )
 {
-  QUndoGroup * obj = (QUndoGroup *) Qt4xHb::itemGetPtrStackSelfItem();
+  QUndoGroup * obj = ( QUndoGroup * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->undoText() );
@@ -402,12 +402,12 @@ void redo()
 */
 HB_FUNC_STATIC( QUNDOGROUP_REDO )
 {
-  QUndoGroup * obj = (QUndoGroup *) Qt4xHb::itemGetPtrStackSelfItem();
+  QUndoGroup * obj = ( QUndoGroup * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->redo();
@@ -428,15 +428,15 @@ void setActiveStack( QUndoStack * stack )
 */
 HB_FUNC_STATIC( QUNDOGROUP_SETACTIVESTACK )
 {
-  QUndoGroup * obj = (QUndoGroup *) Qt4xHb::itemGetPtrStackSelfItem();
+  QUndoGroup * obj = ( QUndoGroup * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQUNDOSTACK(1) )
+    if( ISNUMPAR( 1 ) && ISQUNDOSTACK( 1 ) )
     {
 #endif
-      obj->setActiveStack( PQUNDOSTACK(1) );
+      obj->setActiveStack( PQUNDOSTACK( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -454,12 +454,12 @@ void undo()
 */
 HB_FUNC_STATIC( QUNDOGROUP_UNDO )
 {
-  QUndoGroup * obj = (QUndoGroup *) Qt4xHb::itemGetPtrStackSelfItem();
+  QUndoGroup * obj = ( QUndoGroup * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->undo();

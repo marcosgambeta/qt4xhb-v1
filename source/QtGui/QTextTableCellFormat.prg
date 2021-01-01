@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -53,7 +53,7 @@ QTextTableCellFormat()
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QTextTableCellFormat * obj = new QTextTableCellFormat();
     Qt4xHb::returnNewObject( obj, true );
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_NEW )
 
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_DELETE )
 {
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextTableCellFormat * obj = ( QTextTableCellFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -86,12 +86,12 @@ qreal bottomPadding() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_BOTTOMPADDING )
 {
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextTableCellFormat * obj = ( QTextTableCellFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->bottomPadding() );
@@ -110,12 +110,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_ISVALID )
 {
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextTableCellFormat * obj = ( QTextTableCellFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -134,12 +134,12 @@ qreal leftPadding() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_LEFTPADDING )
 {
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextTableCellFormat * obj = ( QTextTableCellFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->leftPadding() );
@@ -158,12 +158,12 @@ qreal rightPadding() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_RIGHTPADDING )
 {
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextTableCellFormat * obj = ( QTextTableCellFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->rightPadding() );
@@ -182,15 +182,15 @@ void setBottomPadding( qreal padding )
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETBOTTOMPADDING )
 {
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextTableCellFormat * obj = ( QTextTableCellFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setBottomPadding( PQREAL(1) );
+      obj->setBottomPadding( PQREAL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,15 +208,15 @@ void setLeftPadding( qreal padding )
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETLEFTPADDING )
 {
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextTableCellFormat * obj = ( QTextTableCellFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setLeftPadding( PQREAL(1) );
+      obj->setLeftPadding( PQREAL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -234,15 +234,15 @@ void setPadding( qreal padding )
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETPADDING )
 {
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextTableCellFormat * obj = ( QTextTableCellFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setPadding( PQREAL(1) );
+      obj->setPadding( PQREAL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -260,15 +260,15 @@ void setRightPadding( qreal padding )
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETRIGHTPADDING )
 {
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextTableCellFormat * obj = ( QTextTableCellFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setRightPadding( PQREAL(1) );
+      obj->setRightPadding( PQREAL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -286,15 +286,15 @@ void setTopPadding( qreal padding )
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_SETTOPPADDING )
 {
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextTableCellFormat * obj = ( QTextTableCellFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setTopPadding( PQREAL(1) );
+      obj->setTopPadding( PQREAL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -312,12 +312,12 @@ qreal topPadding() const
 */
 HB_FUNC_STATIC( QTEXTTABLECELLFORMAT_TOPPADDING )
 {
-  QTextTableCellFormat * obj = (QTextTableCellFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextTableCellFormat * obj = ( QTextTableCellFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->topPadding() );

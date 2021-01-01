@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -63,17 +63,17 @@ QStyleOptionProgressBar( const QStyleOptionProgressBar & other )
 */
 void QStyleOptionProgressBar_new2()
 {
-  QStyleOptionProgressBar * obj = new QStyleOptionProgressBar( *PQSTYLEOPTIONPROGRESSBAR(1) );
+  QStyleOptionProgressBar * obj = new QStyleOptionProgressBar( *PQSTYLEOPTIONPROGRESSBAR( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QStyleOptionProgressBar_new1();
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONPROGRESSBAR(1) )
+  else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONPROGRESSBAR( 1 ) )
   {
     QStyleOptionProgressBar_new2();
   }
@@ -88,11 +88,11 @@ int minimum
 */
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_MINIMUM )
 {
-  QStyleOptionProgressBar * obj = (QStyleOptionProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionProgressBar * obj = ( QStyleOptionProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RINT( obj->minimum );
     }
@@ -104,13 +104,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_MINIMUM )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETMINIMUM )
 {
-  QStyleOptionProgressBar * obj = (QStyleOptionProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionProgressBar * obj = ( QStyleOptionProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
-      obj->minimum= PINT(1);
+      obj->minimum= PINT( 1 );
     }
     else
     {
@@ -126,11 +126,11 @@ int maximum
 */
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_MAXIMUM )
 {
-  QStyleOptionProgressBar * obj = (QStyleOptionProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionProgressBar * obj = ( QStyleOptionProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RINT( obj->maximum );
     }
@@ -142,13 +142,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_MAXIMUM )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETMAXIMUM )
 {
-  QStyleOptionProgressBar * obj = (QStyleOptionProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionProgressBar * obj = ( QStyleOptionProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
-      obj->maximum= PINT(1);
+      obj->maximum= PINT( 1 );
     }
     else
     {
@@ -164,11 +164,11 @@ int progress
 */
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_PROGRESS )
 {
-  QStyleOptionProgressBar * obj = (QStyleOptionProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionProgressBar * obj = ( QStyleOptionProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RINT( obj->progress );
     }
@@ -180,13 +180,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_PROGRESS )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETPROGRESS )
 {
-  QStyleOptionProgressBar * obj = (QStyleOptionProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionProgressBar * obj = ( QStyleOptionProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
-      obj->progress= PINT(1);
+      obj->progress= PINT( 1 );
     }
     else
     {
@@ -202,11 +202,11 @@ QString text
 */
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_TEXT )
 {
-  QStyleOptionProgressBar * obj = (QStyleOptionProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionProgressBar * obj = ( QStyleOptionProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RQSTRING( obj->text );
     }
@@ -218,13 +218,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_TEXT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETTEXT )
 {
-  QStyleOptionProgressBar * obj = (QStyleOptionProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionProgressBar * obj = ( QStyleOptionProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
-      obj->text= PQSTRING(1);
+      obj->text= PQSTRING( 1 );
     }
     else
     {
@@ -240,11 +240,11 @@ Qt::Alignment textAlignment
 */
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_TEXTALIGNMENT )
 {
-  QStyleOptionProgressBar * obj = (QStyleOptionProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionProgressBar * obj = ( QStyleOptionProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RENUM( obj->textAlignment );
     }
@@ -256,13 +256,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_TEXTALIGNMENT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETTEXTALIGNMENT )
 {
-  QStyleOptionProgressBar * obj = (QStyleOptionProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionProgressBar * obj = ( QStyleOptionProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
-      obj->textAlignment= (Qt::Alignment) hb_parni(1);
+      obj->textAlignment= ( Qt::Alignment ) hb_parni( 1 );
     }
     else
     {
@@ -278,11 +278,11 @@ bool textVisible
 */
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_TEXTVISIBLE )
 {
-  QStyleOptionProgressBar * obj = (QStyleOptionProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionProgressBar * obj = ( QStyleOptionProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RBOOL( obj->textVisible );
     }
@@ -294,13 +294,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_TEXTVISIBLE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETTEXTVISIBLE )
 {
-  QStyleOptionProgressBar * obj = (QStyleOptionProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionProgressBar * obj = ( QStyleOptionProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
-      obj->textVisible= PBOOL(1);
+      obj->textVisible= PBOOL( 1 );
     }
     else
     {

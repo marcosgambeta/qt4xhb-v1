@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QMessageBoxSlots.h"
 
-QMessageBoxSlots::QMessageBoxSlots( QObject *parent ) : QObject( parent )
+QMessageBoxSlots::QMessageBoxSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,14 +22,14 @@ QMessageBoxSlots::~QMessageBoxSlots()
 
 void QMessageBoxSlots::buttonClicked( QAbstractButton * button )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "buttonClicked(QAbstractButton*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QMESSAGEBOX" );
-    PHB_ITEM pbutton = Qt4xHb::Signals_return_qobject( (QObject *) button, "QABSTRACTBUTTON" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QMESSAGEBOX" );
+    PHB_ITEM pbutton = Qt4xHb::Signals_return_qobject( ( QObject * ) button, "QABSTRACTBUTTON" );
 
     hb_vmEvalBlockV( cb, 2, psender, pbutton );
 
@@ -40,7 +40,7 @@ void QMessageBoxSlots::buttonClicked( QAbstractButton * button )
 
 void QMessageBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMessageBox * obj = (QMessageBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMessageBox * obj = ( QMessageBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -63,9 +63,9 @@ QGraphicsDropShadowEffect( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
-    QGraphicsDropShadowEffect * obj = new QGraphicsDropShadowEffect( OPQOBJECT(1,0) );
+    QGraphicsDropShadowEffect * obj = new QGraphicsDropShadowEffect( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_DELETE )
 {
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsDropShadowEffect * obj = ( QGraphicsDropShadowEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -98,12 +98,12 @@ qreal blurRadius() const
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BLURRADIUS )
 {
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsDropShadowEffect * obj = ( QGraphicsDropShadowEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->blurRadius() );
@@ -122,12 +122,12 @@ QColor color() const
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_COLOR )
 {
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsDropShadowEffect * obj = ( QGraphicsDropShadowEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QColor * ptr = new QColor( obj->color() );
@@ -147,12 +147,12 @@ QPointF offset() const
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_OFFSET )
 {
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsDropShadowEffect * obj = ( QGraphicsDropShadowEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPointF * ptr = new QPointF( obj->offset() );
@@ -172,12 +172,12 @@ qreal xOffset() const
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_XOFFSET )
 {
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsDropShadowEffect * obj = ( QGraphicsDropShadowEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->xOffset() );
@@ -196,12 +196,12 @@ qreal yOffset() const
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_YOFFSET )
 {
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsDropShadowEffect * obj = ( QGraphicsDropShadowEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->yOffset() );
@@ -220,15 +220,15 @@ virtual QRectF boundingRectFor( const QRectF & rect ) const
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BOUNDINGRECTFOR )
 {
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsDropShadowEffect * obj = ( QGraphicsDropShadowEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQRECTF(1) )
+    if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->boundingRectFor( *PQRECTF(1) ) );
+      QRectF * ptr = new QRectF( obj->boundingRectFor( *PQRECTF( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -245,15 +245,15 @@ void setBlurRadius( qreal blurRadius )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETBLURRADIUS )
 {
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsDropShadowEffect * obj = ( QGraphicsDropShadowEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setBlurRadius( PQREAL(1) );
+      obj->setBlurRadius( PQREAL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,15 +271,15 @@ void setColor( const QColor & color )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETCOLOR )
 {
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsDropShadowEffect * obj = ( QGraphicsDropShadowEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
+    if( ISNUMPAR( 1 ) && ( ISQCOLOR( 1 ) || ISCHAR( 1 ) ) )
     {
 #endif
-      obj->setColor( ISOBJECT(1)? *(QColor *) Qt4xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setColor( ISOBJECT( 1 )? *( QColor * ) Qt4xHb::itemGetPtr( 1 ) : QColor( hb_parc( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -297,11 +297,11 @@ void setOffset( const QPointF & ofs )
 */
 void QGraphicsDropShadowEffect_setOffset1()
 {
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsDropShadowEffect * obj = ( QGraphicsDropShadowEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setOffset( *PQPOINTF(1) );
+    obj->setOffset( *PQPOINTF( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -312,11 +312,11 @@ void setOffset( qreal dx, qreal dy )
 */
 void QGraphicsDropShadowEffect_setOffset2()
 {
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsDropShadowEffect * obj = ( QGraphicsDropShadowEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setOffset( PQREAL(1), PQREAL(2) );
+    obj->setOffset( PQREAL( 1 ), PQREAL( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -327,11 +327,11 @@ void setOffset( qreal d )
 */
 void QGraphicsDropShadowEffect_setOffset3()
 {
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsDropShadowEffect * obj = ( QGraphicsDropShadowEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setOffset( PQREAL(1) );
+    obj->setOffset( PQREAL( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -339,15 +339,15 @@ void QGraphicsDropShadowEffect_setOffset3()
 
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET )
 {
-  if( ISNUMPAR(1) && ISQPOINTF(1) )
+  if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
   {
     QGraphicsDropShadowEffect_setOffset1();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
   {
     QGraphicsDropShadowEffect_setOffset2();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
   {
     QGraphicsDropShadowEffect_setOffset3();
   }
@@ -362,15 +362,15 @@ void setXOffset( qreal dx )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETXOFFSET )
 {
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsDropShadowEffect * obj = ( QGraphicsDropShadowEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setXOffset( PQREAL(1) );
+      obj->setXOffset( PQREAL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -388,15 +388,15 @@ void setYOffset( qreal dy )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETYOFFSET )
 {
-  QGraphicsDropShadowEffect * obj = (QGraphicsDropShadowEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsDropShadowEffect * obj = ( QGraphicsDropShadowEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setYOffset( PQREAL(1) );
+      obj->setYOffset( PQREAL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

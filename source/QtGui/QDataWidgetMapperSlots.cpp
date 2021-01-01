@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QDataWidgetMapperSlots.h"
 
-QDataWidgetMapperSlots::QDataWidgetMapperSlots( QObject *parent ) : QObject( parent )
+QDataWidgetMapperSlots::QDataWidgetMapperSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QDataWidgetMapperSlots::~QDataWidgetMapperSlots()
 
 void QDataWidgetMapperSlots::currentIndexChanged( int index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentIndexChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDATAWIDGETMAPPER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDATAWIDGETMAPPER" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -40,7 +40,7 @@ void QDataWidgetMapperSlots::currentIndexChanged( int index )
 
 void QDataWidgetMapperSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDataWidgetMapper * obj = (QDataWidgetMapper *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDataWidgetMapper * obj = ( QDataWidgetMapper * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

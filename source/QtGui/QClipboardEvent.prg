@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -39,7 +39,7 @@ RETURN
 
 HB_FUNC_STATIC( QCLIPBOARDEVENT_DELETE )
 {
-  QClipboardEvent * obj = (QClipboardEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QClipboardEvent * obj = ( QClipboardEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

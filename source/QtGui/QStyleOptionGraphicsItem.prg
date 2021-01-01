@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -60,17 +60,17 @@ QStyleOptionGraphicsItem( const QStyleOptionGraphicsItem & other )
 */
 void QStyleOptionGraphicsItem_new2()
 {
-  QStyleOptionGraphicsItem * obj = new QStyleOptionGraphicsItem( *PQSTYLEOPTIONGRAPHICSITEM(1) );
+  QStyleOptionGraphicsItem * obj = new QStyleOptionGraphicsItem( *PQSTYLEOPTIONGRAPHICSITEM( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QStyleOptionGraphicsItem_new1();
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONGRAPHICSITEM(1) )
+  else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONGRAPHICSITEM( 1 ) )
   {
     QStyleOptionGraphicsItem_new2();
   }
@@ -86,10 +86,10 @@ static qreal levelOfDetailFromTransform( const QTransform & worldTransform )
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAILFROMTRANSFORM )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQTRANSFORM(1) )
+  if( ISNUMPAR( 1 ) && ISQTRANSFORM( 1 ) )
   {
 #endif
-    RQREAL( QStyleOptionGraphicsItem::levelOfDetailFromTransform( *PQTRANSFORM(1) ) );
+    RQREAL( QStyleOptionGraphicsItem::levelOfDetailFromTransform( *PQTRANSFORM( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -104,11 +104,11 @@ QRectF exposedRect
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_EXPOSEDRECT )
 {
-  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionGraphicsItem * obj = ( QStyleOptionGraphicsItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       QRectF * ptr = new QRectF( obj->exposedRect );
       Qt4xHb::createReturnClass( ptr, "QRECTF", true );
@@ -121,13 +121,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_EXPOSEDRECT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_SETEXPOSEDRECT )
 {
-  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionGraphicsItem * obj = ( QStyleOptionGraphicsItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISQRECTF(1) )
+    if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
     {
-      obj->exposedRect= *PQRECTF(1);
+      obj->exposedRect= *PQRECTF( 1 );
     }
     else
     {
@@ -143,11 +143,11 @@ QMatrix matrix
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_MATRIX )
 {
-  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionGraphicsItem * obj = ( QStyleOptionGraphicsItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       QMatrix * ptr = new QMatrix( obj->matrix );
       Qt4xHb::createReturnClass( ptr, "QMATRIX", true );
@@ -160,13 +160,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_MATRIX )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_SETMATRIX )
 {
-  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionGraphicsItem * obj = ( QStyleOptionGraphicsItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISQMATRIX(1) )
+    if( ISNUMPAR( 1 ) && ISQMATRIX( 1 ) )
     {
-      obj->matrix= *PQMATRIX(1);
+      obj->matrix= *PQMATRIX( 1 );
     }
     else
     {
@@ -182,11 +182,11 @@ qreal levelOfDetail
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAIL )
 {
-  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionGraphicsItem * obj = ( QStyleOptionGraphicsItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RQREAL( obj->levelOfDetail );
     }
@@ -198,13 +198,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAIL )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_SETLEVELOFDETAIL )
 {
-  QStyleOptionGraphicsItem * obj = (QStyleOptionGraphicsItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionGraphicsItem * obj = ( QStyleOptionGraphicsItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
-      obj->levelOfDetail= PQREAL(1);
+      obj->levelOfDetail= PQREAL( 1 );
     }
     else
     {

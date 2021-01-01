@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -62,7 +62,7 @@ QGraphicsPixmapItem( QGraphicsItem * parent = 0 )
 */
 void QGraphicsPixmapItem_new1()
 {
-  QGraphicsPixmapItem * obj = new QGraphicsPixmapItem( ISNIL(1)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(1) );
+  QGraphicsPixmapItem * obj = new QGraphicsPixmapItem( ISNIL( 1 )? 0 : ( QGraphicsItem * ) Qt4xHb::itemGetPtr( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -71,17 +71,17 @@ QGraphicsPixmapItem( const QPixmap & pixmap, QGraphicsItem * parent = 0 )
 */
 void QGraphicsPixmapItem_new2()
 {
-  QGraphicsPixmapItem * obj = new QGraphicsPixmapItem( *PQPIXMAP(1), ISNIL(2)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(2) );
+  QGraphicsPixmapItem * obj = new QGraphicsPixmapItem( *PQPIXMAP( 1 ), ISNIL( 2 )? 0 : ( QGraphicsItem * ) Qt4xHb::itemGetPtr( 2 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQGRAPHICSITEM( 1 ) || ISNIL( 1 ) ) )
   {
     QGraphicsPixmapItem_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQPIXMAP(1) && (ISQGRAPHICSITEM(2)||ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISQPIXMAP( 1 ) && ( ISQGRAPHICSITEM( 2 ) || ISNIL( 2 ) ) )
   {
     QGraphicsPixmapItem_new2();
   }
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_DELETE )
 {
-  QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPixmapItem * obj = ( QGraphicsPixmapItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -113,12 +113,12 @@ QPointF offset() const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_OFFSET )
 {
-  QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPixmapItem * obj = ( QGraphicsPixmapItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPointF * ptr = new QPointF( obj->offset() );
@@ -138,12 +138,12 @@ QPixmap pixmap() const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_PIXMAP )
 {
-  QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPixmapItem * obj = ( QGraphicsPixmapItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->pixmap() );
@@ -163,11 +163,11 @@ void setOffset( const QPointF & offset )
 */
 void QGraphicsPixmapItem_setOffset1()
 {
-  QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPixmapItem * obj = ( QGraphicsPixmapItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setOffset( *PQPOINTF(1) );
+    obj->setOffset( *PQPOINTF( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -178,11 +178,11 @@ void setOffset( qreal x, qreal y )
 */
 void QGraphicsPixmapItem_setOffset2()
 {
-  QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPixmapItem * obj = ( QGraphicsPixmapItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setOffset( PQREAL(1), PQREAL(2) );
+    obj->setOffset( PQREAL( 1 ), PQREAL( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -190,11 +190,11 @@ void QGraphicsPixmapItem_setOffset2()
 
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETOFFSET )
 {
-  if( ISNUMPAR(1) && ISQPOINTF(1) )
+  if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
   {
     QGraphicsPixmapItem_setOffset1();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
   {
     QGraphicsPixmapItem_setOffset2();
   }
@@ -209,15 +209,15 @@ void setPixmap( const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETPIXMAP )
 {
-  QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPixmapItem * obj = ( QGraphicsPixmapItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPIXMAP(1) )
+    if( ISNUMPAR( 1 ) && ISQPIXMAP( 1 ) )
     {
 #endif
-      obj->setPixmap( *PQPIXMAP(1) );
+      obj->setPixmap( *PQPIXMAP( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,15 +235,15 @@ void setShapeMode( QGraphicsPixmapItem::ShapeMode mode )
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETSHAPEMODE )
 {
-  QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPixmapItem * obj = ( QGraphicsPixmapItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setShapeMode( (QGraphicsPixmapItem::ShapeMode) hb_parni(1) );
+      obj->setShapeMode( ( QGraphicsPixmapItem::ShapeMode ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,15 +261,15 @@ void setTransformationMode( Qt::TransformationMode mode )
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETTRANSFORMATIONMODE )
 {
-  QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPixmapItem * obj = ( QGraphicsPixmapItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setTransformationMode( (Qt::TransformationMode) hb_parni(1) );
+      obj->setTransformationMode( ( Qt::TransformationMode ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -287,12 +287,12 @@ QGraphicsPixmapItem::ShapeMode shapeMode() const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SHAPEMODE )
 {
-  QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPixmapItem * obj = ( QGraphicsPixmapItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->shapeMode() );
@@ -311,12 +311,12 @@ Qt::TransformationMode transformationMode() const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_TRANSFORMATIONMODE )
 {
-  QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPixmapItem * obj = ( QGraphicsPixmapItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->transformationMode() );
@@ -335,12 +335,12 @@ virtual QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_BOUNDINGRECT )
 {
-  QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPixmapItem * obj = ( QGraphicsPixmapItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QRectF * ptr = new QRectF( obj->boundingRect() );
@@ -360,15 +360,15 @@ virtual bool contains( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_CONTAINS )
 {
-  QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPixmapItem * obj = ( QGraphicsPixmapItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINTF(1) )
+    if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
     {
 #endif
-      RBOOL( obj->contains( *PQPOINTF(1) ) );
+      RBOOL( obj->contains( *PQPOINTF( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -384,15 +384,15 @@ virtual bool isObscuredBy( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_ISOBSCUREDBY )
 {
-  QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPixmapItem * obj = ( QGraphicsPixmapItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGRAPHICSITEM(1) )
+    if( ISNUMPAR( 1 ) && ISQGRAPHICSITEM( 1 ) )
     {
 #endif
-      RBOOL( obj->isObscuredBy( PQGRAPHICSITEM(1) ) );
+      RBOOL( obj->isObscuredBy( PQGRAPHICSITEM( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -408,12 +408,12 @@ virtual QPainterPath opaqueArea() const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_OPAQUEAREA )
 {
-  QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPixmapItem * obj = ( QGraphicsPixmapItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPainterPath * ptr = new QPainterPath( obj->opaqueArea() );
@@ -433,15 +433,15 @@ virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option,
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_PAINT )
 {
-  QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPixmapItem * obj = ( QGraphicsPixmapItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISQWIDGET(3) )
+    if( ISNUMPAR( 3 ) && ISQPAINTER( 1 ) && ISQSTYLEOPTIONGRAPHICSITEM( 2 ) && ISQWIDGET( 3 ) )
     {
 #endif
-      obj->paint( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), PQWIDGET(3) );
+      obj->paint( PQPAINTER( 1 ), PQSTYLEOPTIONGRAPHICSITEM( 2 ), PQWIDGET( 3 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -459,12 +459,12 @@ virtual QPainterPath shape() const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SHAPE )
 {
-  QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPixmapItem * obj = ( QGraphicsPixmapItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPainterPath * ptr = new QPainterPath( obj->shape() );
@@ -484,12 +484,12 @@ virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_TYPE )
 {
-  QGraphicsPixmapItem * obj = (QGraphicsPixmapItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPixmapItem * obj = ( QGraphicsPixmapItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->type() );

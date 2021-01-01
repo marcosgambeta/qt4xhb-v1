@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -51,12 +51,12 @@ QTextDocument * document() const
 */
 HB_FUNC_STATIC( QTEXTOBJECT_DOCUMENT )
 {
-  QTextObject * obj = (QTextObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextObject * obj = ( QTextObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTextDocument * ptr = obj->document();
@@ -76,12 +76,12 @@ QTextFormat format() const
 */
 HB_FUNC_STATIC( QTEXTOBJECT_FORMAT )
 {
-  QTextObject * obj = (QTextObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextObject * obj = ( QTextObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTextFormat * ptr = new QTextFormat( obj->format() );
@@ -101,12 +101,12 @@ int formatIndex() const
 */
 HB_FUNC_STATIC( QTEXTOBJECT_FORMATINDEX )
 {
-  QTextObject * obj = (QTextObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextObject * obj = ( QTextObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->formatIndex() );
@@ -125,12 +125,12 @@ int objectIndex() const
 */
 HB_FUNC_STATIC( QTEXTOBJECT_OBJECTINDEX )
 {
-  QTextObject * obj = (QTextObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextObject * obj = ( QTextObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->objectIndex() );

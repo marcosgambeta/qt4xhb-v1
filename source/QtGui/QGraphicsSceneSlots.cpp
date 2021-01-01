@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QGraphicsSceneSlots.h"
 
-QGraphicsSceneSlots::QGraphicsSceneSlots( QObject *parent ) : QObject( parent )
+QGraphicsSceneSlots::QGraphicsSceneSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,15 +22,15 @@ QGraphicsSceneSlots::~QGraphicsSceneSlots()
 
 void QGraphicsSceneSlots::changed( const QList<QRectF> & region )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "changed(QList<QRectF>)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSSCENE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSSCENE" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QRECTF" );
-    PHB_ITEM pregion = hb_itemArrayNew(0);
+    PHB_ITEM pregion = hb_itemArrayNew( 0 );
     if( pDynSym )
     {
       for( int i = 0; i < region.count(); i++ )
@@ -41,7 +41,7 @@ void QGraphicsSceneSlots::changed( const QList<QRectF> & region )
         PHB_ITEM pTempObject = hb_itemNew( NULL );
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
         PHB_ITEM pTempItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pTempItem, (QRectF *) new QRectF( region [i] ) );
+        hb_itemPutPtr( pTempItem, ( QRectF * ) new QRectF( region [i] ) );
         hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
         hb_arrayAddForward( pregion, pTempObject );
         hb_itemRelease( pTempObject );
@@ -62,14 +62,14 @@ void QGraphicsSceneSlots::changed( const QList<QRectF> & region )
 
 void QGraphicsSceneSlots::sceneRectChanged( const QRectF & rect )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "sceneRectChanged(QRectF)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSSCENE" );
-    PHB_ITEM prect = Qt4xHb::Signals_return_object( (void *) &rect, "QRECTF" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSSCENE" );
+    PHB_ITEM prect = Qt4xHb::Signals_return_object( ( void * ) &rect, "QRECTF" );
 
     hb_vmEvalBlockV( cb, 2, psender, prect );
 
@@ -80,13 +80,13 @@ void QGraphicsSceneSlots::sceneRectChanged( const QRectF & rect )
 
 void QGraphicsSceneSlots::selectionChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "selectionChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSSCENE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSSCENE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -96,7 +96,7 @@ void QGraphicsSceneSlots::selectionChanged()
 
 void QGraphicsSceneSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsScene * obj = (QGraphicsScene *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsScene * obj = ( QGraphicsScene * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

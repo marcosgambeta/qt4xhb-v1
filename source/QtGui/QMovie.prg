@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -92,7 +92,7 @@ QMovie( QObject * parent = 0 )
 */
 void QMovie_new1()
 {
-  QMovie * obj = new QMovie( OPQOBJECT(1,0) );
+  QMovie * obj = new QMovie( OPQOBJECT( 1, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -101,7 +101,7 @@ QMovie( QIODevice * device, const QByteArray & format = QByteArray(), QObject * 
 */
 void QMovie_new2()
 {
-  QMovie * obj = new QMovie( PQIODEVICE(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt4xHb::itemGetPtr(2), OPQOBJECT(3,0) );
+  QMovie * obj = new QMovie( PQIODEVICE( 1 ), ISNIL( 2 )? QByteArray() : *( QByteArray * ) Qt4xHb::itemGetPtr( 2 ), OPQOBJECT( 3, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -110,21 +110,21 @@ QMovie( const QString & fileName, const QByteArray & format = QByteArray(), QObj
 */
 void QMovie_new3()
 {
-  QMovie * obj = new QMovie( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt4xHb::itemGetPtr(2), OPQOBJECT(3,0) );
+  QMovie * obj = new QMovie( PQSTRING( 1 ), ISNIL( 2 )? QByteArray() : *( QByteArray * ) Qt4xHb::itemGetPtr( 2 ), OPQOBJECT( 3, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QMOVIE_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
     QMovie_new1();
   }
-  else if( ISBETWEEN(1,3) && ISQIODEVICE(1) && (ISQBYTEARRAY(2)||ISNIL(2)) && (ISQOBJECT(3)||ISNIL(3)) )
+  else if( ISBETWEEN( 1, 3 ) && ISQIODEVICE( 1 ) && ( ISQBYTEARRAY( 2 ) || ISNIL( 2 ) ) && ( ISQOBJECT( 3 ) || ISNIL( 3 ) ) )
   {
     QMovie_new2();
   }
-  else if( ISBETWEEN(1,3) && ISCHAR(1) && (ISQBYTEARRAY(2)||ISNIL(2)) && (ISQOBJECT(3)||ISNIL(3)) )
+  else if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISQBYTEARRAY( 2 ) || ISNIL( 2 ) ) && ( ISQOBJECT( 3 ) || ISNIL( 3 ) ) )
   {
     QMovie_new3();
   }
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QMOVIE_NEW )
 
 HB_FUNC_STATIC( QMOVIE_DELETE )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -158,12 +158,12 @@ QColor backgroundColor() const
 */
 HB_FUNC_STATIC( QMOVIE_BACKGROUNDCOLOR )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QColor * ptr = new QColor( obj->backgroundColor() );
@@ -183,12 +183,12 @@ QMovie::CacheMode cacheMode() const
 */
 HB_FUNC_STATIC( QMOVIE_CACHEMODE )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->cacheMode() );
@@ -207,12 +207,12 @@ int currentFrameNumber() const
 */
 HB_FUNC_STATIC( QMOVIE_CURRENTFRAMENUMBER )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->currentFrameNumber() );
@@ -231,12 +231,12 @@ QImage currentImage() const
 */
 HB_FUNC_STATIC( QMOVIE_CURRENTIMAGE )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QImage * ptr = new QImage( obj->currentImage() );
@@ -256,12 +256,12 @@ QPixmap currentPixmap() const
 */
 HB_FUNC_STATIC( QMOVIE_CURRENTPIXMAP )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->currentPixmap() );
@@ -281,12 +281,12 @@ QIODevice * device() const
 */
 HB_FUNC_STATIC( QMOVIE_DEVICE )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QIODevice * ptr = obj->device();
@@ -306,12 +306,12 @@ QString fileName() const
 */
 HB_FUNC_STATIC( QMOVIE_FILENAME )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->fileName() );
@@ -330,12 +330,12 @@ QByteArray format() const
 */
 HB_FUNC_STATIC( QMOVIE_FORMAT )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->format() );
@@ -355,12 +355,12 @@ int frameCount() const
 */
 HB_FUNC_STATIC( QMOVIE_FRAMECOUNT )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->frameCount() );
@@ -379,12 +379,12 @@ QRect frameRect() const
 */
 HB_FUNC_STATIC( QMOVIE_FRAMERECT )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QRect * ptr = new QRect( obj->frameRect() );
@@ -404,12 +404,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QMOVIE_ISVALID )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -428,15 +428,15 @@ bool jumpToFrame( int frameNumber )
 */
 HB_FUNC_STATIC( QMOVIE_JUMPTOFRAME )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->jumpToFrame( PINT(1) ) );
+      RBOOL( obj->jumpToFrame( PINT( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -452,12 +452,12 @@ int loopCount() const
 */
 HB_FUNC_STATIC( QMOVIE_LOOPCOUNT )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->loopCount() );
@@ -476,12 +476,12 @@ int nextFrameDelay() const
 */
 HB_FUNC_STATIC( QMOVIE_NEXTFRAMEDELAY )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->nextFrameDelay() );
@@ -500,12 +500,12 @@ QSize scaledSize()
 */
 HB_FUNC_STATIC( QMOVIE_SCALEDSIZE )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->scaledSize() );
@@ -525,15 +525,15 @@ void setBackgroundColor( const QColor & color )
 */
 HB_FUNC_STATIC( QMOVIE_SETBACKGROUNDCOLOR )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
+    if( ISNUMPAR( 1 ) && ( ISQCOLOR( 1 ) || ISCHAR( 1 ) ) )
     {
 #endif
-      obj->setBackgroundColor( ISOBJECT(1)? *(QColor *) Qt4xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setBackgroundColor( ISOBJECT( 1 )? *( QColor * ) Qt4xHb::itemGetPtr( 1 ) : QColor( hb_parc( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -551,15 +551,15 @@ void setCacheMode( QMovie::CacheMode mode )
 */
 HB_FUNC_STATIC( QMOVIE_SETCACHEMODE )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setCacheMode( (QMovie::CacheMode) hb_parni(1) );
+      obj->setCacheMode( ( QMovie::CacheMode ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -577,15 +577,15 @@ void setDevice( QIODevice * device )
 */
 HB_FUNC_STATIC( QMOVIE_SETDEVICE )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQIODEVICE(1) )
+    if( ISNUMPAR( 1 ) && ISQIODEVICE( 1 ) )
     {
 #endif
-      obj->setDevice( PQIODEVICE(1) );
+      obj->setDevice( PQIODEVICE( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -603,15 +603,15 @@ void setFileName( const QString & fileName )
 */
 HB_FUNC_STATIC( QMOVIE_SETFILENAME )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setFileName( PQSTRING(1) );
+      obj->setFileName( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -629,15 +629,15 @@ void setFormat( const QByteArray & format )
 */
 HB_FUNC_STATIC( QMOVIE_SETFORMAT )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
     {
 #endif
-      obj->setFormat( *PQBYTEARRAY(1) );
+      obj->setFormat( *PQBYTEARRAY( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -655,15 +655,15 @@ void setScaledSize( const QSize & size )
 */
 HB_FUNC_STATIC( QMOVIE_SETSCALEDSIZE )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZE(1) )
+    if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
     {
 #endif
-      obj->setScaledSize( *PQSIZE(1) );
+      obj->setScaledSize( *PQSIZE( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -681,12 +681,12 @@ int speed() const
 */
 HB_FUNC_STATIC( QMOVIE_SPEED )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->speed() );
@@ -705,12 +705,12 @@ QMovie::MovieState state() const
 */
 HB_FUNC_STATIC( QMOVIE_STATE )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->state() );
@@ -729,12 +729,12 @@ bool jumpToNextFrame()
 */
 HB_FUNC_STATIC( QMOVIE_JUMPTONEXTFRAME )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->jumpToNextFrame() );
@@ -753,15 +753,15 @@ void setPaused( bool paused )
 */
 HB_FUNC_STATIC( QMOVIE_SETPAUSED )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setPaused( PBOOL(1) );
+      obj->setPaused( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -779,15 +779,15 @@ void setSpeed( int percentSpeed )
 */
 HB_FUNC_STATIC( QMOVIE_SETSPEED )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setSpeed( PINT(1) );
+      obj->setSpeed( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -805,12 +805,12 @@ void start()
 */
 HB_FUNC_STATIC( QMOVIE_START )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->start();
@@ -831,12 +831,12 @@ void stop()
 */
 HB_FUNC_STATIC( QMOVIE_STOP )
 {
-  QMovie * obj = (QMovie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMovie * obj = ( QMovie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->stop();
@@ -858,12 +858,12 @@ static QList<QByteArray> supportedFormats()
 HB_FUNC_STATIC( QMOVIE_SUPPORTEDFORMATS )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QList<QByteArray> list = QMovie::supportedFormats();
     PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew( 0 );
     if( pDynSym )
     {
       for( int i = 0; i < list.count(); i++ )
@@ -874,7 +874,7 @@ HB_FUNC_STATIC( QMOVIE_SUPPORTEDFORMATS )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QByteArray *) new QByteArray( list[i] ) );
+        hb_itemPutPtr( pItem, ( QByteArray * ) new QByteArray( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );

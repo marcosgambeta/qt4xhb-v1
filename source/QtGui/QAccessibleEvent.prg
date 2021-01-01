@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -45,9 +45,9 @@ QAccessibleEvent( QAccessibleEvent::Type type, int child )
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_NEW )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
   {
-    QAccessibleEvent * obj = new QAccessibleEvent( (QAccessibleEvent::Type) hb_parni(1), PINT(2) );
+    QAccessibleEvent * obj = new QAccessibleEvent( ( QAccessibleEvent::Type ) hb_parni( 1 ), PINT( 2 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -61,12 +61,12 @@ int child() const
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_CHILD )
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAccessibleEvent * obj = ( QAccessibleEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->child() );
@@ -85,15 +85,15 @@ void setValue( const QString & text )
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_SETVALUE )
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAccessibleEvent * obj = ( QAccessibleEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setValue( PQSTRING(1) );
+      obj->setValue( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -111,12 +111,12 @@ QString value() const
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_VALUE )
 {
-  QAccessibleEvent * obj = (QAccessibleEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAccessibleEvent * obj = ( QAccessibleEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->value() );

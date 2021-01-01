@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -46,7 +46,7 @@ QGraphicsSceneMoveEvent()
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QGraphicsSceneMoveEvent * obj = new QGraphicsSceneMoveEvent();
     Qt4xHb::returnNewObject( obj, false );
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_DELETE )
 {
-  QGraphicsSceneMoveEvent * obj = (QGraphicsSceneMoveEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneMoveEvent * obj = ( QGraphicsSceneMoveEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -79,12 +79,12 @@ QPointF newPos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEWPOS )
 {
-  QGraphicsSceneMoveEvent * obj = (QGraphicsSceneMoveEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneMoveEvent * obj = ( QGraphicsSceneMoveEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPointF * ptr = new QPointF( obj->newPos() );
@@ -104,12 +104,12 @@ QPointF oldPos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_OLDPOS )
 {
-  QGraphicsSceneMoveEvent * obj = (QGraphicsSceneMoveEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneMoveEvent * obj = ( QGraphicsSceneMoveEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPointF * ptr = new QPointF( obj->oldPos() );

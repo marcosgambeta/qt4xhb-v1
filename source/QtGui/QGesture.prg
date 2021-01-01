@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -54,9 +54,9 @@ QGesture( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGESTURE_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
-    QGesture * obj = new QGesture( OPQOBJECT(1,0) );
+    QGesture * obj = new QGesture( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QGESTURE_NEW )
 
 HB_FUNC_STATIC( QGESTURE_DELETE )
 {
-  QGesture * obj = (QGesture *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGesture * obj = ( QGesture * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -89,12 +89,12 @@ QGesture::GestureCancelPolicy gestureCancelPolicy() const
 */
 HB_FUNC_STATIC( QGESTURE_GESTURECANCELPOLICY )
 {
-  QGesture * obj = (QGesture *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGesture * obj = ( QGesture * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->gestureCancelPolicy() );
@@ -113,12 +113,12 @@ Qt::GestureType gestureType() const
 */
 HB_FUNC_STATIC( QGESTURE_GESTURETYPE )
 {
-  QGesture * obj = (QGesture *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGesture * obj = ( QGesture * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->gestureType() );
@@ -137,12 +137,12 @@ bool hasHotSpot() const
 */
 HB_FUNC_STATIC( QGESTURE_HASHOTSPOT )
 {
-  QGesture * obj = (QGesture *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGesture * obj = ( QGesture * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->hasHotSpot() );
@@ -161,12 +161,12 @@ QPointF hotSpot() const
 */
 HB_FUNC_STATIC( QGESTURE_HOTSPOT )
 {
-  QGesture * obj = (QGesture *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGesture * obj = ( QGesture * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPointF * ptr = new QPointF( obj->hotSpot() );
@@ -186,15 +186,15 @@ void setGestureCancelPolicy( QGesture::GestureCancelPolicy policy )
 */
 HB_FUNC_STATIC( QGESTURE_SETGESTURECANCELPOLICY )
 {
-  QGesture * obj = (QGesture *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGesture * obj = ( QGesture * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setGestureCancelPolicy( (QGesture::GestureCancelPolicy) hb_parni(1) );
+      obj->setGestureCancelPolicy( ( QGesture::GestureCancelPolicy ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,15 +212,15 @@ void setHotSpot( const QPointF & value )
 */
 HB_FUNC_STATIC( QGESTURE_SETHOTSPOT )
 {
-  QGesture * obj = (QGesture *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGesture * obj = ( QGesture * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINTF(1) )
+    if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
     {
 #endif
-      obj->setHotSpot( *PQPOINTF(1) );
+      obj->setHotSpot( *PQPOINTF( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,12 +238,12 @@ Qt::GestureState state() const
 */
 HB_FUNC_STATIC( QGESTURE_STATE )
 {
-  QGesture * obj = (QGesture *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGesture * obj = ( QGesture * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->state() );
@@ -262,12 +262,12 @@ void unsetHotSpot()
 */
 HB_FUNC_STATIC( QGESTURE_UNSETHOTSPOT )
 {
-  QGesture * obj = (QGesture *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGesture * obj = ( QGesture * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->unsetHotSpot();

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -47,7 +47,7 @@ QStyleOptionComplex( int version = QStyleOptionComplex::Version, int type = QSty
 */
 void QStyleOptionComplex_new1()
 {
-  QStyleOptionComplex * obj = new QStyleOptionComplex( OPINT(1,QStyleOptionComplex::Version), OPINT(2,QStyleOptionComplex::SO_Complex) );
+  QStyleOptionComplex * obj = new QStyleOptionComplex( OPINT( 1, QStyleOptionComplex::Version ), OPINT( 2, QStyleOptionComplex::SO_Complex ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -56,17 +56,17 @@ QStyleOptionComplex( const QStyleOptionComplex & other )
 */
 void QStyleOptionComplex_new2()
 {
-  QStyleOptionComplex * obj = new QStyleOptionComplex( *PQSTYLEOPTIONCOMPLEX(1) );
+  QStyleOptionComplex * obj = new QStyleOptionComplex( *PQSTYLEOPTIONCOMPLEX( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_NEW )
 {
-  if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTNUM(2) )
+  if( ISBETWEEN( 0, 2 ) && ISOPTNUM( 1 ) && ISOPTNUM( 2 ) )
   {
     QStyleOptionComplex_new1();
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONCOMPLEX(1) )
+  else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONCOMPLEX( 1 ) )
   {
     QStyleOptionComplex_new2();
   }
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_NEW )
 
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_DELETE )
 {
-  QStyleOptionComplex * obj = (QStyleOptionComplex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionComplex * obj = ( QStyleOptionComplex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -98,11 +98,11 @@ QStyle::SubControls subControls
 */
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SUBCONTROLS )
 {
-  QStyleOptionComplex * obj = (QStyleOptionComplex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionComplex * obj = ( QStyleOptionComplex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RENUM( obj->subControls );
     }
@@ -114,13 +114,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SUBCONTROLS )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SETSUBCONTROLS )
 {
-  QStyleOptionComplex * obj = (QStyleOptionComplex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionComplex * obj = ( QStyleOptionComplex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
-      obj->subControls= (QStyle::SubControls) hb_parni(1);
+      obj->subControls= ( QStyle::SubControls ) hb_parni( 1 );
     }
     else
     {
@@ -136,11 +136,11 @@ QStyle::SubControls activeSubControls
 */
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_ACTIVESUBCONTROLS )
 {
-  QStyleOptionComplex * obj = (QStyleOptionComplex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionComplex * obj = ( QStyleOptionComplex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RENUM( obj->activeSubControls );
     }
@@ -152,13 +152,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_ACTIVESUBCONTROLS )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SETACTIVESUBCONTROLS )
 {
-  QStyleOptionComplex * obj = (QStyleOptionComplex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionComplex * obj = ( QStyleOptionComplex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
-      obj->activeSubControls= (QStyle::SubControls) hb_parni(1);
+      obj->activeSubControls= ( QStyle::SubControls ) hb_parni( 1 );
     }
     else
     {

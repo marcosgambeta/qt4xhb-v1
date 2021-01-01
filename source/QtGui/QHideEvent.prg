@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -43,7 +43,7 @@ QHideEvent()
 */
 HB_FUNC_STATIC( QHIDEEVENT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QHideEvent * obj = new QHideEvent();
     Qt4xHb::returnNewObject( obj, false );
@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QHIDEEVENT_NEW )
 
 HB_FUNC_STATIC( QHIDEEVENT_DELETE )
 {
-  QHideEvent * obj = (QHideEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QHideEvent * obj = ( QHideEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

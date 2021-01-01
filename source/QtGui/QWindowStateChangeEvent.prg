@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -45,7 +45,7 @@ QWindowStateChangeEvent( Qt::WindowStates aOldState )
 */
 void QWindowStateChangeEvent_new1()
 {
-  QWindowStateChangeEvent * obj = new QWindowStateChangeEvent( (Qt::WindowStates) hb_parni(1) );
+  QWindowStateChangeEvent * obj = new QWindowStateChangeEvent( ( Qt::WindowStates ) hb_parni( 1 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -54,17 +54,17 @@ QWindowStateChangeEvent( Qt::WindowStates aOldState, bool isOverride )
 */
 void QWindowStateChangeEvent_new2()
 {
-  QWindowStateChangeEvent * obj = new QWindowStateChangeEvent( (Qt::WindowStates) hb_parni(1), PBOOL(2) );
+  QWindowStateChangeEvent * obj = new QWindowStateChangeEvent( ( Qt::WindowStates ) hb_parni( 1 ), PBOOL( 2 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW )
 {
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
   {
     QWindowStateChangeEvent_new1();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
+  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISLOG( 2 ) )
   {
     QWindowStateChangeEvent_new2();
   }
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW )
 
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_DELETE )
 {
-  QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWindowStateChangeEvent * obj = ( QWindowStateChangeEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -96,12 +96,12 @@ Qt::WindowStates oldState() const
 */
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_OLDSTATE )
 {
-  QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWindowStateChangeEvent * obj = ( QWindowStateChangeEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->oldState() );
@@ -120,12 +120,12 @@ bool isOverride() const
 */
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_ISOVERRIDE )
 {
-  QWindowStateChangeEvent * obj = (QWindowStateChangeEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWindowStateChangeEvent * obj = ( QWindowStateChangeEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isOverride() );

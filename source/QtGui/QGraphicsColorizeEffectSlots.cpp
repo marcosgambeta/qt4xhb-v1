@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QGraphicsColorizeEffectSlots.h"
 
-QGraphicsColorizeEffectSlots::QGraphicsColorizeEffectSlots( QObject *parent ) : QObject( parent )
+QGraphicsColorizeEffectSlots::QGraphicsColorizeEffectSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,14 +22,14 @@ QGraphicsColorizeEffectSlots::~QGraphicsColorizeEffectSlots()
 
 void QGraphicsColorizeEffectSlots::colorChanged( const QColor & color )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "colorChanged(QColor)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSCOLORIZEEFFECT" );
-    PHB_ITEM pcolor = Qt4xHb::Signals_return_object( (void *) &color, "QCOLOR" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSCOLORIZEEFFECT" );
+    PHB_ITEM pcolor = Qt4xHb::Signals_return_object( ( void * ) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
 
@@ -40,13 +40,13 @@ void QGraphicsColorizeEffectSlots::colorChanged( const QColor & color )
 
 void QGraphicsColorizeEffectSlots::strengthChanged( qreal strength )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "strengthChanged(qreal)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSCOLORIZEEFFECT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSCOLORIZEEFFECT" );
     PHB_ITEM pstrength = hb_itemPutND( NULL, strength );
 
     hb_vmEvalBlockV( cb, 2, psender, pstrength );
@@ -58,7 +58,7 @@ void QGraphicsColorizeEffectSlots::strengthChanged( qreal strength )
 
 void QGraphicsColorizeEffectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsColorizeEffect * obj = ( QGraphicsColorizeEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

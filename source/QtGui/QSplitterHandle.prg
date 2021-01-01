@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -51,9 +51,9 @@ QSplitterHandle( Qt::Orientation orientation, QSplitter * parent )
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_NEW )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISQSPLITTER(2) )
+  if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQSPLITTER( 2 ) )
   {
-    QSplitterHandle * obj = new QSplitterHandle( (Qt::Orientation) hb_parni(1), PQSPLITTER(2) );
+    QSplitterHandle * obj = new QSplitterHandle( ( Qt::Orientation ) hb_parni( 1 ), PQSPLITTER( 2 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -67,12 +67,12 @@ bool opaqueResize() const
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_OPAQUERESIZE )
 {
-  QSplitterHandle * obj = (QSplitterHandle *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitterHandle * obj = ( QSplitterHandle * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->opaqueResize() );
@@ -91,12 +91,12 @@ Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_ORIENTATION )
 {
-  QSplitterHandle * obj = (QSplitterHandle *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitterHandle * obj = ( QSplitterHandle * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->orientation() );
@@ -115,15 +115,15 @@ void setOrientation( Qt::Orientation orientation )
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_SETORIENTATION )
 {
-  QSplitterHandle * obj = (QSplitterHandle *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitterHandle * obj = ( QSplitterHandle * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setOrientation( (Qt::Orientation) hb_parni(1) );
+      obj->setOrientation( ( Qt::Orientation ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,12 +141,12 @@ QSplitter * splitter() const
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_SPLITTER )
 {
-  QSplitterHandle * obj = (QSplitterHandle *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitterHandle * obj = ( QSplitterHandle * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSplitter * ptr = obj->splitter();
@@ -166,12 +166,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_SIZEHINT )
 {
-  QSplitterHandle * obj = (QSplitterHandle *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitterHandle * obj = ( QSplitterHandle * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );

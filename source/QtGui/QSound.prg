@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -53,9 +53,9 @@ QSound( const QString & filename, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSOUND_NEW )
 {
-  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISQOBJECT( 2 ) || ISNIL( 2 ) ) )
   {
-    QSound * obj = new QSound( PQSTRING(1), OPQOBJECT(2,0) );
+    QSound * obj = new QSound( PQSTRING( 1 ), OPQOBJECT( 2, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QSOUND_NEW )
 
 HB_FUNC_STATIC( QSOUND_DELETE )
 {
-  QSound * obj = (QSound *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSound * obj = ( QSound * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -88,12 +88,12 @@ QString fileName() const
 */
 HB_FUNC_STATIC( QSOUND_FILENAME )
 {
-  QSound * obj = (QSound *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSound * obj = ( QSound * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->fileName() );
@@ -112,12 +112,12 @@ bool isFinished() const
 */
 HB_FUNC_STATIC( QSOUND_ISFINISHED )
 {
-  QSound * obj = (QSound *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSound * obj = ( QSound * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isFinished() );
@@ -136,12 +136,12 @@ int loops() const
 */
 HB_FUNC_STATIC( QSOUND_LOOPS )
 {
-  QSound * obj = (QSound *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSound * obj = ( QSound * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->loops() );
@@ -160,12 +160,12 @@ int loopsRemaining() const
 */
 HB_FUNC_STATIC( QSOUND_LOOPSREMAINING )
 {
-  QSound * obj = (QSound *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSound * obj = ( QSound * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->loopsRemaining() );
@@ -184,15 +184,15 @@ void setLoops( int number )
 */
 HB_FUNC_STATIC( QSOUND_SETLOOPS )
 {
-  QSound * obj = (QSound *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSound * obj = ( QSound * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setLoops( PINT(1) );
+      obj->setLoops( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,12 +210,12 @@ void stop()
 */
 HB_FUNC_STATIC( QSOUND_STOP )
 {
-  QSound * obj = (QSound *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSound * obj = ( QSound * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->stop();
@@ -237,7 +237,7 @@ static bool isAvailable()
 HB_FUNC_STATIC( QSOUND_ISAVAILABLE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RBOOL( QSound::isAvailable() );
@@ -255,7 +255,7 @@ void play()
 */
 void QSound_play1()
 {
-  QSound * obj = (QSound *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSound * obj = ( QSound * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -271,18 +271,18 @@ static void play( const QString & filename )
 void QSound_play2()
 {
 
-  QSound::play( PQSTRING(1) );
+  QSound::play( PQSTRING( 1 ) );
 
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( QSOUND_PLAY )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QSound_play1();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
     QSound_play2();
   }

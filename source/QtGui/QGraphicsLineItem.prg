@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -60,7 +60,7 @@ QGraphicsLineItem( QGraphicsItem * parent = 0 )
 */
 void QGraphicsLineItem_new1()
 {
-  QGraphicsLineItem * obj = new QGraphicsLineItem( ISNIL(1)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(1) );
+  QGraphicsLineItem * obj = new QGraphicsLineItem( ISNIL( 1 )? 0 : ( QGraphicsItem * ) Qt4xHb::itemGetPtr( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -69,7 +69,7 @@ QGraphicsLineItem( const QLineF & line, QGraphicsItem * parent = 0 )
 */
 void QGraphicsLineItem_new2()
 {
-  QGraphicsLineItem * obj = new QGraphicsLineItem( *PQLINEF(1), ISNIL(2)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(2) );
+  QGraphicsLineItem * obj = new QGraphicsLineItem( *PQLINEF( 1 ), ISNIL( 2 )? 0 : ( QGraphicsItem * ) Qt4xHb::itemGetPtr( 2 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -78,21 +78,21 @@ QGraphicsLineItem( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * paren
 */
 void QGraphicsLineItem_new3()
 {
-  QGraphicsLineItem * obj = new QGraphicsLineItem( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ISNIL(5)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(5) );
+  QGraphicsLineItem * obj = new QGraphicsLineItem( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), ISNIL( 5 )? 0 : ( QGraphicsItem * ) Qt4xHb::itemGetPtr( 5 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQGRAPHICSITEM( 1 ) || ISNIL( 1 ) ) )
   {
     QGraphicsLineItem_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQLINEF(1) && (ISQGRAPHICSITEM(2)||ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISQLINEF( 1 ) && ( ISQGRAPHICSITEM( 2 ) || ISNIL( 2 ) ) )
   {
     QGraphicsLineItem_new2();
   }
-  else if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISQGRAPHICSITEM(5)||ISNIL(5)) )
+  else if( ISBETWEEN( 4, 5 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ( ISQGRAPHICSITEM( 5 ) || ISNIL( 5 ) ) )
   {
     QGraphicsLineItem_new3();
   }
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_DELETE )
 {
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLineItem * obj = ( QGraphicsLineItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -124,12 +124,12 @@ QLineF line() const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_LINE )
 {
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLineItem * obj = ( QGraphicsLineItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QLineF * ptr = new QLineF( obj->line() );
@@ -149,12 +149,12 @@ QPen pen() const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_PEN )
 {
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLineItem * obj = ( QGraphicsLineItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPen * ptr = new QPen( obj->pen() );
@@ -174,11 +174,11 @@ void setLine( const QLineF & line )
 */
 void QGraphicsLineItem_setLine1()
 {
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLineItem * obj = ( QGraphicsLineItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setLine( *PQLINEF(1) );
+    obj->setLine( *PQLINEF( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -189,11 +189,11 @@ void setLine( qreal x1, qreal y1, qreal x2, qreal y2 )
 */
 void QGraphicsLineItem_setLine2()
 {
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLineItem * obj = ( QGraphicsLineItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setLine( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+    obj->setLine( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -201,11 +201,11 @@ void QGraphicsLineItem_setLine2()
 
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETLINE )
 {
-  if( ISNUMPAR(1) && ISQLINEF(1) )
+  if( ISNUMPAR( 1 ) && ISQLINEF( 1 ) )
   {
     QGraphicsLineItem_setLine1();
   }
-  else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+  else if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
   {
     QGraphicsLineItem_setLine2();
   }
@@ -220,15 +220,15 @@ void setPen( const QPen & pen )
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETPEN )
 {
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLineItem * obj = ( QGraphicsLineItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPEN(1) )
+    if( ISNUMPAR( 1 ) && ISQPEN( 1 ) )
     {
 #endif
-      obj->setPen( *PQPEN(1) );
+      obj->setPen( *PQPEN( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,12 +246,12 @@ virtual QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_BOUNDINGRECT )
 {
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLineItem * obj = ( QGraphicsLineItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QRectF * ptr = new QRectF( obj->boundingRect() );
@@ -271,15 +271,15 @@ virtual bool contains( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_CONTAINS )
 {
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLineItem * obj = ( QGraphicsLineItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINTF(1) )
+    if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
     {
 #endif
-      RBOOL( obj->contains( *PQPOINTF(1) ) );
+      RBOOL( obj->contains( *PQPOINTF( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,15 +295,15 @@ virtual bool isObscuredBy( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_ISOBSCUREDBY )
 {
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLineItem * obj = ( QGraphicsLineItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGRAPHICSITEM(1) )
+    if( ISNUMPAR( 1 ) && ISQGRAPHICSITEM( 1 ) )
     {
 #endif
-      RBOOL( obj->isObscuredBy( PQGRAPHICSITEM(1) ) );
+      RBOOL( obj->isObscuredBy( PQGRAPHICSITEM( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -319,12 +319,12 @@ virtual QPainterPath opaqueArea() const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_OPAQUEAREA )
 {
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLineItem * obj = ( QGraphicsLineItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPainterPath * ptr = new QPainterPath( obj->opaqueArea() );
@@ -344,15 +344,15 @@ virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option,
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_PAINT )
 {
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLineItem * obj = ( QGraphicsLineItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3)||ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && ISQPAINTER( 1 ) && ISQSTYLEOPTIONGRAPHICSITEM( 2 ) && ( ISQWIDGET( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
-      obj->paint( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,0) );
+      obj->paint( PQPAINTER( 1 ), PQSTYLEOPTIONGRAPHICSITEM( 2 ), OPQWIDGET( 3, 0 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -370,12 +370,12 @@ virtual QPainterPath shape() const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_SHAPE )
 {
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLineItem * obj = ( QGraphicsLineItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPainterPath * ptr = new QPainterPath( obj->shape() );
@@ -395,12 +395,12 @@ virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_TYPE )
 {
-  QGraphicsLineItem * obj = (QGraphicsLineItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLineItem * obj = ( QGraphicsLineItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->type() );

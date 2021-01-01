@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -47,9 +47,9 @@ QShortcutEvent( const QKeySequence & key, int id, bool ambiguous = false )
 */
 HB_FUNC_STATIC( QSHORTCUTEVENT_NEW )
 {
-  if( ISBETWEEN(2,3) && ISQKEYSEQUENCE(1) && ISNUM(2) && ISOPTLOG(3) )
+  if( ISBETWEEN( 2, 3 ) && ISQKEYSEQUENCE( 1 ) && ISNUM( 2 ) && ISOPTLOG( 3 ) )
   {
-    QShortcutEvent * obj = new QShortcutEvent( *PQKEYSEQUENCE(1), PINT(2), OPBOOL(3,false) );
+    QShortcutEvent * obj = new QShortcutEvent( *PQKEYSEQUENCE( 1 ), PINT( 2 ), OPBOOL( 3, false ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_NEW )
 
 HB_FUNC_STATIC( QSHORTCUTEVENT_DELETE )
 {
-  QShortcutEvent * obj = (QShortcutEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcutEvent * obj = ( QShortcutEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -80,12 +80,12 @@ const QKeySequence & key()
 */
 HB_FUNC_STATIC( QSHORTCUTEVENT_KEY )
 {
-  QShortcutEvent * obj = (QShortcutEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcutEvent * obj = ( QShortcutEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QKeySequence * ptr = &obj->key();
@@ -105,12 +105,12 @@ int shortcutId()
 */
 HB_FUNC_STATIC( QSHORTCUTEVENT_SHORTCUTID )
 {
-  QShortcutEvent * obj = (QShortcutEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcutEvent * obj = ( QShortcutEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->shortcutId() );
@@ -129,12 +129,12 @@ bool isAmbiguous()
 */
 HB_FUNC_STATIC( QSHORTCUTEVENT_ISAMBIGUOUS )
 {
-  QShortcutEvent * obj = (QShortcutEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcutEvent * obj = ( QShortcutEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isAmbiguous() );

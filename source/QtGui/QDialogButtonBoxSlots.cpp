@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QDialogButtonBoxSlots.h"
 
-QDialogButtonBoxSlots::QDialogButtonBoxSlots( QObject *parent ) : QObject( parent )
+QDialogButtonBoxSlots::QDialogButtonBoxSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QDialogButtonBoxSlots::~QDialogButtonBoxSlots()
 
 void QDialogButtonBoxSlots::accepted()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "accepted()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDIALOGBUTTONBOX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDIALOGBUTTONBOX" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,14 +38,14 @@ void QDialogButtonBoxSlots::accepted()
 
 void QDialogButtonBoxSlots::clicked( QAbstractButton * button )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "clicked(QAbstractButton*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDIALOGBUTTONBOX" );
-    PHB_ITEM pbutton = Qt4xHb::Signals_return_qobject( (QObject *) button, "QABSTRACTBUTTON" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDIALOGBUTTONBOX" );
+    PHB_ITEM pbutton = Qt4xHb::Signals_return_qobject( ( QObject * ) button, "QABSTRACTBUTTON" );
 
     hb_vmEvalBlockV( cb, 2, psender, pbutton );
 
@@ -56,13 +56,13 @@ void QDialogButtonBoxSlots::clicked( QAbstractButton * button )
 
 void QDialogButtonBoxSlots::helpRequested()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "helpRequested()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDIALOGBUTTONBOX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDIALOGBUTTONBOX" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -72,13 +72,13 @@ void QDialogButtonBoxSlots::helpRequested()
 
 void QDialogButtonBoxSlots::rejected()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "rejected()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDIALOGBUTTONBOX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDIALOGBUTTONBOX" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -88,7 +88,7 @@ void QDialogButtonBoxSlots::rejected()
 
 void QDialogButtonBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = ( QDialogButtonBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

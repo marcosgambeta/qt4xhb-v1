@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -28,7 +28,7 @@ class QDialogSlots: public QObject
 {
   Q_OBJECT
   public:
-  QDialogSlots( QObject *parent = 0 );
+  QDialogSlots( QObject * parent = 0 );
   ~QDialogSlots();
   public slots:
   void accepted();

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -65,7 +65,7 @@ QTextBlockFormat()
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QTextBlockFormat * obj = new QTextBlockFormat();
     Qt4xHb::returnNewObject( obj, true );
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_NEW )
 
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_DELETE )
 {
-  QTextBlockFormat * obj = (QTextBlockFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlockFormat * obj = ( QTextBlockFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -98,12 +98,12 @@ Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_ALIGNMENT )
 {
-  QTextBlockFormat * obj = (QTextBlockFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlockFormat * obj = ( QTextBlockFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->alignment() );
@@ -122,12 +122,12 @@ qreal bottomMargin() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_BOTTOMMARGIN )
 {
-  QTextBlockFormat * obj = (QTextBlockFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlockFormat * obj = ( QTextBlockFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->bottomMargin() );
@@ -146,12 +146,12 @@ int indent() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_INDENT )
 {
-  QTextBlockFormat * obj = (QTextBlockFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlockFormat * obj = ( QTextBlockFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->indent() );
@@ -170,12 +170,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_ISVALID )
 {
-  QTextBlockFormat * obj = (QTextBlockFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlockFormat * obj = ( QTextBlockFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -194,12 +194,12 @@ qreal leftMargin() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LEFTMARGIN )
 {
-  QTextBlockFormat * obj = (QTextBlockFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlockFormat * obj = ( QTextBlockFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->leftMargin() );
@@ -218,11 +218,11 @@ qreal lineHeight( qreal scriptLineHeight, qreal scaling ) const
 */
 void QTextBlockFormat_lineHeight1()
 {
-  QTextBlockFormat * obj = (QTextBlockFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlockFormat * obj = ( QTextBlockFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RQREAL( obj->lineHeight( PQREAL(1), PQREAL(2) ) );
+    RQREAL( obj->lineHeight( PQREAL( 1 ), PQREAL( 2 ) ) );
   }
 }
 
@@ -231,7 +231,7 @@ qreal lineHeight() const
 */
 void QTextBlockFormat_lineHeight2()
 {
-  QTextBlockFormat * obj = (QTextBlockFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlockFormat * obj = ( QTextBlockFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -241,11 +241,11 @@ void QTextBlockFormat_lineHeight2()
 
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
   {
     QTextBlockFormat_lineHeight1();
   }
-  else if( ISNUMPAR(0) )
+  else if( ISNUMPAR( 0 ) )
   {
     QTextBlockFormat_lineHeight2();
   }
@@ -260,12 +260,12 @@ int lineHeightType() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHTTYPE )
 {
-  QTextBlockFormat * obj = (QTextBlockFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlockFormat * obj = ( QTextBlockFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->lineHeightType() );
@@ -284,12 +284,12 @@ bool nonBreakableLines() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_NONBREAKABLELINES )
 {
-  QTextBlockFormat * obj = (QTextBlockFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlockFormat * obj = ( QTextBlockFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->nonBreakableLines() );
@@ -308,12 +308,12 @@ QTextFormat::PageBreakFlags pageBreakPolicy() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_PAGEBREAKPOLICY )
 {
-  QTextBlockFormat * obj = (QTextBlockFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlockFormat * obj = ( QTextBlockFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->pageBreakPolicy() );
@@ -332,12 +332,12 @@ qreal rightMargin() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_RIGHTMARGIN )
 {
-  QTextBlockFormat * obj = (QTextBlockFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlockFormat * obj = ( QTextBlockFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->rightMargin() );
@@ -356,15 +356,15 @@ void setAlignment( Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETALIGNMENT )
 {
-  QTextBlockFormat * obj = (QTextBlockFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlockFormat * obj = ( QTextBlockFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setAlignment( (Qt::Alignment) hb_parni(1) );
+      obj->setAlignment( ( Qt::Alignment ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -382,15 +382,15 @@ void setBottomMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETBOTTOMMARGIN )
 {
-  QTextBlockFormat * obj = (QTextBlockFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlockFormat * obj = ( QTextBlockFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setBottomMargin( PQREAL(1) );
+      obj->setBottomMargin( PQREAL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -408,15 +408,15 @@ void setIndent( int indentation )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETINDENT )
 {
-  QTextBlockFormat * obj = (QTextBlockFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlockFormat * obj = ( QTextBlockFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setIndent( PINT(1) );
+      obj->setIndent( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -434,15 +434,15 @@ void setLeftMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETLEFTMARGIN )
 {
-  QTextBlockFormat * obj = (QTextBlockFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlockFormat * obj = ( QTextBlockFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setLeftMargin( PQREAL(1) );
+      obj->setLeftMargin( PQREAL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -460,15 +460,15 @@ void setLineHeight( qreal height, int heightType )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETLINEHEIGHT )
 {
-  QTextBlockFormat * obj = (QTextBlockFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlockFormat * obj = ( QTextBlockFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      obj->setLineHeight( PQREAL(1), PINT(2) );
+      obj->setLineHeight( PQREAL( 1 ), PINT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -486,15 +486,15 @@ void setNonBreakableLines( bool b )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETNONBREAKABLELINES )
 {
-  QTextBlockFormat * obj = (QTextBlockFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlockFormat * obj = ( QTextBlockFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setNonBreakableLines( PBOOL(1) );
+      obj->setNonBreakableLines( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -512,15 +512,15 @@ void setPageBreakPolicy( QTextFormat::PageBreakFlags policy )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETPAGEBREAKPOLICY )
 {
-  QTextBlockFormat * obj = (QTextBlockFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlockFormat * obj = ( QTextBlockFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setPageBreakPolicy( (QTextFormat::PageBreakFlags) hb_parni(1) );
+      obj->setPageBreakPolicy( ( QTextFormat::PageBreakFlags ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -538,15 +538,15 @@ void setRightMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETRIGHTMARGIN )
 {
-  QTextBlockFormat * obj = (QTextBlockFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlockFormat * obj = ( QTextBlockFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setRightMargin( PQREAL(1) );
+      obj->setRightMargin( PQREAL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -564,15 +564,15 @@ void setTextIndent( qreal indent )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETTEXTINDENT )
 {
-  QTextBlockFormat * obj = (QTextBlockFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlockFormat * obj = ( QTextBlockFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setTextIndent( PQREAL(1) );
+      obj->setTextIndent( PQREAL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -590,15 +590,15 @@ void setTopMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETTOPMARGIN )
 {
-  QTextBlockFormat * obj = (QTextBlockFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlockFormat * obj = ( QTextBlockFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setTopMargin( PQREAL(1) );
+      obj->setTopMargin( PQREAL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -616,12 +616,12 @@ qreal textIndent() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_TEXTINDENT )
 {
-  QTextBlockFormat * obj = (QTextBlockFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlockFormat * obj = ( QTextBlockFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->textIndent() );
@@ -640,12 +640,12 @@ qreal topMargin() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_TOPMARGIN )
 {
-  QTextBlockFormat * obj = (QTextBlockFormat *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlockFormat * obj = ( QTextBlockFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->topMargin() );

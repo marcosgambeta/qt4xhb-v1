@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QCalendarWidgetSlots.h"
 
-QCalendarWidgetSlots::QCalendarWidgetSlots( QObject *parent ) : QObject( parent )
+QCalendarWidgetSlots::QCalendarWidgetSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,14 +22,14 @@ QCalendarWidgetSlots::~QCalendarWidgetSlots()
 
 void QCalendarWidgetSlots::activated( const QDate & date )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activated(QDate)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QCALENDARWIDGET" );
-    PHB_ITEM pdate = Qt4xHb::Signals_return_object( (void *) &date, "QDATE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCALENDARWIDGET" );
+    PHB_ITEM pdate = Qt4xHb::Signals_return_object( ( void * ) &date, "QDATE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pdate );
 
@@ -40,14 +40,14 @@ void QCalendarWidgetSlots::activated( const QDate & date )
 
 void QCalendarWidgetSlots::clicked( const QDate & date )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "clicked(QDate)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QCALENDARWIDGET" );
-    PHB_ITEM pdate = Qt4xHb::Signals_return_object( (void *) &date, "QDATE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCALENDARWIDGET" );
+    PHB_ITEM pdate = Qt4xHb::Signals_return_object( ( void * ) &date, "QDATE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pdate );
 
@@ -58,13 +58,13 @@ void QCalendarWidgetSlots::clicked( const QDate & date )
 
 void QCalendarWidgetSlots::currentPageChanged( int year, int month )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentPageChanged(int,int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QCALENDARWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCALENDARWIDGET" );
     PHB_ITEM pyear = hb_itemPutNI( NULL, year );
     PHB_ITEM pmonth = hb_itemPutNI( NULL, month );
 
@@ -78,13 +78,13 @@ void QCalendarWidgetSlots::currentPageChanged( int year, int month )
 
 void QCalendarWidgetSlots::selectionChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "selectionChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QCALENDARWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCALENDARWIDGET" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -94,7 +94,7 @@ void QCalendarWidgetSlots::selectionChanged()
 
 void QCalendarWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCalendarWidget * obj = (QCalendarWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QCalendarWidget * obj = ( QCalendarWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

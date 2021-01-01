@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -56,9 +56,9 @@ QFontComboBox( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
   {
-    QFontComboBox * obj = new QFontComboBox( OPQWIDGET(1,0) );
+    QFontComboBox * obj = new QFontComboBox( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_NEW )
 
 HB_FUNC_STATIC( QFONTCOMBOBOX_DELETE )
 {
-  QFontComboBox * obj = (QFontComboBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontComboBox * obj = ( QFontComboBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -91,12 +91,12 @@ QFont currentFont() const
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_CURRENTFONT )
 {
-  QFontComboBox * obj = (QFontComboBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontComboBox * obj = ( QFontComboBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QFont * ptr = new QFont( obj->currentFont() );
@@ -116,12 +116,12 @@ QFontComboBox::FontFilters fontFilters() const
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_FONTFILTERS )
 {
-  QFontComboBox * obj = (QFontComboBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontComboBox * obj = ( QFontComboBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->fontFilters() );
@@ -140,15 +140,15 @@ void setFontFilters( QFontComboBox::FontFilters filters )
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_SETFONTFILTERS )
 {
-  QFontComboBox * obj = (QFontComboBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontComboBox * obj = ( QFontComboBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setFontFilters( (QFontComboBox::FontFilters) hb_parni(1) );
+      obj->setFontFilters( ( QFontComboBox::FontFilters ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,15 +166,15 @@ void setWritingSystem( QFontDatabase::WritingSystem script )
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_SETWRITINGSYSTEM )
 {
-  QFontComboBox * obj = (QFontComboBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontComboBox * obj = ( QFontComboBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setWritingSystem( (QFontDatabase::WritingSystem) hb_parni(1) );
+      obj->setWritingSystem( ( QFontDatabase::WritingSystem ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,12 +192,12 @@ QFontDatabase::WritingSystem writingSystem() const
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_WRITINGSYSTEM )
 {
-  QFontComboBox * obj = (QFontComboBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontComboBox * obj = ( QFontComboBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->writingSystem() );
@@ -216,12 +216,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_SIZEHINT )
 {
-  QFontComboBox * obj = (QFontComboBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontComboBox * obj = ( QFontComboBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
@@ -241,15 +241,15 @@ void setCurrentFont( const QFont & font )
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_SETCURRENTFONT )
 {
-  QFontComboBox * obj = (QFontComboBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontComboBox * obj = ( QFontComboBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQFONT(1) )
+    if( ISNUMPAR( 1 ) && ISQFONT( 1 ) )
     {
 #endif
-      obj->setCurrentFont( *PQFONT(1) );
+      obj->setCurrentFont( *PQFONT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

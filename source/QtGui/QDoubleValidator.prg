@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -55,7 +55,7 @@ QDoubleValidator( QObject * parent = 0 )
 */
 void QDoubleValidator_new1()
 {
-  QDoubleValidator * obj = new QDoubleValidator( OPQOBJECT(1,0) );
+  QDoubleValidator * obj = new QDoubleValidator( OPQOBJECT( 1, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -64,17 +64,17 @@ QDoubleValidator( double bottom, double top, int decimals, QObject * parent = 0 
 */
 void QDoubleValidator_new2()
 {
-  QDoubleValidator * obj = new QDoubleValidator( PDOUBLE(1), PDOUBLE(2), PINT(3), OPQOBJECT(4,0) );
+  QDoubleValidator * obj = new QDoubleValidator( PDOUBLE( 1 ), PDOUBLE( 2 ), PINT( 3 ), OPQOBJECT( 4, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
     QDoubleValidator_new1();
   }
-  else if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && (ISQOBJECT(4)||ISNIL(4)) )
+  else if( ISBETWEEN( 3, 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ( ISQOBJECT( 4 ) || ISNIL( 4 ) ) )
   {
     QDoubleValidator_new2();
   }
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW )
 
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_DELETE )
 {
-  QDoubleValidator * obj = (QDoubleValidator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = ( QDoubleValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,12 +108,12 @@ double bottom() const
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_BOTTOM )
 {
-  QDoubleValidator * obj = (QDoubleValidator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = ( QDoubleValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RDOUBLE( obj->bottom() );
@@ -132,12 +132,12 @@ int decimals() const
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_DECIMALS )
 {
-  QDoubleValidator * obj = (QDoubleValidator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = ( QDoubleValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->decimals() );
@@ -156,12 +156,12 @@ QDoubleValidator::Notation notation() const
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_NOTATION )
 {
-  QDoubleValidator * obj = (QDoubleValidator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = ( QDoubleValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->notation() );
@@ -180,15 +180,15 @@ void setBottom( double )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETBOTTOM )
 {
-  QDoubleValidator * obj = (QDoubleValidator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = ( QDoubleValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setBottom( PDOUBLE(1) );
+      obj->setBottom( PDOUBLE( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,15 +206,15 @@ void setDecimals( int )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETDECIMALS )
 {
-  QDoubleValidator * obj = (QDoubleValidator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = ( QDoubleValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setDecimals( PINT(1) );
+      obj->setDecimals( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,15 +232,15 @@ void setNotation( QDoubleValidator::Notation )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETNOTATION )
 {
-  QDoubleValidator * obj = (QDoubleValidator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = ( QDoubleValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setNotation( (QDoubleValidator::Notation) hb_parni(1) );
+      obj->setNotation( ( QDoubleValidator::Notation ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -258,15 +258,15 @@ virtual void setRange( double minimum, double maximum, int decimals = 0 )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETRANGE )
 {
-  QDoubleValidator * obj = (QDoubleValidator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = ( QDoubleValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN( 2, 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISOPTNUM( 3 ) )
     {
 #endif
-      obj->setRange( PDOUBLE(1), PDOUBLE(2), OPINT(3,0) );
+      obj->setRange( PDOUBLE( 1 ), PDOUBLE( 2 ), OPINT( 3, 0 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -284,15 +284,15 @@ void setTop( double )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETTOP )
 {
-  QDoubleValidator * obj = (QDoubleValidator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = ( QDoubleValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setTop( PDOUBLE(1) );
+      obj->setTop( PDOUBLE( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -310,12 +310,12 @@ double top() const
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_TOP )
 {
-  QDoubleValidator * obj = (QDoubleValidator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = ( QDoubleValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RDOUBLE( obj->top() );
@@ -334,18 +334,18 @@ virtual QValidator::State validate( QString & input, int & pos ) const
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_VALIDATE )
 {
-  QDoubleValidator * obj = (QDoubleValidator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = ( QDoubleValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      QString par1 = hb_parc(1);
+      QString par1 = hb_parc( 1 );
       int par2;
       RENUM( obj->validate( par1, par2 ) );
-      hb_storc( QSTRINGTOSTRING(par1), 1);
+      hb_storc( QSTRINGTOSTRING( par1 ), 1 );
       hb_storni( par2, 2 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

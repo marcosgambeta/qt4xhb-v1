@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -78,9 +78,9 @@ QBoxLayout( QBoxLayout::Direction dir, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_NEW )
 {
-  if( ISBETWEEN(1,2) && ISNUM(1) && (ISQWIDGET(2)||ISNIL(2)) )
+  if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISQWIDGET( 2 ) || ISNIL( 2 ) ) )
   {
-    QBoxLayout * obj = new QBoxLayout( (QBoxLayout::Direction) hb_parni(1), OPQWIDGET(2,0) );
+    QBoxLayout * obj = new QBoxLayout( ( QBoxLayout::Direction ) hb_parni( 1 ), OPQWIDGET( 2, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QBOXLAYOUT_NEW )
 
 HB_FUNC_STATIC( QBOXLAYOUT_DELETE )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -113,15 +113,15 @@ void addLayout( QLayout * layout, int stretch = 0 )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDLAYOUT )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQLAYOUT(1) && ISOPTNUM(2) )
+    if( ISBETWEEN( 1, 2 ) && ISQLAYOUT( 1 ) && ISOPTNUM( 2 ) )
     {
 #endif
-      obj->addLayout( PQLAYOUT(1), OPINT(2,0) );
+      obj->addLayout( PQLAYOUT( 1 ), OPINT( 2, 0 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -139,15 +139,15 @@ void addSpacerItem( QSpacerItem * spacerItem )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDSPACERITEM )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSPACERITEM(1) )
+    if( ISNUMPAR( 1 ) && ISQSPACERITEM( 1 ) )
     {
 #endif
-      obj->addSpacerItem( PQSPACERITEM(1) );
+      obj->addSpacerItem( PQSPACERITEM( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,15 +165,15 @@ void addSpacing( int size )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDSPACING )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->addSpacing( PINT(1) );
+      obj->addSpacing( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,15 +191,15 @@ void addStretch( int stretch = 0 )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDSTRETCH )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
     {
 #endif
-      obj->addStretch( OPINT(1,0) );
+      obj->addStretch( OPINT( 1, 0 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,15 +217,15 @@ void addStrut( int size )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDSTRUT )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->addStrut( PINT(1) );
+      obj->addStrut( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,15 +243,15 @@ void addWidget( QWidget * widget, int stretch = 0, Qt::Alignment alignment = 0 )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDWIDGET )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISQWIDGET(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN( 1, 3 ) && ISQWIDGET( 1 ) && ISOPTNUM( 2 ) && ISOPTNUM( 3 ) )
     {
 #endif
-      obj->addWidget( PQWIDGET(1), OPINT(2,0), ISNIL(3)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(3) );
+      obj->addWidget( PQWIDGET( 1 ), OPINT( 2, 0 ), ISNIL( 3 )? ( Qt::Alignment ) 0 : ( Qt::Alignment ) hb_parni( 3 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -269,12 +269,12 @@ QBoxLayout::Direction direction() const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_DIRECTION )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->direction() );
@@ -293,15 +293,15 @@ void insertLayout( int index, QLayout * layout, int stretch = 0 )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_INSERTLAYOUT )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISQLAYOUT(2) && ISOPTNUM(3) )
+    if( ISBETWEEN( 2, 3 ) && ISNUM( 1 ) && ISQLAYOUT( 2 ) && ISOPTNUM( 3 ) )
     {
 #endif
-      obj->insertLayout( PINT(1), PQLAYOUT(2), OPINT(3,0) );
+      obj->insertLayout( PINT( 1 ), PQLAYOUT( 2 ), OPINT( 3, 0 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -319,15 +319,15 @@ void insertSpacerItem( int index, QSpacerItem * spacerItem )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_INSERTSPACERITEM )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQSPACERITEM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQSPACERITEM( 2 ) )
     {
 #endif
-      obj->insertSpacerItem( PINT(1), PQSPACERITEM(2) );
+      obj->insertSpacerItem( PINT( 1 ), PQSPACERITEM( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -345,15 +345,15 @@ void insertSpacing( int index, int size )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_INSERTSPACING )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      obj->insertSpacing( PINT(1), PINT(2) );
+      obj->insertSpacing( PINT( 1 ), PINT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -371,15 +371,15 @@ void insertStretch( int index, int stretch = 0 )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_INSERTSTRETCH )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) )
     {
 #endif
-      obj->insertStretch( PINT(1), OPINT(2,0) );
+      obj->insertStretch( PINT( 1 ), OPINT( 2, 0 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -397,15 +397,15 @@ void insertWidget( int index, QWidget * widget, int stretch = 0, Qt::Alignment a
 */
 HB_FUNC_STATIC( QBOXLAYOUT_INSERTWIDGET )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,4) && ISNUM(1) && ISQWIDGET(2) && ISOPTNUM(3) && ISOPTNUM(4) )
+    if( ISBETWEEN( 2, 4 ) && ISNUM( 1 ) && ISQWIDGET( 2 ) && ISOPTNUM( 3 ) && ISOPTNUM( 4 ) )
     {
 #endif
-      obj->insertWidget( PINT(1), PQWIDGET(2), OPINT(3,0), ISNIL(4)? (Qt::Alignment) 0 : (Qt::Alignment) hb_parni(4) );
+      obj->insertWidget( PINT( 1 ), PQWIDGET( 2 ), OPINT( 3, 0 ), ISNIL( 4 )? ( Qt::Alignment ) 0 : ( Qt::Alignment ) hb_parni( 4 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -423,15 +423,15 @@ void setDirection( QBoxLayout::Direction direction )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_SETDIRECTION )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setDirection( (QBoxLayout::Direction) hb_parni(1) );
+      obj->setDirection( ( QBoxLayout::Direction ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -449,15 +449,15 @@ void setSpacing( int spacing )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_SETSPACING )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setSpacing( PINT(1) );
+      obj->setSpacing( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -475,15 +475,15 @@ void setStretch( int index, int stretch )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_SETSTRETCH )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      obj->setStretch( PINT(1), PINT(2) );
+      obj->setStretch( PINT( 1 ), PINT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -501,11 +501,11 @@ bool setStretchFactor( QWidget * widget, int stretch )
 */
 void QBoxLayout_setStretchFactor1()
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->setStretchFactor( PQWIDGET(1), PINT(2) ) );
+    RBOOL( obj->setStretchFactor( PQWIDGET( 1 ), PINT( 2 ) ) );
   }
 }
 
@@ -514,21 +514,21 @@ bool setStretchFactor( QLayout * layout, int stretch )
 */
 void QBoxLayout_setStretchFactor2()
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->setStretchFactor( PQLAYOUT(1), PINT(2) ) );
+    RBOOL( obj->setStretchFactor( PQLAYOUT( 1 ), PINT( 2 ) ) );
   }
 }
 
 HB_FUNC_STATIC( QBOXLAYOUT_SETSTRETCHFACTOR )
 {
-  if( ISNUMPAR(2) && ISQWIDGET(1) && ISNUM(2) )
+  if( ISNUMPAR( 2 ) && ISQWIDGET( 1 ) && ISNUM( 2 ) )
   {
     QBoxLayout_setStretchFactor1();
   }
-  else if( ISNUMPAR(2) && ISQLAYOUT(1) && ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && ISQLAYOUT( 1 ) && ISNUM( 2 ) )
   {
     QBoxLayout_setStretchFactor2();
   }
@@ -543,12 +543,12 @@ int spacing() const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_SPACING )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->spacing() );
@@ -567,15 +567,15 @@ int stretch( int index ) const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_STRETCH )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RINT( obj->stretch( PINT(1) ) );
+      RINT( obj->stretch( PINT( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -591,15 +591,15 @@ virtual void addItem( QLayoutItem * item )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ADDITEM )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQLAYOUTITEM(1) )
+    if( ISNUMPAR( 1 ) && ISQLAYOUTITEM( 1 ) )
     {
 #endif
-      obj->addItem( PQLAYOUTITEM(1) );
+      obj->addItem( PQLAYOUTITEM( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -617,12 +617,12 @@ virtual int count() const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_COUNT )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->count() );
@@ -641,12 +641,12 @@ virtual Qt::Orientations expandingDirections() const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_EXPANDINGDIRECTIONS )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->expandingDirections() );
@@ -665,12 +665,12 @@ virtual bool hasHeightForWidth() const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_HASHEIGHTFORWIDTH )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->hasHeightForWidth() );
@@ -689,15 +689,15 @@ virtual int heightForWidth( int w ) const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_HEIGHTFORWIDTH )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RINT( obj->heightForWidth( PINT(1) ) );
+      RINT( obj->heightForWidth( PINT( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -713,12 +713,12 @@ virtual void invalidate()
 */
 HB_FUNC_STATIC( QBOXLAYOUT_INVALIDATE )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->invalidate();
@@ -739,15 +739,15 @@ virtual QLayoutItem * itemAt( int index ) const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_ITEMAT )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QLayoutItem * ptr = obj->itemAt( PINT(1) );
+      QLayoutItem * ptr = obj->itemAt( PINT( 1 ) );
       Qt4xHb::createReturnClass( ptr, "QLAYOUTITEM", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -764,12 +764,12 @@ virtual QSize maximumSize() const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_MAXIMUMSIZE )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->maximumSize() );
@@ -789,15 +789,15 @@ virtual int minimumHeightForWidth( int w ) const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_MINIMUMHEIGHTFORWIDTH )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RINT( obj->minimumHeightForWidth( PINT(1) ) );
+      RINT( obj->minimumHeightForWidth( PINT( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -813,12 +813,12 @@ virtual QSize minimumSize() const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_MINIMUMSIZE )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSize() );
@@ -838,15 +838,15 @@ virtual void setGeometry( const QRect & r )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_SETGEOMETRY )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQRECT(1) )
+    if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
     {
 #endif
-      obj->setGeometry( *PQRECT(1) );
+      obj->setGeometry( *PQRECT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -864,12 +864,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QBOXLAYOUT_SIZEHINT )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
@@ -889,15 +889,15 @@ virtual QLayoutItem * takeAt( int index )
 */
 HB_FUNC_STATIC( QBOXLAYOUT_TAKEAT )
 {
-  QBoxLayout * obj = (QBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QBoxLayout * obj = ( QBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QLayoutItem * ptr = obj->takeAt( PINT(1) );
+      QLayoutItem * ptr = obj->takeAt( PINT( 1 ) );
       Qt4xHb::createReturnClass( ptr, "QLAYOUTITEM", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

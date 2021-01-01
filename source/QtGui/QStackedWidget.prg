@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -59,9 +59,9 @@ QStackedWidget( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
   {
-    QStackedWidget * obj = new QStackedWidget( OPQWIDGET(1,0) );
+    QStackedWidget * obj = new QStackedWidget( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_NEW )
 
 HB_FUNC_STATIC( QSTACKEDWIDGET_DELETE )
 {
-  QStackedWidget * obj = (QStackedWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStackedWidget * obj = ( QStackedWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -94,15 +94,15 @@ int addWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_ADDWIDGET )
 {
-  QStackedWidget * obj = (QStackedWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStackedWidget * obj = ( QStackedWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      RINT( obj->addWidget( PQWIDGET(1) ) );
+      RINT( obj->addWidget( PQWIDGET( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,12 +118,12 @@ int count() const
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_COUNT )
 {
-  QStackedWidget * obj = (QStackedWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStackedWidget * obj = ( QStackedWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->count() );
@@ -142,12 +142,12 @@ int currentIndex() const
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_CURRENTINDEX )
 {
-  QStackedWidget * obj = (QStackedWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStackedWidget * obj = ( QStackedWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->currentIndex() );
@@ -166,12 +166,12 @@ QWidget * currentWidget() const
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_CURRENTWIDGET )
 {
-  QStackedWidget * obj = (QStackedWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStackedWidget * obj = ( QStackedWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWidget * ptr = obj->currentWidget();
@@ -191,15 +191,15 @@ int indexOf( QWidget * widget ) const
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_INDEXOF )
 {
-  QStackedWidget * obj = (QStackedWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStackedWidget * obj = ( QStackedWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      RINT( obj->indexOf( PQWIDGET(1) ) );
+      RINT( obj->indexOf( PQWIDGET( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,15 +215,15 @@ int insertWidget( int index, QWidget * widget )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_INSERTWIDGET )
 {
-  QStackedWidget * obj = (QStackedWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStackedWidget * obj = ( QStackedWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQWIDGET(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQWIDGET( 2 ) )
     {
 #endif
-      RINT( obj->insertWidget( PINT(1), PQWIDGET(2) ) );
+      RINT( obj->insertWidget( PINT( 1 ), PQWIDGET( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,15 +239,15 @@ void removeWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_REMOVEWIDGET )
 {
-  QStackedWidget * obj = (QStackedWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStackedWidget * obj = ( QStackedWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      obj->removeWidget( PQWIDGET(1) );
+      obj->removeWidget( PQWIDGET( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -265,15 +265,15 @@ QWidget * widget( int index ) const
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_WIDGET )
 {
-  QStackedWidget * obj = (QStackedWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStackedWidget * obj = ( QStackedWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QWidget * ptr = obj->widget( PINT(1) );
+      QWidget * ptr = obj->widget( PINT( 1 ) );
       Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -290,15 +290,15 @@ void setCurrentIndex( int index )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_SETCURRENTINDEX )
 {
-  QStackedWidget * obj = (QStackedWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStackedWidget * obj = ( QStackedWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setCurrentIndex( PINT(1) );
+      obj->setCurrentIndex( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,15 +316,15 @@ void setCurrentWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_SETCURRENTWIDGET )
 {
-  QStackedWidget * obj = (QStackedWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStackedWidget * obj = ( QStackedWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      obj->setCurrentWidget( PQWIDGET(1) );
+      obj->setCurrentWidget( PQWIDGET( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

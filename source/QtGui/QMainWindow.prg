@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -105,9 +105,9 @@ QMainWindow( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC( QMAINWINDOW_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
+  if( ISBETWEEN( 0, 2 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) && ISOPTNUM( 2 ) )
   {
-    QMainWindow * obj = new QMainWindow( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+    QMainWindow * obj = new QMainWindow( OPQWIDGET( 1, 0 ), ISNIL( 2 )? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 2 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QMAINWINDOW_NEW )
 
 HB_FUNC_STATIC( QMAINWINDOW_DELETE )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -140,11 +140,11 @@ void addDockWidget( Qt::DockWidgetArea area, QDockWidget * dockwidget )
 */
 void QMainWindow_addDockWidget1()
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->addDockWidget( (Qt::DockWidgetArea) hb_parni(1), PQDOCKWIDGET(2) );
+    obj->addDockWidget( ( Qt::DockWidgetArea ) hb_parni( 1 ), PQDOCKWIDGET( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -155,11 +155,11 @@ void addDockWidget( Qt::DockWidgetArea area, QDockWidget * dockwidget, Qt::Orien
 */
 void QMainWindow_addDockWidget2()
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->addDockWidget( (Qt::DockWidgetArea) hb_parni(1), PQDOCKWIDGET(2), (Qt::Orientation) hb_parni(3) );
+    obj->addDockWidget( ( Qt::DockWidgetArea ) hb_parni( 1 ), PQDOCKWIDGET( 2 ), ( Qt::Orientation ) hb_parni( 3 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -167,11 +167,11 @@ void QMainWindow_addDockWidget2()
 
 HB_FUNC_STATIC( QMAINWINDOW_ADDDOCKWIDGET )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISQDOCKWIDGET(2) )
+  if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQDOCKWIDGET( 2 ) )
   {
     QMainWindow_addDockWidget1();
   }
-  else if( ISNUMPAR(3) && ISNUM(1) && ISQDOCKWIDGET(2) && ISNUM(3) )
+  else if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISQDOCKWIDGET( 2 ) && ISNUM( 3 ) )
   {
     QMainWindow_addDockWidget2();
   }
@@ -186,11 +186,11 @@ void addToolBar( Qt::ToolBarArea area, QToolBar * toolbar )
 */
 void QMainWindow_addToolBar1()
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->addToolBar( (Qt::ToolBarArea) hb_parni(1), PQTOOLBAR(2) );
+    obj->addToolBar( ( Qt::ToolBarArea ) hb_parni( 1 ), PQTOOLBAR( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -201,11 +201,11 @@ void addToolBar( QToolBar * toolbar )
 */
 void QMainWindow_addToolBar2()
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->addToolBar( PQTOOLBAR(1) );
+    obj->addToolBar( PQTOOLBAR( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -216,26 +216,26 @@ QToolBar * addToolBar( const QString & title )
 */
 void QMainWindow_addToolBar3()
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QToolBar * ptr = obj->addToolBar( PQSTRING(1) );
+    QToolBar * ptr = obj->addToolBar( PQSTRING( 1 ) );
     Qt4xHb::createReturnQObjectClass( ptr, "QTOOLBAR" );
   }
 }
 
 HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBAR )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISQTOOLBAR(2) )
+  if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQTOOLBAR( 2 ) )
   {
     QMainWindow_addToolBar1();
   }
-  else if( ISNUMPAR(1) && ISQTOOLBAR(1) )
+  else if( ISNUMPAR( 1 ) && ISQTOOLBAR( 1 ) )
   {
     QMainWindow_addToolBar2();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
     QMainWindow_addToolBar3();
   }
@@ -250,15 +250,15 @@ void addToolBarBreak( Qt::ToolBarArea area = Qt::TopToolBarArea )
 */
 HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBARBREAK )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
     {
 #endif
-      obj->addToolBarBreak( ISNIL(1)? (Qt::ToolBarArea) Qt::TopToolBarArea : (Qt::ToolBarArea) hb_parni(1) );
+      obj->addToolBarBreak( ISNIL( 1 )? ( Qt::ToolBarArea ) Qt::TopToolBarArea : ( Qt::ToolBarArea ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -276,12 +276,12 @@ QWidget * centralWidget() const
 */
 HB_FUNC_STATIC( QMAINWINDOW_CENTRALWIDGET )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWidget * ptr = obj->centralWidget();
@@ -301,15 +301,15 @@ Qt::DockWidgetArea corner( Qt::Corner corner ) const
 */
 HB_FUNC_STATIC( QMAINWINDOW_CORNER )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RENUM( obj->corner( (Qt::Corner) hb_parni(1) ) );
+      RENUM( obj->corner( ( Qt::Corner ) hb_parni( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -325,12 +325,12 @@ virtual QMenu * createPopupMenu()
 */
 HB_FUNC_STATIC( QMAINWINDOW_CREATEPOPUPMENU )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QMenu * ptr = obj->createPopupMenu();
@@ -350,12 +350,12 @@ QMainWindow::DockOptions dockOptions() const
 */
 HB_FUNC_STATIC( QMAINWINDOW_DOCKOPTIONS )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->dockOptions() );
@@ -374,15 +374,15 @@ Qt::DockWidgetArea dockWidgetArea( QDockWidget * dockwidget ) const
 */
 HB_FUNC_STATIC( QMAINWINDOW_DOCKWIDGETAREA )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDOCKWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQDOCKWIDGET( 1 ) )
     {
 #endif
-      RENUM( obj->dockWidgetArea( PQDOCKWIDGET(1) ) );
+      RENUM( obj->dockWidgetArea( PQDOCKWIDGET( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -398,12 +398,12 @@ bool documentMode() const
 */
 HB_FUNC_STATIC( QMAINWINDOW_DOCUMENTMODE )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->documentMode() );
@@ -422,12 +422,12 @@ QSize iconSize() const
 */
 HB_FUNC_STATIC( QMAINWINDOW_ICONSIZE )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->iconSize() );
@@ -447,15 +447,15 @@ void insertToolBar( QToolBar * before, QToolBar * toolbar )
 */
 HB_FUNC_STATIC( QMAINWINDOW_INSERTTOOLBAR )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQTOOLBAR(1) && ISQTOOLBAR(2) )
+    if( ISNUMPAR( 2 ) && ISQTOOLBAR( 1 ) && ISQTOOLBAR( 2 ) )
     {
 #endif
-      obj->insertToolBar( PQTOOLBAR(1), PQTOOLBAR(2) );
+      obj->insertToolBar( PQTOOLBAR( 1 ), PQTOOLBAR( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -473,15 +473,15 @@ void insertToolBarBreak( QToolBar * before )
 */
 HB_FUNC_STATIC( QMAINWINDOW_INSERTTOOLBARBREAK )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTOOLBAR(1) )
+    if( ISNUMPAR( 1 ) && ISQTOOLBAR( 1 ) )
     {
 #endif
-      obj->insertToolBarBreak( PQTOOLBAR(1) );
+      obj->insertToolBarBreak( PQTOOLBAR( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -499,12 +499,12 @@ bool isAnimated() const
 */
 HB_FUNC_STATIC( QMAINWINDOW_ISANIMATED )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isAnimated() );
@@ -523,12 +523,12 @@ bool isDockNestingEnabled() const
 */
 HB_FUNC_STATIC( QMAINWINDOW_ISDOCKNESTINGENABLED )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isDockNestingEnabled() );
@@ -547,12 +547,12 @@ QMenuBar * menuBar() const
 */
 HB_FUNC_STATIC( QMAINWINDOW_MENUBAR )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QMenuBar * ptr = obj->menuBar();
@@ -572,12 +572,12 @@ QWidget * menuWidget() const
 */
 HB_FUNC_STATIC( QMAINWINDOW_MENUWIDGET )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWidget * ptr = obj->menuWidget();
@@ -597,15 +597,15 @@ void removeDockWidget( QDockWidget * dockwidget )
 */
 HB_FUNC_STATIC( QMAINWINDOW_REMOVEDOCKWIDGET )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDOCKWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQDOCKWIDGET( 1 ) )
     {
 #endif
-      obj->removeDockWidget( PQDOCKWIDGET(1) );
+      obj->removeDockWidget( PQDOCKWIDGET( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -623,15 +623,15 @@ void removeToolBar( QToolBar * toolbar )
 */
 HB_FUNC_STATIC( QMAINWINDOW_REMOVETOOLBAR )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTOOLBAR(1) )
+    if( ISNUMPAR( 1 ) && ISQTOOLBAR( 1 ) )
     {
 #endif
-      obj->removeToolBar( PQTOOLBAR(1) );
+      obj->removeToolBar( PQTOOLBAR( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -649,15 +649,15 @@ void removeToolBarBreak( QToolBar * before )
 */
 HB_FUNC_STATIC( QMAINWINDOW_REMOVETOOLBARBREAK )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTOOLBAR(1) )
+    if( ISNUMPAR( 1 ) && ISQTOOLBAR( 1 ) )
     {
 #endif
-      obj->removeToolBarBreak( PQTOOLBAR(1) );
+      obj->removeToolBarBreak( PQTOOLBAR( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -675,15 +675,15 @@ bool restoreDockWidget( QDockWidget * dockwidget )
 */
 HB_FUNC_STATIC( QMAINWINDOW_RESTOREDOCKWIDGET )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDOCKWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQDOCKWIDGET( 1 ) )
     {
 #endif
-      RBOOL( obj->restoreDockWidget( PQDOCKWIDGET(1) ) );
+      RBOOL( obj->restoreDockWidget( PQDOCKWIDGET( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -699,15 +699,15 @@ bool restoreState( const QByteArray & state, int version = 0 )
 */
 HB_FUNC_STATIC( QMAINWINDOW_RESTORESTATE )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQBYTEARRAY(1) && ISOPTNUM(2) )
+    if( ISBETWEEN( 1, 2 ) && ISQBYTEARRAY( 1 ) && ISOPTNUM( 2 ) )
     {
 #endif
-      RBOOL( obj->restoreState( *PQBYTEARRAY(1), OPINT(2,0) ) );
+      RBOOL( obj->restoreState( *PQBYTEARRAY( 1 ), OPINT( 2, 0 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -723,15 +723,15 @@ QByteArray saveState( int version = 0 ) const
 */
 HB_FUNC_STATIC( QMAINWINDOW_SAVESTATE )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->saveState( OPINT(1,0) ) );
+      QByteArray * ptr = new QByteArray( obj->saveState( OPINT( 1, 0 ) ) );
       Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -748,15 +748,15 @@ void setCentralWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETCENTRALWIDGET )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      obj->setCentralWidget( PQWIDGET(1) );
+      obj->setCentralWidget( PQWIDGET( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -774,15 +774,15 @@ void setCorner( Qt::Corner corner, Qt::DockWidgetArea area )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETCORNER )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      obj->setCorner( (Qt::Corner) hb_parni(1), (Qt::DockWidgetArea) hb_parni(2) );
+      obj->setCorner( ( Qt::Corner ) hb_parni( 1 ), ( Qt::DockWidgetArea ) hb_parni( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -800,15 +800,15 @@ void setDockOptions( QMainWindow::DockOptions options )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETDOCKOPTIONS )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setDockOptions( (QMainWindow::DockOptions) hb_parni(1) );
+      obj->setDockOptions( ( QMainWindow::DockOptions ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -826,15 +826,15 @@ void setDocumentMode( bool enabled )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETDOCUMENTMODE )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setDocumentMode( PBOOL(1) );
+      obj->setDocumentMode( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -852,15 +852,15 @@ void setIconSize( const QSize & iconSize )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETICONSIZE )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZE(1) )
+    if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
     {
 #endif
-      obj->setIconSize( *PQSIZE(1) );
+      obj->setIconSize( *PQSIZE( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -878,15 +878,15 @@ void setMenuBar( QMenuBar * menuBar )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETMENUBAR )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMENUBAR(1) )
+    if( ISNUMPAR( 1 ) && ISQMENUBAR( 1 ) )
     {
 #endif
-      obj->setMenuBar( PQMENUBAR(1) );
+      obj->setMenuBar( PQMENUBAR( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -904,15 +904,15 @@ void setMenuWidget( QWidget * menuBar )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETMENUWIDGET )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      obj->setMenuWidget( PQWIDGET(1) );
+      obj->setMenuWidget( PQWIDGET( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -930,15 +930,15 @@ void setStatusBar( QStatusBar * statusbar )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETSTATUSBAR )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSTATUSBAR(1) )
+    if( ISNUMPAR( 1 ) && ISQSTATUSBAR( 1 ) )
     {
 #endif
-      obj->setStatusBar( PQSTATUSBAR(1) );
+      obj->setStatusBar( PQSTATUSBAR( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -956,15 +956,15 @@ void setTabPosition( Qt::DockWidgetAreas areas, QTabWidget::TabPosition tabPosit
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETTABPOSITION )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      obj->setTabPosition( (Qt::DockWidgetAreas) hb_parni(1), (QTabWidget::TabPosition) hb_parni(2) );
+      obj->setTabPosition( ( Qt::DockWidgetAreas ) hb_parni( 1 ), ( QTabWidget::TabPosition ) hb_parni( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -982,15 +982,15 @@ void setTabShape( QTabWidget::TabShape tabShape )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETTABSHAPE )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setTabShape( (QTabWidget::TabShape) hb_parni(1) );
+      obj->setTabShape( ( QTabWidget::TabShape ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1008,15 +1008,15 @@ void setToolButtonStyle( Qt::ToolButtonStyle toolButtonStyle )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETTOOLBUTTONSTYLE )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setToolButtonStyle( (Qt::ToolButtonStyle) hb_parni(1) );
+      obj->setToolButtonStyle( ( Qt::ToolButtonStyle ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1034,15 +1034,15 @@ void splitDockWidget( QDockWidget * first, QDockWidget * second, Qt::Orientation
 */
 HB_FUNC_STATIC( QMAINWINDOW_SPLITDOCKWIDGET )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQDOCKWIDGET(1) && ISQDOCKWIDGET(2) && ISNUM(3) )
+    if( ISNUMPAR( 3 ) && ISQDOCKWIDGET( 1 ) && ISQDOCKWIDGET( 2 ) && ISNUM( 3 ) )
     {
 #endif
-      obj->splitDockWidget( PQDOCKWIDGET(1), PQDOCKWIDGET(2), (Qt::Orientation) hb_parni(3) );
+      obj->splitDockWidget( PQDOCKWIDGET( 1 ), PQDOCKWIDGET( 2 ), ( Qt::Orientation ) hb_parni( 3 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1060,12 +1060,12 @@ QStatusBar * statusBar() const
 */
 HB_FUNC_STATIC( QMAINWINDOW_STATUSBAR )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QStatusBar * ptr = obj->statusBar();
@@ -1085,15 +1085,15 @@ QTabWidget::TabPosition tabPosition( Qt::DockWidgetArea area ) const
 */
 HB_FUNC_STATIC( QMAINWINDOW_TABPOSITION )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RENUM( obj->tabPosition( (Qt::DockWidgetArea) hb_parni(1) ) );
+      RENUM( obj->tabPosition( ( Qt::DockWidgetArea ) hb_parni( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1109,12 +1109,12 @@ QTabWidget::TabShape tabShape() const
 */
 HB_FUNC_STATIC( QMAINWINDOW_TABSHAPE )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->tabShape() );
@@ -1133,17 +1133,17 @@ QList<QDockWidget *> tabifiedDockWidgets( QDockWidget * dockwidget ) const
 */
 HB_FUNC_STATIC( QMAINWINDOW_TABIFIEDDOCKWIDGETS )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDOCKWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQDOCKWIDGET( 1 ) )
     {
 #endif
-      QList<QDockWidget *> list = obj->tabifiedDockWidgets( PQDOCKWIDGET(1) );
+      QList<QDockWidget *> list = obj->tabifiedDockWidgets( PQDOCKWIDGET( 1 ) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QDOCKWIDGET" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
@@ -1154,7 +1154,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TABIFIEDDOCKWIDGETS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QDockWidget *) list[i] );
+          hb_itemPutPtr( pItem, ( QDockWidget * ) list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -1181,15 +1181,15 @@ void tabifyDockWidget( QDockWidget * first, QDockWidget * second )
 */
 HB_FUNC_STATIC( QMAINWINDOW_TABIFYDOCKWIDGET )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQDOCKWIDGET(1) && ISQDOCKWIDGET(2) )
+    if( ISNUMPAR( 2 ) && ISQDOCKWIDGET( 1 ) && ISQDOCKWIDGET( 2 ) )
     {
 #endif
-      obj->tabifyDockWidget( PQDOCKWIDGET(1), PQDOCKWIDGET(2) );
+      obj->tabifyDockWidget( PQDOCKWIDGET( 1 ), PQDOCKWIDGET( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1207,15 +1207,15 @@ Qt::ToolBarArea toolBarArea( QToolBar * toolbar ) const
 */
 HB_FUNC_STATIC( QMAINWINDOW_TOOLBARAREA )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTOOLBAR(1) )
+    if( ISNUMPAR( 1 ) && ISQTOOLBAR( 1 ) )
     {
 #endif
-      RENUM( obj->toolBarArea( PQTOOLBAR(1) ) );
+      RENUM( obj->toolBarArea( PQTOOLBAR( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1231,15 +1231,15 @@ bool toolBarBreak( QToolBar * toolbar ) const
 */
 HB_FUNC_STATIC( QMAINWINDOW_TOOLBARBREAK )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTOOLBAR(1) )
+    if( ISNUMPAR( 1 ) && ISQTOOLBAR( 1 ) )
     {
 #endif
-      RBOOL( obj->toolBarBreak( PQTOOLBAR(1) ) );
+      RBOOL( obj->toolBarBreak( PQTOOLBAR( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1255,12 +1255,12 @@ Qt::ToolButtonStyle toolButtonStyle() const
 */
 HB_FUNC_STATIC( QMAINWINDOW_TOOLBUTTONSTYLE )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->toolButtonStyle() );
@@ -1279,15 +1279,15 @@ void setAnimated( bool enabled )
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETANIMATED )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setAnimated( PBOOL(1) );
+      obj->setAnimated( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1305,15 +1305,15 @@ void setDockNestingEnabled( bool enabled ) const
 */
 HB_FUNC_STATIC( QMAINWINDOW_SETDOCKNESTINGENABLED )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setDockNestingEnabled( PBOOL(1) );
+      obj->setDockNestingEnabled( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

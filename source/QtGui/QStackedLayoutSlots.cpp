@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QStackedLayoutSlots.h"
 
-QStackedLayoutSlots::QStackedLayoutSlots( QObject *parent ) : QObject( parent )
+QStackedLayoutSlots::QStackedLayoutSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QStackedLayoutSlots::~QStackedLayoutSlots()
 
 void QStackedLayoutSlots::setCurrentIndex( int index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "setCurrentIndex(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QSTACKEDLAYOUT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSTACKEDLAYOUT" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -40,14 +40,14 @@ void QStackedLayoutSlots::setCurrentIndex( int index )
 
 void QStackedLayoutSlots::setCurrentWidget( QWidget * widget )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "setCurrentWidget(QWidget*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QSTACKEDLAYOUT" );
-    PHB_ITEM pwidget = Qt4xHb::Signals_return_qobject( (QObject *) widget, "QWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSTACKEDLAYOUT" );
+    PHB_ITEM pwidget = Qt4xHb::Signals_return_qobject( ( QObject * ) widget, "QWIDGET" );
 
     hb_vmEvalBlockV( cb, 2, psender, pwidget );
 
@@ -58,7 +58,7 @@ void QStackedLayoutSlots::setCurrentWidget( QWidget * widget )
 
 void QStackedLayoutSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QStackedLayout * obj = (QStackedLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStackedLayout * obj = ( QStackedLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

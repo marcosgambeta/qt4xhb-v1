@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -43,7 +43,7 @@ QStyleHintReturnVariant()
 */
 HB_FUNC_STATIC( QSTYLEHINTRETURNVARIANT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QStyleHintReturnVariant * obj = new QStyleHintReturnVariant();
     Qt4xHb::returnNewObject( obj, true );
@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QSTYLEHINTRETURNVARIANT_NEW )
 
 HB_FUNC_STATIC( QSTYLEHINTRETURNVARIANT_DELETE )
 {
-  QStyleHintReturnVariant * obj = (QStyleHintReturnVariant *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleHintReturnVariant * obj = ( QStyleHintReturnVariant * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

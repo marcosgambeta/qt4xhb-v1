@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -53,7 +53,7 @@ QCheckBox( QWidget * parent = 0 )
 */
 void QCheckBox_new1()
 {
-  QCheckBox * obj = new QCheckBox( OPQWIDGET(1,0) );
+  QCheckBox * obj = new QCheckBox( OPQWIDGET( 1, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -62,17 +62,17 @@ QCheckBox( const QString & text, QWidget * parent = 0 )
 */
 void QCheckBox_new2()
 {
-  QCheckBox * obj = new QCheckBox( PQSTRING(1), OPQWIDGET(2,0) );
+  QCheckBox * obj = new QCheckBox( PQSTRING( 1 ), OPQWIDGET( 2, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QCHECKBOX_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
   {
     QCheckBox_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISQWIDGET( 2 ) || ISNIL( 2 ) ) )
   {
     QCheckBox_new2();
   }
@@ -87,12 +87,12 @@ Qt::CheckState checkState() const
 */
 HB_FUNC_STATIC( QCHECKBOX_CHECKSTATE )
 {
-  QCheckBox * obj = (QCheckBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QCheckBox * obj = ( QCheckBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->checkState() );
@@ -111,12 +111,12 @@ bool isTristate() const
 */
 HB_FUNC_STATIC( QCHECKBOX_ISTRISTATE )
 {
-  QCheckBox * obj = (QCheckBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QCheckBox * obj = ( QCheckBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isTristate() );
@@ -135,15 +135,15 @@ void setCheckState( Qt::CheckState state )
 */
 HB_FUNC_STATIC( QCHECKBOX_SETCHECKSTATE )
 {
-  QCheckBox * obj = (QCheckBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QCheckBox * obj = ( QCheckBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setCheckState( (Qt::CheckState) hb_parni(1) );
+      obj->setCheckState( ( Qt::CheckState ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,15 +161,15 @@ void setTristate( bool y = true )
 */
 HB_FUNC_STATIC( QCHECKBOX_SETTRISTATE )
 {
-  QCheckBox * obj = (QCheckBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QCheckBox * obj = ( QCheckBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN( 0, 1 ) && ISOPTLOG( 1 ) )
     {
 #endif
-      obj->setTristate( OPBOOL(1,true) );
+      obj->setTristate( OPBOOL( 1, true ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,12 +187,12 @@ virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QCHECKBOX_MINIMUMSIZEHINT )
 {
-  QCheckBox * obj = (QCheckBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QCheckBox * obj = ( QCheckBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
@@ -212,12 +212,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QCHECKBOX_SIZEHINT )
 {
-  QCheckBox * obj = (QCheckBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QCheckBox * obj = ( QCheckBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );

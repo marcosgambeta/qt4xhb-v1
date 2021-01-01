@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -54,17 +54,17 @@ QStyleOptionFocusRect( const QStyleOptionFocusRect & other )
 */
 void QStyleOptionFocusRect_new2()
 {
-  QStyleOptionFocusRect * obj = new QStyleOptionFocusRect( *PQSTYLEOPTIONFOCUSRECT(1) );
+  QStyleOptionFocusRect * obj = new QStyleOptionFocusRect( *PQSTYLEOPTIONFOCUSRECT( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QStyleOptionFocusRect_new1();
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONFOCUSRECT(1) )
+  else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONFOCUSRECT( 1 ) )
   {
     QStyleOptionFocusRect_new2();
   }
@@ -79,11 +79,11 @@ QColor backgroundColor
 */
 HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_BACKGROUNDCOLOR )
 {
-  QStyleOptionFocusRect * obj = (QStyleOptionFocusRect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionFocusRect * obj = ( QStyleOptionFocusRect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       QColor * ptr = new QColor( obj->backgroundColor );
       Qt4xHb::createReturnClass( ptr, "QCOLOR", true );
@@ -96,13 +96,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_BACKGROUNDCOLOR )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_SETBACKGROUNDCOLOR )
 {
-  QStyleOptionFocusRect * obj = (QStyleOptionFocusRect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionFocusRect * obj = ( QStyleOptionFocusRect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISQCOLOR(1) )
+    if( ISNUMPAR( 1 ) && ISQCOLOR( 1 ) )
     {
-      obj->backgroundColor= *PQCOLOR(1);
+      obj->backgroundColor= *PQCOLOR( 1 );
     }
     else
     {

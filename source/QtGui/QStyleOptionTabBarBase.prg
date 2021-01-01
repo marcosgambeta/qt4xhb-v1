@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -58,17 +58,17 @@ QStyleOptionTabBarBase( const QStyleOptionTabBarBase & other )
 */
 void QStyleOptionTabBarBase_new2()
 {
-  QStyleOptionTabBarBase * obj = new QStyleOptionTabBarBase( *PQSTYLEOPTIONTABBARBASE(1) );
+  QStyleOptionTabBarBase * obj = new QStyleOptionTabBarBase( *PQSTYLEOPTIONTABBARBASE( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QStyleOptionTabBarBase_new1();
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONTABBARBASE(1) )
+  else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONTABBARBASE( 1 ) )
   {
     QStyleOptionTabBarBase_new2();
   }
@@ -83,11 +83,11 @@ QTabBar::Shape shape
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SHAPE )
 {
-  QStyleOptionTabBarBase * obj = (QStyleOptionTabBarBase *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionTabBarBase * obj = ( QStyleOptionTabBarBase * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RENUM( obj->shape );
     }
@@ -99,13 +99,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SHAPE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SETSHAPE )
 {
-  QStyleOptionTabBarBase * obj = (QStyleOptionTabBarBase *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionTabBarBase * obj = ( QStyleOptionTabBarBase * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
-      obj->shape= (QTabBar::Shape) hb_parni(1);
+      obj->shape= ( QTabBar::Shape ) hb_parni( 1 );
     }
     else
     {
@@ -121,11 +121,11 @@ QRect tabBarRect
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_TABBARRECT )
 {
-  QStyleOptionTabBarBase * obj = (QStyleOptionTabBarBase *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionTabBarBase * obj = ( QStyleOptionTabBarBase * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       QRect * ptr = new QRect( obj->tabBarRect );
       Qt4xHb::createReturnClass( ptr, "QRECT", true );
@@ -138,13 +138,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_TABBARRECT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SETTABBARRECT )
 {
-  QStyleOptionTabBarBase * obj = (QStyleOptionTabBarBase *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionTabBarBase * obj = ( QStyleOptionTabBarBase * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISQRECT(1) )
+    if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
     {
-      obj->tabBarRect= *PQRECT(1);
+      obj->tabBarRect= *PQRECT( 1 );
     }
     else
     {
@@ -160,11 +160,11 @@ QRect selectedTabRect
 */
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SELECTEDTABRECT )
 {
-  QStyleOptionTabBarBase * obj = (QStyleOptionTabBarBase *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionTabBarBase * obj = ( QStyleOptionTabBarBase * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       QRect * ptr = new QRect( obj->selectedTabRect );
       Qt4xHb::createReturnClass( ptr, "QRECT", true );
@@ -177,13 +177,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SELECTEDTABRECT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SETSELECTEDTABRECT )
 {
-  QStyleOptionTabBarBase * obj = (QStyleOptionTabBarBase *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionTabBarBase * obj = ( QStyleOptionTabBarBase * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISQRECT(1) )
+    if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
     {
-      obj->selectedTabRect= *PQRECT(1);
+      obj->selectedTabRect= *PQRECT( 1 );
     }
     else
     {

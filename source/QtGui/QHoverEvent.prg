@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -46,9 +46,9 @@ QHoverEvent( QEvent::Type type, const QPoint & pos, const QPoint & oldPos )
 */
 HB_FUNC_STATIC( QHOVEREVENT_NEW )
 {
-  if( ISNUMPAR(3) && ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) )
+  if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISQPOINT( 2 ) && ISQPOINT( 3 ) )
   {
-    QHoverEvent * obj = new QHoverEvent( (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
+    QHoverEvent * obj = new QHoverEvent( ( QEvent::Type ) hb_parni( 1 ), *PQPOINT( 2 ), *PQPOINT( 3 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QHOVEREVENT_NEW )
 
 HB_FUNC_STATIC( QHOVEREVENT_DELETE )
 {
-  QHoverEvent * obj = (QHoverEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QHoverEvent * obj = ( QHoverEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -79,12 +79,12 @@ const QPoint & pos() const
 */
 HB_FUNC_STATIC( QHOVEREVENT_POS )
 {
-  QHoverEvent * obj = (QHoverEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QHoverEvent * obj = ( QHoverEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QPoint * ptr = &obj->pos();
@@ -104,12 +104,12 @@ const QPoint & oldPos() const
 */
 HB_FUNC_STATIC( QHOVEREVENT_OLDPOS )
 {
-  QHoverEvent * obj = (QHoverEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QHoverEvent * obj = ( QHoverEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QPoint * ptr = &obj->oldPos();

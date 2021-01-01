@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -46,9 +46,9 @@ QResizeEvent( const QSize & size, const QSize & oldSize )
 */
 HB_FUNC_STATIC( QRESIZEEVENT_NEW )
 {
-  if( ISNUMPAR(2) && ISQSIZE(1) && ISQSIZE(2) )
+  if( ISNUMPAR( 2 ) && ISQSIZE( 1 ) && ISQSIZE( 2 ) )
   {
-    QResizeEvent * obj = new QResizeEvent( *PQSIZE(1), *PQSIZE(2) );
+    QResizeEvent * obj = new QResizeEvent( *PQSIZE( 1 ), *PQSIZE( 2 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QRESIZEEVENT_NEW )
 
 HB_FUNC_STATIC( QRESIZEEVENT_DELETE )
 {
-  QResizeEvent * obj = (QResizeEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QResizeEvent * obj = ( QResizeEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -79,12 +79,12 @@ const QSize & size() const
 */
 HB_FUNC_STATIC( QRESIZEEVENT_SIZE )
 {
-  QResizeEvent * obj = (QResizeEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QResizeEvent * obj = ( QResizeEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QSize * ptr = &obj->size();
@@ -104,12 +104,12 @@ const QSize & oldSize() const
 */
 HB_FUNC_STATIC( QRESIZEEVENT_OLDSIZE )
 {
-  QResizeEvent * obj = (QResizeEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QResizeEvent * obj = ( QResizeEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QSize * ptr = &obj->oldSize();

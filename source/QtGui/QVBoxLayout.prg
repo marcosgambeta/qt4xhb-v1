@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -54,17 +54,17 @@ QVBoxLayout( QWidget * parent )
 */
 void QVBoxLayout_new2()
 {
-  QVBoxLayout * obj = new QVBoxLayout( PQWIDGET(1) );
+  QVBoxLayout * obj = new QVBoxLayout( PQWIDGET( 1 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QVBOXLAYOUT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QVBoxLayout_new1();
   }
-  else if( ISNUMPAR(1) && ISQWIDGET(1) )
+  else if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
     QVBoxLayout_new2();
   }
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QVBOXLAYOUT_NEW )
 
 HB_FUNC_STATIC( QVBOXLAYOUT_DELETE )
 {
-  QVBoxLayout * obj = (QVBoxLayout *) Qt4xHb::itemGetPtrStackSelfItem();
+  QVBoxLayout * obj = ( QVBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

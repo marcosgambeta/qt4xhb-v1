@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -48,9 +48,9 @@ QActionEvent( int type, QAction * action, QAction * before = 0 )
 */
 HB_FUNC_STATIC( QACTIONEVENT_NEW )
 {
-  if( ISBETWEEN(2,3) && ISNUM(1) && ISQACTION(2) && (ISQACTION(3)||ISNIL(3)) )
+  if( ISBETWEEN( 2, 3 ) && ISNUM( 1 ) && ISQACTION( 2 ) && ( ISQACTION( 3 ) || ISNIL( 3 ) ) )
   {
-    QActionEvent * obj = new QActionEvent( PINT(1), PQACTION(2), OPQACTION(3,0) );
+    QActionEvent * obj = new QActionEvent( PINT( 1 ), PQACTION( 2 ), OPQACTION( 3, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QACTIONEVENT_NEW )
 
 HB_FUNC_STATIC( QACTIONEVENT_DELETE )
 {
-  QActionEvent * obj = (QActionEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QActionEvent * obj = ( QActionEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -81,12 +81,12 @@ QAction * action() const
 */
 HB_FUNC_STATIC( QACTIONEVENT_ACTION )
 {
-  QActionEvent * obj = (QActionEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QActionEvent * obj = ( QActionEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QAction * ptr = obj->action();
@@ -106,12 +106,12 @@ QAction * before() const
 */
 HB_FUNC_STATIC( QACTIONEVENT_BEFORE )
 {
-  QActionEvent * obj = (QActionEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QActionEvent * obj = ( QActionEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QAction * ptr = obj->before();

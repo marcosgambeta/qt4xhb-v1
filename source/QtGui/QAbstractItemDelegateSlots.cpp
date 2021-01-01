@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QAbstractItemDelegateSlots.h"
 
-QAbstractItemDelegateSlots::QAbstractItemDelegateSlots( QObject *parent ) : QObject( parent )
+QAbstractItemDelegateSlots::QAbstractItemDelegateSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,14 +22,14 @@ QAbstractItemDelegateSlots::~QAbstractItemDelegateSlots()
 
 void QAbstractItemDelegateSlots::closeEditor( QWidget * editor, QAbstractItemDelegate::EndEditHint hint )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMDELEGATE" );
-    PHB_ITEM peditor = Qt4xHb::Signals_return_qobject( (QObject *) editor, "QWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTITEMDELEGATE" );
+    PHB_ITEM peditor = Qt4xHb::Signals_return_qobject( ( QObject * ) editor, "QWIDGET" );
     PHB_ITEM phint = hb_itemPutNI( NULL, (int) hint );
 
     hb_vmEvalBlockV( cb, 3, psender, peditor, phint );
@@ -42,14 +42,14 @@ void QAbstractItemDelegateSlots::closeEditor( QWidget * editor, QAbstractItemDel
 
 void QAbstractItemDelegateSlots::commitData( QWidget * editor )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "commitData(QWidget*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMDELEGATE" );
-    PHB_ITEM peditor = Qt4xHb::Signals_return_qobject( (QObject *) editor, "QWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTITEMDELEGATE" );
+    PHB_ITEM peditor = Qt4xHb::Signals_return_qobject( ( QObject * ) editor, "QWIDGET" );
 
     hb_vmEvalBlockV( cb, 2, psender, peditor );
 
@@ -60,14 +60,14 @@ void QAbstractItemDelegateSlots::commitData( QWidget * editor )
 
 void QAbstractItemDelegateSlots::sizeHintChanged( const QModelIndex & index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "sizeHintChanged(QModelIndex)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTITEMDELEGATE" );
-    PHB_ITEM pindex = Qt4xHb::Signals_return_object( (void *) &index, "QMODELINDEX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTITEMDELEGATE" );
+    PHB_ITEM pindex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
 
@@ -78,7 +78,7 @@ void QAbstractItemDelegateSlots::sizeHintChanged( const QModelIndex & index )
 
 void QAbstractItemDelegateSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractItemDelegate * obj = ( QAbstractItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

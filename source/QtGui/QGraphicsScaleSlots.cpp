@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QGraphicsScaleSlots.h"
 
-QGraphicsScaleSlots::QGraphicsScaleSlots( QObject *parent ) : QObject( parent )
+QGraphicsScaleSlots::QGraphicsScaleSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QGraphicsScaleSlots::~QGraphicsScaleSlots()
 
 void QGraphicsScaleSlots::originChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "originChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSSCALE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSSCALE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,13 +38,13 @@ void QGraphicsScaleSlots::originChanged()
 
 void QGraphicsScaleSlots::scaleChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "scaleChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSSCALE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSSCALE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -54,13 +54,13 @@ void QGraphicsScaleSlots::scaleChanged()
 
 void QGraphicsScaleSlots::xScaleChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "xScaleChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSSCALE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSSCALE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -70,13 +70,13 @@ void QGraphicsScaleSlots::xScaleChanged()
 
 void QGraphicsScaleSlots::yScaleChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "yScaleChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSSCALE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSSCALE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -86,13 +86,13 @@ void QGraphicsScaleSlots::yScaleChanged()
 
 void QGraphicsScaleSlots::zScaleChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "zScaleChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSSCALE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSSCALE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -102,7 +102,7 @@ void QGraphicsScaleSlots::zScaleChanged()
 
 void QGraphicsScaleSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsScale * obj = (QGraphicsScale *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsScale * obj = ( QGraphicsScale * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

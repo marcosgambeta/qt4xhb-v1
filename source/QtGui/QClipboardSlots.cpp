@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QClipboardSlots.h"
 
-QClipboardSlots::QClipboardSlots( QObject *parent ) : QObject( parent )
+QClipboardSlots::QClipboardSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QClipboardSlots::~QClipboardSlots()
 
 void QClipboardSlots::changed( QClipboard::Mode mode )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "changed(QClipboard::Mode)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QCLIPBOARD" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCLIPBOARD" );
     PHB_ITEM pmode = hb_itemPutNI( NULL, (int) mode );
 
     hb_vmEvalBlockV( cb, 2, psender, pmode );
@@ -40,13 +40,13 @@ void QClipboardSlots::changed( QClipboard::Mode mode )
 
 void QClipboardSlots::dataChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "dataChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QCLIPBOARD" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCLIPBOARD" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -56,13 +56,13 @@ void QClipboardSlots::dataChanged()
 
 void QClipboardSlots::findBufferChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "findBufferChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QCLIPBOARD" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCLIPBOARD" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -72,13 +72,13 @@ void QClipboardSlots::findBufferChanged()
 
 void QClipboardSlots::selectionChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "selectionChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QCLIPBOARD" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCLIPBOARD" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -88,7 +88,7 @@ void QClipboardSlots::selectionChanged()
 
 void QClipboardSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QClipboard * obj = (QClipboard *) Qt4xHb::itemGetPtrStackSelfItem();
+  QClipboard * obj = ( QClipboard * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

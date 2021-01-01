@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -53,9 +53,9 @@ QKeyEvent( QEvent::Type type, int key, Qt::KeyboardModifiers modifiers, const QS
 */
 HB_FUNC_STATIC( QKEYEVENT_NEW )
 {
-  if( ISBETWEEN(3,6) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISOPTCHAR(4) && ISOPTLOG(5) && ISOPTNUM(6) )
+  if( ISBETWEEN( 3, 6 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISOPTCHAR( 4 ) && ISOPTLOG( 5 ) && ISOPTNUM( 6 ) )
   {
-    QKeyEvent * obj = new QKeyEvent( (QEvent::Type) hb_parni(1), PINT(2), (Qt::KeyboardModifiers) hb_parni(3), OPQSTRING(4,QString()), OPBOOL(5,false), OPUSHORT(6,1) );
+    QKeyEvent * obj = new QKeyEvent( ( QEvent::Type ) hb_parni( 1 ), PINT( 2 ), ( Qt::KeyboardModifiers ) hb_parni( 3 ), OPQSTRING( 4, QString() ), OPBOOL( 5, false ), OPUSHORT( 6, 1 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QKEYEVENT_NEW )
 
 HB_FUNC_STATIC( QKEYEVENT_DELETE )
 {
-  QKeyEvent * obj = (QKeyEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QKeyEvent * obj = ( QKeyEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -86,12 +86,12 @@ int count() const
 */
 HB_FUNC_STATIC( QKEYEVENT_COUNT )
 {
-  QKeyEvent * obj = (QKeyEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QKeyEvent * obj = ( QKeyEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->count() );
@@ -110,12 +110,12 @@ bool isAutoRepeat() const
 */
 HB_FUNC_STATIC( QKEYEVENT_ISAUTOREPEAT )
 {
-  QKeyEvent * obj = (QKeyEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QKeyEvent * obj = ( QKeyEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isAutoRepeat() );
@@ -134,12 +134,12 @@ int key() const
 */
 HB_FUNC_STATIC( QKEYEVENT_KEY )
 {
-  QKeyEvent * obj = (QKeyEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QKeyEvent * obj = ( QKeyEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->key() );
@@ -158,15 +158,15 @@ bool matches( QKeySequence::StandardKey key ) const
 */
 HB_FUNC_STATIC( QKEYEVENT_MATCHES )
 {
-  QKeyEvent * obj = (QKeyEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QKeyEvent * obj = ( QKeyEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->matches( (QKeySequence::StandardKey) hb_parni(1) ) );
+      RBOOL( obj->matches( ( QKeySequence::StandardKey ) hb_parni( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,12 +182,12 @@ Qt::KeyboardModifiers modifiers() const
 */
 HB_FUNC_STATIC( QKEYEVENT_MODIFIERS )
 {
-  QKeyEvent * obj = (QKeyEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QKeyEvent * obj = ( QKeyEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->modifiers() );
@@ -206,12 +206,12 @@ quint32 nativeModifiers() const
 */
 HB_FUNC_STATIC( QKEYEVENT_NATIVEMODIFIERS )
 {
-  QKeyEvent * obj = (QKeyEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QKeyEvent * obj = ( QKeyEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQUINT32( obj->nativeModifiers() );
@@ -230,12 +230,12 @@ quint32 nativeScanCode() const
 */
 HB_FUNC_STATIC( QKEYEVENT_NATIVESCANCODE )
 {
-  QKeyEvent * obj = (QKeyEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QKeyEvent * obj = ( QKeyEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQUINT32( obj->nativeScanCode() );
@@ -254,12 +254,12 @@ quint32 nativeVirtualKey() const
 */
 HB_FUNC_STATIC( QKEYEVENT_NATIVEVIRTUALKEY )
 {
-  QKeyEvent * obj = (QKeyEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QKeyEvent * obj = ( QKeyEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQUINT32( obj->nativeVirtualKey() );
@@ -278,12 +278,12 @@ QString text() const
 */
 HB_FUNC_STATIC( QKEYEVENT_TEXT )
 {
-  QKeyEvent * obj = (QKeyEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QKeyEvent * obj = ( QKeyEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->text() );
@@ -303,10 +303,10 @@ static QKeyEvent * createExtendedKeyEvent( QEvent::Type type, int key, Qt::Keybo
 HB_FUNC_STATIC( QKEYEVENT_CREATEEXTENDEDKEYEVENT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(6,9) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) && ISNUM(6) && ISOPTCHAR(7) && ISOPTLOG(8) && ISOPTNUM(9) )
+  if( ISBETWEEN( 6, 9 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) && ISNUM( 6 ) && ISOPTCHAR( 7 ) && ISOPTLOG( 8 ) && ISOPTNUM( 9 ) )
   {
 #endif
-    QKeyEvent * ptr = QKeyEvent::createExtendedKeyEvent( (QEvent::Type) hb_parni(1), PINT(2), (Qt::KeyboardModifiers) hb_parni(3), PQUINT32(4), PQUINT32(5), PQUINT32(6), OPQSTRING(7,QString()), OPBOOL(8,false), OPUSHORT(9,1) );
+    QKeyEvent * ptr = QKeyEvent::createExtendedKeyEvent( ( QEvent::Type ) hb_parni( 1 ), PINT( 2 ), ( Qt::KeyboardModifiers ) hb_parni( 3 ), PQUINT32( 4 ), PQUINT32( 5 ), PQUINT32( 6 ), OPQSTRING( 7, QString() ), OPBOOL( 8, false ), OPUSHORT( 9, 1 ) );
     Qt4xHb::createReturnClass( ptr, "QKEYEVENT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }

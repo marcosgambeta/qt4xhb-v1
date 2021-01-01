@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -50,9 +50,9 @@ QHelpEvent( QEvent::Type type, const QPoint & pos, const QPoint & globalPos )
 */
 HB_FUNC_STATIC( QHELPEVENT_NEW )
 {
-  if( ISNUMPAR(3) && ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) )
+  if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISQPOINT( 2 ) && ISQPOINT( 3 ) )
   {
-    QHelpEvent * obj = new QHelpEvent( (QEvent::Type) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
+    QHelpEvent * obj = new QHelpEvent( ( QEvent::Type ) hb_parni( 1 ), *PQPOINT( 2 ), *PQPOINT( 3 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QHELPEVENT_NEW )
 
 HB_FUNC_STATIC( QHELPEVENT_DELETE )
 {
-  QHelpEvent * obj = (QHelpEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEvent * obj = ( QHelpEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -83,12 +83,12 @@ const QPoint & globalPos() const
 */
 HB_FUNC_STATIC( QHELPEVENT_GLOBALPOS )
 {
-  QHelpEvent * obj = (QHelpEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEvent * obj = ( QHelpEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QPoint * ptr = &obj->globalPos();
@@ -108,12 +108,12 @@ int globalX() const
 */
 HB_FUNC_STATIC( QHELPEVENT_GLOBALX )
 {
-  QHelpEvent * obj = (QHelpEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEvent * obj = ( QHelpEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->globalX() );
@@ -132,12 +132,12 @@ int globalY() const
 */
 HB_FUNC_STATIC( QHELPEVENT_GLOBALY )
 {
-  QHelpEvent * obj = (QHelpEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEvent * obj = ( QHelpEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->globalY() );
@@ -156,12 +156,12 @@ const QPoint & pos() const
 */
 HB_FUNC_STATIC( QHELPEVENT_POS )
 {
-  QHelpEvent * obj = (QHelpEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEvent * obj = ( QHelpEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QPoint * ptr = &obj->pos();
@@ -181,12 +181,12 @@ int x() const
 */
 HB_FUNC_STATIC( QHELPEVENT_X )
 {
-  QHelpEvent * obj = (QHelpEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEvent * obj = ( QHelpEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->x() );
@@ -205,12 +205,12 @@ int y() const
 */
 HB_FUNC_STATIC( QHELPEVENT_Y )
 {
-  QHelpEvent * obj = (QHelpEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEvent * obj = ( QHelpEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->y() );

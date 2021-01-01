@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -59,7 +59,7 @@ QGraphicsSimpleTextItem( QGraphicsItem * parent = 0 )
 */
 void QGraphicsSimpleTextItem_new1()
 {
-  QGraphicsSimpleTextItem * obj = new QGraphicsSimpleTextItem( ISNIL(1)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(1) );
+  QGraphicsSimpleTextItem * obj = new QGraphicsSimpleTextItem( ISNIL( 1 )? 0 : ( QGraphicsItem * ) Qt4xHb::itemGetPtr( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -68,17 +68,17 @@ QGraphicsSimpleTextItem( const QString & text, QGraphicsItem * parent = 0 )
 */
 void QGraphicsSimpleTextItem_new2()
 {
-  QGraphicsSimpleTextItem * obj = new QGraphicsSimpleTextItem( PQSTRING(1), ISNIL(2)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(2) );
+  QGraphicsSimpleTextItem * obj = new QGraphicsSimpleTextItem( PQSTRING( 1 ), ISNIL( 2 )? 0 : ( QGraphicsItem * ) Qt4xHb::itemGetPtr( 2 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQGRAPHICSITEM( 1 ) || ISNIL( 1 ) ) )
   {
     QGraphicsSimpleTextItem_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQGRAPHICSITEM(2)||ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISQGRAPHICSITEM( 2 ) || ISNIL( 2 ) ) )
   {
     QGraphicsSimpleTextItem_new2();
   }
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_DELETE )
 {
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSimpleTextItem * obj = ( QGraphicsSimpleTextItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -110,12 +110,12 @@ QFont font() const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_FONT )
 {
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSimpleTextItem * obj = ( QGraphicsSimpleTextItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QFont * ptr = new QFont( obj->font() );
@@ -135,15 +135,15 @@ void setFont( const QFont & font )
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SETFONT )
 {
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSimpleTextItem * obj = ( QGraphicsSimpleTextItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQFONT(1) )
+    if( ISNUMPAR( 1 ) && ISQFONT( 1 ) )
     {
 #endif
-      obj->setFont( *PQFONT(1) );
+      obj->setFont( *PQFONT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,15 +161,15 @@ void setText( const QString & text )
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SETTEXT )
 {
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSimpleTextItem * obj = ( QGraphicsSimpleTextItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setText( PQSTRING(1) );
+      obj->setText( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,12 +187,12 @@ QString text() const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_TEXT )
 {
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSimpleTextItem * obj = ( QGraphicsSimpleTextItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->text() );
@@ -211,12 +211,12 @@ virtual QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_BOUNDINGRECT )
 {
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSimpleTextItem * obj = ( QGraphicsSimpleTextItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QRectF * ptr = new QRectF( obj->boundingRect() );
@@ -236,15 +236,15 @@ virtual bool contains( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_CONTAINS )
 {
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSimpleTextItem * obj = ( QGraphicsSimpleTextItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINTF(1) )
+    if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
     {
 #endif
-      RBOOL( obj->contains( *PQPOINTF(1) ) );
+      RBOOL( obj->contains( *PQPOINTF( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -260,15 +260,15 @@ virtual bool isObscuredBy( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_ISOBSCUREDBY )
 {
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSimpleTextItem * obj = ( QGraphicsSimpleTextItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGRAPHICSITEM(1) )
+    if( ISNUMPAR( 1 ) && ISQGRAPHICSITEM( 1 ) )
     {
 #endif
-      RBOOL( obj->isObscuredBy( PQGRAPHICSITEM(1) ) );
+      RBOOL( obj->isObscuredBy( PQGRAPHICSITEM( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -284,12 +284,12 @@ virtual QPainterPath opaqueArea() const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_OPAQUEAREA )
 {
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSimpleTextItem * obj = ( QGraphicsSimpleTextItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPainterPath * ptr = new QPainterPath( obj->opaqueArea() );
@@ -309,15 +309,15 @@ virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option,
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_PAINT )
 {
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSimpleTextItem * obj = ( QGraphicsSimpleTextItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISQWIDGET(3) )
+    if( ISNUMPAR( 3 ) && ISQPAINTER( 1 ) && ISQSTYLEOPTIONGRAPHICSITEM( 2 ) && ISQWIDGET( 3 ) )
     {
 #endif
-      obj->paint( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), PQWIDGET(3) );
+      obj->paint( PQPAINTER( 1 ), PQSTYLEOPTIONGRAPHICSITEM( 2 ), PQWIDGET( 3 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -335,12 +335,12 @@ virtual QPainterPath shape() const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_SHAPE )
 {
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSimpleTextItem * obj = ( QGraphicsSimpleTextItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPainterPath * ptr = new QPainterPath( obj->shape() );
@@ -360,12 +360,12 @@ virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_TYPE )
 {
-  QGraphicsSimpleTextItem * obj = (QGraphicsSimpleTextItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSimpleTextItem * obj = ( QGraphicsSimpleTextItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->type() );

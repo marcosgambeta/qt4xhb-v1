@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -71,9 +71,9 @@ QProgressBar( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QPROGRESSBAR_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
   {
-    QProgressBar * obj = new QProgressBar( OPQWIDGET(1,0) );
+    QProgressBar * obj = new QProgressBar( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_NEW )
 
 HB_FUNC_STATIC( QPROGRESSBAR_DELETE )
 {
-  QProgressBar * obj = (QProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProgressBar * obj = ( QProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -106,12 +106,12 @@ Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_ALIGNMENT )
 {
-  QProgressBar * obj = (QProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProgressBar * obj = ( QProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->alignment() );
@@ -130,12 +130,12 @@ QString format() const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_FORMAT )
 {
-  QProgressBar * obj = (QProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProgressBar * obj = ( QProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->format() );
@@ -154,12 +154,12 @@ bool invertedAppearance()
 */
 HB_FUNC_STATIC( QPROGRESSBAR_INVERTEDAPPEARANCE )
 {
-  QProgressBar * obj = (QProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProgressBar * obj = ( QProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->invertedAppearance() );
@@ -178,12 +178,12 @@ bool isTextVisible() const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_ISTEXTVISIBLE )
 {
-  QProgressBar * obj = (QProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProgressBar * obj = ( QProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isTextVisible() );
@@ -202,12 +202,12 @@ int maximum() const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_MAXIMUM )
 {
-  QProgressBar * obj = (QProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProgressBar * obj = ( QProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->maximum() );
@@ -226,12 +226,12 @@ int minimum() const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_MINIMUM )
 {
-  QProgressBar * obj = (QProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProgressBar * obj = ( QProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->minimum() );
@@ -250,12 +250,12 @@ Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_ORIENTATION )
 {
-  QProgressBar * obj = (QProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProgressBar * obj = ( QProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->orientation() );
@@ -274,15 +274,15 @@ void setAlignment( Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QPROGRESSBAR_SETALIGNMENT )
 {
-  QProgressBar * obj = (QProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProgressBar * obj = ( QProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setAlignment( (Qt::Alignment) hb_parni(1) );
+      obj->setAlignment( ( Qt::Alignment ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -300,15 +300,15 @@ void setFormat( const QString & format )
 */
 HB_FUNC_STATIC( QPROGRESSBAR_SETFORMAT )
 {
-  QProgressBar * obj = (QProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProgressBar * obj = ( QProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setFormat( PQSTRING(1) );
+      obj->setFormat( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -326,15 +326,15 @@ void setInvertedAppearance( bool invert )
 */
 HB_FUNC_STATIC( QPROGRESSBAR_SETINVERTEDAPPEARANCE )
 {
-  QProgressBar * obj = (QProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProgressBar * obj = ( QProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setInvertedAppearance( PBOOL(1) );
+      obj->setInvertedAppearance( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -352,15 +352,15 @@ void setTextDirection( QProgressBar::Direction textDirection )
 */
 HB_FUNC_STATIC( QPROGRESSBAR_SETTEXTDIRECTION )
 {
-  QProgressBar * obj = (QProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProgressBar * obj = ( QProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setTextDirection( (QProgressBar::Direction) hb_parni(1) );
+      obj->setTextDirection( ( QProgressBar::Direction ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -378,15 +378,15 @@ void setTextVisible( bool visible )
 */
 HB_FUNC_STATIC( QPROGRESSBAR_SETTEXTVISIBLE )
 {
-  QProgressBar * obj = (QProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProgressBar * obj = ( QProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setTextVisible( PBOOL(1) );
+      obj->setTextVisible( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -404,12 +404,12 @@ virtual QString text() const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_TEXT )
 {
-  QProgressBar * obj = (QProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProgressBar * obj = ( QProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->text() );
@@ -428,12 +428,12 @@ QProgressBar::Direction textDirection()
 */
 HB_FUNC_STATIC( QPROGRESSBAR_TEXTDIRECTION )
 {
-  QProgressBar * obj = (QProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProgressBar * obj = ( QProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->textDirection() );
@@ -452,12 +452,12 @@ int value() const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_VALUE )
 {
-  QProgressBar * obj = (QProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProgressBar * obj = ( QProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->value() );
@@ -476,12 +476,12 @@ virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_MINIMUMSIZEHINT )
 {
-  QProgressBar * obj = (QProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProgressBar * obj = ( QProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
@@ -501,12 +501,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QPROGRESSBAR_SIZEHINT )
 {
-  QProgressBar * obj = (QProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProgressBar * obj = ( QProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
@@ -526,12 +526,12 @@ void reset()
 */
 HB_FUNC_STATIC( QPROGRESSBAR_RESET )
 {
-  QProgressBar * obj = (QProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProgressBar * obj = ( QProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->reset();
@@ -552,15 +552,15 @@ void setMaximum( int maximum )
 */
 HB_FUNC_STATIC( QPROGRESSBAR_SETMAXIMUM )
 {
-  QProgressBar * obj = (QProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProgressBar * obj = ( QProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setMaximum( PINT(1) );
+      obj->setMaximum( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -578,15 +578,15 @@ void setMinimum( int minimum )
 */
 HB_FUNC_STATIC( QPROGRESSBAR_SETMINIMUM )
 {
-  QProgressBar * obj = (QProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProgressBar * obj = ( QProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setMinimum( PINT(1) );
+      obj->setMinimum( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -604,15 +604,15 @@ void setOrientation( Qt::Orientation )
 */
 HB_FUNC_STATIC( QPROGRESSBAR_SETORIENTATION )
 {
-  QProgressBar * obj = (QProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProgressBar * obj = ( QProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setOrientation( (Qt::Orientation) hb_parni(1) );
+      obj->setOrientation( ( Qt::Orientation ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -630,15 +630,15 @@ void setRange( int minimum, int maximum )
 */
 HB_FUNC_STATIC( QPROGRESSBAR_SETRANGE )
 {
-  QProgressBar * obj = (QProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProgressBar * obj = ( QProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      obj->setRange( PINT(1), PINT(2) );
+      obj->setRange( PINT( 1 ), PINT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -656,15 +656,15 @@ void setValue( int value )
 */
 HB_FUNC_STATIC( QPROGRESSBAR_SETVALUE )
 {
-  QProgressBar * obj = (QProgressBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QProgressBar * obj = ( QProgressBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setValue( PINT(1) );
+      obj->setValue( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

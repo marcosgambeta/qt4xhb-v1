@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QWizardPageSlots.h"
 
-QWizardPageSlots::QWizardPageSlots( QObject *parent ) : QObject( parent )
+QWizardPageSlots::QWizardPageSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QWizardPageSlots::~QWizardPageSlots()
 
 void QWizardPageSlots::completeChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "completeChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QWIZARDPAGE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWIZARDPAGE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,7 +38,7 @@ void QWizardPageSlots::completeChanged()
 
 void QWizardPageSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QWizardPage * obj = (QWizardPage *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWizardPage * obj = ( QWizardPage * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

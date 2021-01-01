@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -49,9 +49,9 @@ QRubberBand( QRubberBand::Shape s, QWidget * p = 0 )
 */
 HB_FUNC_STATIC( QRUBBERBAND_NEW )
 {
-  if( ISBETWEEN(1,2) && ISNUM(1) && (ISQWIDGET(2)||ISNIL(2)) )
+  if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISQWIDGET( 2 ) || ISNIL( 2 ) ) )
   {
-    QRubberBand * obj = new QRubberBand( (QRubberBand::Shape) hb_parni(1), OPQWIDGET(2,0) );
+    QRubberBand * obj = new QRubberBand( ( QRubberBand::Shape ) hb_parni( 1 ), OPQWIDGET( 2, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QRUBBERBAND_NEW )
 
 HB_FUNC_STATIC( QRUBBERBAND_DELETE )
 {
-  QRubberBand * obj = (QRubberBand *) Qt4xHb::itemGetPtrStackSelfItem();
+  QRubberBand * obj = ( QRubberBand * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -84,11 +84,11 @@ void move( int x, int y )
 */
 void QRubberBand_move1()
 {
-  QRubberBand * obj = (QRubberBand *) Qt4xHb::itemGetPtrStackSelfItem();
+  QRubberBand * obj = ( QRubberBand * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->move( PINT(1), PINT(2) );
+    obj->move( PINT( 1 ), PINT( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -99,11 +99,11 @@ void move( const QPoint & p )
 */
 void QRubberBand_move2()
 {
-  QRubberBand * obj = (QRubberBand *) Qt4xHb::itemGetPtrStackSelfItem();
+  QRubberBand * obj = ( QRubberBand * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->move( *PQPOINT(1) );
+    obj->move( *PQPOINT( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -111,11 +111,11 @@ void QRubberBand_move2()
 
 HB_FUNC_STATIC( QRUBBERBAND_MOVE )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
   {
     QRubberBand_move1();
   }
-  else if( ISNUMPAR(1) && ISQPOINT(1) )
+  else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
     QRubberBand_move2();
   }
@@ -130,11 +130,11 @@ void resize( int width, int height )
 */
 void QRubberBand_resize1()
 {
-  QRubberBand * obj = (QRubberBand *) Qt4xHb::itemGetPtrStackSelfItem();
+  QRubberBand * obj = ( QRubberBand * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->resize( PINT(1), PINT(2) );
+    obj->resize( PINT( 1 ), PINT( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -145,11 +145,11 @@ void resize( const QSize & size )
 */
 void QRubberBand_resize2()
 {
-  QRubberBand * obj = (QRubberBand *) Qt4xHb::itemGetPtrStackSelfItem();
+  QRubberBand * obj = ( QRubberBand * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->resize( *PQSIZE(1) );
+    obj->resize( *PQSIZE( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -157,11 +157,11 @@ void QRubberBand_resize2()
 
 HB_FUNC_STATIC( QRUBBERBAND_RESIZE )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
   {
     QRubberBand_resize1();
   }
-  else if( ISNUMPAR(1) && ISQSIZE(1) )
+  else if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
   {
     QRubberBand_resize2();
   }
@@ -176,11 +176,11 @@ void setGeometry( const QRect & rect )
 */
 void QRubberBand_setGeometry1()
 {
-  QRubberBand * obj = (QRubberBand *) Qt4xHb::itemGetPtrStackSelfItem();
+  QRubberBand * obj = ( QRubberBand * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setGeometry( *PQRECT(1) );
+    obj->setGeometry( *PQRECT( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -191,11 +191,11 @@ void setGeometry( int x, int y, int width, int height )
 */
 void QRubberBand_setGeometry2()
 {
-  QRubberBand * obj = (QRubberBand *) Qt4xHb::itemGetPtrStackSelfItem();
+  QRubberBand * obj = ( QRubberBand * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setGeometry( PINT(1), PINT(2), PINT(3), PINT(4) );
+    obj->setGeometry( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -203,11 +203,11 @@ void QRubberBand_setGeometry2()
 
 HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY )
 {
-  if( ISNUMPAR(1) && ISQRECT(1) )
+  if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
   {
     QRubberBand_setGeometry1();
   }
-  else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+  else if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
   {
     QRubberBand_setGeometry2();
   }
@@ -222,12 +222,12 @@ QRubberBand::Shape shape() const
 */
 HB_FUNC_STATIC( QRUBBERBAND_SHAPE )
 {
-  QRubberBand * obj = (QRubberBand *) Qt4xHb::itemGetPtrStackSelfItem();
+  QRubberBand * obj = ( QRubberBand * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->shape() );

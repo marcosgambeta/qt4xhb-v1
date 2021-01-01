@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -42,7 +42,7 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSTRANSFORM_DELETE )
 {
-  QGraphicsTransform * obj = (QGraphicsTransform *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsTransform * obj = ( QGraphicsTransform * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -64,15 +64,15 @@ virtual void applyTo( QMatrix4x4 * matrix ) const = 0
 */
 HB_FUNC_STATIC( QGRAPHICSTRANSFORM_APPLYTO )
 {
-  QGraphicsTransform * obj = (QGraphicsTransform *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsTransform * obj = ( QGraphicsTransform * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMATRIX4X4(1) )
+    if( ISNUMPAR( 1 ) && ISQMATRIX4X4( 1 ) )
     {
 #endif
-      obj->applyTo( PQMATRIX4X4(1) );
+      obj->applyTo( PQMATRIX4X4( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

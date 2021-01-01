@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -50,9 +50,9 @@ QWidgetAction( QObject * parent )
 */
 HB_FUNC_STATIC( QWIDGETACTION_NEW )
 {
-  if( ISNUMPAR(1) && ISQOBJECT(1) )
+  if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
   {
-    QWidgetAction * obj = new QWidgetAction( PQOBJECT(1) );
+    QWidgetAction * obj = new QWidgetAction( PQOBJECT( 1 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QWIDGETACTION_NEW )
 
 HB_FUNC_STATIC( QWIDGETACTION_DELETE )
 {
-  QWidgetAction * obj = (QWidgetAction *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidgetAction * obj = ( QWidgetAction * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -85,12 +85,12 @@ QWidget * defaultWidget() const
 */
 HB_FUNC_STATIC( QWIDGETACTION_DEFAULTWIDGET )
 {
-  QWidgetAction * obj = (QWidgetAction *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidgetAction * obj = ( QWidgetAction * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWidget * ptr = obj->defaultWidget();
@@ -110,15 +110,15 @@ void releaseWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QWIDGETACTION_RELEASEWIDGET )
 {
-  QWidgetAction * obj = (QWidgetAction *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidgetAction * obj = ( QWidgetAction * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      obj->releaseWidget( PQWIDGET(1) );
+      obj->releaseWidget( PQWIDGET( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,15 +136,15 @@ QWidget * requestWidget( QWidget * parent )
 */
 HB_FUNC_STATIC( QWIDGETACTION_REQUESTWIDGET )
 {
-  QWidgetAction * obj = (QWidgetAction *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidgetAction * obj = ( QWidgetAction * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      QWidget * ptr = obj->requestWidget( PQWIDGET(1) );
+      QWidget * ptr = obj->requestWidget( PQWIDGET( 1 ) );
       Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -161,15 +161,15 @@ void setDefaultWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QWIDGETACTION_SETDEFAULTWIDGET )
 {
-  QWidgetAction * obj = (QWidgetAction *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidgetAction * obj = ( QWidgetAction * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      obj->setDefaultWidget( PQWIDGET(1) );
+      obj->setDefaultWidget( PQWIDGET( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

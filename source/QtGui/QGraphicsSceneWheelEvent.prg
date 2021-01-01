@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -48,7 +48,7 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_DELETE )
 {
-  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneWheelEvent * obj = ( QGraphicsSceneWheelEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -68,12 +68,12 @@ Qt::MouseButtons buttons() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_BUTTONS )
 {
-  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneWheelEvent * obj = ( QGraphicsSceneWheelEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->buttons() );
@@ -92,12 +92,12 @@ int delta() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_DELTA )
 {
-  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneWheelEvent * obj = ( QGraphicsSceneWheelEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->delta() );
@@ -116,12 +116,12 @@ Qt::KeyboardModifiers modifiers() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_MODIFIERS )
 {
-  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneWheelEvent * obj = ( QGraphicsSceneWheelEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->modifiers() );
@@ -140,12 +140,12 @@ Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_ORIENTATION )
 {
-  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneWheelEvent * obj = ( QGraphicsSceneWheelEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->orientation() );
@@ -164,12 +164,12 @@ QPointF pos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_POS )
 {
-  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneWheelEvent * obj = ( QGraphicsSceneWheelEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPointF * ptr = new QPointF( obj->pos() );
@@ -189,12 +189,12 @@ QPointF scenePos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_SCENEPOS )
 {
-  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneWheelEvent * obj = ( QGraphicsSceneWheelEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPointF * ptr = new QPointF( obj->scenePos() );
@@ -214,12 +214,12 @@ QPoint screenPos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_SCREENPOS )
 {
-  QGraphicsSceneWheelEvent * obj = (QGraphicsSceneWheelEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneWheelEvent * obj = ( QGraphicsSceneWheelEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPoint * ptr = new QPoint( obj->screenPos() );

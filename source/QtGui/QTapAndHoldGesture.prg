@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -46,7 +46,7 @@ RETURN
 
 HB_FUNC_STATIC( QTAPANDHOLDGESTURE_DELETE )
 {
-  QTapAndHoldGesture * obj = (QTapAndHoldGesture *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTapAndHoldGesture * obj = ( QTapAndHoldGesture * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -68,12 +68,12 @@ QPointF position() const
 */
 HB_FUNC_STATIC( QTAPANDHOLDGESTURE_POSITION )
 {
-  QTapAndHoldGesture * obj = (QTapAndHoldGesture *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTapAndHoldGesture * obj = ( QTapAndHoldGesture * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPointF * ptr = new QPointF( obj->position() );
@@ -93,15 +93,15 @@ void setPosition( const QPointF & pos )
 */
 HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETPOSITION )
 {
-  QTapAndHoldGesture * obj = (QTapAndHoldGesture *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTapAndHoldGesture * obj = ( QTapAndHoldGesture * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINTF(1) )
+    if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
     {
 #endif
-      obj->setPosition( *PQPOINTF(1) );
+      obj->setPosition( *PQPOINTF( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,10 +120,10 @@ static void setTimeout( int msecs )
 HB_FUNC_STATIC( QTAPANDHOLDGESTURE_SETTIMEOUT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
   {
 #endif
-    QTapAndHoldGesture::setTimeout( PINT(1) );
+    QTapAndHoldGesture::setTimeout( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -141,7 +141,7 @@ static int timeout()
 HB_FUNC_STATIC( QTAPANDHOLDGESTURE_TIMEOUT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RINT( QTapAndHoldGesture::timeout() );

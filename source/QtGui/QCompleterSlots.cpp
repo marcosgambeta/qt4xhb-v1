@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QCompleterSlots.h"
 
-QCompleterSlots::QCompleterSlots( QObject *parent ) : QObject( parent )
+QCompleterSlots::QCompleterSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,14 +22,14 @@ QCompleterSlots::~QCompleterSlots()
 
 void QCompleterSlots::activated( const QString & text )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activated(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QCOMPLETER" );
-    PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCOMPLETER" );
+    PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING( text ) );
 
     hb_vmEvalBlockV( cb, 2, psender, ptext );
 
@@ -40,14 +40,14 @@ void QCompleterSlots::activated( const QString & text )
 
 void QCompleterSlots::activated( const QModelIndex & index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activated(QModelIndex)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QCOMPLETER" );
-    PHB_ITEM pindex = Qt4xHb::Signals_return_object( (void *) &index, "QMODELINDEX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCOMPLETER" );
+    PHB_ITEM pindex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
 
@@ -58,14 +58,14 @@ void QCompleterSlots::activated( const QModelIndex & index )
 
 void QCompleterSlots::highlighted( const QString & text )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "highlighted(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QCOMPLETER" );
-    PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCOMPLETER" );
+    PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING( text ) );
 
     hb_vmEvalBlockV( cb, 2, psender, ptext );
 
@@ -76,14 +76,14 @@ void QCompleterSlots::highlighted( const QString & text )
 
 void QCompleterSlots::highlighted( const QModelIndex & index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "highlighted(QModelIndex)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QCOMPLETER" );
-    PHB_ITEM pindex = Qt4xHb::Signals_return_object( (void *) &index, "QMODELINDEX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCOMPLETER" );
+    PHB_ITEM pindex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
 
@@ -94,7 +94,7 @@ void QCompleterSlots::highlighted( const QModelIndex & index )
 
 void QCompleterSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCompleter * obj = (QCompleter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QCompleter * obj = ( QCompleter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

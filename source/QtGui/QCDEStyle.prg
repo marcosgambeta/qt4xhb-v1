@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -50,9 +50,9 @@ QCDEStyle( bool useHighlightCols = false )
 */
 HB_FUNC_STATIC( QCDESTYLE_NEW )
 {
-  if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+  if( ISBETWEEN( 0, 1 ) && ISOPTLOG( 1 ) )
   {
-    QCDEStyle * obj = new QCDEStyle( OPBOOL(1,false) );
+    QCDEStyle * obj = new QCDEStyle( OPBOOL( 1, false ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QCDESTYLE_NEW )
 
 HB_FUNC_STATIC( QCDESTYLE_DELETE )
 {
-  QCDEStyle * obj = (QCDEStyle *) Qt4xHb::itemGetPtrStackSelfItem();
+  QCDEStyle * obj = ( QCDEStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -85,15 +85,15 @@ virtual void drawControl( QStyle::ControlElement element, const QStyleOption * o
 */
 HB_FUNC_STATIC( QCDESTYLE_DRAWCONTROL )
 {
-  QCDEStyle * obj = (QCDEStyle *) Qt4xHb::itemGetPtrStackSelfItem();
+  QCDEStyle * obj = ( QCDEStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,4) && ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && (ISQWIDGET(4)||ISNIL(4)) )
+    if( ISBETWEEN( 3, 4 ) && ISNUM( 1 ) && ISQSTYLEOPTION( 2 ) && ISQPAINTER( 3 ) && ( ISQWIDGET( 4 ) || ISNIL( 4 ) ) )
     {
 #endif
-      obj->drawControl( (QStyle::ControlElement) hb_parni(1), PQSTYLEOPTION(2), PQPAINTER(3), OPQWIDGET(4,0) );
+      obj->drawControl( ( QStyle::ControlElement ) hb_parni( 1 ), PQSTYLEOPTION( 2 ), PQPAINTER( 3 ), OPQWIDGET( 4, 0 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -111,15 +111,15 @@ virtual void drawPrimitive( QStyle::PrimitiveElement pe, const QStyleOption * op
 */
 HB_FUNC_STATIC( QCDESTYLE_DRAWPRIMITIVE )
 {
-  QCDEStyle * obj = (QCDEStyle *) Qt4xHb::itemGetPtrStackSelfItem();
+  QCDEStyle * obj = ( QCDEStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,4) && ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && (ISQWIDGET(4)||ISNIL(4)) )
+    if( ISBETWEEN( 3, 4 ) && ISNUM( 1 ) && ISQSTYLEOPTION( 2 ) && ISQPAINTER( 3 ) && ( ISQWIDGET( 4 ) || ISNIL( 4 ) ) )
     {
 #endif
-      obj->drawPrimitive( (QStyle::PrimitiveElement) hb_parni(1), PQSTYLEOPTION(2), PQPAINTER(3), OPQWIDGET(4,0) );
+      obj->drawPrimitive( ( QStyle::PrimitiveElement ) hb_parni( 1 ), PQSTYLEOPTION( 2 ), PQPAINTER( 3 ), OPQWIDGET( 4, 0 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,15 +137,15 @@ virtual int pixelMetric( QStyle::PixelMetric metric, const QStyleOption * option
 */
 HB_FUNC_STATIC( QCDESTYLE_PIXELMETRIC )
 {
-  QCDEStyle * obj = (QCDEStyle *) Qt4xHb::itemGetPtrStackSelfItem();
+  QCDEStyle * obj = ( QCDEStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISNUM(1) && (ISQSTYLEOPTION(2)||ISNIL(2)) && (ISQWIDGET(3)||ISNIL(3)) )
+    if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ( ISQSTYLEOPTION( 2 ) || ISNIL( 2 ) ) && ( ISQWIDGET( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
-      RINT( obj->pixelMetric( (QStyle::PixelMetric) hb_parni(1), ISNIL(2)? 0 : (QStyleOption *) Qt4xHb::itemGetPtr(2), OPQWIDGET(3,0) ) );
+      RINT( obj->pixelMetric( ( QStyle::PixelMetric ) hb_parni( 1 ), ISNIL( 2 )? 0 : ( QStyleOption * ) Qt4xHb::itemGetPtr( 2 ), OPQWIDGET( 3, 0 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,12 +161,12 @@ virtual QPalette standardPalette() const
 */
 HB_FUNC_STATIC( QCDESTYLE_STANDARDPALETTE )
 {
-  QCDEStyle * obj = (QCDEStyle *) Qt4xHb::itemGetPtrStackSelfItem();
+  QCDEStyle * obj = ( QCDEStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPalette * ptr = new QPalette( obj->standardPalette() );

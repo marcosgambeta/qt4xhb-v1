@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -28,7 +28,7 @@ class QPlainTextEditSlots: public QObject
 {
   Q_OBJECT
   public:
-  QPlainTextEditSlots( QObject *parent = 0 );
+  QPlainTextEditSlots( QObject * parent = 0 );
   ~QPlainTextEditSlots();
   public slots:
   void blockCountChanged( int newBlockCount );

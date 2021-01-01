@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -46,7 +46,7 @@ RETURN
 
 HB_FUNC_STATIC( QFONTENGINEPLUGIN_DELETE )
 {
-  QFontEnginePlugin * obj = (QFontEnginePlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontEnginePlugin * obj = ( QFontEnginePlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -68,17 +68,17 @@ virtual QList<QFontEngineInfo> availableFontEngines() const = 0
 */
 HB_FUNC_STATIC( QFONTENGINEPLUGIN_AVAILABLEFONTENGINES )
 {
-  QFontEnginePlugin * obj = (QFontEnginePlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontEnginePlugin * obj = ( QFontEnginePlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QFontEngineInfo> list = obj->availableFontEngines();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QFONTENGINEINFO" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QFONTENGINEPLUGIN_AVAILABLEFONTENGINES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QFontEngineInfo *) new QFontEngineInfo( list[i] ) );
+          hb_itemPutPtr( pItem, ( QFontEngineInfo * ) new QFontEngineInfo( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -120,15 +120,15 @@ virtual QAbstractFontEngine * create( const QFontEngineInfo & info ) = 0
 */
 HB_FUNC_STATIC( QFONTENGINEPLUGIN_CREATE )
 {
-  QFontEnginePlugin * obj = (QFontEnginePlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontEnginePlugin * obj = ( QFontEnginePlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQFONTENGINEINFO(1) )
+    if( ISNUMPAR( 1 ) && ISQFONTENGINEINFO( 1 ) )
     {
 #endif
-      QAbstractFontEngine * ptr = obj->create( *PQFONTENGINEINFO(1) );
+      QAbstractFontEngine * ptr = obj->create( *PQFONTENGINEINFO( 1 ) );
       Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTFONTENGINE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -145,12 +145,12 @@ virtual QStringList keys() const
 */
 HB_FUNC_STATIC( QFONTENGINEPLUGIN_KEYS )
 {
-  QFontEnginePlugin * obj = (QFontEnginePlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontEnginePlugin * obj = ( QFontEnginePlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->keys() );

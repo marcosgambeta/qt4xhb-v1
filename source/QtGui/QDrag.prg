@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -66,9 +66,9 @@ QDrag( QWidget * dragSource )
 */
 HB_FUNC_STATIC( QDRAG_NEW )
 {
-  if( ISNUMPAR(1) && ISQWIDGET(1) )
+  if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
-    QDrag * obj = new QDrag( PQWIDGET(1) );
+    QDrag * obj = new QDrag( PQWIDGET( 1 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QDRAG_NEW )
 
 HB_FUNC_STATIC( QDRAG_DELETE )
 {
-  QDrag * obj = (QDrag *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDrag * obj = ( QDrag * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -101,11 +101,11 @@ Qt::DropAction exec( Qt::DropActions supportedActions = Qt::MoveAction )
 */
 void QDrag_exec1()
 {
-  QDrag * obj = (QDrag *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDrag * obj = ( QDrag * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RENUM( obj->exec( ISNIL(1)? (Qt::DropActions) Qt::MoveAction : (Qt::DropActions) hb_parni(1) ) );
+    RENUM( obj->exec( ISNIL( 1 )? ( Qt::DropActions ) Qt::MoveAction : ( Qt::DropActions ) hb_parni( 1 ) ) );
   }
 }
 
@@ -114,21 +114,21 @@ Qt::DropAction exec( Qt::DropActions supportedActions, Qt::DropAction defaultDro
 */
 void QDrag_exec2()
 {
-  QDrag * obj = (QDrag *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDrag * obj = ( QDrag * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RENUM( obj->exec( (Qt::DropActions) hb_parni(1), (Qt::DropAction) hb_parni(2) ) );
+    RENUM( obj->exec( ( Qt::DropActions ) hb_parni( 1 ), ( Qt::DropAction ) hb_parni( 2 ) ) );
   }
 }
 
 HB_FUNC_STATIC( QDRAG_EXEC )
 {
-  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
   {
     QDrag_exec1();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
   {
     QDrag_exec2();
   }
@@ -143,12 +143,12 @@ QPoint hotSpot() const
 */
 HB_FUNC_STATIC( QDRAG_HOTSPOT )
 {
-  QDrag * obj = (QDrag *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDrag * obj = ( QDrag * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPoint * ptr = new QPoint( obj->hotSpot() );
@@ -168,12 +168,12 @@ QMimeData * mimeData() const
 */
 HB_FUNC_STATIC( QDRAG_MIMEDATA )
 {
-  QDrag * obj = (QDrag *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDrag * obj = ( QDrag * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QMimeData * ptr = obj->mimeData();
@@ -193,12 +193,12 @@ QPixmap pixmap() const
 */
 HB_FUNC_STATIC( QDRAG_PIXMAP )
 {
-  QDrag * obj = (QDrag *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDrag * obj = ( QDrag * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->pixmap() );
@@ -218,15 +218,15 @@ void setDragCursor( const QPixmap & cursor, Qt::DropAction action )
 */
 HB_FUNC_STATIC( QDRAG_SETDRAGCURSOR )
 {
-  QDrag * obj = (QDrag *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDrag * obj = ( QDrag * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQPIXMAP(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISQPIXMAP( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      obj->setDragCursor( *PQPIXMAP(1), (Qt::DropAction) hb_parni(2) );
+      obj->setDragCursor( *PQPIXMAP( 1 ), ( Qt::DropAction ) hb_parni( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,15 +244,15 @@ void setHotSpot( const QPoint & hotspot )
 */
 HB_FUNC_STATIC( QDRAG_SETHOTSPOT )
 {
-  QDrag * obj = (QDrag *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDrag * obj = ( QDrag * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINT(1) )
+    if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
     {
 #endif
-      obj->setHotSpot( *PQPOINT(1) );
+      obj->setHotSpot( *PQPOINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,15 +270,15 @@ void setMimeData( QMimeData * data )
 */
 HB_FUNC_STATIC( QDRAG_SETMIMEDATA )
 {
-  QDrag * obj = (QDrag *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDrag * obj = ( QDrag * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMIMEDATA(1) )
+    if( ISNUMPAR( 1 ) && ISQMIMEDATA( 1 ) )
     {
 #endif
-      obj->setMimeData( PQMIMEDATA(1) );
+      obj->setMimeData( PQMIMEDATA( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -296,15 +296,15 @@ void setPixmap( const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QDRAG_SETPIXMAP )
 {
-  QDrag * obj = (QDrag *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDrag * obj = ( QDrag * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPIXMAP(1) )
+    if( ISNUMPAR( 1 ) && ISQPIXMAP( 1 ) )
     {
 #endif
-      obj->setPixmap( *PQPIXMAP(1) );
+      obj->setPixmap( *PQPIXMAP( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -322,12 +322,12 @@ QWidget * source() const
 */
 HB_FUNC_STATIC( QDRAG_SOURCE )
 {
-  QDrag * obj = (QDrag *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDrag * obj = ( QDrag * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWidget * ptr = obj->source();
@@ -347,12 +347,12 @@ QWidget * target() const
 */
 HB_FUNC_STATIC( QDRAG_TARGET )
 {
-  QDrag * obj = (QDrag *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDrag * obj = ( QDrag * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWidget * ptr = obj->target();

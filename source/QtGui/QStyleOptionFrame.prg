@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -55,17 +55,17 @@ QStyleOptionFrame( const QStyleOptionFrame & other )
 */
 void QStyleOptionFrame_new2()
 {
-  QStyleOptionFrame * obj = new QStyleOptionFrame( *PQSTYLEOPTIONFRAME(1) );
+  QStyleOptionFrame * obj = new QStyleOptionFrame( *PQSTYLEOPTIONFRAME( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QStyleOptionFrame_new1();
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONFRAME(1) )
+  else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONFRAME( 1 ) )
   {
     QStyleOptionFrame_new2();
   }
@@ -80,11 +80,11 @@ int lineWidth
 */
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_LINEWIDTH )
 {
-  QStyleOptionFrame * obj = (QStyleOptionFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionFrame * obj = ( QStyleOptionFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RINT( obj->lineWidth );
     }
@@ -96,13 +96,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_LINEWIDTH )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETLINEWIDTH )
 {
-  QStyleOptionFrame * obj = (QStyleOptionFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionFrame * obj = ( QStyleOptionFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
-      obj->lineWidth= PINT(1);
+      obj->lineWidth= PINT( 1 );
     }
     else
     {
@@ -118,11 +118,11 @@ int midLineWidth
 */
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_MIDLINEWIDTH )
 {
-  QStyleOptionFrame * obj = (QStyleOptionFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionFrame * obj = ( QStyleOptionFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RINT( obj->midLineWidth );
     }
@@ -134,13 +134,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_MIDLINEWIDTH )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONFRAME_SETMIDLINEWIDTH )
 {
-  QStyleOptionFrame * obj = (QStyleOptionFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionFrame * obj = ( QStyleOptionFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
-      obj->midLineWidth= PINT(1);
+      obj->midLineWidth= PINT( 1 );
     }
     else
     {

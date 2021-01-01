@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_DEFAULTPAINT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
+    if( ISNUMPAR( 3 ) && ISQPAINTER(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
     {
 #endif
       obj->defaultPaint( PQPAINTER(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETPAINTCB )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if( ISNUMPAR( 1 ) )
     {
 #endif
       obj->setPaintCB( PBLOCKORSYMBOL(1) );
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETSIZEHINTCB )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if( ISNUMPAR( 1 ) )
     {
 #endif
       obj->setSizeHintCB( PBLOCKORSYMBOL(2) );
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETDISPLAYTEXTCB )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if( ISNUMPAR( 1 ) )
     {
 #endif
       obj->setDisplayTextCB( PBLOCKORSYMBOL(3) );
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETCREATEEDITORCB )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if( ISNUMPAR( 1 ) )
     {
 #endif
       obj->setCreateEditorCB( PBLOCKORSYMBOL(4) );
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETEDITORDATACB )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if( ISNUMPAR( 1 ) )
     {
 #endif
       obj->setEditorDataCB( PBLOCKORSYMBOL(5) );
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETMODELDATACB )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if( ISNUMPAR( 1 ) )
     {
 #endif
       obj->setModelDataCB( PBLOCKORSYMBOL(6) );
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETUPDATEEDITORGEOMETRYCB )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if( ISNUMPAR( 1 ) )
     {
 #endif
       obj->setUpdateEditorGeometryCB( PBLOCKORSYMBOL(7) );

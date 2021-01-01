@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -57,7 +57,7 @@ QGraphicsPolygonItem( QGraphicsItem * parent = 0 )
 */
 void QGraphicsPolygonItem_new1()
 {
-  QGraphicsPolygonItem * obj = new QGraphicsPolygonItem( ISNIL(1)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(1) );
+  QGraphicsPolygonItem * obj = new QGraphicsPolygonItem( ISNIL( 1 )? 0 : ( QGraphicsItem * ) Qt4xHb::itemGetPtr( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -66,17 +66,17 @@ QGraphicsPolygonItem( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
 */
 void QGraphicsPolygonItem_new2()
 {
-  QGraphicsPolygonItem * obj = new QGraphicsPolygonItem( *PQPOLYGONF(1), ISNIL(2)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(2) );
+  QGraphicsPolygonItem * obj = new QGraphicsPolygonItem( *PQPOLYGONF( 1 ), ISNIL( 2 )? 0 : ( QGraphicsItem * ) Qt4xHb::itemGetPtr( 2 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQGRAPHICSITEM(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQGRAPHICSITEM( 1 ) || ISNIL( 1 ) ) )
   {
     QGraphicsPolygonItem_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQPOLYGONF(1) && (ISQGRAPHICSITEM(2)||ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISQPOLYGONF( 1 ) && ( ISQGRAPHICSITEM( 2 ) || ISNIL( 2 ) ) )
   {
     QGraphicsPolygonItem_new2();
   }
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_DELETE )
 {
-  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = ( QGraphicsPolygonItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,12 +108,12 @@ Qt::FillRule fillRule() const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_FILLRULE )
 {
-  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = ( QGraphicsPolygonItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->fillRule() );
@@ -132,12 +132,12 @@ QPolygonF polygon() const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_POLYGON )
 {
-  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = ( QGraphicsPolygonItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPolygonF * ptr = new QPolygonF( obj->polygon() );
@@ -157,15 +157,15 @@ void setFillRule( Qt::FillRule rule )
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SETFILLRULE )
 {
-  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = ( QGraphicsPolygonItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setFillRule( (Qt::FillRule) hb_parni(1) );
+      obj->setFillRule( ( Qt::FillRule ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,15 +183,15 @@ void setPolygon( const QPolygonF & polygon )
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SETPOLYGON )
 {
-  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = ( QGraphicsPolygonItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOLYGONF(1) )
+    if( ISNUMPAR( 1 ) && ISQPOLYGONF( 1 ) )
     {
 #endif
-      obj->setPolygon( *PQPOLYGONF(1) );
+      obj->setPolygon( *PQPOLYGONF( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,12 +209,12 @@ virtual QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_BOUNDINGRECT )
 {
-  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = ( QGraphicsPolygonItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QRectF * ptr = new QRectF( obj->boundingRect() );
@@ -234,15 +234,15 @@ virtual bool contains( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_CONTAINS )
 {
-  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = ( QGraphicsPolygonItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINTF(1) )
+    if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
     {
 #endif
-      RBOOL( obj->contains( *PQPOINTF(1) ) );
+      RBOOL( obj->contains( *PQPOINTF( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -258,15 +258,15 @@ virtual bool isObscuredBy( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_ISOBSCUREDBY )
 {
-  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = ( QGraphicsPolygonItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGRAPHICSITEM(1) )
+    if( ISNUMPAR( 1 ) && ISQGRAPHICSITEM( 1 ) )
     {
 #endif
-      RBOOL( obj->isObscuredBy( PQGRAPHICSITEM(1) ) );
+      RBOOL( obj->isObscuredBy( PQGRAPHICSITEM( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,12 +282,12 @@ virtual QPainterPath opaqueArea() const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_OPAQUEAREA )
 {
-  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = ( QGraphicsPolygonItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPainterPath * ptr = new QPainterPath( obj->opaqueArea() );
@@ -307,15 +307,15 @@ virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option,
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_PAINT )
 {
-  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = ( QGraphicsPolygonItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3)||ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && ISQPAINTER( 1 ) && ISQSTYLEOPTIONGRAPHICSITEM( 2 ) && ( ISQWIDGET( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
-      obj->paint( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET(3,0) );
+      obj->paint( PQPAINTER( 1 ), PQSTYLEOPTIONGRAPHICSITEM( 2 ), OPQWIDGET( 3, 0 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -333,12 +333,12 @@ virtual QPainterPath shape() const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SHAPE )
 {
-  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = ( QGraphicsPolygonItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPainterPath * ptr = new QPainterPath( obj->shape() );
@@ -358,12 +358,12 @@ virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_TYPE )
 {
-  QGraphicsPolygonItem * obj = (QGraphicsPolygonItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = ( QGraphicsPolygonItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->type() );

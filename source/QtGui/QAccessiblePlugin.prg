@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -44,7 +44,7 @@ RETURN
 
 HB_FUNC_STATIC( QACCESSIBLEPLUGIN_DELETE )
 {
-  QAccessiblePlugin * obj = (QAccessiblePlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAccessiblePlugin * obj = ( QAccessiblePlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -66,15 +66,15 @@ virtual QAccessibleInterface * create( const QString & key, QObject * object ) =
 */
 HB_FUNC_STATIC( QACCESSIBLEPLUGIN_CREATE )
 {
-  QAccessiblePlugin * obj = (QAccessiblePlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAccessiblePlugin * obj = ( QAccessiblePlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQOBJECT(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISQOBJECT( 2 ) )
     {
 #endif
-      QAccessibleInterface * ptr = obj->create( PQSTRING(1), PQOBJECT(2) );
+      QAccessibleInterface * ptr = obj->create( PQSTRING( 1 ), PQOBJECT( 2 ) );
       Qt4xHb::createReturnClass( ptr, "QACCESSIBLEINTERFACE", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -91,12 +91,12 @@ virtual QStringList keys() const = 0
 */
 HB_FUNC_STATIC( QACCESSIBLEPLUGIN_KEYS )
 {
-  QAccessiblePlugin * obj = (QAccessiblePlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAccessiblePlugin * obj = ( QAccessiblePlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->keys() );

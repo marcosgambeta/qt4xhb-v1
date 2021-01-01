@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -63,9 +63,9 @@ QDialog( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QDIALOG_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQWIDGET(1)||ISNIL(1)) && ISOPTNUM(2) )
+  if( ISBETWEEN( 0, 2 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) && ISOPTNUM( 2 ) )
   {
-    QDialog * obj = new QDialog( OPQWIDGET(1,0), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+    QDialog * obj = new QDialog( OPQWIDGET( 1, 0 ), ISNIL( 2 )? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 2 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QDIALOG_NEW )
 
 HB_FUNC_STATIC( QDIALOG_DELETE )
 {
-  QDialog * obj = (QDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialog * obj = ( QDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -98,12 +98,12 @@ bool isSizeGripEnabled() const
 */
 HB_FUNC_STATIC( QDIALOG_ISSIZEGRIPENABLED )
 {
-  QDialog * obj = (QDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialog * obj = ( QDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isSizeGripEnabled() );
@@ -122,12 +122,12 @@ int result() const
 */
 HB_FUNC_STATIC( QDIALOG_RESULT )
 {
-  QDialog * obj = (QDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialog * obj = ( QDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->result() );
@@ -146,15 +146,15 @@ void setModal( bool modal )
 */
 HB_FUNC_STATIC( QDIALOG_SETMODAL )
 {
-  QDialog * obj = (QDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialog * obj = ( QDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setModal( PBOOL(1) );
+      obj->setModal( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,15 +172,15 @@ void setResult( int i )
 */
 HB_FUNC_STATIC( QDIALOG_SETRESULT )
 {
-  QDialog * obj = (QDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialog * obj = ( QDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setResult( PINT(1) );
+      obj->setResult( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -198,15 +198,15 @@ void setSizeGripEnabled( bool )
 */
 HB_FUNC_STATIC( QDIALOG_SETSIZEGRIPENABLED )
 {
-  QDialog * obj = (QDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialog * obj = ( QDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setSizeGripEnabled( PBOOL(1) );
+      obj->setSizeGripEnabled( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,12 +224,12 @@ virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QDIALOG_MINIMUMSIZEHINT )
 {
-  QDialog * obj = (QDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialog * obj = ( QDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
@@ -249,15 +249,15 @@ virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QDIALOG_SETVISIBLE )
 {
-  QDialog * obj = (QDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialog * obj = ( QDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setVisible( PBOOL(1) );
+      obj->setVisible( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -275,12 +275,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QDIALOG_SIZEHINT )
 {
-  QDialog * obj = (QDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialog * obj = ( QDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
@@ -300,12 +300,12 @@ virtual void accept()
 */
 HB_FUNC_STATIC( QDIALOG_ACCEPT )
 {
-  QDialog * obj = (QDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialog * obj = ( QDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->accept();
@@ -326,15 +326,15 @@ virtual void done( int r )
 */
 HB_FUNC_STATIC( QDIALOG_DONE )
 {
-  QDialog * obj = (QDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialog * obj = ( QDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->done( PINT(1) );
+      obj->done( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -352,12 +352,12 @@ int exec()
 */
 HB_FUNC_STATIC( QDIALOG_EXEC )
 {
-  QDialog * obj = (QDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialog * obj = ( QDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->exec() );
@@ -376,12 +376,12 @@ void open()
 */
 HB_FUNC_STATIC( QDIALOG_OPEN )
 {
-  QDialog * obj = (QDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialog * obj = ( QDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->open();
@@ -402,12 +402,12 @@ virtual void reject()
 */
 HB_FUNC_STATIC( QDIALOG_REJECT )
 {
-  QDialog * obj = (QDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialog * obj = ( QDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->reject();

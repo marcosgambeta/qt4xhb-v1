@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -55,17 +55,17 @@ QInputMethodEvent( const QInputMethodEvent & other )
 */
 void QInputMethodEvent_new3()
 {
-  QInputMethodEvent * obj = new QInputMethodEvent( *PQINPUTMETHODEVENT(1) );
+  QInputMethodEvent * obj = new QInputMethodEvent( *PQINPUTMETHODEVENT( 1 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QInputMethodEvent_new1();
   }
-  else if( ISNUMPAR(1) && ISQINPUTMETHODEVENT(1) )
+  else if( ISNUMPAR( 1 ) && ISQINPUTMETHODEVENT( 1 ) )
   {
     QInputMethodEvent_new3();
   }
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW )
 
 HB_FUNC_STATIC( QINPUTMETHODEVENT_DELETE )
 {
-  QInputMethodEvent * obj = (QInputMethodEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputMethodEvent * obj = ( QInputMethodEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -97,12 +97,12 @@ int replacementLength() const
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTLENGTH )
 {
-  QInputMethodEvent * obj = (QInputMethodEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputMethodEvent * obj = ( QInputMethodEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->replacementLength() );
@@ -121,12 +121,12 @@ int replacementStart() const
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTSTART )
 {
-  QInputMethodEvent * obj = (QInputMethodEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputMethodEvent * obj = ( QInputMethodEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->replacementStart() );
@@ -145,15 +145,15 @@ void setCommitString( const QString & commitString, int replaceFrom = 0, int rep
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_SETCOMMITSTRING )
 {
-  QInputMethodEvent * obj = (QInputMethodEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputMethodEvent * obj = ( QInputMethodEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISCHAR(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ISOPTNUM( 2 ) && ISOPTNUM( 3 ) )
     {
 #endif
-      obj->setCommitString( PQSTRING(1), OPINT(2,0), OPINT(3,0) );
+      obj->setCommitString( PQSTRING( 1 ), OPINT( 2, 0 ), OPINT( 3, 0 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

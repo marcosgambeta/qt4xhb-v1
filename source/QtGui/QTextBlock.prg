@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -89,9 +89,9 @@ QTextBlock( const QTextBlock & other )
 */
 HB_FUNC_STATIC( QTEXTBLOCK_NEW )
 {
-  if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
+  if( ISNUMPAR( 1 ) && ISQTEXTBLOCK( 1 ) )
   {
-    QTextBlock * obj = new QTextBlock( *PQTEXTBLOCK(1) );
+    QTextBlock * obj = new QTextBlock( *PQTEXTBLOCK( 1 ) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEW )
 
 HB_FUNC_STATIC( QTEXTBLOCK_DELETE )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -122,12 +122,12 @@ QTextBlockFormat blockFormat() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_BLOCKFORMAT )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTextBlockFormat * ptr = new QTextBlockFormat( obj->blockFormat() );
@@ -147,12 +147,12 @@ int blockFormatIndex() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_BLOCKFORMATINDEX )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->blockFormatIndex() );
@@ -171,12 +171,12 @@ int blockNumber() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_BLOCKNUMBER )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->blockNumber() );
@@ -195,12 +195,12 @@ QTextCharFormat charFormat() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_CHARFORMAT )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTextCharFormat * ptr = new QTextCharFormat( obj->charFormat() );
@@ -220,12 +220,12 @@ int charFormatIndex() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_CHARFORMATINDEX )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->charFormatIndex() );
@@ -244,12 +244,12 @@ void clearLayout()
 */
 HB_FUNC_STATIC( QTEXTBLOCK_CLEARLAYOUT )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->clearLayout();
@@ -270,15 +270,15 @@ bool contains( int position ) const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_CONTAINS )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->contains( PINT(1) ) );
+      RBOOL( obj->contains( PINT( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,12 +294,12 @@ const QTextDocument * document() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_DOCUMENT )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QTextDocument * ptr = obj->document();
@@ -319,12 +319,12 @@ int firstLineNumber() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_FIRSTLINENUMBER )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->firstLineNumber() );
@@ -343,12 +343,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_ISVALID )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -367,12 +367,12 @@ bool isVisible() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_ISVISIBLE )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isVisible() );
@@ -391,12 +391,12 @@ QTextLayout * layout() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_LAYOUT )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTextLayout * ptr = obj->layout();
@@ -416,12 +416,12 @@ int length() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_LENGTH )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->length() );
@@ -440,12 +440,12 @@ int lineCount() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_LINECOUNT )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->lineCount() );
@@ -464,12 +464,12 @@ QTextBlock next() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_NEXT )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTextBlock * ptr = new QTextBlock( obj->next() );
@@ -489,12 +489,12 @@ int position() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_POSITION )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->position() );
@@ -513,12 +513,12 @@ QTextBlock previous() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_PREVIOUS )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTextBlock * ptr = new QTextBlock( obj->previous() );
@@ -538,12 +538,12 @@ int revision() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_REVISION )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->revision() );
@@ -562,15 +562,15 @@ void setLineCount( int count )
 */
 HB_FUNC_STATIC( QTEXTBLOCK_SETLINECOUNT )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setLineCount( PINT(1) );
+      obj->setLineCount( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -588,15 +588,15 @@ void setRevision( int rev )
 */
 HB_FUNC_STATIC( QTEXTBLOCK_SETREVISION )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setRevision( PINT(1) );
+      obj->setRevision( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -614,15 +614,15 @@ void setUserData( QTextBlockUserData * data )
 */
 HB_FUNC_STATIC( QTEXTBLOCK_SETUSERDATA )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTBLOCKUSERDATA(1) )
+    if( ISNUMPAR( 1 ) && ISQTEXTBLOCKUSERDATA( 1 ) )
     {
 #endif
-      obj->setUserData( PQTEXTBLOCKUSERDATA(1) );
+      obj->setUserData( PQTEXTBLOCKUSERDATA( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -640,15 +640,15 @@ void setUserState( int state )
 */
 HB_FUNC_STATIC( QTEXTBLOCK_SETUSERSTATE )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setUserState( PINT(1) );
+      obj->setUserState( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -666,15 +666,15 @@ void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QTEXTBLOCK_SETVISIBLE )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setVisible( PBOOL(1) );
+      obj->setVisible( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -692,12 +692,12 @@ QString text() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_TEXT )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->text() );
@@ -716,12 +716,12 @@ Qt::LayoutDirection textDirection() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_TEXTDIRECTION )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->textDirection() );
@@ -740,12 +740,12 @@ QTextList * textList() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_TEXTLIST )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTextList * ptr = obj->textList();
@@ -765,12 +765,12 @@ QTextBlockUserData * userData() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_USERDATA )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTextBlockUserData * ptr = obj->userData();
@@ -790,12 +790,12 @@ int userState() const
 */
 HB_FUNC_STATIC( QTEXTBLOCK_USERSTATE )
 {
-  QTextBlock * obj = (QTextBlock *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBlock * obj = ( QTextBlock * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->userState() );
@@ -813,18 +813,18 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -851,16 +851,16 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QTEXTBLOCK_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QTEXTBLOCK_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

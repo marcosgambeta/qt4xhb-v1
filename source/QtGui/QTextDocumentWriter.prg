@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -76,7 +76,7 @@ QTextDocumentWriter( QIODevice * device, const QByteArray & format )
 */
 void QTextDocumentWriter_new2()
 {
-  QTextDocumentWriter * obj = new QTextDocumentWriter( PQIODEVICE(1), *PQBYTEARRAY(2) );
+  QTextDocumentWriter * obj = new QTextDocumentWriter( PQIODEVICE( 1 ), *PQBYTEARRAY( 2 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -85,21 +85,21 @@ QTextDocumentWriter( const QString & fileName, const QByteArray & format = QByte
 */
 void QTextDocumentWriter_new3()
 {
-  QTextDocumentWriter * obj = new QTextDocumentWriter( PQSTRING(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt4xHb::itemGetPtr(2) );
+  QTextDocumentWriter * obj = new QTextDocumentWriter( PQSTRING( 1 ), ISNIL( 2 )? QByteArray() : *( QByteArray * ) Qt4xHb::itemGetPtr( 2 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QTextDocumentWriter_new1();
   }
-  else if( ISNUMPAR(2) && ISQIODEVICE(1) && ISQBYTEARRAY(2) )
+  else if( ISNUMPAR( 2 ) && ISQIODEVICE( 1 ) && ISQBYTEARRAY( 2 ) )
   {
     QTextDocumentWriter_new2();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQBYTEARRAY(2)||ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISQBYTEARRAY( 2 ) || ISNIL( 2 ) ) )
   {
     QTextDocumentWriter_new3();
   }
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEW )
 
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_DELETE )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextDocumentWriter * obj = ( QTextDocumentWriter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -131,12 +131,12 @@ QTextCodec * codec() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_CODEC )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextDocumentWriter * obj = ( QTextDocumentWriter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTextCodec * ptr = obj->codec();
@@ -156,12 +156,12 @@ QIODevice * device() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_DEVICE )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextDocumentWriter * obj = ( QTextDocumentWriter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QIODevice * ptr = obj->device();
@@ -181,12 +181,12 @@ QString fileName() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_FILENAME )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextDocumentWriter * obj = ( QTextDocumentWriter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->fileName() );
@@ -205,12 +205,12 @@ QByteArray format() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_FORMAT )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextDocumentWriter * obj = ( QTextDocumentWriter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->format() );
@@ -230,15 +230,15 @@ void setCodec( QTextCodec * codec )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETCODEC )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextDocumentWriter * obj = ( QTextDocumentWriter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTCODEC(1) )
+    if( ISNUMPAR( 1 ) && ISQTEXTCODEC( 1 ) )
     {
 #endif
-      obj->setCodec( PQTEXTCODEC(1) );
+      obj->setCodec( PQTEXTCODEC( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,15 +256,15 @@ void setDevice( QIODevice * device )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETDEVICE )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextDocumentWriter * obj = ( QTextDocumentWriter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQIODEVICE(1) )
+    if( ISNUMPAR( 1 ) && ISQIODEVICE( 1 ) )
     {
 #endif
-      obj->setDevice( PQIODEVICE(1) );
+      obj->setDevice( PQIODEVICE( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,15 +282,15 @@ void setFileName( const QString & fileName )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETFILENAME )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextDocumentWriter * obj = ( QTextDocumentWriter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setFileName( PQSTRING(1) );
+      obj->setFileName( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -308,15 +308,15 @@ void setFormat( const QByteArray & format )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETFORMAT )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextDocumentWriter * obj = ( QTextDocumentWriter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
     {
 #endif
-      obj->setFormat( *PQBYTEARRAY(1) );
+      obj->setFormat( *PQBYTEARRAY( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -334,11 +334,11 @@ bool write( const QTextDocument * document )
 */
 void QTextDocumentWriter_write1()
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextDocumentWriter * obj = ( QTextDocumentWriter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->write( PQTEXTDOCUMENT(1) ) );
+    RBOOL( obj->write( PQTEXTDOCUMENT( 1 ) ) );
   }
 }
 
@@ -347,21 +347,21 @@ bool write( const QTextDocumentFragment & fragment )
 */
 void QTextDocumentWriter_write2()
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextDocumentWriter * obj = ( QTextDocumentWriter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RBOOL( obj->write( *PQTEXTDOCUMENTFRAGMENT(1) ) );
+    RBOOL( obj->write( *PQTEXTDOCUMENTFRAGMENT( 1 ) ) );
   }
 }
 
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE )
 {
-  if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
+  if( ISNUMPAR( 1 ) && ISQTEXTDOCUMENT( 1 ) )
   {
     QTextDocumentWriter_write1();
   }
-  else if( ISNUMPAR(1) && ISQTEXTDOCUMENTFRAGMENT(1) )
+  else if( ISNUMPAR( 1 ) && ISQTEXTDOCUMENTFRAGMENT( 1 ) )
   {
     QTextDocumentWriter_write2();
   }
@@ -376,17 +376,17 @@ QList<QByteArray> supportedDocumentFormats()
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SUPPORTEDDOCUMENTFORMATS )
 {
-  QTextDocumentWriter * obj = (QTextDocumentWriter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextDocumentWriter * obj = ( QTextDocumentWriter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QByteArray> list = obj->supportedDocumentFormats();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SUPPORTEDDOCUMENTFORMATS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QByteArray *) new QByteArray( list[i] ) );
+          hb_itemPutPtr( pItem, ( QByteArray * ) new QByteArray( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -427,18 +427,18 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -465,16 +465,16 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

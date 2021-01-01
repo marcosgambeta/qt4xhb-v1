@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -47,9 +47,9 @@ QErrorMessage( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QERRORMESSAGE_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
   {
-    QErrorMessage * obj = new QErrorMessage( OPQWIDGET(1,0) );
+    QErrorMessage * obj = new QErrorMessage( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QERRORMESSAGE_NEW )
 
 HB_FUNC_STATIC( QERRORMESSAGE_DELETE )
 {
-  QErrorMessage * obj = (QErrorMessage *) Qt4xHb::itemGetPtrStackSelfItem();
+  QErrorMessage * obj = ( QErrorMessage * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -82,11 +82,11 @@ void showMessage( const QString & message )
 */
 void QErrorMessage_showMessage1()
 {
-  QErrorMessage * obj = (QErrorMessage *) Qt4xHb::itemGetPtrStackSelfItem();
+  QErrorMessage * obj = ( QErrorMessage * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->showMessage( PQSTRING(1) );
+    obj->showMessage( PQSTRING( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -97,11 +97,11 @@ void showMessage( const QString & message, const QString & type )
 */
 void QErrorMessage_showMessage2()
 {
-  QErrorMessage * obj = (QErrorMessage *) Qt4xHb::itemGetPtrStackSelfItem();
+  QErrorMessage * obj = ( QErrorMessage * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->showMessage( PQSTRING(1), PQSTRING(2) );
+    obj->showMessage( PQSTRING( 1 ), PQSTRING( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -109,11 +109,11 @@ void QErrorMessage_showMessage2()
 
 HB_FUNC_STATIC( QERRORMESSAGE_SHOWMESSAGE )
 {
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
     QErrorMessage_showMessage1();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISCHAR( 2 ) )
   {
     QErrorMessage_showMessage2();
   }
@@ -128,12 +128,12 @@ QErrorMessage * qtHandler()
 */
 HB_FUNC_STATIC( QERRORMESSAGE_QTHANDLER )
 {
-  QErrorMessage * obj = (QErrorMessage *) Qt4xHb::itemGetPtrStackSelfItem();
+  QErrorMessage * obj = ( QErrorMessage * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QErrorMessage * ptr = obj->qtHandler();

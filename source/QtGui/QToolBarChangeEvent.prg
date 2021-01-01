@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -44,9 +44,9 @@ QToolBarChangeEvent( bool t )
 */
 HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_NEW )
 {
-  if( ISNUMPAR(1) && ISLOG(1) )
+  if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
   {
-    QToolBarChangeEvent * obj = new QToolBarChangeEvent( PBOOL(1) );
+    QToolBarChangeEvent * obj = new QToolBarChangeEvent( PBOOL( 1 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_NEW )
 
 HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_DELETE )
 {
-  QToolBarChangeEvent * obj = (QToolBarChangeEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QToolBarChangeEvent * obj = ( QToolBarChangeEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -77,12 +77,12 @@ bool toggle() const
 */
 HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_TOGGLE )
 {
-  QToolBarChangeEvent * obj = (QToolBarChangeEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QToolBarChangeEvent * obj = ( QToolBarChangeEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->toggle() );

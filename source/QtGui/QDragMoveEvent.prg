@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -47,9 +47,9 @@ QDragMoveEvent( const QPoint & pos, Qt::DropActions actions, const QMimeData * d
 */
 HB_FUNC_STATIC( QDRAGMOVEEVENT_NEW )
 {
-  if( ISBETWEEN(5,6) && ISQPOINT(1) && ISNUM(2) && ISQMIMEDATA(3) && ISNUM(4) && ISNUM(5) && ISOPTNUM(6) )
+  if( ISBETWEEN( 5, 6 ) && ISQPOINT( 1 ) && ISNUM( 2 ) && ISQMIMEDATA( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) && ISOPTNUM( 6 ) )
   {
-    QDragMoveEvent * obj = new QDragMoveEvent( *PQPOINT(1), (Qt::DropActions) hb_parni(2), PQMIMEDATA(3), (Qt::MouseButtons) hb_parni(4), (Qt::KeyboardModifiers) hb_parni(5), ISNIL(6)? (QEvent::Type) QEvent::DragMove : (QEvent::Type) hb_parni(6) );
+    QDragMoveEvent * obj = new QDragMoveEvent( *PQPOINT( 1 ), ( Qt::DropActions ) hb_parni( 2 ), PQMIMEDATA( 3 ), ( Qt::MouseButtons ) hb_parni( 4 ), ( Qt::KeyboardModifiers ) hb_parni( 5 ), ISNIL( 6 )? ( QEvent::Type ) QEvent::DragMove : ( QEvent::Type ) hb_parni( 6 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_NEW )
 
 HB_FUNC_STATIC( QDRAGMOVEEVENT_DELETE )
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDragMoveEvent * obj = ( QDragMoveEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -80,11 +80,11 @@ void accept( const QRect & rectangle )
 */
 void QDragMoveEvent_accept1()
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDragMoveEvent * obj = ( QDragMoveEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->accept( *PQRECT(1) );
+    obj->accept( *PQRECT( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -95,7 +95,7 @@ void accept()
 */
 void QDragMoveEvent_accept2()
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDragMoveEvent * obj = ( QDragMoveEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -107,11 +107,11 @@ void QDragMoveEvent_accept2()
 
 HB_FUNC_STATIC( QDRAGMOVEEVENT_ACCEPT )
 {
-  if( ISNUMPAR(1) && ISQRECT(1) )
+  if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
   {
     QDragMoveEvent_accept1();
   }
-  else if( ISNUMPAR(0) )
+  else if( ISNUMPAR( 0 ) )
   {
     QDragMoveEvent_accept2();
   }
@@ -126,12 +126,12 @@ QRect answerRect() const
 */
 HB_FUNC_STATIC( QDRAGMOVEEVENT_ANSWERRECT )
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDragMoveEvent * obj = ( QDragMoveEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QRect * ptr = new QRect( obj->answerRect() );
@@ -151,11 +151,11 @@ void ignore( const QRect & rectangle )
 */
 void QDragMoveEvent_ignore1()
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDragMoveEvent * obj = ( QDragMoveEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->ignore( *PQRECT(1) );
+    obj->ignore( *PQRECT( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -166,7 +166,7 @@ void ignore()
 */
 void QDragMoveEvent_ignore2()
 {
-  QDragMoveEvent * obj = (QDragMoveEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDragMoveEvent * obj = ( QDragMoveEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -178,11 +178,11 @@ void QDragMoveEvent_ignore2()
 
 HB_FUNC_STATIC( QDRAGMOVEEVENT_IGNORE )
 {
-  if( ISNUMPAR(1) && ISQRECT(1) )
+  if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
   {
     QDragMoveEvent_ignore1();
   }
-  else if( ISNUMPAR(0) )
+  else if( ISNUMPAR( 0 ) )
   {
     QDragMoveEvent_ignore2();
   }

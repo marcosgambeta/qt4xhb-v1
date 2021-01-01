@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -44,9 +44,9 @@ QStatusTipEvent( const QString & tip )
 */
 HB_FUNC_STATIC( QSTATUSTIPEVENT_NEW )
 {
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
-    QStatusTipEvent * obj = new QStatusTipEvent( PQSTRING(1) );
+    QStatusTipEvent * obj = new QStatusTipEvent( PQSTRING( 1 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QSTATUSTIPEVENT_NEW )
 
 HB_FUNC_STATIC( QSTATUSTIPEVENT_DELETE )
 {
-  QStatusTipEvent * obj = (QStatusTipEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStatusTipEvent * obj = ( QStatusTipEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -77,12 +77,12 @@ QString tip() const
 */
 HB_FUNC_STATIC( QSTATUSTIPEVENT_TIP )
 {
-  QStatusTipEvent * obj = (QStatusTipEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStatusTipEvent * obj = ( QStatusTipEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->tip() );

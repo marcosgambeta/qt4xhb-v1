@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -43,7 +43,7 @@ QIconDragEvent()
 */
 HB_FUNC_STATIC( QICONDRAGEVENT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QIconDragEvent * obj = new QIconDragEvent();
     Qt4xHb::returnNewObject( obj, false );
@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QICONDRAGEVENT_NEW )
 
 HB_FUNC_STATIC( QICONDRAGEVENT_DELETE )
 {
-  QIconDragEvent * obj = (QIconDragEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIconDragEvent * obj = ( QIconDragEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

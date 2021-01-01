@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QMdiSubWindowSlots.h"
 
-QMdiSubWindowSlots::QMdiSubWindowSlots( QObject *parent ) : QObject( parent )
+QMdiSubWindowSlots::QMdiSubWindowSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QMdiSubWindowSlots::~QMdiSubWindowSlots()
 
 void QMdiSubWindowSlots::aboutToActivate()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "aboutToActivate()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QMDISUBWINDOW" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QMDISUBWINDOW" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,13 +38,13 @@ void QMdiSubWindowSlots::aboutToActivate()
 
 void QMdiSubWindowSlots::windowStateChanged( Qt::WindowStates oldState, Qt::WindowStates newState )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QMDISUBWINDOW" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QMDISUBWINDOW" );
     PHB_ITEM poldState = hb_itemPutNI( NULL, (int) oldState );
     PHB_ITEM pnewState = hb_itemPutNI( NULL, (int) newState );
 
@@ -58,7 +58,7 @@ void QMdiSubWindowSlots::windowStateChanged( Qt::WindowStates oldState, Qt::Wind
 
 void QMdiSubWindowSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMdiSubWindow * obj = (QMdiSubWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMdiSubWindow * obj = ( QMdiSubWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

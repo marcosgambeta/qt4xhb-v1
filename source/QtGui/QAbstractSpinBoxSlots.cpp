@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QAbstractSpinBoxSlots.h"
 
-QAbstractSpinBoxSlots::QAbstractSpinBoxSlots( QObject *parent ) : QObject( parent )
+QAbstractSpinBoxSlots::QAbstractSpinBoxSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QAbstractSpinBoxSlots::~QAbstractSpinBoxSlots()
 
 void QAbstractSpinBoxSlots::editingFinished()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "editingFinished()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTSPINBOX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTSPINBOX" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,7 +38,7 @@ void QAbstractSpinBoxSlots::editingFinished()
 
 void QAbstractSpinBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractSpinBox * obj = (QAbstractSpinBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -58,9 +58,9 @@ QScrollArea( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSCROLLAREA_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
   {
-    QScrollArea * obj = new QScrollArea( OPQWIDGET(1,0) );
+    QScrollArea * obj = new QScrollArea( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QSCROLLAREA_NEW )
 
 HB_FUNC_STATIC( QSCROLLAREA_DELETE )
 {
-  QScrollArea * obj = (QScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollArea * obj = ( QScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -93,12 +93,12 @@ Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QSCROLLAREA_ALIGNMENT )
 {
-  QScrollArea * obj = (QScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollArea * obj = ( QScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->alignment() );
@@ -117,15 +117,15 @@ void ensureVisible( int x, int y, int xmargin = 50, int ymargin = 50 )
 */
 HB_FUNC_STATIC( QSCROLLAREA_ENSUREVISIBLE )
 {
-  QScrollArea * obj = (QScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollArea * obj = ( QScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,4) && ISNUM(1) && ISNUM(2) && ISOPTNUM(3) && ISOPTNUM(4) )
+    if( ISBETWEEN( 2, 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISOPTNUM( 3 ) && ISOPTNUM( 4 ) )
     {
 #endif
-      obj->ensureVisible( PINT(1), PINT(2), OPINT(3,50), OPINT(4,50) );
+      obj->ensureVisible( PINT( 1 ), PINT( 2 ), OPINT( 3, 50 ), OPINT( 4, 50 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,15 +143,15 @@ void ensureWidgetVisible( QWidget * childWidget, int xmargin = 50, int ymargin =
 */
 HB_FUNC_STATIC( QSCROLLAREA_ENSUREWIDGETVISIBLE )
 {
-  QScrollArea * obj = (QScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollArea * obj = ( QScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISQWIDGET(1) && ISOPTNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN( 1, 3 ) && ISQWIDGET( 1 ) && ISOPTNUM( 2 ) && ISOPTNUM( 3 ) )
     {
 #endif
-      obj->ensureWidgetVisible( PQWIDGET(1), OPINT(2,50), OPINT(3,50) );
+      obj->ensureWidgetVisible( PQWIDGET( 1 ), OPINT( 2, 50 ), OPINT( 3, 50 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,15 +169,15 @@ void setAlignment( Qt::Alignment )
 */
 HB_FUNC_STATIC( QSCROLLAREA_SETALIGNMENT )
 {
-  QScrollArea * obj = (QScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollArea * obj = ( QScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setAlignment( (Qt::Alignment) hb_parni(1) );
+      obj->setAlignment( ( Qt::Alignment ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,15 +195,15 @@ void setWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QSCROLLAREA_SETWIDGET )
 {
-  QScrollArea * obj = (QScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollArea * obj = ( QScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      obj->setWidget( PQWIDGET(1) );
+      obj->setWidget( PQWIDGET( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,15 +221,15 @@ void setWidgetResizable( bool resizable )
 */
 HB_FUNC_STATIC( QSCROLLAREA_SETWIDGETRESIZABLE )
 {
-  QScrollArea * obj = (QScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollArea * obj = ( QScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setWidgetResizable( PBOOL(1) );
+      obj->setWidgetResizable( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,12 +247,12 @@ QWidget * takeWidget()
 */
 HB_FUNC_STATIC( QSCROLLAREA_TAKEWIDGET )
 {
-  QScrollArea * obj = (QScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollArea * obj = ( QScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWidget * ptr = obj->takeWidget();
@@ -272,12 +272,12 @@ QWidget * widget() const
 */
 HB_FUNC_STATIC( QSCROLLAREA_WIDGET )
 {
-  QScrollArea * obj = (QScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollArea * obj = ( QScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWidget * ptr = obj->widget();
@@ -297,12 +297,12 @@ bool widgetResizable() const
 */
 HB_FUNC_STATIC( QSCROLLAREA_WIDGETRESIZABLE )
 {
-  QScrollArea * obj = (QScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollArea * obj = ( QScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->widgetResizable() );
@@ -321,15 +321,15 @@ virtual bool focusNextPrevChild( bool next )
 */
 HB_FUNC_STATIC( QSCROLLAREA_FOCUSNEXTPREVCHILD )
 {
-  QScrollArea * obj = (QScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollArea * obj = ( QScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      RBOOL( obj->focusNextPrevChild( PBOOL(1) ) );
+      RBOOL( obj->focusNextPrevChild( PBOOL( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -345,12 +345,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSCROLLAREA_SIZEHINT )
 {
-  QScrollArea * obj = (QScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollArea * obj = ( QScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QFontComboBoxSlots.h"
 
-QFontComboBoxSlots::QFontComboBoxSlots( QObject *parent ) : QObject( parent )
+QFontComboBoxSlots::QFontComboBoxSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,14 +22,14 @@ QFontComboBoxSlots::~QFontComboBoxSlots()
 
 void QFontComboBoxSlots::currentFontChanged( const QFont & font )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentFontChanged(QFont)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QFONTCOMBOBOX" );
-    PHB_ITEM pfont = Qt4xHb::Signals_return_object( (void *) &font, "QFONT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QFONTCOMBOBOX" );
+    PHB_ITEM pfont = Qt4xHb::Signals_return_object( ( void * ) &font, "QFONT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pfont );
 
@@ -40,7 +40,7 @@ void QFontComboBoxSlots::currentFontChanged( const QFont & font )
 
 void QFontComboBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QFontComboBox * obj = (QFontComboBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontComboBox * obj = ( QFontComboBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

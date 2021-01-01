@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -53,9 +53,9 @@ QGraphicsColorizeEffect( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
-    QGraphicsColorizeEffect * obj = new QGraphicsColorizeEffect( OPQOBJECT(1,0) );
+    QGraphicsColorizeEffect * obj = new QGraphicsColorizeEffect( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_DELETE )
 {
-  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsColorizeEffect * obj = ( QGraphicsColorizeEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -88,12 +88,12 @@ QColor color() const
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_COLOR )
 {
-  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsColorizeEffect * obj = ( QGraphicsColorizeEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QColor * ptr = new QColor( obj->color() );
@@ -113,12 +113,12 @@ qreal strength() const
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_STRENGTH )
 {
-  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsColorizeEffect * obj = ( QGraphicsColorizeEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->strength() );
@@ -137,15 +137,15 @@ void setColor( const QColor & c )
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETCOLOR )
 {
-  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsColorizeEffect * obj = ( QGraphicsColorizeEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1)||ISCHAR(1)) )
+    if( ISNUMPAR( 1 ) && ( ISQCOLOR( 1 ) || ISCHAR( 1 ) ) )
     {
 #endif
-      obj->setColor( ISOBJECT(1)? *(QColor *) Qt4xHb::itemGetPtr(1) : QColor(hb_parc(1)) );
+      obj->setColor( ISOBJECT( 1 )? *( QColor * ) Qt4xHb::itemGetPtr( 1 ) : QColor( hb_parc( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,15 +163,15 @@ void setStrength( qreal strength )
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETSTRENGTH )
 {
-  QGraphicsColorizeEffect * obj = (QGraphicsColorizeEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsColorizeEffect * obj = ( QGraphicsColorizeEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setStrength( PQREAL(1) );
+      obj->setStrength( PQREAL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

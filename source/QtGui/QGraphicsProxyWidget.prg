@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -54,9 +54,9 @@ QGraphicsProxyWidget( QGraphicsItem * parent = 0, Qt::WindowFlags wFlags = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQGRAPHICSITEM(1)||ISNIL(1)) && ISOPTNUM(2) )
+  if( ISBETWEEN( 0, 2 ) && ( ISQGRAPHICSITEM( 1 ) || ISNIL( 1 ) ) && ISOPTNUM( 2 ) )
   {
-    QGraphicsProxyWidget * obj = new QGraphicsProxyWidget( ISNIL(1)? 0 : (QGraphicsItem *) Qt4xHb::itemGetPtr(1), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+    QGraphicsProxyWidget * obj = new QGraphicsProxyWidget( ISNIL( 1 )? 0 : ( QGraphicsItem * ) Qt4xHb::itemGetPtr( 1 ), ISNIL( 2 )? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 2 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_DELETE )
 {
-  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsProxyWidget * obj = ( QGraphicsProxyWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -89,15 +89,15 @@ QGraphicsProxyWidget * createProxyForChildWidget( QWidget * child )
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_CREATEPROXYFORCHILDWIDGET )
 {
-  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsProxyWidget * obj = ( QGraphicsProxyWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      QGraphicsProxyWidget * ptr = obj->createProxyForChildWidget( PQWIDGET(1) );
+      QGraphicsProxyWidget * ptr = obj->createProxyForChildWidget( PQWIDGET( 1 ) );
       Qt4xHb::createReturnQObjectClass( ptr, "QGRAPHICSPROXYWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -114,15 +114,15 @@ void setWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SETWIDGET )
 {
-  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsProxyWidget * obj = ( QGraphicsProxyWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      obj->setWidget( PQWIDGET(1) );
+      obj->setWidget( PQWIDGET( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,15 +140,15 @@ QRectF subWidgetRect( const QWidget * widget ) const
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SUBWIDGETRECT )
 {
-  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsProxyWidget * obj = ( QGraphicsProxyWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->subWidgetRect( PQWIDGET(1) ) );
+      QRectF * ptr = new QRectF( obj->subWidgetRect( PQWIDGET( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -165,12 +165,12 @@ QWidget * widget() const
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_WIDGET )
 {
-  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsProxyWidget * obj = ( QGraphicsProxyWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWidget * ptr = obj->widget();
@@ -190,15 +190,15 @@ virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option,
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_PAINT )
 {
-  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsProxyWidget * obj = ( QGraphicsProxyWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISQWIDGET(3) )
+    if( ISNUMPAR( 3 ) && ISQPAINTER( 1 ) && ISQSTYLEOPTIONGRAPHICSITEM( 2 ) && ISQWIDGET( 3 ) )
     {
 #endif
-      obj->paint( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), PQWIDGET(3) );
+      obj->paint( PQPAINTER( 1 ), PQSTYLEOPTIONGRAPHICSITEM( 2 ), PQWIDGET( 3 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,15 +216,15 @@ virtual void setGeometry( const QRectF & rect )
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SETGEOMETRY )
 {
-  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsProxyWidget * obj = ( QGraphicsProxyWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQRECTF(1) )
+    if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
     {
 #endif
-      obj->setGeometry( *PQRECTF(1) );
+      obj->setGeometry( *PQRECTF( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -242,12 +242,12 @@ virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_TYPE )
 {
-  QGraphicsProxyWidget * obj = (QGraphicsProxyWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsProxyWidget * obj = ( QGraphicsProxyWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->type() );

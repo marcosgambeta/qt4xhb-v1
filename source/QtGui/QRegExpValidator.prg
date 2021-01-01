@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -49,7 +49,7 @@ QRegExpValidator( QObject * parent = 0 )
 */
 void QRegExpValidator_new1()
 {
-  QRegExpValidator * obj = new QRegExpValidator( OPQOBJECT(1,0) );
+  QRegExpValidator * obj = new QRegExpValidator( OPQOBJECT( 1, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -58,17 +58,17 @@ QRegExpValidator( const QRegExp & rx, QObject * parent )
 */
 void QRegExpValidator_new2()
 {
-  QRegExpValidator * obj = new QRegExpValidator( *PQREGEXP(1), PQOBJECT(2) );
+  QRegExpValidator * obj = new QRegExpValidator( *PQREGEXP( 1 ), PQOBJECT( 2 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
     QRegExpValidator_new1();
   }
-  else if( ISNUMPAR(2) && ISQREGEXP(1) && ISQOBJECT(2) )
+  else if( ISNUMPAR( 2 ) && ISQREGEXP( 1 ) && ISQOBJECT( 2 ) )
   {
     QRegExpValidator_new2();
   }
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
 
 HB_FUNC_STATIC( QREGEXPVALIDATOR_DELETE )
 {
-  QRegExpValidator * obj = (QRegExpValidator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QRegExpValidator * obj = ( QRegExpValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -102,12 +102,12 @@ const QRegExp & regExp() const
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
 {
-  QRegExpValidator * obj = (QRegExpValidator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QRegExpValidator * obj = ( QRegExpValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QRegExp * ptr = &obj->regExp();
@@ -127,15 +127,15 @@ void setRegExp( const QRegExp & rx )
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_SETREGEXP )
 {
-  QRegExpValidator * obj = (QRegExpValidator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QRegExpValidator * obj = ( QRegExpValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQREGEXP(1) )
+    if( ISNUMPAR( 1 ) && ISQREGEXP( 1 ) )
     {
 #endif
-      obj->setRegExp( *PQREGEXP(1) );
+      obj->setRegExp( *PQREGEXP( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,18 +153,18 @@ virtual QValidator::State validate( QString & input, int & pos ) const
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_VALIDATE )
 {
-  QRegExpValidator * obj = (QRegExpValidator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QRegExpValidator * obj = ( QRegExpValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      QString par1 = hb_parc(1);
+      QString par1 = hb_parc( 1 );
       int par2;
       RENUM( obj->validate( par1, par2 ) );
-      hb_storc( QSTRINGTOSTRING(par1), 1);
+      hb_storc( QSTRINGTOSTRING( par1 ), 1 );
       hb_storni( par2, 2 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

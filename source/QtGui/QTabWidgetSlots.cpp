@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QTabWidgetSlots.h"
 
-QTabWidgetSlots::QTabWidgetSlots( QObject *parent ) : QObject( parent )
+QTabWidgetSlots::QTabWidgetSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QTabWidgetSlots::~QTabWidgetSlots()
 
 void QTabWidgetSlots::currentChanged( int index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QTABWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTABWIDGET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -40,13 +40,13 @@ void QTabWidgetSlots::currentChanged( int index )
 
 void QTabWidgetSlots::tabCloseRequested( int index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "tabCloseRequested(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QTABWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTABWIDGET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -58,7 +58,7 @@ void QTabWidgetSlots::tabCloseRequested( int index )
 
 void QTabWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTabWidget * obj = (QTabWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabWidget * obj = ( QTabWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

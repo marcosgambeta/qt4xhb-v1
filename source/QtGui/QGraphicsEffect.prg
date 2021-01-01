@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -49,7 +49,7 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSEFFECT_DELETE )
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsEffect * obj = ( QGraphicsEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -71,12 +71,12 @@ QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECT )
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsEffect * obj = ( QGraphicsEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QRectF * ptr = new QRectF( obj->boundingRect() );
@@ -96,15 +96,15 @@ virtual QRectF boundingRectFor( const QRectF & rect ) const
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsEffect * obj = ( QGraphicsEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQRECTF(1) )
+    if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->boundingRectFor( *PQRECTF(1) ) );
+      QRectF * ptr = new QRectF( obj->boundingRectFor( *PQRECTF( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -121,12 +121,12 @@ bool isEnabled() const
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_ISENABLED )
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsEffect * obj = ( QGraphicsEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isEnabled() );
@@ -145,15 +145,15 @@ void setEnabled( bool enable )
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_SETENABLED )
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsEffect * obj = ( QGraphicsEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setEnabled( PBOOL(1) );
+      obj->setEnabled( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,12 +171,12 @@ void update()
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_UPDATE )
 {
-  QGraphicsEffect * obj = (QGraphicsEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsEffect * obj = ( QGraphicsEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->update();

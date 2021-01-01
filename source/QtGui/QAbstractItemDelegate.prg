@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -55,7 +55,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DELETE )
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractItemDelegate * obj = ( QAbstractItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -77,15 +77,15 @@ virtual QWidget * createEditor( QWidget * parent, const QStyleOptionViewItem & o
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_CREATEEDITOR )
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractItemDelegate * obj = ( QAbstractItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQWIDGET(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
+    if( ISNUMPAR( 3 ) && ISQWIDGET( 1 ) && ISQSTYLEOPTIONVIEWITEM( 2 ) && ISQMODELINDEX( 3 ) )
     {
 #endif
-      QWidget * ptr = obj->createEditor( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
+      QWidget * ptr = obj->createEditor( PQWIDGET( 1 ), *PQSTYLEOPTIONVIEWITEM( 2 ), *PQMODELINDEX( 3 ) );
       Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -102,15 +102,15 @@ virtual bool editorEvent( QEvent * event, QAbstractItemModel * model, const QSty
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_EDITOREVENT )
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractItemDelegate * obj = ( QAbstractItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISQEVENT(1) && ISQABSTRACTITEMMODEL(2) && ISQSTYLEOPTIONVIEWITEM(3) && ISQMODELINDEX(4) )
+    if( ISNUMPAR( 4 ) && ISQEVENT( 1 ) && ISQABSTRACTITEMMODEL( 2 ) && ISQSTYLEOPTIONVIEWITEM( 3 ) && ISQMODELINDEX( 4 ) )
     {
 #endif
-      RBOOL( obj->editorEvent( PQEVENT(1), PQABSTRACTITEMMODEL(2), *PQSTYLEOPTIONVIEWITEM(3), *PQMODELINDEX(4) ) );
+      RBOOL( obj->editorEvent( PQEVENT( 1 ), PQABSTRACTITEMMODEL( 2 ), *PQSTYLEOPTIONVIEWITEM( 3 ), *PQMODELINDEX( 4 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,15 +126,15 @@ virtual void paint( QPainter * painter, const QStyleOptionViewItem & option, con
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINT )
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractItemDelegate * obj = ( QAbstractItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
+    if( ISNUMPAR( 3 ) && ISQPAINTER( 1 ) && ISQSTYLEOPTIONVIEWITEM( 2 ) && ISQMODELINDEX( 3 ) )
     {
 #endif
-      obj->paint( PQPAINTER(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
+      obj->paint( PQPAINTER( 1 ), *PQSTYLEOPTIONVIEWITEM( 2 ), *PQMODELINDEX( 3 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,15 +152,15 @@ virtual void setEditorData( QWidget * editor, const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETEDITORDATA )
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractItemDelegate * obj = ( QAbstractItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQWIDGET(1) && ISQMODELINDEX(2) )
+    if( ISNUMPAR( 2 ) && ISQWIDGET( 1 ) && ISQMODELINDEX( 2 ) )
     {
 #endif
-      obj->setEditorData( PQWIDGET(1), *PQMODELINDEX(2) );
+      obj->setEditorData( PQWIDGET( 1 ), *PQMODELINDEX( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -178,15 +178,15 @@ virtual void setModelData( QWidget * editor, QAbstractItemModel * model, const Q
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETMODELDATA )
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractItemDelegate * obj = ( QAbstractItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQWIDGET(1) && ISQABSTRACTITEMMODEL(2) && ISQMODELINDEX(3) )
+    if( ISNUMPAR( 3 ) && ISQWIDGET( 1 ) && ISQABSTRACTITEMMODEL( 2 ) && ISQMODELINDEX( 3 ) )
     {
 #endif
-      obj->setModelData( PQWIDGET(1), PQABSTRACTITEMMODEL(2), *PQMODELINDEX(3) );
+      obj->setModelData( PQWIDGET( 1 ), PQABSTRACTITEMMODEL( 2 ), *PQMODELINDEX( 3 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,15 +204,15 @@ virtual QSize sizeHint( const QStyleOptionViewItem & option, const QModelIndex &
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SIZEHINT )
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractItemDelegate * obj = ( QAbstractItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQSTYLEOPTIONVIEWITEM(1) && ISQMODELINDEX(2) )
+    if( ISNUMPAR( 2 ) && ISQSTYLEOPTIONVIEWITEM( 1 ) && ISQMODELINDEX( 2 ) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint( *PQSTYLEOPTIONVIEWITEM(1), *PQMODELINDEX(2) ) );
+      QSize * ptr = new QSize( obj->sizeHint( *PQSTYLEOPTIONVIEWITEM( 1 ), *PQMODELINDEX( 2 ) ) );
       Qt4xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -229,15 +229,15 @@ virtual void updateEditorGeometry( QWidget * editor, const QStyleOptionViewItem 
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_UPDATEEDITORGEOMETRY )
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractItemDelegate * obj = ( QAbstractItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQWIDGET(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
+    if( ISNUMPAR( 3 ) && ISQWIDGET( 1 ) && ISQSTYLEOPTIONVIEWITEM( 2 ) && ISQMODELINDEX( 3 ) )
     {
 #endif
-      obj->updateEditorGeometry( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
+      obj->updateEditorGeometry( PQWIDGET( 1 ), *PQSTYLEOPTIONVIEWITEM( 2 ), *PQMODELINDEX( 3 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,15 +255,15 @@ bool helpEvent( QHelpEvent * event, QAbstractItemView * view, const QStyleOption
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_HELPEVENT )
 {
-  QAbstractItemDelegate * obj = (QAbstractItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractItemDelegate * obj = ( QAbstractItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISQHELPEVENT(1) && ISQABSTRACTITEMVIEW(2) && ISQSTYLEOPTIONVIEWITEM(3) && ISQMODELINDEX(4) )
+    if( ISNUMPAR( 4 ) && ISQHELPEVENT( 1 ) && ISQABSTRACTITEMVIEW( 2 ) && ISQSTYLEOPTIONVIEWITEM( 3 ) && ISQMODELINDEX( 4 ) )
     {
 #endif
-      RBOOL( obj->helpEvent( PQHELPEVENT(1), PQABSTRACTITEMVIEW(2), *PQSTYLEOPTIONVIEWITEM(3), *PQMODELINDEX(4) ) );
+      RBOOL( obj->helpEvent( PQHELPEVENT( 1 ), PQABSTRACTITEMVIEW( 2 ), *PQSTYLEOPTIONVIEWITEM( 3 ), *PQMODELINDEX( 4 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

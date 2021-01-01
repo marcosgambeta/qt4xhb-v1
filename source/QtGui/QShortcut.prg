@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -62,7 +62,7 @@ QShortcut( QWidget * parent )
 */
 void QShortcut_new1()
 {
-  QShortcut * obj = new QShortcut( PQWIDGET(1) );
+  QShortcut * obj = new QShortcut( PQWIDGET( 1 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -71,17 +71,17 @@ QShortcut( const QKeySequence & key, QWidget * parent, const char * member = 0, 
 */
 void QShortcut_new2()
 {
-  QShortcut * obj = new QShortcut( *PQKEYSEQUENCE(1), PQWIDGET(2), OPCONSTCHAR(3,0), OPCONSTCHAR(4,0), ISNIL(5)? (Qt::ShortcutContext) Qt::WindowShortcut : (Qt::ShortcutContext) hb_parni(5) );
+  QShortcut * obj = new QShortcut( *PQKEYSEQUENCE( 1 ), PQWIDGET( 2 ), OPCONSTCHAR( 3, 0 ), OPCONSTCHAR( 4, 0 ), ISNIL( 5 )? ( Qt::ShortcutContext ) Qt::WindowShortcut : ( Qt::ShortcutContext ) hb_parni( 5 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QSHORTCUT_NEW )
 {
-  if( ISNUMPAR(1) && ISQWIDGET(1) )
+  if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
     QShortcut_new1();
   }
-  else if( ISBETWEEN(2,5) && ISQKEYSEQUENCE(1) && ISQWIDGET(2) && (ISCHAR(3)||ISNIL(3)) && (ISCHAR(4)||ISNIL(4)) && (ISNUM(5)||ISNIL(5)) )
+  else if( ISBETWEEN( 2, 5 ) && ISQKEYSEQUENCE( 1 ) && ISQWIDGET( 2 ) && ( ISCHAR( 3 ) || ISNIL( 3 ) ) && ( ISCHAR( 4 ) || ISNIL( 4 ) ) && ( ISNUM( 5 ) || ISNIL( 5 ) ) )
   {
     QShortcut_new2();
   }
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QSHORTCUT_NEW )
 
 HB_FUNC_STATIC( QSHORTCUT_DELETE )
 {
-  QShortcut * obj = (QShortcut *) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcut * obj = ( QShortcut * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -115,12 +115,12 @@ bool autoRepeat() const
 */
 HB_FUNC_STATIC( QSHORTCUT_AUTOREPEAT )
 {
-  QShortcut * obj = (QShortcut *) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcut * obj = ( QShortcut * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->autoRepeat() );
@@ -139,12 +139,12 @@ Qt::ShortcutContext context() const
 */
 HB_FUNC_STATIC( QSHORTCUT_CONTEXT )
 {
-  QShortcut * obj = (QShortcut *) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcut * obj = ( QShortcut * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->context() );
@@ -163,12 +163,12 @@ int id() const
 */
 HB_FUNC_STATIC( QSHORTCUT_ID )
 {
-  QShortcut * obj = (QShortcut *) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcut * obj = ( QShortcut * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->id() );
@@ -187,12 +187,12 @@ bool isEnabled() const
 */
 HB_FUNC_STATIC( QSHORTCUT_ISENABLED )
 {
-  QShortcut * obj = (QShortcut *) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcut * obj = ( QShortcut * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isEnabled() );
@@ -211,12 +211,12 @@ QKeySequence key() const
 */
 HB_FUNC_STATIC( QSHORTCUT_KEY )
 {
-  QShortcut * obj = (QShortcut *) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcut * obj = ( QShortcut * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QKeySequence * ptr = new QKeySequence( obj->key() );
@@ -236,12 +236,12 @@ QWidget * parentWidget() const
 */
 HB_FUNC_STATIC( QSHORTCUT_PARENTWIDGET )
 {
-  QShortcut * obj = (QShortcut *) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcut * obj = ( QShortcut * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWidget * ptr = obj->parentWidget();
@@ -261,15 +261,15 @@ void setAutoRepeat( bool on )
 */
 HB_FUNC_STATIC( QSHORTCUT_SETAUTOREPEAT )
 {
-  QShortcut * obj = (QShortcut *) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcut * obj = ( QShortcut * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setAutoRepeat( PBOOL(1) );
+      obj->setAutoRepeat( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -287,15 +287,15 @@ void setContext( Qt::ShortcutContext context )
 */
 HB_FUNC_STATIC( QSHORTCUT_SETCONTEXT )
 {
-  QShortcut * obj = (QShortcut *) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcut * obj = ( QShortcut * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setContext( (Qt::ShortcutContext) hb_parni(1) );
+      obj->setContext( ( Qt::ShortcutContext ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -313,15 +313,15 @@ void setEnabled( bool enable )
 */
 HB_FUNC_STATIC( QSHORTCUT_SETENABLED )
 {
-  QShortcut * obj = (QShortcut *) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcut * obj = ( QShortcut * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setEnabled( PBOOL(1) );
+      obj->setEnabled( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -339,15 +339,15 @@ void setKey( const QKeySequence & key )
 */
 HB_FUNC_STATIC( QSHORTCUT_SETKEY )
 {
-  QShortcut * obj = (QShortcut *) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcut * obj = ( QShortcut * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQKEYSEQUENCE(1) )
+    if( ISNUMPAR( 1 ) && ISQKEYSEQUENCE( 1 ) )
     {
 #endif
-      obj->setKey( *PQKEYSEQUENCE(1) );
+      obj->setKey( *PQKEYSEQUENCE( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -365,15 +365,15 @@ void setWhatsThis( const QString & text )
 */
 HB_FUNC_STATIC( QSHORTCUT_SETWHATSTHIS )
 {
-  QShortcut * obj = (QShortcut *) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcut * obj = ( QShortcut * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setWhatsThis( PQSTRING(1) );
+      obj->setWhatsThis( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -391,12 +391,12 @@ QString whatsThis() const
 */
 HB_FUNC_STATIC( QSHORTCUT_WHATSTHIS )
 {
-  QShortcut * obj = (QShortcut *) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcut * obj = ( QShortcut * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->whatsThis() );

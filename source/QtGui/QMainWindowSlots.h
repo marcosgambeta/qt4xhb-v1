@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -28,7 +28,7 @@ class QMainWindowSlots: public QObject
 {
   Q_OBJECT
   public:
-  QMainWindowSlots( QObject *parent = 0 );
+  QMainWindowSlots( QObject * parent = 0 );
   ~QMainWindowSlots();
   public slots:
   void iconSizeChanged( const QSize & iconSize );

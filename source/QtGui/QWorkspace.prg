@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -66,9 +66,9 @@ QWorkspace( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QWORKSPACE_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
   {
-    QWorkspace * obj = new QWorkspace( OPQWIDGET(1,0) );
+    QWorkspace * obj = new QWorkspace( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QWORKSPACE_NEW )
 
 HB_FUNC_STATIC( QWORKSPACE_DELETE )
 {
-  QWorkspace * obj = (QWorkspace *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWorkspace * obj = ( QWorkspace * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -101,12 +101,12 @@ QWidget * activeWindow() const
 */
 HB_FUNC_STATIC( QWORKSPACE_ACTIVEWINDOW )
 {
-  QWorkspace * obj = (QWorkspace *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWorkspace * obj = ( QWorkspace * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWidget * ptr = obj->activeWindow();
@@ -126,15 +126,15 @@ QWidget * addWindow( QWidget * w, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC( QWORKSPACE_ADDWINDOW )
 {
-  QWorkspace * obj = (QWorkspace *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWorkspace * obj = ( QWorkspace * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQWIDGET(1) && ISOPTNUM(2) )
+    if( ISBETWEEN( 1, 2 ) && ISQWIDGET( 1 ) && ISOPTNUM( 2 ) )
     {
 #endif
-      QWidget * ptr = obj->addWindow( PQWIDGET(1), ISNIL(2)? (Qt::WindowFlags) 0 : (Qt::WindowFlags) hb_parni(2) );
+      QWidget * ptr = obj->addWindow( PQWIDGET( 1 ), ISNIL( 2 )? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 2 ) );
       Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -151,12 +151,12 @@ QBrush background() const
 */
 HB_FUNC_STATIC( QWORKSPACE_BACKGROUND )
 {
-  QWorkspace * obj = (QWorkspace *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWorkspace * obj = ( QWorkspace * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QBrush * ptr = new QBrush( obj->background() );
@@ -176,12 +176,12 @@ bool scrollBarsEnabled() const
 */
 HB_FUNC_STATIC( QWORKSPACE_SCROLLBARSENABLED )
 {
-  QWorkspace * obj = (QWorkspace *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWorkspace * obj = ( QWorkspace * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->scrollBarsEnabled() );
@@ -200,15 +200,15 @@ void setBackground( const QBrush & background )
 */
 HB_FUNC_STATIC( QWORKSPACE_SETBACKGROUND )
 {
-  QWorkspace * obj = (QWorkspace *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWorkspace * obj = ( QWorkspace * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBRUSH(1) )
+    if( ISNUMPAR( 1 ) && ISQBRUSH( 1 ) )
     {
 #endif
-      obj->setBackground( *PQBRUSH(1) );
+      obj->setBackground( *PQBRUSH( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,15 +226,15 @@ void setScrollBarsEnabled( bool enable )
 */
 HB_FUNC_STATIC( QWORKSPACE_SETSCROLLBARSENABLED )
 {
-  QWorkspace * obj = (QWorkspace *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWorkspace * obj = ( QWorkspace * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setScrollBarsEnabled( PBOOL(1) );
+      obj->setScrollBarsEnabled( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,17 +252,17 @@ QWidgetList windowList( QWorkspace::WindowOrder order = QWorkspace::CreationOrde
 */
 HB_FUNC_STATIC( QWORKSPACE_WINDOWLIST )
 {
-  QWorkspace * obj = (QWorkspace *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWorkspace * obj = ( QWorkspace * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
     {
 #endif
-      QWidgetList list = obj->windowList( ISNIL(1)? (QWorkspace::WindowOrder) QWorkspace::CreationOrder : (QWorkspace::WindowOrder) hb_parni(1) );
+      QWidgetList list = obj->windowList( ISNIL( 1 )? ( QWorkspace::WindowOrder ) QWorkspace::CreationOrder : ( QWorkspace::WindowOrder ) hb_parni( 1 ) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QWORKSPACE_WINDOWLIST )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QWidget *) list[i] );
+          hb_itemPutPtr( pItem, ( QWidget * ) list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -300,12 +300,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QWORKSPACE_SIZEHINT )
 {
-  QWorkspace * obj = (QWorkspace *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWorkspace * obj = ( QWorkspace * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
@@ -325,12 +325,12 @@ void activateNextWindow()
 */
 HB_FUNC_STATIC( QWORKSPACE_ACTIVATENEXTWINDOW )
 {
-  QWorkspace * obj = (QWorkspace *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWorkspace * obj = ( QWorkspace * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->activateNextWindow();
@@ -351,12 +351,12 @@ void activatePreviousWindow()
 */
 HB_FUNC_STATIC( QWORKSPACE_ACTIVATEPREVIOUSWINDOW )
 {
-  QWorkspace * obj = (QWorkspace *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWorkspace * obj = ( QWorkspace * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->activatePreviousWindow();
@@ -377,12 +377,12 @@ void arrangeIcons()
 */
 HB_FUNC_STATIC( QWORKSPACE_ARRANGEICONS )
 {
-  QWorkspace * obj = (QWorkspace *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWorkspace * obj = ( QWorkspace * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->arrangeIcons();
@@ -403,12 +403,12 @@ void cascade()
 */
 HB_FUNC_STATIC( QWORKSPACE_CASCADE )
 {
-  QWorkspace * obj = (QWorkspace *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWorkspace * obj = ( QWorkspace * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->cascade();
@@ -429,12 +429,12 @@ void closeActiveWindow()
 */
 HB_FUNC_STATIC( QWORKSPACE_CLOSEACTIVEWINDOW )
 {
-  QWorkspace * obj = (QWorkspace *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWorkspace * obj = ( QWorkspace * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->closeActiveWindow();
@@ -455,12 +455,12 @@ void closeAllWindows()
 */
 HB_FUNC_STATIC( QWORKSPACE_CLOSEALLWINDOWS )
 {
-  QWorkspace * obj = (QWorkspace *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWorkspace * obj = ( QWorkspace * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->closeAllWindows();
@@ -481,15 +481,15 @@ void setActiveWindow( QWidget * w )
 */
 HB_FUNC_STATIC( QWORKSPACE_SETACTIVEWINDOW )
 {
-  QWorkspace * obj = (QWorkspace *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWorkspace * obj = ( QWorkspace * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      obj->setActiveWindow( PQWIDGET(1) );
+      obj->setActiveWindow( PQWIDGET( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -507,12 +507,12 @@ void tile()
 */
 HB_FUNC_STATIC( QWORKSPACE_TILE )
 {
-  QWorkspace * obj = (QWorkspace *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWorkspace * obj = ( QWorkspace * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->tile();

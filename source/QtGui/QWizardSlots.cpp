@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QWizardSlots.h"
 
-QWizardSlots::QWizardSlots( QObject *parent ) : QObject( parent )
+QWizardSlots::QWizardSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QWizardSlots::~QWizardSlots()
 
 void QWizardSlots::currentIdChanged( int id )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentIdChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QWIZARD" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWIZARD" );
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
 
     hb_vmEvalBlockV( cb, 2, psender, pid );
@@ -40,13 +40,13 @@ void QWizardSlots::currentIdChanged( int id )
 
 void QWizardSlots::customButtonClicked( int which )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "customButtonClicked(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QWIZARD" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWIZARD" );
     PHB_ITEM pwhich = hb_itemPutNI( NULL, which );
 
     hb_vmEvalBlockV( cb, 2, psender, pwhich );
@@ -58,13 +58,13 @@ void QWizardSlots::customButtonClicked( int which )
 
 void QWizardSlots::helpRequested()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "helpRequested()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QWIZARD" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWIZARD" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -74,13 +74,13 @@ void QWizardSlots::helpRequested()
 
 void QWizardSlots::pageAdded( int id )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "pageAdded(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QWIZARD" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWIZARD" );
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
 
     hb_vmEvalBlockV( cb, 2, psender, pid );
@@ -92,13 +92,13 @@ void QWizardSlots::pageAdded( int id )
 
 void QWizardSlots::pageRemoved( int id )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "pageRemoved(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QWIZARD" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWIZARD" );
     PHB_ITEM pid = hb_itemPutNI( NULL, id );
 
     hb_vmEvalBlockV( cb, 2, psender, pid );
@@ -110,7 +110,7 @@ void QWizardSlots::pageRemoved( int id )
 
 void QWizardSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QWizard * obj = (QWizard *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWizard * obj = ( QWizard * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

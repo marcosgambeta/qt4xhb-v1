@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -106,9 +106,9 @@ QSortFilterProxyModel( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
-    QSortFilterProxyModel * obj = new QSortFilterProxyModel( OPQOBJECT(1,0) );
+    QSortFilterProxyModel * obj = new QSortFilterProxyModel( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_NEW )
 
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_DELETE )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -141,12 +141,12 @@ bool dynamicSortFilter() const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_DYNAMICSORTFILTER )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->dynamicSortFilter() );
@@ -165,12 +165,12 @@ Qt::CaseSensitivity filterCaseSensitivity() const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERCASESENSITIVITY )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->filterCaseSensitivity() );
@@ -189,12 +189,12 @@ int filterKeyColumn() const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERKEYCOLUMN )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->filterKeyColumn() );
@@ -213,12 +213,12 @@ QRegExp filterRegExp() const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERREGEXP )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QRegExp * ptr = new QRegExp( obj->filterRegExp() );
@@ -238,12 +238,12 @@ int filterRole() const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FILTERROLE )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->filterRole() );
@@ -262,12 +262,12 @@ bool isSortLocaleAware() const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_ISSORTLOCALEAWARE )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isSortLocaleAware() );
@@ -286,15 +286,15 @@ void setDynamicSortFilter( bool enable )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETDYNAMICSORTFILTER )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setDynamicSortFilter( PBOOL(1) );
+      obj->setDynamicSortFilter( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -312,15 +312,15 @@ void setFilterCaseSensitivity( Qt::CaseSensitivity cs )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERCASESENSITIVITY )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setFilterCaseSensitivity( (Qt::CaseSensitivity) hb_parni(1) );
+      obj->setFilterCaseSensitivity( ( Qt::CaseSensitivity ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -338,15 +338,15 @@ void setFilterKeyColumn( int column )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERKEYCOLUMN )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setFilterKeyColumn( PINT(1) );
+      obj->setFilterKeyColumn( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -364,15 +364,15 @@ void setFilterRole( int role )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERROLE )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setFilterRole( PINT(1) );
+      obj->setFilterRole( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -390,15 +390,15 @@ void setSortCaseSensitivity( Qt::CaseSensitivity cs )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETSORTCASESENSITIVITY )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setSortCaseSensitivity( (Qt::CaseSensitivity) hb_parni(1) );
+      obj->setSortCaseSensitivity( ( Qt::CaseSensitivity ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -416,15 +416,15 @@ void setSortLocaleAware( bool on )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETSORTLOCALEAWARE )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setSortLocaleAware( PBOOL(1) );
+      obj->setSortLocaleAware( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -442,15 +442,15 @@ void setSortRole( int role )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETSORTROLE )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setSortRole( PINT(1) );
+      obj->setSortRole( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -468,12 +468,12 @@ Qt::CaseSensitivity sortCaseSensitivity() const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTCASESENSITIVITY )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->sortCaseSensitivity() );
@@ -492,12 +492,12 @@ int sortColumn() const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTCOLUMN )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->sortColumn() );
@@ -516,12 +516,12 @@ Qt::SortOrder sortOrder() const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTORDER )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->sortOrder() );
@@ -540,12 +540,12 @@ int sortRole() const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORTROLE )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->sortRole() );
@@ -564,15 +564,15 @@ virtual QModelIndex buddy( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_BUDDY )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->buddy( *PQMODELINDEX(1) ) );
+      QModelIndex * ptr = new QModelIndex( obj->buddy( *PQMODELINDEX( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -589,15 +589,15 @@ virtual bool canFetchMore( const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_CANFETCHMORE )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      RBOOL( obj->canFetchMore( *PQMODELINDEX(1) ) );
+      RBOOL( obj->canFetchMore( *PQMODELINDEX( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -613,15 +613,15 @@ virtual int columnCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_COLUMNCOUNT )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( ISQMODELINDEX( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
-      RINT( obj->columnCount( ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt4xHb::itemGetPtr(1) ) );
+      RINT( obj->columnCount( ISNIL( 1 )? QModelIndex() : *( QModelIndex * ) Qt4xHb::itemGetPtr( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -637,15 +637,15 @@ virtual QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) c
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_DATA )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && ISOPTNUM(2) )
+    if( ISBETWEEN( 1, 2 ) && ISQMODELINDEX( 1 ) && ISOPTNUM( 2 ) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
+      QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX( 1 ), OPINT( 2, Qt::DisplayRole ) ) );
       Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -662,15 +662,15 @@ virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int ro
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_DROPMIMEDATA )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(5) && ISQMIMEDATA(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISQMODELINDEX(5) )
+    if( ISNUMPAR( 5 ) && ISQMIMEDATA( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISQMODELINDEX( 5 ) )
     {
 #endif
-      RBOOL( obj->dropMimeData( PQMIMEDATA(1), (Qt::DropAction) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5) ) );
+      RBOOL( obj->dropMimeData( PQMIMEDATA( 1 ), ( Qt::DropAction ) hb_parni( 2 ), PINT( 3 ), PINT( 4 ), *PQMODELINDEX( 5 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -686,15 +686,15 @@ virtual void fetchMore( const QModelIndex & parent )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FETCHMORE )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      obj->fetchMore( *PQMODELINDEX(1) );
+      obj->fetchMore( *PQMODELINDEX( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -712,15 +712,15 @@ virtual Qt::ItemFlags flags( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_FLAGS )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      RENUM( obj->flags( *PQMODELINDEX(1) ) );
+      RENUM( obj->flags( *PQMODELINDEX( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -736,15 +736,15 @@ virtual bool hasChildren( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_HASCHILDREN )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( ISQMODELINDEX( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
-      RBOOL( obj->hasChildren( ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt4xHb::itemGetPtr(1) ) );
+      RBOOL( obj->hasChildren( ISNIL( 1 )? QModelIndex() : *( QModelIndex * ) Qt4xHb::itemGetPtr( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -760,15 +760,15 @@ virtual QVariant headerData( int section, Qt::Orientation orientation, int role 
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_HEADERDATA )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN( 2, 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISOPTNUM( 3 ) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->headerData( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
+      QVariant * ptr = new QVariant( obj->headerData( PINT( 1 ), ( Qt::Orientation ) hb_parni( 2 ), OPINT( 3, Qt::DisplayRole ) ) );
       Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -785,15 +785,15 @@ virtual QModelIndex index( int row, int column, const QModelIndex & parent = QMo
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_INDEX )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ( ISQMODELINDEX( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->index( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt4xHb::itemGetPtr(3) ) );
+      QModelIndex * ptr = new QModelIndex( obj->index( PINT( 1 ), PINT( 2 ), ISNIL( 3 )? QModelIndex() : *( QModelIndex * ) Qt4xHb::itemGetPtr( 3 ) ) );
       Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -810,15 +810,15 @@ virtual bool insertColumns( int column, int count, const QModelIndex & parent = 
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_INSERTCOLUMNS )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ( ISQMODELINDEX( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
-      RBOOL( obj->insertColumns( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt4xHb::itemGetPtr(3) ) );
+      RBOOL( obj->insertColumns( PINT( 1 ), PINT( 2 ), ISNIL( 3 )? QModelIndex() : *( QModelIndex * ) Qt4xHb::itemGetPtr( 3 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -834,15 +834,15 @@ virtual bool insertRows( int row, int count, const QModelIndex & parent = QModel
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_INSERTROWS )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ( ISQMODELINDEX( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
-      RBOOL( obj->insertRows( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt4xHb::itemGetPtr(3) ) );
+      RBOOL( obj->insertRows( PINT( 1 ), PINT( 2 ), ISNIL( 3 )? QModelIndex() : *( QModelIndex * ) Qt4xHb::itemGetPtr( 3 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -858,15 +858,15 @@ virtual QModelIndex mapFromSource( const QModelIndex & sourceIndex ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MAPFROMSOURCE )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->mapFromSource( *PQMODELINDEX(1) ) );
+      QModelIndex * ptr = new QModelIndex( obj->mapFromSource( *PQMODELINDEX( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -883,15 +883,15 @@ virtual QItemSelection mapSelectionFromSource( const QItemSelection & sourceSele
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MAPSELECTIONFROMSOURCE )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQITEMSELECTION(1) )
+    if( ISNUMPAR( 1 ) && ISQITEMSELECTION( 1 ) )
     {
 #endif
-      QItemSelection * ptr = new QItemSelection( obj->mapSelectionFromSource( *PQITEMSELECTION(1) ) );
+      QItemSelection * ptr = new QItemSelection( obj->mapSelectionFromSource( *PQITEMSELECTION( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QITEMSELECTION", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -908,15 +908,15 @@ virtual QItemSelection mapSelectionToSource( const QItemSelection & proxySelecti
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MAPSELECTIONTOSOURCE )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQITEMSELECTION(1) )
+    if( ISNUMPAR( 1 ) && ISQITEMSELECTION( 1 ) )
     {
 #endif
-      QItemSelection * ptr = new QItemSelection( obj->mapSelectionToSource( *PQITEMSELECTION(1) ) );
+      QItemSelection * ptr = new QItemSelection( obj->mapSelectionToSource( *PQITEMSELECTION( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QITEMSELECTION", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -933,15 +933,15 @@ virtual QModelIndex mapToSource( const QModelIndex & proxyIndex ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MAPTOSOURCE )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->mapToSource( *PQMODELINDEX(1) ) );
+      QModelIndex * ptr = new QModelIndex( obj->mapToSource( *PQMODELINDEX( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -958,17 +958,17 @@ virtual QModelIndexList match( const QModelIndex & start, int role, const QVaria
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MATCH )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,5) && ISQMODELINDEX(1) && ISNUM(2) && ISQVARIANT(3) && ISOPTNUM(4) && ISOPTNUM(5) )
+    if( ISBETWEEN( 3, 5 ) && ISQMODELINDEX( 1 ) && ISNUM( 2 ) && ISQVARIANT( 3 ) && ISOPTNUM( 4 ) && ISOPTNUM( 5 ) )
     {
 #endif
-      QModelIndexList list = obj->match( *PQMODELINDEX(1), PINT(2), *PQVARIANT(3), OPINT(4,1), ISNIL(5)? (Qt::MatchFlags) Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) : (Qt::MatchFlags) hb_parni(5) );
+      QModelIndexList list = obj->match( *PQMODELINDEX( 1 ), PINT( 2 ), *PQVARIANT( 3 ), OPINT( 4, 1 ), ISNIL( 5 )? ( Qt::MatchFlags ) Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) : ( Qt::MatchFlags ) hb_parni( 5 ) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
@@ -979,7 +979,7 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MATCH )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QModelIndex *) new QModelIndex( list[i] ) );
+          hb_itemPutPtr( pItem, ( QModelIndex * ) new QModelIndex( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -1010,21 +1010,20 @@ virtual QMimeData * mimeData( const QModelIndexList & indexes ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MIMEDATA )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISARRAY( 1 ) )
     {
 #endif
       QModelIndexList par1;
-      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
-      int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
+      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      int nLen1 = hb_arrayLen( aList1 );
+      for( int i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+        par1 << *( QModelIndex * ) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
       QMimeData * ptr = obj->mimeData( par1 );
       Qt4xHb::createReturnQObjectClass( ptr, "QMIMEDATA" );
@@ -1043,12 +1042,12 @@ virtual QStringList mimeTypes() const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_MIMETYPES )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->mimeTypes() );
@@ -1067,15 +1066,15 @@ virtual QModelIndex parent( const QModelIndex & child ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_PARENT )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->parent( *PQMODELINDEX(1) ) );
+      QModelIndex * ptr = new QModelIndex( obj->parent( *PQMODELINDEX( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1092,15 +1091,15 @@ virtual bool removeColumns( int column, int count, const QModelIndex & parent = 
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_REMOVECOLUMNS )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ( ISQMODELINDEX( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
-      RBOOL( obj->removeColumns( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt4xHb::itemGetPtr(3) ) );
+      RBOOL( obj->removeColumns( PINT( 1 ), PINT( 2 ), ISNIL( 3 )? QModelIndex() : *( QModelIndex * ) Qt4xHb::itemGetPtr( 3 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1116,15 +1115,15 @@ virtual bool removeRows( int row, int count, const QModelIndex & parent = QModel
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_REMOVEROWS )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
+    if( ISBETWEEN( 2, 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ( ISQMODELINDEX( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
-      RBOOL( obj->removeRows( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt4xHb::itemGetPtr(3) ) );
+      RBOOL( obj->removeRows( PINT( 1 ), PINT( 2 ), ISNIL( 3 )? QModelIndex() : *( QModelIndex * ) Qt4xHb::itemGetPtr( 3 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1140,15 +1139,15 @@ virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_ROWCOUNT )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( ISQMODELINDEX( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
-      RINT( obj->rowCount( ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt4xHb::itemGetPtr(1) ) );
+      RINT( obj->rowCount( ISNIL( 1 )? QModelIndex() : *( QModelIndex * ) Qt4xHb::itemGetPtr( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1164,15 +1163,15 @@ virtual bool setData( const QModelIndex & index, const QVariant & value, int rol
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETDATA )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISQMODELINDEX(1) && ISQVARIANT(2) && ISOPTNUM(3) )
+    if( ISBETWEEN( 2, 3 ) && ISQMODELINDEX( 1 ) && ISQVARIANT( 2 ) && ISOPTNUM( 3 ) )
     {
 #endif
-      RBOOL( obj->setData( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
+      RBOOL( obj->setData( *PQMODELINDEX( 1 ), *PQVARIANT( 2 ), OPINT( 3, Qt::EditRole ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1188,15 +1187,15 @@ virtual bool setHeaderData( int section, Qt::Orientation orientation, const QVar
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETHEADERDATA )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3,4) && ISNUM(1) && ISNUM(2) && ISQVARIANT(3) && ISOPTNUM(4) )
+    if( ISBETWEEN( 3, 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISQVARIANT( 3 ) && ISOPTNUM( 4 ) )
     {
 #endif
-      RBOOL( obj->setHeaderData( PINT(1), (Qt::Orientation) hb_parni(2), *PQVARIANT(3), OPINT(4,Qt::EditRole) ) );
+      RBOOL( obj->setHeaderData( PINT( 1 ), ( Qt::Orientation ) hb_parni( 2 ), *PQVARIANT( 3 ), OPINT( 4, Qt::EditRole ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1212,15 +1211,15 @@ virtual void setSourceModel( QAbstractItemModel * sourceModel )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETSOURCEMODEL )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
+    if( ISNUMPAR( 1 ) && ISQABSTRACTITEMMODEL( 1 ) )
     {
 #endif
-      obj->setSourceModel( PQABSTRACTITEMMODEL(1) );
+      obj->setSourceModel( PQABSTRACTITEMMODEL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1238,15 +1237,15 @@ virtual void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SORT )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) )
     {
 #endif
-      obj->sort( PINT(1), ISNIL(2)? (Qt::SortOrder) Qt::AscendingOrder : (Qt::SortOrder) hb_parni(2) );
+      obj->sort( PINT( 1 ), ISNIL( 2 )? ( Qt::SortOrder ) Qt::AscendingOrder : ( Qt::SortOrder ) hb_parni( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1264,15 +1263,15 @@ virtual QSize span( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SPAN )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      QSize * ptr = new QSize( obj->span( *PQMODELINDEX(1) ) );
+      QSize * ptr = new QSize( obj->span( *PQMODELINDEX( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1289,12 +1288,12 @@ virtual Qt::DropActions supportedDropActions() const
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SUPPORTEDDROPACTIONS )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->supportedDropActions() );
@@ -1313,12 +1312,12 @@ void invalidate()
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_INVALIDATE )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->invalidate();
@@ -1339,15 +1338,15 @@ void setFilterFixedString( const QString & pattern )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERFIXEDSTRING )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setFilterFixedString( PQSTRING(1) );
+      obj->setFilterFixedString( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1365,11 +1364,11 @@ void setFilterRegExp( const QRegExp & regExp )
 */
 void QSortFilterProxyModel_setFilterRegExp1()
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setFilterRegExp( *PQREGEXP(1) );
+    obj->setFilterRegExp( *PQREGEXP( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1380,11 +1379,11 @@ void setFilterRegExp( const QString & pattern )
 */
 void QSortFilterProxyModel_setFilterRegExp2()
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setFilterRegExp( PQSTRING(1) );
+    obj->setFilterRegExp( PQSTRING( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1392,11 +1391,11 @@ void QSortFilterProxyModel_setFilterRegExp2()
 
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERREGEXP )
 {
-  if( ISNUMPAR(1) && ISQREGEXP(1) )
+  if( ISNUMPAR( 1 ) && ISQREGEXP( 1 ) )
   {
     QSortFilterProxyModel_setFilterRegExp1();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
     QSortFilterProxyModel_setFilterRegExp2();
   }
@@ -1411,15 +1410,15 @@ void setFilterWildcard( const QString & pattern )
 */
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERWILDCARD )
 {
-  QSortFilterProxyModel * obj = (QSortFilterProxyModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSortFilterProxyModel * obj = ( QSortFilterProxyModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setFilterWildcard( PQSTRING(1) );
+      obj->setFilterWildcard( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

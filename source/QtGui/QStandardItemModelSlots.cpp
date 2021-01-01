@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QStandardItemModelSlots.h"
 
-QStandardItemModelSlots::QStandardItemModelSlots( QObject *parent ) : QObject( parent )
+QStandardItemModelSlots::QStandardItemModelSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,14 +22,14 @@ QStandardItemModelSlots::~QStandardItemModelSlots()
 
 void QStandardItemModelSlots::itemChanged( QStandardItem * item )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "itemChanged(QStandardItem*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QSTANDARDITEMMODEL" );
-    PHB_ITEM pitem = Qt4xHb::Signals_return_object( (void *) item, "QSTANDARDITEM" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSTANDARDITEMMODEL" );
+    PHB_ITEM pitem = Qt4xHb::Signals_return_object( ( void * ) item, "QSTANDARDITEM" );
 
     hb_vmEvalBlockV( cb, 2, psender, pitem );
 
@@ -40,7 +40,7 @@ void QStandardItemModelSlots::itemChanged( QStandardItem * item )
 
 void QStandardItemModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QStandardItemModel * obj = (QStandardItemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStandardItemModel * obj = ( QStandardItemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

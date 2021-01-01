@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -67,7 +67,7 @@ QPrinterInfo( const QPrinterInfo & src )
 */
 void QPrinterInfo_new2()
 {
-  QPrinterInfo * obj = new QPrinterInfo( *PQPRINTERINFO(1) );
+  QPrinterInfo * obj = new QPrinterInfo( *PQPRINTERINFO( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -76,21 +76,21 @@ QPrinterInfo( const QPrinter & printer )
 */
 void QPrinterInfo_new3()
 {
-  QPrinterInfo * obj = new QPrinterInfo( *PQPRINTER(1) );
+  QPrinterInfo * obj = new QPrinterInfo( *PQPRINTER( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QPRINTERINFO_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QPrinterInfo_new1();
   }
-  else if( ISNUMPAR(1) && ISQPRINTERINFO(1) )
+  else if( ISNUMPAR( 1 ) && ISQPRINTERINFO( 1 ) )
   {
     QPrinterInfo_new2();
   }
-  else if( ISNUMPAR(1) && ISQPRINTER(1) )
+  else if( ISNUMPAR( 1 ) && ISQPRINTER( 1 ) )
   {
     QPrinterInfo_new3();
   }
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QPRINTERINFO_NEW )
 
 HB_FUNC_STATIC( QPRINTERINFO_DELETE )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrinterInfo * obj = ( QPrinterInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -122,12 +122,12 @@ bool isDefault() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_ISDEFAULT )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrinterInfo * obj = ( QPrinterInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isDefault() );
@@ -146,12 +146,12 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_ISNULL )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrinterInfo * obj = ( QPrinterInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isNull() );
@@ -170,12 +170,12 @@ QString printerName() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_PRINTERNAME )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrinterInfo * obj = ( QPrinterInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->printerName() );
@@ -194,21 +194,21 @@ QList<QPrinter::PaperSize> supportedPaperSizes() const
 */
 HB_FUNC_STATIC( QPRINTERINFO_SUPPORTEDPAPERSIZES )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrinterInfo * obj = ( QPrinterInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QPrinter::PaperSize> list = obj->supportedPaperSizes();
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       for( int i = 0; i < list.count(); i++ )
       {
         PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
         hb_arrayAddForward( pArray, pItem );
-        hb_itemRelease(pItem);
+        hb_itemRelease( pItem );
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -226,17 +226,17 @@ QList<QPrinterInfo> availablePrinters()
 */
 HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
 {
-  QPrinterInfo * obj = (QPrinterInfo *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrinterInfo * obj = ( QPrinterInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QPrinterInfo> list = obj->availablePrinters();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QPRINTERINFO" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QPRINTERINFO_AVAILABLEPRINTERS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QPrinterInfo *) new QPrinterInfo( list[i] ) );
+          hb_itemPutPtr( pItem, ( QPrinterInfo * ) new QPrinterInfo( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -279,7 +279,7 @@ static QPrinterInfo defaultPrinter()
 HB_FUNC_STATIC( QPRINTERINFO_DEFAULTPRINTER )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QPrinterInfo * ptr = new QPrinterInfo( QPrinterInfo::defaultPrinter() );
@@ -297,18 +297,18 @@ HB_FUNC_STATIC( QPRINTERINFO_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -335,16 +335,16 @@ HB_FUNC_STATIC( QPRINTERINFO_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QPRINTERINFO_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QPRINTERINFO_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

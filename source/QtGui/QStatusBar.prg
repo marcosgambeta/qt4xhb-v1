@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -57,9 +57,9 @@ QStatusBar( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
   {
-    QStatusBar * obj = new QStatusBar( OPQWIDGET(1,0) );
+    QStatusBar * obj = new QStatusBar( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QSTATUSBAR_NEW )
 
 HB_FUNC_STATIC( QSTATUSBAR_DELETE )
 {
-  QStatusBar * obj = (QStatusBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStatusBar * obj = ( QStatusBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -92,15 +92,15 @@ void addPermanentWidget( QWidget * widget, int stretch = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_ADDPERMANENTWIDGET )
 {
-  QStatusBar * obj = (QStatusBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStatusBar * obj = ( QStatusBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQWIDGET(1) && ISOPTNUM(2) )
+    if( ISBETWEEN( 1, 2 ) && ISQWIDGET( 1 ) && ISOPTNUM( 2 ) )
     {
 #endif
-      obj->addPermanentWidget( PQWIDGET(1), OPINT(2,0) );
+      obj->addPermanentWidget( PQWIDGET( 1 ), OPINT( 2, 0 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,15 +118,15 @@ void addWidget( QWidget * widget, int stretch = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_ADDWIDGET )
 {
-  QStatusBar * obj = (QStatusBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStatusBar * obj = ( QStatusBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQWIDGET(1) && ISOPTNUM(2) )
+    if( ISBETWEEN( 1, 2 ) && ISQWIDGET( 1 ) && ISOPTNUM( 2 ) )
     {
 #endif
-      obj->addWidget( PQWIDGET(1), OPINT(2,0) );
+      obj->addWidget( PQWIDGET( 1 ), OPINT( 2, 0 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,12 +144,12 @@ QString currentMessage() const
 */
 HB_FUNC_STATIC( QSTATUSBAR_CURRENTMESSAGE )
 {
-  QStatusBar * obj = (QStatusBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStatusBar * obj = ( QStatusBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->currentMessage() );
@@ -168,15 +168,15 @@ int insertPermanentWidget( int index, QWidget * widget, int stretch = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_INSERTPERMANENTWIDGET )
 {
-  QStatusBar * obj = (QStatusBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStatusBar * obj = ( QStatusBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISQWIDGET(2) && ISOPTNUM(3) )
+    if( ISBETWEEN( 2, 3 ) && ISNUM( 1 ) && ISQWIDGET( 2 ) && ISOPTNUM( 3 ) )
     {
 #endif
-      RINT( obj->insertPermanentWidget( PINT(1), PQWIDGET(2), OPINT(3,0) ) );
+      RINT( obj->insertPermanentWidget( PINT( 1 ), PQWIDGET( 2 ), OPINT( 3, 0 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,15 +192,15 @@ int insertWidget( int index, QWidget * widget, int stretch = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_INSERTWIDGET )
 {
-  QStatusBar * obj = (QStatusBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStatusBar * obj = ( QStatusBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISQWIDGET(2) && ISOPTNUM(3) )
+    if( ISBETWEEN( 2, 3 ) && ISNUM( 1 ) && ISQWIDGET( 2 ) && ISOPTNUM( 3 ) )
     {
 #endif
-      RINT( obj->insertWidget( PINT(1), PQWIDGET(2), OPINT(3,0) ) );
+      RINT( obj->insertWidget( PINT( 1 ), PQWIDGET( 2 ), OPINT( 3, 0 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -216,12 +216,12 @@ bool isSizeGripEnabled() const
 */
 HB_FUNC_STATIC( QSTATUSBAR_ISSIZEGRIPENABLED )
 {
-  QStatusBar * obj = (QStatusBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStatusBar * obj = ( QStatusBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isSizeGripEnabled() );
@@ -240,15 +240,15 @@ void removeWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QSTATUSBAR_REMOVEWIDGET )
 {
-  QStatusBar * obj = (QStatusBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStatusBar * obj = ( QStatusBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      obj->removeWidget( PQWIDGET(1) );
+      obj->removeWidget( PQWIDGET( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -266,15 +266,15 @@ void setSizeGripEnabled( bool )
 */
 HB_FUNC_STATIC( QSTATUSBAR_SETSIZEGRIPENABLED )
 {
-  QStatusBar * obj = (QStatusBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStatusBar * obj = ( QStatusBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setSizeGripEnabled( PBOOL(1) );
+      obj->setSizeGripEnabled( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,12 +292,12 @@ void clearMessage()
 */
 HB_FUNC_STATIC( QSTATUSBAR_CLEARMESSAGE )
 {
-  QStatusBar * obj = (QStatusBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStatusBar * obj = ( QStatusBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->clearMessage();
@@ -318,15 +318,15 @@ void showMessage( const QString & message, int timeout = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_SHOWMESSAGE )
 {
-  QStatusBar * obj = (QStatusBar *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStatusBar * obj = ( QStatusBar * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ISOPTNUM( 2 ) )
     {
 #endif
-      obj->showMessage( PQSTRING(1), OPINT(2,0) );
+      obj->showMessage( PQSTRING( 1 ), OPINT( 2, 0 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

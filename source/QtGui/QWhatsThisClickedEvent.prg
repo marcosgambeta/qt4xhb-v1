@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -44,9 +44,9 @@ QWhatsThisClickedEvent( const QString & href )
 */
 HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_NEW )
 {
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
-    QWhatsThisClickedEvent * obj = new QWhatsThisClickedEvent( PQSTRING(1) );
+    QWhatsThisClickedEvent * obj = new QWhatsThisClickedEvent( PQSTRING( 1 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_NEW )
 
 HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_DELETE )
 {
-  QWhatsThisClickedEvent * obj = (QWhatsThisClickedEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWhatsThisClickedEvent * obj = ( QWhatsThisClickedEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -77,12 +77,12 @@ QString href() const
 */
 HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_HREF )
 {
-  QWhatsThisClickedEvent * obj = (QWhatsThisClickedEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWhatsThisClickedEvent * obj = ( QWhatsThisClickedEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->href() );

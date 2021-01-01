@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -52,7 +52,7 @@ QIntValidator( QObject * parent = 0 )
 */
 void QIntValidator_new1()
 {
-  QIntValidator * obj = new QIntValidator( OPQOBJECT(1,0) );
+  QIntValidator * obj = new QIntValidator( OPQOBJECT( 1, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -61,17 +61,17 @@ QIntValidator( int minimum, int maximum, QObject * parent )
 */
 void QIntValidator_new2()
 {
-  QIntValidator * obj = new QIntValidator( PINT(1), PINT(2), PQOBJECT(3) );
+  QIntValidator * obj = new QIntValidator( PINT( 1 ), PINT( 2 ), PQOBJECT( 3 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QINTVALIDATOR_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
     QIntValidator_new1();
   }
-  else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQOBJECT(3) )
+  else if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISQOBJECT( 3 ) )
   {
     QIntValidator_new2();
   }
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_NEW )
 
 HB_FUNC_STATIC( QINTVALIDATOR_DELETE )
 {
-  QIntValidator * obj = (QIntValidator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIntValidator * obj = ( QIntValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -105,12 +105,12 @@ int bottom() const
 */
 HB_FUNC_STATIC( QINTVALIDATOR_BOTTOM )
 {
-  QIntValidator * obj = (QIntValidator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIntValidator * obj = ( QIntValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->bottom() );
@@ -129,15 +129,15 @@ void setBottom( int )
 */
 HB_FUNC_STATIC( QINTVALIDATOR_SETBOTTOM )
 {
-  QIntValidator * obj = (QIntValidator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIntValidator * obj = ( QIntValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setBottom( PINT(1) );
+      obj->setBottom( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,15 +155,15 @@ virtual void setRange( int bottom, int top )
 */
 HB_FUNC_STATIC( QINTVALIDATOR_SETRANGE )
 {
-  QIntValidator * obj = (QIntValidator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIntValidator * obj = ( QIntValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      obj->setRange( PINT(1), PINT(2) );
+      obj->setRange( PINT( 1 ), PINT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,15 +181,15 @@ void setTop( int )
 */
 HB_FUNC_STATIC( QINTVALIDATOR_SETTOP )
 {
-  QIntValidator * obj = (QIntValidator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIntValidator * obj = ( QIntValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setTop( PINT(1) );
+      obj->setTop( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,12 +207,12 @@ int top() const
 */
 HB_FUNC_STATIC( QINTVALIDATOR_TOP )
 {
-  QIntValidator * obj = (QIntValidator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIntValidator * obj = ( QIntValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->top() );
@@ -231,17 +231,17 @@ virtual void fixup( QString & input ) const
 */
 HB_FUNC_STATIC( QINTVALIDATOR_FIXUP )
 {
-  QIntValidator * obj = (QIntValidator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIntValidator * obj = ( QIntValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      QString par1 = hb_parc(1);
+      QString par1 = hb_parc( 1 );
       obj->fixup( par1 );
-      hb_storc( QSTRINGTOSTRING(par1), 1);
+      hb_storc( QSTRINGTOSTRING( par1 ), 1 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -259,18 +259,18 @@ virtual QValidator::State validate( QString & input, int & pos ) const
 */
 HB_FUNC_STATIC( QINTVALIDATOR_VALIDATE )
 {
-  QIntValidator * obj = (QIntValidator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIntValidator * obj = ( QIntValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      QString par1 = hb_parc(1);
+      QString par1 = hb_parc( 1 );
       int par2;
       RENUM( obj->validate( par1, par2 ) );
-      hb_storc( QSTRINGTOSTRING(par1), 1);
+      hb_storc( QSTRINGTOSTRING( par1 ), 1 );
       hb_storni( par2, 2 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -78,7 +78,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTBUTTON_DELETE )
 {
-  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -100,12 +100,12 @@ bool autoExclusive() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOEXCLUSIVE )
 {
-  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->autoExclusive() );
@@ -124,12 +124,12 @@ bool autoRepeat() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEAT )
 {
-  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->autoRepeat() );
@@ -148,12 +148,12 @@ int autoRepeatDelay() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATDELAY )
 {
-  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->autoRepeatDelay() );
@@ -172,12 +172,12 @@ int autoRepeatInterval() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATINTERVAL )
 {
-  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->autoRepeatInterval() );
@@ -196,12 +196,12 @@ QButtonGroup * group() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_GROUP )
 {
-  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QButtonGroup * ptr = obj->group();
@@ -221,12 +221,12 @@ QIcon icon() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ICON )
 {
-  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QIcon * ptr = new QIcon( obj->icon() );
@@ -246,12 +246,12 @@ QSize iconSize() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ICONSIZE )
 {
-  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->iconSize() );
@@ -271,12 +271,12 @@ bool isCheckable() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKABLE )
 {
-  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isCheckable() );
@@ -295,12 +295,12 @@ bool isChecked() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKED )
 {
-  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isChecked() );
@@ -319,12 +319,12 @@ bool isDown() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ISDOWN )
 {
-  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isDown() );
@@ -343,15 +343,15 @@ void setAutoExclusive( bool )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOEXCLUSIVE )
 {
-  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setAutoExclusive( PBOOL(1) );
+      obj->setAutoExclusive( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -369,15 +369,15 @@ void setAutoRepeat( bool )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEAT )
 {
-  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setAutoRepeat( PBOOL(1) );
+      obj->setAutoRepeat( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -395,15 +395,15 @@ void setAutoRepeatDelay( int )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATDELAY )
 {
-  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setAutoRepeatDelay( PINT(1) );
+      obj->setAutoRepeatDelay( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -421,15 +421,15 @@ void setAutoRepeatInterval( int )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATINTERVAL )
 {
-  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setAutoRepeatInterval( PINT(1) );
+      obj->setAutoRepeatInterval( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -447,15 +447,15 @@ void setCheckable( bool )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKABLE )
 {
-  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setCheckable( PBOOL(1) );
+      obj->setCheckable( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -473,15 +473,15 @@ void setDown( bool )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETDOWN )
 {
-  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setDown( PBOOL(1) );
+      obj->setDown( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -499,15 +499,15 @@ void setIcon( const QIcon & icon )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETICON )
 {
-  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQICON(1)||ISCHAR(1)) )
+    if( ISNUMPAR( 1 ) && ( ISQICON( 1) || ISCHAR( 1 ) ) )
     {
 #endif
-      obj->setIcon( ISOBJECT(1)? *(QIcon *) Qt4xHb::itemGetPtr(1) : QIcon(hb_parc(1)) );
+      obj->setIcon( ISOBJECT( 1 )? *( QIcon * ) Qt4xHb::itemGetPtr( 1 ) : QIcon( hb_parc( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -525,15 +525,15 @@ void setShortcut( const QKeySequence & key )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETSHORTCUT )
 {
-  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQKEYSEQUENCE(1) )
+    if( ISNUMPAR( 1 ) && ISQKEYSEQUENCE( 1 ) )
     {
 #endif
-      obj->setShortcut( *PQKEYSEQUENCE(1) );
+      obj->setShortcut( *PQKEYSEQUENCE( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -551,15 +551,15 @@ void setText( const QString & text )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETTEXT )
 {
-  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setText( PQSTRING(1) );
+      obj->setText( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -577,12 +577,12 @@ QKeySequence shortcut() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SHORTCUT )
 {
-  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QKeySequence * ptr = new QKeySequence( obj->shortcut() );
@@ -602,12 +602,12 @@ QString text() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_TEXT )
 {
-  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->text() );
@@ -626,15 +626,15 @@ void animateClick( int msec = 100 )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ANIMATECLICK )
 {
-  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
     {
 #endif
-      obj->animateClick( OPINT(1,100) );
+      obj->animateClick( OPINT( 1, 100 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -652,12 +652,12 @@ void click()
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_CLICK )
 {
-  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->click();
@@ -678,15 +678,15 @@ void setChecked( bool )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKED )
 {
-  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setChecked( PBOOL(1) );
+      obj->setChecked( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -704,15 +704,15 @@ void setIconSize( const QSize & size )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETICONSIZE )
 {
-  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSIZE(1) )
+    if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
     {
 #endif
-      obj->setIconSize( *PQSIZE(1) );
+      obj->setIconSize( *PQSIZE( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -730,12 +730,12 @@ void toggle()
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_TOGGLE )
 {
-  QAbstractButton * obj = (QAbstractButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->toggle();

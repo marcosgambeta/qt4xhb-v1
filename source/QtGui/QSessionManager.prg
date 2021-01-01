@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -58,12 +58,12 @@ bool allowsErrorInteraction()
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSERRORINTERACTION )
 {
-  QSessionManager * obj = (QSessionManager *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSessionManager * obj = ( QSessionManager * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->allowsErrorInteraction() );
@@ -82,12 +82,12 @@ bool allowsInteraction()
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSINTERACTION )
 {
-  QSessionManager * obj = (QSessionManager *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSessionManager * obj = ( QSessionManager * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->allowsInteraction() );
@@ -106,12 +106,12 @@ void cancel()
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_CANCEL )
 {
-  QSessionManager * obj = (QSessionManager *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSessionManager * obj = ( QSessionManager * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->cancel();
@@ -132,12 +132,12 @@ QStringList discardCommand() const
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_DISCARDCOMMAND )
 {
-  QSessionManager * obj = (QSessionManager *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSessionManager * obj = ( QSessionManager * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->discardCommand() );
@@ -156,12 +156,12 @@ bool isPhase2() const
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_ISPHASE2 )
 {
-  QSessionManager * obj = (QSessionManager *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSessionManager * obj = ( QSessionManager * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isPhase2() );
@@ -180,12 +180,12 @@ void release()
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_RELEASE )
 {
-  QSessionManager * obj = (QSessionManager *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSessionManager * obj = ( QSessionManager * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->release();
@@ -206,12 +206,12 @@ void requestPhase2()
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_REQUESTPHASE2 )
 {
-  QSessionManager * obj = (QSessionManager *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSessionManager * obj = ( QSessionManager * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->requestPhase2();
@@ -232,12 +232,12 @@ QStringList restartCommand() const
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTCOMMAND )
 {
-  QSessionManager * obj = (QSessionManager *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSessionManager * obj = ( QSessionManager * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->restartCommand() );
@@ -256,12 +256,12 @@ QSessionManager::RestartHint restartHint() const
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTHINT )
 {
-  QSessionManager * obj = (QSessionManager *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSessionManager * obj = ( QSessionManager * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->restartHint() );
@@ -280,12 +280,12 @@ QString sessionId() const
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONID )
 {
-  QSessionManager * obj = (QSessionManager *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSessionManager * obj = ( QSessionManager * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->sessionId() );
@@ -304,12 +304,12 @@ QString sessionKey() const
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONKEY )
 {
-  QSessionManager * obj = (QSessionManager *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSessionManager * obj = ( QSessionManager * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->sessionKey() );
@@ -328,15 +328,15 @@ void setDiscardCommand( const QStringList & list )
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_SETDISCARDCOMMAND )
 {
-  QSessionManager * obj = (QSessionManager *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSessionManager * obj = ( QSessionManager * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISARRAY( 1 ) )
     {
 #endif
-      obj->setDiscardCommand( PQSTRINGLIST(1) );
+      obj->setDiscardCommand( PQSTRINGLIST( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -354,11 +354,11 @@ void setManagerProperty( const QString & name, const QStringList & value )
 */
 void QSessionManager_setManagerProperty1()
 {
-  QSessionManager * obj = (QSessionManager *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSessionManager * obj = ( QSessionManager * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setManagerProperty( PQSTRING(1), PQSTRINGLIST(2) );
+    obj->setManagerProperty( PQSTRING( 1 ), PQSTRINGLIST( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -369,11 +369,11 @@ void setManagerProperty( const QString & name, const QString & value )
 */
 void QSessionManager_setManagerProperty2()
 {
-  QSessionManager * obj = (QSessionManager *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSessionManager * obj = ( QSessionManager * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setManagerProperty( PQSTRING(1), PQSTRING(2) );
+    obj->setManagerProperty( PQSTRING( 1 ), PQSTRING( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -381,11 +381,11 @@ void QSessionManager_setManagerProperty2()
 
 HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY )
 {
-  if( ISNUMPAR(2) && ISCHAR(1) && ISARRAY(2) )
+  if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISARRAY( 2 ) )
   {
     QSessionManager_setManagerProperty1();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISCHAR( 2 ) )
   {
     QSessionManager_setManagerProperty2();
   }
@@ -400,15 +400,15 @@ void setRestartCommand( const QStringList & command )
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTCOMMAND )
 {
-  QSessionManager * obj = (QSessionManager *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSessionManager * obj = ( QSessionManager * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISARRAY( 1 ) )
     {
 #endif
-      obj->setRestartCommand( PQSTRINGLIST(1) );
+      obj->setRestartCommand( PQSTRINGLIST( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -426,15 +426,15 @@ void setRestartHint( QSessionManager::RestartHint hint )
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTHINT )
 {
-  QSessionManager * obj = (QSessionManager *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSessionManager * obj = ( QSessionManager * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setRestartHint( (QSessionManager::RestartHint) hb_parni(1) );
+      obj->setRestartHint( ( QSessionManager::RestartHint ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

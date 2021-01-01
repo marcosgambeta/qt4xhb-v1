@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -54,9 +54,9 @@ QGraphicsBlurEffect( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
-    QGraphicsBlurEffect * obj = new QGraphicsBlurEffect( OPQOBJECT(1,0) );
+    QGraphicsBlurEffect * obj = new QGraphicsBlurEffect( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_DELETE )
 {
-  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsBlurEffect * obj = ( QGraphicsBlurEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -89,12 +89,12 @@ QGraphicsBlurEffect::BlurHints blurHints() const
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURHINTS )
 {
-  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsBlurEffect * obj = ( QGraphicsBlurEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->blurHints() );
@@ -113,12 +113,12 @@ qreal blurRadius() const
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURRADIUS )
 {
-  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsBlurEffect * obj = ( QGraphicsBlurEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->blurRadius() );
@@ -137,15 +137,15 @@ virtual QRectF boundingRectFor( const QRectF & rect ) const
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR )
 {
-  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsBlurEffect * obj = ( QGraphicsBlurEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQRECTF(1) )
+    if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->boundingRectFor( *PQRECTF(1) ) );
+      QRectF * ptr = new QRectF( obj->boundingRectFor( *PQRECTF( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -162,15 +162,15 @@ void setBlurHints( QGraphicsBlurEffect::BlurHints hints )
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURHINTS )
 {
-  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsBlurEffect * obj = ( QGraphicsBlurEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setBlurHints( (QGraphicsBlurEffect::BlurHints) hb_parni(1) );
+      obj->setBlurHints( ( QGraphicsBlurEffect::BlurHints ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,15 +188,15 @@ void setBlurRadius( qreal blurRadius )
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURRADIUS )
 {
-  QGraphicsBlurEffect * obj = (QGraphicsBlurEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsBlurEffect * obj = ( QGraphicsBlurEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setBlurRadius( PQREAL(1) );
+      obj->setBlurRadius( PQREAL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

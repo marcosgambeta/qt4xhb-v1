@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -30,7 +30,7 @@ class QDragSlots: public QObject
 {
   Q_OBJECT
   public:
-  QDragSlots( QObject *parent = 0 );
+  QDragSlots( QObject * parent = 0 );
   ~QDragSlots();
   public slots:
   void actionChanged( Qt::DropAction action );

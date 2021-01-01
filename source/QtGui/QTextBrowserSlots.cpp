@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QTextBrowserSlots.h"
 
-QTextBrowserSlots::QTextBrowserSlots( QObject *parent ) : QObject( parent )
+QTextBrowserSlots::QTextBrowserSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,14 +22,14 @@ QTextBrowserSlots::~QTextBrowserSlots()
 
 void QTextBrowserSlots::anchorClicked( const QUrl & link )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "anchorClicked(QUrl)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QTEXTBROWSER" );
-    PHB_ITEM plink = Qt4xHb::Signals_return_object( (void *) &link, "QURL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTEXTBROWSER" );
+    PHB_ITEM plink = Qt4xHb::Signals_return_object( ( void * ) &link, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, plink );
 
@@ -40,13 +40,13 @@ void QTextBrowserSlots::anchorClicked( const QUrl & link )
 
 void QTextBrowserSlots::backwardAvailable( bool available )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "backwardAvailable(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QTEXTBROWSER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTEXTBROWSER" );
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
 
     hb_vmEvalBlockV( cb, 2, psender, pavailable );
@@ -58,13 +58,13 @@ void QTextBrowserSlots::backwardAvailable( bool available )
 
 void QTextBrowserSlots::forwardAvailable( bool available )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "forwardAvailable(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QTEXTBROWSER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTEXTBROWSER" );
     PHB_ITEM pavailable = hb_itemPutL( NULL, available );
 
     hb_vmEvalBlockV( cb, 2, psender, pavailable );
@@ -76,14 +76,14 @@ void QTextBrowserSlots::forwardAvailable( bool available )
 
 void QTextBrowserSlots::highlighted( const QUrl & link )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "highlighted(QUrl)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QTEXTBROWSER" );
-    PHB_ITEM plink = Qt4xHb::Signals_return_object( (void *) &link, "QURL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTEXTBROWSER" );
+    PHB_ITEM plink = Qt4xHb::Signals_return_object( ( void * ) &link, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, plink );
 
@@ -94,14 +94,14 @@ void QTextBrowserSlots::highlighted( const QUrl & link )
 
 void QTextBrowserSlots::highlighted( const QString & link )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "highlighted(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QTEXTBROWSER" );
-    PHB_ITEM plink = hb_itemPutC( NULL, QSTRINGTOSTRING(link) );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTEXTBROWSER" );
+    PHB_ITEM plink = hb_itemPutC( NULL, QSTRINGTOSTRING( link ) );
 
     hb_vmEvalBlockV( cb, 2, psender, plink );
 
@@ -112,13 +112,13 @@ void QTextBrowserSlots::highlighted( const QString & link )
 
 void QTextBrowserSlots::historyChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "historyChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QTEXTBROWSER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTEXTBROWSER" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -128,14 +128,14 @@ void QTextBrowserSlots::historyChanged()
 
 void QTextBrowserSlots::sourceChanged( const QUrl & src )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "sourceChanged(QUrl)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QTEXTBROWSER" );
-    PHB_ITEM psrc = Qt4xHb::Signals_return_object( (void *) &src, "QURL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTEXTBROWSER" );
+    PHB_ITEM psrc = Qt4xHb::Signals_return_object( ( void * ) &src, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, psrc );
 
@@ -146,7 +146,7 @@ void QTextBrowserSlots::sourceChanged( const QUrl & src )
 
 void QTextBrowserSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTextBrowser * obj = (QTextBrowser *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextBrowser * obj = ( QTextBrowser * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

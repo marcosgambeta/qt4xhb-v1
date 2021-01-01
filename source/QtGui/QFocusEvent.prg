@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -46,9 +46,9 @@ QFocusEvent( QEvent::Type type, Qt::FocusReason reason = Qt::OtherFocusReason )
 */
 HB_FUNC_STATIC( QFOCUSEVENT_NEW )
 {
-  if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+  if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) )
   {
-    QFocusEvent * obj = new QFocusEvent( (QEvent::Type) hb_parni(1), ISNIL(2)? (Qt::FocusReason) Qt::OtherFocusReason : (Qt::FocusReason) hb_parni(2) );
+    QFocusEvent * obj = new QFocusEvent( ( QEvent::Type ) hb_parni( 1 ), ISNIL( 2 )? ( Qt::FocusReason ) Qt::OtherFocusReason : ( Qt::FocusReason ) hb_parni( 2 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QFOCUSEVENT_NEW )
 
 HB_FUNC_STATIC( QFOCUSEVENT_DELETE )
 {
-  QFocusEvent * obj = (QFocusEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFocusEvent * obj = ( QFocusEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -79,12 +79,12 @@ bool gotFocus() const
 */
 HB_FUNC_STATIC( QFOCUSEVENT_GOTFOCUS )
 {
-  QFocusEvent * obj = (QFocusEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFocusEvent * obj = ( QFocusEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->gotFocus() );
@@ -103,12 +103,12 @@ bool lostFocus() const
 */
 HB_FUNC_STATIC( QFOCUSEVENT_LOSTFOCUS )
 {
-  QFocusEvent * obj = (QFocusEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFocusEvent * obj = ( QFocusEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->lostFocus() );
@@ -127,12 +127,12 @@ Qt::FocusReason reason() const
 */
 HB_FUNC_STATIC( QFOCUSEVENT_REASON )
 {
-  QFocusEvent * obj = (QFocusEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFocusEvent * obj = ( QFocusEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->reason() );

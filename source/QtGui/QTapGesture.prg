@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -44,7 +44,7 @@ RETURN
 
 HB_FUNC_STATIC( QTAPGESTURE_DELETE )
 {
-  QTapGesture * obj = (QTapGesture *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTapGesture * obj = ( QTapGesture * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -66,12 +66,12 @@ QPointF position() const
 */
 HB_FUNC_STATIC( QTAPGESTURE_POSITION )
 {
-  QTapGesture * obj = (QTapGesture *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTapGesture * obj = ( QTapGesture * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPointF * ptr = new QPointF( obj->position() );
@@ -91,15 +91,15 @@ void setPosition( const QPointF & pos )
 */
 HB_FUNC_STATIC( QTAPGESTURE_SETPOSITION )
 {
-  QTapGesture * obj = (QTapGesture *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTapGesture * obj = ( QTapGesture * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINTF(1) )
+    if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
     {
 #endif
-      obj->setPosition( *PQPOINTF(1) );
+      obj->setPosition( *PQPOINTF( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

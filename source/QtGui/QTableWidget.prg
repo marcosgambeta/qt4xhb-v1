@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -110,7 +110,7 @@ QTableWidget( QWidget * parent = 0 )
 */
 void QTableWidget_new1()
 {
-  QTableWidget * obj = new QTableWidget( OPQWIDGET(1,0) );
+  QTableWidget * obj = new QTableWidget( OPQWIDGET( 1, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -119,17 +119,17 @@ QTableWidget( int rows, int columns, QWidget * parent = 0 )
 */
 void QTableWidget_new2()
 {
-  QTableWidget * obj = new QTableWidget( PINT(1), PINT(2), OPQWIDGET(3,0) );
+  QTableWidget * obj = new QTableWidget( PINT( 1 ), PINT( 2 ), OPQWIDGET( 3, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
   {
     QTableWidget_new1();
   }
-  else if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQWIDGET(3)||ISNIL(3)) )
+  else if( ISBETWEEN( 2, 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ( ISQWIDGET( 3 ) || ISNIL( 3 ) ) )
   {
     QTableWidget_new2();
   }
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_NEW )
 
 HB_FUNC_STATIC( QTABLEWIDGET_DELETE )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -163,15 +163,15 @@ QWidget * cellWidget( int row, int column ) const
 */
 HB_FUNC_STATIC( QTABLEWIDGET_CELLWIDGET )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      QWidget * ptr = obj->cellWidget( PINT(1), PINT(2) );
+      QWidget * ptr = obj->cellWidget( PINT( 1 ), PINT( 2 ) );
       Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -188,15 +188,15 @@ void closePersistentEditor( QTableWidgetItem * item )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_CLOSEPERSISTENTEDITOR )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTABLEWIDGETITEM(1) )
+    if( ISNUMPAR( 1 ) && ISQTABLEWIDGETITEM( 1 ) )
     {
 #endif
-      obj->closePersistentEditor( PQTABLEWIDGETITEM(1) );
+      obj->closePersistentEditor( PQTABLEWIDGETITEM( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,15 +214,15 @@ int column( const QTableWidgetItem * item ) const
 */
 HB_FUNC_STATIC( QTABLEWIDGET_COLUMN )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTABLEWIDGETITEM(1) )
+    if( ISNUMPAR( 1 ) && ISQTABLEWIDGETITEM( 1 ) )
     {
 #endif
-      RINT( obj->column( PQTABLEWIDGETITEM(1) ) );
+      RINT( obj->column( PQTABLEWIDGETITEM( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,12 +238,12 @@ int columnCount() const
 */
 HB_FUNC_STATIC( QTABLEWIDGET_COLUMNCOUNT )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->columnCount() );
@@ -262,12 +262,12 @@ int currentColumn() const
 */
 HB_FUNC_STATIC( QTABLEWIDGET_CURRENTCOLUMN )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->currentColumn() );
@@ -286,12 +286,12 @@ QTableWidgetItem * currentItem() const
 */
 HB_FUNC_STATIC( QTABLEWIDGET_CURRENTITEM )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTableWidgetItem * ptr = obj->currentItem();
@@ -311,12 +311,12 @@ int currentRow() const
 */
 HB_FUNC_STATIC( QTABLEWIDGET_CURRENTROW )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->currentRow() );
@@ -335,15 +335,15 @@ void editItem( QTableWidgetItem * item )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_EDITITEM )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTABLEWIDGETITEM(1) )
+    if( ISNUMPAR( 1 ) && ISQTABLEWIDGETITEM( 1 ) )
     {
 #endif
-      obj->editItem( PQTABLEWIDGETITEM(1) );
+      obj->editItem( PQTABLEWIDGETITEM( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -361,17 +361,17 @@ QList<QTableWidgetItem *> findItems( const QString & text, Qt::MatchFlags flags 
 */
 HB_FUNC_STATIC( QTABLEWIDGET_FINDITEMS )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      QList<QTableWidgetItem *> list = obj->findItems( PQSTRING(1), (Qt::MatchFlags) hb_parni(2) );
+      QList<QTableWidgetItem *> list = obj->findItems( PQSTRING( 1 ), ( Qt::MatchFlags ) hb_parni( 2 ) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QTABLEWIDGETITEM" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_FINDITEMS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QTableWidgetItem *) list[i] );
+          hb_itemPutPtr( pItem, ( QTableWidgetItem * ) list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -409,15 +409,15 @@ QTableWidgetItem * horizontalHeaderItem( int column ) const
 */
 HB_FUNC_STATIC( QTABLEWIDGET_HORIZONTALHEADERITEM )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QTableWidgetItem * ptr = obj->horizontalHeaderItem( PINT(1) );
+      QTableWidgetItem * ptr = obj->horizontalHeaderItem( PINT( 1 ) );
       Qt4xHb::createReturnClass( ptr, "QTABLEWIDGETITEM", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -434,15 +434,15 @@ QTableWidgetItem * item( int row, int column ) const
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ITEM )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      QTableWidgetItem * ptr = obj->item( PINT(1), PINT(2) );
+      QTableWidgetItem * ptr = obj->item( PINT( 1 ), PINT( 2 ) );
       Qt4xHb::createReturnClass( ptr, "QTABLEWIDGETITEM", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -459,11 +459,11 @@ QTableWidgetItem * itemAt( const QPoint & point ) const
 */
 void QTableWidget_itemAt1()
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QTableWidgetItem * ptr = obj->itemAt( *PQPOINT(1) );
+    QTableWidgetItem * ptr = obj->itemAt( *PQPOINT( 1 ) );
     Qt4xHb::createReturnClass( ptr, "QTABLEWIDGETITEM", false );
   }
 }
@@ -473,22 +473,22 @@ QTableWidgetItem * itemAt( int ax, int ay ) const
 */
 void QTableWidget_itemAt2()
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QTableWidgetItem * ptr = obj->itemAt( PINT(1), PINT(2) );
+    QTableWidgetItem * ptr = obj->itemAt( PINT( 1 ), PINT( 2 ) );
     Qt4xHb::createReturnClass( ptr, "QTABLEWIDGETITEM", false );
   }
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ITEMAT )
 {
-  if( ISNUMPAR(1) && ISQPOINT(1) )
+  if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
     QTableWidget_itemAt1();
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
   {
     QTableWidget_itemAt2();
   }
@@ -503,15 +503,15 @@ void openPersistentEditor( QTableWidgetItem * item )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_OPENPERSISTENTEDITOR )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTABLEWIDGETITEM(1) )
+    if( ISNUMPAR( 1 ) && ISQTABLEWIDGETITEM( 1 ) )
     {
 #endif
-      obj->openPersistentEditor( PQTABLEWIDGETITEM(1) );
+      obj->openPersistentEditor( PQTABLEWIDGETITEM( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -529,15 +529,15 @@ void removeCellWidget( int row, int column )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_REMOVECELLWIDGET )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      obj->removeCellWidget( PINT(1), PINT(2) );
+      obj->removeCellWidget( PINT( 1 ), PINT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -555,15 +555,15 @@ int row( const QTableWidgetItem * item ) const
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ROW )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTABLEWIDGETITEM(1) )
+    if( ISNUMPAR( 1 ) && ISQTABLEWIDGETITEM( 1 ) )
     {
 #endif
-      RINT( obj->row( PQTABLEWIDGETITEM(1) ) );
+      RINT( obj->row( PQTABLEWIDGETITEM( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -579,12 +579,12 @@ int rowCount() const
 */
 HB_FUNC_STATIC( QTABLEWIDGET_ROWCOUNT )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->rowCount() );
@@ -603,17 +603,17 @@ QList<QTableWidgetItem *> selectedItems()
 */
 HB_FUNC_STATIC( QTABLEWIDGET_SELECTEDITEMS )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QTableWidgetItem *> list = obj->selectedItems();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QTABLEWIDGETITEM" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
@@ -624,7 +624,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SELECTEDITEMS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QTableWidgetItem *) list[i] );
+          hb_itemPutPtr( pItem, ( QTableWidgetItem * ) list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -651,17 +651,17 @@ QList<QTableWidgetSelectionRange> selectedRanges() const
 */
 HB_FUNC_STATIC( QTABLEWIDGET_SELECTEDRANGES )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QTableWidgetSelectionRange> list = obj->selectedRanges();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QTABLEWIDGETSELECTIONRANGE" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SELECTEDRANGES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QTableWidgetSelectionRange *) new QTableWidgetSelectionRange( list[i] ) );
+          hb_itemPutPtr( pItem, ( QTableWidgetSelectionRange * ) new QTableWidgetSelectionRange( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -703,15 +703,15 @@ void setCellWidget( int row, int column, QWidget * widget )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_SETCELLWIDGET )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQWIDGET(3) )
+    if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISQWIDGET( 3 ) )
     {
 #endif
-      obj->setCellWidget( PINT(1), PINT(2), PQWIDGET(3) );
+      obj->setCellWidget( PINT( 1 ), PINT( 2 ), PQWIDGET( 3 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -729,15 +729,15 @@ void setColumnCount( int columns )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_SETCOLUMNCOUNT )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setColumnCount( PINT(1) );
+      obj->setColumnCount( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -755,11 +755,11 @@ void setCurrentCell( int row, int column )
 */
 void QTableWidget_setCurrentCell1()
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setCurrentCell( PINT(1), PINT(2) );
+    obj->setCurrentCell( PINT( 1 ), PINT( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -770,11 +770,11 @@ void setCurrentCell( int row, int column, QItemSelectionModel::SelectionFlags co
 */
 void QTableWidget_setCurrentCell2()
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setCurrentCell( PINT(1), PINT(2), (QItemSelectionModel::SelectionFlags) hb_parni(3) );
+    obj->setCurrentCell( PINT( 1 ), PINT( 2 ), ( QItemSelectionModel::SelectionFlags ) hb_parni( 3 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -782,11 +782,11 @@ void QTableWidget_setCurrentCell2()
 
 HB_FUNC_STATIC( QTABLEWIDGET_SETCURRENTCELL )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
   {
     QTableWidget_setCurrentCell1();
   }
-  else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
+  else if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) )
   {
     QTableWidget_setCurrentCell2();
   }
@@ -801,11 +801,11 @@ void setCurrentItem( QTableWidgetItem * item )
 */
 void QTableWidget_setCurrentItem1()
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setCurrentItem( PQTABLEWIDGETITEM(1) );
+    obj->setCurrentItem( PQTABLEWIDGETITEM( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -816,11 +816,11 @@ void setCurrentItem( QTableWidgetItem * item, QItemSelectionModel::SelectionFlag
 */
 void QTableWidget_setCurrentItem2()
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setCurrentItem( PQTABLEWIDGETITEM(1), (QItemSelectionModel::SelectionFlags) hb_parni(2) );
+    obj->setCurrentItem( PQTABLEWIDGETITEM( 1 ), ( QItemSelectionModel::SelectionFlags ) hb_parni( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -828,11 +828,11 @@ void QTableWidget_setCurrentItem2()
 
 HB_FUNC_STATIC( QTABLEWIDGET_SETCURRENTITEM )
 {
-  if( ISNUMPAR(1) && ISQTABLEWIDGETITEM(1) )
+  if( ISNUMPAR( 1 ) && ISQTABLEWIDGETITEM( 1 ) )
   {
     QTableWidget_setCurrentItem1();
   }
-  else if( ISNUMPAR(2) && ISQTABLEWIDGETITEM(1) && ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && ISQTABLEWIDGETITEM( 1 ) && ISNUM( 2 ) )
   {
     QTableWidget_setCurrentItem2();
   }
@@ -847,15 +847,15 @@ void setHorizontalHeaderItem( int column, QTableWidgetItem * item )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_SETHORIZONTALHEADERITEM )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQTABLEWIDGETITEM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQTABLEWIDGETITEM( 2 ) )
     {
 #endif
-      obj->setHorizontalHeaderItem( PINT(1), PQTABLEWIDGETITEM(2) );
+      obj->setHorizontalHeaderItem( PINT( 1 ), PQTABLEWIDGETITEM( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -873,15 +873,15 @@ void setHorizontalHeaderLabels( const QStringList & labels )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_SETHORIZONTALHEADERLABELS )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISARRAY( 1 ) )
     {
 #endif
-      obj->setHorizontalHeaderLabels( PQSTRINGLIST(1) );
+      obj->setHorizontalHeaderLabels( PQSTRINGLIST( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -899,15 +899,15 @@ void setItem( int row, int column, QTableWidgetItem * item )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_SETITEM )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISQTABLEWIDGETITEM(3) )
+    if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISQTABLEWIDGETITEM( 3 ) )
     {
 #endif
-      obj->setItem( PINT(1), PINT(2), PQTABLEWIDGETITEM(3) );
+      obj->setItem( PINT( 1 ), PINT( 2 ), PQTABLEWIDGETITEM( 3 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -925,15 +925,15 @@ void setItemPrototype( const QTableWidgetItem * item )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_SETITEMPROTOTYPE )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTABLEWIDGETITEM(1) )
+    if( ISNUMPAR( 1 ) && ISQTABLEWIDGETITEM( 1 ) )
     {
 #endif
-      obj->setItemPrototype( PQTABLEWIDGETITEM(1) );
+      obj->setItemPrototype( PQTABLEWIDGETITEM( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -951,15 +951,15 @@ void setRangeSelected( const QTableWidgetSelectionRange & range, bool select )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_SETRANGESELECTED )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQTABLEWIDGETSELECTIONRANGE(1) && ISLOG(2) )
+    if( ISNUMPAR( 2 ) && ISQTABLEWIDGETSELECTIONRANGE( 1 ) && ISLOG( 2 ) )
     {
 #endif
-      obj->setRangeSelected( *PQTABLEWIDGETSELECTIONRANGE(1), PBOOL(2) );
+      obj->setRangeSelected( *PQTABLEWIDGETSELECTIONRANGE( 1 ), PBOOL( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -977,15 +977,15 @@ void setRowCount( int rows )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_SETROWCOUNT )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setRowCount( PINT(1) );
+      obj->setRowCount( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1003,15 +1003,15 @@ void setVerticalHeaderItem( int row, QTableWidgetItem * item )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_SETVERTICALHEADERITEM )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQTABLEWIDGETITEM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQTABLEWIDGETITEM( 2 ) )
     {
 #endif
-      obj->setVerticalHeaderItem( PINT(1), PQTABLEWIDGETITEM(2) );
+      obj->setVerticalHeaderItem( PINT( 1 ), PQTABLEWIDGETITEM( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1029,15 +1029,15 @@ void setVerticalHeaderLabels( const QStringList & labels )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_SETVERTICALHEADERLABELS )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISARRAY( 1 ) )
     {
 #endif
-      obj->setVerticalHeaderLabels( PQSTRINGLIST(1) );
+      obj->setVerticalHeaderLabels( PQSTRINGLIST( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1055,15 +1055,15 @@ void sortItems( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_SORTITEMS )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) )
     {
 #endif
-      obj->sortItems( PINT(1), ISNIL(2)? (Qt::SortOrder) Qt::AscendingOrder : (Qt::SortOrder) hb_parni(2) );
+      obj->sortItems( PINT( 1 ), ISNIL( 2 )? ( Qt::SortOrder ) Qt::AscendingOrder : ( Qt::SortOrder ) hb_parni( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1081,15 +1081,15 @@ QTableWidgetItem * takeHorizontalHeaderItem( int column )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_TAKEHORIZONTALHEADERITEM )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QTableWidgetItem * ptr = obj->takeHorizontalHeaderItem( PINT(1) );
+      QTableWidgetItem * ptr = obj->takeHorizontalHeaderItem( PINT( 1 ) );
       Qt4xHb::createReturnClass( ptr, "QTABLEWIDGETITEM", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1106,15 +1106,15 @@ QTableWidgetItem * takeItem( int row, int column )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_TAKEITEM )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      QTableWidgetItem * ptr = obj->takeItem( PINT(1), PINT(2) );
+      QTableWidgetItem * ptr = obj->takeItem( PINT( 1 ), PINT( 2 ) );
       Qt4xHb::createReturnClass( ptr, "QTABLEWIDGETITEM", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1131,15 +1131,15 @@ QTableWidgetItem * takeVerticalHeaderItem( int row )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_TAKEVERTICALHEADERITEM )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QTableWidgetItem * ptr = obj->takeVerticalHeaderItem( PINT(1) );
+      QTableWidgetItem * ptr = obj->takeVerticalHeaderItem( PINT( 1 ) );
       Qt4xHb::createReturnClass( ptr, "QTABLEWIDGETITEM", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1156,15 +1156,15 @@ QTableWidgetItem * verticalHeaderItem( int row ) const
 */
 HB_FUNC_STATIC( QTABLEWIDGET_VERTICALHEADERITEM )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QTableWidgetItem * ptr = obj->verticalHeaderItem( PINT(1) );
+      QTableWidgetItem * ptr = obj->verticalHeaderItem( PINT( 1 ) );
       Qt4xHb::createReturnClass( ptr, "QTABLEWIDGETITEM", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1181,15 +1181,15 @@ int visualColumn( int logicalColumn ) const
 */
 HB_FUNC_STATIC( QTABLEWIDGET_VISUALCOLUMN )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RINT( obj->visualColumn( PINT(1) ) );
+      RINT( obj->visualColumn( PINT( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1205,15 +1205,15 @@ QRect visualItemRect( const QTableWidgetItem * item ) const
 */
 HB_FUNC_STATIC( QTABLEWIDGET_VISUALITEMRECT )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTABLEWIDGETITEM(1) )
+    if( ISNUMPAR( 1 ) && ISQTABLEWIDGETITEM( 1 ) )
     {
 #endif
-      QRect * ptr = new QRect( obj->visualItemRect( PQTABLEWIDGETITEM(1) ) );
+      QRect * ptr = new QRect( obj->visualItemRect( PQTABLEWIDGETITEM( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1230,15 +1230,15 @@ int visualRow( int logicalRow ) const
 */
 HB_FUNC_STATIC( QTABLEWIDGET_VISUALROW )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RINT( obj->visualRow( PINT(1) ) );
+      RINT( obj->visualRow( PINT( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1254,12 +1254,12 @@ void clear()
 */
 HB_FUNC_STATIC( QTABLEWIDGET_CLEAR )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->clear();
@@ -1280,12 +1280,12 @@ void clearContents()
 */
 HB_FUNC_STATIC( QTABLEWIDGET_CLEARCONTENTS )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->clearContents();
@@ -1306,15 +1306,15 @@ void insertColumn( int column )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_INSERTCOLUMN )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->insertColumn( PINT(1) );
+      obj->insertColumn( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1332,15 +1332,15 @@ void insertRow( int row )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_INSERTROW )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->insertRow( PINT(1) );
+      obj->insertRow( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1358,15 +1358,15 @@ void removeColumn( int column )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_REMOVECOLUMN )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->removeColumn( PINT(1) );
+      obj->removeColumn( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1384,15 +1384,15 @@ void removeRow( int row )
 */
 HB_FUNC_STATIC( QTABLEWIDGET_REMOVEROW )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->removeRow( PINT(1) );
+      obj->removeRow( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1410,15 +1410,15 @@ void scrollToItem( const QTableWidgetItem * item, QAbstractItemView::ScrollHint 
 */
 HB_FUNC_STATIC( QTABLEWIDGET_SCROLLTOITEM )
 {
-  QTableWidget * obj = (QTableWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTableWidget * obj = ( QTableWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQTABLEWIDGETITEM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN( 1, 2 ) && ISQTABLEWIDGETITEM( 1 ) && ISOPTNUM( 2 ) )
     {
 #endif
-      obj->scrollToItem( PQTABLEWIDGETITEM(1), ISNIL(2)? (QAbstractItemView::ScrollHint) QAbstractItemView::EnsureVisible : (QAbstractItemView::ScrollHint) hb_parni(2) );
+      obj->scrollToItem( PQTABLEWIDGETITEM( 1 ), ISNIL( 2 )? ( QAbstractItemView::ScrollHint ) QAbstractItemView::EnsureVisible : ( QAbstractItemView::ScrollHint ) hb_parni( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

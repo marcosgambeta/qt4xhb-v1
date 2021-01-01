@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QSystemTrayIconSlots.h"
 
-QSystemTrayIconSlots::QSystemTrayIconSlots( QObject *parent ) : QObject( parent )
+QSystemTrayIconSlots::QSystemTrayIconSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QSystemTrayIconSlots::~QSystemTrayIconSlots()
 
 void QSystemTrayIconSlots::activated( QSystemTrayIcon::ActivationReason reason )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activated(QSystemTrayIcon::ActivationReason)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QSYSTEMTRAYICON" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSYSTEMTRAYICON" );
     PHB_ITEM preason = hb_itemPutNI( NULL, (int) reason );
 
     hb_vmEvalBlockV( cb, 2, psender, preason );
@@ -40,13 +40,13 @@ void QSystemTrayIconSlots::activated( QSystemTrayIcon::ActivationReason reason )
 
 void QSystemTrayIconSlots::messageClicked()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "messageClicked()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QSYSTEMTRAYICON" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSYSTEMTRAYICON" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -56,7 +56,7 @@ void QSystemTrayIconSlots::messageClicked()
 
 void QSystemTrayIconSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSystemTrayIcon * obj = (QSystemTrayIcon *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = ( QSystemTrayIcon * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

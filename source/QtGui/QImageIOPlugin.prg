@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -45,7 +45,7 @@ RETURN
 
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_DELETE )
 {
-  QImageIOPlugin * obj = (QImageIOPlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QImageIOPlugin * obj = ( QImageIOPlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -67,15 +67,15 @@ virtual QImageIOPlugin::Capabilities capabilities( QIODevice * device, const QBy
 */
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_CAPABILITIES )
 {
-  QImageIOPlugin * obj = (QImageIOPlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QImageIOPlugin * obj = ( QImageIOPlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQIODEVICE(1) && ISQBYTEARRAY(2) )
+    if( ISNUMPAR( 2 ) && ISQIODEVICE( 1 ) && ISQBYTEARRAY( 2 ) )
     {
 #endif
-      RENUM( obj->capabilities( PQIODEVICE(1), *PQBYTEARRAY(2) ) );
+      RENUM( obj->capabilities( PQIODEVICE( 1 ), *PQBYTEARRAY( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -91,15 +91,15 @@ virtual QImageIOHandler * create( QIODevice * device, const QByteArray & format 
 */
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_CREATE )
 {
-  QImageIOPlugin * obj = (QImageIOPlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QImageIOPlugin * obj = ( QImageIOPlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2)||ISNIL(2)) )
+    if( ISBETWEEN( 1, 2 ) && ISQIODEVICE( 1 ) && ( ISQBYTEARRAY( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
-      QImageIOHandler * ptr = obj->create( PQIODEVICE(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt4xHb::itemGetPtr(2) );
+      QImageIOHandler * ptr = obj->create( PQIODEVICE( 1 ), ISNIL( 2 )? QByteArray() : *( QByteArray * ) Qt4xHb::itemGetPtr( 2 ) );
       Qt4xHb::createReturnClass( ptr, "QIMAGEIOHANDLER", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -116,12 +116,12 @@ virtual QStringList keys() const = 0
 */
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_KEYS )
 {
-  QImageIOPlugin * obj = (QImageIOPlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QImageIOPlugin * obj = ( QImageIOPlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->keys() );

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -104,9 +104,9 @@ QFileSystemModel( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
-    QFileSystemModel * obj = new QFileSystemModel( OPQOBJECT(1,0) );
+    QFileSystemModel * obj = new QFileSystemModel( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_NEW )
 
 HB_FUNC_STATIC( QFILESYSTEMMODEL_DELETE )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -139,15 +139,15 @@ QIcon fileIcon( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEICON )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->fileIcon( *PQMODELINDEX(1) ) );
+      QIcon * ptr = new QIcon( obj->fileIcon( *PQMODELINDEX( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QICON", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -164,15 +164,15 @@ QFileInfo fileInfo( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEINFO )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      QFileInfo * ptr = new QFileInfo( obj->fileInfo( *PQMODELINDEX(1) ) );
+      QFileInfo * ptr = new QFileInfo( obj->fileInfo( *PQMODELINDEX( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QFILEINFO", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -189,15 +189,15 @@ QString fileName( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FILENAME )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      RQSTRING( obj->fileName( *PQMODELINDEX(1) ) );
+      RQSTRING( obj->fileName( *PQMODELINDEX( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,15 +213,15 @@ QString filePath( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEPATH )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      RQSTRING( obj->filePath( *PQMODELINDEX(1) ) );
+      RQSTRING( obj->filePath( *PQMODELINDEX( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,12 +237,12 @@ QDir::Filters filter() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FILTER )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->filter() );
@@ -261,12 +261,12 @@ QFileIconProvider * iconProvider() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ICONPROVIDER )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QFileIconProvider * ptr = obj->iconProvider();
@@ -286,15 +286,15 @@ bool isDir( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ISDIR )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      RBOOL( obj->isDir( *PQMODELINDEX(1) ) );
+      RBOOL( obj->isDir( *PQMODELINDEX( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -310,12 +310,12 @@ bool isReadOnly() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ISREADONLY )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isReadOnly() );
@@ -334,15 +334,15 @@ QDateTime lastModified( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_LASTMODIFIED )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->lastModified( *PQMODELINDEX(1) ) );
+      QDateTime * ptr = new QDateTime( obj->lastModified( *PQMODELINDEX( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -359,15 +359,15 @@ QModelIndex mkdir( const QModelIndex & parent, const QString & name )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_MKDIR )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQMODELINDEX(1) && ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && ISQMODELINDEX( 1 ) && ISCHAR( 2 ) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->mkdir( *PQMODELINDEX(1), PQSTRING(2) ) );
+      QModelIndex * ptr = new QModelIndex( obj->mkdir( *PQMODELINDEX( 1 ), PQSTRING( 2 ) ) );
       Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -384,15 +384,15 @@ QVariant myComputer( int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_MYCOMPUTER )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->myComputer( OPINT(1,Qt::DisplayRole) ) );
+      QVariant * ptr = new QVariant( obj->myComputer( OPINT( 1, Qt::DisplayRole ) ) );
       Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -409,12 +409,12 @@ bool nameFilterDisables() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_NAMEFILTERDISABLES )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->nameFilterDisables() );
@@ -433,12 +433,12 @@ QStringList nameFilters() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_NAMEFILTERS )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->nameFilters() );
@@ -457,15 +457,15 @@ QFile::Permissions permissions( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_PERMISSIONS )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      RENUM( obj->permissions( *PQMODELINDEX(1) ) );
+      RENUM( obj->permissions( *PQMODELINDEX( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -481,15 +481,15 @@ bool remove( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_REMOVE )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      RBOOL( obj->remove( *PQMODELINDEX(1) ) );
+      RBOOL( obj->remove( *PQMODELINDEX( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -505,12 +505,12 @@ bool resolveSymlinks() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_RESOLVESYMLINKS )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->resolveSymlinks() );
@@ -529,15 +529,15 @@ bool rmdir( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_RMDIR )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      RBOOL( obj->rmdir( *PQMODELINDEX(1) ) );
+      RBOOL( obj->rmdir( *PQMODELINDEX( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -553,12 +553,12 @@ QDir rootDirectory() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTDIRECTORY )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QDir * ptr = new QDir( obj->rootDirectory() );
@@ -578,12 +578,12 @@ QString rootPath() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTPATH )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->rootPath() );
@@ -602,15 +602,15 @@ void setFilter( QDir::Filters filters )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETFILTER )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setFilter( (QDir::Filters) hb_parni(1) );
+      obj->setFilter( ( QDir::Filters ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -628,15 +628,15 @@ void setIconProvider( QFileIconProvider * provider )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETICONPROVIDER )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQFILEICONPROVIDER(1) )
+    if( ISNUMPAR( 1 ) && ISQFILEICONPROVIDER( 1 ) )
     {
 #endif
-      obj->setIconProvider( PQFILEICONPROVIDER(1) );
+      obj->setIconProvider( PQFILEICONPROVIDER( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -654,15 +654,15 @@ void setNameFilterDisables( bool enable )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETNAMEFILTERDISABLES )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setNameFilterDisables( PBOOL(1) );
+      obj->setNameFilterDisables( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -680,15 +680,15 @@ void setNameFilters( const QStringList & filters )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETNAMEFILTERS )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISARRAY( 1 ) )
     {
 #endif
-      obj->setNameFilters( PQSTRINGLIST(1) );
+      obj->setNameFilters( PQSTRINGLIST( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -706,15 +706,15 @@ void setReadOnly( bool enable )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETREADONLY )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setReadOnly( PBOOL(1) );
+      obj->setReadOnly( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -732,15 +732,15 @@ void setResolveSymlinks( bool enable )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETRESOLVESYMLINKS )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setResolveSymlinks( PBOOL(1) );
+      obj->setResolveSymlinks( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -758,15 +758,15 @@ QModelIndex setRootPath( const QString & newPath )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETROOTPATH )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->setRootPath( PQSTRING(1) ) );
+      QModelIndex * ptr = new QModelIndex( obj->setRootPath( PQSTRING( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -783,15 +783,15 @@ qint64 size( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SIZE )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      RQINT64( obj->size( *PQMODELINDEX(1) ) );
+      RQINT64( obj->size( *PQMODELINDEX( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -807,15 +807,15 @@ QString type( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_TYPE )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      RQSTRING( obj->type( *PQMODELINDEX(1) ) );
+      RQSTRING( obj->type( *PQMODELINDEX( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -831,15 +831,15 @@ virtual bool canFetchMore( const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_CANFETCHMORE )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      RBOOL( obj->canFetchMore( *PQMODELINDEX(1) ) );
+      RBOOL( obj->canFetchMore( *PQMODELINDEX( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -855,15 +855,15 @@ virtual int columnCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_COLUMNCOUNT )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( ISQMODELINDEX( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
-      RINT( obj->columnCount( ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt4xHb::itemGetPtr(1) ) );
+      RINT( obj->columnCount( ISNIL( 1 )? QModelIndex() : *( QModelIndex * ) Qt4xHb::itemGetPtr( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -879,15 +879,15 @@ virtual QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) c
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_DATA )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQMODELINDEX(1) && ISOPTNUM(2) )
+    if( ISBETWEEN( 1, 2 ) && ISQMODELINDEX( 1 ) && ISOPTNUM( 2 ) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT(2,Qt::DisplayRole) ) );
+      QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX( 1 ), OPINT( 2, Qt::DisplayRole ) ) );
       Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -904,15 +904,15 @@ virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int ro
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_DROPMIMEDATA )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(5) && ISQMIMEDATA(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISQMODELINDEX(5) )
+    if( ISNUMPAR( 5 ) && ISQMIMEDATA( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISQMODELINDEX( 5 ) )
     {
 #endif
-      RBOOL( obj->dropMimeData( PQMIMEDATA(1), (Qt::DropAction) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5) ) );
+      RBOOL( obj->dropMimeData( PQMIMEDATA( 1 ), ( Qt::DropAction ) hb_parni( 2 ), PINT( 3 ), PINT( 4 ), *PQMODELINDEX( 5 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -928,15 +928,15 @@ virtual void fetchMore( const QModelIndex & parent )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FETCHMORE )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      obj->fetchMore( *PQMODELINDEX(1) );
+      obj->fetchMore( *PQMODELINDEX( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -954,15 +954,15 @@ virtual Qt::ItemFlags flags( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_FLAGS )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      RENUM( obj->flags( *PQMODELINDEX(1) ) );
+      RENUM( obj->flags( *PQMODELINDEX( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -978,15 +978,15 @@ virtual bool hasChildren( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_HASCHILDREN )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( ISQMODELINDEX( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
-      RBOOL( obj->hasChildren( ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt4xHb::itemGetPtr(1) ) );
+      RBOOL( obj->hasChildren( ISNIL( 1 )? QModelIndex() : *( QModelIndex * ) Qt4xHb::itemGetPtr( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1002,15 +1002,15 @@ virtual QVariant headerData( int section, Qt::Orientation orientation, int role 
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_HEADERDATA )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && ISOPTNUM(3) )
+    if( ISBETWEEN( 2, 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISOPTNUM( 3 ) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->headerData( PINT(1), (Qt::Orientation) hb_parni(2), OPINT(3,Qt::DisplayRole) ) );
+      QVariant * ptr = new QVariant( obj->headerData( PINT( 1 ), ( Qt::Orientation ) hb_parni( 2 ), OPINT( 3, Qt::DisplayRole ) ) );
       Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1027,11 +1027,11 @@ QModelIndex index( const QString & path, int column = 0 ) const
 */
 void QFileSystemModel_index1()
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QModelIndex * ptr = new QModelIndex( obj->index( PQSTRING(1), OPINT(2,0) ) );
+    QModelIndex * ptr = new QModelIndex( obj->index( PQSTRING( 1 ), OPINT( 2, 0 ) ) );
     Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
   }
 }
@@ -1041,22 +1041,22 @@ virtual QModelIndex index( int row, int column, const QModelIndex & parent = QMo
 */
 void QFileSystemModel_index2()
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QModelIndex * ptr = new QModelIndex( obj->index( PINT(1), PINT(2), ISNIL(3)? QModelIndex() : *(QModelIndex *) Qt4xHb::itemGetPtr(3) ) );
+    QModelIndex * ptr = new QModelIndex( obj->index( PINT( 1 ), PINT( 2 ), ISNIL( 3 )? QModelIndex() : *( QModelIndex * ) Qt4xHb::itemGetPtr( 3 ) ) );
     Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
   }
 }
 
 HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX )
 {
-  if( ISBETWEEN(1,2) && ISCHAR(1) && (ISNUM(2)||ISNIL(2)) )
+  if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
   {
     QFileSystemModel_index1();
   }
-  else if( ISBETWEEN(2,3) && ISNUM(1) && ISNUM(2) && (ISQMODELINDEX(3)||ISNIL(3)) )
+  else if( ISBETWEEN( 2, 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ( ISQMODELINDEX( 3 ) || ISNIL( 3 ) ) )
   {
     QFileSystemModel_index2();
   }
@@ -1071,21 +1071,20 @@ virtual QMimeData * mimeData( const QModelIndexList & indexes ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMEDATA )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISARRAY( 1 ) )
     {
 #endif
       QModelIndexList par1;
-      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
-      int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
+      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      int nLen1 = hb_arrayLen( aList1 );
+      for( int i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << *(QModelIndex *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+        par1 << *( QModelIndex * ) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
       QMimeData * ptr = obj->mimeData( par1 );
       Qt4xHb::createReturnQObjectClass( ptr, "QMIMEDATA" );
@@ -1104,12 +1103,12 @@ virtual QStringList mimeTypes() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMETYPES )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->mimeTypes() );
@@ -1128,15 +1127,15 @@ virtual QModelIndex parent( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_PARENT )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
+    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->parent( *PQMODELINDEX(1) ) );
+      QModelIndex * ptr = new QModelIndex( obj->parent( *PQMODELINDEX( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1153,15 +1152,15 @@ virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ROWCOUNT )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQMODELINDEX(1)||ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( ISQMODELINDEX( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
-      RINT( obj->rowCount( ISNIL(1)? QModelIndex() : *(QModelIndex *) Qt4xHb::itemGetPtr(1) ) );
+      RINT( obj->rowCount( ISNIL( 1 )? QModelIndex() : *( QModelIndex * ) Qt4xHb::itemGetPtr( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1177,15 +1176,15 @@ virtual bool setData( const QModelIndex & idx, const QVariant & value, int role 
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SETDATA )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2,3) && ISQMODELINDEX(1) && ISQVARIANT(2) && ISOPTNUM(3) )
+    if( ISBETWEEN( 2, 3 ) && ISQMODELINDEX( 1 ) && ISQVARIANT( 2 ) && ISOPTNUM( 3 ) )
     {
 #endif
-      RBOOL( obj->setData( *PQMODELINDEX(1), *PQVARIANT(2), OPINT(3,Qt::EditRole) ) );
+      RBOOL( obj->setData( *PQMODELINDEX( 1 ), *PQVARIANT( 2 ), OPINT( 3, Qt::EditRole ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1201,15 +1200,15 @@ virtual void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SORT )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTNUM(2) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) )
     {
 #endif
-      obj->sort( PINT(1), ISNIL(2)? (Qt::SortOrder) Qt::AscendingOrder : (Qt::SortOrder) hb_parni(2) );
+      obj->sort( PINT( 1 ), ISNIL( 2 )? ( Qt::SortOrder ) Qt::AscendingOrder : ( Qt::SortOrder ) hb_parni( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1227,12 +1226,12 @@ virtual Qt::DropActions supportedDropActions() const
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_SUPPORTEDDROPACTIONS )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->supportedDropActions() );

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -49,7 +49,7 @@ QFileOpenEvent( const QString & file )
 */
 void QFileOpenEvent_new1()
 {
-  QFileOpenEvent * obj = new QFileOpenEvent( PQSTRING(1) );
+  QFileOpenEvent * obj = new QFileOpenEvent( PQSTRING( 1 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -58,17 +58,17 @@ QFileOpenEvent( const QUrl & url )
 */
 void QFileOpenEvent_new2()
 {
-  QFileOpenEvent * obj = new QFileOpenEvent( *PQURL(1) );
+  QFileOpenEvent * obj = new QFileOpenEvent( *PQURL( 1 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QFILEOPENEVENT_NEW )
 {
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
     QFileOpenEvent_new1();
   }
-  else if( ISNUMPAR(1) && ISQURL(1) )
+  else if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
   {
     QFileOpenEvent_new2();
   }
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_NEW )
 
 HB_FUNC_STATIC( QFILEOPENEVENT_DELETE )
 {
-  QFileOpenEvent * obj = (QFileOpenEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileOpenEvent * obj = ( QFileOpenEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -100,12 +100,12 @@ QString file() const
 */
 HB_FUNC_STATIC( QFILEOPENEVENT_FILE )
 {
-  QFileOpenEvent * obj = (QFileOpenEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileOpenEvent * obj = ( QFileOpenEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->file() );
@@ -124,15 +124,15 @@ bool openFile( QFile & file, QIODevice::OpenMode flags ) const
 */
 HB_FUNC_STATIC( QFILEOPENEVENT_OPENFILE )
 {
-  QFileOpenEvent * obj = (QFileOpenEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileOpenEvent * obj = ( QFileOpenEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQFILE(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISQFILE( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      RBOOL( obj->openFile( *PQFILE(1), (QIODevice::OpenMode) hb_parni(2) ) );
+      RBOOL( obj->openFile( *PQFILE( 1 ), ( QIODevice::OpenMode ) hb_parni( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -148,12 +148,12 @@ QUrl url() const
 */
 HB_FUNC_STATIC( QFILEOPENEVENT_URL )
 {
-  QFileOpenEvent * obj = (QFileOpenEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileOpenEvent * obj = ( QFileOpenEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QUrl * ptr = new QUrl( obj->url() );

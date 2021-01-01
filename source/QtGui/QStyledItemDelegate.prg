@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -57,9 +57,9 @@ QStyledItemDelegate( QObject * parent = 0 )
 */
 void QStyledItemDelegate_new()
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
-    QStyledItemDelegate * obj = new QStyledItemDelegate( OPQOBJECT(1,0) );
+    QStyledItemDelegate * obj = new QStyledItemDelegate( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -70,7 +70,7 @@ void QStyledItemDelegate_new()
 
 HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_DELETE )
 {
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyledItemDelegate * obj = ( QStyledItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -92,15 +92,15 @@ virtual QString displayText( const QVariant & value, const QLocale & locale ) co
 */
 HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_DISPLAYTEXT )
 {
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyledItemDelegate * obj = ( QStyledItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQVARIANT(1) && ISQLOCALE(2) )
+    if( ISNUMPAR( 2 ) && ISQVARIANT( 1 ) && ISQLOCALE( 2 ) )
     {
 #endif
-      RQSTRING( obj->displayText( *PQVARIANT(1), *PQLOCALE(2) ) );
+      RQSTRING( obj->displayText( *PQVARIANT( 1 ), *PQLOCALE( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,12 +116,12 @@ QItemEditorFactory * itemEditorFactory() const
 */
 HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_ITEMEDITORFACTORY )
 {
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyledItemDelegate * obj = ( QStyledItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QItemEditorFactory * ptr = obj->itemEditorFactory();
@@ -141,15 +141,15 @@ void setItemEditorFactory( QItemEditorFactory * factory )
 */
 HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_SETITEMEDITORFACTORY )
 {
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyledItemDelegate * obj = ( QStyledItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQITEMEDITORFACTORY(1) )
+    if( ISNUMPAR( 1 ) && ISQITEMEDITORFACTORY( 1 ) )
     {
 #endif
-      obj->setItemEditorFactory( PQITEMEDITORFACTORY(1) );
+      obj->setItemEditorFactory( PQITEMEDITORFACTORY( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,15 +167,15 @@ virtual QWidget * createEditor( QWidget * parent, const QStyleOptionViewItem & o
 */
 HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_CREATEEDITOR )
 {
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyledItemDelegate * obj = ( QStyledItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQWIDGET(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
+    if( ISNUMPAR( 3 ) && ISQWIDGET( 1 ) && ISQSTYLEOPTIONVIEWITEM( 2 ) && ISQMODELINDEX( 3 ) )
     {
 #endif
-      QWidget * ptr = obj->createEditor( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
+      QWidget * ptr = obj->createEditor( PQWIDGET( 1 ), *PQSTYLEOPTIONVIEWITEM( 2 ), *PQMODELINDEX( 3 ) );
       Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -192,15 +192,15 @@ virtual void paint( QPainter * painter, const QStyleOptionViewItem & option, con
 */
 HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_PAINT )
 {
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyledItemDelegate * obj = ( QStyledItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
+    if( ISNUMPAR( 3 ) && ISQPAINTER( 1 ) && ISQSTYLEOPTIONVIEWITEM( 2 ) && ISQMODELINDEX( 3 ) )
     {
 #endif
-      obj->paint( PQPAINTER(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
+      obj->paint( PQPAINTER( 1 ), *PQSTYLEOPTIONVIEWITEM( 2 ), *PQMODELINDEX( 3 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -218,15 +218,15 @@ virtual void setEditorData( QWidget * editor, const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_SETEDITORDATA )
 {
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyledItemDelegate * obj = ( QStyledItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQWIDGET(1) && ISQMODELINDEX(2) )
+    if( ISNUMPAR( 2 ) && ISQWIDGET( 1 ) && ISQMODELINDEX( 2 ) )
     {
 #endif
-      obj->setEditorData( PQWIDGET(1), *PQMODELINDEX(2) );
+      obj->setEditorData( PQWIDGET( 1 ), *PQMODELINDEX( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,15 +244,15 @@ virtual void setModelData( QWidget * editor, QAbstractItemModel * model, const Q
 */
 HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_SETMODELDATA )
 {
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyledItemDelegate * obj = ( QStyledItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQWIDGET(1) && ISQABSTRACTITEMMODEL(2) && ISQMODELINDEX(3) )
+    if( ISNUMPAR( 3 ) && ISQWIDGET( 1 ) && ISQABSTRACTITEMMODEL( 2 ) && ISQMODELINDEX( 3 ) )
     {
 #endif
-      obj->setModelData( PQWIDGET(1), PQABSTRACTITEMMODEL(2), *PQMODELINDEX(3) );
+      obj->setModelData( PQWIDGET( 1 ), PQABSTRACTITEMMODEL( 2 ), *PQMODELINDEX( 3 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,15 +270,15 @@ virtual QSize sizeHint( const QStyleOptionViewItem & option, const QModelIndex &
 */
 HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_SIZEHINT )
 {
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyledItemDelegate * obj = ( QStyledItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQSTYLEOPTIONVIEWITEM(1) && ISQMODELINDEX(2) )
+    if( ISNUMPAR( 2 ) && ISQSTYLEOPTIONVIEWITEM( 1 ) && ISQMODELINDEX( 2 ) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint( *PQSTYLEOPTIONVIEWITEM(1), *PQMODELINDEX(2) ) );
+      QSize * ptr = new QSize( obj->sizeHint( *PQSTYLEOPTIONVIEWITEM( 1 ), *PQMODELINDEX( 2 ) ) );
       Qt4xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -295,15 +295,15 @@ virtual void updateEditorGeometry( QWidget * editor, const QStyleOptionViewItem 
 */
 HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_UPDATEEDITORGEOMETRY )
 {
-  QStyledItemDelegate * obj = (QStyledItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyledItemDelegate * obj = ( QStyledItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQWIDGET(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
+    if( ISNUMPAR( 3 ) && ISQWIDGET( 1 ) && ISQSTYLEOPTIONVIEWITEM( 2 ) && ISQMODELINDEX( 3 ) )
     {
 #endif
-      obj->updateEditorGeometry( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
+      obj->updateEditorGeometry( PQWIDGET( 1 ), *PQSTYLEOPTIONVIEWITEM( 2 ), *PQMODELINDEX( 3 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

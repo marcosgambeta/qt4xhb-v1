@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QMainWindowSlots.h"
 
-QMainWindowSlots::QMainWindowSlots( QObject *parent ) : QObject( parent )
+QMainWindowSlots::QMainWindowSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,14 +22,14 @@ QMainWindowSlots::~QMainWindowSlots()
 
 void QMainWindowSlots::iconSizeChanged( const QSize & iconSize )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "iconSizeChanged(QSize)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QMAINWINDOW" );
-    PHB_ITEM piconSize = Qt4xHb::Signals_return_object( (void *) &iconSize, "QSIZE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QMAINWINDOW" );
+    PHB_ITEM piconSize = Qt4xHb::Signals_return_object( ( void * ) &iconSize, "QSIZE" );
 
     hb_vmEvalBlockV( cb, 2, psender, piconSize );
 
@@ -40,13 +40,13 @@ void QMainWindowSlots::iconSizeChanged( const QSize & iconSize )
 
 void QMainWindowSlots::toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QMAINWINDOW" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QMAINWINDOW" );
     PHB_ITEM ptoolButtonStyle = hb_itemPutNI( NULL, (int) toolButtonStyle );
 
     hb_vmEvalBlockV( cb, 2, psender, ptoolButtonStyle );
@@ -58,7 +58,7 @@ void QMainWindowSlots::toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonSty
 
 void QMainWindowSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMainWindow * obj = (QMainWindow *) Qt4xHb::itemGetPtrStackSelfItem();
+  QMainWindow * obj = ( QMainWindow * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

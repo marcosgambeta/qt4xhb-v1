@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -47,7 +47,7 @@ QPaintEvent( const QRegion & paintRegion )
 */
 void QPaintEvent_new1()
 {
-  QPaintEvent * obj = new QPaintEvent( *PQREGION(1) );
+  QPaintEvent * obj = new QPaintEvent( *PQREGION( 1 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -56,17 +56,17 @@ QPaintEvent( const QRect & paintRect )
 */
 void QPaintEvent_new2()
 {
-  QPaintEvent * obj = new QPaintEvent( *PQRECT(1) );
+  QPaintEvent * obj = new QPaintEvent( *PQRECT( 1 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QPAINTEVENT_NEW )
 {
-  if( ISNUMPAR(1) && ISQREGION(1) )
+  if( ISNUMPAR( 1 ) && ISQREGION( 1 ) )
   {
     QPaintEvent_new1();
   }
-  else if( ISNUMPAR(1) && ISQRECT(1) )
+  else if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
   {
     QPaintEvent_new2();
   }
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QPAINTEVENT_NEW )
 
 HB_FUNC_STATIC( QPAINTEVENT_DELETE )
 {
-  QPaintEvent * obj = (QPaintEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPaintEvent * obj = ( QPaintEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -98,12 +98,12 @@ const QRect & rect() const
 */
 HB_FUNC_STATIC( QPAINTEVENT_RECT )
 {
-  QPaintEvent * obj = (QPaintEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPaintEvent * obj = ( QPaintEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QRect * ptr = &obj->rect();
@@ -123,12 +123,12 @@ const QRegion & region() const
 */
 HB_FUNC_STATIC( QPAINTEVENT_REGION )
 {
-  QPaintEvent * obj = (QPaintEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPaintEvent * obj = ( QPaintEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QRegion * ptr = &obj->region();

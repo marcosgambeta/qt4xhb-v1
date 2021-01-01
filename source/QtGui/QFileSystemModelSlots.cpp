@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QFileSystemModelSlots.h"
 
-QFileSystemModelSlots::QFileSystemModelSlots( QObject *parent ) : QObject( parent )
+QFileSystemModelSlots::QFileSystemModelSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,14 +22,14 @@ QFileSystemModelSlots::~QFileSystemModelSlots()
 
 void QFileSystemModelSlots::directoryLoaded( const QString & path )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "directoryLoaded(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QFILESYSTEMMODEL" );
-    PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING(path) );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QFILESYSTEMMODEL" );
+    PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING( path ) );
 
     hb_vmEvalBlockV( cb, 2, psender, ppath );
 
@@ -40,16 +40,16 @@ void QFileSystemModelSlots::directoryLoaded( const QString & path )
 
 void QFileSystemModelSlots::fileRenamed( const QString & path, const QString & oldName, const QString & newName )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "fileRenamed(QString,QString,QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QFILESYSTEMMODEL" );
-    PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING(path) );
-    PHB_ITEM poldName = hb_itemPutC( NULL, QSTRINGTOSTRING(oldName) );
-    PHB_ITEM pnewName = hb_itemPutC( NULL, QSTRINGTOSTRING(newName) );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QFILESYSTEMMODEL" );
+    PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING( path ) );
+    PHB_ITEM poldName = hb_itemPutC( NULL, QSTRINGTOSTRING( oldName ) );
+    PHB_ITEM pnewName = hb_itemPutC( NULL, QSTRINGTOSTRING( newName ) );
 
     hb_vmEvalBlockV( cb, 4, psender, ppath, poldName, pnewName );
 
@@ -62,14 +62,14 @@ void QFileSystemModelSlots::fileRenamed( const QString & path, const QString & o
 
 void QFileSystemModelSlots::rootPathChanged( const QString & newPath )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "rootPathChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QFILESYSTEMMODEL" );
-    PHB_ITEM pnewPath = hb_itemPutC( NULL, QSTRINGTOSTRING(newPath) );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QFILESYSTEMMODEL" );
+    PHB_ITEM pnewPath = hb_itemPutC( NULL, QSTRINGTOSTRING( newPath ) );
 
     hb_vmEvalBlockV( cb, 2, psender, pnewPath );
 
@@ -80,7 +80,7 @@ void QFileSystemModelSlots::rootPathChanged( const QString & newPath )
 
 void QFileSystemModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QFileSystemModel * obj = (QFileSystemModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemModel * obj = ( QFileSystemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

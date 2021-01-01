@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QDateTimeEditSlots.h"
 
-QDateTimeEditSlots::QDateTimeEditSlots( QObject *parent ) : QObject( parent )
+QDateTimeEditSlots::QDateTimeEditSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,14 +22,14 @@ QDateTimeEditSlots::~QDateTimeEditSlots()
 
 void QDateTimeEditSlots::dateChanged( const QDate & date )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "dateChanged(QDate)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDATETIMEEDIT" );
-    PHB_ITEM pdate = Qt4xHb::Signals_return_object( (void *) &date, "QDATE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDATETIMEEDIT" );
+    PHB_ITEM pdate = Qt4xHb::Signals_return_object( ( void * ) &date, "QDATE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pdate );
 
@@ -40,14 +40,14 @@ void QDateTimeEditSlots::dateChanged( const QDate & date )
 
 void QDateTimeEditSlots::dateTimeChanged( const QDateTime & datetime )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "dateTimeChanged(QDateTime)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDATETIMEEDIT" );
-    PHB_ITEM pdatetime = Qt4xHb::Signals_return_object( (void *) &datetime, "QDATETIME" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDATETIMEEDIT" );
+    PHB_ITEM pdatetime = Qt4xHb::Signals_return_object( ( void * ) &datetime, "QDATETIME" );
 
     hb_vmEvalBlockV( cb, 2, psender, pdatetime );
 
@@ -58,14 +58,14 @@ void QDateTimeEditSlots::dateTimeChanged( const QDateTime & datetime )
 
 void QDateTimeEditSlots::timeChanged( const QTime & time )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "timeChanged(QTime)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDATETIMEEDIT" );
-    PHB_ITEM ptime = Qt4xHb::Signals_return_object( (void *) &time, "QTIME" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDATETIMEEDIT" );
+    PHB_ITEM ptime = Qt4xHb::Signals_return_object( ( void * ) &time, "QTIME" );
 
     hb_vmEvalBlockV( cb, 2, psender, ptime );
 
@@ -76,7 +76,7 @@ void QDateTimeEditSlots::timeChanged( const QTime & time )
 
 void QDateTimeEditSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDateTimeEdit * obj = (QDateTimeEdit *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDateTimeEdit * obj = ( QDateTimeEdit * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

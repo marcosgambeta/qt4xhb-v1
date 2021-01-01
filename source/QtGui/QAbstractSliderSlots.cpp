@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QAbstractSliderSlots.h"
 
-QAbstractSliderSlots::QAbstractSliderSlots( QObject *parent ) : QObject( parent )
+QAbstractSliderSlots::QAbstractSliderSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QAbstractSliderSlots::~QAbstractSliderSlots()
 
 void QAbstractSliderSlots::actionTriggered( int action )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "actionTriggered(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTSLIDER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTSLIDER" );
     PHB_ITEM paction = hb_itemPutNI( NULL, action );
 
     hb_vmEvalBlockV( cb, 2, psender, paction );
@@ -40,13 +40,13 @@ void QAbstractSliderSlots::actionTriggered( int action )
 
 void QAbstractSliderSlots::rangeChanged( int min, int max )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "rangeChanged(int,int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTSLIDER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTSLIDER" );
     PHB_ITEM pmin = hb_itemPutNI( NULL, min );
     PHB_ITEM pmax = hb_itemPutNI( NULL, max );
 
@@ -60,13 +60,13 @@ void QAbstractSliderSlots::rangeChanged( int min, int max )
 
 void QAbstractSliderSlots::sliderMoved( int value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "sliderMoved(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTSLIDER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTSLIDER" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
 
     hb_vmEvalBlockV( cb, 2, psender, pvalue );
@@ -78,13 +78,13 @@ void QAbstractSliderSlots::sliderMoved( int value )
 
 void QAbstractSliderSlots::sliderPressed()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "sliderPressed()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTSLIDER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTSLIDER" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -94,13 +94,13 @@ void QAbstractSliderSlots::sliderPressed()
 
 void QAbstractSliderSlots::sliderReleased()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "sliderReleased()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTSLIDER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTSLIDER" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -110,13 +110,13 @@ void QAbstractSliderSlots::sliderReleased()
 
 void QAbstractSliderSlots::valueChanged( int value )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "valueChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QABSTRACTSLIDER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTSLIDER" );
     PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
 
     hb_vmEvalBlockV( cb, 2, psender, pvalue );
@@ -128,7 +128,7 @@ void QAbstractSliderSlots::valueChanged( int value )
 
 void QAbstractSliderSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractSlider * obj = (QAbstractSlider *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSlider * obj = ( QAbstractSlider * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

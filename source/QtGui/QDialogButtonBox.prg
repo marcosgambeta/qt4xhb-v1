@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -67,7 +67,7 @@ QDialogButtonBox( QWidget * parent = 0 )
 */
 void QDialogButtonBox_new1()
 {
-  QDialogButtonBox * obj = new QDialogButtonBox( OPQWIDGET(1,0) );
+  QDialogButtonBox * obj = new QDialogButtonBox( OPQWIDGET( 1, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -76,7 +76,7 @@ QDialogButtonBox( Qt::Orientation orientation, QWidget * parent = 0 )
 */
 void QDialogButtonBox_new2()
 {
-  QDialogButtonBox * obj = new QDialogButtonBox( (Qt::Orientation) hb_parni(1), OPQWIDGET(2,0) );
+  QDialogButtonBox * obj = new QDialogButtonBox( ( Qt::Orientation ) hb_parni( 1 ), OPQWIDGET( 2, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -85,21 +85,21 @@ QDialogButtonBox( QDialogButtonBox::StandardButtons buttons, Qt::Orientation ori
 */
 void QDialogButtonBox_new3()
 {
-  QDialogButtonBox * obj = new QDialogButtonBox( (QDialogButtonBox::StandardButtons) hb_parni(1), ISNIL(2)? (Qt::Orientation) Qt::Horizontal : (Qt::Orientation) hb_parni(2), OPQWIDGET(3,0) );
+  QDialogButtonBox * obj = new QDialogButtonBox( ( QDialogButtonBox::StandardButtons ) hb_parni( 1 ), ISNIL( 2 )? ( Qt::Orientation ) Qt::Horizontal : ( Qt::Orientation ) hb_parni( 2 ), OPQWIDGET( 3, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
   {
     QDialogButtonBox_new1();
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQWIDGET(2)||ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISQWIDGET( 2 ) || ISNIL( 2 ) ) )
   {
     QDialogButtonBox_new2();
   }
-  else if( ISBETWEEN(1,3) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) && (ISQWIDGET(3)||ISNIL(3)) )
+  else if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) && ( ISQWIDGET( 3 ) || ISNIL( 3 ) ) )
   {
     QDialogButtonBox_new3();
   }
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW )
 
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_DELETE )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = ( QDialogButtonBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -133,11 +133,11 @@ void addButton( QAbstractButton * button, QDialogButtonBox::ButtonRole role )
 */
 void QDialogButtonBox_addButton1()
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = ( QDialogButtonBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->addButton( PQABSTRACTBUTTON(1), (QDialogButtonBox::ButtonRole) hb_parni(2) );
+    obj->addButton( PQABSTRACTBUTTON( 1 ), ( QDialogButtonBox::ButtonRole ) hb_parni( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -148,11 +148,11 @@ QPushButton * addButton( const QString & text, QDialogButtonBox::ButtonRole role
 */
 void QDialogButtonBox_addButton2()
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = ( QDialogButtonBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QPushButton * ptr = obj->addButton( PQSTRING(1), (QDialogButtonBox::ButtonRole) hb_parni(2) );
+    QPushButton * ptr = obj->addButton( PQSTRING( 1 ), ( QDialogButtonBox::ButtonRole ) hb_parni( 2 ) );
     Qt4xHb::createReturnQObjectClass( ptr, "QPUSHBUTTON" );
   }
 }
@@ -162,26 +162,26 @@ QPushButton * addButton( QDialogButtonBox::StandardButton button )
 */
 void QDialogButtonBox_addButton3()
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = ( QDialogButtonBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QPushButton * ptr = obj->addButton( (QDialogButtonBox::StandardButton) hb_parni(1) );
+    QPushButton * ptr = obj->addButton( ( QDialogButtonBox::StandardButton ) hb_parni( 1 ) );
     Qt4xHb::createReturnQObjectClass( ptr, "QPUSHBUTTON" );
   }
 }
 
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON )
 {
-  if( ISNUMPAR(2) && ISQABSTRACTBUTTON(1) && ISNUM(2) )
+  if( ISNUMPAR( 2 ) && ISQABSTRACTBUTTON( 1 ) && ISNUM( 2 ) )
   {
     QDialogButtonBox_addButton1();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
   {
     QDialogButtonBox_addButton2();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
   {
     QDialogButtonBox_addButton3();
   }
@@ -196,15 +196,15 @@ QPushButton * button( QDialogButtonBox::StandardButton which ) const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTON )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = ( QDialogButtonBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QPushButton * ptr = obj->button( (QDialogButtonBox::StandardButton) hb_parni(1) );
+      QPushButton * ptr = obj->button( ( QDialogButtonBox::StandardButton ) hb_parni( 1 ) );
       Qt4xHb::createReturnQObjectClass( ptr, "QPUSHBUTTON" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -221,15 +221,15 @@ QDialogButtonBox::ButtonRole buttonRole( QAbstractButton * button ) const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTONROLE )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = ( QDialogButtonBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTBUTTON(1) )
+    if( ISNUMPAR( 1 ) && ISQABSTRACTBUTTON( 1 ) )
     {
 #endif
-      RENUM( obj->buttonRole( PQABSTRACTBUTTON(1) ) );
+      RENUM( obj->buttonRole( PQABSTRACTBUTTON( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,17 +245,17 @@ QList<QAbstractButton *> buttons() const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTONS )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = ( QDialogButtonBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QAbstractButton *> list = obj->buttons();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTBUTTON" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTONS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QAbstractButton *) list[i] );
+          hb_itemPutPtr( pItem, ( QAbstractButton * ) list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -293,12 +293,12 @@ bool centerButtons() const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_CENTERBUTTONS )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = ( QDialogButtonBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->centerButtons() );
@@ -317,12 +317,12 @@ void clear()
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_CLEAR )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = ( QDialogButtonBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->clear();
@@ -343,12 +343,12 @@ Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ORIENTATION )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = ( QDialogButtonBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->orientation() );
@@ -367,15 +367,15 @@ void removeButton( QAbstractButton * button )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_REMOVEBUTTON )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = ( QDialogButtonBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTBUTTON(1) )
+    if( ISNUMPAR( 1 ) && ISQABSTRACTBUTTON( 1 ) )
     {
 #endif
-      obj->removeButton( PQABSTRACTBUTTON(1) );
+      obj->removeButton( PQABSTRACTBUTTON( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -393,15 +393,15 @@ void setCenterButtons( bool center )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETCENTERBUTTONS )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = ( QDialogButtonBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setCenterButtons( PBOOL(1) );
+      obj->setCenterButtons( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -419,15 +419,15 @@ void setOrientation( Qt::Orientation orientation )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETORIENTATION )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = ( QDialogButtonBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setOrientation( (Qt::Orientation) hb_parni(1) );
+      obj->setOrientation( ( Qt::Orientation ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -445,15 +445,15 @@ void setStandardButtons( QDialogButtonBox::StandardButtons buttons )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETSTANDARDBUTTONS )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = ( QDialogButtonBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setStandardButtons( (QDialogButtonBox::StandardButtons) hb_parni(1) );
+      obj->setStandardButtons( ( QDialogButtonBox::StandardButtons ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -471,15 +471,15 @@ QDialogButtonBox::StandardButton standardButton( QAbstractButton * button ) cons
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTON )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = ( QDialogButtonBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTBUTTON(1) )
+    if( ISNUMPAR( 1 ) && ISQABSTRACTBUTTON( 1 ) )
     {
 #endif
-      RENUM( obj->standardButton( PQABSTRACTBUTTON(1) ) );
+      RENUM( obj->standardButton( PQABSTRACTBUTTON( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -495,12 +495,12 @@ QDialogButtonBox::StandardButtons standardButtons() const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTONS )
 {
-  QDialogButtonBox * obj = (QDialogButtonBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialogButtonBox * obj = ( QDialogButtonBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->standardButtons() );

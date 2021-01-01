@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -53,17 +53,17 @@ QStyleOptionSizeGrip( const QStyleOptionSizeGrip & other )
 */
 void QStyleOptionSizeGrip_new2()
 {
-  QStyleOptionSizeGrip * obj = new QStyleOptionSizeGrip( *PQSTYLEOPTIONSIZEGRIP(1) );
+  QStyleOptionSizeGrip * obj = new QStyleOptionSizeGrip( *PQSTYLEOPTIONSIZEGRIP( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QStyleOptionSizeGrip_new1();
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONSIZEGRIP(1) )
+  else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONSIZEGRIP( 1 ) )
   {
     QStyleOptionSizeGrip_new2();
   }
@@ -78,11 +78,11 @@ Qt::Corner corner
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_CORNER )
 {
-  QStyleOptionSizeGrip * obj = (QStyleOptionSizeGrip *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionSizeGrip * obj = ( QStyleOptionSizeGrip * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
       RENUM( obj->corner );
     }
@@ -94,13 +94,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_CORNER )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_SETCORNER )
 {
-  QStyleOptionSizeGrip * obj = (QStyleOptionSizeGrip *) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionSizeGrip * obj = ( QStyleOptionSizeGrip * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
-      obj->corner= (Qt::Corner) hb_parni(1);
+      obj->corner= ( Qt::Corner ) hb_parni( 1 );
     }
     else
     {

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -49,7 +49,7 @@ RETURN
 
 HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_DELETE )
 {
-  QInputContextPlugin * obj = (QInputContextPlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputContextPlugin * obj = ( QInputContextPlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -71,15 +71,15 @@ virtual QInputContext * create( const QString & key ) = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_CREATE )
 {
-  QInputContextPlugin * obj = (QInputContextPlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputContextPlugin * obj = ( QInputContextPlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      QInputContext * ptr = obj->create( PQSTRING(1) );
+      QInputContext * ptr = obj->create( PQSTRING( 1 ) );
       Qt4xHb::createReturnQObjectClass( ptr, "QINPUTCONTEXT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -96,15 +96,15 @@ virtual QString description( const QString & key ) = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_DESCRIPTION )
 {
-  QInputContextPlugin * obj = (QInputContextPlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputContextPlugin * obj = ( QInputContextPlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      RQSTRING( obj->description( PQSTRING(1) ) );
+      RQSTRING( obj->description( PQSTRING( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,15 +120,15 @@ virtual QString displayName( const QString & key ) = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_DISPLAYNAME )
 {
-  QInputContextPlugin * obj = (QInputContextPlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputContextPlugin * obj = ( QInputContextPlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      RQSTRING( obj->displayName( PQSTRING(1) ) );
+      RQSTRING( obj->displayName( PQSTRING( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,12 +144,12 @@ virtual QStringList keys() const = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_KEYS )
 {
-  QInputContextPlugin * obj = (QInputContextPlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputContextPlugin * obj = ( QInputContextPlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->keys() );
@@ -168,15 +168,15 @@ virtual QStringList languages( const QString & key ) = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_LANGUAGES )
 {
-  QInputContextPlugin * obj = (QInputContextPlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputContextPlugin * obj = ( QInputContextPlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      RQSTRINGLIST( obj->languages( PQSTRING(1) ) );
+      RQSTRINGLIST( obj->languages( PQSTRING( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QListViewSlots.h"
 
-QListViewSlots::QListViewSlots( QObject *parent ) : QObject( parent )
+QListViewSlots::QListViewSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,15 +22,15 @@ QListViewSlots::~QListViewSlots()
 
 void QListViewSlots::indexesMoved( const QModelIndexList & indexes )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "indexesMoved(QModelIndexList)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QLISTVIEW" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QLISTVIEW" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
-    PHB_ITEM pindexes = hb_itemArrayNew(0);
+    PHB_ITEM pindexes = hb_itemArrayNew( 0 );
     if( pDynSym )
     {
       for( int i = 0; i < indexes.count(); i++ )
@@ -41,7 +41,7 @@ void QListViewSlots::indexesMoved( const QModelIndexList & indexes )
         PHB_ITEM pTempObject = hb_itemNew( NULL );
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
         PHB_ITEM pTempItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pTempItem, (QModelIndex *) new QModelIndex( indexes [i] ) );
+        hb_itemPutPtr( pTempItem, ( QModelIndex * ) new QModelIndex( indexes [i] ) );
         hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
         hb_arrayAddForward( pindexes, pTempObject );
         hb_itemRelease( pTempObject );
@@ -62,7 +62,7 @@ void QListViewSlots::indexesMoved( const QModelIndexList & indexes )
 
 void QListViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QListView * obj = (QListView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

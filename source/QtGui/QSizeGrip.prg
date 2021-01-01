@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -48,9 +48,9 @@ QSizeGrip( QWidget * parent )
 */
 HB_FUNC_STATIC( QSIZEGRIP_NEW )
 {
-  if( ISNUMPAR(1) && ISQWIDGET(1) )
+  if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
-    QSizeGrip * obj = new QSizeGrip( PQWIDGET(1) );
+    QSizeGrip * obj = new QSizeGrip( PQWIDGET( 1 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QSIZEGRIP_NEW )
 
 HB_FUNC_STATIC( QSIZEGRIP_DELETE )
 {
-  QSizeGrip * obj = (QSizeGrip *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSizeGrip * obj = ( QSizeGrip * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -83,15 +83,15 @@ virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QSIZEGRIP_SETVISIBLE )
 {
-  QSizeGrip * obj = (QSizeGrip *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSizeGrip * obj = ( QSizeGrip * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setVisible( PBOOL(1) );
+      obj->setVisible( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -109,12 +109,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSIZEGRIP_SIZEHINT )
 {
-  QSizeGrip * obj = (QSizeGrip *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSizeGrip * obj = ( QSizeGrip * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );

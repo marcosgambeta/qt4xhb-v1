@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -48,7 +48,7 @@ QCommandLinkButton( QWidget * parent = 0 )
 */
 void QCommandLinkButton_new1()
 {
-  QCommandLinkButton * obj = new QCommandLinkButton( OPQWIDGET(1,0) );
+  QCommandLinkButton * obj = new QCommandLinkButton( OPQWIDGET( 1, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -57,7 +57,7 @@ QCommandLinkButton( const QString & text, QWidget * parent = 0 )
 */
 void QCommandLinkButton_new2()
 {
-  QCommandLinkButton * obj = new QCommandLinkButton( PQSTRING(1), OPQWIDGET(2,0) );
+  QCommandLinkButton * obj = new QCommandLinkButton( PQSTRING( 1 ), OPQWIDGET( 2, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -66,21 +66,21 @@ QCommandLinkButton( const QString & text, const QString & description, QWidget *
 */
 void QCommandLinkButton_new3()
 {
-  QCommandLinkButton * obj = new QCommandLinkButton( PQSTRING(1), PQSTRING(2), OPQWIDGET(3,0) );
+  QCommandLinkButton * obj = new QCommandLinkButton( PQSTRING( 1 ), PQSTRING( 2 ), OPQWIDGET( 3, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
   {
     QCommandLinkButton_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISQWIDGET( 2 ) || ISNIL( 2 ) ) )
   {
     QCommandLinkButton_new2();
   }
-  else if( ISBETWEEN(2,3) && ISCHAR(1) && ISCHAR(2) && (ISQWIDGET(3)||ISNIL(3)) )
+  else if( ISBETWEEN( 2, 3 ) && ISCHAR( 1 ) && ISCHAR( 2 ) && ( ISQWIDGET( 3 ) || ISNIL( 3 ) ) )
   {
     QCommandLinkButton_new3();
   }
@@ -95,12 +95,12 @@ QString description() const
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DESCRIPTION )
 {
-  QCommandLinkButton * obj = (QCommandLinkButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QCommandLinkButton * obj = ( QCommandLinkButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->description() );
@@ -119,15 +119,15 @@ void setDescription( const QString & description )
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETDESCRIPTION )
 {
-  QCommandLinkButton * obj = (QCommandLinkButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QCommandLinkButton * obj = ( QCommandLinkButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setDescription( PQSTRING(1) );
+      obj->setDescription( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,12 +145,12 @@ bool isFlat() const
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_ISFLAT )
 {
-  QCommandLinkButton * obj = (QCommandLinkButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QCommandLinkButton * obj = ( QCommandLinkButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isFlat() );
@@ -169,15 +169,15 @@ void setFlat( bool )
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETFLAT )
 {
-  QCommandLinkButton * obj = (QCommandLinkButton *) Qt4xHb::itemGetPtrStackSelfItem();
+  QCommandLinkButton * obj = ( QCommandLinkButton * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setFlat( PBOOL(1) );
+      obj->setFlat( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -56,9 +56,9 @@ QWidgetItem( QWidget * widget )
 */
 HB_FUNC_STATIC( QWIDGETITEM_NEW )
 {
-  if( ISNUMPAR(1) && ISQWIDGET(1) )
+  if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
-    QWidgetItem * obj = new QWidgetItem( PQWIDGET(1) );
+    QWidgetItem * obj = new QWidgetItem( PQWIDGET( 1 ) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QWIDGETITEM_NEW )
 
 HB_FUNC_STATIC( QWIDGETITEM_DELETE )
 {
-  QWidgetItem * obj = (QWidgetItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidgetItem * obj = ( QWidgetItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -89,12 +89,12 @@ virtual Qt::Orientations expandingDirections() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_EXPANDINGDIRECTIONS )
 {
-  QWidgetItem * obj = (QWidgetItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidgetItem * obj = ( QWidgetItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->expandingDirections() );
@@ -113,12 +113,12 @@ virtual QRect geometry() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_GEOMETRY )
 {
-  QWidgetItem * obj = (QWidgetItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidgetItem * obj = ( QWidgetItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QRect * ptr = new QRect( obj->geometry() );
@@ -138,12 +138,12 @@ virtual bool hasHeightForWidth() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_HASHEIGHTFORWIDTH )
 {
-  QWidgetItem * obj = (QWidgetItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidgetItem * obj = ( QWidgetItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->hasHeightForWidth() );
@@ -162,15 +162,15 @@ virtual int heightForWidth( int w ) const
 */
 HB_FUNC_STATIC( QWIDGETITEM_HEIGHTFORWIDTH )
 {
-  QWidgetItem * obj = (QWidgetItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidgetItem * obj = ( QWidgetItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RINT( obj->heightForWidth( PINT(1) ) );
+      RINT( obj->heightForWidth( PINT( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,12 +186,12 @@ virtual bool isEmpty() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_ISEMPTY )
 {
-  QWidgetItem * obj = (QWidgetItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidgetItem * obj = ( QWidgetItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isEmpty() );
@@ -210,12 +210,12 @@ virtual QSize maximumSize() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_MAXIMUMSIZE )
 {
-  QWidgetItem * obj = (QWidgetItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidgetItem * obj = ( QWidgetItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->maximumSize() );
@@ -235,12 +235,12 @@ virtual QSize minimumSize() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_MINIMUMSIZE )
 {
-  QWidgetItem * obj = (QWidgetItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidgetItem * obj = ( QWidgetItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSize() );
@@ -260,15 +260,15 @@ virtual void setGeometry( const QRect & rect )
 */
 HB_FUNC_STATIC( QWIDGETITEM_SETGEOMETRY )
 {
-  QWidgetItem * obj = (QWidgetItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidgetItem * obj = ( QWidgetItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQRECT(1) )
+    if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
     {
 #endif
-      obj->setGeometry( *PQRECT(1) );
+      obj->setGeometry( *PQRECT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -286,12 +286,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_SIZEHINT )
 {
-  QWidgetItem * obj = (QWidgetItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidgetItem * obj = ( QWidgetItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
@@ -311,12 +311,12 @@ virtual QWidget * widget()
 */
 HB_FUNC_STATIC( QWIDGETITEM_WIDGET )
 {
-  QWidgetItem * obj = (QWidgetItem *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidgetItem * obj = ( QWidgetItem * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWidget * ptr = obj->widget();

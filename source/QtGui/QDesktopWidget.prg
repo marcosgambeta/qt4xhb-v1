@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -56,11 +56,11 @@ const QRect availableGeometry( int screen = -1 ) const
 */
 void QDesktopWidget_availableGeometry1()
 {
-  QDesktopWidget * obj = (QDesktopWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget * obj = ( QDesktopWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QRect * ptr = new QRect( obj->availableGeometry( OPINT(1,-1) ) );
+    QRect * ptr = new QRect( obj->availableGeometry( OPINT( 1, -1 ) ) );
     Qt4xHb::createReturnClass( ptr, "QRECT", true );
   }
 }
@@ -70,11 +70,11 @@ const QRect availableGeometry( const QWidget * widget ) const
 */
 void QDesktopWidget_availableGeometry2()
 {
-  QDesktopWidget * obj = (QDesktopWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget * obj = ( QDesktopWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QRect * ptr = new QRect( obj->availableGeometry( PQWIDGET(1) ) );
+    QRect * ptr = new QRect( obj->availableGeometry( PQWIDGET( 1 ) ) );
     Qt4xHb::createReturnClass( ptr, "QRECT", true );
   }
 }
@@ -84,26 +84,26 @@ const QRect availableGeometry( const QPoint & p ) const
 */
 void QDesktopWidget_availableGeometry3()
 {
-  QDesktopWidget * obj = (QDesktopWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget * obj = ( QDesktopWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QRect * ptr = new QRect( obj->availableGeometry( *PQPOINT(1) ) );
+    QRect * ptr = new QRect( obj->availableGeometry( *PQPOINT( 1 ) ) );
     Qt4xHb::createReturnClass( ptr, "QRECT", true );
   }
 }
 
 HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
 {
-  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
   {
     QDesktopWidget_availableGeometry1();
   }
-  else if( ISNUMPAR(1) && ISQWIDGET(1) )
+  else if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
     QDesktopWidget_availableGeometry2();
   }
-  else if( ISNUMPAR(1) && ISQPOINT(1) )
+  else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
     QDesktopWidget_availableGeometry3();
   }
@@ -118,12 +118,12 @@ bool isVirtualDesktop() const
 */
 HB_FUNC_STATIC( QDESKTOPWIDGET_ISVIRTUALDESKTOP )
 {
-  QDesktopWidget * obj = (QDesktopWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget * obj = ( QDesktopWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isVirtualDesktop() );
@@ -142,12 +142,12 @@ int primaryScreen() const
 */
 HB_FUNC_STATIC( QDESKTOPWIDGET_PRIMARYSCREEN )
 {
-  QDesktopWidget * obj = (QDesktopWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget * obj = ( QDesktopWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->primaryScreen() );
@@ -166,15 +166,15 @@ QWidget * screen( int screen = -1 )
 */
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
 {
-  QDesktopWidget * obj = (QDesktopWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget * obj = ( QDesktopWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
     {
 #endif
-      QWidget * ptr = obj->screen( OPINT(1,-1) );
+      QWidget * ptr = obj->screen( OPINT( 1, -1 ) );
       Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -191,12 +191,12 @@ int screenCount() const
 */
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENCOUNT )
 {
-  QDesktopWidget * obj = (QDesktopWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget * obj = ( QDesktopWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->screenCount() );
@@ -215,11 +215,11 @@ const QRect screenGeometry( int screen = -1 ) const
 */
 void QDesktopWidget_screenGeometry1()
 {
-  QDesktopWidget * obj = (QDesktopWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget * obj = ( QDesktopWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QRect * ptr = new QRect( obj->screenGeometry( OPINT(1,-1) ) );
+    QRect * ptr = new QRect( obj->screenGeometry( OPINT( 1, -1 ) ) );
     Qt4xHb::createReturnClass( ptr, "QRECT", true );
   }
 }
@@ -229,11 +229,11 @@ const QRect screenGeometry( const QWidget * widget ) const
 */
 void QDesktopWidget_screenGeometry2()
 {
-  QDesktopWidget * obj = (QDesktopWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget * obj = ( QDesktopWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QRect * ptr = new QRect( obj->screenGeometry( PQWIDGET(1) ) );
+    QRect * ptr = new QRect( obj->screenGeometry( PQWIDGET( 1 ) ) );
     Qt4xHb::createReturnClass( ptr, "QRECT", true );
   }
 }
@@ -243,26 +243,26 @@ const QRect screenGeometry( const QPoint & p ) const
 */
 void QDesktopWidget_screenGeometry3()
 {
-  QDesktopWidget * obj = (QDesktopWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget * obj = ( QDesktopWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QRect * ptr = new QRect( obj->screenGeometry( *PQPOINT(1) ) );
+    QRect * ptr = new QRect( obj->screenGeometry( *PQPOINT( 1 ) ) );
     Qt4xHb::createReturnClass( ptr, "QRECT", true );
   }
 }
 
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
 {
-  if( ISBETWEEN(0,1) && (ISNUM(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
   {
     QDesktopWidget_screenGeometry1();
   }
-  else if( ISNUMPAR(1) && ISQWIDGET(1) )
+  else if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
     QDesktopWidget_screenGeometry2();
   }
-  else if( ISNUMPAR(1) && ISQPOINT(1) )
+  else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
     QDesktopWidget_screenGeometry3();
   }
@@ -277,11 +277,11 @@ int screenNumber( const QWidget * widget = 0 ) const
 */
 void QDesktopWidget_screenNumber1()
 {
-  QDesktopWidget * obj = (QDesktopWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget * obj = ( QDesktopWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RINT( obj->screenNumber( OPQWIDGET(1,0) ) );
+    RINT( obj->screenNumber( OPQWIDGET( 1, 0 ) ) );
   }
 }
 
@@ -290,21 +290,21 @@ int screenNumber( const QPoint & point ) const
 */
 void QDesktopWidget_screenNumber2()
 {
-  QDesktopWidget * obj = (QDesktopWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget * obj = ( QDesktopWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RINT( obj->screenNumber( *PQPOINT(1) ) );
+    RINT( obj->screenNumber( *PQPOINT( 1 ) ) );
   }
 }
 
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
   {
     QDesktopWidget_screenNumber1();
   }
-  else if( ISNUMPAR(1) && ISQPOINT(1) )
+  else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
     QDesktopWidget_screenNumber2();
   }

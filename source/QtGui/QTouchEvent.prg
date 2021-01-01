@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -43,7 +43,7 @@ RETURN
 
 HB_FUNC_STATIC( QTOUCHEVENT_DELETE )
 {
-  QTouchEvent * obj = (QTouchEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTouchEvent * obj = ( QTouchEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -63,12 +63,12 @@ QWidget * widget() const
 */
 HB_FUNC_STATIC( QTOUCHEVENT_WIDGET )
 {
-  QTouchEvent * obj = (QTouchEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTouchEvent * obj = ( QTouchEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWidget * ptr = obj->widget();
@@ -88,12 +88,12 @@ QTouchEvent::DeviceType deviceType() const
 */
 HB_FUNC_STATIC( QTOUCHEVENT_DEVICETYPE )
 {
-  QTouchEvent * obj = (QTouchEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTouchEvent * obj = ( QTouchEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->deviceType() );
@@ -112,12 +112,12 @@ Qt::TouchPointStates touchPointStates() const
 */
 HB_FUNC_STATIC( QTOUCHEVENT_TOUCHPOINTSTATES )
 {
-  QTouchEvent * obj = (QTouchEvent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTouchEvent * obj = ( QTouchEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->touchPointStates() );

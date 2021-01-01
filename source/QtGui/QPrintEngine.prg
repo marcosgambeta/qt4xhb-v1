@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -55,7 +55,7 @@ RETURN
 
 HB_FUNC_STATIC( QPRINTENGINE_DELETE )
 {
-  QPrintEngine * obj = (QPrintEngine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrintEngine * obj = ( QPrintEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -75,12 +75,12 @@ virtual bool abort() = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_ABORT )
 {
-  QPrintEngine * obj = (QPrintEngine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrintEngine * obj = ( QPrintEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->abort() );
@@ -99,15 +99,15 @@ virtual int metric( QPaintDevice::PaintDeviceMetric id ) const = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_METRIC )
 {
-  QPrintEngine * obj = (QPrintEngine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrintEngine * obj = ( QPrintEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RINT( obj->metric( (QPaintDevice::PaintDeviceMetric) hb_parni(1) ) );
+      RINT( obj->metric( ( QPaintDevice::PaintDeviceMetric ) hb_parni( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -123,12 +123,12 @@ virtual bool newPage() = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_NEWPAGE )
 {
-  QPrintEngine * obj = (QPrintEngine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrintEngine * obj = ( QPrintEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->newPage() );
@@ -147,12 +147,12 @@ virtual QPrinter::PrinterState printerState() const = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_PRINTERSTATE )
 {
-  QPrintEngine * obj = (QPrintEngine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrintEngine * obj = ( QPrintEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->printerState() );
@@ -171,15 +171,15 @@ virtual QVariant property( QPrintEngine::PrintEnginePropertyKey key ) const = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_PROPERTY )
 {
-  QPrintEngine * obj = (QPrintEngine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrintEngine * obj = ( QPrintEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->property( (QPrintEngine::PrintEnginePropertyKey) hb_parni(1) ) );
+      QVariant * ptr = new QVariant( obj->property( ( QPrintEngine::PrintEnginePropertyKey ) hb_parni( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -196,15 +196,15 @@ virtual void setProperty( QPrintEngine::PrintEnginePropertyKey key, const QVaria
 */
 HB_FUNC_STATIC( QPRINTENGINE_SETPROPERTY )
 {
-  QPrintEngine * obj = (QPrintEngine *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrintEngine * obj = ( QPrintEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQVARIANT(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQVARIANT( 2 ) )
     {
 #endif
-      obj->setProperty( (QPrintEngine::PrintEnginePropertyKey) hb_parni(1), *PQVARIANT(2) );
+      obj->setProperty( ( QPrintEngine::PrintEnginePropertyKey ) hb_parni( 1 ), *PQVARIANT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,18 +221,18 @@ HB_FUNC_STATIC( QPRINTENGINE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -259,16 +259,16 @@ HB_FUNC_STATIC( QPRINTENGINE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QPRINTENGINE_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QPRINTENGINE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

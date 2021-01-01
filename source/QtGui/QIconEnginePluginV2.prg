@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -44,7 +44,7 @@ RETURN
 
 HB_FUNC_STATIC( QICONENGINEPLUGINV2_DELETE )
 {
-  QIconEnginePluginV2 * obj = (QIconEnginePluginV2 *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIconEnginePluginV2 * obj = ( QIconEnginePluginV2 * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -66,15 +66,15 @@ virtual QIconEngineV2 * create( const QString & filename = QString() ) = 0
 */
 HB_FUNC_STATIC( QICONENGINEPLUGINV2_CREATE )
 {
-  QIconEnginePluginV2 * obj = (QIconEnginePluginV2 *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIconEnginePluginV2 * obj = ( QIconEnginePluginV2 * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
+    if( ISBETWEEN( 0, 1 ) && ISOPTCHAR( 1 ) )
     {
 #endif
-      QIconEngineV2 * ptr = obj->create( OPQSTRING(1,QString()) );
+      QIconEngineV2 * ptr = obj->create( OPQSTRING( 1, QString() ) );
       Qt4xHb::createReturnClass( ptr, "QICONENGINEV2", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -91,12 +91,12 @@ virtual QStringList keys() const = 0
 */
 HB_FUNC_STATIC( QICONENGINEPLUGINV2_KEYS )
 {
-  QIconEnginePluginV2 * obj = (QIconEnginePluginV2 *) Qt4xHb::itemGetPtrStackSelfItem();
+  QIconEnginePluginV2 * obj = ( QIconEnginePluginV2 * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->keys() );

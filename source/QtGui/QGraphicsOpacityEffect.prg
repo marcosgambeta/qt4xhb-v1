@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -53,9 +53,9 @@ QGraphicsOpacityEffect( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
-    QGraphicsOpacityEffect * obj = new QGraphicsOpacityEffect( OPQOBJECT(1,0) );
+    QGraphicsOpacityEffect * obj = new QGraphicsOpacityEffect( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_DELETE )
 {
-  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsOpacityEffect * obj = ( QGraphicsOpacityEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -88,12 +88,12 @@ qreal opacity() const
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITY )
 {
-  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsOpacityEffect * obj = ( QGraphicsOpacityEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->opacity() );
@@ -112,12 +112,12 @@ QBrush opacityMask() const
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITYMASK )
 {
-  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsOpacityEffect * obj = ( QGraphicsOpacityEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QBrush * ptr = new QBrush( obj->opacityMask() );
@@ -137,15 +137,15 @@ void setOpacity( qreal opacity )
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITY )
 {
-  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsOpacityEffect * obj = ( QGraphicsOpacityEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setOpacity( PQREAL(1) );
+      obj->setOpacity( PQREAL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,15 +163,15 @@ void setOpacityMask( const QBrush & mask )
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITYMASK )
 {
-  QGraphicsOpacityEffect * obj = (QGraphicsOpacityEffect *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsOpacityEffect * obj = ( QGraphicsOpacityEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBRUSH(1) )
+    if( ISNUMPAR( 1 ) && ISQBRUSH( 1 ) )
     {
 #endif
-      obj->setOpacityMask( *PQBRUSH(1) );
+      obj->setOpacityMask( *PQBRUSH( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

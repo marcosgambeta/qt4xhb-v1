@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -74,7 +74,7 @@ QCursor( Qt::CursorShape shape )
 */
 void QCursor_new2()
 {
-  QCursor * obj = new QCursor( (Qt::CursorShape) hb_parni(1) );
+  QCursor * obj = new QCursor( ( Qt::CursorShape ) hb_parni( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -83,7 +83,7 @@ QCursor( const QBitmap & bitmap, const QBitmap & mask, int hotX = -1, int hotY =
 */
 void QCursor_new3()
 {
-  QCursor * obj = new QCursor( *PQBITMAP(1), *PQBITMAP(2), OPINT(3,-1), OPINT(4,-1) );
+  QCursor * obj = new QCursor( *PQBITMAP( 1 ), *PQBITMAP( 2 ), OPINT( 3, -1 ), OPINT( 4, -1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -92,7 +92,7 @@ QCursor( const QPixmap & pixmap, int hotX = -1, int hotY = -1 )
 */
 void QCursor_new4()
 {
-  QCursor * obj = new QCursor( *PQPIXMAP(1), OPINT(2,-1), OPINT(3,-1) );
+  QCursor * obj = new QCursor( *PQPIXMAP( 1 ), OPINT( 2, -1 ), OPINT( 3, -1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -101,29 +101,29 @@ QCursor( const QCursor & c )
 */
 void QCursor_new5()
 {
-  QCursor * obj = new QCursor( *PQCURSOR(1) );
+  QCursor * obj = new QCursor( *PQCURSOR( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QCURSOR_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QCursor_new1();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
   {
     QCursor_new2();
   }
-  else if( ISBETWEEN(2,4) && ISQBITMAP(1) && ISQBITMAP(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
+  else if( ISBETWEEN( 2, 4 ) && ISQBITMAP( 1 ) && ISQBITMAP( 2 ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
   {
     QCursor_new3();
   }
-  else if( ISBETWEEN(1,3) && ISQPIXMAP(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+  else if( ISBETWEEN( 1, 3 ) && ISQPIXMAP( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
   {
     QCursor_new4();
   }
-  else if( ISNUMPAR(1) && ISQCURSOR(1) )
+  else if( ISNUMPAR( 1 ) && ISQCURSOR( 1 ) )
   {
     QCursor_new5();
   }
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QCURSOR_NEW )
 
 HB_FUNC_STATIC( QCURSOR_DELETE )
 {
-  QCursor * obj = (QCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QCursor * obj = ( QCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -155,12 +155,12 @@ const QBitmap * bitmap() const
 */
 HB_FUNC_STATIC( QCURSOR_BITMAP )
 {
-  QCursor * obj = (QCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QCursor * obj = ( QCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QBitmap * ptr = obj->bitmap();
@@ -180,12 +180,12 @@ QPoint hotSpot() const
 */
 HB_FUNC_STATIC( QCURSOR_HOTSPOT )
 {
-  QCursor * obj = (QCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QCursor * obj = ( QCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPoint * ptr = new QPoint( obj->hotSpot() );
@@ -205,12 +205,12 @@ const QBitmap * mask() const
 */
 HB_FUNC_STATIC( QCURSOR_MASK )
 {
-  QCursor * obj = (QCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QCursor * obj = ( QCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       const QBitmap * ptr = obj->mask();
@@ -230,12 +230,12 @@ QPixmap pixmap() const
 */
 HB_FUNC_STATIC( QCURSOR_PIXMAP )
 {
-  QCursor * obj = (QCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QCursor * obj = ( QCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->pixmap() );
@@ -255,15 +255,15 @@ void setShape( Qt::CursorShape shape )
 */
 HB_FUNC_STATIC( QCURSOR_SETSHAPE )
 {
-  QCursor * obj = (QCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QCursor * obj = ( QCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setShape( (Qt::CursorShape) hb_parni(1) );
+      obj->setShape( ( Qt::CursorShape ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -281,12 +281,12 @@ Qt::CursorShape shape() const
 */
 HB_FUNC_STATIC( QCURSOR_SHAPE )
 {
-  QCursor * obj = (QCursor *) Qt4xHb::itemGetPtrStackSelfItem();
+  QCursor * obj = ( QCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->shape() );
@@ -306,7 +306,7 @@ static QPoint pos()
 HB_FUNC_STATIC( QCURSOR_POS )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QPoint * ptr = new QPoint( QCursor::pos() );
@@ -326,7 +326,7 @@ static void setPos( int x, int y )
 void QCursor_setPos1()
 {
 
-  QCursor::setPos( PINT(1), PINT(2) );
+  QCursor::setPos( PINT( 1 ), PINT( 2 ) );
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -337,18 +337,18 @@ static void setPos( const QPoint & p )
 void QCursor_setPos2()
 {
 
-  QCursor::setPos( *PQPOINT(1) );
+  QCursor::setPos( *PQPOINT( 1 ) );
 
   hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( QCURSOR_SETPOS )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
   {
     QCursor_setPos1();
   }
-  else if( ISNUMPAR(1) && ISQPOINT(1) )
+  else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
     QCursor_setPos2();
   }
@@ -362,18 +362,18 @@ HB_FUNC_STATIC( QCURSOR_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -400,16 +400,16 @@ HB_FUNC_STATIC( QCURSOR_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QCURSOR_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QCURSOR_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

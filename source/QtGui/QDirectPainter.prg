@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -64,9 +64,9 @@ QDirectPainter( QObject * parent = 0, QDirectPainter::SurfaceFlag flag = QDirect
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQOBJECT(1)||ISNIL(1)) && ISOPTNUM(2) )
+  if( ISBETWEEN( 0, 2 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) && ISOPTNUM( 2 ) )
   {
-    QDirectPainter * obj = new QDirectPainter( OPQOBJECT(1,0), ISNIL(2)? (QDirectPainter::SurfaceFlag) QDirectPainter::NonReserved : (QDirectPainter::SurfaceFlag) hb_parni(2) );
+    QDirectPainter * obj = new QDirectPainter( OPQOBJECT( 1, 0 ), ISNIL( 2 )? ( QDirectPainter::SurfaceFlag ) QDirectPainter::NonReserved : ( QDirectPainter::SurfaceFlag ) hb_parni( 2 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_NEW )
 
 HB_FUNC_STATIC( QDIRECTPAINTER_DELETE )
 {
-  QDirectPainter * obj = (QDirectPainter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDirectPainter * obj = ( QDirectPainter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -99,12 +99,12 @@ QRegion allocatedRegion() const
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_ALLOCATEDREGION )
 {
-  QDirectPainter * obj = (QDirectPainter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDirectPainter * obj = ( QDirectPainter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QRegion * ptr = new QRegion( obj->allocatedRegion() );
@@ -124,7 +124,7 @@ void endPainting()
 */
 void QDirectPainter_endPainting1()
 {
-  QDirectPainter * obj = (QDirectPainter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDirectPainter * obj = ( QDirectPainter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -139,11 +139,11 @@ void endPainting( const QRegion & region )
 */
 void QDirectPainter_endPainting2()
 {
-  QDirectPainter * obj = (QDirectPainter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDirectPainter * obj = ( QDirectPainter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->endPainting( *PQREGION(1) );
+    obj->endPainting( *PQREGION( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -151,11 +151,11 @@ void QDirectPainter_endPainting2()
 
 HB_FUNC_STATIC( QDIRECTPAINTER_ENDPAINTING )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QDirectPainter_endPainting1();
   }
-  else if( ISNUMPAR(1) && ISQREGION(1) )
+  else if( ISNUMPAR( 1 ) && ISQREGION( 1 ) )
   {
     QDirectPainter_endPainting2();
   }
@@ -170,15 +170,15 @@ void flush( const QRegion & region )
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_FLUSH )
 {
-  QDirectPainter * obj = (QDirectPainter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDirectPainter * obj = ( QDirectPainter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQREGION(1) )
+    if( ISNUMPAR( 1 ) && ISQREGION( 1 ) )
     {
 #endif
-      obj->flush( *PQREGION(1) );
+      obj->flush( *PQREGION( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,12 +196,12 @@ QRect geometry() const
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_GEOMETRY )
 {
-  QDirectPainter * obj = (QDirectPainter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDirectPainter * obj = ( QDirectPainter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QRect * ptr = new QRect( obj->geometry() );
@@ -221,12 +221,12 @@ void lower()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_LOWER )
 {
-  QDirectPainter * obj = (QDirectPainter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDirectPainter * obj = ( QDirectPainter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->lower();
@@ -247,12 +247,12 @@ void raise()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_RAISE )
 {
-  QDirectPainter * obj = (QDirectPainter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDirectPainter * obj = ( QDirectPainter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->raise();
@@ -273,15 +273,15 @@ virtual void regionChanged( const QRegion & newRegion )
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_REGIONCHANGED )
 {
-  QDirectPainter * obj = (QDirectPainter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDirectPainter * obj = ( QDirectPainter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQREGION(1) )
+    if( ISNUMPAR( 1 ) && ISQREGION( 1 ) )
     {
 #endif
-      obj->regionChanged( *PQREGION(1) );
+      obj->regionChanged( *PQREGION( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -299,12 +299,12 @@ QRegion requestedRegion() const
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_REQUESTEDREGION )
 {
-  QDirectPainter * obj = (QDirectPainter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDirectPainter * obj = ( QDirectPainter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QRegion * ptr = new QRegion( obj->requestedRegion() );
@@ -324,15 +324,15 @@ void setGeometry( const QRect & rectangle )
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_SETGEOMETRY )
 {
-  QDirectPainter * obj = (QDirectPainter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDirectPainter * obj = ( QDirectPainter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQRECT(1) )
+    if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
     {
 #endif
-      obj->setGeometry( *PQRECT(1) );
+      obj->setGeometry( *PQRECT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -350,15 +350,15 @@ void setRegion( const QRegion & region )
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_SETREGION )
 {
-  QDirectPainter * obj = (QDirectPainter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDirectPainter * obj = ( QDirectPainter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQREGION(1) )
+    if( ISNUMPAR( 1 ) && ISQREGION( 1 ) )
     {
 #endif
-      obj->setRegion( *PQREGION(1) );
+      obj->setRegion( *PQREGION( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -376,15 +376,15 @@ void startPainting( bool lockDisplay = true )
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_STARTPAINTING )
 {
-  QDirectPainter * obj = (QDirectPainter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDirectPainter * obj = ( QDirectPainter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTLOG(1) )
+    if( ISBETWEEN( 0, 1 ) && ISOPTLOG( 1 ) )
     {
 #endif
-      obj->startPainting( OPBOOL(1,true) );
+      obj->startPainting( OPBOOL( 1, true ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -403,7 +403,7 @@ static int linestep()
 HB_FUNC_STATIC( QDIRECTPAINTER_LINESTEP )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RINT( QDirectPainter::linestep() );
@@ -422,7 +422,7 @@ static void lock()
 HB_FUNC_STATIC( QDIRECTPAINTER_LOCK )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QDirectPainter::lock();
@@ -443,7 +443,7 @@ static int screenDepth()
 HB_FUNC_STATIC( QDIRECTPAINTER_SCREENDEPTH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RINT( QDirectPainter::screenDepth() );
@@ -462,7 +462,7 @@ static int screenHeight()
 HB_FUNC_STATIC( QDIRECTPAINTER_SCREENHEIGHT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RINT( QDirectPainter::screenHeight() );
@@ -481,7 +481,7 @@ static int screenWidth()
 HB_FUNC_STATIC( QDIRECTPAINTER_SCREENWIDTH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RINT( QDirectPainter::screenWidth() );
@@ -500,7 +500,7 @@ static void unlock()
 HB_FUNC_STATIC( QDIRECTPAINTER_UNLOCK )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QDirectPainter::unlock();

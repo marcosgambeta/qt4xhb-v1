@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -47,9 +47,9 @@ QFocusFrame( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QFOCUSFRAME_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
   {
-    QFocusFrame * obj = new QFocusFrame( OPQWIDGET(1,0) );
+    QFocusFrame * obj = new QFocusFrame( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -63,15 +63,15 @@ void setWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QFOCUSFRAME_SETWIDGET )
 {
-  QFocusFrame * obj = (QFocusFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFocusFrame * obj = ( QFocusFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      obj->setWidget( PQWIDGET(1) );
+      obj->setWidget( PQWIDGET( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -89,12 +89,12 @@ QWidget * widget() const
 */
 HB_FUNC_STATIC( QFOCUSFRAME_WIDGET )
 {
-  QFocusFrame * obj = (QFocusFrame *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFocusFrame * obj = ( QFocusFrame * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWidget * ptr = obj->widget();

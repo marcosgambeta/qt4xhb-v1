@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -63,7 +63,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_DELETE )
 {
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractScrollArea * obj = ( QAbstractScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -85,15 +85,15 @@ void addScrollBarWidget( QWidget * widget, Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_ADDSCROLLBARWIDGET )
 {
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractScrollArea * obj = ( QAbstractScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQWIDGET(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISQWIDGET( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      obj->addScrollBarWidget( PQWIDGET(1), (Qt::Alignment) hb_parni(2) );
+      obj->addScrollBarWidget( PQWIDGET( 1 ), ( Qt::Alignment ) hb_parni( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -111,12 +111,12 @@ QWidget * cornerWidget() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_CORNERWIDGET )
 {
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractScrollArea * obj = ( QAbstractScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWidget * ptr = obj->cornerWidget();
@@ -136,12 +136,12 @@ QScrollBar * horizontalScrollBar() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBAR )
 {
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractScrollArea * obj = ( QAbstractScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QScrollBar * ptr = obj->horizontalScrollBar();
@@ -161,12 +161,12 @@ Qt::ScrollBarPolicy horizontalScrollBarPolicy() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_HORIZONTALSCROLLBARPOLICY )
 {
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractScrollArea * obj = ( QAbstractScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->horizontalScrollBarPolicy() );
@@ -185,12 +185,12 @@ QSize maximumViewportSize() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_MAXIMUMVIEWPORTSIZE )
 {
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractScrollArea * obj = ( QAbstractScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->maximumViewportSize() );
@@ -210,17 +210,17 @@ QWidgetList scrollBarWidgets( Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SCROLLBARWIDGETS )
 {
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractScrollArea * obj = ( QAbstractScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QWidgetList list = obj->scrollBarWidgets( (Qt::Alignment) hb_parni(1) );
+      QWidgetList list = obj->scrollBarWidgets( ( Qt::Alignment ) hb_parni( 1 ) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SCROLLBARWIDGETS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QWidget *) list[i] );
+          hb_itemPutPtr( pItem, ( QWidget * ) list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -258,15 +258,15 @@ void setCornerWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETCORNERWIDGET )
 {
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractScrollArea * obj = ( QAbstractScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      obj->setCornerWidget( PQWIDGET(1) );
+      obj->setCornerWidget( PQWIDGET( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -284,15 +284,15 @@ void setHorizontalScrollBar( QScrollBar * scrollBar )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBAR )
 {
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractScrollArea * obj = ( QAbstractScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSCROLLBAR(1) )
+    if( ISNUMPAR( 1 ) && ISQSCROLLBAR( 1 ) )
     {
 #endif
-      obj->setHorizontalScrollBar( PQSCROLLBAR(1) );
+      obj->setHorizontalScrollBar( PQSCROLLBAR( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -310,15 +310,15 @@ void setHorizontalScrollBarPolicy( Qt::ScrollBarPolicy )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETHORIZONTALSCROLLBARPOLICY )
 {
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractScrollArea * obj = ( QAbstractScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setHorizontalScrollBarPolicy( (Qt::ScrollBarPolicy) hb_parni(1) );
+      obj->setHorizontalScrollBarPolicy( ( Qt::ScrollBarPolicy ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -336,15 +336,15 @@ void setVerticalScrollBar( QScrollBar * scrollBar )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBAR )
 {
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractScrollArea * obj = ( QAbstractScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSCROLLBAR(1) )
+    if( ISNUMPAR( 1 ) && ISQSCROLLBAR( 1 ) )
     {
 #endif
-      obj->setVerticalScrollBar( PQSCROLLBAR(1) );
+      obj->setVerticalScrollBar( PQSCROLLBAR( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -362,15 +362,15 @@ void setVerticalScrollBarPolicy( Qt::ScrollBarPolicy )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVERTICALSCROLLBARPOLICY )
 {
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractScrollArea * obj = ( QAbstractScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setVerticalScrollBarPolicy( (Qt::ScrollBarPolicy) hb_parni(1) );
+      obj->setVerticalScrollBarPolicy( ( Qt::ScrollBarPolicy ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -388,15 +388,15 @@ void setViewport( QWidget * widget )
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SETVIEWPORT )
 {
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractScrollArea * obj = ( QAbstractScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
     {
 #endif
-      obj->setViewport( PQWIDGET(1) );
+      obj->setViewport( PQWIDGET( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -414,12 +414,12 @@ QScrollBar * verticalScrollBar() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBAR )
 {
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractScrollArea * obj = ( QAbstractScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QScrollBar * ptr = obj->verticalScrollBar();
@@ -439,12 +439,12 @@ Qt::ScrollBarPolicy verticalScrollBarPolicy() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VERTICALSCROLLBARPOLICY )
 {
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractScrollArea * obj = ( QAbstractScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->verticalScrollBarPolicy() );
@@ -463,12 +463,12 @@ QWidget * viewport() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_VIEWPORT )
 {
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractScrollArea * obj = ( QAbstractScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWidget * ptr = obj->viewport();
@@ -488,12 +488,12 @@ virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_MINIMUMSIZEHINT )
 {
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractScrollArea * obj = ( QAbstractScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
@@ -513,12 +513,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QABSTRACTSCROLLAREA_SIZEHINT )
 {
-  QAbstractScrollArea * obj = (QAbstractScrollArea *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractScrollArea * obj = ( QAbstractScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );

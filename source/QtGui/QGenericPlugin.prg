@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -44,7 +44,7 @@ RETURN
 
 HB_FUNC_STATIC( QGENERICPLUGIN_DELETE )
 {
-  QGenericPlugin * obj = (QGenericPlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGenericPlugin * obj = ( QGenericPlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -66,15 +66,15 @@ virtual QObject * create( const QString & key, const QString & specification ) =
 */
 HB_FUNC_STATIC( QGENERICPLUGIN_CREATE )
 {
-  QGenericPlugin * obj = (QGenericPlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGenericPlugin * obj = ( QGenericPlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISCHAR( 2 ) )
     {
 #endif
-      QObject * ptr = obj->create( PQSTRING(1), PQSTRING(2) );
+      QObject * ptr = obj->create( PQSTRING( 1 ), PQSTRING( 2 ) );
       Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -91,12 +91,12 @@ virtual QStringList keys() const = 0
 */
 HB_FUNC_STATIC( QGENERICPLUGIN_KEYS )
 {
-  QGenericPlugin * obj = (QGenericPlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGenericPlugin * obj = ( QGenericPlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->keys() );

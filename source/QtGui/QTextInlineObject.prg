@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -63,7 +63,7 @@ RETURN
 
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_DELETE )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = ( QTextInlineObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -83,12 +83,12 @@ qreal ascent() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_ASCENT )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = ( QTextInlineObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->ascent() );
@@ -107,12 +107,12 @@ qreal descent() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_DESCENT )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = ( QTextInlineObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->descent() );
@@ -131,12 +131,12 @@ QTextFormat format() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_FORMAT )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = ( QTextInlineObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTextFormat * ptr = new QTextFormat( obj->format() );
@@ -156,12 +156,12 @@ int formatIndex() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_FORMATINDEX )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = ( QTextInlineObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->formatIndex() );
@@ -180,12 +180,12 @@ qreal height() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_HEIGHT )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = ( QTextInlineObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->height() );
@@ -204,12 +204,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_ISVALID )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = ( QTextInlineObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -228,12 +228,12 @@ QRectF rect() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_RECT )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = ( QTextInlineObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QRectF * ptr = new QRectF( obj->rect() );
@@ -253,15 +253,15 @@ void setAscent( qreal a )
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_SETASCENT )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = ( QTextInlineObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setAscent( PQREAL(1) );
+      obj->setAscent( PQREAL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,15 +279,15 @@ void setDescent( qreal d )
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_SETDESCENT )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = ( QTextInlineObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setDescent( PQREAL(1) );
+      obj->setDescent( PQREAL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -305,15 +305,15 @@ void setWidth( qreal w )
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_SETWIDTH )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = ( QTextInlineObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setWidth( PQREAL(1) );
+      obj->setWidth( PQREAL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -331,12 +331,12 @@ Qt::LayoutDirection textDirection() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_TEXTDIRECTION )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = ( QTextInlineObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->textDirection() );
@@ -355,12 +355,12 @@ int textPosition() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_TEXTPOSITION )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = ( QTextInlineObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->textPosition() );
@@ -379,12 +379,12 @@ qreal width() const
 */
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_WIDTH )
 {
-  QTextInlineObject * obj = (QTextInlineObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextInlineObject * obj = ( QTextInlineObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->width() );
@@ -402,18 +402,18 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -440,16 +440,16 @@ HB_FUNC_STATIC( QTEXTINLINEOBJECT_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QTEXTINLINEOBJECT_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

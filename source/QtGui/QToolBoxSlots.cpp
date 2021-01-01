@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QToolBoxSlots.h"
 
-QToolBoxSlots::QToolBoxSlots( QObject *parent ) : QObject( parent )
+QToolBoxSlots::QToolBoxSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QToolBoxSlots::~QToolBoxSlots()
 
 void QToolBoxSlots::currentChanged( int index )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QTOOLBOX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTOOLBOX" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -40,7 +40,7 @@ void QToolBoxSlots::currentChanged( int index )
 
 void QToolBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QToolBox * obj = (QToolBox *) Qt4xHb::itemGetPtrStackSelfItem();
+  QToolBox * obj = ( QToolBox * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

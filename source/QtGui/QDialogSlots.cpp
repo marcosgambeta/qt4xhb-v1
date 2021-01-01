@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QDialogSlots.h"
 
-QDialogSlots::QDialogSlots( QObject *parent ) : QObject( parent )
+QDialogSlots::QDialogSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QDialogSlots::~QDialogSlots()
 
 void QDialogSlots::accepted()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "accepted()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDIALOG" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDIALOG" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,13 +38,13 @@ void QDialogSlots::accepted()
 
 void QDialogSlots::finished( int result )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "finished(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDIALOG" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDIALOG" );
     PHB_ITEM presult = hb_itemPutNI( NULL, result );
 
     hb_vmEvalBlockV( cb, 2, psender, presult );
@@ -56,13 +56,13 @@ void QDialogSlots::finished( int result )
 
 void QDialogSlots::rejected()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "rejected()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDIALOG" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDIALOG" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -72,7 +72,7 @@ void QDialogSlots::rejected()
 
 void QDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDialog * obj = (QDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialog * obj = ( QDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

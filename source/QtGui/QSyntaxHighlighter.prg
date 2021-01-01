@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -48,7 +48,7 @@ RETURN
 
 HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_DELETE )
 {
-  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSyntaxHighlighter * obj = ( QSyntaxHighlighter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -70,12 +70,12 @@ QTextDocument * document() const
 */
 HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_DOCUMENT )
 {
-  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSyntaxHighlighter * obj = ( QSyntaxHighlighter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QTextDocument * ptr = obj->document();
@@ -95,15 +95,15 @@ void setDocument( QTextDocument * doc )
 */
 HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_SETDOCUMENT )
 {
-  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSyntaxHighlighter * obj = ( QSyntaxHighlighter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
+    if( ISNUMPAR( 1 ) && ISQTEXTDOCUMENT( 1 ) )
     {
 #endif
-      obj->setDocument( PQTEXTDOCUMENT(1) );
+      obj->setDocument( PQTEXTDOCUMENT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -121,12 +121,12 @@ void rehighlight()
 */
 HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHT )
 {
-  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSyntaxHighlighter * obj = ( QSyntaxHighlighter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->rehighlight();
@@ -147,15 +147,15 @@ void rehighlightBlock( const QTextBlock & block )
 */
 HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHTBLOCK )
 {
-  QSyntaxHighlighter * obj = (QSyntaxHighlighter *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSyntaxHighlighter * obj = ( QSyntaxHighlighter * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
+    if( ISNUMPAR( 1 ) && ISQTEXTBLOCK( 1 ) )
     {
 #endif
-      obj->rehighlightBlock( *PQTEXTBLOCK(1) );
+      obj->rehighlightBlock( *PQTEXTBLOCK( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

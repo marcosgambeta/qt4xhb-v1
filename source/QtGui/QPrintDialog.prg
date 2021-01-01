@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -57,7 +57,7 @@ QPrintDialog( QPrinter * printer, QWidget * parent = 0 )
 */
 void QPrintDialog_new1()
 {
-  QPrintDialog * obj = new QPrintDialog( PQPRINTER(1), OPQWIDGET(2,0) );
+  QPrintDialog * obj = new QPrintDialog( PQPRINTER( 1 ), OPQWIDGET( 2, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -66,17 +66,17 @@ QPrintDialog( QWidget * parent = 0 )
 */
 void QPrintDialog_new2()
 {
-  QPrintDialog * obj = new QPrintDialog( OPQWIDGET(1,0) );
+  QPrintDialog * obj = new QPrintDialog( OPQWIDGET( 1, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QPRINTDIALOG_NEW )
 {
-  if( ISBETWEEN(1,2) && ISQPRINTER(1) && (ISQWIDGET(2)||ISNIL(2)) )
+  if( ISBETWEEN( 1, 2 ) && ISQPRINTER( 1 ) && ( ISQWIDGET( 2 ) || ISNIL( 2 ) ) )
   {
     QPrintDialog_new1();
   }
-  else if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  else if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
   {
     QPrintDialog_new2();
   }
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_NEW )
 
 HB_FUNC_STATIC( QPRINTDIALOG_DELETE )
 {
-  QPrintDialog * obj = (QPrintDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrintDialog * obj = ( QPrintDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -110,15 +110,15 @@ void open( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_OPEN )
 {
-  QPrintDialog * obj = (QPrintDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrintDialog * obj = ( QPrintDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && ISCHAR( 2 ) )
     {
 #endif
-      obj->open( PQOBJECT(1), PCONSTCHAR(2) );
+      obj->open( PQOBJECT( 1 ), PCONSTCHAR( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,12 +136,12 @@ QPrintDialog::PrintDialogOptions options() const
 */
 HB_FUNC_STATIC( QPRINTDIALOG_OPTIONS )
 {
-  QPrintDialog * obj = (QPrintDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrintDialog * obj = ( QPrintDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->options() );
@@ -160,12 +160,12 @@ QPrinter * printer()
 */
 HB_FUNC_STATIC( QPRINTDIALOG_PRINTER )
 {
-  QPrintDialog * obj = (QPrintDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrintDialog * obj = ( QPrintDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPrinter * ptr = obj->printer();
@@ -185,15 +185,15 @@ void setOption( QPrintDialog::PrintDialogOption option, bool on = true )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_SETOPTION )
 {
-  QPrintDialog * obj = (QPrintDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrintDialog * obj = ( QPrintDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTLOG( 2 ) )
     {
 #endif
-      obj->setOption( (QPrintDialog::PrintDialogOption) hb_parni(1), OPBOOL(2,true) );
+      obj->setOption( ( QPrintDialog::PrintDialogOption ) hb_parni( 1 ), OPBOOL( 2, true ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,15 +211,15 @@ void setOptions( QPrintDialog::PrintDialogOptions options )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_SETOPTIONS )
 {
-  QPrintDialog * obj = (QPrintDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrintDialog * obj = ( QPrintDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setOptions( (QPrintDialog::PrintDialogOptions) hb_parni(1) );
+      obj->setOptions( ( QPrintDialog::PrintDialogOptions ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,15 +237,15 @@ bool testOption( QPrintDialog::PrintDialogOption option ) const
 */
 HB_FUNC_STATIC( QPRINTDIALOG_TESTOPTION )
 {
-  QPrintDialog * obj = (QPrintDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrintDialog * obj = ( QPrintDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->testOption( (QPrintDialog::PrintDialogOption) hb_parni(1) ) );
+      RBOOL( obj->testOption( ( QPrintDialog::PrintDialogOption ) hb_parni( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,15 +261,15 @@ virtual void done( int result )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_DONE )
 {
-  QPrintDialog * obj = (QPrintDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrintDialog * obj = ( QPrintDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->done( PINT(1) );
+      obj->done( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -287,12 +287,12 @@ virtual int exec()
 */
 HB_FUNC_STATIC( QPRINTDIALOG_EXEC )
 {
-  QPrintDialog * obj = (QPrintDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrintDialog * obj = ( QPrintDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->exec() );
@@ -311,15 +311,15 @@ virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_SETVISIBLE )
 {
-  QPrintDialog * obj = (QPrintDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrintDialog * obj = ( QPrintDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setVisible( PBOOL(1) );
+      obj->setVisible( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

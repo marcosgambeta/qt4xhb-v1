@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -45,7 +45,7 @@ RETURN
 
 HB_FUNC_STATIC( QSWIPEGESTURE_DELETE )
 {
-  QSwipeGesture * obj = (QSwipeGesture *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSwipeGesture * obj = ( QSwipeGesture * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -67,12 +67,12 @@ QSwipeGesture::SwipeDirection horizontalDirection() const
 */
 HB_FUNC_STATIC( QSWIPEGESTURE_HORIZONTALDIRECTION )
 {
-  QSwipeGesture * obj = (QSwipeGesture *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSwipeGesture * obj = ( QSwipeGesture * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->horizontalDirection() );
@@ -91,15 +91,15 @@ void setSwipeAngle( qreal value )
 */
 HB_FUNC_STATIC( QSWIPEGESTURE_SETSWIPEANGLE )
 {
-  QSwipeGesture * obj = (QSwipeGesture *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSwipeGesture * obj = ( QSwipeGesture * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setSwipeAngle( PQREAL(1) );
+      obj->setSwipeAngle( PQREAL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -117,12 +117,12 @@ qreal swipeAngle() const
 */
 HB_FUNC_STATIC( QSWIPEGESTURE_SWIPEANGLE )
 {
-  QSwipeGesture * obj = (QSwipeGesture *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSwipeGesture * obj = ( QSwipeGesture * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->swipeAngle() );
@@ -141,12 +141,12 @@ QSwipeGesture::SwipeDirection verticalDirection() const
 */
 HB_FUNC_STATIC( QSWIPEGESTURE_VERTICALDIRECTION )
 {
-  QSwipeGesture * obj = (QSwipeGesture *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSwipeGesture * obj = ( QSwipeGesture * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->verticalDirection() );

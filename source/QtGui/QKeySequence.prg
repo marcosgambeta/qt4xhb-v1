@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -70,7 +70,7 @@ QKeySequence( const QString & key )
 */
 void QKeySequence_new2()
 {
-  QKeySequence * obj = new QKeySequence( PQSTRING(1) );
+  QKeySequence * obj = new QKeySequence( PQSTRING( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -79,7 +79,7 @@ QKeySequence( const QString & key, QKeySequence::SequenceFormat format )
 */
 void QKeySequence_new3()
 {
-  QKeySequence * obj = new QKeySequence( PQSTRING(1), (QKeySequence::SequenceFormat) hb_parni(2) );
+  QKeySequence * obj = new QKeySequence( PQSTRING( 1 ), ( QKeySequence::SequenceFormat ) hb_parni( 2 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -88,7 +88,7 @@ QKeySequence( int k1, int k2 = 0, int k3 = 0, int k4 = 0 )
 */
 void QKeySequence_new4()
 {
-  QKeySequence * obj = new QKeySequence( PINT(1), OPINT(2,0), OPINT(3,0), OPINT(4,0) );
+  QKeySequence * obj = new QKeySequence( PINT( 1 ), OPINT( 2, 0 ), OPINT( 3, 0 ), OPINT( 4, 0 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -97,7 +97,7 @@ QKeySequence( const QKeySequence & keysequence )
 */
 void QKeySequence_new5()
 {
-  QKeySequence * obj = new QKeySequence( *PQKEYSEQUENCE(1) );
+  QKeySequence * obj = new QKeySequence( *PQKEYSEQUENCE( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -106,33 +106,33 @@ QKeySequence( QKeySequence::StandardKey key )
 */
 void QKeySequence_new6()
 {
-  QKeySequence * obj = new QKeySequence( (QKeySequence::StandardKey) hb_parni(1) );
+  QKeySequence * obj = new QKeySequence( ( QKeySequence::StandardKey ) hb_parni( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QKEYSEQUENCE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QKeySequence_new1();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
     QKeySequence_new2();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
   {
     QKeySequence_new3();
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
   {
     QKeySequence_new6();
   }
-  else if( ISBETWEEN(1,4) && ISNUM(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
+  else if( ISBETWEEN( 1, 4 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
   {
     QKeySequence_new4();
   }
-  else if( ISNUMPAR(1) && ISQKEYSEQUENCE(1) )
+  else if( ISNUMPAR( 1 ) && ISQKEYSEQUENCE( 1 ) )
   {
     QKeySequence_new5();
   }
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW )
 
 HB_FUNC_STATIC( QKEYSEQUENCE_DELETE )
 {
-  QKeySequence * obj = (QKeySequence *) Qt4xHb::itemGetPtrStackSelfItem();
+  QKeySequence * obj = ( QKeySequence * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -164,12 +164,12 @@ uint count() const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_COUNT )
 {
-  QKeySequence * obj = (QKeySequence *) Qt4xHb::itemGetPtrStackSelfItem();
+  QKeySequence * obj = ( QKeySequence * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RUINT( obj->count() );
@@ -188,12 +188,12 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_ISEMPTY )
 {
-  QKeySequence * obj = (QKeySequence *) Qt4xHb::itemGetPtrStackSelfItem();
+  QKeySequence * obj = ( QKeySequence * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isEmpty() );
@@ -212,15 +212,15 @@ QKeySequence::SequenceMatch matches( const QKeySequence & seq ) const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_MATCHES )
 {
-  QKeySequence * obj = (QKeySequence *) Qt4xHb::itemGetPtrStackSelfItem();
+  QKeySequence * obj = ( QKeySequence * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQKEYSEQUENCE(1) )
+    if( ISNUMPAR( 1 ) && ISQKEYSEQUENCE( 1 ) )
     {
 #endif
-      RENUM( obj->matches( *PQKEYSEQUENCE(1) ) );
+      RENUM( obj->matches( *PQKEYSEQUENCE( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,15 +236,15 @@ QString toString( QKeySequence::SequenceFormat format = QKeySequence::PortableTe
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_TOSTRING )
 {
-  QKeySequence * obj = (QKeySequence *) Qt4xHb::itemGetPtrStackSelfItem();
+  QKeySequence * obj = ( QKeySequence * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
     {
 #endif
-      RQSTRING( obj->toString( ISNIL(1)? (QKeySequence::SequenceFormat) QKeySequence::PortableText : (QKeySequence::SequenceFormat) hb_parni(1) ) );
+      RQSTRING( obj->toString( ISNIL( 1 )? ( QKeySequence::SequenceFormat ) QKeySequence::PortableText : ( QKeySequence::SequenceFormat ) hb_parni( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,10 +261,10 @@ static QKeySequence fromString( const QString & str, QKeySequence::SequenceForma
 HB_FUNC_STATIC( QKEYSEQUENCE_FROMSTRING )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+  if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ISOPTNUM( 2 ) )
   {
 #endif
-    QKeySequence * ptr = new QKeySequence( QKeySequence::fromString( PQSTRING(1), ISNIL(2)? (QKeySequence::SequenceFormat) QKeySequence::PortableText : (QKeySequence::SequenceFormat) hb_parni(2) ) );
+    QKeySequence * ptr = new QKeySequence( QKeySequence::fromString( PQSTRING( 1 ), ISNIL( 2 )? ( QKeySequence::SequenceFormat ) QKeySequence::PortableText : ( QKeySequence::SequenceFormat ) hb_parni( 2 ) ) );
     Qt4xHb::createReturnClass( ptr, "QKEYSEQUENCE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
@@ -281,12 +281,12 @@ static QList<QKeySequence> keyBindings( QKeySequence::StandardKey key )
 HB_FUNC_STATIC( QKEYSEQUENCE_KEYBINDINGS )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
   {
 #endif
-    QList<QKeySequence> list = QKeySequence::keyBindings( (QKeySequence::StandardKey) hb_parni(1) );
+    QList<QKeySequence> list = QKeySequence::keyBindings( ( QKeySequence::StandardKey ) hb_parni( 1 ) );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QKEYSEQUENCE" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew( 0 );
     if( pDynSym )
     {
       for( int i = 0; i < list.count(); i++ )
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_KEYBINDINGS )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QKeySequence *) new QKeySequence( list[i] ) );
+        hb_itemPutPtr( pItem, ( QKeySequence * ) new QKeySequence( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -328,10 +328,10 @@ static QKeySequence mnemonic( const QString & text )
 HB_FUNC_STATIC( QKEYSEQUENCE_MNEMONIC )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
 #endif
-    QKeySequence * ptr = new QKeySequence( QKeySequence::mnemonic( PQSTRING(1) ) );
+    QKeySequence * ptr = new QKeySequence( QKeySequence::mnemonic( PQSTRING( 1 ) ) );
     Qt4xHb::createReturnClass( ptr, "QKEYSEQUENCE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
@@ -346,18 +346,18 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -384,16 +384,16 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QKEYSEQUENCE_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QKEYSEQUENCE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

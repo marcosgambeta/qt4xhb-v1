@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QGraphicsObjectSlots.h"
 
-QGraphicsObjectSlots::QGraphicsObjectSlots( QObject *parent ) : QObject( parent )
+QGraphicsObjectSlots::QGraphicsObjectSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QGraphicsObjectSlots::~QGraphicsObjectSlots()
 
 void QGraphicsObjectSlots::enabledChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "enabledChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSOBJECT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSOBJECT" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,13 +38,13 @@ void QGraphicsObjectSlots::enabledChanged()
 
 void QGraphicsObjectSlots::opacityChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "opacityChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSOBJECT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSOBJECT" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -54,13 +54,13 @@ void QGraphicsObjectSlots::opacityChanged()
 
 void QGraphicsObjectSlots::parentChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "parentChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSOBJECT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSOBJECT" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -70,13 +70,13 @@ void QGraphicsObjectSlots::parentChanged()
 
 void QGraphicsObjectSlots::rotationChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "rotationChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSOBJECT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSOBJECT" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -86,13 +86,13 @@ void QGraphicsObjectSlots::rotationChanged()
 
 void QGraphicsObjectSlots::scaleChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "scaleChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSOBJECT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSOBJECT" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -102,13 +102,13 @@ void QGraphicsObjectSlots::scaleChanged()
 
 void QGraphicsObjectSlots::visibleChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "visibleChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSOBJECT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSOBJECT" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -118,13 +118,13 @@ void QGraphicsObjectSlots::visibleChanged()
 
 void QGraphicsObjectSlots::xChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "xChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSOBJECT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSOBJECT" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -134,13 +134,13 @@ void QGraphicsObjectSlots::xChanged()
 
 void QGraphicsObjectSlots::yChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "yChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSOBJECT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSOBJECT" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -150,13 +150,13 @@ void QGraphicsObjectSlots::yChanged()
 
 void QGraphicsObjectSlots::zChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "zChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSOBJECT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSOBJECT" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -166,7 +166,7 @@ void QGraphicsObjectSlots::zChanged()
 
 void QGraphicsObjectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsObject * obj = (QGraphicsObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsObject * obj = ( QGraphicsObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

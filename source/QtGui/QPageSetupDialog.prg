@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -52,9 +52,9 @@ QPageSetupDialog( QPrinter * printer, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
 {
-  if( ISBETWEEN(1,2) && ISQPRINTER(1) && (ISQWIDGET(2)||ISNIL(2)) )
+  if( ISBETWEEN( 1, 2 ) && ISQPRINTER( 1 ) && ( ISQWIDGET( 2 ) || ISNIL( 2 ) ) )
   {
-    QPageSetupDialog * obj = new QPageSetupDialog( PQPRINTER(1), OPQWIDGET(2,0) );
+    QPageSetupDialog * obj = new QPageSetupDialog( PQPRINTER( 1 ), OPQWIDGET( 2, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -68,15 +68,15 @@ void open( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_OPEN )
 {
-  QPageSetupDialog * obj = (QPageSetupDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPageSetupDialog * obj = ( QPageSetupDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQOBJECT(1) && ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && ISCHAR( 2 ) )
     {
 #endif
-      obj->open( PQOBJECT(1), PCONSTCHAR(2) );
+      obj->open( PQOBJECT( 1 ), PCONSTCHAR( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -94,12 +94,12 @@ QPageSetupDialog::PageSetupDialogOptions options() const
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_OPTIONS )
 {
-  QPageSetupDialog * obj = (QPageSetupDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPageSetupDialog * obj = ( QPageSetupDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->options() );
@@ -118,12 +118,12 @@ QPrinter * printer()
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
 {
-  QPageSetupDialog * obj = (QPageSetupDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPageSetupDialog * obj = ( QPageSetupDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPrinter * ptr = obj->printer();
@@ -143,15 +143,15 @@ void setOption( QPageSetupDialog::PageSetupDialogOption option, bool on = true )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_SETOPTION )
 {
-  QPageSetupDialog * obj = (QPageSetupDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPageSetupDialog * obj = ( QPageSetupDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISNUM(1) && ISOPTLOG(2) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTLOG( 2 ) )
     {
 #endif
-      obj->setOption( (QPageSetupDialog::PageSetupDialogOption) hb_parni(1), OPBOOL(2,true) );
+      obj->setOption( ( QPageSetupDialog::PageSetupDialogOption ) hb_parni( 1 ), OPBOOL( 2, true ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,15 +169,15 @@ void setOptions( QPageSetupDialog::PageSetupDialogOptions options )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_SETOPTIONS )
 {
-  QPageSetupDialog * obj = (QPageSetupDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPageSetupDialog * obj = ( QPageSetupDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setOptions( (QPageSetupDialog::PageSetupDialogOptions) hb_parni(1) );
+      obj->setOptions( ( QPageSetupDialog::PageSetupDialogOptions ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,15 +195,15 @@ bool testOption( QPageSetupDialog::PageSetupDialogOption option ) const
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_TESTOPTION )
 {
-  QPageSetupDialog * obj = (QPageSetupDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPageSetupDialog * obj = ( QPageSetupDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->testOption( (QPageSetupDialog::PageSetupDialogOption) hb_parni(1) ) );
+      RBOOL( obj->testOption( ( QPageSetupDialog::PageSetupDialogOption ) hb_parni( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,15 +219,15 @@ virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_SETVISIBLE )
 {
-  QPageSetupDialog * obj = (QPageSetupDialog *) Qt4xHb::itemGetPtrStackSelfItem();
+  QPageSetupDialog * obj = ( QPageSetupDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setVisible( PBOOL(1) );
+      obj->setVisible( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
