@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -52,7 +52,7 @@ QSvgWidget( QWidget * parent = 0 )
 */
 void QSvgWidget_new1()
 {
-  QSvgWidget * obj = new QSvgWidget( OPQWIDGET(1,0) );
+  QSvgWidget * obj = new QSvgWidget( OPQWIDGET( 1, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -61,17 +61,17 @@ QSvgWidget( const QString & file, QWidget * parent = 0 )
 */
 void QSvgWidget_new2()
 {
-  QSvgWidget * obj = new QSvgWidget( PQSTRING(1), OPQWIDGET(2,0) );
+  QSvgWidget * obj = new QSvgWidget( PQSTRING( 1 ), OPQWIDGET( 2, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QSVGWIDGET_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
   {
     QSvgWidget_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQWIDGET(2)||ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISQWIDGET( 2 ) || ISNIL( 2 ) ) )
   {
     QSvgWidget_new2();
   }
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QSVGWIDGET_NEW )
 
 HB_FUNC_STATIC( QSVGWIDGET_DELETE )
 {
-  QSvgWidget * obj = (QSvgWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSvgWidget * obj = ( QSvgWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -105,12 +105,12 @@ QSvgRenderer * renderer() const
 */
 HB_FUNC_STATIC( QSVGWIDGET_RENDERER )
 {
-  QSvgWidget * obj = (QSvgWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSvgWidget * obj = ( QSvgWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSvgRenderer * ptr = obj->renderer();
@@ -130,12 +130,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSVGWIDGET_SIZEHINT )
 {
-  QSvgWidget * obj = (QSvgWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSvgWidget * obj = ( QSvgWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
@@ -155,11 +155,11 @@ void load( const QString & file )
 */
 void QSvgWidget_load1()
 {
-  QSvgWidget * obj = (QSvgWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSvgWidget * obj = ( QSvgWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->load( PQSTRING(1) );
+    obj->load( PQSTRING( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -170,11 +170,11 @@ void load( const QByteArray & contents )
 */
 void QSvgWidget_load2()
 {
-  QSvgWidget * obj = (QSvgWidget *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSvgWidget * obj = ( QSvgWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->load( *PQBYTEARRAY(1) );
+    obj->load( *PQBYTEARRAY( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -182,11 +182,11 @@ void QSvgWidget_load2()
 
 HB_FUNC_STATIC( QSVGWIDGET_LOAD )
 {
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
     QSvgWidget_load1();
   }
-  else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+  else if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
     QSvgWidget_load2();
   }
