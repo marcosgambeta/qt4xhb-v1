@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QAudioInputSlots.h"
 
-QAudioInputSlots::QAudioInputSlots( QObject *parent ) : QObject( parent )
+QAudioInputSlots::QAudioInputSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QAudioInputSlots::~QAudioInputSlots()
 
 void QAudioInputSlots::stateChanged( QAudio::State state )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "stateChanged(QAudio::State)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QAUDIOINPUT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QAUDIOINPUT" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
 
     hb_vmEvalBlockV( cb, 2, psender, pstate );
@@ -40,13 +40,13 @@ void QAudioInputSlots::stateChanged( QAudio::State state )
 
 void QAudioInputSlots::notify()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "notify()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QAUDIOINPUT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QAUDIOINPUT" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -56,7 +56,7 @@ void QAudioInputSlots::notify()
 
 void QAudioInputSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAudioInput * obj = (QAudioInput *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioInput * obj = ( QAudioInput * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
