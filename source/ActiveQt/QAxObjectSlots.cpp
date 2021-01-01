@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QAxObjectSlots.h"
 
-QAxObjectSlots::QAxObjectSlots( QObject *parent ) : QObject( parent )
+QAxObjectSlots::QAxObjectSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,17 +22,17 @@ QAxObjectSlots::~QAxObjectSlots()
 
 void QAxObjectSlots::exception( int code, const QString & source, const QString & desc, const QString & help )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "exception(int,QString,QString,QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QAXOBJECT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QAXOBJECT" );
     PHB_ITEM pcode = hb_itemPutNI( NULL, code );
-    PHB_ITEM psource = hb_itemPutC( NULL, QSTRINGTOSTRING(source) );
-    PHB_ITEM pdesc = hb_itemPutC( NULL, QSTRINGTOSTRING(desc) );
-    PHB_ITEM phelp = hb_itemPutC( NULL, QSTRINGTOSTRING(help) );
+    PHB_ITEM psource = hb_itemPutC( NULL, QSTRINGTOSTRING( source ) );
+    PHB_ITEM pdesc = hb_itemPutC( NULL, QSTRINGTOSTRING( desc ) );
+    PHB_ITEM phelp = hb_itemPutC( NULL, QSTRINGTOSTRING( help ) );
 
     hb_vmEvalBlockV( cb, 5, psender, pcode, psource, pdesc, phelp );
 
@@ -46,14 +46,14 @@ void QAxObjectSlots::exception( int code, const QString & source, const QString 
 
 void QAxObjectSlots::propertyChanged( const QString & name )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "propertyChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QAXOBJECT" );
-    PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QAXOBJECT" );
+    PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING( name ) );
 
     hb_vmEvalBlockV( cb, 2, psender, pname );
 
@@ -64,16 +64,16 @@ void QAxObjectSlots::propertyChanged( const QString & name )
 
 void QAxObjectSlots::signal( const QString & name, int argc, void * argv )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "signal(QString,int,void*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QAXOBJECT" );
-    PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QAXOBJECT" );
+    PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING( name ) );
     PHB_ITEM pargc = hb_itemPutNI( NULL, argc );
-    PHB_ITEM pargv = hb_itemPutPtr( NULL, (void *) argv );
+    PHB_ITEM pargv = hb_itemPutPtr( NULL, ( void * ) argv );
 
     hb_vmEvalBlockV( cb, 4, psender, pname, pargc, pargv );
 
@@ -86,7 +86,7 @@ void QAxObjectSlots::signal( const QString & name, int argc, void * argv )
 
 void QAxObjectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAxObject * obj = (QAxObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxObject * obj = ( QAxObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

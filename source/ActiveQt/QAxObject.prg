@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -67,7 +67,7 @@ QAxObject( QObject * parent = 0 )
 */
 void QAxObject_new1()
 {
-  QAxObject * obj = new QAxObject( OPQOBJECT(1,0) );
+  QAxObject * obj = new QAxObject( OPQOBJECT( 1, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -76,7 +76,7 @@ QAxObject( const QString & c, QObject * parent = 0 )
 */
 void QAxObject_new2()
 {
-  QAxObject * obj = new QAxObject( PQSTRING(1), OPQOBJECT(2,0) );
+  QAxObject * obj = new QAxObject( PQSTRING( 1 ), OPQOBJECT( 2, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -85,21 +85,21 @@ QAxObject( IUnknown * iface, QObject * parent = 0 )
 */
 void QAxObject_new3()
 {
-  QAxObject * obj = new QAxObject( (IUnknown *) hb_parptr(1), OPQOBJECT(2,0) );
+  QAxObject * obj = new QAxObject( ( IUnknown * ) hb_parptr( 1 ), OPQOBJECT( 2, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QAXOBJECT_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
     QAxObject_new1();
   }
-  else if( ISBETWEEN(1,2) && ISCHAR(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISQOBJECT( 2 ) || ISNIL( 2 ) ) )
   {
     QAxObject_new2();
   }
-  else if( ISBETWEEN(1,2) && ISPOINTER(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISPOINTER( 1 ) && ( ISQOBJECT( 2 ) || ISNIL( 2 ) ) )
   {
     QAxObject_new3();
   }
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QAXOBJECT_NEW )
 
 HB_FUNC_STATIC( QAXOBJECT_DELETE )
 {
-  QAxObject * obj = (QAxObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxObject * obj = ( QAxObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -133,15 +133,15 @@ bool doVerb( const QString & verb )
 */
 HB_FUNC_STATIC( QAXOBJECT_DOVERB )
 {
-  QAxObject * obj = (QAxObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxObject * obj = ( QAxObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      RBOOL( obj->doVerb( PQSTRING(1) ) );
+      RBOOL( obj->doVerb( PQSTRING( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,20 +152,17 @@ HB_FUNC_STATIC( QAXOBJECT_DOVERB )
   }
 }
 
-// métodos da classe QAxBase, colocados aqui por causa
-// de problemas com herança no [x]Harbour
-
 /*
 QVariant asVariant() const
 */
 HB_FUNC_STATIC( QAXOBJECT_ASVARIANT )
 {
-  QAxObject * obj = (QAxObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxObject * obj = ( QAxObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QVariant * ptr = new QVariant( obj->asVariant() );
@@ -185,12 +182,12 @@ virtual void clear()
 */
 HB_FUNC_STATIC( QAXOBJECT_CLEAR )
 {
-  QAxObject * obj = (QAxObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxObject * obj = ( QAxObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->clear();
@@ -211,12 +208,12 @@ QString control() const
 */
 HB_FUNC_STATIC( QAXOBJECT_CONTROL )
 {
-  QAxObject * obj = (QAxObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxObject * obj = ( QAxObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->control() );
@@ -235,12 +232,12 @@ void disableClassInfo()
 */
 HB_FUNC_STATIC( QAXOBJECT_DISABLECLASSINFO )
 {
-  QAxObject * obj = (QAxObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxObject * obj = ( QAxObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->disableClassInfo();
@@ -261,12 +258,12 @@ void disableEventSink()
 */
 HB_FUNC_STATIC( QAXOBJECT_DISABLEEVENTSINK )
 {
-  QAxObject * obj = (QAxObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxObject * obj = ( QAxObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->disableEventSink();
@@ -287,12 +284,12 @@ void disableMetaObject()
 */
 HB_FUNC_STATIC( QAXOBJECT_DISABLEMETAOBJECT )
 {
-  QAxObject * obj = (QAxObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxObject * obj = ( QAxObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->disableMetaObject();
@@ -313,11 +310,11 @@ QVariant dynamicCall( const char * function, const QVariant & var1 = QVariant(),
 */
 void QAxObject_dynamicCall1()
 {
-  QAxObject * obj = (QAxObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxObject * obj = ( QAxObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->dynamicCall( PCONSTCHAR(1), ISNIL(2)? QVariant() : *(QVariant *) Qt4xHb::itemGetPtr(2), ISNIL(3)? QVariant() : *(QVariant *) Qt4xHb::itemGetPtr(3), ISNIL(4)? QVariant() : *(QVariant *) Qt4xHb::itemGetPtr(4), ISNIL(5)? QVariant() : *(QVariant *) Qt4xHb::itemGetPtr(5), ISNIL(6)? QVariant() : *(QVariant *) Qt4xHb::itemGetPtr(6), ISNIL(7)? QVariant() : *(QVariant *) Qt4xHb::itemGetPtr(7), ISNIL(8)? QVariant() : *(QVariant *) Qt4xHb::itemGetPtr(8), ISNIL(9)? QVariant() : *(QVariant *) Qt4xHb::itemGetPtr(9) ) );
+    QVariant * ptr = new QVariant( obj->dynamicCall( PCONSTCHAR( 1 ), ISNIL( 2 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 2 ), ISNIL( 3 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 3 ), ISNIL( 4 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 4 ), ISNIL( 5 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 5 ), ISNIL( 6 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 6 ), ISNIL( 7 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 7 ), ISNIL( 8 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 8 ), ISNIL( 9 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 9 ) ) );
     Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
   }
 }
@@ -327,22 +324,22 @@ QVariant dynamicCall( const char * function, QList<QVariant> & vars )
 */
 void QAxObject_dynamicCall2()
 {
-  QAxObject * obj = (QAxObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxObject * obj = ( QAxObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->dynamicCall( PCONSTCHAR(1), PQVARIANTLIST(2) ) );
+    QVariant * ptr = new QVariant( obj->dynamicCall( PCONSTCHAR( 1 ), PQVARIANTLIST( 2 ) ) );
     Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
   }
 }
 
 HB_FUNC_STATIC( QAXOBJECT_DYNAMICCALL )
 {
-  if( ISBETWEEN(1,9) && ISCHAR(1) && (ISQVARIANT(2)||ISNIL(2)) && (ISQVARIANT(3)||ISNIL(3)) && (ISQVARIANT(4)||ISNIL(4)) && (ISQVARIANT(5)||ISNIL(5)) && (ISQVARIANT(6)||ISNIL(6)) && (ISQVARIANT(7)||ISNIL(7)) && (ISQVARIANT(8)||ISNIL(8)) && (ISQVARIANT(9)||ISNIL(9)) )
+  if( ISBETWEEN( 1, 9 ) && ISCHAR( 1 ) && ( ISQVARIANT( 2 ) || ISNIL( 2 ) ) && ( ISQVARIANT( 3 ) || ISNIL( 3 ) ) && ( ISQVARIANT( 4 ) || ISNIL( 4 ) ) && ( ISQVARIANT( 5 ) || ISNIL( 5 ) ) && ( ISQVARIANT( 6 ) || ISNIL( 6 ) ) && ( ISQVARIANT( 7 ) || ISNIL( 7 ) ) && ( ISQVARIANT( 8 ) || ISNIL( 8 ) ) && ( ISQVARIANT( 9 ) || ISNIL( 9 ) ) )
   {
     QAxObject_dynamicCall1();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISARRAY(2) )
+  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISARRAY( 2 ) )
   {
     QAxObject_dynamicCall2();
   }
@@ -357,12 +354,12 @@ QString generateDocumentation()
 */
 HB_FUNC_STATIC( QAXOBJECT_GENERATEDOCUMENTATION )
 {
-  QAxObject * obj = (QAxObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxObject * obj = ( QAxObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->generateDocumentation() );
@@ -381,12 +378,12 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QAXOBJECT_ISNULL )
 {
-  QAxObject * obj = (QAxObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxObject * obj = ( QAxObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isNull() );
@@ -405,15 +402,15 @@ virtual bool propertyWritable( const char * prop ) const
 */
 HB_FUNC_STATIC( QAXOBJECT_PROPERTYWRITABLE )
 {
-  QAxObject * obj = (QAxObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxObject * obj = ( QAxObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      RBOOL( obj->propertyWritable( PCONSTCHAR(1) ) );
+      RBOOL( obj->propertyWritable( PCONSTCHAR( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -429,11 +426,11 @@ QAxObject * querySubObject( const char * name, const QVariant & var1 = QVariant(
 */
 void QAxObject_querySubObject1()
 {
-  QAxObject * obj = (QAxObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxObject * obj = ( QAxObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QAxObject * ptr = obj->querySubObject( PCONSTCHAR(1), ISNIL(2)? QVariant() : *(QVariant *) Qt4xHb::itemGetPtr(2), ISNIL(3)? QVariant() : *(QVariant *) Qt4xHb::itemGetPtr(3), ISNIL(4)? QVariant() : *(QVariant *) Qt4xHb::itemGetPtr(4), ISNIL(5)? QVariant() : *(QVariant *) Qt4xHb::itemGetPtr(5), ISNIL(6)? QVariant() : *(QVariant *) Qt4xHb::itemGetPtr(6), ISNIL(7)? QVariant() : *(QVariant *) Qt4xHb::itemGetPtr(7), ISNIL(8)? QVariant() : *(QVariant *) Qt4xHb::itemGetPtr(8), ISNIL(9)? QVariant() : *(QVariant *) Qt4xHb::itemGetPtr(9) );
+    QAxObject * ptr = obj->querySubObject( PCONSTCHAR( 1 ), ISNIL( 2 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 2 ), ISNIL( 3 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 3 ), ISNIL( 4 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 4 ), ISNIL( 5 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 5 ), ISNIL( 6 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 6 ), ISNIL( 7 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 7 ), ISNIL( 8 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 8 ), ISNIL( 9 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 9 ) );
     Qt4xHb::createReturnQObjectClass( ptr, "QAXOBJECT" );
   }
 }
@@ -443,22 +440,22 @@ QAxObject * querySubObject( const char * name, QList<QVariant> & vars )
 */
 void QAxObject_querySubObject2()
 {
-  QAxObject * obj = (QAxObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxObject * obj = ( QAxObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    QAxObject * ptr = obj->querySubObject( PCONSTCHAR(1), PQVARIANTLIST(2) );
+    QAxObject * ptr = obj->querySubObject( PCONSTCHAR( 1 ), PQVARIANTLIST( 2 ) );
     Qt4xHb::createReturnQObjectClass( ptr, "QAXOBJECT" );
   }
 }
 
 HB_FUNC_STATIC( QAXOBJECT_QUERYSUBOBJECT )
 {
-  if( ISBETWEEN(1,9) && ISCHAR(1) && (ISQVARIANT(2)||ISNIL(2)) && (ISQVARIANT(3)||ISNIL(3)) && (ISQVARIANT(4)||ISNIL(4)) && (ISQVARIANT(5)||ISNIL(5)) && (ISQVARIANT(6)||ISNIL(6)) && (ISQVARIANT(7)||ISNIL(7)) && (ISQVARIANT(8)||ISNIL(8)) && (ISQVARIANT(9)||ISNIL(9)) )
+  if( ISBETWEEN( 1, 9 ) && ISCHAR( 1 ) && ( ISQVARIANT( 2 ) || ISNIL( 2 ) ) && ( ISQVARIANT( 3 ) || ISNIL( 3 ) ) && ( ISQVARIANT( 4 ) || ISNIL( 4 ) ) && ( ISQVARIANT( 5 ) || ISNIL( 5 ) ) && ( ISQVARIANT( 6 ) || ISNIL( 6 ) ) && ( ISQVARIANT( 7 ) || ISNIL( 7 ) ) && ( ISQVARIANT( 8 ) || ISNIL( 8 ) ) && ( ISQVARIANT( 9 ) || ISNIL( 9 ) ) )
   {
     QAxObject_querySubObject1();
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISARRAY(2) )
+  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISARRAY( 2 ) )
   {
     QAxObject_querySubObject2();
   }
@@ -473,15 +470,15 @@ bool setControl( const QString & )
 */
 HB_FUNC_STATIC( QAXOBJECT_SETCONTROL )
 {
-  QAxObject * obj = (QAxObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxObject * obj = ( QAxObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      RBOOL( obj->setControl( PQSTRING(1) ) );
+      RBOOL( obj->setControl( PQSTRING( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -497,15 +494,15 @@ virtual void setPropertyWritable( const char * prop, bool ok )
 */
 HB_FUNC_STATIC( QAXOBJECT_SETPROPERTYWRITABLE )
 {
-  QAxObject * obj = (QAxObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxObject * obj = ( QAxObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISLOG(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISLOG( 2 ) )
     {
 #endif
-      obj->setPropertyWritable( PCONSTCHAR(1), PBOOL(2) );
+      obj->setPropertyWritable( PCONSTCHAR( 1 ), PBOOL( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -523,12 +520,12 @@ QStringList verbs() const
 */
 HB_FUNC_STATIC( QAXOBJECT_VERBS )
 {
-  QAxObject * obj = (QAxObject *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxObject * obj = ( QAxObject * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->verbs() );
