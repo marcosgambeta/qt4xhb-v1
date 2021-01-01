@@ -74,3 +74,6 @@ cpp=yes
 gui=yes
 
 {msvc}ldflags=/NODEFAULTLIB:msvcrt.lib
+
+-prgflag=__QT4XHB__
+-cflag=__QT4XHB__
