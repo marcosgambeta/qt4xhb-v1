@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -55,17 +55,17 @@ QDomEntity( const QDomEntity & x )
 */
 void QDomEntity_new2()
 {
-  QDomEntity * obj = new QDomEntity( *PQDOMENTITY(1) );
+  QDomEntity * obj = new QDomEntity( *PQDOMENTITY( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QDOMENTITY_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QDomEntity_new1();
   }
-  else if( ISNUMPAR(1) && ISQDOMENTITY(1) )
+  else if( ISNUMPAR( 1 ) && ISQDOMENTITY( 1 ) )
   {
     QDomEntity_new2();
   }
@@ -80,12 +80,12 @@ QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMENTITY_NODETYPE )
 {
-  QDomEntity * obj = (QDomEntity *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomEntity * obj = ( QDomEntity * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->nodeType() );
@@ -104,12 +104,12 @@ QString notationName() const
 */
 HB_FUNC_STATIC( QDOMENTITY_NOTATIONNAME )
 {
-  QDomEntity * obj = (QDomEntity *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomEntity * obj = ( QDomEntity * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->notationName() );
@@ -128,12 +128,12 @@ QString publicId() const
 */
 HB_FUNC_STATIC( QDOMENTITY_PUBLICID )
 {
-  QDomEntity * obj = (QDomEntity *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomEntity * obj = ( QDomEntity * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->publicId() );
@@ -152,12 +152,12 @@ QString systemId() const
 */
 HB_FUNC_STATIC( QDOMENTITY_SYSTEMID )
 {
-  QDomEntity * obj = (QDomEntity *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomEntity * obj = ( QDomEntity * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->systemId() );

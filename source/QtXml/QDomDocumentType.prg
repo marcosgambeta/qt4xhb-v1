@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -59,17 +59,17 @@ QDomDocumentType( const QDomDocumentType & n )
 */
 void QDomDocumentType_new2()
 {
-  QDomDocumentType * obj = new QDomDocumentType( *PQDOMDOCUMENTTYPE(1) );
+  QDomDocumentType * obj = new QDomDocumentType( *PQDOMDOCUMENTTYPE( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QDomDocumentType_new1();
   }
-  else if( ISNUMPAR(1) && ISQDOMDOCUMENTTYPE(1) )
+  else if( ISNUMPAR( 1 ) && ISQDOMDOCUMENTTYPE( 1 ) )
   {
     QDomDocumentType_new2();
   }
@@ -84,12 +84,12 @@ QDomNamedNodeMap entities() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_ENTITIES )
 {
-  QDomDocumentType * obj = (QDomDocumentType *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = ( QDomDocumentType * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->entities() );
@@ -109,12 +109,12 @@ QString internalSubset() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_INTERNALSUBSET )
 {
-  QDomDocumentType * obj = (QDomDocumentType *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = ( QDomDocumentType * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->internalSubset() );
@@ -133,12 +133,12 @@ QString name() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NAME )
 {
-  QDomDocumentType * obj = (QDomDocumentType *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = ( QDomDocumentType * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->name() );
@@ -157,12 +157,12 @@ QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NODETYPE )
 {
-  QDomDocumentType * obj = (QDomDocumentType *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = ( QDomDocumentType * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->nodeType() );
@@ -181,12 +181,12 @@ QDomNamedNodeMap notations() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NOTATIONS )
 {
-  QDomDocumentType * obj = (QDomDocumentType *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = ( QDomDocumentType * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->notations() );
@@ -206,12 +206,12 @@ QString publicId() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_PUBLICID )
 {
-  QDomDocumentType * obj = (QDomDocumentType *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = ( QDomDocumentType * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->publicId() );
@@ -230,12 +230,12 @@ QString systemId() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_SYSTEMID )
 {
-  QDomDocumentType * obj = (QDomDocumentType *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = ( QDomDocumentType * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->systemId() );

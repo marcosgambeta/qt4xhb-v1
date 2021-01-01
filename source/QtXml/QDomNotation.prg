@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -54,17 +54,17 @@ QDomNotation( const QDomNotation & x )
 */
 void QDomNotation_new2()
 {
-  QDomNotation * obj = new QDomNotation( *PQDOMNOTATION(1) );
+  QDomNotation * obj = new QDomNotation( *PQDOMNOTATION( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QDOMNOTATION_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QDomNotation_new1();
   }
-  else if( ISNUMPAR(1) && ISQDOMNOTATION(1) )
+  else if( ISNUMPAR( 1 ) && ISQDOMNOTATION( 1 ) )
   {
     QDomNotation_new2();
   }
@@ -79,12 +79,12 @@ QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMNOTATION_NODETYPE )
 {
-  QDomNotation * obj = (QDomNotation *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomNotation * obj = ( QDomNotation * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->nodeType() );
@@ -103,12 +103,12 @@ QString publicId() const
 */
 HB_FUNC_STATIC( QDOMNOTATION_PUBLICID )
 {
-  QDomNotation * obj = (QDomNotation *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomNotation * obj = ( QDomNotation * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->publicId() );
@@ -127,12 +127,12 @@ QString systemId() const
 */
 HB_FUNC_STATIC( QDOMNOTATION_SYSTEMID )
 {
-  QDomNotation * obj = (QDomNotation *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomNotation * obj = ( QDomNotation * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->systemId() );

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -51,7 +51,7 @@ RETURN
 
 HB_FUNC_STATIC( QXMLDTDHANDLER_DELETE )
 {
-  QXmlDTDHandler * obj = (QXmlDTDHandler *) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlDTDHandler * obj = ( QXmlDTDHandler * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -71,12 +71,12 @@ virtual QString errorString() const = 0
 */
 HB_FUNC_STATIC( QXMLDTDHANDLER_ERRORSTRING )
 {
-  QXmlDTDHandler * obj = (QXmlDTDHandler *) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlDTDHandler * obj = ( QXmlDTDHandler * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->errorString() );
@@ -95,15 +95,15 @@ virtual bool notationDecl( const QString & name, const QString & publicId, const
 */
 HB_FUNC_STATIC( QXMLDTDHANDLER_NOTATIONDECL )
 {
-  QXmlDTDHandler * obj = (QXmlDTDHandler *) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlDTDHandler * obj = ( QXmlDTDHandler * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) )
+    if( ISNUMPAR( 3 ) && ISCHAR( 1 ) && ISCHAR( 2 ) && ISCHAR( 3 ) )
     {
 #endif
-      RBOOL( obj->notationDecl( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+      RBOOL( obj->notationDecl( PQSTRING( 1 ), PQSTRING( 2 ), PQSTRING( 3 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -119,15 +119,15 @@ virtual bool unparsedEntityDecl( const QString & name, const QString & publicId,
 */
 HB_FUNC_STATIC( QXMLDTDHANDLER_UNPARSEDENTITYDECL )
 {
-  QXmlDTDHandler * obj = (QXmlDTDHandler *) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlDTDHandler * obj = ( QXmlDTDHandler * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISCHAR(1) && ISCHAR(2) && ISCHAR(3) && ISCHAR(4) )
+    if( ISNUMPAR( 4 ) && ISCHAR( 1 ) && ISCHAR( 2 ) && ISCHAR( 3 ) && ISCHAR( 4 ) )
     {
 #endif
-      RBOOL( obj->unparsedEntityDecl( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4) ) );
+      RBOOL( obj->unparsedEntityDecl( PQSTRING( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), PQSTRING( 4 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,18 +142,18 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -180,16 +180,16 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QXMLDTDHANDLER_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QXMLDTDHANDLER_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

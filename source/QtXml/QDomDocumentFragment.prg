@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -52,17 +52,17 @@ QDomDocumentFragment( const QDomDocumentFragment & x )
 */
 void QDomDocumentFragment_new2()
 {
-  QDomDocumentFragment * obj = new QDomDocumentFragment( *PQDOMDOCUMENTFRAGMENT(1) );
+  QDomDocumentFragment * obj = new QDomDocumentFragment( *PQDOMDOCUMENTFRAGMENT( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QDomDocumentFragment_new1();
   }
-  else if( ISNUMPAR(1) && ISQDOMDOCUMENTFRAGMENT(1) )
+  else if( ISNUMPAR( 1 ) && ISQDOMDOCUMENTFRAGMENT( 1 ) )
   {
     QDomDocumentFragment_new2();
   }
@@ -77,12 +77,12 @@ QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NODETYPE )
 {
-  QDomDocumentFragment * obj = (QDomDocumentFragment *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomDocumentFragment * obj = ( QDomDocumentFragment * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->nodeType() );

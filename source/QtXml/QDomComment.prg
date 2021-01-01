@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -52,17 +52,17 @@ QDomComment( const QDomComment & x )
 */
 void QDomComment_new2()
 {
-  QDomComment * obj = new QDomComment( *PQDOMCOMMENT(1) );
+  QDomComment * obj = new QDomComment( *PQDOMCOMMENT( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QDOMCOMMENT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QDomComment_new1();
   }
-  else if( ISNUMPAR(1) && ISQDOMCOMMENT(1) )
+  else if( ISNUMPAR( 1 ) && ISQDOMCOMMENT( 1 ) )
   {
     QDomComment_new2();
   }
@@ -77,12 +77,12 @@ QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMCOMMENT_NODETYPE )
 {
-  QDomComment * obj = (QDomComment *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomComment * obj = ( QDomComment * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->nodeType() );

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -53,17 +53,17 @@ QDomText( const QDomText & x )
 */
 void QDomText_new2()
 {
-  QDomText * obj = new QDomText( *PQDOMTEXT(1) );
+  QDomText * obj = new QDomText( *PQDOMTEXT( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QDOMTEXT_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QDomText_new1();
   }
-  else if( ISNUMPAR(1) && ISQDOMTEXT(1) )
+  else if( ISNUMPAR( 1 ) && ISQDOMTEXT( 1 ) )
   {
     QDomText_new2();
   }
@@ -78,12 +78,12 @@ QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMTEXT_NODETYPE )
 {
-  QDomText * obj = (QDomText *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomText * obj = ( QDomText * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->nodeType() );
@@ -102,15 +102,15 @@ QDomText splitText( int offset )
 */
 HB_FUNC_STATIC( QDOMTEXT_SPLITTEXT )
 {
-  QDomText * obj = (QDomText *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomText * obj = ( QDomText * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QDomText * ptr = new QDomText( obj->splitText( PINT(1) ) );
+      QDomText * ptr = new QDomText( obj->splitText( PINT( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QDOMTEXT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -55,17 +55,17 @@ QDomProcessingInstruction( const QDomProcessingInstruction & x )
 */
 void QDomProcessingInstruction_new2()
 {
-  QDomProcessingInstruction * obj = new QDomProcessingInstruction( *PQDOMPROCESSINGINSTRUCTION(1) );
+  QDomProcessingInstruction * obj = new QDomProcessingInstruction( *PQDOMPROCESSINGINSTRUCTION( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QDomProcessingInstruction_new1();
   }
-  else if( ISNUMPAR(1) && ISQDOMPROCESSINGINSTRUCTION(1) )
+  else if( ISNUMPAR( 1 ) && ISQDOMPROCESSINGINSTRUCTION( 1 ) )
   {
     QDomProcessingInstruction_new2();
   }
@@ -80,12 +80,12 @@ QString data() const
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DATA )
 {
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomProcessingInstruction * obj = ( QDomProcessingInstruction * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->data() );
@@ -104,12 +104,12 @@ QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NODETYPE )
 {
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomProcessingInstruction * obj = ( QDomProcessingInstruction * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->nodeType() );
@@ -128,15 +128,15 @@ void setData( const QString & d )
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_SETDATA )
 {
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomProcessingInstruction * obj = ( QDomProcessingInstruction * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setData( PQSTRING(1) );
+      obj->setData( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,12 +154,12 @@ QString target() const
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_TARGET )
 {
-  QDomProcessingInstruction * obj = (QDomProcessingInstruction *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomProcessingInstruction * obj = ( QDomProcessingInstruction * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->target() );

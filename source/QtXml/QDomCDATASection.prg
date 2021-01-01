@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -52,17 +52,17 @@ QDomCDATASection( const QDomCDATASection & x )
 */
 void QDomCDATASection_new2()
 {
-  QDomCDATASection * obj = new QDomCDATASection( *PQDOMCDATASECTION(1) );
+  QDomCDATASection * obj = new QDomCDATASection( *PQDOMCDATASECTION( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QDOMCDATASECTION_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QDomCDATASection_new1();
   }
-  else if( ISNUMPAR(1) && ISQDOMCDATASECTION(1) )
+  else if( ISNUMPAR( 1 ) && ISQDOMCDATASECTION( 1 ) )
   {
     QDomCDATASection_new2();
   }
@@ -77,12 +77,12 @@ QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMCDATASECTION_NODETYPE )
 {
-  QDomCDATASection * obj = (QDomCDATASection *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomCDATASection * obj = ( QDomCDATASection * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->nodeType() );
