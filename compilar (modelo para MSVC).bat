@@ -1,7 +1,7 @@
 rem
 rem Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 rem
-rem Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+rem Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 rem
 rem Batch para compilação (Windows/MSVC)
 rem
