@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -47,7 +47,7 @@ RETURN
 
 HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_DELETE )
 {
-  QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptExtensionPlugin * obj = ( QScriptExtensionPlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -69,15 +69,15 @@ QScriptValue setupPackage( const QString & key, QScriptEngine * engine ) const
 */
 HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE )
 {
-  QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptExtensionPlugin * obj = ( QScriptExtensionPlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQSCRIPTENGINE(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISQSCRIPTENGINE( 2 ) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->setupPackage( PQSTRING(1), PQSCRIPTENGINE(2) ) );
+      QScriptValue * ptr = new QScriptValue( obj->setupPackage( PQSTRING( 1 ), PQSCRIPTENGINE( 2 ) ) );
       Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -94,15 +94,15 @@ virtual void initialize( const QString & key, QScriptEngine * engine ) = 0
 */
 HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_INITIALIZE )
 {
-  QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptExtensionPlugin * obj = ( QScriptExtensionPlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQSCRIPTENGINE(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISQSCRIPTENGINE( 2 ) )
     {
 #endif
-      obj->initialize( PQSTRING(1), PQSCRIPTENGINE(2) );
+      obj->initialize( PQSTRING( 1 ), PQSCRIPTENGINE( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,12 +120,12 @@ virtual QStringList keys() const = 0
 */
 HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_KEYS )
 {
-  QScriptExtensionPlugin * obj = (QScriptExtensionPlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptExtensionPlugin * obj = ( QScriptExtensionPlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->keys() );

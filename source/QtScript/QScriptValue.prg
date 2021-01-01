@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -118,7 +118,7 @@ QScriptValue( const QScriptValue & other )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW2 )
 {
-  QScriptValue * obj = new QScriptValue( *PQSCRIPTVALUE(1) );
+  QScriptValue * obj = new QScriptValue( *PQSCRIPTVALUE( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -127,7 +127,7 @@ QScriptValue( QScriptValue::SpecialValue value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW3 )
 {
-  QScriptValue * obj = new QScriptValue( (QScriptValue::SpecialValue) hb_parni(1) );
+  QScriptValue * obj = new QScriptValue( ( QScriptValue::SpecialValue ) hb_parni( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -136,7 +136,7 @@ QScriptValue( bool value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW4 )
 {
-  QScriptValue * obj = new QScriptValue( PBOOL(1) );
+  QScriptValue * obj = new QScriptValue( PBOOL( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -145,7 +145,7 @@ QScriptValue( int value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW5 )
 {
-  QScriptValue * obj = new QScriptValue( PINT(1) );
+  QScriptValue * obj = new QScriptValue( PINT( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -154,7 +154,7 @@ QScriptValue( uint value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW6 )
 {
-  QScriptValue * obj = new QScriptValue( PUINT(1) );
+  QScriptValue * obj = new QScriptValue( PUINT( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -163,7 +163,7 @@ QScriptValue( const QString & value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW8 )
 {
-  QScriptValue * obj = new QScriptValue( PQSTRING(1) );
+  QScriptValue * obj = new QScriptValue( PQSTRING( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -172,32 +172,32 @@ QScriptValue( const char * value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW10 )
 {
-  QScriptValue * obj = new QScriptValue( PCONSTCHAR(1) );
+  QScriptValue * obj = new QScriptValue( PCONSTCHAR( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     HB_FUNC_EXEC( QSCRIPTVALUE_NEW1 );
   }
-  else if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
+  else if( ISNUMPAR( 1 ) && ISQSCRIPTVALUE( 1 ) )
   {
     HB_FUNC_EXEC( QSCRIPTVALUE_NEW2 );
   }
-  else if( ISNUMPAR(1) && ISNUM(1) )
+  else if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
   {
     HB_FUNC_EXEC( QSCRIPTVALUE_NEW3 );
     //HB_FUNC_EXEC( QSCRIPTVALUE_NEW5 );
     //HB_FUNC_EXEC( QSCRIPTVALUE_NEW6 );
     //HB_FUNC_EXEC( QSCRIPTVALUE_NEW7 );
   }
-  else if( ISNUMPAR(1) && ISLOG(1) )
+  else if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
   {
     HB_FUNC_EXEC( QSCRIPTVALUE_NEW4 );
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
     HB_FUNC_EXEC( QSCRIPTVALUE_NEW8 );
     //HB_FUNC_EXEC( QSCRIPTVALUE_NEW10 );
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
 
 HB_FUNC_STATIC( QSCRIPTVALUE_DELETE )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -225,14 +225,16 @@ HB_FUNC_STATIC( QSCRIPTVALUE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-// QScriptValue call ( const QScriptValue & thisObject = QScriptValue(), const QScriptValueList & args = QScriptValueList() )
+/*
+QScriptValue call ( const QScriptValue & thisObject = QScriptValue(), const QScriptValueList & args = QScriptValueList() )
+*/
 HB_FUNC_STATIC( QSCRIPTVALUE_CALL1 )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 
   if( obj )
   {
-    QScriptValue par1 = ISNIL(1)? QScriptValue() : *(QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
+    QScriptValue par1 = ISNIL( 1 )? QScriptValue() : *(QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) );
     QScriptValueList par2;
     PHB_ITEM aList2 = hb_param(2, HB_IT_ARRAY);
     int i2;
@@ -251,15 +253,15 @@ QScriptValue call( const QScriptValue & thisObject, const QScriptValue & argumen
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_CALL2 )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQSCRIPTVALUE(1) && ISQSCRIPTVALUE(2) )
+    if( ISNUMPAR( 2 ) && ISQSCRIPTVALUE( 1 ) && ISQSCRIPTVALUE( 2 ) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->call( *PQSCRIPTVALUE(1), *PQSCRIPTVALUE(2) ) );
+      QScriptValue * ptr = new QScriptValue( obj->call( *PQSCRIPTVALUE( 1 ), *PQSCRIPTVALUE( 2 ) ) );
       Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -273,11 +275,11 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CALL2 )
 
 HB_FUNC_STATIC( QSCRIPTVALUE_CALL )
 {
-  if( ISBETWEEN(0,2) && (ISQSCRIPTVALUE(1)||ISNIL(1)) && (ISOBJECT(2)||ISNIL(2)) )
+  if( ISBETWEEN( 0, 2 ) && ( ISQSCRIPTVALUE( 1 ) || ISNIL( 1 ) ) && ( ISOBJECT( 2 ) || ISNIL( 2 ) ) )
   {
     HB_FUNC_EXEC( QSCRIPTVALUE_CALL1 );
   }
-  else if( ISNUMPAR(2) && ISQSCRIPTVALUE(1) && ISQSCRIPTVALUE(2) )
+  else if( ISNUMPAR( 2 ) && ISQSCRIPTVALUE( 1 ) && ISQSCRIPTVALUE( 2 ) )
   {
     HB_FUNC_EXEC( QSCRIPTVALUE_CALL2 );
   }
@@ -287,7 +289,9 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CALL )
   }
 }
 
-// QScriptValue construct ( const QScriptValueList & args = QScriptValueList() )
+/*
+QScriptValue construct ( const QScriptValueList & args = QScriptValueList() )
+*/
 HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT1 )
 {
   QScriptValue * obj = (QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
@@ -312,15 +316,15 @@ QScriptValue construct( const QScriptValue & arguments )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT2 )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
+    if( ISNUMPAR( 1 ) && ISQSCRIPTVALUE( 1 ) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->construct( *PQSCRIPTVALUE(1) ) );
+      QScriptValue * ptr = new QScriptValue( obj->construct( *PQSCRIPTVALUE( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -334,11 +338,11 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT2 )
 
 HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT )
 {
-  if( ISBETWEEN(0,1) && (ISOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
     HB_FUNC_EXEC( QSCRIPTVALUE_CONSTRUCT1 );
   }
-  else if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
+  else if( ISNUMPAR( 1 ) && ISQSCRIPTVALUE( 1 ) )
   {
     HB_FUNC_EXEC( QSCRIPTVALUE_CONSTRUCT2 );
   }
@@ -353,12 +357,12 @@ QScriptValue data() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_DATA )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QScriptValue * ptr = new QScriptValue( obj->data() );
@@ -378,15 +382,15 @@ bool equals( const QScriptValue & other ) const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_EQUALS )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
+    if( ISNUMPAR( 1 ) && ISQSCRIPTVALUE( 1 ) )
     {
 #endif
-      RBOOL( obj->equals( *PQSCRIPTVALUE(1) ) );
+      RBOOL( obj->equals( *PQSCRIPTVALUE( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -402,15 +406,15 @@ bool instanceOf( const QScriptValue & other ) const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_INSTANCEOF )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
+    if( ISNUMPAR( 1 ) && ISQSCRIPTVALUE( 1 ) )
     {
 #endif
-      RBOOL( obj->instanceOf( *PQSCRIPTVALUE(1) ) );
+      RBOOL( obj->instanceOf( *PQSCRIPTVALUE( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -426,12 +430,12 @@ bool isArray() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISARRAY )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isArray() );
@@ -450,12 +454,12 @@ bool isBool() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISBOOL )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isBool() );
@@ -474,12 +478,12 @@ bool isDate() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISDATE )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isDate() );
@@ -498,12 +502,12 @@ bool isError() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISERROR )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isError() );
@@ -522,12 +526,12 @@ bool isFunction() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISFUNCTION )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isFunction() );
@@ -546,12 +550,12 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISNULL )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isNull() );
@@ -570,12 +574,12 @@ bool isNumber() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISNUMBER )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isNumber() );
@@ -594,12 +598,12 @@ bool isObject() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISOBJECT )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isObject() );
@@ -618,12 +622,12 @@ bool isQMetaObject() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISQMETAOBJECT )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isQMetaObject() );
@@ -642,12 +646,12 @@ bool isQObject() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISQOBJECT )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isQObject() );
@@ -666,12 +670,12 @@ bool isRegExp() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISREGEXP )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isRegExp() );
@@ -690,12 +694,12 @@ bool isString() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISSTRING )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isString() );
@@ -714,12 +718,12 @@ bool isUndefined() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISUNDEFINED )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isUndefined() );
@@ -738,12 +742,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISVALID )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -762,12 +766,12 @@ bool isVariant() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_ISVARIANT )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isVariant() );
@@ -786,15 +790,15 @@ bool lessThan( const QScriptValue & other ) const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_LESSTHAN )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
+    if( ISNUMPAR( 1 ) && ISQSCRIPTVALUE( 1 ) )
     {
 #endif
-      RBOOL( obj->lessThan( *PQSCRIPTVALUE(1) ) );
+      RBOOL( obj->lessThan( *PQSCRIPTVALUE( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -810,12 +814,12 @@ QScriptValue prototype() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_PROTOTYPE )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QScriptValue * ptr = new QScriptValue( obj->prototype() );
@@ -835,12 +839,12 @@ QScriptClass * scriptClass() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_SCRIPTCLASS )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QScriptClass * ptr = obj->scriptClass();
@@ -860,15 +864,15 @@ void setData( const QScriptValue & data )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_SETDATA )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
+    if( ISNUMPAR( 1 ) && ISQSCRIPTVALUE( 1 ) )
     {
 #endif
-      obj->setData( *PQSCRIPTVALUE(1) );
+      obj->setData( *PQSCRIPTVALUE( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -886,15 +890,15 @@ void setPrototype( const QScriptValue & prototype )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_SETPROTOTYPE )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
+    if( ISNUMPAR( 1 ) && ISQSCRIPTVALUE( 1 ) )
     {
 #endif
-      obj->setPrototype( *PQSCRIPTVALUE(1) );
+      obj->setPrototype( *PQSCRIPTVALUE( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -912,15 +916,15 @@ void setScriptClass( QScriptClass * scriptClass )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_SETSCRIPTCLASS )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSCRIPTCLASS(1) )
+    if( ISNUMPAR( 1 ) && ISQSCRIPTCLASS( 1 ) )
     {
 #endif
-      obj->setScriptClass( PQSCRIPTCLASS(1) );
+      obj->setScriptClass( PQSCRIPTCLASS( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -938,15 +942,15 @@ bool strictlyEquals( const QScriptValue & other ) const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_STRICTLYEQUALS )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
+    if( ISNUMPAR( 1 ) && ISQSCRIPTVALUE( 1 ) )
     {
 #endif
-      RBOOL( obj->strictlyEquals( *PQSCRIPTVALUE(1) ) );
+      RBOOL( obj->strictlyEquals( *PQSCRIPTVALUE( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -962,12 +966,12 @@ bool toBool() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_TOBOOL )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->toBool() );
@@ -986,12 +990,12 @@ QDateTime toDateTime() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_TODATETIME )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->toDateTime() );
@@ -1011,12 +1015,12 @@ qint32 toInt32() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_TOINT32 )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQINT32( obj->toInt32() );
@@ -1035,12 +1039,12 @@ QObject * toQObject() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_TOQOBJECT )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QObject * ptr = obj->toQObject();
@@ -1060,12 +1064,12 @@ QRegExp toRegExp() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_TOREGEXP )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QRegExp * ptr = new QRegExp( obj->toRegExp() );
@@ -1085,12 +1089,12 @@ QString toString() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_TOSTRING )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->toString() );
@@ -1109,12 +1113,12 @@ quint16 toUInt16() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_TOUINT16 )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQUINT16( obj->toUInt16() );
@@ -1133,12 +1137,12 @@ quint32 toUInt32() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_TOUINT32 )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQUINT32( obj->toUInt32() );
@@ -1157,12 +1161,12 @@ QVariant toVariant() const
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_TOVARIANT )
 {
-  QScriptValue * obj = (QScriptValue *) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptValue * obj = ( QScriptValue * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QVariant * ptr = new QVariant( obj->toVariant() );
@@ -1181,18 +1185,18 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -1219,16 +1223,16 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QSCRIPTVALUE_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QSCRIPTVALUE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
