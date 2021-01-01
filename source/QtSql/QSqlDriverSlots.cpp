@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QSqlDriverSlots.h"
 
-QSqlDriverSlots::QSqlDriverSlots( QObject *parent ) : QObject( parent )
+QSqlDriverSlots::QSqlDriverSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,14 +22,14 @@ QSqlDriverSlots::~QSqlDriverSlots()
 
 void QSqlDriverSlots::notification( const QString & name )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "notification(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QSQLDRIVER" );
-    PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING(name) );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSQLDRIVER" );
+    PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING( name ) );
 
     hb_vmEvalBlockV( cb, 2, psender, pname );
 
@@ -40,7 +40,7 @@ void QSqlDriverSlots::notification( const QString & name )
 
 void QSqlDriverSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSqlDriver * obj = (QSqlDriver *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

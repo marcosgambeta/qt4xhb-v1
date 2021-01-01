@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -50,7 +50,7 @@ QSqlIndex( const QString & cursorname = QString(), const QString & name = QStrin
 */
 void QSqlIndex_new1()
 {
-  QSqlIndex * obj = new QSqlIndex( OPQSTRING(1,QString()), OPQSTRING(2,QString()) );
+  QSqlIndex * obj = new QSqlIndex( OPQSTRING( 1, QString() ), OPQSTRING( 2, QString() ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -59,17 +59,17 @@ QSqlIndex( const QSqlIndex & other )
 */
 void QSqlIndex_new2()
 {
-  QSqlIndex * obj = new QSqlIndex( *PQSQLINDEX(1) );
+  QSqlIndex * obj = new QSqlIndex( *PQSQLINDEX( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QSQLINDEX_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISCHAR(1)||ISNIL(1)) && (ISCHAR(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 2 ) && ( ISCHAR( 1 ) || ISNIL( 1 ) ) && ( ISCHAR( 1 ) || ISNIL( 1 ) ) )
   {
     QSqlIndex_new1();
   }
-  else if( ISNUMPAR(1) && ISQSQLINDEX(1) )
+  else if( ISNUMPAR( 1 ) && ISQSQLINDEX( 1 ) )
   {
     QSqlIndex_new2();
   }
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QSQLINDEX_NEW )
 
 HB_FUNC_STATIC( QSQLINDEX_DELETE )
 {
-  QSqlIndex * obj = (QSqlIndex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlIndex * obj = ( QSqlIndex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -101,11 +101,11 @@ void append( const QSqlField & field )
 */
 void QSqlIndex_append1()
 {
-  QSqlIndex * obj = (QSqlIndex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlIndex * obj = ( QSqlIndex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->append( *PQSQLFIELD(1) );
+    obj->append( *PQSQLFIELD( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -116,11 +116,11 @@ void append( const QSqlField & field, bool desc )
 */
 void QSqlIndex_append2()
 {
-  QSqlIndex * obj = (QSqlIndex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlIndex * obj = ( QSqlIndex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->append( *PQSQLFIELD(1), PBOOL(2) );
+    obj->append( *PQSQLFIELD( 1 ), PBOOL( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -128,11 +128,11 @@ void QSqlIndex_append2()
 
 HB_FUNC_STATIC( QSQLINDEX_APPEND )
 {
-  if( ISNUMPAR(1) && ISQSQLFIELD(1) )
+  if( ISNUMPAR( 1 ) && ISQSQLFIELD( 1 ) )
   {
     QSqlIndex_append1();
   }
-  else if( ISNUMPAR(2) && ISQSQLFIELD(1) && ISLOG(2) )
+  else if( ISNUMPAR( 2 ) && ISQSQLFIELD( 1 ) && ISLOG( 2 ) )
   {
     QSqlIndex_append2();
   }
@@ -147,12 +147,12 @@ QString cursorName() const
 */
 HB_FUNC_STATIC( QSQLINDEX_CURSORNAME )
 {
-  QSqlIndex * obj = (QSqlIndex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlIndex * obj = ( QSqlIndex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->cursorName() );
@@ -171,15 +171,15 @@ bool isDescending( int i ) const
 */
 HB_FUNC_STATIC( QSQLINDEX_ISDESCENDING )
 {
-  QSqlIndex * obj = (QSqlIndex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlIndex * obj = ( QSqlIndex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->isDescending( PINT(1) ) );
+      RBOOL( obj->isDescending( PINT( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,12 +195,12 @@ QString name() const
 */
 HB_FUNC_STATIC( QSQLINDEX_NAME )
 {
-  QSqlIndex * obj = (QSqlIndex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlIndex * obj = ( QSqlIndex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->name() );
@@ -219,15 +219,15 @@ void setCursorName( const QString & cursorName )
 */
 HB_FUNC_STATIC( QSQLINDEX_SETCURSORNAME )
 {
-  QSqlIndex * obj = (QSqlIndex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlIndex * obj = ( QSqlIndex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setCursorName( PQSTRING(1) );
+      obj->setCursorName( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,15 +245,15 @@ void setDescending( int i, bool desc )
 */
 HB_FUNC_STATIC( QSQLINDEX_SETDESCENDING )
 {
-  QSqlIndex * obj = (QSqlIndex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlIndex * obj = ( QSqlIndex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISLOG(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISLOG( 2 ) )
     {
 #endif
-      obj->setDescending( PINT(1), PBOOL(2) );
+      obj->setDescending( PINT( 1 ), PBOOL( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,15 +271,15 @@ void setName( const QString & name )
 */
 HB_FUNC_STATIC( QSQLINDEX_SETNAME )
 {
-  QSqlIndex * obj = (QSqlIndex *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlIndex * obj = ( QSqlIndex * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setName( PQSTRING(1) );
+      obj->setName( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

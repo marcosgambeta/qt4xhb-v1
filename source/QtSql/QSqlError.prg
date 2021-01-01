@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -62,7 +62,7 @@ QSqlError( const QString & driverText = QString(), const QString & databaseText 
 */
 void QSqlError_new1()
 {
-  QSqlError * obj = new QSqlError( OPQSTRING(1,QString()), OPQSTRING(2,QString()), ISNIL(3)? (QSqlError::ErrorType) QSqlError::NoError : (QSqlError::ErrorType) hb_parni(3), OPINT(4,-1) );
+  QSqlError * obj = new QSqlError( OPQSTRING( 1, QString() ), OPQSTRING( 2, QString() ), ISNIL( 3 )? ( QSqlError::ErrorType ) QSqlError::NoError : ( QSqlError::ErrorType ) hb_parni( 3 ), OPINT( 4, -1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -71,17 +71,17 @@ QSqlError( const QSqlError & other )
 */
 void QSqlError_new2()
 {
-  QSqlError * obj = new QSqlError( *PQSQLERROR(1) );
+  QSqlError * obj = new QSqlError( *PQSQLERROR( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QSQLERROR_NEW )
 {
-  if( ISBETWEEN(0,4) && (ISCHAR(1)||ISNIL(1)) && (ISCHAR(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) )
+  if( ISBETWEEN( 0, 4 ) && ( ISCHAR( 1 ) || ISNIL( 1 ) ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
   {
     QSqlError_new1();
   }
-  else if( ISNUMPAR(1) && ISQSQLERROR(1) )
+  else if( ISNUMPAR( 1 ) && ISQSQLERROR( 1 ) )
   {
     QSqlError_new2();
   }
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QSQLERROR_NEW )
 
 HB_FUNC_STATIC( QSQLERROR_DELETE )
 {
-  QSqlError * obj = (QSqlError *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlError * obj = ( QSqlError * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -113,12 +113,12 @@ QString databaseText() const
 */
 HB_FUNC_STATIC( QSQLERROR_DATABASETEXT )
 {
-  QSqlError * obj = (QSqlError *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlError * obj = ( QSqlError * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->databaseText() );
@@ -137,12 +137,12 @@ QString driverText() const
 */
 HB_FUNC_STATIC( QSQLERROR_DRIVERTEXT )
 {
-  QSqlError * obj = (QSqlError *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlError * obj = ( QSqlError * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->driverText() );
@@ -161,12 +161,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QSQLERROR_ISVALID )
 {
-  QSqlError * obj = (QSqlError *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlError * obj = ( QSqlError * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -185,12 +185,12 @@ int number() const
 */
 HB_FUNC_STATIC( QSQLERROR_NUMBER )
 {
-  QSqlError * obj = (QSqlError *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlError * obj = ( QSqlError * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->number() );
@@ -209,15 +209,15 @@ void setDatabaseText( const QString & databaseText )
 */
 HB_FUNC_STATIC( QSQLERROR_SETDATABASETEXT )
 {
-  QSqlError * obj = (QSqlError *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlError * obj = ( QSqlError * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setDatabaseText( PQSTRING(1) );
+      obj->setDatabaseText( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,15 +235,15 @@ void setDriverText( const QString & driverText )
 */
 HB_FUNC_STATIC( QSQLERROR_SETDRIVERTEXT )
 {
-  QSqlError * obj = (QSqlError *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlError * obj = ( QSqlError * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setDriverText( PQSTRING(1) );
+      obj->setDriverText( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,15 +261,15 @@ void setNumber( int number )
 */
 HB_FUNC_STATIC( QSQLERROR_SETNUMBER )
 {
-  QSqlError * obj = (QSqlError *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlError * obj = ( QSqlError * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setNumber( PINT(1) );
+      obj->setNumber( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -287,15 +287,15 @@ void setType( QSqlError::ErrorType type )
 */
 HB_FUNC_STATIC( QSQLERROR_SETTYPE )
 {
-  QSqlError * obj = (QSqlError *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlError * obj = ( QSqlError * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setType( (QSqlError::ErrorType) hb_parni(1) );
+      obj->setType( ( QSqlError::ErrorType ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -313,12 +313,12 @@ QString text() const
 */
 HB_FUNC_STATIC( QSQLERROR_TEXT )
 {
-  QSqlError * obj = (QSqlError *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlError * obj = ( QSqlError * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->text() );
@@ -337,12 +337,12 @@ QSqlError::ErrorType type() const
 */
 HB_FUNC_STATIC( QSQLERROR_TYPE )
 {
-  QSqlError * obj = (QSqlError *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlError * obj = ( QSqlError * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->type() );
@@ -360,18 +360,18 @@ HB_FUNC_STATIC( QSQLERROR_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -398,16 +398,16 @@ HB_FUNC_STATIC( QSQLERROR_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QSQLERROR_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QSQLERROR_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

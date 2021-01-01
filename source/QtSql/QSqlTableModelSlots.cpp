@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QSqlTableModelSlots.h"
 
-QSqlTableModelSlots::QSqlTableModelSlots( QObject *parent ) : QObject( parent )
+QSqlTableModelSlots::QSqlTableModelSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QSqlTableModelSlots::~QSqlTableModelSlots()
 
 void QSqlTableModelSlots::beforeDelete( int row )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "beforeDelete(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QSQLTABLEMODEL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSQLTABLEMODEL" );
     PHB_ITEM prow = hb_itemPutNI( NULL, row );
 
     hb_vmEvalBlockV( cb, 2, psender, prow );
@@ -40,14 +40,14 @@ void QSqlTableModelSlots::beforeDelete( int row )
 
 void QSqlTableModelSlots::beforeInsert( QSqlRecord & record )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "beforeInsert(QSqlRecord)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QSQLTABLEMODEL" );
-    PHB_ITEM precord = Qt4xHb::Signals_return_object( (void *) &record, "QSQLRECORD" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSQLTABLEMODEL" );
+    PHB_ITEM precord = Qt4xHb::Signals_return_object( ( void * ) &record, "QSQLRECORD" );
 
     hb_vmEvalBlockV( cb, 2, psender, precord );
 
@@ -58,15 +58,15 @@ void QSqlTableModelSlots::beforeInsert( QSqlRecord & record )
 
 void QSqlTableModelSlots::beforeUpdate( int row, QSqlRecord & record )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "beforeUpdate(int,QSqlRecord)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QSQLTABLEMODEL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSQLTABLEMODEL" );
     PHB_ITEM prow = hb_itemPutNI( NULL, row );
-    PHB_ITEM precord = Qt4xHb::Signals_return_object( (void *) &record, "QSQLRECORD" );
+    PHB_ITEM precord = Qt4xHb::Signals_return_object( ( void * ) &record, "QSQLRECORD" );
 
     hb_vmEvalBlockV( cb, 3, psender, prow, precord );
 
@@ -78,15 +78,15 @@ void QSqlTableModelSlots::beforeUpdate( int row, QSqlRecord & record )
 
 void QSqlTableModelSlots::primeInsert( int row, QSqlRecord & record )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "primeInsert(int,QSqlRecord)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QSQLTABLEMODEL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSQLTABLEMODEL" );
     PHB_ITEM prow = hb_itemPutNI( NULL, row );
-    PHB_ITEM precord = Qt4xHb::Signals_return_object( (void *) &record, "QSQLRECORD" );
+    PHB_ITEM precord = Qt4xHb::Signals_return_object( ( void * ) &record, "QSQLRECORD" );
 
     hb_vmEvalBlockV( cb, 3, psender, prow, precord );
 
@@ -98,7 +98,7 @@ void QSqlTableModelSlots::primeInsert( int row, QSqlRecord & record )
 
 void QSqlTableModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSqlTableModel * obj = (QSqlTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = ( QSqlTableModel * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

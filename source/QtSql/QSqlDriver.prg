@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -77,7 +77,7 @@ RETURN
 
 HB_FUNC_STATIC( QSQLDRIVER_DELETE )
 {
-  QSqlDriver * obj = (QSqlDriver *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -99,12 +99,12 @@ virtual bool beginTransaction()
 */
 HB_FUNC_STATIC( QSQLDRIVER_BEGINTRANSACTION )
 {
-  QSqlDriver * obj = (QSqlDriver *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->beginTransaction() );
@@ -123,12 +123,12 @@ virtual void close() = 0
 */
 HB_FUNC_STATIC( QSQLDRIVER_CLOSE )
 {
-  QSqlDriver * obj = (QSqlDriver *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->close();
@@ -149,12 +149,12 @@ virtual bool commitTransaction()
 */
 HB_FUNC_STATIC( QSQLDRIVER_COMMITTRANSACTION )
 {
-  QSqlDriver * obj = (QSqlDriver *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->commitTransaction() );
@@ -173,12 +173,12 @@ virtual QSqlResult * createResult() const = 0
 */
 HB_FUNC_STATIC( QSQLDRIVER_CREATERESULT )
 {
-  QSqlDriver * obj = (QSqlDriver *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSqlResult * ptr = obj->createResult();
@@ -198,15 +198,15 @@ virtual QString escapeIdentifier( const QString & identifier, QSqlDriver::Identi
 */
 HB_FUNC_STATIC( QSQLDRIVER_ESCAPEIDENTIFIER )
 {
-  QSqlDriver * obj = (QSqlDriver *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      RQSTRING( obj->escapeIdentifier( PQSTRING(1), (QSqlDriver::IdentifierType) hb_parni(2) ) );
+      RQSTRING( obj->escapeIdentifier( PQSTRING( 1 ), ( QSqlDriver::IdentifierType ) hb_parni( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,15 +222,15 @@ virtual QString formatValue( const QSqlField & field, bool trimStrings = false )
 */
 HB_FUNC_STATIC( QSQLDRIVER_FORMATVALUE )
 {
-  QSqlDriver * obj = (QSqlDriver *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISQSQLFIELD(1) && ISOPTLOG(2) )
+    if( ISBETWEEN( 1, 2 ) && ISQSQLFIELD( 1 ) && ISOPTLOG( 2 ) )
     {
 #endif
-      RQSTRING( obj->formatValue( *PQSQLFIELD(1), OPBOOL(2,false) ) );
+      RQSTRING( obj->formatValue( *PQSQLFIELD( 1 ), OPBOOL( 2, false ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,12 +246,12 @@ virtual QVariant handle() const
 */
 HB_FUNC_STATIC( QSQLDRIVER_HANDLE )
 {
-  QSqlDriver * obj = (QSqlDriver *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QVariant * ptr = new QVariant( obj->handle() );
@@ -271,15 +271,15 @@ virtual bool hasFeature( QSqlDriver::DriverFeature feature ) const = 0
 */
 HB_FUNC_STATIC( QSQLDRIVER_HASFEATURE )
 {
-  QSqlDriver * obj = (QSqlDriver *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->hasFeature( (QSqlDriver::DriverFeature) hb_parni(1) ) );
+      RBOOL( obj->hasFeature( ( QSqlDriver::DriverFeature ) hb_parni( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,15 +295,15 @@ bool isIdentifierEscaped( const QString & identifier, QSqlDriver::IdentifierType
 */
 HB_FUNC_STATIC( QSQLDRIVER_ISIDENTIFIERESCAPED )
 {
-  QSqlDriver * obj = (QSqlDriver *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      RBOOL( obj->isIdentifierEscaped( PQSTRING(1), (QSqlDriver::IdentifierType) hb_parni(2) ) );
+      RBOOL( obj->isIdentifierEscaped( PQSTRING( 1 ), ( QSqlDriver::IdentifierType ) hb_parni( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -319,12 +319,12 @@ virtual bool isOpen() const
 */
 HB_FUNC_STATIC( QSQLDRIVER_ISOPEN )
 {
-  QSqlDriver * obj = (QSqlDriver *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isOpen() );
@@ -343,12 +343,12 @@ bool isOpenError() const
 */
 HB_FUNC_STATIC( QSQLDRIVER_ISOPENERROR )
 {
-  QSqlDriver * obj = (QSqlDriver *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isOpenError() );
@@ -367,12 +367,12 @@ QSqlError lastError() const
 */
 HB_FUNC_STATIC( QSQLDRIVER_LASTERROR )
 {
-  QSqlDriver * obj = (QSqlDriver *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSqlError * ptr = new QSqlError( obj->lastError() );
@@ -392,12 +392,12 @@ QSql::NumericalPrecisionPolicy numericalPrecisionPolicy() const
 */
 HB_FUNC_STATIC( QSQLDRIVER_NUMERICALPRECISIONPOLICY )
 {
-  QSqlDriver * obj = (QSqlDriver *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->numericalPrecisionPolicy() );
@@ -416,15 +416,15 @@ virtual bool open( const QString & db, const QString & user = QString(), const Q
 */
 HB_FUNC_STATIC( QSQLDRIVER_OPEN )
 {
-  QSqlDriver * obj = (QSqlDriver *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,6) && ISCHAR(1) && ISOPTCHAR(2) && ISOPTCHAR(3) && ISOPTCHAR(4) && ISOPTNUM(5) && ISOPTCHAR(6) )
+    if( ISBETWEEN( 1, 6 ) && ISCHAR( 1 ) && ISOPTCHAR( 2 ) && ISOPTCHAR( 3 ) && ISOPTCHAR( 4 ) && ISOPTNUM( 5 ) && ISOPTCHAR( 6 ) )
     {
 #endif
-      RBOOL( obj->open( PQSTRING(1), OPQSTRING(2,QString()), OPQSTRING(3,QString()), OPQSTRING(4,QString()), OPINT(5,-1), OPQSTRING(6,QString()) ) );
+      RBOOL( obj->open( PQSTRING( 1 ), OPQSTRING( 2, QString() ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ), OPINT( 5, -1 ), OPQSTRING( 6, QString() ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -440,15 +440,15 @@ virtual QSqlIndex primaryIndex( const QString & tableName ) const
 */
 HB_FUNC_STATIC( QSQLDRIVER_PRIMARYINDEX )
 {
-  QSqlDriver * obj = (QSqlDriver *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      QSqlIndex * ptr = new QSqlIndex( obj->primaryIndex( PQSTRING(1) ) );
+      QSqlIndex * ptr = new QSqlIndex( obj->primaryIndex( PQSTRING( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QSQLINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -465,15 +465,15 @@ virtual QSqlRecord record( const QString & tableName ) const
 */
 HB_FUNC_STATIC( QSQLDRIVER_RECORD )
 {
-  QSqlDriver * obj = (QSqlDriver *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      QSqlRecord * ptr = new QSqlRecord( obj->record( PQSTRING(1) ) );
+      QSqlRecord * ptr = new QSqlRecord( obj->record( PQSTRING( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QSQLRECORD", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -490,12 +490,12 @@ virtual bool rollbackTransaction()
 */
 HB_FUNC_STATIC( QSQLDRIVER_ROLLBACKTRANSACTION )
 {
-  QSqlDriver * obj = (QSqlDriver *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->rollbackTransaction() );
@@ -514,15 +514,15 @@ void setNumericalPrecisionPolicy( QSql::NumericalPrecisionPolicy precisionPolicy
 */
 HB_FUNC_STATIC( QSQLDRIVER_SETNUMERICALPRECISIONPOLICY )
 {
-  QSqlDriver * obj = (QSqlDriver *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setNumericalPrecisionPolicy( (QSql::NumericalPrecisionPolicy) hb_parni(1) );
+      obj->setNumericalPrecisionPolicy( ( QSql::NumericalPrecisionPolicy ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -540,15 +540,15 @@ virtual QString sqlStatement( QSqlDriver::StatementType type, const QString & ta
 */
 HB_FUNC_STATIC( QSQLDRIVER_SQLSTATEMENT )
 {
-  QSqlDriver * obj = (QSqlDriver *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISNUM(1) && ISCHAR(2) && ISQSQLRECORD(3) && ISLOG(4) )
+    if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISCHAR( 2 ) && ISQSQLRECORD( 3 ) && ISLOG( 4 ) )
     {
 #endif
-      RQSTRING( obj->sqlStatement( (QSqlDriver::StatementType) hb_parni(1), PQSTRING(2), *PQSQLRECORD(3), PBOOL(4) ) );
+      RQSTRING( obj->sqlStatement( ( QSqlDriver::StatementType ) hb_parni( 1 ), PQSTRING( 2 ), *PQSQLRECORD( 3 ), PBOOL( 4 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -564,15 +564,15 @@ QString stripDelimiters( const QString & identifier, QSqlDriver::IdentifierType 
 */
 HB_FUNC_STATIC( QSQLDRIVER_STRIPDELIMITERS )
 {
-  QSqlDriver * obj = (QSqlDriver *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      RQSTRING( obj->stripDelimiters( PQSTRING(1), (QSqlDriver::IdentifierType) hb_parni(2) ) );
+      RQSTRING( obj->stripDelimiters( PQSTRING( 1 ), ( QSqlDriver::IdentifierType ) hb_parni( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -588,15 +588,15 @@ bool subscribeToNotification( const QString & name )
 */
 HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBETONOTIFICATION )
 {
-  QSqlDriver * obj = (QSqlDriver *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      RBOOL( obj->subscribeToNotification( PQSTRING(1) ) );
+      RBOOL( obj->subscribeToNotification( PQSTRING( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -612,12 +612,12 @@ QStringList subscribedToNotifications() const
 */
 HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBEDTONOTIFICATIONS )
 {
-  QSqlDriver * obj = (QSqlDriver *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->subscribedToNotifications() );
@@ -636,15 +636,15 @@ virtual QStringList tables( QSql::TableType tableType ) const
 */
 HB_FUNC_STATIC( QSQLDRIVER_TABLES )
 {
-  QSqlDriver * obj = (QSqlDriver *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RQSTRINGLIST( obj->tables( (QSql::TableType) hb_parni(1) ) );
+      RQSTRINGLIST( obj->tables( ( QSql::TableType ) hb_parni( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -660,15 +660,15 @@ bool unsubscribeFromNotification( const QString & name )
 */
 HB_FUNC_STATIC( QSQLDRIVER_UNSUBSCRIBEFROMNOTIFICATION )
 {
-  QSqlDriver * obj = (QSqlDriver *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      RBOOL( obj->unsubscribeFromNotification( PQSTRING(1) ) );
+      RBOOL( obj->unsubscribeFromNotification( PQSTRING( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
