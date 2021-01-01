@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -45,7 +45,7 @@ RETURN
 
 HB_FUNC_STATIC( QWEBHISTORYINTERFACE_DELETE )
 {
-  QWebHistoryInterface * obj = (QWebHistoryInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebHistoryInterface * obj = ( QWebHistoryInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -67,15 +67,15 @@ virtual void addHistoryEntry( const QString & url ) = 0
 */
 HB_FUNC_STATIC( QWEBHISTORYINTERFACE_ADDHISTORYENTRY )
 {
-  QWebHistoryInterface * obj = (QWebHistoryInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebHistoryInterface * obj = ( QWebHistoryInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->addHistoryEntry( PQSTRING(1) );
+      obj->addHistoryEntry( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -93,15 +93,15 @@ virtual bool historyContains( const QString & url ) const = 0
 */
 HB_FUNC_STATIC( QWEBHISTORYINTERFACE_HISTORYCONTAINS )
 {
-  QWebHistoryInterface * obj = (QWebHistoryInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebHistoryInterface * obj = ( QWebHistoryInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      RBOOL( obj->historyContains( PQSTRING(1) ) );
+      RBOOL( obj->historyContains( PQSTRING( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,7 +118,7 @@ static QWebHistoryInterface * defaultInterface()
 HB_FUNC_STATIC( QWEBHISTORYINTERFACE_DEFAULTINTERFACE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QWebHistoryInterface * ptr = QWebHistoryInterface::defaultInterface();
@@ -138,10 +138,10 @@ static void setDefaultInterface( QWebHistoryInterface * defaultInterface )
 HB_FUNC_STATIC( QWEBHISTORYINTERFACE_SETDEFAULTINTERFACE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQWEBHISTORYINTERFACE(1) )
+  if( ISNUMPAR( 1 ) && ISQWEBHISTORYINTERFACE( 1 ) )
   {
 #endif
-    QWebHistoryInterface::setDefaultInterface( PQWEBHISTORYINTERFACE(1) );
+    QWebHistoryInterface::setDefaultInterface( PQWEBHISTORYINTERFACE( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

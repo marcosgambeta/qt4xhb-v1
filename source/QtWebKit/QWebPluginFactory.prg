@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -44,7 +44,7 @@ RETURN
 
 HB_FUNC_STATIC( QWEBPLUGINFACTORY_DELETE )
 {
-  QWebPluginFactory * obj = (QWebPluginFactory *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebPluginFactory * obj = ( QWebPluginFactory * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -66,15 +66,15 @@ virtual QObject * create( const QString & mimeType, const QUrl & url, const QStr
 */
 HB_FUNC_STATIC( QWEBPLUGINFACTORY_CREATE )
 {
-  QWebPluginFactory * obj = (QWebPluginFactory *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebPluginFactory * obj = ( QWebPluginFactory * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISCHAR(1) && ISQURL(2) && ISARRAY(3) && ISARRAY(4) )
+    if( ISNUMPAR( 4 ) && ISCHAR( 1 ) && ISQURL( 2 ) && ISARRAY( 3 ) && ISARRAY( 4 ) )
     {
 #endif
-      QObject * ptr = obj->create( PQSTRING(1), *PQURL(2), PQSTRINGLIST(3), PQSTRINGLIST(4) );
+      QObject * ptr = obj->create( PQSTRING( 1 ), *PQURL( 2 ), PQSTRINGLIST( 3 ), PQSTRINGLIST( 4 ) );
       Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -91,12 +91,12 @@ virtual void refreshPlugins()
 */
 HB_FUNC_STATIC( QWEBPLUGINFACTORY_REFRESHPLUGINS )
 {
-  QWebPluginFactory * obj = (QWebPluginFactory *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebPluginFactory * obj = ( QWebPluginFactory * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->refreshPlugins();

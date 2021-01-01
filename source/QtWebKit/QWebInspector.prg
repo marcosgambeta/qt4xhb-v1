@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -51,9 +51,9 @@ QWebInspector( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQWIDGET(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
   {
-    QWebInspector * obj = new QWebInspector( OPQWIDGET(1,0) );
+    QWebInspector * obj = new QWebInspector( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_NEW )
 
 HB_FUNC_STATIC( QWEBINSPECTOR_DELETE )
 {
-  QWebInspector * obj = (QWebInspector *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebInspector * obj = ( QWebInspector * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -86,12 +86,12 @@ QWebPage * page() const
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_PAGE )
 {
-  QWebInspector * obj = (QWebInspector *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebInspector * obj = ( QWebInspector * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QWebPage * ptr = obj->page();
@@ -111,15 +111,15 @@ void setPage( QWebPage * page )
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_SETPAGE )
 {
-  QWebInspector * obj = (QWebInspector *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebInspector * obj = ( QWebInspector * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWEBPAGE(1) )
+    if( ISNUMPAR( 1 ) && ISQWEBPAGE( 1 ) )
     {
 #endif
-      obj->setPage( PQWEBPAGE(1) );
+      obj->setPage( PQWEBPAGE( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,15 +137,15 @@ virtual bool event( QEvent * ev )
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_EVENT )
 {
-  QWebInspector * obj = (QWebInspector *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebInspector * obj = ( QWebInspector * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQEVENT(1) )
+    if( ISNUMPAR( 1 ) && ISQEVENT( 1 ) )
     {
 #endif
-      RBOOL( obj->event( PQEVENT(1) ) );
+      RBOOL( obj->event( PQEVENT( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,12 +161,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_SIZEHINT )
 {
-  QWebInspector * obj = (QWebInspector *) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebInspector * obj = ( QWebInspector * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );

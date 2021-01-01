@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QGraphicsWebViewSlots.h"
 
-QGraphicsWebViewSlots::QGraphicsWebViewSlots( QObject *parent ) : QObject( parent )
+QGraphicsWebViewSlots::QGraphicsWebViewSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QGraphicsWebViewSlots::~QGraphicsWebViewSlots()
 
 void QGraphicsWebViewSlots::iconChanged()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "iconChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSWEBVIEW" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSWEBVIEW" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,14 +38,14 @@ void QGraphicsWebViewSlots::iconChanged()
 
 void QGraphicsWebViewSlots::linkClicked( const QUrl & url )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "linkClicked(QUrl)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSWEBVIEW" );
-    PHB_ITEM purl = Qt4xHb::Signals_return_object( (void *) &url, "QURL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSWEBVIEW" );
+    PHB_ITEM purl = Qt4xHb::Signals_return_object( ( void * ) &url, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, purl );
 
@@ -56,13 +56,13 @@ void QGraphicsWebViewSlots::linkClicked( const QUrl & url )
 
 void QGraphicsWebViewSlots::loadFinished( bool ok )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "loadFinished(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSWEBVIEW" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSWEBVIEW" );
     PHB_ITEM pok = hb_itemPutL( NULL, ok );
 
     hb_vmEvalBlockV( cb, 2, psender, pok );
@@ -74,13 +74,13 @@ void QGraphicsWebViewSlots::loadFinished( bool ok )
 
 void QGraphicsWebViewSlots::loadProgress( int progress )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "loadProgress(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSWEBVIEW" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSWEBVIEW" );
     PHB_ITEM pprogress = hb_itemPutNI( NULL, progress );
 
     hb_vmEvalBlockV( cb, 2, psender, pprogress );
@@ -92,13 +92,13 @@ void QGraphicsWebViewSlots::loadProgress( int progress )
 
 void QGraphicsWebViewSlots::loadStarted()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "loadStarted()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSWEBVIEW" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSWEBVIEW" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -108,14 +108,14 @@ void QGraphicsWebViewSlots::loadStarted()
 
 void QGraphicsWebViewSlots::statusBarMessage( const QString & text )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "statusBarMessage(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSWEBVIEW" );
-    PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING(text) );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSWEBVIEW" );
+    PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING( text ) );
 
     hb_vmEvalBlockV( cb, 2, psender, ptext );
 
@@ -126,14 +126,14 @@ void QGraphicsWebViewSlots::statusBarMessage( const QString & text )
 
 void QGraphicsWebViewSlots::titleChanged( const QString & title )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "titleChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSWEBVIEW" );
-    PHB_ITEM ptitle = hb_itemPutC( NULL, QSTRINGTOSTRING(title) );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSWEBVIEW" );
+    PHB_ITEM ptitle = hb_itemPutC( NULL, QSTRINGTOSTRING( title ) );
 
     hb_vmEvalBlockV( cb, 2, psender, ptitle );
 
@@ -144,14 +144,14 @@ void QGraphicsWebViewSlots::titleChanged( const QString & title )
 
 void QGraphicsWebViewSlots::urlChanged( const QUrl & url )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "urlChanged(QUrl)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QGRAPHICSWEBVIEW" );
-    PHB_ITEM purl = Qt4xHb::Signals_return_object( (void *) &url, "QURL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSWEBVIEW" );
+    PHB_ITEM purl = Qt4xHb::Signals_return_object( ( void * ) &url, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, purl );
 
@@ -162,7 +162,7 @@ void QGraphicsWebViewSlots::urlChanged( const QUrl & url )
 
 void QGraphicsWebViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsWebView * obj = (QGraphicsWebView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsWebView * obj = ( QGraphicsWebView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
