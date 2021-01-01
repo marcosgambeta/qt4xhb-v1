@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QDeclarativeComponentSlots.h"
 
-QDeclarativeComponentSlots::QDeclarativeComponentSlots( QObject *parent ) : QObject( parent )
+QDeclarativeComponentSlots::QDeclarativeComponentSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QDeclarativeComponentSlots::~QDeclarativeComponentSlots()
 
 void QDeclarativeComponentSlots::progressChanged( qreal progress )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "progressChanged(qreal)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDECLARATIVECOMPONENT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDECLARATIVECOMPONENT" );
     PHB_ITEM pprogress = hb_itemPutND( NULL, progress );
 
     hb_vmEvalBlockV( cb, 2, psender, pprogress );
@@ -40,13 +40,13 @@ void QDeclarativeComponentSlots::progressChanged( qreal progress )
 
 void QDeclarativeComponentSlots::statusChanged( QDeclarativeComponent::Status status )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "statusChanged(QDeclarativeComponent::Status)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDECLARATIVECOMPONENT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDECLARATIVECOMPONENT" );
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
 
     hb_vmEvalBlockV( cb, 2, psender, pstatus );
@@ -58,7 +58,7 @@ void QDeclarativeComponentSlots::statusChanged( QDeclarativeComponent::Status st
 
 void QDeclarativeComponentSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

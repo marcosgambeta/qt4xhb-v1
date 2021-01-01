@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QDeclarativeViewSlots.h"
 
-QDeclarativeViewSlots::QDeclarativeViewSlots( QObject *parent ) : QObject( parent )
+QDeclarativeViewSlots::QDeclarativeViewSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,14 +22,14 @@ QDeclarativeViewSlots::~QDeclarativeViewSlots()
 
 void QDeclarativeViewSlots::sceneResized( QSize size )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "sceneResized(QSize)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDECLARATIVEVIEW" );
-    PHB_ITEM psize = Qt4xHb::Signals_return_object( (void *) &size, "QSIZE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDECLARATIVEVIEW" );
+    PHB_ITEM psize = Qt4xHb::Signals_return_object( ( void * ) &size, "QSIZE" );
 
     hb_vmEvalBlockV( cb, 2, psender, psize );
 
@@ -40,13 +40,13 @@ void QDeclarativeViewSlots::sceneResized( QSize size )
 
 void QDeclarativeViewSlots::statusChanged( QDeclarativeView::Status status )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "statusChanged(QDeclarativeView::Status)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QDECLARATIVEVIEW" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDECLARATIVEVIEW" );
     PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
 
     hb_vmEvalBlockV( cb, 2, psender, pstatus );
@@ -58,7 +58,7 @@ void QDeclarativeViewSlots::statusChanged( QDeclarativeView::Status status )
 
 void QDeclarativeViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDeclarativeView * obj = (QDeclarativeView *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeView * obj = ( QDeclarativeView * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

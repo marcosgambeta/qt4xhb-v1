@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -56,9 +56,9 @@ QDeclarativePropertyMap( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
-    QDeclarativePropertyMap * obj = new QDeclarativePropertyMap( OPQOBJECT(1,0) );
+    QDeclarativePropertyMap * obj = new QDeclarativePropertyMap( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_DELETE )
 {
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativePropertyMap * obj = ( QDeclarativePropertyMap * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -91,15 +91,15 @@ void clear( const QString & key )
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_CLEAR )
 {
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativePropertyMap * obj = ( QDeclarativePropertyMap * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->clear( PQSTRING(1) );
+      obj->clear( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -117,15 +117,15 @@ bool contains( const QString & key ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_CONTAINS )
 {
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativePropertyMap * obj = ( QDeclarativePropertyMap * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      RBOOL( obj->contains( PQSTRING(1) ) );
+      RBOOL( obj->contains( PQSTRING( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,12 +141,12 @@ int count() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_COUNT )
 {
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativePropertyMap * obj = ( QDeclarativePropertyMap * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->count() );
@@ -165,15 +165,15 @@ void insert( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_INSERT )
 {
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativePropertyMap * obj = ( QDeclarativePropertyMap * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQVARIANT(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISQVARIANT( 2 ) )
     {
 #endif
-      obj->insert( PQSTRING(1), *PQVARIANT(2) );
+      obj->insert( PQSTRING( 1 ), *PQVARIANT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,12 +191,12 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_ISEMPTY )
 {
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativePropertyMap * obj = ( QDeclarativePropertyMap * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isEmpty() );
@@ -215,12 +215,12 @@ QStringList keys() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_KEYS )
 {
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativePropertyMap * obj = ( QDeclarativePropertyMap * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRINGLIST( obj->keys() );
@@ -239,12 +239,12 @@ int size() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_SIZE )
 {
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativePropertyMap * obj = ( QDeclarativePropertyMap * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->size() );
@@ -263,15 +263,15 @@ QVariant value( const QString & key ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_VALUE )
 {
-  QDeclarativePropertyMap * obj = (QDeclarativePropertyMap *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativePropertyMap * obj = ( QDeclarativePropertyMap * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->value( PQSTRING(1) ) );
+      QVariant * ptr = new QVariant( obj->value( PQSTRING( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

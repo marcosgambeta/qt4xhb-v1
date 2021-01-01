@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -69,7 +69,7 @@ QDeclarativeComponent( QObject * parent = 0 )
 */
 void QDeclarativeComponent_new1()
 {
-  QDeclarativeComponent * obj = new QDeclarativeComponent( OPQOBJECT(1,0) );
+  QDeclarativeComponent * obj = new QDeclarativeComponent( OPQOBJECT( 1, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -78,7 +78,7 @@ QDeclarativeComponent( QDeclarativeEngine *, QObject * parent = 0 )
 */
 void QDeclarativeComponent_new2()
 {
-  QDeclarativeComponent * obj = new QDeclarativeComponent( PQDECLARATIVEENGINE(1), OPQOBJECT(2,0) );
+  QDeclarativeComponent * obj = new QDeclarativeComponent( PQDECLARATIVEENGINE( 1 ), OPQOBJECT( 2, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -87,7 +87,7 @@ QDeclarativeComponent( QDeclarativeEngine *, const QString & fileName, QObject *
 */
 void QDeclarativeComponent_new3()
 {
-  QDeclarativeComponent * obj = new QDeclarativeComponent( PQDECLARATIVEENGINE(1), PQSTRING(2), OPQOBJECT(3,0) );
+  QDeclarativeComponent * obj = new QDeclarativeComponent( PQDECLARATIVEENGINE( 1 ), PQSTRING( 2 ), OPQOBJECT( 3, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -96,25 +96,25 @@ QDeclarativeComponent( QDeclarativeEngine *, const QUrl & url, QObject * parent 
 */
 void QDeclarativeComponent_new4()
 {
-  QDeclarativeComponent * obj = new QDeclarativeComponent( PQDECLARATIVEENGINE(1), *PQURL(2), OPQOBJECT(3,0) );
+  QDeclarativeComponent * obj = new QDeclarativeComponent( PQDECLARATIVEENGINE( 1 ), *PQURL( 2 ), OPQOBJECT( 3, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
     QDeclarativeComponent_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQDECLARATIVEENGINE(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISQDECLARATIVEENGINE( 1 ) && ( ISQOBJECT( 2 ) || ISNIL( 2 ) ) )
   {
     QDeclarativeComponent_new2();
   }
-  else if( ISBETWEEN(2,3) && ISQDECLARATIVEENGINE(1) && ISCHAR(2) && (ISQOBJECT(3)||ISNIL(3)) )
+  else if( ISBETWEEN( 2, 3 ) && ISQDECLARATIVEENGINE( 1 ) && ISCHAR( 2 ) && ( ISQOBJECT( 3 ) || ISNIL( 3 ) ) )
   {
     QDeclarativeComponent_new3();
   }
-  else if( ISBETWEEN(2,3) && ISQDECLARATIVEENGINE(1) && ISQURL(2) && (ISQOBJECT(3)||ISNIL(3)) )
+  else if( ISBETWEEN( 2, 3 ) && ISQDECLARATIVEENGINE( 1 ) && ISQURL( 2 ) && ( ISQOBJECT( 3 ) || ISNIL( 3 ) ) )
   {
     QDeclarativeComponent_new4();
   }
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_DELETE )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -148,15 +148,15 @@ virtual QObject * beginCreate( QDeclarativeContext * context )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_BEGINCREATE )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDECLARATIVECONTEXT(1) )
+    if( ISNUMPAR( 1 ) && ISQDECLARATIVECONTEXT( 1 ) )
     {
 #endif
-      QObject * ptr = obj->beginCreate( PQDECLARATIVECONTEXT(1) );
+      QObject * ptr = obj->beginCreate( PQDECLARATIVECONTEXT( 1 ) );
       Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -173,12 +173,12 @@ virtual void completeCreate()
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_COMPLETECREATE )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->completeCreate();
@@ -199,15 +199,15 @@ virtual QObject * create( QDeclarativeContext * context = 0 )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATE )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQDECLARATIVECONTEXT(1)||ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( ISQDECLARATIVECONTEXT( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
-      QObject * ptr = obj->create( OPQDECLARATIVECONTEXT(1,0) );
+      QObject * ptr = obj->create( OPQDECLARATIVECONTEXT( 1, 0 ) );
       Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -224,12 +224,12 @@ QDeclarativeContext * creationContext() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATIONCONTEXT )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QDeclarativeContext * ptr = obj->creationContext();
@@ -249,17 +249,17 @@ QList<QDeclarativeError> errors() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QDeclarativeError> list = obj->errors();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QDeclarativeError *) new QDeclarativeError( list[i] ) );
+          hb_itemPutPtr( pItem, ( QDeclarativeError * ) new QDeclarativeError( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -301,12 +301,12 @@ bool isError() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISERROR )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isError() );
@@ -325,12 +325,12 @@ bool isLoading() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISLOADING )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isLoading() );
@@ -349,12 +349,12 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISNULL )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isNull() );
@@ -373,12 +373,12 @@ bool isReady() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISREADY )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isReady() );
@@ -397,15 +397,15 @@ void loadUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_LOADURL )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQURL(1) )
+    if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
     {
 #endif
-      obj->loadUrl( *PQURL(1) );
+      obj->loadUrl( *PQURL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -423,12 +423,12 @@ qreal progress() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_PROGRESS )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQREAL( obj->progress() );
@@ -447,15 +447,15 @@ void setData( const QByteArray & data, const QUrl & url )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_SETDATA )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISQURL(2) )
+    if( ISNUMPAR( 2 ) && ISQBYTEARRAY( 1 ) && ISQURL( 2 ) )
     {
 #endif
-      obj->setData( *PQBYTEARRAY(1), *PQURL(2) );
+      obj->setData( *PQBYTEARRAY( 1 ), *PQURL( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -473,12 +473,12 @@ QDeclarativeComponent::Status status() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_STATUS )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->status() );
@@ -497,12 +497,12 @@ QUrl url() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_URL )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QUrl * ptr = new QUrl( obj->url() );
@@ -522,12 +522,12 @@ Q_INVOKABLE QString errorString() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORSTRING )
 {
-  QDeclarativeComponent * obj = (QDeclarativeComponent *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->errorString() );

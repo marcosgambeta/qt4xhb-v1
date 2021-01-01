@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -45,15 +45,15 @@ virtual void initializeEngine( QDeclarativeEngine * engine, const char * uri )
 */
 HB_FUNC_STATIC( QDECLARATIVEEXTENSIONPLUGIN_INITIALIZEENGINE )
 {
-  QDeclarativeExtensionPlugin * obj = (QDeclarativeExtensionPlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeExtensionPlugin * obj = ( QDeclarativeExtensionPlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQDECLARATIVEENGINE(1) && ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && ISQDECLARATIVEENGINE( 1 ) && ISCHAR( 2 ) )
     {
 #endif
-      obj->initializeEngine( PQDECLARATIVEENGINE(1), PCONSTCHAR(2) );
+      obj->initializeEngine( PQDECLARATIVEENGINE( 1 ), PCONSTCHAR( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -71,15 +71,15 @@ virtual void registerTypes( const char * uri ) = 0
 */
 HB_FUNC_STATIC( QDECLARATIVEEXTENSIONPLUGIN_REGISTERTYPES )
 {
-  QDeclarativeExtensionPlugin * obj = (QDeclarativeExtensionPlugin *) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeExtensionPlugin * obj = ( QDeclarativeExtensionPlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->registerTypes( PCONSTCHAR(1) );
+      obj->registerTypes( PCONSTCHAR( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
