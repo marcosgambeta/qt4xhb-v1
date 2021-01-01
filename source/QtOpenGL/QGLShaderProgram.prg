@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -120,7 +120,7 @@ QGLShaderProgram( QObject * parent = 0 )
 */
 void QGLShaderProgram_new1()
 {
-  QGLShaderProgram * obj = new QGLShaderProgram( OPQOBJECT(1,0) );
+  QGLShaderProgram * obj = new QGLShaderProgram( OPQOBJECT( 1, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -129,17 +129,17 @@ QGLShaderProgram( const QGLContext * context, QObject * parent = 0 )
 */
 void QGLShaderProgram_new2()
 {
-  QGLShaderProgram * obj = new QGLShaderProgram( PQGLCONTEXT(1), OPQOBJECT(2,0) );
+  QGLShaderProgram * obj = new QGLShaderProgram( PQGLCONTEXT( 1 ), OPQOBJECT( 2, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QGLSHADERPROGRAM_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
     QGLShaderProgram_new1();
   }
-  else if( ISBETWEEN(1,2) && ISQGLCONTEXT(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISQGLCONTEXT( 1 ) && ( ISQOBJECT( 2 ) || ISNIL( 2 ) ) )
   {
     QGLShaderProgram_new2();
   }
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_NEW )
 
 HB_FUNC_STATIC( QGLSHADERPROGRAM_DELETE )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -173,15 +173,15 @@ bool addShader( QGLShader * shader )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADER )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGLSHADER(1) )
+    if( ISNUMPAR( 1 ) && ISQGLSHADER( 1 ) )
     {
 #endif
-      RBOOL( obj->addShader( PQGLSHADER(1) ) );
+      RBOOL( obj->addShader( PQGLSHADER( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -197,15 +197,15 @@ bool addShaderFromSourceCode( QGLShader::ShaderType type, const char * source )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE1 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISCHAR( 2 ) )
     {
 #endif
-      RBOOL( obj->addShaderFromSourceCode( (QGLShader::ShaderType) hb_parni(1), PCONSTCHAR(2) ) );
+      RBOOL( obj->addShaderFromSourceCode( ( QGLShader::ShaderType ) hb_parni( 1 ), PCONSTCHAR( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,15 +221,15 @@ bool addShaderFromSourceCode( QGLShader::ShaderType type, const QByteArray & sou
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE2 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQBYTEARRAY(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQBYTEARRAY( 2 ) )
     {
 #endif
-      RBOOL( obj->addShaderFromSourceCode( (QGLShader::ShaderType) hb_parni(1), *PQBYTEARRAY(2) ) );
+      RBOOL( obj->addShaderFromSourceCode( ( QGLShader::ShaderType ) hb_parni( 1 ), *PQBYTEARRAY( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,15 +245,15 @@ bool addShaderFromSourceCode( QGLShader::ShaderType type, const QString & source
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE3 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISCHAR( 2 ) )
     {
 #endif
-      RBOOL( obj->addShaderFromSourceCode( (QGLShader::ShaderType) hb_parni(1), PQSTRING(2) ) );
+      RBOOL( obj->addShaderFromSourceCode( ( QGLShader::ShaderType ) hb_parni( 1 ), PQSTRING( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -266,15 +266,15 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE3 )
 
 HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
+  if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISCHAR( 2 ) )
   {
     HB_FUNC_EXEC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE1 );
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISQBYTEARRAY(2) )
+  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQBYTEARRAY( 2 ) )
   {
     HB_FUNC_EXEC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE2 );
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
+  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISCHAR( 2 ) )
   {
     HB_FUNC_EXEC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCECODE3 );
   }
@@ -289,15 +289,15 @@ bool addShaderFromSourceFile( QGLShader::ShaderType type, const QString & fileNa
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_ADDSHADERFROMSOURCEFILE )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISCHAR( 2 ) )
     {
 #endif
-      RBOOL( obj->addShaderFromSourceFile( (QGLShader::ShaderType) hb_parni(1), PQSTRING(2) ) );
+      RBOOL( obj->addShaderFromSourceFile( ( QGLShader::ShaderType ) hb_parni( 1 ), PQSTRING( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -313,15 +313,15 @@ int attributeLocation( const char * name ) const
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_ATTRIBUTELOCATION1 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      RINT( obj->attributeLocation( PCONSTCHAR(1) ) );
+      RINT( obj->attributeLocation( PCONSTCHAR( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -337,15 +337,15 @@ int attributeLocation( const QByteArray & name ) const
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_ATTRIBUTELOCATION2 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
     {
 #endif
-      RINT( obj->attributeLocation( *PQBYTEARRAY(1) ) );
+      RINT( obj->attributeLocation( *PQBYTEARRAY( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -361,15 +361,15 @@ int attributeLocation( const QString & name ) const
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_ATTRIBUTELOCATION3 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      RINT( obj->attributeLocation( PQSTRING(1) ) );
+      RINT( obj->attributeLocation( PQSTRING( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -382,15 +382,15 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_ATTRIBUTELOCATION3 )
 
 HB_FUNC_STATIC( QGLSHADERPROGRAM_ATTRIBUTELOCATION )
 {
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
     HB_FUNC_EXEC( QGLSHADERPROGRAM_ATTRIBUTELOCATION1 );
   }
-  else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+  else if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
     HB_FUNC_EXEC( QGLSHADERPROGRAM_ATTRIBUTELOCATION2 );
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
     HB_FUNC_EXEC( QGLSHADERPROGRAM_ATTRIBUTELOCATION3 );
   }
@@ -405,12 +405,12 @@ bool bind()
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_BIND )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->bind() );
@@ -429,15 +429,15 @@ void bindAttributeLocation( const char * name, int location )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION1 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      obj->bindAttributeLocation( PCONSTCHAR(1), PINT(2) );
+      obj->bindAttributeLocation( PCONSTCHAR( 1 ), PINT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -455,15 +455,15 @@ void bindAttributeLocation( const QByteArray & name, int location )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION2 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISQBYTEARRAY( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      obj->bindAttributeLocation( *PQBYTEARRAY(1), PINT(2) );
+      obj->bindAttributeLocation( *PQBYTEARRAY( 1 ), PINT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -481,15 +481,15 @@ void bindAttributeLocation( const QString & name, int location )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION3 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      obj->bindAttributeLocation( PQSTRING(1), PINT(2) );
+      obj->bindAttributeLocation( PQSTRING( 1 ), PINT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -504,15 +504,15 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION3 )
 
 HB_FUNC_STATIC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION )
 {
-  if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+  if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
   {
     HB_FUNC_EXEC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION1 );
   }
-  else if( ISNUMPAR(2) && ISQBYTEARRAY(1) && ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && ISQBYTEARRAY( 1 ) && ISNUM( 2 ) )
   {
     HB_FUNC_EXEC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION2 );
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
   {
     HB_FUNC_EXEC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION3 );
   }
@@ -527,11 +527,11 @@ void disableAttributeArray( int location )
 */
 void QGLShaderProgram_disableAttributeArray1()
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->disableAttributeArray( PINT(1) );
+    obj->disableAttributeArray( PINT( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -542,11 +542,11 @@ void disableAttributeArray( const char * name )
 */
 void QGLShaderProgram_disableAttributeArray2()
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->disableAttributeArray( PCONSTCHAR(1) );
+    obj->disableAttributeArray( PCONSTCHAR( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -554,11 +554,11 @@ void QGLShaderProgram_disableAttributeArray2()
 
 HB_FUNC_STATIC( QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY )
 {
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
   {
     QGLShaderProgram_disableAttributeArray1();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
     QGLShaderProgram_disableAttributeArray2();
   }
@@ -573,11 +573,11 @@ void enableAttributeArray( int location )
 */
 void QGLShaderProgram_enableAttributeArray1()
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->enableAttributeArray( PINT(1) );
+    obj->enableAttributeArray( PINT( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -588,11 +588,11 @@ void enableAttributeArray( const char * name )
 */
 void QGLShaderProgram_enableAttributeArray2()
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->enableAttributeArray( PCONSTCHAR(1) );
+    obj->enableAttributeArray( PCONSTCHAR( 1 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -600,11 +600,11 @@ void QGLShaderProgram_enableAttributeArray2()
 
 HB_FUNC_STATIC( QGLSHADERPROGRAM_ENABLEATTRIBUTEARRAY )
 {
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
   {
     QGLShaderProgram_enableAttributeArray1();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
     QGLShaderProgram_enableAttributeArray2();
   }
@@ -619,12 +619,12 @@ GLenum geometryInputType() const
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_GEOMETRYINPUTTYPE )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RGLENUM( obj->geometryInputType() );
@@ -643,12 +643,12 @@ GLenum geometryOutputType() const
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_GEOMETRYOUTPUTTYPE )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RGLENUM( obj->geometryOutputType() );
@@ -667,12 +667,12 @@ int geometryOutputVertexCount() const
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_GEOMETRYOUTPUTVERTEXCOUNT )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->geometryOutputVertexCount() );
@@ -691,12 +691,12 @@ bool isLinked() const
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_ISLINKED )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isLinked() );
@@ -715,12 +715,12 @@ virtual bool link()
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_LINK )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->link() );
@@ -739,12 +739,12 @@ QString log() const
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_LOG )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->log() );
@@ -763,12 +763,12 @@ int maxGeometryOutputVertices() const
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_MAXGEOMETRYOUTPUTVERTICES )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->maxGeometryOutputVertices() );
@@ -787,12 +787,12 @@ GLuint programId() const
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_PROGRAMID )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RGLUINT( obj->programId() );
@@ -811,12 +811,12 @@ void release()
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_RELEASE )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->release();
@@ -837,12 +837,12 @@ void removeAllShaders()
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_REMOVEALLSHADERS )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->removeAllShaders();
@@ -863,15 +863,15 @@ void removeShader( QGLShader * shader )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_REMOVESHADER )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGLSHADER(1) )
+    if( ISNUMPAR( 1 ) && ISQGLSHADER( 1 ) )
     {
 #endif
-      obj->removeShader( PQGLSHADER(1) );
+      obj->removeShader( PQGLSHADER( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -889,11 +889,11 @@ void setAttributeBuffer( int location, GLenum type, int offset, int tupleSize, i
 */
 void QGLShaderProgram_setAttributeBuffer1()
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setAttributeBuffer( PINT(1), PGLENUM(2), PINT(3), PINT(4), OPINT(5,0) );
+    obj->setAttributeBuffer( PINT( 1 ), PGLENUM( 2 ), PINT( 3 ), PINT( 4 ), OPINT( 5, 0 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -904,11 +904,11 @@ void setAttributeBuffer( const char * name, GLenum type, int offset, int tupleSi
 */
 void QGLShaderProgram_setAttributeBuffer2()
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->setAttributeBuffer( PCONSTCHAR(1), PGLENUM(2), PINT(3), PINT(4), OPINT(5,0) );
+    obj->setAttributeBuffer( PCONSTCHAR( 1 ), PGLENUM( 2 ), PINT( 3 ), PINT( 4 ), OPINT( 5, 0 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -916,11 +916,11 @@ void QGLShaderProgram_setAttributeBuffer2()
 
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEBUFFER )
 {
-  if( ISBETWEEN(4,5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISNUM(5)||ISNIL(5)) )
+  if( ISBETWEEN( 4, 5 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ( ISNUM( 5 ) || ISNIL( 5 ) ) )
   {
     QGLShaderProgram_setAttributeBuffer1();
   }
-  else if( ISBETWEEN(4,5) && ISCHAR(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && (ISNUM(5)||ISNIL(5)) )
+  else if( ISBETWEEN( 4, 5 ) && ISCHAR( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ( ISNUM( 5 ) || ISNIL( 5 ) ) )
   {
     QGLShaderProgram_setAttributeBuffer2();
   }
@@ -935,15 +935,15 @@ void setAttributeValue( int location, GLfloat value )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE1 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      obj->setAttributeValue( PINT(1), PGLFLOAT(2) );
+      obj->setAttributeValue( PINT( 1 ), PGLFLOAT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -961,15 +961,15 @@ void setAttributeValue( int location, GLfloat x, GLfloat y )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE2 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
+    if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) )
     {
 #endif
-      obj->setAttributeValue( PINT(1), PGLFLOAT(2), PGLFLOAT(3) );
+      obj->setAttributeValue( PINT( 1 ), PGLFLOAT( 2 ), PGLFLOAT( 3 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -987,15 +987,15 @@ void setAttributeValue( int location, GLfloat x, GLfloat y, GLfloat z )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE3 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+    if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
     {
 #endif
-      obj->setAttributeValue( PINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4) );
+      obj->setAttributeValue( PINT( 1 ), PGLFLOAT( 2 ), PGLFLOAT( 3 ), PGLFLOAT( 4 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1013,15 +1013,15 @@ void setAttributeValue( int location, GLfloat x, GLfloat y, GLfloat z, GLfloat w
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE4 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) )
+    if( ISNUMPAR( 5 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) )
     {
 #endif
-      obj->setAttributeValue( PINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4), PGLFLOAT(5) );
+      obj->setAttributeValue( PINT( 1 ), PGLFLOAT( 2 ), PGLFLOAT( 3 ), PGLFLOAT( 4 ), PGLFLOAT( 5 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1039,15 +1039,15 @@ void setAttributeValue( int location, const QColor & value )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE8 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && (ISQCOLOR(2)||ISCHAR(2)) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ( ISQCOLOR( 2 ) || ISCHAR( 2 ) ) )
     {
 #endif
-      obj->setAttributeValue( PINT(1), ISOBJECT(2)? *(QColor *) Qt4xHb::itemGetPtr(2) : QColor(hb_parc(2)) );
+      obj->setAttributeValue( PINT( 1 ), ISOBJECT( 2 )? *( QColor * ) Qt4xHb::itemGetPtr( 2 ) : QColor( hb_parc( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1065,15 +1065,15 @@ void setAttributeValue( const char * name, GLfloat value )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE10 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      obj->setAttributeValue( PCONSTCHAR(1), PGLFLOAT(2) );
+      obj->setAttributeValue( PCONSTCHAR( 1 ), PGLFLOAT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1091,15 +1091,15 @@ void setAttributeValue( const char * name, GLfloat x, GLfloat y )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE11 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISCHAR(1) && ISNUM(2) && ISNUM(3) )
+    if( ISNUMPAR( 3 ) && ISCHAR( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) )
     {
 #endif
-      obj->setAttributeValue( PCONSTCHAR(1), PGLFLOAT(2), PGLFLOAT(3) );
+      obj->setAttributeValue( PCONSTCHAR( 1 ), PGLFLOAT( 2 ), PGLFLOAT( 3 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1117,15 +1117,15 @@ void setAttributeValue( const char * name, GLfloat x, GLfloat y, GLfloat z )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE12 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISCHAR(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+    if( ISNUMPAR( 4 ) && ISCHAR( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
     {
 #endif
-      obj->setAttributeValue( PCONSTCHAR(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4) );
+      obj->setAttributeValue( PCONSTCHAR( 1 ), PGLFLOAT( 2 ), PGLFLOAT( 3 ), PGLFLOAT( 4 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1143,15 +1143,15 @@ void setAttributeValue( const char * name, GLfloat x, GLfloat y, GLfloat z, GLfl
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE13 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(5) && ISCHAR(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) )
+    if( ISNUMPAR( 5 ) && ISCHAR( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) )
     {
 #endif
-      obj->setAttributeValue( PCONSTCHAR(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4), PGLFLOAT(5) );
+      obj->setAttributeValue( PCONSTCHAR( 1 ), PGLFLOAT( 2 ), PGLFLOAT( 3 ), PGLFLOAT( 4 ), PGLFLOAT( 5 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1169,15 +1169,15 @@ void setAttributeValue( const char * name, const QColor & value )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE17 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && (ISQCOLOR(2)||ISCHAR(2)) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ( ISQCOLOR( 2 ) || ISCHAR( 2 ) ) )
     {
 #endif
-      obj->setAttributeValue( PCONSTCHAR(1), ISOBJECT(2)? *(QColor *) Qt4xHb::itemGetPtr(2) : QColor(hb_parc(2)) );
+      obj->setAttributeValue( PCONSTCHAR( 1 ), ISOBJECT( 2 )? *( QColor * ) Qt4xHb::itemGetPtr( 2 ) : QColor( hb_parc( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1192,43 +1192,43 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE17 )
 
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+  if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
   {
     HB_FUNC_EXEC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE1 );
   }
-  else if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
+  else if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) )
   {
     HB_FUNC_EXEC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE2 );
   }
-  else if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+  else if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
   {
     HB_FUNC_EXEC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE3 );
   }
-  else if( ISNUMPAR(5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) )
+  else if( ISNUMPAR( 5 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) )
   {
     HB_FUNC_EXEC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE4 );
   }
-  else if( ISNUMPAR(2) && ISNUM(1) && (ISQCOLOR(2)||ISCHAR(2)) )
+  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ( ISQCOLOR( 2 ) || ISCHAR( 2 ) ) )
   {
     HB_FUNC_EXEC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE8 );
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
   {
     HB_FUNC_EXEC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE10 );
   }
-  else if( ISNUMPAR(3) && ISCHAR(1) && ISNUM(2) && ISNUM(3) )
+  else if( ISNUMPAR( 3 ) && ISCHAR( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) )
   {
     HB_FUNC_EXEC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE11 );
   }
-  else if( ISNUMPAR(4) && ISCHAR(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+  else if( ISNUMPAR( 4 ) && ISCHAR( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
   {
     HB_FUNC_EXEC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE12 );
   }
-  else if( ISNUMPAR(5) && ISCHAR(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) )
+  else if( ISNUMPAR( 5 ) && ISCHAR( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) )
   {
     HB_FUNC_EXEC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE13 );
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && (ISQCOLOR(2)||ISCHAR(2)) )
+  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ( ISQCOLOR( 2 ) || ISCHAR( 2 ) ) )
   {
     HB_FUNC_EXEC( QGLSHADERPROGRAM_SETATTRIBUTEVALUE17 );
   }
@@ -1243,15 +1243,15 @@ void setGeometryInputType( GLenum inputType )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETGEOMETRYINPUTTYPE )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setGeometryInputType( PGLENUM(1) );
+      obj->setGeometryInputType( PGLENUM( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1269,15 +1269,15 @@ void setGeometryOutputType( GLenum outputType )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETGEOMETRYOUTPUTTYPE )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setGeometryOutputType( PGLENUM(1) );
+      obj->setGeometryOutputType( PGLENUM( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1295,15 +1295,15 @@ void setGeometryOutputVertexCount( int count )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETGEOMETRYOUTPUTVERTEXCOUNT )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setGeometryOutputVertexCount( PINT(1) );
+      obj->setGeometryOutputVertexCount( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1321,15 +1321,15 @@ void setUniformValue( int location, GLfloat value )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE1 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      obj->setUniformValue( PINT(1), PGLFLOAT(2) );
+      obj->setUniformValue( PINT( 1 ), PGLFLOAT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1347,15 +1347,15 @@ void setUniformValue( const char * name, const QPointF & point )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE2 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQPOINTF(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISQPOINTF( 2 ) )
     {
 #endif
-      obj->setUniformValue( PCONSTCHAR(1), *PQPOINTF(2) );
+      obj->setUniformValue( PCONSTCHAR( 1 ), *PQPOINTF( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1373,15 +1373,15 @@ void setUniformValue( const char * name, const QSize & size )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE3 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQSIZE(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISQSIZE( 2 ) )
     {
 #endif
-      obj->setUniformValue( PCONSTCHAR(1), *PQSIZE(2) );
+      obj->setUniformValue( PCONSTCHAR( 1 ), *PQSIZE( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1399,15 +1399,15 @@ void setUniformValue( const char * name, const QSizeF & size )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE4 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQSIZEF(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISQSIZEF( 2 ) )
     {
 #endif
-      obj->setUniformValue( PCONSTCHAR(1), *PQSIZEF(2) );
+      obj->setUniformValue( PCONSTCHAR( 1 ), *PQSIZEF( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1425,15 +1425,15 @@ void setUniformValue( const char * name, const QTransform & value )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE20 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQTRANSFORM(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISQTRANSFORM( 2 ) )
     {
 #endif
-      obj->setUniformValue( PCONSTCHAR(1), *PQTRANSFORM(2) );
+      obj->setUniformValue( PCONSTCHAR( 1 ), *PQTRANSFORM( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1451,15 +1451,15 @@ void setUniformValue( int location, GLint value )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE21 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      obj->setUniformValue( PINT(1), PGLINT(2) );
+      obj->setUniformValue( PINT( 1 ), PGLINT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1477,15 +1477,15 @@ void setUniformValue( int location, GLuint value )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE22 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      obj->setUniformValue( PINT(1), PGLUINT(2) );
+      obj->setUniformValue( PINT( 1 ), PGLUINT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1503,15 +1503,15 @@ void setUniformValue( int location, GLfloat x, GLfloat y )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE23 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISNUM(1) && ISNUM(2) && ISNUM(3) )
+    if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) )
     {
 #endif
-      obj->setUniformValue( PINT(1), PGLFLOAT(2), PGLFLOAT(3) );
+      obj->setUniformValue( PINT( 1 ), PGLFLOAT( 2 ), PGLFLOAT( 3 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1529,15 +1529,15 @@ void setUniformValue( int location, GLfloat x, GLfloat y, GLfloat z )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE24 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+    if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
     {
 #endif
-      obj->setUniformValue( PINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4) );
+      obj->setUniformValue( PINT( 1 ), PGLFLOAT( 2 ), PGLFLOAT( 3 ), PGLFLOAT( 4 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1555,15 +1555,15 @@ void setUniformValue( int location, GLfloat x, GLfloat y, GLfloat z, GLfloat w )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE25 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(5) && ISNUM(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) )
+    if( ISNUMPAR( 5 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) )
     {
 #endif
-      obj->setUniformValue( PINT(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4), PGLFLOAT(5) );
+      obj->setUniformValue( PINT( 1 ), PGLFLOAT( 2 ), PGLFLOAT( 3 ), PGLFLOAT( 4 ), PGLFLOAT( 5 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1581,15 +1581,15 @@ void setUniformValue( int location, const QColor & color )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE29 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && (ISQCOLOR(2)||ISCHAR(2)) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ( ISQCOLOR( 2 ) || ISCHAR( 2 ) ) )
     {
 #endif
-      obj->setUniformValue( PINT(1), ISOBJECT(2)? *(QColor *) Qt4xHb::itemGetPtr(2) : QColor(hb_parc(2)) );
+      obj->setUniformValue( PINT( 1 ), ISOBJECT( 2 )? *( QColor * ) Qt4xHb::itemGetPtr( 2 ) : QColor( hb_parc( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1607,15 +1607,15 @@ void setUniformValue( int location, const QPoint & point )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE30 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQPOINT(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQPOINT( 2 ) )
     {
 #endif
-      obj->setUniformValue( PINT(1), *PQPOINT(2) );
+      obj->setUniformValue( PINT( 1 ), *PQPOINT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1633,15 +1633,15 @@ void setUniformValue( int location, const QPointF & point )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE31 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQPOINTF(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQPOINTF( 2 ) )
     {
 #endif
-      obj->setUniformValue( PINT(1), *PQPOINTF(2) );
+      obj->setUniformValue( PINT( 1 ), *PQPOINTF( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1659,15 +1659,15 @@ void setUniformValue( int location, const QSize & size )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE32 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQSIZE(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQSIZE( 2 ) )
     {
 #endif
-      obj->setUniformValue( PINT(1), *PQSIZE(2) );
+      obj->setUniformValue( PINT( 1 ), *PQSIZE( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1685,15 +1685,15 @@ void setUniformValue( int location, const QSizeF & size )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE33 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQSIZEF(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQSIZEF( 2 ) )
     {
 #endif
-      obj->setUniformValue( PINT(1), *PQSIZEF(2) );
+      obj->setUniformValue( PINT( 1 ), *PQSIZEF( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1711,15 +1711,15 @@ void setUniformValue( int location, const QTransform & value )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE43 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISNUM(1) && ISQTRANSFORM(2) )
+    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQTRANSFORM( 2 ) )
     {
 #endif
-      obj->setUniformValue( PINT(1), *PQTRANSFORM(2) );
+      obj->setUniformValue( PINT( 1 ), *PQTRANSFORM( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1737,15 +1737,15 @@ void setUniformValue( const char * name, GLfloat value )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE44 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      obj->setUniformValue( PCONSTCHAR(1), PGLFLOAT(2) );
+      obj->setUniformValue( PCONSTCHAR( 1 ), PGLFLOAT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1763,15 +1763,15 @@ void setUniformValue( const char * name, GLint value )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE45 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      obj->setUniformValue( PCONSTCHAR(1), PGLINT(2) );
+      obj->setUniformValue( PCONSTCHAR( 1 ), PGLINT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1789,15 +1789,15 @@ void setUniformValue( const char * name, GLuint value )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE46 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      obj->setUniformValue( PCONSTCHAR(1), PGLUINT(2) );
+      obj->setUniformValue( PCONSTCHAR( 1 ), PGLUINT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1815,15 +1815,15 @@ void setUniformValue( const char * name, GLfloat x, GLfloat y )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE47 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISCHAR(1) && ISNUM(2) && ISNUM(3) )
+    if( ISNUMPAR( 3 ) && ISCHAR( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) )
     {
 #endif
-      obj->setUniformValue( PCONSTCHAR(1), PGLFLOAT(2), PGLFLOAT(3) );
+      obj->setUniformValue( PCONSTCHAR( 1 ), PGLFLOAT( 2 ), PGLFLOAT( 3 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1841,15 +1841,15 @@ void setUniformValue( const char * name, GLfloat x, GLfloat y, GLfloat z )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE48 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(4) && ISCHAR(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+    if( ISNUMPAR( 4 ) && ISCHAR( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
     {
 #endif
-      obj->setUniformValue( PCONSTCHAR(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4) );
+      obj->setUniformValue( PCONSTCHAR( 1 ), PGLFLOAT( 2 ), PGLFLOAT( 3 ), PGLFLOAT( 4 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1867,15 +1867,15 @@ void setUniformValue( const char * name, GLfloat x, GLfloat y, GLfloat z, GLfloa
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE49 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(5) && ISCHAR(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) && ISNUM(5) )
+    if( ISNUMPAR( 5 ) && ISCHAR( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) )
     {
 #endif
-      obj->setUniformValue( PCONSTCHAR(1), PGLFLOAT(2), PGLFLOAT(3), PGLFLOAT(4), PGLFLOAT(5) );
+      obj->setUniformValue( PCONSTCHAR( 1 ), PGLFLOAT( 2 ), PGLFLOAT( 3 ), PGLFLOAT( 4 ), PGLFLOAT( 5 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1893,15 +1893,15 @@ void setUniformValue( const char * name, const QColor & color )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE53 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && (ISQCOLOR(2)||ISCHAR(2)) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ( ISQCOLOR( 2 ) || ISCHAR( 2 ) ) )
     {
 #endif
-      obj->setUniformValue( PCONSTCHAR(1), ISOBJECT(2)? *(QColor *) Qt4xHb::itemGetPtr(2) : QColor(hb_parc(2)) );
+      obj->setUniformValue( PCONSTCHAR( 1 ), ISOBJECT( 2 )? *( QColor * ) Qt4xHb::itemGetPtr( 2 ) : QColor( hb_parc( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1919,15 +1919,15 @@ void setUniformValue( const char * name, const QPoint & point )
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE54 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQPOINT(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISQPOINT( 2 ) )
     {
 #endif
-      obj->setUniformValue( PCONSTCHAR(1), *PQPOINT(2) );
+      obj->setUniformValue( PCONSTCHAR( 1 ), *PQPOINT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1942,11 +1942,11 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE54 )
 
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETUNIFORMVALUE )
 {
-  if( ISNUMPAR(2) && ISNUM(1) && (ISQCOLOR(2)||ISCHAR(2)) )
+  if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ( ISQCOLOR( 2 ) || ISCHAR( 2 ) ) )
   {
     HB_FUNC_EXEC( QGLSHADERPROGRAM_SETUNIFORMVALUE29 );
   }
-  else if( ISNUMPAR(2) && ISCHAR(1) && (ISQCOLOR(2)||ISCHAR(2)) )
+  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ( ISQCOLOR( 2 ) || ISCHAR( 2 ) ) )
   {
     HB_FUNC_EXEC( QGLSHADERPROGRAM_SETUNIFORMVALUE53 );
   }
@@ -1961,17 +1961,17 @@ QList<QGLShader *> shaders() const
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SHADERS )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QGLShader *> list = obj->shaders();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGLSHADER" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
@@ -1982,7 +1982,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SHADERS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QGLShader *) list[i] );
+          hb_itemPutPtr( pItem, ( QGLShader * ) list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -2009,15 +2009,15 @@ int uniformLocation( const char * name ) const
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_UNIFORMLOCATION1 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      RINT( obj->uniformLocation( PCONSTCHAR(1) ) );
+      RINT( obj->uniformLocation( PCONSTCHAR( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2033,15 +2033,15 @@ int uniformLocation( const QByteArray & name ) const
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_UNIFORMLOCATION2 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
     {
 #endif
-      RINT( obj->uniformLocation( *PQBYTEARRAY(1) ) );
+      RINT( obj->uniformLocation( *PQBYTEARRAY( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2057,15 +2057,15 @@ int uniformLocation( const QString & name ) const
 */
 HB_FUNC_STATIC( QGLSHADERPROGRAM_UNIFORMLOCATION3 )
 {
-  QGLShaderProgram * obj = (QGLShaderProgram *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLShaderProgram * obj = ( QGLShaderProgram * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      RINT( obj->uniformLocation( PQSTRING(1) ) );
+      RINT( obj->uniformLocation( PQSTRING( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2078,15 +2078,15 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_UNIFORMLOCATION3 )
 
 HB_FUNC_STATIC( QGLSHADERPROGRAM_UNIFORMLOCATION )
 {
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
     HB_FUNC_EXEC( QGLSHADERPROGRAM_UNIFORMLOCATION1 );
   }
-  else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+  else if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
     HB_FUNC_EXEC( QGLSHADERPROGRAM_UNIFORMLOCATION2 );
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
     HB_FUNC_EXEC( QGLSHADERPROGRAM_UNIFORMLOCATION3 );
   }
@@ -2102,10 +2102,10 @@ static bool hasOpenGLShaderPrograms( const QGLContext * context = 0 )
 HB_FUNC_STATIC( QGLSHADERPROGRAM_HASOPENGLSHADERPROGRAMS )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0,1) && (ISQGLCONTEXT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQGLCONTEXT( 1 ) || ISNIL( 1 ) ) )
   {
 #endif
-    RBOOL( QGLShaderProgram::hasOpenGLShaderPrograms( ISNIL(1)? 0 : (QGLContext *) Qt4xHb::itemGetPtr(1) ) );
+    RBOOL( QGLShaderProgram::hasOpenGLShaderPrograms( ISNIL( 1 )? 0 : ( QGLContext * ) Qt4xHb::itemGetPtr( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -75,9 +75,9 @@ QGLContext( const QGLFormat & format )
 */
 HB_FUNC_STATIC( QGLCONTEXT_NEW )
 {
-  if( ISNUMPAR(1) && ISQGLFORMAT(1) )
+  if( ISNUMPAR( 1 ) && ISQGLFORMAT( 1 ) )
   {
-    QGLContext * obj = new QGLContext( *PQGLFORMAT(1) );
+    QGLContext * obj = new QGLContext( *PQGLFORMAT( 1 ) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QGLCONTEXT_NEW )
 
 HB_FUNC_STATIC( QGLCONTEXT_DELETE )
 {
-  QGLContext * obj = (QGLContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLContext * obj = ( QGLContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -108,11 +108,11 @@ GLuint bindTexture( const QImage & image, GLenum target, GLint format, QGLContex
 */
 void QGLContext_bindTexture1()
 {
-  QGLContext * obj = (QGLContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLContext * obj = ( QGLContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RGLUINT( obj->bindTexture( *PQIMAGE(1), PGLENUM(2), PGLINT(3), (QGLContext::BindOptions) hb_parni(4) ) );
+    RGLUINT( obj->bindTexture( *PQIMAGE( 1 ), PGLENUM( 2 ), PGLINT( 3 ), ( QGLContext::BindOptions ) hb_parni( 4 ) ) );
   }
 }
 
@@ -121,11 +121,11 @@ GLuint bindTexture( const QString & fileName )
 */
 void QGLContext_bindTexture2()
 {
-  QGLContext * obj = (QGLContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLContext * obj = ( QGLContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RGLUINT( obj->bindTexture( PQSTRING(1) ) );
+    RGLUINT( obj->bindTexture( PQSTRING( 1 ) ) );
   }
 }
 
@@ -134,11 +134,11 @@ GLuint bindTexture( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint f
 */
 void QGLContext_bindTexture3()
 {
-  QGLContext * obj = (QGLContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLContext * obj = ( QGLContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RGLUINT( obj->bindTexture( *PQIMAGE(1), OPGLENUM(2,GL_TEXTURE_2D), OPGLINT(3,GL_RGBA) ) );
+    RGLUINT( obj->bindTexture( *PQIMAGE( 1 ), OPGLENUM( 2, GL_TEXTURE_2D ), OPGLINT( 3, GL_RGBA ) ) );
   }
 }
 
@@ -147,11 +147,11 @@ GLuint bindTexture( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint
 */
 void QGLContext_bindTexture4()
 {
-  QGLContext * obj = (QGLContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLContext * obj = ( QGLContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RGLUINT( obj->bindTexture( *PQPIXMAP(1), OPGLENUM(2,GL_TEXTURE_2D), OPGLINT(3,GL_RGBA) ) );
+    RGLUINT( obj->bindTexture( *PQPIXMAP( 1 ), OPGLENUM( 2, GL_TEXTURE_2D ), OPGLINT( 3, GL_RGBA ) ) );
   }
 }
 
@@ -160,33 +160,33 @@ GLuint bindTexture( const QPixmap & pixmap, GLenum target, GLint format, QGLCont
 */
 void QGLContext_bindTexture5()
 {
-  QGLContext * obj = (QGLContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLContext * obj = ( QGLContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RGLUINT( obj->bindTexture( *PQPIXMAP(1), PGLENUM(2), PGLINT(3), (QGLContext::BindOptions) hb_parni(4) ) );
+    RGLUINT( obj->bindTexture( *PQPIXMAP( 1 ), PGLENUM( 2 ), PGLINT( 3 ), ( QGLContext::BindOptions ) hb_parni( 4 ) ) );
   }
 }
 
 HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE )
 {
-  if( ISNUMPAR(4) && ISQIMAGE(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+  if( ISNUMPAR( 4 ) && ISQIMAGE( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
   {
     QGLContext_bindTexture1();
   }
-  else if( ISNUMPAR(1) && ISCHAR(1) )
+  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
     QGLContext_bindTexture2();
   }
-  else if( ISBETWEEN(1,3) && ISQIMAGE(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+  else if( ISBETWEEN( 1, 3 ) && ISQIMAGE( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
   {
     QGLContext_bindTexture3();
   }
-  else if( ISBETWEEN(1,3) && ISQPIXMAP(1) && (ISNUM(2)||ISNIL(2)) && (ISNUM(3)||ISNIL(3)) )
+  else if( ISBETWEEN( 1, 3 ) && ISQPIXMAP( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
   {
     QGLContext_bindTexture4();
   }
-  else if( ISNUMPAR(4) && ISQPIXMAP(1) && ISNUM(2) && ISNUM(3) && ISNUM(4) )
+  else if( ISNUMPAR( 4 ) && ISQPIXMAP( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
   {
     QGLContext_bindTexture5();
   }
@@ -201,15 +201,15 @@ virtual bool create( const QGLContext * shareContext = 0 )
 */
 HB_FUNC_STATIC( QGLCONTEXT_CREATE )
 {
-  QGLContext * obj = (QGLContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLContext * obj = ( QGLContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQGLCONTEXT(1)||ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( ISQGLCONTEXT( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
-      RBOOL( obj->create( ISNIL(1)? 0 : (QGLContext *) Qt4xHb::itemGetPtr(1) ) );
+      RBOOL( obj->create( ISNIL( 1 )? 0 : ( QGLContext * ) Qt4xHb::itemGetPtr( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,15 +225,15 @@ void deleteTexture( GLuint id )
 */
 HB_FUNC_STATIC( QGLCONTEXT_DELETETEXTURE )
 {
-  QGLContext * obj = (QGLContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLContext * obj = ( QGLContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->deleteTexture( PGLUINT(1) );
+      obj->deleteTexture( PGLUINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -251,12 +251,12 @@ QPaintDevice * device() const
 */
 HB_FUNC_STATIC( QGLCONTEXT_DEVICE )
 {
-  QGLContext * obj = (QGLContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLContext * obj = ( QGLContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QPaintDevice * ptr = obj->device();
@@ -276,12 +276,12 @@ virtual void doneCurrent()
 */
 HB_FUNC_STATIC( QGLCONTEXT_DONECURRENT )
 {
-  QGLContext * obj = (QGLContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLContext * obj = ( QGLContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->doneCurrent();
@@ -302,11 +302,11 @@ void drawTexture( const QRectF & target, GLuint textureId, GLenum textureTarget 
 */
 void QGLContext_drawTexture1()
 {
-  QGLContext * obj = (QGLContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLContext * obj = ( QGLContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->drawTexture( *PQRECTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
+    obj->drawTexture( *PQRECTF( 1 ), PGLUINT( 2 ), OPGLENUM( 3, GL_TEXTURE_2D ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -317,11 +317,11 @@ void drawTexture( const QPointF & point, GLuint textureId, GLenum textureTarget 
 */
 void QGLContext_drawTexture2()
 {
-  QGLContext * obj = (QGLContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLContext * obj = ( QGLContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    obj->drawTexture( *PQPOINTF(1), PGLUINT(2), OPGLENUM(3,GL_TEXTURE_2D) );
+    obj->drawTexture( *PQPOINTF( 1 ), PGLUINT( 2 ), OPGLENUM( 3, GL_TEXTURE_2D ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -329,11 +329,11 @@ void QGLContext_drawTexture2()
 
 HB_FUNC_STATIC( QGLCONTEXT_DRAWTEXTURE )
 {
-  if( ISBETWEEN(2,3) && ISQRECTF(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
+  if( ISBETWEEN( 2, 3 ) && ISQRECTF( 1 ) && ISNUM( 2 ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
   {
     QGLContext_drawTexture1();
   }
-  else if( ISBETWEEN(2,3) && ISQPOINTF(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) )
+  else if( ISBETWEEN( 2, 3 ) && ISQPOINTF( 1 ) && ISNUM( 2 ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
   {
     QGLContext_drawTexture2();
   }
@@ -348,12 +348,12 @@ QGLFormat format() const
 */
 HB_FUNC_STATIC( QGLCONTEXT_FORMAT )
 {
-  QGLContext * obj = (QGLContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLContext * obj = ( QGLContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QGLFormat * ptr = new QGLFormat( obj->format() );
@@ -373,15 +373,15 @@ void * getProcAddress( const QString & proc ) const
 */
 HB_FUNC_STATIC( QGLCONTEXT_GETPROCADDRESS )
 {
-  QGLContext * obj = (QGLContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLContext * obj = ( QGLContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      hb_retptr( (void *) obj->getProcAddress( PQSTRING(1) ) );
+      hb_retptr( ( void * ) obj->getProcAddress( PQSTRING( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -397,12 +397,12 @@ bool isSharing() const
 */
 HB_FUNC_STATIC( QGLCONTEXT_ISSHARING )
 {
-  QGLContext * obj = (QGLContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLContext * obj = ( QGLContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isSharing() );
@@ -421,12 +421,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QGLCONTEXT_ISVALID )
 {
-  QGLContext * obj = (QGLContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLContext * obj = ( QGLContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -445,12 +445,12 @@ virtual void makeCurrent()
 */
 HB_FUNC_STATIC( QGLCONTEXT_MAKECURRENT )
 {
-  QGLContext * obj = (QGLContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLContext * obj = ( QGLContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->makeCurrent();
@@ -471,12 +471,12 @@ QColor overlayTransparentColor() const
 */
 HB_FUNC_STATIC( QGLCONTEXT_OVERLAYTRANSPARENTCOLOR )
 {
-  QGLContext * obj = (QGLContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLContext * obj = ( QGLContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QColor * ptr = new QColor( obj->overlayTransparentColor() );
@@ -496,12 +496,12 @@ QGLFormat requestedFormat() const
 */
 HB_FUNC_STATIC( QGLCONTEXT_REQUESTEDFORMAT )
 {
-  QGLContext * obj = (QGLContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLContext * obj = ( QGLContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QGLFormat * ptr = new QGLFormat( obj->requestedFormat() );
@@ -521,12 +521,12 @@ void reset()
 */
 HB_FUNC_STATIC( QGLCONTEXT_RESET )
 {
-  QGLContext * obj = (QGLContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLContext * obj = ( QGLContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->reset();
@@ -547,15 +547,15 @@ void setFormat( const QGLFormat & format )
 */
 HB_FUNC_STATIC( QGLCONTEXT_SETFORMAT )
 {
-  QGLContext * obj = (QGLContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLContext * obj = ( QGLContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGLFORMAT(1) )
+    if( ISNUMPAR( 1 ) && ISQGLFORMAT( 1 ) )
     {
 #endif
-      obj->setFormat( *PQGLFORMAT(1) );
+      obj->setFormat( *PQGLFORMAT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -573,12 +573,12 @@ virtual void swapBuffers() const
 */
 HB_FUNC_STATIC( QGLCONTEXT_SWAPBUFFERS )
 {
-  QGLContext * obj = (QGLContext *) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLContext * obj = ( QGLContext * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->swapBuffers();
@@ -600,10 +600,10 @@ static bool areSharing( const QGLContext * context1, const QGLContext * context2
 HB_FUNC_STATIC( QGLCONTEXT_ARESHARING )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(2) && ISQGLCONTEXT(1) && ISQGLCONTEXT(2) )
+  if( ISNUMPAR( 2 ) && ISQGLCONTEXT( 1 ) && ISQGLCONTEXT( 2 ) )
   {
 #endif
-    RBOOL( QGLContext::areSharing( PQGLCONTEXT(1), PQGLCONTEXT(2) ) );
+    RBOOL( QGLContext::areSharing( PQGLCONTEXT( 1 ), PQGLCONTEXT( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -619,7 +619,7 @@ static const QGLContext * currentContext()
 HB_FUNC_STATIC( QGLCONTEXT_CURRENTCONTEXT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     const QGLContext * ptr = QGLContext::currentContext();
@@ -639,10 +639,10 @@ static void setTextureCacheLimit( int size )
 HB_FUNC_STATIC( QGLCONTEXT_SETTEXTURECACHELIMIT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
   {
 #endif
-    QGLContext::setTextureCacheLimit( PINT(1) );
+    QGLContext::setTextureCacheLimit( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -660,7 +660,7 @@ static int textureCacheLimit()
 HB_FUNC_STATIC( QGLCONTEXT_TEXTURECACHELIMIT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     RINT( QGLContext::textureCacheLimit() );
@@ -677,18 +677,18 @@ HB_FUNC_STATIC( QGLCONTEXT_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -715,16 +715,16 @@ HB_FUNC_STATIC( QGLCONTEXT_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QGLCONTEXT_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QGLCONTEXT_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
