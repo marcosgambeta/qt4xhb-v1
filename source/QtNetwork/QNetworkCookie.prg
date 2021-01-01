@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -73,7 +73,7 @@ QNetworkCookie( const QByteArray & name = QByteArray(), const QByteArray & value
 */
 void QNetworkCookie_new1()
 {
-  QNetworkCookie * obj = new QNetworkCookie( ISNIL(1)? QByteArray() : *(QByteArray *) Qt4xHb::itemGetPtr(1), ISNIL(2)? QByteArray() : *(QByteArray *) Qt4xHb::itemGetPtr(2) );
+  QNetworkCookie * obj = new QNetworkCookie( ISNIL( 1 )? QByteArray() : *( QByteArray * ) Qt4xHb::itemGetPtr( 1 ), ISNIL( 2 )? QByteArray() : *( QByteArray * ) Qt4xHb::itemGetPtr( 2 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -82,17 +82,17 @@ QNetworkCookie( const QNetworkCookie & other )
 */
 void QNetworkCookie_new2()
 {
-  QNetworkCookie * obj = new QNetworkCookie( *PQNETWORKCOOKIE(1) );
+  QNetworkCookie * obj = new QNetworkCookie( *PQNETWORKCOOKIE( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QNETWORKCOOKIE_NEW )
 {
-  if( ISBETWEEN(0,2) && (ISQBYTEARRAY(1)||ISNIL(1)) && (ISQBYTEARRAY(2)||ISNIL(2)) )
+  if( ISBETWEEN( 0, 2 ) && ( ISQBYTEARRAY( 1 ) || ISNIL( 1 ) ) && ( ISQBYTEARRAY( 2 ) || ISNIL( 2 ) ) )
   {
     QNetworkCookie_new1();
   }
-  else if( ISNUMPAR(1) && ISQNETWORKCOOKIE(1) )
+  else if( ISNUMPAR( 1 ) && ISQNETWORKCOOKIE( 1 ) )
   {
     QNetworkCookie_new2();
   }
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_NEW )
 
 HB_FUNC_STATIC( QNETWORKCOOKIE_DELETE )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCookie * obj = ( QNetworkCookie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -124,12 +124,12 @@ QString domain() const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_DOMAIN )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCookie * obj = ( QNetworkCookie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->domain() );
@@ -148,12 +148,12 @@ QDateTime expirationDate() const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_EXPIRATIONDATE )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCookie * obj = ( QNetworkCookie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->expirationDate() );
@@ -173,12 +173,12 @@ bool isHttpOnly() const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_ISHTTPONLY )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCookie * obj = ( QNetworkCookie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isHttpOnly() );
@@ -197,12 +197,12 @@ bool isSecure() const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_ISSECURE )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCookie * obj = ( QNetworkCookie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isSecure() );
@@ -221,12 +221,12 @@ bool isSessionCookie() const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_ISSESSIONCOOKIE )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCookie * obj = ( QNetworkCookie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isSessionCookie() );
@@ -245,12 +245,12 @@ QByteArray name() const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_NAME )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCookie * obj = ( QNetworkCookie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->name() );
@@ -270,12 +270,12 @@ QString path() const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_PATH )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCookie * obj = ( QNetworkCookie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->path() );
@@ -294,15 +294,15 @@ void setDomain( const QString & domain )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_SETDOMAIN )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCookie * obj = ( QNetworkCookie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setDomain( PQSTRING(1) );
+      obj->setDomain( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -320,15 +320,15 @@ void setExpirationDate( const QDateTime & date )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_SETEXPIRATIONDATE )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCookie * obj = ( QNetworkCookie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQDATETIME(1) )
+    if( ISNUMPAR( 1 ) && ISQDATETIME( 1 ) )
     {
 #endif
-      obj->setExpirationDate( *PQDATETIME(1) );
+      obj->setExpirationDate( *PQDATETIME( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,15 +346,15 @@ void setHttpOnly( bool enable )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_SETHTTPONLY )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCookie * obj = ( QNetworkCookie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setHttpOnly( PBOOL(1) );
+      obj->setHttpOnly( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -372,15 +372,15 @@ void setName( const QByteArray & cookieName )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_SETNAME )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCookie * obj = ( QNetworkCookie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
     {
 #endif
-      obj->setName( *PQBYTEARRAY(1) );
+      obj->setName( *PQBYTEARRAY( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -398,15 +398,15 @@ void setPath( const QString & path )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_SETPATH )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCookie * obj = ( QNetworkCookie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setPath( PQSTRING(1) );
+      obj->setPath( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -424,15 +424,15 @@ void setSecure( bool enable )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_SETSECURE )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCookie * obj = ( QNetworkCookie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISLOG(1) )
+    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
     {
 #endif
-      obj->setSecure( PBOOL(1) );
+      obj->setSecure( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -450,15 +450,15 @@ void setValue( const QByteArray & value )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_SETVALUE )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCookie * obj = ( QNetworkCookie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
     {
 #endif
-      obj->setValue( *PQBYTEARRAY(1) );
+      obj->setValue( *PQBYTEARRAY( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -476,15 +476,15 @@ QByteArray toRawForm( QNetworkCookie::RawForm form = QNetworkCookie::Full ) cons
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_TORAWFORM )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCookie * obj = ( QNetworkCookie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->toRawForm( ISNIL(1)? (QNetworkCookie::RawForm) QNetworkCookie::Full : (QNetworkCookie::RawForm) hb_parni(1) ) );
+      QByteArray * ptr = new QByteArray( obj->toRawForm( ISNIL( 1 )? ( QNetworkCookie::RawForm ) QNetworkCookie::Full : ( QNetworkCookie::RawForm ) hb_parni( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -501,12 +501,12 @@ QByteArray value() const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_VALUE )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCookie * obj = ( QNetworkCookie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->value() );
@@ -526,17 +526,17 @@ QList<QNetworkCookie> parseCookies( const QByteArray & cookieString )
 */
 HB_FUNC_STATIC( QNETWORKCOOKIE_PARSECOOKIES )
 {
-  QNetworkCookie * obj = (QNetworkCookie *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCookie * obj = ( QNetworkCookie * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
     {
 #endif
-      QList<QNetworkCookie> list = obj->parseCookies( *PQBYTEARRAY(1) );
+      QList<QNetworkCookie> list = obj->parseCookies( *PQBYTEARRAY( 1 ) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKCOOKIE" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_PARSECOOKIES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QNetworkCookie *) new QNetworkCookie( list[i] ) );
+          hb_itemPutPtr( pItem, ( QNetworkCookie * ) new QNetworkCookie( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -577,18 +577,18 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -615,16 +615,16 @@ HB_FUNC_STATIC( QNETWORKCOOKIE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QNETWORKCOOKIE_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QNETWORKCOOKIE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

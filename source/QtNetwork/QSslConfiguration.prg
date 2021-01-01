@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -87,17 +87,17 @@ QSslConfiguration( const QSslConfiguration & other )
 */
 void QSslConfiguration_new2()
 {
-  QSslConfiguration * obj = new QSslConfiguration( *PQSSLCONFIGURATION(1) );
+  QSslConfiguration * obj = new QSslConfiguration( *PQSSLCONFIGURATION( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QSSLCONFIGURATION_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QSslConfiguration_new1();
   }
-  if( ISNUMPAR(1) && ISQSSLCONFIGURATION(1) )
+  if( ISNUMPAR( 1 ) && ISQSSLCONFIGURATION( 1 ) )
   {
     QSslConfiguration_new2();
   }
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_NEW )
 
 HB_FUNC_STATIC( QSSLCONFIGURATION_DELETE )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = ( QSslConfiguration * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -129,17 +129,17 @@ QList<QSslCertificate> caCertificates() const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_CACERTIFICATES )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = ( QSslConfiguration * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QSslCertificate> list = obj->caCertificates();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_CACERTIFICATES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QSslCertificate *) new QSslCertificate( list[i] ) );
+          hb_itemPutPtr( pItem, ( QSslCertificate * ) new QSslCertificate( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -181,17 +181,17 @@ QList<QSslCipher> ciphers() const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_CIPHERS )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = ( QSslConfiguration * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QSslCipher> list = obj->ciphers();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCIPHER" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_CIPHERS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QSslCipher *) new QSslCipher( list[i] ) );
+          hb_itemPutPtr( pItem, ( QSslCipher * ) new QSslCipher( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -233,12 +233,12 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_ISNULL )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = ( QSslConfiguration * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isNull() );
@@ -257,12 +257,12 @@ QSslCertificate localCertificate() const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_LOCALCERTIFICATE )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = ( QSslConfiguration * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSslCertificate * ptr = new QSslCertificate( obj->localCertificate() );
@@ -282,12 +282,12 @@ QSslCertificate peerCertificate() const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_PEERCERTIFICATE )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = ( QSslConfiguration * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSslCertificate * ptr = new QSslCertificate( obj->peerCertificate() );
@@ -307,17 +307,17 @@ QList<QSslCertificate> peerCertificateChain() const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_PEERCERTIFICATECHAIN )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = ( QSslConfiguration * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QSslCertificate> list = obj->peerCertificateChain();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_PEERCERTIFICATECHAIN )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QSslCertificate *) new QSslCertificate( list[i] ) );
+          hb_itemPutPtr( pItem, ( QSslCertificate * ) new QSslCertificate( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -359,12 +359,12 @@ int peerVerifyDepth() const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_PEERVERIFYDEPTH )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = ( QSslConfiguration * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->peerVerifyDepth() );
@@ -383,12 +383,12 @@ QSslSocket::PeerVerifyMode peerVerifyMode() const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_PEERVERIFYMODE )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = ( QSslConfiguration * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->peerVerifyMode() );
@@ -407,12 +407,12 @@ QSslKey privateKey() const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_PRIVATEKEY )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = ( QSslConfiguration * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSslKey * ptr = new QSslKey( obj->privateKey() );
@@ -432,12 +432,12 @@ QSsl::SslProtocol protocol() const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_PROTOCOL )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = ( QSslConfiguration * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->protocol() );
@@ -456,12 +456,12 @@ QSslCipher sessionCipher() const
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SESSIONCIPHER )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = ( QSslConfiguration * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSslCipher * ptr = new QSslCipher( obj->sessionCipher() );
@@ -481,21 +481,20 @@ void setCaCertificates( const QList<QSslCertificate> & certificates )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETCACERTIFICATES )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = ( QSslConfiguration * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISARRAY( 1 ) )
     {
 #endif
       QList<QSslCertificate> par1;
-      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
-      int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
+      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      int nLen1 = hb_arrayLen( aList1 );
+      for( int i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << *(QSslCertificate *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+        par1 << *( QSslCertificate * ) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
       obj->setCaCertificates( par1 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -515,21 +514,20 @@ void setCiphers( const QList<QSslCipher> & ciphers )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETCIPHERS )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = ( QSslConfiguration * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISARRAY( 1 ) )
     {
 #endif
       QList<QSslCipher> par1;
-      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-      int i1;
-      int nLen1 = hb_arrayLen(aList1);
-      for (i1=0;i1<nLen1;i1++)
+      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      int nLen1 = hb_arrayLen( aList1 );
+      for( int i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << *(QSslCipher *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+        par1 << *( QSslCipher * ) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
       }
       obj->setCiphers( par1 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -549,15 +547,15 @@ void setLocalCertificate( const QSslCertificate & certificate )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETLOCALCERTIFICATE )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = ( QSslConfiguration * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSSLCERTIFICATE(1) )
+    if( ISNUMPAR( 1 ) && ISQSSLCERTIFICATE( 1 ) )
     {
 #endif
-      obj->setLocalCertificate( *PQSSLCERTIFICATE(1) );
+      obj->setLocalCertificate( *PQSSLCERTIFICATE( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -575,15 +573,15 @@ void setPeerVerifyDepth( int depth )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETPEERVERIFYDEPTH )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = ( QSslConfiguration * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setPeerVerifyDepth( PINT(1) );
+      obj->setPeerVerifyDepth( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -601,15 +599,15 @@ void setPeerVerifyMode( QSslSocket::PeerVerifyMode mode )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETPEERVERIFYMODE )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = ( QSslConfiguration * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setPeerVerifyMode( (QSslSocket::PeerVerifyMode) hb_parni(1) );
+      obj->setPeerVerifyMode( ( QSslSocket::PeerVerifyMode ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -627,15 +625,15 @@ void setPrivateKey( const QSslKey & key )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETPRIVATEKEY )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = ( QSslConfiguration * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSSLKEY(1) )
+    if( ISNUMPAR( 1 ) && ISQSSLKEY( 1 ) )
     {
 #endif
-      obj->setPrivateKey( *PQSSLKEY(1) );
+      obj->setPrivateKey( *PQSSLKEY( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -653,15 +651,15 @@ void setProtocol( QSsl::SslProtocol protocol )
 */
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETPROTOCOL )
 {
-  QSslConfiguration * obj = (QSslConfiguration *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslConfiguration * obj = ( QSslConfiguration * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setProtocol( (QSsl::SslProtocol) hb_parni(1) );
+      obj->setProtocol( ( QSsl::SslProtocol ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -680,7 +678,7 @@ static QSslConfiguration defaultConfiguration()
 HB_FUNC_STATIC( QSSLCONFIGURATION_DEFAULTCONFIGURATION )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
 #endif
     QSslConfiguration * ptr = new QSslConfiguration( QSslConfiguration::defaultConfiguration() );
@@ -700,10 +698,10 @@ static void setDefaultConfiguration( const QSslConfiguration & configuration )
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETDEFAULTCONFIGURATION )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQSSLCONFIGURATION(1) )
+  if( ISNUMPAR( 1 ) && ISQSSLCONFIGURATION( 1 ) )
   {
 #endif
-    QSslConfiguration::setDefaultConfiguration( *PQSSLCONFIGURATION(1) );
+    QSslConfiguration::setDefaultConfiguration( *PQSSLCONFIGURATION( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -719,18 +717,18 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -757,16 +755,16 @@ HB_FUNC_STATIC( QSSLCONFIGURATION_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QSSLCONFIGURATION_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QSSLCONFIGURATION_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

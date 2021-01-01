@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -70,9 +70,9 @@ QLocalSocket( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QLOCALSOCKET_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
-    QLocalSocket * obj = new QLocalSocket( OPQOBJECT(1,0) );
+    QLocalSocket * obj = new QLocalSocket( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_NEW )
 
 HB_FUNC_STATIC( QLOCALSOCKET_DELETE )
 {
-  QLocalSocket * obj = (QLocalSocket *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalSocket * obj = ( QLocalSocket * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -105,12 +105,12 @@ void abort()
 */
 HB_FUNC_STATIC( QLOCALSOCKET_ABORT )
 {
-  QLocalSocket * obj = (QLocalSocket *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalSocket * obj = ( QLocalSocket * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->abort();
@@ -131,15 +131,15 @@ void connectToServer( const QString & name, QIODevice::OpenMode openMode = QIODe
 */
 HB_FUNC_STATIC( QLOCALSOCKET_CONNECTTOSERVER )
 {
-  QLocalSocket * obj = (QLocalSocket *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalSocket * obj = ( QLocalSocket * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ISOPTNUM( 2 ) )
     {
 #endif
-      obj->connectToServer( PQSTRING(1), ISNIL(2)? (QIODevice::OpenMode) QIODevice::ReadWrite : (QIODevice::OpenMode) hb_parni(2) );
+      obj->connectToServer( PQSTRING( 1 ), ISNIL( 2 )? ( QIODevice::OpenMode ) QIODevice::ReadWrite : ( QIODevice::OpenMode ) hb_parni( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,12 +157,12 @@ void disconnectFromServer()
 */
 HB_FUNC_STATIC( QLOCALSOCKET_DISCONNECTFROMSERVER )
 {
-  QLocalSocket * obj = (QLocalSocket *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalSocket * obj = ( QLocalSocket * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->disconnectFromServer();
@@ -183,12 +183,12 @@ QLocalSocket::LocalSocketError error() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_ERROR )
 {
-  QLocalSocket * obj = (QLocalSocket *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalSocket * obj = ( QLocalSocket * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->error() );
@@ -207,12 +207,12 @@ bool flush()
 */
 HB_FUNC_STATIC( QLOCALSOCKET_FLUSH )
 {
-  QLocalSocket * obj = (QLocalSocket *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalSocket * obj = ( QLocalSocket * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->flush() );
@@ -231,12 +231,12 @@ QString fullServerName() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_FULLSERVERNAME )
 {
-  QLocalSocket * obj = (QLocalSocket *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalSocket * obj = ( QLocalSocket * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->fullServerName() );
@@ -255,12 +255,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_ISVALID )
 {
-  QLocalSocket * obj = (QLocalSocket *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalSocket * obj = ( QLocalSocket * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -279,12 +279,12 @@ qint64 readBufferSize() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_READBUFFERSIZE )
 {
-  QLocalSocket * obj = (QLocalSocket *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalSocket * obj = ( QLocalSocket * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQINT64( obj->readBufferSize() );
@@ -303,12 +303,12 @@ QString serverName() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_SERVERNAME )
 {
-  QLocalSocket * obj = (QLocalSocket *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalSocket * obj = ( QLocalSocket * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->serverName() );
@@ -327,15 +327,15 @@ void setReadBufferSize( qint64 size )
 */
 HB_FUNC_STATIC( QLOCALSOCKET_SETREADBUFFERSIZE )
 {
-  QLocalSocket * obj = (QLocalSocket *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalSocket * obj = ( QLocalSocket * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setReadBufferSize( PQINT64(1) );
+      obj->setReadBufferSize( PQINT64( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,12 +353,12 @@ QLocalSocket::LocalSocketState state() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_STATE )
 {
-  QLocalSocket * obj = (QLocalSocket *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalSocket * obj = ( QLocalSocket * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->state() );
@@ -377,15 +377,15 @@ bool waitForConnected( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QLOCALSOCKET_WAITFORCONNECTED )
 {
-  QLocalSocket * obj = (QLocalSocket *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalSocket * obj = ( QLocalSocket * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->waitForConnected( OPINT(1,30000) ) );
+      RBOOL( obj->waitForConnected( OPINT( 1, 30000 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -401,15 +401,15 @@ bool waitForDisconnected( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QLOCALSOCKET_WAITFORDISCONNECTED )
 {
-  QLocalSocket * obj = (QLocalSocket *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalSocket * obj = ( QLocalSocket * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->waitForDisconnected( OPINT(1,30000) ) );
+      RBOOL( obj->waitForDisconnected( OPINT( 1, 30000 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -425,12 +425,12 @@ virtual qint64 bytesAvailable() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_BYTESAVAILABLE )
 {
-  QLocalSocket * obj = (QLocalSocket *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalSocket * obj = ( QLocalSocket * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQINT64( obj->bytesAvailable() );
@@ -449,12 +449,12 @@ virtual qint64 bytesToWrite() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_BYTESTOWRITE )
 {
-  QLocalSocket * obj = (QLocalSocket *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalSocket * obj = ( QLocalSocket * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQINT64( obj->bytesToWrite() );
@@ -473,12 +473,12 @@ virtual bool canReadLine() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_CANREADLINE )
 {
-  QLocalSocket * obj = (QLocalSocket *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalSocket * obj = ( QLocalSocket * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->canReadLine() );
@@ -497,12 +497,12 @@ virtual void close()
 */
 HB_FUNC_STATIC( QLOCALSOCKET_CLOSE )
 {
-  QLocalSocket * obj = (QLocalSocket *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalSocket * obj = ( QLocalSocket * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->close();
@@ -523,12 +523,12 @@ virtual bool isSequential() const
 */
 HB_FUNC_STATIC( QLOCALSOCKET_ISSEQUENTIAL )
 {
-  QLocalSocket * obj = (QLocalSocket *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalSocket * obj = ( QLocalSocket * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isSequential() );
@@ -547,15 +547,15 @@ virtual bool waitForBytesWritten( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QLOCALSOCKET_WAITFORBYTESWRITTEN )
 {
-  QLocalSocket * obj = (QLocalSocket *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalSocket * obj = ( QLocalSocket * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->waitForBytesWritten( OPINT(1,30000) ) );
+      RBOOL( obj->waitForBytesWritten( OPINT( 1, 30000 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -571,15 +571,15 @@ virtual bool waitForReadyRead( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QLOCALSOCKET_WAITFORREADYREAD )
 {
-  QLocalSocket * obj = (QLocalSocket *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalSocket * obj = ( QLocalSocket * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTNUM(1) )
+    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
     {
 #endif
-      RBOOL( obj->waitForReadyRead( OPINT(1,30000) ) );
+      RBOOL( obj->waitForReadyRead( OPINT( 1, 30000 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

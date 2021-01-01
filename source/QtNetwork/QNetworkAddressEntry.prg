@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -70,17 +70,17 @@ QNetworkAddressEntry( const QNetworkAddressEntry & other )
 */
 void QNetworkAddressEntry_new2()
 {
-  QNetworkAddressEntry * obj = new QNetworkAddressEntry( *PQNETWORKADDRESSENTRY(1) );
+  QNetworkAddressEntry * obj = new QNetworkAddressEntry( *PQNETWORKADDRESSENTRY( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QNetworkAddressEntry_new1();
   }
-  else if( ISNUMPAR(1) && ISQNETWORKADDRESSENTRY(1) )
+  else if( ISNUMPAR( 1 ) && ISQNETWORKADDRESSENTRY( 1 ) )
   {
     QNetworkAddressEntry_new2();
   }
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEW )
 
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_DELETE )
 {
-  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkAddressEntry * obj = ( QNetworkAddressEntry * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -112,12 +112,12 @@ QHostAddress broadcast() const
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_BROADCAST )
 {
-  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkAddressEntry * obj = ( QNetworkAddressEntry * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QHostAddress * ptr = new QHostAddress( obj->broadcast() );
@@ -137,12 +137,12 @@ QHostAddress ip() const
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_IP )
 {
-  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkAddressEntry * obj = ( QNetworkAddressEntry * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QHostAddress * ptr = new QHostAddress( obj->ip() );
@@ -162,12 +162,12 @@ QHostAddress netmask() const
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NETMASK )
 {
-  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkAddressEntry * obj = ( QNetworkAddressEntry * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QHostAddress * ptr = new QHostAddress( obj->netmask() );
@@ -187,12 +187,12 @@ int prefixLength() const
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_PREFIXLENGTH )
 {
-  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkAddressEntry * obj = ( QNetworkAddressEntry * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->prefixLength() );
@@ -211,15 +211,15 @@ void setBroadcast( const QHostAddress & newBroadcast )
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETBROADCAST )
 {
-  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkAddressEntry * obj = ( QNetworkAddressEntry * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQHOSTADDRESS(1) )
+    if( ISNUMPAR( 1 ) && ISQHOSTADDRESS( 1 ) )
     {
 #endif
-      obj->setBroadcast( *PQHOSTADDRESS(1) );
+      obj->setBroadcast( *PQHOSTADDRESS( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,15 +237,15 @@ void setIp( const QHostAddress & newIp )
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETIP )
 {
-  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkAddressEntry * obj = ( QNetworkAddressEntry * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQHOSTADDRESS(1) )
+    if( ISNUMPAR( 1 ) && ISQHOSTADDRESS( 1 ) )
     {
 #endif
-      obj->setIp( *PQHOSTADDRESS(1) );
+      obj->setIp( *PQHOSTADDRESS( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,15 +263,15 @@ void setNetmask( const QHostAddress & newNetmask )
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETNETMASK )
 {
-  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkAddressEntry * obj = ( QNetworkAddressEntry * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQHOSTADDRESS(1) )
+    if( ISNUMPAR( 1 ) && ISQHOSTADDRESS( 1 ) )
     {
 #endif
-      obj->setNetmask( *PQHOSTADDRESS(1) );
+      obj->setNetmask( *PQHOSTADDRESS( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -289,15 +289,15 @@ void setPrefixLength( int length )
 */
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETPREFIXLENGTH )
 {
-  QNetworkAddressEntry * obj = (QNetworkAddressEntry *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkAddressEntry * obj = ( QNetworkAddressEntry * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setPrefixLength( PINT(1) );
+      obj->setPrefixLength( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -314,18 +314,18 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -352,16 +352,16 @@ HB_FUNC_STATIC( QNETWORKADDRESSENTRY_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QNETWORKADDRESSENTRY_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -70,17 +70,17 @@ QAuthenticator( const QAuthenticator & other )
 */
 void QAuthenticator_new2()
 {
-  QAuthenticator * obj = new QAuthenticator( *PQAUTHENTICATOR(1) );
+  QAuthenticator * obj = new QAuthenticator( *PQAUTHENTICATOR( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QAUTHENTICATOR_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QAuthenticator_new1();
   }
-  else if( ISNUMPAR(1) && ISQAUTHENTICATOR(1) )
+  else if( ISNUMPAR( 1 ) && ISQAUTHENTICATOR( 1 ) )
   {
     QAuthenticator_new2();
   }
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_NEW )
 
 HB_FUNC_STATIC( QAUTHENTICATOR_DELETE )
 {
-  QAuthenticator * obj = (QAuthenticator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAuthenticator * obj = ( QAuthenticator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -112,12 +112,12 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_ISNULL )
 {
-  QAuthenticator * obj = (QAuthenticator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAuthenticator * obj = ( QAuthenticator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isNull() );
@@ -136,15 +136,15 @@ QVariant option( const QString & opt ) const
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_OPTION )
 {
-  QAuthenticator * obj = (QAuthenticator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAuthenticator * obj = ( QAuthenticator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->option( PQSTRING(1) ) );
+      QVariant * ptr = new QVariant( obj->option( PQSTRING( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -161,12 +161,12 @@ QString password() const
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_PASSWORD )
 {
-  QAuthenticator * obj = (QAuthenticator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAuthenticator * obj = ( QAuthenticator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->password() );
@@ -185,12 +185,12 @@ QString realm() const
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_REALM )
 {
-  QAuthenticator * obj = (QAuthenticator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAuthenticator * obj = ( QAuthenticator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->realm() );
@@ -209,15 +209,15 @@ void setOption( const QString & opt, const QVariant & value )
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_SETOPTION )
 {
-  QAuthenticator * obj = (QAuthenticator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAuthenticator * obj = ( QAuthenticator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISQVARIANT(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISQVARIANT( 2 ) )
     {
 #endif
-      obj->setOption( PQSTRING(1), *PQVARIANT(2) );
+      obj->setOption( PQSTRING( 1 ), *PQVARIANT( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -235,15 +235,15 @@ void setPassword( const QString & password )
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_SETPASSWORD )
 {
-  QAuthenticator * obj = (QAuthenticator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAuthenticator * obj = ( QAuthenticator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setPassword( PQSTRING(1) );
+      obj->setPassword( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,15 +261,15 @@ void setUser( const QString & user )
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_SETUSER )
 {
-  QAuthenticator * obj = (QAuthenticator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAuthenticator * obj = ( QAuthenticator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      obj->setUser( PQSTRING(1) );
+      obj->setUser( PQSTRING( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -287,12 +287,12 @@ QString user() const
 */
 HB_FUNC_STATIC( QAUTHENTICATOR_USER )
 {
-  QAuthenticator * obj = (QAuthenticator *) Qt4xHb::itemGetPtrStackSelfItem();
+  QAuthenticator * obj = ( QAuthenticator * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->user() );
@@ -310,18 +310,18 @@ HB_FUNC_STATIC( QAUTHENTICATOR_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -348,16 +348,16 @@ HB_FUNC_STATIC( QAUTHENTICATOR_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QAUTHENTICATOR_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QAUTHENTICATOR_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

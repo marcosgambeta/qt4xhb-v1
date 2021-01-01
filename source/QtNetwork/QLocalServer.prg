@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -63,9 +63,9 @@ QLocalServer( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QLOCALSERVER_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
-    QLocalServer * obj = new QLocalServer( OPQOBJECT(1,0) );
+    QLocalServer * obj = new QLocalServer( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QLOCALSERVER_NEW )
 
 HB_FUNC_STATIC( QLOCALSERVER_DELETE )
 {
-  QLocalServer * obj = (QLocalServer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalServer * obj = ( QLocalServer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -98,12 +98,12 @@ void close()
 */
 HB_FUNC_STATIC( QLOCALSERVER_CLOSE )
 {
-  QLocalServer * obj = (QLocalServer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalServer * obj = ( QLocalServer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->close();
@@ -124,12 +124,12 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_ERRORSTRING )
 {
-  QLocalServer * obj = (QLocalServer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalServer * obj = ( QLocalServer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->errorString() );
@@ -148,12 +148,12 @@ QString fullServerName() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_FULLSERVERNAME )
 {
-  QLocalServer * obj = (QLocalServer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalServer * obj = ( QLocalServer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->fullServerName() );
@@ -172,12 +172,12 @@ virtual bool hasPendingConnections() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_HASPENDINGCONNECTIONS )
 {
-  QLocalServer * obj = (QLocalServer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalServer * obj = ( QLocalServer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->hasPendingConnections() );
@@ -196,12 +196,12 @@ bool isListening() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_ISLISTENING )
 {
-  QLocalServer * obj = (QLocalServer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalServer * obj = ( QLocalServer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isListening() );
@@ -220,15 +220,15 @@ bool listen( const QString & name )
 */
 HB_FUNC_STATIC( QLOCALSERVER_LISTEN )
 {
-  QLocalServer * obj = (QLocalServer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalServer * obj = ( QLocalServer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      RBOOL( obj->listen( PQSTRING(1) ) );
+      RBOOL( obj->listen( PQSTRING( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,12 +244,12 @@ int maxPendingConnections() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_MAXPENDINGCONNECTIONS )
 {
-  QLocalServer * obj = (QLocalServer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalServer * obj = ( QLocalServer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->maxPendingConnections() );
@@ -268,12 +268,12 @@ virtual QLocalSocket * nextPendingConnection()
 */
 HB_FUNC_STATIC( QLOCALSERVER_NEXTPENDINGCONNECTION )
 {
-  QLocalServer * obj = (QLocalServer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalServer * obj = ( QLocalServer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QLocalSocket * ptr = obj->nextPendingConnection();
@@ -293,12 +293,12 @@ QAbstractSocket::SocketError serverError() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_SERVERERROR )
 {
-  QLocalServer * obj = (QLocalServer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalServer * obj = ( QLocalServer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->serverError() );
@@ -317,12 +317,12 @@ QString serverName() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_SERVERNAME )
 {
-  QLocalServer * obj = (QLocalServer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalServer * obj = ( QLocalServer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->serverName() );
@@ -341,15 +341,15 @@ void setMaxPendingConnections( int numConnections )
 */
 HB_FUNC_STATIC( QLOCALSERVER_SETMAXPENDINGCONNECTIONS )
 {
-  QLocalServer * obj = (QLocalServer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalServer * obj = ( QLocalServer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setMaxPendingConnections( PINT(1) );
+      obj->setMaxPendingConnections( PINT( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -367,16 +367,16 @@ bool waitForNewConnection( int msec = 0, bool * timedOut = 0 )
 */
 HB_FUNC_STATIC( QLOCALSERVER_WAITFORNEWCONNECTION )
 {
-  QLocalServer * obj = (QLocalServer *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalServer * obj = ( QLocalServer * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && ISOPTNUM(1) && ISOPTLOG(2) )
+    if( ISBETWEEN( 0, 2 ) && ISOPTNUM( 1 ) && ISOPTLOG( 2 ) )
     {
 #endif
       bool par2;
-      RBOOL( obj->waitForNewConnection( OPINT(1,0), &par2 ) );
+      RBOOL( obj->waitForNewConnection( OPINT( 1, 0 ), &par2 ) );
       hb_storl( par2, 2 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -394,10 +394,10 @@ static bool removeServer( const QString & name )
 HB_FUNC_STATIC( QLOCALSERVER_REMOVESERVER )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
 #endif
-    RBOOL( QLocalServer::removeServer( PQSTRING(1) ) );
+    RBOOL( QLocalServer::removeServer( PQSTRING( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

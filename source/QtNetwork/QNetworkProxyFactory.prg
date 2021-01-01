@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -54,7 +54,7 @@ RETURN
 
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_DELETE )
 {
-  QNetworkProxyFactory * obj = (QNetworkProxyFactory *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkProxyFactory * obj = ( QNetworkProxyFactory * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -74,17 +74,17 @@ virtual QList<QNetworkProxy> queryProxy( const QNetworkProxyQuery & query = QNet
 */
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_QUERYPROXY )
 {
-  QNetworkProxyFactory * obj = (QNetworkProxyFactory *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkProxyFactory * obj = ( QNetworkProxyFactory * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQNETWORKPROXYQUERY(1)||ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( ISQNETWORKPROXYQUERY( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
-      QList<QNetworkProxy> list = obj->queryProxy( ISNIL(1)? QNetworkProxyQuery() : *(QNetworkProxyQuery *) Qt4xHb::itemGetPtr(1) );
+      QList<QNetworkProxy> list = obj->queryProxy( ISNIL( 1 )? QNetworkProxyQuery() : *( QNetworkProxyQuery * ) Qt4xHb::itemGetPtr( 1 ) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKPROXY" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_QUERYPROXY )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QNetworkProxy *) new QNetworkProxy( list[i] ) );
+          hb_itemPutPtr( pItem, ( QNetworkProxy * ) new QNetworkProxy( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -127,12 +127,12 @@ static QList<QNetworkProxy> proxyForQuery( const QNetworkProxyQuery & query )
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_PROXYFORQUERY )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQNETWORKPROXYQUERY(1) )
+  if( ISNUMPAR( 1 ) && ISQNETWORKPROXYQUERY( 1 ) )
   {
 #endif
-    QList<QNetworkProxy> list = QNetworkProxyFactory::proxyForQuery( *PQNETWORKPROXYQUERY(1) );
+    QList<QNetworkProxy> list = QNetworkProxyFactory::proxyForQuery( *PQNETWORKPROXYQUERY( 1 ) );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKPROXY" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew( 0 );
     if( pDynSym )
     {
       for( int i = 0; i < list.count(); i++ )
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_PROXYFORQUERY )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QNetworkProxy *) new QNetworkProxy( list[i] ) );
+        hb_itemPutPtr( pItem, ( QNetworkProxy * ) new QNetworkProxy( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -174,10 +174,10 @@ static void setApplicationProxyFactory( QNetworkProxyFactory * factory )
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SETAPPLICATIONPROXYFACTORY )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQNETWORKPROXYFACTORY(1) )
+  if( ISNUMPAR( 1 ) && ISQNETWORKPROXYFACTORY( 1 ) )
   {
 #endif
-    QNetworkProxyFactory::setApplicationProxyFactory( PQNETWORKPROXYFACTORY(1) );
+    QNetworkProxyFactory::setApplicationProxyFactory( PQNETWORKPROXYFACTORY( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -195,10 +195,10 @@ static void setUseSystemConfiguration( bool enable )
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SETUSESYSTEMCONFIGURATION )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISLOG(1) )
+  if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
   {
 #endif
-    QNetworkProxyFactory::setUseSystemConfiguration( PBOOL(1) );
+    QNetworkProxyFactory::setUseSystemConfiguration( PBOOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -216,12 +216,12 @@ static QList<QNetworkProxy> systemProxyForQuery( const QNetworkProxyQuery & quer
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SYSTEMPROXYFORQUERY )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0,1) && (ISQNETWORKPROXYQUERY(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQNETWORKPROXYQUERY( 1 ) || ISNIL( 1 ) ) )
   {
 #endif
-    QList<QNetworkProxy> list = QNetworkProxyFactory::systemProxyForQuery( ISNIL(1)? QNetworkProxyQuery() : *(QNetworkProxyQuery *) Qt4xHb::itemGetPtr(1) );
+    QList<QNetworkProxy> list = QNetworkProxyFactory::systemProxyForQuery( ISNIL( 1 )? QNetworkProxyQuery() : *( QNetworkProxyQuery * ) Qt4xHb::itemGetPtr( 1 ) );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKPROXY" );
-    PHB_ITEM pArray = hb_itemArrayNew(0);
+    PHB_ITEM pArray = hb_itemArrayNew( 0 );
     if( pDynSym )
     {
       for( int i = 0; i < list.count(); i++ )
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SYSTEMPROXYFORQUERY )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, (QNetworkProxy *) new QNetworkProxy( list[i] ) );
+        hb_itemPutPtr( pItem, ( QNetworkProxy * ) new QNetworkProxy( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -261,18 +261,18 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -299,16 +299,16 @@ HB_FUNC_STATIC( QNETWORKPROXYFACTORY_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QNETWORKPROXYFACTORY_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

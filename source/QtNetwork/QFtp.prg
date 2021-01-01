@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -82,9 +82,9 @@ QFtp( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QFTP_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
-    QFtp * obj = new QFtp( OPQOBJECT(1,0) );
+    QFtp * obj = new QFtp( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QFTP_NEW )
 
 HB_FUNC_STATIC( QFTP_DELETE )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -117,12 +117,12 @@ qint64 bytesAvailable() const
 */
 HB_FUNC_STATIC( QFTP_BYTESAVAILABLE )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQINT64( obj->bytesAvailable() );
@@ -141,15 +141,15 @@ int cd( const QString & dir )
 */
 HB_FUNC_STATIC( QFTP_CD )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      RINT( obj->cd( PQSTRING(1) ) );
+      RINT( obj->cd( PQSTRING( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,12 +165,12 @@ void clearPendingCommands()
 */
 HB_FUNC_STATIC( QFTP_CLEARPENDINGCOMMANDS )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->clearPendingCommands();
@@ -191,12 +191,12 @@ int close()
 */
 HB_FUNC_STATIC( QFTP_CLOSE )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->close() );
@@ -215,15 +215,15 @@ int connectToHost( const QString & host, quint16 port = 21 )
 */
 HB_FUNC_STATIC( QFTP_CONNECTTOHOST )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,2) && ISCHAR(1) && ISOPTNUM(2) )
+    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ISOPTNUM( 2 ) )
     {
 #endif
-      RINT( obj->connectToHost( PQSTRING(1), OPQUINT16(2,21) ) );
+      RINT( obj->connectToHost( PQSTRING( 1 ), OPQUINT16( 2, 21 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,12 +239,12 @@ QFtp::Command currentCommand() const
 */
 HB_FUNC_STATIC( QFTP_CURRENTCOMMAND )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->currentCommand() );
@@ -263,12 +263,12 @@ QIODevice * currentDevice() const
 */
 HB_FUNC_STATIC( QFTP_CURRENTDEVICE )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QIODevice * ptr = obj->currentDevice();
@@ -288,12 +288,12 @@ int currentId() const
 */
 HB_FUNC_STATIC( QFTP_CURRENTID )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->currentId() );
@@ -312,12 +312,12 @@ QFtp::Error error() const
 */
 HB_FUNC_STATIC( QFTP_ERROR )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->error() );
@@ -336,12 +336,12 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QFTP_ERRORSTRING )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->errorString() );
@@ -360,15 +360,15 @@ int get( const QString & file, QIODevice * dev = 0, QFtp::TransferType type = QF
 */
 HB_FUNC_STATIC( QFTP_GET )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1,3) && ISCHAR(1) && (ISQIODEVICE(2)||ISNIL(2)) && ISOPTNUM(3) )
+    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISQIODEVICE( 2 ) || ISNIL( 2 ) ) && ISOPTNUM( 3 ) )
     {
 #endif
-      RINT( obj->get( PQSTRING(1), OPQIODEVICE(2,0), ISNIL(3)? (QFtp::TransferType) QFtp::Binary : (QFtp::TransferType) hb_parni(3) ) );
+      RINT( obj->get( PQSTRING( 1 ), OPQIODEVICE( 2, 0 ), ISNIL( 3 )? ( QFtp::TransferType ) QFtp::Binary : ( QFtp::TransferType ) hb_parni( 3 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -384,12 +384,12 @@ bool hasPendingCommands() const
 */
 HB_FUNC_STATIC( QFTP_HASPENDINGCOMMANDS )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->hasPendingCommands() );
@@ -408,15 +408,15 @@ int list( const QString & dir = QString() )
 */
 HB_FUNC_STATIC( QFTP_LIST )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && ISOPTCHAR(1) )
+    if( ISBETWEEN( 0, 1 ) && ISOPTCHAR( 1 ) )
     {
 #endif
-      RINT( obj->list( OPQSTRING(1,QString()) ) );
+      RINT( obj->list( OPQSTRING( 1, QString() ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -432,15 +432,15 @@ int login( const QString & user = QString(), const QString & password = QString(
 */
 HB_FUNC_STATIC( QFTP_LOGIN )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,2) && ISOPTCHAR(1) && ISOPTCHAR(2) )
+    if( ISBETWEEN( 0, 2 ) && ISOPTCHAR( 1 ) && ISOPTCHAR( 2 ) )
     {
 #endif
-      RINT( obj->login( OPQSTRING(1,QString()), OPQSTRING(2,QString()) ) );
+      RINT( obj->login( OPQSTRING( 1, QString() ), OPQSTRING( 2, QString() ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -456,15 +456,15 @@ int mkdir( const QString & dir )
 */
 HB_FUNC_STATIC( QFTP_MKDIR )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      RINT( obj->mkdir( PQSTRING(1) ) );
+      RINT( obj->mkdir( PQSTRING( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -480,11 +480,11 @@ int put( QIODevice * dev, const QString & file, QFtp::TransferType type = QFtp::
 */
 void QFtp_put1()
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RINT( obj->put( PQIODEVICE(1), PQSTRING(2), ISNIL(3)? (QFtp::TransferType) QFtp::Binary : (QFtp::TransferType) hb_parni(3) ) );
+    RINT( obj->put( PQIODEVICE( 1 ), PQSTRING( 2 ), ISNIL( 3 )? ( QFtp::TransferType ) QFtp::Binary : ( QFtp::TransferType ) hb_parni( 3 ) ) );
   }
 }
 
@@ -493,21 +493,21 @@ int put( const QByteArray & data, const QString & file, QFtp::TransferType type 
 */
 void QFtp_put2()
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
-    RINT( obj->put( *PQBYTEARRAY(1), PQSTRING(2), ISNIL(3)? (QFtp::TransferType) QFtp::Binary : (QFtp::TransferType) hb_parni(3) ) );
+    RINT( obj->put( *PQBYTEARRAY( 1 ), PQSTRING( 2 ), ISNIL( 3 )? ( QFtp::TransferType ) QFtp::Binary : ( QFtp::TransferType ) hb_parni( 3 ) ) );
   }
 }
 
 HB_FUNC_STATIC( QFTP_PUT )
 {
-  if( ISBETWEEN(2,3) && ISQIODEVICE(1) && ISCHAR(2) && (ISNUM(3)||ISNIL(3)) )
+  if( ISBETWEEN( 2, 3 ) && ISQIODEVICE( 1 ) && ISCHAR( 2 ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
   {
     QFtp_put1();
   }
-  else if( ISBETWEEN(2,3) && ISQBYTEARRAY(1) && ISCHAR(2) && (ISNUM(3)||ISNIL(3)) )
+  else if( ISBETWEEN( 2, 3 ) && ISQBYTEARRAY( 1 ) && ISCHAR( 2 ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
   {
     QFtp_put2();
   }
@@ -522,15 +522,15 @@ int rawCommand( const QString & command )
 */
 HB_FUNC_STATIC( QFTP_RAWCOMMAND )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      RINT( obj->rawCommand( PQSTRING(1) ) );
+      RINT( obj->rawCommand( PQSTRING( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -546,15 +546,15 @@ qint64 read( char * data, qint64 maxlen )
 */
 HB_FUNC_STATIC( QFTP_READ )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      RQINT64( obj->read( (char *) hb_parc(1), PQINT64(2) ) );
+      RQINT64( obj->read( ( char * ) hb_parc( 1 ), PQINT64( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -570,12 +570,12 @@ QByteArray readAll()
 */
 HB_FUNC_STATIC( QFTP_READALL )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->readAll() );
@@ -595,15 +595,15 @@ int remove( const QString & file )
 */
 HB_FUNC_STATIC( QFTP_REMOVE )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      RINT( obj->remove( PQSTRING(1) ) );
+      RINT( obj->remove( PQSTRING( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -619,15 +619,15 @@ int rename( const QString & oldname, const QString & newname )
 */
 HB_FUNC_STATIC( QFTP_RENAME )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISCHAR(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISCHAR( 2 ) )
     {
 #endif
-      RINT( obj->rename( PQSTRING(1), PQSTRING(2) ) );
+      RINT( obj->rename( PQSTRING( 1 ), PQSTRING( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -643,15 +643,15 @@ int rmdir( const QString & dir )
 */
 HB_FUNC_STATIC( QFTP_RMDIR )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISCHAR(1) )
+    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
     {
 #endif
-      RINT( obj->rmdir( PQSTRING(1) ) );
+      RINT( obj->rmdir( PQSTRING( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -667,15 +667,15 @@ int setProxy( const QString & host, quint16 port )
 */
 HB_FUNC_STATIC( QFTP_SETPROXY )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISCHAR(1) && ISNUM(2) )
+    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
     {
 #endif
-      RINT( obj->setProxy( PQSTRING(1), PQUINT16(2) ) );
+      RINT( obj->setProxy( PQSTRING( 1 ), PQUINT16( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -691,15 +691,15 @@ int setTransferMode( QFtp::TransferMode mode )
 */
 HB_FUNC_STATIC( QFTP_SETTRANSFERMODE )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      RINT( obj->setTransferMode( (QFtp::TransferMode) hb_parni(1) ) );
+      RINT( obj->setTransferMode( ( QFtp::TransferMode ) hb_parni( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -715,12 +715,12 @@ QFtp::State state() const
 */
 HB_FUNC_STATIC( QFTP_STATE )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->state() );
@@ -739,12 +739,12 @@ void abort()
 */
 HB_FUNC_STATIC( QFTP_ABORT )
 {
-  QFtp * obj = (QFtp *) Qt4xHb::itemGetPtrStackSelfItem();
+  QFtp * obj = ( QFtp * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->abort();

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QLocalSocketSlots.h"
 
-QLocalSocketSlots::QLocalSocketSlots( QObject *parent ) : QObject( parent )
+QLocalSocketSlots::QLocalSocketSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QLocalSocketSlots::~QLocalSocketSlots()
 
 void QLocalSocketSlots::connected()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "connected()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QLOCALSOCKET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QLOCALSOCKET" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,13 +38,13 @@ void QLocalSocketSlots::connected()
 
 void QLocalSocketSlots::disconnected()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "disconnected()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QLOCALSOCKET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QLOCALSOCKET" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -54,13 +54,13 @@ void QLocalSocketSlots::disconnected()
 
 void QLocalSocketSlots::error( QLocalSocket::LocalSocketError socketError )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "error(QLocalSocket::LocalSocketError)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QLOCALSOCKET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QLOCALSOCKET" );
     PHB_ITEM psocketError = hb_itemPutNI( NULL, (int) socketError );
 
     hb_vmEvalBlockV( cb, 2, psender, psocketError );
@@ -72,13 +72,13 @@ void QLocalSocketSlots::error( QLocalSocket::LocalSocketError socketError )
 
 void QLocalSocketSlots::stateChanged( QLocalSocket::LocalSocketState socketState )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "stateChanged(QLocalSocket::LocalSocketState)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QLOCALSOCKET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QLOCALSOCKET" );
     PHB_ITEM psocketState = hb_itemPutNI( NULL, (int) socketState );
 
     hb_vmEvalBlockV( cb, 2, psender, psocketState );
@@ -90,7 +90,7 @@ void QLocalSocketSlots::stateChanged( QLocalSocket::LocalSocketState socketState
 
 void QLocalSocketSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QLocalSocket * obj = (QLocalSocket *) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalSocket * obj = ( QLocalSocket * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

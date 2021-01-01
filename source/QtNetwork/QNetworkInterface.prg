@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -74,17 +74,17 @@ QNetworkInterface( const QNetworkInterface & other )
 */
 void QNetworkInterface_new2()
 {
-  QNetworkInterface * obj = new QNetworkInterface( *PQNETWORKINTERFACE(1) );
+  QNetworkInterface * obj = new QNetworkInterface( *PQNETWORKINTERFACE( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QNETWORKINTERFACE_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QNetworkInterface_new1();
   }
-  else if( ISNUMPAR(1) && ISQNETWORKINTERFACE(1) )
+  else if( ISNUMPAR( 1 ) && ISQNETWORKINTERFACE( 1 ) )
   {
     QNetworkInterface_new2();
   }
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NEW )
 
 HB_FUNC_STATIC( QNETWORKINTERFACE_DELETE )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = ( QNetworkInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -116,17 +116,17 @@ QList<QNetworkAddressEntry> addressEntries() const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = ( QNetworkInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QNetworkAddressEntry> list = obj->addressEntries();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKADDRESSENTRY" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QNetworkAddressEntry *) new QNetworkAddressEntry( list[i] ) );
+          hb_itemPutPtr( pItem, ( QNetworkAddressEntry * ) new QNetworkAddressEntry( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -168,12 +168,12 @@ QNetworkInterface::InterfaceFlags flags() const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_FLAGS )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = ( QNetworkInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->flags() );
@@ -192,12 +192,12 @@ QString hardwareAddress() const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_HARDWAREADDRESS )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = ( QNetworkInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->hardwareAddress() );
@@ -216,12 +216,12 @@ QString humanReadableName() const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_HUMANREADABLENAME )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = ( QNetworkInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->humanReadableName() );
@@ -240,12 +240,12 @@ int index() const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_INDEX )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = ( QNetworkInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->index() );
@@ -264,12 +264,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_ISVALID )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = ( QNetworkInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -288,12 +288,12 @@ QString name() const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_NAME )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = ( QNetworkInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQSTRING( obj->name() );
@@ -312,17 +312,17 @@ QList<QHostAddress> allAddresses()
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = ( QNetworkInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QHostAddress> list = obj->allAddresses();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QHOSTADDRESS" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QHostAddress *) new QHostAddress( list[i] ) );
+          hb_itemPutPtr( pItem, ( QHostAddress * ) new QHostAddress( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -364,17 +364,17 @@ QList<QNetworkInterface> allInterfaces()
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
 {
-  QNetworkInterface * obj = (QNetworkInterface *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = ( QNetworkInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QNetworkInterface> list = obj->allInterfaces();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKINTERFACE" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QNetworkInterface *) new QNetworkInterface( list[i] ) );
+          hb_itemPutPtr( pItem, ( QNetworkInterface * ) new QNetworkInterface( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -417,10 +417,10 @@ static QNetworkInterface interfaceFromIndex( int index )
 HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMINDEX )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISNUM(1) )
+  if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
   {
 #endif
-    QNetworkInterface * ptr = new QNetworkInterface( QNetworkInterface::interfaceFromIndex( PINT(1) ) );
+    QNetworkInterface * ptr = new QNetworkInterface( QNetworkInterface::interfaceFromIndex( PINT( 1 ) ) );
     Qt4xHb::createReturnClass( ptr, "QNETWORKINTERFACE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
@@ -437,10 +437,10 @@ static QNetworkInterface interfaceFromName( const QString & name )
 HB_FUNC_STATIC( QNETWORKINTERFACE_INTERFACEFROMNAME )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISCHAR(1) )
+  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
   {
 #endif
-    QNetworkInterface * ptr = new QNetworkInterface( QNetworkInterface::interfaceFromName( PQSTRING(1) ) );
+    QNetworkInterface * ptr = new QNetworkInterface( QNetworkInterface::interfaceFromName( PQSTRING( 1 ) ) );
     Qt4xHb::createReturnClass( ptr, "QNETWORKINTERFACE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
@@ -455,18 +455,18 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -493,16 +493,16 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QNETWORKINTERFACE_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QNETWORKINTERFACE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }

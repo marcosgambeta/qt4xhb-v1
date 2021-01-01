@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -50,7 +50,7 @@ QHttpMultiPart( QObject * parent = 0 )
 */
 void QHttpMultiPart_new1()
 {
-  QHttpMultiPart * obj = new QHttpMultiPart( OPQOBJECT(1,0) );
+  QHttpMultiPart * obj = new QHttpMultiPart( OPQOBJECT( 1, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -59,17 +59,17 @@ QHttpMultiPart( QHttpMultiPart::ContentType contentType, QObject * parent = 0 )
 */
 void QHttpMultiPart_new2()
 {
-  QHttpMultiPart * obj = new QHttpMultiPart( (QHttpMultiPart::ContentType) hb_parni(1), OPQOBJECT(2,0) );
+  QHttpMultiPart * obj = new QHttpMultiPart( ( QHttpMultiPart::ContentType ) hb_parni( 1 ), OPQOBJECT( 2, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QHTTPMULTIPART_NEW )
 {
-  if( ISBETWEEN(0,1) && (ISQOBJECT(1)||ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
     QHttpMultiPart_new1();
   }
-  else if( ISBETWEEN(1,2) && ISNUM(1) && (ISQOBJECT(2)||ISNIL(2)) )
+  else if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISQOBJECT( 2 ) || ISNIL( 2 ) ) )
   {
     QHttpMultiPart_new2();
   }
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_NEW )
 
 HB_FUNC_STATIC( QHTTPMULTIPART_DELETE )
 {
-  QHttpMultiPart * obj = (QHttpMultiPart *) Qt4xHb::itemGetPtrStackSelfItem();
+  QHttpMultiPart * obj = ( QHttpMultiPart * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -103,15 +103,15 @@ void append( const QHttpPart & httpPart )
 */
 HB_FUNC_STATIC( QHTTPMULTIPART_APPEND )
 {
-  QHttpMultiPart * obj = (QHttpMultiPart *) Qt4xHb::itemGetPtrStackSelfItem();
+  QHttpMultiPart * obj = ( QHttpMultiPart * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQHTTPPART(1) )
+    if( ISNUMPAR( 1 ) && ISQHTTPPART( 1 ) )
     {
 #endif
-      obj->append( *PQHTTPPART(1) );
+      obj->append( *PQHTTPPART( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,12 +129,12 @@ QByteArray boundary() const
 */
 HB_FUNC_STATIC( QHTTPMULTIPART_BOUNDARY )
 {
-  QHttpMultiPart * obj = (QHttpMultiPart *) Qt4xHb::itemGetPtrStackSelfItem();
+  QHttpMultiPart * obj = ( QHttpMultiPart * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->boundary() );
@@ -154,15 +154,15 @@ void setBoundary( const QByteArray & boundary )
 */
 HB_FUNC_STATIC( QHTTPMULTIPART_SETBOUNDARY )
 {
-  QHttpMultiPart * obj = (QHttpMultiPart *) Qt4xHb::itemGetPtrStackSelfItem();
+  QHttpMultiPart * obj = ( QHttpMultiPart * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
     {
 #endif
-      obj->setBoundary( *PQBYTEARRAY(1) );
+      obj->setBoundary( *PQBYTEARRAY( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,15 +180,15 @@ void setContentType( QHttpMultiPart::ContentType contentType )
 */
 HB_FUNC_STATIC( QHTTPMULTIPART_SETCONTENTTYPE )
 {
-  QHttpMultiPart * obj = (QHttpMultiPart *) Qt4xHb::itemGetPtrStackSelfItem();
+  QHttpMultiPart * obj = ( QHttpMultiPart * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setContentType( (QHttpMultiPart::ContentType) hb_parni(1) );
+      obj->setContentType( ( QHttpMultiPart::ContentType ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

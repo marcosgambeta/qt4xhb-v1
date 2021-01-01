@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -12,7 +12,7 @@
 
 #include "QSslSocketSlots.h"
 
-QSslSocketSlots::QSslSocketSlots( QObject *parent ) : QObject( parent )
+QSslSocketSlots::QSslSocketSlots( QObject * parent ) : QObject( parent )
 {
 }
 
@@ -22,13 +22,13 @@ QSslSocketSlots::~QSslSocketSlots()
 
 void QSslSocketSlots::encrypted()
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "encrypted()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QSSLSOCKET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSSLSOCKET" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,13 +38,13 @@ void QSslSocketSlots::encrypted()
 
 void QSslSocketSlots::encryptedBytesWritten( qint64 written )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "encryptedBytesWritten(qint64)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QSSLSOCKET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSSLSOCKET" );
     PHB_ITEM pwritten = hb_itemPutNLL( NULL, written );
 
     hb_vmEvalBlockV( cb, 2, psender, pwritten );
@@ -56,13 +56,13 @@ void QSslSocketSlots::encryptedBytesWritten( qint64 written )
 
 void QSslSocketSlots::modeChanged( QSslSocket::SslMode mode )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "modeChanged(QSslSocket::SslMode)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QSSLSOCKET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSSLSOCKET" );
     PHB_ITEM pmode = hb_itemPutNI( NULL, (int) mode );
 
     hb_vmEvalBlockV( cb, 2, psender, pmode );
@@ -74,14 +74,14 @@ void QSslSocketSlots::modeChanged( QSslSocket::SslMode mode )
 
 void QSslSocketSlots::peerVerifyError( const QSslError & error )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "peerVerifyError(QSslError)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QSSLSOCKET" );
-    PHB_ITEM perror = Qt4xHb::Signals_return_object( (void *) &error, "QSSLERROR" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSSLSOCKET" );
+    PHB_ITEM perror = Qt4xHb::Signals_return_object( ( void * ) &error, "QSSLERROR" );
 
     hb_vmEvalBlockV( cb, 2, psender, perror );
 
@@ -92,15 +92,15 @@ void QSslSocketSlots::peerVerifyError( const QSslError & error )
 
 void QSslSocketSlots::sslErrors( const QList<QSslError> & errors )
 {
-  QObject *object = qobject_cast<QObject *>(sender());
+  QObject * object = qobject_cast<QObject *>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "sslErrors(QList<QSslError>)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( (QObject *) object, "QSSLSOCKET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSSLSOCKET" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
-    PHB_ITEM perrors = hb_itemArrayNew(0);
+    PHB_ITEM perrors = hb_itemArrayNew( 0 );
     if( pDynSym )
     {
       for( int i = 0; i < errors.count(); i++ )
@@ -111,7 +111,7 @@ void QSslSocketSlots::sslErrors( const QList<QSslError> & errors )
         PHB_ITEM pTempObject = hb_itemNew( NULL );
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
         PHB_ITEM pTempItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pTempItem, (QSslError *) new QSslError( errors [i] ) );
+        hb_itemPutPtr( pTempItem, ( QSslError * ) new QSslError( errors [i] ) );
         hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
         hb_arrayAddForward( perrors, pTempObject );
         hb_itemRelease( pTempObject );
@@ -132,7 +132,7 @@ void QSslSocketSlots::sslErrors( const QList<QSslError> & errors )
 
 void QSslSocketSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSslSocket * obj = (QSslSocket *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslSocket * obj = ( QSslSocket * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {

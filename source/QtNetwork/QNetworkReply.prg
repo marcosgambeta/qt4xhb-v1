@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -75,7 +75,7 @@ RETURN
 
 HB_FUNC_STATIC( QNETWORKREPLY_DELETE )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkReply * obj = ( QNetworkReply * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -97,12 +97,12 @@ virtual void abort() = 0
 */
 HB_FUNC_STATIC( QNETWORKREPLY_ABORT )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkReply * obj = ( QNetworkReply * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->abort();
@@ -123,15 +123,15 @@ QVariant attribute( QNetworkRequest::Attribute code ) const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_ATTRIBUTE )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkReply * obj = ( QNetworkReply * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->attribute( (QNetworkRequest::Attribute) hb_parni(1) ) );
+      QVariant * ptr = new QVariant( obj->attribute( ( QNetworkRequest::Attribute ) hb_parni( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -148,12 +148,12 @@ QNetworkReply::NetworkError error() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_ERROR )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkReply * obj = ( QNetworkReply * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->error() );
@@ -172,15 +172,15 @@ bool hasRawHeader( const QByteArray & headerName ) const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_HASRAWHEADER )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkReply * obj = ( QNetworkReply * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
     {
 #endif
-      RBOOL( obj->hasRawHeader( *PQBYTEARRAY(1) ) );
+      RBOOL( obj->hasRawHeader( *PQBYTEARRAY( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,15 +196,15 @@ QVariant header( QNetworkRequest::KnownHeaders header ) const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_HEADER )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkReply * obj = ( QNetworkReply * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->header( (QNetworkRequest::KnownHeaders) hb_parni(1) ) );
+      QVariant * ptr = new QVariant( obj->header( ( QNetworkRequest::KnownHeaders ) hb_parni( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -221,17 +221,16 @@ void ignoreSslErrors( const QList<QSslError> & errors )
 */
 void QNetworkReply_ignoreSslErrors1()
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkReply * obj = ( QNetworkReply * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
     QList<QSslError> par1;
-    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
-    int i1;
-    int nLen1 = hb_arrayLen(aList1);
-    for (i1=0;i1<nLen1;i1++)
+    PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+    int nLen1 = hb_arrayLen( aList1 );
+    for( int i1 = 0; i1 < nLen1; i1++ )
     {
-      par1 << *(QSslError *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      par1 << *( QSslError * ) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
     obj->ignoreSslErrors( par1 );
   }
@@ -244,7 +243,7 @@ virtual void ignoreSslErrors()
 */
 void QNetworkReply_ignoreSslErrors2()
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkReply * obj = ( QNetworkReply * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -256,11 +255,11 @@ void QNetworkReply_ignoreSslErrors2()
 
 HB_FUNC_STATIC( QNETWORKREPLY_IGNORESSLERRORS )
 {
-  if( ISNUMPAR(1) && ISARRAY(1) )
+  if( ISNUMPAR( 1 ) && ISARRAY( 1 ) )
   {
     QNetworkReply_ignoreSslErrors1();
   }
-  else if( ISNUMPAR(0) )
+  else if( ISNUMPAR( 0 ) )
   {
     QNetworkReply_ignoreSslErrors2();
   }
@@ -275,12 +274,12 @@ bool isFinished() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_ISFINISHED )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkReply * obj = ( QNetworkReply * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isFinished() );
@@ -299,12 +298,12 @@ bool isRunning() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_ISRUNNING )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkReply * obj = ( QNetworkReply * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isRunning() );
@@ -323,12 +322,12 @@ QNetworkAccessManager * manager() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_MANAGER )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkReply * obj = ( QNetworkReply * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QNetworkAccessManager * ptr = obj->manager();
@@ -348,12 +347,12 @@ QNetworkAccessManager::Operation operation() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_OPERATION )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkReply * obj = ( QNetworkReply * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->operation() );
@@ -372,15 +371,15 @@ QByteArray rawHeader( const QByteArray & headerName ) const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADER )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkReply * obj = ( QNetworkReply * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->rawHeader( *PQBYTEARRAY(1) ) );
+      QByteArray * ptr = new QByteArray( obj->rawHeader( *PQBYTEARRAY( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -397,17 +396,17 @@ QList<QByteArray> rawHeaderList() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADERLIST )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkReply * obj = ( QNetworkReply * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QList<QByteArray> list = obj->rawHeaderList();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-      PHB_ITEM pArray = hb_itemArrayNew(0);
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
@@ -418,7 +417,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADERLIST )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, (QByteArray *) new QByteArray( list[i] ) );
+          hb_itemPutPtr( pItem, ( QByteArray * ) new QByteArray( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -449,12 +448,12 @@ qint64 readBufferSize() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_READBUFFERSIZE )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkReply * obj = ( QNetworkReply * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RQINT64( obj->readBufferSize() );
@@ -473,12 +472,12 @@ QNetworkRequest request() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_REQUEST )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkReply * obj = ( QNetworkReply * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QNetworkRequest * ptr = new QNetworkRequest( obj->request() );
@@ -498,15 +497,15 @@ virtual void setReadBufferSize( qint64 size )
 */
 HB_FUNC_STATIC( QNETWORKREPLY_SETREADBUFFERSIZE )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkReply * obj = ( QNetworkReply * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISNUM(1) )
+    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      obj->setReadBufferSize( PQINT64(1) );
+      obj->setReadBufferSize( PQINT64( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -524,15 +523,15 @@ void setSslConfiguration( const QSslConfiguration & config )
 */
 HB_FUNC_STATIC( QNETWORKREPLY_SETSSLCONFIGURATION )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkReply * obj = ( QNetworkReply * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSSLCONFIGURATION(1) )
+    if( ISNUMPAR( 1 ) && ISQSSLCONFIGURATION( 1 ) )
     {
 #endif
-      obj->setSslConfiguration( *PQSSLCONFIGURATION(1) );
+      obj->setSslConfiguration( *PQSSLCONFIGURATION( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -550,12 +549,12 @@ QSslConfiguration sslConfiguration() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_SSLCONFIGURATION )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkReply * obj = ( QNetworkReply * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QSslConfiguration * ptr = new QSslConfiguration( obj->sslConfiguration() );
@@ -575,12 +574,12 @@ QUrl url() const
 */
 HB_FUNC_STATIC( QNETWORKREPLY_URL )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkReply * obj = ( QNetworkReply * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       QUrl * ptr = new QUrl( obj->url() );
@@ -600,12 +599,12 @@ virtual void close()
 */
 HB_FUNC_STATIC( QNETWORKREPLY_CLOSE )
 {
-  QNetworkReply * obj = (QNetworkReply *) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkReply * obj = ( QNetworkReply * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->close();

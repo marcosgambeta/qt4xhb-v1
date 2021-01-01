@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2020 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -69,7 +69,7 @@ QSslKey( const QByteArray & encoded, QSsl::KeyAlgorithm algorithm, QSsl::Encodin
 */
 void QSslKey_new2()
 {
-  QSslKey * obj = new QSslKey( *PQBYTEARRAY(1), (QSsl::KeyAlgorithm) hb_parni(2), ISNIL(3)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(3), ISNIL(4)? (QSsl::KeyType) QSsl::PrivateKey : (QSsl::KeyType) hb_parni(4), ISNIL(5)? QByteArray() : *(QByteArray *) Qt4xHb::itemGetPtr(5) );
+  QSslKey * obj = new QSslKey( *PQBYTEARRAY( 1 ), ( QSsl::KeyAlgorithm ) hb_parni( 2 ), ISNIL( 3 )? ( QSsl::EncodingFormat ) QSsl::Pem : ( QSsl::EncodingFormat ) hb_parni( 3 ), ISNIL( 4 )? ( QSsl::KeyType ) QSsl::PrivateKey : ( QSsl::KeyType ) hb_parni( 4 ), ISNIL( 5 )? QByteArray() : *( QByteArray * ) Qt4xHb::itemGetPtr( 5 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -78,7 +78,7 @@ QSslKey( QIODevice * device, QSsl::KeyAlgorithm algorithm, QSsl::EncodingFormat 
 */
 void QSslKey_new3()
 {
-  QSslKey * obj = new QSslKey( PQIODEVICE(1), (QSsl::KeyAlgorithm) hb_parni(2), ISNIL(3)? (QSsl::EncodingFormat) QSsl::Pem : (QSsl::EncodingFormat) hb_parni(3), ISNIL(4)? (QSsl::KeyType) QSsl::PrivateKey : (QSsl::KeyType) hb_parni(4), ISNIL(5)? QByteArray() : *(QByteArray *) Qt4xHb::itemGetPtr(5) );
+  QSslKey * obj = new QSslKey( PQIODEVICE( 1 ), ( QSsl::KeyAlgorithm ) hb_parni( 2 ), ISNIL( 3 )? ( QSsl::EncodingFormat ) QSsl::Pem : ( QSsl::EncodingFormat ) hb_parni( 3 ), ISNIL( 4 )? ( QSsl::KeyType ) QSsl::PrivateKey : ( QSsl::KeyType ) hb_parni( 4 ), ISNIL( 5 )? QByteArray() : *( QByteArray * ) Qt4xHb::itemGetPtr( 5 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -87,25 +87,25 @@ QSslKey( const QSslKey & other )
 */
 void QSslKey_new4()
 {
-  QSslKey * obj = new QSslKey( *PQSSLKEY(1) );
+  QSslKey * obj = new QSslKey( *PQSSLKEY( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QSSLKEY_NEW )
 {
-  if( ISNUMPAR(0) )
+  if( ISNUMPAR( 0 ) )
   {
     QSslKey_new1();
   }
-  else if( ISBETWEEN(2,5) && ISQBYTEARRAY(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) && (ISQBYTEARRAY(5)||ISNIL(5)) )
+  else if( ISBETWEEN( 2, 5 ) && ISQBYTEARRAY( 1 ) && ISNUM( 2 ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) && ( ISQBYTEARRAY( 5 ) || ISNIL( 5 ) ) )
   {
     QSslKey_new2();
   }
-  else if( ISBETWEEN(2,5) && ISQIODEVICE(1) && ISNUM(2) && (ISNUM(3)||ISNIL(3)) && (ISNUM(4)||ISNIL(4)) && (ISQBYTEARRAY(5)||ISNIL(5)) )
+  else if( ISBETWEEN( 2, 5 ) && ISQIODEVICE( 1 ) && ISNUM( 2 ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) && ( ISQBYTEARRAY( 5 ) || ISNIL( 5 ) ) )
   {
     QSslKey_new3();
   }
-  else if( ISNUMPAR(1) && ISQSSLKEY(1) )
+  else if( ISNUMPAR( 1 ) && ISQSSLKEY( 1 ) )
   {
     QSslKey_new4();
   }
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSSLKEY_NEW )
 
 HB_FUNC_STATIC( QSSLKEY_DELETE )
 {
-  QSslKey * obj = (QSslKey *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslKey * obj = ( QSslKey * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
@@ -137,12 +137,12 @@ QSsl::KeyAlgorithm algorithm() const
 */
 HB_FUNC_STATIC( QSSLKEY_ALGORITHM )
 {
-  QSslKey * obj = (QSslKey *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslKey * obj = ( QSslKey * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->algorithm() );
@@ -161,12 +161,12 @@ void clear()
 */
 HB_FUNC_STATIC( QSSLKEY_CLEAR )
 {
-  QSslKey * obj = (QSslKey *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslKey * obj = ( QSslKey * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       obj->clear();
@@ -187,12 +187,12 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QSSLKEY_ISNULL )
 {
-  QSslKey * obj = (QSslKey *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslKey * obj = ( QSslKey * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RBOOL( obj->isNull() );
@@ -211,12 +211,12 @@ int length() const
 */
 HB_FUNC_STATIC( QSSLKEY_LENGTH )
 {
-  QSslKey * obj = (QSslKey *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslKey * obj = ( QSslKey * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RINT( obj->length() );
@@ -235,15 +235,15 @@ QByteArray toDer( const QByteArray & passPhrase = QByteArray() ) const
 */
 HB_FUNC_STATIC( QSSLKEY_TODER )
 {
-  QSslKey * obj = (QSslKey *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslKey * obj = ( QSslKey * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQBYTEARRAY(1)||ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( ISQBYTEARRAY( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->toDer( ISNIL(1)? QByteArray() : *(QByteArray *) Qt4xHb::itemGetPtr(1) ) );
+      QByteArray * ptr = new QByteArray( obj->toDer( ISNIL( 1 )? QByteArray() : *( QByteArray * ) Qt4xHb::itemGetPtr( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -260,15 +260,15 @@ QByteArray toPem( const QByteArray & passPhrase = QByteArray() ) const
 */
 HB_FUNC_STATIC( QSSLKEY_TOPEM )
 {
-  QSslKey * obj = (QSslKey *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslKey * obj = ( QSslKey * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0,1) && (ISQBYTEARRAY(1)||ISNIL(1)) )
+    if( ISBETWEEN( 0, 1 ) && ( ISQBYTEARRAY( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->toPem( ISNIL(1)? QByteArray() : *(QByteArray *) Qt4xHb::itemGetPtr(1) ) );
+      QByteArray * ptr = new QByteArray( obj->toPem( ISNIL( 1 )? QByteArray() : *( QByteArray * ) Qt4xHb::itemGetPtr( 1 ) ) );
       Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -285,12 +285,12 @@ QSsl::KeyType type() const
 */
 HB_FUNC_STATIC( QSSLKEY_TYPE )
 {
-  QSslKey * obj = (QSslKey *) Qt4xHb::itemGetPtrStackSelfItem();
+  QSslKey * obj = ( QSslKey * ) Qt4xHb::itemGetPtrStackSelfItem();
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if( ISNUMPAR( 0 ) )
     {
 #endif
       RENUM( obj->type() );
@@ -308,18 +308,18 @@ HB_FUNC_STATIC( QSSLKEY_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT(1) )
+  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_objSendMsg( hb_param(1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER(1) )
+  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, (void *) hb_itemGetPtr( hb_param(1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -346,16 +346,16 @@ HB_FUNC_STATIC( QSSLKEY_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QSSLKEY_SELFDESTRUCTION )
 {
-  hb_retl( (bool) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
 }
 
 HB_FUNC_STATIC( QSSLKEY_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG(1) )
+  if( hb_pcount() == 1 && ISLOG( 1 ) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
