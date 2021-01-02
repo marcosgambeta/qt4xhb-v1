@@ -9,6 +9,7 @@ rem
 hbmk2 ColorsNames1            %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 ColorsNames2            %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 ColorsNames3            %1 %2 %3 ..\qt4xhb.hbc
+hbmk2 define                  %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 HAbstractListModel1     %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 HAbstractListModel2     %1 %2 %3 ..\qt4xhb.hbc
 hbmk2 HAbstractListModel3     %1 %2 %3 ..\qt4xhb.hbc
