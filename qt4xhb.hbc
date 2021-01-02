@@ -75,5 +75,5 @@ gui=yes
 
 {msvc}ldflags=/NODEFAULTLIB:msvcrt.lib
 
--prgflag=__QT4XHB__
--cflag=__QT4XHB__
+prgflags=-D__QT4XHB__
+cflags=-D__QT4XHB__
