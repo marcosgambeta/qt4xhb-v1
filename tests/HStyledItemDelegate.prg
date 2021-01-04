@@ -1,8 +1,14 @@
 /*
 
-  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
+  Qt4xHb Project - Test Program
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta
+
+  E-mail:
+  marcosgambeta AT outlook DOT com
+
+  Website:
+  https://github.com/marcosgambeta/qt4xhb
 
 */
 
@@ -91,14 +97,14 @@ PROCEDURE Main()
 
    // cria um objeto da classe TextDelegate para uso na coluna 1
    oTextDelegate := TextDelegate():new( oView )
-   oTextDelegate:onCloseEditor( {|oSender,oEditor,nHint|qout("oTextDelegate - closeEditor - "+alltrim(str(nHint)))} )
-   oTextDelegate:onCommitData( {|oSender,oEditor|qout("oTextDelegate - commitData")} )
+   oTextDelegate:onCloseEditor( { | oSender, oEditor, nHint | qout( "oTextDelegate - closeEditor - " + alltrim( str( nHint ) ) ) } )
+   oTextDelegate:onCommitData( { | oSender, oEditor | qout( "oTextDelegate - commitData" ) } )
    oView:setItemDelegateForColumn( 1, oTextDelegate )
 
    // cria um objeto da classe ValueDelegate para uso na coluna 2
    oValueDelegate := ValueDelegate():new( oView )
-   oValueDelegate:onCloseEditor( {|oSender,oEditor,nHint|qout("oValueDelegate - closeEditor - "+alltrim(str(nHint)))} )
-   oValueDelegate:onCommitData( {|oSender,oEditor|qout("oValueDelegate - commitData")} )
+   oValueDelegate:onCloseEditor( { | oSender, oEditor, nHint | qout( "oValueDelegate - closeEditor - " + alltrim( str( nHint ) ) ) } )
+   oValueDelegate:onCommitData( { | oSender, oEditor | qout( "oValueDelegate - commitData" ) } )
    oView:setItemDelegateForColumn( 2, oValueDelegate )
 
    oWindow:show()
@@ -133,10 +139,10 @@ METHOD new( ... ) CLASS TextDelegate
 
    ::super:new( ... )
 
-   ::setDisplayTextCB( {|...|::displayText(...)} )
-   ::setCreateEditorCB( {|...|::createEditor(...)} )
-   ::setEditorDataCB( {|...|::setEditorData(...)} )
-   ::setModelDataCB( {|...|::setModelData(...)} )
+   ::setDisplayTextCB( { | ... | ::displayText( ... ) } )
+   ::setCreateEditorCB( { | ... | ::createEditor( ... ) } )
+   ::setEditorDataCB( { | ... | ::setEditorData( ... ) } )
+   ::setModelDataCB( { | ... | ::setModelData( ... ) } )
 
 RETURN self
 
@@ -198,10 +204,10 @@ METHOD new( ... ) CLASS ValueDelegate
 
    ::super:new( ... )
 
-   ::setPaintCB( {|...|::paint(...)} )
-   ::setCreateEditorCB( {|...|::createEditor(...)} )
-   ::setEditorDataCB( {|...|::setEditorData(...)} )
-   ::setModelDataCB( {|...|::setModelData(...)} )
+   ::setPaintCB( { | ... | ::paint( ... ) } )
+   ::setCreateEditorCB( { | ... | ::createEditor( ... ) } )
+   ::setEditorDataCB( { | ... | ::setEditorData( ... ) } )
+   ::setModelDataCB( { | ... | ::setModelData( ... ) } )
 
 RETURN self
 

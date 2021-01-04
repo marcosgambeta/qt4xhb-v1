@@ -1,8 +1,14 @@
 /*
 
-  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
+  Qt4xHb Project - Test Program
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta
+
+  E-mail:
+  marcosgambeta AT outlook DOT com
+
+  Website:
+  https://github.com/marcosgambeta/qt4xhb
 
 */
 
@@ -22,12 +28,12 @@ PROCEDURE Main()
    oWindow:resize( 800, 600 )
 
    oModel := HAbstractTableModel():new()
-   oModel:setRowCountCB( {||1000000} ) // total de linhas
-   oModel:setColumnCountCB( {||10000} ) // total de colunas
-   oModel:setDisplayRoleCB( {|nRow,nCol|"Célula "+alltrim(str(nRow))+","+alltrim(str(nCol))} ) // conteúdo da célula
-   oModel:setForegroundRoleCB( {|nRow,nCol|iif(nCol/2==int(nCol/2),"blue","dark green")} ) // cor de frente da célula
-   oModel:setHorizontalHeaderDisplayRoleCB( {|nCol|"Coluna "+strzero(nCol,5)} ) // títulos das colunas
-   oModel:setVerticalHeaderDisplayRoleCB( {|nRow|"Linha "+alltrim(str(nRow))} ) // títulos das linhas
+   oModel:setRowCountCB( { || 1000000 } ) // total de linhas
+   oModel:setColumnCountCB( { || 10000 } ) // total de colunas
+   oModel:setDisplayRoleCB( { | nRow, nCol | "Célula " + alltrim( str( nRow ) ) + "," + alltrim( str( nCol ) ) } ) // conteúdo da célula
+   oModel:setForegroundRoleCB( { | nRow, nCol | iif( nCol / 2 == int( nCol / 2 ), "blue", "dark green" ) } ) // cor de frente da célula
+   oModel:setHorizontalHeaderDisplayRoleCB( { | nCol | "Coluna " + strzero( nCol, 5 ) } ) // títulos das colunas
+   oModel:setVerticalHeaderDisplayRoleCB( { | nRow | "Linha " + alltrim( str( nRow ) ) } ) // títulos das linhas
 
    oView := QTableView():new( oWindow )
    oView:move( 10, 10 )

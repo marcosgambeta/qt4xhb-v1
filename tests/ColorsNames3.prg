@@ -1,8 +1,14 @@
 /*
 
-  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
+  Qt4xHb Project - Test Program
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta
+
+  E-mail:
+  marcosgambeta AT outlook DOT com
+
+  Website:
+  https://github.com/marcosgambeta/qt4xhb
 
 */
 
@@ -62,10 +68,10 @@ METHOD new( ... ) CLASS myModel
 
    ::super:new( ... )
 
-   ::setRowCountCB( {|...|::rowCount(...)} )
-   ::setColumnCountCB( {|...|::columnCount(...)} )
-   ::setDataCB( {|...|::data(...)} )
-   ::setHeaderDataCB( {|...|::headerData(...)} )
+   ::setRowCountCB( { | ... | ::rowCount( ... ) } )
+   ::setColumnCountCB( { | ... | ::columnCount( ... ) } )
+   ::setDataCB( { | ... | ::data( ... ) } )
+   ::setHeaderDataCB( { | ... | ::headerData( ... ) } )
 
 RETURN self
 

@@ -1,8 +1,14 @@
 /*
 
-  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
+  Qt4xHb Project - Test Program
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta
+
+  E-mail:
+  marcosgambeta AT outlook DOT com
+
+  Website:
+  https://github.com/marcosgambeta/qt4xhb
 
 */
 
@@ -22,7 +28,7 @@ PROCEDURE Main()
    oLabelWidth := QLabel():new( "0", oWindow ):move( 20, 20 ):resize( 100, 30 )
    oLabelHeight := QLabel():new( "0", oWindow ):move( 20, 80 ):resize( 100, 30 )
 
-   oWindow:onResizeEvent( {|oSender,oResizeEvent|
+   oWindow:onResizeEvent( { | oSender, oResizeEvent |
       oLabelWidth:setText( alltrim( str( oResizeEvent:size():width() ) ) )
       oLabelHeight:setText( alltrim( str( oResizeEvent:size():height() ) ) )
       } )

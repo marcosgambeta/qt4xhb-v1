@@ -1,8 +1,14 @@
 /*
 
-  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
+  Qt4xHb Project - Test Program
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta
+
+  E-mail:
+  marcosgambeta AT outlook DOT com
+
+  Website:
+  https://github.com/marcosgambeta/qt4xhb
 
 */
 
@@ -22,8 +28,8 @@ PROCEDURE Main()
    oWindow:resize( 400, 600 )
 
    oModel := HAbstractListModel():new()
-   oModel:setRowCountCB( {||100} )
-   oModel:setDisplayRoleCB( {|nRow|"Linha "+alltrim(str(nRow))} )
+   oModel:setRowCountCB( { || 100 } )
+   oModel:setDisplayRoleCB( { | nRow | "Linha " + alltrim( str( nRow ) ) } )
 
    oList := QListView():new( oWindow )
    oList:move( 10, 10 )

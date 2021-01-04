@@ -1,8 +1,14 @@
 /*
 
-  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
+  Qt4xHb Project - Test Program
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta
+
+  E-mail:
+  marcosgambeta AT outlook DOT com
+
+  Website:
+  https://github.com/marcosgambeta/qt4xhb
 
 */
 
@@ -53,15 +59,15 @@ PROCEDURE Main()
 
    oModel := HAbstractTableModel():new()
 
-   oModel:setRowCountCB( {||len(aEstados)} ) // total de linhas
-   oModel:setColumnCountCB( {||2} ) // total de colunas (1=imagem 2=nome)
+   oModel:setRowCountCB( { || len( aEstados ) } ) // total de linhas
+   oModel:setColumnCountCB( { || 2 } ) // total de colunas (1=imagem 2=nome)
 
-   oModel:setDisplayRoleCB( {|nRow,nCol|iif(nCol==1,aEstados[nRow+1,2],NIL)} ) // conteúdo da célula (coluna 2)
-   oModel:setDecorationRoleCB( {|nRow,nCol|iif(nCol==0,QPixmap():new(aEstados[nRow+1,1]),NIL)} ) // conteúdo da célula (coluna 1)
-   oModel:setSizeHintRoleCB( {|nRow,nCol|iif(nCol==0,QSize():new(150,107),NIL)} ) // tamanho da célula (coluna 1)
+   oModel:setDisplayRoleCB( { | nRow, nCol | iif( nCol == 1, aEstados[ nRow + 1, 2 ], NIL ) } ) // conteúdo da célula (coluna 2)
+   oModel:setDecorationRoleCB( { | nRow, nCol | iif( nCol == 0, QPixmap():new( aEstados[ nRow + 1, 1 ] ), NIL ) } ) // conteúdo da célula (coluna 1)
+   oModel:setSizeHintRoleCB( { | nRow, nCol | iif( nCol == 0, QSize():new( 150, 107 ), NIL ) } ) // tamanho da célula (coluna 1)
 
-   oModel:setHorizontalHeaderDisplayRoleCB( {|nCol|{"Bandeira","Estado"}[nCol+1]} ) // títulos das colunas
-   oModel:setVerticalHeaderDisplayRoleCB( {|nRow|alltrim(str(nRow))} ) // títulos das linhas
+   oModel:setHorizontalHeaderDisplayRoleCB( { | nCol | { "Bandeira", "Estado" }[ nCol + 1 ] } ) // títulos das colunas
+   oModel:setVerticalHeaderDisplayRoleCB( { | nRow | alltrim( str( nRow ) ) } ) // títulos das linhas
 
    oView := QTableView():new( oWindow )
    oView:move( 10, 10 )

@@ -1,8 +1,14 @@
 /*
 
-  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
+  Qt4xHb Project - Test Program
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta
+
+  E-mail:
+  marcosgambeta AT outlook DOT com
+
+  Website:
+  https://github.com/marcosgambeta/qt4xhb
 
 */
 
@@ -24,7 +30,7 @@ PROCEDURE Main()
    oDial := QDial():new( oWindow )
    oDial:move( 20, 20 )
    oDial:setTooltip( "Eu sou um Dial" )
-   oDial:onSliderMoved( {|oSender,nValue|test(oSender,nValue)} )
+   oDial:onSliderMoved( { | oSender, nValue | test( oSender, nValue ) } )
    oDial:show()
 
    oApp:exec()

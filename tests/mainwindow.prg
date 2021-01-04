@@ -1,8 +1,14 @@
 /*
 
-  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
+  Qt4xHb Project - Test Program
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta
+
+  E-mail:
+  marcosgambeta AT outlook DOT com
+
+  Website:
+  https://github.com/marcosgambeta/qt4xhb
 
 */
 
@@ -124,47 +130,47 @@ METHOD createMenuBar() CLASS HMainWindow
 
    ::oActionNew := ::oMenu1:AddAction( QIcon():new( "images\new.png" ), "&Novo" )
    ::oActionNew:setStatusTip( "Executa a opção NOVO" )
-   ::oActionNew:onTriggered( {||::showMessage("Arquivo/Novo")} )
+   ::oActionNew:onTriggered( { || ::showMessage( "Arquivo/Novo" ) } )
 
    ::oActionOpen := ::oMenu1:AddAction( QIcon():new( "images\open.png" ), "&Abrir" )
    ::oActionOpen:setStatusTip( "Executa a opção ABRIR" )
-   ::oActionOpen:onTriggered( {||::showMessage("Arquivo/Abrir")} )
+   ::oActionOpen:onTriggered( { || ::showMessage( "Arquivo/Abrir" ) } )
 
    ::oActionSave := ::oMenu1:AddAction( QIcon():new( "images\save.png" ), "&Salvar" )
    ::oActionSave:setStatusTip( "Executa a opção SALVAR" )
-   ::oActionSave:onTriggered( {||::showMessage("Arquivo/Salvar")} )
+   ::oActionSave:onTriggered( { || ::showMessage( "Arquivo/Salvar" ) } )
 
    ::oMenu2 := ::oMenuBar:AddMenu( "&Editar" )
 
    ::oActionCut := ::oMenu2:AddAction( QIcon():New( "images\cut.png" ), "&Recortar" )
    ::oActionCut:setStatusTip( "Executa a opção RECORTAR" )
-   ::oActionCut:onTriggered( {||::showMessage("Editar/Recortar")} )
+   ::oActionCut:onTriggered( { || ::showMessage( "Editar/Recortar" ) } )
 
    ::oActionCopy := ::oMenu2:AddAction( QIcon():new( "images\copy.png" ), "&Copiar" )
    ::oActionCopy:setStatusTip( "Executa a opção COPIAR" )
-   ::oActionCopy:onTriggered( {||::showMessage("Editar/Copiar")} )
+   ::oActionCopy:onTriggered( { || ::showMessage( "Editar/Copiar" ) } )
 
    ::oActionPaste := ::oMenu2:AddAction( QIcon():New( "images\paste.png" ), "C&olar" )
    ::oActionPaste:setStatusTip( "Executa a opção COLAR" )
-   ::oActionPaste:onTriggered( {||::showMessage("Editar/Colar")} )
+   ::oActionPaste:onTriggered( { || ::showMessage( "Editar/Colar" ) } )
 
    ::oMenu3 := ::oMenuBar:AddMenu( "&Sobre" )
 
    ::oActionAbout := ::oMenu3:AddAction( "&Exemplo" )
    ::oActionAbout:setStatusTip( "Exibe informações sobre este exemplo" )
-   ::oActionAbout:onTriggered( {||::showMessage("Este exemplo demonstra a criação da janela principal de uma aplicação")} )
+   ::oActionAbout:onTriggered( { || ::showMessage( "Este exemplo demonstra a criação da janela principal de uma aplicação" ) } )
 
    ::oActionAboutxH := ::oMenu3:AddAction( "&xHarbour" )
    ::oActionAboutxH:setStatusTip( "Exibe a versão do Harbour/xHarbour" )
-   ::oActionAboutxH:onTriggered( {||::showMessage(version())} )
+   ::oActionAboutxH:onTriggered( { || ::showMessage( version() ) } )
 
    ::oActionAboutCC := ::oMenu3:AddAction( "&C/C++ Compiler" )
    ::oActionAboutCC:setStatusTip( "Exibe informações sobre o compilador C/C++" )
-   ::oActionAboutCC:onTriggered( {||::showMessage(hb_compiler())} )
+   ::oActionAboutCC:onTriggered( { || ::showMessage( hb_compiler() ) } )
 
    ::oActionAboutQt := ::oMenu3:AddAction( "&Qt Framework" )
    ::oActionAboutQt:setStatusTip( "Exibe informações sobre o Qt Framework" )
-   ::oActionAboutQt:onTriggered( {||oApp:aboutQt()})
+   ::oActionAboutQt:onTriggered( { || oApp:aboutQt() } )
 
 RETURN self
 
@@ -205,7 +211,7 @@ RETURN self
 
 METHOD defineEvents() CLASS HMainWindow
 
-   ::onCloseEvent( {|oSender,oEvent|::CloseMainWindow(oSender,oEvent)} )
+   ::onCloseEvent( { | oSender, oEvent | ::CloseMainWindow( oSender, oEvent ) } )
 
 RETURN self
 

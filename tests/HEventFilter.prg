@@ -1,8 +1,14 @@
 /*
 
-  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
+  Qt4xHb Project - Test Program
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta
+
+  E-mail:
+  marcosgambeta AT outlook DOT com
+
+  Website:
+  https://github.com/marcosgambeta/qt4xhb
 
 */
 
@@ -26,7 +32,7 @@ PROCEDURE Main()
 
    oButton := QPushButton():new( "dialog", oWindow )
    oButton:move( 20, 20 )
-   oButton:onClicked( {||dialog(oWindow)} )
+   oButton:onClicked( { || dialog( oWindow ) } )
 
    oWindow:show()
 
@@ -67,8 +73,8 @@ STATIC FUNCTION dialog( oParent )
    oLineEdit3:resize( 100, 30 )
 
    oEventFilter := HEventFilter():new( oDialog )
-   oEventFilter:onDestroyed( {||qout("oEventFilter-destroyed")} )
-   oEventFilter:setEventFilterCB( {|oObject,oEvent|
+   oEventFilter:onDestroyed( { || qout( "oEventFilter-destroyed" ) } )
+   oEventFilter:setEventFilterCB( { | oObject, oEvent |
       LOCAL nType := oEvent:type()
 
       IF nType == QEvent_Resize

@@ -1,8 +1,14 @@
 /*
 
-  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
+  Qt4xHb Project - Test Program
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta
+
+  E-mail:
+  marcosgambeta AT outlook DOT com
+
+  Website:
+  https://github.com/marcosgambeta/qt4xhb
 
 */
 
@@ -25,13 +31,13 @@ PROCEDURE Main()
    oWindow:resize( 800, 600 )
 
    oModel := HAbstractTableModel():new()
-   oModel:setRowCountCB( {||len(aColorsNames)} ) // total de linhas
-   oModel:setColumnCountCB( {||2} ) // total de colunas
-   oModel:setDisplayRoleCB( {|nRow,nCol|{aColorsNames[nRow+1],NIL}[nCol+1]} ) // conteúdo da célula
-   oModel:setFontRoleCB( {|nRow,nCol|iif(nCol==0,QFont():new("Arial Black",12),NIL)} ) // fonte da célula
-   oModel:setBackgroundRoleCB( {|nRow,nCol|iif(nCol==0,NIL,aColorsNames[nRow+1])} ) // cor de fundo da célula
-   oModel:setHorizontalHeaderDisplayRoleCB( {|nCol|{"Nome","Cor"}[nCol+1]} ) // títulos das colunas
-   oModel:setVerticalHeaderDisplayRoleCB( {|nRow|alltrim(str(nRow+1))} ) // títulos das linhas
+   oModel:setRowCountCB( { || len( aColorsNames ) } ) // total de linhas
+   oModel:setColumnCountCB( { || 2 } ) // total de colunas
+   oModel:setDisplayRoleCB( { | nRow, nCol | { aColorsNames[ nRow + 1 ], NIL }[ nCol + 1 ] } ) // conteúdo da célula
+   oModel:setFontRoleCB( { | nRow, nCol | iif( nCol == 0, QFont():new( "Arial Black", 12 ), NIL ) } ) // fonte da célula
+   oModel:setBackgroundRoleCB( { | nRow, nCol | iif( nCol == 0, NIL, aColorsNames[ nRow + 1 ] ) } ) // cor de fundo da célula
+   oModel:setHorizontalHeaderDisplayRoleCB( { | nCol | { "Nome", "Cor" }[ nCol + 1 ] } ) // títulos das colunas
+   oModel:setVerticalHeaderDisplayRoleCB( { | nRow | alltrim( str( nRow + 1 ) ) } ) // títulos das linhas
 
    oView := QTableView():new( oWindow )
    oView:move( 10, 10 )

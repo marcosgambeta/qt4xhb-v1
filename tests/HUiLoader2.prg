@@ -1,8 +1,14 @@
 /*
 
-  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
+  Qt4xHb Project - Test Program
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta
+
+  E-mail:
+  marcosgambeta AT outlook DOT com
+
+  Website:
+  https://github.com/marcosgambeta/qt4xhb
 
 */
 
@@ -48,16 +54,16 @@ PROCEDURE Main()
    oWindow := loadUI( "HUiLoader.ui" )
 
    oPushButton := oWindow:findChild( "pushButton" )
-   ? oPushButton:onClicked( {||qout("PushButton clicked")} )
+   ? oPushButton:onClicked( { || qout( "PushButton clicked" ) } )
 
    oCommandLinkButton := oWindow:findChild( "commandLinkButton" )
-   ? oCommandLinkButton:onClicked( {||qout("CommandLinkButton clicked")} )
+   ? oCommandLinkButton:onClicked( { || qout( "CommandLinkButton clicked" ) } )
 
    oComboBox := oWindow:findChild( "comboBox" )
 
    oLineEdit := oWindow:findChild( "lineEdit" )
-   ? oLineEdit:onFocusInEvent( {||qout("focusin")} )
-   ? oLineEdit:onFocusOutEvent( {||qout("focusout")} )
+   ? oLineEdit:onFocusInEvent( { || qout( "focusin" ) } )
+   ? oLineEdit:onFocusOutEvent( { || qout( "focusout" ) } )
 
    oLCDNumber := oWindow:findChild( "lcdNumber" )
 
@@ -78,7 +84,7 @@ STATIC FUNCTION loadUI( cFileName )
    LOCAL oUI
 
    oLoader := HUiLoader():new()
-   oLoader:setCreateWidgetCB( {|oWidget|
+   oLoader:setCreateWidgetCB( { | oWidget |
       ? oWidget:pointer
       ?? " "
       ?? oWidget:className()

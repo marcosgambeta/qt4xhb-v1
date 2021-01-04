@@ -1,8 +1,14 @@
 /*
 
-  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
+  Qt4xHb Project - Test Program
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta
+
+  E-mail:
+  marcosgambeta AT outlook DOT com
+
+  Website:
+  https://github.com/marcosgambeta/qt4xhb
 
 */
 
@@ -39,40 +45,40 @@ PROCEDURE Main()
    oMenuA := oMenuBar:addMenu( "Menu &A" )
 
    oActionA1 := oMenuA:addAction( "Opção 1" )
-   oActionA1:onTriggered( {||aviso(oMainWindow,"Menu A/Opção 1")} )
+   oActionA1:onTriggered( { || aviso( oMainWindow, "Menu A/Opção 1" ) } )
 
    oActionA2 := oMenuA:addAction( "Opção 2" )
-   oActionA2:onTriggered( {||aviso(oMainWindow,"Menu A/Opção 2")} )
+   oActionA2:onTriggered( { || aviso( oMainWindow, "Menu A/Opção 2" ) } )
 
    oActionA3 := oMenuA:addAction( "Opção 3" )
-   oActionA3:onTriggered( {||aviso(oMainWindow,"Menu A/Opção 3")} )
+   oActionA3:onTriggered( { || aviso( oMainWindow, "Menu A/Opção 3" ) } )
 
    oActionA4 := oMenuA:addAction( "Opção 4" )
-   oActionA4:onTriggered( {||aviso(oMainWindow,"Menu A/Opção 4")} )
+   oActionA4:onTriggered( { || aviso( oMainWindow, "Menu A/Opção 4" ) } )
 
    oMenuB := oMenuBar:addMenu( "Menu &B" )
 
    oActionB1 := oMenuB:addAction( "Opção 1" )
-   oActionB1:onTriggered( {||aviso(oMainWindow,"Menu B/Opção 1")} )
+   oActionB1:onTriggered( { || aviso( oMainWindow, "Menu B/Opção 1" ) } )
 
    oActionB2 := oMenuB:addAction( "Opção 2" )
-   oActionB2:onTriggered( {||aviso(oMainWindow,"Menu B/Opção 2")} )
+   oActionB2:onTriggered( { || aviso( oMainWindow, "Menu B/Opção 2" ) } )
 
    oActionB3 := oMenuB:addAction( "Opção 3" )
-   oActionB3:onTriggered( {||aviso(oMainWindow,"Menu B/Opção 3")} )
+   oActionB3:onTriggered( { || aviso( oMainWindow, "Menu B/Opção 3" ) } )
 
    oMenuC := oMenuBar:addMenu( "Menu &C" )
 
    oActionC1 := oMenuC:addAction( "Opção 1" )
-   oActionC1:onTriggered( {||aviso(oMainWindow,"Menu C/Opção 1")} )
+   oActionC1:onTriggered( { || aviso( oMainWindow, "Menu C/Opção 1" ) } )
 
    oActionC2 := oMenuC:addAction( "Opção 2" )
-   oActionC2:onTriggered( {||aviso(oMainWindow,"Menu C/Opção 2")} )
+   oActionC2:onTriggered( { || aviso( oMainWindow, "Menu C/Opção 2" ) } )
 
    oMenuD := oMenuBar:addMenu( "Menu &D" )
 
    oActionD1 := oMenuD:addAction( "Opção 1" )
-   oActionD1:onTriggered( {||aviso(oMainWindow,"Menu D/Opção 1")} )
+   oActionD1:onTriggered( { || aviso( oMainWindow, "Menu D/Opção 1" ) } )
 
    oMainWindow:Show()
 

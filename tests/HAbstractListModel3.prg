@@ -1,8 +1,14 @@
 /*
 
-  Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
+  Qt4xHb Project - Test Program
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2021 Marcos Antonio Gambeta
+
+  E-mail:
+  marcosgambeta AT outlook DOT com
+
+  Website:
+  https://github.com/marcosgambeta/qt4xhb
 
 */
 
@@ -53,15 +59,15 @@ PROCEDURE Main()
    aadd( aEstados, { "images\estados\tocantins.png"       , "Tocantins"           })
 
    oModel := HAbstractListModel():new( oWindow )
-   oModel:setRowCountCB( {||len(aEstados)} )
-   oModel:setDisplayRoleCB( {|nRow|aEstados[nRow+1,2]} )
-   oModel:setDecorationRoleCB( {|nRow|aEstados[nRow+1,1]} )
+   oModel:setRowCountCB( { || len( aEstados ) } )
+   oModel:setDisplayRoleCB( { | nRow | aEstados[ nRow + 1, 2 ] } )
+   oModel:setDecorationRoleCB( { | nRow | aEstados[ nRow + 1, 1 ] } )
 
    oComboBox := QComboBox():new( oWindow )
    oComboBox:move( 10, 10 )
    oComboBox:resize( 200, 20 )
    oComboBox:setModel( oModel )
-   ? oComboBox:onActivated( {|oSender,nIndex|qout(strzero(nIndex,4)),qout(aEstados[nIndex+1,2])} )
+   ? oComboBox:onActivated( { | oSender, nIndex | qout( strzero( nIndex, 4 ) ), qout( aEstados[ nIndex + 1, 2 ] ) } )
 
    oWindow:show()
 
