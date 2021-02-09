@@ -28,7 +28,6 @@
 #include "qt4xhb_macros_qtxml.h"
 #include "qt4xhb_macros_qtxmlpatterns.h"
 
-#define ISOPTLOG(n) (ISLOG(n)||ISNIL(n))
 #define ISOPTNUM(n) (ISNUM(n)||ISNIL(n))
 #define ISOPTCHAR(n) (ISCHAR(n)||ISNIL(n))
 #define ISOPTPOINTER(n) (ISPOINTER(n)||ISNIL(n))

@@ -1008,7 +1008,7 @@ static QSqlDatabase database( const QString & connectionName = QLatin1String( QS
 HB_FUNC_STATIC( QSQLDATABASE_DATABASE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 0, 2 ) && ISOPTCHAR( 1 ) && ISOPTLOG( 2 ) )
+  if( ISBETWEEN( 0, 2 ) && ISOPTCHAR( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) )
   {
 #endif
     QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::database( OPQSTRING( 1, QLatin1String( QSqlDatabase::defaultConnection ) ), OPBOOL( 2, true ) ) );

@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QMATRIX4X4_INVERTED )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ISOPTLOG( 1 ) )
+    if( ISBETWEEN( 0, 1 ) && ( ISLOG( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
       bool par1;

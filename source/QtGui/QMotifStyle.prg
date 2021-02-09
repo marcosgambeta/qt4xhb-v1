@@ -63,7 +63,7 @@ QMotifStyle( bool useHighlightCols = false )
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ISOPTLOG( 1 ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISLOG( 1 ) || ISNIL( 1 ) ) )
   {
     QMotifStyle * obj = new QMotifStyle( OPBOOL( 1, false ) );
     Qt4xHb::returnNewObject( obj, false );

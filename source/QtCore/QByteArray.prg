@@ -1211,7 +1211,7 @@ HB_FUNC_STATIC( QBYTEARRAY_LEFTJUSTIFIED )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) && ISOPTLOG( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) && ( ISLOG( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->leftJustified( PINT( 1 ), OPCHAR( 2, ' ' ), OPBOOL( 3, false ) ) );
@@ -2080,7 +2080,7 @@ HB_FUNC_STATIC( QBYTEARRAY_RIGHTJUSTIFIED )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) && ISOPTLOG( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) && ( ISLOG( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->rightJustified( PINT( 1 ), OPCHAR( 2, ' ' ), OPBOOL( 3, false ) ) );
@@ -2581,7 +2581,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TODOUBLE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ISOPTLOG( 1 ) )
+    if( ISBETWEEN( 0, 1 ) && ( ISLOG( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
       bool par1;
@@ -2607,7 +2607,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOFLOAT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ISOPTLOG( 1 ) )
+    if( ISBETWEEN( 0, 1 ) && ( ISLOG( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
       bool par1;
@@ -2658,7 +2658,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOINT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 2 ) && ISOPTLOG( 1 ) && ISOPTNUM( 2 ) )
+    if( ISBETWEEN( 0, 2 ) && ( ISLOG( 1 ) || ISNIL( 1 ) ) && ISOPTNUM( 2 ) )
     {
 #endif
       bool par1;
@@ -2684,7 +2684,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOLONG )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 2 ) && ISOPTLOG( 1 ) && ISOPTNUM( 2 ) )
+    if( ISBETWEEN( 0, 2 ) && ( ISLOG( 1 ) || ISNIL( 1 ) ) && ISOPTNUM( 2 ) )
     {
 #endif
       bool par1;
@@ -2710,7 +2710,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOLONGLONG )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 2 ) && ISOPTLOG( 1 ) && ISOPTNUM( 2 ) )
+    if( ISBETWEEN( 0, 2 ) && ( ISLOG( 1 ) || ISNIL( 1 ) ) && ISOPTNUM( 2 ) )
     {
 #endif
       bool par1;
@@ -2786,7 +2786,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOSHORT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 2 ) && ISOPTLOG( 1 ) && ISOPTNUM( 2 ) )
+    if( ISBETWEEN( 0, 2 ) && ( ISLOG( 1 ) || ISNIL( 1 ) ) && ISOPTNUM( 2 ) )
     {
 #endif
       bool par1;
@@ -2812,7 +2812,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOUINT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 2 ) && ISOPTLOG( 1 ) && ISOPTNUM( 2 ) )
+    if( ISBETWEEN( 0, 2 ) && ( ISLOG( 1 ) || ISNIL( 1 ) ) && ISOPTNUM( 2 ) )
     {
 #endif
       bool par1;
@@ -2838,7 +2838,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOULONG )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 2 ) && ISOPTLOG( 1 ) && ISOPTNUM( 2 ) )
+    if( ISBETWEEN( 0, 2 ) && ( ISLOG( 1 ) || ISNIL( 1 ) ) && ISOPTNUM( 2 ) )
     {
 #endif
       bool par1;
@@ -2864,7 +2864,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOULONGLONG )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 2 ) && ISOPTLOG( 1 ) && ISOPTNUM( 2 ) )
+    if( ISBETWEEN( 0, 2 ) && ( ISLOG( 1 ) || ISNIL( 1 ) ) && ISOPTNUM( 2 ) )
     {
 #endif
       bool par1;
@@ -2890,7 +2890,7 @@ HB_FUNC_STATIC( QBYTEARRAY_TOUSHORT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 2 ) && ISOPTLOG( 1 ) && ISOPTNUM( 2 ) )
+    if( ISBETWEEN( 0, 2 ) && ( ISLOG( 1 ) || ISNIL( 1 ) ) && ISOPTNUM( 2 ) )
     {
 #endif
       bool par1;

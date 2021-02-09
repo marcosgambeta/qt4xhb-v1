@@ -3096,7 +3096,7 @@ HB_FUNC_STATIC( QWIDGET_SETATTRIBUTE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTLOG( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       obj->setAttribute( ( Qt::WidgetAttribute ) hb_parni( 1 ), OPBOOL( 2, true ) );
@@ -4108,7 +4108,7 @@ HB_FUNC_STATIC( QWIDGET_SETSHORTCUTAUTOREPEAT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTLOG( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       obj->setShortcutAutoRepeat( PINT( 1 ), OPBOOL( 2, true ) );
@@ -4134,7 +4134,7 @@ HB_FUNC_STATIC( QWIDGET_SETSHORTCUTENABLED )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTLOG( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       obj->setShortcutEnabled( PINT( 1 ), OPBOOL( 2, true ) );

@@ -53,7 +53,7 @@ QKeyEvent( QEvent::Type type, int key, Qt::KeyboardModifiers modifiers, const QS
 */
 HB_FUNC_STATIC( QKEYEVENT_NEW )
 {
-  if( ISBETWEEN( 3, 6 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISOPTCHAR( 4 ) && ISOPTLOG( 5 ) && ISOPTNUM( 6 ) )
+  if( ISBETWEEN( 3, 6 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISOPTCHAR( 4 ) && ( ISLOG( 5 ) || ISNIL( 5 ) ) && ISOPTNUM( 6 ) )
   {
     QKeyEvent * obj = new QKeyEvent( ( QEvent::Type ) hb_parni( 1 ), PINT( 2 ), ( Qt::KeyboardModifiers ) hb_parni( 3 ), OPQSTRING( 4, QString() ), OPBOOL( 5, false ), OPUSHORT( 6, 1 ) );
     Qt4xHb::returnNewObject( obj, false );
@@ -303,7 +303,7 @@ static QKeyEvent * createExtendedKeyEvent( QEvent::Type type, int key, Qt::Keybo
 HB_FUNC_STATIC( QKEYEVENT_CREATEEXTENDEDKEYEVENT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 6, 9 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) && ISNUM( 6 ) && ISOPTCHAR( 7 ) && ISOPTLOG( 8 ) && ISOPTNUM( 9 ) )
+  if( ISBETWEEN( 6, 9 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) && ISNUM( 6 ) && ISOPTCHAR( 7 ) && ( ISLOG( 8 ) || ISNIL( 8 ) ) && ISOPTNUM( 9 ) )
   {
 #endif
     QKeyEvent * ptr = QKeyEvent::createExtendedKeyEvent( ( QEvent::Type ) hb_parni( 1 ), PINT( 2 ), ( Qt::KeyboardModifiers ) hb_parni( 3 ), PQUINT32( 4 ), PQUINT32( 5 ), PQUINT32( 6 ), OPQSTRING( 7, QString() ), OPBOOL( 8, false ), OPUSHORT( 9, 1 ) );

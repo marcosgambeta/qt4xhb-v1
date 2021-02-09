@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QXMLREADER_FEATURE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ISOPTLOG( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       bool par2;
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QXMLREADER_PROPERTY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ISOPTLOG( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       bool par2;

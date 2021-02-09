@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QTCPSERVER_WAITFORNEWCONNECTION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 2 ) && ISOPTNUM( 1 ) && ISOPTLOG( 2 ) )
+    if( ISBETWEEN( 0, 2 ) && ISOPTNUM( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       bool par2;

@@ -1242,7 +1242,7 @@ HB_FUNC_STATIC( QLOCALE_TODOUBLE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ISOPTLOG( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       bool par2;
@@ -1268,7 +1268,7 @@ HB_FUNC_STATIC( QLOCALE_TOFLOAT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ISOPTLOG( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       bool par2;
@@ -1294,7 +1294,7 @@ HB_FUNC_STATIC( QLOCALE_TOINT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ISOPTLOG( 2 ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) && ISOPTNUM( 3 ) )
     {
 #endif
       bool par2;
@@ -1320,7 +1320,7 @@ HB_FUNC_STATIC( QLOCALE_TOLONGLONG )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ISOPTLOG( 2 ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) && ISOPTNUM( 3 ) )
     {
 #endif
       bool par2;
@@ -1370,7 +1370,7 @@ HB_FUNC_STATIC( QLOCALE_TOSHORT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ISOPTLOG( 2 ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) && ISOPTNUM( 3 ) )
     {
 #endif
       bool par2;
@@ -1780,7 +1780,7 @@ HB_FUNC_STATIC( QLOCALE_TOUINT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ISOPTLOG( 2 ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) && ISOPTNUM( 3 ) )
     {
 #endif
       bool par2;
@@ -1806,7 +1806,7 @@ HB_FUNC_STATIC( QLOCALE_TOULONGLONG )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ISOPTLOG( 2 ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) && ISOPTNUM( 3 ) )
     {
 #endif
       bool par2;
@@ -1832,7 +1832,7 @@ HB_FUNC_STATIC( QLOCALE_TOUSHORT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ISOPTLOG( 2 ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) && ISOPTNUM( 3 ) )
     {
 #endif
       bool par2;

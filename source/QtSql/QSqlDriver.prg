@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QSQLDRIVER_FORMATVALUE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQSQLFIELD( 1 ) && ISOPTLOG( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISQSQLFIELD( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       RQSTRING( obj->formatValue( *PQSQLFIELD( 1 ), OPBOOL( 2, false ) ) );

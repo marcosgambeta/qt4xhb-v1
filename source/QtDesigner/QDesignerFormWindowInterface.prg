@@ -858,7 +858,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CLEARSELECTION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ISOPTLOG( 1 ) )
+    if( ISBETWEEN( 0, 1 ) && ( ISLOG( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
       obj->clearSelection( OPBOOL( 1, true ) );
@@ -910,7 +910,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SELECTWIDGET )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQWIDGET( 1 ) && ISOPTLOG( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISQWIDGET( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       obj->selectWidget( PQWIDGET( 1 ), OPBOOL( 2, true ) );
