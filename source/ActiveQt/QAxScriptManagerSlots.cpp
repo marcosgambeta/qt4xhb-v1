@@ -28,8 +28,8 @@ void QAxScriptManagerSlots::error( QAxScript * script, int code, const QString &
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QAXSCRIPTMANAGER" );
-    PHB_ITEM pscript = Qt4xHb::Signals_return_qobject( ( QObject * ) script, "QAXSCRIPT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QAXSCRIPTMANAGER" );
+    PHB_ITEM pscript = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( script ), "QAXSCRIPT" );
     PHB_ITEM pcode = hb_itemPutNI( NULL, code );
     PHB_ITEM pdescription = hb_itemPutC( NULL, QSTRINGTOSTRING( description ) );
     PHB_ITEM psourcePosition = hb_itemPutNI( NULL, sourcePosition );
@@ -48,7 +48,7 @@ void QAxScriptManagerSlots::error( QAxScript * script, int code, const QString &
 
 void QAxScriptManagerSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAxScriptManager * obj = ( QAxScriptManager * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxScriptManager * obj = static_cast< QAxScriptManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

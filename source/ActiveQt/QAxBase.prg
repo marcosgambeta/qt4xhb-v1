@@ -67,7 +67,7 @@ RETURN
 
 HB_FUNC_STATIC( QAXBASE_DELETE )
 {
-  QAxBase * obj = ( QAxBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxBase * obj = static_cast< QAxBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -87,7 +87,7 @@ QVariant asVariant() const
 */
 HB_FUNC_STATIC( QAXBASE_ASVARIANT )
 {
-  QAxBase * obj = ( QAxBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxBase * obj = static_cast< QAxBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -112,7 +112,7 @@ virtual void clear()
 */
 HB_FUNC_STATIC( QAXBASE_CLEAR )
 {
-  QAxBase * obj = ( QAxBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxBase * obj = static_cast< QAxBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -138,7 +138,7 @@ QString control() const
 */
 HB_FUNC_STATIC( QAXBASE_CONTROL )
 {
-  QAxBase * obj = ( QAxBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxBase * obj = static_cast< QAxBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -162,7 +162,7 @@ void disableClassInfo()
 */
 HB_FUNC_STATIC( QAXBASE_DISABLECLASSINFO )
 {
-  QAxBase * obj = ( QAxBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxBase * obj = static_cast< QAxBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -188,7 +188,7 @@ void disableEventSink()
 */
 HB_FUNC_STATIC( QAXBASE_DISABLEEVENTSINK )
 {
-  QAxBase * obj = ( QAxBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxBase * obj = static_cast< QAxBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -214,7 +214,7 @@ void disableMetaObject()
 */
 HB_FUNC_STATIC( QAXBASE_DISABLEMETAOBJECT )
 {
-  QAxBase * obj = ( QAxBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxBase * obj = static_cast< QAxBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -240,11 +240,11 @@ QVariant dynamicCall( const char * function, const QVariant & var1 = QVariant(),
 */
 void QAxBase_dynamicCall1()
 {
-  QAxBase * obj = ( QAxBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxBase * obj = static_cast< QAxBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
-    QVariant * ptr = new QVariant( obj->dynamicCall( PCONSTCHAR( 1 ), ISNIL( 2 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 2 ), ISNIL( 3 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 3 ), ISNIL( 4 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 4 ), ISNIL( 5 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 5 ), ISNIL( 6 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 6 ), ISNIL( 7 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 7 ), ISNIL( 8 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 8 ), ISNIL( 9 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 9 ) ) );
+    QVariant * ptr = new QVariant( obj->dynamicCall( PCONSTCHAR( 1 ), ISNIL( 2 ) ? QVariant() : *static_cast< QVariant * >( Qt4xHb::itemGetPtr( 2 ) ), ISNIL( 3 ) ? QVariant() : *static_cast< QVariant * >( Qt4xHb::itemGetPtr( 3 ) ), ISNIL( 4 ) ? QVariant() : *static_cast< QVariant * >( Qt4xHb::itemGetPtr( 4 ) ), ISNIL( 5 ) ? QVariant() : *static_cast< QVariant * >( Qt4xHb::itemGetPtr( 5 ) ), ISNIL( 6 ) ? QVariant() : *static_cast< QVariant * >( Qt4xHb::itemGetPtr( 6 ) ), ISNIL( 7 ) ? QVariant() : *static_cast< QVariant * >( Qt4xHb::itemGetPtr( 7 ) ), ISNIL( 8 ) ? QVariant() : *static_cast< QVariant * >( Qt4xHb::itemGetPtr( 8 ) ), ISNIL( 9 ) ? QVariant() : *static_cast< QVariant * >( Qt4xHb::itemGetPtr( 9 ) ) ) );
     Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
   }
 }
@@ -254,7 +254,7 @@ QVariant dynamicCall( const char * function, QList<QVariant> & vars )
 */
 void QAxBase_dynamicCall2()
 {
-  QAxBase * obj = ( QAxBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxBase * obj = static_cast< QAxBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -284,7 +284,7 @@ QString generateDocumentation()
 */
 HB_FUNC_STATIC( QAXBASE_GENERATEDOCUMENTATION )
 {
-  QAxBase * obj = ( QAxBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxBase * obj = static_cast< QAxBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -308,7 +308,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QAXBASE_ISNULL )
 {
-  QAxBase * obj = ( QAxBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxBase * obj = static_cast< QAxBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -332,7 +332,7 @@ virtual bool propertyWritable( const char * prop ) const
 */
 HB_FUNC_STATIC( QAXBASE_PROPERTYWRITABLE )
 {
-  QAxBase * obj = ( QAxBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxBase * obj = static_cast< QAxBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -356,11 +356,11 @@ QAxObject * querySubObject( const char * name, const QVariant & var1 = QVariant(
 */
 void QAxBase_querySubObject1()
 {
-  QAxBase * obj = ( QAxBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxBase * obj = static_cast< QAxBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
-    QAxObject * ptr = obj->querySubObject( PCONSTCHAR( 1 ), ISNIL( 2 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 2 ), ISNIL( 3 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 3 ), ISNIL( 4 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 4 ), ISNIL( 5 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 5 ), ISNIL( 6 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 6 ), ISNIL( 7 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 7 ), ISNIL( 8 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 8 ), ISNIL( 9 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 9 ) );
+    QAxObject * ptr = obj->querySubObject( PCONSTCHAR( 1 ), ISNIL( 2 ) ? QVariant() : *static_cast< QVariant * >( Qt4xHb::itemGetPtr( 2 ) ), ISNIL( 3 ) ? QVariant() : *static_cast< QVariant * >( Qt4xHb::itemGetPtr( 3 ) ), ISNIL( 4 ) ? QVariant() : *static_cast< QVariant * >( Qt4xHb::itemGetPtr( 4 ) ), ISNIL( 5 ) ? QVariant() : *static_cast< QVariant * >( Qt4xHb::itemGetPtr( 5 ) ), ISNIL( 6 ) ? QVariant() : *static_cast< QVariant * >( Qt4xHb::itemGetPtr( 6 ) ), ISNIL( 7 ) ? QVariant() : *static_cast< QVariant * >( Qt4xHb::itemGetPtr( 7 ) ), ISNIL( 8 ) ? QVariant() : *static_cast< QVariant * >( Qt4xHb::itemGetPtr( 8 ) ), ISNIL( 9 ) ? QVariant() : *static_cast< QVariant * >( Qt4xHb::itemGetPtr( 9 ) ) );
     Qt4xHb::createReturnQObjectClass( ptr, "QAXOBJECT" );
   }
 }
@@ -370,7 +370,7 @@ QAxObject * querySubObject( const char * name, QList<QVariant> & vars )
 */
 void QAxBase_querySubObject2()
 {
-  QAxBase * obj = ( QAxBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxBase * obj = static_cast< QAxBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -400,7 +400,7 @@ bool setControl( const QString & )
 */
 HB_FUNC_STATIC( QAXBASE_SETCONTROL )
 {
-  QAxBase * obj = ( QAxBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxBase * obj = static_cast< QAxBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -424,7 +424,7 @@ virtual void setPropertyWritable( const char * prop, bool ok )
 */
 HB_FUNC_STATIC( QAXBASE_SETPROPERTYWRITABLE )
 {
-  QAxBase * obj = ( QAxBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxBase * obj = static_cast< QAxBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -450,7 +450,7 @@ QStringList verbs() const
 */
 HB_FUNC_STATIC( QAXBASE_VERBS )
 {
-  QAxBase * obj = ( QAxBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxBase * obj = static_cast< QAxBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QAXBASE_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QAXBASE_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QAXBINDABLE_NEW )
 
 HB_FUNC_STATIC( QAXBINDABLE_DELETE )
 {
-  QAxBindable * obj = ( QAxBindable * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxBindable * obj = static_cast< QAxBindable * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -90,7 +90,7 @@ virtual QAxAggregated * createAggregate()
 */
 HB_FUNC_STATIC( QAXBINDABLE_CREATEAGGREGATE )
 {
-  QAxBindable * obj = ( QAxBindable * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxBindable * obj = static_cast< QAxBindable * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -115,7 +115,7 @@ virtual bool readData( QIODevice * source, const QString & format )
 */
 HB_FUNC_STATIC( QAXBINDABLE_READDATA )
 {
-  QAxBindable * obj = ( QAxBindable * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxBindable * obj = static_cast< QAxBindable * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -139,12 +139,12 @@ void reportError( int code, const QString & src, const QString & desc, const QSt
 */
 HB_FUNC_STATIC( QAXBINDABLE_REPORTERROR )
 {
-  QAxBindable * obj = ( QAxBindable * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxBindable * obj = static_cast< QAxBindable * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 3, 4 ) && ISNUM( 1 ) && ISCHAR( 2 ) && ISCHAR( 3 ) && ISOPTCHAR( 4 ) )
+    if( ISBETWEEN( 3, 4 ) && ISNUM( 1 ) && ISCHAR( 2 ) && ISCHAR( 3 ) && ( ISCHAR( 4 ) || ISNIL( 4 ) ) )
     {
 #endif
       obj->reportError( PINT( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), OPQSTRING( 4, QString() ) );
@@ -165,7 +165,7 @@ virtual bool writeData( QIODevice * sink )
 */
 HB_FUNC_STATIC( QAXBINDABLE_WRITEDATA )
 {
-  QAxBindable * obj = ( QAxBindable * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxBindable * obj = static_cast< QAxBindable * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QAXBINDABLE_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QAXBINDABLE_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

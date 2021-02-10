@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_NEW )
 
 HB_FUNC_STATIC( QAXSCRIPTENGINE_DELETE )
 {
-  QAxScriptEngine * obj = ( QAxScriptEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxScriptEngine * obj = static_cast< QAxScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -86,7 +86,7 @@ void addItem( const QString & name )
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_ADDITEM )
 {
-  QAxScriptEngine * obj = ( QAxScriptEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxScriptEngine * obj = static_cast< QAxScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -112,7 +112,7 @@ bool hasIntrospection() const
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_HASINTROSPECTION )
 {
-  QAxScriptEngine * obj = ( QAxScriptEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxScriptEngine * obj = static_cast< QAxScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -136,7 +136,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_ISVALID )
 {
-  QAxScriptEngine * obj = ( QAxScriptEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxScriptEngine * obj = static_cast< QAxScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -160,7 +160,7 @@ QString scriptLanguage() const
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_SCRIPTLANGUAGE )
 {
-  QAxScriptEngine * obj = ( QAxScriptEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxScriptEngine * obj = static_cast< QAxScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -184,7 +184,7 @@ void setState( QAxScriptEngine::State st )
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_SETSTATE )
 {
-  QAxScriptEngine * obj = ( QAxScriptEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxScriptEngine * obj = static_cast< QAxScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -210,7 +210,7 @@ QAxScriptEngine::State state() const
 */
 HB_FUNC_STATIC( QAXSCRIPTENGINE_STATE )
 {
-  QAxScriptEngine * obj = ( QAxScriptEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxScriptEngine * obj = static_cast< QAxScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

@@ -28,7 +28,7 @@ void QAxWidgetSlots::exception( int code, const QString & source, const QString 
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QAXWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QAXWIDGET" );
     PHB_ITEM pcode = hb_itemPutNI( NULL, code );
     PHB_ITEM psource = hb_itemPutC( NULL, QSTRINGTOSTRING( source ) );
     PHB_ITEM pdesc = hb_itemPutC( NULL, QSTRINGTOSTRING( desc ) );
@@ -52,7 +52,7 @@ void QAxWidgetSlots::propertyChanged( const QString & name )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QAXWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QAXWIDGET" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING( name ) );
 
     hb_vmEvalBlockV( cb, 2, psender, pname );
@@ -70,10 +70,10 @@ void QAxWidgetSlots::signal( const QString & name, int argc, void * argv )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QAXWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QAXWIDGET" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING( name ) );
     PHB_ITEM pargc = hb_itemPutNI( NULL, argc );
-    PHB_ITEM pargv = hb_itemPutPtr( NULL, ( void * ) argv );
+    PHB_ITEM pargv = hb_itemPutPtr( NULL, static_cast< void * >( argv ) );
 
     hb_vmEvalBlockV( cb, 4, psender, pname, pargc, pargv );
 
@@ -86,7 +86,7 @@ void QAxWidgetSlots::signal( const QString & name, int argc, void * argv )
 
 void QAxWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAxWidget * obj = ( QAxWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAxWidget * obj = static_cast< QAxWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
