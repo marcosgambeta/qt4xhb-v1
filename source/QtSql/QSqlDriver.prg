@@ -77,7 +77,7 @@ RETURN
 
 HB_FUNC_STATIC( QSQLDRIVER_DELETE )
 {
-  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -99,7 +99,7 @@ virtual bool beginTransaction()
 */
 HB_FUNC_STATIC( QSQLDRIVER_BEGINTRANSACTION )
 {
-  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -123,7 +123,7 @@ virtual void close() = 0
 */
 HB_FUNC_STATIC( QSQLDRIVER_CLOSE )
 {
-  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -149,7 +149,7 @@ virtual bool commitTransaction()
 */
 HB_FUNC_STATIC( QSQLDRIVER_COMMITTRANSACTION )
 {
-  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -173,7 +173,7 @@ virtual QSqlResult * createResult() const = 0
 */
 HB_FUNC_STATIC( QSQLDRIVER_CREATERESULT )
 {
-  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -198,7 +198,7 @@ virtual QString escapeIdentifier( const QString & identifier, QSqlDriver::Identi
 */
 HB_FUNC_STATIC( QSQLDRIVER_ESCAPEIDENTIFIER )
 {
-  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -222,7 +222,7 @@ virtual QString formatValue( const QSqlField & field, bool trimStrings = false )
 */
 HB_FUNC_STATIC( QSQLDRIVER_FORMATVALUE )
 {
-  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -246,7 +246,7 @@ virtual QVariant handle() const
 */
 HB_FUNC_STATIC( QSQLDRIVER_HANDLE )
 {
-  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -271,7 +271,7 @@ virtual bool hasFeature( QSqlDriver::DriverFeature feature ) const = 0
 */
 HB_FUNC_STATIC( QSQLDRIVER_HASFEATURE )
 {
-  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -295,7 +295,7 @@ bool isIdentifierEscaped( const QString & identifier, QSqlDriver::IdentifierType
 */
 HB_FUNC_STATIC( QSQLDRIVER_ISIDENTIFIERESCAPED )
 {
-  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -319,7 +319,7 @@ virtual bool isOpen() const
 */
 HB_FUNC_STATIC( QSQLDRIVER_ISOPEN )
 {
-  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -343,7 +343,7 @@ bool isOpenError() const
 */
 HB_FUNC_STATIC( QSQLDRIVER_ISOPENERROR )
 {
-  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -367,7 +367,7 @@ QSqlError lastError() const
 */
 HB_FUNC_STATIC( QSQLDRIVER_LASTERROR )
 {
-  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -392,7 +392,7 @@ QSql::NumericalPrecisionPolicy numericalPrecisionPolicy() const
 */
 HB_FUNC_STATIC( QSQLDRIVER_NUMERICALPRECISIONPOLICY )
 {
-  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -416,12 +416,12 @@ virtual bool open( const QString & db, const QString & user = QString(), const Q
 */
 HB_FUNC_STATIC( QSQLDRIVER_OPEN )
 {
-  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 6 ) && ISCHAR( 1 ) && ISOPTCHAR( 2 ) && ISOPTCHAR( 3 ) && ISOPTCHAR( 4 ) && ISOPTNUM( 5 ) && ISOPTCHAR( 6 ) )
+    if( ISBETWEEN( 1, 6 ) && ISCHAR( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) && ( ISCHAR( 3 ) || ISNIL( 3 ) ) && ( ISCHAR( 4 ) || ISNIL( 4 ) ) && ( ISNUM( 5 ) || ISNIL( 5 ) ) && ( ISCHAR( 6 ) || ISNIL( 6 ) ) )
     {
 #endif
       RBOOL( obj->open( PQSTRING( 1 ), OPQSTRING( 2, QString() ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ), OPINT( 5, -1 ), OPQSTRING( 6, QString() ) ) );
@@ -440,7 +440,7 @@ virtual QSqlIndex primaryIndex( const QString & tableName ) const
 */
 HB_FUNC_STATIC( QSQLDRIVER_PRIMARYINDEX )
 {
-  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -465,7 +465,7 @@ virtual QSqlRecord record( const QString & tableName ) const
 */
 HB_FUNC_STATIC( QSQLDRIVER_RECORD )
 {
-  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -490,7 +490,7 @@ virtual bool rollbackTransaction()
 */
 HB_FUNC_STATIC( QSQLDRIVER_ROLLBACKTRANSACTION )
 {
-  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -514,7 +514,7 @@ void setNumericalPrecisionPolicy( QSql::NumericalPrecisionPolicy precisionPolicy
 */
 HB_FUNC_STATIC( QSQLDRIVER_SETNUMERICALPRECISIONPOLICY )
 {
-  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -540,7 +540,7 @@ virtual QString sqlStatement( QSqlDriver::StatementType type, const QString & ta
 */
 HB_FUNC_STATIC( QSQLDRIVER_SQLSTATEMENT )
 {
-  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -564,7 +564,7 @@ QString stripDelimiters( const QString & identifier, QSqlDriver::IdentifierType 
 */
 HB_FUNC_STATIC( QSQLDRIVER_STRIPDELIMITERS )
 {
-  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -588,7 +588,7 @@ bool subscribeToNotification( const QString & name )
 */
 HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBETONOTIFICATION )
 {
-  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -612,7 +612,7 @@ QStringList subscribedToNotifications() const
 */
 HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBEDTONOTIFICATIONS )
 {
-  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -636,7 +636,7 @@ virtual QStringList tables( QSql::TableType tableType ) const
 */
 HB_FUNC_STATIC( QSQLDRIVER_TABLES )
 {
-  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -660,7 +660,7 @@ bool unsubscribeFromNotification( const QString & name )
 */
 HB_FUNC_STATIC( QSQLDRIVER_UNSUBSCRIBEFROMNOTIFICATION )
 {
-  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

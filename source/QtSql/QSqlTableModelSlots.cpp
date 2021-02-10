@@ -28,7 +28,7 @@ void QSqlTableModelSlots::beforeDelete( int row )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSQLTABLEMODEL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSQLTABLEMODEL" );
     PHB_ITEM prow = hb_itemPutNI( NULL, row );
 
     hb_vmEvalBlockV( cb, 2, psender, prow );
@@ -46,7 +46,7 @@ void QSqlTableModelSlots::beforeInsert( QSqlRecord & record )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSQLTABLEMODEL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSQLTABLEMODEL" );
     PHB_ITEM precord = Qt4xHb::Signals_return_object( ( void * ) &record, "QSQLRECORD" );
 
     hb_vmEvalBlockV( cb, 2, psender, precord );
@@ -64,7 +64,7 @@ void QSqlTableModelSlots::beforeUpdate( int row, QSqlRecord & record )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSQLTABLEMODEL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSQLTABLEMODEL" );
     PHB_ITEM prow = hb_itemPutNI( NULL, row );
     PHB_ITEM precord = Qt4xHb::Signals_return_object( ( void * ) &record, "QSQLRECORD" );
 
@@ -84,7 +84,7 @@ void QSqlTableModelSlots::primeInsert( int row, QSqlRecord & record )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSQLTABLEMODEL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSQLTABLEMODEL" );
     PHB_ITEM prow = hb_itemPutNI( NULL, row );
     PHB_ITEM precord = Qt4xHb::Signals_return_object( ( void * ) &record, "QSQLRECORD" );
 
@@ -98,7 +98,7 @@ void QSqlTableModelSlots::primeInsert( int row, QSqlRecord & record )
 
 void QSqlTableModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSqlTableModel * obj = ( QSqlTableModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlTableModel * obj = static_cast< QSqlTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_NEW )
 
 HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_DELETE )
 {
-  QSqlRelationalDelegate * obj = ( QSqlRelationalDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlRelationalDelegate * obj = static_cast< QSqlRelationalDelegate * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -84,7 +84,7 @@ virtual QWidget * createEditor( QWidget * parent, const QStyleOptionViewItem & o
 */
 HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_CREATEEDITOR )
 {
-  QSqlRelationalDelegate * obj = ( QSqlRelationalDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlRelationalDelegate * obj = static_cast< QSqlRelationalDelegate * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -109,7 +109,7 @@ virtual void setEditorData( QWidget * editor, const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_SETEDITORDATA )
 {
-  QSqlRelationalDelegate * obj = ( QSqlRelationalDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlRelationalDelegate * obj = static_cast< QSqlRelationalDelegate * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -135,7 +135,7 @@ virtual void setModelData( QWidget * editor, QAbstractItemModel * model, const Q
 */
 HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_SETMODELDATA )
 {
-  QSqlRelationalDelegate * obj = ( QSqlRelationalDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlRelationalDelegate * obj = static_cast< QSqlRelationalDelegate * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

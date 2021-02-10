@@ -28,7 +28,7 @@ void QSqlDriverSlots::notification( const QString & name )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSQLDRIVER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSQLDRIVER" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING( name ) );
 
     hb_vmEvalBlockV( cb, 2, psender, pname );
@@ -40,7 +40,7 @@ void QSqlDriverSlots::notification( const QString & name )
 
 void QSqlDriverSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSqlDriver * obj = ( QSqlDriver * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

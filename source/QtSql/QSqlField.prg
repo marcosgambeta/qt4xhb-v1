@@ -77,7 +77,7 @@ QSqlField( const QString & fieldName = QString(), QVariant::Type type = QVariant
 */
 void QSqlField_new1()
 {
-  QSqlField * obj = new QSqlField( OPQSTRING( 1, QString() ), ISNIL( 2 )? ( QVariant::Type ) QVariant::Invalid : ( QVariant::Type ) hb_parni( 2 ) );
+  QSqlField * obj = new QSqlField( OPQSTRING( 1, QString() ), ISNIL( 2 ) ? ( QVariant::Type ) QVariant::Invalid : ( QVariant::Type ) hb_parni( 2 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QSQLFIELD_NEW )
 
 HB_FUNC_STATIC( QSQLFIELD_DELETE )
 {
-  QSqlField * obj = ( QSqlField * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlField * obj = static_cast< QSqlField * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -128,7 +128,7 @@ void clear()
 */
 HB_FUNC_STATIC( QSQLFIELD_CLEAR )
 {
-  QSqlField * obj = ( QSqlField * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlField * obj = static_cast< QSqlField * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -154,7 +154,7 @@ QVariant defaultValue() const
 */
 HB_FUNC_STATIC( QSQLFIELD_DEFAULTVALUE )
 {
-  QSqlField * obj = ( QSqlField * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlField * obj = static_cast< QSqlField * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -179,7 +179,7 @@ bool isAutoValue() const
 */
 HB_FUNC_STATIC( QSQLFIELD_ISAUTOVALUE )
 {
-  QSqlField * obj = ( QSqlField * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlField * obj = static_cast< QSqlField * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -203,7 +203,7 @@ bool isGenerated() const
 */
 HB_FUNC_STATIC( QSQLFIELD_ISGENERATED )
 {
-  QSqlField * obj = ( QSqlField * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlField * obj = static_cast< QSqlField * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -227,7 +227,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QSQLFIELD_ISNULL )
 {
-  QSqlField * obj = ( QSqlField * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlField * obj = static_cast< QSqlField * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -251,7 +251,7 @@ bool isReadOnly() const
 */
 HB_FUNC_STATIC( QSQLFIELD_ISREADONLY )
 {
-  QSqlField * obj = ( QSqlField * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlField * obj = static_cast< QSqlField * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -275,7 +275,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QSQLFIELD_ISVALID )
 {
-  QSqlField * obj = ( QSqlField * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlField * obj = static_cast< QSqlField * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -299,7 +299,7 @@ int length() const
 */
 HB_FUNC_STATIC( QSQLFIELD_LENGTH )
 {
-  QSqlField * obj = ( QSqlField * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlField * obj = static_cast< QSqlField * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -323,7 +323,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QSQLFIELD_NAME )
 {
-  QSqlField * obj = ( QSqlField * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlField * obj = static_cast< QSqlField * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -347,7 +347,7 @@ int precision() const
 */
 HB_FUNC_STATIC( QSQLFIELD_PRECISION )
 {
-  QSqlField * obj = ( QSqlField * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlField * obj = static_cast< QSqlField * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -371,7 +371,7 @@ QSqlField::RequiredStatus requiredStatus() const
 */
 HB_FUNC_STATIC( QSQLFIELD_REQUIREDSTATUS )
 {
-  QSqlField * obj = ( QSqlField * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlField * obj = static_cast< QSqlField * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -395,7 +395,7 @@ void setAutoValue( bool autoVal )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETAUTOVALUE )
 {
-  QSqlField * obj = ( QSqlField * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlField * obj = static_cast< QSqlField * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -421,7 +421,7 @@ void setDefaultValue( const QVariant & value )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETDEFAULTVALUE )
 {
-  QSqlField * obj = ( QSqlField * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlField * obj = static_cast< QSqlField * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -447,7 +447,7 @@ void setGenerated( bool gen )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETGENERATED )
 {
-  QSqlField * obj = ( QSqlField * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlField * obj = static_cast< QSqlField * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -473,7 +473,7 @@ void setLength( int fieldLength )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETLENGTH )
 {
-  QSqlField * obj = ( QSqlField * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlField * obj = static_cast< QSqlField * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -499,7 +499,7 @@ void setName( const QString & name )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETNAME )
 {
-  QSqlField * obj = ( QSqlField * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlField * obj = static_cast< QSqlField * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -525,7 +525,7 @@ void setPrecision( int precision )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETPRECISION )
 {
-  QSqlField * obj = ( QSqlField * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlField * obj = static_cast< QSqlField * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -551,7 +551,7 @@ void setReadOnly( bool readOnly )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETREADONLY )
 {
-  QSqlField * obj = ( QSqlField * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlField * obj = static_cast< QSqlField * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -577,7 +577,7 @@ void setRequired( bool required )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETREQUIRED )
 {
-  QSqlField * obj = ( QSqlField * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlField * obj = static_cast< QSqlField * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -603,7 +603,7 @@ void setRequiredStatus( QSqlField::RequiredStatus required )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETREQUIREDSTATUS )
 {
-  QSqlField * obj = ( QSqlField * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlField * obj = static_cast< QSqlField * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -629,7 +629,7 @@ void setType( QVariant::Type type )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETTYPE )
 {
-  QSqlField * obj = ( QSqlField * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlField * obj = static_cast< QSqlField * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -655,7 +655,7 @@ void setValue( const QVariant & value )
 */
 HB_FUNC_STATIC( QSQLFIELD_SETVALUE )
 {
-  QSqlField * obj = ( QSqlField * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlField * obj = static_cast< QSqlField * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -681,7 +681,7 @@ QVariant::Type type() const
 */
 HB_FUNC_STATIC( QSQLFIELD_TYPE )
 {
-  QSqlField * obj = ( QSqlField * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlField * obj = static_cast< QSqlField * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -705,7 +705,7 @@ QVariant value() const
 */
 HB_FUNC_STATIC( QSQLFIELD_VALUE )
 {
-  QSqlField * obj = ( QSqlField * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSqlField * obj = static_cast< QSqlField * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -731,7 +731,7 @@ HB_FUNC_STATIC( QSQLFIELD_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -740,7 +740,7 @@ HB_FUNC_STATIC( QSQLFIELD_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
