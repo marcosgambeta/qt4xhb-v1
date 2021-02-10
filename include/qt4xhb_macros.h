@@ -28,12 +28,6 @@
 #include "qt4xhb_macros_qtxml.h"
 #include "qt4xhb_macros_qtxmlpatterns.h"
 
-#define ISOPTNUM(n) (ISNUM(n)||ISNIL(n))
-#define ISOPTCHAR(n) (ISCHAR(n)||ISNIL(n))
-#define ISOPTPOINTER(n) (ISPOINTER(n)||ISNIL(n))
-#define ISOPTOBJECT(n) (ISOBJECT(n)||ISNIL(n))
-#define ISOPTARRAY(n) (ISARRAY(n)||ISNIL(n))
-
 #define ISBETWEEN(a,b)                                      hb_pcount() >= a && hb_pcount() <= b
 #define ISNUMPAR(a)                                         hb_pcount() == a
 #define INHERITS(a,b)                                       Qt4xHb::isObjectDerivedFrom(a,b)
@@ -44,16 +38,8 @@
 #define ISQLATIN1STRING(n)                                  Qt4xHb::isObjectDerivedFrom(n,"QLatin1String")
 #define PQLATIN1STRING(n)                                   (QLatin1String *) Qt4xHb::itemGetPtr(n)
 #define PQXMLSTREAMNAMESPACEDECLARATIONS(n)                 (QXmlStreamNamespaceDeclarations *) Qt4xHb::itemGetPtr(n)
-#define ISQSTYLEOPTIONVIEWITEM(n)                           Qt4xHb::isObjectDerivedFrom(n,"QStyleOptionViewItem")
-#define PQSTYLEOPTIONVIEWITEM(n)                            (QStyleOptionViewItem *) Qt4xHb::itemGetPtr(n)
 #define ISQMATRIX(n)                                        Qt4xHb::isObjectDerivedFrom(n,"QMatrix")
 #define PQMATRIX(n)                                         (QMatrix *) Qt4xHb::itemGetPtr(n)
-#define ISQSTYLEOPTION(n)                                   Qt4xHb::isObjectDerivedFrom(n,"QStyleOption")
-#define PQSTYLEOPTION(n)                                    (QStyleOption *) Qt4xHb::itemGetPtr(n)
-#define ISQSTYLEOPTIONCOMPLEX(n)                            Qt4xHb::isObjectDerivedFrom(n,"QStyleOptionComplex")
-#define PQSTYLEOPTIONCOMPLEX(n)                             (QStyleOptionComplex *) Qt4xHb::itemGetPtr(n)
-#define ISQSTYLEOPTIONGRAPHICSITEM(n)                       Qt4xHb::isObjectDerivedFrom(n,"QStyleOptionGraphicsItem")
-#define PQSTYLEOPTIONGRAPHICSITEM(n)                        (QStyleOptionGraphicsItem *) Qt4xHb::itemGetPtr(n)
 #define ISQQUATERNION(n)                                    Qt4xHb::isObjectDerivedFrom(n,"QQuaternion")
 #define PQQUATERNION(n)                                     (QQuaternion *) Qt4xHb::itemGetPtr(n)
 #define ISQPLATFORMGLCONTEXT(n)                             Qt4xHb::isObjectDerivedFrom(n,"QPlatformGLContext")
