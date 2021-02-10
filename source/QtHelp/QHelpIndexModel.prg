@@ -50,7 +50,7 @@ void createIndex( const QString & customFilterName )
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_CREATEINDEX )
 {
-  QHelpIndexModel * obj = ( QHelpIndexModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpIndexModel * obj = static_cast< QHelpIndexModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -76,12 +76,12 @@ QModelIndex filter( const QString & filter, const QString & wildcard = QString()
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_FILTER )
 {
-  QHelpIndexModel * obj = ( QHelpIndexModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpIndexModel * obj = static_cast< QHelpIndexModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ISOPTCHAR( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->filter( PQSTRING( 1 ), OPQSTRING( 2, QString() ) ) );
@@ -101,7 +101,7 @@ bool isCreatingIndex() const
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_ISCREATINGINDEX )
 {
-  QHelpIndexModel * obj = ( QHelpIndexModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpIndexModel * obj = static_cast< QHelpIndexModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

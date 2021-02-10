@@ -47,7 +47,7 @@ QModelIndex indexOf( const QUrl & link )
 */
 HB_FUNC_STATIC( QHELPCONTENTWIDGET_INDEXOF )
 {
-  QHelpContentWidget * obj = ( QHelpContentWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpContentWidget * obj = static_cast< QHelpContentWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

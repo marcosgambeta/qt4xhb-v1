@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_NEW )
 
 HB_FUNC_STATIC( QHELPENGINECORE_DELETE )
 {
-  QHelpEngineCore * obj = ( QHelpEngineCore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = static_cast< QHelpEngineCore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -115,7 +115,7 @@ bool addCustomFilter( const QString & filterName, const QStringList & attributes
 */
 HB_FUNC_STATIC( QHELPENGINECORE_ADDCUSTOMFILTER )
 {
-  QHelpEngineCore * obj = ( QHelpEngineCore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = static_cast< QHelpEngineCore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -139,7 +139,7 @@ bool autoSaveFilter() const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_AUTOSAVEFILTER )
 {
-  QHelpEngineCore * obj = ( QHelpEngineCore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = static_cast< QHelpEngineCore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -163,7 +163,7 @@ QString collectionFile() const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_COLLECTIONFILE )
 {
-  QHelpEngineCore * obj = ( QHelpEngineCore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = static_cast< QHelpEngineCore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -187,7 +187,7 @@ bool copyCollectionFile( const QString & fileName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_COPYCOLLECTIONFILE )
 {
-  QHelpEngineCore * obj = ( QHelpEngineCore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = static_cast< QHelpEngineCore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -211,7 +211,7 @@ QString currentFilter() const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_CURRENTFILTER )
 {
-  QHelpEngineCore * obj = ( QHelpEngineCore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = static_cast< QHelpEngineCore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -235,7 +235,7 @@ QStringList customFilters() const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMFILTERS )
 {
-  QHelpEngineCore * obj = ( QHelpEngineCore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = static_cast< QHelpEngineCore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -259,7 +259,7 @@ QVariant customValue( const QString & key, const QVariant & defaultValue = QVari
 */
 HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMVALUE )
 {
-  QHelpEngineCore * obj = ( QHelpEngineCore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = static_cast< QHelpEngineCore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMVALUE )
     if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISQVARIANT( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->customValue( PQSTRING( 1 ), ISNIL( 2 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 2 ) ) );
+      QVariant * ptr = new QVariant( obj->customValue( PQSTRING( 1 ), ISNIL( 2 ) ? QVariant() : *static_cast< QVariant * >( Qt4xHb::itemGetPtr( 2 ) ) ) );
       Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -284,7 +284,7 @@ QString documentationFileName( const QString & namespaceName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_DOCUMENTATIONFILENAME )
 {
-  QHelpEngineCore * obj = ( QHelpEngineCore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = static_cast< QHelpEngineCore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -308,7 +308,7 @@ QString error() const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_ERROR )
 {
-  QHelpEngineCore * obj = ( QHelpEngineCore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = static_cast< QHelpEngineCore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -332,7 +332,7 @@ QByteArray fileData( const QUrl & url ) const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_FILEDATA )
 {
-  QHelpEngineCore * obj = ( QHelpEngineCore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = static_cast< QHelpEngineCore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -357,12 +357,12 @@ QList<QUrl> files( const QString namespaceName, const QStringList & filterAttrib
 */
 HB_FUNC_STATIC( QHELPENGINECORE_FILES )
 {
-  QHelpEngineCore * obj = ( QHelpEngineCore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = static_cast< QHelpEngineCore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 3 ) && ISCHAR( 1 ) && ISARRAY( 2 ) && ISOPTCHAR( 3 ) )
+    if( ISBETWEEN( 2, 3 ) && ISCHAR( 1 ) && ISARRAY( 2 ) && ( ISCHAR( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
       QList<QUrl> list = obj->files( PQSTRING( 1 ), PQSTRINGLIST( 2 ), OPQSTRING( 3, QString() ) );
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QUrl * ) new QUrl( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QUrl * >( new QUrl( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -409,7 +409,7 @@ QStringList filterAttributes() const
 */
 void QHelpEngineCore_filterAttributes1()
 {
-  QHelpEngineCore * obj = ( QHelpEngineCore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = static_cast< QHelpEngineCore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -422,7 +422,7 @@ QStringList filterAttributes( const QString & filterName ) const
 */
 void QHelpEngineCore_filterAttributes2()
 {
-  QHelpEngineCore * obj = ( QHelpEngineCore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = static_cast< QHelpEngineCore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -451,7 +451,7 @@ QUrl findFile( const QUrl & url ) const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_FINDFILE )
 {
-  QHelpEngineCore * obj = ( QHelpEngineCore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = static_cast< QHelpEngineCore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -476,7 +476,7 @@ bool registerDocumentation( const QString & documentationFileName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_REGISTERDOCUMENTATION )
 {
-  QHelpEngineCore * obj = ( QHelpEngineCore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = static_cast< QHelpEngineCore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -500,7 +500,7 @@ QStringList registeredDocumentations() const
 */
 HB_FUNC_STATIC( QHELPENGINECORE_REGISTEREDDOCUMENTATIONS )
 {
-  QHelpEngineCore * obj = ( QHelpEngineCore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = static_cast< QHelpEngineCore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -524,7 +524,7 @@ bool removeCustomFilter( const QString & filterName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_REMOVECUSTOMFILTER )
 {
-  QHelpEngineCore * obj = ( QHelpEngineCore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = static_cast< QHelpEngineCore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -548,7 +548,7 @@ bool removeCustomValue( const QString & key )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_REMOVECUSTOMVALUE )
 {
-  QHelpEngineCore * obj = ( QHelpEngineCore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = static_cast< QHelpEngineCore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -572,7 +572,7 @@ void setAutoSaveFilter( bool save )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_SETAUTOSAVEFILTER )
 {
-  QHelpEngineCore * obj = ( QHelpEngineCore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = static_cast< QHelpEngineCore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -598,7 +598,7 @@ void setCollectionFile( const QString & fileName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_SETCOLLECTIONFILE )
 {
-  QHelpEngineCore * obj = ( QHelpEngineCore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = static_cast< QHelpEngineCore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -624,7 +624,7 @@ void setCurrentFilter( const QString & filterName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_SETCURRENTFILTER )
 {
-  QHelpEngineCore * obj = ( QHelpEngineCore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = static_cast< QHelpEngineCore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -650,7 +650,7 @@ bool setCustomValue( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_SETCUSTOMVALUE )
 {
-  QHelpEngineCore * obj = ( QHelpEngineCore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = static_cast< QHelpEngineCore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -674,7 +674,7 @@ bool setupData()
 */
 HB_FUNC_STATIC( QHELPENGINECORE_SETUPDATA )
 {
-  QHelpEngineCore * obj = ( QHelpEngineCore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = static_cast< QHelpEngineCore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -698,7 +698,7 @@ bool unregisterDocumentation( const QString & namespaceName )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_UNREGISTERDOCUMENTATION )
 {
-  QHelpEngineCore * obj = ( QHelpEngineCore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngineCore * obj = static_cast< QHelpEngineCore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

@@ -28,7 +28,7 @@ void QHelpContentWidgetSlots::linkActivated( const QUrl & link )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QHELPCONTENTWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QHELPCONTENTWIDGET" );
     PHB_ITEM plink = Qt4xHb::Signals_return_object( ( void * ) &link, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, plink );
@@ -40,7 +40,7 @@ void QHelpContentWidgetSlots::linkActivated( const QUrl & link )
 
 void QHelpContentWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpContentWidget * obj = ( QHelpContentWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpContentWidget * obj = static_cast< QHelpContentWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

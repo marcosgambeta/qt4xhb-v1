@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_NEW )
 
 HB_FUNC_STATIC( QHELPSEARCHENGINE_DELETE )
 {
-  QHelpSearchEngine * obj = ( QHelpSearchEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpSearchEngine * obj = static_cast< QHelpSearchEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -99,7 +99,7 @@ int hitCount() const
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_HITCOUNT )
 {
-  QHelpSearchEngine * obj = ( QHelpSearchEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpSearchEngine * obj = static_cast< QHelpSearchEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -123,7 +123,7 @@ QList<QHelpSearchQuery> query() const
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERY )
 {
-  QHelpSearchEngine * obj = ( QHelpSearchEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpSearchEngine * obj = static_cast< QHelpSearchEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERY )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QHelpSearchQuery * ) new QHelpSearchQuery( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QHelpSearchQuery * >( new QHelpSearchQuery( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -175,7 +175,7 @@ QHelpSearchQueryWidget * queryWidget()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERYWIDGET )
 {
-  QHelpSearchEngine * obj = ( QHelpSearchEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpSearchEngine * obj = static_cast< QHelpSearchEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -200,7 +200,7 @@ QHelpSearchResultWidget * resultWidget()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_RESULTWIDGET )
 {
-  QHelpSearchEngine * obj = ( QHelpSearchEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpSearchEngine * obj = static_cast< QHelpSearchEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -225,7 +225,7 @@ void cancelIndexing()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELINDEXING )
 {
-  QHelpSearchEngine * obj = ( QHelpSearchEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpSearchEngine * obj = static_cast< QHelpSearchEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -251,7 +251,7 @@ void cancelSearching()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELSEARCHING )
 {
-  QHelpSearchEngine * obj = ( QHelpSearchEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpSearchEngine * obj = static_cast< QHelpSearchEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -277,7 +277,7 @@ void reindexDocumentation()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_REINDEXDOCUMENTATION )
 {
-  QHelpSearchEngine * obj = ( QHelpSearchEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpSearchEngine * obj = static_cast< QHelpSearchEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -303,7 +303,7 @@ void search( const QList<QHelpSearchQuery> & queryList )
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_SEARCH )
 {
-  QHelpSearchEngine * obj = ( QHelpSearchEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpSearchEngine * obj = static_cast< QHelpSearchEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_SEARCH )
       int nLen1 = hb_arrayLen( aList1 );
       for( int i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << *( QHelpSearchQuery * ) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+        par1 << *static_cast< QHelpSearchQuery * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
       }
       obj->search( par1 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -58,7 +58,7 @@ RETURN
 
 HB_FUNC_STATIC( QHELPCONTENTITEM_DELETE )
 {
-  QHelpContentItem * obj = ( QHelpContentItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpContentItem * obj = static_cast< QHelpContentItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -78,7 +78,7 @@ QHelpContentItem * child( int row ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_CHILD )
 {
-  QHelpContentItem * obj = ( QHelpContentItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpContentItem * obj = static_cast< QHelpContentItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -103,7 +103,7 @@ int childCount() const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDCOUNT )
 {
-  QHelpContentItem * obj = ( QHelpContentItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpContentItem * obj = static_cast< QHelpContentItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -127,7 +127,7 @@ int childPosition( QHelpContentItem * child ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDPOSITION )
 {
-  QHelpContentItem * obj = ( QHelpContentItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpContentItem * obj = static_cast< QHelpContentItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -151,7 +151,7 @@ QHelpContentItem * parent() const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_PARENT )
 {
-  QHelpContentItem * obj = ( QHelpContentItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpContentItem * obj = static_cast< QHelpContentItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -176,7 +176,7 @@ int row() const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_ROW )
 {
-  QHelpContentItem * obj = ( QHelpContentItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpContentItem * obj = static_cast< QHelpContentItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -200,7 +200,7 @@ QString title() const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_TITLE )
 {
-  QHelpContentItem * obj = ( QHelpContentItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpContentItem * obj = static_cast< QHelpContentItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -224,7 +224,7 @@ QUrl url() const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_URL )
 {
-  QHelpContentItem * obj = ( QHelpContentItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpContentItem * obj = static_cast< QHelpContentItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

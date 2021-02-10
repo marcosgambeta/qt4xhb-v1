@@ -28,7 +28,7 @@ void QHelpIndexModelSlots::indexCreated()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QHELPINDEXMODEL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QHELPINDEXMODEL" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QHelpIndexModelSlots::indexCreationStarted()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QHELPINDEXMODEL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QHELPINDEXMODEL" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -54,7 +54,7 @@ void QHelpIndexModelSlots::indexCreationStarted()
 
 void QHelpIndexModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpIndexModel * obj = ( QHelpIndexModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpIndexModel * obj = static_cast< QHelpIndexModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

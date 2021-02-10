@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QHELPENGINE_NEW )
 
 HB_FUNC_STATIC( QHELPENGINE_DELETE )
 {
-  QHelpEngine * obj = ( QHelpEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngine * obj = static_cast< QHelpEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -96,7 +96,7 @@ QHelpContentModel * contentModel() const
 */
 HB_FUNC_STATIC( QHELPENGINE_CONTENTMODEL )
 {
-  QHelpEngine * obj = ( QHelpEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngine * obj = static_cast< QHelpEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -121,7 +121,7 @@ QHelpContentWidget * contentWidget()
 */
 HB_FUNC_STATIC( QHELPENGINE_CONTENTWIDGET )
 {
-  QHelpEngine * obj = ( QHelpEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngine * obj = static_cast< QHelpEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -146,7 +146,7 @@ QHelpIndexModel * indexModel() const
 */
 HB_FUNC_STATIC( QHELPENGINE_INDEXMODEL )
 {
-  QHelpEngine * obj = ( QHelpEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngine * obj = static_cast< QHelpEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -171,7 +171,7 @@ QHelpIndexWidget * indexWidget()
 */
 HB_FUNC_STATIC( QHELPENGINE_INDEXWIDGET )
 {
-  QHelpEngine * obj = ( QHelpEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngine * obj = static_cast< QHelpEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -196,7 +196,7 @@ QHelpSearchEngine * searchEngine()
 */
 HB_FUNC_STATIC( QHELPENGINE_SEARCHENGINE )
 {
-  QHelpEngine * obj = ( QHelpEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEngine * obj = static_cast< QHelpEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

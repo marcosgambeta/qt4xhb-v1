@@ -28,7 +28,7 @@ void QHelpContentModelSlots::contentsCreated()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QHELPCONTENTMODEL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QHELPCONTENTMODEL" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QHelpContentModelSlots::contentsCreationStarted()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QHELPCONTENTMODEL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QHELPCONTENTMODEL" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -54,7 +54,7 @@ void QHelpContentModelSlots::contentsCreationStarted()
 
 void QHelpContentModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpContentModel * obj = ( QHelpContentModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpContentModel * obj = static_cast< QHelpContentModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

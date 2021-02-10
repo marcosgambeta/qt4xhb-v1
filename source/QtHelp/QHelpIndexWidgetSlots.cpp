@@ -28,7 +28,7 @@ void QHelpIndexWidgetSlots::linkActivated( const QUrl & link, const QString & ke
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QHELPINDEXWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QHELPINDEXWIDGET" );
     PHB_ITEM plink = Qt4xHb::Signals_return_object( ( void * ) &link, "QURL" );
     PHB_ITEM pkeyword = hb_itemPutC( NULL, QSTRINGTOSTRING( keyword ) );
 
@@ -42,7 +42,7 @@ void QHelpIndexWidgetSlots::linkActivated( const QUrl & link, const QString & ke
 
 void QHelpIndexWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpIndexWidget * obj = ( QHelpIndexWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpIndexWidget * obj = static_cast< QHelpIndexWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

@@ -28,7 +28,7 @@ void QHelpSearchQueryWidgetSlots::search()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QHELPSEARCHQUERYWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QHELPSEARCHQUERYWIDGET" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,7 +38,7 @@ void QHelpSearchQueryWidgetSlots::search()
 
 void QHelpSearchQueryWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpSearchQueryWidget * obj = ( QHelpSearchQueryWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpSearchQueryWidget * obj = static_cast< QHelpSearchQueryWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

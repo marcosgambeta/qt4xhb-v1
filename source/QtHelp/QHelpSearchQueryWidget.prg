@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_NEW )
 
 HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_DELETE )
 {
-  QHelpSearchQueryWidget * obj = ( QHelpSearchQueryWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpSearchQueryWidget * obj = static_cast< QHelpSearchQueryWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -84,7 +84,7 @@ QList<QHelpSearchQuery> query() const
 */
 HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_QUERY )
 {
-  QHelpSearchQueryWidget * obj = ( QHelpSearchQueryWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpSearchQueryWidget * obj = static_cast< QHelpSearchQueryWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_QUERY )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QHelpSearchQuery * ) new QHelpSearchQuery( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QHelpSearchQuery * >( new QHelpSearchQuery( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );

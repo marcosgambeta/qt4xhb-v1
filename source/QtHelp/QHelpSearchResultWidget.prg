@@ -45,7 +45,7 @@ RETURN
 
 HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_DELETE )
 {
-  QHelpSearchResultWidget * obj = ( QHelpSearchResultWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpSearchResultWidget * obj = static_cast< QHelpSearchResultWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -67,7 +67,7 @@ QUrl linkAt( const QPoint & point )
 */
 HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_LINKAT )
 {
-  QHelpSearchResultWidget * obj = ( QHelpSearchResultWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpSearchResultWidget * obj = static_cast< QHelpSearchResultWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
