@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_NEW )
 
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DELETE )
 {
-  QWebSecurityOrigin * obj = ( QWebSecurityOrigin * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebSecurityOrigin * obj = static_cast< QWebSecurityOrigin * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -100,7 +100,7 @@ qint64 databaseQuota() const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEQUOTA )
 {
-  QWebSecurityOrigin * obj = ( QWebSecurityOrigin * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebSecurityOrigin * obj = static_cast< QWebSecurityOrigin * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -124,7 +124,7 @@ qint64 databaseUsage() const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASEUSAGE )
 {
-  QWebSecurityOrigin * obj = ( QWebSecurityOrigin * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebSecurityOrigin * obj = static_cast< QWebSecurityOrigin * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -148,7 +148,7 @@ QList<QWebDatabase> databases() const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASES )
 {
-  QWebSecurityOrigin * obj = ( QWebSecurityOrigin * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebSecurityOrigin * obj = static_cast< QWebSecurityOrigin * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_DATABASES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QWebDatabase * ) new QWebDatabase( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QWebDatabase * >( new QWebDatabase( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -200,7 +200,7 @@ QString host() const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_HOST )
 {
-  QWebSecurityOrigin * obj = ( QWebSecurityOrigin * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebSecurityOrigin * obj = static_cast< QWebSecurityOrigin * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -224,7 +224,7 @@ int port() const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_PORT )
 {
-  QWebSecurityOrigin * obj = ( QWebSecurityOrigin * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebSecurityOrigin * obj = static_cast< QWebSecurityOrigin * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -248,7 +248,7 @@ QString scheme() const
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_SCHEME )
 {
-  QWebSecurityOrigin * obj = ( QWebSecurityOrigin * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebSecurityOrigin * obj = static_cast< QWebSecurityOrigin * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -272,7 +272,7 @@ void setDatabaseQuota( qint64 quota )
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_SETDATABASEQUOTA )
 {
-  QWebSecurityOrigin * obj = ( QWebSecurityOrigin * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebSecurityOrigin * obj = static_cast< QWebSecurityOrigin * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -319,7 +319,7 @@ QList<QWebSecurityOrigin> allOrigins()
 */
 HB_FUNC_STATIC( QWEBSECURITYORIGIN_ALLORIGINS )
 {
-  QWebSecurityOrigin * obj = ( QWebSecurityOrigin * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebSecurityOrigin * obj = static_cast< QWebSecurityOrigin * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_ALLORIGINS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QWebSecurityOrigin * ) new QWebSecurityOrigin( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QWebSecurityOrigin * >( new QWebSecurityOrigin( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -421,7 +421,7 @@ HB_FUNC_STATIC( QWEBSECURITYORIGIN_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

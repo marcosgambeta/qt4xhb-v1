@@ -28,7 +28,7 @@ void QWebPageSlots::contentsChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWEBPAGE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWEBPAGE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,8 +44,8 @@ void QWebPageSlots::databaseQuotaExceeded( QWebFrame * frame, QString databaseNa
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWEBPAGE" );
-    PHB_ITEM pframe = Qt4xHb::Signals_return_qobject( ( QObject * ) frame, "QWEBFRAME" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWEBPAGE" );
+    PHB_ITEM pframe = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( frame ), "QWEBFRAME" );
     PHB_ITEM pdatabaseName = hb_itemPutC( NULL, ( const char * ) databaseName.toLatin1().data() );
 
     hb_vmEvalBlockV( cb, 3, psender, pframe, pdatabaseName );
@@ -64,7 +64,7 @@ void QWebPageSlots::downloadRequested( const QNetworkRequest & request )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWEBPAGE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWEBPAGE" );
     PHB_ITEM prequest = Qt4xHb::Signals_return_object( ( void * ) &request, "QNETWORKREQUEST" );
 
     hb_vmEvalBlockV( cb, 2, psender, prequest );
@@ -82,8 +82,8 @@ void QWebPageSlots::frameCreated( QWebFrame * frame )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWEBPAGE" );
-    PHB_ITEM pframe = Qt4xHb::Signals_return_qobject( ( QObject * ) frame, "QWEBFRAME" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWEBPAGE" );
+    PHB_ITEM pframe = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( frame ), "QWEBFRAME" );
 
     hb_vmEvalBlockV( cb, 2, psender, pframe );
 
@@ -100,7 +100,7 @@ void QWebPageSlots::geometryChangeRequested( const QRect & geom )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWEBPAGE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWEBPAGE" );
     PHB_ITEM pgeom = Qt4xHb::Signals_return_object( ( void * ) &geom, "QRECT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pgeom );
@@ -118,7 +118,7 @@ void QWebPageSlots::linkClicked( const QUrl & url )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWEBPAGE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWEBPAGE" );
     PHB_ITEM purl = Qt4xHb::Signals_return_object( ( void * ) &url, "QURL" );
 
     hb_vmEvalBlockV( cb, 2, psender, purl );
@@ -136,7 +136,7 @@ void QWebPageSlots::linkHovered( const QString & link, const QString & title, co
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWEBPAGE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWEBPAGE" );
     PHB_ITEM plink = hb_itemPutC( NULL, QSTRINGTOSTRING( link ) );
     PHB_ITEM ptitle = hb_itemPutC( NULL, QSTRINGTOSTRING( title ) );
     PHB_ITEM ptextContent = hb_itemPutC( NULL, QSTRINGTOSTRING( textContent ) );
@@ -158,7 +158,7 @@ void QWebPageSlots::loadFinished( bool ok )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWEBPAGE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWEBPAGE" );
     PHB_ITEM pok = hb_itemPutL( NULL, ok );
 
     hb_vmEvalBlockV( cb, 2, psender, pok );
@@ -176,7 +176,7 @@ void QWebPageSlots::loadProgress( int progress )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWEBPAGE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWEBPAGE" );
     PHB_ITEM pprogress = hb_itemPutNI( NULL, progress );
 
     hb_vmEvalBlockV( cb, 2, psender, pprogress );
@@ -194,7 +194,7 @@ void QWebPageSlots::loadStarted()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWEBPAGE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWEBPAGE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -210,7 +210,7 @@ void QWebPageSlots::menuBarVisibilityChangeRequested( bool visible )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWEBPAGE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWEBPAGE" );
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
 
     hb_vmEvalBlockV( cb, 2, psender, pvisible );
@@ -228,7 +228,7 @@ void QWebPageSlots::microFocusChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWEBPAGE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWEBPAGE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -244,8 +244,8 @@ void QWebPageSlots::printRequested( QWebFrame * frame )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWEBPAGE" );
-    PHB_ITEM pframe = Qt4xHb::Signals_return_qobject( ( QObject * ) frame, "QWEBFRAME" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWEBPAGE" );
+    PHB_ITEM pframe = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( frame ), "QWEBFRAME" );
 
     hb_vmEvalBlockV( cb, 2, psender, pframe );
 
@@ -262,7 +262,7 @@ void QWebPageSlots::repaintRequested( const QRect & dirtyRect )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWEBPAGE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWEBPAGE" );
     PHB_ITEM pdirtyRect = Qt4xHb::Signals_return_object( ( void * ) &dirtyRect, "QRECT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pdirtyRect );
@@ -280,8 +280,8 @@ void QWebPageSlots::restoreFrameStateRequested( QWebFrame * frame )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWEBPAGE" );
-    PHB_ITEM pframe = Qt4xHb::Signals_return_qobject( ( QObject * ) frame, "QWEBFRAME" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWEBPAGE" );
+    PHB_ITEM pframe = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( frame ), "QWEBFRAME" );
 
     hb_vmEvalBlockV( cb, 2, psender, pframe );
 
@@ -298,8 +298,8 @@ void QWebPageSlots::saveFrameStateRequested( QWebFrame * frame, QWebHistoryItem 
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWEBPAGE" );
-    PHB_ITEM pframe = Qt4xHb::Signals_return_qobject( ( QObject * ) frame, "QWEBFRAME" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWEBPAGE" );
+    PHB_ITEM pframe = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( frame ), "QWEBFRAME" );
     PHB_ITEM pitem = Qt4xHb::Signals_return_object( ( void * ) item, "QWEBHISTORYITEM" );
 
     hb_vmEvalBlockV( cb, 3, psender, pframe, pitem );
@@ -318,7 +318,7 @@ void QWebPageSlots::scrollRequested( int dx, int dy, const QRect & rectToScroll 
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWEBPAGE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWEBPAGE" );
     PHB_ITEM pdx = hb_itemPutNI( NULL, dx );
     PHB_ITEM pdy = hb_itemPutNI( NULL, dy );
     PHB_ITEM prectToScroll = Qt4xHb::Signals_return_object( ( void * ) &rectToScroll, "QRECT" );
@@ -340,7 +340,7 @@ void QWebPageSlots::selectionChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWEBPAGE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWEBPAGE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -356,7 +356,7 @@ void QWebPageSlots::statusBarMessage( const QString & text )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWEBPAGE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWEBPAGE" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING( text ) );
 
     hb_vmEvalBlockV( cb, 2, psender, ptext );
@@ -374,7 +374,7 @@ void QWebPageSlots::statusBarVisibilityChangeRequested( bool visible )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWEBPAGE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWEBPAGE" );
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
 
     hb_vmEvalBlockV( cb, 2, psender, pvisible );
@@ -392,7 +392,7 @@ void QWebPageSlots::toolBarVisibilityChangeRequested( bool visible )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWEBPAGE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWEBPAGE" );
     PHB_ITEM pvisible = hb_itemPutL( NULL, visible );
 
     hb_vmEvalBlockV( cb, 2, psender, pvisible );
@@ -410,8 +410,8 @@ void QWebPageSlots::unsupportedContent( QNetworkReply * reply )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWEBPAGE" );
-    PHB_ITEM preply = Qt4xHb::Signals_return_qobject( ( QObject * ) reply, "QNETWORKREPLY" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWEBPAGE" );
+    PHB_ITEM preply = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( reply ), "QNETWORKREPLY" );
 
     hb_vmEvalBlockV( cb, 2, psender, preply );
 
@@ -428,7 +428,7 @@ void QWebPageSlots::windowCloseRequested()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWEBPAGE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWEBPAGE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -438,7 +438,7 @@ void QWebPageSlots::windowCloseRequested()
 
 void QWebPageSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QWebPage * obj = ( QWebPage * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebPage * obj = static_cast< QWebPage * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

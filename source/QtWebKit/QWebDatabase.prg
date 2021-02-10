@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QWEBDATABASE_NEW )
 
 HB_FUNC_STATIC( QWEBDATABASE_DELETE )
 {
-  QWebDatabase * obj = ( QWebDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebDatabase * obj = static_cast< QWebDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -96,7 +96,7 @@ QString displayName() const
 */
 HB_FUNC_STATIC( QWEBDATABASE_DISPLAYNAME )
 {
-  QWebDatabase * obj = ( QWebDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebDatabase * obj = static_cast< QWebDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -120,7 +120,7 @@ qint64 expectedSize() const
 */
 HB_FUNC_STATIC( QWEBDATABASE_EXPECTEDSIZE )
 {
-  QWebDatabase * obj = ( QWebDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebDatabase * obj = static_cast< QWebDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -144,7 +144,7 @@ QString fileName() const
 */
 HB_FUNC_STATIC( QWEBDATABASE_FILENAME )
 {
-  QWebDatabase * obj = ( QWebDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebDatabase * obj = static_cast< QWebDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -168,7 +168,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QWEBDATABASE_NAME )
 {
-  QWebDatabase * obj = ( QWebDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebDatabase * obj = static_cast< QWebDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -192,7 +192,7 @@ QWebSecurityOrigin origin() const
 */
 HB_FUNC_STATIC( QWEBDATABASE_ORIGIN )
 {
-  QWebDatabase * obj = ( QWebDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebDatabase * obj = static_cast< QWebDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -217,7 +217,7 @@ qint64 size() const
 */
 HB_FUNC_STATIC( QWEBDATABASE_SIZE )
 {
-  QWebDatabase * obj = ( QWebDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebDatabase * obj = static_cast< QWebDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QWEBDATABASE_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QWEBDATABASE_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

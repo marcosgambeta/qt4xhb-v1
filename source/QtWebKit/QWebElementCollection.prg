@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW )
 
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_DELETE )
 {
-  QWebElementCollection * obj = ( QWebElementCollection * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebElementCollection * obj = static_cast< QWebElementCollection * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -123,7 +123,7 @@ void append( const QWebElementCollection & other )
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_APPEND )
 {
-  QWebElementCollection * obj = ( QWebElementCollection * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebElementCollection * obj = static_cast< QWebElementCollection * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -149,7 +149,7 @@ QWebElement at( int i ) const
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_AT )
 {
-  QWebElementCollection * obj = ( QWebElementCollection * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebElementCollection * obj = static_cast< QWebElementCollection * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -174,7 +174,7 @@ int count() const
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_COUNT )
 {
-  QWebElementCollection * obj = ( QWebElementCollection * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebElementCollection * obj = static_cast< QWebElementCollection * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -198,7 +198,7 @@ QWebElement first() const
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_FIRST )
 {
-  QWebElementCollection * obj = ( QWebElementCollection * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebElementCollection * obj = static_cast< QWebElementCollection * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -223,7 +223,7 @@ QWebElement last() const
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_LAST )
 {
-  QWebElementCollection * obj = ( QWebElementCollection * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebElementCollection * obj = static_cast< QWebElementCollection * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -248,7 +248,7 @@ QList<QWebElement> toList() const
 */
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_TOLIST )
 {
-  QWebElementCollection * obj = ( QWebElementCollection * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebElementCollection * obj = static_cast< QWebElementCollection * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_TOLIST )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QWebElement * ) new QWebElement( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QWebElement * >( new QWebElement( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

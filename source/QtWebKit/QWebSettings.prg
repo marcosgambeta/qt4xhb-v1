@@ -90,7 +90,7 @@ QString defaultTextEncoding() const
 */
 HB_FUNC_STATIC( QWEBSETTINGS_DEFAULTTEXTENCODING )
 {
-  QWebSettings * obj = ( QWebSettings * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebSettings * obj = static_cast< QWebSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -114,7 +114,7 @@ QString fontFamily( QWebSettings::FontFamily which ) const
 */
 HB_FUNC_STATIC( QWEBSETTINGS_FONTFAMILY )
 {
-  QWebSettings * obj = ( QWebSettings * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebSettings * obj = static_cast< QWebSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -138,7 +138,7 @@ int fontSize( QWebSettings::FontSize type ) const
 */
 HB_FUNC_STATIC( QWEBSETTINGS_FONTSIZE )
 {
-  QWebSettings * obj = ( QWebSettings * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebSettings * obj = static_cast< QWebSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -162,7 +162,7 @@ QString localStoragePath() const
 */
 HB_FUNC_STATIC( QWEBSETTINGS_LOCALSTORAGEPATH )
 {
-  QWebSettings * obj = ( QWebSettings * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebSettings * obj = static_cast< QWebSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -186,7 +186,7 @@ void resetAttribute( QWebSettings::WebAttribute attribute )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_RESETATTRIBUTE )
 {
-  QWebSettings * obj = ( QWebSettings * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebSettings * obj = static_cast< QWebSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -212,7 +212,7 @@ void resetFontFamily( QWebSettings::FontFamily which )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_RESETFONTFAMILY )
 {
-  QWebSettings * obj = ( QWebSettings * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebSettings * obj = static_cast< QWebSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -238,7 +238,7 @@ void resetFontSize( QWebSettings::FontSize type )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_RESETFONTSIZE )
 {
-  QWebSettings * obj = ( QWebSettings * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebSettings * obj = static_cast< QWebSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -264,7 +264,7 @@ void setAttribute( QWebSettings::WebAttribute attribute, bool on )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETATTRIBUTE )
 {
-  QWebSettings * obj = ( QWebSettings * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebSettings * obj = static_cast< QWebSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -290,7 +290,7 @@ void setDefaultTextEncoding( const QString & encoding )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETDEFAULTTEXTENCODING )
 {
-  QWebSettings * obj = ( QWebSettings * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebSettings * obj = static_cast< QWebSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -316,7 +316,7 @@ void setFontFamily( QWebSettings::FontFamily which, const QString & family )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETFONTFAMILY )
 {
-  QWebSettings * obj = ( QWebSettings * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebSettings * obj = static_cast< QWebSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -342,7 +342,7 @@ void setFontSize( QWebSettings::FontSize type, int size )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETFONTSIZE )
 {
-  QWebSettings * obj = ( QWebSettings * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebSettings * obj = static_cast< QWebSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -368,7 +368,7 @@ void setLocalStoragePath( const QString & path )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETLOCALSTORAGEPATH )
 {
-  QWebSettings * obj = ( QWebSettings * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebSettings * obj = static_cast< QWebSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -394,7 +394,7 @@ void setUserStyleSheetUrl( const QUrl & location )
 */
 HB_FUNC_STATIC( QWEBSETTINGS_SETUSERSTYLESHEETURL )
 {
-  QWebSettings * obj = ( QWebSettings * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebSettings * obj = static_cast< QWebSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -420,7 +420,7 @@ bool testAttribute( QWebSettings::WebAttribute attribute ) const
 */
 HB_FUNC_STATIC( QWEBSETTINGS_TESTATTRIBUTE )
 {
-  QWebSettings * obj = ( QWebSettings * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebSettings * obj = static_cast< QWebSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -444,7 +444,7 @@ QUrl userStyleSheetUrl() const
 */
 HB_FUNC_STATIC( QWEBSETTINGS_USERSTYLESHEETURL )
 {
-  QWebSettings * obj = ( QWebSettings * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWebSettings * obj = static_cast< QWebSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -512,7 +512,7 @@ static void enablePersistentStorage( const QString & path = QString() )
 HB_FUNC_STATIC( QWEBSETTINGS_ENABLEPERSISTENTSTORAGE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 0, 1 ) && ISOPTCHAR( 1 ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISCHAR( 1 ) || ISNIL( 1 ) ) )
   {
 #endif
     QWebSettings::enablePersistentStorage( OPQSTRING( 1, QString() ) );
@@ -875,7 +875,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -884,7 +884,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
