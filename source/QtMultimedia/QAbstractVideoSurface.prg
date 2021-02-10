@@ -57,7 +57,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_DELETE )
 {
-  QAbstractVideoSurface * obj = ( QAbstractVideoSurface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractVideoSurface * obj = static_cast< QAbstractVideoSurface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -79,7 +79,7 @@ QAbstractVideoSurface::Error error() const
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ERROR )
 {
-  QAbstractVideoSurface * obj = ( QAbstractVideoSurface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractVideoSurface * obj = static_cast< QAbstractVideoSurface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -103,7 +103,7 @@ bool isActive() const
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ISACTIVE )
 {
-  QAbstractVideoSurface * obj = ( QAbstractVideoSurface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractVideoSurface * obj = static_cast< QAbstractVideoSurface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -127,7 +127,7 @@ virtual bool isFormatSupported( const QVideoSurfaceFormat & format ) const
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ISFORMATSUPPORTED )
 {
-  QAbstractVideoSurface * obj = ( QAbstractVideoSurface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractVideoSurface * obj = static_cast< QAbstractVideoSurface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -151,7 +151,7 @@ virtual QVideoSurfaceFormat nearestFormat( const QVideoSurfaceFormat & format ) 
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_NEARESTFORMAT )
 {
-  QAbstractVideoSurface * obj = ( QAbstractVideoSurface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractVideoSurface * obj = static_cast< QAbstractVideoSurface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -176,7 +176,7 @@ virtual bool present( const QVideoFrame & frame ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_PRESENT )
 {
-  QAbstractVideoSurface * obj = ( QAbstractVideoSurface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractVideoSurface * obj = static_cast< QAbstractVideoSurface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -200,7 +200,7 @@ virtual bool start( const QVideoSurfaceFormat & format )
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_START )
 {
-  QAbstractVideoSurface * obj = ( QAbstractVideoSurface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractVideoSurface * obj = static_cast< QAbstractVideoSurface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -224,7 +224,7 @@ virtual void stop()
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_STOP )
 {
-  QAbstractVideoSurface * obj = ( QAbstractVideoSurface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractVideoSurface * obj = static_cast< QAbstractVideoSurface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -250,15 +250,15 @@ virtual QList<QVideoFrame::PixelFormat> supportedPixelFormats( QAbstractVideoBuf
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SUPPORTEDPIXELFORMATS )
 {
-  QAbstractVideoSurface * obj = ( QAbstractVideoSurface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractVideoSurface * obj = static_cast< QAbstractVideoSurface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
+    if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
-      QList<QVideoFrame::PixelFormat> list = obj->supportedPixelFormats( ISNIL( 1 )? ( QAbstractVideoBuffer::HandleType ) QAbstractVideoBuffer::NoHandle : ( QAbstractVideoBuffer::HandleType ) hb_parni( 1 ) );
+      QList<QVideoFrame::PixelFormat> list = obj->supportedPixelFormats( ISNIL( 1 ) ? ( QAbstractVideoBuffer::HandleType ) QAbstractVideoBuffer::NoHandle : ( QAbstractVideoBuffer::HandleType ) hb_parni( 1 ) );
       PHB_ITEM pArray = hb_itemArrayNew( 0 );
       for( int i = 0; i < list.count(); i++ )
       {
@@ -282,7 +282,7 @@ QVideoSurfaceFormat surfaceFormat() const
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SURFACEFORMAT )
 {
-  QAbstractVideoSurface * obj = ( QAbstractVideoSurface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractVideoSurface * obj = static_cast< QAbstractVideoSurface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

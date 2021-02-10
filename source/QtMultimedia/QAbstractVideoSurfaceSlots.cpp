@@ -28,7 +28,7 @@ void QAbstractVideoSurfaceSlots::activeChanged( bool active )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTVIDEOSURFACE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTVIDEOSURFACE" );
     PHB_ITEM pactive = hb_itemPutL( NULL, active );
 
     hb_vmEvalBlockV( cb, 2, psender, pactive );
@@ -46,7 +46,7 @@ void QAbstractVideoSurfaceSlots::surfaceFormatChanged( const QVideoSurfaceFormat
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTVIDEOSURFACE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTVIDEOSURFACE" );
     PHB_ITEM pformat = Qt4xHb::Signals_return_object( ( void * ) &format, "QVIDEOSURFACEFORMAT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pformat );
@@ -64,7 +64,7 @@ void QAbstractVideoSurfaceSlots::supportedFormatsChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTVIDEOSURFACE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTVIDEOSURFACE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -74,7 +74,7 @@ void QAbstractVideoSurfaceSlots::supportedFormatsChanged()
 
 void QAbstractVideoSurfaceSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractVideoSurface * obj = ( QAbstractVideoSurface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractVideoSurface * obj = static_cast< QAbstractVideoSurface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

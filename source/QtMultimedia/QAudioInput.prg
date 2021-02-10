@@ -66,7 +66,7 @@ QAudioInput( const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 
 */
 void QAudioInput_new1()
 {
-  QAudioInput * obj = new QAudioInput( ISNIL( 1 )? QAudioFormat() : *( QAudioFormat * ) Qt4xHb::itemGetPtr( 1 ), OPQOBJECT( 2, 0 ) );
+  QAudioInput * obj = new QAudioInput( ISNIL( 1 ) ? QAudioFormat() : *static_cast< QAudioFormat * >( Qt4xHb::itemGetPtr( 1 ) ), OPQOBJECT( 2, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -75,7 +75,7 @@ QAudioInput( const QAudioDeviceInfo & audioDevice, const QAudioFormat & format =
 */
 void QAudioInput_new2()
 {
-  QAudioInput * obj = new QAudioInput( *PQAUDIODEVICEINFO( 1 ), ISNIL( 2 )? QAudioFormat() : *( QAudioFormat * ) Qt4xHb::itemGetPtr( 2 ), OPQOBJECT( 3, 0 ) );
+  QAudioInput * obj = new QAudioInput( *PQAUDIODEVICEINFO( 1 ), ISNIL( 2 ) ? QAudioFormat() : *static_cast< QAudioFormat * >( Qt4xHb::itemGetPtr( 2 ) ), OPQOBJECT( 3, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QAUDIOINPUT_NEW )
 
 HB_FUNC_STATIC( QAUDIOINPUT_DELETE )
 {
-  QAudioInput * obj = ( QAudioInput * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioInput * obj = static_cast< QAudioInput * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -119,7 +119,7 @@ int bufferSize() const
 */
 HB_FUNC_STATIC( QAUDIOINPUT_BUFFERSIZE )
 {
-  QAudioInput * obj = ( QAudioInput * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioInput * obj = static_cast< QAudioInput * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -143,7 +143,7 @@ int bytesReady() const
 */
 HB_FUNC_STATIC( QAUDIOINPUT_BYTESREADY )
 {
-  QAudioInput * obj = ( QAudioInput * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioInput * obj = static_cast< QAudioInput * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -167,7 +167,7 @@ qint64 elapsedUSecs() const
 */
 HB_FUNC_STATIC( QAUDIOINPUT_ELAPSEDUSECS )
 {
-  QAudioInput * obj = ( QAudioInput * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioInput * obj = static_cast< QAudioInput * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -191,7 +191,7 @@ QAudio::Error error() const
 */
 HB_FUNC_STATIC( QAUDIOINPUT_ERROR )
 {
-  QAudioInput * obj = ( QAudioInput * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioInput * obj = static_cast< QAudioInput * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -215,7 +215,7 @@ QAudioFormat format() const
 */
 HB_FUNC_STATIC( QAUDIOINPUT_FORMAT )
 {
-  QAudioInput * obj = ( QAudioInput * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioInput * obj = static_cast< QAudioInput * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -240,7 +240,7 @@ int notifyInterval() const
 */
 HB_FUNC_STATIC( QAUDIOINPUT_NOTIFYINTERVAL )
 {
-  QAudioInput * obj = ( QAudioInput * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioInput * obj = static_cast< QAudioInput * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -264,7 +264,7 @@ int periodSize() const
 */
 HB_FUNC_STATIC( QAUDIOINPUT_PERIODSIZE )
 {
-  QAudioInput * obj = ( QAudioInput * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioInput * obj = static_cast< QAudioInput * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -288,7 +288,7 @@ qint64 processedUSecs() const
 */
 HB_FUNC_STATIC( QAUDIOINPUT_PROCESSEDUSECS )
 {
-  QAudioInput * obj = ( QAudioInput * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioInput * obj = static_cast< QAudioInput * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -312,7 +312,7 @@ void reset()
 */
 HB_FUNC_STATIC( QAUDIOINPUT_RESET )
 {
-  QAudioInput * obj = ( QAudioInput * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioInput * obj = static_cast< QAudioInput * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -338,7 +338,7 @@ void resume()
 */
 HB_FUNC_STATIC( QAUDIOINPUT_RESUME )
 {
-  QAudioInput * obj = ( QAudioInput * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioInput * obj = static_cast< QAudioInput * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -364,7 +364,7 @@ void setBufferSize( int value )
 */
 HB_FUNC_STATIC( QAUDIOINPUT_SETBUFFERSIZE )
 {
-  QAudioInput * obj = ( QAudioInput * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioInput * obj = static_cast< QAudioInput * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -390,7 +390,7 @@ void setNotifyInterval( int ms )
 */
 HB_FUNC_STATIC( QAUDIOINPUT_SETNOTIFYINTERVAL )
 {
-  QAudioInput * obj = ( QAudioInput * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioInput * obj = static_cast< QAudioInput * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -416,7 +416,7 @@ void start( QIODevice * device )
 */
 void QAudioInput_start1()
 {
-  QAudioInput * obj = ( QAudioInput * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioInput * obj = static_cast< QAudioInput * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -431,7 +431,7 @@ QIODevice * start()
 */
 void QAudioInput_start2()
 {
-  QAudioInput * obj = ( QAudioInput * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioInput * obj = static_cast< QAudioInput * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -461,7 +461,7 @@ QAudio::State state() const
 */
 HB_FUNC_STATIC( QAUDIOINPUT_STATE )
 {
-  QAudioInput * obj = ( QAudioInput * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioInput * obj = static_cast< QAudioInput * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -485,7 +485,7 @@ void stop()
 */
 HB_FUNC_STATIC( QAUDIOINPUT_STOP )
 {
-  QAudioInput * obj = ( QAudioInput * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioInput * obj = static_cast< QAudioInput * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -511,7 +511,7 @@ void suspend()
 */
 HB_FUNC_STATIC( QAUDIOINPUT_SUSPEND )
 {
-  QAudioInput * obj = ( QAudioInput * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioInput * obj = static_cast< QAudioInput * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_NEW )
 
 HB_FUNC_STATIC( QAUDIOFORMAT_DELETE )
 {
-  QAudioFormat * obj = ( QAudioFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioFormat * obj = static_cast< QAudioFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -120,7 +120,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_ISVALID )
 {
-  QAudioFormat * obj = ( QAudioFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioFormat * obj = static_cast< QAudioFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -144,7 +144,7 @@ void setFrequency( int frequency )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETFREQUENCY )
 {
-  QAudioFormat * obj = ( QAudioFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioFormat * obj = static_cast< QAudioFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -170,7 +170,7 @@ int frequency() const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_FREQUENCY )
 {
-  QAudioFormat * obj = ( QAudioFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioFormat * obj = static_cast< QAudioFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -194,7 +194,7 @@ void setSampleRate( int samplerate )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLERATE )
 {
-  QAudioFormat * obj = ( QAudioFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioFormat * obj = static_cast< QAudioFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -220,7 +220,7 @@ int sampleRate() const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLERATE )
 {
-  QAudioFormat * obj = ( QAudioFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioFormat * obj = static_cast< QAudioFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -244,7 +244,7 @@ void setChannels( int channels )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETCHANNELS )
 {
-  QAudioFormat * obj = ( QAudioFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioFormat * obj = static_cast< QAudioFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -270,7 +270,7 @@ int channels() const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_CHANNELS )
 {
-  QAudioFormat * obj = ( QAudioFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioFormat * obj = static_cast< QAudioFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -294,7 +294,7 @@ void setChannelCount( int channelCount )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETCHANNELCOUNT )
 {
-  QAudioFormat * obj = ( QAudioFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioFormat * obj = static_cast< QAudioFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -320,7 +320,7 @@ int channelCount() const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_CHANNELCOUNT )
 {
-  QAudioFormat * obj = ( QAudioFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioFormat * obj = static_cast< QAudioFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -344,7 +344,7 @@ void setSampleSize( int sampleSize )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLESIZE )
 {
-  QAudioFormat * obj = ( QAudioFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioFormat * obj = static_cast< QAudioFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -370,7 +370,7 @@ int sampleSize() const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLESIZE )
 {
-  QAudioFormat * obj = ( QAudioFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioFormat * obj = static_cast< QAudioFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -394,7 +394,7 @@ void setCodec( const QString & codec )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETCODEC )
 {
-  QAudioFormat * obj = ( QAudioFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioFormat * obj = static_cast< QAudioFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -420,7 +420,7 @@ QString codec() const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_CODEC )
 {
-  QAudioFormat * obj = ( QAudioFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioFormat * obj = static_cast< QAudioFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -444,7 +444,7 @@ void setByteOrder( QAudioFormat::Endian byteOrder )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETBYTEORDER )
 {
-  QAudioFormat * obj = ( QAudioFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioFormat * obj = static_cast< QAudioFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -470,7 +470,7 @@ QAudioFormat::Endian byteOrder() const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_BYTEORDER )
 {
-  QAudioFormat * obj = ( QAudioFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioFormat * obj = static_cast< QAudioFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -494,7 +494,7 @@ QAudioFormat::SampleType sampleType() const
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SAMPLETYPE )
 {
-  QAudioFormat * obj = ( QAudioFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioFormat * obj = static_cast< QAudioFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -518,7 +518,7 @@ void setSampleType( QAudioFormat::SampleType sampleType )
 */
 HB_FUNC_STATIC( QAUDIOFORMAT_SETSAMPLETYPE )
 {
-  QAudioFormat * obj = ( QAudioFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioFormat * obj = static_cast< QAudioFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QAUDIOFORMAT_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

@@ -55,7 +55,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_DELETE )
 {
-  QAbstractVideoBuffer * obj = ( QAbstractVideoBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractVideoBuffer * obj = static_cast< QAbstractVideoBuffer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -75,7 +75,7 @@ virtual QVariant handle() const
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLE )
 {
-  QAbstractVideoBuffer * obj = ( QAbstractVideoBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractVideoBuffer * obj = static_cast< QAbstractVideoBuffer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -100,7 +100,7 @@ QAbstractVideoBuffer::HandleType handleType() const
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_HANDLETYPE )
 {
-  QAbstractVideoBuffer * obj = ( QAbstractVideoBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractVideoBuffer * obj = static_cast< QAbstractVideoBuffer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -124,7 +124,7 @@ virtual QAbstractVideoBuffer::MapMode mapMode() const = 0
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_MAPMODE )
 {
-  QAbstractVideoBuffer * obj = ( QAbstractVideoBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractVideoBuffer * obj = static_cast< QAbstractVideoBuffer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -148,7 +148,7 @@ virtual void unmap() = 0
 */
 HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_UNMAP )
 {
-  QAbstractVideoBuffer * obj = ( QAbstractVideoBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractVideoBuffer * obj = static_cast< QAbstractVideoBuffer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOBUFFER_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

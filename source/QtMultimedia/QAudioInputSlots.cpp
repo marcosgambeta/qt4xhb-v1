@@ -28,8 +28,8 @@ void QAudioInputSlots::stateChanged( QAudio::State state )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QAUDIOINPUT" );
-    PHB_ITEM pstate = hb_itemPutNI( NULL, (int) state );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QAUDIOINPUT" );
+    PHB_ITEM pstate = hb_itemPutNI( NULL, ( int ) state );
 
     hb_vmEvalBlockV( cb, 2, psender, pstate );
 
@@ -46,7 +46,7 @@ void QAudioInputSlots::notify()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QAUDIOINPUT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QAUDIOINPUT" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -56,7 +56,7 @@ void QAudioInputSlots::notify()
 
 void QAudioInputSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAudioInput * obj = ( QAudioInput * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAudioInput * obj = static_cast< QAudioInput * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
