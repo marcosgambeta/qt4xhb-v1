@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_NEW )
 
 HB_FUNC_STATIC( QTESTEVENTLIST_DELETE )
 {
-  QTestEventList * obj = ( QTestEventList * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTestEventList * obj = static_cast< QTestEventList * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -121,7 +121,7 @@ void addDelay( int msecs )
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDDELAY )
 {
-  QTestEventList * obj = ( QTestEventList * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTestEventList * obj = static_cast< QTestEventList * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -147,15 +147,15 @@ void addKeyClick( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifie
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICK1 )
 {
-  QTestEventList * obj = ( QTestEventList * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTestEventList * obj = static_cast< QTestEventList * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
-      obj->addKeyClick( ( Qt::Key ) hb_parni( 1 ), ISNIL( 2 )? ( Qt::KeyboardModifiers ) Qt::NoModifier : ( Qt::KeyboardModifiers ) hb_parni( 2 ), OPINT( 3, -1 ) );
+      obj->addKeyClick( ( Qt::Key ) hb_parni( 1 ), ISNIL( 2 ) ? ( Qt::KeyboardModifiers ) Qt::NoModifier : ( Qt::KeyboardModifiers ) hb_parni( 2 ), OPINT( 3, -1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,15 +173,15 @@ void addKeyClick( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, 
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICK2 )
 {
-  QTestEventList * obj = ( QTestEventList * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTestEventList * obj = static_cast< QTestEventList * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
-      obj->addKeyClick( PCHAR( 1 ), ISNIL( 2 )? ( Qt::KeyboardModifiers ) Qt::NoModifier : ( Qt::KeyboardModifiers ) hb_parni( 2 ), OPINT( 3, -1 ) );
+      obj->addKeyClick( PCHAR( 1 ), ISNIL( 2 ) ? ( Qt::KeyboardModifiers ) Qt::NoModifier : ( Qt::KeyboardModifiers ) hb_parni( 2 ), OPINT( 3, -1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,15 +215,15 @@ void addKeyClicks( const QString & keys, Qt::KeyboardModifiers modifiers = Qt::N
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYCLICKS )
 {
-  QTestEventList * obj = ( QTestEventList * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTestEventList * obj = static_cast< QTestEventList * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ISOPTNUM( 2 ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
-      obj->addKeyClicks( PQSTRING( 1 ), ISNIL( 2 )? ( Qt::KeyboardModifiers ) Qt::NoModifier : ( Qt::KeyboardModifiers ) hb_parni( 2 ), OPINT( 3, -1 ) );
+      obj->addKeyClicks( PQSTRING( 1 ), ISNIL( 2 ) ? ( Qt::KeyboardModifiers ) Qt::NoModifier : ( Qt::KeyboardModifiers ) hb_parni( 2 ), OPINT( 3, -1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -241,15 +241,15 @@ void addKeyPress( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModifie
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYPRESS1 )
 {
-  QTestEventList * obj = ( QTestEventList * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTestEventList * obj = static_cast< QTestEventList * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
-      obj->addKeyPress( ( Qt::Key ) hb_parni( 1 ), ISNIL( 2 )? ( Qt::KeyboardModifiers ) Qt::NoModifier : ( Qt::KeyboardModifiers ) hb_parni( 2 ), OPINT( 3, -1 ) );
+      obj->addKeyPress( ( Qt::Key ) hb_parni( 1 ), ISNIL( 2 ) ? ( Qt::KeyboardModifiers ) Qt::NoModifier : ( Qt::KeyboardModifiers ) hb_parni( 2 ), OPINT( 3, -1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,15 +267,15 @@ void addKeyPress( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier, 
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYPRESS2 )
 {
-  QTestEventList * obj = ( QTestEventList * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTestEventList * obj = static_cast< QTestEventList * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
-      obj->addKeyPress( PCHAR( 1 ), ISNIL( 2 )? ( Qt::KeyboardModifiers ) Qt::NoModifier : ( Qt::KeyboardModifiers ) hb_parni( 2 ), OPINT( 3, -1 ) );
+      obj->addKeyPress( PCHAR( 1 ), ISNIL( 2 ) ? ( Qt::KeyboardModifiers ) Qt::NoModifier : ( Qt::KeyboardModifiers ) hb_parni( 2 ), OPINT( 3, -1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -309,15 +309,15 @@ void addKeyRelease( Qt::Key qtKey, Qt::KeyboardModifiers modifiers = Qt::NoModif
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYRELEASE1 )
 {
-  QTestEventList * obj = ( QTestEventList * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTestEventList * obj = static_cast< QTestEventList * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
-      obj->addKeyRelease( ( Qt::Key ) hb_parni( 1 ), ISNIL( 2 )? ( Qt::KeyboardModifiers ) Qt::NoModifier : ( Qt::KeyboardModifiers ) hb_parni( 2 ), OPINT( 3, -1 ) );
+      obj->addKeyRelease( ( Qt::Key ) hb_parni( 1 ), ISNIL( 2 ) ? ( Qt::KeyboardModifiers ) Qt::NoModifier : ( Qt::KeyboardModifiers ) hb_parni( 2 ), OPINT( 3, -1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -335,15 +335,15 @@ void addKeyRelease( char ascii, Qt::KeyboardModifiers modifiers = Qt::NoModifier
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDKEYRELEASE2 )
 {
-  QTestEventList * obj = ( QTestEventList * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTestEventList * obj = static_cast< QTestEventList * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
-      obj->addKeyRelease( PCHAR( 1 ), ISNIL( 2 )? ( Qt::KeyboardModifiers ) Qt::NoModifier : ( Qt::KeyboardModifiers ) hb_parni( 2 ), OPINT( 3, -1 ) );
+      obj->addKeyRelease( PCHAR( 1 ), ISNIL( 2 ) ? ( Qt::KeyboardModifiers ) Qt::NoModifier : ( Qt::KeyboardModifiers ) hb_parni( 2 ), OPINT( 3, -1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -377,15 +377,15 @@ void addMouseClick( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0,
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSECLICK )
 {
-  QTestEventList * obj = ( QTestEventList * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTestEventList * obj = static_cast< QTestEventList * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 4 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) && ( ISQPOINT( 3 ) || ISNIL( 3 ) ) && ISOPTNUM( 4 ) )
+    if( ISBETWEEN( 1, 4 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) && ( ISQPOINT( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
     {
 #endif
-      obj->addMouseClick( ( Qt::MouseButton ) hb_parni( 1 ), ISNIL( 2 )? ( Qt::KeyboardModifiers ) 0 : ( Qt::KeyboardModifiers ) hb_parni( 2 ), ISNIL( 3 )? QPoint() : *( QPoint * ) Qt4xHb::itemGetPtr( 3 ), OPINT( 4, -1 ) );
+      obj->addMouseClick( ( Qt::MouseButton ) hb_parni( 1 ), ISNIL( 2 ) ? ( Qt::KeyboardModifiers ) 0 : ( Qt::KeyboardModifiers ) hb_parni( 2 ), ISNIL( 3 ) ? QPoint() : *static_cast< QPoint * >( Qt4xHb::itemGetPtr( 3 ) ), OPINT( 4, -1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -403,15 +403,15 @@ void addMouseDClick( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSEDCLICK )
 {
-  QTestEventList * obj = ( QTestEventList * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTestEventList * obj = static_cast< QTestEventList * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 4 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) && ( ISQPOINT( 3 ) || ISNIL( 3 ) ) && ISOPTNUM( 4 ) )
+    if( ISBETWEEN( 1, 4 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) && ( ISQPOINT( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
     {
 #endif
-      obj->addMouseDClick( ( Qt::MouseButton ) hb_parni( 1 ), ISNIL( 2 )? ( Qt::KeyboardModifiers ) 0 : ( Qt::KeyboardModifiers ) hb_parni( 2 ), ISNIL( 3 )? QPoint() : *( QPoint * ) Qt4xHb::itemGetPtr( 3 ), OPINT( 4, -1 ) );
+      obj->addMouseDClick( ( Qt::MouseButton ) hb_parni( 1 ), ISNIL( 2 ) ? ( Qt::KeyboardModifiers ) 0 : ( Qt::KeyboardModifiers ) hb_parni( 2 ), ISNIL( 3 ) ? QPoint() : *static_cast< QPoint * >( Qt4xHb::itemGetPtr( 3 ) ), OPINT( 4, -1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -429,15 +429,15 @@ void addMouseMove( QPoint pos = QPoint(), int delay = -1 )
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSEMOVE )
 {
-  QTestEventList * obj = ( QTestEventList * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTestEventList * obj = static_cast< QTestEventList * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 2 ) && ( ISQPOINT( 1 ) || ISNIL( 1 ) ) && ISOPTNUM( 2 ) )
+    if( ISBETWEEN( 0, 2 ) && ( ISQPOINT( 1 ) || ISNIL( 1 ) ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
-      obj->addMouseMove( ISNIL( 1 )? QPoint() : *( QPoint * ) Qt4xHb::itemGetPtr( 1 ), OPINT( 2, -1 ) );
+      obj->addMouseMove( ISNIL( 1 ) ? QPoint() : *static_cast< QPoint * >( Qt4xHb::itemGetPtr( 1 ) ), OPINT( 2, -1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -455,15 +455,15 @@ void addMousePress( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 0,
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSEPRESS )
 {
-  QTestEventList * obj = ( QTestEventList * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTestEventList * obj = static_cast< QTestEventList * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 4 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) && ( ISQPOINT( 3 ) || ISNIL( 3 ) ) && ISOPTNUM( 4 ) )
+    if( ISBETWEEN( 1, 4 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) && ( ISQPOINT( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
     {
 #endif
-      obj->addMousePress( ( Qt::MouseButton ) hb_parni( 1 ), ISNIL( 2 )? ( Qt::KeyboardModifiers ) 0 : ( Qt::KeyboardModifiers ) hb_parni( 2 ), ISNIL( 3 )? QPoint() : *( QPoint * ) Qt4xHb::itemGetPtr( 3 ), OPINT( 4, -1 ) );
+      obj->addMousePress( ( Qt::MouseButton ) hb_parni( 1 ), ISNIL( 2 ) ? ( Qt::KeyboardModifiers ) 0 : ( Qt::KeyboardModifiers ) hb_parni( 2 ), ISNIL( 3 ) ? QPoint() : *static_cast< QPoint * >( Qt4xHb::itemGetPtr( 3 ) ), OPINT( 4, -1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -481,15 +481,15 @@ void addMouseRelease( Qt::MouseButton button, Qt::KeyboardModifiers modifiers = 
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_ADDMOUSERELEASE )
 {
-  QTestEventList * obj = ( QTestEventList * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTestEventList * obj = static_cast< QTestEventList * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 4 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) && ( ISQPOINT( 3 ) || ISNIL( 3 ) ) && ISOPTNUM( 4 ) )
+    if( ISBETWEEN( 1, 4 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) && ( ISQPOINT( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
     {
 #endif
-      obj->addMouseRelease( ( Qt::MouseButton ) hb_parni( 1 ), ISNIL( 2 )? ( Qt::KeyboardModifiers ) 0 : ( Qt::KeyboardModifiers ) hb_parni( 2 ), ISNIL( 3 )? QPoint() : *( QPoint * ) Qt4xHb::itemGetPtr( 3 ), OPINT( 4, -1 ) );
+      obj->addMouseRelease( ( Qt::MouseButton ) hb_parni( 1 ), ISNIL( 2 ) ? ( Qt::KeyboardModifiers ) 0 : ( Qt::KeyboardModifiers ) hb_parni( 2 ), ISNIL( 3 ) ? QPoint() : *static_cast< QPoint * >( Qt4xHb::itemGetPtr( 3 ) ), OPINT( 4, -1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -507,7 +507,7 @@ void clear()
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_CLEAR )
 {
-  QTestEventList * obj = ( QTestEventList * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTestEventList * obj = static_cast< QTestEventList * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -533,7 +533,7 @@ void simulate( QWidget * w )
 */
 HB_FUNC_STATIC( QTESTEVENTLIST_SIMULATE )
 {
-  QTestEventList * obj = ( QTestEventList * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTestEventList * obj = static_cast< QTestEventList * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -560,7 +560,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -569,7 +569,7 @@ HB_FUNC_STATIC( QTESTEVENTLIST_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
