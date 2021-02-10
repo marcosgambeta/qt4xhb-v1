@@ -48,7 +48,7 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_DELETE )
 {
-  QGraphicsSceneHoverEvent * obj = ( QGraphicsSceneHoverEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneHoverEvent * obj = static_cast< QGraphicsSceneHoverEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -68,7 +68,7 @@ QPointF lastPos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_LASTPOS )
 {
-  QGraphicsSceneHoverEvent * obj = ( QGraphicsSceneHoverEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneHoverEvent * obj = static_cast< QGraphicsSceneHoverEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -93,7 +93,7 @@ QPointF lastScenePos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_LASTSCENEPOS )
 {
-  QGraphicsSceneHoverEvent * obj = ( QGraphicsSceneHoverEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneHoverEvent * obj = static_cast< QGraphicsSceneHoverEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -118,7 +118,7 @@ QPoint lastScreenPos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_LASTSCREENPOS )
 {
-  QGraphicsSceneHoverEvent * obj = ( QGraphicsSceneHoverEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneHoverEvent * obj = static_cast< QGraphicsSceneHoverEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -143,7 +143,7 @@ Qt::KeyboardModifiers modifiers() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_MODIFIERS )
 {
-  QGraphicsSceneHoverEvent * obj = ( QGraphicsSceneHoverEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneHoverEvent * obj = static_cast< QGraphicsSceneHoverEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -167,7 +167,7 @@ QPointF pos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_POS )
 {
-  QGraphicsSceneHoverEvent * obj = ( QGraphicsSceneHoverEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneHoverEvent * obj = static_cast< QGraphicsSceneHoverEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -192,7 +192,7 @@ QPointF scenePos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_SCENEPOS )
 {
-  QGraphicsSceneHoverEvent * obj = ( QGraphicsSceneHoverEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneHoverEvent * obj = static_cast< QGraphicsSceneHoverEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -217,7 +217,7 @@ QPoint screenPos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEHOVEREVENT_SCREENPOS )
 {
-  QGraphicsSceneHoverEvent * obj = ( QGraphicsSceneHoverEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneHoverEvent * obj = static_cast< QGraphicsSceneHoverEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

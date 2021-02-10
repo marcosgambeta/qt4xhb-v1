@@ -81,7 +81,7 @@ bool activate()
 */
 HB_FUNC_STATIC( QLAYOUT_ACTIVATE )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -105,7 +105,7 @@ virtual void addItem( QLayoutItem * item ) = 0
 */
 HB_FUNC_STATIC( QLAYOUT_ADDITEM )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -131,7 +131,7 @@ void addWidget( QWidget * w )
 */
 HB_FUNC_STATIC( QLAYOUT_ADDWIDGET )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -157,7 +157,7 @@ QMargins contentsMargins() const
 */
 HB_FUNC_STATIC( QLAYOUT_CONTENTSMARGINS )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -182,7 +182,7 @@ QRect contentsRect() const
 */
 HB_FUNC_STATIC( QLAYOUT_CONTENTSRECT )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -207,7 +207,7 @@ virtual int count() const = 0
 */
 HB_FUNC_STATIC( QLAYOUT_COUNT )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -231,7 +231,7 @@ virtual Qt::Orientations expandingDirections() const
 */
 HB_FUNC_STATIC( QLAYOUT_EXPANDINGDIRECTIONS )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -255,7 +255,7 @@ void getContentsMargins( int * left, int * top, int * right, int * bottom ) cons
 */
 HB_FUNC_STATIC( QLAYOUT_GETCONTENTSMARGINS )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -289,7 +289,7 @@ virtual int indexOf( QWidget * widget ) const
 */
 HB_FUNC_STATIC( QLAYOUT_INDEXOF )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -313,7 +313,7 @@ bool isEnabled() const
 */
 HB_FUNC_STATIC( QLAYOUT_ISENABLED )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -337,7 +337,7 @@ virtual QLayoutItem * itemAt( int index ) const = 0
 */
 HB_FUNC_STATIC( QLAYOUT_ITEMAT )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -362,7 +362,7 @@ virtual QSize maximumSize() const
 */
 HB_FUNC_STATIC( QLAYOUT_MAXIMUMSIZE )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -387,7 +387,7 @@ QWidget * menuBar() const
 */
 HB_FUNC_STATIC( QLAYOUT_MENUBAR )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -412,7 +412,7 @@ virtual QSize minimumSize() const
 */
 HB_FUNC_STATIC( QLAYOUT_MINIMUMSIZE )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -437,7 +437,7 @@ QWidget * parentWidget() const
 */
 HB_FUNC_STATIC( QLAYOUT_PARENTWIDGET )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -462,7 +462,7 @@ void removeItem( QLayoutItem * item )
 */
 HB_FUNC_STATIC( QLAYOUT_REMOVEITEM )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -488,7 +488,7 @@ void removeWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QLAYOUT_REMOVEWIDGET )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -514,7 +514,7 @@ bool setAlignment( QWidget * w, Qt::Alignment alignment )
 */
 void QLayout_setAlignment1()
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -527,7 +527,7 @@ void setAlignment( Qt::Alignment alignment )
 */
 void QLayout_setAlignment2()
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -542,7 +542,7 @@ bool setAlignment( QLayout * l, Qt::Alignment alignment )
 */
 void QLayout_setAlignment3()
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -575,7 +575,7 @@ void setContentsMargins( int left, int top, int right, int bottom )
 */
 void QLayout_setContentsMargins1()
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -590,7 +590,7 @@ void setContentsMargins( const QMargins & margins )
 */
 void QLayout_setContentsMargins2()
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -621,7 +621,7 @@ void setEnabled( bool enable )
 */
 HB_FUNC_STATIC( QLAYOUT_SETENABLED )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -647,7 +647,7 @@ void setMenuBar( QWidget * widget )
 */
 HB_FUNC_STATIC( QLAYOUT_SETMENUBAR )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -673,7 +673,7 @@ void setSizeConstraint( QLayout::SizeConstraint )
 */
 HB_FUNC_STATIC( QLAYOUT_SETSIZECONSTRAINT )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -699,7 +699,7 @@ void setSpacing( int )
 */
 HB_FUNC_STATIC( QLAYOUT_SETSPACING )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -725,7 +725,7 @@ QLayout::SizeConstraint sizeConstraint() const
 */
 HB_FUNC_STATIC( QLAYOUT_SIZECONSTRAINT )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -749,7 +749,7 @@ int spacing() const
 */
 HB_FUNC_STATIC( QLAYOUT_SPACING )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -773,7 +773,7 @@ virtual QLayoutItem * takeAt( int index ) = 0
 */
 HB_FUNC_STATIC( QLAYOUT_TAKEAT )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -798,7 +798,7 @@ void update()
 */
 HB_FUNC_STATIC( QLAYOUT_UPDATE )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -824,7 +824,7 @@ virtual QRect geometry() const
 */
 HB_FUNC_STATIC( QLAYOUT_GEOMETRY )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -849,7 +849,7 @@ virtual void invalidate()
 */
 HB_FUNC_STATIC( QLAYOUT_INVALIDATE )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -875,7 +875,7 @@ virtual bool isEmpty() const
 */
 HB_FUNC_STATIC( QLAYOUT_ISEMPTY )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -899,7 +899,7 @@ virtual QLayout * layout()
 */
 HB_FUNC_STATIC( QLAYOUT_LAYOUT )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -924,7 +924,7 @@ virtual void setGeometry( const QRect & r )
 */
 HB_FUNC_STATIC( QLAYOUT_SETGEOMETRY )
 {
-  QLayout * obj = ( QLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLayout * obj = static_cast< QLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

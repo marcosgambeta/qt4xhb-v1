@@ -28,8 +28,8 @@ void QToolButtonSlots::triggered( QAction * action )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTOOLBUTTON" );
-    PHB_ITEM paction = Qt4xHb::Signals_return_qobject( ( QObject * ) action, "QACTION" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTOOLBUTTON" );
+    PHB_ITEM paction = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( action ), "QACTION" );
 
     hb_vmEvalBlockV( cb, 2, psender, paction );
 
@@ -40,7 +40,7 @@ void QToolButtonSlots::triggered( QAction * action )
 
 void QToolButtonSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QToolButton * obj = ( QToolButton * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QToolButton * obj = static_cast< QToolButton * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

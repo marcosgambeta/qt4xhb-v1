@@ -335,9 +335,9 @@ QWidget( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QWIDGET_NEW )
 {
-  if( ISBETWEEN( 0, 2 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) && ISOPTNUM( 2 ) )
+  if( ISBETWEEN( 0, 2 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
   {
-    QWidget * obj = new QWidget( OPQWIDGET( 1, 0 ), ISNIL( 2 )? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 2 ) );
+    QWidget * obj = new QWidget( OPQWIDGET( 1, 0 ), ISNIL( 2 ) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 2 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QWIDGET_NEW )
 
 HB_FUNC_STATIC( QWIDGET_DELETE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -370,7 +370,7 @@ bool acceptDrops() const
 */
 HB_FUNC_STATIC( QWIDGET_ACCEPTDROPS )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -394,7 +394,7 @@ QString accessibleDescription() const
 */
 HB_FUNC_STATIC( QWIDGET_ACCESSIBLEDESCRIPTION )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -418,7 +418,7 @@ QString accessibleName() const
 */
 HB_FUNC_STATIC( QWIDGET_ACCESSIBLENAME )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -442,7 +442,7 @@ QList<QAction *> actions() const
 */
 HB_FUNC_STATIC( QWIDGET_ACTIONS )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -463,7 +463,7 @@ HB_FUNC_STATIC( QWIDGET_ACTIONS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QAction * ) list[i] );
+          hb_itemPutPtr( pItem, static_cast< QAction * >( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -490,7 +490,7 @@ void activateWindow()
 */
 HB_FUNC_STATIC( QWIDGET_ACTIVATEWINDOW )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -516,7 +516,7 @@ void addAction( QAction * action )
 */
 HB_FUNC_STATIC( QWIDGET_ADDACTION )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -542,7 +542,7 @@ void addActions( QList<QAction *> actions )
 */
 HB_FUNC_STATIC( QWIDGET_ADDACTIONS )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QWIDGET_ADDACTIONS )
       int nLen1 = hb_arrayLen( aList1 );
       for( int i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << ( QAction * ) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+        par1 << static_cast< QAction * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
       }
       obj->addActions( par1 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -575,7 +575,7 @@ void adjustSize()
 */
 HB_FUNC_STATIC( QWIDGET_ADJUSTSIZE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -601,7 +601,7 @@ bool autoFillBackground() const
 */
 HB_FUNC_STATIC( QWIDGET_AUTOFILLBACKGROUND )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -625,7 +625,7 @@ QPalette::ColorRole backgroundRole() const
 */
 HB_FUNC_STATIC( QWIDGET_BACKGROUNDROLE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -649,7 +649,7 @@ QSize baseSize() const
 */
 HB_FUNC_STATIC( QWIDGET_BASESIZE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -674,7 +674,7 @@ QWidget * childAt( int x, int y ) const
 */
 void QWidget_childAt1()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -688,7 +688,7 @@ QWidget * childAt( const QPoint & p ) const
 */
 void QWidget_childAt2()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -718,7 +718,7 @@ QRect childrenRect() const
 */
 HB_FUNC_STATIC( QWIDGET_CHILDRENRECT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -743,7 +743,7 @@ QRegion childrenRegion() const
 */
 HB_FUNC_STATIC( QWIDGET_CHILDRENREGION )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -768,7 +768,7 @@ void clearFocus()
 */
 HB_FUNC_STATIC( QWIDGET_CLEARFOCUS )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -794,7 +794,7 @@ void clearMask()
 */
 HB_FUNC_STATIC( QWIDGET_CLEARMASK )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -820,7 +820,7 @@ QMargins contentsMargins() const
 */
 HB_FUNC_STATIC( QWIDGET_CONTENTSMARGINS )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -845,7 +845,7 @@ QRect contentsRect() const
 */
 HB_FUNC_STATIC( QWIDGET_CONTENTSRECT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -870,7 +870,7 @@ Qt::ContextMenuPolicy contextMenuPolicy() const
 */
 HB_FUNC_STATIC( QWIDGET_CONTEXTMENUPOLICY )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -894,7 +894,7 @@ QCursor cursor() const
 */
 HB_FUNC_STATIC( QWIDGET_CURSOR )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -920,7 +920,7 @@ WId effectiveWinId () const
 HB_FUNC_STATIC( QWIDGET_EFFECTIVEWINID )
 {
 #ifdef Q_OS_WIN
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -928,7 +928,7 @@ HB_FUNC_STATIC( QWIDGET_EFFECTIVEWINID )
     if( ISNUMPAR( 0 ) )
     {
 #endif
-      hb_retptr( ( void * ) obj->effectiveWinId() );
+      hb_retptr( static_cast< void * >( obj->effectiveWinId() ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -944,7 +944,7 @@ void ensurePolished() const
 */
 HB_FUNC_STATIC( QWIDGET_ENSUREPOLISHED )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -970,7 +970,7 @@ Qt::FocusPolicy focusPolicy() const
 */
 HB_FUNC_STATIC( QWIDGET_FOCUSPOLICY )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -994,7 +994,7 @@ QWidget * focusProxy() const
 */
 HB_FUNC_STATIC( QWIDGET_FOCUSPROXY )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1019,7 +1019,7 @@ QWidget * focusWidget() const
 */
 HB_FUNC_STATIC( QWIDGET_FOCUSWIDGET )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1044,7 +1044,7 @@ const QFont & font() const
 */
 HB_FUNC_STATIC( QWIDGET_FONT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1069,7 +1069,7 @@ QFontInfo fontInfo() const
 */
 HB_FUNC_STATIC( QWIDGET_FONTINFO )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1094,7 +1094,7 @@ QFontMetrics fontMetrics() const
 */
 HB_FUNC_STATIC( QWIDGET_FONTMETRICS )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1119,7 +1119,7 @@ QPalette::ColorRole foregroundRole() const
 */
 HB_FUNC_STATIC( QWIDGET_FOREGROUNDROLE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1143,7 +1143,7 @@ QRect frameGeometry() const
 */
 HB_FUNC_STATIC( QWIDGET_FRAMEGEOMETRY )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1168,7 +1168,7 @@ QSize frameSize() const
 */
 HB_FUNC_STATIC( QWIDGET_FRAMESIZE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1193,7 +1193,7 @@ const QRect & geometry() const
 */
 HB_FUNC_STATIC( QWIDGET_GEOMETRY )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1218,7 +1218,7 @@ void getContentsMargins( int * left, int * top, int * right, int * bottom ) cons
 */
 HB_FUNC_STATIC( QWIDGET_GETCONTENTSMARGINS )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1252,15 +1252,15 @@ void grabGesture( Qt::GestureType gesture, Qt::GestureFlags flags = Qt::GestureF
 */
 HB_FUNC_STATIC( QWIDGET_GRABGESTURE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
-      obj->grabGesture( ( Qt::GestureType ) hb_parni( 1 ), ISNIL( 2 )? ( Qt::GestureFlags ) Qt::GestureFlags() : ( Qt::GestureFlags ) hb_parni( 2 ) );
+      obj->grabGesture( ( Qt::GestureType ) hb_parni( 1 ), ISNIL( 2 ) ? ( Qt::GestureFlags ) Qt::GestureFlags() : ( Qt::GestureFlags ) hb_parni( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1278,7 +1278,7 @@ void grabKeyboard()
 */
 HB_FUNC_STATIC( QWIDGET_GRABKEYBOARD )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1304,7 +1304,7 @@ void grabMouse()
 */
 void QWidget_grabMouse1()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1319,7 +1319,7 @@ void grabMouse( const QCursor & cursor )
 */
 void QWidget_grabMouse2()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1350,15 +1350,15 @@ int grabShortcut( const QKeySequence & key, Qt::ShortcutContext context = Qt::Wi
 */
 HB_FUNC_STATIC( QWIDGET_GRABSHORTCUT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQKEYSEQUENCE( 1 ) && ISOPTNUM( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISQKEYSEQUENCE( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
-      RINT( obj->grabShortcut( *PQKEYSEQUENCE( 1 ), ISNIL( 2 )? ( Qt::ShortcutContext ) Qt::WindowShortcut : ( Qt::ShortcutContext ) hb_parni( 2 ) ) );
+      RINT( obj->grabShortcut( *PQKEYSEQUENCE( 1 ), ISNIL( 2 ) ? ( Qt::ShortcutContext ) Qt::WindowShortcut : ( Qt::ShortcutContext ) hb_parni( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1374,7 +1374,7 @@ QGraphicsEffect * graphicsEffect() const
 */
 HB_FUNC_STATIC( QWIDGET_GRAPHICSEFFECT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1399,7 +1399,7 @@ QGraphicsProxyWidget * graphicsProxyWidget() const
 */
 HB_FUNC_STATIC( QWIDGET_GRAPHICSPROXYWIDGET )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1424,7 +1424,7 @@ bool hasFocus() const
 */
 HB_FUNC_STATIC( QWIDGET_HASFOCUS )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1448,7 +1448,7 @@ bool hasMouseTracking() const
 */
 HB_FUNC_STATIC( QWIDGET_HASMOUSETRACKING )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1472,7 +1472,7 @@ int height() const
 */
 HB_FUNC_STATIC( QWIDGET_HEIGHT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1496,7 +1496,7 @@ virtual int heightForWidth( int w ) const
 */
 HB_FUNC_STATIC( QWIDGET_HEIGHTFORWIDTH )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1520,7 +1520,7 @@ QInputContext * inputContext()
 */
 HB_FUNC_STATIC( QWIDGET_INPUTCONTEXT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1545,7 +1545,7 @@ Qt::InputMethodHints inputMethodHints() const
 */
 HB_FUNC_STATIC( QWIDGET_INPUTMETHODHINTS )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1569,7 +1569,7 @@ virtual QVariant inputMethodQuery( Qt::InputMethodQuery query ) const
 */
 HB_FUNC_STATIC( QWIDGET_INPUTMETHODQUERY )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1594,7 +1594,7 @@ void insertAction( QAction * before, QAction * action )
 */
 HB_FUNC_STATIC( QWIDGET_INSERTACTION )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1620,7 +1620,7 @@ void insertActions( QAction * before, QList<QAction *> actions )
 */
 HB_FUNC_STATIC( QWIDGET_INSERTACTIONS )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1633,7 +1633,7 @@ HB_FUNC_STATIC( QWIDGET_INSERTACTIONS )
       int nLen2 = hb_arrayLen( aList2 );
       for( int i2 = 0; i2 < nLen2; i2++ )
       {
-        par2 << ( QAction * ) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
+        par2 << static_cast< QAction * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
       }
       obj->insertActions( PQACTION( 1 ), par2 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1653,7 +1653,7 @@ bool isActiveWindow() const
 */
 HB_FUNC_STATIC( QWIDGET_ISACTIVEWINDOW )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1677,7 +1677,7 @@ bool isAncestorOf( const QWidget * child ) const
 */
 HB_FUNC_STATIC( QWIDGET_ISANCESTOROF )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1701,7 +1701,7 @@ bool isEnabled() const
 */
 HB_FUNC_STATIC( QWIDGET_ISENABLED )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1725,7 +1725,7 @@ bool isEnabledTo( QWidget * ancestor ) const
 */
 HB_FUNC_STATIC( QWIDGET_ISENABLEDTO )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1749,7 +1749,7 @@ bool isFullScreen() const
 */
 HB_FUNC_STATIC( QWIDGET_ISFULLSCREEN )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1773,7 +1773,7 @@ bool isHidden() const
 */
 HB_FUNC_STATIC( QWIDGET_ISHIDDEN )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1797,7 +1797,7 @@ bool isMaximized() const
 */
 HB_FUNC_STATIC( QWIDGET_ISMAXIMIZED )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1821,7 +1821,7 @@ bool isMinimized() const
 */
 HB_FUNC_STATIC( QWIDGET_ISMINIMIZED )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1845,7 +1845,7 @@ bool isModal() const
 */
 HB_FUNC_STATIC( QWIDGET_ISMODAL )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1869,7 +1869,7 @@ bool isVisible() const
 */
 HB_FUNC_STATIC( QWIDGET_ISVISIBLE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1893,7 +1893,7 @@ bool isVisibleTo( QWidget * ancestor ) const
 */
 HB_FUNC_STATIC( QWIDGET_ISVISIBLETO )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1917,7 +1917,7 @@ bool isWindow() const
 */
 HB_FUNC_STATIC( QWIDGET_ISWINDOW )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1941,7 +1941,7 @@ bool isWindowModified() const
 */
 HB_FUNC_STATIC( QWIDGET_ISWINDOWMODIFIED )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1965,7 +1965,7 @@ QLayout * layout() const
 */
 HB_FUNC_STATIC( QWIDGET_LAYOUT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1990,7 +1990,7 @@ Qt::LayoutDirection layoutDirection() const
 */
 HB_FUNC_STATIC( QWIDGET_LAYOUTDIRECTION )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2014,7 +2014,7 @@ QLocale locale() const
 */
 HB_FUNC_STATIC( QWIDGET_LOCALE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2039,7 +2039,7 @@ QPoint mapFrom( QWidget * parent, const QPoint & pos ) const
 */
 HB_FUNC_STATIC( QWIDGET_MAPFROM )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2064,7 +2064,7 @@ QPoint mapFromGlobal( const QPoint & pos ) const
 */
 HB_FUNC_STATIC( QWIDGET_MAPFROMGLOBAL )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2089,7 +2089,7 @@ QPoint mapFromParent( const QPoint & pos ) const
 */
 HB_FUNC_STATIC( QWIDGET_MAPFROMPARENT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2114,7 +2114,7 @@ QPoint mapTo( QWidget * parent, const QPoint & pos ) const
 */
 HB_FUNC_STATIC( QWIDGET_MAPTO )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2139,7 +2139,7 @@ QPoint mapToGlobal( const QPoint & pos ) const
 */
 HB_FUNC_STATIC( QWIDGET_MAPTOGLOBAL )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2164,7 +2164,7 @@ QPoint mapToParent( const QPoint & pos ) const
 */
 HB_FUNC_STATIC( QWIDGET_MAPTOPARENT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2189,7 +2189,7 @@ QRegion mask() const
 */
 HB_FUNC_STATIC( QWIDGET_MASK )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2214,7 +2214,7 @@ int maximumHeight() const
 */
 HB_FUNC_STATIC( QWIDGET_MAXIMUMHEIGHT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2238,7 +2238,7 @@ QSize maximumSize() const
 */
 HB_FUNC_STATIC( QWIDGET_MAXIMUMSIZE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2263,7 +2263,7 @@ int maximumWidth() const
 */
 HB_FUNC_STATIC( QWIDGET_MAXIMUMWIDTH )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2287,7 +2287,7 @@ int minimumHeight() const
 */
 HB_FUNC_STATIC( QWIDGET_MINIMUMHEIGHT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2311,7 +2311,7 @@ QSize minimumSize() const
 */
 HB_FUNC_STATIC( QWIDGET_MINIMUMSIZE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2336,7 +2336,7 @@ virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QWIDGET_MINIMUMSIZEHINT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2361,7 +2361,7 @@ int minimumWidth() const
 */
 HB_FUNC_STATIC( QWIDGET_MINIMUMWIDTH )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2385,7 +2385,7 @@ void move( const QPoint & )
 */
 void QWidget_move1()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2400,7 +2400,7 @@ void move( int x, int y )
 */
 void QWidget_move2()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2431,7 +2431,7 @@ QWidget * nativeParentWidget() const
 */
 HB_FUNC_STATIC( QWIDGET_NATIVEPARENTWIDGET )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2456,7 +2456,7 @@ QWidget * nextInFocusChain() const
 */
 HB_FUNC_STATIC( QWIDGET_NEXTINFOCUSCHAIN )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2481,7 +2481,7 @@ QRect normalGeometry() const
 */
 HB_FUNC_STATIC( QWIDGET_NORMALGEOMETRY )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2506,7 +2506,7 @@ void overrideWindowFlags( Qt::WindowFlags flags )
 */
 HB_FUNC_STATIC( QWIDGET_OVERRIDEWINDOWFLAGS )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2532,7 +2532,7 @@ const QPalette & palette() const
 */
 HB_FUNC_STATIC( QWIDGET_PALETTE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2557,7 +2557,7 @@ QWidget * parentWidget() const
 */
 HB_FUNC_STATIC( QWIDGET_PARENTWIDGET )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2582,7 +2582,7 @@ QPoint pos() const
 */
 HB_FUNC_STATIC( QWIDGET_POS )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2607,7 +2607,7 @@ QWidget * previousInFocusChain() const
 */
 HB_FUNC_STATIC( QWIDGET_PREVIOUSINFOCUSCHAIN )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2632,7 +2632,7 @@ QRect rect() const
 */
 HB_FUNC_STATIC( QWIDGET_RECT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2657,7 +2657,7 @@ void releaseKeyboard()
 */
 HB_FUNC_STATIC( QWIDGET_RELEASEKEYBOARD )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2683,7 +2683,7 @@ void releaseMouse()
 */
 HB_FUNC_STATIC( QWIDGET_RELEASEMOUSE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2709,7 +2709,7 @@ void releaseShortcut( int id )
 */
 HB_FUNC_STATIC( QWIDGET_RELEASESHORTCUT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2735,7 +2735,7 @@ void removeAction( QAction * action )
 */
 HB_FUNC_STATIC( QWIDGET_REMOVEACTION )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2761,11 +2761,11 @@ void render( QPaintDevice * target, const QPoint & targetOffset = QPoint(), cons
 */
 void QWidget_render1()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
-    obj->render( PQPAINTDEVICE( 1 ), ISNIL( 2 )? QPoint() : *( QPoint * ) Qt4xHb::itemGetPtr( 2 ), ISNIL( 3 )? QRegion() : *( QRegion * ) Qt4xHb::itemGetPtr( 3 ), ISNIL( 4 )? ( QWidget::RenderFlags ) QWidget::RenderFlags( QWidget::DrawWindowBackground | QWidget::DrawChildren ) : ( QWidget::RenderFlags ) hb_parni( 4 ) );
+    obj->render( PQPAINTDEVICE( 1 ), ISNIL( 2 ) ? QPoint() : *static_cast< QPoint * >( Qt4xHb::itemGetPtr( 2 ) ), ISNIL( 3 ) ? QRegion() : *static_cast< QRegion * >( Qt4xHb::itemGetPtr( 3 ) ), ISNIL( 4 ) ? ( QWidget::RenderFlags ) QWidget::RenderFlags( QWidget::DrawWindowBackground | QWidget::DrawChildren ) : ( QWidget::RenderFlags ) hb_parni( 4 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2776,11 +2776,11 @@ void render( QPainter * painter, const QPoint & targetOffset = QPoint(), const Q
 */
 void QWidget_render2()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
-    obj->render( PQPAINTER( 1 ), ISNIL( 2 )? QPoint() : *( QPoint * ) Qt4xHb::itemGetPtr( 2 ), ISNIL( 3 )? QRegion() : *( QRegion * ) Qt4xHb::itemGetPtr( 3 ), ISNIL( 4 )? ( QWidget::RenderFlags ) QWidget::RenderFlags( QWidget::DrawWindowBackground | QWidget::DrawChildren ) : ( QWidget::RenderFlags ) hb_parni( 4 ) );
+    obj->render( PQPAINTER( 1 ), ISNIL( 2 ) ? QPoint() : *static_cast< QPoint * >( Qt4xHb::itemGetPtr( 2 ) ), ISNIL( 3 ) ? QRegion() : *static_cast< QRegion * >( Qt4xHb::itemGetPtr( 3 ) ), ISNIL( 4 ) ? ( QWidget::RenderFlags ) QWidget::RenderFlags( QWidget::DrawWindowBackground | QWidget::DrawChildren ) : ( QWidget::RenderFlags ) hb_parni( 4 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2807,7 +2807,7 @@ void repaint( int x, int y, int w, int h )
 */
 void QWidget_repaint1()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2822,7 +2822,7 @@ void repaint( const QRect & rect )
 */
 void QWidget_repaint2()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2837,7 +2837,7 @@ void repaint( const QRegion & rgn )
 */
 void QWidget_repaint3()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2872,7 +2872,7 @@ void resize( const QSize & )
 */
 void QWidget_resize1()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2887,7 +2887,7 @@ void resize( int w, int h )
 */
 void QWidget_resize2()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2918,7 +2918,7 @@ bool restoreGeometry( const QByteArray & geometry )
 */
 HB_FUNC_STATIC( QWIDGET_RESTOREGEOMETRY )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2942,7 +2942,7 @@ QByteArray saveGeometry() const
 */
 HB_FUNC_STATIC( QWIDGET_SAVEGEOMETRY )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2967,7 +2967,7 @@ void scroll( int dx, int dy )
 */
 void QWidget_scroll1()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2982,7 +2982,7 @@ void scroll( int dx, int dy, const QRect & r )
 */
 void QWidget_scroll2()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3013,7 +3013,7 @@ void setAcceptDrops( bool on )
 */
 HB_FUNC_STATIC( QWIDGET_SETACCEPTDROPS )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3039,7 +3039,7 @@ void setAccessibleDescription( const QString & description )
 */
 HB_FUNC_STATIC( QWIDGET_SETACCESSIBLEDESCRIPTION )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3065,7 +3065,7 @@ void setAccessibleName( const QString & name )
 */
 HB_FUNC_STATIC( QWIDGET_SETACCESSIBLENAME )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3091,7 +3091,7 @@ void setAttribute( Qt::WidgetAttribute attribute, bool on = true )
 */
 HB_FUNC_STATIC( QWIDGET_SETATTRIBUTE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3117,7 +3117,7 @@ void setAutoFillBackground( bool enabled )
 */
 HB_FUNC_STATIC( QWIDGET_SETAUTOFILLBACKGROUND )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3143,7 +3143,7 @@ void setBackgroundRole( QPalette::ColorRole role )
 */
 HB_FUNC_STATIC( QWIDGET_SETBACKGROUNDROLE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3169,7 +3169,7 @@ void setBaseSize( const QSize & )
 */
 void QWidget_setBaseSize1()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3184,7 +3184,7 @@ void setBaseSize( int basew, int baseh )
 */
 void QWidget_setBaseSize2()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3215,7 +3215,7 @@ void setContentsMargins( int left, int top, int right, int bottom )
 */
 void QWidget_setContentsMargins1()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3230,7 +3230,7 @@ void setContentsMargins( const QMargins & margins )
 */
 void QWidget_setContentsMargins2()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3261,7 +3261,7 @@ void setContextMenuPolicy( Qt::ContextMenuPolicy policy )
 */
 HB_FUNC_STATIC( QWIDGET_SETCONTEXTMENUPOLICY )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3287,7 +3287,7 @@ void setCursor( const QCursor & )
 */
 HB_FUNC_STATIC( QWIDGET_SETCURSOR )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3313,7 +3313,7 @@ void setFixedHeight( int h )
 */
 HB_FUNC_STATIC( QWIDGET_SETFIXEDHEIGHT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3339,7 +3339,7 @@ void setFixedSize( const QSize & s )
 */
 void QWidget_setFixedSize1()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3354,7 +3354,7 @@ void setFixedSize( int w, int h )
 */
 void QWidget_setFixedSize2()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3385,7 +3385,7 @@ void setFixedWidth( int w )
 */
 HB_FUNC_STATIC( QWIDGET_SETFIXEDWIDTH )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3411,7 +3411,7 @@ void setFocus( Qt::FocusReason reason )
 */
 void QWidget_setFocus1()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3426,7 +3426,7 @@ void setFocus()
 */
 void QWidget_setFocus2()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3457,7 +3457,7 @@ void setFocusPolicy( Qt::FocusPolicy policy )
 */
 HB_FUNC_STATIC( QWIDGET_SETFOCUSPOLICY )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3483,7 +3483,7 @@ void setFocusProxy( QWidget * w )
 */
 HB_FUNC_STATIC( QWIDGET_SETFOCUSPROXY )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3509,7 +3509,7 @@ void setFont( const QFont & )
 */
 HB_FUNC_STATIC( QWIDGET_SETFONT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3535,7 +3535,7 @@ void setForegroundRole( QPalette::ColorRole role )
 */
 HB_FUNC_STATIC( QWIDGET_SETFOREGROUNDROLE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3561,7 +3561,7 @@ void setGeometry( const QRect & )
 */
 void QWidget_setGeometry1()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3576,7 +3576,7 @@ void setGeometry( int x, int y, int w, int h )
 */
 void QWidget_setGeometry2()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3607,7 +3607,7 @@ void setGraphicsEffect( QGraphicsEffect * effect )
 */
 HB_FUNC_STATIC( QWIDGET_SETGRAPHICSEFFECT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3633,7 +3633,7 @@ void setInputContext( QInputContext * context )
 */
 HB_FUNC_STATIC( QWIDGET_SETINPUTCONTEXT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3659,7 +3659,7 @@ void setInputMethodHints( Qt::InputMethodHints hints )
 */
 HB_FUNC_STATIC( QWIDGET_SETINPUTMETHODHINTS )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3685,7 +3685,7 @@ void setLayout( QLayout * layout )
 */
 HB_FUNC_STATIC( QWIDGET_SETLAYOUT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3711,7 +3711,7 @@ void setLayoutDirection( Qt::LayoutDirection direction )
 */
 HB_FUNC_STATIC( QWIDGET_SETLAYOUTDIRECTION )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3737,7 +3737,7 @@ void setLocale( const QLocale & locale )
 */
 HB_FUNC_STATIC( QWIDGET_SETLOCALE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3763,7 +3763,7 @@ void setMask( const QBitmap & bitmap )
 */
 void QWidget_setMask1()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3778,7 +3778,7 @@ void setMask( const QRegion & region )
 */
 void QWidget_setMask2()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3809,7 +3809,7 @@ void setMaximumHeight( int maxh )
 */
 HB_FUNC_STATIC( QWIDGET_SETMAXIMUMHEIGHT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3835,7 +3835,7 @@ void setMaximumSize( const QSize & )
 */
 void QWidget_setMaximumSize1()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3850,7 +3850,7 @@ void setMaximumSize( int maxw, int maxh )
 */
 void QWidget_setMaximumSize2()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3881,7 +3881,7 @@ void setMaximumWidth( int maxw )
 */
 HB_FUNC_STATIC( QWIDGET_SETMAXIMUMWIDTH )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3907,7 +3907,7 @@ void setMinimumHeight( int minh )
 */
 HB_FUNC_STATIC( QWIDGET_SETMINIMUMHEIGHT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3933,7 +3933,7 @@ void setMinimumSize( const QSize & )
 */
 void QWidget_setMinimumSize1()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3948,7 +3948,7 @@ void setMinimumSize( int minw, int minh )
 */
 void QWidget_setMinimumSize2()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -3979,7 +3979,7 @@ void setMinimumWidth( int minw )
 */
 HB_FUNC_STATIC( QWIDGET_SETMINIMUMWIDTH )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4005,7 +4005,7 @@ void setMouseTracking( bool enable )
 */
 HB_FUNC_STATIC( QWIDGET_SETMOUSETRACKING )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4031,7 +4031,7 @@ void setPalette( const QPalette & )
 */
 HB_FUNC_STATIC( QWIDGET_SETPALETTE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4057,7 +4057,7 @@ void setParent( QWidget * parent )
 */
 void QWidget_setParent1()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4072,7 +4072,7 @@ void setParent( QWidget * parent, Qt::WindowFlags f )
 */
 void QWidget_setParent2()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4103,7 +4103,7 @@ void setShortcutAutoRepeat( int id, bool enable = true )
 */
 HB_FUNC_STATIC( QWIDGET_SETSHORTCUTAUTOREPEAT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4129,7 +4129,7 @@ void setShortcutEnabled( int id, bool enable = true )
 */
 HB_FUNC_STATIC( QWIDGET_SETSHORTCUTENABLED )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4155,7 +4155,7 @@ void setSizeIncrement( const QSize & )
 */
 void QWidget_setSizeIncrement1()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4170,7 +4170,7 @@ void setSizeIncrement( int w, int h )
 */
 void QWidget_setSizeIncrement2()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4201,7 +4201,7 @@ void setSizePolicy( QSizePolicy & )
 */
 void QWidget_setSizePolicy1()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4216,7 +4216,7 @@ void setSizePolicy( QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical
 */
 void QWidget_setSizePolicy2()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4247,7 +4247,7 @@ void setStatusTip( const QString & )
 */
 HB_FUNC_STATIC( QWIDGET_SETSTATUSTIP )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4273,7 +4273,7 @@ void setStyle( QStyle * style )
 */
 HB_FUNC_STATIC( QWIDGET_SETSTYLE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4299,7 +4299,7 @@ void setToolTip( const QString & )
 */
 HB_FUNC_STATIC( QWIDGET_SETTOOLTIP )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4325,7 +4325,7 @@ void setUpdatesEnabled( bool enable )
 */
 HB_FUNC_STATIC( QWIDGET_SETUPDATESENABLED )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4351,7 +4351,7 @@ void setWhatsThis( const QString & )
 */
 HB_FUNC_STATIC( QWIDGET_SETWHATSTHIS )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4377,7 +4377,7 @@ void setWindowFilePath( const QString & filePath )
 */
 HB_FUNC_STATIC( QWIDGET_SETWINDOWFILEPATH )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4403,7 +4403,7 @@ void setWindowFlags( Qt::WindowFlags type )
 */
 HB_FUNC_STATIC( QWIDGET_SETWINDOWFLAGS )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4429,7 +4429,7 @@ void setWindowIcon( const QIcon & icon )
 */
 HB_FUNC_STATIC( QWIDGET_SETWINDOWICON )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4437,7 +4437,7 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWICON )
     if( ISNUMPAR( 1 ) && ( ISQICON( 1) || ISCHAR( 1 ) ) )
     {
 #endif
-      obj->setWindowIcon( ISOBJECT( 1 )? *( QIcon * ) Qt4xHb::itemGetPtr( 1 ) : QIcon( hb_parc( 1 ) ) );
+      obj->setWindowIcon( ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt4xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -4455,7 +4455,7 @@ void setWindowIconText( const QString & )
 */
 HB_FUNC_STATIC( QWIDGET_SETWINDOWICONTEXT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4481,7 +4481,7 @@ void setWindowModality( Qt::WindowModality windowModality )
 */
 HB_FUNC_STATIC( QWIDGET_SETWINDOWMODALITY )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4507,7 +4507,7 @@ void setWindowOpacity( qreal level )
 */
 HB_FUNC_STATIC( QWIDGET_SETWINDOWOPACITY )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4533,7 +4533,7 @@ void setWindowRole( const QString & role )
 */
 HB_FUNC_STATIC( QWIDGET_SETWINDOWROLE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4559,7 +4559,7 @@ void setWindowState( Qt::WindowStates windowState )
 */
 HB_FUNC_STATIC( QWIDGET_SETWINDOWSTATE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4585,7 +4585,7 @@ QSize size() const
 */
 HB_FUNC_STATIC( QWIDGET_SIZE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4610,7 +4610,7 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QWIDGET_SIZEHINT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4635,7 +4635,7 @@ QSize sizeIncrement() const
 */
 HB_FUNC_STATIC( QWIDGET_SIZEINCREMENT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4660,7 +4660,7 @@ QSizePolicy sizePolicy() const
 */
 HB_FUNC_STATIC( QWIDGET_SIZEPOLICY )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4685,7 +4685,7 @@ void stackUnder( QWidget * w )
 */
 HB_FUNC_STATIC( QWIDGET_STACKUNDER )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4711,7 +4711,7 @@ QString statusTip() const
 */
 HB_FUNC_STATIC( QWIDGET_STATUSTIP )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4735,7 +4735,7 @@ QStyle * style() const
 */
 HB_FUNC_STATIC( QWIDGET_STYLE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4760,7 +4760,7 @@ QString styleSheet() const
 */
 HB_FUNC_STATIC( QWIDGET_STYLESHEET )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4784,7 +4784,7 @@ bool testAttribute( Qt::WidgetAttribute attribute ) const
 */
 HB_FUNC_STATIC( QWIDGET_TESTATTRIBUTE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4808,7 +4808,7 @@ QString toolTip() const
 */
 HB_FUNC_STATIC( QWIDGET_TOOLTIP )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4832,7 +4832,7 @@ bool underMouse() const
 */
 HB_FUNC_STATIC( QWIDGET_UNDERMOUSE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4856,7 +4856,7 @@ void ungrabGesture( Qt::GestureType gesture )
 */
 HB_FUNC_STATIC( QWIDGET_UNGRABGESTURE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4882,7 +4882,7 @@ void unsetCursor()
 */
 HB_FUNC_STATIC( QWIDGET_UNSETCURSOR )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4908,7 +4908,7 @@ void unsetLayoutDirection()
 */
 HB_FUNC_STATIC( QWIDGET_UNSETLAYOUTDIRECTION )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4934,7 +4934,7 @@ void unsetLocale()
 */
 HB_FUNC_STATIC( QWIDGET_UNSETLOCALE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4960,7 +4960,7 @@ void update( int x, int y, int w, int h )
 */
 void QWidget_update1()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4975,7 +4975,7 @@ void update( const QRect & rect )
 */
 void QWidget_update2()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -4990,7 +4990,7 @@ void update( const QRegion & rgn )
 */
 void QWidget_update3()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5005,7 +5005,7 @@ void update()
 */
 void QWidget_update4()
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5044,7 +5044,7 @@ void updateGeometry()
 */
 HB_FUNC_STATIC( QWIDGET_UPDATEGEOMETRY )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5070,7 +5070,7 @@ bool updatesEnabled() const
 */
 HB_FUNC_STATIC( QWIDGET_UPDATESENABLED )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5094,7 +5094,7 @@ QRegion visibleRegion() const
 */
 HB_FUNC_STATIC( QWIDGET_VISIBLEREGION )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5119,7 +5119,7 @@ QString whatsThis() const
 */
 HB_FUNC_STATIC( QWIDGET_WHATSTHIS )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5143,7 +5143,7 @@ int width() const
 */
 HB_FUNC_STATIC( QWIDGET_WIDTH )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5168,7 +5168,7 @@ WId winId () const
 HB_FUNC_STATIC( QWIDGET_WINID )
 {
 #ifdef Q_OS_WIN
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5176,7 +5176,7 @@ HB_FUNC_STATIC( QWIDGET_WINID )
     if( ISNUMPAR( 0 ) )
     {
 #endif
-      hb_retptr( ( void * ) obj->winId() );
+      hb_retptr( static_cast< void * >( obj->winId() ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -5192,7 +5192,7 @@ QWidget * window() const
 */
 HB_FUNC_STATIC( QWIDGET_WINDOW )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5217,7 +5217,7 @@ QString windowFilePath() const
 */
 HB_FUNC_STATIC( QWIDGET_WINDOWFILEPATH )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5241,7 +5241,7 @@ Qt::WindowFlags windowFlags() const
 */
 HB_FUNC_STATIC( QWIDGET_WINDOWFLAGS )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5265,7 +5265,7 @@ QIcon windowIcon() const
 */
 HB_FUNC_STATIC( QWIDGET_WINDOWICON )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5290,7 +5290,7 @@ QString windowIconText() const
 */
 HB_FUNC_STATIC( QWIDGET_WINDOWICONTEXT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5314,7 +5314,7 @@ Qt::WindowModality windowModality() const
 */
 HB_FUNC_STATIC( QWIDGET_WINDOWMODALITY )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5338,7 +5338,7 @@ qreal windowOpacity() const
 */
 HB_FUNC_STATIC( QWIDGET_WINDOWOPACITY )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5362,7 +5362,7 @@ QString windowRole() const
 */
 HB_FUNC_STATIC( QWIDGET_WINDOWROLE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5386,7 +5386,7 @@ Qt::WindowStates windowState() const
 */
 HB_FUNC_STATIC( QWIDGET_WINDOWSTATE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5410,7 +5410,7 @@ QString windowTitle() const
 */
 HB_FUNC_STATIC( QWIDGET_WINDOWTITLE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5434,7 +5434,7 @@ Qt::WindowType windowType() const
 */
 HB_FUNC_STATIC( QWIDGET_WINDOWTYPE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5458,7 +5458,7 @@ int x() const
 */
 HB_FUNC_STATIC( QWIDGET_X )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5482,7 +5482,7 @@ int y() const
 */
 HB_FUNC_STATIC( QWIDGET_Y )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5506,7 +5506,7 @@ virtual QPaintEngine * paintEngine() const
 */
 HB_FUNC_STATIC( QWIDGET_PAINTENGINE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5531,7 +5531,7 @@ bool close()
 */
 HB_FUNC_STATIC( QWIDGET_CLOSE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5555,7 +5555,7 @@ void hide()
 */
 HB_FUNC_STATIC( QWIDGET_HIDE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5581,7 +5581,7 @@ void lower()
 */
 HB_FUNC_STATIC( QWIDGET_LOWER )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5607,7 +5607,7 @@ void raise()
 */
 HB_FUNC_STATIC( QWIDGET_RAISE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5633,7 +5633,7 @@ void setDisabled( bool disable )
 */
 HB_FUNC_STATIC( QWIDGET_SETDISABLED )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5659,7 +5659,7 @@ void setEnabled( bool )
 */
 HB_FUNC_STATIC( QWIDGET_SETENABLED )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5685,7 +5685,7 @@ void setHidden( bool hidden )
 */
 HB_FUNC_STATIC( QWIDGET_SETHIDDEN )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5711,7 +5711,7 @@ void setStyleSheet( const QString & styleSheet )
 */
 HB_FUNC_STATIC( QWIDGET_SETSTYLESHEET )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5737,7 +5737,7 @@ virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QWIDGET_SETVISIBLE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5763,7 +5763,7 @@ void setWindowModified( bool )
 */
 HB_FUNC_STATIC( QWIDGET_SETWINDOWMODIFIED )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5789,7 +5789,7 @@ void setWindowTitle( const QString & )
 */
 HB_FUNC_STATIC( QWIDGET_SETWINDOWTITLE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5815,7 +5815,7 @@ void show()
 */
 HB_FUNC_STATIC( QWIDGET_SHOW )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5841,7 +5841,7 @@ void showFullScreen()
 */
 HB_FUNC_STATIC( QWIDGET_SHOWFULLSCREEN )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5867,7 +5867,7 @@ void showMaximized()
 */
 HB_FUNC_STATIC( QWIDGET_SHOWMAXIMIZED )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5893,7 +5893,7 @@ void showMinimized()
 */
 HB_FUNC_STATIC( QWIDGET_SHOWMINIMIZED )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5919,7 +5919,7 @@ void showNormal()
 */
 HB_FUNC_STATIC( QWIDGET_SHOWNORMAL )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5949,7 +5949,7 @@ int colorCount() const
 */
 HB_FUNC_STATIC( QWIDGET_COLORCOUNT )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5973,7 +5973,7 @@ int depth() const
 */
 HB_FUNC_STATIC( QWIDGET_DEPTH )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -5997,7 +5997,7 @@ int heightMM() const
 */
 HB_FUNC_STATIC( QWIDGET_HEIGHTMM )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -6021,7 +6021,7 @@ int logicalDpiX() const
 */
 HB_FUNC_STATIC( QWIDGET_LOGICALDPIX )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -6045,7 +6045,7 @@ int logicalDpiY() const
 */
 HB_FUNC_STATIC( QWIDGET_LOGICALDPIY )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -6069,7 +6069,7 @@ int numColors() const
 */
 HB_FUNC_STATIC( QWIDGET_NUMCOLORS )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -6093,7 +6093,7 @@ bool paintingActive() const
 */
 HB_FUNC_STATIC( QWIDGET_PAINTINGACTIVE )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -6117,7 +6117,7 @@ int physicalDpiX() const
 */
 HB_FUNC_STATIC( QWIDGET_PHYSICALDPIX )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -6141,7 +6141,7 @@ int physicalDpiY() const
 */
 HB_FUNC_STATIC( QWIDGET_PHYSICALDPIY )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -6165,7 +6165,7 @@ int widthMM() const
 */
 HB_FUNC_STATIC( QWIDGET_WIDTHMM )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

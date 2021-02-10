@@ -67,7 +67,7 @@ bool opaqueResize() const
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_OPAQUERESIZE )
 {
-  QSplitterHandle * obj = ( QSplitterHandle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitterHandle * obj = static_cast< QSplitterHandle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -91,7 +91,7 @@ Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_ORIENTATION )
 {
-  QSplitterHandle * obj = ( QSplitterHandle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitterHandle * obj = static_cast< QSplitterHandle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -115,7 +115,7 @@ void setOrientation( Qt::Orientation orientation )
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_SETORIENTATION )
 {
-  QSplitterHandle * obj = ( QSplitterHandle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitterHandle * obj = static_cast< QSplitterHandle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -141,7 +141,7 @@ QSplitter * splitter() const
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_SPLITTER )
 {
-  QSplitterHandle * obj = ( QSplitterHandle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitterHandle * obj = static_cast< QSplitterHandle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -166,7 +166,7 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSPLITTERHANDLE_SIZEHINT )
 {
-  QSplitterHandle * obj = ( QSplitterHandle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplitterHandle * obj = static_cast< QSplitterHandle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

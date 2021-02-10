@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QPICTURE_NEW )
 
 HB_FUNC_STATIC( QPICTURE_DELETE )
 {
-  QPicture * obj = ( QPicture * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPicture * obj = static_cast< QPicture * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -105,7 +105,7 @@ QRect boundingRect() const
 */
 HB_FUNC_STATIC( QPICTURE_BOUNDINGRECT )
 {
-  QPicture * obj = ( QPicture * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPicture * obj = static_cast< QPicture * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -130,7 +130,7 @@ const char * data() const
 */
 HB_FUNC_STATIC( QPICTURE_DATA )
 {
-  QPicture * obj = ( QPicture * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPicture * obj = static_cast< QPicture * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -154,7 +154,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QPICTURE_ISNULL )
 {
-  QPicture * obj = ( QPicture * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPicture * obj = static_cast< QPicture * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -178,7 +178,7 @@ bool load( const QString & fileName, const char * format = 0 )
 */
 void QPicture_load1()
 {
-  QPicture * obj = ( QPicture * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPicture * obj = static_cast< QPicture * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -191,7 +191,7 @@ bool load( QIODevice * dev, const char * format = 0 )
 */
 void QPicture_load2()
 {
-  QPicture * obj = ( QPicture * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPicture * obj = static_cast< QPicture * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -220,7 +220,7 @@ bool play( QPainter * painter )
 */
 HB_FUNC_STATIC( QPICTURE_PLAY )
 {
-  QPicture * obj = ( QPicture * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPicture * obj = static_cast< QPicture * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -244,7 +244,7 @@ bool save( const QString & fileName, const char * format = 0 )
 */
 void QPicture_save1()
 {
-  QPicture * obj = ( QPicture * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPicture * obj = static_cast< QPicture * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -257,7 +257,7 @@ bool save( QIODevice * dev, const char * format = 0 )
 */
 void QPicture_save2()
 {
-  QPicture * obj = ( QPicture * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPicture * obj = static_cast< QPicture * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -286,7 +286,7 @@ void setBoundingRect( const QRect & r )
 */
 HB_FUNC_STATIC( QPICTURE_SETBOUNDINGRECT )
 {
-  QPicture * obj = ( QPicture * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPicture * obj = static_cast< QPicture * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -312,7 +312,7 @@ virtual void setData( const char * data, uint size )
 */
 HB_FUNC_STATIC( QPICTURE_SETDATA )
 {
-  QPicture * obj = ( QPicture * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPicture * obj = static_cast< QPicture * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -338,7 +338,7 @@ uint size() const
 */
 HB_FUNC_STATIC( QPICTURE_SIZE )
 {
-  QPicture * obj = ( QPicture * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPicture * obj = static_cast< QPicture * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -362,7 +362,7 @@ void swap( QPicture & other )
 */
 HB_FUNC_STATIC( QPICTURE_SWAP )
 {
-  QPicture * obj = ( QPicture * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPicture * obj = static_cast< QPicture * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

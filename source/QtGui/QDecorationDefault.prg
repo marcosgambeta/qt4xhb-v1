@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QDECORATIONDEFAULT_NEW )
 
 HB_FUNC_STATIC( QDECORATIONDEFAULT_DELETE )
 {
-  QDecorationDefault * obj = ( QDecorationDefault * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDecorationDefault * obj = static_cast< QDecorationDefault * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -79,15 +79,15 @@ virtual bool paint( QPainter * painter, const QWidget * widget, int decorationRe
 */
 HB_FUNC_STATIC( QDECORATIONDEFAULT_PAINT )
 {
-  QDecorationDefault * obj = ( QDecorationDefault * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDecorationDefault * obj = static_cast< QDecorationDefault * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 4 ) && ISQPAINTER( 1 ) && ISQWIDGET( 2 ) && ISOPTNUM( 3 ) && ISOPTNUM( 4 ) )
+    if( ISBETWEEN( 2, 4 ) && ISQPAINTER( 1 ) && ISQWIDGET( 2 ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
     {
 #endif
-      RBOOL( obj->paint( PQPAINTER( 1 ), PQWIDGET( 2 ), OPINT( 3, QDecoration::All ), ISNIL( 4 )? ( QDecoration::DecorationState ) QDecoration::Normal : ( QDecoration::DecorationState ) hb_parni( 4 ) ) );
+      RBOOL( obj->paint( PQPAINTER( 1 ), PQWIDGET( 2 ), OPINT( 3, QDecoration::All ), ISNIL( 4 ) ? ( QDecoration::DecorationState ) QDecoration::Normal : ( QDecoration::DecorationState ) hb_parni( 4 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -103,12 +103,12 @@ virtual QRegion region( const QWidget * widget, const QRect & rect, int decorati
 */
 HB_FUNC_STATIC( QDECORATIONDEFAULT_REGION )
 {
-  QDecorationDefault * obj = ( QDecorationDefault * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDecorationDefault * obj = static_cast< QDecorationDefault * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 3 ) && ISQWIDGET( 1 ) && ISQRECT( 2 ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 2, 3 ) && ISQWIDGET( 1 ) && ISQRECT( 2 ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
       QRegion * ptr = new QRegion( obj->region( PQWIDGET( 1 ), *PQRECT( 2 ), OPINT( 3, QDecoration::All ) ) );

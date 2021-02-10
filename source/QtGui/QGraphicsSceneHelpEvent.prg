@@ -43,7 +43,7 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSSCENEHELPEVENT_DELETE )
 {
-  QGraphicsSceneHelpEvent * obj = ( QGraphicsSceneHelpEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneHelpEvent * obj = static_cast< QGraphicsSceneHelpEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -63,7 +63,7 @@ QPointF scenePos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEHELPEVENT_SCENEPOS )
 {
-  QGraphicsSceneHelpEvent * obj = ( QGraphicsSceneHelpEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneHelpEvent * obj = static_cast< QGraphicsSceneHelpEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -88,7 +88,7 @@ QPoint screenPos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEHELPEVENT_SCREENPOS )
 {
-  QGraphicsSceneHelpEvent * obj = ( QGraphicsSceneHelpEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneHelpEvent * obj = static_cast< QGraphicsSceneHelpEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

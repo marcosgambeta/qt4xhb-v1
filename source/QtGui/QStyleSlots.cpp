@@ -28,7 +28,7 @@ void QStyleSlots::currentChanged( int index )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSTYLE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSTYLE" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -46,7 +46,7 @@ void QStyleSlots::tabCloseRequested( int index )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSTYLE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSTYLE" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -64,7 +64,7 @@ void QStyleSlots::tabMoved( int from, int to )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSTYLE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSTYLE" );
     PHB_ITEM pfrom = hb_itemPutNI( NULL, from );
     PHB_ITEM pto = hb_itemPutNI( NULL, to );
 
@@ -78,7 +78,7 @@ void QStyleSlots::tabMoved( int from, int to )
 
 void QStyleSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QStyle * obj = ( QStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyle * obj = static_cast< QStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

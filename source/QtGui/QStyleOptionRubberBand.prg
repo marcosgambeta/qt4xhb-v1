@@ -80,7 +80,7 @@ QRubberBand::Shape shape
 */
 HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_SHAPE )
 {
-  QStyleOptionRubberBand * obj = ( QStyleOptionRubberBand * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionRubberBand * obj = static_cast< QStyleOptionRubberBand * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_SHAPE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_SETSHAPE )
 {
-  QStyleOptionRubberBand * obj = ( QStyleOptionRubberBand * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionRubberBand * obj = static_cast< QStyleOptionRubberBand * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -118,7 +118,7 @@ bool opaque
 */
 HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_OPAQUE )
 {
-  QStyleOptionRubberBand * obj = ( QStyleOptionRubberBand * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionRubberBand * obj = static_cast< QStyleOptionRubberBand * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_OPAQUE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_SETOPAQUE )
 {
-  QStyleOptionRubberBand * obj = ( QStyleOptionRubberBand * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionRubberBand * obj = static_cast< QStyleOptionRubberBand * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

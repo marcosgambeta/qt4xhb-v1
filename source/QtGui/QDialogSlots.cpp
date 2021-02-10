@@ -28,7 +28,7 @@ void QDialogSlots::accepted()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDIALOG" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDIALOG" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QDialogSlots::finished( int result )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDIALOG" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDIALOG" );
     PHB_ITEM presult = hb_itemPutNI( NULL, result );
 
     hb_vmEvalBlockV( cb, 2, psender, presult );
@@ -62,7 +62,7 @@ void QDialogSlots::rejected()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDIALOG" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDIALOG" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -72,7 +72,7 @@ void QDialogSlots::rejected()
 
 void QDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDialog * obj = ( QDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDialog * obj = static_cast< QDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

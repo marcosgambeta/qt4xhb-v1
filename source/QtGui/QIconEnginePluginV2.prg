@@ -44,7 +44,7 @@ RETURN
 
 HB_FUNC_STATIC( QICONENGINEPLUGINV2_DELETE )
 {
-  QIconEnginePluginV2 * obj = ( QIconEnginePluginV2 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QIconEnginePluginV2 * obj = static_cast< QIconEnginePluginV2 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -66,12 +66,12 @@ virtual QIconEngineV2 * create( const QString & filename = QString() ) = 0
 */
 HB_FUNC_STATIC( QICONENGINEPLUGINV2_CREATE )
 {
-  QIconEnginePluginV2 * obj = ( QIconEnginePluginV2 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QIconEnginePluginV2 * obj = static_cast< QIconEnginePluginV2 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ISOPTCHAR( 1 ) )
+    if( ISBETWEEN( 0, 1 ) && ( ISCHAR( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
       QIconEngineV2 * ptr = obj->create( OPQSTRING( 1, QString() ) );
@@ -91,7 +91,7 @@ virtual QStringList keys() const = 0
 */
 HB_FUNC_STATIC( QICONENGINEPLUGINV2_KEYS )
 {
-  QIconEnginePluginV2 * obj = ( QIconEnginePluginV2 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QIconEnginePluginV2 * obj = static_cast< QIconEnginePluginV2 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

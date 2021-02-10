@@ -45,7 +45,7 @@ RETURN
 
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_DELETE )
 {
-  QImageIOPlugin * obj = ( QImageIOPlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QImageIOPlugin * obj = static_cast< QImageIOPlugin * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -67,7 +67,7 @@ virtual QImageIOPlugin::Capabilities capabilities( QIODevice * device, const QBy
 */
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_CAPABILITIES )
 {
-  QImageIOPlugin * obj = ( QImageIOPlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QImageIOPlugin * obj = static_cast< QImageIOPlugin * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -91,7 +91,7 @@ virtual QImageIOHandler * create( QIODevice * device, const QByteArray & format 
 */
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_CREATE )
 {
-  QImageIOPlugin * obj = ( QImageIOPlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QImageIOPlugin * obj = static_cast< QImageIOPlugin * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_CREATE )
     if( ISBETWEEN( 1, 2 ) && ISQIODEVICE( 1 ) && ( ISQBYTEARRAY( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
-      QImageIOHandler * ptr = obj->create( PQIODEVICE( 1 ), ISNIL( 2 )? QByteArray() : *( QByteArray * ) Qt4xHb::itemGetPtr( 2 ) );
+      QImageIOHandler * ptr = obj->create( PQIODEVICE( 1 ), ISNIL( 2 ) ? QByteArray() : *static_cast< QByteArray * >( Qt4xHb::itemGetPtr( 2 ) ) );
       Qt4xHb::createReturnClass( ptr, "QIMAGEIOHANDLER", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -116,7 +116,7 @@ virtual QStringList keys() const = 0
 */
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_KEYS )
 {
-  QImageIOPlugin * obj = ( QImageIOPlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QImageIOPlugin * obj = static_cast< QImageIOPlugin * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QSTATUSTIPEVENT_NEW )
 
 HB_FUNC_STATIC( QSTATUSTIPEVENT_DELETE )
 {
-  QStatusTipEvent * obj = ( QStatusTipEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStatusTipEvent * obj = static_cast< QStatusTipEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -77,7 +77,7 @@ QString tip() const
 */
 HB_FUNC_STATIC( QSTATUSTIPEVENT_TIP )
 {
-  QStatusTipEvent * obj = ( QStatusTipEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStatusTipEvent * obj = static_cast< QStatusTipEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

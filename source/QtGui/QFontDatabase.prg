@@ -93,7 +93,7 @@ bool bold( const QString & family, const QString & style ) const
 */
 HB_FUNC_STATIC( QFONTDATABASE_BOLD )
 {
-  QFontDatabase * obj = ( QFontDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontDatabase * obj = static_cast< QFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -117,15 +117,15 @@ QStringList families( QFontDatabase::WritingSystem writingSystem = QFontDatabase
 */
 HB_FUNC_STATIC( QFONTDATABASE_FAMILIES )
 {
-  QFontDatabase * obj = ( QFontDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontDatabase * obj = static_cast< QFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
+    if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
-      RQSTRINGLIST( obj->families( ISNIL( 1 )? ( QFontDatabase::WritingSystem ) QFontDatabase::Any : ( QFontDatabase::WritingSystem ) hb_parni( 1 ) ) );
+      RQSTRINGLIST( obj->families( ISNIL( 1 ) ? ( QFontDatabase::WritingSystem ) QFontDatabase::Any : ( QFontDatabase::WritingSystem ) hb_parni( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,7 +141,7 @@ QFont font( const QString & family, const QString & style, int pointSize ) const
 */
 HB_FUNC_STATIC( QFONTDATABASE_FONT )
 {
-  QFontDatabase * obj = ( QFontDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontDatabase * obj = static_cast< QFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -166,12 +166,12 @@ bool isBitmapScalable( const QString & family, const QString & style = QString()
 */
 HB_FUNC_STATIC( QFONTDATABASE_ISBITMAPSCALABLE )
 {
-  QFontDatabase * obj = ( QFontDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontDatabase * obj = static_cast< QFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ISOPTCHAR( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       RBOOL( obj->isBitmapScalable( PQSTRING( 1 ), OPQSTRING( 2, QString() ) ) );
@@ -190,12 +190,12 @@ bool isFixedPitch( const QString & family, const QString & style = QString() ) c
 */
 HB_FUNC_STATIC( QFONTDATABASE_ISFIXEDPITCH )
 {
-  QFontDatabase * obj = ( QFontDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontDatabase * obj = static_cast< QFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ISOPTCHAR( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       RBOOL( obj->isFixedPitch( PQSTRING( 1 ), OPQSTRING( 2, QString() ) ) );
@@ -214,12 +214,12 @@ bool isScalable( const QString & family, const QString & style = QString() ) con
 */
 HB_FUNC_STATIC( QFONTDATABASE_ISSCALABLE )
 {
-  QFontDatabase * obj = ( QFontDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontDatabase * obj = static_cast< QFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ISOPTCHAR( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       RBOOL( obj->isScalable( PQSTRING( 1 ), OPQSTRING( 2, QString() ) ) );
@@ -238,12 +238,12 @@ bool isSmoothlyScalable( const QString & family, const QString & style = QString
 */
 HB_FUNC_STATIC( QFONTDATABASE_ISSMOOTHLYSCALABLE )
 {
-  QFontDatabase * obj = ( QFontDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontDatabase * obj = static_cast< QFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ISOPTCHAR( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       RBOOL( obj->isSmoothlyScalable( PQSTRING( 1 ), OPQSTRING( 2, QString() ) ) );
@@ -262,7 +262,7 @@ bool italic( const QString & family, const QString & style ) const
 */
 HB_FUNC_STATIC( QFONTDATABASE_ITALIC )
 {
-  QFontDatabase * obj = ( QFontDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontDatabase * obj = static_cast< QFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -286,12 +286,12 @@ QList<int> pointSizes( const QString & family, const QString & style = QString()
 */
 HB_FUNC_STATIC( QFONTDATABASE_POINTSIZES )
 {
-  QFontDatabase * obj = ( QFontDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontDatabase * obj = static_cast< QFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ISOPTCHAR( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       QList<int> list = obj->pointSizes( PQSTRING( 1 ), OPQSTRING( 2, QString() ) );
@@ -311,7 +311,7 @@ QList<int> smoothSizes( const QString & family, const QString & style )
 */
 HB_FUNC_STATIC( QFONTDATABASE_SMOOTHSIZES )
 {
-  QFontDatabase * obj = ( QFontDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontDatabase * obj = static_cast< QFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -336,7 +336,7 @@ QString styleString( const QFont & font )
 */
 void QFontDatabase_styleString1()
 {
-  QFontDatabase * obj = ( QFontDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontDatabase * obj = static_cast< QFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -349,7 +349,7 @@ QString styleString( const QFontInfo & fontInfo )
 */
 void QFontDatabase_styleString2()
 {
-  QFontDatabase * obj = ( QFontDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontDatabase * obj = static_cast< QFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -378,7 +378,7 @@ QStringList styles( const QString & family ) const
 */
 HB_FUNC_STATIC( QFONTDATABASE_STYLES )
 {
-  QFontDatabase * obj = ( QFontDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontDatabase * obj = static_cast< QFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -402,7 +402,7 @@ int weight( const QString & family, const QString & style ) const
 */
 HB_FUNC_STATIC( QFONTDATABASE_WEIGHT )
 {
-  QFontDatabase * obj = ( QFontDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontDatabase * obj = static_cast< QFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -426,7 +426,7 @@ QList<QFontDatabase::WritingSystem> writingSystems() const
 */
 void QFontDatabase_writingSystems1()
 {
-  QFontDatabase * obj = ( QFontDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontDatabase * obj = static_cast< QFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -447,7 +447,7 @@ QList<QFontDatabase::WritingSystem> writingSystems( const QString & family ) con
 */
 void QFontDatabase_writingSystems2()
 {
-  QFontDatabase * obj = ( QFontDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontDatabase * obj = static_cast< QFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QFONTDATABASE_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QFONTDATABASE_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

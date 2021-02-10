@@ -28,7 +28,7 @@ void QFileDialogSlots::currentChanged( const QString & path )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QFILEDIALOG" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QFILEDIALOG" );
     PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING( path ) );
 
     hb_vmEvalBlockV( cb, 2, psender, ppath );
@@ -46,7 +46,7 @@ void QFileDialogSlots::directoryEntered( const QString & directory )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QFILEDIALOG" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QFILEDIALOG" );
     PHB_ITEM pdirectory = hb_itemPutC( NULL, QSTRINGTOSTRING( directory ) );
 
     hb_vmEvalBlockV( cb, 2, psender, pdirectory );
@@ -64,7 +64,7 @@ void QFileDialogSlots::fileSelected( const QString & file )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QFILEDIALOG" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QFILEDIALOG" );
     PHB_ITEM pfile = hb_itemPutC( NULL, QSTRINGTOSTRING( file ) );
 
     hb_vmEvalBlockV( cb, 2, psender, pfile );
@@ -82,7 +82,7 @@ void QFileDialogSlots::filesSelected( const QStringList & selected )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QFILEDIALOG" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QFILEDIALOG" );
     PHB_ITEM pselected = hb_itemArrayNew( 0 );
     for( int i = 0; i < selected.count(); i++ )
     {
@@ -106,7 +106,7 @@ void QFileDialogSlots::filterSelected( const QString & filter )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QFILEDIALOG" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QFILEDIALOG" );
     PHB_ITEM pfilter = hb_itemPutC( NULL, QSTRINGTOSTRING( filter ) );
 
     hb_vmEvalBlockV( cb, 2, psender, pfilter );
@@ -118,7 +118,7 @@ void QFileDialogSlots::filterSelected( const QString & filter )
 
 void QFileDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QFileDialog * obj = ( QFileDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

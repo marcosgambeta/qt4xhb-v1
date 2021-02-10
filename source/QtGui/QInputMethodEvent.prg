@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW )
 
 HB_FUNC_STATIC( QINPUTMETHODEVENT_DELETE )
 {
-  QInputMethodEvent * obj = ( QInputMethodEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputMethodEvent * obj = static_cast< QInputMethodEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -97,7 +97,7 @@ int replacementLength() const
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTLENGTH )
 {
-  QInputMethodEvent * obj = ( QInputMethodEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputMethodEvent * obj = static_cast< QInputMethodEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -121,7 +121,7 @@ int replacementStart() const
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_REPLACEMENTSTART )
 {
-  QInputMethodEvent * obj = ( QInputMethodEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputMethodEvent * obj = static_cast< QInputMethodEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -145,12 +145,12 @@ void setCommitString( const QString & commitString, int replaceFrom = 0, int rep
 */
 HB_FUNC_STATIC( QINPUTMETHODEVENT_SETCOMMITSTRING )
 {
-  QInputMethodEvent * obj = ( QInputMethodEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputMethodEvent * obj = static_cast< QInputMethodEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ISOPTNUM( 2 ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
       obj->setCommitString( PQSTRING( 1 ), OPINT( 2, 0 ), OPINT( 3, 0 ) );

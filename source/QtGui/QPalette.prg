@@ -94,7 +94,7 @@ QPalette( const QColor & button )
 */
 void QPalette_new2()
 {
-  QPalette * obj = new QPalette( ISOBJECT( 1 )? *( QColor * ) Qt4xHb::itemGetPtr( 1 ) : QColor( hb_parc( 1 ) ) );
+  QPalette * obj = new QPalette( ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -112,7 +112,7 @@ QPalette( const QColor & button, const QColor & window )
 */
 void QPalette_new4()
 {
-  QPalette * obj = new QPalette( ISOBJECT( 1 )? *( QColor * ) Qt4xHb::itemGetPtr( 1 ) : QColor( hb_parc( 1 ) ), ISOBJECT( 2 )? *( QColor * ) Qt4xHb::itemGetPtr( 2 ) : QColor( hb_parc( 2 ) ) );
+  QPalette * obj = new QPalette( ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ), ISOBJECT( 2 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 2 ) ) : QColor( hb_parc( 2 ) ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QPALETTE_NEW )
 
 HB_FUNC_STATIC( QPALETTE_DELETE )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -188,7 +188,7 @@ const QBrush & alternateBase() const
 */
 HB_FUNC_STATIC( QPALETTE_ALTERNATEBASE )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -213,7 +213,7 @@ const QBrush & base() const
 */
 HB_FUNC_STATIC( QPALETTE_BASE )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -238,7 +238,7 @@ const QBrush & brightText() const
 */
 HB_FUNC_STATIC( QPALETTE_BRIGHTTEXT )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -263,7 +263,7 @@ const QBrush & brush( QPalette::ColorGroup group, QPalette::ColorRole role ) con
 */
 void QPalette_brush1()
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -277,7 +277,7 @@ const QBrush & brush( QPalette::ColorRole role ) const
 */
 void QPalette_brush2()
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -307,7 +307,7 @@ const QBrush & button() const
 */
 HB_FUNC_STATIC( QPALETTE_BUTTON )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -332,7 +332,7 @@ const QBrush & buttonText() const
 */
 HB_FUNC_STATIC( QPALETTE_BUTTONTEXT )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -357,7 +357,7 @@ qint64 cacheKey() const
 */
 HB_FUNC_STATIC( QPALETTE_CACHEKEY )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -381,7 +381,7 @@ const QColor & color( QPalette::ColorGroup group, QPalette::ColorRole role ) con
 */
 void QPalette_color1()
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -395,7 +395,7 @@ const QColor & color( QPalette::ColorRole role ) const
 */
 void QPalette_color2()
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -425,7 +425,7 @@ QPalette::ColorGroup currentColorGroup() const
 */
 HB_FUNC_STATIC( QPALETTE_CURRENTCOLORGROUP )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -449,7 +449,7 @@ const QBrush & dark() const
 */
 HB_FUNC_STATIC( QPALETTE_DARK )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -474,7 +474,7 @@ const QBrush & highlight() const
 */
 HB_FUNC_STATIC( QPALETTE_HIGHLIGHT )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -499,7 +499,7 @@ const QBrush & highlightedText() const
 */
 HB_FUNC_STATIC( QPALETTE_HIGHLIGHTEDTEXT )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -524,7 +524,7 @@ bool isBrushSet( QPalette::ColorGroup cg, QPalette::ColorRole cr ) const
 */
 HB_FUNC_STATIC( QPALETTE_ISBRUSHSET )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -548,7 +548,7 @@ bool isCopyOf( const QPalette & p ) const
 */
 HB_FUNC_STATIC( QPALETTE_ISCOPYOF )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -572,7 +572,7 @@ bool isEqual( QPalette::ColorGroup cg1, QPalette::ColorGroup cg2 ) const
 */
 HB_FUNC_STATIC( QPALETTE_ISEQUAL )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -596,7 +596,7 @@ const QBrush & light() const
 */
 HB_FUNC_STATIC( QPALETTE_LIGHT )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -621,7 +621,7 @@ const QBrush & link() const
 */
 HB_FUNC_STATIC( QPALETTE_LINK )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -646,7 +646,7 @@ const QBrush & linkVisited() const
 */
 HB_FUNC_STATIC( QPALETTE_LINKVISITED )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -671,7 +671,7 @@ const QBrush & mid() const
 */
 HB_FUNC_STATIC( QPALETTE_MID )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -696,7 +696,7 @@ const QBrush & midlight() const
 */
 HB_FUNC_STATIC( QPALETTE_MIDLIGHT )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -721,7 +721,7 @@ QPalette resolve( const QPalette & other ) const
 */
 HB_FUNC_STATIC( QPALETTE_RESOLVE )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -746,7 +746,7 @@ void setBrush( QPalette::ColorRole role, const QBrush & brush )
 */
 void QPalette_setBrush1()
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -761,7 +761,7 @@ void setBrush( QPalette::ColorGroup group, QPalette::ColorRole role, const QBrus
 */
 void QPalette_setBrush2()
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -792,11 +792,11 @@ void setColor( QPalette::ColorGroup group, QPalette::ColorRole role, const QColo
 */
 void QPalette_setColor1()
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
-    obj->setColor( ( QPalette::ColorGroup ) hb_parni( 1 ), ( QPalette::ColorRole ) hb_parni( 2 ), ISOBJECT( 3 )? *( QColor * ) Qt4xHb::itemGetPtr( 3 ) : QColor( hb_parc( 3 ) ) );
+    obj->setColor( ( QPalette::ColorGroup ) hb_parni( 1 ), ( QPalette::ColorRole ) hb_parni( 2 ), ISOBJECT( 3 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 3 ) ) : QColor( hb_parc( 3 ) ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -807,11 +807,11 @@ void setColor( QPalette::ColorRole role, const QColor & color )
 */
 void QPalette_setColor2()
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
-    obj->setColor( ( QPalette::ColorRole ) hb_parni( 1 ), ISOBJECT( 2 )? *( QColor * ) Qt4xHb::itemGetPtr( 2 ) : QColor( hb_parc( 2 ) ) );
+    obj->setColor( ( QPalette::ColorRole ) hb_parni( 1 ), ISOBJECT( 2 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 2 ) ) : QColor( hb_parc( 2 ) ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -838,7 +838,7 @@ void setColorGroup( QPalette::ColorGroup cg, const QBrush & windowText, const QB
 */
 HB_FUNC_STATIC( QPALETTE_SETCOLORGROUP )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -864,7 +864,7 @@ void setCurrentColorGroup( QPalette::ColorGroup cg )
 */
 HB_FUNC_STATIC( QPALETTE_SETCURRENTCOLORGROUP )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -890,7 +890,7 @@ const QBrush & shadow() const
 */
 HB_FUNC_STATIC( QPALETTE_SHADOW )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -915,7 +915,7 @@ const QBrush & text() const
 */
 HB_FUNC_STATIC( QPALETTE_TEXT )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -940,7 +940,7 @@ const QBrush & toolTipBase() const
 */
 HB_FUNC_STATIC( QPALETTE_TOOLTIPBASE )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -965,7 +965,7 @@ const QBrush & toolTipText() const
 */
 HB_FUNC_STATIC( QPALETTE_TOOLTIPTEXT )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -990,7 +990,7 @@ const QBrush & window() const
 */
 HB_FUNC_STATIC( QPALETTE_WINDOW )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1015,7 +1015,7 @@ const QBrush & windowText() const
 */
 HB_FUNC_STATIC( QPALETTE_WINDOWTEXT )
 {
-  QPalette * obj = ( QPalette * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPalette * obj = static_cast< QPalette * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1041,7 +1041,7 @@ HB_FUNC_STATIC( QPALETTE_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -1050,7 +1050,7 @@ HB_FUNC_STATIC( QPALETTE_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

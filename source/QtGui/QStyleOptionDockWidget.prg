@@ -84,7 +84,7 @@ QString title
 */
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_TITLE )
 {
-  QStyleOptionDockWidget * obj = ( QStyleOptionDockWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionDockWidget * obj = static_cast< QStyleOptionDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_TITLE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETTITLE )
 {
-  QStyleOptionDockWidget * obj = ( QStyleOptionDockWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionDockWidget * obj = static_cast< QStyleOptionDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -122,7 +122,7 @@ bool closable
 */
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_CLOSABLE )
 {
-  QStyleOptionDockWidget * obj = ( QStyleOptionDockWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionDockWidget * obj = static_cast< QStyleOptionDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_CLOSABLE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETCLOSABLE )
 {
-  QStyleOptionDockWidget * obj = ( QStyleOptionDockWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionDockWidget * obj = static_cast< QStyleOptionDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -160,7 +160,7 @@ bool movable
 */
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_MOVABLE )
 {
-  QStyleOptionDockWidget * obj = ( QStyleOptionDockWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionDockWidget * obj = static_cast< QStyleOptionDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_MOVABLE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETMOVABLE )
 {
-  QStyleOptionDockWidget * obj = ( QStyleOptionDockWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionDockWidget * obj = static_cast< QStyleOptionDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -198,7 +198,7 @@ bool floatable
 */
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_FLOATABLE )
 {
-  QStyleOptionDockWidget * obj = ( QStyleOptionDockWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionDockWidget * obj = static_cast< QStyleOptionDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_FLOATABLE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETFLOATABLE )
 {
-  QStyleOptionDockWidget * obj = ( QStyleOptionDockWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionDockWidget * obj = static_cast< QStyleOptionDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

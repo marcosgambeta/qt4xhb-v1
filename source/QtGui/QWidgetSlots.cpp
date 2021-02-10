@@ -28,7 +28,7 @@ void QWidgetSlots::customContextMenuRequested( const QPoint & pos )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWIDGET" );
     PHB_ITEM ppos = Qt4xHb::Signals_return_object( ( void * ) &pos, "QPOINT" );
 
     hb_vmEvalBlockV( cb, 2, psender, ppos );
@@ -40,7 +40,7 @@ void QWidgetSlots::customContextMenuRequested( const QPoint & pos )
 
 void QWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QWidget * obj = ( QWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidget * obj = static_cast< QWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

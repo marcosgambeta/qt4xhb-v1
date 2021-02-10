@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QVECTOR3D_NEW )
 
 HB_FUNC_STATIC( QVECTOR3D_DELETE )
 {
-  QVector3D * obj = ( QVector3D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector3D * obj = static_cast< QVector3D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -195,7 +195,7 @@ qreal distanceToLine( const QVector3D & point, const QVector3D & direction ) con
 */
 HB_FUNC_STATIC( QVECTOR3D_DISTANCETOLINE )
 {
-  QVector3D * obj = ( QVector3D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector3D * obj = static_cast< QVector3D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -219,7 +219,7 @@ qreal distanceToPlane( const QVector3D & plane, const QVector3D & normal ) const
 */
 void QVector3D_distanceToPlane1()
 {
-  QVector3D * obj = ( QVector3D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector3D * obj = static_cast< QVector3D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -232,7 +232,7 @@ qreal distanceToPlane( const QVector3D & plane1, const QVector3D & plane2, const
 */
 void QVector3D_distanceToPlane2()
 {
-  QVector3D * obj = ( QVector3D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector3D * obj = static_cast< QVector3D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -261,7 +261,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QVECTOR3D_ISNULL )
 {
-  QVector3D * obj = ( QVector3D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector3D * obj = static_cast< QVector3D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -285,7 +285,7 @@ qreal length() const
 */
 HB_FUNC_STATIC( QVECTOR3D_LENGTH )
 {
-  QVector3D * obj = ( QVector3D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector3D * obj = static_cast< QVector3D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -309,7 +309,7 @@ qreal lengthSquared() const
 */
 HB_FUNC_STATIC( QVECTOR3D_LENGTHSQUARED )
 {
-  QVector3D * obj = ( QVector3D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector3D * obj = static_cast< QVector3D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -333,7 +333,7 @@ void normalize()
 */
 HB_FUNC_STATIC( QVECTOR3D_NORMALIZE )
 {
-  QVector3D * obj = ( QVector3D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector3D * obj = static_cast< QVector3D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -359,7 +359,7 @@ QVector3D normalized() const
 */
 HB_FUNC_STATIC( QVECTOR3D_NORMALIZED )
 {
-  QVector3D * obj = ( QVector3D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector3D * obj = static_cast< QVector3D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -384,7 +384,7 @@ void setX( qreal x )
 */
 HB_FUNC_STATIC( QVECTOR3D_SETX )
 {
-  QVector3D * obj = ( QVector3D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector3D * obj = static_cast< QVector3D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -410,7 +410,7 @@ void setY( qreal y )
 */
 HB_FUNC_STATIC( QVECTOR3D_SETY )
 {
-  QVector3D * obj = ( QVector3D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector3D * obj = static_cast< QVector3D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -436,7 +436,7 @@ void setZ( qreal z )
 */
 HB_FUNC_STATIC( QVECTOR3D_SETZ )
 {
-  QVector3D * obj = ( QVector3D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector3D * obj = static_cast< QVector3D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -462,7 +462,7 @@ QPoint toPoint() const
 */
 HB_FUNC_STATIC( QVECTOR3D_TOPOINT )
 {
-  QVector3D * obj = ( QVector3D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector3D * obj = static_cast< QVector3D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -487,7 +487,7 @@ QPointF toPointF() const
 */
 HB_FUNC_STATIC( QVECTOR3D_TOPOINTF )
 {
-  QVector3D * obj = ( QVector3D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector3D * obj = static_cast< QVector3D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -512,7 +512,7 @@ QVector2D toVector2D() const
 */
 HB_FUNC_STATIC( QVECTOR3D_TOVECTOR2D )
 {
-  QVector3D * obj = ( QVector3D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector3D * obj = static_cast< QVector3D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -537,7 +537,7 @@ QVector4D toVector4D() const
 */
 HB_FUNC_STATIC( QVECTOR3D_TOVECTOR4D )
 {
-  QVector3D * obj = ( QVector3D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector3D * obj = static_cast< QVector3D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -562,7 +562,7 @@ qreal x() const
 */
 HB_FUNC_STATIC( QVECTOR3D_X )
 {
-  QVector3D * obj = ( QVector3D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector3D * obj = static_cast< QVector3D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -586,7 +586,7 @@ qreal y() const
 */
 HB_FUNC_STATIC( QVECTOR3D_Y )
 {
-  QVector3D * obj = ( QVector3D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector3D * obj = static_cast< QVector3D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -610,7 +610,7 @@ qreal z() const
 */
 HB_FUNC_STATIC( QVECTOR3D_Z )
 {
-  QVector3D * obj = ( QVector3D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector3D * obj = static_cast< QVector3D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -710,7 +710,7 @@ HB_FUNC_STATIC( QVECTOR3D_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -719,7 +719,7 @@ HB_FUNC_STATIC( QVECTOR3D_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

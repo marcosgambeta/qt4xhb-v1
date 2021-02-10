@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_NEW )
 
 HB_FUNC_STATIC( QFILEOPENEVENT_DELETE )
 {
-  QFileOpenEvent * obj = ( QFileOpenEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileOpenEvent * obj = static_cast< QFileOpenEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -100,7 +100,7 @@ QString file() const
 */
 HB_FUNC_STATIC( QFILEOPENEVENT_FILE )
 {
-  QFileOpenEvent * obj = ( QFileOpenEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileOpenEvent * obj = static_cast< QFileOpenEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -124,7 +124,7 @@ bool openFile( QFile & file, QIODevice::OpenMode flags ) const
 */
 HB_FUNC_STATIC( QFILEOPENEVENT_OPENFILE )
 {
-  QFileOpenEvent * obj = ( QFileOpenEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileOpenEvent * obj = static_cast< QFileOpenEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -148,7 +148,7 @@ QUrl url() const
 */
 HB_FUNC_STATIC( QFILEOPENEVENT_URL )
 {
-  QFileOpenEvent * obj = ( QFileOpenEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileOpenEvent * obj = static_cast< QFileOpenEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_NEW )
 
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_DELETE )
 {
-  QItemSelectionModel * obj = ( QItemSelectionModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemSelectionModel * obj = static_cast< QItemSelectionModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -123,7 +123,7 @@ bool columnIntersectsSelection( int column, const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_COLUMNINTERSECTSSELECTION )
 {
-  QItemSelectionModel * obj = ( QItemSelectionModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemSelectionModel * obj = static_cast< QItemSelectionModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -147,7 +147,7 @@ QModelIndex currentIndex() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_CURRENTINDEX )
 {
-  QItemSelectionModel * obj = ( QItemSelectionModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemSelectionModel * obj = static_cast< QItemSelectionModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -172,7 +172,7 @@ bool hasSelection() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_HASSELECTION )
 {
-  QItemSelectionModel * obj = ( QItemSelectionModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemSelectionModel * obj = static_cast< QItemSelectionModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -196,7 +196,7 @@ bool isColumnSelected( int column, const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISCOLUMNSELECTED )
 {
-  QItemSelectionModel * obj = ( QItemSelectionModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemSelectionModel * obj = static_cast< QItemSelectionModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -220,7 +220,7 @@ bool isRowSelected( int row, const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISROWSELECTED )
 {
-  QItemSelectionModel * obj = ( QItemSelectionModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemSelectionModel * obj = static_cast< QItemSelectionModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -244,7 +244,7 @@ bool isSelected( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ISSELECTED )
 {
-  QItemSelectionModel * obj = ( QItemSelectionModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemSelectionModel * obj = static_cast< QItemSelectionModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -268,7 +268,7 @@ const QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_MODEL )
 {
-  QItemSelectionModel * obj = ( QItemSelectionModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemSelectionModel * obj = static_cast< QItemSelectionModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -293,7 +293,7 @@ bool rowIntersectsSelection( int row, const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ROWINTERSECTSSELECTION )
 {
-  QItemSelectionModel * obj = ( QItemSelectionModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemSelectionModel * obj = static_cast< QItemSelectionModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -317,12 +317,12 @@ QModelIndexList selectedColumns( int row = 0 ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDCOLUMNS )
 {
-  QItemSelectionModel * obj = ( QItemSelectionModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemSelectionModel * obj = static_cast< QItemSelectionModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
+    if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
       QModelIndexList list = obj->selectedColumns( OPINT( 1, 0 ) );
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDCOLUMNS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QModelIndex * ) new QModelIndex( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QModelIndex * >( new QModelIndex( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -369,7 +369,7 @@ QModelIndexList selectedIndexes() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDINDEXES )
 {
-  QItemSelectionModel * obj = ( QItemSelectionModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemSelectionModel * obj = static_cast< QItemSelectionModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDINDEXES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QModelIndex * ) new QModelIndex( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QModelIndex * >( new QModelIndex( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -421,12 +421,12 @@ QModelIndexList selectedRows( int column = 0 ) const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDROWS )
 {
-  QItemSelectionModel * obj = ( QItemSelectionModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemSelectionModel * obj = static_cast< QItemSelectionModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
+    if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
       QModelIndexList list = obj->selectedRows( OPINT( 1, 0 ) );
@@ -442,7 +442,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDROWS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QModelIndex * ) new QModelIndex( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QModelIndex * >( new QModelIndex( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -473,7 +473,7 @@ const QItemSelection selection() const
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTION )
 {
-  QItemSelectionModel * obj = ( QItemSelectionModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemSelectionModel * obj = static_cast< QItemSelectionModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -498,7 +498,7 @@ virtual void clear()
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_CLEAR )
 {
-  QItemSelectionModel * obj = ( QItemSelectionModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemSelectionModel * obj = static_cast< QItemSelectionModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -524,7 +524,7 @@ void clearSelection()
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_CLEARSELECTION )
 {
-  QItemSelectionModel * obj = ( QItemSelectionModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemSelectionModel * obj = static_cast< QItemSelectionModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -550,7 +550,7 @@ virtual void reset()
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_RESET )
 {
-  QItemSelectionModel * obj = ( QItemSelectionModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemSelectionModel * obj = static_cast< QItemSelectionModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -576,7 +576,7 @@ virtual void select( const QModelIndex & index, QItemSelectionModel::SelectionFl
 */
 void QItemSelectionModel_select1()
 {
-  QItemSelectionModel * obj = ( QItemSelectionModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemSelectionModel * obj = static_cast< QItemSelectionModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -591,7 +591,7 @@ virtual void select( const QItemSelection & selection, QItemSelectionModel::Sele
 */
 void QItemSelectionModel_select2()
 {
-  QItemSelectionModel * obj = ( QItemSelectionModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemSelectionModel * obj = static_cast< QItemSelectionModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -622,7 +622,7 @@ void setCurrentIndex( const QModelIndex & index, QItemSelectionModel::SelectionF
 */
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_SETCURRENTINDEX )
 {
-  QItemSelectionModel * obj = ( QItemSelectionModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemSelectionModel * obj = static_cast< QItemSelectionModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

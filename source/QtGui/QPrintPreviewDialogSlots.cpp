@@ -28,7 +28,7 @@ void QPrintPreviewDialogSlots::paintRequested( QPrinter * printer )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QPRINTPREVIEWDIALOG" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QPRINTPREVIEWDIALOG" );
     PHB_ITEM pprinter = Qt4xHb::Signals_return_object( ( void * ) printer, "QPRINTER" );
 
     hb_vmEvalBlockV( cb, 2, psender, pprinter );
@@ -40,7 +40,7 @@ void QPrintPreviewDialogSlots::paintRequested( QPrinter * printer )
 
 void QPrintPreviewDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QPrintPreviewDialog * obj = ( QPrintPreviewDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrintPreviewDialog * obj = static_cast< QPrintPreviewDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW )
 
 HB_FUNC_STATIC( QSTACKEDLAYOUT_DELETE )
 {
-  QStackedLayout * obj = ( QStackedLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStackedLayout * obj = static_cast< QStackedLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -124,7 +124,7 @@ int addWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_ADDWIDGET )
 {
-  QStackedLayout * obj = ( QStackedLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStackedLayout * obj = static_cast< QStackedLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -148,7 +148,7 @@ int currentIndex() const
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTINDEX )
 {
-  QStackedLayout * obj = ( QStackedLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStackedLayout * obj = static_cast< QStackedLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -172,7 +172,7 @@ QWidget * currentWidget() const
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTWIDGET )
 {
-  QStackedLayout * obj = ( QStackedLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStackedLayout * obj = static_cast< QStackedLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -197,7 +197,7 @@ int insertWidget( int index, QWidget * widget )
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_INSERTWIDGET )
 {
-  QStackedLayout * obj = ( QStackedLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStackedLayout * obj = static_cast< QStackedLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -221,7 +221,7 @@ void setStackingMode( QStackedLayout::StackingMode stackingMode )
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_SETSTACKINGMODE )
 {
-  QStackedLayout * obj = ( QStackedLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStackedLayout * obj = static_cast< QStackedLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -247,7 +247,7 @@ QStackedLayout::StackingMode stackingMode() const
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_STACKINGMODE )
 {
-  QStackedLayout * obj = ( QStackedLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStackedLayout * obj = static_cast< QStackedLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -271,7 +271,7 @@ QWidget * widget( int index ) const
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_WIDGET )
 {
-  QStackedLayout * obj = ( QStackedLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStackedLayout * obj = static_cast< QStackedLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -296,7 +296,7 @@ void setCurrentIndex( int index )
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_SETCURRENTINDEX )
 {
-  QStackedLayout * obj = ( QStackedLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStackedLayout * obj = static_cast< QStackedLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -322,7 +322,7 @@ void setCurrentWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QSTACKEDLAYOUT_SETCURRENTWIDGET )
 {
-  QStackedLayout * obj = ( QStackedLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStackedLayout * obj = static_cast< QStackedLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

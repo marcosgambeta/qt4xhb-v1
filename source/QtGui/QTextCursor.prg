@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEW )
 
 HB_FUNC_STATIC( QTEXTCURSOR_DELETE )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -213,7 +213,7 @@ int anchor() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ANCHOR )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -237,7 +237,7 @@ bool atBlockEnd() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ATBLOCKEND )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -261,7 +261,7 @@ bool atBlockStart() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ATBLOCKSTART )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -285,7 +285,7 @@ bool atEnd() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ATEND )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -309,7 +309,7 @@ bool atStart() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ATSTART )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -333,7 +333,7 @@ void beginEditBlock()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_BEGINEDITBLOCK )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -359,7 +359,7 @@ QTextBlock block() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_BLOCK )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -384,7 +384,7 @@ QTextCharFormat blockCharFormat() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_BLOCKCHARFORMAT )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -409,7 +409,7 @@ QTextBlockFormat blockFormat() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_BLOCKFORMAT )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -434,7 +434,7 @@ int blockNumber() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_BLOCKNUMBER )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -458,7 +458,7 @@ QTextCharFormat charFormat() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_CHARFORMAT )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -483,7 +483,7 @@ void clearSelection()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_CLEARSELECTION )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -509,7 +509,7 @@ int columnNumber() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_COLUMNNUMBER )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -533,7 +533,7 @@ QTextList * createList( const QTextListFormat & format )
 */
 void QTextCursor_createList1()
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -547,7 +547,7 @@ QTextList * createList( QTextListFormat::Style style )
 */
 void QTextCursor_createList2()
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -577,7 +577,7 @@ QTextFrame * currentFrame() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_CURRENTFRAME )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -602,7 +602,7 @@ QTextList * currentList() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_CURRENTLIST )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -627,7 +627,7 @@ QTextTable * currentTable() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_CURRENTTABLE )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -652,7 +652,7 @@ void deleteChar()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_DELETECHAR )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -678,7 +678,7 @@ void deletePreviousChar()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_DELETEPREVIOUSCHAR )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -704,7 +704,7 @@ QTextDocument * document() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_DOCUMENT )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -729,7 +729,7 @@ void endEditBlock()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ENDEDITBLOCK )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -755,7 +755,7 @@ bool hasComplexSelection() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_HASCOMPLEXSELECTION )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -779,7 +779,7 @@ bool hasSelection() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_HASSELECTION )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -803,7 +803,7 @@ void insertBlock()
 */
 void QTextCursor_insertBlock1()
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -818,7 +818,7 @@ void insertBlock( const QTextBlockFormat & format )
 */
 void QTextCursor_insertBlock2()
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -833,7 +833,7 @@ void insertBlock( const QTextBlockFormat & format, const QTextCharFormat & charF
 */
 void QTextCursor_insertBlock3()
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -868,7 +868,7 @@ void insertFragment( const QTextDocumentFragment & fragment )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTFRAGMENT )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -894,7 +894,7 @@ QTextFrame * insertFrame( const QTextFrameFormat & format )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTFRAME )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -919,7 +919,7 @@ void insertHtml( const QString & html )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTHTML )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -945,7 +945,7 @@ void insertImage( const QTextImageFormat & format )
 */
 void QTextCursor_insertImage1()
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -960,7 +960,7 @@ void insertImage( const QTextImageFormat & format, QTextFrameFormat::Position al
 */
 void QTextCursor_insertImage2()
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -975,7 +975,7 @@ void insertImage( const QString & name )
 */
 void QTextCursor_insertImage3()
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -990,7 +990,7 @@ void insertImage( const QImage & image, const QString & name = QString() )
 */
 void QTextCursor_insertImage4()
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1029,7 +1029,7 @@ QTextList * insertList( const QTextListFormat & format )
 */
 void QTextCursor_insertList1()
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1043,7 +1043,7 @@ QTextList * insertList( QTextListFormat::Style style )
 */
 void QTextCursor_insertList2()
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1073,7 +1073,7 @@ QTextTable * insertTable( int rows, int columns, const QTextTableFormat & format
 */
 void QTextCursor_insertTable1()
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1087,7 +1087,7 @@ QTextTable * insertTable( int rows, int columns )
 */
 void QTextCursor_insertTable2()
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1117,7 +1117,7 @@ void insertText( const QString & text )
 */
 void QTextCursor_insertText1()
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1132,7 +1132,7 @@ void insertText( const QString & text, const QTextCharFormat & format )
 */
 void QTextCursor_insertText2()
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1163,7 +1163,7 @@ bool isCopyOf( const QTextCursor & other ) const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ISCOPYOF )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1187,7 +1187,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_ISNULL )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1211,7 +1211,7 @@ void joinPreviousEditBlock()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_JOINPREVIOUSEDITBLOCK )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1237,7 +1237,7 @@ bool keepPositionOnInsert() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_KEEPPOSITIONONINSERT )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1261,7 +1261,7 @@ void mergeBlockCharFormat( const QTextCharFormat & modifier )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_MERGEBLOCKCHARFORMAT )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1287,7 +1287,7 @@ void mergeBlockFormat( const QTextBlockFormat & modifier )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_MERGEBLOCKFORMAT )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1313,7 +1313,7 @@ void mergeCharFormat( const QTextCharFormat & modifier )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_MERGECHARFORMAT )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1339,15 +1339,15 @@ bool movePosition( QTextCursor::MoveOperation operation, QTextCursor::MoveMode m
 */
 HB_FUNC_STATIC( QTEXTCURSOR_MOVEPOSITION )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
-      RBOOL( obj->movePosition( ( QTextCursor::MoveOperation ) hb_parni( 1 ), ISNIL( 2 )? ( QTextCursor::MoveMode ) QTextCursor::MoveAnchor : ( QTextCursor::MoveMode ) hb_parni( 2 ), OPINT( 3, 1 ) ) );
+      RBOOL( obj->movePosition( ( QTextCursor::MoveOperation ) hb_parni( 1 ), ISNIL( 2 ) ? ( QTextCursor::MoveMode ) QTextCursor::MoveAnchor : ( QTextCursor::MoveMode ) hb_parni( 2 ), OPINT( 3, 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1363,7 +1363,7 @@ int position() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_POSITION )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1387,7 +1387,7 @@ int positionInBlock() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_POSITIONINBLOCK )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1411,7 +1411,7 @@ void removeSelectedText()
 */
 HB_FUNC_STATIC( QTEXTCURSOR_REMOVESELECTEDTEXT )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1437,7 +1437,7 @@ void select( QTextCursor::SelectionType selection )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SELECT )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1463,7 +1463,7 @@ void selectedTableCells( int * firstRow, int * numRows, int * firstColumn, int *
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SELECTEDTABLECELLS )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1497,7 +1497,7 @@ QString selectedText() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SELECTEDTEXT )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1521,7 +1521,7 @@ QTextDocumentFragment selection() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SELECTION )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1546,7 +1546,7 @@ int selectionEnd() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SELECTIONEND )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1570,7 +1570,7 @@ int selectionStart() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SELECTIONSTART )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1594,7 +1594,7 @@ void setBlockCharFormat( const QTextCharFormat & format )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETBLOCKCHARFORMAT )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1620,7 +1620,7 @@ void setBlockFormat( const QTextBlockFormat & format )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETBLOCKFORMAT )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1646,7 +1646,7 @@ void setCharFormat( const QTextCharFormat & format )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETCHARFORMAT )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1672,7 +1672,7 @@ void setKeepPositionOnInsert( bool b )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETKEEPPOSITIONONINSERT )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1698,15 +1698,15 @@ void setPosition( int pos, QTextCursor::MoveMode m = QTextCursor::MoveAnchor )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETPOSITION )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
-      obj->setPosition( PINT( 1 ), ISNIL( 2 )? ( QTextCursor::MoveMode ) QTextCursor::MoveAnchor : ( QTextCursor::MoveMode ) hb_parni( 2 ) );
+      obj->setPosition( PINT( 1 ), ISNIL( 2 ) ? ( QTextCursor::MoveMode ) QTextCursor::MoveAnchor : ( QTextCursor::MoveMode ) hb_parni( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1724,7 +1724,7 @@ void setVerticalMovementX( int x )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETVERTICALMOVEMENTX )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1750,7 +1750,7 @@ void setVisualNavigation( bool b )
 */
 HB_FUNC_STATIC( QTEXTCURSOR_SETVISUALNAVIGATION )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1776,7 +1776,7 @@ int verticalMovementX() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_VERTICALMOVEMENTX )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1800,7 +1800,7 @@ bool visualNavigation() const
 */
 HB_FUNC_STATIC( QTEXTCURSOR_VISUALNAVIGATION )
 {
-  QTextCursor * obj = ( QTextCursor * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCursor * obj = static_cast< QTextCursor * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1825,7 +1825,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -1834,7 +1834,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

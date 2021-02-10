@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QMATRIX4X4_NEW )
 
 HB_FUNC_STATIC( QMATRIX4X4_DELETE )
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -151,7 +151,7 @@ QVector4D column( int index ) const
 */
 HB_FUNC_STATIC( QMATRIX4X4_COLUMN )
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -176,7 +176,7 @@ qreal determinant() const
 */
 HB_FUNC_STATIC( QMATRIX4X4_DETERMINANT )
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -200,7 +200,7 @@ void fill( qreal value )
 */
 HB_FUNC_STATIC( QMATRIX4X4_FILL )
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -226,7 +226,7 @@ void flipCoordinates()
 */
 HB_FUNC_STATIC( QMATRIX4X4_FLIPCOORDINATES )
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -252,7 +252,7 @@ void frustum( qreal left, qreal right, qreal bottom, qreal top, qreal nearPlane,
 */
 HB_FUNC_STATIC( QMATRIX4X4_FRUSTUM )
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -278,7 +278,7 @@ QMatrix4x4 inverted( bool * invertible = 0 ) const
 */
 HB_FUNC_STATIC( QMATRIX4X4_INVERTED )
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -305,7 +305,7 @@ bool isIdentity() const
 */
 HB_FUNC_STATIC( QMATRIX4X4_ISIDENTITY )
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -329,7 +329,7 @@ void lookAt( const QVector3D & eye, const QVector3D & center, const QVector3D & 
 */
 HB_FUNC_STATIC( QMATRIX4X4_LOOKAT )
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -355,7 +355,7 @@ QPoint map( const QPoint & point ) const
 */
 void QMatrix4x4_map1()
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -369,7 +369,7 @@ QPointF map( const QPointF & point ) const
 */
 void QMatrix4x4_map2()
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -383,7 +383,7 @@ QVector3D map( const QVector3D & point ) const
 */
 void QMatrix4x4_map3()
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -397,7 +397,7 @@ QVector4D map( const QVector4D & point ) const
 */
 void QMatrix4x4_map4()
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -435,7 +435,7 @@ QRect mapRect( const QRect & rect ) const
 */
 void QMatrix4x4_mapRect1()
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -449,7 +449,7 @@ QRectF mapRect( const QRectF & rect ) const
 */
 void QMatrix4x4_mapRect2()
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -479,7 +479,7 @@ QVector3D mapVector( const QVector3D & vector ) const
 */
 HB_FUNC_STATIC( QMATRIX4X4_MAPVECTOR )
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -504,7 +504,7 @@ QMatrix3x3 normalMatrix() const
 */
 HB_FUNC_STATIC( QMATRIX4X4_NORMALMATRIX )
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -529,7 +529,7 @@ void optimize()
 */
 HB_FUNC_STATIC( QMATRIX4X4_OPTIMIZE )
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -555,7 +555,7 @@ void ortho( qreal left, qreal right, qreal bottom, qreal top, qreal nearPlane, q
 */
 void QMatrix4x4_ortho1()
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -570,7 +570,7 @@ void ortho( const QRect & rect )
 */
 void QMatrix4x4_ortho2()
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -585,7 +585,7 @@ void ortho( const QRectF & rect )
 */
 void QMatrix4x4_ortho3()
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -620,7 +620,7 @@ void perspective( qreal angle, qreal aspect, qreal nearPlane, qreal farPlane )
 */
 HB_FUNC_STATIC( QMATRIX4X4_PERSPECTIVE )
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -646,7 +646,7 @@ void rotate( qreal angle, const QVector3D & vector )
 */
 void QMatrix4x4_rotate1()
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -661,7 +661,7 @@ void rotate( const QQuaternion & quaternion )
 */
 void QMatrix4x4_rotate2()
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -676,7 +676,7 @@ void rotate( qreal angle, qreal x, qreal y, qreal z = 0.0f )
 */
 void QMatrix4x4_rotate3()
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -711,7 +711,7 @@ QVector4D row( int index ) const
 */
 HB_FUNC_STATIC( QMATRIX4X4_ROW )
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -736,7 +736,7 @@ void scale( const QVector3D & vector )
 */
 void QMatrix4x4_scale1()
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -751,7 +751,7 @@ void scale( qreal x, qreal y )
 */
 void QMatrix4x4_scale2()
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -766,7 +766,7 @@ void scale( qreal x, qreal y, qreal z )
 */
 void QMatrix4x4_scale3()
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -781,7 +781,7 @@ void scale( qreal factor )
 */
 void QMatrix4x4_scale4()
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -820,7 +820,7 @@ void setColumn( int index, const QVector4D & value )
 */
 HB_FUNC_STATIC( QMATRIX4X4_SETCOLUMN )
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -846,7 +846,7 @@ void setRow( int index, const QVector4D & value )
 */
 HB_FUNC_STATIC( QMATRIX4X4_SETROW )
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -872,7 +872,7 @@ void setToIdentity()
 */
 HB_FUNC_STATIC( QMATRIX4X4_SETTOIDENTITY )
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -898,7 +898,7 @@ QTransform toTransform() const
 */
 void QMatrix4x4_toTransform1()
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -912,7 +912,7 @@ QTransform toTransform( qreal distanceToPlane ) const
 */
 void QMatrix4x4_toTransform2()
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -942,7 +942,7 @@ void translate( const QVector3D & vector )
 */
 void QMatrix4x4_translate1()
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -957,7 +957,7 @@ void translate( qreal x, qreal y )
 */
 void QMatrix4x4_translate2()
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -972,7 +972,7 @@ void translate( qreal x, qreal y, qreal z )
 */
 void QMatrix4x4_translate3()
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1007,7 +1007,7 @@ QMatrix4x4 transposed() const
 */
 HB_FUNC_STATIC( QMATRIX4X4_TRANSPOSED )
 {
-  QMatrix4x4 * obj = ( QMatrix4x4 * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMatrix4x4 * obj = static_cast< QMatrix4x4 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1033,7 +1033,7 @@ HB_FUNC_STATIC( QMATRIX4X4_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -1042,7 +1042,7 @@ HB_FUNC_STATIC( QMATRIX4X4_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

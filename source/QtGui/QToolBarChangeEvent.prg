@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_NEW )
 
 HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_DELETE )
 {
-  QToolBarChangeEvent * obj = ( QToolBarChangeEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QToolBarChangeEvent * obj = static_cast< QToolBarChangeEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -77,7 +77,7 @@ bool toggle() const
 */
 HB_FUNC_STATIC( QTOOLBARCHANGEEVENT_TOGGLE )
 {
-  QToolBarChangeEvent * obj = ( QToolBarChangeEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QToolBarChangeEvent * obj = static_cast< QToolBarChangeEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

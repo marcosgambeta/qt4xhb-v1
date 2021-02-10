@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QSTYLEHINTRETURNVARIANT_NEW )
 
 HB_FUNC_STATIC( QSTYLEHINTRETURNVARIANT_DELETE )
 {
-  QStyleHintReturnVariant * obj = ( QStyleHintReturnVariant * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleHintReturnVariant * obj = static_cast< QStyleHintReturnVariant * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

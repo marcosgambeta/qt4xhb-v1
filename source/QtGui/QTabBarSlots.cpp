@@ -28,7 +28,7 @@ void QTabBarSlots::currentChanged( int index )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTABBAR" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTABBAR" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -46,7 +46,7 @@ void QTabBarSlots::tabCloseRequested( int index )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTABBAR" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTABBAR" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -64,7 +64,7 @@ void QTabBarSlots::tabMoved( int from, int to )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTABBAR" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTABBAR" );
     PHB_ITEM pfrom = hb_itemPutNI( NULL, from );
     PHB_ITEM pto = hb_itemPutNI( NULL, to );
 
@@ -78,7 +78,7 @@ void QTabBarSlots::tabMoved( int from, int to )
 
 void QTabBarSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTabBar * obj = ( QTabBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTabBar * obj = static_cast< QTabBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

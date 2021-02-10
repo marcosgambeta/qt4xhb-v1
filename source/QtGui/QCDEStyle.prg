@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QCDESTYLE_NEW )
 
 HB_FUNC_STATIC( QCDESTYLE_DELETE )
 {
-  QCDEStyle * obj = ( QCDEStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCDEStyle * obj = static_cast< QCDEStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -85,7 +85,7 @@ virtual void drawControl( QStyle::ControlElement element, const QStyleOption * o
 */
 HB_FUNC_STATIC( QCDESTYLE_DRAWCONTROL )
 {
-  QCDEStyle * obj = ( QCDEStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCDEStyle * obj = static_cast< QCDEStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -111,7 +111,7 @@ virtual void drawPrimitive( QStyle::PrimitiveElement pe, const QStyleOption * op
 */
 HB_FUNC_STATIC( QCDESTYLE_DRAWPRIMITIVE )
 {
-  QCDEStyle * obj = ( QCDEStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCDEStyle * obj = static_cast< QCDEStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -137,7 +137,7 @@ virtual int pixelMetric( QStyle::PixelMetric metric, const QStyleOption * option
 */
 HB_FUNC_STATIC( QCDESTYLE_PIXELMETRIC )
 {
-  QCDEStyle * obj = ( QCDEStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCDEStyle * obj = static_cast< QCDEStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QCDESTYLE_PIXELMETRIC )
     if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ( ISQSTYLEOPTION( 2 ) || ISNIL( 2 ) ) && ( ISQWIDGET( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
-      RINT( obj->pixelMetric( ( QStyle::PixelMetric ) hb_parni( 1 ), ISNIL( 2 )? 0 : ( QStyleOption * ) Qt4xHb::itemGetPtr( 2 ), OPQWIDGET( 3, 0 ) ) );
+      RINT( obj->pixelMetric( ( QStyle::PixelMetric ) hb_parni( 1 ), ISNIL( 2 ) ? 0 : static_cast< QStyleOption * >( Qt4xHb::itemGetPtr( 2 ) ), OPQWIDGET( 3, 0 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,7 +161,7 @@ virtual QPalette standardPalette() const
 */
 HB_FUNC_STATIC( QCDESTYLE_STANDARDPALETTE )
 {
-  QCDEStyle * obj = ( QCDEStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCDEStyle * obj = static_cast< QCDEStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

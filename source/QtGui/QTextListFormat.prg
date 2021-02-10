@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_NEW )
 
 HB_FUNC_STATIC( QTEXTLISTFORMAT_DELETE )
 {
-  QTextListFormat * obj = ( QTextListFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextListFormat * obj = static_cast< QTextListFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -85,7 +85,7 @@ int indent() const
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_INDENT )
 {
-  QTextListFormat * obj = ( QTextListFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextListFormat * obj = static_cast< QTextListFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -109,7 +109,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_ISVALID )
 {
-  QTextListFormat * obj = ( QTextListFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextListFormat * obj = static_cast< QTextListFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -133,7 +133,7 @@ QString numberPrefix() const
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERPREFIX )
 {
-  QTextListFormat * obj = ( QTextListFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextListFormat * obj = static_cast< QTextListFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -157,7 +157,7 @@ QString numberSuffix() const
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERSUFFIX )
 {
-  QTextListFormat * obj = ( QTextListFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextListFormat * obj = static_cast< QTextListFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -181,7 +181,7 @@ void setIndent( int indentation )
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_SETINDENT )
 {
-  QTextListFormat * obj = ( QTextListFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextListFormat * obj = static_cast< QTextListFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -207,7 +207,7 @@ void setNumberPrefix( const QString & numberPrefix )
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_SETNUMBERPREFIX )
 {
-  QTextListFormat * obj = ( QTextListFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextListFormat * obj = static_cast< QTextListFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -233,7 +233,7 @@ void setNumberSuffix( const QString & numberSuffix )
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_SETNUMBERSUFFIX )
 {
-  QTextListFormat * obj = ( QTextListFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextListFormat * obj = static_cast< QTextListFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -259,7 +259,7 @@ void setStyle( QTextListFormat::Style style )
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_SETSTYLE )
 {
-  QTextListFormat * obj = ( QTextListFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextListFormat * obj = static_cast< QTextListFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -285,7 +285,7 @@ QTextListFormat::Style style() const
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_STYLE )
 {
-  QTextListFormat * obj = ( QTextListFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextListFormat * obj = static_cast< QTextListFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

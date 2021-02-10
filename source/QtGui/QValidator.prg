@@ -46,7 +46,7 @@ RETURN
 
 HB_FUNC_STATIC( QVALIDATOR_DELETE )
 {
-  QValidator * obj = ( QValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QValidator * obj = static_cast< QValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -68,7 +68,7 @@ virtual void fixup( QString & input ) const
 */
 HB_FUNC_STATIC( QVALIDATOR_FIXUP )
 {
-  QValidator * obj = ( QValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QValidator * obj = static_cast< QValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -96,7 +96,7 @@ QLocale locale() const
 */
 HB_FUNC_STATIC( QVALIDATOR_LOCALE )
 {
-  QValidator * obj = ( QValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QValidator * obj = static_cast< QValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -121,7 +121,7 @@ void setLocale( const QLocale & locale )
 */
 HB_FUNC_STATIC( QVALIDATOR_SETLOCALE )
 {
-  QValidator * obj = ( QValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QValidator * obj = static_cast< QValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -147,7 +147,7 @@ virtual QValidator::State validate( QString & input, int & pos ) const = 0
 */
 HB_FUNC_STATIC( QVALIDATOR_VALIDATE )
 {
-  QValidator * obj = ( QValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QValidator * obj = static_cast< QValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

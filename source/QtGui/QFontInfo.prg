@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QFONTINFO_NEW )
 
 HB_FUNC_STATIC( QFONTINFO_DELETE )
 {
-  QFontInfo * obj = ( QFontInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontInfo * obj = static_cast< QFontInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -116,7 +116,7 @@ bool bold() const
 */
 HB_FUNC_STATIC( QFONTINFO_BOLD )
 {
-  QFontInfo * obj = ( QFontInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontInfo * obj = static_cast< QFontInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -140,7 +140,7 @@ bool exactMatch() const
 */
 HB_FUNC_STATIC( QFONTINFO_EXACTMATCH )
 {
-  QFontInfo * obj = ( QFontInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontInfo * obj = static_cast< QFontInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -164,7 +164,7 @@ QString family() const
 */
 HB_FUNC_STATIC( QFONTINFO_FAMILY )
 {
-  QFontInfo * obj = ( QFontInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontInfo * obj = static_cast< QFontInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -188,7 +188,7 @@ bool fixedPitch() const
 */
 HB_FUNC_STATIC( QFONTINFO_FIXEDPITCH )
 {
-  QFontInfo * obj = ( QFontInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontInfo * obj = static_cast< QFontInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -212,7 +212,7 @@ bool italic() const
 */
 HB_FUNC_STATIC( QFONTINFO_ITALIC )
 {
-  QFontInfo * obj = ( QFontInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontInfo * obj = static_cast< QFontInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -236,7 +236,7 @@ int pixelSize() const
 */
 HB_FUNC_STATIC( QFONTINFO_PIXELSIZE )
 {
-  QFontInfo * obj = ( QFontInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontInfo * obj = static_cast< QFontInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -260,7 +260,7 @@ int pointSize() const
 */
 HB_FUNC_STATIC( QFONTINFO_POINTSIZE )
 {
-  QFontInfo * obj = ( QFontInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontInfo * obj = static_cast< QFontInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -284,7 +284,7 @@ qreal pointSizeF() const
 */
 HB_FUNC_STATIC( QFONTINFO_POINTSIZEF )
 {
-  QFontInfo * obj = ( QFontInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontInfo * obj = static_cast< QFontInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -308,7 +308,7 @@ bool rawMode() const
 */
 HB_FUNC_STATIC( QFONTINFO_RAWMODE )
 {
-  QFontInfo * obj = ( QFontInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontInfo * obj = static_cast< QFontInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -332,7 +332,7 @@ QFont::Style style() const
 */
 HB_FUNC_STATIC( QFONTINFO_STYLE )
 {
-  QFontInfo * obj = ( QFontInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontInfo * obj = static_cast< QFontInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -356,7 +356,7 @@ QFont::StyleHint styleHint() const
 */
 HB_FUNC_STATIC( QFONTINFO_STYLEHINT )
 {
-  QFontInfo * obj = ( QFontInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontInfo * obj = static_cast< QFontInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -380,7 +380,7 @@ QString styleName() const
 */
 HB_FUNC_STATIC( QFONTINFO_STYLENAME )
 {
-  QFontInfo * obj = ( QFontInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontInfo * obj = static_cast< QFontInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -404,7 +404,7 @@ int weight() const
 */
 HB_FUNC_STATIC( QFONTINFO_WEIGHT )
 {
-  QFontInfo * obj = ( QFontInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontInfo * obj = static_cast< QFontInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QFONTINFO_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QFONTINFO_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

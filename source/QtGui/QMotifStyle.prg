@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QMOTIFSTYLE_NEW )
 
 HB_FUNC_STATIC( QMOTIFSTYLE_DELETE )
 {
-  QMotifStyle * obj = ( QMotifStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMotifStyle * obj = static_cast< QMotifStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -98,7 +98,7 @@ void setUseHighlightColors( bool arg )
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_SETUSEHIGHLIGHTCOLORS )
 {
-  QMotifStyle * obj = ( QMotifStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMotifStyle * obj = static_cast< QMotifStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -124,7 +124,7 @@ bool useHighlightColors() const
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_USEHIGHLIGHTCOLORS )
 {
-  QMotifStyle * obj = ( QMotifStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMotifStyle * obj = static_cast< QMotifStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -148,7 +148,7 @@ virtual void drawComplexControl( QStyle::ComplexControl cc, const QStyleOptionCo
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_DRAWCOMPLEXCONTROL )
 {
-  QMotifStyle * obj = ( QMotifStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMotifStyle * obj = static_cast< QMotifStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -174,7 +174,7 @@ virtual void drawControl( QStyle::ControlElement element, const QStyleOption * o
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_DRAWCONTROL )
 {
-  QMotifStyle * obj = ( QMotifStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMotifStyle * obj = static_cast< QMotifStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -200,7 +200,7 @@ virtual void drawPrimitive( QStyle::PrimitiveElement pe, const QStyleOption * op
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_DRAWPRIMITIVE )
 {
-  QMotifStyle * obj = ( QMotifStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMotifStyle * obj = static_cast< QMotifStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -226,7 +226,7 @@ virtual bool event( QEvent * e )
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_EVENT )
 {
-  QMotifStyle * obj = ( QMotifStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMotifStyle * obj = static_cast< QMotifStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -250,7 +250,7 @@ virtual int pixelMetric( QStyle::PixelMetric pm, const QStyleOption * opt = 0, c
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_PIXELMETRIC )
 {
-  QMotifStyle * obj = ( QMotifStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMotifStyle * obj = static_cast< QMotifStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QMOTIFSTYLE_PIXELMETRIC )
     if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ( ISQSTYLEOPTION( 2 ) || ISNIL( 2 ) ) && ( ISQWIDGET( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
-      RINT( obj->pixelMetric( ( QStyle::PixelMetric ) hb_parni( 1 ), ISNIL( 2 )? 0 : ( QStyleOption * ) Qt4xHb::itemGetPtr( 2 ), OPQWIDGET( 3, 0 ) ) );
+      RINT( obj->pixelMetric( ( QStyle::PixelMetric ) hb_parni( 1 ), ISNIL( 2 ) ? 0 : static_cast< QStyleOption * >( Qt4xHb::itemGetPtr( 2 ) ), OPQWIDGET( 3, 0 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -274,7 +274,7 @@ virtual void polish( QPalette & pal )
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_POLISH )
 {
-  QMotifStyle * obj = ( QMotifStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMotifStyle * obj = static_cast< QMotifStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -300,7 +300,7 @@ virtual QSize sizeFromContents( QStyle::ContentsType ct, const QStyleOption * op
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_SIZEFROMCONTENTS )
 {
-  QMotifStyle * obj = ( QMotifStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMotifStyle * obj = static_cast< QMotifStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -325,7 +325,7 @@ virtual QPalette standardPalette() const
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_STANDARDPALETTE )
 {
-  QMotifStyle * obj = ( QMotifStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMotifStyle * obj = static_cast< QMotifStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -350,7 +350,7 @@ virtual QPixmap standardPixmap( QStyle::StandardPixmap standardPixmap, const QSt
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_STANDARDPIXMAP )
 {
-  QMotifStyle * obj = ( QMotifStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMotifStyle * obj = static_cast< QMotifStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -375,7 +375,7 @@ virtual int styleHint( QStyle::StyleHint hint, const QStyleOption * opt = 0, con
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_STYLEHINT )
 {
-  QMotifStyle * obj = ( QMotifStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMotifStyle * obj = static_cast< QMotifStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QMOTIFSTYLE_STYLEHINT )
     if( ISBETWEEN( 1, 4 ) && ISNUM( 1 ) && ( ISQSTYLEOPTION( 2 ) || ISNIL( 2 ) ) && ( ISQWIDGET( 3 ) || ISNIL( 3 ) ) && ( ISQSTYLEHINTRETURN( 4 ) || ISNIL( 4 ) ) )
     {
 #endif
-      RINT( obj->styleHint( ( QStyle::StyleHint ) hb_parni( 1 ), ISNIL( 2 )? 0 : ( QStyleOption * ) Qt4xHb::itemGetPtr( 2 ), OPQWIDGET( 3, 0 ), ISNIL( 4 )? 0 : ( QStyleHintReturn * ) Qt4xHb::itemGetPtr( 4 ) ) );
+      RINT( obj->styleHint( ( QStyle::StyleHint ) hb_parni( 1 ), ISNIL( 2 ) ? 0 : static_cast< QStyleOption * >( Qt4xHb::itemGetPtr( 2 ) ), OPQWIDGET( 3, 0 ), ISNIL( 4 ) ? 0 : static_cast< QStyleHintReturn * >( Qt4xHb::itemGetPtr( 4 ) ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -399,7 +399,7 @@ virtual QRect subControlRect( QStyle::ComplexControl cc, const QStyleOptionCompl
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_SUBCONTROLRECT )
 {
-  QMotifStyle * obj = ( QMotifStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMotifStyle * obj = static_cast< QMotifStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -424,7 +424,7 @@ virtual QRect subElementRect( QStyle::SubElement sr, const QStyleOption * opt, c
 */
 HB_FUNC_STATIC( QMOTIFSTYLE_SUBELEMENTRECT )
 {
-  QMotifStyle * obj = ( QMotifStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMotifStyle * obj = static_cast< QMotifStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

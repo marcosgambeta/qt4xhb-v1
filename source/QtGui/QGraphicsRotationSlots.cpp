@@ -28,7 +28,7 @@ void QGraphicsRotationSlots::angleChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSROTATION" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSROTATION" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QGraphicsRotationSlots::axisChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSROTATION" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSROTATION" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -60,7 +60,7 @@ void QGraphicsRotationSlots::originChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSROTATION" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSROTATION" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -70,7 +70,7 @@ void QGraphicsRotationSlots::originChanged()
 
 void QGraphicsRotationSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsRotation * obj = ( QGraphicsRotation * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsRotation * obj = static_cast< QGraphicsRotation * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

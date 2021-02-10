@@ -45,9 +45,9 @@ QInputEvent( QEvent::Type type, Qt::KeyboardModifiers modifiers = Qt::NoModifier
 */
 HB_FUNC_STATIC( QINPUTEVENT_NEW )
 {
-  if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) )
+  if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
   {
-    QInputEvent * obj = new QInputEvent( ( QEvent::Type ) hb_parni( 1 ), ISNIL( 2 )? ( Qt::KeyboardModifiers ) Qt::NoModifier : ( Qt::KeyboardModifiers ) hb_parni( 2 ) );
+    QInputEvent * obj = new QInputEvent( ( QEvent::Type ) hb_parni( 1 ), ISNIL( 2 ) ? ( Qt::KeyboardModifiers ) Qt::NoModifier : ( Qt::KeyboardModifiers ) hb_parni( 2 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QINPUTEVENT_NEW )
 
 HB_FUNC_STATIC( QINPUTEVENT_DELETE )
 {
-  QInputEvent * obj = ( QInputEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputEvent * obj = static_cast< QInputEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -78,7 +78,7 @@ Qt::KeyboardModifiers modifiers() const
 */
 HB_FUNC_STATIC( QINPUTEVENT_MODIFIERS )
 {
-  QInputEvent * obj = ( QInputEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputEvent * obj = static_cast< QInputEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -102,7 +102,7 @@ void setModifiers( Qt::KeyboardModifiers amodifiers )
 */
 HB_FUNC_STATIC( QINPUTEVENT_SETMODIFIERS )
 {
-  QInputEvent * obj = ( QInputEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QInputEvent * obj = static_cast< QInputEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

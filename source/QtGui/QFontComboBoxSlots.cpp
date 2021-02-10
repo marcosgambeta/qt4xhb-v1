@@ -28,7 +28,7 @@ void QFontComboBoxSlots::currentFontChanged( const QFont & font )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QFONTCOMBOBOX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QFONTCOMBOBOX" );
     PHB_ITEM pfont = Qt4xHb::Signals_return_object( ( void * ) &font, "QFONT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pfont );
@@ -40,7 +40,7 @@ void QFontComboBoxSlots::currentFontChanged( const QFont & font )
 
 void QFontComboBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QFontComboBox * obj = ( QFontComboBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontComboBox * obj = static_cast< QFontComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

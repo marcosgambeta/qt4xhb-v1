@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QINTVALIDATOR_NEW )
 
 HB_FUNC_STATIC( QINTVALIDATOR_DELETE )
 {
-  QIntValidator * obj = ( QIntValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QIntValidator * obj = static_cast< QIntValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -105,7 +105,7 @@ int bottom() const
 */
 HB_FUNC_STATIC( QINTVALIDATOR_BOTTOM )
 {
-  QIntValidator * obj = ( QIntValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QIntValidator * obj = static_cast< QIntValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -129,7 +129,7 @@ void setBottom( int )
 */
 HB_FUNC_STATIC( QINTVALIDATOR_SETBOTTOM )
 {
-  QIntValidator * obj = ( QIntValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QIntValidator * obj = static_cast< QIntValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -155,7 +155,7 @@ virtual void setRange( int bottom, int top )
 */
 HB_FUNC_STATIC( QINTVALIDATOR_SETRANGE )
 {
-  QIntValidator * obj = ( QIntValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QIntValidator * obj = static_cast< QIntValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -181,7 +181,7 @@ void setTop( int )
 */
 HB_FUNC_STATIC( QINTVALIDATOR_SETTOP )
 {
-  QIntValidator * obj = ( QIntValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QIntValidator * obj = static_cast< QIntValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -207,7 +207,7 @@ int top() const
 */
 HB_FUNC_STATIC( QINTVALIDATOR_TOP )
 {
-  QIntValidator * obj = ( QIntValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QIntValidator * obj = static_cast< QIntValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -231,7 +231,7 @@ virtual void fixup( QString & input ) const
 */
 HB_FUNC_STATIC( QINTVALIDATOR_FIXUP )
 {
-  QIntValidator * obj = ( QIntValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QIntValidator * obj = static_cast< QIntValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -259,7 +259,7 @@ virtual QValidator::State validate( QString & input, int & pos ) const
 */
 HB_FUNC_STATIC( QINTVALIDATOR_VALIDATE )
 {
-  QIntValidator * obj = ( QIntValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QIntValidator * obj = static_cast< QIntValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

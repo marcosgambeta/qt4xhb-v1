@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QCLOSEEVENT_NEW )
 
 HB_FUNC_STATIC( QCLOSEEVENT_DELETE )
 {
-  QCloseEvent * obj = ( QCloseEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCloseEvent * obj = static_cast< QCloseEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

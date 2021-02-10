@@ -28,7 +28,7 @@ void QComboBoxSlots::activated( int index )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCOMBOBOX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QCOMBOBOX" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -46,7 +46,7 @@ void QComboBoxSlots::activated( const QString & text )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCOMBOBOX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QCOMBOBOX" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING( text ) );
 
     hb_vmEvalBlockV( cb, 2, psender, ptext );
@@ -64,7 +64,7 @@ void QComboBoxSlots::currentIndexChanged( int index )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCOMBOBOX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QCOMBOBOX" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -82,7 +82,7 @@ void QComboBoxSlots::currentIndexChanged( const QString & text )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCOMBOBOX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QCOMBOBOX" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING( text ) );
 
     hb_vmEvalBlockV( cb, 2, psender, ptext );
@@ -100,7 +100,7 @@ void QComboBoxSlots::editTextChanged( const QString & text )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCOMBOBOX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QCOMBOBOX" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING( text ) );
 
     hb_vmEvalBlockV( cb, 2, psender, ptext );
@@ -118,7 +118,7 @@ void QComboBoxSlots::highlighted( int index )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCOMBOBOX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QCOMBOBOX" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -136,7 +136,7 @@ void QComboBoxSlots::highlighted( const QString & text )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCOMBOBOX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QCOMBOBOX" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING( text ) );
 
     hb_vmEvalBlockV( cb, 2, psender, ptext );
@@ -148,7 +148,7 @@ void QComboBoxSlots::highlighted( const QString & text )
 
 void QComboBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QComboBox * obj = ( QComboBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

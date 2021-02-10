@@ -28,7 +28,7 @@ void QDataWidgetMapperSlots::currentIndexChanged( int index )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDATAWIDGETMAPPER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDATAWIDGETMAPPER" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -40,7 +40,7 @@ void QDataWidgetMapperSlots::currentIndexChanged( int index )
 
 void QDataWidgetMapperSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDataWidgetMapper * obj = ( QDataWidgetMapper * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

@@ -28,7 +28,7 @@ void QLCDNumberSlots::overflow()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QLCDNUMBER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QLCDNUMBER" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,7 +38,7 @@ void QLCDNumberSlots::overflow()
 
 void QLCDNumberSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QLCDNumber * obj = ( QLCDNumber * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLCDNumber * obj = static_cast< QLCDNumber * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

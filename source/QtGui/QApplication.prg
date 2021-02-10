@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QAPPLICATION_NEW )
 
 HB_FUNC_STATIC( QAPPLICATION_DELETE )
 {
-  QApplication * obj = ( QApplication * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QApplication * obj = static_cast< QApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -181,7 +181,7 @@ virtual void commitData( QSessionManager & manager )
 */
 HB_FUNC_STATIC( QAPPLICATION_COMMITDATA )
 {
-  QApplication * obj = ( QApplication * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QApplication * obj = static_cast< QApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -207,7 +207,7 @@ QInputContext * inputContext() const
 */
 HB_FUNC_STATIC( QAPPLICATION_INPUTCONTEXT )
 {
-  QApplication * obj = ( QApplication * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QApplication * obj = static_cast< QApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -232,7 +232,7 @@ bool isSessionRestored() const
 */
 HB_FUNC_STATIC( QAPPLICATION_ISSESSIONRESTORED )
 {
-  QApplication * obj = ( QApplication * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QApplication * obj = static_cast< QApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -256,7 +256,7 @@ virtual void saveState( QSessionManager & manager )
 */
 HB_FUNC_STATIC( QAPPLICATION_SAVESTATE )
 {
-  QApplication * obj = ( QApplication * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QApplication * obj = static_cast< QApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -282,7 +282,7 @@ QString sessionId() const
 */
 HB_FUNC_STATIC( QAPPLICATION_SESSIONID )
 {
-  QApplication * obj = ( QApplication * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QApplication * obj = static_cast< QApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -306,7 +306,7 @@ QString sessionKey() const
 */
 HB_FUNC_STATIC( QAPPLICATION_SESSIONKEY )
 {
-  QApplication * obj = ( QApplication * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QApplication * obj = static_cast< QApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -330,7 +330,7 @@ void setInputContext( QInputContext * inputContext )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETINPUTCONTEXT )
 {
-  QApplication * obj = ( QApplication * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QApplication * obj = static_cast< QApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -356,7 +356,7 @@ QString styleSheet() const
 */
 HB_FUNC_STATIC( QAPPLICATION_STYLESHEET )
 {
-  QApplication * obj = ( QApplication * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QApplication * obj = static_cast< QApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -380,7 +380,7 @@ virtual bool notify( QObject * receiver, QEvent * e )
 */
 HB_FUNC_STATIC( QAPPLICATION_NOTIFY )
 {
-  QApplication * obj = ( QApplication * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QApplication * obj = static_cast< QApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -404,7 +404,7 @@ void aboutQt()
 */
 HB_FUNC_STATIC( QAPPLICATION_ABOUTQT )
 {
-  QApplication * obj = ( QApplication * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QApplication * obj = static_cast< QApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -430,7 +430,7 @@ void closeAllWindows()
 */
 HB_FUNC_STATIC( QAPPLICATION_CLOSEALLWINDOWS )
 {
-  QApplication * obj = ( QApplication * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QApplication * obj = static_cast< QApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -456,7 +456,7 @@ void setStyleSheet( const QString & sheet )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETSTYLESHEET )
 {
-  QApplication * obj = ( QApplication * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QApplication * obj = static_cast< QApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -543,7 +543,7 @@ static void alert( QWidget * widget, int msec = 0 )
 HB_FUNC_STATIC( QAPPLICATION_ALERT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 1, 2 ) && ISQWIDGET( 1 ) && ISOPTNUM( 2 ) )
+  if( ISBETWEEN( 1, 2 ) && ISQWIDGET( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
   {
 #endif
     QApplication::alert( PQWIDGET( 1 ), OPINT( 2, 0 ) );
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QAPPLICATION_ALLWIDGETS )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, ( QWidget * ) list[i] );
+        hb_itemPutPtr( pItem, static_cast< QWidget * >( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         hb_arrayAddForward( pArray, pObject );
@@ -1321,7 +1321,7 @@ static void setFont( const QFont & font, const char * className = 0 )
 HB_FUNC_STATIC( QAPPLICATION_SETFONT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 1, 2 ) && ISQFONT( 1 ) && ISOPTCHAR( 2 ) )
+  if( ISBETWEEN( 1, 2 ) && ISQFONT( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
   {
 #endif
     QApplication::setFont( *PQFONT( 1 ), OPCONSTCHAR( 2, 0 ) );
@@ -1447,7 +1447,7 @@ static void setPalette( const QPalette & palette, const char * className = 0 )
 HB_FUNC_STATIC( QAPPLICATION_SETPALETTE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 1, 2 ) && ISQPALETTE( 1 ) && ISOPTCHAR( 2 ) )
+  if( ISBETWEEN( 1, 2 ) && ISQPALETTE( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
   {
 #endif
     QApplication::setPalette( *PQPALETTE( 1 ), OPCONSTCHAR( 2, 0 ) );
@@ -1592,7 +1592,7 @@ HB_FUNC_STATIC( QAPPLICATION_SETWINDOWICON )
   if( ISNUMPAR( 1 ) && ( ISQICON( 1) || ISCHAR( 1 ) ) )
   {
 #endif
-    QApplication::setWindowIcon( ISOBJECT( 1 )? *( QIcon * ) Qt4xHb::itemGetPtr( 1 ) : QIcon( hb_parc( 1 ) ) );
+    QApplication::setWindowIcon( ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt4xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1741,7 +1741,7 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELWIDGETS )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, ( QWidget * ) list[i] );
+        hb_itemPutPtr( pItem, static_cast< QWidget * >( list[i] ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         hb_arrayAddForward( pArray, pObject );

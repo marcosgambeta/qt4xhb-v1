@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QMENUBAR_NEW )
 
 HB_FUNC_STATIC( QMENUBAR_DELETE )
 {
-  QMenuBar * obj = ( QMenuBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMenuBar * obj = static_cast< QMenuBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -102,7 +102,7 @@ QAction * activeAction() const
 */
 HB_FUNC_STATIC( QMENUBAR_ACTIVEACTION )
 {
-  QMenuBar * obj = ( QMenuBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMenuBar * obj = static_cast< QMenuBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -127,7 +127,7 @@ QAction * addAction( const QString & text )
 */
 void QMenuBar_addAction1()
 {
-  QMenuBar * obj = ( QMenuBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMenuBar * obj = static_cast< QMenuBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -141,7 +141,7 @@ QAction * addAction( const QString & text, const QObject * receiver, const char 
 */
 void QMenuBar_addAction2()
 {
-  QMenuBar * obj = ( QMenuBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMenuBar * obj = static_cast< QMenuBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -155,7 +155,7 @@ void addAction( QAction * action )
 */
 void QMenuBar_addAction3()
 {
-  QMenuBar * obj = ( QMenuBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMenuBar * obj = static_cast< QMenuBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -190,7 +190,7 @@ QAction * addMenu( QMenu * menu )
 */
 void QMenuBar_addMenu1()
 {
-  QMenuBar * obj = ( QMenuBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMenuBar * obj = static_cast< QMenuBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -204,7 +204,7 @@ QMenu * addMenu( const QString & title )
 */
 void QMenuBar_addMenu2()
 {
-  QMenuBar * obj = ( QMenuBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMenuBar * obj = static_cast< QMenuBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -218,11 +218,11 @@ QMenu * addMenu( const QIcon & icon, const QString & title )
 */
 void QMenuBar_addMenu3()
 {
-  QMenuBar * obj = ( QMenuBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMenuBar * obj = static_cast< QMenuBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
-    QMenu * ptr = obj->addMenu( ISOBJECT( 1 )? *( QIcon * ) Qt4xHb::itemGetPtr( 1 ) : QIcon( hb_parc( 1 ) ), PQSTRING( 2 ) );
+    QMenu * ptr = obj->addMenu( ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt4xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ), PQSTRING( 2 ) );
     Qt4xHb::createReturnQObjectClass( ptr, "QMENU" );
   }
 }
@@ -252,7 +252,7 @@ QAction * addSeparator()
 */
 HB_FUNC_STATIC( QMENUBAR_ADDSEPARATOR )
 {
-  QMenuBar * obj = ( QMenuBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMenuBar * obj = static_cast< QMenuBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -277,7 +277,7 @@ void clear()
 */
 HB_FUNC_STATIC( QMENUBAR_CLEAR )
 {
-  QMenuBar * obj = ( QMenuBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMenuBar * obj = static_cast< QMenuBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -303,7 +303,7 @@ QAction * insertMenu( QAction * before, QMenu * menu )
 */
 HB_FUNC_STATIC( QMENUBAR_INSERTMENU )
 {
-  QMenuBar * obj = ( QMenuBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMenuBar * obj = static_cast< QMenuBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -328,7 +328,7 @@ QAction * insertSeparator( QAction * before )
 */
 HB_FUNC_STATIC( QMENUBAR_INSERTSEPARATOR )
 {
-  QMenuBar * obj = ( QMenuBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMenuBar * obj = static_cast< QMenuBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -353,7 +353,7 @@ bool isDefaultUp() const
 */
 HB_FUNC_STATIC( QMENUBAR_ISDEFAULTUP )
 {
-  QMenuBar * obj = ( QMenuBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMenuBar * obj = static_cast< QMenuBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -377,7 +377,7 @@ bool isNativeMenuBar() const
 */
 HB_FUNC_STATIC( QMENUBAR_ISNATIVEMENUBAR )
 {
-  QMenuBar * obj = ( QMenuBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMenuBar * obj = static_cast< QMenuBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -401,7 +401,7 @@ void setActiveAction( QAction * act )
 */
 HB_FUNC_STATIC( QMENUBAR_SETACTIVEACTION )
 {
-  QMenuBar * obj = ( QMenuBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMenuBar * obj = static_cast< QMenuBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -427,7 +427,7 @@ void setDefaultUp( bool )
 */
 HB_FUNC_STATIC( QMENUBAR_SETDEFAULTUP )
 {
-  QMenuBar * obj = ( QMenuBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMenuBar * obj = static_cast< QMenuBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -453,7 +453,7 @@ void setNativeMenuBar( bool nativeMenuBar )
 */
 HB_FUNC_STATIC( QMENUBAR_SETNATIVEMENUBAR )
 {
-  QMenuBar * obj = ( QMenuBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMenuBar * obj = static_cast< QMenuBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -479,7 +479,7 @@ virtual int heightForWidth( int ) const
 */
 HB_FUNC_STATIC( QMENUBAR_HEIGHTFORWIDTH )
 {
-  QMenuBar * obj = ( QMenuBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMenuBar * obj = static_cast< QMenuBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -503,7 +503,7 @@ virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QMENUBAR_MINIMUMSIZEHINT )
 {
-  QMenuBar * obj = ( QMenuBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMenuBar * obj = static_cast< QMenuBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -528,7 +528,7 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QMENUBAR_SIZEHINT )
 {
-  QMenuBar * obj = ( QMenuBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMenuBar * obj = static_cast< QMenuBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -553,7 +553,7 @@ virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QMENUBAR_SETVISIBLE )
 {
-  QMenuBar * obj = ( QMenuBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMenuBar * obj = static_cast< QMenuBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

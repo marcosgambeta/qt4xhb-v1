@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_NEW )
 
 HB_FUNC_STATIC( QLINEARGRADIENT_DELETE )
 {
-  QLinearGradient * obj = ( QLinearGradient * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLinearGradient * obj = static_cast< QLinearGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -112,7 +112,7 @@ QPointF finalStop() const
 */
 HB_FUNC_STATIC( QLINEARGRADIENT_FINALSTOP )
 {
-  QLinearGradient * obj = ( QLinearGradient * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLinearGradient * obj = static_cast< QLinearGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -137,7 +137,7 @@ void setFinalStop( const QPointF & stop )
 */
 void QLinearGradient_setFinalStop1()
 {
-  QLinearGradient * obj = ( QLinearGradient * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLinearGradient * obj = static_cast< QLinearGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -152,7 +152,7 @@ void setFinalStop( qreal x, qreal y )
 */
 void QLinearGradient_setFinalStop2()
 {
-  QLinearGradient * obj = ( QLinearGradient * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLinearGradient * obj = static_cast< QLinearGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -183,7 +183,7 @@ void setStart( const QPointF & start )
 */
 void QLinearGradient_setStart1()
 {
-  QLinearGradient * obj = ( QLinearGradient * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLinearGradient * obj = static_cast< QLinearGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -198,7 +198,7 @@ void setStart( qreal x, qreal y )
 */
 void QLinearGradient_setStart2()
 {
-  QLinearGradient * obj = ( QLinearGradient * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLinearGradient * obj = static_cast< QLinearGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -229,7 +229,7 @@ QPointF start() const
 */
 HB_FUNC_STATIC( QLINEARGRADIENT_START )
 {
-  QLinearGradient * obj = ( QLinearGradient * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLinearGradient * obj = static_cast< QLinearGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

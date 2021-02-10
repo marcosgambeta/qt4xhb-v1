@@ -28,7 +28,7 @@ void QListViewSlots::indexesMoved( const QModelIndexList & indexes )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QLISTVIEW" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QLISTVIEW" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
     PHB_ITEM pindexes = hb_itemArrayNew( 0 );
     if( pDynSym )
@@ -41,7 +41,7 @@ void QListViewSlots::indexesMoved( const QModelIndexList & indexes )
         PHB_ITEM pTempObject = hb_itemNew( NULL );
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
         PHB_ITEM pTempItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pTempItem, ( QModelIndex * ) new QModelIndex( indexes [i] ) );
+        hb_itemPutPtr( pTempItem, static_cast< QModelIndex * >( new QModelIndex( indexes [i] ) ) );
         hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
         hb_arrayAddForward( pindexes, pTempObject );
         hb_itemRelease( pTempObject );
@@ -62,7 +62,7 @@ void QListViewSlots::indexesMoved( const QModelIndexList & indexes )
 
 void QListViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QListView * obj = ( QListView * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

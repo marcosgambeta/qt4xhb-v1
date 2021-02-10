@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQGRAPHICSLAYOUTITEM( 1 ) || ISNIL( 1 ) ) )
   {
-    QGraphicsAnchorLayout * obj = new QGraphicsAnchorLayout( ISNIL( 1 )? 0 : ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtr( 1 ) );
+    QGraphicsAnchorLayout * obj = new QGraphicsAnchorLayout( ISNIL( 1 ) ? 0 : static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtr( 1 ) ) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_DELETE )
 {
-  QGraphicsAnchorLayout * obj = ( QGraphicsAnchorLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = static_cast< QGraphicsAnchorLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -92,7 +92,7 @@ QGraphicsAnchor * addAnchor( QGraphicsLayoutItem * firstItem, Qt::AnchorPoint fi
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDANCHOR )
 {
-  QGraphicsAnchorLayout * obj = ( QGraphicsAnchorLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = static_cast< QGraphicsAnchorLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -117,15 +117,15 @@ void addAnchors( QGraphicsLayoutItem * firstItem, QGraphicsLayoutItem * secondIt
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDANCHORS )
 {
-  QGraphicsAnchorLayout * obj = ( QGraphicsAnchorLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = static_cast< QGraphicsAnchorLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 3 ) && ISQGRAPHICSLAYOUTITEM( 1 ) && ISQGRAPHICSLAYOUTITEM( 2 ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 2, 3 ) && ISQGRAPHICSLAYOUTITEM( 1 ) && ISQGRAPHICSLAYOUTITEM( 2 ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
-      obj->addAnchors( PQGRAPHICSLAYOUTITEM( 1 ), PQGRAPHICSLAYOUTITEM( 2 ), ISNIL( 3 )? ( Qt::Orientations ) Qt::Horizontal | Qt::Vertical : ( Qt::Orientations ) hb_parni( 3 ) );
+      obj->addAnchors( PQGRAPHICSLAYOUTITEM( 1 ), PQGRAPHICSLAYOUTITEM( 2 ), ISNIL( 3 ) ? ( Qt::Orientations ) Qt::Horizontal | Qt::Vertical : ( Qt::Orientations ) hb_parni( 3 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,7 +143,7 @@ void addCornerAnchors( QGraphicsLayoutItem * firstItem, Qt::Corner firstCorner, 
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDCORNERANCHORS )
 {
-  QGraphicsAnchorLayout * obj = ( QGraphicsAnchorLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = static_cast< QGraphicsAnchorLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -169,7 +169,7 @@ QGraphicsAnchor * anchor( QGraphicsLayoutItem * firstItem, Qt::AnchorPoint first
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ANCHOR )
 {
-  QGraphicsAnchorLayout * obj = ( QGraphicsAnchorLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = static_cast< QGraphicsAnchorLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -194,7 +194,7 @@ qreal horizontalSpacing() const
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_HORIZONTALSPACING )
 {
-  QGraphicsAnchorLayout * obj = ( QGraphicsAnchorLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = static_cast< QGraphicsAnchorLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -218,7 +218,7 @@ void setHorizontalSpacing( qreal spacing )
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETHORIZONTALSPACING )
 {
-  QGraphicsAnchorLayout * obj = ( QGraphicsAnchorLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = static_cast< QGraphicsAnchorLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -244,7 +244,7 @@ void setSpacing( qreal spacing )
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETSPACING )
 {
-  QGraphicsAnchorLayout * obj = ( QGraphicsAnchorLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = static_cast< QGraphicsAnchorLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -270,7 +270,7 @@ void setVerticalSpacing( qreal spacing )
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETVERTICALSPACING )
 {
-  QGraphicsAnchorLayout * obj = ( QGraphicsAnchorLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = static_cast< QGraphicsAnchorLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -296,7 +296,7 @@ qreal verticalSpacing() const
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_VERTICALSPACING )
 {
-  QGraphicsAnchorLayout * obj = ( QGraphicsAnchorLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = static_cast< QGraphicsAnchorLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -320,7 +320,7 @@ virtual int count() const
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_COUNT )
 {
-  QGraphicsAnchorLayout * obj = ( QGraphicsAnchorLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = static_cast< QGraphicsAnchorLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -344,7 +344,7 @@ virtual void invalidate()
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_INVALIDATE )
 {
-  QGraphicsAnchorLayout * obj = ( QGraphicsAnchorLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = static_cast< QGraphicsAnchorLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -370,7 +370,7 @@ virtual QGraphicsLayoutItem * itemAt( int index ) const
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ITEMAT )
 {
-  QGraphicsAnchorLayout * obj = ( QGraphicsAnchorLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = static_cast< QGraphicsAnchorLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -395,7 +395,7 @@ virtual void removeAt( int index )
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_REMOVEAT )
 {
-  QGraphicsAnchorLayout * obj = ( QGraphicsAnchorLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = static_cast< QGraphicsAnchorLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -421,7 +421,7 @@ virtual void setGeometry( const QRectF & geom )
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_SETGEOMETRY )
 {
-  QGraphicsAnchorLayout * obj = ( QGraphicsAnchorLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsAnchorLayout * obj = static_cast< QGraphicsAnchorLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

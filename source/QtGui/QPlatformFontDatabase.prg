@@ -56,7 +56,7 @@ RETURN
 
 HB_FUNC_STATIC( QPLATFORMFONTDATABASE_DELETE )
 {
-  QPlatformFontDatabase * obj = ( QPlatformFontDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPlatformFontDatabase * obj = static_cast< QPlatformFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -76,7 +76,7 @@ virtual QStringList addApplicationFont( const QByteArray & fontData, const QStri
 */
 HB_FUNC_STATIC( QPLATFORMFONTDATABASE_ADDAPPLICATIONFONT )
 {
-  QPlatformFontDatabase * obj = ( QPlatformFontDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPlatformFontDatabase * obj = static_cast< QPlatformFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -100,7 +100,7 @@ virtual QString fontDir() const
 */
 HB_FUNC_STATIC( QPLATFORMFONTDATABASE_FONTDIR )
 {
-  QPlatformFontDatabase * obj = ( QPlatformFontDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPlatformFontDatabase * obj = static_cast< QPlatformFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -124,7 +124,7 @@ virtual QFontEngine * fontEngine( const QByteArray & fontData, qreal pixelSize, 
 */
 HB_FUNC_STATIC( QPLATFORMFONTDATABASE_FONTENGINE )
 {
-  QPlatformFontDatabase * obj = ( QPlatformFontDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPlatformFontDatabase * obj = static_cast< QPlatformFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -149,7 +149,7 @@ virtual void populateFontDatabase()
 */
 HB_FUNC_STATIC( QPLATFORMFONTDATABASE_POPULATEFONTDATABASE )
 {
-  QPlatformFontDatabase * obj = ( QPlatformFontDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPlatformFontDatabase * obj = static_cast< QPlatformFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -175,7 +175,7 @@ virtual void releaseHandle( void * handle )
 */
 HB_FUNC_STATIC( QPLATFORMFONTDATABASE_RELEASEHANDLE )
 {
-  QPlatformFontDatabase * obj = ( QPlatformFontDatabase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPlatformFontDatabase * obj = static_cast< QPlatformFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_RELEASEHANDLE )
     if( ISNUMPAR( 1 ) && ISPOINTER( 1 ) )
     {
 #endif
-      obj->releaseHandle( ( void * ) hb_parptr( 1 ) );
+      obj->releaseHandle( static_cast< void * >( hb_parptr( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_REGISTERFONT )
   if( ISNUMPAR( 10 ) && ISCHAR( 1 ) && ISCHAR( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) && ISLOG( 6 ) && ISLOG( 7 ) && ISNUM( 8 ) && ISQSUPPORTEDWRITINGSYSTEMS( 9 ) && ISPOINTER( 10 ) )
   {
 #endif
-    QPlatformFontDatabase::registerFont( PQSTRING( 1 ), PQSTRING( 2 ), ( QFont::Weight ) hb_parni( 3 ), ( QFont::Style ) hb_parni( 4 ), ( QFont::Stretch ) hb_parni( 5 ), PBOOL( 6 ), PBOOL( 7 ), PINT( 8 ), *PQSUPPORTEDWRITINGSYSTEMS( 9 ), ( void * ) hb_parptr( 10 ) );
+    QPlatformFontDatabase::registerFont( PQSTRING( 1 ), PQSTRING( 2 ), ( QFont::Weight ) hb_parni( 3 ), ( QFont::Style ) hb_parni( 4 ), ( QFont::Stretch ) hb_parni( 5 ), PBOOL( 6 ), PBOOL( 7 ), PINT( 8 ), *PQSUPPORTEDWRITINGSYSTEMS( 9 ), static_cast< void * >( hb_parptr( 10 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_REGISTERQPF2FONT )
   if( ISNUMPAR( 2 ) && ISQBYTEARRAY( 1 ) && ISPOINTER( 2 ) )
   {
 #endif
-    QPlatformFontDatabase::registerQPF2Font( *PQBYTEARRAY( 1 ), ( void * ) hb_parptr( 2 ) );
+    QPlatformFontDatabase::registerQPF2Font( *PQBYTEARRAY( 1 ), static_cast< void * >( hb_parptr( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QPLATFORMFONTDATABASE_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

@@ -28,7 +28,7 @@ void QColorDialogSlots::colorSelected( const QColor & color )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCOLORDIALOG" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QCOLORDIALOG" );
     PHB_ITEM pcolor = Qt4xHb::Signals_return_object( ( void * ) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
@@ -46,7 +46,7 @@ void QColorDialogSlots::currentColorChanged( const QColor & color )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCOLORDIALOG" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QCOLORDIALOG" );
     PHB_ITEM pcolor = Qt4xHb::Signals_return_object( ( void * ) &color, "QCOLOR" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcolor );
@@ -58,7 +58,7 @@ void QColorDialogSlots::currentColorChanged( const QColor & color )
 
 void QColorDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QColorDialog * obj = ( QColorDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QColorDialog * obj = static_cast< QColorDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

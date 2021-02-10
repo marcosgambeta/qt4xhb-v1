@@ -28,7 +28,7 @@ void QFontDialogSlots::currentFontChanged( const QFont & font )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QFONTDIALOG" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QFONTDIALOG" );
     PHB_ITEM pfont = Qt4xHb::Signals_return_object( ( void * ) &font, "QFONT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pfont );
@@ -46,7 +46,7 @@ void QFontDialogSlots::fontSelected( const QFont & font )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QFONTDIALOG" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QFONTDIALOG" );
     PHB_ITEM pfont = Qt4xHb::Signals_return_object( ( void * ) &font, "QFONT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pfont );
@@ -58,7 +58,7 @@ void QFontDialogSlots::fontSelected( const QFont & font )
 
 void QFontDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QFontDialog * obj = ( QFontDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontDialog * obj = static_cast< QFontDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

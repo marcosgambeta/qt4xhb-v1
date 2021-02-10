@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QRESIZEEVENT_NEW )
 
 HB_FUNC_STATIC( QRESIZEEVENT_DELETE )
 {
-  QResizeEvent * obj = ( QResizeEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QResizeEvent * obj = static_cast< QResizeEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -79,7 +79,7 @@ const QSize & size() const
 */
 HB_FUNC_STATIC( QRESIZEEVENT_SIZE )
 {
-  QResizeEvent * obj = ( QResizeEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QResizeEvent * obj = static_cast< QResizeEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -104,7 +104,7 @@ const QSize & oldSize() const
 */
 HB_FUNC_STATIC( QRESIZEEVENT_OLDSIZE )
 {
-  QResizeEvent * obj = ( QResizeEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QResizeEvent * obj = static_cast< QResizeEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

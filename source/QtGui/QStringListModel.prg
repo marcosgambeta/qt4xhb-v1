@@ -89,7 +89,7 @@ void setStringList( const QStringList & strings )
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_SETSTRINGLIST )
 {
-  QStringListModel * obj = ( QStringListModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStringListModel * obj = static_cast< QStringListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -115,7 +115,7 @@ QStringList stringList() const
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_STRINGLIST )
 {
-  QStringListModel * obj = ( QStringListModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStringListModel * obj = static_cast< QStringListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -139,7 +139,7 @@ virtual QVariant data( const QModelIndex & index, int role ) const
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_DATA )
 {
-  QStringListModel * obj = ( QStringListModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStringListModel * obj = static_cast< QStringListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -164,7 +164,7 @@ virtual Qt::ItemFlags flags( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_FLAGS )
 {
-  QStringListModel * obj = ( QStringListModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStringListModel * obj = static_cast< QStringListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -188,7 +188,7 @@ virtual bool insertRows( int row, int count, const QModelIndex & parent = QModel
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_INSERTROWS )
 {
-  QStringListModel * obj = ( QStringListModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStringListModel * obj = static_cast< QStringListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_INSERTROWS )
     if( ISBETWEEN( 2, 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ( ISQMODELINDEX( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
-      RBOOL( obj->insertRows( PINT( 1 ), PINT( 2 ), ISNIL( 3 )? QModelIndex() : *( QModelIndex * ) Qt4xHb::itemGetPtr( 3 ) ) );
+      RBOOL( obj->insertRows( PINT( 1 ), PINT( 2 ), ISNIL( 3 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt4xHb::itemGetPtr( 3 ) ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,7 +212,7 @@ virtual bool removeRows( int row, int count, const QModelIndex & parent = QModel
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_REMOVEROWS )
 {
-  QStringListModel * obj = ( QStringListModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStringListModel * obj = static_cast< QStringListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_REMOVEROWS )
     if( ISBETWEEN( 2, 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ( ISQMODELINDEX( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
-      RBOOL( obj->removeRows( PINT( 1 ), PINT( 2 ), ISNIL( 3 )? QModelIndex() : *( QModelIndex * ) Qt4xHb::itemGetPtr( 3 ) ) );
+      RBOOL( obj->removeRows( PINT( 1 ), PINT( 2 ), ISNIL( 3 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt4xHb::itemGetPtr( 3 ) ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,7 +236,7 @@ virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_ROWCOUNT )
 {
-  QStringListModel * obj = ( QStringListModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStringListModel * obj = static_cast< QStringListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_ROWCOUNT )
     if( ISBETWEEN( 0, 1 ) && ( ISQMODELINDEX( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
-      RINT( obj->rowCount( ISNIL( 1 )? QModelIndex() : *( QModelIndex * ) Qt4xHb::itemGetPtr( 1 ) ) );
+      RINT( obj->rowCount( ISNIL( 1 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt4xHb::itemGetPtr( 1 ) ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -260,12 +260,12 @@ virtual bool setData( const QModelIndex & index, const QVariant & value, int rol
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_SETDATA )
 {
-  QStringListModel * obj = ( QStringListModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStringListModel * obj = static_cast< QStringListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 3 ) && ISQMODELINDEX( 1 ) && ISQVARIANT( 2 ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 2, 3 ) && ISQMODELINDEX( 1 ) && ISQVARIANT( 2 ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
       RBOOL( obj->setData( *PQMODELINDEX( 1 ), *PQVARIANT( 2 ), OPINT( 3, Qt::EditRole ) ) );
@@ -284,15 +284,15 @@ virtual void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_SORT )
 {
-  QStringListModel * obj = ( QStringListModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStringListModel * obj = static_cast< QStringListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
-      obj->sort( PINT( 1 ), ISNIL( 2 )? ( Qt::SortOrder ) Qt::AscendingOrder : ( Qt::SortOrder ) hb_parni( 2 ) );
+      obj->sort( PINT( 1 ), ISNIL( 2 ) ? ( Qt::SortOrder ) Qt::AscendingOrder : ( Qt::SortOrder ) hb_parni( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -310,7 +310,7 @@ virtual Qt::DropActions supportedDropActions() const
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_SUPPORTEDDROPACTIONS )
 {
-  QStringListModel * obj = ( QStringListModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStringListModel * obj = static_cast< QStringListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

@@ -60,7 +60,7 @@ QUndoCommand( QUndoCommand * parent = 0 )
 */
 void QUndoCommand_new1()
 {
-  QUndoCommand * obj = new QUndoCommand( ISNIL( 1 )? 0 : ( QUndoCommand * ) Qt4xHb::itemGetPtr( 1 ) );
+  QUndoCommand * obj = new QUndoCommand( ISNIL( 1 ) ? 0 : static_cast< QUndoCommand * >( Qt4xHb::itemGetPtr( 1 ) ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -69,7 +69,7 @@ QUndoCommand( const QString & text, QUndoCommand * parent = 0 )
 */
 void QUndoCommand_new2()
 {
-  QUndoCommand * obj = new QUndoCommand( PQSTRING( 1 ), ISNIL( 2 )? 0 : ( QUndoCommand * ) Qt4xHb::itemGetPtr( 2 ) );
+  QUndoCommand * obj = new QUndoCommand( PQSTRING( 1 ), ISNIL( 2 ) ? 0 : static_cast< QUndoCommand * >( Qt4xHb::itemGetPtr( 2 ) ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_NEW )
 
 HB_FUNC_STATIC( QUNDOCOMMAND_DELETE )
 {
-  QUndoCommand * obj = ( QUndoCommand * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUndoCommand * obj = static_cast< QUndoCommand * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -111,7 +111,7 @@ const QUndoCommand * child( int index ) const
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_CHILD )
 {
-  QUndoCommand * obj = ( QUndoCommand * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUndoCommand * obj = static_cast< QUndoCommand * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -136,7 +136,7 @@ int childCount() const
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_CHILDCOUNT )
 {
-  QUndoCommand * obj = ( QUndoCommand * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUndoCommand * obj = static_cast< QUndoCommand * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -160,7 +160,7 @@ virtual int id() const
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_ID )
 {
-  QUndoCommand * obj = ( QUndoCommand * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUndoCommand * obj = static_cast< QUndoCommand * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -184,7 +184,7 @@ virtual bool mergeWith( const QUndoCommand * command )
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_MERGEWITH )
 {
-  QUndoCommand * obj = ( QUndoCommand * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUndoCommand * obj = static_cast< QUndoCommand * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -208,7 +208,7 @@ virtual void redo()
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_REDO )
 {
-  QUndoCommand * obj = ( QUndoCommand * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUndoCommand * obj = static_cast< QUndoCommand * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -234,7 +234,7 @@ void setText( const QString & text )
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_SETTEXT )
 {
-  QUndoCommand * obj = ( QUndoCommand * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUndoCommand * obj = static_cast< QUndoCommand * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -260,7 +260,7 @@ QString text() const
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_TEXT )
 {
-  QUndoCommand * obj = ( QUndoCommand * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUndoCommand * obj = static_cast< QUndoCommand * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -284,7 +284,7 @@ virtual void undo()
 */
 HB_FUNC_STATIC( QUNDOCOMMAND_UNDO )
 {
-  QUndoCommand * obj = ( QUndoCommand * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUndoCommand * obj = static_cast< QUndoCommand * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

@@ -28,7 +28,7 @@ void QProgressDialogSlots::canceled()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QPROGRESSDIALOG" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QPROGRESSDIALOG" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,7 +38,7 @@ void QProgressDialogSlots::canceled()
 
 void QProgressDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QProgressDialog * obj = ( QProgressDialog * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QProgressDialog * obj = static_cast< QProgressDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

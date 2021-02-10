@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QSCROLLBAR_NEW )
 
 HB_FUNC_STATIC( QSCROLLBAR_DELETE )
 {
-  QScrollBar * obj = ( QScrollBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollBar * obj = static_cast< QScrollBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -101,7 +101,7 @@ virtual bool event( QEvent * event )
 */
 HB_FUNC_STATIC( QSCROLLBAR_EVENT )
 {
-  QScrollBar * obj = ( QScrollBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollBar * obj = static_cast< QScrollBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -125,7 +125,7 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSCROLLBAR_SIZEHINT )
 {
-  QScrollBar * obj = ( QScrollBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollBar * obj = static_cast< QScrollBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

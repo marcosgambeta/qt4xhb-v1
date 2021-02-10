@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QHBOXLAYOUT_NEW )
 
 HB_FUNC_STATIC( QHBOXLAYOUT_DELETE )
 {
-  QHBoxLayout * obj = ( QHBoxLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHBoxLayout * obj = static_cast< QHBoxLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

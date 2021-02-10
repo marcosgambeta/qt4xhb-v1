@@ -28,7 +28,7 @@ void QAbstractSpinBoxSlots::editingFinished()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTSPINBOX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTSPINBOX" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,7 +38,7 @@ void QAbstractSpinBoxSlots::editingFinished()
 
 void QAbstractSpinBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

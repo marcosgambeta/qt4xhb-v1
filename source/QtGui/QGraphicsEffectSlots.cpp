@@ -28,7 +28,7 @@ void QGraphicsEffectSlots::enabledChanged( bool enabled )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSEFFECT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSEFFECT" );
     PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
 
     hb_vmEvalBlockV( cb, 2, psender, penabled );
@@ -40,7 +40,7 @@ void QGraphicsEffectSlots::enabledChanged( bool enabled )
 
 void QGraphicsEffectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsEffect * obj = ( QGraphicsEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsEffect * obj = static_cast< QGraphicsEffect * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

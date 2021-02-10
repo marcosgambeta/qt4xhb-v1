@@ -28,7 +28,7 @@ void QToolBoxSlots::currentChanged( int index )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTOOLBOX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTOOLBOX" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -40,7 +40,7 @@ void QToolBoxSlots::currentChanged( int index )
 
 void QToolBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QToolBox * obj = ( QToolBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QToolBox * obj = static_cast< QToolBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

@@ -71,7 +71,7 @@ QShortcut( const QKeySequence & key, QWidget * parent, const char * member = 0, 
 */
 void QShortcut_new2()
 {
-  QShortcut * obj = new QShortcut( *PQKEYSEQUENCE( 1 ), PQWIDGET( 2 ), OPCONSTCHAR( 3, 0 ), OPCONSTCHAR( 4, 0 ), ISNIL( 5 )? ( Qt::ShortcutContext ) Qt::WindowShortcut : ( Qt::ShortcutContext ) hb_parni( 5 ) );
+  QShortcut * obj = new QShortcut( *PQKEYSEQUENCE( 1 ), PQWIDGET( 2 ), OPCONSTCHAR( 3, 0 ), OPCONSTCHAR( 4, 0 ), ISNIL( 5 ) ? ( Qt::ShortcutContext ) Qt::WindowShortcut : ( Qt::ShortcutContext ) hb_parni( 5 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QSHORTCUT_NEW )
 
 HB_FUNC_STATIC( QSHORTCUT_DELETE )
 {
-  QShortcut * obj = ( QShortcut * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcut * obj = static_cast< QShortcut * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -115,7 +115,7 @@ bool autoRepeat() const
 */
 HB_FUNC_STATIC( QSHORTCUT_AUTOREPEAT )
 {
-  QShortcut * obj = ( QShortcut * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcut * obj = static_cast< QShortcut * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -139,7 +139,7 @@ Qt::ShortcutContext context() const
 */
 HB_FUNC_STATIC( QSHORTCUT_CONTEXT )
 {
-  QShortcut * obj = ( QShortcut * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcut * obj = static_cast< QShortcut * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -163,7 +163,7 @@ int id() const
 */
 HB_FUNC_STATIC( QSHORTCUT_ID )
 {
-  QShortcut * obj = ( QShortcut * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcut * obj = static_cast< QShortcut * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -187,7 +187,7 @@ bool isEnabled() const
 */
 HB_FUNC_STATIC( QSHORTCUT_ISENABLED )
 {
-  QShortcut * obj = ( QShortcut * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcut * obj = static_cast< QShortcut * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -211,7 +211,7 @@ QKeySequence key() const
 */
 HB_FUNC_STATIC( QSHORTCUT_KEY )
 {
-  QShortcut * obj = ( QShortcut * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcut * obj = static_cast< QShortcut * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -236,7 +236,7 @@ QWidget * parentWidget() const
 */
 HB_FUNC_STATIC( QSHORTCUT_PARENTWIDGET )
 {
-  QShortcut * obj = ( QShortcut * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcut * obj = static_cast< QShortcut * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -261,7 +261,7 @@ void setAutoRepeat( bool on )
 */
 HB_FUNC_STATIC( QSHORTCUT_SETAUTOREPEAT )
 {
-  QShortcut * obj = ( QShortcut * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcut * obj = static_cast< QShortcut * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -287,7 +287,7 @@ void setContext( Qt::ShortcutContext context )
 */
 HB_FUNC_STATIC( QSHORTCUT_SETCONTEXT )
 {
-  QShortcut * obj = ( QShortcut * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcut * obj = static_cast< QShortcut * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -313,7 +313,7 @@ void setEnabled( bool enable )
 */
 HB_FUNC_STATIC( QSHORTCUT_SETENABLED )
 {
-  QShortcut * obj = ( QShortcut * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcut * obj = static_cast< QShortcut * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -339,7 +339,7 @@ void setKey( const QKeySequence & key )
 */
 HB_FUNC_STATIC( QSHORTCUT_SETKEY )
 {
-  QShortcut * obj = ( QShortcut * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcut * obj = static_cast< QShortcut * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -365,7 +365,7 @@ void setWhatsThis( const QString & text )
 */
 HB_FUNC_STATIC( QSHORTCUT_SETWHATSTHIS )
 {
-  QShortcut * obj = ( QShortcut * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcut * obj = static_cast< QShortcut * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -391,7 +391,7 @@ QString whatsThis() const
 */
 HB_FUNC_STATIC( QSHORTCUT_WHATSTHIS )
 {
-  QShortcut * obj = ( QShortcut * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QShortcut * obj = static_cast< QShortcut * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

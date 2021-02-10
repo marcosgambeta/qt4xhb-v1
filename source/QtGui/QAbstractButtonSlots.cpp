@@ -28,7 +28,7 @@ void QAbstractButtonSlots::clicked( bool checked )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTBUTTON" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTBUTTON" );
     PHB_ITEM pchecked = hb_itemPutL( NULL, checked );
 
     hb_vmEvalBlockV( cb, 2, psender, pchecked );
@@ -46,7 +46,7 @@ void QAbstractButtonSlots::pressed()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTBUTTON" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTBUTTON" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -62,7 +62,7 @@ void QAbstractButtonSlots::released()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTBUTTON" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTBUTTON" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -78,7 +78,7 @@ void QAbstractButtonSlots::toggled( bool checked )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTBUTTON" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTBUTTON" );
     PHB_ITEM pchecked = hb_itemPutL( NULL, checked );
 
     hb_vmEvalBlockV( cb, 2, psender, pchecked );
@@ -90,7 +90,7 @@ void QAbstractButtonSlots::toggled( bool checked )
 
 void QAbstractButtonSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractButton * obj = ( QAbstractButton * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractButton * obj = static_cast< QAbstractButton * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

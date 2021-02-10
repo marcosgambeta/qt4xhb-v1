@@ -98,7 +98,7 @@ void QPolygon_new4()
   int nLen1 = hb_arrayLen( aList1 );
   for( int i1 = 0; i1 < nLen1; i1++ )
   {
-    par1 << *( QPoint * ) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+    par1 << *static_cast< QPoint * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
   }
   QPolygon * obj = new QPolygon( par1 );
   Qt4xHb::returnNewObject( obj, true );
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QPOLYGON_NEW )
 
 HB_FUNC_STATIC( QPOLYGON_DELETE )
 {
-  QPolygon * obj = ( QPolygon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPolygon * obj = static_cast< QPolygon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -163,7 +163,7 @@ QRect boundingRect() const
 */
 HB_FUNC_STATIC( QPOLYGON_BOUNDINGRECT )
 {
-  QPolygon * obj = ( QPolygon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPolygon * obj = static_cast< QPolygon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -188,7 +188,7 @@ bool containsPoint( const QPoint & point, Qt::FillRule fillRule ) const
 */
 HB_FUNC_STATIC( QPOLYGON_CONTAINSPOINT )
 {
-  QPolygon * obj = ( QPolygon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPolygon * obj = static_cast< QPolygon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -212,7 +212,7 @@ QPolygon intersected( const QPolygon & r ) const
 */
 HB_FUNC_STATIC( QPOLYGON_INTERSECTED )
 {
-  QPolygon * obj = ( QPolygon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPolygon * obj = static_cast< QPolygon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -237,7 +237,7 @@ void point( int index, int * x, int * y ) const
 */
 void QPolygon_point1()
 {
-  QPolygon * obj = ( QPolygon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPolygon * obj = static_cast< QPolygon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -256,7 +256,7 @@ QPoint point( int index ) const
 */
 void QPolygon_point2()
 {
-  QPolygon * obj = ( QPolygon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPolygon * obj = static_cast< QPolygon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -286,12 +286,12 @@ void putPoints( int index, int nPoints, const QPolygon & fromPolygon, int fromIn
 */
 HB_FUNC_STATIC( QPOLYGON_PUTPOINTS2 )
 {
-  QPolygon * obj = ( QPolygon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPolygon * obj = static_cast< QPolygon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 3, 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISQPOLYGON( 3 ) && ISOPTNUM( 4 ) )
+    if( ISBETWEEN( 3, 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISQPOLYGON( 3 ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
     {
 #endif
       obj->putPoints( PINT( 1 ), PINT( 2 ), *PQPOLYGON( 3 ), OPINT( 4, 0 ) );
@@ -317,7 +317,7 @@ void setPoint( int index, int x, int y )
 */
 void QPolygon_setPoint1()
 {
-  QPolygon * obj = ( QPolygon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPolygon * obj = static_cast< QPolygon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -332,7 +332,7 @@ void setPoint( int index, const QPoint & point )
 */
 void QPolygon_setPoint2()
 {
-  QPolygon * obj = ( QPolygon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPolygon * obj = static_cast< QPolygon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -363,7 +363,7 @@ QPolygon subtracted( const QPolygon & r ) const
 */
 HB_FUNC_STATIC( QPOLYGON_SUBTRACTED )
 {
-  QPolygon * obj = ( QPolygon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPolygon * obj = static_cast< QPolygon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -388,7 +388,7 @@ void swap( QPolygon & other )
 */
 HB_FUNC_STATIC( QPOLYGON_SWAP )
 {
-  QPolygon * obj = ( QPolygon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPolygon * obj = static_cast< QPolygon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -414,7 +414,7 @@ void translate( int dx, int dy )
 */
 void QPolygon_translate1()
 {
-  QPolygon * obj = ( QPolygon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPolygon * obj = static_cast< QPolygon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -429,7 +429,7 @@ void translate( const QPoint & offset )
 */
 void QPolygon_translate2()
 {
-  QPolygon * obj = ( QPolygon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPolygon * obj = static_cast< QPolygon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -460,7 +460,7 @@ QPolygon translated( int dx, int dy ) const
 */
 void QPolygon_translated1()
 {
-  QPolygon * obj = ( QPolygon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPolygon * obj = static_cast< QPolygon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -474,7 +474,7 @@ QPolygon translated( const QPoint & offset ) const
 */
 void QPolygon_translated2()
 {
-  QPolygon * obj = ( QPolygon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPolygon * obj = static_cast< QPolygon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -504,7 +504,7 @@ QPolygon united( const QPolygon & r ) const
 */
 HB_FUNC_STATIC( QPOLYGON_UNITED )
 {
-  QPolygon * obj = ( QPolygon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPolygon * obj = static_cast< QPolygon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QPOLYGON_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -539,7 +539,7 @@ HB_FUNC_STATIC( QPOLYGON_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

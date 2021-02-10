@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_NEW )
 
 HB_FUNC_STATIC( QTEXTFRAGMENT_DELETE )
 {
-  QTextFragment * obj = ( QTextFragment * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFragment * obj = static_cast< QTextFragment * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -113,7 +113,7 @@ QTextCharFormat charFormat() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMAT )
 {
-  QTextFragment * obj = ( QTextFragment * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFragment * obj = static_cast< QTextFragment * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -138,7 +138,7 @@ int charFormatIndex() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMATINDEX )
 {
-  QTextFragment * obj = ( QTextFragment * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFragment * obj = static_cast< QTextFragment * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -162,7 +162,7 @@ bool contains( int position ) const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_CONTAINS )
 {
-  QTextFragment * obj = ( QTextFragment * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFragment * obj = static_cast< QTextFragment * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -186,7 +186,7 @@ QList<QGlyphRun> glyphRuns() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
 {
-  QTextFragment * obj = ( QTextFragment * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFragment * obj = static_cast< QTextFragment * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QGlyphRun * ) new QGlyphRun( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QGlyphRun * >( new QGlyphRun( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -238,7 +238,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_ISVALID )
 {
-  QTextFragment * obj = ( QTextFragment * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFragment * obj = static_cast< QTextFragment * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -262,7 +262,7 @@ int length() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_LENGTH )
 {
-  QTextFragment * obj = ( QTextFragment * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFragment * obj = static_cast< QTextFragment * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -286,7 +286,7 @@ int position() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_POSITION )
 {
-  QTextFragment * obj = ( QTextFragment * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFragment * obj = static_cast< QTextFragment * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -310,7 +310,7 @@ QString text() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_TEXT )
 {
-  QTextFragment * obj = ( QTextFragment * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFragment * obj = static_cast< QTextFragment * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

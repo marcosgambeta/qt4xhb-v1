@@ -41,7 +41,7 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSSCENEEVENT_DELETE )
 {
-  QGraphicsSceneEvent * obj = ( QGraphicsSceneEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneEvent * obj = static_cast< QGraphicsSceneEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -61,7 +61,7 @@ QWidget * widget() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEEVENT_WIDGET )
 {
-  QGraphicsSceneEvent * obj = ( QGraphicsSceneEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneEvent * obj = static_cast< QGraphicsSceneEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

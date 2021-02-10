@@ -28,7 +28,7 @@ void QTreeViewSlots::collapsed( const QModelIndex & index )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTREEVIEW" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTREEVIEW" );
     PHB_ITEM pindex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -46,7 +46,7 @@ void QTreeViewSlots::expanded( const QModelIndex & index )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTREEVIEW" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTREEVIEW" );
     PHB_ITEM pindex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -58,7 +58,7 @@ void QTreeViewSlots::expanded( const QModelIndex & index )
 
 void QTreeViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTreeView * obj = ( QTreeView * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTreeView * obj = static_cast< QTreeView * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

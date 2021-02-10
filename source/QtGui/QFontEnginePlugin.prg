@@ -46,7 +46,7 @@ RETURN
 
 HB_FUNC_STATIC( QFONTENGINEPLUGIN_DELETE )
 {
-  QFontEnginePlugin * obj = ( QFontEnginePlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontEnginePlugin * obj = static_cast< QFontEnginePlugin * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -68,7 +68,7 @@ virtual QList<QFontEngineInfo> availableFontEngines() const = 0
 */
 HB_FUNC_STATIC( QFONTENGINEPLUGIN_AVAILABLEFONTENGINES )
 {
-  QFontEnginePlugin * obj = ( QFontEnginePlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontEnginePlugin * obj = static_cast< QFontEnginePlugin * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QFONTENGINEPLUGIN_AVAILABLEFONTENGINES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QFontEngineInfo * ) new QFontEngineInfo( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QFontEngineInfo * >( new QFontEngineInfo( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -120,7 +120,7 @@ virtual QAbstractFontEngine * create( const QFontEngineInfo & info ) = 0
 */
 HB_FUNC_STATIC( QFONTENGINEPLUGIN_CREATE )
 {
-  QFontEnginePlugin * obj = ( QFontEnginePlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontEnginePlugin * obj = static_cast< QFontEnginePlugin * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -145,7 +145,7 @@ virtual QStringList keys() const
 */
 HB_FUNC_STATIC( QFONTENGINEPLUGIN_KEYS )
 {
-  QFontEnginePlugin * obj = ( QFontEnginePlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontEnginePlugin * obj = static_cast< QFontEnginePlugin * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

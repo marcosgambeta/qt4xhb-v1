@@ -61,7 +61,7 @@ int child() const
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_CHILD )
 {
-  QAccessibleEvent * obj = ( QAccessibleEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAccessibleEvent * obj = static_cast< QAccessibleEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -85,7 +85,7 @@ void setValue( const QString & text )
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_SETVALUE )
 {
-  QAccessibleEvent * obj = ( QAccessibleEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAccessibleEvent * obj = static_cast< QAccessibleEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -111,7 +111,7 @@ QString value() const
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_VALUE )
 {
-  QAccessibleEvent * obj = ( QAccessibleEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAccessibleEvent * obj = static_cast< QAccessibleEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

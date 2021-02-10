@@ -104,7 +104,7 @@ QRectF exposedRect
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_EXPOSEDRECT )
 {
-  QStyleOptionGraphicsItem * obj = ( QStyleOptionGraphicsItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionGraphicsItem * obj = static_cast< QStyleOptionGraphicsItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_EXPOSEDRECT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_SETEXPOSEDRECT )
 {
-  QStyleOptionGraphicsItem * obj = ( QStyleOptionGraphicsItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionGraphicsItem * obj = static_cast< QStyleOptionGraphicsItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -143,7 +143,7 @@ QMatrix matrix
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_MATRIX )
 {
-  QStyleOptionGraphicsItem * obj = ( QStyleOptionGraphicsItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionGraphicsItem * obj = static_cast< QStyleOptionGraphicsItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_MATRIX )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_SETMATRIX )
 {
-  QStyleOptionGraphicsItem * obj = ( QStyleOptionGraphicsItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionGraphicsItem * obj = static_cast< QStyleOptionGraphicsItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -182,7 +182,7 @@ qreal levelOfDetail
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAIL )
 {
-  QStyleOptionGraphicsItem * obj = ( QStyleOptionGraphicsItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionGraphicsItem * obj = static_cast< QStyleOptionGraphicsItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAIL )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_SETLEVELOFDETAIL )
 {
-  QStyleOptionGraphicsItem * obj = ( QStyleOptionGraphicsItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionGraphicsItem * obj = static_cast< QStyleOptionGraphicsItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

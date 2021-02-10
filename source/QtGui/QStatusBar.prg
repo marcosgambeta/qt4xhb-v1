@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QSTATUSBAR_NEW )
 
 HB_FUNC_STATIC( QSTATUSBAR_DELETE )
 {
-  QStatusBar * obj = ( QStatusBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStatusBar * obj = static_cast< QStatusBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -92,12 +92,12 @@ void addPermanentWidget( QWidget * widget, int stretch = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_ADDPERMANENTWIDGET )
 {
-  QStatusBar * obj = ( QStatusBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStatusBar * obj = static_cast< QStatusBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQWIDGET( 1 ) && ISOPTNUM( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISQWIDGET( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       obj->addPermanentWidget( PQWIDGET( 1 ), OPINT( 2, 0 ) );
@@ -118,12 +118,12 @@ void addWidget( QWidget * widget, int stretch = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_ADDWIDGET )
 {
-  QStatusBar * obj = ( QStatusBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStatusBar * obj = static_cast< QStatusBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQWIDGET( 1 ) && ISOPTNUM( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISQWIDGET( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       obj->addWidget( PQWIDGET( 1 ), OPINT( 2, 0 ) );
@@ -144,7 +144,7 @@ QString currentMessage() const
 */
 HB_FUNC_STATIC( QSTATUSBAR_CURRENTMESSAGE )
 {
-  QStatusBar * obj = ( QStatusBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStatusBar * obj = static_cast< QStatusBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -168,12 +168,12 @@ int insertPermanentWidget( int index, QWidget * widget, int stretch = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_INSERTPERMANENTWIDGET )
 {
-  QStatusBar * obj = ( QStatusBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStatusBar * obj = static_cast< QStatusBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 3 ) && ISNUM( 1 ) && ISQWIDGET( 2 ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 2, 3 ) && ISNUM( 1 ) && ISQWIDGET( 2 ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
       RINT( obj->insertPermanentWidget( PINT( 1 ), PQWIDGET( 2 ), OPINT( 3, 0 ) ) );
@@ -192,12 +192,12 @@ int insertWidget( int index, QWidget * widget, int stretch = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_INSERTWIDGET )
 {
-  QStatusBar * obj = ( QStatusBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStatusBar * obj = static_cast< QStatusBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 3 ) && ISNUM( 1 ) && ISQWIDGET( 2 ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 2, 3 ) && ISNUM( 1 ) && ISQWIDGET( 2 ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
       RINT( obj->insertWidget( PINT( 1 ), PQWIDGET( 2 ), OPINT( 3, 0 ) ) );
@@ -216,7 +216,7 @@ bool isSizeGripEnabled() const
 */
 HB_FUNC_STATIC( QSTATUSBAR_ISSIZEGRIPENABLED )
 {
-  QStatusBar * obj = ( QStatusBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStatusBar * obj = static_cast< QStatusBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -240,7 +240,7 @@ void removeWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QSTATUSBAR_REMOVEWIDGET )
 {
-  QStatusBar * obj = ( QStatusBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStatusBar * obj = static_cast< QStatusBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -266,7 +266,7 @@ void setSizeGripEnabled( bool )
 */
 HB_FUNC_STATIC( QSTATUSBAR_SETSIZEGRIPENABLED )
 {
-  QStatusBar * obj = ( QStatusBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStatusBar * obj = static_cast< QStatusBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -292,7 +292,7 @@ void clearMessage()
 */
 HB_FUNC_STATIC( QSTATUSBAR_CLEARMESSAGE )
 {
-  QStatusBar * obj = ( QStatusBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStatusBar * obj = static_cast< QStatusBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -318,12 +318,12 @@ void showMessage( const QString & message, int timeout = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_SHOWMESSAGE )
 {
-  QStatusBar * obj = ( QStatusBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStatusBar * obj = static_cast< QStatusBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ISOPTNUM( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       obj->showMessage( PQSTRING( 1 ), OPINT( 2, 0 ) );

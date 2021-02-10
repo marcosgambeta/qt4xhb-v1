@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QABSTRACTSPINBOX_NEW )
 
 HB_FUNC_STATIC( QABSTRACTSPINBOX_DELETE )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -116,7 +116,7 @@ Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_ALIGNMENT )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -140,7 +140,7 @@ QAbstractSpinBox::ButtonSymbols buttonSymbols() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_BUTTONSYMBOLS )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -164,7 +164,7 @@ QAbstractSpinBox::CorrectionMode correctionMode() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_CORRECTIONMODE )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -188,7 +188,7 @@ virtual void fixup( QString & input ) const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_FIXUP )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -216,7 +216,7 @@ bool hasAcceptableInput() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_HASACCEPTABLEINPUT )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -240,7 +240,7 @@ bool hasFrame() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_HASFRAME )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -264,7 +264,7 @@ void interpretText()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_INTERPRETTEXT )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -290,7 +290,7 @@ bool isAccelerated() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_ISACCELERATED )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -314,7 +314,7 @@ bool isReadOnly() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_ISREADONLY )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -338,7 +338,7 @@ bool keyboardTracking() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_KEYBOARDTRACKING )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -362,7 +362,7 @@ void setAccelerated( bool on )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETACCELERATED )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -388,7 +388,7 @@ void setAlignment( Qt::Alignment flag )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETALIGNMENT )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -414,7 +414,7 @@ void setButtonSymbols( QAbstractSpinBox::ButtonSymbols bs )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETBUTTONSYMBOLS )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -440,7 +440,7 @@ void setCorrectionMode( QAbstractSpinBox::CorrectionMode cm )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETCORRECTIONMODE )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -466,7 +466,7 @@ void setFrame( bool )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETFRAME )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -492,7 +492,7 @@ void setKeyboardTracking( bool kt )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETKEYBOARDTRACKING )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -518,7 +518,7 @@ void setReadOnly( bool r )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETREADONLY )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -544,7 +544,7 @@ void setSpecialValueText( const QString & txt )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETSPECIALVALUETEXT )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -570,7 +570,7 @@ void setWrapping( bool w )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SETWRAPPING )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -596,7 +596,7 @@ QString specialValueText() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SPECIALVALUETEXT )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -620,7 +620,7 @@ virtual void stepBy( int steps )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPBY )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -646,7 +646,7 @@ QString text() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_TEXT )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -670,7 +670,7 @@ virtual QValidator::State validate( QString & input, int & pos ) const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_VALIDATE )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -698,7 +698,7 @@ bool wrapping() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_WRAPPING )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -722,7 +722,7 @@ virtual bool event( QEvent * event )
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_EVENT )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -746,7 +746,7 @@ virtual QVariant inputMethodQuery( Qt::InputMethodQuery query ) const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_INPUTMETHODQUERY )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -771,7 +771,7 @@ virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_MINIMUMSIZEHINT )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -796,7 +796,7 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SIZEHINT )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -821,7 +821,7 @@ virtual void clear()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_CLEAR )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -847,7 +847,7 @@ void selectAll()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_SELECTALL )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -873,7 +873,7 @@ void stepDown()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPDOWN )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -899,7 +899,7 @@ void stepUp()
 */
 HB_FUNC_STATIC( QABSTRACTSPINBOX_STEPUP )
 {
-  QAbstractSpinBox * obj = ( QAbstractSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractSpinBox * obj = static_cast< QAbstractSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

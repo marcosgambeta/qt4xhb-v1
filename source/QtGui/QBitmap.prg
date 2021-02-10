@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QBITMAP_NEW )
 
 HB_FUNC_STATIC( QBITMAP_DELETE )
 {
-  QBitmap * obj = ( QBitmap * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QBitmap * obj = static_cast< QBitmap * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -141,7 +141,7 @@ void clear()
 */
 HB_FUNC_STATIC( QBITMAP_CLEAR )
 {
-  QBitmap * obj = ( QBitmap * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QBitmap * obj = static_cast< QBitmap * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -167,7 +167,7 @@ QBitmap transformed( const QTransform & matrix ) const
 */
 HB_FUNC_STATIC( QBITMAP_TRANSFORMED )
 {
-  QBitmap * obj = ( QBitmap * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QBitmap * obj = static_cast< QBitmap * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -193,10 +193,10 @@ static QBitmap fromData( const QSize & size, const uchar * bits, QImage::Format 
 HB_FUNC_STATIC( QBITMAP_FROMDATA )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 2, 3 ) && ISQSIZE( 1 ) && ISCHAR( 2 ) && ISOPTNUM( 3 ) )
+  if( ISBETWEEN( 2, 3 ) && ISQSIZE( 1 ) && ISCHAR( 2 ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
   {
 #endif
-    QBitmap * ptr = new QBitmap( QBitmap::fromData( *PQSIZE( 1 ), PCONSTUCHAR( 2 ), ISNIL( 3 )? ( QImage::Format ) QImage::Format_MonoLSB : ( QImage::Format ) hb_parni( 3 ) ) );
+    QBitmap * ptr = new QBitmap( QBitmap::fromData( *PQSIZE( 1 ), PCONSTUCHAR( 2 ), ISNIL( 3 ) ? ( QImage::Format ) QImage::Format_MonoLSB : ( QImage::Format ) hb_parni( 3 ) ) );
     Qt4xHb::createReturnClass( ptr, "QBITMAP", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
@@ -213,10 +213,10 @@ static QBitmap fromImage( const QImage & image, Qt::ImageConversionFlags flags =
 HB_FUNC_STATIC( QBITMAP_FROMIMAGE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 1, 2 ) && ISQIMAGE( 1 ) && ISOPTNUM( 2 ) )
+  if( ISBETWEEN( 1, 2 ) && ISQIMAGE( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
   {
 #endif
-    QBitmap * ptr = new QBitmap( QBitmap::fromImage( *PQIMAGE( 1 ), ISNIL( 2 )? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni( 2 ) ) );
+    QBitmap * ptr = new QBitmap( QBitmap::fromImage( *PQIMAGE( 1 ), ISNIL( 2 ) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni( 2 ) ) );
     Qt4xHb::createReturnClass( ptr, "QBITMAP", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
@@ -232,7 +232,7 @@ QVariant toVariant()
 */
 void QBitmap_toVariant1()
 {
-  QBitmap * obj = ( QBitmap * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QBitmap * obj = static_cast< QBitmap * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -247,7 +247,7 @@ static QVariant toVariant( const QBitmap & )
 */
 void QBitmap_toVariant2()
 {
-  QBitmap * bitmap = ( QBitmap * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
+  QBitmap * bitmap = static_cast< QBitmap * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
   QVariant * variant = new QVariant();
   variant->setValue<QBitmap>( *bitmap );
   Qt4xHb::createReturnClass( variant, "QVARIANT", true );
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QBITMAP_FROMVARIANT )
 {
   if( ISNUMPAR( 1 ) && ISQVARIANT( 1 ) )
   {
-    QVariant * variant = ( QVariant * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) );
+    QVariant * variant = static_cast< QVariant * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     QBitmap * bitmap = new QBitmap( variant->value<QBitmap>() );
     Qt4xHb::createReturnClass( bitmap, "QBITMAP", true );
   }

@@ -87,7 +87,7 @@ Qt::CheckState checkState() const
 */
 HB_FUNC_STATIC( QCHECKBOX_CHECKSTATE )
 {
-  QCheckBox * obj = ( QCheckBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCheckBox * obj = static_cast< QCheckBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -111,7 +111,7 @@ bool isTristate() const
 */
 HB_FUNC_STATIC( QCHECKBOX_ISTRISTATE )
 {
-  QCheckBox * obj = ( QCheckBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCheckBox * obj = static_cast< QCheckBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -135,7 +135,7 @@ void setCheckState( Qt::CheckState state )
 */
 HB_FUNC_STATIC( QCHECKBOX_SETCHECKSTATE )
 {
-  QCheckBox * obj = ( QCheckBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCheckBox * obj = static_cast< QCheckBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -161,7 +161,7 @@ void setTristate( bool y = true )
 */
 HB_FUNC_STATIC( QCHECKBOX_SETTRISTATE )
 {
-  QCheckBox * obj = ( QCheckBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCheckBox * obj = static_cast< QCheckBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -187,7 +187,7 @@ virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QCHECKBOX_MINIMUMSIZEHINT )
 {
-  QCheckBox * obj = ( QCheckBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCheckBox * obj = static_cast< QCheckBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -212,7 +212,7 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QCHECKBOX_SIZEHINT )
 {
-  QCheckBox * obj = ( QCheckBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCheckBox * obj = static_cast< QCheckBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

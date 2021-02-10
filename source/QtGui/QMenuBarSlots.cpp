@@ -28,8 +28,8 @@ void QMenuBarSlots::hovered( QAction * action )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QMENUBAR" );
-    PHB_ITEM paction = Qt4xHb::Signals_return_qobject( ( QObject * ) action, "QACTION" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QMENUBAR" );
+    PHB_ITEM paction = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( action ), "QACTION" );
 
     hb_vmEvalBlockV( cb, 2, psender, paction );
 
@@ -46,8 +46,8 @@ void QMenuBarSlots::triggered( QAction * action )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QMENUBAR" );
-    PHB_ITEM paction = Qt4xHb::Signals_return_qobject( ( QObject * ) action, "QACTION" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QMENUBAR" );
+    PHB_ITEM paction = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( action ), "QACTION" );
 
     hb_vmEvalBlockV( cb, 2, psender, paction );
 
@@ -58,7 +58,7 @@ void QMenuBarSlots::triggered( QAction * action )
 
 void QMenuBarSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMenuBar * obj = ( QMenuBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMenuBar * obj = static_cast< QMenuBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

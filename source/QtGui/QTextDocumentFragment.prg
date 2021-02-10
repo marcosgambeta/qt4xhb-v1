@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW )
 
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_DELETE )
 {
-  QTextDocumentFragment * obj = ( QTextDocumentFragment * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextDocumentFragment * obj = static_cast< QTextDocumentFragment * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -134,7 +134,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_ISEMPTY )
 {
-  QTextDocumentFragment * obj = ( QTextDocumentFragment * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextDocumentFragment * obj = static_cast< QTextDocumentFragment * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -158,7 +158,7 @@ QString toHtml( const QByteArray & encoding ) const
 */
 void QTextDocumentFragment_toHtml1()
 {
-  QTextDocumentFragment * obj = ( QTextDocumentFragment * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextDocumentFragment * obj = static_cast< QTextDocumentFragment * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -171,7 +171,7 @@ QString toHtml() const
 */
 void QTextDocumentFragment_toHtml2()
 {
-  QTextDocumentFragment * obj = ( QTextDocumentFragment * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextDocumentFragment * obj = static_cast< QTextDocumentFragment * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -200,7 +200,7 @@ QString toPlainText() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOPLAINTEXT )
 {
-  QTextDocumentFragment * obj = ( QTextDocumentFragment * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextDocumentFragment * obj = static_cast< QTextDocumentFragment * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

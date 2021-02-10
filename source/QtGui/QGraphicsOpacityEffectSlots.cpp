@@ -28,7 +28,7 @@ void QGraphicsOpacityEffectSlots::opacityChanged( qreal opacity )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSOPACITYEFFECT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSOPACITYEFFECT" );
     PHB_ITEM popacity = hb_itemPutND( NULL, opacity );
 
     hb_vmEvalBlockV( cb, 2, psender, popacity );
@@ -46,7 +46,7 @@ void QGraphicsOpacityEffectSlots::opacityMaskChanged( const QBrush & mask )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSOPACITYEFFECT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSOPACITYEFFECT" );
     PHB_ITEM pmask = Qt4xHb::Signals_return_object( ( void * ) &mask, "QBRUSH" );
 
     hb_vmEvalBlockV( cb, 2, psender, pmask );
@@ -58,7 +58,7 @@ void QGraphicsOpacityEffectSlots::opacityMaskChanged( const QBrush & mask )
 
 void QGraphicsOpacityEffectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsOpacityEffect * obj = ( QGraphicsOpacityEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsOpacityEffect * obj = static_cast< QGraphicsOpacityEffect * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

@@ -28,7 +28,7 @@ void QCheckBoxSlots::stateChanged( int state )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCHECKBOX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QCHECKBOX" );
     PHB_ITEM pstate = hb_itemPutNI( NULL, state );
 
     hb_vmEvalBlockV( cb, 2, psender, pstate );
@@ -40,7 +40,7 @@ void QCheckBoxSlots::stateChanged( int state )
 
 void QCheckBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCheckBox * obj = ( QCheckBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCheckBox * obj = static_cast< QCheckBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

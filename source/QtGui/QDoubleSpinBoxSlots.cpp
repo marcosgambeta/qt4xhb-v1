@@ -28,7 +28,7 @@ void QDoubleSpinBoxSlots::valueChanged( double d )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDOUBLESPINBOX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDOUBLESPINBOX" );
     PHB_ITEM pd = hb_itemPutND( NULL, d );
 
     hb_vmEvalBlockV( cb, 2, psender, pd );
@@ -46,7 +46,7 @@ void QDoubleSpinBoxSlots::valueChanged( const QString & text )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDOUBLESPINBOX" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDOUBLESPINBOX" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING( text ) );
 
     hb_vmEvalBlockV( cb, 2, psender, ptext );
@@ -58,7 +58,7 @@ void QDoubleSpinBoxSlots::valueChanged( const QString & text )
 
 void QDoubleSpinBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDoubleSpinBox * obj = ( QDoubleSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDoubleSpinBox * obj = static_cast< QDoubleSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

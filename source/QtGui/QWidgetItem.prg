@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QWIDGETITEM_NEW )
 
 HB_FUNC_STATIC( QWIDGETITEM_DELETE )
 {
-  QWidgetItem * obj = ( QWidgetItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidgetItem * obj = static_cast< QWidgetItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -89,7 +89,7 @@ virtual Qt::Orientations expandingDirections() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_EXPANDINGDIRECTIONS )
 {
-  QWidgetItem * obj = ( QWidgetItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidgetItem * obj = static_cast< QWidgetItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -113,7 +113,7 @@ virtual QRect geometry() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_GEOMETRY )
 {
-  QWidgetItem * obj = ( QWidgetItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidgetItem * obj = static_cast< QWidgetItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -138,7 +138,7 @@ virtual bool hasHeightForWidth() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_HASHEIGHTFORWIDTH )
 {
-  QWidgetItem * obj = ( QWidgetItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidgetItem * obj = static_cast< QWidgetItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -162,7 +162,7 @@ virtual int heightForWidth( int w ) const
 */
 HB_FUNC_STATIC( QWIDGETITEM_HEIGHTFORWIDTH )
 {
-  QWidgetItem * obj = ( QWidgetItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidgetItem * obj = static_cast< QWidgetItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -186,7 +186,7 @@ virtual bool isEmpty() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_ISEMPTY )
 {
-  QWidgetItem * obj = ( QWidgetItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidgetItem * obj = static_cast< QWidgetItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -210,7 +210,7 @@ virtual QSize maximumSize() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_MAXIMUMSIZE )
 {
-  QWidgetItem * obj = ( QWidgetItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidgetItem * obj = static_cast< QWidgetItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -235,7 +235,7 @@ virtual QSize minimumSize() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_MINIMUMSIZE )
 {
-  QWidgetItem * obj = ( QWidgetItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidgetItem * obj = static_cast< QWidgetItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -260,7 +260,7 @@ virtual void setGeometry( const QRect & rect )
 */
 HB_FUNC_STATIC( QWIDGETITEM_SETGEOMETRY )
 {
-  QWidgetItem * obj = ( QWidgetItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidgetItem * obj = static_cast< QWidgetItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -286,7 +286,7 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_SIZEHINT )
 {
-  QWidgetItem * obj = ( QWidgetItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidgetItem * obj = static_cast< QWidgetItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -311,7 +311,7 @@ virtual QWidget * widget()
 */
 HB_FUNC_STATIC( QWIDGETITEM_WIDGET )
 {
-  QWidgetItem * obj = ( QWidgetItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWidgetItem * obj = static_cast< QWidgetItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

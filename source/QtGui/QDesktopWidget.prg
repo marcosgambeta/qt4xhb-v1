@@ -56,7 +56,7 @@ const QRect availableGeometry( int screen = -1 ) const
 */
 void QDesktopWidget_availableGeometry1()
 {
-  QDesktopWidget * obj = ( QDesktopWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget * obj = static_cast< QDesktopWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -70,7 +70,7 @@ const QRect availableGeometry( const QWidget * widget ) const
 */
 void QDesktopWidget_availableGeometry2()
 {
-  QDesktopWidget * obj = ( QDesktopWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget * obj = static_cast< QDesktopWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -84,7 +84,7 @@ const QRect availableGeometry( const QPoint & p ) const
 */
 void QDesktopWidget_availableGeometry3()
 {
-  QDesktopWidget * obj = ( QDesktopWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget * obj = static_cast< QDesktopWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -118,7 +118,7 @@ bool isVirtualDesktop() const
 */
 HB_FUNC_STATIC( QDESKTOPWIDGET_ISVIRTUALDESKTOP )
 {
-  QDesktopWidget * obj = ( QDesktopWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget * obj = static_cast< QDesktopWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -142,7 +142,7 @@ int primaryScreen() const
 */
 HB_FUNC_STATIC( QDESKTOPWIDGET_PRIMARYSCREEN )
 {
-  QDesktopWidget * obj = ( QDesktopWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget * obj = static_cast< QDesktopWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -166,12 +166,12 @@ QWidget * screen( int screen = -1 )
 */
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
 {
-  QDesktopWidget * obj = ( QDesktopWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget * obj = static_cast< QDesktopWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
+    if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
       QWidget * ptr = obj->screen( OPINT( 1, -1 ) );
@@ -191,7 +191,7 @@ int screenCount() const
 */
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENCOUNT )
 {
-  QDesktopWidget * obj = ( QDesktopWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget * obj = static_cast< QDesktopWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -215,7 +215,7 @@ const QRect screenGeometry( int screen = -1 ) const
 */
 void QDesktopWidget_screenGeometry1()
 {
-  QDesktopWidget * obj = ( QDesktopWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget * obj = static_cast< QDesktopWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -229,7 +229,7 @@ const QRect screenGeometry( const QWidget * widget ) const
 */
 void QDesktopWidget_screenGeometry2()
 {
-  QDesktopWidget * obj = ( QDesktopWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget * obj = static_cast< QDesktopWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -243,7 +243,7 @@ const QRect screenGeometry( const QPoint & p ) const
 */
 void QDesktopWidget_screenGeometry3()
 {
-  QDesktopWidget * obj = ( QDesktopWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget * obj = static_cast< QDesktopWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -277,7 +277,7 @@ int screenNumber( const QWidget * widget = 0 ) const
 */
 void QDesktopWidget_screenNumber1()
 {
-  QDesktopWidget * obj = ( QDesktopWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget * obj = static_cast< QDesktopWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -290,7 +290,7 @@ int screenNumber( const QPoint & point ) const
 */
 void QDesktopWidget_screenNumber2()
 {
-  QDesktopWidget * obj = ( QDesktopWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesktopWidget * obj = static_cast< QDesktopWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

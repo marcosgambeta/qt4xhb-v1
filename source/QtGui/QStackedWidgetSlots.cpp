@@ -28,7 +28,7 @@ void QStackedWidgetSlots::currentChanged( int index )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSTACKEDWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSTACKEDWIDGET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -46,7 +46,7 @@ void QStackedWidgetSlots::widgetRemoved( int index )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSTACKEDWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSTACKEDWIDGET" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -58,7 +58,7 @@ void QStackedWidgetSlots::widgetRemoved( int index )
 
 void QStackedWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QStackedWidget * obj = ( QStackedWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStackedWidget * obj = static_cast< QStackedWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

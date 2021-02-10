@@ -28,7 +28,7 @@ void QStackedLayoutSlots::setCurrentIndex( int index )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSTACKEDLAYOUT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSTACKEDLAYOUT" );
     PHB_ITEM pindex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -46,8 +46,8 @@ void QStackedLayoutSlots::setCurrentWidget( QWidget * widget )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSTACKEDLAYOUT" );
-    PHB_ITEM pwidget = Qt4xHb::Signals_return_qobject( ( QObject * ) widget, "QWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSTACKEDLAYOUT" );
+    PHB_ITEM pwidget = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( widget ), "QWIDGET" );
 
     hb_vmEvalBlockV( cb, 2, psender, pwidget );
 
@@ -58,7 +58,7 @@ void QStackedLayoutSlots::setCurrentWidget( QWidget * widget )
 
 void QStackedLayoutSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QStackedLayout * obj = ( QStackedLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStackedLayout * obj = static_cast< QStackedLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

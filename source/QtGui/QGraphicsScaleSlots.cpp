@@ -28,7 +28,7 @@ void QGraphicsScaleSlots::originChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSSCALE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSSCALE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QGraphicsScaleSlots::scaleChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSSCALE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSSCALE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -60,7 +60,7 @@ void QGraphicsScaleSlots::xScaleChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSSCALE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSSCALE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -76,7 +76,7 @@ void QGraphicsScaleSlots::yScaleChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSSCALE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSSCALE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -92,7 +92,7 @@ void QGraphicsScaleSlots::zScaleChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSSCALE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSSCALE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -102,7 +102,7 @@ void QGraphicsScaleSlots::zScaleChanged()
 
 void QGraphicsScaleSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsScale * obj = ( QGraphicsScale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsScale * obj = static_cast< QGraphicsScale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

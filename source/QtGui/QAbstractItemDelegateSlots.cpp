@@ -28,9 +28,9 @@ void QAbstractItemDelegateSlots::closeEditor( QWidget * editor, QAbstractItemDel
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTITEMDELEGATE" );
-    PHB_ITEM peditor = Qt4xHb::Signals_return_qobject( ( QObject * ) editor, "QWIDGET" );
-    PHB_ITEM phint = hb_itemPutNI( NULL, (int) hint );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTITEMDELEGATE" );
+    PHB_ITEM peditor = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( editor ), "QWIDGET" );
+    PHB_ITEM phint = hb_itemPutNI( NULL, ( int ) hint );
 
     hb_vmEvalBlockV( cb, 3, psender, peditor, phint );
 
@@ -48,8 +48,8 @@ void QAbstractItemDelegateSlots::commitData( QWidget * editor )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTITEMDELEGATE" );
-    PHB_ITEM peditor = Qt4xHb::Signals_return_qobject( ( QObject * ) editor, "QWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTITEMDELEGATE" );
+    PHB_ITEM peditor = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( editor ), "QWIDGET" );
 
     hb_vmEvalBlockV( cb, 2, psender, peditor );
 
@@ -66,7 +66,7 @@ void QAbstractItemDelegateSlots::sizeHintChanged( const QModelIndex & index )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTITEMDELEGATE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTITEMDELEGATE" );
     PHB_ITEM pindex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -78,7 +78,7 @@ void QAbstractItemDelegateSlots::sizeHintChanged( const QModelIndex & index )
 
 void QAbstractItemDelegateSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractItemDelegate * obj = ( QAbstractItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractItemDelegate * obj = static_cast< QAbstractItemDelegate * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QDOUBLEVALIDATOR_NEW )
 
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_DELETE )
 {
-  QDoubleValidator * obj = ( QDoubleValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = static_cast< QDoubleValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -108,7 +108,7 @@ double bottom() const
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_BOTTOM )
 {
-  QDoubleValidator * obj = ( QDoubleValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = static_cast< QDoubleValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -132,7 +132,7 @@ int decimals() const
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_DECIMALS )
 {
-  QDoubleValidator * obj = ( QDoubleValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = static_cast< QDoubleValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -156,7 +156,7 @@ QDoubleValidator::Notation notation() const
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_NOTATION )
 {
-  QDoubleValidator * obj = ( QDoubleValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = static_cast< QDoubleValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -180,7 +180,7 @@ void setBottom( double )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETBOTTOM )
 {
-  QDoubleValidator * obj = ( QDoubleValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = static_cast< QDoubleValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -206,7 +206,7 @@ void setDecimals( int )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETDECIMALS )
 {
-  QDoubleValidator * obj = ( QDoubleValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = static_cast< QDoubleValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -232,7 +232,7 @@ void setNotation( QDoubleValidator::Notation )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETNOTATION )
 {
-  QDoubleValidator * obj = ( QDoubleValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = static_cast< QDoubleValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -258,12 +258,12 @@ virtual void setRange( double minimum, double maximum, int decimals = 0 )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETRANGE )
 {
-  QDoubleValidator * obj = ( QDoubleValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = static_cast< QDoubleValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 2, 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
       obj->setRange( PDOUBLE( 1 ), PDOUBLE( 2 ), OPINT( 3, 0 ) );
@@ -284,7 +284,7 @@ void setTop( double )
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_SETTOP )
 {
-  QDoubleValidator * obj = ( QDoubleValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = static_cast< QDoubleValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -310,7 +310,7 @@ double top() const
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_TOP )
 {
-  QDoubleValidator * obj = ( QDoubleValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = static_cast< QDoubleValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -334,7 +334,7 @@ virtual QValidator::State validate( QString & input, int & pos ) const
 */
 HB_FUNC_STATIC( QDOUBLEVALIDATOR_VALIDATE )
 {
-  QDoubleValidator * obj = ( QDoubleValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDoubleValidator * obj = static_cast< QDoubleValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

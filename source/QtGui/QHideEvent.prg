@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QHIDEEVENT_NEW )
 
 HB_FUNC_STATIC( QHIDEEVENT_DELETE )
 {
-  QHideEvent * obj = ( QHideEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHideEvent * obj = static_cast< QHideEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

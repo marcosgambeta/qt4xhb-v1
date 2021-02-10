@@ -28,8 +28,8 @@ void QMessageBoxSlots::buttonClicked( QAbstractButton * button )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QMESSAGEBOX" );
-    PHB_ITEM pbutton = Qt4xHb::Signals_return_qobject( ( QObject * ) button, "QABSTRACTBUTTON" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QMESSAGEBOX" );
+    PHB_ITEM pbutton = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( button ), "QABSTRACTBUTTON" );
 
     hb_vmEvalBlockV( cb, 2, psender, pbutton );
 
@@ -40,7 +40,7 @@ void QMessageBoxSlots::buttonClicked( QAbstractButton * button )
 
 void QMessageBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMessageBox * obj = ( QMessageBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMessageBox * obj = static_cast< QMessageBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

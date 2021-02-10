@@ -28,7 +28,7 @@ void QAbstractTextDocumentLayoutSlots::documentSizeChanged( const QSizeF & newSi
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTTEXTDOCUMENTLAYOUT" );
     PHB_ITEM pnewSize = Qt4xHb::Signals_return_object( ( void * ) &newSize, "QSIZEF" );
 
     hb_vmEvalBlockV( cb, 2, psender, pnewSize );
@@ -46,7 +46,7 @@ void QAbstractTextDocumentLayoutSlots::pageCountChanged( int newPages )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTTEXTDOCUMENTLAYOUT" );
     PHB_ITEM pnewPages = hb_itemPutNI( NULL, newPages );
 
     hb_vmEvalBlockV( cb, 2, psender, pnewPages );
@@ -64,7 +64,7 @@ void QAbstractTextDocumentLayoutSlots::update( const QRectF & rect )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTTEXTDOCUMENTLAYOUT" );
     PHB_ITEM prect = Qt4xHb::Signals_return_object( ( void * ) &rect, "QRECTF" );
 
     hb_vmEvalBlockV( cb, 2, psender, prect );
@@ -82,7 +82,7 @@ void QAbstractTextDocumentLayoutSlots::updateBlock( const QTextBlock & block )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTTEXTDOCUMENTLAYOUT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTTEXTDOCUMENTLAYOUT" );
     PHB_ITEM pblock = Qt4xHb::Signals_return_object( ( void * ) &block, "QTEXTBLOCK" );
 
     hb_vmEvalBlockV( cb, 2, psender, pblock );
@@ -94,7 +94,7 @@ void QAbstractTextDocumentLayoutSlots::updateBlock( const QTextBlock & block )
 
 void QAbstractTextDocumentLayoutSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractTextDocumentLayout * obj = ( QAbstractTextDocumentLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractTextDocumentLayout * obj = static_cast< QAbstractTextDocumentLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

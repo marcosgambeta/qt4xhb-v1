@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_NEW )
 
 HB_FUNC_STATIC( QTEXTLENGTH_DELETE )
 {
-  QTextLength * obj = ( QTextLength * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLength * obj = static_cast< QTextLength * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -106,7 +106,7 @@ qreal rawValue() const
 */
 HB_FUNC_STATIC( QTEXTLENGTH_RAWVALUE )
 {
-  QTextLength * obj = ( QTextLength * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLength * obj = static_cast< QTextLength * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -130,7 +130,7 @@ QTextLength::Type type() const
 */
 HB_FUNC_STATIC( QTEXTLENGTH_TYPE )
 {
-  QTextLength * obj = ( QTextLength * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLength * obj = static_cast< QTextLength * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -154,7 +154,7 @@ qreal value( qreal maximumLength ) const
 */
 HB_FUNC_STATIC( QTEXTLENGTH_VALUE )
 {
-  QTextLength * obj = ( QTextLength * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLength * obj = static_cast< QTextLength * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

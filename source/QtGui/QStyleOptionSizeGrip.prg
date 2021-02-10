@@ -78,7 +78,7 @@ Qt::Corner corner
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_CORNER )
 {
-  QStyleOptionSizeGrip * obj = ( QStyleOptionSizeGrip * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionSizeGrip * obj = static_cast< QStyleOptionSizeGrip * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_CORNER )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_SETCORNER )
 {
-  QStyleOptionSizeGrip * obj = ( QStyleOptionSizeGrip * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionSizeGrip * obj = static_cast< QStyleOptionSizeGrip * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

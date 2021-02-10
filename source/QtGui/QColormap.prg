@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QCOLORMAP_NEW )
 
 HB_FUNC_STATIC( QCOLORMAP_DELETE )
 {
-  QColormap * obj = ( QColormap * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QColormap * obj = static_cast< QColormap * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -95,7 +95,7 @@ const QColor colorAt( uint pixel ) const
 */
 HB_FUNC_STATIC( QCOLORMAP_COLORAT )
 {
-  QColormap * obj = ( QColormap * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QColormap * obj = static_cast< QColormap * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -120,7 +120,7 @@ const QVector<QColor> colormap() const
 */
 HB_FUNC_STATIC( QCOLORMAP_COLORMAP )
 {
-  QColormap * obj = ( QColormap * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QColormap * obj = static_cast< QColormap * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QCOLORMAP_COLORMAP )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QColor * ) new QColor( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QColor * >( new QColor( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -172,7 +172,7 @@ int depth() const
 */
 HB_FUNC_STATIC( QCOLORMAP_DEPTH )
 {
-  QColormap * obj = ( QColormap * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QColormap * obj = static_cast< QColormap * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -196,7 +196,7 @@ QColormap::Mode mode() const
 */
 HB_FUNC_STATIC( QCOLORMAP_MODE )
 {
-  QColormap * obj = ( QColormap * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QColormap * obj = static_cast< QColormap * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -220,7 +220,7 @@ uint pixel( const QColor & color ) const
 */
 HB_FUNC_STATIC( QCOLORMAP_PIXEL )
 {
-  QColormap * obj = ( QColormap * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QColormap * obj = static_cast< QColormap * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QCOLORMAP_PIXEL )
     if( ISNUMPAR( 1 ) && ( ISQCOLOR( 1 ) || ISCHAR( 1 ) ) )
     {
 #endif
-      RUINT( obj->pixel( ISOBJECT( 1 )? *( QColor * ) Qt4xHb::itemGetPtr( 1 ) : QColor( hb_parc( 1 ) ) ) );
+      RUINT( obj->pixel( ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,7 +244,7 @@ int size() const
 */
 HB_FUNC_STATIC( QCOLORMAP_SIZE )
 {
-  QColormap * obj = ( QColormap * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QColormap * obj = static_cast< QColormap * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -269,7 +269,7 @@ static QColormap instance( int screen = -1 )
 HB_FUNC_STATIC( QCOLORMAP_INSTANCE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
   {
 #endif
     QColormap * ptr = new QColormap( QColormap::instance( OPINT( 1, -1 ) ) );
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QCOLORMAP_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QCOLORMAP_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

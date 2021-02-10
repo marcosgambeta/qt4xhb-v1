@@ -28,7 +28,7 @@ void QStandardItemModelSlots::itemChanged( QStandardItem * item )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSTANDARDITEMMODEL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSTANDARDITEMMODEL" );
     PHB_ITEM pitem = Qt4xHb::Signals_return_object( ( void * ) item, "QSTANDARDITEM" );
 
     hb_vmEvalBlockV( cb, 2, psender, pitem );
@@ -40,7 +40,7 @@ void QStandardItemModelSlots::itemChanged( QStandardItem * item )
 
 void QStandardItemModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QStandardItemModel * obj = ( QStandardItemModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

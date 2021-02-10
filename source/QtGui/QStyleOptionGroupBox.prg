@@ -89,7 +89,7 @@ QStyleOptionFrame::FrameFeatures features
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_FEATURES )
 {
-  QStyleOptionGroupBox * obj = ( QStyleOptionGroupBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionGroupBox * obj = static_cast< QStyleOptionGroupBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_FEATURES )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETFEATURES )
 {
-  QStyleOptionGroupBox * obj = ( QStyleOptionGroupBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionGroupBox * obj = static_cast< QStyleOptionGroupBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -127,7 +127,7 @@ QString text
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXT )
 {
-  QStyleOptionGroupBox * obj = ( QStyleOptionGroupBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionGroupBox * obj = static_cast< QStyleOptionGroupBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETTEXT )
 {
-  QStyleOptionGroupBox * obj = ( QStyleOptionGroupBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionGroupBox * obj = static_cast< QStyleOptionGroupBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -165,7 +165,7 @@ Qt::Alignment textAlignment
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXTALIGNMENT )
 {
-  QStyleOptionGroupBox * obj = ( QStyleOptionGroupBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionGroupBox * obj = static_cast< QStyleOptionGroupBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXTALIGNMENT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETTEXTALIGNMENT )
 {
-  QStyleOptionGroupBox * obj = ( QStyleOptionGroupBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionGroupBox * obj = static_cast< QStyleOptionGroupBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -203,7 +203,7 @@ QColor textColor
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXTCOLOR )
 {
-  QStyleOptionGroupBox * obj = ( QStyleOptionGroupBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionGroupBox * obj = static_cast< QStyleOptionGroupBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXTCOLOR )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETTEXTCOLOR )
 {
-  QStyleOptionGroupBox * obj = ( QStyleOptionGroupBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionGroupBox * obj = static_cast< QStyleOptionGroupBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -242,7 +242,7 @@ int lineWidth
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_LINEWIDTH )
 {
-  QStyleOptionGroupBox * obj = ( QStyleOptionGroupBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionGroupBox * obj = static_cast< QStyleOptionGroupBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_LINEWIDTH )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETLINEWIDTH )
 {
-  QStyleOptionGroupBox * obj = ( QStyleOptionGroupBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionGroupBox * obj = static_cast< QStyleOptionGroupBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -280,7 +280,7 @@ int midLineWidth
 */
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_MIDLINEWIDTH )
 {
-  QStyleOptionGroupBox * obj = ( QStyleOptionGroupBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionGroupBox * obj = static_cast< QStyleOptionGroupBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_MIDLINEWIDTH )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETMIDLINEWIDTH )
 {
-  QStyleOptionGroupBox * obj = ( QStyleOptionGroupBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionGroupBox * obj = static_cast< QStyleOptionGroupBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

@@ -95,7 +95,7 @@ QPen( const QColor & color )
 */
 void QPen_new3()
 {
-  QPen * obj = new QPen( ISOBJECT( 1 )? *( QColor * ) Qt4xHb::itemGetPtr( 1 ) : QColor( hb_parc( 1 ) ) );
+  QPen * obj = new QPen( ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -104,7 +104,7 @@ QPen( const QBrush & brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt:
 */
 void QPen_new4()
 {
-  QPen * obj = new QPen( *PQBRUSH( 1 ), PQREAL( 2 ), ISNIL( 3 )? ( Qt::PenStyle ) Qt::SolidLine : ( Qt::PenStyle ) hb_parni( 3 ), ISNIL( 4 )? ( Qt::PenCapStyle ) Qt::SquareCap : ( Qt::PenCapStyle ) hb_parni( 4 ), ISNIL( 5 )? ( Qt::PenJoinStyle ) Qt::BevelJoin : ( Qt::PenJoinStyle ) hb_parni( 5 ) );
+  QPen * obj = new QPen( *PQBRUSH( 1 ), PQREAL( 2 ), ISNIL( 3 ) ? ( Qt::PenStyle ) Qt::SolidLine : ( Qt::PenStyle ) hb_parni( 3 ), ISNIL( 4 ) ? ( Qt::PenCapStyle ) Qt::SquareCap : ( Qt::PenCapStyle ) hb_parni( 4 ), ISNIL( 5 ) ? ( Qt::PenJoinStyle ) Qt::BevelJoin : ( Qt::PenJoinStyle ) hb_parni( 5 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QPEN_NEW )
 
 HB_FUNC_STATIC( QPEN_DELETE )
 {
-  QPen * obj = ( QPen * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPen * obj = static_cast< QPen * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -167,7 +167,7 @@ QBrush brush() const
 */
 HB_FUNC_STATIC( QPEN_BRUSH )
 {
-  QPen * obj = ( QPen * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPen * obj = static_cast< QPen * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -192,7 +192,7 @@ Qt::PenCapStyle capStyle() const
 */
 HB_FUNC_STATIC( QPEN_CAPSTYLE )
 {
-  QPen * obj = ( QPen * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPen * obj = static_cast< QPen * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -216,7 +216,7 @@ QColor color() const
 */
 HB_FUNC_STATIC( QPEN_COLOR )
 {
-  QPen * obj = ( QPen * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPen * obj = static_cast< QPen * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -241,7 +241,7 @@ qreal dashOffset() const
 */
 HB_FUNC_STATIC( QPEN_DASHOFFSET )
 {
-  QPen * obj = ( QPen * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPen * obj = static_cast< QPen * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -265,7 +265,7 @@ QVector<qreal> dashPattern() const
 */
 HB_FUNC_STATIC( QPEN_DASHPATTERN )
 {
-  QPen * obj = ( QPen * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPen * obj = static_cast< QPen * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -297,7 +297,7 @@ bool isCosmetic() const
 */
 HB_FUNC_STATIC( QPEN_ISCOSMETIC )
 {
-  QPen * obj = ( QPen * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPen * obj = static_cast< QPen * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -321,7 +321,7 @@ bool isSolid() const
 */
 HB_FUNC_STATIC( QPEN_ISSOLID )
 {
-  QPen * obj = ( QPen * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPen * obj = static_cast< QPen * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -345,7 +345,7 @@ Qt::PenJoinStyle joinStyle() const
 */
 HB_FUNC_STATIC( QPEN_JOINSTYLE )
 {
-  QPen * obj = ( QPen * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPen * obj = static_cast< QPen * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -369,7 +369,7 @@ qreal miterLimit() const
 */
 HB_FUNC_STATIC( QPEN_MITERLIMIT )
 {
-  QPen * obj = ( QPen * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPen * obj = static_cast< QPen * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -393,7 +393,7 @@ void setBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QPEN_SETBRUSH )
 {
-  QPen * obj = ( QPen * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPen * obj = static_cast< QPen * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -419,7 +419,7 @@ void setCapStyle( Qt::PenCapStyle style )
 */
 HB_FUNC_STATIC( QPEN_SETCAPSTYLE )
 {
-  QPen * obj = ( QPen * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPen * obj = static_cast< QPen * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -445,7 +445,7 @@ void setColor( const QColor & color )
 */
 HB_FUNC_STATIC( QPEN_SETCOLOR )
 {
-  QPen * obj = ( QPen * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPen * obj = static_cast< QPen * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QPEN_SETCOLOR )
     if( ISNUMPAR( 1 ) && ( ISQCOLOR( 1 ) || ISCHAR( 1 ) ) )
     {
 #endif
-      obj->setColor( ISOBJECT( 1 )? *( QColor * ) Qt4xHb::itemGetPtr( 1 ) : QColor( hb_parc( 1 ) ) );
+      obj->setColor( ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -471,7 +471,7 @@ void setCosmetic( bool cosmetic )
 */
 HB_FUNC_STATIC( QPEN_SETCOSMETIC )
 {
-  QPen * obj = ( QPen * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPen * obj = static_cast< QPen * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -497,7 +497,7 @@ void setDashOffset( qreal offset )
 */
 HB_FUNC_STATIC( QPEN_SETDASHOFFSET )
 {
-  QPen * obj = ( QPen * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPen * obj = static_cast< QPen * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -523,7 +523,7 @@ void setDashPattern( const QVector<qreal> & pattern )
 */
 HB_FUNC_STATIC( QPEN_SETDASHPATTERN )
 {
-  QPen * obj = ( QPen * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPen * obj = static_cast< QPen * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -558,7 +558,7 @@ void setJoinStyle( Qt::PenJoinStyle style )
 */
 HB_FUNC_STATIC( QPEN_SETJOINSTYLE )
 {
-  QPen * obj = ( QPen * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPen * obj = static_cast< QPen * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -584,7 +584,7 @@ void setMiterLimit( qreal limit )
 */
 HB_FUNC_STATIC( QPEN_SETMITERLIMIT )
 {
-  QPen * obj = ( QPen * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPen * obj = static_cast< QPen * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -610,7 +610,7 @@ void setStyle( Qt::PenStyle style )
 */
 HB_FUNC_STATIC( QPEN_SETSTYLE )
 {
-  QPen * obj = ( QPen * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPen * obj = static_cast< QPen * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -636,7 +636,7 @@ void setWidth( int width )
 */
 HB_FUNC_STATIC( QPEN_SETWIDTH )
 {
-  QPen * obj = ( QPen * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPen * obj = static_cast< QPen * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -662,7 +662,7 @@ void setWidthF( qreal width )
 */
 HB_FUNC_STATIC( QPEN_SETWIDTHF )
 {
-  QPen * obj = ( QPen * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPen * obj = static_cast< QPen * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -688,7 +688,7 @@ Qt::PenStyle style() const
 */
 HB_FUNC_STATIC( QPEN_STYLE )
 {
-  QPen * obj = ( QPen * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPen * obj = static_cast< QPen * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -712,7 +712,7 @@ int width() const
 */
 HB_FUNC_STATIC( QPEN_WIDTH )
 {
-  QPen * obj = ( QPen * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPen * obj = static_cast< QPen * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -736,7 +736,7 @@ qreal widthF() const
 */
 HB_FUNC_STATIC( QPEN_WIDTHF )
 {
-  QPen * obj = ( QPen * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPen * obj = static_cast< QPen * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -761,7 +761,7 @@ HB_FUNC_STATIC( QPEN_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -770,7 +770,7 @@ HB_FUNC_STATIC( QPEN_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

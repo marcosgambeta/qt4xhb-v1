@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QICONDRAGEVENT_NEW )
 
 HB_FUNC_STATIC( QICONDRAGEVENT_DELETE )
 {
-  QIconDragEvent * obj = ( QIconDragEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QIconDragEvent * obj = static_cast< QIconDragEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

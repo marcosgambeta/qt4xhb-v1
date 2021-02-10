@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QVECTOR4D_NEW )
 
 HB_FUNC_STATIC( QVECTOR4D_DELETE )
 {
-  QVector4D * obj = ( QVector4D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector4D * obj = static_cast< QVector4D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -208,7 +208,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QVECTOR4D_ISNULL )
 {
-  QVector4D * obj = ( QVector4D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector4D * obj = static_cast< QVector4D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -232,7 +232,7 @@ qreal length() const
 */
 HB_FUNC_STATIC( QVECTOR4D_LENGTH )
 {
-  QVector4D * obj = ( QVector4D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector4D * obj = static_cast< QVector4D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -256,7 +256,7 @@ qreal lengthSquared() const
 */
 HB_FUNC_STATIC( QVECTOR4D_LENGTHSQUARED )
 {
-  QVector4D * obj = ( QVector4D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector4D * obj = static_cast< QVector4D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -280,7 +280,7 @@ void normalize()
 */
 HB_FUNC_STATIC( QVECTOR4D_NORMALIZE )
 {
-  QVector4D * obj = ( QVector4D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector4D * obj = static_cast< QVector4D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -306,7 +306,7 @@ QVector4D normalized() const
 */
 HB_FUNC_STATIC( QVECTOR4D_NORMALIZED )
 {
-  QVector4D * obj = ( QVector4D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector4D * obj = static_cast< QVector4D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -331,7 +331,7 @@ void setW( qreal w )
 */
 HB_FUNC_STATIC( QVECTOR4D_SETW )
 {
-  QVector4D * obj = ( QVector4D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector4D * obj = static_cast< QVector4D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -357,7 +357,7 @@ void setX( qreal x )
 */
 HB_FUNC_STATIC( QVECTOR4D_SETX )
 {
-  QVector4D * obj = ( QVector4D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector4D * obj = static_cast< QVector4D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -383,7 +383,7 @@ void setY( qreal y )
 */
 HB_FUNC_STATIC( QVECTOR4D_SETY )
 {
-  QVector4D * obj = ( QVector4D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector4D * obj = static_cast< QVector4D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -409,7 +409,7 @@ void setZ( qreal z )
 */
 HB_FUNC_STATIC( QVECTOR4D_SETZ )
 {
-  QVector4D * obj = ( QVector4D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector4D * obj = static_cast< QVector4D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -435,7 +435,7 @@ QPoint toPoint() const
 */
 HB_FUNC_STATIC( QVECTOR4D_TOPOINT )
 {
-  QVector4D * obj = ( QVector4D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector4D * obj = static_cast< QVector4D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -460,7 +460,7 @@ QPointF toPointF() const
 */
 HB_FUNC_STATIC( QVECTOR4D_TOPOINTF )
 {
-  QVector4D * obj = ( QVector4D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector4D * obj = static_cast< QVector4D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -485,7 +485,7 @@ QVector2D toVector2D() const
 */
 HB_FUNC_STATIC( QVECTOR4D_TOVECTOR2D )
 {
-  QVector4D * obj = ( QVector4D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector4D * obj = static_cast< QVector4D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -510,7 +510,7 @@ QVector2D toVector2DAffine() const
 */
 HB_FUNC_STATIC( QVECTOR4D_TOVECTOR2DAFFINE )
 {
-  QVector4D * obj = ( QVector4D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector4D * obj = static_cast< QVector4D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -535,7 +535,7 @@ QVector3D toVector3D() const
 */
 HB_FUNC_STATIC( QVECTOR4D_TOVECTOR3D )
 {
-  QVector4D * obj = ( QVector4D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector4D * obj = static_cast< QVector4D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -560,7 +560,7 @@ QVector3D toVector3DAffine() const
 */
 HB_FUNC_STATIC( QVECTOR4D_TOVECTOR3DAFFINE )
 {
-  QVector4D * obj = ( QVector4D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector4D * obj = static_cast< QVector4D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -585,7 +585,7 @@ qreal w() const
 */
 HB_FUNC_STATIC( QVECTOR4D_W )
 {
-  QVector4D * obj = ( QVector4D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector4D * obj = static_cast< QVector4D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -609,7 +609,7 @@ qreal x() const
 */
 HB_FUNC_STATIC( QVECTOR4D_X )
 {
-  QVector4D * obj = ( QVector4D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector4D * obj = static_cast< QVector4D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -633,7 +633,7 @@ qreal y() const
 */
 HB_FUNC_STATIC( QVECTOR4D_Y )
 {
-  QVector4D * obj = ( QVector4D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector4D * obj = static_cast< QVector4D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -657,7 +657,7 @@ qreal z() const
 */
 HB_FUNC_STATIC( QVECTOR4D_Z )
 {
-  QVector4D * obj = ( QVector4D * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVector4D * obj = static_cast< QVector4D * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -701,7 +701,7 @@ HB_FUNC_STATIC( QVECTOR4D_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -710,7 +710,7 @@ HB_FUNC_STATIC( QVECTOR4D_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

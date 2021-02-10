@@ -55,7 +55,7 @@ RETURN
 
 HB_FUNC_STATIC( QPRINTENGINE_DELETE )
 {
-  QPrintEngine * obj = ( QPrintEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrintEngine * obj = static_cast< QPrintEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -75,7 +75,7 @@ virtual bool abort() = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_ABORT )
 {
-  QPrintEngine * obj = ( QPrintEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrintEngine * obj = static_cast< QPrintEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -99,7 +99,7 @@ virtual int metric( QPaintDevice::PaintDeviceMetric id ) const = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_METRIC )
 {
-  QPrintEngine * obj = ( QPrintEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrintEngine * obj = static_cast< QPrintEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -123,7 +123,7 @@ virtual bool newPage() = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_NEWPAGE )
 {
-  QPrintEngine * obj = ( QPrintEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrintEngine * obj = static_cast< QPrintEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -147,7 +147,7 @@ virtual QPrinter::PrinterState printerState() const = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_PRINTERSTATE )
 {
-  QPrintEngine * obj = ( QPrintEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrintEngine * obj = static_cast< QPrintEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -171,7 +171,7 @@ virtual QVariant property( QPrintEngine::PrintEnginePropertyKey key ) const = 0
 */
 HB_FUNC_STATIC( QPRINTENGINE_PROPERTY )
 {
-  QPrintEngine * obj = ( QPrintEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrintEngine * obj = static_cast< QPrintEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -196,7 +196,7 @@ virtual void setProperty( QPrintEngine::PrintEnginePropertyKey key, const QVaria
 */
 HB_FUNC_STATIC( QPRINTENGINE_SETPROPERTY )
 {
-  QPrintEngine * obj = ( QPrintEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPrintEngine * obj = static_cast< QPrintEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QPRINTENGINE_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QPRINTENGINE_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

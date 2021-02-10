@@ -28,8 +28,8 @@ void QSystemTrayIconSlots::activated( QSystemTrayIcon::ActivationReason reason )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSYSTEMTRAYICON" );
-    PHB_ITEM preason = hb_itemPutNI( NULL, (int) reason );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSYSTEMTRAYICON" );
+    PHB_ITEM preason = hb_itemPutNI( NULL, ( int ) reason );
 
     hb_vmEvalBlockV( cb, 2, psender, preason );
 
@@ -46,7 +46,7 @@ void QSystemTrayIconSlots::messageClicked()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSYSTEMTRAYICON" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSYSTEMTRAYICON" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -56,7 +56,7 @@ void QSystemTrayIconSlots::messageClicked()
 
 void QSystemTrayIconSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSystemTrayIcon * obj = ( QSystemTrayIcon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = static_cast< QSystemTrayIcon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

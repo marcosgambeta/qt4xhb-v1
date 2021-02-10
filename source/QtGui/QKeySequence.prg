@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW )
 
 HB_FUNC_STATIC( QKEYSEQUENCE_DELETE )
 {
-  QKeySequence * obj = ( QKeySequence * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QKeySequence * obj = static_cast< QKeySequence * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -164,7 +164,7 @@ uint count() const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_COUNT )
 {
-  QKeySequence * obj = ( QKeySequence * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QKeySequence * obj = static_cast< QKeySequence * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -188,7 +188,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_ISEMPTY )
 {
-  QKeySequence * obj = ( QKeySequence * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QKeySequence * obj = static_cast< QKeySequence * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -212,7 +212,7 @@ QKeySequence::SequenceMatch matches( const QKeySequence & seq ) const
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_MATCHES )
 {
-  QKeySequence * obj = ( QKeySequence * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QKeySequence * obj = static_cast< QKeySequence * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -236,15 +236,15 @@ QString toString( QKeySequence::SequenceFormat format = QKeySequence::PortableTe
 */
 HB_FUNC_STATIC( QKEYSEQUENCE_TOSTRING )
 {
-  QKeySequence * obj = ( QKeySequence * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QKeySequence * obj = static_cast< QKeySequence * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
+    if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
-      RQSTRING( obj->toString( ISNIL( 1 )? ( QKeySequence::SequenceFormat ) QKeySequence::PortableText : ( QKeySequence::SequenceFormat ) hb_parni( 1 ) ) );
+      RQSTRING( obj->toString( ISNIL( 1 ) ? ( QKeySequence::SequenceFormat ) QKeySequence::PortableText : ( QKeySequence::SequenceFormat ) hb_parni( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,10 +261,10 @@ static QKeySequence fromString( const QString & str, QKeySequence::SequenceForma
 HB_FUNC_STATIC( QKEYSEQUENCE_FROMSTRING )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ISOPTNUM( 2 ) )
+  if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
   {
 #endif
-    QKeySequence * ptr = new QKeySequence( QKeySequence::fromString( PQSTRING( 1 ), ISNIL( 2 )? ( QKeySequence::SequenceFormat ) QKeySequence::PortableText : ( QKeySequence::SequenceFormat ) hb_parni( 2 ) ) );
+    QKeySequence * ptr = new QKeySequence( QKeySequence::fromString( PQSTRING( 1 ), ISNIL( 2 ) ? ( QKeySequence::SequenceFormat ) QKeySequence::PortableText : ( QKeySequence::SequenceFormat ) hb_parni( 2 ) ) );
     Qt4xHb::createReturnClass( ptr, "QKEYSEQUENCE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_KEYBINDINGS )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, ( QKeySequence * ) new QKeySequence( list[i] ) );
+        hb_itemPutPtr( pItem, static_cast< QKeySequence * >( new QKeySequence( list[i] ) ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

@@ -94,7 +94,7 @@ qreal angle() const
 */
 HB_FUNC_STATIC( QCONICALGRADIENT_ANGLE )
 {
-  QConicalGradient * obj = ( QConicalGradient * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QConicalGradient * obj = static_cast< QConicalGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -118,7 +118,7 @@ QPointF center() const
 */
 HB_FUNC_STATIC( QCONICALGRADIENT_CENTER )
 {
-  QConicalGradient * obj = ( QConicalGradient * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QConicalGradient * obj = static_cast< QConicalGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -143,7 +143,7 @@ void setAngle( qreal angle )
 */
 HB_FUNC_STATIC( QCONICALGRADIENT_SETANGLE )
 {
-  QConicalGradient * obj = ( QConicalGradient * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QConicalGradient * obj = static_cast< QConicalGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -169,7 +169,7 @@ void setCenter( const QPointF & center )
 */
 void QConicalGradient_setCenter1()
 {
-  QConicalGradient * obj = ( QConicalGradient * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QConicalGradient * obj = static_cast< QConicalGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -184,7 +184,7 @@ void setCenter( qreal x, qreal y )
 */
 void QConicalGradient_setCenter2()
 {
-  QConicalGradient * obj = ( QConicalGradient * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QConicalGradient * obj = static_cast< QConicalGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

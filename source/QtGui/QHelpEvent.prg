@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QHELPEVENT_NEW )
 
 HB_FUNC_STATIC( QHELPEVENT_DELETE )
 {
-  QHelpEvent * obj = ( QHelpEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEvent * obj = static_cast< QHelpEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -83,7 +83,7 @@ const QPoint & globalPos() const
 */
 HB_FUNC_STATIC( QHELPEVENT_GLOBALPOS )
 {
-  QHelpEvent * obj = ( QHelpEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEvent * obj = static_cast< QHelpEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -108,7 +108,7 @@ int globalX() const
 */
 HB_FUNC_STATIC( QHELPEVENT_GLOBALX )
 {
-  QHelpEvent * obj = ( QHelpEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEvent * obj = static_cast< QHelpEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -132,7 +132,7 @@ int globalY() const
 */
 HB_FUNC_STATIC( QHELPEVENT_GLOBALY )
 {
-  QHelpEvent * obj = ( QHelpEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEvent * obj = static_cast< QHelpEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -156,7 +156,7 @@ const QPoint & pos() const
 */
 HB_FUNC_STATIC( QHELPEVENT_POS )
 {
-  QHelpEvent * obj = ( QHelpEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEvent * obj = static_cast< QHelpEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -181,7 +181,7 @@ int x() const
 */
 HB_FUNC_STATIC( QHELPEVENT_X )
 {
-  QHelpEvent * obj = ( QHelpEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEvent * obj = static_cast< QHelpEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -205,7 +205,7 @@ int y() const
 */
 HB_FUNC_STATIC( QHELPEVENT_Y )
 {
-  QHelpEvent * obj = ( QHelpEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHelpEvent * obj = static_cast< QHelpEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

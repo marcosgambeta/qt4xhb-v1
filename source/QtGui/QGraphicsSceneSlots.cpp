@@ -28,7 +28,7 @@ void QGraphicsSceneSlots::changed( const QList<QRectF> & region )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSSCENE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSSCENE" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QRECTF" );
     PHB_ITEM pregion = hb_itemArrayNew( 0 );
     if( pDynSym )
@@ -41,7 +41,7 @@ void QGraphicsSceneSlots::changed( const QList<QRectF> & region )
         PHB_ITEM pTempObject = hb_itemNew( NULL );
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
         PHB_ITEM pTempItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pTempItem, ( QRectF * ) new QRectF( region [i] ) );
+        hb_itemPutPtr( pTempItem, static_cast< QRectF * >( new QRectF( region [i] ) ) );
         hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
         hb_arrayAddForward( pregion, pTempObject );
         hb_itemRelease( pTempObject );
@@ -68,7 +68,7 @@ void QGraphicsSceneSlots::sceneRectChanged( const QRectF & rect )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSSCENE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSSCENE" );
     PHB_ITEM prect = Qt4xHb::Signals_return_object( ( void * ) &rect, "QRECTF" );
 
     hb_vmEvalBlockV( cb, 2, psender, prect );
@@ -86,7 +86,7 @@ void QGraphicsSceneSlots::selectionChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSSCENE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSSCENE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -96,7 +96,7 @@ void QGraphicsSceneSlots::selectionChanged()
 
 void QGraphicsSceneSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsScene * obj = ( QGraphicsScene * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsScene * obj = static_cast< QGraphicsScene * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

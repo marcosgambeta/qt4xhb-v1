@@ -46,7 +46,7 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_DELETE )
 {
-  QGraphicsSceneContextMenuEvent * obj = ( QGraphicsSceneContextMenuEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneContextMenuEvent * obj = static_cast< QGraphicsSceneContextMenuEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -66,7 +66,7 @@ Qt::KeyboardModifiers modifiers() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_MODIFIERS )
 {
-  QGraphicsSceneContextMenuEvent * obj = ( QGraphicsSceneContextMenuEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneContextMenuEvent * obj = static_cast< QGraphicsSceneContextMenuEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -90,7 +90,7 @@ QPointF pos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_POS )
 {
-  QGraphicsSceneContextMenuEvent * obj = ( QGraphicsSceneContextMenuEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneContextMenuEvent * obj = static_cast< QGraphicsSceneContextMenuEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -115,7 +115,7 @@ QGraphicsSceneContextMenuEvent::Reason reason() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_REASON )
 {
-  QGraphicsSceneContextMenuEvent * obj = ( QGraphicsSceneContextMenuEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneContextMenuEvent * obj = static_cast< QGraphicsSceneContextMenuEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -139,7 +139,7 @@ QPointF scenePos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_SCENEPOS )
 {
-  QGraphicsSceneContextMenuEvent * obj = ( QGraphicsSceneContextMenuEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneContextMenuEvent * obj = static_cast< QGraphicsSceneContextMenuEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -164,7 +164,7 @@ QPoint screenPos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENECONTEXTMENUEVENT_SCREENPOS )
 {
-  QGraphicsSceneContextMenuEvent * obj = ( QGraphicsSceneContextMenuEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneContextMenuEvent * obj = static_cast< QGraphicsSceneContextMenuEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

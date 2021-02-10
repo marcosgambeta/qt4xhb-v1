@@ -28,8 +28,8 @@ void QGraphicsBlurEffectSlots::blurHintsChanged( QGraphicsBlurEffect::BlurHints 
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSBLUREFFECT" );
-    PHB_ITEM phints = hb_itemPutNI( NULL, (int) hints );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSBLUREFFECT" );
+    PHB_ITEM phints = hb_itemPutNI( NULL, ( int ) hints );
 
     hb_vmEvalBlockV( cb, 2, psender, phints );
 
@@ -46,7 +46,7 @@ void QGraphicsBlurEffectSlots::blurRadiusChanged( qreal radius )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSBLUREFFECT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSBLUREFFECT" );
     PHB_ITEM pradius = hb_itemPutND( NULL, radius );
 
     hb_vmEvalBlockV( cb, 2, psender, pradius );
@@ -58,7 +58,7 @@ void QGraphicsBlurEffectSlots::blurRadiusChanged( qreal radius )
 
 void QGraphicsBlurEffectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsBlurEffect * obj = ( QGraphicsBlurEffect * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsBlurEffect * obj = static_cast< QGraphicsBlurEffect * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

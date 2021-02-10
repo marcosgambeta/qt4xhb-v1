@@ -52,7 +52,7 @@ RETURN
 
 HB_FUNC_STATIC( QMIMESOURCE_DELETE )
 {
-  QMimeSource * obj = ( QMimeSource * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMimeSource * obj = static_cast< QMimeSource * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -72,7 +72,7 @@ virtual QByteArray encodedData( const char * format ) const = 0
 */
 HB_FUNC_STATIC( QMIMESOURCE_ENCODEDDATA )
 {
-  QMimeSource * obj = ( QMimeSource * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMimeSource * obj = static_cast< QMimeSource * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -97,12 +97,12 @@ virtual const char * format( int i = 0 ) const = 0
 */
 HB_FUNC_STATIC( QMIMESOURCE_FORMAT )
 {
-  QMimeSource * obj = ( QMimeSource * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMimeSource * obj = static_cast< QMimeSource * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
+    if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
       hb_retc( ( const char * ) obj->format( OPINT( 1, 0 ) ) );
@@ -121,7 +121,7 @@ virtual bool provides( const char * mimeType ) const
 */
 HB_FUNC_STATIC( QMIMESOURCE_PROVIDES )
 {
-  QMimeSource * obj = ( QMimeSource * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMimeSource * obj = static_cast< QMimeSource * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QMIMESOURCE_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QMIMESOURCE_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

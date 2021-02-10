@@ -28,7 +28,7 @@ void QAbstractItemViewSlots::activated( const QModelIndex & index )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTITEMVIEW" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTITEMVIEW" );
     PHB_ITEM pindex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -46,7 +46,7 @@ void QAbstractItemViewSlots::clicked( const QModelIndex & index )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTITEMVIEW" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTITEMVIEW" );
     PHB_ITEM pindex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -64,7 +64,7 @@ void QAbstractItemViewSlots::doubleClicked( const QModelIndex & index )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTITEMVIEW" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTITEMVIEW" );
     PHB_ITEM pindex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -82,7 +82,7 @@ void QAbstractItemViewSlots::entered( const QModelIndex & index )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTITEMVIEW" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTITEMVIEW" );
     PHB_ITEM pindex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -100,7 +100,7 @@ void QAbstractItemViewSlots::pressed( const QModelIndex & index )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTITEMVIEW" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTITEMVIEW" );
     PHB_ITEM pindex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -118,7 +118,7 @@ void QAbstractItemViewSlots::viewportEntered()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTITEMVIEW" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTITEMVIEW" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -128,7 +128,7 @@ void QAbstractItemViewSlots::viewportEntered()
 
 void QAbstractItemViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractItemView * obj = ( QAbstractItemView * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractItemView * obj = static_cast< QAbstractItemView * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

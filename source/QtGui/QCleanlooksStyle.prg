@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_NEW )
 
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_DELETE )
 {
-  QCleanlooksStyle * obj = ( QCleanlooksStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCleanlooksStyle * obj = static_cast< QCleanlooksStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -101,7 +101,7 @@ virtual void drawComplexControl( QStyle::ComplexControl control, const QStyleOpt
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_DRAWCOMPLEXCONTROL )
 {
-  QCleanlooksStyle * obj = ( QCleanlooksStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCleanlooksStyle * obj = static_cast< QCleanlooksStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -127,7 +127,7 @@ virtual void drawControl( QStyle::ControlElement element, const QStyleOption * o
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_DRAWCONTROL )
 {
-  QCleanlooksStyle * obj = ( QCleanlooksStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCleanlooksStyle * obj = static_cast< QCleanlooksStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -153,7 +153,7 @@ virtual void drawItemPixmap( QPainter * painter, const QRect & rect, int alignme
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_DRAWITEMPIXMAP )
 {
-  QCleanlooksStyle * obj = ( QCleanlooksStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCleanlooksStyle * obj = static_cast< QCleanlooksStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -179,15 +179,15 @@ virtual void drawItemText( QPainter * painter, const QRect & rectangle, int alig
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_DRAWITEMTEXT )
 {
-  QCleanlooksStyle * obj = ( QCleanlooksStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCleanlooksStyle * obj = static_cast< QCleanlooksStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 6, 7 ) && ISQPAINTER( 1 ) && ISQRECT( 2 ) && ISNUM( 3 ) && ISQPALETTE( 4 ) && ISLOG( 5 ) && ISCHAR( 6 ) && ISOPTNUM( 7 ) )
+    if( ISBETWEEN( 6, 7 ) && ISQPAINTER( 1 ) && ISQRECT( 2 ) && ISNUM( 3 ) && ISQPALETTE( 4 ) && ISLOG( 5 ) && ISCHAR( 6 ) && ( ISNUM( 7 ) || ISNIL( 7 ) ) )
     {
 #endif
-      obj->drawItemText( PQPAINTER( 1 ), *PQRECT( 2 ), PINT( 3 ), *PQPALETTE( 4 ), PBOOL( 5 ), PQSTRING( 6 ), ISNIL( 7 )? ( QPalette::ColorRole ) QPalette::NoRole : ( QPalette::ColorRole ) hb_parni( 7 ) );
+      obj->drawItemText( PQPAINTER( 1 ), *PQRECT( 2 ), PINT( 3 ), *PQPALETTE( 4 ), PBOOL( 5 ), PQSTRING( 6 ), ISNIL( 7 ) ? ( QPalette::ColorRole ) QPalette::NoRole : ( QPalette::ColorRole ) hb_parni( 7 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,7 +205,7 @@ virtual void drawPrimitive( QStyle::PrimitiveElement elem, const QStyleOption * 
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_DRAWPRIMITIVE )
 {
-  QCleanlooksStyle * obj = ( QCleanlooksStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCleanlooksStyle * obj = static_cast< QCleanlooksStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -231,7 +231,7 @@ virtual QPixmap generatedIconPixmap( QIcon::Mode iconMode, const QPixmap & pixma
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_GENERATEDICONPIXMAP )
 {
-  QCleanlooksStyle * obj = ( QCleanlooksStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCleanlooksStyle * obj = static_cast< QCleanlooksStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -256,7 +256,7 @@ virtual QStyle::SubControl hitTestComplexControl( QStyle::ComplexControl cc, con
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_HITTESTCOMPLEXCONTROL )
 {
-  QCleanlooksStyle * obj = ( QCleanlooksStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCleanlooksStyle * obj = static_cast< QCleanlooksStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -280,7 +280,7 @@ virtual QRect itemPixmapRect( const QRect & r, int flags, const QPixmap & pixmap
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_ITEMPIXMAPRECT )
 {
-  QCleanlooksStyle * obj = ( QCleanlooksStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCleanlooksStyle * obj = static_cast< QCleanlooksStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -305,7 +305,7 @@ virtual int pixelMetric( QStyle::PixelMetric metric, const QStyleOption * option
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_PIXELMETRIC )
 {
-  QCleanlooksStyle * obj = ( QCleanlooksStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCleanlooksStyle * obj = static_cast< QCleanlooksStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_PIXELMETRIC )
     if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ( ISQSTYLEOPTION( 2 ) || ISNIL( 2 ) ) && ( ISQWIDGET( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
-      RINT( obj->pixelMetric( ( QStyle::PixelMetric ) hb_parni( 1 ), ISNIL( 2 )? 0 : ( QStyleOption * ) Qt4xHb::itemGetPtr( 2 ), OPQWIDGET( 3, 0 ) ) );
+      RINT( obj->pixelMetric( ( QStyle::PixelMetric ) hb_parni( 1 ), ISNIL( 2 ) ? 0 : static_cast< QStyleOption * >( Qt4xHb::itemGetPtr( 2 ) ), OPQWIDGET( 3, 0 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -329,7 +329,7 @@ virtual void polish( QWidget * widget )
 */
 void QCleanlooksStyle_polish1()
 {
-  QCleanlooksStyle * obj = ( QCleanlooksStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCleanlooksStyle * obj = static_cast< QCleanlooksStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -344,7 +344,7 @@ virtual void polish( QApplication * app )
 */
 void QCleanlooksStyle_polish2()
 {
-  QCleanlooksStyle * obj = ( QCleanlooksStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCleanlooksStyle * obj = static_cast< QCleanlooksStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -359,7 +359,7 @@ virtual void polish( QPalette & pal )
 */
 void QCleanlooksStyle_polish3()
 {
-  QCleanlooksStyle * obj = ( QCleanlooksStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCleanlooksStyle * obj = static_cast< QCleanlooksStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -394,7 +394,7 @@ virtual QSize sizeFromContents( QStyle::ContentsType type, const QStyleOption * 
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_SIZEFROMCONTENTS )
 {
-  QCleanlooksStyle * obj = ( QCleanlooksStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCleanlooksStyle * obj = static_cast< QCleanlooksStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -419,7 +419,7 @@ virtual QPalette standardPalette() const
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_STANDARDPALETTE )
 {
-  QCleanlooksStyle * obj = ( QCleanlooksStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCleanlooksStyle * obj = static_cast< QCleanlooksStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -444,7 +444,7 @@ virtual QPixmap standardPixmap( QStyle::StandardPixmap standardPixmap, const QSt
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_STANDARDPIXMAP )
 {
-  QCleanlooksStyle * obj = ( QCleanlooksStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCleanlooksStyle * obj = static_cast< QCleanlooksStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -469,7 +469,7 @@ virtual int styleHint( QStyle::StyleHint hint, const QStyleOption * option = 0, 
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_STYLEHINT )
 {
-  QCleanlooksStyle * obj = ( QCleanlooksStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCleanlooksStyle * obj = static_cast< QCleanlooksStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -477,7 +477,7 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_STYLEHINT )
     if( ISBETWEEN( 1, 4 ) && ISNUM( 1 ) && ( ISQSTYLEOPTION( 2 ) || ISNIL( 2 ) ) && ( ISQWIDGET( 3 ) || ISNIL( 3 ) ) && ( ISQSTYLEHINTRETURN( 4 ) || ISNIL( 4 ) ) )
     {
 #endif
-      RINT( obj->styleHint( ( QStyle::StyleHint ) hb_parni( 1 ), ISNIL( 2 )? 0 : ( QStyleOption * ) Qt4xHb::itemGetPtr( 2 ), OPQWIDGET( 3, 0 ), ISNIL( 4 )? 0 : ( QStyleHintReturn * ) Qt4xHb::itemGetPtr( 4 ) ) );
+      RINT( obj->styleHint( ( QStyle::StyleHint ) hb_parni( 1 ), ISNIL( 2 ) ? 0 : static_cast< QStyleOption * >( Qt4xHb::itemGetPtr( 2 ) ), OPQWIDGET( 3, 0 ), ISNIL( 4 ) ? 0 : static_cast< QStyleHintReturn * >( Qt4xHb::itemGetPtr( 4 ) ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -493,7 +493,7 @@ virtual QRect subControlRect( QStyle::ComplexControl control, const QStyleOption
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_SUBCONTROLRECT )
 {
-  QCleanlooksStyle * obj = ( QCleanlooksStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCleanlooksStyle * obj = static_cast< QCleanlooksStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -518,7 +518,7 @@ virtual QRect subElementRect( QStyle::SubElement sr, const QStyleOption * opt, c
 */
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_SUBELEMENTRECT )
 {
-  QCleanlooksStyle * obj = ( QCleanlooksStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCleanlooksStyle * obj = static_cast< QCleanlooksStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -543,7 +543,7 @@ virtual void unpolish( QWidget * widget )
 */
 void QCleanlooksStyle_unpolish1()
 {
-  QCleanlooksStyle * obj = ( QCleanlooksStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCleanlooksStyle * obj = static_cast< QCleanlooksStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -558,7 +558,7 @@ virtual void unpolish( QApplication * app )
 */
 void QCleanlooksStyle_unpolish2()
 {
-  QCleanlooksStyle * obj = ( QCleanlooksStyle * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCleanlooksStyle * obj = static_cast< QCleanlooksStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

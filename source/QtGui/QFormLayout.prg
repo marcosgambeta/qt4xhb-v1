@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_NEW )
 
 HB_FUNC_STATIC( QFORMLAYOUT_DELETE )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -115,7 +115,7 @@ void addRow( QWidget * label, QWidget * field )
 */
 void QFormLayout_addRow1()
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -130,7 +130,7 @@ void addRow( QWidget * label, QLayout * field )
 */
 void QFormLayout_addRow2()
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -145,7 +145,7 @@ void addRow( const QString & labelText, QWidget * field )
 */
 void QFormLayout_addRow3()
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -160,7 +160,7 @@ void addRow( const QString & labelText, QLayout * field )
 */
 void QFormLayout_addRow4()
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -175,7 +175,7 @@ void addRow( QWidget * widget )
 */
 void QFormLayout_addRow5()
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -190,7 +190,7 @@ void addRow( QLayout * layout )
 */
 void QFormLayout_addRow6()
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -237,7 +237,7 @@ QFormLayout::FieldGrowthPolicy fieldGrowthPolicy() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_FIELDGROWTHPOLICY )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -261,7 +261,7 @@ Qt::Alignment formAlignment() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_FORMALIGNMENT )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -285,7 +285,7 @@ int horizontalSpacing() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_HORIZONTALSPACING )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -309,7 +309,7 @@ void insertRow( int row, QWidget * label, QWidget * field )
 */
 void QFormLayout_insertRow1()
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -324,7 +324,7 @@ void insertRow( int row, QWidget * label, QLayout * field )
 */
 void QFormLayout_insertRow2()
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -339,7 +339,7 @@ void insertRow( int row, const QString & labelText, QWidget * field )
 */
 void QFormLayout_insertRow3()
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -354,7 +354,7 @@ void insertRow( int row, const QString & labelText, QLayout * field )
 */
 void QFormLayout_insertRow4()
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -369,7 +369,7 @@ void insertRow( int row, QWidget * widget )
 */
 void QFormLayout_insertRow5()
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -384,7 +384,7 @@ void insertRow( int row, QLayout * layout )
 */
 void QFormLayout_insertRow6()
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -431,7 +431,7 @@ Qt::Alignment labelAlignment() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_LABELALIGNMENT )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -455,7 +455,7 @@ QWidget * labelForField( QWidget * field ) const
 */
 void QFormLayout_labelForField1()
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -469,7 +469,7 @@ QWidget * labelForField( QLayout * field ) const
 */
 void QFormLayout_labelForField2()
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -499,7 +499,7 @@ int rowCount() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_ROWCOUNT )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -523,7 +523,7 @@ QFormLayout::RowWrapPolicy rowWrapPolicy() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_ROWWRAPPOLICY )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -547,7 +547,7 @@ void setFieldGrowthPolicy( QFormLayout::FieldGrowthPolicy policy )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETFIELDGROWTHPOLICY )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -573,7 +573,7 @@ void setFormAlignment( Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETFORMALIGNMENT )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -599,7 +599,7 @@ void setHorizontalSpacing( int spacing )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETHORIZONTALSPACING )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -625,7 +625,7 @@ void setItem( int row, QFormLayout::ItemRole role, QLayoutItem * item )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETITEM )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -651,7 +651,7 @@ void setLabelAlignment( Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETLABELALIGNMENT )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -677,7 +677,7 @@ void setLayout( int row, QFormLayout::ItemRole role, QLayout * layout )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETLAYOUT )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -703,7 +703,7 @@ void setRowWrapPolicy( QFormLayout::RowWrapPolicy policy )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETROWWRAPPOLICY )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -729,7 +729,7 @@ void setSpacing( int spacing )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETSPACING )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -755,7 +755,7 @@ void setVerticalSpacing( int spacing )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETVERTICALSPACING )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -781,7 +781,7 @@ void setWidget( int row, QFormLayout::ItemRole role, QWidget * widget )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETWIDGET )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -807,7 +807,7 @@ int spacing() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SPACING )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -831,7 +831,7 @@ int verticalSpacing() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_VERTICALSPACING )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -855,7 +855,7 @@ virtual void addItem( QLayoutItem * item )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_ADDITEM )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -881,7 +881,7 @@ virtual int count() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_COUNT )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -905,7 +905,7 @@ virtual Qt::Orientations expandingDirections() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_EXPANDINGDIRECTIONS )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -929,7 +929,7 @@ virtual bool hasHeightForWidth() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_HASHEIGHTFORWIDTH )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -953,7 +953,7 @@ virtual int heightForWidth( int width ) const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_HEIGHTFORWIDTH )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -977,7 +977,7 @@ virtual void invalidate()
 */
 HB_FUNC_STATIC( QFORMLAYOUT_INVALIDATE )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1003,7 +1003,7 @@ QLayoutItem * itemAt( int row, QFormLayout::ItemRole role ) const
 */
 void QFormLayout_itemAt1()
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1017,7 +1017,7 @@ virtual QLayoutItem * itemAt( int index ) const
 */
 void QFormLayout_itemAt2()
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1047,7 +1047,7 @@ virtual QSize minimumSize() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_MINIMUMSIZE )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1072,7 +1072,7 @@ virtual void setGeometry( const QRect & rect )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SETGEOMETRY )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1098,7 +1098,7 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QFORMLAYOUT_SIZEHINT )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1123,7 +1123,7 @@ virtual QLayoutItem * takeAt( int index )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_TAKEAT )
 {
-  QFormLayout * obj = ( QFormLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormLayout * obj = static_cast< QFormLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

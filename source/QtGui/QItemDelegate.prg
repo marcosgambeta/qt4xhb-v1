@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_NEW )
 
 HB_FUNC_STATIC( QITEMDELEGATE_DELETE )
 {
-  QItemDelegate * obj = ( QItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemDelegate * obj = static_cast< QItemDelegate * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -85,7 +85,7 @@ bool hasClipping() const
 */
 HB_FUNC_STATIC( QITEMDELEGATE_HASCLIPPING )
 {
-  QItemDelegate * obj = ( QItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemDelegate * obj = static_cast< QItemDelegate * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -109,7 +109,7 @@ QItemEditorFactory * itemEditorFactory() const
 */
 HB_FUNC_STATIC( QITEMDELEGATE_ITEMEDITORFACTORY )
 {
-  QItemDelegate * obj = ( QItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemDelegate * obj = static_cast< QItemDelegate * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -134,7 +134,7 @@ void setClipping( bool clip )
 */
 HB_FUNC_STATIC( QITEMDELEGATE_SETCLIPPING )
 {
-  QItemDelegate * obj = ( QItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemDelegate * obj = static_cast< QItemDelegate * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -160,7 +160,7 @@ void setItemEditorFactory( QItemEditorFactory * factory )
 */
 HB_FUNC_STATIC( QITEMDELEGATE_SETITEMEDITORFACTORY )
 {
-  QItemDelegate * obj = ( QItemDelegate * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemDelegate * obj = static_cast< QItemDelegate * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

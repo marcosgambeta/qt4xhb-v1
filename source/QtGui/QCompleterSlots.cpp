@@ -28,7 +28,7 @@ void QCompleterSlots::activated( const QString & text )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCOMPLETER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QCOMPLETER" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING( text ) );
 
     hb_vmEvalBlockV( cb, 2, psender, ptext );
@@ -46,7 +46,7 @@ void QCompleterSlots::activated( const QModelIndex & index )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCOMPLETER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QCOMPLETER" );
     PHB_ITEM pindex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -64,7 +64,7 @@ void QCompleterSlots::highlighted( const QString & text )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCOMPLETER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QCOMPLETER" );
     PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING( text ) );
 
     hb_vmEvalBlockV( cb, 2, psender, ptext );
@@ -82,7 +82,7 @@ void QCompleterSlots::highlighted( const QModelIndex & index )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCOMPLETER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QCOMPLETER" );
     PHB_ITEM pindex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -94,7 +94,7 @@ void QCompleterSlots::highlighted( const QModelIndex & index )
 
 void QCompleterSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCompleter * obj = ( QCompleter * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCompleter * obj = static_cast< QCompleter * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

@@ -58,7 +58,7 @@ RETURN
 
 HB_FUNC_STATIC( QDECORATION_DELETE )
 {
-  QDecoration * obj = ( QDecoration * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDecoration * obj = static_cast< QDecoration * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -78,7 +78,7 @@ virtual void buildSysMenu( QWidget * widget, QMenu * menu )
 */
 HB_FUNC_STATIC( QDECORATION_BUILDSYSMENU )
 {
-  QDecoration * obj = ( QDecoration * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDecoration * obj = static_cast< QDecoration * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -104,7 +104,7 @@ void menuTriggered( QWidget * widget, QAction * action )
 */
 HB_FUNC_STATIC( QDECORATION_MENUTRIGGERED )
 {
-  QDecoration * obj = ( QDecoration * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDecoration * obj = static_cast< QDecoration * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -130,15 +130,15 @@ virtual bool paint( QPainter * painter, const QWidget * widget, int decorationRe
 */
 HB_FUNC_STATIC( QDECORATION_PAINT )
 {
-  QDecoration * obj = ( QDecoration * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDecoration * obj = static_cast< QDecoration * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 4 ) && ISQPAINTER( 1 ) && ISQWIDGET( 2 ) && ISOPTNUM( 3 ) && ISOPTNUM( 4 ) )
+    if( ISBETWEEN( 2, 4 ) && ISQPAINTER( 1 ) && ISQWIDGET( 2 ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
     {
 #endif
-      RBOOL( obj->paint( PQPAINTER( 1 ), PQWIDGET( 2 ), OPINT( 3, QDecoration::All ), ISNIL( 4 )? ( QDecoration::DecorationState ) QDecoration::Normal : ( QDecoration::DecorationState ) hb_parni( 4 ) ) );
+      RBOOL( obj->paint( PQPAINTER( 1 ), PQWIDGET( 2 ), OPINT( 3, QDecoration::All ), ISNIL( 4 ) ? ( QDecoration::DecorationState ) QDecoration::Normal : ( QDecoration::DecorationState ) hb_parni( 4 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,7 +154,7 @@ virtual QRegion region( const QWidget * widget, const QRect & rectangle, int dec
 */
 void QDecoration_region1()
 {
-  QDecoration * obj = ( QDecoration * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDecoration * obj = static_cast< QDecoration * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -168,7 +168,7 @@ QRegion region( const QWidget * widget, int decorationRegion = QDecoration::All 
 */
 void QDecoration_region2()
 {
-  QDecoration * obj = ( QDecoration * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDecoration * obj = static_cast< QDecoration * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -198,7 +198,7 @@ virtual int regionAt( const QWidget * widget, const QPoint & point )
 */
 HB_FUNC_STATIC( QDECORATION_REGIONAT )
 {
-  QDecoration * obj = ( QDecoration * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDecoration * obj = static_cast< QDecoration * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -222,7 +222,7 @@ virtual void regionClicked( QWidget * widget, int region )
 */
 HB_FUNC_STATIC( QDECORATION_REGIONCLICKED )
 {
-  QDecoration * obj = ( QDecoration * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDecoration * obj = static_cast< QDecoration * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -248,7 +248,7 @@ virtual void regionDoubleClicked( QWidget * widget, int region )
 */
 HB_FUNC_STATIC( QDECORATION_REGIONDOUBLECLICKED )
 {
-  QDecoration * obj = ( QDecoration * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDecoration * obj = static_cast< QDecoration * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QDECORATION_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QDECORATION_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

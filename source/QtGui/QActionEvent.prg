@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QACTIONEVENT_NEW )
 
 HB_FUNC_STATIC( QACTIONEVENT_DELETE )
 {
-  QActionEvent * obj = ( QActionEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QActionEvent * obj = static_cast< QActionEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -81,7 +81,7 @@ QAction * action() const
 */
 HB_FUNC_STATIC( QACTIONEVENT_ACTION )
 {
-  QActionEvent * obj = ( QActionEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QActionEvent * obj = static_cast< QActionEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -106,7 +106,7 @@ QAction * before() const
 */
 HB_FUNC_STATIC( QACTIONEVENT_BEFORE )
 {
-  QActionEvent * obj = ( QActionEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QActionEvent * obj = static_cast< QActionEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

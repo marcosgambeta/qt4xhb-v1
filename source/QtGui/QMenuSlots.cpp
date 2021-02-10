@@ -28,7 +28,7 @@ void QMenuSlots::aboutToHide()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QMENU" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QMENU" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QMenuSlots::aboutToShow()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QMENU" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QMENU" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -60,8 +60,8 @@ void QMenuSlots::hovered( QAction * action )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QMENU" );
-    PHB_ITEM paction = Qt4xHb::Signals_return_qobject( ( QObject * ) action, "QACTION" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QMENU" );
+    PHB_ITEM paction = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( action ), "QACTION" );
 
     hb_vmEvalBlockV( cb, 2, psender, paction );
 
@@ -78,8 +78,8 @@ void QMenuSlots::triggered( QAction * action )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QMENU" );
-    PHB_ITEM paction = Qt4xHb::Signals_return_qobject( ( QObject * ) action, "QACTION" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QMENU" );
+    PHB_ITEM paction = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( action ), "QACTION" );
 
     hb_vmEvalBlockV( cb, 2, psender, paction );
 
@@ -90,7 +90,7 @@ void QMenuSlots::triggered( QAction * action )
 
 void QMenuSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMenu * obj = ( QMenu * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

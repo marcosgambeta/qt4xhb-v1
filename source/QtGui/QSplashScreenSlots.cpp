@@ -28,7 +28,7 @@ void QSplashScreenSlots::messageChanged( const QString & message )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSPLASHSCREEN" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSPLASHSCREEN" );
     PHB_ITEM pmessage = hb_itemPutC( NULL, QSTRINGTOSTRING( message ) );
 
     hb_vmEvalBlockV( cb, 2, psender, pmessage );
@@ -40,7 +40,7 @@ void QSplashScreenSlots::messageChanged( const QString & message )
 
 void QSplashScreenSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSplashScreen * obj = ( QSplashScreen * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSplashScreen * obj = static_cast< QSplashScreen * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

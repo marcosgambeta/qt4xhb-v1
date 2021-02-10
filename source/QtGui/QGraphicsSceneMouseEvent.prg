@@ -53,7 +53,7 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_DELETE )
 {
-  QGraphicsSceneMouseEvent * obj = ( QGraphicsSceneMouseEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneMouseEvent * obj = static_cast< QGraphicsSceneMouseEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -73,7 +73,7 @@ Qt::MouseButton button() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTON )
 {
-  QGraphicsSceneMouseEvent * obj = ( QGraphicsSceneMouseEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneMouseEvent * obj = static_cast< QGraphicsSceneMouseEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -97,7 +97,7 @@ QPointF buttonDownPos( Qt::MouseButton button ) const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNPOS )
 {
-  QGraphicsSceneMouseEvent * obj = ( QGraphicsSceneMouseEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneMouseEvent * obj = static_cast< QGraphicsSceneMouseEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -122,7 +122,7 @@ QPointF buttonDownScenePos( Qt::MouseButton button ) const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCENEPOS )
 {
-  QGraphicsSceneMouseEvent * obj = ( QGraphicsSceneMouseEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneMouseEvent * obj = static_cast< QGraphicsSceneMouseEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -147,7 +147,7 @@ QPoint buttonDownScreenPos( Qt::MouseButton button ) const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCREENPOS )
 {
-  QGraphicsSceneMouseEvent * obj = ( QGraphicsSceneMouseEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneMouseEvent * obj = static_cast< QGraphicsSceneMouseEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -172,7 +172,7 @@ Qt::MouseButtons buttons() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONS )
 {
-  QGraphicsSceneMouseEvent * obj = ( QGraphicsSceneMouseEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneMouseEvent * obj = static_cast< QGraphicsSceneMouseEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -196,7 +196,7 @@ QPointF lastPos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_LASTPOS )
 {
-  QGraphicsSceneMouseEvent * obj = ( QGraphicsSceneMouseEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneMouseEvent * obj = static_cast< QGraphicsSceneMouseEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -221,7 +221,7 @@ QPointF lastScenePos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_LASTSCENEPOS )
 {
-  QGraphicsSceneMouseEvent * obj = ( QGraphicsSceneMouseEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneMouseEvent * obj = static_cast< QGraphicsSceneMouseEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -246,7 +246,7 @@ QPoint lastScreenPos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_LASTSCREENPOS )
 {
-  QGraphicsSceneMouseEvent * obj = ( QGraphicsSceneMouseEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneMouseEvent * obj = static_cast< QGraphicsSceneMouseEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -271,7 +271,7 @@ Qt::KeyboardModifiers modifiers() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_MODIFIERS )
 {
-  QGraphicsSceneMouseEvent * obj = ( QGraphicsSceneMouseEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneMouseEvent * obj = static_cast< QGraphicsSceneMouseEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -295,7 +295,7 @@ QPointF pos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_POS )
 {
-  QGraphicsSceneMouseEvent * obj = ( QGraphicsSceneMouseEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneMouseEvent * obj = static_cast< QGraphicsSceneMouseEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -320,7 +320,7 @@ QPointF scenePos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_SCENEPOS )
 {
-  QGraphicsSceneMouseEvent * obj = ( QGraphicsSceneMouseEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneMouseEvent * obj = static_cast< QGraphicsSceneMouseEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -345,7 +345,7 @@ QPoint screenPos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_SCREENPOS )
 {
-  QGraphicsSceneMouseEvent * obj = ( QGraphicsSceneMouseEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneMouseEvent * obj = static_cast< QGraphicsSceneMouseEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

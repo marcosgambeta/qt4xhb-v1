@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QSCROLLAREA_NEW )
 
 HB_FUNC_STATIC( QSCROLLAREA_DELETE )
 {
-  QScrollArea * obj = ( QScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollArea * obj = static_cast< QScrollArea * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -93,7 +93,7 @@ Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QSCROLLAREA_ALIGNMENT )
 {
-  QScrollArea * obj = ( QScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollArea * obj = static_cast< QScrollArea * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -117,12 +117,12 @@ void ensureVisible( int x, int y, int xmargin = 50, int ymargin = 50 )
 */
 HB_FUNC_STATIC( QSCROLLAREA_ENSUREVISIBLE )
 {
-  QScrollArea * obj = ( QScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollArea * obj = static_cast< QScrollArea * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISOPTNUM( 3 ) && ISOPTNUM( 4 ) )
+    if( ISBETWEEN( 2, 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
     {
 #endif
       obj->ensureVisible( PINT( 1 ), PINT( 2 ), OPINT( 3, 50 ), OPINT( 4, 50 ) );
@@ -143,12 +143,12 @@ void ensureWidgetVisible( QWidget * childWidget, int xmargin = 50, int ymargin =
 */
 HB_FUNC_STATIC( QSCROLLAREA_ENSUREWIDGETVISIBLE )
 {
-  QScrollArea * obj = ( QScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollArea * obj = static_cast< QScrollArea * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISQWIDGET( 1 ) && ISOPTNUM( 2 ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISQWIDGET( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
       obj->ensureWidgetVisible( PQWIDGET( 1 ), OPINT( 2, 50 ), OPINT( 3, 50 ) );
@@ -169,7 +169,7 @@ void setAlignment( Qt::Alignment )
 */
 HB_FUNC_STATIC( QSCROLLAREA_SETALIGNMENT )
 {
-  QScrollArea * obj = ( QScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollArea * obj = static_cast< QScrollArea * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -195,7 +195,7 @@ void setWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QSCROLLAREA_SETWIDGET )
 {
-  QScrollArea * obj = ( QScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollArea * obj = static_cast< QScrollArea * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -221,7 +221,7 @@ void setWidgetResizable( bool resizable )
 */
 HB_FUNC_STATIC( QSCROLLAREA_SETWIDGETRESIZABLE )
 {
-  QScrollArea * obj = ( QScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollArea * obj = static_cast< QScrollArea * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -247,7 +247,7 @@ QWidget * takeWidget()
 */
 HB_FUNC_STATIC( QSCROLLAREA_TAKEWIDGET )
 {
-  QScrollArea * obj = ( QScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollArea * obj = static_cast< QScrollArea * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -272,7 +272,7 @@ QWidget * widget() const
 */
 HB_FUNC_STATIC( QSCROLLAREA_WIDGET )
 {
-  QScrollArea * obj = ( QScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollArea * obj = static_cast< QScrollArea * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -297,7 +297,7 @@ bool widgetResizable() const
 */
 HB_FUNC_STATIC( QSCROLLAREA_WIDGETRESIZABLE )
 {
-  QScrollArea * obj = ( QScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollArea * obj = static_cast< QScrollArea * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -321,7 +321,7 @@ virtual bool focusNextPrevChild( bool next )
 */
 HB_FUNC_STATIC( QSCROLLAREA_FOCUSNEXTPREVCHILD )
 {
-  QScrollArea * obj = ( QScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollArea * obj = static_cast< QScrollArea * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -345,7 +345,7 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSCROLLAREA_SIZEHINT )
 {
-  QScrollArea * obj = ( QScrollArea * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScrollArea * obj = static_cast< QScrollArea * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

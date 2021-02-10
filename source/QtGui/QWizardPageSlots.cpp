@@ -28,7 +28,7 @@ void QWizardPageSlots::completeChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QWIZARDPAGE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWIZARDPAGE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,7 +38,7 @@ void QWizardPageSlots::completeChanged()
 
 void QWizardPageSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QWizardPage * obj = ( QWizardPage * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QWizardPage * obj = static_cast< QWizardPage * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

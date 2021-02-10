@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_NEW )
 
 HB_FUNC_STATIC( QTEXTFORMAT_DELETE )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -171,7 +171,7 @@ QBrush background() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_BACKGROUND )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -196,7 +196,7 @@ bool boolProperty( int propertyId ) const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_BOOLPROPERTY )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -220,7 +220,7 @@ QBrush brushProperty( int propertyId ) const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_BRUSHPROPERTY )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -245,7 +245,7 @@ void clearBackground()
 */
 HB_FUNC_STATIC( QTEXTFORMAT_CLEARBACKGROUND )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -271,7 +271,7 @@ void clearForeground()
 */
 HB_FUNC_STATIC( QTEXTFORMAT_CLEARFOREGROUND )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -297,7 +297,7 @@ void clearProperty( int propertyId )
 */
 HB_FUNC_STATIC( QTEXTFORMAT_CLEARPROPERTY )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -323,7 +323,7 @@ QColor colorProperty( int propertyId ) const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_COLORPROPERTY )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -348,7 +348,7 @@ qreal doubleProperty( int propertyId ) const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_DOUBLEPROPERTY )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -372,7 +372,7 @@ QBrush foreground() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_FOREGROUND )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -397,7 +397,7 @@ bool hasProperty( int propertyId ) const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_HASPROPERTY )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -421,7 +421,7 @@ int intProperty( int propertyId ) const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_INTPROPERTY )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -445,7 +445,7 @@ bool isBlockFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_ISBLOCKFORMAT )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -469,7 +469,7 @@ bool isCharFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_ISCHARFORMAT )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -493,7 +493,7 @@ bool isFrameFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_ISFRAMEFORMAT )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -517,7 +517,7 @@ bool isImageFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_ISIMAGEFORMAT )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -541,7 +541,7 @@ bool isListFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_ISLISTFORMAT )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -565,7 +565,7 @@ bool isTableCellFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_ISTABLECELLFORMAT )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -589,7 +589,7 @@ bool isTableFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_ISTABLEFORMAT )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -613,7 +613,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_ISVALID )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -637,7 +637,7 @@ Qt::LayoutDirection layoutDirection() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_LAYOUTDIRECTION )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -661,7 +661,7 @@ QTextLength lengthProperty( int propertyId ) const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_LENGTHPROPERTY )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -686,7 +686,7 @@ QVector<QTextLength> lengthVectorProperty( int propertyId ) const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_LENGTHVECTORPROPERTY )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -707,7 +707,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_LENGTHVECTORPROPERTY )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QTextLength * ) new QTextLength( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QTextLength * >( new QTextLength( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -738,7 +738,7 @@ void merge( const QTextFormat & other )
 */
 HB_FUNC_STATIC( QTEXTFORMAT_MERGE )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -764,7 +764,7 @@ int objectIndex() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_OBJECTINDEX )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -788,7 +788,7 @@ int objectType() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_OBJECTTYPE )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -812,7 +812,7 @@ QPen penProperty( int propertyId ) const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_PENPROPERTY )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -837,7 +837,7 @@ QVariant property( int propertyId ) const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_PROPERTY )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -862,7 +862,7 @@ int propertyCount() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_PROPERTYCOUNT )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -886,7 +886,7 @@ void setBackground( const QBrush & brush )
 */
 HB_FUNC_STATIC( QTEXTFORMAT_SETBACKGROUND )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -912,7 +912,7 @@ void setForeground( const QBrush & brush )
 */
 HB_FUNC_STATIC( QTEXTFORMAT_SETFOREGROUND )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -938,7 +938,7 @@ void setLayoutDirection( Qt::LayoutDirection direction )
 */
 HB_FUNC_STATIC( QTEXTFORMAT_SETLAYOUTDIRECTION )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -964,7 +964,7 @@ void setObjectIndex( int index )
 */
 HB_FUNC_STATIC( QTEXTFORMAT_SETOBJECTINDEX )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -990,7 +990,7 @@ void setObjectType( int type )
 */
 HB_FUNC_STATIC( QTEXTFORMAT_SETOBJECTTYPE )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1016,7 +1016,7 @@ void setProperty( int propertyId, const QVariant & value )
 */
 void QTextFormat_setProperty1()
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1031,7 +1031,7 @@ void setProperty( int propertyId, const QVector<QTextLength> & value )
 */
 void QTextFormat_setProperty2()
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1040,7 +1040,7 @@ void QTextFormat_setProperty2()
     int nLen2 = hb_arrayLen( aList2 );
     for( int i2 = 0; i2 < nLen2; i2++ )
     {
-      par2 << *( QTextLength * ) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
+      par2 << *static_cast< QTextLength * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
     }
     obj->setProperty( PINT( 1 ), par2 );
   }
@@ -1069,7 +1069,7 @@ QString stringProperty( int propertyId ) const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_STRINGPROPERTY )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1093,7 +1093,7 @@ QTextBlockFormat toBlockFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_TOBLOCKFORMAT )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1118,7 +1118,7 @@ QTextCharFormat toCharFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_TOCHARFORMAT )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1143,7 +1143,7 @@ QTextFrameFormat toFrameFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_TOFRAMEFORMAT )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1168,7 +1168,7 @@ QTextImageFormat toImageFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_TOIMAGEFORMAT )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1193,7 +1193,7 @@ QTextListFormat toListFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_TOLISTFORMAT )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1218,7 +1218,7 @@ QTextTableCellFormat toTableCellFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_TOTABLECELLFORMAT )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1243,7 +1243,7 @@ QTextTableFormat toTableFormat() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_TOTABLEFORMAT )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1268,7 +1268,7 @@ int type() const
 */
 HB_FUNC_STATIC( QTEXTFORMAT_TYPE )
 {
-  QTextFormat * obj = ( QTextFormat * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1293,7 +1293,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -1302,7 +1302,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

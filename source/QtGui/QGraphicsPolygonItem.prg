@@ -57,7 +57,7 @@ QGraphicsPolygonItem( QGraphicsItem * parent = 0 )
 */
 void QGraphicsPolygonItem_new1()
 {
-  QGraphicsPolygonItem * obj = new QGraphicsPolygonItem( ISNIL( 1 )? 0 : ( QGraphicsItem * ) Qt4xHb::itemGetPtr( 1 ) );
+  QGraphicsPolygonItem * obj = new QGraphicsPolygonItem( ISNIL( 1 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 1 ) ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -66,7 +66,7 @@ QGraphicsPolygonItem( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
 */
 void QGraphicsPolygonItem_new2()
 {
-  QGraphicsPolygonItem * obj = new QGraphicsPolygonItem( *PQPOLYGONF( 1 ), ISNIL( 2 )? 0 : ( QGraphicsItem * ) Qt4xHb::itemGetPtr( 2 ) );
+  QGraphicsPolygonItem * obj = new QGraphicsPolygonItem( *PQPOLYGONF( 1 ), ISNIL( 2 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 2 ) ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_DELETE )
 {
-  QGraphicsPolygonItem * obj = ( QGraphicsPolygonItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = static_cast< QGraphicsPolygonItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -108,7 +108,7 @@ Qt::FillRule fillRule() const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_FILLRULE )
 {
-  QGraphicsPolygonItem * obj = ( QGraphicsPolygonItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = static_cast< QGraphicsPolygonItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -132,7 +132,7 @@ QPolygonF polygon() const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_POLYGON )
 {
-  QGraphicsPolygonItem * obj = ( QGraphicsPolygonItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = static_cast< QGraphicsPolygonItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -157,7 +157,7 @@ void setFillRule( Qt::FillRule rule )
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SETFILLRULE )
 {
-  QGraphicsPolygonItem * obj = ( QGraphicsPolygonItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = static_cast< QGraphicsPolygonItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -183,7 +183,7 @@ void setPolygon( const QPolygonF & polygon )
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SETPOLYGON )
 {
-  QGraphicsPolygonItem * obj = ( QGraphicsPolygonItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = static_cast< QGraphicsPolygonItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -209,7 +209,7 @@ virtual QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_BOUNDINGRECT )
 {
-  QGraphicsPolygonItem * obj = ( QGraphicsPolygonItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = static_cast< QGraphicsPolygonItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -234,7 +234,7 @@ virtual bool contains( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_CONTAINS )
 {
-  QGraphicsPolygonItem * obj = ( QGraphicsPolygonItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = static_cast< QGraphicsPolygonItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -258,7 +258,7 @@ virtual bool isObscuredBy( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_ISOBSCUREDBY )
 {
-  QGraphicsPolygonItem * obj = ( QGraphicsPolygonItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = static_cast< QGraphicsPolygonItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -282,7 +282,7 @@ virtual QPainterPath opaqueArea() const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_OPAQUEAREA )
 {
-  QGraphicsPolygonItem * obj = ( QGraphicsPolygonItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = static_cast< QGraphicsPolygonItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -307,7 +307,7 @@ virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option,
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_PAINT )
 {
-  QGraphicsPolygonItem * obj = ( QGraphicsPolygonItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = static_cast< QGraphicsPolygonItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -333,7 +333,7 @@ virtual QPainterPath shape() const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SHAPE )
 {
-  QGraphicsPolygonItem * obj = ( QGraphicsPolygonItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = static_cast< QGraphicsPolygonItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -358,7 +358,7 @@ virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_TYPE )
 {
-  QGraphicsPolygonItem * obj = ( QGraphicsPolygonItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsPolygonItem * obj = static_cast< QGraphicsPolygonItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

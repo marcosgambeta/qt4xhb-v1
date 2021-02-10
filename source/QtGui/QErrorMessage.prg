@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QERRORMESSAGE_NEW )
 
 HB_FUNC_STATIC( QERRORMESSAGE_DELETE )
 {
-  QErrorMessage * obj = ( QErrorMessage * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QErrorMessage * obj = static_cast< QErrorMessage * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -82,7 +82,7 @@ void showMessage( const QString & message )
 */
 void QErrorMessage_showMessage1()
 {
-  QErrorMessage * obj = ( QErrorMessage * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QErrorMessage * obj = static_cast< QErrorMessage * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -97,7 +97,7 @@ void showMessage( const QString & message, const QString & type )
 */
 void QErrorMessage_showMessage2()
 {
-  QErrorMessage * obj = ( QErrorMessage * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QErrorMessage * obj = static_cast< QErrorMessage * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -128,7 +128,7 @@ QErrorMessage * qtHandler()
 */
 HB_FUNC_STATIC( QERRORMESSAGE_QTHANDLER )
 {
-  QErrorMessage * obj = ( QErrorMessage * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QErrorMessage * obj = static_cast< QErrorMessage * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

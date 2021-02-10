@@ -76,7 +76,7 @@ QSystemTrayIcon( const QIcon & icon, QObject * parent = 0 )
 */
 void QSystemTrayIcon_new2()
 {
-  QSystemTrayIcon * obj = new QSystemTrayIcon( ISOBJECT( 1 )? *( QIcon * ) Qt4xHb::itemGetPtr( 1 ) : QIcon( hb_parc( 1 ) ), OPQOBJECT( 2, 0 ) );
+  QSystemTrayIcon * obj = new QSystemTrayIcon( ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt4xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ), OPQOBJECT( 2, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW )
 
 HB_FUNC_STATIC( QSYSTEMTRAYICON_DELETE )
 {
-  QSystemTrayIcon * obj = ( QSystemTrayIcon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = static_cast< QSystemTrayIcon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -120,7 +120,7 @@ QMenu * contextMenu() const
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_CONTEXTMENU )
 {
-  QSystemTrayIcon * obj = ( QSystemTrayIcon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = static_cast< QSystemTrayIcon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -145,7 +145,7 @@ QRect geometry() const
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_GEOMETRY )
 {
-  QSystemTrayIcon * obj = ( QSystemTrayIcon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = static_cast< QSystemTrayIcon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -170,7 +170,7 @@ QIcon icon() const
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ICON )
 {
-  QSystemTrayIcon * obj = ( QSystemTrayIcon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = static_cast< QSystemTrayIcon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -195,7 +195,7 @@ bool isVisible() const
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ISVISIBLE )
 {
-  QSystemTrayIcon * obj = ( QSystemTrayIcon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = static_cast< QSystemTrayIcon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -219,7 +219,7 @@ void setContextMenu( QMenu * menu )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETCONTEXTMENU )
 {
-  QSystemTrayIcon * obj = ( QSystemTrayIcon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = static_cast< QSystemTrayIcon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -245,7 +245,7 @@ void setIcon( const QIcon & icon )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETICON )
 {
-  QSystemTrayIcon * obj = ( QSystemTrayIcon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = static_cast< QSystemTrayIcon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETICON )
     if( ISNUMPAR( 1 ) && ( ISQICON( 1) || ISCHAR( 1 ) ) )
     {
 #endif
-      obj->setIcon( ISOBJECT( 1 )? *( QIcon * ) Qt4xHb::itemGetPtr( 1 ) : QIcon( hb_parc( 1 ) ) );
+      obj->setIcon( ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt4xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,7 +271,7 @@ void setToolTip( const QString & tip )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETTOOLTIP )
 {
-  QSystemTrayIcon * obj = ( QSystemTrayIcon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = static_cast< QSystemTrayIcon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -297,15 +297,15 @@ void showMessage( const QString & title, const QString & message, QSystemTrayIco
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOWMESSAGE )
 {
-  QSystemTrayIcon * obj = ( QSystemTrayIcon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = static_cast< QSystemTrayIcon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 4 ) && ISCHAR( 1 ) && ISCHAR( 2 ) && ISOPTNUM( 3 ) && ISOPTNUM( 4 ) )
+    if( ISBETWEEN( 2, 4 ) && ISCHAR( 1 ) && ISCHAR( 2 ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
     {
 #endif
-      obj->showMessage( PQSTRING( 1 ), PQSTRING( 2 ), ISNIL( 3 )? ( QSystemTrayIcon::MessageIcon ) QSystemTrayIcon::Information : ( QSystemTrayIcon::MessageIcon ) hb_parni( 3 ), OPINT( 4, 10000 ) );
+      obj->showMessage( PQSTRING( 1 ), PQSTRING( 2 ), ISNIL( 3 ) ? ( QSystemTrayIcon::MessageIcon ) QSystemTrayIcon::Information : ( QSystemTrayIcon::MessageIcon ) hb_parni( 3 ), OPINT( 4, 10000 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,7 +323,7 @@ QString toolTip() const
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_TOOLTIP )
 {
-  QSystemTrayIcon * obj = ( QSystemTrayIcon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = static_cast< QSystemTrayIcon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -347,7 +347,7 @@ void hide()
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_HIDE )
 {
-  QSystemTrayIcon * obj = ( QSystemTrayIcon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = static_cast< QSystemTrayIcon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -373,7 +373,7 @@ void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SETVISIBLE )
 {
-  QSystemTrayIcon * obj = ( QSystemTrayIcon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = static_cast< QSystemTrayIcon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -399,7 +399,7 @@ void show()
 */
 HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOW )
 {
-  QSystemTrayIcon * obj = ( QSystemTrayIcon * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSystemTrayIcon * obj = static_cast< QSystemTrayIcon * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

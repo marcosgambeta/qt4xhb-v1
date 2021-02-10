@@ -28,7 +28,7 @@ void QColumnViewSlots::updatePreviewWidget( const QModelIndex & index )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCOLUMNVIEW" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QCOLUMNVIEW" );
     PHB_ITEM pindex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX" );
 
     hb_vmEvalBlockV( cb, 2, psender, pindex );
@@ -40,7 +40,7 @@ void QColumnViewSlots::updatePreviewWidget( const QModelIndex & index )
 
 void QColumnViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QColumnView * obj = ( QColumnView * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QColumnView * obj = static_cast< QColumnView * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

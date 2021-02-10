@@ -64,7 +64,7 @@ QString anchorAt( const QPointF & position ) const
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT )
 {
-  QAbstractTextDocumentLayout * obj = ( QAbstractTextDocumentLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractTextDocumentLayout * obj = static_cast< QAbstractTextDocumentLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -88,7 +88,7 @@ virtual QRectF blockBoundingRect( const QTextBlock & block ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT )
 {
-  QAbstractTextDocumentLayout * obj = ( QAbstractTextDocumentLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractTextDocumentLayout * obj = static_cast< QAbstractTextDocumentLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -113,7 +113,7 @@ QTextDocument * document() const
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENT )
 {
-  QAbstractTextDocumentLayout * obj = ( QAbstractTextDocumentLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractTextDocumentLayout * obj = static_cast< QAbstractTextDocumentLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -138,7 +138,7 @@ virtual QSizeF documentSize() const = 0
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENTSIZE )
 {
-  QAbstractTextDocumentLayout * obj = ( QAbstractTextDocumentLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractTextDocumentLayout * obj = static_cast< QAbstractTextDocumentLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -163,7 +163,7 @@ virtual QRectF frameBoundingRect( QTextFrame * frame ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT )
 {
-  QAbstractTextDocumentLayout * obj = ( QAbstractTextDocumentLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractTextDocumentLayout * obj = static_cast< QAbstractTextDocumentLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -188,7 +188,7 @@ QTextObjectInterface * handlerForObject( int objectType ) const
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT )
 {
-  QAbstractTextDocumentLayout * obj = ( QAbstractTextDocumentLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractTextDocumentLayout * obj = static_cast< QAbstractTextDocumentLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -213,7 +213,7 @@ virtual int hitTest( const QPointF & point, Qt::HitTestAccuracy accuracy ) const
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HITTEST )
 {
-  QAbstractTextDocumentLayout * obj = ( QAbstractTextDocumentLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractTextDocumentLayout * obj = static_cast< QAbstractTextDocumentLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -237,7 +237,7 @@ virtual int pageCount() const = 0
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_PAGECOUNT )
 {
-  QAbstractTextDocumentLayout * obj = ( QAbstractTextDocumentLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractTextDocumentLayout * obj = static_cast< QAbstractTextDocumentLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -261,7 +261,7 @@ QPaintDevice * paintDevice() const
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_PAINTDEVICE )
 {
-  QAbstractTextDocumentLayout * obj = ( QAbstractTextDocumentLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractTextDocumentLayout * obj = static_cast< QAbstractTextDocumentLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -286,7 +286,7 @@ void registerHandler( int objectType, QObject * component )
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_REGISTERHANDLER )
 {
-  QAbstractTextDocumentLayout * obj = ( QAbstractTextDocumentLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractTextDocumentLayout * obj = static_cast< QAbstractTextDocumentLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -312,7 +312,7 @@ void setPaintDevice( QPaintDevice * device )
 */
 HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_SETPAINTDEVICE )
 {
-  QAbstractTextDocumentLayout * obj = ( QAbstractTextDocumentLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractTextDocumentLayout * obj = static_cast< QAbstractTextDocumentLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

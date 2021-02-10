@@ -28,7 +28,7 @@ void QStatusBarSlots::messageChanged( const QString & message )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSTATUSBAR" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSTATUSBAR" );
     PHB_ITEM pmessage = hb_itemPutC( NULL, QSTRINGTOSTRING( message ) );
 
     hb_vmEvalBlockV( cb, 2, psender, pmessage );
@@ -40,7 +40,7 @@ void QStatusBarSlots::messageChanged( const QString & message )
 
 void QStatusBarSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QStatusBar * obj = ( QStatusBar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStatusBar * obj = static_cast< QStatusBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

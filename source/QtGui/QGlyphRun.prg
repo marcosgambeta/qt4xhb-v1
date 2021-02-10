@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QGLYPHRUN_NEW )
 
 HB_FUNC_STATIC( QGLYPHRUN_DELETE )
 {
-  QGlyphRun * obj = ( QGlyphRun * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGlyphRun * obj = static_cast< QGlyphRun * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -118,7 +118,7 @@ void clear()
 */
 HB_FUNC_STATIC( QGLYPHRUN_CLEAR )
 {
-  QGlyphRun * obj = ( QGlyphRun * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGlyphRun * obj = static_cast< QGlyphRun * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -144,7 +144,7 @@ QVector<quint32> glyphIndexes() const
 */
 HB_FUNC_STATIC( QGLYPHRUN_GLYPHINDEXES )
 {
-  QGlyphRun * obj = ( QGlyphRun * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGlyphRun * obj = static_cast< QGlyphRun * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -176,7 +176,7 @@ bool overline() const
 */
 HB_FUNC_STATIC( QGLYPHRUN_OVERLINE )
 {
-  QGlyphRun * obj = ( QGlyphRun * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGlyphRun * obj = static_cast< QGlyphRun * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -200,7 +200,7 @@ QVector<QPointF> positions() const
 */
 HB_FUNC_STATIC( QGLYPHRUN_POSITIONS )
 {
-  QGlyphRun * obj = ( QGlyphRun * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGlyphRun * obj = static_cast< QGlyphRun * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QGLYPHRUN_POSITIONS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QPointF * ) new QPointF( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QPointF * >( new QPointF( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -252,7 +252,7 @@ QRawFont rawFont() const
 */
 HB_FUNC_STATIC( QGLYPHRUN_RAWFONT )
 {
-  QGlyphRun * obj = ( QGlyphRun * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGlyphRun * obj = static_cast< QGlyphRun * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -277,7 +277,7 @@ void setGlyphIndexes( const QVector<quint32> & glyphIndexes )
 */
 HB_FUNC_STATIC( QGLYPHRUN_SETGLYPHINDEXES )
 {
-  QGlyphRun * obj = ( QGlyphRun * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGlyphRun * obj = static_cast< QGlyphRun * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -312,7 +312,7 @@ void setOverline( bool overline )
 */
 HB_FUNC_STATIC( QGLYPHRUN_SETOVERLINE )
 {
-  QGlyphRun * obj = ( QGlyphRun * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGlyphRun * obj = static_cast< QGlyphRun * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -338,7 +338,7 @@ void setPositions( const QVector<QPointF> & positions )
 */
 HB_FUNC_STATIC( QGLYPHRUN_SETPOSITIONS )
 {
-  QGlyphRun * obj = ( QGlyphRun * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGlyphRun * obj = static_cast< QGlyphRun * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QGLYPHRUN_SETPOSITIONS )
       int nLen1 = hb_arrayLen( aList1 );
       for( int i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << *( QPointF * ) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+        par1 << *static_cast< QPointF * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
       }
       obj->setPositions( par1 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -371,7 +371,7 @@ void setRawFont( const QRawFont & rawFont )
 */
 HB_FUNC_STATIC( QGLYPHRUN_SETRAWFONT )
 {
-  QGlyphRun * obj = ( QGlyphRun * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGlyphRun * obj = static_cast< QGlyphRun * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -397,7 +397,7 @@ void setStrikeOut( bool strikeOut )
 */
 HB_FUNC_STATIC( QGLYPHRUN_SETSTRIKEOUT )
 {
-  QGlyphRun * obj = ( QGlyphRun * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGlyphRun * obj = static_cast< QGlyphRun * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -423,7 +423,7 @@ void setUnderline( bool underline )
 */
 HB_FUNC_STATIC( QGLYPHRUN_SETUNDERLINE )
 {
-  QGlyphRun * obj = ( QGlyphRun * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGlyphRun * obj = static_cast< QGlyphRun * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -449,7 +449,7 @@ bool strikeOut() const
 */
 HB_FUNC_STATIC( QGLYPHRUN_STRIKEOUT )
 {
-  QGlyphRun * obj = ( QGlyphRun * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGlyphRun * obj = static_cast< QGlyphRun * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -473,7 +473,7 @@ bool underline() const
 */
 HB_FUNC_STATIC( QGLYPHRUN_UNDERLINE )
 {
-  QGlyphRun * obj = ( QGlyphRun * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGlyphRun * obj = static_cast< QGlyphRun * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QGLYPHRUN_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QGLYPHRUN_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

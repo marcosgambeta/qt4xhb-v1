@@ -86,7 +86,7 @@ ButtonFeatures features
 */
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_FEATURES )
 {
-  QStyleOptionButton * obj = ( QStyleOptionButton * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionButton * obj = static_cast< QStyleOptionButton * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_FEATURES )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_SETFEATURES )
 {
-  QStyleOptionButton * obj = ( QStyleOptionButton * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionButton * obj = static_cast< QStyleOptionButton * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -124,7 +124,7 @@ QString text
 */
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_TEXT )
 {
-  QStyleOptionButton * obj = ( QStyleOptionButton * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionButton * obj = static_cast< QStyleOptionButton * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_TEXT )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_SETTEXT )
 {
-  QStyleOptionButton * obj = ( QStyleOptionButton * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionButton * obj = static_cast< QStyleOptionButton * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -162,7 +162,7 @@ QIcon icon
 */
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_ICON )
 {
-  QStyleOptionButton * obj = ( QStyleOptionButton * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionButton * obj = static_cast< QStyleOptionButton * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -179,7 +179,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_ICON )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_SETICON )
 {
-  QStyleOptionButton * obj = ( QStyleOptionButton * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionButton * obj = static_cast< QStyleOptionButton * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -201,7 +201,7 @@ QSize iconSize
 */
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_ICONSIZE )
 {
-  QStyleOptionButton * obj = ( QStyleOptionButton * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionButton * obj = static_cast< QStyleOptionButton * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_ICONSIZE )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONBUTTON_SETICONSIZE )
 {
-  QStyleOptionButton * obj = ( QStyleOptionButton * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionButton * obj = static_cast< QStyleOptionButton * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

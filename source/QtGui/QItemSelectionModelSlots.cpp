@@ -28,7 +28,7 @@ void QItemSelectionModelSlots::currentChanged( const QModelIndex & current, cons
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QITEMSELECTIONMODEL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QITEMSELECTIONMODEL" );
     PHB_ITEM pcurrent = Qt4xHb::Signals_return_object( ( void * ) &current, "QMODELINDEX" );
     PHB_ITEM pprevious = Qt4xHb::Signals_return_object( ( void * ) &previous, "QMODELINDEX" );
 
@@ -48,7 +48,7 @@ void QItemSelectionModelSlots::currentColumnChanged( const QModelIndex & current
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QITEMSELECTIONMODEL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QITEMSELECTIONMODEL" );
     PHB_ITEM pcurrent = Qt4xHb::Signals_return_object( ( void * ) &current, "QMODELINDEX" );
     PHB_ITEM pprevious = Qt4xHb::Signals_return_object( ( void * ) &previous, "QMODELINDEX" );
 
@@ -68,7 +68,7 @@ void QItemSelectionModelSlots::currentRowChanged( const QModelIndex & current, c
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QITEMSELECTIONMODEL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QITEMSELECTIONMODEL" );
     PHB_ITEM pcurrent = Qt4xHb::Signals_return_object( ( void * ) &current, "QMODELINDEX" );
     PHB_ITEM pprevious = Qt4xHb::Signals_return_object( ( void * ) &previous, "QMODELINDEX" );
 
@@ -88,7 +88,7 @@ void QItemSelectionModelSlots::selectionChanged( const QItemSelection & selected
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QITEMSELECTIONMODEL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QITEMSELECTIONMODEL" );
     PHB_ITEM pselected = Qt4xHb::Signals_return_object( ( void * ) &selected, "QITEMSELECTION" );
     PHB_ITEM pdeselected = Qt4xHb::Signals_return_object( ( void * ) &deselected, "QITEMSELECTION" );
 
@@ -102,7 +102,7 @@ void QItemSelectionModelSlots::selectionChanged( const QItemSelection & selected
 
 void QItemSelectionModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QItemSelectionModel * obj = ( QItemSelectionModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QItemSelectionModel * obj = static_cast< QItemSelectionModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

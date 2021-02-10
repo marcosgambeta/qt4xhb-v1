@@ -82,7 +82,7 @@ QAbstractSpinBox::ButtonSymbols buttonSymbols
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_BUTTONSYMBOLS )
 {
-  QStyleOptionSpinBox * obj = ( QStyleOptionSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionSpinBox * obj = static_cast< QStyleOptionSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_BUTTONSYMBOLS )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETBUTTONSYMBOLS )
 {
-  QStyleOptionSpinBox * obj = ( QStyleOptionSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionSpinBox * obj = static_cast< QStyleOptionSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -120,7 +120,7 @@ QAbstractSpinBox::StepEnabled stepEnabled
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_STEPENABLED )
 {
-  QStyleOptionSpinBox * obj = ( QStyleOptionSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionSpinBox * obj = static_cast< QStyleOptionSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_STEPENABLED )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETSTEPENABLED )
 {
-  QStyleOptionSpinBox * obj = ( QStyleOptionSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionSpinBox * obj = static_cast< QStyleOptionSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -158,7 +158,7 @@ bool frame
 */
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_FRAME )
 {
-  QStyleOptionSpinBox * obj = ( QStyleOptionSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionSpinBox * obj = static_cast< QStyleOptionSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_FRAME )
 }
 HB_FUNC_STATIC( QSTYLEOPTIONSPINBOX_SETFRAME )
 {
-  QStyleOptionSpinBox * obj = ( QStyleOptionSpinBox * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStyleOptionSpinBox * obj = static_cast< QStyleOptionSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

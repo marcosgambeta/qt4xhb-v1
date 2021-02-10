@@ -109,7 +109,7 @@ QTextLayout( const QString & text, const QFont & font, QPaintDevice * paintdevic
 */
 void QTextLayout_new3()
 {
-  QTextLayout * obj = new QTextLayout( PQSTRING( 1 ), *PQFONT( 2 ), ISNIL( 3 )? 0 : ( QPaintDevice * ) Qt4xHb::itemGetPtr( 3 ) );
+  QTextLayout * obj = new QTextLayout( PQSTRING( 1 ), *PQFONT( 2 ), ISNIL( 3 ) ? 0 : static_cast< QPaintDevice * >( Qt4xHb::itemGetPtr( 3 ) ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEW )
 
 HB_FUNC_STATIC( QTEXTLAYOUT_DELETE )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -155,7 +155,7 @@ void beginLayout()
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_BEGINLAYOUT )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -181,7 +181,7 @@ QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_BOUNDINGRECT )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -206,7 +206,7 @@ bool cacheEnabled() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_CACHEENABLED )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -230,7 +230,7 @@ void clearAdditionalFormats()
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_CLEARADDITIONALFORMATS )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -256,7 +256,7 @@ void clearLayout()
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_CLEARLAYOUT )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -282,7 +282,7 @@ QTextLine createLine()
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_CREATELINE )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -307,7 +307,7 @@ Qt::CursorMoveStyle cursorMoveStyle() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_CURSORMOVESTYLE )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -331,7 +331,7 @@ void drawCursor( QPainter * painter, const QPointF & position, int cursorPositio
 */
 void QTextLayout_drawCursor1()
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -346,7 +346,7 @@ void drawCursor( QPainter * painter, const QPointF & position, int cursorPositio
 */
 void QTextLayout_drawCursor2()
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -377,7 +377,7 @@ void endLayout()
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_ENDLAYOUT )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -403,7 +403,7 @@ QFont font() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_FONT )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -428,7 +428,7 @@ QList<QGlyphRun> glyphRuns() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_GLYPHRUNS )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_GLYPHRUNS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QGlyphRun * ) new QGlyphRun( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QGlyphRun * >( new QGlyphRun( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -480,7 +480,7 @@ bool isValidCursorPosition( int pos ) const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_ISVALIDCURSORPOSITION )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -504,7 +504,7 @@ int leftCursorPosition( int oldPos ) const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_LEFTCURSORPOSITION )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -528,7 +528,7 @@ QTextLine lineAt( int i ) const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_LINEAT )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -553,7 +553,7 @@ int lineCount() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_LINECOUNT )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -577,7 +577,7 @@ QTextLine lineForTextPosition( int pos ) const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_LINEFORTEXTPOSITION )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -602,7 +602,7 @@ qreal maximumWidth() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_MAXIMUMWIDTH )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -626,7 +626,7 @@ qreal minimumWidth() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_MINIMUMWIDTH )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -650,15 +650,15 @@ int nextCursorPosition( int oldPos, QTextLayout::CursorMode mode = QTextLayout::
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_NEXTCURSORPOSITION )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
-      RINT( obj->nextCursorPosition( PINT( 1 ), ISNIL( 2 )? ( QTextLayout::CursorMode ) QTextLayout::SkipCharacters : ( QTextLayout::CursorMode ) hb_parni( 2 ) ) );
+      RINT( obj->nextCursorPosition( PINT( 1 ), ISNIL( 2 ) ? ( QTextLayout::CursorMode ) QTextLayout::SkipCharacters : ( QTextLayout::CursorMode ) hb_parni( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -674,7 +674,7 @@ QPointF position() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_POSITION )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -699,7 +699,7 @@ int preeditAreaPosition() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_PREEDITAREAPOSITION )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -723,7 +723,7 @@ QString preeditAreaText() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_PREEDITAREATEXT )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -747,15 +747,15 @@ int previousCursorPosition( int oldPos, QTextLayout::CursorMode mode = QTextLayo
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_PREVIOUSCURSORPOSITION )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
-      RINT( obj->previousCursorPosition( PINT( 1 ), ISNIL( 2 )? ( QTextLayout::CursorMode ) QTextLayout::SkipCharacters : ( QTextLayout::CursorMode ) hb_parni( 2 ) ) );
+      RINT( obj->previousCursorPosition( PINT( 1 ), ISNIL( 2 ) ? ( QTextLayout::CursorMode ) QTextLayout::SkipCharacters : ( QTextLayout::CursorMode ) hb_parni( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -771,7 +771,7 @@ int rightCursorPosition( int oldPos ) const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_RIGHTCURSORPOSITION )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -795,7 +795,7 @@ void setCacheEnabled( bool enable )
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETCACHEENABLED )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -821,7 +821,7 @@ void setCursorMoveStyle( Qt::CursorMoveStyle style )
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETCURSORMOVESTYLE )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -847,7 +847,7 @@ void setFont( const QFont & font )
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETFONT )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -873,7 +873,7 @@ void setPosition( const QPointF & p )
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETPOSITION )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -899,7 +899,7 @@ void setPreeditArea( int position, const QString & text )
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETPREEDITAREA )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -925,7 +925,7 @@ void setText( const QString & string )
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETTEXT )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -951,7 +951,7 @@ void setTextOption( const QTextOption & option )
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETTEXTOPTION )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -977,7 +977,7 @@ QString text() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_TEXT )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1001,7 +1001,7 @@ QTextOption textOption() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_TEXTOPTION )
 {
-  QTextLayout * obj = ( QTextLayout * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1027,7 +1027,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -1036,7 +1036,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

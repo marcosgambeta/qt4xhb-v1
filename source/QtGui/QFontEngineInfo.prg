@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_NEW )
 
 HB_FUNC_STATIC( QFONTENGINEINFO_DELETE )
 {
-  QFontEngineInfo * obj = ( QFontEngineInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontEngineInfo * obj = static_cast< QFontEngineInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -126,7 +126,7 @@ QString family() const
 */
 HB_FUNC_STATIC( QFONTENGINEINFO_FAMILY )
 {
-  QFontEngineInfo * obj = ( QFontEngineInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontEngineInfo * obj = static_cast< QFontEngineInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -150,7 +150,7 @@ qreal pixelSize() const
 */
 HB_FUNC_STATIC( QFONTENGINEINFO_PIXELSIZE )
 {
-  QFontEngineInfo * obj = ( QFontEngineInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontEngineInfo * obj = static_cast< QFontEngineInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -174,7 +174,7 @@ void setFamily( const QString & name )
 */
 HB_FUNC_STATIC( QFONTENGINEINFO_SETFAMILY )
 {
-  QFontEngineInfo * obj = ( QFontEngineInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontEngineInfo * obj = static_cast< QFontEngineInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -200,7 +200,7 @@ void setPixelSize( qreal size )
 */
 HB_FUNC_STATIC( QFONTENGINEINFO_SETPIXELSIZE )
 {
-  QFontEngineInfo * obj = ( QFontEngineInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontEngineInfo * obj = static_cast< QFontEngineInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -226,7 +226,7 @@ void setStyle( QFont::Style style )
 */
 HB_FUNC_STATIC( QFONTENGINEINFO_SETSTYLE )
 {
-  QFontEngineInfo * obj = ( QFontEngineInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontEngineInfo * obj = static_cast< QFontEngineInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -252,7 +252,7 @@ void setWeight( int weight )
 */
 HB_FUNC_STATIC( QFONTENGINEINFO_SETWEIGHT )
 {
-  QFontEngineInfo * obj = ( QFontEngineInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontEngineInfo * obj = static_cast< QFontEngineInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -278,7 +278,7 @@ void setWritingSystems( const QList<QFontDatabase::WritingSystem> & writingSyste
 */
 HB_FUNC_STATIC( QFONTENGINEINFO_SETWRITINGSYSTEMS )
 {
-  QFontEngineInfo * obj = ( QFontEngineInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontEngineInfo * obj = static_cast< QFontEngineInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -311,7 +311,7 @@ QFont::Style style() const
 */
 HB_FUNC_STATIC( QFONTENGINEINFO_STYLE )
 {
-  QFontEngineInfo * obj = ( QFontEngineInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontEngineInfo * obj = static_cast< QFontEngineInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -335,7 +335,7 @@ int weight() const
 */
 HB_FUNC_STATIC( QFONTENGINEINFO_WEIGHT )
 {
-  QFontEngineInfo * obj = ( QFontEngineInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontEngineInfo * obj = static_cast< QFontEngineInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -359,7 +359,7 @@ QList<QFontDatabase::WritingSystem> writingSystems() const
 */
 HB_FUNC_STATIC( QFONTENGINEINFO_WRITINGSYSTEMS )
 {
-  QFontEngineInfo * obj = ( QFontEngineInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFontEngineInfo * obj = static_cast< QFontEngineInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

@@ -58,7 +58,7 @@ QGraphicsEllipseItem( QGraphicsItem * parent = 0 )
 */
 void QGraphicsEllipseItem_new1()
 {
-  QGraphicsEllipseItem * obj = new QGraphicsEllipseItem( ISNIL( 1 )? 0 : ( QGraphicsItem * ) Qt4xHb::itemGetPtr( 1 ) );
+  QGraphicsEllipseItem * obj = new QGraphicsEllipseItem( ISNIL( 1 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 1 ) ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -67,7 +67,7 @@ QGraphicsEllipseItem( const QRectF & rect, QGraphicsItem * parent = 0 )
 */
 void QGraphicsEllipseItem_new2()
 {
-  QGraphicsEllipseItem * obj = new QGraphicsEllipseItem( *PQRECTF( 1 ), ISNIL( 2 )? 0 : ( QGraphicsItem * ) Qt4xHb::itemGetPtr( 2 ) );
+  QGraphicsEllipseItem * obj = new QGraphicsEllipseItem( *PQRECTF( 1 ), ISNIL( 2 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 2 ) ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -76,7 +76,7 @@ QGraphicsEllipseItem( qreal x, qreal y, qreal width, qreal height, QGraphicsItem
 */
 void QGraphicsEllipseItem_new3()
 {
-  QGraphicsEllipseItem * obj = new QGraphicsEllipseItem( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), ISNIL( 5 )? 0 : ( QGraphicsItem * ) Qt4xHb::itemGetPtr( 5 ) );
+  QGraphicsEllipseItem * obj = new QGraphicsEllipseItem( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), ISNIL( 5 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 5 ) ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_DELETE )
 {
-  QGraphicsEllipseItem * obj = ( QGraphicsEllipseItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsEllipseItem * obj = static_cast< QGraphicsEllipseItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -122,7 +122,7 @@ QRectF rect() const
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_RECT )
 {
-  QGraphicsEllipseItem * obj = ( QGraphicsEllipseItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsEllipseItem * obj = static_cast< QGraphicsEllipseItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -147,7 +147,7 @@ void setRect( const QRectF & rect )
 */
 void QGraphicsEllipseItem_setRect1()
 {
-  QGraphicsEllipseItem * obj = ( QGraphicsEllipseItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsEllipseItem * obj = static_cast< QGraphicsEllipseItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -162,7 +162,7 @@ void setRect( qreal x, qreal y, qreal width, qreal height )
 */
 void QGraphicsEllipseItem_setRect2()
 {
-  QGraphicsEllipseItem * obj = ( QGraphicsEllipseItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsEllipseItem * obj = static_cast< QGraphicsEllipseItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -193,7 +193,7 @@ void setSpanAngle( int angle )
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETSPANANGLE )
 {
-  QGraphicsEllipseItem * obj = ( QGraphicsEllipseItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsEllipseItem * obj = static_cast< QGraphicsEllipseItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -219,7 +219,7 @@ void setStartAngle( int angle )
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETSTARTANGLE )
 {
-  QGraphicsEllipseItem * obj = ( QGraphicsEllipseItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsEllipseItem * obj = static_cast< QGraphicsEllipseItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -245,7 +245,7 @@ int spanAngle() const
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SPANANGLE )
 {
-  QGraphicsEllipseItem * obj = ( QGraphicsEllipseItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsEllipseItem * obj = static_cast< QGraphicsEllipseItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -269,7 +269,7 @@ int startAngle() const
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_STARTANGLE )
 {
-  QGraphicsEllipseItem * obj = ( QGraphicsEllipseItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsEllipseItem * obj = static_cast< QGraphicsEllipseItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -293,7 +293,7 @@ virtual QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_BOUNDINGRECT )
 {
-  QGraphicsEllipseItem * obj = ( QGraphicsEllipseItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsEllipseItem * obj = static_cast< QGraphicsEllipseItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -318,7 +318,7 @@ virtual bool contains( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_CONTAINS )
 {
-  QGraphicsEllipseItem * obj = ( QGraphicsEllipseItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsEllipseItem * obj = static_cast< QGraphicsEllipseItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -342,7 +342,7 @@ virtual bool isObscuredBy( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_ISOBSCUREDBY )
 {
-  QGraphicsEllipseItem * obj = ( QGraphicsEllipseItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsEllipseItem * obj = static_cast< QGraphicsEllipseItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -366,7 +366,7 @@ virtual QPainterPath opaqueArea() const
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_OPAQUEAREA )
 {
-  QGraphicsEllipseItem * obj = ( QGraphicsEllipseItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsEllipseItem * obj = static_cast< QGraphicsEllipseItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -391,7 +391,7 @@ virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option,
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_PAINT )
 {
-  QGraphicsEllipseItem * obj = ( QGraphicsEllipseItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsEllipseItem * obj = static_cast< QGraphicsEllipseItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -417,7 +417,7 @@ virtual QPainterPath shape() const
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SHAPE )
 {
-  QGraphicsEllipseItem * obj = ( QGraphicsEllipseItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsEllipseItem * obj = static_cast< QGraphicsEllipseItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -442,7 +442,7 @@ virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_TYPE )
 {
-  QGraphicsEllipseItem * obj = ( QGraphicsEllipseItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsEllipseItem * obj = static_cast< QGraphicsEllipseItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

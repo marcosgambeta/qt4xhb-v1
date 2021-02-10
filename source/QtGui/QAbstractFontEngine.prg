@@ -45,7 +45,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTFONTENGINE_DELETE )
 {
-  QAbstractFontEngine * obj = ( QAbstractFontEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractFontEngine * obj = static_cast< QAbstractFontEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -67,7 +67,7 @@ virtual QAbstractFontEngine::Capabilities capabilities() const = 0
 */
 HB_FUNC_STATIC( QABSTRACTFONTENGINE_CAPABILITIES )
 {
-  QAbstractFontEngine * obj = ( QAbstractFontEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractFontEngine * obj = static_cast< QAbstractFontEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -91,7 +91,7 @@ virtual QVariant fontProperty( QAbstractFontEngine::FontProperty property ) cons
 */
 HB_FUNC_STATIC( QABSTRACTFONTENGINE_FONTPROPERTY )
 {
-  QAbstractFontEngine * obj = ( QAbstractFontEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractFontEngine * obj = static_cast< QAbstractFontEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -116,7 +116,7 @@ virtual bool renderGlyph( uint glyph, int depth, int bytesPerLine, int height, u
 */
 HB_FUNC_STATIC( QABSTRACTFONTENGINE_RENDERGLYPH )
 {
-  QAbstractFontEngine * obj = ( QAbstractFontEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractFontEngine * obj = static_cast< QAbstractFontEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

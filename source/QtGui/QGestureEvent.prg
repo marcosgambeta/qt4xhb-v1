@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_NEW )
     int nLen1 = hb_arrayLen( aList1 );
     for( int i1 = 0; i1 < nLen1; i1++ )
     {
-      par1 << ( QGesture * ) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+      par1 << static_cast< QGesture * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
     }
     QGestureEvent * obj = new QGestureEvent( par1 );
     Qt4xHb::returnNewObject( obj, false );
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_NEW )
 
 HB_FUNC_STATIC( QGESTUREEVENT_DELETE )
 {
-  QGestureEvent * obj = ( QGestureEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGestureEvent * obj = static_cast< QGestureEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -99,7 +99,7 @@ void accept()
 */
 void QGestureEvent_accept1()
 {
-  QGestureEvent * obj = ( QGestureEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGestureEvent * obj = static_cast< QGestureEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -114,7 +114,7 @@ void accept( QGesture * gesture )
 */
 void QGestureEvent_accept2()
 {
-  QGestureEvent * obj = ( QGestureEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGestureEvent * obj = static_cast< QGestureEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -129,7 +129,7 @@ void accept( Qt::GestureType gestureType )
 */
 void QGestureEvent_accept3()
 {
-  QGestureEvent * obj = ( QGestureEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGestureEvent * obj = static_cast< QGestureEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -164,7 +164,7 @@ QList<QGesture *> activeGestures() const
 */
 HB_FUNC_STATIC( QGESTUREEVENT_ACTIVEGESTURES )
 {
-  QGestureEvent * obj = ( QGestureEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGestureEvent * obj = static_cast< QGestureEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACTIVEGESTURES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QGesture * ) list[i] );
+          hb_itemPutPtr( pItem, static_cast< QGesture * >( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -212,7 +212,7 @@ QList<QGesture *> canceledGestures() const
 */
 HB_FUNC_STATIC( QGESTUREEVENT_CANCELEDGESTURES )
 {
-  QGestureEvent * obj = ( QGestureEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGestureEvent * obj = static_cast< QGestureEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_CANCELEDGESTURES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QGesture * ) list[i] );
+          hb_itemPutPtr( pItem, static_cast< QGesture * >( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -260,7 +260,7 @@ QGesture * gesture( Qt::GestureType type ) const
 */
 HB_FUNC_STATIC( QGESTUREEVENT_GESTURE )
 {
-  QGestureEvent * obj = ( QGestureEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGestureEvent * obj = static_cast< QGestureEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -285,7 +285,7 @@ QList<QGesture *> gestures() const
 */
 HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
 {
-  QGestureEvent * obj = ( QGestureEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGestureEvent * obj = static_cast< QGestureEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QGesture * ) list[i] );
+          hb_itemPutPtr( pItem, static_cast< QGesture * >( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -333,7 +333,7 @@ void ignore()
 */
 void QGestureEvent_ignore1()
 {
-  QGestureEvent * obj = ( QGestureEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGestureEvent * obj = static_cast< QGestureEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -348,7 +348,7 @@ void ignore( QGesture * gesture )
 */
 void QGestureEvent_ignore2()
 {
-  QGestureEvent * obj = ( QGestureEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGestureEvent * obj = static_cast< QGestureEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -363,7 +363,7 @@ void ignore( Qt::GestureType gestureType )
 */
 void QGestureEvent_ignore3()
 {
-  QGestureEvent * obj = ( QGestureEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGestureEvent * obj = static_cast< QGestureEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -398,7 +398,7 @@ bool isAccepted() const
 */
 void QGestureEvent_isAccepted1()
 {
-  QGestureEvent * obj = ( QGestureEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGestureEvent * obj = static_cast< QGestureEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -411,7 +411,7 @@ bool isAccepted( QGesture * gesture ) const
 */
 void QGestureEvent_isAccepted2()
 {
-  QGestureEvent * obj = ( QGestureEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGestureEvent * obj = static_cast< QGestureEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -424,7 +424,7 @@ bool isAccepted( Qt::GestureType gestureType ) const
 */
 void QGestureEvent_isAccepted3()
 {
-  QGestureEvent * obj = ( QGestureEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGestureEvent * obj = static_cast< QGestureEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -457,7 +457,7 @@ QPointF mapToGraphicsScene( const QPointF & gesturePoint ) const
 */
 HB_FUNC_STATIC( QGESTUREEVENT_MAPTOGRAPHICSSCENE )
 {
-  QGestureEvent * obj = ( QGestureEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGestureEvent * obj = static_cast< QGestureEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -482,7 +482,7 @@ void setAccepted( bool accepted )
 */
 void QGestureEvent_setAccepted1()
 {
-  QGestureEvent * obj = ( QGestureEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGestureEvent * obj = static_cast< QGestureEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -497,7 +497,7 @@ void setAccepted( QGesture * gesture, bool value )
 */
 void QGestureEvent_setAccepted2()
 {
-  QGestureEvent * obj = ( QGestureEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGestureEvent * obj = static_cast< QGestureEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -512,7 +512,7 @@ void setAccepted( Qt::GestureType gestureType, bool value )
 */
 void QGestureEvent_setAccepted3()
 {
-  QGestureEvent * obj = ( QGestureEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGestureEvent * obj = static_cast< QGestureEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -547,7 +547,7 @@ void setWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QGESTUREEVENT_SETWIDGET )
 {
-  QGestureEvent * obj = ( QGestureEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGestureEvent * obj = static_cast< QGestureEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -573,7 +573,7 @@ QWidget * widget() const
 */
 HB_FUNC_STATIC( QGESTUREEVENT_WIDGET )
 {
-  QGestureEvent * obj = ( QGestureEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGestureEvent * obj = static_cast< QGestureEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

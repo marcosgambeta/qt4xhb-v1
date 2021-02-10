@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
 
 HB_FUNC_STATIC( QREGEXPVALIDATOR_DELETE )
 {
-  QRegExpValidator * obj = ( QRegExpValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QRegExpValidator * obj = static_cast< QRegExpValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -102,7 +102,7 @@ const QRegExp & regExp() const
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
 {
-  QRegExpValidator * obj = ( QRegExpValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QRegExpValidator * obj = static_cast< QRegExpValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -127,7 +127,7 @@ void setRegExp( const QRegExp & rx )
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_SETREGEXP )
 {
-  QRegExpValidator * obj = ( QRegExpValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QRegExpValidator * obj = static_cast< QRegExpValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -153,7 +153,7 @@ virtual QValidator::State validate( QString & input, int & pos ) const
 */
 HB_FUNC_STATIC( QREGEXPVALIDATOR_VALIDATE )
 {
-  QRegExpValidator * obj = ( QRegExpValidator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QRegExpValidator * obj = static_cast< QRegExpValidator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

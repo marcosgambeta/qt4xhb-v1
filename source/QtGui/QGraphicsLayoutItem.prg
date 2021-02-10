@@ -74,7 +74,7 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_DELETE )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -94,7 +94,7 @@ QRectF contentsRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_CONTENTSRECT )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -119,7 +119,7 @@ QSizeF effectiveSizeHint( Qt::SizeHint which, const QSizeF & constraint = QSizeF
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_EFFECTIVESIZEHINT )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_EFFECTIVESIZEHINT )
     if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISQSIZEF( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->effectiveSizeHint( ( Qt::SizeHint ) hb_parni( 1 ), ISNIL( 2 )? QSizeF() : *( QSizeF * ) Qt4xHb::itemGetPtr( 2 ) ) );
+      QSizeF * ptr = new QSizeF( obj->effectiveSizeHint( ( Qt::SizeHint ) hb_parni( 1 ), ISNIL( 2 ) ? QSizeF() : *static_cast< QSizeF * >( Qt4xHb::itemGetPtr( 2 ) ) ) );
       Qt4xHb::createReturnClass( ptr, "QSIZEF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -144,7 +144,7 @@ QRectF geometry() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GEOMETRY )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -169,7 +169,7 @@ virtual void getContentsMargins( qreal * left, qreal * top, qreal * right, qreal
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GETCONTENTSMARGINS )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -203,7 +203,7 @@ QGraphicsItem * graphicsItem() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_GRAPHICSITEM )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -228,7 +228,7 @@ bool isLayout() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_ISLAYOUT )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -252,7 +252,7 @@ qreal maximumHeight() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MAXIMUMHEIGHT )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -276,7 +276,7 @@ QSizeF maximumSize() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MAXIMUMSIZE )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -301,7 +301,7 @@ qreal maximumWidth() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MAXIMUMWIDTH )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -325,7 +325,7 @@ qreal minimumHeight() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MINIMUMHEIGHT )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -349,7 +349,7 @@ QSizeF minimumSize() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MINIMUMSIZE )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -374,7 +374,7 @@ qreal minimumWidth() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_MINIMUMWIDTH )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -398,7 +398,7 @@ bool ownedByLayout() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_OWNEDBYLAYOUT )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -422,7 +422,7 @@ QGraphicsLayoutItem * parentLayoutItem() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PARENTLAYOUTITEM )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -447,7 +447,7 @@ qreal preferredHeight() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PREFERREDHEIGHT )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -471,7 +471,7 @@ QSizeF preferredSize() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PREFERREDSIZE )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -496,7 +496,7 @@ qreal preferredWidth() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_PREFERREDWIDTH )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -520,7 +520,7 @@ virtual void setGeometry( const QRectF & rect )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETGEOMETRY )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -546,7 +546,7 @@ void setMaximumHeight( qreal height )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMHEIGHT )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -572,7 +572,7 @@ void setMaximumSize( const QSizeF & size )
 */
 void QGraphicsLayoutItem_setMaximumSize1()
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -587,7 +587,7 @@ void setMaximumSize( qreal w, qreal h )
 */
 void QGraphicsLayoutItem_setMaximumSize2()
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -618,7 +618,7 @@ void setMaximumWidth( qreal width )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMAXIMUMWIDTH )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -644,7 +644,7 @@ void setMinimumHeight( qreal height )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMHEIGHT )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -670,7 +670,7 @@ void setMinimumSize( const QSizeF & size )
 */
 void QGraphicsLayoutItem_setMinimumSize1()
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -685,7 +685,7 @@ void setMinimumSize( qreal w, qreal h )
 */
 void QGraphicsLayoutItem_setMinimumSize2()
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -716,7 +716,7 @@ void setMinimumWidth( qreal width )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETMINIMUMWIDTH )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -742,7 +742,7 @@ void setParentLayoutItem( QGraphicsLayoutItem * parent )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPARENTLAYOUTITEM )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -768,7 +768,7 @@ void setPreferredHeight( qreal height )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDHEIGHT )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -794,7 +794,7 @@ void setPreferredSize( const QSizeF & size )
 */
 void QGraphicsLayoutItem_setPreferredSize1()
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -809,7 +809,7 @@ void setPreferredSize( qreal w, qreal h )
 */
 void QGraphicsLayoutItem_setPreferredSize2()
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -840,7 +840,7 @@ void setPreferredWidth( qreal width )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETPREFERREDWIDTH )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -866,7 +866,7 @@ void setSizePolicy( const QSizePolicy & policy )
 */
 void QGraphicsLayoutItem_setSizePolicy1()
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -881,11 +881,11 @@ void setSizePolicy( QSizePolicy::Policy hPolicy, QSizePolicy::Policy vPolicy, QS
 */
 void QGraphicsLayoutItem_setSizePolicy2()
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
-    obj->setSizePolicy( ( QSizePolicy::Policy ) hb_parni( 1 ), ( QSizePolicy::Policy ) hb_parni( 2 ), ISNIL( 3 )? ( QSizePolicy::ControlType ) QSizePolicy::DefaultType : ( QSizePolicy::ControlType ) hb_parni( 3 ) );
+    obj->setSizePolicy( ( QSizePolicy::Policy ) hb_parni( 1 ), ( QSizePolicy::Policy ) hb_parni( 2 ), ISNIL( 3 ) ? ( QSizePolicy::ControlType ) QSizePolicy::DefaultType : ( QSizePolicy::ControlType ) hb_parni( 3 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -912,7 +912,7 @@ QSizePolicy sizePolicy() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SIZEPOLICY )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -937,7 +937,7 @@ virtual void updateGeometry()
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_UPDATEGEOMETRY )
 {
-  QGraphicsLayoutItem * obj = ( QGraphicsLayoutItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsLayoutItem * obj = static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

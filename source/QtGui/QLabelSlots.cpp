@@ -28,7 +28,7 @@ void QLabelSlots::linkActivated( const QString & link )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QLABEL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QLABEL" );
     PHB_ITEM plink = hb_itemPutC( NULL, QSTRINGTOSTRING( link ) );
 
     hb_vmEvalBlockV( cb, 2, psender, plink );
@@ -46,7 +46,7 @@ void QLabelSlots::linkHovered( const QString & link )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QLABEL" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QLABEL" );
     PHB_ITEM plink = hb_itemPutC( NULL, QSTRINGTOSTRING( link ) );
 
     hb_vmEvalBlockV( cb, 2, psender, plink );
@@ -58,7 +58,7 @@ void QLabelSlots::linkHovered( const QString & link )
 
 void QLabelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QLabel * obj = ( QLabel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLabel * obj = static_cast< QLabel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

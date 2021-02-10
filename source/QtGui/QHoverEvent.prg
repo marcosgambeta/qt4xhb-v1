@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QHOVEREVENT_NEW )
 
 HB_FUNC_STATIC( QHOVEREVENT_DELETE )
 {
-  QHoverEvent * obj = ( QHoverEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHoverEvent * obj = static_cast< QHoverEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -79,7 +79,7 @@ const QPoint & pos() const
 */
 HB_FUNC_STATIC( QHOVEREVENT_POS )
 {
-  QHoverEvent * obj = ( QHoverEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHoverEvent * obj = static_cast< QHoverEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -104,7 +104,7 @@ const QPoint & oldPos() const
 */
 HB_FUNC_STATIC( QHOVEREVENT_OLDPOS )
 {
-  QHoverEvent * obj = ( QHoverEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHoverEvent * obj = static_cast< QHoverEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

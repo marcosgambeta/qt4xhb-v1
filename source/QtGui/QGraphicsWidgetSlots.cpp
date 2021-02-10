@@ -28,7 +28,7 @@ void QGraphicsWidgetSlots::geometryChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QGRAPHICSWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSWIDGET" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,7 +38,7 @@ void QGraphicsWidgetSlots::geometryChanged()
 
 void QGraphicsWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsWidget * obj = ( QGraphicsWidget * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsWidget * obj = static_cast< QGraphicsWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

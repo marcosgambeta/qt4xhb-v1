@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_DELETE )
 {
-  QGraphicsSceneMoveEvent * obj = ( QGraphicsSceneMoveEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneMoveEvent * obj = static_cast< QGraphicsSceneMoveEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -79,7 +79,7 @@ QPointF newPos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEWPOS )
 {
-  QGraphicsSceneMoveEvent * obj = ( QGraphicsSceneMoveEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneMoveEvent * obj = static_cast< QGraphicsSceneMoveEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -104,7 +104,7 @@ QPointF oldPos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_OLDPOS )
 {
-  QGraphicsSceneMoveEvent * obj = ( QGraphicsSceneMoveEvent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGraphicsSceneMoveEvent * obj = static_cast< QGraphicsSceneMoveEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
