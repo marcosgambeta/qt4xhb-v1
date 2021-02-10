@@ -91,7 +91,7 @@ qint64 additionalData() const
 */
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_ADDITIONALDATA )
 {
-  QXmlNodeModelIndex * obj = ( QXmlNodeModelIndex * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlNodeModelIndex * obj = static_cast< QXmlNodeModelIndex * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -115,7 +115,7 @@ qint64 data() const
 */
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_DATA )
 {
-  QXmlNodeModelIndex * obj = ( QXmlNodeModelIndex * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlNodeModelIndex * obj = static_cast< QXmlNodeModelIndex * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -139,7 +139,7 @@ void * internalPointer() const
 */
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_INTERNALPOINTER )
 {
-  QXmlNodeModelIndex * obj = ( QXmlNodeModelIndex * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlNodeModelIndex * obj = static_cast< QXmlNodeModelIndex * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_INTERNALPOINTER )
     if( ISNUMPAR( 0 ) )
     {
 #endif
-      hb_retptr( ( void * ) obj->internalPointer() );
+      hb_retptr( static_cast< void * >( obj->internalPointer() ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,7 +163,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_ISNULL )
 {
-  QXmlNodeModelIndex * obj = ( QXmlNodeModelIndex * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlNodeModelIndex * obj = static_cast< QXmlNodeModelIndex * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -187,7 +187,7 @@ const QAbstractXmlNodeModel * model() const
 */
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_MODEL )
 {
-  QXmlNodeModelIndex * obj = ( QXmlNodeModelIndex * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlNodeModelIndex * obj = static_cast< QXmlNodeModelIndex * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

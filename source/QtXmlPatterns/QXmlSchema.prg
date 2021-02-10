@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_NEW )
 
 HB_FUNC_STATIC( QXMLSCHEMA_DELETE )
 {
-  QXmlSchema * obj = ( QXmlSchema * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -122,7 +122,7 @@ QUrl documentUri() const
 */
 HB_FUNC_STATIC( QXMLSCHEMA_DOCUMENTURI )
 {
-  QXmlSchema * obj = ( QXmlSchema * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -147,7 +147,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QXMLSCHEMA_ISVALID )
 {
-  QXmlSchema * obj = ( QXmlSchema * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -171,7 +171,7 @@ bool load( const QUrl & source )
 */
 void QXmlSchema_load1()
 {
-  QXmlSchema * obj = ( QXmlSchema * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -184,11 +184,11 @@ bool load( QIODevice * source, const QUrl & documentUri = QUrl() )
 */
 void QXmlSchema_load2()
 {
-  QXmlSchema * obj = ( QXmlSchema * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
-    RBOOL( obj->load( PQIODEVICE( 1 ), ISNIL( 2 )? QUrl() : *( QUrl * ) Qt4xHb::itemGetPtr( 2 ) ) );
+    RBOOL( obj->load( PQIODEVICE( 1 ), ISNIL( 2 ) ? QUrl() : *static_cast< QUrl * >( Qt4xHb::itemGetPtr( 2 ) ) ) );
   }
 }
 
@@ -197,11 +197,11 @@ bool load( const QByteArray & data, const QUrl & documentUri = QUrl() )
 */
 void QXmlSchema_load3()
 {
-  QXmlSchema * obj = ( QXmlSchema * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
-    RBOOL( obj->load( *PQBYTEARRAY( 1 ), ISNIL( 2 )? QUrl() : *( QUrl * ) Qt4xHb::itemGetPtr( 2 ) ) );
+    RBOOL( obj->load( *PQBYTEARRAY( 1 ), ISNIL( 2 ) ? QUrl() : *static_cast< QUrl * >( Qt4xHb::itemGetPtr( 2 ) ) ) );
   }
 }
 
@@ -230,7 +230,7 @@ QAbstractMessageHandler * messageHandler() const
 */
 HB_FUNC_STATIC( QXMLSCHEMA_MESSAGEHANDLER )
 {
-  QXmlSchema * obj = ( QXmlSchema * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -255,7 +255,7 @@ QXmlNamePool namePool() const
 */
 HB_FUNC_STATIC( QXMLSCHEMA_NAMEPOOL )
 {
-  QXmlSchema * obj = ( QXmlSchema * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -280,7 +280,7 @@ QNetworkAccessManager * networkAccessManager() const
 */
 HB_FUNC_STATIC( QXMLSCHEMA_NETWORKACCESSMANAGER )
 {
-  QXmlSchema * obj = ( QXmlSchema * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -305,7 +305,7 @@ void setMessageHandler( QAbstractMessageHandler * handler )
 */
 HB_FUNC_STATIC( QXMLSCHEMA_SETMESSAGEHANDLER )
 {
-  QXmlSchema * obj = ( QXmlSchema * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -331,7 +331,7 @@ void setNetworkAccessManager( QNetworkAccessManager * manager )
 */
 HB_FUNC_STATIC( QXMLSCHEMA_SETNETWORKACCESSMANAGER )
 {
-  QXmlSchema * obj = ( QXmlSchema * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -357,7 +357,7 @@ void setUriResolver( const QAbstractUriResolver * resolver )
 */
 HB_FUNC_STATIC( QXMLSCHEMA_SETURIRESOLVER )
 {
-  QXmlSchema * obj = ( QXmlSchema * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -383,7 +383,7 @@ const QAbstractUriResolver * uriResolver() const
 */
 HB_FUNC_STATIC( QXMLSCHEMA_URIRESOLVER )
 {
-  QXmlSchema * obj = ( QXmlSchema * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

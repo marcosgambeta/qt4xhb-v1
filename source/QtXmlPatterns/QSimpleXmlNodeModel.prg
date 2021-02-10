@@ -51,7 +51,7 @@ RETURN
 
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_DELETE )
 {
-  QSimpleXmlNodeModel * obj = ( QSimpleXmlNodeModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSimpleXmlNodeModel * obj = static_cast< QSimpleXmlNodeModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -71,7 +71,7 @@ QXmlNamePool & namePool() const
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMEPOOL )
 {
-  QSimpleXmlNodeModel * obj = ( QSimpleXmlNodeModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSimpleXmlNodeModel * obj = static_cast< QSimpleXmlNodeModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -96,7 +96,7 @@ virtual QUrl baseUri( const QXmlNodeModelIndex & node ) const
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_BASEURI )
 {
-  QSimpleXmlNodeModel * obj = ( QSimpleXmlNodeModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSimpleXmlNodeModel * obj = static_cast< QSimpleXmlNodeModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -121,7 +121,7 @@ virtual QXmlNodeModelIndex elementById( const QXmlName & id ) const
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_ELEMENTBYID )
 {
-  QSimpleXmlNodeModel * obj = ( QSimpleXmlNodeModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSimpleXmlNodeModel * obj = static_cast< QSimpleXmlNodeModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -146,7 +146,7 @@ virtual QVector<QXmlName> namespaceBindings( const QXmlNodeModelIndex & node ) c
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMESPACEBINDINGS )
 {
-  QSimpleXmlNodeModel * obj = ( QSimpleXmlNodeModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSimpleXmlNodeModel * obj = static_cast< QSimpleXmlNodeModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMESPACEBINDINGS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QXmlName * ) new QXmlName( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QXmlName * >( new QXmlName( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -198,7 +198,7 @@ virtual QVector<QXmlNodeModelIndex> nodesByIdref( const QXmlName & idref ) const
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NODESBYIDREF )
 {
-  QSimpleXmlNodeModel * obj = ( QSimpleXmlNodeModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSimpleXmlNodeModel * obj = static_cast< QSimpleXmlNodeModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NODESBYIDREF )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QXmlNodeModelIndex * ) new QXmlNodeModelIndex( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QXmlNodeModelIndex * >( new QXmlNodeModelIndex( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -250,7 +250,7 @@ virtual QString stringValue( const QXmlNodeModelIndex & node ) const
 */
 HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_STRINGVALUE )
 {
-  QSimpleXmlNodeModel * obj = ( QSimpleXmlNodeModel * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSimpleXmlNodeModel * obj = static_cast< QSimpleXmlNodeModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

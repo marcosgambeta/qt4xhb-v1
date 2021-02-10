@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QXMLITEM_NEW )
 
 HB_FUNC_STATIC( QXMLITEM_DELETE )
 {
-  QXmlItem * obj = ( QXmlItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlItem * obj = static_cast< QXmlItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -138,7 +138,7 @@ bool isAtomicValue() const
 */
 HB_FUNC_STATIC( QXMLITEM_ISATOMICVALUE )
 {
-  QXmlItem * obj = ( QXmlItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlItem * obj = static_cast< QXmlItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -162,7 +162,7 @@ bool isNode() const
 */
 HB_FUNC_STATIC( QXMLITEM_ISNODE )
 {
-  QXmlItem * obj = ( QXmlItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlItem * obj = static_cast< QXmlItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -186,7 +186,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QXMLITEM_ISNULL )
 {
-  QXmlItem * obj = ( QXmlItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlItem * obj = static_cast< QXmlItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -210,7 +210,7 @@ QVariant toAtomicValue() const
 */
 HB_FUNC_STATIC( QXMLITEM_TOATOMICVALUE )
 {
-  QXmlItem * obj = ( QXmlItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlItem * obj = static_cast< QXmlItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -235,7 +235,7 @@ QXmlNodeModelIndex toNodeModelIndex() const
 */
 HB_FUNC_STATIC( QXMLITEM_TONODEMODELINDEX )
 {
-  QXmlItem * obj = ( QXmlItem * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlItem * obj = static_cast< QXmlItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QXMLITEM_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QXMLITEM_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

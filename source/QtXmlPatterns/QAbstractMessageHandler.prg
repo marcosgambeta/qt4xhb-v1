@@ -42,7 +42,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTMESSAGEHANDLER_DELETE )
 {
-  QAbstractMessageHandler * obj = ( QAbstractMessageHandler * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractMessageHandler * obj = static_cast< QAbstractMessageHandler * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -64,7 +64,7 @@ void message( QtMsgType type, const QString & description, const QUrl & identifi
 */
 HB_FUNC_STATIC( QABSTRACTMESSAGEHANDLER_MESSAGE )
 {
-  QAbstractMessageHandler * obj = ( QAbstractMessageHandler * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractMessageHandler * obj = static_cast< QAbstractMessageHandler * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QABSTRACTMESSAGEHANDLER_MESSAGE )
     if( ISBETWEEN( 2, 4 ) && ISNUM( 1 ) && ISCHAR( 2 ) && ( ISQURL( 3 ) || ISNIL( 3 ) ) && ( ISQSOURCELOCATION( 4 ) || ISNIL( 4 ) ) )
     {
 #endif
-      obj->message( ( QtMsgType ) hb_parni( 1 ), PQSTRING( 2 ), ISNIL( 3 )? QUrl() : *( QUrl * ) Qt4xHb::itemGetPtr( 3 ), ISNIL( 4 )? QSourceLocation() : *( QSourceLocation * ) Qt4xHb::itemGetPtr( 4 ) );
+      obj->message( ( QtMsgType ) hb_parni( 1 ), PQSTRING( 2 ), ISNIL( 3 ) ? QUrl() : *static_cast< QUrl * >( Qt4xHb::itemGetPtr( 3 ) ), ISNIL( 4 ) ? QSourceLocation() : *static_cast< QSourceLocation * >( Qt4xHb::itemGetPtr( 4 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
