@@ -28,7 +28,7 @@ void QCoreApplicationSlots::aboutToQuit()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QCOREAPPLICATION" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QCOREAPPLICATION" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,7 +38,7 @@ void QCoreApplicationSlots::aboutToQuit()
 
 void QCoreApplicationSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCoreApplication * obj = ( QCoreApplication * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCoreApplication * obj = static_cast< QCoreApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

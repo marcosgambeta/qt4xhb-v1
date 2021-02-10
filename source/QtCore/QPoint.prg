@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QPOINT_NEW )
 
 HB_FUNC_STATIC( QPOINT_DELETE )
 {
-  QPoint * obj = ( QPoint * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPoint * obj = static_cast< QPoint * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -109,7 +109,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QPOINT_ISNULL )
 {
-  QPoint * obj = ( QPoint * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPoint * obj = static_cast< QPoint * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -133,7 +133,7 @@ int manhattanLength() const
 */
 HB_FUNC_STATIC( QPOINT_MANHATTANLENGTH )
 {
-  QPoint * obj = ( QPoint * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPoint * obj = static_cast< QPoint * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -157,7 +157,7 @@ void setX( int x )
 */
 HB_FUNC_STATIC( QPOINT_SETX )
 {
-  QPoint * obj = ( QPoint * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPoint * obj = static_cast< QPoint * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -183,7 +183,7 @@ void setY( int y )
 */
 HB_FUNC_STATIC( QPOINT_SETY )
 {
-  QPoint * obj = ( QPoint * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPoint * obj = static_cast< QPoint * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -209,7 +209,7 @@ int x() const
 */
 HB_FUNC_STATIC( QPOINT_X )
 {
-  QPoint * obj = ( QPoint * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPoint * obj = static_cast< QPoint * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -233,7 +233,7 @@ int y() const
 */
 HB_FUNC_STATIC( QPOINT_Y )
 {
-  QPoint * obj = ( QPoint * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPoint * obj = static_cast< QPoint * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QPOINT_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QPOINT_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

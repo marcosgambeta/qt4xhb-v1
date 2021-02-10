@@ -124,7 +124,7 @@ QDir( const QString & path, const QString & nameFilter, QDir::SortFlags sort = Q
 */
 void QDir_new3()
 {
-  QDir * obj = new QDir( PQSTRING( 1 ), PQSTRING( 2 ), ISNIL( 3 )? ( QDir::SortFlags ) QDir::SortFlags( QDir::Name | QDir::IgnoreCase ) : ( QDir::SortFlags ) hb_parni( 3 ), ISNIL( 4 )? ( QDir::Filters ) QDir::AllEntries : ( QDir::Filters ) hb_parni( 4 ) );
+  QDir * obj = new QDir( PQSTRING( 1 ), PQSTRING( 2 ), ISNIL( 3 ) ? ( QDir::SortFlags ) QDir::SortFlags( QDir::Name | QDir::IgnoreCase ) : ( QDir::SortFlags ) hb_parni( 3 ), ISNIL( 4 ) ? ( QDir::Filters ) QDir::AllEntries : ( QDir::Filters ) hb_parni( 4 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QDIR_NEW )
 
 HB_FUNC_STATIC( QDIR_DELETE )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -170,7 +170,7 @@ QString absoluteFilePath( const QString & fileName ) const
 */
 HB_FUNC_STATIC( QDIR_ABSOLUTEFILEPATH )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -194,7 +194,7 @@ QString absolutePath() const
 */
 HB_FUNC_STATIC( QDIR_ABSOLUTEPATH )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -218,7 +218,7 @@ QString canonicalPath() const
 */
 HB_FUNC_STATIC( QDIR_CANONICALPATH )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -242,7 +242,7 @@ bool cd( const QString & dirName )
 */
 HB_FUNC_STATIC( QDIR_CD )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -266,7 +266,7 @@ bool cdUp()
 */
 HB_FUNC_STATIC( QDIR_CDUP )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -290,7 +290,7 @@ uint count() const
 */
 HB_FUNC_STATIC( QDIR_COUNT )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -314,7 +314,7 @@ QString dirName() const
 */
 HB_FUNC_STATIC( QDIR_DIRNAME )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -338,11 +338,11 @@ QFileInfoList entryInfoList( const QStringList & nameFilters, QDir::Filters filt
 */
 void QDir_entryInfoList1()
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
-    QFileInfoList list = obj->entryInfoList( PQSTRINGLIST( 1 ), ISNIL( 2 )? ( QDir::Filters ) QDir::NoFilter : ( QDir::Filters ) hb_parni( 2 ), ISNIL( 3 )? ( QDir::SortFlags ) QDir::NoSort : ( QDir::SortFlags ) hb_parni( 3 ) );
+    QFileInfoList list = obj->entryInfoList( PQSTRINGLIST( 1 ), ISNIL( 2 ) ? ( QDir::Filters ) QDir::NoFilter : ( QDir::Filters ) hb_parni( 2 ), ISNIL( 3 ) ? ( QDir::SortFlags ) QDir::NoSort : ( QDir::SortFlags ) hb_parni( 3 ) );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
     PHB_ITEM pArray = hb_itemArrayNew( 0 );
     if( pDynSym )
@@ -355,7 +355,7 @@ void QDir_entryInfoList1()
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, ( QFileInfo * ) new QFileInfo( list[i] ) );
+        hb_itemPutPtr( pItem, static_cast< QFileInfo * >( new QFileInfo( list[i] ) ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -379,11 +379,11 @@ QFileInfoList entryInfoList( QDir::Filters filters = QDir::NoFilter, QDir::SortF
 */
 void QDir_entryInfoList2()
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
-    QFileInfoList list = obj->entryInfoList( ISNIL( 1 )? ( QDir::Filters ) QDir::NoFilter : ( QDir::Filters ) hb_parni( 1 ), ISNIL( 2 )? ( QDir::SortFlags ) QDir::NoSort : ( QDir::SortFlags ) hb_parni( 2 ) );
+    QFileInfoList list = obj->entryInfoList( ISNIL( 1 ) ? ( QDir::Filters ) QDir::NoFilter : ( QDir::Filters ) hb_parni( 1 ), ISNIL( 2 ) ? ( QDir::SortFlags ) QDir::NoSort : ( QDir::SortFlags ) hb_parni( 2 ) );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
     PHB_ITEM pArray = hb_itemArrayNew( 0 );
     if( pDynSym )
@@ -396,7 +396,7 @@ void QDir_entryInfoList2()
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, ( QFileInfo * ) new QFileInfo( list[i] ) );
+        hb_itemPutPtr( pItem, static_cast< QFileInfo * >( new QFileInfo( list[i] ) ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -436,11 +436,11 @@ QStringList entryList( const QStringList & nameFilters, QDir::Filters filters = 
 */
 void QDir_entryList1()
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
-    RQSTRINGLIST( obj->entryList( PQSTRINGLIST( 1 ), ISNIL( 2 )? ( QDir::Filters ) QDir::NoFilter : ( QDir::Filters ) hb_parni( 2 ), ISNIL( 3 )? ( QDir::SortFlags ) QDir::NoSort : ( QDir::SortFlags ) hb_parni( 3 ) ) );
+    RQSTRINGLIST( obj->entryList( PQSTRINGLIST( 1 ), ISNIL( 2 ) ? ( QDir::Filters ) QDir::NoFilter : ( QDir::Filters ) hb_parni( 2 ), ISNIL( 3 ) ? ( QDir::SortFlags ) QDir::NoSort : ( QDir::SortFlags ) hb_parni( 3 ) ) );
   }
 }
 
@@ -449,11 +449,11 @@ QStringList entryList( QDir::Filters filters = QDir::NoFilter, QDir::SortFlags s
 */
 void QDir_entryList2()
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
-    RQSTRINGLIST( obj->entryList( ISNIL( 1 )? ( QDir::Filters ) QDir::NoFilter : ( QDir::Filters ) hb_parni( 1 ), ISNIL( 2 )? ( QDir::SortFlags ) QDir::NoSort : ( QDir::SortFlags ) hb_parni( 2 ) ) );
+    RQSTRINGLIST( obj->entryList( ISNIL( 1 ) ? ( QDir::Filters ) QDir::NoFilter : ( QDir::Filters ) hb_parni( 1 ), ISNIL( 2 ) ? ( QDir::SortFlags ) QDir::NoSort : ( QDir::SortFlags ) hb_parni( 2 ) ) );
   }
 }
 
@@ -478,7 +478,7 @@ bool exists( const QString & name ) const
 */
 void QDir_exists1()
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -491,7 +491,7 @@ bool exists() const
 */
 void QDir_exists2()
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -520,7 +520,7 @@ QString filePath( const QString & fileName ) const
 */
 HB_FUNC_STATIC( QDIR_FILEPATH )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -544,7 +544,7 @@ QDir::Filters filter() const
 */
 HB_FUNC_STATIC( QDIR_FILTER )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -568,7 +568,7 @@ bool isAbsolute() const
 */
 HB_FUNC_STATIC( QDIR_ISABSOLUTE )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -592,7 +592,7 @@ bool isReadable() const
 */
 HB_FUNC_STATIC( QDIR_ISREADABLE )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -616,7 +616,7 @@ bool isRelative() const
 */
 HB_FUNC_STATIC( QDIR_ISRELATIVE )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -640,7 +640,7 @@ bool isRoot() const
 */
 HB_FUNC_STATIC( QDIR_ISROOT )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -664,7 +664,7 @@ bool makeAbsolute()
 */
 HB_FUNC_STATIC( QDIR_MAKEABSOLUTE )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -688,7 +688,7 @@ bool mkdir( const QString & dirName ) const
 */
 HB_FUNC_STATIC( QDIR_MKDIR )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -712,7 +712,7 @@ bool mkpath( const QString & dirPath ) const
 */
 HB_FUNC_STATIC( QDIR_MKPATH )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -736,7 +736,7 @@ QStringList nameFilters() const
 */
 HB_FUNC_STATIC( QDIR_NAMEFILTERS )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -760,7 +760,7 @@ QString path() const
 */
 HB_FUNC_STATIC( QDIR_PATH )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -784,7 +784,7 @@ void refresh() const
 */
 HB_FUNC_STATIC( QDIR_REFRESH )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -810,7 +810,7 @@ QString relativeFilePath( const QString & fileName ) const
 */
 HB_FUNC_STATIC( QDIR_RELATIVEFILEPATH )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -834,7 +834,7 @@ bool remove( const QString & fileName )
 */
 HB_FUNC_STATIC( QDIR_REMOVE )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -858,7 +858,7 @@ bool rename( const QString & oldName, const QString & newName )
 */
 HB_FUNC_STATIC( QDIR_RENAME )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -882,7 +882,7 @@ bool rmdir( const QString & dirName ) const
 */
 HB_FUNC_STATIC( QDIR_RMDIR )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -906,7 +906,7 @@ bool rmpath( const QString & dirPath ) const
 */
 HB_FUNC_STATIC( QDIR_RMPATH )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -930,7 +930,7 @@ void setFilter( QDir::Filters filters )
 */
 HB_FUNC_STATIC( QDIR_SETFILTER )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -956,7 +956,7 @@ void setNameFilters( const QStringList & nameFilters )
 */
 HB_FUNC_STATIC( QDIR_SETNAMEFILTERS )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -982,7 +982,7 @@ void setPath( const QString & path )
 */
 HB_FUNC_STATIC( QDIR_SETPATH )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1008,7 +1008,7 @@ void setSorting( QDir::SortFlags sort )
 */
 HB_FUNC_STATIC( QDIR_SETSORTING )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1034,7 +1034,7 @@ QDir::SortFlags sorting() const
 */
 HB_FUNC_STATIC( QDIR_SORTING )
 {
-  QDir * obj = ( QDir * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDir * obj = static_cast< QDir * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1154,7 +1154,7 @@ HB_FUNC_STATIC( QDIR_DRIVES )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, ( QFileInfo * ) new QFileInfo( list[i] ) );
+        hb_itemPutPtr( pItem, static_cast< QFileInfo * >( new QFileInfo( list[i] ) ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -1491,7 +1491,7 @@ HB_FUNC_STATIC( QDIR_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -1500,7 +1500,7 @@ HB_FUNC_STATIC( QDIR_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

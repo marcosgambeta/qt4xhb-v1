@@ -60,7 +60,7 @@ QEasingCurve( QEasingCurve::Type type = QEasingCurve::Linear )
 */
 void QEasingCurve_new1()
 {
-  QEasingCurve * obj = new QEasingCurve( ISNIL( 1 )? ( QEasingCurve::Type ) QEasingCurve::Linear : ( QEasingCurve::Type ) hb_parni( 1 ) );
+  QEasingCurve * obj = new QEasingCurve( ISNIL( 1 ) ? ( QEasingCurve::Type ) QEasingCurve::Linear : ( QEasingCurve::Type ) hb_parni( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QEASINGCURVE_NEW )
 
 HB_FUNC_STATIC( QEASINGCURVE_DELETE )
 {
-  QEasingCurve * obj = ( QEasingCurve * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QEasingCurve * obj = static_cast< QEasingCurve * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -111,7 +111,7 @@ qreal amplitude() const
 */
 HB_FUNC_STATIC( QEASINGCURVE_AMPLITUDE )
 {
-  QEasingCurve * obj = ( QEasingCurve * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QEasingCurve * obj = static_cast< QEasingCurve * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -135,7 +135,7 @@ qreal overshoot() const
 */
 HB_FUNC_STATIC( QEASINGCURVE_OVERSHOOT )
 {
-  QEasingCurve * obj = ( QEasingCurve * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QEasingCurve * obj = static_cast< QEasingCurve * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -159,7 +159,7 @@ qreal period() const
 */
 HB_FUNC_STATIC( QEASINGCURVE_PERIOD )
 {
-  QEasingCurve * obj = ( QEasingCurve * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QEasingCurve * obj = static_cast< QEasingCurve * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -183,7 +183,7 @@ void setAmplitude( qreal amplitude )
 */
 HB_FUNC_STATIC( QEASINGCURVE_SETAMPLITUDE )
 {
-  QEasingCurve * obj = ( QEasingCurve * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QEasingCurve * obj = static_cast< QEasingCurve * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -209,7 +209,7 @@ void setOvershoot( qreal overshoot )
 */
 HB_FUNC_STATIC( QEASINGCURVE_SETOVERSHOOT )
 {
-  QEasingCurve * obj = ( QEasingCurve * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QEasingCurve * obj = static_cast< QEasingCurve * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -235,7 +235,7 @@ void setPeriod( qreal period )
 */
 HB_FUNC_STATIC( QEASINGCURVE_SETPERIOD )
 {
-  QEasingCurve * obj = ( QEasingCurve * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QEasingCurve * obj = static_cast< QEasingCurve * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -261,7 +261,7 @@ void setType( QEasingCurve::Type type )
 */
 HB_FUNC_STATIC( QEASINGCURVE_SETTYPE )
 {
-  QEasingCurve * obj = ( QEasingCurve * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QEasingCurve * obj = static_cast< QEasingCurve * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -287,7 +287,7 @@ QEasingCurve::Type type() const
 */
 HB_FUNC_STATIC( QEASINGCURVE_TYPE )
 {
-  QEasingCurve * obj = ( QEasingCurve * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QEasingCurve * obj = static_cast< QEasingCurve * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QEASINGCURVE_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QEASINGCURVE_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

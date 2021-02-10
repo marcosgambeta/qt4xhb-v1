@@ -73,7 +73,7 @@ bool canEncode( QChar ) const
 */
 void QTextCodec_canEncode1()
 {
-  QTextCodec * obj = ( QTextCodec * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCodec * obj = static_cast< QTextCodec * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -86,7 +86,7 @@ bool canEncode( const QString & ) const
 */
 void QTextCodec_canEncode2()
 {
-  QTextCodec * obj = ( QTextCodec * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCodec * obj = static_cast< QTextCodec * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -115,7 +115,7 @@ QString toUnicode( const QByteArray & ) const
 */
 void QTextCodec_toUnicode1()
 {
-  QTextCodec * obj = ( QTextCodec * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCodec * obj = static_cast< QTextCodec * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -128,7 +128,7 @@ QString toUnicode( const char * chars ) const
 */
 void QTextCodec_toUnicode2()
 {
-  QTextCodec * obj = ( QTextCodec * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCodec * obj = static_cast< QTextCodec * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -161,7 +161,7 @@ QByteArray fromUnicode( const QString & uc ) const
 */
 void QTextCodec_fromUnicode1()
 {
-  QTextCodec * obj = ( QTextCodec * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCodec * obj = static_cast< QTextCodec * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -191,7 +191,7 @@ QTextDecoder * makeDecoder() const
 */
 void QTextCodec_makeDecoder1()
 {
-  QTextCodec * obj = ( QTextCodec * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCodec * obj = static_cast< QTextCodec * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -205,7 +205,7 @@ QTextDecoder * makeDecoder( QTextCodec::ConversionFlags flags ) const
 */
 void QTextCodec_makeDecoder2()
 {
-  QTextCodec * obj = ( QTextCodec * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCodec * obj = static_cast< QTextCodec * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -235,7 +235,7 @@ QTextEncoder * makeEncoder() const
 */
 void QTextCodec_makeEncoder1()
 {
-  QTextCodec * obj = ( QTextCodec * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCodec * obj = static_cast< QTextCodec * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -249,7 +249,7 @@ QTextEncoder * makeEncoder( QTextCodec::ConversionFlags flags ) const
 */
 void QTextCodec_makeEncoder2()
 {
-  QTextCodec * obj = ( QTextCodec * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCodec * obj = static_cast< QTextCodec * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -279,7 +279,7 @@ virtual QByteArray name() const = 0
 */
 HB_FUNC_STATIC( QTEXTCODEC_NAME )
 {
-  QTextCodec * obj = ( QTextCodec * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCodec * obj = static_cast< QTextCodec * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -304,7 +304,7 @@ virtual QList<QByteArray> aliases() const
 */
 HB_FUNC_STATIC( QTEXTCODEC_ALIASES )
 {
-  QTextCodec * obj = ( QTextCodec * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCodec * obj = static_cast< QTextCodec * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QTEXTCODEC_ALIASES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QByteArray * ) new QByteArray( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QByteArray * >( new QByteArray( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -356,7 +356,7 @@ virtual int mibEnum() const = 0
 */
 HB_FUNC_STATIC( QTEXTCODEC_MIBENUM )
 {
-  QTextCodec * obj = ( QTextCodec * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextCodec * obj = static_cast< QTextCodec * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QTEXTCODEC_AVAILABLECODECS )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, ( QByteArray * ) new QByteArray( list[i] ) );
+        hb_itemPutPtr( pItem, static_cast< QByteArray * >( new QByteArray( list[i] ) ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -699,7 +699,7 @@ HB_FUNC_STATIC( QTEXTCODEC_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -708,7 +708,7 @@ HB_FUNC_STATIC( QTEXTCODEC_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

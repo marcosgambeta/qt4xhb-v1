@@ -28,7 +28,7 @@ void QAbstractAnimationSlots::currentLoopChanged( int currentLoop )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTANIMATION" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTANIMATION" );
     PHB_ITEM pcurrentLoop = hb_itemPutNI( NULL, currentLoop );
 
     hb_vmEvalBlockV( cb, 2, psender, pcurrentLoop );
@@ -46,8 +46,8 @@ void QAbstractAnimationSlots::directionChanged( QAbstractAnimation::Direction ne
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTANIMATION" );
-    PHB_ITEM pnewDirection = hb_itemPutNI( NULL, (int) newDirection );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTANIMATION" );
+    PHB_ITEM pnewDirection = hb_itemPutNI( NULL, ( int ) newDirection );
 
     hb_vmEvalBlockV( cb, 2, psender, pnewDirection );
 
@@ -64,7 +64,7 @@ void QAbstractAnimationSlots::finished()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTANIMATION" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTANIMATION" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -80,9 +80,9 @@ void QAbstractAnimationSlots::stateChanged( QAbstractAnimation::State newState, 
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTANIMATION" );
-    PHB_ITEM pnewState = hb_itemPutNI( NULL, (int) newState );
-    PHB_ITEM poldState = hb_itemPutNI( NULL, (int) oldState );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTANIMATION" );
+    PHB_ITEM pnewState = hb_itemPutNI( NULL, ( int ) newState );
+    PHB_ITEM poldState = hb_itemPutNI( NULL, ( int ) oldState );
 
     hb_vmEvalBlockV( cb, 3, psender, pnewState, poldState );
 
@@ -94,7 +94,7 @@ void QAbstractAnimationSlots::stateChanged( QAbstractAnimation::State newState, 
 
 void QAbstractAnimationSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractAnimation * obj = ( QAbstractAnimation * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractAnimation * obj = static_cast< QAbstractAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

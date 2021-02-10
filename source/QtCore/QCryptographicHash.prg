@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_NEW )
 
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_DELETE )
 {
-  QCryptographicHash * obj = ( QCryptographicHash * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCryptographicHash * obj = static_cast< QCryptographicHash * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -90,7 +90,7 @@ void addData( const char * data, int length )
 */
 void QCryptographicHash_addData1()
 {
-  QCryptographicHash * obj = ( QCryptographicHash * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCryptographicHash * obj = static_cast< QCryptographicHash * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -105,7 +105,7 @@ void addData( const QByteArray & data )
 */
 void QCryptographicHash_addData2()
 {
-  QCryptographicHash * obj = ( QCryptographicHash * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCryptographicHash * obj = static_cast< QCryptographicHash * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -136,7 +136,7 @@ void reset()
 */
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESET )
 {
-  QCryptographicHash * obj = ( QCryptographicHash * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCryptographicHash * obj = static_cast< QCryptographicHash * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -162,7 +162,7 @@ QByteArray result() const
 */
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_RESULT )
 {
-  QCryptographicHash * obj = ( QCryptographicHash * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCryptographicHash * obj = static_cast< QCryptographicHash * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

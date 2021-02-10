@@ -28,7 +28,7 @@ void QAbstractStateSlots::entered()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTSTATE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTSTATE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QAbstractStateSlots::exited()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTSTATE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTSTATE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -54,7 +54,7 @@ void QAbstractStateSlots::exited()
 
 void QAbstractStateSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractState * obj = ( QAbstractState * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractState * obj = static_cast< QAbstractState * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

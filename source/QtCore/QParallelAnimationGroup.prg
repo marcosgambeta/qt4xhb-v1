@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_NEW )
 
 HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DELETE )
 {
-  QParallelAnimationGroup * obj = ( QParallelAnimationGroup * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QParallelAnimationGroup * obj = static_cast< QParallelAnimationGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -81,7 +81,7 @@ virtual int duration() const
 */
 HB_FUNC_STATIC( QPARALLELANIMATIONGROUP_DURATION )
 {
-  QParallelAnimationGroup * obj = ( QParallelAnimationGroup * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QParallelAnimationGroup * obj = static_cast< QParallelAnimationGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

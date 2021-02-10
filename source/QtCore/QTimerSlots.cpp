@@ -28,7 +28,7 @@ void QTimerSlots::timeout()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTIMER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTIMER" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,7 +38,7 @@ void QTimerSlots::timeout()
 
 void QTimerSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTimer * obj = ( QTimer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimer * obj = static_cast< QTimer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

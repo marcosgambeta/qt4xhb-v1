@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QPOINTF_NEW )
 
 HB_FUNC_STATIC( QPOINTF_DELETE )
 {
-  QPointF * obj = ( QPointF * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPointF * obj = static_cast< QPointF * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -124,7 +124,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QPOINTF_ISNULL )
 {
-  QPointF * obj = ( QPointF * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPointF * obj = static_cast< QPointF * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -148,7 +148,7 @@ qreal manhattanLength() const
 */
 HB_FUNC_STATIC( QPOINTF_MANHATTANLENGTH )
 {
-  QPointF * obj = ( QPointF * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPointF * obj = static_cast< QPointF * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -172,7 +172,7 @@ void setX( qreal x )
 */
 HB_FUNC_STATIC( QPOINTF_SETX )
 {
-  QPointF * obj = ( QPointF * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPointF * obj = static_cast< QPointF * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -198,7 +198,7 @@ void setY( qreal y )
 */
 HB_FUNC_STATIC( QPOINTF_SETY )
 {
-  QPointF * obj = ( QPointF * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPointF * obj = static_cast< QPointF * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -224,7 +224,7 @@ QPoint toPoint() const
 */
 HB_FUNC_STATIC( QPOINTF_TOPOINT )
 {
-  QPointF * obj = ( QPointF * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPointF * obj = static_cast< QPointF * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -249,7 +249,7 @@ qreal x() const
 */
 HB_FUNC_STATIC( QPOINTF_X )
 {
-  QPointF * obj = ( QPointF * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPointF * obj = static_cast< QPointF * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -273,7 +273,7 @@ qreal y() const
 */
 HB_FUNC_STATIC( QPOINTF_Y )
 {
-  QPointF * obj = ( QPointF * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPointF * obj = static_cast< QPointF * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QPOINTF_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QPOINTF_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

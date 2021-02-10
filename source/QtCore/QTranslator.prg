@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QTRANSLATOR_NEW )
 
 HB_FUNC_STATIC( QTRANSLATOR_DELETE )
 {
-  QTranslator * obj = ( QTranslator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTranslator * obj = static_cast< QTranslator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -85,7 +85,7 @@ virtual bool isEmpty() const
 */
 HB_FUNC_STATIC( QTRANSLATOR_ISEMPTY )
 {
-  QTranslator * obj = ( QTranslator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTranslator * obj = static_cast< QTranslator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -109,7 +109,7 @@ bool load( const QString & filename, const QString & directory = QString(), cons
 */
 void QTranslator_load1()
 {
-  QTranslator * obj = ( QTranslator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTranslator * obj = static_cast< QTranslator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -122,7 +122,7 @@ bool load( const QLocale & locale, const QString & filename, const QString & pre
 */
 void QTranslator_load2()
 {
-  QTranslator * obj = ( QTranslator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTranslator * obj = static_cast< QTranslator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -151,12 +151,12 @@ virtual QString translate( const char * context, const char * sourceText, const 
 */
 HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
 {
-  QTranslator * obj = ( QTranslator * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTranslator * obj = static_cast< QTranslator * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 4 ) && ISCHAR( 1 ) && ISCHAR( 2 ) && ISOPTCHAR( 3 ) && ISOPTNUM( 4 ) )
+    if( ISBETWEEN( 2, 4 ) && ISCHAR( 1 ) && ISCHAR( 2 ) && ( ISCHAR( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
     {
 #endif
       RQSTRING( obj->translate( PCONSTCHAR( 1 ), PCONSTCHAR( 2 ), OPCONSTCHAR( 3, 0 ), OPINT( 4, -1 ) ) );

@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_NEW )
 
 HB_FUNC_STATIC( QCOREAPPLICATION_DELETE )
 {
-  QCoreApplication * obj = ( QCoreApplication * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCoreApplication * obj = static_cast< QCoreApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -117,7 +117,7 @@ bool filterEvent( void * message, long * result )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_FILTEREVENT )
 {
-  QCoreApplication * obj = ( QCoreApplication * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCoreApplication * obj = static_cast< QCoreApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_FILTEREVENT )
     {
 #endif
       long par2;
-      RBOOL( obj->filterEvent( ( void * ) hb_parptr( 1 ), &par2 ) );
+      RBOOL( obj->filterEvent( static_cast< void * >( hb_parptr( 1 ) ), &par2 ) );
       hb_stornl( par2, 2 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -143,7 +143,7 @@ virtual bool notify( QObject * receiver, QEvent * event )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_NOTIFY )
 {
-  QCoreApplication * obj = ( QCoreApplication * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCoreApplication * obj = static_cast< QCoreApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -167,7 +167,7 @@ void quit()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_QUIT )
 {
-  QCoreApplication * obj = ( QCoreApplication * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QCoreApplication * obj = static_cast< QCoreApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -367,7 +367,7 @@ static void exit( int returnCode = 0 )
 HB_FUNC_STATIC( QCOREAPPLICATION_EXIT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
   {
 #endif
     QCoreApplication::exit( OPINT( 1, 0 ) );
@@ -564,7 +564,7 @@ static void processEvents( QEventLoop::ProcessEventsFlags flags = QEventLoop::Al
 void QCoreApplication_processEvents1()
 {
 
-  QCoreApplication::processEvents( ISNIL( 1 )? ( QEventLoop::ProcessEventsFlags ) QEventLoop::AllEvents : ( QEventLoop::ProcessEventsFlags ) hb_parni( 1 ) );
+  QCoreApplication::processEvents( ISNIL( 1 ) ? ( QEventLoop::ProcessEventsFlags ) QEventLoop::AllEvents : ( QEventLoop::ProcessEventsFlags ) hb_parni( 1 ) );
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -912,7 +912,7 @@ static QString translate( const char * context, const char * sourceText, const c
 void QCoreApplication_translate2()
 {
 
-  RQSTRING( QCoreApplication::translate( PCONSTCHAR( 1 ), PCONSTCHAR( 2 ), OPCONSTCHAR( 3, 0 ), ISNIL( 4 )? ( QCoreApplication::Encoding ) QCoreApplication::CodecForTr : ( QCoreApplication::Encoding ) hb_parni( 4 ) ) );
+  RQSTRING( QCoreApplication::translate( PCONSTCHAR( 1 ), PCONSTCHAR( 2 ), OPCONSTCHAR( 3, 0 ), ISNIL( 4 ) ? ( QCoreApplication::Encoding ) QCoreApplication::CodecForTr : ( QCoreApplication::Encoding ) hb_parni( 4 ) ) );
 }
 
 HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )

@@ -56,7 +56,7 @@ QSemaphore( int n = 0 )
 */
 HB_FUNC_STATIC( QSEMAPHORE_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
   {
     QSemaphore * obj = new QSemaphore( OPINT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, true );
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QSEMAPHORE_NEW )
 
 HB_FUNC_STATIC( QSEMAPHORE_DELETE )
 {
-  QSemaphore * obj = ( QSemaphore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSemaphore * obj = static_cast< QSemaphore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -89,12 +89,12 @@ void acquire( int n = 1 )
 */
 HB_FUNC_STATIC( QSEMAPHORE_ACQUIRE )
 {
-  QSemaphore * obj = ( QSemaphore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSemaphore * obj = static_cast< QSemaphore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
+    if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
       obj->acquire( OPINT( 1, 1 ) );
@@ -115,7 +115,7 @@ int available() const
 */
 HB_FUNC_STATIC( QSEMAPHORE_AVAILABLE )
 {
-  QSemaphore * obj = ( QSemaphore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSemaphore * obj = static_cast< QSemaphore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -139,12 +139,12 @@ void release( int n = 1 )
 */
 HB_FUNC_STATIC( QSEMAPHORE_RELEASE )
 {
-  QSemaphore * obj = ( QSemaphore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSemaphore * obj = static_cast< QSemaphore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
+    if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
       obj->release( OPINT( 1, 1 ) );
@@ -165,7 +165,7 @@ bool tryAcquire( int n = 1 )
 */
 void QSemaphore_tryAcquire1()
 {
-  QSemaphore * obj = ( QSemaphore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSemaphore * obj = static_cast< QSemaphore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -178,7 +178,7 @@ bool tryAcquire( int n, int timeout )
 */
 void QSemaphore_tryAcquire2()
 {
-  QSemaphore * obj = ( QSemaphore * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSemaphore * obj = static_cast< QSemaphore * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QSEMAPHORE_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QSEMAPHORE_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

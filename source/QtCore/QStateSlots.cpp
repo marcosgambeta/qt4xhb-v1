@@ -28,7 +28,7 @@ void QStateSlots::finished()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSTATE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSTATE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QStateSlots::propertiesAssigned()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSTATE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSTATE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -54,7 +54,7 @@ void QStateSlots::propertiesAssigned()
 
 void QStateSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QState * obj = ( QState * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QState * obj = static_cast< QState * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

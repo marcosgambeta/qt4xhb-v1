@@ -28,7 +28,7 @@ void QStateMachineSlots::started()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSTATEMACHINE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSTATEMACHINE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QStateMachineSlots::stopped()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSTATEMACHINE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSTATEMACHINE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -54,7 +54,7 @@ void QStateMachineSlots::stopped()
 
 void QStateMachineSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QStateMachine * obj = ( QStateMachine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStateMachine * obj = static_cast< QStateMachine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

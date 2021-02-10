@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QATOMICINT_NEW )
 
 HB_FUNC_STATIC( QATOMICINT_DELETE )
 {
-  QAtomicInt * obj = ( QAtomicInt * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAtomicInt * obj = static_cast< QAtomicInt * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -125,7 +125,7 @@ bool deref()
 */
 HB_FUNC_STATIC( QATOMICINT_DEREF )
 {
-  QAtomicInt * obj = ( QAtomicInt * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAtomicInt * obj = static_cast< QAtomicInt * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -149,7 +149,7 @@ int fetchAndAddAcquire( int valueToAdd )
 */
 HB_FUNC_STATIC( QATOMICINT_FETCHANDADDACQUIRE )
 {
-  QAtomicInt * obj = ( QAtomicInt * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAtomicInt * obj = static_cast< QAtomicInt * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -173,7 +173,7 @@ int fetchAndAddOrdered( int valueToAdd )
 */
 HB_FUNC_STATIC( QATOMICINT_FETCHANDADDORDERED )
 {
-  QAtomicInt * obj = ( QAtomicInt * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAtomicInt * obj = static_cast< QAtomicInt * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -197,7 +197,7 @@ int fetchAndAddRelaxed( int valueToAdd )
 */
 HB_FUNC_STATIC( QATOMICINT_FETCHANDADDRELAXED )
 {
-  QAtomicInt * obj = ( QAtomicInt * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAtomicInt * obj = static_cast< QAtomicInt * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -221,7 +221,7 @@ int fetchAndAddRelease( int valueToAdd )
 */
 HB_FUNC_STATIC( QATOMICINT_FETCHANDADDRELEASE )
 {
-  QAtomicInt * obj = ( QAtomicInt * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAtomicInt * obj = static_cast< QAtomicInt * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -245,7 +245,7 @@ int fetchAndStoreAcquire( int newValue )
 */
 HB_FUNC_STATIC( QATOMICINT_FETCHANDSTOREACQUIRE )
 {
-  QAtomicInt * obj = ( QAtomicInt * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAtomicInt * obj = static_cast< QAtomicInt * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -269,7 +269,7 @@ int fetchAndStoreOrdered( int newValue )
 */
 HB_FUNC_STATIC( QATOMICINT_FETCHANDSTOREORDERED )
 {
-  QAtomicInt * obj = ( QAtomicInt * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAtomicInt * obj = static_cast< QAtomicInt * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -293,7 +293,7 @@ int fetchAndStoreRelaxed( int newValue )
 */
 HB_FUNC_STATIC( QATOMICINT_FETCHANDSTORERELAXED )
 {
-  QAtomicInt * obj = ( QAtomicInt * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAtomicInt * obj = static_cast< QAtomicInt * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -317,7 +317,7 @@ int fetchAndStoreRelease( int newValue )
 */
 HB_FUNC_STATIC( QATOMICINT_FETCHANDSTORERELEASE )
 {
-  QAtomicInt * obj = ( QAtomicInt * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAtomicInt * obj = static_cast< QAtomicInt * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -341,7 +341,7 @@ bool ref()
 */
 HB_FUNC_STATIC( QATOMICINT_REF )
 {
-  QAtomicInt * obj = ( QAtomicInt * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAtomicInt * obj = static_cast< QAtomicInt * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -365,7 +365,7 @@ bool testAndSetAcquire( int expectedValue, int newValue )
 */
 HB_FUNC_STATIC( QATOMICINT_TESTANDSETACQUIRE )
 {
-  QAtomicInt * obj = ( QAtomicInt * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAtomicInt * obj = static_cast< QAtomicInt * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -389,7 +389,7 @@ bool testAndSetOrdered( int expectedValue, int newValue )
 */
 HB_FUNC_STATIC( QATOMICINT_TESTANDSETORDERED )
 {
-  QAtomicInt * obj = ( QAtomicInt * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAtomicInt * obj = static_cast< QAtomicInt * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -413,7 +413,7 @@ bool testAndSetRelaxed( int expectedValue, int newValue )
 */
 HB_FUNC_STATIC( QATOMICINT_TESTANDSETRELAXED )
 {
-  QAtomicInt * obj = ( QAtomicInt * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAtomicInt * obj = static_cast< QAtomicInt * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -437,7 +437,7 @@ bool testAndSetRelease( int expectedValue, int newValue )
 */
 HB_FUNC_STATIC( QATOMICINT_TESTANDSETRELEASE )
 {
-  QAtomicInt * obj = ( QAtomicInt * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAtomicInt * obj = static_cast< QAtomicInt * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -614,7 +614,7 @@ HB_FUNC_STATIC( QATOMICINT_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QATOMICINT_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

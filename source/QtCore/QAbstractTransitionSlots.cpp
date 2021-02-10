@@ -28,7 +28,7 @@ void QAbstractTransitionSlots::triggered()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTTRANSITION" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTTRANSITION" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,7 +38,7 @@ void QAbstractTransitionSlots::triggered()
 
 void QAbstractTransitionSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractTransition * obj = ( QAbstractTransition * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = static_cast< QAbstractTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

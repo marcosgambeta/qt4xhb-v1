@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QMETAENUM_NEW )
 
 HB_FUNC_STATIC( QMETAENUM_DELETE )
 {
-  QMetaEnum * obj = ( QMetaEnum * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMetaEnum * obj = static_cast< QMetaEnum * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -99,7 +99,7 @@ const char * name() const
 */
 HB_FUNC_STATIC( QMETAENUM_NAME )
 {
-  QMetaEnum * obj = ( QMetaEnum * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMetaEnum * obj = static_cast< QMetaEnum * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -123,7 +123,7 @@ bool isFlag() const
 */
 HB_FUNC_STATIC( QMETAENUM_ISFLAG )
 {
-  QMetaEnum * obj = ( QMetaEnum * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMetaEnum * obj = static_cast< QMetaEnum * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -147,7 +147,7 @@ int keyCount() const
 */
 HB_FUNC_STATIC( QMETAENUM_KEYCOUNT )
 {
-  QMetaEnum * obj = ( QMetaEnum * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMetaEnum * obj = static_cast< QMetaEnum * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -171,7 +171,7 @@ const char * key( int index ) const
 */
 HB_FUNC_STATIC( QMETAENUM_KEY )
 {
-  QMetaEnum * obj = ( QMetaEnum * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMetaEnum * obj = static_cast< QMetaEnum * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -195,7 +195,7 @@ int value( int index ) const
 */
 HB_FUNC_STATIC( QMETAENUM_VALUE )
 {
-  QMetaEnum * obj = ( QMetaEnum * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMetaEnum * obj = static_cast< QMetaEnum * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -219,7 +219,7 @@ const char * scope() const
 */
 HB_FUNC_STATIC( QMETAENUM_SCOPE )
 {
-  QMetaEnum * obj = ( QMetaEnum * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMetaEnum * obj = static_cast< QMetaEnum * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -243,7 +243,7 @@ int keyToValue( const char * key ) const
 */
 HB_FUNC_STATIC( QMETAENUM_KEYTOVALUE )
 {
-  QMetaEnum * obj = ( QMetaEnum * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMetaEnum * obj = static_cast< QMetaEnum * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -267,7 +267,7 @@ const char * valueToKey( int value ) const
 */
 HB_FUNC_STATIC( QMETAENUM_VALUETOKEY )
 {
-  QMetaEnum * obj = ( QMetaEnum * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMetaEnum * obj = static_cast< QMetaEnum * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -291,7 +291,7 @@ int keysToValue( const char * keys ) const
 */
 HB_FUNC_STATIC( QMETAENUM_KEYSTOVALUE )
 {
-  QMetaEnum * obj = ( QMetaEnum * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMetaEnum * obj = static_cast< QMetaEnum * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -315,7 +315,7 @@ QByteArray valueToKeys( int value ) const
 */
 HB_FUNC_STATIC( QMETAENUM_VALUETOKEYS )
 {
-  QMetaEnum * obj = ( QMetaEnum * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMetaEnum * obj = static_cast< QMetaEnum * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -340,7 +340,7 @@ const QMetaObject * enclosingMetaObject() const
 */
 HB_FUNC_STATIC( QMETAENUM_ENCLOSINGMETAOBJECT )
 {
-  QMetaEnum * obj = ( QMetaEnum * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMetaEnum * obj = static_cast< QMetaEnum * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -365,7 +365,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QMETAENUM_ISVALID )
 {
-  QMetaEnum * obj = ( QMetaEnum * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMetaEnum * obj = static_cast< QMetaEnum * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -390,7 +390,7 @@ HB_FUNC_STATIC( QMETAENUM_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QMETAENUM_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

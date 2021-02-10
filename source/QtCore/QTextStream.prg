@@ -110,7 +110,7 @@ QTextStream( FILE * fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWr
 */
 void QTextStream_new3()
 {
-  QTextStream * obj = new QTextStream( ( FILE * ) hb_parptr( 1 ), ISNIL( 2 )? ( QIODevice::OpenMode ) QIODevice::ReadWrite : ( QIODevice::OpenMode ) hb_parni( 2 ) );
+  QTextStream * obj = new QTextStream( static_cast< FILE * >( hb_parptr( 1 ) ), ISNIL( 2 ) ? ( QIODevice::OpenMode ) QIODevice::ReadWrite : ( QIODevice::OpenMode ) hb_parni( 2 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -119,7 +119,7 @@ QTextStream( QByteArray * array, QIODevice::OpenMode openMode = QIODevice::ReadW
 */
 void QTextStream_new5()
 {
-  QTextStream * obj = new QTextStream( PQBYTEARRAY( 1 ), ISNIL( 2 )? ( QIODevice::OpenMode ) QIODevice::ReadWrite : ( QIODevice::OpenMode ) hb_parni( 2 ) );
+  QTextStream * obj = new QTextStream( PQBYTEARRAY( 1 ), ISNIL( 2 ) ? ( QIODevice::OpenMode ) QIODevice::ReadWrite : ( QIODevice::OpenMode ) hb_parni( 2 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -128,7 +128,7 @@ QTextStream( const QByteArray & array, QIODevice::OpenMode openMode = QIODevice:
 */
 void QTextStream_new6()
 {
-  QTextStream * obj = new QTextStream( *PQBYTEARRAY( 1 ), ISNIL( 2 )? ( QIODevice::OpenMode ) QIODevice::ReadOnly : ( QIODevice::OpenMode ) hb_parni( 2 ) );
+  QTextStream * obj = new QTextStream( *PQBYTEARRAY( 1 ), ISNIL( 2 ) ? ( QIODevice::OpenMode ) QIODevice::ReadOnly : ( QIODevice::OpenMode ) hb_parni( 2 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_NEW )
 
 HB_FUNC_STATIC( QTEXTSTREAM_DELETE )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -182,7 +182,7 @@ void setCodec( QTextCodec * codec )
 */
 void QTextStream_setCodec1()
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -197,7 +197,7 @@ void setCodec( const char * codecName )
 */
 void QTextStream_setCodec2()
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -228,7 +228,7 @@ QTextCodec * codec() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_CODEC )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -253,7 +253,7 @@ void setAutoDetectUnicode( bool enabled )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETAUTODETECTUNICODE )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -279,7 +279,7 @@ bool autoDetectUnicode() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_AUTODETECTUNICODE )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -303,7 +303,7 @@ void setGenerateByteOrderMark( bool generate )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETGENERATEBYTEORDERMARK )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -329,7 +329,7 @@ bool generateByteOrderMark() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_GENERATEBYTEORDERMARK )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -353,7 +353,7 @@ void setLocale( const QLocale & locale )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETLOCALE )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -379,7 +379,7 @@ QLocale locale() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_LOCALE )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -404,7 +404,7 @@ void setDevice( QIODevice * device )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETDEVICE )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -430,7 +430,7 @@ QIODevice * device() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_DEVICE )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -455,7 +455,7 @@ QTextStream::Status status() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_STATUS )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -479,7 +479,7 @@ void setStatus( QTextStream::Status status )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETSTATUS )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -505,7 +505,7 @@ void resetStatus()
 */
 HB_FUNC_STATIC( QTEXTSTREAM_RESETSTATUS )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -531,7 +531,7 @@ bool atEnd() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_ATEND )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -555,7 +555,7 @@ void reset()
 */
 HB_FUNC_STATIC( QTEXTSTREAM_RESET )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -581,7 +581,7 @@ void flush()
 */
 HB_FUNC_STATIC( QTEXTSTREAM_FLUSH )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -607,7 +607,7 @@ bool seek( qint64 pos )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SEEK )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -631,7 +631,7 @@ qint64 pos() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_POS )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -655,7 +655,7 @@ void skipWhiteSpace()
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SKIPWHITESPACE )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -681,12 +681,12 @@ QString readLine( qint64 maxlen = 0 )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_READLINE )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
+    if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
       RQSTRING( obj->readLine( OPQINT64( 1, 0 ) ) );
@@ -705,7 +705,7 @@ QString readAll()
 */
 HB_FUNC_STATIC( QTEXTSTREAM_READALL )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -729,7 +729,7 @@ QString read( qint64 maxlen )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_READ )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -753,7 +753,7 @@ void setFieldAlignment( QTextStream::FieldAlignment alignment )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETFIELDALIGNMENT )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -779,7 +779,7 @@ QTextStream::FieldAlignment fieldAlignment() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_FIELDALIGNMENT )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -803,7 +803,7 @@ void setPadChar( QChar ch )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETPADCHAR )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -829,7 +829,7 @@ QChar padChar() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_PADCHAR )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -854,7 +854,7 @@ void setFieldWidth( int width )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETFIELDWIDTH )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -880,7 +880,7 @@ int fieldWidth() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_FIELDWIDTH )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -904,7 +904,7 @@ void setNumberFlags( QTextStream::NumberFlags flags )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETNUMBERFLAGS )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -930,7 +930,7 @@ QTextStream::NumberFlags numberFlags() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_NUMBERFLAGS )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -954,7 +954,7 @@ void setIntegerBase( int base )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETINTEGERBASE )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -980,7 +980,7 @@ int integerBase() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_INTEGERBASE )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1004,7 +1004,7 @@ void setRealNumberNotation( QTextStream::RealNumberNotation notation )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETREALNUMBERNOTATION )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1030,7 +1030,7 @@ QTextStream::RealNumberNotation realNumberNotation() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_REALNUMBERNOTATION )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1054,7 +1054,7 @@ void setRealNumberPrecision( int precision )
 */
 HB_FUNC_STATIC( QTEXTSTREAM_SETREALNUMBERPRECISION )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1080,7 +1080,7 @@ int realNumberPrecision() const
 */
 HB_FUNC_STATIC( QTEXTSTREAM_REALNUMBERPRECISION )
 {
-  QTextStream * obj = ( QTextStream * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1105,7 +1105,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -1114,7 +1114,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

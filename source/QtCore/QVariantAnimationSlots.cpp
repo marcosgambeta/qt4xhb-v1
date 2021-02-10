@@ -28,7 +28,7 @@ void QVariantAnimationSlots::valueChanged( const QVariant & value )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QVARIANTANIMATION" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QVARIANTANIMATION" );
     PHB_ITEM pvalue = Qt4xHb::Signals_return_object( ( void * ) &value, "QVARIANT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pvalue );
@@ -40,7 +40,7 @@ void QVariantAnimationSlots::valueChanged( const QVariant & value )
 
 void QVariantAnimationSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QVariantAnimation * obj = ( QVariantAnimation * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QVariantAnimation * obj = static_cast< QVariantAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

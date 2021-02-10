@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QFINALSTATE_NEW )
 
 HB_FUNC_STATIC( QFINALSTATE_DELETE )
 {
-  QFinalState * obj = ( QFinalState * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFinalState * obj = static_cast< QFinalState * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

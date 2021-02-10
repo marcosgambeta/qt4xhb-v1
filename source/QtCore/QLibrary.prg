@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QLIBRARY_NEW )
 
 HB_FUNC_STATIC( QLIBRARY_DELETE )
 {
-  QLibrary * obj = ( QLibrary * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLibrary * obj = static_cast< QLibrary * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -135,7 +135,7 @@ bool load()
 */
 HB_FUNC_STATIC( QLIBRARY_LOAD )
 {
-  QLibrary * obj = ( QLibrary * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLibrary * obj = static_cast< QLibrary * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -159,7 +159,7 @@ bool unload()
 */
 HB_FUNC_STATIC( QLIBRARY_UNLOAD )
 {
-  QLibrary * obj = ( QLibrary * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLibrary * obj = static_cast< QLibrary * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -183,7 +183,7 @@ bool isLoaded() const
 */
 HB_FUNC_STATIC( QLIBRARY_ISLOADED )
 {
-  QLibrary * obj = ( QLibrary * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLibrary * obj = static_cast< QLibrary * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -207,7 +207,7 @@ void setFileName( const QString & fileName )
 */
 HB_FUNC_STATIC( QLIBRARY_SETFILENAME )
 {
-  QLibrary * obj = ( QLibrary * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLibrary * obj = static_cast< QLibrary * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -233,7 +233,7 @@ QString fileName() const
 */
 HB_FUNC_STATIC( QLIBRARY_FILENAME )
 {
-  QLibrary * obj = ( QLibrary * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLibrary * obj = static_cast< QLibrary * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -257,7 +257,7 @@ void setFileNameAndVersion( const QString & fileName, int verNum )
 */
 void QLibrary_setFileNameAndVersion1()
 {
-  QLibrary * obj = ( QLibrary * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLibrary * obj = static_cast< QLibrary * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -272,7 +272,7 @@ void setFileNameAndVersion( const QString & fileName, const QString & version )
 */
 void QLibrary_setFileNameAndVersion2()
 {
-  QLibrary * obj = ( QLibrary * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLibrary * obj = static_cast< QLibrary * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -303,7 +303,7 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QLIBRARY_ERRORSTRING )
 {
-  QLibrary * obj = ( QLibrary * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLibrary * obj = static_cast< QLibrary * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -327,7 +327,7 @@ void setLoadHints( QLibrary::LoadHints hints )
 */
 HB_FUNC_STATIC( QLIBRARY_SETLOADHINTS )
 {
-  QLibrary * obj = ( QLibrary * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLibrary * obj = static_cast< QLibrary * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -353,7 +353,7 @@ QLibrary::LoadHints loadHints() const
 */
 HB_FUNC_STATIC( QLIBRARY_LOADHINTS )
 {
-  QLibrary * obj = ( QLibrary * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLibrary * obj = static_cast< QLibrary * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -377,11 +377,11 @@ void * resolve( const char * symbol )
 */
 void QLibrary_resolve1()
 {
-  QLibrary * obj = ( QLibrary * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLibrary * obj = static_cast< QLibrary * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
-    hb_retptr( ( void * ) obj->resolve( PCONSTCHAR( 1 ) ) );
+    hb_retptr( static_cast< void * >( obj->resolve( PCONSTCHAR( 1 ) ) ) );
   }
 }
 
@@ -391,7 +391,7 @@ static void * resolve( const QString & fileName, const char * symbol )
 void QLibrary_resolve2()
 {
 
-  hb_retptr( ( void * ) QLibrary::resolve( PQSTRING( 1 ), PCONSTCHAR( 2 ) ) );
+  hb_retptr( static_cast< void * >( QLibrary::resolve( PQSTRING( 1 ), PCONSTCHAR( 2 ) ) ) );
 }
 
 /*
@@ -400,7 +400,7 @@ static void * resolve( const QString & fileName, int verNum, const char * symbol
 void QLibrary_resolve3()
 {
 
-  hb_retptr( ( void * ) QLibrary::resolve( PQSTRING( 1 ), PINT( 2 ), PCONSTCHAR( 3 ) ) );
+  hb_retptr( static_cast< void * >( QLibrary::resolve( PQSTRING( 1 ), PINT( 2 ), PCONSTCHAR( 3 ) ) ) );
 }
 
 /*
@@ -409,7 +409,7 @@ static void * resolve( const QString & fileName, const QString & version, const 
 void QLibrary_resolve4()
 {
 
-  hb_retptr( ( void * ) QLibrary::resolve( PQSTRING( 1 ), PQSTRING( 2 ), PCONSTCHAR( 3 ) ) );
+  hb_retptr( static_cast< void * >( QLibrary::resolve( PQSTRING( 1 ), PQSTRING( 2 ), PCONSTCHAR( 3 ) ) ) );
 }
 
 HB_FUNC_STATIC( QLIBRARY_RESOLVE )

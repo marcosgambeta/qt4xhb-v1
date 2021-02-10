@@ -87,7 +87,7 @@ QFutureInterfaceBase( QFutureInterfaceBase::State initialState = QFutureInterfac
 */
 void QFutureInterfaceBase_new1()
 {
-  QFutureInterfaceBase * obj = new QFutureInterfaceBase( ISNIL( 1 )? ( QFutureInterfaceBase::State ) QFutureInterfaceBase::NoState : ( QFutureInterfaceBase::State ) hb_parni( 1 ) );
+  QFutureInterfaceBase * obj = new QFutureInterfaceBase( ISNIL( 1 ) ? ( QFutureInterfaceBase::State ) QFutureInterfaceBase::NoState : ( QFutureInterfaceBase::State ) hb_parni( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_NEW )
 
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_DELETE )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -138,7 +138,7 @@ void reportStarted()
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_REPORTSTARTED )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -164,7 +164,7 @@ void reportFinished()
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_REPORTFINISHED )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -190,7 +190,7 @@ void reportCanceled()
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_REPORTCANCELED )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -216,7 +216,7 @@ void reportResultsReady( int beginIndex, int endIndex )
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_REPORTRESULTSREADY )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -242,7 +242,7 @@ void setRunnable( QRunnable * runnable )
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETRUNNABLE )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -268,7 +268,7 @@ void setFilterMode( bool enable )
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETFILTERMODE )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -294,7 +294,7 @@ void setProgressRange( int minimum, int maximum )
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPROGRESSRANGE )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -320,7 +320,7 @@ int progressMinimum() const
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_PROGRESSMINIMUM )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -344,7 +344,7 @@ int progressMaximum() const
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_PROGRESSMAXIMUM )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -368,7 +368,7 @@ bool isProgressUpdateNeeded() const
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISPROGRESSUPDATENEEDED )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -392,7 +392,7 @@ void setProgressValue( int progressValue )
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPROGRESSVALUE )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -418,7 +418,7 @@ int progressValue() const
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_PROGRESSVALUE )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -442,7 +442,7 @@ void setProgressValueAndText( int progressValue, const QString & progressText )
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPROGRESSVALUEANDTEXT )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -468,7 +468,7 @@ QString progressText() const
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_PROGRESSTEXT )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -492,7 +492,7 @@ void setExpectedResultCount( int resultCount )
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETEXPECTEDRESULTCOUNT )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -518,7 +518,7 @@ int expectedResultCount()
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_EXPECTEDRESULTCOUNT )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -542,7 +542,7 @@ int resultCount() const
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_RESULTCOUNT )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -566,7 +566,7 @@ bool queryState( QFutureInterfaceBase::State state ) const
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_QUERYSTATE )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -590,7 +590,7 @@ bool isRunning() const
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISRUNNING )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -614,7 +614,7 @@ bool isStarted() const
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISSTARTED )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -638,7 +638,7 @@ bool isCanceled() const
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISCANCELED )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -662,7 +662,7 @@ bool isFinished() const
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISFINISHED )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -686,7 +686,7 @@ bool isPaused() const
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISPAUSED )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -710,7 +710,7 @@ bool isThrottled() const
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISTHROTTLED )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -734,7 +734,7 @@ bool isResultReadyAt( int index ) const
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISRESULTREADYAT )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -758,7 +758,7 @@ void cancel()
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_CANCEL )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -784,7 +784,7 @@ void setPaused( bool paused )
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPAUSED )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -810,7 +810,7 @@ void togglePaused()
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_TOGGLEPAUSED )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -836,7 +836,7 @@ void setThrottled( bool enable )
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETTHROTTLED )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -862,7 +862,7 @@ void waitForFinished()
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_WAITFORFINISHED )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -888,7 +888,7 @@ bool waitForNextResult()
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_WAITFORNEXTRESULT )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -912,7 +912,7 @@ void waitForResult( int resultIndex )
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_WAITFORRESULT )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -938,7 +938,7 @@ void waitForResume()
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_WAITFORRESUME )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -964,7 +964,7 @@ QMutex * mutex() const
 */
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_MUTEX )
 {
-  QFutureInterfaceBase * obj = ( QFutureInterfaceBase * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFutureInterfaceBase * obj = static_cast< QFutureInterfaceBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -990,7 +990,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -999,7 +999,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

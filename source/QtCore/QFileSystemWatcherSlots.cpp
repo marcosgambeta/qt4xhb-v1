@@ -28,7 +28,7 @@ void QFileSystemWatcherSlots::directoryChanged( const QString & path )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QFILESYSTEMWATCHER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QFILESYSTEMWATCHER" );
     PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING( path ) );
 
     hb_vmEvalBlockV( cb, 2, psender, ppath );
@@ -46,7 +46,7 @@ void QFileSystemWatcherSlots::fileChanged( const QString & path )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QFILESYSTEMWATCHER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QFILESYSTEMWATCHER" );
     PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING( path ) );
 
     hb_vmEvalBlockV( cb, 2, psender, ppath );
@@ -58,7 +58,7 @@ void QFileSystemWatcherSlots::fileChanged( const QString & path )
 
 void QFileSystemWatcherSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QFileSystemWatcher * obj = ( QFileSystemWatcher * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFileSystemWatcher * obj = static_cast< QFileSystemWatcher * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

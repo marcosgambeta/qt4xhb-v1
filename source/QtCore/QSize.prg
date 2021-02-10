@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QSIZE_NEW )
 
 HB_FUNC_STATIC( QSIZE_DELETE )
 {
-  QSize * obj = ( QSize * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSize * obj = static_cast< QSize * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -114,7 +114,7 @@ QSize boundedTo( const QSize & otherSize ) const
 */
 HB_FUNC_STATIC( QSIZE_BOUNDEDTO )
 {
-  QSize * obj = ( QSize * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSize * obj = static_cast< QSize * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -139,7 +139,7 @@ QSize expandedTo( const QSize & otherSize ) const
 */
 HB_FUNC_STATIC( QSIZE_EXPANDEDTO )
 {
-  QSize * obj = ( QSize * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSize * obj = static_cast< QSize * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -164,7 +164,7 @@ int height() const
 */
 HB_FUNC_STATIC( QSIZE_HEIGHT )
 {
-  QSize * obj = ( QSize * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSize * obj = static_cast< QSize * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -188,7 +188,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QSIZE_ISEMPTY )
 {
-  QSize * obj = ( QSize * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSize * obj = static_cast< QSize * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -212,7 +212,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QSIZE_ISNULL )
 {
-  QSize * obj = ( QSize * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSize * obj = static_cast< QSize * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -236,7 +236,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QSIZE_ISVALID )
 {
-  QSize * obj = ( QSize * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSize * obj = static_cast< QSize * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -260,7 +260,7 @@ void scale( int width, int height, Qt::AspectRatioMode mode )
 */
 void QSize_scale1()
 {
-  QSize * obj = ( QSize * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSize * obj = static_cast< QSize * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -275,7 +275,7 @@ void scale( const QSize & size, Qt::AspectRatioMode mode )
 */
 void QSize_scale2()
 {
-  QSize * obj = ( QSize * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSize * obj = static_cast< QSize * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -306,7 +306,7 @@ void setHeight( int height )
 */
 HB_FUNC_STATIC( QSIZE_SETHEIGHT )
 {
-  QSize * obj = ( QSize * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSize * obj = static_cast< QSize * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -332,7 +332,7 @@ void setWidth( int width )
 */
 HB_FUNC_STATIC( QSIZE_SETWIDTH )
 {
-  QSize * obj = ( QSize * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSize * obj = static_cast< QSize * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -358,7 +358,7 @@ void transpose()
 */
 HB_FUNC_STATIC( QSIZE_TRANSPOSE )
 {
-  QSize * obj = ( QSize * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSize * obj = static_cast< QSize * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -384,7 +384,7 @@ int width() const
 */
 HB_FUNC_STATIC( QSIZE_WIDTH )
 {
-  QSize * obj = ( QSize * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSize * obj = static_cast< QSize * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QSIZE_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QSIZE_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

@@ -28,7 +28,7 @@ void QThreadSlots::finished()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTHREAD" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTHREAD" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QThreadSlots::started()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTHREAD" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTHREAD" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -54,7 +54,7 @@ void QThreadSlots::started()
 
 void QThreadSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QThread * obj = ( QThread * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QThread * obj = static_cast< QThread * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

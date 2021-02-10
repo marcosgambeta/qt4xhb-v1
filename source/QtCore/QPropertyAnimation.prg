@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QPROPERTYANIMATION_NEW )
 
 HB_FUNC_STATIC( QPROPERTYANIMATION_DELETE )
 {
-  QPropertyAnimation * obj = ( QPropertyAnimation * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPropertyAnimation * obj = static_cast< QPropertyAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -104,7 +104,7 @@ QByteArray propertyName() const
 */
 HB_FUNC_STATIC( QPROPERTYANIMATION_PROPERTYNAME )
 {
-  QPropertyAnimation * obj = ( QPropertyAnimation * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPropertyAnimation * obj = static_cast< QPropertyAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -129,7 +129,7 @@ void setPropertyName( const QByteArray & propertyName )
 */
 HB_FUNC_STATIC( QPROPERTYANIMATION_SETPROPERTYNAME )
 {
-  QPropertyAnimation * obj = ( QPropertyAnimation * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPropertyAnimation * obj = static_cast< QPropertyAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -155,7 +155,7 @@ void setTargetObject( QObject * target )
 */
 HB_FUNC_STATIC( QPROPERTYANIMATION_SETTARGETOBJECT )
 {
-  QPropertyAnimation * obj = ( QPropertyAnimation * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPropertyAnimation * obj = static_cast< QPropertyAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -181,7 +181,7 @@ QObject * targetObject() const
 */
 HB_FUNC_STATIC( QPROPERTYANIMATION_TARGETOBJECT )
 {
-  QPropertyAnimation * obj = ( QPropertyAnimation * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPropertyAnimation * obj = static_cast< QPropertyAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

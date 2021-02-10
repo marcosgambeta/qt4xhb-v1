@@ -28,7 +28,7 @@ void QAbstractEventDispatcherSlots::aboutToBlock()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTEVENTDISPATCHER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTEVENTDISPATCHER" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QAbstractEventDispatcherSlots::awake()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QABSTRACTEVENTDISPATCHER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTEVENTDISPATCHER" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -54,7 +54,7 @@ void QAbstractEventDispatcherSlots::awake()
 
 void QAbstractEventDispatcherSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractEventDispatcher * obj = ( QAbstractEventDispatcher * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractEventDispatcher * obj = static_cast< QAbstractEventDispatcher * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

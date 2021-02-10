@@ -28,7 +28,7 @@ void QSignalMapperSlots::mapped( int i )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSIGNALMAPPER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSIGNALMAPPER" );
     PHB_ITEM pi = hb_itemPutNI( NULL, i );
 
     hb_vmEvalBlockV( cb, 2, psender, pi );
@@ -46,7 +46,7 @@ void QSignalMapperSlots::mapped( const QString & s )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSIGNALMAPPER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSIGNALMAPPER" );
     PHB_ITEM ps = hb_itemPutC( NULL, QSTRINGTOSTRING( s ) );
 
     hb_vmEvalBlockV( cb, 2, psender, ps );
@@ -64,8 +64,8 @@ void QSignalMapperSlots::mapped( QWidget * w )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSIGNALMAPPER" );
-    PHB_ITEM pw = Qt4xHb::Signals_return_qobject( ( QObject * ) w, "QWIDGET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSIGNALMAPPER" );
+    PHB_ITEM pw = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( w ), "QWIDGET" );
 
     hb_vmEvalBlockV( cb, 2, psender, pw );
 
@@ -82,8 +82,8 @@ void QSignalMapperSlots::mapped( QObject * o )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSIGNALMAPPER" );
-    PHB_ITEM po = Qt4xHb::Signals_return_qobject( ( QObject * ) o, "QOBJECT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSIGNALMAPPER" );
+    PHB_ITEM po = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( o ), "QOBJECT" );
 
     hb_vmEvalBlockV( cb, 2, psender, po );
 
@@ -94,7 +94,7 @@ void QSignalMapperSlots::mapped( QObject * o )
 
 void QSignalMapperSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSignalMapper * obj = ( QSignalMapper * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSignalMapper * obj = static_cast< QSignalMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

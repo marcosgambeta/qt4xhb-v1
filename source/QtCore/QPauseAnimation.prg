@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QPAUSEANIMATION_NEW )
 
 HB_FUNC_STATIC( QPAUSEANIMATION_DELETE )
 {
-  QPauseAnimation * obj = ( QPauseAnimation * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPauseAnimation * obj = static_cast< QPauseAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -100,7 +100,7 @@ void setDuration( int msecs )
 */
 HB_FUNC_STATIC( QPAUSEANIMATION_SETDURATION )
 {
-  QPauseAnimation * obj = ( QPauseAnimation * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPauseAnimation * obj = static_cast< QPauseAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -126,7 +126,7 @@ virtual int duration() const
 */
 HB_FUNC_STATIC( QPAUSEANIMATION_DURATION )
 {
-  QPauseAnimation * obj = ( QPauseAnimation * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QPauseAnimation * obj = static_cast< QPauseAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

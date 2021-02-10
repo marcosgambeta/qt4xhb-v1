@@ -28,7 +28,7 @@ void QTimeLineSlots::finished()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTIMELINE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTIMELINE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QTimeLineSlots::frameChanged( int frame )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTIMELINE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTIMELINE" );
     PHB_ITEM pframe = hb_itemPutNI( NULL, frame );
 
     hb_vmEvalBlockV( cb, 2, psender, pframe );
@@ -62,8 +62,8 @@ void QTimeLineSlots::stateChanged( QTimeLine::State newState )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTIMELINE" );
-    PHB_ITEM pnewState = hb_itemPutNI( NULL, (int) newState );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTIMELINE" );
+    PHB_ITEM pnewState = hb_itemPutNI( NULL, ( int ) newState );
 
     hb_vmEvalBlockV( cb, 2, psender, pnewState );
 
@@ -80,7 +80,7 @@ void QTimeLineSlots::valueChanged( qreal value )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTIMELINE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTIMELINE" );
     PHB_ITEM pvalue = hb_itemPutND( NULL, value );
 
     hb_vmEvalBlockV( cb, 2, psender, pvalue );
@@ -92,7 +92,7 @@ void QTimeLineSlots::valueChanged( qreal value )
 
 void QTimeLineSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTimeLine * obj = ( QTimeLine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTimeLine * obj = static_cast< QTimeLine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

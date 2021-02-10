@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_NEW )
 
 HB_FUNC_STATIC( QELAPSEDTIMER_DELETE )
 {
-  QElapsedTimer * obj = ( QElapsedTimer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QElapsedTimer * obj = static_cast< QElapsedTimer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -97,7 +97,7 @@ qint64 elapsed() const
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_ELAPSED )
 {
-  QElapsedTimer * obj = ( QElapsedTimer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QElapsedTimer * obj = static_cast< QElapsedTimer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -121,7 +121,7 @@ bool hasExpired( qint64 timeout ) const
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_HASEXPIRED )
 {
-  QElapsedTimer * obj = ( QElapsedTimer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QElapsedTimer * obj = static_cast< QElapsedTimer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -145,7 +145,7 @@ void invalidate()
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_INVALIDATE )
 {
-  QElapsedTimer * obj = ( QElapsedTimer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QElapsedTimer * obj = static_cast< QElapsedTimer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -171,7 +171,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_ISVALID )
 {
-  QElapsedTimer * obj = ( QElapsedTimer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QElapsedTimer * obj = static_cast< QElapsedTimer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -195,7 +195,7 @@ qint64 msecsSinceReference() const
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_MSECSSINCEREFERENCE )
 {
-  QElapsedTimer * obj = ( QElapsedTimer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QElapsedTimer * obj = static_cast< QElapsedTimer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -219,7 +219,7 @@ qint64 msecsTo( const QElapsedTimer & other ) const
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_MSECSTO )
 {
-  QElapsedTimer * obj = ( QElapsedTimer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QElapsedTimer * obj = static_cast< QElapsedTimer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -243,7 +243,7 @@ qint64 nsecsElapsed() const
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_NSECSELAPSED )
 {
-  QElapsedTimer * obj = ( QElapsedTimer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QElapsedTimer * obj = static_cast< QElapsedTimer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -267,7 +267,7 @@ qint64 restart()
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_RESTART )
 {
-  QElapsedTimer * obj = ( QElapsedTimer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QElapsedTimer * obj = static_cast< QElapsedTimer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -291,7 +291,7 @@ qint64 secsTo( const QElapsedTimer & other ) const
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_SECSTO )
 {
-  QElapsedTimer * obj = ( QElapsedTimer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QElapsedTimer * obj = static_cast< QElapsedTimer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -315,7 +315,7 @@ void start()
 */
 HB_FUNC_STATIC( QELAPSEDTIMER_START )
 {
-  QElapsedTimer * obj = ( QElapsedTimer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QElapsedTimer * obj = static_cast< QElapsedTimer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QELAPSEDTIMER_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

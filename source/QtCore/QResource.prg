@@ -64,9 +64,9 @@ QResource( const QString & file = QString(), const QLocale & locale = QLocale() 
 */
 HB_FUNC_STATIC( QRESOURCE_NEW )
 {
-  if( ISBETWEEN( 0, 2 ) && ISOPTCHAR( 1 ) && ( ISQLOCALE( 2 ) || ISNIL( 2 ) ) )
+  if( ISBETWEEN( 0, 2 ) && ( ISCHAR( 1 ) || ISNIL( 1 ) ) && ( ISQLOCALE( 2 ) || ISNIL( 2 ) ) )
   {
-    QResource * obj = new QResource( OPQSTRING( 1, QString() ), ISNIL( 2 )? QLocale() : *( QLocale * ) Qt4xHb::itemGetPtr( 2 ) );
+    QResource * obj = new QResource( OPQSTRING( 1, QString() ), ISNIL( 2 ) ? QLocale() : *static_cast< QLocale * >( Qt4xHb::itemGetPtr( 2 ) ) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QRESOURCE_NEW )
 
 HB_FUNC_STATIC( QRESOURCE_DELETE )
 {
-  QResource * obj = ( QResource * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QResource * obj = static_cast< QResource * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -97,7 +97,7 @@ QString absoluteFilePath() const
 */
 HB_FUNC_STATIC( QRESOURCE_ABSOLUTEFILEPATH )
 {
-  QResource * obj = ( QResource * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QResource * obj = static_cast< QResource * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -121,7 +121,7 @@ const uchar * data() const
 */
 HB_FUNC_STATIC( QRESOURCE_DATA )
 {
-  QResource * obj = ( QResource * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QResource * obj = static_cast< QResource * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -145,7 +145,7 @@ QString fileName() const
 */
 HB_FUNC_STATIC( QRESOURCE_FILENAME )
 {
-  QResource * obj = ( QResource * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QResource * obj = static_cast< QResource * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -169,7 +169,7 @@ bool isCompressed() const
 */
 HB_FUNC_STATIC( QRESOURCE_ISCOMPRESSED )
 {
-  QResource * obj = ( QResource * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QResource * obj = static_cast< QResource * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -193,7 +193,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QRESOURCE_ISVALID )
 {
-  QResource * obj = ( QResource * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QResource * obj = static_cast< QResource * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -217,7 +217,7 @@ QLocale locale() const
 */
 HB_FUNC_STATIC( QRESOURCE_LOCALE )
 {
-  QResource * obj = ( QResource * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QResource * obj = static_cast< QResource * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -242,7 +242,7 @@ void setFileName( const QString & file )
 */
 HB_FUNC_STATIC( QRESOURCE_SETFILENAME )
 {
-  QResource * obj = ( QResource * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QResource * obj = static_cast< QResource * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -268,7 +268,7 @@ void setLocale( const QLocale & locale )
 */
 HB_FUNC_STATIC( QRESOURCE_SETLOCALE )
 {
-  QResource * obj = ( QResource * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QResource * obj = static_cast< QResource * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -294,7 +294,7 @@ qint64 size() const
 */
 HB_FUNC_STATIC( QRESOURCE_SIZE )
 {
-  QResource * obj = ( QResource * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QResource * obj = static_cast< QResource * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -319,7 +319,7 @@ static bool registerResource( const QString & rccFileName, const QString & mapRo
 HB_FUNC_STATIC( QRESOURCE_REGISTERRESOURCE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ISOPTCHAR( 2 ) )
+  if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
   {
 #endif
     RBOOL( QResource::registerResource( PQSTRING( 1 ), OPQSTRING( 2, QString() ) ) );
@@ -338,7 +338,7 @@ static bool unregisterResource( const QString & rccFileName, const QString & map
 HB_FUNC_STATIC( QRESOURCE_UNREGISTERRESOURCE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ISOPTCHAR( 2 ) )
+  if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
   {
 #endif
     RBOOL( QResource::unregisterResource( PQSTRING( 1 ), OPQSTRING( 2, QString() ) ) );
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QRESOURCE_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QRESOURCE_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

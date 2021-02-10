@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QTIME_NEW )
 
 HB_FUNC_STATIC( QTIME_DELETE )
 {
-  QTime * obj = ( QTime * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTime * obj = static_cast< QTime * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -120,7 +120,7 @@ QTime addMSecs( int ms ) const
 */
 HB_FUNC_STATIC( QTIME_ADDMSECS )
 {
-  QTime * obj = ( QTime * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTime * obj = static_cast< QTime * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -145,7 +145,7 @@ QTime addSecs( int s ) const
 */
 HB_FUNC_STATIC( QTIME_ADDSECS )
 {
-  QTime * obj = ( QTime * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTime * obj = static_cast< QTime * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -170,7 +170,7 @@ int elapsed() const
 */
 HB_FUNC_STATIC( QTIME_ELAPSED )
 {
-  QTime * obj = ( QTime * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTime * obj = static_cast< QTime * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -194,7 +194,7 @@ int hour() const
 */
 HB_FUNC_STATIC( QTIME_HOUR )
 {
-  QTime * obj = ( QTime * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTime * obj = static_cast< QTime * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -218,7 +218,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QTIME_ISNULL )
 {
-  QTime * obj = ( QTime * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTime * obj = static_cast< QTime * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -242,7 +242,7 @@ int minute() const
 */
 HB_FUNC_STATIC( QTIME_MINUTE )
 {
-  QTime * obj = ( QTime * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTime * obj = static_cast< QTime * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -266,7 +266,7 @@ int msec() const
 */
 HB_FUNC_STATIC( QTIME_MSEC )
 {
-  QTime * obj = ( QTime * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTime * obj = static_cast< QTime * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -290,7 +290,7 @@ int msecsTo( const QTime & t ) const
 */
 HB_FUNC_STATIC( QTIME_MSECSTO )
 {
-  QTime * obj = ( QTime * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTime * obj = static_cast< QTime * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -314,7 +314,7 @@ int restart()
 */
 HB_FUNC_STATIC( QTIME_RESTART )
 {
-  QTime * obj = ( QTime * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTime * obj = static_cast< QTime * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -338,7 +338,7 @@ int second() const
 */
 HB_FUNC_STATIC( QTIME_SECOND )
 {
-  QTime * obj = ( QTime * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTime * obj = static_cast< QTime * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -362,7 +362,7 @@ int secsTo( const QTime & t ) const
 */
 HB_FUNC_STATIC( QTIME_SECSTO )
 {
-  QTime * obj = ( QTime * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTime * obj = static_cast< QTime * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -386,12 +386,12 @@ bool setHMS( int h, int m, int s, int ms = 0 )
 */
 HB_FUNC_STATIC( QTIME_SETHMS )
 {
-  QTime * obj = ( QTime * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTime * obj = static_cast< QTime * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 3, 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISOPTNUM( 4 ) )
+    if( ISBETWEEN( 3, 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
     {
 #endif
       RBOOL( obj->setHMS( PINT( 1 ), PINT( 2 ), PINT( 3 ), OPINT( 4, 0 ) ) );
@@ -410,7 +410,7 @@ void start()
 */
 HB_FUNC_STATIC( QTIME_START )
 {
-  QTime * obj = ( QTime * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTime * obj = static_cast< QTime * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -436,7 +436,7 @@ QString toString( const QString & format ) const
 */
 void QTime_toString1()
 {
-  QTime * obj = ( QTime * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTime * obj = static_cast< QTime * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -449,11 +449,11 @@ QString toString( Qt::DateFormat format = Qt::TextDate ) const
 */
 void QTime_toString2()
 {
-  QTime * obj = ( QTime * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTime * obj = static_cast< QTime * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
-    RQSTRING( obj->toString( ISNIL( 1 )? ( Qt::DateFormat ) Qt::TextDate : ( Qt::DateFormat ) hb_parni( 1 ) ) );
+    RQSTRING( obj->toString( ISNIL( 1 ) ? ( Qt::DateFormat ) Qt::TextDate : ( Qt::DateFormat ) hb_parni( 1 ) ) );
   }
 }
 
@@ -499,7 +499,7 @@ static QTime fromString( const QString & string, Qt::DateFormat format = Qt::Tex
 void QTime_fromString1()
 {
 
-  QTime * ptr = new QTime( QTime::fromString( PQSTRING( 1 ), ISNIL( 2 )? ( Qt::DateFormat ) Qt::TextDate : ( Qt::DateFormat ) hb_parni( 2 ) ) );
+  QTime * ptr = new QTime( QTime::fromString( PQSTRING( 1 ), ISNIL( 2 ) ? ( Qt::DateFormat ) Qt::TextDate : ( Qt::DateFormat ) hb_parni( 2 ) ) );
   Qt4xHb::createReturnClass( ptr, "QTIME", true );
 }
 
@@ -508,7 +508,7 @@ QTime fromString( const QString & string, const QString & format )
 */
 void QTime_fromString2()
 {
-  QTime * obj = ( QTime * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTime * obj = static_cast< QTime * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -538,7 +538,7 @@ bool isValid() const
 */
 void QTime_isValid1()
 {
-  QTime * obj = ( QTime * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTime * obj = static_cast< QTime * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QTIME_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -586,7 +586,7 @@ HB_FUNC_STATIC( QTIME_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

@@ -28,8 +28,8 @@ void QObjectSlots::destroyed( QObject * obj )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QOBJECT" );
-    PHB_ITEM pobj = Qt4xHb::Signals_return_qobject( ( QObject * ) obj, "QOBJECT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QOBJECT" );
+    PHB_ITEM pobj = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( obj ), "QOBJECT" );
 
     hb_vmEvalBlockV( cb, 2, psender, pobj );
 
@@ -41,7 +41,7 @@ void QObjectSlots::destroyed( QObject * obj )
 
 void QObjectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QObject * obj = ( QObject * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

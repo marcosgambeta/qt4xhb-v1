@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEW )
 
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_DELETE )
 {
-  QProcessEnvironment * obj = ( QProcessEnvironment * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = static_cast< QProcessEnvironment * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -112,7 +112,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_ISEMPTY )
 {
-  QProcessEnvironment * obj = ( QProcessEnvironment * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = static_cast< QProcessEnvironment * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -136,7 +136,7 @@ void clear()
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_CLEAR )
 {
-  QProcessEnvironment * obj = ( QProcessEnvironment * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = static_cast< QProcessEnvironment * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -162,7 +162,7 @@ bool contains( const QString & name ) const
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_CONTAINS )
 {
-  QProcessEnvironment * obj = ( QProcessEnvironment * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = static_cast< QProcessEnvironment * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -186,7 +186,7 @@ void remove( const QString & name )
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_REMOVE )
 {
-  QProcessEnvironment * obj = ( QProcessEnvironment * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = static_cast< QProcessEnvironment * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -212,12 +212,12 @@ QString value( const QString & name, const QString & defaultValue = QString() ) 
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_VALUE )
 {
-  QProcessEnvironment * obj = ( QProcessEnvironment * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = static_cast< QProcessEnvironment * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ISOPTCHAR( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       RQSTRING( obj->value( PQSTRING( 1 ), OPQSTRING( 2, QString() ) ) );
@@ -236,7 +236,7 @@ QStringList toStringList() const
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_TOSTRINGLIST )
 {
-  QProcessEnvironment * obj = ( QProcessEnvironment * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = static_cast< QProcessEnvironment * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -260,7 +260,7 @@ QStringList keys() const
 */
 HB_FUNC_STATIC( QPROCESSENVIRONMENT_KEYS )
 {
-  QProcessEnvironment * obj = ( QProcessEnvironment * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = static_cast< QProcessEnvironment * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -284,7 +284,7 @@ void insert( const QString & name, const QString & value)
 */
 void QProcessEnvironment_insert1()
 {
-  QProcessEnvironment * obj = ( QProcessEnvironment * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = static_cast< QProcessEnvironment * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -299,7 +299,7 @@ void insert( const QProcessEnvironment & e )
 */
 void QProcessEnvironment_insert2()
 {
-  QProcessEnvironment * obj = ( QProcessEnvironment * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QProcessEnvironment * obj = static_cast< QProcessEnvironment * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -351,7 +351,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QPROCESSENVIRONMENT_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

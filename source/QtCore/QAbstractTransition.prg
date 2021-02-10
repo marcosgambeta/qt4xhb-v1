@@ -60,7 +60,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTTRANSITION_DELETE )
 {
-  QAbstractTransition * obj = ( QAbstractTransition * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = static_cast< QAbstractTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -82,7 +82,7 @@ void addAnimation( QAbstractAnimation * animation )
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_ADDANIMATION )
 {
-  QAbstractTransition * obj = ( QAbstractTransition * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = static_cast< QAbstractTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -108,7 +108,7 @@ QList<QAbstractAnimation *> animations() const
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_ANIMATIONS )
 {
-  QAbstractTransition * obj = ( QAbstractTransition * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = static_cast< QAbstractTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ANIMATIONS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QAbstractAnimation * ) list[i] );
+          hb_itemPutPtr( pItem, static_cast< QAbstractAnimation * >( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -156,7 +156,7 @@ QStateMachine * machine() const
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_MACHINE )
 {
-  QAbstractTransition * obj = ( QAbstractTransition * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = static_cast< QAbstractTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -181,7 +181,7 @@ void removeAnimation( QAbstractAnimation * animation )
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_REMOVEANIMATION )
 {
-  QAbstractTransition * obj = ( QAbstractTransition * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = static_cast< QAbstractTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -207,7 +207,7 @@ void setTargetState( QAbstractState * target )
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATE )
 {
-  QAbstractTransition * obj = ( QAbstractTransition * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = static_cast< QAbstractTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -233,7 +233,7 @@ void setTargetStates( const QList<QAbstractState *> & targets )
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATES )
 {
-  QAbstractTransition * obj = ( QAbstractTransition * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = static_cast< QAbstractTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_SETTARGETSTATES )
       int nLen1 = hb_arrayLen( aList1 );
       for( int i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << ( QAbstractState * ) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+        par1 << static_cast< QAbstractState * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
       }
       obj->setTargetStates( par1 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -266,7 +266,7 @@ QState * sourceState() const
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_SOURCESTATE )
 {
-  QAbstractTransition * obj = ( QAbstractTransition * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = static_cast< QAbstractTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -291,7 +291,7 @@ QAbstractState * targetState() const
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATE )
 {
-  QAbstractTransition * obj = ( QAbstractTransition * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = static_cast< QAbstractTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -316,7 +316,7 @@ QList<QAbstractState *> targetStates() const
 */
 HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATES )
 {
-  QAbstractTransition * obj = ( QAbstractTransition * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractTransition * obj = static_cast< QAbstractTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QAbstractState * ) list[i] );
+          hb_itemPutPtr( pItem, static_cast< QAbstractState * >( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );

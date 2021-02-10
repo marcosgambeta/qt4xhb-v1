@@ -28,8 +28,8 @@ void QSequentialAnimationGroupSlots::currentAnimationChanged( QAbstractAnimation
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSEQUENTIALANIMATIONGROUP" );
-    PHB_ITEM pcurrent = Qt4xHb::Signals_return_qobject( ( QObject * ) current, "QABSTRACTANIMATION" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSEQUENTIALANIMATIONGROUP" );
+    PHB_ITEM pcurrent = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( current ), "QABSTRACTANIMATION" );
 
     hb_vmEvalBlockV( cb, 2, psender, pcurrent );
 
@@ -40,7 +40,7 @@ void QSequentialAnimationGroupSlots::currentAnimationChanged( QAbstractAnimation
 
 void QSequentialAnimationGroupSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSequentialAnimationGroup * obj = ( QSequentialAnimationGroup * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSequentialAnimationGroup * obj = static_cast< QSequentialAnimationGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

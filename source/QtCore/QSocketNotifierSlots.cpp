@@ -28,7 +28,7 @@ void QSocketNotifierSlots::activated( int socket )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSOCKETNOTIFIER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSOCKETNOTIFIER" );
     PHB_ITEM psocket = hb_itemPutNI( NULL, socket );
 
     hb_vmEvalBlockV( cb, 2, psender, psocket );
@@ -40,7 +40,7 @@ void QSocketNotifierSlots::activated( int socket )
 
 void QSocketNotifierSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSocketNotifier * obj = ( QSocketNotifier * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSocketNotifier * obj = static_cast< QSocketNotifier * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

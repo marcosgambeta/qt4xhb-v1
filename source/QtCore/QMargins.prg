@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QMARGINS_NEW )
 
 HB_FUNC_STATIC( QMARGINS_DELETE )
 {
-  QMargins * obj = ( QMargins * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMargins * obj = static_cast< QMargins * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -112,7 +112,7 @@ int bottom() const
 */
 HB_FUNC_STATIC( QMARGINS_BOTTOM )
 {
-  QMargins * obj = ( QMargins * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMargins * obj = static_cast< QMargins * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -136,7 +136,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QMARGINS_ISNULL )
 {
-  QMargins * obj = ( QMargins * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMargins * obj = static_cast< QMargins * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -160,7 +160,7 @@ int left() const
 */
 HB_FUNC_STATIC( QMARGINS_LEFT )
 {
-  QMargins * obj = ( QMargins * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMargins * obj = static_cast< QMargins * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -184,7 +184,7 @@ int right() const
 */
 HB_FUNC_STATIC( QMARGINS_RIGHT )
 {
-  QMargins * obj = ( QMargins * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMargins * obj = static_cast< QMargins * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -208,7 +208,7 @@ void setBottom( int bottom )
 */
 HB_FUNC_STATIC( QMARGINS_SETBOTTOM )
 {
-  QMargins * obj = ( QMargins * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMargins * obj = static_cast< QMargins * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -234,7 +234,7 @@ void setLeft( int left )
 */
 HB_FUNC_STATIC( QMARGINS_SETLEFT )
 {
-  QMargins * obj = ( QMargins * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMargins * obj = static_cast< QMargins * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -260,7 +260,7 @@ void setRight( int right )
 */
 HB_FUNC_STATIC( QMARGINS_SETRIGHT )
 {
-  QMargins * obj = ( QMargins * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMargins * obj = static_cast< QMargins * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -286,7 +286,7 @@ void setTop( int Top )
 */
 HB_FUNC_STATIC( QMARGINS_SETTOP )
 {
-  QMargins * obj = ( QMargins * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMargins * obj = static_cast< QMargins * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -312,7 +312,7 @@ int top() const
 */
 HB_FUNC_STATIC( QMARGINS_TOP )
 {
-  QMargins * obj = ( QMargins * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMargins * obj = static_cast< QMargins * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QMARGINS_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QMARGINS_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

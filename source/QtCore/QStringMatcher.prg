@@ -66,7 +66,7 @@ QStringMatcher( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensit
 */
 void QStringMatcher_new2()
 {
-  QStringMatcher * obj = new QStringMatcher( PQSTRING( 1 ), ISNIL( 2 )? ( Qt::CaseSensitivity ) Qt::CaseSensitive : ( Qt::CaseSensitivity ) hb_parni( 2 ) );
+  QStringMatcher * obj = new QStringMatcher( PQSTRING( 1 ), ISNIL( 2 ) ? ( Qt::CaseSensitivity ) Qt::CaseSensitive : ( Qt::CaseSensitivity ) hb_parni( 2 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -75,7 +75,7 @@ QStringMatcher( const QChar * uc, int len, Qt::CaseSensitivity cs = Qt::CaseSens
 */
 void QStringMatcher_new3()
 {
-  QStringMatcher * obj = new QStringMatcher( PQCHAR( 1 ), PINT( 2 ), ISNIL( 3 )? ( Qt::CaseSensitivity ) Qt::CaseSensitive : ( Qt::CaseSensitivity ) hb_parni( 3 ) );
+  QStringMatcher * obj = new QStringMatcher( PQCHAR( 1 ), PINT( 2 ), ISNIL( 3 ) ? ( Qt::CaseSensitivity ) Qt::CaseSensitive : ( Qt::CaseSensitivity ) hb_parni( 3 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_NEW )
 
 HB_FUNC_STATIC( QSTRINGMATCHER_DELETE )
 {
-  QStringMatcher * obj = ( QStringMatcher * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStringMatcher * obj = static_cast< QStringMatcher * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -134,7 +134,7 @@ void setPattern( const QString & pattern )
 */
 HB_FUNC_STATIC( QSTRINGMATCHER_SETPATTERN )
 {
-  QStringMatcher * obj = ( QStringMatcher * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStringMatcher * obj = static_cast< QStringMatcher * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -160,7 +160,7 @@ void setCaseSensitivity( Qt::CaseSensitivity cs )
 */
 HB_FUNC_STATIC( QSTRINGMATCHER_SETCASESENSITIVITY )
 {
-  QStringMatcher * obj = ( QStringMatcher * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStringMatcher * obj = static_cast< QStringMatcher * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -186,7 +186,7 @@ int indexIn( const QString & str, int from = 0 ) const
 */
 void QStringMatcher_indexIn1()
 {
-  QStringMatcher * obj = ( QStringMatcher * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStringMatcher * obj = static_cast< QStringMatcher * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -199,7 +199,7 @@ int indexIn( const QChar * str, int length, int from = 0 ) const
 */
 void QStringMatcher_indexIn2()
 {
-  QStringMatcher * obj = ( QStringMatcher * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStringMatcher * obj = static_cast< QStringMatcher * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -228,7 +228,7 @@ QString pattern() const
 */
 HB_FUNC_STATIC( QSTRINGMATCHER_PATTERN )
 {
-  QStringMatcher * obj = ( QStringMatcher * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStringMatcher * obj = static_cast< QStringMatcher * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -252,7 +252,7 @@ Qt::CaseSensitivity caseSensitivity() const
 */
 HB_FUNC_STATIC( QSTRINGMATCHER_CASESENSITIVITY )
 {
-  QStringMatcher * obj = ( QStringMatcher * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QStringMatcher * obj = static_cast< QStringMatcher * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QSTRINGMATCHER_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

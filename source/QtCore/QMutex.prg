@@ -55,9 +55,9 @@ QMutex( QMutex::RecursionMode mode = QMutex::NonRecursive )
 */
 HB_FUNC_STATIC( QMUTEX_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
   {
-    QMutex * obj = new QMutex( ISNIL( 1 )? ( QMutex::RecursionMode ) QMutex::NonRecursive : ( QMutex::RecursionMode ) hb_parni( 1 ) );
+    QMutex * obj = new QMutex( ISNIL( 1 ) ? ( QMutex::RecursionMode ) QMutex::NonRecursive : ( QMutex::RecursionMode ) hb_parni( 1 ) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QMUTEX_NEW )
 
 HB_FUNC_STATIC( QMUTEX_DELETE )
 {
-  QMutex * obj = ( QMutex * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMutex * obj = static_cast< QMutex * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -88,7 +88,7 @@ void lock()
 */
 HB_FUNC_STATIC( QMUTEX_LOCK )
 {
-  QMutex * obj = ( QMutex * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMutex * obj = static_cast< QMutex * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -114,7 +114,7 @@ bool tryLock()
 */
 void QMutex_tryLock1()
 {
-  QMutex * obj = ( QMutex * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMutex * obj = static_cast< QMutex * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -127,7 +127,7 @@ bool tryLock( int timeout )
 */
 void QMutex_tryLock2()
 {
-  QMutex * obj = ( QMutex * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMutex * obj = static_cast< QMutex * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -156,7 +156,7 @@ void unlock()
 */
 HB_FUNC_STATIC( QMUTEX_UNLOCK )
 {
-  QMutex * obj = ( QMutex * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QMutex * obj = static_cast< QMutex * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QMUTEX_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QMUTEX_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

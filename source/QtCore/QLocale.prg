@@ -152,7 +152,7 @@ QLocale( QLocale::Language language, QLocale::Country country = QLocale::AnyCoun
 */
 void QLocale_new3()
 {
-  QLocale * obj = new QLocale( ( QLocale::Language ) hb_parni( 1 ), ISNIL( 2 )? ( QLocale::Country ) QLocale::AnyCountry : ( QLocale::Country ) hb_parni( 2 ) );
+  QLocale * obj = new QLocale( ( QLocale::Language ) hb_parni( 1 ), ISNIL( 2 ) ? ( QLocale::Country ) QLocale::AnyCountry : ( QLocale::Country ) hb_parni( 2 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -207,7 +207,7 @@ QString amText() const
 */
 HB_FUNC_STATIC( QLOCALE_AMTEXT )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -231,7 +231,7 @@ QString bcp47Name() const
 */
 HB_FUNC_STATIC( QLOCALE_BCP47NAME )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -255,7 +255,7 @@ QLocale::Country country() const
 */
 HB_FUNC_STATIC( QLOCALE_COUNTRY )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -279,7 +279,7 @@ QString createSeparatedList( const QStringList & list ) const
 */
 HB_FUNC_STATIC( QLOCALE_CREATESEPARATEDLIST )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -303,15 +303,15 @@ QString currencySymbol( QLocale::CurrencySymbolFormat format = QLocale::Currency
 */
 HB_FUNC_STATIC( QLOCALE_CURRENCYSYMBOL )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
+    if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
-      RQSTRING( obj->currencySymbol( ISNIL( 1 )? ( QLocale::CurrencySymbolFormat ) QLocale::CurrencySymbol : ( QLocale::CurrencySymbolFormat ) hb_parni( 1 ) ) );
+      RQSTRING( obj->currencySymbol( ISNIL( 1 ) ? ( QLocale::CurrencySymbolFormat ) QLocale::CurrencySymbol : ( QLocale::CurrencySymbolFormat ) hb_parni( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -327,15 +327,15 @@ QString dateFormat( QLocale::FormatType format = QLocale::LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_DATEFORMAT )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
+    if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
-      RQSTRING( obj->dateFormat( ISNIL( 1 )? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 1 ) ) );
+      RQSTRING( obj->dateFormat( ISNIL( 1 ) ? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -351,15 +351,15 @@ QString dateTimeFormat( QLocale::FormatType format = QLocale::LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_DATETIMEFORMAT )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
+    if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
-      RQSTRING( obj->dateTimeFormat( ISNIL( 1 )? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 1 ) ) );
+      RQSTRING( obj->dateTimeFormat( ISNIL( 1 ) ? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -375,15 +375,15 @@ QString dayName( int day, QLocale::FormatType type = QLocale::LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_DAYNAME )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
-      RQSTRING( obj->dayName( PINT( 1 ), ISNIL( 2 )? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 2 ) ) );
+      RQSTRING( obj->dayName( PINT( 1 ), ISNIL( 2 ) ? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -399,7 +399,7 @@ QChar decimalPoint() const
 */
 HB_FUNC_STATIC( QLOCALE_DECIMALPOINT )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -424,7 +424,7 @@ QChar exponential() const
 */
 HB_FUNC_STATIC( QLOCALE_EXPONENTIAL )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -449,7 +449,7 @@ Qt::DayOfWeek firstDayOfWeek() const
 */
 HB_FUNC_STATIC( QLOCALE_FIRSTDAYOFWEEK )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -473,7 +473,7 @@ QChar groupSeparator() const
 */
 HB_FUNC_STATIC( QLOCALE_GROUPSEPARATOR )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -498,7 +498,7 @@ QLocale::Language language() const
 */
 HB_FUNC_STATIC( QLOCALE_LANGUAGE )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -522,7 +522,7 @@ QLocale::MeasurementSystem measurementSystem() const
 */
 HB_FUNC_STATIC( QLOCALE_MEASUREMENTSYSTEM )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -546,15 +546,15 @@ QString monthName( int month, QLocale::FormatType type = QLocale::LongFormat ) c
 */
 HB_FUNC_STATIC( QLOCALE_MONTHNAME )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
-      RQSTRING( obj->monthName( PINT( 1 ), ISNIL( 2 )? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 2 ) ) );
+      RQSTRING( obj->monthName( PINT( 1 ), ISNIL( 2 ) ? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -570,7 +570,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QLOCALE_NAME )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -594,7 +594,7 @@ QString nativeCountryName() const
 */
 HB_FUNC_STATIC( QLOCALE_NATIVECOUNTRYNAME )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -618,7 +618,7 @@ QString nativeLanguageName() const
 */
 HB_FUNC_STATIC( QLOCALE_NATIVELANGUAGENAME )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -642,7 +642,7 @@ QChar negativeSign() const
 */
 HB_FUNC_STATIC( QLOCALE_NEGATIVESIGN )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -667,7 +667,7 @@ QLocale::NumberOptions numberOptions() const
 */
 HB_FUNC_STATIC( QLOCALE_NUMBEROPTIONS )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -691,7 +691,7 @@ QChar percent() const
 */
 HB_FUNC_STATIC( QLOCALE_PERCENT )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -716,7 +716,7 @@ QString pmText() const
 */
 HB_FUNC_STATIC( QLOCALE_PMTEXT )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -740,7 +740,7 @@ QChar positiveSign() const
 */
 HB_FUNC_STATIC( QLOCALE_POSITIVESIGN )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -765,11 +765,11 @@ QString quoteString( const QString & str, QLocale::QuotationStyle style = QLocal
 */
 void QLocale_quoteString1()
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
-    RQSTRING( obj->quoteString( PQSTRING( 1 ), ISNIL( 2 )? ( QLocale::QuotationStyle ) QLocale::StandardQuotation : ( QLocale::QuotationStyle ) hb_parni( 2 ) ) );
+    RQSTRING( obj->quoteString( PQSTRING( 1 ), ISNIL( 2 ) ? ( QLocale::QuotationStyle ) QLocale::StandardQuotation : ( QLocale::QuotationStyle ) hb_parni( 2 ) ) );
   }
 }
 
@@ -778,11 +778,11 @@ QString quoteString( const QStringRef & str, QLocale::QuotationStyle style = QLo
 */
 void QLocale_quoteString2()
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
-    RQSTRING( obj->quoteString( *PQSTRINGREF( 1 ), ISNIL( 2 )? ( QLocale::QuotationStyle ) QLocale::StandardQuotation : ( QLocale::QuotationStyle ) hb_parni( 2 ) ) );
+    RQSTRING( obj->quoteString( *PQSTRINGREF( 1 ), ISNIL( 2 ) ? ( QLocale::QuotationStyle ) QLocale::StandardQuotation : ( QLocale::QuotationStyle ) hb_parni( 2 ) ) );
   }
 }
 
@@ -807,7 +807,7 @@ QLocale::Script script() const
 */
 HB_FUNC_STATIC( QLOCALE_SCRIPT )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -831,7 +831,7 @@ void setNumberOptions( QLocale::NumberOptions options )
 */
 HB_FUNC_STATIC( QLOCALE_SETNUMBEROPTIONS )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -857,15 +857,15 @@ QString standaloneDayName( int day, QLocale::FormatType type = QLocale::LongForm
 */
 HB_FUNC_STATIC( QLOCALE_STANDALONEDAYNAME )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
-      RQSTRING( obj->standaloneDayName( PINT( 1 ), ISNIL( 2 )? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 2 ) ) );
+      RQSTRING( obj->standaloneDayName( PINT( 1 ), ISNIL( 2 ) ? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -881,15 +881,15 @@ QString standaloneMonthName( int month, QLocale::FormatType type = QLocale::Long
 */
 HB_FUNC_STATIC( QLOCALE_STANDALONEMONTHNAME )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
-      RQSTRING( obj->standaloneMonthName( PINT( 1 ), ISNIL( 2 )? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 2 ) ) );
+      RQSTRING( obj->standaloneMonthName( PINT( 1 ), ISNIL( 2 ) ? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -905,7 +905,7 @@ Qt::LayoutDirection textDirection() const
 */
 HB_FUNC_STATIC( QLOCALE_TEXTDIRECTION )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -929,15 +929,15 @@ QString timeFormat( QLocale::FormatType format = QLocale::LongFormat ) const
 */
 HB_FUNC_STATIC( QLOCALE_TIMEFORMAT )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ISOPTNUM( 1 ) )
+    if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
     {
 #endif
-      RQSTRING( obj->timeFormat( ISNIL( 1 )? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 1 ) ) );
+      RQSTRING( obj->timeFormat( ISNIL( 1 ) ? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -953,12 +953,12 @@ QString toCurrencyString( qlonglong value, const QString & symbol = QString() ) 
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING1 )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTCHAR( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       RQSTRING( obj->toCurrencyString( PQLONGLONG( 1 ), OPQSTRING( 2, QString() ) ) );
@@ -977,12 +977,12 @@ QString toCurrencyString( short value, const QString & symbol = QString() ) cons
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING2 )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTCHAR( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       RQSTRING( obj->toCurrencyString( PSHORT( 1 ), OPQSTRING( 2, QString() ) ) );
@@ -1001,12 +1001,12 @@ QString toCurrencyString( ushort value, const QString & symbol = QString() ) con
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING3 )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTCHAR( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       RQSTRING( obj->toCurrencyString( PUSHORT( 1 ), OPQSTRING( 2, QString() ) ) );
@@ -1025,12 +1025,12 @@ QString toCurrencyString( int value, const QString & symbol = QString() ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING4 )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTCHAR( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       RQSTRING( obj->toCurrencyString( PINT( 1 ), OPQSTRING( 2, QString() ) ) );
@@ -1049,12 +1049,12 @@ QString toCurrencyString( uint value, const QString & symbol = QString() ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING5 )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTCHAR( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       RQSTRING( obj->toCurrencyString( PUINT( 1 ), OPQSTRING( 2, QString() ) ) );
@@ -1073,12 +1073,12 @@ QString toCurrencyString( float value, const QString & symbol = QString() ) cons
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING6 )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTCHAR( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       RQSTRING( obj->toCurrencyString( PFLOAT( 1 ), OPQSTRING( 2, QString() ) ) );
@@ -1097,12 +1097,12 @@ QString toCurrencyString( qulonglong value, const QString & symbol = QString() )
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING7 )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTCHAR( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       RQSTRING( obj->toCurrencyString( PQULONGLONG( 1 ), OPQSTRING( 2, QString() ) ) );
@@ -1121,12 +1121,12 @@ QString toCurrencyString( double value, const QString & symbol = QString() ) con
 */
 HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING8 )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ISOPTCHAR( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       RQSTRING( obj->toCurrencyString( PDOUBLE( 1 ), OPQSTRING( 2, QString() ) ) );
@@ -1149,11 +1149,11 @@ QDate toDate( const QString & string, QLocale::FormatType format = QLocale::Long
 */
 void QLocale_toDate1()
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
-    QDate * ptr = new QDate( obj->toDate( PQSTRING( 1 ), ISNIL( 2 )? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 2 ) ) );
+    QDate * ptr = new QDate( obj->toDate( PQSTRING( 1 ), ISNIL( 2 ) ? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 2 ) ) );
     Qt4xHb::createReturnClass( ptr, "QDATE", true );
   }
 }
@@ -1163,7 +1163,7 @@ QDate toDate( const QString & string, const QString & format ) const
 */
 void QLocale_toDate2()
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1193,11 +1193,11 @@ QDateTime toDateTime( const QString & string, QLocale::FormatType format = QLoca
 */
 void QLocale_toDateTime1()
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
-    QDateTime * ptr = new QDateTime( obj->toDateTime( PQSTRING( 1 ), ISNIL( 2 )? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 2 ) ) );
+    QDateTime * ptr = new QDateTime( obj->toDateTime( PQSTRING( 1 ), ISNIL( 2 ) ? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 2 ) ) );
     Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
   }
 }
@@ -1207,7 +1207,7 @@ QDateTime toDateTime( const QString & string, const QString & format ) const
 */
 void QLocale_toDateTime2()
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1237,7 +1237,7 @@ double toDouble( const QString & s, bool * ok = 0 ) const
 */
 HB_FUNC_STATIC( QLOCALE_TODOUBLE )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1263,7 +1263,7 @@ float toFloat( const QString & s, bool * ok = 0 ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOFLOAT )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1289,12 +1289,12 @@ int toInt( const QString & s, bool * ok = 0, int base = 0 ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOINT )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
       bool par2;
@@ -1315,12 +1315,12 @@ qlonglong toLongLong( const QString & s, bool * ok = 0, int base = 0 ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOLONGLONG )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
       bool par2;
@@ -1341,7 +1341,7 @@ QString toLower( const QString & str ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOLOWER )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1365,12 +1365,12 @@ short toShort( const QString & s, bool * ok = 0, int base = 0 ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSHORT )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
       bool par2;
@@ -1391,7 +1391,7 @@ QString toString( qlonglong i ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING1 )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1415,7 +1415,7 @@ QString toString( const QDate & date, const QString & format ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING2 )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1439,15 +1439,15 @@ QString toString( const QDate & date, QLocale::FormatType format = QLocale::Long
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING3 )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQDATE( 1 ) && ISOPTNUM( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISQDATE( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
-      RQSTRING( obj->toString( *PQDATE( 1 ), ISNIL( 2 )? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 2 ) ) );
+      RQSTRING( obj->toString( *PQDATE( 1 ), ISNIL( 2 ) ? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1463,7 +1463,7 @@ QString toString( const QTime & time, const QString & format ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING4 )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1487,15 +1487,15 @@ QString toString( const QTime & time, QLocale::FormatType format = QLocale::Long
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING5 )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQTIME( 1 ) && ISOPTNUM( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISQTIME( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
-      RQSTRING( obj->toString( *PQTIME( 1 ), ISNIL( 2 )? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 2 ) ) );
+      RQSTRING( obj->toString( *PQTIME( 1 ), ISNIL( 2 ) ? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1511,15 +1511,15 @@ QString toString( const QDateTime & dateTime, QLocale::FormatType format = QLoca
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING6 )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQDATETIME( 1 ) && ISOPTNUM( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISQDATETIME( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
-      RQSTRING( obj->toString( *PQDATETIME( 1 ), ISNIL( 2 )? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 2 ) ) );
+      RQSTRING( obj->toString( *PQDATETIME( 1 ), ISNIL( 2 ) ? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1535,7 +1535,7 @@ QString toString( const QDateTime & dateTime, const QString & format ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING7 )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1559,7 +1559,7 @@ QString toString( short i ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING8 )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1583,7 +1583,7 @@ QString toString( ushort i ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING9 )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1607,7 +1607,7 @@ QString toString( int i ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING10 )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1631,7 +1631,7 @@ QString toString( uint i ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING11 )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1655,12 +1655,12 @@ QString toString( float i, char f = 'g', int prec = 6 ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING12 )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
       RQSTRING( obj->toString( PFLOAT( 1 ), OPCHAR( 2, 'g' ), OPINT( 3, 6 ) ) );
@@ -1679,7 +1679,7 @@ QString toString( qulonglong i ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING13 )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1703,12 +1703,12 @@ QString toString( double i, char f = 'g', int prec = 6 ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOSTRING14 )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ISOPTNUM( 2 ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
       RQSTRING( obj->toString( PDOUBLE( 1 ), OPCHAR( 2, 'g' ), OPINT( 3, 6 ) ) );
@@ -1731,11 +1731,11 @@ QTime toTime( const QString & string, QLocale::FormatType format = QLocale::Long
 */
 void QLocale_toTime1()
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
-    QTime * ptr = new QTime( obj->toTime( PQSTRING( 1 ), ISNIL( 2 )? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 2 ) ) );
+    QTime * ptr = new QTime( obj->toTime( PQSTRING( 1 ), ISNIL( 2 ) ? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 2 ) ) );
     Qt4xHb::createReturnClass( ptr, "QTIME", true );
   }
 }
@@ -1745,7 +1745,7 @@ QTime toTime( const QString & string, const QString & format ) const
 */
 void QLocale_toTime2()
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1775,12 +1775,12 @@ uint toUInt( const QString & s, bool * ok = 0, int base = 0 ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOUINT )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
       bool par2;
@@ -1801,12 +1801,12 @@ qlonglong toULongLong( const QString & s, bool * ok = 0, int base = 0 ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOULONGLONG )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
       bool par2;
@@ -1827,12 +1827,12 @@ ushort toUShort( const QString & s, bool * ok = 0, int base = 0 ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOUSHORT )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) && ISOPTNUM( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
       bool par2;
@@ -1853,7 +1853,7 @@ QString toUpper( const QString & str ) const
 */
 HB_FUNC_STATIC( QLOCALE_TOUPPER )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1877,7 +1877,7 @@ QStringList uiLanguages() const
 */
 HB_FUNC_STATIC( QLOCALE_UILANGUAGES )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -1901,7 +1901,7 @@ QList<Qt::DayOfWeek> weekdays() const
 */
 HB_FUNC_STATIC( QLOCALE_WEEKDAYS )
 {
-  QLocale * obj = ( QLocale * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -2008,7 +2008,7 @@ HB_FUNC_STATIC( QLOCALE_MATCHINGLOCALES )
         PHB_ITEM pObject = hb_itemNew( NULL );
         hb_itemCopy( pObject, hb_stackReturnItem() );
         PHB_ITEM pItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pItem, ( QLocale * ) new QLocale( list[i] ) );
+        hb_itemPutPtr( pItem, static_cast< QLocale * >( new QLocale( list[i] ) ) );
         hb_objSendMsg( pObject, "_POINTER", 1, pItem );
         hb_itemRelease( pItem );
         PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -2099,7 +2099,7 @@ HB_FUNC_STATIC( QLOCALE_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -2108,7 +2108,7 @@ HB_FUNC_STATIC( QLOCALE_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
