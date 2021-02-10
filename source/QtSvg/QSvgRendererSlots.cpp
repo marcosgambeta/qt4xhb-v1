@@ -28,7 +28,7 @@ void QSvgRendererSlots::repaintNeeded()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSVGRENDERER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSVGRENDERER" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,7 +38,7 @@ void QSvgRendererSlots::repaintNeeded()
 
 void QSvgRendererSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSvgRenderer * obj = ( QSvgRenderer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QSvgRenderer * obj = static_cast< QSvgRenderer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
