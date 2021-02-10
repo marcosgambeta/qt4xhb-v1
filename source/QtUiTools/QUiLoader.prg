@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QUILOADER_NEW )
 
 HB_FUNC_STATIC( QUILOADER_DELETE )
 {
-  QUiLoader * obj = ( QUiLoader * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUiLoader * obj = static_cast< QUiLoader * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -104,7 +104,7 @@ void addPluginPath( const QString & path )
 */
 HB_FUNC_STATIC( QUILOADER_ADDPLUGINPATH )
 {
-  QUiLoader * obj = ( QUiLoader * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUiLoader * obj = static_cast< QUiLoader * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -130,7 +130,7 @@ QStringList availableLayouts() const
 */
 HB_FUNC_STATIC( QUILOADER_AVAILABLELAYOUTS )
 {
-  QUiLoader * obj = ( QUiLoader * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUiLoader * obj = static_cast< QUiLoader * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -154,7 +154,7 @@ QStringList availableWidgets() const
 */
 HB_FUNC_STATIC( QUILOADER_AVAILABLEWIDGETS )
 {
-  QUiLoader * obj = ( QUiLoader * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUiLoader * obj = static_cast< QUiLoader * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -178,7 +178,7 @@ void clearPluginPaths()
 */
 HB_FUNC_STATIC( QUILOADER_CLEARPLUGINPATHS )
 {
-  QUiLoader * obj = ( QUiLoader * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUiLoader * obj = static_cast< QUiLoader * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -204,12 +204,12 @@ virtual QAction * createAction( QObject * parent = 0, const QString & name = QSt
 */
 HB_FUNC_STATIC( QUILOADER_CREATEACTION )
 {
-  QUiLoader * obj = ( QUiLoader * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUiLoader * obj = static_cast< QUiLoader * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 2 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) && ISOPTCHAR( 2 ) )
+    if( ISBETWEEN( 0, 2 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       QAction * ptr = obj->createAction( OPQOBJECT( 1, 0 ), OPQSTRING( 2, QString() ) );
@@ -229,12 +229,12 @@ virtual QActionGroup * createActionGroup( QObject * parent = 0, const QString & 
 */
 HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
 {
-  QUiLoader * obj = ( QUiLoader * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUiLoader * obj = static_cast< QUiLoader * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 2 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) && ISOPTCHAR( 2 ) )
+    if( ISBETWEEN( 0, 2 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       QActionGroup * ptr = obj->createActionGroup( OPQOBJECT( 1, 0 ), OPQSTRING( 2, QString() ) );
@@ -254,12 +254,12 @@ virtual QLayout * createLayout( const QString & className, QObject * parent = 0,
 */
 HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
 {
-  QUiLoader * obj = ( QUiLoader * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUiLoader * obj = static_cast< QUiLoader * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISQOBJECT( 2 ) || ISNIL( 2 ) ) && ISOPTCHAR( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISQOBJECT( 2 ) || ISNIL( 2 ) ) && ( ISCHAR( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
       QLayout * ptr = obj->createLayout( PQSTRING( 1 ), OPQOBJECT( 2, 0 ), OPQSTRING( 3, QString() ) );
@@ -279,12 +279,12 @@ virtual QWidget * createWidget( const QString & className, QWidget * parent = 0,
 */
 HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
 {
-  QUiLoader * obj = ( QUiLoader * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUiLoader * obj = static_cast< QUiLoader * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISQWIDGET( 2 ) || ISNIL( 2 ) ) && ISOPTCHAR( 3 ) )
+    if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISQWIDGET( 2 ) || ISNIL( 2 ) ) && ( ISCHAR( 3 ) || ISNIL( 3 ) ) )
     {
 #endif
       QWidget * ptr = obj->createWidget( PQSTRING( 1 ), OPQWIDGET( 2, 0 ), OPQSTRING( 3, QString() ) );
@@ -304,7 +304,7 @@ bool isLanguageChangeEnabled() const
 */
 HB_FUNC_STATIC( QUILOADER_ISLANGUAGECHANGEENABLED )
 {
-  QUiLoader * obj = ( QUiLoader * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUiLoader * obj = static_cast< QUiLoader * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -328,7 +328,7 @@ QWidget * load( QIODevice * device, QWidget * parentWidget = 0 )
 */
 HB_FUNC_STATIC( QUILOADER_LOAD )
 {
-  QUiLoader * obj = ( QUiLoader * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUiLoader * obj = static_cast< QUiLoader * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -353,7 +353,7 @@ QStringList pluginPaths() const
 */
 HB_FUNC_STATIC( QUILOADER_PLUGINPATHS )
 {
-  QUiLoader * obj = ( QUiLoader * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUiLoader * obj = static_cast< QUiLoader * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -377,7 +377,7 @@ void setLanguageChangeEnabled( bool enabled )
 */
 HB_FUNC_STATIC( QUILOADER_SETLANGUAGECHANGEENABLED )
 {
-  QUiLoader * obj = ( QUiLoader * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUiLoader * obj = static_cast< QUiLoader * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -403,7 +403,7 @@ void setWorkingDirectory( const QDir & dir )
 */
 HB_FUNC_STATIC( QUILOADER_SETWORKINGDIRECTORY )
 {
-  QUiLoader * obj = ( QUiLoader * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUiLoader * obj = static_cast< QUiLoader * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -429,7 +429,7 @@ QDir workingDirectory() const
 */
 HB_FUNC_STATIC( QUILOADER_WORKINGDIRECTORY )
 {
-  QUiLoader * obj = ( QUiLoader * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUiLoader * obj = static_cast< QUiLoader * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
