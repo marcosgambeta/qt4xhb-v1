@@ -55,7 +55,7 @@ RETURN
 /*
 QStyledItemDelegate( QObject * parent = 0 )
 */
-void QStyledItemDelegate_new()
+HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
   {
