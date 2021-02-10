@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_NEW )
 
 HB_FUNC_STATIC( QGLCOLORMAP_DELETE )
 {
-  QGLColormap * obj = ( QGLColormap * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLColormap * obj = static_cast< QGLColormap * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -111,7 +111,7 @@ QColor entryColor( int idx ) const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_ENTRYCOLOR )
 {
-  QGLColormap * obj = ( QGLColormap * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLColormap * obj = static_cast< QGLColormap * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -136,7 +136,7 @@ QRgb entryRgb( int idx ) const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_ENTRYRGB )
 {
-  QGLColormap * obj = ( QGLColormap * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLColormap * obj = static_cast< QGLColormap * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -160,7 +160,7 @@ int find( QRgb color ) const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_FIND )
 {
-  QGLColormap * obj = ( QGLColormap * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLColormap * obj = static_cast< QGLColormap * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -184,7 +184,7 @@ int findNearest( QRgb color ) const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_FINDNEAREST )
 {
-  QGLColormap * obj = ( QGLColormap * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLColormap * obj = static_cast< QGLColormap * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -208,7 +208,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_ISEMPTY )
 {
-  QGLColormap * obj = ( QGLColormap * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLColormap * obj = static_cast< QGLColormap * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -232,7 +232,7 @@ void setEntry( int idx, QRgb color )
 */
 void QGLColormap_setEntry1()
 {
-  QGLColormap * obj = ( QGLColormap * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLColormap * obj = static_cast< QGLColormap * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -247,11 +247,11 @@ void setEntry( int idx, const QColor & color )
 */
 void QGLColormap_setEntry2()
 {
-  QGLColormap * obj = ( QGLColormap * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLColormap * obj = static_cast< QGLColormap * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
-    obj->setEntry( PINT( 1 ), ISOBJECT( 2 )? *( QColor * ) Qt4xHb::itemGetPtr( 2 ) : QColor( hb_parc( 2 ) ) );
+    obj->setEntry( PINT( 1 ), ISOBJECT( 2 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 2 ) ) : QColor( hb_parc( 2 ) ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -278,7 +278,7 @@ int size() const
 */
 HB_FUNC_STATIC( QGLCOLORMAP_SIZE )
 {
-  QGLColormap * obj = ( QGLColormap * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLColormap * obj = static_cast< QGLColormap * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -303,7 +303,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

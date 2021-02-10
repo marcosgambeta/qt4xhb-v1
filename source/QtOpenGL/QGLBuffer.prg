@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QGLBUFFER_NEW )
 
 HB_FUNC_STATIC( QGLBUFFER_DELETE )
 {
-  QGLBuffer * obj = ( QGLBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLBuffer * obj = static_cast< QGLBuffer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -130,11 +130,11 @@ void allocate( const void * data, int count )
 */
 void QGLBuffer_allocate1()
 {
-  QGLBuffer * obj = ( QGLBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLBuffer * obj = static_cast< QGLBuffer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
-    obj->allocate( ( const void * ) hb_parptr( 1 ), PINT( 2 ) );
+    obj->allocate( static_cast< const void * >( hb_parptr( 1 ) ), PINT( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -145,7 +145,7 @@ void allocate( int count )
 */
 void QGLBuffer_allocate2()
 {
-  QGLBuffer * obj = ( QGLBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLBuffer * obj = static_cast< QGLBuffer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -176,7 +176,7 @@ bool bind()
 */
 HB_FUNC_STATIC( QGLBUFFER_BIND )
 {
-  QGLBuffer * obj = ( QGLBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLBuffer * obj = static_cast< QGLBuffer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -200,7 +200,7 @@ GLuint bufferId() const
 */
 HB_FUNC_STATIC( QGLBUFFER_BUFFERID )
 {
-  QGLBuffer * obj = ( QGLBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLBuffer * obj = static_cast< QGLBuffer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -224,7 +224,7 @@ bool create()
 */
 HB_FUNC_STATIC( QGLBUFFER_CREATE )
 {
-  QGLBuffer * obj = ( QGLBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLBuffer * obj = static_cast< QGLBuffer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -248,7 +248,7 @@ void destroy()
 */
 HB_FUNC_STATIC( QGLBUFFER_DESTROY )
 {
-  QGLBuffer * obj = ( QGLBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLBuffer * obj = static_cast< QGLBuffer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -274,7 +274,7 @@ bool isCreated() const
 */
 HB_FUNC_STATIC( QGLBUFFER_ISCREATED )
 {
-  QGLBuffer * obj = ( QGLBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLBuffer * obj = static_cast< QGLBuffer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -298,7 +298,7 @@ void * map( QGLBuffer::Access access )
 */
 HB_FUNC_STATIC( QGLBUFFER_MAP )
 {
-  QGLBuffer * obj = ( QGLBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLBuffer * obj = static_cast< QGLBuffer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QGLBUFFER_MAP )
     if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
     {
 #endif
-      hb_retptr( ( void * ) obj->map( ( QGLBuffer::Access ) hb_parni( 1 ) ) );
+      hb_retptr( static_cast< void * >( obj->map( ( QGLBuffer::Access ) hb_parni( 1 ) ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -322,7 +322,7 @@ bool read( int offset, void * data, int count )
 */
 HB_FUNC_STATIC( QGLBUFFER_READ )
 {
-  QGLBuffer * obj = ( QGLBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLBuffer * obj = static_cast< QGLBuffer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QGLBUFFER_READ )
     if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISPOINTER( 2 ) && ISNUM( 3 ) )
     {
 #endif
-      RBOOL( obj->read( PINT( 1 ), ( void * ) hb_parptr( 2 ), PINT( 3 ) ) );
+      RBOOL( obj->read( PINT( 1 ), static_cast< void * >( hb_parptr( 2 ) ), PINT( 3 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,7 +346,7 @@ void setUsagePattern( QGLBuffer::UsagePattern value )
 */
 HB_FUNC_STATIC( QGLBUFFER_SETUSAGEPATTERN )
 {
-  QGLBuffer * obj = ( QGLBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLBuffer * obj = static_cast< QGLBuffer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -372,7 +372,7 @@ int size() const
 */
 HB_FUNC_STATIC( QGLBUFFER_SIZE )
 {
-  QGLBuffer * obj = ( QGLBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLBuffer * obj = static_cast< QGLBuffer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -396,7 +396,7 @@ QGLBuffer::Type type() const
 */
 HB_FUNC_STATIC( QGLBUFFER_TYPE )
 {
-  QGLBuffer * obj = ( QGLBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLBuffer * obj = static_cast< QGLBuffer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -420,7 +420,7 @@ bool unmap()
 */
 HB_FUNC_STATIC( QGLBUFFER_UNMAP )
 {
-  QGLBuffer * obj = ( QGLBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLBuffer * obj = static_cast< QGLBuffer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -444,7 +444,7 @@ QGLBuffer::UsagePattern usagePattern() const
 */
 HB_FUNC_STATIC( QGLBUFFER_USAGEPATTERN )
 {
-  QGLBuffer * obj = ( QGLBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLBuffer * obj = static_cast< QGLBuffer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -468,7 +468,7 @@ void release()
 */
 void QGLBuffer_release1()
 {
-  QGLBuffer * obj = ( QGLBuffer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QGLBuffer * obj = static_cast< QGLBuffer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -511,7 +511,7 @@ HB_FUNC_STATIC( QGLBUFFER_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QGLBUFFER_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
