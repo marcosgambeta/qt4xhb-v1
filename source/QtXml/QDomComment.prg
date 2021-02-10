@@ -77,7 +77,7 @@ QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMCOMMENT_NODETYPE )
 {
-  QDomComment * obj = ( QDomComment * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomComment * obj = static_cast< QDomComment * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

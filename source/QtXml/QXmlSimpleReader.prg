@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_NEW )
 
 HB_FUNC_STATIC( QXMLSIMPLEREADER_DELETE )
 {
-  QXmlSimpleReader * obj = ( QXmlSimpleReader * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSimpleReader * obj = static_cast< QXmlSimpleReader * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -78,7 +78,7 @@ virtual bool parse( const QXmlInputSource * input, bool incremental )
 */
 HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSE )
 {
-  QXmlSimpleReader * obj = ( QXmlSimpleReader * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSimpleReader * obj = static_cast< QXmlSimpleReader * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -102,7 +102,7 @@ virtual bool parseContinue()
 */
 HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSECONTINUE )
 {
-  QXmlSimpleReader * obj = ( QXmlSimpleReader * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlSimpleReader * obj = static_cast< QXmlSimpleReader * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

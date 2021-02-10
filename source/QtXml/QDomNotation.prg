@@ -79,7 +79,7 @@ QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMNOTATION_NODETYPE )
 {
-  QDomNotation * obj = ( QDomNotation * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomNotation * obj = static_cast< QDomNotation * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -103,7 +103,7 @@ QString publicId() const
 */
 HB_FUNC_STATIC( QDOMNOTATION_PUBLICID )
 {
-  QDomNotation * obj = ( QDomNotation * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomNotation * obj = static_cast< QDomNotation * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -127,7 +127,7 @@ QString systemId() const
 */
 HB_FUNC_STATIC( QDOMNOTATION_SYSTEMID )
 {
-  QDomNotation * obj = ( QDomNotation * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomNotation * obj = static_cast< QDomNotation * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

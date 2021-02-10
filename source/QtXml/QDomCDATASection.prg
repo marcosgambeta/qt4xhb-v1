@@ -77,7 +77,7 @@ QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMCDATASECTION_NODETYPE )
 {
-  QDomCDATASection * obj = ( QDomCDATASection * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomCDATASection * obj = static_cast< QDomCDATASection * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_NEW )
 
 HB_FUNC_STATIC( QXMLATTRIBUTES_DELETE )
 {
-  QXmlAttributes * obj = ( QXmlAttributes * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = static_cast< QXmlAttributes * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -95,7 +95,7 @@ void append( const QString & qName, const QString & uri, const QString & localPa
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_APPEND )
 {
-  QXmlAttributes * obj = ( QXmlAttributes * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = static_cast< QXmlAttributes * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -121,7 +121,7 @@ void clear()
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_CLEAR )
 {
-  QXmlAttributes * obj = ( QXmlAttributes * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = static_cast< QXmlAttributes * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -147,7 +147,7 @@ int count() const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_COUNT )
 {
-  QXmlAttributes * obj = ( QXmlAttributes * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = static_cast< QXmlAttributes * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -171,7 +171,7 @@ int index( const QString & qName ) const
 */
 void QXmlAttributes_index1()
 {
-  QXmlAttributes * obj = ( QXmlAttributes * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = static_cast< QXmlAttributes * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -184,7 +184,7 @@ int index( const QLatin1String & qName ) const
 */
 void QXmlAttributes_index2()
 {
-  QXmlAttributes * obj = ( QXmlAttributes * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = static_cast< QXmlAttributes * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -197,7 +197,7 @@ int index( const QString & uri, const QString & localPart ) const
 */
 void QXmlAttributes_index3()
 {
-  QXmlAttributes * obj = ( QXmlAttributes * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = static_cast< QXmlAttributes * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -230,7 +230,7 @@ int length() const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_LENGTH )
 {
-  QXmlAttributes * obj = ( QXmlAttributes * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = static_cast< QXmlAttributes * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -254,7 +254,7 @@ QString localName( int index ) const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_LOCALNAME )
 {
-  QXmlAttributes * obj = ( QXmlAttributes * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = static_cast< QXmlAttributes * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -278,7 +278,7 @@ QString qName( int index ) const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_QNAME )
 {
-  QXmlAttributes * obj = ( QXmlAttributes * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = static_cast< QXmlAttributes * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -302,7 +302,7 @@ QString type( int index ) const
 */
 void QXmlAttributes_type1()
 {
-  QXmlAttributes * obj = ( QXmlAttributes * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = static_cast< QXmlAttributes * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -315,7 +315,7 @@ QString type( const QString & qName ) const
 */
 void QXmlAttributes_type2()
 {
-  QXmlAttributes * obj = ( QXmlAttributes * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = static_cast< QXmlAttributes * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -328,7 +328,7 @@ QString type( const QString & uri, const QString & localName ) const
 */
 void QXmlAttributes_type3()
 {
-  QXmlAttributes * obj = ( QXmlAttributes * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = static_cast< QXmlAttributes * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -361,7 +361,7 @@ QString uri( int index ) const
 */
 HB_FUNC_STATIC( QXMLATTRIBUTES_URI )
 {
-  QXmlAttributes * obj = ( QXmlAttributes * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = static_cast< QXmlAttributes * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -385,7 +385,7 @@ QString value( int index ) const
 */
 void QXmlAttributes_value1()
 {
-  QXmlAttributes * obj = ( QXmlAttributes * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = static_cast< QXmlAttributes * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -398,7 +398,7 @@ QString value( const QString & qName ) const
 */
 void QXmlAttributes_value2()
 {
-  QXmlAttributes * obj = ( QXmlAttributes * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = static_cast< QXmlAttributes * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -411,7 +411,7 @@ QString value( const QLatin1String & qName ) const
 */
 void QXmlAttributes_value3()
 {
-  QXmlAttributes * obj = ( QXmlAttributes * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = static_cast< QXmlAttributes * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -424,7 +424,7 @@ QString value( const QString & uri, const QString & localName ) const
 */
 void QXmlAttributes_value4()
 {
-  QXmlAttributes * obj = ( QXmlAttributes * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlAttributes * obj = static_cast< QXmlAttributes * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

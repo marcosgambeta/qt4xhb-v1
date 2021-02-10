@@ -84,7 +84,7 @@ QDomNamedNodeMap entities() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_ENTITIES )
 {
-  QDomDocumentType * obj = ( QDomDocumentType * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = static_cast< QDomDocumentType * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -109,7 +109,7 @@ QString internalSubset() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_INTERNALSUBSET )
 {
-  QDomDocumentType * obj = ( QDomDocumentType * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = static_cast< QDomDocumentType * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -133,7 +133,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NAME )
 {
-  QDomDocumentType * obj = ( QDomDocumentType * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = static_cast< QDomDocumentType * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -157,7 +157,7 @@ QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NODETYPE )
 {
-  QDomDocumentType * obj = ( QDomDocumentType * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = static_cast< QDomDocumentType * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -181,7 +181,7 @@ QDomNamedNodeMap notations() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NOTATIONS )
 {
-  QDomDocumentType * obj = ( QDomDocumentType * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = static_cast< QDomDocumentType * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -206,7 +206,7 @@ QString publicId() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_PUBLICID )
 {
-  QDomDocumentType * obj = ( QDomDocumentType * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = static_cast< QDomDocumentType * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -230,7 +230,7 @@ QString systemId() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_SYSTEMID )
 {
-  QDomDocumentType * obj = ( QDomDocumentType * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomDocumentType * obj = static_cast< QDomDocumentType * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

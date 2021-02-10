@@ -80,7 +80,7 @@ QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMENTITY_NODETYPE )
 {
-  QDomEntity * obj = ( QDomEntity * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomEntity * obj = static_cast< QDomEntity * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -104,7 +104,7 @@ QString notationName() const
 */
 HB_FUNC_STATIC( QDOMENTITY_NOTATIONNAME )
 {
-  QDomEntity * obj = ( QDomEntity * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomEntity * obj = static_cast< QDomEntity * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -128,7 +128,7 @@ QString publicId() const
 */
 HB_FUNC_STATIC( QDOMENTITY_PUBLICID )
 {
-  QDomEntity * obj = ( QDomEntity * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomEntity * obj = static_cast< QDomEntity * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -152,7 +152,7 @@ QString systemId() const
 */
 HB_FUNC_STATIC( QDOMENTITY_SYSTEMID )
 {
-  QDomEntity * obj = ( QDomEntity * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDomEntity * obj = static_cast< QDomEntity * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

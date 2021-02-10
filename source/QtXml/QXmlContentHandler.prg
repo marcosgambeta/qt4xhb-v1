@@ -60,7 +60,7 @@ RETURN
 
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_DELETE )
 {
-  QXmlContentHandler * obj = ( QXmlContentHandler * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = static_cast< QXmlContentHandler * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -80,7 +80,7 @@ virtual bool characters( const QString & ch ) = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_CHARACTERS )
 {
-  QXmlContentHandler * obj = ( QXmlContentHandler * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = static_cast< QXmlContentHandler * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -104,7 +104,7 @@ virtual bool endDocument() = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDDOCUMENT )
 {
-  QXmlContentHandler * obj = ( QXmlContentHandler * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = static_cast< QXmlContentHandler * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -128,7 +128,7 @@ virtual bool endElement( const QString & namespaceURI, const QString & localName
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDELEMENT )
 {
-  QXmlContentHandler * obj = ( QXmlContentHandler * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = static_cast< QXmlContentHandler * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -152,7 +152,7 @@ virtual bool endPrefixMapping( const QString & prefix ) = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_ENDPREFIXMAPPING )
 {
-  QXmlContentHandler * obj = ( QXmlContentHandler * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = static_cast< QXmlContentHandler * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -176,7 +176,7 @@ virtual QString errorString() const = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_ERRORSTRING )
 {
-  QXmlContentHandler * obj = ( QXmlContentHandler * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = static_cast< QXmlContentHandler * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -200,7 +200,7 @@ virtual bool ignorableWhitespace( const QString & ch ) = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_IGNORABLEWHITESPACE )
 {
-  QXmlContentHandler * obj = ( QXmlContentHandler * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = static_cast< QXmlContentHandler * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -224,7 +224,7 @@ virtual bool processingInstruction( const QString & target, const QString & data
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_PROCESSINGINSTRUCTION )
 {
-  QXmlContentHandler * obj = ( QXmlContentHandler * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = static_cast< QXmlContentHandler * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -248,7 +248,7 @@ virtual void setDocumentLocator( QXmlLocator * locator ) = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_SETDOCUMENTLOCATOR )
 {
-  QXmlContentHandler * obj = ( QXmlContentHandler * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = static_cast< QXmlContentHandler * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -274,7 +274,7 @@ virtual bool skippedEntity( const QString & name ) = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_SKIPPEDENTITY )
 {
-  QXmlContentHandler * obj = ( QXmlContentHandler * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = static_cast< QXmlContentHandler * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -298,7 +298,7 @@ virtual bool startDocument() = 0
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTDOCUMENT )
 {
-  QXmlContentHandler * obj = ( QXmlContentHandler * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = static_cast< QXmlContentHandler * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -322,7 +322,7 @@ virtual bool startElement( const QString & namespaceURI, const QString & localNa
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTELEMENT )
 {
-  QXmlContentHandler * obj = ( QXmlContentHandler * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = static_cast< QXmlContentHandler * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -346,7 +346,7 @@ virtual bool startPrefixMapping( const QString & prefix, const QString & uri ) =
 */
 HB_FUNC_STATIC( QXMLCONTENTHANDLER_STARTPREFIXMAPPING )
 {
-  QXmlContentHandler * obj = ( QXmlContentHandler * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QXmlContentHandler * obj = static_cast< QXmlContentHandler * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QXMLCONTENTHANDLER_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
