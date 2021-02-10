@@ -62,7 +62,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_DELETE )
 {
-  QDesignerCustomWidgetInterface * obj = ( QDesignerCustomWidgetInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface * obj = static_cast< QDesignerCustomWidgetInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -82,7 +82,7 @@ virtual QString codeTemplate() const
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_CODETEMPLATE )
 {
-  QDesignerCustomWidgetInterface * obj = ( QDesignerCustomWidgetInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface * obj = static_cast< QDesignerCustomWidgetInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -106,7 +106,7 @@ virtual QWidget * createWidget( QWidget * parent ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_CREATEWIDGET )
 {
-  QDesignerCustomWidgetInterface * obj = ( QDesignerCustomWidgetInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface * obj = static_cast< QDesignerCustomWidgetInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -131,7 +131,7 @@ virtual QString domXml() const
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_DOMXML )
 {
-  QDesignerCustomWidgetInterface * obj = ( QDesignerCustomWidgetInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface * obj = static_cast< QDesignerCustomWidgetInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -155,7 +155,7 @@ virtual QString group() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_GROUP )
 {
-  QDesignerCustomWidgetInterface * obj = ( QDesignerCustomWidgetInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface * obj = static_cast< QDesignerCustomWidgetInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -179,7 +179,7 @@ virtual QIcon icon() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ICON )
 {
-  QDesignerCustomWidgetInterface * obj = ( QDesignerCustomWidgetInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface * obj = static_cast< QDesignerCustomWidgetInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -204,7 +204,7 @@ virtual QString includeFile() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_INCLUDEFILE )
 {
-  QDesignerCustomWidgetInterface * obj = ( QDesignerCustomWidgetInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface * obj = static_cast< QDesignerCustomWidgetInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -228,7 +228,7 @@ virtual void initialize( QDesignerFormEditorInterface * formEditor )
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_INITIALIZE )
 {
-  QDesignerCustomWidgetInterface * obj = ( QDesignerCustomWidgetInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface * obj = static_cast< QDesignerCustomWidgetInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -254,7 +254,7 @@ virtual bool isContainer() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ISCONTAINER )
 {
-  QDesignerCustomWidgetInterface * obj = ( QDesignerCustomWidgetInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface * obj = static_cast< QDesignerCustomWidgetInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -278,7 +278,7 @@ virtual bool isInitialized() const
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_ISINITIALIZED )
 {
-  QDesignerCustomWidgetInterface * obj = ( QDesignerCustomWidgetInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface * obj = static_cast< QDesignerCustomWidgetInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -302,7 +302,7 @@ virtual QString name() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_NAME )
 {
-  QDesignerCustomWidgetInterface * obj = ( QDesignerCustomWidgetInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface * obj = static_cast< QDesignerCustomWidgetInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -326,7 +326,7 @@ virtual QString toolTip() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_TOOLTIP )
 {
-  QDesignerCustomWidgetInterface * obj = ( QDesignerCustomWidgetInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface * obj = static_cast< QDesignerCustomWidgetInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -350,7 +350,7 @@ virtual QString whatsThis() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_WHATSTHIS )
 {
-  QDesignerCustomWidgetInterface * obj = ( QDesignerCustomWidgetInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerCustomWidgetInterface * obj = static_cast< QDesignerCustomWidgetInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QDESIGNERCUSTOMWIDGETINTERFACE_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

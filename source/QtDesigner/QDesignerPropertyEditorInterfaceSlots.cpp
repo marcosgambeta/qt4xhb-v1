@@ -28,7 +28,7 @@ void QDesignerPropertyEditorInterfaceSlots::propertyChanged( const QString & nam
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDESIGNERPROPERTYEDITORINTERFACE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDESIGNERPROPERTYEDITORINTERFACE" );
     PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING( name ) );
     PHB_ITEM pvalue = Qt4xHb::Signals_return_object( ( void * ) &value, "QVARIANT" );
 
@@ -42,7 +42,7 @@ void QDesignerPropertyEditorInterfaceSlots::propertyChanged( const QString & nam
 
 void QDesignerPropertyEditorInterfaceSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDesignerPropertyEditorInterface * obj = ( QDesignerPropertyEditorInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerPropertyEditorInterface * obj = static_cast< QDesignerPropertyEditorInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

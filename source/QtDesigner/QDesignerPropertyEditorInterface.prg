@@ -54,7 +54,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_DELETE )
 {
-  QDesignerPropertyEditorInterface * obj = ( QDesignerPropertyEditorInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerPropertyEditorInterface * obj = static_cast< QDesignerPropertyEditorInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -76,7 +76,7 @@ virtual QDesignerFormEditorInterface * core() const
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CORE )
 {
-  QDesignerPropertyEditorInterface * obj = ( QDesignerPropertyEditorInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerPropertyEditorInterface * obj = static_cast< QDesignerPropertyEditorInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -101,7 +101,7 @@ virtual QString currentPropertyName() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_CURRENTPROPERTYNAME )
 {
-  QDesignerPropertyEditorInterface * obj = ( QDesignerPropertyEditorInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerPropertyEditorInterface * obj = static_cast< QDesignerPropertyEditorInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -125,7 +125,7 @@ virtual bool isReadOnly() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_ISREADONLY )
 {
-  QDesignerPropertyEditorInterface * obj = ( QDesignerPropertyEditorInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerPropertyEditorInterface * obj = static_cast< QDesignerPropertyEditorInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -149,7 +149,7 @@ virtual QObject * object() const = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_OBJECT )
 {
-  QDesignerPropertyEditorInterface * obj = ( QDesignerPropertyEditorInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerPropertyEditorInterface * obj = static_cast< QDesignerPropertyEditorInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -174,7 +174,7 @@ virtual void setObject( QObject * object ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETOBJECT )
 {
-  QDesignerPropertyEditorInterface * obj = ( QDesignerPropertyEditorInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerPropertyEditorInterface * obj = static_cast< QDesignerPropertyEditorInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -200,7 +200,7 @@ virtual void setPropertyValue( const QString & name, const QVariant & value, boo
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETPROPERTYVALUE )
 {
-  QDesignerPropertyEditorInterface * obj = ( QDesignerPropertyEditorInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerPropertyEditorInterface * obj = static_cast< QDesignerPropertyEditorInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -226,7 +226,7 @@ virtual void setReadOnly( bool readOnly ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERPROPERTYEDITORINTERFACE_SETREADONLY )
 {
-  QDesignerPropertyEditorInterface * obj = ( QDesignerPropertyEditorInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerPropertyEditorInterface * obj = static_cast< QDesignerPropertyEditorInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

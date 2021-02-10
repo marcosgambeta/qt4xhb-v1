@@ -28,8 +28,8 @@ void QDesignerFormWindowManagerInterfaceSlots::activeFormWindowChanged( QDesigne
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
-    PHB_ITEM pformWindow = Qt4xHb::Signals_return_qobject( ( QObject * ) formWindow, "QDESIGNERFORMWINDOWINTERFACE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
+    PHB_ITEM pformWindow = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( formWindow ), "QDESIGNERFORMWINDOWINTERFACE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pformWindow );
 
@@ -46,8 +46,8 @@ void QDesignerFormWindowManagerInterfaceSlots::formWindowAdded( QDesignerFormWin
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
-    PHB_ITEM pformWindow = Qt4xHb::Signals_return_qobject( ( QObject * ) formWindow, "QDESIGNERFORMWINDOWINTERFACE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
+    PHB_ITEM pformWindow = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( formWindow ), "QDESIGNERFORMWINDOWINTERFACE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pformWindow );
 
@@ -64,8 +64,8 @@ void QDesignerFormWindowManagerInterfaceSlots::formWindowRemoved( QDesignerFormW
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
-    PHB_ITEM pformWindow = Qt4xHb::Signals_return_qobject( ( QObject * ) formWindow, "QDESIGNERFORMWINDOWINTERFACE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
+    PHB_ITEM pformWindow = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( formWindow ), "QDESIGNERFORMWINDOWINTERFACE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pformWindow );
 
@@ -76,7 +76,7 @@ void QDesignerFormWindowManagerInterfaceSlots::formWindowRemoved( QDesignerFormW
 
 void QDesignerFormWindowManagerInterfaceSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDesignerFormWindowManagerInterface * obj = ( QDesignerFormWindowManagerInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDesignerFormWindowManagerInterface * obj = static_cast< QDesignerFormWindowManagerInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

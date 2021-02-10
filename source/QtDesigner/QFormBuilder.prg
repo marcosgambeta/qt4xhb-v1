@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QFORMBUILDER_NEW )
 
 HB_FUNC_STATIC( QFORMBUILDER_DELETE )
 {
-  QFormBuilder * obj = ( QFormBuilder * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormBuilder * obj = static_cast< QFormBuilder * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -82,7 +82,7 @@ void addPluginPath( const QString & pluginPath )
 */
 HB_FUNC_STATIC( QFORMBUILDER_ADDPLUGINPATH )
 {
-  QFormBuilder * obj = ( QFormBuilder * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormBuilder * obj = static_cast< QFormBuilder * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -108,7 +108,7 @@ void clearPluginPaths()
 */
 HB_FUNC_STATIC( QFORMBUILDER_CLEARPLUGINPATHS )
 {
-  QFormBuilder * obj = ( QFormBuilder * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormBuilder * obj = static_cast< QFormBuilder * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -134,7 +134,7 @@ QList<QDesignerCustomWidgetInterface *> customWidgets() const
 */
 HB_FUNC_STATIC( QFORMBUILDER_CUSTOMWIDGETS )
 {
-  QFormBuilder * obj = ( QFormBuilder * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormBuilder * obj = static_cast< QFormBuilder * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QFORMBUILDER_CUSTOMWIDGETS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QDesignerCustomWidgetInterface * ) list[i] );
+          hb_itemPutPtr( pItem, static_cast< QDesignerCustomWidgetInterface * >( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -182,7 +182,7 @@ QStringList pluginPaths() const
 */
 HB_FUNC_STATIC( QFORMBUILDER_PLUGINPATHS )
 {
-  QFormBuilder * obj = ( QFormBuilder * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormBuilder * obj = static_cast< QFormBuilder * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -206,7 +206,7 @@ void setPluginPath( const QStringList & pluginPaths )
 */
 HB_FUNC_STATIC( QFORMBUILDER_SETPLUGINPATH )
 {
-  QFormBuilder * obj = ( QFormBuilder * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QFormBuilder * obj = static_cast< QFormBuilder * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

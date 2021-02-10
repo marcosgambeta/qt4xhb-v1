@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_NEW )
 
 HB_FUNC_STATIC( QEXTENSIONMANAGER_DELETE )
 {
-  QExtensionManager * obj = ( QExtensionManager * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QExtensionManager * obj = static_cast< QExtensionManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -84,7 +84,7 @@ virtual QObject * extension( QObject * object, const QString & iid ) const
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_EXTENSION )
 {
-  QExtensionManager * obj = ( QExtensionManager * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QExtensionManager * obj = static_cast< QExtensionManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -109,12 +109,12 @@ virtual void registerExtensions( QAbstractExtensionFactory * factory, const QStr
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_REGISTEREXTENSIONS )
 {
-  QExtensionManager * obj = ( QExtensionManager * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QExtensionManager * obj = static_cast< QExtensionManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQABSTRACTEXTENSIONFACTORY( 1 ) && ISOPTCHAR( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISQABSTRACTEXTENSIONFACTORY( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       obj->registerExtensions( PQABSTRACTEXTENSIONFACTORY( 1 ), OPQSTRING( 2, QString() ) );
@@ -135,12 +135,12 @@ virtual void unregisterExtensions( QAbstractExtensionFactory * factory, const QS
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
 {
-  QExtensionManager * obj = ( QExtensionManager * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QExtensionManager * obj = static_cast< QExtensionManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQABSTRACTEXTENSIONFACTORY( 1 ) && ISOPTCHAR( 2 ) )
+    if( ISBETWEEN( 1, 2 ) && ISQABSTRACTEXTENSIONFACTORY( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
       obj->unregisterExtensions( PQABSTRACTEXTENSIONFACTORY( 1 ), OPQSTRING( 2, QString() ) );
