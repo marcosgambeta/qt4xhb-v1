@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW )
 
 HB_FUNC_STATIC( QHOSTADDRESS_DELETE )
 {
-  QHostAddress * obj = ( QHostAddress * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHostAddress * obj = static_cast< QHostAddress * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -153,7 +153,7 @@ void clear()
 */
 HB_FUNC_STATIC( QHOSTADDRESS_CLEAR )
 {
-  QHostAddress * obj = ( QHostAddress * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHostAddress * obj = static_cast< QHostAddress * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -179,7 +179,7 @@ bool isInSubnet( const QHostAddress & subnet, int netmask ) const
 */
 void QHostAddress_isInSubnet1()
 {
-  QHostAddress * obj = ( QHostAddress * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHostAddress * obj = static_cast< QHostAddress * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -204,7 +204,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QHOSTADDRESS_ISNULL )
 {
-  QHostAddress * obj = ( QHostAddress * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHostAddress * obj = static_cast< QHostAddress * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -228,7 +228,7 @@ QAbstractSocket::NetworkLayerProtocol protocol() const
 */
 HB_FUNC_STATIC( QHOSTADDRESS_PROTOCOL )
 {
-  QHostAddress * obj = ( QHostAddress * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHostAddress * obj = static_cast< QHostAddress * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -252,7 +252,7 @@ QString scopeId() const
 */
 HB_FUNC_STATIC( QHOSTADDRESS_SCOPEID )
 {
-  QHostAddress * obj = ( QHostAddress * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHostAddress * obj = static_cast< QHostAddress * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -276,7 +276,7 @@ void setAddress( quint32 ip4Addr )
 */
 void QHostAddress_setAddress1()
 {
-  QHostAddress * obj = ( QHostAddress * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHostAddress * obj = static_cast< QHostAddress * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -291,7 +291,7 @@ bool setAddress( const QString & address )
 */
 void QHostAddress_setAddress4()
 {
-  QHostAddress * obj = ( QHostAddress * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHostAddress * obj = static_cast< QHostAddress * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -320,7 +320,7 @@ void setScopeId( const QString & id )
 */
 HB_FUNC_STATIC( QHOSTADDRESS_SETSCOPEID )
 {
-  QHostAddress * obj = ( QHostAddress * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHostAddress * obj = static_cast< QHostAddress * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -346,7 +346,7 @@ quint32 toIPv4Address() const
 */
 HB_FUNC_STATIC( QHOSTADDRESS_TOIPV4ADDRESS )
 {
-  QHostAddress * obj = ( QHostAddress * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHostAddress * obj = static_cast< QHostAddress * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -370,7 +370,7 @@ QString toString() const
 */
 HB_FUNC_STATIC( QHOSTADDRESS_TOSTRING )
 {
-  QHostAddress * obj = ( QHostAddress * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHostAddress * obj = static_cast< QHostAddress * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

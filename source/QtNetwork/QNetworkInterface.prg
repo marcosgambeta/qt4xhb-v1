@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NEW )
 
 HB_FUNC_STATIC( QNETWORKINTERFACE_DELETE )
 {
-  QNetworkInterface * obj = ( QNetworkInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = static_cast< QNetworkInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -116,7 +116,7 @@ QList<QNetworkAddressEntry> addressEntries() const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
 {
-  QNetworkInterface * obj = ( QNetworkInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = static_cast< QNetworkInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ADDRESSENTRIES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QNetworkAddressEntry * ) new QNetworkAddressEntry( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QNetworkAddressEntry * >( new QNetworkAddressEntry( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -168,7 +168,7 @@ QNetworkInterface::InterfaceFlags flags() const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_FLAGS )
 {
-  QNetworkInterface * obj = ( QNetworkInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = static_cast< QNetworkInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -192,7 +192,7 @@ QString hardwareAddress() const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_HARDWAREADDRESS )
 {
-  QNetworkInterface * obj = ( QNetworkInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = static_cast< QNetworkInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -216,7 +216,7 @@ QString humanReadableName() const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_HUMANREADABLENAME )
 {
-  QNetworkInterface * obj = ( QNetworkInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = static_cast< QNetworkInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -240,7 +240,7 @@ int index() const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_INDEX )
 {
-  QNetworkInterface * obj = ( QNetworkInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = static_cast< QNetworkInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -264,7 +264,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_ISVALID )
 {
-  QNetworkInterface * obj = ( QNetworkInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = static_cast< QNetworkInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -288,7 +288,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_NAME )
 {
-  QNetworkInterface * obj = ( QNetworkInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = static_cast< QNetworkInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -312,7 +312,7 @@ QList<QHostAddress> allAddresses()
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
 {
-  QNetworkInterface * obj = ( QNetworkInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = static_cast< QNetworkInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -333,7 +333,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLADDRESSES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QHostAddress * ) new QHostAddress( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QHostAddress * >( new QHostAddress( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -364,7 +364,7 @@ QList<QNetworkInterface> allInterfaces()
 */
 HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
 {
-  QNetworkInterface * obj = ( QNetworkInterface * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkInterface * obj = static_cast< QNetworkInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_ALLINTERFACES )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QNetworkInterface * ) new QNetworkInterface( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QNetworkInterface * >( new QNetworkInterface( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QNETWORKINTERFACE_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

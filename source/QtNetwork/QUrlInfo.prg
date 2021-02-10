@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QURLINFO_NEW )
 
 HB_FUNC_STATIC( QURLINFO_DELETE )
 {
-  QUrlInfo * obj = ( QUrlInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUrlInfo * obj = static_cast< QUrlInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -159,7 +159,7 @@ QString group() const
 */
 HB_FUNC_STATIC( QURLINFO_GROUP )
 {
-  QUrlInfo * obj = ( QUrlInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUrlInfo * obj = static_cast< QUrlInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -183,7 +183,7 @@ bool isDir() const
 */
 HB_FUNC_STATIC( QURLINFO_ISDIR )
 {
-  QUrlInfo * obj = ( QUrlInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUrlInfo * obj = static_cast< QUrlInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -207,7 +207,7 @@ bool isExecutable() const
 */
 HB_FUNC_STATIC( QURLINFO_ISEXECUTABLE )
 {
-  QUrlInfo * obj = ( QUrlInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUrlInfo * obj = static_cast< QUrlInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -231,7 +231,7 @@ bool isFile() const
 */
 HB_FUNC_STATIC( QURLINFO_ISFILE )
 {
-  QUrlInfo * obj = ( QUrlInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUrlInfo * obj = static_cast< QUrlInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -255,7 +255,7 @@ bool isReadable() const
 */
 HB_FUNC_STATIC( QURLINFO_ISREADABLE )
 {
-  QUrlInfo * obj = ( QUrlInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUrlInfo * obj = static_cast< QUrlInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -279,7 +279,7 @@ bool isSymLink() const
 */
 HB_FUNC_STATIC( QURLINFO_ISSYMLINK )
 {
-  QUrlInfo * obj = ( QUrlInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUrlInfo * obj = static_cast< QUrlInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -303,7 +303,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QURLINFO_ISVALID )
 {
-  QUrlInfo * obj = ( QUrlInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUrlInfo * obj = static_cast< QUrlInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -327,7 +327,7 @@ bool isWritable() const
 */
 HB_FUNC_STATIC( QURLINFO_ISWRITABLE )
 {
-  QUrlInfo * obj = ( QUrlInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUrlInfo * obj = static_cast< QUrlInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -351,7 +351,7 @@ QDateTime lastModified() const
 */
 HB_FUNC_STATIC( QURLINFO_LASTMODIFIED )
 {
-  QUrlInfo * obj = ( QUrlInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUrlInfo * obj = static_cast< QUrlInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -376,7 +376,7 @@ QDateTime lastRead() const
 */
 HB_FUNC_STATIC( QURLINFO_LASTREAD )
 {
-  QUrlInfo * obj = ( QUrlInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUrlInfo * obj = static_cast< QUrlInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -401,7 +401,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QURLINFO_NAME )
 {
-  QUrlInfo * obj = ( QUrlInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUrlInfo * obj = static_cast< QUrlInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -425,7 +425,7 @@ QString owner() const
 */
 HB_FUNC_STATIC( QURLINFO_OWNER )
 {
-  QUrlInfo * obj = ( QUrlInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUrlInfo * obj = static_cast< QUrlInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -449,7 +449,7 @@ int permissions() const
 */
 HB_FUNC_STATIC( QURLINFO_PERMISSIONS )
 {
-  QUrlInfo * obj = ( QUrlInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUrlInfo * obj = static_cast< QUrlInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -473,7 +473,7 @@ virtual void setDir( bool b )
 */
 HB_FUNC_STATIC( QURLINFO_SETDIR )
 {
-  QUrlInfo * obj = ( QUrlInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUrlInfo * obj = static_cast< QUrlInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -499,7 +499,7 @@ virtual void setFile( bool b )
 */
 HB_FUNC_STATIC( QURLINFO_SETFILE )
 {
-  QUrlInfo * obj = ( QUrlInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUrlInfo * obj = static_cast< QUrlInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -525,7 +525,7 @@ virtual void setGroup( const QString & s )
 */
 HB_FUNC_STATIC( QURLINFO_SETGROUP )
 {
-  QUrlInfo * obj = ( QUrlInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUrlInfo * obj = static_cast< QUrlInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -551,7 +551,7 @@ virtual void setLastModified( const QDateTime & dt )
 */
 HB_FUNC_STATIC( QURLINFO_SETLASTMODIFIED )
 {
-  QUrlInfo * obj = ( QUrlInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUrlInfo * obj = static_cast< QUrlInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -577,7 +577,7 @@ void setLastRead( const QDateTime & dt )
 */
 HB_FUNC_STATIC( QURLINFO_SETLASTREAD )
 {
-  QUrlInfo * obj = ( QUrlInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUrlInfo * obj = static_cast< QUrlInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -603,7 +603,7 @@ virtual void setName( const QString & name )
 */
 HB_FUNC_STATIC( QURLINFO_SETNAME )
 {
-  QUrlInfo * obj = ( QUrlInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUrlInfo * obj = static_cast< QUrlInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -629,7 +629,7 @@ virtual void setOwner( const QString & s )
 */
 HB_FUNC_STATIC( QURLINFO_SETOWNER )
 {
-  QUrlInfo * obj = ( QUrlInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUrlInfo * obj = static_cast< QUrlInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -655,7 +655,7 @@ virtual void setPermissions( int p )
 */
 HB_FUNC_STATIC( QURLINFO_SETPERMISSIONS )
 {
-  QUrlInfo * obj = ( QUrlInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUrlInfo * obj = static_cast< QUrlInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -681,7 +681,7 @@ virtual void setReadable( bool b )
 */
 HB_FUNC_STATIC( QURLINFO_SETREADABLE )
 {
-  QUrlInfo * obj = ( QUrlInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUrlInfo * obj = static_cast< QUrlInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -707,7 +707,7 @@ virtual void setSize( qint64 size )
 */
 HB_FUNC_STATIC( QURLINFO_SETSIZE )
 {
-  QUrlInfo * obj = ( QUrlInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUrlInfo * obj = static_cast< QUrlInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -733,7 +733,7 @@ virtual void setSymLink( bool b )
 */
 HB_FUNC_STATIC( QURLINFO_SETSYMLINK )
 {
-  QUrlInfo * obj = ( QUrlInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUrlInfo * obj = static_cast< QUrlInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -759,7 +759,7 @@ virtual void setWritable( bool b )
 */
 HB_FUNC_STATIC( QURLINFO_SETWRITABLE )
 {
-  QUrlInfo * obj = ( QUrlInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUrlInfo * obj = static_cast< QUrlInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -785,7 +785,7 @@ qint64 size() const
 */
 HB_FUNC_STATIC( QURLINFO_SIZE )
 {
-  QUrlInfo * obj = ( QUrlInfo * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QUrlInfo * obj = static_cast< QUrlInfo * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -867,7 +867,7 @@ HB_FUNC_STATIC( QURLINFO_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -876,7 +876,7 @@ HB_FUNC_STATIC( QURLINFO_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

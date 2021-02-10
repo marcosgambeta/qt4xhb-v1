@@ -51,7 +51,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_DELETE )
 {
-  QAbstractNetworkCache * obj = ( QAbstractNetworkCache * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractNetworkCache * obj = static_cast< QAbstractNetworkCache * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -73,7 +73,7 @@ virtual qint64 cacheSize() const = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_CACHESIZE )
 {
-  QAbstractNetworkCache * obj = ( QAbstractNetworkCache * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractNetworkCache * obj = static_cast< QAbstractNetworkCache * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -97,7 +97,7 @@ virtual QIODevice * data( const QUrl & url ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_DATA )
 {
-  QAbstractNetworkCache * obj = ( QAbstractNetworkCache * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractNetworkCache * obj = static_cast< QAbstractNetworkCache * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -122,7 +122,7 @@ virtual void insert( QIODevice * device ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_INSERT )
 {
-  QAbstractNetworkCache * obj = ( QAbstractNetworkCache * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractNetworkCache * obj = static_cast< QAbstractNetworkCache * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -148,7 +148,7 @@ virtual QNetworkCacheMetaData metaData( const QUrl & url ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_METADATA )
 {
-  QAbstractNetworkCache * obj = ( QAbstractNetworkCache * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractNetworkCache * obj = static_cast< QAbstractNetworkCache * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -173,7 +173,7 @@ virtual QIODevice * prepare( const QNetworkCacheMetaData & metaData ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_PREPARE )
 {
-  QAbstractNetworkCache * obj = ( QAbstractNetworkCache * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractNetworkCache * obj = static_cast< QAbstractNetworkCache * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -198,7 +198,7 @@ virtual bool remove( const QUrl & url ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_REMOVE )
 {
-  QAbstractNetworkCache * obj = ( QAbstractNetworkCache * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractNetworkCache * obj = static_cast< QAbstractNetworkCache * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -222,7 +222,7 @@ virtual void updateMetaData( const QNetworkCacheMetaData & metaData ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_UPDATEMETADATA )
 {
-  QAbstractNetworkCache * obj = ( QAbstractNetworkCache * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractNetworkCache * obj = static_cast< QAbstractNetworkCache * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -248,7 +248,7 @@ virtual void clear() = 0
 */
 HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_CLEAR )
 {
-  QAbstractNetworkCache * obj = ( QAbstractNetworkCache * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QAbstractNetworkCache * obj = static_cast< QAbstractNetworkCache * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

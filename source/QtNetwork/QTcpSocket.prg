@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QTCPSOCKET_NEW )
 
 HB_FUNC_STATIC( QTCPSOCKET_DELETE )
 {
-  QTcpSocket * obj = ( QTcpSocket * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTcpSocket * obj = static_cast< QTcpSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

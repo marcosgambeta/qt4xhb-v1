@@ -28,7 +28,7 @@ void QLocalSocketSlots::connected()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QLOCALSOCKET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QLOCALSOCKET" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QLocalSocketSlots::disconnected()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QLOCALSOCKET" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QLOCALSOCKET" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -60,8 +60,8 @@ void QLocalSocketSlots::error( QLocalSocket::LocalSocketError socketError )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QLOCALSOCKET" );
-    PHB_ITEM psocketError = hb_itemPutNI( NULL, (int) socketError );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QLOCALSOCKET" );
+    PHB_ITEM psocketError = hb_itemPutNI( NULL, ( int ) socketError );
 
     hb_vmEvalBlockV( cb, 2, psender, psocketError );
 
@@ -78,8 +78,8 @@ void QLocalSocketSlots::stateChanged( QLocalSocket::LocalSocketState socketState
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QLOCALSOCKET" );
-    PHB_ITEM psocketState = hb_itemPutNI( NULL, (int) socketState );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QLOCALSOCKET" );
+    PHB_ITEM psocketState = hb_itemPutNI( NULL, ( int ) socketState );
 
     hb_vmEvalBlockV( cb, 2, psender, psocketState );
 
@@ -90,7 +90,7 @@ void QLocalSocketSlots::stateChanged( QLocalSocket::LocalSocketState socketState
 
 void QLocalSocketSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QLocalSocket * obj = ( QLocalSocket * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QLocalSocket * obj = static_cast< QLocalSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

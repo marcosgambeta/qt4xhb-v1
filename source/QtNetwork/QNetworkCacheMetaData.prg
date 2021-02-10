@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEW )
 
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_DELETE )
 {
-  QNetworkCacheMetaData * obj = ( QNetworkCacheMetaData * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCacheMetaData * obj = static_cast< QNetworkCacheMetaData * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -116,7 +116,7 @@ QDateTime expirationDate() const
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_EXPIRATIONDATE )
 {
-  QNetworkCacheMetaData * obj = ( QNetworkCacheMetaData * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCacheMetaData * obj = static_cast< QNetworkCacheMetaData * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -141,7 +141,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_ISVALID )
 {
-  QNetworkCacheMetaData * obj = ( QNetworkCacheMetaData * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCacheMetaData * obj = static_cast< QNetworkCacheMetaData * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -165,7 +165,7 @@ QDateTime lastModified() const
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_LASTMODIFIED )
 {
-  QNetworkCacheMetaData * obj = ( QNetworkCacheMetaData * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCacheMetaData * obj = static_cast< QNetworkCacheMetaData * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -190,7 +190,7 @@ bool saveToDisk() const
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SAVETODISK )
 {
-  QNetworkCacheMetaData * obj = ( QNetworkCacheMetaData * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCacheMetaData * obj = static_cast< QNetworkCacheMetaData * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -214,7 +214,7 @@ void setExpirationDate( const QDateTime & dateTime )
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETEXPIRATIONDATE )
 {
-  QNetworkCacheMetaData * obj = ( QNetworkCacheMetaData * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCacheMetaData * obj = static_cast< QNetworkCacheMetaData * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -240,7 +240,7 @@ void setLastModified( const QDateTime & dateTime )
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETLASTMODIFIED )
 {
-  QNetworkCacheMetaData * obj = ( QNetworkCacheMetaData * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCacheMetaData * obj = static_cast< QNetworkCacheMetaData * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -266,7 +266,7 @@ void setSaveToDisk( bool allow )
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETSAVETODISK )
 {
-  QNetworkCacheMetaData * obj = ( QNetworkCacheMetaData * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCacheMetaData * obj = static_cast< QNetworkCacheMetaData * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -292,7 +292,7 @@ void setUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_SETURL )
 {
-  QNetworkCacheMetaData * obj = ( QNetworkCacheMetaData * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCacheMetaData * obj = static_cast< QNetworkCacheMetaData * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -318,7 +318,7 @@ QUrl url() const
 */
 HB_FUNC_STATIC( QNETWORKCACHEMETADATA_URL )
 {
-  QNetworkCacheMetaData * obj = ( QNetworkCacheMetaData * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCacheMetaData * obj = static_cast< QNetworkCacheMetaData * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QNETWORKCACHEMETADATA_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

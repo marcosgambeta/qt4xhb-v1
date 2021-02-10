@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_NEW )
 
 HB_FUNC_STATIC( QHTTPMULTIPART_DELETE )
 {
-  QHttpMultiPart * obj = ( QHttpMultiPart * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHttpMultiPart * obj = static_cast< QHttpMultiPart * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -103,7 +103,7 @@ void append( const QHttpPart & httpPart )
 */
 HB_FUNC_STATIC( QHTTPMULTIPART_APPEND )
 {
-  QHttpMultiPart * obj = ( QHttpMultiPart * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHttpMultiPart * obj = static_cast< QHttpMultiPart * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -129,7 +129,7 @@ QByteArray boundary() const
 */
 HB_FUNC_STATIC( QHTTPMULTIPART_BOUNDARY )
 {
-  QHttpMultiPart * obj = ( QHttpMultiPart * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHttpMultiPart * obj = static_cast< QHttpMultiPart * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -154,7 +154,7 @@ void setBoundary( const QByteArray & boundary )
 */
 HB_FUNC_STATIC( QHTTPMULTIPART_SETBOUNDARY )
 {
-  QHttpMultiPart * obj = ( QHttpMultiPart * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHttpMultiPart * obj = static_cast< QHttpMultiPart * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -180,7 +180,7 @@ void setContentType( QHttpMultiPart::ContentType contentType )
 */
 HB_FUNC_STATIC( QHTTPMULTIPART_SETCONTENTTYPE )
 {
-  QHttpMultiPart * obj = ( QHttpMultiPart * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHttpMultiPart * obj = static_cast< QHttpMultiPart * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

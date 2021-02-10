@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_NEW )
 
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_DELETE )
 {
-  QNetworkCookieJar * obj = ( QNetworkCookieJar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCookieJar * obj = static_cast< QNetworkCookieJar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -83,7 +83,7 @@ virtual QList<QNetworkCookie> cookiesForUrl( const QUrl & url ) const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_COOKIESFORURL )
 {
-  QNetworkCookieJar * obj = ( QNetworkCookieJar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCookieJar * obj = static_cast< QNetworkCookieJar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_COOKIESFORURL )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QNetworkCookie * ) new QNetworkCookie( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QNetworkCookie * >( new QNetworkCookie( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -135,7 +135,7 @@ virtual bool setCookiesFromUrl( const QList<QNetworkCookie> & cookieList, const 
 */
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_SETCOOKIESFROMURL )
 {
-  QNetworkCookieJar * obj = ( QNetworkCookieJar * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QNetworkCookieJar * obj = static_cast< QNetworkCookieJar * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_SETCOOKIESFROMURL )
       int nLen1 = hb_arrayLen( aList1 );
       for( int i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << *( QNetworkCookie * ) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
+        par1 << *static_cast< QNetworkCookie * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
       }
       RBOOL( obj->setCookiesFromUrl( par1, *PQURL( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

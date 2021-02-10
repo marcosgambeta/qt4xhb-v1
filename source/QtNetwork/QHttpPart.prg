@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QHTTPPART_NEW )
 
 HB_FUNC_STATIC( QHTTPPART_DELETE )
 {
-  QHttpPart * obj = ( QHttpPart * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHttpPart * obj = static_cast< QHttpPart * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -107,7 +107,7 @@ void setBody( const QByteArray & body )
 */
 HB_FUNC_STATIC( QHTTPPART_SETBODY )
 {
-  QHttpPart * obj = ( QHttpPart * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHttpPart * obj = static_cast< QHttpPart * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -133,7 +133,7 @@ void setBodyDevice( QIODevice * device )
 */
 HB_FUNC_STATIC( QHTTPPART_SETBODYDEVICE )
 {
-  QHttpPart * obj = ( QHttpPart * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHttpPart * obj = static_cast< QHttpPart * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -159,7 +159,7 @@ void setHeader( QNetworkRequest::KnownHeaders header, const QVariant & value )
 */
 HB_FUNC_STATIC( QHTTPPART_SETHEADER )
 {
-  QHttpPart * obj = ( QHttpPart * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHttpPart * obj = static_cast< QHttpPart * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -185,7 +185,7 @@ void setRawHeader( const QByteArray & headerName, const QByteArray & headerValue
 */
 HB_FUNC_STATIC( QHTTPPART_SETRAWHEADER )
 {
-  QHttpPart * obj = ( QHttpPart * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QHttpPart * obj = static_cast< QHttpPart * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QHTTPPART_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QHTTPPART_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

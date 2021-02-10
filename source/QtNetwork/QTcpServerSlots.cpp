@@ -28,7 +28,7 @@ void QTcpServerSlots::newConnection()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QTCPSERVER" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTCPSERVER" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,7 +38,7 @@ void QTcpServerSlots::newConnection()
 
 void QTcpServerSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTcpServer * obj = ( QTcpServer * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QTcpServer * obj = static_cast< QTcpServer * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
