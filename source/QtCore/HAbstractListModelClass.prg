@@ -90,7 +90,7 @@ virtual ~HAbstractListModel()
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_DELETE )
 {
-  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractListModel * obj = static_cast< HAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -116,7 +116,7 @@ void setRowCountCB ( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETROWCOUNTCB )
 {
-  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractListModel * obj = static_cast< HAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -146,7 +146,7 @@ void setDisplayRoleCB ( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETDISPLAYROLECB )
 {
-  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractListModel * obj = static_cast< HAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -172,7 +172,7 @@ void setDecorationRoleCB ( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETDECORATIONROLECB )
 {
-  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractListModel * obj = static_cast< HAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -198,7 +198,7 @@ void setEditRoleCB ( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETEDITROLECB )
 {
-  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractListModel * obj = static_cast< HAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -224,7 +224,7 @@ void setToolTipRoleCB ( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETTOOLTIPROLECB )
 {
-  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractListModel * obj = static_cast< HAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -250,7 +250,7 @@ void setStatusTipRoleCB ( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETSTATUSTIPROLECB )
 {
-  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractListModel * obj = static_cast< HAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -276,7 +276,7 @@ void setWhatsThisRoleCB ( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETWHATSTHISROLECB )
 {
-  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractListModel * obj = static_cast< HAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -302,7 +302,7 @@ void setSizeHintRoleCB ( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETSIZEHINTROLECB )
 {
-  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractListModel * obj = static_cast< HAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -328,7 +328,7 @@ void setFontRoleCB ( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETFONTROLECB )
 {
-  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractListModel * obj = static_cast< HAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -354,7 +354,7 @@ void setTextAlignmentRoleCB ( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETTEXTALIGNMENTROLECB )
 {
-  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractListModel * obj = static_cast< HAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -380,7 +380,7 @@ void setBackgroundRoleCB ( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETBACKGROUNDROLECB )
 {
-  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractListModel * obj = static_cast< HAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -406,7 +406,7 @@ void setForegroundRoleCB ( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETFOREGROUNDROLECB )
 {
-  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractListModel * obj = static_cast< HAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -436,7 +436,7 @@ void setHorizontalHeaderDisplayRoleCB ( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERDISPLAYROLECB )
 {
-  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractListModel * obj = static_cast< HAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -462,7 +462,7 @@ void setHorizontalHeaderDecorationRoleCB ( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERDECORATIONROLECB )
 {
-  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractListModel * obj = static_cast< HAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -488,7 +488,7 @@ void setHorizontalHeaderFontRoleCB ( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERFONTROLECB )
 {
-  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractListModel * obj = static_cast< HAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -514,7 +514,7 @@ void setHorizontalHeaderTextAlignmentRoleCB ( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERTEXTALIGNMENTROLECB )
 {
-  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractListModel * obj = static_cast< HAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -540,7 +540,7 @@ void setHorizontalHeaderBackgroundRoleCB ( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERBACKGROUNDROLECB )
 {
-  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractListModel * obj = static_cast< HAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -566,7 +566,7 @@ void setHorizontalHeaderForegroundRoleCB ( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETHORIZONTALHEADERFOREGROUNDROLECB )
 {
-  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractListModel * obj = static_cast< HAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -596,7 +596,7 @@ void setVerticalHeaderDisplayRoleCB ( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERDISPLAYROLECB )
 {
-  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractListModel * obj = static_cast< HAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -622,7 +622,7 @@ void setVerticalHeaderDecorationRoleCB ( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERDECORATIONROLECB )
 {
-  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractListModel * obj = static_cast< HAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -648,7 +648,7 @@ void setVerticalHeaderFontRoleCB ( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERFONTROLECB )
 {
-  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractListModel * obj = static_cast< HAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -674,7 +674,7 @@ void setVerticalHeaderTextAlignmentRoleCB ( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERTEXTALIGNMENTROLECB )
 {
-  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractListModel * obj = static_cast< HAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -700,7 +700,7 @@ void setVerticalHeaderBackgroundRoleCB ( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERBACKGROUNDROLECB )
 {
-  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractListModel * obj = static_cast< HAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -726,7 +726,7 @@ void setVerticalHeaderForegroundRoleCB ( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_SETVERTICALHEADERFOREGROUNDROLECB )
 {
-  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractListModel * obj = static_cast< HAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -764,7 +764,7 @@ void reloadData()
 */
 HB_FUNC_STATIC( HABSTRACTLISTMODEL_RELOADDATA )
 {
-  HAbstractListModel * obj = (HAbstractListModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractListModel * obj = static_cast< HAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

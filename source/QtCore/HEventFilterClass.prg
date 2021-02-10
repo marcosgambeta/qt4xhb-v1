@@ -59,7 +59,7 @@ HB_FUNC_STATIC( HEVENTFILTER_NEW )
 */
 HB_FUNC_STATIC( HEVENTFILTER_DELETE )
 {
-  HEventFilter * obj = (HEventFilter *) Qt4xHb::itemGetPtrStackSelfItem();
+  HEventFilter * obj = static_cast< HEventFilter * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj != NULL )
   {
@@ -81,7 +81,7 @@ void setEventFilterCB ( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HEVENTFILTER_SETEVENTFILTERCB )
 {
-  HEventFilter * obj = (HEventFilter *) Qt4xHb::itemGetPtrStackSelfItem();
+  HEventFilter * obj = static_cast< HEventFilter * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj != NULL )
   {

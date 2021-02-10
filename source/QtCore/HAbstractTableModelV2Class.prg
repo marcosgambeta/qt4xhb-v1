@@ -68,7 +68,7 @@ virtual ~HAbstractTableModelV2()
 */
 HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_DELETE )
 {
-  HAbstractTableModelV2 * obj = (HAbstractTableModelV2 *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModelV2 * obj = static_cast< HAbstractTableModelV2 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -90,7 +90,7 @@ void setRowCountCB( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETROWCOUNTCB )
 {
-  HAbstractTableModelV2 * obj = (HAbstractTableModelV2 *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModelV2 * obj = static_cast< HAbstractTableModelV2 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -116,7 +116,7 @@ void setColumnCountCB( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETCOLUMNCOUNTCB )
 {
-  HAbstractTableModelV2 * obj = (HAbstractTableModelV2 *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModelV2 * obj = static_cast< HAbstractTableModelV2 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -142,7 +142,7 @@ void setDataCB( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETDATACB )
 {
-  HAbstractTableModelV2 * obj = (HAbstractTableModelV2 *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModelV2 * obj = static_cast< HAbstractTableModelV2 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -168,7 +168,7 @@ void setHeaderDataCB( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETHEADERDATACB )
 {
-  HAbstractTableModelV2 * obj = (HAbstractTableModelV2 *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModelV2 * obj = static_cast< HAbstractTableModelV2 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -194,7 +194,7 @@ void setFlagsCB( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETFLAGSCB )
 {
-  HAbstractTableModelV2 * obj = (HAbstractTableModelV2 *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModelV2 * obj = static_cast< HAbstractTableModelV2 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -220,7 +220,7 @@ void setSetDataCB( PHB_ITEM block )
 */
 HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETSETDATACB )
 {
-  HAbstractTableModelV2 * obj = (HAbstractTableModelV2 *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModelV2 * obj = static_cast< HAbstractTableModelV2 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -270,7 +270,7 @@ void reloadData()
 */
 HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_RELOADDATA )
 {
-  HAbstractTableModelV2 * obj = (HAbstractTableModelV2 *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModelV2 * obj = static_cast< HAbstractTableModelV2 * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

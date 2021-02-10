@@ -93,7 +93,7 @@ virtual ~HAbstractTableModel()
 */
 HB_FUNC( HABSTRACTTABLEMODEL_DELETE )
 {
-  HAbstractTableModel * obj = (HAbstractTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModel * obj = static_cast< HAbstractTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -117,7 +117,7 @@ void setRowCountCB( PHB_ITEM block )
 */
 HB_FUNC( HABSTRACTTABLEMODEL_SETROWCOUNTCB )
 {
-  HAbstractTableModel * obj = (HAbstractTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModel * obj = static_cast< HAbstractTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -143,7 +143,7 @@ void setColumnCountCB( PHB_ITEM block )
 */
 HB_FUNC( HABSTRACTTABLEMODEL_SETCOLUMNCOUNTCB )
 {
-  HAbstractTableModel * obj = (HAbstractTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModel * obj = static_cast< HAbstractTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -171,7 +171,7 @@ void setDisplayRoleCB( PHB_ITEM block )
 */
 HB_FUNC( HABSTRACTTABLEMODEL_SETDISPLAYROLECB )
 {
-  HAbstractTableModel * obj = (HAbstractTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModel * obj = static_cast< HAbstractTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -197,7 +197,7 @@ void setDecorationRoleCB( PHB_ITEM block )
 */
 HB_FUNC( HABSTRACTTABLEMODEL_SETDECORATIONROLECB )
 {
-  HAbstractTableModel * obj = (HAbstractTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModel * obj = static_cast< HAbstractTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -223,7 +223,7 @@ void setEditRoleCB( PHB_ITEM block )
 */
 HB_FUNC( HABSTRACTTABLEMODEL_SETEDITROLECB )
 {
-  HAbstractTableModel * obj = (HAbstractTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModel * obj = static_cast< HAbstractTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -249,7 +249,7 @@ void setToolTipRoleCB( PHB_ITEM block )
 */
 HB_FUNC( HABSTRACTTABLEMODEL_SETTOOLTIPROLECB )
 {
-  HAbstractTableModel * obj = (HAbstractTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModel * obj = static_cast< HAbstractTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -275,7 +275,7 @@ void setStatusTipRoleCB( PHB_ITEM block )
 */
 HB_FUNC( HABSTRACTTABLEMODEL_SETSTATUSTIPROLECB )
 {
-  HAbstractTableModel * obj = (HAbstractTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModel * obj = static_cast< HAbstractTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -301,7 +301,7 @@ void setWhatsThisRoleCB( PHB_ITEM block )
 */
 HB_FUNC( HABSTRACTTABLEMODEL_SETWHATSTHISROLECB )
 {
-  HAbstractTableModel * obj = (HAbstractTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModel * obj = static_cast< HAbstractTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -327,7 +327,7 @@ void setSizeHintRoleCB( PHB_ITEM block )
 */
 HB_FUNC( HABSTRACTTABLEMODEL_SETSIZEHINTROLECB )
 {
-  HAbstractTableModel * obj = (HAbstractTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModel * obj = static_cast< HAbstractTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -353,7 +353,7 @@ void setFontRoleCB( PHB_ITEM block )
 */
 HB_FUNC( HABSTRACTTABLEMODEL_SETFONTROLECB )
 {
-  HAbstractTableModel * obj = (HAbstractTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModel * obj = static_cast< HAbstractTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -379,7 +379,7 @@ void setTextAlignmentRoleCB( PHB_ITEM block )
 */
 HB_FUNC( HABSTRACTTABLEMODEL_SETTEXTALIGNMENTROLECB )
 {
-  HAbstractTableModel * obj = (HAbstractTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModel * obj = static_cast< HAbstractTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -405,7 +405,7 @@ void setBackgroundRoleCB( PHB_ITEM block )
 */
 HB_FUNC( HABSTRACTTABLEMODEL_SETBACKGROUNDROLECB )
 {
-  HAbstractTableModel * obj = (HAbstractTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModel * obj = static_cast< HAbstractTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -431,7 +431,7 @@ void setForegroundRoleCB( PHB_ITEM block )
 */
 HB_FUNC( HABSTRACTTABLEMODEL_SETFOREGROUNDROLECB )
 {
-  HAbstractTableModel * obj = (HAbstractTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModel * obj = static_cast< HAbstractTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -459,7 +459,7 @@ void setHorizontalHeaderDisplayRoleCB( PHB_ITEM block )
 */
 HB_FUNC( HABSTRACTTABLEMODEL_SETHORIZONTALHEADERDISPLAYROLECB )
 {
-  HAbstractTableModel * obj = (HAbstractTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModel * obj = static_cast< HAbstractTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -485,7 +485,7 @@ void setHorizontalHeaderDecorationRoleCB( PHB_ITEM block )
 */
 HB_FUNC( HABSTRACTTABLEMODEL_SETHORIZONTALHEADERDECORATIONROLECB )
 {
-  HAbstractTableModel * obj = (HAbstractTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModel * obj = static_cast< HAbstractTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -511,7 +511,7 @@ void setHorizontalHeaderFontRoleCB( PHB_ITEM block )
 */
 HB_FUNC( HABSTRACTTABLEMODEL_SETHORIZONTALHEADERFONTROLECB )
 {
-  HAbstractTableModel * obj = (HAbstractTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModel * obj = static_cast< HAbstractTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -537,7 +537,7 @@ void setHorizontalHeaderTextAlignmentRoleCB( PHB_ITEM block )
 */
 HB_FUNC( HABSTRACTTABLEMODEL_SETHORIZONTALHEADERTEXTALIGNMENTROLECB )
 {
-  HAbstractTableModel * obj = (HAbstractTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModel * obj = static_cast< HAbstractTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -563,7 +563,7 @@ void setHorizontalHeaderBackgroundRoleCB( PHB_ITEM block )
 */
 HB_FUNC( HABSTRACTTABLEMODEL_SETHORIZONTALHEADERBACKGROUNDROLECB )
 {
-  HAbstractTableModel * obj = (HAbstractTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModel * obj = static_cast< HAbstractTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -589,7 +589,7 @@ void setHorizontalHeaderForegroundRoleCB( PHB_ITEM block )
 */
 HB_FUNC( HABSTRACTTABLEMODEL_SETHORIZONTALHEADERFOREGROUNDROLECB )
 {
-  HAbstractTableModel * obj = (HAbstractTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModel * obj = static_cast< HAbstractTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -618,7 +618,7 @@ void setVerticalHeaderDisplayRoleCB( PHB_ITEM block )
 */
 HB_FUNC( HABSTRACTTABLEMODEL_SETVERTICALHEADERDISPLAYROLECB )
 {
-  HAbstractTableModel * obj = (HAbstractTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModel * obj = static_cast< HAbstractTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -644,7 +644,7 @@ void setVerticalHeaderDecorationRoleCB( PHB_ITEM block )
 */
 HB_FUNC( HABSTRACTTABLEMODEL_SETVERTICALHEADERDECORATIONROLECB )
 {
-  HAbstractTableModel * obj = (HAbstractTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModel * obj = static_cast< HAbstractTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -670,7 +670,7 @@ void setVerticalHeaderFontRoleCB( PHB_ITEM block )
 */
 HB_FUNC( HABSTRACTTABLEMODEL_SETVERTICALHEADERFONTROLECB )
 {
-  HAbstractTableModel * obj = (HAbstractTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModel * obj = static_cast< HAbstractTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -696,7 +696,7 @@ void setVerticalHeaderTextAlignmentRoleCB( PHB_ITEM block )
 */
 HB_FUNC( HABSTRACTTABLEMODEL_SETVERTICALHEADERTEXTALIGNMENTROLECB )
 {
-  HAbstractTableModel * obj = (HAbstractTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModel * obj = static_cast< HAbstractTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -722,7 +722,7 @@ void setVerticalHeaderBackgroundRoleCB( PHB_ITEM block )
 */
 HB_FUNC( HABSTRACTTABLEMODEL_SETVERTICALHEADERBACKGROUNDROLECB )
 {
-  HAbstractTableModel * obj = (HAbstractTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModel * obj = static_cast< HAbstractTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -748,7 +748,7 @@ void setVerticalHeaderForegroundRoleCB( PHB_ITEM block )
 */
 HB_FUNC( HABSTRACTTABLEMODEL_SETVERTICALHEADERFOREGROUNDROLECB )
 {
-  HAbstractTableModel * obj = (HAbstractTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModel * obj = static_cast< HAbstractTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -790,7 +790,7 @@ void reloadData()
 */
 HB_FUNC( HABSTRACTTABLEMODEL_RELOADDATA )
 {
-  HAbstractTableModel * obj = (HAbstractTableModel *) Qt4xHb::itemGetPtrStackSelfItem();
+  HAbstractTableModel * obj = static_cast< HAbstractTableModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
