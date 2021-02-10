@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVEVIEW_DELETE )
 {
-  QDeclarativeView * obj = ( QDeclarativeView * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeView * obj = static_cast< QDeclarativeView * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -122,7 +122,7 @@ QDeclarativeEngine * engine() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ENGINE )
 {
-  QDeclarativeView * obj = ( QDeclarativeView * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeView * obj = static_cast< QDeclarativeView * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -147,7 +147,7 @@ QList<QDeclarativeError> errors() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
 {
-  QDeclarativeView * obj = ( QDeclarativeView * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeView * obj = static_cast< QDeclarativeView * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QDeclarativeError * ) new QDeclarativeError( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QDeclarativeError * >( new QDeclarativeError( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -199,7 +199,7 @@ QSize initialSize() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_INITIALSIZE )
 {
-  QDeclarativeView * obj = ( QDeclarativeView * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeView * obj = static_cast< QDeclarativeView * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -224,7 +224,7 @@ QDeclarativeView::ResizeMode resizeMode() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_RESIZEMODE )
 {
-  QDeclarativeView * obj = ( QDeclarativeView * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeView * obj = static_cast< QDeclarativeView * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -248,7 +248,7 @@ QDeclarativeContext * rootContext() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTCONTEXT )
 {
-  QDeclarativeView * obj = ( QDeclarativeView * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeView * obj = static_cast< QDeclarativeView * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -273,7 +273,7 @@ QGraphicsObject * rootObject() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTOBJECT )
 {
-  QDeclarativeView * obj = ( QDeclarativeView * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeView * obj = static_cast< QDeclarativeView * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -298,7 +298,7 @@ void setResizeMode( QDeclarativeView::ResizeMode )
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_SETRESIZEMODE )
 {
-  QDeclarativeView * obj = ( QDeclarativeView * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeView * obj = static_cast< QDeclarativeView * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -324,7 +324,7 @@ void setSource( const QUrl & url )
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_SETSOURCE )
 {
-  QDeclarativeView * obj = ( QDeclarativeView * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeView * obj = static_cast< QDeclarativeView * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -350,7 +350,7 @@ QUrl source() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_SOURCE )
 {
-  QDeclarativeView * obj = ( QDeclarativeView * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeView * obj = static_cast< QDeclarativeView * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -375,7 +375,7 @@ QDeclarativeView::Status status() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_STATUS )
 {
-  QDeclarativeView * obj = ( QDeclarativeView * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeView * obj = static_cast< QDeclarativeView * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

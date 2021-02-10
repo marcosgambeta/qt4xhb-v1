@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVEERROR_DELETE )
 {
-  QDeclarativeError * obj = ( QDeclarativeError * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeError * obj = static_cast< QDeclarativeError * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -114,7 +114,7 @@ int column() const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_COLUMN )
 {
-  QDeclarativeError * obj = ( QDeclarativeError * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeError * obj = static_cast< QDeclarativeError * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -138,7 +138,7 @@ QString description() const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_DESCRIPTION )
 {
-  QDeclarativeError * obj = ( QDeclarativeError * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeError * obj = static_cast< QDeclarativeError * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -162,7 +162,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_ISVALID )
 {
-  QDeclarativeError * obj = ( QDeclarativeError * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeError * obj = static_cast< QDeclarativeError * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -186,7 +186,7 @@ int line() const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_LINE )
 {
-  QDeclarativeError * obj = ( QDeclarativeError * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeError * obj = static_cast< QDeclarativeError * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -210,7 +210,7 @@ void setColumn( int column )
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_SETCOLUMN )
 {
-  QDeclarativeError * obj = ( QDeclarativeError * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeError * obj = static_cast< QDeclarativeError * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -236,7 +236,7 @@ void setDescription( const QString & description )
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_SETDESCRIPTION )
 {
-  QDeclarativeError * obj = ( QDeclarativeError * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeError * obj = static_cast< QDeclarativeError * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -262,7 +262,7 @@ void setLine( int line )
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_SETLINE )
 {
-  QDeclarativeError * obj = ( QDeclarativeError * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeError * obj = static_cast< QDeclarativeError * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -288,7 +288,7 @@ void setUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_SETURL )
 {
-  QDeclarativeError * obj = ( QDeclarativeError * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeError * obj = static_cast< QDeclarativeError * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -314,7 +314,7 @@ QString toString() const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_TOSTRING )
 {
-  QDeclarativeError * obj = ( QDeclarativeError * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeError * obj = static_cast< QDeclarativeError * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -338,7 +338,7 @@ QUrl url() const
 */
 HB_FUNC_STATIC( QDECLARATIVEERROR_URL )
 {
-  QDeclarativeError * obj = ( QDeclarativeError * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeError * obj = static_cast< QDeclarativeError * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QDECLARATIVEERROR_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

@@ -98,7 +98,7 @@ bool append( QObject * object ) const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_APPEND )
 {
-  QDeclarativeListReference * obj = ( QDeclarativeListReference * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = static_cast< QDeclarativeListReference * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -122,7 +122,7 @@ QObject * at( int index ) const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_AT )
 {
-  QDeclarativeListReference * obj = ( QDeclarativeListReference * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = static_cast< QDeclarativeListReference * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -147,7 +147,7 @@ bool canAppend() const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAPPEND )
 {
-  QDeclarativeListReference * obj = ( QDeclarativeListReference * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = static_cast< QDeclarativeListReference * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -171,7 +171,7 @@ bool canAt() const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANAT )
 {
-  QDeclarativeListReference * obj = ( QDeclarativeListReference * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = static_cast< QDeclarativeListReference * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -195,7 +195,7 @@ bool canClear() const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCLEAR )
 {
-  QDeclarativeListReference * obj = ( QDeclarativeListReference * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = static_cast< QDeclarativeListReference * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -219,7 +219,7 @@ bool canCount() const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CANCOUNT )
 {
-  QDeclarativeListReference * obj = ( QDeclarativeListReference * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = static_cast< QDeclarativeListReference * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -243,7 +243,7 @@ bool clear() const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_CLEAR )
 {
-  QDeclarativeListReference * obj = ( QDeclarativeListReference * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = static_cast< QDeclarativeListReference * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -267,7 +267,7 @@ int count() const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_COUNT )
 {
-  QDeclarativeListReference * obj = ( QDeclarativeListReference * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = static_cast< QDeclarativeListReference * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -291,7 +291,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_ISVALID )
 {
-  QDeclarativeListReference * obj = ( QDeclarativeListReference * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = static_cast< QDeclarativeListReference * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -315,7 +315,7 @@ const QMetaObject * listElementType() const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_LISTELEMENTTYPE )
 {
-  QDeclarativeListReference * obj = ( QDeclarativeListReference * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = static_cast< QDeclarativeListReference * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -340,7 +340,7 @@ QObject * object() const
 */
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_OBJECT )
 {
-  QDeclarativeListReference * obj = ( QDeclarativeListReference * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeListReference * obj = static_cast< QDeclarativeListReference * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

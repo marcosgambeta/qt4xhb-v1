@@ -28,7 +28,7 @@ void QDeclarativeExpressionSlots::valueChanged()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDECLARATIVEEXPRESSION" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDECLARATIVEEXPRESSION" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -38,7 +38,7 @@ void QDeclarativeExpressionSlots::valueChanged()
 
 void QDeclarativeExpressionSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDeclarativeExpression * obj = ( QDeclarativeExpression * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeExpression * obj = static_cast< QDeclarativeExpression * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

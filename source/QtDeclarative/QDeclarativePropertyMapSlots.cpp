@@ -28,7 +28,7 @@ void QDeclarativePropertyMapSlots::valueChanged( const QString & key, const QVar
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDECLARATIVEPROPERTYMAP" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDECLARATIVEPROPERTYMAP" );
     PHB_ITEM pkey = hb_itemPutC( NULL, QSTRINGTOSTRING( key ) );
     PHB_ITEM pvalue = Qt4xHb::Signals_return_object( ( void * ) &value, "QVARIANT" );
 
@@ -42,7 +42,7 @@ void QDeclarativePropertyMapSlots::valueChanged( const QString & key, const QVar
 
 void QDeclarativePropertyMapSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDeclarativePropertyMap * obj = ( QDeclarativePropertyMap * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativePropertyMap * obj = static_cast< QDeclarativePropertyMap * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

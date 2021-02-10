@@ -28,7 +28,7 @@ void QDeclarativeViewSlots::sceneResized( QSize size )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDECLARATIVEVIEW" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDECLARATIVEVIEW" );
     PHB_ITEM psize = Qt4xHb::Signals_return_object( ( void * ) &size, "QSIZE" );
 
     hb_vmEvalBlockV( cb, 2, psender, psize );
@@ -46,8 +46,8 @@ void QDeclarativeViewSlots::statusChanged( QDeclarativeView::Status status )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDECLARATIVEVIEW" );
-    PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDECLARATIVEVIEW" );
+    PHB_ITEM pstatus = hb_itemPutNI( NULL, ( int ) status );
 
     hb_vmEvalBlockV( cb, 2, psender, pstatus );
 
@@ -58,7 +58,7 @@ void QDeclarativeViewSlots::statusChanged( QDeclarativeView::Status status )
 
 void QDeclarativeViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDeclarativeView * obj = ( QDeclarativeView * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeView * obj = static_cast< QDeclarativeView * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

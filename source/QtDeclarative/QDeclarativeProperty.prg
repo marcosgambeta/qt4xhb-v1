@@ -188,7 +188,7 @@ bool connectNotifySignal( QObject * dest, const char * slot ) const
 */
 void QDeclarativeProperty_connectNotifySignal1()
 {
-  QDeclarativeProperty * obj = ( QDeclarativeProperty * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = static_cast< QDeclarativeProperty * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -201,7 +201,7 @@ bool connectNotifySignal( QObject * dest, int method ) const
 */
 void QDeclarativeProperty_connectNotifySignal2()
 {
-  QDeclarativeProperty * obj = ( QDeclarativeProperty * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = static_cast< QDeclarativeProperty * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -230,7 +230,7 @@ bool hasNotifySignal() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_HASNOTIFYSIGNAL )
 {
-  QDeclarativeProperty * obj = ( QDeclarativeProperty * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = static_cast< QDeclarativeProperty * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -254,7 +254,7 @@ int index() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_INDEX )
 {
-  QDeclarativeProperty * obj = ( QDeclarativeProperty * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = static_cast< QDeclarativeProperty * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -278,7 +278,7 @@ bool isDesignable() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISDESIGNABLE )
 {
-  QDeclarativeProperty * obj = ( QDeclarativeProperty * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = static_cast< QDeclarativeProperty * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -302,7 +302,7 @@ bool isProperty() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISPROPERTY )
 {
-  QDeclarativeProperty * obj = ( QDeclarativeProperty * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = static_cast< QDeclarativeProperty * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -326,7 +326,7 @@ bool isResettable() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISRESETTABLE )
 {
-  QDeclarativeProperty * obj = ( QDeclarativeProperty * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = static_cast< QDeclarativeProperty * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -350,7 +350,7 @@ bool isSignalProperty() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISSIGNALPROPERTY )
 {
-  QDeclarativeProperty * obj = ( QDeclarativeProperty * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = static_cast< QDeclarativeProperty * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -374,7 +374,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISVALID )
 {
-  QDeclarativeProperty * obj = ( QDeclarativeProperty * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = static_cast< QDeclarativeProperty * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -398,7 +398,7 @@ bool isWritable() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_ISWRITABLE )
 {
-  QDeclarativeProperty * obj = ( QDeclarativeProperty * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = static_cast< QDeclarativeProperty * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -422,7 +422,7 @@ QMetaMethod method() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_METHOD )
 {
-  QDeclarativeProperty * obj = ( QDeclarativeProperty * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = static_cast< QDeclarativeProperty * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -447,7 +447,7 @@ QString name() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NAME )
 {
-  QDeclarativeProperty * obj = ( QDeclarativeProperty * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = static_cast< QDeclarativeProperty * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -471,7 +471,7 @@ bool needsNotifySignal() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEEDSNOTIFYSIGNAL )
 {
-  QDeclarativeProperty * obj = ( QDeclarativeProperty * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = static_cast< QDeclarativeProperty * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -495,7 +495,7 @@ QObject * object() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_OBJECT )
 {
-  QDeclarativeProperty * obj = ( QDeclarativeProperty * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = static_cast< QDeclarativeProperty * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -520,7 +520,7 @@ QMetaProperty property() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTY )
 {
-  QDeclarativeProperty * obj = ( QDeclarativeProperty * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = static_cast< QDeclarativeProperty * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -545,7 +545,7 @@ int propertyType() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTYTYPE )
 {
-  QDeclarativeProperty * obj = ( QDeclarativeProperty * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = static_cast< QDeclarativeProperty * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -569,7 +569,7 @@ QDeclarativeProperty::PropertyTypeCategory propertyTypeCategory() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTYTYPECATEGORY )
 {
-  QDeclarativeProperty * obj = ( QDeclarativeProperty * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = static_cast< QDeclarativeProperty * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -593,7 +593,7 @@ const char * propertyTypeName() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_PROPERTYTYPENAME )
 {
-  QDeclarativeProperty * obj = ( QDeclarativeProperty * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = static_cast< QDeclarativeProperty * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -617,7 +617,7 @@ bool reset() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_RESET )
 {
-  QDeclarativeProperty * obj = ( QDeclarativeProperty * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = static_cast< QDeclarativeProperty * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -641,7 +641,7 @@ QDeclarativeProperty::Type type() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTY_TYPE )
 {
-  QDeclarativeProperty * obj = ( QDeclarativeProperty * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = static_cast< QDeclarativeProperty * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -665,7 +665,7 @@ QVariant read() const
 */
 void QDeclarativeProperty_read1()
 {
-  QDeclarativeProperty * obj = ( QDeclarativeProperty * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = static_cast< QDeclarativeProperty * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -733,7 +733,7 @@ bool write( const QVariant & value ) const
 */
 void QDeclarativeProperty_write1()
 {
-  QDeclarativeProperty * obj = ( QDeclarativeProperty * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeProperty * obj = static_cast< QDeclarativeProperty * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -798,7 +798,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -807,7 +807,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTY_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

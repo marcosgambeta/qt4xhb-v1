@@ -28,7 +28,7 @@ void QDeclarativeEngineSlots::quit()
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDECLARATIVEENGINE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDECLARATIVEENGINE" );
 
     hb_vmEvalBlockV( cb, 1, psender );
 
@@ -44,7 +44,7 @@ void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warning
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDECLARATIVEENGINE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDECLARATIVEENGINE" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
     PHB_ITEM pwarnings = hb_itemArrayNew( 0 );
     if( pDynSym )
@@ -57,7 +57,7 @@ void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warning
         PHB_ITEM pTempObject = hb_itemNew( NULL );
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
         PHB_ITEM pTempItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pTempItem, ( QDeclarativeError * ) new QDeclarativeError( warnings [i] ) );
+        hb_itemPutPtr( pTempItem, static_cast< QDeclarativeError * >( new QDeclarativeError( warnings [i] ) ) );
         hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
         hb_arrayAddForward( pwarnings, pTempObject );
         hb_itemRelease( pTempObject );
@@ -78,7 +78,7 @@ void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warning
 
 void QDeclarativeEngineSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDeclarativeEngine * obj = ( QDeclarativeEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeEngine * obj = static_cast< QDeclarativeEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

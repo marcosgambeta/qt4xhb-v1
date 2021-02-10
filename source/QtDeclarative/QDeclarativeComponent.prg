@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_DELETE )
 {
-  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = static_cast< QDeclarativeComponent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -148,7 +148,7 @@ virtual QObject * beginCreate( QDeclarativeContext * context )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_BEGINCREATE )
 {
-  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = static_cast< QDeclarativeComponent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -173,7 +173,7 @@ virtual void completeCreate()
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_COMPLETECREATE )
 {
-  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = static_cast< QDeclarativeComponent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -199,7 +199,7 @@ virtual QObject * create( QDeclarativeContext * context = 0 )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATE )
 {
-  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = static_cast< QDeclarativeComponent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -224,7 +224,7 @@ QDeclarativeContext * creationContext() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATIONCONTEXT )
 {
-  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = static_cast< QDeclarativeComponent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -249,7 +249,7 @@ QList<QDeclarativeError> errors() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
 {
-  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = static_cast< QDeclarativeComponent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, ( QDeclarativeError * ) new QDeclarativeError( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast< QDeclarativeError * >( new QDeclarativeError( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -301,7 +301,7 @@ bool isError() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISERROR )
 {
-  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = static_cast< QDeclarativeComponent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -325,7 +325,7 @@ bool isLoading() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISLOADING )
 {
-  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = static_cast< QDeclarativeComponent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -349,7 +349,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISNULL )
 {
-  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = static_cast< QDeclarativeComponent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -373,7 +373,7 @@ bool isReady() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ISREADY )
 {
-  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = static_cast< QDeclarativeComponent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -397,7 +397,7 @@ void loadUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_LOADURL )
 {
-  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = static_cast< QDeclarativeComponent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -423,7 +423,7 @@ qreal progress() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_PROGRESS )
 {
-  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = static_cast< QDeclarativeComponent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -447,7 +447,7 @@ void setData( const QByteArray & data, const QUrl & url )
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_SETDATA )
 {
-  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = static_cast< QDeclarativeComponent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -473,7 +473,7 @@ QDeclarativeComponent::Status status() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_STATUS )
 {
-  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = static_cast< QDeclarativeComponent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -497,7 +497,7 @@ QUrl url() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_URL )
 {
-  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = static_cast< QDeclarativeComponent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -522,7 +522,7 @@ Q_INVOKABLE QString errorString() const
 */
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORSTRING )
 {
-  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = static_cast< QDeclarativeComponent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

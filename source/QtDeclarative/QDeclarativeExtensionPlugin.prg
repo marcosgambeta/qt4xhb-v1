@@ -45,7 +45,7 @@ virtual void initializeEngine( QDeclarativeEngine * engine, const char * uri )
 */
 HB_FUNC_STATIC( QDECLARATIVEEXTENSIONPLUGIN_INITIALIZEENGINE )
 {
-  QDeclarativeExtensionPlugin * obj = ( QDeclarativeExtensionPlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeExtensionPlugin * obj = static_cast< QDeclarativeExtensionPlugin * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -71,7 +71,7 @@ virtual void registerTypes( const char * uri ) = 0
 */
 HB_FUNC_STATIC( QDECLARATIVEEXTENSIONPLUGIN_REGISTERTYPES )
 {
-  QDeclarativeExtensionPlugin * obj = ( QDeclarativeExtensionPlugin * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeExtensionPlugin * obj = static_cast< QDeclarativeExtensionPlugin * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

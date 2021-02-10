@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_DELETE )
 {
-  QDeclarativeImageProvider * obj = ( QDeclarativeImageProvider * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeImageProvider * obj = static_cast< QDeclarativeImageProvider * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -90,7 +90,7 @@ QDeclarativeImageProvider::ImageType imageType() const
 */
 HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_IMAGETYPE )
 {
-  QDeclarativeImageProvider * obj = ( QDeclarativeImageProvider * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeImageProvider * obj = static_cast< QDeclarativeImageProvider * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -114,7 +114,7 @@ virtual QImage requestImage( const QString & id, QSize * size, const QSize & req
 */
 HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_REQUESTIMAGE )
 {
-  QDeclarativeImageProvider * obj = ( QDeclarativeImageProvider * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeImageProvider * obj = static_cast< QDeclarativeImageProvider * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -139,7 +139,7 @@ virtual QPixmap requestPixmap( const QString & id, QSize * size, const QSize & r
 */
 HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_REQUESTPIXMAP )
 {
-  QDeclarativeImageProvider * obj = ( QDeclarativeImageProvider * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeImageProvider * obj = static_cast< QDeclarativeImageProvider * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

@@ -28,7 +28,7 @@ void QDeclarativeComponentSlots::progressChanged( qreal progress )
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDECLARATIVECOMPONENT" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDECLARATIVECOMPONENT" );
     PHB_ITEM pprogress = hb_itemPutND( NULL, progress );
 
     hb_vmEvalBlockV( cb, 2, psender, pprogress );
@@ -46,8 +46,8 @@ void QDeclarativeComponentSlots::statusChanged( QDeclarativeComponent::Status st
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QDECLARATIVECOMPONENT" );
-    PHB_ITEM pstatus = hb_itemPutNI( NULL, (int) status );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDECLARATIVECOMPONENT" );
+    PHB_ITEM pstatus = hb_itemPutNI( NULL, ( int ) status );
 
     hb_vmEvalBlockV( cb, 2, psender, pstatus );
 
@@ -58,7 +58,7 @@ void QDeclarativeComponentSlots::statusChanged( QDeclarativeComponent::Status st
 
 void QDeclarativeComponentSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDeclarativeComponent * obj = ( QDeclarativeComponent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QDeclarativeComponent * obj = static_cast< QDeclarativeComponent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
