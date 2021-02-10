@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_NEW )
 
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_DELETE )
 {
-  QScriptEngineAgent * obj = ( QScriptEngineAgent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptEngineAgent * obj = static_cast< QScriptEngineAgent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -101,7 +101,7 @@ virtual void contextPop()
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_CONTEXTPOP )
 {
-  QScriptEngineAgent * obj = ( QScriptEngineAgent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptEngineAgent * obj = static_cast< QScriptEngineAgent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -127,7 +127,7 @@ virtual void contextPush()
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_CONTEXTPUSH )
 {
-  QScriptEngineAgent * obj = ( QScriptEngineAgent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptEngineAgent * obj = static_cast< QScriptEngineAgent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -153,7 +153,7 @@ QScriptEngine * engine() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_ENGINE )
 {
-  QScriptEngineAgent * obj = ( QScriptEngineAgent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptEngineAgent * obj = static_cast< QScriptEngineAgent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -178,7 +178,7 @@ virtual void exceptionCatch( qint64 scriptId, const QScriptValue & exception )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXCEPTIONCATCH )
 {
-  QScriptEngineAgent * obj = ( QScriptEngineAgent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptEngineAgent * obj = static_cast< QScriptEngineAgent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -204,7 +204,7 @@ virtual void exceptionThrow( qint64 scriptId, const QScriptValue & exception, bo
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXCEPTIONTHROW )
 {
-  QScriptEngineAgent * obj = ( QScriptEngineAgent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptEngineAgent * obj = static_cast< QScriptEngineAgent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -230,7 +230,7 @@ virtual QVariant extension( QScriptEngineAgent::Extension extension, const QVari
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXTENSION )
 {
-  QScriptEngineAgent * obj = ( QScriptEngineAgent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptEngineAgent * obj = static_cast< QScriptEngineAgent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXTENSION )
     if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISQVARIANT( 2 ) || ISNIL( 2 ) ) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->extension( ( QScriptEngineAgent::Extension ) hb_parni( 1 ), ISNIL( 2 )? QVariant() : *( QVariant * ) Qt4xHb::itemGetPtr( 2 ) ) );
+      QVariant * ptr = new QVariant( obj->extension( ( QScriptEngineAgent::Extension ) hb_parni( 1 ), ISNIL( 2 ) ? QVariant() : *static_cast< QVariant * >( Qt4xHb::itemGetPtr( 2 ) ) ) );
       Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -255,7 +255,7 @@ virtual void functionEntry( qint64 scriptId )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_FUNCTIONENTRY )
 {
-  QScriptEngineAgent * obj = ( QScriptEngineAgent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptEngineAgent * obj = static_cast< QScriptEngineAgent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -281,7 +281,7 @@ virtual void functionExit( qint64 scriptId, const QScriptValue & returnValue )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_FUNCTIONEXIT )
 {
-  QScriptEngineAgent * obj = ( QScriptEngineAgent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptEngineAgent * obj = static_cast< QScriptEngineAgent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -307,7 +307,7 @@ virtual void positionChange( qint64 scriptId, int lineNumber, int columnNumber )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_POSITIONCHANGE )
 {
-  QScriptEngineAgent * obj = ( QScriptEngineAgent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptEngineAgent * obj = static_cast< QScriptEngineAgent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -333,7 +333,7 @@ virtual void scriptLoad( qint64 id, const QString & program, const QString & fil
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SCRIPTLOAD )
 {
-  QScriptEngineAgent * obj = ( QScriptEngineAgent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptEngineAgent * obj = static_cast< QScriptEngineAgent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -359,7 +359,7 @@ virtual void scriptUnload( qint64 id )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SCRIPTUNLOAD )
 {
-  QScriptEngineAgent * obj = ( QScriptEngineAgent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptEngineAgent * obj = static_cast< QScriptEngineAgent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -385,7 +385,7 @@ virtual bool supportsExtension( QScriptEngineAgent::Extension extension ) const
 */
 HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SUPPORTSEXTENSION )
 {
-  QScriptEngineAgent * obj = ( QScriptEngineAgent * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptEngineAgent * obj = static_cast< QScriptEngineAgent * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

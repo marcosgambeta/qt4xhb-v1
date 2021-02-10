@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_NEW )
 
 HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_DELETE )
 {
-  QScriptSyntaxCheckResult * obj = ( QScriptSyntaxCheckResult * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptSyntaxCheckResult * obj = static_cast< QScriptSyntaxCheckResult * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -89,7 +89,7 @@ int errorColumnNumber() const
 */
 HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORCOLUMNNUMBER )
 {
-  QScriptSyntaxCheckResult * obj = ( QScriptSyntaxCheckResult * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptSyntaxCheckResult * obj = static_cast< QScriptSyntaxCheckResult * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -113,7 +113,7 @@ int errorLineNumber() const
 */
 HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORLINENUMBER )
 {
-  QScriptSyntaxCheckResult * obj = ( QScriptSyntaxCheckResult * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptSyntaxCheckResult * obj = static_cast< QScriptSyntaxCheckResult * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -137,7 +137,7 @@ QString errorMessage() const
 */
 HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_ERRORMESSAGE )
 {
-  QScriptSyntaxCheckResult * obj = ( QScriptSyntaxCheckResult * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptSyntaxCheckResult * obj = static_cast< QScriptSyntaxCheckResult * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -161,7 +161,7 @@ QScriptSyntaxCheckResult::State state() const
 */
 HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_STATE )
 {
-  QScriptSyntaxCheckResult * obj = ( QScriptSyntaxCheckResult * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptSyntaxCheckResult * obj = static_cast< QScriptSyntaxCheckResult * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QSCRIPTSYNTAXCHECKRESULT_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );

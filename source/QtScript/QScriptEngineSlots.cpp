@@ -28,7 +28,7 @@ void QScriptEngineSlots::signalHandlerException( const QScriptValue & exception 
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( ( QObject * ) object, "QSCRIPTENGINE" );
+    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSCRIPTENGINE" );
     PHB_ITEM pexception = Qt4xHb::Signals_return_object( ( void * ) &exception, "QSCRIPTVALUE" );
 
     hb_vmEvalBlockV( cb, 2, psender, pexception );
@@ -40,7 +40,7 @@ void QScriptEngineSlots::signalHandlerException( const QScriptValue & exception 
 
 void QScriptEngineSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QScriptEngine * obj = ( QScriptEngine * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {

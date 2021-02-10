@@ -69,7 +69,7 @@ RETURN
 
 HB_FUNC_STATIC( QSCRIPTCONTEXT_DELETE )
 {
-  QScriptContext * obj = ( QScriptContext * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptContext * obj = static_cast< QScriptContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -89,7 +89,7 @@ QScriptValue activationObject() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_ACTIVATIONOBJECT )
 {
-  QScriptContext * obj = ( QScriptContext * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptContext * obj = static_cast< QScriptContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -114,7 +114,7 @@ QScriptValue argument( int index ) const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENT )
 {
-  QScriptContext * obj = ( QScriptContext * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptContext * obj = static_cast< QScriptContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -139,7 +139,7 @@ int argumentCount() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENTCOUNT )
 {
-  QScriptContext * obj = ( QScriptContext * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptContext * obj = static_cast< QScriptContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -163,7 +163,7 @@ QScriptValue argumentsObject() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_ARGUMENTSOBJECT )
 {
-  QScriptContext * obj = ( QScriptContext * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptContext * obj = static_cast< QScriptContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -188,7 +188,7 @@ QStringList backtrace() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_BACKTRACE )
 {
-  QScriptContext * obj = ( QScriptContext * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptContext * obj = static_cast< QScriptContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -212,7 +212,7 @@ QScriptValue callee() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_CALLEE )
 {
-  QScriptContext * obj = ( QScriptContext * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptContext * obj = static_cast< QScriptContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -237,7 +237,7 @@ QScriptEngine * engine() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_ENGINE )
 {
-  QScriptContext * obj = ( QScriptContext * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptContext * obj = static_cast< QScriptContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -262,7 +262,7 @@ bool isCalledAsConstructor() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_ISCALLEDASCONSTRUCTOR )
 {
-  QScriptContext * obj = ( QScriptContext * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptContext * obj = static_cast< QScriptContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -286,7 +286,7 @@ QScriptContext * parentContext() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_PARENTCONTEXT )
 {
-  QScriptContext * obj = ( QScriptContext * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptContext * obj = static_cast< QScriptContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -311,7 +311,7 @@ void setActivationObject( const QScriptValue & activation )
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_SETACTIVATIONOBJECT )
 {
-  QScriptContext * obj = ( QScriptContext * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptContext * obj = static_cast< QScriptContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -337,7 +337,7 @@ void setThisObject( const QScriptValue & thisObject )
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_SETTHISOBJECT )
 {
-  QScriptContext * obj = ( QScriptContext * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptContext * obj = static_cast< QScriptContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -363,7 +363,7 @@ QScriptContext::ExecutionState state() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_STATE )
 {
-  QScriptContext * obj = ( QScriptContext * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptContext * obj = static_cast< QScriptContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -387,7 +387,7 @@ QScriptValue thisObject() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_THISOBJECT )
 {
-  QScriptContext * obj = ( QScriptContext * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptContext * obj = static_cast< QScriptContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -412,7 +412,7 @@ QScriptValue throwError( QScriptContext::Error error, const QString & text )
 */
 void QScriptContext_throwError1()
 {
-  QScriptContext * obj = ( QScriptContext * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptContext * obj = static_cast< QScriptContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -426,7 +426,7 @@ QScriptValue throwError( const QString & text )
 */
 void QScriptContext_throwError2()
 {
-  QScriptContext * obj = ( QScriptContext * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptContext * obj = static_cast< QScriptContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -456,7 +456,7 @@ QScriptValue throwValue( const QScriptValue & value )
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWVALUE )
 {
-  QScriptContext * obj = ( QScriptContext * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptContext * obj = static_cast< QScriptContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -481,7 +481,7 @@ QString toString() const
 */
 HB_FUNC_STATIC( QSCRIPTCONTEXT_TOSTRING )
 {
-  QScriptContext * obj = ( QScriptContext * ) Qt4xHb::itemGetPtrStackSelfItem();
+  QScriptContext * obj = static_cast< QScriptContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_NEWFROM )
 
   if( hb_pcount() == 1 && ISOBJECT( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_NEWFROM )
   }
   else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, ( void * ) hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
     hb_itemRelease( ptr );
     PHB_ITEM des = hb_itemPutL( NULL, false );
