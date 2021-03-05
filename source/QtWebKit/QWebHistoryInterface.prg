@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QWEBHISTORYINTERFACE_ADDHISTORYENTRY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->addHistoryEntry( PQSTRING( 1 ) );
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QWEBHISTORYINTERFACE_HISTORYCONTAINS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       RBOOL( obj->historyContains( PQSTRING( 1 ) ) );

@@ -127,7 +127,7 @@ QWebPage( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QWEBPAGE_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QWebPage * obj = new QWebPage( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QWEBPAGE_ACTION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QAction * ptr = obj->action( ( QWebPage::WebAction ) hb_parni( 1 ) );
@@ -266,10 +266,10 @@ HB_FUNC_STATIC( QWEBPAGE_FINDTEXT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      RBOOL( obj->findText( PQSTRING( 1 ), ISNIL( 2 ) ? ( QWebPage::FindFlags ) 0 : ( QWebPage::FindFlags ) hb_parni( 2 ) ) );
+      RBOOL( obj->findText( PQSTRING( 1 ), HB_ISNIL( 2 ) ? ( QWebPage::FindFlags ) 0 : ( QWebPage::FindFlags ) hb_parni( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QWEBPAGE_FOCUSNEXTPREVCHILD )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       RBOOL( obj->focusNextPrevChild( PBOOL( 1 ) ) );
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QWEBPAGE_INPUTMETHODQUERY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QVariant * ptr = new QVariant( obj->inputMethodQuery( ( Qt::InputMethodQuery ) hb_parni( 1 ) ) );
@@ -634,7 +634,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETCONTENTEDITABLE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setContentEditable( PBOOL( 1 ) );
@@ -660,7 +660,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETFORWARDUNSUPPORTEDCONTENT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setForwardUnsupportedContent( PBOOL( 1 ) );
@@ -686,7 +686,7 @@ HB_FUNC_STATIC( QWEBPAGE_SETLINKDELEGATIONPOLICY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setLinkDelegationPolicy( ( QWebPage::LinkDelegationPolicy ) hb_parni( 1 ) );
@@ -893,7 +893,7 @@ HB_FUNC_STATIC( QWEBPAGE_SUPPORTSEXTENSION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       RBOOL( obj->supportsExtension( ( QWebPage::Extension ) hb_parni( 1 ) ) );
@@ -965,7 +965,7 @@ HB_FUNC_STATIC( QWEBPAGE_TRIGGERACTION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
       obj->triggerAction( ( QWebPage::WebAction ) hb_parni( 1 ), OPBOOL( 2, false ) );
