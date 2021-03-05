@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QDESIGNERWIDGETBOXINTERFACE_SETFILENAME )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setFileName( PQSTRING( 1 ) );
