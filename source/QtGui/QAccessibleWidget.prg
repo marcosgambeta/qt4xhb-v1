@@ -54,9 +54,9 @@ QAccessibleWidget( QWidget * w, QAccessible::Role role = QAccessible::Client, co
 */
 HB_FUNC_STATIC( QACCESSIBLEWIDGET_NEW )
 {
-  if( ISBETWEEN( 1, 3 ) && ISQWIDGET( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) && ( ISCHAR( 3 ) || ISNIL( 3 ) ) )
+  if( ISBETWEEN( 1, 3 ) && ISQWIDGET( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QAccessibleWidget * obj = new QAccessibleWidget( PQWIDGET( 1 ), ISNIL( 2 ) ? ( QAccessible::Role ) QAccessible::Client : ( QAccessible::Role ) hb_parni( 2 ), OPQSTRING( 3, QString() ) );
+    QAccessibleWidget * obj = new QAccessibleWidget( PQWIDGET( 1 ), HB_ISNIL( 2 ) ? ( QAccessible::Role ) QAccessible::Client : ( QAccessible::Role ) hb_parni( 2 ), OPQSTRING( 3, QString() ) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_ACTIONTEXT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) )
+    if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
     {
 #endif
       RQSTRING( obj->actionText( PINT( 1 ), ( QAccessible::Text ) hb_parni( 2 ), PINT( 3 ) ) );
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_CHILDAT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
       RINT( obj->childAt( PINT( 1 ), PINT( 2 ) ) );
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_DOACTION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISARRAY( 3 ) )
+    if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISARRAY( 3 ) )
     {
 #endif
       QVariantList par3;
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_RECT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QRect * ptr = new QRect( obj->rect( PINT( 1 ) ) );
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_RELATIONTO )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISQACCESSIBLEINTERFACE( 2 ) && ISNUM( 3 ) )
+    if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && ISQACCESSIBLEINTERFACE( 2 ) && HB_ISNUM( 3 ) )
     {
 #endif
       RENUM( obj->relationTo( PINT( 1 ), PQACCESSIBLEINTERFACE( 2 ), PINT( 3 ) ) );
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_ROLE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       RENUM( obj->role( PINT( 1 ) ) );
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_STATE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       RENUM( obj->state( PINT( 1 ) ) );
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_TEXT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
       RQSTRING( obj->text( ( QAccessible::Text ) hb_parni( 1 ), PINT( 2 ) ) );
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_USERACTIONCOUNT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       RINT( obj->userActionCount( PINT( 1 ) ) );

@@ -135,10 +135,10 @@ HB_FUNC_STATIC( QDECORATION_PAINT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 4 ) && ISQPAINTER( 1 ) && ISQWIDGET( 2 ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
+    if( ISBETWEEN( 2, 4 ) && ISQPAINTER( 1 ) && ISQWIDGET( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
     {
 #endif
-      RBOOL( obj->paint( PQPAINTER( 1 ), PQWIDGET( 2 ), OPINT( 3, QDecoration::All ), ISNIL( 4 ) ? ( QDecoration::DecorationState ) QDecoration::Normal : ( QDecoration::DecorationState ) hb_parni( 4 ) ) );
+      RBOOL( obj->paint( PQPAINTER( 1 ), PQWIDGET( 2 ), OPINT( 3, QDecoration::All ), HB_ISNIL( 4 ) ? ( QDecoration::DecorationState ) QDecoration::Normal : ( QDecoration::DecorationState ) hb_parni( 4 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,11 +179,11 @@ void QDecoration_region2()
 
 HB_FUNC_STATIC( QDECORATION_REGION )
 {
-  if( ISBETWEEN( 2, 3 ) && ISQWIDGET( 1 ) && ISQRECT( 2 ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
+  if( ISBETWEEN( 2, 3 ) && ISQWIDGET( 1 ) && ISQRECT( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QDecoration_region1();
   }
-  else if( ISBETWEEN( 1, 2 ) && ISQWIDGET( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
+  else if( ISBETWEEN( 1, 2 ) && ISQWIDGET( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QDecoration_region2();
   }
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QDECORATION_REGIONCLICKED )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQWIDGET( 1 ) && ISNUM( 2 ) )
+    if( ISNUMPAR( 2 ) && ISQWIDGET( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
       obj->regionClicked( PQWIDGET( 1 ), PINT( 2 ) );
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QDECORATION_REGIONDOUBLECLICKED )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQWIDGET( 1 ) && ISNUM( 2 ) )
+    if( ISNUMPAR( 2 ) && ISQWIDGET( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
       obj->regionDoubleClicked( PQWIDGET( 1 ), PINT( 2 ) );
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QDECORATION_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QDECORATION_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QDECORATION_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

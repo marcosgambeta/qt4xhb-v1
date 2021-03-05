@@ -111,7 +111,7 @@ QListWidgetItem( const QIcon & icon, const QString & text, QListWidget * parent 
 */
 void QListWidgetItem_new3()
 {
-  QListWidgetItem * obj = new QListWidgetItem( ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt4xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ), PQSTRING( 2 ), OPQLISTWIDGET( 3, 0 ), OPINT( 4, QListWidgetItem::Type ) );
+  QListWidgetItem * obj = new QListWidgetItem( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt4xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ), PQSTRING( 2 ), OPQLISTWIDGET( 3, 0 ), OPINT( 4, QListWidgetItem::Type ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -126,15 +126,15 @@ void QListWidgetItem_new4()
 
 HB_FUNC_STATIC( QLISTWIDGETITEM_NEW )
 {
-  if( ISBETWEEN( 0, 2 ) && ( ISQLISTWIDGET( 1 ) || ISNIL( 1 ) ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
+  if( ISBETWEEN( 0, 2 ) && ( ISQLISTWIDGET( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QListWidgetItem_new1();
   }
-  else if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISQLISTWIDGET( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
+  else if( ISBETWEEN( 1, 3 ) && HB_ISCHAR( 1 ) && ( ISQLISTWIDGET( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QListWidgetItem_new2();
   }
-  else if( ISBETWEEN( 2, 4 ) && ( ISQICON( 1 ) || ISCHAR( 1 ) ) && ISCHAR( 2 ) && ( ISQLISTWIDGET( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
+  else if( ISBETWEEN( 2, 4 ) && ( ISQICON( 1 ) || HB_ISCHAR( 1 ) ) && HB_ISCHAR( 2 ) && ( ISQLISTWIDGET( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
     QListWidgetItem_new3();
   }
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_DATA )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QVariant * ptr = new QVariant( obj->data( PINT( 1 ) ) );
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETCHECKSTATE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setCheckState( ( Qt::CheckState ) hb_parni( 1 ) );
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETDATA )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQVARIANT( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQVARIANT( 2 ) )
     {
 #endif
       obj->setData( PINT( 1 ), *PQVARIANT( 2 ) );
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETFLAGS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setFlags( ( Qt::ItemFlags ) hb_parni( 1 ) );
@@ -628,7 +628,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETHIDDEN )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setHidden( PBOOL( 1 ) );
@@ -654,10 +654,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETICON )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ( ISQICON( 1) || ISCHAR( 1 ) ) )
+    if( ISNUMPAR( 1 ) && ( ISQICON( 1) || HB_ISCHAR( 1 ) ) )
     {
 #endif
-      obj->setIcon( ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt4xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ) );
+      obj->setIcon( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt4xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -680,7 +680,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETSELECTED )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setSelected( PBOOL( 1 ) );
@@ -732,7 +732,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETSTATUSTIP )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setStatusTip( PQSTRING( 1 ) );
@@ -758,7 +758,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETTEXT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setText( PQSTRING( 1 ) );
@@ -784,7 +784,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETTEXTALIGNMENT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setTextAlignment( PINT( 1 ) );
@@ -810,7 +810,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETTOOLTIP )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setToolTip( PQSTRING( 1 ) );
@@ -836,7 +836,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETWHATSTHIS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setWhatsThis( PQSTRING( 1 ) );
@@ -1051,7 +1051,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -1060,7 +1060,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -1096,7 +1096,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

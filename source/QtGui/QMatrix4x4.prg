@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QMATRIX4X4_NEW )
   {
     QMatrix4x4_new1();
   }
-  else if( ISNUMPAR( 16 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) && ISNUM( 6 ) && ISNUM( 7 ) && ISNUM( 8 ) && ISNUM( 9 ) && ISNUM( 10 ) && ISNUM( 11 ) && ISNUM( 12 ) && ISNUM( 13 ) && ISNUM( 14 ) && ISNUM( 15 ) && ISNUM( 16 ) )
+  else if( ISNUMPAR( 16 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) && HB_ISNUM( 7 ) && HB_ISNUM( 8 ) && HB_ISNUM( 9 ) && HB_ISNUM( 10 ) && HB_ISNUM( 11 ) && HB_ISNUM( 12 ) && HB_ISNUM( 13 ) && HB_ISNUM( 14 ) && HB_ISNUM( 15 ) && HB_ISNUM( 16 ) )
   {
     QMatrix4x4_new3();
   }
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QMATRIX4X4_COLUMN )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QVector4D * ptr = new QVector4D( obj->column( PINT( 1 ) ) );
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QMATRIX4X4_FILL )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->fill( PQREAL( 1 ) );
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QMATRIX4X4_FRUSTUM )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 6 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) && ISNUM( 6 ) )
+    if( ISNUMPAR( 6 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) )
     {
 #endif
       obj->frustum( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), PQREAL( 5 ), PQREAL( 6 ) );
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QMATRIX4X4_INVERTED )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( ISLOG( 1 ) || ISNIL( 1 ) ) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISLOG( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
       bool par1;
@@ -597,7 +597,7 @@ void QMatrix4x4_ortho3()
 
 HB_FUNC_STATIC( QMATRIX4X4_ORTHO )
 {
-  if( ISNUMPAR( 6 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) && ISNUM( 6 ) )
+  if( ISNUMPAR( 6 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) )
   {
     QMatrix4x4_ortho1();
   }
@@ -625,7 +625,7 @@ HB_FUNC_STATIC( QMATRIX4X4_PERSPECTIVE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
+    if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
     {
 #endif
       obj->perspective( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ) );
@@ -688,7 +688,7 @@ void QMatrix4x4_rotate3()
 
 HB_FUNC_STATIC( QMATRIX4X4_ROTATE )
 {
-  if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQVECTOR3D( 2 ) )
+  if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQVECTOR3D( 2 ) )
   {
     QMatrix4x4_rotate1();
   }
@@ -696,7 +696,7 @@ HB_FUNC_STATIC( QMATRIX4X4_ROTATE )
   {
     QMatrix4x4_rotate2();
   }
-  else if( ISBETWEEN( 3, 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
+  else if( ISBETWEEN( 3, 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
     QMatrix4x4_rotate3();
   }
@@ -716,7 +716,7 @@ HB_FUNC_STATIC( QMATRIX4X4_ROW )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QVector4D * ptr = new QVector4D( obj->row( PINT( 1 ) ) );
@@ -797,15 +797,15 @@ HB_FUNC_STATIC( QMATRIX4X4_SCALE )
   {
     QMatrix4x4_scale1();
   }
-  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QMatrix4x4_scale2();
   }
-  else if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) )
+  else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
     QMatrix4x4_scale3();
   }
-  else if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QMatrix4x4_scale4();
   }
@@ -825,7 +825,7 @@ HB_FUNC_STATIC( QMATRIX4X4_SETCOLUMN )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQVECTOR4D( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQVECTOR4D( 2 ) )
     {
 #endif
       obj->setColumn( PINT( 1 ), *PQVECTOR4D( 2 ) );
@@ -851,7 +851,7 @@ HB_FUNC_STATIC( QMATRIX4X4_SETROW )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQVECTOR4D( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQVECTOR4D( 2 ) )
     {
 #endif
       obj->setRow( PINT( 1 ), *PQVECTOR4D( 2 ) );
@@ -927,7 +927,7 @@ HB_FUNC_STATIC( QMATRIX4X4_TOTRANSFORM )
   {
     QMatrix4x4_toTransform1();
   }
-  else if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QMatrix4x4_toTransform2();
   }
@@ -988,11 +988,11 @@ HB_FUNC_STATIC( QMATRIX4X4_TRANSLATE )
   {
     QMatrix4x4_translate1();
   }
-  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QMatrix4x4_translate2();
   }
-  else if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) )
+  else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
     QMatrix4x4_translate3();
   }
@@ -1031,7 +1031,7 @@ HB_FUNC_STATIC( QMATRIX4X4_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -1040,7 +1040,7 @@ HB_FUNC_STATIC( QMATRIX4X4_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -1076,7 +1076,7 @@ HB_FUNC_STATIC( QMATRIX4X4_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

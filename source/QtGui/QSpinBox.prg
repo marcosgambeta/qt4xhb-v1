@@ -62,7 +62,7 @@ QSpinBox( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSPINBOX_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QSpinBox * obj = new QSpinBox( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QSPINBOX_SETMAXIMUM )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setMaximum( PINT( 1 ) );
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QSPINBOX_SETMINIMUM )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setMinimum( PINT( 1 ) );
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QSPINBOX_SETPREFIX )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setPrefix( PQSTRING( 1 ) );
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QSPINBOX_SETRANGE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
       obj->setRange( PINT( 1 ), PINT( 2 ) );
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QSPINBOX_SETSINGLESTEP )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setSingleStep( PINT( 1 ) );
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QSPINBOX_SETSUFFIX )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setSuffix( PQSTRING( 1 ) );
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QSPINBOX_SETVALUE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setValue( PINT( 1 ) );

@@ -64,7 +64,7 @@ QWizardPage( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QWIZARDPAGE_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QWizardPage * obj = new QWizardPage( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_BUTTONTEXT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       RQSTRING( obj->buttonText( ( QWizard::WizardButton ) hb_parni( 1 ) ) );
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_PIXMAP )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->pixmap( ( QWizard::WizardPixmap ) hb_parni( 1 ) ) );
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETBUTTONTEXT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISCHAR( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
       obj->setButtonText( ( QWizard::WizardButton ) hb_parni( 1 ), PQSTRING( 2 ) );
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETCOMMITPAGE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setCommitPage( PBOOL( 1 ) );
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETFINALPAGE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setFinalPage( PBOOL( 1 ) );
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETPIXMAP )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQPIXMAP( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQPIXMAP( 2 ) )
     {
 #endif
       obj->setPixmap( ( QWizard::WizardPixmap ) hb_parni( 1 ), *PQPIXMAP( 2 ) );
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETSUBTITLE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setSubTitle( PQSTRING( 1 ) );
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SETTITLE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setTitle( PQSTRING( 1 ) );

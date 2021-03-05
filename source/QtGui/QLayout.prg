@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QLAYOUT_GETCONTENTSMARGINS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
+    if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
     {
 #endif
       int par1;
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QLAYOUT_ITEMAT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QLayoutItem * ptr = obj->itemAt( PINT( 1 ) );
@@ -552,15 +552,15 @@ void QLayout_setAlignment3()
 
 HB_FUNC_STATIC( QLAYOUT_SETALIGNMENT )
 {
-  if( ISNUMPAR( 2 ) && ISQWIDGET( 1 ) && ISNUM( 2 ) )
+  if( ISNUMPAR( 2 ) && ISQWIDGET( 1 ) && HB_ISNUM( 2 ) )
   {
     QLayout_setAlignment1();
   }
-  else if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QLayout_setAlignment2();
   }
-  else if( ISNUMPAR( 2 ) && ISQLAYOUT( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && ISQLAYOUT( 1 ) && HB_ISNUM( 2 ) )
   {
     QLayout_setAlignment3();
   }
@@ -602,7 +602,7 @@ void QLayout_setContentsMargins2()
 
 HB_FUNC_STATIC( QLAYOUT_SETCONTENTSMARGINS )
 {
-  if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
+  if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
     QLayout_setContentsMargins1();
   }
@@ -626,7 +626,7 @@ HB_FUNC_STATIC( QLAYOUT_SETENABLED )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setEnabled( PBOOL( 1 ) );
@@ -678,7 +678,7 @@ HB_FUNC_STATIC( QLAYOUT_SETSIZECONSTRAINT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setSizeConstraint( ( QLayout::SizeConstraint ) hb_parni( 1 ) );
@@ -704,7 +704,7 @@ HB_FUNC_STATIC( QLAYOUT_SETSPACING )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setSpacing( PINT( 1 ) );
@@ -778,7 +778,7 @@ HB_FUNC_STATIC( QLAYOUT_TAKEAT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QLayoutItem * ptr = obj->takeAt( PINT( 1 ) );

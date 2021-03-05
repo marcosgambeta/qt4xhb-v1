@@ -116,19 +116,19 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW )
   {
     QKeySequence_new1();
   }
-  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QKeySequence_new2();
   }
-  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) )
   {
     QKeySequence_new3();
   }
-  else if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QKeySequence_new6();
   }
-  else if( ISBETWEEN( 1, 4 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
+  else if( ISBETWEEN( 1, 4 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
     QKeySequence_new4();
   }
@@ -241,10 +241,10 @@ HB_FUNC_STATIC( QKEYSEQUENCE_TOSTRING )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      RQSTRING( obj->toString( ISNIL( 1 ) ? ( QKeySequence::SequenceFormat ) QKeySequence::PortableText : ( QKeySequence::SequenceFormat ) hb_parni( 1 ) ) );
+      RQSTRING( obj->toString( HB_ISNIL( 1 ) ? ( QKeySequence::SequenceFormat ) QKeySequence::PortableText : ( QKeySequence::SequenceFormat ) hb_parni( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,10 +261,10 @@ static QKeySequence fromString( const QString & str, QKeySequence::SequenceForma
 HB_FUNC_STATIC( QKEYSEQUENCE_FROMSTRING )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
+  if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
 #endif
-    QKeySequence * ptr = new QKeySequence( QKeySequence::fromString( PQSTRING( 1 ), ISNIL( 2 ) ? ( QKeySequence::SequenceFormat ) QKeySequence::PortableText : ( QKeySequence::SequenceFormat ) hb_parni( 2 ) ) );
+    QKeySequence * ptr = new QKeySequence( QKeySequence::fromString( PQSTRING( 1 ), HB_ISNIL( 2 ) ? ( QKeySequence::SequenceFormat ) QKeySequence::PortableText : ( QKeySequence::SequenceFormat ) hb_parni( 2 ) ) );
     Qt4xHb::createReturnClass( ptr, "QKEYSEQUENCE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
@@ -281,7 +281,7 @@ static QList<QKeySequence> keyBindings( QKeySequence::StandardKey key )
 HB_FUNC_STATIC( QKEYSEQUENCE_KEYBINDINGS )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
 #endif
     QList<QKeySequence> list = QKeySequence::keyBindings( ( QKeySequence::StandardKey ) hb_parni( 1 ) );
@@ -328,7 +328,7 @@ static QKeySequence mnemonic( const QString & text )
 HB_FUNC_STATIC( QKEYSEQUENCE_MNEMONIC )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
 #endif
     QKeySequence * ptr = new QKeySequence( QKeySequence::mnemonic( PQSTRING( 1 ) ) );
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_CREATELIST )
   {
     QTextCursor_createList1();
   }
-  else if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QTextCursor_createList2();
   }
@@ -924,7 +924,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTHTML )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->insertHtml( PQSTRING( 1 ) );
@@ -1006,15 +1006,15 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE )
   {
     QTextCursor_insertImage1();
   }
-  else if( ISNUMPAR( 2 ) && ISQTEXTIMAGEFORMAT( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && ISQTEXTIMAGEFORMAT( 1 ) && HB_ISNUM( 2 ) )
   {
     QTextCursor_insertImage2();
   }
-  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QTextCursor_insertImage3();
   }
-  else if( ISBETWEEN( 1, 2 ) && ISQIMAGE( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
+  else if( ISBETWEEN( 1, 2 ) && ISQIMAGE( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QTextCursor_insertImage4();
   }
@@ -1058,7 +1058,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTLIST )
   {
     QTextCursor_insertList1();
   }
-  else if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QTextCursor_insertList2();
   }
@@ -1098,11 +1098,11 @@ void QTextCursor_insertTable2()
 
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTTABLE )
 {
-  if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISQTEXTTABLEFORMAT( 3 ) )
+  if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQTEXTTABLEFORMAT( 3 ) )
   {
     QTextCursor_insertTable1();
   }
-  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QTextCursor_insertTable2();
   }
@@ -1144,11 +1144,11 @@ void QTextCursor_insertText2()
 
 HB_FUNC_STATIC( QTEXTCURSOR_INSERTTEXT )
 {
-  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QTextCursor_insertText1();
   }
-  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISQTEXTCHARFORMAT( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQTEXTCHARFORMAT( 2 ) )
   {
     QTextCursor_insertText2();
   }
@@ -1344,10 +1344,10 @@ HB_FUNC_STATIC( QTEXTCURSOR_MOVEPOSITION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
+    if( ISBETWEEN( 1, 3 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
-      RBOOL( obj->movePosition( ( QTextCursor::MoveOperation ) hb_parni( 1 ), ISNIL( 2 ) ? ( QTextCursor::MoveMode ) QTextCursor::MoveAnchor : ( QTextCursor::MoveMode ) hb_parni( 2 ), OPINT( 3, 1 ) ) );
+      RBOOL( obj->movePosition( ( QTextCursor::MoveOperation ) hb_parni( 1 ), HB_ISNIL( 2 ) ? ( QTextCursor::MoveMode ) QTextCursor::MoveAnchor : ( QTextCursor::MoveMode ) hb_parni( 2 ), OPINT( 3, 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1442,7 +1442,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SELECT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->select( ( QTextCursor::SelectionType ) hb_parni( 1 ) );
@@ -1468,7 +1468,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SELECTEDTABLECELLS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
+    if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
     {
 #endif
       int par1;
@@ -1677,7 +1677,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SETKEEPPOSITIONONINSERT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setKeepPositionOnInsert( PBOOL( 1 ) );
@@ -1703,10 +1703,10 @@ HB_FUNC_STATIC( QTEXTCURSOR_SETPOSITION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      obj->setPosition( PINT( 1 ), ISNIL( 2 ) ? ( QTextCursor::MoveMode ) QTextCursor::MoveAnchor : ( QTextCursor::MoveMode ) hb_parni( 2 ) );
+      obj->setPosition( PINT( 1 ), HB_ISNIL( 2 ) ? ( QTextCursor::MoveMode ) QTextCursor::MoveAnchor : ( QTextCursor::MoveMode ) hb_parni( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1729,7 +1729,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SETVERTICALMOVEMENTX )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setVerticalMovementX( PINT( 1 ) );
@@ -1755,7 +1755,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SETVISUALNAVIGATION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setVisualNavigation( PBOOL( 1 ) );
@@ -1823,7 +1823,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -1832,7 +1832,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -1868,7 +1868,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

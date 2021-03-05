@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETFEATURES )
 
   if( obj )
   {
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
       obj->features= ( QStyleOptionFrameV2::FrameFeatures ) hb_parni( 1 );
     }
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETTEXT )
 
   if( obj )
   {
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
       obj->text= PQSTRING( 1 );
     }
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETTEXTALIGNMENT )
 
   if( obj )
   {
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
       obj->textAlignment= ( Qt::Alignment ) hb_parni( 1 );
     }
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETLINEWIDTH )
 
   if( obj )
   {
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
       obj->lineWidth= PINT( 1 );
     }
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_SETMIDLINEWIDTH )
 
   if( obj )
   {
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
       obj->midLineWidth= PINT( 1 );
     }

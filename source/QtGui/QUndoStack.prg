@@ -80,7 +80,7 @@ QUndoStack( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QUNDOSTACK_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QUndoStack * obj = new QUndoStack( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QUNDOSTACK_BEGINMACRO )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->beginMacro( PQSTRING( 1 ) );
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QUNDOSTACK_COMMAND )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       const QUndoCommand * ptr = obj->command( PINT( 1 ) );
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CREATEREDOACTION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQOBJECT( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
+    if( ISBETWEEN( 1, 2 ) && ISQOBJECT( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
       QAction * ptr = obj->createRedoAction( PQOBJECT( 1 ), OPQSTRING( 2, QString() ) );
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QUNDOSTACK_CREATEUNDOACTION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQOBJECT( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
+    if( ISBETWEEN( 1, 2 ) && ISQOBJECT( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
       QAction * ptr = obj->createUndoAction( PQOBJECT( 1 ), OPQSTRING( 2, QString() ) );
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QUNDOSTACK_SETUNDOLIMIT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setUndoLimit( PINT( 1 ) );
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QUNDOSTACK_TEXT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       RQSTRING( obj->text( PINT( 1 ) ) );
@@ -615,7 +615,7 @@ HB_FUNC_STATIC( QUNDOSTACK_SETACTIVE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( ISLOG( 1 ) || ISNIL( 1 ) ) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISLOG( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
       obj->setActive( OPBOOL( 1, true ) );
@@ -667,7 +667,7 @@ HB_FUNC_STATIC( QUNDOSTACK_SETINDEX )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setIndex( PINT( 1 ) );

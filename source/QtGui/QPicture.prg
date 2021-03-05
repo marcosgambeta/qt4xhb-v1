@@ -69,7 +69,7 @@ void QPicture_new2()
 
 HB_FUNC_STATIC( QPICTURE_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QPicture_new1();
   }
@@ -201,11 +201,11 @@ void QPicture_load2()
 
 HB_FUNC_STATIC( QPICTURE_LOAD )
 {
-  if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
+  if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QPicture_load1();
   }
-  else if( ISBETWEEN( 1, 2 ) && ISQIODEVICE( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
+  else if( ISBETWEEN( 1, 2 ) && ISQIODEVICE( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QPicture_load2();
   }
@@ -267,11 +267,11 @@ void QPicture_save2()
 
 HB_FUNC_STATIC( QPICTURE_SAVE )
 {
-  if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
+  if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QPicture_save1();
   }
-  else if( ISBETWEEN( 1, 2 ) && ISQIODEVICE( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
+  else if( ISBETWEEN( 1, 2 ) && ISQIODEVICE( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QPicture_save2();
   }
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QPICTURE_SETDATA )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
       obj->setData( PCONSTCHAR( 1 ), PUINT( 2 ) );

@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_FONTPROPERTY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QVariant * ptr = new QVariant( obj->fontProperty( ( QAbstractFontEngine::FontProperty ) hb_parni( 1 ) ) );
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_RENDERGLYPH )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 5 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISCHAR( 5 ) )
+    if( ISNUMPAR( 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISCHAR( 5 ) )
     {
 #endif
       RBOOL( obj->renderGlyph( PUINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), ( uchar * ) hb_parc( 5 ) ) );

@@ -67,7 +67,7 @@ QMenuBar( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QMENUBAR_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QMenuBar * obj = new QMenuBar( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
@@ -167,11 +167,11 @@ void QMenuBar_addAction3()
 
 HB_FUNC_STATIC( QMENUBAR_ADDACTION )
 {
-  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QMenuBar_addAction1();
   }
-  else if( ISNUMPAR( 3 ) && ISCHAR( 1 ) && ISQOBJECT( 2 ) && ISCHAR( 3 ) )
+  else if( ISNUMPAR( 3 ) && HB_ISCHAR( 1 ) && ISQOBJECT( 2 ) && HB_ISCHAR( 3 ) )
   {
     QMenuBar_addAction2();
   }
@@ -222,7 +222,7 @@ void QMenuBar_addMenu3()
 
   if( obj )
   {
-    QMenu * ptr = obj->addMenu( ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt4xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ), PQSTRING( 2 ) );
+    QMenu * ptr = obj->addMenu( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt4xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ), PQSTRING( 2 ) );
     Qt4xHb::createReturnQObjectClass( ptr, "QMENU" );
   }
 }
@@ -233,11 +233,11 @@ HB_FUNC_STATIC( QMENUBAR_ADDMENU )
   {
     QMenuBar_addMenu1();
   }
-  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QMenuBar_addMenu2();
   }
-  else if( ISNUMPAR( 2 ) && ( ISQICON( 1 ) || ISCHAR( 1 ) ) && ISCHAR( 2 ) )
+  else if( ISNUMPAR( 2 ) && ( ISQICON( 1 ) || HB_ISCHAR( 1 ) ) && HB_ISCHAR( 2 ) )
   {
     QMenuBar_addMenu3();
   }
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QMENUBAR_SETDEFAULTUP )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setDefaultUp( PBOOL( 1 ) );
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QMENUBAR_SETNATIVEMENUBAR )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setNativeMenuBar( PBOOL( 1 ) );
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QMENUBAR_HEIGHTFORWIDTH )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       RINT( obj->heightForWidth( PINT( 1 ) ) );
@@ -558,7 +558,7 @@ HB_FUNC_STATIC( QMENUBAR_SETVISIBLE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setVisible( PBOOL( 1 ) );

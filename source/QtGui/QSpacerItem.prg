@@ -53,9 +53,9 @@ QSpacerItem( int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum, Q
 */
 HB_FUNC_STATIC( QSPACERITEM_NEW )
 {
-  if( ISBETWEEN( 2, 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
+  if( ISBETWEEN( 2, 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QSpacerItem * obj = new QSpacerItem( PINT( 1 ), PINT( 2 ), ISNIL( 3 ) ? ( QSizePolicy::Policy ) QSizePolicy::Minimum : ( QSizePolicy::Policy ) hb_parni( 3 ), ISNIL( 4 ) ? ( QSizePolicy::Policy ) QSizePolicy::Minimum : ( QSizePolicy::Policy ) hb_parni( 4 ) );
+    QSpacerItem * obj = new QSpacerItem( PINT( 1 ), PINT( 2 ), HB_ISNIL( 3 ) ? ( QSizePolicy::Policy ) QSizePolicy::Minimum : ( QSizePolicy::Policy ) hb_parni( 3 ), HB_ISNIL( 4 ) ? ( QSizePolicy::Policy ) QSizePolicy::Minimum : ( QSizePolicy::Policy ) hb_parni( 4 ) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
@@ -74,10 +74,10 @@ HB_FUNC_STATIC( QSPACERITEM_CHANGESIZE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
+    if( ISBETWEEN( 2, 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
     {
 #endif
-      obj->changeSize( PINT( 1 ), PINT( 2 ), ISNIL( 3 ) ? ( QSizePolicy::Policy ) QSizePolicy::Minimum : ( QSizePolicy::Policy ) hb_parni( 3 ), ISNIL( 4 ) ? ( QSizePolicy::Policy ) QSizePolicy::Minimum : ( QSizePolicy::Policy ) hb_parni( 4 ) );
+      obj->changeSize( PINT( 1 ), PINT( 2 ), HB_ISNIL( 3 ) ? ( QSizePolicy::Policy ) QSizePolicy::Minimum : ( QSizePolicy::Policy ) hb_parni( 3 ), HB_ISNIL( 4 ) ? ( QSizePolicy::Policy ) QSizePolicy::Minimum : ( QSizePolicy::Policy ) hb_parni( 4 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

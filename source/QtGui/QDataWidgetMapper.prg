@@ -80,7 +80,7 @@ QDataWidgetMapper( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QDataWidgetMapper * obj = new QDataWidgetMapper( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
@@ -142,11 +142,11 @@ void QDataWidgetMapper_addMapping2()
 
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ADDMAPPING )
 {
-  if( ISNUMPAR( 2 ) && ISQWIDGET( 1 ) && ISNUM( 2 ) )
+  if( ISNUMPAR( 2 ) && ISQWIDGET( 1 ) && HB_ISNUM( 2 ) )
   {
     QDataWidgetMapper_addMapping1();
   }
-  else if( ISNUMPAR( 3 ) && ISQWIDGET( 1 ) && ISNUM( 2 ) && ISQBYTEARRAY( 3 ) )
+  else if( ISNUMPAR( 3 ) && ISQWIDGET( 1 ) && HB_ISNUM( 2 ) && ISQBYTEARRAY( 3 ) )
   {
     QDataWidgetMapper_addMapping2();
   }
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDWIDGETAT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QWidget * ptr = obj->mappedWidgetAt( PINT( 1 ) );
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETORIENTATION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setOrientation( ( Qt::Orientation ) hb_parni( 1 ) );
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETSUBMITPOLICY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setSubmitPolicy( ( QDataWidgetMapper::SubmitPolicy ) hb_parni( 1 ) );
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETCURRENTINDEX )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setCurrentIndex( PINT( 1 ) );

@@ -60,11 +60,11 @@ void QWindowStateChangeEvent_new2()
 
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW )
 {
-  if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QWindowStateChangeEvent_new1();
   }
-  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISLOG( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISLOG( 2 ) )
   {
     QWindowStateChangeEvent_new2();
   }

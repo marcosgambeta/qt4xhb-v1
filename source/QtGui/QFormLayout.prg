@@ -80,7 +80,7 @@ QFormLayout( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QFORMLAYOUT_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QFormLayout * obj = new QFormLayout( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
@@ -210,11 +210,11 @@ HB_FUNC_STATIC( QFORMLAYOUT_ADDROW )
   {
     QFormLayout_addRow2();
   }
-  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISQWIDGET( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQWIDGET( 2 ) )
   {
     QFormLayout_addRow3();
   }
-  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISQLAYOUT( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQLAYOUT( 2 ) )
   {
     QFormLayout_addRow4();
   }
@@ -396,27 +396,27 @@ void QFormLayout_insertRow6()
 
 HB_FUNC_STATIC( QFORMLAYOUT_INSERTROW )
 {
-  if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISQWIDGET( 2 ) && ISQWIDGET( 3 ) )
+  if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && ISQWIDGET( 2 ) && ISQWIDGET( 3 ) )
   {
     QFormLayout_insertRow1();
   }
-  else if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISQWIDGET( 2 ) && ISQLAYOUT( 3 ) )
+  else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && ISQWIDGET( 2 ) && ISQLAYOUT( 3 ) )
   {
     QFormLayout_insertRow2();
   }
-  else if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISCHAR( 2 ) && ISQWIDGET( 3 ) )
+  else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) && ISQWIDGET( 3 ) )
   {
     QFormLayout_insertRow3();
   }
-  else if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISCHAR( 2 ) && ISQLAYOUT( 3 ) )
+  else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) && ISQLAYOUT( 3 ) )
   {
     QFormLayout_insertRow4();
   }
-  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQWIDGET( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQWIDGET( 2 ) )
   {
     QFormLayout_insertRow5();
   }
-  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQLAYOUT( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQLAYOUT( 2 ) )
   {
     QFormLayout_insertRow6();
   }
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETFIELDGROWTHPOLICY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setFieldGrowthPolicy( ( QFormLayout::FieldGrowthPolicy ) hb_parni( 1 ) );
@@ -578,7 +578,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETFORMALIGNMENT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setFormAlignment( ( Qt::Alignment ) hb_parni( 1 ) );
@@ -604,7 +604,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETHORIZONTALSPACING )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setHorizontalSpacing( PINT( 1 ) );
@@ -630,7 +630,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETITEM )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISQLAYOUTITEM( 3 ) )
+    if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQLAYOUTITEM( 3 ) )
     {
 #endif
       obj->setItem( PINT( 1 ), ( QFormLayout::ItemRole ) hb_parni( 2 ), PQLAYOUTITEM( 3 ) );
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETLABELALIGNMENT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setLabelAlignment( ( Qt::Alignment ) hb_parni( 1 ) );
@@ -682,7 +682,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETLAYOUT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISQLAYOUT( 3 ) )
+    if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQLAYOUT( 3 ) )
     {
 #endif
       obj->setLayout( PINT( 1 ), ( QFormLayout::ItemRole ) hb_parni( 2 ), PQLAYOUT( 3 ) );
@@ -708,7 +708,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETROWWRAPPOLICY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setRowWrapPolicy( ( QFormLayout::RowWrapPolicy ) hb_parni( 1 ) );
@@ -734,7 +734,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETSPACING )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setSpacing( PINT( 1 ) );
@@ -760,7 +760,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETVERTICALSPACING )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setVerticalSpacing( PINT( 1 ) );
@@ -786,7 +786,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SETWIDGET )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISQWIDGET( 3 ) )
+    if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQWIDGET( 3 ) )
     {
 #endif
       obj->setWidget( PINT( 1 ), ( QFormLayout::ItemRole ) hb_parni( 2 ), PQWIDGET( 3 ) );
@@ -958,7 +958,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_HEIGHTFORWIDTH )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       RINT( obj->heightForWidth( PINT( 1 ) ) );
@@ -1028,11 +1028,11 @@ void QFormLayout_itemAt2()
 
 HB_FUNC_STATIC( QFORMLAYOUT_ITEMAT )
 {
-  if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+  if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QFormLayout_itemAt1();
   }
-  else if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QFormLayout_itemAt2();
   }
@@ -1128,7 +1128,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_TAKEAT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QLayoutItem * ptr = obj->takeAt( PINT( 1 ) );

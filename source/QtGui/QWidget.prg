@@ -335,9 +335,9 @@ QWidget( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QWIDGET_NEW )
 {
-  if( ISBETWEEN( 0, 2 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
+  if( ISBETWEEN( 0, 2 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QWidget * obj = new QWidget( OPQWIDGET( 1, 0 ), ISNIL( 2 ) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 2 ) );
+    QWidget * obj = new QWidget( OPQWIDGET( 1, 0 ), HB_ISNIL( 2 ) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 2 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QWIDGET_ADDACTIONS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISARRAY( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
       QList<QAction *> par1;
@@ -699,7 +699,7 @@ void QWidget_childAt2()
 
 HB_FUNC_STATIC( QWIDGET_CHILDAT )
 {
-  if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+  if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QWidget_childAt1();
   }
@@ -1223,7 +1223,7 @@ HB_FUNC_STATIC( QWIDGET_GETCONTENTSMARGINS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
+    if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
     {
 #endif
       int par1;
@@ -1257,10 +1257,10 @@ HB_FUNC_STATIC( QWIDGET_GRABGESTURE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      obj->grabGesture( ( Qt::GestureType ) hb_parni( 1 ), ISNIL( 2 ) ? ( Qt::GestureFlags ) Qt::GestureFlags() : ( Qt::GestureFlags ) hb_parni( 2 ) );
+      obj->grabGesture( ( Qt::GestureType ) hb_parni( 1 ), HB_ISNIL( 2 ) ? ( Qt::GestureFlags ) Qt::GestureFlags() : ( Qt::GestureFlags ) hb_parni( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1355,10 +1355,10 @@ HB_FUNC_STATIC( QWIDGET_GRABSHORTCUT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQKEYSEQUENCE( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
+    if( ISBETWEEN( 1, 2 ) && ISQKEYSEQUENCE( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      RINT( obj->grabShortcut( *PQKEYSEQUENCE( 1 ), ISNIL( 2 ) ? ( Qt::ShortcutContext ) Qt::WindowShortcut : ( Qt::ShortcutContext ) hb_parni( 2 ) ) );
+      RINT( obj->grabShortcut( *PQKEYSEQUENCE( 1 ), HB_ISNIL( 2 ) ? ( Qt::ShortcutContext ) Qt::WindowShortcut : ( Qt::ShortcutContext ) hb_parni( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1501,7 +1501,7 @@ HB_FUNC_STATIC( QWIDGET_HEIGHTFORWIDTH )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       RINT( obj->heightForWidth( PINT( 1 ) ) );
@@ -1574,7 +1574,7 @@ HB_FUNC_STATIC( QWIDGET_INPUTMETHODQUERY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QVariant * ptr = new QVariant( obj->inputMethodQuery( ( Qt::InputMethodQuery ) hb_parni( 1 ) ) );
@@ -1625,7 +1625,7 @@ HB_FUNC_STATIC( QWIDGET_INSERTACTIONS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQACTION( 1 ) && ISARRAY( 2 ) )
+    if( ISNUMPAR( 2 ) && ISQACTION( 1 ) && HB_ISARRAY( 2 ) )
     {
 #endif
       QList<QAction *> par2;
@@ -2416,7 +2416,7 @@ HB_FUNC_STATIC( QWIDGET_MOVE )
   {
     QWidget_move1();
   }
-  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QWidget_move2();
   }
@@ -2511,7 +2511,7 @@ HB_FUNC_STATIC( QWIDGET_OVERRIDEWINDOWFLAGS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->overrideWindowFlags( ( Qt::WindowFlags ) hb_parni( 1 ) );
@@ -2714,7 +2714,7 @@ HB_FUNC_STATIC( QWIDGET_RELEASESHORTCUT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->releaseShortcut( PINT( 1 ) );
@@ -2765,7 +2765,7 @@ void QWidget_render1()
 
   if( obj )
   {
-    obj->render( PQPAINTDEVICE( 1 ), ISNIL( 2 ) ? QPoint() : *static_cast< QPoint * >( Qt4xHb::itemGetPtr( 2 ) ), ISNIL( 3 ) ? QRegion() : *static_cast< QRegion * >( Qt4xHb::itemGetPtr( 3 ) ), ISNIL( 4 ) ? ( QWidget::RenderFlags ) QWidget::RenderFlags( QWidget::DrawWindowBackground | QWidget::DrawChildren ) : ( QWidget::RenderFlags ) hb_parni( 4 ) );
+    obj->render( PQPAINTDEVICE( 1 ), HB_ISNIL( 2 ) ? QPoint() : *static_cast< QPoint * >( Qt4xHb::itemGetPtr( 2 ) ), HB_ISNIL( 3 ) ? QRegion() : *static_cast< QRegion * >( Qt4xHb::itemGetPtr( 3 ) ), HB_ISNIL( 4 ) ? ( QWidget::RenderFlags ) QWidget::RenderFlags( QWidget::DrawWindowBackground | QWidget::DrawChildren ) : ( QWidget::RenderFlags ) hb_parni( 4 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2780,7 +2780,7 @@ void QWidget_render2()
 
   if( obj )
   {
-    obj->render( PQPAINTER( 1 ), ISNIL( 2 ) ? QPoint() : *static_cast< QPoint * >( Qt4xHb::itemGetPtr( 2 ) ), ISNIL( 3 ) ? QRegion() : *static_cast< QRegion * >( Qt4xHb::itemGetPtr( 3 ) ), ISNIL( 4 ) ? ( QWidget::RenderFlags ) QWidget::RenderFlags( QWidget::DrawWindowBackground | QWidget::DrawChildren ) : ( QWidget::RenderFlags ) hb_parni( 4 ) );
+    obj->render( PQPAINTER( 1 ), HB_ISNIL( 2 ) ? QPoint() : *static_cast< QPoint * >( Qt4xHb::itemGetPtr( 2 ) ), HB_ISNIL( 3 ) ? QRegion() : *static_cast< QRegion * >( Qt4xHb::itemGetPtr( 3 ) ), HB_ISNIL( 4 ) ? ( QWidget::RenderFlags ) QWidget::RenderFlags( QWidget::DrawWindowBackground | QWidget::DrawChildren ) : ( QWidget::RenderFlags ) hb_parni( 4 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2788,11 +2788,11 @@ void QWidget_render2()
 
 HB_FUNC_STATIC( QWIDGET_RENDER )
 {
-  if( ISBETWEEN( 1, 4 ) && ISQPAINTDEVICE( 1 ) && ( ISQPOINT( 2 ) || ISNIL( 2 ) ) && ( ISQREGION( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
+  if( ISBETWEEN( 1, 4 ) && ISQPAINTDEVICE( 1 ) && ( ISQPOINT( 2 ) || HB_ISNIL( 2 ) ) && ( ISQREGION( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
     QWidget_render1();
   }
-  else if( ISBETWEEN( 1, 4 ) && ISQPAINTER( 1 ) && ( ISQPOINT( 2 ) || ISNIL( 2 ) ) && ( ISQREGION( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
+  else if( ISBETWEEN( 1, 4 ) && ISQPAINTER( 1 ) && ( ISQPOINT( 2 ) || HB_ISNIL( 2 ) ) && ( ISQREGION( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
     QWidget_render2();
   }
@@ -2849,7 +2849,7 @@ void QWidget_repaint3()
 
 HB_FUNC_STATIC( QWIDGET_REPAINT )
 {
-  if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
+  if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
     QWidget_repaint1();
   }
@@ -2903,7 +2903,7 @@ HB_FUNC_STATIC( QWIDGET_RESIZE )
   {
     QWidget_resize1();
   }
-  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QWidget_resize2();
   }
@@ -2994,11 +2994,11 @@ void QWidget_scroll2()
 
 HB_FUNC_STATIC( QWIDGET_SCROLL )
 {
-  if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+  if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QWidget_scroll1();
   }
-  else if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISQRECT( 3 ) )
+  else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQRECT( 3 ) )
   {
     QWidget_scroll2();
   }
@@ -3018,7 +3018,7 @@ HB_FUNC_STATIC( QWIDGET_SETACCEPTDROPS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setAcceptDrops( PBOOL( 1 ) );
@@ -3044,7 +3044,7 @@ HB_FUNC_STATIC( QWIDGET_SETACCESSIBLEDESCRIPTION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setAccessibleDescription( PQSTRING( 1 ) );
@@ -3070,7 +3070,7 @@ HB_FUNC_STATIC( QWIDGET_SETACCESSIBLENAME )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setAccessibleName( PQSTRING( 1 ) );
@@ -3096,7 +3096,7 @@ HB_FUNC_STATIC( QWIDGET_SETATTRIBUTE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
       obj->setAttribute( ( Qt::WidgetAttribute ) hb_parni( 1 ), OPBOOL( 2, true ) );
@@ -3122,7 +3122,7 @@ HB_FUNC_STATIC( QWIDGET_SETAUTOFILLBACKGROUND )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setAutoFillBackground( PBOOL( 1 ) );
@@ -3148,7 +3148,7 @@ HB_FUNC_STATIC( QWIDGET_SETBACKGROUNDROLE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setBackgroundRole( ( QPalette::ColorRole ) hb_parni( 1 ) );
@@ -3200,7 +3200,7 @@ HB_FUNC_STATIC( QWIDGET_SETBASESIZE )
   {
     QWidget_setBaseSize1();
   }
-  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QWidget_setBaseSize2();
   }
@@ -3242,7 +3242,7 @@ void QWidget_setContentsMargins2()
 
 HB_FUNC_STATIC( QWIDGET_SETCONTENTSMARGINS )
 {
-  if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
+  if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
     QWidget_setContentsMargins1();
   }
@@ -3266,7 +3266,7 @@ HB_FUNC_STATIC( QWIDGET_SETCONTEXTMENUPOLICY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setContextMenuPolicy( ( Qt::ContextMenuPolicy ) hb_parni( 1 ) );
@@ -3318,7 +3318,7 @@ HB_FUNC_STATIC( QWIDGET_SETFIXEDHEIGHT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setFixedHeight( PINT( 1 ) );
@@ -3370,7 +3370,7 @@ HB_FUNC_STATIC( QWIDGET_SETFIXEDSIZE )
   {
     QWidget_setFixedSize1();
   }
-  else if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QWidget_setFixedSize2();
   }
@@ -3390,7 +3390,7 @@ HB_FUNC_STATIC( QWIDGET_SETFIXEDWIDTH )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setFixedWidth( PINT( 1 ) );
@@ -3438,7 +3438,7 @@ void QWidget_setFocus2()
 
 HB_FUNC_STATIC( QWIDGET_SETFOCUS )
 {
-  if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QWidget_setFocus1();
   }
@@ -3462,7 +3462,7 @@ HB_FUNC_STATIC( QWIDGET_SETFOCUSPOLICY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setFocusPolicy( ( Qt::FocusPolicy ) hb_parni( 1 ) );
@@ -3540,7 +3540,7 @@ HB_FUNC_STATIC( QWIDGET_SETFOREGROUNDROLE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setForegroundRole( ( QPalette::ColorRole ) hb_parni( 1 ) );
@@ -3592,7 +3592,7 @@ HB_FUNC_STATIC( QWIDGET_SETGEOMETRY )
   {
     QWidget_setGeometry1();
   }
-  else if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
+  else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
     QWidget_setGeometry2();
   }
@@ -3664,7 +3664,7 @@ HB_FUNC_STATIC( QWIDGET_SETINPUTMETHODHINTS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setInputMethodHints( ( Qt::InputMethodHints ) hb_parni( 1 ) );
@@ -3716,7 +3716,7 @@ HB_FUNC_STATIC( QWIDGET_SETLAYOUTDIRECTION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setLayoutDirection( ( Qt::LayoutDirection ) hb_parni( 1 ) );
@@ -3814,7 +3814,7 @@ HB_FUNC_STATIC( QWIDGET_SETMAXIMUMHEIGHT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setMaximumHeight( PINT( 1 ) );
@@ -3866,7 +3866,7 @@ HB_FUNC_STATIC( QWIDGET_SETMAXIMUMSIZE )
   {
     QWidget_setMaximumSize1();
   }
-  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QWidget_setMaximumSize2();
   }
@@ -3886,7 +3886,7 @@ HB_FUNC_STATIC( QWIDGET_SETMAXIMUMWIDTH )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setMaximumWidth( PINT( 1 ) );
@@ -3912,7 +3912,7 @@ HB_FUNC_STATIC( QWIDGET_SETMINIMUMHEIGHT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setMinimumHeight( PINT( 1 ) );
@@ -3964,7 +3964,7 @@ HB_FUNC_STATIC( QWIDGET_SETMINIMUMSIZE )
   {
     QWidget_setMinimumSize1();
   }
-  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QWidget_setMinimumSize2();
   }
@@ -3984,7 +3984,7 @@ HB_FUNC_STATIC( QWIDGET_SETMINIMUMWIDTH )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setMinimumWidth( PINT( 1 ) );
@@ -4010,7 +4010,7 @@ HB_FUNC_STATIC( QWIDGET_SETMOUSETRACKING )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setMouseTracking( PBOOL( 1 ) );
@@ -4088,7 +4088,7 @@ HB_FUNC_STATIC( QWIDGET_SETPARENT )
   {
     QWidget_setParent1();
   }
-  else if( ISNUMPAR( 2 ) && ISQWIDGET( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && ISQWIDGET( 1 ) && HB_ISNUM( 2 ) )
   {
     QWidget_setParent2();
   }
@@ -4108,7 +4108,7 @@ HB_FUNC_STATIC( QWIDGET_SETSHORTCUTAUTOREPEAT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
       obj->setShortcutAutoRepeat( PINT( 1 ), OPBOOL( 2, true ) );
@@ -4134,7 +4134,7 @@ HB_FUNC_STATIC( QWIDGET_SETSHORTCUTENABLED )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
       obj->setShortcutEnabled( PINT( 1 ), OPBOOL( 2, true ) );
@@ -4186,7 +4186,7 @@ HB_FUNC_STATIC( QWIDGET_SETSIZEINCREMENT )
   {
     QWidget_setSizeIncrement1();
   }
-  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QWidget_setSizeIncrement2();
   }
@@ -4232,7 +4232,7 @@ HB_FUNC_STATIC( QWIDGET_SETSIZEPOLICY )
   {
     QWidget_setSizePolicy1();
   }
-  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QWidget_setSizePolicy2();
   }
@@ -4252,7 +4252,7 @@ HB_FUNC_STATIC( QWIDGET_SETSTATUSTIP )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setStatusTip( PQSTRING( 1 ) );
@@ -4304,7 +4304,7 @@ HB_FUNC_STATIC( QWIDGET_SETTOOLTIP )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setToolTip( PQSTRING( 1 ) );
@@ -4330,7 +4330,7 @@ HB_FUNC_STATIC( QWIDGET_SETUPDATESENABLED )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setUpdatesEnabled( PBOOL( 1 ) );
@@ -4356,7 +4356,7 @@ HB_FUNC_STATIC( QWIDGET_SETWHATSTHIS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setWhatsThis( PQSTRING( 1 ) );
@@ -4382,7 +4382,7 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWFILEPATH )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setWindowFilePath( PQSTRING( 1 ) );
@@ -4408,7 +4408,7 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWFLAGS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setWindowFlags( ( Qt::WindowFlags ) hb_parni( 1 ) );
@@ -4434,10 +4434,10 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWICON )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ( ISQICON( 1) || ISCHAR( 1 ) ) )
+    if( ISNUMPAR( 1 ) && ( ISQICON( 1) || HB_ISCHAR( 1 ) ) )
     {
 #endif
-      obj->setWindowIcon( ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt4xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ) );
+      obj->setWindowIcon( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt4xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -4460,7 +4460,7 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWICONTEXT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setWindowIconText( PQSTRING( 1 ) );
@@ -4486,7 +4486,7 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWMODALITY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setWindowModality( ( Qt::WindowModality ) hb_parni( 1 ) );
@@ -4512,7 +4512,7 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWOPACITY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setWindowOpacity( PQREAL( 1 ) );
@@ -4538,7 +4538,7 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWROLE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setWindowRole( PQSTRING( 1 ) );
@@ -4564,7 +4564,7 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWSTATE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setWindowState( ( Qt::WindowStates ) hb_parni( 1 ) );
@@ -4789,7 +4789,7 @@ HB_FUNC_STATIC( QWIDGET_TESTATTRIBUTE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       RBOOL( obj->testAttribute( ( Qt::WidgetAttribute ) hb_parni( 1 ) ) );
@@ -4861,7 +4861,7 @@ HB_FUNC_STATIC( QWIDGET_UNGRABGESTURE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->ungrabGesture( ( Qt::GestureType ) hb_parni( 1 ) );
@@ -5017,7 +5017,7 @@ void QWidget_update4()
 
 HB_FUNC_STATIC( QWIDGET_UPDATE )
 {
-  if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
+  if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
     QWidget_update1();
   }
@@ -5638,7 +5638,7 @@ HB_FUNC_STATIC( QWIDGET_SETDISABLED )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setDisabled( PBOOL( 1 ) );
@@ -5664,7 +5664,7 @@ HB_FUNC_STATIC( QWIDGET_SETENABLED )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setEnabled( PBOOL( 1 ) );
@@ -5690,7 +5690,7 @@ HB_FUNC_STATIC( QWIDGET_SETHIDDEN )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setHidden( PBOOL( 1 ) );
@@ -5716,7 +5716,7 @@ HB_FUNC_STATIC( QWIDGET_SETSTYLESHEET )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setStyleSheet( PQSTRING( 1 ) );
@@ -5742,7 +5742,7 @@ HB_FUNC_STATIC( QWIDGET_SETVISIBLE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setVisible( PBOOL( 1 ) );
@@ -5768,7 +5768,7 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWMODIFIED )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setWindowModified( PBOOL( 1 ) );
@@ -5794,7 +5794,7 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWTITLE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setWindowTitle( PQSTRING( 1 ) );
@@ -6195,7 +6195,7 @@ HB_FUNC_STATIC( QWIDGET_FIND )
 {
 #ifdef Q_OS_WIN
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && ISPOINTER( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISPOINTER( 1 ) )
   {
 #endif
     QWidget * ptr = QWidget::find( ( WId ) hb_parptr( 1 ) );

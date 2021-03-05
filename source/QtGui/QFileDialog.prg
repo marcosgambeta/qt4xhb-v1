@@ -127,11 +127,11 @@ void QFileDialog_new2()
 
 HB_FUNC_STATIC( QFILEDIALOG_NEW )
 {
-  if( ISNUMPAR( 2 ) && ISQWIDGET( 1 ) && ISNUM( 2 ) )
+  if( ISNUMPAR( 2 ) && ISQWIDGET( 1 ) && HB_ISNUM( 2 ) )
   {
     QFileDialog_new1();
   }
-  else if( ISBETWEEN( 0, 4 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) && ( ISCHAR( 3 ) || ISNIL( 3 ) ) && ( ISCHAR( 4 ) || ISNIL( 4 ) ) )
+  else if( ISBETWEEN( 0, 4 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISCHAR( 4 ) || HB_ISNIL( 4 ) ) )
   {
     QFileDialog_new2();
   }
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QFILEDIALOG_LABELTEXT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       RQSTRING( obj->labelText( ( QFileDialog::DialogLabel ) hb_parni( 1 ) ) );
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QFILEDIALOG_OPEN )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && ISCHAR( 2 ) )
+    if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
       obj->open( PQOBJECT( 1 ), PCONSTCHAR( 2 ) );
@@ -633,7 +633,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTFILE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->selectFile( PQSTRING( 1 ) );
@@ -659,7 +659,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SELECTNAMEFILTER )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->selectNameFilter( PQSTRING( 1 ) );
@@ -733,7 +733,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETACCEPTMODE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setAcceptMode( ( QFileDialog::AcceptMode ) hb_parni( 1 ) );
@@ -759,7 +759,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETCONFIRMOVERWRITE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setConfirmOverwrite( PBOOL( 1 ) );
@@ -785,7 +785,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETDEFAULTSUFFIX )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setDefaultSuffix( PQSTRING( 1 ) );
@@ -833,7 +833,7 @@ void QFileDialog_setDirectory2()
 
 HB_FUNC_STATIC( QFILEDIALOG_SETDIRECTORY )
 {
-  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QFileDialog_setDirectory1();
   }
@@ -857,7 +857,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETFILEMODE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setFileMode( ( QFileDialog::FileMode ) hb_parni( 1 ) );
@@ -883,7 +883,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETFILTER )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setFilter( ( QDir::Filters ) hb_parni( 1 ) );
@@ -909,7 +909,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETHISTORY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISARRAY( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
       obj->setHistory( PQSTRINGLIST( 1 ) );
@@ -987,7 +987,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETLABELTEXT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISCHAR( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
       obj->setLabelText( ( QFileDialog::DialogLabel ) hb_parni( 1 ), PQSTRING( 2 ) );
@@ -1013,7 +1013,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETNAMEFILTER )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setNameFilter( PQSTRING( 1 ) );
@@ -1039,7 +1039,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETNAMEFILTERDETAILSVISIBLE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setNameFilterDetailsVisible( PBOOL( 1 ) );
@@ -1065,7 +1065,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETNAMEFILTERS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISARRAY( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
       obj->setNameFilters( PQSTRINGLIST( 1 ) );
@@ -1091,7 +1091,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETOPTION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
       obj->setOption( ( QFileDialog::Option ) hb_parni( 1 ), OPBOOL( 2, true ) );
@@ -1117,7 +1117,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETOPTIONS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setOptions( ( QFileDialog::Options ) hb_parni( 1 ) );
@@ -1169,7 +1169,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETREADONLY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setReadOnly( PBOOL( 1 ) );
@@ -1195,7 +1195,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETRESOLVESYMLINKS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setResolveSymlinks( PBOOL( 1 ) );
@@ -1221,7 +1221,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETSIDEBARURLS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISARRAY( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
       QList<QUrl> par1;
@@ -1254,7 +1254,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETVIEWMODE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setViewMode( ( QFileDialog::ViewMode ) hb_parni( 1 ) );
@@ -1332,7 +1332,7 @@ HB_FUNC_STATIC( QFILEDIALOG_TESTOPTION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       RBOOL( obj->testOption( ( QFileDialog::Option ) hb_parni( 1 ) ) );
@@ -1380,7 +1380,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SETVISIBLE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setVisible( PBOOL( 1 ) );
@@ -1402,10 +1402,10 @@ static QString getExistingDirectory( QWidget * parent = 0, const QString & capti
 HB_FUNC_STATIC( QFILEDIALOG_GETEXISTINGDIRECTORY )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 0, 4 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) && ( ISCHAR( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
+  if( ISBETWEEN( 0, 4 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
 #endif
-    RQSTRING( QFileDialog::getExistingDirectory( OPQWIDGET( 1, 0 ), OPQSTRING( 2, QString() ), OPQSTRING( 3, QString() ), ISNIL( 4 ) ? ( QFileDialog::Options ) QFileDialog::ShowDirsOnly : ( QFileDialog::Options ) hb_parni( 4 ) ) );
+    RQSTRING( QFileDialog::getExistingDirectory( OPQWIDGET( 1, 0 ), OPQSTRING( 2, QString() ), OPQSTRING( 3, QString() ), HB_ISNIL( 4 ) ? ( QFileDialog::Options ) QFileDialog::ShowDirsOnly : ( QFileDialog::Options ) hb_parni( 4 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1421,10 +1421,10 @@ static QString getOpenFileName( QWidget * parent = 0, const QString & caption = 
 HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILENAME )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 0, 6 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) && ( ISCHAR( 3 ) || ISNIL( 3 ) ) && ( ISCHAR( 4 ) || ISNIL( 4 ) ) && ( ISCHAR( 5 ) || ISNIL( 5 ) ) && ( ISNUM( 6 ) || ISNIL( 6 ) ) )
+  if( ISBETWEEN( 0, 6 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISCHAR( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISCHAR( 5 ) || HB_ISNIL( 5 ) ) && ( HB_ISNUM( 6 ) || HB_ISNIL( 6 ) ) )
   {
 #endif
-    RQSTRING( QFileDialog::getOpenFileName( OPQWIDGET( 1, 0 ), OPQSTRING( 2, QString() ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ), NULL, ISNIL( 6 ) ? ( QFileDialog::Options ) 0 : ( QFileDialog::Options ) hb_parni( 6 ) ) );
+    RQSTRING( QFileDialog::getOpenFileName( OPQWIDGET( 1, 0 ), OPQSTRING( 2, QString() ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ), NULL, HB_ISNIL( 6 ) ? ( QFileDialog::Options ) 0 : ( QFileDialog::Options ) hb_parni( 6 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1440,10 +1440,10 @@ static QStringList getOpenFileNames( QWidget * parent = 0, const QString & capti
 HB_FUNC_STATIC( QFILEDIALOG_GETOPENFILENAMES )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 0, 6 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) && ( ISCHAR( 3 ) || ISNIL( 3 ) ) && ( ISCHAR( 4 ) || ISNIL( 4 ) ) && ( ISCHAR( 5 ) || ISNIL( 5 ) ) && ( ISNUM( 6 ) || ISNIL( 6 ) ) )
+  if( ISBETWEEN( 0, 6 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISCHAR( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISCHAR( 5 ) || HB_ISNIL( 5 ) ) && ( HB_ISNUM( 6 ) || HB_ISNIL( 6 ) ) )
   {
 #endif
-    RQSTRINGLIST( QFileDialog::getOpenFileNames( OPQWIDGET( 1, 0 ), OPQSTRING( 2, QString() ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ), NULL, ISNIL( 6 ) ? ( QFileDialog::Options ) 0 : ( QFileDialog::Options ) hb_parni( 6 ) ) );
+    RQSTRINGLIST( QFileDialog::getOpenFileNames( OPQWIDGET( 1, 0 ), OPQSTRING( 2, QString() ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ), NULL, HB_ISNIL( 6 ) ? ( QFileDialog::Options ) 0 : ( QFileDialog::Options ) hb_parni( 6 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1459,10 +1459,10 @@ static QString getSaveFileName( QWidget * parent = 0, const QString & caption = 
 HB_FUNC_STATIC( QFILEDIALOG_GETSAVEFILENAME )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 0, 6 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) && ( ISCHAR( 3 ) || ISNIL( 3 ) ) && ( ISCHAR( 4 ) || ISNIL( 4 ) ) && ( ISCHAR( 5 ) || ISNIL( 5 ) ) && ( ISNUM( 6 ) || ISNIL( 6 ) ) )
+  if( ISBETWEEN( 0, 6 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISCHAR( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISCHAR( 5 ) || HB_ISNIL( 5 ) ) && ( HB_ISNUM( 6 ) || HB_ISNIL( 6 ) ) )
   {
 #endif
-    RQSTRING( QFileDialog::getSaveFileName( OPQWIDGET( 1, 0 ), OPQSTRING( 2, QString() ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ), NULL, ISNIL( 6 ) ? ( QFileDialog::Options ) 0 : ( QFileDialog::Options ) hb_parni( 6 ) ) );
+    RQSTRING( QFileDialog::getSaveFileName( OPQWIDGET( 1, 0 ), OPQSTRING( 2, QString() ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ), NULL, HB_ISNIL( 6 ) ? ( QFileDialog::Options ) 0 : ( QFileDialog::Options ) hb_parni( 6 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

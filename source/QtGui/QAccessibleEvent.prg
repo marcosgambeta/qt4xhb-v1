@@ -45,7 +45,7 @@ QAccessibleEvent( QAccessibleEvent::Type type, int child )
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_NEW )
 {
-  if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+  if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QAccessibleEvent * obj = new QAccessibleEvent( ( QAccessibleEvent::Type ) hb_parni( 1 ), PINT( 2 ) );
     Qt4xHb::returnNewObject( obj, false );
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_SETVALUE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setValue( PQSTRING( 1 ) );

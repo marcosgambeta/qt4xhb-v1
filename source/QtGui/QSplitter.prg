@@ -91,11 +91,11 @@ void QSplitter_new2()
 
 HB_FUNC_STATIC( QSPLITTER_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QSplitter_new1();
   }
-  else if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISQWIDGET( 2 ) || ISNIL( 2 ) ) )
+  else if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QSplitter_new2();
   }
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QSPLITTER_GETRANGE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) )
+    if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
     {
 #endif
       int par2;
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QSPLITTER_HANDLE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QSplitterHandle * ptr = obj->handle( PINT( 1 ) );
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QSPLITTER_INSERTWIDGET )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQWIDGET( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQWIDGET( 2 ) )
     {
 #endif
       obj->insertWidget( PINT( 1 ), PQWIDGET( 2 ) );
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QSPLITTER_ISCOLLAPSIBLE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       RBOOL( obj->isCollapsible( PINT( 1 ) ) );
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QSPLITTER_SETCHILDRENCOLLAPSIBLE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setChildrenCollapsible( PBOOL( 1 ) );
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QSPLITTER_SETCOLLAPSIBLE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISLOG( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISLOG( 2 ) )
     {
 #endif
       obj->setCollapsible( PINT( 1 ), PBOOL( 2 ) );
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QSPLITTER_SETHANDLEWIDTH )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setHandleWidth( PINT( 1 ) );
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QSPLITTER_SETOPAQUERESIZE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( ISLOG( 1 ) || ISNIL( 1 ) ) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISLOG( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
       obj->setOpaqueResize( OPBOOL( 1, true ) );
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QSPLITTER_SETORIENTATION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setOrientation( ( Qt::Orientation ) hb_parni( 1 ) );
@@ -614,7 +614,7 @@ HB_FUNC_STATIC( QSPLITTER_SETSIZES )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISARRAY( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
       QList<int> par1;
@@ -649,7 +649,7 @@ HB_FUNC_STATIC( QSPLITTER_SETSTRETCHFACTOR )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
       obj->setStretchFactor( PINT( 1 ), PINT( 2 ) );
@@ -700,7 +700,7 @@ HB_FUNC_STATIC( QSPLITTER_WIDGET )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QWidget * ptr = obj->widget( PINT( 1 ) );

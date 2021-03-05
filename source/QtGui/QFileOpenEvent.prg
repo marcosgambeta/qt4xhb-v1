@@ -64,7 +64,7 @@ void QFileOpenEvent_new2()
 
 HB_FUNC_STATIC( QFILEOPENEVENT_NEW )
 {
-  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QFileOpenEvent_new1();
   }
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_OPENFILE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQFILE( 1 ) && ISNUM( 2 ) )
+    if( ISNUMPAR( 2 ) && ISQFILE( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
       RBOOL( obj->openFile( *PQFILE( 1 ), ( QIODevice::OpenMode ) hb_parni( 2 ) ) );

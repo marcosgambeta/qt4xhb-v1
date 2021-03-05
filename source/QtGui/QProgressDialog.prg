@@ -72,7 +72,7 @@ QProgressDialog( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 void QProgressDialog_new1()
 {
-  QProgressDialog * obj = new QProgressDialog( OPQWIDGET( 1, 0 ), ISNIL( 2 ) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 2 ) );
+  QProgressDialog * obj = new QProgressDialog( OPQWIDGET( 1, 0 ), HB_ISNIL( 2 ) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 2 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -81,17 +81,17 @@ QProgressDialog( const QString & labelText, const QString & cancelButtonText, in
 */
 void QProgressDialog_new2()
 {
-  QProgressDialog * obj = new QProgressDialog( PQSTRING( 1 ), PQSTRING( 2 ), PINT( 3 ), PINT( 4 ), OPQWIDGET( 5, 0 ), ISNIL( 6 ) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 6 ) );
+  QProgressDialog * obj = new QProgressDialog( PQSTRING( 1 ), PQSTRING( 2 ), PINT( 3 ), PINT( 4 ), OPQWIDGET( 5, 0 ), HB_ISNIL( 6 ) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 6 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QPROGRESSDIALOG_NEW )
 {
-  if( ISBETWEEN( 0, 2 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
+  if( ISBETWEEN( 0, 2 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QProgressDialog_new1();
   }
-  else if( ISBETWEEN( 4, 6 ) && ISCHAR( 1 ) && ISCHAR( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ( ISQWIDGET( 5 ) || ISNIL( 5 ) ) && ( ISNUM( 6 ) || ISNIL( 6 ) ) )
+  else if( ISBETWEEN( 4, 6 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ( ISQWIDGET( 5 ) || HB_ISNIL( 5 ) ) && ( HB_ISNUM( 6 ) || HB_ISNIL( 6 ) ) )
   {
     QProgressDialog_new2();
   }
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_OPEN )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && ISCHAR( 2 ) )
+    if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
       obj->open( PQOBJECT( 1 ), PCONSTCHAR( 2 ) );
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETAUTOCLOSE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setAutoClose( PBOOL( 1 ) );
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETAUTORESET )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setAutoReset( PBOOL( 1 ) );
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETCANCELBUTTONTEXT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setCancelButtonText( PQSTRING( 1 ) );
@@ -581,7 +581,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETLABELTEXT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setLabelText( PQSTRING( 1 ) );
@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETMAXIMUM )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setMaximum( PINT( 1 ) );
@@ -633,7 +633,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETMINIMUM )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setMinimum( PINT( 1 ) );
@@ -659,7 +659,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETMINIMUMDURATION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setMinimumDuration( PINT( 1 ) );
@@ -685,7 +685,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETRANGE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
       obj->setRange( PINT( 1 ), PINT( 2 ) );
@@ -711,7 +711,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETVALUE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setValue( PINT( 1 ) );

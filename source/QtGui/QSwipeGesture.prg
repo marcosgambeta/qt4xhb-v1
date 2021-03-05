@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QSWIPEGESTURE_SETSWIPEANGLE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setSwipeAngle( PQREAL( 1 ) );

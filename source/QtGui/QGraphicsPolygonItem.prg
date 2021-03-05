@@ -57,7 +57,7 @@ QGraphicsPolygonItem( QGraphicsItem * parent = 0 )
 */
 void QGraphicsPolygonItem_new1()
 {
-  QGraphicsPolygonItem * obj = new QGraphicsPolygonItem( ISNIL( 1 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 1 ) ) );
+  QGraphicsPolygonItem * obj = new QGraphicsPolygonItem( HB_ISNIL( 1 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 1 ) ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -66,17 +66,17 @@ QGraphicsPolygonItem( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
 */
 void QGraphicsPolygonItem_new2()
 {
-  QGraphicsPolygonItem * obj = new QGraphicsPolygonItem( *PQPOLYGONF( 1 ), ISNIL( 2 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 2 ) ) );
+  QGraphicsPolygonItem * obj = new QGraphicsPolygonItem( *PQPOLYGONF( 1 ), HB_ISNIL( 2 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 2 ) ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQGRAPHICSITEM( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQGRAPHICSITEM( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QGraphicsPolygonItem_new1();
   }
-  else if( ISBETWEEN( 1, 2 ) && ISQPOLYGONF( 1 ) && ( ISQGRAPHICSITEM( 2 ) || ISNIL( 2 ) ) )
+  else if( ISBETWEEN( 1, 2 ) && ISQPOLYGONF( 1 ) && ( ISQGRAPHICSITEM( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QGraphicsPolygonItem_new2();
   }
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_SETFILLRULE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setFillRule( ( Qt::FillRule ) hb_parni( 1 ) );
@@ -312,7 +312,7 @@ HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_PAINT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 3 ) && ISQPAINTER( 1 ) && ISQSTYLEOPTIONGRAPHICSITEM( 2 ) && ( ISQWIDGET( 3 ) || ISNIL( 3 ) ) )
+    if( ISBETWEEN( 2, 3 ) && ISQPAINTER( 1 ) && ISQSTYLEOPTIONGRAPHICSITEM( 2 ) && ( ISQWIDGET( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
       obj->paint( PQPAINTER( 1 ), PQSTYLEOPTIONGRAPHICSITEM( 2 ), OPQWIDGET( 3, 0 ) );

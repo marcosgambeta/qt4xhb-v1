@@ -87,7 +87,7 @@ QListWidget( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QLISTWIDGET_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QListWidget * obj = new QListWidget( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
@@ -149,7 +149,7 @@ void QListWidget_addItem2()
 
 HB_FUNC_STATIC( QLISTWIDGET_ADDITEM )
 {
-  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QListWidget_addItem1();
   }
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ADDITEMS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISARRAY( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
       obj->addItems( PQSTRINGLIST( 1 ) );
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QLISTWIDGET_FINDITEMS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
       QList<QListWidgetItem *> list = obj->findItems( PQSTRING( 1 ), ( Qt::MatchFlags ) hb_parni( 2 ) );
@@ -394,11 +394,11 @@ void QListWidget_insertItem2()
 
 HB_FUNC_STATIC( QLISTWIDGET_INSERTITEM )
 {
-  if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQLISTWIDGETITEM( 2 ) )
+  if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQLISTWIDGETITEM( 2 ) )
   {
     QListWidget_insertItem1();
   }
-  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISCHAR( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) )
   {
     QListWidget_insertItem2();
   }
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QLISTWIDGET_INSERTITEMS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISARRAY( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISARRAY( 2 ) )
     {
 #endif
       obj->insertItems( PINT( 1 ), PQSTRINGLIST( 2 ) );
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEM )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QListWidgetItem * ptr = obj->item( PINT( 1 ) );
@@ -517,7 +517,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMAT )
   {
     QListWidget_itemAt1();
   }
-  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QListWidget_itemAt2();
   }
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTITEM )
   {
     QListWidget_setCurrentItem1();
   }
-  else if( ISNUMPAR( 2 ) && ISQLISTWIDGETITEM( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && ISQLISTWIDGETITEM( 1 ) && HB_ISNUM( 2 ) )
   {
     QListWidget_setCurrentItem2();
   }
@@ -754,11 +754,11 @@ void QListWidget_setCurrentRow2()
 
 HB_FUNC_STATIC( QLISTWIDGET_SETCURRENTROW )
 {
-  if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QListWidget_setCurrentRow1();
   }
-  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QListWidget_setCurrentRow2();
   }
@@ -804,7 +804,7 @@ HB_FUNC_STATIC( QLISTWIDGET_SETSORTINGENABLED )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setSortingEnabled( PBOOL( 1 ) );
@@ -830,10 +830,10 @@ HB_FUNC_STATIC( QLISTWIDGET_SORTITEMS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      obj->sortItems( ISNIL( 1 ) ? ( Qt::SortOrder ) Qt::AscendingOrder : ( Qt::SortOrder ) hb_parni( 1 ) );
+      obj->sortItems( HB_ISNIL( 1 ) ? ( Qt::SortOrder ) Qt::AscendingOrder : ( Qt::SortOrder ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -856,7 +856,7 @@ HB_FUNC_STATIC( QLISTWIDGET_TAKEITEM )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QListWidgetItem * ptr = obj->takeItem( PINT( 1 ) );
@@ -958,10 +958,10 @@ HB_FUNC_STATIC( QLISTWIDGET_SCROLLTOITEM )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQLISTWIDGETITEM( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
+    if( ISBETWEEN( 1, 2 ) && ISQLISTWIDGETITEM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      obj->scrollToItem( PQLISTWIDGETITEM( 1 ), ISNIL( 2 ) ? ( QAbstractItemView::ScrollHint ) QAbstractItemView::EnsureVisible : ( QAbstractItemView::ScrollHint ) hb_parni( 2 ) );
+      obj->scrollToItem( PQLISTWIDGETITEM( 1 ), HB_ISNIL( 2 ) ? ( QAbstractItemView::ScrollHint ) QAbstractItemView::EnsureVisible : ( QAbstractItemView::ScrollHint ) hb_parni( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

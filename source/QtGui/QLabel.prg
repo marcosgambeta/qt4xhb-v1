@@ -91,7 +91,7 @@ QLabel( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 void QLabel_new1()
 {
-  QLabel * obj = new QLabel( OPQWIDGET( 1, 0 ), ISNIL( 2 ) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 2 ) );
+  QLabel * obj = new QLabel( OPQWIDGET( 1, 0 ), HB_ISNIL( 2 ) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 2 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -100,17 +100,17 @@ QLabel( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 void QLabel_new2()
 {
-  QLabel * obj = new QLabel( PQSTRING( 1 ), OPQWIDGET( 2, 0 ), ISNIL( 3 ) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 3 ) );
+  QLabel * obj = new QLabel( PQSTRING( 1 ), OPQWIDGET( 2, 0 ), HB_ISNIL( 3 ) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 3 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QLABEL_NEW )
 {
-  if( ISBETWEEN( 0, 2 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
+  if( ISBETWEEN( 0, 2 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QLabel_new1();
   }
-  else if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISQWIDGET( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
+  else if( ISBETWEEN( 1, 3 ) && HB_ISCHAR( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QLabel_new2();
   }
@@ -417,7 +417,7 @@ HB_FUNC_STATIC( QLABEL_SETALIGNMENT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setAlignment( ( Qt::Alignment ) hb_parni( 1 ) );
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QLABEL_SETINDENT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setIndent( PINT( 1 ) );
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QLABEL_SETMARGIN )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setMargin( PINT( 1 ) );
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QLABEL_SETOPENEXTERNALLINKS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setOpenExternalLinks( PBOOL( 1 ) );
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QLABEL_SETSCALEDCONTENTS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setScaledContents( PBOOL( 1 ) );
@@ -573,7 +573,7 @@ HB_FUNC_STATIC( QLABEL_SETSELECTION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
       obj->setSelection( PINT( 1 ), PINT( 2 ) );
@@ -599,7 +599,7 @@ HB_FUNC_STATIC( QLABEL_SETTEXTFORMAT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setTextFormat( ( Qt::TextFormat ) hb_parni( 1 ) );
@@ -625,7 +625,7 @@ HB_FUNC_STATIC( QLABEL_SETTEXTINTERACTIONFLAGS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setTextInteractionFlags( ( Qt::TextInteractionFlags ) hb_parni( 1 ) );
@@ -651,7 +651,7 @@ HB_FUNC_STATIC( QLABEL_SETWORDWRAP )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setWordWrap( PBOOL( 1 ) );
@@ -773,7 +773,7 @@ HB_FUNC_STATIC( QLABEL_HEIGHTFORWIDTH )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       RINT( obj->heightForWidth( PINT( 1 ) ) );
@@ -899,7 +899,7 @@ HB_FUNC_STATIC( QLABEL_SETNUM1 )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setNum( PINT( 1 ) );
@@ -925,7 +925,7 @@ HB_FUNC_STATIC( QLABEL_SETNUM2 )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setNum( PDOUBLE( 1 ) );
@@ -943,7 +943,7 @@ HB_FUNC_STATIC( QLABEL_SETNUM2 )
 
 HB_FUNC_STATIC( QLABEL_SETNUM )
 {
-  if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     HB_FUNC_EXEC( QLABEL_SETNUM2 );
   }
@@ -1015,7 +1015,7 @@ HB_FUNC_STATIC( QLABEL_SETTEXT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setText( PQSTRING( 1 ) );

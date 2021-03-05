@@ -105,7 +105,7 @@ void QDrag_exec1()
 
   if( obj )
   {
-    RENUM( obj->exec( ISNIL( 1 ) ? ( Qt::DropActions ) Qt::MoveAction : ( Qt::DropActions ) hb_parni( 1 ) ) );
+    RENUM( obj->exec( HB_ISNIL( 1 ) ? ( Qt::DropActions ) Qt::MoveAction : ( Qt::DropActions ) hb_parni( 1 ) ) );
   }
 }
 
@@ -124,11 +124,11 @@ void QDrag_exec2()
 
 HB_FUNC_STATIC( QDRAG_EXEC )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QDrag_exec1();
   }
-  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QDrag_exec2();
   }
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QDRAG_SETDRAGCURSOR )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQPIXMAP( 1 ) && ISNUM( 2 ) )
+    if( ISNUMPAR( 2 ) && ISQPIXMAP( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
       obj->setDragCursor( *PQPIXMAP( 1 ), ( Qt::DropAction ) hb_parni( 2 ) );

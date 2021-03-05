@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SETSHAPE )
 
   if( obj )
   {
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
       obj->shape= ( QTabBar::Shape ) hb_parni( 1 );
     }

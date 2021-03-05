@@ -60,7 +60,7 @@ QGraphicsLineItem( QGraphicsItem * parent = 0 )
 */
 void QGraphicsLineItem_new1()
 {
-  QGraphicsLineItem * obj = new QGraphicsLineItem( ISNIL( 1 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 1 ) ) );
+  QGraphicsLineItem * obj = new QGraphicsLineItem( HB_ISNIL( 1 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 1 ) ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -69,7 +69,7 @@ QGraphicsLineItem( const QLineF & line, QGraphicsItem * parent = 0 )
 */
 void QGraphicsLineItem_new2()
 {
-  QGraphicsLineItem * obj = new QGraphicsLineItem( *PQLINEF( 1 ), ISNIL( 2 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 2 ) ) );
+  QGraphicsLineItem * obj = new QGraphicsLineItem( *PQLINEF( 1 ), HB_ISNIL( 2 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 2 ) ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -78,21 +78,21 @@ QGraphicsLineItem( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * paren
 */
 void QGraphicsLineItem_new3()
 {
-  QGraphicsLineItem * obj = new QGraphicsLineItem( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), ISNIL( 5 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 5 ) ) );
+  QGraphicsLineItem * obj = new QGraphicsLineItem( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), HB_ISNIL( 5 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 5 ) ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQGRAPHICSITEM( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQGRAPHICSITEM( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QGraphicsLineItem_new1();
   }
-  else if( ISBETWEEN( 1, 2 ) && ISQLINEF( 1 ) && ( ISQGRAPHICSITEM( 2 ) || ISNIL( 2 ) ) )
+  else if( ISBETWEEN( 1, 2 ) && ISQLINEF( 1 ) && ( ISQGRAPHICSITEM( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QGraphicsLineItem_new2();
   }
-  else if( ISBETWEEN( 4, 5 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ( ISQGRAPHICSITEM( 5 ) || ISNIL( 5 ) ) )
+  else if( ISBETWEEN( 4, 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ( ISQGRAPHICSITEM( 5 ) || HB_ISNIL( 5 ) ) )
   {
     QGraphicsLineItem_new3();
   }
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_SETLINE )
   {
     QGraphicsLineItem_setLine1();
   }
-  else if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
+  else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
     QGraphicsLineItem_setLine2();
   }
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_PAINT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 3 ) && ISQPAINTER( 1 ) && ISQSTYLEOPTIONGRAPHICSITEM( 2 ) && ( ISQWIDGET( 3 ) || ISNIL( 3 ) ) )
+    if( ISBETWEEN( 2, 3 ) && ISQPAINTER( 1 ) && ISQSTYLEOPTIONGRAPHICSITEM( 2 ) && ( ISQWIDGET( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
       obj->paint( PQPAINTER( 1 ), PQSTYLEOPTIONGRAPHICSITEM( 2 ), OPQWIDGET( 3, 0 ) );

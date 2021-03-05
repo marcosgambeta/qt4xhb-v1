@@ -137,11 +137,11 @@ void QLineEdit_new2()
 
 HB_FUNC_STATIC( QLINEEDIT_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QLineEdit_new1();
   }
-  else if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISQWIDGET( 2 ) || ISNIL( 2 ) ) )
+  else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QLineEdit_new2();
   }
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORBACKWARD )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISLOG( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISLOG( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
       obj->cursorBackward( PBOOL( 1 ), OPINT( 2, 1 ) );
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORFORWARD )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISLOG( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISLOG( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
       obj->cursorForward( PBOOL( 1 ), OPINT( 2, 1 ) );
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORWORDBACKWARD )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->cursorWordBackward( PBOOL( 1 ) );
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QLINEEDIT_CURSORWORDFORWARD )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->cursorWordForward( PBOOL( 1 ) );
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QLINEEDIT_END )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->end( PBOOL( 1 ) );
@@ -582,7 +582,7 @@ HB_FUNC_STATIC( QLINEEDIT_GETTEXTMARGINS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
+    if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
     {
 #endif
       int par1;
@@ -688,7 +688,7 @@ HB_FUNC_STATIC( QLINEEDIT_HOME )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->home( PBOOL( 1 ) );
@@ -738,7 +738,7 @@ HB_FUNC_STATIC( QLINEEDIT_INSERT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->insert( PQSTRING( 1 ) );
@@ -981,7 +981,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETALIGNMENT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setAlignment( ( Qt::Alignment ) hb_parni( 1 ) );
@@ -1033,7 +1033,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETCURSORPOSITION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setCursorPosition( PINT( 1 ) );
@@ -1059,7 +1059,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETDRAGENABLED )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setDragEnabled( PBOOL( 1 ) );
@@ -1085,7 +1085,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETECHOMODE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setEchoMode( ( QLineEdit::EchoMode ) hb_parni( 1 ) );
@@ -1111,7 +1111,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETFRAME )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setFrame( PBOOL( 1 ) );
@@ -1137,7 +1137,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETINPUTMASK )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setInputMask( PQSTRING( 1 ) );
@@ -1163,7 +1163,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETMAXLENGTH )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setMaxLength( PINT( 1 ) );
@@ -1189,7 +1189,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETMODIFIED )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setModified( PBOOL( 1 ) );
@@ -1215,7 +1215,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETPLACEHOLDERTEXT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setPlaceholderText( PQSTRING( 1 ) );
@@ -1241,7 +1241,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETREADONLY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setReadOnly( PBOOL( 1 ) );
@@ -1267,7 +1267,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETSELECTION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
       obj->setSelection( PINT( 1 ), PINT( 2 ) );
@@ -1315,7 +1315,7 @@ void QLineEdit_setTextMargins2()
 
 HB_FUNC_STATIC( QLINEEDIT_SETTEXTMARGINS )
 {
-  if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
+  if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
     QLineEdit_setTextMargins1();
   }
@@ -1488,7 +1488,7 @@ HB_FUNC_STATIC( QLINEEDIT_INPUTMETHODQUERY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QVariant * ptr = new QVariant( obj->inputMethodQuery( ( Qt::InputMethodQuery ) hb_parni( 1 ) ) );
@@ -1643,7 +1643,7 @@ HB_FUNC_STATIC( QLINEEDIT_SETTEXT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setText( PQSTRING( 1 ) );

@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETTITLE )
 
   if( obj )
   {
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
       obj->title= PQSTRING( 1 );
     }
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETCLOSABLE )
 
   if( obj )
   {
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
       obj->closable= PBOOL( 1 );
     }
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETMOVABLE )
 
   if( obj )
   {
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
       obj->movable= PBOOL( 1 );
     }
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETFLOATABLE )
 
   if( obj )
   {
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
       obj->floatable= PBOOL( 1 );
     }

@@ -65,7 +65,7 @@ QButtonGroup( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QButtonGroup * obj = new QButtonGroup( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_ADDBUTTON )
   {
     QButtonGroup_addButton1();
   }
-  else if( ISNUMPAR( 2 ) && ISQABSTRACTBUTTON( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && ISQABSTRACTBUTTON( 1 ) && HB_ISNUM( 2 ) )
   {
     QButtonGroup_addButton2();
   }
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTON )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QAbstractButton * ptr = obj->button( PINT( 1 ) );
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_SETEXCLUSIVE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setExclusive( PBOOL( 1 ) );
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_SETID )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQABSTRACTBUTTON( 1 ) && ISNUM( 2 ) )
+    if( ISNUMPAR( 2 ) && ISQABSTRACTBUTTON( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
       obj->setId( PQABSTRACTBUTTON( 1 ), PINT( 2 ) );

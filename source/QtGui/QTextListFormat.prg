@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_SETINDENT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setIndent( PINT( 1 ) );
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_SETNUMBERPREFIX )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setNumberPrefix( PQSTRING( 1 ) );
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_SETNUMBERSUFFIX )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setNumberSuffix( PQSTRING( 1 ) );
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_SETSTYLE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setStyle( ( QTextListFormat::Style ) hb_parni( 1 ) );

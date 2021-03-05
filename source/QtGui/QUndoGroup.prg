@@ -72,7 +72,7 @@ QUndoGroup( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QUNDOGROUP_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QUndoGroup * obj = new QUndoGroup( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CREATEREDOACTION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQOBJECT( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
+    if( ISBETWEEN( 1, 2 ) && ISQOBJECT( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
       QAction * ptr = obj->createRedoAction( PQOBJECT( 1 ), OPQSTRING( 2, QString() ) );
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CREATEUNDOACTION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQOBJECT( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
+    if( ISBETWEEN( 1, 2 ) && ISQOBJECT( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
       QAction * ptr = obj->createUndoAction( PQOBJECT( 1 ), OPQSTRING( 2, QString() ) );

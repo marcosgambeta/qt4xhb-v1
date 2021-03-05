@@ -56,7 +56,7 @@ QFontComboBox( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QFontComboBox * obj = new QFontComboBox( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_SETFONTFILTERS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setFontFilters( ( QFontComboBox::FontFilters ) hb_parni( 1 ) );
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_SETWRITINGSYSTEM )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setWritingSystem( ( QFontDatabase::WritingSystem ) hb_parni( 1 ) );

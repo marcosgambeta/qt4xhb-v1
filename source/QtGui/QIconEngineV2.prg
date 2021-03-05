@@ -72,10 +72,10 @@ HB_FUNC_STATIC( QICONENGINEV2_AVAILABLESIZES )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 2 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
+    if( ISBETWEEN( 0, 2 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      QList<QSize> list = obj->availableSizes( ISNIL( 1 ) ? ( QIcon::Mode ) QIcon::Normal : ( QIcon::Mode ) hb_parni( 1 ), ISNIL( 2 ) ? ( QIcon::State ) QIcon::Off : ( QIcon::State ) hb_parni( 2 ) );
+      QList<QSize> list = obj->availableSizes( HB_ISNIL( 1 ) ? ( QIcon::Mode ) QIcon::Normal : ( QIcon::Mode ) hb_parni( 1 ), HB_ISNIL( 2 ) ? ( QIcon::State ) QIcon::Off : ( QIcon::State ) hb_parni( 2 ) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSIZE" );
       PHB_ITEM pArray = hb_itemArrayNew( 0 );
       if( pDynSym )
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QICONENGINEV2_VIRTUAL_HOOK )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISPOINTER( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISPOINTER( 2 ) )
     {
 #endif
       obj->virtual_hook( PINT( 1 ), static_cast< void * >( hb_parptr( 2 ) ) );

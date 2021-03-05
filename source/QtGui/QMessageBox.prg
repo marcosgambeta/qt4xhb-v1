@@ -98,17 +98,17 @@ QMessageBox( QMessageBox::Icon icon, const QString & title, const QString & text
 */
 void QMessageBox_new2()
 {
-  QMessageBox * obj = new QMessageBox( ( QMessageBox::Icon ) hb_parni( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), ISNIL( 4 ) ? ( QMessageBox::StandardButtons ) QMessageBox::NoButton : ( QMessageBox::StandardButtons ) hb_parni( 4 ), OPQWIDGET( 5, 0 ), ISNIL( 6 ) ? ( Qt::WindowFlags ) Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint : ( Qt::WindowFlags ) hb_parni( 6 ) );
+  QMessageBox * obj = new QMessageBox( ( QMessageBox::Icon ) hb_parni( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), HB_ISNIL( 4 ) ? ( QMessageBox::StandardButtons ) QMessageBox::NoButton : ( QMessageBox::StandardButtons ) hb_parni( 4 ), OPQWIDGET( 5, 0 ), HB_ISNIL( 6 ) ? ( Qt::WindowFlags ) Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint : ( Qt::WindowFlags ) hb_parni( 6 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QMESSAGEBOX_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QMessageBox_new1();
   }
-  else if( ISBETWEEN( 3, 6 ) && ISNUM( 1 ) && ISCHAR( 2 ) && ISCHAR( 3 ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) && ( ISQWIDGET( 5 ) || ISNIL( 5 ) ) && ( ISNUM( 6 ) || ISNIL( 6 ) ) )
+  else if( ISBETWEEN( 3, 6 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) && ( ISQWIDGET( 5 ) || HB_ISNIL( 5 ) ) && ( HB_ISNUM( 6 ) || HB_ISNIL( 6 ) ) )
   {
     QMessageBox_new2();
   }
@@ -182,15 +182,15 @@ void QMessageBox_addButton3()
 
 HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON )
 {
-  if( ISNUMPAR( 2 ) && ISQABSTRACTBUTTON( 1 ) && ISNUM( 2 ) )
+  if( ISNUMPAR( 2 ) && ISQABSTRACTBUTTON( 1 ) && HB_ISNUM( 2 ) )
   {
     QMessageBox_addButton1();
   }
-  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) )
   {
     QMessageBox_addButton2();
   }
-  else if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QMessageBox_addButton3();
   }
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTON )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QAbstractButton * ptr = obj->button( ( QMessageBox::StandardButton ) hb_parni( 1 ) );
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_OPEN )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && ISCHAR( 2 ) )
+    if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
       obj->open( PQOBJECT( 1 ), PCONSTCHAR( 2 ) );
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETDEFAULTBUTTON )
   {
     QMessageBox_setDefaultButton1();
   }
-  else if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QMessageBox_setDefaultButton2();
   }
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETDETAILEDTEXT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setDetailedText( PQSTRING( 1 ) );
@@ -629,7 +629,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETESCAPEBUTTON )
   {
     QMessageBox_setEscapeButton1();
   }
-  else if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QMessageBox_setEscapeButton2();
   }
@@ -649,7 +649,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETICON )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setIcon( ( QMessageBox::Icon ) hb_parni( 1 ) );
@@ -701,7 +701,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETINFORMATIVETEXT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setInformativeText( PQSTRING( 1 ) );
@@ -727,7 +727,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETSTANDARDBUTTONS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setStandardButtons( ( QMessageBox::StandardButtons ) hb_parni( 1 ) );
@@ -753,7 +753,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETTEXT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setText( PQSTRING( 1 ) );
@@ -779,7 +779,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETTEXTFORMAT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setTextFormat( ( Qt::TextFormat ) hb_parni( 1 ) );
@@ -805,7 +805,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETWINDOWMODALITY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setWindowModality( ( Qt::WindowModality ) hb_parni( 1 ) );
@@ -831,7 +831,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETWINDOWTITLE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setWindowTitle( PQSTRING( 1 ) );
@@ -953,7 +953,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETVISIBLE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setVisible( PBOOL( 1 ) );
@@ -999,7 +999,7 @@ static void about( QWidget * parent, const QString & title, const QString & text
 HB_FUNC_STATIC( QMESSAGEBOX_ABOUT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 3 ) && ISQWIDGET( 1 ) && ISCHAR( 2 ) && ISCHAR( 3 ) )
+  if( ISNUMPAR( 3 ) && ISQWIDGET( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) )
   {
 #endif
     QMessageBox::about( PQWIDGET( 1 ), PQSTRING( 2 ), PQSTRING( 3 ) );
@@ -1020,7 +1020,7 @@ static void aboutQt( QWidget * parent, const QString & title = QString() )
 HB_FUNC_STATIC( QMESSAGEBOX_ABOUTQT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 1, 2 ) && ISQWIDGET( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) )
+  if( ISBETWEEN( 1, 2 ) && ISQWIDGET( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
   {
 #endif
     QMessageBox::aboutQt( PQWIDGET( 1 ), OPQSTRING( 2, QString() ) );
@@ -1041,10 +1041,10 @@ static QMessageBox::StandardButton critical( QWidget * parent, const QString & t
 HB_FUNC_STATIC( QMESSAGEBOX_CRITICAL )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 3, 5 ) && ISQWIDGET( 1 ) && ISCHAR( 2 ) && ISCHAR( 3 ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) && ( ISNUM( 5 ) || ISNIL( 5 ) ) )
+  if( ISBETWEEN( 3, 5 ) && ISQWIDGET( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) )
   {
 #endif
-    RENUM( QMessageBox::critical( PQWIDGET( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), ISNIL( 4 ) ? ( QMessageBox::StandardButtons ) QMessageBox::Ok : ( QMessageBox::StandardButtons ) hb_parni( 4 ), ISNIL( 5 ) ? ( QMessageBox::StandardButton ) QMessageBox::NoButton : ( QMessageBox::StandardButton ) hb_parni( 5 ) ) );
+    RENUM( QMessageBox::critical( PQWIDGET( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), HB_ISNIL( 4 ) ? ( QMessageBox::StandardButtons ) QMessageBox::Ok : ( QMessageBox::StandardButtons ) hb_parni( 4 ), HB_ISNIL( 5 ) ? ( QMessageBox::StandardButton ) QMessageBox::NoButton : ( QMessageBox::StandardButton ) hb_parni( 5 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1060,10 +1060,10 @@ static QMessageBox::StandardButton information( QWidget * parent, const QString 
 HB_FUNC_STATIC( QMESSAGEBOX_INFORMATION )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 3, 5 ) && ISQWIDGET( 1 ) && ISCHAR( 2 ) && ISCHAR( 3 ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) && ( ISNUM( 5 ) || ISNIL( 5 ) ) )
+  if( ISBETWEEN( 3, 5 ) && ISQWIDGET( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) )
   {
 #endif
-    RENUM( QMessageBox::information( PQWIDGET( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), ISNIL( 4 ) ? ( QMessageBox::StandardButtons ) QMessageBox::Ok : ( QMessageBox::StandardButtons ) hb_parni( 4 ), ISNIL( 5 ) ? ( QMessageBox::StandardButton ) QMessageBox::NoButton : ( QMessageBox::StandardButton ) hb_parni( 5 ) ) );
+    RENUM( QMessageBox::information( PQWIDGET( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), HB_ISNIL( 4 ) ? ( QMessageBox::StandardButtons ) QMessageBox::Ok : ( QMessageBox::StandardButtons ) hb_parni( 4 ), HB_ISNIL( 5 ) ? ( QMessageBox::StandardButton ) QMessageBox::NoButton : ( QMessageBox::StandardButton ) hb_parni( 5 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1079,10 +1079,10 @@ static QMessageBox::StandardButton question( QWidget * parent, const QString & t
 HB_FUNC_STATIC( QMESSAGEBOX_QUESTION )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 3, 5 ) && ISQWIDGET( 1 ) && ISCHAR( 2 ) && ISCHAR( 3 ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) && ( ISNUM( 5 ) || ISNIL( 5 ) ) )
+  if( ISBETWEEN( 3, 5 ) && ISQWIDGET( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) )
   {
 #endif
-    RENUM( QMessageBox::question( PQWIDGET( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), ISNIL( 4 ) ? ( QMessageBox::StandardButtons ) QMessageBox::Ok : ( QMessageBox::StandardButtons ) hb_parni( 4 ), ISNIL( 5 ) ? ( QMessageBox::StandardButton ) QMessageBox::NoButton : ( QMessageBox::StandardButton ) hb_parni( 5 ) ) );
+    RENUM( QMessageBox::question( PQWIDGET( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), HB_ISNIL( 4 ) ? ( QMessageBox::StandardButtons ) QMessageBox::Ok : ( QMessageBox::StandardButtons ) hb_parni( 4 ), HB_ISNIL( 5 ) ? ( QMessageBox::StandardButton ) QMessageBox::NoButton : ( QMessageBox::StandardButton ) hb_parni( 5 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1098,10 +1098,10 @@ static QMessageBox::StandardButton warning( QWidget * parent, const QString & ti
 HB_FUNC_STATIC( QMESSAGEBOX_WARNING )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 3, 5 ) && ISQWIDGET( 1 ) && ISCHAR( 2 ) && ISCHAR( 3 ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) && ( ISNUM( 5 ) || ISNIL( 5 ) ) )
+  if( ISBETWEEN( 3, 5 ) && ISQWIDGET( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) )
   {
 #endif
-    RENUM( QMessageBox::warning( PQWIDGET( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), ISNIL( 4 ) ? ( QMessageBox::StandardButtons ) QMessageBox::Ok : ( QMessageBox::StandardButtons ) hb_parni( 4 ), ISNIL( 5 ) ? ( QMessageBox::StandardButton ) QMessageBox::NoButton : ( QMessageBox::StandardButton ) hb_parni( 5 ) ) );
+    RENUM( QMessageBox::warning( PQWIDGET( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), HB_ISNIL( 4 ) ? ( QMessageBox::StandardButtons ) QMessageBox::Ok : ( QMessageBox::StandardButtons ) hb_parni( 4 ), HB_ISNIL( 5 ) ? ( QMessageBox::StandardButton ) QMessageBox::NoButton : ( QMessageBox::StandardButton ) hb_parni( 5 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

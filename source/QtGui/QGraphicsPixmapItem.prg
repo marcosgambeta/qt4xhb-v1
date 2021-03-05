@@ -62,7 +62,7 @@ QGraphicsPixmapItem( QGraphicsItem * parent = 0 )
 */
 void QGraphicsPixmapItem_new1()
 {
-  QGraphicsPixmapItem * obj = new QGraphicsPixmapItem( ISNIL( 1 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 1 ) ) );
+  QGraphicsPixmapItem * obj = new QGraphicsPixmapItem( HB_ISNIL( 1 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 1 ) ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -71,17 +71,17 @@ QGraphicsPixmapItem( const QPixmap & pixmap, QGraphicsItem * parent = 0 )
 */
 void QGraphicsPixmapItem_new2()
 {
-  QGraphicsPixmapItem * obj = new QGraphicsPixmapItem( *PQPIXMAP( 1 ), ISNIL( 2 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 2 ) ) );
+  QGraphicsPixmapItem * obj = new QGraphicsPixmapItem( *PQPIXMAP( 1 ), HB_ISNIL( 2 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 2 ) ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
 HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQGRAPHICSITEM( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQGRAPHICSITEM( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QGraphicsPixmapItem_new1();
   }
-  else if( ISBETWEEN( 1, 2 ) && ISQPIXMAP( 1 ) && ( ISQGRAPHICSITEM( 2 ) || ISNIL( 2 ) ) )
+  else if( ISBETWEEN( 1, 2 ) && ISQPIXMAP( 1 ) && ( ISQGRAPHICSITEM( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QGraphicsPixmapItem_new2();
   }
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETOFFSET )
   {
     QGraphicsPixmapItem_setOffset1();
   }
-  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QGraphicsPixmapItem_setOffset2();
   }
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETSHAPEMODE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setShapeMode( ( QGraphicsPixmapItem::ShapeMode ) hb_parni( 1 ) );
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SETTRANSFORMATIONMODE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setTransformationMode( ( Qt::TransformationMode ) hb_parni( 1 ) );

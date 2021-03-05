@@ -186,7 +186,7 @@ HB_FUNC_STATIC( QPAINTER_NEW )
   {
     QPainter_new1();
   }
-  else if( ISNUMPAR( 1 ) && ISOBJECT( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISOBJECT( 1 ) )
   {
     QPainter_new2();
   }
@@ -363,26 +363,26 @@ void QPainter_boundingRect4()
 
   if( obj )
   {
-    QRectF * ptr = new QRectF( obj->boundingRect( *PQRECTF( 1 ), PQSTRING( 2 ), ISNIL( 3 ) ? QTextOption() : *static_cast< QTextOption * >( Qt4xHb::itemGetPtr( 3 ) ) ) );
+    QRectF * ptr = new QRectF( obj->boundingRect( *PQRECTF( 1 ), PQSTRING( 2 ), HB_ISNIL( 3 ) ? QTextOption() : *static_cast< QTextOption * >( Qt4xHb::itemGetPtr( 3 ) ) ) );
     Qt4xHb::createReturnClass( ptr, "QRECTF", true );
   }
 }
 
 HB_FUNC_STATIC( QPAINTER_BOUNDINGRECT )
 {
-  if( ISNUMPAR( 3 ) && ISQRECTF( 1 ) && ISNUM( 2 ) && ISCHAR( 3 ) )
+  if( ISNUMPAR( 3 ) && ISQRECTF( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) )
   {
     QPainter_boundingRect1();
   }
-  else if( ISNUMPAR( 3 ) && ISQRECT( 1 ) && ISNUM( 2 ) && ISCHAR( 3 ) )
+  else if( ISNUMPAR( 3 ) && ISQRECT( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) )
   {
     QPainter_boundingRect2();
   }
-  else if( ISNUMPAR( 6 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) && ISCHAR( 6 ) )
+  else if( ISNUMPAR( 6 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISCHAR( 6 ) )
   {
     QPainter_boundingRect3();
   }
-  else if( ISBETWEEN( 2, 3 ) && ISQRECTF( 1 ) && ISCHAR( 2 ) && ( ISQTEXTOPTION( 3 ) || ISNIL( 3 ) ) )
+  else if( ISBETWEEN( 2, 3 ) && ISQRECTF( 1 ) && HB_ISCHAR( 2 ) && ( ISQTEXTOPTION( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QPainter_boundingRect4();
   }
@@ -638,15 +638,15 @@ void QPainter_drawArc3()
 
 HB_FUNC_STATIC( QPAINTER_DRAWARC )
 {
-  if( ISNUMPAR( 3 ) && ISQRECTF( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) )
+  if( ISNUMPAR( 3 ) && ISQRECTF( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
     QPainter_drawArc1();
   }
-  else if( ISNUMPAR( 3 ) && ISQRECT( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) )
+  else if( ISNUMPAR( 3 ) && ISQRECT( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
     QPainter_drawArc2();
   }
-  else if( ISNUMPAR( 6 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) && ISNUM( 6 ) )
+  else if( ISNUMPAR( 6 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) )
   {
     QPainter_drawArc3();
   }
@@ -703,15 +703,15 @@ void QPainter_drawChord3()
 
 HB_FUNC_STATIC( QPAINTER_DRAWCHORD )
 {
-  if( ISNUMPAR( 3 ) && ISQRECTF( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) )
+  if( ISNUMPAR( 3 ) && ISQRECTF( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
     QPainter_drawChord1();
   }
-  else if( ISNUMPAR( 3 ) && ISQRECT( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) )
+  else if( ISNUMPAR( 3 ) && ISQRECT( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
     QPainter_drawChord2();
   }
-  else if( ISNUMPAR( 6 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) && ISNUM( 6 ) )
+  else if( ISNUMPAR( 6 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) )
   {
     QPainter_drawChord3();
   }
@@ -852,15 +852,15 @@ HB_FUNC_STATIC( QPAINTER_DRAWELLIPSE )
   {
     QPainter_drawEllipse2();
   }
-  else if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
+  else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
     QPainter_drawEllipse3();
   }
-  else if( ISNUMPAR( 3 ) && ISQPOINTF( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) )
+  else if( ISNUMPAR( 3 ) && ISQPOINTF( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
     QPainter_drawEllipse4();
   }
-  else if( ISNUMPAR( 3 ) && ISQPOINT( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) )
+  else if( ISNUMPAR( 3 ) && ISQPOINT( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
     QPainter_drawEllipse5();
   }
@@ -879,7 +879,7 @@ void QPainter_drawImage1()
 
   if( obj )
   {
-    obj->drawImage( *PQRECTF( 1 ), *PQIMAGE( 2 ), *PQRECTF( 3 ), ISNIL( 4 ) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni( 4 ) );
+    obj->drawImage( *PQRECTF( 1 ), *PQIMAGE( 2 ), *PQRECTF( 3 ), HB_ISNIL( 4 ) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni( 4 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -894,7 +894,7 @@ void QPainter_drawImage2()
 
   if( obj )
   {
-    obj->drawImage( *PQRECT( 1 ), *PQIMAGE( 2 ), *PQRECT( 3 ), ISNIL( 4 ) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni( 4 ) );
+    obj->drawImage( *PQRECT( 1 ), *PQIMAGE( 2 ), *PQRECT( 3 ), HB_ISNIL( 4 ) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni( 4 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -939,7 +939,7 @@ void QPainter_drawImage5()
 
   if( obj )
   {
-    obj->drawImage( *PQPOINTF( 1 ), *PQIMAGE( 2 ), *PQRECTF( 3 ), ISNIL( 4 ) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni( 4 ) );
+    obj->drawImage( *PQPOINTF( 1 ), *PQIMAGE( 2 ), *PQRECTF( 3 ), HB_ISNIL( 4 ) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni( 4 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -954,7 +954,7 @@ void QPainter_drawImage6()
 
   if( obj )
   {
-    obj->drawImage( *PQPOINT( 1 ), *PQIMAGE( 2 ), *PQRECT( 3 ), ISNIL( 4 ) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni( 4 ) );
+    obj->drawImage( *PQPOINT( 1 ), *PQIMAGE( 2 ), *PQRECT( 3 ), HB_ISNIL( 4 ) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni( 4 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -999,7 +999,7 @@ void QPainter_drawImage9()
 
   if( obj )
   {
-    obj->drawImage( PINT( 1 ), PINT( 2 ), *PQIMAGE( 3 ), OPINT( 4, 0 ), OPINT( 5, 0 ), OPINT( 6, -1 ), OPINT( 7, -1 ), ISNIL( 8 ) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni( 8 ) );
+    obj->drawImage( PINT( 1 ), PINT( 2 ), *PQIMAGE( 3 ), OPINT( 4, 0 ), OPINT( 5, 0 ), OPINT( 6, -1 ), OPINT( 7, -1 ), HB_ISNIL( 8 ) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni( 8 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1007,11 +1007,11 @@ void QPainter_drawImage9()
 
 HB_FUNC_STATIC( QPAINTER_DRAWIMAGE )
 {
-  if( ISBETWEEN( 3, 4 ) && ISQRECTF( 1 ) && ISQIMAGE( 2 ) && ISQRECTF( 3 ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
+  if( ISBETWEEN( 3, 4 ) && ISQRECTF( 1 ) && ISQIMAGE( 2 ) && ISQRECTF( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
     QPainter_drawImage1();
   }
-  else if( ISBETWEEN( 3, 4 ) && ISQRECT( 1 ) && ISQIMAGE( 2 ) && ISQRECT( 3 ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
+  else if( ISBETWEEN( 3, 4 ) && ISQRECT( 1 ) && ISQIMAGE( 2 ) && ISQRECT( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
     QPainter_drawImage2();
   }
@@ -1023,11 +1023,11 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE )
   {
     QPainter_drawImage4();
   }
-  else if( ISBETWEEN( 3, 4 ) && ISQPOINTF( 1 ) && ISQIMAGE( 2 ) && ISQRECTF( 3 ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
+  else if( ISBETWEEN( 3, 4 ) && ISQPOINTF( 1 ) && ISQIMAGE( 2 ) && ISQRECTF( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
     QPainter_drawImage5();
   }
-  else if( ISBETWEEN( 3, 4 ) && ISQPOINT( 1 ) && ISQIMAGE( 2 ) && ISQRECT( 3 ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
+  else if( ISBETWEEN( 3, 4 ) && ISQPOINT( 1 ) && ISQIMAGE( 2 ) && ISQRECT( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
     QPainter_drawImage6();
   }
@@ -1039,7 +1039,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE )
   {
     QPainter_drawImage8();
   }
-  else if( ISBETWEEN( 3, 8 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISQIMAGE( 3 ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) && ( ISNUM( 5 ) || ISNIL( 5 ) ) && ( ISNUM( 6 ) || ISNIL( 6 ) ) && ( ISNUM( 7 ) || ISNIL( 7 ) ) && ( ISNUM( 8 ) || ISNIL( 8 ) ) )
+  else if( ISBETWEEN( 3, 8 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQIMAGE( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) && ( HB_ISNUM( 6 ) || HB_ISNIL( 6 ) ) && ( HB_ISNUM( 7 ) || HB_ISNIL( 7 ) ) && ( HB_ISNUM( 8 ) || HB_ISNIL( 8 ) ) )
   {
     QPainter_drawImage9();
   }
@@ -1142,7 +1142,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWLINE )
   {
     QPainter_drawLine4();
   }
-  else if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
+  else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
     QPainter_drawLine5();
   }
@@ -1162,7 +1162,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWLINES5 )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISARRAY( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
       QVector<QPointF> par1;
@@ -1195,7 +1195,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWLINES6 )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISARRAY( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
       QVector<QPoint> par1;
@@ -1228,7 +1228,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWLINES7 )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISARRAY( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
       QVector<QLineF> par1;
@@ -1261,7 +1261,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWLINES8 )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISARRAY( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
       QVector<QLine> par1;
@@ -1369,7 +1369,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPICTURE )
   {
     QPainter_drawPicture2();
   }
-  else if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISQPICTURE( 3 ) )
+  else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQPICTURE( 3 ) )
   {
     QPainter_drawPicture3();
   }
@@ -1426,15 +1426,15 @@ void QPainter_drawPie3()
 
 HB_FUNC_STATIC( QPAINTER_DRAWPIE )
 {
-  if( ISNUMPAR( 3 ) && ISQRECTF( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) )
+  if( ISNUMPAR( 3 ) && ISQRECTF( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
     QPainter_drawPie1();
   }
-  else if( ISNUMPAR( 3 ) && ISQRECT( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) )
+  else if( ISNUMPAR( 3 ) && ISQRECT( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
     QPainter_drawPie2();
   }
-  else if( ISNUMPAR( 6 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) && ISNUM( 6 ) )
+  else if( ISNUMPAR( 6 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) )
   {
     QPainter_drawPie3();
   }
@@ -1635,7 +1635,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP )
   {
     QPainter_drawPixmap6();
   }
-  else if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISQPIXMAP( 3 ) )
+  else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQPIXMAP( 3 ) )
   {
     QPainter_drawPixmap7();
   }
@@ -1643,15 +1643,15 @@ HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP )
   {
     QPainter_drawPixmap8();
   }
-  else if( ISNUMPAR( 5 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISQPIXMAP( 5 ) )
+  else if( ISNUMPAR( 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ISQPIXMAP( 5 ) )
   {
     QPainter_drawPixmap9();
   }
-  else if( ISNUMPAR( 9 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISQPIXMAP( 5 ) && ISNUM( 6 ) && ISNUM( 7 ) && ISNUM( 8 ) && ISNUM( 9 ) )
+  else if( ISNUMPAR( 9 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ISQPIXMAP( 5 ) && HB_ISNUM( 6 ) && HB_ISNUM( 7 ) && HB_ISNUM( 8 ) && HB_ISNUM( 9 ) )
   {
     QPainter_drawPixmap10();
   }
-  else if( ISNUMPAR( 7 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISQPIXMAP( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) && ISNUM( 6 ) && ISNUM( 7 ) )
+  else if( ISNUMPAR( 7 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQPIXMAP( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) && HB_ISNUM( 7 ) )
   {
     QPainter_drawPixmap11();
   }
@@ -1716,7 +1716,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWPOINT )
   {
     QPainter_drawPoint2();
   }
-  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QPainter_drawPoint3();
   }
@@ -1781,7 +1781,7 @@ void QPainter_drawPolygon3()
 
   if( obj )
   {
-    obj->drawPolygon( *PQPOLYGONF( 1 ), ISNIL( 2 ) ? ( Qt::FillRule ) Qt::OddEvenFill : ( Qt::FillRule ) hb_parni( 2 ) );
+    obj->drawPolygon( *PQPOLYGONF( 1 ), HB_ISNIL( 2 ) ? ( Qt::FillRule ) Qt::OddEvenFill : ( Qt::FillRule ) hb_parni( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1796,7 +1796,7 @@ void QPainter_drawPolygon4()
 
   if( obj )
   {
-    obj->drawPolygon( *PQPOLYGON( 1 ), ISNIL( 2 ) ? ( Qt::FillRule ) Qt::OddEvenFill : ( Qt::FillRule ) hb_parni( 2 ) );
+    obj->drawPolygon( *PQPOLYGON( 1 ), HB_ISNIL( 2 ) ? ( Qt::FillRule ) Qt::OddEvenFill : ( Qt::FillRule ) hb_parni( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -1804,11 +1804,11 @@ void QPainter_drawPolygon4()
 
 HB_FUNC_STATIC( QPAINTER_DRAWPOLYGON )
 {
-  if( ISBETWEEN( 1, 2 ) && ISQPOLYGONF( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
+  if( ISBETWEEN( 1, 2 ) && ISQPOLYGONF( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QPainter_drawPolygon3();
   }
-  else if( ISBETWEEN( 1, 2 ) && ISQPOLYGON( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
+  else if( ISBETWEEN( 1, 2 ) && ISQPOLYGON( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QPainter_drawPolygon4();
   }
@@ -1919,7 +1919,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWRECT )
   {
     QPainter_drawRect2();
   }
-  else if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
+  else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
     QPainter_drawRect3();
   }
@@ -1986,7 +1986,7 @@ void QPainter_drawRoundedRect1()
 
   if( obj )
   {
-    obj->drawRoundedRect( *PQRECTF( 1 ), PQREAL( 2 ), PQREAL( 3 ), ISNIL( 4 ) ? ( Qt::SizeMode ) Qt::AbsoluteSize : ( Qt::SizeMode ) hb_parni( 4 ) );
+    obj->drawRoundedRect( *PQRECTF( 1 ), PQREAL( 2 ), PQREAL( 3 ), HB_ISNIL( 4 ) ? ( Qt::SizeMode ) Qt::AbsoluteSize : ( Qt::SizeMode ) hb_parni( 4 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2001,7 +2001,7 @@ void QPainter_drawRoundedRect2()
 
   if( obj )
   {
-    obj->drawRoundedRect( *PQRECT( 1 ), PQREAL( 2 ), PQREAL( 3 ), ISNIL( 4 ) ? ( Qt::SizeMode ) Qt::AbsoluteSize : ( Qt::SizeMode ) hb_parni( 4 ) );
+    obj->drawRoundedRect( *PQRECT( 1 ), PQREAL( 2 ), PQREAL( 3 ), HB_ISNIL( 4 ) ? ( Qt::SizeMode ) Qt::AbsoluteSize : ( Qt::SizeMode ) hb_parni( 4 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2016,7 +2016,7 @@ void QPainter_drawRoundedRect3()
 
   if( obj )
   {
-    obj->drawRoundedRect( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), PQREAL( 5 ), PQREAL( 6 ), ISNIL( 7 ) ? ( Qt::SizeMode ) Qt::AbsoluteSize : ( Qt::SizeMode ) hb_parni( 7 ) );
+    obj->drawRoundedRect( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), PQREAL( 5 ), PQREAL( 6 ), HB_ISNIL( 7 ) ? ( Qt::SizeMode ) Qt::AbsoluteSize : ( Qt::SizeMode ) hb_parni( 7 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2024,15 +2024,15 @@ void QPainter_drawRoundedRect3()
 
 HB_FUNC_STATIC( QPAINTER_DRAWROUNDEDRECT )
 {
-  if( ISBETWEEN( 3, 4 ) && ISQRECTF( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
+  if( ISBETWEEN( 3, 4 ) && ISQRECTF( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
     QPainter_drawRoundedRect1();
   }
-  else if( ISBETWEEN( 3, 4 ) && ISQRECT( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
+  else if( ISBETWEEN( 3, 4 ) && ISQRECT( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
     QPainter_drawRoundedRect2();
   }
-  else if( ISBETWEEN( 6, 7 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) && ISNUM( 6 ) && ( ISNUM( 7 ) || ISNIL( 7 ) ) )
+  else if( ISBETWEEN( 6, 7 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) && ( HB_ISNUM( 7 ) || HB_ISNIL( 7 ) ) )
   {
     QPainter_drawRoundedRect3();
   }
@@ -2097,7 +2097,7 @@ HB_FUNC_STATIC( QPAINTER_DRAWSTATICTEXT )
   {
     QPainter_drawStaticText2();
   }
-  else if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISQSTATICTEXT( 3 ) )
+  else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQSTATICTEXT( 3 ) )
   {
     QPainter_drawStaticText3();
   }
@@ -2146,7 +2146,7 @@ void QPainter_drawText3()
 
   if( obj )
   {
-    obj->drawText( *PQRECTF( 1 ), PINT( 2 ), PQSTRING( 3 ), ISNIL( 4 ) ? 0 : static_cast< QRectF * >( Qt4xHb::itemGetPtr( 4 ) ) );
+    obj->drawText( *PQRECTF( 1 ), PINT( 2 ), PQSTRING( 3 ), HB_ISNIL( 4 ) ? 0 : static_cast< QRectF * >( Qt4xHb::itemGetPtr( 4 ) ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2161,7 +2161,7 @@ void QPainter_drawText4()
 
   if( obj )
   {
-    obj->drawText( *PQRECT( 1 ), PINT( 2 ), PQSTRING( 3 ), ISNIL( 4 ) ? 0 : static_cast< QRect * >( Qt4xHb::itemGetPtr( 4 ) ) );
+    obj->drawText( *PQRECT( 1 ), PINT( 2 ), PQSTRING( 3 ), HB_ISNIL( 4 ) ? 0 : static_cast< QRect * >( Qt4xHb::itemGetPtr( 4 ) ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2191,7 +2191,7 @@ void QPainter_drawText6()
 
   if( obj )
   {
-    obj->drawText( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), PINT( 5 ), PQSTRING( 6 ), ISNIL( 7 ) ? 0 : static_cast< QRect * >( Qt4xHb::itemGetPtr( 7 ) ) );
+    obj->drawText( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), PINT( 5 ), PQSTRING( 6 ), HB_ISNIL( 7 ) ? 0 : static_cast< QRect * >( Qt4xHb::itemGetPtr( 7 ) ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2206,7 +2206,7 @@ void QPainter_drawText7()
 
   if( obj )
   {
-    obj->drawText( *PQRECTF( 1 ), PQSTRING( 2 ), ISNIL( 3 ) ? QTextOption() : *static_cast< QTextOption * >( Qt4xHb::itemGetPtr( 3 ) ) );
+    obj->drawText( *PQRECTF( 1 ), PQSTRING( 2 ), HB_ISNIL( 3 ) ? QTextOption() : *static_cast< QTextOption * >( Qt4xHb::itemGetPtr( 3 ) ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2214,31 +2214,31 @@ void QPainter_drawText7()
 
 HB_FUNC_STATIC( QPAINTER_DRAWTEXT )
 {
-  if( ISNUMPAR( 2 ) && ISQPOINTF( 1 ) && ISCHAR( 2 ) )
+  if( ISNUMPAR( 2 ) && ISQPOINTF( 1 ) && HB_ISCHAR( 2 ) )
   {
     QPainter_drawText1();
   }
-  else if( ISNUMPAR( 2 ) && ISQPOINT( 1 ) && ISCHAR( 2 ) )
+  else if( ISNUMPAR( 2 ) && ISQPOINT( 1 ) && HB_ISCHAR( 2 ) )
   {
     QPainter_drawText2();
   }
-  else if( ISBETWEEN( 3, 4 ) && ISQRECTF( 1 ) && ISNUM( 2 ) && ISCHAR( 3 ) && ( ISQRECTF( 4 ) || ISNIL( 4 ) ) )
+  else if( ISBETWEEN( 3, 4 ) && ISQRECTF( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) && ( ISQRECTF( 4 ) || HB_ISNIL( 4 ) ) )
   {
     QPainter_drawText3();
   }
-  else if( ISBETWEEN( 3, 4 ) && ISQRECT( 1 ) && ISNUM( 2 ) && ISCHAR( 3 ) && ( ISQRECT( 4 ) || ISNIL( 4 ) ) )
+  else if( ISBETWEEN( 3, 4 ) && ISQRECT( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) && ( ISQRECT( 4 ) || HB_ISNIL( 4 ) ) )
   {
     QPainter_drawText4();
   }
-  else if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISCHAR( 3 ) )
+  else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) )
   {
     QPainter_drawText5();
   }
-  else if( ISBETWEEN( 6, 7 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) && ISCHAR( 6 ) && ( ISQRECT( 7 ) || ISNUM( 7 ) ) )
+  else if( ISBETWEEN( 6, 7 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISCHAR( 6 ) && ( ISQRECT( 7 ) || HB_ISNUM( 7 ) ) )
   {
     QPainter_drawText6();
   }
-  else if( ISBETWEEN( 2, 3 ) && ISQRECT( 1 ) && ISCHAR( 2 ) && ( ISQTEXTOPTION( 3 ) || ISNIL( 3 ) ) )
+  else if( ISBETWEEN( 2, 3 ) && ISQRECT( 1 ) && HB_ISCHAR( 2 ) && ( ISQTEXTOPTION( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QPainter_drawText7();
   }
@@ -2257,7 +2257,7 @@ void QPainter_drawTiledPixmap1()
 
   if( obj )
   {
-    obj->drawTiledPixmap( *PQRECTF( 1 ), *PQPIXMAP( 2 ), ISNIL( 3 ) ? QPointF() : *static_cast< QPointF * >( Qt4xHb::itemGetPtr( 3 ) ) );
+    obj->drawTiledPixmap( *PQRECTF( 1 ), *PQPIXMAP( 2 ), HB_ISNIL( 3 ) ? QPointF() : *static_cast< QPointF * >( Qt4xHb::itemGetPtr( 3 ) ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2272,7 +2272,7 @@ void QPainter_drawTiledPixmap2()
 
   if( obj )
   {
-    obj->drawTiledPixmap( *PQRECT( 1 ), *PQPIXMAP( 2 ), ISNIL( 3 ) ? QPoint() : *static_cast< QPoint * >( Qt4xHb::itemGetPtr( 3 ) ) );
+    obj->drawTiledPixmap( *PQRECT( 1 ), *PQPIXMAP( 2 ), HB_ISNIL( 3 ) ? QPoint() : *static_cast< QPoint * >( Qt4xHb::itemGetPtr( 3 ) ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -2295,15 +2295,15 @@ void QPainter_drawTiledPixmap3()
 
 HB_FUNC_STATIC( QPAINTER_DRAWTILEDPIXMAP )
 {
-  if( ISBETWEEN( 2, 3 ) && ISQRECTF( 1 ) && ISQPIXMAP( 2 ) && ( ISQPOINTF( 3 ) || ISNIL( 3 ) ) )
+  if( ISBETWEEN( 2, 3 ) && ISQRECTF( 1 ) && ISQPIXMAP( 2 ) && ( ISQPOINTF( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QPainter_drawTiledPixmap1();
   }
-  else if( ISBETWEEN( 2, 3 ) && ISQRECT( 1 ) && ISQPIXMAP( 2 ) && ( ISQPOINT( 3 ) || ISNIL( 3 ) ) )
+  else if( ISBETWEEN( 2, 3 ) && ISQRECT( 1 ) && ISQPIXMAP( 2 ) && ( ISQPOINT( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QPainter_drawTiledPixmap2();
   }
-  else if( ISBETWEEN( 5, 7 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISQPIXMAP( 5 ) && ( ISNUM( 6 ) || ISNIL( 6 ) ) && ( ISNUM( 7 ) || ISNIL( 7 ) ) )
+  else if( ISBETWEEN( 5, 7 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ISQPIXMAP( 5 ) && ( HB_ISNUM( 6 ) || HB_ISNIL( 6 ) ) && ( HB_ISNUM( 7 ) || HB_ISNIL( 7 ) ) )
   {
     QPainter_drawTiledPixmap3();
   }
@@ -2418,7 +2418,7 @@ HB_FUNC_STATIC( QPAINTER_ERASERECT )
   {
     QPainter_eraseRect2();
   }
-  else if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
+  else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
     QPainter_eraseRect3();
   }
@@ -2490,7 +2490,7 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT2 )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 5 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) )
+    if( ISNUMPAR( 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) )
     {
 #endif
       obj->fillRect( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), ( Qt::BrushStyle ) hb_parni( 5 ) );
@@ -2516,7 +2516,7 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT3 )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQRECT( 1 ) && ISNUM( 2 ) )
+    if( ISNUMPAR( 2 ) && ISQRECT( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
       obj->fillRect( *PQRECT( 1 ), ( Qt::BrushStyle ) hb_parni( 2 ) );
@@ -2542,7 +2542,7 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT4 )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQRECTF( 1 ) && ISNUM( 2 ) )
+    if( ISNUMPAR( 2 ) && ISQRECTF( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
       obj->fillRect( *PQRECTF( 1 ), ( Qt::BrushStyle ) hb_parni( 2 ) );
@@ -2594,10 +2594,10 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT6 )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQRECT( 1 ) && ( ISQCOLOR( 2 ) || ISCHAR( 2 ) ) )
+    if( ISNUMPAR( 2 ) && ISQRECT( 1 ) && ( ISQCOLOR( 2 ) || HB_ISCHAR( 2 ) ) )
     {
 #endif
-      obj->fillRect( *PQRECT( 1 ), ISOBJECT( 2 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 2 ) ) : QColor( hb_parc( 2 ) ) );
+      obj->fillRect( *PQRECT( 1 ), HB_ISOBJECT( 2 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 2 ) ) : QColor( hb_parc( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2620,10 +2620,10 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT7 )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQRECTF( 1 ) && ( ISQCOLOR( 2 ) || ISCHAR( 2 ) ) )
+    if( ISNUMPAR( 2 ) && ISQRECTF( 1 ) && ( ISQCOLOR( 2 ) || HB_ISCHAR( 2 ) ) )
     {
 #endif
-      obj->fillRect( *PQRECTF( 1 ), ISOBJECT( 2 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 2 ) ) : QColor( hb_parc( 2 ) ) );
+      obj->fillRect( *PQRECTF( 1 ), HB_ISOBJECT( 2 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 2 ) ) : QColor( hb_parc( 2 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2646,7 +2646,7 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT8 )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 5 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISQBRUSH( 5 ) )
+    if( ISNUMPAR( 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ISQBRUSH( 5 ) )
     {
 #endif
       obj->fillRect( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), *PQBRUSH( 5 ) );
@@ -2672,10 +2672,10 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT9 )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 5 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ( ISQCOLOR( 5 ) || ISCHAR( 5 ) ) )
+    if( ISNUMPAR( 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ( ISQCOLOR( 5 ) || HB_ISCHAR( 5 ) ) )
     {
 #endif
-      obj->fillRect( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), ISOBJECT( 5 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 5 ) ) : QColor( hb_parc( 5 ) ) );
+      obj->fillRect( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), HB_ISOBJECT( 5 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 5 ) ) : QColor( hb_parc( 5 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2698,7 +2698,7 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT10 )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 5 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) )
+    if( ISNUMPAR( 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) )
     {
 #endif
       obj->fillRect( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), ( Qt::GlobalColor ) hb_parni( 5 ) );
@@ -2724,7 +2724,7 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT11 )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQRECT( 1 ) && ISNUM( 2 ) )
+    if( ISNUMPAR( 2 ) && ISQRECT( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
       obj->fillRect( *PQRECT( 1 ), ( Qt::GlobalColor ) hb_parni( 2 ) );
@@ -2750,7 +2750,7 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT12 )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQRECTF( 1 ) && ISNUM( 2 ) )
+    if( ISNUMPAR( 2 ) && ISQRECTF( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
       obj->fillRect( *PQRECTF( 1 ), ( Qt::GlobalColor ) hb_parni( 2 ) );
@@ -2772,15 +2772,15 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT )
   {
     HB_FUNC_EXEC( QPAINTER_FILLRECT1 );
   }
-  else if( ISNUMPAR( 5 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) )
+  else if( ISNUMPAR( 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) )
   {
     HB_FUNC_EXEC( QPAINTER_FILLRECT2 );
   }
-  else if( ISNUMPAR( 2 ) && ISQRECT( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && ISQRECT( 1 ) && HB_ISNUM( 2 ) )
   {
     HB_FUNC_EXEC( QPAINTER_FILLRECT3 );
   }
-  else if( ISNUMPAR( 2 ) && ISQRECTF( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && ISQRECTF( 1 ) && HB_ISNUM( 2 ) )
   {
     HB_FUNC_EXEC( QPAINTER_FILLRECT4 );
   }
@@ -2788,31 +2788,31 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT )
   {
     HB_FUNC_EXEC( QPAINTER_FILLRECT5 );
   }
-  else if( ISNUMPAR( 2 ) && ISQRECT( 1 ) && ( ISQCOLOR( 2 ) || ISCHAR( 2 ) ) )
+  else if( ISNUMPAR( 2 ) && ISQRECT( 1 ) && ( ISQCOLOR( 2 ) || HB_ISCHAR( 2 ) ) )
   {
     HB_FUNC_EXEC( QPAINTER_FILLRECT6 );
   }
-  else if( ISNUMPAR( 2 ) && ISQRECTF( 1 ) && ( ISQCOLOR( 2 ) || ISCHAR( 2 ) ) )
+  else if( ISNUMPAR( 2 ) && ISQRECTF( 1 ) && ( ISQCOLOR( 2 ) || HB_ISCHAR( 2 ) ) )
   {
     HB_FUNC_EXEC( QPAINTER_FILLRECT7 );
   }
-  else if( ISNUMPAR( 5 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISQBRUSH( 5 ) )
+  else if( ISNUMPAR( 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ISQBRUSH( 5 ) )
   {
     HB_FUNC_EXEC( QPAINTER_FILLRECT8 );
   }
-  else if( ISNUMPAR( 5 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ( ISQCOLOR( 5 ) || ISCHAR( 5 ) ) )
+  else if( ISNUMPAR( 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ( ISQCOLOR( 5 ) || HB_ISCHAR( 5 ) ) )
   {
     HB_FUNC_EXEC( QPAINTER_FILLRECT9 );
   }
-  else if( ISNUMPAR( 5 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) )
+  else if( ISNUMPAR( 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) )
   {
     HB_FUNC_EXEC( QPAINTER_FILLRECT10 ); // TODO: resolver conflito entre [10] e [02]
   }
-  else if( ISNUMPAR( 2 ) && ISQRECT( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && ISQRECT( 1 ) && HB_ISNUM( 2 ) )
   {
     HB_FUNC_EXEC( QPAINTER_FILLRECT11 ); // TODO: resolver conflito entre [11] e [03]
   }
-  else if( ISNUMPAR( 2 ) && ISQRECTF( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && ISQRECTF( 1 ) && HB_ISNUM( 2 ) )
   {
     HB_FUNC_EXEC( QPAINTER_FILLRECT12 ); // TODO: resolver conflito entre [12] e [04]
   }
@@ -3155,7 +3155,7 @@ HB_FUNC_STATIC( QPAINTER_ROTATE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->rotate( PQREAL( 1 ) );
@@ -3207,7 +3207,7 @@ HB_FUNC_STATIC( QPAINTER_SCALE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
       obj->scale( PQREAL( 1 ), PQREAL( 2 ) );
@@ -3259,7 +3259,7 @@ HB_FUNC_STATIC( QPAINTER_SETBACKGROUNDMODE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setBackgroundMode( ( Qt::BGMode ) hb_parni( 1 ) );
@@ -3311,7 +3311,7 @@ HB_FUNC_STATIC( QPAINTER_SETBRUSH )
   {
     QPainter_setBrush1();
   }
-  else if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QPainter_setBrush2();
   }
@@ -3376,7 +3376,7 @@ HB_FUNC_STATIC( QPAINTER_SETBRUSHORIGIN )
   {
     QPainter_setBrushOrigin2();
   }
-  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QPainter_setBrushOrigin3();
   }
@@ -3396,10 +3396,10 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPPATH )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQPAINTERPATH( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
+    if( ISBETWEEN( 1, 2 ) && ISQPAINTERPATH( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      obj->setClipPath( *PQPAINTERPATH( 1 ), ISNIL( 2 ) ? ( Qt::ClipOperation ) Qt::ReplaceClip : ( Qt::ClipOperation ) hb_parni( 2 ) );
+      obj->setClipPath( *PQPAINTERPATH( 1 ), HB_ISNIL( 2 ) ? ( Qt::ClipOperation ) Qt::ReplaceClip : ( Qt::ClipOperation ) hb_parni( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -3421,7 +3421,7 @@ void QPainter_setClipRect1()
 
   if( obj )
   {
-    obj->setClipRect( *PQRECTF( 1 ), ISNIL( 2 ) ? ( Qt::ClipOperation ) Qt::ReplaceClip : ( Qt::ClipOperation ) hb_parni( 2 ) );
+    obj->setClipRect( *PQRECTF( 1 ), HB_ISNIL( 2 ) ? ( Qt::ClipOperation ) Qt::ReplaceClip : ( Qt::ClipOperation ) hb_parni( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3436,7 +3436,7 @@ void QPainter_setClipRect2()
 
   if( obj )
   {
-    obj->setClipRect( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), ISNIL( 5 ) ? ( Qt::ClipOperation ) Qt::ReplaceClip : ( Qt::ClipOperation ) hb_parni( 5 ) );
+    obj->setClipRect( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), HB_ISNIL( 5 ) ? ( Qt::ClipOperation ) Qt::ReplaceClip : ( Qt::ClipOperation ) hb_parni( 5 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3451,7 +3451,7 @@ void QPainter_setClipRect3()
 
   if( obj )
   {
-    obj->setClipRect( *PQRECT( 1 ), ISNIL( 2 ) ? ( Qt::ClipOperation ) Qt::ReplaceClip : ( Qt::ClipOperation ) hb_parni( 2 ) );
+    obj->setClipRect( *PQRECT( 1 ), HB_ISNIL( 2 ) ? ( Qt::ClipOperation ) Qt::ReplaceClip : ( Qt::ClipOperation ) hb_parni( 2 ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3459,15 +3459,15 @@ void QPainter_setClipRect3()
 
 HB_FUNC_STATIC( QPAINTER_SETCLIPRECT )
 {
-  if( ISBETWEEN( 1, 2 ) && ISQRECTF( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
+  if( ISBETWEEN( 1, 2 ) && ISQRECTF( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QPainter_setClipRect1();
   }
-  else if( ISBETWEEN( 4, 5 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ( ISNUM( 5 ) || ISNIL( 5 ) ) )
+  else if( ISBETWEEN( 4, 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) )
   {
     QPainter_setClipRect2();
   }
-  else if( ISBETWEEN( 1, 2 ) && ISQRECT( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
+  else if( ISBETWEEN( 1, 2 ) && ISQRECT( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QPainter_setClipRect3();
   }
@@ -3487,10 +3487,10 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPREGION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQREGION( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
+    if( ISBETWEEN( 1, 2 ) && ISQREGION( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      obj->setClipRegion( *PQREGION( 1 ), ISNIL( 2 ) ? ( Qt::ClipOperation ) Qt::ReplaceClip : ( Qt::ClipOperation ) hb_parni( 2 ) );
+      obj->setClipRegion( *PQREGION( 1 ), HB_ISNIL( 2 ) ? ( Qt::ClipOperation ) Qt::ReplaceClip : ( Qt::ClipOperation ) hb_parni( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -3513,7 +3513,7 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPPING )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setClipping( PBOOL( 1 ) );
@@ -3539,7 +3539,7 @@ HB_FUNC_STATIC( QPAINTER_SETCOMPOSITIONMODE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setCompositionMode( ( QPainter::CompositionMode ) hb_parni( 1 ) );
@@ -3591,7 +3591,7 @@ HB_FUNC_STATIC( QPAINTER_SETLAYOUTDIRECTION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setLayoutDirection( ( Qt::LayoutDirection ) hb_parni( 1 ) );
@@ -3617,7 +3617,7 @@ HB_FUNC_STATIC( QPAINTER_SETOPACITY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setOpacity( PQREAL( 1 ) );
@@ -3657,7 +3657,7 @@ void QPainter_setPen2()
 
   if( obj )
   {
-    obj->setPen( ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ) );
+    obj->setPen( HB_ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -3684,11 +3684,11 @@ HB_FUNC_STATIC( QPAINTER_SETPEN )
   {
     QPainter_setPen1();
   }
-  else if( ISNUMPAR( 1 ) && ( ISQCOLOR( 1 ) || ISCHAR( 1 ) ) )
+  else if( ISNUMPAR( 1 ) && ( ISQCOLOR( 1 ) || HB_ISCHAR( 1 ) ) )
   {
     QPainter_setPen2();
   }
-  else if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QPainter_setPen3();
   }
@@ -3708,7 +3708,7 @@ HB_FUNC_STATIC( QPAINTER_SETRENDERHINT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
       obj->setRenderHint( ( QPainter::RenderHint ) hb_parni( 1 ), OPBOOL( 2, true ) );
@@ -3734,7 +3734,7 @@ HB_FUNC_STATIC( QPAINTER_SETRENDERHINTS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
       obj->setRenderHints( ( QPainter::RenderHints ) hb_parni( 1 ), OPBOOL( 2, true ) );
@@ -3760,7 +3760,7 @@ HB_FUNC_STATIC( QPAINTER_SETTRANSFORM )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQTRANSFORM( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) )
+    if( ISBETWEEN( 1, 2 ) && ISQTRANSFORM( 1 ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
       obj->setTransform( *PQTRANSFORM( 1 ), OPBOOL( 2, false ) );
@@ -3786,7 +3786,7 @@ HB_FUNC_STATIC( QPAINTER_SETVIEWTRANSFORMENABLED )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setViewTransformEnabled( PBOOL( 1 ) );
@@ -3838,7 +3838,7 @@ HB_FUNC_STATIC( QPAINTER_SETVIEWPORT )
   {
     QPainter_setViewport1();
   }
-  else if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
+  else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
     QPainter_setViewport2();
   }
@@ -3884,7 +3884,7 @@ HB_FUNC_STATIC( QPAINTER_SETWINDOW )
   {
     QPainter_setWindow1();
   }
-  else if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
+  else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
     QPainter_setWindow2();
   }
@@ -3904,7 +3904,7 @@ HB_FUNC_STATIC( QPAINTER_SETWORLDMATRIXENABLED )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setWorldMatrixEnabled( PBOOL( 1 ) );
@@ -3930,7 +3930,7 @@ HB_FUNC_STATIC( QPAINTER_SETWORLDTRANSFORM )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQTRANSFORM( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) )
+    if( ISBETWEEN( 1, 2 ) && ISQTRANSFORM( 1 ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
       obj->setWorldTransform( *PQTRANSFORM( 1 ), OPBOOL( 2, false ) );
@@ -3956,7 +3956,7 @@ HB_FUNC_STATIC( QPAINTER_SHEAR )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
       obj->shear( PQREAL( 1 ), PQREAL( 2 ) );
@@ -4008,7 +4008,7 @@ HB_FUNC_STATIC( QPAINTER_TESTRENDERHINT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       RBOOL( obj->testRenderHint( ( QPainter::RenderHint ) hb_parni( 1 ) ) );
@@ -4102,7 +4102,7 @@ HB_FUNC_STATIC( QPAINTER_TRANSLATE )
   {
     QPainter_translate2();
   }
-  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QPainter_translate3();
   }
@@ -4239,7 +4239,7 @@ HB_FUNC_STATIC( QPAINTER_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -4248,7 +4248,7 @@ HB_FUNC_STATIC( QPAINTER_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -4284,7 +4284,7 @@ HB_FUNC_STATIC( QPAINTER_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

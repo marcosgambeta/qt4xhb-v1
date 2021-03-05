@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETORIENTATION )
 
   if( obj )
   {
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
       obj->orientation= ( Qt::Orientation ) hb_parni( 1 );
     }
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETMINIMUM )
 
   if( obj )
   {
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
       obj->minimum= PINT( 1 );
     }
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETMAXIMUM )
 
   if( obj )
   {
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
       obj->maximum= PINT( 1 );
     }
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETTICKPOSITION )
 
   if( obj )
   {
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
       obj->tickPosition= ( QSlider::TickPosition ) hb_parni( 1 );
     }
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETTICKINTERVAL )
 
   if( obj )
   {
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
       obj->tickInterval= PINT( 1 );
     }
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETUPSIDEDOWN )
 
   if( obj )
   {
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
       obj->upsideDown= PBOOL( 1 );
     }
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETSLIDERPOSITION )
 
   if( obj )
   {
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
       obj->sliderPosition= PINT( 1 );
     }
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETSLIDERVALUE )
 
   if( obj )
   {
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
       obj->sliderValue= PINT( 1 );
     }
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETSINGLESTEP )
 
   if( obj )
   {
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
       obj->singleStep= PINT( 1 );
     }
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETPAGESTEP )
 
   if( obj )
   {
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
       obj->pageStep= PINT( 1 );
     }
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETNOTCHTARGET )
 
   if( obj )
   {
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
       obj->notchTarget= PQREAL( 1 );
     }
@@ -538,7 +538,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_SETDIALWRAPPING )
 
   if( obj )
   {
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
       obj->dialWrapping= PBOOL( 1 );
     }

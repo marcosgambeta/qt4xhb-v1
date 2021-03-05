@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_MOUSEHANDLER )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQMOUSEEVENT( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQMOUSEEVENT( 2 ) )
     {
 #endif
       obj->mouseHandler( PINT( 1 ), PQMOUSEEVENT( 2 ) );
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_STANDARDFORMAT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QTextFormat * ptr = new QTextFormat( obj->standardFormat( ( QInputContext::StandardFormat ) hb_parni( 1 ) ) );

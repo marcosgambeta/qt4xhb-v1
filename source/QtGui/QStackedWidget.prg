@@ -59,7 +59,7 @@ QStackedWidget( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QStackedWidget * obj = new QStackedWidget( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_INSERTWIDGET )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQWIDGET( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQWIDGET( 2 ) )
     {
 #endif
       RINT( obj->insertWidget( PINT( 1 ), PQWIDGET( 2 ) ) );
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_WIDGET )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QWidget * ptr = obj->widget( PINT( 1 ) );
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_SETCURRENTINDEX )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setCurrentIndex( PINT( 1 ) );

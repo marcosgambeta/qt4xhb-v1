@@ -137,19 +137,19 @@ void QDateTimeEdit_new4()
 
 HB_FUNC_STATIC( QDATETIMEEDIT_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QDateTimeEdit_new1();
   }
-  else if( ISBETWEEN( 1, 2 ) && ISQDATETIME( 1 ) && ( ISQWIDGET( 2 ) || ISNIL( 2 ) ) )
+  else if( ISBETWEEN( 1, 2 ) && ISQDATETIME( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QDateTimeEdit_new2();
   }
-  else if( ISBETWEEN( 1, 2 ) && ISQDATE( 1 ) && ( ISQWIDGET( 2 ) || ISNIL( 2 ) ) )
+  else if( ISBETWEEN( 1, 2 ) && ISQDATE( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QDateTimeEdit_new3();
   }
-  else if( ISBETWEEN( 1, 2 ) && ISQTIME( 1 ) && ( ISQWIDGET( 2 ) || ISNIL( 2 ) ) )
+  else if( ISBETWEEN( 1, 2 ) && ISQTIME( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QDateTimeEdit_new4();
   }
@@ -689,7 +689,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONAT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       RENUM( obj->sectionAt( PINT( 1 ) ) );
@@ -737,7 +737,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SECTIONTEXT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       RQSTRING( obj->sectionText( ( QDateTimeEdit::Section ) hb_parni( 1 ) ) );
@@ -761,7 +761,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETCALENDARPOPUP )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setCalendarPopup( PBOOL( 1 ) );
@@ -813,7 +813,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETCURRENTSECTION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setCurrentSection( ( QDateTimeEdit::Section ) hb_parni( 1 ) );
@@ -839,7 +839,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETCURRENTSECTIONINDEX )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setCurrentSectionIndex( PINT( 1 ) );
@@ -917,7 +917,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETDISPLAYFORMAT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setDisplayFormat( PQSTRING( 1 ) );
@@ -1099,7 +1099,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETSELECTEDSECTION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setSelectedSection( ( QDateTimeEdit::Section ) hb_parni( 1 ) );
@@ -1151,7 +1151,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_SETTIMESPEC )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setTimeSpec( ( Qt::TimeSpec ) hb_parni( 1 ) );
@@ -1301,7 +1301,7 @@ HB_FUNC_STATIC( QDATETIMEEDIT_STEPBY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->stepBy( PINT( 1 ) );

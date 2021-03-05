@@ -73,11 +73,11 @@ void QFontDialog_new2()
 
 HB_FUNC_STATIC( QFONTDIALOG_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QFontDialog_new1();
   }
-  else if( ISBETWEEN( 1, 2 ) && ISQFONT( 1 ) && ( ISQWIDGET( 2 ) || ISNIL( 2 ) ) )
+  else if( ISBETWEEN( 1, 2 ) && ISQFONT( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QFontDialog_new2();
   }
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QFONTDIALOG_OPEN )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && ISCHAR( 2 ) )
+    if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
       obj->open( PQOBJECT( 1 ), PCONSTCHAR( 2 ) );
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SETOPTION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
       obj->setOption( ( QFontDialog::FontDialogOption ) hb_parni( 1 ), OPBOOL( 2, true ) );
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SETOPTIONS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setOptions( ( QFontDialog::FontDialogOptions ) hb_parni( 1 ) );
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QFONTDIALOG_TESTOPTION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       RBOOL( obj->testOption( ( QFontDialog::FontDialogOption ) hb_parni( 1 ) ) );
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QFONTDIALOG_SETVISIBLE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setVisible( PBOOL( 1 ) );
@@ -365,19 +365,19 @@ void QFontDialog_getFont4()
 
 HB_FUNC_STATIC( QFONTDIALOG_GETFONT )
 {
-  if( ISNUMPAR( 5 ) && ISLOG( 1 ) && ISQFONT( 2 ) && ISQWIDGET( 3 ) && ISCHAR( 4 ) && ISNUM( 5 ) )
+  if( ISNUMPAR( 5 ) && HB_ISLOG( 1 ) && ISQFONT( 2 ) && ISQWIDGET( 3 ) && HB_ISCHAR( 4 ) && HB_ISNUM( 5 ) )
   {
     QFontDialog_getFont1();
   }
-  else if( ISNUMPAR( 4 ) && ISLOG( 1 ) && ISQFONT( 2 ) && ISQWIDGET( 3 ) && ISCHAR( 4 ) )
+  else if( ISNUMPAR( 4 ) && HB_ISLOG( 1 ) && ISQFONT( 2 ) && ISQWIDGET( 3 ) && HB_ISCHAR( 4 ) )
   {
     QFontDialog_getFont2();
   }
-  else if( ISBETWEEN( 2, 3 ) && ISLOG( 1 ) && ISQFONT( 2 ) && ( ISQWIDGET( 3 ) || ISNIL( 3 ) ) )
+  else if( ISBETWEEN( 2, 3 ) && HB_ISLOG( 1 ) && ISQFONT( 2 ) && ( ISQWIDGET( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QFontDialog_getFont3();
   }
-  else if( ISBETWEEN( 1, 2 ) && ISLOG( 1 ) && ( ISQWIDGET( 2 ) || ISNIL( 2 ) ) )
+  else if( ISBETWEEN( 1, 2 ) && HB_ISLOG( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QFontDialog_getFont4();
   }
