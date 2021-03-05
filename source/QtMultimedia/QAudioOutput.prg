@@ -66,7 +66,7 @@ QAudioOutput( const QAudioFormat & format = QAudioFormat(), QObject * parent = 0
 */
 void QAudioOutput_new1()
 {
-  QAudioOutput * obj = new QAudioOutput( ISNIL( 1 ) ? QAudioFormat() : *static_cast< QAudioFormat * >( Qt4xHb::itemGetPtr( 1 ) ), OPQOBJECT( 2, 0 ) );
+  QAudioOutput * obj = new QAudioOutput( HB_ISNIL( 1 ) ? QAudioFormat() : *static_cast< QAudioFormat * >( Qt4xHb::itemGetPtr( 1 ) ), OPQOBJECT( 2, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
@@ -75,17 +75,17 @@ QAudioOutput( const QAudioDeviceInfo & audioDevice, const QAudioFormat & format 
 */
 void QAudioOutput_new2()
 {
-  QAudioOutput * obj = new QAudioOutput( *PQAUDIODEVICEINFO( 1 ), ISNIL( 2 ) ? QAudioFormat() : *static_cast< QAudioFormat * >( Qt4xHb::itemGetPtr( 2 ) ), OPQOBJECT( 3, 0 ) );
+  QAudioOutput * obj = new QAudioOutput( *PQAUDIODEVICEINFO( 1 ), HB_ISNIL( 2 ) ? QAudioFormat() : *static_cast< QAudioFormat * >( Qt4xHb::itemGetPtr( 2 ) ), OPQOBJECT( 3, 0 ) );
   Qt4xHb::returnNewObject( obj, false );
 }
 
 HB_FUNC_STATIC( QAUDIOOUTPUT_NEW )
 {
-  if( ISBETWEEN( 0, 2 ) && ( ISQAUDIOFORMAT( 1 ) || ISNIL( 1 ) ) && ( ISQOBJECT( 2 ) || ISNIL( 2 ) ) )
+  if( ISBETWEEN( 0, 2 ) && ( ISQAUDIOFORMAT( 1 ) || HB_ISNIL( 1 ) ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QAudioOutput_new1();
   }
-  else if( ISBETWEEN( 1, 3 ) && ISQAUDIODEVICEINFO( 1 ) && ( ISQAUDIOFORMAT( 2 ) || ISNIL( 2 ) ) && ( ISQOBJECT( 3 ) || ISNIL( 3 ) ) )
+  else if( ISBETWEEN( 1, 3 ) && ISQAUDIODEVICEINFO( 1 ) && ( ISQAUDIOFORMAT( 2 ) || HB_ISNIL( 2 ) ) && ( ISQOBJECT( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QAudioOutput_new2();
   }
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_SETBUFFERSIZE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setBufferSize( PINT( 1 ) );
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_SETNOTIFYINTERVAL )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setNotifyInterval( PINT( 1 ) );

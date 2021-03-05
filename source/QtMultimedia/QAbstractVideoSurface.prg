@@ -255,10 +255,10 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SUPPORTEDPIXELFORMATS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      QList<QVideoFrame::PixelFormat> list = obj->supportedPixelFormats( ISNIL( 1 ) ? ( QAbstractVideoBuffer::HandleType ) QAbstractVideoBuffer::NoHandle : ( QAbstractVideoBuffer::HandleType ) hb_parni( 1 ) );
+      QList<QVideoFrame::PixelFormat> list = obj->supportedPixelFormats( HB_ISNIL( 1 ) ? ( QAbstractVideoBuffer::HandleType ) QAbstractVideoBuffer::NoHandle : ( QAbstractVideoBuffer::HandleType ) hb_parni( 1 ) );
       PHB_ITEM pArray = hb_itemArrayNew( 0 );
       for( int i = 0; i < list.count(); i++ )
       {
