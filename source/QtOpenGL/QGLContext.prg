@@ -170,23 +170,23 @@ void QGLContext_bindTexture5()
 
 HB_FUNC_STATIC( QGLCONTEXT_BINDTEXTURE )
 {
-  if( ISNUMPAR( 4 ) && ISQIMAGE( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
+  if( ISNUMPAR( 4 ) && ISQIMAGE( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
     QGLContext_bindTexture1();
   }
-  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QGLContext_bindTexture2();
   }
-  else if( ISBETWEEN( 1, 3 ) && ISQIMAGE( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
+  else if( ISBETWEEN( 1, 3 ) && ISQIMAGE( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QGLContext_bindTexture3();
   }
-  else if( ISBETWEEN( 1, 3 ) && ISQPIXMAP( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
+  else if( ISBETWEEN( 1, 3 ) && ISQPIXMAP( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QGLContext_bindTexture4();
   }
-  else if( ISNUMPAR( 4 ) && ISQPIXMAP( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) )
+  else if( ISNUMPAR( 4 ) && ISQPIXMAP( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
     QGLContext_bindTexture5();
   }
@@ -206,10 +206,10 @@ HB_FUNC_STATIC( QGLCONTEXT_CREATE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( ISQGLCONTEXT( 1 ) || ISNIL( 1 ) ) )
+    if( ISBETWEEN( 0, 1 ) && ( ISQGLCONTEXT( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      RBOOL( obj->create( ISNIL( 1 ) ? 0 : static_cast< QGLContext * >( Qt4xHb::itemGetPtr( 1 ) ) ) );
+      RBOOL( obj->create( HB_ISNIL( 1 ) ? 0 : static_cast< QGLContext * >( Qt4xHb::itemGetPtr( 1 ) ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QGLCONTEXT_DELETETEXTURE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->deleteTexture( PGLUINT( 1 ) );
@@ -329,11 +329,11 @@ void QGLContext_drawTexture2()
 
 HB_FUNC_STATIC( QGLCONTEXT_DRAWTEXTURE )
 {
-  if( ISBETWEEN( 2, 3 ) && ISQRECTF( 1 ) && ISNUM( 2 ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
+  if( ISBETWEEN( 2, 3 ) && ISQRECTF( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QGLContext_drawTexture1();
   }
-  else if( ISBETWEEN( 2, 3 ) && ISQPOINTF( 1 ) && ISNUM( 2 ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) )
+  else if( ISBETWEEN( 2, 3 ) && ISQPOINTF( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QGLContext_drawTexture2();
   }
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QGLCONTEXT_GETPROCADDRESS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       hb_retptr( static_cast< void * >( obj->getProcAddress( PQSTRING( 1 ) ) ) );
@@ -639,7 +639,7 @@ static void setTextureCacheLimit( int size )
 HB_FUNC_STATIC( QGLCONTEXT_SETTEXTURECACHELIMIT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
 #endif
     QGLContext::setTextureCacheLimit( PINT( 1 ) );
@@ -677,7 +677,7 @@ HB_FUNC_STATIC( QGLCONTEXT_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -686,7 +686,7 @@ HB_FUNC_STATIC( QGLCONTEXT_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -722,7 +722,7 @@ HB_FUNC_STATIC( QGLCONTEXT_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
