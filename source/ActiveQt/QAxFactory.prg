@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QAXFACTORY_CLASSID )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       QUuid * ptr = new QUuid( obj->classID( PQSTRING( 1 ) ) );
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QAXFACTORY_CREATEOBJECT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       QObject * ptr = obj->createObject( PQSTRING( 1 ) );
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QAXFACTORY_EVENTSID )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       QUuid * ptr = new QUuid( obj->eventsID( PQSTRING( 1 ) ) );
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QAXFACTORY_EXPOSETOSUPERCLASS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       RQSTRING( obj->exposeToSuperClass( PQSTRING( 1 ) ) );
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QAXFACTORY_HASSTOCKEVENTS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       RBOOL( obj->hasStockEvents( PQSTRING( 1 ) ) );
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QAXFACTORY_INTERFACEID )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       QUuid * ptr = new QUuid( obj->interfaceID( PQSTRING( 1 ) ) );
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QAXFACTORY_METAOBJECT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       const QMetaObject * ptr = obj->metaObject( PQSTRING( 1 ) );
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QAXFACTORY_REGISTERCLASS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISQSETTINGS( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQSETTINGS( 2 ) )
     {
 #endif
       obj->registerClass( PQSTRING( 1 ), PQSETTINGS( 2 ) );
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QAXFACTORY_STAYTOPLEVEL )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       RBOOL( obj->stayTopLevel( PQSTRING( 1 ) ) );
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QAXFACTORY_UNREGISTERCLASS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISQSETTINGS( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQSETTINGS( 2 ) )
     {
 #endif
       obj->unregisterClass( PQSTRING( 1 ), PQSETTINGS( 2 ) );
@@ -439,7 +439,7 @@ HB_FUNC_STATIC( QAXFACTORY_VALIDATELICENSEKEY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISCHAR( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
       RBOOL( obj->validateLicenseKey( PQSTRING( 1 ), PQSTRING( 2 ) ) );
@@ -535,10 +535,10 @@ static bool startServer( QAxFactory::ServerType type = QAxFactory::MultipleInsta
 HB_FUNC_STATIC( QAXFACTORY_STARTSERVER )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
 #endif
-    RBOOL( QAxFactory::startServer( ISNIL( 1 ) ? ( QAxFactory::ServerType ) QAxFactory::MultipleInstances : ( QAxFactory::ServerType ) hb_parni( 1 ) ) );
+    RBOOL( QAxFactory::startServer( HB_ISNIL( 1 ) ? ( QAxFactory::ServerType ) QAxFactory::MultipleInstances : ( QAxFactory::ServerType ) hb_parni( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
