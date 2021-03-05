@@ -68,7 +68,7 @@ QStateMachine( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSTATEMACHINE_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QStateMachine * obj = new QStateMachine( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_CANCELDELAYEDEVENT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       RBOOL( obj->cancelDelayedEvent( PINT( 1 ) ) );
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_POSTDELAYEDEVENT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQEVENT( 1 ) && ISNUM( 2 ) )
+    if( ISNUMPAR( 2 ) && ISQEVENT( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
       RINT( obj->postDelayedEvent( PQEVENT( 1 ), PINT( 2 ) ) );
@@ -402,10 +402,10 @@ HB_FUNC_STATIC( QSTATEMACHINE_POSTEVENT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQEVENT( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
+    if( ISBETWEEN( 1, 2 ) && ISQEVENT( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      obj->postEvent( PQEVENT( 1 ), ISNIL( 2 ) ? ( QStateMachine::EventPriority ) QStateMachine::NormalPriority : ( QStateMachine::EventPriority ) hb_parni( 2 ) );
+      obj->postEvent( PQEVENT( 1 ), HB_ISNIL( 2 ) ? ( QStateMachine::EventPriority ) QStateMachine::NormalPriority : ( QStateMachine::EventPriority ) hb_parni( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_SETANIMATED )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setAnimated( PBOOL( 1 ) );
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_SETGLOBALRESTOREPOLICY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setGlobalRestorePolicy( ( QStateMachine::RestorePolicy ) hb_parni( 1 ) );

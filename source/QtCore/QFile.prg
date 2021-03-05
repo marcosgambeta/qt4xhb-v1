@@ -95,7 +95,7 @@ void QFile_new3()
 
 HB_FUNC_STATIC( QFILE_NEW )
 {
-  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QFile_new1();
   }
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QFILE_NEW )
   {
     QFile_new2();
   }
-  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISQOBJECT( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQOBJECT( 2 ) )
   {
     QFile_new3();
   }
@@ -238,7 +238,7 @@ HB_FUNC_STATIC( QFILE_SETFILENAME )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setFileName( PQSTRING( 1 ) );
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QFILE_UNMAP )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       RBOOL( obj->unmap( ( uchar * ) hb_parc( 1 ) ) );
@@ -445,23 +445,23 @@ void QFile_open6()
 
 HB_FUNC_STATIC( QFILE_OPEN )
 {
-  if( ISNUMPAR( 2 ) && ISPOINTER( 1 ) && ISNUM( 2 ) )
+  if( ISNUMPAR( 2 ) && HB_ISPOINTER( 1 ) && HB_ISNUM( 2 ) )
   {
     QFile_open1();
   }
-  else if( ISNUMPAR( 3 ) && ISPOINTER( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) )
+  else if( ISNUMPAR( 3 ) && HB_ISPOINTER( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
     QFile_open2();
   }
-  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QFile_open3();
   }
-  else if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) )
+  else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
     QFile_open4();
   }
-  else if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QFile_open6();
   }
@@ -505,7 +505,7 @@ HB_FUNC_STATIC( QFILE_SEEK )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       RBOOL( obj->seek( PQINT64( 1 ) ) );
@@ -567,11 +567,11 @@ void QFile_copy2()
 
 HB_FUNC_STATIC( QFILE_COPY )
 {
-  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QFile_copy1();
   }
-  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISCHAR( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
   {
     QFile_copy2();
   }
@@ -605,7 +605,7 @@ HB_FUNC_STATIC( QFILE_DECODENAME )
   {
     QFile_decodeName1();
   }
-  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QFile_decodeName2();
   }
@@ -621,7 +621,7 @@ static QByteArray encodeName( const QString & fileName )
 HB_FUNC_STATIC( QFILE_ENCODENAME )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
 #endif
     QByteArray * ptr = new QByteArray( QFile::encodeName( PQSTRING( 1 ) ) );
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QFILE_EXISTS )
   {
     QFile_exists1();
   }
-  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QFile_exists2();
   }
@@ -697,11 +697,11 @@ void QFile_link2()
 
 HB_FUNC_STATIC( QFILE_LINK )
 {
-  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QFile_link1();
   }
-  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISCHAR( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
   {
     QFile_link2();
   }
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QFILE_PERMISSIONS )
   {
     QFile_permissions1();
   }
-  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QFile_permissions2();
   }
@@ -777,7 +777,7 @@ HB_FUNC_STATIC( QFILE_REMOVE )
   {
     QFile_remove1();
   }
-  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QFile_remove2();
   }
@@ -811,11 +811,11 @@ void QFile_rename2()
 
 HB_FUNC_STATIC( QFILE_RENAME )
 {
-  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QFile_rename1();
   }
-  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISCHAR( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
   {
     QFile_rename2();
   }
@@ -849,11 +849,11 @@ void QFile_resize2()
 
 HB_FUNC_STATIC( QFILE_RESIZE )
 {
-  if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QFile_resize1();
   }
-  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) )
   {
     QFile_resize2();
   }
@@ -887,11 +887,11 @@ void QFile_setPermissions2()
 
 HB_FUNC_STATIC( QFILE_SETPERMISSIONS )
 {
-  if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QFile_setPermissions1();
   }
-  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) )
   {
     QFile_setPermissions2();
   }
@@ -929,7 +929,7 @@ HB_FUNC_STATIC( QFILE_SYMLINKTARGET )
   {
     QFile_symLinkTarget1();
   }
-  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QFile_symLinkTarget2();
   }

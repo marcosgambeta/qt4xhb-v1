@@ -56,7 +56,7 @@ QTimer( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QTIMER_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QTimer * obj = new QTimer( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QTIMER_SETINTERVAL )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setInterval( PINT( 1 ) );
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QTIMER_SETSINGLESHOT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setSingleShot( PBOOL( 1 ) );
@@ -266,7 +266,7 @@ void QTimer_start2()
 
 HB_FUNC_STATIC( QTIMER_START )
 {
-  if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QTimer_start1();
   }
@@ -312,7 +312,7 @@ static void singleShot( int msec, QObject * receiver, const char * member )
 HB_FUNC_STATIC( QTIMER_SINGLESHOT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISQOBJECT( 2 ) && ISCHAR( 3 ) )
+  if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && ISQOBJECT( 2 ) && HB_ISCHAR( 3 ) )
   {
 #endif
     QTimer::singleShot( PINT( 1 ), PQOBJECT( 2 ), PCONSTCHAR( 3 ) );

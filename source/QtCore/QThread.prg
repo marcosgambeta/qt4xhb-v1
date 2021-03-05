@@ -62,7 +62,7 @@ QThread( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QTHREAD_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QThread * obj = new QThread( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QTHREAD_EXIT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
       obj->exit( OPINT( 1, 0 ) );
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QTHREAD_SETPRIORITY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setPriority( ( QThread::Priority ) hb_parni( 1 ) );
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QTHREAD_SETSTACKSIZE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setStackSize( PUINT( 1 ) );
@@ -326,10 +326,10 @@ HB_FUNC_STATIC( QTHREAD_START )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      obj->start( ISNIL( 1 ) ? ( QThread::Priority ) QThread::InheritPriority : ( QThread::Priority ) hb_parni( 1 ) );
+      obj->start( HB_ISNIL( 1 ) ? ( QThread::Priority ) QThread::InheritPriority : ( QThread::Priority ) hb_parni( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

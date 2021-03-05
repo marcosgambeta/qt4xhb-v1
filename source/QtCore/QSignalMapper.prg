@@ -55,7 +55,7 @@ QSignalMapper( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSIGNALMAPPER_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QSignalMapper * obj = new QSignalMapper( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
@@ -147,11 +147,11 @@ void QSignalMapper_setMapping4()
 
 HB_FUNC_STATIC( QSIGNALMAPPER_SETMAPPING )
 {
-  if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && ISNUM( 2 ) )
+  if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISNUM( 2 ) )
   {
     QSignalMapper_setMapping1();
   }
-  else if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && ISCHAR( 2 ) )
+  else if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) )
   {
     QSignalMapper_setMapping2();
   }
@@ -253,11 +253,11 @@ void QSignalMapper_mapping4()
 
 HB_FUNC_STATIC( QSIGNALMAPPER_MAPPING )
 {
-  if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QSignalMapper_mapping1();
   }
-  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QSignalMapper_mapping2();
   }

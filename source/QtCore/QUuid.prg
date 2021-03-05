@@ -112,11 +112,11 @@ HB_FUNC_STATIC( QUUID_NEW )
   {
     HB_FUNC_EXEC( QUUID_NEW1 );
   }
-  else if( ISNUMPAR( 11 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) && ISNUM( 6 ) && ISNUM( 7 ) && ISNUM( 8 ) && ISNUM( 9 ) && ISNUM( 10 ) && ISNUM( 11 ) )
+  else if( ISNUMPAR( 11 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) && HB_ISNUM( 7 ) && HB_ISNUM( 8 ) && HB_ISNUM( 9 ) && HB_ISNUM( 10 ) && HB_ISNUM( 11 ) )
   {
     HB_FUNC_EXEC( QUUID_NEW2 );
   }
-  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     HB_FUNC_EXEC( QUUID_NEW3 );
     //HB_FUNC_EXEC( QUUID_NEW4 );
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QUUID_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QUUID_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QUUID_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

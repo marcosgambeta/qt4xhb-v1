@@ -121,23 +121,23 @@ void QSettings_new5()
 
 HB_FUNC_STATIC( QSETTINGS_NEW )
 {
-  if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) && ( ISQOBJECT( 3 ) || ISNIL( 3 ) ) )
+  if( ISBETWEEN( 1, 3 ) && HB_ISCHAR( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) && ( ISQOBJECT( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QSettings_new1();
   }
-  else if( ISBETWEEN( 2, 4 ) && ISNUM( 1 ) && ISCHAR( 2 ) && ( ISCHAR( 3 ) || ISNIL( 3 ) ) && ( ISQOBJECT( 4 ) || ISNIL( 4 ) ) )
+  else if( ISBETWEEN( 2, 4 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( ISQOBJECT( 4 ) || HB_ISNIL( 4 ) ) )
   {
     QSettings_new2();
   }
-  else if( ISBETWEEN( 3, 5 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISCHAR( 3 ) && ( ISCHAR( 4 ) || ISNIL( 4 ) ) && ( ISQOBJECT( 5 ) || ISNIL( 5 ) ) )
+  else if( ISBETWEEN( 3, 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) && ( HB_ISCHAR( 4 ) || HB_ISNIL( 4 ) ) && ( ISQOBJECT( 5 ) || HB_ISNIL( 5 ) ) )
   {
     QSettings_new3();
   }
-  else if( ISBETWEEN( 2, 3 ) && ISCHAR( 1 ) && ISNUM( 2 ) && ( ISQOBJECT( 3 ) || ISNIL( 3 ) ) )
+  else if( ISBETWEEN( 2, 3 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) && ( ISQOBJECT( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QSettings_new4();
   }
-  else if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
+  else if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QSettings_new5();
   }
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QSETTINGS_BEGINGROUP )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->beginGroup( PQSTRING( 1 ) );
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QSETTINGS_BEGINREADARRAY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       RINT( obj->beginReadArray( PQSTRING( 1 ) ) );
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QSETTINGS_BEGINWRITEARRAY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISNUM( 2 ) || ISNIL( 2 ) ) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
       obj->beginWriteArray( PQSTRING( 1 ), OPINT( 2, -1 ) );
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QSETTINGS_CONTAINS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       RBOOL( obj->contains( PQSTRING( 1 ) ) );
@@ -619,7 +619,7 @@ HB_FUNC_STATIC( QSETTINGS_REMOVE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->remove( PQSTRING( 1 ) );
@@ -669,7 +669,7 @@ HB_FUNC_STATIC( QSETTINGS_SETARRAYINDEX )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setArrayIndex( PINT( 1 ) );
@@ -695,7 +695,7 @@ HB_FUNC_STATIC( QSETTINGS_SETFALLBACKSENABLED )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setFallbacksEnabled( PBOOL( 1 ) );
@@ -747,7 +747,7 @@ HB_FUNC_STATIC( QSETTINGS_SETINICODEC )
   {
     QSettings_setIniCodec1();
   }
-  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QSettings_setIniCodec2();
   }
@@ -767,7 +767,7 @@ HB_FUNC_STATIC( QSETTINGS_SETVALUE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISQVARIANT( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQVARIANT( 2 ) )
     {
 #endif
       obj->setValue( PQSTRING( 1 ), *PQVARIANT( 2 ) );
@@ -843,10 +843,10 @@ HB_FUNC_STATIC( QSETTINGS_VALUE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISQVARIANT( 2 ) || ISNIL( 2 ) ) )
+    if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQVARIANT( 2 ) || HB_ISNIL( 2 ) ) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->value( PQSTRING( 1 ), ISNIL( 2 ) ? QVariant() : *static_cast< QVariant * >( Qt4xHb::itemGetPtr( 2 ) ) ) );
+      QVariant * ptr = new QVariant( obj->value( PQSTRING( 1 ), HB_ISNIL( 2 ) ? QVariant() : *static_cast< QVariant * >( Qt4xHb::itemGetPtr( 2 ) ) ) );
       Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -883,7 +883,7 @@ static void setDefaultFormat( QSettings::Format format )
 HB_FUNC_STATIC( QSETTINGS_SETDEFAULTFORMAT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
 #endif
     QSettings::setDefaultFormat( ( QSettings::Format ) hb_parni( 1 ) );
@@ -904,7 +904,7 @@ static void setPath( QSettings::Format format, QSettings::Scope scope, const QSt
 HB_FUNC_STATIC( QSETTINGS_SETPATH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISCHAR( 3 ) )
+  if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) )
   {
 #endif
     QSettings::setPath( ( QSettings::Format ) hb_parni( 1 ), ( QSettings::Scope ) hb_parni( 2 ), PQSTRING( 3 ) );

@@ -87,7 +87,7 @@ QFutureInterfaceBase( QFutureInterfaceBase::State initialState = QFutureInterfac
 */
 void QFutureInterfaceBase_new1()
 {
-  QFutureInterfaceBase * obj = new QFutureInterfaceBase( ISNIL( 1 ) ? ( QFutureInterfaceBase::State ) QFutureInterfaceBase::NoState : ( QFutureInterfaceBase::State ) hb_parni( 1 ) );
+  QFutureInterfaceBase * obj = new QFutureInterfaceBase( HB_ISNIL( 1 ) ? ( QFutureInterfaceBase::State ) QFutureInterfaceBase::NoState : ( QFutureInterfaceBase::State ) hb_parni( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -102,7 +102,7 @@ void QFutureInterfaceBase_new2()
 
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QFutureInterfaceBase_new1();
   }
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_REPORTRESULTSREADY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
       obj->reportResultsReady( PINT( 1 ), PINT( 2 ) );
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETFILTERMODE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setFilterMode( PBOOL( 1 ) );
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPROGRESSRANGE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
       obj->setProgressRange( PINT( 1 ), PINT( 2 ) );
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPROGRESSVALUE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setProgressValue( PINT( 1 ) );
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPROGRESSVALUEANDTEXT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISCHAR( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
       obj->setProgressValueAndText( PINT( 1 ), PQSTRING( 2 ) );
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETEXPECTEDRESULTCOUNT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setExpectedResultCount( PINT( 1 ) );
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_QUERYSTATE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       RBOOL( obj->queryState( ( QFutureInterfaceBase::State ) hb_parni( 1 ) ) );
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_ISRESULTREADYAT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       RBOOL( obj->isResultReadyAt( PINT( 1 ) ) );
@@ -789,7 +789,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETPAUSED )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setPaused( PBOOL( 1 ) );
@@ -841,7 +841,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETTHROTTLED )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setThrottled( PBOOL( 1 ) );
@@ -917,7 +917,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_WAITFORRESULT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->waitForResult( PINT( 1 ) );
@@ -988,7 +988,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -997,7 +997,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -1033,7 +1033,7 @@ HB_FUNC_STATIC( QFUTUREINTERFACEBASE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

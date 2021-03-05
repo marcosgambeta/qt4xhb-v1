@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_FILTEREVENT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISPOINTER( 1 ) && ISNUM( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISPOINTER( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
       long par2;
@@ -194,7 +194,7 @@ static void addLibraryPath( const QString & path )
 HB_FUNC_STATIC( QCOREAPPLICATION_ADDLIBRARYPATH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
 #endif
     QCoreApplication::addLibraryPath( PQSTRING( 1 ) );
@@ -367,7 +367,7 @@ static void exit( int returnCode = 0 )
 HB_FUNC_STATIC( QCOREAPPLICATION_EXIT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
 #endif
     QCoreApplication::exit( OPINT( 1, 0 ) );
@@ -544,11 +544,11 @@ void QCoreApplication_postEvent2()
 
 HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT )
 {
-  if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && ISOBJECT( 2 ) )
+  if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISOBJECT( 2 ) )
   {
     QCoreApplication_postEvent1();
   }
-  else if( ISNUMPAR( 3 ) && ISQOBJECT( 1 ) && ISOBJECT( 2 ) && ISNUM( 3 ) )
+  else if( ISNUMPAR( 3 ) && ISQOBJECT( 1 ) && HB_ISOBJECT( 2 ) && HB_ISNUM( 3 ) )
   {
     QCoreApplication_postEvent2();
   }
@@ -564,7 +564,7 @@ static void processEvents( QEventLoop::ProcessEventsFlags flags = QEventLoop::Al
 void QCoreApplication_processEvents1()
 {
 
-  QCoreApplication::processEvents( ISNIL( 1 ) ? ( QEventLoop::ProcessEventsFlags ) QEventLoop::AllEvents : ( QEventLoop::ProcessEventsFlags ) hb_parni( 1 ) );
+  QCoreApplication::processEvents( HB_ISNIL( 1 ) ? ( QEventLoop::ProcessEventsFlags ) QEventLoop::AllEvents : ( QEventLoop::ProcessEventsFlags ) hb_parni( 1 ) );
 
   hb_itemReturn( hb_stackSelfItem() );
 }
@@ -582,11 +582,11 @@ void QCoreApplication_processEvents2()
 
 HB_FUNC_STATIC( QCOREAPPLICATION_PROCESSEVENTS )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QCoreApplication_processEvents1();
   }
-  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QCoreApplication_processEvents2();
   }
@@ -602,7 +602,7 @@ static void removeLibraryPath( const QString & path )
 HB_FUNC_STATIC( QCOREAPPLICATION_REMOVELIBRARYPATH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
 #endif
     QCoreApplication::removeLibraryPath( PQSTRING( 1 ) );
@@ -645,7 +645,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS )
   {
     QCoreApplication_removePostedEvents1();
   }
-  else if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISNUM( 2 ) )
   {
     QCoreApplication_removePostedEvents2();
   }
@@ -719,7 +719,7 @@ void QCoreApplication_sendPostedEvents2()
 
 HB_FUNC_STATIC( QCOREAPPLICATION_SENDPOSTEDEVENTS )
 {
-  if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && ISNUM( 2 ) )
+  if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISNUM( 2 ) )
   {
     QCoreApplication_sendPostedEvents1();
   }
@@ -739,7 +739,7 @@ static void setApplicationName( const QString & application )
 HB_FUNC_STATIC( QCOREAPPLICATION_SETAPPLICATIONNAME )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
 #endif
     QCoreApplication::setApplicationName( PQSTRING( 1 ) );
@@ -760,7 +760,7 @@ static void setApplicationVersion( const QString & version )
 HB_FUNC_STATIC( QCOREAPPLICATION_SETAPPLICATIONVERSION )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
 #endif
     QCoreApplication::setApplicationVersion( PQSTRING( 1 ) );
@@ -781,7 +781,7 @@ static void setAttribute( Qt::ApplicationAttribute attribute, bool on = true )
 HB_FUNC_STATIC( QCOREAPPLICATION_SETATTRIBUTE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 1, 2 ) && ISNUM( 1 ) && ( ISLOG( 2 ) || ISNIL( 2 ) ) )
+  if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
   {
 #endif
     QCoreApplication::setAttribute( ( Qt::ApplicationAttribute ) hb_parni( 1 ), OPBOOL( 2, true ) );
@@ -802,7 +802,7 @@ static void setLibraryPaths( const QStringList & paths )
 HB_FUNC_STATIC( QCOREAPPLICATION_SETLIBRARYPATHS )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && ISARRAY( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
   {
 #endif
     QCoreApplication::setLibraryPaths( PQSTRINGLIST( 1 ) );
@@ -823,7 +823,7 @@ static void setOrganizationDomain( const QString & orgDomain )
 HB_FUNC_STATIC( QCOREAPPLICATION_SETORGANIZATIONDOMAIN )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
 #endif
     QCoreApplication::setOrganizationDomain( PQSTRING( 1 ) );
@@ -844,7 +844,7 @@ static void setOrganizationName( const QString & orgName )
 HB_FUNC_STATIC( QCOREAPPLICATION_SETORGANIZATIONNAME )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
 #endif
     QCoreApplication::setOrganizationName( PQSTRING( 1 ) );
@@ -884,7 +884,7 @@ static bool testAttribute( Qt::ApplicationAttribute attribute )
 HB_FUNC_STATIC( QCOREAPPLICATION_TESTATTRIBUTE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
 #endif
     RBOOL( QCoreApplication::testAttribute( ( Qt::ApplicationAttribute ) hb_parni( 1 ) ) );
@@ -912,16 +912,16 @@ static QString translate( const char * context, const char * sourceText, const c
 void QCoreApplication_translate2()
 {
 
-  RQSTRING( QCoreApplication::translate( PCONSTCHAR( 1 ), PCONSTCHAR( 2 ), OPCONSTCHAR( 3, 0 ), ISNIL( 4 ) ? ( QCoreApplication::Encoding ) QCoreApplication::CodecForTr : ( QCoreApplication::Encoding ) hb_parni( 4 ) ) );
+  RQSTRING( QCoreApplication::translate( PCONSTCHAR( 1 ), PCONSTCHAR( 2 ), OPCONSTCHAR( 3, 0 ), HB_ISNIL( 4 ) ? ( QCoreApplication::Encoding ) QCoreApplication::CodecForTr : ( QCoreApplication::Encoding ) hb_parni( 4 ) ) );
 }
 
 HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
 {
-  if( ISNUMPAR( 5 ) && ISCHAR( 1 ) && ISCHAR( 2 ) && ISCHAR( 3 ) && ISNUM( 4 ) && ISNUM( 5 ) )
+  if( ISNUMPAR( 5 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) )
   {
     QCoreApplication_translate1();
   }
-  else if( ISNUMPAR( 4 ) && ISCHAR( 1 ) && ISCHAR( 2 ) && ISCHAR( 3 ) && ISNUM( 4 ) )
+  else if( ISNUMPAR( 4 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && HB_ISNUM( 4 ) )
   {
     QCoreApplication_translate2();
   }

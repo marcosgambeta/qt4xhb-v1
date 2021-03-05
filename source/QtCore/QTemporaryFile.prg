@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW )
   {
     QTemporaryFile_new1();
   }
-  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QTemporaryFile_new2();
   }
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW )
   {
     QTemporaryFile_new3();
   }
-  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISQOBJECT( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQOBJECT( 2 ) )
   {
     QTemporaryFile_new4();
   }
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_SETAUTOREMOVE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setAutoRemove( PBOOL( 1 ) );
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_SETFILETEMPLATE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setFileTemplate( PQSTRING( 1 ) );
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_CREATELOCALFILE )
   {
     QTemporaryFile_createLocalFile1();
   }
-  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QTemporaryFile_createLocalFile2();
   }

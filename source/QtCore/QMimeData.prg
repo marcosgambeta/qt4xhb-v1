@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QMIMEDATA_DATA )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->data( PQSTRING( 1 ) ) );
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QMIMEDATA_HASFORMAT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       RBOOL( obj->hasFormat( PQSTRING( 1 ) ) );
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QMIMEDATA_REMOVEFORMAT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->removeFormat( PQSTRING( 1 ) );
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETDATA )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISQBYTEARRAY( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQBYTEARRAY( 2 ) )
     {
 #endif
       obj->setData( PQSTRING( 1 ), *PQBYTEARRAY( 2 ) );
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETHTML )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setHtml( PQSTRING( 1 ) );
@@ -535,7 +535,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETTEXT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setText( PQSTRING( 1 ) );
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QMIMEDATA_SETURLS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISARRAY( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
       QList<QUrl> par1;

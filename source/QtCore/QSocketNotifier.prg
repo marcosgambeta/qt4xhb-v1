@@ -51,7 +51,7 @@ QSocketNotifier( int socket, QSocketNotifier::Type, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_NEW )
 {
-  if( ISBETWEEN( 2, 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ( ISQOBJECT( 3 ) || ISNIL( 3 ) ) )
+  if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( ISQOBJECT( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QSocketNotifier * obj = new QSocketNotifier( PINT( 1 ), ( QSocketNotifier::Type ) hb_parni( 2 ), OPQOBJECT( 3, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_SETENABLED )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setEnabled( PBOOL( 1 ) );

@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_KEYVALUEAT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QVariant * ptr = new QVariant( obj->keyValueAt( PQREAL( 1 ) ) );
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETDURATION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setDuration( PINT( 1 ) );
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_SETKEYVALUEAT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQVARIANT( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQVARIANT( 2 ) )
     {
 #endif
       obj->setKeyValueAt( PQREAL( 1 ), *PQVARIANT( 2 ) );

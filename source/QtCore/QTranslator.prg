@@ -50,7 +50,7 @@ QTranslator( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QTRANSLATOR_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QTranslator * obj = new QTranslator( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
@@ -132,11 +132,11 @@ void QTranslator_load2()
 
 HB_FUNC_STATIC( QTRANSLATOR_LOAD )
 {
-  if( ISBETWEEN( 1, 4 ) && ISCHAR( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) && ( ISCHAR( 3 ) || ISNIL( 3 ) ) && ( ISCHAR( 4 ) || ISNIL( 4 ) ) )
+  if( ISBETWEEN( 1, 4 ) && HB_ISCHAR( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISCHAR( 4 ) || HB_ISNIL( 4 ) ) )
   {
     QTranslator_load1();
   }
-  else if( ISBETWEEN( 2, 5 ) && ISQLOCALE( 1 ) && ISCHAR( 2 ) && ( ISCHAR( 3 ) || ISNIL( 3 ) ) && ( ISCHAR( 4 ) || ISNIL( 4 ) ) && ( ISCHAR( 5 ) || ISNIL( 5 ) ) )
+  else if( ISBETWEEN( 2, 5 ) && ISQLOCALE( 1 ) && HB_ISCHAR( 2 ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISCHAR( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISCHAR( 5 ) || HB_ISNIL( 5 ) ) )
   {
     QTranslator_load2();
   }
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 4 ) && ISCHAR( 1 ) && ISCHAR( 2 ) && ( ISCHAR( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
+    if( ISBETWEEN( 2, 4 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
     {
 #endif
       RQSTRING( obj->translate( PCONSTCHAR( 1 ), PCONSTCHAR( 2 ), OPCONSTCHAR( 3, 0 ), OPINT( 4, -1 ) ) );

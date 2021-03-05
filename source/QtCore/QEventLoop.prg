@@ -51,7 +51,7 @@ QEventLoop( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QEVENTLOOP_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QEventLoop * obj = new QEventLoop( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
@@ -91,10 +91,10 @@ HB_FUNC_STATIC( QEVENTLOOP_EXEC )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      RINT( obj->exec( ISNIL( 1 ) ? ( QEventLoop::ProcessEventsFlags ) QEventLoop::AllEvents : ( QEventLoop::ProcessEventsFlags ) hb_parni( 1 ) ) );
+      RINT( obj->exec( HB_ISNIL( 1 ) ? ( QEventLoop::ProcessEventsFlags ) QEventLoop::AllEvents : ( QEventLoop::ProcessEventsFlags ) hb_parni( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QEVENTLOOP_EXIT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
       obj->exit( OPINT( 1, 0 ) );
@@ -164,7 +164,7 @@ void QEventLoop_processEvents1()
 
   if( obj )
   {
-    RBOOL( obj->processEvents( ISNIL( 1 ) ? ( QEventLoop::ProcessEventsFlags ) QEventLoop::AllEvents : ( QEventLoop::ProcessEventsFlags ) hb_parni( 1 ) ) );
+    RBOOL( obj->processEvents( HB_ISNIL( 1 ) ? ( QEventLoop::ProcessEventsFlags ) QEventLoop::AllEvents : ( QEventLoop::ProcessEventsFlags ) hb_parni( 1 ) ) );
   }
 }
 
@@ -185,11 +185,11 @@ void QEventLoop_processEvents2()
 
 HB_FUNC_STATIC( QEVENTLOOP_PROCESSEVENTS )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QEventLoop_processEvents1();
   }
-  else if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QEventLoop_processEvents2();
   }

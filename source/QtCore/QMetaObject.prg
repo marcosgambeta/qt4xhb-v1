@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CLASSINFO )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QMetaClassInfo * ptr = new QMetaClassInfo( obj->classInfo( PINT( 1 ) ) );
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CONSTRUCTOR )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QMetaMethod * ptr = new QMetaMethod( obj->constructor( PINT( 1 ) ) );
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QMETAOBJECT_ENUMERATOR )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QMetaEnum * ptr = new QMetaEnum( obj->enumerator( PINT( 1 ) ) );
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFCLASSINFO )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       RINT( obj->indexOfClassInfo( PCONSTCHAR( 1 ) ) );
@@ -356,7 +356,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFCONSTRUCTOR )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       RINT( obj->indexOfConstructor( PCONSTCHAR( 1 ) ) );
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFENUMERATOR )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       RINT( obj->indexOfEnumerator( PCONSTCHAR( 1 ) ) );
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFMETHOD )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       RINT( obj->indexOfMethod( PCONSTCHAR( 1 ) ) );
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFPROPERTY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       RINT( obj->indexOfProperty( PCONSTCHAR( 1 ) ) );
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFSIGNAL )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       RINT( obj->indexOfSignal( PCONSTCHAR( 1 ) ) );
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QMETAOBJECT_INDEXOFSLOT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       RINT( obj->indexOfSlot( PCONSTCHAR( 1 ) ) );
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QMETAOBJECT_METHOD )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QMetaMethod * ptr = new QMetaMethod( obj->method( PINT( 1 ) ) );
@@ -573,7 +573,7 @@ HB_FUNC_STATIC( QMETAOBJECT_PROPERTY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QMetaProperty * ptr = new QMetaProperty( obj->property( PINT( 1 ) ) );
@@ -692,7 +692,7 @@ static bool checkConnectArgs( const char * signal, const char * method )
 HB_FUNC_STATIC( QMETAOBJECT_CHECKCONNECTARGS )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISCHAR( 2 ) )
+  if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
   {
 #endif
     RBOOL( QMetaObject::checkConnectArgs( PCONSTCHAR( 1 ), PCONSTCHAR( 2 ) ) );
@@ -737,7 +737,7 @@ static QByteArray normalizedSignature( const char * method )
 HB_FUNC_STATIC( QMETAOBJECT_NORMALIZEDSIGNATURE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
 #endif
     QByteArray * ptr = new QByteArray( QMetaObject::normalizedSignature( PCONSTCHAR( 1 ) ) );
@@ -757,7 +757,7 @@ static QByteArray normalizedType( const char * type )
 HB_FUNC_STATIC( QMETAOBJECT_NORMALIZEDTYPE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
 #endif
     QByteArray * ptr = new QByteArray( QMetaObject::normalizedType( PCONSTCHAR( 1 ) ) );
@@ -775,7 +775,7 @@ HB_FUNC_STATIC( QMETAOBJECT_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -784,7 +784,7 @@ HB_FUNC_STATIC( QMETAOBJECT_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -820,7 +820,7 @@ HB_FUNC_STATIC( QMETAOBJECT_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
