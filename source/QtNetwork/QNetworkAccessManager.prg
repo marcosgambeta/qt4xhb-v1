@@ -82,7 +82,7 @@ QNetworkAccessManager( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QNetworkAccessManager * obj = new QNetworkAccessManager( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SENDCUSTOMREQUEST )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 3 ) && ISQNETWORKREQUEST( 1 ) && ISQBYTEARRAY( 2 ) && ( ISQIODEVICE( 3 ) || ISNIL( 3 ) ) )
+    if( ISBETWEEN( 2, 3 ) && ISQNETWORKREQUEST( 1 ) && ISQBYTEARRAY( 2 ) && ( ISQIODEVICE( 3 ) || HB_ISNIL( 3 ) ) )
     {
 #endif
       QNetworkReply * ptr = obj->sendCustomRequest( *PQNETWORKREQUEST( 1 ), *PQBYTEARRAY( 2 ), OPQIODEVICE( 3, 0 ) );
@@ -562,7 +562,7 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_SETNETWORKACCESSIBLE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setNetworkAccessible( ( QNetworkAccessManager::NetworkAccessibility ) hb_parni( 1 ) );

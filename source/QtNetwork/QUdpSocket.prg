@@ -49,7 +49,7 @@ QUdpSocket( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QUDPSOCKET_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QUdpSocket * obj = new QUdpSocket( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
@@ -133,19 +133,19 @@ void QUdpSocket_bind4()
 
 HB_FUNC_STATIC( QUDPSOCKET_BIND )
 {
-  if( ISNUMPAR( 2 ) && ISQHOSTADDRESS( 1 ) && ISNUM( 2 ) )
+  if( ISNUMPAR( 2 ) && ISQHOSTADDRESS( 1 ) && HB_ISNUM( 2 ) )
   {
     QUdpSocket_bind1();
   }
-  else if( ISNUMPAR( 3 ) && ISQHOSTADDRESS( 1 ) && ISNUM( 2 ) && ISNUM( 3 ) )
+  else if( ISNUMPAR( 3 ) && ISQHOSTADDRESS( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
     QUdpSocket_bind2();
   }
-  else if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
+  else if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QUdpSocket_bind3();
   }
-  else if( ISNUMPAR( 4 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+  else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
     QUdpSocket_bind4();
   }
@@ -231,11 +231,11 @@ void QUdpSocket_writeDatagram2()
 
 HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM )
 {
-  if( ISNUMPAR( 4 ) && ISCHAR( 1 ) && ISNUM( 2 ) && ISQHOSTADDRESS( 3 ) && ISNUM( 4 ) )
+  if( ISNUMPAR( 4 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) && ISQHOSTADDRESS( 3 ) && HB_ISNUM( 4 ) )
   {
     QUdpSocket_writeDatagram1();
   }
-  else if( ISNUMPAR( 3 ) && ISQBYTEARRAY( 1 ) && ISQHOSTADDRESS( 2 ) && ISNUM( 3 ) )
+  else if( ISNUMPAR( 3 ) && ISQBYTEARRAY( 1 ) && ISQHOSTADDRESS( 2 ) && HB_ISNUM( 3 ) )
   {
     QUdpSocket_writeDatagram2();
   }

@@ -109,11 +109,11 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW )
   {
     QHostAddress_new1();
   }
-  else if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     HB_FUNC_EXEC( QHOSTADDRESS_NEW2 );
   }
-  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QHostAddress_new6();
   }
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW )
   {
     QHostAddress_new7();
   }
-  else if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     HB_FUNC_EXEC( QHOSTADDRESS_NEW8 );
   }
@@ -189,7 +189,7 @@ void QHostAddress_isInSubnet1()
 
 HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET )
 {
-  if( ISNUMPAR( 2 ) && ISQHOSTADDRESS( 1 ) && ISNUM( 2 ) )
+  if( ISNUMPAR( 2 ) && ISQHOSTADDRESS( 1 ) && HB_ISNUM( 2 ) )
   {
     QHostAddress_isInSubnet1();
   }
@@ -301,11 +301,11 @@ void QHostAddress_setAddress4()
 
 HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS )
 {
-  if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
     QHostAddress_setAddress1();
   }
-  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QHostAddress_setAddress4();
   }
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETSCOPEID )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setScopeId( PQSTRING( 1 ) );
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -402,7 +402,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

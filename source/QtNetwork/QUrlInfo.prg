@@ -123,11 +123,11 @@ HB_FUNC_STATIC( QURLINFO_NEW )
   {
     QUrlInfo_new2();
   }
-  else if( ISNUMPAR( 13 ) && ISCHAR( 1 ) && ISNUM( 2 ) && ISCHAR( 3 ) && ISCHAR( 4 ) && ISNUM( 5 ) && ISQDATETIME( 6 ) && ISQDATETIME( 7 ) && ISLOG( 8 ) && ISLOG( 9 ) && ISLOG( 10 ) && ISLOG( 11 ) && ISLOG( 12 ) && ISLOG( 13 ) )
+  else if( ISNUMPAR( 13 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) && HB_ISCHAR( 4 ) && HB_ISNUM( 5 ) && ISQDATETIME( 6 ) && ISQDATETIME( 7 ) && HB_ISLOG( 8 ) && HB_ISLOG( 9 ) && HB_ISLOG( 10 ) && HB_ISLOG( 11 ) && HB_ISLOG( 12 ) && HB_ISLOG( 13 ) )
   {
     QUrlInfo_new3();
   }
-  else if( ISNUMPAR( 13 ) && ISQURL( 1 ) && ISNUM( 2 ) && ISCHAR( 3 ) && ISCHAR( 4 ) && ISNUM( 5 ) && ISQDATETIME( 6 ) && ISQDATETIME( 7 ) && ISLOG( 8 ) && ISLOG( 9 ) && ISLOG( 10 ) && ISLOG( 11 ) && ISLOG( 12 ) && ISLOG( 13 ) )
+  else if( ISNUMPAR( 13 ) && ISQURL( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) && HB_ISCHAR( 4 ) && HB_ISNUM( 5 ) && ISQDATETIME( 6 ) && ISQDATETIME( 7 ) && HB_ISLOG( 8 ) && HB_ISLOG( 9 ) && HB_ISLOG( 10 ) && HB_ISLOG( 11 ) && HB_ISLOG( 12 ) && HB_ISLOG( 13 ) )
   {
     QUrlInfo_new4();
   }
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QURLINFO_SETDIR )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setDir( PBOOL( 1 ) );
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QURLINFO_SETFILE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setFile( PBOOL( 1 ) );
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QURLINFO_SETGROUP )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setGroup( PQSTRING( 1 ) );
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QURLINFO_SETNAME )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setName( PQSTRING( 1 ) );
@@ -634,7 +634,7 @@ HB_FUNC_STATIC( QURLINFO_SETOWNER )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setOwner( PQSTRING( 1 ) );
@@ -660,7 +660,7 @@ HB_FUNC_STATIC( QURLINFO_SETPERMISSIONS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setPermissions( PINT( 1 ) );
@@ -686,7 +686,7 @@ HB_FUNC_STATIC( QURLINFO_SETREADABLE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setReadable( PBOOL( 1 ) );
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QURLINFO_SETSIZE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setSize( PQINT64( 1 ) );
@@ -738,7 +738,7 @@ HB_FUNC_STATIC( QURLINFO_SETSYMLINK )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setSymLink( PBOOL( 1 ) );
@@ -764,7 +764,7 @@ HB_FUNC_STATIC( QURLINFO_SETWRITABLE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setWritable( PBOOL( 1 ) );
@@ -810,7 +810,7 @@ static bool equal( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 HB_FUNC_STATIC( QURLINFO_EQUAL )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 3 ) && ISQURLINFO( 1 ) && ISQURLINFO( 2 ) && ISNUM( 3 ) )
+  if( ISNUMPAR( 3 ) && ISQURLINFO( 1 ) && ISQURLINFO( 2 ) && HB_ISNUM( 3 ) )
   {
 #endif
     RBOOL( QUrlInfo::equal( *PQURLINFO( 1 ), *PQURLINFO( 2 ), PINT( 3 ) ) );
@@ -829,7 +829,7 @@ static bool greaterThan( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 HB_FUNC_STATIC( QURLINFO_GREATERTHAN )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 3 ) && ISQURLINFO( 1 ) && ISQURLINFO( 2 ) && ISNUM( 3 ) )
+  if( ISNUMPAR( 3 ) && ISQURLINFO( 1 ) && ISQURLINFO( 2 ) && HB_ISNUM( 3 ) )
   {
 #endif
     RBOOL( QUrlInfo::greaterThan( *PQURLINFO( 1 ), *PQURLINFO( 2 ), PINT( 3 ) ) );
@@ -848,7 +848,7 @@ static bool lessThan( const QUrlInfo & i1, const QUrlInfo & i2, int sortBy )
 HB_FUNC_STATIC( QURLINFO_LESSTHAN )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 3 ) && ISQURLINFO( 1 ) && ISQURLINFO( 2 ) && ISNUM( 3 ) )
+  if( ISNUMPAR( 3 ) && ISQURLINFO( 1 ) && ISQURLINFO( 2 ) && HB_ISNUM( 3 ) )
   {
 #endif
     RBOOL( QUrlInfo::lessThan( *PQURLINFO( 1 ), *PQURLINFO( 2 ), PINT( 3 ) ) );
@@ -865,7 +865,7 @@ HB_FUNC_STATIC( QURLINFO_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -874,7 +874,7 @@ HB_FUNC_STATIC( QURLINFO_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -910,7 +910,7 @@ HB_FUNC_STATIC( QURLINFO_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
