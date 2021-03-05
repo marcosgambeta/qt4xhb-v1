@@ -97,19 +97,19 @@ void QSvgRenderer_new4()
 
 HB_FUNC_STATIC( QSVGRENDERER_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QSvgRenderer_new1();
   }
-  else if( ISBETWEEN( 1, 2 ) && ISCHAR( 1 ) && ( ISQOBJECT( 2 ) || ISNIL( 2 ) ) )
+  else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QSvgRenderer_new2();
   }
-  else if( ISBETWEEN( 1, 2 ) && ISQBYTEARRAY( 1 ) && ( ISQOBJECT( 2 ) || ISNIL( 2 ) ) )
+  else if( ISBETWEEN( 1, 2 ) && ISQBYTEARRAY( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QSvgRenderer_new3();
   }
-  else if( ISBETWEEN( 1, 2 ) && ISQXMLSTREAMREADER( 1 ) && ( ISQOBJECT( 2 ) || ISNIL( 2 ) ) )
+  else if( ISBETWEEN( 1, 2 ) && ISQXMLSTREAMREADER( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QSvgRenderer_new4();
   }
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QSVGRENDERER_BOUNDSONELEMENT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       QRectF * ptr = new QRectF( obj->boundsOnElement( PQSTRING( 1 ) ) );
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QSVGRENDERER_ELEMENTEXISTS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       RBOOL( obj->elementExists( PQSTRING( 1 ) ) );
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QSVGRENDERER_MATRIXFORELEMENT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       QMatrix * ptr = new QMatrix( obj->matrixForElement( PQSTRING( 1 ) ) );
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QSVGRENDERER_SETFRAMESPERSECOND )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setFramesPerSecond( PINT( 1 ) );
@@ -472,7 +472,7 @@ void QSvgRenderer_load3()
 
 HB_FUNC_STATIC( QSVGRENDERER_LOAD )
 {
-  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QSvgRenderer_load1();
   }
@@ -529,7 +529,7 @@ void QSvgRenderer_render3()
 
   if( obj )
   {
-    obj->render( PQPAINTER( 1 ), PQSTRING( 2 ), ISNIL( 3 ) ? QRectF() : *static_cast< QRectF * >( Qt4xHb::itemGetPtr( 3 ) ) );
+    obj->render( PQPAINTER( 1 ), PQSTRING( 2 ), HB_ISNIL( 3 ) ? QRectF() : *static_cast< QRectF * >( Qt4xHb::itemGetPtr( 3 ) ) );
   }
 
   hb_itemReturn( hb_stackSelfItem() );
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QSVGRENDERER_RENDER )
   {
     QSvgRenderer_render2();
   }
-  else if( ISBETWEEN( 2, 3 ) && ISQPAINTER( 1 ) && ISCHAR( 2 ) && ( ISQRECTF( 3 ) || ISNIL( 3 ) ) )
+  else if( ISBETWEEN( 2, 3 ) && ISQPAINTER( 1 ) && HB_ISCHAR( 2 ) && ( ISQRECTF( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QSvgRenderer_render3();
   }
