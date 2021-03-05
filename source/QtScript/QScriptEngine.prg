@@ -145,10 +145,10 @@ HB_FUNC_STATIC( QSCRIPTENGINE_ABORTEVALUATION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( ISQSCRIPTVALUE( 1 ) || ISNIL( 1 ) ) )
+    if( ISBETWEEN( 0, 1 ) && ( ISQSCRIPTVALUE( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      obj->abortEvaluation( ISNIL( 1 ) ? QScriptValue() : *static_cast< QScriptValue * >( Qt4xHb::itemGetPtr( 1 ) ) );
+      obj->abortEvaluation( HB_ISNIL( 1 ) ? QScriptValue() : *static_cast< QScriptValue * >( Qt4xHb::itemGetPtr( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_DEFAULTPROTOTYPE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       QScriptValue * ptr = new QScriptValue( obj->defaultPrototype( PINT( 1 ) ) );
@@ -342,7 +342,7 @@ void QScriptEngine_evaluate2()
 
 HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE )
 {
-  if( ISBETWEEN( 1, 3 ) && ISCHAR( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNUM( 3 ) ) )
+  if( ISBETWEEN( 1, 3 ) && HB_ISCHAR( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNUM( 3 ) ) )
   {
     QScriptEngine_evaluate1();
   }
@@ -415,7 +415,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_IMPORTEXTENSION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       QScriptValue * ptr = new QScriptValue( obj->importExtension( PQSTRING( 1 ) ) );
@@ -464,10 +464,10 @@ HB_FUNC_STATIC( QSCRIPTENGINE_INSTALLTRANSLATORFUNCTIONS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( ISQSCRIPTVALUE( 1 ) || ISNIL( 1 ) ) )
+    if( ISBETWEEN( 0, 1 ) && ( ISQSCRIPTVALUE( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
-      obj->installTranslatorFunctions( ISNIL( 1 ) ? QScriptValue() : *static_cast< QScriptValue * >( Qt4xHb::itemGetPtr( 1 ) ) );
+      obj->installTranslatorFunctions( HB_ISNIL( 1 ) ? QScriptValue() : *static_cast< QScriptValue * >( Qt4xHb::itemGetPtr( 1 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -514,7 +514,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWARRAY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
       QScriptValue * ptr = new QScriptValue( obj->newArray( OPUINT( 1, 0 ) ) );
@@ -563,7 +563,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP )
   {
     QScriptEngine_newRegExp1();
   }
-  else if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISCHAR( 2 ) )
+  else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
   {
     QScriptEngine_newRegExp2();
   }
@@ -727,7 +727,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_REPORTADDITIONALMEMORYCOST )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->reportAdditionalMemoryCost( PINT( 1 ) );
@@ -779,7 +779,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_SETDEFAULTPROTOTYPE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISQSCRIPTVALUE( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQSCRIPTVALUE( 2 ) )
     {
 #endif
       obj->setDefaultPrototype( PINT( 1 ), *PQSCRIPTVALUE( 2 ) );
@@ -831,7 +831,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_SETPROCESSEVENTSINTERVAL )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISNUM( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
     {
 #endif
       obj->setProcessEventsInterval( PINT( 1 ) );
@@ -882,7 +882,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_TOSTRINGHANDLE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       QScriptString * ptr = new QScriptString( obj->toStringHandle( PQSTRING( 1 ) ) );
@@ -1001,7 +1001,7 @@ static QScriptSyntaxCheckResult checkSyntax( const QString & program )
 HB_FUNC_STATIC( QSCRIPTENGINE_CHECKSYNTAX )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
 #endif
     QScriptSyntaxCheckResult * ptr = new QScriptSyntaxCheckResult( QScriptEngine::checkSyntax( PQSTRING( 1 ) ) );
