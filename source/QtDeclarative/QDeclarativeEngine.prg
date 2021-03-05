@@ -82,7 +82,7 @@ QDeclarativeEngine( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QDeclarativeEngine * obj = new QDeclarativeEngine( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDIMAGEPROVIDER )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISQDECLARATIVEIMAGEPROVIDER( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQDECLARATIVEIMAGEPROVIDER( 2 ) )
     {
 #endif
       obj->addImageProvider( PQSTRING( 1 ), PQDECLARATIVEIMAGEPROVIDER( 2 ) );
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDIMPORTPATH )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->addImportPath( PQSTRING( 1 ) );
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDPLUGINPATH )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->addPluginPath( PQSTRING( 1 ) );
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_IMAGEPROVIDER )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       QDeclarativeImageProvider * ptr = obj->imageProvider( PQSTRING( 1 ) );
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_IMPORTPLUGIN )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && ISCHAR( 1 ) && ISCHAR( 2 ) )
+    if( ISNUMPAR( 3 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
       RBOOL( obj->importPlugin( PQSTRING( 1 ), PQSTRING( 2 ), NULL ) );
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_REMOVEIMAGEPROVIDER )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->removeImageProvider( PQSTRING( 1 ) );
@@ -523,7 +523,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETIMPORTPATHLIST )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISARRAY( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
       obj->setImportPathList( PQSTRINGLIST( 1 ) );
@@ -575,7 +575,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOFFLINESTORAGEPATH )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setOfflineStoragePath( PQSTRING( 1 ) );
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISLOG( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
     {
 #endif
       obj->setOutputWarningsToStandardError( PBOOL( 1 ) );
@@ -627,7 +627,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETPLUGINPATHLIST )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISARRAY( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
     {
 #endif
       obj->setPluginPathList( PQSTRINGLIST( 1 ) );
@@ -709,7 +709,7 @@ static void setObjectOwnership( QObject * object, QDeclarativeEngine::ObjectOwne
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOBJECTOWNERSHIP )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && ISNUM( 2 ) )
+  if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISNUM( 2 ) )
   {
 #endif
     QDeclarativeEngine::setObjectOwnership( PQOBJECT( 1 ), ( QDeclarativeEngine::ObjectOwnership ) hb_parni( 2 ) );

@@ -102,19 +102,19 @@ void QDeclarativeComponent_new4()
 
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || ISNIL( 1 ) ) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
     QDeclarativeComponent_new1();
   }
-  else if( ISBETWEEN( 1, 2 ) && ISQDECLARATIVEENGINE( 1 ) && ( ISQOBJECT( 2 ) || ISNIL( 2 ) ) )
+  else if( ISBETWEEN( 1, 2 ) && ISQDECLARATIVEENGINE( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QDeclarativeComponent_new2();
   }
-  else if( ISBETWEEN( 2, 3 ) && ISQDECLARATIVEENGINE( 1 ) && ISCHAR( 2 ) && ( ISQOBJECT( 3 ) || ISNIL( 3 ) ) )
+  else if( ISBETWEEN( 2, 3 ) && ISQDECLARATIVEENGINE( 1 ) && HB_ISCHAR( 2 ) && ( ISQOBJECT( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QDeclarativeComponent_new3();
   }
-  else if( ISBETWEEN( 2, 3 ) && ISQDECLARATIVEENGINE( 1 ) && ISQURL( 2 ) && ( ISQOBJECT( 3 ) || ISNIL( 3 ) ) )
+  else if( ISBETWEEN( 2, 3 ) && ISQDECLARATIVEENGINE( 1 ) && ISQURL( 2 ) && ( ISQOBJECT( 3 ) || HB_ISNIL( 3 ) ) )
   {
     QDeclarativeComponent_new4();
   }
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( ISQDECLARATIVECONTEXT( 1 ) || ISNIL( 1 ) ) )
+    if( ISBETWEEN( 0, 1 ) && ( ISQDECLARATIVECONTEXT( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
       QObject * ptr = obj->create( OPQDECLARATIVECONTEXT( 1, 0 ) );
