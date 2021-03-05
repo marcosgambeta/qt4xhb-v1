@@ -369,7 +369,7 @@ void QXmlSchemaValidator_validate2()
 
   if( obj )
   {
-    RBOOL( obj->validate( PQIODEVICE( 1 ), ISNIL( 2 ) ? QUrl() : *static_cast< QUrl * >( Qt4xHb::itemGetPtr( 2 ) ) ) );
+    RBOOL( obj->validate( PQIODEVICE( 1 ), HB_ISNIL( 2 ) ? QUrl() : *static_cast< QUrl * >( Qt4xHb::itemGetPtr( 2 ) ) ) );
   }
 }
 
@@ -382,7 +382,7 @@ void QXmlSchemaValidator_validate3()
 
   if( obj )
   {
-    RBOOL( obj->validate( *PQBYTEARRAY( 1 ), ISNIL( 2 ) ? QUrl() : *static_cast< QUrl * >( Qt4xHb::itemGetPtr( 2 ) ) ) );
+    RBOOL( obj->validate( *PQBYTEARRAY( 1 ), HB_ISNIL( 2 ) ? QUrl() : *static_cast< QUrl * >( Qt4xHb::itemGetPtr( 2 ) ) ) );
   }
 }
 
@@ -392,11 +392,11 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE )
   {
     QXmlSchemaValidator_validate1();
   }
-  else if( ISBETWEEN( 1, 2 ) && ISQIODEVICE( 1 ) && ( ISQURL( 2 ) || ISNIL( 2 ) ) )
+  else if( ISBETWEEN( 1, 2 ) && ISQIODEVICE( 1 ) && ( ISQURL( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QXmlSchemaValidator_validate2();
   }
-  else if( ISBETWEEN( 1, 2 ) && ISQBYTEARRAY( 1 ) && ( ISQURL( 2 ) || ISNIL( 2 ) ) )
+  else if( ISBETWEEN( 1, 2 ) && ISQBYTEARRAY( 1 ) && ( ISQURL( 2 ) || HB_ISNIL( 2 ) ) )
   {
     QXmlSchemaValidator_validate3();
   }
@@ -410,7 +410,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_NEWFROM )
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
   {
     PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
     hb_objSendMsg( self, "_pointer", 1, ptr );
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
   {
     PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
     hb_objSendMsg( self, "_self_destruction", 1, des );

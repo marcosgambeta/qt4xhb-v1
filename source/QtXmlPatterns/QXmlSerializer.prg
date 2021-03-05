@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_COMMENT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->comment( PQSTRING( 1 ) );
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_PROCESSINGINSTRUCTION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQXMLNAME( 1 ) && ISCHAR( 2 ) )
+    if( ISNUMPAR( 2 ) && ISQXMLNAME( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
       obj->processingInstruction( *PQXMLNAME( 1 ), PQSTRING( 2 ) );
