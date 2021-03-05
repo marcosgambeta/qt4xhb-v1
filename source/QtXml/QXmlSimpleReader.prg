@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQXMLINPUTSOURCE( 1 ) && ISLOG( 2 ) )
+    if( ISNUMPAR( 2 ) && ISQXMLINPUTSOURCE( 1 ) && HB_ISLOG( 2 ) )
     {
 #endif
       RBOOL( obj->parse( PQXMLINPUTSOURCE( 1 ), PBOOL( 2 ) ) );

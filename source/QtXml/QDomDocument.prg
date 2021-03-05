@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NEW )
   {
     QDomDocument_new1();
   }
-  else if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
     QDomDocument_new2();
   }
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEATTRIBUTE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       QDomAttr * ptr = new QDomAttr( obj->createAttribute( PQSTRING( 1 ) ) );
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEATTRIBUTENS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISCHAR( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
       QDomAttr * ptr = new QDomAttr( obj->createAttributeNS( PQSTRING( 1 ), PQSTRING( 2 ) ) );
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATECDATASECTION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       QDomCDATASection * ptr = new QDomCDATASection( obj->createCDATASection( PQSTRING( 1 ) ) );
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATECOMMENT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       QDomComment * ptr = new QDomComment( obj->createComment( PQSTRING( 1 ) ) );
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEELEMENT )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       QDomElement * ptr = new QDomElement( obj->createElement( PQSTRING( 1 ) ) );
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEELEMENTNS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISCHAR( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
       QDomElement * ptr = new QDomElement( obj->createElementNS( PQSTRING( 1 ), PQSTRING( 2 ) ) );
@@ -335,7 +335,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEENTITYREFERENCE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       QDomEntityReference * ptr = new QDomEntityReference( obj->createEntityReference( PQSTRING( 1 ) ) );
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEPROCESSINGINSTRUCTION )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISCHAR( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
       QDomProcessingInstruction * ptr = new QDomProcessingInstruction( obj->createProcessingInstruction( PQSTRING( 1 ), PQSTRING( 2 ) ) );
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATETEXTNODE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       QDomText * ptr = new QDomText( obj->createTextNode( PQSTRING( 1 ) ) );
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTBYID )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       QDomElement * ptr = new QDomElement( obj->elementById( PQSTRING( 1 ) ) );
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTSBYTAGNAME )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       QDomNodeList * ptr = new QDomNodeList( obj->elementsByTagName( PQSTRING( 1 ) ) );
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTSBYTAGNAMENS )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISCHAR( 1 ) && ISCHAR( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
       QDomNodeList * ptr = new QDomNodeList( obj->elementsByTagNameNS( PQSTRING( 1 ), PQSTRING( 2 ) ) );
@@ -560,7 +560,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_IMPORTNODE )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQDOMNODE( 1 ) && ISLOG( 2 ) )
+    if( ISNUMPAR( 2 ) && ISQDOMNODE( 1 ) && HB_ISLOG( 2 ) )
     {
 #endif
       QDomNode * ptr = new QDomNode( obj->importNode( *PQDOMNODE( 1 ), PBOOL( 2 ) ) );
@@ -737,35 +737,35 @@ void QDomDocument_setContent8()
 
 HB_FUNC_STATIC( QDOMDOCUMENT_SETCONTENT )
 {
-  if( ISBETWEEN( 2, 5 ) && ISQBYTEARRAY( 1 ) && ISLOG( 2 ) && ( ISCHAR( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) && ( ISNUM( 5 ) || ISNIL( 5 ) ) )
+  if( ISBETWEEN( 2, 5 ) && ISQBYTEARRAY( 1 ) && HB_ISLOG( 2 ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) )
   {
     QDomDocument_setContent1();
   }
-  else if( ISBETWEEN( 2, 5 ) && ISCHAR( 1 ) && ISLOG( 2 ) && ( ISCHAR( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) && ( ISNUM( 5 ) || ISNIL( 5 ) ) )
+  else if( ISBETWEEN( 2, 5 ) && HB_ISCHAR( 1 ) && HB_ISLOG( 2 ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) )
   {
     QDomDocument_setContent2();
   }
-  else if( ISBETWEEN( 2, 5 ) && ISQIODEVICE( 1 ) && ISLOG( 2 ) && ( ISCHAR( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) && ( ISNUM( 5 ) || ISNIL( 5 ) ) )
+  else if( ISBETWEEN( 2, 5 ) && ISQIODEVICE( 1 ) && HB_ISLOG( 2 ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) )
   {
     QDomDocument_setContent3();
   }
-  else if( ISBETWEEN( 2, 5 ) && ISQXMLINPUTSOURCE( 1 ) && ISLOG( 2 ) && ( ISCHAR( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) && ( ISNUM( 5 ) || ISNIL( 5 ) ) )
+  else if( ISBETWEEN( 2, 5 ) && ISQXMLINPUTSOURCE( 1 ) && HB_ISLOG( 2 ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) )
   {
     QDomDocument_setContent4();
   }
-  else if( ISBETWEEN( 1, 4 ) && ISCHAR( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
+  else if( ISBETWEEN( 1, 4 ) && HB_ISCHAR( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
     QDomDocument_setContent5();
   }
-  else if( ISBETWEEN( 1, 4 ) && ISQBYTEARRAY( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
+  else if( ISBETWEEN( 1, 4 ) && ISQBYTEARRAY( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
     QDomDocument_setContent6();
   }
-  else if( ISBETWEEN( 1, 4 ) && ISQIODEVICE( 1 ) && ( ISCHAR( 2 ) || ISNIL( 2 ) ) && ( ISNUM( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) )
+  else if( ISBETWEEN( 1, 4 ) && ISQIODEVICE( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
     QDomDocument_setContent7();
   }
-  else if( ISBETWEEN( 2, 5 ) && ISQXMLINPUTSOURCE( 1 ) && ISQXMLREADER( 2 ) && ( ISCHAR( 3 ) || ISNIL( 3 ) ) && ( ISNUM( 4 ) || ISNIL( 4 ) ) && ( ISNUM( 5 ) || ISNIL( 5 ) ) )
+  else if( ISBETWEEN( 2, 5 ) && ISQXMLINPUTSOURCE( 1 ) && ISQXMLREADER( 2 ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) )
   {
     QDomDocument_setContent8();
   }
@@ -785,7 +785,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_TOBYTEARRAY )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->toByteArray( OPINT( 1, 1 ) ) );
@@ -810,7 +810,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_TOSTRING )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( ISNUM( 1 ) || ISNIL( 1 ) ) )
+    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
     {
 #endif
       RQSTRING( obj->toString( OPINT( 1, 1 ) ) );

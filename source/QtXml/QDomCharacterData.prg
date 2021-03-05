@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_APPENDDATA )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->appendData( PQSTRING( 1 ) );
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_DELETEDATA )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
       obj->deleteData( PUNSIGNEDLONG( 1 ), PUNSIGNEDLONG( 2 ) );
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_INSERTDATA )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISCHAR( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) )
     {
 #endif
       obj->insertData( PUNSIGNEDLONG( 1 ), PQSTRING( 2 ) );
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_REPLACEDATA )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && ISNUM( 1 ) && ISNUM( 2 ) && ISCHAR( 3 ) )
+    if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) )
     {
 #endif
       obj->replaceData( PUNSIGNEDLONG( 1 ), PUNSIGNEDLONG( 2 ), PQSTRING( 3 ) );
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_SETDATA )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISCHAR( 1 ) )
+    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
     {
 #endif
       obj->setData( PQSTRING( 1 ) );
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_SUBSTRINGDATA )
   if( obj )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISNUM( 1 ) && ISNUM( 2 ) )
+    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
     {
 #endif
       RQSTRING( obj->substringData( PUNSIGNEDLONG( 1 ), PUNSIGNEDLONG( 2 ) ) );
