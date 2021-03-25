@@ -8,7 +8,7 @@
   marcosgambeta AT outlook DOT com
 
   Website:
-  https://github.com/marcosgambeta/qt4xhb
+  https://github.com/magsoftinfo/qt4xhb
 
 */
 
