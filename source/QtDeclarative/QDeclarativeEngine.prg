@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVEENGINE_DELETE )
 {
-  QDeclarativeEngine * obj = static_cast< QDeclarativeEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeEngine * obj = qobject_cast< QDeclarativeEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -117,7 +117,7 @@ void addImageProvider( const QString & providerId, QDeclarativeImageProvider * p
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDIMAGEPROVIDER )
 {
-  QDeclarativeEngine * obj = static_cast< QDeclarativeEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeEngine * obj = qobject_cast< QDeclarativeEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -143,7 +143,7 @@ void addImportPath( const QString & path )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDIMPORTPATH )
 {
-  QDeclarativeEngine * obj = static_cast< QDeclarativeEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeEngine * obj = qobject_cast< QDeclarativeEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -169,7 +169,7 @@ void addPluginPath( const QString & path )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ADDPLUGINPATH )
 {
-  QDeclarativeEngine * obj = static_cast< QDeclarativeEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeEngine * obj = qobject_cast< QDeclarativeEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -195,7 +195,7 @@ QUrl baseUrl() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_BASEURL )
 {
-  QDeclarativeEngine * obj = static_cast< QDeclarativeEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeEngine * obj = qobject_cast< QDeclarativeEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -220,7 +220,7 @@ void clearComponentCache()
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_CLEARCOMPONENTCACHE )
 {
-  QDeclarativeEngine * obj = static_cast< QDeclarativeEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeEngine * obj = qobject_cast< QDeclarativeEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -246,7 +246,7 @@ QDeclarativeImageProvider * imageProvider( const QString & providerId ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_IMAGEPROVIDER )
 {
-  QDeclarativeEngine * obj = static_cast< QDeclarativeEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeEngine * obj = qobject_cast< QDeclarativeEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -271,7 +271,7 @@ QStringList importPathList() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_IMPORTPATHLIST )
 {
-  QDeclarativeEngine * obj = static_cast< QDeclarativeEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeEngine * obj = qobject_cast< QDeclarativeEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -295,7 +295,7 @@ bool importPlugin( const QString & filePath, const QString & uri, QString * erro
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_IMPORTPLUGIN )
 {
-  QDeclarativeEngine * obj = static_cast< QDeclarativeEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeEngine * obj = qobject_cast< QDeclarativeEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -319,7 +319,7 @@ QNetworkAccessManager * networkAccessManager() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGER )
 {
-  QDeclarativeEngine * obj = static_cast< QDeclarativeEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeEngine * obj = qobject_cast< QDeclarativeEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -344,7 +344,7 @@ QDeclarativeNetworkAccessManagerFactory * networkAccessManagerFactory() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGERFACTORY )
 {
-  QDeclarativeEngine * obj = static_cast< QDeclarativeEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeEngine * obj = qobject_cast< QDeclarativeEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -369,7 +369,7 @@ QString offlineStoragePath() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_OFFLINESTORAGEPATH )
 {
-  QDeclarativeEngine * obj = static_cast< QDeclarativeEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeEngine * obj = qobject_cast< QDeclarativeEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -393,7 +393,7 @@ bool outputWarningsToStandardError() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_OUTPUTWARNINGSTOSTANDARDERROR )
 {
-  QDeclarativeEngine * obj = static_cast< QDeclarativeEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeEngine * obj = qobject_cast< QDeclarativeEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -417,7 +417,7 @@ QStringList pluginPathList() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_PLUGINPATHLIST )
 {
-  QDeclarativeEngine * obj = static_cast< QDeclarativeEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeEngine * obj = qobject_cast< QDeclarativeEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -441,7 +441,7 @@ void removeImageProvider( const QString & providerId )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_REMOVEIMAGEPROVIDER )
 {
-  QDeclarativeEngine * obj = static_cast< QDeclarativeEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeEngine * obj = qobject_cast< QDeclarativeEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -467,7 +467,7 @@ QDeclarativeContext * rootContext() const
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ROOTCONTEXT )
 {
-  QDeclarativeEngine * obj = static_cast< QDeclarativeEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeEngine * obj = qobject_cast< QDeclarativeEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -492,7 +492,7 @@ void setBaseUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETBASEURL )
 {
-  QDeclarativeEngine * obj = static_cast< QDeclarativeEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeEngine * obj = qobject_cast< QDeclarativeEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -518,7 +518,7 @@ void setImportPathList( const QStringList & paths )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETIMPORTPATHLIST )
 {
-  QDeclarativeEngine * obj = static_cast< QDeclarativeEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeEngine * obj = qobject_cast< QDeclarativeEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -544,7 +544,7 @@ void setNetworkAccessManagerFactory( QDeclarativeNetworkAccessManagerFactory * f
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETNETWORKACCESSMANAGERFACTORY )
 {
-  QDeclarativeEngine * obj = static_cast< QDeclarativeEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeEngine * obj = qobject_cast< QDeclarativeEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -570,7 +570,7 @@ void setOfflineStoragePath( const QString & dir )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOFFLINESTORAGEPATH )
 {
-  QDeclarativeEngine * obj = static_cast< QDeclarativeEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeEngine * obj = qobject_cast< QDeclarativeEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -596,7 +596,7 @@ void setOutputWarningsToStandardError( bool enabled )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOUTPUTWARNINGSTOSTANDARDERROR )
 {
-  QDeclarativeEngine * obj = static_cast< QDeclarativeEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeEngine * obj = qobject_cast< QDeclarativeEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -622,7 +622,7 @@ void setPluginPathList( const QStringList & paths )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_SETPLUGINPATHLIST )
 {
-  QDeclarativeEngine * obj = static_cast< QDeclarativeEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeEngine * obj = qobject_cast< QDeclarativeEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

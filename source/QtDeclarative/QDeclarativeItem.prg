@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVEITEM_DELETE )
 {
-  QDeclarativeItem * obj = static_cast< QDeclarativeItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeItem * obj = qobject_cast< QDeclarativeItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -101,7 +101,7 @@ qreal baselineOffset() const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_BASELINEOFFSET )
 {
-  QDeclarativeItem * obj = static_cast< QDeclarativeItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeItem * obj = qobject_cast< QDeclarativeItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -125,7 +125,7 @@ QDeclarativeItem * childAt( qreal x, qreal y ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDAT )
 {
-  QDeclarativeItem * obj = static_cast< QDeclarativeItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeItem * obj = qobject_cast< QDeclarativeItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -150,7 +150,7 @@ QRectF childrenRect()
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDRENRECT )
 {
-  QDeclarativeItem * obj = static_cast< QDeclarativeItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeItem * obj = qobject_cast< QDeclarativeItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -175,7 +175,7 @@ bool clip() const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_CLIP )
 {
-  QDeclarativeItem * obj = static_cast< QDeclarativeItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeItem * obj = qobject_cast< QDeclarativeItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -199,7 +199,7 @@ void forceActiveFocus()
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_FORCEACTIVEFOCUS )
 {
-  QDeclarativeItem * obj = static_cast< QDeclarativeItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeItem * obj = qobject_cast< QDeclarativeItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -225,7 +225,7 @@ qreal implicitHeight() const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITHEIGHT )
 {
-  QDeclarativeItem * obj = static_cast< QDeclarativeItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeItem * obj = qobject_cast< QDeclarativeItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -249,7 +249,7 @@ qreal implicitWidth() const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_IMPLICITWIDTH )
 {
-  QDeclarativeItem * obj = static_cast< QDeclarativeItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeItem * obj = qobject_cast< QDeclarativeItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -273,7 +273,7 @@ bool keepMouseGrab() const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_KEEPMOUSEGRAB )
 {
-  QDeclarativeItem * obj = static_cast< QDeclarativeItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeItem * obj = qobject_cast< QDeclarativeItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -297,7 +297,7 @@ QScriptValue mapFromItem( const QScriptValue & item, qreal x, qreal y ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_MAPFROMITEM )
 {
-  QDeclarativeItem * obj = static_cast< QDeclarativeItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeItem * obj = qobject_cast< QDeclarativeItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -322,7 +322,7 @@ QScriptValue mapToItem( const QScriptValue & item, qreal x, qreal y ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_MAPTOITEM )
 {
-  QDeclarativeItem * obj = static_cast< QDeclarativeItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeItem * obj = qobject_cast< QDeclarativeItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -347,7 +347,7 @@ QDeclarativeItem * parentItem() const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_PARENTITEM )
 {
-  QDeclarativeItem * obj = static_cast< QDeclarativeItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeItem * obj = qobject_cast< QDeclarativeItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -372,7 +372,7 @@ void setBaselineOffset( qreal )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETBASELINEOFFSET )
 {
-  QDeclarativeItem * obj = static_cast< QDeclarativeItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeItem * obj = qobject_cast< QDeclarativeItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -398,7 +398,7 @@ void setClip( bool )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETCLIP )
 {
-  QDeclarativeItem * obj = static_cast< QDeclarativeItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeItem * obj = qobject_cast< QDeclarativeItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -424,7 +424,7 @@ void setKeepMouseGrab( bool keep )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETKEEPMOUSEGRAB )
 {
-  QDeclarativeItem * obj = static_cast< QDeclarativeItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeItem * obj = qobject_cast< QDeclarativeItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -450,7 +450,7 @@ void setParentItem( QDeclarativeItem * parent )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETPARENTITEM )
 {
-  QDeclarativeItem * obj = static_cast< QDeclarativeItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeItem * obj = qobject_cast< QDeclarativeItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -476,7 +476,7 @@ void setSmooth( bool smooth )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETSMOOTH )
 {
-  QDeclarativeItem * obj = static_cast< QDeclarativeItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeItem * obj = qobject_cast< QDeclarativeItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -502,7 +502,7 @@ void setTransformOrigin( QDeclarativeItem::TransformOrigin origin )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SETTRANSFORMORIGIN )
 {
-  QDeclarativeItem * obj = static_cast< QDeclarativeItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeItem * obj = qobject_cast< QDeclarativeItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -528,7 +528,7 @@ bool smooth() const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_SMOOTH )
 {
-  QDeclarativeItem * obj = static_cast< QDeclarativeItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeItem * obj = qobject_cast< QDeclarativeItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -552,7 +552,7 @@ QDeclarativeItem::TransformOrigin transformOrigin() const
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_TRANSFORMORIGIN )
 {
-  QDeclarativeItem * obj = static_cast< QDeclarativeItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeItem * obj = qobject_cast< QDeclarativeItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVEVIEW_DELETE )
 {
-  QDeclarativeView * obj = static_cast< QDeclarativeView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeView * obj = qobject_cast< QDeclarativeView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -122,7 +122,7 @@ QDeclarativeEngine * engine() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ENGINE )
 {
-  QDeclarativeView * obj = static_cast< QDeclarativeView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeView * obj = qobject_cast< QDeclarativeView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -147,7 +147,7 @@ QList<QDeclarativeError> errors() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
 {
-  QDeclarativeView * obj = static_cast< QDeclarativeView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeView * obj = qobject_cast< QDeclarativeView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -199,7 +199,7 @@ QSize initialSize() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_INITIALSIZE )
 {
-  QDeclarativeView * obj = static_cast< QDeclarativeView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeView * obj = qobject_cast< QDeclarativeView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -224,7 +224,7 @@ QDeclarativeView::ResizeMode resizeMode() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_RESIZEMODE )
 {
-  QDeclarativeView * obj = static_cast< QDeclarativeView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeView * obj = qobject_cast< QDeclarativeView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -248,7 +248,7 @@ QDeclarativeContext * rootContext() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTCONTEXT )
 {
-  QDeclarativeView * obj = static_cast< QDeclarativeView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeView * obj = qobject_cast< QDeclarativeView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -273,7 +273,7 @@ QGraphicsObject * rootObject() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTOBJECT )
 {
-  QDeclarativeView * obj = static_cast< QDeclarativeView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeView * obj = qobject_cast< QDeclarativeView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -298,7 +298,7 @@ void setResizeMode( QDeclarativeView::ResizeMode )
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_SETRESIZEMODE )
 {
-  QDeclarativeView * obj = static_cast< QDeclarativeView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeView * obj = qobject_cast< QDeclarativeView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -324,7 +324,7 @@ void setSource( const QUrl & url )
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_SETSOURCE )
 {
-  QDeclarativeView * obj = static_cast< QDeclarativeView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeView * obj = qobject_cast< QDeclarativeView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -350,7 +350,7 @@ QUrl source() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_SOURCE )
 {
-  QDeclarativeView * obj = static_cast< QDeclarativeView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeView * obj = qobject_cast< QDeclarativeView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -375,7 +375,7 @@ QDeclarativeView::Status status() const
 */
 HB_FUNC_STATIC( QDECLARATIVEVIEW_STATUS )
 {
-  QDeclarativeView * obj = static_cast< QDeclarativeView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeView * obj = qobject_cast< QDeclarativeView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

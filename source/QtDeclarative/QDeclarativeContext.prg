@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_DELETE )
 {
-  QDeclarativeContext * obj = static_cast< QDeclarativeContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeContext * obj = qobject_cast< QDeclarativeContext * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -114,7 +114,7 @@ QUrl baseUrl() const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_BASEURL )
 {
-  QDeclarativeContext * obj = static_cast< QDeclarativeContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeContext * obj = qobject_cast< QDeclarativeContext * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -139,7 +139,7 @@ QObject * contextObject() const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_CONTEXTOBJECT )
 {
-  QDeclarativeContext * obj = static_cast< QDeclarativeContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeContext * obj = qobject_cast< QDeclarativeContext * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -164,7 +164,7 @@ QVariant contextProperty( const QString & name ) const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_CONTEXTPROPERTY )
 {
-  QDeclarativeContext * obj = static_cast< QDeclarativeContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeContext * obj = qobject_cast< QDeclarativeContext * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -189,7 +189,7 @@ QDeclarativeEngine * engine() const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_ENGINE )
 {
-  QDeclarativeContext * obj = static_cast< QDeclarativeContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeContext * obj = qobject_cast< QDeclarativeContext * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -214,7 +214,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_ISVALID )
 {
-  QDeclarativeContext * obj = static_cast< QDeclarativeContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeContext * obj = qobject_cast< QDeclarativeContext * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -238,7 +238,7 @@ QDeclarativeContext * parentContext() const
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_PARENTCONTEXT )
 {
-  QDeclarativeContext * obj = static_cast< QDeclarativeContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeContext * obj = qobject_cast< QDeclarativeContext * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -263,7 +263,7 @@ QUrl resolvedUrl( const QUrl & src )
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_RESOLVEDURL )
 {
-  QDeclarativeContext * obj = static_cast< QDeclarativeContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeContext * obj = qobject_cast< QDeclarativeContext * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -288,7 +288,7 @@ void setBaseUrl( const QUrl & baseUrl )
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETBASEURL )
 {
-  QDeclarativeContext * obj = static_cast< QDeclarativeContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeContext * obj = qobject_cast< QDeclarativeContext * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -314,7 +314,7 @@ void setContextObject( QObject * object )
 */
 HB_FUNC_STATIC( QDECLARATIVECONTEXT_SETCONTEXTOBJECT )
 {
-  QDeclarativeContext * obj = static_cast< QDeclarativeContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeContext * obj = qobject_cast< QDeclarativeContext * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -340,7 +340,7 @@ void setContextProperty( const QString & name, QObject * value )
 */
 void QDeclarativeContext_setContextProperty1()
 {
-  QDeclarativeContext * obj = static_cast< QDeclarativeContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeContext * obj = qobject_cast< QDeclarativeContext * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -355,7 +355,7 @@ void setContextProperty( const QString & name, const QVariant & value )
 */
 void QDeclarativeContext_setContextProperty2()
 {
-  QDeclarativeContext * obj = static_cast< QDeclarativeContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeContext * obj = qobject_cast< QDeclarativeContext * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

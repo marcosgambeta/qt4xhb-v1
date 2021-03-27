@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_DELETE )
 {
-  QDeclarativeExpression * obj = static_cast< QDeclarativeExpression * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeExpression * obj = qobject_cast< QDeclarativeExpression * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -122,7 +122,7 @@ void clearError()
 */
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CLEARERROR )
 {
-  QDeclarativeExpression * obj = static_cast< QDeclarativeExpression * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeExpression * obj = qobject_cast< QDeclarativeExpression * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -148,7 +148,7 @@ QDeclarativeContext * context() const
 */
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CONTEXT )
 {
-  QDeclarativeExpression * obj = static_cast< QDeclarativeExpression * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeExpression * obj = qobject_cast< QDeclarativeExpression * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -173,7 +173,7 @@ QDeclarativeEngine * engine() const
 */
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ENGINE )
 {
-  QDeclarativeExpression * obj = static_cast< QDeclarativeExpression * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeExpression * obj = qobject_cast< QDeclarativeExpression * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -198,7 +198,7 @@ QDeclarativeError error() const
 */
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ERROR )
 {
-  QDeclarativeExpression * obj = static_cast< QDeclarativeExpression * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeExpression * obj = qobject_cast< QDeclarativeExpression * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -223,7 +223,7 @@ QVariant evaluate( bool * valueIsUndefined = 0 )
 */
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EVALUATE )
 {
-  QDeclarativeExpression * obj = static_cast< QDeclarativeExpression * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeExpression * obj = qobject_cast< QDeclarativeExpression * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -250,7 +250,7 @@ QString expression() const
 */
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EXPRESSION )
 {
-  QDeclarativeExpression * obj = static_cast< QDeclarativeExpression * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeExpression * obj = qobject_cast< QDeclarativeExpression * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -274,7 +274,7 @@ bool hasError() const
 */
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_HASERROR )
 {
-  QDeclarativeExpression * obj = static_cast< QDeclarativeExpression * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeExpression * obj = qobject_cast< QDeclarativeExpression * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -298,7 +298,7 @@ int lineNumber() const
 */
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_LINENUMBER )
 {
-  QDeclarativeExpression * obj = static_cast< QDeclarativeExpression * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeExpression * obj = qobject_cast< QDeclarativeExpression * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -322,7 +322,7 @@ bool notifyOnValueChanged() const
 */
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NOTIFYONVALUECHANGED )
 {
-  QDeclarativeExpression * obj = static_cast< QDeclarativeExpression * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeExpression * obj = qobject_cast< QDeclarativeExpression * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -346,7 +346,7 @@ QObject * scopeObject() const
 */
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SCOPEOBJECT )
 {
-  QDeclarativeExpression * obj = static_cast< QDeclarativeExpression * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeExpression * obj = qobject_cast< QDeclarativeExpression * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -371,7 +371,7 @@ void setExpression( const QString & expression )
 */
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETEXPRESSION )
 {
-  QDeclarativeExpression * obj = static_cast< QDeclarativeExpression * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeExpression * obj = qobject_cast< QDeclarativeExpression * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -397,7 +397,7 @@ void setNotifyOnValueChanged( bool notifyOnChange )
 */
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETNOTIFYONVALUECHANGED )
 {
-  QDeclarativeExpression * obj = static_cast< QDeclarativeExpression * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeExpression * obj = qobject_cast< QDeclarativeExpression * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -423,7 +423,7 @@ void setSourceLocation( const QString & url, int line )
 */
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SETSOURCELOCATION )
 {
-  QDeclarativeExpression * obj = static_cast< QDeclarativeExpression * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeExpression * obj = qobject_cast< QDeclarativeExpression * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -449,7 +449,7 @@ QString sourceFile() const
 */
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SOURCEFILE )
 {
-  QDeclarativeExpression * obj = static_cast< QDeclarativeExpression * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeExpression * obj = qobject_cast< QDeclarativeExpression * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

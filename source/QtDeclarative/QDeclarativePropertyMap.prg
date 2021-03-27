@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_NEW )
 
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_DELETE )
 {
-  QDeclarativePropertyMap * obj = static_cast< QDeclarativePropertyMap * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativePropertyMap * obj = qobject_cast< QDeclarativePropertyMap * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -91,7 +91,7 @@ void clear( const QString & key )
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_CLEAR )
 {
-  QDeclarativePropertyMap * obj = static_cast< QDeclarativePropertyMap * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativePropertyMap * obj = qobject_cast< QDeclarativePropertyMap * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -117,7 +117,7 @@ bool contains( const QString & key ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_CONTAINS )
 {
-  QDeclarativePropertyMap * obj = static_cast< QDeclarativePropertyMap * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativePropertyMap * obj = qobject_cast< QDeclarativePropertyMap * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -141,7 +141,7 @@ int count() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_COUNT )
 {
-  QDeclarativePropertyMap * obj = static_cast< QDeclarativePropertyMap * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativePropertyMap * obj = qobject_cast< QDeclarativePropertyMap * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -165,7 +165,7 @@ void insert( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_INSERT )
 {
-  QDeclarativePropertyMap * obj = static_cast< QDeclarativePropertyMap * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativePropertyMap * obj = qobject_cast< QDeclarativePropertyMap * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -191,7 +191,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_ISEMPTY )
 {
-  QDeclarativePropertyMap * obj = static_cast< QDeclarativePropertyMap * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativePropertyMap * obj = qobject_cast< QDeclarativePropertyMap * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -215,7 +215,7 @@ QStringList keys() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_KEYS )
 {
-  QDeclarativePropertyMap * obj = static_cast< QDeclarativePropertyMap * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativePropertyMap * obj = qobject_cast< QDeclarativePropertyMap * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -239,7 +239,7 @@ int size() const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_SIZE )
 {
-  QDeclarativePropertyMap * obj = static_cast< QDeclarativePropertyMap * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativePropertyMap * obj = qobject_cast< QDeclarativePropertyMap * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -263,7 +263,7 @@ QVariant value( const QString & key ) const
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_VALUE )
 {
-  QDeclarativePropertyMap * obj = static_cast< QDeclarativePropertyMap * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativePropertyMap * obj = qobject_cast< QDeclarativePropertyMap * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
