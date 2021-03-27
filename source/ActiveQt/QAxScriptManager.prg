@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_NEW )
 
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_DELETE )
 {
-  QAxScriptManager * obj = static_cast< QAxScriptManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxScriptManager * obj = qobject_cast< QAxScriptManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -94,7 +94,7 @@ void addObject( QAxBase * object )
 */
 void QAxScriptManager_addObject1()
 {
-  QAxScriptManager * obj = static_cast< QAxScriptManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxScriptManager * obj = qobject_cast< QAxScriptManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -109,7 +109,7 @@ void addObject( QObject * object )
 */
 void QAxScriptManager_addObject2()
 {
-  QAxScriptManager * obj = static_cast< QAxScriptManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxScriptManager * obj = qobject_cast< QAxScriptManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -140,7 +140,7 @@ QVariant call( const QString & function, const QVariant & var1 = QVariant(), con
 */
 void QAxScriptManager_call1()
 {
-  QAxScriptManager * obj = static_cast< QAxScriptManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxScriptManager * obj = qobject_cast< QAxScriptManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -154,7 +154,7 @@ QVariant call( const QString & function, QList<QVariant> & arguments )
 */
 void QAxScriptManager_call2()
 {
-  QAxScriptManager * obj = static_cast< QAxScriptManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxScriptManager * obj = qobject_cast< QAxScriptManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -184,7 +184,7 @@ QStringList functions( QAxScript::FunctionFlags flags = QAxScript::FunctionNames
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_FUNCTIONS )
 {
-  QAxScriptManager * obj = static_cast< QAxScriptManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxScriptManager * obj = qobject_cast< QAxScriptManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -208,7 +208,7 @@ QAxScript * load( const QString & code, const QString & name, const QString & la
 */
 void QAxScriptManager_load1()
 {
-  QAxScriptManager * obj = static_cast< QAxScriptManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxScriptManager * obj = qobject_cast< QAxScriptManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -222,7 +222,7 @@ QAxScript * load( const QString & file, const QString & name )
 */
 void QAxScriptManager_load2()
 {
-  QAxScriptManager * obj = static_cast< QAxScriptManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxScriptManager * obj = qobject_cast< QAxScriptManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -252,7 +252,7 @@ QAxScript * script( const QString & name ) const
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPT )
 {
-  QAxScriptManager * obj = static_cast< QAxScriptManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxScriptManager * obj = qobject_cast< QAxScriptManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -277,7 +277,7 @@ QStringList scriptNames() const
 */
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPTNAMES )
 {
-  QAxScriptManager * obj = static_cast< QAxScriptManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxScriptManager * obj = qobject_cast< QAxScriptManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

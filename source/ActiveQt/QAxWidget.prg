@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QAXWIDGET_NEW )
 
 HB_FUNC_STATIC( QAXWIDGET_DELETE )
 {
-  QAxWidget * obj = static_cast< QAxWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxWidget * obj = qobject_cast< QAxWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -139,7 +139,7 @@ virtual QAxAggregated * createAggregate()
 */
 HB_FUNC_STATIC( QAXWIDGET_CREATEAGGREGATE )
 {
-  QAxWidget * obj = static_cast< QAxWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxWidget * obj = qobject_cast< QAxWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -164,7 +164,7 @@ bool doVerb( const QString & verb )
 */
 HB_FUNC_STATIC( QAXWIDGET_DOVERB )
 {
-  QAxWidget * obj = static_cast< QAxWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxWidget * obj = qobject_cast< QAxWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -188,7 +188,7 @@ virtual void clear()
 */
 HB_FUNC_STATIC( QAXWIDGET_CLEAR )
 {
-  QAxWidget * obj = static_cast< QAxWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxWidget * obj = qobject_cast< QAxWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -214,7 +214,7 @@ virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QAXWIDGET_MINIMUMSIZEHINT )
 {
-  QAxWidget * obj = static_cast< QAxWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxWidget * obj = qobject_cast< QAxWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -239,7 +239,7 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QAXWIDGET_SIZEHINT )
 {
-  QAxWidget * obj = static_cast< QAxWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxWidget * obj = qobject_cast< QAxWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -264,7 +264,7 @@ QVariant asVariant() const
 */
 HB_FUNC_STATIC( QAXWIDGET_ASVARIANT )
 {
-  QAxWidget * obj = static_cast< QAxWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxWidget * obj = qobject_cast< QAxWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -289,7 +289,7 @@ QString control() const
 */
 HB_FUNC_STATIC( QAXWIDGET_CONTROL )
 {
-  QAxWidget * obj = static_cast< QAxWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxWidget * obj = qobject_cast< QAxWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -313,7 +313,7 @@ void disableClassInfo()
 */
 HB_FUNC_STATIC( QAXWIDGET_DISABLECLASSINFO )
 {
-  QAxWidget * obj = static_cast< QAxWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxWidget * obj = qobject_cast< QAxWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -339,7 +339,7 @@ void disableEventSink()
 */
 HB_FUNC_STATIC( QAXWIDGET_DISABLEEVENTSINK )
 {
-  QAxWidget * obj = static_cast< QAxWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxWidget * obj = qobject_cast< QAxWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -365,7 +365,7 @@ void disableMetaObject()
 */
 HB_FUNC_STATIC( QAXWIDGET_DISABLEMETAOBJECT )
 {
-  QAxWidget * obj = static_cast< QAxWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxWidget * obj = qobject_cast< QAxWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -391,7 +391,7 @@ QVariant dynamicCall( const char * function, const QVariant & var1 = QVariant(),
 */
 void QAxWidget_dynamicCall1()
 {
-  QAxWidget * obj = static_cast< QAxWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxWidget * obj = qobject_cast< QAxWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -405,7 +405,7 @@ QVariant dynamicCall( const char * function, QList<QVariant> & vars )
 */
 void QAxWidget_dynamicCall2()
 {
-  QAxWidget * obj = static_cast< QAxWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxWidget * obj = qobject_cast< QAxWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -435,7 +435,7 @@ QString generateDocumentation()
 */
 HB_FUNC_STATIC( QAXWIDGET_GENERATEDOCUMENTATION )
 {
-  QAxWidget * obj = static_cast< QAxWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxWidget * obj = qobject_cast< QAxWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -459,7 +459,7 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QAXWIDGET_ISNULL )
 {
-  QAxWidget * obj = static_cast< QAxWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxWidget * obj = qobject_cast< QAxWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -483,7 +483,7 @@ virtual bool propertyWritable( const char * prop ) const
 */
 HB_FUNC_STATIC( QAXWIDGET_PROPERTYWRITABLE )
 {
-  QAxWidget * obj = static_cast< QAxWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxWidget * obj = qobject_cast< QAxWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -507,7 +507,7 @@ QAxObject * querySubObject( const char * name, const QVariant & var1 = QVariant(
 */
 void QAxWidget_querySubObject1()
 {
-  QAxWidget * obj = static_cast< QAxWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxWidget * obj = qobject_cast< QAxWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -521,7 +521,7 @@ QAxObject * querySubObject( const char * name, QList<QVariant> & vars )
 */
 void QAxWidget_querySubObject2()
 {
-  QAxWidget * obj = static_cast< QAxWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxWidget * obj = qobject_cast< QAxWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -551,7 +551,7 @@ bool setControl( const QString & )
 */
 HB_FUNC_STATIC( QAXWIDGET_SETCONTROL )
 {
-  QAxWidget * obj = static_cast< QAxWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxWidget * obj = qobject_cast< QAxWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -575,7 +575,7 @@ virtual void setPropertyWritable( const char * prop, bool ok )
 */
 HB_FUNC_STATIC( QAXWIDGET_SETPROPERTYWRITABLE )
 {
-  QAxWidget * obj = static_cast< QAxWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxWidget * obj = qobject_cast< QAxWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -601,7 +601,7 @@ QStringList verbs() const
 */
 HB_FUNC_STATIC( QAXWIDGET_VERBS )
 {
-  QAxWidget * obj = static_cast< QAxWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxWidget * obj = qobject_cast< QAxWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
