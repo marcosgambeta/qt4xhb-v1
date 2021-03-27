@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QWIDGETACTION_NEW )
 
 HB_FUNC_STATIC( QWIDGETACTION_DELETE )
 {
-  QWidgetAction * obj = static_cast< QWidgetAction * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWidgetAction * obj = qobject_cast< QWidgetAction * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -85,7 +85,7 @@ QWidget * defaultWidget() const
 */
 HB_FUNC_STATIC( QWIDGETACTION_DEFAULTWIDGET )
 {
-  QWidgetAction * obj = static_cast< QWidgetAction * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWidgetAction * obj = qobject_cast< QWidgetAction * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -110,7 +110,7 @@ void releaseWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QWIDGETACTION_RELEASEWIDGET )
 {
-  QWidgetAction * obj = static_cast< QWidgetAction * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWidgetAction * obj = qobject_cast< QWidgetAction * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -136,7 +136,7 @@ QWidget * requestWidget( QWidget * parent )
 */
 HB_FUNC_STATIC( QWIDGETACTION_REQUESTWIDGET )
 {
-  QWidgetAction * obj = static_cast< QWidgetAction * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWidgetAction * obj = qobject_cast< QWidgetAction * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -161,7 +161,7 @@ void setDefaultWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QWIDGETACTION_SETDEFAULTWIDGET )
 {
-  QWidgetAction * obj = static_cast< QWidgetAction * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWidgetAction * obj = qobject_cast< QWidgetAction * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

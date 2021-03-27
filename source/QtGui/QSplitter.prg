@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QSPLITTER_NEW )
 
 HB_FUNC_STATIC( QSPLITTER_DELETE )
 {
-  QSplitter * obj = static_cast< QSplitter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSplitter * obj = qobject_cast< QSplitter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -129,7 +129,7 @@ void addWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QSPLITTER_ADDWIDGET )
 {
-  QSplitter * obj = static_cast< QSplitter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSplitter * obj = qobject_cast< QSplitter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -155,7 +155,7 @@ bool childrenCollapsible() const
 */
 HB_FUNC_STATIC( QSPLITTER_CHILDRENCOLLAPSIBLE )
 {
-  QSplitter * obj = static_cast< QSplitter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSplitter * obj = qobject_cast< QSplitter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -179,7 +179,7 @@ int count() const
 */
 HB_FUNC_STATIC( QSPLITTER_COUNT )
 {
-  QSplitter * obj = static_cast< QSplitter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSplitter * obj = qobject_cast< QSplitter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -203,7 +203,7 @@ void getRange( int index, int * min, int * max ) const
 */
 HB_FUNC_STATIC( QSPLITTER_GETRANGE )
 {
-  QSplitter * obj = static_cast< QSplitter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSplitter * obj = qobject_cast< QSplitter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -233,7 +233,7 @@ QSplitterHandle * handle( int index ) const
 */
 HB_FUNC_STATIC( QSPLITTER_HANDLE )
 {
-  QSplitter * obj = static_cast< QSplitter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSplitter * obj = qobject_cast< QSplitter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -258,7 +258,7 @@ int handleWidth() const
 */
 HB_FUNC_STATIC( QSPLITTER_HANDLEWIDTH )
 {
-  QSplitter * obj = static_cast< QSplitter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSplitter * obj = qobject_cast< QSplitter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -282,7 +282,7 @@ int indexOf( QWidget * widget ) const
 */
 HB_FUNC_STATIC( QSPLITTER_INDEXOF )
 {
-  QSplitter * obj = static_cast< QSplitter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSplitter * obj = qobject_cast< QSplitter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -306,7 +306,7 @@ void insertWidget( int index, QWidget * widget )
 */
 HB_FUNC_STATIC( QSPLITTER_INSERTWIDGET )
 {
-  QSplitter * obj = static_cast< QSplitter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSplitter * obj = qobject_cast< QSplitter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -332,7 +332,7 @@ bool isCollapsible( int index ) const
 */
 HB_FUNC_STATIC( QSPLITTER_ISCOLLAPSIBLE )
 {
-  QSplitter * obj = static_cast< QSplitter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSplitter * obj = qobject_cast< QSplitter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -356,7 +356,7 @@ bool opaqueResize() const
 */
 HB_FUNC_STATIC( QSPLITTER_OPAQUERESIZE )
 {
-  QSplitter * obj = static_cast< QSplitter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSplitter * obj = qobject_cast< QSplitter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -380,7 +380,7 @@ Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QSPLITTER_ORIENTATION )
 {
-  QSplitter * obj = static_cast< QSplitter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSplitter * obj = qobject_cast< QSplitter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -404,7 +404,7 @@ void refresh()
 */
 HB_FUNC_STATIC( QSPLITTER_REFRESH )
 {
-  QSplitter * obj = static_cast< QSplitter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSplitter * obj = qobject_cast< QSplitter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -430,7 +430,7 @@ bool restoreState( const QByteArray & state )
 */
 HB_FUNC_STATIC( QSPLITTER_RESTORESTATE )
 {
-  QSplitter * obj = static_cast< QSplitter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSplitter * obj = qobject_cast< QSplitter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -454,7 +454,7 @@ QByteArray saveState() const
 */
 HB_FUNC_STATIC( QSPLITTER_SAVESTATE )
 {
-  QSplitter * obj = static_cast< QSplitter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSplitter * obj = qobject_cast< QSplitter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -479,7 +479,7 @@ void setChildrenCollapsible( bool )
 */
 HB_FUNC_STATIC( QSPLITTER_SETCHILDRENCOLLAPSIBLE )
 {
-  QSplitter * obj = static_cast< QSplitter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSplitter * obj = qobject_cast< QSplitter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -505,7 +505,7 @@ void setCollapsible( int index, bool collapse )
 */
 HB_FUNC_STATIC( QSPLITTER_SETCOLLAPSIBLE )
 {
-  QSplitter * obj = static_cast< QSplitter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSplitter * obj = qobject_cast< QSplitter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -531,7 +531,7 @@ void setHandleWidth( int )
 */
 HB_FUNC_STATIC( QSPLITTER_SETHANDLEWIDTH )
 {
-  QSplitter * obj = static_cast< QSplitter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSplitter * obj = qobject_cast< QSplitter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -557,7 +557,7 @@ void setOpaqueResize( bool opaque = true )
 */
 HB_FUNC_STATIC( QSPLITTER_SETOPAQUERESIZE )
 {
-  QSplitter * obj = static_cast< QSplitter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSplitter * obj = qobject_cast< QSplitter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -583,7 +583,7 @@ void setOrientation( Qt::Orientation )
 */
 HB_FUNC_STATIC( QSPLITTER_SETORIENTATION )
 {
-  QSplitter * obj = static_cast< QSplitter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSplitter * obj = qobject_cast< QSplitter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -609,7 +609,7 @@ void setSizes( const QList<int> & list )
 */
 HB_FUNC_STATIC( QSPLITTER_SETSIZES )
 {
-  QSplitter * obj = static_cast< QSplitter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSplitter * obj = qobject_cast< QSplitter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -644,7 +644,7 @@ void setStretchFactor( int index, int stretch )
 */
 HB_FUNC_STATIC( QSPLITTER_SETSTRETCHFACTOR )
 {
-  QSplitter * obj = static_cast< QSplitter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSplitter * obj = qobject_cast< QSplitter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -670,7 +670,7 @@ QList<int> sizes() const
 */
 HB_FUNC_STATIC( QSPLITTER_SIZES )
 {
-  QSplitter * obj = static_cast< QSplitter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSplitter * obj = qobject_cast< QSplitter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -695,7 +695,7 @@ QWidget * widget( int index ) const
 */
 HB_FUNC_STATIC( QSPLITTER_WIDGET )
 {
-  QSplitter * obj = static_cast< QSplitter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSplitter * obj = qobject_cast< QSplitter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -720,7 +720,7 @@ virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QSPLITTER_MINIMUMSIZEHINT )
 {
-  QSplitter * obj = static_cast< QSplitter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSplitter * obj = qobject_cast< QSplitter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -745,7 +745,7 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSPLITTER_SIZEHINT )
 {
-  QSplitter * obj = static_cast< QSplitter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSplitter * obj = qobject_cast< QSplitter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

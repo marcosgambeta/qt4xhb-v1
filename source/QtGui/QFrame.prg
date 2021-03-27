@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QFRAME_NEW )
 
 HB_FUNC_STATIC( QFRAME_DELETE )
 {
-  QFrame * obj = static_cast< QFrame * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -96,7 +96,7 @@ QRect frameRect() const
 */
 HB_FUNC_STATIC( QFRAME_FRAMERECT )
 {
-  QFrame * obj = static_cast< QFrame * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -121,7 +121,7 @@ QFrame::Shadow frameShadow() const
 */
 HB_FUNC_STATIC( QFRAME_FRAMESHADOW )
 {
-  QFrame * obj = static_cast< QFrame * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -145,7 +145,7 @@ QFrame::Shape frameShape() const
 */
 HB_FUNC_STATIC( QFRAME_FRAMESHAPE )
 {
-  QFrame * obj = static_cast< QFrame * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -169,7 +169,7 @@ int frameStyle() const
 */
 HB_FUNC_STATIC( QFRAME_FRAMESTYLE )
 {
-  QFrame * obj = static_cast< QFrame * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -193,7 +193,7 @@ int frameWidth() const
 */
 HB_FUNC_STATIC( QFRAME_FRAMEWIDTH )
 {
-  QFrame * obj = static_cast< QFrame * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -217,7 +217,7 @@ int lineWidth() const
 */
 HB_FUNC_STATIC( QFRAME_LINEWIDTH )
 {
-  QFrame * obj = static_cast< QFrame * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -241,7 +241,7 @@ int midLineWidth() const
 */
 HB_FUNC_STATIC( QFRAME_MIDLINEWIDTH )
 {
-  QFrame * obj = static_cast< QFrame * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -265,7 +265,7 @@ void setFrameRect( const QRect & )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMERECT )
 {
-  QFrame * obj = static_cast< QFrame * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -291,7 +291,7 @@ void setFrameShadow( QFrame::Shadow )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMESHADOW )
 {
-  QFrame * obj = static_cast< QFrame * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -317,7 +317,7 @@ void setFrameShape( QFrame::Shape )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMESHAPE )
 {
-  QFrame * obj = static_cast< QFrame * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -343,7 +343,7 @@ void setFrameStyle( int style )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMESTYLE )
 {
-  QFrame * obj = static_cast< QFrame * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -369,7 +369,7 @@ void setLineWidth( int )
 */
 HB_FUNC_STATIC( QFRAME_SETLINEWIDTH )
 {
-  QFrame * obj = static_cast< QFrame * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -395,7 +395,7 @@ void setMidLineWidth( int )
 */
 HB_FUNC_STATIC( QFRAME_SETMIDLINEWIDTH )
 {
-  QFrame * obj = static_cast< QFrame * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -421,7 +421,7 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QFRAME_SIZEHINT )
 {
-  QFrame * obj = static_cast< QFrame * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

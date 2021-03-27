@@ -74,7 +74,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_DELETE )
 {
-  QAbstractProxyModel * obj = static_cast< QAbstractProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -96,7 +96,7 @@ virtual QModelIndex mapFromSource( const QModelIndex & sourceIndex ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPFROMSOURCE )
 {
-  QAbstractProxyModel * obj = static_cast< QAbstractProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -121,7 +121,7 @@ virtual QItemSelection mapSelectionFromSource( const QItemSelection & sourceSele
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPSELECTIONFROMSOURCE )
 {
-  QAbstractProxyModel * obj = static_cast< QAbstractProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -146,7 +146,7 @@ virtual QItemSelection mapSelectionToSource( const QItemSelection & proxySelecti
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPSELECTIONTOSOURCE )
 {
-  QAbstractProxyModel * obj = static_cast< QAbstractProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -171,7 +171,7 @@ virtual QModelIndex mapToSource( const QModelIndex & proxyIndex ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPTOSOURCE )
 {
-  QAbstractProxyModel * obj = static_cast< QAbstractProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -196,7 +196,7 @@ virtual void setSourceModel( QAbstractItemModel * sourceModel )
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SETSOURCEMODEL )
 {
-  QAbstractProxyModel * obj = static_cast< QAbstractProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -222,7 +222,7 @@ QAbstractItemModel * sourceModel() const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SOURCEMODEL )
 {
-  QAbstractProxyModel * obj = static_cast< QAbstractProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -247,7 +247,7 @@ virtual QModelIndex buddy( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_BUDDY )
 {
-  QAbstractProxyModel * obj = static_cast< QAbstractProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -272,7 +272,7 @@ virtual bool canFetchMore( const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_CANFETCHMORE )
 {
-  QAbstractProxyModel * obj = static_cast< QAbstractProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -296,7 +296,7 @@ virtual QVariant data( const QModelIndex & proxyIndex, int role = Qt::DisplayRol
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_DATA )
 {
-  QAbstractProxyModel * obj = static_cast< QAbstractProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -321,7 +321,7 @@ virtual void fetchMore( const QModelIndex & parent )
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_FETCHMORE )
 {
-  QAbstractProxyModel * obj = static_cast< QAbstractProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -347,7 +347,7 @@ virtual Qt::ItemFlags flags( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_FLAGS )
 {
-  QAbstractProxyModel * obj = static_cast< QAbstractProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -371,7 +371,7 @@ virtual bool hasChildren( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_HASCHILDREN )
 {
-  QAbstractProxyModel * obj = static_cast< QAbstractProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -395,7 +395,7 @@ virtual QVariant headerData( int section, Qt::Orientation orientation, int role 
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_HEADERDATA )
 {
-  QAbstractProxyModel * obj = static_cast< QAbstractProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -420,7 +420,7 @@ virtual QMimeData * mimeData( const QModelIndexList & indexes ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MIMEDATA )
 {
-  QAbstractProxyModel * obj = static_cast< QAbstractProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -452,7 +452,7 @@ virtual QStringList mimeTypes() const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MIMETYPES )
 {
-  QAbstractProxyModel * obj = static_cast< QAbstractProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -476,7 +476,7 @@ virtual void revert()
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_REVERT )
 {
-  QAbstractProxyModel * obj = static_cast< QAbstractProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -502,7 +502,7 @@ virtual bool setData( const QModelIndex & index, const QVariant & value, int rol
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SETDATA )
 {
-  QAbstractProxyModel * obj = static_cast< QAbstractProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -526,7 +526,7 @@ virtual bool setHeaderData( int section, Qt::Orientation orientation, const QVar
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SETHEADERDATA )
 {
-  QAbstractProxyModel * obj = static_cast< QAbstractProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -550,7 +550,7 @@ virtual void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SORT )
 {
-  QAbstractProxyModel * obj = static_cast< QAbstractProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -576,7 +576,7 @@ virtual QSize span( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SPAN )
 {
-  QAbstractProxyModel * obj = static_cast< QAbstractProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -601,7 +601,7 @@ virtual bool submit()
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SUBMIT )
 {
-  QAbstractProxyModel * obj = static_cast< QAbstractProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -625,7 +625,7 @@ virtual Qt::DropActions supportedDropActions() const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SUPPORTEDDROPACTIONS )
 {
-  QAbstractProxyModel * obj = static_cast< QAbstractProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

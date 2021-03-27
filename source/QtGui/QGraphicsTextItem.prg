@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DELETE )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -139,7 +139,7 @@ void adjustSize()
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ADJUSTSIZE )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -165,7 +165,7 @@ QColor defaultTextColor() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DEFAULTTEXTCOLOR )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -190,7 +190,7 @@ QTextDocument * document() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DOCUMENT )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -215,7 +215,7 @@ QFont font() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_FONT )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -240,7 +240,7 @@ bool openExternalLinks() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPENEXTERNALLINKS )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -264,7 +264,7 @@ void setDefaultTextColor( const QColor & col )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETDEFAULTTEXTCOLOR )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -290,7 +290,7 @@ void setDocument( QTextDocument * document )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETDOCUMENT )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -316,7 +316,7 @@ void setFont( const QFont & font )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETFONT )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -342,7 +342,7 @@ void setHtml( const QString & text )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETHTML )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -368,7 +368,7 @@ void setOpenExternalLinks( bool open )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETOPENEXTERNALLINKS )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -394,7 +394,7 @@ void setPlainText( const QString & text )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETPLAINTEXT )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -420,7 +420,7 @@ void setTabChangesFocus( bool b )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTABCHANGESFOCUS )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -446,7 +446,7 @@ void setTextCursor( const QTextCursor & cursor )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTCURSOR )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -472,7 +472,7 @@ void setTextInteractionFlags( Qt::TextInteractionFlags flags )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTINTERACTIONFLAGS )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -498,7 +498,7 @@ void setTextWidth( qreal width )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTWIDTH )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -524,7 +524,7 @@ bool tabChangesFocus() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TABCHANGESFOCUS )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -548,7 +548,7 @@ QTextCursor textCursor() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTCURSOR )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -573,7 +573,7 @@ Qt::TextInteractionFlags textInteractionFlags() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTINTERACTIONFLAGS )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -597,7 +597,7 @@ qreal textWidth() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTWIDTH )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -621,7 +621,7 @@ QString toHtml() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOHTML )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -645,7 +645,7 @@ QString toPlainText() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOPLAINTEXT )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -669,7 +669,7 @@ virtual QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_BOUNDINGRECT )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -694,7 +694,7 @@ virtual bool contains( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_CONTAINS )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -718,7 +718,7 @@ virtual bool isObscuredBy( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ISOBSCUREDBY )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -742,7 +742,7 @@ virtual QPainterPath opaqueArea() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPAQUEAREA )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -767,7 +767,7 @@ virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option,
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_PAINT )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -793,7 +793,7 @@ virtual QPainterPath shape() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SHAPE )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -818,7 +818,7 @@ virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TYPE )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

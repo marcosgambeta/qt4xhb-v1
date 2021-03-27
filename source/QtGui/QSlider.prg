@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QSLIDER_NEW )
 
 HB_FUNC_STATIC( QSLIDER_DELETE )
 {
-  QSlider * obj = static_cast< QSlider * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSlider * obj = qobject_cast< QSlider * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -106,7 +106,7 @@ void setTickInterval( int ti )
 */
 HB_FUNC_STATIC( QSLIDER_SETTICKINTERVAL )
 {
-  QSlider * obj = static_cast< QSlider * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSlider * obj = qobject_cast< QSlider * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -132,7 +132,7 @@ void setTickPosition( QSlider::TickPosition position )
 */
 HB_FUNC_STATIC( QSLIDER_SETTICKPOSITION )
 {
-  QSlider * obj = static_cast< QSlider * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSlider * obj = qobject_cast< QSlider * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -158,7 +158,7 @@ int tickInterval() const
 */
 HB_FUNC_STATIC( QSLIDER_TICKINTERVAL )
 {
-  QSlider * obj = static_cast< QSlider * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSlider * obj = qobject_cast< QSlider * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -182,7 +182,7 @@ QSlider::TickPosition tickPosition() const
 */
 HB_FUNC_STATIC( QSLIDER_TICKPOSITION )
 {
-  QSlider * obj = static_cast< QSlider * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSlider * obj = qobject_cast< QSlider * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -206,7 +206,7 @@ virtual bool event( QEvent * event )
 */
 HB_FUNC_STATIC( QSLIDER_EVENT )
 {
-  QSlider * obj = static_cast< QSlider * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSlider * obj = qobject_cast< QSlider * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -230,7 +230,7 @@ virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QSLIDER_MINIMUMSIZEHINT )
 {
-  QSlider * obj = static_cast< QSlider * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSlider * obj = qobject_cast< QSlider * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -255,7 +255,7 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSLIDER_SIZEHINT )
 {
-  QSlider * obj = static_cast< QSlider * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSlider * obj = qobject_cast< QSlider * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

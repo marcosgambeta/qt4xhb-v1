@@ -45,7 +45,7 @@ RETURN
 
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_DELETE )
 {
-  QImageIOPlugin * obj = static_cast< QImageIOPlugin * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QImageIOPlugin * obj = qobject_cast< QImageIOPlugin * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -67,7 +67,7 @@ virtual QImageIOPlugin::Capabilities capabilities( QIODevice * device, const QBy
 */
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_CAPABILITIES )
 {
-  QImageIOPlugin * obj = static_cast< QImageIOPlugin * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QImageIOPlugin * obj = qobject_cast< QImageIOPlugin * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -91,7 +91,7 @@ virtual QImageIOHandler * create( QIODevice * device, const QByteArray & format 
 */
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_CREATE )
 {
-  QImageIOPlugin * obj = static_cast< QImageIOPlugin * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QImageIOPlugin * obj = qobject_cast< QImageIOPlugin * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -116,7 +116,7 @@ virtual QStringList keys() const = 0
 */
 HB_FUNC_STATIC( QIMAGEIOPLUGIN_KEYS )
 {
-  QImageIOPlugin * obj = static_cast< QImageIOPlugin * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QImageIOPlugin * obj = qobject_cast< QImageIOPlugin * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

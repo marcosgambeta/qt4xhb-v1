@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_NEW )
 
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_DELETE )
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -115,7 +115,7 @@ void addMapping( QWidget * widget, int section )
 */
 void QDataWidgetMapper_addMapping1()
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -130,7 +130,7 @@ void addMapping( QWidget * widget, int section, const QByteArray & propertyName 
 */
 void QDataWidgetMapper_addMapping2()
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -161,7 +161,7 @@ void clearMapping()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_CLEARMAPPING )
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -187,7 +187,7 @@ int currentIndex() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_CURRENTINDEX )
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -211,7 +211,7 @@ QAbstractItemDelegate * itemDelegate() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ITEMDELEGATE )
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -236,7 +236,7 @@ QByteArray mappedPropertyName( QWidget * widget ) const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDPROPERTYNAME )
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -261,7 +261,7 @@ int mappedSection( QWidget * widget ) const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDSECTION )
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -285,7 +285,7 @@ QWidget * mappedWidgetAt( int section ) const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDWIDGETAT )
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -310,7 +310,7 @@ QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_MODEL )
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -335,7 +335,7 @@ Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ORIENTATION )
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -359,7 +359,7 @@ void removeMapping( QWidget * widget )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_REMOVEMAPPING )
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -385,7 +385,7 @@ QModelIndex rootIndex() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ROOTINDEX )
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -410,7 +410,7 @@ void setItemDelegate( QAbstractItemDelegate * delegate )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETITEMDELEGATE )
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -436,7 +436,7 @@ void setModel( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETMODEL )
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -462,7 +462,7 @@ void setOrientation( Qt::Orientation aOrientation )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETORIENTATION )
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -488,7 +488,7 @@ void setRootIndex( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETROOTINDEX )
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -514,7 +514,7 @@ void setSubmitPolicy( QDataWidgetMapper::SubmitPolicy policy )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETSUBMITPOLICY )
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -540,7 +540,7 @@ QDataWidgetMapper::SubmitPolicy submitPolicy() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMITPOLICY )
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -564,7 +564,7 @@ void revert()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_REVERT )
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -590,7 +590,7 @@ virtual void setCurrentIndex( int index )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETCURRENTINDEX )
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -616,7 +616,7 @@ void setCurrentModelIndex( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETCURRENTMODELINDEX )
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -642,7 +642,7 @@ bool submit()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMIT )
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -666,7 +666,7 @@ void toFirst()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOFIRST )
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -692,7 +692,7 @@ void toLast()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOLAST )
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -718,7 +718,7 @@ void toNext()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_TONEXT )
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -744,7 +744,7 @@ void toPrevious()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOPREVIOUS )
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

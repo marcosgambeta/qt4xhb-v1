@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QWORKSPACE_NEW )
 
 HB_FUNC_STATIC( QWORKSPACE_DELETE )
 {
-  QWorkspace * obj = static_cast< QWorkspace * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWorkspace * obj = qobject_cast< QWorkspace * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -101,7 +101,7 @@ QWidget * activeWindow() const
 */
 HB_FUNC_STATIC( QWORKSPACE_ACTIVEWINDOW )
 {
-  QWorkspace * obj = static_cast< QWorkspace * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWorkspace * obj = qobject_cast< QWorkspace * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -126,7 +126,7 @@ QWidget * addWindow( QWidget * w, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC( QWORKSPACE_ADDWINDOW )
 {
-  QWorkspace * obj = static_cast< QWorkspace * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWorkspace * obj = qobject_cast< QWorkspace * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -151,7 +151,7 @@ QBrush background() const
 */
 HB_FUNC_STATIC( QWORKSPACE_BACKGROUND )
 {
-  QWorkspace * obj = static_cast< QWorkspace * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWorkspace * obj = qobject_cast< QWorkspace * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -176,7 +176,7 @@ bool scrollBarsEnabled() const
 */
 HB_FUNC_STATIC( QWORKSPACE_SCROLLBARSENABLED )
 {
-  QWorkspace * obj = static_cast< QWorkspace * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWorkspace * obj = qobject_cast< QWorkspace * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -200,7 +200,7 @@ void setBackground( const QBrush & background )
 */
 HB_FUNC_STATIC( QWORKSPACE_SETBACKGROUND )
 {
-  QWorkspace * obj = static_cast< QWorkspace * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWorkspace * obj = qobject_cast< QWorkspace * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -226,7 +226,7 @@ void setScrollBarsEnabled( bool enable )
 */
 HB_FUNC_STATIC( QWORKSPACE_SETSCROLLBARSENABLED )
 {
-  QWorkspace * obj = static_cast< QWorkspace * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWorkspace * obj = qobject_cast< QWorkspace * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -252,7 +252,7 @@ QWidgetList windowList( QWorkspace::WindowOrder order = QWorkspace::CreationOrde
 */
 HB_FUNC_STATIC( QWORKSPACE_WINDOWLIST )
 {
-  QWorkspace * obj = static_cast< QWorkspace * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWorkspace * obj = qobject_cast< QWorkspace * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -300,7 +300,7 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QWORKSPACE_SIZEHINT )
 {
-  QWorkspace * obj = static_cast< QWorkspace * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWorkspace * obj = qobject_cast< QWorkspace * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -325,7 +325,7 @@ void activateNextWindow()
 */
 HB_FUNC_STATIC( QWORKSPACE_ACTIVATENEXTWINDOW )
 {
-  QWorkspace * obj = static_cast< QWorkspace * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWorkspace * obj = qobject_cast< QWorkspace * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -351,7 +351,7 @@ void activatePreviousWindow()
 */
 HB_FUNC_STATIC( QWORKSPACE_ACTIVATEPREVIOUSWINDOW )
 {
-  QWorkspace * obj = static_cast< QWorkspace * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWorkspace * obj = qobject_cast< QWorkspace * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -377,7 +377,7 @@ void arrangeIcons()
 */
 HB_FUNC_STATIC( QWORKSPACE_ARRANGEICONS )
 {
-  QWorkspace * obj = static_cast< QWorkspace * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWorkspace * obj = qobject_cast< QWorkspace * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -403,7 +403,7 @@ void cascade()
 */
 HB_FUNC_STATIC( QWORKSPACE_CASCADE )
 {
-  QWorkspace * obj = static_cast< QWorkspace * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWorkspace * obj = qobject_cast< QWorkspace * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -429,7 +429,7 @@ void closeActiveWindow()
 */
 HB_FUNC_STATIC( QWORKSPACE_CLOSEACTIVEWINDOW )
 {
-  QWorkspace * obj = static_cast< QWorkspace * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWorkspace * obj = qobject_cast< QWorkspace * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -455,7 +455,7 @@ void closeAllWindows()
 */
 HB_FUNC_STATIC( QWORKSPACE_CLOSEALLWINDOWS )
 {
-  QWorkspace * obj = static_cast< QWorkspace * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWorkspace * obj = qobject_cast< QWorkspace * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -481,7 +481,7 @@ void setActiveWindow( QWidget * w )
 */
 HB_FUNC_STATIC( QWORKSPACE_SETACTIVEWINDOW )
 {
-  QWorkspace * obj = static_cast< QWorkspace * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWorkspace * obj = qobject_cast< QWorkspace * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -507,7 +507,7 @@ void tile()
 */
 HB_FUNC_STATIC( QWORKSPACE_TILE )
 {
-  QWorkspace * obj = static_cast< QWorkspace * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWorkspace * obj = qobject_cast< QWorkspace * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

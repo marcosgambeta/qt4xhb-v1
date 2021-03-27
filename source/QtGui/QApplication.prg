@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QAPPLICATION_NEW )
 
 HB_FUNC_STATIC( QAPPLICATION_DELETE )
 {
-  QApplication * obj = static_cast< QApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QApplication * obj = qobject_cast< QApplication * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -181,7 +181,7 @@ virtual void commitData( QSessionManager & manager )
 */
 HB_FUNC_STATIC( QAPPLICATION_COMMITDATA )
 {
-  QApplication * obj = static_cast< QApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QApplication * obj = qobject_cast< QApplication * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -207,7 +207,7 @@ QInputContext * inputContext() const
 */
 HB_FUNC_STATIC( QAPPLICATION_INPUTCONTEXT )
 {
-  QApplication * obj = static_cast< QApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QApplication * obj = qobject_cast< QApplication * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -232,7 +232,7 @@ bool isSessionRestored() const
 */
 HB_FUNC_STATIC( QAPPLICATION_ISSESSIONRESTORED )
 {
-  QApplication * obj = static_cast< QApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QApplication * obj = qobject_cast< QApplication * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -256,7 +256,7 @@ virtual void saveState( QSessionManager & manager )
 */
 HB_FUNC_STATIC( QAPPLICATION_SAVESTATE )
 {
-  QApplication * obj = static_cast< QApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QApplication * obj = qobject_cast< QApplication * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -282,7 +282,7 @@ QString sessionId() const
 */
 HB_FUNC_STATIC( QAPPLICATION_SESSIONID )
 {
-  QApplication * obj = static_cast< QApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QApplication * obj = qobject_cast< QApplication * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -306,7 +306,7 @@ QString sessionKey() const
 */
 HB_FUNC_STATIC( QAPPLICATION_SESSIONKEY )
 {
-  QApplication * obj = static_cast< QApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QApplication * obj = qobject_cast< QApplication * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -330,7 +330,7 @@ void setInputContext( QInputContext * inputContext )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETINPUTCONTEXT )
 {
-  QApplication * obj = static_cast< QApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QApplication * obj = qobject_cast< QApplication * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -356,7 +356,7 @@ QString styleSheet() const
 */
 HB_FUNC_STATIC( QAPPLICATION_STYLESHEET )
 {
-  QApplication * obj = static_cast< QApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QApplication * obj = qobject_cast< QApplication * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -380,7 +380,7 @@ virtual bool notify( QObject * receiver, QEvent * e )
 */
 HB_FUNC_STATIC( QAPPLICATION_NOTIFY )
 {
-  QApplication * obj = static_cast< QApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QApplication * obj = qobject_cast< QApplication * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -404,7 +404,7 @@ void aboutQt()
 */
 HB_FUNC_STATIC( QAPPLICATION_ABOUTQT )
 {
-  QApplication * obj = static_cast< QApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QApplication * obj = qobject_cast< QApplication * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -430,7 +430,7 @@ void closeAllWindows()
 */
 HB_FUNC_STATIC( QAPPLICATION_CLOSEALLWINDOWS )
 {
-  QApplication * obj = static_cast< QApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QApplication * obj = qobject_cast< QApplication * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -456,7 +456,7 @@ void setStyleSheet( const QString & sheet )
 */
 HB_FUNC_STATIC( QAPPLICATION_SETSTYLESHEET )
 {
-  QApplication * obj = static_cast< QApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QApplication * obj = qobject_cast< QApplication * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

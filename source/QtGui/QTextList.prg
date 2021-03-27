@@ -52,7 +52,7 @@ RETURN
 
 HB_FUNC_STATIC( QTEXTLIST_DELETE )
 {
-  QTextList * obj = static_cast< QTextList * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextList * obj = qobject_cast< QTextList * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -74,7 +74,7 @@ void add( const QTextBlock & block )
 */
 HB_FUNC_STATIC( QTEXTLIST_ADD )
 {
-  QTextList * obj = static_cast< QTextList * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextList * obj = qobject_cast< QTextList * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -100,7 +100,7 @@ int count() const
 */
 HB_FUNC_STATIC( QTEXTLIST_COUNT )
 {
-  QTextList * obj = static_cast< QTextList * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextList * obj = qobject_cast< QTextList * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -124,7 +124,7 @@ QTextListFormat format() const
 */
 HB_FUNC_STATIC( QTEXTLIST_FORMAT )
 {
-  QTextList * obj = static_cast< QTextList * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextList * obj = qobject_cast< QTextList * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -149,7 +149,7 @@ QTextBlock item( int i ) const
 */
 HB_FUNC_STATIC( QTEXTLIST_ITEM )
 {
-  QTextList * obj = static_cast< QTextList * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextList * obj = qobject_cast< QTextList * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -174,7 +174,7 @@ int itemNumber( const QTextBlock & block ) const
 */
 HB_FUNC_STATIC( QTEXTLIST_ITEMNUMBER )
 {
-  QTextList * obj = static_cast< QTextList * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextList * obj = qobject_cast< QTextList * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -198,7 +198,7 @@ QString itemText( const QTextBlock & block ) const
 */
 HB_FUNC_STATIC( QTEXTLIST_ITEMTEXT )
 {
-  QTextList * obj = static_cast< QTextList * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextList * obj = qobject_cast< QTextList * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -222,7 +222,7 @@ void remove( const QTextBlock & block )
 */
 HB_FUNC_STATIC( QTEXTLIST_REMOVE )
 {
-  QTextList * obj = static_cast< QTextList * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextList * obj = qobject_cast< QTextList * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -248,7 +248,7 @@ void removeItem( int i )
 */
 HB_FUNC_STATIC( QTEXTLIST_REMOVEITEM )
 {
-  QTextList * obj = static_cast< QTextList * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextList * obj = qobject_cast< QTextList * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -274,7 +274,7 @@ void setFormat( const QTextListFormat & format )
 */
 HB_FUNC_STATIC( QTEXTLIST_SETFORMAT )
 {
-  QTextList * obj = static_cast< QTextList * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextList * obj = qobject_cast< QTextList * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

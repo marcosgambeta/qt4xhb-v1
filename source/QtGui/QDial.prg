@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QDIAL_NEW )
 
 HB_FUNC_STATIC( QDIAL_DELETE )
 {
-  QDial * obj = static_cast< QDial * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDial * obj = qobject_cast< QDial * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -90,7 +90,7 @@ int notchSize() const
 */
 HB_FUNC_STATIC( QDIAL_NOTCHSIZE )
 {
-  QDial * obj = static_cast< QDial * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDial * obj = qobject_cast< QDial * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -114,7 +114,7 @@ qreal notchTarget() const
 */
 HB_FUNC_STATIC( QDIAL_NOTCHTARGET )
 {
-  QDial * obj = static_cast< QDial * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDial * obj = qobject_cast< QDial * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -138,7 +138,7 @@ bool notchesVisible() const
 */
 HB_FUNC_STATIC( QDIAL_NOTCHESVISIBLE )
 {
-  QDial * obj = static_cast< QDial * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDial * obj = qobject_cast< QDial * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -162,7 +162,7 @@ void setNotchTarget( double target )
 */
 HB_FUNC_STATIC( QDIAL_SETNOTCHTARGET )
 {
-  QDial * obj = static_cast< QDial * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDial * obj = qobject_cast< QDial * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -188,7 +188,7 @@ bool wrapping() const
 */
 HB_FUNC_STATIC( QDIAL_WRAPPING )
 {
-  QDial * obj = static_cast< QDial * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDial * obj = qobject_cast< QDial * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -212,7 +212,7 @@ virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QDIAL_MINIMUMSIZEHINT )
 {
-  QDial * obj = static_cast< QDial * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDial * obj = qobject_cast< QDial * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -237,7 +237,7 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QDIAL_SIZEHINT )
 {
-  QDial * obj = static_cast< QDial * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDial * obj = qobject_cast< QDial * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -262,7 +262,7 @@ void setNotchesVisible( bool visible )
 */
 HB_FUNC_STATIC( QDIAL_SETNOTCHESVISIBLE )
 {
-  QDial * obj = static_cast< QDial * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDial * obj = qobject_cast< QDial * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -288,7 +288,7 @@ void setWrapping( bool on )
 */
 HB_FUNC_STATIC( QDIAL_SETWRAPPING )
 {
-  QDial * obj = static_cast< QDial * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDial * obj = qobject_cast< QDial * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

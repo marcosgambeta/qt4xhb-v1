@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_NEW )
 
 HB_FUNC_STATIC( QFONTCOMBOBOX_DELETE )
 {
-  QFontComboBox * obj = static_cast< QFontComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFontComboBox * obj = qobject_cast< QFontComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -91,7 +91,7 @@ QFont currentFont() const
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_CURRENTFONT )
 {
-  QFontComboBox * obj = static_cast< QFontComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFontComboBox * obj = qobject_cast< QFontComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -116,7 +116,7 @@ QFontComboBox::FontFilters fontFilters() const
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_FONTFILTERS )
 {
-  QFontComboBox * obj = static_cast< QFontComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFontComboBox * obj = qobject_cast< QFontComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -140,7 +140,7 @@ void setFontFilters( QFontComboBox::FontFilters filters )
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_SETFONTFILTERS )
 {
-  QFontComboBox * obj = static_cast< QFontComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFontComboBox * obj = qobject_cast< QFontComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -166,7 +166,7 @@ void setWritingSystem( QFontDatabase::WritingSystem script )
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_SETWRITINGSYSTEM )
 {
-  QFontComboBox * obj = static_cast< QFontComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFontComboBox * obj = qobject_cast< QFontComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -192,7 +192,7 @@ QFontDatabase::WritingSystem writingSystem() const
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_WRITINGSYSTEM )
 {
-  QFontComboBox * obj = static_cast< QFontComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFontComboBox * obj = qobject_cast< QFontComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -216,7 +216,7 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_SIZEHINT )
 {
-  QFontComboBox * obj = static_cast< QFontComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFontComboBox * obj = qobject_cast< QFontComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -241,7 +241,7 @@ void setCurrentFont( const QFont & font )
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_SETCURRENTFONT )
 {
-  QFontComboBox * obj = static_cast< QFontComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFontComboBox * obj = qobject_cast< QFontComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

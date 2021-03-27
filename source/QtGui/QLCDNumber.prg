@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QLCDNUMBER_NEW )
 
 HB_FUNC_STATIC( QLCDNUMBER_DELETE )
 {
-  QLCDNumber * obj = static_cast< QLCDNumber * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -123,7 +123,7 @@ bool checkOverflow( double num ) const
 */
 HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW1 )
 {
-  QLCDNumber * obj = static_cast< QLCDNumber * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -147,7 +147,7 @@ bool checkOverflow( int num ) const
 */
 HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW2 )
 {
-  QLCDNumber * obj = static_cast< QLCDNumber * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -183,7 +183,7 @@ int digitCount() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_DIGITCOUNT )
 {
-  QLCDNumber * obj = static_cast< QLCDNumber * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -207,7 +207,7 @@ int intValue() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_INTVALUE )
 {
-  QLCDNumber * obj = static_cast< QLCDNumber * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -231,7 +231,7 @@ QLCDNumber::Mode mode() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_MODE )
 {
-  QLCDNumber * obj = static_cast< QLCDNumber * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -255,7 +255,7 @@ QLCDNumber::SegmentStyle segmentStyle() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_SEGMENTSTYLE )
 {
-  QLCDNumber * obj = static_cast< QLCDNumber * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -279,7 +279,7 @@ void setDigitCount( int numDigits )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETDIGITCOUNT )
 {
-  QLCDNumber * obj = static_cast< QLCDNumber * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -305,7 +305,7 @@ void setMode( QLCDNumber::Mode )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETMODE )
 {
-  QLCDNumber * obj = static_cast< QLCDNumber * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -331,7 +331,7 @@ void setSegmentStyle( QLCDNumber::SegmentStyle )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETSEGMENTSTYLE )
 {
-  QLCDNumber * obj = static_cast< QLCDNumber * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -357,7 +357,7 @@ bool smallDecimalPoint() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_SMALLDECIMALPOINT )
 {
-  QLCDNumber * obj = static_cast< QLCDNumber * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -381,7 +381,7 @@ double value() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_VALUE )
 {
-  QLCDNumber * obj = static_cast< QLCDNumber * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -405,7 +405,7 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_SIZEHINT )
 {
-  QLCDNumber * obj = static_cast< QLCDNumber * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -430,7 +430,7 @@ void display( const QString & s )
 */
 HB_FUNC_STATIC( QLCDNUMBER_DISPLAY1 )
 {
-  QLCDNumber * obj = static_cast< QLCDNumber * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -456,7 +456,7 @@ void display( double num )
 */
 HB_FUNC_STATIC( QLCDNUMBER_DISPLAY2 )
 {
-  QLCDNumber * obj = static_cast< QLCDNumber * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -482,7 +482,7 @@ void display( int num )
 */
 HB_FUNC_STATIC( QLCDNUMBER_DISPLAY3 )
 {
-  QLCDNumber * obj = static_cast< QLCDNumber * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -524,7 +524,7 @@ void setBinMode()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETBINMODE )
 {
-  QLCDNumber * obj = static_cast< QLCDNumber * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -550,7 +550,7 @@ void setDecMode()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETDECMODE )
 {
-  QLCDNumber * obj = static_cast< QLCDNumber * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -576,7 +576,7 @@ void setHexMode()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETHEXMODE )
 {
-  QLCDNumber * obj = static_cast< QLCDNumber * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -602,7 +602,7 @@ void setOctMode()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETOCTMODE )
 {
-  QLCDNumber * obj = static_cast< QLCDNumber * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -628,7 +628,7 @@ void setSmallDecimalPoint( bool )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETSMALLDECIMALPOINT )
 {
-  QLCDNumber * obj = static_cast< QLCDNumber * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

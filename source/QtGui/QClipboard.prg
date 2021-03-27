@@ -69,7 +69,7 @@ void clear( QClipboard::Mode mode = QClipboard::Clipboard )
 */
 HB_FUNC_STATIC( QCLIPBOARD_CLEAR )
 {
-  QClipboard * obj = static_cast< QClipboard * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QClipboard * obj = qobject_cast< QClipboard * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -95,7 +95,7 @@ QImage image( QClipboard::Mode mode = QClipboard::Clipboard ) const
 */
 HB_FUNC_STATIC( QCLIPBOARD_IMAGE )
 {
-  QClipboard * obj = static_cast< QClipboard * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QClipboard * obj = qobject_cast< QClipboard * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -120,7 +120,7 @@ const QMimeData * mimeData( QClipboard::Mode mode = QClipboard::Clipboard ) cons
 */
 HB_FUNC_STATIC( QCLIPBOARD_MIMEDATA )
 {
-  QClipboard * obj = static_cast< QClipboard * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QClipboard * obj = qobject_cast< QClipboard * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -145,7 +145,7 @@ bool ownsClipboard() const
 */
 HB_FUNC_STATIC( QCLIPBOARD_OWNSCLIPBOARD )
 {
-  QClipboard * obj = static_cast< QClipboard * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QClipboard * obj = qobject_cast< QClipboard * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -169,7 +169,7 @@ bool ownsFindBuffer() const
 */
 HB_FUNC_STATIC( QCLIPBOARD_OWNSFINDBUFFER )
 {
-  QClipboard * obj = static_cast< QClipboard * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QClipboard * obj = qobject_cast< QClipboard * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -193,7 +193,7 @@ bool ownsSelection() const
 */
 HB_FUNC_STATIC( QCLIPBOARD_OWNSSELECTION )
 {
-  QClipboard * obj = static_cast< QClipboard * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QClipboard * obj = qobject_cast< QClipboard * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -217,7 +217,7 @@ QPixmap pixmap( QClipboard::Mode mode = QClipboard::Clipboard ) const
 */
 HB_FUNC_STATIC( QCLIPBOARD_PIXMAP )
 {
-  QClipboard * obj = static_cast< QClipboard * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QClipboard * obj = qobject_cast< QClipboard * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -242,7 +242,7 @@ void setImage( const QImage & image, QClipboard::Mode mode = QClipboard::Clipboa
 */
 HB_FUNC_STATIC( QCLIPBOARD_SETIMAGE )
 {
-  QClipboard * obj = static_cast< QClipboard * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QClipboard * obj = qobject_cast< QClipboard * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -268,7 +268,7 @@ void setMimeData( QMimeData * src, QClipboard::Mode mode = QClipboard::Clipboard
 */
 HB_FUNC_STATIC( QCLIPBOARD_SETMIMEDATA )
 {
-  QClipboard * obj = static_cast< QClipboard * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QClipboard * obj = qobject_cast< QClipboard * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -294,7 +294,7 @@ void setPixmap( const QPixmap & pixmap, QClipboard::Mode mode = QClipboard::Clip
 */
 HB_FUNC_STATIC( QCLIPBOARD_SETPIXMAP )
 {
-  QClipboard * obj = static_cast< QClipboard * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QClipboard * obj = qobject_cast< QClipboard * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -320,7 +320,7 @@ void setText( const QString & text, QClipboard::Mode mode = QClipboard::Clipboar
 */
 HB_FUNC_STATIC( QCLIPBOARD_SETTEXT )
 {
-  QClipboard * obj = static_cast< QClipboard * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QClipboard * obj = qobject_cast< QClipboard * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -346,7 +346,7 @@ bool supportsFindBuffer() const
 */
 HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSFINDBUFFER )
 {
-  QClipboard * obj = static_cast< QClipboard * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QClipboard * obj = qobject_cast< QClipboard * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -370,7 +370,7 @@ bool supportsSelection() const
 */
 HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSSELECTION )
 {
-  QClipboard * obj = static_cast< QClipboard * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QClipboard * obj = qobject_cast< QClipboard * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -394,7 +394,7 @@ QString text( QClipboard::Mode mode = QClipboard::Clipboard ) const
 */
 void QClipboard_text1()
 {
-  QClipboard * obj = static_cast< QClipboard * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QClipboard * obj = qobject_cast< QClipboard * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -407,7 +407,7 @@ QString text( QString & subtype, QClipboard::Mode mode = QClipboard::Clipboard )
 */
 void QClipboard_text2()
 {
-  QClipboard * obj = static_cast< QClipboard * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QClipboard * obj = qobject_cast< QClipboard * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

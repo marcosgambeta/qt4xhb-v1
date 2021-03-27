@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QLISTVIEW_NEW )
 
 HB_FUNC_STATIC( QLISTVIEW_DELETE )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -117,7 +117,7 @@ int batchSize() const
 */
 HB_FUNC_STATIC( QLISTVIEW_BATCHSIZE )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -141,7 +141,7 @@ void clearPropertyFlags()
 */
 HB_FUNC_STATIC( QLISTVIEW_CLEARPROPERTYFLAGS )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -167,7 +167,7 @@ QListView::Flow flow() const
 */
 HB_FUNC_STATIC( QLISTVIEW_FLOW )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -191,7 +191,7 @@ QSize gridSize() const
 */
 HB_FUNC_STATIC( QLISTVIEW_GRIDSIZE )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -216,7 +216,7 @@ bool isRowHidden( int row ) const
 */
 HB_FUNC_STATIC( QLISTVIEW_ISROWHIDDEN )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -240,7 +240,7 @@ bool isSelectionRectVisible() const
 */
 HB_FUNC_STATIC( QLISTVIEW_ISSELECTIONRECTVISIBLE )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -264,7 +264,7 @@ bool isWrapping() const
 */
 HB_FUNC_STATIC( QLISTVIEW_ISWRAPPING )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -288,7 +288,7 @@ QListView::LayoutMode layoutMode() const
 */
 HB_FUNC_STATIC( QLISTVIEW_LAYOUTMODE )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -312,7 +312,7 @@ int modelColumn() const
 */
 HB_FUNC_STATIC( QLISTVIEW_MODELCOLUMN )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -336,7 +336,7 @@ QListView::Movement movement() const
 */
 HB_FUNC_STATIC( QLISTVIEW_MOVEMENT )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -360,7 +360,7 @@ QListView::ResizeMode resizeMode() const
 */
 HB_FUNC_STATIC( QLISTVIEW_RESIZEMODE )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -384,7 +384,7 @@ void setBatchSize( int batchSize )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETBATCHSIZE )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -410,7 +410,7 @@ void setFlow( QListView::Flow flow )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETFLOW )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -436,7 +436,7 @@ void setGridSize( const QSize & size )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETGRIDSIZE )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -462,7 +462,7 @@ void setLayoutMode( QListView::LayoutMode mode )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETLAYOUTMODE )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -488,7 +488,7 @@ void setModelColumn( int column )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETMODELCOLUMN )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -514,7 +514,7 @@ void setMovement( QListView::Movement movement )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETMOVEMENT )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -540,7 +540,7 @@ void setResizeMode( QListView::ResizeMode mode )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETRESIZEMODE )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -566,7 +566,7 @@ void setRowHidden( int row, bool hide )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETROWHIDDEN )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -592,7 +592,7 @@ void setSelectionRectVisible( bool show )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETSELECTIONRECTVISIBLE )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -618,7 +618,7 @@ void setSpacing( int space )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETSPACING )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -644,7 +644,7 @@ void setUniformItemSizes( bool enable )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETUNIFORMITEMSIZES )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -670,7 +670,7 @@ void setViewMode( QListView::ViewMode mode )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETVIEWMODE )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -696,7 +696,7 @@ void setWordWrap( bool on )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETWORDWRAP )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -722,7 +722,7 @@ void setWrapping( bool enable )
 */
 HB_FUNC_STATIC( QLISTVIEW_SETWRAPPING )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -748,7 +748,7 @@ int spacing() const
 */
 HB_FUNC_STATIC( QLISTVIEW_SPACING )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -772,7 +772,7 @@ bool uniformItemSizes() const
 */
 HB_FUNC_STATIC( QLISTVIEW_UNIFORMITEMSIZES )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -796,7 +796,7 @@ QListView::ViewMode viewMode() const
 */
 HB_FUNC_STATIC( QLISTVIEW_VIEWMODE )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -820,7 +820,7 @@ bool wordWrap() const
 */
 HB_FUNC_STATIC( QLISTVIEW_WORDWRAP )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -844,7 +844,7 @@ virtual QModelIndex indexAt( const QPoint & p ) const
 */
 HB_FUNC_STATIC( QLISTVIEW_INDEXAT )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -869,7 +869,7 @@ virtual void scrollTo( const QModelIndex & index, QListView::ScrollHint hint = Q
 */
 HB_FUNC_STATIC( QLISTVIEW_SCROLLTO )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -895,7 +895,7 @@ virtual QRect visualRect( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QLISTVIEW_VISUALRECT )
 {
-  QListView * obj = static_cast< QListView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

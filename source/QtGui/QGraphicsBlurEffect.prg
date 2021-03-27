@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_DELETE )
 {
-  QGraphicsBlurEffect * obj = static_cast< QGraphicsBlurEffect * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsBlurEffect * obj = qobject_cast< QGraphicsBlurEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -89,7 +89,7 @@ QGraphicsBlurEffect::BlurHints blurHints() const
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURHINTS )
 {
-  QGraphicsBlurEffect * obj = static_cast< QGraphicsBlurEffect * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsBlurEffect * obj = qobject_cast< QGraphicsBlurEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -113,7 +113,7 @@ qreal blurRadius() const
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURRADIUS )
 {
-  QGraphicsBlurEffect * obj = static_cast< QGraphicsBlurEffect * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsBlurEffect * obj = qobject_cast< QGraphicsBlurEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -137,7 +137,7 @@ virtual QRectF boundingRectFor( const QRectF & rect ) const
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR )
 {
-  QGraphicsBlurEffect * obj = static_cast< QGraphicsBlurEffect * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsBlurEffect * obj = qobject_cast< QGraphicsBlurEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -162,7 +162,7 @@ void setBlurHints( QGraphicsBlurEffect::BlurHints hints )
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURHINTS )
 {
-  QGraphicsBlurEffect * obj = static_cast< QGraphicsBlurEffect * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsBlurEffect * obj = qobject_cast< QGraphicsBlurEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -188,7 +188,7 @@ void setBlurRadius( qreal blurRadius )
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURRADIUS )
 {
-  QGraphicsBlurEffect * obj = static_cast< QGraphicsBlurEffect * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsBlurEffect * obj = qobject_cast< QGraphicsBlurEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_NEW )
 
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_DELETE )
 {
-  QMouseEventTransition * obj = static_cast< QMouseEventTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMouseEventTransition * obj = qobject_cast< QMouseEventTransition * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -107,7 +107,7 @@ Qt::MouseButton button() const
 */
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_BUTTON )
 {
-  QMouseEventTransition * obj = static_cast< QMouseEventTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMouseEventTransition * obj = qobject_cast< QMouseEventTransition * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -131,7 +131,7 @@ QPainterPath hitTestPath() const
 */
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_HITTESTPATH )
 {
-  QMouseEventTransition * obj = static_cast< QMouseEventTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMouseEventTransition * obj = qobject_cast< QMouseEventTransition * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -156,7 +156,7 @@ Qt::KeyboardModifiers modifierMask() const
 */
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_MODIFIERMASK )
 {
-  QMouseEventTransition * obj = static_cast< QMouseEventTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMouseEventTransition * obj = qobject_cast< QMouseEventTransition * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -180,7 +180,7 @@ void setButton( Qt::MouseButton button )
 */
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETBUTTON )
 {
-  QMouseEventTransition * obj = static_cast< QMouseEventTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMouseEventTransition * obj = qobject_cast< QMouseEventTransition * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -206,7 +206,7 @@ void setHitTestPath( const QPainterPath & path )
 */
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETHITTESTPATH )
 {
-  QMouseEventTransition * obj = static_cast< QMouseEventTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMouseEventTransition * obj = qobject_cast< QMouseEventTransition * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -232,7 +232,7 @@ void setModifierMask( Qt::KeyboardModifiers modifierMask )
 */
 HB_FUNC_STATIC( QMOUSEEVENTTRANSITION_SETMODIFIERMASK )
 {
-  QMouseEventTransition * obj = static_cast< QMouseEventTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMouseEventTransition * obj = qobject_cast< QMouseEventTransition * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

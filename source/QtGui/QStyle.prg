@@ -78,7 +78,7 @@ RETURN
 
 HB_FUNC_STATIC( QSTYLE_DELETE )
 {
-  QStyle * obj = static_cast< QStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyle * obj = qobject_cast< QStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -100,7 +100,7 @@ int combinedLayoutSpacing( QSizePolicy::ControlTypes controls1, QSizePolicy::Con
 */
 HB_FUNC_STATIC( QSTYLE_COMBINEDLAYOUTSPACING )
 {
-  QStyle * obj = static_cast< QStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyle * obj = qobject_cast< QStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -124,7 +124,7 @@ virtual void drawComplexControl( QStyle::ComplexControl control, const QStyleOpt
 */
 HB_FUNC_STATIC( QSTYLE_DRAWCOMPLEXCONTROL )
 {
-  QStyle * obj = static_cast< QStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyle * obj = qobject_cast< QStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -150,7 +150,7 @@ virtual void drawControl( QStyle::ControlElement element, const QStyleOption * o
 */
 HB_FUNC_STATIC( QSTYLE_DRAWCONTROL )
 {
-  QStyle * obj = static_cast< QStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyle * obj = qobject_cast< QStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -176,7 +176,7 @@ virtual void drawItemPixmap( QPainter * painter, const QRect & rectangle, int al
 */
 HB_FUNC_STATIC( QSTYLE_DRAWITEMPIXMAP )
 {
-  QStyle * obj = static_cast< QStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyle * obj = qobject_cast< QStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -202,7 +202,7 @@ virtual void drawItemText( QPainter * painter, const QRect & rectangle, int alig
 */
 HB_FUNC_STATIC( QSTYLE_DRAWITEMTEXT )
 {
-  QStyle * obj = static_cast< QStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyle * obj = qobject_cast< QStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -228,7 +228,7 @@ virtual void drawPrimitive( QStyle::PrimitiveElement element, const QStyleOption
 */
 HB_FUNC_STATIC( QSTYLE_DRAWPRIMITIVE )
 {
-  QStyle * obj = static_cast< QStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyle * obj = qobject_cast< QStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -254,7 +254,7 @@ virtual QPixmap generatedIconPixmap( QIcon::Mode iconMode, const QPixmap & pixma
 */
 HB_FUNC_STATIC( QSTYLE_GENERATEDICONPIXMAP )
 {
-  QStyle * obj = static_cast< QStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyle * obj = qobject_cast< QStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -279,7 +279,7 @@ virtual QStyle::SubControl hitTestComplexControl( QStyle::ComplexControl control
 */
 HB_FUNC_STATIC( QSTYLE_HITTESTCOMPLEXCONTROL )
 {
-  QStyle * obj = static_cast< QStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyle * obj = qobject_cast< QStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -303,7 +303,7 @@ virtual QRect itemPixmapRect( const QRect & rectangle, int alignment, const QPix
 */
 HB_FUNC_STATIC( QSTYLE_ITEMPIXMAPRECT )
 {
-  QStyle * obj = static_cast< QStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyle * obj = qobject_cast< QStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -328,7 +328,7 @@ virtual QRect itemTextRect( const QFontMetrics & metrics, const QRect & rectangl
 */
 HB_FUNC_STATIC( QSTYLE_ITEMTEXTRECT )
 {
-  QStyle * obj = static_cast< QStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyle * obj = qobject_cast< QStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -353,7 +353,7 @@ int layoutSpacing( QSizePolicy::ControlType control1, QSizePolicy::ControlType c
 */
 HB_FUNC_STATIC( QSTYLE_LAYOUTSPACING )
 {
-  QStyle * obj = static_cast< QStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyle * obj = qobject_cast< QStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -377,7 +377,7 @@ virtual int pixelMetric( QStyle::PixelMetric metric, const QStyleOption * option
 */
 HB_FUNC_STATIC( QSTYLE_PIXELMETRIC )
 {
-  QStyle * obj = static_cast< QStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyle * obj = qobject_cast< QStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -401,7 +401,7 @@ virtual void polish( QWidget * widget )
 */
 void QStyle_polish1()
 {
-  QStyle * obj = static_cast< QStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyle * obj = qobject_cast< QStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -416,7 +416,7 @@ virtual void polish( QApplication * application )
 */
 void QStyle_polish2()
 {
-  QStyle * obj = static_cast< QStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyle * obj = qobject_cast< QStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -431,7 +431,7 @@ virtual void polish( QPalette & palette )
 */
 void QStyle_polish3()
 {
-  QStyle * obj = static_cast< QStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyle * obj = qobject_cast< QStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -466,7 +466,7 @@ const QStyle * proxy() const
 */
 HB_FUNC_STATIC( QSTYLE_PROXY )
 {
-  QStyle * obj = static_cast< QStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyle * obj = qobject_cast< QStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -491,7 +491,7 @@ virtual QSize sizeFromContents( QStyle::ContentsType type, const QStyleOption * 
 */
 HB_FUNC_STATIC( QSTYLE_SIZEFROMCONTENTS )
 {
-  QStyle * obj = static_cast< QStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyle * obj = qobject_cast< QStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -516,7 +516,7 @@ QIcon standardIcon( QStyle::StandardPixmap standardIcon, const QStyleOption * op
 */
 HB_FUNC_STATIC( QSTYLE_STANDARDICON )
 {
-  QStyle * obj = static_cast< QStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyle * obj = qobject_cast< QStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -541,7 +541,7 @@ virtual QPalette standardPalette() const
 */
 HB_FUNC_STATIC( QSTYLE_STANDARDPALETTE )
 {
-  QStyle * obj = static_cast< QStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyle * obj = qobject_cast< QStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -566,7 +566,7 @@ virtual int styleHint( QStyle::StyleHint hint, const QStyleOption * option = 0, 
 */
 HB_FUNC_STATIC( QSTYLE_STYLEHINT )
 {
-  QStyle * obj = static_cast< QStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyle * obj = qobject_cast< QStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -590,7 +590,7 @@ virtual QRect subControlRect( QStyle::ComplexControl control, const QStyleOption
 */
 HB_FUNC_STATIC( QSTYLE_SUBCONTROLRECT )
 {
-  QStyle * obj = static_cast< QStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyle * obj = qobject_cast< QStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -615,7 +615,7 @@ virtual QRect subElementRect( QStyle::SubElement element, const QStyleOption * o
 */
 HB_FUNC_STATIC( QSTYLE_SUBELEMENTRECT )
 {
-  QStyle * obj = static_cast< QStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyle * obj = qobject_cast< QStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -640,7 +640,7 @@ virtual void unpolish( QWidget * widget )
 */
 void QStyle_unpolish1()
 {
-  QStyle * obj = static_cast< QStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyle * obj = qobject_cast< QStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -655,7 +655,7 @@ virtual void unpolish( QApplication * application )
 */
 void QStyle_unpolish2()
 {
-  QStyle * obj = static_cast< QStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyle * obj = qobject_cast< QStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -686,7 +686,7 @@ QRect alignedRect( Qt::LayoutDirection direction, Qt::Alignment alignment, const
 */
 HB_FUNC_STATIC( QSTYLE_ALIGNEDRECT )
 {
-  QStyle * obj = static_cast< QStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyle * obj = qobject_cast< QStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

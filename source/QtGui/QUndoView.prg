@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QUNDOVIEW_NEW )
 
 HB_FUNC_STATIC( QUNDOVIEW_DELETE )
 {
-  QUndoView * obj = static_cast< QUndoView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoView * obj = qobject_cast< QUndoView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -125,7 +125,7 @@ QIcon cleanIcon() const
 */
 HB_FUNC_STATIC( QUNDOVIEW_CLEANICON )
 {
-  QUndoView * obj = static_cast< QUndoView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoView * obj = qobject_cast< QUndoView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -150,7 +150,7 @@ QString emptyLabel() const
 */
 HB_FUNC_STATIC( QUNDOVIEW_EMPTYLABEL )
 {
-  QUndoView * obj = static_cast< QUndoView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoView * obj = qobject_cast< QUndoView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -174,7 +174,7 @@ QUndoGroup * group() const
 */
 HB_FUNC_STATIC( QUNDOVIEW_GROUP )
 {
-  QUndoView * obj = static_cast< QUndoView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoView * obj = qobject_cast< QUndoView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -199,7 +199,7 @@ void setCleanIcon( const QIcon & icon )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETCLEANICON )
 {
-  QUndoView * obj = static_cast< QUndoView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoView * obj = qobject_cast< QUndoView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -225,7 +225,7 @@ void setEmptyLabel( const QString & label )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETEMPTYLABEL )
 {
-  QUndoView * obj = static_cast< QUndoView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoView * obj = qobject_cast< QUndoView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -251,7 +251,7 @@ QUndoStack * stack() const
 */
 HB_FUNC_STATIC( QUNDOVIEW_STACK )
 {
-  QUndoView * obj = static_cast< QUndoView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoView * obj = qobject_cast< QUndoView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -276,7 +276,7 @@ void setGroup( QUndoGroup * group )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETGROUP )
 {
-  QUndoView * obj = static_cast< QUndoView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoView * obj = qobject_cast< QUndoView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -302,7 +302,7 @@ void setStack( QUndoStack * stack )
 */
 HB_FUNC_STATIC( QUNDOVIEW_SETSTACK )
 {
-  QUndoView * obj = static_cast< QUndoView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoView * obj = qobject_cast< QUndoView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

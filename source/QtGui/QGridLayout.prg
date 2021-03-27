@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_NEW )
 
 HB_FUNC_STATIC( QGRIDLAYOUT_DELETE )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -137,7 +137,7 @@ void addItem( QLayoutItem * item, int row, int column, int rowSpan = 1, int colu
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ADDITEM )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -163,7 +163,7 @@ void addLayout( QLayout * layout, int row, int column, Qt::Alignment alignment =
 */
 void QGridLayout_addLayout1()
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -178,7 +178,7 @@ void addLayout( QLayout * layout, int row, int column, int rowSpan, int columnSp
 */
 void QGridLayout_addLayout2()
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -209,7 +209,7 @@ void addWidget( QWidget * widget, int row, int column, Qt::Alignment alignment =
 */
 void QGridLayout_addWidget1()
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -224,7 +224,7 @@ void addWidget( QWidget * widget, int fromRow, int fromColumn, int rowSpan, int 
 */
 void QGridLayout_addWidget2()
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -255,7 +255,7 @@ QRect cellRect( int row, int column ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_CELLRECT )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -280,7 +280,7 @@ int columnCount() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNCOUNT )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -304,7 +304,7 @@ int columnMinimumWidth( int column ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNMINIMUMWIDTH )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -328,7 +328,7 @@ int columnStretch( int column ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNSTRETCH )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -352,7 +352,7 @@ void getItemPosition( int index, int * row, int * column, int * rowSpan, int * c
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_GETITEMPOSITION )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -386,7 +386,7 @@ int horizontalSpacing() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_HORIZONTALSPACING )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -410,7 +410,7 @@ QLayoutItem * itemAtPosition( int row, int column ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ITEMATPOSITION )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -435,7 +435,7 @@ Qt::Corner originCorner() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ORIGINCORNER )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -459,7 +459,7 @@ int rowCount() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ROWCOUNT )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -483,7 +483,7 @@ int rowMinimumHeight( int row ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ROWMINIMUMHEIGHT )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -507,7 +507,7 @@ int rowStretch( int row ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ROWSTRETCH )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -531,7 +531,7 @@ void setColumnMinimumWidth( int column, int minSize )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETCOLUMNMINIMUMWIDTH )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -557,7 +557,7 @@ void setColumnStretch( int column, int stretch )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETCOLUMNSTRETCH )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -583,7 +583,7 @@ void setHorizontalSpacing( int spacing )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETHORIZONTALSPACING )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -609,7 +609,7 @@ void setOriginCorner( Qt::Corner corner )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETORIGINCORNER )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -635,7 +635,7 @@ void setRowMinimumHeight( int row, int minSize )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETROWMINIMUMHEIGHT )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -661,7 +661,7 @@ void setRowStretch( int row, int stretch )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETROWSTRETCH )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -687,7 +687,7 @@ void setSpacing( int spacing )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETSPACING )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -713,7 +713,7 @@ void setVerticalSpacing( int spacing )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETVERTICALSPACING )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -739,7 +739,7 @@ int spacing() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SPACING )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -763,7 +763,7 @@ int verticalSpacing() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_VERTICALSPACING )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -787,7 +787,7 @@ virtual int count() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_COUNT )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -811,7 +811,7 @@ virtual Qt::Orientations expandingDirections() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_EXPANDINGDIRECTIONS )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -835,7 +835,7 @@ virtual bool hasHeightForWidth() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_HASHEIGHTFORWIDTH )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -859,7 +859,7 @@ virtual int heightForWidth( int w ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_HEIGHTFORWIDTH )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -883,7 +883,7 @@ virtual void invalidate()
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_INVALIDATE )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -909,7 +909,7 @@ virtual QLayoutItem * itemAt( int index ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_ITEMAT )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -934,7 +934,7 @@ virtual QSize maximumSize() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_MAXIMUMSIZE )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -959,7 +959,7 @@ virtual int minimumHeightForWidth( int w ) const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_MINIMUMHEIGHTFORWIDTH )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -983,7 +983,7 @@ virtual QSize minimumSize() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_MINIMUMSIZE )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1008,7 +1008,7 @@ virtual void setGeometry( const QRect & rect )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SETGEOMETRY )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1034,7 +1034,7 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_SIZEHINT )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1059,7 +1059,7 @@ virtual QLayoutItem * takeAt( int index )
 */
 HB_FUNC_STATIC( QGRIDLAYOUT_TAKEAT )
 {
-  QGridLayout * obj = static_cast< QGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_NEW )
 
 HB_FUNC_STATIC( QBUTTONGROUP_DELETE )
 {
-  QButtonGroup * obj = static_cast< QButtonGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QButtonGroup * obj = qobject_cast< QButtonGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -100,7 +100,7 @@ void addButton( QAbstractButton * button )
 */
 void QButtonGroup_addButton1()
 {
-  QButtonGroup * obj = static_cast< QButtonGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QButtonGroup * obj = qobject_cast< QButtonGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -115,7 +115,7 @@ void addButton( QAbstractButton * button, int id )
 */
 void QButtonGroup_addButton2()
 {
-  QButtonGroup * obj = static_cast< QButtonGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QButtonGroup * obj = qobject_cast< QButtonGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -146,7 +146,7 @@ QAbstractButton * button( int id ) const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_BUTTON )
 {
-  QButtonGroup * obj = static_cast< QButtonGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QButtonGroup * obj = qobject_cast< QButtonGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -171,7 +171,7 @@ QList<QAbstractButton *> buttons() const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_BUTTONS )
 {
-  QButtonGroup * obj = static_cast< QButtonGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QButtonGroup * obj = qobject_cast< QButtonGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -219,7 +219,7 @@ QAbstractButton * checkedButton() const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDBUTTON )
 {
-  QButtonGroup * obj = static_cast< QButtonGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QButtonGroup * obj = qobject_cast< QButtonGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -244,7 +244,7 @@ int checkedId() const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDID )
 {
-  QButtonGroup * obj = static_cast< QButtonGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QButtonGroup * obj = qobject_cast< QButtonGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -268,7 +268,7 @@ bool exclusive() const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_EXCLUSIVE )
 {
-  QButtonGroup * obj = static_cast< QButtonGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QButtonGroup * obj = qobject_cast< QButtonGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -292,7 +292,7 @@ int id( QAbstractButton * button ) const
 */
 HB_FUNC_STATIC( QBUTTONGROUP_ID )
 {
-  QButtonGroup * obj = static_cast< QButtonGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QButtonGroup * obj = qobject_cast< QButtonGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -316,7 +316,7 @@ void removeButton( QAbstractButton * button )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_REMOVEBUTTON )
 {
-  QButtonGroup * obj = static_cast< QButtonGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QButtonGroup * obj = qobject_cast< QButtonGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -342,7 +342,7 @@ void setExclusive( bool )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_SETEXCLUSIVE )
 {
-  QButtonGroup * obj = static_cast< QButtonGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QButtonGroup * obj = qobject_cast< QButtonGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -368,7 +368,7 @@ void setId( QAbstractButton * button, int id )
 */
 HB_FUNC_STATIC( QBUTTONGROUP_SETID )
 {
-  QButtonGroup * obj = static_cast< QButtonGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QButtonGroup * obj = qobject_cast< QButtonGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

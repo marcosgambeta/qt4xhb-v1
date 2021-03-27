@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QRUBBERBAND_NEW )
 
 HB_FUNC_STATIC( QRUBBERBAND_DELETE )
 {
-  QRubberBand * obj = static_cast< QRubberBand * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QRubberBand * obj = qobject_cast< QRubberBand * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -84,7 +84,7 @@ void move( int x, int y )
 */
 void QRubberBand_move1()
 {
-  QRubberBand * obj = static_cast< QRubberBand * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QRubberBand * obj = qobject_cast< QRubberBand * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -99,7 +99,7 @@ void move( const QPoint & p )
 */
 void QRubberBand_move2()
 {
-  QRubberBand * obj = static_cast< QRubberBand * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QRubberBand * obj = qobject_cast< QRubberBand * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -130,7 +130,7 @@ void resize( int width, int height )
 */
 void QRubberBand_resize1()
 {
-  QRubberBand * obj = static_cast< QRubberBand * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QRubberBand * obj = qobject_cast< QRubberBand * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -145,7 +145,7 @@ void resize( const QSize & size )
 */
 void QRubberBand_resize2()
 {
-  QRubberBand * obj = static_cast< QRubberBand * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QRubberBand * obj = qobject_cast< QRubberBand * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -176,7 +176,7 @@ void setGeometry( const QRect & rect )
 */
 void QRubberBand_setGeometry1()
 {
-  QRubberBand * obj = static_cast< QRubberBand * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QRubberBand * obj = qobject_cast< QRubberBand * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -191,7 +191,7 @@ void setGeometry( int x, int y, int width, int height )
 */
 void QRubberBand_setGeometry2()
 {
-  QRubberBand * obj = static_cast< QRubberBand * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QRubberBand * obj = qobject_cast< QRubberBand * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -222,7 +222,7 @@ QRubberBand::Shape shape() const
 */
 HB_FUNC_STATIC( QRUBBERBAND_SHAPE )
 {
-  QRubberBand * obj = static_cast< QRubberBand * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QRubberBand * obj = qobject_cast< QRubberBand * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QSCROLLAREA_NEW )
 
 HB_FUNC_STATIC( QSCROLLAREA_DELETE )
 {
-  QScrollArea * obj = static_cast< QScrollArea * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScrollArea * obj = qobject_cast< QScrollArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -93,7 +93,7 @@ Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QSCROLLAREA_ALIGNMENT )
 {
-  QScrollArea * obj = static_cast< QScrollArea * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScrollArea * obj = qobject_cast< QScrollArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -117,7 +117,7 @@ void ensureVisible( int x, int y, int xmargin = 50, int ymargin = 50 )
 */
 HB_FUNC_STATIC( QSCROLLAREA_ENSUREVISIBLE )
 {
-  QScrollArea * obj = static_cast< QScrollArea * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScrollArea * obj = qobject_cast< QScrollArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -143,7 +143,7 @@ void ensureWidgetVisible( QWidget * childWidget, int xmargin = 50, int ymargin =
 */
 HB_FUNC_STATIC( QSCROLLAREA_ENSUREWIDGETVISIBLE )
 {
-  QScrollArea * obj = static_cast< QScrollArea * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScrollArea * obj = qobject_cast< QScrollArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -169,7 +169,7 @@ void setAlignment( Qt::Alignment )
 */
 HB_FUNC_STATIC( QSCROLLAREA_SETALIGNMENT )
 {
-  QScrollArea * obj = static_cast< QScrollArea * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScrollArea * obj = qobject_cast< QScrollArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -195,7 +195,7 @@ void setWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QSCROLLAREA_SETWIDGET )
 {
-  QScrollArea * obj = static_cast< QScrollArea * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScrollArea * obj = qobject_cast< QScrollArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -221,7 +221,7 @@ void setWidgetResizable( bool resizable )
 */
 HB_FUNC_STATIC( QSCROLLAREA_SETWIDGETRESIZABLE )
 {
-  QScrollArea * obj = static_cast< QScrollArea * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScrollArea * obj = qobject_cast< QScrollArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -247,7 +247,7 @@ QWidget * takeWidget()
 */
 HB_FUNC_STATIC( QSCROLLAREA_TAKEWIDGET )
 {
-  QScrollArea * obj = static_cast< QScrollArea * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScrollArea * obj = qobject_cast< QScrollArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -272,7 +272,7 @@ QWidget * widget() const
 */
 HB_FUNC_STATIC( QSCROLLAREA_WIDGET )
 {
-  QScrollArea * obj = static_cast< QScrollArea * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScrollArea * obj = qobject_cast< QScrollArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -297,7 +297,7 @@ bool widgetResizable() const
 */
 HB_FUNC_STATIC( QSCROLLAREA_WIDGETRESIZABLE )
 {
-  QScrollArea * obj = static_cast< QScrollArea * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScrollArea * obj = qobject_cast< QScrollArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -321,7 +321,7 @@ virtual bool focusNextPrevChild( bool next )
 */
 HB_FUNC_STATIC( QSCROLLAREA_FOCUSNEXTPREVCHILD )
 {
-  QScrollArea * obj = static_cast< QScrollArea * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScrollArea * obj = qobject_cast< QScrollArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -345,7 +345,7 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSCROLLAREA_SIZEHINT )
 {
-  QScrollArea * obj = static_cast< QScrollArea * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScrollArea * obj = qobject_cast< QScrollArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

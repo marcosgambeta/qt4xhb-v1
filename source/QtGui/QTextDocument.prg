@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENT_NEW )
 
 HB_FUNC_STATIC( QTEXTDOCUMENT_DELETE )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -193,7 +193,7 @@ void addResource( int type, const QUrl & name, const QVariant & resource )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ADDRESOURCE )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -219,7 +219,7 @@ void adjustSize()
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ADJUSTSIZE )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -245,7 +245,7 @@ QVector<QTextFormat> allFormats() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ALLFORMATS )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -297,7 +297,7 @@ int availableRedoSteps() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_AVAILABLEREDOSTEPS )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -321,7 +321,7 @@ int availableUndoSteps() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_AVAILABLEUNDOSTEPS )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -345,7 +345,7 @@ QTextBlock begin() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_BEGIN )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -370,7 +370,7 @@ int blockCount() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_BLOCKCOUNT )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -394,7 +394,7 @@ QChar characterAt( int pos ) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_CHARACTERAT )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -419,7 +419,7 @@ int characterCount() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_CHARACTERCOUNT )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -443,7 +443,7 @@ virtual void clear()
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_CLEAR )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -469,7 +469,7 @@ void clearUndoRedoStacks( QTextDocument::Stacks stacksToClear = QTextDocument::U
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_CLEARUNDOREDOSTACKS )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -495,7 +495,7 @@ QTextDocument * clone( QObject * parent = 0 ) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_CLONE )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -520,7 +520,7 @@ Qt::CursorMoveStyle defaultCursorMoveStyle() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTCURSORMOVESTYLE )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -544,7 +544,7 @@ QFont defaultFont() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTFONT )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -569,7 +569,7 @@ QString defaultStyleSheet() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTSTYLESHEET )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -593,7 +593,7 @@ QTextOption defaultTextOption() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_DEFAULTTEXTOPTION )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -618,7 +618,7 @@ QAbstractTextDocumentLayout * documentLayout() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_DOCUMENTLAYOUT )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -643,7 +643,7 @@ qreal documentMargin() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_DOCUMENTMARGIN )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -667,7 +667,7 @@ void drawContents( QPainter * p, const QRectF & rect = QRectF() )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_DRAWCONTENTS )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -693,7 +693,7 @@ QTextBlock end() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_END )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -718,7 +718,7 @@ QTextCursor find( const QString & subString, const QTextCursor & cursor, QTextDo
 */
 void QTextDocument_find1()
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -732,7 +732,7 @@ QTextCursor find( const QRegExp & expr, const QTextCursor & cursor, QTextDocumen
 */
 void QTextDocument_find2()
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -746,7 +746,7 @@ QTextCursor find( const QString & subString, int position = 0, QTextDocument::Fi
 */
 void QTextDocument_find3()
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -760,7 +760,7 @@ QTextCursor find( const QRegExp & expr, int position = 0, QTextDocument::FindFla
 */
 void QTextDocument_find4()
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -798,7 +798,7 @@ QTextBlock findBlock( int pos ) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCK )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -823,7 +823,7 @@ QTextBlock findBlockByLineNumber( int lineNumber ) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCKBYLINENUMBER )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -848,7 +848,7 @@ QTextBlock findBlockByNumber( int blockNumber ) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_FINDBLOCKBYNUMBER )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -873,7 +873,7 @@ QTextBlock firstBlock() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_FIRSTBLOCK )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -898,7 +898,7 @@ qreal idealWidth() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_IDEALWIDTH )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -922,7 +922,7 @@ qreal indentWidth() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_INDENTWIDTH )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -946,7 +946,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ISEMPTY )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -970,7 +970,7 @@ bool isModified() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ISMODIFIED )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -994,7 +994,7 @@ bool isRedoAvailable() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ISREDOAVAILABLE )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1018,7 +1018,7 @@ bool isUndoAvailable() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ISUNDOAVAILABLE )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1042,7 +1042,7 @@ bool isUndoRedoEnabled() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ISUNDOREDOENABLED )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1066,7 +1066,7 @@ QTextBlock lastBlock() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_LASTBLOCK )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1091,7 +1091,7 @@ int lineCount() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_LINECOUNT )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1115,7 +1115,7 @@ void markContentsDirty( int position, int length )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_MARKCONTENTSDIRTY )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1141,7 +1141,7 @@ int maximumBlockCount() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_MAXIMUMBLOCKCOUNT )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1165,7 +1165,7 @@ QString metaInformation( QTextDocument::MetaInformation info ) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_METAINFORMATION )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1189,7 +1189,7 @@ QTextObject * object( int objectIndex ) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_OBJECT )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1214,7 +1214,7 @@ QTextObject * objectForFormat( const QTextFormat & f ) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_OBJECTFORFORMAT )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1239,7 +1239,7 @@ int pageCount() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_PAGECOUNT )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1263,7 +1263,7 @@ QSizeF pageSize() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_PAGESIZE )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1288,7 +1288,7 @@ void print( QPrinter * printer ) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_PRINT )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1314,7 +1314,7 @@ QVariant resource( int type, const QUrl & name ) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_RESOURCE )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1339,7 +1339,7 @@ int revision() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_REVISION )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1363,7 +1363,7 @@ QTextFrame * rootFrame() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_ROOTFRAME )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1388,7 +1388,7 @@ void setDefaultCursorMoveStyle( Qt::CursorMoveStyle style )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTCURSORMOVESTYLE )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1414,7 +1414,7 @@ void setDefaultFont( const QFont & font )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTFONT )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1440,7 +1440,7 @@ void setDefaultStyleSheet( const QString & sheet )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTSTYLESHEET )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1466,7 +1466,7 @@ void setDefaultTextOption( const QTextOption & option )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETDEFAULTTEXTOPTION )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1492,7 +1492,7 @@ void setDocumentLayout( QAbstractTextDocumentLayout * layout )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETDOCUMENTLAYOUT )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1518,7 +1518,7 @@ void setDocumentMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETDOCUMENTMARGIN )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1544,7 +1544,7 @@ void setHtml( const QString & html )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETHTML )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1570,7 +1570,7 @@ void setIndentWidth( qreal width )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETINDENTWIDTH )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1596,7 +1596,7 @@ void setMaximumBlockCount( int maximum )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETMAXIMUMBLOCKCOUNT )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1622,7 +1622,7 @@ void setMetaInformation( QTextDocument::MetaInformation info, const QString & st
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETMETAINFORMATION )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1648,7 +1648,7 @@ void setPageSize( const QSizeF & size )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETPAGESIZE )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1674,7 +1674,7 @@ void setPlainText( const QString & text )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETPLAINTEXT )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1700,7 +1700,7 @@ void setTextWidth( qreal width )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETTEXTWIDTH )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1726,7 +1726,7 @@ void setUndoRedoEnabled( bool enable )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETUNDOREDOENABLED )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1752,7 +1752,7 @@ void setUseDesignMetrics( bool b )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETUSEDESIGNMETRICS )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1778,7 +1778,7 @@ QSizeF size() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SIZE )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1803,7 +1803,7 @@ qreal textWidth() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_TEXTWIDTH )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1827,7 +1827,7 @@ QString toHtml( const QByteArray & encoding = QByteArray() ) const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_TOHTML )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1851,7 +1851,7 @@ QString toPlainText() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_TOPLAINTEXT )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1875,7 +1875,7 @@ bool useDesignMetrics() const
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_USEDESIGNMETRICS )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1899,7 +1899,7 @@ void redo( QTextCursor * cursor )
 */
 void QTextDocument_redo1()
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1914,7 +1914,7 @@ void redo()
 */
 void QTextDocument_redo2()
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1945,7 +1945,7 @@ void setModified( bool m = true )
 */
 HB_FUNC_STATIC( QTEXTDOCUMENT_SETMODIFIED )
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1971,7 +1971,7 @@ void undo( QTextCursor * cursor )
 */
 void QTextDocument_undo1()
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1986,7 +1986,7 @@ void undo()
 */
 void QTextDocument_undo2()
 {
-  QTextDocument * obj = static_cast< QTextDocument * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextDocument * obj = qobject_cast< QTextDocument * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

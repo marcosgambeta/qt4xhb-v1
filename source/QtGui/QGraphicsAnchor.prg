@@ -46,7 +46,7 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSANCHOR_DELETE )
 {
-  QGraphicsAnchor * obj = static_cast< QGraphicsAnchor * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsAnchor * obj = qobject_cast< QGraphicsAnchor * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -68,7 +68,7 @@ void setSizePolicy( QSizePolicy::Policy policy )
 */
 HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSIZEPOLICY )
 {
-  QGraphicsAnchor * obj = static_cast< QGraphicsAnchor * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsAnchor * obj = qobject_cast< QGraphicsAnchor * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -94,7 +94,7 @@ void setSpacing( qreal spacing )
 */
 HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSPACING )
 {
-  QGraphicsAnchor * obj = static_cast< QGraphicsAnchor * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsAnchor * obj = qobject_cast< QGraphicsAnchor * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -120,7 +120,7 @@ QSizePolicy::Policy sizePolicy() const
 */
 HB_FUNC_STATIC( QGRAPHICSANCHOR_SIZEPOLICY )
 {
-  QGraphicsAnchor * obj = static_cast< QGraphicsAnchor * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsAnchor * obj = qobject_cast< QGraphicsAnchor * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -144,7 +144,7 @@ qreal spacing() const
 */
 HB_FUNC_STATIC( QGRAPHICSANCHOR_SPACING )
 {
-  QGraphicsAnchor * obj = static_cast< QGraphicsAnchor * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsAnchor * obj = qobject_cast< QGraphicsAnchor * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -168,7 +168,7 @@ void unsetSpacing()
 */
 HB_FUNC_STATIC( QGRAPHICSANCHOR_UNSETSPACING )
 {
-  QGraphicsAnchor * obj = static_cast< QGraphicsAnchor * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsAnchor * obj = qobject_cast< QGraphicsAnchor * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

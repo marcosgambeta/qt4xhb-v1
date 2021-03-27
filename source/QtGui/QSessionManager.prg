@@ -58,7 +58,7 @@ bool allowsErrorInteraction()
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSERRORINTERACTION )
 {
-  QSessionManager * obj = static_cast< QSessionManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSessionManager * obj = qobject_cast< QSessionManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -82,7 +82,7 @@ bool allowsInteraction()
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSINTERACTION )
 {
-  QSessionManager * obj = static_cast< QSessionManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSessionManager * obj = qobject_cast< QSessionManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -106,7 +106,7 @@ void cancel()
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_CANCEL )
 {
-  QSessionManager * obj = static_cast< QSessionManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSessionManager * obj = qobject_cast< QSessionManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -132,7 +132,7 @@ QStringList discardCommand() const
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_DISCARDCOMMAND )
 {
-  QSessionManager * obj = static_cast< QSessionManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSessionManager * obj = qobject_cast< QSessionManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -156,7 +156,7 @@ bool isPhase2() const
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_ISPHASE2 )
 {
-  QSessionManager * obj = static_cast< QSessionManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSessionManager * obj = qobject_cast< QSessionManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -180,7 +180,7 @@ void release()
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_RELEASE )
 {
-  QSessionManager * obj = static_cast< QSessionManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSessionManager * obj = qobject_cast< QSessionManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -206,7 +206,7 @@ void requestPhase2()
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_REQUESTPHASE2 )
 {
-  QSessionManager * obj = static_cast< QSessionManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSessionManager * obj = qobject_cast< QSessionManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -232,7 +232,7 @@ QStringList restartCommand() const
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTCOMMAND )
 {
-  QSessionManager * obj = static_cast< QSessionManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSessionManager * obj = qobject_cast< QSessionManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -256,7 +256,7 @@ QSessionManager::RestartHint restartHint() const
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTHINT )
 {
-  QSessionManager * obj = static_cast< QSessionManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSessionManager * obj = qobject_cast< QSessionManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -280,7 +280,7 @@ QString sessionId() const
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONID )
 {
-  QSessionManager * obj = static_cast< QSessionManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSessionManager * obj = qobject_cast< QSessionManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -304,7 +304,7 @@ QString sessionKey() const
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONKEY )
 {
-  QSessionManager * obj = static_cast< QSessionManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSessionManager * obj = qobject_cast< QSessionManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -328,7 +328,7 @@ void setDiscardCommand( const QStringList & list )
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_SETDISCARDCOMMAND )
 {
-  QSessionManager * obj = static_cast< QSessionManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSessionManager * obj = qobject_cast< QSessionManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -354,7 +354,7 @@ void setManagerProperty( const QString & name, const QStringList & value )
 */
 void QSessionManager_setManagerProperty1()
 {
-  QSessionManager * obj = static_cast< QSessionManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSessionManager * obj = qobject_cast< QSessionManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -369,7 +369,7 @@ void setManagerProperty( const QString & name, const QString & value )
 */
 void QSessionManager_setManagerProperty2()
 {
-  QSessionManager * obj = static_cast< QSessionManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSessionManager * obj = qobject_cast< QSessionManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -400,7 +400,7 @@ void setRestartCommand( const QStringList & command )
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTCOMMAND )
 {
-  QSessionManager * obj = static_cast< QSessionManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSessionManager * obj = qobject_cast< QSessionManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -426,7 +426,7 @@ void setRestartHint( QSessionManager::RestartHint hint )
 */
 HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTHINT )
 {
-  QSessionManager * obj = static_cast< QSessionManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSessionManager * obj = qobject_cast< QSessionManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

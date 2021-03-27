@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QFILEDIALOG_NEW )
 
 HB_FUNC_STATIC( QFILEDIALOG_DELETE )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -165,7 +165,7 @@ QFileDialog::AcceptMode acceptMode() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_ACCEPTMODE )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -189,7 +189,7 @@ bool confirmOverwrite() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_CONFIRMOVERWRITE )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -213,7 +213,7 @@ QString defaultSuffix() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_DEFAULTSUFFIX )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -237,7 +237,7 @@ QDir directory() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_DIRECTORY )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -262,7 +262,7 @@ QFileDialog::FileMode fileMode() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_FILEMODE )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -286,7 +286,7 @@ QDir::Filters filter() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_FILTER )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -310,7 +310,7 @@ QStringList history() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_HISTORY )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -334,7 +334,7 @@ QFileIconProvider * iconProvider() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_ICONPROVIDER )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -359,7 +359,7 @@ bool isNameFilterDetailsVisible() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_ISNAMEFILTERDETAILSVISIBLE )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -383,7 +383,7 @@ bool isReadOnly() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_ISREADONLY )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -407,7 +407,7 @@ QAbstractItemDelegate * itemDelegate() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_ITEMDELEGATE )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -432,7 +432,7 @@ QString labelText( QFileDialog::DialogLabel label ) const
 */
 HB_FUNC_STATIC( QFILEDIALOG_LABELTEXT )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -456,7 +456,7 @@ QStringList nameFilters() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_NAMEFILTERS )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -480,7 +480,7 @@ void open( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QFILEDIALOG_OPEN )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -506,7 +506,7 @@ QFileDialog::Options options() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_OPTIONS )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -530,7 +530,7 @@ QAbstractProxyModel * proxyModel() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_PROXYMODEL )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -555,7 +555,7 @@ bool resolveSymlinks() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_RESOLVESYMLINKS )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -579,7 +579,7 @@ bool restoreState( const QByteArray & state )
 */
 HB_FUNC_STATIC( QFILEDIALOG_RESTORESTATE )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -603,7 +603,7 @@ QByteArray saveState() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_SAVESTATE )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -628,7 +628,7 @@ void selectFile( const QString & filename )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SELECTFILE )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -654,7 +654,7 @@ void selectNameFilter( const QString & filter )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SELECTNAMEFILTER )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -680,7 +680,7 @@ QStringList selectedFiles() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_SELECTEDFILES )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -704,7 +704,7 @@ QString selectedNameFilter() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_SELECTEDNAMEFILTER )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -728,7 +728,7 @@ void setAcceptMode( QFileDialog::AcceptMode mode )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETACCEPTMODE )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -754,7 +754,7 @@ void setConfirmOverwrite( bool enabled )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETCONFIRMOVERWRITE )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -780,7 +780,7 @@ void setDefaultSuffix( const QString & suffix )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETDEFAULTSUFFIX )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -806,7 +806,7 @@ void setDirectory( const QString & directory )
 */
 void QFileDialog_setDirectory1()
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -821,7 +821,7 @@ void setDirectory( const QDir & directory )
 */
 void QFileDialog_setDirectory2()
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -852,7 +852,7 @@ void setFileMode( QFileDialog::FileMode mode )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETFILEMODE )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -878,7 +878,7 @@ void setFilter( QDir::Filters filters )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETFILTER )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -904,7 +904,7 @@ void setHistory( const QStringList & paths )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETHISTORY )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -930,7 +930,7 @@ void setIconProvider( QFileIconProvider * provider )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETICONPROVIDER )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -956,7 +956,7 @@ void setItemDelegate( QAbstractItemDelegate * delegate )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETITEMDELEGATE )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -982,7 +982,7 @@ void setLabelText( QFileDialog::DialogLabel label, const QString & text )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETLABELTEXT )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1008,7 +1008,7 @@ void setNameFilter( const QString & filter )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETNAMEFILTER )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1034,7 +1034,7 @@ void setNameFilterDetailsVisible( bool enabled )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETNAMEFILTERDETAILSVISIBLE )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1060,7 +1060,7 @@ void setNameFilters( const QStringList & filters )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETNAMEFILTERS )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1086,7 +1086,7 @@ void setOption( QFileDialog::Option option, bool on = true )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETOPTION )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1112,7 +1112,7 @@ void setOptions( QFileDialog::Options options )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETOPTIONS )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1138,7 +1138,7 @@ void setProxyModel( QAbstractProxyModel * proxyModel )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETPROXYMODEL )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1164,7 +1164,7 @@ void setReadOnly( bool enabled )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETREADONLY )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1190,7 +1190,7 @@ void setResolveSymlinks( bool enabled )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETRESOLVESYMLINKS )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1216,7 +1216,7 @@ void setSidebarUrls( const QList<QUrl> & urls )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETSIDEBARURLS )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1249,7 +1249,7 @@ void setViewMode( QFileDialog::ViewMode mode )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETVIEWMODE )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1275,7 +1275,7 @@ QList<QUrl> sidebarUrls() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_SIDEBARURLS )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1327,7 +1327,7 @@ bool testOption( QFileDialog::Option option ) const
 */
 HB_FUNC_STATIC( QFILEDIALOG_TESTOPTION )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1351,7 +1351,7 @@ QFileDialog::ViewMode viewMode() const
 */
 HB_FUNC_STATIC( QFILEDIALOG_VIEWMODE )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1375,7 +1375,7 @@ virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QFILEDIALOG_SETVISIBLE )
 {
-  QFileDialog * obj = static_cast< QFileDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

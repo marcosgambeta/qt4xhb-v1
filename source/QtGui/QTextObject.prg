@@ -51,7 +51,7 @@ QTextDocument * document() const
 */
 HB_FUNC_STATIC( QTEXTOBJECT_DOCUMENT )
 {
-  QTextObject * obj = static_cast< QTextObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextObject * obj = qobject_cast< QTextObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -76,7 +76,7 @@ QTextFormat format() const
 */
 HB_FUNC_STATIC( QTEXTOBJECT_FORMAT )
 {
-  QTextObject * obj = static_cast< QTextObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextObject * obj = qobject_cast< QTextObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -101,7 +101,7 @@ int formatIndex() const
 */
 HB_FUNC_STATIC( QTEXTOBJECT_FORMATINDEX )
 {
-  QTextObject * obj = static_cast< QTextObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextObject * obj = qobject_cast< QTextObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -125,7 +125,7 @@ int objectIndex() const
 */
 HB_FUNC_STATIC( QTEXTOBJECT_OBJECTINDEX )
 {
-  QTextObject * obj = static_cast< QTextObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextObject * obj = qobject_cast< QTextObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

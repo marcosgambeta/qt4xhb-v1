@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QSTATUSBAR_NEW )
 
 HB_FUNC_STATIC( QSTATUSBAR_DELETE )
 {
-  QStatusBar * obj = static_cast< QStatusBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStatusBar * obj = qobject_cast< QStatusBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -92,7 +92,7 @@ void addPermanentWidget( QWidget * widget, int stretch = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_ADDPERMANENTWIDGET )
 {
-  QStatusBar * obj = static_cast< QStatusBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStatusBar * obj = qobject_cast< QStatusBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -118,7 +118,7 @@ void addWidget( QWidget * widget, int stretch = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_ADDWIDGET )
 {
-  QStatusBar * obj = static_cast< QStatusBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStatusBar * obj = qobject_cast< QStatusBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -144,7 +144,7 @@ QString currentMessage() const
 */
 HB_FUNC_STATIC( QSTATUSBAR_CURRENTMESSAGE )
 {
-  QStatusBar * obj = static_cast< QStatusBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStatusBar * obj = qobject_cast< QStatusBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -168,7 +168,7 @@ int insertPermanentWidget( int index, QWidget * widget, int stretch = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_INSERTPERMANENTWIDGET )
 {
-  QStatusBar * obj = static_cast< QStatusBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStatusBar * obj = qobject_cast< QStatusBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -192,7 +192,7 @@ int insertWidget( int index, QWidget * widget, int stretch = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_INSERTWIDGET )
 {
-  QStatusBar * obj = static_cast< QStatusBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStatusBar * obj = qobject_cast< QStatusBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -216,7 +216,7 @@ bool isSizeGripEnabled() const
 */
 HB_FUNC_STATIC( QSTATUSBAR_ISSIZEGRIPENABLED )
 {
-  QStatusBar * obj = static_cast< QStatusBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStatusBar * obj = qobject_cast< QStatusBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -240,7 +240,7 @@ void removeWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QSTATUSBAR_REMOVEWIDGET )
 {
-  QStatusBar * obj = static_cast< QStatusBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStatusBar * obj = qobject_cast< QStatusBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -266,7 +266,7 @@ void setSizeGripEnabled( bool )
 */
 HB_FUNC_STATIC( QSTATUSBAR_SETSIZEGRIPENABLED )
 {
-  QStatusBar * obj = static_cast< QStatusBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStatusBar * obj = qobject_cast< QStatusBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -292,7 +292,7 @@ void clearMessage()
 */
 HB_FUNC_STATIC( QSTATUSBAR_CLEARMESSAGE )
 {
-  QStatusBar * obj = static_cast< QStatusBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStatusBar * obj = qobject_cast< QStatusBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -318,7 +318,7 @@ void showMessage( const QString & message, int timeout = 0 )
 */
 HB_FUNC_STATIC( QSTATUSBAR_SHOWMESSAGE )
 {
-  QStatusBar * obj = static_cast< QStatusBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStatusBar * obj = qobject_cast< QStatusBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QWINDOWSXPSTYLE_NEW )
 
 HB_FUNC_STATIC( QWINDOWSXPSTYLE_DELETE )
 {
-  QWindowsXPStyle * obj = static_cast< QWindowsXPStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWindowsXPStyle * obj = qobject_cast< QWindowsXPStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -96,7 +96,7 @@ virtual void drawComplexControl( QStyle::ComplexControl cc, const QStyleOptionCo
 */
 HB_FUNC_STATIC( QWINDOWSXPSTYLE_DRAWCOMPLEXCONTROL )
 {
-  QWindowsXPStyle * obj = static_cast< QWindowsXPStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWindowsXPStyle * obj = qobject_cast< QWindowsXPStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -122,7 +122,7 @@ virtual void drawControl( QStyle::ControlElement element, const QStyleOption * o
 */
 HB_FUNC_STATIC( QWINDOWSXPSTYLE_DRAWCONTROL )
 {
-  QWindowsXPStyle * obj = static_cast< QWindowsXPStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWindowsXPStyle * obj = qobject_cast< QWindowsXPStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -148,7 +148,7 @@ virtual void drawPrimitive( QStyle::PrimitiveElement pe, const QStyleOption * op
 */
 HB_FUNC_STATIC( QWINDOWSXPSTYLE_DRAWPRIMITIVE )
 {
-  QWindowsXPStyle * obj = static_cast< QWindowsXPStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWindowsXPStyle * obj = qobject_cast< QWindowsXPStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -174,7 +174,7 @@ virtual int pixelMetric( QStyle::PixelMetric pm, const QStyleOption * option = 0
 */
 HB_FUNC_STATIC( QWINDOWSXPSTYLE_PIXELMETRIC )
 {
-  QWindowsXPStyle * obj = static_cast< QWindowsXPStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWindowsXPStyle * obj = qobject_cast< QWindowsXPStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -198,7 +198,7 @@ virtual void polish( QApplication * app )
 */
 void QWindowsXPStyle_polish1()
 {
-  QWindowsXPStyle * obj = static_cast< QWindowsXPStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWindowsXPStyle * obj = qobject_cast< QWindowsXPStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -213,7 +213,7 @@ virtual void polish( QWidget * widget )
 */
 void QWindowsXPStyle_polish2()
 {
-  QWindowsXPStyle * obj = static_cast< QWindowsXPStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWindowsXPStyle * obj = qobject_cast< QWindowsXPStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -228,7 +228,7 @@ virtual void polish( QPalette & pal )
 */
 void QWindowsXPStyle_polish3()
 {
-  QWindowsXPStyle * obj = static_cast< QWindowsXPStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWindowsXPStyle * obj = qobject_cast< QWindowsXPStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -263,7 +263,7 @@ virtual QSize sizeFromContents( QStyle::ContentsType ct, const QStyleOption * op
 */
 HB_FUNC_STATIC( QWINDOWSXPSTYLE_SIZEFROMCONTENTS )
 {
-  QWindowsXPStyle * obj = static_cast< QWindowsXPStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWindowsXPStyle * obj = qobject_cast< QWindowsXPStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -288,7 +288,7 @@ virtual QPalette standardPalette() const
 */
 HB_FUNC_STATIC( QWINDOWSXPSTYLE_STANDARDPALETTE )
 {
-  QWindowsXPStyle * obj = static_cast< QWindowsXPStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWindowsXPStyle * obj = qobject_cast< QWindowsXPStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -313,7 +313,7 @@ virtual QPixmap standardPixmap( QStyle::StandardPixmap standardPixmap, const QSt
 */
 HB_FUNC_STATIC( QWINDOWSXPSTYLE_STANDARDPIXMAP )
 {
-  QWindowsXPStyle * obj = static_cast< QWindowsXPStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWindowsXPStyle * obj = qobject_cast< QWindowsXPStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -338,7 +338,7 @@ virtual int styleHint( QStyle::StyleHint hint, const QStyleOption * option = 0, 
 */
 HB_FUNC_STATIC( QWINDOWSXPSTYLE_STYLEHINT )
 {
-  QWindowsXPStyle * obj = static_cast< QWindowsXPStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWindowsXPStyle * obj = qobject_cast< QWindowsXPStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -362,7 +362,7 @@ virtual QRect subControlRect( QStyle::ComplexControl cc, const QStyleOptionCompl
 */
 HB_FUNC_STATIC( QWINDOWSXPSTYLE_SUBCONTROLRECT )
 {
-  QWindowsXPStyle * obj = static_cast< QWindowsXPStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWindowsXPStyle * obj = qobject_cast< QWindowsXPStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -387,7 +387,7 @@ virtual QRect subElementRect( QStyle::SubElement sr, const QStyleOption * option
 */
 HB_FUNC_STATIC( QWINDOWSXPSTYLE_SUBELEMENTRECT )
 {
-  QWindowsXPStyle * obj = static_cast< QWindowsXPStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWindowsXPStyle * obj = qobject_cast< QWindowsXPStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -412,7 +412,7 @@ virtual void unpolish( QApplication * app )
 */
 void QWindowsXPStyle_unpolish1()
 {
-  QWindowsXPStyle * obj = static_cast< QWindowsXPStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWindowsXPStyle * obj = qobject_cast< QWindowsXPStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -427,7 +427,7 @@ virtual void unpolish( QWidget * widget )
 */
 void QWindowsXPStyle_unpolish2()
 {
-  QWindowsXPStyle * obj = static_cast< QWindowsXPStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWindowsXPStyle * obj = qobject_cast< QWindowsXPStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

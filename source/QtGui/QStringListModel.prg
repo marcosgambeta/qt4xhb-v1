@@ -89,7 +89,7 @@ void setStringList( const QStringList & strings )
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_SETSTRINGLIST )
 {
-  QStringListModel * obj = static_cast< QStringListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStringListModel * obj = qobject_cast< QStringListModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -115,7 +115,7 @@ QStringList stringList() const
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_STRINGLIST )
 {
-  QStringListModel * obj = static_cast< QStringListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStringListModel * obj = qobject_cast< QStringListModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -139,7 +139,7 @@ virtual QVariant data( const QModelIndex & index, int role ) const
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_DATA )
 {
-  QStringListModel * obj = static_cast< QStringListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStringListModel * obj = qobject_cast< QStringListModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -164,7 +164,7 @@ virtual Qt::ItemFlags flags( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_FLAGS )
 {
-  QStringListModel * obj = static_cast< QStringListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStringListModel * obj = qobject_cast< QStringListModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -188,7 +188,7 @@ virtual bool insertRows( int row, int count, const QModelIndex & parent = QModel
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_INSERTROWS )
 {
-  QStringListModel * obj = static_cast< QStringListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStringListModel * obj = qobject_cast< QStringListModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -212,7 +212,7 @@ virtual bool removeRows( int row, int count, const QModelIndex & parent = QModel
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_REMOVEROWS )
 {
-  QStringListModel * obj = static_cast< QStringListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStringListModel * obj = qobject_cast< QStringListModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -236,7 +236,7 @@ virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_ROWCOUNT )
 {
-  QStringListModel * obj = static_cast< QStringListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStringListModel * obj = qobject_cast< QStringListModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -260,7 +260,7 @@ virtual bool setData( const QModelIndex & index, const QVariant & value, int rol
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_SETDATA )
 {
-  QStringListModel * obj = static_cast< QStringListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStringListModel * obj = qobject_cast< QStringListModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -284,7 +284,7 @@ virtual void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_SORT )
 {
-  QStringListModel * obj = static_cast< QStringListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStringListModel * obj = qobject_cast< QStringListModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -310,7 +310,7 @@ virtual Qt::DropActions supportedDropActions() const
 */
 HB_FUNC_STATIC( QSTRINGLISTMODEL_SUPPORTEDDROPACTIONS )
 {
-  QStringListModel * obj = static_cast< QStringListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStringListModel * obj = qobject_cast< QStringListModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_DELETE )
 {
-  QGraphicsOpacityEffect * obj = static_cast< QGraphicsOpacityEffect * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsOpacityEffect * obj = qobject_cast< QGraphicsOpacityEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -88,7 +88,7 @@ qreal opacity() const
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITY )
 {
-  QGraphicsOpacityEffect * obj = static_cast< QGraphicsOpacityEffect * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsOpacityEffect * obj = qobject_cast< QGraphicsOpacityEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -112,7 +112,7 @@ QBrush opacityMask() const
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITYMASK )
 {
-  QGraphicsOpacityEffect * obj = static_cast< QGraphicsOpacityEffect * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsOpacityEffect * obj = qobject_cast< QGraphicsOpacityEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -137,7 +137,7 @@ void setOpacity( qreal opacity )
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITY )
 {
-  QGraphicsOpacityEffect * obj = static_cast< QGraphicsOpacityEffect * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsOpacityEffect * obj = qobject_cast< QGraphicsOpacityEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -163,7 +163,7 @@ void setOpacityMask( const QBrush & mask )
 */
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITYMASK )
 {
-  QGraphicsOpacityEffect * obj = static_cast< QGraphicsOpacityEffect * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsOpacityEffect * obj = qobject_cast< QGraphicsOpacityEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

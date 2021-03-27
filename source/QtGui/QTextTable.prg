@@ -62,7 +62,7 @@ RETURN
 
 HB_FUNC_STATIC( QTEXTTABLE_DELETE )
 {
-  QTextTable * obj = static_cast< QTextTable * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -84,7 +84,7 @@ void appendColumns( int count )
 */
 HB_FUNC_STATIC( QTEXTTABLE_APPENDCOLUMNS )
 {
-  QTextTable * obj = static_cast< QTextTable * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -110,7 +110,7 @@ void appendRows( int count )
 */
 HB_FUNC_STATIC( QTEXTTABLE_APPENDROWS )
 {
-  QTextTable * obj = static_cast< QTextTable * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -136,7 +136,7 @@ QTextTableCell cellAt( int row, int column ) const
 */
 void QTextTable_cellAt1()
 {
-  QTextTable * obj = static_cast< QTextTable * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -150,7 +150,7 @@ QTextTableCell cellAt( int position ) const
 */
 void QTextTable_cellAt2()
 {
-  QTextTable * obj = static_cast< QTextTable * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -164,7 +164,7 @@ QTextTableCell cellAt( const QTextCursor & cursor ) const
 */
 void QTextTable_cellAt3()
 {
-  QTextTable * obj = static_cast< QTextTable * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -198,7 +198,7 @@ int columns() const
 */
 HB_FUNC_STATIC( QTEXTTABLE_COLUMNS )
 {
-  QTextTable * obj = static_cast< QTextTable * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -222,7 +222,7 @@ QTextTableFormat format() const
 */
 HB_FUNC_STATIC( QTEXTTABLE_FORMAT )
 {
-  QTextTable * obj = static_cast< QTextTable * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -247,7 +247,7 @@ void insertColumns( int index, int columns )
 */
 HB_FUNC_STATIC( QTEXTTABLE_INSERTCOLUMNS )
 {
-  QTextTable * obj = static_cast< QTextTable * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -273,7 +273,7 @@ void insertRows( int index, int rows )
 */
 HB_FUNC_STATIC( QTEXTTABLE_INSERTROWS )
 {
-  QTextTable * obj = static_cast< QTextTable * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -299,7 +299,7 @@ void mergeCells( int row, int column, int numRows, int numCols )
 */
 void QTextTable_mergeCells1()
 {
-  QTextTable * obj = static_cast< QTextTable * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -314,7 +314,7 @@ void mergeCells( const QTextCursor & cursor )
 */
 void QTextTable_mergeCells2()
 {
-  QTextTable * obj = static_cast< QTextTable * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -345,7 +345,7 @@ void removeColumns( int index, int columns )
 */
 HB_FUNC_STATIC( QTEXTTABLE_REMOVECOLUMNS )
 {
-  QTextTable * obj = static_cast< QTextTable * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -371,7 +371,7 @@ void removeRows( int index, int rows )
 */
 HB_FUNC_STATIC( QTEXTTABLE_REMOVEROWS )
 {
-  QTextTable * obj = static_cast< QTextTable * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -397,7 +397,7 @@ void resize( int rows, int columns )
 */
 HB_FUNC_STATIC( QTEXTTABLE_RESIZE )
 {
-  QTextTable * obj = static_cast< QTextTable * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -423,7 +423,7 @@ QTextCursor rowEnd( const QTextCursor & cursor ) const
 */
 HB_FUNC_STATIC( QTEXTTABLE_ROWEND )
 {
-  QTextTable * obj = static_cast< QTextTable * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -448,7 +448,7 @@ QTextCursor rowStart( const QTextCursor & cursor ) const
 */
 HB_FUNC_STATIC( QTEXTTABLE_ROWSTART )
 {
-  QTextTable * obj = static_cast< QTextTable * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -473,7 +473,7 @@ int rows() const
 */
 HB_FUNC_STATIC( QTEXTTABLE_ROWS )
 {
-  QTextTable * obj = static_cast< QTextTable * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -497,7 +497,7 @@ void setFormat( const QTextTableFormat & format )
 */
 HB_FUNC_STATIC( QTEXTTABLE_SETFORMAT )
 {
-  QTextTable * obj = static_cast< QTextTable * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -523,7 +523,7 @@ void splitCell( int row, int column, int numRows, int numCols )
 */
 HB_FUNC_STATIC( QTEXTTABLE_SPLITCELL )
 {
-  QTextTable * obj = static_cast< QTextTable * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

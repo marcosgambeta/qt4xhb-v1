@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QSIZEGRIP_NEW )
 
 HB_FUNC_STATIC( QSIZEGRIP_DELETE )
 {
-  QSizeGrip * obj = static_cast< QSizeGrip * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSizeGrip * obj = qobject_cast< QSizeGrip * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -83,7 +83,7 @@ virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QSIZEGRIP_SETVISIBLE )
 {
-  QSizeGrip * obj = static_cast< QSizeGrip * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSizeGrip * obj = qobject_cast< QSizeGrip * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -109,7 +109,7 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSIZEGRIP_SIZEHINT )
 {
-  QSizeGrip * obj = static_cast< QSizeGrip * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSizeGrip * obj = qobject_cast< QSizeGrip * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

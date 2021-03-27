@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_NEW )
 
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_DELETE )
 {
-  QGraphicsColorizeEffect * obj = static_cast< QGraphicsColorizeEffect * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsColorizeEffect * obj = qobject_cast< QGraphicsColorizeEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -88,7 +88,7 @@ QColor color() const
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_COLOR )
 {
-  QGraphicsColorizeEffect * obj = static_cast< QGraphicsColorizeEffect * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsColorizeEffect * obj = qobject_cast< QGraphicsColorizeEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -113,7 +113,7 @@ qreal strength() const
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_STRENGTH )
 {
-  QGraphicsColorizeEffect * obj = static_cast< QGraphicsColorizeEffect * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsColorizeEffect * obj = qobject_cast< QGraphicsColorizeEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -137,7 +137,7 @@ void setColor( const QColor & c )
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETCOLOR )
 {
-  QGraphicsColorizeEffect * obj = static_cast< QGraphicsColorizeEffect * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsColorizeEffect * obj = qobject_cast< QGraphicsColorizeEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -163,7 +163,7 @@ void setStrength( qreal strength )
 */
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETSTRENGTH )
 {
-  QGraphicsColorizeEffect * obj = static_cast< QGraphicsColorizeEffect * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsColorizeEffect * obj = qobject_cast< QGraphicsColorizeEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

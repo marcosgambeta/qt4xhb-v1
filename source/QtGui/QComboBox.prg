@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QCOMBOBOX_NEW )
 
 HB_FUNC_STATIC( QCOMBOBOX_DELETE )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -169,7 +169,7 @@ void addItem( const QString & text, const QVariant & userData = QVariant() )
 */
 void QComboBox_addItem1()
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -184,7 +184,7 @@ void addItem( const QIcon & icon, const QString & text, const QVariant & userDat
 */
 void QComboBox_addItem2()
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -215,7 +215,7 @@ void addItems( const QStringList & texts )
 */
 HB_FUNC_STATIC( QCOMBOBOX_ADDITEMS )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -241,7 +241,7 @@ QCompleter * completer() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_COMPLETER )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -266,7 +266,7 @@ int count() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_COUNT )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -290,7 +290,7 @@ int currentIndex() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_CURRENTINDEX )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -314,7 +314,7 @@ QString currentText() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_CURRENTTEXT )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -338,7 +338,7 @@ bool duplicatesEnabled() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_DUPLICATESENABLED )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -362,7 +362,7 @@ int findData( const QVariant & data, int role = Qt::UserRole, Qt::MatchFlags fla
 */
 HB_FUNC_STATIC( QCOMBOBOX_FINDDATA )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -386,7 +386,7 @@ int findText( const QString & text, Qt::MatchFlags flags = Qt::MatchExactly | Qt
 */
 HB_FUNC_STATIC( QCOMBOBOX_FINDTEXT )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -410,7 +410,7 @@ bool hasFrame() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_HASFRAME )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -434,7 +434,7 @@ virtual void hidePopup()
 */
 HB_FUNC_STATIC( QCOMBOBOX_HIDEPOPUP )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -460,7 +460,7 @@ QSize iconSize() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_ICONSIZE )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -485,7 +485,7 @@ void insertItem( int index, const QString & text, const QVariant & userData = QV
 */
 void QComboBox_insertItem1()
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -500,7 +500,7 @@ void insertItem( int index, const QIcon & icon, const QString & text, const QVar
 */
 void QComboBox_insertItem2()
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -531,7 +531,7 @@ void insertItems( int index, const QStringList & list )
 */
 HB_FUNC_STATIC( QCOMBOBOX_INSERTITEMS )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -557,7 +557,7 @@ QComboBox::InsertPolicy insertPolicy() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_INSERTPOLICY )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -581,7 +581,7 @@ void insertSeparator( int index )
 */
 HB_FUNC_STATIC( QCOMBOBOX_INSERTSEPARATOR )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -607,7 +607,7 @@ bool isEditable() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_ISEDITABLE )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -631,7 +631,7 @@ QVariant itemData( int index, int role = Qt::UserRole ) const
 */
 HB_FUNC_STATIC( QCOMBOBOX_ITEMDATA )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -656,7 +656,7 @@ QAbstractItemDelegate * itemDelegate() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_ITEMDELEGATE )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -681,7 +681,7 @@ QIcon itemIcon( int index ) const
 */
 HB_FUNC_STATIC( QCOMBOBOX_ITEMICON )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -706,7 +706,7 @@ QString itemText( int index ) const
 */
 HB_FUNC_STATIC( QCOMBOBOX_ITEMTEXT )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -730,7 +730,7 @@ QLineEdit * lineEdit() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_LINEEDIT )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -755,7 +755,7 @@ int maxCount() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_MAXCOUNT )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -779,7 +779,7 @@ int maxVisibleItems() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_MAXVISIBLEITEMS )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -803,7 +803,7 @@ int minimumContentsLength() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_MINIMUMCONTENTSLENGTH )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -827,7 +827,7 @@ QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_MODEL )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -852,7 +852,7 @@ int modelColumn() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_MODELCOLUMN )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -876,7 +876,7 @@ void removeItem( int index )
 */
 HB_FUNC_STATIC( QCOMBOBOX_REMOVEITEM )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -902,7 +902,7 @@ QModelIndex rootModelIndex() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_ROOTMODELINDEX )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -927,7 +927,7 @@ void setCompleter( QCompleter * completer )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETCOMPLETER )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -953,7 +953,7 @@ void setDuplicatesEnabled( bool enable )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETDUPLICATESENABLED )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -979,7 +979,7 @@ void setEditable( bool editable )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETEDITABLE )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1005,7 +1005,7 @@ void setFrame( bool )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETFRAME )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1031,7 +1031,7 @@ void setIconSize( const QSize & size )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETICONSIZE )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1057,7 +1057,7 @@ void setInsertPolicy( QComboBox::InsertPolicy policy )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETINSERTPOLICY )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1083,7 +1083,7 @@ void setItemData( int index, const QVariant & value, int role = Qt::UserRole )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETITEMDATA )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1109,7 +1109,7 @@ void setItemDelegate( QAbstractItemDelegate * delegate )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETITEMDELEGATE )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1135,7 +1135,7 @@ void setItemIcon( int index, const QIcon & icon )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETITEMICON )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1161,7 +1161,7 @@ void setItemText( int index, const QString & text )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETITEMTEXT )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1187,7 +1187,7 @@ void setLineEdit( QLineEdit * edit )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETLINEEDIT )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1213,7 +1213,7 @@ void setMaxCount( int max )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETMAXCOUNT )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1239,7 +1239,7 @@ void setMaxVisibleItems( int maxItems )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETMAXVISIBLEITEMS )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1265,7 +1265,7 @@ void setMinimumContentsLength( int characters )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETMINIMUMCONTENTSLENGTH )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1291,7 +1291,7 @@ void setModel( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETMODEL )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1317,7 +1317,7 @@ void setModelColumn( int visibleColumn )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETMODELCOLUMN )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1343,7 +1343,7 @@ void setRootModelIndex( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETROOTMODELINDEX )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1369,7 +1369,7 @@ void setSizeAdjustPolicy( QComboBox::SizeAdjustPolicy policy )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETSIZEADJUSTPOLICY )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1395,7 +1395,7 @@ void setValidator( const QValidator * validator )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETVALIDATOR )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1421,7 +1421,7 @@ void setView( QAbstractItemView * itemView )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETVIEW )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1447,7 +1447,7 @@ virtual void showPopup()
 */
 HB_FUNC_STATIC( QCOMBOBOX_SHOWPOPUP )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1473,7 +1473,7 @@ QComboBox::SizeAdjustPolicy sizeAdjustPolicy() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_SIZEADJUSTPOLICY )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1497,7 +1497,7 @@ const QValidator * validator() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_VALIDATOR )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1522,7 +1522,7 @@ QAbstractItemView * view() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_VIEW )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1547,7 +1547,7 @@ virtual bool event( QEvent * event )
 */
 HB_FUNC_STATIC( QCOMBOBOX_EVENT )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1571,7 +1571,7 @@ virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_MINIMUMSIZEHINT )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1596,7 +1596,7 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QCOMBOBOX_SIZEHINT )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1621,7 +1621,7 @@ void clear()
 */
 HB_FUNC_STATIC( QCOMBOBOX_CLEAR )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1647,7 +1647,7 @@ void clearEditText()
 */
 HB_FUNC_STATIC( QCOMBOBOX_CLEAREDITTEXT )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1673,7 +1673,7 @@ void setCurrentIndex( int index )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETCURRENTINDEX )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1699,7 +1699,7 @@ void setEditText( const QString & text )
 */
 HB_FUNC_STATIC( QCOMBOBOX_SETEDITTEXT )
 {
-  QComboBox * obj = static_cast< QComboBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

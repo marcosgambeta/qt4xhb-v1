@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_NEW )
 
 HB_FUNC_STATIC( QPUSHBUTTON_DELETE )
 {
-  QPushButton * obj = static_cast< QPushButton * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPushButton * obj = qobject_cast< QPushButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -118,7 +118,7 @@ bool autoDefault() const
 */
 HB_FUNC_STATIC( QPUSHBUTTON_AUTODEFAULT )
 {
-  QPushButton * obj = static_cast< QPushButton * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPushButton * obj = qobject_cast< QPushButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -142,7 +142,7 @@ bool isDefault() const
 */
 HB_FUNC_STATIC( QPUSHBUTTON_ISDEFAULT )
 {
-  QPushButton * obj = static_cast< QPushButton * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPushButton * obj = qobject_cast< QPushButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -166,7 +166,7 @@ bool isFlat() const
 */
 HB_FUNC_STATIC( QPUSHBUTTON_ISFLAT )
 {
-  QPushButton * obj = static_cast< QPushButton * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPushButton * obj = qobject_cast< QPushButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -190,7 +190,7 @@ void setAutoDefault( bool )
 */
 HB_FUNC_STATIC( QPUSHBUTTON_SETAUTODEFAULT )
 {
-  QPushButton * obj = static_cast< QPushButton * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPushButton * obj = qobject_cast< QPushButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -216,7 +216,7 @@ void setDefault( bool )
 */
 HB_FUNC_STATIC( QPUSHBUTTON_SETDEFAULT )
 {
-  QPushButton * obj = static_cast< QPushButton * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPushButton * obj = qobject_cast< QPushButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -242,7 +242,7 @@ void setFlat( bool )
 */
 HB_FUNC_STATIC( QPUSHBUTTON_SETFLAT )
 {
-  QPushButton * obj = static_cast< QPushButton * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPushButton * obj = qobject_cast< QPushButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -268,7 +268,7 @@ void showMenu()
 */
 HB_FUNC_STATIC( QPUSHBUTTON_SHOWMENU )
 {
-  QPushButton * obj = static_cast< QPushButton * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPushButton * obj = qobject_cast< QPushButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

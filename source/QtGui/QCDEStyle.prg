@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QCDESTYLE_NEW )
 
 HB_FUNC_STATIC( QCDESTYLE_DELETE )
 {
-  QCDEStyle * obj = static_cast< QCDEStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QCDEStyle * obj = qobject_cast< QCDEStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -85,7 +85,7 @@ virtual void drawControl( QStyle::ControlElement element, const QStyleOption * o
 */
 HB_FUNC_STATIC( QCDESTYLE_DRAWCONTROL )
 {
-  QCDEStyle * obj = static_cast< QCDEStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QCDEStyle * obj = qobject_cast< QCDEStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -111,7 +111,7 @@ virtual void drawPrimitive( QStyle::PrimitiveElement pe, const QStyleOption * op
 */
 HB_FUNC_STATIC( QCDESTYLE_DRAWPRIMITIVE )
 {
-  QCDEStyle * obj = static_cast< QCDEStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QCDEStyle * obj = qobject_cast< QCDEStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -137,7 +137,7 @@ virtual int pixelMetric( QStyle::PixelMetric metric, const QStyleOption * option
 */
 HB_FUNC_STATIC( QCDESTYLE_PIXELMETRIC )
 {
-  QCDEStyle * obj = static_cast< QCDEStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QCDEStyle * obj = qobject_cast< QCDEStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -161,7 +161,7 @@ virtual QPalette standardPalette() const
 */
 HB_FUNC_STATIC( QCDESTYLE_STANDARDPALETTE )
 {
-  QCDEStyle * obj = static_cast< QCDEStyle * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QCDEStyle * obj = qobject_cast< QCDEStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

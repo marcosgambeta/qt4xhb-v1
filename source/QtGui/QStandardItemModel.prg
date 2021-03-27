@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_NEW )
 
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_DELETE )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -154,7 +154,7 @@ QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_INDEX )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -179,7 +179,7 @@ QModelIndex parent( const QModelIndex & child ) const
 */
 void QStandardItemModel_parent1()
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -193,7 +193,7 @@ QObject * parent() const
 */
 void QStandardItemModel_parent2()
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -223,7 +223,7 @@ int rowCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_ROWCOUNT )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -247,7 +247,7 @@ int columnCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_COLUMNCOUNT )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -271,7 +271,7 @@ bool hasChildren( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_HASCHILDREN )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -295,7 +295,7 @@ QVariant data( const QModelIndex & index, int role = Qt::DisplayRole ) const
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_DATA )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -320,7 +320,7 @@ bool setData( const QModelIndex & index, const QVariant & value, int role = Qt::
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETDATA )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -344,7 +344,7 @@ QVariant headerData( int section, Qt::Orientation orientation, int role = Qt::Di
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_HEADERDATA )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -369,7 +369,7 @@ bool setHeaderData( int section, Qt::Orientation orientation, const QVariant & v
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETHEADERDATA )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -393,7 +393,7 @@ bool insertRows( int row, int count, const QModelIndex & parent = QModelIndex() 
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_INSERTROWS )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -417,7 +417,7 @@ bool insertColumns( int column, int count, const QModelIndex & parent = QModelIn
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_INSERTCOLUMNS )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -441,7 +441,7 @@ bool removeRows( int row, int count, const QModelIndex & parent = QModelIndex() 
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_REMOVEROWS )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -465,7 +465,7 @@ bool removeColumns( int column, int count, const QModelIndex & parent = QModelIn
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_REMOVECOLUMNS )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -489,7 +489,7 @@ Qt::ItemFlags flags( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_FLAGS )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -513,7 +513,7 @@ Qt::DropActions supportedDropActions() const
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_SUPPORTEDDROPACTIONS )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -537,7 +537,7 @@ void clear()
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_CLEAR )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -563,7 +563,7 @@ void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_SORT )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -589,7 +589,7 @@ QStandardItem * itemFromIndex( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_ITEMFROMINDEX )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -614,7 +614,7 @@ QModelIndex indexFromItem( const QStandardItem * item ) const
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_INDEXFROMITEM )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -639,7 +639,7 @@ QStandardItem * item( int row, int column = 0 ) const
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_ITEM )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -664,7 +664,7 @@ void setItem( int row, int column, QStandardItem * item )
 */
 void QStandardItemModel_setItem1()
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -679,7 +679,7 @@ void setItem( int row, QStandardItem * item )
 */
 void QStandardItemModel_setItem2()
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -710,7 +710,7 @@ QStandardItem * invisibleRootItem() const
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_INVISIBLEROOTITEM )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -735,7 +735,7 @@ QStandardItem * horizontalHeaderItem( int column ) const
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_HORIZONTALHEADERITEM )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -760,7 +760,7 @@ void setHorizontalHeaderItem( int column, QStandardItem * item )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETHORIZONTALHEADERITEM )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -786,7 +786,7 @@ QStandardItem * verticalHeaderItem( int row ) const
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_VERTICALHEADERITEM )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -811,7 +811,7 @@ void setVerticalHeaderItem( int row, QStandardItem * item )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETVERTICALHEADERITEM )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -837,7 +837,7 @@ void setHorizontalHeaderLabels( const QStringList & labels )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETHORIZONTALHEADERLABELS )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -863,7 +863,7 @@ void setVerticalHeaderLabels( const QStringList & labels )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETVERTICALHEADERLABELS )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -889,7 +889,7 @@ void setRowCount( int rows )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETROWCOUNT )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -915,7 +915,7 @@ void setColumnCount( int columns )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETCOLUMNCOUNT )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -941,7 +941,7 @@ void appendRow( const QList<QStandardItem *> & items )
 */
 void QStandardItemModel_appendRow1()
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -963,7 +963,7 @@ void appendRow( QStandardItem * item )
 */
 void QStandardItemModel_appendRow2()
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -994,7 +994,7 @@ void appendColumn( const QList<QStandardItem *> & items )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_APPENDCOLUMN )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1027,7 +1027,7 @@ void insertRow( int row, const QList<QStandardItem *> & items )
 */
 void QStandardItemModel_insertRow1()
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1049,7 +1049,7 @@ void insertRow( int row, QStandardItem * item )
 */
 void QStandardItemModel_insertRow2()
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1064,7 +1064,7 @@ bool insertRow( int row, const QModelIndex & parent = QModelIndex() )
 */
 void QStandardItemModel_insertRow3()
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1097,7 +1097,7 @@ void insertColumn( int column, const QList<QStandardItem *> & items )
 */
 void QStandardItemModel_insertColumn1()
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1119,7 +1119,7 @@ bool insertColumn( int column, const QModelIndex & parent = QModelIndex() )
 */
 void QStandardItemModel_insertColumn2()
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1148,7 +1148,7 @@ QStandardItem * takeItem( int row, int column = 0 )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEITEM )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1173,7 +1173,7 @@ QList<QStandardItem *> takeRow( int row )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEROW )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1221,7 +1221,7 @@ QList<QStandardItem *> takeColumn( int column )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKECOLUMN )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1269,7 +1269,7 @@ QStandardItem * takeHorizontalHeaderItem( int column )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEHORIZONTALHEADERITEM )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1294,7 +1294,7 @@ QStandardItem * takeVerticalHeaderItem( int row )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEVERTICALHEADERITEM )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1319,7 +1319,7 @@ const QStandardItem * itemPrototype() const
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_ITEMPROTOTYPE )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1344,7 +1344,7 @@ void setItemPrototype( const QStandardItem * item )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETITEMPROTOTYPE )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1370,7 +1370,7 @@ QList<QStandardItem *> findItems( const QString & text, Qt::MatchFlags flags = Q
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_FINDITEMS )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1418,7 +1418,7 @@ int sortRole() const
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_SORTROLE )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1442,7 +1442,7 @@ void setSortRole( int role )
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_SETSORTROLE )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1468,7 +1468,7 @@ QStringList mimeTypes() const
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_MIMETYPES )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1492,7 +1492,7 @@ QMimeData * mimeData( const QModelIndexList & indexes ) const
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_MIMEDATA )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1524,7 +1524,7 @@ bool dropMimeData( const QMimeData * data, Qt::DropAction action, int row, int c
 */
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_DROPMIMEDATA )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

@@ -44,7 +44,7 @@ RETURN
 
 HB_FUNC_STATIC( QTAPGESTURE_DELETE )
 {
-  QTapGesture * obj = static_cast< QTapGesture * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTapGesture * obj = qobject_cast< QTapGesture * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -66,7 +66,7 @@ QPointF position() const
 */
 HB_FUNC_STATIC( QTAPGESTURE_POSITION )
 {
-  QTapGesture * obj = static_cast< QTapGesture * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTapGesture * obj = qobject_cast< QTapGesture * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -91,7 +91,7 @@ void setPosition( const QPointF & pos )
 */
 HB_FUNC_STATIC( QTAPGESTURE_SETPOSITION )
 {
-  QTapGesture * obj = static_cast< QTapGesture * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTapGesture * obj = qobject_cast< QTapGesture * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

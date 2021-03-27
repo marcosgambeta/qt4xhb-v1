@@ -44,7 +44,7 @@ RETURN
 
 HB_FUNC_STATIC( QGENERICPLUGIN_DELETE )
 {
-  QGenericPlugin * obj = static_cast< QGenericPlugin * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGenericPlugin * obj = qobject_cast< QGenericPlugin * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -66,7 +66,7 @@ virtual QObject * create( const QString & key, const QString & specification ) =
 */
 HB_FUNC_STATIC( QGENERICPLUGIN_CREATE )
 {
-  QGenericPlugin * obj = static_cast< QGenericPlugin * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGenericPlugin * obj = qobject_cast< QGenericPlugin * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -91,7 +91,7 @@ virtual QStringList keys() const = 0
 */
 HB_FUNC_STATIC( QGENERICPLUGIN_KEYS )
 {
-  QGenericPlugin * obj = static_cast< QGenericPlugin * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGenericPlugin * obj = qobject_cast< QGenericPlugin * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

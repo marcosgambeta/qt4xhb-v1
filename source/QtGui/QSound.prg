@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QSOUND_NEW )
 
 HB_FUNC_STATIC( QSOUND_DELETE )
 {
-  QSound * obj = static_cast< QSound * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSound * obj = qobject_cast< QSound * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -88,7 +88,7 @@ QString fileName() const
 */
 HB_FUNC_STATIC( QSOUND_FILENAME )
 {
-  QSound * obj = static_cast< QSound * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSound * obj = qobject_cast< QSound * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -112,7 +112,7 @@ bool isFinished() const
 */
 HB_FUNC_STATIC( QSOUND_ISFINISHED )
 {
-  QSound * obj = static_cast< QSound * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSound * obj = qobject_cast< QSound * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -136,7 +136,7 @@ int loops() const
 */
 HB_FUNC_STATIC( QSOUND_LOOPS )
 {
-  QSound * obj = static_cast< QSound * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSound * obj = qobject_cast< QSound * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -160,7 +160,7 @@ int loopsRemaining() const
 */
 HB_FUNC_STATIC( QSOUND_LOOPSREMAINING )
 {
-  QSound * obj = static_cast< QSound * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSound * obj = qobject_cast< QSound * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -184,7 +184,7 @@ void setLoops( int number )
 */
 HB_FUNC_STATIC( QSOUND_SETLOOPS )
 {
-  QSound * obj = static_cast< QSound * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSound * obj = qobject_cast< QSound * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -210,7 +210,7 @@ void stop()
 */
 HB_FUNC_STATIC( QSOUND_STOP )
 {
-  QSound * obj = static_cast< QSound * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSound * obj = qobject_cast< QSound * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -255,7 +255,7 @@ void play()
 */
 void QSound_play1()
 {
-  QSound * obj = static_cast< QSound * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSound * obj = qobject_cast< QSound * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

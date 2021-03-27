@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QTABLEVIEW_NEW )
 
 HB_FUNC_STATIC( QTABLEVIEW_DELETE )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -129,7 +129,7 @@ void clearSpans()
 */
 HB_FUNC_STATIC( QTABLEVIEW_CLEARSPANS )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -155,7 +155,7 @@ int columnAt( int x ) const
 */
 HB_FUNC_STATIC( QTABLEVIEW_COLUMNAT )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -179,7 +179,7 @@ int columnSpan( int row, int column ) const
 */
 HB_FUNC_STATIC( QTABLEVIEW_COLUMNSPAN )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -203,7 +203,7 @@ int columnViewportPosition( int column ) const
 */
 HB_FUNC_STATIC( QTABLEVIEW_COLUMNVIEWPORTPOSITION )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -227,7 +227,7 @@ int columnWidth( int column ) const
 */
 HB_FUNC_STATIC( QTABLEVIEW_COLUMNWIDTH )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -251,7 +251,7 @@ Qt::PenStyle gridStyle() const
 */
 HB_FUNC_STATIC( QTABLEVIEW_GRIDSTYLE )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -275,7 +275,7 @@ QHeaderView * horizontalHeader() const
 */
 HB_FUNC_STATIC( QTABLEVIEW_HORIZONTALHEADER )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -300,7 +300,7 @@ bool isColumnHidden( int column ) const
 */
 HB_FUNC_STATIC( QTABLEVIEW_ISCOLUMNHIDDEN )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -324,7 +324,7 @@ bool isCornerButtonEnabled() const
 */
 HB_FUNC_STATIC( QTABLEVIEW_ISCORNERBUTTONENABLED )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -348,7 +348,7 @@ bool isRowHidden( int row ) const
 */
 HB_FUNC_STATIC( QTABLEVIEW_ISROWHIDDEN )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -372,7 +372,7 @@ bool isSortingEnabled() const
 */
 HB_FUNC_STATIC( QTABLEVIEW_ISSORTINGENABLED )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -396,7 +396,7 @@ int rowAt( int y ) const
 */
 HB_FUNC_STATIC( QTABLEVIEW_ROWAT )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -420,7 +420,7 @@ int rowHeight( int row ) const
 */
 HB_FUNC_STATIC( QTABLEVIEW_ROWHEIGHT )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -444,7 +444,7 @@ int rowSpan( int row, int column ) const
 */
 HB_FUNC_STATIC( QTABLEVIEW_ROWSPAN )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -468,7 +468,7 @@ int rowViewportPosition( int row ) const
 */
 HB_FUNC_STATIC( QTABLEVIEW_ROWVIEWPORTPOSITION )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -492,7 +492,7 @@ void setColumnHidden( int column, bool hide )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETCOLUMNHIDDEN )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -518,7 +518,7 @@ void setColumnWidth( int column, int width )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETCOLUMNWIDTH )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -544,7 +544,7 @@ void setCornerButtonEnabled( bool enable )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETCORNERBUTTONENABLED )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -570,7 +570,7 @@ void setGridStyle( Qt::PenStyle style )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETGRIDSTYLE )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -596,7 +596,7 @@ void setHorizontalHeader( QHeaderView * header )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETHORIZONTALHEADER )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -622,7 +622,7 @@ void setRowHeight( int row, int height )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETROWHEIGHT )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -648,7 +648,7 @@ void setRowHidden( int row, bool hide )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETROWHIDDEN )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -674,7 +674,7 @@ void setSortingEnabled( bool enable )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETSORTINGENABLED )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -700,7 +700,7 @@ void setSpan( int row, int column, int rowSpanCount, int columnSpanCount )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETSPAN )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -726,7 +726,7 @@ void setVerticalHeader( QHeaderView * header )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETVERTICALHEADER )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -752,7 +752,7 @@ void setWordWrap( bool on )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETWORDWRAP )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -778,7 +778,7 @@ bool showGrid() const
 */
 HB_FUNC_STATIC( QTABLEVIEW_SHOWGRID )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -802,7 +802,7 @@ void sortByColumn( int column, Qt::SortOrder order )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SORTBYCOLUMN )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -828,7 +828,7 @@ QHeaderView * verticalHeader() const
 */
 HB_FUNC_STATIC( QTABLEVIEW_VERTICALHEADER )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -853,7 +853,7 @@ bool wordWrap() const
 */
 HB_FUNC_STATIC( QTABLEVIEW_WORDWRAP )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -877,7 +877,7 @@ virtual QModelIndex indexAt( const QPoint & pos ) const
 */
 HB_FUNC_STATIC( QTABLEVIEW_INDEXAT )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -902,7 +902,7 @@ virtual void setModel( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETMODEL )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -928,7 +928,7 @@ virtual void setRootIndex( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETROOTINDEX )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -954,7 +954,7 @@ virtual void setSelectionModel( QItemSelectionModel * selectionModel )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETSELECTIONMODEL )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -980,7 +980,7 @@ void hideColumn( int column )
 */
 HB_FUNC_STATIC( QTABLEVIEW_HIDECOLUMN )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1006,7 +1006,7 @@ void hideRow( int row )
 */
 HB_FUNC_STATIC( QTABLEVIEW_HIDEROW )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1032,7 +1032,7 @@ void resizeColumnToContents( int column )
 */
 HB_FUNC_STATIC( QTABLEVIEW_RESIZECOLUMNTOCONTENTS )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1058,7 +1058,7 @@ void resizeColumnsToContents()
 */
 HB_FUNC_STATIC( QTABLEVIEW_RESIZECOLUMNSTOCONTENTS )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1084,7 +1084,7 @@ void resizeRowToContents( int row )
 */
 HB_FUNC_STATIC( QTABLEVIEW_RESIZEROWTOCONTENTS )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1110,7 +1110,7 @@ void resizeRowsToContents()
 */
 HB_FUNC_STATIC( QTABLEVIEW_RESIZEROWSTOCONTENTS )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1136,7 +1136,7 @@ void selectColumn( int column )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SELECTCOLUMN )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1162,7 +1162,7 @@ void selectRow( int row )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SELECTROW )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1188,7 +1188,7 @@ void setShowGrid( bool show )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SETSHOWGRID )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1214,7 +1214,7 @@ void showColumn( int column )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SHOWCOLUMN )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1240,7 +1240,7 @@ void showRow( int row )
 */
 HB_FUNC_STATIC( QTABLEVIEW_SHOWROW )
 {
-  QTableView * obj = static_cast< QTableView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTableView * obj = qobject_cast< QTableView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

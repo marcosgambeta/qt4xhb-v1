@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QMENU_NEW )
 
 HB_FUNC_STATIC( QMENU_DELETE )
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -134,7 +134,7 @@ QAction * actionAt( const QPoint & pt ) const
 */
 HB_FUNC_STATIC( QMENU_ACTIONAT )
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -159,7 +159,7 @@ QRect actionGeometry( QAction * act ) const
 */
 HB_FUNC_STATIC( QMENU_ACTIONGEOMETRY )
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -184,7 +184,7 @@ QAction * activeAction() const
 */
 HB_FUNC_STATIC( QMENU_ACTIVEACTION )
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -209,7 +209,7 @@ QAction * addAction( const QString & text )
 */
 void QMenu_addAction1()
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -223,7 +223,7 @@ QAction * addAction( const QIcon & icon, const QString & text )
 */
 void QMenu_addAction2()
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -237,7 +237,7 @@ QAction * addAction( const QString & text, const QObject * receiver, const char 
 */
 void QMenu_addAction3()
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -251,7 +251,7 @@ QAction * addAction( const QIcon & icon, const QString & text, const QObject * r
 */
 void QMenu_addAction4()
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -265,7 +265,7 @@ void addAction( QAction * action )
 */
 void QMenu_addAction5()
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -308,7 +308,7 @@ QAction * addMenu( QMenu * menu )
 */
 void QMenu_addMenu1()
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -322,7 +322,7 @@ QMenu * addMenu( const QString & title )
 */
 void QMenu_addMenu2()
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -336,7 +336,7 @@ QMenu * addMenu( const QIcon & icon, const QString & title )
 */
 void QMenu_addMenu3()
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -370,7 +370,7 @@ QAction * addSeparator()
 */
 HB_FUNC_STATIC( QMENU_ADDSEPARATOR )
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -395,7 +395,7 @@ void clear()
 */
 HB_FUNC_STATIC( QMENU_CLEAR )
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -421,7 +421,7 @@ QAction * defaultAction() const
 */
 HB_FUNC_STATIC( QMENU_DEFAULTACTION )
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -446,7 +446,7 @@ void hideTearOffMenu()
 */
 HB_FUNC_STATIC( QMENU_HIDETEAROFFMENU )
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -472,7 +472,7 @@ QIcon icon() const
 */
 HB_FUNC_STATIC( QMENU_ICON )
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -497,7 +497,7 @@ QAction * insertMenu( QAction * before, QMenu * menu )
 */
 HB_FUNC_STATIC( QMENU_INSERTMENU )
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -522,7 +522,7 @@ QAction * insertSeparator( QAction * before )
 */
 HB_FUNC_STATIC( QMENU_INSERTSEPARATOR )
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -547,7 +547,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QMENU_ISEMPTY )
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -571,7 +571,7 @@ bool isTearOffEnabled() const
 */
 HB_FUNC_STATIC( QMENU_ISTEAROFFENABLED )
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -595,7 +595,7 @@ bool isTearOffMenuVisible() const
 */
 HB_FUNC_STATIC( QMENU_ISTEAROFFMENUVISIBLE )
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -619,7 +619,7 @@ QAction * menuAction() const
 */
 HB_FUNC_STATIC( QMENU_MENUACTION )
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -644,7 +644,7 @@ void popup( const QPoint & p, QAction * atAction = 0 )
 */
 HB_FUNC_STATIC( QMENU_POPUP )
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -670,7 +670,7 @@ bool separatorsCollapsible() const
 */
 HB_FUNC_STATIC( QMENU_SEPARATORSCOLLAPSIBLE )
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -694,7 +694,7 @@ void setActiveAction( QAction * act )
 */
 HB_FUNC_STATIC( QMENU_SETACTIVEACTION )
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -720,7 +720,7 @@ void setDefaultAction( QAction * act )
 */
 HB_FUNC_STATIC( QMENU_SETDEFAULTACTION )
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -746,7 +746,7 @@ void setIcon( const QIcon & icon )
 */
 HB_FUNC_STATIC( QMENU_SETICON )
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -772,7 +772,7 @@ void setSeparatorsCollapsible( bool collapse )
 */
 HB_FUNC_STATIC( QMENU_SETSEPARATORSCOLLAPSIBLE )
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -798,7 +798,7 @@ void setTearOffEnabled( bool )
 */
 HB_FUNC_STATIC( QMENU_SETTEAROFFENABLED )
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -824,7 +824,7 @@ void setTitle( const QString & title )
 */
 HB_FUNC_STATIC( QMENU_SETTITLE )
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -850,7 +850,7 @@ QString title() const
 */
 HB_FUNC_STATIC( QMENU_TITLE )
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -874,7 +874,7 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QMENU_SIZEHINT )
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -899,7 +899,7 @@ QAction * exec()
 */
 void QMenu_exec1()
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -913,7 +913,7 @@ QAction * exec( const QPoint & p, QAction * action = 0 )
 */
 void QMenu_exec2()
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -927,7 +927,7 @@ QAction * exec( QList<QAction *> actions, const QPoint & pos, QAction * at, QWid
 */
 void QMenu_exec3()
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -948,7 +948,7 @@ QAction * exec( QList<QAction *> actions, const QPoint & pos, QAction * at = 0 )
 */
 void QMenu_exec4()
 {
-  QMenu * obj = static_cast< QMenu * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

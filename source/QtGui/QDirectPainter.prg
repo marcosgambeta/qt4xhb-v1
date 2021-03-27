@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_NEW )
 
 HB_FUNC_STATIC( QDIRECTPAINTER_DELETE )
 {
-  QDirectPainter * obj = static_cast< QDirectPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -99,7 +99,7 @@ QRegion allocatedRegion() const
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_ALLOCATEDREGION )
 {
-  QDirectPainter * obj = static_cast< QDirectPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -124,7 +124,7 @@ void endPainting()
 */
 void QDirectPainter_endPainting1()
 {
-  QDirectPainter * obj = static_cast< QDirectPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -139,7 +139,7 @@ void endPainting( const QRegion & region )
 */
 void QDirectPainter_endPainting2()
 {
-  QDirectPainter * obj = static_cast< QDirectPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -170,7 +170,7 @@ void flush( const QRegion & region )
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_FLUSH )
 {
-  QDirectPainter * obj = static_cast< QDirectPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -196,7 +196,7 @@ QRect geometry() const
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_GEOMETRY )
 {
-  QDirectPainter * obj = static_cast< QDirectPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -221,7 +221,7 @@ void lower()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_LOWER )
 {
-  QDirectPainter * obj = static_cast< QDirectPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -247,7 +247,7 @@ void raise()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_RAISE )
 {
-  QDirectPainter * obj = static_cast< QDirectPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -273,7 +273,7 @@ virtual void regionChanged( const QRegion & newRegion )
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_REGIONCHANGED )
 {
-  QDirectPainter * obj = static_cast< QDirectPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -299,7 +299,7 @@ QRegion requestedRegion() const
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_REQUESTEDREGION )
 {
-  QDirectPainter * obj = static_cast< QDirectPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -324,7 +324,7 @@ void setGeometry( const QRect & rectangle )
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_SETGEOMETRY )
 {
-  QDirectPainter * obj = static_cast< QDirectPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -350,7 +350,7 @@ void setRegion( const QRegion & region )
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_SETREGION )
 {
-  QDirectPainter * obj = static_cast< QDirectPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -376,7 +376,7 @@ void startPainting( bool lockDisplay = true )
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_STARTPAINTING )
 {
-  QDirectPainter * obj = static_cast< QDirectPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

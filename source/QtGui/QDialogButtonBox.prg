@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW )
 
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_DELETE )
 {
-  QDialogButtonBox * obj = static_cast< QDialogButtonBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDialogButtonBox * obj = qobject_cast< QDialogButtonBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -133,7 +133,7 @@ void addButton( QAbstractButton * button, QDialogButtonBox::ButtonRole role )
 */
 void QDialogButtonBox_addButton1()
 {
-  QDialogButtonBox * obj = static_cast< QDialogButtonBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDialogButtonBox * obj = qobject_cast< QDialogButtonBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -148,7 +148,7 @@ QPushButton * addButton( const QString & text, QDialogButtonBox::ButtonRole role
 */
 void QDialogButtonBox_addButton2()
 {
-  QDialogButtonBox * obj = static_cast< QDialogButtonBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDialogButtonBox * obj = qobject_cast< QDialogButtonBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -162,7 +162,7 @@ QPushButton * addButton( QDialogButtonBox::StandardButton button )
 */
 void QDialogButtonBox_addButton3()
 {
-  QDialogButtonBox * obj = static_cast< QDialogButtonBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDialogButtonBox * obj = qobject_cast< QDialogButtonBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -196,7 +196,7 @@ QPushButton * button( QDialogButtonBox::StandardButton which ) const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTON )
 {
-  QDialogButtonBox * obj = static_cast< QDialogButtonBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDialogButtonBox * obj = qobject_cast< QDialogButtonBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -221,7 +221,7 @@ QDialogButtonBox::ButtonRole buttonRole( QAbstractButton * button ) const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTONROLE )
 {
-  QDialogButtonBox * obj = static_cast< QDialogButtonBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDialogButtonBox * obj = qobject_cast< QDialogButtonBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -245,7 +245,7 @@ QList<QAbstractButton *> buttons() const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTONS )
 {
-  QDialogButtonBox * obj = static_cast< QDialogButtonBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDialogButtonBox * obj = qobject_cast< QDialogButtonBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -293,7 +293,7 @@ bool centerButtons() const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_CENTERBUTTONS )
 {
-  QDialogButtonBox * obj = static_cast< QDialogButtonBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDialogButtonBox * obj = qobject_cast< QDialogButtonBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -317,7 +317,7 @@ void clear()
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_CLEAR )
 {
-  QDialogButtonBox * obj = static_cast< QDialogButtonBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDialogButtonBox * obj = qobject_cast< QDialogButtonBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -343,7 +343,7 @@ Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ORIENTATION )
 {
-  QDialogButtonBox * obj = static_cast< QDialogButtonBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDialogButtonBox * obj = qobject_cast< QDialogButtonBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -367,7 +367,7 @@ void removeButton( QAbstractButton * button )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_REMOVEBUTTON )
 {
-  QDialogButtonBox * obj = static_cast< QDialogButtonBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDialogButtonBox * obj = qobject_cast< QDialogButtonBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -393,7 +393,7 @@ void setCenterButtons( bool center )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETCENTERBUTTONS )
 {
-  QDialogButtonBox * obj = static_cast< QDialogButtonBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDialogButtonBox * obj = qobject_cast< QDialogButtonBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -419,7 +419,7 @@ void setOrientation( Qt::Orientation orientation )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETORIENTATION )
 {
-  QDialogButtonBox * obj = static_cast< QDialogButtonBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDialogButtonBox * obj = qobject_cast< QDialogButtonBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -445,7 +445,7 @@ void setStandardButtons( QDialogButtonBox::StandardButtons buttons )
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_SETSTANDARDBUTTONS )
 {
-  QDialogButtonBox * obj = static_cast< QDialogButtonBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDialogButtonBox * obj = qobject_cast< QDialogButtonBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -471,7 +471,7 @@ QDialogButtonBox::StandardButton standardButton( QAbstractButton * button ) cons
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTON )
 {
-  QDialogButtonBox * obj = static_cast< QDialogButtonBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDialogButtonBox * obj = qobject_cast< QDialogButtonBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -495,7 +495,7 @@ QDialogButtonBox::StandardButtons standardButtons() const
 */
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTONS )
 {
-  QDialogButtonBox * obj = static_cast< QDialogButtonBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDialogButtonBox * obj = qobject_cast< QDialogButtonBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

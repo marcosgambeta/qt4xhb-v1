@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_NEW )
 
 HB_FUNC_STATIC( QDOCKWIDGET_DELETE )
 {
-  QDockWidget * obj = static_cast< QDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDockWidget * obj = qobject_cast< QDockWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -120,7 +120,7 @@ Qt::DockWidgetAreas allowedAreas() const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ALLOWEDAREAS )
 {
-  QDockWidget * obj = static_cast< QDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDockWidget * obj = qobject_cast< QDockWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -144,7 +144,7 @@ QDockWidget::DockWidgetFeatures features() const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_FEATURES )
 {
-  QDockWidget * obj = static_cast< QDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDockWidget * obj = qobject_cast< QDockWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -168,7 +168,7 @@ bool isAreaAllowed( Qt::DockWidgetArea area ) const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ISAREAALLOWED )
 {
-  QDockWidget * obj = static_cast< QDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDockWidget * obj = qobject_cast< QDockWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -192,7 +192,7 @@ bool isFloating() const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ISFLOATING )
 {
-  QDockWidget * obj = static_cast< QDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDockWidget * obj = qobject_cast< QDockWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -216,7 +216,7 @@ void setAllowedAreas( Qt::DockWidgetAreas areas )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_SETALLOWEDAREAS )
 {
-  QDockWidget * obj = static_cast< QDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDockWidget * obj = qobject_cast< QDockWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -242,7 +242,7 @@ void setFeatures( QDockWidget::DockWidgetFeatures features )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_SETFEATURES )
 {
-  QDockWidget * obj = static_cast< QDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDockWidget * obj = qobject_cast< QDockWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -268,7 +268,7 @@ void setFloating( bool floating )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_SETFLOATING )
 {
-  QDockWidget * obj = static_cast< QDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDockWidget * obj = qobject_cast< QDockWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -294,7 +294,7 @@ void setTitleBarWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_SETTITLEBARWIDGET )
 {
-  QDockWidget * obj = static_cast< QDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDockWidget * obj = qobject_cast< QDockWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -320,7 +320,7 @@ void setWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_SETWIDGET )
 {
-  QDockWidget * obj = static_cast< QDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDockWidget * obj = qobject_cast< QDockWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -346,7 +346,7 @@ QWidget * titleBarWidget() const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_TITLEBARWIDGET )
 {
-  QDockWidget * obj = static_cast< QDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDockWidget * obj = qobject_cast< QDockWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -371,7 +371,7 @@ QAction * toggleViewAction() const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_TOGGLEVIEWACTION )
 {
-  QDockWidget * obj = static_cast< QDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDockWidget * obj = qobject_cast< QDockWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -396,7 +396,7 @@ QWidget * widget() const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_WIDGET )
 {
-  QDockWidget * obj = static_cast< QDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDockWidget * obj = qobject_cast< QDockWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

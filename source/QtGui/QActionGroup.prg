@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QACTIONGROUP_NEW )
 
 HB_FUNC_STATIC( QACTIONGROUP_DELETE )
 {
-  QActionGroup * obj = static_cast< QActionGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QActionGroup * obj = qobject_cast< QActionGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -95,7 +95,7 @@ QList<QAction *> actions() const
 */
 HB_FUNC_STATIC( QACTIONGROUP_ACTIONS )
 {
-  QActionGroup * obj = static_cast< QActionGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QActionGroup * obj = qobject_cast< QActionGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -143,7 +143,7 @@ QAction * addAction( QAction * action )
 */
 void QActionGroup_addAction1()
 {
-  QActionGroup * obj = static_cast< QActionGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QActionGroup * obj = qobject_cast< QActionGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -157,7 +157,7 @@ QAction * addAction( const QString & text )
 */
 void QActionGroup_addAction2()
 {
-  QActionGroup * obj = static_cast< QActionGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QActionGroup * obj = qobject_cast< QActionGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -171,7 +171,7 @@ QAction * addAction( const QIcon & icon, const QString & text )
 */
 void QActionGroup_addAction3()
 {
-  QActionGroup * obj = static_cast< QActionGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QActionGroup * obj = qobject_cast< QActionGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -205,7 +205,7 @@ QAction * checkedAction() const
 */
 HB_FUNC_STATIC( QACTIONGROUP_CHECKEDACTION )
 {
-  QActionGroup * obj = static_cast< QActionGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QActionGroup * obj = qobject_cast< QActionGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -230,7 +230,7 @@ bool isEnabled() const
 */
 HB_FUNC_STATIC( QACTIONGROUP_ISENABLED )
 {
-  QActionGroup * obj = static_cast< QActionGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QActionGroup * obj = qobject_cast< QActionGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -254,7 +254,7 @@ bool isExclusive() const
 */
 HB_FUNC_STATIC( QACTIONGROUP_ISEXCLUSIVE )
 {
-  QActionGroup * obj = static_cast< QActionGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QActionGroup * obj = qobject_cast< QActionGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -278,7 +278,7 @@ bool isVisible() const
 */
 HB_FUNC_STATIC( QACTIONGROUP_ISVISIBLE )
 {
-  QActionGroup * obj = static_cast< QActionGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QActionGroup * obj = qobject_cast< QActionGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -302,7 +302,7 @@ void removeAction( QAction * action )
 */
 HB_FUNC_STATIC( QACTIONGROUP_REMOVEACTION )
 {
-  QActionGroup * obj = static_cast< QActionGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QActionGroup * obj = qobject_cast< QActionGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -328,7 +328,7 @@ void setDisabled( bool b )
 */
 HB_FUNC_STATIC( QACTIONGROUP_SETDISABLED )
 {
-  QActionGroup * obj = static_cast< QActionGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QActionGroup * obj = qobject_cast< QActionGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -354,7 +354,7 @@ void setEnabled( bool )
 */
 HB_FUNC_STATIC( QACTIONGROUP_SETENABLED )
 {
-  QActionGroup * obj = static_cast< QActionGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QActionGroup * obj = qobject_cast< QActionGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -380,7 +380,7 @@ void setExclusive( bool )
 */
 HB_FUNC_STATIC( QACTIONGROUP_SETEXCLUSIVE )
 {
-  QActionGroup * obj = static_cast< QActionGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QActionGroup * obj = qobject_cast< QActionGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -406,7 +406,7 @@ void setVisible( bool )
 */
 HB_FUNC_STATIC( QACTIONGROUP_SETVISIBLE )
 {
-  QActionGroup * obj = static_cast< QActionGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QActionGroup * obj = qobject_cast< QActionGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

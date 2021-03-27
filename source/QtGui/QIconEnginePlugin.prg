@@ -44,7 +44,7 @@ RETURN
 
 HB_FUNC_STATIC( QICONENGINEPLUGIN_DELETE )
 {
-  QIconEnginePlugin * obj = static_cast< QIconEnginePlugin * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QIconEnginePlugin * obj = qobject_cast< QIconEnginePlugin * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -66,7 +66,7 @@ virtual QIconEngine * create( const QString & filename ) = 0
 */
 HB_FUNC_STATIC( QICONENGINEPLUGIN_CREATE )
 {
-  QIconEnginePlugin * obj = static_cast< QIconEnginePlugin * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QIconEnginePlugin * obj = qobject_cast< QIconEnginePlugin * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -91,7 +91,7 @@ virtual QStringList keys() const = 0
 */
 HB_FUNC_STATIC( QICONENGINEPLUGIN_KEYS )
 {
-  QIconEnginePlugin * obj = static_cast< QIconEnginePlugin * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QIconEnginePlugin * obj = qobject_cast< QIconEnginePlugin * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

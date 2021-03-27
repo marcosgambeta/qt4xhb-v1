@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW )
 
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_DELETE )
 {
-  QKeyEventTransition * obj = static_cast< QKeyEventTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QKeyEventTransition * obj = qobject_cast< QKeyEventTransition * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -102,7 +102,7 @@ int key() const
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_KEY )
 {
-  QKeyEventTransition * obj = static_cast< QKeyEventTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QKeyEventTransition * obj = qobject_cast< QKeyEventTransition * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -126,7 +126,7 @@ Qt::KeyboardModifiers modifierMask() const
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_MODIFIERMASK )
 {
-  QKeyEventTransition * obj = static_cast< QKeyEventTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QKeyEventTransition * obj = qobject_cast< QKeyEventTransition * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -150,7 +150,7 @@ void setKey( int key )
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETKEY )
 {
-  QKeyEventTransition * obj = static_cast< QKeyEventTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QKeyEventTransition * obj = qobject_cast< QKeyEventTransition * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -176,7 +176,7 @@ void setModifierMask( Qt::KeyboardModifiers modifierMask )
 */
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_SETMODIFIERMASK )
 {
-  QKeyEventTransition * obj = static_cast< QKeyEventTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QKeyEventTransition * obj = qobject_cast< QKeyEventTransition * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

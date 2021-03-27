@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QUNDOSTACK_NEW )
 
 HB_FUNC_STATIC( QUNDOSTACK_DELETE )
 {
-  QUndoStack * obj = static_cast< QUndoStack * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoStack * obj = qobject_cast< QUndoStack * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -115,7 +115,7 @@ void beginMacro( const QString & text )
 */
 HB_FUNC_STATIC( QUNDOSTACK_BEGINMACRO )
 {
-  QUndoStack * obj = static_cast< QUndoStack * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoStack * obj = qobject_cast< QUndoStack * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -141,7 +141,7 @@ bool canRedo() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_CANREDO )
 {
-  QUndoStack * obj = static_cast< QUndoStack * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoStack * obj = qobject_cast< QUndoStack * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -165,7 +165,7 @@ bool canUndo() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_CANUNDO )
 {
-  QUndoStack * obj = static_cast< QUndoStack * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoStack * obj = qobject_cast< QUndoStack * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -189,7 +189,7 @@ int cleanIndex() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_CLEANINDEX )
 {
-  QUndoStack * obj = static_cast< QUndoStack * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoStack * obj = qobject_cast< QUndoStack * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -213,7 +213,7 @@ void clear()
 */
 HB_FUNC_STATIC( QUNDOSTACK_CLEAR )
 {
-  QUndoStack * obj = static_cast< QUndoStack * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoStack * obj = qobject_cast< QUndoStack * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -239,7 +239,7 @@ const QUndoCommand * command( int index ) const
 */
 HB_FUNC_STATIC( QUNDOSTACK_COMMAND )
 {
-  QUndoStack * obj = static_cast< QUndoStack * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoStack * obj = qobject_cast< QUndoStack * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -264,7 +264,7 @@ int count() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_COUNT )
 {
-  QUndoStack * obj = static_cast< QUndoStack * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoStack * obj = qobject_cast< QUndoStack * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -288,7 +288,7 @@ QAction * createRedoAction( QObject * parent, const QString & prefix = QString()
 */
 HB_FUNC_STATIC( QUNDOSTACK_CREATEREDOACTION )
 {
-  QUndoStack * obj = static_cast< QUndoStack * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoStack * obj = qobject_cast< QUndoStack * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -313,7 +313,7 @@ QAction * createUndoAction( QObject * parent, const QString & prefix = QString()
 */
 HB_FUNC_STATIC( QUNDOSTACK_CREATEUNDOACTION )
 {
-  QUndoStack * obj = static_cast< QUndoStack * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoStack * obj = qobject_cast< QUndoStack * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -338,7 +338,7 @@ void endMacro()
 */
 HB_FUNC_STATIC( QUNDOSTACK_ENDMACRO )
 {
-  QUndoStack * obj = static_cast< QUndoStack * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoStack * obj = qobject_cast< QUndoStack * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -364,7 +364,7 @@ int index() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_INDEX )
 {
-  QUndoStack * obj = static_cast< QUndoStack * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoStack * obj = qobject_cast< QUndoStack * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -388,7 +388,7 @@ bool isActive() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_ISACTIVE )
 {
-  QUndoStack * obj = static_cast< QUndoStack * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoStack * obj = qobject_cast< QUndoStack * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -412,7 +412,7 @@ bool isClean() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_ISCLEAN )
 {
-  QUndoStack * obj = static_cast< QUndoStack * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoStack * obj = qobject_cast< QUndoStack * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -436,7 +436,7 @@ void push( QUndoCommand * cmd )
 */
 HB_FUNC_STATIC( QUNDOSTACK_PUSH )
 {
-  QUndoStack * obj = static_cast< QUndoStack * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoStack * obj = qobject_cast< QUndoStack * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -462,7 +462,7 @@ QString redoText() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_REDOTEXT )
 {
-  QUndoStack * obj = static_cast< QUndoStack * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoStack * obj = qobject_cast< QUndoStack * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -486,7 +486,7 @@ void setUndoLimit( int limit )
 */
 HB_FUNC_STATIC( QUNDOSTACK_SETUNDOLIMIT )
 {
-  QUndoStack * obj = static_cast< QUndoStack * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoStack * obj = qobject_cast< QUndoStack * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -512,7 +512,7 @@ QString text( int idx ) const
 */
 HB_FUNC_STATIC( QUNDOSTACK_TEXT )
 {
-  QUndoStack * obj = static_cast< QUndoStack * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoStack * obj = qobject_cast< QUndoStack * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -536,7 +536,7 @@ int undoLimit() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_UNDOLIMIT )
 {
-  QUndoStack * obj = static_cast< QUndoStack * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoStack * obj = qobject_cast< QUndoStack * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -560,7 +560,7 @@ QString undoText() const
 */
 HB_FUNC_STATIC( QUNDOSTACK_UNDOTEXT )
 {
-  QUndoStack * obj = static_cast< QUndoStack * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoStack * obj = qobject_cast< QUndoStack * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -584,7 +584,7 @@ void redo()
 */
 HB_FUNC_STATIC( QUNDOSTACK_REDO )
 {
-  QUndoStack * obj = static_cast< QUndoStack * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoStack * obj = qobject_cast< QUndoStack * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -610,7 +610,7 @@ void setActive( bool active = true )
 */
 HB_FUNC_STATIC( QUNDOSTACK_SETACTIVE )
 {
-  QUndoStack * obj = static_cast< QUndoStack * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoStack * obj = qobject_cast< QUndoStack * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -636,7 +636,7 @@ void setClean()
 */
 HB_FUNC_STATIC( QUNDOSTACK_SETCLEAN )
 {
-  QUndoStack * obj = static_cast< QUndoStack * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoStack * obj = qobject_cast< QUndoStack * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -662,7 +662,7 @@ void setIndex( int idx )
 */
 HB_FUNC_STATIC( QUNDOSTACK_SETINDEX )
 {
-  QUndoStack * obj = static_cast< QUndoStack * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoStack * obj = qobject_cast< QUndoStack * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -688,7 +688,7 @@ void undo()
 */
 HB_FUNC_STATIC( QUNDOSTACK_UNDO )
 {
-  QUndoStack * obj = static_cast< QUndoStack * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoStack * obj = qobject_cast< QUndoStack * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

@@ -95,7 +95,7 @@ QString description() const
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_DESCRIPTION )
 {
-  QCommandLinkButton * obj = static_cast< QCommandLinkButton * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QCommandLinkButton * obj = qobject_cast< QCommandLinkButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -119,7 +119,7 @@ void setDescription( const QString & description )
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETDESCRIPTION )
 {
-  QCommandLinkButton * obj = static_cast< QCommandLinkButton * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QCommandLinkButton * obj = qobject_cast< QCommandLinkButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -145,7 +145,7 @@ bool isFlat() const
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_ISFLAT )
 {
-  QCommandLinkButton * obj = static_cast< QCommandLinkButton * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QCommandLinkButton * obj = qobject_cast< QCommandLinkButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -169,7 +169,7 @@ void setFlat( bool )
 */
 HB_FUNC_STATIC( QCOMMANDLINKBUTTON_SETFLAT )
 {
-  QCommandLinkButton * obj = static_cast< QCommandLinkButton * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QCommandLinkButton * obj = qobject_cast< QCommandLinkButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QIDENTITYPROXYMODEL_NEW )
 
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_DELETE )
 {
-  QIdentityProxyModel * obj = static_cast< QIdentityProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QIdentityProxyModel * obj = qobject_cast< QIdentityProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -99,7 +99,7 @@ virtual int columnCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_COLUMNCOUNT )
 {
-  QIdentityProxyModel * obj = static_cast< QIdentityProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QIdentityProxyModel * obj = qobject_cast< QIdentityProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -123,7 +123,7 @@ virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int ro
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_DROPMIMEDATA )
 {
-  QIdentityProxyModel * obj = static_cast< QIdentityProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QIdentityProxyModel * obj = qobject_cast< QIdentityProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -147,7 +147,7 @@ virtual QModelIndex index( int row, int column, const QModelIndex & parent = QMo
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INDEX )
 {
-  QIdentityProxyModel * obj = static_cast< QIdentityProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QIdentityProxyModel * obj = qobject_cast< QIdentityProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -172,7 +172,7 @@ virtual bool insertColumns( int column, int count, const QModelIndex & parent = 
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INSERTCOLUMNS )
 {
-  QIdentityProxyModel * obj = static_cast< QIdentityProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QIdentityProxyModel * obj = qobject_cast< QIdentityProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -196,7 +196,7 @@ virtual bool insertRows( int row, int count, const QModelIndex & parent = QModel
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_INSERTROWS )
 {
-  QIdentityProxyModel * obj = static_cast< QIdentityProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QIdentityProxyModel * obj = qobject_cast< QIdentityProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -220,7 +220,7 @@ virtual QModelIndex mapFromSource( const QModelIndex & sourceIndex ) const
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPFROMSOURCE )
 {
-  QIdentityProxyModel * obj = static_cast< QIdentityProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QIdentityProxyModel * obj = qobject_cast< QIdentityProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -245,7 +245,7 @@ virtual QItemSelection mapSelectionFromSource( const QItemSelection & selection 
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPSELECTIONFROMSOURCE )
 {
-  QIdentityProxyModel * obj = static_cast< QIdentityProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QIdentityProxyModel * obj = qobject_cast< QIdentityProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -270,7 +270,7 @@ virtual QItemSelection mapSelectionToSource( const QItemSelection & selection ) 
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPSELECTIONTOSOURCE )
 {
-  QIdentityProxyModel * obj = static_cast< QIdentityProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QIdentityProxyModel * obj = qobject_cast< QIdentityProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -295,7 +295,7 @@ virtual QModelIndex mapToSource( const QModelIndex & proxyIndex ) const
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MAPTOSOURCE )
 {
-  QIdentityProxyModel * obj = static_cast< QIdentityProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QIdentityProxyModel * obj = qobject_cast< QIdentityProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -320,7 +320,7 @@ virtual QModelIndexList match( const QModelIndex & start, int role, const QVaria
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_MATCH )
 {
-  QIdentityProxyModel * obj = static_cast< QIdentityProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QIdentityProxyModel * obj = qobject_cast< QIdentityProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -372,7 +372,7 @@ virtual QModelIndex parent( const QModelIndex & child ) const
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_PARENT )
 {
-  QIdentityProxyModel * obj = static_cast< QIdentityProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QIdentityProxyModel * obj = qobject_cast< QIdentityProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -397,7 +397,7 @@ virtual bool removeColumns( int column, int count, const QModelIndex & parent = 
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_REMOVECOLUMNS )
 {
-  QIdentityProxyModel * obj = static_cast< QIdentityProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QIdentityProxyModel * obj = qobject_cast< QIdentityProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -421,7 +421,7 @@ virtual bool removeRows( int row, int count, const QModelIndex & parent = QModel
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_REMOVEROWS )
 {
-  QIdentityProxyModel * obj = static_cast< QIdentityProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QIdentityProxyModel * obj = qobject_cast< QIdentityProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -445,7 +445,7 @@ virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_ROWCOUNT )
 {
-  QIdentityProxyModel * obj = static_cast< QIdentityProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QIdentityProxyModel * obj = qobject_cast< QIdentityProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -469,7 +469,7 @@ virtual void setSourceModel( QAbstractItemModel * newSourceModel )
 */
 HB_FUNC_STATIC( QIDENTITYPROXYMODEL_SETSOURCEMODEL )
 {
-  QIdentityProxyModel * obj = static_cast< QIdentityProxyModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QIdentityProxyModel * obj = qobject_cast< QIdentityProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
