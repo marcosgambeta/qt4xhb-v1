@@ -47,7 +47,7 @@ RETURN
 
 HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_DELETE )
 {
-  QDesignerActionEditorInterface * obj = static_cast< QDesignerActionEditorInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDesignerActionEditorInterface * obj = qobject_cast< QDesignerActionEditorInterface * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -69,7 +69,7 @@ virtual QDesignerFormEditorInterface * core() const
 */
 HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_CORE )
 {
-  QDesignerActionEditorInterface * obj = static_cast< QDesignerActionEditorInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDesignerActionEditorInterface * obj = qobject_cast< QDesignerActionEditorInterface * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -94,7 +94,7 @@ virtual void manageAction( QAction * action ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_MANAGEACTION )
 {
-  QDesignerActionEditorInterface * obj = static_cast< QDesignerActionEditorInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDesignerActionEditorInterface * obj = qobject_cast< QDesignerActionEditorInterface * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -120,7 +120,7 @@ virtual void setFormWindow( QDesignerFormWindowInterface * formWindow ) = 0
 */
 HB_FUNC_STATIC( QDESIGNERACTIONEDITORINTERFACE_SETFORMWINDOW )
 {
-  QDesignerActionEditorInterface * obj = static_cast< QDesignerActionEditorInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDesignerActionEditorInterface * obj = qobject_cast< QDesignerActionEditorInterface * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

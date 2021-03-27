@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QEXTENSIONFACTORY_NEW )
 
 HB_FUNC_STATIC( QEXTENSIONFACTORY_DELETE )
 {
-  QExtensionFactory * obj = static_cast< QExtensionFactory * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QExtensionFactory * obj = qobject_cast< QExtensionFactory * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -86,7 +86,7 @@ QExtensionManager * extensionManager() const
 */
 HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSIONMANAGER )
 {
-  QExtensionFactory * obj = static_cast< QExtensionFactory * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QExtensionFactory * obj = qobject_cast< QExtensionFactory * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -111,7 +111,7 @@ virtual QObject * extension( QObject * object, const QString & iid ) const
 */
 HB_FUNC_STATIC( QEXTENSIONFACTORY_EXTENSION )
 {
-  QExtensionFactory * obj = static_cast< QExtensionFactory * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QExtensionFactory * obj = qobject_cast< QExtensionFactory * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

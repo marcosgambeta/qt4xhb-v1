@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_NEW )
 
 HB_FUNC_STATIC( QEXTENSIONMANAGER_DELETE )
 {
-  QExtensionManager * obj = static_cast< QExtensionManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QExtensionManager * obj = qobject_cast< QExtensionManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -84,7 +84,7 @@ virtual QObject * extension( QObject * object, const QString & iid ) const
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_EXTENSION )
 {
-  QExtensionManager * obj = static_cast< QExtensionManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QExtensionManager * obj = qobject_cast< QExtensionManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -109,7 +109,7 @@ virtual void registerExtensions( QAbstractExtensionFactory * factory, const QStr
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_REGISTEREXTENSIONS )
 {
-  QExtensionManager * obj = static_cast< QExtensionManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QExtensionManager * obj = qobject_cast< QExtensionManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -135,7 +135,7 @@ virtual void unregisterExtensions( QAbstractExtensionFactory * factory, const QS
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
 {
-  QExtensionManager * obj = static_cast< QExtensionManager * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QExtensionManager * obj = qobject_cast< QExtensionManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
