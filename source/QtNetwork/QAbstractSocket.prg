@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_NEW )
 
 HB_FUNC_STATIC( QABSTRACTSOCKET_DELETE )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -124,7 +124,7 @@ void abort()
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ABORT )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -150,7 +150,7 @@ void connectToHost( const QString & hostName, quint16 port, QIODevice::OpenMode 
 */
 void QAbstractSocket_connectToHost1()
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -165,7 +165,7 @@ void connectToHost( const QHostAddress & address, quint16 port, QIODevice::OpenM
 */
 void QAbstractSocket_connectToHost2()
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -196,7 +196,7 @@ void disconnectFromHost()
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_DISCONNECTFROMHOST )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -222,7 +222,7 @@ QAbstractSocket::SocketError error() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ERROR )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -246,7 +246,7 @@ bool flush()
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_FLUSH )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -270,7 +270,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ISVALID )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -294,7 +294,7 @@ QHostAddress localAddress() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_LOCALADDRESS )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -319,7 +319,7 @@ quint16 localPort() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_LOCALPORT )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -343,7 +343,7 @@ QHostAddress peerAddress() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_PEERADDRESS )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -368,7 +368,7 @@ QString peerName() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_PEERNAME )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -392,7 +392,7 @@ quint16 peerPort() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_PEERPORT )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -416,7 +416,7 @@ QNetworkProxy proxy() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_PROXY )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -441,7 +441,7 @@ qint64 readBufferSize() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_READBUFFERSIZE )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -465,7 +465,7 @@ void setProxy( const QNetworkProxy & networkProxy )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_SETPROXY )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -491,7 +491,7 @@ void setReadBufferSize( qint64 size )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_SETREADBUFFERSIZE )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -517,7 +517,7 @@ bool setSocketDescriptor( int socketDescriptor, QAbstractSocket::SocketState soc
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_SETSOCKETDESCRIPTOR )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -541,7 +541,7 @@ void setSocketOption( QAbstractSocket::SocketOption option, const QVariant & val
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_SETSOCKETOPTION )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -567,7 +567,7 @@ int socketDescriptor() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETDESCRIPTOR )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -591,7 +591,7 @@ QVariant socketOption( QAbstractSocket::SocketOption option )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETOPTION )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -616,7 +616,7 @@ QAbstractSocket::SocketType socketType() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETTYPE )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -640,7 +640,7 @@ QAbstractSocket::SocketState state() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_STATE )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -664,7 +664,7 @@ bool waitForConnected( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORCONNECTED )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -688,7 +688,7 @@ bool waitForDisconnected( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORDISCONNECTED )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -712,7 +712,7 @@ virtual bool atEnd() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ATEND )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -736,7 +736,7 @@ virtual qint64 bytesAvailable() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_BYTESAVAILABLE )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -760,7 +760,7 @@ virtual qint64 bytesToWrite() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_BYTESTOWRITE )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -784,7 +784,7 @@ virtual bool canReadLine() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_CANREADLINE )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -808,7 +808,7 @@ virtual void close()
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_CLOSE )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -834,7 +834,7 @@ virtual bool isSequential() const
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_ISSEQUENTIAL )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -858,7 +858,7 @@ virtual bool waitForBytesWritten( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORBYTESWRITTEN )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -882,7 +882,7 @@ virtual bool waitForReadyRead( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORREADYREAD )
 {
-  QAbstractSocket * obj = static_cast< QAbstractSocket * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

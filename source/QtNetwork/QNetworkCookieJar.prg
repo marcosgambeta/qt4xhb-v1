@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_NEW )
 
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_DELETE )
 {
-  QNetworkCookieJar * obj = static_cast< QNetworkCookieJar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QNetworkCookieJar * obj = qobject_cast< QNetworkCookieJar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -83,7 +83,7 @@ virtual QList<QNetworkCookie> cookiesForUrl( const QUrl & url ) const
 */
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_COOKIESFORURL )
 {
-  QNetworkCookieJar * obj = static_cast< QNetworkCookieJar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QNetworkCookieJar * obj = qobject_cast< QNetworkCookieJar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -135,7 +135,7 @@ virtual bool setCookiesFromUrl( const QList<QNetworkCookie> & cookieList, const 
 */
 HB_FUNC_STATIC( QNETWORKCOOKIEJAR_SETCOOKIESFROMURL )
 {
-  QNetworkCookieJar * obj = static_cast< QNetworkCookieJar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QNetworkCookieJar * obj = qobject_cast< QNetworkCookieJar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

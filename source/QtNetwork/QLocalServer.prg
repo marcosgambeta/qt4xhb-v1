@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QLOCALSERVER_NEW )
 
 HB_FUNC_STATIC( QLOCALSERVER_DELETE )
 {
-  QLocalServer * obj = static_cast< QLocalServer * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLocalServer * obj = qobject_cast< QLocalServer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -98,7 +98,7 @@ void close()
 */
 HB_FUNC_STATIC( QLOCALSERVER_CLOSE )
 {
-  QLocalServer * obj = static_cast< QLocalServer * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLocalServer * obj = qobject_cast< QLocalServer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -124,7 +124,7 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_ERRORSTRING )
 {
-  QLocalServer * obj = static_cast< QLocalServer * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLocalServer * obj = qobject_cast< QLocalServer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -148,7 +148,7 @@ QString fullServerName() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_FULLSERVERNAME )
 {
-  QLocalServer * obj = static_cast< QLocalServer * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLocalServer * obj = qobject_cast< QLocalServer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -172,7 +172,7 @@ virtual bool hasPendingConnections() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_HASPENDINGCONNECTIONS )
 {
-  QLocalServer * obj = static_cast< QLocalServer * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLocalServer * obj = qobject_cast< QLocalServer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -196,7 +196,7 @@ bool isListening() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_ISLISTENING )
 {
-  QLocalServer * obj = static_cast< QLocalServer * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLocalServer * obj = qobject_cast< QLocalServer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -220,7 +220,7 @@ bool listen( const QString & name )
 */
 HB_FUNC_STATIC( QLOCALSERVER_LISTEN )
 {
-  QLocalServer * obj = static_cast< QLocalServer * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLocalServer * obj = qobject_cast< QLocalServer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -244,7 +244,7 @@ int maxPendingConnections() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_MAXPENDINGCONNECTIONS )
 {
-  QLocalServer * obj = static_cast< QLocalServer * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLocalServer * obj = qobject_cast< QLocalServer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -268,7 +268,7 @@ virtual QLocalSocket * nextPendingConnection()
 */
 HB_FUNC_STATIC( QLOCALSERVER_NEXTPENDINGCONNECTION )
 {
-  QLocalServer * obj = static_cast< QLocalServer * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLocalServer * obj = qobject_cast< QLocalServer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -293,7 +293,7 @@ QAbstractSocket::SocketError serverError() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_SERVERERROR )
 {
-  QLocalServer * obj = static_cast< QLocalServer * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLocalServer * obj = qobject_cast< QLocalServer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -317,7 +317,7 @@ QString serverName() const
 */
 HB_FUNC_STATIC( QLOCALSERVER_SERVERNAME )
 {
-  QLocalServer * obj = static_cast< QLocalServer * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLocalServer * obj = qobject_cast< QLocalServer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -341,7 +341,7 @@ void setMaxPendingConnections( int numConnections )
 */
 HB_FUNC_STATIC( QLOCALSERVER_SETMAXPENDINGCONNECTIONS )
 {
-  QLocalServer * obj = static_cast< QLocalServer * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLocalServer * obj = qobject_cast< QLocalServer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -367,7 +367,7 @@ bool waitForNewConnection( int msec = 0, bool * timedOut = 0 )
 */
 HB_FUNC_STATIC( QLOCALSERVER_WAITFORNEWCONNECTION )
 {
-  QLocalServer * obj = static_cast< QLocalServer * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLocalServer * obj = qobject_cast< QLocalServer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
