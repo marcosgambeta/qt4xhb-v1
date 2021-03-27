@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QGLWIDGET_NEW )
 
 HB_FUNC_STATIC( QGLWIDGET_DELETE )
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -140,7 +140,7 @@ GLuint bindTexture( const QImage & image, GLenum target = GL_TEXTURE_2D, GLint f
 */
 void QGLWidget_bindTexture1()
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -153,7 +153,7 @@ GLuint bindTexture( const QPixmap & pixmap, GLenum target = GL_TEXTURE_2D, GLint
 */
 void QGLWidget_bindTexture2()
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -166,7 +166,7 @@ GLuint bindTexture( const QImage & image, GLenum target, GLint format, QGLContex
 */
 void QGLWidget_bindTexture3()
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -179,7 +179,7 @@ GLuint bindTexture( const QPixmap & pixmap, GLenum target, GLint format, QGLCont
 */
 void QGLWidget_bindTexture4()
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -192,7 +192,7 @@ GLuint bindTexture( const QString & fileName )
 */
 void QGLWidget_bindTexture5()
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -233,7 +233,7 @@ const QGLColormap & colormap() const
 */
 HB_FUNC_STATIC( QGLWIDGET_COLORMAP )
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -258,7 +258,7 @@ const QGLContext * context() const
 */
 HB_FUNC_STATIC( QGLWIDGET_CONTEXT )
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -283,7 +283,7 @@ void deleteTexture( GLuint id )
 */
 HB_FUNC_STATIC( QGLWIDGET_DELETETEXTURE )
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -309,7 +309,7 @@ void doneCurrent()
 */
 HB_FUNC_STATIC( QGLWIDGET_DONECURRENT )
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -335,7 +335,7 @@ bool doubleBuffer() const
 */
 HB_FUNC_STATIC( QGLWIDGET_DOUBLEBUFFER )
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -359,7 +359,7 @@ void drawTexture( const QRectF & target, GLuint textureId, GLenum textureTarget 
 */
 void QGLWidget_drawTexture1()
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -374,7 +374,7 @@ void drawTexture( const QPointF & point, GLuint textureId, GLenum textureTarget 
 */
 void QGLWidget_drawTexture2()
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -405,7 +405,7 @@ QGLFormat format() const
 */
 HB_FUNC_STATIC( QGLWIDGET_FORMAT )
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -430,7 +430,7 @@ QImage grabFrameBuffer( bool withAlpha = false )
 */
 HB_FUNC_STATIC( QGLWIDGET_GRABFRAMEBUFFER )
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -455,7 +455,7 @@ bool isSharing() const
 */
 HB_FUNC_STATIC( QGLWIDGET_ISSHARING )
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -479,7 +479,7 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QGLWIDGET_ISVALID )
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -503,7 +503,7 @@ void makeCurrent()
 */
 HB_FUNC_STATIC( QGLWIDGET_MAKECURRENT )
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -529,7 +529,7 @@ void makeOverlayCurrent()
 */
 HB_FUNC_STATIC( QGLWIDGET_MAKEOVERLAYCURRENT )
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -555,7 +555,7 @@ const QGLContext * overlayContext() const
 */
 HB_FUNC_STATIC( QGLWIDGET_OVERLAYCONTEXT )
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -580,7 +580,7 @@ void qglClearColor( const QColor & c ) const
 */
 HB_FUNC_STATIC( QGLWIDGET_QGLCLEARCOLOR )
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -606,7 +606,7 @@ void qglColor( const QColor & c ) const
 */
 HB_FUNC_STATIC( QGLWIDGET_QGLCOLOR )
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -632,7 +632,7 @@ QPixmap renderPixmap( int w = 0, int h = 0, bool useContext = false )
 */
 HB_FUNC_STATIC( QGLWIDGET_RENDERPIXMAP )
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -657,7 +657,7 @@ void renderText( int x, int y, const QString & str, const QFont & font = QFont()
 */
 void QGLWidget_renderText1()
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -672,7 +672,7 @@ void renderText( double x, double y, double z, const QString & str, const QFont 
 */
 void QGLWidget_renderText2()
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -703,7 +703,7 @@ void setColormap( const QGLColormap & cmap )
 */
 HB_FUNC_STATIC( QGLWIDGET_SETCOLORMAP )
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -729,7 +729,7 @@ void setMouseTracking( bool enable )
 */
 HB_FUNC_STATIC( QGLWIDGET_SETMOUSETRACKING )
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -755,7 +755,7 @@ void swapBuffers()
 */
 HB_FUNC_STATIC( QGLWIDGET_SWAPBUFFERS )
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -781,7 +781,7 @@ virtual void updateGL()
 */
 HB_FUNC_STATIC( QGLWIDGET_UPDATEGL )
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -807,7 +807,7 @@ virtual void updateOverlayGL()
 */
 HB_FUNC_STATIC( QGLWIDGET_UPDATEOVERLAYGL )
 {
-  QGLWidget * obj = static_cast< QGLWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGLWidget * obj = qobject_cast< QGLWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
