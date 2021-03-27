@@ -43,6 +43,7 @@ namespace Qt4xHb
 
   void * itemGetPtr ( int numpar );
   void * itemGetPtrStackSelfItem ();
+  QObject * getQObjectPointerFromSelfItem();
   void storePointerAndFlag (void * pointer, bool flag);
   void returnNewObject (void * pointer, bool flag);
 
