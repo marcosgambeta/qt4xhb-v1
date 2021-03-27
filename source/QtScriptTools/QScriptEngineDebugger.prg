@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_NEW )
 
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_DELETE )
 {
-  QScriptEngineDebugger * obj = static_cast< QScriptEngineDebugger * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngineDebugger * obj = qobject_cast< QScriptEngineDebugger * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -103,7 +103,7 @@ QAction * action( QScriptEngineDebugger::DebuggerAction action ) const
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ACTION )
 {
-  QScriptEngineDebugger * obj = static_cast< QScriptEngineDebugger * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngineDebugger * obj = qobject_cast< QScriptEngineDebugger * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -128,7 +128,7 @@ void attachTo( QScriptEngine * engine )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_ATTACHTO )
 {
-  QScriptEngineDebugger * obj = static_cast< QScriptEngineDebugger * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngineDebugger * obj = qobject_cast< QScriptEngineDebugger * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -154,7 +154,7 @@ bool autoShowStandardWindow() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_AUTOSHOWSTANDARDWINDOW )
 {
-  QScriptEngineDebugger * obj = static_cast< QScriptEngineDebugger * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngineDebugger * obj = qobject_cast< QScriptEngineDebugger * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -178,7 +178,7 @@ QMenu * createStandardMenu( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU )
 {
-  QScriptEngineDebugger * obj = static_cast< QScriptEngineDebugger * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngineDebugger * obj = qobject_cast< QScriptEngineDebugger * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -203,7 +203,7 @@ QToolBar * createStandardToolBar( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDTOOLBAR )
 {
-  QScriptEngineDebugger * obj = static_cast< QScriptEngineDebugger * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngineDebugger * obj = qobject_cast< QScriptEngineDebugger * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -228,7 +228,7 @@ void detach()
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_DETACH )
 {
-  QScriptEngineDebugger * obj = static_cast< QScriptEngineDebugger * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngineDebugger * obj = qobject_cast< QScriptEngineDebugger * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -254,7 +254,7 @@ void setAutoShowStandardWindow( bool autoShow )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_SETAUTOSHOWSTANDARDWINDOW )
 {
-  QScriptEngineDebugger * obj = static_cast< QScriptEngineDebugger * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngineDebugger * obj = qobject_cast< QScriptEngineDebugger * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -280,7 +280,7 @@ QMainWindow * standardWindow() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_STANDARDWINDOW )
 {
-  QScriptEngineDebugger * obj = static_cast< QScriptEngineDebugger * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngineDebugger * obj = qobject_cast< QScriptEngineDebugger * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -305,7 +305,7 @@ QScriptEngineDebugger::DebuggerState state() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_STATE )
 {
-  QScriptEngineDebugger * obj = static_cast< QScriptEngineDebugger * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngineDebugger * obj = qobject_cast< QScriptEngineDebugger * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -329,7 +329,7 @@ QWidget * widget( QScriptEngineDebugger::DebuggerWidget widget ) const
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_WIDGET )
 {
-  QScriptEngineDebugger * obj = static_cast< QScriptEngineDebugger * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngineDebugger * obj = qobject_cast< QScriptEngineDebugger * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
