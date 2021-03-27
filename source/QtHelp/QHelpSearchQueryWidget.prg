@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_NEW )
 
 HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_DELETE )
 {
-  QHelpSearchQueryWidget * obj = static_cast< QHelpSearchQueryWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QHelpSearchQueryWidget * obj = qobject_cast< QHelpSearchQueryWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -84,7 +84,7 @@ QList<QHelpSearchQuery> query() const
 */
 HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_QUERY )
 {
-  QHelpSearchQueryWidget * obj = static_cast< QHelpSearchQueryWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QHelpSearchQueryWidget * obj = qobject_cast< QHelpSearchQueryWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
