@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QWEBVIEW_NEW )
 
 HB_FUNC_STATIC( QWEBVIEW_DELETE )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -128,7 +128,7 @@ bool findText( const QString & subString, QWebPage::FindFlags options = 0 )
 */
 HB_FUNC_STATIC( QWEBVIEW_FINDTEXT )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -152,7 +152,7 @@ QWebHistory * history() const
 */
 HB_FUNC_STATIC( QWEBVIEW_HISTORY )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -177,7 +177,7 @@ QIcon icon() const
 */
 HB_FUNC_STATIC( QWEBVIEW_ICON )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -202,7 +202,7 @@ bool isModified() const
 */
 HB_FUNC_STATIC( QWEBVIEW_ISMODIFIED )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -226,7 +226,7 @@ void load( const QUrl & url )
 */
 void QWebView_load1()
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -241,7 +241,7 @@ void load( const QNetworkRequest & request, QNetworkAccessManager::Operation ope
 */
 void QWebView_load2()
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -272,7 +272,7 @@ QWebPage * page() const
 */
 HB_FUNC_STATIC( QWEBVIEW_PAGE )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -297,7 +297,7 @@ QAction * pageAction( QWebPage::WebAction action ) const
 */
 HB_FUNC_STATIC( QWEBVIEW_PAGEACTION )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -322,7 +322,7 @@ QPainter::RenderHints renderHints() const
 */
 HB_FUNC_STATIC( QWEBVIEW_RENDERHINTS )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -346,7 +346,7 @@ QString selectedText() const
 */
 HB_FUNC_STATIC( QWEBVIEW_SELECTEDTEXT )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -370,7 +370,7 @@ void setContent( const QByteArray & data, const QString & mimeType = QString(), 
 */
 HB_FUNC_STATIC( QWEBVIEW_SETCONTENT )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -396,7 +396,7 @@ void setHtml( const QString & html, const QUrl & baseUrl = QUrl() )
 */
 HB_FUNC_STATIC( QWEBVIEW_SETHTML )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -422,7 +422,7 @@ void setPage( QWebPage * page )
 */
 HB_FUNC_STATIC( QWEBVIEW_SETPAGE )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -448,7 +448,7 @@ void setRenderHint( QPainter::RenderHint hint, bool enabled = true )
 */
 HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINT )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -474,7 +474,7 @@ void setRenderHints( QPainter::RenderHints hints )
 */
 HB_FUNC_STATIC( QWEBVIEW_SETRENDERHINTS )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -500,7 +500,7 @@ void setTextSizeMultiplier( qreal factor )
 */
 HB_FUNC_STATIC( QWEBVIEW_SETTEXTSIZEMULTIPLIER )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -526,7 +526,7 @@ void setUrl( const QUrl & url )
 */
 HB_FUNC_STATIC( QWEBVIEW_SETURL )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -552,7 +552,7 @@ void setZoomFactor( qreal factor )
 */
 HB_FUNC_STATIC( QWEBVIEW_SETZOOMFACTOR )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -578,7 +578,7 @@ QWebSettings * settings() const
 */
 HB_FUNC_STATIC( QWEBVIEW_SETTINGS )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -603,7 +603,7 @@ qreal textSizeMultiplier() const
 */
 HB_FUNC_STATIC( QWEBVIEW_TEXTSIZEMULTIPLIER )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -627,7 +627,7 @@ QString title() const
 */
 HB_FUNC_STATIC( QWEBVIEW_TITLE )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -651,7 +651,7 @@ void triggerPageAction( QWebPage::WebAction action, bool checked = false )
 */
 HB_FUNC_STATIC( QWEBVIEW_TRIGGERPAGEACTION )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -677,7 +677,7 @@ QUrl url() const
 */
 HB_FUNC_STATIC( QWEBVIEW_URL )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -702,7 +702,7 @@ qreal zoomFactor() const
 */
 HB_FUNC_STATIC( QWEBVIEW_ZOOMFACTOR )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -726,7 +726,7 @@ void back()
 */
 HB_FUNC_STATIC( QWEBVIEW_BACK )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -752,7 +752,7 @@ void forward()
 */
 HB_FUNC_STATIC( QWEBVIEW_FORWARD )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -778,7 +778,7 @@ void print( QPrinter * printer ) const
 */
 HB_FUNC_STATIC( QWEBVIEW_PRINT )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -804,7 +804,7 @@ void reload()
 */
 HB_FUNC_STATIC( QWEBVIEW_RELOAD )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -830,7 +830,7 @@ void stop()
 */
 HB_FUNC_STATIC( QWEBVIEW_STOP )
 {
-  QWebView * obj = static_cast< QWebView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebView * obj = qobject_cast< QWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

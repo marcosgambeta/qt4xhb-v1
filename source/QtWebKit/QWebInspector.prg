@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_NEW )
 
 HB_FUNC_STATIC( QWEBINSPECTOR_DELETE )
 {
-  QWebInspector * obj = static_cast< QWebInspector * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebInspector * obj = qobject_cast< QWebInspector * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -86,7 +86,7 @@ QWebPage * page() const
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_PAGE )
 {
-  QWebInspector * obj = static_cast< QWebInspector * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebInspector * obj = qobject_cast< QWebInspector * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -111,7 +111,7 @@ void setPage( QWebPage * page )
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_SETPAGE )
 {
-  QWebInspector * obj = static_cast< QWebInspector * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebInspector * obj = qobject_cast< QWebInspector * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -137,7 +137,7 @@ virtual bool event( QEvent * ev )
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_EVENT )
 {
-  QWebInspector * obj = static_cast< QWebInspector * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebInspector * obj = qobject_cast< QWebInspector * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -161,7 +161,7 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_SIZEHINT )
 {
-  QWebInspector * obj = static_cast< QWebInspector * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebInspector * obj = qobject_cast< QWebInspector * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
