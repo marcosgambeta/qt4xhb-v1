@@ -46,7 +46,7 @@ RETURN
 
 HB_FUNC_STATIC( QSQLDRIVERPLUGIN_DELETE )
 {
-  QSqlDriverPlugin * obj = static_cast< QSqlDriverPlugin * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriverPlugin * obj = qobject_cast< QSqlDriverPlugin * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -68,7 +68,7 @@ virtual QSqlDriver * create( const QString & key ) = 0
 */
 HB_FUNC_STATIC( QSQLDRIVERPLUGIN_CREATE )
 {
-  QSqlDriverPlugin * obj = static_cast< QSqlDriverPlugin * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriverPlugin * obj = qobject_cast< QSqlDriverPlugin * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -93,7 +93,7 @@ virtual QStringList keys() const = 0
 */
 HB_FUNC_STATIC( QSQLDRIVERPLUGIN_KEYS )
 {
-  QSqlDriverPlugin * obj = static_cast< QSqlDriverPlugin * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriverPlugin * obj = qobject_cast< QSqlDriverPlugin * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

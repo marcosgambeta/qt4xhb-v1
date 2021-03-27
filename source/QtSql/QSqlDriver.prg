@@ -77,7 +77,7 @@ RETURN
 
 HB_FUNC_STATIC( QSQLDRIVER_DELETE )
 {
-  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriver * obj = qobject_cast< QSqlDriver * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -99,7 +99,7 @@ virtual bool beginTransaction()
 */
 HB_FUNC_STATIC( QSQLDRIVER_BEGINTRANSACTION )
 {
-  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriver * obj = qobject_cast< QSqlDriver * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -123,7 +123,7 @@ virtual void close() = 0
 */
 HB_FUNC_STATIC( QSQLDRIVER_CLOSE )
 {
-  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriver * obj = qobject_cast< QSqlDriver * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -149,7 +149,7 @@ virtual bool commitTransaction()
 */
 HB_FUNC_STATIC( QSQLDRIVER_COMMITTRANSACTION )
 {
-  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriver * obj = qobject_cast< QSqlDriver * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -173,7 +173,7 @@ virtual QSqlResult * createResult() const = 0
 */
 HB_FUNC_STATIC( QSQLDRIVER_CREATERESULT )
 {
-  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriver * obj = qobject_cast< QSqlDriver * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -198,7 +198,7 @@ virtual QString escapeIdentifier( const QString & identifier, QSqlDriver::Identi
 */
 HB_FUNC_STATIC( QSQLDRIVER_ESCAPEIDENTIFIER )
 {
-  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriver * obj = qobject_cast< QSqlDriver * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -222,7 +222,7 @@ virtual QString formatValue( const QSqlField & field, bool trimStrings = false )
 */
 HB_FUNC_STATIC( QSQLDRIVER_FORMATVALUE )
 {
-  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriver * obj = qobject_cast< QSqlDriver * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -246,7 +246,7 @@ virtual QVariant handle() const
 */
 HB_FUNC_STATIC( QSQLDRIVER_HANDLE )
 {
-  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriver * obj = qobject_cast< QSqlDriver * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -271,7 +271,7 @@ virtual bool hasFeature( QSqlDriver::DriverFeature feature ) const = 0
 */
 HB_FUNC_STATIC( QSQLDRIVER_HASFEATURE )
 {
-  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriver * obj = qobject_cast< QSqlDriver * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -295,7 +295,7 @@ bool isIdentifierEscaped( const QString & identifier, QSqlDriver::IdentifierType
 */
 HB_FUNC_STATIC( QSQLDRIVER_ISIDENTIFIERESCAPED )
 {
-  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriver * obj = qobject_cast< QSqlDriver * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -319,7 +319,7 @@ virtual bool isOpen() const
 */
 HB_FUNC_STATIC( QSQLDRIVER_ISOPEN )
 {
-  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriver * obj = qobject_cast< QSqlDriver * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -343,7 +343,7 @@ bool isOpenError() const
 */
 HB_FUNC_STATIC( QSQLDRIVER_ISOPENERROR )
 {
-  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriver * obj = qobject_cast< QSqlDriver * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -367,7 +367,7 @@ QSqlError lastError() const
 */
 HB_FUNC_STATIC( QSQLDRIVER_LASTERROR )
 {
-  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriver * obj = qobject_cast< QSqlDriver * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -392,7 +392,7 @@ QSql::NumericalPrecisionPolicy numericalPrecisionPolicy() const
 */
 HB_FUNC_STATIC( QSQLDRIVER_NUMERICALPRECISIONPOLICY )
 {
-  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriver * obj = qobject_cast< QSqlDriver * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -416,7 +416,7 @@ virtual bool open( const QString & db, const QString & user = QString(), const Q
 */
 HB_FUNC_STATIC( QSQLDRIVER_OPEN )
 {
-  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriver * obj = qobject_cast< QSqlDriver * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -440,7 +440,7 @@ virtual QSqlIndex primaryIndex( const QString & tableName ) const
 */
 HB_FUNC_STATIC( QSQLDRIVER_PRIMARYINDEX )
 {
-  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriver * obj = qobject_cast< QSqlDriver * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -465,7 +465,7 @@ virtual QSqlRecord record( const QString & tableName ) const
 */
 HB_FUNC_STATIC( QSQLDRIVER_RECORD )
 {
-  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriver * obj = qobject_cast< QSqlDriver * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -490,7 +490,7 @@ virtual bool rollbackTransaction()
 */
 HB_FUNC_STATIC( QSQLDRIVER_ROLLBACKTRANSACTION )
 {
-  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriver * obj = qobject_cast< QSqlDriver * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -514,7 +514,7 @@ void setNumericalPrecisionPolicy( QSql::NumericalPrecisionPolicy precisionPolicy
 */
 HB_FUNC_STATIC( QSQLDRIVER_SETNUMERICALPRECISIONPOLICY )
 {
-  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriver * obj = qobject_cast< QSqlDriver * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -540,7 +540,7 @@ virtual QString sqlStatement( QSqlDriver::StatementType type, const QString & ta
 */
 HB_FUNC_STATIC( QSQLDRIVER_SQLSTATEMENT )
 {
-  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriver * obj = qobject_cast< QSqlDriver * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -564,7 +564,7 @@ QString stripDelimiters( const QString & identifier, QSqlDriver::IdentifierType 
 */
 HB_FUNC_STATIC( QSQLDRIVER_STRIPDELIMITERS )
 {
-  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriver * obj = qobject_cast< QSqlDriver * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -588,7 +588,7 @@ bool subscribeToNotification( const QString & name )
 */
 HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBETONOTIFICATION )
 {
-  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriver * obj = qobject_cast< QSqlDriver * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -612,7 +612,7 @@ QStringList subscribedToNotifications() const
 */
 HB_FUNC_STATIC( QSQLDRIVER_SUBSCRIBEDTONOTIFICATIONS )
 {
-  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriver * obj = qobject_cast< QSqlDriver * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -636,7 +636,7 @@ virtual QStringList tables( QSql::TableType tableType ) const
 */
 HB_FUNC_STATIC( QSQLDRIVER_TABLES )
 {
-  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriver * obj = qobject_cast< QSqlDriver * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -660,7 +660,7 @@ bool unsubscribeFromNotification( const QString & name )
 */
 HB_FUNC_STATIC( QSQLDRIVER_UNSUBSCRIBEFROMNOTIFICATION )
 {
-  QSqlDriver * obj = static_cast< QSqlDriver * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlDriver * obj = qobject_cast< QSqlDriver * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

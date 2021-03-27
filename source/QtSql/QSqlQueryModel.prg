@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_NEW )
 
 HB_FUNC_STATIC( QSQLQUERYMODEL_DELETE )
 {
-  QSqlQueryModel * obj = static_cast< QSqlQueryModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -102,7 +102,7 @@ virtual void clear()
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_CLEAR )
 {
-  QSqlQueryModel * obj = static_cast< QSqlQueryModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -128,7 +128,7 @@ QSqlError lastError() const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_LASTERROR )
 {
-  QSqlQueryModel * obj = static_cast< QSqlQueryModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -153,7 +153,7 @@ QSqlQuery query() const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_QUERY )
 {
-  QSqlQueryModel * obj = static_cast< QSqlQueryModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -178,7 +178,7 @@ QSqlRecord record( int row ) const
 */
 void QSqlQueryModel_record1()
 {
-  QSqlQueryModel * obj = static_cast< QSqlQueryModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -192,7 +192,7 @@ QSqlRecord record() const
 */
 void QSqlQueryModel_record2()
 {
-  QSqlQueryModel * obj = static_cast< QSqlQueryModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -222,7 +222,7 @@ void setQuery( const QSqlQuery & query )
 */
 void QSqlQueryModel_setQuery1()
 {
-  QSqlQueryModel * obj = static_cast< QSqlQueryModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -237,7 +237,7 @@ void setQuery( const QString & query, const QSqlDatabase & db = QSqlDatabase() )
 */
 void QSqlQueryModel_setQuery2()
 {
-  QSqlQueryModel * obj = static_cast< QSqlQueryModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -268,7 +268,7 @@ virtual bool canFetchMore( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_CANFETCHMORE )
 {
-  QSqlQueryModel * obj = static_cast< QSqlQueryModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -292,7 +292,7 @@ virtual int columnCount( const QModelIndex & index = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_COLUMNCOUNT )
 {
-  QSqlQueryModel * obj = static_cast< QSqlQueryModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -316,7 +316,7 @@ virtual QVariant data( const QModelIndex & item, int role = Qt::DisplayRole ) co
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_DATA )
 {
-  QSqlQueryModel * obj = static_cast< QSqlQueryModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -341,7 +341,7 @@ virtual void fetchMore( const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_FETCHMORE )
 {
-  QSqlQueryModel * obj = static_cast< QSqlQueryModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -367,7 +367,7 @@ virtual QVariant headerData( int section, Qt::Orientation orientation, int role 
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_HEADERDATA )
 {
-  QSqlQueryModel * obj = static_cast< QSqlQueryModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -392,7 +392,7 @@ virtual bool insertColumns( int column, int count, const QModelIndex & parent = 
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_INSERTCOLUMNS )
 {
-  QSqlQueryModel * obj = static_cast< QSqlQueryModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -416,7 +416,7 @@ virtual bool removeColumns( int column, int count, const QModelIndex & parent = 
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_REMOVECOLUMNS )
 {
-  QSqlQueryModel * obj = static_cast< QSqlQueryModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -440,7 +440,7 @@ virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_ROWCOUNT )
 {
-  QSqlQueryModel * obj = static_cast< QSqlQueryModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -464,7 +464,7 @@ virtual bool setHeaderData( int section, Qt::Orientation orientation, const QVar
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_SETHEADERDATA )
 {
-  QSqlQueryModel * obj = static_cast< QSqlQueryModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
