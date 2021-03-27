@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QTIMER_NEW )
 
 HB_FUNC_STATIC( QTIMER_DELETE )
 {
-  QTimer * obj = static_cast< QTimer * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTimer * obj = qobject_cast< QTimer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -91,7 +91,7 @@ int interval() const
 */
 HB_FUNC_STATIC( QTIMER_INTERVAL )
 {
-  QTimer * obj = static_cast< QTimer * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTimer * obj = qobject_cast< QTimer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -115,7 +115,7 @@ bool isActive() const
 */
 HB_FUNC_STATIC( QTIMER_ISACTIVE )
 {
-  QTimer * obj = static_cast< QTimer * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTimer * obj = qobject_cast< QTimer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -139,7 +139,7 @@ bool isSingleShot() const
 */
 HB_FUNC_STATIC( QTIMER_ISSINGLESHOT )
 {
-  QTimer * obj = static_cast< QTimer * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTimer * obj = qobject_cast< QTimer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -163,7 +163,7 @@ void setInterval( int msec )
 */
 HB_FUNC_STATIC( QTIMER_SETINTERVAL )
 {
-  QTimer * obj = static_cast< QTimer * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTimer * obj = qobject_cast< QTimer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -189,7 +189,7 @@ void setSingleShot( bool singleShot )
 */
 HB_FUNC_STATIC( QTIMER_SETSINGLESHOT )
 {
-  QTimer * obj = static_cast< QTimer * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTimer * obj = qobject_cast< QTimer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -215,7 +215,7 @@ int timerId() const
 */
 HB_FUNC_STATIC( QTIMER_TIMERID )
 {
-  QTimer * obj = static_cast< QTimer * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTimer * obj = qobject_cast< QTimer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -239,7 +239,7 @@ void start( int msec )
 */
 void QTimer_start1()
 {
-  QTimer * obj = static_cast< QTimer * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTimer * obj = qobject_cast< QTimer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -254,7 +254,7 @@ void start()
 */
 void QTimer_start2()
 {
-  QTimer * obj = static_cast< QTimer * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTimer * obj = qobject_cast< QTimer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -285,7 +285,7 @@ void stop()
 */
 HB_FUNC_STATIC( QTIMER_STOP )
 {
-  QTimer * obj = static_cast< QTimer * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTimer * obj = qobject_cast< QTimer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

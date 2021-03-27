@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QSTATE_NEW )
 
 HB_FUNC_STATIC( QSTATE_DELETE )
 {
-  QState * obj = static_cast< QState * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QState * obj = qobject_cast< QState * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -118,7 +118,7 @@ void addTransition( QAbstractTransition * transition )
 */
 void QState_addTransition1()
 {
-  QState * obj = static_cast< QState * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QState * obj = qobject_cast< QState * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -133,7 +133,7 @@ QSignalTransition * addTransition( QObject * sender, const char * signal, QAbstr
 */
 void QState_addTransition2()
 {
-  QState * obj = static_cast< QState * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QState * obj = qobject_cast< QState * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -147,7 +147,7 @@ QAbstractTransition * addTransition( QAbstractState * target )
 */
 void QState_addTransition3()
 {
-  QState * obj = static_cast< QState * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QState * obj = qobject_cast< QState * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -181,7 +181,7 @@ void assignProperty( QObject * object, const char * name, const QVariant & value
 */
 HB_FUNC_STATIC( QSTATE_ASSIGNPROPERTY )
 {
-  QState * obj = static_cast< QState * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QState * obj = qobject_cast< QState * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -207,7 +207,7 @@ QState::ChildMode childMode() const
 */
 HB_FUNC_STATIC( QSTATE_CHILDMODE )
 {
-  QState * obj = static_cast< QState * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QState * obj = qobject_cast< QState * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -231,7 +231,7 @@ QAbstractState * errorState() const
 */
 HB_FUNC_STATIC( QSTATE_ERRORSTATE )
 {
-  QState * obj = static_cast< QState * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QState * obj = qobject_cast< QState * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -256,7 +256,7 @@ QAbstractState * initialState() const
 */
 HB_FUNC_STATIC( QSTATE_INITIALSTATE )
 {
-  QState * obj = static_cast< QState * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QState * obj = qobject_cast< QState * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -281,7 +281,7 @@ void removeTransition( QAbstractTransition * transition )
 */
 HB_FUNC_STATIC( QSTATE_REMOVETRANSITION )
 {
-  QState * obj = static_cast< QState * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QState * obj = qobject_cast< QState * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -307,7 +307,7 @@ void setChildMode( QState::ChildMode mode )
 */
 HB_FUNC_STATIC( QSTATE_SETCHILDMODE )
 {
-  QState * obj = static_cast< QState * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QState * obj = qobject_cast< QState * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -333,7 +333,7 @@ void setErrorState( QAbstractState * state )
 */
 HB_FUNC_STATIC( QSTATE_SETERRORSTATE )
 {
-  QState * obj = static_cast< QState * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QState * obj = qobject_cast< QState * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -359,7 +359,7 @@ void setInitialState( QAbstractState * state )
 */
 HB_FUNC_STATIC( QSTATE_SETINITIALSTATE )
 {
-  QState * obj = static_cast< QState * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QState * obj = qobject_cast< QState * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -385,7 +385,7 @@ QList<QAbstractTransition *> transitions() const
 */
 HB_FUNC_STATIC( QSTATE_TRANSITIONS )
 {
-  QState * obj = static_cast< QState * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QState * obj = qobject_cast< QState * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

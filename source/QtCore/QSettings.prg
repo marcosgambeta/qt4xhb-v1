@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QSETTINGS_NEW )
 
 HB_FUNC_STATIC( QSETTINGS_DELETE )
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -171,7 +171,7 @@ QStringList allKeys() const
 */
 HB_FUNC_STATIC( QSETTINGS_ALLKEYS )
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -195,7 +195,7 @@ QString applicationName() const
 */
 HB_FUNC_STATIC( QSETTINGS_APPLICATIONNAME )
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -219,7 +219,7 @@ void beginGroup( const QString & prefix )
 */
 HB_FUNC_STATIC( QSETTINGS_BEGINGROUP )
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -245,7 +245,7 @@ int beginReadArray( const QString & prefix )
 */
 HB_FUNC_STATIC( QSETTINGS_BEGINREADARRAY )
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -269,7 +269,7 @@ void beginWriteArray( const QString & prefix, int size = -1 )
 */
 HB_FUNC_STATIC( QSETTINGS_BEGINWRITEARRAY )
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -295,7 +295,7 @@ QStringList childGroups() const
 */
 HB_FUNC_STATIC( QSETTINGS_CHILDGROUPS )
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -319,7 +319,7 @@ QStringList childKeys() const
 */
 HB_FUNC_STATIC( QSETTINGS_CHILDKEYS )
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -343,7 +343,7 @@ void clear()
 */
 HB_FUNC_STATIC( QSETTINGS_CLEAR )
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -369,7 +369,7 @@ bool contains( const QString & key ) const
 */
 HB_FUNC_STATIC( QSETTINGS_CONTAINS )
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -393,7 +393,7 @@ void endArray()
 */
 HB_FUNC_STATIC( QSETTINGS_ENDARRAY )
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -419,7 +419,7 @@ void endGroup()
 */
 HB_FUNC_STATIC( QSETTINGS_ENDGROUP )
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -445,7 +445,7 @@ bool fallbacksEnabled() const
 */
 HB_FUNC_STATIC( QSETTINGS_FALLBACKSENABLED )
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -469,7 +469,7 @@ QString fileName() const
 */
 HB_FUNC_STATIC( QSETTINGS_FILENAME )
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -493,7 +493,7 @@ QSettings::Format format() const
 */
 HB_FUNC_STATIC( QSETTINGS_FORMAT )
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -517,7 +517,7 @@ QString group() const
 */
 HB_FUNC_STATIC( QSETTINGS_GROUP )
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -541,7 +541,7 @@ QTextCodec * iniCodec() const
 */
 HB_FUNC_STATIC( QSETTINGS_INICODEC )
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -566,7 +566,7 @@ bool isWritable() const
 */
 HB_FUNC_STATIC( QSETTINGS_ISWRITABLE )
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -590,7 +590,7 @@ QString organizationName() const
 */
 HB_FUNC_STATIC( QSETTINGS_ORGANIZATIONNAME )
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -614,7 +614,7 @@ void remove( const QString & key )
 */
 HB_FUNC_STATIC( QSETTINGS_REMOVE )
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -640,7 +640,7 @@ QSettings::Scope scope() const
 */
 HB_FUNC_STATIC( QSETTINGS_SCOPE )
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -664,7 +664,7 @@ void setArrayIndex( int i )
 */
 HB_FUNC_STATIC( QSETTINGS_SETARRAYINDEX )
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -690,7 +690,7 @@ void setFallbacksEnabled( bool b )
 */
 HB_FUNC_STATIC( QSETTINGS_SETFALLBACKSENABLED )
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -716,7 +716,7 @@ void setIniCodec( QTextCodec * codec )
 */
 void QSettings_setIniCodec1()
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -731,7 +731,7 @@ void setIniCodec( const char * codecName )
 */
 void QSettings_setIniCodec2()
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -762,7 +762,7 @@ void setValue( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QSETTINGS_SETVALUE )
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -788,7 +788,7 @@ QSettings::Status status() const
 */
 HB_FUNC_STATIC( QSETTINGS_STATUS )
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -812,7 +812,7 @@ void sync()
 */
 HB_FUNC_STATIC( QSETTINGS_SYNC )
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -838,7 +838,7 @@ QVariant value( const QString & key, const QVariant & defaultValue = QVariant() 
 */
 HB_FUNC_STATIC( QSETTINGS_VALUE )
 {
-  QSettings * obj = static_cast< QSettings * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSettings * obj = qobject_cast< QSettings * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

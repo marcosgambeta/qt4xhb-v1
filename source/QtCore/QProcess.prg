@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QPROCESS_NEW )
 
 HB_FUNC_STATIC( QPROCESS_DELETE )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -129,7 +129,7 @@ void closeReadChannel( QProcess::ProcessChannel channel )
 */
 HB_FUNC_STATIC( QPROCESS_CLOSEREADCHANNEL )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -155,7 +155,7 @@ void closeWriteChannel()
 */
 HB_FUNC_STATIC( QPROCESS_CLOSEWRITECHANNEL )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -181,7 +181,7 @@ QStringList environment() const
 */
 HB_FUNC_STATIC( QPROCESS_ENVIRONMENT )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -205,7 +205,7 @@ QProcess::ProcessError error() const
 */
 HB_FUNC_STATIC( QPROCESS_ERROR )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -229,7 +229,7 @@ int exitCode() const
 */
 HB_FUNC_STATIC( QPROCESS_EXITCODE )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -253,7 +253,7 @@ QProcess::ExitStatus exitStatus() const
 */
 HB_FUNC_STATIC( QPROCESS_EXITSTATUS )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -278,7 +278,7 @@ QString nativeArguments () const
 HB_FUNC_STATIC( QPROCESS_NATIVEARGUMENTS )
 {
 #if defined(Q_OS_WIN) 
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -302,7 +302,7 @@ QProcess::ProcessChannelMode processChannelMode() const
 */
 HB_FUNC_STATIC( QPROCESS_PROCESSCHANNELMODE )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -326,7 +326,7 @@ QProcessEnvironment processEnvironment() const
 */
 HB_FUNC_STATIC( QPROCESS_PROCESSENVIRONMENT )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -351,7 +351,7 @@ QByteArray readAllStandardError()
 */
 HB_FUNC_STATIC( QPROCESS_READALLSTANDARDERROR )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -376,7 +376,7 @@ QByteArray readAllStandardOutput()
 */
 HB_FUNC_STATIC( QPROCESS_READALLSTANDARDOUTPUT )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -401,7 +401,7 @@ QProcess::ProcessChannel readChannel() const
 */
 HB_FUNC_STATIC( QPROCESS_READCHANNEL )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -425,7 +425,7 @@ void setEnvironment( const QStringList & environment )
 */
 HB_FUNC_STATIC( QPROCESS_SETENVIRONMENT )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -452,7 +452,7 @@ void setNativeArguments ( const QString & arguments )
 HB_FUNC_STATIC( QPROCESS_SETNATIVEARGUMENTS )
 {
 #if defined(Q_OS_WIN) 
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -478,7 +478,7 @@ void setProcessChannelMode( QProcess::ProcessChannelMode mode )
 */
 HB_FUNC_STATIC( QPROCESS_SETPROCESSCHANNELMODE )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -504,7 +504,7 @@ void setProcessEnvironment( const QProcessEnvironment & environment )
 */
 HB_FUNC_STATIC( QPROCESS_SETPROCESSENVIRONMENT )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -530,7 +530,7 @@ void setReadChannel( QProcess::ProcessChannel channel )
 */
 HB_FUNC_STATIC( QPROCESS_SETREADCHANNEL )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -556,7 +556,7 @@ void setStandardErrorFile( const QString & fileName, QIODevice::OpenMode mode = 
 */
 HB_FUNC_STATIC( QPROCESS_SETSTANDARDERRORFILE )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -582,7 +582,7 @@ void setStandardInputFile( const QString & fileName )
 */
 HB_FUNC_STATIC( QPROCESS_SETSTANDARDINPUTFILE )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -608,7 +608,7 @@ void setStandardOutputFile( const QString & fileName, QIODevice::OpenMode mode =
 */
 HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTFILE )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -634,7 +634,7 @@ void setStandardOutputProcess( QProcess * destination )
 */
 HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTPROCESS )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -660,7 +660,7 @@ void setWorkingDirectory( const QString & dir )
 */
 HB_FUNC_STATIC( QPROCESS_SETWORKINGDIRECTORY )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -686,7 +686,7 @@ void start( const QString & program, const QStringList & arguments, QIODevice::O
 */
 void QProcess_start1()
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -701,7 +701,7 @@ void start( const QString & program, QIODevice::OpenMode mode = QIODevice::ReadW
 */
 void QProcess_start2()
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -732,7 +732,7 @@ QProcess::ProcessState state() const
 */
 HB_FUNC_STATIC( QPROCESS_STATE )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -756,7 +756,7 @@ bool waitForFinished( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QPROCESS_WAITFORFINISHED )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -780,7 +780,7 @@ bool waitForStarted( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QPROCESS_WAITFORSTARTED )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -804,7 +804,7 @@ QString workingDirectory() const
 */
 HB_FUNC_STATIC( QPROCESS_WORKINGDIRECTORY )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -828,7 +828,7 @@ virtual bool atEnd() const
 */
 HB_FUNC_STATIC( QPROCESS_ATEND )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -852,7 +852,7 @@ virtual qint64 bytesAvailable() const
 */
 HB_FUNC_STATIC( QPROCESS_BYTESAVAILABLE )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -876,7 +876,7 @@ virtual qint64 bytesToWrite() const
 */
 HB_FUNC_STATIC( QPROCESS_BYTESTOWRITE )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -900,7 +900,7 @@ virtual bool canReadLine() const
 */
 HB_FUNC_STATIC( QPROCESS_CANREADLINE )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -924,7 +924,7 @@ virtual void close()
 */
 HB_FUNC_STATIC( QPROCESS_CLOSE )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -950,7 +950,7 @@ virtual bool isSequential() const
 */
 HB_FUNC_STATIC( QPROCESS_ISSEQUENTIAL )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -974,7 +974,7 @@ virtual bool waitForBytesWritten( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QPROCESS_WAITFORBYTESWRITTEN )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -998,7 +998,7 @@ virtual bool waitForReadyRead( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QPROCESS_WAITFORREADYREAD )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1022,7 +1022,7 @@ void kill()
 */
 HB_FUNC_STATIC( QPROCESS_KILL )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1048,7 +1048,7 @@ void terminate()
 */
 HB_FUNC_STATIC( QPROCESS_TERMINATE )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

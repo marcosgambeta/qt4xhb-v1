@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QOBJECT_NEW )
 
 HB_FUNC_STATIC( QOBJECT_DELETE )
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -275,7 +275,7 @@ bool blockSignals( bool block )
 */
 HB_FUNC_STATIC( QOBJECT_BLOCKSIGNALS )
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -299,7 +299,7 @@ const QObjectList & children() const
 */
 HB_FUNC_STATIC( QOBJECT_CHILDREN )
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -347,7 +347,7 @@ void dumpObjectInfo()
 */
 HB_FUNC_STATIC( QOBJECT_DUMPOBJECTINFO )
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -373,7 +373,7 @@ void dumpObjectTree()
 */
 HB_FUNC_STATIC( QOBJECT_DUMPOBJECTTREE )
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -399,7 +399,7 @@ QList<QByteArray> dynamicPropertyNames() const
 */
 HB_FUNC_STATIC( QOBJECT_DYNAMICPROPERTYNAMES )
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -451,7 +451,7 @@ virtual bool event( QEvent * e )
 */
 HB_FUNC_STATIC( QOBJECT_EVENT )
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -475,7 +475,7 @@ virtual bool eventFilter( QObject * watched, QEvent * event )
 */
 HB_FUNC_STATIC( QOBJECT_EVENTFILTER )
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -499,7 +499,7 @@ T findChild ( const QString & name = QString() ) const
 */
 HB_FUNC_STATIC( QOBJECT_FINDCHILD )
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -524,7 +524,7 @@ QList<T> findChildren ( const QString & name = QString() ) const
 */
 void QObject_findChildren1()
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -560,7 +560,7 @@ QList<T> findChildren ( const QRegExp & regExp ) const
 */
 void QObject_findChildren2()
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -613,7 +613,7 @@ bool inherits( const char * className ) const
 */
 HB_FUNC_STATIC( QOBJECT_INHERITS )
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -637,7 +637,7 @@ void installEventFilter( QObject * filterObj )
 */
 HB_FUNC_STATIC( QOBJECT_INSTALLEVENTFILTER )
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -663,7 +663,7 @@ bool isWidgetType() const
 */
 HB_FUNC_STATIC( QOBJECT_ISWIDGETTYPE )
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -687,7 +687,7 @@ void killTimer( int id )
 */
 HB_FUNC_STATIC( QOBJECT_KILLTIMER )
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -713,7 +713,7 @@ virtual const QMetaObject * metaObject() const
 */
 HB_FUNC_STATIC( QOBJECT_METAOBJECT )
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -738,7 +738,7 @@ void moveToThread( QThread * targetThread )
 */
 HB_FUNC_STATIC( QOBJECT_MOVETOTHREAD )
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -764,7 +764,7 @@ QString objectName() const
 */
 HB_FUNC_STATIC( QOBJECT_OBJECTNAME )
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -788,7 +788,7 @@ QObject * parent() const
 */
 HB_FUNC_STATIC( QOBJECT_PARENT )
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -813,7 +813,7 @@ QVariant property( const char * name ) const
 */
 HB_FUNC_STATIC( QOBJECT_PROPERTY )
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -838,7 +838,7 @@ void removeEventFilter( QObject * obj )
 */
 HB_FUNC_STATIC( QOBJECT_REMOVEEVENTFILTER )
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -864,7 +864,7 @@ void setObjectName( const QString & name )
 */
 HB_FUNC_STATIC( QOBJECT_SETOBJECTNAME )
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -890,7 +890,7 @@ void setParent( QObject * parent )
 */
 HB_FUNC_STATIC( QOBJECT_SETPARENT )
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -916,7 +916,7 @@ bool setProperty( const char * name, const QVariant & value )
 */
 HB_FUNC_STATIC( QOBJECT_SETPROPERTY )
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -940,7 +940,7 @@ bool signalsBlocked() const
 */
 HB_FUNC_STATIC( QOBJECT_SIGNALSBLOCKED )
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -964,7 +964,7 @@ int startTimer( int interval )
 */
 HB_FUNC_STATIC( QOBJECT_STARTTIMER )
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -988,7 +988,7 @@ QThread * thread() const
 */
 HB_FUNC_STATIC( QOBJECT_THREAD )
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -1013,7 +1013,7 @@ void deleteLater()
 */
 HB_FUNC_STATIC( QOBJECT_DELETELATER )
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

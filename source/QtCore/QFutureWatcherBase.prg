@@ -69,7 +69,7 @@ RETURN
 
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_DELETE )
 {
-  QFutureWatcherBase * obj = static_cast< QFutureWatcherBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFutureWatcherBase * obj = qobject_cast< QFutureWatcherBase * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -91,7 +91,7 @@ int progressValue() const
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSVALUE )
 {
-  QFutureWatcherBase * obj = static_cast< QFutureWatcherBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFutureWatcherBase * obj = qobject_cast< QFutureWatcherBase * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -115,7 +115,7 @@ int progressMinimum() const
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSMINIMUM )
 {
-  QFutureWatcherBase * obj = static_cast< QFutureWatcherBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFutureWatcherBase * obj = qobject_cast< QFutureWatcherBase * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -139,7 +139,7 @@ int progressMaximum() const
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSMAXIMUM )
 {
-  QFutureWatcherBase * obj = static_cast< QFutureWatcherBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFutureWatcherBase * obj = qobject_cast< QFutureWatcherBase * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -163,7 +163,7 @@ QString progressText() const
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_PROGRESSTEXT )
 {
-  QFutureWatcherBase * obj = static_cast< QFutureWatcherBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFutureWatcherBase * obj = qobject_cast< QFutureWatcherBase * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -187,7 +187,7 @@ bool isStarted() const
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISSTARTED )
 {
-  QFutureWatcherBase * obj = static_cast< QFutureWatcherBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFutureWatcherBase * obj = qobject_cast< QFutureWatcherBase * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -211,7 +211,7 @@ bool isFinished() const
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISFINISHED )
 {
-  QFutureWatcherBase * obj = static_cast< QFutureWatcherBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFutureWatcherBase * obj = qobject_cast< QFutureWatcherBase * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -235,7 +235,7 @@ bool isRunning() const
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISRUNNING )
 {
-  QFutureWatcherBase * obj = static_cast< QFutureWatcherBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFutureWatcherBase * obj = qobject_cast< QFutureWatcherBase * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -259,7 +259,7 @@ bool isCanceled() const
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISCANCELED )
 {
-  QFutureWatcherBase * obj = static_cast< QFutureWatcherBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFutureWatcherBase * obj = qobject_cast< QFutureWatcherBase * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -283,7 +283,7 @@ bool isPaused() const
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_ISPAUSED )
 {
-  QFutureWatcherBase * obj = static_cast< QFutureWatcherBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFutureWatcherBase * obj = qobject_cast< QFutureWatcherBase * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -307,7 +307,7 @@ void waitForFinished()
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_WAITFORFINISHED )
 {
-  QFutureWatcherBase * obj = static_cast< QFutureWatcherBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFutureWatcherBase * obj = qobject_cast< QFutureWatcherBase * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -333,7 +333,7 @@ void setPendingResultsLimit( int limit )
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_SETPENDINGRESULTSLIMIT )
 {
-  QFutureWatcherBase * obj = static_cast< QFutureWatcherBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFutureWatcherBase * obj = qobject_cast< QFutureWatcherBase * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -359,7 +359,7 @@ bool event( QEvent * event )
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_EVENT )
 {
-  QFutureWatcherBase * obj = static_cast< QFutureWatcherBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFutureWatcherBase * obj = qobject_cast< QFutureWatcherBase * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -383,7 +383,7 @@ void cancel()
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_CANCEL )
 {
-  QFutureWatcherBase * obj = static_cast< QFutureWatcherBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFutureWatcherBase * obj = qobject_cast< QFutureWatcherBase * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -409,7 +409,7 @@ void setPaused( bool paused )
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_SETPAUSED )
 {
-  QFutureWatcherBase * obj = static_cast< QFutureWatcherBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFutureWatcherBase * obj = qobject_cast< QFutureWatcherBase * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -435,7 +435,7 @@ void pause()
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_PAUSE )
 {
-  QFutureWatcherBase * obj = static_cast< QFutureWatcherBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFutureWatcherBase * obj = qobject_cast< QFutureWatcherBase * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -461,7 +461,7 @@ void resume()
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_RESUME )
 {
-  QFutureWatcherBase * obj = static_cast< QFutureWatcherBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFutureWatcherBase * obj = qobject_cast< QFutureWatcherBase * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -487,7 +487,7 @@ void togglePaused()
 */
 HB_FUNC_STATIC( QFUTUREWATCHERBASE_TOGGLEPAUSED )
 {
-  QFutureWatcherBase * obj = static_cast< QFutureWatcherBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFutureWatcherBase * obj = qobject_cast< QFutureWatcherBase * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

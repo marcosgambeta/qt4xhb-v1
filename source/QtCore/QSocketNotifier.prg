@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_NEW )
 
 HB_FUNC_STATIC( QSOCKETNOTIFIER_DELETE )
 {
-  QSocketNotifier * obj = static_cast< QSocketNotifier * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSocketNotifier * obj = qobject_cast< QSocketNotifier * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -86,7 +86,7 @@ int socket() const
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_SOCKET )
 {
-  QSocketNotifier * obj = static_cast< QSocketNotifier * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSocketNotifier * obj = qobject_cast< QSocketNotifier * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -110,7 +110,7 @@ QSocketNotifier::Type type() const
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_TYPE )
 {
-  QSocketNotifier * obj = static_cast< QSocketNotifier * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSocketNotifier * obj = qobject_cast< QSocketNotifier * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -134,7 +134,7 @@ bool isEnabled() const
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_ISENABLED )
 {
-  QSocketNotifier * obj = static_cast< QSocketNotifier * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSocketNotifier * obj = qobject_cast< QSocketNotifier * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -158,7 +158,7 @@ void setEnabled( bool )
 */
 HB_FUNC_STATIC( QSOCKETNOTIFIER_SETENABLED )
 {
-  QSocketNotifier * obj = static_cast< QSocketNotifier * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSocketNotifier * obj = qobject_cast< QSocketNotifier * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

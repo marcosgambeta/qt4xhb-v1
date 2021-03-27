@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_NEW )
 
 HB_FUNC_STATIC( QSIGNALTRANSITION_DELETE )
 {
-  QSignalTransition * obj = static_cast< QSignalTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSignalTransition * obj = qobject_cast< QSignalTransition * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -104,7 +104,7 @@ QObject * senderObject() const
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SENDEROBJECT )
 {
-  QSignalTransition * obj = static_cast< QSignalTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSignalTransition * obj = qobject_cast< QSignalTransition * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -129,7 +129,7 @@ void setSenderObject( QObject * sender )
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SETSENDEROBJECT )
 {
-  QSignalTransition * obj = static_cast< QSignalTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSignalTransition * obj = qobject_cast< QSignalTransition * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -155,7 +155,7 @@ QByteArray signal() const
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SIGNAL )
 {
-  QSignalTransition * obj = static_cast< QSignalTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSignalTransition * obj = qobject_cast< QSignalTransition * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -180,7 +180,7 @@ void setSignal( const QByteArray & signal )
 */
 HB_FUNC_STATIC( QSIGNALTRANSITION_SETSIGNAL )
 {
-  QSignalTransition * obj = static_cast< QSignalTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSignalTransition * obj = qobject_cast< QSignalTransition * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

@@ -51,7 +51,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTSTATE_DELETE )
 {
-  QAbstractState * obj = static_cast< QAbstractState * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractState * obj = qobject_cast< QAbstractState * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -73,7 +73,7 @@ QStateMachine * machine() const
 */
 HB_FUNC_STATIC( QABSTRACTSTATE_MACHINE )
 {
-  QAbstractState * obj = static_cast< QAbstractState * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractState * obj = qobject_cast< QAbstractState * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -98,7 +98,7 @@ QState * parentState() const
 */
 HB_FUNC_STATIC( QABSTRACTSTATE_PARENTSTATE )
 {
-  QAbstractState * obj = static_cast< QAbstractState * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractState * obj = qobject_cast< QAbstractState * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

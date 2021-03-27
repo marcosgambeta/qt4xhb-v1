@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QFILE_NEW )
 
 HB_FUNC_STATIC( QFILE_DELETE )
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -137,7 +137,7 @@ QFile::FileError error() const
 */
 HB_FUNC_STATIC( QFILE_ERROR )
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -161,7 +161,7 @@ QString fileName() const
 */
 HB_FUNC_STATIC( QFILE_FILENAME )
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -185,7 +185,7 @@ bool flush()
 */
 HB_FUNC_STATIC( QFILE_FLUSH )
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -209,7 +209,7 @@ int handle() const
 */
 HB_FUNC_STATIC( QFILE_HANDLE )
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -233,7 +233,7 @@ void setFileName( const QString & name )
 */
 HB_FUNC_STATIC( QFILE_SETFILENAME )
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -259,7 +259,7 @@ bool unmap( uchar * address )
 */
 HB_FUNC_STATIC( QFILE_UNMAP )
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -283,7 +283,7 @@ void unsetError()
 */
 HB_FUNC_STATIC( QFILE_UNSETERROR )
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -309,7 +309,7 @@ virtual bool atEnd() const
 */
 HB_FUNC_STATIC( QFILE_ATEND )
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -333,7 +333,7 @@ virtual void close()
 */
 HB_FUNC_STATIC( QFILE_CLOSE )
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -359,7 +359,7 @@ virtual bool isSequential() const
 */
 HB_FUNC_STATIC( QFILE_ISSEQUENTIAL )
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -383,7 +383,7 @@ bool open( FILE * fh, QIODevice::OpenMode mode )
 */
 void QFile_open1()
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -396,7 +396,7 @@ bool open( FILE * fh, QIODevice::OpenMode mode, QFile::FileHandleFlags handleFla
 */
 void QFile_open2()
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -409,7 +409,7 @@ bool open( int fd, QIODevice::OpenMode mode )
 */
 void QFile_open3()
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -422,7 +422,7 @@ bool open( int fd, QIODevice::OpenMode mode, QFile::FileHandleFlags handleFlags 
 */
 void QFile_open4()
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -435,7 +435,7 @@ virtual bool open( QIODevice::OpenMode mode )
 */
 void QFile_open6()
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -476,7 +476,7 @@ virtual qint64 pos() const
 */
 HB_FUNC_STATIC( QFILE_POS )
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -500,7 +500,7 @@ virtual bool seek( qint64 pos )
 */
 HB_FUNC_STATIC( QFILE_SEEK )
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -524,7 +524,7 @@ virtual qint64 size() const
 */
 HB_FUNC_STATIC( QFILE_SIZE )
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -548,7 +548,7 @@ bool copy( const QString & newName )
 */
 void QFile_copy1()
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -640,7 +640,7 @@ bool exists() const
 */
 void QFile_exists1()
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -678,7 +678,7 @@ bool link( const QString & linkName )
 */
 void QFile_link1()
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -716,7 +716,7 @@ QFile::Permissions permissions() const
 */
 void QFile_permissions1()
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -754,7 +754,7 @@ bool remove()
 */
 void QFile_remove1()
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -792,7 +792,7 @@ bool rename( const QString & newName )
 */
 void QFile_rename1()
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -830,7 +830,7 @@ bool resize( qint64 sz )
 */
 void QFile_resize1()
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -868,7 +868,7 @@ bool setPermissions( QFile::Permissions permissions )
 */
 void QFile_setPermissions1()
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -906,7 +906,7 @@ QString symLinkTarget() const
 */
 void QFile_symLinkTarget1()
 {
-  QFile * obj = static_cast< QFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFile * obj = qobject_cast< QFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

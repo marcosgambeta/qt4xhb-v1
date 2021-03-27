@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QTRANSLATOR_NEW )
 
 HB_FUNC_STATIC( QTRANSLATOR_DELETE )
 {
-  QTranslator * obj = static_cast< QTranslator * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTranslator * obj = qobject_cast< QTranslator * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -85,7 +85,7 @@ virtual bool isEmpty() const
 */
 HB_FUNC_STATIC( QTRANSLATOR_ISEMPTY )
 {
-  QTranslator * obj = static_cast< QTranslator * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTranslator * obj = qobject_cast< QTranslator * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -109,7 +109,7 @@ bool load( const QString & filename, const QString & directory = QString(), cons
 */
 void QTranslator_load1()
 {
-  QTranslator * obj = static_cast< QTranslator * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTranslator * obj = qobject_cast< QTranslator * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -122,7 +122,7 @@ bool load( const QLocale & locale, const QString & filename, const QString & pre
 */
 void QTranslator_load2()
 {
-  QTranslator * obj = static_cast< QTranslator * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTranslator * obj = qobject_cast< QTranslator * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -151,7 +151,7 @@ virtual QString translate( const char * context, const char * sourceText, const 
 */
 HB_FUNC_STATIC( QTRANSLATOR_TRANSLATE )
 {
-  QTranslator * obj = static_cast< QTranslator * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTranslator * obj = qobject_cast< QTranslator * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

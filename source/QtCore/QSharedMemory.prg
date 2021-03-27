@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_NEW )
 
 HB_FUNC_STATIC( QSHAREDMEMORY_DELETE )
 {
-  QSharedMemory * obj = static_cast< QSharedMemory * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSharedMemory * obj = qobject_cast< QSharedMemory * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -112,7 +112,7 @@ void setKey( const QString & key )
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_SETKEY )
 {
-  QSharedMemory * obj = static_cast< QSharedMemory * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSharedMemory * obj = qobject_cast< QSharedMemory * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -138,7 +138,7 @@ QString key() const
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_KEY )
 {
-  QSharedMemory * obj = static_cast< QSharedMemory * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSharedMemory * obj = qobject_cast< QSharedMemory * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -162,7 +162,7 @@ void setNativeKey( const QString & key )
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_SETNATIVEKEY )
 {
-  QSharedMemory * obj = static_cast< QSharedMemory * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSharedMemory * obj = qobject_cast< QSharedMemory * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -188,7 +188,7 @@ QString nativeKey() const
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_NATIVEKEY )
 {
-  QSharedMemory * obj = static_cast< QSharedMemory * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSharedMemory * obj = qobject_cast< QSharedMemory * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -212,7 +212,7 @@ bool create( int size, QSharedMemory::AccessMode mode = QSharedMemory::ReadWrite
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_CREATE )
 {
-  QSharedMemory * obj = static_cast< QSharedMemory * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSharedMemory * obj = qobject_cast< QSharedMemory * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -236,7 +236,7 @@ int size() const
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_SIZE )
 {
-  QSharedMemory * obj = static_cast< QSharedMemory * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSharedMemory * obj = qobject_cast< QSharedMemory * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -260,7 +260,7 @@ bool attach( QSharedMemory::AccessMode mode = QSharedMemory::ReadWrite )
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_ATTACH )
 {
-  QSharedMemory * obj = static_cast< QSharedMemory * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSharedMemory * obj = qobject_cast< QSharedMemory * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -284,7 +284,7 @@ bool isAttached() const
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_ISATTACHED )
 {
-  QSharedMemory * obj = static_cast< QSharedMemory * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSharedMemory * obj = qobject_cast< QSharedMemory * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -308,7 +308,7 @@ bool detach()
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_DETACH )
 {
-  QSharedMemory * obj = static_cast< QSharedMemory * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSharedMemory * obj = qobject_cast< QSharedMemory * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -332,7 +332,7 @@ void * data()
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_DATA )
 {
-  QSharedMemory * obj = static_cast< QSharedMemory * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSharedMemory * obj = qobject_cast< QSharedMemory * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -356,7 +356,7 @@ bool lock()
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_LOCK )
 {
-  QSharedMemory * obj = static_cast< QSharedMemory * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSharedMemory * obj = qobject_cast< QSharedMemory * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -380,7 +380,7 @@ bool unlock()
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_UNLOCK )
 {
-  QSharedMemory * obj = static_cast< QSharedMemory * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSharedMemory * obj = qobject_cast< QSharedMemory * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -404,7 +404,7 @@ QSharedMemory::SharedMemoryError error() const
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_ERROR )
 {
-  QSharedMemory * obj = static_cast< QSharedMemory * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSharedMemory * obj = qobject_cast< QSharedMemory * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -428,7 +428,7 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QSHAREDMEMORY_ERRORSTRING )
 {
-  QSharedMemory * obj = static_cast< QSharedMemory * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSharedMemory * obj = qobject_cast< QSharedMemory * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

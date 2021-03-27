@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW )
 
 HB_FUNC_STATIC( QTEMPORARYFILE_DELETE )
 {
-  QTemporaryFile * obj = static_cast< QTemporaryFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTemporaryFile * obj = qobject_cast< QTemporaryFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -131,7 +131,7 @@ bool autoRemove() const
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_AUTOREMOVE )
 {
-  QTemporaryFile * obj = static_cast< QTemporaryFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTemporaryFile * obj = qobject_cast< QTemporaryFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -155,7 +155,7 @@ QString fileTemplate() const
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_FILETEMPLATE )
 {
-  QTemporaryFile * obj = static_cast< QTemporaryFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTemporaryFile * obj = qobject_cast< QTemporaryFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -179,7 +179,7 @@ bool open()
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_OPEN )
 {
-  QTemporaryFile * obj = static_cast< QTemporaryFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTemporaryFile * obj = qobject_cast< QTemporaryFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -203,7 +203,7 @@ void setAutoRemove( bool b )
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_SETAUTOREMOVE )
 {
-  QTemporaryFile * obj = static_cast< QTemporaryFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTemporaryFile * obj = qobject_cast< QTemporaryFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -229,7 +229,7 @@ void setFileTemplate( const QString & name )
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_SETFILETEMPLATE )
 {
-  QTemporaryFile * obj = static_cast< QTemporaryFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTemporaryFile * obj = qobject_cast< QTemporaryFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -255,7 +255,7 @@ virtual QString fileName() const
 */
 HB_FUNC_STATIC( QTEMPORARYFILE_FILENAME )
 {
-  QTemporaryFile * obj = static_cast< QTemporaryFile * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTemporaryFile * obj = qobject_cast< QTemporaryFile * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

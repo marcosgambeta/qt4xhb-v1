@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QLIBRARY_NEW )
 
 HB_FUNC_STATIC( QLIBRARY_DELETE )
 {
-  QLibrary * obj = static_cast< QLibrary * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLibrary * obj = qobject_cast< QLibrary * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -135,7 +135,7 @@ bool load()
 */
 HB_FUNC_STATIC( QLIBRARY_LOAD )
 {
-  QLibrary * obj = static_cast< QLibrary * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLibrary * obj = qobject_cast< QLibrary * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -159,7 +159,7 @@ bool unload()
 */
 HB_FUNC_STATIC( QLIBRARY_UNLOAD )
 {
-  QLibrary * obj = static_cast< QLibrary * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLibrary * obj = qobject_cast< QLibrary * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -183,7 +183,7 @@ bool isLoaded() const
 */
 HB_FUNC_STATIC( QLIBRARY_ISLOADED )
 {
-  QLibrary * obj = static_cast< QLibrary * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLibrary * obj = qobject_cast< QLibrary * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -207,7 +207,7 @@ void setFileName( const QString & fileName )
 */
 HB_FUNC_STATIC( QLIBRARY_SETFILENAME )
 {
-  QLibrary * obj = static_cast< QLibrary * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLibrary * obj = qobject_cast< QLibrary * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -233,7 +233,7 @@ QString fileName() const
 */
 HB_FUNC_STATIC( QLIBRARY_FILENAME )
 {
-  QLibrary * obj = static_cast< QLibrary * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLibrary * obj = qobject_cast< QLibrary * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -257,7 +257,7 @@ void setFileNameAndVersion( const QString & fileName, int verNum )
 */
 void QLibrary_setFileNameAndVersion1()
 {
-  QLibrary * obj = static_cast< QLibrary * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLibrary * obj = qobject_cast< QLibrary * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -272,7 +272,7 @@ void setFileNameAndVersion( const QString & fileName, const QString & version )
 */
 void QLibrary_setFileNameAndVersion2()
 {
-  QLibrary * obj = static_cast< QLibrary * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLibrary * obj = qobject_cast< QLibrary * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -303,7 +303,7 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QLIBRARY_ERRORSTRING )
 {
-  QLibrary * obj = static_cast< QLibrary * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLibrary * obj = qobject_cast< QLibrary * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -327,7 +327,7 @@ void setLoadHints( QLibrary::LoadHints hints )
 */
 HB_FUNC_STATIC( QLIBRARY_SETLOADHINTS )
 {
-  QLibrary * obj = static_cast< QLibrary * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLibrary * obj = qobject_cast< QLibrary * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -353,7 +353,7 @@ QLibrary::LoadHints loadHints() const
 */
 HB_FUNC_STATIC( QLIBRARY_LOADHINTS )
 {
-  QLibrary * obj = static_cast< QLibrary * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLibrary * obj = qobject_cast< QLibrary * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -377,7 +377,7 @@ void * resolve( const char * symbol )
 */
 void QLibrary_resolve1()
 {
-  QLibrary * obj = static_cast< QLibrary * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLibrary * obj = qobject_cast< QLibrary * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

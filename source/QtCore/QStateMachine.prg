@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_NEW )
 
 HB_FUNC_STATIC( QSTATEMACHINE_DELETE )
 {
-  QStateMachine * obj = static_cast< QStateMachine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStateMachine * obj = qobject_cast< QStateMachine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -103,7 +103,7 @@ void addDefaultAnimation( QAbstractAnimation * animation )
 */
 HB_FUNC_STATIC( QSTATEMACHINE_ADDDEFAULTANIMATION )
 {
-  QStateMachine * obj = static_cast< QStateMachine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStateMachine * obj = qobject_cast< QStateMachine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -129,7 +129,7 @@ void addState( QAbstractState * state )
 */
 HB_FUNC_STATIC( QSTATEMACHINE_ADDSTATE )
 {
-  QStateMachine * obj = static_cast< QStateMachine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStateMachine * obj = qobject_cast< QStateMachine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -155,7 +155,7 @@ bool cancelDelayedEvent( int id )
 */
 HB_FUNC_STATIC( QSTATEMACHINE_CANCELDELAYEDEVENT )
 {
-  QStateMachine * obj = static_cast< QStateMachine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStateMachine * obj = qobject_cast< QStateMachine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -179,7 +179,7 @@ void clearError()
 */
 HB_FUNC_STATIC( QSTATEMACHINE_CLEARERROR )
 {
-  QStateMachine * obj = static_cast< QStateMachine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStateMachine * obj = qobject_cast< QStateMachine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -205,7 +205,7 @@ QList<QAbstractAnimation *> defaultAnimations() const
 */
 HB_FUNC_STATIC( QSTATEMACHINE_DEFAULTANIMATIONS )
 {
-  QStateMachine * obj = static_cast< QStateMachine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStateMachine * obj = qobject_cast< QStateMachine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -253,7 +253,7 @@ QStateMachine::Error error() const
 */
 HB_FUNC_STATIC( QSTATEMACHINE_ERROR )
 {
-  QStateMachine * obj = static_cast< QStateMachine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStateMachine * obj = qobject_cast< QStateMachine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -277,7 +277,7 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QSTATEMACHINE_ERRORSTRING )
 {
-  QStateMachine * obj = static_cast< QStateMachine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStateMachine * obj = qobject_cast< QStateMachine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -301,7 +301,7 @@ QStateMachine::RestorePolicy globalRestorePolicy() const
 */
 HB_FUNC_STATIC( QSTATEMACHINE_GLOBALRESTOREPOLICY )
 {
-  QStateMachine * obj = static_cast< QStateMachine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStateMachine * obj = qobject_cast< QStateMachine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -325,7 +325,7 @@ bool isAnimated() const
 */
 HB_FUNC_STATIC( QSTATEMACHINE_ISANIMATED )
 {
-  QStateMachine * obj = static_cast< QStateMachine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStateMachine * obj = qobject_cast< QStateMachine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -349,7 +349,7 @@ bool isRunning() const
 */
 HB_FUNC_STATIC( QSTATEMACHINE_ISRUNNING )
 {
-  QStateMachine * obj = static_cast< QStateMachine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStateMachine * obj = qobject_cast< QStateMachine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -373,7 +373,7 @@ int postDelayedEvent( QEvent * event, int delay )
 */
 HB_FUNC_STATIC( QSTATEMACHINE_POSTDELAYEDEVENT )
 {
-  QStateMachine * obj = static_cast< QStateMachine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStateMachine * obj = qobject_cast< QStateMachine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -397,7 +397,7 @@ void postEvent( QEvent * event, QStateMachine::EventPriority priority = QStateMa
 */
 HB_FUNC_STATIC( QSTATEMACHINE_POSTEVENT )
 {
-  QStateMachine * obj = static_cast< QStateMachine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStateMachine * obj = qobject_cast< QStateMachine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -423,7 +423,7 @@ void removeDefaultAnimation( QAbstractAnimation * animation )
 */
 HB_FUNC_STATIC( QSTATEMACHINE_REMOVEDEFAULTANIMATION )
 {
-  QStateMachine * obj = static_cast< QStateMachine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStateMachine * obj = qobject_cast< QStateMachine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -449,7 +449,7 @@ void removeState( QAbstractState * state )
 */
 HB_FUNC_STATIC( QSTATEMACHINE_REMOVESTATE )
 {
-  QStateMachine * obj = static_cast< QStateMachine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStateMachine * obj = qobject_cast< QStateMachine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -475,7 +475,7 @@ void setAnimated( bool enabled )
 */
 HB_FUNC_STATIC( QSTATEMACHINE_SETANIMATED )
 {
-  QStateMachine * obj = static_cast< QStateMachine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStateMachine * obj = qobject_cast< QStateMachine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -501,7 +501,7 @@ void setGlobalRestorePolicy( QStateMachine::RestorePolicy restorePolicy )
 */
 HB_FUNC_STATIC( QSTATEMACHINE_SETGLOBALRESTOREPOLICY )
 {
-  QStateMachine * obj = static_cast< QStateMachine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStateMachine * obj = qobject_cast< QStateMachine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -527,7 +527,7 @@ virtual bool eventFilter( QObject * watched, QEvent * event )
 */
 HB_FUNC_STATIC( QSTATEMACHINE_EVENTFILTER )
 {
-  QStateMachine * obj = static_cast< QStateMachine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStateMachine * obj = qobject_cast< QStateMachine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -551,7 +551,7 @@ void start()
 */
 HB_FUNC_STATIC( QSTATEMACHINE_START )
 {
-  QStateMachine * obj = static_cast< QStateMachine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStateMachine * obj = qobject_cast< QStateMachine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -577,7 +577,7 @@ void stop()
 */
 HB_FUNC_STATIC( QSTATEMACHINE_STOP )
 {
-  QStateMachine * obj = static_cast< QStateMachine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStateMachine * obj = qobject_cast< QStateMachine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

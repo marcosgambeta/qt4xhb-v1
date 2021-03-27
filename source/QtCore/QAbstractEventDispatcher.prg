@@ -56,7 +56,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_DELETE )
 {
-  QAbstractEventDispatcher * obj = static_cast< QAbstractEventDispatcher * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractEventDispatcher * obj = qobject_cast< QAbstractEventDispatcher * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -78,7 +78,7 @@ bool filterEvent( void * message )
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FILTEREVENT )
 {
-  QAbstractEventDispatcher * obj = static_cast< QAbstractEventDispatcher * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractEventDispatcher * obj = qobject_cast< QAbstractEventDispatcher * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -102,7 +102,7 @@ virtual void flush() = 0
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FLUSH )
 {
-  QAbstractEventDispatcher * obj = static_cast< QAbstractEventDispatcher * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractEventDispatcher * obj = qobject_cast< QAbstractEventDispatcher * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -128,7 +128,7 @@ virtual bool hasPendingEvents() = 0
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_HASPENDINGEVENTS )
 {
-  QAbstractEventDispatcher * obj = static_cast< QAbstractEventDispatcher * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractEventDispatcher * obj = qobject_cast< QAbstractEventDispatcher * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -152,7 +152,7 @@ virtual void interrupt() = 0
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INTERRUPT )
 {
-  QAbstractEventDispatcher * obj = static_cast< QAbstractEventDispatcher * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractEventDispatcher * obj = qobject_cast< QAbstractEventDispatcher * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -178,7 +178,7 @@ virtual bool processEvents( QEventLoop::ProcessEventsFlags flags ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_PROCESSEVENTS )
 {
-  QAbstractEventDispatcher * obj = static_cast< QAbstractEventDispatcher * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractEventDispatcher * obj = qobject_cast< QAbstractEventDispatcher * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -202,7 +202,7 @@ virtual void registerSocketNotifier( QSocketNotifier * notifier ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERSOCKETNOTIFIER )
 {
-  QAbstractEventDispatcher * obj = static_cast< QAbstractEventDispatcher * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractEventDispatcher * obj = qobject_cast< QAbstractEventDispatcher * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -228,7 +228,7 @@ int registerTimer( int interval, QObject * object )
 */
 void QAbstractEventDispatcher_registerTimer1()
 {
-  QAbstractEventDispatcher * obj = static_cast< QAbstractEventDispatcher * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractEventDispatcher * obj = qobject_cast< QAbstractEventDispatcher * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -241,7 +241,7 @@ virtual void registerTimer( int timerId, int interval, QObject * object ) = 0
 */
 void QAbstractEventDispatcher_registerTimer2()
 {
-  QAbstractEventDispatcher * obj = static_cast< QAbstractEventDispatcher * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractEventDispatcher * obj = qobject_cast< QAbstractEventDispatcher * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -272,7 +272,7 @@ virtual void unregisterSocketNotifier( QSocketNotifier * notifier ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERSOCKETNOTIFIER )
 {
-  QAbstractEventDispatcher * obj = static_cast< QAbstractEventDispatcher * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractEventDispatcher * obj = qobject_cast< QAbstractEventDispatcher * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -298,7 +298,7 @@ virtual bool unregisterTimer( int timerId ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMER )
 {
-  QAbstractEventDispatcher * obj = static_cast< QAbstractEventDispatcher * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractEventDispatcher * obj = qobject_cast< QAbstractEventDispatcher * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -322,7 +322,7 @@ virtual bool unregisterTimers( QObject * object ) = 0
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMERS )
 {
-  QAbstractEventDispatcher * obj = static_cast< QAbstractEventDispatcher * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractEventDispatcher * obj = qobject_cast< QAbstractEventDispatcher * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -346,7 +346,7 @@ virtual void wakeUp() = 0
 */
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_WAKEUP )
 {
-  QAbstractEventDispatcher * obj = static_cast< QAbstractEventDispatcher * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractEventDispatcher * obj = qobject_cast< QAbstractEventDispatcher * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

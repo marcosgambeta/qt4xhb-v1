@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_NEW )
 
 HB_FUNC_STATIC( QEVENTTRANSITION_DELETE )
 {
-  QEventTransition * obj = static_cast< QEventTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QEventTransition * obj = qobject_cast< QEventTransition * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -103,7 +103,7 @@ QObject * eventSource() const
 */
 HB_FUNC_STATIC( QEVENTTRANSITION_EVENTSOURCE )
 {
-  QEventTransition * obj = static_cast< QEventTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QEventTransition * obj = qobject_cast< QEventTransition * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -128,7 +128,7 @@ QEvent::Type eventType() const
 */
 HB_FUNC_STATIC( QEVENTTRANSITION_EVENTTYPE )
 {
-  QEventTransition * obj = static_cast< QEventTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QEventTransition * obj = qobject_cast< QEventTransition * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -152,7 +152,7 @@ void setEventSource( QObject * object )
 */
 HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTSOURCE )
 {
-  QEventTransition * obj = static_cast< QEventTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QEventTransition * obj = qobject_cast< QEventTransition * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -178,7 +178,7 @@ void setEventType( QEvent::Type type )
 */
 HB_FUNC_STATIC( QEVENTTRANSITION_SETEVENTTYPE )
 {
-  QEventTransition * obj = static_cast< QEventTransition * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QEventTransition * obj = qobject_cast< QEventTransition * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

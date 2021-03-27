@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QEVENTLOOP_NEW )
 
 HB_FUNC_STATIC( QEVENTLOOP_DELETE )
 {
-  QEventLoop * obj = static_cast< QEventLoop * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QEventLoop * obj = qobject_cast< QEventLoop * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -86,7 +86,7 @@ int exec( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
 */
 HB_FUNC_STATIC( QEVENTLOOP_EXEC )
 {
-  QEventLoop * obj = static_cast< QEventLoop * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QEventLoop * obj = qobject_cast< QEventLoop * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -110,7 +110,7 @@ void exit( int returnCode = 0 )
 */
 HB_FUNC_STATIC( QEVENTLOOP_EXIT )
 {
-  QEventLoop * obj = static_cast< QEventLoop * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QEventLoop * obj = qobject_cast< QEventLoop * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -136,7 +136,7 @@ bool isRunning() const
 */
 HB_FUNC_STATIC( QEVENTLOOP_ISRUNNING )
 {
-  QEventLoop * obj = static_cast< QEventLoop * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QEventLoop * obj = qobject_cast< QEventLoop * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -160,7 +160,7 @@ bool processEvents( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents
 */
 void QEventLoop_processEvents1()
 {
-  QEventLoop * obj = static_cast< QEventLoop * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QEventLoop * obj = qobject_cast< QEventLoop * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -173,7 +173,7 @@ void processEvents( QEventLoop::ProcessEventsFlags flags, int maxTime )
 */
 void QEventLoop_processEvents2()
 {
-  QEventLoop * obj = static_cast< QEventLoop * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QEventLoop * obj = qobject_cast< QEventLoop * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -204,7 +204,7 @@ void wakeUp()
 */
 HB_FUNC_STATIC( QEVENTLOOP_WAKEUP )
 {
-  QEventLoop * obj = static_cast< QEventLoop * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QEventLoop * obj = qobject_cast< QEventLoop * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -230,7 +230,7 @@ void quit()
 */
 HB_FUNC_STATIC( QEVENTLOOP_QUIT )
 {
-  QEventLoop * obj = static_cast< QEventLoop * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QEventLoop * obj = qobject_cast< QEventLoop * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

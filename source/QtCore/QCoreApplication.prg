@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_NEW )
 
 HB_FUNC_STATIC( QCOREAPPLICATION_DELETE )
 {
-  QCoreApplication * obj = static_cast< QCoreApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QCoreApplication * obj = qobject_cast< QCoreApplication * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -117,7 +117,7 @@ bool filterEvent( void * message, long * result )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_FILTEREVENT )
 {
-  QCoreApplication * obj = static_cast< QCoreApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QCoreApplication * obj = qobject_cast< QCoreApplication * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -143,7 +143,7 @@ virtual bool notify( QObject * receiver, QEvent * event )
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_NOTIFY )
 {
-  QCoreApplication * obj = static_cast< QCoreApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QCoreApplication * obj = qobject_cast< QCoreApplication * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -167,7 +167,7 @@ void quit()
 */
 HB_FUNC_STATIC( QCOREAPPLICATION_QUIT )
 {
-  QCoreApplication * obj = static_cast< QCoreApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QCoreApplication * obj = qobject_cast< QCoreApplication * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

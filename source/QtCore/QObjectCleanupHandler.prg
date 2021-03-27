@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_NEW )
 
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_DELETE )
 {
-  QObjectCleanupHandler * obj = static_cast< QObjectCleanupHandler * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObjectCleanupHandler * obj = qobject_cast< QObjectCleanupHandler * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -85,7 +85,7 @@ QObject * add( QObject * object )
 */
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ADD )
 {
-  QObjectCleanupHandler * obj = static_cast< QObjectCleanupHandler * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObjectCleanupHandler * obj = qobject_cast< QObjectCleanupHandler * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -110,7 +110,7 @@ void remove( QObject * object )
 */
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_REMOVE )
 {
-  QObjectCleanupHandler * obj = static_cast< QObjectCleanupHandler * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObjectCleanupHandler * obj = qobject_cast< QObjectCleanupHandler * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -136,7 +136,7 @@ bool isEmpty() const
 */
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ISEMPTY )
 {
-  QObjectCleanupHandler * obj = static_cast< QObjectCleanupHandler * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObjectCleanupHandler * obj = qobject_cast< QObjectCleanupHandler * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -160,7 +160,7 @@ void clear()
 */
 HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_CLEAR )
 {
-  QObjectCleanupHandler * obj = static_cast< QObjectCleanupHandler * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObjectCleanupHandler * obj = qobject_cast< QObjectCleanupHandler * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

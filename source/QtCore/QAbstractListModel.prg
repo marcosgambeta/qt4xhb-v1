@@ -44,7 +44,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTLISTMODEL_DELETE )
 {
-  QAbstractListModel * obj = static_cast< QAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractListModel * obj = qobject_cast< QAbstractListModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -66,7 +66,7 @@ virtual bool dropMimeData( const QMimeData * data, Qt::DropAction action, int ro
 */
 HB_FUNC_STATIC( QABSTRACTLISTMODEL_DROPMIMEDATA )
 {
-  QAbstractListModel * obj = static_cast< QAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractListModel * obj = qobject_cast< QAbstractListModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -90,7 +90,7 @@ virtual QModelIndex index( int row, int column = 0, const QModelIndex & parent =
 */
 HB_FUNC_STATIC( QABSTRACTLISTMODEL_INDEX )
 {
-  QAbstractListModel * obj = static_cast< QAbstractListModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractListModel * obj = qobject_cast< QAbstractListModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

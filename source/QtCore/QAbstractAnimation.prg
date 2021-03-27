@@ -66,7 +66,7 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTANIMATION_DELETE )
 {
-  QAbstractAnimation * obj = static_cast< QAbstractAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractAnimation * obj = qobject_cast< QAbstractAnimation * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -88,7 +88,7 @@ int currentLoop() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTLOOP )
 {
-  QAbstractAnimation * obj = static_cast< QAbstractAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractAnimation * obj = qobject_cast< QAbstractAnimation * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -112,7 +112,7 @@ int currentLoopTime() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTLOOPTIME )
 {
-  QAbstractAnimation * obj = static_cast< QAbstractAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractAnimation * obj = qobject_cast< QAbstractAnimation * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -136,7 +136,7 @@ int currentTime() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_CURRENTTIME )
 {
-  QAbstractAnimation * obj = static_cast< QAbstractAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractAnimation * obj = qobject_cast< QAbstractAnimation * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -160,7 +160,7 @@ QAbstractAnimation::Direction direction() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_DIRECTION )
 {
-  QAbstractAnimation * obj = static_cast< QAbstractAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractAnimation * obj = qobject_cast< QAbstractAnimation * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -184,7 +184,7 @@ virtual int duration() const = 0
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_DURATION )
 {
-  QAbstractAnimation * obj = static_cast< QAbstractAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractAnimation * obj = qobject_cast< QAbstractAnimation * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -208,7 +208,7 @@ QAnimationGroup * group() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_GROUP )
 {
-  QAbstractAnimation * obj = static_cast< QAbstractAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractAnimation * obj = qobject_cast< QAbstractAnimation * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -233,7 +233,7 @@ int loopCount() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_LOOPCOUNT )
 {
-  QAbstractAnimation * obj = static_cast< QAbstractAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractAnimation * obj = qobject_cast< QAbstractAnimation * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -257,7 +257,7 @@ void setDirection( QAbstractAnimation::Direction direction )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_SETDIRECTION )
 {
-  QAbstractAnimation * obj = static_cast< QAbstractAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractAnimation * obj = qobject_cast< QAbstractAnimation * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -283,7 +283,7 @@ void setLoopCount( int loopCount )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_SETLOOPCOUNT )
 {
-  QAbstractAnimation * obj = static_cast< QAbstractAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractAnimation * obj = qobject_cast< QAbstractAnimation * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -309,7 +309,7 @@ QAbstractAnimation::State state() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_STATE )
 {
-  QAbstractAnimation * obj = static_cast< QAbstractAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractAnimation * obj = qobject_cast< QAbstractAnimation * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -333,7 +333,7 @@ int totalDuration() const
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_TOTALDURATION )
 {
-  QAbstractAnimation * obj = static_cast< QAbstractAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractAnimation * obj = qobject_cast< QAbstractAnimation * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -357,7 +357,7 @@ void pause()
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_PAUSE )
 {
-  QAbstractAnimation * obj = static_cast< QAbstractAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractAnimation * obj = qobject_cast< QAbstractAnimation * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -383,7 +383,7 @@ void resume()
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_RESUME )
 {
-  QAbstractAnimation * obj = static_cast< QAbstractAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractAnimation * obj = qobject_cast< QAbstractAnimation * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -409,7 +409,7 @@ void setCurrentTime( int msecs )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_SETCURRENTTIME )
 {
-  QAbstractAnimation * obj = static_cast< QAbstractAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractAnimation * obj = qobject_cast< QAbstractAnimation * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -435,7 +435,7 @@ void setPaused( bool paused )
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_SETPAUSED )
 {
-  QAbstractAnimation * obj = static_cast< QAbstractAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractAnimation * obj = qobject_cast< QAbstractAnimation * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -461,7 +461,7 @@ void start( QAbstractAnimation::DeletionPolicy policy = QAbstractAnimation::Keep
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_START )
 {
-  QAbstractAnimation * obj = static_cast< QAbstractAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractAnimation * obj = qobject_cast< QAbstractAnimation * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -487,7 +487,7 @@ void stop()
 */
 HB_FUNC_STATIC( QABSTRACTANIMATION_STOP )
 {
-  QAbstractAnimation * obj = static_cast< QAbstractAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractAnimation * obj = qobject_cast< QAbstractAnimation * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

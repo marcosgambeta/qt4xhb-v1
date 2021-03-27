@@ -50,7 +50,7 @@ RETURN
 
 HB_FUNC_STATIC( QANIMATIONGROUP_DELETE )
 {
-  QAnimationGroup * obj = static_cast< QAnimationGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAnimationGroup * obj = qobject_cast< QAnimationGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -72,7 +72,7 @@ void addAnimation( QAbstractAnimation * animation )
 */
 HB_FUNC_STATIC( QANIMATIONGROUP_ADDANIMATION )
 {
-  QAnimationGroup * obj = static_cast< QAnimationGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAnimationGroup * obj = qobject_cast< QAnimationGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -98,7 +98,7 @@ QAbstractAnimation * animationAt( int index ) const
 */
 HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONAT )
 {
-  QAnimationGroup * obj = static_cast< QAnimationGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAnimationGroup * obj = qobject_cast< QAnimationGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -123,7 +123,7 @@ int animationCount() const
 */
 HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONCOUNT )
 {
-  QAnimationGroup * obj = static_cast< QAnimationGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAnimationGroup * obj = qobject_cast< QAnimationGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -147,7 +147,7 @@ void clear()
 */
 HB_FUNC_STATIC( QANIMATIONGROUP_CLEAR )
 {
-  QAnimationGroup * obj = static_cast< QAnimationGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAnimationGroup * obj = qobject_cast< QAnimationGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -173,7 +173,7 @@ int indexOfAnimation( QAbstractAnimation * animation ) const
 */
 HB_FUNC_STATIC( QANIMATIONGROUP_INDEXOFANIMATION )
 {
-  QAnimationGroup * obj = static_cast< QAnimationGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAnimationGroup * obj = qobject_cast< QAnimationGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -197,7 +197,7 @@ void insertAnimation( int index, QAbstractAnimation * animation )
 */
 HB_FUNC_STATIC( QANIMATIONGROUP_INSERTANIMATION )
 {
-  QAnimationGroup * obj = static_cast< QAnimationGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAnimationGroup * obj = qobject_cast< QAnimationGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -223,7 +223,7 @@ void removeAnimation( QAbstractAnimation * animation )
 */
 HB_FUNC_STATIC( QANIMATIONGROUP_REMOVEANIMATION )
 {
-  QAnimationGroup * obj = static_cast< QAnimationGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAnimationGroup * obj = qobject_cast< QAnimationGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -249,7 +249,7 @@ QAbstractAnimation * takeAnimation( int index )
 */
 HB_FUNC_STATIC( QANIMATIONGROUP_TAKEANIMATION )
 {
-  QAnimationGroup * obj = static_cast< QAnimationGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAnimationGroup * obj = qobject_cast< QAnimationGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
