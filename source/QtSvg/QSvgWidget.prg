@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QSVGWIDGET_NEW )
 
 HB_FUNC_STATIC( QSVGWIDGET_DELETE )
 {
-  QSvgWidget * obj = static_cast< QSvgWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSvgWidget * obj = qobject_cast< QSvgWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -105,7 +105,7 @@ QSvgRenderer * renderer() const
 */
 HB_FUNC_STATIC( QSVGWIDGET_RENDERER )
 {
-  QSvgWidget * obj = static_cast< QSvgWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSvgWidget * obj = qobject_cast< QSvgWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -130,7 +130,7 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSVGWIDGET_SIZEHINT )
 {
-  QSvgWidget * obj = static_cast< QSvgWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSvgWidget * obj = qobject_cast< QSvgWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -155,7 +155,7 @@ void load( const QString & file )
 */
 void QSvgWidget_load1()
 {
-  QSvgWidget * obj = static_cast< QSvgWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSvgWidget * obj = qobject_cast< QSvgWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -170,7 +170,7 @@ void load( const QByteArray & contents )
 */
 void QSvgWidget_load2()
 {
-  QSvgWidget * obj = static_cast< QSvgWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSvgWidget * obj = qobject_cast< QSvgWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
