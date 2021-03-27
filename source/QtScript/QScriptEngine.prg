@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEW )
 
 HB_FUNC_STATIC( QSCRIPTENGINE_DELETE )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -140,7 +140,7 @@ void abortEvaluation( const QScriptValue & result = QScriptValue() )
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_ABORTEVALUATION )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -166,7 +166,7 @@ QScriptEngineAgent * agent() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_AGENT )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -191,7 +191,7 @@ QStringList availableExtensions() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_AVAILABLEEXTENSIONS )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -215,7 +215,7 @@ void clearExceptions()
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_CLEAREXCEPTIONS )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -241,7 +241,7 @@ void collectGarbage()
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_COLLECTGARBAGE )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -267,7 +267,7 @@ QScriptContext * currentContext() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_CURRENTCONTEXT )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -292,7 +292,7 @@ QScriptValue defaultPrototype( int metaTypeId ) const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_DEFAULTPROTOTYPE )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -317,7 +317,7 @@ QScriptValue evaluate( const QString & program, const QString & fileName = QStri
 */
 void QScriptEngine_evaluate1()
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -331,7 +331,7 @@ QScriptValue evaluate( const QScriptProgram & program )
 */
 void QScriptEngine_evaluate2()
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -361,7 +361,7 @@ QScriptValue globalObject() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_GLOBALOBJECT )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -386,7 +386,7 @@ bool hasUncaughtException() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_HASUNCAUGHTEXCEPTION )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -410,7 +410,7 @@ QScriptValue importExtension( const QString & extension )
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_IMPORTEXTENSION )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -435,7 +435,7 @@ QStringList importedExtensions() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_IMPORTEDEXTENSIONS )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -459,7 +459,7 @@ void installTranslatorFunctions( const QScriptValue & object = QScriptValue() )
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_INSTALLTRANSLATORFUNCTIONS )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -485,7 +485,7 @@ bool isEvaluating() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_ISEVALUATING )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -509,7 +509,7 @@ QScriptValue newArray( uint length = 0 )
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWARRAY )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -534,7 +534,7 @@ QScriptValue newRegExp( const QRegExp & regexp )
 */
 void QScriptEngine_newRegExp1()
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -548,7 +548,7 @@ QScriptValue newRegExp( const QString & pattern, const QString & flags )
 */
 void QScriptEngine_newRegExp2()
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -578,7 +578,7 @@ QScriptValue newVariant( const QVariant & value )
 */
 void QScriptEngine_newVariant1()
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -592,7 +592,7 @@ QScriptValue newVariant( const QScriptValue & object, const QVariant & value )
 */
 void QScriptEngine_newVariant2()
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -622,7 +622,7 @@ QScriptValue nullValue()
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_NULLVALUE )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -647,7 +647,7 @@ void popContext()
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_POPCONTEXT )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -673,7 +673,7 @@ int processEventsInterval() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_PROCESSEVENTSINTERVAL )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -697,7 +697,7 @@ QScriptContext * pushContext()
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_PUSHCONTEXT )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -722,7 +722,7 @@ void reportAdditionalMemoryCost( int size )
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_REPORTADDITIONALMEMORYCOST )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -748,7 +748,7 @@ void setAgent( QScriptEngineAgent * agent )
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_SETAGENT )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -774,7 +774,7 @@ void setDefaultPrototype( int metaTypeId, const QScriptValue & prototype )
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_SETDEFAULTPROTOTYPE )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -800,7 +800,7 @@ void setGlobalObject( const QScriptValue & object )
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_SETGLOBALOBJECT )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -826,7 +826,7 @@ void setProcessEventsInterval( int interval )
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_SETPROCESSEVENTSINTERVAL )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -852,7 +852,7 @@ QScriptValue toObject( const QScriptValue & value )
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_TOOBJECT )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -877,7 +877,7 @@ QScriptString toStringHandle( const QString & str )
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_TOSTRINGHANDLE )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -902,7 +902,7 @@ QScriptValue uncaughtException() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTION )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -927,7 +927,7 @@ QStringList uncaughtExceptionBacktrace() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTIONBACKTRACE )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -951,7 +951,7 @@ int uncaughtExceptionLineNumber() const
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTIONLINENUMBER )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
@@ -975,7 +975,7 @@ QScriptValue undefinedValue()
 */
 HB_FUNC_STATIC( QSCRIPTENGINE_UNDEFINEDVALUE )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
