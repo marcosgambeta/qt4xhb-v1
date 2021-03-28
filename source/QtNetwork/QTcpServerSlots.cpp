@@ -22,23 +22,23 @@ QTcpServerSlots::~QTcpServerSlots()
 
 void QTcpServerSlots::newConnection()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "newConnection()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTCPSERVER" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTCPSERVER" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QTcpServerSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTcpServer * obj = static_cast< QTcpServer * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTcpServer * obj = qobject_cast< QTcpServer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

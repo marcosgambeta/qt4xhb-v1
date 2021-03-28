@@ -22,23 +22,23 @@ QLocalServerSlots::~QLocalServerSlots()
 
 void QLocalServerSlots::newConnection()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "newConnection()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QLOCALSERVER" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QLOCALSERVER" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QLocalServerSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QLocalServer * obj = static_cast< QLocalServer * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLocalServer * obj = qobject_cast< QLocalServer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

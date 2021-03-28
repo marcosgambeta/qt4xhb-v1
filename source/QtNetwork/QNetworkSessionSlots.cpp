@@ -22,111 +22,111 @@ QNetworkSessionSlots::~QNetworkSessionSlots()
 
 void QNetworkSessionSlots::closed()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "closed()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QNETWORKSESSION" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QNETWORKSESSION" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QNetworkSessionSlots::error( QNetworkSession::SessionError error )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "error(QNetworkSession::SessionError)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QNETWORKSESSION" );
-    PHB_ITEM perror = hb_itemPutNI( NULL, ( int ) error );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QNETWORKSESSION" );
+    PHB_ITEM pError = hb_itemPutNI( NULL, static_cast< int >( error ) );
 
-    hb_vmEvalBlockV( cb, 2, psender, perror );
+    hb_vmEvalBlockV( cb, 2, pSender, pError );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( perror );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pError );
   }
 }
 
 void QNetworkSessionSlots::newConfigurationActivated()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "newConfigurationActivated()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QNETWORKSESSION" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QNETWORKSESSION" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QNetworkSessionSlots::opened()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "opened()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QNETWORKSESSION" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QNETWORKSESSION" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QNetworkSessionSlots::preferredConfigurationChanged( const QNetworkConfiguration & config, bool isSeamless )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "preferredConfigurationChanged(QNetworkConfiguration,bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QNETWORKSESSION" );
-    PHB_ITEM pconfig = Qt4xHb::Signals_return_object( ( void * ) &config, "QNETWORKCONFIGURATION" );
-    PHB_ITEM pisSeamless = hb_itemPutL( NULL, isSeamless );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QNETWORKSESSION" );
+    PHB_ITEM pConfig = Qt4xHb::Signals_return_object( ( void * ) &config, "QNETWORKCONFIGURATION" );
+    PHB_ITEM pIsSeamless = hb_itemPutL( NULL, isSeamless );
 
-    hb_vmEvalBlockV( cb, 3, psender, pconfig, pisSeamless );
+    hb_vmEvalBlockV( cb, 3, pSender, pConfig, pIsSeamless );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pconfig );
-    hb_itemRelease( pisSeamless );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pConfig );
+    hb_itemRelease( pIsSeamless );
   }
 }
 
 void QNetworkSessionSlots::stateChanged( QNetworkSession::State state )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "stateChanged(QNetworkSession::State)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QNETWORKSESSION" );
-    PHB_ITEM pstate = hb_itemPutNI( NULL, ( int ) state );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QNETWORKSESSION" );
+    PHB_ITEM pState = hb_itemPutNI( NULL, static_cast< int >( state ) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pstate );
+    hb_vmEvalBlockV( cb, 2, pSender, pState );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pstate );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pState );
   }
 }
 
 void QNetworkSessionSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QNetworkSession * obj = static_cast< QNetworkSession * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QNetworkSession * obj = qobject_cast< QNetworkSession * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
