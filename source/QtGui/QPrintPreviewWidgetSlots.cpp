@@ -22,41 +22,41 @@ QPrintPreviewWidgetSlots::~QPrintPreviewWidgetSlots()
 
 void QPrintPreviewWidgetSlots::paintRequested( QPrinter * printer )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "paintRequested(QPrinter*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QPRINTPREVIEWWIDGET" );
-    PHB_ITEM pprinter = Qt4xHb::Signals_return_object( ( void * ) printer, "QPRINTER" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QPRINTPREVIEWWIDGET" );
+    PHB_ITEM pPrinter = Qt4xHb::Signals_return_object( ( void * ) printer, "QPRINTER" );
 
-    hb_vmEvalBlockV( cb, 2, psender, pprinter );
+    hb_vmEvalBlockV( cb, 2, pSender, pPrinter );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pprinter );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pPrinter );
   }
 }
 
 void QPrintPreviewWidgetSlots::previewChanged()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "previewChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QPRINTPREVIEWWIDGET" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QPRINTPREVIEWWIDGET" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QPrintPreviewWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QPrintPreviewWidget * obj = static_cast< QPrintPreviewWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPrintPreviewWidget * obj = qobject_cast< QPrintPreviewWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

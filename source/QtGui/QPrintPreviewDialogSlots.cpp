@@ -22,25 +22,25 @@ QPrintPreviewDialogSlots::~QPrintPreviewDialogSlots()
 
 void QPrintPreviewDialogSlots::paintRequested( QPrinter * printer )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "paintRequested(QPrinter*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QPRINTPREVIEWDIALOG" );
-    PHB_ITEM pprinter = Qt4xHb::Signals_return_object( ( void * ) printer, "QPRINTER" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QPRINTPREVIEWDIALOG" );
+    PHB_ITEM pPrinter = Qt4xHb::Signals_return_object( ( void * ) printer, "QPRINTER" );
 
-    hb_vmEvalBlockV( cb, 2, psender, pprinter );
+    hb_vmEvalBlockV( cb, 2, pSender, pPrinter );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pprinter );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pPrinter );
   }
 }
 
 void QPrintPreviewDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QPrintPreviewDialog * obj = static_cast< QPrintPreviewDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPrintPreviewDialog * obj = qobject_cast< QPrintPreviewDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

@@ -22,43 +22,43 @@ QGraphicsBlurEffectSlots::~QGraphicsBlurEffectSlots()
 
 void QGraphicsBlurEffectSlots::blurHintsChanged( QGraphicsBlurEffect::BlurHints hints )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSBLUREFFECT" );
-    PHB_ITEM phints = hb_itemPutNI( NULL, ( int ) hints );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QGRAPHICSBLUREFFECT" );
+    PHB_ITEM pHints = hb_itemPutNI( NULL, static_cast< int >( hints ) );
 
-    hb_vmEvalBlockV( cb, 2, psender, phints );
+    hb_vmEvalBlockV( cb, 2, pSender, pHints );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( phints );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pHints );
   }
 }
 
 void QGraphicsBlurEffectSlots::blurRadiusChanged( qreal radius )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "blurRadiusChanged(qreal)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSBLUREFFECT" );
-    PHB_ITEM pradius = hb_itemPutND( NULL, radius );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QGRAPHICSBLUREFFECT" );
+    PHB_ITEM pRadius = hb_itemPutND( NULL, radius );
 
-    hb_vmEvalBlockV( cb, 2, psender, pradius );
+    hb_vmEvalBlockV( cb, 2, pSender, pRadius );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pradius );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pRadius );
   }
 }
 
 void QGraphicsBlurEffectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsBlurEffect * obj = static_cast< QGraphicsBlurEffect * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsBlurEffect * obj = qobject_cast< QGraphicsBlurEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

@@ -22,25 +22,25 @@ QMessageBoxSlots::~QMessageBoxSlots()
 
 void QMessageBoxSlots::buttonClicked( QAbstractButton * button )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "buttonClicked(QAbstractButton*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QMESSAGEBOX" );
-    PHB_ITEM pbutton = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( button ), "QABSTRACTBUTTON" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QMESSAGEBOX" );
+    PHB_ITEM pButton = Qt4xHb::Signals_return_qobject( button, "QABSTRACTBUTTON" );
 
-    hb_vmEvalBlockV( cb, 2, psender, pbutton );
+    hb_vmEvalBlockV( cb, 2, pSender, pButton );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pbutton );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pButton );
   }
 }
 
 void QMessageBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMessageBox * obj = static_cast< QMessageBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMessageBox * obj = qobject_cast< QMessageBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

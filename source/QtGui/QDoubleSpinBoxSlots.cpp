@@ -22,43 +22,43 @@ QDoubleSpinBoxSlots::~QDoubleSpinBoxSlots()
 
 void QDoubleSpinBoxSlots::valueChanged( double d )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "valueChanged(double)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDOUBLESPINBOX" );
-    PHB_ITEM pd = hb_itemPutND( NULL, d );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDOUBLESPINBOX" );
+    PHB_ITEM pD = hb_itemPutND( NULL, d );
 
-    hb_vmEvalBlockV( cb, 2, psender, pd );
+    hb_vmEvalBlockV( cb, 2, pSender, pD );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pd );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pD );
   }
 }
 
 void QDoubleSpinBoxSlots::valueChanged( const QString & text )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "valueChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDOUBLESPINBOX" );
-    PHB_ITEM ptext = hb_itemPutC( NULL, QSTRINGTOSTRING( text ) );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDOUBLESPINBOX" );
+    PHB_ITEM pText = hb_itemPutC( NULL, QSTRINGTOSTRING( text ) );
 
-    hb_vmEvalBlockV( cb, 2, psender, ptext );
+    hb_vmEvalBlockV( cb, 2, pSender, pText );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( ptext );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pText );
   }
 }
 
 void QDoubleSpinBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDoubleSpinBox * obj = static_cast< QDoubleSpinBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDoubleSpinBox * obj = qobject_cast< QDoubleSpinBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

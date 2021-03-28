@@ -22,55 +22,55 @@ QGraphicsRotationSlots::~QGraphicsRotationSlots()
 
 void QGraphicsRotationSlots::angleChanged()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "angleChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSROTATION" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QGRAPHICSROTATION" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QGraphicsRotationSlots::axisChanged()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "axisChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSROTATION" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QGRAPHICSROTATION" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QGraphicsRotationSlots::originChanged()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "originChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSROTATION" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QGRAPHICSROTATION" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QGraphicsRotationSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsRotation * obj = static_cast< QGraphicsRotation * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsRotation * obj = qobject_cast< QGraphicsRotation * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

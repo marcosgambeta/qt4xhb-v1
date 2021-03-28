@@ -22,25 +22,25 @@ QSplashScreenSlots::~QSplashScreenSlots()
 
 void QSplashScreenSlots::messageChanged( const QString & message )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "messageChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSPLASHSCREEN" );
-    PHB_ITEM pmessage = hb_itemPutC( NULL, QSTRINGTOSTRING( message ) );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSPLASHSCREEN" );
+    PHB_ITEM pMessage = hb_itemPutC( NULL, QSTRINGTOSTRING( message ) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pmessage );
+    hb_vmEvalBlockV( cb, 2, pSender, pMessage );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pmessage );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pMessage );
   }
 }
 
 void QSplashScreenSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSplashScreen * obj = static_cast< QSplashScreen * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSplashScreen * obj = qobject_cast< QSplashScreen * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

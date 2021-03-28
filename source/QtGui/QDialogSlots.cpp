@@ -22,57 +22,57 @@ QDialogSlots::~QDialogSlots()
 
 void QDialogSlots::accepted()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "accepted()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDIALOG" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDIALOG" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QDialogSlots::finished( int result )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "finished(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDIALOG" );
-    PHB_ITEM presult = hb_itemPutNI( NULL, result );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDIALOG" );
+    PHB_ITEM pResult = hb_itemPutNI( NULL, result );
 
-    hb_vmEvalBlockV( cb, 2, psender, presult );
+    hb_vmEvalBlockV( cb, 2, pSender, pResult );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( presult );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pResult );
   }
 }
 
 void QDialogSlots::rejected()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "rejected()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDIALOG" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDIALOG" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDialog * obj = static_cast< QDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDialog * obj = qobject_cast< QDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

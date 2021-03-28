@@ -22,95 +22,95 @@ QWizardSlots::~QWizardSlots()
 
 void QWizardSlots::currentIdChanged( int id )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentIdChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWIZARD" );
-    PHB_ITEM pid = hb_itemPutNI( NULL, id );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QWIZARD" );
+    PHB_ITEM pId = hb_itemPutNI( NULL, id );
 
-    hb_vmEvalBlockV( cb, 2, psender, pid );
+    hb_vmEvalBlockV( cb, 2, pSender, pId );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pid );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pId );
   }
 }
 
 void QWizardSlots::customButtonClicked( int which )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "customButtonClicked(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWIZARD" );
-    PHB_ITEM pwhich = hb_itemPutNI( NULL, which );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QWIZARD" );
+    PHB_ITEM pWhich = hb_itemPutNI( NULL, which );
 
-    hb_vmEvalBlockV( cb, 2, psender, pwhich );
+    hb_vmEvalBlockV( cb, 2, pSender, pWhich );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pwhich );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pWhich );
   }
 }
 
 void QWizardSlots::helpRequested()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "helpRequested()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWIZARD" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QWIZARD" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QWizardSlots::pageAdded( int id )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "pageAdded(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWIZARD" );
-    PHB_ITEM pid = hb_itemPutNI( NULL, id );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QWIZARD" );
+    PHB_ITEM pId = hb_itemPutNI( NULL, id );
 
-    hb_vmEvalBlockV( cb, 2, psender, pid );
+    hb_vmEvalBlockV( cb, 2, pSender, pId );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pid );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pId );
   }
 }
 
 void QWizardSlots::pageRemoved( int id )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "pageRemoved(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QWIZARD" );
-    PHB_ITEM pid = hb_itemPutNI( NULL, id );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QWIZARD" );
+    PHB_ITEM pId = hb_itemPutNI( NULL, id );
 
-    hb_vmEvalBlockV( cb, 2, psender, pid );
+    hb_vmEvalBlockV( cb, 2, pSender, pId );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pid );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pId );
   }
 }
 
 void QWizardSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QWizard * obj = static_cast< QWizard * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWizard * obj = qobject_cast< QWizard * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

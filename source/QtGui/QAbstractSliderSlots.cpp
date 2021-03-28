@@ -22,113 +22,113 @@ QAbstractSliderSlots::~QAbstractSliderSlots()
 
 void QAbstractSliderSlots::actionTriggered( int action )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "actionTriggered(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTSLIDER" );
-    PHB_ITEM paction = hb_itemPutNI( NULL, action );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTSLIDER" );
+    PHB_ITEM pAction = hb_itemPutNI( NULL, action );
 
-    hb_vmEvalBlockV( cb, 2, psender, paction );
+    hb_vmEvalBlockV( cb, 2, pSender, pAction );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( paction );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pAction );
   }
 }
 
 void QAbstractSliderSlots::rangeChanged( int min, int max )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "rangeChanged(int,int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTSLIDER" );
-    PHB_ITEM pmin = hb_itemPutNI( NULL, min );
-    PHB_ITEM pmax = hb_itemPutNI( NULL, max );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTSLIDER" );
+    PHB_ITEM pMin = hb_itemPutNI( NULL, min );
+    PHB_ITEM pMax = hb_itemPutNI( NULL, max );
 
-    hb_vmEvalBlockV( cb, 3, psender, pmin, pmax );
+    hb_vmEvalBlockV( cb, 3, pSender, pMin, pMax );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pmin );
-    hb_itemRelease( pmax );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pMin );
+    hb_itemRelease( pMax );
   }
 }
 
 void QAbstractSliderSlots::sliderMoved( int value )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "sliderMoved(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTSLIDER" );
-    PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTSLIDER" );
+    PHB_ITEM pValue = hb_itemPutNI( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, pSender, pValue );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pvalue );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pValue );
   }
 }
 
 void QAbstractSliderSlots::sliderPressed()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "sliderPressed()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTSLIDER" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTSLIDER" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QAbstractSliderSlots::sliderReleased()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "sliderReleased()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTSLIDER" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTSLIDER" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QAbstractSliderSlots::valueChanged( int value )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "valueChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTSLIDER" );
-    PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTSLIDER" );
+    PHB_ITEM pValue = hb_itemPutNI( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, pSender, pValue );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pvalue );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pValue );
   }
 }
 
 void QAbstractSliderSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractSlider * obj = static_cast< QAbstractSlider * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractSlider * obj = qobject_cast< QAbstractSlider * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

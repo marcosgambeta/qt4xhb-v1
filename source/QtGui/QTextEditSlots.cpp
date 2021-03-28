@@ -22,127 +22,127 @@ QTextEditSlots::~QTextEditSlots()
 
 void QTextEditSlots::copyAvailable( bool yes )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "copyAvailable(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTEXTEDIT" );
-    PHB_ITEM pyes = hb_itemPutL( NULL, yes );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTEXTEDIT" );
+    PHB_ITEM pYes = hb_itemPutL( NULL, yes );
 
-    hb_vmEvalBlockV( cb, 2, psender, pyes );
+    hb_vmEvalBlockV( cb, 2, pSender, pYes );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pyes );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pYes );
   }
 }
 
 void QTextEditSlots::currentCharFormatChanged( const QTextCharFormat & f )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentCharFormatChanged(QTextCharFormat)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTEXTEDIT" );
-    PHB_ITEM pf = Qt4xHb::Signals_return_object( ( void * ) &f, "QTEXTCHARFORMAT" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTEXTEDIT" );
+    PHB_ITEM pF = Qt4xHb::Signals_return_object( ( void * ) &f, "QTEXTCHARFORMAT" );
 
-    hb_vmEvalBlockV( cb, 2, psender, pf );
+    hb_vmEvalBlockV( cb, 2, pSender, pF );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pf );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pF );
   }
 }
 
 void QTextEditSlots::cursorPositionChanged()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "cursorPositionChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTEXTEDIT" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTEXTEDIT" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QTextEditSlots::redoAvailable( bool available )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "redoAvailable(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTEXTEDIT" );
-    PHB_ITEM pavailable = hb_itemPutL( NULL, available );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTEXTEDIT" );
+    PHB_ITEM pAvailable = hb_itemPutL( NULL, available );
 
-    hb_vmEvalBlockV( cb, 2, psender, pavailable );
+    hb_vmEvalBlockV( cb, 2, pSender, pAvailable );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pavailable );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pAvailable );
   }
 }
 
 void QTextEditSlots::selectionChanged()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "selectionChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTEXTEDIT" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTEXTEDIT" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QTextEditSlots::textChanged()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "textChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTEXTEDIT" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTEXTEDIT" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QTextEditSlots::undoAvailable( bool available )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "undoAvailable(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTEXTEDIT" );
-    PHB_ITEM pavailable = hb_itemPutL( NULL, available );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTEXTEDIT" );
+    PHB_ITEM pAvailable = hb_itemPutL( NULL, available );
 
-    hb_vmEvalBlockV( cb, 2, psender, pavailable );
+    hb_vmEvalBlockV( cb, 2, pSender, pAvailable );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pavailable );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pAvailable );
   }
 }
 
 void QTextEditSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTextEdit * obj = static_cast< QTextEdit * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextEdit * obj = qobject_cast< QTextEdit * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

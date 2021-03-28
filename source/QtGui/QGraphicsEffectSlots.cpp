@@ -22,25 +22,25 @@ QGraphicsEffectSlots::~QGraphicsEffectSlots()
 
 void QGraphicsEffectSlots::enabledChanged( bool enabled )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "enabledChanged(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSEFFECT" );
-    PHB_ITEM penabled = hb_itemPutL( NULL, enabled );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QGRAPHICSEFFECT" );
+    PHB_ITEM pEnabled = hb_itemPutL( NULL, enabled );
 
-    hb_vmEvalBlockV( cb, 2, psender, penabled );
+    hb_vmEvalBlockV( cb, 2, pSender, pEnabled );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( penabled );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pEnabled );
   }
 }
 
 void QGraphicsEffectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsEffect * obj = static_cast< QGraphicsEffect * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsEffect * obj = qobject_cast< QGraphicsEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

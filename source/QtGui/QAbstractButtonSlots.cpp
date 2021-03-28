@@ -22,75 +22,75 @@ QAbstractButtonSlots::~QAbstractButtonSlots()
 
 void QAbstractButtonSlots::clicked( bool checked )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "clicked(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTBUTTON" );
-    PHB_ITEM pchecked = hb_itemPutL( NULL, checked );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTBUTTON" );
+    PHB_ITEM pChecked = hb_itemPutL( NULL, checked );
 
-    hb_vmEvalBlockV( cb, 2, psender, pchecked );
+    hb_vmEvalBlockV( cb, 2, pSender, pChecked );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pchecked );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pChecked );
   }
 }
 
 void QAbstractButtonSlots::pressed()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "pressed()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTBUTTON" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTBUTTON" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QAbstractButtonSlots::released()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "released()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTBUTTON" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTBUTTON" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QAbstractButtonSlots::toggled( bool checked )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "toggled(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTBUTTON" );
-    PHB_ITEM pchecked = hb_itemPutL( NULL, checked );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTBUTTON" );
+    PHB_ITEM pChecked = hb_itemPutL( NULL, checked );
 
-    hb_vmEvalBlockV( cb, 2, psender, pchecked );
+    hb_vmEvalBlockV( cb, 2, pSender, pChecked );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pchecked );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pChecked );
   }
 }
 
 void QAbstractButtonSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractButton * obj = static_cast< QAbstractButton * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

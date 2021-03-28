@@ -22,25 +22,25 @@ QProgressBarSlots::~QProgressBarSlots()
 
 void QProgressBarSlots::valueChanged( int value )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "valueChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QPROGRESSBAR" );
-    PHB_ITEM pvalue = hb_itemPutNI( NULL, value );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QPROGRESSBAR" );
+    PHB_ITEM pValue = hb_itemPutNI( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, pSender, pValue );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pvalue );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pValue );
   }
 }
 
 void QProgressBarSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QProgressBar * obj = static_cast< QProgressBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProgressBar * obj = qobject_cast< QProgressBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

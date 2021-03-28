@@ -22,133 +22,133 @@ QUndoGroupSlots::~QUndoGroupSlots()
 
 void QUndoGroupSlots::activeStackChanged( QUndoStack * stack )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activeStackChanged(QUndoStack*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QUNDOGROUP" );
-    PHB_ITEM pstack = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( stack ), "QUNDOSTACK" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QUNDOGROUP" );
+    PHB_ITEM pStack = Qt4xHb::Signals_return_qobject( stack, "QUNDOSTACK" );
 
-    hb_vmEvalBlockV( cb, 2, psender, pstack );
+    hb_vmEvalBlockV( cb, 2, pSender, pStack );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pstack );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pStack );
   }
 }
 
 void QUndoGroupSlots::canRedoChanged( bool canRedo )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "canRedoChanged(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QUNDOGROUP" );
-    PHB_ITEM pcanRedo = hb_itemPutL( NULL, canRedo );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QUNDOGROUP" );
+    PHB_ITEM pCanRedo = hb_itemPutL( NULL, canRedo );
 
-    hb_vmEvalBlockV( cb, 2, psender, pcanRedo );
+    hb_vmEvalBlockV( cb, 2, pSender, pCanRedo );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pcanRedo );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pCanRedo );
   }
 }
 
 void QUndoGroupSlots::canUndoChanged( bool canUndo )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "canUndoChanged(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QUNDOGROUP" );
-    PHB_ITEM pcanUndo = hb_itemPutL( NULL, canUndo );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QUNDOGROUP" );
+    PHB_ITEM pCanUndo = hb_itemPutL( NULL, canUndo );
 
-    hb_vmEvalBlockV( cb, 2, psender, pcanUndo );
+    hb_vmEvalBlockV( cb, 2, pSender, pCanUndo );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pcanUndo );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pCanUndo );
   }
 }
 
 void QUndoGroupSlots::cleanChanged( bool clean )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "cleanChanged(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QUNDOGROUP" );
-    PHB_ITEM pclean = hb_itemPutL( NULL, clean );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QUNDOGROUP" );
+    PHB_ITEM pClean = hb_itemPutL( NULL, clean );
 
-    hb_vmEvalBlockV( cb, 2, psender, pclean );
+    hb_vmEvalBlockV( cb, 2, pSender, pClean );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pclean );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pClean );
   }
 }
 
 void QUndoGroupSlots::indexChanged( int idx )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "indexChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QUNDOGROUP" );
-    PHB_ITEM pidx = hb_itemPutNI( NULL, idx );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QUNDOGROUP" );
+    PHB_ITEM pIdx = hb_itemPutNI( NULL, idx );
 
-    hb_vmEvalBlockV( cb, 2, psender, pidx );
+    hb_vmEvalBlockV( cb, 2, pSender, pIdx );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pidx );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pIdx );
   }
 }
 
 void QUndoGroupSlots::redoTextChanged( const QString & redoText )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "redoTextChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QUNDOGROUP" );
-    PHB_ITEM predoText = hb_itemPutC( NULL, QSTRINGTOSTRING( redoText ) );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QUNDOGROUP" );
+    PHB_ITEM pRedoText = hb_itemPutC( NULL, QSTRINGTOSTRING( redoText ) );
 
-    hb_vmEvalBlockV( cb, 2, psender, predoText );
+    hb_vmEvalBlockV( cb, 2, pSender, pRedoText );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( predoText );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pRedoText );
   }
 }
 
 void QUndoGroupSlots::undoTextChanged( const QString & undoText )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "undoTextChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QUNDOGROUP" );
-    PHB_ITEM pundoText = hb_itemPutC( NULL, QSTRINGTOSTRING( undoText ) );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QUNDOGROUP" );
+    PHB_ITEM pUndoText = hb_itemPutC( NULL, QSTRINGTOSTRING( undoText ) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pundoText );
+    hb_vmEvalBlockV( cb, 2, pSender, pUndoText );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pundoText );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pUndoText );
   }
 }
 
 void QUndoGroupSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QUndoGroup * obj = static_cast< QUndoGroup * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QUndoGroup * obj = qobject_cast< QUndoGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

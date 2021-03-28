@@ -22,41 +22,41 @@ QSystemTrayIconSlots::~QSystemTrayIconSlots()
 
 void QSystemTrayIconSlots::activated( QSystemTrayIcon::ActivationReason reason )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activated(QSystemTrayIcon::ActivationReason)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSYSTEMTRAYICON" );
-    PHB_ITEM preason = hb_itemPutNI( NULL, ( int ) reason );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSYSTEMTRAYICON" );
+    PHB_ITEM pReason = hb_itemPutNI( NULL, static_cast< int >( reason ) );
 
-    hb_vmEvalBlockV( cb, 2, psender, preason );
+    hb_vmEvalBlockV( cb, 2, pSender, pReason );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( preason );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pReason );
   }
 }
 
 void QSystemTrayIconSlots::messageClicked()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "messageClicked()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSYSTEMTRAYICON" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSYSTEMTRAYICON" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QSystemTrayIconSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSystemTrayIcon * obj = static_cast< QSystemTrayIcon * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSystemTrayIcon * obj = qobject_cast< QSystemTrayIcon * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

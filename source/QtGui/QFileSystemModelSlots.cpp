@@ -22,65 +22,65 @@ QFileSystemModelSlots::~QFileSystemModelSlots()
 
 void QFileSystemModelSlots::directoryLoaded( const QString & path )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "directoryLoaded(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QFILESYSTEMMODEL" );
-    PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING( path ) );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFILESYSTEMMODEL" );
+    PHB_ITEM pPath = hb_itemPutC( NULL, QSTRINGTOSTRING( path ) );
 
-    hb_vmEvalBlockV( cb, 2, psender, ppath );
+    hb_vmEvalBlockV( cb, 2, pSender, pPath );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( ppath );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pPath );
   }
 }
 
 void QFileSystemModelSlots::fileRenamed( const QString & path, const QString & oldName, const QString & newName )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "fileRenamed(QString,QString,QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QFILESYSTEMMODEL" );
-    PHB_ITEM ppath = hb_itemPutC( NULL, QSTRINGTOSTRING( path ) );
-    PHB_ITEM poldName = hb_itemPutC( NULL, QSTRINGTOSTRING( oldName ) );
-    PHB_ITEM pnewName = hb_itemPutC( NULL, QSTRINGTOSTRING( newName ) );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFILESYSTEMMODEL" );
+    PHB_ITEM pPath = hb_itemPutC( NULL, QSTRINGTOSTRING( path ) );
+    PHB_ITEM pOldName = hb_itemPutC( NULL, QSTRINGTOSTRING( oldName ) );
+    PHB_ITEM pNewName = hb_itemPutC( NULL, QSTRINGTOSTRING( newName ) );
 
-    hb_vmEvalBlockV( cb, 4, psender, ppath, poldName, pnewName );
+    hb_vmEvalBlockV( cb, 4, pSender, pPath, pOldName, pNewName );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( ppath );
-    hb_itemRelease( poldName );
-    hb_itemRelease( pnewName );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pPath );
+    hb_itemRelease( pOldName );
+    hb_itemRelease( pNewName );
   }
 }
 
 void QFileSystemModelSlots::rootPathChanged( const QString & newPath )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "rootPathChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QFILESYSTEMMODEL" );
-    PHB_ITEM pnewPath = hb_itemPutC( NULL, QSTRINGTOSTRING( newPath ) );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFILESYSTEMMODEL" );
+    PHB_ITEM pNewPath = hb_itemPutC( NULL, QSTRINGTOSTRING( newPath ) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pnewPath );
+    hb_vmEvalBlockV( cb, 2, pSender, pNewPath );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pnewPath );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pNewPath );
   }
 }
 
 void QFileSystemModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QFileSystemModel * obj = static_cast< QFileSystemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileSystemModel * obj = qobject_cast< QFileSystemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

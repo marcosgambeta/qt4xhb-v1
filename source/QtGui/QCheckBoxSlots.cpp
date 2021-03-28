@@ -22,25 +22,25 @@ QCheckBoxSlots::~QCheckBoxSlots()
 
 void QCheckBoxSlots::stateChanged( int state )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "stateChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QCHECKBOX" );
-    PHB_ITEM pstate = hb_itemPutNI( NULL, state );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QCHECKBOX" );
+    PHB_ITEM pState = hb_itemPutNI( NULL, state );
 
-    hb_vmEvalBlockV( cb, 2, psender, pstate );
+    hb_vmEvalBlockV( cb, 2, pSender, pState );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pstate );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pState );
   }
 }
 
 void QCheckBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCheckBox * obj = static_cast< QCheckBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QCheckBox * obj = qobject_cast< QCheckBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

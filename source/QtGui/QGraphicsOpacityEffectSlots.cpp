@@ -22,43 +22,43 @@ QGraphicsOpacityEffectSlots::~QGraphicsOpacityEffectSlots()
 
 void QGraphicsOpacityEffectSlots::opacityChanged( qreal opacity )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "opacityChanged(qreal)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSOPACITYEFFECT" );
-    PHB_ITEM popacity = hb_itemPutND( NULL, opacity );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QGRAPHICSOPACITYEFFECT" );
+    PHB_ITEM pOpacity = hb_itemPutND( NULL, opacity );
 
-    hb_vmEvalBlockV( cb, 2, psender, popacity );
+    hb_vmEvalBlockV( cb, 2, pSender, pOpacity );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( popacity );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pOpacity );
   }
 }
 
 void QGraphicsOpacityEffectSlots::opacityMaskChanged( const QBrush & mask )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "opacityMaskChanged(QBrush)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSOPACITYEFFECT" );
-    PHB_ITEM pmask = Qt4xHb::Signals_return_object( ( void * ) &mask, "QBRUSH" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QGRAPHICSOPACITYEFFECT" );
+    PHB_ITEM pMask = Qt4xHb::Signals_return_object( ( void * ) &mask, "QBRUSH" );
 
-    hb_vmEvalBlockV( cb, 2, psender, pmask );
+    hb_vmEvalBlockV( cb, 2, pSender, pMask );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pmask );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pMask );
   }
 }
 
 void QGraphicsOpacityEffectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsOpacityEffect * obj = static_cast< QGraphicsOpacityEffect * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsOpacityEffect * obj = qobject_cast< QGraphicsOpacityEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

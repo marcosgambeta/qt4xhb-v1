@@ -22,43 +22,43 @@ QFontDialogSlots::~QFontDialogSlots()
 
 void QFontDialogSlots::currentFontChanged( const QFont & font )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentFontChanged(QFont)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QFONTDIALOG" );
-    PHB_ITEM pfont = Qt4xHb::Signals_return_object( ( void * ) &font, "QFONT" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFONTDIALOG" );
+    PHB_ITEM pFont = Qt4xHb::Signals_return_object( ( void * ) &font, "QFONT" );
 
-    hb_vmEvalBlockV( cb, 2, psender, pfont );
+    hb_vmEvalBlockV( cb, 2, pSender, pFont );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pfont );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pFont );
   }
 }
 
 void QFontDialogSlots::fontSelected( const QFont & font )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "fontSelected(QFont)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QFONTDIALOG" );
-    PHB_ITEM pfont = Qt4xHb::Signals_return_object( ( void * ) &font, "QFONT" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFONTDIALOG" );
+    PHB_ITEM pFont = Qt4xHb::Signals_return_object( ( void * ) &font, "QFONT" );
 
-    hb_vmEvalBlockV( cb, 2, psender, pfont );
+    hb_vmEvalBlockV( cb, 2, pSender, pFont );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pfont );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pFont );
   }
 }
 
 void QFontDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QFontDialog * obj = static_cast< QFontDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFontDialog * obj = qobject_cast< QFontDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

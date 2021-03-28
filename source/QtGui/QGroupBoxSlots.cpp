@@ -22,43 +22,43 @@ QGroupBoxSlots::~QGroupBoxSlots()
 
 void QGroupBoxSlots::clicked( bool checked )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "clicked(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGROUPBOX" );
-    PHB_ITEM pchecked = hb_itemPutL( NULL, checked );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QGROUPBOX" );
+    PHB_ITEM pChecked = hb_itemPutL( NULL, checked );
 
-    hb_vmEvalBlockV( cb, 2, psender, pchecked );
+    hb_vmEvalBlockV( cb, 2, pSender, pChecked );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pchecked );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pChecked );
   }
 }
 
 void QGroupBoxSlots::toggled( bool on )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "toggled(bool)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGROUPBOX" );
-    PHB_ITEM pon = hb_itemPutL( NULL, on );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QGROUPBOX" );
+    PHB_ITEM pOn = hb_itemPutL( NULL, on );
 
-    hb_vmEvalBlockV( cb, 2, psender, pon );
+    hb_vmEvalBlockV( cb, 2, pSender, pOn );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pon );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pOn );
   }
 }
 
 void QGroupBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGroupBox * obj = static_cast< QGroupBox * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGroupBox * obj = qobject_cast< QGroupBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

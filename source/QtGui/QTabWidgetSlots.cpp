@@ -22,43 +22,43 @@ QTabWidgetSlots::~QTabWidgetSlots()
 
 void QTabWidgetSlots::currentChanged( int index )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTABWIDGET" );
-    PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTABWIDGET" );
+    PHB_ITEM pIndex = hb_itemPutNI( NULL, index );
 
-    hb_vmEvalBlockV( cb, 2, psender, pindex );
+    hb_vmEvalBlockV( cb, 2, pSender, pIndex );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pindex );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pIndex );
   }
 }
 
 void QTabWidgetSlots::tabCloseRequested( int index )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "tabCloseRequested(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTABWIDGET" );
-    PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTABWIDGET" );
+    PHB_ITEM pIndex = hb_itemPutNI( NULL, index );
 
-    hb_vmEvalBlockV( cb, 2, psender, pindex );
+    hb_vmEvalBlockV( cb, 2, pSender, pIndex );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pindex );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pIndex );
   }
 }
 
 void QTabWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTabWidget * obj = static_cast< QTabWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTabWidget * obj = qobject_cast< QTabWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

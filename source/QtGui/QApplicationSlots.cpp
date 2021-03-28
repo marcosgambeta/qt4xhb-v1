@@ -22,127 +22,127 @@ QApplicationSlots::~QApplicationSlots()
 
 void QApplicationSlots::aboutToReleaseGpuResources()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "aboutToReleaseGpuResources()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QAPPLICATION" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QAPPLICATION" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QApplicationSlots::aboutToUseGpuResources()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "aboutToUseGpuResources()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QAPPLICATION" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QAPPLICATION" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QApplicationSlots::commitDataRequest( QSessionManager & manager )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "commitDataRequest(QSessionManager)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QAPPLICATION" );
-    PHB_ITEM pmanager = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( &manager ), "QSESSIONMANAGER" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QAPPLICATION" );
+    PHB_ITEM pManager = Qt4xHb::Signals_return_qobject( &manager, "QSESSIONMANAGER" );
 
-    hb_vmEvalBlockV( cb, 2, psender, pmanager );
+    hb_vmEvalBlockV( cb, 2, pSender, pManager );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pmanager );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pManager );
   }
 }
 
 void QApplicationSlots::focusChanged( QWidget * old, QWidget * now )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "focusChanged(QWidget*,QWidget*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QAPPLICATION" );
-    PHB_ITEM pold = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( old ), "QWIDGET" );
-    PHB_ITEM pnow = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( now ), "QWIDGET" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QAPPLICATION" );
+    PHB_ITEM pOld = Qt4xHb::Signals_return_qobject( old, "QWIDGET" );
+    PHB_ITEM pNow = Qt4xHb::Signals_return_qobject( now, "QWIDGET" );
 
-    hb_vmEvalBlockV( cb, 3, psender, pold, pnow );
+    hb_vmEvalBlockV( cb, 3, pSender, pOld, pNow );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pold );
-    hb_itemRelease( pnow );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pOld );
+    hb_itemRelease( pNow );
   }
 }
 
 void QApplicationSlots::fontDatabaseChanged()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "fontDatabaseChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QAPPLICATION" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QAPPLICATION" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QApplicationSlots::lastWindowClosed()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "lastWindowClosed()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QAPPLICATION" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QAPPLICATION" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QApplicationSlots::saveStateRequest( QSessionManager & manager )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "saveStateRequest(QSessionManager)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QAPPLICATION" );
-    PHB_ITEM pmanager = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( &manager ), "QSESSIONMANAGER" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QAPPLICATION" );
+    PHB_ITEM pManager = Qt4xHb::Signals_return_qobject( &manager, "QSESSIONMANAGER" );
 
-    hb_vmEvalBlockV( cb, 2, psender, pmanager );
+    hb_vmEvalBlockV( cb, 2, pSender, pManager );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pmanager );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pManager );
   }
 }
 
 void QApplicationSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QApplication * obj = static_cast< QApplication * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QApplication * obj = qobject_cast< QApplication * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

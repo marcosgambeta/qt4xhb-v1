@@ -22,43 +22,43 @@ QDragSlots::~QDragSlots()
 
 void QDragSlots::actionChanged( Qt::DropAction action )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "actionChanged(Qt::DropAction)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDRAG" );
-    PHB_ITEM paction = hb_itemPutNI( NULL, ( int ) action );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDRAG" );
+    PHB_ITEM pAction = hb_itemPutNI( NULL, static_cast< int >( action ) );
 
-    hb_vmEvalBlockV( cb, 2, psender, paction );
+    hb_vmEvalBlockV( cb, 2, pSender, pAction );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( paction );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pAction );
   }
 }
 
 void QDragSlots::targetChanged( QWidget * newTarget )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "targetChanged(QWidget*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDRAG" );
-    PHB_ITEM pnewTarget = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( newTarget ), "QWIDGET" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDRAG" );
+    PHB_ITEM pNewTarget = Qt4xHb::Signals_return_qobject( newTarget, "QWIDGET" );
 
-    hb_vmEvalBlockV( cb, 2, psender, pnewTarget );
+    hb_vmEvalBlockV( cb, 2, pSender, pNewTarget );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pnewTarget );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pNewTarget );
   }
 }
 
 void QDragSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDrag * obj = static_cast< QDrag * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDrag * obj = qobject_cast< QDrag * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

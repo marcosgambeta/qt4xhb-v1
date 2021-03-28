@@ -22,43 +22,43 @@ QGraphicsTextItemSlots::~QGraphicsTextItemSlots()
 
 void QGraphicsTextItemSlots::linkActivated( const QString & link )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "linkActivated(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSTEXTITEM" );
-    PHB_ITEM plink = hb_itemPutC( NULL, QSTRINGTOSTRING( link ) );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QGRAPHICSTEXTITEM" );
+    PHB_ITEM pLink = hb_itemPutC( NULL, QSTRINGTOSTRING( link ) );
 
-    hb_vmEvalBlockV( cb, 2, psender, plink );
+    hb_vmEvalBlockV( cb, 2, pSender, pLink );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( plink );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pLink );
   }
 }
 
 void QGraphicsTextItemSlots::linkHovered( const QString & link )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "linkHovered(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSTEXTITEM" );
-    PHB_ITEM plink = hb_itemPutC( NULL, QSTRINGTOSTRING( link ) );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QGRAPHICSTEXTITEM" );
+    PHB_ITEM pLink = hb_itemPutC( NULL, QSTRINGTOSTRING( link ) );
 
-    hb_vmEvalBlockV( cb, 2, psender, plink );
+    hb_vmEvalBlockV( cb, 2, pSender, pLink );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( plink );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pLink );
   }
 }
 
 void QGraphicsTextItemSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsTextItem * obj = static_cast< QGraphicsTextItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

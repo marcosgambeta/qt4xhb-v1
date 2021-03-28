@@ -22,61 +22,61 @@ QDesktopWidgetSlots::~QDesktopWidgetSlots()
 
 void QDesktopWidgetSlots::resized( int screen )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "resized(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDESKTOPWIDGET" );
-    PHB_ITEM pscreen = hb_itemPutNI( NULL, screen );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDESKTOPWIDGET" );
+    PHB_ITEM pScreen = hb_itemPutNI( NULL, screen );
 
-    hb_vmEvalBlockV( cb, 2, psender, pscreen );
+    hb_vmEvalBlockV( cb, 2, pSender, pScreen );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pscreen );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pScreen );
   }
 }
 
 void QDesktopWidgetSlots::screenCountChanged( int newCount )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "screenCountChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDESKTOPWIDGET" );
-    PHB_ITEM pnewCount = hb_itemPutNI( NULL, newCount );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDESKTOPWIDGET" );
+    PHB_ITEM pNewCount = hb_itemPutNI( NULL, newCount );
 
-    hb_vmEvalBlockV( cb, 2, psender, pnewCount );
+    hb_vmEvalBlockV( cb, 2, pSender, pNewCount );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pnewCount );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pNewCount );
   }
 }
 
 void QDesktopWidgetSlots::workAreaResized( int screen )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "workAreaResized(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDESKTOPWIDGET" );
-    PHB_ITEM pscreen = hb_itemPutNI( NULL, screen );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDESKTOPWIDGET" );
+    PHB_ITEM pScreen = hb_itemPutNI( NULL, screen );
 
-    hb_vmEvalBlockV( cb, 2, psender, pscreen );
+    hb_vmEvalBlockV( cb, 2, pSender, pScreen );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pscreen );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pScreen );
   }
 }
 
 void QDesktopWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDesktopWidget * obj = static_cast< QDesktopWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDesktopWidget * obj = qobject_cast< QDesktopWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

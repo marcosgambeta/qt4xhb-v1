@@ -22,25 +22,25 @@ QStandardItemModelSlots::~QStandardItemModelSlots()
 
 void QStandardItemModelSlots::itemChanged( QStandardItem * item )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "itemChanged(QStandardItem*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSTANDARDITEMMODEL" );
-    PHB_ITEM pitem = Qt4xHb::Signals_return_object( ( void * ) item, "QSTANDARDITEM" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSTANDARDITEMMODEL" );
+    PHB_ITEM pItem = Qt4xHb::Signals_return_object( ( void * ) item, "QSTANDARDITEM" );
 
-    hb_vmEvalBlockV( cb, 2, psender, pitem );
+    hb_vmEvalBlockV( cb, 2, pSender, pItem );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pitem );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pItem );
   }
 }
 
 void QStandardItemModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QStandardItemModel * obj = static_cast< QStandardItemModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

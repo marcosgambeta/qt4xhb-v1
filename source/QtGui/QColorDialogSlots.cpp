@@ -22,43 +22,43 @@ QColorDialogSlots::~QColorDialogSlots()
 
 void QColorDialogSlots::colorSelected( const QColor & color )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "colorSelected(QColor)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QCOLORDIALOG" );
-    PHB_ITEM pcolor = Qt4xHb::Signals_return_object( ( void * ) &color, "QCOLOR" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QCOLORDIALOG" );
+    PHB_ITEM pColor = Qt4xHb::Signals_return_object( ( void * ) &color, "QCOLOR" );
 
-    hb_vmEvalBlockV( cb, 2, psender, pcolor );
+    hb_vmEvalBlockV( cb, 2, pSender, pColor );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pcolor );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pColor );
   }
 }
 
 void QColorDialogSlots::currentColorChanged( const QColor & color )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentColorChanged(QColor)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QCOLORDIALOG" );
-    PHB_ITEM pcolor = Qt4xHb::Signals_return_object( ( void * ) &color, "QCOLOR" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QCOLORDIALOG" );
+    PHB_ITEM pColor = Qt4xHb::Signals_return_object( ( void * ) &color, "QCOLOR" );
 
-    hb_vmEvalBlockV( cb, 2, psender, pcolor );
+    hb_vmEvalBlockV( cb, 2, pSender, pColor );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pcolor );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pColor );
   }
 }
 
 void QColorDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QColorDialog * obj = static_cast< QColorDialog * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QColorDialog * obj = qobject_cast< QColorDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

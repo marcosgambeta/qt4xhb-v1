@@ -22,63 +22,63 @@ QTabBarSlots::~QTabBarSlots()
 
 void QTabBarSlots::currentChanged( int index )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTABBAR" );
-    PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTABBAR" );
+    PHB_ITEM pIndex = hb_itemPutNI( NULL, index );
 
-    hb_vmEvalBlockV( cb, 2, psender, pindex );
+    hb_vmEvalBlockV( cb, 2, pSender, pIndex );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pindex );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pIndex );
   }
 }
 
 void QTabBarSlots::tabCloseRequested( int index )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "tabCloseRequested(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTABBAR" );
-    PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTABBAR" );
+    PHB_ITEM pIndex = hb_itemPutNI( NULL, index );
 
-    hb_vmEvalBlockV( cb, 2, psender, pindex );
+    hb_vmEvalBlockV( cb, 2, pSender, pIndex );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pindex );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pIndex );
   }
 }
 
 void QTabBarSlots::tabMoved( int from, int to )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "tabMoved(int,int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTABBAR" );
-    PHB_ITEM pfrom = hb_itemPutNI( NULL, from );
-    PHB_ITEM pto = hb_itemPutNI( NULL, to );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTABBAR" );
+    PHB_ITEM pFrom = hb_itemPutNI( NULL, from );
+    PHB_ITEM pTo = hb_itemPutNI( NULL, to );
 
-    hb_vmEvalBlockV( cb, 3, psender, pfrom, pto );
+    hb_vmEvalBlockV( cb, 3, pSender, pFrom, pTo );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pfrom );
-    hb_itemRelease( pto );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pFrom );
+    hb_itemRelease( pTo );
   }
 }
 
 void QTabBarSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTabBar * obj = static_cast< QTabBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTabBar * obj = qobject_cast< QTabBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

@@ -22,23 +22,23 @@ QGraphicsWidgetSlots::~QGraphicsWidgetSlots()
 
 void QGraphicsWidgetSlots::geometryChanged()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "geometryChanged()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QGRAPHICSWIDGET" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QGRAPHICSWIDGET" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QGraphicsWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsWidget * obj = static_cast< QGraphicsWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsWidget * obj = qobject_cast< QGraphicsWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

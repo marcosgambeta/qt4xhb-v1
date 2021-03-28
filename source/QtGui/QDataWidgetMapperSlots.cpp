@@ -22,25 +22,25 @@ QDataWidgetMapperSlots::~QDataWidgetMapperSlots()
 
 void QDataWidgetMapperSlots::currentIndexChanged( int index )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentIndexChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDATAWIDGETMAPPER" );
-    PHB_ITEM pindex = hb_itemPutNI( NULL, index );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDATAWIDGETMAPPER" );
+    PHB_ITEM pIndex = hb_itemPutNI( NULL, index );
 
-    hb_vmEvalBlockV( cb, 2, psender, pindex );
+    hb_vmEvalBlockV( cb, 2, pSender, pIndex );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pindex );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pIndex );
   }
 }
 
 void QDataWidgetMapperSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDataWidgetMapper * obj = static_cast< QDataWidgetMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

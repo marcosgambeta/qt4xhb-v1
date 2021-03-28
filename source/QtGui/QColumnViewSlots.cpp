@@ -22,25 +22,25 @@ QColumnViewSlots::~QColumnViewSlots()
 
 void QColumnViewSlots::updatePreviewWidget( const QModelIndex & index )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "updatePreviewWidget(QModelIndex)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QCOLUMNVIEW" );
-    PHB_ITEM pindex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QCOLUMNVIEW" );
+    PHB_ITEM pIndex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX" );
 
-    hb_vmEvalBlockV( cb, 2, psender, pindex );
+    hb_vmEvalBlockV( cb, 2, pSender, pIndex );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pindex );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pIndex );
   }
 }
 
 void QColumnViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QColumnView * obj = static_cast< QColumnView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QColumnView * obj = qobject_cast< QColumnView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
