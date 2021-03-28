@@ -22,73 +22,73 @@ QHelpSearchEngineSlots::~QHelpSearchEngineSlots()
 
 void QHelpSearchEngineSlots::indexingFinished()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "indexingFinished()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QHELPSEARCHENGINE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QHELPSEARCHENGINE" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QHelpSearchEngineSlots::indexingStarted()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "indexingStarted()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QHELPSEARCHENGINE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QHELPSEARCHENGINE" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QHelpSearchEngineSlots::searchingFinished( int hits )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "searchingFinished(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QHELPSEARCHENGINE" );
-    PHB_ITEM phits = hb_itemPutNI( NULL, hits );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QHELPSEARCHENGINE" );
+    PHB_ITEM pHits = hb_itemPutNI( NULL, hits );
 
-    hb_vmEvalBlockV( cb, 2, psender, phits );
+    hb_vmEvalBlockV( cb, 2, pSender, pHits );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( phits );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pHits );
   }
 }
 
 void QHelpSearchEngineSlots::searchingStarted()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "searchingStarted()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QHELPSEARCHENGINE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QHELPSEARCHENGINE" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QHelpSearchEngineSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpSearchEngine * obj = static_cast< QHelpSearchEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QHelpSearchEngine * obj = qobject_cast< QHelpSearchEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

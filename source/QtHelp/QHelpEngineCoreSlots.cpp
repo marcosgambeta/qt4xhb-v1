@@ -22,75 +22,75 @@ QHelpEngineCoreSlots::~QHelpEngineCoreSlots()
 
 void QHelpEngineCoreSlots::currentFilterChanged( const QString & newFilter )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentFilterChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QHELPENGINECORE" );
-    PHB_ITEM pnewFilter = hb_itemPutC( NULL, QSTRINGTOSTRING( newFilter ) );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QHELPENGINECORE" );
+    PHB_ITEM pNewFilter = hb_itemPutC( NULL, QSTRINGTOSTRING( newFilter ) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pnewFilter );
+    hb_vmEvalBlockV( cb, 2, pSender, pNewFilter );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pnewFilter );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pNewFilter );
   }
 }
 
 void QHelpEngineCoreSlots::setupFinished()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "setupFinished()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QHELPENGINECORE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QHELPENGINECORE" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QHelpEngineCoreSlots::setupStarted()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "setupStarted()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QHELPENGINECORE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QHELPENGINECORE" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QHelpEngineCoreSlots::warning( const QString & msg )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "warning(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QHELPENGINECORE" );
-    PHB_ITEM pmsg = hb_itemPutC( NULL, QSTRINGTOSTRING( msg ) );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QHELPENGINECORE" );
+    PHB_ITEM pMsg = hb_itemPutC( NULL, QSTRINGTOSTRING( msg ) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pmsg );
+    hb_vmEvalBlockV( cb, 2, pSender, pMsg );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pmsg );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pMsg );
   }
 }
 
 void QHelpEngineCoreSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpEngineCore * obj = static_cast< QHelpEngineCore * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QHelpEngineCore * obj = qobject_cast< QHelpEngineCore * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

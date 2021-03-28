@@ -22,27 +22,27 @@ QHelpIndexWidgetSlots::~QHelpIndexWidgetSlots()
 
 void QHelpIndexWidgetSlots::linkActivated( const QUrl & link, const QString & keyword )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "linkActivated(QUrl,QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QHELPINDEXWIDGET" );
-    PHB_ITEM plink = Qt4xHb::Signals_return_object( ( void * ) &link, "QURL" );
-    PHB_ITEM pkeyword = hb_itemPutC( NULL, QSTRINGTOSTRING( keyword ) );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QHELPINDEXWIDGET" );
+    PHB_ITEM pLink = Qt4xHb::Signals_return_object( ( void * ) &link, "QURL" );
+    PHB_ITEM pKeyword = hb_itemPutC( NULL, QSTRINGTOSTRING( keyword ) );
 
-    hb_vmEvalBlockV( cb, 3, psender, plink, pkeyword );
+    hb_vmEvalBlockV( cb, 3, pSender, pLink, pKeyword );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( plink );
-    hb_itemRelease( pkeyword );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pLink );
+    hb_itemRelease( pKeyword );
   }
 }
 
 void QHelpIndexWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpIndexWidget * obj = static_cast< QHelpIndexWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QHelpIndexWidget * obj = qobject_cast< QHelpIndexWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

@@ -22,25 +22,25 @@ QHelpContentWidgetSlots::~QHelpContentWidgetSlots()
 
 void QHelpContentWidgetSlots::linkActivated( const QUrl & link )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "linkActivated(QUrl)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QHELPCONTENTWIDGET" );
-    PHB_ITEM plink = Qt4xHb::Signals_return_object( ( void * ) &link, "QURL" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QHELPCONTENTWIDGET" );
+    PHB_ITEM pLink = Qt4xHb::Signals_return_object( ( void * ) &link, "QURL" );
 
-    hb_vmEvalBlockV( cb, 2, psender, plink );
+    hb_vmEvalBlockV( cb, 2, pSender, pLink );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( plink );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pLink );
   }
 }
 
 void QHelpContentWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpContentWidget * obj = static_cast< QHelpContentWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QHelpContentWidget * obj = qobject_cast< QHelpContentWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

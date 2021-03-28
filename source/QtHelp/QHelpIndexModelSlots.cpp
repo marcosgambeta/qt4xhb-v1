@@ -22,39 +22,39 @@ QHelpIndexModelSlots::~QHelpIndexModelSlots()
 
 void QHelpIndexModelSlots::indexCreated()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "indexCreated()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QHELPINDEXMODEL" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QHELPINDEXMODEL" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QHelpIndexModelSlots::indexCreationStarted()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "indexCreationStarted()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QHELPINDEXMODEL" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QHELPINDEXMODEL" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QHelpIndexModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpIndexModel * obj = static_cast< QHelpIndexModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QHelpIndexModel * obj = qobject_cast< QHelpIndexModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

@@ -22,25 +22,25 @@ QHelpSearchResultWidgetSlots::~QHelpSearchResultWidgetSlots()
 
 void QHelpSearchResultWidgetSlots::requestShowLink( const QUrl & link )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "requestShowLink(QUrl)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QHELPSEARCHRESULTWIDGET" );
-    PHB_ITEM plink = Qt4xHb::Signals_return_object( ( void * ) &link, "QURL" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QHELPSEARCHRESULTWIDGET" );
+    PHB_ITEM pLink = Qt4xHb::Signals_return_object( ( void * ) &link, "QURL" );
 
-    hb_vmEvalBlockV( cb, 2, psender, plink );
+    hb_vmEvalBlockV( cb, 2, pSender, pLink );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( plink );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pLink );
   }
 }
 
 void QHelpSearchResultWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpSearchResultWidget * obj = static_cast< QHelpSearchResultWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QHelpSearchResultWidget * obj = qobject_cast< QHelpSearchResultWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

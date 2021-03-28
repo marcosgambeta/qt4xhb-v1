@@ -22,23 +22,23 @@ QHelpSearchQueryWidgetSlots::~QHelpSearchQueryWidgetSlots()
 
 void QHelpSearchQueryWidgetSlots::search()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "search()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QHELPSEARCHQUERYWIDGET" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QHELPSEARCHQUERYWIDGET" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QHelpSearchQueryWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpSearchQueryWidget * obj = static_cast< QHelpSearchQueryWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QHelpSearchQueryWidget * obj = qobject_cast< QHelpSearchQueryWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
