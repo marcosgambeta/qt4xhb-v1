@@ -22,39 +22,39 @@ QThreadSlots::~QThreadSlots()
 
 void QThreadSlots::finished()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "finished()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTHREAD" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTHREAD" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QThreadSlots::started()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "started()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTHREAD" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTHREAD" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QThreadSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QThread * obj = static_cast< QThread * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QThread * obj = qobject_cast< QThread * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

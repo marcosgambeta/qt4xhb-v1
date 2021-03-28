@@ -22,79 +22,79 @@ QAbstractAnimationSlots::~QAbstractAnimationSlots()
 
 void QAbstractAnimationSlots::currentLoopChanged( int currentLoop )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentLoopChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTANIMATION" );
-    PHB_ITEM pcurrentLoop = hb_itemPutNI( NULL, currentLoop );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTANIMATION" );
+    PHB_ITEM pCurrentLoop = hb_itemPutNI( NULL, currentLoop );
 
-    hb_vmEvalBlockV( cb, 2, psender, pcurrentLoop );
+    hb_vmEvalBlockV( cb, 2, pSender, pCurrentLoop );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pcurrentLoop );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pCurrentLoop );
   }
 }
 
 void QAbstractAnimationSlots::directionChanged( QAbstractAnimation::Direction newDirection )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "directionChanged(QAbstractAnimation::Direction)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTANIMATION" );
-    PHB_ITEM pnewDirection = hb_itemPutNI( NULL, ( int ) newDirection );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTANIMATION" );
+    PHB_ITEM pNewDirection = hb_itemPutNI( NULL, static_cast< int >( newDirection ) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pnewDirection );
+    hb_vmEvalBlockV( cb, 2, pSender, pNewDirection );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pnewDirection );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pNewDirection );
   }
 }
 
 void QAbstractAnimationSlots::finished()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "finished()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTANIMATION" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTANIMATION" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QAbstractAnimationSlots::stateChanged( QAbstractAnimation::State newState, QAbstractAnimation::State oldState )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QABSTRACTANIMATION" );
-    PHB_ITEM pnewState = hb_itemPutNI( NULL, ( int ) newState );
-    PHB_ITEM poldState = hb_itemPutNI( NULL, ( int ) oldState );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTANIMATION" );
+    PHB_ITEM pNewState = hb_itemPutNI( NULL, static_cast< int >( newState ) );
+    PHB_ITEM pOldState = hb_itemPutNI( NULL, static_cast< int >( oldState ) );
 
-    hb_vmEvalBlockV( cb, 3, psender, pnewState, poldState );
+    hb_vmEvalBlockV( cb, 3, pSender, pNewState, pOldState );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pnewState );
-    hb_itemRelease( poldState );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pNewState );
+    hb_itemRelease( pOldState );
   }
 }
 
 void QAbstractAnimationSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractAnimation * obj = static_cast< QAbstractAnimation * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractAnimation * obj = qobject_cast< QAbstractAnimation * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

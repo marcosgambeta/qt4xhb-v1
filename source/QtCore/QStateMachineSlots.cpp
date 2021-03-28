@@ -22,39 +22,39 @@ QStateMachineSlots::~QStateMachineSlots()
 
 void QStateMachineSlots::started()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "started()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSTATEMACHINE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSTATEMACHINE" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QStateMachineSlots::stopped()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "stopped()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSTATEMACHINE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSTATEMACHINE" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QStateMachineSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QStateMachine * obj = static_cast< QStateMachine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStateMachine * obj = qobject_cast< QStateMachine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

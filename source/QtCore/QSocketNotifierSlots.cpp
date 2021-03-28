@@ -22,25 +22,25 @@ QSocketNotifierSlots::~QSocketNotifierSlots()
 
 void QSocketNotifierSlots::activated( int socket )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activated(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSOCKETNOTIFIER" );
-    PHB_ITEM psocket = hb_itemPutNI( NULL, socket );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSOCKETNOTIFIER" );
+    PHB_ITEM pSocket = hb_itemPutNI( NULL, socket );
 
-    hb_vmEvalBlockV( cb, 2, psender, psocket );
+    hb_vmEvalBlockV( cb, 2, pSender, pSocket );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( psocket );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pSocket );
   }
 }
 
 void QSocketNotifierSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSocketNotifier * obj = static_cast< QSocketNotifier * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSocketNotifier * obj = qobject_cast< QSocketNotifier * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

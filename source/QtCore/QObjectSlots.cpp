@@ -22,26 +22,26 @@ QObjectSlots::~QObjectSlots()
 
 void QObjectSlots::destroyed( QObject * obj )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "destroyed(QObject*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QOBJECT" );
-    PHB_ITEM pobj = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( obj ), "QOBJECT" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QOBJECT" );
+    PHB_ITEM pObj = Qt4xHb::Signals_return_qobject( obj, "QOBJECT" );
 
-    hb_vmEvalBlockV( cb, 2, psender, pobj );
+    hb_vmEvalBlockV( cb, 2, pSender, pObj );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pobj );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pObj );
     Qt4xHb::Signals_disconnect_signal( object, "destroyed(QObject*)" );
   }
 }
 
 void QObjectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QObject * obj = static_cast< QObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

@@ -22,111 +22,111 @@ QProcessSlots::~QProcessSlots()
 
 void QProcessSlots::error( QProcess::ProcessError error )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "error(QProcess::ProcessError)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QPROCESS" );
-    PHB_ITEM perror = hb_itemPutNI( NULL, ( int ) error );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QPROCESS" );
+    PHB_ITEM pError = hb_itemPutNI( NULL, static_cast< int >( error ) );
 
-    hb_vmEvalBlockV( cb, 2, psender, perror );
+    hb_vmEvalBlockV( cb, 2, pSender, pError );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( perror );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pError );
   }
 }
 
 void QProcessSlots::finished( int exitCode, QProcess::ExitStatus exitStatus )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "finished(int,QProcess::ExitStatus)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QPROCESS" );
-    PHB_ITEM pexitCode = hb_itemPutNI( NULL, exitCode );
-    PHB_ITEM pexitStatus = hb_itemPutNI( NULL, ( int ) exitStatus );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QPROCESS" );
+    PHB_ITEM pExitCode = hb_itemPutNI( NULL, exitCode );
+    PHB_ITEM pExitStatus = hb_itemPutNI( NULL, static_cast< int >( exitStatus ) );
 
-    hb_vmEvalBlockV( cb, 3, psender, pexitCode, pexitStatus );
+    hb_vmEvalBlockV( cb, 3, pSender, pExitCode, pExitStatus );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pexitCode );
-    hb_itemRelease( pexitStatus );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pExitCode );
+    hb_itemRelease( pExitStatus );
   }
 }
 
 void QProcessSlots::readyReadStandardError()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "readyReadStandardError()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QPROCESS" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QPROCESS" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QProcessSlots::readyReadStandardOutput()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "readyReadStandardOutput()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QPROCESS" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QPROCESS" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QProcessSlots::started()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "started()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QPROCESS" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QPROCESS" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QProcessSlots::stateChanged( QProcess::ProcessState newState )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "stateChanged(QProcess::ProcessState)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QPROCESS" );
-    PHB_ITEM pnewState = hb_itemPutNI( NULL, ( int ) newState );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QPROCESS" );
+    PHB_ITEM pNewState = hb_itemPutNI( NULL, static_cast< int >( newState ) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pnewState );
+    hb_vmEvalBlockV( cb, 2, pSender, pNewState );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pnewState );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pNewState );
   }
 }
 
 void QProcessSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QProcess * obj = static_cast< QProcess * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QProcess * obj = qobject_cast< QProcess * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

@@ -22,77 +22,77 @@ QTimeLineSlots::~QTimeLineSlots()
 
 void QTimeLineSlots::finished()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "finished()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTIMELINE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTIMELINE" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QTimeLineSlots::frameChanged( int frame )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "frameChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTIMELINE" );
-    PHB_ITEM pframe = hb_itemPutNI( NULL, frame );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTIMELINE" );
+    PHB_ITEM pFrame = hb_itemPutNI( NULL, frame );
 
-    hb_vmEvalBlockV( cb, 2, psender, pframe );
+    hb_vmEvalBlockV( cb, 2, pSender, pFrame );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pframe );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pFrame );
   }
 }
 
 void QTimeLineSlots::stateChanged( QTimeLine::State newState )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "stateChanged(QTimeLine::State)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTIMELINE" );
-    PHB_ITEM pnewState = hb_itemPutNI( NULL, ( int ) newState );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTIMELINE" );
+    PHB_ITEM pNewState = hb_itemPutNI( NULL, static_cast< int >( newState ) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pnewState );
+    hb_vmEvalBlockV( cb, 2, pSender, pNewState );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pnewState );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pNewState );
   }
 }
 
 void QTimeLineSlots::valueChanged( qreal value )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "valueChanged(qreal)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTIMELINE" );
-    PHB_ITEM pvalue = hb_itemPutND( NULL, value );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTIMELINE" );
+    PHB_ITEM pValue = hb_itemPutND( NULL, value );
 
-    hb_vmEvalBlockV( cb, 2, psender, pvalue );
+    hb_vmEvalBlockV( cb, 2, pSender, pValue );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pvalue );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pValue );
   }
 }
 
 void QTimeLineSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTimeLine * obj = static_cast< QTimeLine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTimeLine * obj = qobject_cast< QTimeLine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

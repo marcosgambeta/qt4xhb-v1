@@ -22,79 +22,79 @@ QSignalMapperSlots::~QSignalMapperSlots()
 
 void QSignalMapperSlots::mapped( int i )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "mapped(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSIGNALMAPPER" );
-    PHB_ITEM pi = hb_itemPutNI( NULL, i );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSIGNALMAPPER" );
+    PHB_ITEM pI = hb_itemPutNI( NULL, i );
 
-    hb_vmEvalBlockV( cb, 2, psender, pi );
+    hb_vmEvalBlockV( cb, 2, pSender, pI );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pi );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pI );
   }
 }
 
 void QSignalMapperSlots::mapped( const QString & s )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "mapped(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSIGNALMAPPER" );
-    PHB_ITEM ps = hb_itemPutC( NULL, QSTRINGTOSTRING( s ) );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSIGNALMAPPER" );
+    PHB_ITEM pS = hb_itemPutC( NULL, QSTRINGTOSTRING( s ) );
 
-    hb_vmEvalBlockV( cb, 2, psender, ps );
+    hb_vmEvalBlockV( cb, 2, pSender, pS );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( ps );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pS );
   }
 }
 
 void QSignalMapperSlots::mapped( QWidget * w )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "mapped(QWidget*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSIGNALMAPPER" );
-    PHB_ITEM pw = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( w ), "QWIDGET" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSIGNALMAPPER" );
+    PHB_ITEM pW = Qt4xHb::Signals_return_qobject( w, "QWIDGET" );
 
-    hb_vmEvalBlockV( cb, 2, psender, pw );
+    hb_vmEvalBlockV( cb, 2, pSender, pW );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pw );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pW );
   }
 }
 
 void QSignalMapperSlots::mapped( QObject * o )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "mapped(QObject*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSIGNALMAPPER" );
-    PHB_ITEM po = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( o ), "QOBJECT" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSIGNALMAPPER" );
+    PHB_ITEM pO = Qt4xHb::Signals_return_qobject( o, "QOBJECT" );
 
-    hb_vmEvalBlockV( cb, 2, psender, po );
+    hb_vmEvalBlockV( cb, 2, pSender, pO );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( po );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pO );
   }
 }
 
 void QSignalMapperSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSignalMapper * obj = static_cast< QSignalMapper * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSignalMapper * obj = qobject_cast< QSignalMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

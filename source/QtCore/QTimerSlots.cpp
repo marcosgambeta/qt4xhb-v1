@@ -22,23 +22,23 @@ QTimerSlots::~QTimerSlots()
 
 void QTimerSlots::timeout()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "timeout()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QTIMER" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTIMER" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QTimerSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTimer * obj = static_cast< QTimer * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTimer * obj = qobject_cast< QTimer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

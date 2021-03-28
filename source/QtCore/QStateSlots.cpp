@@ -22,39 +22,39 @@ QStateSlots::~QStateSlots()
 
 void QStateSlots::finished()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "finished()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSTATE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSTATE" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QStateSlots::propertiesAssigned()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "propertiesAssigned()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSTATE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSTATE" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QStateSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QState * obj = static_cast< QState * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QState * obj = qobject_cast< QState * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

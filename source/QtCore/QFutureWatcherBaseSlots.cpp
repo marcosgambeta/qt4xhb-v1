@@ -22,181 +22,181 @@ QFutureWatcherBaseSlots::~QFutureWatcherBaseSlots()
 
 void QFutureWatcherBaseSlots::started()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "started()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QFUTUREWATCHERBASE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFUTUREWATCHERBASE" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QFutureWatcherBaseSlots::finished()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "finished()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QFUTUREWATCHERBASE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFUTUREWATCHERBASE" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QFutureWatcherBaseSlots::canceled()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "canceled()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QFUTUREWATCHERBASE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFUTUREWATCHERBASE" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QFutureWatcherBaseSlots::paused()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "paused()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QFUTUREWATCHERBASE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFUTUREWATCHERBASE" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QFutureWatcherBaseSlots::resumed()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "resumed()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QFUTUREWATCHERBASE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFUTUREWATCHERBASE" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QFutureWatcherBaseSlots::resultReadyAt( int resultIndex )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "resultReadyAt(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QFUTUREWATCHERBASE" );
-    PHB_ITEM presultIndex = hb_itemPutNI( NULL, resultIndex );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFUTUREWATCHERBASE" );
+    PHB_ITEM pResultIndex = hb_itemPutNI( NULL, resultIndex );
 
-    hb_vmEvalBlockV( cb, 2, psender, presultIndex );
+    hb_vmEvalBlockV( cb, 2, pSender, pResultIndex );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( presultIndex );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pResultIndex );
   }
 }
 
 void QFutureWatcherBaseSlots::resultsReadyAt( int beginIndex, int endIndex )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "resultsReadyAt(int,int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QFUTUREWATCHERBASE" );
-    PHB_ITEM pbeginIndex = hb_itemPutNI( NULL, beginIndex );
-    PHB_ITEM pendIndex = hb_itemPutNI( NULL, endIndex );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFUTUREWATCHERBASE" );
+    PHB_ITEM pBeginIndex = hb_itemPutNI( NULL, beginIndex );
+    PHB_ITEM pEndIndex = hb_itemPutNI( NULL, endIndex );
 
-    hb_vmEvalBlockV( cb, 3, psender, pbeginIndex, pendIndex );
+    hb_vmEvalBlockV( cb, 3, pSender, pBeginIndex, pEndIndex );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pbeginIndex );
-    hb_itemRelease( pendIndex );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pBeginIndex );
+    hb_itemRelease( pEndIndex );
   }
 }
 
 void QFutureWatcherBaseSlots::progressRangeChanged( int minimum, int maximum )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "progressRangeChanged(int,int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QFUTUREWATCHERBASE" );
-    PHB_ITEM pminimum = hb_itemPutNI( NULL, minimum );
-    PHB_ITEM pmaximum = hb_itemPutNI( NULL, maximum );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFUTUREWATCHERBASE" );
+    PHB_ITEM pMinimum = hb_itemPutNI( NULL, minimum );
+    PHB_ITEM pMaximum = hb_itemPutNI( NULL, maximum );
 
-    hb_vmEvalBlockV( cb, 3, psender, pminimum, pmaximum );
+    hb_vmEvalBlockV( cb, 3, pSender, pMinimum, pMaximum );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pminimum );
-    hb_itemRelease( pmaximum );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pMinimum );
+    hb_itemRelease( pMaximum );
   }
 }
 
 void QFutureWatcherBaseSlots::progressValueChanged( int progressValue )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "progressValueChanged(int)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QFUTUREWATCHERBASE" );
-    PHB_ITEM pprogressValue = hb_itemPutNI( NULL, progressValue );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFUTUREWATCHERBASE" );
+    PHB_ITEM pProgressValue = hb_itemPutNI( NULL, progressValue );
 
-    hb_vmEvalBlockV( cb, 2, psender, pprogressValue );
+    hb_vmEvalBlockV( cb, 2, pSender, pProgressValue );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pprogressValue );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pProgressValue );
   }
 }
 
 void QFutureWatcherBaseSlots::progressTextChanged( const QString & progressText )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "progressTextChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QFUTUREWATCHERBASE" );
-    PHB_ITEM pprogressText = hb_itemPutC( NULL, QSTRINGTOSTRING( progressText ) );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFUTUREWATCHERBASE" );
+    PHB_ITEM pProgressText = hb_itemPutC( NULL, QSTRINGTOSTRING( progressText ) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pprogressText );
+    hb_vmEvalBlockV( cb, 2, pSender, pProgressText );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pprogressText );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pProgressText );
   }
 }
 
 void QFutureWatcherBaseSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QFutureWatcherBase * obj = static_cast< QFutureWatcherBase * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFutureWatcherBase * obj = qobject_cast< QFutureWatcherBase * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

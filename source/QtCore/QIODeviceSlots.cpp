@@ -22,73 +22,73 @@ QIODeviceSlots::~QIODeviceSlots()
 
 void QIODeviceSlots::aboutToClose()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "aboutToClose()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QIODEVICE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QIODEVICE" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QIODeviceSlots::bytesWritten( qint64 bytes )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "bytesWritten(qint64)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QIODEVICE" );
-    PHB_ITEM pbytes = hb_itemPutNLL( NULL, bytes );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QIODEVICE" );
+    PHB_ITEM pBytes = hb_itemPutNLL( NULL, bytes );
 
-    hb_vmEvalBlockV( cb, 2, psender, pbytes );
+    hb_vmEvalBlockV( cb, 2, pSender, pBytes );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pbytes );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pBytes );
   }
 }
 
 void QIODeviceSlots::readChannelFinished()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "readChannelFinished()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QIODEVICE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QIODEVICE" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QIODeviceSlots::readyRead()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "readyRead()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QIODEVICE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QIODEVICE" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QIODeviceSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QIODevice * obj = static_cast< QIODevice * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QIODevice * obj = qobject_cast< QIODevice * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
