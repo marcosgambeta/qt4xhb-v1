@@ -22,71 +22,71 @@ QAxObjectSlots::~QAxObjectSlots()
 
 void QAxObjectSlots::exception( int code, const QString & source, const QString & desc, const QString & help )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "exception(int,QString,QString,QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QAXOBJECT" );
-    PHB_ITEM pcode = hb_itemPutNI( NULL, code );
-    PHB_ITEM psource = hb_itemPutC( NULL, QSTRINGTOSTRING( source ) );
-    PHB_ITEM pdesc = hb_itemPutC( NULL, QSTRINGTOSTRING( desc ) );
-    PHB_ITEM phelp = hb_itemPutC( NULL, QSTRINGTOSTRING( help ) );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QAXOBJECT" );
+    PHB_ITEM pCode = hb_itemPutNI( NULL, code );
+    PHB_ITEM pSource = hb_itemPutC( NULL, QSTRINGTOSTRING( source ) );
+    PHB_ITEM pDesc = hb_itemPutC( NULL, QSTRINGTOSTRING( desc ) );
+    PHB_ITEM pHelp = hb_itemPutC( NULL, QSTRINGTOSTRING( help ) );
 
-    hb_vmEvalBlockV( cb, 5, psender, pcode, psource, pdesc, phelp );
+    hb_vmEvalBlockV( cb, 5, pSender, pCode, pSource, pDesc, pHelp );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pcode );
-    hb_itemRelease( psource );
-    hb_itemRelease( pdesc );
-    hb_itemRelease( phelp );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pCode );
+    hb_itemRelease( pSource );
+    hb_itemRelease( pDesc );
+    hb_itemRelease( pHelp );
   }
 }
 
 void QAxObjectSlots::propertyChanged( const QString & name )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "propertyChanged(QString)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QAXOBJECT" );
-    PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING( name ) );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QAXOBJECT" );
+    PHB_ITEM pName = hb_itemPutC( NULL, QSTRINGTOSTRING( name ) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pname );
+    hb_vmEvalBlockV( cb, 2, pSender, pName );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pname );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pName );
   }
 }
 
 void QAxObjectSlots::signal( const QString & name, int argc, void * argv )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "signal(QString,int,void*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QAXOBJECT" );
-    PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING( name ) );
-    PHB_ITEM pargc = hb_itemPutNI( NULL, argc );
-    PHB_ITEM pargv = hb_itemPutPtr( NULL, static_cast< void * >( argv ) );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QAXOBJECT" );
+    PHB_ITEM pName = hb_itemPutC( NULL, QSTRINGTOSTRING( name ) );
+    PHB_ITEM pArgc = hb_itemPutNI( NULL, argc );
+    PHB_ITEM pArgv = hb_itemPutPtr( NULL, static_cast< void * >( argv ) );
 
-    hb_vmEvalBlockV( cb, 4, psender, pname, pargc, pargv );
+    hb_vmEvalBlockV( cb, 4, pSender, pName, pArgc, pArgv );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pname );
-    hb_itemRelease( pargc );
-    hb_itemRelease( pargv );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pName );
+    hb_itemRelease( pArgc );
+    hb_itemRelease( pArgv );
   }
 }
 
 void QAxObjectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAxObject * obj = static_cast< QAxObject * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAxObject * obj = qobject_cast< QAxObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
