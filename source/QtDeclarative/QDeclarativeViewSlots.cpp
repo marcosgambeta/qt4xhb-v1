@@ -22,43 +22,43 @@ QDeclarativeViewSlots::~QDeclarativeViewSlots()
 
 void QDeclarativeViewSlots::sceneResized( QSize size )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "sceneResized(QSize)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDECLARATIVEVIEW" );
-    PHB_ITEM psize = Qt4xHb::Signals_return_object( ( void * ) &size, "QSIZE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDECLARATIVEVIEW" );
+    PHB_ITEM pSize = Qt4xHb::Signals_return_object( ( void * ) &size, "QSIZE" );
 
-    hb_vmEvalBlockV( cb, 2, psender, psize );
+    hb_vmEvalBlockV( cb, 2, pSender, pSize );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( psize );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pSize );
   }
 }
 
 void QDeclarativeViewSlots::statusChanged( QDeclarativeView::Status status )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "statusChanged(QDeclarativeView::Status)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDECLARATIVEVIEW" );
-    PHB_ITEM pstatus = hb_itemPutNI( NULL, ( int ) status );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDECLARATIVEVIEW" );
+    PHB_ITEM pStatus = hb_itemPutNI( NULL, static_cast< int >( status ) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pstatus );
+    hb_vmEvalBlockV( cb, 2, pSender, pStatus );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pstatus );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pStatus );
   }
 }
 
 void QDeclarativeViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDeclarativeView * obj = static_cast< QDeclarativeView * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeView * obj = qobject_cast< QDeclarativeView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

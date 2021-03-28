@@ -22,31 +22,31 @@ QDeclarativeEngineSlots::~QDeclarativeEngineSlots()
 
 void QDeclarativeEngineSlots::quit()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "quit()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDECLARATIVEENGINE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDECLARATIVEENGINE" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warnings )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "warnings(QList<QDeclarativeError>)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDECLARATIVEENGINE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDECLARATIVEENGINE" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
-    PHB_ITEM pwarnings = hb_itemArrayNew( 0 );
+    PHB_ITEM pWarnings = hb_itemArrayNew( 0 );
     if( pDynSym )
     {
       for( int i = 0; i < warnings.count(); i++ )
@@ -59,7 +59,7 @@ void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warning
         PHB_ITEM pTempItem = hb_itemNew( NULL );
         hb_itemPutPtr( pTempItem, static_cast< QDeclarativeError * >( new QDeclarativeError( warnings [i] ) ) );
         hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
-        hb_arrayAddForward( pwarnings, pTempObject );
+        hb_arrayAddForward( pWarnings, pTempObject );
         hb_itemRelease( pTempObject );
         hb_itemRelease( pTempItem );
       }
@@ -69,16 +69,16 @@ void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warning
       hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QDECLARATIVEERROR", HB_ERR_ARGS_BASEPARAMS );
     }
 
-    hb_vmEvalBlockV( cb, 2, psender, pwarnings );
+    hb_vmEvalBlockV( cb, 2, pSender, pWarnings );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pwarnings );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pWarnings );
   }
 }
 
 void QDeclarativeEngineSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDeclarativeEngine * obj = static_cast< QDeclarativeEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDeclarativeEngine * obj = qobject_cast< QDeclarativeEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
