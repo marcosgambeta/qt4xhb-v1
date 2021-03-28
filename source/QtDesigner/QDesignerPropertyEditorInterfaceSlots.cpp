@@ -22,27 +22,27 @@ QDesignerPropertyEditorInterfaceSlots::~QDesignerPropertyEditorInterfaceSlots()
 
 void QDesignerPropertyEditorInterfaceSlots::propertyChanged( const QString & name, const QVariant & value )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "propertyChanged(QString,QVariant)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDESIGNERPROPERTYEDITORINTERFACE" );
-    PHB_ITEM pname = hb_itemPutC( NULL, QSTRINGTOSTRING( name ) );
-    PHB_ITEM pvalue = Qt4xHb::Signals_return_object( ( void * ) &value, "QVARIANT" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDESIGNERPROPERTYEDITORINTERFACE" );
+    PHB_ITEM pName = hb_itemPutC( NULL, QSTRINGTOSTRING( name ) );
+    PHB_ITEM pValue = Qt4xHb::Signals_return_object( ( void * ) &value, "QVARIANT" );
 
-    hb_vmEvalBlockV( cb, 3, psender, pname, pvalue );
+    hb_vmEvalBlockV( cb, 3, pSender, pName, pValue );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pname );
-    hb_itemRelease( pvalue );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pName );
+    hb_itemRelease( pValue );
   }
 }
 
 void QDesignerPropertyEditorInterfaceSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDesignerPropertyEditorInterface * obj = static_cast< QDesignerPropertyEditorInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDesignerPropertyEditorInterface * obj = qobject_cast< QDesignerPropertyEditorInterface * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {

@@ -22,61 +22,61 @@ QDesignerFormWindowManagerInterfaceSlots::~QDesignerFormWindowManagerInterfaceSl
 
 void QDesignerFormWindowManagerInterfaceSlots::activeFormWindowChanged( QDesignerFormWindowInterface * formWindow )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activeFormWindowChanged(QDesignerFormWindowInterface*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
-    PHB_ITEM pformWindow = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( formWindow ), "QDESIGNERFORMWINDOWINTERFACE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
+    PHB_ITEM pFormWindow = Qt4xHb::Signals_return_qobject( formWindow, "QDESIGNERFORMWINDOWINTERFACE" );
 
-    hb_vmEvalBlockV( cb, 2, psender, pformWindow );
+    hb_vmEvalBlockV( cb, 2, pSender, pFormWindow );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pformWindow );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pFormWindow );
   }
 }
 
 void QDesignerFormWindowManagerInterfaceSlots::formWindowAdded( QDesignerFormWindowInterface * formWindow )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "formWindowAdded(QDesignerFormWindowInterface*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
-    PHB_ITEM pformWindow = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( formWindow ), "QDESIGNERFORMWINDOWINTERFACE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
+    PHB_ITEM pFormWindow = Qt4xHb::Signals_return_qobject( formWindow, "QDESIGNERFORMWINDOWINTERFACE" );
 
-    hb_vmEvalBlockV( cb, 2, psender, pformWindow );
+    hb_vmEvalBlockV( cb, 2, pSender, pFormWindow );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pformWindow );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pFormWindow );
   }
 }
 
 void QDesignerFormWindowManagerInterfaceSlots::formWindowRemoved( QDesignerFormWindowInterface * formWindow )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "formWindowRemoved(QDesignerFormWindowInterface*)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
-    PHB_ITEM pformWindow = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( formWindow ), "QDESIGNERFORMWINDOWINTERFACE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
+    PHB_ITEM pFormWindow = Qt4xHb::Signals_return_qobject( formWindow, "QDESIGNERFORMWINDOWINTERFACE" );
 
-    hb_vmEvalBlockV( cb, 2, psender, pformWindow );
+    hb_vmEvalBlockV( cb, 2, pSender, pFormWindow );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pformWindow );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pFormWindow );
   }
 }
 
 void QDesignerFormWindowManagerInterfaceSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDesignerFormWindowManagerInterface * obj = static_cast< QDesignerFormWindowManagerInterface * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDesignerFormWindowManagerInterface * obj = qobject_cast< QDesignerFormWindowManagerInterface * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
