@@ -22,25 +22,25 @@ QScriptEngineSlots::~QScriptEngineSlots()
 
 void QScriptEngineSlots::signalHandlerException( const QScriptValue & exception )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "signalHandlerException(QScriptValue)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QSCRIPTENGINE" );
-    PHB_ITEM pexception = Qt4xHb::Signals_return_object( ( void * ) &exception, "QSCRIPTVALUE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSCRIPTENGINE" );
+    PHB_ITEM pException = Qt4xHb::Signals_return_object( ( void * ) &exception, "QSCRIPTVALUE" );
 
-    hb_vmEvalBlockV( cb, 2, psender, pexception );
+    hb_vmEvalBlockV( cb, 2, pSender, pException );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pexception );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pException );
   }
 }
 
 void QScriptEngineSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QScriptEngine * obj = static_cast< QScriptEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
