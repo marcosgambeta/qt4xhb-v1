@@ -22,41 +22,41 @@ QAudioOutputSlots::~QAudioOutputSlots()
 
 void QAudioOutputSlots::notify()
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "notify()" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QAUDIOOUTPUT" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QAUDIOOUTPUT" );
 
-    hb_vmEvalBlockV( cb, 1, psender );
+    hb_vmEvalBlockV( cb, 1, pSender );
 
-    hb_itemRelease( psender );
+    hb_itemRelease( pSender );
   }
 }
 
 void QAudioOutputSlots::stateChanged( QAudio::State state )
 {
-  QObject * object = qobject_cast<QObject *>( sender() );
+  QObject * object = qobject_cast< QObject * >( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "stateChanged(QAudio::State)" );
 
   if( cb )
   {
-    PHB_ITEM psender = Qt4xHb::Signals_return_qobject( static_cast< QObject * >( object ), "QAUDIOOUTPUT" );
-    PHB_ITEM pstate = hb_itemPutNI( NULL, ( int ) state );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QAUDIOOUTPUT" );
+    PHB_ITEM pState = hb_itemPutNI( NULL, static_cast< int >( state ) );
 
-    hb_vmEvalBlockV( cb, 2, psender, pstate );
+    hb_vmEvalBlockV( cb, 2, pSender, pState );
 
-    hb_itemRelease( psender );
-    hb_itemRelease( pstate );
+    hb_itemRelease( pSender );
+    hb_itemRelease( pState );
   }
 }
 
 void QAudioOutputSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAudioOutput * obj = static_cast< QAudioOutput * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAudioOutput * obj = qobject_cast< QAudioOutput * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
