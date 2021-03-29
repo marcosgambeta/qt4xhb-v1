@@ -27,6 +27,8 @@
 #include "hbapicls.h"
 #endif
 
+#include "qt4xhb_utils.h"
+
 namespace Qt4xHb
 {
   //void Signals_connect_signal( QObject * object, QString signal, PHB_ITEM codeblock );
@@ -46,9 +48,9 @@ class Signals: public QObject
   ~Signals();
 
   private:
-  QVector<QObject*> * m_list1; // armazena ponteiro do objeto
-  QVector<QString> * m_list2;  // armazena assinatura do sinal
-  QVector<PHB_ITEM> * m_list3; // armazena codeblock
+  QVector< QObject * > * m_list1; // armazena ponteiro do objeto
+  QVector< QString > * m_list2;  // armazena assinatura do sinal
+  QVector< PHB_ITEM > * m_list3; // armazena codeblock
   QMutex * m_mutex;
 
   public:

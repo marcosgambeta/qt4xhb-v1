@@ -15,9 +15,9 @@ static Signals *s_signals = NULL;
 */
 Signals::Signals( QObject *parent ) : QObject( parent )
 {
-  m_list1 = new QVector<QObject*>( 1000, NULL ); // armazena ponteiro do objeto
-  m_list2 = new QVector<QString>( 1000, "" );    // armazena assinatura do sinal
-  m_list3 = new QVector<PHB_ITEM>( 1000, NULL ); // armazena codeblock
+  m_list1 = new QVector< QObject * >( 1000, NULL ); // armazena ponteiro do objeto
+  m_list2 = new QVector< QString >( 1000, "" );    // armazena assinatura do sinal
+  m_list3 = new QVector< PHB_ITEM >( 1000, NULL ); // armazena codeblock
   m_mutex = new QMutex();
 }
 
@@ -29,9 +29,9 @@ Signals::~Signals()
   const int listsize = m_list1->size();
   for( int i = 0; i < listsize; ++i )
   {
-    if( m_list1->at(i) )
+    if( m_list1->at( i ) )
     {
-      hb_itemRelease( m_list3->at(i) );
+      hb_itemRelease( m_list3->at( i ) );
     }
   }
 
@@ -81,9 +81,9 @@ void Signals::disconnectSignal( QObject * object, QString signal )
   const int listsize = m_list1->size();
   for( int i = 0; i < listsize; ++i )
   {
-    if( ( m_list1->at(i) == object ) && ( m_list2->at(i) == signal ) )
+    if( ( m_list1->at( i ) == object ) && ( m_list2->at( i) == signal ) )
     {
-      hb_itemRelease( m_list3->at(i) );
+      hb_itemRelease( m_list3->at( i ) );
       m_list1->replace( i, NULL );
       m_list2->replace( i, "" );
       m_list3->replace( i, NULL );
@@ -106,7 +106,7 @@ bool Signals::isSignalConnected( QObject * object, QString signal )
   const int listsize = m_list1->size();
   for( int i = 0; i < listsize; ++i )
   {
-    if( ( m_list1->at(i) == object ) && ( m_list2->at(i) == signal ) )
+    if( ( m_list1->at( i ) == object ) && ( m_list2->at( i ) == signal ) )
     {
       result = true;
       break;
@@ -124,9 +124,9 @@ PHB_ITEM Signals::returnCodeblock( QObject * object, QString signal )
   const int listsize = m_list1->size();
   for( int i = 0; i < listsize; ++i )
   {
-    if( ( m_list1->at(i) == object ) && ( m_list2->at(i) == signal ) )
+    if( ( m_list1->at( i ) == object ) && ( m_list2->at( i ) == signal ) )
     {
-      result = m_list3->at(i);
+      result = m_list3->at( i );
       break;
     }
   }
@@ -143,9 +143,9 @@ void Signals::disconnectAllSignals( QObject * obj, bool children )
     for( int i = 0; i < listsize; ++i )
     {
       // elimina sinais ativos ligados ao objeto (obj)
-      if( ( m_list1->at(i) == obj ) && ( m_list2->at(i) != "destroyed(QObject*)" ) )
+      if( ( m_list1->at( i ) == obj ) && ( m_list2->at( i ) != "destroyed(QObject*)" ) )
       {
-        hb_itemRelease( m_list3->at(i) );
+        hb_itemRelease( m_list3->at( i ) );
         m_list1->replace( i, NULL );
         m_list2->replace( i, "" );
         m_list3->replace( i, NULL );
@@ -155,22 +155,22 @@ void Signals::disconnectAllSignals( QObject * obj, bool children )
   else
   {
     // obtém a lista de filhos, netos, bisnetos, etc...
-    QList<QObject *> objectList = obj->findChildren<QObject *>();
+    QList< QObject * > objectList = obj->findChildren< QObject * >();
     // adiciona o pai na lista
     objectList << obj;
     // percorre toda a lista de objetos
     const int listsize = objectList.size();
     for( int i = 0; i < listsize; ++i )
     {
-      QObject * currentObject = (QObject *) objectList.at(i);
+      QObject * currentObject = objectList.at(i);
       // percorre toda a lista de sinais
       const int listsize2 = m_list1->size();
       for( int ii = 0; ii < listsize2; ++ii )
       {
         // elimina sinais ativos (true) ligados ao objeto list.at(i)
-        if( ( m_list1->at(ii) == currentObject ) && ( m_list2->at(ii) != "destroyed(QObject*)" ) )
+        if( ( m_list1->at( ii ) == currentObject ) && ( m_list2->at( ii ) != "destroyed(QObject*)" ) )
         {
-          hb_itemRelease( m_list3->at(ii) );
+          hb_itemRelease( m_list3->at( ii ) );
           m_list1->replace( ii, NULL );
           m_list2->replace( ii, "" );
           m_list3->replace( ii, NULL );
@@ -182,54 +182,55 @@ void Signals::disconnectAllSignals( QObject * obj, bool children )
 
 bool Signals::connectionDisconnection( QObject * receiver, QString signal, QString slot )
 {
+  QObject * sender = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
   bool result = false;
 
-  m_mutex->lock();
-
-  if( hb_pcount() == 1 )
+  if( sender )
   {
-    QObject * sender = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
+    m_mutex->lock();
 
-    if( !isSignalConnected( sender, signal ) )
+    if( hb_pcount() == 1 )
     {
-      PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
-
-      if( codeblock )
+      if( !isSignalConnected( sender, signal ) )
       {
-        result = sender->connect( sender,
-                                  sender->metaObject()->method(sender->metaObject()->indexOfMethod(QMetaObject::normalizedSignature(signal.toLatin1().constData()))),
-                                  receiver,
-                                  receiver->metaObject()->method(receiver->metaObject()->indexOfMethod(QMetaObject::normalizedSignature(slot.toLatin1().constData())))
-                                );
+        PHB_ITEM codeblock = hb_itemNew( hb_param( 1, HB_IT_BLOCK | HB_IT_SYMBOL ) );
 
-        if( result )
+        if( codeblock )
         {
-          connectSignal( sender, signal, codeblock ); // se conectado, adiciona
-        }
-        else
-        {
-          hb_itemRelease( codeblock );
+          result = sender->connect( sender,
+                                    sender->metaObject()->method( sender->metaObject()->indexOfMethod( QMetaObject::normalizedSignature( signal.toLatin1().constData() ) ) ),
+                                    receiver,
+                                    receiver->metaObject()->method( receiver->metaObject()->indexOfMethod( QMetaObject::normalizedSignature( slot.toLatin1().constData() ) ) )
+                                  );
+
+          if( result )
+          {
+            connectSignal( sender, signal, codeblock ); // se conectado, adiciona
+          }
+          else
+          {
+            hb_itemRelease( codeblock );
+          }
         }
       }
     }
-  }
-  else if( hb_pcount() == 0 )
-  {
-    QObject * sender = (QObject *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
-
-    result = sender->disconnect( sender,
-                                 sender->metaObject()->method(sender->metaObject()->indexOfMethod(QMetaObject::normalizedSignature(signal.toLatin1().constData()))),
-                                 receiver,
-                                 receiver->metaObject()->method(receiver->metaObject()->indexOfMethod(QMetaObject::normalizedSignature(slot.toLatin1().constData())))
-                               );
-
-    if( result )
+    else if( hb_pcount() == 0 )
     {
-      disconnectSignal( sender, signal ); // se desconectado, remove
-    }
-  }
+      result = sender->disconnect( sender,
+                                   sender->metaObject()->method( sender->metaObject()->indexOfMethod( QMetaObject::normalizedSignature( signal.toLatin1().constData() ) ) ),
+                                   receiver,
+                                   receiver->metaObject()->method( receiver->metaObject()->indexOfMethod( QMetaObject::normalizedSignature( slot.toLatin1().constData() ) ) )
+                                 );
 
-  m_mutex->unlock();
+      if( result )
+      {
+        disconnectSignal( sender, signal ); // se desconectado, remove
+      }
+    }
+
+    m_mutex->unlock();
+  }
 
   return result;
 }
@@ -247,7 +248,7 @@ int Signals::active()
   const int listsize = m_list1->size();
   for( int i = 0; i < listsize; ++i )
   {
-    if( m_list1->at(i) )
+    if( m_list1->at( i ) )
     {
       ++count;
     }
@@ -316,7 +317,7 @@ PHB_ITEM Signals_return_object( void * ptr, const char * classname )
     hb_vmDo( 0 );
     hb_itemCopy( pObject, hb_stackReturnItem() );
     PHB_ITEM pItem = hb_itemNew( NULL );
-    hb_itemPutPtr( pItem, (void *) ptr );
+    hb_itemPutPtr( pItem, ptr );
     hb_objSendMsg( pObject, "_POINTER", 1, pItem );
     hb_itemRelease( pItem );
   }
@@ -334,7 +335,7 @@ PHB_ITEM Signals_return_qobject( QObject * ptr, const char * classname )
 
   if( ptr )
   {
-    pDynSym = hb_dynsymFindName( (const char *) ptr->metaObject()->className() );
+    pDynSym = hb_dynsymFindName( ptr->metaObject()->className() );
   }
 
   if( !pDynSym )
@@ -351,7 +352,7 @@ PHB_ITEM Signals_return_qobject( QObject * ptr, const char * classname )
     hb_vmDo( 0 );
     hb_itemCopy( pObject, hb_stackReturnItem() );
     PHB_ITEM pItem = hb_itemNew( NULL );
-    hb_itemPutPtr( pItem, (void *) ptr );
+    hb_itemPutPtr( pItem, ptr );
     hb_objSendMsg( pObject, "_POINTER", 1, pItem );
     hb_itemRelease( pItem );
   }
