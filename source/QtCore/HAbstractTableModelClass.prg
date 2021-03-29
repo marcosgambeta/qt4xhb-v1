@@ -77,9 +77,9 @@ HAbstractTableModel( QObject * parent = 0 )
 */
 HB_FUNC( HABSTRACTTABLEMODEL_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    HAbstractTableModel * obj = new HAbstractTableModel( OPQOBJECT(1,0) );
+    HAbstractTableModel * obj = new HAbstractTableModel( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -125,7 +125,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_SETROWCOUNTCB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setRowCountCB( PBLOCKORSYMBOL(1) );
+      obj->setRowCountCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,7 +151,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_SETCOLUMNCOUNTCB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setColumnCountCB( PBLOCKORSYMBOL(1) );
+      obj->setColumnCountCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -179,7 +179,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_SETDISPLAYROLECB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setDisplayRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setDisplayRoleCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,7 +205,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_SETDECORATIONROLECB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setDecorationRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setDecorationRoleCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -231,7 +231,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_SETEDITROLECB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setEditRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setEditRoleCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -257,7 +257,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_SETTOOLTIPROLECB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setToolTipRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setToolTipRoleCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -283,7 +283,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_SETSTATUSTIPROLECB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setStatusTipRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setStatusTipRoleCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -309,7 +309,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_SETWHATSTHISROLECB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setWhatsThisRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setWhatsThisRoleCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -335,7 +335,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_SETSIZEHINTROLECB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setSizeHintRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setSizeHintRoleCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -361,7 +361,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_SETFONTROLECB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setFontRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setFontRoleCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -387,7 +387,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_SETTEXTALIGNMENTROLECB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setTextAlignmentRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setTextAlignmentRoleCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -413,7 +413,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_SETBACKGROUNDROLECB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setBackgroundRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setBackgroundRoleCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -439,7 +439,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_SETFOREGROUNDROLECB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setForegroundRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setForegroundRoleCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -467,7 +467,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_SETHORIZONTALHEADERDISPLAYROLECB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setHorizontalHeaderDisplayRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setHorizontalHeaderDisplayRoleCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -493,7 +493,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_SETHORIZONTALHEADERDECORATIONROLECB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setHorizontalHeaderDecorationRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setHorizontalHeaderDecorationRoleCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -519,7 +519,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_SETHORIZONTALHEADERFONTROLECB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setHorizontalHeaderFontRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setHorizontalHeaderFontRoleCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -545,7 +545,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_SETHORIZONTALHEADERTEXTALIGNMENTROLECB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setHorizontalHeaderTextAlignmentRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setHorizontalHeaderTextAlignmentRoleCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -571,7 +571,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_SETHORIZONTALHEADERBACKGROUNDROLECB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setHorizontalHeaderBackgroundRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setHorizontalHeaderBackgroundRoleCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -597,7 +597,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_SETHORIZONTALHEADERFOREGROUNDROLECB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setHorizontalHeaderForegroundRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setHorizontalHeaderForegroundRoleCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -626,7 +626,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_SETVERTICALHEADERDISPLAYROLECB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setVerticalHeaderDisplayRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setVerticalHeaderDisplayRoleCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -652,7 +652,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_SETVERTICALHEADERDECORATIONROLECB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setVerticalHeaderDecorationRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setVerticalHeaderDecorationRoleCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -678,7 +678,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_SETVERTICALHEADERFONTROLECB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setVerticalHeaderFontRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setVerticalHeaderFontRoleCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -704,7 +704,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_SETVERTICALHEADERTEXTALIGNMENTROLECB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setVerticalHeaderTextAlignmentRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setVerticalHeaderTextAlignmentRoleCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -730,7 +730,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_SETVERTICALHEADERBACKGROUNDROLECB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setVerticalHeaderBackgroundRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setVerticalHeaderBackgroundRoleCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -756,7 +756,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_SETVERTICALHEADERFOREGROUNDROLECB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setVerticalHeaderForegroundRoleCB( PBLOCKORSYMBOL(1) );
+      obj->setVerticalHeaderForegroundRoleCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

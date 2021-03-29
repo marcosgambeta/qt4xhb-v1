@@ -52,9 +52,9 @@ HAbstractTableModelV2( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && (ISQOBJECT(1)||HB_ISNIL(1)) )
+  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    HAbstractTableModelV2 * obj = new HAbstractTableModelV2( OPQOBJECT(1,0) );
+    HAbstractTableModelV2 * obj = new HAbstractTableModelV2( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETROWCOUNTCB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setRowCountCB( PBLOCKORSYMBOL(1) );
+      obj->setRowCountCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETCOLUMNCOUNTCB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setColumnCountCB( PBLOCKORSYMBOL(1) );
+      obj->setColumnCountCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETDATACB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setDataCB( PBLOCKORSYMBOL(1) );
+      obj->setDataCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETHEADERDATACB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setHeaderDataCB( PBLOCKORSYMBOL(1) );
+      obj->setHeaderDataCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETFLAGSCB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setFlagsCB( PBLOCKORSYMBOL(1) );
+      obj->setFlagsCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_SETSETDATACB )
     if( ISNUMPAR( 1 ) )
     {
 #endif
-      obj->setSetDataCB( PBLOCKORSYMBOL(1) );
+      obj->setSetDataCB( PBLOCKORSYMBOL( 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
