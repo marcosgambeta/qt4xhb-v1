@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -64,33 +64,23 @@ RETURN
 #include <QtDeclarative/QDeclarativeContext>
 #include <QtGui/QGraphicsObject>
 
-/*
-QDeclarativeView( QWidget * parent = 0 )
-*/
-void QDeclarativeView_new1()
-{
-  QDeclarativeView * obj = new QDeclarativeView( OPQWIDGET( 1, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QDeclarativeView( const QUrl & source, QWidget * parent = 0 )
-*/
-void QDeclarativeView_new2()
-{
-  QDeclarativeView * obj = new QDeclarativeView( *PQURL( 1 ), OPQWIDGET( 2, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QDeclarativeView_new1();
+    /*
+    QDeclarativeView( QWidget * parent = 0 )
+    */
+    QDeclarativeView * obj = new QDeclarativeView( OPQWIDGET( 1, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISBETWEEN( 1, 2 ) && ISQURL( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QDeclarativeView_new2();
+    /*
+    QDeclarativeView( const QUrl & source, QWidget * parent = 0 )
+    */
+    QDeclarativeView * obj = new QDeclarativeView( *PQURL( 1 ), OPQWIDGET( 2, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

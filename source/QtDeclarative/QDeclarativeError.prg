@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -58,33 +58,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDeclarativeError()
-*/
-void QDeclarativeError_new1()
-{
-  QDeclarativeError * obj = new QDeclarativeError();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QDeclarativeError( const QDeclarativeError & other )
-*/
-void QDeclarativeError_new2()
-{
-  QDeclarativeError * obj = new QDeclarativeError( *PQDECLARATIVEERROR( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QDECLARATIVEERROR_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QDeclarativeError_new1();
+    /*
+    QDeclarativeError()
+    */
+    QDeclarativeError * obj = new QDeclarativeError();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQDECLARATIVEERROR( 1 ) )
   {
-    QDeclarativeError_new2();
+    /*
+    QDeclarativeError( const QDeclarativeError & other )
+    */
+    QDeclarativeError * obj = new QDeclarativeError( *PQDECLARATIVEERROR( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

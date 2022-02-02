@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -59,33 +59,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDeclarativeListReference()
-*/
-void QDeclarativeListReference_new1()
-{
-  QDeclarativeListReference * obj = new QDeclarativeListReference();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QDeclarativeListReference( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
-*/
-void QDeclarativeListReference_new2()
-{
-  QDeclarativeListReference * obj = new QDeclarativeListReference( PQOBJECT( 1 ), PCONSTCHAR( 2 ), OPQDECLARATIVEENGINE( 3, 0 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QDeclarativeListReference_new1();
+    /*
+    QDeclarativeListReference()
+    */
+    QDeclarativeListReference * obj = new QDeclarativeListReference();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 2, 3 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) && ( ISQDECLARATIVEENGINE( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QDeclarativeListReference_new2();
+    /*
+    QDeclarativeListReference( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
+    */
+    QDeclarativeListReference * obj = new QDeclarativeListReference( PQOBJECT( 1 ), PCONSTCHAR( 2 ), OPQDECLARATIVEENGINE( 3, 0 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
