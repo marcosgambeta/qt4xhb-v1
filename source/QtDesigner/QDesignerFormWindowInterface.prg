@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -926,45 +926,35 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SELECTWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-virtual void setContents( QIODevice * device ) = 0
-*/
-void QDesignerFormWindowInterface_setContents1()
-{
-  QDesignerFormWindowInterface * obj = qobject_cast< QDesignerFormWindowInterface * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->setContents( PQIODEVICE( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-virtual void setContents( const QString & contents ) = 0
-*/
-void QDesignerFormWindowInterface_setContents2()
-{
-  QDesignerFormWindowInterface * obj = qobject_cast< QDesignerFormWindowInterface * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->setContents( PQSTRING( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SETCONTENTS )
 {
   if( ISNUMPAR( 1 ) && ISQIODEVICE( 1 ) )
   {
-    QDesignerFormWindowInterface_setContents1();
+    /*
+    virtual void setContents( QIODevice * device ) = 0
+    */
+    QDesignerFormWindowInterface * obj = qobject_cast< QDesignerFormWindowInterface * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setContents( PQIODEVICE( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QDesignerFormWindowInterface_setContents2();
+    /*
+    virtual void setContents( const QString & contents ) = 0
+    */
+    QDesignerFormWindowInterface * obj = qobject_cast< QDesignerFormWindowInterface * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setContents( PQSTRING( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -1102,35 +1092,25 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_UNMANAGEWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-static QDesignerFormWindowInterface * findFormWindow( QWidget * widget )
-*/
-void QDesignerFormWindowInterface_findFormWindow1()
-{
-
-  QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow( PQWIDGET( 1 ) );
-  Qt4xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
-}
-
-/*
-static QDesignerFormWindowInterface * findFormWindow( QObject * object )
-*/
-void QDesignerFormWindowInterface_findFormWindow2()
-{
-
-  QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow( PQOBJECT( 1 ) );
-  Qt4xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
-}
-
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_FINDFORMWINDOW )
 {
   if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
-    QDesignerFormWindowInterface_findFormWindow1();
+    /*
+    static QDesignerFormWindowInterface * findFormWindow( QWidget * widget )
+    */
+
+    QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow( PQWIDGET( 1 ) );
+    Qt4xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
   }
   else if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
   {
-    QDesignerFormWindowInterface_findFormWindow2();
+    /*
+    static QDesignerFormWindowInterface * findFormWindow( QObject * object )
+    */
+
+    QDesignerFormWindowInterface * ptr = QDesignerFormWindowInterface::findFormWindow( PQOBJECT( 1 ) );
+    Qt4xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
   }
   else
   {
