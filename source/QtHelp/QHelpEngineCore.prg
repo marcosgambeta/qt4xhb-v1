@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -404,41 +404,31 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILES )
   }
 }
 
-/*
-QStringList filterAttributes() const
-*/
-void QHelpEngineCore_filterAttributes1()
-{
-  QHelpEngineCore * obj = qobject_cast< QHelpEngineCore * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    RQSTRINGLIST( obj->filterAttributes() );
-  }
-}
-
-/*
-QStringList filterAttributes( const QString & filterName ) const
-*/
-void QHelpEngineCore_filterAttributes2()
-{
-  QHelpEngineCore * obj = qobject_cast< QHelpEngineCore * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    RQSTRINGLIST( obj->filterAttributes( PQSTRING( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QHelpEngineCore_filterAttributes1();
+    /*
+    QStringList filterAttributes() const
+    */
+    QHelpEngineCore * obj = qobject_cast< QHelpEngineCore * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      RQSTRINGLIST( obj->filterAttributes() );
+    }
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QHelpEngineCore_filterAttributes2();
+    /*
+    QStringList filterAttributes( const QString & filterName ) const
+    */
+    QHelpEngineCore * obj = qobject_cast< QHelpEngineCore * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      RQSTRINGLIST( obj->filterAttributes( PQSTRING( 1 ) ) );
+    }
   }
   else
   {
