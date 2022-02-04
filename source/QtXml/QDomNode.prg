@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -124,33 +124,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDomNode()
-*/
-void QDomNode_new1()
-{
-  QDomNode * obj = new QDomNode();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QDomNode( const QDomNode & n )
-*/
-void QDomNode_new2()
-{
-  QDomNode * obj = new QDomNode( *PQDOMNODE( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QDOMNODE_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QDomNode_new1();
+    /*
+    QDomNode()
+    */
+    QDomNode * obj = new QDomNode();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQDOMNODE( 1 ) )
   {
-    QDomNode_new2();
+    /*
+    QDomNode( const QDomNode & n )
+    */
+    QDomNode * obj = new QDomNode( *PQDOMNODE( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -1302,45 +1292,35 @@ HB_FUNC_STATIC( QDOMNODE_REPLACECHILD )
   }
 }
 
-/*
-void save( QTextStream & str, int indent ) const
-*/
-void QDomNode_save1()
-{
-  QDomNode * obj = static_cast< QDomNode * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->save( *PQTEXTSTREAM( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void save( QTextStream & str, int indent, QDomNode::EncodingPolicy encodingPolicy ) const
-*/
-void QDomNode_save2()
-{
-  QDomNode * obj = static_cast< QDomNode * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->save( *PQTEXTSTREAM( 1 ), PINT( 2 ), ( QDomNode::EncodingPolicy ) hb_parni( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QDOMNODE_SAVE )
 {
   if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) )
   {
-    QDomNode_save1();
+    /*
+    void save( QTextStream & str, int indent ) const
+    */
+    QDomNode * obj = static_cast< QDomNode * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->save( *PQTEXTSTREAM( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 3 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
-    QDomNode_save2();
+    /*
+    void save( QTextStream & str, int indent, QDomNode::EncodingPolicy encodingPolicy ) const
+    */
+    QDomNode * obj = static_cast< QDomNode * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->save( *PQTEXTSTREAM( 1 ), PINT( 2 ), ( QDomNode::EncodingPolicy ) hb_parni( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -55,33 +55,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDomImplementation()
-*/
-void QDomImplementation_new1()
-{
-  QDomImplementation * obj = new QDomImplementation();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QDomImplementation( const QDomImplementation & x )
-*/
-void QDomImplementation_new2()
-{
-  QDomImplementation * obj = new QDomImplementation( *PQDOMIMPLEMENTATION( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QDOMIMPLEMENTATION_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QDomImplementation_new1();
+    /*
+    QDomImplementation()
+    */
+    QDomImplementation * obj = new QDomImplementation();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQDOMIMPLEMENTATION( 1 ) )
   {
-    QDomImplementation_new2();
+    /*
+    QDomImplementation( const QDomImplementation & x )
+    */
+    QDomImplementation * obj = new QDomImplementation( *PQDOMIMPLEMENTATION( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

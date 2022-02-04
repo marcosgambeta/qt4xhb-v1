@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -38,33 +38,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDomDocumentFragment()
-*/
-void QDomDocumentFragment_new1()
-{
-  QDomDocumentFragment * obj = new QDomDocumentFragment();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QDomDocumentFragment( const QDomDocumentFragment & x )
-*/
-void QDomDocumentFragment_new2()
-{
-  QDomDocumentFragment * obj = new QDomDocumentFragment( *PQDOMDOCUMENTFRAGMENT( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QDOMDOCUMENTFRAGMENT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QDomDocumentFragment_new1();
+    /*
+    QDomDocumentFragment()
+    */
+    QDomDocumentFragment * obj = new QDomDocumentFragment();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQDOMDOCUMENTFRAGMENT( 1 ) )
   {
-    QDomDocumentFragment_new2();
+    /*
+    QDomDocumentFragment( const QDomDocumentFragment & x )
+    */
+    QDomDocumentFragment * obj = new QDomDocumentFragment( *PQDOMDOCUMENTFRAGMENT( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

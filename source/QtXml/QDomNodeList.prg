@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -54,33 +54,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDomNodeList()
-*/
-void QDomNodeList_new1()
-{
-  QDomNodeList * obj = new QDomNodeList();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QDomNodeList( const QDomNodeList & n )
-*/
-void QDomNodeList_new2()
-{
-  QDomNodeList * obj = new QDomNodeList( *PQDOMNODELIST( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QDOMNODELIST_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QDomNodeList_new1();
+    /*
+    QDomNodeList()
+    */
+    QDomNodeList * obj = new QDomNodeList();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQDOMNODELIST( 1 ) )
   {
-    QDomNodeList_new2();
+    /*
+    QDomNodeList( const QDomNodeList & n )
+    */
+    QDomNodeList * obj = new QDomNodeList( *PQDOMNODELIST( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
