@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -20,9 +20,9 @@ CLASS QHostAddress
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new
    METHOD new2
    METHOD new8
+   METHOD new
    METHOD delete
    METHOD clear
    METHOD isInSubnet
@@ -59,38 +59,11 @@ RETURN
 #include "qt4xhb_utils.h"
 
 /*
-QHostAddress()
-*/
-void QHostAddress_new1()
-{
-  QHostAddress * obj = new QHostAddress();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
 QHostAddress( quint32 ip4Addr )
 */
 HB_FUNC_STATIC( QHOSTADDRESS_NEW2 )
 {
   QHostAddress * obj = new QHostAddress( PQUINT32( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QHostAddress( const QString & address )
-*/
-void QHostAddress_new6()
-{
-  QHostAddress * obj = new QHostAddress( PQSTRING( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QHostAddress( const QHostAddress & address )
-*/
-void QHostAddress_new7()
-{
-  QHostAddress * obj = new QHostAddress( *PQHOSTADDRESS( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -107,7 +80,11 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QHostAddress_new1();
+    /*
+    QHostAddress()
+    */
+    QHostAddress * obj = new QHostAddress();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
@@ -115,11 +92,19 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW )
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QHostAddress_new6();
+    /*
+    QHostAddress( const QString & address )
+    */
+    QHostAddress * obj = new QHostAddress( PQSTRING( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQHOSTADDRESS( 1 ) )
   {
-    QHostAddress_new7();
+    /*
+    QHostAddress( const QHostAddress & address )
+    */
+    QHostAddress * obj = new QHostAddress( *PQHOSTADDRESS( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
@@ -177,25 +162,24 @@ HB_FUNC_STATIC( QHOSTADDRESS_CLEAR )
 /*
 bool isInSubnet( const QHostAddress & subnet, int netmask ) const
 */
-void QHostAddress_isInSubnet1()
+HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET )
 {
   QHostAddress * obj = static_cast< QHostAddress * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
   if( obj )
   {
-    RBOOL( obj->isInSubnet( *PQHOSTADDRESS( 1 ), PINT( 2 ) ) );
-  }
-}
-
-HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET )
-{
-  if( ISNUMPAR( 2 ) && ISQHOSTADDRESS( 1 ) && HB_ISNUM( 2 ) )
-  {
-    QHostAddress_isInSubnet1();
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR( 2 ) && ISQHOSTADDRESS( 1 ) && HB_ISNUM( 2 ) )
+    {
+#endif
+      RBOOL( obj->isInSubnet( *PQHOSTADDRESS( 1 ), PINT( 2 ) ) );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
   }
 }
 
@@ -271,43 +255,33 @@ HB_FUNC_STATIC( QHOSTADDRESS_SCOPEID )
   }
 }
 
-/*
-void setAddress( quint32 ip4Addr )
-*/
-void QHostAddress_setAddress1()
-{
-  QHostAddress * obj = static_cast< QHostAddress * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setAddress( PQUINT32( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-bool setAddress( const QString & address )
-*/
-void QHostAddress_setAddress4()
-{
-  QHostAddress * obj = static_cast< QHostAddress * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->setAddress( PQSTRING( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS )
 {
   if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QHostAddress_setAddress1();
+    /*
+    void setAddress( quint32 ip4Addr )
+    */
+    QHostAddress * obj = static_cast< QHostAddress * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setAddress( PQUINT32( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QHostAddress_setAddress4();
+    /*
+    bool setAddress( const QString & address )
+    */
+    QHostAddress * obj = static_cast< QHostAddress * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->setAddress( PQSTRING( 1 ) ) );
+    }
   }
   else
   {

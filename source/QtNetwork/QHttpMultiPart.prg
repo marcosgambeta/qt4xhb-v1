@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -45,33 +45,23 @@ RETURN
 #include "qt4xhb_events.h"
 #include "qt4xhb_signals.h"
 
-/*
-QHttpMultiPart( QObject * parent = 0 )
-*/
-void QHttpMultiPart_new1()
-{
-  QHttpMultiPart * obj = new QHttpMultiPart( OPQOBJECT( 1, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QHttpMultiPart( QHttpMultiPart::ContentType contentType, QObject * parent = 0 )
-*/
-void QHttpMultiPart_new2()
-{
-  QHttpMultiPart * obj = new QHttpMultiPart( ( QHttpMultiPart::ContentType ) hb_parni( 1 ), OPQOBJECT( 2, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QHTTPMULTIPART_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QHttpMultiPart_new1();
+    /*
+    QHttpMultiPart( QObject * parent = 0 )
+    */
+    QHttpMultiPart * obj = new QHttpMultiPart( OPQOBJECT( 1, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QHttpMultiPart_new2();
+    /*
+    QHttpMultiPart( QHttpMultiPart::ContentType contentType, QObject * parent = 0 )
+    */
+    QHttpMultiPart * obj = new QHttpMultiPart( ( QHttpMultiPart::ContentType ) hb_parni( 1 ), OPQOBJECT( 2, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

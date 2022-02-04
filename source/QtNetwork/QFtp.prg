@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -475,41 +475,31 @@ HB_FUNC_STATIC( QFTP_MKDIR )
   }
 }
 
-/*
-int put( QIODevice * dev, const QString & file, QFtp::TransferType type = QFtp::Binary )
-*/
-void QFtp_put1()
-{
-  QFtp * obj = qobject_cast< QFtp * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    RINT( obj->put( PQIODEVICE( 1 ), PQSTRING( 2 ), HB_ISNIL( 3 ) ? ( QFtp::TransferType ) QFtp::Binary : ( QFtp::TransferType ) hb_parni( 3 ) ) );
-  }
-}
-
-/*
-int put( const QByteArray & data, const QString & file, QFtp::TransferType type = QFtp::Binary )
-*/
-void QFtp_put2()
-{
-  QFtp * obj = qobject_cast< QFtp * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    RINT( obj->put( *PQBYTEARRAY( 1 ), PQSTRING( 2 ), HB_ISNIL( 3 ) ? ( QFtp::TransferType ) QFtp::Binary : ( QFtp::TransferType ) hb_parni( 3 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QFTP_PUT )
 {
   if( ISBETWEEN( 2, 3 ) && ISQIODEVICE( 1 ) && HB_ISCHAR( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QFtp_put1();
+    /*
+    int put( QIODevice * dev, const QString & file, QFtp::TransferType type = QFtp::Binary )
+    */
+    QFtp * obj = qobject_cast< QFtp * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      RINT( obj->put( PQIODEVICE( 1 ), PQSTRING( 2 ), HB_ISNIL( 3 ) ? ( QFtp::TransferType ) QFtp::Binary : ( QFtp::TransferType ) hb_parni( 3 ) ) );
+    }
   }
   else if( ISBETWEEN( 2, 3 ) && ISQBYTEARRAY( 1 ) && HB_ISCHAR( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QFtp_put2();
+    /*
+    int put( const QByteArray & data, const QString & file, QFtp::TransferType type = QFtp::Binary )
+    */
+    QFtp * obj = qobject_cast< QFtp * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      RINT( obj->put( *PQBYTEARRAY( 1 ), PQSTRING( 2 ), HB_ISNIL( 3 ) ? ( QFtp::TransferType ) QFtp::Binary : ( QFtp::TransferType ) hb_parni( 3 ) ) );
+    }
   }
   else
   {

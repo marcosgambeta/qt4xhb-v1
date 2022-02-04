@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -69,46 +69,31 @@ RETURN
 #include <QtCore/QDateTime>
 #include <QtNetwork/QSslKey>
 
-/*
-QSslCertificate( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
-*/
-void QSslCertificate_new1()
-{
-  QSslCertificate * obj = new QSslCertificate( PQIODEVICE( 1 ), HB_ISNIL( 2 ) ? ( QSsl::EncodingFormat ) QSsl::Pem : ( QSsl::EncodingFormat ) hb_parni( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QSslCertificate( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
-*/
-void QSslCertificate_new2()
-{
-  QSslCertificate * obj = new QSslCertificate( HB_ISNIL( 1 ) ? QByteArray() : *static_cast< QByteArray * >( Qt4xHb::itemGetPtr( 1 ) ), HB_ISNIL( 2 ) ? ( QSsl::EncodingFormat ) QSsl::Pem : ( QSsl::EncodingFormat ) hb_parni( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QSslCertificate( const QSslCertificate & other )
-*/
-void QSslCertificate_new3()
-{
-  QSslCertificate * obj = new QSslCertificate( *PQSSLCERTIFICATE( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSSLCERTIFICATE_NEW )
 {
   if( ISBETWEEN( 1, 2 ) && ISQIODEVICE( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QSslCertificate_new1();
+    /*
+    QSslCertificate( QIODevice * device, QSsl::EncodingFormat format = QSsl::Pem )
+    */
+    QSslCertificate * obj = new QSslCertificate( PQIODEVICE( 1 ), HB_ISNIL( 2 ) ? ( QSsl::EncodingFormat ) QSsl::Pem : ( QSsl::EncodingFormat ) hb_parni( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 0, 2 ) && ( ISQBYTEARRAY( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QSslCertificate_new2();
+    /*
+    QSslCertificate( const QByteArray & data = QByteArray(), QSsl::EncodingFormat format = QSsl::Pem )
+    */
+    QSslCertificate * obj = new QSslCertificate( HB_ISNIL( 1 ) ? QByteArray() : *static_cast< QByteArray * >( Qt4xHb::itemGetPtr( 1 ) ), HB_ISNIL( 2 ) ? ( QSsl::EncodingFormat ) QSsl::Pem : ( QSsl::EncodingFormat ) hb_parni( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQSSLCERTIFICATE( 1 ) )
   {
-    QSslCertificate_new3();
+    /*
+    QSslCertificate( const QSslCertificate & other )
+    */
+    QSslCertificate * obj = new QSslCertificate( *PQSSLCERTIFICATE( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -282,41 +267,31 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_ISVALID )
   }
 }
 
-/*
-QString issuerInfo( QSslCertificate::SubjectInfo subject ) const
-*/
-void QSslCertificate_issuerInfo1()
-{
-  QSslCertificate * obj = static_cast< QSslCertificate * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RQSTRING( obj->issuerInfo( ( QSslCertificate::SubjectInfo ) hb_parni( 1 ) ) );
-  }
-}
-
-/*
-QString issuerInfo( const QByteArray & tag ) const
-*/
-void QSslCertificate_issuerInfo2()
-{
-  QSslCertificate * obj = static_cast< QSslCertificate * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RQSTRING( obj->issuerInfo( *PQBYTEARRAY( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QSSLCERTIFICATE_ISSUERINFO )
 {
   if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QSslCertificate_issuerInfo1();
+    /*
+    QString issuerInfo( QSslCertificate::SubjectInfo subject ) const
+    */
+    QSslCertificate * obj = static_cast< QSslCertificate * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RQSTRING( obj->issuerInfo( ( QSslCertificate::SubjectInfo ) hb_parni( 1 ) ) );
+    }
   }
   else if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    QSslCertificate_issuerInfo2();
+    /*
+    QString issuerInfo( const QByteArray & tag ) const
+    */
+    QSslCertificate * obj = static_cast< QSslCertificate * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RQSTRING( obj->issuerInfo( *PQBYTEARRAY( 1 ) ) );
+    }
   }
   else
   {
@@ -374,41 +349,31 @@ HB_FUNC_STATIC( QSSLCERTIFICATE_SERIALNUMBER )
   }
 }
 
-/*
-QString subjectInfo( QSslCertificate::SubjectInfo subject ) const
-*/
-void QSslCertificate_subjectInfo1()
-{
-  QSslCertificate * obj = static_cast< QSslCertificate * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RQSTRING( obj->subjectInfo( ( QSslCertificate::SubjectInfo ) hb_parni( 1 ) ) );
-  }
-}
-
-/*
-QString subjectInfo( const QByteArray & tag ) const
-*/
-void QSslCertificate_subjectInfo2()
-{
-  QSslCertificate * obj = static_cast< QSslCertificate * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RQSTRING( obj->subjectInfo( *PQBYTEARRAY( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QSSLCERTIFICATE_SUBJECTINFO )
 {
   if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QSslCertificate_subjectInfo1();
+    /*
+    QString subjectInfo( QSslCertificate::SubjectInfo subject ) const
+    */
+    QSslCertificate * obj = static_cast< QSslCertificate * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RQSTRING( obj->subjectInfo( ( QSslCertificate::SubjectInfo ) hb_parni( 1 ) ) );
+    }
   }
   else if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    QSslCertificate_subjectInfo2();
+    /*
+    QString subjectInfo( const QByteArray & tag ) const
+    */
+    QSslCertificate * obj = static_cast< QSslCertificate * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RQSTRING( obj->subjectInfo( *PQBYTEARRAY( 1 ) ) );
+    }
   }
   else
   {

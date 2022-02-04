@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -145,45 +145,35 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_ABORT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void connectToHost( const QString & hostName, quint16 port, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
-*/
-void QAbstractSocket_connectToHost1()
-{
-  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->connectToHost( PQSTRING( 1 ), PQUINT16( 2 ), HB_ISNIL( 3 ) ? ( QIODevice::OpenMode ) QIODevice::ReadWrite : ( QIODevice::OpenMode ) hb_parni( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void connectToHost( const QHostAddress & address, quint16 port, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
-*/
-void QAbstractSocket_connectToHost2()
-{
-  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->connectToHost( *PQHOSTADDRESS( 1 ), PQUINT16( 2 ), HB_ISNIL( 3 ) ? ( QIODevice::OpenMode ) QIODevice::ReadWrite : ( QIODevice::OpenMode ) hb_parni( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QABSTRACTSOCKET_CONNECTTOHOST )
 {
   if( ISBETWEEN( 2, 3 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QAbstractSocket_connectToHost1();
+    /*
+    void connectToHost( const QString & hostName, quint16 port, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
+    */
+    QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->connectToHost( PQSTRING( 1 ), PQUINT16( 2 ), HB_ISNIL( 3 ) ? ( QIODevice::OpenMode ) QIODevice::ReadWrite : ( QIODevice::OpenMode ) hb_parni( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISBETWEEN( 2, 3 ) && ISQHOSTADDRESS( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QAbstractSocket_connectToHost2();
+    /*
+    void connectToHost( const QHostAddress & address, quint16 port, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
+    */
+    QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->connectToHost( *PQHOSTADDRESS( 1 ), PQUINT16( 2 ), HB_ISNIL( 3 ) ? ( QIODevice::OpenMode ) QIODevice::ReadWrite : ( QIODevice::OpenMode ) hb_parni( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -56,46 +56,31 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSslCipher()
-*/
-void QSslCipher_new1()
-{
-  QSslCipher * obj = new QSslCipher();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QSslCipher( const QString & name, QSsl::SslProtocol protocol )
-*/
-void QSslCipher_new2()
-{
-  QSslCipher * obj = new QSslCipher( PQSTRING( 1 ), ( QSsl::SslProtocol ) hb_parni( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QSslCipher( const QSslCipher & other )
-*/
-void QSslCipher_new3()
-{
-  QSslCipher * obj = new QSslCipher( *PQSSLCIPHER( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSSLCIPHER_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QSslCipher_new1();
+    /*
+    QSslCipher()
+    */
+    QSslCipher * obj = new QSslCipher();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) )
   {
-    QSslCipher_new2();
+    /*
+    QSslCipher( const QString & name, QSsl::SslProtocol protocol )
+    */
+    QSslCipher * obj = new QSslCipher( PQSTRING( 1 ), ( QSsl::SslProtocol ) hb_parni( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQSSLCIPHER( 1 ) )
   {
-    QSslCipher_new3();
+    /*
+    QSslCipher( const QSslCipher & other )
+    */
+    QSslCipher * obj = new QSslCipher( *PQSSLCIPHER( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

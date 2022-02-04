@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -51,33 +51,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QHttpPart()
-*/
-void QHttpPart_new1()
-{
-  QHttpPart * obj = new QHttpPart();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QHttpPart( const QHttpPart & other )
-*/
-void QHttpPart_new2()
-{
-  QHttpPart * obj = new QHttpPart( *PQHTTPPART( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QHTTPPART_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QHttpPart_new1();
+    /*
+    QHttpPart()
+    */
+    QHttpPart * obj = new QHttpPart();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQHTTPPART( 1 ) )
   {
-    QHttpPart_new2();
+    /*
+    QHttpPart( const QHttpPart & other )
+    */
+    QHttpPart * obj = new QHttpPart( *PQHTTPPART( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

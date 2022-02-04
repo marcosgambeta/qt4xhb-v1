@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -77,59 +77,39 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QUrlInfo()
-*/
-void QUrlInfo_new1()
-{
-  QUrlInfo * obj = new QUrlInfo();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QUrlInfo( const QUrlInfo & ui )
-*/
-void QUrlInfo_new2()
-{
-  QUrlInfo * obj = new QUrlInfo( *PQURLINFO( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QUrlInfo( const QString & name, int permissions, const QString & owner, const QString & group, qint64 size, const QDateTime & lastModified, const QDateTime & lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable )
-*/
-void QUrlInfo_new3()
-{
-  QUrlInfo * obj = new QUrlInfo( PQSTRING( 1 ), PINT( 2 ), PQSTRING( 3 ), PQSTRING( 4 ), PQINT64( 5 ), *PQDATETIME( 6 ), *PQDATETIME( 7 ), PBOOL( 8 ), PBOOL( 9 ), PBOOL( 10 ), PBOOL( 11 ), PBOOL( 12 ), PBOOL( 13 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QUrlInfo( const QUrl & url, int permissions, const QString & owner, const QString & group, qint64 size, const QDateTime & lastModified, const QDateTime & lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable )
-*/
-void QUrlInfo_new4()
-{
-  QUrlInfo * obj = new QUrlInfo( *PQURL( 1 ), PINT( 2 ), PQSTRING( 3 ), PQSTRING( 4 ), PQINT64( 5 ), *PQDATETIME( 6 ), *PQDATETIME( 7 ), PBOOL( 8 ), PBOOL( 9 ), PBOOL( 10 ), PBOOL( 11 ), PBOOL( 12 ), PBOOL( 13 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QURLINFO_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QUrlInfo_new1();
+    /*
+    QUrlInfo()
+    */
+    QUrlInfo * obj = new QUrlInfo();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQURLINFO( 1 ) )
   {
-    QUrlInfo_new2();
+    /*
+    QUrlInfo( const QUrlInfo & ui )
+    */
+    QUrlInfo * obj = new QUrlInfo( *PQURLINFO( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 13 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) && HB_ISCHAR( 4 ) && HB_ISNUM( 5 ) && ISQDATETIME( 6 ) && ISQDATETIME( 7 ) && HB_ISLOG( 8 ) && HB_ISLOG( 9 ) && HB_ISLOG( 10 ) && HB_ISLOG( 11 ) && HB_ISLOG( 12 ) && HB_ISLOG( 13 ) )
   {
-    QUrlInfo_new3();
+    /*
+    QUrlInfo( const QString & name, int permissions, const QString & owner, const QString & group, qint64 size, const QDateTime & lastModified, const QDateTime & lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable )
+    */
+    QUrlInfo * obj = new QUrlInfo( PQSTRING( 1 ), PINT( 2 ), PQSTRING( 3 ), PQSTRING( 4 ), PQINT64( 5 ), *PQDATETIME( 6 ), *PQDATETIME( 7 ), PBOOL( 8 ), PBOOL( 9 ), PBOOL( 10 ), PBOOL( 11 ), PBOOL( 12 ), PBOOL( 13 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 13 ) && ISQURL( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) && HB_ISCHAR( 4 ) && HB_ISNUM( 5 ) && ISQDATETIME( 6 ) && ISQDATETIME( 7 ) && HB_ISLOG( 8 ) && HB_ISLOG( 9 ) && HB_ISLOG( 10 ) && HB_ISLOG( 11 ) && HB_ISLOG( 12 ) && HB_ISLOG( 13 ) )
   {
-    QUrlInfo_new4();
+    /*
+    QUrlInfo( const QUrl & url, int permissions, const QString & owner, const QString & group, qint64 size, const QDateTime & lastModified, const QDateTime & lastRead, bool isDir, bool isFile, bool isSymLink, bool isWritable, bool isReadable, bool isExecutable )
+    */
+    QUrlInfo * obj = new QUrlInfo( *PQURL( 1 ), PINT( 2 ), PQSTRING( 3 ), PQSTRING( 4 ), PQINT64( 5 ), *PQDATETIME( 6 ), *PQDATETIME( 7 ), PBOOL( 8 ), PBOOL( 9 ), PBOOL( 10 ), PBOOL( 11 ), PBOOL( 12 ), PBOOL( 13 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

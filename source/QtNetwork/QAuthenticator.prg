@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -56,33 +56,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QAuthenticator()
-*/
-void QAuthenticator_new1()
-{
-  QAuthenticator * obj = new QAuthenticator();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QAuthenticator( const QAuthenticator & other )
-*/
-void QAuthenticator_new2()
-{
-  QAuthenticator * obj = new QAuthenticator( *PQAUTHENTICATOR( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QAUTHENTICATOR_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QAuthenticator_new1();
+    /*
+    QAuthenticator()
+    */
+    QAuthenticator * obj = new QAuthenticator();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQAUTHENTICATOR( 1 ) )
   {
-    QAuthenticator_new2();
+    /*
+    QAuthenticator( const QAuthenticator & other )
+    */
+    QAuthenticator * obj = new QAuthenticator( *PQAUTHENTICATOR( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

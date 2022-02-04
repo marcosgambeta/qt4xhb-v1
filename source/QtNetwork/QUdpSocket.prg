@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -79,75 +79,55 @@ HB_FUNC_STATIC( QUDPSOCKET_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-bool bind( const QHostAddress & address, quint16 port )
-*/
-void QUdpSocket_bind1()
-{
-  QUdpSocket * obj = qobject_cast< QUdpSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->bind( *PQHOSTADDRESS( 1 ), PQUINT16( 2 ) ) );
-  }
-}
-
-/*
-bool bind( const QHostAddress & address, quint16 port, QUdpSocket::BindMode mode )
-*/
-void QUdpSocket_bind2()
-{
-  QUdpSocket * obj = qobject_cast< QUdpSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->bind( *PQHOSTADDRESS( 1 ), PQUINT16( 2 ), ( QUdpSocket::BindMode ) hb_parni( 3 ) ) );
-  }
-}
-
-/*
-bool bind( quint16 port = 0 )
-*/
-void QUdpSocket_bind3()
-{
-  QUdpSocket * obj = qobject_cast< QUdpSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->bind( OPQUINT16( 1, 0 ) ) );
-  }
-}
-
-/*
-bool bind( quint16 port, QUdpSocket::BindMode mode )
-*/
-void QUdpSocket_bind4()
-{
-  QUdpSocket * obj = qobject_cast< QUdpSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->bind( PQUINT16( 1 ), ( QUdpSocket::BindMode ) hb_parni( 2 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QUDPSOCKET_BIND )
 {
   if( ISNUMPAR( 2 ) && ISQHOSTADDRESS( 1 ) && HB_ISNUM( 2 ) )
   {
-    QUdpSocket_bind1();
+    /*
+    bool bind( const QHostAddress & address, quint16 port )
+    */
+    QUdpSocket * obj = qobject_cast< QUdpSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->bind( *PQHOSTADDRESS( 1 ), PQUINT16( 2 ) ) );
+    }
   }
   else if( ISNUMPAR( 3 ) && ISQHOSTADDRESS( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
-    QUdpSocket_bind2();
+    /*
+    bool bind( const QHostAddress & address, quint16 port, QUdpSocket::BindMode mode )
+    */
+    QUdpSocket * obj = qobject_cast< QUdpSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->bind( *PQHOSTADDRESS( 1 ), PQUINT16( 2 ), ( QUdpSocket::BindMode ) hb_parni( 3 ) ) );
+    }
   }
   else if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QUdpSocket_bind3();
+    /*
+    bool bind( quint16 port = 0 )
+    */
+    QUdpSocket * obj = qobject_cast< QUdpSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->bind( OPQUINT16( 1, 0 ) ) );
+    }
   }
   else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QUdpSocket_bind4();
+    /*
+    bool bind( quint16 port, QUdpSocket::BindMode mode )
+    */
+    QUdpSocket * obj = qobject_cast< QUdpSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->bind( PQUINT16( 1 ), ( QUdpSocket::BindMode ) hb_parni( 2 ) ) );
+    }
   }
   else
   {
@@ -203,41 +183,31 @@ HB_FUNC_STATIC( QUDPSOCKET_PENDINGDATAGRAMSIZE )
   }
 }
 
-/*
-qint64 writeDatagram( const char * data, qint64 size, const QHostAddress & address, quint16 port )
-*/
-void QUdpSocket_writeDatagram1()
-{
-  QUdpSocket * obj = qobject_cast< QUdpSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    RQINT64( obj->writeDatagram( PCONSTCHAR( 1 ), PQINT64( 2 ), *PQHOSTADDRESS( 3 ), PQUINT16( 4 ) ) );
-  }
-}
-
-/*
-qint64 writeDatagram( const QByteArray & datagram, const QHostAddress & host, quint16 port )
-*/
-void QUdpSocket_writeDatagram2()
-{
-  QUdpSocket * obj = qobject_cast< QUdpSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    RQINT64( obj->writeDatagram( *PQBYTEARRAY( 1 ), *PQHOSTADDRESS( 2 ), PQUINT16( 3 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM )
 {
   if( ISNUMPAR( 4 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) && ISQHOSTADDRESS( 3 ) && HB_ISNUM( 4 ) )
   {
-    QUdpSocket_writeDatagram1();
+    /*
+    qint64 writeDatagram( const char * data, qint64 size, const QHostAddress & address, quint16 port )
+    */
+    QUdpSocket * obj = qobject_cast< QUdpSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      RQINT64( obj->writeDatagram( PCONSTCHAR( 1 ), PQINT64( 2 ), *PQHOSTADDRESS( 3 ), PQUINT16( 4 ) ) );
+    }
   }
   else if( ISNUMPAR( 3 ) && ISQBYTEARRAY( 1 ) && ISQHOSTADDRESS( 2 ) && HB_ISNUM( 3 ) )
   {
-    QUdpSocket_writeDatagram2();
+    /*
+    qint64 writeDatagram( const QByteArray & datagram, const QHostAddress & host, quint16 port )
+    */
+    QUdpSocket * obj = qobject_cast< QUdpSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      RQINT64( obj->writeDatagram( *PQBYTEARRAY( 1 ), *PQHOSTADDRESS( 2 ), PQUINT16( 3 ) ) );
+    }
   }
   else
   {

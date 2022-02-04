@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -311,43 +311,33 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_NETWORKACCESSIBLE )
   }
 }
 
-/*
-QNetworkReply * post( const QNetworkRequest & request, QIODevice * data )
-*/
-void QNetworkAccessManager_post1()
-{
-  QNetworkAccessManager * obj = qobject_cast< QNetworkAccessManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    QNetworkReply * ptr = obj->post( *PQNETWORKREQUEST( 1 ), PQIODEVICE( 2 ) );
-    Qt4xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
-  }
-}
-
-/*
-QNetworkReply * post( const QNetworkRequest & request, const QByteArray & data )
-*/
-void QNetworkAccessManager_post2()
-{
-  QNetworkAccessManager * obj = qobject_cast< QNetworkAccessManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    QNetworkReply * ptr = obj->post( *PQNETWORKREQUEST( 1 ), *PQBYTEARRAY( 2 ) );
-    Qt4xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
-  }
-}
-
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_POST )
 {
   if( ISNUMPAR( 2 ) && ISQNETWORKREQUEST( 1 ) && ISQIODEVICE( 2 ) )
   {
-    QNetworkAccessManager_post1();
+    /*
+    QNetworkReply * post( const QNetworkRequest & request, QIODevice * data )
+    */
+    QNetworkAccessManager * obj = qobject_cast< QNetworkAccessManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      QNetworkReply * ptr = obj->post( *PQNETWORKREQUEST( 1 ), PQIODEVICE( 2 ) );
+      Qt4xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
+    }
   }
   else if( ISNUMPAR( 2 ) && ISQNETWORKREQUEST( 1 ) && ISQBYTEARRAY( 2 ) )
   {
-    QNetworkAccessManager_post2();
+    /*
+    QNetworkReply * post( const QNetworkRequest & request, const QByteArray & data )
+    */
+    QNetworkAccessManager * obj = qobject_cast< QNetworkAccessManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      QNetworkReply * ptr = obj->post( *PQNETWORKREQUEST( 1 ), *PQBYTEARRAY( 2 ) );
+      Qt4xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
+    }
   }
   else
   {
@@ -405,43 +395,33 @@ HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PROXYFACTORY )
   }
 }
 
-/*
-QNetworkReply * put( const QNetworkRequest & request, QIODevice * data )
-*/
-void QNetworkAccessManager_put1()
-{
-  QNetworkAccessManager * obj = qobject_cast< QNetworkAccessManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    QNetworkReply * ptr = obj->put( *PQNETWORKREQUEST( 1 ), PQIODEVICE( 2 ) );
-    Qt4xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
-  }
-}
-
-/*
-QNetworkReply * put( const QNetworkRequest & request, const QByteArray & data )
-*/
-void QNetworkAccessManager_put2()
-{
-  QNetworkAccessManager * obj = qobject_cast< QNetworkAccessManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    QNetworkReply * ptr = obj->put( *PQNETWORKREQUEST( 1 ), *PQBYTEARRAY( 2 ) );
-    Qt4xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
-  }
-}
-
 HB_FUNC_STATIC( QNETWORKACCESSMANAGER_PUT )
 {
   if( ISNUMPAR( 2 ) && ISQNETWORKREQUEST( 1 ) && ISQIODEVICE( 2 ) )
   {
-    QNetworkAccessManager_put1();
+    /*
+    QNetworkReply * put( const QNetworkRequest & request, QIODevice * data )
+    */
+    QNetworkAccessManager * obj = qobject_cast< QNetworkAccessManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      QNetworkReply * ptr = obj->put( *PQNETWORKREQUEST( 1 ), PQIODEVICE( 2 ) );
+      Qt4xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
+    }
   }
   else if( ISNUMPAR( 2 ) && ISQNETWORKREQUEST( 1 ) && ISQBYTEARRAY( 2 ) )
   {
-    QNetworkAccessManager_put2();
+    /*
+    QNetworkReply * put( const QNetworkRequest & request, const QByteArray & data )
+    */
+    QNetworkAccessManager * obj = qobject_cast< QNetworkAccessManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      QNetworkReply * ptr = obj->put( *PQNETWORKREQUEST( 1 ), *PQBYTEARRAY( 2 ) );
+      Qt4xHb::createReturnQObjectClass( ptr, "QNETWORKREPLY" );
+    }
   }
   else
   {

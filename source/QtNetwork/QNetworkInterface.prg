@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -60,33 +60,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QNetworkInterface()
-*/
-void QNetworkInterface_new1()
-{
-  QNetworkInterface * obj = new QNetworkInterface();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QNetworkInterface( const QNetworkInterface & other )
-*/
-void QNetworkInterface_new2()
-{
-  QNetworkInterface * obj = new QNetworkInterface( *PQNETWORKINTERFACE( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QNETWORKINTERFACE_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QNetworkInterface_new1();
+    /*
+    QNetworkInterface()
+    */
+    QNetworkInterface * obj = new QNetworkInterface();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQNETWORKINTERFACE( 1 ) )
   {
-    QNetworkInterface_new2();
+    /*
+    QNetworkInterface( const QNetworkInterface & other )
+    */
+    QNetworkInterface * obj = new QNetworkInterface( *PQNETWORKINTERFACE( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

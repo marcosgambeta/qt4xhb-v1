@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -68,33 +68,23 @@ RETURN
 
 #include <QtCore/QDateTime>
 
-/*
-QNetworkCookie( const QByteArray & name = QByteArray(), const QByteArray & value = QByteArray() )
-*/
-void QNetworkCookie_new1()
-{
-  QNetworkCookie * obj = new QNetworkCookie( HB_ISNIL( 1 ) ? QByteArray() : *static_cast< QByteArray * >( Qt4xHb::itemGetPtr( 1 ) ), HB_ISNIL( 2 ) ? QByteArray() : *static_cast< QByteArray * >( Qt4xHb::itemGetPtr( 2 ) ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QNetworkCookie( const QNetworkCookie & other )
-*/
-void QNetworkCookie_new2()
-{
-  QNetworkCookie * obj = new QNetworkCookie( *PQNETWORKCOOKIE( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QNETWORKCOOKIE_NEW )
 {
   if( ISBETWEEN( 0, 2 ) && ( ISQBYTEARRAY( 1 ) || HB_ISNIL( 1 ) ) && ( ISQBYTEARRAY( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QNetworkCookie_new1();
+    /*
+    QNetworkCookie( const QByteArray & name = QByteArray(), const QByteArray & value = QByteArray() )
+    */
+    QNetworkCookie * obj = new QNetworkCookie( HB_ISNIL( 1 ) ? QByteArray() : *static_cast< QByteArray * >( Qt4xHb::itemGetPtr( 1 ) ), HB_ISNIL( 2 ) ? QByteArray() : *static_cast< QByteArray * >( Qt4xHb::itemGetPtr( 2 ) ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQNETWORKCOOKIE( 1 ) )
   {
-    QNetworkCookie_new2();
+    /*
+    QNetworkCookie( const QNetworkCookie & other )
+    */
+    QNetworkCookie * obj = new QNetworkCookie( *PQNETWORKCOOKIE( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

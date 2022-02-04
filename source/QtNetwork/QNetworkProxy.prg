@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -63,46 +63,31 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QNetworkProxy()
-*/
-void QNetworkProxy_new1()
-{
-  QNetworkProxy * obj = new QNetworkProxy();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QNetworkProxy( QNetworkProxy::ProxyType type, const QString & hostName = QString(), quint16 port = 0, const QString & user = QString(), const QString & password = QString() )
-*/
-void QNetworkProxy_new2()
-{
-  QNetworkProxy * obj = new QNetworkProxy( ( QNetworkProxy::ProxyType ) hb_parni( 1 ), OPQSTRING( 2, QString() ), OPQUINT16( 3, 0 ), OPQSTRING( 4, QString() ), OPQSTRING( 5, QString() ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QNetworkProxy( const QNetworkProxy & other )
-*/
-void QNetworkProxy_new3()
-{
-  QNetworkProxy * obj = new QNetworkProxy( *PQNETWORKPROXY( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QNETWORKPROXY_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QNetworkProxy_new1();
+    /*
+    QNetworkProxy()
+    */
+    QNetworkProxy * obj = new QNetworkProxy();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 1, 5 ) && HB_ISNUM( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) )  && ( HB_ISCHAR( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISCHAR( 5 ) || HB_ISNIL( 5 ) ) )
   {
-    QNetworkProxy_new2();
+    /*
+    QNetworkProxy( QNetworkProxy::ProxyType type, const QString & hostName = QString(), quint16 port = 0, const QString & user = QString(), const QString & password = QString() )
+    */
+    QNetworkProxy * obj = new QNetworkProxy( ( QNetworkProxy::ProxyType ) hb_parni( 1 ), OPQSTRING( 2, QString() ), OPQUINT16( 3, 0 ), OPQSTRING( 4, QString() ), OPQSTRING( 5, QString() ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQNETWORKPROXY( 1 ) )
   {
-    QNetworkProxy_new3();
+    /*
+    QNetworkProxy( const QNetworkProxy & other )
+    */
+    QNetworkProxy * obj = new QNetworkProxy( *PQNETWORKPROXY( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
