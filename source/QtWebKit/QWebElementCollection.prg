@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -54,46 +54,31 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QWebElementCollection()
-*/
-void QWebElementCollection_new1()
-{
-  QWebElementCollection * obj = new QWebElementCollection();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QWebElementCollection( const QWebElement & contextElement, const QString & query )
-*/
-void QWebElementCollection_new2()
-{
-  QWebElementCollection * obj = new QWebElementCollection( *PQWEBELEMENT( 1 ), PQSTRING( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QWebElementCollection( const QWebElementCollection & other )
-*/
-void QWebElementCollection_new3()
-{
-  QWebElementCollection * obj = new QWebElementCollection( *PQWEBELEMENTCOLLECTION( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QWEBELEMENTCOLLECTION_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QWebElementCollection_new1();
+    /*
+    QWebElementCollection()
+    */
+    QWebElementCollection * obj = new QWebElementCollection();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 2 ) && ISQWEBELEMENT( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QWebElementCollection_new2();
+    /*
+    QWebElementCollection( const QWebElement & contextElement, const QString & query )
+    */
+    QWebElementCollection * obj = new QWebElementCollection( *PQWEBELEMENT( 1 ), PQSTRING( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQWEBELEMENTCOLLECTION( 1 ) )
   {
-    QWebElementCollection_new3();
+    /*
+    QWebElementCollection( const QWebElementCollection & other )
+    */
+    QWebElementCollection * obj = new QWebElementCollection( *PQWEBELEMENTCOLLECTION( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

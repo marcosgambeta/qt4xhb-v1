@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -108,45 +108,35 @@ RETURN
 #include <QtWebKit/QWebSecurityOrigin>
 #include <QtWebKit/QWebPage>
 
-/*
-void addToJavaScriptWindowObject( const QString & name, QObject * object )
-*/
-void QWebFrame_addToJavaScriptWindowObject1()
-{
-  QWebFrame * obj = qobject_cast< QWebFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->addToJavaScriptWindowObject( PQSTRING( 1 ), PQOBJECT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void addToJavaScriptWindowObject( const QString & name, QObject * object, QScriptEngine::ValueOwnership own )
-*/
-void QWebFrame_addToJavaScriptWindowObject2()
-{
-  QWebFrame * obj = qobject_cast< QWebFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->addToJavaScriptWindowObject( PQSTRING( 1 ), PQOBJECT( 2 ), ( QScriptEngine::ValueOwnership ) hb_parni( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QWEBFRAME_ADDTOJAVASCRIPTWINDOWOBJECT )
 {
   if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQOBJECT( 2 ) )
   {
-    QWebFrame_addToJavaScriptWindowObject1();
+    /*
+    void addToJavaScriptWindowObject( const QString & name, QObject * object )
+    */
+    QWebFrame * obj = qobject_cast< QWebFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->addToJavaScriptWindowObject( PQSTRING( 1 ), PQOBJECT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 3 ) && HB_ISCHAR( 1 ) && ISQOBJECT( 2 ) && HB_ISNUM( 3 ) )
   {
-    QWebFrame_addToJavaScriptWindowObject2();
+    /*
+    void addToJavaScriptWindowObject( const QString & name, QObject * object, QScriptEngine::ValueOwnership own )
+    */
+    QWebFrame * obj = qobject_cast< QWebFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->addToJavaScriptWindowObject( PQSTRING( 1 ), PQOBJECT( 2 ), ( QScriptEngine::ValueOwnership ) hb_parni( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -450,45 +440,35 @@ HB_FUNC_STATIC( QWEBFRAME_ICON )
   }
 }
 
-/*
-void load( const QUrl & url )
-*/
-void QWebFrame_load1()
-{
-  QWebFrame * obj = qobject_cast< QWebFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->load( *PQURL( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void load( const QNetworkRequest & req, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
-*/
-void QWebFrame_load2()
-{
-  QWebFrame * obj = qobject_cast< QWebFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->load( *PQNETWORKREQUEST( 1 ), HB_ISNIL( 2 ) ? ( QNetworkAccessManager::Operation ) QNetworkAccessManager::GetOperation : ( QNetworkAccessManager::Operation ) hb_parni( 2 ), HB_ISNIL( 3 ) ? QByteArray() : *static_cast< QByteArray * >( Qt4xHb::itemGetPtr( 3 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QWEBFRAME_LOAD )
 {
   if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
   {
-    QWebFrame_load1();
+    /*
+    void load( const QUrl & url )
+    */
+    QWebFrame * obj = qobject_cast< QWebFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->load( *PQURL( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISBETWEEN( 1, 3 ) && ISQNETWORKREQUEST( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( ISQBYTEARRAY( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QWebFrame_load2();
+    /*
+    void load( const QNetworkRequest & req, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
+    */
+    QWebFrame * obj = qobject_cast< QWebFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->load( *PQNETWORKREQUEST( 1 ), HB_ISNIL( 2 ) ? ( QNetworkAccessManager::Operation ) QNetworkAccessManager::GetOperation : ( QNetworkAccessManager::Operation ) hb_parni( 2 ), HB_ISNIL( 3 ) ? QByteArray() : *static_cast< QByteArray * >( Qt4xHb::itemGetPtr( 3 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -571,64 +551,49 @@ HB_FUNC_STATIC( QWEBFRAME_POS )
   }
 }
 
-/*
-void render( QPainter * painter )
-*/
-void QWebFrame_render1()
-{
-  QWebFrame * obj = qobject_cast< QWebFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->render( PQPAINTER( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void render( QPainter * painter, const QRegion & clip )
-*/
-void QWebFrame_render2()
-{
-  QWebFrame * obj = qobject_cast< QWebFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->render( PQPAINTER( 1 ), *PQREGION( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void render( QPainter * painter, QWebFrame::RenderLayer layer, const QRegion & clip = QRegion() )
-*/
-void QWebFrame_render3()
-{
-  QWebFrame * obj = qobject_cast< QWebFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->render( PQPAINTER( 1 ), ( QWebFrame::RenderLayer ) hb_parni( 2 ), HB_ISNIL( 3 ) ? QRegion() : *static_cast< QRegion * >( Qt4xHb::itemGetPtr( 3 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QWEBFRAME_RENDER )
 {
   if( ISNUMPAR( 1 ) && ISQPAINTER( 1 ) )
   {
-    QWebFrame_render1();
+    /*
+    void render( QPainter * painter )
+    */
+    QWebFrame * obj = qobject_cast< QWebFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->render( PQPAINTER( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && ISQPAINTER( 1 ) && ISQREGION( 2 ) )
   {
-    QWebFrame_render2();
+    /*
+    void render( QPainter * painter, const QRegion & clip )
+    */
+    QWebFrame * obj = qobject_cast< QWebFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->render( PQPAINTER( 1 ), *PQREGION( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISBETWEEN( 2, 3 ) && ISQPAINTER( 1 ) && HB_ISNUM( 2 ) && ( ISQREGION( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QWebFrame_render3();
+    /*
+    void render( QPainter * painter, QWebFrame::RenderLayer layer, const QRegion & clip = QRegion() )
+    */
+    QWebFrame * obj = qobject_cast< QWebFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->render( PQPAINTER( 1 ), ( QWebFrame::RenderLayer ) hb_parni( 2 ), HB_ISNIL( 3 ) ? QRegion() : *static_cast< QRegion * >( Qt4xHb::itemGetPtr( 3 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
