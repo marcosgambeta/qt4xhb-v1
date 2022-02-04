@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -90,59 +90,39 @@ RETURN
 #include <QtSql/QSqlRecord>
 #include <QtSql/QSqlDriver>
 
-/*
-QSqlQuery( QSqlResult * result )
-*/
-void QSqlQuery_new1()
-{
-  QSqlQuery * obj = new QSqlQuery( PQSQLRESULT( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QSqlQuery( const QString & query = QString(), QSqlDatabase db = QSqlDatabase() )
-*/
-void QSqlQuery_new2()
-{
-  QSqlQuery * obj = new QSqlQuery( OPQSTRING( 1, QString() ), HB_ISNIL( 2 ) ? QSqlDatabase() : *static_cast< QSqlDatabase * >( Qt4xHb::itemGetPtr( 2 ) ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QSqlQuery( QSqlDatabase db )
-*/
-void QSqlQuery_new3()
-{
-  QSqlQuery * obj = new QSqlQuery( *PQSQLDATABASE( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QSqlQuery( const QSqlQuery & other )
-*/
-void QSqlQuery_new4()
-{
-  QSqlQuery * obj = new QSqlQuery( *PQSQLQUERY( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSQLQUERY_NEW )
 {
   if( ISNUMPAR( 1 ) && ISQSQLRESULT( 1 ) )
   {
-    QSqlQuery_new1();
+    /*
+    QSqlQuery( QSqlResult * result )
+    */
+    QSqlQuery * obj = new QSqlQuery( PQSQLRESULT( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 0, 2 ) && ( HB_ISCHAR( 1 ) || HB_ISNIL( 1 ) ) && ( ISQSQLDATABASE( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QSqlQuery_new2();
+    /*
+    QSqlQuery( const QString & query = QString(), QSqlDatabase db = QSqlDatabase() )
+    */
+    QSqlQuery * obj = new QSqlQuery( OPQSTRING( 1, QString() ), HB_ISNIL( 2 ) ? QSqlDatabase() : *static_cast< QSqlDatabase * >( Qt4xHb::itemGetPtr( 2 ) ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQSQLDATABASE( 1 ) )
   {
-    QSqlQuery_new3();
+    /*
+    QSqlQuery( QSqlDatabase db )
+    */
+    QSqlQuery * obj = new QSqlQuery( *PQSQLDATABASE( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQSQLQUERY( 1 ) )
   {
-    QSqlQuery_new4();
+    /*
+    QSqlQuery( const QSqlQuery & other )
+    */
+    QSqlQuery * obj = new QSqlQuery( *PQSQLQUERY( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -217,45 +197,35 @@ HB_FUNC_STATIC( QSQLQUERY_AT )
   }
 }
 
-/*
-void bindValue( const QString & placeholder, const QVariant & val, QSql::ParamType paramType = QSql::In )
-*/
-void QSqlQuery_bindValue1()
-{
-  QSqlQuery * obj = static_cast< QSqlQuery * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->bindValue( PQSTRING( 1 ), *PQVARIANT( 2 ), HB_ISNIL( 3 ) ? ( QSql::ParamType ) QSql::In : ( QSql::ParamType ) hb_parni( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void bindValue( int pos, const QVariant & val, QSql::ParamType paramType = QSql::In )
-*/
-void QSqlQuery_bindValue2()
-{
-  QSqlQuery * obj = static_cast< QSqlQuery * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->bindValue( PINT( 1 ), *PQVARIANT( 2 ), HB_ISNIL( 3 ) ? ( QSql::ParamType ) QSql::In : ( QSql::ParamType ) hb_parni( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QSQLQUERY_BINDVALUE )
 {
   if( ISBETWEEN( 2, 3 ) && HB_ISCHAR( 1 ) && ISQVARIANT( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QSqlQuery_bindValue1();
+    /*
+    void bindValue( const QString & placeholder, const QVariant & val, QSql::ParamType paramType = QSql::In )
+    */
+    QSqlQuery * obj = static_cast< QSqlQuery * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->bindValue( PQSTRING( 1 ), *PQVARIANT( 2 ), HB_ISNIL( 3 ) ? ( QSql::ParamType ) QSql::In : ( QSql::ParamType ) hb_parni( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && ISQVARIANT( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QSqlQuery_bindValue2();
+    /*
+    void bindValue( int pos, const QVariant & val, QSql::ParamType paramType = QSql::In )
+    */
+    QSqlQuery * obj = static_cast< QSqlQuery * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->bindValue( PINT( 1 ), *PQVARIANT( 2 ), HB_ISNIL( 3 ) ? ( QSql::ParamType ) QSql::In : ( QSql::ParamType ) hb_parni( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -263,43 +233,33 @@ HB_FUNC_STATIC( QSQLQUERY_BINDVALUE )
   }
 }
 
-/*
-QVariant boundValue( const QString & placeholder ) const
-*/
-void QSqlQuery_boundValue1()
-{
-  QSqlQuery * obj = static_cast< QSqlQuery * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->boundValue( PQSTRING( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
-  }
-}
-
-/*
-QVariant boundValue( int pos ) const
-*/
-void QSqlQuery_boundValue2()
-{
-  QSqlQuery * obj = static_cast< QSqlQuery * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QVariant * ptr = new QVariant( obj->boundValue( PINT( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
-  }
-}
-
 HB_FUNC_STATIC( QSQLQUERY_BOUNDVALUE )
 {
   if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QSqlQuery_boundValue1();
+    /*
+    QVariant boundValue( const QString & placeholder ) const
+    */
+    QSqlQuery * obj = static_cast< QSqlQuery * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QVariant * ptr = new QVariant( obj->boundValue( PQSTRING( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+    }
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QSqlQuery_boundValue2();
+    /*
+    QVariant boundValue( int pos ) const
+    */
+    QSqlQuery * obj = static_cast< QSqlQuery * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QVariant * ptr = new QVariant( obj->boundValue( PINT( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+    }
   }
   else
   {
@@ -358,41 +318,31 @@ HB_FUNC_STATIC( QSQLQUERY_DRIVER )
   }
 }
 
-/*
-bool exec( const QString & query )
-*/
-void QSqlQuery_exec1()
-{
-  QSqlQuery * obj = static_cast< QSqlQuery * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->exec( PQSTRING( 1 ) ) );
-  }
-}
-
-/*
-bool exec()
-*/
-void QSqlQuery_exec2()
-{
-  QSqlQuery * obj = static_cast< QSqlQuery * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->exec() );
-  }
-}
-
 HB_FUNC_STATIC( QSQLQUERY_EXEC )
 {
   if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QSqlQuery_exec1();
+    /*
+    bool exec( const QString & query )
+    */
+    QSqlQuery * obj = static_cast< QSqlQuery * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->exec( PQSTRING( 1 ) ) );
+    }
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QSqlQuery_exec2();
+    /*
+    bool exec()
+    */
+    QSqlQuery * obj = static_cast< QSqlQuery * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->exec() );
+    }
   }
   else
   {

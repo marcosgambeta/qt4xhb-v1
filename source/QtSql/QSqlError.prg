@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -57,33 +57,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSqlError( const QString & driverText = QString(), const QString & databaseText = QString(), QSqlError::ErrorType type = QSqlError::NoError, int number = -1 )
-*/
-void QSqlError_new1()
-{
-  QSqlError * obj = new QSqlError( OPQSTRING( 1, QString() ), OPQSTRING( 2, QString() ), HB_ISNIL( 3 ) ? ( QSqlError::ErrorType ) QSqlError::NoError : ( QSqlError::ErrorType ) hb_parni( 3 ), OPINT( 4, -1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QSqlError( const QSqlError & other )
-*/
-void QSqlError_new2()
-{
-  QSqlError * obj = new QSqlError( *PQSQLERROR( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSQLERROR_NEW )
 {
   if( ISBETWEEN( 0, 4 ) && ( HB_ISCHAR( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QSqlError_new1();
+    /*
+    QSqlError( const QString & driverText = QString(), const QString & databaseText = QString(), QSqlError::ErrorType type = QSqlError::NoError, int number = -1 )
+    */
+    QSqlError * obj = new QSqlError( OPQSTRING( 1, QString() ), OPQSTRING( 2, QString() ), HB_ISNIL( 3 ) ? ( QSqlError::ErrorType ) QSqlError::NoError : ( QSqlError::ErrorType ) hb_parni( 3 ), OPINT( 4, -1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQSQLERROR( 1 ) )
   {
-    QSqlError_new2();
+    /*
+    QSqlError( const QSqlError & other )
+    */
+    QSqlError * obj = new QSqlError( *PQSQLERROR( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
