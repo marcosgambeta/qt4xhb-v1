@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -65,33 +65,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTestEventList()
-*/
-void QTestEventList_new1()
-{
-  QTestEventList * obj = new QTestEventList();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QTestEventList( const QTestEventList & other )
-*/
-void QTestEventList_new2()
-{
-  QTestEventList * obj = new QTestEventList( *PQTESTEVENTLIST( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QTESTEVENTLIST_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QTestEventList_new1();
+    /*
+    QTestEventList()
+    */
+    QTestEventList * obj = new QTestEventList();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQTESTEVENTLIST( 1 ) )
   {
-    QTestEventList_new2();
+    /*
+    QTestEventList( const QTestEventList & other )
+    */
+    QTestEventList * obj = new QTestEventList( *PQTESTEVENTLIST( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
