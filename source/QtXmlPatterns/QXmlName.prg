@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -55,33 +55,23 @@ RETURN
 
 #include <QtXmlPatterns/QXmlNamePool>
 
-/*
-QXmlName()
-*/
-void QXmlName_new1()
-{
-  QXmlName * obj = new QXmlName();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QXmlName( QXmlNamePool & namePool, const QString & localName, const QString & namespaceURI = QString(), const QString & prefix = QString() )
-*/
-void QXmlName_new2()
-{
-  QXmlName * obj = new QXmlName( *PQXMLNAMEPOOL( 1 ), PQSTRING( 2 ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QXMLNAME_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QXmlName_new1();
+    /*
+    QXmlName()
+    */
+    QXmlName * obj = new QXmlName();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 2, 4 ) && ISQXMLNAMEPOOL( 1 ) && HB_ISCHAR( 2 ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISCHAR( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QXmlName_new2();
+    /*
+    QXmlName( QXmlNamePool & namePool, const QString & localName, const QString & namespaceURI = QString(), const QString & prefix = QString() )
+    */
+    QXmlName * obj = new QXmlName( *PQXMLNAMEPOOL( 1 ), PQSTRING( 2 ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

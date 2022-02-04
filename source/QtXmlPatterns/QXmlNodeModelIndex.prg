@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -52,33 +52,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QXmlNodeModelIndex()
-*/
-void QXmlNodeModelIndex_new1()
-{
-  QXmlNodeModelIndex * obj = new QXmlNodeModelIndex();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QXmlNodeModelIndex( const QXmlNodeModelIndex & other )
-*/
-void QXmlNodeModelIndex_new2()
-{
-  QXmlNodeModelIndex * obj = new QXmlNodeModelIndex( *PQXMLNODEMODELINDEX( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QXMLNODEMODELINDEX_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QXmlNodeModelIndex_new1();
+    /*
+    QXmlNodeModelIndex()
+    */
+    QXmlNodeModelIndex * obj = new QXmlNodeModelIndex();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQXMLNODEMODELINDEX( 1 ) )
   {
-    QXmlNodeModelIndex_new2();
+    /*
+    QXmlNodeModelIndex( const QXmlNodeModelIndex & other )
+    */
+    QXmlNodeModelIndex * obj = new QXmlNodeModelIndex( *PQXMLNODEMODELINDEX( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

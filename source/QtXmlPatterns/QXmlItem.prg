@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -56,59 +56,39 @@ RETURN
 
 #include <QtCore/QVariant>
 
-/*
-QXmlItem()
-*/
-void QXmlItem_new1()
-{
-  QXmlItem * obj = new QXmlItem();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QXmlItem( const QXmlItem & other )
-*/
-void QXmlItem_new2()
-{
-  QXmlItem * obj = new QXmlItem( *PQXMLITEM( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QXmlItem( const QXmlNodeModelIndex & node )
-*/
-void QXmlItem_new3()
-{
-  QXmlItem * obj = new QXmlItem( *PQXMLNODEMODELINDEX( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QXmlItem( const QVariant & atomicValue )
-*/
-void QXmlItem_new4()
-{
-  QXmlItem * obj = new QXmlItem( *PQVARIANT( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QXMLITEM_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QXmlItem_new1();
+    /*
+    QXmlItem()
+    */
+    QXmlItem * obj = new QXmlItem();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQXMLITEM( 1 ) )
   {
-    QXmlItem_new2();
+    /*
+    QXmlItem( const QXmlItem & other )
+    */
+    QXmlItem * obj = new QXmlItem( *PQXMLITEM( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQXMLNODEMODELINDEX( 1 ) )
   {
-    QXmlItem_new3();
+    /*
+    QXmlItem( const QXmlNodeModelIndex & node )
+    */
+    QXmlItem * obj = new QXmlItem( *PQXMLNODEMODELINDEX( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQVARIANT( 1 ) )
   {
-    QXmlItem_new4();
+    /*
+    QXmlItem( const QVariant & atomicValue )
+    */
+    QXmlItem * obj = new QXmlItem( *PQVARIANT( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

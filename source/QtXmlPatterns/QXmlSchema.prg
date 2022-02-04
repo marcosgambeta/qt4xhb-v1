@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -66,33 +66,23 @@ RETURN
 #include <QtNetwork/QNetworkAccessManager>
 #include <QtXmlPatterns/QAbstractUriResolver>
 
-/*
-QXmlSchema()
-*/
-void QXmlSchema_new1()
-{
-  QXmlSchema * obj = new QXmlSchema();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QXmlSchema( const QXmlSchema & other )
-*/
-void QXmlSchema_new2()
-{
-  QXmlSchema * obj = new QXmlSchema( *PQXMLSCHEMA( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QXMLSCHEMA_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QXmlSchema_new1();
+    /*
+    QXmlSchema()
+    */
+    QXmlSchema * obj = new QXmlSchema();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQXMLSCHEMA( 1 ) )
   {
-    QXmlSchema_new2();
+    /*
+    QXmlSchema( const QXmlSchema & other )
+    */
+    QXmlSchema * obj = new QXmlSchema( *PQXMLSCHEMA( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -166,58 +156,43 @@ HB_FUNC_STATIC( QXMLSCHEMA_ISVALID )
   }
 }
 
-/*
-bool load( const QUrl & source )
-*/
-void QXmlSchema_load1()
-{
-  QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->load( *PQURL( 1 ) ) );
-  }
-}
-
-/*
-bool load( QIODevice * source, const QUrl & documentUri = QUrl() )
-*/
-void QXmlSchema_load2()
-{
-  QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->load( PQIODEVICE( 1 ), HB_ISNIL( 2 ) ? QUrl() : *static_cast< QUrl * >( Qt4xHb::itemGetPtr( 2 ) ) ) );
-  }
-}
-
-/*
-bool load( const QByteArray & data, const QUrl & documentUri = QUrl() )
-*/
-void QXmlSchema_load3()
-{
-  QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->load( *PQBYTEARRAY( 1 ), HB_ISNIL( 2 ) ? QUrl() : *static_cast< QUrl * >( Qt4xHb::itemGetPtr( 2 ) ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QXMLSCHEMA_LOAD )
 {
   if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
   {
-    QXmlSchema_load1();
+    /*
+    bool load( const QUrl & source )
+    */
+    QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->load( *PQURL( 1 ) ) );
+    }
   }
   else if( ISBETWEEN( 1, 2 ) && ISQIODEVICE( 1 ) && ( ISQURL( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QXmlSchema_load2();
+    /*
+    bool load( QIODevice * source, const QUrl & documentUri = QUrl() )
+    */
+    QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->load( PQIODEVICE( 1 ), HB_ISNIL( 2 ) ? QUrl() : *static_cast< QUrl * >( Qt4xHb::itemGetPtr( 2 ) ) ) );
+    }
   }
   else if( ISBETWEEN( 1, 2 ) && ISQBYTEARRAY( 1 ) && ( ISQURL( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QXmlSchema_load3();
+    /*
+    bool load( const QByteArray & data, const QUrl & documentUri = QUrl() )
+    */
+    QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->load( *PQBYTEARRAY( 1 ), HB_ISNIL( 2 ) ? QUrl() : *static_cast< QUrl * >( Qt4xHb::itemGetPtr( 2 ) ) ) );
+    }
   }
   else
   {
