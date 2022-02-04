@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -61,33 +61,23 @@ RETURN
 #include "qt4xhb_events.h"
 #include "qt4xhb_signals.h"
 
-/*
-QAudioOutput( const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
-*/
-void QAudioOutput_new1()
-{
-  QAudioOutput * obj = new QAudioOutput( HB_ISNIL( 1 ) ? QAudioFormat() : *static_cast< QAudioFormat * >( Qt4xHb::itemGetPtr( 1 ) ), OPQOBJECT( 2, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QAudioOutput( const QAudioDeviceInfo & audioDevice, const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
-*/
-void QAudioOutput_new2()
-{
-  QAudioOutput * obj = new QAudioOutput( *PQAUDIODEVICEINFO( 1 ), HB_ISNIL( 2 ) ? QAudioFormat() : *static_cast< QAudioFormat * >( Qt4xHb::itemGetPtr( 2 ) ), OPQOBJECT( 3, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QAUDIOOUTPUT_NEW )
 {
   if( ISBETWEEN( 0, 2 ) && ( ISQAUDIOFORMAT( 1 ) || HB_ISNIL( 1 ) ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QAudioOutput_new1();
+    /*
+    QAudioOutput( const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
+    */
+    QAudioOutput * obj = new QAudioOutput( HB_ISNIL( 1 ) ? QAudioFormat() : *static_cast< QAudioFormat * >( Qt4xHb::itemGetPtr( 1 ) ), OPQOBJECT( 2, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISBETWEEN( 1, 3 ) && ISQAUDIODEVICEINFO( 1 ) && ( ISQAUDIOFORMAT( 2 ) || HB_ISNIL( 2 ) ) && ( ISQOBJECT( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QAudioOutput_new2();
+    /*
+    QAudioOutput( const QAudioDeviceInfo & audioDevice, const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
+    */
+    QAudioOutput * obj = new QAudioOutput( *PQAUDIODEVICEINFO( 1 ), HB_ISNIL( 2 ) ? QAudioFormat() : *static_cast< QAudioFormat * >( Qt4xHb::itemGetPtr( 2 ) ), OPQOBJECT( 3, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -411,44 +401,34 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_SETNOTIFYINTERVAL )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void start( QIODevice * device )
-*/
-void QAudioOutput_start1()
-{
-  QAudioOutput * obj = qobject_cast< QAudioOutput * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->start( PQIODEVICE( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-QIODevice * start()
-*/
-void QAudioOutput_start2()
-{
-  QAudioOutput * obj = qobject_cast< QAudioOutput * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    QIODevice * ptr = obj->start();
-    Qt4xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
-  }
-}
-
 HB_FUNC_STATIC( QAUDIOOUTPUT_START )
 {
   if( ISNUMPAR( 1 ) && ISQIODEVICE( 1 ) )
   {
-    QAudioOutput_start1();
+    /*
+    void start( QIODevice * device )
+    */
+    QAudioOutput * obj = qobject_cast< QAudioOutput * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->start( PQIODEVICE( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QAudioOutput_start2();
+    /*
+    QIODevice * start()
+    */
+    QAudioOutput * obj = qobject_cast< QAudioOutput * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      QIODevice * ptr = obj->start();
+      Qt4xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
+    }
   }
   else
   {
