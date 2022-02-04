@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -46,33 +46,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QGLFramebufferObjectFormat()
-*/
-void QGLFramebufferObjectFormat_new1()
-{
-  QGLFramebufferObjectFormat * obj = new QGLFramebufferObjectFormat();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QGLFramebufferObjectFormat( const QGLFramebufferObjectFormat & other )
-*/
-void QGLFramebufferObjectFormat_new2()
-{
-  QGLFramebufferObjectFormat * obj = new QGLFramebufferObjectFormat( *PQGLFRAMEBUFFEROBJECTFORMAT( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECTFORMAT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QGLFramebufferObjectFormat_new1();
+    /*
+    QGLFramebufferObjectFormat()
+    */
+    QGLFramebufferObjectFormat * obj = new QGLFramebufferObjectFormat();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQGLFRAMEBUFFEROBJECTFORMAT( 1 ) )
   {
-    QGLFramebufferObjectFormat_new2();
+    /*
+    QGLFramebufferObjectFormat( const QGLFramebufferObjectFormat & other )
+    */
+    QGLFramebufferObjectFormat * obj = new QGLFramebufferObjectFormat( *PQGLFRAMEBUFFEROBJECTFORMAT( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -115,33 +115,23 @@ RETURN
 #include "qt4xhb_events.h"
 #include "qt4xhb_signals.h"
 
-/*
-QGLShaderProgram( QObject * parent = 0 )
-*/
-void QGLShaderProgram_new1()
-{
-  QGLShaderProgram * obj = new QGLShaderProgram( OPQOBJECT( 1, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QGLShaderProgram( const QGLContext * context, QObject * parent = 0 )
-*/
-void QGLShaderProgram_new2()
-{
-  QGLShaderProgram * obj = new QGLShaderProgram( PQGLCONTEXT( 1 ), OPQOBJECT( 2, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QGLSHADERPROGRAM_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QGLShaderProgram_new1();
+    /*
+    QGLShaderProgram( QObject * parent = 0 )
+    */
+    QGLShaderProgram * obj = new QGLShaderProgram( OPQOBJECT( 1, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISBETWEEN( 1, 2 ) && ISQGLCONTEXT( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QGLShaderProgram_new2();
+    /*
+    QGLShaderProgram( const QGLContext * context, QObject * parent = 0 )
+    */
+    QGLShaderProgram * obj = new QGLShaderProgram( PQGLCONTEXT( 1 ), OPQOBJECT( 2, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -522,45 +512,35 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_BINDATTRIBUTELOCATION )
   }
 }
 
-/*
-void disableAttributeArray( int location )
-*/
-void QGLShaderProgram_disableAttributeArray1()
-{
-  QGLShaderProgram * obj = qobject_cast< QGLShaderProgram * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->disableAttributeArray( PINT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void disableAttributeArray( const char * name )
-*/
-void QGLShaderProgram_disableAttributeArray2()
-{
-  QGLShaderProgram * obj = qobject_cast< QGLShaderProgram * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->disableAttributeArray( PCONSTCHAR( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY )
 {
   if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QGLShaderProgram_disableAttributeArray1();
+    /*
+    void disableAttributeArray( int location )
+    */
+    QGLShaderProgram * obj = qobject_cast< QGLShaderProgram * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->disableAttributeArray( PINT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QGLShaderProgram_disableAttributeArray2();
+    /*
+    void disableAttributeArray( const char * name )
+    */
+    QGLShaderProgram * obj = qobject_cast< QGLShaderProgram * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->disableAttributeArray( PCONSTCHAR( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -568,45 +548,35 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_DISABLEATTRIBUTEARRAY )
   }
 }
 
-/*
-void enableAttributeArray( int location )
-*/
-void QGLShaderProgram_enableAttributeArray1()
-{
-  QGLShaderProgram * obj = qobject_cast< QGLShaderProgram * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->enableAttributeArray( PINT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void enableAttributeArray( const char * name )
-*/
-void QGLShaderProgram_enableAttributeArray2()
-{
-  QGLShaderProgram * obj = qobject_cast< QGLShaderProgram * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->enableAttributeArray( PCONSTCHAR( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QGLSHADERPROGRAM_ENABLEATTRIBUTEARRAY )
 {
   if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QGLShaderProgram_enableAttributeArray1();
+    /*
+    void enableAttributeArray( int location )
+    */
+    QGLShaderProgram * obj = qobject_cast< QGLShaderProgram * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->enableAttributeArray( PINT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QGLShaderProgram_enableAttributeArray2();
+    /*
+    void enableAttributeArray( const char * name )
+    */
+    QGLShaderProgram * obj = qobject_cast< QGLShaderProgram * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->enableAttributeArray( PCONSTCHAR( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -884,45 +854,35 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_REMOVESHADER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setAttributeBuffer( int location, GLenum type, int offset, int tupleSize, int stride = 0 )
-*/
-void QGLShaderProgram_setAttributeBuffer1()
-{
-  QGLShaderProgram * obj = qobject_cast< QGLShaderProgram * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->setAttributeBuffer( PINT( 1 ), PGLENUM( 2 ), PINT( 3 ), PINT( 4 ), OPINT( 5, 0 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setAttributeBuffer( const char * name, GLenum type, int offset, int tupleSize, int stride = 0 )
-*/
-void QGLShaderProgram_setAttributeBuffer2()
-{
-  QGLShaderProgram * obj = qobject_cast< QGLShaderProgram * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->setAttributeBuffer( PCONSTCHAR( 1 ), PGLENUM( 2 ), PINT( 3 ), PINT( 4 ), OPINT( 5, 0 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QGLSHADERPROGRAM_SETATTRIBUTEBUFFER )
 {
   if( ISBETWEEN( 4, 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) )
   {
-    QGLShaderProgram_setAttributeBuffer1();
+    /*
+    void setAttributeBuffer( int location, GLenum type, int offset, int tupleSize, int stride = 0 )
+    */
+    QGLShaderProgram * obj = qobject_cast< QGLShaderProgram * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setAttributeBuffer( PINT( 1 ), PGLENUM( 2 ), PINT( 3 ), PINT( 4 ), OPINT( 5, 0 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISBETWEEN( 4, 5 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) )
   {
-    QGLShaderProgram_setAttributeBuffer2();
+    /*
+    void setAttributeBuffer( const char * name, GLenum type, int offset, int tupleSize, int stride = 0 )
+    */
+    QGLShaderProgram * obj = qobject_cast< QGLShaderProgram * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setAttributeBuffer( PCONSTCHAR( 1 ), PGLENUM( 2 ), PINT( 3 ), PINT( 4 ), OPINT( 5, 0 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
