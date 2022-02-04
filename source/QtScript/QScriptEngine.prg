@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -82,33 +82,23 @@ RETURN
 
 #include <QtCore/QStringList>
 
-/*
-QScriptEngine()
-*/
-void QScriptEngine_new1()
-{
-  QScriptEngine * obj = new QScriptEngine();
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QScriptEngine( QObject * parent )
-*/
-void QScriptEngine_new2()
-{
-  QScriptEngine * obj = new QScriptEngine( PQOBJECT( 1 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QSCRIPTENGINE_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QScriptEngine_new1();
+    /*
+    QScriptEngine()
+    */
+    QScriptEngine * obj = new QScriptEngine();
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
   {
-    QScriptEngine_new2();
+    /*
+    QScriptEngine( QObject * parent )
+    */
+    QScriptEngine * obj = new QScriptEngine( PQOBJECT( 1 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -312,43 +302,33 @@ HB_FUNC_STATIC( QSCRIPTENGINE_DEFAULTPROTOTYPE )
   }
 }
 
-/*
-QScriptValue evaluate( const QString & program, const QString & fileName = QString(), int lineNumber = 1 )
-*/
-void QScriptEngine_evaluate1()
-{
-  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->evaluate( PQSTRING( 1 ), OPQSTRING( 2, QString() ), OPINT( 3, 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
-  }
-}
-
-/*
-QScriptValue evaluate( const QScriptProgram & program )
-*/
-void QScriptEngine_evaluate2()
-{
-  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->evaluate( *PQSCRIPTPROGRAM( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
-  }
-}
-
 HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE )
 {
   if( ISBETWEEN( 1, 3 ) && HB_ISCHAR( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNUM( 3 ) ) )
   {
-    QScriptEngine_evaluate1();
+    /*
+    QScriptValue evaluate( const QString & program, const QString & fileName = QString(), int lineNumber = 1 )
+    */
+    QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      QScriptValue * ptr = new QScriptValue( obj->evaluate( PQSTRING( 1 ), OPQSTRING( 2, QString() ), OPINT( 3, 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+    }
   }
   else if( ISNUMPAR( 1 ) && ISQSCRIPTPROGRAM( 1 ) )
   {
-    QScriptEngine_evaluate2();
+    /*
+    QScriptValue evaluate( const QScriptProgram & program )
+    */
+    QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      QScriptValue * ptr = new QScriptValue( obj->evaluate( *PQSCRIPTPROGRAM( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+    }
   }
   else
   {
@@ -529,43 +509,33 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWARRAY )
   }
 }
 
-/*
-QScriptValue newRegExp( const QRegExp & regexp )
-*/
-void QScriptEngine_newRegExp1()
-{
-  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->newRegExp( *PQREGEXP( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
-  }
-}
-
-/*
-QScriptValue newRegExp( const QString & pattern, const QString & flags )
-*/
-void QScriptEngine_newRegExp2()
-{
-  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->newRegExp( PQSTRING( 1 ), PQSTRING( 2 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
-  }
-}
-
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP )
 {
   if( ISNUMPAR( 1 ) && ISQREGEXP( 1 ) )
   {
-    QScriptEngine_newRegExp1();
+    /*
+    QScriptValue newRegExp( const QRegExp & regexp )
+    */
+    QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      QScriptValue * ptr = new QScriptValue( obj->newRegExp( *PQREGEXP( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+    }
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QScriptEngine_newRegExp2();
+    /*
+    QScriptValue newRegExp( const QString & pattern, const QString & flags )
+    */
+    QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      QScriptValue * ptr = new QScriptValue( obj->newRegExp( PQSTRING( 1 ), PQSTRING( 2 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+    }
   }
   else
   {
@@ -573,43 +543,33 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP )
   }
 }
 
-/*
-QScriptValue newVariant( const QVariant & value )
-*/
-void QScriptEngine_newVariant1()
-{
-  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->newVariant( *PQVARIANT( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
-  }
-}
-
-/*
-QScriptValue newVariant( const QScriptValue & object, const QVariant & value )
-*/
-void QScriptEngine_newVariant2()
-{
-  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->newVariant( *PQSCRIPTVALUE( 1 ), *PQVARIANT( 2 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
-  }
-}
-
 HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT )
 {
   if( ISNUMPAR( 1 ) && ISQVARIANT( 1 ) )
   {
-    QScriptEngine_newVariant1();
+    /*
+    QScriptValue newVariant( const QVariant & value )
+    */
+    QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      QScriptValue * ptr = new QScriptValue( obj->newVariant( *PQVARIANT( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+    }
   }
   else if( ISNUMPAR( 2 ) && ISQSCRIPTVALUE( 1 ) && ISQVARIANT( 2 ) )
   {
-    QScriptEngine_newVariant2();
+    /*
+    QScriptValue newVariant( const QScriptValue & object, const QVariant & value )
+    */
+    QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      QScriptValue * ptr = new QScriptValue( obj->newVariant( *PQSCRIPTVALUE( 1 ), *PQVARIANT( 2 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+    }
   }
   else
   {

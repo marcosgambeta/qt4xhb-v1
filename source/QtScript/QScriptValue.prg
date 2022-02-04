@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -25,13 +25,9 @@ CLASS QScriptValue
    DATA pointer
    DATA self_destruction INIT .F.
 
-   METHOD new1
-   METHOD new2
    METHOD new3
-   METHOD new4
    METHOD new5
    METHOD new6
-   METHOD new8
    METHOD new10
    METHOD new
    METHOD delete
@@ -105,38 +101,11 @@ RETURN
 #include <QtCore/QVariant>
 
 /*
-QScriptValue()
-*/
-HB_FUNC_STATIC( QSCRIPTVALUE_NEW1 )
-{
-  QScriptValue * obj = new QScriptValue();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QScriptValue( const QScriptValue & other )
-*/
-HB_FUNC_STATIC( QSCRIPTVALUE_NEW2 )
-{
-  QScriptValue * obj = new QScriptValue( *PQSCRIPTVALUE( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
 QScriptValue( QScriptValue::SpecialValue value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW3 )
 {
   QScriptValue * obj = new QScriptValue( ( QScriptValue::SpecialValue ) hb_parni( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QScriptValue( bool value )
-*/
-HB_FUNC_STATIC( QSCRIPTVALUE_NEW4 )
-{
-  QScriptValue * obj = new QScriptValue( PBOOL( 1 ) );
   Qt4xHb::returnNewObject( obj, true );
 }
 
@@ -159,15 +128,6 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW6 )
 }
 
 /*
-QScriptValue( const QString & value )
-*/
-HB_FUNC_STATIC( QSCRIPTVALUE_NEW8 )
-{
-  QScriptValue * obj = new QScriptValue( PQSTRING( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
 QScriptValue( const char * value )
 */
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW10 )
@@ -180,11 +140,19 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    HB_FUNC_EXEC( QSCRIPTVALUE_NEW1 );
+    /*
+    QScriptValue()
+    */
+    QScriptValue * obj = new QScriptValue();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQSCRIPTVALUE( 1 ) )
   {
-    HB_FUNC_EXEC( QSCRIPTVALUE_NEW2 );
+    /*
+    QScriptValue( const QScriptValue & other )
+    */
+    QScriptValue * obj = new QScriptValue( *PQSCRIPTVALUE( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
@@ -195,11 +163,19 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
   }
   else if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
   {
-    HB_FUNC_EXEC( QSCRIPTVALUE_NEW4 );
+    /*
+    QScriptValue( bool value )
+    */
+    QScriptValue * obj = new QScriptValue( PBOOL( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    HB_FUNC_EXEC( QSCRIPTVALUE_NEW8 );
+    /*
+    QScriptValue( const QString & value )
+    */
+    QScriptValue * obj = new QScriptValue( PQSTRING( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
     //HB_FUNC_EXEC( QSCRIPTVALUE_NEW10 );
   }
   else

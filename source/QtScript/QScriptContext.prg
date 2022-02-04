@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -407,43 +407,33 @@ HB_FUNC_STATIC( QSCRIPTCONTEXT_THISOBJECT )
   }
 }
 
-/*
-QScriptValue throwError( QScriptContext::Error error, const QString & text )
-*/
-void QScriptContext_throwError1()
-{
-  QScriptContext * obj = static_cast< QScriptContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->throwError( ( QScriptContext::Error ) hb_parni( 1 ), PQSTRING( 2 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
-  }
-}
-
-/*
-QScriptValue throwError( const QString & text )
-*/
-void QScriptContext_throwError2()
-{
-  QScriptContext * obj = static_cast< QScriptContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QScriptValue * ptr = new QScriptValue( obj->throwError( PQSTRING( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
-  }
-}
-
 HB_FUNC_STATIC( QSCRIPTCONTEXT_THROWERROR )
 {
   if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QScriptContext_throwError1();
+    /*
+    QScriptValue throwError( QScriptContext::Error error, const QString & text )
+    */
+    QScriptContext * obj = static_cast< QScriptContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QScriptValue * ptr = new QScriptValue( obj->throwError( ( QScriptContext::Error ) hb_parni( 1 ), PQSTRING( 2 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+    }
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QScriptContext_throwError2();
+    /*
+    QScriptValue throwError( const QString & text )
+    */
+    QScriptContext * obj = static_cast< QScriptContext * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QScriptValue * ptr = new QScriptValue( obj->throwError( PQSTRING( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+    }
   }
   else
   {

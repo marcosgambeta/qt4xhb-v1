@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -49,33 +49,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QScriptString()
-*/
-void QScriptString_new1()
-{
-  QScriptString * obj = new QScriptString();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QScriptString( const QScriptString & other )
-*/
-void QScriptString_new2()
-{
-  QScriptString * obj = new QScriptString( *PQSCRIPTSTRING( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSCRIPTSTRING_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QScriptString_new1();
+    /*
+    QScriptString()
+    */
+    QScriptString * obj = new QScriptString();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQSCRIPTSTRING( 1 ) )
   {
-    QScriptString_new2();
+    /*
+    QScriptString( const QScriptString & other )
+    */
+    QScriptString * obj = new QScriptString( *PQSCRIPTSTRING( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

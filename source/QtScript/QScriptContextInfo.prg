@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -57,46 +57,31 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QScriptContextInfo( const QScriptContext * context )
-*/
-void QScriptContextInfo_new1()
-{
-  QScriptContextInfo * obj = new QScriptContextInfo( PQSCRIPTCONTEXT( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QScriptContextInfo( const QScriptContextInfo & other )
-*/
-void QScriptContextInfo_new2()
-{
-  QScriptContextInfo * obj = new QScriptContextInfo( *PQSCRIPTCONTEXTINFO( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QScriptContextInfo()
-*/
-void QScriptContextInfo_new3()
-{
-  QScriptContextInfo * obj = new QScriptContextInfo();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSCRIPTCONTEXTINFO_NEW )
 {
   if( ISNUMPAR( 1 ) && ISQSCRIPTCONTEXT( 1 ) )
   {
-    QScriptContextInfo_new1();
+    /*
+    QScriptContextInfo( const QScriptContext * context )
+    */
+    QScriptContextInfo * obj = new QScriptContextInfo( PQSCRIPTCONTEXT( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQSCRIPTCONTEXTINFO( 1 ) )
   {
-    QScriptContextInfo_new2();
+    /*
+    QScriptContextInfo( const QScriptContextInfo & other )
+    */
+    QScriptContextInfo * obj = new QScriptContextInfo( *PQSCRIPTCONTEXTINFO( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QScriptContextInfo_new3();
+    /*
+    QScriptContextInfo()
+    */
+    QScriptContextInfo * obj = new QScriptContextInfo();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
