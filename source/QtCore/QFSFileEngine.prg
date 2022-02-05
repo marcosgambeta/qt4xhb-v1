@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -76,33 +76,23 @@ RETURN
 
 #include <QtCore/QDateTime>
 
-/*
-QFSFileEngine()
-*/
-void QFSFileEngine_new1()
-{
-  QFSFileEngine * obj = new QFSFileEngine();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QFSFileEngine( const QString & file )
-*/
-void QFSFileEngine_new2()
-{
-  QFSFileEngine * obj = new QFSFileEngine( PQSTRING( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QFSFILEENGINE_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QFSFileEngine_new1();
+    /*
+    QFSFileEngine()
+    */
+    QFSFileEngine * obj = new QFSFileEngine();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QFSFileEngine_new2();
+    /*
+    QFSFileEngine( const QString & file )
+    */
+    QFSFileEngine * obj = new QFSFileEngine( PQSTRING( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -127,75 +117,55 @@ HB_FUNC_STATIC( QFSFILEENGINE_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-bool open( QIODevice::OpenMode openMode, FILE * fh )
-*/
-void QFSFileEngine_open1()
-{
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->open( ( QIODevice::OpenMode ) hb_parni( 1 ), static_cast< FILE * >( hb_parptr( 2 ) ) ) );
-  }
-}
-
-/*
-bool open( QIODevice::OpenMode openMode, int fd )
-*/
-void QFSFileEngine_open2()
-{
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->open( ( QIODevice::OpenMode ) hb_parni( 1 ), PINT( 2 ) ) );
-  }
-}
-
-/*
-bool open( QIODevice::OpenMode openMode, int fd, QFile::FileHandleFlags handleFlags )
-*/
-void QFSFileEngine_open3()
-{
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->open( ( QIODevice::OpenMode ) hb_parni( 1 ), PINT( 2 ), ( QFile::FileHandleFlags ) hb_parni( 3 ) ) );
-  }
-}
-
-/*
-bool open( QIODevice::OpenMode openMode, FILE * fh, QFile::FileHandleFlags handleFlags )
-*/
-void QFSFileEngine_open4()
-{
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->open( ( QIODevice::OpenMode ) hb_parni( 1 ), static_cast< FILE * >( hb_parptr( 2 ) ), ( QFile::FileHandleFlags ) hb_parni( 3 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QFSFILEENGINE_OPEN )
 {
   if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISPOINTER( 2 ) )
   {
-    QFSFileEngine_open1();
+    /*
+    bool open( QIODevice::OpenMode openMode, FILE * fh )
+    */
+    QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->open( ( QIODevice::OpenMode ) hb_parni( 1 ), static_cast< FILE * >( hb_parptr( 2 ) ) ) );
+    }
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QFSFileEngine_open2();
+    /*
+    bool open( QIODevice::OpenMode openMode, int fd )
+    */
+    QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->open( ( QIODevice::OpenMode ) hb_parni( 1 ), PINT( 2 ) ) );
+    }
   }
   else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
-    QFSFileEngine_open3();
+    /*
+    bool open( QIODevice::OpenMode openMode, int fd, QFile::FileHandleFlags handleFlags )
+    */
+    QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->open( ( QIODevice::OpenMode ) hb_parni( 1 ), PINT( 2 ), ( QFile::FileHandleFlags ) hb_parni( 3 ) ) );
+    }
   }
   else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISPOINTER( 2 ) && HB_ISNUM( 3 ) )
   {
-    QFSFileEngine_open4();
+    /*
+    bool open( QIODevice::OpenMode openMode, FILE * fh, QFile::FileHandleFlags handleFlags )
+    */
+    QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->open( ( QIODevice::OpenMode ) hb_parni( 1 ), static_cast< FILE * >( hb_parptr( 2 ) ), ( QFile::FileHandleFlags ) hb_parni( 3 ) ) );
+    }
   }
   else
   {

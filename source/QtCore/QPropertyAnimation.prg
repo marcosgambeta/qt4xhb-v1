@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -46,33 +46,23 @@ RETURN
 #include "qt4xhb_events.h"
 #include "qt4xhb_signals.h"
 
-/*
-QPropertyAnimation( QObject * parent = 0 )
-*/
-void QPropertyAnimation_new1()
-{
-  QPropertyAnimation * obj = new QPropertyAnimation( OPQOBJECT( 1, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QPropertyAnimation( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
-*/
-void QPropertyAnimation_new2()
-{
-  QPropertyAnimation * obj = new QPropertyAnimation( PQOBJECT( 1 ), *PQBYTEARRAY( 2 ), OPQOBJECT( 3, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QPROPERTYANIMATION_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QPropertyAnimation_new1();
+    /*
+    QPropertyAnimation( QObject * parent = 0 )
+    */
+    QPropertyAnimation * obj = new QPropertyAnimation( OPQOBJECT( 1, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISBETWEEN( 2, 3 ) && ISQOBJECT( 1 ) && ISQBYTEARRAY( 2 ) && ( ISQOBJECT( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QPropertyAnimation_new2();
+    /*
+    QPropertyAnimation( QObject * target, const QByteArray & propertyName, QObject * parent = 0 )
+    */
+    QPropertyAnimation * obj = new QPropertyAnimation( PQOBJECT( 1 ), *PQBYTEARRAY( 2 ), OPQOBJECT( 3, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

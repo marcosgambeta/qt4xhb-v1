@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -234,45 +234,35 @@ HB_FUNC_STATIC( QTIMER_TIMERID )
   }
 }
 
-/*
-void start( int msec )
-*/
-void QTimer_start1()
-{
-  QTimer * obj = qobject_cast< QTimer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->start( PINT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void start()
-*/
-void QTimer_start2()
-{
-  QTimer * obj = qobject_cast< QTimer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->start();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QTIMER_START )
 {
   if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QTimer_start1();
+    /*
+    void start( int msec )
+    */
+    QTimer * obj = qobject_cast< QTimer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->start( PINT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QTimer_start2();
+    /*
+    void start()
+    */
+    QTimer * obj = qobject_cast< QTimer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->start();
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

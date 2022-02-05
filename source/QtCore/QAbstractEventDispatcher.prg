@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -223,43 +223,33 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERSOCKETNOTIFIER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-int registerTimer( int interval, QObject * object )
-*/
-void QAbstractEventDispatcher_registerTimer1()
-{
-  QAbstractEventDispatcher * obj = qobject_cast< QAbstractEventDispatcher * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    RINT( obj->registerTimer( PINT( 1 ), PQOBJECT( 2 ) ) );
-  }
-}
-
-/*
-virtual void registerTimer( int timerId, int interval, QObject * object ) = 0
-*/
-void QAbstractEventDispatcher_registerTimer2()
-{
-  QAbstractEventDispatcher * obj = qobject_cast< QAbstractEventDispatcher * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->registerTimer( PINT( 1 ), PINT( 2 ), PQOBJECT( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER )
 {
   if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQOBJECT( 2 ) )
   {
-    QAbstractEventDispatcher_registerTimer1();
+    /*
+    int registerTimer( int interval, QObject * object )
+    */
+    QAbstractEventDispatcher * obj = qobject_cast< QAbstractEventDispatcher * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      RINT( obj->registerTimer( PINT( 1 ), PQOBJECT( 2 ) ) );
+    }
   }
   else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQOBJECT( 3 ) )
   {
-    QAbstractEventDispatcher_registerTimer2();
+    /*
+    virtual void registerTimer( int timerId, int interval, QObject * object ) = 0
+    */
+    QAbstractEventDispatcher * obj = qobject_cast< QAbstractEventDispatcher * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->registerTimer( PINT( 1 ), PINT( 2 ), PQOBJECT( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

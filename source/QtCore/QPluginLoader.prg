@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -50,33 +50,23 @@ RETURN
 #include "qt4xhb_events.h"
 #include "qt4xhb_signals.h"
 
-/*
-QPluginLoader( QObject * parent = 0 )
-*/
-void QPluginLoader_new1()
-{
-  QPluginLoader * obj = new QPluginLoader( OPQOBJECT( 1, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QPluginLoader( const QString & fileName, QObject * parent = 0 )
-*/
-void QPluginLoader_new2()
-{
-  QPluginLoader * obj = new QPluginLoader( PQSTRING( 1 ), OPQOBJECT( 2, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QPLUGINLOADER_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QPluginLoader_new1();
+    /*
+    QPluginLoader( QObject * parent = 0 )
+    */
+    QPluginLoader * obj = new QPluginLoader( OPQOBJECT( 1, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QPluginLoader_new2();
+    /*
+    QPluginLoader( const QString & fileName, QObject * parent = 0 )
+    */
+    QPluginLoader * obj = new QPluginLoader( PQSTRING( 1 ), OPQOBJECT( 2, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

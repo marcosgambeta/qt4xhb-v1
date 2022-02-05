@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -82,33 +82,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QFutureInterfaceBase( QFutureInterfaceBase::State initialState = QFutureInterfaceBase::NoState )
-*/
-void QFutureInterfaceBase_new1()
-{
-  QFutureInterfaceBase * obj = new QFutureInterfaceBase( HB_ISNIL( 1 ) ? ( QFutureInterfaceBase::State ) QFutureInterfaceBase::NoState : ( QFutureInterfaceBase::State ) hb_parni( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QFutureInterfaceBase( const QFutureInterfaceBase & other )
-*/
-void QFutureInterfaceBase_new2()
-{
-  QFutureInterfaceBase * obj = new QFutureInterfaceBase( *PQFUTUREINTERFACEBASE( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QFUTUREINTERFACEBASE_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QFutureInterfaceBase_new1();
+    /*
+    QFutureInterfaceBase( QFutureInterfaceBase::State initialState = QFutureInterfaceBase::NoState )
+    */
+    QFutureInterfaceBase * obj = new QFutureInterfaceBase( HB_ISNIL( 1 ) ? ( QFutureInterfaceBase::State ) QFutureInterfaceBase::NoState : ( QFutureInterfaceBase::State ) hb_parni( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQFUTUREINTERFACEBASE( 1 ) )
   {
-    QFutureInterfaceBase_new2();
+    /*
+    QFutureInterfaceBase( const QFutureInterfaceBase & other )
+    */
+    QFutureInterfaceBase * obj = new QFutureInterfaceBase( *PQFUTUREINTERFACEBASE( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

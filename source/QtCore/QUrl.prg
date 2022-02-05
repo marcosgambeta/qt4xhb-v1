@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -119,59 +119,39 @@ RETURN
 
 #include <QtCore/QStringList>
 
-/*
-QUrl()
-*/
-void QUrl_new1()
-{
-  QUrl * obj = new QUrl();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QUrl( const QString & url )
-*/
-void QUrl_new2()
-{
-  QUrl * obj = new QUrl( PQSTRING( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QUrl( const QUrl & other )
-*/
-void QUrl_new3()
-{
-  QUrl * obj = new QUrl( *PQURL( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QUrl( const QString & url, QUrl::ParsingMode parsingMode )
-*/
-void QUrl_new4()
-{
-  QUrl * obj = new QUrl( PQSTRING( 1 ), ( QUrl::ParsingMode ) hb_parni( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QURL_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QUrl_new1();
+    /*
+    QUrl()
+    */
+    QUrl * obj = new QUrl();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QUrl_new2();
+    /*
+    QUrl( const QString & url )
+    */
+    QUrl * obj = new QUrl( PQSTRING( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
   {
-    QUrl_new3();
+    /*
+    QUrl( const QUrl & other )
+    */
+    QUrl * obj = new QUrl( *PQURL( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) )
   {
-    QUrl_new4();
+    /*
+    QUrl( const QString & url, QUrl::ParsingMode parsingMode )
+    */
+    QUrl * obj = new QUrl( PQSTRING( 1 ), ( QUrl::ParsingMode ) hb_parni( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -885,41 +865,31 @@ HB_FUNC_STATIC( QURL_PATH )
   }
 }
 
-/*
-int port() const
-*/
-void QUrl_port1()
-{
-  QUrl * obj = static_cast< QUrl * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RINT( obj->port() );
-  }
-}
-
-/*
-int port( int defaultPort ) const
-*/
-void QUrl_port2()
-{
-  QUrl * obj = static_cast< QUrl * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RINT( obj->port( PINT( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QURL_PORT )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QUrl_port1();
+    /*
+    int port() const
+    */
+    QUrl * obj = static_cast< QUrl * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RINT( obj->port() );
+    }
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QUrl_port2();
+    /*
+    int port( int defaultPort ) const
+    */
+    QUrl * obj = static_cast< QUrl * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RINT( obj->port( PINT( 1 ) ) );
+    }
   }
   else
   {
@@ -1260,45 +1230,35 @@ HB_FUNC_STATIC( QURL_SETENCODEDQUERY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setEncodedUrl( const QByteArray & encodedUrl )
-*/
-void QUrl_setEncodedUrl1()
-{
-  QUrl * obj = static_cast< QUrl * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setEncodedUrl( *PQBYTEARRAY( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setEncodedUrl( const QByteArray & encodedUrl, QUrl::ParsingMode parsingMode )
-*/
-void QUrl_setEncodedUrl2()
-{
-  QUrl * obj = static_cast< QUrl * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setEncodedUrl( *PQBYTEARRAY( 1 ), ( QUrl::ParsingMode ) hb_parni( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QURL_SETENCODEDURL )
 {
   if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    QUrl_setEncodedUrl1();
+    /*
+    void setEncodedUrl( const QByteArray & encodedUrl )
+    */
+    QUrl * obj = static_cast< QUrl * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setEncodedUrl( *PQBYTEARRAY( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && ISQBYTEARRAY( 1 ) && HB_ISNUM( 2 ) )
   {
-    QUrl_setEncodedUrl2();
+    /*
+    void setEncodedUrl( const QByteArray & encodedUrl, QUrl::ParsingMode parsingMode )
+    */
+    QUrl * obj = static_cast< QUrl * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setEncodedUrl( *PQBYTEARRAY( 1 ), ( QUrl::ParsingMode ) hb_parni( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -1514,45 +1474,35 @@ HB_FUNC_STATIC( QURL_SETSCHEME )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setUrl( const QString & url )
-*/
-void QUrl_setUrl1()
-{
-  QUrl * obj = static_cast< QUrl * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setUrl( PQSTRING( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setUrl( const QString & url, QUrl::ParsingMode parsingMode )
-*/
-void QUrl_setUrl2()
-{
-  QUrl * obj = static_cast< QUrl * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setUrl( PQSTRING( 1 ), ( QUrl::ParsingMode ) hb_parni( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QURL_SETURL )
 {
   if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QUrl_setUrl1();
+    /*
+    void setUrl( const QString & url )
+    */
+    QUrl * obj = static_cast< QUrl * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setUrl( PQSTRING( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) )
   {
-    QUrl_setUrl2();
+    /*
+    void setUrl( const QString & url, QUrl::ParsingMode parsingMode )
+    */
+    QUrl * obj = static_cast< QUrl * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setUrl( PQSTRING( 1 ), ( QUrl::ParsingMode ) hb_parni( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -1802,35 +1752,25 @@ HB_FUNC_STATIC( QURL_FROMACE )
 #endif
 }
 
-/*
-static QUrl fromEncoded( const QByteArray & input )
-*/
-void QUrl_fromEncoded1()
-{
-
-  QUrl * ptr = new QUrl( QUrl::fromEncoded( *PQBYTEARRAY( 1 ) ) );
-  Qt4xHb::createReturnClass( ptr, "QURL", true );
-}
-
-/*
-static QUrl fromEncoded( const QByteArray & input, QUrl::ParsingMode parsingMode )
-*/
-void QUrl_fromEncoded2()
-{
-
-  QUrl * ptr = new QUrl( QUrl::fromEncoded( *PQBYTEARRAY( 1 ), ( QUrl::ParsingMode ) hb_parni( 2 ) ) );
-  Qt4xHb::createReturnClass( ptr, "QURL", true );
-}
-
 HB_FUNC_STATIC( QURL_FROMENCODED )
 {
   if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    QUrl_fromEncoded1();
+    /*
+    static QUrl fromEncoded( const QByteArray & input )
+    */
+
+    QUrl * ptr = new QUrl( QUrl::fromEncoded( *PQBYTEARRAY( 1 ) ) );
+    Qt4xHb::createReturnClass( ptr, "QURL", true );
   }
   else if( ISNUMPAR( 2 ) && ISQBYTEARRAY( 1 ) && HB_ISNUM( 2 ) )
   {
-    QUrl_fromEncoded2();
+    /*
+    static QUrl fromEncoded( const QByteArray & input, QUrl::ParsingMode parsingMode )
+    */
+
+    QUrl * ptr = new QUrl( QUrl::fromEncoded( *PQBYTEARRAY( 1 ), ( QUrl::ParsingMode ) hb_parni( 2 ) ) );
+    Qt4xHb::createReturnClass( ptr, "QURL", true );
   }
   else
   {

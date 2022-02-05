@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -60,33 +60,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QModelIndex()
-*/
-void QModelIndex_new1()
-{
-  QModelIndex * obj = new QModelIndex();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QModelIndex( const QModelIndex & other )
-*/
-void QModelIndex_new2()
-{
-  QModelIndex * obj = new QModelIndex( *PQMODELINDEX( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QMODELINDEX_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QModelIndex_new1();
+    /*
+    QModelIndex()
+    */
+    QModelIndex * obj = new QModelIndex();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
   {
-    QModelIndex_new2();
+    /*
+    QModelIndex( const QModelIndex & other )
+    */
+    QModelIndex * obj = new QModelIndex( *PQMODELINDEX( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

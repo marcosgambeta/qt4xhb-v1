@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -45,33 +45,23 @@ RETURN
 #include "qt4xhb_events.h"
 #include "qt4xhb_signals.h"
 
-/*
-QHistoryState( QState * parent = 0 )
-*/
-void QHistoryState_new1()
-{
-  QHistoryState * obj = new QHistoryState( OPQSTATE( 1, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QHistoryState( QHistoryState::HistoryType type, QState * parent = 0 )
-*/
-void QHistoryState_new2()
-{
-  QHistoryState * obj = new QHistoryState( ( QHistoryState::HistoryType ) hb_parni( 1 ), OPQSTATE( 2, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QHISTORYSTATE_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQSTATE( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QHistoryState_new1();
+    /*
+    QHistoryState( QState * parent = 0 )
+    */
+    QHistoryState * obj = new QHistoryState( OPQSTATE( 1, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( ISQSTATE( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QHistoryState_new2();
+    /*
+    QHistoryState( QHistoryState::HistoryType type, QState * parent = 0 )
+    */
+    QHistoryState * obj = new QHistoryState( ( QHistoryState::HistoryType ) hb_parni( 1 ), OPQSTATE( 2, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

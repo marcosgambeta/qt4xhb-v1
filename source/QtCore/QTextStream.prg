@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -87,72 +87,47 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTextStream()
-*/
-void QTextStream_new1()
-{
-  QTextStream * obj = new QTextStream();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextStream( QIODevice * device )
-*/
-void QTextStream_new2()
-{
-  QTextStream * obj = new QTextStream( PQIODEVICE( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextStream( FILE * fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
-*/
-void QTextStream_new3()
-{
-  QTextStream * obj = new QTextStream( static_cast< FILE * >( hb_parptr( 1 ) ), HB_ISNIL( 2 ) ? ( QIODevice::OpenMode ) QIODevice::ReadWrite : ( QIODevice::OpenMode ) hb_parni( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextStream( QByteArray * array, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
-*/
-void QTextStream_new5()
-{
-  QTextStream * obj = new QTextStream( PQBYTEARRAY( 1 ), HB_ISNIL( 2 ) ? ( QIODevice::OpenMode ) QIODevice::ReadWrite : ( QIODevice::OpenMode ) hb_parni( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextStream( const QByteArray & array, QIODevice::OpenMode openMode = QIODevice::ReadOnly )
-*/
-void QTextStream_new6()
-{
-  QTextStream * obj = new QTextStream( *PQBYTEARRAY( 1 ), HB_ISNIL( 2 ) ? ( QIODevice::OpenMode ) QIODevice::ReadOnly : ( QIODevice::OpenMode ) hb_parni( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QTEXTSTREAM_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QTextStream_new1();
+    /*
+    QTextStream()
+    */
+    QTextStream * obj = new QTextStream();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQIODEVICE( 1 ) )
   {
-    QTextStream_new2();
+    /*
+    QTextStream( QIODevice * device )
+    */
+    QTextStream * obj = new QTextStream( PQIODEVICE( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISPOINTER( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QTextStream_new3();
+    /*
+    QTextStream( FILE * fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
+    */
+    QTextStream * obj = new QTextStream( static_cast< FILE * >( hb_parptr( 1 ) ), HB_ISNIL( 2 ) ? ( QIODevice::OpenMode ) QIODevice::ReadWrite : ( QIODevice::OpenMode ) hb_parni( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 1, 2 ) && ISQBYTEARRAY( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QTextStream_new5();
+    /*
+    QTextStream( QByteArray * array, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
+    */
+    QTextStream * obj = new QTextStream( PQBYTEARRAY( 1 ), HB_ISNIL( 2 ) ? ( QIODevice::OpenMode ) QIODevice::ReadWrite : ( QIODevice::OpenMode ) hb_parni( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 1, 2 ) && ISQBYTEARRAY( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QTextStream_new6();
+    /*
+    QTextStream( const QByteArray & array, QIODevice::OpenMode openMode = QIODevice::ReadOnly )
+    */
+    QTextStream * obj = new QTextStream( *PQBYTEARRAY( 1 ), HB_ISNIL( 2 ) ? ( QIODevice::OpenMode ) QIODevice::ReadOnly : ( QIODevice::OpenMode ) hb_parni( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -177,45 +152,35 @@ HB_FUNC_STATIC( QTEXTSTREAM_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setCodec( QTextCodec * codec )
-*/
-void QTextStream_setCodec1()
-{
-  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setCodec( PQTEXTCODEC( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setCodec( const char * codecName )
-*/
-void QTextStream_setCodec2()
-{
-  QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setCodec( PCONSTCHAR( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QTEXTSTREAM_SETCODEC )
 {
   if( ISNUMPAR( 1 ) && ISQTEXTCODEC( 1 ) )
   {
-    QTextStream_setCodec1();
+    /*
+    void setCodec( QTextCodec * codec )
+    */
+    QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setCodec( PQTEXTCODEC( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QTextStream_setCodec2();
+    /*
+    void setCodec( const char * codecName )
+    */
+    QTextStream * obj = static_cast< QTextStream * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setCodec( PCONSTCHAR( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

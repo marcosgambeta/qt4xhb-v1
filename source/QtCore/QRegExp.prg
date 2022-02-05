@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -69,46 +69,31 @@ RETURN
 
 #include <QtCore/QStringList>
 
-/*
-QRegExp()
-*/
-void QRegExp_new1()
-{
-  QRegExp * obj = new QRegExp();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QRegExp( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, QRegExp::PatternSyntax syntax = QRegExp::RegExp )
-*/
-void QRegExp_new2()
-{
-  QRegExp * obj = new QRegExp( PQSTRING( 1 ), HB_ISNIL( 2 ) ? ( Qt::CaseSensitivity ) Qt::CaseSensitive : ( Qt::CaseSensitivity ) hb_parni( 2 ), HB_ISNIL( 3 ) ? ( QRegExp::PatternSyntax ) QRegExp::RegExp : ( QRegExp::PatternSyntax ) hb_parni( 3 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QRegExp( const QRegExp & rx )
-*/
-void QRegExp_new3()
-{
-  QRegExp * obj = new QRegExp( *PQREGEXP( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QREGEXP_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QRegExp_new1();
+    /*
+    QRegExp()
+    */
+    QRegExp * obj = new QRegExp();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 1, 3 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QRegExp_new2();
+    /*
+    QRegExp( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, QRegExp::PatternSyntax syntax = QRegExp::RegExp )
+    */
+    QRegExp * obj = new QRegExp( PQSTRING( 1 ), HB_ISNIL( 2 ) ? ( Qt::CaseSensitivity ) Qt::CaseSensitive : ( Qt::CaseSensitivity ) hb_parni( 2 ), HB_ISNIL( 3 ) ? ( QRegExp::PatternSyntax ) QRegExp::RegExp : ( QRegExp::PatternSyntax ) hb_parni( 3 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQREGEXP( 1 ) )
   {
-    QRegExp_new3();
+    /*
+    QRegExp( const QRegExp & rx )
+    */
+    QRegExp * obj = new QRegExp( *PQREGEXP( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

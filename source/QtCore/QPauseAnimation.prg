@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -42,33 +42,23 @@ RETURN
 #include "qt4xhb_events.h"
 #include "qt4xhb_signals.h"
 
-/*
-QPauseAnimation( QObject * parent = 0 )
-*/
-void QPauseAnimation_new1()
-{
-  QPauseAnimation * obj = new QPauseAnimation( OPQOBJECT( 1, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QPauseAnimation( int msecs, QObject * parent = 0 )
-*/
-void QPauseAnimation_new2()
-{
-  QPauseAnimation * obj = new QPauseAnimation( PINT( 1 ), OPQOBJECT( 2, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QPAUSEANIMATION_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QPauseAnimation_new1();
+    /*
+    QPauseAnimation( QObject * parent = 0 )
+    */
+    QPauseAnimation * obj = new QPauseAnimation( OPQOBJECT( 1, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QPauseAnimation_new2();
+    /*
+    QPauseAnimation( int msecs, QObject * parent = 0 )
+    */
+    QPauseAnimation * obj = new QPauseAnimation( PINT( 1 ), OPQOBJECT( 2, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -109,41 +109,31 @@ HB_FUNC_STATIC( QMUTEX_LOCK )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-bool tryLock()
-*/
-void QMutex_tryLock1()
-{
-  QMutex * obj = static_cast< QMutex * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->tryLock() );
-  }
-}
-
-/*
-bool tryLock( int timeout )
-*/
-void QMutex_tryLock2()
-{
-  QMutex * obj = static_cast< QMutex * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->tryLock( PINT( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QMUTEX_TRYLOCK )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QMutex_tryLock1();
+    /*
+    bool tryLock()
+    */
+    QMutex * obj = static_cast< QMutex * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->tryLock() );
+    }
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QMutex_tryLock2();
+    /*
+    bool tryLock( int timeout )
+    */
+    QMutex * obj = static_cast< QMutex * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->tryLock( PINT( 1 ) ) );
+    }
   }
   else
   {

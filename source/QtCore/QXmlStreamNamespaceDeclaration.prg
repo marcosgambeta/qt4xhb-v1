@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -50,46 +50,31 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QXmlStreamNamespaceDeclaration()
-*/
-void QXmlStreamNamespaceDeclaration_new1()
-{
-  QXmlStreamNamespaceDeclaration * obj = new QXmlStreamNamespaceDeclaration();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QXmlStreamNamespaceDeclaration( const QXmlStreamNamespaceDeclaration & other )
-*/
-void QXmlStreamNamespaceDeclaration_new2()
-{
-  QXmlStreamNamespaceDeclaration * obj = new QXmlStreamNamespaceDeclaration( *PQXMLSTREAMNAMESPACEDECLARATION( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QXmlStreamNamespaceDeclaration( const QString & prefix, const QString & namespaceUri )
-*/
-void QXmlStreamNamespaceDeclaration_new3()
-{
-  QXmlStreamNamespaceDeclaration * obj = new QXmlStreamNamespaceDeclaration( PQSTRING( 1 ), PQSTRING( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QXMLSTREAMNAMESPACEDECLARATION_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QXmlStreamNamespaceDeclaration_new1();
+    /*
+    QXmlStreamNamespaceDeclaration()
+    */
+    QXmlStreamNamespaceDeclaration * obj = new QXmlStreamNamespaceDeclaration();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQXMLSTREAMNAMESPACEDECLARATION( 1 ) )
   {
-    QXmlStreamNamespaceDeclaration_new2();
+    /*
+    QXmlStreamNamespaceDeclaration( const QXmlStreamNamespaceDeclaration & other )
+    */
+    QXmlStreamNamespaceDeclaration * obj = new QXmlStreamNamespaceDeclaration( *PQXMLSTREAMNAMESPACEDECLARATION( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QXmlStreamNamespaceDeclaration_new3();
+    /*
+    QXmlStreamNamespaceDeclaration( const QString & prefix, const QString & namespaceUri )
+    */
+    QXmlStreamNamespaceDeclaration * obj = new QXmlStreamNamespaceDeclaration( PQSTRING( 1 ), PQSTRING( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

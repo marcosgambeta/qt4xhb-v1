@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -106,72 +106,47 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QXmlStreamReader()
-*/
-void QXmlStreamReader_new1()
-{
-  QXmlStreamReader * obj = new QXmlStreamReader();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QXmlStreamReader( QIODevice * device )
-*/
-void QXmlStreamReader_new2()
-{
-  QXmlStreamReader * obj = new QXmlStreamReader( PQIODEVICE( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QXmlStreamReader( const QByteArray & data )
-*/
-void QXmlStreamReader_new3()
-{
-  QXmlStreamReader * obj = new QXmlStreamReader( *PQBYTEARRAY( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QXmlStreamReader( const QString & data )
-*/
-void QXmlStreamReader_new4()
-{
-  QXmlStreamReader * obj = new QXmlStreamReader( PQSTRING( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QXmlStreamReader( const char * data )
-*/
-void QXmlStreamReader_new5()
-{
-  QXmlStreamReader * obj = new QXmlStreamReader( PCONSTCHAR( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QXMLSTREAMREADER_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QXmlStreamReader_new1();
+    /*
+    QXmlStreamReader()
+    */
+    QXmlStreamReader * obj = new QXmlStreamReader();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQIODEVICE( 1 ) )
   {
-    QXmlStreamReader_new2();
+    /*
+    QXmlStreamReader( QIODevice * device )
+    */
+    QXmlStreamReader * obj = new QXmlStreamReader( PQIODEVICE( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    QXmlStreamReader_new3();
+    /*
+    QXmlStreamReader( const QByteArray & data )
+    */
+    QXmlStreamReader * obj = new QXmlStreamReader( *PQBYTEARRAY( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QXmlStreamReader_new4();
+    /*
+    QXmlStreamReader( const QString & data )
+    */
+    QXmlStreamReader * obj = new QXmlStreamReader( PQSTRING( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QXmlStreamReader_new5();
+    /*
+    QXmlStreamReader( const char * data )
+    */
+    QXmlStreamReader * obj = new QXmlStreamReader( PCONSTCHAR( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -196,60 +171,35 @@ HB_FUNC_STATIC( QXMLSTREAMREADER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void addData( const QByteArray & data )
-*/
-void QXmlStreamReader_addData1()
-{
-  QXmlStreamReader * obj = static_cast< QXmlStreamReader * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->addData( *PQBYTEARRAY( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void addData( const QString & data )
-*/
-void QXmlStreamReader_addData2()
-{
-  QXmlStreamReader * obj = static_cast< QXmlStreamReader * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->addData( PQSTRING( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void addData( const char * data )
-*/
-void QXmlStreamReader_addData3()
-{
-  QXmlStreamReader * obj = static_cast< QXmlStreamReader * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->addData( PCONSTCHAR( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QXMLSTREAMREADER_ADDDATA )
 {
   if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    QXmlStreamReader_addData1();
+    /*
+    void addData( const QByteArray & data )
+    */
+    QXmlStreamReader * obj = static_cast< QXmlStreamReader * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->addData( *PQBYTEARRAY( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QXmlStreamReader_addData2();
+    /*
+    void addData( const QString & data )
+    */
+    QXmlStreamReader * obj = static_cast< QXmlStreamReader * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->addData( PQSTRING( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

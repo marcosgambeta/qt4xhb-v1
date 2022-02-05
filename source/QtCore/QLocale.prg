@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -129,72 +129,47 @@ RETURN
 #include <QtCore/QDate>
 #include <QtCore/QStringList>
 
-/*
-QLocale()
-*/
-void QLocale_new1()
-{
-  QLocale * obj = new QLocale();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QLocale( const QString & name )
-*/
-void QLocale_new2()
-{
-  QLocale * obj = new QLocale( PQSTRING( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QLocale( QLocale::Language language, QLocale::Country country = QLocale::AnyCountry )
-*/
-void QLocale_new3()
-{
-  QLocale * obj = new QLocale( ( QLocale::Language ) hb_parni( 1 ), HB_ISNIL( 2 ) ? ( QLocale::Country ) QLocale::AnyCountry : ( QLocale::Country ) hb_parni( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QLocale( QLocale::Language language, QLocale::Script script, QLocale::Country country )
-*/
-void QLocale_new4()
-{
-  QLocale * obj = new QLocale( ( QLocale::Language ) hb_parni( 1 ), ( QLocale::Script ) hb_parni( 2 ), ( QLocale::Country ) hb_parni( 3 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QLocale( const QLocale & other )
-*/
-void QLocale_new5()
-{
-  QLocale * obj = new QLocale( *PQLOCALE( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QLOCALE_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QLocale_new1();
+    /*
+    QLocale()
+    */
+    QLocale * obj = new QLocale();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QLocale_new2();
+    /*
+    QLocale( const QString & name )
+    */
+    QLocale * obj = new QLocale( PQSTRING( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QLocale_new3();
+    /*
+    QLocale( QLocale::Language language, QLocale::Country country = QLocale::AnyCountry )
+    */
+    QLocale * obj = new QLocale( ( QLocale::Language ) hb_parni( 1 ), HB_ISNIL( 2 ) ? ( QLocale::Country ) QLocale::AnyCountry : ( QLocale::Country ) hb_parni( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
-    QLocale_new4();
+    /*
+    QLocale( QLocale::Language language, QLocale::Script script, QLocale::Country country )
+    */
+    QLocale * obj = new QLocale( ( QLocale::Language ) hb_parni( 1 ), ( QLocale::Script ) hb_parni( 2 ), ( QLocale::Country ) hb_parni( 3 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQLOCALE( 1 ) )
   {
-    QLocale_new5();
+    /*
+    QLocale( const QLocale & other )
+    */
+    QLocale * obj = new QLocale( *PQLOCALE( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -760,41 +735,31 @@ HB_FUNC_STATIC( QLOCALE_POSITIVESIGN )
   }
 }
 
-/*
-QString quoteString( const QString & str, QLocale::QuotationStyle style = QLocale::StandardQuotation ) const
-*/
-void QLocale_quoteString1()
-{
-  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RQSTRING( obj->quoteString( PQSTRING( 1 ), HB_ISNIL( 2 ) ? ( QLocale::QuotationStyle ) QLocale::StandardQuotation : ( QLocale::QuotationStyle ) hb_parni( 2 ) ) );
-  }
-}
-
-/*
-QString quoteString( const QStringRef & str, QLocale::QuotationStyle style = QLocale::StandardQuotation ) const
-*/
-void QLocale_quoteString2()
-{
-  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RQSTRING( obj->quoteString( *PQSTRINGREF( 1 ), HB_ISNIL( 2 ) ? ( QLocale::QuotationStyle ) QLocale::StandardQuotation : ( QLocale::QuotationStyle ) hb_parni( 2 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QLOCALE_QUOTESTRING )
 {
   if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QLocale_quoteString1();
+    /*
+    QString quoteString( const QString & str, QLocale::QuotationStyle style = QLocale::StandardQuotation ) const
+    */
+    QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RQSTRING( obj->quoteString( PQSTRING( 1 ), HB_ISNIL( 2 ) ? ( QLocale::QuotationStyle ) QLocale::StandardQuotation : ( QLocale::QuotationStyle ) hb_parni( 2 ) ) );
+    }
   }
   else if( ISBETWEEN( 1, 2 ) && ISQSTRINGREF( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QLocale_quoteString2();
+    /*
+    QString quoteString( const QStringRef & str, QLocale::QuotationStyle style = QLocale::StandardQuotation ) const
+    */
+    QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RQSTRING( obj->quoteString( *PQSTRINGREF( 1 ), HB_ISNIL( 2 ) ? ( QLocale::QuotationStyle ) QLocale::StandardQuotation : ( QLocale::QuotationStyle ) hb_parni( 2 ) ) );
+    }
   }
   else
   {
@@ -1144,43 +1109,33 @@ HB_FUNC_STATIC( QLOCALE_TOCURRENCYSTRING )
 {
 }
 
-/*
-QDate toDate( const QString & string, QLocale::FormatType format = QLocale::LongFormat ) const
-*/
-void QLocale_toDate1()
-{
-  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QDate * ptr = new QDate( obj->toDate( PQSTRING( 1 ), HB_ISNIL( 2 ) ? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 2 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QDATE", true );
-  }
-}
-
-/*
-QDate toDate( const QString & string, const QString & format ) const
-*/
-void QLocale_toDate2()
-{
-  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QDate * ptr = new QDate( obj->toDate( PQSTRING( 1 ), PQSTRING( 2 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QDATE", true );
-  }
-}
-
 HB_FUNC_STATIC( QLOCALE_TODATE )
 {
   if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QLocale_toDate1();
+    /*
+    QDate toDate( const QString & string, QLocale::FormatType format = QLocale::LongFormat ) const
+    */
+    QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QDate * ptr = new QDate( obj->toDate( PQSTRING( 1 ), HB_ISNIL( 2 ) ? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 2 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QDATE", true );
+    }
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QLocale_toDate2();
+    /*
+    QDate toDate( const QString & string, const QString & format ) const
+    */
+    QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QDate * ptr = new QDate( obj->toDate( PQSTRING( 1 ), PQSTRING( 2 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QDATE", true );
+    }
   }
   else
   {
@@ -1188,43 +1143,33 @@ HB_FUNC_STATIC( QLOCALE_TODATE )
   }
 }
 
-/*
-QDateTime toDateTime( const QString & string, QLocale::FormatType format = QLocale::LongFormat ) const
-*/
-void QLocale_toDateTime1()
-{
-  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QDateTime * ptr = new QDateTime( obj->toDateTime( PQSTRING( 1 ), HB_ISNIL( 2 ) ? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 2 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
-  }
-}
-
-/*
-QDateTime toDateTime( const QString & string, const QString & format ) const
-*/
-void QLocale_toDateTime2()
-{
-  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QDateTime * ptr = new QDateTime( obj->toDateTime( PQSTRING( 1 ), PQSTRING( 2 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
-  }
-}
-
 HB_FUNC_STATIC( QLOCALE_TODATETIME )
 {
   if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QLocale_toDateTime1();
+    /*
+    QDateTime toDateTime( const QString & string, QLocale::FormatType format = QLocale::LongFormat ) const
+    */
+    QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QDateTime * ptr = new QDateTime( obj->toDateTime( PQSTRING( 1 ), HB_ISNIL( 2 ) ? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 2 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
+    }
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QLocale_toDateTime2();
+    /*
+    QDateTime toDateTime( const QString & string, const QString & format ) const
+    */
+    QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QDateTime * ptr = new QDateTime( obj->toDateTime( PQSTRING( 1 ), PQSTRING( 2 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
+    }
   }
   else
   {
@@ -1726,43 +1671,33 @@ HB_FUNC_STATIC( QLOCALE_TOSTRING )
 {
 }
 
-/*
-QTime toTime( const QString & string, QLocale::FormatType format = QLocale::LongFormat ) const
-*/
-void QLocale_toTime1()
-{
-  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QTime * ptr = new QTime( obj->toTime( PQSTRING( 1 ), HB_ISNIL( 2 ) ? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 2 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QTIME", true );
-  }
-}
-
-/*
-QTime toTime( const QString & string, const QString & format ) const
-*/
-void QLocale_toTime2()
-{
-  QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QTime * ptr = new QTime( obj->toTime( PQSTRING( 1 ), PQSTRING( 2 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QTIME", true );
-  }
-}
-
 HB_FUNC_STATIC( QLOCALE_TOTIME )
 {
   if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QLocale_toTime1();
+    /*
+    QTime toTime( const QString & string, QLocale::FormatType format = QLocale::LongFormat ) const
+    */
+    QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QTime * ptr = new QTime( obj->toTime( PQSTRING( 1 ), HB_ISNIL( 2 ) ? ( QLocale::FormatType ) QLocale::LongFormat : ( QLocale::FormatType ) hb_parni( 2 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QTIME", true );
+    }
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QLocale_toTime2();
+    /*
+    QTime toTime( const QString & string, const QString & format ) const
+    */
+    QLocale * obj = static_cast< QLocale * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QTime * ptr = new QTime( obj->toTime( PQSTRING( 1 ), PQSTRING( 2 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QTIME", true );
+    }
   }
   else
   {

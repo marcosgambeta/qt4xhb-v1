@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -63,59 +63,39 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDataStream()
-*/
-void QDataStream_new1()
-{
-  QDataStream * obj = new QDataStream();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QDataStream( QIODevice * d )
-*/
-void QDataStream_new2()
-{
-  QDataStream * obj = new QDataStream( PQIODEVICE( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QDataStream( QByteArray * a, QIODevice::OpenMode mode )
-*/
-void QDataStream_new3()
-{
-  QDataStream * obj = new QDataStream( PQBYTEARRAY( 1 ), ( QIODevice::OpenMode ) hb_parni( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QDataStream( const QByteArray & a )
-*/
-void QDataStream_new4()
-{
-  QDataStream * obj = new QDataStream( *PQBYTEARRAY( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QDATASTREAM_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QDataStream_new1();
+    /*
+    QDataStream()
+    */
+    QDataStream * obj = new QDataStream();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQIODEVICE( 1 ) )
   {
-    QDataStream_new2();
+    /*
+    QDataStream( QIODevice * d )
+    */
+    QDataStream * obj = new QDataStream( PQIODEVICE( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 2 ) && ISQBYTEARRAY( 1 ) && HB_ISNUM( 2 ) )
   {
-    QDataStream_new3();
+    /*
+    QDataStream( QByteArray * a, QIODevice::OpenMode mode )
+    */
+    QDataStream * obj = new QDataStream( PQBYTEARRAY( 1 ), ( QIODevice::OpenMode ) hb_parni( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    QDataStream_new4();
+    /*
+    QDataStream( const QByteArray & a )
+    */
+    QDataStream * obj = new QDataStream( *PQBYTEARRAY( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -53,33 +53,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QXmlStreamEntityDeclaration()
-*/
-void QXmlStreamEntityDeclaration_new1()
-{
-  QXmlStreamEntityDeclaration * obj = new QXmlStreamEntityDeclaration();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QXmlStreamEntityDeclaration( const QXmlStreamEntityDeclaration & other )
-*/
-void QXmlStreamEntityDeclaration_new2()
-{
-  QXmlStreamEntityDeclaration * obj = new QXmlStreamEntityDeclaration( *PQXMLSTREAMENTITYDECLARATION( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QXMLSTREAMENTITYDECLARATION_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QXmlStreamEntityDeclaration_new1();
+    /*
+    QXmlStreamEntityDeclaration()
+    */
+    QXmlStreamEntityDeclaration * obj = new QXmlStreamEntityDeclaration();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQXMLSTREAMENTITYDECLARATION( 1 ) )
   {
-    QXmlStreamEntityDeclaration_new2();
+    /*
+    QXmlStreamEntityDeclaration( const QXmlStreamEntityDeclaration & other )
+    */
+    QXmlStreamEntityDeclaration * obj = new QXmlStreamEntityDeclaration( *PQXMLSTREAMENTITYDECLARATION( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

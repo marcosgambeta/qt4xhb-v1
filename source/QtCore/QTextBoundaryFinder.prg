@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -58,46 +58,31 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTextBoundaryFinder()
-*/
-void QTextBoundaryFinder_new1()
-{
-  QTextBoundaryFinder * obj = new QTextBoundaryFinder();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextBoundaryFinder( const QTextBoundaryFinder & other )
-*/
-void QTextBoundaryFinder_new2()
-{
-  QTextBoundaryFinder * obj = new QTextBoundaryFinder( *PQTEXTBOUNDARYFINDER( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextBoundaryFinder( QTextBoundaryFinder::BoundaryType type, const QString & string )
-*/
-void QTextBoundaryFinder_new3()
-{
-  QTextBoundaryFinder * obj = new QTextBoundaryFinder( ( QTextBoundaryFinder::BoundaryType ) hb_parni( 1 ), PQSTRING( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QTEXTBOUNDARYFINDER_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QTextBoundaryFinder_new1();
+    /*
+    QTextBoundaryFinder()
+    */
+    QTextBoundaryFinder * obj = new QTextBoundaryFinder();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQTEXTBOUNDARYFINDER( 1 ) )
   {
-    QTextBoundaryFinder_new2();
+    /*
+    QTextBoundaryFinder( const QTextBoundaryFinder & other )
+    */
+    QTextBoundaryFinder * obj = new QTextBoundaryFinder( *PQTEXTBOUNDARYFINDER( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QTextBoundaryFinder_new3();
+    /*
+    QTextBoundaryFinder( QTextBoundaryFinder::BoundaryType type, const QString & string )
+    */
+    QTextBoundaryFinder * obj = new QTextBoundaryFinder( ( QTextBoundaryFinder::BoundaryType ) hb_parni( 1 ), PQSTRING( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

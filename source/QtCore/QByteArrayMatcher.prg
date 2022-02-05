@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -51,59 +51,39 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QByteArrayMatcher()
-*/
-void QByteArrayMatcher_new1()
-{
-  QByteArrayMatcher * obj = new QByteArrayMatcher();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QByteArrayMatcher( const QByteArray & pattern )
-*/
-void QByteArrayMatcher_new2()
-{
-  QByteArrayMatcher * obj = new QByteArrayMatcher( *PQBYTEARRAY( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QByteArrayMatcher( const char * pattern, int length )
-*/
-void QByteArrayMatcher_new3()
-{
-  QByteArrayMatcher * obj = new QByteArrayMatcher( PCONSTCHAR( 1 ), PINT( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QByteArrayMatcher( const QByteArrayMatcher & other )
-*/
-void QByteArrayMatcher_new4()
-{
-  QByteArrayMatcher * obj = new QByteArrayMatcher( *PQBYTEARRAYMATCHER( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QByteArrayMatcher_new1();
+    /*
+    QByteArrayMatcher()
+    */
+    QByteArrayMatcher * obj = new QByteArrayMatcher();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    QByteArrayMatcher_new2();
+    /*
+    QByteArrayMatcher( const QByteArray & pattern )
+    */
+    QByteArrayMatcher * obj = new QByteArrayMatcher( *PQBYTEARRAY( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) )
   {
-    QByteArrayMatcher_new3();
+    /*
+    QByteArrayMatcher( const char * pattern, int length )
+    */
+    QByteArrayMatcher * obj = new QByteArrayMatcher( PCONSTCHAR( 1 ), PINT( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQBYTEARRAYMATCHER( 1 ) )
   {
-    QByteArrayMatcher_new4();
+    /*
+    QByteArrayMatcher( const QByteArrayMatcher & other )
+    */
+    QByteArrayMatcher * obj = new QByteArrayMatcher( *PQBYTEARRAYMATCHER( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -128,41 +108,31 @@ HB_FUNC_STATIC( QBYTEARRAYMATCHER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-int indexIn( const QByteArray & ba, int from = 0 ) const
-*/
-void QByteArrayMatcher_indexIn1()
-{
-  QByteArrayMatcher * obj = static_cast< QByteArrayMatcher * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RINT( obj->indexIn( *PQBYTEARRAY( 1 ), OPINT( 2, 0 ) ) );
-  }
-}
-
-/*
-int indexIn( const char * str, int len, int from = 0 ) const
-*/
-void QByteArrayMatcher_indexIn2()
-{
-  QByteArrayMatcher * obj = static_cast< QByteArrayMatcher * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RINT( obj->indexIn( PCONSTCHAR( 1 ), PINT( 2 ), OPINT( 3, 0 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QBYTEARRAYMATCHER_INDEXIN )
 {
   if( ISBETWEEN( 1, 2 ) && ISQBYTEARRAY( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QByteArrayMatcher_indexIn1();
+    /*
+    int indexIn( const QByteArray & ba, int from = 0 ) const
+    */
+    QByteArrayMatcher * obj = static_cast< QByteArrayMatcher * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RINT( obj->indexIn( *PQBYTEARRAY( 1 ), OPINT( 2, 0 ) ) );
+    }
   }
   else if( ISBETWEEN( 2, 3 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QByteArrayMatcher_indexIn2();
+    /*
+    int indexIn( const char * str, int len, int from = 0 ) const
+    */
+    QByteArrayMatcher * obj = static_cast< QByteArrayMatcher * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RINT( obj->indexIn( PCONSTCHAR( 1 ), PINT( 2 ), OPINT( 3, 0 ) ) );
+    }
   }
   else
   {

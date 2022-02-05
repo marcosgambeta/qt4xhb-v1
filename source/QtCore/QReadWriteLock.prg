@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -52,33 +52,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QReadWriteLock()
-*/
-void QReadWriteLock_new1()
-{
-  QReadWriteLock * obj = new QReadWriteLock();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QReadWriteLock( QReadWriteLock::RecursionMode recursionMode )
-*/
-void QReadWriteLock_new2()
-{
-  QReadWriteLock * obj = new QReadWriteLock( ( QReadWriteLock::RecursionMode ) hb_parni( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QREADWRITELOCK_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QReadWriteLock_new1();
+    /*
+    QReadWriteLock()
+    */
+    QReadWriteLock * obj = new QReadWriteLock();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QReadWriteLock_new2();
+    /*
+    QReadWriteLock( QReadWriteLock::RecursionMode recursionMode )
+    */
+    QReadWriteLock * obj = new QReadWriteLock( ( QReadWriteLock::RecursionMode ) hb_parni( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -155,41 +145,31 @@ HB_FUNC_STATIC( QREADWRITELOCK_LOCKFORWRITE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-bool tryLockForRead()
-*/
-void QReadWriteLock_tryLockForRead1()
-{
-  QReadWriteLock * obj = static_cast< QReadWriteLock * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->tryLockForRead() );
-  }
-}
-
-/*
-bool tryLockForRead( int timeout )
-*/
-void QReadWriteLock_tryLockForRead2()
-{
-  QReadWriteLock * obj = static_cast< QReadWriteLock * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->tryLockForRead( PINT( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QReadWriteLock_tryLockForRead1();
+    /*
+    bool tryLockForRead()
+    */
+    QReadWriteLock * obj = static_cast< QReadWriteLock * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->tryLockForRead() );
+    }
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QReadWriteLock_tryLockForRead2();
+    /*
+    bool tryLockForRead( int timeout )
+    */
+    QReadWriteLock * obj = static_cast< QReadWriteLock * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->tryLockForRead( PINT( 1 ) ) );
+    }
   }
   else
   {
@@ -197,41 +177,31 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD )
   }
 }
 
-/*
-bool tryLockForWrite()
-*/
-void QReadWriteLock_tryLockForWrite1()
-{
-  QReadWriteLock * obj = static_cast< QReadWriteLock * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->tryLockForWrite() );
-  }
-}
-
-/*
-bool tryLockForWrite( int timeout )
-*/
-void QReadWriteLock_tryLockForWrite2()
-{
-  QReadWriteLock * obj = static_cast< QReadWriteLock * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->tryLockForWrite( PINT( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QReadWriteLock_tryLockForWrite1();
+    /*
+    bool tryLockForWrite()
+    */
+    QReadWriteLock * obj = static_cast< QReadWriteLock * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->tryLockForWrite() );
+    }
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QReadWriteLock_tryLockForWrite2();
+    /*
+    bool tryLockForWrite( int timeout )
+    */
+    QReadWriteLock * obj = static_cast< QReadWriteLock * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->tryLockForWrite( PINT( 1 ) ) );
+    }
   }
   else
   {

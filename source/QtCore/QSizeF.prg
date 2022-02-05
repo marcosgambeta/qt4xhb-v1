@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -60,46 +60,31 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSizeF()
-*/
-void QSizeF_new1()
-{
-  QSizeF * obj = new QSizeF();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QSizeF( const QSize & size )
-*/
-void QSizeF_new2()
-{
-  QSizeF * obj = new QSizeF( *PQSIZE( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QSizeF( qreal width, qreal height )
-*/
-void QSizeF_new3()
-{
-  QSizeF * obj = new QSizeF( PQREAL( 1 ), PQREAL( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSIZEF_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QSizeF_new1();
+    /*
+    QSizeF()
+    */
+    QSizeF * obj = new QSizeF();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
   {
-    QSizeF_new2();
+    /*
+    QSizeF( const QSize & size )
+    */
+    QSizeF * obj = new QSizeF( *PQSIZE( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QSizeF_new3();
+    /*
+    QSizeF( qreal width, qreal height )
+    */
+    QSizeF * obj = new QSizeF( PQREAL( 1 ), PQREAL( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -270,45 +255,35 @@ HB_FUNC_STATIC( QSIZEF_ISVALID )
   }
 }
 
-/*
-void scale( qreal width, qreal height, Qt::AspectRatioMode mode )
-*/
-void QSizeF_scale1()
-{
-  QSizeF * obj = static_cast< QSizeF * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->scale( PQREAL( 1 ), PQREAL( 2 ), ( Qt::AspectRatioMode ) hb_parni( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void scale( const QSizeF & size, Qt::AspectRatioMode mode )
-*/
-void QSizeF_scale2()
-{
-  QSizeF * obj = static_cast< QSizeF * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->scale( *PQSIZEF( 1 ), ( Qt::AspectRatioMode ) hb_parni( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QSIZEF_SCALE )
 {
   if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
-    QSizeF_scale1();
+    /*
+    void scale( qreal width, qreal height, Qt::AspectRatioMode mode )
+    */
+    QSizeF * obj = static_cast< QSizeF * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->scale( PQREAL( 1 ), PQREAL( 2 ), ( Qt::AspectRatioMode ) hb_parni( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && ISQSIZEF( 1 ) && HB_ISNUM( 2 ) )
   {
-    QSizeF_scale2();
+    /*
+    void scale( const QSizeF & size, Qt::AspectRatioMode mode )
+    */
+    QSizeF * obj = static_cast< QSizeF * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->scale( *PQSIZEF( 1 ), ( Qt::AspectRatioMode ) hb_parni( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

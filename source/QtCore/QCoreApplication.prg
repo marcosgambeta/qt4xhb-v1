@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -520,37 +520,27 @@ HB_FUNC_STATIC( QCOREAPPLICATION_ORGANIZATIONNAME )
 #endif
 }
 
-/*
-static void postEvent( QObject * receiver, QEvent * event )
-*/
-void QCoreApplication_postEvent1()
-{
-
-  QCoreApplication::postEvent( PQOBJECT( 1 ), PQEVENT( 2 ) );
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-static void postEvent( QObject * receiver, QEvent * event, int priority )
-*/
-void QCoreApplication_postEvent2()
-{
-
-  QCoreApplication::postEvent( PQOBJECT( 1 ), PQEVENT( 2 ), PINT( 3 ) );
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT )
 {
   if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISOBJECT( 2 ) )
   {
-    QCoreApplication_postEvent1();
+    /*
+    static void postEvent( QObject * receiver, QEvent * event )
+    */
+
+    QCoreApplication::postEvent( PQOBJECT( 1 ), PQEVENT( 2 ) );
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 3 ) && ISQOBJECT( 1 ) && HB_ISOBJECT( 2 ) && HB_ISNUM( 3 ) )
   {
-    QCoreApplication_postEvent2();
+    /*
+    static void postEvent( QObject * receiver, QEvent * event, int priority )
+    */
+
+    QCoreApplication::postEvent( PQOBJECT( 1 ), PQEVENT( 2 ), PINT( 3 ) );
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -558,37 +548,27 @@ HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT )
   }
 }
 
-/*
-static void processEvents( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
-*/
-void QCoreApplication_processEvents1()
-{
-
-  QCoreApplication::processEvents( HB_ISNIL( 1 ) ? ( QEventLoop::ProcessEventsFlags ) QEventLoop::AllEvents : ( QEventLoop::ProcessEventsFlags ) hb_parni( 1 ) );
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-static void processEvents( QEventLoop::ProcessEventsFlags flags, int maxtime )
-*/
-void QCoreApplication_processEvents2()
-{
-
-  QCoreApplication::processEvents( ( QEventLoop::ProcessEventsFlags ) hb_parni( 1 ), PINT( 2 ) );
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QCOREAPPLICATION_PROCESSEVENTS )
 {
   if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QCoreApplication_processEvents1();
+    /*
+    static void processEvents( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
+    */
+
+    QCoreApplication::processEvents( HB_ISNIL( 1 ) ? ( QEventLoop::ProcessEventsFlags ) QEventLoop::AllEvents : ( QEventLoop::ProcessEventsFlags ) hb_parni( 1 ) );
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QCoreApplication_processEvents2();
+    /*
+    static void processEvents( QEventLoop::ProcessEventsFlags flags, int maxtime )
+    */
+
+    QCoreApplication::processEvents( ( QEventLoop::ProcessEventsFlags ) hb_parni( 1 ), PINT( 2 ) );
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -617,37 +597,27 @@ HB_FUNC_STATIC( QCOREAPPLICATION_REMOVELIBRARYPATH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-static void removePostedEvents( QObject * receiver )
-*/
-void QCoreApplication_removePostedEvents1()
-{
-
-  QCoreApplication::removePostedEvents( PQOBJECT( 1 ) );
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-static void removePostedEvents( QObject * receiver, int eventType )
-*/
-void QCoreApplication_removePostedEvents2()
-{
-
-  QCoreApplication::removePostedEvents( PQOBJECT( 1 ), PINT( 2 ) );
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QCOREAPPLICATION_REMOVEPOSTEDEVENTS )
 {
   if( ISNUMPAR( 1 ) && ISQOBJECT( 1 ) )
   {
-    QCoreApplication_removePostedEvents1();
+    /*
+    static void removePostedEvents( QObject * receiver )
+    */
+
+    QCoreApplication::removePostedEvents( PQOBJECT( 1 ) );
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISNUM( 2 ) )
   {
-    QCoreApplication_removePostedEvents2();
+    /*
+    static void removePostedEvents( QObject * receiver, int eventType )
+    */
+
+    QCoreApplication::removePostedEvents( PQOBJECT( 1 ), PINT( 2 ) );
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -695,37 +665,27 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SENDEVENT )
 #endif
 }
 
-/*
-static void sendPostedEvents( QObject * receiver, int event_type )
-*/
-void QCoreApplication_sendPostedEvents1()
-{
-
-  QCoreApplication::sendPostedEvents( PQOBJECT( 1 ), PINT( 2 ) );
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-static void sendPostedEvents()
-*/
-void QCoreApplication_sendPostedEvents2()
-{
-
-  QCoreApplication::sendPostedEvents();
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QCOREAPPLICATION_SENDPOSTEDEVENTS )
 {
   if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISNUM( 2 ) )
   {
-    QCoreApplication_sendPostedEvents1();
+    /*
+    static void sendPostedEvents( QObject * receiver, int event_type )
+    */
+
+    QCoreApplication::sendPostedEvents( PQOBJECT( 1 ), PINT( 2 ) );
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QCoreApplication_sendPostedEvents2();
+    /*
+    static void sendPostedEvents()
+    */
+
+    QCoreApplication::sendPostedEvents();
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -897,33 +857,23 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TESTATTRIBUTE )
 #endif
 }
 
-/*
-static QString translate( const char * context, const char * sourceText, const char * disambiguation, QCoreApplication::Encoding encoding, int n )
-*/
-void QCoreApplication_translate1()
-{
-
-  RQSTRING( QCoreApplication::translate( PCONSTCHAR( 1 ), PCONSTCHAR( 2 ), PCONSTCHAR( 3 ), ( QCoreApplication::Encoding ) hb_parni( 4 ), PINT( 5 ) ) );
-}
-
-/*
-static QString translate( const char * context, const char * sourceText, const char * disambiguation = 0, QCoreApplication::Encoding encoding = QCoreApplication::CodecForTr )
-*/
-void QCoreApplication_translate2()
-{
-
-  RQSTRING( QCoreApplication::translate( PCONSTCHAR( 1 ), PCONSTCHAR( 2 ), OPCONSTCHAR( 3, 0 ), HB_ISNIL( 4 ) ? ( QCoreApplication::Encoding ) QCoreApplication::CodecForTr : ( QCoreApplication::Encoding ) hb_parni( 4 ) ) );
-}
-
 HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
 {
   if( ISNUMPAR( 5 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) )
   {
-    QCoreApplication_translate1();
+    /*
+    static QString translate( const char * context, const char * sourceText, const char * disambiguation, QCoreApplication::Encoding encoding, int n )
+    */
+
+    RQSTRING( QCoreApplication::translate( PCONSTCHAR( 1 ), PCONSTCHAR( 2 ), PCONSTCHAR( 3 ), ( QCoreApplication::Encoding ) hb_parni( 4 ), PINT( 5 ) ) );
   }
   else if( ISNUMPAR( 4 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && HB_ISNUM( 4 ) )
   {
-    QCoreApplication_translate2();
+    /*
+    static QString translate( const char * context, const char * sourceText, const char * disambiguation = 0, QCoreApplication::Encoding encoding = QCoreApplication::CodecForTr )
+    */
+
+    RQSTRING( QCoreApplication::translate( PCONSTCHAR( 1 ), PCONSTCHAR( 2 ), OPCONSTCHAR( 3, 0 ), HB_ISNIL( 4 ) ? ( QCoreApplication::Encoding ) QCoreApplication::CodecForTr : ( QCoreApplication::Encoding ) hb_parni( 4 ) ) );
   }
   else
   {

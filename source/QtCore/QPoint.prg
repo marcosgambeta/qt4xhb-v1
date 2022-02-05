@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -53,33 +53,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QPoint()
-*/
-void QPoint_new1()
-{
-  QPoint * obj = new QPoint();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QPoint( int xpos, int ypos )
-*/
-void QPoint_new2()
-{
-  QPoint * obj = new QPoint( PINT( 1 ), PINT( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QPOINT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QPoint_new1();
+    /*
+    QPoint()
+    */
+    QPoint * obj = new QPoint();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QPoint_new2();
+    /*
+    QPoint( int xpos, int ypos )
+    */
+    QPoint * obj = new QPoint( PINT( 1 ), PINT( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -55,46 +55,31 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QPointF()
-*/
-void QPointF_new1()
-{
-  QPointF * obj = new QPointF();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QPointF( const QPoint & point )
-*/
-void QPointF_new2()
-{
-  QPointF * obj = new QPointF( *PQPOINT( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QPointF( qreal xpos, qreal ypos )
-*/
-void QPointF_new3()
-{
-  QPointF * obj = new QPointF( PQREAL( 1 ), PQREAL( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QPOINTF_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QPointF_new1();
+    /*
+    QPointF()
+    */
+    QPointF * obj = new QPointF();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
-    QPointF_new2();
+    /*
+    QPointF( const QPoint & point )
+    */
+    QPointF * obj = new QPointF( *PQPOINT( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QPointF_new3();
+    /*
+    QPointF( qreal xpos, qreal ypos )
+    */
+    QPointF * obj = new QPointF( PQREAL( 1 ), PQREAL( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

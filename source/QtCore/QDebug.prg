@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -50,46 +50,31 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QDebug( QIODevice * device )
-*/
-void QDebug_new1()
-{
-  QDebug * obj = new QDebug( PQIODEVICE( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QDebug( QtMsgType type )
-*/
-void QDebug_new3()
-{
-  QDebug * obj = new QDebug( ( QtMsgType ) hb_parni( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QDebug( const QDebug & other )
-*/
-void QDebug_new4()
-{
-  QDebug * obj = new QDebug( *PQDEBUG( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QDEBUG_NEW )
 {
   if( ISNUMPAR( 1 ) && ISQIODEVICE( 1 ) )
   {
-    QDebug_new1();
+    /*
+    QDebug( QIODevice * device )
+    */
+    QDebug * obj = new QDebug( PQIODEVICE( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QDebug_new3();
+    /*
+    QDebug( QtMsgType type )
+    */
+    QDebug * obj = new QDebug( ( QtMsgType ) hb_parni( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQDEBUG( 1 ) )
   {
-    QDebug_new4();
+    /*
+    QDebug( const QDebug & other )
+    */
+    QDebug * obj = new QDebug( *PQDEBUG( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -54,59 +54,39 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QXmlStreamAttribute()
-*/
-void QXmlStreamAttribute_new1()
-{
-  QXmlStreamAttribute * obj = new QXmlStreamAttribute();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QXmlStreamAttribute( const QString & qualifiedName, const QString & value )
-*/
-void QXmlStreamAttribute_new2()
-{
-  QXmlStreamAttribute * obj = new QXmlStreamAttribute( PQSTRING( 1 ), PQSTRING( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QXmlStreamAttribute( const QString & namespaceUri, const QString & name, const QString & value )
-*/
-void QXmlStreamAttribute_new3()
-{
-  QXmlStreamAttribute * obj = new QXmlStreamAttribute( PQSTRING( 1 ), PQSTRING( 2 ), PQSTRING( 3 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QXmlStreamAttribute( const QXmlStreamAttribute & other )
-*/
-void QXmlStreamAttribute_new4()
-{
-  QXmlStreamAttribute * obj = new QXmlStreamAttribute( *PQXMLSTREAMATTRIBUTE( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QXmlStreamAttribute_new1();
+    /*
+    QXmlStreamAttribute()
+    */
+    QXmlStreamAttribute * obj = new QXmlStreamAttribute();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QXmlStreamAttribute_new2();
+    /*
+    QXmlStreamAttribute( const QString & qualifiedName, const QString & value )
+    */
+    QXmlStreamAttribute * obj = new QXmlStreamAttribute( PQSTRING( 1 ), PQSTRING( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 3 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) )
   {
-    QXmlStreamAttribute_new3();
+    /*
+    QXmlStreamAttribute( const QString & namespaceUri, const QString & name, const QString & value )
+    */
+    QXmlStreamAttribute * obj = new QXmlStreamAttribute( PQSTRING( 1 ), PQSTRING( 2 ), PQSTRING( 3 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQXMLSTREAMATTRIBUTE( 1 ) )
   {
-    QXmlStreamAttribute_new4();
+    /*
+    QXmlStreamAttribute( const QXmlStreamAttribute & other )
+    */
+    QXmlStreamAttribute * obj = new QXmlStreamAttribute( *PQXMLSTREAMATTRIBUTE( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -51,33 +51,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QXmlStreamNotationDeclaration()
-*/
-void QXmlStreamNotationDeclaration_new1()
-{
-  QXmlStreamNotationDeclaration * obj = new QXmlStreamNotationDeclaration();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QXmlStreamNotationDeclaration( const QXmlStreamNotationDeclaration & other )
-*/
-void QXmlStreamNotationDeclaration_new2()
-{
-  QXmlStreamNotationDeclaration * obj = new QXmlStreamNotationDeclaration( *PQXMLSTREAMNOTATIONDECLARATION( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QXMLSTREAMNOTATIONDECLARATION_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QXmlStreamNotationDeclaration_new1();
+    /*
+    QXmlStreamNotationDeclaration()
+    */
+    QXmlStreamNotationDeclaration * obj = new QXmlStreamNotationDeclaration();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQXMLSTREAMNOTATIONDECLARATION( 1 ) )
   {
-    QXmlStreamNotationDeclaration_new2();
+    /*
+    QXmlStreamNotationDeclaration( const QXmlStreamNotationDeclaration & other )
+    */
+    QXmlStreamNotationDeclaration * obj = new QXmlStreamNotationDeclaration( *PQXMLSTREAMNOTATIONDECLARATION( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

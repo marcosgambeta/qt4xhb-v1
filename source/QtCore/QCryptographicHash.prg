@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -85,45 +85,35 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void addData( const char * data, int length )
-*/
-void QCryptographicHash_addData1()
-{
-  QCryptographicHash * obj = static_cast< QCryptographicHash * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->addData( PCONSTCHAR( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void addData( const QByteArray & data )
-*/
-void QCryptographicHash_addData2()
-{
-  QCryptographicHash * obj = static_cast< QCryptographicHash * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->addData( *PQBYTEARRAY( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_ADDDATA )
 {
   if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) )
   {
-    QCryptographicHash_addData1();
+    /*
+    void addData( const char * data, int length )
+    */
+    QCryptographicHash * obj = static_cast< QCryptographicHash * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->addData( PCONSTCHAR( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    QCryptographicHash_addData2();
+    /*
+    void addData( const QByteArray & data )
+    */
+    QCryptographicHash * obj = static_cast< QCryptographicHash * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->addData( *PQBYTEARRAY( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

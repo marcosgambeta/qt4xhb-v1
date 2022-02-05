@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -48,33 +48,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTextDecoder( const QTextCodec * codec )
-*/
-void QTextDecoder_new1()
-{
-  QTextDecoder * obj = new QTextDecoder( PQTEXTCODEC( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextDecoder( const QTextCodec * codec, QTextCodec::ConversionFlags flags )
-*/
-void QTextDecoder_new2()
-{
-  QTextDecoder * obj = new QTextDecoder( PQTEXTCODEC( 1 ), ( QTextCodec::ConversionFlags ) hb_parni( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QTEXTDECODER_NEW )
 {
   if( ISNUMPAR( 1 ) && ISQTEXTCODEC( 1 ) )
   {
-    QTextDecoder_new1();
+    /*
+    QTextDecoder( const QTextCodec * codec )
+    */
+    QTextDecoder * obj = new QTextDecoder( PQTEXTCODEC( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 2 ) && ISQTEXTCODEC( 1 ) && HB_ISNUM( 2 ) )
   {
-    QTextDecoder_new2();
+    /*
+    QTextDecoder( const QTextCodec * codec, QTextCodec::ConversionFlags flags )
+    */
+    QTextDecoder * obj = new QTextDecoder( PQTEXTCODEC( 1 ), ( QTextCodec::ConversionFlags ) hb_parni( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -99,60 +89,45 @@ HB_FUNC_STATIC( QTEXTDECODER_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-QString toUnicode( const char * chars, int len )
-*/
-void QTextDecoder_toUnicode1()
-{
-  QTextDecoder * obj = static_cast< QTextDecoder * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RQSTRING( obj->toUnicode( PCONSTCHAR( 1 ), PINT( 2 ) ) );
-  }
-}
-
-/*
-void toUnicode( QString * target, const char * chars, int len )
-*/
-void QTextDecoder_toUnicode2()
-{
-  QTextDecoder * obj = static_cast< QTextDecoder * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->toUnicode( NULL, PCONSTCHAR( 2 ), PINT( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-QString toUnicode( const QByteArray & ba )
-*/
-void QTextDecoder_toUnicode3()
-{
-  QTextDecoder * obj = static_cast< QTextDecoder * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RQSTRING( obj->toUnicode( *PQBYTEARRAY( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE )
 {
   if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) )
   {
-    QTextDecoder_toUnicode1();
+    /*
+    QString toUnicode( const char * chars, int len )
+    */
+    QTextDecoder * obj = static_cast< QTextDecoder * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RQSTRING( obj->toUnicode( PCONSTCHAR( 1 ), PINT( 2 ) ) );
+    }
   }
   else if( ISNUMPAR( 3 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISNUM( 3 ) )
   {
-    QTextDecoder_toUnicode2();
+    /*
+    void toUnicode( QString * target, const char * chars, int len )
+    */
+    QTextDecoder * obj = static_cast< QTextDecoder * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->toUnicode( NULL, PCONSTCHAR( 2 ), PINT( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    QTextDecoder_toUnicode3();
+    /*
+    QString toUnicode( const QByteArray & ba )
+    */
+    QTextDecoder * obj = static_cast< QTextDecoder * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RQSTRING( obj->toUnicode( *PQBYTEARRAY( 1 ) ) );
+    }
   }
   else
   {

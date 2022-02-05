@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -312,43 +312,33 @@ HB_FUNC_STATIC( QTHREADPOOL_TRYSTART )
   }
 }
 
-/*
-void waitForDone()
-*/
-void QThreadPool_waitForDone1()
-{
-  QThreadPool * obj = qobject_cast< QThreadPool * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->waitForDone();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-bool waitForDone( int msecs )
-*/
-void QThreadPool_waitForDone2()
-{
-  QThreadPool * obj = qobject_cast< QThreadPool * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->waitForDone( PINT( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QTHREADPOOL_WAITFORDONE )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QThreadPool_waitForDone1();
+    /*
+    void waitForDone()
+    */
+    QThreadPool * obj = qobject_cast< QThreadPool * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->waitForDone();
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QThreadPool_waitForDone2();
+    /*
+    bool waitForDone( int msecs )
+    */
+    QThreadPool * obj = qobject_cast< QThreadPool * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->waitForDone( PINT( 1 ) ) );
+    }
   }
   else
   {

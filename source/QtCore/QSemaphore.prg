@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -160,41 +160,31 @@ HB_FUNC_STATIC( QSEMAPHORE_RELEASE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-bool tryAcquire( int n = 1 )
-*/
-void QSemaphore_tryAcquire1()
-{
-  QSemaphore * obj = static_cast< QSemaphore * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->tryAcquire( OPINT( 1, 1 ) ) );
-  }
-}
-
-/*
-bool tryAcquire( int n, int timeout )
-*/
-void QSemaphore_tryAcquire2()
-{
-  QSemaphore * obj = static_cast< QSemaphore * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->tryAcquire( PINT( 1 ), PINT( 2 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE )
 {
   if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QSemaphore_tryAcquire1();
+    /*
+    bool tryAcquire( int n = 1 )
+    */
+    QSemaphore * obj = static_cast< QSemaphore * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->tryAcquire( OPINT( 1, 1 ) ) );
+    }
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QSemaphore_tryAcquire2();
+    /*
+    bool tryAcquire( int n, int timeout )
+    */
+    QSemaphore * obj = static_cast< QSemaphore * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->tryAcquire( PINT( 1 ), PINT( 2 ) ) );
+    }
   }
   else
   {
