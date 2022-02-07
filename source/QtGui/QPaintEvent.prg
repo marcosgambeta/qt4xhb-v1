@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -42,33 +42,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QPaintEvent( const QRegion & paintRegion )
-*/
-void QPaintEvent_new1()
-{
-  QPaintEvent * obj = new QPaintEvent( *PQREGION( 1 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QPaintEvent( const QRect & paintRect )
-*/
-void QPaintEvent_new2()
-{
-  QPaintEvent * obj = new QPaintEvent( *PQRECT( 1 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QPAINTEVENT_NEW )
 {
   if( ISNUMPAR( 1 ) && ISQREGION( 1 ) )
   {
-    QPaintEvent_new1();
+    /*
+    QPaintEvent( const QRegion & paintRegion )
+    */
+    QPaintEvent * obj = new QPaintEvent( *PQREGION( 1 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
   {
-    QPaintEvent_new2();
+    /*
+    QPaintEvent( const QRect & paintRect )
+    */
+    QPaintEvent * obj = new QPaintEvent( *PQRECT( 1 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

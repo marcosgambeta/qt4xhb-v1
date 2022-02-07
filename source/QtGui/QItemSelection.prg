@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -53,33 +53,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QItemSelection()
-*/
-void QItemSelection_new1()
-{
-  QItemSelection * obj = new QItemSelection();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QItemSelection( const QModelIndex & topLeft, const QModelIndex & bottomRight )
-*/
-void QItemSelection_new2()
-{
-  QItemSelection * obj = new QItemSelection( *PQMODELINDEX( 1 ), *PQMODELINDEX( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QITEMSELECTION_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QItemSelection_new1();
+    /*
+    QItemSelection()
+    */
+    QItemSelection * obj = new QItemSelection();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 2 ) && ISQMODELINDEX( 1 ) && ISQMODELINDEX( 2 ) )
   {
-    QItemSelection_new2();
+    /*
+    QItemSelection( const QModelIndex & topLeft, const QModelIndex & bottomRight )
+    */
+    QItemSelection * obj = new QItemSelection( *PQMODELINDEX( 1 ), *PQMODELINDEX( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

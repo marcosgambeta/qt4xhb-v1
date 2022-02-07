@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -152,26 +152,25 @@ HB_FUNC_STATIC( QCALENDARWIDGET_DATEEDITACCEPTDELAY )
 /*
 QTextCharFormat dateTextFormat( const QDate & date ) const
 */
-void QCalendarWidget_dateTextFormat2()
+HB_FUNC_STATIC( QCALENDARWIDGET_DATETEXTFORMAT )
 {
   QCalendarWidget * obj = qobject_cast< QCalendarWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
   if( obj )
   {
-    QTextCharFormat * ptr = new QTextCharFormat( obj->dateTextFormat( *PQDATE( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QTEXTCHARFORMAT", true );
-  }
-}
-
-HB_FUNC_STATIC( QCALENDARWIDGET_DATETEXTFORMAT )
-{
-  if( ISNUMPAR( 1 ) && ISQDATE( 1 ) )
-  {
-    QCalendarWidget_dateTextFormat2();
-  }
-  else
-  {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    if( ISNUMPAR( 1 ) && ISQDATE( 1 ) )
+    {
+#endif
+      QTextCharFormat * ptr = new QTextCharFormat( obj->dateTextFormat( *PQDATE( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QTEXTCHARFORMAT", true );
+#ifndef QT4XHB_DONT_CHECK_PARAMETERS
+    }
+    else
+    {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    }
+#endif
   }
 }
 

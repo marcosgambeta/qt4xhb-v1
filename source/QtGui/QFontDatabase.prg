@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -331,41 +331,31 @@ HB_FUNC_STATIC( QFONTDATABASE_SMOOTHSIZES )
   }
 }
 
-/*
-QString styleString( const QFont & font )
-*/
-void QFontDatabase_styleString1()
-{
-  QFontDatabase * obj = static_cast< QFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RQSTRING( obj->styleString( *PQFONT( 1 ) ) );
-  }
-}
-
-/*
-QString styleString( const QFontInfo & fontInfo )
-*/
-void QFontDatabase_styleString2()
-{
-  QFontDatabase * obj = static_cast< QFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RQSTRING( obj->styleString( *PQFONTINFO( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING )
 {
   if( ISNUMPAR( 1 ) && ISQFONT( 1 ) )
   {
-    QFontDatabase_styleString1();
+    /*
+    QString styleString( const QFont & font )
+    */
+    QFontDatabase * obj = static_cast< QFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RQSTRING( obj->styleString( *PQFONT( 1 ) ) );
+    }
   }
   else if( ISNUMPAR( 1 ) && ISQFONTINFO( 1 ) )
   {
-    QFontDatabase_styleString2();
+    /*
+    QString styleString( const QFontInfo & fontInfo )
+    */
+    QFontDatabase * obj = static_cast< QFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RQSTRING( obj->styleString( *PQFONTINFO( 1 ) ) );
+    }
   }
   else
   {
@@ -421,57 +411,47 @@ HB_FUNC_STATIC( QFONTDATABASE_WEIGHT )
   }
 }
 
-/*
-QList<QFontDatabase::WritingSystem> writingSystems() const
-*/
-void QFontDatabase_writingSystems1()
-{
-  QFontDatabase * obj = static_cast< QFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QList<QFontDatabase::WritingSystem> list = obj->writingSystems();
-    PHB_ITEM pArray = hb_itemArrayNew( 0 );
-    for( int i = 0; i < list.count(); i++ )
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease( pItem );
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
-
-/*
-QList<QFontDatabase::WritingSystem> writingSystems( const QString & family ) const
-*/
-void QFontDatabase_writingSystems2()
-{
-  QFontDatabase * obj = static_cast< QFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QList<QFontDatabase::WritingSystem> list = obj->writingSystems( PQSTRING( 1 ) );
-    PHB_ITEM pArray = hb_itemArrayNew( 0 );
-    for( int i = 0; i < list.count(); i++ )
-    {
-      PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
-      hb_arrayAddForward( pArray, pItem );
-      hb_itemRelease( pItem );
-    }
-    hb_itemReturnRelease(pArray);
-  }
-}
-
 HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMS )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QFontDatabase_writingSystems1();
+    /*
+    QList<QFontDatabase::WritingSystem> writingSystems() const
+    */
+    QFontDatabase * obj = static_cast< QFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QList<QFontDatabase::WritingSystem> list = obj->writingSystems();
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
+      for( int i = 0; i < list.count(); i++ )
+      {
+        PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
+        hb_arrayAddForward( pArray, pItem );
+        hb_itemRelease( pItem );
+      }
+      hb_itemReturnRelease(pArray);
+    }
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QFontDatabase_writingSystems2();
+    /*
+    QList<QFontDatabase::WritingSystem> writingSystems( const QString & family ) const
+    */
+    QFontDatabase * obj = static_cast< QFontDatabase * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QList<QFontDatabase::WritingSystem> list = obj->writingSystems( PQSTRING( 1 ) );
+      PHB_ITEM pArray = hb_itemArrayNew( 0 );
+      for( int i = 0; i < list.count(); i++ )
+      {
+        PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
+        hb_arrayAddForward( pArray, pItem );
+        hb_itemRelease( pItem );
+      }
+      hb_itemReturnRelease(pArray);
+    }
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -44,33 +44,23 @@ RETURN
 
 #include <QtCore/QUrl>
 
-/*
-QFileOpenEvent( const QString & file )
-*/
-void QFileOpenEvent_new1()
-{
-  QFileOpenEvent * obj = new QFileOpenEvent( PQSTRING( 1 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QFileOpenEvent( const QUrl & url )
-*/
-void QFileOpenEvent_new2()
-{
-  QFileOpenEvent * obj = new QFileOpenEvent( *PQURL( 1 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QFILEOPENEVENT_NEW )
 {
   if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QFileOpenEvent_new1();
+    /*
+    QFileOpenEvent( const QString & file )
+    */
+    QFileOpenEvent * obj = new QFileOpenEvent( PQSTRING( 1 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
   {
-    QFileOpenEvent_new2();
+    /*
+    QFileOpenEvent( const QUrl & url )
+    */
+    QFileOpenEvent * obj = new QFileOpenEvent( *PQURL( 1 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

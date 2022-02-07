@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -47,46 +47,31 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTreeWidgetItemIterator( const QTreeWidgetItemIterator & it )
-*/
-void QTreeWidgetItemIterator_new1()
-{
-  QTreeWidgetItemIterator * obj = new QTreeWidgetItemIterator( *PQTREEWIDGETITEMITERATOR( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QTreeWidgetItemIterator( QTreeWidget * widget, QTreeWidgetItemIterator::IteratorFlags flags = QTreeWidgetItemIterator::All )
-*/
-void QTreeWidgetItemIterator_new2()
-{
-  QTreeWidgetItemIterator * obj = new QTreeWidgetItemIterator( PQTREEWIDGET( 1 ), HB_ISNIL( 2 ) ? ( QTreeWidgetItemIterator::IteratorFlags ) QTreeWidgetItemIterator::All : ( QTreeWidgetItemIterator::IteratorFlags ) hb_parni( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QTreeWidgetItemIterator( QTreeWidgetItem * item, QTreeWidgetItemIterator::IteratorFlags flags = QTreeWidgetItemIterator::All )
-*/
-void QTreeWidgetItemIterator_new3()
-{
-  QTreeWidgetItemIterator * obj = new QTreeWidgetItemIterator( PQTREEWIDGETITEM( 1 ), HB_ISNIL( 2 ) ? ( QTreeWidgetItemIterator::IteratorFlags ) QTreeWidgetItemIterator::All : ( QTreeWidgetItemIterator::IteratorFlags ) hb_parni( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QTREEWIDGETITEMITERATOR_NEW )
 {
   if( ISNUMPAR( 1 ) && ISQTREEWIDGETITEMITERATOR( 1 ) )
   {
-    QTreeWidgetItemIterator_new1();
+    /*
+    QTreeWidgetItemIterator( const QTreeWidgetItemIterator & it )
+    */
+    QTreeWidgetItemIterator * obj = new QTreeWidgetItemIterator( *PQTREEWIDGETITEMITERATOR( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 1, 2 ) && ISQTREEWIDGET( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QTreeWidgetItemIterator_new2();
+    /*
+    QTreeWidgetItemIterator( QTreeWidget * widget, QTreeWidgetItemIterator::IteratorFlags flags = QTreeWidgetItemIterator::All )
+    */
+    QTreeWidgetItemIterator * obj = new QTreeWidgetItemIterator( PQTREEWIDGET( 1 ), HB_ISNIL( 2 ) ? ( QTreeWidgetItemIterator::IteratorFlags ) QTreeWidgetItemIterator::All : ( QTreeWidgetItemIterator::IteratorFlags ) hb_parni( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 1, 2 ) && ISQTREEWIDGETITEM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QTreeWidgetItemIterator_new3();
+    /*
+    QTreeWidgetItemIterator( QTreeWidgetItem * item, QTreeWidgetItemIterator::IteratorFlags flags = QTreeWidgetItemIterator::All )
+    */
+    QTreeWidgetItemIterator * obj = new QTreeWidgetItemIterator( PQTREEWIDGETITEM( 1 ), HB_ISNIL( 2 ) ? ( QTreeWidgetItemIterator::IteratorFlags ) QTreeWidgetItemIterator::All : ( QTreeWidgetItemIterator::IteratorFlags ) hb_parni( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

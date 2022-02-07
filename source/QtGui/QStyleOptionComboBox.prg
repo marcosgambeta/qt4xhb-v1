@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -52,33 +52,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QStyleOptionComboBox()
-*/
-void QStyleOptionComboBox_new1()
-{
-  QStyleOptionComboBox * obj = new QStyleOptionComboBox();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QStyleOptionComboBox( const QStyleOptionComboBox & other )
-*/
-void QStyleOptionComboBox_new2()
-{
-  QStyleOptionComboBox * obj = new QStyleOptionComboBox( *PQSTYLEOPTIONCOMBOBOX( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QStyleOptionComboBox_new1();
+    /*
+    QStyleOptionComboBox()
+    */
+    QStyleOptionComboBox * obj = new QStyleOptionComboBox();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONCOMBOBOX( 1 ) )
   {
-    QStyleOptionComboBox_new2();
+    /*
+    QStyleOptionComboBox( const QStyleOptionComboBox & other )
+    */
+    QStyleOptionComboBox * obj = new QStyleOptionComboBox( *PQSTYLEOPTIONCOMBOBOX( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

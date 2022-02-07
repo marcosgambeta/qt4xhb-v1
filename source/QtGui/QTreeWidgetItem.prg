@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -109,124 +109,79 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTreeWidgetItem( int type = QTreeWidgetItem::Type )
-*/
-void QTreeWidgetItem_new1()
-{
-  QTreeWidgetItem * obj = new QTreeWidgetItem( OPINT( 1, QTreeWidgetItem::Type ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QTreeWidgetItem( const QStringList & strings, int type = QTreeWidgetItem::Type )
-*/
-void QTreeWidgetItem_new2()
-{
-  QTreeWidgetItem * obj = new QTreeWidgetItem( PQSTRINGLIST( 1 ), OPINT( 2, QTreeWidgetItem::Type ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QTreeWidgetItem( QTreeWidget * parent, int type = QTreeWidgetItem::Type )
-*/
-void QTreeWidgetItem_new3()
-{
-  QTreeWidgetItem * obj = new QTreeWidgetItem( PQTREEWIDGET( 1 ), OPINT( 2, QTreeWidgetItem::Type ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QTreeWidgetItem( QTreeWidget * parent, const QStringList & strings, int type = QTreeWidgetItem::Type )
-*/
-void QTreeWidgetItem_new4()
-{
-  QTreeWidgetItem * obj = new QTreeWidgetItem( PQTREEWIDGET( 1 ), PQSTRINGLIST( 2 ), OPINT( 3, QTreeWidgetItem::Type ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QTreeWidgetItem( QTreeWidget * parent, QTreeWidgetItem * preceding, int type = QTreeWidgetItem::Type )
-*/
-void QTreeWidgetItem_new5()
-{
-  QTreeWidgetItem * obj = new QTreeWidgetItem( PQTREEWIDGET( 1 ), PQTREEWIDGETITEM( 2 ), OPINT( 3, QTreeWidgetItem::Type ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QTreeWidgetItem( QTreeWidgetItem * parent, int type = QTreeWidgetItem::Type )
-*/
-void QTreeWidgetItem_new6()
-{
-  QTreeWidgetItem * obj = new QTreeWidgetItem( PQTREEWIDGETITEM( 1 ), OPINT( 2, QTreeWidgetItem::Type ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QTreeWidgetItem( QTreeWidgetItem * parent, const QStringList & strings, int type = QTreeWidgetItem::Type )
-*/
-void QTreeWidgetItem_new7()
-{
-  QTreeWidgetItem * obj = new QTreeWidgetItem( PQTREEWIDGETITEM( 1 ), PQSTRINGLIST( 2 ), OPINT( 3, QTreeWidgetItem::Type ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QTreeWidgetItem( QTreeWidgetItem * parent, QTreeWidgetItem * preceding, int type = QTreeWidgetItem::Type )
-*/
-void QTreeWidgetItem_new8()
-{
-  QTreeWidgetItem * obj = new QTreeWidgetItem( PQTREEWIDGETITEM( 1 ), PQTREEWIDGETITEM( 2 ), OPINT( 3, QTreeWidgetItem::Type ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QTreeWidgetItem( const QTreeWidgetItem & other )
-*/
-void QTreeWidgetItem_new9()
-{
-  QTreeWidgetItem * obj = new QTreeWidgetItem( *PQTREEWIDGETITEM( 1 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QTREEWIDGETITEM_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QTreeWidgetItem_new1();
+    /*
+    QTreeWidgetItem( int type = QTreeWidgetItem::Type )
+    */
+    QTreeWidgetItem * obj = new QTreeWidgetItem( OPINT( 1, QTreeWidgetItem::Type ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISARRAY( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QTreeWidgetItem_new2();
+    /*
+    QTreeWidgetItem( const QStringList & strings, int type = QTreeWidgetItem::Type )
+    */
+    QTreeWidgetItem * obj = new QTreeWidgetItem( PQSTRINGLIST( 1 ), OPINT( 2, QTreeWidgetItem::Type ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISBETWEEN( 1, 2 ) && ISQTREEWIDGET( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QTreeWidgetItem_new3();
+    /*
+    QTreeWidgetItem( QTreeWidget * parent, int type = QTreeWidgetItem::Type )
+    */
+    QTreeWidgetItem * obj = new QTreeWidgetItem( PQTREEWIDGET( 1 ), OPINT( 2, QTreeWidgetItem::Type ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISBETWEEN( 2, 3 ) && ISQTREEWIDGET( 1 ) && HB_ISARRAY( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QTreeWidgetItem_new4();
+    /*
+    QTreeWidgetItem( QTreeWidget * parent, const QStringList & strings, int type = QTreeWidgetItem::Type )
+    */
+    QTreeWidgetItem * obj = new QTreeWidgetItem( PQTREEWIDGET( 1 ), PQSTRINGLIST( 2 ), OPINT( 3, QTreeWidgetItem::Type ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISBETWEEN( 2, 3 ) && ISQTREEWIDGET( 1 ) && ISQTREEWIDGETITEM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QTreeWidgetItem_new5();
+    /*
+    QTreeWidgetItem( QTreeWidget * parent, QTreeWidgetItem * preceding, int type = QTreeWidgetItem::Type )
+    */
+    QTreeWidgetItem * obj = new QTreeWidgetItem( PQTREEWIDGET( 1 ), PQTREEWIDGETITEM( 2 ), OPINT( 3, QTreeWidgetItem::Type ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISBETWEEN( 1, 2 ) && ISQTREEWIDGETITEM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QTreeWidgetItem_new6();
+    /*
+    QTreeWidgetItem( QTreeWidgetItem * parent, int type = QTreeWidgetItem::Type )
+    */
+    QTreeWidgetItem * obj = new QTreeWidgetItem( PQTREEWIDGETITEM( 1 ), OPINT( 2, QTreeWidgetItem::Type ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISBETWEEN( 2, 3 ) && ISQTREEWIDGETITEM( 1 ) && HB_ISARRAY( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QTreeWidgetItem_new7();
+    /*
+    QTreeWidgetItem( QTreeWidgetItem * parent, const QStringList & strings, int type = QTreeWidgetItem::Type )
+    */
+    QTreeWidgetItem * obj = new QTreeWidgetItem( PQTREEWIDGETITEM( 1 ), PQSTRINGLIST( 2 ), OPINT( 3, QTreeWidgetItem::Type ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISBETWEEN( 2, 3 ) && ISQTREEWIDGETITEM( 1 ) && ISQTREEWIDGETITEM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QTreeWidgetItem_new8();
+    /*
+    QTreeWidgetItem( QTreeWidgetItem * parent, QTreeWidgetItem * preceding, int type = QTreeWidgetItem::Type )
+    */
+    QTreeWidgetItem * obj = new QTreeWidgetItem( PQTREEWIDGETITEM( 1 ), PQTREEWIDGETITEM( 2 ), OPINT( 3, QTreeWidgetItem::Type ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISNUMPAR( 1 ) && ISQTREEWIDGETITEM( 1 ) )
   {
-    QTreeWidgetItem_new9();
+    /*
+    QTreeWidgetItem( const QTreeWidgetItem & other )
+    */
+    QTreeWidgetItem * obj = new QTreeWidgetItem( *PQTREEWIDGETITEM( 1 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -52,33 +52,23 @@ RETURN
 #include "qt4xhb_events.h"
 #include "qt4xhb_signals.h"
 
-/*
-QPrintDialog( QPrinter * printer, QWidget * parent = 0 )
-*/
-void QPrintDialog_new1()
-{
-  QPrintDialog * obj = new QPrintDialog( PQPRINTER( 1 ), OPQWIDGET( 2, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QPrintDialog( QWidget * parent = 0 )
-*/
-void QPrintDialog_new2()
-{
-  QPrintDialog * obj = new QPrintDialog( OPQWIDGET( 1, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QPRINTDIALOG_NEW )
 {
   if( ISBETWEEN( 1, 2 ) && ISQPRINTER( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QPrintDialog_new1();
+    /*
+    QPrintDialog( QPrinter * printer, QWidget * parent = 0 )
+    */
+    QPrintDialog * obj = new QPrintDialog( PQPRINTER( 1 ), OPQWIDGET( 2, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QPrintDialog_new2();
+    /*
+    QPrintDialog( QWidget * parent = 0 )
+    */
+    QPrintDialog * obj = new QPrintDialog( OPQWIDGET( 1, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

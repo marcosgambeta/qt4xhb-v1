@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -44,33 +44,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QStyleOptionTabBarBase()
-*/
-void QStyleOptionTabBarBase_new1()
-{
-  QStyleOptionTabBarBase * obj = new QStyleOptionTabBarBase();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QStyleOptionTabBarBase( const QStyleOptionTabBarBase & other )
-*/
-void QStyleOptionTabBarBase_new2()
-{
-  QStyleOptionTabBarBase * obj = new QStyleOptionTabBarBase( *PQSTYLEOPTIONTABBARBASE( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QStyleOptionTabBarBase_new1();
+    /*
+    QStyleOptionTabBarBase()
+    */
+    QStyleOptionTabBarBase * obj = new QStyleOptionTabBarBase();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONTABBARBASE( 1 ) )
   {
-    QStyleOptionTabBarBase_new2();
+    /*
+    QStyleOptionTabBarBase( const QStyleOptionTabBarBase & other )
+    */
+    QStyleOptionTabBarBase * obj = new QStyleOptionTabBarBase( *PQSTYLEOPTIONTABBARBASE( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

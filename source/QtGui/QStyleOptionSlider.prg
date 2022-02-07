@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -61,33 +61,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QStyleOptionSlider()
-*/
-void QStyleOptionSlider_new1()
-{
-  QStyleOptionSlider * obj = new QStyleOptionSlider();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QStyleOptionSlider( const QStyleOptionSlider & other )
-*/
-void QStyleOptionSlider_new2()
-{
-  QStyleOptionSlider * obj = new QStyleOptionSlider( *PQSTYLEOPTIONSLIDER( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONSLIDER_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QStyleOptionSlider_new1();
+    /*
+    QStyleOptionSlider()
+    */
+    QStyleOptionSlider * obj = new QStyleOptionSlider();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONSLIDER( 1 ) )
   {
-    QStyleOptionSlider_new2();
+    /*
+    QStyleOptionSlider( const QStyleOptionSlider & other )
+    */
+    QStyleOptionSlider * obj = new QStyleOptionSlider( *PQSTYLEOPTIONSLIDER( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

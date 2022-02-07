@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -49,33 +49,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSupportedWritingSystems()
-*/
-void QSupportedWritingSystems_new1()
-{
-  QSupportedWritingSystems * obj = new QSupportedWritingSystems();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QSupportedWritingSystems( const QSupportedWritingSystems & other )
-*/
-void QSupportedWritingSystems_new2()
-{
-  QSupportedWritingSystems * obj = new QSupportedWritingSystems( *PQSUPPORTEDWRITINGSYSTEMS( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QSupportedWritingSystems_new1();
+    /*
+    QSupportedWritingSystems()
+    */
+    QSupportedWritingSystems * obj = new QSupportedWritingSystems();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQSUPPORTEDWRITINGSYSTEMS( 1 ) )
   {
-    QSupportedWritingSystems_new2();
+    /*
+    QSupportedWritingSystems( const QSupportedWritingSystems & other )
+    */
+    QSupportedWritingSystems * obj = new QSupportedWritingSystems( *PQSUPPORTEDWRITINGSYSTEMS( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

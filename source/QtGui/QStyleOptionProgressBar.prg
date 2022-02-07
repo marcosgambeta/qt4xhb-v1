@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -49,33 +49,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QStyleOptionProgressBar()
-*/
-void QStyleOptionProgressBar_new1()
-{
-  QStyleOptionProgressBar * obj = new QStyleOptionProgressBar();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QStyleOptionProgressBar( const QStyleOptionProgressBar & other )
-*/
-void QStyleOptionProgressBar_new2()
-{
-  QStyleOptionProgressBar * obj = new QStyleOptionProgressBar( *PQSTYLEOPTIONPROGRESSBAR( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QStyleOptionProgressBar_new1();
+    /*
+    QStyleOptionProgressBar()
+    */
+    QStyleOptionProgressBar * obj = new QStyleOptionProgressBar();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONPROGRESSBAR( 1 ) )
   {
-    QStyleOptionProgressBar_new2();
+    /*
+    QStyleOptionProgressBar( const QStyleOptionProgressBar & other )
+    */
+    QStyleOptionProgressBar * obj = new QStyleOptionProgressBar( *PQSTYLEOPTIONPROGRESSBAR( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -116,45 +116,35 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void addItem( QGraphicsLayoutItem * item, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
-*/
-void QGraphicsGridLayout_addItem1()
-{
-  QGraphicsGridLayout * obj = static_cast< QGraphicsGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->addItem( PQGRAPHICSLAYOUTITEM( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), PINT( 5 ), HB_ISNIL( 6 ) ? ( Qt::Alignment ) 0 : ( Qt::Alignment ) hb_parni( 6 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void addItem( QGraphicsLayoutItem * item, int row, int column, Qt::Alignment alignment = 0 )
-*/
-void QGraphicsGridLayout_addItem2()
-{
-  QGraphicsGridLayout * obj = static_cast< QGraphicsGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->addItem( PQGRAPHICSLAYOUTITEM( 1 ), PINT( 2 ), PINT( 3 ), HB_ISNIL( 4 ) ? ( Qt::Alignment ) 0 : ( Qt::Alignment ) hb_parni( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ADDITEM )
 {
   if( ISBETWEEN( 5, 6 ) && ISQGRAPHICSLAYOUTITEM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && ( HB_ISNUM( 6 ) || HB_ISNIL( 6 ) ) )
   {
-    QGraphicsGridLayout_addItem1();
+    /*
+    void addItem( QGraphicsLayoutItem * item, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
+    */
+    QGraphicsGridLayout * obj = static_cast< QGraphicsGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->addItem( PQGRAPHICSLAYOUTITEM( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), PINT( 5 ), HB_ISNIL( 6 ) ? ( Qt::Alignment ) 0 : ( Qt::Alignment ) hb_parni( 6 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISBETWEEN( 3, 4 ) && ISQGRAPHICSLAYOUTITEM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QGraphicsGridLayout_addItem2();
+    /*
+    void addItem( QGraphicsLayoutItem * item, int row, int column, Qt::Alignment alignment = 0 )
+    */
+    QGraphicsGridLayout * obj = static_cast< QGraphicsGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->addItem( PQGRAPHICSLAYOUTITEM( 1 ), PINT( 2 ), PINT( 3 ), HB_ISNIL( 4 ) ? ( Qt::Alignment ) 0 : ( Qt::Alignment ) hb_parni( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -378,43 +368,33 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_HORIZONTALSPACING )
   }
 }
 
-/*
-QGraphicsLayoutItem * itemAt( int row, int column ) const
-*/
-void QGraphicsGridLayout_itemAt1()
-{
-  QGraphicsGridLayout * obj = static_cast< QGraphicsGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QGraphicsLayoutItem * ptr = obj->itemAt( PINT( 1 ), PINT( 2 ) );
-    Qt4xHb::createReturnClass( ptr, "QGRAPHICSLAYOUTITEM", false );
-  }
-}
-
-/*
-virtual QGraphicsLayoutItem * itemAt( int index ) const
-*/
-void QGraphicsGridLayout_itemAt2()
-{
-  QGraphicsGridLayout * obj = static_cast< QGraphicsGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QGraphicsLayoutItem * ptr = obj->itemAt( PINT( 1 ) );
-    Qt4xHb::createReturnClass( ptr, "QGRAPHICSLAYOUTITEM", false );
-  }
-}
-
 HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ITEMAT )
 {
   if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QGraphicsGridLayout_itemAt1();
+    /*
+    QGraphicsLayoutItem * itemAt( int row, int column ) const
+    */
+    QGraphicsGridLayout * obj = static_cast< QGraphicsGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QGraphicsLayoutItem * ptr = obj->itemAt( PINT( 1 ), PINT( 2 ) );
+      Qt4xHb::createReturnClass( ptr, "QGRAPHICSLAYOUTITEM", false );
+    }
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QGraphicsGridLayout_itemAt2();
+    /*
+    virtual QGraphicsLayoutItem * itemAt( int index ) const
+    */
+    QGraphicsGridLayout * obj = static_cast< QGraphicsGridLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QGraphicsLayoutItem * ptr = obj->itemAt( PINT( 1 ) );
+      Qt4xHb::createReturnClass( ptr, "QGRAPHICSLAYOUTITEM", false );
+    }
   }
   else
   {

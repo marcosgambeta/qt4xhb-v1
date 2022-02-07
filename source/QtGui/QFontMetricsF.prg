@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -72,59 +72,39 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QFontMetricsF( const QFont & font )
-*/
-void QFontMetricsF_new1()
-{
-  QFontMetricsF * obj = new QFontMetricsF( *PQFONT( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QFontMetricsF( const QFont & font, QPaintDevice * paintdevice )
-*/
-void QFontMetricsF_new2()
-{
-  QFontMetricsF * obj = new QFontMetricsF( *PQFONT( 1 ), PQPAINTDEVICE( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QFontMetricsF( const QFontMetrics & fontMetrics )
-*/
-void QFontMetricsF_new3()
-{
-  QFontMetricsF * obj = new QFontMetricsF( *PQFONTMETRICS( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QFontMetricsF( const QFontMetricsF & fm )
-*/
-void QFontMetricsF_new4()
-{
-  QFontMetricsF * obj = new QFontMetricsF( *PQFONTMETRICSF( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QFONTMETRICSF_NEW )
 {
   if( ISNUMPAR( 1 ) && ISQFONT( 1 ) )
   {
-    QFontMetricsF_new1();
+    /*
+    QFontMetricsF( const QFont & font )
+    */
+    QFontMetricsF * obj = new QFontMetricsF( *PQFONT( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 2 ) && ISQFONT( 1 ) && HB_ISOBJECT( 2 ) )
   {
-    QFontMetricsF_new2();
+    /*
+    QFontMetricsF( const QFont & font, QPaintDevice * paintdevice )
+    */
+    QFontMetricsF * obj = new QFontMetricsF( *PQFONT( 1 ), PQPAINTDEVICE( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQFONTMETRICS( 1 ) )
   {
-    QFontMetricsF_new3();
+    /*
+    QFontMetricsF( const QFontMetrics & fontMetrics )
+    */
+    QFontMetricsF * obj = new QFontMetricsF( *PQFONTMETRICS( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQFONTMETRICSF( 1 ) )
   {
-    QFontMetricsF_new4();
+    /*
+    QFontMetricsF( const QFontMetricsF & fm )
+    */
+    QFontMetricsF * obj = new QFontMetricsF( *PQFONTMETRICSF( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -197,63 +177,48 @@ HB_FUNC_STATIC( QFONTMETRICSF_AVERAGECHARWIDTH )
   }
 }
 
-/*
-QRectF boundingRect( const QString & text ) const
-*/
-void QFontMetricsF_boundingRect1()
-{
-  QFontMetricsF * obj = static_cast< QFontMetricsF * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->boundingRect( PQSTRING( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QRECTF", true );
-  }
-}
-
-/*
-QRectF boundingRect( QChar ch ) const
-*/
-void QFontMetricsF_boundingRect2()
-{
-  QFontMetricsF * obj = static_cast< QFontMetricsF * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->boundingRect( *PQCHAR( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QRECTF", true );
-  }
-}
-
-/*
-QRectF boundingRect( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
-*/
-void QFontMetricsF_boundingRect3()
-{
-  QFontMetricsF * obj = static_cast< QFontMetricsF * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    int par5;
-    QRectF * ptr = new QRectF( obj->boundingRect( *PQRECTF( 1 ), PINT( 2 ), PQSTRING( 3 ), OPINT( 4, 0 ), &par5 ) );
-    Qt4xHb::createReturnClass( ptr, "QRECTF", true );
-    hb_storni( par5, 5 );
-  }
-}
-
 HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT )
 {
   if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QFontMetricsF_boundingRect1();
+    /*
+    QRectF boundingRect( const QString & text ) const
+    */
+    QFontMetricsF * obj = static_cast< QFontMetricsF * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QRectF * ptr = new QRectF( obj->boundingRect( PQSTRING( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
+    }
   }
   else if( ISNUMPAR( 1 ) && ISQCHAR( 1 ) )
   {
-    QFontMetricsF_boundingRect2();
+    /*
+    QRectF boundingRect( QChar ch ) const
+    */
+    QFontMetricsF * obj = static_cast< QFontMetricsF * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QRectF * ptr = new QRectF( obj->boundingRect( *PQCHAR( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
+    }
   }
   else if( ISBETWEEN( 3, 5 ) && ISQRECTF( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISARRAY( 5 ) || HB_ISNIL( 5 ) ) )
   {
-    QFontMetricsF_boundingRect3();
+    /*
+    QRectF boundingRect( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
+    */
+    QFontMetricsF * obj = static_cast< QFontMetricsF * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      int par5;
+      QRectF * ptr = new QRectF( obj->boundingRect( *PQRECTF( 1 ), PINT( 2 ), PQSTRING( 3 ), OPINT( 4, 0 ), &par5 ) );
+      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
+      hb_storni( par5, 5 );
+    }
   }
   else
   {
@@ -697,41 +662,31 @@ HB_FUNC_STATIC( QFONTMETRICSF_UNDERLINEPOS )
   }
 }
 
-/*
-qreal width( const QString & text ) const
-*/
-void QFontMetricsF_width1()
-{
-  QFontMetricsF * obj = static_cast< QFontMetricsF * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RQREAL( obj->width( PQSTRING( 1 ) ) );
-  }
-}
-
-/*
-qreal width( QChar ch ) const
-*/
-void QFontMetricsF_width2()
-{
-  QFontMetricsF * obj = static_cast< QFontMetricsF * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RQREAL( obj->width( *PQCHAR( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QFONTMETRICSF_WIDTH )
 {
   if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QFontMetricsF_width1();
+    /*
+    qreal width( const QString & text ) const
+    */
+    QFontMetricsF * obj = static_cast< QFontMetricsF * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RQREAL( obj->width( PQSTRING( 1 ) ) );
+    }
   }
   else if( ISNUMPAR( 1 ) && ISQCHAR( 1 ) )
   {
-    QFontMetricsF_width2();
+    /*
+    qreal width( QChar ch ) const
+    */
+    QFontMetricsF * obj = static_cast< QFontMetricsF * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RQREAL( obj->width( *PQCHAR( 1 ) ) );
+    }
   }
   else
   {

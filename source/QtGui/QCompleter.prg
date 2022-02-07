@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -83,46 +83,31 @@ RETURN
 #include <QtCore/QStringList>
 #include <QtGui/QAbstractItemView>
 
-/*
-QCompleter( QObject * parent = 0 )
-*/
-void QCompleter_new1()
-{
-  QCompleter * obj = new QCompleter( OPQOBJECT( 1, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QCompleter( QAbstractItemModel * model, QObject * parent = 0 )
-*/
-void QCompleter_new2()
-{
-  QCompleter * obj = new QCompleter( PQABSTRACTITEMMODEL( 1 ), OPQOBJECT( 2, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QCompleter( const QStringList & list, QObject * parent = 0 )
-*/
-void QCompleter_new3()
-{
-  QCompleter * obj = new QCompleter( PQSTRINGLIST( 1 ), OPQOBJECT( 2, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QCOMPLETER_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QCompleter_new1();
+    /*
+    QCompleter( QObject * parent = 0 )
+    */
+    QCompleter * obj = new QCompleter( OPQOBJECT( 1, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISBETWEEN( 1, 2 ) && ISQABSTRACTITEMMODEL( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QCompleter_new2();
+    /*
+    QCompleter( QAbstractItemModel * model, QObject * parent = 0 )
+    */
+    QCompleter * obj = new QCompleter( PQABSTRACTITEMMODEL( 1 ), OPQOBJECT( 2, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISARRAY( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QCompleter_new3();
+    /*
+    QCompleter( const QStringList & list, QObject * parent = 0 )
+    */
+    QCompleter * obj = new QCompleter( PQSTRINGLIST( 1 ), OPQOBJECT( 2, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

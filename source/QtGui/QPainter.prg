@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -68,7 +68,6 @@ CLASS QPainter
    METHOD drawPolygon
    METHOD drawPolyline
    METHOD drawRect
-   METHOD drawRects
    METHOD drawRoundedRect
    METHOD drawStaticText
    METHOD drawText
@@ -77,15 +76,9 @@ CLASS QPainter
    METHOD endNativePainting
    METHOD eraseRect
    METHOD fillPath
-   METHOD fillRect1
    METHOD fillRect2
    METHOD fillRect3
    METHOD fillRect4
-   METHOD fillRect5
-   METHOD fillRect6
-   METHOD fillRect7
-   METHOD fillRect8
-   METHOD fillRect9
    METHOD fillRect10
    METHOD fillRect11
    METHOD fillRect12
@@ -162,33 +155,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QPainter()
-*/
-void QPainter_new1()
-{
-  QPainter * obj = new QPainter();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QPainter( QPaintDevice * device )
-*/
-void QPainter_new2()
-{
-  QPainter * obj = new QPainter( PQPAINTDEVICE( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QPAINTER_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QPainter_new1();
+    /*
+    QPainter()
+    */
+    QPainter * obj = new QPainter();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && HB_ISOBJECT( 1 ) )
   {
-    QPainter_new2();
+    /*
+    QPainter( QPaintDevice * device )
+    */
+    QPainter * obj = new QPainter( PQPAINTDEVICE( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -312,79 +295,59 @@ HB_FUNC_STATIC( QPAINTER_BEGINNATIVEPAINTING )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-QRectF boundingRect( const QRectF & rectangle, int flags, const QString & text )
-*/
-void QPainter_boundingRect1()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->boundingRect( *PQRECTF( 1 ), PINT( 2 ), PQSTRING( 3 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QRECTF", true );
-  }
-}
-
-/*
-QRect boundingRect( const QRect & rectangle, int flags, const QString & text )
-*/
-void QPainter_boundingRect2()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->boundingRect( *PQRECT( 1 ), PINT( 2 ), PQSTRING( 3 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QRECT", true );
-  }
-}
-
-/*
-QRect boundingRect( int x, int y, int w, int h, int flags, const QString & text )
-*/
-void QPainter_boundingRect3()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->boundingRect( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), PINT( 5 ), PQSTRING( 6 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QRECT", true );
-  }
-}
-
-/*
-QRectF boundingRect( const QRectF & rectangle, const QString & text, const QTextOption & option = QTextOption() )
-*/
-void QPainter_boundingRect4()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->boundingRect( *PQRECTF( 1 ), PQSTRING( 2 ), HB_ISNIL( 3 ) ? QTextOption() : *static_cast< QTextOption * >( Qt4xHb::itemGetPtr( 3 ) ) ) );
-    Qt4xHb::createReturnClass( ptr, "QRECTF", true );
-  }
-}
-
 HB_FUNC_STATIC( QPAINTER_BOUNDINGRECT )
 {
   if( ISNUMPAR( 3 ) && ISQRECTF( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) )
   {
-    QPainter_boundingRect1();
+    /*
+    QRectF boundingRect( const QRectF & rectangle, int flags, const QString & text )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QRectF * ptr = new QRectF( obj->boundingRect( *PQRECTF( 1 ), PINT( 2 ), PQSTRING( 3 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
+    }
   }
   else if( ISNUMPAR( 3 ) && ISQRECT( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) )
   {
-    QPainter_boundingRect2();
+    /*
+    QRect boundingRect( const QRect & rectangle, int flags, const QString & text )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QRect * ptr = new QRect( obj->boundingRect( *PQRECT( 1 ), PINT( 2 ), PQSTRING( 3 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+    }
   }
   else if( ISNUMPAR( 6 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISCHAR( 6 ) )
   {
-    QPainter_boundingRect3();
+    /*
+    QRect boundingRect( int x, int y, int w, int h, int flags, const QString & text )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QRect * ptr = new QRect( obj->boundingRect( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), PINT( 5 ), PQSTRING( 6 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+    }
   }
   else if( ISBETWEEN( 2, 3 ) && ISQRECTF( 1 ) && HB_ISCHAR( 2 ) && ( ISQTEXTOPTION( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QPainter_boundingRect4();
+    /*
+    QRectF boundingRect( const QRectF & rectangle, const QString & text, const QTextOption & option = QTextOption() )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QRectF * ptr = new QRectF( obj->boundingRect( *PQRECTF( 1 ), PQSTRING( 2 ), HB_ISNIL( 3 ) ? QTextOption() : *static_cast< QTextOption * >( Qt4xHb::itemGetPtr( 3 ) ) ) );
+      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
+    }
   }
   else
   {
@@ -591,457 +554,347 @@ HB_FUNC_STATIC( QPAINTER_DEVICETRANSFORM )
   }
 }
 
-/*
-void drawArc( const QRectF & rectangle, int startAngle, int spanAngle )
-*/
-void QPainter_drawArc1()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawArc( *PQRECTF( 1 ), PINT( 2 ), PINT( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawArc( const QRect & rectangle, int startAngle, int spanAngle )
-*/
-void QPainter_drawArc2()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawArc( *PQRECT( 1 ), PINT( 2 ), PINT( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawArc( int x, int y, int width, int height, int startAngle, int spanAngle )
-*/
-void QPainter_drawArc3()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawArc( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), PINT( 5 ), PINT( 6 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPAINTER_DRAWARC )
 {
   if( ISNUMPAR( 3 ) && ISQRECTF( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
-    QPainter_drawArc1();
+    /*
+    void drawArc( const QRectF & rectangle, int startAngle, int spanAngle )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawArc( *PQRECTF( 1 ), PINT( 2 ), PINT( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 3 ) && ISQRECT( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
-    QPainter_drawArc2();
+    /*
+    void drawArc( const QRect & rectangle, int startAngle, int spanAngle )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawArc( *PQRECT( 1 ), PINT( 2 ), PINT( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 6 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) )
   {
-    QPainter_drawArc3();
+    /*
+    void drawArc( int x, int y, int width, int height, int startAngle, int spanAngle )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawArc( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), PINT( 5 ), PINT( 6 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
-}
-
-/*
-void drawChord( const QRectF & rectangle, int startAngle, int spanAngle )
-*/
-void QPainter_drawChord1()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawChord( *PQRECTF( 1 ), PINT( 2 ), PINT( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawChord( const QRect & rectangle, int startAngle, int spanAngle )
-*/
-void QPainter_drawChord2()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawChord( *PQRECT( 1 ), PINT( 2 ), PINT( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawChord( int x, int y, int width, int height, int startAngle, int spanAngle )
-*/
-void QPainter_drawChord3()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawChord( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), PINT( 5 ), PINT( 6 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( QPAINTER_DRAWCHORD )
 {
   if( ISNUMPAR( 3 ) && ISQRECTF( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
-    QPainter_drawChord1();
+    /*
+    void drawChord( const QRectF & rectangle, int startAngle, int spanAngle )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawChord( *PQRECTF( 1 ), PINT( 2 ), PINT( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 3 ) && ISQRECT( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
-    QPainter_drawChord2();
+    /*
+    void drawChord( const QRect & rectangle, int startAngle, int spanAngle )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawChord( *PQRECT( 1 ), PINT( 2 ), PINT( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 6 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) )
   {
-    QPainter_drawChord3();
+    /*
+    void drawChord( int x, int y, int width, int height, int startAngle, int spanAngle )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawChord( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), PINT( 5 ), PINT( 6 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
-}
-
-/*
-void drawConvexPolygon( const QPolygonF & polygon )
-*/
-void QPainter_drawConvexPolygon3()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawConvexPolygon( *PQPOLYGONF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawConvexPolygon( const QPolygon & polygon )
-*/
-void QPainter_drawConvexPolygon4()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawConvexPolygon( *PQPOLYGON( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( QPAINTER_DRAWCONVEXPOLYGON )
 {
   if( ISNUMPAR( 1 ) && ISQPOLYGONF( 1 ) )
   {
-    QPainter_drawConvexPolygon3();
+    /*
+    void drawConvexPolygon( const QPolygonF & polygon )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawConvexPolygon( *PQPOLYGONF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && ISQPOLYGON( 1 ) )
   {
-    QPainter_drawConvexPolygon4();
+    /*
+    void drawConvexPolygon( const QPolygon & polygon )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawConvexPolygon( *PQPOLYGON( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
-}
-
-/*
-void drawEllipse( const QRectF & rectangle )
-*/
-void QPainter_drawEllipse1()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawEllipse( *PQRECTF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawEllipse( const QRect & rectangle )
-*/
-void QPainter_drawEllipse2()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawEllipse( *PQRECT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawEllipse( int x, int y, int width, int height )
-*/
-void QPainter_drawEllipse3()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawEllipse( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawEllipse( const QPointF & center, qreal rx, qreal ry )
-*/
-void QPainter_drawEllipse4()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawEllipse( *PQPOINTF( 1 ), PQREAL( 2 ), PQREAL( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawEllipse( const QPoint & center, int rx, int ry )
-*/
-void QPainter_drawEllipse5()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawEllipse( *PQPOINT( 1 ), PINT( 2 ), PINT( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( QPAINTER_DRAWELLIPSE )
 {
   if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
   {
-    QPainter_drawEllipse1();
+    /*
+    void drawEllipse( const QRectF & rectangle )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawEllipse( *PQRECTF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
   {
-    QPainter_drawEllipse2();
+    /*
+    void drawEllipse( const QRect & rectangle )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawEllipse( *PQRECT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QPainter_drawEllipse3();
+    /*
+    void drawEllipse( int x, int y, int width, int height )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawEllipse( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 3 ) && ISQPOINTF( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
-    QPainter_drawEllipse4();
+    /*
+    void drawEllipse( const QPointF & center, qreal rx, qreal ry )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawEllipse( *PQPOINTF( 1 ), PQREAL( 2 ), PQREAL( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 3 ) && ISQPOINT( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
-    QPainter_drawEllipse5();
+    /*
+    void drawEllipse( const QPoint & center, int rx, int ry )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawEllipse( *PQPOINT( 1 ), PINT( 2 ), PINT( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
-}
-
-/*
-void drawImage( const QRectF & target, const QImage & image, const QRectF & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
-*/
-void QPainter_drawImage1()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawImage( *PQRECTF( 1 ), *PQIMAGE( 2 ), *PQRECTF( 3 ), HB_ISNIL( 4 ) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawImage( const QRect & target, const QImage & image, const QRect & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
-*/
-void QPainter_drawImage2()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawImage( *PQRECT( 1 ), *PQIMAGE( 2 ), *PQRECT( 3 ), HB_ISNIL( 4 ) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawImage( const QPointF & point, const QImage & image )
-*/
-void QPainter_drawImage3()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawImage( *PQPOINTF( 1 ), *PQIMAGE( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawImage( const QPoint & point, const QImage & image )
-*/
-void QPainter_drawImage4()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawImage( *PQPOINT( 1 ), *PQIMAGE( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawImage( const QPointF & point, const QImage & image, const QRectF & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
-*/
-void QPainter_drawImage5()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawImage( *PQPOINTF( 1 ), *PQIMAGE( 2 ), *PQRECTF( 3 ), HB_ISNIL( 4 ) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawImage( const QPoint & point, const QImage & image, const QRect & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
-*/
-void QPainter_drawImage6()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawImage( *PQPOINT( 1 ), *PQIMAGE( 2 ), *PQRECT( 3 ), HB_ISNIL( 4 ) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawImage( const QRectF & rectangle, const QImage & image )
-*/
-void QPainter_drawImage7()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawImage( *PQRECTF( 1 ), *PQIMAGE( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawImage( const QRect & rectangle, const QImage & image )
-*/
-void QPainter_drawImage8()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawImage( *PQRECT( 1 ), *PQIMAGE( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawImage( int x, int y, const QImage & image, int sx = 0, int sy = 0, int sw = -1, int sh = -1, Qt::ImageConversionFlags flags = Qt::AutoColor )
-*/
-void QPainter_drawImage9()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawImage( PINT( 1 ), PINT( 2 ), *PQIMAGE( 3 ), OPINT( 4, 0 ), OPINT( 5, 0 ), OPINT( 6, -1 ), OPINT( 7, -1 ), HB_ISNIL( 8 ) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni( 8 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( QPAINTER_DRAWIMAGE )
 {
   if( ISBETWEEN( 3, 4 ) && ISQRECTF( 1 ) && ISQIMAGE( 2 ) && ISQRECTF( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QPainter_drawImage1();
+    /*
+    void drawImage( const QRectF & target, const QImage & image, const QRectF & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawImage( *PQRECTF( 1 ), *PQIMAGE( 2 ), *PQRECTF( 3 ), HB_ISNIL( 4 ) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISBETWEEN( 3, 4 ) && ISQRECT( 1 ) && ISQIMAGE( 2 ) && ISQRECT( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QPainter_drawImage2();
+    /*
+    void drawImage( const QRect & target, const QImage & image, const QRect & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawImage( *PQRECT( 1 ), *PQIMAGE( 2 ), *PQRECT( 3 ), HB_ISNIL( 4 ) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && ISQPOINTF( 1 ) && ISQIMAGE( 2 ) )
   {
-    QPainter_drawImage3();
+    /*
+    void drawImage( const QPointF & point, const QImage & image )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawImage( *PQPOINTF( 1 ), *PQIMAGE( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && ISQPOINT( 1 ) && ISQIMAGE( 2 ) )
   {
-    QPainter_drawImage4();
+    /*
+    void drawImage( const QPoint & point, const QImage & image )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawImage( *PQPOINT( 1 ), *PQIMAGE( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISBETWEEN( 3, 4 ) && ISQPOINTF( 1 ) && ISQIMAGE( 2 ) && ISQRECTF( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QPainter_drawImage5();
+    /*
+    void drawImage( const QPointF & point, const QImage & image, const QRectF & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawImage( *PQPOINTF( 1 ), *PQIMAGE( 2 ), *PQRECTF( 3 ), HB_ISNIL( 4 ) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISBETWEEN( 3, 4 ) && ISQPOINT( 1 ) && ISQIMAGE( 2 ) && ISQRECT( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QPainter_drawImage6();
+    /*
+    void drawImage( const QPoint & point, const QImage & image, const QRect & source, Qt::ImageConversionFlags flags = Qt::AutoColor )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawImage( *PQPOINT( 1 ), *PQIMAGE( 2 ), *PQRECT( 3 ), HB_ISNIL( 4 ) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && ISQRECTF( 1 ) && ISQIMAGE( 2 ) )
   {
-    QPainter_drawImage7();
+    /*
+    void drawImage( const QRectF & rectangle, const QImage & image )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawImage( *PQRECTF( 1 ), *PQIMAGE( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && ISQRECT( 1 ) && ISQIMAGE( 2 ) )
   {
-    QPainter_drawImage8();
+    /*
+    void drawImage( const QRect & rectangle, const QImage & image )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawImage( *PQRECT( 1 ), *PQIMAGE( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISBETWEEN( 3, 8 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQIMAGE( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) && ( HB_ISNUM( 6 ) || HB_ISNIL( 6 ) ) && ( HB_ISNUM( 7 ) || HB_ISNIL( 7 ) ) && ( HB_ISNUM( 8 ) || HB_ISNIL( 8 ) ) )
   {
-    QPainter_drawImage9();
+    /*
+    void drawImage( int x, int y, const QImage & image, int sx = 0, int sy = 0, int sw = -1, int sh = -1, Qt::ImageConversionFlags flags = Qt::AutoColor )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawImage( PINT( 1 ), PINT( 2 ), *PQIMAGE( 3 ), OPINT( 4, 0 ), OPINT( 5, 0 ), OPINT( 6, -1 ), OPINT( 7, -1 ), HB_ISNIL( 8 ) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni( 8 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -1049,102 +902,77 @@ HB_FUNC_STATIC( QPAINTER_DRAWIMAGE )
   }
 }
 
-/*
-void drawLine( const QLineF & line )
-*/
-void QPainter_drawLine1()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawLine( *PQLINEF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawLine( const QLine & line )
-*/
-void QPainter_drawLine2()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawLine( *PQLINE( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawLine( const QPoint & p1, const QPoint & p2 )
-*/
-void QPainter_drawLine3()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawLine( *PQPOINT( 1 ), *PQPOINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawLine( const QPointF & p1, const QPointF & p2 )
-*/
-void QPainter_drawLine4()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawLine( *PQPOINTF( 1 ), *PQPOINTF( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawLine( int x1, int y1, int x2, int y2 )
-*/
-void QPainter_drawLine5()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawLine( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPAINTER_DRAWLINE )
 {
   if( ISNUMPAR( 1 ) && ISQLINEF( 1 ) )
   {
-    QPainter_drawLine1();
+    /*
+    void drawLine( const QLineF & line )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawLine( *PQLINEF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && ISQLINE( 1 ) )
   {
-    QPainter_drawLine2();
+    /*
+    void drawLine( const QLine & line )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawLine( *PQLINE( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && ISQPOINT( 1 ) && ISQPOINT( 2 ) )
   {
-    QPainter_drawLine3();
+    /*
+    void drawLine( const QPoint & p1, const QPoint & p2 )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawLine( *PQPOINT( 1 ), *PQPOINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && ISQPOINTF( 1 ) && ISQPOINTF( 2 ) )
   {
-    QPainter_drawLine4();
+    /*
+    void drawLine( const QPointF & p1, const QPointF & p2 )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawLine( *PQPOINTF( 1 ), *PQPOINTF( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QPainter_drawLine5();
+    /*
+    void drawLine( int x1, int y1, int x2, int y2 )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawLine( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -1314,933 +1142,675 @@ HB_FUNC_STATIC( QPAINTER_DRAWPATH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void drawPicture( const QPointF & point, const QPicture & picture )
-*/
-void QPainter_drawPicture1()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawPicture( *PQPOINTF( 1 ), *PQPICTURE( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawPicture( const QPoint & point, const QPicture & picture )
-*/
-void QPainter_drawPicture2()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawPicture( *PQPOINT( 1 ), *PQPICTURE( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawPicture( int x, int y, const QPicture & picture )
-*/
-void QPainter_drawPicture3()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawPicture( PINT( 1 ), PINT( 2 ), *PQPICTURE( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPAINTER_DRAWPICTURE )
 {
   if( ISNUMPAR( 2 ) && ISQPOINTF( 1 ) && ISQPICTURE( 2 ) )
   {
-    QPainter_drawPicture1();
+    /*
+    void drawPicture( const QPointF & point, const QPicture & picture )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawPicture( *PQPOINTF( 1 ), *PQPICTURE( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && ISQPOINT( 1 ) && ISQPICTURE( 2 ) )
   {
-    QPainter_drawPicture2();
+    /*
+    void drawPicture( const QPoint & point, const QPicture & picture )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawPicture( *PQPOINT( 1 ), *PQPICTURE( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQPICTURE( 3 ) )
   {
-    QPainter_drawPicture3();
+    /*
+    void drawPicture( int x, int y, const QPicture & picture )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawPicture( PINT( 1 ), PINT( 2 ), *PQPICTURE( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
-}
-
-/*
-void drawPie( const QRectF & rectangle, int startAngle, int spanAngle )
-*/
-void QPainter_drawPie1()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawPie( *PQRECTF( 1 ), PINT( 2 ), PINT( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawPie( const QRect & rectangle, int startAngle, int spanAngle )
-*/
-void QPainter_drawPie2()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawPie( *PQRECT( 1 ), PINT( 2 ), PINT( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawPie( int x, int y, int width, int height, int startAngle, int spanAngle )
-*/
-void QPainter_drawPie3()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawPie( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), PINT( 5 ), PINT( 6 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( QPAINTER_DRAWPIE )
 {
   if( ISNUMPAR( 3 ) && ISQRECTF( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
-    QPainter_drawPie1();
+    /*
+    void drawPie( const QRectF & rectangle, int startAngle, int spanAngle )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawPie( *PQRECTF( 1 ), PINT( 2 ), PINT( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 3 ) && ISQRECT( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
-    QPainter_drawPie2();
+    /*
+    void drawPie( const QRect & rectangle, int startAngle, int spanAngle )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawPie( *PQRECT( 1 ), PINT( 2 ), PINT( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 6 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) )
   {
-    QPainter_drawPie3();
+    /*
+    void drawPie( int x, int y, int width, int height, int startAngle, int spanAngle )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawPie( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), PINT( 5 ), PINT( 6 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
-}
-
-/*
-void drawPixmap( const QRectF & target, const QPixmap & pixmap, const QRectF & source )
-*/
-void QPainter_drawPixmap1()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawPixmap( *PQRECTF( 1 ), *PQPIXMAP( 2 ), *PQRECTF( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawPixmap( const QRect & target, const QPixmap & pixmap, const QRect & source )
-*/
-void QPainter_drawPixmap2()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawPixmap( *PQRECT( 1 ), *PQPIXMAP( 2 ), *PQRECT( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawPixmap( const QPointF & point, const QPixmap & pixmap, const QRectF & source )
-*/
-void QPainter_drawPixmap3()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawPixmap( *PQPOINTF( 1 ), *PQPIXMAP( 2 ), *PQRECTF( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawPixmap( const QPoint & point, const QPixmap & pixmap, const QRect & source )
-*/
-void QPainter_drawPixmap4()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawPixmap( *PQPOINT( 1 ), *PQPIXMAP( 2 ), *PQRECT( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawPixmap( const QPointF & point, const QPixmap & pixmap )
-*/
-void QPainter_drawPixmap5()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawPixmap( *PQPOINTF( 1 ), *PQPIXMAP( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawPixmap( const QPoint & point, const QPixmap & pixmap )
-*/
-void QPainter_drawPixmap6()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawPixmap( *PQPOINT( 1 ), *PQPIXMAP( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawPixmap( int x, int y, const QPixmap & pixmap )
-*/
-void QPainter_drawPixmap7()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawPixmap( PINT( 1 ), PINT( 2 ), *PQPIXMAP( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawPixmap( const QRect & rectangle, const QPixmap & pixmap )
-*/
-void QPainter_drawPixmap8()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawPixmap( *PQRECT( 1 ), *PQPIXMAP( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawPixmap( int x, int y, int width, int height, const QPixmap & pixmap )
-*/
-void QPainter_drawPixmap9()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawPixmap( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), *PQPIXMAP( 5 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawPixmap( int x, int y, int w, int h, const QPixmap & pixmap, int sx, int sy, int sw, int sh )
-*/
-void QPainter_drawPixmap10()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawPixmap( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), *PQPIXMAP( 5 ), PINT( 6 ), PINT( 7 ), PINT( 8 ), PINT( 9 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawPixmap( int x, int y, const QPixmap & pixmap, int sx, int sy, int sw, int sh )
-*/
-void QPainter_drawPixmap11()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawPixmap( PINT( 1 ), PINT( 2 ), *PQPIXMAP( 3 ), PINT( 4 ), PINT( 5 ), PINT( 6 ), PINT( 7 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( QPAINTER_DRAWPIXMAP )
 {
   if( ISNUMPAR( 3 ) && ISQRECTF( 1 ) && ISQPIXMAP( 2 ) && ISQRECTF( 3 ) )
   {
-    QPainter_drawPixmap1();
+    /*
+    void drawPixmap( const QRectF & target, const QPixmap & pixmap, const QRectF & source )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawPixmap( *PQRECTF( 1 ), *PQPIXMAP( 2 ), *PQRECTF( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 3 ) && ISQRECT( 1 ) && ISQPIXMAP( 2 ) && ISQRECT( 3 ) )
   {
-    QPainter_drawPixmap2();
+    /*
+    void drawPixmap( const QRect & target, const QPixmap & pixmap, const QRect & source )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawPixmap( *PQRECT( 1 ), *PQPIXMAP( 2 ), *PQRECT( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 3 ) && ISQPOINTF( 1 ) && ISQPIXMAP( 2 ) && ISQRECTF( 3 ) )
   {
-    QPainter_drawPixmap3();
+    /*
+    void drawPixmap( const QPointF & point, const QPixmap & pixmap, const QRectF & source )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawPixmap( *PQPOINTF( 1 ), *PQPIXMAP( 2 ), *PQRECTF( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 3 ) && ISQPOINT( 1 ) && ISQPIXMAP( 2 ) && ISQRECT( 3 ) )
   {
-    QPainter_drawPixmap4();
+    /*
+    void drawPixmap( const QPoint & point, const QPixmap & pixmap, const QRect & source )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawPixmap( *PQPOINT( 1 ), *PQPIXMAP( 2 ), *PQRECT( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && ISQPOINTF( 1 ) && ISQPIXMAP( 2 ) )
   {
-    QPainter_drawPixmap5();
+    /*
+    void drawPixmap( const QPointF & point, const QPixmap & pixmap )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawPixmap( *PQPOINTF( 1 ), *PQPIXMAP( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && ISQPOINT( 1 ) && ISQPIXMAP( 2 ) )
   {
-    QPainter_drawPixmap6();
+    /*
+    void drawPixmap( const QPoint & point, const QPixmap & pixmap )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawPixmap( *PQPOINT( 1 ), *PQPIXMAP( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQPIXMAP( 3 ) )
   {
-    QPainter_drawPixmap7();
+    /*
+    void drawPixmap( int x, int y, const QPixmap & pixmap )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawPixmap( PINT( 1 ), PINT( 2 ), *PQPIXMAP( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && ISQRECT( 1 ) && ISQPIXMAP( 2 ) )
   {
-    QPainter_drawPixmap8();
+    /*
+    void drawPixmap( const QRect & rectangle, const QPixmap & pixmap )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawPixmap( *PQRECT( 1 ), *PQPIXMAP( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ISQPIXMAP( 5 ) )
   {
-    QPainter_drawPixmap9();
+    /*
+    void drawPixmap( int x, int y, int width, int height, const QPixmap & pixmap )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawPixmap( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), *PQPIXMAP( 5 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 9 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ISQPIXMAP( 5 ) && HB_ISNUM( 6 ) && HB_ISNUM( 7 ) && HB_ISNUM( 8 ) && HB_ISNUM( 9 ) )
   {
-    QPainter_drawPixmap10();
+    /*
+    void drawPixmap( int x, int y, int w, int h, const QPixmap & pixmap, int sx, int sy, int sw, int sh )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawPixmap( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), *PQPIXMAP( 5 ), PINT( 6 ), PINT( 7 ), PINT( 8 ), PINT( 9 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 7 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQPIXMAP( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) && HB_ISNUM( 7 ) )
   {
-    QPainter_drawPixmap11();
+    /*
+    void drawPixmap( int x, int y, const QPixmap & pixmap, int sx, int sy, int sw, int sh )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawPixmap( PINT( 1 ), PINT( 2 ), *PQPIXMAP( 3 ), PINT( 4 ), PINT( 5 ), PINT( 6 ), PINT( 7 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
-}
-
-/*
-void drawPoint( const QPointF & position )
-*/
-void QPainter_drawPoint1()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawPoint( *PQPOINTF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawPoint( const QPoint & position )
-*/
-void QPainter_drawPoint2()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawPoint( *PQPOINT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawPoint( int x, int y )
-*/
-void QPainter_drawPoint3()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawPoint( PINT( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( QPAINTER_DRAWPOINT )
 {
   if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
   {
-    QPainter_drawPoint1();
+    /*
+    void drawPoint( const QPointF & position )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawPoint( *PQPOINTF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
-    QPainter_drawPoint2();
+    /*
+    void drawPoint( const QPoint & position )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawPoint( *PQPOINT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QPainter_drawPoint3();
+    /*
+    void drawPoint( int x, int y )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawPoint( PINT( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
-}
-
-/*
-void drawPoints( const QPolygonF & points )
-*/
-void QPainter_drawPoints3()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawPoints( *PQPOLYGONF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawPoints( const QPolygon & points )
-*/
-void QPainter_drawPoints4()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawPoints( *PQPOLYGON( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( QPAINTER_DRAWPOINTS )
 {
   if( ISNUMPAR( 1 ) && ISQPOLYGONF( 1 ) )
   {
-    QPainter_drawPoints3();
+    /*
+    void drawPoints( const QPolygonF & points )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawPoints( *PQPOLYGONF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && ISQPOLYGON( 1 ) )
   {
-    QPainter_drawPoints4();
+    /*
+    void drawPoints( const QPolygon & points )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawPoints( *PQPOLYGON( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
-}
-
-/*
-void drawPolygon( const QPolygonF & points, Qt::FillRule fillRule = Qt::OddEvenFill )
-*/
-void QPainter_drawPolygon3()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawPolygon( *PQPOLYGONF( 1 ), HB_ISNIL( 2 ) ? ( Qt::FillRule ) Qt::OddEvenFill : ( Qt::FillRule ) hb_parni( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawPolygon( const QPolygon & points, Qt::FillRule fillRule = Qt::OddEvenFill )
-*/
-void QPainter_drawPolygon4()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawPolygon( *PQPOLYGON( 1 ), HB_ISNIL( 2 ) ? ( Qt::FillRule ) Qt::OddEvenFill : ( Qt::FillRule ) hb_parni( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( QPAINTER_DRAWPOLYGON )
 {
   if( ISBETWEEN( 1, 2 ) && ISQPOLYGONF( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QPainter_drawPolygon3();
+    /*
+    void drawPolygon( const QPolygonF & points, Qt::FillRule fillRule = Qt::OddEvenFill )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawPolygon( *PQPOLYGONF( 1 ), HB_ISNIL( 2 ) ? ( Qt::FillRule ) Qt::OddEvenFill : ( Qt::FillRule ) hb_parni( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISBETWEEN( 1, 2 ) && ISQPOLYGON( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QPainter_drawPolygon4();
+    /*
+    void drawPolygon( const QPolygon & points, Qt::FillRule fillRule = Qt::OddEvenFill )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawPolygon( *PQPOLYGON( 1 ), HB_ISNIL( 2 ) ? ( Qt::FillRule ) Qt::OddEvenFill : ( Qt::FillRule ) hb_parni( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
-}
-
-/*
-void drawPolyline( const QPolygonF & points )
-*/
-void QPainter_drawPolyline3()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawPolyline( *PQPOLYGONF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawPolyline( const QPolygon & points )
-*/
-void QPainter_drawPolyline4()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawPolyline( *PQPOLYGON( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( QPAINTER_DRAWPOLYLINE )
 {
   if( ISNUMPAR( 1 ) && ISQPOLYGONF( 1 ) )
   {
-    QPainter_drawPolyline3();
+    /*
+    void drawPolyline( const QPolygonF & points )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawPolyline( *PQPOLYGONF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && ISQPOLYGON( 1 ) )
   {
-    QPainter_drawPolyline4();
+    /*
+    void drawPolyline( const QPolygon & points )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawPolyline( *PQPOLYGON( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
-}
-
-/*
-void drawRect( const QRectF & rectangle )
-*/
-void QPainter_drawRect1()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawRect( *PQRECTF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawRect( const QRect & rectangle )
-*/
-void QPainter_drawRect2()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawRect( *PQRECT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawRect( int x, int y, int width, int height )
-*/
-void QPainter_drawRect3()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawRect( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( QPAINTER_DRAWRECT )
 {
   if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
   {
-    QPainter_drawRect1();
+    /*
+    void drawRect( const QRectF & rectangle )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawRect( *PQRECTF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
   {
-    QPainter_drawRect2();
+    /*
+    void drawRect( const QRect & rectangle )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawRect( *PQRECT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QPainter_drawRect3();
+    /*
+    void drawRect( int x, int y, int width, int height )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawRect( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
-}
-
-/*
-void drawRects( const QVector<QRectF> & rectangles )
-*/
-void QPainter_drawRects3()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QVector<QRectF> par1;
-    PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
-    int nLen1 = hb_arrayLen( aList1 );
-    for( int i1 = 0; i1 < nLen1; i1++ )
-    {
-      par1 << *static_cast< QRectF * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
-    }
-    obj->drawRects( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawRects( const QVector<QRect> & rectangles )
-*/
-void QPainter_drawRects4()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QVector<QRect> par1;
-    PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
-    int nLen1 = hb_arrayLen( aList1 );
-    for( int i1 = 0; i1 < nLen1; i1++ )
-    {
-      par1 << *static_cast< QRect * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
-    }
-    obj->drawRects( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-HB_FUNC_STATIC( QPAINTER_DRAWRECTS )
-{
-}
-
-/*
-void drawRoundedRect( const QRectF & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
-*/
-void QPainter_drawRoundedRect1()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawRoundedRect( *PQRECTF( 1 ), PQREAL( 2 ), PQREAL( 3 ), HB_ISNIL( 4 ) ? ( Qt::SizeMode ) Qt::AbsoluteSize : ( Qt::SizeMode ) hb_parni( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawRoundedRect( const QRect & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
-*/
-void QPainter_drawRoundedRect2()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawRoundedRect( *PQRECT( 1 ), PQREAL( 2 ), PQREAL( 3 ), HB_ISNIL( 4 ) ? ( Qt::SizeMode ) Qt::AbsoluteSize : ( Qt::SizeMode ) hb_parni( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawRoundedRect( int x, int y, int w, int h, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
-*/
-void QPainter_drawRoundedRect3()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawRoundedRect( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), PQREAL( 5 ), PQREAL( 6 ), HB_ISNIL( 7 ) ? ( Qt::SizeMode ) Qt::AbsoluteSize : ( Qt::SizeMode ) hb_parni( 7 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( QPAINTER_DRAWROUNDEDRECT )
 {
   if( ISBETWEEN( 3, 4 ) && ISQRECTF( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QPainter_drawRoundedRect1();
+    /*
+    void drawRoundedRect( const QRectF & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawRoundedRect( *PQRECTF( 1 ), PQREAL( 2 ), PQREAL( 3 ), HB_ISNIL( 4 ) ? ( Qt::SizeMode ) Qt::AbsoluteSize : ( Qt::SizeMode ) hb_parni( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISBETWEEN( 3, 4 ) && ISQRECT( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QPainter_drawRoundedRect2();
+    /*
+    void drawRoundedRect( const QRect & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawRoundedRect( *PQRECT( 1 ), PQREAL( 2 ), PQREAL( 3 ), HB_ISNIL( 4 ) ? ( Qt::SizeMode ) Qt::AbsoluteSize : ( Qt::SizeMode ) hb_parni( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISBETWEEN( 6, 7 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) && ( HB_ISNUM( 7 ) || HB_ISNIL( 7 ) ) )
   {
-    QPainter_drawRoundedRect3();
+    /*
+    void drawRoundedRect( int x, int y, int w, int h, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawRoundedRect( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), PQREAL( 5 ), PQREAL( 6 ), HB_ISNIL( 7 ) ? ( Qt::SizeMode ) Qt::AbsoluteSize : ( Qt::SizeMode ) hb_parni( 7 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
-}
-
-/*
-void drawStaticText( const QPointF & topLeftPosition, const QStaticText & staticText )
-*/
-void QPainter_drawStaticText1()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawStaticText( *PQPOINTF( 1 ), *PQSTATICTEXT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawStaticText( const QPoint & topLeftPosition, const QStaticText & staticText )
-*/
-void QPainter_drawStaticText2()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawStaticText( *PQPOINT( 1 ), *PQSTATICTEXT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawStaticText( int left, int top, const QStaticText & staticText )
-*/
-void QPainter_drawStaticText3()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawStaticText( PINT( 1 ), PINT( 2 ), *PQSTATICTEXT( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( QPAINTER_DRAWSTATICTEXT )
 {
   if( ISNUMPAR( 2 ) && ISQPOINTF( 1 ) && ISQSTATICTEXT( 2 ) )
   {
-    QPainter_drawStaticText1();
+    /*
+    void drawStaticText( const QPointF & topLeftPosition, const QStaticText & staticText )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawStaticText( *PQPOINTF( 1 ), *PQSTATICTEXT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && ISQPOINT( 1 ) && ISQSTATICTEXT( 2 ) )
   {
-    QPainter_drawStaticText2();
+    /*
+    void drawStaticText( const QPoint & topLeftPosition, const QStaticText & staticText )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawStaticText( *PQPOINT( 1 ), *PQSTATICTEXT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQSTATICTEXT( 3 ) )
   {
-    QPainter_drawStaticText3();
+    /*
+    void drawStaticText( int left, int top, const QStaticText & staticText )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawStaticText( PINT( 1 ), PINT( 2 ), *PQSTATICTEXT( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
   }
-}
-
-/*
-void drawText( const QPointF & position, const QString & text )
-*/
-void QPainter_drawText1()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawText( *PQPOINTF( 1 ), PQSTRING( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawText( const QPoint & position, const QString & text )
-*/
-void QPainter_drawText2()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawText( *PQPOINT( 1 ), PQSTRING( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawText( const QRectF & rectangle, int flags, const QString & text, QRectF * boundingRect = 0 )
-*/
-void QPainter_drawText3()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawText( *PQRECTF( 1 ), PINT( 2 ), PQSTRING( 3 ), HB_ISNIL( 4 ) ? 0 : static_cast< QRectF * >( Qt4xHb::itemGetPtr( 4 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawText( const QRect & rectangle, int flags, const QString & text, QRect * boundingRect = 0 )
-*/
-void QPainter_drawText4()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawText( *PQRECT( 1 ), PINT( 2 ), PQSTRING( 3 ), HB_ISNIL( 4 ) ? 0 : static_cast< QRect * >( Qt4xHb::itemGetPtr( 4 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawText( int x, int y, const QString & text )
-*/
-void QPainter_drawText5()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawText( PINT( 1 ), PINT( 2 ), PQSTRING( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawText( int x, int y, int width, int height, int flags, const QString & text, QRect * boundingRect = 0 )
-*/
-void QPainter_drawText6()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawText( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), PINT( 5 ), PQSTRING( 6 ), HB_ISNIL( 7 ) ? 0 : static_cast< QRect * >( Qt4xHb::itemGetPtr( 7 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawText( const QRectF & rectangle, const QString & text, const QTextOption & option = QTextOption() )
-*/
-void QPainter_drawText7()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawText( *PQRECTF( 1 ), PQSTRING( 2 ), HB_ISNIL( 3 ) ? QTextOption() : *static_cast< QTextOption * >( Qt4xHb::itemGetPtr( 3 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
 }
 
 HB_FUNC_STATIC( QPAINTER_DRAWTEXT )
 {
   if( ISNUMPAR( 2 ) && ISQPOINTF( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QPainter_drawText1();
+    /*
+    void drawText( const QPointF & position, const QString & text )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawText( *PQPOINTF( 1 ), PQSTRING( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && ISQPOINT( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QPainter_drawText2();
+    /*
+    void drawText( const QPoint & position, const QString & text )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawText( *PQPOINT( 1 ), PQSTRING( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISBETWEEN( 3, 4 ) && ISQRECTF( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) && ( ISQRECTF( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QPainter_drawText3();
+    /*
+    void drawText( const QRectF & rectangle, int flags, const QString & text, QRectF * boundingRect = 0 )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawText( *PQRECTF( 1 ), PINT( 2 ), PQSTRING( 3 ), HB_ISNIL( 4 ) ? 0 : static_cast< QRectF * >( Qt4xHb::itemGetPtr( 4 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISBETWEEN( 3, 4 ) && ISQRECT( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) && ( ISQRECT( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QPainter_drawText4();
+    /*
+    void drawText( const QRect & rectangle, int flags, const QString & text, QRect * boundingRect = 0 )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawText( *PQRECT( 1 ), PINT( 2 ), PQSTRING( 3 ), HB_ISNIL( 4 ) ? 0 : static_cast< QRect * >( Qt4xHb::itemGetPtr( 4 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISCHAR( 3 ) )
   {
-    QPainter_drawText5();
+    /*
+    void drawText( int x, int y, const QString & text )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawText( PINT( 1 ), PINT( 2 ), PQSTRING( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISBETWEEN( 6, 7 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISCHAR( 6 ) && ( ISQRECT( 7 ) || HB_ISNUM( 7 ) ) )
   {
-    QPainter_drawText6();
+    /*
+    void drawText( int x, int y, int width, int height, int flags, const QString & text, QRect * boundingRect = 0 )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawText( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), PINT( 5 ), PQSTRING( 6 ), HB_ISNIL( 7 ) ? 0 : static_cast< QRect * >( Qt4xHb::itemGetPtr( 7 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISBETWEEN( 2, 3 ) && ISQRECT( 1 ) && HB_ISCHAR( 2 ) && ( ISQTEXTOPTION( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QPainter_drawText7();
+    /*
+    void drawText( const QRectF & rectangle, const QString & text, const QTextOption & option = QTextOption() )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawText( *PQRECTF( 1 ), PQSTRING( 2 ), HB_ISNIL( 3 ) ? QTextOption() : *static_cast< QTextOption * >( Qt4xHb::itemGetPtr( 3 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -2248,64 +1818,49 @@ HB_FUNC_STATIC( QPAINTER_DRAWTEXT )
   }
 }
 
-/*
-void drawTiledPixmap( const QRectF & rectangle, const QPixmap & pixmap, const QPointF & position = QPointF() )
-*/
-void QPainter_drawTiledPixmap1()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawTiledPixmap( *PQRECTF( 1 ), *PQPIXMAP( 2 ), HB_ISNIL( 3 ) ? QPointF() : *static_cast< QPointF * >( Qt4xHb::itemGetPtr( 3 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawTiledPixmap( const QRect & rectangle, const QPixmap & pixmap, const QPoint & position = QPoint() )
-*/
-void QPainter_drawTiledPixmap2()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawTiledPixmap( *PQRECT( 1 ), *PQPIXMAP( 2 ), HB_ISNIL( 3 ) ? QPoint() : *static_cast< QPoint * >( Qt4xHb::itemGetPtr( 3 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void drawTiledPixmap( int x, int y, int width, int height, const QPixmap & pixmap, int sx = 0, int sy = 0 )
-*/
-void QPainter_drawTiledPixmap3()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawTiledPixmap( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), *PQPIXMAP( 5 ), OPINT( 6, 0 ), OPINT( 7, 0 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPAINTER_DRAWTILEDPIXMAP )
 {
   if( ISBETWEEN( 2, 3 ) && ISQRECTF( 1 ) && ISQPIXMAP( 2 ) && ( ISQPOINTF( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QPainter_drawTiledPixmap1();
+    /*
+    void drawTiledPixmap( const QRectF & rectangle, const QPixmap & pixmap, const QPointF & position = QPointF() )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawTiledPixmap( *PQRECTF( 1 ), *PQPIXMAP( 2 ), HB_ISNIL( 3 ) ? QPointF() : *static_cast< QPointF * >( Qt4xHb::itemGetPtr( 3 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISBETWEEN( 2, 3 ) && ISQRECT( 1 ) && ISQPIXMAP( 2 ) && ( ISQPOINT( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QPainter_drawTiledPixmap2();
+    /*
+    void drawTiledPixmap( const QRect & rectangle, const QPixmap & pixmap, const QPoint & position = QPoint() )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawTiledPixmap( *PQRECT( 1 ), *PQPIXMAP( 2 ), HB_ISNIL( 3 ) ? QPoint() : *static_cast< QPoint * >( Qt4xHb::itemGetPtr( 3 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISBETWEEN( 5, 7 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ISQPIXMAP( 5 ) && ( HB_ISNUM( 6 ) || HB_ISNIL( 6 ) ) && ( HB_ISNUM( 7 ) || HB_ISNIL( 7 ) ) )
   {
-    QPainter_drawTiledPixmap3();
+    /*
+    void drawTiledPixmap( int x, int y, int width, int height, const QPixmap & pixmap, int sx = 0, int sy = 0 )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawTiledPixmap( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), *PQPIXMAP( 5 ), OPINT( 6, 0 ), OPINT( 7, 0 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -2363,64 +1918,49 @@ HB_FUNC_STATIC( QPAINTER_ENDNATIVEPAINTING )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void eraseRect( const QRectF & rectangle )
-*/
-void QPainter_eraseRect1()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->eraseRect( *PQRECTF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void eraseRect( const QRect & rectangle )
-*/
-void QPainter_eraseRect2()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->eraseRect( *PQRECT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void eraseRect( int x, int y, int width, int height )
-*/
-void QPainter_eraseRect3()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->eraseRect( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPAINTER_ERASERECT )
 {
   if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
   {
-    QPainter_eraseRect1();
+    /*
+    void eraseRect( const QRectF & rectangle )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->eraseRect( *PQRECTF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
   {
-    QPainter_eraseRect2();
+    /*
+    void eraseRect( const QRect & rectangle )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->eraseRect( *PQRECT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QPainter_eraseRect3();
+    /*
+    void eraseRect( int x, int y, int width, int height )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->eraseRect( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -2442,32 +1982,6 @@ HB_FUNC_STATIC( QPAINTER_FILLPATH )
     {
 #endif
       obj->fillPath( *PQPAINTERPATH( 1 ), *PQBRUSH( 2 ) );
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-#endif
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void fillRect( const QRectF & rectangle, const QBrush & brush )
-*/
-HB_FUNC_STATIC( QPAINTER_FILLRECT1 )
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQRECTF( 1 ) && ISQBRUSH( 2 ) )
-    {
-#endif
-      obj->fillRect( *PQRECTF( 1 ), *PQBRUSH( 2 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2546,136 +2060,6 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT4 )
     {
 #endif
       obj->fillRect( *PQRECTF( 1 ), ( Qt::BrushStyle ) hb_parni( 2 ) );
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-#endif
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void fillRect( const QRect & rectangle, const QBrush & brush )
-*/
-HB_FUNC_STATIC( QPAINTER_FILLRECT5 )
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQRECT( 1 ) && ISQBRUSH( 2 ) )
-    {
-#endif
-      obj->fillRect( *PQRECT( 1 ), *PQBRUSH( 2 ) );
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-#endif
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void fillRect( const QRect & rectangle, const QColor & color )
-*/
-HB_FUNC_STATIC( QPAINTER_FILLRECT6 )
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQRECT( 1 ) && ( ISQCOLOR( 2 ) || HB_ISCHAR( 2 ) ) )
-    {
-#endif
-      obj->fillRect( *PQRECT( 1 ), HB_ISOBJECT( 2 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 2 ) ) : QColor( hb_parc( 2 ) ) );
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-#endif
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void fillRect( const QRectF & rectangle, const QColor & color )
-*/
-HB_FUNC_STATIC( QPAINTER_FILLRECT7 )
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQRECTF( 1 ) && ( ISQCOLOR( 2 ) || HB_ISCHAR( 2 ) ) )
-    {
-#endif
-      obj->fillRect( *PQRECTF( 1 ), HB_ISOBJECT( 2 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 2 ) ) : QColor( hb_parc( 2 ) ) );
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-#endif
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void fillRect( int x, int y, int width, int height, const QBrush & brush )
-*/
-HB_FUNC_STATIC( QPAINTER_FILLRECT8 )
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ISQBRUSH( 5 ) )
-    {
-#endif
-      obj->fillRect( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), *PQBRUSH( 5 ) );
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    }
-    else
-    {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-    }
-#endif
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void fillRect( int x, int y, int width, int height, const QColor & color )
-*/
-HB_FUNC_STATIC( QPAINTER_FILLRECT9 )
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-#ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ( ISQCOLOR( 5 ) || HB_ISCHAR( 5 ) ) )
-    {
-#endif
-      obj->fillRect( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), HB_ISOBJECT( 5 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 5 ) ) : QColor( hb_parc( 5 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2768,9 +2152,19 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT12 )
 
 HB_FUNC_STATIC( QPAINTER_FILLRECT )
 {
-  if( ISNUMPAR( 2 ) && ISQPAINTERPATH( 1 ) && ISQBRUSH( 2 ) )
+  if( ISNUMPAR( 2 ) && ISQRECTF( 1 ) && ISQBRUSH( 2 ) )
   {
-    HB_FUNC_EXEC( QPAINTER_FILLRECT1 );
+    /*
+    void fillRect( const QRectF & rectangle, const QBrush & brush )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->fillRect( *PQRECTF( 1 ), *PQBRUSH( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) )
   {
@@ -2786,23 +2180,73 @@ HB_FUNC_STATIC( QPAINTER_FILLRECT )
   }
   else if( ISNUMPAR( 2 ) && ISQRECT( 1 ) && ISQBRUSH( 2 ) )
   {
-    HB_FUNC_EXEC( QPAINTER_FILLRECT5 );
+    /*
+    void fillRect( const QRect & rectangle, const QBrush & brush )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->fillRect( *PQRECT( 1 ), *PQBRUSH( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && ISQRECT( 1 ) && ( ISQCOLOR( 2 ) || HB_ISCHAR( 2 ) ) )
   {
-    HB_FUNC_EXEC( QPAINTER_FILLRECT6 );
+    /*
+    void fillRect( const QRect & rectangle, const QColor & color )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->fillRect( *PQRECT( 1 ), HB_ISOBJECT( 2 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 2 ) ) : QColor( hb_parc( 2 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && ISQRECTF( 1 ) && ( ISQCOLOR( 2 ) || HB_ISCHAR( 2 ) ) )
   {
-    HB_FUNC_EXEC( QPAINTER_FILLRECT7 );
+    /*
+    void fillRect( const QRectF & rectangle, const QColor & color )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->fillRect( *PQRECTF( 1 ), HB_ISOBJECT( 2 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 2 ) ) : QColor( hb_parc( 2 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ISQBRUSH( 5 ) )
   {
-    HB_FUNC_EXEC( QPAINTER_FILLRECT8 );
+    /*
+    void fillRect( int x, int y, int width, int height, const QBrush & brush )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->fillRect( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), *PQBRUSH( 5 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ( ISQCOLOR( 5 ) || HB_ISCHAR( 5 ) ) )
   {
-    HB_FUNC_EXEC( QPAINTER_FILLRECT9 );
+    /*
+    void fillRect( int x, int y, int width, int height, const QColor & color )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->fillRect( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), HB_ISOBJECT( 5 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 5 ) ) : QColor( hb_parc( 5 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) )
   {
@@ -3275,45 +2719,35 @@ HB_FUNC_STATIC( QPAINTER_SETBACKGROUNDMODE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setBrush( const QBrush & brush )
-*/
-void QPainter_setBrush1()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setBrush( *PQBRUSH( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setBrush( Qt::BrushStyle style )
-*/
-void QPainter_setBrush2()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setBrush( ( Qt::BrushStyle ) hb_parni( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPAINTER_SETBRUSH )
 {
   if( ISNUMPAR( 1 ) && ISQBRUSH( 1 ) )
   {
-    QPainter_setBrush1();
+    /*
+    void setBrush( const QBrush & brush )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setBrush( *PQBRUSH( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QPainter_setBrush2();
+    /*
+    void setBrush( Qt::BrushStyle style )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setBrush( ( Qt::BrushStyle ) hb_parni( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -3321,64 +2755,49 @@ HB_FUNC_STATIC( QPAINTER_SETBRUSH )
   }
 }
 
-/*
-void setBrushOrigin( const QPointF & position )
-*/
-void QPainter_setBrushOrigin1()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setBrushOrigin( *PQPOINTF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setBrushOrigin( const QPoint & position )
-*/
-void QPainter_setBrushOrigin2()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setBrushOrigin( *PQPOINT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setBrushOrigin( int x, int y )
-*/
-void QPainter_setBrushOrigin3()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setBrushOrigin( PINT( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPAINTER_SETBRUSHORIGIN )
 {
   if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
   {
-    QPainter_setBrushOrigin1();
+    /*
+    void setBrushOrigin( const QPointF & position )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setBrushOrigin( *PQPOINTF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
-    QPainter_setBrushOrigin2();
+    /*
+    void setBrushOrigin( const QPoint & position )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setBrushOrigin( *PQPOINT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QPainter_setBrushOrigin3();
+    /*
+    void setBrushOrigin( int x, int y )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setBrushOrigin( PINT( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -3412,64 +2831,49 @@ HB_FUNC_STATIC( QPAINTER_SETCLIPPATH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setClipRect( const QRectF & rectangle, Qt::ClipOperation operation = Qt::ReplaceClip )
-*/
-void QPainter_setClipRect1()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setClipRect( *PQRECTF( 1 ), HB_ISNIL( 2 ) ? ( Qt::ClipOperation ) Qt::ReplaceClip : ( Qt::ClipOperation ) hb_parni( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setClipRect( int x, int y, int width, int height, Qt::ClipOperation operation = Qt::ReplaceClip )
-*/
-void QPainter_setClipRect2()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setClipRect( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), HB_ISNIL( 5 ) ? ( Qt::ClipOperation ) Qt::ReplaceClip : ( Qt::ClipOperation ) hb_parni( 5 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setClipRect( const QRect & rectangle, Qt::ClipOperation operation = Qt::ReplaceClip )
-*/
-void QPainter_setClipRect3()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setClipRect( *PQRECT( 1 ), HB_ISNIL( 2 ) ? ( Qt::ClipOperation ) Qt::ReplaceClip : ( Qt::ClipOperation ) hb_parni( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPAINTER_SETCLIPRECT )
 {
   if( ISBETWEEN( 1, 2 ) && ISQRECTF( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QPainter_setClipRect1();
+    /*
+    void setClipRect( const QRectF & rectangle, Qt::ClipOperation operation = Qt::ReplaceClip )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setClipRect( *PQRECTF( 1 ), HB_ISNIL( 2 ) ? ( Qt::ClipOperation ) Qt::ReplaceClip : ( Qt::ClipOperation ) hb_parni( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISBETWEEN( 4, 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) )
   {
-    QPainter_setClipRect2();
+    /*
+    void setClipRect( int x, int y, int width, int height, Qt::ClipOperation operation = Qt::ReplaceClip )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setClipRect( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), HB_ISNIL( 5 ) ? ( Qt::ClipOperation ) Qt::ReplaceClip : ( Qt::ClipOperation ) hb_parni( 5 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISBETWEEN( 1, 2 ) && ISQRECT( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QPainter_setClipRect3();
+    /*
+    void setClipRect( const QRect & rectangle, Qt::ClipOperation operation = Qt::ReplaceClip )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setClipRect( *PQRECT( 1 ), HB_ISNIL( 2 ) ? ( Qt::ClipOperation ) Qt::ReplaceClip : ( Qt::ClipOperation ) hb_parni( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -3633,64 +3037,49 @@ HB_FUNC_STATIC( QPAINTER_SETOPACITY )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setPen( const QPen & pen )
-*/
-void QPainter_setPen1()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setPen( *PQPEN( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setPen( const QColor & color )
-*/
-void QPainter_setPen2()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setPen( HB_ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setPen( Qt::PenStyle style )
-*/
-void QPainter_setPen3()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setPen( ( Qt::PenStyle ) hb_parni( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPAINTER_SETPEN )
 {
   if( ISNUMPAR( 1 ) && ISQPEN( 1 ) )
   {
-    QPainter_setPen1();
+    /*
+    void setPen( const QPen & pen )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setPen( *PQPEN( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && ( ISQCOLOR( 1 ) || HB_ISCHAR( 1 ) ) )
   {
-    QPainter_setPen2();
+    /*
+    void setPen( const QColor & color )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setPen( HB_ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QPainter_setPen3();
+    /*
+    void setPen( Qt::PenStyle style )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setPen( ( Qt::PenStyle ) hb_parni( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -3802,45 +3191,35 @@ HB_FUNC_STATIC( QPAINTER_SETVIEWTRANSFORMENABLED )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setViewport( const QRect & rectangle )
-*/
-void QPainter_setViewport1()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setViewport( *PQRECT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setViewport( int x, int y, int width, int height )
-*/
-void QPainter_setViewport2()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setViewport( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPAINTER_SETVIEWPORT )
 {
   if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
   {
-    QPainter_setViewport1();
+    /*
+    void setViewport( const QRect & rectangle )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setViewport( *PQRECT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QPainter_setViewport2();
+    /*
+    void setViewport( int x, int y, int width, int height )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setViewport( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -3848,45 +3227,35 @@ HB_FUNC_STATIC( QPAINTER_SETVIEWPORT )
   }
 }
 
-/*
-void setWindow( const QRect & rectangle )
-*/
-void QPainter_setWindow1()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setWindow( *PQRECT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setWindow( int x, int y, int width, int height )
-*/
-void QPainter_setWindow2()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setWindow( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPAINTER_SETWINDOW )
 {
   if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
   {
-    QPainter_setWindow1();
+    /*
+    void setWindow( const QRect & rectangle )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setWindow( *PQRECT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QPainter_setWindow2();
+    /*
+    void setWindow( int x, int y, int width, int height )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setWindow( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -4047,64 +3416,49 @@ HB_FUNC_STATIC( QPAINTER_TRANSFORM )
   }
 }
 
-/*
-void translate( const QPointF & offset )
-*/
-void QPainter_translate1()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->translate( *PQPOINTF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void translate( const QPoint & offset )
-*/
-void QPainter_translate2()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->translate( *PQPOINT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void translate( qreal dx, qreal dy )
-*/
-void QPainter_translate3()
-{
-  QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->translate( PQREAL( 1 ), PQREAL( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPAINTER_TRANSLATE )
 {
   if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
   {
-    QPainter_translate1();
+    /*
+    void translate( const QPointF & offset )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->translate( *PQPOINTF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
-    QPainter_translate2();
+    /*
+    void translate( const QPoint & offset )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->translate( *PQPOINT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QPainter_translate3();
+    /*
+    void translate( qreal dx, qreal dy )
+    */
+    QPainter * obj = static_cast< QPainter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->translate( PQREAL( 1 ), PQREAL( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

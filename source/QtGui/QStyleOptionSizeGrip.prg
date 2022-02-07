@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -39,33 +39,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QStyleOptionSizeGrip()
-*/
-void QStyleOptionSizeGrip_new1()
-{
-  QStyleOptionSizeGrip * obj = new QStyleOptionSizeGrip();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QStyleOptionSizeGrip( const QStyleOptionSizeGrip & other )
-*/
-void QStyleOptionSizeGrip_new2()
-{
-  QStyleOptionSizeGrip * obj = new QStyleOptionSizeGrip( *PQSTYLEOPTIONSIZEGRIP( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONSIZEGRIP_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QStyleOptionSizeGrip_new1();
+    /*
+    QStyleOptionSizeGrip()
+    */
+    QStyleOptionSizeGrip * obj = new QStyleOptionSizeGrip();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONSIZEGRIP( 1 ) )
   {
-    QStyleOptionSizeGrip_new2();
+    /*
+    QStyleOptionSizeGrip( const QStyleOptionSizeGrip & other )
+    */
+    QStyleOptionSizeGrip * obj = new QStyleOptionSizeGrip( *PQSTYLEOPTIONSIZEGRIP( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

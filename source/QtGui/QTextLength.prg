@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -50,33 +50,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTextLength()
-*/
-void QTextLength_new1()
-{
-  QTextLength * obj = new QTextLength();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextLength( QTextLength::Type type, qreal value )
-*/
-void QTextLength_new2()
-{
-  QTextLength * obj = new QTextLength( ( QTextLength::Type ) hb_parni( 1 ), PQREAL( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QTEXTLENGTH_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QTextLength_new1();
+    /*
+    QTextLength()
+    */
+    QTextLength * obj = new QTextLength();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QTextLength_new2();
+    /*
+    QTextLength( QTextLength::Type type, qreal value )
+    */
+    QTextLength * obj = new QTextLength( ( QTextLength::Type ) hb_parni( 1 ), PQREAL( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

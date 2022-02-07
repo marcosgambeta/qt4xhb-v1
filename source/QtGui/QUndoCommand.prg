@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -55,33 +55,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QUndoCommand( QUndoCommand * parent = 0 )
-*/
-void QUndoCommand_new1()
-{
-  QUndoCommand * obj = new QUndoCommand( HB_ISNIL( 1 ) ? 0 : static_cast< QUndoCommand * >( Qt4xHb::itemGetPtr( 1 ) ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QUndoCommand( const QString & text, QUndoCommand * parent = 0 )
-*/
-void QUndoCommand_new2()
-{
-  QUndoCommand * obj = new QUndoCommand( PQSTRING( 1 ), HB_ISNIL( 2 ) ? 0 : static_cast< QUndoCommand * >( Qt4xHb::itemGetPtr( 2 ) ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QUNDOCOMMAND_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQUNDOCOMMAND( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QUndoCommand_new1();
+    /*
+    QUndoCommand( QUndoCommand * parent = 0 )
+    */
+    QUndoCommand * obj = new QUndoCommand( HB_ISNIL( 1 ) ? 0 : static_cast< QUndoCommand * >( Qt4xHb::itemGetPtr( 1 ) ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQUNDOCOMMAND( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QUndoCommand_new2();
+    /*
+    QUndoCommand( const QString & text, QUndoCommand * parent = 0 )
+    */
+    QUndoCommand * obj = new QUndoCommand( PQSTRING( 1 ), HB_ISNIL( 2 ) ? 0 : static_cast< QUndoCommand * >( Qt4xHb::itemGetPtr( 2 ) ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

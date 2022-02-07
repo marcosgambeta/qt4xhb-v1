@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -53,8 +53,8 @@ CLASS QTransform
    METHOD isScaling
    METHOD isTranslating
    METHOD map1
-   METHOD map
    METHOD map10
+   METHOD map
    METHOD mapRect
    METHOD mapToPolygon
    METHOD reset
@@ -91,59 +91,39 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTransform()
-*/
-void QTransform_new1()
-{
-  QTransform * obj = new QTransform();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QTransform( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 = 1.0 )
-*/
-void QTransform_new2()
-{
-  QTransform * obj = new QTransform( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), PQREAL( 5 ), PQREAL( 6 ), PQREAL( 7 ), PQREAL( 8 ), OPQREAL( 9, 1.0 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QTransform( qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy )
-*/
-void QTransform_new3()
-{
-  QTransform * obj = new QTransform( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), PQREAL( 5 ), PQREAL( 6 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QTransform( const QMatrix & matrix )
-*/
-void QTransform_new4()
-{
-  QTransform * obj = new QTransform( *PQMATRIX( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QTRANSFORM_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QTransform_new1();
+    /*
+    QTransform()
+    */
+    QTransform * obj = new QTransform();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 8, 9 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) && HB_ISNUM( 7 ) && HB_ISNUM( 8 ) && ( HB_ISNUM( 9 ) || HB_ISNIL( 9 ) ) )
   {
-    QTransform_new2();
+    /*
+    QTransform( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 = 1.0 )
+    */
+    QTransform * obj = new QTransform( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), PQREAL( 5 ), PQREAL( 6 ), PQREAL( 7 ), PQREAL( 8 ), OPQREAL( 9, 1.0 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 6 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) )
   {
-    QTransform_new3();
+    /*
+    QTransform( qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy )
+    */
+    QTransform * obj = new QTransform( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), PQREAL( 5 ), PQREAL( 6 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQMATRIX( 1 ) )
   {
-    QTransform_new4();
+    /*
+    QTransform( const QMatrix & matrix )
+    */
+    QTransform * obj = new QTransform( *PQMATRIX( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -683,118 +663,6 @@ HB_FUNC_STATIC( QTRANSFORM_MAP1 )
 }
 
 /*
-QPointF map( const QPointF & p ) const
-*/
-void QTransform_map2()
-{
-  QTransform * obj = static_cast< QTransform * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QPointF * ptr = new QPointF( obj->map( *PQPOINTF( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
-  }
-}
-
-/*
-QPoint map( const QPoint & point ) const
-*/
-void QTransform_map3()
-{
-  QTransform * obj = static_cast< QTransform * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QPoint * ptr = new QPoint( obj->map( *PQPOINT( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QPOINT", true );
-  }
-}
-
-/*
-QLine map( const QLine & l ) const
-*/
-void QTransform_map4()
-{
-  QTransform * obj = static_cast< QTransform * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QLine * ptr = new QLine( obj->map( *PQLINE( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QLINE", true );
-  }
-}
-
-/*
-QLineF map( const QLineF & line ) const
-*/
-void QTransform_map5()
-{
-  QTransform * obj = static_cast< QTransform * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QLineF * ptr = new QLineF( obj->map( *PQLINEF( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QLINEF", true );
-  }
-}
-
-/*
-QPolygonF map( const QPolygonF & polygon ) const
-*/
-void QTransform_map6()
-{
-  QTransform * obj = static_cast< QTransform * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QPolygonF * ptr = new QPolygonF( obj->map( *PQPOLYGONF( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QPOLYGONF", true );
-  }
-}
-
-/*
-QPolygon map( const QPolygon & polygon ) const
-*/
-void QTransform_map7()
-{
-  QTransform * obj = static_cast< QTransform * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QPolygon * ptr = new QPolygon( obj->map( *PQPOLYGON( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QPOLYGON", true );
-  }
-}
-
-/*
-QRegion map( const QRegion & region ) const
-*/
-void QTransform_map8()
-{
-  QTransform * obj = static_cast< QTransform * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QRegion * ptr = new QRegion( obj->map( *PQREGION( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QREGION", true );
-  }
-}
-
-/*
-QPainterPath map( const QPainterPath & path ) const
-*/
-void QTransform_map9()
-{
-  QTransform * obj = static_cast< QTransform * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QPainterPath * ptr = new QPainterPath( obj->map( *PQPAINTERPATH( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QPAINTERPATH", true );
-  }
-}
-
-/*
 void map( int x, int y, int * tx, int * ty ) const
 */
 HB_FUNC_STATIC( QTRANSFORM_MAP10 )
@@ -832,35 +700,107 @@ HB_FUNC_STATIC( QTRANSFORM_MAP )
   }
   else if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
   {
-    QTransform_map2();
+    /*
+    QPointF map( const QPointF & p ) const
+    */
+    QTransform * obj = static_cast< QTransform * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QPointF * ptr = new QPointF( obj->map( *PQPOINTF( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
+    }
   }
   else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
-    QTransform_map3();
+    /*
+    QPoint map( const QPoint & point ) const
+    */
+    QTransform * obj = static_cast< QTransform * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QPoint * ptr = new QPoint( obj->map( *PQPOINT( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QPOINT", true );
+    }
   }
   else if( ISNUMPAR( 1 ) && ISQLINE( 1 ) )
   {
-    QTransform_map4();
+    /*
+    QLine map( const QLine & l ) const
+    */
+    QTransform * obj = static_cast< QTransform * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QLine * ptr = new QLine( obj->map( *PQLINE( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QLINE", true );
+    }
   }
   else if( ISNUMPAR( 1 ) && ISQLINEF( 1 ) )
   {
-    QTransform_map5();
+    /*
+    QLineF map( const QLineF & line ) const
+    */
+    QTransform * obj = static_cast< QTransform * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QLineF * ptr = new QLineF( obj->map( *PQLINEF( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QLINEF", true );
+    }
   }
   else if( ISNUMPAR( 1 ) && ISQPOLYGONF( 1 ) )
   {
-    QTransform_map6();
+    /*
+    QPolygonF map( const QPolygonF & polygon ) const
+    */
+    QTransform * obj = static_cast< QTransform * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QPolygonF * ptr = new QPolygonF( obj->map( *PQPOLYGONF( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QPOLYGONF", true );
+    }
   }
   else if( ISNUMPAR( 1 ) && ISQPOLYGON( 1 ) )
   {
-    QTransform_map7();
+    /*
+    QPolygon map( const QPolygon & polygon ) const
+    */
+    QTransform * obj = static_cast< QTransform * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QPolygon * ptr = new QPolygon( obj->map( *PQPOLYGON( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QPOLYGON", true );
+    }
   }
   else if( ISNUMPAR( 1 ) && ISQREGION( 1 ) )
   {
-    QTransform_map8();
+    /*
+    QRegion map( const QRegion & region ) const
+    */
+    QTransform * obj = static_cast< QTransform * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QRegion * ptr = new QRegion( obj->map( *PQREGION( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QREGION", true );
+    }
   }
   else if( ISNUMPAR( 1 ) && ISQPAINTERPATH( 1 ) )
   {
-    QTransform_map9();
+    /*
+    QPainterPath map( const QPainterPath & path ) const
+    */
+    QTransform * obj = static_cast< QTransform * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QPainterPath * ptr = new QPainterPath( obj->map( *PQPAINTERPATH( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QPAINTERPATH", true );
+    }
   }
   else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
@@ -872,43 +812,33 @@ HB_FUNC_STATIC( QTRANSFORM_MAP )
   }
 }
 
-/*
-QRectF mapRect( const QRectF & rectangle ) const
-*/
-void QTransform_mapRect1()
-{
-  QTransform * obj = static_cast< QTransform * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->mapRect( *PQRECTF( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QRECTF", true );
-  }
-}
-
-/*
-QRect mapRect( const QRect & rectangle ) const
-*/
-void QTransform_mapRect2()
-{
-  QTransform * obj = static_cast< QTransform * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->mapRect( *PQRECT( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QRECT", true );
-  }
-}
-
 HB_FUNC_STATIC( QTRANSFORM_MAPRECT )
 {
   if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
   {
-    QTransform_mapRect1();
+    /*
+    QRectF mapRect( const QRectF & rectangle ) const
+    */
+    QTransform * obj = static_cast< QTransform * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QRectF * ptr = new QRectF( obj->mapRect( *PQRECTF( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
+    }
   }
   else if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
   {
-    QTransform_mapRect2();
+    /*
+    QRect mapRect( const QRect & rectangle ) const
+    */
+    QTransform * obj = static_cast< QTransform * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QRect * ptr = new QRect( obj->mapRect( *PQRECT( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+    }
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -1022,43 +1022,33 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_HEADERDATA )
   }
 }
 
-/*
-QModelIndex index( const QString & path, int column = 0 ) const
-*/
-void QFileSystemModel_index1()
-{
-  QFileSystemModel * obj = qobject_cast< QFileSystemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->index( PQSTRING( 1 ), OPINT( 2, 0 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
-  }
-}
-
-/*
-virtual QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const
-*/
-void QFileSystemModel_index2()
-{
-  QFileSystemModel * obj = qobject_cast< QFileSystemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    QModelIndex * ptr = new QModelIndex( obj->index( PINT( 1 ), PINT( 2 ), HB_ISNIL( 3 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt4xHb::itemGetPtr( 3 ) ) ) );
-    Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
-  }
-}
-
 HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX )
 {
   if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QFileSystemModel_index1();
+    /*
+    QModelIndex index( const QString & path, int column = 0 ) const
+    */
+    QFileSystemModel * obj = qobject_cast< QFileSystemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      QModelIndex * ptr = new QModelIndex( obj->index( PQSTRING( 1 ), OPINT( 2, 0 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+    }
   }
   else if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( ISQMODELINDEX( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QFileSystemModel_index2();
+    /*
+    virtual QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const
+    */
+    QFileSystemModel * obj = qobject_cast< QFileSystemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      QModelIndex * ptr = new QModelIndex( obj->index( PINT( 1 ), PINT( 2 ), HB_ISNIL( 3 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt4xHb::itemGetPtr( 3 ) ) ) );
+      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+    }
   }
   else
   {

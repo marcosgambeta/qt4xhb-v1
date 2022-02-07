@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -63,85 +63,55 @@ RETURN
 
 #include <QtCore/QVector>
 
-/*
-QRegion()
-*/
-void QRegion_new1()
-{
-  QRegion * obj = new QRegion();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QRegion( int x, int y, int w, int h, QRegion::RegionType t = QRegion::Rectangle )
-*/
-void QRegion_new2()
-{
-  QRegion * obj = new QRegion( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), HB_ISNIL( 5 ) ? ( QRegion::RegionType ) QRegion::Rectangle : ( QRegion::RegionType ) hb_parni( 5 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QRegion( const QPolygon & a, Qt::FillRule fillRule = Qt::OddEvenFill )
-*/
-void QRegion_new3()
-{
-  QRegion * obj = new QRegion( *PQPOLYGON( 1 ), HB_ISNIL( 2 ) ? ( Qt::FillRule ) Qt::OddEvenFill : ( Qt::FillRule ) hb_parni( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QRegion( const QRegion & r )
-*/
-void QRegion_new4()
-{
-  QRegion * obj = new QRegion( *PQREGION( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QRegion( const QBitmap & bm )
-*/
-void QRegion_new5()
-{
-  QRegion * obj = new QRegion( *PQBITMAP( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QRegion( const QRect & r, QRegion::RegionType t = QRegion::Rectangle )
-*/
-void QRegion_new6()
-{
-  QRegion * obj = new QRegion( *PQRECT( 1 ), HB_ISNIL( 2 ) ? ( QRegion::RegionType ) QRegion::Rectangle : ( QRegion::RegionType ) hb_parni( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QREGION_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QRegion_new1();
+    /*
+    QRegion()
+    */
+    QRegion * obj = new QRegion();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 4, 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) )
   {
-    QRegion_new2();
+    /*
+    QRegion( int x, int y, int w, int h, QRegion::RegionType t = QRegion::Rectangle )
+    */
+    QRegion * obj = new QRegion( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), HB_ISNIL( 5 ) ? ( QRegion::RegionType ) QRegion::Rectangle : ( QRegion::RegionType ) hb_parni( 5 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 1, 2 ) && ISQPOLYGON( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QRegion_new3();
+    /*
+    QRegion( const QPolygon & a, Qt::FillRule fillRule = Qt::OddEvenFill )
+    */
+    QRegion * obj = new QRegion( *PQPOLYGON( 1 ), HB_ISNIL( 2 ) ? ( Qt::FillRule ) Qt::OddEvenFill : ( Qt::FillRule ) hb_parni( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQREGION( 1 ) )
   {
-    QRegion_new4();
+    /*
+    QRegion( const QRegion & r )
+    */
+    QRegion * obj = new QRegion( *PQREGION( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQBITMAP( 1 ) )
   {
-    QRegion_new5();
+    /*
+    QRegion( const QBitmap & bm )
+    */
+    QRegion * obj = new QRegion( *PQBITMAP( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 1, 2 ) && ISQRECT( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QRegion_new6();
+    /*
+    QRegion( const QRect & r, QRegion::RegionType t = QRegion::Rectangle )
+    */
+    QRegion * obj = new QRegion( *PQRECT( 1 ), HB_ISNIL( 2 ) ? ( QRegion::RegionType ) QRegion::Rectangle : ( QRegion::RegionType ) hb_parni( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -191,73 +161,35 @@ HB_FUNC_STATIC( QREGION_BOUNDINGRECT )
   }
 }
 
-/*
-bool contains( const QPoint & p ) const
-*/
-void QRegion_contains1()
-{
-  QRegion * obj = static_cast< QRegion * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->contains( *PQPOINT( 1 ) ) );
-  }
-}
-
-/*
-bool contains( const QRect & r ) const
-*/
-void QRegion_contains2()
-{
-  QRegion * obj = static_cast< QRegion * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->contains( *PQRECT( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QREGION_CONTAINS )
 {
   if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
-    QRegion_contains1();
+    /*
+    bool contains( const QPoint & p ) const
+    */
+    QRegion * obj = static_cast< QRegion * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->contains( *PQPOINT( 1 ) ) );
+    }
   }
   else if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
   {
-    QRegion_contains2();
+    /*
+    bool contains( const QRect & r ) const
+    */
+    QRegion * obj = static_cast< QRegion * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->contains( *PQRECT( 1 ) ) );
+    }
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
-
-/*
-QRegion intersected( const QRegion & r ) const
-*/
-void QRegion_intersected1()
-{
-  QRegion * obj = static_cast< QRegion * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QRegion * ptr = new QRegion( obj->intersected( *PQREGION( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QREGION", true );
-  }
-}
-
-/*
-QRegion intersected( const QRect & rect ) const
-*/
-void QRegion_intersected2()
-{
-  QRegion * obj = static_cast< QRegion * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QRegion * ptr = new QRegion( obj->intersected( *PQRECT( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QREGION", true );
   }
 }
 
@@ -265,11 +197,29 @@ HB_FUNC_STATIC( QREGION_INTERSECTED )
 {
   if( ISNUMPAR( 1 ) && ISQREGION( 1 ) )
   {
-    QRegion_intersected1();
+    /*
+    QRegion intersected( const QRegion & r ) const
+    */
+    QRegion * obj = static_cast< QRegion * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QRegion * ptr = new QRegion( obj->intersected( *PQREGION( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QREGION", true );
+    }
   }
   else if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
   {
-    QRegion_intersected2();
+    /*
+    QRegion intersected( const QRect & rect ) const
+    */
+    QRegion * obj = static_cast< QRegion * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QRegion * ptr = new QRegion( obj->intersected( *PQRECT( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QREGION", true );
+    }
   }
   else
   {
@@ -277,41 +227,31 @@ HB_FUNC_STATIC( QREGION_INTERSECTED )
   }
 }
 
-/*
-bool intersects( const QRegion & region ) const
-*/
-void QRegion_intersects1()
-{
-  QRegion * obj = static_cast< QRegion * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->intersects( *PQREGION( 1 ) ) );
-  }
-}
-
-/*
-bool intersects( const QRect & rect ) const
-*/
-void QRegion_intersects2()
-{
-  QRegion * obj = static_cast< QRegion * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->intersects( *PQRECT( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QREGION_INTERSECTS )
 {
   if( ISNUMPAR( 1 ) && ISQREGION( 1 ) )
   {
-    QRegion_intersects1();
+    /*
+    bool intersects( const QRegion & region ) const
+    */
+    QRegion * obj = static_cast< QRegion * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->intersects( *PQREGION( 1 ) ) );
+    }
   }
   else if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
   {
-    QRegion_intersects2();
+    /*
+    bool intersects( const QRect & rect ) const
+    */
+    QRegion * obj = static_cast< QRegion * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->intersects( *PQRECT( 1 ) ) );
+    }
   }
   else
   {
@@ -470,77 +410,39 @@ HB_FUNC_STATIC( QREGION_SWAP )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void translate( int dx, int dy )
-*/
-void QRegion_translate1()
-{
-  QRegion * obj = static_cast< QRegion * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->translate( PINT( 1 ), PINT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void translate( const QPoint & point )
-*/
-void QRegion_translate2()
-{
-  QRegion * obj = static_cast< QRegion * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->translate( *PQPOINT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QREGION_TRANSLATE )
 {
   if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QRegion_translate1();
+    /*
+    void translate( int dx, int dy )
+    */
+    QRegion * obj = static_cast< QRegion * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->translate( PINT( 1 ), PINT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
-    QRegion_translate2();
+    /*
+    void translate( const QPoint & point )
+    */
+    QRegion * obj = static_cast< QRegion * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->translate( *PQPOINT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
-
-/*
-QRegion translated( int dx, int dy ) const
-*/
-void QRegion_translated1()
-{
-  QRegion * obj = static_cast< QRegion * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QRegion * ptr = new QRegion( obj->translated( PINT( 1 ), PINT( 2 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QREGION", true );
-  }
-}
-
-/*
-QRegion translated( const QPoint & p ) const
-*/
-void QRegion_translated2()
-{
-  QRegion * obj = static_cast< QRegion * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QRegion * ptr = new QRegion( obj->translated( *PQPOINT( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QREGION", true );
   }
 }
 
@@ -548,11 +450,29 @@ HB_FUNC_STATIC( QREGION_TRANSLATED )
 {
   if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QRegion_translated1();
+    /*
+    QRegion translated( int dx, int dy ) const
+    */
+    QRegion * obj = static_cast< QRegion * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QRegion * ptr = new QRegion( obj->translated( PINT( 1 ), PINT( 2 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QREGION", true );
+    }
   }
   else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
-    QRegion_translated2();
+    /*
+    QRegion translated( const QPoint & p ) const
+    */
+    QRegion * obj = static_cast< QRegion * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QRegion * ptr = new QRegion( obj->translated( *PQPOINT( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QREGION", true );
+    }
   }
   else
   {
@@ -560,43 +480,33 @@ HB_FUNC_STATIC( QREGION_TRANSLATED )
   }
 }
 
-/*
-QRegion united( const QRegion & r ) const
-*/
-void QRegion_united1()
-{
-  QRegion * obj = static_cast< QRegion * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QRegion * ptr = new QRegion( obj->united( *PQREGION( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QREGION", true );
-  }
-}
-
-/*
-QRegion united( const QRect & rect ) const
-*/
-void QRegion_united2()
-{
-  QRegion * obj = static_cast< QRegion * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QRegion * ptr = new QRegion( obj->united( *PQRECT( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QREGION", true );
-  }
-}
-
 HB_FUNC_STATIC( QREGION_UNITED )
 {
   if( ISNUMPAR( 1 ) && ISQREGION( 1 ) )
   {
-    QRegion_united1();
+    /*
+    QRegion united( const QRegion & r ) const
+    */
+    QRegion * obj = static_cast< QRegion * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QRegion * ptr = new QRegion( obj->united( *PQREGION( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QREGION", true );
+    }
   }
   else if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
   {
-    QRegion_united2();
+    /*
+    QRegion united( const QRect & rect ) const
+    */
+    QRegion * obj = static_cast< QRegion * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QRegion * ptr = new QRegion( obj->united( *PQRECT( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QREGION", true );
+    }
   }
   else
   {

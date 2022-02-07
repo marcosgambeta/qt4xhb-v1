@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -79,33 +79,23 @@ RETURN
 #include "qt4xhb_events.h"
 #include "qt4xhb_signals.h"
 
-/*
-QGridLayout( QWidget * parent )
-*/
-void QGridLayout_new1()
-{
-  QGridLayout * obj = new QGridLayout( PQWIDGET( 1 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QGridLayout()
-*/
-void QGridLayout_new2()
-{
-  QGridLayout * obj = new QGridLayout();
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QGRIDLAYOUT_NEW )
 {
   if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
-    QGridLayout_new1();
+    /*
+    QGridLayout( QWidget * parent )
+    */
+    QGridLayout * obj = new QGridLayout( PQWIDGET( 1 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QGridLayout_new2();
+    /*
+    QGridLayout()
+    */
+    QGridLayout * obj = new QGridLayout();
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -158,45 +148,35 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDITEM )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void addLayout( QLayout * layout, int row, int column, Qt::Alignment alignment = 0 )
-*/
-void QGridLayout_addLayout1()
-{
-  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->addLayout( PQLAYOUT( 1 ), PINT( 2 ), PINT( 3 ), HB_ISNIL( 4 ) ? ( Qt::Alignment ) 0 : ( Qt::Alignment ) hb_parni( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void addLayout( QLayout * layout, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
-*/
-void QGridLayout_addLayout2()
-{
-  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->addLayout( PQLAYOUT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), PINT( 5 ), HB_ISNIL( 6 ) ? ( Qt::Alignment ) 0 : ( Qt::Alignment ) hb_parni( 6 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QGRIDLAYOUT_ADDLAYOUT )
 {
   if( ISBETWEEN( 3, 4 ) && ISQLAYOUT( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QGridLayout_addLayout1();
+    /*
+    void addLayout( QLayout * layout, int row, int column, Qt::Alignment alignment = 0 )
+    */
+    QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->addLayout( PQLAYOUT( 1 ), PINT( 2 ), PINT( 3 ), HB_ISNIL( 4 ) ? ( Qt::Alignment ) 0 : ( Qt::Alignment ) hb_parni( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISBETWEEN( 5, 6 ) && ISQLAYOUT( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && ( HB_ISNUM( 6 ) || HB_ISNIL( 6 ) ) )
   {
-    QGridLayout_addLayout2();
+    /*
+    void addLayout( QLayout * layout, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
+    */
+    QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->addLayout( PQLAYOUT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), PINT( 5 ), HB_ISNIL( 6 ) ? ( Qt::Alignment ) 0 : ( Qt::Alignment ) hb_parni( 6 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -204,45 +184,35 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDLAYOUT )
   }
 }
 
-/*
-void addWidget( QWidget * widget, int row, int column, Qt::Alignment alignment = 0 )
-*/
-void QGridLayout_addWidget1()
-{
-  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->addWidget( PQWIDGET( 1 ), PINT( 2 ), PINT( 3 ), HB_ISNIL( 4 ) ? ( Qt::Alignment ) 0 : ( Qt::Alignment ) hb_parni( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void addWidget( QWidget * widget, int fromRow, int fromColumn, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
-*/
-void QGridLayout_addWidget2()
-{
-  QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->addWidget( PQWIDGET( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), PINT( 5 ), HB_ISNIL( 6 ) ? ( Qt::Alignment ) 0 : ( Qt::Alignment ) hb_parni( 6 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QGRIDLAYOUT_ADDWIDGET )
 {
   if( ISBETWEEN( 3, 4 ) && ISQWIDGET( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QGridLayout_addWidget1();
+    /*
+    void addWidget( QWidget * widget, int row, int column, Qt::Alignment alignment = 0 )
+    */
+    QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->addWidget( PQWIDGET( 1 ), PINT( 2 ), PINT( 3 ), HB_ISNIL( 4 ) ? ( Qt::Alignment ) 0 : ( Qt::Alignment ) hb_parni( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISBETWEEN( 5, 6 ) && ISQWIDGET( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && ( HB_ISNUM( 6 ) || HB_ISNIL( 6 ) ) )
   {
-    QGridLayout_addWidget2();
+    /*
+    void addWidget( QWidget * widget, int fromRow, int fromColumn, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
+    */
+    QGridLayout * obj = qobject_cast< QGridLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->addWidget( PQWIDGET( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ), PINT( 5 ), HB_ISNIL( 6 ) ? ( Qt::Alignment ) 0 : ( Qt::Alignment ) hb_parni( 6 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

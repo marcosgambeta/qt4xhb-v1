@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -48,33 +48,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QWheelEvent( const QPoint & pos, int delta, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, Qt::Orientation orient = Qt::Vertical )
-*/
-void QWheelEvent_new1()
-{
-  QWheelEvent * obj = new QWheelEvent( *PQPOINT( 1 ), PINT( 2 ), ( Qt::MouseButtons ) hb_parni( 3 ), ( Qt::KeyboardModifiers ) hb_parni( 4 ), HB_ISNIL( 5 ) ? ( Qt::Orientation ) Qt::Vertical : ( Qt::Orientation ) hb_parni( 5 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QWheelEvent( const QPoint & pos, const QPoint & globalPos, int delta, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, Qt::Orientation orient = Qt::Vertical )
-*/
-void QWheelEvent_new2()
-{
-  QWheelEvent * obj = new QWheelEvent( *PQPOINT( 1 ), *PQPOINT( 2 ), PINT( 3 ), ( Qt::MouseButtons ) hb_parni( 4 ), ( Qt::KeyboardModifiers ) hb_parni( 5 ), HB_ISNIL( 6 ) ? ( Qt::Orientation ) Qt::Vertical : ( Qt::Orientation ) hb_parni( 6 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QWHEELEVENT_NEW )
 {
   if( ISBETWEEN( 4, 5 ) && ISQPOINT( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) )
   {
-    QWheelEvent_new1();
+    /*
+    QWheelEvent( const QPoint & pos, int delta, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, Qt::Orientation orient = Qt::Vertical )
+    */
+    QWheelEvent * obj = new QWheelEvent( *PQPOINT( 1 ), PINT( 2 ), ( Qt::MouseButtons ) hb_parni( 3 ), ( Qt::KeyboardModifiers ) hb_parni( 4 ), HB_ISNIL( 5 ) ? ( Qt::Orientation ) Qt::Vertical : ( Qt::Orientation ) hb_parni( 5 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISBETWEEN( 5, 6 ) && ISQPOINT( 1 ) && ISQPOINT( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && ( HB_ISNUM( 6 ) || HB_ISNIL( 6 ) ) )
   {
-    QWheelEvent_new2();
+    /*
+    QWheelEvent( const QPoint & pos, const QPoint & globalPos, int delta, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, Qt::Orientation orient = Qt::Vertical )
+    */
+    QWheelEvent * obj = new QWheelEvent( *PQPOINT( 1 ), *PQPOINT( 2 ), PINT( 3 ), ( Qt::MouseButtons ) hb_parni( 4 ), ( Qt::KeyboardModifiers ) hb_parni( 5 ), HB_ISNIL( 6 ) ? ( Qt::Orientation ) Qt::Vertical : ( Qt::Orientation ) hb_parni( 6 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

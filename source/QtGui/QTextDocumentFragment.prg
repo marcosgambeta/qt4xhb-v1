@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -52,59 +52,39 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTextDocumentFragment()
-*/
-void QTextDocumentFragment_new1()
-{
-  QTextDocumentFragment * obj = new QTextDocumentFragment();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextDocumentFragment( const QTextDocument * document )
-*/
-void QTextDocumentFragment_new2()
-{
-  QTextDocumentFragment * obj = new QTextDocumentFragment( PQTEXTDOCUMENT( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextDocumentFragment( const QTextCursor & cursor )
-*/
-void QTextDocumentFragment_new3()
-{
-  QTextDocumentFragment * obj = new QTextDocumentFragment( *PQTEXTCURSOR( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextDocumentFragment( const QTextDocumentFragment & other )
-*/
-void QTextDocumentFragment_new4()
-{
-  QTextDocumentFragment * obj = new QTextDocumentFragment( *PQTEXTDOCUMENTFRAGMENT( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QTextDocumentFragment_new1();
+    /*
+    QTextDocumentFragment()
+    */
+    QTextDocumentFragment * obj = new QTextDocumentFragment();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQTEXTDOCUMENT( 1 ) )
   {
-    QTextDocumentFragment_new2();
+    /*
+    QTextDocumentFragment( const QTextDocument * document )
+    */
+    QTextDocumentFragment * obj = new QTextDocumentFragment( PQTEXTDOCUMENT( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQTEXTCURSOR( 1 ) )
   {
-    QTextDocumentFragment_new3();
+    /*
+    QTextDocumentFragment( const QTextCursor & cursor )
+    */
+    QTextDocumentFragment * obj = new QTextDocumentFragment( *PQTEXTCURSOR( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQTEXTDOCUMENTFRAGMENT( 1 ) )
   {
-    QTextDocumentFragment_new4();
+    /*
+    QTextDocumentFragment( const QTextDocumentFragment & other )
+    */
+    QTextDocumentFragment * obj = new QTextDocumentFragment( *PQTEXTDOCUMENTFRAGMENT( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -153,41 +133,31 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_ISEMPTY )
   }
 }
 
-/*
-QString toHtml( const QByteArray & encoding ) const
-*/
-void QTextDocumentFragment_toHtml1()
-{
-  QTextDocumentFragment * obj = static_cast< QTextDocumentFragment * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RQSTRING( obj->toHtml( *PQBYTEARRAY( 1 ) ) );
-  }
-}
-
-/*
-QString toHtml() const
-*/
-void QTextDocumentFragment_toHtml2()
-{
-  QTextDocumentFragment * obj = static_cast< QTextDocumentFragment * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RQSTRING( obj->toHtml() );
-  }
-}
-
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOHTML )
 {
   if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
   {
-    QTextDocumentFragment_toHtml1();
+    /*
+    QString toHtml( const QByteArray & encoding ) const
+    */
+    QTextDocumentFragment * obj = static_cast< QTextDocumentFragment * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RQSTRING( obj->toHtml( *PQBYTEARRAY( 1 ) ) );
+    }
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QTextDocumentFragment_toHtml2();
+    /*
+    QString toHtml() const
+    */
+    QTextDocumentFragment * obj = static_cast< QTextDocumentFragment * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RQSTRING( obj->toHtml() );
+    }
   }
   else
   {
@@ -219,35 +189,25 @@ HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_TOPLAINTEXT )
   }
 }
 
-/*
-static QTextDocumentFragment fromHtml( const QString & text )
-*/
-void QTextDocumentFragment_fromHtml1()
-{
-
-  QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml( PQSTRING( 1 ) ) );
-  Qt4xHb::createReturnClass( ptr, "QTEXTDOCUMENTFRAGMENT", true );
-}
-
-/*
-static QTextDocumentFragment fromHtml( const QString & text, const QTextDocument * resourceProvider )
-*/
-void QTextDocumentFragment_fromHtml2()
-{
-
-  QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml( PQSTRING( 1 ), PQTEXTDOCUMENT( 2 ) ) );
-  Qt4xHb::createReturnClass( ptr, "QTEXTDOCUMENTFRAGMENT", true );
-}
-
 HB_FUNC_STATIC( QTEXTDOCUMENTFRAGMENT_FROMHTML )
 {
   if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QTextDocumentFragment_fromHtml1();
+    /*
+    static QTextDocumentFragment fromHtml( const QString & text )
+    */
+
+    QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml( PQSTRING( 1 ) ) );
+    Qt4xHb::createReturnClass( ptr, "QTEXTDOCUMENTFRAGMENT", true );
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQTEXTDOCUMENT( 2 ) )
   {
-    QTextDocumentFragment_fromHtml2();
+    /*
+    static QTextDocumentFragment fromHtml( const QString & text, const QTextDocument * resourceProvider )
+    */
+
+    QTextDocumentFragment * ptr = new QTextDocumentFragment( QTextDocumentFragment::fromHtml( PQSTRING( 1 ), PQTEXTDOCUMENT( 2 ) ) );
+    Qt4xHb::createReturnClass( ptr, "QTEXTDOCUMENTFRAGMENT", true );
   }
   else
   {

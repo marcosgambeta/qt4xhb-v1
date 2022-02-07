@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -40,33 +40,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QWindowStateChangeEvent( Qt::WindowStates aOldState )
-*/
-void QWindowStateChangeEvent_new1()
-{
-  QWindowStateChangeEvent * obj = new QWindowStateChangeEvent( ( Qt::WindowStates ) hb_parni( 1 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QWindowStateChangeEvent( Qt::WindowStates aOldState, bool isOverride )
-*/
-void QWindowStateChangeEvent_new2()
-{
-  QWindowStateChangeEvent * obj = new QWindowStateChangeEvent( ( Qt::WindowStates ) hb_parni( 1 ), PBOOL( 2 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW )
 {
   if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QWindowStateChangeEvent_new1();
+    /*
+    QWindowStateChangeEvent( Qt::WindowStates aOldState )
+    */
+    QWindowStateChangeEvent * obj = new QWindowStateChangeEvent( ( Qt::WindowStates ) hb_parni( 1 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISLOG( 2 ) )
   {
-    QWindowStateChangeEvent_new2();
+    /*
+    QWindowStateChangeEvent( Qt::WindowStates aOldState, bool isOverride )
+    */
+    QWindowStateChangeEvent * obj = new QWindowStateChangeEvent( ( Qt::WindowStates ) hb_parni( 1 ), PBOOL( 2 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

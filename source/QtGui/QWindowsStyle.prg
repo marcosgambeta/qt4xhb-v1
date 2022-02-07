@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -190,64 +190,49 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_PIXELMETRIC )
   }
 }
 
-/*
-virtual void polish( QApplication * app )
-*/
-void QWindowsStyle_polish1()
-{
-  QWindowsStyle * obj = qobject_cast< QWindowsStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->polish( PQAPPLICATION( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-virtual void polish( QWidget * widget )
-*/
-void QWindowsStyle_polish2()
-{
-  QWindowsStyle * obj = qobject_cast< QWindowsStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->polish( PQWIDGET( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-virtual void polish( QPalette & pal )
-*/
-void QWindowsStyle_polish3()
-{
-  QWindowsStyle * obj = qobject_cast< QWindowsStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->polish( *PQPALETTE( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QWINDOWSSTYLE_POLISH )
 {
   if( ISNUMPAR( 1 ) && ISQAPPLICATION( 1 ) )
   {
-    QWindowsStyle_polish1();
+    /*
+    virtual void polish( QApplication * app )
+    */
+    QWindowsStyle * obj = qobject_cast< QWindowsStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->polish( PQAPPLICATION( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
-    QWindowsStyle_polish2();
+    /*
+    virtual void polish( QWidget * widget )
+    */
+    QWindowsStyle * obj = qobject_cast< QWindowsStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->polish( PQWIDGET( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && ISQPALETTE( 1 ) )
   {
-    QWindowsStyle_polish3();
+    /*
+    virtual void polish( QPalette & pal )
+    */
+    QWindowsStyle * obj = qobject_cast< QWindowsStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->polish( *PQPALETTE( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -354,45 +339,35 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_SUBELEMENTRECT )
   }
 }
 
-/*
-virtual void unpolish( QApplication * app )
-*/
-void QWindowsStyle_unpolish1()
-{
-  QWindowsStyle * obj = qobject_cast< QWindowsStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->unpolish( PQAPPLICATION( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-virtual void unpolish( QWidget * widget )
-*/
-void QWindowsStyle_unpolish2()
-{
-  QWindowsStyle * obj = qobject_cast< QWindowsStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->unpolish( PQWIDGET( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QWINDOWSSTYLE_UNPOLISH )
 {
   if( ISNUMPAR( 1 ) && ISQAPPLICATION( 1 ) )
   {
-    QWindowsStyle_unpolish1();
+    /*
+    virtual void unpolish( QApplication * app )
+    */
+    QWindowsStyle * obj = qobject_cast< QWindowsStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->unpolish( PQAPPLICATION( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
-    QWindowsStyle_unpolish2();
+    /*
+    virtual void unpolish( QWidget * widget )
+    */
+    QWindowsStyle * obj = qobject_cast< QWindowsStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->unpolish( PQWIDGET( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -57,46 +57,31 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QFontEngineInfo()
-*/
-void QFontEngineInfo_new1()
-{
-  QFontEngineInfo * obj = new QFontEngineInfo();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QFontEngineInfo( const QString & family )
-*/
-void QFontEngineInfo_new2()
-{
-  QFontEngineInfo * obj = new QFontEngineInfo( PQSTRING( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QFontEngineInfo( const QFontEngineInfo & other )
-*/
-void QFontEngineInfo_new3()
-{
-  QFontEngineInfo * obj = new QFontEngineInfo( *PQFONTENGINEINFO( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QFONTENGINEINFO_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QFontEngineInfo_new1();
+    /*
+    QFontEngineInfo()
+    */
+    QFontEngineInfo * obj = new QFontEngineInfo();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QFontEngineInfo_new2();
+    /*
+    QFontEngineInfo( const QString & family )
+    */
+    QFontEngineInfo * obj = new QFontEngineInfo( PQSTRING( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQFONTENGINEINFO( 1 ) )
   {
-    QFontEngineInfo_new3();
+    /*
+    QFontEngineInfo( const QFontEngineInfo & other )
+    */
+    QFontEngineInfo * obj = new QFontEngineInfo( *PQFONTENGINEINFO( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

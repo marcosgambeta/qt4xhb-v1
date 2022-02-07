@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -509,60 +509,45 @@ HB_FUNC_STATIC( QLAYOUT_REMOVEWIDGET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-bool setAlignment( QWidget * w, Qt::Alignment alignment )
-*/
-void QLayout_setAlignment1()
-{
-  QLayout * obj = qobject_cast< QLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->setAlignment( PQWIDGET( 1 ), ( Qt::Alignment ) hb_parni( 2 ) ) );
-  }
-}
-
-/*
-void setAlignment( Qt::Alignment alignment )
-*/
-void QLayout_setAlignment2()
-{
-  QLayout * obj = qobject_cast< QLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->setAlignment( ( Qt::Alignment ) hb_parni( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-bool setAlignment( QLayout * l, Qt::Alignment alignment )
-*/
-void QLayout_setAlignment3()
-{
-  QLayout * obj = qobject_cast< QLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->setAlignment( PQLAYOUT( 1 ), ( Qt::Alignment ) hb_parni( 2 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QLAYOUT_SETALIGNMENT )
 {
   if( ISNUMPAR( 2 ) && ISQWIDGET( 1 ) && HB_ISNUM( 2 ) )
   {
-    QLayout_setAlignment1();
+    /*
+    bool setAlignment( QWidget * w, Qt::Alignment alignment )
+    */
+    QLayout * obj = qobject_cast< QLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->setAlignment( PQWIDGET( 1 ), ( Qt::Alignment ) hb_parni( 2 ) ) );
+    }
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QLayout_setAlignment2();
+    /*
+    void setAlignment( Qt::Alignment alignment )
+    */
+    QLayout * obj = qobject_cast< QLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setAlignment( ( Qt::Alignment ) hb_parni( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && ISQLAYOUT( 1 ) && HB_ISNUM( 2 ) )
   {
-    QLayout_setAlignment3();
+    /*
+    bool setAlignment( QLayout * l, Qt::Alignment alignment )
+    */
+    QLayout * obj = qobject_cast< QLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->setAlignment( PQLAYOUT( 1 ), ( Qt::Alignment ) hb_parni( 2 ) ) );
+    }
   }
   else
   {
@@ -570,45 +555,35 @@ HB_FUNC_STATIC( QLAYOUT_SETALIGNMENT )
   }
 }
 
-/*
-void setContentsMargins( int left, int top, int right, int bottom )
-*/
-void QLayout_setContentsMargins1()
-{
-  QLayout * obj = qobject_cast< QLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->setContentsMargins( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setContentsMargins( const QMargins & margins )
-*/
-void QLayout_setContentsMargins2()
-{
-  QLayout * obj = qobject_cast< QLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->setContentsMargins( *PQMARGINS( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QLAYOUT_SETCONTENTSMARGINS )
 {
   if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QLayout_setContentsMargins1();
+    /*
+    void setContentsMargins( int left, int top, int right, int bottom )
+    */
+    QLayout * obj = qobject_cast< QLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setContentsMargins( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && ISQMARGINS( 1 ) )
   {
-    QLayout_setContentsMargins2();
+    /*
+    void setContentsMargins( const QMargins & margins )
+    */
+    QLayout * obj = qobject_cast< QLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setContentsMargins( *PQMARGINS( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

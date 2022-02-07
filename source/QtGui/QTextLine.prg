@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -516,45 +516,35 @@ HB_FUNC_STATIC( QTEXTLINE_SETLINEWIDTH )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setNumColumns( int numColumns )
-*/
-void QTextLine_setNumColumns1()
-{
-  QTextLine * obj = static_cast< QTextLine * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setNumColumns( PINT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setNumColumns( int numColumns, qreal alignmentWidth )
-*/
-void QTextLine_setNumColumns2()
-{
-  QTextLine * obj = static_cast< QTextLine * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setNumColumns( PINT( 1 ), PQREAL( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS )
 {
   if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QTextLine_setNumColumns1();
+    /*
+    void setNumColumns( int numColumns )
+    */
+    QTextLine * obj = static_cast< QTextLine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setNumColumns( PINT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QTextLine_setNumColumns2();
+    /*
+    void setNumColumns( int numColumns, qreal alignmentWidth )
+    */
+    QTextLine * obj = static_cast< QTextLine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setNumColumns( PINT( 1 ), PQREAL( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

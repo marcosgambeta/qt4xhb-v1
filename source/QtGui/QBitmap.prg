@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -46,72 +46,47 @@ RETURN
 
 #include <QtCore/QVariant>
 
-/*
-QBitmap()
-*/
-void QBitmap_new1()
-{
-  QBitmap * obj = new QBitmap();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QBitmap( const QPixmap & pixmap )
-*/
-void QBitmap_new2()
-{
-  QBitmap * obj = new QBitmap( *PQPIXMAP( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QBitmap( int width, int height )
-*/
-void QBitmap_new3()
-{
-  QBitmap * obj = new QBitmap( PINT( 1 ), PINT( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QBitmap( const QSize & size )
-*/
-void QBitmap_new4()
-{
-  QBitmap * obj = new QBitmap( *PQSIZE( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QBitmap( const QString & fileName, const char * format = 0 )
-*/
-void QBitmap_new5()
-{
-  QBitmap * obj = new QBitmap( PQSTRING( 1 ), OPCONSTCHAR( 2, 0 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QBITMAP_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QBitmap_new1();
+    /*
+    QBitmap()
+    */
+    QBitmap * obj = new QBitmap();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQPIXMAP( 1 ) )
   {
-    QBitmap_new2();
+    /*
+    QBitmap( const QPixmap & pixmap )
+    */
+    QBitmap * obj = new QBitmap( *PQPIXMAP( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QBitmap_new3();
+    /*
+    QBitmap( int width, int height )
+    */
+    QBitmap * obj = new QBitmap( PINT( 1 ), PINT( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
   {
-    QBitmap_new4();
+    /*
+    QBitmap( const QSize & size )
+    */
+    QBitmap * obj = new QBitmap( *PQSIZE( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QBitmap_new5();
+    /*
+    QBitmap( const QString & fileName, const char * format = 0 )
+    */
+    QBitmap * obj = new QBitmap( PQSTRING( 1 ), OPCONSTCHAR( 2, 0 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

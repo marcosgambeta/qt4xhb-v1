@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -41,33 +41,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QInputMethodEvent()
-*/
-void QInputMethodEvent_new1()
-{
-  QInputMethodEvent * obj = new QInputMethodEvent();
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QInputMethodEvent( const QInputMethodEvent & other )
-*/
-void QInputMethodEvent_new3()
-{
-  QInputMethodEvent * obj = new QInputMethodEvent( *PQINPUTMETHODEVENT( 1 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QINPUTMETHODEVENT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QInputMethodEvent_new1();
+    /*
+    QInputMethodEvent()
+    */
+    QInputMethodEvent * obj = new QInputMethodEvent();
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISNUMPAR( 1 ) && ISQINPUTMETHODEVENT( 1 ) )
   {
-    QInputMethodEvent_new3();
+    /*
+    QInputMethodEvent( const QInputMethodEvent & other )
+    */
+    QInputMethodEvent * obj = new QInputMethodEvent( *PQINPUTMETHODEVENT( 1 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

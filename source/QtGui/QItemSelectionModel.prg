@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -65,33 +65,23 @@ RETURN
 #include "qt4xhb_events.h"
 #include "qt4xhb_signals.h"
 
-/*
-QItemSelectionModel( QAbstractItemModel * model )
-*/
-void QItemSelectionModel_new1()
-{
-  QItemSelectionModel * obj = new QItemSelectionModel( PQABSTRACTITEMMODEL( 1 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QItemSelectionModel( QAbstractItemModel * model, QObject * parent )
-*/
-void QItemSelectionModel_new2()
-{
-  QItemSelectionModel * obj = new QItemSelectionModel( PQABSTRACTITEMMODEL( 1 ), PQOBJECT( 2 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_NEW )
 {
   if( ISNUMPAR( 1 ) && ISQABSTRACTITEMMODEL( 1 ) )
   {
-    QItemSelectionModel_new1();
+    /*
+    QItemSelectionModel( QAbstractItemModel * model )
+    */
+    QItemSelectionModel * obj = new QItemSelectionModel( PQABSTRACTITEMMODEL( 1 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISNUMPAR( 2 ) && ISQABSTRACTITEMMODEL( 1 ) && ISQOBJECT( 2 ) )
   {
-    QItemSelectionModel_new2();
+    /*
+    QItemSelectionModel( QAbstractItemModel * model, QObject * parent )
+    */
+    QItemSelectionModel * obj = new QItemSelectionModel( PQABSTRACTITEMMODEL( 1 ), PQOBJECT( 2 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -571,45 +561,35 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_RESET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-virtual void select( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
-*/
-void QItemSelectionModel_select1()
-{
-  QItemSelectionModel * obj = qobject_cast< QItemSelectionModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->select( *PQMODELINDEX( 1 ), ( QItemSelectionModel::SelectionFlags ) hb_parni( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-virtual void select( const QItemSelection & selection, QItemSelectionModel::SelectionFlags command )
-*/
-void QItemSelectionModel_select2()
-{
-  QItemSelectionModel * obj = qobject_cast< QItemSelectionModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->select( *PQITEMSELECTION( 1 ), ( QItemSelectionModel::SelectionFlags ) hb_parni( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECT )
 {
   if( ISNUMPAR( 2 ) && ISQMODELINDEX( 1 ) && HB_ISNUM( 2 ) )
   {
-    QItemSelectionModel_select1();
+    /*
+    virtual void select( const QModelIndex & index, QItemSelectionModel::SelectionFlags command )
+    */
+    QItemSelectionModel * obj = qobject_cast< QItemSelectionModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->select( *PQMODELINDEX( 1 ), ( QItemSelectionModel::SelectionFlags ) hb_parni( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && ISQITEMSELECTION( 1 ) && HB_ISNUM( 2 ) )
   {
-    QItemSelectionModel_select2();
+    /*
+    virtual void select( const QItemSelection & selection, QItemSelectionModel::SelectionFlags command )
+    */
+    QItemSelectionModel * obj = qobject_cast< QItemSelectionModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->select( *PQITEMSELECTION( 1 ), ( QItemSelectionModel::SelectionFlags ) hb_parni( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

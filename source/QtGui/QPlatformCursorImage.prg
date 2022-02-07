@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -135,64 +135,49 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_IMAGE )
   }
 }
 
-/*
-void set( const uchar * data, const uchar * mask, int width, int height, int hx, int hy )
-*/
-void QPlatformCursorImage_set1()
-{
-  QPlatformCursorImage * obj = static_cast< QPlatformCursorImage * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->set( PCONSTUCHAR( 1 ), PCONSTUCHAR( 2 ), PINT( 3 ), PINT( 4 ), PINT( 5 ), PINT( 6 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void set( const QImage & image, int hx, int hy )
-*/
-void QPlatformCursorImage_set2()
-{
-  QPlatformCursorImage * obj = static_cast< QPlatformCursorImage * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->set( *PQIMAGE( 1 ), PINT( 2 ), PINT( 3 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void set( Qt::CursorShape id )
-*/
-void QPlatformCursorImage_set3()
-{
-  QPlatformCursorImage * obj = static_cast< QPlatformCursorImage * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->set( ( Qt::CursorShape ) hb_parni( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_SET )
 {
   if( ISNUMPAR( 6 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) )
   {
-    QPlatformCursorImage_set1();
+    /*
+    void set( const uchar * data, const uchar * mask, int width, int height, int hx, int hy )
+    */
+    QPlatformCursorImage * obj = static_cast< QPlatformCursorImage * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->set( PCONSTUCHAR( 1 ), PCONSTUCHAR( 2 ), PINT( 3 ), PINT( 4 ), PINT( 5 ), PINT( 6 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 3 ) && ISQIMAGE( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
-    QPlatformCursorImage_set2();
+    /*
+    void set( const QImage & image, int hx, int hy )
+    */
+    QPlatformCursorImage * obj = static_cast< QPlatformCursorImage * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->set( *PQIMAGE( 1 ), PINT( 2 ), PINT( 3 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QPlatformCursorImage_set3();
+    /*
+    void set( Qt::CursorShape id )
+    */
+    QPlatformCursorImage * obj = static_cast< QPlatformCursorImage * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->set( ( Qt::CursorShape ) hb_parni( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

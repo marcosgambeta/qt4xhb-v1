@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -46,33 +46,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QStyleOptionTitleBar()
-*/
-void QStyleOptionTitleBar_new1()
-{
-  QStyleOptionTitleBar * obj = new QStyleOptionTitleBar();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QStyleOptionTitleBar( const QStyleOptionTitleBar & other )
-*/
-void QStyleOptionTitleBar_new2()
-{
-  QStyleOptionTitleBar * obj = new QStyleOptionTitleBar( *PQSTYLEOPTIONTITLEBAR( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QStyleOptionTitleBar_new1();
+    /*
+    QStyleOptionTitleBar()
+    */
+    QStyleOptionTitleBar * obj = new QStyleOptionTitleBar();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONTITLEBAR( 1 ) )
   {
-    QStyleOptionTitleBar_new2();
+    /*
+    QStyleOptionTitleBar( const QStyleOptionTitleBar & other )
+    */
+    QStyleOptionTitleBar * obj = new QStyleOptionTitleBar( *PQSTYLEOPTIONTITLEBAR( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

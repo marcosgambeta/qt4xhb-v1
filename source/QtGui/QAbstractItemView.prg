@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -480,43 +480,33 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_INDEXWIDGET )
   }
 }
 
-/*
-QAbstractItemDelegate * itemDelegate() const
-*/
-void QAbstractItemView_itemDelegate1()
-{
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    QAbstractItemDelegate * ptr = obj->itemDelegate();
-    Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMDELEGATE" );
-  }
-}
-
-/*
-QAbstractItemDelegate * itemDelegate( const QModelIndex & index ) const
-*/
-void QAbstractItemView_itemDelegate2()
-{
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    QAbstractItemDelegate * ptr = obj->itemDelegate( *PQMODELINDEX( 1 ) );
-    Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMDELEGATE" );
-  }
-}
-
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATE )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QAbstractItemView_itemDelegate1();
+    /*
+    QAbstractItemDelegate * itemDelegate() const
+    */
+    QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      QAbstractItemDelegate * ptr = obj->itemDelegate();
+      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMDELEGATE" );
+    }
   }
   else if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
   {
-    QAbstractItemView_itemDelegate2();
+    /*
+    QAbstractItemDelegate * itemDelegate( const QModelIndex & index ) const
+    */
+    QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      QAbstractItemDelegate * ptr = obj->itemDelegate( *PQMODELINDEX( 1 ) );
+      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMDELEGATE" );
+    }
   }
   else
   {

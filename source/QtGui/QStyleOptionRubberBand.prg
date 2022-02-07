@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -41,33 +41,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QStyleOptionRubberBand()
-*/
-void QStyleOptionRubberBand_new1()
-{
-  QStyleOptionRubberBand * obj = new QStyleOptionRubberBand();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QStyleOptionRubberBand( const QStyleOptionRubberBand & other )
-*/
-void QStyleOptionRubberBand_new2()
-{
-  QStyleOptionRubberBand * obj = new QStyleOptionRubberBand( *PQSTYLEOPTIONRUBBERBAND( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONRUBBERBAND_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QStyleOptionRubberBand_new1();
+    /*
+    QStyleOptionRubberBand()
+    */
+    QStyleOptionRubberBand * obj = new QStyleOptionRubberBand();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONRUBBERBAND( 1 ) )
   {
-    QStyleOptionRubberBand_new2();
+    /*
+    QStyleOptionRubberBand( const QStyleOptionRubberBand & other )
+    */
+    QStyleOptionRubberBand * obj = new QStyleOptionRubberBand( *PQSTYLEOPTIONRUBBERBAND( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

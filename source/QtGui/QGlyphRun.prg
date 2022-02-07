@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -62,33 +62,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QGlyphRun()
-*/
-void QGlyphRun_new1()
-{
-  QGlyphRun * obj = new QGlyphRun();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QGlyphRun( const QGlyphRun & other )
-*/
-void QGlyphRun_new2()
-{
-  QGlyphRun * obj = new QGlyphRun( *PQGLYPHRUN( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QGLYPHRUN_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QGlyphRun_new1();
+    /*
+    QGlyphRun()
+    */
+    QGlyphRun * obj = new QGlyphRun();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQGLYPHRUN( 1 ) )
   {
-    QGlyphRun_new2();
+    /*
+    QGlyphRun( const QGlyphRun & other )
+    */
+    QGlyphRun * obj = new QGlyphRun( *PQGLYPHRUN( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

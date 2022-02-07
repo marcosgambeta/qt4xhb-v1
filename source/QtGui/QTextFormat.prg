@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -102,46 +102,31 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QTextFormat()
-*/
-void QTextFormat_new1()
-{
-  QTextFormat * obj = new QTextFormat();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextFormat( int type )
-*/
-void QTextFormat_new2()
-{
-  QTextFormat * obj = new QTextFormat( PINT( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextFormat( const QTextFormat & other )
-*/
-void QTextFormat_new3()
-{
-  QTextFormat * obj = new QTextFormat( *PQTEXTFORMAT( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QTEXTFORMAT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QTextFormat_new1();
+    /*
+    QTextFormat()
+    */
+    QTextFormat * obj = new QTextFormat();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QTextFormat_new2();
+    /*
+    QTextFormat( int type )
+    */
+    QTextFormat * obj = new QTextFormat( PINT( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQTEXTFORMAT( 1 ) )
   {
-    QTextFormat_new3();
+    /*
+    QTextFormat( const QTextFormat & other )
+    */
+    QTextFormat * obj = new QTextFormat( *PQTEXTFORMAT( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -1011,52 +996,42 @@ HB_FUNC_STATIC( QTEXTFORMAT_SETOBJECTTYPE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setProperty( int propertyId, const QVariant & value )
-*/
-void QTextFormat_setProperty1()
-{
-  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setProperty( PINT( 1 ), *PQVARIANT( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setProperty( int propertyId, const QVector<QTextLength> & value )
-*/
-void QTextFormat_setProperty2()
-{
-  QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QVector<QTextLength> par2;
-    PHB_ITEM aList2 = hb_param( 2, HB_IT_ARRAY );
-    int nLen2 = hb_arrayLen( aList2 );
-    for( int i2 = 0; i2 < nLen2; i2++ )
-    {
-      par2 << *static_cast< QTextLength * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
-    }
-    obj->setProperty( PINT( 1 ), par2 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QTEXTFORMAT_SETPROPERTY )
 {
   if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQVARIANT( 2 ) )
   {
-    QTextFormat_setProperty1();
+    /*
+    void setProperty( int propertyId, const QVariant & value )
+    */
+    QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setProperty( PINT( 1 ), *PQVARIANT( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISARRAY( 2 ) )
   {
-    QTextFormat_setProperty2();
+    /*
+    void setProperty( int propertyId, const QVector<QTextLength> & value )
+    */
+    QTextFormat * obj = static_cast< QTextFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QVector<QTextLength> par2;
+      PHB_ITEM aList2 = hb_param( 2, HB_IT_ARRAY );
+      int nLen2 = hb_arrayLen( aList2 );
+      for( int i2 = 0; i2 < nLen2; i2++ )
+      {
+        par2 << *static_cast< QTextLength * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
+      }
+      obj->setProperty( PINT( 1 ), par2 );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -324,64 +324,49 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_PIXELMETRIC )
   }
 }
 
-/*
-virtual void polish( QWidget * widget )
-*/
-void QCleanlooksStyle_polish1()
-{
-  QCleanlooksStyle * obj = qobject_cast< QCleanlooksStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->polish( PQWIDGET( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-virtual void polish( QApplication * app )
-*/
-void QCleanlooksStyle_polish2()
-{
-  QCleanlooksStyle * obj = qobject_cast< QCleanlooksStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->polish( PQAPPLICATION( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-virtual void polish( QPalette & pal )
-*/
-void QCleanlooksStyle_polish3()
-{
-  QCleanlooksStyle * obj = qobject_cast< QCleanlooksStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->polish( *PQPALETTE( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_POLISH )
 {
   if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
-    QCleanlooksStyle_polish1();
+    /*
+    virtual void polish( QWidget * widget )
+    */
+    QCleanlooksStyle * obj = qobject_cast< QCleanlooksStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->polish( PQWIDGET( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && ISQAPPLICATION( 1 ) )
   {
-    QCleanlooksStyle_polish2();
+    /*
+    virtual void polish( QApplication * app )
+    */
+    QCleanlooksStyle * obj = qobject_cast< QCleanlooksStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->polish( PQAPPLICATION( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && ISQPALETTE( 1 ) )
   {
-    QCleanlooksStyle_polish3();
+    /*
+    virtual void polish( QPalette & pal )
+    */
+    QCleanlooksStyle * obj = qobject_cast< QCleanlooksStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->polish( *PQPALETTE( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -538,45 +523,35 @@ HB_FUNC_STATIC( QCLEANLOOKSSTYLE_SUBELEMENTRECT )
   }
 }
 
-/*
-virtual void unpolish( QWidget * widget )
-*/
-void QCleanlooksStyle_unpolish1()
-{
-  QCleanlooksStyle * obj = qobject_cast< QCleanlooksStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->unpolish( PQWIDGET( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-virtual void unpolish( QApplication * app )
-*/
-void QCleanlooksStyle_unpolish2()
-{
-  QCleanlooksStyle * obj = qobject_cast< QCleanlooksStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->unpolish( PQAPPLICATION( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QCLEANLOOKSSTYLE_UNPOLISH )
 {
   if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
-    QCleanlooksStyle_unpolish1();
+    /*
+    virtual void unpolish( QWidget * widget )
+    */
+    QCleanlooksStyle * obj = qobject_cast< QCleanlooksStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->unpolish( PQWIDGET( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && ISQAPPLICATION( 1 ) )
   {
-    QCleanlooksStyle_unpolish2();
+    /*
+    virtual void unpolish( QApplication * app )
+    */
+    QCleanlooksStyle * obj = qobject_cast< QCleanlooksStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->unpolish( PQAPPLICATION( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

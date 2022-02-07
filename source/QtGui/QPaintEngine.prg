@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -108,45 +108,35 @@ HB_FUNC_STATIC( QPAINTENGINE_BEGIN )
   }
 }
 
-/*
-virtual void drawEllipse( const QRectF & rect )
-*/
-void QPaintEngine_drawEllipse1()
-{
-  QPaintEngine * obj = static_cast< QPaintEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawEllipse( *PQRECTF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-virtual void drawEllipse( const QRect & rect )
-*/
-void QPaintEngine_drawEllipse2()
-{
-  QPaintEngine * obj = static_cast< QPaintEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->drawEllipse( *PQRECT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPAINTENGINE_DRAWELLIPSE )
 {
   if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
   {
-    QPaintEngine_drawEllipse1();
+    /*
+    virtual void drawEllipse( const QRectF & rect )
+    */
+    QPaintEngine * obj = static_cast< QPaintEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawEllipse( *PQRECTF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
   {
-    QPaintEngine_drawEllipse2();
+    /*
+    virtual void drawEllipse( const QRect & rect )
+    */
+    QPaintEngine * obj = static_cast< QPaintEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->drawEllipse( *PQRECT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

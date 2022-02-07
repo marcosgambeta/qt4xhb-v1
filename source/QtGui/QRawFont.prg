@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -26,7 +26,6 @@ CLASS QRawFont
 
    METHOD new
    METHOD delete
-   METHOD advancesForGlyphIndexes1
    METHOD advancesForGlyphIndexes
    METHOD alphaMapForGlyph
    METHOD ascent
@@ -79,59 +78,39 @@ RETURN
 
 #include <QtGui/QImage>
 
-/*
-QRawFont()
-*/
-void QRawFont_new1()
-{
-  QRawFont * obj = new QRawFont();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QRawFont( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
-*/
-void QRawFont_new2()
-{
-  QRawFont * obj = new QRawFont( PQSTRING( 1 ), PQREAL( 2 ), HB_ISNIL( 3 ) ? ( QFont::HintingPreference ) QFont::PreferDefaultHinting : ( QFont::HintingPreference ) hb_parni( 3 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QRawFont( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
-*/
-void QRawFont_new3()
-{
-  QRawFont * obj = new QRawFont( *PQBYTEARRAY( 1 ), PQREAL( 2 ), HB_ISNIL( 3 ) ? ( QFont::HintingPreference ) QFont::PreferDefaultHinting : ( QFont::HintingPreference ) hb_parni( 3 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QRawFont( const QRawFont & other )
-*/
-void QRawFont_new4()
-{
-  QRawFont * obj = new QRawFont( *PQRAWFONT( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QRAWFONT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QRawFont_new1();
+    /*
+    QRawFont()
+    */
+    QRawFont * obj = new QRawFont();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 2, 3 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QRawFont_new2();
+    /*
+    QRawFont( const QString & fileName, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
+    */
+    QRawFont * obj = new QRawFont( PQSTRING( 1 ), PQREAL( 2 ), HB_ISNIL( 3 ) ? ( QFont::HintingPreference ) QFont::PreferDefaultHinting : ( QFont::HintingPreference ) hb_parni( 3 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 2, 3 ) && ISQBYTEARRAY( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QRawFont_new3();
+    /*
+    QRawFont( const QByteArray & fontData, qreal pixelSize, QFont::HintingPreference hintingPreference = QFont::PreferDefaultHinting )
+    */
+    QRawFont * obj = new QRawFont( *PQBYTEARRAY( 1 ), PQREAL( 2 ), HB_ISNIL( 3 ) ? ( QFont::HintingPreference ) QFont::PreferDefaultHinting : ( QFont::HintingPreference ) hb_parni( 3 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQRAWFONT( 1 ) )
   {
-    QRawFont_new4();
+    /*
+    QRawFont( const QRawFont & other )
+    */
+    QRawFont * obj = new QRawFont( *PQRAWFONT( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -159,7 +138,7 @@ HB_FUNC_STATIC( QRAWFONT_DELETE )
 /*
 QVector<QPointF> advancesForGlyphIndexes( const QVector<quint32> & glyphIndexes ) const
 */
-HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES1 )
+HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES )
 {
   QRawFont * obj = static_cast< QRawFont * >( Qt4xHb::itemGetPtrStackSelfItem() );
 
@@ -215,11 +194,6 @@ HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES1 )
     }
 #endif
   }
-}
-
-HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES )
-{
-  HB_FUNC_EXEC( QRAWFONT_ADVANCESFORGLYPHINDEXES1 );
 }
 
 /*
@@ -703,41 +677,31 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTEDWRITINGSYSTEMS )
   }
 }
 
-/*
-bool supportsCharacter( QChar character ) const
-*/
-void QRawFont_supportsCharacter1()
-{
-  QRawFont * obj = static_cast< QRawFont * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->supportsCharacter( *PQCHAR( 1 ) ) );
-  }
-}
-
-/*
-bool supportsCharacter( quint32 ucs4 ) const
-*/
-void QRawFont_supportsCharacter2()
-{
-  QRawFont * obj = static_cast< QRawFont * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->supportsCharacter( PQUINT32( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QRAWFONT_SUPPORTSCHARACTER )
 {
   if( ISNUMPAR( 1 ) && ISQCHAR( 1 ) )
   {
-    QRawFont_supportsCharacter1();
+    /*
+    bool supportsCharacter( QChar character ) const
+    */
+    QRawFont * obj = static_cast< QRawFont * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->supportsCharacter( *PQCHAR( 1 ) ) );
+    }
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QRawFont_supportsCharacter2();
+    /*
+    bool supportsCharacter( quint32 ucs4 ) const
+    */
+    QRawFont * obj = static_cast< QRawFont * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->supportsCharacter( PQUINT32( 1 ) ) );
+    }
   }
   else
   {

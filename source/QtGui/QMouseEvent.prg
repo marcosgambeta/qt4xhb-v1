@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -51,33 +51,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QMouseEvent( QEvent::Type type, const QPoint & pos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
-*/
-void QMouseEvent_new1()
-{
-  QMouseEvent * obj = new QMouseEvent( ( QEvent::Type ) hb_parni( 1 ), *PQPOINT( 2 ), ( Qt::MouseButton ) hb_parni( 3 ), ( Qt::MouseButtons ) hb_parni( 4 ), ( Qt::KeyboardModifiers ) hb_parni( 5 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QMouseEvent( QEvent::Type type, const QPoint & pos, const QPoint & globalPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
-*/
-void QMouseEvent_new2()
-{
-  QMouseEvent * obj = new QMouseEvent( ( QEvent::Type ) hb_parni( 1 ), *PQPOINT( 2 ), *PQPOINT( 3 ), ( Qt::MouseButton ) hb_parni( 4 ), ( Qt::MouseButtons ) hb_parni( 5 ), ( Qt::KeyboardModifiers ) hb_parni( 6 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QMOUSEEVENT_NEW )
 {
   if( ISNUMPAR( 5 ) && HB_ISNUM( 1 ) && ISQPOINT( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) )
   {
-    QMouseEvent_new1();
+    /*
+    QMouseEvent( QEvent::Type type, const QPoint & pos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
+    */
+    QMouseEvent * obj = new QMouseEvent( ( QEvent::Type ) hb_parni( 1 ), *PQPOINT( 2 ), ( Qt::MouseButton ) hb_parni( 3 ), ( Qt::MouseButtons ) hb_parni( 4 ), ( Qt::KeyboardModifiers ) hb_parni( 5 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISNUMPAR( 6 ) && HB_ISNUM( 1 ) && ISQPOINT( 2 ) && ISQPOINT( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) )
   {
-    QMouseEvent_new2();
+    /*
+    QMouseEvent( QEvent::Type type, const QPoint & pos, const QPoint & globalPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
+    */
+    QMouseEvent * obj = new QMouseEvent( ( QEvent::Type ) hb_parni( 1 ), *PQPOINT( 2 ), *PQPOINT( 3 ), ( Qt::MouseButton ) hb_parni( 4 ), ( Qt::MouseButtons ) hb_parni( 5 ), ( Qt::KeyboardModifiers ) hb_parni( 6 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -78,33 +78,23 @@ RETURN
 #include <QtGui/QIcon>
 #include <QtGui/QAction>
 
-/*
-QToolBar( const QString & title, QWidget * parent = 0 )
-*/
-void QToolBar_new1()
-{
-  QToolBar * obj = new QToolBar( PQSTRING( 1 ), OPQWIDGET( 2, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QToolBar( QWidget * parent = 0 )
-*/
-void QToolBar_new2()
-{
-  QToolBar * obj = new QToolBar( OPQWIDGET( 1, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QTOOLBAR_NEW )
 {
   if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QToolBar_new1();
+    /*
+    QToolBar( const QString & title, QWidget * parent = 0 )
+    */
+    QToolBar * obj = new QToolBar( PQSTRING( 1 ), OPQWIDGET( 2, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QToolBar_new2();
+    /*
+    QToolBar( QWidget * parent = 0 )
+    */
+    QToolBar * obj = new QToolBar( OPQWIDGET( 1, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -131,43 +121,33 @@ HB_FUNC_STATIC( QTOOLBAR_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-QAction * actionAt( int x, int y ) const
-*/
-void QToolBar_actionAt1()
-{
-  QToolBar * obj = qobject_cast< QToolBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    QAction * ptr = obj->actionAt( PINT( 1 ), PINT( 2 ) );
-    Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
-  }
-}
-
-/*
-QAction * actionAt( const QPoint & p ) const
-*/
-void QToolBar_actionAt2()
-{
-  QToolBar * obj = qobject_cast< QToolBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    QAction * ptr = obj->actionAt( *PQPOINT( 1 ) );
-    Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
-  }
-}
-
 HB_FUNC_STATIC( QTOOLBAR_ACTIONAT )
 {
   if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QToolBar_actionAt1();
+    /*
+    QAction * actionAt( int x, int y ) const
+    */
+    QToolBar * obj = qobject_cast< QToolBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      QAction * ptr = obj->actionAt( PINT( 1 ), PINT( 2 ) );
+      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+    }
   }
   else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
-    QToolBar_actionAt2();
+    /*
+    QAction * actionAt( const QPoint & p ) const
+    */
+    QToolBar * obj = qobject_cast< QToolBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      QAction * ptr = obj->actionAt( *PQPOINT( 1 ) );
+      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+    }
   }
   else
   {
@@ -175,98 +155,73 @@ HB_FUNC_STATIC( QTOOLBAR_ACTIONAT )
   }
 }
 
-/*
-void addAction( QAction * action )
-*/
-void QToolBar_addAction1()
-{
-  QToolBar * obj = qobject_cast< QToolBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->addAction( PQACTION( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-QAction * addAction( const QString & text )
-*/
-void QToolBar_addAction2()
-{
-  QToolBar * obj = qobject_cast< QToolBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    QAction * ptr = obj->addAction( PQSTRING( 1 ) );
-    Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
-  }
-}
-
-/*
-QAction * addAction( const QIcon & icon, const QString & text )
-*/
-void QToolBar_addAction3()
-{
-  QToolBar * obj = qobject_cast< QToolBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    QAction * ptr = obj->addAction( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt4xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ), PQSTRING( 2 ) );
-    Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
-  }
-}
-
-/*
-QAction * addAction( const QString & text, const QObject * receiver, const char * member )
-*/
-void QToolBar_addAction4()
-{
-  QToolBar * obj = qobject_cast< QToolBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    QAction * ptr = obj->addAction( PQSTRING( 1 ), PQOBJECT( 2 ), PCONSTCHAR( 3 ) );
-    Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
-  }
-}
-
-/*
-QAction * addAction( const QIcon & icon, const QString & text, const QObject * receiver, const char * member )
-*/
-void QToolBar_addAction5()
-{
-  QToolBar * obj = qobject_cast< QToolBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    QAction * ptr = obj->addAction( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt4xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ), PQSTRING( 2 ), PQOBJECT( 3 ), PCONSTCHAR( 4 ) );
-    Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
-  }
-}
-
 HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
 {
   if( ISNUMPAR( 1 ) && ISQACTION( 1 ) )
   {
-    QToolBar_addAction1();
+    /*
+    void addAction( QAction * action )
+    */
+    QToolBar * obj = qobject_cast< QToolBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->addAction( PQACTION( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QToolBar_addAction2();
+    /*
+    QAction * addAction( const QString & text )
+    */
+    QToolBar * obj = qobject_cast< QToolBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      QAction * ptr = obj->addAction( PQSTRING( 1 ) );
+      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+    }
   }
   else if( ISNUMPAR( 2 ) && ( ISQICON( 1 ) || HB_ISCHAR( 1 ) ) && HB_ISCHAR( 2 ) )
   {
-    QToolBar_addAction3();
+    /*
+    QAction * addAction( const QIcon & icon, const QString & text )
+    */
+    QToolBar * obj = qobject_cast< QToolBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      QAction * ptr = obj->addAction( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt4xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ), PQSTRING( 2 ) );
+      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+    }
   }
   else if( ISNUMPAR( 3 ) && HB_ISCHAR( 1 ) && ISQOBJECT( 2 ) && HB_ISCHAR( 3 ) )
   {
-    QToolBar_addAction4();
+    /*
+    QAction * addAction( const QString & text, const QObject * receiver, const char * member )
+    */
+    QToolBar * obj = qobject_cast< QToolBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      QAction * ptr = obj->addAction( PQSTRING( 1 ), PQOBJECT( 2 ), PCONSTCHAR( 3 ) );
+      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+    }
   }
   else if( ISNUMPAR( 4 ) && ( ISQICON( 1 ) || HB_ISCHAR( 1 ) ) && HB_ISCHAR( 2 ) && ISQOBJECT( 3 ) && HB_ISCHAR( 4 ) )
   {
-    QToolBar_addAction5();
+    /*
+    QAction * addAction( const QIcon & icon, const QString & text, const QObject * receiver, const char * member )
+    */
+    QToolBar * obj = qobject_cast< QToolBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      QAction * ptr = obj->addAction( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt4xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ), PQSTRING( 2 ), PQOBJECT( 3 ), PCONSTCHAR( 4 ) );
+      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+    }
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -60,33 +60,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QFontInfo( const QFont & font )
-*/
-void QFontInfo_new1()
-{
-  QFontInfo * obj = new QFontInfo( *PQFONT( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QFontInfo( const QFontInfo & fi )
-*/
-void QFontInfo_new2()
-{
-  QFontInfo * obj = new QFontInfo( *PQFONTINFO( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QFONTINFO_NEW )
 {
   if( ISNUMPAR( 1 ) && ISQFONT( 1 ) )
   {
-    QFontInfo_new1();
+    /*
+    QFontInfo( const QFont & font )
+    */
+    QFontInfo * obj = new QFontInfo( *PQFONT( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQFONTINFO( 1 ) )
   {
-    QFontInfo_new2();
+    /*
+    QFontInfo( const QFontInfo & fi )
+    */
+    QFontInfo * obj = new QFontInfo( *PQFONTINFO( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

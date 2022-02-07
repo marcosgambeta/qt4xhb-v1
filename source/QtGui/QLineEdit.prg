@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -117,33 +117,23 @@ RETURN
 #include <QtGui/QMenu>
 #include <QtGui/QValidator>
 
-/*
-QLineEdit( QWidget * parent = 0 )
-*/
-void QLineEdit_new1()
-{
-  QLineEdit * obj = new QLineEdit( OPQWIDGET( 1, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QLineEdit( const QString & contents, QWidget * parent = 0 )
-*/
-void QLineEdit_new2()
-{
-  QLineEdit * obj = new QLineEdit( PQSTRING( 1 ), OPQWIDGET( 2, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QLINEEDIT_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QLineEdit_new1();
+    /*
+    QLineEdit( QWidget * parent = 0 )
+    */
+    QLineEdit * obj = new QLineEdit( OPQWIDGET( 1, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QLineEdit_new2();
+    /*
+    QLineEdit( const QString & contents, QWidget * parent = 0 )
+    */
+    QLineEdit * obj = new QLineEdit( PQSTRING( 1 ), OPQWIDGET( 2, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -1283,45 +1273,35 @@ HB_FUNC_STATIC( QLINEEDIT_SETSELECTION )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setTextMargins( int left, int top, int right, int bottom )
-*/
-void QLineEdit_setTextMargins1()
-{
-  QLineEdit * obj = qobject_cast< QLineEdit * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->setTextMargins( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setTextMargins( const QMargins & margins )
-*/
-void QLineEdit_setTextMargins2()
-{
-  QLineEdit * obj = qobject_cast< QLineEdit * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->setTextMargins( *PQMARGINS( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QLINEEDIT_SETTEXTMARGINS )
 {
   if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QLineEdit_setTextMargins1();
+    /*
+    void setTextMargins( int left, int top, int right, int bottom )
+    */
+    QLineEdit * obj = qobject_cast< QLineEdit * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setTextMargins( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && ISQMARGINS( 1 ) )
   {
-    QLineEdit_setTextMargins2();
+    /*
+    void setTextMargins( const QMargins & margins )
+    */
+    QLineEdit * obj = qobject_cast< QLineEdit * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setTextMargins( *PQMARGINS( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

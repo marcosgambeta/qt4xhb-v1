@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -54,33 +54,23 @@ RETURN
 
 #include <QtGui/QFont>
 
-/*
-QGraphicsSimpleTextItem( QGraphicsItem * parent = 0 )
-*/
-void QGraphicsSimpleTextItem_new1()
-{
-  QGraphicsSimpleTextItem * obj = new QGraphicsSimpleTextItem( HB_ISNIL( 1 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 1 ) ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QGraphicsSimpleTextItem( const QString & text, QGraphicsItem * parent = 0 )
-*/
-void QGraphicsSimpleTextItem_new2()
-{
-  QGraphicsSimpleTextItem * obj = new QGraphicsSimpleTextItem( PQSTRING( 1 ), HB_ISNIL( 2 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 2 ) ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QGRAPHICSSIMPLETEXTITEM_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQGRAPHICSITEM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QGraphicsSimpleTextItem_new1();
+    /*
+    QGraphicsSimpleTextItem( QGraphicsItem * parent = 0 )
+    */
+    QGraphicsSimpleTextItem * obj = new QGraphicsSimpleTextItem( HB_ISNIL( 1 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 1 ) ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQGRAPHICSITEM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QGraphicsSimpleTextItem_new2();
+    /*
+    QGraphicsSimpleTextItem( const QString & text, QGraphicsItem * parent = 0 )
+    */
+    QGraphicsSimpleTextItem * obj = new QGraphicsSimpleTextItem( PQSTRING( 1 ), HB_ISNIL( 2 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 2 ) ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

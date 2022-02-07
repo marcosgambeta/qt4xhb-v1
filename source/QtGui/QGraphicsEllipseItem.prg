@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -53,46 +53,31 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QGraphicsEllipseItem( QGraphicsItem * parent = 0 )
-*/
-void QGraphicsEllipseItem_new1()
-{
-  QGraphicsEllipseItem * obj = new QGraphicsEllipseItem( HB_ISNIL( 1 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 1 ) ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QGraphicsEllipseItem( const QRectF & rect, QGraphicsItem * parent = 0 )
-*/
-void QGraphicsEllipseItem_new2()
-{
-  QGraphicsEllipseItem * obj = new QGraphicsEllipseItem( *PQRECTF( 1 ), HB_ISNIL( 2 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 2 ) ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QGraphicsEllipseItem( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = 0 )
-*/
-void QGraphicsEllipseItem_new3()
-{
-  QGraphicsEllipseItem * obj = new QGraphicsEllipseItem( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), HB_ISNIL( 5 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 5 ) ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQGRAPHICSITEM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QGraphicsEllipseItem_new1();
+    /*
+    QGraphicsEllipseItem( QGraphicsItem * parent = 0 )
+    */
+    QGraphicsEllipseItem * obj = new QGraphicsEllipseItem( HB_ISNIL( 1 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 1 ) ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 1, 2 ) && ISQRECTF( 1 ) && ( ISQGRAPHICSITEM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QGraphicsEllipseItem_new2();
+    /*
+    QGraphicsEllipseItem( const QRectF & rect, QGraphicsItem * parent = 0 )
+    */
+    QGraphicsEllipseItem * obj = new QGraphicsEllipseItem( *PQRECTF( 1 ), HB_ISNIL( 2 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 2 ) ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 4, 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ( ISQGRAPHICSITEM( 5 ) || HB_ISNIL( 5 ) ) )
   {
-    QGraphicsEllipseItem_new3();
+    /*
+    QGraphicsEllipseItem( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = 0 )
+    */
+    QGraphicsEllipseItem * obj = new QGraphicsEllipseItem( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), HB_ISNIL( 5 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 5 ) ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -142,45 +127,35 @@ HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_RECT )
   }
 }
 
-/*
-void setRect( const QRectF & rect )
-*/
-void QGraphicsEllipseItem_setRect1()
-{
-  QGraphicsEllipseItem * obj = static_cast< QGraphicsEllipseItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setRect( *PQRECTF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setRect( qreal x, qreal y, qreal width, qreal height )
-*/
-void QGraphicsEllipseItem_setRect2()
-{
-  QGraphicsEllipseItem * obj = static_cast< QGraphicsEllipseItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setRect( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QGRAPHICSELLIPSEITEM_SETRECT )
 {
   if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
   {
-    QGraphicsEllipseItem_setRect1();
+    /*
+    void setRect( const QRectF & rect )
+    */
+    QGraphicsEllipseItem * obj = static_cast< QGraphicsEllipseItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setRect( *PQRECTF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QGraphicsEllipseItem_setRect2();
+    /*
+    void setRect( qreal x, qreal y, qreal width, qreal height )
+    */
+    QGraphicsEllipseItem * obj = static_cast< QGraphicsEllipseItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setRect( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

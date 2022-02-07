@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -53,46 +53,31 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QPrinterInfo()
-*/
-void QPrinterInfo_new1()
-{
-  QPrinterInfo * obj = new QPrinterInfo();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QPrinterInfo( const QPrinterInfo & src )
-*/
-void QPrinterInfo_new2()
-{
-  QPrinterInfo * obj = new QPrinterInfo( *PQPRINTERINFO( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QPrinterInfo( const QPrinter & printer )
-*/
-void QPrinterInfo_new3()
-{
-  QPrinterInfo * obj = new QPrinterInfo( *PQPRINTER( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QPRINTERINFO_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QPrinterInfo_new1();
+    /*
+    QPrinterInfo()
+    */
+    QPrinterInfo * obj = new QPrinterInfo();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQPRINTERINFO( 1 ) )
   {
-    QPrinterInfo_new2();
+    /*
+    QPrinterInfo( const QPrinterInfo & src )
+    */
+    QPrinterInfo * obj = new QPrinterInfo( *PQPRINTERINFO( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQPRINTER( 1 ) )
   {
-    QPrinterInfo_new3();
+    /*
+    QPrinterInfo( const QPrinter & printer )
+    */
+    QPrinterInfo * obj = new QPrinterInfo( *PQPRINTER( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

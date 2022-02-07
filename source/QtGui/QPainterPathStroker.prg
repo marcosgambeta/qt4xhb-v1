@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -351,54 +351,44 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHOFFSET )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setDashPattern( Qt::PenStyle style )
-*/
-void QPainterPathStroker_setDashPattern1()
-{
-  QPainterPathStroker * obj = static_cast< QPainterPathStroker * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setDashPattern( ( Qt::PenStyle ) hb_parni( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setDashPattern( const QVector<qreal> & dashPattern )
-*/
-void QPainterPathStroker_setDashPattern2()
-{
-  QPainterPathStroker * obj = static_cast< QPainterPathStroker * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QVector<qreal> par1;
-    PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
-    int nLen1 = hb_arrayLen( aList1 );
-    qreal temp1;
-    for( int i1 = 0; i1 < nLen1; i1++ )
-    {
-      temp1 = hb_arrayGetND(aList1, i1+1);
-      par1 << temp1;
-    }
-    obj->setDashPattern( par1 );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN )
 {
   if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QPainterPathStroker_setDashPattern1();
+    /*
+    void setDashPattern( Qt::PenStyle style )
+    */
+    QPainterPathStroker * obj = static_cast< QPainterPathStroker * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setDashPattern( ( Qt::PenStyle ) hb_parni( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
   {
-    QPainterPathStroker_setDashPattern2();
+    /*
+    void setDashPattern( const QVector<qreal> & dashPattern )
+    */
+    QPainterPathStroker * obj = static_cast< QPainterPathStroker * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QVector<qreal> par1;
+      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
+      int nLen1 = hb_arrayLen( aList1 );
+      qreal temp1;
+      for( int i1 = 0; i1 < nLen1; i1++ )
+      {
+        temp1 = hb_arrayGetND(aList1, i1+1);
+        par1 << temp1;
+      }
+      obj->setDashPattern( par1 );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

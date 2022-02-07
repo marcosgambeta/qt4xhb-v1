@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -46,33 +46,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QStyleOptionGraphicsItem()
-*/
-void QStyleOptionGraphicsItem_new1()
-{
-  QStyleOptionGraphicsItem * obj = new QStyleOptionGraphicsItem();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QStyleOptionGraphicsItem( const QStyleOptionGraphicsItem & other )
-*/
-void QStyleOptionGraphicsItem_new2()
-{
-  QStyleOptionGraphicsItem * obj = new QStyleOptionGraphicsItem( *PQSTYLEOPTIONGRAPHICSITEM( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QStyleOptionGraphicsItem_new1();
+    /*
+    QStyleOptionGraphicsItem()
+    */
+    QStyleOptionGraphicsItem * obj = new QStyleOptionGraphicsItem();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONGRAPHICSITEM( 1 ) )
   {
-    QStyleOptionGraphicsItem_new2();
+    /*
+    QStyleOptionGraphicsItem( const QStyleOptionGraphicsItem & other )
+    */
+    QStyleOptionGraphicsItem * obj = new QStyleOptionGraphicsItem( *PQSTYLEOPTIONGRAPHICSITEM( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

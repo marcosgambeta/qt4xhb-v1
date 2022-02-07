@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -187,45 +187,35 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_SETANGLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setAxis( const QVector3D & axis )
-*/
-void QGraphicsRotation_setAxis1()
-{
-  QGraphicsRotation * obj = qobject_cast< QGraphicsRotation * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->setAxis( *PQVECTOR3D( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setAxis( Qt::Axis axis )
-*/
-void QGraphicsRotation_setAxis2()
-{
-  QGraphicsRotation * obj = qobject_cast< QGraphicsRotation * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->setAxis( ( Qt::Axis ) hb_parni( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QGRAPHICSROTATION_SETAXIS )
 {
   if( ISNUMPAR( 1 ) && ISQVECTOR3D( 1 ) )
   {
-    QGraphicsRotation_setAxis1();
+    /*
+    void setAxis( const QVector3D & axis )
+    */
+    QGraphicsRotation * obj = qobject_cast< QGraphicsRotation * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setAxis( *PQVECTOR3D( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QGraphicsRotation_setAxis2();
+    /*
+    void setAxis( Qt::Axis axis )
+    */
+    QGraphicsRotation * obj = qobject_cast< QGraphicsRotation * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setAxis( ( Qt::Axis ) hb_parni( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

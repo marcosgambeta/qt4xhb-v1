@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -389,43 +389,33 @@ HB_FUNC_STATIC( QCLIPBOARD_SUPPORTSSELECTION )
   }
 }
 
-/*
-QString text( QClipboard::Mode mode = QClipboard::Clipboard ) const
-*/
-void QClipboard_text1()
-{
-  QClipboard * obj = qobject_cast< QClipboard * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    RQSTRING( obj->text( HB_ISNIL( 1 ) ? ( QClipboard::Mode ) QClipboard::Clipboard : ( QClipboard::Mode ) hb_parni( 1 ) ) );
-  }
-}
-
-/*
-QString text( QString & subtype, QClipboard::Mode mode = QClipboard::Clipboard ) const
-*/
-void QClipboard_text2()
-{
-  QClipboard * obj = qobject_cast< QClipboard * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    QString par1 = hb_parc( 1 );
-    RQSTRING( obj->text( par1, HB_ISNIL( 2 ) ? ( QClipboard::Mode ) QClipboard::Clipboard : ( QClipboard::Mode ) hb_parni( 2 ) ) );
-    hb_storc( QSTRINGTOSTRING( par1 ), 1 );
-  }
-}
-
 HB_FUNC_STATIC( QCLIPBOARD_TEXT )
 {
   if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QClipboard_text1();
+    /*
+    QString text( QClipboard::Mode mode = QClipboard::Clipboard ) const
+    */
+    QClipboard * obj = qobject_cast< QClipboard * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      RQSTRING( obj->text( HB_ISNIL( 1 ) ? ( QClipboard::Mode ) QClipboard::Clipboard : ( QClipboard::Mode ) hb_parni( 1 ) ) );
+    }
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QClipboard_text2();
+    /*
+    QString text( QString & subtype, QClipboard::Mode mode = QClipboard::Clipboard ) const
+    */
+    QClipboard * obj = qobject_cast< QClipboard * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      QString par1 = hb_parc( 1 );
+      RQSTRING( obj->text( par1, HB_ISNIL( 2 ) ? ( QClipboard::Mode ) QClipboard::Clipboard : ( QClipboard::Mode ) hb_parni( 2 ) ) );
+      hb_storc( QSTRINGTOSTRING( par1 ), 1 );
+    }
   }
   else
   {

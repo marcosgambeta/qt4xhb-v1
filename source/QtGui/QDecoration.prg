@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -149,43 +149,33 @@ HB_FUNC_STATIC( QDECORATION_PAINT )
   }
 }
 
-/*
-virtual QRegion region( const QWidget * widget, const QRect & rectangle, int decorationRegion = QDecoration::All ) = 0
-*/
-void QDecoration_region1()
-{
-  QDecoration * obj = static_cast< QDecoration * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QRegion * ptr = new QRegion( obj->region( PQWIDGET( 1 ), *PQRECT( 2 ), OPINT( 3, QDecoration::All ) ) );
-    Qt4xHb::createReturnClass( ptr, "QREGION", true );
-  }
-}
-
-/*
-QRegion region( const QWidget * widget, int decorationRegion = QDecoration::All )
-*/
-void QDecoration_region2()
-{
-  QDecoration * obj = static_cast< QDecoration * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QRegion * ptr = new QRegion( obj->region( PQWIDGET( 1 ), OPINT( 2, QDecoration::All ) ) );
-    Qt4xHb::createReturnClass( ptr, "QREGION", true );
-  }
-}
-
 HB_FUNC_STATIC( QDECORATION_REGION )
 {
   if( ISBETWEEN( 2, 3 ) && ISQWIDGET( 1 ) && ISQRECT( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QDecoration_region1();
+    /*
+    virtual QRegion region( const QWidget * widget, const QRect & rectangle, int decorationRegion = QDecoration::All ) = 0
+    */
+    QDecoration * obj = static_cast< QDecoration * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QRegion * ptr = new QRegion( obj->region( PQWIDGET( 1 ), *PQRECT( 2 ), OPINT( 3, QDecoration::All ) ) );
+      Qt4xHb::createReturnClass( ptr, "QREGION", true );
+    }
   }
   else if( ISBETWEEN( 1, 2 ) && ISQWIDGET( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QDecoration_region2();
+    /*
+    QRegion region( const QWidget * widget, int decorationRegion = QDecoration::All )
+    */
+    QDecoration * obj = static_cast< QDecoration * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QRegion * ptr = new QRegion( obj->region( PQWIDGET( 1 ), OPINT( 2, QDecoration::All ) ) );
+      Qt4xHb::createReturnClass( ptr, "QREGION", true );
+    }
   }
   else
   {

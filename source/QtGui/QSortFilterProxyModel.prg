@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -1359,45 +1359,35 @@ HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERFIXEDSTRING )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setFilterRegExp( const QRegExp & regExp )
-*/
-void QSortFilterProxyModel_setFilterRegExp1()
-{
-  QSortFilterProxyModel * obj = qobject_cast< QSortFilterProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->setFilterRegExp( *PQREGEXP( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setFilterRegExp( const QString & pattern )
-*/
-void QSortFilterProxyModel_setFilterRegExp2()
-{
-  QSortFilterProxyModel * obj = qobject_cast< QSortFilterProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->setFilterRegExp( PQSTRING( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QSORTFILTERPROXYMODEL_SETFILTERREGEXP )
 {
   if( ISNUMPAR( 1 ) && ISQREGEXP( 1 ) )
   {
-    QSortFilterProxyModel_setFilterRegExp1();
+    /*
+    void setFilterRegExp( const QRegExp & regExp )
+    */
+    QSortFilterProxyModel * obj = qobject_cast< QSortFilterProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setFilterRegExp( *PQREGEXP( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QSortFilterProxyModel_setFilterRegExp2();
+    /*
+    void setFilterRegExp( const QString & pattern )
+    */
+    QSortFilterProxyModel * obj = qobject_cast< QSortFilterProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setFilterRegExp( PQSTRING( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

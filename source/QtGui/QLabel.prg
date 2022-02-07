@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -86,33 +86,23 @@ RETURN
 
 #include <QtGui/QMovie>
 
-/*
-QLabel( QWidget * parent = 0, Qt::WindowFlags f = 0 )
-*/
-void QLabel_new1()
-{
-  QLabel * obj = new QLabel( OPQWIDGET( 1, 0 ), HB_ISNIL( 2 ) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 2 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QLabel( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
-*/
-void QLabel_new2()
-{
-  QLabel * obj = new QLabel( PQSTRING( 1 ), OPQWIDGET( 2, 0 ), HB_ISNIL( 3 ) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 3 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QLABEL_NEW )
 {
   if( ISBETWEEN( 0, 2 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QLabel_new1();
+    /*
+    QLabel( QWidget * parent = 0, Qt::WindowFlags f = 0 )
+    */
+    QLabel * obj = new QLabel( OPQWIDGET( 1, 0 ), HB_ISNIL( 2 ) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 2 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISBETWEEN( 1, 3 ) && HB_ISCHAR( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
   {
-    QLabel_new2();
+    /*
+    QLabel( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
+    */
+    QLabel * obj = new QLabel( PQSTRING( 1 ), OPQWIDGET( 2, 0 ), HB_ISNIL( 3 ) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 3 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

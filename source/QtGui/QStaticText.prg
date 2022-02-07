@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -61,46 +61,31 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QStaticText()
-*/
-void QStaticText_new1()
-{
-  QStaticText * obj = new QStaticText();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QStaticText( const QString & text )
-*/
-void QStaticText_new2()
-{
-  QStaticText * obj = new QStaticText( PQSTRING( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QStaticText( const QStaticText & other )
-*/
-void QStaticText_new3()
-{
-  QStaticText * obj = new QStaticText( *PQSTATICTEXT( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSTATICTEXT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QStaticText_new1();
+    /*
+    QStaticText()
+    */
+    QStaticText * obj = new QStaticText();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QStaticText_new2();
+    /*
+    QStaticText( const QString & text )
+    */
+    QStaticText * obj = new QStaticText( PQSTRING( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQSTATICTEXT( 1 ) )
   {
-    QStaticText_new3();
+    /*
+    QStaticText( const QStaticText & other )
+    */
+    QStaticText * obj = new QStaticText( *PQSTATICTEXT( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

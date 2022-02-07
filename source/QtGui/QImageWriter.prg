@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -68,46 +68,31 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QImageWriter()
-*/
-void QImageWriter_new1()
-{
-  QImageWriter * obj = new QImageWriter();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QImageWriter( QIODevice * device, const QByteArray & format )
-*/
-void QImageWriter_new2()
-{
-  QImageWriter * obj = new QImageWriter( PQIODEVICE( 1 ), *PQBYTEARRAY( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QImageWriter( const QString & fileName, const QByteArray & format = QByteArray() )
-*/
-void QImageWriter_new3()
-{
-  QImageWriter * obj = new QImageWriter( PQSTRING( 1 ), HB_ISNIL( 2 ) ? QByteArray() : *static_cast< QByteArray * >( Qt4xHb::itemGetPtr( 2 ) ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QIMAGEWRITER_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QImageWriter_new1();
+    /*
+    QImageWriter()
+    */
+    QImageWriter * obj = new QImageWriter();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 1, 2 ) && ISQIODEVICE( 1 ) && ( ISQBYTEARRAY( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QImageWriter_new2();
+    /*
+    QImageWriter( QIODevice * device, const QByteArray & format )
+    */
+    QImageWriter * obj = new QImageWriter( PQIODEVICE( 1 ), *PQBYTEARRAY( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQBYTEARRAY( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QImageWriter_new3();
+    /*
+    QImageWriter( const QString & fileName, const QByteArray & format = QByteArray() )
+    */
+    QImageWriter * obj = new QImageWriter( PQSTRING( 1 ), HB_ISNIL( 2 ) ? QByteArray() : *static_cast< QByteArray * >( Qt4xHb::itemGetPtr( 2 ) ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

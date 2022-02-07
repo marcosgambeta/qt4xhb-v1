@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -50,33 +50,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QStyleOptionGroupBox()
-*/
-void QStyleOptionGroupBox_new1()
-{
-  QStyleOptionGroupBox * obj = new QStyleOptionGroupBox();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QStyleOptionGroupBox( const QStyleOptionGroupBox & other )
-*/
-void QStyleOptionGroupBox_new2()
-{
-  QStyleOptionGroupBox * obj = new QStyleOptionGroupBox( *PQSTYLEOPTIONGROUPBOX( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QStyleOptionGroupBox_new1();
+    /*
+    QStyleOptionGroupBox()
+    */
+    QStyleOptionGroupBox * obj = new QStyleOptionGroupBox();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONGROUPBOX( 1 ) )
   {
-    QStyleOptionGroupBox_new2();
+    /*
+    QStyleOptionGroupBox( const QStyleOptionGroupBox & other )
+    */
+    QStyleOptionGroupBox * obj = new QStyleOptionGroupBox( *PQSTYLEOPTIONGROUPBOX( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

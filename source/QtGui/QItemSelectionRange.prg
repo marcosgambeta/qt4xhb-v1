@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -65,59 +65,39 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QItemSelectionRange()
-*/
-void QItemSelectionRange_new1()
-{
-  QItemSelectionRange * obj = new QItemSelectionRange();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QItemSelectionRange( const QItemSelectionRange & other )
-*/
-void QItemSelectionRange_new2()
-{
-  QItemSelectionRange * obj = new QItemSelectionRange( *PQITEMSELECTIONRANGE( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QItemSelectionRange( const QModelIndex & topLeft, const QModelIndex & bottomRight )
-*/
-void QItemSelectionRange_new3()
-{
-  QItemSelectionRange * obj = new QItemSelectionRange( *PQMODELINDEX( 1 ), *PQMODELINDEX( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QItemSelectionRange( const QModelIndex & index )
-*/
-void QItemSelectionRange_new4()
-{
-  QItemSelectionRange * obj = new QItemSelectionRange( *PQMODELINDEX( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QItemSelectionRange_new1();
+    /*
+    QItemSelectionRange()
+    */
+    QItemSelectionRange * obj = new QItemSelectionRange();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQITEMSELECTIONRANGE( 1 ) )
   {
-    QItemSelectionRange_new2();
+    /*
+    QItemSelectionRange( const QItemSelectionRange & other )
+    */
+    QItemSelectionRange * obj = new QItemSelectionRange( *PQITEMSELECTIONRANGE( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 2 ) && ISQMODELINDEX( 1 ) && ISQMODELINDEX( 2 ) )
   {
-    QItemSelectionRange_new3();
+    /*
+    QItemSelectionRange( const QModelIndex & topLeft, const QModelIndex & bottomRight )
+    */
+    QItemSelectionRange * obj = new QItemSelectionRange( *PQMODELINDEX( 1 ), *PQMODELINDEX( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
   {
-    QItemSelectionRange_new4();
+    /*
+    QItemSelectionRange( const QModelIndex & index )
+    */
+    QItemSelectionRange * obj = new QItemSelectionRange( *PQMODELINDEX( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -191,41 +171,31 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_BOTTOMRIGHT )
   }
 }
 
-/*
-bool contains( const QModelIndex & index ) const
-*/
-void QItemSelectionRange_contains1()
-{
-  QItemSelectionRange * obj = static_cast< QItemSelectionRange * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->contains( *PQMODELINDEX( 1 ) ) );
-  }
-}
-
-/*
-bool contains( int row, int column, const QModelIndex & parentIndex ) const
-*/
-void QItemSelectionRange_contains2()
-{
-  QItemSelectionRange * obj = static_cast< QItemSelectionRange * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->contains( PINT( 1 ), PINT( 2 ), *PQMODELINDEX( 3 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS )
 {
   if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
   {
-    QItemSelectionRange_contains1();
+    /*
+    bool contains( const QModelIndex & index ) const
+    */
+    QItemSelectionRange * obj = static_cast< QItemSelectionRange * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->contains( *PQMODELINDEX( 1 ) ) );
+    }
   }
   else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQMODELINDEX( 3 ) )
   {
-    QItemSelectionRange_contains2();
+    /*
+    bool contains( int row, int column, const QModelIndex & parentIndex ) const
+    */
+    QItemSelectionRange * obj = static_cast< QItemSelectionRange * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->contains( PINT( 1 ), PINT( 2 ), *PQMODELINDEX( 3 ) ) );
+    }
   }
   else
   {

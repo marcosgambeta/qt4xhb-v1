@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -292,64 +292,49 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETCOLOR )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setOffset( const QPointF & ofs )
-*/
-void QGraphicsDropShadowEffect_setOffset1()
-{
-  QGraphicsDropShadowEffect * obj = qobject_cast< QGraphicsDropShadowEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->setOffset( *PQPOINTF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setOffset( qreal dx, qreal dy )
-*/
-void QGraphicsDropShadowEffect_setOffset2()
-{
-  QGraphicsDropShadowEffect * obj = qobject_cast< QGraphicsDropShadowEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->setOffset( PQREAL( 1 ), PQREAL( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setOffset( qreal d )
-*/
-void QGraphicsDropShadowEffect_setOffset3()
-{
-  QGraphicsDropShadowEffect * obj = qobject_cast< QGraphicsDropShadowEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->setOffset( PQREAL( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET )
 {
   if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
   {
-    QGraphicsDropShadowEffect_setOffset1();
+    /*
+    void setOffset( const QPointF & ofs )
+    */
+    QGraphicsDropShadowEffect * obj = qobject_cast< QGraphicsDropShadowEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setOffset( *PQPOINTF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QGraphicsDropShadowEffect_setOffset2();
+    /*
+    void setOffset( qreal dx, qreal dy )
+    */
+    QGraphicsDropShadowEffect * obj = qobject_cast< QGraphicsDropShadowEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setOffset( PQREAL( 1 ), PQREAL( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QGraphicsDropShadowEffect_setOffset3();
+    /*
+    void setOffset( qreal d )
+    */
+    QGraphicsDropShadowEffect * obj = qobject_cast< QGraphicsDropShadowEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setOffset( PQREAL( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

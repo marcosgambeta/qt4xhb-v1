@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -57,33 +57,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QStyleOptionToolButton()
-*/
-void QStyleOptionToolButton_new1()
-{
-  QStyleOptionToolButton * obj = new QStyleOptionToolButton();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QStyleOptionToolButton( const QStyleOptionToolButton & other )
-*/
-void QStyleOptionToolButton_new2()
-{
-  QStyleOptionToolButton * obj = new QStyleOptionToolButton( *PQSTYLEOPTIONTOOLBUTTON( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QStyleOptionToolButton_new1();
+    /*
+    QStyleOptionToolButton()
+    */
+    QStyleOptionToolButton * obj = new QStyleOptionToolButton();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONTOOLBUTTON( 1 ) )
   {
-    QStyleOptionToolButton_new2();
+    /*
+    QStyleOptionToolButton( const QStyleOptionToolButton & other )
+    */
+    QStyleOptionToolButton * obj = new QStyleOptionToolButton( *PQSTYLEOPTIONTOOLBUTTON( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

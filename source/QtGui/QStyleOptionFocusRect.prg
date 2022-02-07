@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -40,33 +40,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QStyleOptionFocusRect()
-*/
-void QStyleOptionFocusRect_new1()
-{
-  QStyleOptionFocusRect * obj = new QStyleOptionFocusRect();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QStyleOptionFocusRect( const QStyleOptionFocusRect & other )
-*/
-void QStyleOptionFocusRect_new2()
-{
-  QStyleOptionFocusRect * obj = new QStyleOptionFocusRect( *PQSTYLEOPTIONFOCUSRECT( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QStyleOptionFocusRect_new1();
+    /*
+    QStyleOptionFocusRect()
+    */
+    QStyleOptionFocusRect * obj = new QStyleOptionFocusRect();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONFOCUSRECT( 1 ) )
   {
-    QStyleOptionFocusRect_new2();
+    /*
+    QStyleOptionFocusRect( const QStyleOptionFocusRect & other )
+    */
+    QStyleOptionFocusRect * obj = new QStyleOptionFocusRect( *PQSTYLEOPTIONFOCUSRECT( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

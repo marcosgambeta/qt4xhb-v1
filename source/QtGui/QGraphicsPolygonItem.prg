@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -52,33 +52,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QGraphicsPolygonItem( QGraphicsItem * parent = 0 )
-*/
-void QGraphicsPolygonItem_new1()
-{
-  QGraphicsPolygonItem * obj = new QGraphicsPolygonItem( HB_ISNIL( 1 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 1 ) ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QGraphicsPolygonItem( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
-*/
-void QGraphicsPolygonItem_new2()
-{
-  QGraphicsPolygonItem * obj = new QGraphicsPolygonItem( *PQPOLYGONF( 1 ), HB_ISNIL( 2 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 2 ) ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QGRAPHICSPOLYGONITEM_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQGRAPHICSITEM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QGraphicsPolygonItem_new1();
+    /*
+    QGraphicsPolygonItem( QGraphicsItem * parent = 0 )
+    */
+    QGraphicsPolygonItem * obj = new QGraphicsPolygonItem( HB_ISNIL( 1 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 1 ) ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 1, 2 ) && ISQPOLYGONF( 1 ) && ( ISQGRAPHICSITEM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QGraphicsPolygonItem_new2();
+    /*
+    QGraphicsPolygonItem( const QPolygonF & polygon, QGraphicsItem * parent = 0 )
+    */
+    QGraphicsPolygonItem * obj = new QGraphicsPolygonItem( *PQPOLYGONF( 1 ), HB_ISNIL( 2 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 2 ) ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

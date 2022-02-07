@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -61,33 +61,23 @@ RETURN
 
 #include <QtGui/QTextCursor>
 
-/*
-QTextTableCell()
-*/
-void QTextTableCell_new1()
-{
-  QTextTableCell * obj = new QTextTableCell();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QTextTableCell( const QTextTableCell & other )
-*/
-void QTextTableCell_new2()
-{
-  QTextTableCell * obj = new QTextTableCell( *PQTEXTTABLECELL( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QTEXTTABLECELL_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QTextTableCell_new1();
+    /*
+    QTextTableCell()
+    */
+    QTextTableCell * obj = new QTextTableCell();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQTEXTTABLECELL( 1 ) )
   {
-    QTextTableCell_new2();
+    /*
+    QTextTableCell( const QTextTableCell & other )
+    */
+    QTextTableCell * obj = new QTextTableCell( *PQTEXTTABLECELL( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

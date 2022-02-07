@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -40,33 +40,23 @@ RETURN
 #include "qt4xhb_events.h"
 #include "qt4xhb_signals.h"
 
-/*
-QHBoxLayout()
-*/
-void QHBoxLayout_new1()
-{
-  QHBoxLayout * obj = new QHBoxLayout();
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QHBoxLayout( QWidget * parent )
-*/
-void QHBoxLayout_new2()
-{
-  QHBoxLayout * obj = new QHBoxLayout( PQWIDGET( 1 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QHBOXLAYOUT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QHBoxLayout_new1();
+    /*
+    QHBoxLayout()
+    */
+    QHBoxLayout * obj = new QHBoxLayout();
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
-    QHBoxLayout_new2();
+    /*
+    QHBoxLayout( QWidget * parent )
+    */
+    QHBoxLayout * obj = new QHBoxLayout( PQWIDGET( 1 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

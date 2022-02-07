@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -46,46 +46,31 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QContextMenuEvent( QContextMenuEvent::Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )
-*/
-void QContextMenuEvent_new1()
-{
-  QContextMenuEvent * obj = new QContextMenuEvent( ( QContextMenuEvent::Reason ) hb_parni( 1 ), *PQPOINT( 2 ), *PQPOINT( 3 ), ( Qt::KeyboardModifiers ) hb_parni( 4 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QContextMenuEvent( QContextMenuEvent::Reason reason, const QPoint & pos, const QPoint & globalPos )
-*/
-void QContextMenuEvent_new2()
-{
-  QContextMenuEvent * obj = new QContextMenuEvent( ( QContextMenuEvent::Reason ) hb_parni( 1 ), *PQPOINT( 2 ), *PQPOINT( 3 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QContextMenuEvent( QContextMenuEvent::Reason reason, const QPoint & pos )
-*/
-void QContextMenuEvent_new3()
-{
-  QContextMenuEvent * obj = new QContextMenuEvent( ( QContextMenuEvent::Reason ) hb_parni( 1 ), *PQPOINT( 2 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QCONTEXTMENUEVENT_NEW )
 {
   if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && ISQPOINT( 2 ) && ISQPOINT( 3 ) && HB_ISNUM( 4 ) )
   {
-    QContextMenuEvent_new1();
+    /*
+    QContextMenuEvent( QContextMenuEvent::Reason reason, const QPoint & pos, const QPoint & globalPos, Qt::KeyboardModifiers modifiers )
+    */
+    QContextMenuEvent * obj = new QContextMenuEvent( ( QContextMenuEvent::Reason ) hb_parni( 1 ), *PQPOINT( 2 ), *PQPOINT( 3 ), ( Qt::KeyboardModifiers ) hb_parni( 4 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && ISQPOINT( 2 ) && ISQPOINT( 3 ) )
   {
-    QContextMenuEvent_new2();
+    /*
+    QContextMenuEvent( QContextMenuEvent::Reason reason, const QPoint & pos, const QPoint & globalPos )
+    */
+    QContextMenuEvent * obj = new QContextMenuEvent( ( QContextMenuEvent::Reason ) hb_parni( 1 ), *PQPOINT( 2 ), *PQPOINT( 3 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQPOINT( 2 ) )
   {
-    QContextMenuEvent_new3();
+    /*
+    QContextMenuEvent( QContextMenuEvent::Reason reason, const QPoint & pos )
+    */
+    QContextMenuEvent * obj = new QContextMenuEvent( ( QContextMenuEvent::Reason ) hb_parni( 1 ), *PQPOINT( 2 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -61,33 +61,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QGraphicsLinearLayout( QGraphicsLayoutItem * parent = 0 )
-*/
-void QGraphicsLinearLayout_new1()
-{
-  QGraphicsLinearLayout * obj = new QGraphicsLinearLayout( HB_ISNIL( 1 ) ? 0 : static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtr( 1 ) ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QGraphicsLinearLayout( Qt::Orientation orientation, QGraphicsLayoutItem * parent = 0 )
-*/
-void QGraphicsLinearLayout_new2()
-{
-  QGraphicsLinearLayout * obj = new QGraphicsLinearLayout( ( Qt::Orientation ) hb_parni( 1 ), HB_ISNIL( 2 ) ? 0 : static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtr( 2 ) ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQGRAPHICSLAYOUTITEM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QGraphicsLinearLayout_new1();
+    /*
+    QGraphicsLinearLayout( QGraphicsLayoutItem * parent = 0 )
+    */
+    QGraphicsLinearLayout * obj = new QGraphicsLinearLayout( HB_ISNIL( 1 ) ? 0 : static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtr( 1 ) ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( ISQGRAPHICSLAYOUTITEM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QGraphicsLinearLayout_new2();
+    /*
+    QGraphicsLinearLayout( Qt::Orientation orientation, QGraphicsLayoutItem * parent = 0 )
+    */
+    QGraphicsLinearLayout * obj = new QGraphicsLinearLayout( ( Qt::Orientation ) hb_parni( 1 ), HB_ISNIL( 2 ) ? 0 : static_cast< QGraphicsLayoutItem * >( Qt4xHb::itemGetPtr( 2 ) ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

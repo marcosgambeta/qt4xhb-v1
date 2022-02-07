@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -494,45 +494,35 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETBOTTOMMARGIN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setHeight( const QTextLength & height )
-*/
-void QTextFrameFormat_setHeight1()
-{
-  QTextFrameFormat * obj = static_cast< QTextFrameFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setHeight( *PQTEXTLENGTH( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setHeight( qreal height )
-*/
-void QTextFrameFormat_setHeight2()
-{
-  QTextFrameFormat * obj = static_cast< QTextFrameFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setHeight( PQREAL( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETHEIGHT )
 {
   if( ISNUMPAR( 1 ) && ISQTEXTLENGTH( 1 ) )
   {
-    QTextFrameFormat_setHeight1();
+    /*
+    void setHeight( const QTextLength & height )
+    */
+    QTextFrameFormat * obj = static_cast< QTextFrameFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setHeight( *PQTEXTLENGTH( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QTextFrameFormat_setHeight2();
+    /*
+    void setHeight( qreal height )
+    */
+    QTextFrameFormat * obj = static_cast< QTextFrameFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setHeight( PQREAL( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -722,45 +712,35 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETTOPMARGIN )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setWidth( const QTextLength & width )
-*/
-void QTextFrameFormat_setWidth1()
-{
-  QTextFrameFormat * obj = static_cast< QTextFrameFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setWidth( *PQTEXTLENGTH( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setWidth( qreal width )
-*/
-void QTextFrameFormat_setWidth2()
-{
-  QTextFrameFormat * obj = static_cast< QTextFrameFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setWidth( PQREAL( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QTEXTFRAMEFORMAT_SETWIDTH )
 {
   if( ISNUMPAR( 1 ) && ISQTEXTLENGTH( 1 ) )
   {
-    QTextFrameFormat_setWidth1();
+    /*
+    void setWidth( const QTextLength & width )
+    */
+    QTextFrameFormat * obj = static_cast< QTextFrameFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setWidth( *PQTEXTLENGTH( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QTextFrameFormat_setWidth2();
+    /*
+    void setWidth( qreal width )
+    */
+    QTextFrameFormat * obj = static_cast< QTextFrameFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setWidth( PQREAL( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

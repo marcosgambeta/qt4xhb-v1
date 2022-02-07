@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -75,45 +75,35 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void accept( const QRect & rectangle )
-*/
-void QDragMoveEvent_accept1()
-{
-  QDragMoveEvent * obj = static_cast< QDragMoveEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->accept( *PQRECT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void accept()
-*/
-void QDragMoveEvent_accept2()
-{
-  QDragMoveEvent * obj = static_cast< QDragMoveEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->accept();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QDRAGMOVEEVENT_ACCEPT )
 {
   if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
   {
-    QDragMoveEvent_accept1();
+    /*
+    void accept( const QRect & rectangle )
+    */
+    QDragMoveEvent * obj = static_cast< QDragMoveEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->accept( *PQRECT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QDragMoveEvent_accept2();
+    /*
+    void accept()
+    */
+    QDragMoveEvent * obj = static_cast< QDragMoveEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->accept();
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -146,45 +136,35 @@ HB_FUNC_STATIC( QDRAGMOVEEVENT_ANSWERRECT )
   }
 }
 
-/*
-void ignore( const QRect & rectangle )
-*/
-void QDragMoveEvent_ignore1()
-{
-  QDragMoveEvent * obj = static_cast< QDragMoveEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->ignore( *PQRECT( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void ignore()
-*/
-void QDragMoveEvent_ignore2()
-{
-  QDragMoveEvent * obj = static_cast< QDragMoveEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->ignore();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QDRAGMOVEEVENT_IGNORE )
 {
   if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
   {
-    QDragMoveEvent_ignore1();
+    /*
+    void ignore( const QRect & rectangle )
+    */
+    QDragMoveEvent * obj = static_cast< QDragMoveEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->ignore( *PQRECT( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QDragMoveEvent_ignore2();
+    /*
+    void ignore()
+    */
+    QDragMoveEvent * obj = static_cast< QDragMoveEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->ignore();
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

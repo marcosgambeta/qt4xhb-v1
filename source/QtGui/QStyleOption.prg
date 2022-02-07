@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -66,33 +66,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QStyleOption( int version = QStyleOption::Version, int type = QStyleOption::SO_Default )
-*/
-void QStyleOption_new1()
-{
-  QStyleOption * obj = new QStyleOption( OPINT( 1, QStyleOption::Version ), OPINT( 2, QStyleOption::SO_Default ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QStyleOption( const QStyleOption & other )
-*/
-void QStyleOption_new2()
-{
-  QStyleOption * obj = new QStyleOption( *PQSTYLEOPTION( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSTYLEOPTION_NEW )
 {
   if( ISBETWEEN( 0, 2 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QStyleOption_new1();
+    /*
+    QStyleOption( int version = QStyleOption::Version, int type = QStyleOption::SO_Default )
+    */
+    QStyleOption * obj = new QStyleOption( OPINT( 1, QStyleOption::Version ), OPINT( 2, QStyleOption::SO_Default ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQSTYLEOPTION( 1 ) )
   {
-    QStyleOption_new2();
+    /*
+    QStyleOption( const QStyleOption & other )
+    */
+    QStyleOption * obj = new QStyleOption( *PQSTYLEOPTION( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

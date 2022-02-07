@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -58,33 +58,23 @@ RETURN
 #include "qt4xhb_events.h"
 #include "qt4xhb_signals.h"
 
-/*
-QColorDialog( QWidget * parent = 0 )
-*/
-void QColorDialog_new1()
-{
-  QColorDialog * obj = new QColorDialog( OPQWIDGET( 1, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QColorDialog( const QColor & initial, QWidget * parent = 0 )
-*/
-void QColorDialog_new2()
-{
-  QColorDialog * obj = new QColorDialog( HB_ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ), OPQWIDGET( 2, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QCOLORDIALOG_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QColorDialog_new1();
+    /*
+    QColorDialog( QWidget * parent = 0 )
+    */
+    QColorDialog * obj = new QColorDialog( OPQWIDGET( 1, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISBETWEEN( 1, 2 ) && ( ISQCOLOR( 1 ) || HB_ISCHAR( 1 ) ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QColorDialog_new2();
+    /*
+    QColorDialog( const QColor & initial, QWidget * parent = 0 )
+    */
+    QColorDialog * obj = new QColorDialog( HB_ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ), OPQWIDGET( 2, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -136,45 +126,35 @@ HB_FUNC_STATIC( QCOLORDIALOG_CURRENTCOLOR )
   }
 }
 
-/*
-void open()
-*/
-void QColorDialog_open1()
-{
-  QColorDialog * obj = qobject_cast< QColorDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->open();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void open( QObject * receiver, const char * member )
-*/
-void QColorDialog_open2()
-{
-  QColorDialog * obj = qobject_cast< QColorDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->open( PQOBJECT( 1 ), PCONSTCHAR( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QCOLORDIALOG_OPEN )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QColorDialog_open1();
+    /*
+    void open()
+    */
+    QColorDialog * obj = qobject_cast< QColorDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->open();
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) )
   {
-    QColorDialog_open2();
+    /*
+    void open( QObject * receiver, const char * member )
+    */
+    QColorDialog * obj = qobject_cast< QColorDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->open( PQOBJECT( 1 ), PCONSTCHAR( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -397,35 +377,25 @@ HB_FUNC_STATIC( QCOLORDIALOG_CUSTOMCOUNT )
 #endif
 }
 
-/*
-static QColor getColor( const QColor & initial, QWidget * parent, const QString & title, QColorDialog::ColorDialogOptions options = 0 )
-*/
-void QColorDialog_getColor1()
-{
-
-  QColor * ptr = new QColor( QColorDialog::getColor( HB_ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ), PQWIDGET( 2 ), PQSTRING( 3 ), HB_ISNIL( 4 ) ? ( QColorDialog::ColorDialogOptions ) 0 : ( QColorDialog::ColorDialogOptions ) hb_parni( 4 ) ) );
-  Qt4xHb::createReturnClass( ptr, "QCOLOR", true );
-}
-
-/*
-static QColor getColor( const QColor & initial = Qt::white, QWidget * parent = 0 )
-*/
-void QColorDialog_getColor2()
-{
-
-  QColor * ptr = new QColor( QColorDialog::getColor( HB_ISNIL( 1 ) ? Qt::white : *static_cast< QColor * >( Qt4xHb::itemGetPtr( 1 ) ), OPQWIDGET( 2, 0 ) ) );
-  Qt4xHb::createReturnClass( ptr, "QCOLOR", true );
-}
-
 HB_FUNC_STATIC( QCOLORDIALOG_GETCOLOR )
 {
   if( ISBETWEEN( 3, 4 ) && ( ISQCOLOR( 1 ) || HB_ISCHAR( 1 ) ) && ISQWIDGET( 2 ) && HB_ISCHAR( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
   {
-    QColorDialog_getColor1();
+    /*
+    static QColor getColor( const QColor & initial, QWidget * parent, const QString & title, QColorDialog::ColorDialogOptions options = 0 )
+    */
+
+    QColor * ptr = new QColor( QColorDialog::getColor( HB_ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ), PQWIDGET( 2 ), PQSTRING( 3 ), HB_ISNIL( 4 ) ? ( QColorDialog::ColorDialogOptions ) 0 : ( QColorDialog::ColorDialogOptions ) hb_parni( 4 ) ) );
+    Qt4xHb::createReturnClass( ptr, "QCOLOR", true );
   }
   else if( ISBETWEEN( 0, 2 ) && ( ISQCOLOR( 1 ) || HB_ISCHAR( 1 ) || HB_ISNIL( 1 ) ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QColorDialog_getColor2();
+    /*
+    static QColor getColor( const QColor & initial = Qt::white, QWidget * parent = 0 )
+    */
+
+    QColor * ptr = new QColor( QColorDialog::getColor( HB_ISNIL( 1 ) ? Qt::white : *static_cast< QColor * >( Qt4xHb::itemGetPtr( 1 ) ), OPQWIDGET( 2, 0 ) ) );
+    Qt4xHb::createReturnClass( ptr, "QCOLOR", true );
   }
   else
   {

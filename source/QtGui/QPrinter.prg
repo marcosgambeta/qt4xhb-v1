@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -100,33 +100,23 @@ RETURN
 
 #include <QtCore/QList>
 
-/*
-QPrinter( QPrinter::PrinterMode mode = QPrinter::ScreenResolution )
-*/
-void QPrinter_new1()
-{
-  QPrinter * obj = new QPrinter( HB_ISNIL( 1 ) ? ( QPrinter::PrinterMode ) QPrinter::ScreenResolution : ( QPrinter::PrinterMode ) hb_parni( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QPrinter( const QPrinterInfo & printer, QPrinter::PrinterMode mode = QPrinter::ScreenResolution )
-*/
-void QPrinter_new2()
-{
-  QPrinter * obj = new QPrinter( *PQPRINTERINFO( 1 ), HB_ISNIL( 2 ) ? ( QPrinter::PrinterMode ) QPrinter::ScreenResolution : ( QPrinter::PrinterMode ) hb_parni( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QPRINTER_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QPrinter_new1();
+    /*
+    QPrinter( QPrinter::PrinterMode mode = QPrinter::ScreenResolution )
+    */
+    QPrinter * obj = new QPrinter( HB_ISNIL( 1 ) ? ( QPrinter::PrinterMode ) QPrinter::ScreenResolution : ( QPrinter::PrinterMode ) hb_parni( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 1, 2 ) && ISQPRINTERINFO( 1 ) && HB_ISNUM( 2 ) )
   {
-    QPrinter_new2();
+    /*
+    QPrinter( const QPrinterInfo & printer, QPrinter::PrinterMode mode = QPrinter::ScreenResolution )
+    */
+    QPrinter * obj = new QPrinter( *PQPRINTERINFO( 1 ), HB_ISNIL( 2 ) ? ( QPrinter::PrinterMode ) QPrinter::ScreenResolution : ( QPrinter::PrinterMode ) hb_parni( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -559,75 +549,37 @@ HB_FUNC_STATIC( QPRINTER_PAGEORDER )
   }
 }
 
-/*
-QRect pageRect() const
-*/
-void QPrinter_pageRect1()
-{
-  QPrinter * obj = static_cast< QPrinter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->pageRect() );
-    Qt4xHb::createReturnClass( ptr, "QRECT", true );
-  }
-}
-
-/*
-QRectF pageRect( QPrinter::Unit unit ) const
-*/
-void QPrinter_pageRect2()
-{
-  QPrinter * obj = static_cast< QPrinter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->pageRect( ( QPrinter::Unit ) hb_parni( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QRECTF", true );
-  }
-}
-
 HB_FUNC_STATIC( QPRINTER_PAGERECT )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QPrinter_pageRect1();
+    /*
+    QRect pageRect() const
+    */
+    QPrinter * obj = static_cast< QPrinter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QRect * ptr = new QRect( obj->pageRect() );
+      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+    }
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QPrinter_pageRect2();
+    /*
+    QRectF pageRect( QPrinter::Unit unit ) const
+    */
+    QPrinter * obj = static_cast< QPrinter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QRectF * ptr = new QRectF( obj->pageRect( ( QPrinter::Unit ) hb_parni( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
+    }
   }
   else
   {
     hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
-  }
-}
-
-/*
-QRect paperRect() const
-*/
-void QPrinter_paperRect1()
-{
-  QPrinter * obj = static_cast< QPrinter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QRect * ptr = new QRect( obj->paperRect() );
-    Qt4xHb::createReturnClass( ptr, "QRECT", true );
-  }
-}
-
-/*
-QRectF paperRect( QPrinter::Unit unit ) const
-*/
-void QPrinter_paperRect2()
-{
-  QPrinter * obj = static_cast< QPrinter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QRectF * ptr = new QRectF( obj->paperRect( ( QPrinter::Unit ) hb_parni( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QRECTF", true );
   }
 }
 
@@ -635,11 +587,29 @@ HB_FUNC_STATIC( QPRINTER_PAPERRECT )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QPrinter_paperRect1();
+    /*
+    QRect paperRect() const
+    */
+    QPrinter * obj = static_cast< QPrinter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QRect * ptr = new QRect( obj->paperRect() );
+      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+    }
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QPrinter_paperRect2();
+    /*
+    QRectF paperRect( QPrinter::Unit unit ) const
+    */
+    QPrinter * obj = static_cast< QPrinter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QRectF * ptr = new QRectF( obj->paperRect( ( QPrinter::Unit ) hb_parni( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
+    }
   }
   else
   {
@@ -647,42 +617,32 @@ HB_FUNC_STATIC( QPRINTER_PAPERRECT )
   }
 }
 
-/*
-QPrinter::PaperSize paperSize() const
-*/
-void QPrinter_paperSize1()
-{
-  QPrinter * obj = static_cast< QPrinter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RENUM( obj->paperSize() );
-  }
-}
-
-/*
-QSizeF paperSize( QPrinter::Unit unit ) const
-*/
-void QPrinter_paperSize2()
-{
-  QPrinter * obj = static_cast< QPrinter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QSizeF * ptr = new QSizeF( obj->paperSize( ( QPrinter::Unit ) hb_parni( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QSIZEF", true );
-  }
-}
-
 HB_FUNC_STATIC( QPRINTER_PAPERSIZE )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QPrinter_paperSize1();
+    /*
+    QPrinter::PaperSize paperSize() const
+    */
+    QPrinter * obj = static_cast< QPrinter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RENUM( obj->paperSize() );
+    }
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QPrinter_paperSize2();
+    /*
+    QSizeF paperSize( QPrinter::Unit unit ) const
+    */
+    QPrinter * obj = static_cast< QPrinter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QSizeF * ptr = new QSizeF( obj->paperSize( ( QPrinter::Unit ) hb_parni( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QSIZEF", true );
+    }
   }
   else
   {
@@ -1249,45 +1209,35 @@ HB_FUNC_STATIC( QPRINTER_SETPAGEORDER )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setPaperSize( QPrinter::PaperSize newPaperSize )
-*/
-void QPrinter_setPaperSize1()
-{
-  QPrinter * obj = static_cast< QPrinter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setPaperSize( ( QPrinter::PaperSize ) hb_parni( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setPaperSize( const QSizeF & paperSize, QPrinter::Unit unit )
-*/
-void QPrinter_setPaperSize2()
-{
-  QPrinter * obj = static_cast< QPrinter * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setPaperSize( *PQSIZEF( 1 ), ( QPrinter::Unit ) hb_parni( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QPRINTER_SETPAPERSIZE )
 {
   if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QPrinter_setPaperSize1();
+    /*
+    void setPaperSize( QPrinter::PaperSize newPaperSize )
+    */
+    QPrinter * obj = static_cast< QPrinter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setPaperSize( ( QPrinter::PaperSize ) hb_parni( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && ISQSIZEF( 1 ) && HB_ISNUM( 2 ) )
   {
-    QPrinter_setPaperSize2();
+    /*
+    void setPaperSize( const QSizeF & paperSize, QPrinter::Unit unit )
+    */
+    QPrinter * obj = static_cast< QPrinter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setPaperSize( *PQSIZEF( 1 ), ( QPrinter::Unit ) hb_parni( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

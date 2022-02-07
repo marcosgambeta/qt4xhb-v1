@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -93,46 +93,31 @@ RETURN
 
 #include <QtGui/QColor>
 
-/*
-QImageReader()
-*/
-void QImageReader_new1()
-{
-  QImageReader * obj = new QImageReader();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QImageReader( QIODevice * device, const QByteArray & format = QByteArray() )
-*/
-void QImageReader_new2()
-{
-  QImageReader * obj = new QImageReader( PQIODEVICE( 1 ), HB_ISNIL( 2 ) ? QByteArray() : *static_cast< QByteArray * >( Qt4xHb::itemGetPtr( 2 ) ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QImageReader( const QString & fileName, const QByteArray & format = QByteArray() )
-*/
-void QImageReader_new3()
-{
-  QImageReader * obj = new QImageReader( PQSTRING( 1 ), HB_ISNIL( 2 ) ? QByteArray() : *static_cast< QByteArray * >( Qt4xHb::itemGetPtr( 2 ) ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QIMAGEREADER_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QImageReader_new1();
+    /*
+    QImageReader()
+    */
+    QImageReader * obj = new QImageReader();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 1, 2 ) && ISQIODEVICE( 1 ) && ( ISQBYTEARRAY( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QImageReader_new2();
+    /*
+    QImageReader( QIODevice * device, const QByteArray & format = QByteArray() )
+    */
+    QImageReader * obj = new QImageReader( PQIODEVICE( 1 ), HB_ISNIL( 2 ) ? QByteArray() : *static_cast< QByteArray * >( Qt4xHb::itemGetPtr( 2 ) ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQBYTEARRAY( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QImageReader_new3();
+    /*
+    QImageReader( const QString & fileName, const QByteArray & format = QByteArray() )
+    */
+    QImageReader * obj = new QImageReader( PQSTRING( 1 ), HB_ISNIL( 2 ) ? QByteArray() : *static_cast< QByteArray * >( Qt4xHb::itemGetPtr( 2 ) ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -594,42 +579,32 @@ HB_FUNC_STATIC( QIMAGEREADER_QUALITY )
   }
 }
 
-/*
-QImage read()
-*/
-void QImageReader_read1()
-{
-  QImageReader * obj = static_cast< QImageReader * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    QImage * ptr = new QImage( obj->read() );
-    Qt4xHb::createReturnClass( ptr, "QIMAGE", true );
-  }
-}
-
-/*
-bool read( QImage * image )
-*/
-void QImageReader_read2()
-{
-  QImageReader * obj = static_cast< QImageReader * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RBOOL( obj->read( PQIMAGE( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QIMAGEREADER_READ )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QImageReader_read1();
+    /*
+    QImage read()
+    */
+    QImageReader * obj = static_cast< QImageReader * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      QImage * ptr = new QImage( obj->read() );
+      Qt4xHb::createReturnClass( ptr, "QIMAGE", true );
+    }
   }
   else if( ISNUMPAR( 1 ) && ISQIMAGE( 1 ) )
   {
-    QImageReader_read2();
+    /*
+    bool read( QImage * image )
+    */
+    QImageReader * obj = static_cast< QImageReader * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RBOOL( obj->read( PQIMAGE( 1 ) ) );
+    }
   }
   else
   {
@@ -1068,52 +1043,37 @@ HB_FUNC_STATIC( QIMAGEREADER_TEXTKEYS )
   }
 }
 
-/*
-QImage::Format imageFormat() const
-*/
-void QImageReader_imageFormat1()
-{
-  QImageReader * obj = static_cast< QImageReader * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RENUM( obj->imageFormat() );
-  }
-}
-
-/*
-static QByteArray imageFormat( const QString & fileName )
-*/
-void QImageReader_imageFormat2()
-{
-
-  QByteArray * ptr = new QByteArray( QImageReader::imageFormat( PQSTRING( 1 ) ) );
-  Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
-}
-
-/*
-static QByteArray imageFormat( QIODevice * device )
-*/
-void QImageReader_imageFormat3()
-{
-
-  QByteArray * ptr = new QByteArray( QImageReader::imageFormat( PQIODEVICE( 1 ) ) );
-  Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
-}
-
 HB_FUNC_STATIC( QIMAGEREADER_IMAGEFORMAT )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QImageReader_imageFormat1();
+    /*
+    QImage::Format imageFormat() const
+    */
+    QImageReader * obj = static_cast< QImageReader * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RENUM( obj->imageFormat() );
+    }
   }
   else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
   {
-    QImageReader_imageFormat2();
+    /*
+    static QByteArray imageFormat( const QString & fileName )
+    */
+
+    QByteArray * ptr = new QByteArray( QImageReader::imageFormat( PQSTRING( 1 ) ) );
+    Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
   }
   else if( ISNUMPAR( 1 ) && ISQIODEVICE( 1 ) )
   {
-    QImageReader_imageFormat3();
+    /*
+    static QByteArray imageFormat( QIODevice * device )
+    */
+
+    QByteArray * ptr = new QByteArray( QImageReader::imageFormat( PQIODEVICE( 1 ) ) );
+    Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
   }
   else
   {

@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -60,33 +60,23 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QStyleOptionMenuItem()
-*/
-void QStyleOptionMenuItem_new1()
-{
-  QStyleOptionMenuItem * obj = new QStyleOptionMenuItem();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QStyleOptionMenuItem( const QStyleOptionMenuItem & other )
-*/
-void QStyleOptionMenuItem_new2()
-{
-  QStyleOptionMenuItem * obj = new QStyleOptionMenuItem( *PQSTYLEOPTIONMENUITEM( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QStyleOptionMenuItem_new1();
+    /*
+    QStyleOptionMenuItem()
+    */
+    QStyleOptionMenuItem * obj = new QStyleOptionMenuItem();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONMENUITEM( 1 ) )
   {
-    QStyleOptionMenuItem_new2();
+    /*
+    QStyleOptionMenuItem( const QStyleOptionMenuItem & other )
+    */
+    QStyleOptionMenuItem * obj = new QStyleOptionMenuItem( *PQSTYLEOPTIONMENUITEM( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

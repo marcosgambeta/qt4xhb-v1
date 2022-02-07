@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -459,58 +459,43 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEX )
   }
 }
 
-/*
-int logicalIndexAt( int position ) const
-*/
-void QHeaderView_logicalIndexAt1()
-{
-  QHeaderView * obj = qobject_cast< QHeaderView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    RINT( obj->logicalIndexAt( PINT( 1 ) ) );
-  }
-}
-
-/*
-int logicalIndexAt( int x, int y ) const
-*/
-void QHeaderView_logicalIndexAt2()
-{
-  QHeaderView * obj = qobject_cast< QHeaderView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    RINT( obj->logicalIndexAt( PINT( 1 ), PINT( 2 ) ) );
-  }
-}
-
-/*
-int logicalIndexAt( const QPoint & pos ) const
-*/
-void QHeaderView_logicalIndexAt3()
-{
-  QHeaderView * obj = qobject_cast< QHeaderView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    RINT( obj->logicalIndexAt( *PQPOINT( 1 ) ) );
-  }
-}
-
 HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT )
 {
   if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QHeaderView_logicalIndexAt1();
+    /*
+    int logicalIndexAt( int position ) const
+    */
+    QHeaderView * obj = qobject_cast< QHeaderView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      RINT( obj->logicalIndexAt( PINT( 1 ) ) );
+    }
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QHeaderView_logicalIndexAt2();
+    /*
+    int logicalIndexAt( int x, int y ) const
+    */
+    QHeaderView * obj = qobject_cast< QHeaderView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      RINT( obj->logicalIndexAt( PINT( 1 ), PINT( 2 ) ) );
+    }
   }
   else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
   {
-    QHeaderView_logicalIndexAt3();
+    /*
+    int logicalIndexAt( const QPoint & pos ) const
+    */
+    QHeaderView * obj = qobject_cast< QHeaderView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      RINT( obj->logicalIndexAt( *PQPOINT( 1 ) ) );
+    }
   }
   else
   {
@@ -1067,45 +1052,35 @@ HB_FUNC_STATIC( QHEADERVIEW_SETMOVABLE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setResizeMode( QHeaderView::ResizeMode mode )
-*/
-void QHeaderView_setResizeMode1()
-{
-  QHeaderView * obj = qobject_cast< QHeaderView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->setResizeMode( ( QHeaderView::ResizeMode ) hb_parni( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setResizeMode( int logicalIndex, QHeaderView::ResizeMode mode )
-*/
-void QHeaderView_setResizeMode2()
-{
-  QHeaderView * obj = qobject_cast< QHeaderView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->setResizeMode( PINT( 1 ), ( QHeaderView::ResizeMode ) hb_parni( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QHEADERVIEW_SETRESIZEMODE )
 {
   if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QHeaderView_setResizeMode1();
+    /*
+    void setResizeMode( QHeaderView::ResizeMode mode )
+    */
+    QHeaderView * obj = qobject_cast< QHeaderView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setResizeMode( ( QHeaderView::ResizeMode ) hb_parni( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QHeaderView_setResizeMode2();
+    /*
+    void setResizeMode( int logicalIndex, QHeaderView::ResizeMode mode )
+    */
+    QHeaderView * obj = qobject_cast< QHeaderView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setResizeMode( PINT( 1 ), ( QHeaderView::ResizeMode ) hb_parni( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

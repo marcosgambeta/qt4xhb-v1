@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -119,45 +119,35 @@ HB_FUNC_STATIC( QDIRECTPAINTER_ALLOCATEDREGION )
   }
 }
 
-/*
-void endPainting()
-*/
-void QDirectPainter_endPainting1()
-{
-  QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->endPainting();
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void endPainting( const QRegion & region )
-*/
-void QDirectPainter_endPainting2()
-{
-  QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->endPainting( *PQREGION( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QDIRECTPAINTER_ENDPAINTING )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QDirectPainter_endPainting1();
+    /*
+    void endPainting()
+    */
+    QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->endPainting();
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && ISQREGION( 1 ) )
   {
-    QDirectPainter_endPainting2();
+    /*
+    void endPainting( const QRegion & region )
+    */
+    QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->endPainting( *PQREGION( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

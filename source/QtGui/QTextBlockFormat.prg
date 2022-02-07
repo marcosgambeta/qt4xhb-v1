@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -213,41 +213,31 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LEFTMARGIN )
   }
 }
 
-/*
-qreal lineHeight( qreal scriptLineHeight, qreal scaling ) const
-*/
-void QTextBlockFormat_lineHeight1()
-{
-  QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RQREAL( obj->lineHeight( PQREAL( 1 ), PQREAL( 2 ) ) );
-  }
-}
-
-/*
-qreal lineHeight() const
-*/
-void QTextBlockFormat_lineHeight2()
-{
-  QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    RQREAL( obj->lineHeight() );
-  }
-}
-
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT )
 {
   if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QTextBlockFormat_lineHeight1();
+    /*
+    qreal lineHeight( qreal scriptLineHeight, qreal scaling ) const
+    */
+    QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RQREAL( obj->lineHeight( PQREAL( 1 ), PQREAL( 2 ) ) );
+    }
   }
   else if( ISNUMPAR( 0 ) )
   {
-    QTextBlockFormat_lineHeight2();
+    /*
+    qreal lineHeight() const
+    */
+    QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      RQREAL( obj->lineHeight() );
+    }
   }
   else
   {

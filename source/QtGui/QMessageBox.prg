@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -84,33 +84,23 @@ RETURN
 #include <QtGui/QPushButton>
 #include <QtGui/QAbstractButton>
 
-/*
-QMessageBox( QWidget * parent = 0 )
-*/
-void QMessageBox_new1()
-{
-  QMessageBox * obj = new QMessageBox( OPQWIDGET( 1, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QMessageBox( QMessageBox::Icon icon, const QString & title, const QString & text, QMessageBox::StandardButtons buttons = QMessageBox::NoButton, QWidget * parent = 0, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
-*/
-void QMessageBox_new2()
-{
-  QMessageBox * obj = new QMessageBox( ( QMessageBox::Icon ) hb_parni( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), HB_ISNIL( 4 ) ? ( QMessageBox::StandardButtons ) QMessageBox::NoButton : ( QMessageBox::StandardButtons ) hb_parni( 4 ), OPQWIDGET( 5, 0 ), HB_ISNIL( 6 ) ? ( Qt::WindowFlags ) Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint : ( Qt::WindowFlags ) hb_parni( 6 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QMESSAGEBOX_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QMessageBox_new1();
+    /*
+    QMessageBox( QWidget * parent = 0 )
+    */
+    QMessageBox * obj = new QMessageBox( OPQWIDGET( 1, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISBETWEEN( 3, 6 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) && ( ISQWIDGET( 5 ) || HB_ISNIL( 5 ) ) && ( HB_ISNUM( 6 ) || HB_ISNIL( 6 ) ) )
   {
-    QMessageBox_new2();
+    /*
+    QMessageBox( QMessageBox::Icon icon, const QString & title, const QString & text, QMessageBox::StandardButtons buttons = QMessageBox::NoButton, QWidget * parent = 0, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
+    */
+    QMessageBox * obj = new QMessageBox( ( QMessageBox::Icon ) hb_parni( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), HB_ISNIL( 4 ) ? ( QMessageBox::StandardButtons ) QMessageBox::NoButton : ( QMessageBox::StandardButtons ) hb_parni( 4 ), OPQWIDGET( 5, 0 ), HB_ISNIL( 6 ) ? ( Qt::WindowFlags ) Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint : ( Qt::WindowFlags ) hb_parni( 6 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
@@ -137,62 +127,47 @@ HB_FUNC_STATIC( QMESSAGEBOX_DELETE )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void addButton( QAbstractButton * button, QMessageBox::ButtonRole role )
-*/
-void QMessageBox_addButton1()
-{
-  QMessageBox * obj = qobject_cast< QMessageBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->addButton( PQABSTRACTBUTTON( 1 ), ( QMessageBox::ButtonRole ) hb_parni( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-QPushButton * addButton( const QString & text, QMessageBox::ButtonRole role )
-*/
-void QMessageBox_addButton2()
-{
-  QMessageBox * obj = qobject_cast< QMessageBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    QPushButton * ptr = obj->addButton( PQSTRING( 1 ), ( QMessageBox::ButtonRole ) hb_parni( 2 ) );
-    Qt4xHb::createReturnQObjectClass( ptr, "QPUSHBUTTON" );
-  }
-}
-
-/*
-QPushButton * addButton( QMessageBox::StandardButton button )
-*/
-void QMessageBox_addButton3()
-{
-  QMessageBox * obj = qobject_cast< QMessageBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    QPushButton * ptr = obj->addButton( ( QMessageBox::StandardButton ) hb_parni( 1 ) );
-    Qt4xHb::createReturnQObjectClass( ptr, "QPUSHBUTTON" );
-  }
-}
-
 HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON )
 {
   if( ISNUMPAR( 2 ) && ISQABSTRACTBUTTON( 1 ) && HB_ISNUM( 2 ) )
   {
-    QMessageBox_addButton1();
+    /*
+    void addButton( QAbstractButton * button, QMessageBox::ButtonRole role )
+    */
+    QMessageBox * obj = qobject_cast< QMessageBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->addButton( PQABSTRACTBUTTON( 1 ), ( QMessageBox::ButtonRole ) hb_parni( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) )
   {
-    QMessageBox_addButton2();
+    /*
+    QPushButton * addButton( const QString & text, QMessageBox::ButtonRole role )
+    */
+    QMessageBox * obj = qobject_cast< QMessageBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      QPushButton * ptr = obj->addButton( PQSTRING( 1 ), ( QMessageBox::ButtonRole ) hb_parni( 2 ) );
+      Qt4xHb::createReturnQObjectClass( ptr, "QPUSHBUTTON" );
+    }
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QMessageBox_addButton3();
+    /*
+    QPushButton * addButton( QMessageBox::StandardButton button )
+    */
+    QMessageBox * obj = qobject_cast< QMessageBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      QPushButton * ptr = obj->addButton( ( QMessageBox::StandardButton ) hb_parni( 1 ) );
+      Qt4xHb::createReturnQObjectClass( ptr, "QPUSHBUTTON" );
+    }
   }
   else
   {
@@ -521,45 +496,35 @@ HB_FUNC_STATIC( QMESSAGEBOX_REMOVEBUTTON )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setDefaultButton( QPushButton * button )
-*/
-void QMessageBox_setDefaultButton1()
-{
-  QMessageBox * obj = qobject_cast< QMessageBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->setDefaultButton( PQPUSHBUTTON( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setDefaultButton( QMessageBox::StandardButton button )
-*/
-void QMessageBox_setDefaultButton2()
-{
-  QMessageBox * obj = qobject_cast< QMessageBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->setDefaultButton( ( QMessageBox::StandardButton ) hb_parni( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QMESSAGEBOX_SETDEFAULTBUTTON )
 {
   if( ISNUMPAR( 1 ) && ISQPUSHBUTTON( 1 ) )
   {
-    QMessageBox_setDefaultButton1();
+    /*
+    void setDefaultButton( QPushButton * button )
+    */
+    QMessageBox * obj = qobject_cast< QMessageBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setDefaultButton( PQPUSHBUTTON( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QMessageBox_setDefaultButton2();
+    /*
+    void setDefaultButton( QMessageBox::StandardButton button )
+    */
+    QMessageBox * obj = qobject_cast< QMessageBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setDefaultButton( ( QMessageBox::StandardButton ) hb_parni( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -593,45 +558,35 @@ HB_FUNC_STATIC( QMESSAGEBOX_SETDETAILEDTEXT )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void setEscapeButton( QAbstractButton * button )
-*/
-void QMessageBox_setEscapeButton1()
-{
-  QMessageBox * obj = qobject_cast< QMessageBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->setEscapeButton( PQABSTRACTBUTTON( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setEscapeButton( QMessageBox::StandardButton button )
-*/
-void QMessageBox_setEscapeButton2()
-{
-  QMessageBox * obj = qobject_cast< QMessageBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->setEscapeButton( ( QMessageBox::StandardButton ) hb_parni( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QMESSAGEBOX_SETESCAPEBUTTON )
 {
   if( ISNUMPAR( 1 ) && ISQABSTRACTBUTTON( 1 ) )
   {
-    QMessageBox_setEscapeButton1();
+    /*
+    void setEscapeButton( QAbstractButton * button )
+    */
+    QMessageBox * obj = qobject_cast< QMessageBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setEscapeButton( PQABSTRACTBUTTON( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QMessageBox_setEscapeButton2();
+    /*
+    void setEscapeButton( QMessageBox::StandardButton button )
+    */
+    QMessageBox * obj = qobject_cast< QMessageBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setEscapeButton( ( QMessageBox::StandardButton ) hb_parni( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

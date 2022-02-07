@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -63,46 +63,31 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QSizePolicy()
-*/
-void QSizePolicy_new1()
-{
-  QSizePolicy * obj = new QSizePolicy();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QSizePolicy( QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical )
-*/
-void QSizePolicy_new2()
-{
-  QSizePolicy * obj = new QSizePolicy( ( QSizePolicy::Policy ) hb_parni( 1 ), ( QSizePolicy::Policy ) hb_parni( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QSizePolicy( QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical, QSizePolicy::ControlType type )
-*/
-void QSizePolicy_new3()
-{
-  QSizePolicy * obj = new QSizePolicy( ( QSizePolicy::Policy ) hb_parni( 1 ), ( QSizePolicy::Policy ) hb_parni( 2 ), ( QSizePolicy::ControlType ) hb_parni( 3 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QSIZEPOLICY_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QSizePolicy_new1();
+    /*
+    QSizePolicy()
+    */
+    QSizePolicy * obj = new QSizePolicy();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QSizePolicy_new2();
+    /*
+    QSizePolicy( QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical )
+    */
+    QSizePolicy * obj = new QSizePolicy( ( QSizePolicy::Policy ) hb_parni( 1 ), ( QSizePolicy::Policy ) hb_parni( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
   {
-    QSizePolicy_new3();
+    /*
+    QSizePolicy( QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical, QSizePolicy::ControlType type )
+    */
+    QSizePolicy * obj = new QSizePolicy( ( QSizePolicy::Policy ) hb_parni( 1 ), ( QSizePolicy::Policy ) hb_parni( 2 ), ( QSizePolicy::ControlType ) hb_parni( 3 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

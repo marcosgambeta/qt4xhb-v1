@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -131,61 +131,46 @@ HB_FUNC_STATIC( QTEXTTABLE_APPENDROWS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-QTextTableCell cellAt( int row, int column ) const
-*/
-void QTextTable_cellAt1()
-{
-  QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    QTextTableCell * ptr = new QTextTableCell( obj->cellAt( PINT( 1 ), PINT( 2 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QTEXTTABLECELL", true );
-  }
-}
-
-/*
-QTextTableCell cellAt( int position ) const
-*/
-void QTextTable_cellAt2()
-{
-  QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    QTextTableCell * ptr = new QTextTableCell( obj->cellAt( PINT( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QTEXTTABLECELL", true );
-  }
-}
-
-/*
-QTextTableCell cellAt( const QTextCursor & cursor ) const
-*/
-void QTextTable_cellAt3()
-{
-  QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    QTextTableCell * ptr = new QTextTableCell( obj->cellAt( *PQTEXTCURSOR( 1 ) ) );
-    Qt4xHb::createReturnClass( ptr, "QTEXTTABLECELL", true );
-  }
-}
-
 HB_FUNC_STATIC( QTEXTTABLE_CELLAT )
 {
   if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QTextTable_cellAt1();
+    /*
+    QTextTableCell cellAt( int row, int column ) const
+    */
+    QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      QTextTableCell * ptr = new QTextTableCell( obj->cellAt( PINT( 1 ), PINT( 2 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QTEXTTABLECELL", true );
+    }
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QTextTable_cellAt2();
+    /*
+    QTextTableCell cellAt( int position ) const
+    */
+    QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      QTextTableCell * ptr = new QTextTableCell( obj->cellAt( PINT( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QTEXTTABLECELL", true );
+    }
   }
   else if( ISNUMPAR( 1 ) && ISQTEXTCURSOR( 1 ) )
   {
-    QTextTable_cellAt3();
+    /*
+    QTextTableCell cellAt( const QTextCursor & cursor ) const
+    */
+    QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      QTextTableCell * ptr = new QTextTableCell( obj->cellAt( *PQTEXTCURSOR( 1 ) ) );
+      Qt4xHb::createReturnClass( ptr, "QTEXTTABLECELL", true );
+    }
   }
   else
   {
@@ -294,45 +279,35 @@ HB_FUNC_STATIC( QTEXTTABLE_INSERTROWS )
   hb_itemReturn( hb_stackSelfItem() );
 }
 
-/*
-void mergeCells( int row, int column, int numRows, int numCols )
-*/
-void QTextTable_mergeCells1()
-{
-  QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->mergeCells( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void mergeCells( const QTextCursor & cursor )
-*/
-void QTextTable_mergeCells2()
-{
-  QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
-
-  if( obj )
-  {
-    obj->mergeCells( *PQTEXTCURSOR( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QTEXTTABLE_MERGECELLS )
 {
   if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QTextTable_mergeCells1();
+    /*
+    void mergeCells( int row, int column, int numRows, int numCols )
+    */
+    QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->mergeCells( PINT( 1 ), PINT( 2 ), PINT( 3 ), PINT( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 1 ) && ISQTEXTCURSOR( 1 ) )
   {
-    QTextTable_mergeCells2();
+    /*
+    void mergeCells( const QTextCursor & cursor )
+    */
+    QTextTable * obj = qobject_cast< QTextTable * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->mergeCells( *PQTEXTCURSOR( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

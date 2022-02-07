@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -94,46 +94,31 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QPlatformWindowFormat()
-*/
-void QPlatformWindowFormat_new1()
-{
-  QPlatformWindowFormat * obj = new QPlatformWindowFormat();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QPlatformWindowFormat( QPlatformWindowFormat::FormatOptions options )
-*/
-void QPlatformWindowFormat_new2()
-{
-  QPlatformWindowFormat * obj = new QPlatformWindowFormat( ( QPlatformWindowFormat::FormatOptions ) hb_parni( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QPlatformWindowFormat( const QPlatformWindowFormat & other )
-*/
-void QPlatformWindowFormat_new3()
-{
-  QPlatformWindowFormat * obj = new QPlatformWindowFormat( *PQPLATFORMWINDOWFORMAT( 1 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QPlatformWindowFormat_new1();
+    /*
+    QPlatformWindowFormat()
+    */
+    QPlatformWindowFormat * obj = new QPlatformWindowFormat();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
   {
-    QPlatformWindowFormat_new2();
+    /*
+    QPlatformWindowFormat( QPlatformWindowFormat::FormatOptions options )
+    */
+    QPlatformWindowFormat * obj = new QPlatformWindowFormat( ( QPlatformWindowFormat::FormatOptions ) hb_parni( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 1 ) && ISQPLATFORMWINDOWFORMAT( 1 ) )
   {
-    QPlatformWindowFormat_new3();
+    /*
+    QPlatformWindowFormat( const QPlatformWindowFormat & other )
+    */
+    QPlatformWindowFormat * obj = new QPlatformWindowFormat( *PQPLATFORMWINDOWFORMAT( 1 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {

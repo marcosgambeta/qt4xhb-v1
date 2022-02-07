@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -57,33 +57,23 @@ RETURN
 #include "qt4xhb_events.h"
 #include "qt4xhb_signals.h"
 
-/*
-QShortcut( QWidget * parent )
-*/
-void QShortcut_new1()
-{
-  QShortcut * obj = new QShortcut( PQWIDGET( 1 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QShortcut( const QKeySequence & key, QWidget * parent, const char * member = 0, const char * ambiguousMember = 0, Qt::ShortcutContext context = Qt::WindowShortcut )
-*/
-void QShortcut_new2()
-{
-  QShortcut * obj = new QShortcut( *PQKEYSEQUENCE( 1 ), PQWIDGET( 2 ), OPCONSTCHAR( 3, 0 ), OPCONSTCHAR( 4, 0 ), HB_ISNIL( 5 ) ? ( Qt::ShortcutContext ) Qt::WindowShortcut : ( Qt::ShortcutContext ) hb_parni( 5 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QSHORTCUT_NEW )
 {
   if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
   {
-    QShortcut_new1();
+    /*
+    QShortcut( QWidget * parent )
+    */
+    QShortcut * obj = new QShortcut( PQWIDGET( 1 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISBETWEEN( 2, 5 ) && ISQKEYSEQUENCE( 1 ) && ISQWIDGET( 2 ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISCHAR( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) )
   {
-    QShortcut_new2();
+    /*
+    QShortcut( const QKeySequence & key, QWidget * parent, const char * member = 0, const char * ambiguousMember = 0, Qt::ShortcutContext context = Qt::WindowShortcut )
+    */
+    QShortcut * obj = new QShortcut( *PQKEYSEQUENCE( 1 ), PQWIDGET( 2 ), OPCONSTCHAR( 3, 0 ), OPCONSTCHAR( 4, 0 ), HB_ISNIL( 5 ) ? ( Qt::ShortcutContext ) Qt::WindowShortcut : ( Qt::ShortcutContext ) hb_parni( 5 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

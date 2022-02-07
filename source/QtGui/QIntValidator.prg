@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -47,33 +47,23 @@ RETURN
 #include "qt4xhb_events.h"
 #include "qt4xhb_signals.h"
 
-/*
-QIntValidator( QObject * parent = 0 )
-*/
-void QIntValidator_new1()
-{
-  QIntValidator * obj = new QIntValidator( OPQOBJECT( 1, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
-/*
-QIntValidator( int minimum, int maximum, QObject * parent )
-*/
-void QIntValidator_new2()
-{
-  QIntValidator * obj = new QIntValidator( PINT( 1 ), PINT( 2 ), PQOBJECT( 3 ) );
-  Qt4xHb::returnNewObject( obj, false );
-}
-
 HB_FUNC_STATIC( QINTVALIDATOR_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QIntValidator_new1();
+    /*
+    QIntValidator( QObject * parent = 0 )
+    */
+    QIntValidator * obj = new QIntValidator( OPQOBJECT( 1, 0 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQOBJECT( 3 ) )
   {
-    QIntValidator_new2();
+    /*
+    QIntValidator( int minimum, int maximum, QObject * parent )
+    */
+    QIntValidator * obj = new QIntValidator( PINT( 1 ), PINT( 2 ), PQOBJECT( 3 ) );
+    Qt4xHb::returnNewObject( obj, false );
   }
   else
   {

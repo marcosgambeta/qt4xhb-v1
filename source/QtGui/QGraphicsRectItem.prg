@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -49,46 +49,31 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QGraphicsRectItem( QGraphicsItem * parent = 0 )
-*/
-void QGraphicsRectItem_new1()
-{
-  QGraphicsRectItem * obj = new QGraphicsRectItem( HB_ISNIL( 1 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 1 ) ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QGraphicsRectItem( const QRectF & rect, QGraphicsItem * parent = 0 )
-*/
-void QGraphicsRectItem_new2()
-{
-  QGraphicsRectItem * obj = new QGraphicsRectItem( *PQRECTF( 1 ), HB_ISNIL( 2 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 2 ) ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QGraphicsRectItem( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = 0 )
-*/
-void QGraphicsRectItem_new3()
-{
-  QGraphicsRectItem * obj = new QGraphicsRectItem( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), HB_ISNIL( 5 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 5 ) ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QGRAPHICSRECTITEM_NEW )
 {
   if( ISBETWEEN( 0, 1 ) && ( ISQGRAPHICSITEM( 1 ) || HB_ISNIL( 1 ) ) )
   {
-    QGraphicsRectItem_new1();
+    /*
+    QGraphicsRectItem( QGraphicsItem * parent = 0 )
+    */
+    QGraphicsRectItem * obj = new QGraphicsRectItem( HB_ISNIL( 1 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 1 ) ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 1, 2 ) && ISQRECTF( 1 ) && ( ISQGRAPHICSITEM( 2 ) || HB_ISNIL( 2 ) ) )
   {
-    QGraphicsRectItem_new2();
+    /*
+    QGraphicsRectItem( const QRectF & rect, QGraphicsItem * parent = 0 )
+    */
+    QGraphicsRectItem * obj = new QGraphicsRectItem( *PQRECTF( 1 ), HB_ISNIL( 2 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 2 ) ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISBETWEEN( 4, 5 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && ( ISQGRAPHICSITEM( 5 ) || HB_ISNIL( 5 ) ) )
   {
-    QGraphicsRectItem_new3();
+    /*
+    QGraphicsRectItem( qreal x, qreal y, qreal width, qreal height, QGraphicsItem * parent = 0 )
+    */
+    QGraphicsRectItem * obj = new QGraphicsRectItem( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ), HB_ISNIL( 5 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 5 ) ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -138,45 +123,35 @@ HB_FUNC_STATIC( QGRAPHICSRECTITEM_RECT )
   }
 }
 
-/*
-void setRect( const QRectF & rect )
-*/
-void QGraphicsRectItem_setRect1()
-{
-  QGraphicsRectItem * obj = static_cast< QGraphicsRectItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setRect( *PQRECTF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setRect( qreal x, qreal y, qreal width, qreal height )
-*/
-void QGraphicsRectItem_setRect2()
-{
-  QGraphicsRectItem * obj = static_cast< QGraphicsRectItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setRect( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QGRAPHICSRECTITEM_SETRECT )
 {
   if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
   {
-    QGraphicsRectItem_setRect1();
+    /*
+    void setRect( const QRectF & rect )
+    */
+    QGraphicsRectItem * obj = static_cast< QGraphicsRectItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setRect( *PQRECTF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QGraphicsRectItem_setRect2();
+    /*
+    void setRect( qreal x, qreal y, qreal width, qreal height )
+    */
+    QGraphicsRectItem * obj = static_cast< QGraphicsRectItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setRect( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {

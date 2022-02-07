@@ -2,7 +2,7 @@
 
   Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 
-  Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+  Copyright (C) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 
 */
 
@@ -43,46 +43,31 @@ RETURN
 #include "qt4xhb_macros.h"
 #include "qt4xhb_utils.h"
 
-/*
-QLinearGradient()
-*/
-void QLinearGradient_new1()
-{
-  QLinearGradient * obj = new QLinearGradient();
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QLinearGradient( const QPointF & start, const QPointF & finalStop )
-*/
-void QLinearGradient_new2()
-{
-  QLinearGradient * obj = new QLinearGradient( *PQPOINTF( 1 ), *PQPOINTF( 2 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
-/*
-QLinearGradient( qreal xStart, qreal yStart, qreal xFinalStop, qreal yFinalStop )
-*/
-void QLinearGradient_new3()
-{
-  QLinearGradient * obj = new QLinearGradient( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ) );
-  Qt4xHb::returnNewObject( obj, true );
-}
-
 HB_FUNC_STATIC( QLINEARGRADIENT_NEW )
 {
   if( ISNUMPAR( 0 ) )
   {
-    QLinearGradient_new1();
+    /*
+    QLinearGradient()
+    */
+    QLinearGradient * obj = new QLinearGradient();
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 2 ) && ISQPOINTF( 1 ) && ISQPOINTF( 2 ) )
   {
-    QLinearGradient_new2();
+    /*
+    QLinearGradient( const QPointF & start, const QPointF & finalStop )
+    */
+    QLinearGradient * obj = new QLinearGradient( *PQPOINTF( 1 ), *PQPOINTF( 2 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
   {
-    QLinearGradient_new3();
+    /*
+    QLinearGradient( qreal xStart, qreal yStart, qreal xFinalStop, qreal yFinalStop )
+    */
+    QLinearGradient * obj = new QLinearGradient( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ) );
+    Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
@@ -132,45 +117,35 @@ HB_FUNC_STATIC( QLINEARGRADIENT_FINALSTOP )
   }
 }
 
-/*
-void setFinalStop( const QPointF & stop )
-*/
-void QLinearGradient_setFinalStop1()
-{
-  QLinearGradient * obj = static_cast< QLinearGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setFinalStop( *PQPOINTF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setFinalStop( qreal x, qreal y )
-*/
-void QLinearGradient_setFinalStop2()
-{
-  QLinearGradient * obj = static_cast< QLinearGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setFinalStop( PQREAL( 1 ), PQREAL( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QLINEARGRADIENT_SETFINALSTOP )
 {
   if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
   {
-    QLinearGradient_setFinalStop1();
+    /*
+    void setFinalStop( const QPointF & stop )
+    */
+    QLinearGradient * obj = static_cast< QLinearGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setFinalStop( *PQPOINTF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QLinearGradient_setFinalStop2();
+    /*
+    void setFinalStop( qreal x, qreal y )
+    */
+    QLinearGradient * obj = static_cast< QLinearGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setFinalStop( PQREAL( 1 ), PQREAL( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
@@ -178,45 +153,35 @@ HB_FUNC_STATIC( QLINEARGRADIENT_SETFINALSTOP )
   }
 }
 
-/*
-void setStart( const QPointF & start )
-*/
-void QLinearGradient_setStart1()
-{
-  QLinearGradient * obj = static_cast< QLinearGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setStart( *PQPOINTF( 1 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
-/*
-void setStart( qreal x, qreal y )
-*/
-void QLinearGradient_setStart2()
-{
-  QLinearGradient * obj = static_cast< QLinearGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
-
-  if( obj )
-  {
-    obj->setStart( PQREAL( 1 ), PQREAL( 2 ) );
-  }
-
-  hb_itemReturn( hb_stackSelfItem() );
-}
-
 HB_FUNC_STATIC( QLINEARGRADIENT_SETSTART )
 {
   if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
   {
-    QLinearGradient_setStart1();
+    /*
+    void setStart( const QPointF & start )
+    */
+    QLinearGradient * obj = static_cast< QLinearGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setStart( *PQPOINTF( 1 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
   {
-    QLinearGradient_setStart2();
+    /*
+    void setStart( qreal x, qreal y )
+    */
+    QLinearGradient * obj = static_cast< QLinearGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
+
+    if( obj != NULL )
+    {
+      obj->setStart( PQREAL( 1 ), PQREAL( 2 ) );
+    }
+
+    hb_itemReturn( hb_stackSelfItem() );
   }
   else
   {
