@@ -1,7 +1,7 @@
 #
 # Qt4xHb - Bindings libraries for Harbour/xHarbour and Qt Framework 4
 #
-# Copyright (C) 2021 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+# Copyright (c) 2022 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
 
 $(QT4XHB_LIB_DIR)/$(LIBPRE)hbqaxcontainer4$(LIBEXT)        : $(OBJECTS_QAXCONTAINER)
