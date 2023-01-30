@@ -22,7 +22,7 @@ QDesignerPropertyEditorInterfaceSlots::~QDesignerPropertyEditorInterfaceSlots()
 
 void QDesignerPropertyEditorInterfaceSlots::propertyChanged( const QString & name, const QVariant & value )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "propertyChanged(QString,QVariant)" );
 
@@ -42,9 +42,9 @@ void QDesignerPropertyEditorInterfaceSlots::propertyChanged( const QString & nam
 
 void QDesignerPropertyEditorInterfaceSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDesignerPropertyEditorInterface * obj = qobject_cast< QDesignerPropertyEditorInterface * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDesignerPropertyEditorInterface * obj = qobject_cast<QDesignerPropertyEditorInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QDesignerPropertyEditorInterfaceSlots * s = QCoreApplication::instance()->findChild<QDesignerPropertyEditorInterfaceSlots *>();
 
