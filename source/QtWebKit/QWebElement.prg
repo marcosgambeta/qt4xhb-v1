@@ -108,7 +108,7 @@ RETURN
 
 HB_FUNC_STATIC( QWEBELEMENT_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QWebElement()
@@ -116,35 +116,34 @@ HB_FUNC_STATIC( QWEBELEMENT_NEW )
     QWebElement * obj = new QWebElement();
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISNUMPAR( 1 ) && ISQWEBELEMENT( 1 ) )
+  else if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
   {
     /*
     QWebElement( const QWebElement & other )
     */
-    QWebElement * obj = new QWebElement( *PQWEBELEMENT( 1 ) );
+    QWebElement * obj = new QWebElement( *PQWEBELEMENT(1) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QWEBELEMENT_DELETE )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -152,96 +151,96 @@ void addClass( const QString & name )
 */
 HB_FUNC_STATIC( QWEBELEMENT_ADDCLASS )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->addClass( PQSTRING( 1 ) );
+      obj->addClass( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 HB_FUNC_STATIC( QWEBELEMENT_APPENDINSIDE )
 {
-  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     /*
     void appendInside( const QString & markup )
     */
-    QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->appendInside( PQSTRING( 1 ) );
+      obj->appendInside( PQSTRING(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR( 1 ) && ISQWEBELEMENT( 1 ) )
+  else if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
   {
     /*
     void appendInside( const QWebElement & element )
     */
-    QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->appendInside( *PQWEBELEMENT( 1 ) );
+      obj->appendInside( *PQWEBELEMENT(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QWEBELEMENT_APPENDOUTSIDE )
 {
-  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     /*
     void appendOutside( const QString & markup )
     */
-    QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->appendOutside( PQSTRING( 1 ) );
+      obj->appendOutside( PQSTRING(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR( 1 ) && ISQWEBELEMENT( 1 ) )
+  else if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
   {
     /*
     void appendOutside( const QWebElement & element )
     */
-    QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->appendOutside( *PQWEBELEMENT( 1 ) );
+      obj->appendOutside( *PQWEBELEMENT(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -250,20 +249,20 @@ QString attribute( const QString & name, const QString & defaultValue = QString(
 */
 HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTE )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
     {
 #endif
-      RQSTRING( obj->attribute( PQSTRING( 1 ), OPQSTRING( 2, QString() ) ) );
+      RQSTRING( obj->attribute( PQSTRING(1), OPQSTRING( 2, QString() ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -274,20 +273,20 @@ QString attributeNS( const QString & namespaceUri, const QString & name, const Q
 */
 HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENS )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 3 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) )
+    if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ( HB_ISCHAR(3) || HB_ISNIL(3) ) )
     {
 #endif
-      RQSTRING( obj->attributeNS( PQSTRING( 1 ), PQSTRING( 2 ), OPQSTRING( 3, QString() ) ) );
+      RQSTRING( obj->attributeNS( PQSTRING(1), PQSTRING(2), OPQSTRING( 3, QString() ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -298,12 +297,12 @@ QStringList attributeNames( const QString & namespaceUri = QString() ) const
 */
 HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENAMES )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( HB_ISCHAR( 1 ) || HB_ISNIL( 1 ) ) )
+    if( ISBETWEEN(0, 1) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) )
     {
 #endif
       RQSTRINGLIST( obj->attributeNames( OPQSTRING( 1, QString() ) ) );
@@ -311,7 +310,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENAMES )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -322,12 +321,12 @@ QStringList classes() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_CLASSES )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRINGLIST( obj->classes() );
@@ -335,7 +334,7 @@ HB_FUNC_STATIC( QWEBELEMENT_CLASSES )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -346,12 +345,12 @@ QWebElement clone() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_CLONE )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QWebElement * ptr = new QWebElement( obj->clone() );
@@ -360,7 +359,7 @@ HB_FUNC_STATIC( QWEBELEMENT_CLONE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -371,12 +370,12 @@ QWebElement document() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_DOCUMENT )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QWebElement * ptr = new QWebElement( obj->document() );
@@ -385,7 +384,7 @@ HB_FUNC_STATIC( QWEBELEMENT_DOCUMENT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -393,73 +392,73 @@ HB_FUNC_STATIC( QWEBELEMENT_DOCUMENT )
 
 HB_FUNC_STATIC( QWEBELEMENT_ENCLOSECONTENTSWITH )
 {
-  if( ISNUMPAR( 1 ) && ISQWEBELEMENT( 1 ) )
+  if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
   {
     /*
     void encloseContentsWith( const QWebElement & element )
     */
-    QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->encloseContentsWith( *PQWEBELEMENT( 1 ) );
+      obj->encloseContentsWith( *PQWEBELEMENT(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     /*
     void encloseContentsWith( const QString & markup )
     */
-    QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->encloseContentsWith( PQSTRING( 1 ) );
+      obj->encloseContentsWith( PQSTRING(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QWEBELEMENT_ENCLOSEWITH )
 {
-  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     /*
     void encloseWith( const QString & markup )
     */
-    QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->encloseWith( PQSTRING( 1 ) );
+      obj->encloseWith( PQSTRING(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR( 1 ) && ISQWEBELEMENT( 1 ) )
+  else if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
   {
     /*
     void encloseWith( const QWebElement & element )
     */
-    QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->encloseWith( *PQWEBELEMENT( 1 ) );
+      obj->encloseWith( *PQWEBELEMENT(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -468,21 +467,21 @@ QVariant evaluateJavaScript( const QString & scriptSource )
 */
 HB_FUNC_STATIC( QWEBELEMENT_EVALUATEJAVASCRIPT )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->evaluateJavaScript( PQSTRING( 1 ) ) );
+      QVariant * ptr = new QVariant( obj->evaluateJavaScript( PQSTRING(1) ) );
       Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -493,21 +492,21 @@ QWebElementCollection findAll( const QString & selectorQuery ) const
 */
 HB_FUNC_STATIC( QWEBELEMENT_FINDALL )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QWebElementCollection * ptr = new QWebElementCollection( obj->findAll( PQSTRING( 1 ) ) );
+      QWebElementCollection * ptr = new QWebElementCollection( obj->findAll( PQSTRING(1) ) );
       Qt4xHb::createReturnClass( ptr, "QWEBELEMENTCOLLECTION", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -518,21 +517,21 @@ QWebElement findFirst( const QString & selectorQuery ) const
 */
 HB_FUNC_STATIC( QWEBELEMENT_FINDFIRST )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QWebElement * ptr = new QWebElement( obj->findFirst( PQSTRING( 1 ) ) );
+      QWebElement * ptr = new QWebElement( obj->findFirst( PQSTRING(1) ) );
       Qt4xHb::createReturnClass( ptr, "QWEBELEMENT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -543,12 +542,12 @@ QWebElement firstChild() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_FIRSTCHILD )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QWebElement * ptr = new QWebElement( obj->firstChild() );
@@ -557,7 +556,7 @@ HB_FUNC_STATIC( QWEBELEMENT_FIRSTCHILD )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -568,12 +567,12 @@ QRect geometry() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_GEOMETRY )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QRect * ptr = new QRect( obj->geometry() );
@@ -582,7 +581,7 @@ HB_FUNC_STATIC( QWEBELEMENT_GEOMETRY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -593,20 +592,20 @@ bool hasAttribute( const QString & name ) const
 */
 HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTE )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->hasAttribute( PQSTRING( 1 ) ) );
+      RBOOL( obj->hasAttribute( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -617,20 +616,20 @@ bool hasAttributeNS( const QString & namespaceUri, const QString & name ) const
 */
 HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTENS )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
-      RBOOL( obj->hasAttributeNS( PQSTRING( 1 ), PQSTRING( 2 ) ) );
+      RBOOL( obj->hasAttributeNS( PQSTRING(1), PQSTRING(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -641,12 +640,12 @@ bool hasAttributes() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTES )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->hasAttributes() );
@@ -654,7 +653,7 @@ HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTES )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -665,20 +664,20 @@ bool hasClass( const QString & name ) const
 */
 HB_FUNC_STATIC( QWEBELEMENT_HASCLASS )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->hasClass( PQSTRING( 1 ) ) );
+      RBOOL( obj->hasClass( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -689,12 +688,12 @@ bool hasFocus() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_HASFOCUS )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->hasFocus() );
@@ -702,7 +701,7 @@ HB_FUNC_STATIC( QWEBELEMENT_HASFOCUS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -713,12 +712,12 @@ bool isNull() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_ISNULL )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isNull() );
@@ -726,7 +725,7 @@ HB_FUNC_STATIC( QWEBELEMENT_ISNULL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -737,12 +736,12 @@ QWebElement lastChild() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_LASTCHILD )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QWebElement * ptr = new QWebElement( obj->lastChild() );
@@ -751,7 +750,7 @@ HB_FUNC_STATIC( QWEBELEMENT_LASTCHILD )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -762,12 +761,12 @@ QString localName() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_LOCALNAME )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->localName() );
@@ -775,7 +774,7 @@ HB_FUNC_STATIC( QWEBELEMENT_LOCALNAME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -786,12 +785,12 @@ QString namespaceUri() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_NAMESPACEURI )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->namespaceUri() );
@@ -799,7 +798,7 @@ HB_FUNC_STATIC( QWEBELEMENT_NAMESPACEURI )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -810,12 +809,12 @@ QWebElement nextSibling() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_NEXTSIBLING )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QWebElement * ptr = new QWebElement( obj->nextSibling() );
@@ -824,7 +823,7 @@ HB_FUNC_STATIC( QWEBELEMENT_NEXTSIBLING )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -835,12 +834,12 @@ QWebElement parent() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_PARENT )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QWebElement * ptr = new QWebElement( obj->parent() );
@@ -849,7 +848,7 @@ HB_FUNC_STATIC( QWEBELEMENT_PARENT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -860,12 +859,12 @@ QString prefix() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_PREFIX )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->prefix() );
@@ -873,7 +872,7 @@ HB_FUNC_STATIC( QWEBELEMENT_PREFIX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -881,73 +880,73 @@ HB_FUNC_STATIC( QWEBELEMENT_PREFIX )
 
 HB_FUNC_STATIC( QWEBELEMENT_PREPENDINSIDE )
 {
-  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     /*
     void prependInside( const QString & markup )
     */
-    QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->prependInside( PQSTRING( 1 ) );
+      obj->prependInside( PQSTRING(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR( 1 ) && ISQWEBELEMENT( 1 ) )
+  else if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
   {
     /*
     void prependInside( const QWebElement & element )
     */
-    QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->prependInside( *PQWEBELEMENT( 1 ) );
+      obj->prependInside( *PQWEBELEMENT(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QWEBELEMENT_PREPENDOUTSIDE )
 {
-  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     /*
     void prependOutside( const QString & markup )
     */
-    QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->prependOutside( PQSTRING( 1 ) );
+      obj->prependOutside( PQSTRING(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR( 1 ) && ISQWEBELEMENT( 1 ) )
+  else if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
   {
     /*
     void prependOutside( const QWebElement & element )
     */
-    QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->prependOutside( *PQWEBELEMENT( 1 ) );
+      obj->prependOutside( *PQWEBELEMENT(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -956,12 +955,12 @@ QWebElement previousSibling() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_PREVIOUSSIBLING )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QWebElement * ptr = new QWebElement( obj->previousSibling() );
@@ -970,7 +969,7 @@ HB_FUNC_STATIC( QWEBELEMENT_PREVIOUSSIBLING )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -981,12 +980,12 @@ void removeAllChildren()
 */
 HB_FUNC_STATIC( QWEBELEMENT_REMOVEALLCHILDREN )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->removeAllChildren();
@@ -994,12 +993,12 @@ HB_FUNC_STATIC( QWEBELEMENT_REMOVEALLCHILDREN )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1007,25 +1006,25 @@ void removeAttribute( const QString & name )
 */
 HB_FUNC_STATIC( QWEBELEMENT_REMOVEATTRIBUTE )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->removeAttribute( PQSTRING( 1 ) );
+      obj->removeAttribute( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1033,25 +1032,25 @@ void removeAttributeNS( const QString & namespaceUri, const QString & name )
 */
 HB_FUNC_STATIC( QWEBELEMENT_REMOVEATTRIBUTENS )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
-      obj->removeAttributeNS( PQSTRING( 1 ), PQSTRING( 2 ) );
+      obj->removeAttributeNS( PQSTRING(1), PQSTRING(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1059,25 +1058,25 @@ void removeClass( const QString & name )
 */
 HB_FUNC_STATIC( QWEBELEMENT_REMOVECLASS )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->removeClass( PQSTRING( 1 ) );
+      obj->removeClass( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1085,12 +1084,12 @@ void removeFromDocument()
 */
 HB_FUNC_STATIC( QWEBELEMENT_REMOVEFROMDOCUMENT )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->removeFromDocument();
@@ -1098,83 +1097,83 @@ HB_FUNC_STATIC( QWEBELEMENT_REMOVEFROMDOCUMENT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 HB_FUNC_STATIC( QWEBELEMENT_RENDER )
 {
-  if( ISNUMPAR( 1 ) && ISQPAINTER( 1 ) )
+  if( ISNUMPAR(1) && ISQPAINTER(1) )
   {
     /*
     void render( QPainter * painter )
     */
-    QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->render( PQPAINTER( 1 ) );
+      obj->render( PQPAINTER(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR( 2 ) && ISQPAINTER( 1 ) && ISQRECT( 2 ) )
+  else if( ISNUMPAR(2) && ISQPAINTER(1) && ISQRECT(2) )
   {
     /*
     void render( QPainter * painter, const QRect & clip )
     */
-    QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->render( PQPAINTER( 1 ), *PQRECT( 2 ) );
+      obj->render( PQPAINTER(1), *PQRECT(2) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QWEBELEMENT_REPLACE )
 {
-  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     /*
     void replace( const QString & markup )
     */
-    QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->replace( PQSTRING( 1 ) );
+      obj->replace( PQSTRING(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR( 1 ) && ISQWEBELEMENT( 1 ) )
+  else if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
   {
     /*
     void replace( const QWebElement & element )
     */
-    QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->replace( *PQWEBELEMENT( 1 ) );
+      obj->replace( *PQWEBELEMENT(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -1183,25 +1182,25 @@ void setAttribute( const QString & name, const QString & value )
 */
 HB_FUNC_STATIC( QWEBELEMENT_SETATTRIBUTE )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
-      obj->setAttribute( PQSTRING( 1 ), PQSTRING( 2 ) );
+      obj->setAttribute( PQSTRING(1), PQSTRING(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1209,25 +1208,25 @@ void setAttributeNS( const QString & namespaceUri, const QString & name, const Q
 */
 HB_FUNC_STATIC( QWEBELEMENT_SETATTRIBUTENS )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) )
+    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
     {
 #endif
-      obj->setAttributeNS( PQSTRING( 1 ), PQSTRING( 2 ), PQSTRING( 3 ) );
+      obj->setAttributeNS( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1235,12 +1234,12 @@ void setFocus()
 */
 HB_FUNC_STATIC( QWEBELEMENT_SETFOCUS )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->setFocus();
@@ -1248,12 +1247,12 @@ HB_FUNC_STATIC( QWEBELEMENT_SETFOCUS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1261,25 +1260,25 @@ void setInnerXml( const QString & markup )
 */
 HB_FUNC_STATIC( QWEBELEMENT_SETINNERXML )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setInnerXml( PQSTRING( 1 ) );
+      obj->setInnerXml( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1287,25 +1286,25 @@ void setOuterXml( const QString & markup )
 */
 HB_FUNC_STATIC( QWEBELEMENT_SETOUTERXML )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setOuterXml( PQSTRING( 1 ) );
+      obj->setOuterXml( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1313,25 +1312,25 @@ void setPlainText( const QString & text )
 */
 HB_FUNC_STATIC( QWEBELEMENT_SETPLAINTEXT )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setPlainText( PQSTRING( 1 ) );
+      obj->setPlainText( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1339,25 +1338,25 @@ void setStyleProperty( const QString & name, const QString & value )
 */
 HB_FUNC_STATIC( QWEBELEMENT_SETSTYLEPROPERTY )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
-      obj->setStyleProperty( PQSTRING( 1 ), PQSTRING( 2 ) );
+      obj->setStyleProperty( PQSTRING(1), PQSTRING(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1365,20 +1364,20 @@ QString styleProperty( const QString & name, QWebElement::StyleResolveStrategy s
 */
 HB_FUNC_STATIC( QWEBELEMENT_STYLEPROPERTY )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
     {
 #endif
-      RQSTRING( obj->styleProperty( PQSTRING( 1 ), ( QWebElement::StyleResolveStrategy ) hb_parni( 2 ) ) );
+      RQSTRING( obj->styleProperty( PQSTRING(1), ( QWebElement::StyleResolveStrategy ) hb_parni(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1389,12 +1388,12 @@ QString tagName() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_TAGNAME )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->tagName() );
@@ -1402,7 +1401,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TAGNAME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1413,12 +1412,12 @@ QWebElement & takeFromDocument()
 */
 HB_FUNC_STATIC( QWEBELEMENT_TAKEFROMDOCUMENT )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QWebElement * ptr = &obj->takeFromDocument();
@@ -1427,7 +1426,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TAKEFROMDOCUMENT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1438,12 +1437,12 @@ QString toInnerXml() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_TOINNERXML )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->toInnerXml() );
@@ -1451,7 +1450,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TOINNERXML )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1462,12 +1461,12 @@ QString toOuterXml() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_TOOUTERXML )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->toOuterXml() );
@@ -1475,7 +1474,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TOOUTERXML )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1486,12 +1485,12 @@ QString toPlainText() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_TOPLAINTEXT )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->toPlainText() );
@@ -1499,7 +1498,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TOPLAINTEXT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1510,25 +1509,25 @@ void toggleClass( const QString & name )
 */
 HB_FUNC_STATIC( QWEBELEMENT_TOGGLECLASS )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->toggleClass( PQSTRING( 1 ) );
+      obj->toggleClass( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1536,12 +1535,12 @@ QWebFrame * webFrame() const
 */
 HB_FUNC_STATIC( QWEBELEMENT_WEBFRAME )
 {
-  QWebElement * obj = static_cast< QWebElement * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWebElement * obj = static_cast<QWebElement*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QWebFrame * ptr = obj->webFrame();
@@ -1550,7 +1549,7 @@ HB_FUNC_STATIC( QWEBELEMENT_WEBFRAME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1560,27 +1559,27 @@ HB_FUNC_STATIC( QWEBELEMENT_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
   hb_itemReturn( self );
@@ -1605,15 +1604,15 @@ HB_FUNC_STATIC( QWEBELEMENT_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
   hb_itemReturn( self );

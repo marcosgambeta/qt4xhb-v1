@@ -22,7 +22,7 @@ QGraphicsWebViewSlots::~QGraphicsWebViewSlots()
 
 void QGraphicsWebViewSlots::iconChanged()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "iconChanged()" );
 
@@ -38,7 +38,7 @@ void QGraphicsWebViewSlots::iconChanged()
 
 void QGraphicsWebViewSlots::linkClicked( const QUrl & url )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "linkClicked(QUrl)" );
 
@@ -56,7 +56,7 @@ void QGraphicsWebViewSlots::linkClicked( const QUrl & url )
 
 void QGraphicsWebViewSlots::loadFinished( bool ok )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "loadFinished(bool)" );
 
@@ -74,7 +74,7 @@ void QGraphicsWebViewSlots::loadFinished( bool ok )
 
 void QGraphicsWebViewSlots::loadProgress( int progress )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "loadProgress(int)" );
 
@@ -92,7 +92,7 @@ void QGraphicsWebViewSlots::loadProgress( int progress )
 
 void QGraphicsWebViewSlots::loadStarted()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "loadStarted()" );
 
@@ -108,7 +108,7 @@ void QGraphicsWebViewSlots::loadStarted()
 
 void QGraphicsWebViewSlots::statusBarMessage( const QString & text )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "statusBarMessage(QString)" );
 
@@ -126,7 +126,7 @@ void QGraphicsWebViewSlots::statusBarMessage( const QString & text )
 
 void QGraphicsWebViewSlots::titleChanged( const QString & title )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "titleChanged(QString)" );
 
@@ -144,7 +144,7 @@ void QGraphicsWebViewSlots::titleChanged( const QString & title )
 
 void QGraphicsWebViewSlots::urlChanged( const QUrl & url )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "urlChanged(QUrl)" );
 
@@ -162,9 +162,9 @@ void QGraphicsWebViewSlots::urlChanged( const QUrl & url )
 
 void QGraphicsWebViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsWebView * obj = qobject_cast< QGraphicsWebView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsWebView * obj = qobject_cast<QGraphicsWebView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QGraphicsWebViewSlots * s = QCoreApplication::instance()->findChild<QGraphicsWebViewSlots *>();
 
