@@ -22,7 +22,7 @@ QAxScriptManagerSlots::~QAxScriptManagerSlots()
 
 void QAxScriptManagerSlots::error( QAxScript * script, int code, const QString & description, int sourcePosition, const QString & sourceText )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "error(QAxScript*,int,QString,int,QString)" );
 
@@ -48,9 +48,9 @@ void QAxScriptManagerSlots::error( QAxScript * script, int code, const QString &
 
 void QAxScriptManagerSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAxScriptManager * obj = qobject_cast< QAxScriptManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAxScriptManager * obj = qobject_cast<QAxScriptManager*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QAxScriptManagerSlots * s = QCoreApplication::instance()->findChild<QAxScriptManagerSlots *>();
 

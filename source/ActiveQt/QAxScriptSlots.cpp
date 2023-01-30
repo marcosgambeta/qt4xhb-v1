@@ -22,7 +22,7 @@ QAxScriptSlots::~QAxScriptSlots()
 
 void QAxScriptSlots::entered()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "entered()" );
 
@@ -38,7 +38,7 @@ void QAxScriptSlots::entered()
 
 void QAxScriptSlots::error( int code, const QString & description, int sourcePosition, const QString & sourceText )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "error(int,QString,int,QString)" );
 
@@ -62,7 +62,7 @@ void QAxScriptSlots::error( int code, const QString & description, int sourcePos
 
 void QAxScriptSlots::finished()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "finished()" );
 
@@ -78,7 +78,7 @@ void QAxScriptSlots::finished()
 
 void QAxScriptSlots::finished( const QVariant & result )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "finished(QVariant)" );
 
@@ -96,7 +96,7 @@ void QAxScriptSlots::finished( const QVariant & result )
 
 void QAxScriptSlots::finished( int code, const QString & source, const QString & description, const QString & help )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "finished(int,QString,QString,QString)" );
 
@@ -120,7 +120,7 @@ void QAxScriptSlots::finished( int code, const QString & source, const QString &
 
 void QAxScriptSlots::stateChanged( int state )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "stateChanged(int)" );
 
@@ -138,9 +138,9 @@ void QAxScriptSlots::stateChanged( int state )
 
 void QAxScriptSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAxScript * obj = qobject_cast< QAxScript * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAxScript * obj = qobject_cast<QAxScript*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QAxScriptSlots * s = QCoreApplication::instance()->findChild<QAxScriptSlots *>();
 

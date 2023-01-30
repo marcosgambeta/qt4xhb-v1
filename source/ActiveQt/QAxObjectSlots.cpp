@@ -22,7 +22,7 @@ QAxObjectSlots::~QAxObjectSlots()
 
 void QAxObjectSlots::exception( int code, const QString & source, const QString & desc, const QString & help )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "exception(int,QString,QString,QString)" );
 
@@ -46,7 +46,7 @@ void QAxObjectSlots::exception( int code, const QString & source, const QString 
 
 void QAxObjectSlots::propertyChanged( const QString & name )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "propertyChanged(QString)" );
 
@@ -64,7 +64,7 @@ void QAxObjectSlots::propertyChanged( const QString & name )
 
 void QAxObjectSlots::signal( const QString & name, int argc, void * argv )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "signal(QString,int,void*)" );
 
@@ -73,7 +73,7 @@ void QAxObjectSlots::signal( const QString & name, int argc, void * argv )
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QAXOBJECT" );
     PHB_ITEM pName = hb_itemPutC( NULL, QSTRINGTOSTRING( name ) );
     PHB_ITEM pArgc = hb_itemPutNI( NULL, argc );
-    PHB_ITEM pArgv = hb_itemPutPtr( NULL, static_cast< void * >( argv ) );
+    PHB_ITEM pArgv = hb_itemPutPtr( NULL, static_cast<void*>( argv ) );
 
     hb_vmEvalBlockV( cb, 4, pSender, pName, pArgc, pArgv );
 
@@ -86,9 +86,9 @@ void QAxObjectSlots::signal( const QString & name, int argc, void * argv )
 
 void QAxObjectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAxObject * obj = qobject_cast< QAxObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAxObject * obj = qobject_cast<QAxObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QAxObjectSlots * s = QCoreApplication::instance()->findChild<QAxObjectSlots *>();
 
