@@ -69,34 +69,33 @@ QUiLoader( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QUILOADER_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QUiLoader * obj = new QUiLoader( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QUILOADER_DELETE )
 {
-  QUiLoader * obj = qobject_cast< QUiLoader * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QUiLoader * obj = qobject_cast<QUiLoader*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -104,25 +103,25 @@ void addPluginPath( const QString & path )
 */
 HB_FUNC_STATIC( QUILOADER_ADDPLUGINPATH )
 {
-  QUiLoader * obj = qobject_cast< QUiLoader * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QUiLoader * obj = qobject_cast<QUiLoader*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->addPluginPath( PQSTRING( 1 ) );
+      obj->addPluginPath( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -130,12 +129,12 @@ QStringList availableLayouts() const
 */
 HB_FUNC_STATIC( QUILOADER_AVAILABLELAYOUTS )
 {
-  QUiLoader * obj = qobject_cast< QUiLoader * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QUiLoader * obj = qobject_cast<QUiLoader*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRINGLIST( obj->availableLayouts() );
@@ -143,7 +142,7 @@ HB_FUNC_STATIC( QUILOADER_AVAILABLELAYOUTS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -154,12 +153,12 @@ QStringList availableWidgets() const
 */
 HB_FUNC_STATIC( QUILOADER_AVAILABLEWIDGETS )
 {
-  QUiLoader * obj = qobject_cast< QUiLoader * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QUiLoader * obj = qobject_cast<QUiLoader*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRINGLIST( obj->availableWidgets() );
@@ -167,7 +166,7 @@ HB_FUNC_STATIC( QUILOADER_AVAILABLEWIDGETS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -178,12 +177,12 @@ void clearPluginPaths()
 */
 HB_FUNC_STATIC( QUILOADER_CLEARPLUGINPATHS )
 {
-  QUiLoader * obj = qobject_cast< QUiLoader * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QUiLoader * obj = qobject_cast<QUiLoader*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->clearPluginPaths();
@@ -191,12 +190,12 @@ HB_FUNC_STATIC( QUILOADER_CLEARPLUGINPATHS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -204,12 +203,12 @@ virtual QAction * createAction( QObject * parent = 0, const QString & name = QSt
 */
 HB_FUNC_STATIC( QUILOADER_CREATEACTION )
 {
-  QUiLoader * obj = qobject_cast< QUiLoader * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QUiLoader * obj = qobject_cast<QUiLoader*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 2 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(0, 2) && ( ISQOBJECT(1) || HB_ISNIL(1) ) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
     {
 #endif
       QAction * ptr = obj->createAction( OPQOBJECT( 1, 0 ), OPQSTRING( 2, QString() ) );
@@ -218,7 +217,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -229,12 +228,12 @@ virtual QActionGroup * createActionGroup( QObject * parent = 0, const QString & 
 */
 HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
 {
-  QUiLoader * obj = qobject_cast< QUiLoader * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QUiLoader * obj = qobject_cast<QUiLoader*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 2 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(0, 2) && ( ISQOBJECT(1) || HB_ISNIL(1) ) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
     {
 #endif
       QActionGroup * ptr = obj->createActionGroup( OPQOBJECT( 1, 0 ), OPQSTRING( 2, QString() ) );
@@ -243,7 +242,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -254,21 +253,21 @@ virtual QLayout * createLayout( const QString & className, QObject * parent = 0,
 */
 HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
 {
-  QUiLoader * obj = qobject_cast< QUiLoader * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QUiLoader * obj = qobject_cast<QUiLoader*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && HB_ISCHAR( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) )
+    if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) && ( HB_ISCHAR(3) || HB_ISNIL(3) ) )
     {
 #endif
-      QLayout * ptr = obj->createLayout( PQSTRING( 1 ), OPQOBJECT( 2, 0 ), OPQSTRING( 3, QString() ) );
+      QLayout * ptr = obj->createLayout( PQSTRING(1), OPQOBJECT( 2, 0 ), OPQSTRING( 3, QString() ) );
       Qt4xHb::createReturnQObjectClass( ptr, "QLAYOUT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -279,21 +278,21 @@ virtual QWidget * createWidget( const QString & className, QWidget * parent = 0,
 */
 HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
 {
-  QUiLoader * obj = qobject_cast< QUiLoader * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QUiLoader * obj = qobject_cast<QUiLoader*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && HB_ISCHAR( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISCHAR( 3 ) || HB_ISNIL( 3 ) ) )
+    if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) && ( HB_ISCHAR(3) || HB_ISNIL(3) ) )
     {
 #endif
-      QWidget * ptr = obj->createWidget( PQSTRING( 1 ), OPQWIDGET( 2, 0 ), OPQSTRING( 3, QString() ) );
+      QWidget * ptr = obj->createWidget( PQSTRING(1), OPQWIDGET( 2, 0 ), OPQSTRING( 3, QString() ) );
       Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -304,12 +303,12 @@ bool isLanguageChangeEnabled() const
 */
 HB_FUNC_STATIC( QUILOADER_ISLANGUAGECHANGEENABLED )
 {
-  QUiLoader * obj = qobject_cast< QUiLoader * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QUiLoader * obj = qobject_cast<QUiLoader*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isLanguageChangeEnabled() );
@@ -317,7 +316,7 @@ HB_FUNC_STATIC( QUILOADER_ISLANGUAGECHANGEENABLED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -328,21 +327,21 @@ QWidget * load( QIODevice * device, QWidget * parentWidget = 0 )
 */
 HB_FUNC_STATIC( QUILOADER_LOAD )
 {
-  QUiLoader * obj = qobject_cast< QUiLoader * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QUiLoader * obj = qobject_cast<QUiLoader*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQIODEVICE( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && ISQIODEVICE(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QWidget * ptr = obj->load( PQIODEVICE( 1 ), OPQWIDGET( 2, 0 ) );
+      QWidget * ptr = obj->load( PQIODEVICE(1), OPQWIDGET( 2, 0 ) );
       Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -353,12 +352,12 @@ QStringList pluginPaths() const
 */
 HB_FUNC_STATIC( QUILOADER_PLUGINPATHS )
 {
-  QUiLoader * obj = qobject_cast< QUiLoader * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QUiLoader * obj = qobject_cast<QUiLoader*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRINGLIST( obj->pluginPaths() );
@@ -366,7 +365,7 @@ HB_FUNC_STATIC( QUILOADER_PLUGINPATHS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -377,25 +376,25 @@ void setLanguageChangeEnabled( bool enabled )
 */
 HB_FUNC_STATIC( QUILOADER_SETLANGUAGECHANGEENABLED )
 {
-  QUiLoader * obj = qobject_cast< QUiLoader * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QUiLoader * obj = qobject_cast<QUiLoader*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setLanguageChangeEnabled( PBOOL( 1 ) );
+      obj->setLanguageChangeEnabled( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -403,25 +402,25 @@ void setWorkingDirectory( const QDir & dir )
 */
 HB_FUNC_STATIC( QUILOADER_SETWORKINGDIRECTORY )
 {
-  QUiLoader * obj = qobject_cast< QUiLoader * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QUiLoader * obj = qobject_cast<QUiLoader*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQDIR( 1 ) )
+    if( ISNUMPAR(1) && ISQDIR(1) )
     {
 #endif
-      obj->setWorkingDirectory( *PQDIR( 1 ) );
+      obj->setWorkingDirectory( *PQDIR(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -429,12 +428,12 @@ QDir workingDirectory() const
 */
 HB_FUNC_STATIC( QUILOADER_WORKINGDIRECTORY )
 {
-  QUiLoader * obj = qobject_cast< QUiLoader * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QUiLoader * obj = qobject_cast<QUiLoader*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QDir * ptr = new QDir( obj->workingDirectory() );
@@ -443,7 +442,7 @@ HB_FUNC_STATIC( QUILOADER_WORKINGDIRECTORY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
