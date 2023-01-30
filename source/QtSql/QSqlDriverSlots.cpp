@@ -22,7 +22,7 @@ QSqlDriverSlots::~QSqlDriverSlots()
 
 void QSqlDriverSlots::notification( const QString & name )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "notification(QString)" );
 
@@ -40,9 +40,9 @@ void QSqlDriverSlots::notification( const QString & name )
 
 void QSqlDriverSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSqlDriver * obj = qobject_cast< QSqlDriver * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSqlDriver * obj = qobject_cast<QSqlDriver*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QSqlDriverSlots * s = QCoreApplication::instance()->findChild<QSqlDriverSlots *>();
 

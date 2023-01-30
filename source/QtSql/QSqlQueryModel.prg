@@ -67,34 +67,33 @@ QSqlQueryModel( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QSqlQueryModel * obj = new QSqlQueryModel( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QSQLQUERYMODEL_DELETE )
 {
-  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSqlQueryModel * obj = qobject_cast<QSqlQueryModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -102,12 +101,12 @@ virtual void clear()
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_CLEAR )
 {
-  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSqlQueryModel * obj = qobject_cast<QSqlQueryModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->clear();
@@ -115,12 +114,12 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_CLEAR )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -128,12 +127,12 @@ QSqlError lastError() const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_LASTERROR )
 {
-  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSqlQueryModel * obj = qobject_cast<QSqlQueryModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSqlError * ptr = new QSqlError( obj->lastError() );
@@ -142,7 +141,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_LASTERROR )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -153,12 +152,12 @@ QSqlQuery query() const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_QUERY )
 {
-  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSqlQueryModel * obj = qobject_cast<QSqlQueryModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSqlQuery * ptr = new QSqlQuery( obj->query() );
@@ -167,7 +166,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_QUERY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -175,25 +174,25 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_QUERY )
 
 HB_FUNC_STATIC( QSQLQUERYMODEL_RECORD )
 {
-  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     /*
     QSqlRecord record( int row ) const
     */
-    QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+    QSqlQueryModel * obj = qobject_cast<QSqlQueryModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if( obj != NULL )
     {
-      QSqlRecord * ptr = new QSqlRecord( obj->record( PINT( 1 ) ) );
+      QSqlRecord * ptr = new QSqlRecord( obj->record( PINT(1) ) );
       Qt4xHb::createReturnClass( ptr, "QSQLRECORD", true );
     }
   }
-  else if( ISNUMPAR( 0 ) )
+  else if( ISNUMPAR(0) )
   {
     /*
     QSqlRecord record() const
     */
-    QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+    QSqlQueryModel * obj = qobject_cast<QSqlQueryModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if( obj != NULL )
     {
@@ -203,43 +202,43 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_RECORD )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QSQLQUERYMODEL_SETQUERY )
 {
-  if( ISNUMPAR( 1 ) && ISQSQLQUERY( 1 ) )
+  if( ISNUMPAR(1) && ISQSQLQUERY(1) )
   {
     /*
     void setQuery( const QSqlQuery & query )
     */
-    QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+    QSqlQueryModel * obj = qobject_cast<QSqlQueryModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if( obj != NULL )
     {
-      obj->setQuery( *PQSQLQUERY( 1 ) );
+      obj->setQuery( *PQSQLQUERY(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQSQLDATABASE( 2 ) || HB_ISNIL( 2 ) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQSQLDATABASE(2) || HB_ISNIL(2) ) )
   {
     /*
     void setQuery( const QString & query, const QSqlDatabase & db = QSqlDatabase() )
     */
-    QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+    QSqlQueryModel * obj = qobject_cast<QSqlQueryModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if( obj != NULL )
     {
-      obj->setQuery( PQSTRING( 1 ), HB_ISNIL( 2 ) ? QSqlDatabase() : *static_cast< QSqlDatabase * >( Qt4xHb::itemGetPtr( 2 ) ) );
+      obj->setQuery( PQSTRING(1), HB_ISNIL(2) ? QSqlDatabase() : *static_cast<QSqlDatabase*>( Qt4xHb::itemGetPtr(2) ) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -248,20 +247,20 @@ virtual bool canFetchMore( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_CANFETCHMORE )
 {
-  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSqlQueryModel * obj = qobject_cast<QSqlQueryModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( ISQMODELINDEX( 1 ) || HB_ISNIL( 1 ) ) )
+    if( ISBETWEEN(0, 1) && ( ISQMODELINDEX(1) || HB_ISNIL(1) ) )
     {
 #endif
-      RBOOL( obj->canFetchMore( HB_ISNIL( 1 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt4xHb::itemGetPtr( 1 ) ) ) );
+      RBOOL( obj->canFetchMore( HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(1) ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -272,20 +271,20 @@ virtual int columnCount( const QModelIndex & index = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_COLUMNCOUNT )
 {
-  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSqlQueryModel * obj = qobject_cast<QSqlQueryModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( ISQMODELINDEX( 1 ) || HB_ISNIL( 1 ) ) )
+    if( ISBETWEEN(0, 1) && ( ISQMODELINDEX(1) || HB_ISNIL(1) ) )
     {
 #endif
-      RINT( obj->columnCount( HB_ISNIL( 1 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt4xHb::itemGetPtr( 1 ) ) ) );
+      RINT( obj->columnCount( HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(1) ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -296,21 +295,21 @@ virtual QVariant data( const QModelIndex & item, int role = Qt::DisplayRole ) co
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_DATA )
 {
-  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSqlQueryModel * obj = qobject_cast<QSqlQueryModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQMODELINDEX( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX( 1 ), OPINT( 2, Qt::DisplayRole ) ) );
+      QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT( 2, Qt::DisplayRole ) ) );
       Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -321,25 +320,25 @@ virtual void fetchMore( const QModelIndex & parent = QModelIndex() )
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_FETCHMORE )
 {
-  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSqlQueryModel * obj = qobject_cast<QSqlQueryModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( ISQMODELINDEX( 1 ) || HB_ISNIL( 1 ) ) )
+    if( ISBETWEEN(0, 1) && ( ISQMODELINDEX(1) || HB_ISNIL(1) ) )
     {
 #endif
-      obj->fetchMore( HB_ISNIL( 1 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt4xHb::itemGetPtr( 1 ) ) );
+      obj->fetchMore( HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -347,21 +346,21 @@ virtual QVariant headerData( int section, Qt::Orientation orientation, int role 
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_HEADERDATA )
 {
-  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSqlQueryModel * obj = qobject_cast<QSqlQueryModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
+    if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->headerData( PINT( 1 ), ( Qt::Orientation ) hb_parni( 2 ), OPINT( 3, Qt::DisplayRole ) ) );
+      QVariant * ptr = new QVariant( obj->headerData( PINT(1), ( Qt::Orientation ) hb_parni(2), OPINT( 3, Qt::DisplayRole ) ) );
       Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -372,20 +371,20 @@ virtual bool insertColumns( int column, int count, const QModelIndex & parent = 
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_INSERTCOLUMNS )
 {
-  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSqlQueryModel * obj = qobject_cast<QSqlQueryModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( ISQMODELINDEX( 3 ) || HB_ISNIL( 3 ) ) )
+    if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ( ISQMODELINDEX(3) || HB_ISNIL(3) ) )
     {
 #endif
-      RBOOL( obj->insertColumns( PINT( 1 ), PINT( 2 ), HB_ISNIL( 3 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt4xHb::itemGetPtr( 3 ) ) ) );
+      RBOOL( obj->insertColumns( PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(3) ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -396,20 +395,20 @@ virtual bool removeColumns( int column, int count, const QModelIndex & parent = 
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_REMOVECOLUMNS )
 {
-  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSqlQueryModel * obj = qobject_cast<QSqlQueryModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( ISQMODELINDEX( 3 ) || HB_ISNIL( 3 ) ) )
+    if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ( ISQMODELINDEX(3) || HB_ISNIL(3) ) )
     {
 #endif
-      RBOOL( obj->removeColumns( PINT( 1 ), PINT( 2 ), HB_ISNIL( 3 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt4xHb::itemGetPtr( 3 ) ) ) );
+      RBOOL( obj->removeColumns( PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(3) ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -420,20 +419,20 @@ virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_ROWCOUNT )
 {
-  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSqlQueryModel * obj = qobject_cast<QSqlQueryModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( ISQMODELINDEX( 1 ) || HB_ISNIL( 1 ) ) )
+    if( ISBETWEEN(0, 1) && ( ISQMODELINDEX(1) || HB_ISNIL(1) ) )
     {
 #endif
-      RINT( obj->rowCount( HB_ISNIL( 1 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt4xHb::itemGetPtr( 1 ) ) ) );
+      RINT( obj->rowCount( HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(1) ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -444,20 +443,20 @@ virtual bool setHeaderData( int section, Qt::Orientation orientation, const QVar
 */
 HB_FUNC_STATIC( QSQLQUERYMODEL_SETHEADERDATA )
 {
-  QSqlQueryModel * obj = qobject_cast< QSqlQueryModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSqlQueryModel * obj = qobject_cast<QSqlQueryModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 3, 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQVARIANT( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
+    if( ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQVARIANT(3) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
     {
 #endif
-      RBOOL( obj->setHeaderData( PINT( 1 ), ( Qt::Orientation ) hb_parni( 2 ), *PQVARIANT( 3 ), OPINT( 4, Qt::EditRole ) ) );
+      RBOOL( obj->setHeaderData( PINT(1), ( Qt::Orientation ) hb_parni(2), *PQVARIANT(3), OPINT( 4, Qt::EditRole ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

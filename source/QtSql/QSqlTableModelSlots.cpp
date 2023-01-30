@@ -22,7 +22,7 @@ QSqlTableModelSlots::~QSqlTableModelSlots()
 
 void QSqlTableModelSlots::beforeDelete( int row )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "beforeDelete(int)" );
 
@@ -40,7 +40,7 @@ void QSqlTableModelSlots::beforeDelete( int row )
 
 void QSqlTableModelSlots::beforeInsert( QSqlRecord & record )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "beforeInsert(QSqlRecord)" );
 
@@ -58,7 +58,7 @@ void QSqlTableModelSlots::beforeInsert( QSqlRecord & record )
 
 void QSqlTableModelSlots::beforeUpdate( int row, QSqlRecord & record )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "beforeUpdate(int,QSqlRecord)" );
 
@@ -78,7 +78,7 @@ void QSqlTableModelSlots::beforeUpdate( int row, QSqlRecord & record )
 
 void QSqlTableModelSlots::primeInsert( int row, QSqlRecord & record )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "primeInsert(int,QSqlRecord)" );
 
@@ -98,9 +98,9 @@ void QSqlTableModelSlots::primeInsert( int row, QSqlRecord & record )
 
 void QSqlTableModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSqlTableModel * obj = qobject_cast< QSqlTableModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSqlTableModel * obj = qobject_cast<QSqlTableModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QSqlTableModelSlots * s = QCoreApplication::instance()->findChild<QSqlTableModelSlots *>();
 
