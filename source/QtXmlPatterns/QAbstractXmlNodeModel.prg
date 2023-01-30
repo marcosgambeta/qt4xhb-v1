@@ -61,19 +61,18 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_DELETE )
 {
-  QAbstractXmlNodeModel * obj = static_cast< QAbstractXmlNodeModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractXmlNodeModel * obj = static_cast<QAbstractXmlNodeModel*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -81,21 +80,21 @@ virtual QUrl baseUri( const QXmlNodeModelIndex & n ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_BASEURI )
 {
-  QAbstractXmlNodeModel * obj = static_cast< QAbstractXmlNodeModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractXmlNodeModel * obj = static_cast<QAbstractXmlNodeModel*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQXMLNODEMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->baseUri( *PQXMLNODEMODELINDEX( 1 ) ) );
+      QUrl * ptr = new QUrl( obj->baseUri( *PQXMLNODEMODELINDEX(1) ) );
       Qt4xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -106,20 +105,20 @@ virtual QXmlNodeModelIndex::DocumentOrder compareOrder( const QXmlNodeModelIndex
 */
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_COMPAREORDER )
 {
-  QAbstractXmlNodeModel * obj = static_cast< QAbstractXmlNodeModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractXmlNodeModel * obj = static_cast<QAbstractXmlNodeModel*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQXMLNODEMODELINDEX( 1 ) && ISQXMLNODEMODELINDEX( 2 ) )
+    if( ISNUMPAR(2) && ISQXMLNODEMODELINDEX(1) && ISQXMLNODEMODELINDEX(2) )
     {
 #endif
-      RENUM( obj->compareOrder( *PQXMLNODEMODELINDEX( 1 ), *PQXMLNODEMODELINDEX( 2 ) ) );
+      RENUM( obj->compareOrder( *PQXMLNODEMODELINDEX(1), *PQXMLNODEMODELINDEX(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -130,21 +129,21 @@ virtual QUrl documentUri( const QXmlNodeModelIndex & n ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_DOCUMENTURI )
 {
-  QAbstractXmlNodeModel * obj = static_cast< QAbstractXmlNodeModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractXmlNodeModel * obj = static_cast<QAbstractXmlNodeModel*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQXMLNODEMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->documentUri( *PQXMLNODEMODELINDEX( 1 ) ) );
+      QUrl * ptr = new QUrl( obj->documentUri( *PQXMLNODEMODELINDEX(1) ) );
       Qt4xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -155,21 +154,21 @@ virtual QXmlNodeModelIndex elementById( const QXmlName & id ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_ELEMENTBYID )
 {
-  QAbstractXmlNodeModel * obj = static_cast< QAbstractXmlNodeModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractXmlNodeModel * obj = static_cast<QAbstractXmlNodeModel*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQXMLNAME( 1 ) )
+    if( ISNUMPAR(1) && ISQXMLNAME(1) )
     {
 #endif
-      QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->elementById( *PQXMLNAME( 1 ) ) );
+      QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->elementById( *PQXMLNAME(1) ) );
       Qt4xHb::createReturnClass( ptr, "QXMLNODEMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -180,20 +179,20 @@ virtual QXmlNodeModelIndex::NodeKind kind( const QXmlNodeModelIndex & ni ) const
 */
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_KIND )
 {
-  QAbstractXmlNodeModel * obj = static_cast< QAbstractXmlNodeModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractXmlNodeModel * obj = static_cast<QAbstractXmlNodeModel*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQXMLNODEMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
     {
 #endif
-      RENUM( obj->kind( *PQXMLNODEMODELINDEX( 1 ) ) );
+      RENUM( obj->kind( *PQXMLNODEMODELINDEX(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -204,21 +203,21 @@ virtual QXmlName name( const QXmlNodeModelIndex & ni ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NAME )
 {
-  QAbstractXmlNodeModel * obj = static_cast< QAbstractXmlNodeModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractXmlNodeModel * obj = static_cast<QAbstractXmlNodeModel*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQXMLNODEMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
     {
 #endif
-      QXmlName * ptr = new QXmlName( obj->name( *PQXMLNODEMODELINDEX( 1 ) ) );
+      QXmlName * ptr = new QXmlName( obj->name( *PQXMLNODEMODELINDEX(1) ) );
       Qt4xHb::createReturnClass( ptr, "QXMLNAME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -229,28 +228,28 @@ virtual QVector<QXmlName> namespaceBindings( const QXmlNodeModelIndex & n ) cons
 */
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NAMESPACEBINDINGS )
 {
-  QAbstractXmlNodeModel * obj = static_cast< QAbstractXmlNodeModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractXmlNodeModel * obj = static_cast<QAbstractXmlNodeModel*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQXMLNODEMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
     {
 #endif
-      QVector<QXmlName> list = obj->namespaceBindings( *PQXMLNODEMODELINDEX( 1 ) );
+      QVector<QXmlName> list = obj->namespaceBindings( *PQXMLNODEMODELINDEX(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QXMLNAME" );
-      PHB_ITEM pArray = hb_itemArrayNew( 0 );
+      PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
         {
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
-          hb_vmDo( 0 );
+          hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, static_cast< QXmlName * >( new QXmlName( list[i] ) ) );
+          hb_itemPutPtr( pItem, static_cast<QXmlName*>( new QXmlName( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -270,7 +269,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NAMESPACEBINDINGS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -281,28 +280,28 @@ virtual QVector<QXmlNodeModelIndex> nodesByIdref( const QXmlName & idref ) const
 */
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NODESBYIDREF )
 {
-  QAbstractXmlNodeModel * obj = static_cast< QAbstractXmlNodeModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractXmlNodeModel * obj = static_cast<QAbstractXmlNodeModel*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQXMLNAME( 1 ) )
+    if( ISNUMPAR(1) && ISQXMLNAME(1) )
     {
 #endif
-      QVector<QXmlNodeModelIndex> list = obj->nodesByIdref( *PQXMLNAME( 1 ) );
+      QVector<QXmlNodeModelIndex> list = obj->nodesByIdref( *PQXMLNAME(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QXMLNODEMODELINDEX" );
-      PHB_ITEM pArray = hb_itemArrayNew( 0 );
+      PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
         {
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
-          hb_vmDo( 0 );
+          hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, static_cast< QXmlNodeModelIndex * >( new QXmlNodeModelIndex( list[i] ) ) );
+          hb_itemPutPtr( pItem, static_cast<QXmlNodeModelIndex*>( new QXmlNodeModelIndex( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -322,7 +321,7 @@ HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_NODESBYIDREF )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -333,21 +332,21 @@ virtual QXmlNodeModelIndex root( const QXmlNodeModelIndex & n ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_ROOT )
 {
-  QAbstractXmlNodeModel * obj = static_cast< QAbstractXmlNodeModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractXmlNodeModel * obj = static_cast<QAbstractXmlNodeModel*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQXMLNODEMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
     {
 #endif
-      QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->root( *PQXMLNODEMODELINDEX( 1 ) ) );
+      QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->root( *PQXMLNODEMODELINDEX(1) ) );
       Qt4xHb::createReturnClass( ptr, "QXMLNODEMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -358,21 +357,21 @@ QSourceLocation sourceLocation( const QXmlNodeModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_SOURCELOCATION )
 {
-  QAbstractXmlNodeModel * obj = static_cast< QAbstractXmlNodeModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractXmlNodeModel * obj = static_cast<QAbstractXmlNodeModel*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQXMLNODEMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
     {
 #endif
-      QSourceLocation * ptr = new QSourceLocation( obj->sourceLocation( *PQXMLNODEMODELINDEX( 1 ) ) );
+      QSourceLocation * ptr = new QSourceLocation( obj->sourceLocation( *PQXMLNODEMODELINDEX(1) ) );
       Qt4xHb::createReturnClass( ptr, "QSOURCELOCATION", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -383,20 +382,20 @@ virtual QString stringValue( const QXmlNodeModelIndex & n ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_STRINGVALUE )
 {
-  QAbstractXmlNodeModel * obj = static_cast< QAbstractXmlNodeModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractXmlNodeModel * obj = static_cast<QAbstractXmlNodeModel*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQXMLNODEMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
     {
 #endif
-      RQSTRING( obj->stringValue( *PQXMLNODEMODELINDEX( 1 ) ) );
+      RQSTRING( obj->stringValue( *PQXMLNODEMODELINDEX(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -407,21 +406,21 @@ virtual QVariant typedValue( const QXmlNodeModelIndex & node ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTXMLNODEMODEL_TYPEDVALUE )
 {
-  QAbstractXmlNodeModel * obj = static_cast< QAbstractXmlNodeModel * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractXmlNodeModel * obj = static_cast<QAbstractXmlNodeModel*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQXMLNODEMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQXMLNODEMODELINDEX(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->typedValue( *PQXMLNODEMODELINDEX( 1 ) ) );
+      QVariant * ptr = new QVariant( obj->typedValue( *PQXMLNODEMODELINDEX(1) ) );
       Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

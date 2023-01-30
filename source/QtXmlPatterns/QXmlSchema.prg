@@ -68,7 +68,7 @@ RETURN
 
 HB_FUNC_STATIC( QXMLSCHEMA_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QXmlSchema()
@@ -76,35 +76,34 @@ HB_FUNC_STATIC( QXMLSCHEMA_NEW )
     QXmlSchema * obj = new QXmlSchema();
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISNUMPAR( 1 ) && ISQXMLSCHEMA( 1 ) )
+  else if( ISNUMPAR(1) && ISQXMLSCHEMA(1) )
   {
     /*
     QXmlSchema( const QXmlSchema & other )
     */
-    QXmlSchema * obj = new QXmlSchema( *PQXMLSCHEMA( 1 ) );
+    QXmlSchema * obj = new QXmlSchema( *PQXMLSCHEMA(1) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QXMLSCHEMA_DELETE )
 {
-  QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QXmlSchema * obj = static_cast<QXmlSchema*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -112,12 +111,12 @@ QUrl documentUri() const
 */
 HB_FUNC_STATIC( QXMLSCHEMA_DOCUMENTURI )
 {
-  QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QXmlSchema * obj = static_cast<QXmlSchema*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QUrl * ptr = new QUrl( obj->documentUri() );
@@ -126,7 +125,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_DOCUMENTURI )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -137,12 +136,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QXMLSCHEMA_ISVALID )
 {
-  QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QXmlSchema * obj = static_cast<QXmlSchema*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -150,7 +149,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_ISVALID )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -158,45 +157,45 @@ HB_FUNC_STATIC( QXMLSCHEMA_ISVALID )
 
 HB_FUNC_STATIC( QXMLSCHEMA_LOAD )
 {
-  if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
+  if( ISNUMPAR(1) && ISQURL(1) )
   {
     /*
     bool load( const QUrl & source )
     */
-    QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QXmlSchema * obj = static_cast<QXmlSchema*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      RBOOL( obj->load( *PQURL( 1 ) ) );
+      RBOOL( obj->load( *PQURL(1) ) );
     }
   }
-  else if( ISBETWEEN( 1, 2 ) && ISQIODEVICE( 1 ) && ( ISQURL( 2 ) || HB_ISNIL( 2 ) ) )
+  else if( ISBETWEEN(1, 2) && ISQIODEVICE(1) && ( ISQURL(2) || HB_ISNIL(2) ) )
   {
     /*
     bool load( QIODevice * source, const QUrl & documentUri = QUrl() )
     */
-    QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QXmlSchema * obj = static_cast<QXmlSchema*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      RBOOL( obj->load( PQIODEVICE( 1 ), HB_ISNIL( 2 ) ? QUrl() : *static_cast< QUrl * >( Qt4xHb::itemGetPtr( 2 ) ) ) );
+      RBOOL( obj->load( PQIODEVICE(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>( Qt4xHb::itemGetPtr(2) ) ) );
     }
   }
-  else if( ISBETWEEN( 1, 2 ) && ISQBYTEARRAY( 1 ) && ( ISQURL( 2 ) || HB_ISNIL( 2 ) ) )
+  else if( ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ( ISQURL(2) || HB_ISNIL(2) ) )
   {
     /*
     bool load( const QByteArray & data, const QUrl & documentUri = QUrl() )
     */
-    QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QXmlSchema * obj = static_cast<QXmlSchema*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      RBOOL( obj->load( *PQBYTEARRAY( 1 ), HB_ISNIL( 2 ) ? QUrl() : *static_cast< QUrl * >( Qt4xHb::itemGetPtr( 2 ) ) ) );
+      RBOOL( obj->load( *PQBYTEARRAY(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>( Qt4xHb::itemGetPtr(2) ) ) );
     }
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -205,12 +204,12 @@ QAbstractMessageHandler * messageHandler() const
 */
 HB_FUNC_STATIC( QXMLSCHEMA_MESSAGEHANDLER )
 {
-  QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QXmlSchema * obj = static_cast<QXmlSchema*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QAbstractMessageHandler * ptr = obj->messageHandler();
@@ -219,7 +218,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_MESSAGEHANDLER )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -230,12 +229,12 @@ QXmlNamePool namePool() const
 */
 HB_FUNC_STATIC( QXMLSCHEMA_NAMEPOOL )
 {
-  QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QXmlSchema * obj = static_cast<QXmlSchema*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QXmlNamePool * ptr = new QXmlNamePool( obj->namePool() );
@@ -244,7 +243,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_NAMEPOOL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -255,12 +254,12 @@ QNetworkAccessManager * networkAccessManager() const
 */
 HB_FUNC_STATIC( QXMLSCHEMA_NETWORKACCESSMANAGER )
 {
-  QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QXmlSchema * obj = static_cast<QXmlSchema*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QNetworkAccessManager * ptr = obj->networkAccessManager();
@@ -269,7 +268,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_NETWORKACCESSMANAGER )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -280,25 +279,25 @@ void setMessageHandler( QAbstractMessageHandler * handler )
 */
 HB_FUNC_STATIC( QXMLSCHEMA_SETMESSAGEHANDLER )
 {
-  QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QXmlSchema * obj = static_cast<QXmlSchema*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQABSTRACTMESSAGEHANDLER( 1 ) )
+    if( ISNUMPAR(1) && ISQABSTRACTMESSAGEHANDLER(1) )
     {
 #endif
-      obj->setMessageHandler( PQABSTRACTMESSAGEHANDLER( 1 ) );
+      obj->setMessageHandler( PQABSTRACTMESSAGEHANDLER(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -306,25 +305,25 @@ void setNetworkAccessManager( QNetworkAccessManager * manager )
 */
 HB_FUNC_STATIC( QXMLSCHEMA_SETNETWORKACCESSMANAGER )
 {
-  QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QXmlSchema * obj = static_cast<QXmlSchema*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQNETWORKACCESSMANAGER( 1 ) )
+    if( ISNUMPAR(1) && ISQNETWORKACCESSMANAGER(1) )
     {
 #endif
-      obj->setNetworkAccessManager( PQNETWORKACCESSMANAGER( 1 ) );
+      obj->setNetworkAccessManager( PQNETWORKACCESSMANAGER(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -332,25 +331,25 @@ void setUriResolver( const QAbstractUriResolver * resolver )
 */
 HB_FUNC_STATIC( QXMLSCHEMA_SETURIRESOLVER )
 {
-  QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QXmlSchema * obj = static_cast<QXmlSchema*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQABSTRACTURIRESOLVER( 1 ) )
+    if( ISNUMPAR(1) && ISQABSTRACTURIRESOLVER(1) )
     {
 #endif
-      obj->setUriResolver( PQABSTRACTURIRESOLVER( 1 ) );
+      obj->setUriResolver( PQABSTRACTURIRESOLVER(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -358,12 +357,12 @@ const QAbstractUriResolver * uriResolver() const
 */
 HB_FUNC_STATIC( QXMLSCHEMA_URIRESOLVER )
 {
-  QXmlSchema * obj = static_cast< QXmlSchema * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QXmlSchema * obj = static_cast<QXmlSchema*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       const QAbstractUriResolver * ptr = obj->uriResolver();
@@ -372,7 +371,7 @@ HB_FUNC_STATIC( QXMLSCHEMA_URIRESOLVER )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -382,27 +381,27 @@ HB_FUNC_STATIC( QXMLSCHEMA_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
   hb_itemReturn( self );
@@ -427,15 +426,15 @@ HB_FUNC_STATIC( QXMLSCHEMA_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
   hb_itemReturn( self );
