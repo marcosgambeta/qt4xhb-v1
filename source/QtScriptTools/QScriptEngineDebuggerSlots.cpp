@@ -22,7 +22,7 @@ QScriptEngineDebuggerSlots::~QScriptEngineDebuggerSlots()
 
 void QScriptEngineDebuggerSlots::evaluationResumed()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "evaluationResumed()" );
 
@@ -38,7 +38,7 @@ void QScriptEngineDebuggerSlots::evaluationResumed()
 
 void QScriptEngineDebuggerSlots::evaluationSuspended()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "evaluationSuspended()" );
 
@@ -54,9 +54,9 @@ void QScriptEngineDebuggerSlots::evaluationSuspended()
 
 void QScriptEngineDebuggerSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QScriptEngineDebugger * obj = qobject_cast< QScriptEngineDebugger * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QScriptEngineDebugger * obj = qobject_cast<QScriptEngineDebugger*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QScriptEngineDebuggerSlots * s = QCoreApplication::instance()->findChild<QScriptEngineDebuggerSlots *>();
 
