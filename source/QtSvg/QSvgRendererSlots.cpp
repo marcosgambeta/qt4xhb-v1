@@ -22,7 +22,7 @@ QSvgRendererSlots::~QSvgRendererSlots()
 
 void QSvgRendererSlots::repaintNeeded()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "repaintNeeded()" );
 
@@ -38,9 +38,9 @@ void QSvgRendererSlots::repaintNeeded()
 
 void QSvgRendererSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSvgRenderer * obj = qobject_cast< QSvgRenderer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSvgRenderer * obj = qobject_cast<QSvgRenderer*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QSvgRendererSlots * s = QCoreApplication::instance()->findChild<QSvgRendererSlots *>();
 
