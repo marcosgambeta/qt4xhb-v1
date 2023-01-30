@@ -58,34 +58,33 @@ QScrollArea( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSCROLLAREA_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QScrollArea * obj = new QScrollArea( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QSCROLLAREA_DELETE )
 {
-  QScrollArea * obj = qobject_cast< QScrollArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QScrollArea * obj = qobject_cast<QScrollArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -93,12 +92,12 @@ Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QSCROLLAREA_ALIGNMENT )
 {
-  QScrollArea * obj = qobject_cast< QScrollArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QScrollArea * obj = qobject_cast<QScrollArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->alignment() );
@@ -106,7 +105,7 @@ HB_FUNC_STATIC( QSCROLLAREA_ALIGNMENT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -117,25 +116,25 @@ void ensureVisible( int x, int y, int xmargin = 50, int ymargin = 50 )
 */
 HB_FUNC_STATIC( QSCROLLAREA_ENSUREVISIBLE )
 {
-  QScrollArea * obj = qobject_cast< QScrollArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QScrollArea * obj = qobject_cast<QScrollArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
+    if( ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
     {
 #endif
-      obj->ensureVisible( PINT( 1 ), PINT( 2 ), OPINT( 3, 50 ), OPINT( 4, 50 ) );
+      obj->ensureVisible( PINT(1), PINT(2), OPINT( 3, 50 ), OPINT( 4, 50 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -143,25 +142,25 @@ void ensureWidgetVisible( QWidget * childWidget, int xmargin = 50, int ymargin =
 */
 HB_FUNC_STATIC( QSCROLLAREA_ENSUREWIDGETVISIBLE )
 {
-  QScrollArea * obj = qobject_cast< QScrollArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QScrollArea * obj = qobject_cast<QScrollArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && ISQWIDGET( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
+    if( ISBETWEEN(1, 3) && ISQWIDGET(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
     {
 #endif
-      obj->ensureWidgetVisible( PQWIDGET( 1 ), OPINT( 2, 50 ), OPINT( 3, 50 ) );
+      obj->ensureWidgetVisible( PQWIDGET(1), OPINT( 2, 50 ), OPINT( 3, 50 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -169,25 +168,25 @@ void setAlignment( Qt::Alignment )
 */
 HB_FUNC_STATIC( QSCROLLAREA_SETALIGNMENT )
 {
-  QScrollArea * obj = qobject_cast< QScrollArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QScrollArea * obj = qobject_cast<QScrollArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setAlignment( ( Qt::Alignment ) hb_parni( 1 ) );
+      obj->setAlignment( ( Qt::Alignment ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -195,25 +194,25 @@ void setWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QSCROLLAREA_SETWIDGET )
 {
-  QScrollArea * obj = qobject_cast< QScrollArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QScrollArea * obj = qobject_cast<QScrollArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
+    if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->setWidget( PQWIDGET( 1 ) );
+      obj->setWidget( PQWIDGET(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -221,25 +220,25 @@ void setWidgetResizable( bool resizable )
 */
 HB_FUNC_STATIC( QSCROLLAREA_SETWIDGETRESIZABLE )
 {
-  QScrollArea * obj = qobject_cast< QScrollArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QScrollArea * obj = qobject_cast<QScrollArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setWidgetResizable( PBOOL( 1 ) );
+      obj->setWidgetResizable( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -247,12 +246,12 @@ QWidget * takeWidget()
 */
 HB_FUNC_STATIC( QSCROLLAREA_TAKEWIDGET )
 {
-  QScrollArea * obj = qobject_cast< QScrollArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QScrollArea * obj = qobject_cast<QScrollArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QWidget * ptr = obj->takeWidget();
@@ -261,7 +260,7 @@ HB_FUNC_STATIC( QSCROLLAREA_TAKEWIDGET )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -272,12 +271,12 @@ QWidget * widget() const
 */
 HB_FUNC_STATIC( QSCROLLAREA_WIDGET )
 {
-  QScrollArea * obj = qobject_cast< QScrollArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QScrollArea * obj = qobject_cast<QScrollArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QWidget * ptr = obj->widget();
@@ -286,7 +285,7 @@ HB_FUNC_STATIC( QSCROLLAREA_WIDGET )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -297,12 +296,12 @@ bool widgetResizable() const
 */
 HB_FUNC_STATIC( QSCROLLAREA_WIDGETRESIZABLE )
 {
-  QScrollArea * obj = qobject_cast< QScrollArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QScrollArea * obj = qobject_cast<QScrollArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->widgetResizable() );
@@ -310,7 +309,7 @@ HB_FUNC_STATIC( QSCROLLAREA_WIDGETRESIZABLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -321,20 +320,20 @@ virtual bool focusNextPrevChild( bool next )
 */
 HB_FUNC_STATIC( QSCROLLAREA_FOCUSNEXTPREVCHILD )
 {
-  QScrollArea * obj = qobject_cast< QScrollArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QScrollArea * obj = qobject_cast<QScrollArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      RBOOL( obj->focusNextPrevChild( PBOOL( 1 ) ) );
+      RBOOL( obj->focusNextPrevChild( PBOOL(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -345,12 +344,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSCROLLAREA_SIZEHINT )
 {
-  QScrollArea * obj = qobject_cast< QScrollArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QScrollArea * obj = qobject_cast<QScrollArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
@@ -359,7 +358,7 @@ HB_FUNC_STATIC( QSCROLLAREA_SIZEHINT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

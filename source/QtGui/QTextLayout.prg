@@ -88,7 +88,7 @@ RETURN
 
 HB_FUNC_STATIC( QTEXTLAYOUT_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QTextLayout()
@@ -96,43 +96,42 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEW )
     QTextLayout * obj = new QTextLayout();
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     /*
     QTextLayout( const QString & text )
     */
-    QTextLayout * obj = new QTextLayout( PQSTRING( 1 ) );
+    QTextLayout * obj = new QTextLayout( PQSTRING(1) );
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISBETWEEN( 2, 3 ) && HB_ISCHAR( 1 ) && ISQFONT( 2 ) && ( HB_ISOBJECT( 3 ) || HB_ISNIL( 3 ) ) )
+  else if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQFONT(2) && ( HB_ISOBJECT(3) || HB_ISNIL(3) ) )
   {
     /*
     QTextLayout( const QString & text, const QFont & font, QPaintDevice * paintdevice = 0 )
     */
-    QTextLayout * obj = new QTextLayout( PQSTRING( 1 ), *PQFONT( 2 ), HB_ISNIL( 3 ) ? 0 : static_cast< QPaintDevice * >( Qt4xHb::itemGetPtr( 3 ) ) );
+    QTextLayout * obj = new QTextLayout( PQSTRING(1), *PQFONT(2), HB_ISNIL(3) ? 0 : static_cast<QPaintDevice*>( Qt4xHb::itemGetPtr(3) ) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QTEXTLAYOUT_DELETE )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -140,12 +139,12 @@ void beginLayout()
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_BEGINLAYOUT )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->beginLayout();
@@ -153,12 +152,12 @@ HB_FUNC_STATIC( QTEXTLAYOUT_BEGINLAYOUT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -166,12 +165,12 @@ QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_BOUNDINGRECT )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QRectF * ptr = new QRectF( obj->boundingRect() );
@@ -180,7 +179,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_BOUNDINGRECT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -191,12 +190,12 @@ bool cacheEnabled() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_CACHEENABLED )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->cacheEnabled() );
@@ -204,7 +203,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CACHEENABLED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -215,12 +214,12 @@ void clearAdditionalFormats()
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_CLEARADDITIONALFORMATS )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->clearAdditionalFormats();
@@ -228,12 +227,12 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CLEARADDITIONALFORMATS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -241,12 +240,12 @@ void clearLayout()
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_CLEARLAYOUT )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->clearLayout();
@@ -254,12 +253,12 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CLEARLAYOUT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -267,12 +266,12 @@ QTextLine createLine()
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_CREATELINE )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QTextLine * ptr = new QTextLine( obj->createLine() );
@@ -281,7 +280,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CREATELINE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -292,12 +291,12 @@ Qt::CursorMoveStyle cursorMoveStyle() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_CURSORMOVESTYLE )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->cursorMoveStyle() );
@@ -305,7 +304,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CURSORMOVESTYLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -313,37 +312,37 @@ HB_FUNC_STATIC( QTEXTLAYOUT_CURSORMOVESTYLE )
 
 HB_FUNC_STATIC( QTEXTLAYOUT_DRAWCURSOR )
 {
-  if( ISNUMPAR( 4 ) && ISQPAINTER( 1 ) && ISQPOINTF( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
+  if( ISNUMPAR(4) && ISQPAINTER(1) && ISQPOINTF(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
     /*
     void drawCursor( QPainter * painter, const QPointF & position, int cursorPosition, int width ) const
     */
-    QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->drawCursor( PQPAINTER( 1 ), *PQPOINTF( 2 ), PINT( 3 ), PINT( 4 ) );
+      obj->drawCursor( PQPAINTER(1), *PQPOINTF(2), PINT(3), PINT(4) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR( 3 ) && ISQPAINTER( 1 ) && ISQPOINTF( 2 ) && HB_ISNUM( 3 ) )
+  else if( ISNUMPAR(3) && ISQPAINTER(1) && ISQPOINTF(2) && HB_ISNUM(3) )
   {
     /*
     void drawCursor( QPainter * painter, const QPointF & position, int cursorPosition ) const
     */
-    QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->drawCursor( PQPAINTER( 1 ), *PQPOINTF( 2 ), PINT( 3 ) );
+      obj->drawCursor( PQPAINTER(1), *PQPOINTF(2), PINT(3) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -352,12 +351,12 @@ void endLayout()
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_ENDLAYOUT )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->endLayout();
@@ -365,12 +364,12 @@ HB_FUNC_STATIC( QTEXTLAYOUT_ENDLAYOUT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -378,12 +377,12 @@ QFont font() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_FONT )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QFont * ptr = new QFont( obj->font() );
@@ -392,7 +391,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_FONT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -403,28 +402,28 @@ QList<QGlyphRun> glyphRuns() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_GLYPHRUNS )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QList<QGlyphRun> list = obj->glyphRuns();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGLYPHRUN" );
-      PHB_ITEM pArray = hb_itemArrayNew( 0 );
+      PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
         {
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
-          hb_vmDo( 0 );
+          hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, static_cast< QGlyphRun * >( new QGlyphRun( list[i] ) ) );
+          hb_itemPutPtr( pItem, static_cast<QGlyphRun*>( new QGlyphRun( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -444,7 +443,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_GLYPHRUNS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -455,20 +454,20 @@ bool isValidCursorPosition( int pos ) const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_ISVALIDCURSORPOSITION )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isValidCursorPosition( PINT( 1 ) ) );
+      RBOOL( obj->isValidCursorPosition( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -479,20 +478,20 @@ int leftCursorPosition( int oldPos ) const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_LEFTCURSORPOSITION )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->leftCursorPosition( PINT( 1 ) ) );
+      RINT( obj->leftCursorPosition( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -503,21 +502,21 @@ QTextLine lineAt( int i ) const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_LINEAT )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QTextLine * ptr = new QTextLine( obj->lineAt( PINT( 1 ) ) );
+      QTextLine * ptr = new QTextLine( obj->lineAt( PINT(1) ) );
       Qt4xHb::createReturnClass( ptr, "QTEXTLINE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -528,12 +527,12 @@ int lineCount() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_LINECOUNT )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->lineCount() );
@@ -541,7 +540,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LINECOUNT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -552,21 +551,21 @@ QTextLine lineForTextPosition( int pos ) const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_LINEFORTEXTPOSITION )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QTextLine * ptr = new QTextLine( obj->lineForTextPosition( PINT( 1 ) ) );
+      QTextLine * ptr = new QTextLine( obj->lineForTextPosition( PINT(1) ) );
       Qt4xHb::createReturnClass( ptr, "QTEXTLINE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -577,12 +576,12 @@ qreal maximumWidth() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_MAXIMUMWIDTH )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->maximumWidth() );
@@ -590,7 +589,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_MAXIMUMWIDTH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -601,12 +600,12 @@ qreal minimumWidth() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_MINIMUMWIDTH )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->minimumWidth() );
@@ -614,7 +613,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_MINIMUMWIDTH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -625,20 +624,20 @@ int nextCursorPosition( int oldPos, QTextLayout::CursorMode mode = QTextLayout::
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_NEXTCURSORPOSITION )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      RINT( obj->nextCursorPosition( PINT( 1 ), HB_ISNIL( 2 ) ? ( QTextLayout::CursorMode ) QTextLayout::SkipCharacters : ( QTextLayout::CursorMode ) hb_parni( 2 ) ) );
+      RINT( obj->nextCursorPosition( PINT(1), HB_ISNIL(2) ? ( QTextLayout::CursorMode ) QTextLayout::SkipCharacters : ( QTextLayout::CursorMode ) hb_parni(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -649,12 +648,12 @@ QPointF position() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_POSITION )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QPointF * ptr = new QPointF( obj->position() );
@@ -663,7 +662,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_POSITION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -674,12 +673,12 @@ int preeditAreaPosition() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_PREEDITAREAPOSITION )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->preeditAreaPosition() );
@@ -687,7 +686,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_PREEDITAREAPOSITION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -698,12 +697,12 @@ QString preeditAreaText() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_PREEDITAREATEXT )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->preeditAreaText() );
@@ -711,7 +710,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_PREEDITAREATEXT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -722,20 +721,20 @@ int previousCursorPosition( int oldPos, QTextLayout::CursorMode mode = QTextLayo
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_PREVIOUSCURSORPOSITION )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      RINT( obj->previousCursorPosition( PINT( 1 ), HB_ISNIL( 2 ) ? ( QTextLayout::CursorMode ) QTextLayout::SkipCharacters : ( QTextLayout::CursorMode ) hb_parni( 2 ) ) );
+      RINT( obj->previousCursorPosition( PINT(1), HB_ISNIL(2) ? ( QTextLayout::CursorMode ) QTextLayout::SkipCharacters : ( QTextLayout::CursorMode ) hb_parni(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -746,20 +745,20 @@ int rightCursorPosition( int oldPos ) const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_RIGHTCURSORPOSITION )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->rightCursorPosition( PINT( 1 ) ) );
+      RINT( obj->rightCursorPosition( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -770,25 +769,25 @@ void setCacheEnabled( bool enable )
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETCACHEENABLED )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setCacheEnabled( PBOOL( 1 ) );
+      obj->setCacheEnabled( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -796,25 +795,25 @@ void setCursorMoveStyle( Qt::CursorMoveStyle style )
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETCURSORMOVESTYLE )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setCursorMoveStyle( ( Qt::CursorMoveStyle ) hb_parni( 1 ) );
+      obj->setCursorMoveStyle( ( Qt::CursorMoveStyle ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -822,25 +821,25 @@ void setFont( const QFont & font )
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETFONT )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQFONT( 1 ) )
+    if( ISNUMPAR(1) && ISQFONT(1) )
     {
 #endif
-      obj->setFont( *PQFONT( 1 ) );
+      obj->setFont( *PQFONT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -848,25 +847,25 @@ void setPosition( const QPointF & p )
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETPOSITION )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
+    if( ISNUMPAR(1) && ISQPOINTF(1) )
     {
 #endif
-      obj->setPosition( *PQPOINTF( 1 ) );
+      obj->setPosition( *PQPOINTF(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -874,25 +873,25 @@ void setPreeditArea( int position, const QString & text )
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETPREEDITAREA )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
     {
 #endif
-      obj->setPreeditArea( PINT( 1 ), PQSTRING( 2 ) );
+      obj->setPreeditArea( PINT(1), PQSTRING(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -900,25 +899,25 @@ void setText( const QString & string )
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETTEXT )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setText( PQSTRING( 1 ) );
+      obj->setText( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -926,25 +925,25 @@ void setTextOption( const QTextOption & option )
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_SETTEXTOPTION )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQTEXTOPTION( 1 ) )
+    if( ISNUMPAR(1) && ISQTEXTOPTION(1) )
     {
 #endif
-      obj->setTextOption( *PQTEXTOPTION( 1 ) );
+      obj->setTextOption( *PQTEXTOPTION(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -952,12 +951,12 @@ QString text() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_TEXT )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->text() );
@@ -965,7 +964,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_TEXT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -976,12 +975,12 @@ QTextOption textOption() const
 */
 HB_FUNC_STATIC( QTEXTLAYOUT_TEXTOPTION )
 {
-  QTextLayout * obj = static_cast< QTextLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextLayout * obj = static_cast<QTextLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QTextOption * ptr = new QTextOption( obj->textOption() );
@@ -990,7 +989,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_TEXTOPTION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1000,27 +999,27 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
   hb_itemReturn( self );
@@ -1045,15 +1044,15 @@ HB_FUNC_STATIC( QTEXTLAYOUT_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
   hb_itemReturn( self );

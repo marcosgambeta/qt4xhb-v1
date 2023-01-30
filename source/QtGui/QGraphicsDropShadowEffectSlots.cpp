@@ -22,7 +22,7 @@ QGraphicsDropShadowEffectSlots::~QGraphicsDropShadowEffectSlots()
 
 void QGraphicsDropShadowEffectSlots::blurRadiusChanged( qreal blurRadius )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "blurRadiusChanged(qreal)" );
 
@@ -40,7 +40,7 @@ void QGraphicsDropShadowEffectSlots::blurRadiusChanged( qreal blurRadius )
 
 void QGraphicsDropShadowEffectSlots::colorChanged( const QColor & color )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "colorChanged(QColor)" );
 
@@ -58,7 +58,7 @@ void QGraphicsDropShadowEffectSlots::colorChanged( const QColor & color )
 
 void QGraphicsDropShadowEffectSlots::offsetChanged( const QPointF & offset )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "offsetChanged(QPointF)" );
 
@@ -76,9 +76,9 @@ void QGraphicsDropShadowEffectSlots::offsetChanged( const QPointF & offset )
 
 void QGraphicsDropShadowEffectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsDropShadowEffect * obj = qobject_cast< QGraphicsDropShadowEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsDropShadowEffect * obj = qobject_cast<QGraphicsDropShadowEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QGraphicsDropShadowEffectSlots * s = QCoreApplication::instance()->findChild<QGraphicsDropShadowEffectSlots *>();
 

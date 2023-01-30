@@ -49,21 +49,20 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSEFFECT_DELETE )
 {
-  QGraphicsEffect * obj = qobject_cast< QGraphicsEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsEffect * obj = qobject_cast<QGraphicsEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -71,12 +70,12 @@ QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECT )
 {
-  QGraphicsEffect * obj = qobject_cast< QGraphicsEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsEffect * obj = qobject_cast<QGraphicsEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QRectF * ptr = new QRectF( obj->boundingRect() );
@@ -85,7 +84,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -96,21 +95,21 @@ virtual QRectF boundingRectFor( const QRectF & rect ) const
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_BOUNDINGRECTFOR )
 {
-  QGraphicsEffect * obj = qobject_cast< QGraphicsEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsEffect * obj = qobject_cast<QGraphicsEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
+    if( ISNUMPAR(1) && ISQRECTF(1) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->boundingRectFor( *PQRECTF( 1 ) ) );
+      QRectF * ptr = new QRectF( obj->boundingRectFor( *PQRECTF(1) ) );
       Qt4xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -121,12 +120,12 @@ bool isEnabled() const
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_ISENABLED )
 {
-  QGraphicsEffect * obj = qobject_cast< QGraphicsEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsEffect * obj = qobject_cast<QGraphicsEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isEnabled() );
@@ -134,7 +133,7 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_ISENABLED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -145,25 +144,25 @@ void setEnabled( bool enable )
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_SETENABLED )
 {
-  QGraphicsEffect * obj = qobject_cast< QGraphicsEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsEffect * obj = qobject_cast<QGraphicsEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setEnabled( PBOOL( 1 ) );
+      obj->setEnabled( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -171,12 +170,12 @@ void update()
 */
 HB_FUNC_STATIC( QGRAPHICSEFFECT_UPDATE )
 {
-  QGraphicsEffect * obj = qobject_cast< QGraphicsEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsEffect * obj = qobject_cast<QGraphicsEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->update();
@@ -184,12 +183,12 @@ HB_FUNC_STATIC( QGRAPHICSEFFECT_UPDATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 void QGraphicsEffectSlots_connect_signal( const QString & signal, const QString & slot );

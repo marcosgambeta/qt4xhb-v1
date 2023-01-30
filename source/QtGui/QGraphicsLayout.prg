@@ -52,19 +52,18 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_DELETE )
 {
-  QGraphicsLayout * obj = static_cast< QGraphicsLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsLayout * obj = static_cast<QGraphicsLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -72,12 +71,12 @@ void activate()
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_ACTIVATE )
 {
-  QGraphicsLayout * obj = static_cast< QGraphicsLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsLayout * obj = static_cast<QGraphicsLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->activate();
@@ -85,12 +84,12 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_ACTIVATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -98,12 +97,12 @@ virtual int count() const = 0
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_COUNT )
 {
-  QGraphicsLayout * obj = static_cast< QGraphicsLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsLayout * obj = static_cast<QGraphicsLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->count() );
@@ -111,7 +110,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_COUNT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -122,12 +121,12 @@ virtual void invalidate()
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_INVALIDATE )
 {
-  QGraphicsLayout * obj = static_cast< QGraphicsLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsLayout * obj = static_cast<QGraphicsLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->invalidate();
@@ -135,12 +134,12 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_INVALIDATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -148,12 +147,12 @@ bool isActivated() const
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_ISACTIVATED )
 {
-  QGraphicsLayout * obj = static_cast< QGraphicsLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsLayout * obj = static_cast<QGraphicsLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isActivated() );
@@ -161,7 +160,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_ISACTIVATED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -172,21 +171,21 @@ virtual QGraphicsLayoutItem * itemAt( int i ) const = 0
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_ITEMAT )
 {
-  QGraphicsLayout * obj = static_cast< QGraphicsLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsLayout * obj = static_cast<QGraphicsLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QGraphicsLayoutItem * ptr = obj->itemAt( PINT( 1 ) );
+      QGraphicsLayoutItem * ptr = obj->itemAt( PINT(1) );
       Qt4xHb::createReturnClass( ptr, "QGRAPHICSLAYOUTITEM", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -197,25 +196,25 @@ virtual void removeAt( int index ) = 0
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_REMOVEAT )
 {
-  QGraphicsLayout * obj = static_cast< QGraphicsLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsLayout * obj = static_cast<QGraphicsLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->removeAt( PINT( 1 ) );
+      obj->removeAt( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -223,25 +222,25 @@ void setContentsMargins( qreal left, qreal top, qreal right, qreal bottom )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_SETCONTENTSMARGINS )
 {
-  QGraphicsLayout * obj = static_cast< QGraphicsLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsLayout * obj = static_cast<QGraphicsLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
+    if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
     {
 #endif
-      obj->setContentsMargins( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ) );
+      obj->setContentsMargins( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -249,25 +248,25 @@ virtual void widgetEvent( QEvent * e )
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_WIDGETEVENT )
 {
-  QGraphicsLayout * obj = static_cast< QGraphicsLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsLayout * obj = static_cast<QGraphicsLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQEVENT( 1 ) )
+    if( ISNUMPAR(1) && ISQEVENT(1) )
     {
 #endif
-      obj->widgetEvent( PQEVENT( 1 ) );
+      obj->widgetEvent( PQEVENT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -275,12 +274,12 @@ virtual void getContentsMargins( qreal * left, qreal * top, qreal * right, qreal
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_GETCONTENTSMARGINS )
 {
-  QGraphicsLayout * obj = static_cast< QGraphicsLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsLayout * obj = static_cast<QGraphicsLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
+    if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
     {
 #endif
       qreal par1;
@@ -296,12 +295,12 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_GETCONTENTSMARGINS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -309,12 +308,12 @@ virtual void updateGeometry()
 */
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_UPDATEGEOMETRY )
 {
-  QGraphicsLayout * obj = static_cast< QGraphicsLayout * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsLayout * obj = static_cast<QGraphicsLayout*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->updateGeometry();
@@ -322,12 +321,12 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_UPDATEGEOMETRY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -336,7 +335,7 @@ static bool instantInvalidatePropagation()
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_INSTANTINVALIDATEPROPAGATION )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
 #endif
     RBOOL( QGraphicsLayout::instantInvalidatePropagation() );
@@ -344,7 +343,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_INSTANTINVALIDATEPROPAGATION )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -355,19 +354,19 @@ static void setInstantInvalidatePropagation( bool enable )
 HB_FUNC_STATIC( QGRAPHICSLAYOUT_SETINSTANTINVALIDATEPROPAGATION )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+  if( ISNUMPAR(1) && HB_ISLOG(1) )
   {
 #endif
-    QGraphicsLayout::setInstantInvalidatePropagation( PBOOL( 1 ) );
+    QGraphicsLayout::setInstantInvalidatePropagation( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 #pragma ENDDUMP

@@ -131,7 +131,7 @@ RETURN
 
 HB_FUNC_STATIC( QSTANDARDITEM_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QStandardItem()
@@ -139,51 +139,50 @@ HB_FUNC_STATIC( QSTANDARDITEM_NEW )
     QStandardItem * obj = new QStandardItem();
     Qt4xHb::returnNewObject( obj, false );
   }
-  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     /*
     QStandardItem( const QString & text )
     */
-    QStandardItem * obj = new QStandardItem( PQSTRING( 1 ) );
+    QStandardItem * obj = new QStandardItem( PQSTRING(1) );
     Qt4xHb::returnNewObject( obj, false );
   }
-  else if( ISNUMPAR( 2 ) && ( ISQICON( 1 ) || HB_ISCHAR( 1 ) ) && HB_ISCHAR( 2 ) )
+  else if( ISNUMPAR(2) && ( ISQICON(1) || HB_ISCHAR(1) ) && HB_ISCHAR(2) )
   {
     /*
     QStandardItem( const QIcon & icon, const QString & text )
     */
-    QStandardItem * obj = new QStandardItem( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt4xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ), PQSTRING( 2 ) );
+    QStandardItem * obj = new QStandardItem( HB_ISOBJECT(1) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(1) ) : QIcon( hb_parc(1) ), PQSTRING(2) );
     Qt4xHb::returnNewObject( obj, false );
   }
-  else if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
   {
     /*
     QStandardItem( int rows, int columns = 1 )
     */
-    QStandardItem * obj = new QStandardItem( PINT( 1 ), OPINT( 2, 1 ) );
+    QStandardItem * obj = new QStandardItem( PINT(1), OPINT( 2, 1 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QSTANDARDITEM_DELETE )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -191,12 +190,12 @@ virtual QVariant data( int role = Qt::UserRole + 1 ) const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_DATA )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
+    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
     {
 #endif
       QVariant * ptr = new QVariant( obj->data( OPINT( 1, Qt::UserRole + 1 ) ) );
@@ -205,7 +204,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_DATA )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -216,25 +215,25 @@ virtual void setData( const QVariant & value, int role = Qt::UserRole + 1 )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETDATA )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQVARIANT( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && ISQVARIANT(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      obj->setData( *PQVARIANT( 1 ), OPINT( 2, Qt::UserRole + 1 ) );
+      obj->setData( *PQVARIANT(1), OPINT( 2, Qt::UserRole + 1 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -242,12 +241,12 @@ QString text() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_TEXT )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->text() );
@@ -255,7 +254,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TEXT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -266,25 +265,25 @@ void setText( const QString & text )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETTEXT )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setText( PQSTRING( 1 ) );
+      obj->setText( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -292,12 +291,12 @@ QIcon icon() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_ICON )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QIcon * ptr = new QIcon( obj->icon() );
@@ -306,7 +305,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ICON )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -317,25 +316,25 @@ void setIcon( const QIcon & icon )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETICON )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ( ISQICON( 1) || HB_ISCHAR( 1 ) ) )
+    if( ISNUMPAR(1) && ( ISQICON( 1) || HB_ISCHAR(1) ) )
     {
 #endif
-      obj->setIcon( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt4xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ) );
+      obj->setIcon( HB_ISOBJECT(1) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(1) ) : QIcon( hb_parc(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -343,12 +342,12 @@ QString toolTip() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_TOOLTIP )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->toolTip() );
@@ -356,7 +355,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TOOLTIP )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -367,25 +366,25 @@ void setToolTip( const QString & toolTip )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETTOOLTIP )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setToolTip( PQSTRING( 1 ) );
+      obj->setToolTip( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -393,12 +392,12 @@ QString statusTip() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_STATUSTIP )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->statusTip() );
@@ -406,7 +405,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_STATUSTIP )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -417,25 +416,25 @@ void setStatusTip( const QString & statusTip )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETSTATUSTIP )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setStatusTip( PQSTRING( 1 ) );
+      obj->setStatusTip( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -443,12 +442,12 @@ QString whatsThis() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_WHATSTHIS )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->whatsThis() );
@@ -456,7 +455,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_WHATSTHIS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -467,25 +466,25 @@ void setWhatsThis( const QString & whatsThis )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETWHATSTHIS )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setWhatsThis( PQSTRING( 1 ) );
+      obj->setWhatsThis( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -493,12 +492,12 @@ QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SIZEHINT )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
@@ -507,7 +506,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_SIZEHINT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -518,25 +517,25 @@ void setSizeHint( const QSize & sizeHint )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETSIZEHINT )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
+    if( ISNUMPAR(1) && ISQSIZE(1) )
     {
 #endif
-      obj->setSizeHint( *PQSIZE( 1 ) );
+      obj->setSizeHint( *PQSIZE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -544,12 +543,12 @@ QFont font() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_FONT )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QFont * ptr = new QFont( obj->font() );
@@ -558,7 +557,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_FONT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -569,25 +568,25 @@ void setFont( const QFont & font )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETFONT )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQFONT( 1 ) )
+    if( ISNUMPAR(1) && ISQFONT(1) )
     {
 #endif
-      obj->setFont( *PQFONT( 1 ) );
+      obj->setFont( *PQFONT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -595,12 +594,12 @@ Qt::Alignment textAlignment() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_TEXTALIGNMENT )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->textAlignment() );
@@ -608,7 +607,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TEXTALIGNMENT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -619,25 +618,25 @@ void setTextAlignment( Qt::Alignment textAlignment )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETTEXTALIGNMENT )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setTextAlignment( ( Qt::Alignment ) hb_parni( 1 ) );
+      obj->setTextAlignment( ( Qt::Alignment ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -645,12 +644,12 @@ QBrush background() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_BACKGROUND )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QBrush * ptr = new QBrush( obj->background() );
@@ -659,7 +658,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_BACKGROUND )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -670,25 +669,25 @@ void setBackground( const QBrush & brush )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETBACKGROUND )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQBRUSH( 1 ) )
+    if( ISNUMPAR(1) && ISQBRUSH(1) )
     {
 #endif
-      obj->setBackground( *PQBRUSH( 1 ) );
+      obj->setBackground( *PQBRUSH(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -696,12 +695,12 @@ QBrush foreground() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_FOREGROUND )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QBrush * ptr = new QBrush( obj->foreground() );
@@ -710,7 +709,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_FOREGROUND )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -721,25 +720,25 @@ void setForeground( const QBrush & brush )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETFOREGROUND )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQBRUSH( 1 ) )
+    if( ISNUMPAR(1) && ISQBRUSH(1) )
     {
 #endif
-      obj->setForeground( *PQBRUSH( 1 ) );
+      obj->setForeground( *PQBRUSH(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -747,12 +746,12 @@ Qt::CheckState checkState() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_CHECKSTATE )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->checkState() );
@@ -760,7 +759,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_CHECKSTATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -771,25 +770,25 @@ void setCheckState( Qt::CheckState checkState )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETCHECKSTATE )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setCheckState( ( Qt::CheckState ) hb_parni( 1 ) );
+      obj->setCheckState( ( Qt::CheckState ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -797,12 +796,12 @@ QString accessibleText() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_ACCESSIBLETEXT )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->accessibleText() );
@@ -810,7 +809,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ACCESSIBLETEXT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -821,25 +820,25 @@ void setAccessibleText( const QString & accessibleText )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETACCESSIBLETEXT )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setAccessibleText( PQSTRING( 1 ) );
+      obj->setAccessibleText( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -847,12 +846,12 @@ QString accessibleDescription() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_ACCESSIBLEDESCRIPTION )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->accessibleDescription() );
@@ -860,7 +859,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ACCESSIBLEDESCRIPTION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -871,25 +870,25 @@ void setAccessibleDescription( const QString & accessibleDescription )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETACCESSIBLEDESCRIPTION )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setAccessibleDescription( PQSTRING( 1 ) );
+      obj->setAccessibleDescription( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -897,12 +896,12 @@ Qt::ItemFlags flags() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_FLAGS )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->flags() );
@@ -910,7 +909,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_FLAGS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -921,25 +920,25 @@ void setFlags( Qt::ItemFlags flags )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETFLAGS )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setFlags( ( Qt::ItemFlags ) hb_parni( 1 ) );
+      obj->setFlags( ( Qt::ItemFlags ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -947,12 +946,12 @@ bool isEnabled() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_ISENABLED )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isEnabled() );
@@ -960,7 +959,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISENABLED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -971,25 +970,25 @@ void setEnabled( bool enabled )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETENABLED )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setEnabled( PBOOL( 1 ) );
+      obj->setEnabled( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -997,12 +996,12 @@ bool isEditable() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_ISEDITABLE )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isEditable() );
@@ -1010,7 +1009,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISEDITABLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1021,25 +1020,25 @@ void setEditable( bool editable )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETEDITABLE )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setEditable( PBOOL( 1 ) );
+      obj->setEditable( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1047,12 +1046,12 @@ bool isSelectable() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_ISSELECTABLE )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isSelectable() );
@@ -1060,7 +1059,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISSELECTABLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1071,25 +1070,25 @@ void setSelectable( bool selectable )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETSELECTABLE )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setSelectable( PBOOL( 1 ) );
+      obj->setSelectable( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1097,12 +1096,12 @@ bool isCheckable() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_ISCHECKABLE )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isCheckable() );
@@ -1110,7 +1109,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISCHECKABLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1121,25 +1120,25 @@ void setCheckable( bool checkable )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETCHECKABLE )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setCheckable( PBOOL( 1 ) );
+      obj->setCheckable( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1147,12 +1146,12 @@ bool isTristate() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_ISTRISTATE )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isTristate() );
@@ -1160,7 +1159,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISTRISTATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1171,25 +1170,25 @@ void setTristate( bool tristate )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETTRISTATE )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setTristate( PBOOL( 1 ) );
+      obj->setTristate( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1197,12 +1196,12 @@ bool isDragEnabled() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_ISDRAGENABLED )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isDragEnabled() );
@@ -1210,7 +1209,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISDRAGENABLED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1221,25 +1220,25 @@ void setDragEnabled( bool dragEnabled )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETDRAGENABLED )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setDragEnabled( PBOOL( 1 ) );
+      obj->setDragEnabled( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1247,12 +1246,12 @@ bool isDropEnabled() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_ISDROPENABLED )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isDropEnabled() );
@@ -1260,7 +1259,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ISDROPENABLED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1271,25 +1270,25 @@ void setDropEnabled( bool dropEnabled )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETDROPENABLED )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setDropEnabled( PBOOL( 1 ) );
+      obj->setDropEnabled( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1297,12 +1296,12 @@ QStandardItem * parent() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_PARENT )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QStandardItem * ptr = obj->parent();
@@ -1311,7 +1310,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_PARENT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1322,12 +1321,12 @@ int row() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_ROW )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->row() );
@@ -1335,7 +1334,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ROW )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1346,12 +1345,12 @@ int column() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_COLUMN )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->column() );
@@ -1359,7 +1358,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_COLUMN )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1370,12 +1369,12 @@ QModelIndex index() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_INDEX )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->index() );
@@ -1384,7 +1383,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_INDEX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1395,12 +1394,12 @@ QStandardItemModel * model() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_MODEL )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QStandardItemModel * ptr = obj->model();
@@ -1409,7 +1408,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_MODEL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1420,12 +1419,12 @@ int rowCount() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_ROWCOUNT )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->rowCount() );
@@ -1433,7 +1432,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_ROWCOUNT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1444,25 +1443,25 @@ void setRowCount( int rows )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETROWCOUNT )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setRowCount( PINT( 1 ) );
+      obj->setRowCount( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1470,12 +1469,12 @@ int columnCount() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_COLUMNCOUNT )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->columnCount() );
@@ -1483,7 +1482,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_COLUMNCOUNT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1494,25 +1493,25 @@ void setColumnCount( int columns )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SETCOLUMNCOUNT )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setColumnCount( PINT( 1 ) );
+      obj->setColumnCount( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1520,12 +1519,12 @@ bool hasChildren() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_HASCHILDREN )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->hasChildren() );
@@ -1533,7 +1532,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_HASCHILDREN )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1544,21 +1543,21 @@ QStandardItem * child( int row, int column = 0 ) const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_CHILD )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QStandardItem * ptr = obj->child( PINT( 1 ), OPINT( 2, 0 ) );
+      QStandardItem * ptr = obj->child( PINT(1), OPINT( 2, 0 ) );
       Qt4xHb::createReturnClass( ptr, "QSTANDARDITEM", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1566,48 +1565,48 @@ HB_FUNC_STATIC( QSTANDARDITEM_CHILD )
 
 HB_FUNC_STATIC( QSTANDARDITEM_SETCHILD )
 {
-  if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQSTANDARDITEM( 3 ) )
+  if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQSTANDARDITEM(3) )
   {
     /*
     void setChild( int row, int column, QStandardItem * item )
     */
-    QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->setChild( PINT( 1 ), PINT( 2 ), PQSTANDARDITEM( 3 ) );
+      obj->setChild( PINT(1), PINT(2), PQSTANDARDITEM(3) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQSTANDARDITEM( 2 ) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && ISQSTANDARDITEM(2) )
   {
     /*
     void setChild( int row, QStandardItem * item )
     */
-    QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->setChild( PINT( 1 ), PQSTANDARDITEM( 2 ) );
+      obj->setChild( PINT(1), PQSTANDARDITEM(2) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QSTANDARDITEM_INSERTROW )
 {
-  if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISARRAY( 2 ) )
+  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISARRAY(2) )
   {
     /*
     void insertRow( int row, const QList<QStandardItem *> & items )
     */
-    QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
@@ -1616,30 +1615,30 @@ HB_FUNC_STATIC( QSTANDARDITEM_INSERTROW )
       int nLen2 = hb_arrayLen( aList2 );
       for( int i2 = 0; i2 < nLen2; i2++ )
       {
-        par2 << static_cast< QStandardItem * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
+        par2 << static_cast<QStandardItem*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
       }
-      obj->insertRow( PINT( 1 ), par2 );
+      obj->insertRow( PINT(1), par2 );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQSTANDARDITEM( 2 ) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && ISQSTANDARDITEM(2) )
   {
     /*
     void insertRow( int row, QStandardItem * item )
     */
-    QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->insertRow( PINT( 1 ), PQSTANDARDITEM( 2 ) );
+      obj->insertRow( PINT(1), PQSTANDARDITEM(2) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -1648,12 +1647,12 @@ void insertColumn( int column, const QList<QStandardItem *> & items )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_INSERTCOLUMN )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISARRAY( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISARRAY(2) )
     {
 #endif
       QList<QStandardItem *> par2;
@@ -1661,29 +1660,29 @@ HB_FUNC_STATIC( QSTANDARDITEM_INSERTCOLUMN )
       int nLen2 = hb_arrayLen( aList2 );
       for( int i2 = 0; i2 < nLen2; i2++ )
       {
-        par2 << static_cast< QStandardItem * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
+        par2 << static_cast<QStandardItem*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
       }
-      obj->insertColumn( PINT( 1 ), par2 );
+      obj->insertColumn( PINT(1), par2 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 HB_FUNC_STATIC( QSTANDARDITEM_INSERTROWS )
 {
-  if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISARRAY( 2 ) )
+  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISARRAY(2) )
   {
     /*
     void insertRows( int row, const QList<QStandardItem *> & items )
     */
-    QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
@@ -1692,30 +1691,30 @@ HB_FUNC_STATIC( QSTANDARDITEM_INSERTROWS )
       int nLen2 = hb_arrayLen( aList2 );
       for( int i2 = 0; i2 < nLen2; i2++ )
       {
-        par2 << static_cast< QStandardItem * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
+        par2 << static_cast<QStandardItem*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
       }
-      obj->insertRows( PINT( 1 ), par2 );
+      obj->insertRows( PINT(1), par2 );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     /*
     void insertRows( int row, int count )
     */
-    QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->insertRows( PINT( 1 ), PINT( 2 ) );
+      obj->insertRows( PINT(1), PINT(2) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -1724,25 +1723,25 @@ void insertColumns( int column, int count )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_INSERTCOLUMNS )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      obj->insertColumns( PINT( 1 ), PINT( 2 ) );
+      obj->insertColumns( PINT(1), PINT(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1750,25 +1749,25 @@ void removeRow( int row )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_REMOVEROW )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->removeRow( PINT( 1 ) );
+      obj->removeRow( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1776,25 +1775,25 @@ void removeColumn( int column )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_REMOVECOLUMN )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->removeColumn( PINT( 1 ) );
+      obj->removeColumn( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1802,25 +1801,25 @@ void removeRows( int row, int count )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_REMOVEROWS )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      obj->removeRows( PINT( 1 ), PINT( 2 ) );
+      obj->removeRows( PINT(1), PINT(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1828,35 +1827,35 @@ void removeColumns( int column, int count )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_REMOVECOLUMNS )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      obj->removeColumns( PINT( 1 ), PINT( 2 ) );
+      obj->removeColumns( PINT(1), PINT(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 HB_FUNC_STATIC( QSTANDARDITEM_APPENDROW )
 {
-  if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
+  if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
     /*
     void appendRow( const QList<QStandardItem *> & items )
     */
-    QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
@@ -1865,30 +1864,30 @@ HB_FUNC_STATIC( QSTANDARDITEM_APPENDROW )
       int nLen1 = hb_arrayLen( aList1 );
       for( int i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << static_cast< QStandardItem * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+        par1 << static_cast<QStandardItem*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
       }
       obj->appendRow( par1 );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR( 1 ) && ISQSTANDARDITEM( 1 ) )
+  else if( ISNUMPAR(1) && ISQSTANDARDITEM(1) )
   {
     /*
     void appendRow( QStandardItem * item )
     */
-    QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->appendRow( PQSTANDARDITEM( 1 ) );
+      obj->appendRow( PQSTANDARDITEM(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -1897,12 +1896,12 @@ void appendRows( const QList<QStandardItem *> & items )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_APPENDROWS )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
+    if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
       QList<QStandardItem *> par1;
@@ -1910,19 +1909,19 @@ HB_FUNC_STATIC( QSTANDARDITEM_APPENDROWS )
       int nLen1 = hb_arrayLen( aList1 );
       for( int i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << static_cast< QStandardItem * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+        par1 << static_cast<QStandardItem*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
       }
       obj->appendRows( par1 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1930,12 +1929,12 @@ void appendColumn( const QList<QStandardItem *> & items )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_APPENDCOLUMN )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
+    if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
       QList<QStandardItem *> par1;
@@ -1943,19 +1942,19 @@ HB_FUNC_STATIC( QSTANDARDITEM_APPENDCOLUMN )
       int nLen1 = hb_arrayLen( aList1 );
       for( int i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << static_cast< QStandardItem * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+        par1 << static_cast<QStandardItem*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
       }
       obj->appendColumn( par1 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1963,21 +1962,21 @@ QStandardItem * takeChild( int row, int column = 0 )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_TAKECHILD )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QStandardItem * ptr = obj->takeChild( PINT( 1 ), OPINT( 2, 0 ) );
+      QStandardItem * ptr = obj->takeChild( PINT(1), OPINT( 2, 0 ) );
       Qt4xHb::createReturnClass( ptr, "QSTANDARDITEM", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1988,28 +1987,28 @@ QList<QStandardItem *> takeRow( int row )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_TAKEROW )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QList<QStandardItem *> list = obj->takeRow( PINT( 1 ) );
+      QList<QStandardItem *> list = obj->takeRow( PINT(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSTANDARDITEM" );
-      PHB_ITEM pArray = hb_itemArrayNew( 0 );
+      PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
         {
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
-          hb_vmDo( 0 );
+          hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, static_cast< QStandardItem * >( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast<QStandardItem*>( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -2025,7 +2024,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKEROW )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -2036,28 +2035,28 @@ QList<QStandardItem *> takeColumn( int column )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_TAKECOLUMN )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QList<QStandardItem *> list = obj->takeColumn( PINT( 1 ) );
+      QList<QStandardItem *> list = obj->takeColumn( PINT(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QSTANDARDITEM" );
-      PHB_ITEM pArray = hb_itemArrayNew( 0 );
+      PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
         {
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
-          hb_vmDo( 0 );
+          hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, static_cast< QStandardItem * >( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast<QStandardItem*>( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -2073,7 +2072,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TAKECOLUMN )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -2084,25 +2083,25 @@ void sortChildren( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_SORTCHILDREN )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      obj->sortChildren( PINT( 1 ), HB_ISNIL( 2 ) ? ( Qt::SortOrder ) Qt::AscendingOrder : ( Qt::SortOrder ) hb_parni( 2 ) );
+      obj->sortChildren( PINT(1), HB_ISNIL(2) ? ( Qt::SortOrder ) Qt::AscendingOrder : ( Qt::SortOrder ) hb_parni(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -2110,12 +2109,12 @@ QStandardItem * clone() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_CLONE )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QStandardItem * ptr = obj->clone();
@@ -2124,7 +2123,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_CLONE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -2135,12 +2134,12 @@ virtual int type() const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_TYPE )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->type() );
@@ -2148,7 +2147,7 @@ HB_FUNC_STATIC( QSTANDARDITEM_TYPE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -2159,25 +2158,25 @@ virtual void read( QDataStream & in )
 */
 HB_FUNC_STATIC( QSTANDARDITEM_READ )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQDATASTREAM( 1 ) )
+    if( ISNUMPAR(1) && ISQDATASTREAM(1) )
     {
 #endif
-      obj->read( *PQDATASTREAM( 1 ) );
+      obj->read( *PQDATASTREAM(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -2185,52 +2184,52 @@ virtual void write( QDataStream & out ) const
 */
 HB_FUNC_STATIC( QSTANDARDITEM_WRITE )
 {
-  QStandardItem * obj = static_cast< QStandardItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStandardItem * obj = static_cast<QStandardItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQDATASTREAM( 1 ) )
+    if( ISNUMPAR(1) && ISQDATASTREAM(1) )
     {
 #endif
-      obj->write( *PQDATASTREAM( 1 ) );
+      obj->write( *PQDATASTREAM(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 HB_FUNC_STATIC( QSTANDARDITEM_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
   hb_itemReturn( self );
@@ -2255,15 +2254,15 @@ HB_FUNC_STATIC( QSTANDARDITEM_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
   hb_itemReturn( self );

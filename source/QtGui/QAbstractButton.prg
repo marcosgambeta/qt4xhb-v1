@@ -78,21 +78,20 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTBUTTON_DELETE )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -100,12 +99,12 @@ bool autoExclusive() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOEXCLUSIVE )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->autoExclusive() );
@@ -113,7 +112,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOEXCLUSIVE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -124,12 +123,12 @@ bool autoRepeat() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEAT )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->autoRepeat() );
@@ -137,7 +136,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEAT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -148,12 +147,12 @@ int autoRepeatDelay() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATDELAY )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->autoRepeatDelay() );
@@ -161,7 +160,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATDELAY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -172,12 +171,12 @@ int autoRepeatInterval() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATINTERVAL )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->autoRepeatInterval() );
@@ -185,7 +184,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_AUTOREPEATINTERVAL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -196,12 +195,12 @@ QButtonGroup * group() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_GROUP )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QButtonGroup * ptr = obj->group();
@@ -210,7 +209,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_GROUP )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -221,12 +220,12 @@ QIcon icon() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ICON )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QIcon * ptr = new QIcon( obj->icon() );
@@ -235,7 +234,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ICON )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -246,12 +245,12 @@ QSize iconSize() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ICONSIZE )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSize * ptr = new QSize( obj->iconSize() );
@@ -260,7 +259,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ICONSIZE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -271,12 +270,12 @@ bool isCheckable() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKABLE )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isCheckable() );
@@ -284,7 +283,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKABLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -295,12 +294,12 @@ bool isChecked() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKED )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isChecked() );
@@ -308,7 +307,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISCHECKED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -319,12 +318,12 @@ bool isDown() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ISDOWN )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isDown() );
@@ -332,7 +331,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ISDOWN )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -343,25 +342,25 @@ void setAutoExclusive( bool )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOEXCLUSIVE )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setAutoExclusive( PBOOL( 1 ) );
+      obj->setAutoExclusive( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -369,25 +368,25 @@ void setAutoRepeat( bool )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEAT )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setAutoRepeat( PBOOL( 1 ) );
+      obj->setAutoRepeat( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -395,25 +394,25 @@ void setAutoRepeatDelay( int )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATDELAY )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setAutoRepeatDelay( PINT( 1 ) );
+      obj->setAutoRepeatDelay( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -421,25 +420,25 @@ void setAutoRepeatInterval( int )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETAUTOREPEATINTERVAL )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setAutoRepeatInterval( PINT( 1 ) );
+      obj->setAutoRepeatInterval( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -447,25 +446,25 @@ void setCheckable( bool )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKABLE )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setCheckable( PBOOL( 1 ) );
+      obj->setCheckable( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -473,25 +472,25 @@ void setDown( bool )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETDOWN )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setDown( PBOOL( 1 ) );
+      obj->setDown( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -499,25 +498,25 @@ void setIcon( const QIcon & icon )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETICON )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ( ISQICON( 1) || HB_ISCHAR( 1 ) ) )
+    if( ISNUMPAR(1) && ( ISQICON( 1) || HB_ISCHAR(1) ) )
     {
 #endif
-      obj->setIcon( HB_ISOBJECT( 1 ) ? *static_cast< QIcon * >( Qt4xHb::itemGetPtr( 1 ) ) : QIcon( hb_parc( 1 ) ) );
+      obj->setIcon( HB_ISOBJECT(1) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(1) ) : QIcon( hb_parc(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -525,25 +524,25 @@ void setShortcut( const QKeySequence & key )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETSHORTCUT )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQKEYSEQUENCE( 1 ) )
+    if( ISNUMPAR(1) && ISQKEYSEQUENCE(1) )
     {
 #endif
-      obj->setShortcut( *PQKEYSEQUENCE( 1 ) );
+      obj->setShortcut( *PQKEYSEQUENCE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -551,25 +550,25 @@ void setText( const QString & text )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETTEXT )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setText( PQSTRING( 1 ) );
+      obj->setText( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -577,12 +576,12 @@ QKeySequence shortcut() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SHORTCUT )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QKeySequence * ptr = new QKeySequence( obj->shortcut() );
@@ -591,7 +590,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_SHORTCUT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -602,12 +601,12 @@ QString text() const
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_TEXT )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->text() );
@@ -615,7 +614,7 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_TEXT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -626,12 +625,12 @@ void animateClick( int msec = 100 )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_ANIMATECLICK )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
+    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
     {
 #endif
       obj->animateClick( OPINT( 1, 100 ) );
@@ -639,12 +638,12 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_ANIMATECLICK )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -652,12 +651,12 @@ void click()
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_CLICK )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->click();
@@ -665,12 +664,12 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_CLICK )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -678,25 +677,25 @@ void setChecked( bool )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETCHECKED )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setChecked( PBOOL( 1 ) );
+      obj->setChecked( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -704,25 +703,25 @@ void setIconSize( const QSize & size )
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_SETICONSIZE )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
+    if( ISNUMPAR(1) && ISQSIZE(1) )
     {
 #endif
-      obj->setIconSize( *PQSIZE( 1 ) );
+      obj->setIconSize( *PQSIZE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -730,12 +729,12 @@ void toggle()
 */
 HB_FUNC_STATIC( QABSTRACTBUTTON_TOGGLE )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->toggle();
@@ -743,12 +742,12 @@ HB_FUNC_STATIC( QABSTRACTBUTTON_TOGGLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 void QAbstractButtonSlots_connect_signal( const QString & signal, const QString & slot );

@@ -65,7 +65,7 @@ RETURN
 
 HB_FUNC_STATIC( QSIZEPOLICY_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QSizePolicy()
@@ -73,43 +73,42 @@ HB_FUNC_STATIC( QSIZEPOLICY_NEW )
     QSizePolicy * obj = new QSizePolicy();
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     /*
     QSizePolicy( QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical )
     */
-    QSizePolicy * obj = new QSizePolicy( ( QSizePolicy::Policy ) hb_parni( 1 ), ( QSizePolicy::Policy ) hb_parni( 2 ) );
+    QSizePolicy * obj = new QSizePolicy( ( QSizePolicy::Policy ) hb_parni(1), ( QSizePolicy::Policy ) hb_parni(2) );
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
+  else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
     /*
     QSizePolicy( QSizePolicy::Policy horizontal, QSizePolicy::Policy vertical, QSizePolicy::ControlType type )
     */
-    QSizePolicy * obj = new QSizePolicy( ( QSizePolicy::Policy ) hb_parni( 1 ), ( QSizePolicy::Policy ) hb_parni( 2 ), ( QSizePolicy::ControlType ) hb_parni( 3 ) );
+    QSizePolicy * obj = new QSizePolicy( ( QSizePolicy::Policy ) hb_parni(1), ( QSizePolicy::Policy ) hb_parni(2), ( QSizePolicy::ControlType ) hb_parni(3) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QSIZEPOLICY_DELETE )
 {
-  QSizePolicy * obj = static_cast< QSizePolicy * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSizePolicy * obj = static_cast<QSizePolicy*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -117,12 +116,12 @@ QSizePolicy::ControlType controlType() const
 */
 HB_FUNC_STATIC( QSIZEPOLICY_CONTROLTYPE )
 {
-  QSizePolicy * obj = static_cast< QSizePolicy * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSizePolicy * obj = static_cast<QSizePolicy*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->controlType() );
@@ -130,7 +129,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_CONTROLTYPE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -141,12 +140,12 @@ Qt::Orientations expandingDirections() const
 */
 HB_FUNC_STATIC( QSIZEPOLICY_EXPANDINGDIRECTIONS )
 {
-  QSizePolicy * obj = static_cast< QSizePolicy * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSizePolicy * obj = static_cast<QSizePolicy*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->expandingDirections() );
@@ -154,7 +153,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_EXPANDINGDIRECTIONS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -165,12 +164,12 @@ bool hasHeightForWidth() const
 */
 HB_FUNC_STATIC( QSIZEPOLICY_HASHEIGHTFORWIDTH )
 {
-  QSizePolicy * obj = static_cast< QSizePolicy * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSizePolicy * obj = static_cast<QSizePolicy*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->hasHeightForWidth() );
@@ -178,7 +177,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_HASHEIGHTFORWIDTH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -189,12 +188,12 @@ bool hasWidthForHeight() const
 */
 HB_FUNC_STATIC( QSIZEPOLICY_HASWIDTHFORHEIGHT )
 {
-  QSizePolicy * obj = static_cast< QSizePolicy * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSizePolicy * obj = static_cast<QSizePolicy*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->hasWidthForHeight() );
@@ -202,7 +201,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_HASWIDTHFORHEIGHT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -213,12 +212,12 @@ QSizePolicy::Policy horizontalPolicy() const
 */
 HB_FUNC_STATIC( QSIZEPOLICY_HORIZONTALPOLICY )
 {
-  QSizePolicy * obj = static_cast< QSizePolicy * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSizePolicy * obj = static_cast<QSizePolicy*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->horizontalPolicy() );
@@ -226,7 +225,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_HORIZONTALPOLICY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -237,12 +236,12 @@ int horizontalStretch() const
 */
 HB_FUNC_STATIC( QSIZEPOLICY_HORIZONTALSTRETCH )
 {
-  QSizePolicy * obj = static_cast< QSizePolicy * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSizePolicy * obj = static_cast<QSizePolicy*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->horizontalStretch() );
@@ -250,7 +249,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_HORIZONTALSTRETCH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -261,25 +260,25 @@ void setControlType( QSizePolicy::ControlType type )
 */
 HB_FUNC_STATIC( QSIZEPOLICY_SETCONTROLTYPE )
 {
-  QSizePolicy * obj = static_cast< QSizePolicy * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSizePolicy * obj = static_cast<QSizePolicy*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setControlType( ( QSizePolicy::ControlType ) hb_parni( 1 ) );
+      obj->setControlType( ( QSizePolicy::ControlType ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -287,25 +286,25 @@ void setHeightForWidth( bool dependent )
 */
 HB_FUNC_STATIC( QSIZEPOLICY_SETHEIGHTFORWIDTH )
 {
-  QSizePolicy * obj = static_cast< QSizePolicy * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSizePolicy * obj = static_cast<QSizePolicy*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setHeightForWidth( PBOOL( 1 ) );
+      obj->setHeightForWidth( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -313,25 +312,25 @@ void setHorizontalPolicy( QSizePolicy::Policy policy )
 */
 HB_FUNC_STATIC( QSIZEPOLICY_SETHORIZONTALPOLICY )
 {
-  QSizePolicy * obj = static_cast< QSizePolicy * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSizePolicy * obj = static_cast<QSizePolicy*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setHorizontalPolicy( ( QSizePolicy::Policy ) hb_parni( 1 ) );
+      obj->setHorizontalPolicy( ( QSizePolicy::Policy ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -339,25 +338,25 @@ void setHorizontalStretch( uchar stretchFactor )
 */
 HB_FUNC_STATIC( QSIZEPOLICY_SETHORIZONTALSTRETCH )
 {
-  QSizePolicy * obj = static_cast< QSizePolicy * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSizePolicy * obj = static_cast<QSizePolicy*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setHorizontalStretch( PUCHAR( 1 ) );
+      obj->setHorizontalStretch( PUCHAR(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -365,25 +364,25 @@ void setVerticalPolicy( QSizePolicy::Policy policy )
 */
 HB_FUNC_STATIC( QSIZEPOLICY_SETVERTICALPOLICY )
 {
-  QSizePolicy * obj = static_cast< QSizePolicy * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSizePolicy * obj = static_cast<QSizePolicy*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setVerticalPolicy( ( QSizePolicy::Policy ) hb_parni( 1 ) );
+      obj->setVerticalPolicy( ( QSizePolicy::Policy ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -391,25 +390,25 @@ void setVerticalStretch( uchar stretchFactor )
 */
 HB_FUNC_STATIC( QSIZEPOLICY_SETVERTICALSTRETCH )
 {
-  QSizePolicy * obj = static_cast< QSizePolicy * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSizePolicy * obj = static_cast<QSizePolicy*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setVerticalStretch( PUCHAR( 1 ) );
+      obj->setVerticalStretch( PUCHAR(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -417,25 +416,25 @@ void setWidthForHeight( bool dependent )
 */
 HB_FUNC_STATIC( QSIZEPOLICY_SETWIDTHFORHEIGHT )
 {
-  QSizePolicy * obj = static_cast< QSizePolicy * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSizePolicy * obj = static_cast<QSizePolicy*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setWidthForHeight( PBOOL( 1 ) );
+      obj->setWidthForHeight( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -443,12 +442,12 @@ void transpose()
 */
 HB_FUNC_STATIC( QSIZEPOLICY_TRANSPOSE )
 {
-  QSizePolicy * obj = static_cast< QSizePolicy * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSizePolicy * obj = static_cast<QSizePolicy*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->transpose();
@@ -456,12 +455,12 @@ HB_FUNC_STATIC( QSIZEPOLICY_TRANSPOSE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -469,12 +468,12 @@ QSizePolicy::Policy verticalPolicy() const
 */
 HB_FUNC_STATIC( QSIZEPOLICY_VERTICALPOLICY )
 {
-  QSizePolicy * obj = static_cast< QSizePolicy * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSizePolicy * obj = static_cast<QSizePolicy*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->verticalPolicy() );
@@ -482,7 +481,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_VERTICALPOLICY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -493,12 +492,12 @@ int verticalStretch() const
 */
 HB_FUNC_STATIC( QSIZEPOLICY_VERTICALSTRETCH )
 {
-  QSizePolicy * obj = static_cast< QSizePolicy * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSizePolicy * obj = static_cast<QSizePolicy*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->verticalStretch() );
@@ -506,7 +505,7 @@ HB_FUNC_STATIC( QSIZEPOLICY_VERTICALSTRETCH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -516,27 +515,27 @@ HB_FUNC_STATIC( QSIZEPOLICY_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
   hb_itemReturn( self );
@@ -561,15 +560,15 @@ HB_FUNC_STATIC( QSIZEPOLICY_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
   hb_itemReturn( self );

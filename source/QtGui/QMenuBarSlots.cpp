@@ -22,7 +22,7 @@ QMenuBarSlots::~QMenuBarSlots()
 
 void QMenuBarSlots::hovered( QAction * action )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "hovered(QAction*)" );
 
@@ -40,7 +40,7 @@ void QMenuBarSlots::hovered( QAction * action )
 
 void QMenuBarSlots::triggered( QAction * action )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "triggered(QAction*)" );
 
@@ -58,9 +58,9 @@ void QMenuBarSlots::triggered( QAction * action )
 
 void QMenuBarSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMenuBar * obj = qobject_cast< QMenuBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMenuBar * obj = qobject_cast<QMenuBar*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QMenuBarSlots * s = QCoreApplication::instance()->findChild<QMenuBarSlots *>();
 

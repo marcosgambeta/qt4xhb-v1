@@ -45,7 +45,7 @@ RETURN
 
 HB_FUNC_STATIC( QLINEARGRADIENT_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QLinearGradient()
@@ -53,43 +53,42 @@ HB_FUNC_STATIC( QLINEARGRADIENT_NEW )
     QLinearGradient * obj = new QLinearGradient();
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISNUMPAR( 2 ) && ISQPOINTF( 1 ) && ISQPOINTF( 2 ) )
+  else if( ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2) )
   {
     /*
     QLinearGradient( const QPointF & start, const QPointF & finalStop )
     */
-    QLinearGradient * obj = new QLinearGradient( *PQPOINTF( 1 ), *PQPOINTF( 2 ) );
+    QLinearGradient * obj = new QLinearGradient( *PQPOINTF(1), *PQPOINTF(2) );
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISNUMPAR( 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) )
+  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
     /*
     QLinearGradient( qreal xStart, qreal yStart, qreal xFinalStop, qreal yFinalStop )
     */
-    QLinearGradient * obj = new QLinearGradient( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ), PQREAL( 4 ) );
+    QLinearGradient * obj = new QLinearGradient( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QLINEARGRADIENT_DELETE )
 {
-  QLinearGradient * obj = static_cast< QLinearGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLinearGradient * obj = static_cast<QLinearGradient*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -97,12 +96,12 @@ QPointF finalStop() const
 */
 HB_FUNC_STATIC( QLINEARGRADIENT_FINALSTOP )
 {
-  QLinearGradient * obj = static_cast< QLinearGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLinearGradient * obj = static_cast<QLinearGradient*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QPointF * ptr = new QPointF( obj->finalStop() );
@@ -111,7 +110,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_FINALSTOP )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -119,73 +118,73 @@ HB_FUNC_STATIC( QLINEARGRADIENT_FINALSTOP )
 
 HB_FUNC_STATIC( QLINEARGRADIENT_SETFINALSTOP )
 {
-  if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
+  if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
     /*
     void setFinalStop( const QPointF & stop )
     */
-    QLinearGradient * obj = static_cast< QLinearGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QLinearGradient * obj = static_cast<QLinearGradient*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->setFinalStop( *PQPOINTF( 1 ) );
+      obj->setFinalStop( *PQPOINTF(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     /*
     void setFinalStop( qreal x, qreal y )
     */
-    QLinearGradient * obj = static_cast< QLinearGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QLinearGradient * obj = static_cast<QLinearGradient*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->setFinalStop( PQREAL( 1 ), PQREAL( 2 ) );
+      obj->setFinalStop( PQREAL(1), PQREAL(2) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QLINEARGRADIENT_SETSTART )
 {
-  if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
+  if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
     /*
     void setStart( const QPointF & start )
     */
-    QLinearGradient * obj = static_cast< QLinearGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QLinearGradient * obj = static_cast<QLinearGradient*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->setStart( *PQPOINTF( 1 ) );
+      obj->setStart( *PQPOINTF(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     /*
     void setStart( qreal x, qreal y )
     */
-    QLinearGradient * obj = static_cast< QLinearGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QLinearGradient * obj = static_cast<QLinearGradient*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->setStart( PQREAL( 1 ), PQREAL( 2 ) );
+      obj->setStart( PQREAL(1), PQREAL(2) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -194,12 +193,12 @@ QPointF start() const
 */
 HB_FUNC_STATIC( QLINEARGRADIENT_START )
 {
-  QLinearGradient * obj = static_cast< QLinearGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QLinearGradient * obj = static_cast<QLinearGradient*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QPointF * ptr = new QPointF( obj->start() );
@@ -208,7 +207,7 @@ HB_FUNC_STATIC( QLINEARGRADIENT_START )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

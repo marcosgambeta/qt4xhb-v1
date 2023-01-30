@@ -22,7 +22,7 @@ QToolBoxSlots::~QToolBoxSlots()
 
 void QToolBoxSlots::currentChanged( int index )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentChanged(int)" );
 
@@ -40,9 +40,9 @@ void QToolBoxSlots::currentChanged( int index )
 
 void QToolBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QToolBox * obj = qobject_cast< QToolBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QToolBox * obj = qobject_cast<QToolBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QToolBoxSlots * s = QCoreApplication::instance()->findChild<QToolBoxSlots *>();
 

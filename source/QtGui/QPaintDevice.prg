@@ -62,19 +62,18 @@ RETURN
 
 HB_FUNC_STATIC( QPAINTDEVICE_DELETE )
 {
-  QPaintDevice * obj = static_cast< QPaintDevice * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPaintDevice * obj = static_cast<QPaintDevice*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -82,12 +81,12 @@ int colorCount() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_COLORCOUNT )
 {
-  QPaintDevice * obj = static_cast< QPaintDevice * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPaintDevice * obj = static_cast<QPaintDevice*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->colorCount() );
@@ -95,7 +94,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_COLORCOUNT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -106,12 +105,12 @@ int depth() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_DEPTH )
 {
-  QPaintDevice * obj = static_cast< QPaintDevice * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPaintDevice * obj = static_cast<QPaintDevice*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->depth() );
@@ -119,7 +118,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_DEPTH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -130,12 +129,12 @@ int height() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_HEIGHT )
 {
-  QPaintDevice * obj = static_cast< QPaintDevice * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPaintDevice * obj = static_cast<QPaintDevice*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->height() );
@@ -143,7 +142,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_HEIGHT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -154,12 +153,12 @@ int heightMM() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_HEIGHTMM )
 {
-  QPaintDevice * obj = static_cast< QPaintDevice * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPaintDevice * obj = static_cast<QPaintDevice*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->heightMM() );
@@ -167,7 +166,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_HEIGHTMM )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -178,12 +177,12 @@ int logicalDpiX() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_LOGICALDPIX )
 {
-  QPaintDevice * obj = static_cast< QPaintDevice * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPaintDevice * obj = static_cast<QPaintDevice*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->logicalDpiX() );
@@ -191,7 +190,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_LOGICALDPIX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -202,12 +201,12 @@ int logicalDpiY() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_LOGICALDPIY )
 {
-  QPaintDevice * obj = static_cast< QPaintDevice * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPaintDevice * obj = static_cast<QPaintDevice*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->logicalDpiY() );
@@ -215,7 +214,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_LOGICALDPIY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -226,12 +225,12 @@ int numColors() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_NUMCOLORS )
 {
-  QPaintDevice * obj = static_cast< QPaintDevice * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPaintDevice * obj = static_cast<QPaintDevice*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->numColors() );
@@ -239,7 +238,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_NUMCOLORS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -250,12 +249,12 @@ virtual QPaintEngine * paintEngine() const = 0
 */
 HB_FUNC_STATIC( QPAINTDEVICE_PAINTENGINE )
 {
-  QPaintDevice * obj = static_cast< QPaintDevice * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPaintDevice * obj = static_cast<QPaintDevice*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QPaintEngine * ptr = obj->paintEngine();
@@ -264,7 +263,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_PAINTENGINE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -275,12 +274,12 @@ bool paintingActive() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_PAINTINGACTIVE )
 {
-  QPaintDevice * obj = static_cast< QPaintDevice * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPaintDevice * obj = static_cast<QPaintDevice*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->paintingActive() );
@@ -288,7 +287,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_PAINTINGACTIVE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -299,12 +298,12 @@ int physicalDpiX() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_PHYSICALDPIX )
 {
-  QPaintDevice * obj = static_cast< QPaintDevice * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPaintDevice * obj = static_cast<QPaintDevice*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->physicalDpiX() );
@@ -312,7 +311,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_PHYSICALDPIX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -323,12 +322,12 @@ int physicalDpiY() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_PHYSICALDPIY )
 {
-  QPaintDevice * obj = static_cast< QPaintDevice * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPaintDevice * obj = static_cast<QPaintDevice*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->physicalDpiY() );
@@ -336,7 +335,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_PHYSICALDPIY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -347,12 +346,12 @@ int width() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_WIDTH )
 {
-  QPaintDevice * obj = static_cast< QPaintDevice * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPaintDevice * obj = static_cast<QPaintDevice*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->width() );
@@ -360,7 +359,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_WIDTH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -371,12 +370,12 @@ int widthMM() const
 */
 HB_FUNC_STATIC( QPAINTDEVICE_WIDTHMM )
 {
-  QPaintDevice * obj = static_cast< QPaintDevice * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPaintDevice * obj = static_cast<QPaintDevice*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->widthMM() );
@@ -384,7 +383,7 @@ HB_FUNC_STATIC( QPAINTDEVICE_WIDTHMM )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -394,27 +393,27 @@ HB_FUNC_STATIC( QPAINTDEVICE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
   hb_itemReturn( self );
@@ -439,15 +438,15 @@ HB_FUNC_STATIC( QPAINTDEVICE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
   hb_itemReturn( self );

@@ -61,7 +61,7 @@ RETURN
 
 HB_FUNC_STATIC( QPOLYGONF_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QPolygonF()
@@ -69,23 +69,23 @@ HB_FUNC_STATIC( QPOLYGONF_NEW )
     QPolygonF * obj = new QPolygonF();
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     /*
     QPolygonF( int size )
     */
-    QPolygonF * obj = new QPolygonF( PINT( 1 ) );
+    QPolygonF * obj = new QPolygonF( PINT(1) );
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISNUMPAR( 1 ) && ISQPOLYGONF( 1 ) )
+  else if( ISNUMPAR(1) && ISQPOLYGONF(1) )
   {
     /*
     QPolygonF( const QPolygonF & polygon )
     */
-    QPolygonF * obj = new QPolygonF( *PQPOLYGONF( 1 ) );
+    QPolygonF * obj = new QPolygonF( *PQPOLYGONF(1) );
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
+  else if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
     /*
     QPolygonF( const QVector<QPointF> & points )
@@ -95,48 +95,47 @@ HB_FUNC_STATIC( QPOLYGONF_NEW )
     int nLen1 = hb_arrayLen( aList1 );
     for( int i1 = 0; i1 < nLen1; i1++ )
     {
-      par1 << *static_cast< QPointF * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+      par1 << *static_cast<QPointF*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
     }
     QPolygonF * obj = new QPolygonF( par1 );
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
+  else if( ISNUMPAR(1) && ISQRECTF(1) )
   {
     /*
     QPolygonF( const QRectF & rectangle )
     */
-    QPolygonF * obj = new QPolygonF( *PQRECTF( 1 ) );
+    QPolygonF * obj = new QPolygonF( *PQRECTF(1) );
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISNUMPAR( 1 ) && ISQPOLYGON( 1 ) )
+  else if( ISNUMPAR(1) && ISQPOLYGON(1) )
   {
     /*
     QPolygonF( const QPolygon & polygon )
     */
-    QPolygonF * obj = new QPolygonF( *PQPOLYGON( 1 ) );
+    QPolygonF * obj = new QPolygonF( *PQPOLYGON(1) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QPOLYGONF_DELETE )
 {
-  QPolygonF * obj = static_cast< QPolygonF * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPolygonF * obj = static_cast<QPolygonF*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -144,12 +143,12 @@ QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QPOLYGONF_BOUNDINGRECT )
 {
-  QPolygonF * obj = static_cast< QPolygonF * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPolygonF * obj = static_cast<QPolygonF*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QRectF * ptr = new QRectF( obj->boundingRect() );
@@ -158,7 +157,7 @@ HB_FUNC_STATIC( QPOLYGONF_BOUNDINGRECT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -169,20 +168,20 @@ bool containsPoint( const QPointF & point, Qt::FillRule fillRule ) const
 */
 HB_FUNC_STATIC( QPOLYGONF_CONTAINSPOINT )
 {
-  QPolygonF * obj = static_cast< QPolygonF * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPolygonF * obj = static_cast<QPolygonF*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQPOINTF( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2) )
     {
 #endif
-      RBOOL( obj->containsPoint( *PQPOINTF( 1 ), ( Qt::FillRule ) hb_parni( 2 ) ) );
+      RBOOL( obj->containsPoint( *PQPOINTF(1), ( Qt::FillRule ) hb_parni(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -193,21 +192,21 @@ QPolygonF intersected( const QPolygonF & r ) const
 */
 HB_FUNC_STATIC( QPOLYGONF_INTERSECTED )
 {
-  QPolygonF * obj = static_cast< QPolygonF * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPolygonF * obj = static_cast<QPolygonF*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQPOLYGONF( 1 ) )
+    if( ISNUMPAR(1) && ISQPOLYGONF(1) )
     {
 #endif
-      QPolygonF * ptr = new QPolygonF( obj->intersected( *PQPOLYGONF( 1 ) ) );
+      QPolygonF * ptr = new QPolygonF( obj->intersected( *PQPOLYGONF(1) ) );
       Qt4xHb::createReturnClass( ptr, "QPOLYGONF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -218,12 +217,12 @@ bool isClosed() const
 */
 HB_FUNC_STATIC( QPOLYGONF_ISCLOSED )
 {
-  QPolygonF * obj = static_cast< QPolygonF * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPolygonF * obj = static_cast<QPolygonF*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isClosed() );
@@ -231,7 +230,7 @@ HB_FUNC_STATIC( QPOLYGONF_ISCLOSED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -242,21 +241,21 @@ QPolygonF subtracted( const QPolygonF & r ) const
 */
 HB_FUNC_STATIC( QPOLYGONF_SUBTRACTED )
 {
-  QPolygonF * obj = static_cast< QPolygonF * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPolygonF * obj = static_cast<QPolygonF*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQPOLYGONF( 1 ) )
+    if( ISNUMPAR(1) && ISQPOLYGONF(1) )
     {
 #endif
-      QPolygonF * ptr = new QPolygonF( obj->subtracted( *PQPOLYGONF( 1 ) ) );
+      QPolygonF * ptr = new QPolygonF( obj->subtracted( *PQPOLYGONF(1) ) );
       Qt4xHb::createReturnClass( ptr, "QPOLYGONF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -267,25 +266,25 @@ void swap( QPolygonF & other )
 */
 HB_FUNC_STATIC( QPOLYGONF_SWAP )
 {
-  QPolygonF * obj = static_cast< QPolygonF * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPolygonF * obj = static_cast<QPolygonF*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQPOLYGONF( 1 ) )
+    if( ISNUMPAR(1) && ISQPOLYGONF(1) )
     {
 #endif
-      obj->swap( *PQPOLYGONF( 1 ) );
+      obj->swap( *PQPOLYGONF(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -293,12 +292,12 @@ QPolygon toPolygon() const
 */
 HB_FUNC_STATIC( QPOLYGONF_TOPOLYGON )
 {
-  QPolygonF * obj = static_cast< QPolygonF * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPolygonF * obj = static_cast<QPolygonF*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QPolygon * ptr = new QPolygon( obj->toPolygon() );
@@ -307,7 +306,7 @@ HB_FUNC_STATIC( QPOLYGONF_TOPOLYGON )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -315,71 +314,71 @@ HB_FUNC_STATIC( QPOLYGONF_TOPOLYGON )
 
 HB_FUNC_STATIC( QPOLYGONF_TRANSLATE )
 {
-  if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
+  if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
     /*
     void translate( const QPointF & offset )
     */
-    QPolygonF * obj = static_cast< QPolygonF * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QPolygonF * obj = static_cast<QPolygonF*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->translate( *PQPOINTF( 1 ) );
+      obj->translate( *PQPOINTF(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     /*
     void translate( qreal dx, qreal dy )
     */
-    QPolygonF * obj = static_cast< QPolygonF * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QPolygonF * obj = static_cast<QPolygonF*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->translate( PQREAL( 1 ), PQREAL( 2 ) );
+      obj->translate( PQREAL(1), PQREAL(2) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QPOLYGONF_TRANSLATED )
 {
-  if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
+  if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
     /*
     QPolygonF translated( const QPointF & offset ) const
     */
-    QPolygonF * obj = static_cast< QPolygonF * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QPolygonF * obj = static_cast<QPolygonF*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      QPolygonF * ptr = new QPolygonF( obj->translated( *PQPOINTF( 1 ) ) );
+      QPolygonF * ptr = new QPolygonF( obj->translated( *PQPOINTF(1) ) );
       Qt4xHb::createReturnClass( ptr, "QPOLYGONF", true );
     }
   }
-  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     /*
     QPolygonF translated( qreal dx, qreal dy ) const
     */
-    QPolygonF * obj = static_cast< QPolygonF * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QPolygonF * obj = static_cast<QPolygonF*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      QPolygonF * ptr = new QPolygonF( obj->translated( PQREAL( 1 ), PQREAL( 2 ) ) );
+      QPolygonF * ptr = new QPolygonF( obj->translated( PQREAL(1), PQREAL(2) ) );
       Qt4xHb::createReturnClass( ptr, "QPOLYGONF", true );
     }
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -388,21 +387,21 @@ QPolygonF united( const QPolygonF & r ) const
 */
 HB_FUNC_STATIC( QPOLYGONF_UNITED )
 {
-  QPolygonF * obj = static_cast< QPolygonF * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPolygonF * obj = static_cast<QPolygonF*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQPOLYGONF( 1 ) )
+    if( ISNUMPAR(1) && ISQPOLYGONF(1) )
     {
 #endif
-      QPolygonF * ptr = new QPolygonF( obj->united( *PQPOLYGONF( 1 ) ) );
+      QPolygonF * ptr = new QPolygonF( obj->united( *PQPOLYGONF(1) ) );
       Qt4xHb::createReturnClass( ptr, "QPOLYGONF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -412,27 +411,27 @@ HB_FUNC_STATIC( QPOLYGONF_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
   hb_itemReturn( self );
@@ -457,15 +456,15 @@ HB_FUNC_STATIC( QPOLYGONF_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
   hb_itemReturn( self );

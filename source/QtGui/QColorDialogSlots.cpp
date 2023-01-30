@@ -22,7 +22,7 @@ QColorDialogSlots::~QColorDialogSlots()
 
 void QColorDialogSlots::colorSelected( const QColor & color )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "colorSelected(QColor)" );
 
@@ -40,7 +40,7 @@ void QColorDialogSlots::colorSelected( const QColor & color )
 
 void QColorDialogSlots::currentColorChanged( const QColor & color )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentColorChanged(QColor)" );
 
@@ -58,9 +58,9 @@ void QColorDialogSlots::currentColorChanged( const QColor & color )
 
 void QColorDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QColorDialog * obj = qobject_cast< QColorDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QColorDialog * obj = qobject_cast<QColorDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QColorDialogSlots * s = QCoreApplication::instance()->findChild<QColorDialogSlots *>();
 

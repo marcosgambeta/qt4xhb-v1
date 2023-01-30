@@ -22,7 +22,7 @@ QAbstractItemDelegateSlots::~QAbstractItemDelegateSlots()
 
 void QAbstractItemDelegateSlots::closeEditor( QWidget * editor, QAbstractItemDelegate::EndEditHint hint )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "closeEditor(QWidget*,QAbstractItemDelegate::EndEditHint)" );
 
@@ -30,7 +30,7 @@ void QAbstractItemDelegateSlots::closeEditor( QWidget * editor, QAbstractItemDel
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTITEMDELEGATE" );
     PHB_ITEM pEditor = Qt4xHb::Signals_return_qobject( editor, "QWIDGET" );
-    PHB_ITEM pHint = hb_itemPutNI( NULL, static_cast< int >( hint ) );
+    PHB_ITEM pHint = hb_itemPutNI( NULL, static_cast<int >( hint ) );
 
     hb_vmEvalBlockV( cb, 3, pSender, pEditor, pHint );
 
@@ -42,7 +42,7 @@ void QAbstractItemDelegateSlots::closeEditor( QWidget * editor, QAbstractItemDel
 
 void QAbstractItemDelegateSlots::commitData( QWidget * editor )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "commitData(QWidget*)" );
 
@@ -60,7 +60,7 @@ void QAbstractItemDelegateSlots::commitData( QWidget * editor )
 
 void QAbstractItemDelegateSlots::sizeHintChanged( const QModelIndex & index )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "sizeHintChanged(QModelIndex)" );
 
@@ -78,9 +78,9 @@ void QAbstractItemDelegateSlots::sizeHintChanged( const QModelIndex & index )
 
 void QAbstractItemDelegateSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractItemDelegate * obj = qobject_cast< QAbstractItemDelegate * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemDelegate * obj = qobject_cast<QAbstractItemDelegate*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QAbstractItemDelegateSlots * s = QCoreApplication::instance()->findChild<QAbstractItemDelegateSlots *>();
 

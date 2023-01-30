@@ -22,7 +22,7 @@ QItemSelectionModelSlots::~QItemSelectionModelSlots()
 
 void QItemSelectionModelSlots::currentChanged( const QModelIndex & current, const QModelIndex & previous )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentChanged(QModelIndex,QModelIndex)" );
 
@@ -42,7 +42,7 @@ void QItemSelectionModelSlots::currentChanged( const QModelIndex & current, cons
 
 void QItemSelectionModelSlots::currentColumnChanged( const QModelIndex & current, const QModelIndex & previous )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentColumnChanged(QModelIndex,QModelIndex)" );
 
@@ -62,7 +62,7 @@ void QItemSelectionModelSlots::currentColumnChanged( const QModelIndex & current
 
 void QItemSelectionModelSlots::currentRowChanged( const QModelIndex & current, const QModelIndex & previous )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentRowChanged(QModelIndex,QModelIndex)" );
 
@@ -82,7 +82,7 @@ void QItemSelectionModelSlots::currentRowChanged( const QModelIndex & current, c
 
 void QItemSelectionModelSlots::selectionChanged( const QItemSelection & selected, const QItemSelection & deselected )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "selectionChanged(QItemSelection,QItemSelection)" );
 
@@ -102,9 +102,9 @@ void QItemSelectionModelSlots::selectionChanged( const QItemSelection & selected
 
 void QItemSelectionModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QItemSelectionModel * obj = qobject_cast< QItemSelectionModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QItemSelectionModel * obj = qobject_cast<QItemSelectionModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QItemSelectionModelSlots * s = QCoreApplication::instance()->findChild<QItemSelectionModelSlots *>();
 

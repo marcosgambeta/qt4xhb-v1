@@ -44,7 +44,7 @@ RETURN
 
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_NEW )
 {
-  if( ISBETWEEN( 0, 2 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+  if( ISBETWEEN(0, 2) && ( HB_ISNUM(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
   {
     /*
     QStyleOptionComplex( int version = QStyleOptionComplex::Version, int type = QStyleOptionComplex::SO_Complex )
@@ -52,35 +52,34 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_NEW )
     QStyleOptionComplex * obj = new QStyleOptionComplex( OPINT( 1, QStyleOptionComplex::Version ), OPINT( 2, QStyleOptionComplex::SO_Complex ) );
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONCOMPLEX( 1 ) )
+  else if( ISNUMPAR(1) && ISQSTYLEOPTIONCOMPLEX(1) )
   {
     /*
     QStyleOptionComplex( const QStyleOptionComplex & other )
     */
-    QStyleOptionComplex * obj = new QStyleOptionComplex( *PQSTYLEOPTIONCOMPLEX( 1 ) );
+    QStyleOptionComplex * obj = new QStyleOptionComplex( *PQSTYLEOPTIONCOMPLEX(1) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_DELETE )
 {
-  QStyleOptionComplex * obj = static_cast< QStyleOptionComplex * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyleOptionComplex * obj = static_cast<QStyleOptionComplex*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -88,37 +87,37 @@ QStyle::SubControls subControls
 */
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SUBCONTROLS )
 {
-  QStyleOptionComplex * obj = static_cast< QStyleOptionComplex * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyleOptionComplex * obj = static_cast<QStyleOptionComplex*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
       RENUM( obj->subControls );
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 }
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SETSUBCONTROLS )
 {
-  QStyleOptionComplex * obj = static_cast< QStyleOptionComplex * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyleOptionComplex * obj = static_cast<QStyleOptionComplex*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
-      obj->subControls= ( QStyle::SubControls ) hb_parni( 1 );
+      obj->subControls= ( QStyle::SubControls ) hb_parni(1);
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -126,37 +125,37 @@ QStyle::SubControls activeSubControls
 */
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_ACTIVESUBCONTROLS )
 {
-  QStyleOptionComplex * obj = static_cast< QStyleOptionComplex * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyleOptionComplex * obj = static_cast<QStyleOptionComplex*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
       RENUM( obj->activeSubControls );
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 }
 HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_SETACTIVESUBCONTROLS )
 {
-  QStyleOptionComplex * obj = static_cast< QStyleOptionComplex * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyleOptionComplex * obj = static_cast<QStyleOptionComplex*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
-      obj->activeSubControls= ( QStyle::SubControls ) hb_parni( 1 );
+      obj->activeSubControls= ( QStyle::SubControls ) hb_parni(1);
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 #pragma ENDDUMP

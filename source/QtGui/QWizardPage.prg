@@ -64,14 +64,14 @@ QWizardPage( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QWIZARDPAGE_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QWizardPage * obj = new QWizardPage( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -80,20 +80,20 @@ QString buttonText( QWizard::WizardButton which ) const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_BUTTONTEXT )
 {
-  QWizardPage * obj = qobject_cast< QWizardPage * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWizardPage * obj = qobject_cast<QWizardPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->buttonText( ( QWizard::WizardButton ) hb_parni( 1 ) ) );
+      RQSTRING( obj->buttonText( ( QWizard::WizardButton ) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -104,12 +104,12 @@ virtual void cleanupPage()
 */
 HB_FUNC_STATIC( QWIZARDPAGE_CLEANUPPAGE )
 {
-  QWizardPage * obj = qobject_cast< QWizardPage * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWizardPage * obj = qobject_cast<QWizardPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->cleanupPage();
@@ -117,12 +117,12 @@ HB_FUNC_STATIC( QWIZARDPAGE_CLEANUPPAGE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -130,12 +130,12 @@ virtual void initializePage()
 */
 HB_FUNC_STATIC( QWIZARDPAGE_INITIALIZEPAGE )
 {
-  QWizardPage * obj = qobject_cast< QWizardPage * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWizardPage * obj = qobject_cast<QWizardPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->initializePage();
@@ -143,12 +143,12 @@ HB_FUNC_STATIC( QWIZARDPAGE_INITIALIZEPAGE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -156,12 +156,12 @@ bool isCommitPage() const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_ISCOMMITPAGE )
 {
-  QWizardPage * obj = qobject_cast< QWizardPage * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWizardPage * obj = qobject_cast<QWizardPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isCommitPage() );
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_ISCOMMITPAGE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -180,12 +180,12 @@ virtual bool isComplete() const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_ISCOMPLETE )
 {
-  QWizardPage * obj = qobject_cast< QWizardPage * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWizardPage * obj = qobject_cast<QWizardPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isComplete() );
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_ISCOMPLETE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -204,12 +204,12 @@ bool isFinalPage() const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_ISFINALPAGE )
 {
-  QWizardPage * obj = qobject_cast< QWizardPage * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWizardPage * obj = qobject_cast<QWizardPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isFinalPage() );
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_ISFINALPAGE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -228,12 +228,12 @@ virtual int nextId() const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_NEXTID )
 {
-  QWizardPage * obj = qobject_cast< QWizardPage * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWizardPage * obj = qobject_cast<QWizardPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->nextId() );
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_NEXTID )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -252,21 +252,21 @@ QPixmap pixmap( QWizard::WizardPixmap which ) const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_PIXMAP )
 {
-  QWizardPage * obj = qobject_cast< QWizardPage * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWizardPage * obj = qobject_cast<QWizardPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QPixmap * ptr = new QPixmap( obj->pixmap( ( QWizard::WizardPixmap ) hb_parni( 1 ) ) );
+      QPixmap * ptr = new QPixmap( obj->pixmap( ( QWizard::WizardPixmap ) hb_parni(1) ) );
       Qt4xHb::createReturnClass( ptr, "QPIXMAP", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -277,25 +277,25 @@ void setButtonText( QWizard::WizardButton which, const QString & text )
 */
 HB_FUNC_STATIC( QWIZARDPAGE_SETBUTTONTEXT )
 {
-  QWizardPage * obj = qobject_cast< QWizardPage * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWizardPage * obj = qobject_cast<QWizardPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISCHAR( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
     {
 #endif
-      obj->setButtonText( ( QWizard::WizardButton ) hb_parni( 1 ), PQSTRING( 2 ) );
+      obj->setButtonText( ( QWizard::WizardButton ) hb_parni(1), PQSTRING(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -303,25 +303,25 @@ void setCommitPage( bool commitPage )
 */
 HB_FUNC_STATIC( QWIZARDPAGE_SETCOMMITPAGE )
 {
-  QWizardPage * obj = qobject_cast< QWizardPage * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWizardPage * obj = qobject_cast<QWizardPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setCommitPage( PBOOL( 1 ) );
+      obj->setCommitPage( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -329,25 +329,25 @@ void setFinalPage( bool finalPage )
 */
 HB_FUNC_STATIC( QWIZARDPAGE_SETFINALPAGE )
 {
-  QWizardPage * obj = qobject_cast< QWizardPage * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWizardPage * obj = qobject_cast<QWizardPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setFinalPage( PBOOL( 1 ) );
+      obj->setFinalPage( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -355,25 +355,25 @@ void setPixmap( QWizard::WizardPixmap which, const QPixmap & pixmap )
 */
 HB_FUNC_STATIC( QWIZARDPAGE_SETPIXMAP )
 {
-  QWizardPage * obj = qobject_cast< QWizardPage * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWizardPage * obj = qobject_cast<QWizardPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQPIXMAP( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQPIXMAP(2) )
     {
 #endif
-      obj->setPixmap( ( QWizard::WizardPixmap ) hb_parni( 1 ), *PQPIXMAP( 2 ) );
+      obj->setPixmap( ( QWizard::WizardPixmap ) hb_parni(1), *PQPIXMAP(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -381,25 +381,25 @@ void setSubTitle( const QString & subTitle )
 */
 HB_FUNC_STATIC( QWIZARDPAGE_SETSUBTITLE )
 {
-  QWizardPage * obj = qobject_cast< QWizardPage * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWizardPage * obj = qobject_cast<QWizardPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setSubTitle( PQSTRING( 1 ) );
+      obj->setSubTitle( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -407,25 +407,25 @@ void setTitle( const QString & title )
 */
 HB_FUNC_STATIC( QWIZARDPAGE_SETTITLE )
 {
-  QWizardPage * obj = qobject_cast< QWizardPage * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWizardPage * obj = qobject_cast<QWizardPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setTitle( PQSTRING( 1 ) );
+      obj->setTitle( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -433,12 +433,12 @@ QString subTitle() const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_SUBTITLE )
 {
-  QWizardPage * obj = qobject_cast< QWizardPage * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWizardPage * obj = qobject_cast<QWizardPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->subTitle() );
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_SUBTITLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -457,12 +457,12 @@ QString title() const
 */
 HB_FUNC_STATIC( QWIZARDPAGE_TITLE )
 {
-  QWizardPage * obj = qobject_cast< QWizardPage * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWizardPage * obj = qobject_cast<QWizardPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->title() );
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_TITLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -481,12 +481,12 @@ virtual bool validatePage()
 */
 HB_FUNC_STATIC( QWIZARDPAGE_VALIDATEPAGE )
 {
-  QWizardPage * obj = qobject_cast< QWizardPage * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWizardPage * obj = qobject_cast<QWizardPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->validatePage() );
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_VALIDATEPAGE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

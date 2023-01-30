@@ -39,19 +39,18 @@ RETURN
 
 HB_FUNC_STATIC( QCLIPBOARDEVENT_DELETE )
 {
-  QClipboardEvent * obj = static_cast< QClipboardEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QClipboardEvent * obj = static_cast<QClipboardEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 #pragma ENDDUMP

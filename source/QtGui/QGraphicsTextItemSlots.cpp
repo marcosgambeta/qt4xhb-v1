@@ -22,7 +22,7 @@ QGraphicsTextItemSlots::~QGraphicsTextItemSlots()
 
 void QGraphicsTextItemSlots::linkActivated( const QString & link )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "linkActivated(QString)" );
 
@@ -40,7 +40,7 @@ void QGraphicsTextItemSlots::linkActivated( const QString & link )
 
 void QGraphicsTextItemSlots::linkHovered( const QString & link )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "linkHovered(QString)" );
 
@@ -58,9 +58,9 @@ void QGraphicsTextItemSlots::linkHovered( const QString & link )
 
 void QGraphicsTextItemSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QGraphicsTextItemSlots * s = QCoreApplication::instance()->findChild<QGraphicsTextItemSlots *>();
 

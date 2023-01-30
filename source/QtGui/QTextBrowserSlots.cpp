@@ -22,7 +22,7 @@ QTextBrowserSlots::~QTextBrowserSlots()
 
 void QTextBrowserSlots::anchorClicked( const QUrl & link )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "anchorClicked(QUrl)" );
 
@@ -40,7 +40,7 @@ void QTextBrowserSlots::anchorClicked( const QUrl & link )
 
 void QTextBrowserSlots::backwardAvailable( bool available )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "backwardAvailable(bool)" );
 
@@ -58,7 +58,7 @@ void QTextBrowserSlots::backwardAvailable( bool available )
 
 void QTextBrowserSlots::forwardAvailable( bool available )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "forwardAvailable(bool)" );
 
@@ -76,7 +76,7 @@ void QTextBrowserSlots::forwardAvailable( bool available )
 
 void QTextBrowserSlots::highlighted( const QUrl & link )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "highlighted(QUrl)" );
 
@@ -94,7 +94,7 @@ void QTextBrowserSlots::highlighted( const QUrl & link )
 
 void QTextBrowserSlots::highlighted( const QString & link )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "highlighted(QString)" );
 
@@ -112,7 +112,7 @@ void QTextBrowserSlots::highlighted( const QString & link )
 
 void QTextBrowserSlots::historyChanged()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "historyChanged()" );
 
@@ -128,7 +128,7 @@ void QTextBrowserSlots::historyChanged()
 
 void QTextBrowserSlots::sourceChanged( const QUrl & src )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "sourceChanged(QUrl)" );
 
@@ -146,9 +146,9 @@ void QTextBrowserSlots::sourceChanged( const QUrl & src )
 
 void QTextBrowserSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTextBrowser * obj = qobject_cast< QTextBrowser * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QTextBrowser * obj = qobject_cast<QTextBrowser*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QTextBrowserSlots * s = QCoreApplication::instance()->findChild<QTextBrowserSlots *>();
 

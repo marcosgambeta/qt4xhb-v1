@@ -22,7 +22,7 @@ QShortcutSlots::~QShortcutSlots()
 
 void QShortcutSlots::activated()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activated()" );
 
@@ -38,7 +38,7 @@ void QShortcutSlots::activated()
 
 void QShortcutSlots::activatedAmbiguously()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activatedAmbiguously()" );
 
@@ -54,9 +54,9 @@ void QShortcutSlots::activatedAmbiguously()
 
 void QShortcutSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QShortcut * obj = qobject_cast< QShortcut * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QShortcut * obj = qobject_cast<QShortcut*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QShortcutSlots * s = QCoreApplication::instance()->findChild<QShortcutSlots *>();
 

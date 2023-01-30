@@ -22,7 +22,7 @@ QCalendarWidgetSlots::~QCalendarWidgetSlots()
 
 void QCalendarWidgetSlots::activated( const QDate & date )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activated(QDate)" );
 
@@ -40,7 +40,7 @@ void QCalendarWidgetSlots::activated( const QDate & date )
 
 void QCalendarWidgetSlots::clicked( const QDate & date )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "clicked(QDate)" );
 
@@ -58,7 +58,7 @@ void QCalendarWidgetSlots::clicked( const QDate & date )
 
 void QCalendarWidgetSlots::currentPageChanged( int year, int month )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentPageChanged(int,int)" );
 
@@ -78,7 +78,7 @@ void QCalendarWidgetSlots::currentPageChanged( int year, int month )
 
 void QCalendarWidgetSlots::selectionChanged()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "selectionChanged()" );
 
@@ -94,9 +94,9 @@ void QCalendarWidgetSlots::selectionChanged()
 
 void QCalendarWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCalendarWidget * obj = qobject_cast< QCalendarWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QCalendarWidget * obj = qobject_cast<QCalendarWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QCalendarWidgetSlots * s = QCoreApplication::instance()->findChild<QCalendarWidgetSlots *>();
 

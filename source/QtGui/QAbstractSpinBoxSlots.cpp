@@ -22,7 +22,7 @@ QAbstractSpinBoxSlots::~QAbstractSpinBoxSlots()
 
 void QAbstractSpinBoxSlots::editingFinished()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "editingFinished()" );
 
@@ -38,9 +38,9 @@ void QAbstractSpinBoxSlots::editingFinished()
 
 void QAbstractSpinBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractSpinBox * obj = qobject_cast< QAbstractSpinBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractSpinBox * obj = qobject_cast<QAbstractSpinBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QAbstractSpinBoxSlots * s = QCoreApplication::instance()->findChild<QAbstractSpinBoxSlots *>();
 

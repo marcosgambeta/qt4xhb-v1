@@ -22,7 +22,7 @@ QToolButtonSlots::~QToolButtonSlots()
 
 void QToolButtonSlots::triggered( QAction * action )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "triggered(QAction*)" );
 
@@ -40,9 +40,9 @@ void QToolButtonSlots::triggered( QAction * action )
 
 void QToolButtonSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QToolButton * obj = qobject_cast< QToolButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QToolButton * obj = qobject_cast<QToolButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QToolButtonSlots * s = QCoreApplication::instance()->findChild<QToolButtonSlots *>();
 

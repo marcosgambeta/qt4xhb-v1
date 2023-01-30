@@ -22,7 +22,7 @@ QWidgetSlots::~QWidgetSlots()
 
 void QWidgetSlots::customContextMenuRequested( const QPoint & pos )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "customContextMenuRequested(QPoint)" );
 
@@ -40,9 +40,9 @@ void QWidgetSlots::customContextMenuRequested( const QPoint & pos )
 
 void QWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QWidget * obj = qobject_cast< QWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWidget * obj = qobject_cast<QWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QWidgetSlots * s = QCoreApplication::instance()->findChild<QWidgetSlots *>();
 

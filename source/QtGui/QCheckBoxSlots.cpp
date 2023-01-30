@@ -22,7 +22,7 @@ QCheckBoxSlots::~QCheckBoxSlots()
 
 void QCheckBoxSlots::stateChanged( int state )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "stateChanged(int)" );
 
@@ -40,9 +40,9 @@ void QCheckBoxSlots::stateChanged( int state )
 
 void QCheckBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCheckBox * obj = qobject_cast< QCheckBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QCheckBox * obj = qobject_cast<QCheckBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QCheckBoxSlots * s = QCoreApplication::instance()->findChild<QCheckBoxSlots *>();
 

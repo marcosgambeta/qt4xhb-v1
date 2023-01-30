@@ -42,7 +42,7 @@ RETURN
 
 HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QStyleOptionFocusRect()
@@ -50,17 +50,17 @@ HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_NEW )
     QStyleOptionFocusRect * obj = new QStyleOptionFocusRect();
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONFOCUSRECT( 1 ) )
+  else if( ISNUMPAR(1) && ISQSTYLEOPTIONFOCUSRECT(1) )
   {
     /*
     QStyleOptionFocusRect( const QStyleOptionFocusRect & other )
     */
-    QStyleOptionFocusRect * obj = new QStyleOptionFocusRect( *PQSTYLEOPTIONFOCUSRECT( 1 ) );
+    QStyleOptionFocusRect * obj = new QStyleOptionFocusRect( *PQSTYLEOPTIONFOCUSRECT(1) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -69,38 +69,38 @@ QColor backgroundColor
 */
 HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_BACKGROUNDCOLOR )
 {
-  QStyleOptionFocusRect * obj = static_cast< QStyleOptionFocusRect * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyleOptionFocusRect * obj = static_cast<QStyleOptionFocusRect*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
       QColor * ptr = new QColor( obj->backgroundColor );
       Qt4xHb::createReturnClass( ptr, "QCOLOR", true );
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 }
 HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_SETBACKGROUNDCOLOR )
 {
-  QStyleOptionFocusRect * obj = static_cast< QStyleOptionFocusRect * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyleOptionFocusRect * obj = static_cast<QStyleOptionFocusRect*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    if( ISNUMPAR( 1 ) && ISQCOLOR( 1 ) )
+    if( ISNUMPAR(1) && ISQCOLOR(1) )
     {
-      obj->backgroundColor= *PQCOLOR( 1 );
+      obj->backgroundColor= *PQCOLOR(1);
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 #pragma ENDDUMP

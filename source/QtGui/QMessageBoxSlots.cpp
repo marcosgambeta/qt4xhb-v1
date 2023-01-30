@@ -22,7 +22,7 @@ QMessageBoxSlots::~QMessageBoxSlots()
 
 void QMessageBoxSlots::buttonClicked( QAbstractButton * button )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "buttonClicked(QAbstractButton*)" );
 
@@ -40,9 +40,9 @@ void QMessageBoxSlots::buttonClicked( QAbstractButton * button )
 
 void QMessageBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMessageBox * obj = qobject_cast< QMessageBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMessageBox * obj = qobject_cast<QMessageBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QMessageBoxSlots * s = QCoreApplication::instance()->findChild<QMessageBoxSlots *>();
 

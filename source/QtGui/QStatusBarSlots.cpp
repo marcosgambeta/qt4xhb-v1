@@ -22,7 +22,7 @@ QStatusBarSlots::~QStatusBarSlots()
 
 void QStatusBarSlots::messageChanged( const QString & message )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "messageChanged(QString)" );
 
@@ -40,9 +40,9 @@ void QStatusBarSlots::messageChanged( const QString & message )
 
 void QStatusBarSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QStatusBar * obj = qobject_cast< QStatusBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QStatusBar * obj = qobject_cast<QStatusBar*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QStatusBarSlots * s = QCoreApplication::instance()->findChild<QStatusBarSlots *>();
 

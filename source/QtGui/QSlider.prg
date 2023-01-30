@@ -50,7 +50,7 @@ RETURN
 
 HB_FUNC_STATIC( QSLIDER_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     /*
     QSlider( QWidget * parent = 0 )
@@ -58,37 +58,36 @@ HB_FUNC_STATIC( QSLIDER_NEW )
     QSlider * obj = new QSlider( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
-  else if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
   {
     /*
     QSlider( Qt::Orientation orientation, QWidget * parent = 0 )
     */
-    QSlider * obj = new QSlider( ( Qt::Orientation ) hb_parni( 1 ), OPQWIDGET( 2, 0 ) );
+    QSlider * obj = new QSlider( ( Qt::Orientation ) hb_parni(1), OPQWIDGET( 2, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QSLIDER_DELETE )
 {
-  QSlider * obj = qobject_cast< QSlider * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSlider * obj = qobject_cast<QSlider*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -96,25 +95,25 @@ void setTickInterval( int ti )
 */
 HB_FUNC_STATIC( QSLIDER_SETTICKINTERVAL )
 {
-  QSlider * obj = qobject_cast< QSlider * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSlider * obj = qobject_cast<QSlider*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setTickInterval( PINT( 1 ) );
+      obj->setTickInterval( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -122,25 +121,25 @@ void setTickPosition( QSlider::TickPosition position )
 */
 HB_FUNC_STATIC( QSLIDER_SETTICKPOSITION )
 {
-  QSlider * obj = qobject_cast< QSlider * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSlider * obj = qobject_cast<QSlider*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setTickPosition( ( QSlider::TickPosition ) hb_parni( 1 ) );
+      obj->setTickPosition( ( QSlider::TickPosition ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -148,12 +147,12 @@ int tickInterval() const
 */
 HB_FUNC_STATIC( QSLIDER_TICKINTERVAL )
 {
-  QSlider * obj = qobject_cast< QSlider * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSlider * obj = qobject_cast<QSlider*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->tickInterval() );
@@ -161,7 +160,7 @@ HB_FUNC_STATIC( QSLIDER_TICKINTERVAL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -172,12 +171,12 @@ QSlider::TickPosition tickPosition() const
 */
 HB_FUNC_STATIC( QSLIDER_TICKPOSITION )
 {
-  QSlider * obj = qobject_cast< QSlider * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSlider * obj = qobject_cast<QSlider*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->tickPosition() );
@@ -185,7 +184,7 @@ HB_FUNC_STATIC( QSLIDER_TICKPOSITION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -196,20 +195,20 @@ virtual bool event( QEvent * event )
 */
 HB_FUNC_STATIC( QSLIDER_EVENT )
 {
-  QSlider * obj = qobject_cast< QSlider * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSlider * obj = qobject_cast<QSlider*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQEVENT( 1 ) )
+    if( ISNUMPAR(1) && ISQEVENT(1) )
     {
 #endif
-      RBOOL( obj->event( PQEVENT( 1 ) ) );
+      RBOOL( obj->event( PQEVENT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -220,12 +219,12 @@ virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QSLIDER_MINIMUMSIZEHINT )
 {
-  QSlider * obj = qobject_cast< QSlider * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSlider * obj = qobject_cast<QSlider*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
@@ -234,7 +233,7 @@ HB_FUNC_STATIC( QSLIDER_MINIMUMSIZEHINT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -245,12 +244,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSLIDER_SIZEHINT )
 {
-  QSlider * obj = qobject_cast< QSlider * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSlider * obj = qobject_cast<QSlider*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
@@ -259,7 +258,7 @@ HB_FUNC_STATIC( QSLIDER_SIZEHINT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

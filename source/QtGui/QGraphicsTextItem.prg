@@ -83,45 +83,44 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQGRAPHICSITEM( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( ISQGRAPHICSITEM(1) || HB_ISNIL(1) ) )
   {
     /*
     QGraphicsTextItem( QGraphicsItem * parent = 0 )
     */
-    QGraphicsTextItem * obj = new QGraphicsTextItem( HB_ISNIL( 1 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 1 ) ) );
+    QGraphicsTextItem * obj = new QGraphicsTextItem( HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem*>( Qt4xHb::itemGetPtr(1) ) );
     Qt4xHb::returnNewObject( obj, false );
   }
-  else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQGRAPHICSITEM( 2 ) || HB_ISNIL( 2 ) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQGRAPHICSITEM(2) || HB_ISNIL(2) ) )
   {
     /*
     QGraphicsTextItem( const QString & text, QGraphicsItem * parent = 0 )
     */
-    QGraphicsTextItem * obj = new QGraphicsTextItem( PQSTRING( 1 ), HB_ISNIL( 2 ) ? 0 : static_cast< QGraphicsItem * >( Qt4xHb::itemGetPtr( 2 ) ) );
+    QGraphicsTextItem * obj = new QGraphicsTextItem( PQSTRING(1), HB_ISNIL(2) ? 0 : static_cast<QGraphicsItem*>( Qt4xHb::itemGetPtr(2) ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DELETE )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -129,12 +128,12 @@ void adjustSize()
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ADJUSTSIZE )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->adjustSize();
@@ -142,12 +141,12 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ADJUSTSIZE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -155,12 +154,12 @@ QColor defaultTextColor() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DEFAULTTEXTCOLOR )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QColor * ptr = new QColor( obj->defaultTextColor() );
@@ -169,7 +168,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DEFAULTTEXTCOLOR )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -180,12 +179,12 @@ QTextDocument * document() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DOCUMENT )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QTextDocument * ptr = obj->document();
@@ -194,7 +193,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DOCUMENT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -205,12 +204,12 @@ QFont font() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_FONT )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QFont * ptr = new QFont( obj->font() );
@@ -219,7 +218,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_FONT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -230,12 +229,12 @@ bool openExternalLinks() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPENEXTERNALLINKS )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->openExternalLinks() );
@@ -243,7 +242,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPENEXTERNALLINKS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -254,25 +253,25 @@ void setDefaultTextColor( const QColor & col )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETDEFAULTTEXTCOLOR )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ( ISQCOLOR( 1 ) || HB_ISCHAR( 1 ) ) )
+    if( ISNUMPAR(1) && ( ISQCOLOR(1) || HB_ISCHAR(1) ) )
     {
 #endif
-      obj->setDefaultTextColor( HB_ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ) );
+      obj->setDefaultTextColor( HB_ISOBJECT(1) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(1) ) : QColor( hb_parc(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -280,25 +279,25 @@ void setDocument( QTextDocument * document )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETDOCUMENT )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQTEXTDOCUMENT( 1 ) )
+    if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
     {
 #endif
-      obj->setDocument( PQTEXTDOCUMENT( 1 ) );
+      obj->setDocument( PQTEXTDOCUMENT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -306,25 +305,25 @@ void setFont( const QFont & font )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETFONT )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQFONT( 1 ) )
+    if( ISNUMPAR(1) && ISQFONT(1) )
     {
 #endif
-      obj->setFont( *PQFONT( 1 ) );
+      obj->setFont( *PQFONT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -332,25 +331,25 @@ void setHtml( const QString & text )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETHTML )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setHtml( PQSTRING( 1 ) );
+      obj->setHtml( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -358,25 +357,25 @@ void setOpenExternalLinks( bool open )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETOPENEXTERNALLINKS )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setOpenExternalLinks( PBOOL( 1 ) );
+      obj->setOpenExternalLinks( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -384,25 +383,25 @@ void setPlainText( const QString & text )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETPLAINTEXT )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setPlainText( PQSTRING( 1 ) );
+      obj->setPlainText( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -410,25 +409,25 @@ void setTabChangesFocus( bool b )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTABCHANGESFOCUS )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setTabChangesFocus( PBOOL( 1 ) );
+      obj->setTabChangesFocus( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -436,25 +435,25 @@ void setTextCursor( const QTextCursor & cursor )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTCURSOR )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQTEXTCURSOR( 1 ) )
+    if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
     {
 #endif
-      obj->setTextCursor( *PQTEXTCURSOR( 1 ) );
+      obj->setTextCursor( *PQTEXTCURSOR(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -462,25 +461,25 @@ void setTextInteractionFlags( Qt::TextInteractionFlags flags )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTINTERACTIONFLAGS )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setTextInteractionFlags( ( Qt::TextInteractionFlags ) hb_parni( 1 ) );
+      obj->setTextInteractionFlags( ( Qt::TextInteractionFlags ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -488,25 +487,25 @@ void setTextWidth( qreal width )
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTWIDTH )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setTextWidth( PQREAL( 1 ) );
+      obj->setTextWidth( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -514,12 +513,12 @@ bool tabChangesFocus() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TABCHANGESFOCUS )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->tabChangesFocus() );
@@ -527,7 +526,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TABCHANGESFOCUS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -538,12 +537,12 @@ QTextCursor textCursor() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTCURSOR )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QTextCursor * ptr = new QTextCursor( obj->textCursor() );
@@ -552,7 +551,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTCURSOR )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -563,12 +562,12 @@ Qt::TextInteractionFlags textInteractionFlags() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTINTERACTIONFLAGS )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->textInteractionFlags() );
@@ -576,7 +575,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTINTERACTIONFLAGS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -587,12 +586,12 @@ qreal textWidth() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTWIDTH )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->textWidth() );
@@ -600,7 +599,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTWIDTH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -611,12 +610,12 @@ QString toHtml() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOHTML )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->toHtml() );
@@ -624,7 +623,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOHTML )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -635,12 +634,12 @@ QString toPlainText() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOPLAINTEXT )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->toPlainText() );
@@ -648,7 +647,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOPLAINTEXT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -659,12 +658,12 @@ virtual QRectF boundingRect() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_BOUNDINGRECT )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QRectF * ptr = new QRectF( obj->boundingRect() );
@@ -673,7 +672,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_BOUNDINGRECT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -684,20 +683,20 @@ virtual bool contains( const QPointF & point ) const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_CONTAINS )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
+    if( ISNUMPAR(1) && ISQPOINTF(1) )
     {
 #endif
-      RBOOL( obj->contains( *PQPOINTF( 1 ) ) );
+      RBOOL( obj->contains( *PQPOINTF(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -708,20 +707,20 @@ virtual bool isObscuredBy( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ISOBSCUREDBY )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQGRAPHICSITEM( 1 ) )
+    if( ISNUMPAR(1) && ISQGRAPHICSITEM(1) )
     {
 #endif
-      RBOOL( obj->isObscuredBy( PQGRAPHICSITEM( 1 ) ) );
+      RBOOL( obj->isObscuredBy( PQGRAPHICSITEM(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -732,12 +731,12 @@ virtual QPainterPath opaqueArea() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPAQUEAREA )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QPainterPath * ptr = new QPainterPath( obj->opaqueArea() );
@@ -746,7 +745,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPAQUEAREA )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -757,25 +756,25 @@ virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option,
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_PAINT )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && ISQPAINTER( 1 ) && ISQSTYLEOPTIONGRAPHICSITEM( 2 ) && ISQWIDGET( 3 ) )
+    if( ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISQWIDGET(3) )
     {
 #endif
-      obj->paint( PQPAINTER( 1 ), PQSTYLEOPTIONGRAPHICSITEM( 2 ), PQWIDGET( 3 ) );
+      obj->paint( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), PQWIDGET(3) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -783,12 +782,12 @@ virtual QPainterPath shape() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SHAPE )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QPainterPath * ptr = new QPainterPath( obj->shape() );
@@ -797,7 +796,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SHAPE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -808,12 +807,12 @@ virtual int type() const
 */
 HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TYPE )
 {
-  QGraphicsTextItem * obj = qobject_cast< QGraphicsTextItem * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->type() );
@@ -821,7 +820,7 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TYPE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

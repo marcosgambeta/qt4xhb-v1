@@ -54,15 +54,15 @@ RETURN
 
 HB_FUNC_STATIC( QPRINTDIALOG_NEW )
 {
-  if( ISBETWEEN( 1, 2 ) && ISQPRINTER( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
+  if( ISBETWEEN(1, 2) && ISQPRINTER(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
   {
     /*
     QPrintDialog( QPrinter * printer, QWidget * parent = 0 )
     */
-    QPrintDialog * obj = new QPrintDialog( PQPRINTER( 1 ), OPQWIDGET( 2, 0 ) );
+    QPrintDialog * obj = new QPrintDialog( PQPRINTER(1), OPQWIDGET( 2, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
-  else if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
+  else if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     /*
     QPrintDialog( QWidget * parent = 0 )
@@ -72,27 +72,26 @@ HB_FUNC_STATIC( QPRINTDIALOG_NEW )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QPRINTDIALOG_DELETE )
 {
-  QPrintDialog * obj = qobject_cast< QPrintDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPrintDialog * obj = qobject_cast<QPrintDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -100,25 +99,25 @@ void open( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_OPEN )
 {
-  QPrintDialog * obj = qobject_cast< QPrintDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPrintDialog * obj = qobject_cast<QPrintDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) )
+    if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2) )
     {
 #endif
-      obj->open( PQOBJECT( 1 ), PCONSTCHAR( 2 ) );
+      obj->open( PQOBJECT(1), PCONSTCHAR(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -126,12 +125,12 @@ QPrintDialog::PrintDialogOptions options() const
 */
 HB_FUNC_STATIC( QPRINTDIALOG_OPTIONS )
 {
-  QPrintDialog * obj = qobject_cast< QPrintDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPrintDialog * obj = qobject_cast<QPrintDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->options() );
@@ -139,7 +138,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_OPTIONS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -150,12 +149,12 @@ QPrinter * printer()
 */
 HB_FUNC_STATIC( QPRINTDIALOG_PRINTER )
 {
-  QPrintDialog * obj = qobject_cast< QPrintDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPrintDialog * obj = qobject_cast<QPrintDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QPrinter * ptr = obj->printer();
@@ -164,7 +163,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_PRINTER )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -175,25 +174,25 @@ void setOption( QPrintDialog::PrintDialogOption option, bool on = true )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_SETOPTION )
 {
-  QPrintDialog * obj = qobject_cast< QPrintDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPrintDialog * obj = qobject_cast<QPrintDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
     {
 #endif
-      obj->setOption( ( QPrintDialog::PrintDialogOption ) hb_parni( 1 ), OPBOOL( 2, true ) );
+      obj->setOption( ( QPrintDialog::PrintDialogOption ) hb_parni(1), OPBOOL( 2, true ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -201,25 +200,25 @@ void setOptions( QPrintDialog::PrintDialogOptions options )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_SETOPTIONS )
 {
-  QPrintDialog * obj = qobject_cast< QPrintDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPrintDialog * obj = qobject_cast<QPrintDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setOptions( ( QPrintDialog::PrintDialogOptions ) hb_parni( 1 ) );
+      obj->setOptions( ( QPrintDialog::PrintDialogOptions ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -227,20 +226,20 @@ bool testOption( QPrintDialog::PrintDialogOption option ) const
 */
 HB_FUNC_STATIC( QPRINTDIALOG_TESTOPTION )
 {
-  QPrintDialog * obj = qobject_cast< QPrintDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPrintDialog * obj = qobject_cast<QPrintDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->testOption( ( QPrintDialog::PrintDialogOption ) hb_parni( 1 ) ) );
+      RBOOL( obj->testOption( ( QPrintDialog::PrintDialogOption ) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -251,25 +250,25 @@ virtual void done( int result )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_DONE )
 {
-  QPrintDialog * obj = qobject_cast< QPrintDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPrintDialog * obj = qobject_cast<QPrintDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->done( PINT( 1 ) );
+      obj->done( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -277,12 +276,12 @@ virtual int exec()
 */
 HB_FUNC_STATIC( QPRINTDIALOG_EXEC )
 {
-  QPrintDialog * obj = qobject_cast< QPrintDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPrintDialog * obj = qobject_cast<QPrintDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->exec() );
@@ -290,7 +289,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_EXEC )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -301,25 +300,25 @@ virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QPRINTDIALOG_SETVISIBLE )
 {
-  QPrintDialog * obj = qobject_cast< QPrintDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPrintDialog * obj = qobject_cast<QPrintDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setVisible( PBOOL( 1 ) );
+      obj->setVisible( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 void QPrintDialogSlots_connect_signal( const QString & signal, const QString & slot );

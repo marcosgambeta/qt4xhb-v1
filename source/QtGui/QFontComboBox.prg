@@ -56,34 +56,33 @@ QFontComboBox( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QFontComboBox * obj = new QFontComboBox( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QFONTCOMBOBOX_DELETE )
 {
-  QFontComboBox * obj = qobject_cast< QFontComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFontComboBox * obj = qobject_cast<QFontComboBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -91,12 +90,12 @@ QFont currentFont() const
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_CURRENTFONT )
 {
-  QFontComboBox * obj = qobject_cast< QFontComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFontComboBox * obj = qobject_cast<QFontComboBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QFont * ptr = new QFont( obj->currentFont() );
@@ -105,7 +104,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_CURRENTFONT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -116,12 +115,12 @@ QFontComboBox::FontFilters fontFilters() const
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_FONTFILTERS )
 {
-  QFontComboBox * obj = qobject_cast< QFontComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFontComboBox * obj = qobject_cast<QFontComboBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->fontFilters() );
@@ -129,7 +128,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_FONTFILTERS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -140,25 +139,25 @@ void setFontFilters( QFontComboBox::FontFilters filters )
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_SETFONTFILTERS )
 {
-  QFontComboBox * obj = qobject_cast< QFontComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFontComboBox * obj = qobject_cast<QFontComboBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setFontFilters( ( QFontComboBox::FontFilters ) hb_parni( 1 ) );
+      obj->setFontFilters( ( QFontComboBox::FontFilters ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -166,25 +165,25 @@ void setWritingSystem( QFontDatabase::WritingSystem script )
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_SETWRITINGSYSTEM )
 {
-  QFontComboBox * obj = qobject_cast< QFontComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFontComboBox * obj = qobject_cast<QFontComboBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setWritingSystem( ( QFontDatabase::WritingSystem ) hb_parni( 1 ) );
+      obj->setWritingSystem( ( QFontDatabase::WritingSystem ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -192,12 +191,12 @@ QFontDatabase::WritingSystem writingSystem() const
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_WRITINGSYSTEM )
 {
-  QFontComboBox * obj = qobject_cast< QFontComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFontComboBox * obj = qobject_cast<QFontComboBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->writingSystem() );
@@ -205,7 +204,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_WRITINGSYSTEM )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -216,12 +215,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_SIZEHINT )
 {
-  QFontComboBox * obj = qobject_cast< QFontComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFontComboBox * obj = qobject_cast<QFontComboBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
@@ -230,7 +229,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_SIZEHINT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -241,25 +240,25 @@ void setCurrentFont( const QFont & font )
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_SETCURRENTFONT )
 {
-  QFontComboBox * obj = qobject_cast< QFontComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFontComboBox * obj = qobject_cast<QFontComboBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQFONT( 1 ) )
+    if( ISNUMPAR(1) && ISQFONT(1) )
     {
 #endif
-      obj->setCurrentFont( *PQFONT( 1 ) );
+      obj->setCurrentFont( *PQFONT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 void QFontComboBoxSlots_connect_signal( const QString & signal, const QString & slot );

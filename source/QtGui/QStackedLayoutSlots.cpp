@@ -22,7 +22,7 @@ QStackedLayoutSlots::~QStackedLayoutSlots()
 
 void QStackedLayoutSlots::setCurrentIndex( int index )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "setCurrentIndex(int)" );
 
@@ -40,7 +40,7 @@ void QStackedLayoutSlots::setCurrentIndex( int index )
 
 void QStackedLayoutSlots::setCurrentWidget( QWidget * widget )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "setCurrentWidget(QWidget*)" );
 
@@ -58,9 +58,9 @@ void QStackedLayoutSlots::setCurrentWidget( QWidget * widget )
 
 void QStackedLayoutSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QStackedLayout * obj = qobject_cast< QStackedLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QStackedLayout * obj = qobject_cast<QStackedLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QStackedLayoutSlots * s = QCoreApplication::instance()->findChild<QStackedLayoutSlots *>();
 

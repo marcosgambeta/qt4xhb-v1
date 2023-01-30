@@ -46,43 +46,42 @@ RETURN
 
 HB_FUNC_STATIC( QFILEOPENEVENT_NEW )
 {
-  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     /*
     QFileOpenEvent( const QString & file )
     */
-    QFileOpenEvent * obj = new QFileOpenEvent( PQSTRING( 1 ) );
+    QFileOpenEvent * obj = new QFileOpenEvent( PQSTRING(1) );
     Qt4xHb::returnNewObject( obj, false );
   }
-  else if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
+  else if( ISNUMPAR(1) && ISQURL(1) )
   {
     /*
     QFileOpenEvent( const QUrl & url )
     */
-    QFileOpenEvent * obj = new QFileOpenEvent( *PQURL( 1 ) );
+    QFileOpenEvent * obj = new QFileOpenEvent( *PQURL(1) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QFILEOPENEVENT_DELETE )
 {
-  QFileOpenEvent * obj = static_cast< QFileOpenEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileOpenEvent * obj = static_cast<QFileOpenEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -90,12 +89,12 @@ QString file() const
 */
 HB_FUNC_STATIC( QFILEOPENEVENT_FILE )
 {
-  QFileOpenEvent * obj = static_cast< QFileOpenEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileOpenEvent * obj = static_cast<QFileOpenEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->file() );
@@ -103,7 +102,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_FILE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -114,20 +113,20 @@ bool openFile( QFile & file, QIODevice::OpenMode flags ) const
 */
 HB_FUNC_STATIC( QFILEOPENEVENT_OPENFILE )
 {
-  QFileOpenEvent * obj = static_cast< QFileOpenEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileOpenEvent * obj = static_cast<QFileOpenEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQFILE( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && ISQFILE(1) && HB_ISNUM(2) )
     {
 #endif
-      RBOOL( obj->openFile( *PQFILE( 1 ), ( QIODevice::OpenMode ) hb_parni( 2 ) ) );
+      RBOOL( obj->openFile( *PQFILE(1), ( QIODevice::OpenMode ) hb_parni(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -138,12 +137,12 @@ QUrl url() const
 */
 HB_FUNC_STATIC( QFILEOPENEVENT_URL )
 {
-  QFileOpenEvent * obj = static_cast< QFileOpenEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFileOpenEvent * obj = static_cast<QFileOpenEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QUrl * ptr = new QUrl( obj->url() );
@@ -152,7 +151,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_URL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

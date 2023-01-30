@@ -22,14 +22,14 @@ QGraphicsBlurEffectSlots::~QGraphicsBlurEffectSlots()
 
 void QGraphicsBlurEffectSlots::blurHintsChanged( QGraphicsBlurEffect::BlurHints hints )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" );
 
   if( cb )
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QGRAPHICSBLUREFFECT" );
-    PHB_ITEM pHints = hb_itemPutNI( NULL, static_cast< int >( hints ) );
+    PHB_ITEM pHints = hb_itemPutNI( NULL, static_cast<int >( hints ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pHints );
 
@@ -40,7 +40,7 @@ void QGraphicsBlurEffectSlots::blurHintsChanged( QGraphicsBlurEffect::BlurHints 
 
 void QGraphicsBlurEffectSlots::blurRadiusChanged( qreal radius )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "blurRadiusChanged(qreal)" );
 
@@ -58,9 +58,9 @@ void QGraphicsBlurEffectSlots::blurRadiusChanged( qreal radius )
 
 void QGraphicsBlurEffectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsBlurEffect * obj = qobject_cast< QGraphicsBlurEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsBlurEffect * obj = qobject_cast<QGraphicsBlurEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QGraphicsBlurEffectSlots * s = QCoreApplication::instance()->findChild<QGraphicsBlurEffectSlots *>();
 

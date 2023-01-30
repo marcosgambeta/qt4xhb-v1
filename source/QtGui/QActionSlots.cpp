@@ -22,7 +22,7 @@ QActionSlots::~QActionSlots()
 
 void QActionSlots::changed()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "changed()" );
 
@@ -38,7 +38,7 @@ void QActionSlots::changed()
 
 void QActionSlots::hovered()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "hovered()" );
 
@@ -54,7 +54,7 @@ void QActionSlots::hovered()
 
 void QActionSlots::toggled( bool checked )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "toggled(bool)" );
 
@@ -72,7 +72,7 @@ void QActionSlots::toggled( bool checked )
 
 void QActionSlots::triggered( bool checked )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "triggered(bool)" );
 
@@ -90,9 +90,9 @@ void QActionSlots::triggered( bool checked )
 
 void QActionSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAction * obj = qobject_cast< QAction * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAction * obj = qobject_cast<QAction*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QActionSlots * s = QCoreApplication::instance()->findChild<QActionSlots *>();
 

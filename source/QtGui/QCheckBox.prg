@@ -50,7 +50,7 @@ RETURN
 
 HB_FUNC_STATIC( QCHECKBOX_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     /*
     QCheckBox( QWidget * parent = 0 )
@@ -58,17 +58,17 @@ HB_FUNC_STATIC( QCHECKBOX_NEW )
     QCheckBox * obj = new QCheckBox( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
-  else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
   {
     /*
     QCheckBox( const QString & text, QWidget * parent = 0 )
     */
-    QCheckBox * obj = new QCheckBox( PQSTRING( 1 ), OPQWIDGET( 2, 0 ) );
+    QCheckBox * obj = new QCheckBox( PQSTRING(1), OPQWIDGET( 2, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -77,12 +77,12 @@ Qt::CheckState checkState() const
 */
 HB_FUNC_STATIC( QCHECKBOX_CHECKSTATE )
 {
-  QCheckBox * obj = qobject_cast< QCheckBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QCheckBox * obj = qobject_cast<QCheckBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->checkState() );
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QCHECKBOX_CHECKSTATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -101,12 +101,12 @@ bool isTristate() const
 */
 HB_FUNC_STATIC( QCHECKBOX_ISTRISTATE )
 {
-  QCheckBox * obj = qobject_cast< QCheckBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QCheckBox * obj = qobject_cast<QCheckBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isTristate() );
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QCHECKBOX_ISTRISTATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -125,25 +125,25 @@ void setCheckState( Qt::CheckState state )
 */
 HB_FUNC_STATIC( QCHECKBOX_SETCHECKSTATE )
 {
-  QCheckBox * obj = qobject_cast< QCheckBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QCheckBox * obj = qobject_cast<QCheckBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setCheckState( ( Qt::CheckState ) hb_parni( 1 ) );
+      obj->setCheckState( ( Qt::CheckState ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -151,12 +151,12 @@ void setTristate( bool y = true )
 */
 HB_FUNC_STATIC( QCHECKBOX_SETTRISTATE )
 {
-  QCheckBox * obj = qobject_cast< QCheckBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QCheckBox * obj = qobject_cast<QCheckBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( HB_ISLOG( 1 ) || HB_ISNIL( 1 ) ) )
+    if( ISBETWEEN(0, 1) && ( HB_ISLOG(1) || HB_ISNIL(1) ) )
     {
 #endif
       obj->setTristate( OPBOOL( 1, true ) );
@@ -164,12 +164,12 @@ HB_FUNC_STATIC( QCHECKBOX_SETTRISTATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -177,12 +177,12 @@ virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QCHECKBOX_MINIMUMSIZEHINT )
 {
-  QCheckBox * obj = qobject_cast< QCheckBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QCheckBox * obj = qobject_cast<QCheckBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QCHECKBOX_MINIMUMSIZEHINT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -202,12 +202,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QCHECKBOX_SIZEHINT )
 {
-  QCheckBox * obj = qobject_cast< QCheckBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QCheckBox * obj = qobject_cast<QCheckBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QCHECKBOX_SIZEHINT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

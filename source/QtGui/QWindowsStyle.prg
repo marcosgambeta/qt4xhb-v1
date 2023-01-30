@@ -58,34 +58,33 @@ QWindowsStyle()
 */
 HB_FUNC_STATIC( QWINDOWSSTYLE_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     QWindowsStyle * obj = new QWindowsStyle();
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QWINDOWSSTYLE_DELETE )
 {
-  QWindowsStyle * obj = qobject_cast< QWindowsStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWindowsStyle * obj = qobject_cast<QWindowsStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -93,25 +92,25 @@ virtual void drawComplexControl( QStyle::ComplexControl cc, const QStyleOptionCo
 */
 HB_FUNC_STATIC( QWINDOWSSTYLE_DRAWCOMPLEXCONTROL )
 {
-  QWindowsStyle * obj = qobject_cast< QWindowsStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWindowsStyle * obj = qobject_cast<QWindowsStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 3, 4 ) && HB_ISNUM( 1 ) && ISQSTYLEOPTIONCOMPLEX( 2 ) && ISQPAINTER( 3 ) && ( ISQWIDGET( 4 ) || HB_ISNIL( 4 ) ) )
+    if( ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISQPAINTER(3) && ( ISQWIDGET(4) || HB_ISNIL(4) ) )
     {
 #endif
-      obj->drawComplexControl( ( QStyle::ComplexControl ) hb_parni( 1 ), PQSTYLEOPTIONCOMPLEX( 2 ), PQPAINTER( 3 ), OPQWIDGET( 4, 0 ) );
+      obj->drawComplexControl( ( QStyle::ComplexControl ) hb_parni(1), PQSTYLEOPTIONCOMPLEX(2), PQPAINTER(3), OPQWIDGET( 4, 0 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -119,25 +118,25 @@ virtual void drawControl( QStyle::ControlElement ce, const QStyleOption * opt, Q
 */
 HB_FUNC_STATIC( QWINDOWSSTYLE_DRAWCONTROL )
 {
-  QWindowsStyle * obj = qobject_cast< QWindowsStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWindowsStyle * obj = qobject_cast<QWindowsStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 3, 4 ) && HB_ISNUM( 1 ) && ISQSTYLEOPTION( 2 ) && ISQPAINTER( 3 ) && ( ISQWIDGET( 4 ) || HB_ISNIL( 4 ) ) )
+    if( ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && ( ISQWIDGET(4) || HB_ISNIL(4) ) )
     {
 #endif
-      obj->drawControl( ( QStyle::ControlElement ) hb_parni( 1 ), PQSTYLEOPTION( 2 ), PQPAINTER( 3 ), OPQWIDGET( 4, 0 ) );
+      obj->drawControl( ( QStyle::ControlElement ) hb_parni(1), PQSTYLEOPTION(2), PQPAINTER(3), OPQWIDGET( 4, 0 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -145,25 +144,25 @@ virtual void drawPrimitive( QStyle::PrimitiveElement pe, const QStyleOption * op
 */
 HB_FUNC_STATIC( QWINDOWSSTYLE_DRAWPRIMITIVE )
 {
-  QWindowsStyle * obj = qobject_cast< QWindowsStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWindowsStyle * obj = qobject_cast<QWindowsStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 3, 4 ) && HB_ISNUM( 1 ) && ISQSTYLEOPTION( 2 ) && ISQPAINTER( 3 ) && ( ISQWIDGET( 4 ) || HB_ISNIL( 4 ) ) )
+    if( ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && ( ISQWIDGET(4) || HB_ISNIL(4) ) )
     {
 #endif
-      obj->drawPrimitive( ( QStyle::PrimitiveElement ) hb_parni( 1 ), PQSTYLEOPTION( 2 ), PQPAINTER( 3 ), OPQWIDGET( 4, 0 ) );
+      obj->drawPrimitive( ( QStyle::PrimitiveElement ) hb_parni(1), PQSTYLEOPTION(2), PQPAINTER(3), OPQWIDGET( 4, 0 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -171,20 +170,20 @@ virtual int pixelMetric( QStyle::PixelMetric pm, const QStyleOption * opt = 0, c
 */
 HB_FUNC_STATIC( QWINDOWSSTYLE_PIXELMETRIC )
 {
-  QWindowsStyle * obj = qobject_cast< QWindowsStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWindowsStyle * obj = qobject_cast<QWindowsStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 3 ) && HB_ISNUM( 1 ) && ( ISQSTYLEOPTION( 2 ) || HB_ISNIL( 2 ) ) && ( ISQWIDGET( 3 ) || HB_ISNIL( 3 ) ) )
+    if( ISBETWEEN(1, 3) && HB_ISNUM(1) && ( ISQSTYLEOPTION(2) || HB_ISNIL(2) ) && ( ISQWIDGET(3) || HB_ISNIL(3) ) )
     {
 #endif
-      RINT( obj->pixelMetric( ( QStyle::PixelMetric ) hb_parni( 1 ), HB_ISNIL( 2 ) ? 0 : static_cast< QStyleOption * >( Qt4xHb::itemGetPtr( 2 ) ), OPQWIDGET( 3, 0 ) ) );
+      RINT( obj->pixelMetric( ( QStyle::PixelMetric ) hb_parni(1), HB_ISNIL(2) ? 0 : static_cast<QStyleOption*>( Qt4xHb::itemGetPtr(2) ), OPQWIDGET( 3, 0 ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -192,51 +191,51 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_PIXELMETRIC )
 
 HB_FUNC_STATIC( QWINDOWSSTYLE_POLISH )
 {
-  if( ISNUMPAR( 1 ) && ISQAPPLICATION( 1 ) )
+  if( ISNUMPAR(1) && ISQAPPLICATION(1) )
   {
     /*
     virtual void polish( QApplication * app )
     */
-    QWindowsStyle * obj = qobject_cast< QWindowsStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+    QWindowsStyle * obj = qobject_cast<QWindowsStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if( obj != NULL )
     {
-      obj->polish( PQAPPLICATION( 1 ) );
+      obj->polish( PQAPPLICATION(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
+  else if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
     /*
     virtual void polish( QWidget * widget )
     */
-    QWindowsStyle * obj = qobject_cast< QWindowsStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+    QWindowsStyle * obj = qobject_cast<QWindowsStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if( obj != NULL )
     {
-      obj->polish( PQWIDGET( 1 ) );
+      obj->polish( PQWIDGET(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR( 1 ) && ISQPALETTE( 1 ) )
+  else if( ISNUMPAR(1) && ISQPALETTE(1) )
   {
     /*
     virtual void polish( QPalette & pal )
     */
-    QWindowsStyle * obj = qobject_cast< QWindowsStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+    QWindowsStyle * obj = qobject_cast<QWindowsStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if( obj != NULL )
     {
-      obj->polish( *PQPALETTE( 1 ) );
+      obj->polish( *PQPALETTE(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -245,21 +244,21 @@ virtual QSize sizeFromContents( QStyle::ContentsType ct, const QStyleOption * op
 */
 HB_FUNC_STATIC( QWINDOWSSTYLE_SIZEFROMCONTENTS )
 {
-  QWindowsStyle * obj = qobject_cast< QWindowsStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWindowsStyle * obj = qobject_cast<QWindowsStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 3, 4 ) && HB_ISNUM( 1 ) && ISQSTYLEOPTION( 2 ) && ISQSIZE( 3 ) && ( ISQWIDGET( 4 ) || HB_ISNIL( 4 ) ) )
+    if( ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQSIZE(3) && ( ISQWIDGET(4) || HB_ISNIL(4) ) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeFromContents( ( QStyle::ContentsType ) hb_parni( 1 ), PQSTYLEOPTION( 2 ), *PQSIZE( 3 ), OPQWIDGET( 4, 0 ) ) );
+      QSize * ptr = new QSize( obj->sizeFromContents( ( QStyle::ContentsType ) hb_parni(1), PQSTYLEOPTION(2), *PQSIZE(3), OPQWIDGET( 4, 0 ) ) );
       Qt4xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -270,21 +269,21 @@ virtual QPixmap standardPixmap( QStyle::StandardPixmap standardPixmap, const QSt
 */
 HB_FUNC_STATIC( QWINDOWSSTYLE_STANDARDPIXMAP )
 {
-  QWindowsStyle * obj = qobject_cast< QWindowsStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWindowsStyle * obj = qobject_cast<QWindowsStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && ISQSTYLEOPTION( 2 ) && ( ISQWIDGET( 3 ) || HB_ISNIL( 3 ) ) )
+    if( ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ( ISQWIDGET(3) || HB_ISNIL(3) ) )
     {
 #endif
-      QPixmap * ptr = new QPixmap( obj->standardPixmap( ( QStyle::StandardPixmap ) hb_parni( 1 ), PQSTYLEOPTION( 2 ), OPQWIDGET( 3, 0 ) ) );
+      QPixmap * ptr = new QPixmap( obj->standardPixmap( ( QStyle::StandardPixmap ) hb_parni(1), PQSTYLEOPTION(2), OPQWIDGET( 3, 0 ) ) );
       Qt4xHb::createReturnClass( ptr, "QPIXMAP", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -295,20 +294,20 @@ virtual int styleHint( QStyle::StyleHint hint, const QStyleOption * opt = 0, con
 */
 HB_FUNC_STATIC( QWINDOWSSTYLE_STYLEHINT )
 {
-  QWindowsStyle * obj = qobject_cast< QWindowsStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWindowsStyle * obj = qobject_cast<QWindowsStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 4 ) && HB_ISNUM( 1 ) && ( ISQSTYLEOPTION( 2 ) || HB_ISNIL( 2 ) ) && ( ISQWIDGET( 3 ) || HB_ISNIL( 3 ) ) && ( ISQSTYLEHINTRETURN( 4 ) || HB_ISNIL( 4 ) ) )
+    if( ISBETWEEN(1, 4) && HB_ISNUM(1) && ( ISQSTYLEOPTION(2) || HB_ISNIL(2) ) && ( ISQWIDGET(3) || HB_ISNIL(3) ) && ( ISQSTYLEHINTRETURN(4) || HB_ISNIL(4) ) )
     {
 #endif
-      RINT( obj->styleHint( ( QStyle::StyleHint ) hb_parni( 1 ), HB_ISNIL( 2 ) ? 0 : static_cast< QStyleOption * >( Qt4xHb::itemGetPtr( 2 ) ), OPQWIDGET( 3, 0 ), HB_ISNIL( 4 ) ? 0 : static_cast< QStyleHintReturn * >( Qt4xHb::itemGetPtr( 4 ) ) ) );
+      RINT( obj->styleHint( ( QStyle::StyleHint ) hb_parni(1), HB_ISNIL(2) ? 0 : static_cast<QStyleOption*>( Qt4xHb::itemGetPtr(2) ), OPQWIDGET( 3, 0 ), HB_ISNIL(4) ? 0 : static_cast<QStyleHintReturn*>( Qt4xHb::itemGetPtr(4) ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -319,21 +318,21 @@ virtual QRect subElementRect( QStyle::SubElement sr, const QStyleOption * opt, c
 */
 HB_FUNC_STATIC( QWINDOWSSTYLE_SUBELEMENTRECT )
 {
-  QWindowsStyle * obj = qobject_cast< QWindowsStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWindowsStyle * obj = qobject_cast<QWindowsStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && ISQSTYLEOPTION( 2 ) && ( ISQWIDGET( 3 ) || HB_ISNIL( 3 ) ) )
+    if( ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ( ISQWIDGET(3) || HB_ISNIL(3) ) )
     {
 #endif
-      QRect * ptr = new QRect( obj->subElementRect( ( QStyle::SubElement ) hb_parni( 1 ), PQSTYLEOPTION( 2 ), OPQWIDGET( 3, 0 ) ) );
+      QRect * ptr = new QRect( obj->subElementRect( ( QStyle::SubElement ) hb_parni(1), PQSTYLEOPTION(2), OPQWIDGET( 3, 0 ) ) );
       Qt4xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -341,37 +340,37 @@ HB_FUNC_STATIC( QWINDOWSSTYLE_SUBELEMENTRECT )
 
 HB_FUNC_STATIC( QWINDOWSSTYLE_UNPOLISH )
 {
-  if( ISNUMPAR( 1 ) && ISQAPPLICATION( 1 ) )
+  if( ISNUMPAR(1) && ISQAPPLICATION(1) )
   {
     /*
     virtual void unpolish( QApplication * app )
     */
-    QWindowsStyle * obj = qobject_cast< QWindowsStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+    QWindowsStyle * obj = qobject_cast<QWindowsStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if( obj != NULL )
     {
-      obj->unpolish( PQAPPLICATION( 1 ) );
+      obj->unpolish( PQAPPLICATION(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
+  else if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
     /*
     virtual void unpolish( QWidget * widget )
     */
-    QWindowsStyle * obj = qobject_cast< QWindowsStyle * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+    QWindowsStyle * obj = qobject_cast<QWindowsStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if( obj != NULL )
     {
-      obj->unpolish( PQWIDGET( 1 ) );
+      obj->unpolish( PQWIDGET(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 

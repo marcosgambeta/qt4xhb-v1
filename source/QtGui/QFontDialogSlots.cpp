@@ -22,7 +22,7 @@ QFontDialogSlots::~QFontDialogSlots()
 
 void QFontDialogSlots::currentFontChanged( const QFont & font )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentFontChanged(QFont)" );
 
@@ -40,7 +40,7 @@ void QFontDialogSlots::currentFontChanged( const QFont & font )
 
 void QFontDialogSlots::fontSelected( const QFont & font )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "fontSelected(QFont)" );
 
@@ -58,9 +58,9 @@ void QFontDialogSlots::fontSelected( const QFont & font )
 
 void QFontDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QFontDialog * obj = qobject_cast< QFontDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFontDialog * obj = qobject_cast<QFontDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QFontDialogSlots * s = QCoreApplication::instance()->findChild<QFontDialogSlots *>();
 

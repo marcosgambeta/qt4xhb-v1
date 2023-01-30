@@ -51,19 +51,18 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_DELETE )
 {
-  QAbstractGraphicsShapeItem * obj = static_cast< QAbstractGraphicsShapeItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractGraphicsShapeItem * obj = static_cast<QAbstractGraphicsShapeItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -71,12 +70,12 @@ QBrush brush() const
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_BRUSH )
 {
-  QAbstractGraphicsShapeItem * obj = static_cast< QAbstractGraphicsShapeItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractGraphicsShapeItem * obj = static_cast<QAbstractGraphicsShapeItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QBrush * ptr = new QBrush( obj->brush() );
@@ -85,7 +84,7 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_BRUSH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -96,12 +95,12 @@ QPen pen() const
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_PEN )
 {
-  QAbstractGraphicsShapeItem * obj = static_cast< QAbstractGraphicsShapeItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractGraphicsShapeItem * obj = static_cast<QAbstractGraphicsShapeItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QPen * ptr = new QPen( obj->pen() );
@@ -110,7 +109,7 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_PEN )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -121,25 +120,25 @@ void setBrush( const QBrush & brush )
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_SETBRUSH )
 {
-  QAbstractGraphicsShapeItem * obj = static_cast< QAbstractGraphicsShapeItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractGraphicsShapeItem * obj = static_cast<QAbstractGraphicsShapeItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQBRUSH( 1 ) )
+    if( ISNUMPAR(1) && ISQBRUSH(1) )
     {
 #endif
-      obj->setBrush( *PQBRUSH( 1 ) );
+      obj->setBrush( *PQBRUSH(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -147,25 +146,25 @@ void setPen( const QPen & pen )
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_SETPEN )
 {
-  QAbstractGraphicsShapeItem * obj = static_cast< QAbstractGraphicsShapeItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractGraphicsShapeItem * obj = static_cast<QAbstractGraphicsShapeItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQPEN( 1 ) )
+    if( ISNUMPAR(1) && ISQPEN(1) )
     {
 #endif
-      obj->setPen( *PQPEN( 1 ) );
+      obj->setPen( *PQPEN(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -173,20 +172,20 @@ virtual bool isObscuredBy( const QGraphicsItem * item ) const
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_ISOBSCUREDBY )
 {
-  QAbstractGraphicsShapeItem * obj = static_cast< QAbstractGraphicsShapeItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractGraphicsShapeItem * obj = static_cast<QAbstractGraphicsShapeItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQGRAPHICSITEM( 1 ) )
+    if( ISNUMPAR(1) && ISQGRAPHICSITEM(1) )
     {
 #endif
-      RBOOL( obj->isObscuredBy( PQGRAPHICSITEM( 1 ) ) );
+      RBOOL( obj->isObscuredBy( PQGRAPHICSITEM(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -197,12 +196,12 @@ virtual QPainterPath opaqueArea() const
 */
 HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_OPAQUEAREA )
 {
-  QAbstractGraphicsShapeItem * obj = static_cast< QAbstractGraphicsShapeItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAbstractGraphicsShapeItem * obj = static_cast<QAbstractGraphicsShapeItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QPainterPath * ptr = new QPainterPath( obj->opaqueArea() );
@@ -211,7 +210,7 @@ HB_FUNC_STATIC( QABSTRACTGRAPHICSSHAPEITEM_OPAQUEAREA )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

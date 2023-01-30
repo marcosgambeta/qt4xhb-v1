@@ -22,7 +22,7 @@ QGraphicsColorizeEffectSlots::~QGraphicsColorizeEffectSlots()
 
 void QGraphicsColorizeEffectSlots::colorChanged( const QColor & color )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "colorChanged(QColor)" );
 
@@ -40,7 +40,7 @@ void QGraphicsColorizeEffectSlots::colorChanged( const QColor & color )
 
 void QGraphicsColorizeEffectSlots::strengthChanged( qreal strength )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "strengthChanged(qreal)" );
 
@@ -58,9 +58,9 @@ void QGraphicsColorizeEffectSlots::strengthChanged( qreal strength )
 
 void QGraphicsColorizeEffectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsColorizeEffect * obj = qobject_cast< QGraphicsColorizeEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsColorizeEffect * obj = qobject_cast<QGraphicsColorizeEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QGraphicsColorizeEffectSlots * s = QCoreApplication::instance()->findChild<QGraphicsColorizeEffectSlots *>();
 

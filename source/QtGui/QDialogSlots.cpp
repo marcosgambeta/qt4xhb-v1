@@ -22,7 +22,7 @@ QDialogSlots::~QDialogSlots()
 
 void QDialogSlots::accepted()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "accepted()" );
 
@@ -38,7 +38,7 @@ void QDialogSlots::accepted()
 
 void QDialogSlots::finished( int result )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "finished(int)" );
 
@@ -56,7 +56,7 @@ void QDialogSlots::finished( int result )
 
 void QDialogSlots::rejected()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "rejected()" );
 
@@ -72,9 +72,9 @@ void QDialogSlots::rejected()
 
 void QDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDialog * obj = qobject_cast< QDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDialog * obj = qobject_cast<QDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QDialogSlots * s = QCoreApplication::instance()->findChild<QDialogSlots *>();
 

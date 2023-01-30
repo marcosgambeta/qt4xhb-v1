@@ -70,7 +70,7 @@ RETURN
 
 HB_FUNC_STATIC( QIMAGEWRITER_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QImageWriter()
@@ -78,43 +78,42 @@ HB_FUNC_STATIC( QIMAGEWRITER_NEW )
     QImageWriter * obj = new QImageWriter();
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISBETWEEN( 1, 2 ) && ISQIODEVICE( 1 ) && ( ISQBYTEARRAY( 2 ) || HB_ISNIL( 2 ) ) )
+  else if( ISBETWEEN(1, 2) && ISQIODEVICE(1) && ( ISQBYTEARRAY(2) || HB_ISNIL(2) ) )
   {
     /*
     QImageWriter( QIODevice * device, const QByteArray & format )
     */
-    QImageWriter * obj = new QImageWriter( PQIODEVICE( 1 ), *PQBYTEARRAY( 2 ) );
+    QImageWriter * obj = new QImageWriter( PQIODEVICE(1), *PQBYTEARRAY(2) );
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQBYTEARRAY( 2 ) || HB_ISNIL( 2 ) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQBYTEARRAY(2) || HB_ISNIL(2) ) )
   {
     /*
     QImageWriter( const QString & fileName, const QByteArray & format = QByteArray() )
     */
-    QImageWriter * obj = new QImageWriter( PQSTRING( 1 ), HB_ISNIL( 2 ) ? QByteArray() : *static_cast< QByteArray * >( Qt4xHb::itemGetPtr( 2 ) ) );
+    QImageWriter * obj = new QImageWriter( PQSTRING(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray*>( Qt4xHb::itemGetPtr(2) ) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QIMAGEWRITER_DELETE )
 {
-  QImageWriter * obj = static_cast< QImageWriter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -122,12 +121,12 @@ bool canWrite() const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_CANWRITE )
 {
-  QImageWriter * obj = static_cast< QImageWriter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->canWrite() );
@@ -135,7 +134,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_CANWRITE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -146,12 +145,12 @@ int compression() const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_COMPRESSION )
 {
-  QImageWriter * obj = static_cast< QImageWriter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->compression() );
@@ -159,7 +158,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_COMPRESSION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -170,12 +169,12 @@ QIODevice * device() const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_DEVICE )
 {
-  QImageWriter * obj = static_cast< QImageWriter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QIODevice * ptr = obj->device();
@@ -184,7 +183,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_DEVICE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -195,12 +194,12 @@ QImageWriterError::ImageWriterError error() const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_ERROR )
 {
-  QImageWriter * obj = static_cast< QImageWriter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->error() );
@@ -208,7 +207,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_ERROR )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -219,12 +218,12 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_ERRORSTRING )
 {
-  QImageWriter * obj = static_cast< QImageWriter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->errorString() );
@@ -232,7 +231,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_ERRORSTRING )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -243,12 +242,12 @@ QString fileName() const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_FILENAME )
 {
-  QImageWriter * obj = static_cast< QImageWriter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->fileName() );
@@ -256,7 +255,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_FILENAME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -267,12 +266,12 @@ QByteArray format() const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_FORMAT )
 {
-  QImageWriter * obj = static_cast< QImageWriter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->format() );
@@ -281,7 +280,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_FORMAT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -292,12 +291,12 @@ float gamma() const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_GAMMA )
 {
-  QImageWriter * obj = static_cast< QImageWriter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RFLOAT( obj->gamma() );
@@ -305,7 +304,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_GAMMA )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -316,12 +315,12 @@ int quality() const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_QUALITY )
 {
-  QImageWriter * obj = static_cast< QImageWriter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->quality() );
@@ -329,7 +328,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_QUALITY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -340,25 +339,25 @@ void setCompression( int compression )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETCOMPRESSION )
 {
-  QImageWriter * obj = static_cast< QImageWriter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setCompression( PINT( 1 ) );
+      obj->setCompression( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -366,25 +365,25 @@ void setDevice( QIODevice * device )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETDEVICE )
 {
-  QImageWriter * obj = static_cast< QImageWriter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQIODEVICE( 1 ) )
+    if( ISNUMPAR(1) && ISQIODEVICE(1) )
     {
 #endif
-      obj->setDevice( PQIODEVICE( 1 ) );
+      obj->setDevice( PQIODEVICE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -392,25 +391,25 @@ void setFileName( const QString & fileName )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETFILENAME )
 {
-  QImageWriter * obj = static_cast< QImageWriter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setFileName( PQSTRING( 1 ) );
+      obj->setFileName( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -418,25 +417,25 @@ void setFormat( const QByteArray & format )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETFORMAT )
 {
-  QImageWriter * obj = static_cast< QImageWriter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQBYTEARRAY( 1 ) )
+    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      obj->setFormat( *PQBYTEARRAY( 1 ) );
+      obj->setFormat( *PQBYTEARRAY(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -444,25 +443,25 @@ void setGamma( float gamma )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETGAMMA )
 {
-  QImageWriter * obj = static_cast< QImageWriter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setGamma( PFLOAT( 1 ) );
+      obj->setGamma( PFLOAT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -470,25 +469,25 @@ void setQuality( int quality )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETQUALITY )
 {
-  QImageWriter * obj = static_cast< QImageWriter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setQuality( PINT( 1 ) );
+      obj->setQuality( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -496,25 +495,25 @@ void setText( const QString & key, const QString & text )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SETTEXT )
 {
-  QImageWriter * obj = static_cast< QImageWriter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
-      obj->setText( PQSTRING( 1 ), PQSTRING( 2 ) );
+      obj->setText( PQSTRING(1), PQSTRING(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -522,20 +521,20 @@ bool supportsOption( QImageIOHandler::ImageOption option ) const
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTSOPTION )
 {
-  QImageWriter * obj = static_cast< QImageWriter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->supportsOption( ( QImageIOHandler::ImageOption ) hb_parni( 1 ) ) );
+      RBOOL( obj->supportsOption( ( QImageIOHandler::ImageOption ) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -546,20 +545,20 @@ bool write( const QImage & image )
 */
 HB_FUNC_STATIC( QIMAGEWRITER_WRITE )
 {
-  QImageWriter * obj = static_cast< QImageWriter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQIMAGE( 1 ) )
+    if( ISNUMPAR(1) && ISQIMAGE(1) )
     {
 #endif
-      RBOOL( obj->write( *PQIMAGE( 1 ) ) );
+      RBOOL( obj->write( *PQIMAGE(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -570,28 +569,28 @@ QList<QByteArray> supportedImageFormats()
 */
 HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTEDIMAGEFORMATS )
 {
-  QImageWriter * obj = static_cast< QImageWriter * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QList<QByteArray> list = obj->supportedImageFormats();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
-      PHB_ITEM pArray = hb_itemArrayNew( 0 );
+      PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
         {
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
-          hb_vmDo( 0 );
+          hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, static_cast< QByteArray * >( new QByteArray( list[i] ) ) );
+          hb_itemPutPtr( pItem, static_cast<QByteArray*>( new QByteArray( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -611,7 +610,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTEDIMAGEFORMATS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -621,27 +620,27 @@ HB_FUNC_STATIC( QIMAGEWRITER_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
   hb_itemReturn( self );
@@ -666,15 +665,15 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
   hb_itemReturn( self );

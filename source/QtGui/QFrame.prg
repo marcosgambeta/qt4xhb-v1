@@ -61,34 +61,33 @@ QFrame( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QFRAME_NEW )
 {
-  if( ISBETWEEN( 0, 2 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+  if( ISBETWEEN(0, 2) && ( ISQWIDGET(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
   {
-    QFrame * obj = new QFrame( OPQWIDGET( 1, 0 ), HB_ISNIL( 2 ) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 2 ) );
+    QFrame * obj = new QFrame( OPQWIDGET( 1, 0 ), HB_ISNIL(2) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(2) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QFRAME_DELETE )
 {
-  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFrame * obj = qobject_cast<QFrame*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -96,12 +95,12 @@ QRect frameRect() const
 */
 HB_FUNC_STATIC( QFRAME_FRAMERECT )
 {
-  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFrame * obj = qobject_cast<QFrame*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QRect * ptr = new QRect( obj->frameRect() );
@@ -110,7 +109,7 @@ HB_FUNC_STATIC( QFRAME_FRAMERECT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -121,12 +120,12 @@ QFrame::Shadow frameShadow() const
 */
 HB_FUNC_STATIC( QFRAME_FRAMESHADOW )
 {
-  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFrame * obj = qobject_cast<QFrame*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->frameShadow() );
@@ -134,7 +133,7 @@ HB_FUNC_STATIC( QFRAME_FRAMESHADOW )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -145,12 +144,12 @@ QFrame::Shape frameShape() const
 */
 HB_FUNC_STATIC( QFRAME_FRAMESHAPE )
 {
-  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFrame * obj = qobject_cast<QFrame*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->frameShape() );
@@ -158,7 +157,7 @@ HB_FUNC_STATIC( QFRAME_FRAMESHAPE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -169,12 +168,12 @@ int frameStyle() const
 */
 HB_FUNC_STATIC( QFRAME_FRAMESTYLE )
 {
-  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFrame * obj = qobject_cast<QFrame*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->frameStyle() );
@@ -182,7 +181,7 @@ HB_FUNC_STATIC( QFRAME_FRAMESTYLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -193,12 +192,12 @@ int frameWidth() const
 */
 HB_FUNC_STATIC( QFRAME_FRAMEWIDTH )
 {
-  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFrame * obj = qobject_cast<QFrame*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->frameWidth() );
@@ -206,7 +205,7 @@ HB_FUNC_STATIC( QFRAME_FRAMEWIDTH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -217,12 +216,12 @@ int lineWidth() const
 */
 HB_FUNC_STATIC( QFRAME_LINEWIDTH )
 {
-  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFrame * obj = qobject_cast<QFrame*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->lineWidth() );
@@ -230,7 +229,7 @@ HB_FUNC_STATIC( QFRAME_LINEWIDTH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -241,12 +240,12 @@ int midLineWidth() const
 */
 HB_FUNC_STATIC( QFRAME_MIDLINEWIDTH )
 {
-  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFrame * obj = qobject_cast<QFrame*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->midLineWidth() );
@@ -254,7 +253,7 @@ HB_FUNC_STATIC( QFRAME_MIDLINEWIDTH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -265,25 +264,25 @@ void setFrameRect( const QRect & )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMERECT )
 {
-  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFrame * obj = qobject_cast<QFrame*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
+    if( ISNUMPAR(1) && ISQRECT(1) )
     {
 #endif
-      obj->setFrameRect( *PQRECT( 1 ) );
+      obj->setFrameRect( *PQRECT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -291,25 +290,25 @@ void setFrameShadow( QFrame::Shadow )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMESHADOW )
 {
-  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFrame * obj = qobject_cast<QFrame*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setFrameShadow( ( QFrame::Shadow ) hb_parni( 1 ) );
+      obj->setFrameShadow( ( QFrame::Shadow ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -317,25 +316,25 @@ void setFrameShape( QFrame::Shape )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMESHAPE )
 {
-  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFrame * obj = qobject_cast<QFrame*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setFrameShape( ( QFrame::Shape ) hb_parni( 1 ) );
+      obj->setFrameShape( ( QFrame::Shape ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -343,25 +342,25 @@ void setFrameStyle( int style )
 */
 HB_FUNC_STATIC( QFRAME_SETFRAMESTYLE )
 {
-  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFrame * obj = qobject_cast<QFrame*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setFrameStyle( PINT( 1 ) );
+      obj->setFrameStyle( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -369,25 +368,25 @@ void setLineWidth( int )
 */
 HB_FUNC_STATIC( QFRAME_SETLINEWIDTH )
 {
-  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFrame * obj = qobject_cast<QFrame*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setLineWidth( PINT( 1 ) );
+      obj->setLineWidth( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -395,25 +394,25 @@ void setMidLineWidth( int )
 */
 HB_FUNC_STATIC( QFRAME_SETMIDLINEWIDTH )
 {
-  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFrame * obj = qobject_cast<QFrame*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setMidLineWidth( PINT( 1 ) );
+      obj->setMidLineWidth( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -421,12 +420,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QFRAME_SIZEHINT )
 {
-  QFrame * obj = qobject_cast< QFrame * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFrame * obj = qobject_cast<QFrame*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
@@ -435,7 +434,7 @@ HB_FUNC_STATIC( QFRAME_SIZEHINT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

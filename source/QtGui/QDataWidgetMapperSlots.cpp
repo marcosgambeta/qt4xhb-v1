@@ -22,7 +22,7 @@ QDataWidgetMapperSlots::~QDataWidgetMapperSlots()
 
 void QDataWidgetMapperSlots::currentIndexChanged( int index )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentIndexChanged(int)" );
 
@@ -40,9 +40,9 @@ void QDataWidgetMapperSlots::currentIndexChanged( int index )
 
 void QDataWidgetMapperSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QDataWidgetMapperSlots * s = QCoreApplication::instance()->findChild<QDataWidgetMapperSlots *>();
 

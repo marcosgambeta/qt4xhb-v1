@@ -44,7 +44,7 @@ RETURN
 
 HB_FUNC_STATIC( QCONICALGRADIENT_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QConicalGradient()
@@ -52,25 +52,25 @@ HB_FUNC_STATIC( QCONICALGRADIENT_NEW )
     QConicalGradient * obj = new QConicalGradient();
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISNUMPAR( 2 ) && ISQPOINTF( 1 ) && HB_ISNUM( 2 ) )
+  else if( ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2) )
   {
     /*
     QConicalGradient( const QPointF & center, qreal startAngle )
     */
-    QConicalGradient * obj = new QConicalGradient( *PQPOINTF( 1 ), PQREAL( 2 ) );
+    QConicalGradient * obj = new QConicalGradient( *PQPOINTF(1), PQREAL(2) );
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
+  else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
     /*
     QConicalGradient( qreal cx, qreal cy, qreal startAngle )
     */
-    QConicalGradient * obj = new QConicalGradient( PQREAL( 1 ), PQREAL( 2 ), PQREAL( 3 ) );
+    QConicalGradient * obj = new QConicalGradient( PQREAL(1), PQREAL(2), PQREAL(3) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -79,12 +79,12 @@ qreal angle() const
 */
 HB_FUNC_STATIC( QCONICALGRADIENT_ANGLE )
 {
-  QConicalGradient * obj = static_cast< QConicalGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QConicalGradient * obj = static_cast<QConicalGradient*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->angle() );
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_ANGLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -103,12 +103,12 @@ QPointF center() const
 */
 HB_FUNC_STATIC( QCONICALGRADIENT_CENTER )
 {
-  QConicalGradient * obj = static_cast< QConicalGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QConicalGradient * obj = static_cast<QConicalGradient*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QPointF * ptr = new QPointF( obj->center() );
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_CENTER )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -128,60 +128,60 @@ void setAngle( qreal angle )
 */
 HB_FUNC_STATIC( QCONICALGRADIENT_SETANGLE )
 {
-  QConicalGradient * obj = static_cast< QConicalGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QConicalGradient * obj = static_cast<QConicalGradient*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setAngle( PQREAL( 1 ) );
+      obj->setAngle( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 HB_FUNC_STATIC( QCONICALGRADIENT_SETCENTER )
 {
-  if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
+  if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
     /*
     void setCenter( const QPointF & center )
     */
-    QConicalGradient * obj = static_cast< QConicalGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QConicalGradient * obj = static_cast<QConicalGradient*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->setCenter( *PQPOINTF( 1 ) );
+      obj->setCenter( *PQPOINTF(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     /*
     void setCenter( qreal x, qreal y )
     */
-    QConicalGradient * obj = static_cast< QConicalGradient * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QConicalGradient * obj = static_cast<QConicalGradient*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->setCenter( PQREAL( 1 ), PQREAL( 2 ) );
+      obj->setCenter( PQREAL(1), PQREAL(2) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 

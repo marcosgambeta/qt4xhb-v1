@@ -22,7 +22,7 @@ QProgressBarSlots::~QProgressBarSlots()
 
 void QProgressBarSlots::valueChanged( int value )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "valueChanged(int)" );
 
@@ -40,9 +40,9 @@ void QProgressBarSlots::valueChanged( int value )
 
 void QProgressBarSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QProgressBar * obj = qobject_cast< QProgressBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QProgressBar * obj = qobject_cast<QProgressBar*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QProgressBarSlots * s = QCoreApplication::instance()->findChild<QProgressBarSlots *>();
 

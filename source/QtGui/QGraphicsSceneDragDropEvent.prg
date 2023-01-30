@@ -57,19 +57,18 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_DELETE )
 {
-  QGraphicsSceneDragDropEvent * obj = static_cast< QGraphicsSceneDragDropEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsSceneDragDropEvent * obj = static_cast<QGraphicsSceneDragDropEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -77,12 +76,12 @@ void acceptProposedAction()
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_ACCEPTPROPOSEDACTION )
 {
-  QGraphicsSceneDragDropEvent * obj = static_cast< QGraphicsSceneDragDropEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsSceneDragDropEvent * obj = static_cast<QGraphicsSceneDragDropEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->acceptProposedAction();
@@ -90,12 +89,12 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_ACCEPTPROPOSEDACTION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -103,12 +102,12 @@ Qt::MouseButtons buttons() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_BUTTONS )
 {
-  QGraphicsSceneDragDropEvent * obj = static_cast< QGraphicsSceneDragDropEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsSceneDragDropEvent * obj = static_cast<QGraphicsSceneDragDropEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->buttons() );
@@ -116,7 +115,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_BUTTONS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -127,12 +126,12 @@ Qt::DropAction dropAction() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_DROPACTION )
 {
-  QGraphicsSceneDragDropEvent * obj = static_cast< QGraphicsSceneDragDropEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsSceneDragDropEvent * obj = static_cast<QGraphicsSceneDragDropEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->dropAction() );
@@ -140,7 +139,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_DROPACTION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -151,12 +150,12 @@ const QMimeData * mimeData() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_MIMEDATA )
 {
-  QGraphicsSceneDragDropEvent * obj = static_cast< QGraphicsSceneDragDropEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsSceneDragDropEvent * obj = static_cast<QGraphicsSceneDragDropEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       const QMimeData * ptr = obj->mimeData();
@@ -165,7 +164,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_MIMEDATA )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -176,12 +175,12 @@ Qt::KeyboardModifiers modifiers() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_MODIFIERS )
 {
-  QGraphicsSceneDragDropEvent * obj = static_cast< QGraphicsSceneDragDropEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsSceneDragDropEvent * obj = static_cast<QGraphicsSceneDragDropEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->modifiers() );
@@ -189,7 +188,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_MODIFIERS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -200,12 +199,12 @@ QPointF pos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_POS )
 {
-  QGraphicsSceneDragDropEvent * obj = static_cast< QGraphicsSceneDragDropEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsSceneDragDropEvent * obj = static_cast<QGraphicsSceneDragDropEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QPointF * ptr = new QPointF( obj->pos() );
@@ -214,7 +213,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_POS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -225,12 +224,12 @@ Qt::DropActions possibleActions() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_POSSIBLEACTIONS )
 {
-  QGraphicsSceneDragDropEvent * obj = static_cast< QGraphicsSceneDragDropEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsSceneDragDropEvent * obj = static_cast<QGraphicsSceneDragDropEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->possibleActions() );
@@ -238,7 +237,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_POSSIBLEACTIONS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -249,12 +248,12 @@ Qt::DropAction proposedAction() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_PROPOSEDACTION )
 {
-  QGraphicsSceneDragDropEvent * obj = static_cast< QGraphicsSceneDragDropEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsSceneDragDropEvent * obj = static_cast<QGraphicsSceneDragDropEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->proposedAction() );
@@ -262,7 +261,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_PROPOSEDACTION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -273,12 +272,12 @@ QPointF scenePos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SCENEPOS )
 {
-  QGraphicsSceneDragDropEvent * obj = static_cast< QGraphicsSceneDragDropEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsSceneDragDropEvent * obj = static_cast<QGraphicsSceneDragDropEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QPointF * ptr = new QPointF( obj->scenePos() );
@@ -287,7 +286,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SCENEPOS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -298,12 +297,12 @@ QPoint screenPos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SCREENPOS )
 {
-  QGraphicsSceneDragDropEvent * obj = static_cast< QGraphicsSceneDragDropEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsSceneDragDropEvent * obj = static_cast<QGraphicsSceneDragDropEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QPoint * ptr = new QPoint( obj->screenPos() );
@@ -312,7 +311,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SCREENPOS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -323,25 +322,25 @@ void setDropAction( Qt::DropAction action )
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SETDROPACTION )
 {
-  QGraphicsSceneDragDropEvent * obj = static_cast< QGraphicsSceneDragDropEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsSceneDragDropEvent * obj = static_cast<QGraphicsSceneDragDropEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setDropAction( ( Qt::DropAction ) hb_parni( 1 ) );
+      obj->setDropAction( ( Qt::DropAction ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -349,12 +348,12 @@ QWidget * source() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SOURCE )
 {
-  QGraphicsSceneDragDropEvent * obj = static_cast< QGraphicsSceneDragDropEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsSceneDragDropEvent * obj = static_cast<QGraphicsSceneDragDropEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QWidget * ptr = obj->source();
@@ -363,7 +362,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEDRAGDROPEVENT_SOURCE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

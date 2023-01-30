@@ -80,34 +80,33 @@ QMdiArea( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QMDIAREA_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QMdiArea * obj = new QMdiArea( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QMDIAREA_DELETE )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -115,12 +114,12 @@ QMdiArea::WindowOrder activationOrder() const
 */
 HB_FUNC_STATIC( QMDIAREA_ACTIVATIONORDER )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->activationOrder() );
@@ -128,7 +127,7 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVATIONORDER )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -139,12 +138,12 @@ QMdiSubWindow * activeSubWindow() const
 */
 HB_FUNC_STATIC( QMDIAREA_ACTIVESUBWINDOW )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QMdiSubWindow * ptr = obj->activeSubWindow();
@@ -153,7 +152,7 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVESUBWINDOW )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -164,21 +163,21 @@ QMdiSubWindow * addSubWindow( QWidget * widget, Qt::WindowFlags windowFlags = 0 
 */
 HB_FUNC_STATIC( QMDIAREA_ADDSUBWINDOW )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQWIDGET( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && ISQWIDGET(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QMdiSubWindow * ptr = obj->addSubWindow( PQWIDGET( 1 ), HB_ISNIL( 2 ) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 2 ) );
+      QMdiSubWindow * ptr = obj->addSubWindow( PQWIDGET(1), HB_ISNIL(2) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(2) );
       Qt4xHb::createReturnQObjectClass( ptr, "QMDISUBWINDOW" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -189,12 +188,12 @@ QBrush background() const
 */
 HB_FUNC_STATIC( QMDIAREA_BACKGROUND )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QBrush * ptr = new QBrush( obj->background() );
@@ -203,7 +202,7 @@ HB_FUNC_STATIC( QMDIAREA_BACKGROUND )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -214,12 +213,12 @@ QMdiSubWindow * currentSubWindow() const
 */
 HB_FUNC_STATIC( QMDIAREA_CURRENTSUBWINDOW )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QMdiSubWindow * ptr = obj->currentSubWindow();
@@ -228,7 +227,7 @@ HB_FUNC_STATIC( QMDIAREA_CURRENTSUBWINDOW )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -239,12 +238,12 @@ bool documentMode() const
 */
 HB_FUNC_STATIC( QMDIAREA_DOCUMENTMODE )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->documentMode() );
@@ -252,7 +251,7 @@ HB_FUNC_STATIC( QMDIAREA_DOCUMENTMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -263,25 +262,25 @@ void removeSubWindow( QWidget * widget )
 */
 HB_FUNC_STATIC( QMDIAREA_REMOVESUBWINDOW )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
+    if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->removeSubWindow( PQWIDGET( 1 ) );
+      obj->removeSubWindow( PQWIDGET(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -289,25 +288,25 @@ void setActivationOrder( QMdiArea::WindowOrder order )
 */
 HB_FUNC_STATIC( QMDIAREA_SETACTIVATIONORDER )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setActivationOrder( ( QMdiArea::WindowOrder ) hb_parni( 1 ) );
+      obj->setActivationOrder( ( QMdiArea::WindowOrder ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -315,25 +314,25 @@ void setBackground( const QBrush & background )
 */
 HB_FUNC_STATIC( QMDIAREA_SETBACKGROUND )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQBRUSH( 1 ) )
+    if( ISNUMPAR(1) && ISQBRUSH(1) )
     {
 #endif
-      obj->setBackground( *PQBRUSH( 1 ) );
+      obj->setBackground( *PQBRUSH(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -341,25 +340,25 @@ void setDocumentMode( bool enabled )
 */
 HB_FUNC_STATIC( QMDIAREA_SETDOCUMENTMODE )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setDocumentMode( PBOOL( 1 ) );
+      obj->setDocumentMode( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -367,25 +366,25 @@ void setOption( QMdiArea::AreaOption option, bool on = true )
 */
 HB_FUNC_STATIC( QMDIAREA_SETOPTION )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
     {
 #endif
-      obj->setOption( ( QMdiArea::AreaOption ) hb_parni( 1 ), OPBOOL( 2, true ) );
+      obj->setOption( ( QMdiArea::AreaOption ) hb_parni(1), OPBOOL( 2, true ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -393,25 +392,25 @@ void setTabPosition( QTabWidget::TabPosition position )
 */
 HB_FUNC_STATIC( QMDIAREA_SETTABPOSITION )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setTabPosition( ( QTabWidget::TabPosition ) hb_parni( 1 ) );
+      obj->setTabPosition( ( QTabWidget::TabPosition ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -419,25 +418,25 @@ void setTabShape( QTabWidget::TabShape shape )
 */
 HB_FUNC_STATIC( QMDIAREA_SETTABSHAPE )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setTabShape( ( QTabWidget::TabShape ) hb_parni( 1 ) );
+      obj->setTabShape( ( QTabWidget::TabShape ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -445,25 +444,25 @@ void setViewMode( QMdiArea::ViewMode mode )
 */
 HB_FUNC_STATIC( QMDIAREA_SETVIEWMODE )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setViewMode( ( QMdiArea::ViewMode ) hb_parni( 1 ) );
+      obj->setViewMode( ( QMdiArea::ViewMode ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -471,28 +470,28 @@ QList<QMdiSubWindow *> subWindowList( QMdiArea::WindowOrder order = QMdiArea::Cr
 */
 HB_FUNC_STATIC( QMDIAREA_SUBWINDOWLIST )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
+    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
     {
 #endif
-      QList<QMdiSubWindow *> list = obj->subWindowList( HB_ISNIL( 1 ) ? ( QMdiArea::WindowOrder ) QMdiArea::CreationOrder : ( QMdiArea::WindowOrder ) hb_parni( 1 ) );
+      QList<QMdiSubWindow *> list = obj->subWindowList( HB_ISNIL(1) ? ( QMdiArea::WindowOrder ) QMdiArea::CreationOrder : ( QMdiArea::WindowOrder ) hb_parni(1) );
       PHB_DYNS pDynSym = hb_dynsymFindName( "QMDISUBWINDOW" );
-      PHB_ITEM pArray = hb_itemArrayNew( 0 );
+      PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
         {
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
-          hb_vmDo( 0 );
+          hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, static_cast< QMdiSubWindow * >( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast<QMdiSubWindow*>( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -508,7 +507,7 @@ HB_FUNC_STATIC( QMDIAREA_SUBWINDOWLIST )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -519,12 +518,12 @@ QTabWidget::TabPosition tabPosition() const
 */
 HB_FUNC_STATIC( QMDIAREA_TABPOSITION )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->tabPosition() );
@@ -532,7 +531,7 @@ HB_FUNC_STATIC( QMDIAREA_TABPOSITION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -543,12 +542,12 @@ QTabWidget::TabShape tabShape() const
 */
 HB_FUNC_STATIC( QMDIAREA_TABSHAPE )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->tabShape() );
@@ -556,7 +555,7 @@ HB_FUNC_STATIC( QMDIAREA_TABSHAPE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -567,20 +566,20 @@ bool testOption( QMdiArea::AreaOption option ) const
 */
 HB_FUNC_STATIC( QMDIAREA_TESTOPTION )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->testOption( ( QMdiArea::AreaOption ) hb_parni( 1 ) ) );
+      RBOOL( obj->testOption( ( QMdiArea::AreaOption ) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -591,12 +590,12 @@ QMdiArea::ViewMode viewMode() const
 */
 HB_FUNC_STATIC( QMDIAREA_VIEWMODE )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->viewMode() );
@@ -604,7 +603,7 @@ HB_FUNC_STATIC( QMDIAREA_VIEWMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -615,12 +614,12 @@ virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QMDIAREA_MINIMUMSIZEHINT )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
@@ -629,7 +628,7 @@ HB_FUNC_STATIC( QMDIAREA_MINIMUMSIZEHINT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -640,12 +639,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QMDIAREA_SIZEHINT )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
@@ -654,7 +653,7 @@ HB_FUNC_STATIC( QMDIAREA_SIZEHINT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -665,12 +664,12 @@ void activateNextSubWindow()
 */
 HB_FUNC_STATIC( QMDIAREA_ACTIVATENEXTSUBWINDOW )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->activateNextSubWindow();
@@ -678,12 +677,12 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVATENEXTSUBWINDOW )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -691,12 +690,12 @@ void activatePreviousSubWindow()
 */
 HB_FUNC_STATIC( QMDIAREA_ACTIVATEPREVIOUSSUBWINDOW )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->activatePreviousSubWindow();
@@ -704,12 +703,12 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVATEPREVIOUSSUBWINDOW )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -717,12 +716,12 @@ void cascadeSubWindows()
 */
 HB_FUNC_STATIC( QMDIAREA_CASCADESUBWINDOWS )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->cascadeSubWindows();
@@ -730,12 +729,12 @@ HB_FUNC_STATIC( QMDIAREA_CASCADESUBWINDOWS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -743,12 +742,12 @@ void closeActiveSubWindow()
 */
 HB_FUNC_STATIC( QMDIAREA_CLOSEACTIVESUBWINDOW )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->closeActiveSubWindow();
@@ -756,12 +755,12 @@ HB_FUNC_STATIC( QMDIAREA_CLOSEACTIVESUBWINDOW )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -769,12 +768,12 @@ void closeAllSubWindows()
 */
 HB_FUNC_STATIC( QMDIAREA_CLOSEALLSUBWINDOWS )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->closeAllSubWindows();
@@ -782,12 +781,12 @@ HB_FUNC_STATIC( QMDIAREA_CLOSEALLSUBWINDOWS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -795,25 +794,25 @@ void setActiveSubWindow( QMdiSubWindow * window )
 */
 HB_FUNC_STATIC( QMDIAREA_SETACTIVESUBWINDOW )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQMDISUBWINDOW( 1 ) )
+    if( ISNUMPAR(1) && ISQMDISUBWINDOW(1) )
     {
 #endif
-      obj->setActiveSubWindow( PQMDISUBWINDOW( 1 ) );
+      obj->setActiveSubWindow( PQMDISUBWINDOW(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -821,12 +820,12 @@ void tileSubWindows()
 */
 HB_FUNC_STATIC( QMDIAREA_TILESUBWINDOWS )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->tileSubWindows();
@@ -834,12 +833,12 @@ HB_FUNC_STATIC( QMDIAREA_TILESUBWINDOWS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 void QMdiAreaSlots_connect_signal( const QString & signal, const QString & slot );

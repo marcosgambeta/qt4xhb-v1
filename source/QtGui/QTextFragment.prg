@@ -59,7 +59,7 @@ RETURN
 
 HB_FUNC_STATIC( QTEXTFRAGMENT_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QTextFragment()
@@ -67,35 +67,34 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_NEW )
     QTextFragment * obj = new QTextFragment();
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISNUMPAR( 1 ) && ISQTEXTFRAGMENT( 1 ) )
+  else if( ISNUMPAR(1) && ISQTEXTFRAGMENT(1) )
   {
     /*
     QTextFragment( const QTextFragment & other )
     */
-    QTextFragment * obj = new QTextFragment( *PQTEXTFRAGMENT( 1 ) );
+    QTextFragment * obj = new QTextFragment( *PQTEXTFRAGMENT(1) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QTEXTFRAGMENT_DELETE )
 {
-  QTextFragment * obj = static_cast< QTextFragment * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextFragment * obj = static_cast<QTextFragment*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -103,12 +102,12 @@ QTextCharFormat charFormat() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMAT )
 {
-  QTextFragment * obj = static_cast< QTextFragment * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextFragment * obj = static_cast<QTextFragment*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QTextCharFormat * ptr = new QTextCharFormat( obj->charFormat() );
@@ -117,7 +116,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMAT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -128,12 +127,12 @@ int charFormatIndex() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMATINDEX )
 {
-  QTextFragment * obj = static_cast< QTextFragment * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextFragment * obj = static_cast<QTextFragment*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->charFormatIndex() );
@@ -141,7 +140,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_CHARFORMATINDEX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -152,20 +151,20 @@ bool contains( int position ) const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_CONTAINS )
 {
-  QTextFragment * obj = static_cast< QTextFragment * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextFragment * obj = static_cast<QTextFragment*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->contains( PINT( 1 ) ) );
+      RBOOL( obj->contains( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -176,28 +175,28 @@ QList<QGlyphRun> glyphRuns() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
 {
-  QTextFragment * obj = static_cast< QTextFragment * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextFragment * obj = static_cast<QTextFragment*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QList<QGlyphRun> list = obj->glyphRuns();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QGLYPHRUN" );
-      PHB_ITEM pArray = hb_itemArrayNew( 0 );
+      PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
         {
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
-          hb_vmDo( 0 );
+          hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, static_cast< QGlyphRun * >( new QGlyphRun( list[i] ) ) );
+          hb_itemPutPtr( pItem, static_cast<QGlyphRun*>( new QGlyphRun( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -217,7 +216,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_GLYPHRUNS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -228,12 +227,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_ISVALID )
 {
-  QTextFragment * obj = static_cast< QTextFragment * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextFragment * obj = static_cast<QTextFragment*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -241,7 +240,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_ISVALID )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -252,12 +251,12 @@ int length() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_LENGTH )
 {
-  QTextFragment * obj = static_cast< QTextFragment * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextFragment * obj = static_cast<QTextFragment*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->length() );
@@ -265,7 +264,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_LENGTH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -276,12 +275,12 @@ int position() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_POSITION )
 {
-  QTextFragment * obj = static_cast< QTextFragment * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextFragment * obj = static_cast<QTextFragment*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->position() );
@@ -289,7 +288,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_POSITION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -300,12 +299,12 @@ QString text() const
 */
 HB_FUNC_STATIC( QTEXTFRAGMENT_TEXT )
 {
-  QTextFragment * obj = static_cast< QTextFragment * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextFragment * obj = static_cast<QTextFragment*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->text() );
@@ -313,7 +312,7 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_TEXT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -323,27 +322,27 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
   hb_itemReturn( self );
@@ -368,15 +367,15 @@ HB_FUNC_STATIC( QTEXTFRAGMENT_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
   hb_itemReturn( self );

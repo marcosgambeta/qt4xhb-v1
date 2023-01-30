@@ -22,7 +22,7 @@ QSpinBoxSlots::~QSpinBoxSlots()
 
 void QSpinBoxSlots::valueChanged( int i )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "valueChanged(int)" );
 
@@ -40,7 +40,7 @@ void QSpinBoxSlots::valueChanged( int i )
 
 void QSpinBoxSlots::valueChanged( const QString & text )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "valueChanged(QString)" );
 
@@ -58,9 +58,9 @@ void QSpinBoxSlots::valueChanged( const QString & text )
 
 void QSpinBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSpinBox * obj = qobject_cast< QSpinBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSpinBox * obj = qobject_cast<QSpinBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QSpinBoxSlots * s = QCoreApplication::instance()->findChild<QSpinBoxSlots *>();
 

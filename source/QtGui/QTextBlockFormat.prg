@@ -65,32 +65,31 @@ QTextBlockFormat()
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     QTextBlockFormat * obj = new QTextBlockFormat();
     Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_DELETE )
 {
-  QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextBlockFormat * obj = static_cast<QTextBlockFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -98,12 +97,12 @@ Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_ALIGNMENT )
 {
-  QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextBlockFormat * obj = static_cast<QTextBlockFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->alignment() );
@@ -111,7 +110,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_ALIGNMENT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -122,12 +121,12 @@ qreal bottomMargin() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_BOTTOMMARGIN )
 {
-  QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextBlockFormat * obj = static_cast<QTextBlockFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->bottomMargin() );
@@ -135,7 +134,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_BOTTOMMARGIN )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -146,12 +145,12 @@ int indent() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_INDENT )
 {
-  QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextBlockFormat * obj = static_cast<QTextBlockFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->indent() );
@@ -159,7 +158,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_INDENT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -170,12 +169,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_ISVALID )
 {
-  QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextBlockFormat * obj = static_cast<QTextBlockFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -183,7 +182,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_ISVALID )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -194,12 +193,12 @@ qreal leftMargin() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LEFTMARGIN )
 {
-  QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextBlockFormat * obj = static_cast<QTextBlockFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->leftMargin() );
@@ -207,7 +206,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LEFTMARGIN )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -215,24 +214,24 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LEFTMARGIN )
 
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT )
 {
-  if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     /*
     qreal lineHeight( qreal scriptLineHeight, qreal scaling ) const
     */
-    QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QTextBlockFormat * obj = static_cast<QTextBlockFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      RQREAL( obj->lineHeight( PQREAL( 1 ), PQREAL( 2 ) ) );
+      RQREAL( obj->lineHeight( PQREAL(1), PQREAL(2) ) );
     }
   }
-  else if( ISNUMPAR( 0 ) )
+  else if( ISNUMPAR(0) )
   {
     /*
     qreal lineHeight() const
     */
-    QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QTextBlockFormat * obj = static_cast<QTextBlockFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
@@ -241,7 +240,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHT )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -250,12 +249,12 @@ int lineHeightType() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHTTYPE )
 {
-  QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextBlockFormat * obj = static_cast<QTextBlockFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->lineHeightType() );
@@ -263,7 +262,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_LINEHEIGHTTYPE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -274,12 +273,12 @@ bool nonBreakableLines() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_NONBREAKABLELINES )
 {
-  QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextBlockFormat * obj = static_cast<QTextBlockFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->nonBreakableLines() );
@@ -287,7 +286,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_NONBREAKABLELINES )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -298,12 +297,12 @@ QTextFormat::PageBreakFlags pageBreakPolicy() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_PAGEBREAKPOLICY )
 {
-  QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextBlockFormat * obj = static_cast<QTextBlockFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->pageBreakPolicy() );
@@ -311,7 +310,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_PAGEBREAKPOLICY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -322,12 +321,12 @@ qreal rightMargin() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_RIGHTMARGIN )
 {
-  QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextBlockFormat * obj = static_cast<QTextBlockFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->rightMargin() );
@@ -335,7 +334,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_RIGHTMARGIN )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -346,25 +345,25 @@ void setAlignment( Qt::Alignment alignment )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETALIGNMENT )
 {
-  QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextBlockFormat * obj = static_cast<QTextBlockFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setAlignment( ( Qt::Alignment ) hb_parni( 1 ) );
+      obj->setAlignment( ( Qt::Alignment ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -372,25 +371,25 @@ void setBottomMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETBOTTOMMARGIN )
 {
-  QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextBlockFormat * obj = static_cast<QTextBlockFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setBottomMargin( PQREAL( 1 ) );
+      obj->setBottomMargin( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -398,25 +397,25 @@ void setIndent( int indentation )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETINDENT )
 {
-  QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextBlockFormat * obj = static_cast<QTextBlockFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setIndent( PINT( 1 ) );
+      obj->setIndent( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -424,25 +423,25 @@ void setLeftMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETLEFTMARGIN )
 {
-  QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextBlockFormat * obj = static_cast<QTextBlockFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setLeftMargin( PQREAL( 1 ) );
+      obj->setLeftMargin( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -450,25 +449,25 @@ void setLineHeight( qreal height, int heightType )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETLINEHEIGHT )
 {
-  QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextBlockFormat * obj = static_cast<QTextBlockFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      obj->setLineHeight( PQREAL( 1 ), PINT( 2 ) );
+      obj->setLineHeight( PQREAL(1), PINT(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -476,25 +475,25 @@ void setNonBreakableLines( bool b )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETNONBREAKABLELINES )
 {
-  QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextBlockFormat * obj = static_cast<QTextBlockFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setNonBreakableLines( PBOOL( 1 ) );
+      obj->setNonBreakableLines( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -502,25 +501,25 @@ void setPageBreakPolicy( QTextFormat::PageBreakFlags policy )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETPAGEBREAKPOLICY )
 {
-  QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextBlockFormat * obj = static_cast<QTextBlockFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setPageBreakPolicy( ( QTextFormat::PageBreakFlags ) hb_parni( 1 ) );
+      obj->setPageBreakPolicy( ( QTextFormat::PageBreakFlags ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -528,25 +527,25 @@ void setRightMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETRIGHTMARGIN )
 {
-  QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextBlockFormat * obj = static_cast<QTextBlockFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setRightMargin( PQREAL( 1 ) );
+      obj->setRightMargin( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -554,25 +553,25 @@ void setTextIndent( qreal indent )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETTEXTINDENT )
 {
-  QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextBlockFormat * obj = static_cast<QTextBlockFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setTextIndent( PQREAL( 1 ) );
+      obj->setTextIndent( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -580,25 +579,25 @@ void setTopMargin( qreal margin )
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_SETTOPMARGIN )
 {
-  QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextBlockFormat * obj = static_cast<QTextBlockFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setTopMargin( PQREAL( 1 ) );
+      obj->setTopMargin( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -606,12 +605,12 @@ qreal textIndent() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_TEXTINDENT )
 {
-  QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextBlockFormat * obj = static_cast<QTextBlockFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->textIndent() );
@@ -619,7 +618,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_TEXTINDENT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -630,12 +629,12 @@ qreal topMargin() const
 */
 HB_FUNC_STATIC( QTEXTBLOCKFORMAT_TOPMARGIN )
 {
-  QTextBlockFormat * obj = static_cast< QTextBlockFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextBlockFormat * obj = static_cast<QTextBlockFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->topMargin() );
@@ -643,7 +642,7 @@ HB_FUNC_STATIC( QTEXTBLOCKFORMAT_TOPMARGIN )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

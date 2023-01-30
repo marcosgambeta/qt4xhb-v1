@@ -64,34 +64,33 @@ QDirectPainter( QObject * parent = 0, QDirectPainter::SurfaceFlag flag = QDirect
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_NEW )
 {
-  if( ISBETWEEN( 0, 2 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+  if( ISBETWEEN(0, 2) && ( ISQOBJECT(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
   {
-    QDirectPainter * obj = new QDirectPainter( OPQOBJECT( 1, 0 ), HB_ISNIL( 2 ) ? ( QDirectPainter::SurfaceFlag ) QDirectPainter::NonReserved : ( QDirectPainter::SurfaceFlag ) hb_parni( 2 ) );
+    QDirectPainter * obj = new QDirectPainter( OPQOBJECT( 1, 0 ), HB_ISNIL(2) ? ( QDirectPainter::SurfaceFlag ) QDirectPainter::NonReserved : ( QDirectPainter::SurfaceFlag ) hb_parni(2) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QDIRECTPAINTER_DELETE )
 {
-  QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDirectPainter * obj = qobject_cast<QDirectPainter*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -99,12 +98,12 @@ QRegion allocatedRegion() const
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_ALLOCATEDREGION )
 {
-  QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDirectPainter * obj = qobject_cast<QDirectPainter*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QRegion * ptr = new QRegion( obj->allocatedRegion() );
@@ -113,7 +112,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_ALLOCATEDREGION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -121,37 +120,37 @@ HB_FUNC_STATIC( QDIRECTPAINTER_ALLOCATEDREGION )
 
 HB_FUNC_STATIC( QDIRECTPAINTER_ENDPAINTING )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     void endPainting()
     */
-    QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+    QDirectPainter * obj = qobject_cast<QDirectPainter*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if( obj != NULL )
     {
       obj->endPainting();
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR( 1 ) && ISQREGION( 1 ) )
+  else if( ISNUMPAR(1) && ISQREGION(1) )
   {
     /*
     void endPainting( const QRegion & region )
     */
-    QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+    QDirectPainter * obj = qobject_cast<QDirectPainter*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if( obj != NULL )
     {
-      obj->endPainting( *PQREGION( 1 ) );
+      obj->endPainting( *PQREGION(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -160,25 +159,25 @@ void flush( const QRegion & region )
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_FLUSH )
 {
-  QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDirectPainter * obj = qobject_cast<QDirectPainter*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQREGION( 1 ) )
+    if( ISNUMPAR(1) && ISQREGION(1) )
     {
 #endif
-      obj->flush( *PQREGION( 1 ) );
+      obj->flush( *PQREGION(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -186,12 +185,12 @@ QRect geometry() const
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_GEOMETRY )
 {
-  QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDirectPainter * obj = qobject_cast<QDirectPainter*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QRect * ptr = new QRect( obj->geometry() );
@@ -200,7 +199,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_GEOMETRY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -211,12 +210,12 @@ void lower()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_LOWER )
 {
-  QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDirectPainter * obj = qobject_cast<QDirectPainter*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->lower();
@@ -224,12 +223,12 @@ HB_FUNC_STATIC( QDIRECTPAINTER_LOWER )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -237,12 +236,12 @@ void raise()
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_RAISE )
 {
-  QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDirectPainter * obj = qobject_cast<QDirectPainter*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->raise();
@@ -250,12 +249,12 @@ HB_FUNC_STATIC( QDIRECTPAINTER_RAISE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -263,25 +262,25 @@ virtual void regionChanged( const QRegion & newRegion )
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_REGIONCHANGED )
 {
-  QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDirectPainter * obj = qobject_cast<QDirectPainter*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQREGION( 1 ) )
+    if( ISNUMPAR(1) && ISQREGION(1) )
     {
 #endif
-      obj->regionChanged( *PQREGION( 1 ) );
+      obj->regionChanged( *PQREGION(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -289,12 +288,12 @@ QRegion requestedRegion() const
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_REQUESTEDREGION )
 {
-  QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDirectPainter * obj = qobject_cast<QDirectPainter*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QRegion * ptr = new QRegion( obj->requestedRegion() );
@@ -303,7 +302,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_REQUESTEDREGION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -314,25 +313,25 @@ void setGeometry( const QRect & rectangle )
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_SETGEOMETRY )
 {
-  QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDirectPainter * obj = qobject_cast<QDirectPainter*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
+    if( ISNUMPAR(1) && ISQRECT(1) )
     {
 #endif
-      obj->setGeometry( *PQRECT( 1 ) );
+      obj->setGeometry( *PQRECT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -340,25 +339,25 @@ void setRegion( const QRegion & region )
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_SETREGION )
 {
-  QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDirectPainter * obj = qobject_cast<QDirectPainter*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQREGION( 1 ) )
+    if( ISNUMPAR(1) && ISQREGION(1) )
     {
 #endif
-      obj->setRegion( *PQREGION( 1 ) );
+      obj->setRegion( *PQREGION(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -366,12 +365,12 @@ void startPainting( bool lockDisplay = true )
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_STARTPAINTING )
 {
-  QDirectPainter * obj = qobject_cast< QDirectPainter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDirectPainter * obj = qobject_cast<QDirectPainter*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( HB_ISLOG( 1 ) || HB_ISNIL( 1 ) ) )
+    if( ISBETWEEN(0, 1) && ( HB_ISLOG(1) || HB_ISNIL(1) ) )
     {
 #endif
       obj->startPainting( OPBOOL( 1, true ) );
@@ -379,12 +378,12 @@ HB_FUNC_STATIC( QDIRECTPAINTER_STARTPAINTING )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -393,7 +392,7 @@ static int linestep()
 HB_FUNC_STATIC( QDIRECTPAINTER_LINESTEP )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
 #endif
     RINT( QDirectPainter::linestep() );
@@ -401,7 +400,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_LINESTEP )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -412,7 +411,7 @@ static void lock()
 HB_FUNC_STATIC( QDIRECTPAINTER_LOCK )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
 #endif
     QDirectPainter::lock();
@@ -420,11 +419,11 @@ HB_FUNC_STATIC( QDIRECTPAINTER_LOCK )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -433,7 +432,7 @@ static int screenDepth()
 HB_FUNC_STATIC( QDIRECTPAINTER_SCREENDEPTH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
 #endif
     RINT( QDirectPainter::screenDepth() );
@@ -441,7 +440,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_SCREENDEPTH )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -452,7 +451,7 @@ static int screenHeight()
 HB_FUNC_STATIC( QDIRECTPAINTER_SCREENHEIGHT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
 #endif
     RINT( QDirectPainter::screenHeight() );
@@ -460,7 +459,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_SCREENHEIGHT )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -471,7 +470,7 @@ static int screenWidth()
 HB_FUNC_STATIC( QDIRECTPAINTER_SCREENWIDTH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
 #endif
     RINT( QDirectPainter::screenWidth() );
@@ -479,7 +478,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_SCREENWIDTH )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -490,7 +489,7 @@ static void unlock()
 HB_FUNC_STATIC( QDIRECTPAINTER_UNLOCK )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
 #endif
     QDirectPainter::unlock();
@@ -498,11 +497,11 @@ HB_FUNC_STATIC( QDIRECTPAINTER_UNLOCK )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 #pragma ENDDUMP

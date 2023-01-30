@@ -22,7 +22,7 @@ QPrintDialogSlots::~QPrintDialogSlots()
 
 void QPrintDialogSlots::accepted( QPrinter * printer )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "accepted(QPrinter*)" );
 
@@ -40,9 +40,9 @@ void QPrintDialogSlots::accepted( QPrinter * printer )
 
 void QPrintDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QPrintDialog * obj = qobject_cast< QPrintDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPrintDialog * obj = qobject_cast<QPrintDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QPrintDialogSlots * s = QCoreApplication::instance()->findChild<QPrintDialogSlots *>();
 

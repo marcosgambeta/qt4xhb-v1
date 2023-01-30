@@ -22,7 +22,7 @@ QToolBarSlots::~QToolBarSlots()
 
 void QToolBarSlots::actionTriggered( QAction * action )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "actionTriggered(QAction*)" );
 
@@ -40,14 +40,14 @@ void QToolBarSlots::actionTriggered( QAction * action )
 
 void QToolBarSlots::allowedAreasChanged( Qt::ToolBarAreas allowedAreas )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "allowedAreasChanged(Qt::ToolBarAreas)" );
 
   if( cb )
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTOOLBAR" );
-    PHB_ITEM pAllowedAreas = hb_itemPutNI( NULL, static_cast< int >( allowedAreas ) );
+    PHB_ITEM pAllowedAreas = hb_itemPutNI( NULL, static_cast<int >( allowedAreas ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pAllowedAreas );
 
@@ -58,7 +58,7 @@ void QToolBarSlots::allowedAreasChanged( Qt::ToolBarAreas allowedAreas )
 
 void QToolBarSlots::iconSizeChanged( const QSize & iconSize )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "iconSizeChanged(QSize)" );
 
@@ -76,7 +76,7 @@ void QToolBarSlots::iconSizeChanged( const QSize & iconSize )
 
 void QToolBarSlots::movableChanged( bool movable )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "movableChanged(bool)" );
 
@@ -94,14 +94,14 @@ void QToolBarSlots::movableChanged( bool movable )
 
 void QToolBarSlots::orientationChanged( Qt::Orientation orientation )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "orientationChanged(Qt::Orientation)" );
 
   if( cb )
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTOOLBAR" );
-    PHB_ITEM pOrientation = hb_itemPutNI( NULL, static_cast< int >( orientation ) );
+    PHB_ITEM pOrientation = hb_itemPutNI( NULL, static_cast<int >( orientation ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pOrientation );
 
@@ -112,14 +112,14 @@ void QToolBarSlots::orientationChanged( Qt::Orientation orientation )
 
 void QToolBarSlots::toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
 
   if( cb )
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTOOLBAR" );
-    PHB_ITEM pToolButtonStyle = hb_itemPutNI( NULL, static_cast< int >( toolButtonStyle ) );
+    PHB_ITEM pToolButtonStyle = hb_itemPutNI( NULL, static_cast<int >( toolButtonStyle ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pToolButtonStyle );
 
@@ -130,7 +130,7 @@ void QToolBarSlots::toolButtonStyleChanged( Qt::ToolButtonStyle toolButtonStyle 
 
 void QToolBarSlots::topLevelChanged( bool topLevel )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "topLevelChanged(bool)" );
 
@@ -148,7 +148,7 @@ void QToolBarSlots::topLevelChanged( bool topLevel )
 
 void QToolBarSlots::visibilityChanged( bool visible )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "visibilityChanged(bool)" );
 
@@ -166,9 +166,9 @@ void QToolBarSlots::visibilityChanged( bool visible )
 
 void QToolBarSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QToolBar * obj = qobject_cast< QToolBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QToolBar * obj = qobject_cast<QToolBar*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QToolBarSlots * s = QCoreApplication::instance()->findChild<QToolBarSlots *>();
 

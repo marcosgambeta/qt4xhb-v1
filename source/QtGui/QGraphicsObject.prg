@@ -55,25 +55,25 @@ void grabGesture( Qt::GestureType gesture, Qt::GestureFlags flags = Qt::GestureF
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_GRABGESTURE )
 {
-  QGraphicsObject * obj = qobject_cast< QGraphicsObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsObject * obj = qobject_cast<QGraphicsObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      obj->grabGesture( ( Qt::GestureType ) hb_parni( 1 ), HB_ISNIL( 2 ) ? ( Qt::GestureFlags ) Qt::GestureFlags() : ( Qt::GestureFlags ) hb_parni( 2 ) );
+      obj->grabGesture( ( Qt::GestureType ) hb_parni(1), HB_ISNIL(2) ? ( Qt::GestureFlags ) Qt::GestureFlags() : ( Qt::GestureFlags ) hb_parni(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -81,25 +81,25 @@ void ungrabGesture( Qt::GestureType gesture )
 */
 HB_FUNC_STATIC( QGRAPHICSOBJECT_UNGRABGESTURE )
 {
-  QGraphicsObject * obj = qobject_cast< QGraphicsObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsObject * obj = qobject_cast<QGraphicsObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->ungrabGesture( ( Qt::GestureType ) hb_parni( 1 ) );
+      obj->ungrabGesture( ( Qt::GestureType ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 void QGraphicsObjectSlots_connect_signal( const QString & signal, const QString & slot );

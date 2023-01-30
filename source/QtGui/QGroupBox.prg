@@ -56,7 +56,7 @@ RETURN
 
 HB_FUNC_STATIC( QGROUPBOX_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     /*
     QGroupBox( QWidget * parent = 0 )
@@ -64,17 +64,17 @@ HB_FUNC_STATIC( QGROUPBOX_NEW )
     QGroupBox * obj = new QGroupBox( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
-  else if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
   {
     /*
     QGroupBox( const QString & title, QWidget * parent = 0 )
     */
-    QGroupBox * obj = new QGroupBox( PQSTRING( 1 ), OPQWIDGET( 2, 0 ) );
+    QGroupBox * obj = new QGroupBox( PQSTRING(1), OPQWIDGET( 2, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -83,12 +83,12 @@ Qt::Alignment alignment() const
 */
 HB_FUNC_STATIC( QGROUPBOX_ALIGNMENT )
 {
-  QGroupBox * obj = qobject_cast< QGroupBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGroupBox * obj = qobject_cast<QGroupBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->alignment() );
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QGROUPBOX_ALIGNMENT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -107,12 +107,12 @@ bool isCheckable() const
 */
 HB_FUNC_STATIC( QGROUPBOX_ISCHECKABLE )
 {
-  QGroupBox * obj = qobject_cast< QGroupBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGroupBox * obj = qobject_cast<QGroupBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isCheckable() );
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QGROUPBOX_ISCHECKABLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -131,12 +131,12 @@ bool isChecked() const
 */
 HB_FUNC_STATIC( QGROUPBOX_ISCHECKED )
 {
-  QGroupBox * obj = qobject_cast< QGroupBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGroupBox * obj = qobject_cast<QGroupBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isChecked() );
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QGROUPBOX_ISCHECKED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -155,12 +155,12 @@ bool isFlat() const
 */
 HB_FUNC_STATIC( QGROUPBOX_ISFLAT )
 {
-  QGroupBox * obj = qobject_cast< QGroupBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGroupBox * obj = qobject_cast<QGroupBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isFlat() );
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QGROUPBOX_ISFLAT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -179,25 +179,25 @@ void setAlignment( int alignment )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETALIGNMENT )
 {
-  QGroupBox * obj = qobject_cast< QGroupBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGroupBox * obj = qobject_cast<QGroupBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setAlignment( PINT( 1 ) );
+      obj->setAlignment( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -205,25 +205,25 @@ void setCheckable( bool checkable )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETCHECKABLE )
 {
-  QGroupBox * obj = qobject_cast< QGroupBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGroupBox * obj = qobject_cast<QGroupBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setCheckable( PBOOL( 1 ) );
+      obj->setCheckable( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -231,25 +231,25 @@ void setFlat( bool flat )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETFLAT )
 {
-  QGroupBox * obj = qobject_cast< QGroupBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGroupBox * obj = qobject_cast<QGroupBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setFlat( PBOOL( 1 ) );
+      obj->setFlat( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -257,25 +257,25 @@ void setTitle( const QString & title )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETTITLE )
 {
-  QGroupBox * obj = qobject_cast< QGroupBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGroupBox * obj = qobject_cast<QGroupBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setTitle( PQSTRING( 1 ) );
+      obj->setTitle( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -283,12 +283,12 @@ QString title() const
 */
 HB_FUNC_STATIC( QGROUPBOX_TITLE )
 {
-  QGroupBox * obj = qobject_cast< QGroupBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGroupBox * obj = qobject_cast<QGroupBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->title() );
@@ -296,7 +296,7 @@ HB_FUNC_STATIC( QGROUPBOX_TITLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -307,12 +307,12 @@ virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QGROUPBOX_MINIMUMSIZEHINT )
 {
-  QGroupBox * obj = qobject_cast< QGroupBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGroupBox * obj = qobject_cast<QGroupBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QGROUPBOX_MINIMUMSIZEHINT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -332,25 +332,25 @@ void setChecked( bool checked )
 */
 HB_FUNC_STATIC( QGROUPBOX_SETCHECKED )
 {
-  QGroupBox * obj = qobject_cast< QGroupBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGroupBox * obj = qobject_cast<QGroupBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setChecked( PBOOL( 1 ) );
+      obj->setChecked( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 void QGroupBoxSlots_connect_signal( const QString & signal, const QString & slot );

@@ -22,7 +22,7 @@ QLineEditSlots::~QLineEditSlots()
 
 void QLineEditSlots::cursorPositionChanged( int iold, int inew )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "cursorPositionChanged(int,int)" );
 
@@ -42,7 +42,7 @@ void QLineEditSlots::cursorPositionChanged( int iold, int inew )
 
 void QLineEditSlots::editingFinished()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "editingFinished()" );
 
@@ -58,7 +58,7 @@ void QLineEditSlots::editingFinished()
 
 void QLineEditSlots::returnPressed()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "returnPressed()" );
 
@@ -74,7 +74,7 @@ void QLineEditSlots::returnPressed()
 
 void QLineEditSlots::selectionChanged()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "selectionChanged()" );
 
@@ -90,7 +90,7 @@ void QLineEditSlots::selectionChanged()
 
 void QLineEditSlots::textChanged( const QString & text )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "textChanged(QString)" );
 
@@ -108,7 +108,7 @@ void QLineEditSlots::textChanged( const QString & text )
 
 void QLineEditSlots::textEdited( const QString & text )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "textEdited(QString)" );
 
@@ -126,9 +126,9 @@ void QLineEditSlots::textEdited( const QString & text )
 
 void QLineEditSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QLineEdit * obj = qobject_cast< QLineEdit * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QLineEdit * obj = qobject_cast<QLineEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QLineEditSlots * s = QCoreApplication::instance()->findChild<QLineEditSlots *>();
 

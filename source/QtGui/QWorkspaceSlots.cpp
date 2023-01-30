@@ -22,7 +22,7 @@ QWorkspaceSlots::~QWorkspaceSlots()
 
 void QWorkspaceSlots::windowActivated( QWidget * w )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "windowActivated(QWidget*)" );
 
@@ -40,9 +40,9 @@ void QWorkspaceSlots::windowActivated( QWidget * w )
 
 void QWorkspaceSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QWorkspace * obj = qobject_cast< QWorkspace * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWorkspace * obj = qobject_cast<QWorkspace*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QWorkspaceSlots * s = QCoreApplication::instance()->findChild<QWorkspaceSlots *>();
 

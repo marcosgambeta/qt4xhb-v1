@@ -54,12 +54,12 @@ virtual int exec() = 0
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_EXEC )
 {
-  QAbstractPrintDialog * obj = qobject_cast< QAbstractPrintDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractPrintDialog * obj = qobject_cast<QAbstractPrintDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->exec() );
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_EXEC )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -78,12 +78,12 @@ int fromPage() const
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_FROMPAGE )
 {
-  QAbstractPrintDialog * obj = qobject_cast< QAbstractPrintDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractPrintDialog * obj = qobject_cast<QAbstractPrintDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->fromPage() );
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_FROMPAGE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -102,12 +102,12 @@ int maxPage() const
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MAXPAGE )
 {
-  QAbstractPrintDialog * obj = qobject_cast< QAbstractPrintDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractPrintDialog * obj = qobject_cast<QAbstractPrintDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->maxPage() );
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MAXPAGE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -126,12 +126,12 @@ int minPage() const
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MINPAGE )
 {
-  QAbstractPrintDialog * obj = qobject_cast< QAbstractPrintDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractPrintDialog * obj = qobject_cast<QAbstractPrintDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->minPage() );
@@ -139,7 +139,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_MINPAGE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -150,12 +150,12 @@ QAbstractPrintDialog::PrintRange printRange() const
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_PRINTRANGE )
 {
-  QAbstractPrintDialog * obj = qobject_cast< QAbstractPrintDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractPrintDialog * obj = qobject_cast<QAbstractPrintDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->printRange() );
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_PRINTRANGE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -174,12 +174,12 @@ QPrinter * printer() const
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_PRINTER )
 {
-  QAbstractPrintDialog * obj = qobject_cast< QAbstractPrintDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractPrintDialog * obj = qobject_cast<QAbstractPrintDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QPrinter * ptr = obj->printer();
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_PRINTER )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -199,25 +199,25 @@ void setFromTo( int from, int to )
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETFROMTO )
 {
-  QAbstractPrintDialog * obj = qobject_cast< QAbstractPrintDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractPrintDialog * obj = qobject_cast<QAbstractPrintDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      obj->setFromTo( PINT( 1 ), PINT( 2 ) );
+      obj->setFromTo( PINT(1), PINT(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -225,25 +225,25 @@ void setMinMax( int min, int max )
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETMINMAX )
 {
-  QAbstractPrintDialog * obj = qobject_cast< QAbstractPrintDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractPrintDialog * obj = qobject_cast<QAbstractPrintDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      obj->setMinMax( PINT( 1 ), PINT( 2 ) );
+      obj->setMinMax( PINT(1), PINT(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -251,25 +251,25 @@ void setPrintRange( QAbstractPrintDialog::PrintRange range )
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_SETPRINTRANGE )
 {
-  QAbstractPrintDialog * obj = qobject_cast< QAbstractPrintDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractPrintDialog * obj = qobject_cast<QAbstractPrintDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setPrintRange( ( QAbstractPrintDialog::PrintRange ) hb_parni( 1 ) );
+      obj->setPrintRange( ( QAbstractPrintDialog::PrintRange ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -277,12 +277,12 @@ int toPage() const
 */
 HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_TOPAGE )
 {
-  QAbstractPrintDialog * obj = qobject_cast< QAbstractPrintDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractPrintDialog * obj = qobject_cast<QAbstractPrintDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->toPage() );
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_TOPAGE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

@@ -80,69 +80,68 @@ QDataWidgetMapper( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QDataWidgetMapper * obj = new QDataWidgetMapper( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_DELETE )
 {
-  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ADDMAPPING )
 {
-  if( ISNUMPAR( 2 ) && ISQWIDGET( 1 ) && HB_ISNUM( 2 ) )
+  if( ISNUMPAR(2) && ISQWIDGET(1) && HB_ISNUM(2) )
   {
     /*
     void addMapping( QWidget * widget, int section )
     */
-    QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+    QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if( obj != NULL )
     {
-      obj->addMapping( PQWIDGET( 1 ), PINT( 2 ) );
+      obj->addMapping( PQWIDGET(1), PINT(2) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR( 3 ) && ISQWIDGET( 1 ) && HB_ISNUM( 2 ) && ISQBYTEARRAY( 3 ) )
+  else if( ISNUMPAR(3) && ISQWIDGET(1) && HB_ISNUM(2) && ISQBYTEARRAY(3) )
   {
     /*
     void addMapping( QWidget * widget, int section, const QByteArray & propertyName )
     */
-    QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+    QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if( obj != NULL )
     {
-      obj->addMapping( PQWIDGET( 1 ), PINT( 2 ), *PQBYTEARRAY( 3 ) );
+      obj->addMapping( PQWIDGET(1), PINT(2), *PQBYTEARRAY(3) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -151,12 +150,12 @@ void clearMapping()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_CLEARMAPPING )
 {
-  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->clearMapping();
@@ -164,12 +163,12 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_CLEARMAPPING )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -177,12 +176,12 @@ int currentIndex() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_CURRENTINDEX )
 {
-  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->currentIndex() );
@@ -190,7 +189,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_CURRENTINDEX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -201,12 +200,12 @@ QAbstractItemDelegate * itemDelegate() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ITEMDELEGATE )
 {
-  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QAbstractItemDelegate * ptr = obj->itemDelegate();
@@ -215,7 +214,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ITEMDELEGATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -226,21 +225,21 @@ QByteArray mappedPropertyName( QWidget * widget ) const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDPROPERTYNAME )
 {
-  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
+    if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->mappedPropertyName( PQWIDGET( 1 ) ) );
+      QByteArray * ptr = new QByteArray( obj->mappedPropertyName( PQWIDGET(1) ) );
       Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -251,20 +250,20 @@ int mappedSection( QWidget * widget ) const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDSECTION )
 {
-  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
+    if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      RINT( obj->mappedSection( PQWIDGET( 1 ) ) );
+      RINT( obj->mappedSection( PQWIDGET(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -275,21 +274,21 @@ QWidget * mappedWidgetAt( int section ) const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDWIDGETAT )
 {
-  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QWidget * ptr = obj->mappedWidgetAt( PINT( 1 ) );
+      QWidget * ptr = obj->mappedWidgetAt( PINT(1) );
       Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -300,12 +299,12 @@ QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_MODEL )
 {
-  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QAbstractItemModel * ptr = obj->model();
@@ -314,7 +313,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MODEL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -325,12 +324,12 @@ Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ORIENTATION )
 {
-  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->orientation() );
@@ -338,7 +337,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ORIENTATION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -349,25 +348,25 @@ void removeMapping( QWidget * widget )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_REMOVEMAPPING )
 {
-  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
+    if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->removeMapping( PQWIDGET( 1 ) );
+      obj->removeMapping( PQWIDGET(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -375,12 +374,12 @@ QModelIndex rootIndex() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_ROOTINDEX )
 {
-  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->rootIndex() );
@@ -389,7 +388,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_ROOTINDEX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -400,25 +399,25 @@ void setItemDelegate( QAbstractItemDelegate * delegate )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETITEMDELEGATE )
 {
-  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQABSTRACTITEMDELEGATE( 1 ) )
+    if( ISNUMPAR(1) && ISQABSTRACTITEMDELEGATE(1) )
     {
 #endif
-      obj->setItemDelegate( PQABSTRACTITEMDELEGATE( 1 ) );
+      obj->setItemDelegate( PQABSTRACTITEMDELEGATE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -426,25 +425,25 @@ void setModel( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETMODEL )
 {
-  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQABSTRACTITEMMODEL( 1 ) )
+    if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
     {
 #endif
-      obj->setModel( PQABSTRACTITEMMODEL( 1 ) );
+      obj->setModel( PQABSTRACTITEMMODEL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -452,25 +451,25 @@ void setOrientation( Qt::Orientation aOrientation )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETORIENTATION )
 {
-  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setOrientation( ( Qt::Orientation ) hb_parni( 1 ) );
+      obj->setOrientation( ( Qt::Orientation ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -478,25 +477,25 @@ void setRootIndex( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETROOTINDEX )
 {
-  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      obj->setRootIndex( *PQMODELINDEX( 1 ) );
+      obj->setRootIndex( *PQMODELINDEX(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -504,25 +503,25 @@ void setSubmitPolicy( QDataWidgetMapper::SubmitPolicy policy )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETSUBMITPOLICY )
 {
-  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setSubmitPolicy( ( QDataWidgetMapper::SubmitPolicy ) hb_parni( 1 ) );
+      obj->setSubmitPolicy( ( QDataWidgetMapper::SubmitPolicy ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -530,12 +529,12 @@ QDataWidgetMapper::SubmitPolicy submitPolicy() const
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMITPOLICY )
 {
-  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->submitPolicy() );
@@ -543,7 +542,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMITPOLICY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -554,12 +553,12 @@ void revert()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_REVERT )
 {
-  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->revert();
@@ -567,12 +566,12 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_REVERT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -580,25 +579,25 @@ virtual void setCurrentIndex( int index )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETCURRENTINDEX )
 {
-  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setCurrentIndex( PINT( 1 ) );
+      obj->setCurrentIndex( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -606,25 +605,25 @@ void setCurrentModelIndex( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SETCURRENTMODELINDEX )
 {
-  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      obj->setCurrentModelIndex( *PQMODELINDEX( 1 ) );
+      obj->setCurrentModelIndex( *PQMODELINDEX(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -632,12 +631,12 @@ bool submit()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMIT )
 {
-  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->submit() );
@@ -645,7 +644,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_SUBMIT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -656,12 +655,12 @@ void toFirst()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOFIRST )
 {
-  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->toFirst();
@@ -669,12 +668,12 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOFIRST )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -682,12 +681,12 @@ void toLast()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOLAST )
 {
-  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->toLast();
@@ -695,12 +694,12 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOLAST )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -708,12 +707,12 @@ void toNext()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_TONEXT )
 {
-  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->toNext();
@@ -721,12 +720,12 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TONEXT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -734,12 +733,12 @@ void toPrevious()
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOPREVIOUS )
 {
-  QDataWidgetMapper * obj = qobject_cast< QDataWidgetMapper * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDataWidgetMapper * obj = qobject_cast<QDataWidgetMapper*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->toPrevious();
@@ -747,12 +746,12 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_TOPREVIOUS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 void QDataWidgetMapperSlots_connect_signal( const QString & signal, const QString & slot );

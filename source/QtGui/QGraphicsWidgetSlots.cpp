@@ -22,7 +22,7 @@ QGraphicsWidgetSlots::~QGraphicsWidgetSlots()
 
 void QGraphicsWidgetSlots::geometryChanged()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "geometryChanged()" );
 
@@ -38,9 +38,9 @@ void QGraphicsWidgetSlots::geometryChanged()
 
 void QGraphicsWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsWidget * obj = qobject_cast< QGraphicsWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsWidget * obj = qobject_cast<QGraphicsWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QGraphicsWidgetSlots * s = QCoreApplication::instance()->findChild<QGraphicsWidgetSlots *>();
 

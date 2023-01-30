@@ -53,12 +53,12 @@ RETURN
 
 HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
 {
-  if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
   {
     /*
     const QRect availableGeometry( int screen = -1 ) const
     */
-    QDesktopWidget * obj = qobject_cast< QDesktopWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+    QDesktopWidget * obj = qobject_cast<QDesktopWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if( obj != NULL )
     {
@@ -66,35 +66,35 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
       Qt4xHb::createReturnClass( ptr, "QRECT", true );
     }
   }
-  else if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
+  else if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
     /*
     const QRect availableGeometry( const QWidget * widget ) const
     */
-    QDesktopWidget * obj = qobject_cast< QDesktopWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+    QDesktopWidget * obj = qobject_cast<QDesktopWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if( obj != NULL )
     {
-      QRect * ptr = new QRect( obj->availableGeometry( PQWIDGET( 1 ) ) );
+      QRect * ptr = new QRect( obj->availableGeometry( PQWIDGET(1) ) );
       Qt4xHb::createReturnClass( ptr, "QRECT", true );
     }
   }
-  else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
+  else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
     /*
     const QRect availableGeometry( const QPoint & p ) const
     */
-    QDesktopWidget * obj = qobject_cast< QDesktopWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+    QDesktopWidget * obj = qobject_cast<QDesktopWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if( obj != NULL )
     {
-      QRect * ptr = new QRect( obj->availableGeometry( *PQPOINT( 1 ) ) );
+      QRect * ptr = new QRect( obj->availableGeometry( *PQPOINT(1) ) );
       Qt4xHb::createReturnClass( ptr, "QRECT", true );
     }
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -103,12 +103,12 @@ bool isVirtualDesktop() const
 */
 HB_FUNC_STATIC( QDESKTOPWIDGET_ISVIRTUALDESKTOP )
 {
-  QDesktopWidget * obj = qobject_cast< QDesktopWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDesktopWidget * obj = qobject_cast<QDesktopWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isVirtualDesktop() );
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_ISVIRTUALDESKTOP )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -127,12 +127,12 @@ int primaryScreen() const
 */
 HB_FUNC_STATIC( QDESKTOPWIDGET_PRIMARYSCREEN )
 {
-  QDesktopWidget * obj = qobject_cast< QDesktopWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDesktopWidget * obj = qobject_cast<QDesktopWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->primaryScreen() );
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_PRIMARYSCREEN )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -151,12 +151,12 @@ QWidget * screen( int screen = -1 )
 */
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
 {
-  QDesktopWidget * obj = qobject_cast< QDesktopWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDesktopWidget * obj = qobject_cast<QDesktopWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
+    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
     {
 #endif
       QWidget * ptr = obj->screen( OPINT( 1, -1 ) );
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -176,12 +176,12 @@ int screenCount() const
 */
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENCOUNT )
 {
-  QDesktopWidget * obj = qobject_cast< QDesktopWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDesktopWidget * obj = qobject_cast<QDesktopWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->screenCount() );
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENCOUNT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -197,12 +197,12 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENCOUNT )
 
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
 {
-  if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
   {
     /*
     const QRect screenGeometry( int screen = -1 ) const
     */
-    QDesktopWidget * obj = qobject_cast< QDesktopWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+    QDesktopWidget * obj = qobject_cast<QDesktopWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if( obj != NULL )
     {
@@ -210,67 +210,67 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
       Qt4xHb::createReturnClass( ptr, "QRECT", true );
     }
   }
-  else if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
+  else if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
     /*
     const QRect screenGeometry( const QWidget * widget ) const
     */
-    QDesktopWidget * obj = qobject_cast< QDesktopWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+    QDesktopWidget * obj = qobject_cast<QDesktopWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if( obj != NULL )
     {
-      QRect * ptr = new QRect( obj->screenGeometry( PQWIDGET( 1 ) ) );
+      QRect * ptr = new QRect( obj->screenGeometry( PQWIDGET(1) ) );
       Qt4xHb::createReturnClass( ptr, "QRECT", true );
     }
   }
-  else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
+  else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
     /*
     const QRect screenGeometry( const QPoint & p ) const
     */
-    QDesktopWidget * obj = qobject_cast< QDesktopWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+    QDesktopWidget * obj = qobject_cast<QDesktopWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if( obj != NULL )
     {
-      QRect * ptr = new QRect( obj->screenGeometry( *PQPOINT( 1 ) ) );
+      QRect * ptr = new QRect( obj->screenGeometry( *PQPOINT(1) ) );
       Qt4xHb::createReturnClass( ptr, "QRECT", true );
     }
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     /*
     int screenNumber( const QWidget * widget = 0 ) const
     */
-    QDesktopWidget * obj = qobject_cast< QDesktopWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+    QDesktopWidget * obj = qobject_cast<QDesktopWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if( obj != NULL )
     {
       RINT( obj->screenNumber( OPQWIDGET( 1, 0 ) ) );
     }
   }
-  else if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
+  else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
     /*
     int screenNumber( const QPoint & point ) const
     */
-    QDesktopWidget * obj = qobject_cast< QDesktopWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+    QDesktopWidget * obj = qobject_cast<QDesktopWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if( obj != NULL )
     {
-      RINT( obj->screenNumber( *PQPOINT( 1 ) ) );
+      RINT( obj->screenNumber( *PQPOINT(1) ) );
     }
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 

@@ -56,34 +56,33 @@ QPlainTextDocumentLayout( QTextDocument * document )
 */
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_NEW )
 {
-  if( ISNUMPAR( 1 ) && ISQTEXTDOCUMENT( 1 ) )
+  if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
   {
-    QPlainTextDocumentLayout * obj = new QPlainTextDocumentLayout( PQTEXTDOCUMENT( 1 ) );
+    QPlainTextDocumentLayout * obj = new QPlainTextDocumentLayout( PQTEXTDOCUMENT(1) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_DELETE )
 {
-  QPlainTextDocumentLayout * obj = qobject_cast< QPlainTextDocumentLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPlainTextDocumentLayout * obj = qobject_cast<QPlainTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -91,12 +90,12 @@ int cursorWidth() const
 */
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_CURSORWIDTH )
 {
-  QPlainTextDocumentLayout * obj = qobject_cast< QPlainTextDocumentLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPlainTextDocumentLayout * obj = qobject_cast<QPlainTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->cursorWidth() );
@@ -104,7 +103,7 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_CURSORWIDTH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -115,25 +114,25 @@ void ensureBlockLayout( const QTextBlock & block ) const
 */
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_ENSUREBLOCKLAYOUT )
 {
-  QPlainTextDocumentLayout * obj = qobject_cast< QPlainTextDocumentLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPlainTextDocumentLayout * obj = qobject_cast<QPlainTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQTEXTBLOCK( 1 ) )
+    if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
     {
 #endif
-      obj->ensureBlockLayout( *PQTEXTBLOCK( 1 ) );
+      obj->ensureBlockLayout( *PQTEXTBLOCK(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -141,12 +140,12 @@ void requestUpdate()
 */
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_REQUESTUPDATE )
 {
-  QPlainTextDocumentLayout * obj = qobject_cast< QPlainTextDocumentLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPlainTextDocumentLayout * obj = qobject_cast<QPlainTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->requestUpdate();
@@ -154,12 +153,12 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_REQUESTUPDATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -167,25 +166,25 @@ void setCursorWidth( int width )
 */
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_SETCURSORWIDTH )
 {
-  QPlainTextDocumentLayout * obj = qobject_cast< QPlainTextDocumentLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPlainTextDocumentLayout * obj = qobject_cast<QPlainTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setCursorWidth( PINT( 1 ) );
+      obj->setCursorWidth( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -193,21 +192,21 @@ virtual QRectF blockBoundingRect( const QTextBlock & block ) const
 */
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT )
 {
-  QPlainTextDocumentLayout * obj = qobject_cast< QPlainTextDocumentLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPlainTextDocumentLayout * obj = qobject_cast<QPlainTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQTEXTBLOCK( 1 ) )
+    if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->blockBoundingRect( *PQTEXTBLOCK( 1 ) ) );
+      QRectF * ptr = new QRectF( obj->blockBoundingRect( *PQTEXTBLOCK(1) ) );
       Qt4xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -218,12 +217,12 @@ virtual QSizeF documentSize() const
 */
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_DOCUMENTSIZE )
 {
-  QPlainTextDocumentLayout * obj = qobject_cast< QPlainTextDocumentLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPlainTextDocumentLayout * obj = qobject_cast<QPlainTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSizeF * ptr = new QSizeF( obj->documentSize() );
@@ -232,7 +231,7 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_DOCUMENTSIZE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -243,21 +242,21 @@ virtual QRectF frameBoundingRect( QTextFrame * ) const
 */
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT )
 {
-  QPlainTextDocumentLayout * obj = qobject_cast< QPlainTextDocumentLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPlainTextDocumentLayout * obj = qobject_cast<QPlainTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQTEXTFRAME( 1 ) )
+    if( ISNUMPAR(1) && ISQTEXTFRAME(1) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->frameBoundingRect( PQTEXTFRAME( 1 ) ) );
+      QRectF * ptr = new QRectF( obj->frameBoundingRect( PQTEXTFRAME(1) ) );
       Qt4xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -268,20 +267,20 @@ virtual int hitTest( const QPointF &, Qt::HitTestAccuracy ) const
 */
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_HITTEST )
 {
-  QPlainTextDocumentLayout * obj = qobject_cast< QPlainTextDocumentLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPlainTextDocumentLayout * obj = qobject_cast<QPlainTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQPOINTF( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2) )
     {
 #endif
-      RINT( obj->hitTest( *PQPOINTF( 1 ), ( Qt::HitTestAccuracy ) hb_parni( 2 ) ) );
+      RINT( obj->hitTest( *PQPOINTF(1), ( Qt::HitTestAccuracy ) hb_parni(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -292,12 +291,12 @@ virtual int pageCount() const
 */
 HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_PAGECOUNT )
 {
-  QPlainTextDocumentLayout * obj = qobject_cast< QPlainTextDocumentLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPlainTextDocumentLayout * obj = qobject_cast<QPlainTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->pageCount() );
@@ -305,7 +304,7 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_PAGECOUNT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

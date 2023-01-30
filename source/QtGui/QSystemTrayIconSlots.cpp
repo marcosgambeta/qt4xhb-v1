@@ -22,14 +22,14 @@ QSystemTrayIconSlots::~QSystemTrayIconSlots()
 
 void QSystemTrayIconSlots::activated( QSystemTrayIcon::ActivationReason reason )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activated(QSystemTrayIcon::ActivationReason)" );
 
   if( cb )
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSYSTEMTRAYICON" );
-    PHB_ITEM pReason = hb_itemPutNI( NULL, static_cast< int >( reason ) );
+    PHB_ITEM pReason = hb_itemPutNI( NULL, static_cast<int >( reason ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pReason );
 
@@ -40,7 +40,7 @@ void QSystemTrayIconSlots::activated( QSystemTrayIcon::ActivationReason reason )
 
 void QSystemTrayIconSlots::messageClicked()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "messageClicked()" );
 
@@ -56,9 +56,9 @@ void QSystemTrayIconSlots::messageClicked()
 
 void QSystemTrayIconSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSystemTrayIcon * obj = qobject_cast< QSystemTrayIcon * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSystemTrayIcon * obj = qobject_cast<QSystemTrayIcon*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QSystemTrayIconSlots * s = QCoreApplication::instance()->findChild<QSystemTrayIconSlots *>();
 

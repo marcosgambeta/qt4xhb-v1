@@ -22,7 +22,7 @@ QMenuSlots::~QMenuSlots()
 
 void QMenuSlots::aboutToHide()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "aboutToHide()" );
 
@@ -38,7 +38,7 @@ void QMenuSlots::aboutToHide()
 
 void QMenuSlots::aboutToShow()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "aboutToShow()" );
 
@@ -54,7 +54,7 @@ void QMenuSlots::aboutToShow()
 
 void QMenuSlots::hovered( QAction * action )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "hovered(QAction*)" );
 
@@ -72,7 +72,7 @@ void QMenuSlots::hovered( QAction * action )
 
 void QMenuSlots::triggered( QAction * action )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "triggered(QAction*)" );
 
@@ -90,9 +90,9 @@ void QMenuSlots::triggered( QAction * action )
 
 void QMenuSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMenu * obj = qobject_cast< QMenu * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMenu * obj = qobject_cast<QMenu*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QMenuSlots * s = QCoreApplication::instance()->findChild<QMenuSlots *>();
 

@@ -22,7 +22,7 @@ QColumnViewSlots::~QColumnViewSlots()
 
 void QColumnViewSlots::updatePreviewWidget( const QModelIndex & index )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "updatePreviewWidget(QModelIndex)" );
 
@@ -40,9 +40,9 @@ void QColumnViewSlots::updatePreviewWidget( const QModelIndex & index )
 
 void QColumnViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QColumnView * obj = qobject_cast< QColumnView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QColumnView * obj = qobject_cast<QColumnView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QColumnViewSlots * s = QCoreApplication::instance()->findChild<QColumnViewSlots *>();
 

@@ -57,32 +57,31 @@ QPlatformCursorImage( const uchar * data, const uchar * mask, int width, int hei
 */
 HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_NEW )
 {
-  if( ISNUMPAR( 6 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) )
+  if( ISNUMPAR(6) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) )
   {
-    QPlatformCursorImage * obj = new QPlatformCursorImage( PCONSTUCHAR( 1 ), PCONSTUCHAR( 2 ), PINT( 3 ), PINT( 4 ), PINT( 5 ), PINT( 6 ) );
+    QPlatformCursorImage * obj = new QPlatformCursorImage( PCONSTUCHAR(1), PCONSTUCHAR(2), PINT(3), PINT(4), PINT(5), PINT(6) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_DELETE )
 {
-  QPlatformCursorImage * obj = static_cast< QPlatformCursorImage * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPlatformCursorImage * obj = static_cast<QPlatformCursorImage*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -90,12 +89,12 @@ QPoint hotspot()
 */
 HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_HOTSPOT )
 {
-  QPlatformCursorImage * obj = static_cast< QPlatformCursorImage * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPlatformCursorImage * obj = static_cast<QPlatformCursorImage*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QPoint * ptr = new QPoint( obj->hotspot() );
@@ -104,7 +103,7 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_HOTSPOT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -115,12 +114,12 @@ QImage * image()
 */
 HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_IMAGE )
 {
-  QPlatformCursorImage * obj = static_cast< QPlatformCursorImage * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QPlatformCursorImage * obj = static_cast<QPlatformCursorImage*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QImage * ptr = obj->image();
@@ -129,7 +128,7 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_IMAGE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -137,51 +136,51 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_IMAGE )
 
 HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_SET )
 {
-  if( ISNUMPAR( 6 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) )
+  if( ISNUMPAR(6) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) )
   {
     /*
     void set( const uchar * data, const uchar * mask, int width, int height, int hx, int hy )
     */
-    QPlatformCursorImage * obj = static_cast< QPlatformCursorImage * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QPlatformCursorImage * obj = static_cast<QPlatformCursorImage*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->set( PCONSTUCHAR( 1 ), PCONSTUCHAR( 2 ), PINT( 3 ), PINT( 4 ), PINT( 5 ), PINT( 6 ) );
+      obj->set( PCONSTUCHAR(1), PCONSTUCHAR(2), PINT(3), PINT(4), PINT(5), PINT(6) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR( 3 ) && ISQIMAGE( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
+  else if( ISNUMPAR(3) && ISQIMAGE(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
     /*
     void set( const QImage & image, int hx, int hy )
     */
-    QPlatformCursorImage * obj = static_cast< QPlatformCursorImage * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QPlatformCursorImage * obj = static_cast<QPlatformCursorImage*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->set( *PQIMAGE( 1 ), PINT( 2 ), PINT( 3 ) );
+      obj->set( *PQIMAGE(1), PINT(2), PINT(3) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     /*
     void set( Qt::CursorShape id )
     */
-    QPlatformCursorImage * obj = static_cast< QPlatformCursorImage * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QPlatformCursorImage * obj = static_cast<QPlatformCursorImage*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      obj->set( ( Qt::CursorShape ) hb_parni( 1 ) );
+      obj->set( ( Qt::CursorShape ) hb_parni(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -189,27 +188,27 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
   hb_itemReturn( self );
@@ -234,15 +233,15 @@ HB_FUNC_STATIC( QPLATFORMCURSORIMAGE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
   hb_itemReturn( self );

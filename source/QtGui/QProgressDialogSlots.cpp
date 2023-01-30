@@ -22,7 +22,7 @@ QProgressDialogSlots::~QProgressDialogSlots()
 
 void QProgressDialogSlots::canceled()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "canceled()" );
 
@@ -38,9 +38,9 @@ void QProgressDialogSlots::canceled()
 
 void QProgressDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QProgressDialog * obj = qobject_cast< QProgressDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QProgressDialog * obj = qobject_cast<QProgressDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QProgressDialogSlots * s = QCoreApplication::instance()->findChild<QProgressDialogSlots *>();
 

@@ -52,14 +52,14 @@ QPageSetupDialog( QPrinter * printer, QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
 {
-  if( ISBETWEEN( 1, 2 ) && ISQPRINTER( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
+  if( ISBETWEEN(1, 2) && ISQPRINTER(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
   {
-    QPageSetupDialog * obj = new QPageSetupDialog( PQPRINTER( 1 ), OPQWIDGET( 2, 0 ) );
+    QPageSetupDialog * obj = new QPageSetupDialog( PQPRINTER(1), OPQWIDGET( 2, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -68,25 +68,25 @@ void open( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_OPEN )
 {
-  QPageSetupDialog * obj = qobject_cast< QPageSetupDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPageSetupDialog * obj = qobject_cast<QPageSetupDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) )
+    if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2) )
     {
 #endif
-      obj->open( PQOBJECT( 1 ), PCONSTCHAR( 2 ) );
+      obj->open( PQOBJECT(1), PCONSTCHAR(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -94,12 +94,12 @@ QPageSetupDialog::PageSetupDialogOptions options() const
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_OPTIONS )
 {
-  QPageSetupDialog * obj = qobject_cast< QPageSetupDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPageSetupDialog * obj = qobject_cast<QPageSetupDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->options() );
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_OPTIONS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -118,12 +118,12 @@ QPrinter * printer()
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
 {
-  QPageSetupDialog * obj = qobject_cast< QPageSetupDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPageSetupDialog * obj = qobject_cast<QPageSetupDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QPrinter * ptr = obj->printer();
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -143,25 +143,25 @@ void setOption( QPageSetupDialog::PageSetupDialogOption option, bool on = true )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_SETOPTION )
 {
-  QPageSetupDialog * obj = qobject_cast< QPageSetupDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPageSetupDialog * obj = qobject_cast<QPageSetupDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
     {
 #endif
-      obj->setOption( ( QPageSetupDialog::PageSetupDialogOption ) hb_parni( 1 ), OPBOOL( 2, true ) );
+      obj->setOption( ( QPageSetupDialog::PageSetupDialogOption ) hb_parni(1), OPBOOL( 2, true ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -169,25 +169,25 @@ void setOptions( QPageSetupDialog::PageSetupDialogOptions options )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_SETOPTIONS )
 {
-  QPageSetupDialog * obj = qobject_cast< QPageSetupDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPageSetupDialog * obj = qobject_cast<QPageSetupDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setOptions( ( QPageSetupDialog::PageSetupDialogOptions ) hb_parni( 1 ) );
+      obj->setOptions( ( QPageSetupDialog::PageSetupDialogOptions ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -195,20 +195,20 @@ bool testOption( QPageSetupDialog::PageSetupDialogOption option ) const
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_TESTOPTION )
 {
-  QPageSetupDialog * obj = qobject_cast< QPageSetupDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPageSetupDialog * obj = qobject_cast<QPageSetupDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->testOption( ( QPageSetupDialog::PageSetupDialogOption ) hb_parni( 1 ) ) );
+      RBOOL( obj->testOption( ( QPageSetupDialog::PageSetupDialogOption ) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -219,25 +219,25 @@ virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QPAGESETUPDIALOG_SETVISIBLE )
 {
-  QPageSetupDialog * obj = qobject_cast< QPageSetupDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPageSetupDialog * obj = qobject_cast<QPageSetupDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setVisible( PBOOL( 1 ) );
+      obj->setVisible( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 #pragma ENDDUMP

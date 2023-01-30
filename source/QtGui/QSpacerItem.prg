@@ -53,14 +53,14 @@ QSpacerItem( int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimum, Q
 */
 HB_FUNC_STATIC( QSPACERITEM_NEW )
 {
-  if( ISBETWEEN( 2, 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
+  if( ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
   {
-    QSpacerItem * obj = new QSpacerItem( PINT( 1 ), PINT( 2 ), HB_ISNIL( 3 ) ? ( QSizePolicy::Policy ) QSizePolicy::Minimum : ( QSizePolicy::Policy ) hb_parni( 3 ), HB_ISNIL( 4 ) ? ( QSizePolicy::Policy ) QSizePolicy::Minimum : ( QSizePolicy::Policy ) hb_parni( 4 ) );
+    QSpacerItem * obj = new QSpacerItem( PINT(1), PINT(2), HB_ISNIL(3) ? ( QSizePolicy::Policy ) QSizePolicy::Minimum : ( QSizePolicy::Policy ) hb_parni(3), HB_ISNIL(4) ? ( QSizePolicy::Policy ) QSizePolicy::Minimum : ( QSizePolicy::Policy ) hb_parni(4) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -69,25 +69,25 @@ void changeSize( int w, int h, QSizePolicy::Policy hPolicy = QSizePolicy::Minimu
 */
 HB_FUNC_STATIC( QSPACERITEM_CHANGESIZE )
 {
-  QSpacerItem * obj = static_cast< QSpacerItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSpacerItem * obj = static_cast<QSpacerItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
+    if( ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
     {
 #endif
-      obj->changeSize( PINT( 1 ), PINT( 2 ), HB_ISNIL( 3 ) ? ( QSizePolicy::Policy ) QSizePolicy::Minimum : ( QSizePolicy::Policy ) hb_parni( 3 ), HB_ISNIL( 4 ) ? ( QSizePolicy::Policy ) QSizePolicy::Minimum : ( QSizePolicy::Policy ) hb_parni( 4 ) );
+      obj->changeSize( PINT(1), PINT(2), HB_ISNIL(3) ? ( QSizePolicy::Policy ) QSizePolicy::Minimum : ( QSizePolicy::Policy ) hb_parni(3), HB_ISNIL(4) ? ( QSizePolicy::Policy ) QSizePolicy::Minimum : ( QSizePolicy::Policy ) hb_parni(4) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -95,12 +95,12 @@ virtual Qt::Orientations expandingDirections() const
 */
 HB_FUNC_STATIC( QSPACERITEM_EXPANDINGDIRECTIONS )
 {
-  QSpacerItem * obj = static_cast< QSpacerItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSpacerItem * obj = static_cast<QSpacerItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->expandingDirections() );
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QSPACERITEM_EXPANDINGDIRECTIONS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -119,12 +119,12 @@ virtual QRect geometry() const
 */
 HB_FUNC_STATIC( QSPACERITEM_GEOMETRY )
 {
-  QSpacerItem * obj = static_cast< QSpacerItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSpacerItem * obj = static_cast<QSpacerItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QRect * ptr = new QRect( obj->geometry() );
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QSPACERITEM_GEOMETRY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -144,12 +144,12 @@ virtual bool isEmpty() const
 */
 HB_FUNC_STATIC( QSPACERITEM_ISEMPTY )
 {
-  QSpacerItem * obj = static_cast< QSpacerItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSpacerItem * obj = static_cast<QSpacerItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isEmpty() );
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QSPACERITEM_ISEMPTY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -168,12 +168,12 @@ virtual QSize maximumSize() const
 */
 HB_FUNC_STATIC( QSPACERITEM_MAXIMUMSIZE )
 {
-  QSpacerItem * obj = static_cast< QSpacerItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSpacerItem * obj = static_cast<QSpacerItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSize * ptr = new QSize( obj->maximumSize() );
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QSPACERITEM_MAXIMUMSIZE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -193,12 +193,12 @@ virtual QSize minimumSize() const
 */
 HB_FUNC_STATIC( QSPACERITEM_MINIMUMSIZE )
 {
-  QSpacerItem * obj = static_cast< QSpacerItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSpacerItem * obj = static_cast<QSpacerItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSize() );
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QSPACERITEM_MINIMUMSIZE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -218,25 +218,25 @@ virtual void setGeometry( const QRect & r )
 */
 HB_FUNC_STATIC( QSPACERITEM_SETGEOMETRY )
 {
-  QSpacerItem * obj = static_cast< QSpacerItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSpacerItem * obj = static_cast<QSpacerItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
+    if( ISNUMPAR(1) && ISQRECT(1) )
     {
 #endif
-      obj->setGeometry( *PQRECT( 1 ) );
+      obj->setGeometry( *PQRECT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -244,12 +244,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QSPACERITEM_SIZEHINT )
 {
-  QSpacerItem * obj = static_cast< QSpacerItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSpacerItem * obj = static_cast<QSpacerItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QSPACERITEM_SIZEHINT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -269,12 +269,12 @@ virtual QSpacerItem * spacerItem()
 */
 HB_FUNC_STATIC( QSPACERITEM_SPACERITEM )
 {
-  QSpacerItem * obj = static_cast< QSpacerItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QSpacerItem * obj = static_cast<QSpacerItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSpacerItem * ptr = obj->spacerItem();
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QSPACERITEM_SPACERITEM )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

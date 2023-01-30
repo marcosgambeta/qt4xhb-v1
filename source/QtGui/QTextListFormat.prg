@@ -52,32 +52,31 @@ QTextListFormat()
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     QTextListFormat * obj = new QTextListFormat();
     Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QTEXTLISTFORMAT_DELETE )
 {
-  QTextListFormat * obj = static_cast< QTextListFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextListFormat * obj = static_cast<QTextListFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -85,12 +84,12 @@ int indent() const
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_INDENT )
 {
-  QTextListFormat * obj = static_cast< QTextListFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextListFormat * obj = static_cast<QTextListFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->indent() );
@@ -98,7 +97,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_INDENT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -109,12 +108,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_ISVALID )
 {
-  QTextListFormat * obj = static_cast< QTextListFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextListFormat * obj = static_cast<QTextListFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -122,7 +121,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_ISVALID )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -133,12 +132,12 @@ QString numberPrefix() const
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERPREFIX )
 {
-  QTextListFormat * obj = static_cast< QTextListFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextListFormat * obj = static_cast<QTextListFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->numberPrefix() );
@@ -146,7 +145,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERPREFIX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -157,12 +156,12 @@ QString numberSuffix() const
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERSUFFIX )
 {
-  QTextListFormat * obj = static_cast< QTextListFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextListFormat * obj = static_cast<QTextListFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->numberSuffix() );
@@ -170,7 +169,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_NUMBERSUFFIX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -181,25 +180,25 @@ void setIndent( int indentation )
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_SETINDENT )
 {
-  QTextListFormat * obj = static_cast< QTextListFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextListFormat * obj = static_cast<QTextListFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setIndent( PINT( 1 ) );
+      obj->setIndent( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -207,25 +206,25 @@ void setNumberPrefix( const QString & numberPrefix )
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_SETNUMBERPREFIX )
 {
-  QTextListFormat * obj = static_cast< QTextListFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextListFormat * obj = static_cast<QTextListFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setNumberPrefix( PQSTRING( 1 ) );
+      obj->setNumberPrefix( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -233,25 +232,25 @@ void setNumberSuffix( const QString & numberSuffix )
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_SETNUMBERSUFFIX )
 {
-  QTextListFormat * obj = static_cast< QTextListFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextListFormat * obj = static_cast<QTextListFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setNumberSuffix( PQSTRING( 1 ) );
+      obj->setNumberSuffix( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -259,25 +258,25 @@ void setStyle( QTextListFormat::Style style )
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_SETSTYLE )
 {
-  QTextListFormat * obj = static_cast< QTextListFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextListFormat * obj = static_cast<QTextListFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setStyle( ( QTextListFormat::Style ) hb_parni( 1 ) );
+      obj->setStyle( ( QTextListFormat::Style ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -285,12 +284,12 @@ QTextListFormat::Style style() const
 */
 HB_FUNC_STATIC( QTEXTLISTFORMAT_STYLE )
 {
-  QTextListFormat * obj = static_cast< QTextListFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextListFormat * obj = static_cast<QTextListFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->style() );
@@ -298,7 +297,7 @@ HB_FUNC_STATIC( QTEXTLISTFORMAT_STYLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

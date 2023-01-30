@@ -22,7 +22,7 @@ QPrintPreviewWidgetSlots::~QPrintPreviewWidgetSlots()
 
 void QPrintPreviewWidgetSlots::paintRequested( QPrinter * printer )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "paintRequested(QPrinter*)" );
 
@@ -40,7 +40,7 @@ void QPrintPreviewWidgetSlots::paintRequested( QPrinter * printer )
 
 void QPrintPreviewWidgetSlots::previewChanged()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "previewChanged()" );
 
@@ -56,9 +56,9 @@ void QPrintPreviewWidgetSlots::previewChanged()
 
 void QPrintPreviewWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QPrintPreviewWidget * obj = qobject_cast< QPrintPreviewWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QPrintPreviewWidget * obj = qobject_cast<QPrintPreviewWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QPrintPreviewWidgetSlots * s = QCoreApplication::instance()->findChild<QPrintPreviewWidgetSlots *>();
 

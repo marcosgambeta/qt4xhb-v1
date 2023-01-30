@@ -121,21 +121,20 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_DELETE )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -143,12 +142,12 @@ bool alternatingRowColors() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ALTERNATINGROWCOLORS )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->alternatingRowColors() );
@@ -156,7 +155,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ALTERNATINGROWCOLORS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -167,12 +166,12 @@ int autoScrollMargin() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_AUTOSCROLLMARGIN )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->autoScrollMargin() );
@@ -180,7 +179,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_AUTOSCROLLMARGIN )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -191,25 +190,25 @@ void closePersistentEditor( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_CLOSEPERSISTENTEDITOR )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      obj->closePersistentEditor( *PQMODELINDEX( 1 ) );
+      obj->closePersistentEditor( *PQMODELINDEX(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -217,12 +216,12 @@ QModelIndex currentIndex() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_CURRENTINDEX )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->currentIndex() );
@@ -231,7 +230,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_CURRENTINDEX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -242,12 +241,12 @@ Qt::DropAction defaultDropAction() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_DEFAULTDROPACTION )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->defaultDropAction() );
@@ -255,7 +254,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_DEFAULTDROPACTION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -266,12 +265,12 @@ QAbstractItemView::DragDropMode dragDropMode() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_DRAGDROPMODE )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->dragDropMode() );
@@ -279,7 +278,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_DRAGDROPMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -290,12 +289,12 @@ bool dragDropOverwriteMode() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_DRAGDROPOVERWRITEMODE )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->dragDropOverwriteMode() );
@@ -303,7 +302,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_DRAGDROPOVERWRITEMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -314,12 +313,12 @@ bool dragEnabled() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_DRAGENABLED )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->dragEnabled() );
@@ -327,7 +326,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_DRAGENABLED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -338,12 +337,12 @@ QAbstractItemView::EditTriggers editTriggers() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_EDITTRIGGERS )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->editTriggers() );
@@ -351,7 +350,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_EDITTRIGGERS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -362,12 +361,12 @@ bool hasAutoScroll() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_HASAUTOSCROLL )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->hasAutoScroll() );
@@ -375,7 +374,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_HASAUTOSCROLL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -386,12 +385,12 @@ QAbstractItemView::ScrollMode horizontalScrollMode() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_HORIZONTALSCROLLMODE )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->horizontalScrollMode() );
@@ -399,7 +398,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_HORIZONTALSCROLLMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -410,12 +409,12 @@ QSize iconSize() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ICONSIZE )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSize * ptr = new QSize( obj->iconSize() );
@@ -424,7 +423,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ICONSIZE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -435,21 +434,21 @@ virtual QModelIndex indexAt( const QPoint & point ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_INDEXAT )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQPOINT( 1 ) )
+    if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->indexAt( *PQPOINT( 1 ) ) );
+      QModelIndex * ptr = new QModelIndex( obj->indexAt( *PQPOINT(1) ) );
       Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -460,21 +459,21 @@ QWidget * indexWidget( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_INDEXWIDGET )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QWidget * ptr = obj->indexWidget( *PQMODELINDEX( 1 ) );
+      QWidget * ptr = obj->indexWidget( *PQMODELINDEX(1) );
       Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -482,12 +481,12 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_INDEXWIDGET )
 
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATE )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QAbstractItemDelegate * itemDelegate() const
     */
-    QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+    QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if( obj != NULL )
     {
@@ -495,22 +494,22 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATE )
       Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMDELEGATE" );
     }
   }
-  else if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
+  else if( ISNUMPAR(1) && ISQMODELINDEX(1) )
   {
     /*
     QAbstractItemDelegate * itemDelegate( const QModelIndex & index ) const
     */
-    QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+    QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if( obj != NULL )
     {
-      QAbstractItemDelegate * ptr = obj->itemDelegate( *PQMODELINDEX( 1 ) );
+      QAbstractItemDelegate * ptr = obj->itemDelegate( *PQMODELINDEX(1) );
       Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMDELEGATE" );
     }
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -519,21 +518,21 @@ QAbstractItemDelegate * itemDelegateForColumn( int column ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATEFORCOLUMN )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QAbstractItemDelegate * ptr = obj->itemDelegateForColumn( PINT( 1 ) );
+      QAbstractItemDelegate * ptr = obj->itemDelegateForColumn( PINT(1) );
       Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMDELEGATE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -544,21 +543,21 @@ QAbstractItemDelegate * itemDelegateForRow( int row ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATEFORROW )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QAbstractItemDelegate * ptr = obj->itemDelegateForRow( PINT( 1 ) );
+      QAbstractItemDelegate * ptr = obj->itemDelegateForRow( PINT(1) );
       Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMDELEGATE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -569,25 +568,25 @@ virtual void keyboardSearch( const QString & search )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_KEYBOARDSEARCH )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->keyboardSearch( PQSTRING( 1 ) );
+      obj->keyboardSearch( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -595,12 +594,12 @@ QAbstractItemModel * model() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_MODEL )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QAbstractItemModel * ptr = obj->model();
@@ -609,7 +608,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_MODEL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -620,25 +619,25 @@ void openPersistentEditor( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_OPENPERSISTENTEDITOR )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      obj->openPersistentEditor( *PQMODELINDEX( 1 ) );
+      obj->openPersistentEditor( *PQMODELINDEX(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -646,12 +645,12 @@ QModelIndex rootIndex() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ROOTINDEX )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->rootIndex() );
@@ -660,7 +659,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ROOTINDEX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -671,25 +670,25 @@ virtual void scrollTo( const QModelIndex & index, QAbstractItemView::ScrollHint 
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SCROLLTO )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQMODELINDEX( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      obj->scrollTo( *PQMODELINDEX( 1 ), HB_ISNIL( 2 ) ? ( QAbstractItemView::ScrollHint ) QAbstractItemView::EnsureVisible : ( QAbstractItemView::ScrollHint ) hb_parni( 2 ) );
+      obj->scrollTo( *PQMODELINDEX(1), HB_ISNIL(2) ? ( QAbstractItemView::ScrollHint ) QAbstractItemView::EnsureVisible : ( QAbstractItemView::ScrollHint ) hb_parni(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -697,12 +696,12 @@ QAbstractItemView::SelectionBehavior selectionBehavior() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTIONBEHAVIOR )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->selectionBehavior() );
@@ -710,7 +709,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTIONBEHAVIOR )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -721,12 +720,12 @@ QAbstractItemView::SelectionMode selectionMode() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTIONMODE )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->selectionMode() );
@@ -734,7 +733,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTIONMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -745,12 +744,12 @@ QItemSelectionModel * selectionModel() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTIONMODEL )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QItemSelectionModel * ptr = obj->selectionModel();
@@ -759,7 +758,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTIONMODEL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -770,25 +769,25 @@ void setAlternatingRowColors( bool enable )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETALTERNATINGROWCOLORS )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setAlternatingRowColors( PBOOL( 1 ) );
+      obj->setAlternatingRowColors( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -796,25 +795,25 @@ void setAutoScroll( bool enable )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETAUTOSCROLL )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setAutoScroll( PBOOL( 1 ) );
+      obj->setAutoScroll( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -822,25 +821,25 @@ void setAutoScrollMargin( int margin )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETAUTOSCROLLMARGIN )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setAutoScrollMargin( PINT( 1 ) );
+      obj->setAutoScrollMargin( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -848,25 +847,25 @@ void setDefaultDropAction( Qt::DropAction dropAction )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETDEFAULTDROPACTION )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setDefaultDropAction( ( Qt::DropAction ) hb_parni( 1 ) );
+      obj->setDefaultDropAction( ( Qt::DropAction ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -874,25 +873,25 @@ void setDragDropMode( QAbstractItemView::DragDropMode behavior )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETDRAGDROPMODE )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setDragDropMode( ( QAbstractItemView::DragDropMode ) hb_parni( 1 ) );
+      obj->setDragDropMode( ( QAbstractItemView::DragDropMode ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -900,25 +899,25 @@ void setDragDropOverwriteMode( bool overwrite )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETDRAGDROPOVERWRITEMODE )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setDragDropOverwriteMode( PBOOL( 1 ) );
+      obj->setDragDropOverwriteMode( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -926,25 +925,25 @@ void setDragEnabled( bool enable )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETDRAGENABLED )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setDragEnabled( PBOOL( 1 ) );
+      obj->setDragEnabled( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -952,25 +951,25 @@ void setDropIndicatorShown( bool enable )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETDROPINDICATORSHOWN )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setDropIndicatorShown( PBOOL( 1 ) );
+      obj->setDropIndicatorShown( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -978,25 +977,25 @@ void setEditTriggers( QAbstractItemView::EditTriggers triggers )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETEDITTRIGGERS )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setEditTriggers( ( QAbstractItemView::EditTriggers ) hb_parni( 1 ) );
+      obj->setEditTriggers( ( QAbstractItemView::EditTriggers ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1004,25 +1003,25 @@ void setHorizontalScrollMode( QAbstractItemView::ScrollMode mode )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETHORIZONTALSCROLLMODE )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setHorizontalScrollMode( ( QAbstractItemView::ScrollMode ) hb_parni( 1 ) );
+      obj->setHorizontalScrollMode( ( QAbstractItemView::ScrollMode ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1030,25 +1029,25 @@ void setIconSize( const QSize & size )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETICONSIZE )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQSIZE( 1 ) )
+    if( ISNUMPAR(1) && ISQSIZE(1) )
     {
 #endif
-      obj->setIconSize( *PQSIZE( 1 ) );
+      obj->setIconSize( *PQSIZE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1056,25 +1055,25 @@ void setIndexWidget( const QModelIndex & index, QWidget * widget )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETINDEXWIDGET )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQMODELINDEX( 1 ) && ISQWIDGET( 2 ) )
+    if( ISNUMPAR(2) && ISQMODELINDEX(1) && ISQWIDGET(2) )
     {
 #endif
-      obj->setIndexWidget( *PQMODELINDEX( 1 ), PQWIDGET( 2 ) );
+      obj->setIndexWidget( *PQMODELINDEX(1), PQWIDGET(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1082,25 +1081,25 @@ void setItemDelegate( QAbstractItemDelegate * delegate )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETITEMDELEGATE )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQABSTRACTITEMDELEGATE( 1 ) )
+    if( ISNUMPAR(1) && ISQABSTRACTITEMDELEGATE(1) )
     {
 #endif
-      obj->setItemDelegate( PQABSTRACTITEMDELEGATE( 1 ) );
+      obj->setItemDelegate( PQABSTRACTITEMDELEGATE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1108,25 +1107,25 @@ void setItemDelegateForColumn( int column, QAbstractItemDelegate * delegate )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETITEMDELEGATEFORCOLUMN )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQABSTRACTITEMDELEGATE( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQABSTRACTITEMDELEGATE(2) )
     {
 #endif
-      obj->setItemDelegateForColumn( PINT( 1 ), PQABSTRACTITEMDELEGATE( 2 ) );
+      obj->setItemDelegateForColumn( PINT(1), PQABSTRACTITEMDELEGATE(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1134,25 +1133,25 @@ void setItemDelegateForRow( int row, QAbstractItemDelegate * delegate )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETITEMDELEGATEFORROW )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQABSTRACTITEMDELEGATE( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQABSTRACTITEMDELEGATE(2) )
     {
 #endif
-      obj->setItemDelegateForRow( PINT( 1 ), PQABSTRACTITEMDELEGATE( 2 ) );
+      obj->setItemDelegateForRow( PINT(1), PQABSTRACTITEMDELEGATE(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1160,25 +1159,25 @@ virtual void setModel( QAbstractItemModel * model )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETMODEL )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQABSTRACTITEMMODEL( 1 ) )
+    if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
     {
 #endif
-      obj->setModel( PQABSTRACTITEMMODEL( 1 ) );
+      obj->setModel( PQABSTRACTITEMMODEL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1186,25 +1185,25 @@ void setSelectionBehavior( QAbstractItemView::SelectionBehavior behavior )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETSELECTIONBEHAVIOR )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setSelectionBehavior( ( QAbstractItemView::SelectionBehavior ) hb_parni( 1 ) );
+      obj->setSelectionBehavior( ( QAbstractItemView::SelectionBehavior ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1212,25 +1211,25 @@ void setSelectionMode( QAbstractItemView::SelectionMode mode )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETSELECTIONMODE )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setSelectionMode( ( QAbstractItemView::SelectionMode ) hb_parni( 1 ) );
+      obj->setSelectionMode( ( QAbstractItemView::SelectionMode ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1238,25 +1237,25 @@ virtual void setSelectionModel( QItemSelectionModel * selectionModel )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETSELECTIONMODEL )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQITEMSELECTIONMODEL( 1 ) )
+    if( ISNUMPAR(1) && ISQITEMSELECTIONMODEL(1) )
     {
 #endif
-      obj->setSelectionModel( PQITEMSELECTIONMODEL( 1 ) );
+      obj->setSelectionModel( PQITEMSELECTIONMODEL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1264,25 +1263,25 @@ void setTabKeyNavigation( bool enable )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETTABKEYNAVIGATION )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setTabKeyNavigation( PBOOL( 1 ) );
+      obj->setTabKeyNavigation( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1290,25 +1289,25 @@ void setTextElideMode( Qt::TextElideMode mode )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETTEXTELIDEMODE )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setTextElideMode( ( Qt::TextElideMode ) hb_parni( 1 ) );
+      obj->setTextElideMode( ( Qt::TextElideMode ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1316,25 +1315,25 @@ void setVerticalScrollMode( QAbstractItemView::ScrollMode mode )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETVERTICALSCROLLMODE )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setVerticalScrollMode( ( QAbstractItemView::ScrollMode ) hb_parni( 1 ) );
+      obj->setVerticalScrollMode( ( QAbstractItemView::ScrollMode ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1342,12 +1341,12 @@ bool showDropIndicator() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SHOWDROPINDICATOR )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->showDropIndicator() );
@@ -1355,7 +1354,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SHOWDROPINDICATOR )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1366,20 +1365,20 @@ virtual int sizeHintForColumn( int column ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SIZEHINTFORCOLUMN )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->sizeHintForColumn( PINT( 1 ) ) );
+      RINT( obj->sizeHintForColumn( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1390,21 +1389,21 @@ QSize sizeHintForIndex( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SIZEHINTFORINDEX )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHintForIndex( *PQMODELINDEX( 1 ) ) );
+      QSize * ptr = new QSize( obj->sizeHintForIndex( *PQMODELINDEX(1) ) );
       Qt4xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1415,20 +1414,20 @@ virtual int sizeHintForRow( int row ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SIZEHINTFORROW )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->sizeHintForRow( PINT( 1 ) ) );
+      RINT( obj->sizeHintForRow( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1439,12 +1438,12 @@ bool tabKeyNavigation() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_TABKEYNAVIGATION )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->tabKeyNavigation() );
@@ -1452,7 +1451,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_TABKEYNAVIGATION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1463,12 +1462,12 @@ Qt::TextElideMode textElideMode() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_TEXTELIDEMODE )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->textElideMode() );
@@ -1476,7 +1475,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_TEXTELIDEMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1487,12 +1486,12 @@ QAbstractItemView::ScrollMode verticalScrollMode() const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_VERTICALSCROLLMODE )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->verticalScrollMode() );
@@ -1500,7 +1499,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_VERTICALSCROLLMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1511,21 +1510,21 @@ virtual QRect visualRect( const QModelIndex & index ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_VISUALRECT )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QRect * ptr = new QRect( obj->visualRect( *PQMODELINDEX( 1 ) ) );
+      QRect * ptr = new QRect( obj->visualRect( *PQMODELINDEX(1) ) );
       Qt4xHb::createReturnClass( ptr, "QRECT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1536,21 +1535,21 @@ virtual QVariant inputMethodQuery( Qt::InputMethodQuery query ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_INPUTMETHODQUERY )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->inputMethodQuery( ( Qt::InputMethodQuery ) hb_parni( 1 ) ) );
+      QVariant * ptr = new QVariant( obj->inputMethodQuery( ( Qt::InputMethodQuery ) hb_parni(1) ) );
       Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1561,12 +1560,12 @@ void clearSelection()
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_CLEARSELECTION )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->clearSelection();
@@ -1574,12 +1573,12 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_CLEARSELECTION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1587,25 +1586,25 @@ void edit( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_EDIT )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      obj->edit( *PQMODELINDEX( 1 ) );
+      obj->edit( *PQMODELINDEX(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1613,12 +1612,12 @@ virtual void reset()
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_RESET )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->reset();
@@ -1626,12 +1625,12 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_RESET )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1639,12 +1638,12 @@ void scrollToBottom()
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SCROLLTOBOTTOM )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->scrollToBottom();
@@ -1652,12 +1651,12 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SCROLLTOBOTTOM )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1665,12 +1664,12 @@ void scrollToTop()
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SCROLLTOTOP )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->scrollToTop();
@@ -1678,12 +1677,12 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SCROLLTOTOP )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1691,12 +1690,12 @@ virtual void selectAll()
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTALL )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->selectAll();
@@ -1704,12 +1703,12 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTALL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1717,25 +1716,25 @@ void setCurrentIndex( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETCURRENTINDEX )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      obj->setCurrentIndex( *PQMODELINDEX( 1 ) );
+      obj->setCurrentIndex( *PQMODELINDEX(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1743,25 +1742,25 @@ virtual void setRootIndex( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_SETROOTINDEX )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      obj->setRootIndex( *PQMODELINDEX( 1 ) );
+      obj->setRootIndex( *PQMODELINDEX(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1769,25 +1768,25 @@ void update( const QModelIndex & index )
 */
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_UPDATE )
 {
-  QAbstractItemView * obj = qobject_cast< QAbstractItemView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemView * obj = qobject_cast<QAbstractItemView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      obj->update( *PQMODELINDEX( 1 ) );
+      obj->update( *PQMODELINDEX(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 void QAbstractItemViewSlots_connect_signal( const QString & signal, const QString & slot );

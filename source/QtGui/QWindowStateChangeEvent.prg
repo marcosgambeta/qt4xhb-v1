@@ -42,43 +42,42 @@ RETURN
 
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW )
 {
-  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     /*
     QWindowStateChangeEvent( Qt::WindowStates aOldState )
     */
-    QWindowStateChangeEvent * obj = new QWindowStateChangeEvent( ( Qt::WindowStates ) hb_parni( 1 ) );
+    QWindowStateChangeEvent * obj = new QWindowStateChangeEvent( ( Qt::WindowStates ) hb_parni(1) );
     Qt4xHb::returnNewObject( obj, false );
   }
-  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISLOG( 2 ) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2) )
   {
     /*
     QWindowStateChangeEvent( Qt::WindowStates aOldState, bool isOverride )
     */
-    QWindowStateChangeEvent * obj = new QWindowStateChangeEvent( ( Qt::WindowStates ) hb_parni( 1 ), PBOOL( 2 ) );
+    QWindowStateChangeEvent * obj = new QWindowStateChangeEvent( ( Qt::WindowStates ) hb_parni(1), PBOOL(2) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_DELETE )
 {
-  QWindowStateChangeEvent * obj = static_cast< QWindowStateChangeEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWindowStateChangeEvent * obj = static_cast<QWindowStateChangeEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -86,12 +85,12 @@ Qt::WindowStates oldState() const
 */
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_OLDSTATE )
 {
-  QWindowStateChangeEvent * obj = static_cast< QWindowStateChangeEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWindowStateChangeEvent * obj = static_cast<QWindowStateChangeEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->oldState() );
@@ -99,7 +98,7 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_OLDSTATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -110,12 +109,12 @@ bool isOverride() const
 */
 HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_ISOVERRIDE )
 {
-  QWindowStateChangeEvent * obj = static_cast< QWindowStateChangeEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWindowStateChangeEvent * obj = static_cast<QWindowStateChangeEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isOverride() );
@@ -123,7 +122,7 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_ISOVERRIDE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

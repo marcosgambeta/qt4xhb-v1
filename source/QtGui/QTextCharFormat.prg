@@ -95,32 +95,31 @@ QTextCharFormat()
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     QTextCharFormat * obj = new QTextCharFormat();
     Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QTEXTCHARFORMAT_DELETE )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -128,12 +127,12 @@ QString anchorHref() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_ANCHORHREF )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->anchorHref() );
@@ -141,7 +140,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ANCHORHREF )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -152,12 +151,12 @@ QStringList anchorNames() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_ANCHORNAMES )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRINGLIST( obj->anchorNames() );
@@ -165,7 +164,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ANCHORNAMES )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -176,12 +175,12 @@ QFont font() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONT )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QFont * ptr = new QFont( obj->font() );
@@ -190,7 +189,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -201,12 +200,12 @@ QFont::Capitalization fontCapitalization() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTCAPITALIZATION )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->fontCapitalization() );
@@ -214,7 +213,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTCAPITALIZATION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -225,12 +224,12 @@ QString fontFamily() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTFAMILY )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->fontFamily() );
@@ -238,7 +237,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTFAMILY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -249,12 +248,12 @@ bool fontFixedPitch() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTFIXEDPITCH )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->fontFixedPitch() );
@@ -262,7 +261,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTFIXEDPITCH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -273,12 +272,12 @@ QFont::HintingPreference fontHintingPreference() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTHINTINGPREFERENCE )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->fontHintingPreference() );
@@ -286,7 +285,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTHINTINGPREFERENCE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -297,12 +296,12 @@ bool fontItalic() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTITALIC )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->fontItalic() );
@@ -310,7 +309,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTITALIC )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -321,12 +320,12 @@ bool fontKerning() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTKERNING )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->fontKerning() );
@@ -334,7 +333,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTKERNING )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -345,12 +344,12 @@ qreal fontLetterSpacing() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTLETTERSPACING )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->fontLetterSpacing() );
@@ -358,7 +357,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTLETTERSPACING )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -369,12 +368,12 @@ bool fontOverline() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTOVERLINE )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->fontOverline() );
@@ -382,7 +381,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTOVERLINE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -393,12 +392,12 @@ qreal fontPointSize() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTPOINTSIZE )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->fontPointSize() );
@@ -406,7 +405,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTPOINTSIZE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -417,12 +416,12 @@ bool fontStrikeOut() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTRIKEOUT )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->fontStrikeOut() );
@@ -430,7 +429,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTRIKEOUT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -441,12 +440,12 @@ QFont::StyleHint fontStyleHint() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTYLEHINT )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->fontStyleHint() );
@@ -454,7 +453,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTYLEHINT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -465,12 +464,12 @@ QFont::StyleStrategy fontStyleStrategy() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTYLESTRATEGY )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->fontStyleStrategy() );
@@ -478,7 +477,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTSTYLESTRATEGY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -489,12 +488,12 @@ bool fontUnderline() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTUNDERLINE )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->fontUnderline() );
@@ -502,7 +501,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTUNDERLINE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -513,12 +512,12 @@ int fontWeight() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTWEIGHT )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->fontWeight() );
@@ -526,7 +525,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTWEIGHT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -537,12 +536,12 @@ qreal fontWordSpacing() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTWORDSPACING )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->fontWordSpacing() );
@@ -550,7 +549,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONTWORDSPACING )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -561,12 +560,12 @@ bool isAnchor() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_ISANCHOR )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isAnchor() );
@@ -574,7 +573,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ISANCHOR )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -585,12 +584,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_ISVALID )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -598,7 +597,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_ISVALID )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -609,25 +608,25 @@ void setAnchor( bool anchor )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETANCHOR )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setAnchor( PBOOL( 1 ) );
+      obj->setAnchor( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -635,25 +634,25 @@ void setAnchorHref( const QString & value )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETANCHORHREF )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setAnchorHref( PQSTRING( 1 ) );
+      obj->setAnchorHref( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -661,25 +660,25 @@ void setAnchorNames( const QStringList & names )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETANCHORNAMES )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
+    if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
-      obj->setAnchorNames( PQSTRINGLIST( 1 ) );
+      obj->setAnchorNames( PQSTRINGLIST(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -687,25 +686,25 @@ void setFont( const QFont & font )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONT )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQFONT( 1 ) )
+    if( ISNUMPAR(1) && ISQFONT(1) )
     {
 #endif
-      obj->setFont( *PQFONT( 1 ) );
+      obj->setFont( *PQFONT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -713,25 +712,25 @@ void setFontCapitalization( QFont::Capitalization capitalization )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTCAPITALIZATION )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setFontCapitalization( ( QFont::Capitalization ) hb_parni( 1 ) );
+      obj->setFontCapitalization( ( QFont::Capitalization ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -739,25 +738,25 @@ void setFontFamily( const QString & family )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTFAMILY )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setFontFamily( PQSTRING( 1 ) );
+      obj->setFontFamily( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -765,25 +764,25 @@ void setFontFixedPitch( bool fixedPitch )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTFIXEDPITCH )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setFontFixedPitch( PBOOL( 1 ) );
+      obj->setFontFixedPitch( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -791,25 +790,25 @@ void setFontHintingPreference( QFont::HintingPreference hintingPreference )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTHINTINGPREFERENCE )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setFontHintingPreference( ( QFont::HintingPreference ) hb_parni( 1 ) );
+      obj->setFontHintingPreference( ( QFont::HintingPreference ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -817,25 +816,25 @@ void setFontItalic( bool italic )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTITALIC )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setFontItalic( PBOOL( 1 ) );
+      obj->setFontItalic( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -843,25 +842,25 @@ void setFontKerning( bool enable )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTKERNING )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setFontKerning( PBOOL( 1 ) );
+      obj->setFontKerning( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -869,25 +868,25 @@ void setFontLetterSpacing( qreal spacing )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTLETTERSPACING )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setFontLetterSpacing( PQREAL( 1 ) );
+      obj->setFontLetterSpacing( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -895,25 +894,25 @@ void setFontOverline( bool overline )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTOVERLINE )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setFontOverline( PBOOL( 1 ) );
+      obj->setFontOverline( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -921,25 +920,25 @@ void setFontPointSize( qreal size )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTPOINTSIZE )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setFontPointSize( PQREAL( 1 ) );
+      obj->setFontPointSize( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -947,25 +946,25 @@ void setFontStrikeOut( bool strikeOut )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTRIKEOUT )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setFontStrikeOut( PBOOL( 1 ) );
+      obj->setFontStrikeOut( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -973,25 +972,25 @@ void setFontStyleHint( QFont::StyleHint hint, QFont::StyleStrategy strategy = QF
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTYLEHINT )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      obj->setFontStyleHint( ( QFont::StyleHint ) hb_parni( 1 ), HB_ISNIL( 2 ) ? ( QFont::StyleStrategy ) QFont::PreferDefault : ( QFont::StyleStrategy ) hb_parni( 2 ) );
+      obj->setFontStyleHint( ( QFont::StyleHint ) hb_parni(1), HB_ISNIL(2) ? ( QFont::StyleStrategy ) QFont::PreferDefault : ( QFont::StyleStrategy ) hb_parni(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -999,25 +998,25 @@ void setFontStyleStrategy( QFont::StyleStrategy strategy )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTSTYLESTRATEGY )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setFontStyleStrategy( ( QFont::StyleStrategy ) hb_parni( 1 ) );
+      obj->setFontStyleStrategy( ( QFont::StyleStrategy ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1025,25 +1024,25 @@ void setFontUnderline( bool underline )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTUNDERLINE )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setFontUnderline( PBOOL( 1 ) );
+      obj->setFontUnderline( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1051,25 +1050,25 @@ void setFontWeight( int weight )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTWEIGHT )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setFontWeight( PINT( 1 ) );
+      obj->setFontWeight( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1077,25 +1076,25 @@ void setFontWordSpacing( qreal spacing )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETFONTWORDSPACING )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setFontWordSpacing( PQREAL( 1 ) );
+      obj->setFontWordSpacing( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1103,25 +1102,25 @@ void setTextOutline( const QPen & pen )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETTEXTOUTLINE )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQPEN( 1 ) )
+    if( ISNUMPAR(1) && ISQPEN(1) )
     {
 #endif
-      obj->setTextOutline( *PQPEN( 1 ) );
+      obj->setTextOutline( *PQPEN(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1129,25 +1128,25 @@ void setToolTip( const QString & text )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETTOOLTIP )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setToolTip( PQSTRING( 1 ) );
+      obj->setToolTip( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1155,25 +1154,25 @@ void setUnderlineColor( const QColor & color )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETUNDERLINECOLOR )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ( ISQCOLOR( 1 ) || HB_ISCHAR( 1 ) ) )
+    if( ISNUMPAR(1) && ( ISQCOLOR(1) || HB_ISCHAR(1) ) )
     {
 #endif
-      obj->setUnderlineColor( HB_ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ) );
+      obj->setUnderlineColor( HB_ISOBJECT(1) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(1) ) : QColor( hb_parc(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1181,25 +1180,25 @@ void setUnderlineStyle( QTextCharFormat::UnderlineStyle style )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETUNDERLINESTYLE )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setUnderlineStyle( ( QTextCharFormat::UnderlineStyle ) hb_parni( 1 ) );
+      obj->setUnderlineStyle( ( QTextCharFormat::UnderlineStyle ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1207,25 +1206,25 @@ void setVerticalAlignment( QTextCharFormat::VerticalAlignment alignment )
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_SETVERTICALALIGNMENT )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setVerticalAlignment( ( QTextCharFormat::VerticalAlignment ) hb_parni( 1 ) );
+      obj->setVerticalAlignment( ( QTextCharFormat::VerticalAlignment ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1233,12 +1232,12 @@ QPen textOutline() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_TEXTOUTLINE )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QPen * ptr = new QPen( obj->textOutline() );
@@ -1247,7 +1246,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_TEXTOUTLINE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1258,12 +1257,12 @@ QString toolTip() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_TOOLTIP )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->toolTip() );
@@ -1271,7 +1270,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_TOOLTIP )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1282,12 +1281,12 @@ QColor underlineColor() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_UNDERLINECOLOR )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QColor * ptr = new QColor( obj->underlineColor() );
@@ -1296,7 +1295,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_UNDERLINECOLOR )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1307,12 +1306,12 @@ QTextCharFormat::UnderlineStyle underlineStyle() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_UNDERLINESTYLE )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->underlineStyle() );
@@ -1320,7 +1319,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_UNDERLINESTYLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1331,12 +1330,12 @@ QTextCharFormat::VerticalAlignment verticalAlignment() const
 */
 HB_FUNC_STATIC( QTEXTCHARFORMAT_VERTICALALIGNMENT )
 {
-  QTextCharFormat * obj = static_cast< QTextCharFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextCharFormat * obj = static_cast<QTextCharFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->verticalAlignment() );
@@ -1344,7 +1343,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_VERTICALALIGNMENT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

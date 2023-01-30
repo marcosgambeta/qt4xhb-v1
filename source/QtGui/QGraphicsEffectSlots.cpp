@@ -22,7 +22,7 @@ QGraphicsEffectSlots::~QGraphicsEffectSlots()
 
 void QGraphicsEffectSlots::enabledChanged( bool enabled )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "enabledChanged(bool)" );
 
@@ -40,9 +40,9 @@ void QGraphicsEffectSlots::enabledChanged( bool enabled )
 
 void QGraphicsEffectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsEffect * obj = qobject_cast< QGraphicsEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsEffect * obj = qobject_cast<QGraphicsEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QGraphicsEffectSlots * s = QCoreApplication::instance()->findChild<QGraphicsEffectSlots *>();
 

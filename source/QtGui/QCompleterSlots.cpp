@@ -22,7 +22,7 @@ QCompleterSlots::~QCompleterSlots()
 
 void QCompleterSlots::activated( const QString & text )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activated(QString)" );
 
@@ -40,7 +40,7 @@ void QCompleterSlots::activated( const QString & text )
 
 void QCompleterSlots::activated( const QModelIndex & index )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activated(QModelIndex)" );
 
@@ -58,7 +58,7 @@ void QCompleterSlots::activated( const QModelIndex & index )
 
 void QCompleterSlots::highlighted( const QString & text )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "highlighted(QString)" );
 
@@ -76,7 +76,7 @@ void QCompleterSlots::highlighted( const QString & text )
 
 void QCompleterSlots::highlighted( const QModelIndex & index )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "highlighted(QModelIndex)" );
 
@@ -94,9 +94,9 @@ void QCompleterSlots::highlighted( const QModelIndex & index )
 
 void QCompleterSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QCompleter * obj = qobject_cast< QCompleter * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QCompleter * obj = qobject_cast<QCompleter*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QCompleterSlots * s = QCoreApplication::instance()->findChild<QCompleterSlots *>();
 

@@ -47,7 +47,7 @@ RETURN
 
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QStyleOptionDockWidget()
@@ -55,17 +55,17 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_NEW )
     QStyleOptionDockWidget * obj = new QStyleOptionDockWidget();
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONDOCKWIDGET( 1 ) )
+  else if( ISNUMPAR(1) && ISQSTYLEOPTIONDOCKWIDGET(1) )
   {
     /*
     QStyleOptionDockWidget( const QStyleOptionDockWidget & other )
     */
-    QStyleOptionDockWidget * obj = new QStyleOptionDockWidget( *PQSTYLEOPTIONDOCKWIDGET( 1 ) );
+    QStyleOptionDockWidget * obj = new QStyleOptionDockWidget( *PQSTYLEOPTIONDOCKWIDGET(1) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -74,37 +74,37 @@ QString title
 */
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_TITLE )
 {
-  QStyleOptionDockWidget * obj = static_cast< QStyleOptionDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyleOptionDockWidget * obj = static_cast<QStyleOptionDockWidget*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
       RQSTRING( obj->title );
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 }
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETTITLE )
 {
-  QStyleOptionDockWidget * obj = static_cast< QStyleOptionDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyleOptionDockWidget * obj = static_cast<QStyleOptionDockWidget*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
-      obj->title= PQSTRING( 1 );
+      obj->title= PQSTRING(1);
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -112,37 +112,37 @@ bool closable
 */
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_CLOSABLE )
 {
-  QStyleOptionDockWidget * obj = static_cast< QStyleOptionDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyleOptionDockWidget * obj = static_cast<QStyleOptionDockWidget*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
       RBOOL( obj->closable );
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 }
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETCLOSABLE )
 {
-  QStyleOptionDockWidget * obj = static_cast< QStyleOptionDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyleOptionDockWidget * obj = static_cast<QStyleOptionDockWidget*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
-      obj->closable= PBOOL( 1 );
+      obj->closable= PBOOL(1);
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -150,37 +150,37 @@ bool movable
 */
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_MOVABLE )
 {
-  QStyleOptionDockWidget * obj = static_cast< QStyleOptionDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyleOptionDockWidget * obj = static_cast<QStyleOptionDockWidget*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
       RBOOL( obj->movable );
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 }
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETMOVABLE )
 {
-  QStyleOptionDockWidget * obj = static_cast< QStyleOptionDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyleOptionDockWidget * obj = static_cast<QStyleOptionDockWidget*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
-      obj->movable= PBOOL( 1 );
+      obj->movable= PBOOL(1);
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -188,37 +188,37 @@ bool floatable
 */
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_FLOATABLE )
 {
-  QStyleOptionDockWidget * obj = static_cast< QStyleOptionDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyleOptionDockWidget * obj = static_cast<QStyleOptionDockWidget*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
       RBOOL( obj->floatable );
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 }
 HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_SETFLOATABLE )
 {
-  QStyleOptionDockWidget * obj = static_cast< QStyleOptionDockWidget * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyleOptionDockWidget * obj = static_cast<QStyleOptionDockWidget*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
-      obj->floatable= PBOOL( 1 );
+      obj->floatable= PBOOL(1);
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 #pragma ENDDUMP

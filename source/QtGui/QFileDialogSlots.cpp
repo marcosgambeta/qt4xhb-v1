@@ -22,7 +22,7 @@ QFileDialogSlots::~QFileDialogSlots()
 
 void QFileDialogSlots::currentChanged( const QString & path )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentChanged(QString)" );
 
@@ -40,7 +40,7 @@ void QFileDialogSlots::currentChanged( const QString & path )
 
 void QFileDialogSlots::directoryEntered( const QString & directory )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "directoryEntered(QString)" );
 
@@ -58,7 +58,7 @@ void QFileDialogSlots::directoryEntered( const QString & directory )
 
 void QFileDialogSlots::fileSelected( const QString & file )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "fileSelected(QString)" );
 
@@ -76,14 +76,14 @@ void QFileDialogSlots::fileSelected( const QString & file )
 
 void QFileDialogSlots::filesSelected( const QStringList & selected )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "filesSelected(QStringList)" );
 
   if( cb )
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFILEDIALOG" );
-    PHB_ITEM pSelected = hb_itemArrayNew( 0 );
+    PHB_ITEM pSelected = hb_itemArrayNew(0);
     for( int i = 0; i < selected.count(); i++ )
     {
       PHB_ITEM pTempItem = hb_itemPutC( NULL, QSTRINGTOSTRING( selected [i] ) );
@@ -100,7 +100,7 @@ void QFileDialogSlots::filesSelected( const QStringList & selected )
 
 void QFileDialogSlots::filterSelected( const QString & filter )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "filterSelected(QString)" );
 
@@ -118,9 +118,9 @@ void QFileDialogSlots::filterSelected( const QString & filter )
 
 void QFileDialogSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QFileDialog * obj = qobject_cast< QFileDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFileDialog * obj = qobject_cast<QFileDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QFileDialogSlots * s = QCoreApplication::instance()->findChild<QFileDialogSlots *>();
 

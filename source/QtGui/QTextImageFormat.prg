@@ -50,32 +50,31 @@ QTextImageFormat()
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     QTextImageFormat * obj = new QTextImageFormat();
     Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_DELETE )
 {
-  QTextImageFormat * obj = static_cast< QTextImageFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextImageFormat * obj = static_cast<QTextImageFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -83,12 +82,12 @@ qreal height() const
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_HEIGHT )
 {
-  QTextImageFormat * obj = static_cast< QTextImageFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextImageFormat * obj = static_cast<QTextImageFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->height() );
@@ -96,7 +95,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_HEIGHT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -107,12 +106,12 @@ bool isValid() const
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_ISVALID )
 {
-  QTextImageFormat * obj = static_cast< QTextImageFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextImageFormat * obj = static_cast<QTextImageFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isValid() );
@@ -120,7 +119,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_ISVALID )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -131,12 +130,12 @@ QString name() const
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NAME )
 {
-  QTextImageFormat * obj = static_cast< QTextImageFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextImageFormat * obj = static_cast<QTextImageFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->name() );
@@ -144,7 +143,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NAME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -155,25 +154,25 @@ void setHeight( qreal height )
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETHEIGHT )
 {
-  QTextImageFormat * obj = static_cast< QTextImageFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextImageFormat * obj = static_cast<QTextImageFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setHeight( PQREAL( 1 ) );
+      obj->setHeight( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -181,25 +180,25 @@ void setName( const QString & name )
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETNAME )
 {
-  QTextImageFormat * obj = static_cast< QTextImageFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextImageFormat * obj = static_cast<QTextImageFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setName( PQSTRING( 1 ) );
+      obj->setName( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -207,25 +206,25 @@ void setWidth( qreal width )
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETWIDTH )
 {
-  QTextImageFormat * obj = static_cast< QTextImageFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextImageFormat * obj = static_cast<QTextImageFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setWidth( PQREAL( 1 ) );
+      obj->setWidth( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -233,12 +232,12 @@ qreal width() const
 */
 HB_FUNC_STATIC( QTEXTIMAGEFORMAT_WIDTH )
 {
-  QTextImageFormat * obj = static_cast< QTextImageFormat * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QTextImageFormat * obj = static_cast<QTextImageFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->width() );
@@ -246,7 +245,7 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_WIDTH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

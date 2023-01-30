@@ -61,34 +61,33 @@ QGraphicsScale( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QGraphicsScale * obj = new QGraphicsScale( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QGRAPHICSSCALE_DELETE )
 {
-  QGraphicsScale * obj = qobject_cast< QGraphicsScale * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsScale * obj = qobject_cast<QGraphicsScale*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -96,12 +95,12 @@ QVector3D origin() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_ORIGIN )
 {
-  QGraphicsScale * obj = qobject_cast< QGraphicsScale * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsScale * obj = qobject_cast<QGraphicsScale*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QVector3D * ptr = new QVector3D( obj->origin() );
@@ -110,7 +109,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ORIGIN )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -121,25 +120,25 @@ void setOrigin( const QVector3D & point )
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_SETORIGIN )
 {
-  QGraphicsScale * obj = qobject_cast< QGraphicsScale * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsScale * obj = qobject_cast<QGraphicsScale*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQVECTOR3D( 1 ) )
+    if( ISNUMPAR(1) && ISQVECTOR3D(1) )
     {
 #endif
-      obj->setOrigin( *PQVECTOR3D( 1 ) );
+      obj->setOrigin( *PQVECTOR3D(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -147,25 +146,25 @@ void setXScale( qreal )
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_SETXSCALE )
 {
-  QGraphicsScale * obj = qobject_cast< QGraphicsScale * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsScale * obj = qobject_cast<QGraphicsScale*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setXScale( PQREAL( 1 ) );
+      obj->setXScale( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -173,25 +172,25 @@ void setYScale( qreal )
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_SETYSCALE )
 {
-  QGraphicsScale * obj = qobject_cast< QGraphicsScale * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsScale * obj = qobject_cast<QGraphicsScale*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setYScale( PQREAL( 1 ) );
+      obj->setYScale( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -199,25 +198,25 @@ void setZScale( qreal )
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_SETZSCALE )
 {
-  QGraphicsScale * obj = qobject_cast< QGraphicsScale * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsScale * obj = qobject_cast<QGraphicsScale*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setZScale( PQREAL( 1 ) );
+      obj->setZScale( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -225,12 +224,12 @@ qreal xScale() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_XSCALE )
 {
-  QGraphicsScale * obj = qobject_cast< QGraphicsScale * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsScale * obj = qobject_cast<QGraphicsScale*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->xScale() );
@@ -238,7 +237,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_XSCALE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -249,12 +248,12 @@ qreal yScale() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_YSCALE )
 {
-  QGraphicsScale * obj = qobject_cast< QGraphicsScale * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsScale * obj = qobject_cast<QGraphicsScale*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->yScale() );
@@ -262,7 +261,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_YSCALE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -273,12 +272,12 @@ qreal zScale() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_ZSCALE )
 {
-  QGraphicsScale * obj = qobject_cast< QGraphicsScale * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsScale * obj = qobject_cast<QGraphicsScale*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->zScale() );
@@ -286,7 +285,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ZSCALE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -297,25 +296,25 @@ virtual void applyTo( QMatrix4x4 * matrix ) const
 */
 HB_FUNC_STATIC( QGRAPHICSSCALE_APPLYTO )
 {
-  QGraphicsScale * obj = qobject_cast< QGraphicsScale * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsScale * obj = qobject_cast<QGraphicsScale*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQMATRIX4X4( 1 ) )
+    if( ISNUMPAR(1) && ISQMATRIX4X4(1) )
     {
 #endif
-      obj->applyTo( PQMATRIX4X4( 1 ) );
+      obj->applyTo( PQMATRIX4X4(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 void QGraphicsScaleSlots_connect_signal( const QString & signal, const QString & slot );

@@ -55,21 +55,20 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_DELETE )
 {
-  QAbstractItemDelegate * obj = qobject_cast< QAbstractItemDelegate * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemDelegate * obj = qobject_cast<QAbstractItemDelegate*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -77,21 +76,21 @@ virtual QWidget * createEditor( QWidget * parent, const QStyleOptionViewItem & o
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_CREATEEDITOR )
 {
-  QAbstractItemDelegate * obj = qobject_cast< QAbstractItemDelegate * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemDelegate * obj = qobject_cast<QAbstractItemDelegate*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && ISQWIDGET( 1 ) && ISQSTYLEOPTIONVIEWITEM( 2 ) && ISQMODELINDEX( 3 ) )
+    if( ISNUMPAR(3) && ISQWIDGET(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
     {
 #endif
-      QWidget * ptr = obj->createEditor( PQWIDGET( 1 ), *PQSTYLEOPTIONVIEWITEM( 2 ), *PQMODELINDEX( 3 ) );
+      QWidget * ptr = obj->createEditor( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
       Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -102,20 +101,20 @@ virtual bool editorEvent( QEvent * event, QAbstractItemModel * model, const QSty
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_EDITOREVENT )
 {
-  QAbstractItemDelegate * obj = qobject_cast< QAbstractItemDelegate * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemDelegate * obj = qobject_cast<QAbstractItemDelegate*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 4 ) && ISQEVENT( 1 ) && ISQABSTRACTITEMMODEL( 2 ) && ISQSTYLEOPTIONVIEWITEM( 3 ) && ISQMODELINDEX( 4 ) )
+    if( ISNUMPAR(4) && ISQEVENT(1) && ISQABSTRACTITEMMODEL(2) && ISQSTYLEOPTIONVIEWITEM(3) && ISQMODELINDEX(4) )
     {
 #endif
-      RBOOL( obj->editorEvent( PQEVENT( 1 ), PQABSTRACTITEMMODEL( 2 ), *PQSTYLEOPTIONVIEWITEM( 3 ), *PQMODELINDEX( 4 ) ) );
+      RBOOL( obj->editorEvent( PQEVENT(1), PQABSTRACTITEMMODEL(2), *PQSTYLEOPTIONVIEWITEM(3), *PQMODELINDEX(4) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -126,25 +125,25 @@ virtual void paint( QPainter * painter, const QStyleOptionViewItem & option, con
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_PAINT )
 {
-  QAbstractItemDelegate * obj = qobject_cast< QAbstractItemDelegate * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemDelegate * obj = qobject_cast<QAbstractItemDelegate*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && ISQPAINTER( 1 ) && ISQSTYLEOPTIONVIEWITEM( 2 ) && ISQMODELINDEX( 3 ) )
+    if( ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
     {
 #endif
-      obj->paint( PQPAINTER( 1 ), *PQSTYLEOPTIONVIEWITEM( 2 ), *PQMODELINDEX( 3 ) );
+      obj->paint( PQPAINTER(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -152,25 +151,25 @@ virtual void setEditorData( QWidget * editor, const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETEDITORDATA )
 {
-  QAbstractItemDelegate * obj = qobject_cast< QAbstractItemDelegate * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemDelegate * obj = qobject_cast<QAbstractItemDelegate*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQWIDGET( 1 ) && ISQMODELINDEX( 2 ) )
+    if( ISNUMPAR(2) && ISQWIDGET(1) && ISQMODELINDEX(2) )
     {
 #endif
-      obj->setEditorData( PQWIDGET( 1 ), *PQMODELINDEX( 2 ) );
+      obj->setEditorData( PQWIDGET(1), *PQMODELINDEX(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -178,25 +177,25 @@ virtual void setModelData( QWidget * editor, QAbstractItemModel * model, const Q
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SETMODELDATA )
 {
-  QAbstractItemDelegate * obj = qobject_cast< QAbstractItemDelegate * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemDelegate * obj = qobject_cast<QAbstractItemDelegate*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && ISQWIDGET( 1 ) && ISQABSTRACTITEMMODEL( 2 ) && ISQMODELINDEX( 3 ) )
+    if( ISNUMPAR(3) && ISQWIDGET(1) && ISQABSTRACTITEMMODEL(2) && ISQMODELINDEX(3) )
     {
 #endif
-      obj->setModelData( PQWIDGET( 1 ), PQABSTRACTITEMMODEL( 2 ), *PQMODELINDEX( 3 ) );
+      obj->setModelData( PQWIDGET(1), PQABSTRACTITEMMODEL(2), *PQMODELINDEX(3) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -204,21 +203,21 @@ virtual QSize sizeHint( const QStyleOptionViewItem & option, const QModelIndex &
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_SIZEHINT )
 {
-  QAbstractItemDelegate * obj = qobject_cast< QAbstractItemDelegate * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemDelegate * obj = qobject_cast<QAbstractItemDelegate*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQSTYLEOPTIONVIEWITEM( 1 ) && ISQMODELINDEX( 2 ) )
+    if( ISNUMPAR(2) && ISQSTYLEOPTIONVIEWITEM(1) && ISQMODELINDEX(2) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint( *PQSTYLEOPTIONVIEWITEM( 1 ), *PQMODELINDEX( 2 ) ) );
+      QSize * ptr = new QSize( obj->sizeHint( *PQSTYLEOPTIONVIEWITEM(1), *PQMODELINDEX(2) ) );
       Qt4xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -229,25 +228,25 @@ virtual void updateEditorGeometry( QWidget * editor, const QStyleOptionViewItem 
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_UPDATEEDITORGEOMETRY )
 {
-  QAbstractItemDelegate * obj = qobject_cast< QAbstractItemDelegate * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemDelegate * obj = qobject_cast<QAbstractItemDelegate*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && ISQWIDGET( 1 ) && ISQSTYLEOPTIONVIEWITEM( 2 ) && ISQMODELINDEX( 3 ) )
+    if( ISNUMPAR(3) && ISQWIDGET(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
     {
 #endif
-      obj->updateEditorGeometry( PQWIDGET( 1 ), *PQSTYLEOPTIONVIEWITEM( 2 ), *PQMODELINDEX( 3 ) );
+      obj->updateEditorGeometry( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -255,20 +254,20 @@ bool helpEvent( QHelpEvent * event, QAbstractItemView * view, const QStyleOption
 */
 HB_FUNC_STATIC( QABSTRACTITEMDELEGATE_HELPEVENT )
 {
-  QAbstractItemDelegate * obj = qobject_cast< QAbstractItemDelegate * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractItemDelegate * obj = qobject_cast<QAbstractItemDelegate*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 4 ) && ISQHELPEVENT( 1 ) && ISQABSTRACTITEMVIEW( 2 ) && ISQSTYLEOPTIONVIEWITEM( 3 ) && ISQMODELINDEX( 4 ) )
+    if( ISNUMPAR(4) && ISQHELPEVENT(1) && ISQABSTRACTITEMVIEW(2) && ISQSTYLEOPTIONVIEWITEM(3) && ISQMODELINDEX(4) )
     {
 #endif
-      RBOOL( obj->helpEvent( PQHELPEVENT( 1 ), PQABSTRACTITEMVIEW( 2 ), *PQSTYLEOPTIONVIEWITEM( 3 ), *PQMODELINDEX( 4 ) ) );
+      RBOOL( obj->helpEvent( PQHELPEVENT(1), PQABSTRACTITEMVIEW(2), *PQSTYLEOPTIONVIEWITEM(3), *PQMODELINDEX(4) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

@@ -67,14 +67,14 @@ QDoubleSpinBox( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QDoubleSpinBox * obj = new QDoubleSpinBox( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -83,12 +83,12 @@ QString cleanText() const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_CLEANTEXT )
 {
-  QDoubleSpinBox * obj = qobject_cast< QDoubleSpinBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDoubleSpinBox * obj = qobject_cast<QDoubleSpinBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->cleanText() );
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_CLEANTEXT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -107,12 +107,12 @@ int decimals() const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_DECIMALS )
 {
-  QDoubleSpinBox * obj = qobject_cast< QDoubleSpinBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDoubleSpinBox * obj = qobject_cast<QDoubleSpinBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->decimals() );
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_DECIMALS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -131,12 +131,12 @@ double maximum() const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_MAXIMUM )
 {
-  QDoubleSpinBox * obj = qobject_cast< QDoubleSpinBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDoubleSpinBox * obj = qobject_cast<QDoubleSpinBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RDOUBLE( obj->maximum() );
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_MAXIMUM )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -155,12 +155,12 @@ double minimum() const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_MINIMUM )
 {
-  QDoubleSpinBox * obj = qobject_cast< QDoubleSpinBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDoubleSpinBox * obj = qobject_cast<QDoubleSpinBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RDOUBLE( obj->minimum() );
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_MINIMUM )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -179,12 +179,12 @@ QString prefix() const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_PREFIX )
 {
-  QDoubleSpinBox * obj = qobject_cast< QDoubleSpinBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDoubleSpinBox * obj = qobject_cast<QDoubleSpinBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->prefix() );
@@ -192,7 +192,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_PREFIX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -203,25 +203,25 @@ void setDecimals( int prec )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETDECIMALS )
 {
-  QDoubleSpinBox * obj = qobject_cast< QDoubleSpinBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDoubleSpinBox * obj = qobject_cast<QDoubleSpinBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setDecimals( PINT( 1 ) );
+      obj->setDecimals( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -229,25 +229,25 @@ void setMaximum( double max )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETMAXIMUM )
 {
-  QDoubleSpinBox * obj = qobject_cast< QDoubleSpinBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDoubleSpinBox * obj = qobject_cast<QDoubleSpinBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setMaximum( PDOUBLE( 1 ) );
+      obj->setMaximum( PDOUBLE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -255,25 +255,25 @@ void setMinimum( double min )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETMINIMUM )
 {
-  QDoubleSpinBox * obj = qobject_cast< QDoubleSpinBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDoubleSpinBox * obj = qobject_cast<QDoubleSpinBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setMinimum( PDOUBLE( 1 ) );
+      obj->setMinimum( PDOUBLE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -281,25 +281,25 @@ void setPrefix( const QString & prefix )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETPREFIX )
 {
-  QDoubleSpinBox * obj = qobject_cast< QDoubleSpinBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDoubleSpinBox * obj = qobject_cast<QDoubleSpinBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setPrefix( PQSTRING( 1 ) );
+      obj->setPrefix( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -307,25 +307,25 @@ void setRange( double minimum, double maximum )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETRANGE )
 {
-  QDoubleSpinBox * obj = qobject_cast< QDoubleSpinBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDoubleSpinBox * obj = qobject_cast<QDoubleSpinBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      obj->setRange( PDOUBLE( 1 ), PDOUBLE( 2 ) );
+      obj->setRange( PDOUBLE(1), PDOUBLE(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -333,25 +333,25 @@ void setSingleStep( double val )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETSINGLESTEP )
 {
-  QDoubleSpinBox * obj = qobject_cast< QDoubleSpinBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDoubleSpinBox * obj = qobject_cast<QDoubleSpinBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setSingleStep( PDOUBLE( 1 ) );
+      obj->setSingleStep( PDOUBLE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -359,25 +359,25 @@ void setSuffix( const QString & suffix )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETSUFFIX )
 {
-  QDoubleSpinBox * obj = qobject_cast< QDoubleSpinBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDoubleSpinBox * obj = qobject_cast<QDoubleSpinBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setSuffix( PQSTRING( 1 ) );
+      obj->setSuffix( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -385,12 +385,12 @@ double singleStep() const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SINGLESTEP )
 {
-  QDoubleSpinBox * obj = qobject_cast< QDoubleSpinBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDoubleSpinBox * obj = qobject_cast<QDoubleSpinBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RDOUBLE( obj->singleStep() );
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SINGLESTEP )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -409,12 +409,12 @@ QString suffix() const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SUFFIX )
 {
-  QDoubleSpinBox * obj = qobject_cast< QDoubleSpinBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDoubleSpinBox * obj = qobject_cast<QDoubleSpinBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->suffix() );
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SUFFIX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -433,20 +433,20 @@ virtual QString textFromValue( double value ) const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_TEXTFROMVALUE )
 {
-  QDoubleSpinBox * obj = qobject_cast< QDoubleSpinBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDoubleSpinBox * obj = qobject_cast<QDoubleSpinBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->textFromValue( PDOUBLE( 1 ) ) );
+      RQSTRING( obj->textFromValue( PDOUBLE(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -457,12 +457,12 @@ double value() const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_VALUE )
 {
-  QDoubleSpinBox * obj = qobject_cast< QDoubleSpinBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDoubleSpinBox * obj = qobject_cast<QDoubleSpinBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RDOUBLE( obj->value() );
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_VALUE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -481,20 +481,20 @@ virtual double valueFromText( const QString & text ) const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_VALUEFROMTEXT )
 {
-  QDoubleSpinBox * obj = qobject_cast< QDoubleSpinBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDoubleSpinBox * obj = qobject_cast<QDoubleSpinBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RDOUBLE( obj->valueFromText( PQSTRING( 1 ) ) );
+      RDOUBLE( obj->valueFromText( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -505,27 +505,27 @@ virtual void fixup( QString & input ) const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_FIXUP )
 {
-  QDoubleSpinBox * obj = qobject_cast< QDoubleSpinBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDoubleSpinBox * obj = qobject_cast<QDoubleSpinBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QString par1 = hb_parc( 1 );
+      QString par1 = hb_parc(1);
       obj->fixup( par1 );
       hb_storc( QSTRINGTOSTRING( par1 ), 1 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -533,15 +533,15 @@ virtual QValidator::State validate( QString & text, int & pos ) const
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_VALIDATE )
 {
-  QDoubleSpinBox * obj = qobject_cast< QDoubleSpinBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDoubleSpinBox * obj = qobject_cast<QDoubleSpinBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
     {
 #endif
-      QString par1 = hb_parc( 1 );
+      QString par1 = hb_parc(1);
       int par2;
       RENUM( obj->validate( par1, par2 ) );
       hb_storc( QSTRINGTOSTRING( par1 ), 1 );
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_VALIDATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -561,25 +561,25 @@ void setValue( double val )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_SETVALUE )
 {
-  QDoubleSpinBox * obj = qobject_cast< QDoubleSpinBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDoubleSpinBox * obj = qobject_cast<QDoubleSpinBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setValue( PDOUBLE( 1 ) );
+      obj->setValue( PDOUBLE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 void QDoubleSpinBoxSlots_connect_signal( const QString & signal, const QString & slot );

@@ -41,19 +41,18 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSSCENEEVENT_DELETE )
 {
-  QGraphicsSceneEvent * obj = static_cast< QGraphicsSceneEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsSceneEvent * obj = static_cast<QGraphicsSceneEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -61,12 +60,12 @@ QWidget * widget() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEEVENT_WIDGET )
 {
-  QGraphicsSceneEvent * obj = static_cast< QGraphicsSceneEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsSceneEvent * obj = static_cast<QGraphicsSceneEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QWidget * ptr = obj->widget();
@@ -75,7 +74,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEEVENT_WIDGET )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

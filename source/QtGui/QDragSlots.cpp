@@ -22,14 +22,14 @@ QDragSlots::~QDragSlots()
 
 void QDragSlots::actionChanged( Qt::DropAction action )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "actionChanged(Qt::DropAction)" );
 
   if( cb )
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDRAG" );
-    PHB_ITEM pAction = hb_itemPutNI( NULL, static_cast< int >( action ) );
+    PHB_ITEM pAction = hb_itemPutNI( NULL, static_cast<int >( action ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pAction );
 
@@ -40,7 +40,7 @@ void QDragSlots::actionChanged( Qt::DropAction action )
 
 void QDragSlots::targetChanged( QWidget * newTarget )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "targetChanged(QWidget*)" );
 
@@ -58,9 +58,9 @@ void QDragSlots::targetChanged( QWidget * newTarget )
 
 void QDragSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDrag * obj = qobject_cast< QDrag * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDrag * obj = qobject_cast<QDrag*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QDragSlots * s = QCoreApplication::instance()->findChild<QDragSlots *>();
 

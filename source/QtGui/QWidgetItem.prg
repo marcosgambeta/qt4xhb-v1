@@ -56,32 +56,31 @@ QWidgetItem( QWidget * widget )
 */
 HB_FUNC_STATIC( QWIDGETITEM_NEW )
 {
-  if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
+  if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
-    QWidgetItem * obj = new QWidgetItem( PQWIDGET( 1 ) );
+    QWidgetItem * obj = new QWidgetItem( PQWIDGET(1) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QWIDGETITEM_DELETE )
 {
-  QWidgetItem * obj = static_cast< QWidgetItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWidgetItem * obj = static_cast<QWidgetItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -89,12 +88,12 @@ virtual Qt::Orientations expandingDirections() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_EXPANDINGDIRECTIONS )
 {
-  QWidgetItem * obj = static_cast< QWidgetItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWidgetItem * obj = static_cast<QWidgetItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->expandingDirections() );
@@ -102,7 +101,7 @@ HB_FUNC_STATIC( QWIDGETITEM_EXPANDINGDIRECTIONS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -113,12 +112,12 @@ virtual QRect geometry() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_GEOMETRY )
 {
-  QWidgetItem * obj = static_cast< QWidgetItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWidgetItem * obj = static_cast<QWidgetItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QRect * ptr = new QRect( obj->geometry() );
@@ -127,7 +126,7 @@ HB_FUNC_STATIC( QWIDGETITEM_GEOMETRY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -138,12 +137,12 @@ virtual bool hasHeightForWidth() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_HASHEIGHTFORWIDTH )
 {
-  QWidgetItem * obj = static_cast< QWidgetItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWidgetItem * obj = static_cast<QWidgetItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->hasHeightForWidth() );
@@ -151,7 +150,7 @@ HB_FUNC_STATIC( QWIDGETITEM_HASHEIGHTFORWIDTH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -162,20 +161,20 @@ virtual int heightForWidth( int w ) const
 */
 HB_FUNC_STATIC( QWIDGETITEM_HEIGHTFORWIDTH )
 {
-  QWidgetItem * obj = static_cast< QWidgetItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWidgetItem * obj = static_cast<QWidgetItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->heightForWidth( PINT( 1 ) ) );
+      RINT( obj->heightForWidth( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -186,12 +185,12 @@ virtual bool isEmpty() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_ISEMPTY )
 {
-  QWidgetItem * obj = static_cast< QWidgetItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWidgetItem * obj = static_cast<QWidgetItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isEmpty() );
@@ -199,7 +198,7 @@ HB_FUNC_STATIC( QWIDGETITEM_ISEMPTY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -210,12 +209,12 @@ virtual QSize maximumSize() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_MAXIMUMSIZE )
 {
-  QWidgetItem * obj = static_cast< QWidgetItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWidgetItem * obj = static_cast<QWidgetItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSize * ptr = new QSize( obj->maximumSize() );
@@ -224,7 +223,7 @@ HB_FUNC_STATIC( QWIDGETITEM_MAXIMUMSIZE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -235,12 +234,12 @@ virtual QSize minimumSize() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_MINIMUMSIZE )
 {
-  QWidgetItem * obj = static_cast< QWidgetItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWidgetItem * obj = static_cast<QWidgetItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSize() );
@@ -249,7 +248,7 @@ HB_FUNC_STATIC( QWIDGETITEM_MINIMUMSIZE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -260,25 +259,25 @@ virtual void setGeometry( const QRect & rect )
 */
 HB_FUNC_STATIC( QWIDGETITEM_SETGEOMETRY )
 {
-  QWidgetItem * obj = static_cast< QWidgetItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWidgetItem * obj = static_cast<QWidgetItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQRECT( 1 ) )
+    if( ISNUMPAR(1) && ISQRECT(1) )
     {
 #endif
-      obj->setGeometry( *PQRECT( 1 ) );
+      obj->setGeometry( *PQRECT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -286,12 +285,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QWIDGETITEM_SIZEHINT )
 {
-  QWidgetItem * obj = static_cast< QWidgetItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWidgetItem * obj = static_cast<QWidgetItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
@@ -300,7 +299,7 @@ HB_FUNC_STATIC( QWIDGETITEM_SIZEHINT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -311,12 +310,12 @@ virtual QWidget * widget()
 */
 HB_FUNC_STATIC( QWIDGETITEM_WIDGET )
 {
-  QWidgetItem * obj = static_cast< QWidgetItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QWidgetItem * obj = static_cast<QWidgetItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QWidget * ptr = obj->widget();
@@ -325,7 +324,7 @@ HB_FUNC_STATIC( QWIDGETITEM_WIDGET )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

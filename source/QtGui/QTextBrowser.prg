@@ -74,14 +74,14 @@ QTextBrowser( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QTextBrowser * obj = new QTextBrowser( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -90,12 +90,12 @@ int backwardHistoryCount() const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_BACKWARDHISTORYCOUNT )
 {
-  QTextBrowser * obj = qobject_cast< QTextBrowser * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QTextBrowser * obj = qobject_cast<QTextBrowser*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->backwardHistoryCount() );
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_BACKWARDHISTORYCOUNT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -114,12 +114,12 @@ void clearHistory()
 */
 HB_FUNC_STATIC( QTEXTBROWSER_CLEARHISTORY )
 {
-  QTextBrowser * obj = qobject_cast< QTextBrowser * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QTextBrowser * obj = qobject_cast<QTextBrowser*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->clearHistory();
@@ -127,12 +127,12 @@ HB_FUNC_STATIC( QTEXTBROWSER_CLEARHISTORY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -140,12 +140,12 @@ int forwardHistoryCount() const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_FORWARDHISTORYCOUNT )
 {
-  QTextBrowser * obj = qobject_cast< QTextBrowser * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QTextBrowser * obj = qobject_cast<QTextBrowser*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->forwardHistoryCount() );
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_FORWARDHISTORYCOUNT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -164,20 +164,20 @@ QString historyTitle( int i ) const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_HISTORYTITLE )
 {
-  QTextBrowser * obj = qobject_cast< QTextBrowser * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QTextBrowser * obj = qobject_cast<QTextBrowser*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->historyTitle( PINT( 1 ) ) );
+      RQSTRING( obj->historyTitle( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -188,21 +188,21 @@ QUrl historyUrl( int i ) const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_HISTORYURL )
 {
-  QTextBrowser * obj = qobject_cast< QTextBrowser * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QTextBrowser * obj = qobject_cast<QTextBrowser*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->historyUrl( PINT( 1 ) ) );
+      QUrl * ptr = new QUrl( obj->historyUrl( PINT(1) ) );
       Qt4xHb::createReturnClass( ptr, "QURL", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -213,12 +213,12 @@ bool isBackwardAvailable() const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ISBACKWARDAVAILABLE )
 {
-  QTextBrowser * obj = qobject_cast< QTextBrowser * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QTextBrowser * obj = qobject_cast<QTextBrowser*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isBackwardAvailable() );
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ISBACKWARDAVAILABLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -237,12 +237,12 @@ bool isForwardAvailable() const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_ISFORWARDAVAILABLE )
 {
-  QTextBrowser * obj = qobject_cast< QTextBrowser * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QTextBrowser * obj = qobject_cast<QTextBrowser*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isForwardAvailable() );
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_ISFORWARDAVAILABLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -261,12 +261,12 @@ bool openExternalLinks() const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_OPENEXTERNALLINKS )
 {
-  QTextBrowser * obj = qobject_cast< QTextBrowser * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QTextBrowser * obj = qobject_cast<QTextBrowser*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->openExternalLinks() );
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_OPENEXTERNALLINKS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -285,12 +285,12 @@ bool openLinks() const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_OPENLINKS )
 {
-  QTextBrowser * obj = qobject_cast< QTextBrowser * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QTextBrowser * obj = qobject_cast<QTextBrowser*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->openLinks() );
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_OPENLINKS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -309,12 +309,12 @@ QStringList searchPaths() const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_SEARCHPATHS )
 {
-  QTextBrowser * obj = qobject_cast< QTextBrowser * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QTextBrowser * obj = qobject_cast<QTextBrowser*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRINGLIST( obj->searchPaths() );
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SEARCHPATHS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -333,25 +333,25 @@ void setOpenExternalLinks( bool open )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_SETOPENEXTERNALLINKS )
 {
-  QTextBrowser * obj = qobject_cast< QTextBrowser * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QTextBrowser * obj = qobject_cast<QTextBrowser*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setOpenExternalLinks( PBOOL( 1 ) );
+      obj->setOpenExternalLinks( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -359,25 +359,25 @@ void setOpenLinks( bool open )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_SETOPENLINKS )
 {
-  QTextBrowser * obj = qobject_cast< QTextBrowser * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QTextBrowser * obj = qobject_cast<QTextBrowser*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setOpenLinks( PBOOL( 1 ) );
+      obj->setOpenLinks( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -385,25 +385,25 @@ void setSearchPaths( const QStringList & paths )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_SETSEARCHPATHS )
 {
-  QTextBrowser * obj = qobject_cast< QTextBrowser * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QTextBrowser * obj = qobject_cast<QTextBrowser*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
+    if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
-      obj->setSearchPaths( PQSTRINGLIST( 1 ) );
+      obj->setSearchPaths( PQSTRINGLIST(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -411,12 +411,12 @@ QUrl source() const
 */
 HB_FUNC_STATIC( QTEXTBROWSER_SOURCE )
 {
-  QTextBrowser * obj = qobject_cast< QTextBrowser * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QTextBrowser * obj = qobject_cast<QTextBrowser*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QUrl * ptr = new QUrl( obj->source() );
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SOURCE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -436,21 +436,21 @@ virtual QVariant loadResource( int type, const QUrl & name )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_LOADRESOURCE )
 {
-  QTextBrowser * obj = qobject_cast< QTextBrowser * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QTextBrowser * obj = qobject_cast<QTextBrowser*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQURL( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQURL(2) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->loadResource( PINT( 1 ), *PQURL( 2 ) ) );
+      QVariant * ptr = new QVariant( obj->loadResource( PINT(1), *PQURL(2) ) );
       Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -461,12 +461,12 @@ virtual void backward()
 */
 HB_FUNC_STATIC( QTEXTBROWSER_BACKWARD )
 {
-  QTextBrowser * obj = qobject_cast< QTextBrowser * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QTextBrowser * obj = qobject_cast<QTextBrowser*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->backward();
@@ -474,12 +474,12 @@ HB_FUNC_STATIC( QTEXTBROWSER_BACKWARD )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -487,12 +487,12 @@ virtual void forward()
 */
 HB_FUNC_STATIC( QTEXTBROWSER_FORWARD )
 {
-  QTextBrowser * obj = qobject_cast< QTextBrowser * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QTextBrowser * obj = qobject_cast<QTextBrowser*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->forward();
@@ -500,12 +500,12 @@ HB_FUNC_STATIC( QTEXTBROWSER_FORWARD )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -513,12 +513,12 @@ virtual void home()
 */
 HB_FUNC_STATIC( QTEXTBROWSER_HOME )
 {
-  QTextBrowser * obj = qobject_cast< QTextBrowser * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QTextBrowser * obj = qobject_cast<QTextBrowser*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->home();
@@ -526,12 +526,12 @@ HB_FUNC_STATIC( QTEXTBROWSER_HOME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -539,12 +539,12 @@ virtual void reload()
 */
 HB_FUNC_STATIC( QTEXTBROWSER_RELOAD )
 {
-  QTextBrowser * obj = qobject_cast< QTextBrowser * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QTextBrowser * obj = qobject_cast<QTextBrowser*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->reload();
@@ -552,12 +552,12 @@ HB_FUNC_STATIC( QTEXTBROWSER_RELOAD )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -565,25 +565,25 @@ virtual void setSource( const QUrl & name )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_SETSOURCE )
 {
-  QTextBrowser * obj = qobject_cast< QTextBrowser * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QTextBrowser * obj = qobject_cast<QTextBrowser*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQURL( 1 ) )
+    if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      obj->setSource( *PQURL( 1 ) );
+      obj->setSource( *PQURL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 void QTextBrowserSlots_connect_signal( const QString & signal, const QString & slot );

@@ -59,34 +59,33 @@ QStackedWidget( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QStackedWidget * obj = new QStackedWidget( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QSTACKEDWIDGET_DELETE )
 {
-  QStackedWidget * obj = qobject_cast< QStackedWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QStackedWidget * obj = qobject_cast<QStackedWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -94,20 +93,20 @@ int addWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_ADDWIDGET )
 {
-  QStackedWidget * obj = qobject_cast< QStackedWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QStackedWidget * obj = qobject_cast<QStackedWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
+    if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      RINT( obj->addWidget( PQWIDGET( 1 ) ) );
+      RINT( obj->addWidget( PQWIDGET(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -118,12 +117,12 @@ int count() const
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_COUNT )
 {
-  QStackedWidget * obj = qobject_cast< QStackedWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QStackedWidget * obj = qobject_cast<QStackedWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->count() );
@@ -131,7 +130,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_COUNT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -142,12 +141,12 @@ int currentIndex() const
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_CURRENTINDEX )
 {
-  QStackedWidget * obj = qobject_cast< QStackedWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QStackedWidget * obj = qobject_cast<QStackedWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->currentIndex() );
@@ -155,7 +154,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_CURRENTINDEX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -166,12 +165,12 @@ QWidget * currentWidget() const
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_CURRENTWIDGET )
 {
-  QStackedWidget * obj = qobject_cast< QStackedWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QStackedWidget * obj = qobject_cast<QStackedWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QWidget * ptr = obj->currentWidget();
@@ -180,7 +179,7 @@ HB_FUNC_STATIC( QSTACKEDWIDGET_CURRENTWIDGET )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -191,20 +190,20 @@ int indexOf( QWidget * widget ) const
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_INDEXOF )
 {
-  QStackedWidget * obj = qobject_cast< QStackedWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QStackedWidget * obj = qobject_cast<QStackedWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
+    if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      RINT( obj->indexOf( PQWIDGET( 1 ) ) );
+      RINT( obj->indexOf( PQWIDGET(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -215,20 +214,20 @@ int insertWidget( int index, QWidget * widget )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_INSERTWIDGET )
 {
-  QStackedWidget * obj = qobject_cast< QStackedWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QStackedWidget * obj = qobject_cast<QStackedWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQWIDGET( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQWIDGET(2) )
     {
 #endif
-      RINT( obj->insertWidget( PINT( 1 ), PQWIDGET( 2 ) ) );
+      RINT( obj->insertWidget( PINT(1), PQWIDGET(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -239,25 +238,25 @@ void removeWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_REMOVEWIDGET )
 {
-  QStackedWidget * obj = qobject_cast< QStackedWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QStackedWidget * obj = qobject_cast<QStackedWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
+    if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->removeWidget( PQWIDGET( 1 ) );
+      obj->removeWidget( PQWIDGET(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -265,21 +264,21 @@ QWidget * widget( int index ) const
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_WIDGET )
 {
-  QStackedWidget * obj = qobject_cast< QStackedWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QStackedWidget * obj = qobject_cast<QStackedWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QWidget * ptr = obj->widget( PINT( 1 ) );
+      QWidget * ptr = obj->widget( PINT(1) );
       Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -290,25 +289,25 @@ void setCurrentIndex( int index )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_SETCURRENTINDEX )
 {
-  QStackedWidget * obj = qobject_cast< QStackedWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QStackedWidget * obj = qobject_cast<QStackedWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setCurrentIndex( PINT( 1 ) );
+      obj->setCurrentIndex( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -316,25 +315,25 @@ void setCurrentWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QSTACKEDWIDGET_SETCURRENTWIDGET )
 {
-  QStackedWidget * obj = qobject_cast< QStackedWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QStackedWidget * obj = qobject_cast<QStackedWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
+    if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->setCurrentWidget( PQWIDGET( 1 ) );
+      obj->setCurrentWidget( PQWIDGET(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 void QStackedWidgetSlots_connect_signal( const QString & signal, const QString & slot );

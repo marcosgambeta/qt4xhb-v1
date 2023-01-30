@@ -22,7 +22,7 @@ QFontComboBoxSlots::~QFontComboBoxSlots()
 
 void QFontComboBoxSlots::currentFontChanged( const QFont & font )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentFontChanged(QFont)" );
 
@@ -40,9 +40,9 @@ void QFontComboBoxSlots::currentFontChanged( const QFont & font )
 
 void QFontComboBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QFontComboBox * obj = qobject_cast< QFontComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFontComboBox * obj = qobject_cast<QFontComboBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QFontComboBoxSlots * s = QCoreApplication::instance()->findChild<QFontComboBoxSlots *>();
 

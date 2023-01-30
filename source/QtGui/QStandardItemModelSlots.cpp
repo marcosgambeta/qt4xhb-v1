@@ -22,7 +22,7 @@ QStandardItemModelSlots::~QStandardItemModelSlots()
 
 void QStandardItemModelSlots::itemChanged( QStandardItem * item )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "itemChanged(QStandardItem*)" );
 
@@ -40,9 +40,9 @@ void QStandardItemModelSlots::itemChanged( QStandardItem * item )
 
 void QStandardItemModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QStandardItemModel * obj = qobject_cast< QStandardItemModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QStandardItemModel * obj = qobject_cast<QStandardItemModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QStandardItemModelSlots * s = QCoreApplication::instance()->findChild<QStandardItemModelSlots *>();
 

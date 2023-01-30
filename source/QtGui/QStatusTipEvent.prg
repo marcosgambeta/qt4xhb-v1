@@ -44,32 +44,31 @@ QStatusTipEvent( const QString & tip )
 */
 HB_FUNC_STATIC( QSTATUSTIPEVENT_NEW )
 {
-  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
-    QStatusTipEvent * obj = new QStatusTipEvent( PQSTRING( 1 ) );
+    QStatusTipEvent * obj = new QStatusTipEvent( PQSTRING(1) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QSTATUSTIPEVENT_DELETE )
 {
-  QStatusTipEvent * obj = static_cast< QStatusTipEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStatusTipEvent * obj = static_cast<QStatusTipEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -77,12 +76,12 @@ QString tip() const
 */
 HB_FUNC_STATIC( QSTATUSTIPEVENT_TIP )
 {
-  QStatusTipEvent * obj = static_cast< QStatusTipEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStatusTipEvent * obj = static_cast<QStatusTipEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->tip() );
@@ -90,7 +89,7 @@ HB_FUNC_STATIC( QSTATUSTIPEVENT_TIP )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

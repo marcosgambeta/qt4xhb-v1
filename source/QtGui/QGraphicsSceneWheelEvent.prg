@@ -48,19 +48,18 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_DELETE )
 {
-  QGraphicsSceneWheelEvent * obj = static_cast< QGraphicsSceneWheelEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsSceneWheelEvent * obj = static_cast<QGraphicsSceneWheelEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -68,12 +67,12 @@ Qt::MouseButtons buttons() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_BUTTONS )
 {
-  QGraphicsSceneWheelEvent * obj = static_cast< QGraphicsSceneWheelEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsSceneWheelEvent * obj = static_cast<QGraphicsSceneWheelEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->buttons() );
@@ -81,7 +80,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_BUTTONS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -92,12 +91,12 @@ int delta() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_DELTA )
 {
-  QGraphicsSceneWheelEvent * obj = static_cast< QGraphicsSceneWheelEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsSceneWheelEvent * obj = static_cast<QGraphicsSceneWheelEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->delta() );
@@ -105,7 +104,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_DELTA )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -116,12 +115,12 @@ Qt::KeyboardModifiers modifiers() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_MODIFIERS )
 {
-  QGraphicsSceneWheelEvent * obj = static_cast< QGraphicsSceneWheelEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsSceneWheelEvent * obj = static_cast<QGraphicsSceneWheelEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->modifiers() );
@@ -129,7 +128,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_MODIFIERS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -140,12 +139,12 @@ Qt::Orientation orientation() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_ORIENTATION )
 {
-  QGraphicsSceneWheelEvent * obj = static_cast< QGraphicsSceneWheelEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsSceneWheelEvent * obj = static_cast<QGraphicsSceneWheelEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->orientation() );
@@ -153,7 +152,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_ORIENTATION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -164,12 +163,12 @@ QPointF pos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_POS )
 {
-  QGraphicsSceneWheelEvent * obj = static_cast< QGraphicsSceneWheelEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsSceneWheelEvent * obj = static_cast<QGraphicsSceneWheelEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QPointF * ptr = new QPointF( obj->pos() );
@@ -178,7 +177,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_POS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -189,12 +188,12 @@ QPointF scenePos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_SCENEPOS )
 {
-  QGraphicsSceneWheelEvent * obj = static_cast< QGraphicsSceneWheelEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsSceneWheelEvent * obj = static_cast<QGraphicsSceneWheelEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QPointF * ptr = new QPointF( obj->scenePos() );
@@ -203,7 +202,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_SCENEPOS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -214,12 +213,12 @@ QPoint screenPos() const
 */
 HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_SCREENPOS )
 {
-  QGraphicsSceneWheelEvent * obj = static_cast< QGraphicsSceneWheelEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QGraphicsSceneWheelEvent * obj = static_cast<QGraphicsSceneWheelEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QPoint * ptr = new QPoint( obj->screenPos() );
@@ -228,7 +227,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEWHEELEVENT_SCREENPOS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

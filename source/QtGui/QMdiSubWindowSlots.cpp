@@ -22,7 +22,7 @@ QMdiSubWindowSlots::~QMdiSubWindowSlots()
 
 void QMdiSubWindowSlots::aboutToActivate()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "aboutToActivate()" );
 
@@ -38,15 +38,15 @@ void QMdiSubWindowSlots::aboutToActivate()
 
 void QMdiSubWindowSlots::windowStateChanged( Qt::WindowStates oldState, Qt::WindowStates newState )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" );
 
   if( cb )
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QMDISUBWINDOW" );
-    PHB_ITEM pOldState = hb_itemPutNI( NULL, static_cast< int >( oldState ) );
-    PHB_ITEM pNewState = hb_itemPutNI( NULL, static_cast< int >( newState ) );
+    PHB_ITEM pOldState = hb_itemPutNI( NULL, static_cast<int >( oldState ) );
+    PHB_ITEM pNewState = hb_itemPutNI( NULL, static_cast<int >( newState ) );
 
     hb_vmEvalBlockV( cb, 3, pSender, pOldState, pNewState );
 
@@ -58,9 +58,9 @@ void QMdiSubWindowSlots::windowStateChanged( Qt::WindowStates oldState, Qt::Wind
 
 void QMdiSubWindowSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMdiSubWindow * obj = qobject_cast< QMdiSubWindow * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiSubWindow * obj = qobject_cast<QMdiSubWindow*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QMdiSubWindowSlots * s = QCoreApplication::instance()->findChild<QMdiSubWindowSlots *>();
 

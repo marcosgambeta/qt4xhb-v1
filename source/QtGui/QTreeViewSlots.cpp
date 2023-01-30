@@ -22,7 +22,7 @@ QTreeViewSlots::~QTreeViewSlots()
 
 void QTreeViewSlots::collapsed( const QModelIndex & index )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "collapsed(QModelIndex)" );
 
@@ -40,7 +40,7 @@ void QTreeViewSlots::collapsed( const QModelIndex & index )
 
 void QTreeViewSlots::expanded( const QModelIndex & index )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "expanded(QModelIndex)" );
 
@@ -58,9 +58,9 @@ void QTreeViewSlots::expanded( const QModelIndex & index )
 
 void QTreeViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTreeView * obj = qobject_cast< QTreeView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QTreeView * obj = qobject_cast<QTreeView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QTreeViewSlots * s = QCoreApplication::instance()->findChild<QTreeViewSlots *>();
 

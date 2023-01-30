@@ -22,7 +22,7 @@ QGraphicsSceneSlots::~QGraphicsSceneSlots()
 
 void QGraphicsSceneSlots::changed( const QList<QRectF> & region )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "changed(QList<QRectF>)" );
 
@@ -30,18 +30,18 @@ void QGraphicsSceneSlots::changed( const QList<QRectF> & region )
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QGRAPHICSSCENE" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QRECTF" );
-    PHB_ITEM pRegion = hb_itemArrayNew( 0 );
+    PHB_ITEM pRegion = hb_itemArrayNew(0);
     if( pDynSym )
     {
       for( int i = 0; i < region.count(); i++ )
       {
         hb_vmPushDynSym( pDynSym );
         hb_vmPushNil();
-        hb_vmDo( 0 );
+        hb_vmDo(0);
         PHB_ITEM pTempObject = hb_itemNew( NULL );
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
         PHB_ITEM pTempItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pTempItem, static_cast< QRectF * >( new QRectF( region [i] ) ) );
+        hb_itemPutPtr( pTempItem, static_cast<QRectF*>( new QRectF( region [i] ) ) );
         hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
         hb_arrayAddForward( pRegion, pTempObject );
         hb_itemRelease( pTempObject );
@@ -62,7 +62,7 @@ void QGraphicsSceneSlots::changed( const QList<QRectF> & region )
 
 void QGraphicsSceneSlots::sceneRectChanged( const QRectF & rect )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "sceneRectChanged(QRectF)" );
 
@@ -80,7 +80,7 @@ void QGraphicsSceneSlots::sceneRectChanged( const QRectF & rect )
 
 void QGraphicsSceneSlots::selectionChanged()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "selectionChanged()" );
 
@@ -96,9 +96,9 @@ void QGraphicsSceneSlots::selectionChanged()
 
 void QGraphicsSceneSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsScene * obj = qobject_cast< QGraphicsScene * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QGraphicsSceneSlots * s = QCoreApplication::instance()->findChild<QGraphicsSceneSlots *>();
 

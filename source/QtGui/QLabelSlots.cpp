@@ -22,7 +22,7 @@ QLabelSlots::~QLabelSlots()
 
 void QLabelSlots::linkActivated( const QString & link )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "linkActivated(QString)" );
 
@@ -40,7 +40,7 @@ void QLabelSlots::linkActivated( const QString & link )
 
 void QLabelSlots::linkHovered( const QString & link )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "linkHovered(QString)" );
 
@@ -58,9 +58,9 @@ void QLabelSlots::linkHovered( const QString & link )
 
 void QLabelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QLabel * obj = qobject_cast< QLabel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QLabel * obj = qobject_cast<QLabel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QLabelSlots * s = QCoreApplication::instance()->findChild<QLabelSlots *>();
 

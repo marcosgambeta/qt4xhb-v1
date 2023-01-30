@@ -22,7 +22,7 @@ QListViewSlots::~QListViewSlots()
 
 void QListViewSlots::indexesMoved( const QModelIndexList & indexes )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "indexesMoved(QModelIndexList)" );
 
@@ -30,18 +30,18 @@ void QListViewSlots::indexesMoved( const QModelIndexList & indexes )
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QLISTVIEW" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
-    PHB_ITEM pIndexes = hb_itemArrayNew( 0 );
+    PHB_ITEM pIndexes = hb_itemArrayNew(0);
     if( pDynSym )
     {
       for( int i = 0; i < indexes.count(); i++ )
       {
         hb_vmPushDynSym( pDynSym );
         hb_vmPushNil();
-        hb_vmDo( 0 );
+        hb_vmDo(0);
         PHB_ITEM pTempObject = hb_itemNew( NULL );
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
         PHB_ITEM pTempItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pTempItem, static_cast< QModelIndex * >( new QModelIndex( indexes [i] ) ) );
+        hb_itemPutPtr( pTempItem, static_cast<QModelIndex*>( new QModelIndex( indexes [i] ) ) );
         hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
         hb_arrayAddForward( pIndexes, pTempObject );
         hb_itemRelease( pTempObject );
@@ -62,9 +62,9 @@ void QListViewSlots::indexesMoved( const QModelIndexList & indexes )
 
 void QListViewSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QListView * obj = qobject_cast< QListView * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QListView * obj = qobject_cast<QListView*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QListViewSlots * s = QCoreApplication::instance()->findChild<QListViewSlots *>();
 

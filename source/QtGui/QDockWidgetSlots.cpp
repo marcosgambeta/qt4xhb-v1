@@ -22,14 +22,14 @@ QDockWidgetSlots::~QDockWidgetSlots()
 
 void QDockWidgetSlots::allowedAreasChanged( Qt::DockWidgetAreas allowedAreas )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "allowedAreasChanged(Qt::DockWidgetAreas)" );
 
   if( cb )
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDOCKWIDGET" );
-    PHB_ITEM pAllowedAreas = hb_itemPutNI( NULL, static_cast< int >( allowedAreas ) );
+    PHB_ITEM pAllowedAreas = hb_itemPutNI( NULL, static_cast<int >( allowedAreas ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pAllowedAreas );
 
@@ -40,14 +40,14 @@ void QDockWidgetSlots::allowedAreasChanged( Qt::DockWidgetAreas allowedAreas )
 
 void QDockWidgetSlots::dockLocationChanged( Qt::DockWidgetArea area )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "dockLocationChanged(Qt::DockWidgetArea)" );
 
   if( cb )
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDOCKWIDGET" );
-    PHB_ITEM pArea = hb_itemPutNI( NULL, static_cast< int >( area ) );
+    PHB_ITEM pArea = hb_itemPutNI( NULL, static_cast<int >( area ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pArea );
 
@@ -58,14 +58,14 @@ void QDockWidgetSlots::dockLocationChanged( Qt::DockWidgetArea area )
 
 void QDockWidgetSlots::featuresChanged( QDockWidget::DockWidgetFeatures features )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "featuresChanged(QDockWidget::DockWidgetFeatures)" );
 
   if( cb )
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDOCKWIDGET" );
-    PHB_ITEM pFeatures = hb_itemPutNI( NULL, static_cast< int >( features ) );
+    PHB_ITEM pFeatures = hb_itemPutNI( NULL, static_cast<int >( features ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pFeatures );
 
@@ -76,7 +76,7 @@ void QDockWidgetSlots::featuresChanged( QDockWidget::DockWidgetFeatures features
 
 void QDockWidgetSlots::topLevelChanged( bool topLevel )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "topLevelChanged(bool)" );
 
@@ -94,7 +94,7 @@ void QDockWidgetSlots::topLevelChanged( bool topLevel )
 
 void QDockWidgetSlots::visibilityChanged( bool visible )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "visibilityChanged(bool)" );
 
@@ -112,9 +112,9 @@ void QDockWidgetSlots::visibilityChanged( bool visible )
 
 void QDockWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDockWidget * obj = qobject_cast< QDockWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDockWidget * obj = qobject_cast<QDockWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QDockWidgetSlots * s = QCoreApplication::instance()->findChild<QDockWidgetSlots *>();
 

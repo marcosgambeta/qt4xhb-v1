@@ -67,7 +67,7 @@ RETURN
 
 HB_FUNC_STATIC( QLCDNUMBER_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     /*
     QLCDNumber( QWidget * parent = 0 )
@@ -75,37 +75,36 @@ HB_FUNC_STATIC( QLCDNUMBER_NEW )
     QLCDNumber * obj = new QLCDNumber( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
-  else if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
   {
     /*
     QLCDNumber( uint numDigits, QWidget * parent = 0 )
     */
-    QLCDNumber * obj = new QLCDNumber( PUINT( 1 ), OPQWIDGET( 2, 0 ) );
+    QLCDNumber * obj = new QLCDNumber( PUINT(1), OPQWIDGET( 2, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QLCDNUMBER_DELETE )
 {
-  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QLCDNumber * obj = qobject_cast<QLCDNumber*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -113,20 +112,20 @@ bool checkOverflow( double num ) const
 */
 HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW1 )
 {
-  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QLCDNumber * obj = qobject_cast<QLCDNumber*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->checkOverflow( PDOUBLE( 1 ) ) );
+      RBOOL( obj->checkOverflow( PDOUBLE(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -137,20 +136,20 @@ bool checkOverflow( int num ) const
 */
 HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW2 )
 {
-  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QLCDNumber * obj = qobject_cast<QLCDNumber*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->checkOverflow( PINT( 1 ) ) );
+      RBOOL( obj->checkOverflow( PINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -158,13 +157,13 @@ HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW2 )
 
 HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW )
 {
-  if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+  if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     HB_FUNC_EXEC( QLCDNUMBER_CHECKOVERFLOW1 );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -173,12 +172,12 @@ int digitCount() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_DIGITCOUNT )
 {
-  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QLCDNumber * obj = qobject_cast<QLCDNumber*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->digitCount() );
@@ -186,7 +185,7 @@ HB_FUNC_STATIC( QLCDNUMBER_DIGITCOUNT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -197,12 +196,12 @@ int intValue() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_INTVALUE )
 {
-  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QLCDNumber * obj = qobject_cast<QLCDNumber*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->intValue() );
@@ -210,7 +209,7 @@ HB_FUNC_STATIC( QLCDNUMBER_INTVALUE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -221,12 +220,12 @@ QLCDNumber::Mode mode() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_MODE )
 {
-  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QLCDNumber * obj = qobject_cast<QLCDNumber*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->mode() );
@@ -234,7 +233,7 @@ HB_FUNC_STATIC( QLCDNUMBER_MODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -245,12 +244,12 @@ QLCDNumber::SegmentStyle segmentStyle() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_SEGMENTSTYLE )
 {
-  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QLCDNumber * obj = qobject_cast<QLCDNumber*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->segmentStyle() );
@@ -258,7 +257,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SEGMENTSTYLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -269,25 +268,25 @@ void setDigitCount( int numDigits )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETDIGITCOUNT )
 {
-  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QLCDNumber * obj = qobject_cast<QLCDNumber*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setDigitCount( PINT( 1 ) );
+      obj->setDigitCount( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -295,25 +294,25 @@ void setMode( QLCDNumber::Mode )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETMODE )
 {
-  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QLCDNumber * obj = qobject_cast<QLCDNumber*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setMode( ( QLCDNumber::Mode ) hb_parni( 1 ) );
+      obj->setMode( ( QLCDNumber::Mode ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -321,25 +320,25 @@ void setSegmentStyle( QLCDNumber::SegmentStyle )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETSEGMENTSTYLE )
 {
-  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QLCDNumber * obj = qobject_cast<QLCDNumber*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setSegmentStyle( ( QLCDNumber::SegmentStyle ) hb_parni( 1 ) );
+      obj->setSegmentStyle( ( QLCDNumber::SegmentStyle ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -347,12 +346,12 @@ bool smallDecimalPoint() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_SMALLDECIMALPOINT )
 {
-  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QLCDNumber * obj = qobject_cast<QLCDNumber*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->smallDecimalPoint() );
@@ -360,7 +359,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SMALLDECIMALPOINT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -371,12 +370,12 @@ double value() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_VALUE )
 {
-  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QLCDNumber * obj = qobject_cast<QLCDNumber*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RDOUBLE( obj->value() );
@@ -384,7 +383,7 @@ HB_FUNC_STATIC( QLCDNUMBER_VALUE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -395,12 +394,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QLCDNUMBER_SIZEHINT )
 {
-  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QLCDNumber * obj = qobject_cast<QLCDNumber*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
@@ -409,7 +408,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SIZEHINT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -420,25 +419,25 @@ void display( const QString & s )
 */
 HB_FUNC_STATIC( QLCDNUMBER_DISPLAY1 )
 {
-  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QLCDNumber * obj = qobject_cast<QLCDNumber*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->display( PQSTRING( 1 ) );
+      obj->display( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -446,25 +445,25 @@ void display( double num )
 */
 HB_FUNC_STATIC( QLCDNUMBER_DISPLAY2 )
 {
-  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QLCDNumber * obj = qobject_cast<QLCDNumber*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->display( PDOUBLE( 1 ) );
+      obj->display( PDOUBLE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -472,40 +471,40 @@ void display( int num )
 */
 HB_FUNC_STATIC( QLCDNUMBER_DISPLAY3 )
 {
-  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QLCDNumber * obj = qobject_cast<QLCDNumber*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->display( PINT( 1 ) );
+      obj->display( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 HB_FUNC_STATIC( QLCDNUMBER_DISPLAY )
 {
-  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     HB_FUNC_EXEC( QLCDNUMBER_DISPLAY1 );
   }
-  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     HB_FUNC_EXEC( QLCDNUMBER_DISPLAY2 );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -514,12 +513,12 @@ void setBinMode()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETBINMODE )
 {
-  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QLCDNumber * obj = qobject_cast<QLCDNumber*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->setBinMode();
@@ -527,12 +526,12 @@ HB_FUNC_STATIC( QLCDNUMBER_SETBINMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -540,12 +539,12 @@ void setDecMode()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETDECMODE )
 {
-  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QLCDNumber * obj = qobject_cast<QLCDNumber*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->setDecMode();
@@ -553,12 +552,12 @@ HB_FUNC_STATIC( QLCDNUMBER_SETDECMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -566,12 +565,12 @@ void setHexMode()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETHEXMODE )
 {
-  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QLCDNumber * obj = qobject_cast<QLCDNumber*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->setHexMode();
@@ -579,12 +578,12 @@ HB_FUNC_STATIC( QLCDNUMBER_SETHEXMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -592,12 +591,12 @@ void setOctMode()
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETOCTMODE )
 {
-  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QLCDNumber * obj = qobject_cast<QLCDNumber*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->setOctMode();
@@ -605,12 +604,12 @@ HB_FUNC_STATIC( QLCDNUMBER_SETOCTMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -618,25 +617,25 @@ void setSmallDecimalPoint( bool )
 */
 HB_FUNC_STATIC( QLCDNUMBER_SETSMALLDECIMALPOINT )
 {
-  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QLCDNumber * obj = qobject_cast<QLCDNumber*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setSmallDecimalPoint( PBOOL( 1 ) );
+      obj->setSmallDecimalPoint( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 void QLCDNumberSlots_connect_signal( const QString & signal, const QString & slot );

@@ -22,7 +22,7 @@ QTreeWidgetSlots::~QTreeWidgetSlots()
 
 void QTreeWidgetSlots::currentItemChanged( QTreeWidgetItem * current, QTreeWidgetItem * previous )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)" );
 
@@ -42,7 +42,7 @@ void QTreeWidgetSlots::currentItemChanged( QTreeWidgetItem * current, QTreeWidge
 
 void QTreeWidgetSlots::itemActivated( QTreeWidgetItem * item, int column )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "itemActivated(QTreeWidgetItem*,int)" );
 
@@ -62,7 +62,7 @@ void QTreeWidgetSlots::itemActivated( QTreeWidgetItem * item, int column )
 
 void QTreeWidgetSlots::itemChanged( QTreeWidgetItem * item, int column )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "itemChanged(QTreeWidgetItem*,int)" );
 
@@ -82,7 +82,7 @@ void QTreeWidgetSlots::itemChanged( QTreeWidgetItem * item, int column )
 
 void QTreeWidgetSlots::itemClicked( QTreeWidgetItem * item, int column )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "itemClicked(QTreeWidgetItem*,int)" );
 
@@ -102,7 +102,7 @@ void QTreeWidgetSlots::itemClicked( QTreeWidgetItem * item, int column )
 
 void QTreeWidgetSlots::itemCollapsed( QTreeWidgetItem * item )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "itemCollapsed(QTreeWidgetItem*)" );
 
@@ -120,7 +120,7 @@ void QTreeWidgetSlots::itemCollapsed( QTreeWidgetItem * item )
 
 void QTreeWidgetSlots::itemDoubleClicked( QTreeWidgetItem * item, int column )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "itemDoubleClicked(QTreeWidgetItem*,int)" );
 
@@ -140,7 +140,7 @@ void QTreeWidgetSlots::itemDoubleClicked( QTreeWidgetItem * item, int column )
 
 void QTreeWidgetSlots::itemEntered( QTreeWidgetItem * item, int column )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "itemEntered(QTreeWidgetItem*,int)" );
 
@@ -160,7 +160,7 @@ void QTreeWidgetSlots::itemEntered( QTreeWidgetItem * item, int column )
 
 void QTreeWidgetSlots::itemExpanded( QTreeWidgetItem * item )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "itemExpanded(QTreeWidgetItem*)" );
 
@@ -178,7 +178,7 @@ void QTreeWidgetSlots::itemExpanded( QTreeWidgetItem * item )
 
 void QTreeWidgetSlots::itemPressed( QTreeWidgetItem * item, int column )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "itemPressed(QTreeWidgetItem*,int)" );
 
@@ -198,7 +198,7 @@ void QTreeWidgetSlots::itemPressed( QTreeWidgetItem * item, int column )
 
 void QTreeWidgetSlots::itemSelectionChanged()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "itemSelectionChanged()" );
 
@@ -214,9 +214,9 @@ void QTreeWidgetSlots::itemSelectionChanged()
 
 void QTreeWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTreeWidget * obj = qobject_cast< QTreeWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QTreeWidget * obj = qobject_cast<QTreeWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QTreeWidgetSlots * s = QCoreApplication::instance()->findChild<QTreeWidgetSlots *>();
 

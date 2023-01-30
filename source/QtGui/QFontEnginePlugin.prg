@@ -46,21 +46,20 @@ RETURN
 
 HB_FUNC_STATIC( QFONTENGINEPLUGIN_DELETE )
 {
-  QFontEnginePlugin * obj = qobject_cast< QFontEnginePlugin * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFontEnginePlugin * obj = qobject_cast<QFontEnginePlugin*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -68,28 +67,28 @@ virtual QList<QFontEngineInfo> availableFontEngines() const = 0
 */
 HB_FUNC_STATIC( QFONTENGINEPLUGIN_AVAILABLEFONTENGINES )
 {
-  QFontEnginePlugin * obj = qobject_cast< QFontEnginePlugin * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFontEnginePlugin * obj = qobject_cast<QFontEnginePlugin*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QList<QFontEngineInfo> list = obj->availableFontEngines();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QFONTENGINEINFO" );
-      PHB_ITEM pArray = hb_itemArrayNew( 0 );
+      PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
         {
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
-          hb_vmDo( 0 );
+          hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, static_cast< QFontEngineInfo * >( new QFontEngineInfo( list[i] ) ) );
+          hb_itemPutPtr( pItem, static_cast<QFontEngineInfo*>( new QFontEngineInfo( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -109,7 +108,7 @@ HB_FUNC_STATIC( QFONTENGINEPLUGIN_AVAILABLEFONTENGINES )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -120,21 +119,21 @@ virtual QAbstractFontEngine * create( const QFontEngineInfo & info ) = 0
 */
 HB_FUNC_STATIC( QFONTENGINEPLUGIN_CREATE )
 {
-  QFontEnginePlugin * obj = qobject_cast< QFontEnginePlugin * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFontEnginePlugin * obj = qobject_cast<QFontEnginePlugin*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQFONTENGINEINFO( 1 ) )
+    if( ISNUMPAR(1) && ISQFONTENGINEINFO(1) )
     {
 #endif
-      QAbstractFontEngine * ptr = obj->create( *PQFONTENGINEINFO( 1 ) );
+      QAbstractFontEngine * ptr = obj->create( *PQFONTENGINEINFO(1) );
       Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTFONTENGINE" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -145,12 +144,12 @@ virtual QStringList keys() const
 */
 HB_FUNC_STATIC( QFONTENGINEPLUGIN_KEYS )
 {
-  QFontEnginePlugin * obj = qobject_cast< QFontEnginePlugin * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFontEnginePlugin * obj = qobject_cast<QFontEnginePlugin*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRINGLIST( obj->keys() );
@@ -158,7 +157,7 @@ HB_FUNC_STATIC( QFONTENGINEPLUGIN_KEYS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

@@ -22,7 +22,7 @@ QDateTimeEditSlots::~QDateTimeEditSlots()
 
 void QDateTimeEditSlots::dateChanged( const QDate & date )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "dateChanged(QDate)" );
 
@@ -40,7 +40,7 @@ void QDateTimeEditSlots::dateChanged( const QDate & date )
 
 void QDateTimeEditSlots::dateTimeChanged( const QDateTime & datetime )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "dateTimeChanged(QDateTime)" );
 
@@ -58,7 +58,7 @@ void QDateTimeEditSlots::dateTimeChanged( const QDateTime & datetime )
 
 void QDateTimeEditSlots::timeChanged( const QTime & time )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "timeChanged(QTime)" );
 
@@ -76,9 +76,9 @@ void QDateTimeEditSlots::timeChanged( const QTime & time )
 
 void QDateTimeEditSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDateTimeEdit * obj = qobject_cast< QDateTimeEdit * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDateTimeEdit * obj = qobject_cast<QDateTimeEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QDateTimeEditSlots * s = QCoreApplication::instance()->findChild<QDateTimeEditSlots *>();
 

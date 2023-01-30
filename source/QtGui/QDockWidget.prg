@@ -64,45 +64,44 @@ RETURN
 
 HB_FUNC_STATIC( QDOCKWIDGET_NEW )
 {
-  if( ISBETWEEN( 1, 3 ) && HB_ISCHAR( 1 ) && ( ISQWIDGET( 2 ) || HB_ISNIL( 2 ) ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
+  if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
   {
     /*
     QDockWidget( const QString & title, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
     */
-    QDockWidget * obj = new QDockWidget( PQSTRING( 1 ), OPQWIDGET( 2, 0 ), HB_ISNIL( 3 ) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 3 ) );
+    QDockWidget * obj = new QDockWidget( PQSTRING(1), OPQWIDGET( 2, 0 ), HB_ISNIL(3) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(3) );
     Qt4xHb::returnNewObject( obj, false );
   }
-  else if( ISBETWEEN( 0, 2 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+  else if( ISBETWEEN(0, 2) && ( ISQWIDGET(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
   {
     /*
     QDockWidget( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
     */
-    QDockWidget * obj = new QDockWidget( OPQWIDGET( 1, 0 ), HB_ISNIL( 2 ) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 2 ) );
+    QDockWidget * obj = new QDockWidget( OPQWIDGET( 1, 0 ), HB_ISNIL(2) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(2) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QDOCKWIDGET_DELETE )
 {
-  QDockWidget * obj = qobject_cast< QDockWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDockWidget * obj = qobject_cast<QDockWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -110,12 +109,12 @@ Qt::DockWidgetAreas allowedAreas() const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ALLOWEDAREAS )
 {
-  QDockWidget * obj = qobject_cast< QDockWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDockWidget * obj = qobject_cast<QDockWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->allowedAreas() );
@@ -123,7 +122,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ALLOWEDAREAS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -134,12 +133,12 @@ QDockWidget::DockWidgetFeatures features() const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_FEATURES )
 {
-  QDockWidget * obj = qobject_cast< QDockWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDockWidget * obj = qobject_cast<QDockWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->features() );
@@ -147,7 +146,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_FEATURES )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -158,20 +157,20 @@ bool isAreaAllowed( Qt::DockWidgetArea area ) const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ISAREAALLOWED )
 {
-  QDockWidget * obj = qobject_cast< QDockWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDockWidget * obj = qobject_cast<QDockWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isAreaAllowed( ( Qt::DockWidgetArea ) hb_parni( 1 ) ) );
+      RBOOL( obj->isAreaAllowed( ( Qt::DockWidgetArea ) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -182,12 +181,12 @@ bool isFloating() const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_ISFLOATING )
 {
-  QDockWidget * obj = qobject_cast< QDockWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDockWidget * obj = qobject_cast<QDockWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isFloating() );
@@ -195,7 +194,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_ISFLOATING )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -206,25 +205,25 @@ void setAllowedAreas( Qt::DockWidgetAreas areas )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_SETALLOWEDAREAS )
 {
-  QDockWidget * obj = qobject_cast< QDockWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDockWidget * obj = qobject_cast<QDockWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setAllowedAreas( ( Qt::DockWidgetAreas ) hb_parni( 1 ) );
+      obj->setAllowedAreas( ( Qt::DockWidgetAreas ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -232,25 +231,25 @@ void setFeatures( QDockWidget::DockWidgetFeatures features )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_SETFEATURES )
 {
-  QDockWidget * obj = qobject_cast< QDockWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDockWidget * obj = qobject_cast<QDockWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setFeatures( ( QDockWidget::DockWidgetFeatures ) hb_parni( 1 ) );
+      obj->setFeatures( ( QDockWidget::DockWidgetFeatures ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -258,25 +257,25 @@ void setFloating( bool floating )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_SETFLOATING )
 {
-  QDockWidget * obj = qobject_cast< QDockWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDockWidget * obj = qobject_cast<QDockWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setFloating( PBOOL( 1 ) );
+      obj->setFloating( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -284,25 +283,25 @@ void setTitleBarWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_SETTITLEBARWIDGET )
 {
-  QDockWidget * obj = qobject_cast< QDockWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDockWidget * obj = qobject_cast<QDockWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
+    if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->setTitleBarWidget( PQWIDGET( 1 ) );
+      obj->setTitleBarWidget( PQWIDGET(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -310,25 +309,25 @@ void setWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QDOCKWIDGET_SETWIDGET )
 {
-  QDockWidget * obj = qobject_cast< QDockWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDockWidget * obj = qobject_cast<QDockWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
+    if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->setWidget( PQWIDGET( 1 ) );
+      obj->setWidget( PQWIDGET(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -336,12 +335,12 @@ QWidget * titleBarWidget() const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_TITLEBARWIDGET )
 {
-  QDockWidget * obj = qobject_cast< QDockWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDockWidget * obj = qobject_cast<QDockWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QWidget * ptr = obj->titleBarWidget();
@@ -350,7 +349,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_TITLEBARWIDGET )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -361,12 +360,12 @@ QAction * toggleViewAction() const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_TOGGLEVIEWACTION )
 {
-  QDockWidget * obj = qobject_cast< QDockWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDockWidget * obj = qobject_cast<QDockWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QAction * ptr = obj->toggleViewAction();
@@ -375,7 +374,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_TOGGLEVIEWACTION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -386,12 +385,12 @@ QWidget * widget() const
 */
 HB_FUNC_STATIC( QDOCKWIDGET_WIDGET )
 {
-  QDockWidget * obj = qobject_cast< QDockWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDockWidget * obj = qobject_cast<QDockWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QWidget * ptr = obj->widget();
@@ -400,7 +399,7 @@ HB_FUNC_STATIC( QDOCKWIDGET_WIDGET )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

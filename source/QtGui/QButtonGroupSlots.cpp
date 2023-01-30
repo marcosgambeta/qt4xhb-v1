@@ -22,7 +22,7 @@ QButtonGroupSlots::~QButtonGroupSlots()
 
 void QButtonGroupSlots::buttonClicked( QAbstractButton * button )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "buttonClicked(QAbstractButton*)" );
 
@@ -40,7 +40,7 @@ void QButtonGroupSlots::buttonClicked( QAbstractButton * button )
 
 void QButtonGroupSlots::buttonClicked( int id )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "buttonClicked(int)" );
 
@@ -58,7 +58,7 @@ void QButtonGroupSlots::buttonClicked( int id )
 
 void QButtonGroupSlots::buttonPressed( QAbstractButton * button )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "buttonPressed(QAbstractButton*)" );
 
@@ -76,7 +76,7 @@ void QButtonGroupSlots::buttonPressed( QAbstractButton * button )
 
 void QButtonGroupSlots::buttonPressed( int id )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "buttonPressed(int)" );
 
@@ -94,7 +94,7 @@ void QButtonGroupSlots::buttonPressed( int id )
 
 void QButtonGroupSlots::buttonReleased( QAbstractButton * button )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "buttonReleased(QAbstractButton*)" );
 
@@ -112,7 +112,7 @@ void QButtonGroupSlots::buttonReleased( QAbstractButton * button )
 
 void QButtonGroupSlots::buttonReleased( int id )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "buttonReleased(int)" );
 
@@ -130,9 +130,9 @@ void QButtonGroupSlots::buttonReleased( int id )
 
 void QButtonGroupSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QButtonGroup * obj = qobject_cast< QButtonGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QButtonGroup * obj = qobject_cast<QButtonGroup*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QButtonGroupSlots * s = QCoreApplication::instance()->findChild<QButtonGroupSlots *>();
 

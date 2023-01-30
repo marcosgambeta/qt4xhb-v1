@@ -61,21 +61,20 @@ RETURN
 
 HB_FUNC_STATIC( QINPUTCONTEXT_DELETE )
 {
-  QInputContext * obj = qobject_cast< QInputContext * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputContext * obj = qobject_cast<QInputContext*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -83,28 +82,28 @@ virtual QList<QAction *> actions()
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_ACTIONS )
 {
-  QInputContext * obj = qobject_cast< QInputContext * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputContext * obj = qobject_cast<QInputContext*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QList<QAction *> list = obj->actions();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QACTION" );
-      PHB_ITEM pArray = hb_itemArrayNew( 0 );
+      PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
         {
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
-          hb_vmDo( 0 );
+          hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, static_cast< QAction * >( list[i] ) );
+          hb_itemPutPtr( pItem, static_cast<QAction*>( list[i] ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -120,7 +119,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_ACTIONS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -131,20 +130,20 @@ virtual bool filterEvent( const QEvent * event )
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_FILTEREVENT )
 {
-  QInputContext * obj = qobject_cast< QInputContext * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputContext * obj = qobject_cast<QInputContext*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQEVENT( 1 ) )
+    if( ISNUMPAR(1) && ISQEVENT(1) )
     {
 #endif
-      RBOOL( obj->filterEvent( PQEVENT( 1 ) ) );
+      RBOOL( obj->filterEvent( PQEVENT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -155,12 +154,12 @@ QWidget * focusWidget() const
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_FOCUSWIDGET )
 {
-  QInputContext * obj = qobject_cast< QInputContext * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputContext * obj = qobject_cast<QInputContext*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QWidget * ptr = obj->focusWidget();
@@ -169,7 +168,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_FOCUSWIDGET )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -180,12 +179,12 @@ virtual QFont font() const
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_FONT )
 {
-  QInputContext * obj = qobject_cast< QInputContext * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputContext * obj = qobject_cast<QInputContext*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QFont * ptr = new QFont( obj->font() );
@@ -194,7 +193,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_FONT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -205,12 +204,12 @@ virtual QString identifierName() = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_IDENTIFIERNAME )
 {
-  QInputContext * obj = qobject_cast< QInputContext * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputContext * obj = qobject_cast<QInputContext*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->identifierName() );
@@ -218,7 +217,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_IDENTIFIERNAME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -229,12 +228,12 @@ virtual bool isComposing() const = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_ISCOMPOSING )
 {
-  QInputContext * obj = qobject_cast< QInputContext * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputContext * obj = qobject_cast<QInputContext*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isComposing() );
@@ -242,7 +241,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_ISCOMPOSING )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -253,12 +252,12 @@ virtual QString language() = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_LANGUAGE )
 {
-  QInputContext * obj = qobject_cast< QInputContext * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputContext * obj = qobject_cast<QInputContext*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->language() );
@@ -266,7 +265,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_LANGUAGE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -277,25 +276,25 @@ virtual void mouseHandler( int x, QMouseEvent * event )
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_MOUSEHANDLER )
 {
-  QInputContext * obj = qobject_cast< QInputContext * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputContext * obj = qobject_cast<QInputContext*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && ISQMOUSEEVENT( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQMOUSEEVENT(2) )
     {
 #endif
-      obj->mouseHandler( PINT( 1 ), PQMOUSEEVENT( 2 ) );
+      obj->mouseHandler( PINT(1), PQMOUSEEVENT(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -303,12 +302,12 @@ virtual void reset() = 0
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_RESET )
 {
-  QInputContext * obj = qobject_cast< QInputContext * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputContext * obj = qobject_cast<QInputContext*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->reset();
@@ -316,12 +315,12 @@ HB_FUNC_STATIC( QINPUTCONTEXT_RESET )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -329,25 +328,25 @@ void sendEvent( const QInputMethodEvent & event )
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_SENDEVENT )
 {
-  QInputContext * obj = qobject_cast< QInputContext * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputContext * obj = qobject_cast<QInputContext*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQINPUTMETHODEVENT( 1 ) )
+    if( ISNUMPAR(1) && ISQINPUTMETHODEVENT(1) )
     {
 #endif
-      obj->sendEvent( *PQINPUTMETHODEVENT( 1 ) );
+      obj->sendEvent( *PQINPUTMETHODEVENT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -355,25 +354,25 @@ virtual void setFocusWidget( QWidget * widget )
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_SETFOCUSWIDGET )
 {
-  QInputContext * obj = qobject_cast< QInputContext * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputContext * obj = qobject_cast<QInputContext*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
+    if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->setFocusWidget( PQWIDGET( 1 ) );
+      obj->setFocusWidget( PQWIDGET(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -381,21 +380,21 @@ QTextFormat standardFormat( QInputContext::StandardFormat s ) const
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_STANDARDFORMAT )
 {
-  QInputContext * obj = qobject_cast< QInputContext * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputContext * obj = qobject_cast<QInputContext*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QTextFormat * ptr = new QTextFormat( obj->standardFormat( ( QInputContext::StandardFormat ) hb_parni( 1 ) ) );
+      QTextFormat * ptr = new QTextFormat( obj->standardFormat( ( QInputContext::StandardFormat ) hb_parni(1) ) );
       Qt4xHb::createReturnClass( ptr, "QTEXTFORMAT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -406,12 +405,12 @@ virtual void update()
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_UPDATE )
 {
-  QInputContext * obj = qobject_cast< QInputContext * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputContext * obj = qobject_cast<QInputContext*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->update();
@@ -419,12 +418,12 @@ HB_FUNC_STATIC( QINPUTCONTEXT_UPDATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -432,25 +431,25 @@ virtual void widgetDestroyed( QWidget * widget )
 */
 HB_FUNC_STATIC( QINPUTCONTEXT_WIDGETDESTROYED )
 {
-  QInputContext * obj = qobject_cast< QInputContext * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputContext * obj = qobject_cast<QInputContext*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQWIDGET( 1 ) )
+    if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      obj->widgetDestroyed( PQWIDGET( 1 ) );
+      obj->widgetDestroyed( PQWIDGET(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 #pragma ENDDUMP

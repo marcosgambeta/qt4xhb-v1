@@ -54,34 +54,33 @@ QGraphicsBlurEffect( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QGraphicsBlurEffect * obj = new QGraphicsBlurEffect( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_DELETE )
 {
-  QGraphicsBlurEffect * obj = qobject_cast< QGraphicsBlurEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsBlurEffect * obj = qobject_cast<QGraphicsBlurEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -89,12 +88,12 @@ QGraphicsBlurEffect::BlurHints blurHints() const
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURHINTS )
 {
-  QGraphicsBlurEffect * obj = qobject_cast< QGraphicsBlurEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsBlurEffect * obj = qobject_cast<QGraphicsBlurEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->blurHints() );
@@ -102,7 +101,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURHINTS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -113,12 +112,12 @@ qreal blurRadius() const
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURRADIUS )
 {
-  QGraphicsBlurEffect * obj = qobject_cast< QGraphicsBlurEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsBlurEffect * obj = qobject_cast<QGraphicsBlurEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->blurRadius() );
@@ -126,7 +125,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BLURRADIUS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -137,21 +136,21 @@ virtual QRectF boundingRectFor( const QRectF & rect ) const
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR )
 {
-  QGraphicsBlurEffect * obj = qobject_cast< QGraphicsBlurEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsBlurEffect * obj = qobject_cast<QGraphicsBlurEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
+    if( ISNUMPAR(1) && ISQRECTF(1) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->boundingRectFor( *PQRECTF( 1 ) ) );
+      QRectF * ptr = new QRectF( obj->boundingRectFor( *PQRECTF(1) ) );
       Qt4xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -162,25 +161,25 @@ void setBlurHints( QGraphicsBlurEffect::BlurHints hints )
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURHINTS )
 {
-  QGraphicsBlurEffect * obj = qobject_cast< QGraphicsBlurEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsBlurEffect * obj = qobject_cast<QGraphicsBlurEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setBlurHints( ( QGraphicsBlurEffect::BlurHints ) hb_parni( 1 ) );
+      obj->setBlurHints( ( QGraphicsBlurEffect::BlurHints ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -188,25 +187,25 @@ void setBlurRadius( qreal blurRadius )
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_SETBLURRADIUS )
 {
-  QGraphicsBlurEffect * obj = qobject_cast< QGraphicsBlurEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsBlurEffect * obj = qobject_cast<QGraphicsBlurEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setBlurRadius( PQREAL( 1 ) );
+      obj->setBlurRadius( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 void QGraphicsBlurEffectSlots_connect_signal( const QString & signal, const QString & slot );

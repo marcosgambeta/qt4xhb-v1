@@ -51,7 +51,7 @@ RETURN
 
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QStyleOptionProgressBar()
@@ -59,17 +59,17 @@ HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_NEW )
     QStyleOptionProgressBar * obj = new QStyleOptionProgressBar();
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISNUMPAR( 1 ) && ISQSTYLEOPTIONPROGRESSBAR( 1 ) )
+  else if( ISNUMPAR(1) && ISQSTYLEOPTIONPROGRESSBAR(1) )
   {
     /*
     QStyleOptionProgressBar( const QStyleOptionProgressBar & other )
     */
-    QStyleOptionProgressBar * obj = new QStyleOptionProgressBar( *PQSTYLEOPTIONPROGRESSBAR( 1 ) );
+    QStyleOptionProgressBar * obj = new QStyleOptionProgressBar( *PQSTYLEOPTIONPROGRESSBAR(1) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -78,37 +78,37 @@ int minimum
 */
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_MINIMUM )
 {
-  QStyleOptionProgressBar * obj = static_cast< QStyleOptionProgressBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyleOptionProgressBar * obj = static_cast<QStyleOptionProgressBar*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
       RINT( obj->minimum );
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 }
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETMINIMUM )
 {
-  QStyleOptionProgressBar * obj = static_cast< QStyleOptionProgressBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyleOptionProgressBar * obj = static_cast<QStyleOptionProgressBar*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
-      obj->minimum= PINT( 1 );
+      obj->minimum= PINT(1);
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -116,37 +116,37 @@ int maximum
 */
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_MAXIMUM )
 {
-  QStyleOptionProgressBar * obj = static_cast< QStyleOptionProgressBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyleOptionProgressBar * obj = static_cast<QStyleOptionProgressBar*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
       RINT( obj->maximum );
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 }
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETMAXIMUM )
 {
-  QStyleOptionProgressBar * obj = static_cast< QStyleOptionProgressBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyleOptionProgressBar * obj = static_cast<QStyleOptionProgressBar*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
-      obj->maximum= PINT( 1 );
+      obj->maximum= PINT(1);
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -154,37 +154,37 @@ int progress
 */
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_PROGRESS )
 {
-  QStyleOptionProgressBar * obj = static_cast< QStyleOptionProgressBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyleOptionProgressBar * obj = static_cast<QStyleOptionProgressBar*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
       RINT( obj->progress );
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 }
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETPROGRESS )
 {
-  QStyleOptionProgressBar * obj = static_cast< QStyleOptionProgressBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyleOptionProgressBar * obj = static_cast<QStyleOptionProgressBar*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
-      obj->progress= PINT( 1 );
+      obj->progress= PINT(1);
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -192,37 +192,37 @@ QString text
 */
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_TEXT )
 {
-  QStyleOptionProgressBar * obj = static_cast< QStyleOptionProgressBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyleOptionProgressBar * obj = static_cast<QStyleOptionProgressBar*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
       RQSTRING( obj->text );
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 }
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETTEXT )
 {
-  QStyleOptionProgressBar * obj = static_cast< QStyleOptionProgressBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyleOptionProgressBar * obj = static_cast<QStyleOptionProgressBar*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
-      obj->text= PQSTRING( 1 );
+      obj->text= PQSTRING(1);
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -230,37 +230,37 @@ Qt::Alignment textAlignment
 */
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_TEXTALIGNMENT )
 {
-  QStyleOptionProgressBar * obj = static_cast< QStyleOptionProgressBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyleOptionProgressBar * obj = static_cast<QStyleOptionProgressBar*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
       RENUM( obj->textAlignment );
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 }
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETTEXTALIGNMENT )
 {
-  QStyleOptionProgressBar * obj = static_cast< QStyleOptionProgressBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyleOptionProgressBar * obj = static_cast<QStyleOptionProgressBar*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
-      obj->textAlignment= ( Qt::Alignment ) hb_parni( 1 );
+      obj->textAlignment= ( Qt::Alignment ) hb_parni(1);
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -268,37 +268,37 @@ bool textVisible
 */
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_TEXTVISIBLE )
 {
-  QStyleOptionProgressBar * obj = static_cast< QStyleOptionProgressBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyleOptionProgressBar * obj = static_cast<QStyleOptionProgressBar*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
       RBOOL( obj->textVisible );
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 }
 HB_FUNC_STATIC( QSTYLEOPTIONPROGRESSBAR_SETTEXTVISIBLE )
 {
-  QStyleOptionProgressBar * obj = static_cast< QStyleOptionProgressBar * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QStyleOptionProgressBar * obj = static_cast<QStyleOptionProgressBar*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
-      obj->textVisible= PBOOL( 1 );
+      obj->textVisible= PBOOL(1);
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 #pragma ENDDUMP

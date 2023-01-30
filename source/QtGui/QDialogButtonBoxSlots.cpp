@@ -22,7 +22,7 @@ QDialogButtonBoxSlots::~QDialogButtonBoxSlots()
 
 void QDialogButtonBoxSlots::accepted()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "accepted()" );
 
@@ -38,7 +38,7 @@ void QDialogButtonBoxSlots::accepted()
 
 void QDialogButtonBoxSlots::clicked( QAbstractButton * button )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "clicked(QAbstractButton*)" );
 
@@ -56,7 +56,7 @@ void QDialogButtonBoxSlots::clicked( QAbstractButton * button )
 
 void QDialogButtonBoxSlots::helpRequested()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "helpRequested()" );
 
@@ -72,7 +72,7 @@ void QDialogButtonBoxSlots::helpRequested()
 
 void QDialogButtonBoxSlots::rejected()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "rejected()" );
 
@@ -88,9 +88,9 @@ void QDialogButtonBoxSlots::rejected()
 
 void QDialogButtonBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDialogButtonBox * obj = qobject_cast< QDialogButtonBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDialogButtonBox * obj = qobject_cast<QDialogButtonBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QDialogButtonBoxSlots * s = QCoreApplication::instance()->findChild<QDialogButtonBoxSlots *>();
 

@@ -22,7 +22,7 @@ QComboBoxSlots::~QComboBoxSlots()
 
 void QComboBoxSlots::activated( int index )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activated(int)" );
 
@@ -40,7 +40,7 @@ void QComboBoxSlots::activated( int index )
 
 void QComboBoxSlots::activated( const QString & text )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activated(QString)" );
 
@@ -58,7 +58,7 @@ void QComboBoxSlots::activated( const QString & text )
 
 void QComboBoxSlots::currentIndexChanged( int index )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentIndexChanged(int)" );
 
@@ -76,7 +76,7 @@ void QComboBoxSlots::currentIndexChanged( int index )
 
 void QComboBoxSlots::currentIndexChanged( const QString & text )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentIndexChanged(QString)" );
 
@@ -94,7 +94,7 @@ void QComboBoxSlots::currentIndexChanged( const QString & text )
 
 void QComboBoxSlots::editTextChanged( const QString & text )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "editTextChanged(QString)" );
 
@@ -112,7 +112,7 @@ void QComboBoxSlots::editTextChanged( const QString & text )
 
 void QComboBoxSlots::highlighted( int index )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "highlighted(int)" );
 
@@ -130,7 +130,7 @@ void QComboBoxSlots::highlighted( int index )
 
 void QComboBoxSlots::highlighted( const QString & text )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "highlighted(QString)" );
 
@@ -148,9 +148,9 @@ void QComboBoxSlots::highlighted( const QString & text )
 
 void QComboBoxSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QComboBox * obj = qobject_cast< QComboBox * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QComboBox * obj = qobject_cast<QComboBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QComboBoxSlots * s = QCoreApplication::instance()->findChild<QComboBoxSlots *>();
 

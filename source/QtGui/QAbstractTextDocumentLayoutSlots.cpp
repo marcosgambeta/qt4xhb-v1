@@ -22,7 +22,7 @@ QAbstractTextDocumentLayoutSlots::~QAbstractTextDocumentLayoutSlots()
 
 void QAbstractTextDocumentLayoutSlots::documentSizeChanged( const QSizeF & newSize )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "documentSizeChanged(QSizeF)" );
 
@@ -40,7 +40,7 @@ void QAbstractTextDocumentLayoutSlots::documentSizeChanged( const QSizeF & newSi
 
 void QAbstractTextDocumentLayoutSlots::pageCountChanged( int newPages )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "pageCountChanged(int)" );
 
@@ -58,7 +58,7 @@ void QAbstractTextDocumentLayoutSlots::pageCountChanged( int newPages )
 
 void QAbstractTextDocumentLayoutSlots::update( const QRectF & rect )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "update(QRectF)" );
 
@@ -76,7 +76,7 @@ void QAbstractTextDocumentLayoutSlots::update( const QRectF & rect )
 
 void QAbstractTextDocumentLayoutSlots::updateBlock( const QTextBlock & block )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "updateBlock(QTextBlock)" );
 
@@ -94,9 +94,9 @@ void QAbstractTextDocumentLayoutSlots::updateBlock( const QTextBlock & block )
 
 void QAbstractTextDocumentLayoutSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractTextDocumentLayout * obj = qobject_cast< QAbstractTextDocumentLayout * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractTextDocumentLayout * obj = qobject_cast<QAbstractTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QAbstractTextDocumentLayoutSlots * s = QCoreApplication::instance()->findChild<QAbstractTextDocumentLayoutSlots *>();
 

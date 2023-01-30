@@ -22,7 +22,7 @@ QActionGroupSlots::~QActionGroupSlots()
 
 void QActionGroupSlots::hovered( QAction * action )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "hovered(QAction*)" );
 
@@ -40,7 +40,7 @@ void QActionGroupSlots::hovered( QAction * action )
 
 void QActionGroupSlots::triggered( QAction * action )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "triggered(QAction*)" );
 
@@ -58,9 +58,9 @@ void QActionGroupSlots::triggered( QAction * action )
 
 void QActionGroupSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QActionGroup * obj = qobject_cast< QActionGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QActionGroup * obj = qobject_cast<QActionGroup*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QActionGroupSlots * s = QCoreApplication::instance()->findChild<QActionGroupSlots *>();
 

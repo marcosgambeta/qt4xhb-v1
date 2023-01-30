@@ -54,34 +54,33 @@ QGesture( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGESTURE_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QGesture * obj = new QGesture( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QGESTURE_DELETE )
 {
-  QGesture * obj = qobject_cast< QGesture * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGesture * obj = qobject_cast<QGesture*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -89,12 +88,12 @@ QGesture::GestureCancelPolicy gestureCancelPolicy() const
 */
 HB_FUNC_STATIC( QGESTURE_GESTURECANCELPOLICY )
 {
-  QGesture * obj = qobject_cast< QGesture * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGesture * obj = qobject_cast<QGesture*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->gestureCancelPolicy() );
@@ -102,7 +101,7 @@ HB_FUNC_STATIC( QGESTURE_GESTURECANCELPOLICY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -113,12 +112,12 @@ Qt::GestureType gestureType() const
 */
 HB_FUNC_STATIC( QGESTURE_GESTURETYPE )
 {
-  QGesture * obj = qobject_cast< QGesture * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGesture * obj = qobject_cast<QGesture*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->gestureType() );
@@ -126,7 +125,7 @@ HB_FUNC_STATIC( QGESTURE_GESTURETYPE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -137,12 +136,12 @@ bool hasHotSpot() const
 */
 HB_FUNC_STATIC( QGESTURE_HASHOTSPOT )
 {
-  QGesture * obj = qobject_cast< QGesture * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGesture * obj = qobject_cast<QGesture*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->hasHotSpot() );
@@ -150,7 +149,7 @@ HB_FUNC_STATIC( QGESTURE_HASHOTSPOT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -161,12 +160,12 @@ QPointF hotSpot() const
 */
 HB_FUNC_STATIC( QGESTURE_HOTSPOT )
 {
-  QGesture * obj = qobject_cast< QGesture * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGesture * obj = qobject_cast<QGesture*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QPointF * ptr = new QPointF( obj->hotSpot() );
@@ -175,7 +174,7 @@ HB_FUNC_STATIC( QGESTURE_HOTSPOT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -186,25 +185,25 @@ void setGestureCancelPolicy( QGesture::GestureCancelPolicy policy )
 */
 HB_FUNC_STATIC( QGESTURE_SETGESTURECANCELPOLICY )
 {
-  QGesture * obj = qobject_cast< QGesture * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGesture * obj = qobject_cast<QGesture*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setGestureCancelPolicy( ( QGesture::GestureCancelPolicy ) hb_parni( 1 ) );
+      obj->setGestureCancelPolicy( ( QGesture::GestureCancelPolicy ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -212,25 +211,25 @@ void setHotSpot( const QPointF & value )
 */
 HB_FUNC_STATIC( QGESTURE_SETHOTSPOT )
 {
-  QGesture * obj = qobject_cast< QGesture * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGesture * obj = qobject_cast<QGesture*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
+    if( ISNUMPAR(1) && ISQPOINTF(1) )
     {
 #endif
-      obj->setHotSpot( *PQPOINTF( 1 ) );
+      obj->setHotSpot( *PQPOINTF(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -238,12 +237,12 @@ Qt::GestureState state() const
 */
 HB_FUNC_STATIC( QGESTURE_STATE )
 {
-  QGesture * obj = qobject_cast< QGesture * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGesture * obj = qobject_cast<QGesture*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->state() );
@@ -251,7 +250,7 @@ HB_FUNC_STATIC( QGESTURE_STATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -262,12 +261,12 @@ void unsetHotSpot()
 */
 HB_FUNC_STATIC( QGESTURE_UNSETHOTSPOT )
 {
-  QGesture * obj = qobject_cast< QGesture * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGesture * obj = qobject_cast<QGesture*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->unsetHotSpot();
@@ -275,12 +274,12 @@ HB_FUNC_STATIC( QGESTURE_UNSETHOTSPOT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 #pragma ENDDUMP

@@ -22,7 +22,7 @@ QGraphicsRotationSlots::~QGraphicsRotationSlots()
 
 void QGraphicsRotationSlots::angleChanged()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "angleChanged()" );
 
@@ -38,7 +38,7 @@ void QGraphicsRotationSlots::angleChanged()
 
 void QGraphicsRotationSlots::axisChanged()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "axisChanged()" );
 
@@ -54,7 +54,7 @@ void QGraphicsRotationSlots::axisChanged()
 
 void QGraphicsRotationSlots::originChanged()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "originChanged()" );
 
@@ -70,9 +70,9 @@ void QGraphicsRotationSlots::originChanged()
 
 void QGraphicsRotationSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsRotation * obj = qobject_cast< QGraphicsRotation * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsRotation * obj = qobject_cast<QGraphicsRotation*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QGraphicsRotationSlots * s = QCoreApplication::instance()->findChild<QGraphicsRotationSlots *>();
 

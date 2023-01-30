@@ -22,7 +22,7 @@ QAbstractButtonSlots::~QAbstractButtonSlots()
 
 void QAbstractButtonSlots::clicked( bool checked )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "clicked(bool)" );
 
@@ -40,7 +40,7 @@ void QAbstractButtonSlots::clicked( bool checked )
 
 void QAbstractButtonSlots::pressed()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "pressed()" );
 
@@ -56,7 +56,7 @@ void QAbstractButtonSlots::pressed()
 
 void QAbstractButtonSlots::released()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "released()" );
 
@@ -72,7 +72,7 @@ void QAbstractButtonSlots::released()
 
 void QAbstractButtonSlots::toggled( bool checked )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "toggled(bool)" );
 
@@ -90,9 +90,9 @@ void QAbstractButtonSlots::toggled( bool checked )
 
 void QAbstractButtonSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractButton * obj = qobject_cast< QAbstractButton * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractButton * obj = qobject_cast<QAbstractButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QAbstractButtonSlots * s = QCoreApplication::instance()->findChild<QAbstractButtonSlots *>();
 

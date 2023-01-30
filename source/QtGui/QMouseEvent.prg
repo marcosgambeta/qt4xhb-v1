@@ -53,43 +53,42 @@ RETURN
 
 HB_FUNC_STATIC( QMOUSEEVENT_NEW )
 {
-  if( ISNUMPAR( 5 ) && HB_ISNUM( 1 ) && ISQPOINT( 2 ) && HB_ISNUM( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) )
+  if( ISNUMPAR(5) && HB_ISNUM(1) && ISQPOINT(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) )
   {
     /*
     QMouseEvent( QEvent::Type type, const QPoint & pos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
     */
-    QMouseEvent * obj = new QMouseEvent( ( QEvent::Type ) hb_parni( 1 ), *PQPOINT( 2 ), ( Qt::MouseButton ) hb_parni( 3 ), ( Qt::MouseButtons ) hb_parni( 4 ), ( Qt::KeyboardModifiers ) hb_parni( 5 ) );
+    QMouseEvent * obj = new QMouseEvent( ( QEvent::Type ) hb_parni(1), *PQPOINT(2), ( Qt::MouseButton ) hb_parni(3), ( Qt::MouseButtons ) hb_parni(4), ( Qt::KeyboardModifiers ) hb_parni(5) );
     Qt4xHb::returnNewObject( obj, false );
   }
-  else if( ISNUMPAR( 6 ) && HB_ISNUM( 1 ) && ISQPOINT( 2 ) && ISQPOINT( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) )
+  else if( ISNUMPAR(6) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) )
   {
     /*
     QMouseEvent( QEvent::Type type, const QPoint & pos, const QPoint & globalPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
     */
-    QMouseEvent * obj = new QMouseEvent( ( QEvent::Type ) hb_parni( 1 ), *PQPOINT( 2 ), *PQPOINT( 3 ), ( Qt::MouseButton ) hb_parni( 4 ), ( Qt::MouseButtons ) hb_parni( 5 ), ( Qt::KeyboardModifiers ) hb_parni( 6 ) );
+    QMouseEvent * obj = new QMouseEvent( ( QEvent::Type ) hb_parni(1), *PQPOINT(2), *PQPOINT(3), ( Qt::MouseButton ) hb_parni(4), ( Qt::MouseButtons ) hb_parni(5), ( Qt::KeyboardModifiers ) hb_parni(6) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QMOUSEEVENT_DELETE )
 {
-  QMouseEvent * obj = static_cast< QMouseEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMouseEvent * obj = static_cast<QMouseEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -97,12 +96,12 @@ const QPoint & pos() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_POS )
 {
-  QMouseEvent * obj = static_cast< QMouseEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMouseEvent * obj = static_cast<QMouseEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       const QPoint * ptr = &obj->pos();
@@ -111,7 +110,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_POS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -122,12 +121,12 @@ const QPoint & globalPos() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_GLOBALPOS )
 {
-  QMouseEvent * obj = static_cast< QMouseEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMouseEvent * obj = static_cast<QMouseEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       const QPoint * ptr = &obj->globalPos();
@@ -136,7 +135,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_GLOBALPOS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -147,12 +146,12 @@ int x() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_X )
 {
-  QMouseEvent * obj = static_cast< QMouseEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMouseEvent * obj = static_cast<QMouseEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->x() );
@@ -160,7 +159,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_X )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -171,12 +170,12 @@ int y() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_Y )
 {
-  QMouseEvent * obj = static_cast< QMouseEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMouseEvent * obj = static_cast<QMouseEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->y() );
@@ -184,7 +183,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_Y )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -195,12 +194,12 @@ int globalX() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_GLOBALX )
 {
-  QMouseEvent * obj = static_cast< QMouseEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMouseEvent * obj = static_cast<QMouseEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->globalX() );
@@ -208,7 +207,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_GLOBALX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -219,12 +218,12 @@ int globalY() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_GLOBALY )
 {
-  QMouseEvent * obj = static_cast< QMouseEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMouseEvent * obj = static_cast<QMouseEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->globalY() );
@@ -232,7 +231,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_GLOBALY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -243,12 +242,12 @@ Qt::MouseButton button() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_BUTTON )
 {
-  QMouseEvent * obj = static_cast< QMouseEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMouseEvent * obj = static_cast<QMouseEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->button() );
@@ -256,7 +255,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_BUTTON )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -267,12 +266,12 @@ Qt::MouseButtons buttons() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_BUTTONS )
 {
-  QMouseEvent * obj = static_cast< QMouseEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMouseEvent * obj = static_cast<QMouseEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->buttons() );
@@ -280,7 +279,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_BUTTONS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -291,12 +290,12 @@ bool hasExtendedInfo() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_HASEXTENDEDINFO )
 {
-  QMouseEvent * obj = static_cast< QMouseEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMouseEvent * obj = static_cast<QMouseEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->hasExtendedInfo() );
@@ -304,7 +303,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_HASEXTENDEDINFO )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -315,12 +314,12 @@ QPointF posF() const
 */
 HB_FUNC_STATIC( QMOUSEEVENT_POSF )
 {
-  QMouseEvent * obj = static_cast< QMouseEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QMouseEvent * obj = static_cast<QMouseEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QPointF * ptr = new QPointF( obj->posF() );
@@ -329,7 +328,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_POSF )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -341,16 +340,16 @@ static QMouseEvent * createExtendedMouseEvent( QEvent::Type type, const QPointF 
 HB_FUNC_STATIC( QMOUSEEVENT_CREATEEXTENDEDMOUSEEVENT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 6 ) && HB_ISNUM( 1 ) && ISQPOINTF( 2 ) && ISQPOINT( 3 ) && HB_ISNUM( 4 ) && HB_ISNUM( 5 ) && HB_ISNUM( 6 ) )
+  if( ISNUMPAR(6) && HB_ISNUM(1) && ISQPOINTF(2) && ISQPOINT(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) )
   {
 #endif
-    QMouseEvent * ptr = QMouseEvent::createExtendedMouseEvent( ( QEvent::Type ) hb_parni( 1 ), *PQPOINTF( 2 ), *PQPOINT( 3 ), ( Qt::MouseButton ) hb_parni( 4 ), ( Qt::MouseButtons ) hb_parni( 5 ), ( Qt::KeyboardModifiers ) hb_parni( 6 ) );
+    QMouseEvent * ptr = QMouseEvent::createExtendedMouseEvent( ( QEvent::Type ) hb_parni(1), *PQPOINTF(2), *PQPOINT(3), ( Qt::MouseButton ) hb_parni(4), ( Qt::MouseButtons ) hb_parni(5), ( Qt::KeyboardModifiers ) hb_parni(6) );
     Qt4xHb::createReturnClass( ptr, "QMOUSEEVENT" );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }

@@ -22,7 +22,7 @@ QGraphicsOpacityEffectSlots::~QGraphicsOpacityEffectSlots()
 
 void QGraphicsOpacityEffectSlots::opacityChanged( qreal opacity )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "opacityChanged(qreal)" );
 
@@ -40,7 +40,7 @@ void QGraphicsOpacityEffectSlots::opacityChanged( qreal opacity )
 
 void QGraphicsOpacityEffectSlots::opacityMaskChanged( const QBrush & mask )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "opacityMaskChanged(QBrush)" );
 
@@ -58,9 +58,9 @@ void QGraphicsOpacityEffectSlots::opacityMaskChanged( const QBrush & mask )
 
 void QGraphicsOpacityEffectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsOpacityEffect * obj = qobject_cast< QGraphicsOpacityEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsOpacityEffect * obj = qobject_cast<QGraphicsOpacityEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QGraphicsOpacityEffectSlots * s = QCoreApplication::instance()->findChild<QGraphicsOpacityEffectSlots *>();
 

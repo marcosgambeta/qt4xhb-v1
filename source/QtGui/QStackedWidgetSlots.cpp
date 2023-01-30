@@ -22,7 +22,7 @@ QStackedWidgetSlots::~QStackedWidgetSlots()
 
 void QStackedWidgetSlots::currentChanged( int index )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentChanged(int)" );
 
@@ -40,7 +40,7 @@ void QStackedWidgetSlots::currentChanged( int index )
 
 void QStackedWidgetSlots::widgetRemoved( int index )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "widgetRemoved(int)" );
 
@@ -58,9 +58,9 @@ void QStackedWidgetSlots::widgetRemoved( int index )
 
 void QStackedWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QStackedWidget * obj = qobject_cast< QStackedWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QStackedWidget * obj = qobject_cast<QStackedWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QStackedWidgetSlots * s = QCoreApplication::instance()->findChild<QStackedWidgetSlots *>();
 

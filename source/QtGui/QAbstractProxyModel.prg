@@ -74,21 +74,20 @@ RETURN
 
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_DELETE )
 {
-  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast<QAbstractProxyModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -96,21 +95,21 @@ virtual QModelIndex mapFromSource( const QModelIndex & sourceIndex ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPFROMSOURCE )
 {
-  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast<QAbstractProxyModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->mapFromSource( *PQMODELINDEX( 1 ) ) );
+      QModelIndex * ptr = new QModelIndex( obj->mapFromSource( *PQMODELINDEX(1) ) );
       Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -121,21 +120,21 @@ virtual QItemSelection mapSelectionFromSource( const QItemSelection & sourceSele
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPSELECTIONFROMSOURCE )
 {
-  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast<QAbstractProxyModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQITEMSELECTION( 1 ) )
+    if( ISNUMPAR(1) && ISQITEMSELECTION(1) )
     {
 #endif
-      QItemSelection * ptr = new QItemSelection( obj->mapSelectionFromSource( *PQITEMSELECTION( 1 ) ) );
+      QItemSelection * ptr = new QItemSelection( obj->mapSelectionFromSource( *PQITEMSELECTION(1) ) );
       Qt4xHb::createReturnClass( ptr, "QITEMSELECTION", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -146,21 +145,21 @@ virtual QItemSelection mapSelectionToSource( const QItemSelection & proxySelecti
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPSELECTIONTOSOURCE )
 {
-  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast<QAbstractProxyModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQITEMSELECTION( 1 ) )
+    if( ISNUMPAR(1) && ISQITEMSELECTION(1) )
     {
 #endif
-      QItemSelection * ptr = new QItemSelection( obj->mapSelectionToSource( *PQITEMSELECTION( 1 ) ) );
+      QItemSelection * ptr = new QItemSelection( obj->mapSelectionToSource( *PQITEMSELECTION(1) ) );
       Qt4xHb::createReturnClass( ptr, "QITEMSELECTION", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -171,21 +170,21 @@ virtual QModelIndex mapToSource( const QModelIndex & proxyIndex ) const = 0
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MAPTOSOURCE )
 {
-  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast<QAbstractProxyModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->mapToSource( *PQMODELINDEX( 1 ) ) );
+      QModelIndex * ptr = new QModelIndex( obj->mapToSource( *PQMODELINDEX(1) ) );
       Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -196,25 +195,25 @@ virtual void setSourceModel( QAbstractItemModel * sourceModel )
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SETSOURCEMODEL )
 {
-  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast<QAbstractProxyModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQABSTRACTITEMMODEL( 1 ) )
+    if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
     {
 #endif
-      obj->setSourceModel( PQABSTRACTITEMMODEL( 1 ) );
+      obj->setSourceModel( PQABSTRACTITEMMODEL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -222,12 +221,12 @@ QAbstractItemModel * sourceModel() const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SOURCEMODEL )
 {
-  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast<QAbstractProxyModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QAbstractItemModel * ptr = obj->sourceModel();
@@ -236,7 +235,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SOURCEMODEL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -247,21 +246,21 @@ virtual QModelIndex buddy( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_BUDDY )
 {
-  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast<QAbstractProxyModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->buddy( *PQMODELINDEX( 1 ) ) );
+      QModelIndex * ptr = new QModelIndex( obj->buddy( *PQMODELINDEX(1) ) );
       Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -272,20 +271,20 @@ virtual bool canFetchMore( const QModelIndex & parent ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_CANFETCHMORE )
 {
-  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast<QAbstractProxyModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      RBOOL( obj->canFetchMore( *PQMODELINDEX( 1 ) ) );
+      RBOOL( obj->canFetchMore( *PQMODELINDEX(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -296,21 +295,21 @@ virtual QVariant data( const QModelIndex & proxyIndex, int role = Qt::DisplayRol
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_DATA )
 {
-  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast<QAbstractProxyModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && ISQMODELINDEX( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX( 1 ), OPINT( 2, Qt::DisplayRole ) ) );
+      QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT( 2, Qt::DisplayRole ) ) );
       Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -321,25 +320,25 @@ virtual void fetchMore( const QModelIndex & parent )
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_FETCHMORE )
 {
-  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast<QAbstractProxyModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      obj->fetchMore( *PQMODELINDEX( 1 ) );
+      obj->fetchMore( *PQMODELINDEX(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -347,20 +346,20 @@ virtual Qt::ItemFlags flags( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_FLAGS )
 {
-  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast<QAbstractProxyModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      RENUM( obj->flags( *PQMODELINDEX( 1 ) ) );
+      RENUM( obj->flags( *PQMODELINDEX(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -371,20 +370,20 @@ virtual bool hasChildren( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_HASCHILDREN )
 {
-  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast<QAbstractProxyModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( ISQMODELINDEX( 1 ) || HB_ISNIL( 1 ) ) )
+    if( ISBETWEEN(0, 1) && ( ISQMODELINDEX(1) || HB_ISNIL(1) ) )
     {
 #endif
-      RBOOL( obj->hasChildren( HB_ISNIL( 1 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt4xHb::itemGetPtr( 1 ) ) ) );
+      RBOOL( obj->hasChildren( HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(1) ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -395,21 +394,21 @@ virtual QVariant headerData( int section, Qt::Orientation orientation, int role 
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_HEADERDATA )
 {
-  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast<QAbstractProxyModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
+    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->headerData( PINT( 1 ), ( Qt::Orientation ) hb_parni( 2 ), PINT( 3 ) ) );
+      QVariant * ptr = new QVariant( obj->headerData( PINT(1), ( Qt::Orientation ) hb_parni(2), PINT(3) ) );
       Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -420,12 +419,12 @@ virtual QMimeData * mimeData( const QModelIndexList & indexes ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MIMEDATA )
 {
-  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast<QAbstractProxyModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
+    if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
       QModelIndexList par1;
@@ -433,7 +432,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MIMEDATA )
       int nLen1 = hb_arrayLen( aList1 );
       for( int i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << *static_cast< QModelIndex * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+        par1 << *static_cast<QModelIndex*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
       }
       QMimeData * ptr = obj->mimeData( par1 );
       Qt4xHb::createReturnQObjectClass( ptr, "QMIMEDATA" );
@@ -441,7 +440,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MIMEDATA )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -452,12 +451,12 @@ virtual QStringList mimeTypes() const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MIMETYPES )
 {
-  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast<QAbstractProxyModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRINGLIST( obj->mimeTypes() );
@@ -465,7 +464,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_MIMETYPES )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -476,12 +475,12 @@ virtual void revert()
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_REVERT )
 {
-  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast<QAbstractProxyModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->revert();
@@ -489,12 +488,12 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_REVERT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -502,20 +501,20 @@ virtual bool setData( const QModelIndex & index, const QVariant & value, int rol
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SETDATA )
 {
-  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast<QAbstractProxyModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 3 ) && ISQMODELINDEX( 1 ) && ISQVARIANT( 2 ) && ( HB_ISNUM( 3 ) || HB_ISNIL( 3 ) ) )
+    if( ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
     {
 #endif
-      RBOOL( obj->setData( *PQMODELINDEX( 1 ), *PQVARIANT( 2 ), OPINT( 3, Qt::EditRole ) ) );
+      RBOOL( obj->setData( *PQMODELINDEX(1), *PQVARIANT(2), OPINT( 3, Qt::EditRole ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -526,20 +525,20 @@ virtual bool setHeaderData( int section, Qt::Orientation orientation, const QVar
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SETHEADERDATA )
 {
-  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast<QAbstractProxyModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 3, 4 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ISQVARIANT( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) )
+    if( ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ISQVARIANT(3) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
     {
 #endif
-      RBOOL( obj->setHeaderData( PINT( 1 ), ( Qt::Orientation ) hb_parni( 2 ), *PQVARIANT( 3 ), OPINT( 4, Qt::EditRole ) ) );
+      RBOOL( obj->setHeaderData( PINT(1), ( Qt::Orientation ) hb_parni(2), *PQVARIANT(3), OPINT( 4, Qt::EditRole ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -550,25 +549,25 @@ virtual void sort( int column, Qt::SortOrder order = Qt::AscendingOrder )
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SORT )
 {
-  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast<QAbstractProxyModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
     {
 #endif
-      obj->sort( PINT( 1 ), HB_ISNIL( 2 ) ? ( Qt::SortOrder ) Qt::AscendingOrder : ( Qt::SortOrder ) hb_parni( 2 ) );
+      obj->sort( PINT(1), HB_ISNIL(2) ? ( Qt::SortOrder ) Qt::AscendingOrder : ( Qt::SortOrder ) hb_parni(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -576,21 +575,21 @@ virtual QSize span( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SPAN )
 {
-  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast<QAbstractProxyModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QSize * ptr = new QSize( obj->span( *PQMODELINDEX( 1 ) ) );
+      QSize * ptr = new QSize( obj->span( *PQMODELINDEX(1) ) );
       Qt4xHb::createReturnClass( ptr, "QSIZE", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -601,12 +600,12 @@ virtual bool submit()
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SUBMIT )
 {
-  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast<QAbstractProxyModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->submit() );
@@ -614,7 +613,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SUBMIT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -625,12 +624,12 @@ virtual Qt::DropActions supportedDropActions() const
 */
 HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SUPPORTEDDROPACTIONS )
 {
-  QAbstractProxyModel * obj = qobject_cast< QAbstractProxyModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractProxyModel * obj = qobject_cast<QAbstractProxyModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->supportedDropActions() );
@@ -638,7 +637,7 @@ HB_FUNC_STATIC( QABSTRACTPROXYMODEL_SUPPORTEDDROPACTIONS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

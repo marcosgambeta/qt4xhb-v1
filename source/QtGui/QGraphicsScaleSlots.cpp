@@ -22,7 +22,7 @@ QGraphicsScaleSlots::~QGraphicsScaleSlots()
 
 void QGraphicsScaleSlots::originChanged()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "originChanged()" );
 
@@ -38,7 +38,7 @@ void QGraphicsScaleSlots::originChanged()
 
 void QGraphicsScaleSlots::scaleChanged()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "scaleChanged()" );
 
@@ -54,7 +54,7 @@ void QGraphicsScaleSlots::scaleChanged()
 
 void QGraphicsScaleSlots::xScaleChanged()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "xScaleChanged()" );
 
@@ -70,7 +70,7 @@ void QGraphicsScaleSlots::xScaleChanged()
 
 void QGraphicsScaleSlots::yScaleChanged()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "yScaleChanged()" );
 
@@ -86,7 +86,7 @@ void QGraphicsScaleSlots::yScaleChanged()
 
 void QGraphicsScaleSlots::zScaleChanged()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "zScaleChanged()" );
 
@@ -102,9 +102,9 @@ void QGraphicsScaleSlots::zScaleChanged()
 
 void QGraphicsScaleSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QGraphicsScale * obj = qobject_cast< QGraphicsScale * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsScale * obj = qobject_cast<QGraphicsScale*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QGraphicsScaleSlots * s = QCoreApplication::instance()->findChild<QGraphicsScaleSlots *>();
 

@@ -63,34 +63,33 @@ QGraphicsDropShadowEffect( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_NEW )
 {
-  if( ISBETWEEN( 0, 1 ) && ( ISQOBJECT( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QGraphicsDropShadowEffect * obj = new QGraphicsDropShadowEffect( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_DELETE )
 {
-  QGraphicsDropShadowEffect * obj = qobject_cast< QGraphicsDropShadowEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsDropShadowEffect * obj = qobject_cast<QGraphicsDropShadowEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -98,12 +97,12 @@ qreal blurRadius() const
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BLURRADIUS )
 {
-  QGraphicsDropShadowEffect * obj = qobject_cast< QGraphicsDropShadowEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsDropShadowEffect * obj = qobject_cast<QGraphicsDropShadowEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->blurRadius() );
@@ -111,7 +110,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BLURRADIUS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -122,12 +121,12 @@ QColor color() const
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_COLOR )
 {
-  QGraphicsDropShadowEffect * obj = qobject_cast< QGraphicsDropShadowEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsDropShadowEffect * obj = qobject_cast<QGraphicsDropShadowEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QColor * ptr = new QColor( obj->color() );
@@ -136,7 +135,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_COLOR )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -147,12 +146,12 @@ QPointF offset() const
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_OFFSET )
 {
-  QGraphicsDropShadowEffect * obj = qobject_cast< QGraphicsDropShadowEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsDropShadowEffect * obj = qobject_cast<QGraphicsDropShadowEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QPointF * ptr = new QPointF( obj->offset() );
@@ -161,7 +160,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_OFFSET )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -172,12 +171,12 @@ qreal xOffset() const
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_XOFFSET )
 {
-  QGraphicsDropShadowEffect * obj = qobject_cast< QGraphicsDropShadowEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsDropShadowEffect * obj = qobject_cast<QGraphicsDropShadowEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->xOffset() );
@@ -185,7 +184,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_XOFFSET )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -196,12 +195,12 @@ qreal yOffset() const
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_YOFFSET )
 {
-  QGraphicsDropShadowEffect * obj = qobject_cast< QGraphicsDropShadowEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsDropShadowEffect * obj = qobject_cast<QGraphicsDropShadowEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQREAL( obj->yOffset() );
@@ -209,7 +208,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_YOFFSET )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -220,21 +219,21 @@ virtual QRectF boundingRectFor( const QRectF & rect ) const
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BOUNDINGRECTFOR )
 {
-  QGraphicsDropShadowEffect * obj = qobject_cast< QGraphicsDropShadowEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsDropShadowEffect * obj = qobject_cast<QGraphicsDropShadowEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQRECTF( 1 ) )
+    if( ISNUMPAR(1) && ISQRECTF(1) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->boundingRectFor( *PQRECTF( 1 ) ) );
+      QRectF * ptr = new QRectF( obj->boundingRectFor( *PQRECTF(1) ) );
       Qt4xHb::createReturnClass( ptr, "QRECTF", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -245,25 +244,25 @@ void setBlurRadius( qreal blurRadius )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETBLURRADIUS )
 {
-  QGraphicsDropShadowEffect * obj = qobject_cast< QGraphicsDropShadowEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsDropShadowEffect * obj = qobject_cast<QGraphicsDropShadowEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setBlurRadius( PQREAL( 1 ) );
+      obj->setBlurRadius( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -271,74 +270,74 @@ void setColor( const QColor & color )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETCOLOR )
 {
-  QGraphicsDropShadowEffect * obj = qobject_cast< QGraphicsDropShadowEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsDropShadowEffect * obj = qobject_cast<QGraphicsDropShadowEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ( ISQCOLOR( 1 ) || HB_ISCHAR( 1 ) ) )
+    if( ISNUMPAR(1) && ( ISQCOLOR(1) || HB_ISCHAR(1) ) )
     {
 #endif
-      obj->setColor( HB_ISOBJECT( 1 ) ? *static_cast< QColor * >( Qt4xHb::itemGetPtr( 1 ) ) : QColor( hb_parc( 1 ) ) );
+      obj->setColor( HB_ISOBJECT(1) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(1) ) : QColor( hb_parc(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETOFFSET )
 {
-  if( ISNUMPAR( 1 ) && ISQPOINTF( 1 ) )
+  if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
     /*
     void setOffset( const QPointF & ofs )
     */
-    QGraphicsDropShadowEffect * obj = qobject_cast< QGraphicsDropShadowEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+    QGraphicsDropShadowEffect * obj = qobject_cast<QGraphicsDropShadowEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if( obj != NULL )
     {
-      obj->setOffset( *PQPOINTF( 1 ) );
+      obj->setOffset( *PQPOINTF(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     /*
     void setOffset( qreal dx, qreal dy )
     */
-    QGraphicsDropShadowEffect * obj = qobject_cast< QGraphicsDropShadowEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+    QGraphicsDropShadowEffect * obj = qobject_cast<QGraphicsDropShadowEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if( obj != NULL )
     {
-      obj->setOffset( PQREAL( 1 ), PQREAL( 2 ) );
+      obj->setOffset( PQREAL(1), PQREAL(2) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+  else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
     /*
     void setOffset( qreal d )
     */
-    QGraphicsDropShadowEffect * obj = qobject_cast< QGraphicsDropShadowEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+    QGraphicsDropShadowEffect * obj = qobject_cast<QGraphicsDropShadowEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
     if( obj != NULL )
     {
-      obj->setOffset( PQREAL( 1 ) );
+      obj->setOffset( PQREAL(1) );
     }
 
-    hb_itemReturn( hb_stackSelfItem() );
+    hb_itemReturn(hb_stackSelfItem());
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -347,25 +346,25 @@ void setXOffset( qreal dx )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETXOFFSET )
 {
-  QGraphicsDropShadowEffect * obj = qobject_cast< QGraphicsDropShadowEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsDropShadowEffect * obj = qobject_cast<QGraphicsDropShadowEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setXOffset( PQREAL( 1 ) );
+      obj->setXOffset( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -373,25 +372,25 @@ void setYOffset( qreal dy )
 */
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETYOFFSET )
 {
-  QGraphicsDropShadowEffect * obj = qobject_cast< QGraphicsDropShadowEffect * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QGraphicsDropShadowEffect * obj = qobject_cast<QGraphicsDropShadowEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setYOffset( PQREAL( 1 ) );
+      obj->setYOffset( PQREAL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 void QGraphicsDropShadowEffectSlots_connect_signal( const QString & signal, const QString & slot );

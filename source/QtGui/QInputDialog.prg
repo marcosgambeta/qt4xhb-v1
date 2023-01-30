@@ -100,34 +100,33 @@ QInputDialog( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_NEW )
 {
-  if( ISBETWEEN( 0, 2 ) && ( ISQWIDGET( 1 ) || HB_ISNIL( 1 ) ) && ( HB_ISNUM( 2 ) || HB_ISNIL( 2 ) ) )
+  if( ISBETWEEN(0, 2) && ( ISQWIDGET(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
   {
-    QInputDialog * obj = new QInputDialog( OPQWIDGET( 1, 0 ), HB_ISNIL( 2 ) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 2 ) );
+    QInputDialog * obj = new QInputDialog( OPQWIDGET( 1, 0 ), HB_ISNIL(2) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(2) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QINPUTDIALOG_DELETE )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -135,12 +134,12 @@ QString cancelButtonText() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_CANCELBUTTONTEXT )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->cancelButtonText() );
@@ -148,7 +147,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_CANCELBUTTONTEXT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -159,12 +158,12 @@ QStringList comboBoxItems() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_COMBOBOXITEMS )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRINGLIST( obj->comboBoxItems() );
@@ -172,7 +171,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_COMBOBOXITEMS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -183,12 +182,12 @@ int doubleDecimals() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEDECIMALS )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->doubleDecimals() );
@@ -196,7 +195,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEDECIMALS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -207,12 +206,12 @@ double doubleMaximum() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEMAXIMUM )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RDOUBLE( obj->doubleMaximum() );
@@ -220,7 +219,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEMAXIMUM )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -231,12 +230,12 @@ double doubleMinimum() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEMINIMUM )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RDOUBLE( obj->doubleMinimum() );
@@ -244,7 +243,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEMINIMUM )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -255,12 +254,12 @@ double doubleValue() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEVALUE )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RDOUBLE( obj->doubleValue() );
@@ -268,7 +267,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_DOUBLEVALUE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -279,12 +278,12 @@ QInputDialog::InputMode inputMode() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_INPUTMODE )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->inputMode() );
@@ -292,7 +291,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INPUTMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -303,12 +302,12 @@ int intMaximum() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_INTMAXIMUM )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->intMaximum() );
@@ -316,7 +315,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INTMAXIMUM )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -327,12 +326,12 @@ int intMinimum() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_INTMINIMUM )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->intMinimum() );
@@ -340,7 +339,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INTMINIMUM )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -351,12 +350,12 @@ int intStep() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_INTSTEP )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->intStep() );
@@ -364,7 +363,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INTSTEP )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -375,12 +374,12 @@ int intValue() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_INTVALUE )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->intValue() );
@@ -388,7 +387,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_INTVALUE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -399,12 +398,12 @@ bool isComboBoxEditable() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_ISCOMBOBOXEDITABLE )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isComboBoxEditable() );
@@ -412,7 +411,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_ISCOMBOBOXEDITABLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -423,12 +422,12 @@ QString labelText() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_LABELTEXT )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->labelText() );
@@ -436,7 +435,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_LABELTEXT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -447,12 +446,12 @@ QString okButtonText() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_OKBUTTONTEXT )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->okButtonText() );
@@ -460,7 +459,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_OKBUTTONTEXT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -471,25 +470,25 @@ void open( QObject * receiver, const char * member )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_OPEN )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQOBJECT( 1 ) && HB_ISCHAR( 2 ) )
+    if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2) )
     {
 #endif
-      obj->open( PQOBJECT( 1 ), PCONSTCHAR( 2 ) );
+      obj->open( PQOBJECT(1), PCONSTCHAR(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -497,12 +496,12 @@ QInputDialog::InputDialogOptions options() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_OPTIONS )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->options() );
@@ -510,7 +509,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_OPTIONS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -521,25 +520,25 @@ void setCancelButtonText( const QString & text )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETCANCELBUTTONTEXT )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setCancelButtonText( PQSTRING( 1 ) );
+      obj->setCancelButtonText( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -547,25 +546,25 @@ void setComboBoxEditable( bool editable )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETCOMBOBOXEDITABLE )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setComboBoxEditable( PBOOL( 1 ) );
+      obj->setComboBoxEditable( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -573,25 +572,25 @@ void setComboBoxItems( const QStringList & items )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETCOMBOBOXITEMS )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
+    if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
-      obj->setComboBoxItems( PQSTRINGLIST( 1 ) );
+      obj->setComboBoxItems( PQSTRINGLIST(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -599,25 +598,25 @@ void setDoubleDecimals( int decimals )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLEDECIMALS )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setDoubleDecimals( PINT( 1 ) );
+      obj->setDoubleDecimals( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -625,25 +624,25 @@ void setDoubleMaximum( double max )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLEMAXIMUM )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setDoubleMaximum( PDOUBLE( 1 ) );
+      obj->setDoubleMaximum( PDOUBLE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -651,25 +650,25 @@ void setDoubleMinimum( double min )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLEMINIMUM )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setDoubleMinimum( PDOUBLE( 1 ) );
+      obj->setDoubleMinimum( PDOUBLE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -677,25 +676,25 @@ void setDoubleRange( double min, double max )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLERANGE )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      obj->setDoubleRange( PDOUBLE( 1 ), PDOUBLE( 2 ) );
+      obj->setDoubleRange( PDOUBLE(1), PDOUBLE(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -703,25 +702,25 @@ void setDoubleValue( double value )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETDOUBLEVALUE )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setDoubleValue( PDOUBLE( 1 ) );
+      obj->setDoubleValue( PDOUBLE(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -729,25 +728,25 @@ void setInputMode( QInputDialog::InputMode mode )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETINPUTMODE )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setInputMode( ( QInputDialog::InputMode ) hb_parni( 1 ) );
+      obj->setInputMode( ( QInputDialog::InputMode ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -755,25 +754,25 @@ void setIntMaximum( int max )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETINTMAXIMUM )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setIntMaximum( PINT( 1 ) );
+      obj->setIntMaximum( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -781,25 +780,25 @@ void setIntMinimum( int min )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETINTMINIMUM )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setIntMinimum( PINT( 1 ) );
+      obj->setIntMinimum( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -807,25 +806,25 @@ void setIntRange( int min, int max )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETINTRANGE )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      obj->setIntRange( PINT( 1 ), PINT( 2 ) );
+      obj->setIntRange( PINT(1), PINT(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -833,25 +832,25 @@ void setIntStep( int step )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETINTSTEP )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setIntStep( PINT( 1 ) );
+      obj->setIntStep( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -859,25 +858,25 @@ void setIntValue( int value )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETINTVALUE )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setIntValue( PINT( 1 ) );
+      obj->setIntValue( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -885,25 +884,25 @@ void setLabelText( const QString & text )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETLABELTEXT )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setLabelText( PQSTRING( 1 ) );
+      obj->setLabelText( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -911,25 +910,25 @@ void setOkButtonText( const QString & text )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETOKBUTTONTEXT )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setOkButtonText( PQSTRING( 1 ) );
+      obj->setOkButtonText( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -937,25 +936,25 @@ void setOption( QInputDialog::InputDialogOption option, bool on = true )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETOPTION )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && HB_ISNUM( 1 ) && ( HB_ISLOG( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
     {
 #endif
-      obj->setOption( ( QInputDialog::InputDialogOption ) hb_parni( 1 ), OPBOOL( 2, true ) );
+      obj->setOption( ( QInputDialog::InputDialogOption ) hb_parni(1), OPBOOL( 2, true ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -963,25 +962,25 @@ void setOptions( QInputDialog::InputDialogOptions options )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETOPTIONS )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setOptions( ( QInputDialog::InputDialogOptions ) hb_parni( 1 ) );
+      obj->setOptions( ( QInputDialog::InputDialogOptions ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -989,25 +988,25 @@ void setTextEchoMode( QLineEdit::EchoMode mode )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETTEXTECHOMODE )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->setTextEchoMode( ( QLineEdit::EchoMode ) hb_parni( 1 ) );
+      obj->setTextEchoMode( ( QLineEdit::EchoMode ) hb_parni(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1015,25 +1014,25 @@ void setTextValue( const QString & text )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETTEXTVALUE )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setTextValue( PQSTRING( 1 ) );
+      obj->setTextValue( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1041,20 +1040,20 @@ bool testOption( QInputDialog::InputDialogOption option ) const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_TESTOPTION )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->testOption( ( QInputDialog::InputDialogOption ) hb_parni( 1 ) ) );
+      RBOOL( obj->testOption( ( QInputDialog::InputDialogOption ) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1065,12 +1064,12 @@ QLineEdit::EchoMode textEchoMode() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_TEXTECHOMODE )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->textEchoMode() );
@@ -1078,7 +1077,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_TEXTECHOMODE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1089,12 +1088,12 @@ QString textValue() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_TEXTVALUE )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->textValue() );
@@ -1102,7 +1101,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_TEXTVALUE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1113,25 +1112,25 @@ virtual void done( int result )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_DONE )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      obj->done( PINT( 1 ) );
+      obj->done( PINT(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1139,12 +1138,12 @@ virtual QSize minimumSizeHint() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_MINIMUMSIZEHINT )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
@@ -1153,7 +1152,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_MINIMUMSIZEHINT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1164,25 +1163,25 @@ virtual void setVisible( bool visible )
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SETVISIBLE )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISLOG( 1 ) )
+    if( ISNUMPAR(1) && HB_ISLOG(1) )
     {
 #endif
-      obj->setVisible( PBOOL( 1 ) );
+      obj->setVisible( PBOOL(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -1190,12 +1189,12 @@ virtual QSize sizeHint() const
 */
 HB_FUNC_STATIC( QINPUTDIALOG_SIZEHINT )
 {
-  QInputDialog * obj = qobject_cast< QInputDialog * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QInputDialog * obj = qobject_cast<QInputDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
@@ -1204,7 +1203,7 @@ HB_FUNC_STATIC( QINPUTDIALOG_SIZEHINT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -1216,17 +1215,17 @@ static double getDouble( QWidget * parent, const QString & title, const QString 
 HB_FUNC_STATIC( QINPUTDIALOG_GETDOUBLE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 3, 9 ) && ISQWIDGET( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) && ( HB_ISNUM( 6 ) || HB_ISNIL( 6 ) ) && ( HB_ISNUM( 7 ) || HB_ISNIL( 7 ) ) && ( HB_ISLOG( 8 ) || HB_ISNIL( 8 ) ) && ( HB_ISNUM( 9 ) || HB_ISNIL( 9 ) ) )
+  if( ISBETWEEN(3, 9) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ( HB_ISNUM(4) || HB_ISNIL(4) ) && ( HB_ISNUM(5) || HB_ISNIL(5) ) && ( HB_ISNUM(6) || HB_ISNIL(6) ) && ( HB_ISNUM(7) || HB_ISNIL(7) ) && ( HB_ISLOG(8) || HB_ISNIL(8) ) && ( HB_ISNUM(9) || HB_ISNIL(9) ) )
   {
 #endif
     bool par8;
-    RDOUBLE( QInputDialog::getDouble( PQWIDGET( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), OPDOUBLE( 4, 0 ), OPDOUBLE( 5, -2147483647 ), OPDOUBLE( 6, 2147483647 ), OPINT( 7, 1 ), &par8, HB_ISNIL( 9 ) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 9 ) ) );
+    RDOUBLE( QInputDialog::getDouble( PQWIDGET(1), PQSTRING(2), PQSTRING(3), OPDOUBLE( 4, 0 ), OPDOUBLE( 5, -2147483647 ), OPDOUBLE( 6, 2147483647 ), OPINT( 7, 1 ), &par8, HB_ISNIL(9) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(9) ) );
     hb_storl( par8, 8 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -1237,17 +1236,17 @@ static int getInt( QWidget * parent, const QString & title, const QString & labe
 HB_FUNC_STATIC( QINPUTDIALOG_GETINT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 3, 9 ) && ISQWIDGET( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) && ( HB_ISNUM( 6 ) || HB_ISNIL( 6 ) ) && ( HB_ISNUM( 7 ) || HB_ISNIL( 7 ) ) && ( HB_ISLOG( 8 ) || HB_ISNIL( 8 ) ) && ( HB_ISNUM( 9 ) || HB_ISNIL( 9 ) ) )
+  if( ISBETWEEN(3, 9) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ( HB_ISNUM(4) || HB_ISNIL(4) ) && ( HB_ISNUM(5) || HB_ISNIL(5) ) && ( HB_ISNUM(6) || HB_ISNIL(6) ) && ( HB_ISNUM(7) || HB_ISNIL(7) ) && ( HB_ISLOG(8) || HB_ISNIL(8) ) && ( HB_ISNUM(9) || HB_ISNIL(9) ) )
   {
 #endif
     bool par8;
-    RINT( QInputDialog::getInt( PQWIDGET( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), OPINT( 4, 0 ), OPINT( 5, -2147483647 ), OPINT( 6, 2147483647 ), OPINT( 7, 1 ), &par8, HB_ISNIL( 9 ) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 9 ) ) );
+    RINT( QInputDialog::getInt( PQWIDGET(1), PQSTRING(2), PQSTRING(3), OPINT( 4, 0 ), OPINT( 5, -2147483647 ), OPINT( 6, 2147483647 ), OPINT( 7, 1 ), &par8, HB_ISNIL(9) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(9) ) );
     hb_storl( par8, 8 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -1258,17 +1257,17 @@ static QString getItem( QWidget * parent, const QString & title, const QString &
 HB_FUNC_STATIC( QINPUTDIALOG_GETITEM )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 4, 8 ) && ISQWIDGET( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && HB_ISARRAY( 4 ) && ( HB_ISNUM( 5 ) || HB_ISNIL( 5 ) ) && ( HB_ISLOG( 6 ) || HB_ISNIL( 6 ) ) && ( HB_ISLOG( 7 ) || HB_ISNIL( 7 ) ) && ( HB_ISNUM( 8 ) || HB_ISNIL( 8 ) ) )
+  if( ISBETWEEN(4, 8) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISARRAY(4) && ( HB_ISNUM(5) || HB_ISNIL(5) ) && ( HB_ISLOG(6) || HB_ISNIL(6) ) && ( HB_ISLOG(7) || HB_ISNIL(7) ) && ( HB_ISNUM(8) || HB_ISNIL(8) ) )
   {
 #endif
     bool par7;
-    RQSTRING( QInputDialog::getItem( PQWIDGET( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), PQSTRINGLIST( 4 ), OPINT( 5, 0 ), OPBOOL( 6, true ), &par7, HB_ISNIL( 8 ) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 8 ) ) );
+    RQSTRING( QInputDialog::getItem( PQWIDGET(1), PQSTRING(2), PQSTRING(3), PQSTRINGLIST(4), OPINT( 5, 0 ), OPBOOL( 6, true ), &par7, HB_ISNIL(8) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(8) ) );
     hb_storl( par7, 7 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -1279,17 +1278,17 @@ static QString getText( QWidget * parent, const QString & title, const QString &
 HB_FUNC_STATIC( QINPUTDIALOG_GETTEXT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 3, 7 ) && ISQWIDGET( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) && ( HB_ISNUM( 4 ) || HB_ISNIL( 4 ) ) && ( HB_ISCHAR( 5 ) || HB_ISNIL( 5 ) ) && ( HB_ISLOG( 6 ) || HB_ISNIL( 6 ) ) && ( HB_ISNUM( 7 ) || HB_ISNIL( 7 ) ) )
+  if( ISBETWEEN(3, 7) && ISQWIDGET(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ( HB_ISNUM(4) || HB_ISNIL(4) ) && ( HB_ISCHAR(5) || HB_ISNIL(5) ) && ( HB_ISLOG(6) || HB_ISNIL(6) ) && ( HB_ISNUM(7) || HB_ISNIL(7) ) )
   {
 #endif
     bool par6;
-    RQSTRING( QInputDialog::getText( PQWIDGET( 1 ), PQSTRING( 2 ), PQSTRING( 3 ), HB_ISNIL( 4 ) ? ( QLineEdit::EchoMode ) QLineEdit::Normal : ( QLineEdit::EchoMode ) hb_parni( 4 ), OPQSTRING( 5, QString() ), &par6, HB_ISNIL( 7 ) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni( 7 ) ) );
+    RQSTRING( QInputDialog::getText( PQWIDGET(1), PQSTRING(2), PQSTRING(3), HB_ISNIL(4) ? ( QLineEdit::EchoMode ) QLineEdit::Normal : ( QLineEdit::EchoMode ) hb_parni(4), OPQSTRING( 5, QString() ), &par6, HB_ISNIL(7) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(7) ) );
     hb_storl( par6, 6 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }

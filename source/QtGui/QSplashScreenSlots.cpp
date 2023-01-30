@@ -22,7 +22,7 @@ QSplashScreenSlots::~QSplashScreenSlots()
 
 void QSplashScreenSlots::messageChanged( const QString & message )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "messageChanged(QString)" );
 
@@ -40,9 +40,9 @@ void QSplashScreenSlots::messageChanged( const QString & message )
 
 void QSplashScreenSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSplashScreen * obj = qobject_cast< QSplashScreen * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSplashScreen * obj = qobject_cast<QSplashScreen*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QSplashScreenSlots * s = QCoreApplication::instance()->findChild<QSplashScreenSlots *>();
 

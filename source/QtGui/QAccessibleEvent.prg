@@ -45,14 +45,14 @@ QAccessibleEvent( QAccessibleEvent::Type type, int child )
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_NEW )
 {
-  if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
-    QAccessibleEvent * obj = new QAccessibleEvent( ( QAccessibleEvent::Type ) hb_parni( 1 ), PINT( 2 ) );
+    QAccessibleEvent * obj = new QAccessibleEvent( ( QAccessibleEvent::Type ) hb_parni(1), PINT(2) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -61,12 +61,12 @@ int child() const
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_CHILD )
 {
-  QAccessibleEvent * obj = static_cast< QAccessibleEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAccessibleEvent * obj = static_cast<QAccessibleEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->child() );
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_CHILD )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -85,25 +85,25 @@ void setValue( const QString & text )
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_SETVALUE )
 {
-  QAccessibleEvent * obj = static_cast< QAccessibleEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAccessibleEvent * obj = static_cast<QAccessibleEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setValue( PQSTRING( 1 ) );
+      obj->setValue( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -111,12 +111,12 @@ QString value() const
 */
 HB_FUNC_STATIC( QACCESSIBLEEVENT_VALUE )
 {
-  QAccessibleEvent * obj = static_cast< QAccessibleEvent * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QAccessibleEvent * obj = static_cast<QAccessibleEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->value() );
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_VALUE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

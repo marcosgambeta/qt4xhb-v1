@@ -22,7 +22,7 @@ QLCDNumberSlots::~QLCDNumberSlots()
 
 void QLCDNumberSlots::overflow()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "overflow()" );
 
@@ -38,9 +38,9 @@ void QLCDNumberSlots::overflow()
 
 void QLCDNumberSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QLCDNumber * obj = qobject_cast< QLCDNumber * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QLCDNumber * obj = qobject_cast<QLCDNumber*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QLCDNumberSlots * s = QCoreApplication::instance()->findChild<QLCDNumberSlots *>();
 

@@ -22,7 +22,7 @@ QWizardPageSlots::~QWizardPageSlots()
 
 void QWizardPageSlots::completeChanged()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "completeChanged()" );
 
@@ -38,9 +38,9 @@ void QWizardPageSlots::completeChanged()
 
 void QWizardPageSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QWizardPage * obj = qobject_cast< QWizardPage * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QWizardPage * obj = qobject_cast<QWizardPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QWizardPageSlots * s = QCoreApplication::instance()->findChild<QWizardPageSlots *>();
 

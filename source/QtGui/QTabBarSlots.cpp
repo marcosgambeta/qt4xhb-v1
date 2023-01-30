@@ -22,7 +22,7 @@ QTabBarSlots::~QTabBarSlots()
 
 void QTabBarSlots::currentChanged( int index )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentChanged(int)" );
 
@@ -40,7 +40,7 @@ void QTabBarSlots::currentChanged( int index )
 
 void QTabBarSlots::tabCloseRequested( int index )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "tabCloseRequested(int)" );
 
@@ -58,7 +58,7 @@ void QTabBarSlots::tabCloseRequested( int index )
 
 void QTabBarSlots::tabMoved( int from, int to )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "tabMoved(int,int)" );
 
@@ -78,9 +78,9 @@ void QTabBarSlots::tabMoved( int from, int to )
 
 void QTabBarSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTabBar * obj = qobject_cast< QTabBar * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QTabBar * obj = qobject_cast<QTabBar*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QTabBarSlots * s = QCoreApplication::instance()->findChild<QTabBarSlots *>();
 

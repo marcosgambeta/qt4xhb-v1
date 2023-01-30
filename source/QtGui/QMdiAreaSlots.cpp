@@ -22,7 +22,7 @@ QMdiAreaSlots::~QMdiAreaSlots()
 
 void QMdiAreaSlots::subWindowActivated( QMdiSubWindow * window )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "subWindowActivated(QMdiSubWindow*)" );
 
@@ -40,9 +40,9 @@ void QMdiAreaSlots::subWindowActivated( QMdiSubWindow * window )
 
 void QMdiAreaSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QMdiArea * obj = qobject_cast< QMdiArea * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QMdiAreaSlots * s = QCoreApplication::instance()->findChild<QMdiAreaSlots *>();
 
