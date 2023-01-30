@@ -3,7 +3,7 @@
 
   Qt4xHb Project - Test Program
 
-  Copyright (C) 2022 Marcos Antonio Gambeta
+  Copyright (c) 2023 Marcos Antonio Gambeta
 
   E-mail:
   marcosgambeta AT outlook DOT com
