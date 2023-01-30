@@ -43,7 +43,7 @@ RETURN
 
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QDomProcessingInstruction()
@@ -51,17 +51,17 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NEW )
     QDomProcessingInstruction * obj = new QDomProcessingInstruction();
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISNUMPAR( 1 ) && ISQDOMPROCESSINGINSTRUCTION( 1 ) )
+  else if( ISNUMPAR(1) && ISQDOMPROCESSINGINSTRUCTION(1) )
   {
     /*
     QDomProcessingInstruction( const QDomProcessingInstruction & x )
     */
-    QDomProcessingInstruction * obj = new QDomProcessingInstruction( *PQDOMPROCESSINGINSTRUCTION( 1 ) );
+    QDomProcessingInstruction * obj = new QDomProcessingInstruction( *PQDOMPROCESSINGINSTRUCTION(1) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -70,12 +70,12 @@ QString data() const
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DATA )
 {
-  QDomProcessingInstruction * obj = static_cast< QDomProcessingInstruction * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDomProcessingInstruction * obj = static_cast<QDomProcessingInstruction*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->data() );
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_DATA )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -94,12 +94,12 @@ QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NODETYPE )
 {
-  QDomProcessingInstruction * obj = static_cast< QDomProcessingInstruction * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDomProcessingInstruction * obj = static_cast<QDomProcessingInstruction*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->nodeType() );
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_NODETYPE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -118,25 +118,25 @@ void setData( const QString & d )
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_SETDATA )
 {
-  QDomProcessingInstruction * obj = static_cast< QDomProcessingInstruction * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDomProcessingInstruction * obj = static_cast<QDomProcessingInstruction*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setData( PQSTRING( 1 ) );
+      obj->setData( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -144,12 +144,12 @@ QString target() const
 */
 HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_TARGET )
 {
-  QDomProcessingInstruction * obj = static_cast< QDomProcessingInstruction * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDomProcessingInstruction * obj = static_cast<QDomProcessingInstruction*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->target() );
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QDOMPROCESSINGINSTRUCTION_TARGET )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

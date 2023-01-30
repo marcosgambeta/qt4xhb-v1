@@ -47,7 +47,7 @@ RETURN
 
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QDomDocumentType()
@@ -55,17 +55,17 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
     QDomDocumentType * obj = new QDomDocumentType();
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISNUMPAR( 1 ) && ISQDOMDOCUMENTTYPE( 1 ) )
+  else if( ISNUMPAR(1) && ISQDOMDOCUMENTTYPE(1) )
   {
     /*
     QDomDocumentType( const QDomDocumentType & n )
     */
-    QDomDocumentType * obj = new QDomDocumentType( *PQDOMDOCUMENTTYPE( 1 ) );
+    QDomDocumentType * obj = new QDomDocumentType( *PQDOMDOCUMENTTYPE(1) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -74,12 +74,12 @@ QDomNamedNodeMap entities() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_ENTITIES )
 {
-  QDomDocumentType * obj = static_cast< QDomDocumentType * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDomDocumentType * obj = static_cast<QDomDocumentType*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->entities() );
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_ENTITIES )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -99,12 +99,12 @@ QString internalSubset() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_INTERNALSUBSET )
 {
-  QDomDocumentType * obj = static_cast< QDomDocumentType * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDomDocumentType * obj = static_cast<QDomDocumentType*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->internalSubset() );
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_INTERNALSUBSET )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -123,12 +123,12 @@ QString name() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NAME )
 {
-  QDomDocumentType * obj = static_cast< QDomDocumentType * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDomDocumentType * obj = static_cast<QDomDocumentType*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->name() );
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NAME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -147,12 +147,12 @@ QDomNode::NodeType nodeType() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NODETYPE )
 {
-  QDomDocumentType * obj = static_cast< QDomDocumentType * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDomDocumentType * obj = static_cast<QDomDocumentType*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->nodeType() );
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NODETYPE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -171,12 +171,12 @@ QDomNamedNodeMap notations() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NOTATIONS )
 {
-  QDomDocumentType * obj = static_cast< QDomDocumentType * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDomDocumentType * obj = static_cast<QDomDocumentType*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->notations() );
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NOTATIONS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -196,12 +196,12 @@ QString publicId() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_PUBLICID )
 {
-  QDomDocumentType * obj = static_cast< QDomDocumentType * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDomDocumentType * obj = static_cast<QDomDocumentType*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->publicId() );
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_PUBLICID )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -220,12 +220,12 @@ QString systemId() const
 */
 HB_FUNC_STATIC( QDOMDOCUMENTTYPE_SYSTEMID )
 {
-  QDomDocumentType * obj = static_cast< QDomDocumentType * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QDomDocumentType * obj = static_cast<QDomDocumentType*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->systemId() );
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_SYSTEMID )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

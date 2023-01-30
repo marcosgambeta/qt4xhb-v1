@@ -61,32 +61,31 @@ QXmlNamespaceSupport()
 */
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     QXmlNamespaceSupport * obj = new QXmlNamespaceSupport();
     Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_DELETE )
 {
-  QXmlNamespaceSupport * obj = static_cast< QXmlNamespaceSupport * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QXmlNamespaceSupport * obj = static_cast<QXmlNamespaceSupport*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -94,12 +93,12 @@ void popContext()
 */
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_POPCONTEXT )
 {
-  QXmlNamespaceSupport * obj = static_cast< QXmlNamespaceSupport * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QXmlNamespaceSupport * obj = static_cast<QXmlNamespaceSupport*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->popContext();
@@ -107,12 +106,12 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_POPCONTEXT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -120,20 +119,20 @@ QString prefix( const QString & uri ) const
 */
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIX )
 {
-  QXmlNamespaceSupport * obj = static_cast< QXmlNamespaceSupport * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QXmlNamespaceSupport * obj = static_cast<QXmlNamespaceSupport*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->prefix( PQSTRING( 1 ) ) );
+      RQSTRING( obj->prefix( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -141,33 +140,33 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIX )
 
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QStringList prefixes() const
     */
-    QXmlNamespaceSupport * obj = static_cast< QXmlNamespaceSupport * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QXmlNamespaceSupport * obj = static_cast<QXmlNamespaceSupport*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
       RQSTRINGLIST( obj->prefixes() );
     }
   }
-  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     /*
     QStringList prefixes( const QString & uri ) const
     */
-    QXmlNamespaceSupport * obj = static_cast< QXmlNamespaceSupport * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QXmlNamespaceSupport * obj = static_cast<QXmlNamespaceSupport*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      RQSTRINGLIST( obj->prefixes( PQSTRING( 1 ) ) );
+      RQSTRINGLIST( obj->prefixes( PQSTRING(1) ) );
     }
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -176,29 +175,29 @@ void processName( const QString & qname, bool isAttribute, QString & nsuri, QStr
 */
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PROCESSNAME )
 {
-  QXmlNamespaceSupport * obj = static_cast< QXmlNamespaceSupport * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QXmlNamespaceSupport * obj = static_cast<QXmlNamespaceSupport*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 4 ) && HB_ISCHAR( 1 ) && HB_ISLOG( 2 ) && HB_ISCHAR( 3 ) && HB_ISCHAR( 4 ) )
+    if( ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISLOG(2) && HB_ISCHAR(3) && HB_ISCHAR(4) )
     {
 #endif
-      QString par3 = hb_parc( 3 );
-      QString par4 = hb_parc( 4 );
-      obj->processName( PQSTRING( 1 ), PBOOL( 2 ), par3, par4 );
+      QString par3 = hb_parc(3);
+      QString par4 = hb_parc(4);
+      obj->processName( PQSTRING(1), PBOOL(2), par3, par4 );
       hb_storc( QSTRINGTOSTRING( par3 ), 3 );
       hb_storc( QSTRINGTOSTRING( par4 ), 4 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -206,12 +205,12 @@ void pushContext()
 */
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PUSHCONTEXT )
 {
-  QXmlNamespaceSupport * obj = static_cast< QXmlNamespaceSupport * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QXmlNamespaceSupport * obj = static_cast<QXmlNamespaceSupport*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->pushContext();
@@ -219,12 +218,12 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PUSHCONTEXT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -232,12 +231,12 @@ void reset()
 */
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_RESET )
 {
-  QXmlNamespaceSupport * obj = static_cast< QXmlNamespaceSupport * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QXmlNamespaceSupport * obj = static_cast<QXmlNamespaceSupport*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->reset();
@@ -245,12 +244,12 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_RESET )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -258,25 +257,25 @@ void setPrefix( const QString & pre, const QString & uri )
 */
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_SETPREFIX )
 {
-  QXmlNamespaceSupport * obj = static_cast< QXmlNamespaceSupport * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QXmlNamespaceSupport * obj = static_cast<QXmlNamespaceSupport*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
-      obj->setPrefix( PQSTRING( 1 ), PQSTRING( 2 ) );
+      obj->setPrefix( PQSTRING(1), PQSTRING(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -284,29 +283,29 @@ void splitName( const QString & qname, QString & prefix, QString & localname ) c
 */
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_SPLITNAME )
 {
-  QXmlNamespaceSupport * obj = static_cast< QXmlNamespaceSupport * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QXmlNamespaceSupport * obj = static_cast<QXmlNamespaceSupport*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 3 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) )
+    if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
     {
 #endif
-      QString par2 = hb_parc( 2 );
-      QString par3 = hb_parc( 3 );
-      obj->splitName( PQSTRING( 1 ), par2, par3 );
+      QString par2 = hb_parc(2);
+      QString par3 = hb_parc(3);
+      obj->splitName( PQSTRING(1), par2, par3 );
       hb_storc( QSTRINGTOSTRING( par2 ), 2 );
       hb_storc( QSTRINGTOSTRING( par3 ), 3 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -314,20 +313,20 @@ QString uri( const QString & prefix ) const
 */
 HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_URI )
 {
-  QXmlNamespaceSupport * obj = static_cast< QXmlNamespaceSupport * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QXmlNamespaceSupport * obj = static_cast<QXmlNamespaceSupport*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->uri( PQSTRING( 1 ) ) );
+      RQSTRING( obj->uri( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -337,27 +336,27 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
   hb_itemReturn( self );
@@ -382,15 +381,15 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
   hb_itemReturn( self );
