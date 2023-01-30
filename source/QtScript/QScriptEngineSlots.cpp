@@ -22,7 +22,7 @@ QScriptEngineSlots::~QScriptEngineSlots()
 
 void QScriptEngineSlots::signalHandlerException( const QScriptValue & exception )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "signalHandlerException(QScriptValue)" );
 
@@ -40,9 +40,9 @@ void QScriptEngineSlots::signalHandlerException( const QScriptValue & exception 
 
 void QScriptEngineSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QScriptEngine * obj = qobject_cast< QScriptEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QScriptEngine * obj = qobject_cast<QScriptEngine*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QScriptEngineSlots * s = QCoreApplication::instance()->findChild<QScriptEngineSlots *>();
 
