@@ -22,7 +22,7 @@ QTimerSlots::~QTimerSlots()
 
 void QTimerSlots::timeout()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "timeout()" );
 
@@ -38,9 +38,9 @@ void QTimerSlots::timeout()
 
 void QTimerSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTimer * obj = qobject_cast< QTimer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QTimer * obj = qobject_cast<QTimer*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QTimerSlots * s = QCoreApplication::instance()->findChild<QTimerSlots *>();
 

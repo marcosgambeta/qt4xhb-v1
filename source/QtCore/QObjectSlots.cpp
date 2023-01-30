@@ -22,7 +22,7 @@ QObjectSlots::~QObjectSlots()
 
 void QObjectSlots::destroyed( QObject * obj )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "destroyed(QObject*)" );
 
@@ -41,9 +41,9 @@ void QObjectSlots::destroyed( QObject * obj )
 
 void QObjectSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QObject * obj = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QObject * obj = qobject_cast<QObject*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QObjectSlots * s = QCoreApplication::instance()->findChild<QObjectSlots *>();
 

@@ -22,7 +22,7 @@ QStateMachineSlots::~QStateMachineSlots()
 
 void QStateMachineSlots::started()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "started()" );
 
@@ -38,7 +38,7 @@ void QStateMachineSlots::started()
 
 void QStateMachineSlots::stopped()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "stopped()" );
 
@@ -54,9 +54,9 @@ void QStateMachineSlots::stopped()
 
 void QStateMachineSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QStateMachine * obj = qobject_cast< QStateMachine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QStateMachine * obj = qobject_cast<QStateMachine*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QStateMachineSlots * s = QCoreApplication::instance()->findChild<QStateMachineSlots *>();
 

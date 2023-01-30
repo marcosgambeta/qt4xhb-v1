@@ -56,7 +56,7 @@ RETURN
 
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QXmlStreamAttribute()
@@ -64,51 +64,50 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEW )
     QXmlStreamAttribute * obj = new QXmlStreamAttribute();
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) )
+  else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
   {
     /*
     QXmlStreamAttribute( const QString & qualifiedName, const QString & value )
     */
-    QXmlStreamAttribute * obj = new QXmlStreamAttribute( PQSTRING( 1 ), PQSTRING( 2 ) );
+    QXmlStreamAttribute * obj = new QXmlStreamAttribute( PQSTRING(1), PQSTRING(2) );
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISNUMPAR( 3 ) && HB_ISCHAR( 1 ) && HB_ISCHAR( 2 ) && HB_ISCHAR( 3 ) )
+  else if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
   {
     /*
     QXmlStreamAttribute( const QString & namespaceUri, const QString & name, const QString & value )
     */
-    QXmlStreamAttribute * obj = new QXmlStreamAttribute( PQSTRING( 1 ), PQSTRING( 2 ), PQSTRING( 3 ) );
+    QXmlStreamAttribute * obj = new QXmlStreamAttribute( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISNUMPAR( 1 ) && ISQXMLSTREAMATTRIBUTE( 1 ) )
+  else if( ISNUMPAR(1) && ISQXMLSTREAMATTRIBUTE(1) )
   {
     /*
     QXmlStreamAttribute( const QXmlStreamAttribute & other )
     */
-    QXmlStreamAttribute * obj = new QXmlStreamAttribute( *PQXMLSTREAMATTRIBUTE( 1 ) );
+    QXmlStreamAttribute * obj = new QXmlStreamAttribute( *PQXMLSTREAMATTRIBUTE(1) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_DELETE )
 {
-  QXmlStreamAttribute * obj = static_cast< QXmlStreamAttribute * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QXmlStreamAttribute * obj = static_cast<QXmlStreamAttribute*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -116,12 +115,12 @@ bool isDefault() const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_ISDEFAULT )
 {
-  QXmlStreamAttribute * obj = static_cast< QXmlStreamAttribute * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QXmlStreamAttribute * obj = static_cast<QXmlStreamAttribute*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isDefault() );
@@ -129,7 +128,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_ISDEFAULT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -140,12 +139,12 @@ QStringRef name() const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NAME )
 {
-  QXmlStreamAttribute * obj = static_cast< QXmlStreamAttribute * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QXmlStreamAttribute * obj = static_cast<QXmlStreamAttribute*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QStringRef * ptr = new QStringRef( obj->name() );
@@ -154,7 +153,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NAME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -165,12 +164,12 @@ QStringRef namespaceUri() const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NAMESPACEURI )
 {
-  QXmlStreamAttribute * obj = static_cast< QXmlStreamAttribute * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QXmlStreamAttribute * obj = static_cast<QXmlStreamAttribute*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QStringRef * ptr = new QStringRef( obj->namespaceUri() );
@@ -179,7 +178,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NAMESPACEURI )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -190,12 +189,12 @@ QStringRef prefix() const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_PREFIX )
 {
-  QXmlStreamAttribute * obj = static_cast< QXmlStreamAttribute * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QXmlStreamAttribute * obj = static_cast<QXmlStreamAttribute*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QStringRef * ptr = new QStringRef( obj->prefix() );
@@ -204,7 +203,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_PREFIX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -215,12 +214,12 @@ QStringRef qualifiedName() const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_QUALIFIEDNAME )
 {
-  QXmlStreamAttribute * obj = static_cast< QXmlStreamAttribute * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QXmlStreamAttribute * obj = static_cast<QXmlStreamAttribute*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QStringRef * ptr = new QStringRef( obj->qualifiedName() );
@@ -229,7 +228,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_QUALIFIEDNAME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -240,12 +239,12 @@ QStringRef value() const
 */
 HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_VALUE )
 {
-  QXmlStreamAttribute * obj = static_cast< QXmlStreamAttribute * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QXmlStreamAttribute * obj = static_cast<QXmlStreamAttribute*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QStringRef * ptr = new QStringRef( obj->value() );
@@ -254,7 +253,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_VALUE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -264,27 +263,27 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
   hb_itemReturn( self );
@@ -309,15 +308,15 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTE_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
   hb_itemReturn( self );

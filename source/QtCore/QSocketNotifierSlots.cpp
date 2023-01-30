@@ -22,7 +22,7 @@ QSocketNotifierSlots::~QSocketNotifierSlots()
 
 void QSocketNotifierSlots::activated( int socket )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activated(int)" );
 
@@ -40,9 +40,9 @@ void QSocketNotifierSlots::activated( int socket )
 
 void QSocketNotifierSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSocketNotifier * obj = qobject_cast< QSocketNotifier * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSocketNotifier * obj = qobject_cast<QSocketNotifier*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QSocketNotifierSlots * s = QCoreApplication::instance()->findChild<QSocketNotifierSlots *>();
 

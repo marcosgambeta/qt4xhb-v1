@@ -22,7 +22,7 @@ QVariantAnimationSlots::~QVariantAnimationSlots()
 
 void QVariantAnimationSlots::valueChanged( const QVariant & value )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "valueChanged(QVariant)" );
 
@@ -40,9 +40,9 @@ void QVariantAnimationSlots::valueChanged( const QVariant & value )
 
 void QVariantAnimationSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QVariantAnimation * obj = qobject_cast< QVariantAnimation * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QVariantAnimation * obj = qobject_cast<QVariantAnimation*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QVariantAnimationSlots * s = QCoreApplication::instance()->findChild<QVariantAnimationSlots *>();
 

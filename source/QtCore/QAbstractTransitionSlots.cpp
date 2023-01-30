@@ -22,7 +22,7 @@ QAbstractTransitionSlots::~QAbstractTransitionSlots()
 
 void QAbstractTransitionSlots::triggered()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "triggered()" );
 
@@ -38,9 +38,9 @@ void QAbstractTransitionSlots::triggered()
 
 void QAbstractTransitionSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractTransition * obj = qobject_cast< QAbstractTransition * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractTransition * obj = qobject_cast<QAbstractTransition*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QAbstractTransitionSlots * s = QCoreApplication::instance()->findChild<QAbstractTransitionSlots *>();
 

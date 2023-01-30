@@ -142,7 +142,7 @@ int HAbstractTableModelV2::rowCount( const QModelIndex & parent ) const
     }
     else
     {
-      return static_cast< int >( hb_itemGetNI( hb_vmEvalBlockV( m_rowCountBlock, 0 ) ) );
+      return static_cast<int >( hb_itemGetNI( hb_vmEvalBlockV( m_rowCountBlock, 0 ) ) );
     }
   }
   else
@@ -161,7 +161,7 @@ int HAbstractTableModelV2::columnCount( const QModelIndex & parent ) const
     }
     else
     {
-      return static_cast< int >( hb_itemGetNI( hb_vmEvalBlockV( m_columnCountBlock, 0 ) ) );
+      return static_cast<int >( hb_itemGetNI( hb_vmEvalBlockV( m_columnCountBlock, 0 ) ) );
     }
   }
   else
@@ -184,8 +184,8 @@ QVariant HAbstractTableModelV2::data( const QModelIndex & index, int role ) cons
 
     if( hb_clsIsParent( hb_objGetClass( pRet ), "QVARIANT" ) )
     {
-      void * ptr = static_cast<  void * >( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) ) );
-      data = *( static_cast<  QVariant * >( ptr ) );
+      void * ptr = static_cast< void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) ) );
+      data = *( static_cast< QVariant*>( ptr ) );
     }
 
     hb_itemRelease( pIndex );
@@ -214,8 +214,8 @@ QVariant HAbstractTableModelV2::headerData( int section, Qt::Orientation orienta
 
     if( hb_clsIsParent( hb_objGetClass( pRet ), "QVARIANT" ) )
     {
-      void * ptr = static_cast<  void * >( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) ) );
-      data = *( static_cast<  QVariant * >( ptr ) );
+      void * ptr = static_cast< void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) ) );
+      data = *( static_cast< QVariant*>( ptr ) );
     }
 
     hb_itemRelease( pSection );

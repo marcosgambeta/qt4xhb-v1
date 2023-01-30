@@ -22,7 +22,7 @@ QIODeviceSlots::~QIODeviceSlots()
 
 void QIODeviceSlots::aboutToClose()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "aboutToClose()" );
 
@@ -38,7 +38,7 @@ void QIODeviceSlots::aboutToClose()
 
 void QIODeviceSlots::bytesWritten( qint64 bytes )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "bytesWritten(qint64)" );
 
@@ -56,7 +56,7 @@ void QIODeviceSlots::bytesWritten( qint64 bytes )
 
 void QIODeviceSlots::readChannelFinished()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "readChannelFinished()" );
 
@@ -72,7 +72,7 @@ void QIODeviceSlots::readChannelFinished()
 
 void QIODeviceSlots::readyRead()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "readyRead()" );
 
@@ -88,9 +88,9 @@ void QIODeviceSlots::readyRead()
 
 void QIODeviceSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QIODevice * obj = qobject_cast< QIODevice * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QIODevice * obj = qobject_cast<QIODevice*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QIODeviceSlots * s = QCoreApplication::instance()->findChild<QIODeviceSlots *>();
 

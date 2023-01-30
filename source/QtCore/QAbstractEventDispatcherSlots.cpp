@@ -22,7 +22,7 @@ QAbstractEventDispatcherSlots::~QAbstractEventDispatcherSlots()
 
 void QAbstractEventDispatcherSlots::aboutToBlock()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "aboutToBlock()" );
 
@@ -38,7 +38,7 @@ void QAbstractEventDispatcherSlots::aboutToBlock()
 
 void QAbstractEventDispatcherSlots::awake()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "awake()" );
 
@@ -54,9 +54,9 @@ void QAbstractEventDispatcherSlots::awake()
 
 void QAbstractEventDispatcherSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractEventDispatcher * obj = qobject_cast< QAbstractEventDispatcher * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractEventDispatcher * obj = qobject_cast<QAbstractEventDispatcher*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QAbstractEventDispatcherSlots * s = QCoreApplication::instance()->findChild<QAbstractEventDispatcherSlots *>();
 

@@ -22,7 +22,7 @@ QFileSystemWatcherSlots::~QFileSystemWatcherSlots()
 
 void QFileSystemWatcherSlots::directoryChanged( const QString & path )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "directoryChanged(QString)" );
 
@@ -40,7 +40,7 @@ void QFileSystemWatcherSlots::directoryChanged( const QString & path )
 
 void QFileSystemWatcherSlots::fileChanged( const QString & path )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "fileChanged(QString)" );
 
@@ -58,9 +58,9 @@ void QFileSystemWatcherSlots::fileChanged( const QString & path )
 
 void QFileSystemWatcherSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QFileSystemWatcher * obj = qobject_cast< QFileSystemWatcher * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFileSystemWatcher * obj = qobject_cast<QFileSystemWatcher*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QFileSystemWatcherSlots * s = QCoreApplication::instance()->findChild<QFileSystemWatcherSlots *>();
 

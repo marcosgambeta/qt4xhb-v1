@@ -22,7 +22,7 @@ QFutureWatcherBaseSlots::~QFutureWatcherBaseSlots()
 
 void QFutureWatcherBaseSlots::started()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "started()" );
 
@@ -38,7 +38,7 @@ void QFutureWatcherBaseSlots::started()
 
 void QFutureWatcherBaseSlots::finished()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "finished()" );
 
@@ -54,7 +54,7 @@ void QFutureWatcherBaseSlots::finished()
 
 void QFutureWatcherBaseSlots::canceled()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "canceled()" );
 
@@ -70,7 +70,7 @@ void QFutureWatcherBaseSlots::canceled()
 
 void QFutureWatcherBaseSlots::paused()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "paused()" );
 
@@ -86,7 +86,7 @@ void QFutureWatcherBaseSlots::paused()
 
 void QFutureWatcherBaseSlots::resumed()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "resumed()" );
 
@@ -102,7 +102,7 @@ void QFutureWatcherBaseSlots::resumed()
 
 void QFutureWatcherBaseSlots::resultReadyAt( int resultIndex )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "resultReadyAt(int)" );
 
@@ -120,7 +120,7 @@ void QFutureWatcherBaseSlots::resultReadyAt( int resultIndex )
 
 void QFutureWatcherBaseSlots::resultsReadyAt( int beginIndex, int endIndex )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "resultsReadyAt(int,int)" );
 
@@ -140,7 +140,7 @@ void QFutureWatcherBaseSlots::resultsReadyAt( int beginIndex, int endIndex )
 
 void QFutureWatcherBaseSlots::progressRangeChanged( int minimum, int maximum )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "progressRangeChanged(int,int)" );
 
@@ -160,7 +160,7 @@ void QFutureWatcherBaseSlots::progressRangeChanged( int minimum, int maximum )
 
 void QFutureWatcherBaseSlots::progressValueChanged( int progressValue )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "progressValueChanged(int)" );
 
@@ -178,7 +178,7 @@ void QFutureWatcherBaseSlots::progressValueChanged( int progressValue )
 
 void QFutureWatcherBaseSlots::progressTextChanged( const QString & progressText )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "progressTextChanged(QString)" );
 
@@ -196,9 +196,9 @@ void QFutureWatcherBaseSlots::progressTextChanged( const QString & progressText 
 
 void QFutureWatcherBaseSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QFutureWatcherBase * obj = qobject_cast< QFutureWatcherBase * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFutureWatcherBase * obj = qobject_cast<QFutureWatcherBase*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QFutureWatcherBaseSlots * s = QCoreApplication::instance()->findChild<QFutureWatcherBaseSlots *>();
 

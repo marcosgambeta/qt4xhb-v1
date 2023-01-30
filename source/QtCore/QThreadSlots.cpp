@@ -22,7 +22,7 @@ QThreadSlots::~QThreadSlots()
 
 void QThreadSlots::finished()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "finished()" );
 
@@ -38,7 +38,7 @@ void QThreadSlots::finished()
 
 void QThreadSlots::started()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "started()" );
 
@@ -54,9 +54,9 @@ void QThreadSlots::started()
 
 void QThreadSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QThread * obj = qobject_cast< QThread * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QThread * obj = qobject_cast<QThread*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QThreadSlots * s = QCoreApplication::instance()->findChild<QThreadSlots *>();
 

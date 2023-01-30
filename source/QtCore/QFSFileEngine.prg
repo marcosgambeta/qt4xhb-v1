@@ -78,7 +78,7 @@ RETURN
 
 HB_FUNC_STATIC( QFSFILEENGINE_NEW )
 {
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
     /*
     QFSFileEngine()
@@ -86,90 +86,89 @@ HB_FUNC_STATIC( QFSFILEENGINE_NEW )
     QFSFileEngine * obj = new QFSFileEngine();
     Qt4xHb::returnNewObject( obj, true );
   }
-  else if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     /*
     QFSFileEngine( const QString & file )
     */
-    QFSFileEngine * obj = new QFSFileEngine( PQSTRING( 1 ) );
+    QFSFileEngine * obj = new QFSFileEngine( PQSTRING(1) );
     Qt4xHb::returnNewObject( obj, true );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QFSFILEENGINE_DELETE )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 HB_FUNC_STATIC( QFSFILEENGINE_OPEN )
 {
-  if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISPOINTER( 2 ) )
+  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISPOINTER(2) )
   {
     /*
     bool open( QIODevice::OpenMode openMode, FILE * fh )
     */
-    QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      RBOOL( obj->open( ( QIODevice::OpenMode ) hb_parni( 1 ), static_cast< FILE * >( hb_parptr( 2 ) ) ) );
+      RBOOL( obj->open( ( QIODevice::OpenMode ) hb_parni(1), static_cast<FILE*>( hb_parptr(2) ) ) );
     }
   }
-  else if( ISNUMPAR( 2 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     /*
     bool open( QIODevice::OpenMode openMode, int fd )
     */
-    QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      RBOOL( obj->open( ( QIODevice::OpenMode ) hb_parni( 1 ), PINT( 2 ) ) );
+      RBOOL( obj->open( ( QIODevice::OpenMode ) hb_parni(1), PINT(2) ) );
     }
   }
-  else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && HB_ISNUM( 3 ) )
+  else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
     /*
     bool open( QIODevice::OpenMode openMode, int fd, QFile::FileHandleFlags handleFlags )
     */
-    QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      RBOOL( obj->open( ( QIODevice::OpenMode ) hb_parni( 1 ), PINT( 2 ), ( QFile::FileHandleFlags ) hb_parni( 3 ) ) );
+      RBOOL( obj->open( ( QIODevice::OpenMode ) hb_parni(1), PINT(2), ( QFile::FileHandleFlags ) hb_parni(3) ) );
     }
   }
-  else if( ISNUMPAR( 3 ) && HB_ISNUM( 1 ) && HB_ISPOINTER( 2 ) && HB_ISNUM( 3 ) )
+  else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISPOINTER(2) && HB_ISNUM(3) )
   {
     /*
     bool open( QIODevice::OpenMode openMode, FILE * fh, QFile::FileHandleFlags handleFlags )
     */
-    QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+    QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
     if( obj != NULL )
     {
-      RBOOL( obj->open( ( QIODevice::OpenMode ) hb_parni( 1 ), static_cast< FILE * >( hb_parptr( 2 ) ), ( QFile::FileHandleFlags ) hb_parni( 3 ) ) );
+      RBOOL( obj->open( ( QIODevice::OpenMode ) hb_parni(1), static_cast<FILE*>( hb_parptr(2) ), ( QFile::FileHandleFlags ) hb_parni(3) ) );
     }
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
@@ -178,12 +177,12 @@ virtual bool caseSensitive() const
 */
 HB_FUNC_STATIC( QFSFILEENGINE_CASESENSITIVE )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->caseSensitive() );
@@ -191,7 +190,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_CASESENSITIVE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -202,12 +201,12 @@ virtual bool close()
 */
 HB_FUNC_STATIC( QFSFILEENGINE_CLOSE )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->close() );
@@ -215,7 +214,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_CLOSE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -226,20 +225,20 @@ virtual bool copy( const QString & copyName )
 */
 HB_FUNC_STATIC( QFSFILEENGINE_COPY )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->copy( PQSTRING( 1 ) ) );
+      RBOOL( obj->copy( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -250,20 +249,20 @@ virtual QAbstractFileEngine::FileFlags fileFlags( QAbstractFileEngine::FileFlags
 */
 HB_FUNC_STATIC( QFSFILEENGINE_FILEFLAGS )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RENUM( obj->fileFlags( ( QAbstractFileEngine::FileFlags ) hb_parni( 1 ) ) );
+      RENUM( obj->fileFlags( ( QAbstractFileEngine::FileFlags ) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -274,20 +273,20 @@ virtual QString fileName( QAbstractFileEngine::FileName file ) const
 */
 HB_FUNC_STATIC( QFSFILEENGINE_FILENAME )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->fileName( ( QAbstractFileEngine::FileName ) hb_parni( 1 ) ) );
+      RQSTRING( obj->fileName( ( QAbstractFileEngine::FileName ) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -298,21 +297,21 @@ virtual QDateTime fileTime( QAbstractFileEngine::FileTime time ) const
 */
 HB_FUNC_STATIC( QFSFILEENGINE_FILETIME )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->fileTime( ( QAbstractFileEngine::FileTime ) hb_parni( 1 ) ) );
+      QDateTime * ptr = new QDateTime( obj->fileTime( ( QAbstractFileEngine::FileTime ) hb_parni(1) ) );
       Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -323,12 +322,12 @@ virtual bool flush()
 */
 HB_FUNC_STATIC( QFSFILEENGINE_FLUSH )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->flush() );
@@ -336,7 +335,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_FLUSH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -347,12 +346,12 @@ virtual int handle() const
 */
 HB_FUNC_STATIC( QFSFILEENGINE_HANDLE )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->handle() );
@@ -360,7 +359,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_HANDLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -371,12 +370,12 @@ virtual bool isRelativePath() const
 */
 HB_FUNC_STATIC( QFSFILEENGINE_ISRELATIVEPATH )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isRelativePath() );
@@ -384,7 +383,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_ISRELATIVEPATH )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -395,12 +394,12 @@ virtual bool isSequential() const
 */
 HB_FUNC_STATIC( QFSFILEENGINE_ISSEQUENTIAL )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isSequential() );
@@ -408,7 +407,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_ISSEQUENTIAL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -419,20 +418,20 @@ virtual bool link( const QString & newName )
 */
 HB_FUNC_STATIC( QFSFILEENGINE_LINK )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->link( PQSTRING( 1 ) ) );
+      RBOOL( obj->link( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -443,20 +442,20 @@ virtual bool mkdir( const QString & name, bool createParentDirectories ) const
 */
 HB_FUNC_STATIC( QFSFILEENGINE_MKDIR )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISLOG( 2 ) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISLOG(2) )
     {
 #endif
-      RBOOL( obj->mkdir( PQSTRING( 1 ), PBOOL( 2 ) ) );
+      RBOOL( obj->mkdir( PQSTRING(1), PBOOL(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -467,20 +466,20 @@ virtual QString owner( QAbstractFileEngine::FileOwner own ) const
 */
 HB_FUNC_STATIC( QFSFILEENGINE_OWNER )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->owner( ( QAbstractFileEngine::FileOwner ) hb_parni( 1 ) ) );
+      RQSTRING( obj->owner( ( QAbstractFileEngine::FileOwner ) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -491,20 +490,20 @@ virtual uint ownerId( QAbstractFileEngine::FileOwner own ) const
 */
 HB_FUNC_STATIC( QFSFILEENGINE_OWNERID )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RUINT( obj->ownerId( ( QAbstractFileEngine::FileOwner ) hb_parni( 1 ) ) );
+      RUINT( obj->ownerId( ( QAbstractFileEngine::FileOwner ) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -515,12 +514,12 @@ virtual qint64 pos() const
 */
 HB_FUNC_STATIC( QFSFILEENGINE_POS )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQINT64( obj->pos() );
@@ -528,7 +527,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_POS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -539,20 +538,20 @@ virtual qint64 read( char * data, qint64 maxlen )
 */
 HB_FUNC_STATIC( QFSFILEENGINE_READ )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
     {
 #endif
-      RQINT64( obj->read( ( char * ) hb_parc( 1 ), PQINT64( 2 ) ) );
+      RQINT64( obj->read( ( char * ) hb_parc(1), PQINT64(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -563,20 +562,20 @@ virtual qint64 readLine( char * data, qint64 maxlen )
 */
 HB_FUNC_STATIC( QFSFILEENGINE_READLINE )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
     {
 #endif
-      RQINT64( obj->readLine( ( char * ) hb_parc( 1 ), PQINT64( 2 ) ) );
+      RQINT64( obj->readLine( ( char * ) hb_parc(1), PQINT64(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -587,12 +586,12 @@ virtual bool remove()
 */
 HB_FUNC_STATIC( QFSFILEENGINE_REMOVE )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->remove() );
@@ -600,7 +599,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_REMOVE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -611,20 +610,20 @@ virtual bool rename( const QString & newName )
 */
 HB_FUNC_STATIC( QFSFILEENGINE_RENAME )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->rename( PQSTRING( 1 ) ) );
+      RBOOL( obj->rename( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -635,20 +634,20 @@ virtual bool rmdir( const QString & name, bool recurseParentDirectories ) const
 */
 HB_FUNC_STATIC( QFSFILEENGINE_RMDIR )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISLOG( 2 ) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISLOG(2) )
     {
 #endif
-      RBOOL( obj->rmdir( PQSTRING( 1 ), PBOOL( 2 ) ) );
+      RBOOL( obj->rmdir( PQSTRING(1), PBOOL(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -659,20 +658,20 @@ virtual bool seek( qint64 pos )
 */
 HB_FUNC_STATIC( QFSFILEENGINE_SEEK )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->seek( PQINT64( 1 ) ) );
+      RBOOL( obj->seek( PQINT64(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -683,25 +682,25 @@ virtual void setFileName( const QString & file )
 */
 HB_FUNC_STATIC( QFSFILEENGINE_SETFILENAME )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->setFileName( PQSTRING( 1 ) );
+      obj->setFileName( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -709,20 +708,20 @@ virtual bool setPermissions( uint perms )
 */
 HB_FUNC_STATIC( QFSFILEENGINE_SETPERMISSIONS )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->setPermissions( PUINT( 1 ) ) );
+      RBOOL( obj->setPermissions( PUINT(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -733,20 +732,20 @@ virtual bool setSize( qint64 size )
 */
 HB_FUNC_STATIC( QFSFILEENGINE_SETSIZE )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->setSize( PQINT64( 1 ) ) );
+      RBOOL( obj->setSize( PQINT64(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -757,12 +756,12 @@ virtual qint64 size() const
 */
 HB_FUNC_STATIC( QFSFILEENGINE_SIZE )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQINT64( obj->size() );
@@ -770,7 +769,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_SIZE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -781,20 +780,20 @@ virtual bool supportsExtension( QAbstractFileEngine::Extension extension ) const
 */
 HB_FUNC_STATIC( QFSFILEENGINE_SUPPORTSEXTENSION )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->supportsExtension( ( QAbstractFileEngine::Extension ) hb_parni( 1 ) ) );
+      RBOOL( obj->supportsExtension( ( QAbstractFileEngine::Extension ) hb_parni(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -805,20 +804,20 @@ virtual qint64 write( const char * data, qint64 len )
 */
 HB_FUNC_STATIC( QFSFILEENGINE_WRITE )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
     {
 #endif
-      RQINT64( obj->write( PCONSTCHAR( 1 ), PQINT64( 2 ) ) );
+      RQINT64( obj->write( PCONSTCHAR(1), PQINT64(2) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -830,7 +829,7 @@ static QString currentPath( const QString & fileName = QString() )
 HB_FUNC_STATIC( QFSFILEENGINE_CURRENTPATH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN( 0, 1 ) && ( HB_ISCHAR( 1 ) || HB_ISNIL( 1 ) ) )
+  if( ISBETWEEN(0, 1) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) )
   {
 #endif
     RQSTRING( QFSFileEngine::currentPath( OPQSTRING( 1, QString() ) ) );
@@ -838,7 +837,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_CURRENTPATH )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -848,28 +847,28 @@ QFileInfoList drives()
 */
 HB_FUNC_STATIC( QFSFILEENGINE_DRIVES )
 {
-  QFSFileEngine * obj = static_cast< QFSFileEngine * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QFSFileEngine * obj = static_cast<QFSFileEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QFileInfoList list = obj->drives();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
-      PHB_ITEM pArray = hb_itemArrayNew( 0 );
+      PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
         {
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
-          hb_vmDo( 0 );
+          hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, static_cast< QFileInfo * >( new QFileInfo( list[i] ) ) );
+          hb_itemPutPtr( pItem, static_cast<QFileInfo*>( new QFileInfo( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -889,7 +888,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_DRIVES )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -901,7 +900,7 @@ static QString homePath()
 HB_FUNC_STATIC( QFSFILEENGINE_HOMEPATH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
 #endif
     RQSTRING( QFSFileEngine::homePath() );
@@ -909,7 +908,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_HOMEPATH )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -920,7 +919,7 @@ static QString rootPath()
 HB_FUNC_STATIC( QFSFILEENGINE_ROOTPATH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
 #endif
     RQSTRING( QFSFileEngine::rootPath() );
@@ -928,7 +927,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_ROOTPATH )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -939,15 +938,15 @@ static bool setCurrentPath( const QString & path )
 HB_FUNC_STATIC( QFSFILEENGINE_SETCURRENTPATH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+  if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
 #endif
-    RBOOL( QFSFileEngine::setCurrentPath( PQSTRING( 1 ) ) );
+    RBOOL( QFSFileEngine::setCurrentPath( PQSTRING(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }
@@ -958,7 +957,7 @@ static QString tempPath()
 HB_FUNC_STATIC( QFSFILEENGINE_TEMPPATH )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR( 0 ) )
+  if( ISNUMPAR(0) )
   {
 #endif
     RQSTRING( QFSFileEngine::tempPath() );
@@ -966,7 +965,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_TEMPPATH )
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 #endif
 }

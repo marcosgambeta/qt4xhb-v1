@@ -146,10 +146,10 @@ PHB_ITEM HEventFilter::returnQEvent( QEvent * event, const char * classname )
   {
     hb_vmPushDynSym( pDynSym );
     hb_vmPushNil();
-    hb_vmDo( 0 );
+    hb_vmDo(0);
     hb_itemCopy( pObject, hb_stackReturnItem() );
     PHB_ITEM pItem = hb_itemNew( NULL );
-    hb_itemPutPtr( pItem, static_cast< QEvent * >( event ) );
+    hb_itemPutPtr( pItem, static_cast<QEvent*>( event ) );
     hb_objSendMsg( pObject, "_POINTER", 1, pItem );
     hb_itemRelease( pItem );
   }
@@ -181,10 +181,10 @@ PHB_ITEM HEventFilter::returnQObject( QObject * object, const char * classname )
   {
     hb_vmPushDynSym( pDynSym );
     hb_vmPushNil();
-    hb_vmDo( 0 );
+    hb_vmDo(0);
     hb_itemCopy( pObject, hb_stackReturnItem() );
     PHB_ITEM pItem = hb_itemNew( NULL );
-    hb_itemPutPtr( pItem, static_cast< void * >( object ) );
+    hb_itemPutPtr( pItem, static_cast<void*>( object ) );
     hb_objSendMsg( pObject, "_POINTER", 1, pItem );
     hb_itemRelease( pItem );
   }

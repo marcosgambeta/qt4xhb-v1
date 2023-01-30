@@ -22,7 +22,7 @@ QAbstractAnimationSlots::~QAbstractAnimationSlots()
 
 void QAbstractAnimationSlots::currentLoopChanged( int currentLoop )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentLoopChanged(int)" );
 
@@ -40,14 +40,14 @@ void QAbstractAnimationSlots::currentLoopChanged( int currentLoop )
 
 void QAbstractAnimationSlots::directionChanged( QAbstractAnimation::Direction newDirection )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "directionChanged(QAbstractAnimation::Direction)" );
 
   if( cb )
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTANIMATION" );
-    PHB_ITEM pNewDirection = hb_itemPutNI( NULL, static_cast< int >( newDirection ) );
+    PHB_ITEM pNewDirection = hb_itemPutNI( NULL, static_cast<int >( newDirection ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pNewDirection );
 
@@ -58,7 +58,7 @@ void QAbstractAnimationSlots::directionChanged( QAbstractAnimation::Direction ne
 
 void QAbstractAnimationSlots::finished()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "finished()" );
 
@@ -74,15 +74,15 @@ void QAbstractAnimationSlots::finished()
 
 void QAbstractAnimationSlots::stateChanged( QAbstractAnimation::State newState, QAbstractAnimation::State oldState )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)" );
 
   if( cb )
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTANIMATION" );
-    PHB_ITEM pNewState = hb_itemPutNI( NULL, static_cast< int >( newState ) );
-    PHB_ITEM pOldState = hb_itemPutNI( NULL, static_cast< int >( oldState ) );
+    PHB_ITEM pNewState = hb_itemPutNI( NULL, static_cast<int >( newState ) );
+    PHB_ITEM pOldState = hb_itemPutNI( NULL, static_cast<int >( oldState ) );
 
     hb_vmEvalBlockV( cb, 3, pSender, pNewState, pOldState );
 
@@ -94,9 +94,9 @@ void QAbstractAnimationSlots::stateChanged( QAbstractAnimation::State newState, 
 
 void QAbstractAnimationSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractAnimation * obj = qobject_cast< QAbstractAnimation * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractAnimation * obj = qobject_cast<QAbstractAnimation*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QAbstractAnimationSlots * s = QCoreApplication::instance()->findChild<QAbstractAnimationSlots *>();
 

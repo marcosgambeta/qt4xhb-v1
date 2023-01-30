@@ -22,7 +22,7 @@ QSequentialAnimationGroupSlots::~QSequentialAnimationGroupSlots()
 
 void QSequentialAnimationGroupSlots::currentAnimationChanged( QAbstractAnimation * current )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentAnimationChanged(QAbstractAnimation*)" );
 
@@ -40,9 +40,9 @@ void QSequentialAnimationGroupSlots::currentAnimationChanged( QAbstractAnimation
 
 void QSequentialAnimationGroupSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QSequentialAnimationGroup * obj = qobject_cast< QSequentialAnimationGroup * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QSequentialAnimationGroup * obj = qobject_cast<QSequentialAnimationGroup*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QSequentialAnimationGroupSlots * s = QCoreApplication::instance()->findChild<QSequentialAnimationGroupSlots *>();
 

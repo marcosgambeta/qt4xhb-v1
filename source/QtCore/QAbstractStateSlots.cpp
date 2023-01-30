@@ -22,7 +22,7 @@ QAbstractStateSlots::~QAbstractStateSlots()
 
 void QAbstractStateSlots::entered()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "entered()" );
 
@@ -38,7 +38,7 @@ void QAbstractStateSlots::entered()
 
 void QAbstractStateSlots::exited()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "exited()" );
 
@@ -54,9 +54,9 @@ void QAbstractStateSlots::exited()
 
 void QAbstractStateSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractState * obj = qobject_cast< QAbstractState * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractState * obj = qobject_cast<QAbstractState*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QAbstractStateSlots * s = QCoreApplication::instance()->findChild<QAbstractStateSlots *>();
 

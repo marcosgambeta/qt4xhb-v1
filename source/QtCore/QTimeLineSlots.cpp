@@ -22,7 +22,7 @@ QTimeLineSlots::~QTimeLineSlots()
 
 void QTimeLineSlots::finished()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "finished()" );
 
@@ -38,7 +38,7 @@ void QTimeLineSlots::finished()
 
 void QTimeLineSlots::frameChanged( int frame )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "frameChanged(int)" );
 
@@ -56,14 +56,14 @@ void QTimeLineSlots::frameChanged( int frame )
 
 void QTimeLineSlots::stateChanged( QTimeLine::State newState )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "stateChanged(QTimeLine::State)" );
 
   if( cb )
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTIMELINE" );
-    PHB_ITEM pNewState = hb_itemPutNI( NULL, static_cast< int >( newState ) );
+    PHB_ITEM pNewState = hb_itemPutNI( NULL, static_cast<int >( newState ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pNewState );
 
@@ -74,7 +74,7 @@ void QTimeLineSlots::stateChanged( QTimeLine::State newState )
 
 void QTimeLineSlots::valueChanged( qreal value )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "valueChanged(qreal)" );
 
@@ -92,9 +92,9 @@ void QTimeLineSlots::valueChanged( qreal value )
 
 void QTimeLineSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTimeLine * obj = qobject_cast< QTimeLine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QTimeLine * obj = qobject_cast<QTimeLine*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QTimeLineSlots * s = QCoreApplication::instance()->findChild<QTimeLineSlots *>();
 

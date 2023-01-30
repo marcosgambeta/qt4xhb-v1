@@ -22,7 +22,7 @@ QStateSlots::~QStateSlots()
 
 void QStateSlots::finished()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "finished()" );
 
@@ -38,7 +38,7 @@ void QStateSlots::finished()
 
 void QStateSlots::propertiesAssigned()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "propertiesAssigned()" );
 
@@ -54,9 +54,9 @@ void QStateSlots::propertiesAssigned()
 
 void QStateSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QState * obj = qobject_cast< QState * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QState * obj = qobject_cast<QState*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QStateSlots * s = QCoreApplication::instance()->findChild<QStateSlots *>();
 
