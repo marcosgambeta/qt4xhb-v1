@@ -22,7 +22,7 @@ QDeclarativePropertyMapSlots::~QDeclarativePropertyMapSlots()
 
 void QDeclarativePropertyMapSlots::valueChanged( const QString & key, const QVariant & value )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "valueChanged(QString,QVariant)" );
 
@@ -42,9 +42,9 @@ void QDeclarativePropertyMapSlots::valueChanged( const QString & key, const QVar
 
 void QDeclarativePropertyMapSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDeclarativePropertyMap * obj = qobject_cast< QDeclarativePropertyMap * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDeclarativePropertyMap * obj = qobject_cast<QDeclarativePropertyMap*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QDeclarativePropertyMapSlots * s = QCoreApplication::instance()->findChild<QDeclarativePropertyMapSlots *>();
 

@@ -22,7 +22,7 @@ QDeclarativeExpressionSlots::~QDeclarativeExpressionSlots()
 
 void QDeclarativeExpressionSlots::valueChanged()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "valueChanged()" );
 
@@ -38,9 +38,9 @@ void QDeclarativeExpressionSlots::valueChanged()
 
 void QDeclarativeExpressionSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDeclarativeExpression * obj = qobject_cast< QDeclarativeExpression * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDeclarativeExpression * obj = qobject_cast<QDeclarativeExpression*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QDeclarativeExpressionSlots * s = QCoreApplication::instance()->findChild<QDeclarativeExpressionSlots *>();
 

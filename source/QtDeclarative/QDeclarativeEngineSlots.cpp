@@ -22,7 +22,7 @@ QDeclarativeEngineSlots::~QDeclarativeEngineSlots()
 
 void QDeclarativeEngineSlots::quit()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "quit()" );
 
@@ -38,7 +38,7 @@ void QDeclarativeEngineSlots::quit()
 
 void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warnings )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "warnings(QList<QDeclarativeError>)" );
 
@@ -46,18 +46,18 @@ void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warning
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDECLARATIVEENGINE" );
     PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
-    PHB_ITEM pWarnings = hb_itemArrayNew( 0 );
+    PHB_ITEM pWarnings = hb_itemArrayNew(0);
     if( pDynSym )
     {
       for( int i = 0; i < warnings.count(); i++ )
       {
         hb_vmPushDynSym( pDynSym );
         hb_vmPushNil();
-        hb_vmDo( 0 );
+        hb_vmDo(0);
         PHB_ITEM pTempObject = hb_itemNew( NULL );
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
         PHB_ITEM pTempItem = hb_itemNew( NULL );
-        hb_itemPutPtr( pTempItem, static_cast< QDeclarativeError * >( new QDeclarativeError( warnings [i] ) ) );
+        hb_itemPutPtr( pTempItem, static_cast<QDeclarativeError*>( new QDeclarativeError( warnings [i] ) ) );
         hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
         hb_arrayAddForward( pWarnings, pTempObject );
         hb_itemRelease( pTempObject );
@@ -78,9 +78,9 @@ void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warning
 
 void QDeclarativeEngineSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QDeclarativeEngine * obj = qobject_cast< QDeclarativeEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QDeclarativeEngine * obj = qobject_cast<QDeclarativeEngine*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QDeclarativeEngineSlots * s = QCoreApplication::instance()->findChild<QDeclarativeEngineSlots *>();
 
