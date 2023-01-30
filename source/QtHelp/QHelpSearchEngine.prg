@@ -64,34 +64,33 @@ QHelpSearchEngine( QHelpEngineCore * helpEngine, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_NEW )
 {
-  if( ISBETWEEN( 1, 2 ) && ISQHELPENGINECORE( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
+  if( ISBETWEEN(1, 2) && ISQHELPENGINECORE(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
   {
-    QHelpSearchEngine * obj = new QHelpSearchEngine( PQHELPENGINECORE( 1 ), OPQOBJECT( 2, 0 ) );
+    QHelpSearchEngine * obj = new QHelpSearchEngine( PQHELPENGINECORE(1), OPQOBJECT( 2, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QHELPSEARCHENGINE_DELETE )
 {
-  QHelpSearchEngine * obj = qobject_cast< QHelpSearchEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpSearchEngine * obj = qobject_cast<QHelpSearchEngine*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -99,12 +98,12 @@ int hitCount() const
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_HITCOUNT )
 {
-  QHelpSearchEngine * obj = qobject_cast< QHelpSearchEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpSearchEngine * obj = qobject_cast<QHelpSearchEngine*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->hitCount() );
@@ -112,7 +111,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_HITCOUNT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -123,28 +122,28 @@ QList<QHelpSearchQuery> query() const
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERY )
 {
-  QHelpSearchEngine * obj = qobject_cast< QHelpSearchEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpSearchEngine * obj = qobject_cast<QHelpSearchEngine*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QList<QHelpSearchQuery> list = obj->query();
       PHB_DYNS pDynSym = hb_dynsymFindName( "QHELPSEARCHQUERY" );
-      PHB_ITEM pArray = hb_itemArrayNew( 0 );
+      PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
         for( int i = 0; i < list.count(); i++ )
         {
           hb_vmPushDynSym( pDynSym );
           hb_vmPushNil();
-          hb_vmDo( 0 );
+          hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
           PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, static_cast< QHelpSearchQuery * >( new QHelpSearchQuery( list[i] ) ) );
+          hb_itemPutPtr( pItem, static_cast<QHelpSearchQuery*>( new QHelpSearchQuery( list[i] ) ) );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           PHB_ITEM pDestroy = hb_itemNew( NULL );
@@ -164,7 +163,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERY )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -175,12 +174,12 @@ QHelpSearchQueryWidget * queryWidget()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERYWIDGET )
 {
-  QHelpSearchEngine * obj = qobject_cast< QHelpSearchEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpSearchEngine * obj = qobject_cast<QHelpSearchEngine*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QHelpSearchQueryWidget * ptr = obj->queryWidget();
@@ -189,7 +188,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERYWIDGET )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -200,12 +199,12 @@ QHelpSearchResultWidget * resultWidget()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_RESULTWIDGET )
 {
-  QHelpSearchEngine * obj = qobject_cast< QHelpSearchEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpSearchEngine * obj = qobject_cast<QHelpSearchEngine*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QHelpSearchResultWidget * ptr = obj->resultWidget();
@@ -214,7 +213,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_RESULTWIDGET )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -225,12 +224,12 @@ void cancelIndexing()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELINDEXING )
 {
-  QHelpSearchEngine * obj = qobject_cast< QHelpSearchEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpSearchEngine * obj = qobject_cast<QHelpSearchEngine*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->cancelIndexing();
@@ -238,12 +237,12 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELINDEXING )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -251,12 +250,12 @@ void cancelSearching()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELSEARCHING )
 {
-  QHelpSearchEngine * obj = qobject_cast< QHelpSearchEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpSearchEngine * obj = qobject_cast<QHelpSearchEngine*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->cancelSearching();
@@ -264,12 +263,12 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_CANCELSEARCHING )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -277,12 +276,12 @@ void reindexDocumentation()
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_REINDEXDOCUMENTATION )
 {
-  QHelpSearchEngine * obj = qobject_cast< QHelpSearchEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpSearchEngine * obj = qobject_cast<QHelpSearchEngine*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->reindexDocumentation();
@@ -290,12 +289,12 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_REINDEXDOCUMENTATION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -303,12 +302,12 @@ void search( const QList<QHelpSearchQuery> & queryList )
 */
 HB_FUNC_STATIC( QHELPSEARCHENGINE_SEARCH )
 {
-  QHelpSearchEngine * obj = qobject_cast< QHelpSearchEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpSearchEngine * obj = qobject_cast<QHelpSearchEngine*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISARRAY( 1 ) )
+    if( ISNUMPAR(1) && HB_ISARRAY(1) )
     {
 #endif
       QList<QHelpSearchQuery> par1;
@@ -316,19 +315,19 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_SEARCH )
       int nLen1 = hb_arrayLen( aList1 );
       for( int i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << *static_cast< QHelpSearchQuery * >( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+        par1 << *static_cast<QHelpSearchQuery*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
       }
       obj->search( par1 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 void QHelpSearchEngineSlots_connect_signal( const QString & signal, const QString & slot );

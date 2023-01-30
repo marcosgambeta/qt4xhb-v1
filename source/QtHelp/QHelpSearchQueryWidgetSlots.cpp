@@ -22,7 +22,7 @@ QHelpSearchQueryWidgetSlots::~QHelpSearchQueryWidgetSlots()
 
 void QHelpSearchQueryWidgetSlots::search()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "search()" );
 
@@ -38,9 +38,9 @@ void QHelpSearchQueryWidgetSlots::search()
 
 void QHelpSearchQueryWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpSearchQueryWidget * obj = qobject_cast< QHelpSearchQueryWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpSearchQueryWidget * obj = qobject_cast<QHelpSearchQueryWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QHelpSearchQueryWidgetSlots * s = QCoreApplication::instance()->findChild<QHelpSearchQueryWidgetSlots *>();
 

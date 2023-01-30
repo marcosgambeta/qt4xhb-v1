@@ -58,19 +58,18 @@ RETURN
 
 HB_FUNC_STATIC( QHELPCONTENTITEM_DELETE )
 {
-  QHelpContentItem * obj = static_cast< QHelpContentItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QHelpContentItem * obj = static_cast<QHelpContentItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -78,21 +77,21 @@ QHelpContentItem * child( int row ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_CHILD )
 {
-  QHelpContentItem * obj = static_cast< QHelpContentItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QHelpContentItem * obj = static_cast<QHelpContentItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISNUM( 1 ) )
+    if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QHelpContentItem * ptr = obj->child( PINT( 1 ) );
+      QHelpContentItem * ptr = obj->child( PINT(1) );
       Qt4xHb::createReturnClass( ptr, "QHELPCONTENTITEM", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -103,12 +102,12 @@ int childCount() const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDCOUNT )
 {
-  QHelpContentItem * obj = static_cast< QHelpContentItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QHelpContentItem * obj = static_cast<QHelpContentItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->childCount() );
@@ -116,7 +115,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDCOUNT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -127,20 +126,20 @@ int childPosition( QHelpContentItem * child ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDPOSITION )
 {
-  QHelpContentItem * obj = static_cast< QHelpContentItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QHelpContentItem * obj = static_cast<QHelpContentItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQHELPCONTENTITEM( 1 ) )
+    if( ISNUMPAR(1) && ISQHELPCONTENTITEM(1) )
     {
 #endif
-      RINT( obj->childPosition( PQHELPCONTENTITEM( 1 ) ) );
+      RINT( obj->childPosition( PQHELPCONTENTITEM(1) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -151,12 +150,12 @@ QHelpContentItem * parent() const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_PARENT )
 {
-  QHelpContentItem * obj = static_cast< QHelpContentItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QHelpContentItem * obj = static_cast<QHelpContentItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QHelpContentItem * ptr = obj->parent();
@@ -165,7 +164,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_PARENT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -176,12 +175,12 @@ int row() const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_ROW )
 {
-  QHelpContentItem * obj = static_cast< QHelpContentItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QHelpContentItem * obj = static_cast<QHelpContentItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RINT( obj->row() );
@@ -189,7 +188,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_ROW )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -200,12 +199,12 @@ QString title() const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_TITLE )
 {
-  QHelpContentItem * obj = static_cast< QHelpContentItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QHelpContentItem * obj = static_cast<QHelpContentItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->title() );
@@ -213,7 +212,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_TITLE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -224,12 +223,12 @@ QUrl url() const
 */
 HB_FUNC_STATIC( QHELPCONTENTITEM_URL )
 {
-  QHelpContentItem * obj = static_cast< QHelpContentItem * >( Qt4xHb::itemGetPtrStackSelfItem() );
+  QHelpContentItem * obj = static_cast<QHelpContentItem*>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QUrl * ptr = new QUrl( obj->url() );
@@ -238,7 +237,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_URL )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -248,27 +247,27 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_NEWFROM )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT( 1 ) )
+  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER( 1 ) )
+  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast< void * >( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    hb_objSendMsg(self, "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
     PHB_ITEM des = hb_itemPutL( NULL, false );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
   hb_itemReturn( self );
@@ -293,15 +292,15 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_SETSELFDESTRUCTION )
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG( 1 ) )
+  if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl( 1 ) );
+    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
     hb_objSendMsg( self, "_self_destruction", 1, des );
     hb_itemRelease( des );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
   hb_itemReturn( self );

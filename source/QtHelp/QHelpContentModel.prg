@@ -55,21 +55,20 @@ RETURN
 
 HB_FUNC_STATIC( QHELPCONTENTMODEL_DELETE )
 {
-  QHelpContentModel * obj = qobject_cast< QHelpContentModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpContentModel * obj = qobject_cast<QHelpContentModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -77,21 +76,21 @@ QHelpContentItem * contentItemAt( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_CONTENTITEMAT )
 {
-  QHelpContentModel * obj = qobject_cast< QHelpContentModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpContentModel * obj = qobject_cast<QHelpContentModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QHelpContentItem * ptr = obj->contentItemAt( *PQMODELINDEX( 1 ) );
+      QHelpContentItem * ptr = obj->contentItemAt( *PQMODELINDEX(1) );
       Qt4xHb::createReturnClass( ptr, "QHELPCONTENTITEM", false );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -102,25 +101,25 @@ void createContents( const QString & customFilterName )
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_CREATECONTENTS )
 {
-  QHelpContentModel * obj = qobject_cast< QHelpContentModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpContentModel * obj = qobject_cast<QHelpContentModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->createContents( PQSTRING( 1 ) );
+      obj->createContents( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -128,12 +127,12 @@ bool isCreatingContents() const
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_ISCREATINGCONTENTS )
 {
-  QHelpContentModel * obj = qobject_cast< QHelpContentModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpContentModel * obj = qobject_cast<QHelpContentModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isCreatingContents() );
@@ -141,7 +140,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ISCREATINGCONTENTS )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -152,20 +151,20 @@ virtual int columnCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_COLUMNCOUNT )
 {
-  QHelpContentModel * obj = qobject_cast< QHelpContentModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpContentModel * obj = qobject_cast<QHelpContentModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( ISQMODELINDEX( 1 ) || HB_ISNIL( 1 ) ) )
+    if( ISBETWEEN(0, 1) && ( ISQMODELINDEX(1) || HB_ISNIL(1) ) )
     {
 #endif
-      RINT( obj->columnCount( HB_ISNIL( 1 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt4xHb::itemGetPtr( 1 ) ) ) );
+      RINT( obj->columnCount( HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(1) ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -176,21 +175,21 @@ virtual QVariant data( const QModelIndex & index, int role ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_DATA )
 {
-  QHelpContentModel * obj = qobject_cast< QHelpContentModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpContentModel * obj = qobject_cast<QHelpContentModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && ISQMODELINDEX( 1 ) && HB_ISNUM( 2 ) )
+    if( ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISNUM(2) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX( 1 ), PINT( 2 ) ) );
+      QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX(1), PINT(2) ) );
       Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -201,21 +200,21 @@ virtual QModelIndex index( int row, int column, const QModelIndex & parent = QMo
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_INDEX )
 {
-  QHelpContentModel * obj = qobject_cast< QHelpContentModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpContentModel * obj = qobject_cast<QHelpContentModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 2, 3 ) && HB_ISNUM( 1 ) && HB_ISNUM( 2 ) && ( ISQMODELINDEX( 3 ) || HB_ISNIL( 3 ) ) )
+    if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ( ISQMODELINDEX(3) || HB_ISNIL(3) ) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->index( PINT( 1 ), PINT( 2 ), HB_ISNIL( 3 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt4xHb::itemGetPtr( 3 ) ) ) );
+      QModelIndex * ptr = new QModelIndex( obj->index( PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(3) ) ) );
       Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -226,21 +225,21 @@ virtual QModelIndex parent( const QModelIndex & index ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_PARENT )
 {
-  QHelpContentModel * obj = qobject_cast< QHelpContentModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpContentModel * obj = qobject_cast<QHelpContentModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && ISQMODELINDEX( 1 ) )
+    if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->parent( *PQMODELINDEX( 1 ) ) );
+      QModelIndex * ptr = new QModelIndex( obj->parent( *PQMODELINDEX(1) ) );
       Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -251,20 +250,20 @@ virtual int rowCount( const QModelIndex & parent = QModelIndex() ) const
 */
 HB_FUNC_STATIC( QHELPCONTENTMODEL_ROWCOUNT )
 {
-  QHelpContentModel * obj = qobject_cast< QHelpContentModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpContentModel * obj = qobject_cast<QHelpContentModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( ISQMODELINDEX( 1 ) || HB_ISNIL( 1 ) ) )
+    if( ISBETWEEN(0, 1) && ( ISQMODELINDEX(1) || HB_ISNIL(1) ) )
     {
 #endif
-      RINT( obj->rowCount( HB_ISNIL( 1 ) ? QModelIndex() : *static_cast< QModelIndex * >( Qt4xHb::itemGetPtr( 1 ) ) ) );
+      RINT( obj->rowCount( HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(1) ) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

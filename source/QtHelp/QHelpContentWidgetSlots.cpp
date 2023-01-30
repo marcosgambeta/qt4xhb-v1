@@ -22,7 +22,7 @@ QHelpContentWidgetSlots::~QHelpContentWidgetSlots()
 
 void QHelpContentWidgetSlots::linkActivated( const QUrl & link )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "linkActivated(QUrl)" );
 
@@ -40,9 +40,9 @@ void QHelpContentWidgetSlots::linkActivated( const QUrl & link )
 
 void QHelpContentWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpContentWidget * obj = qobject_cast< QHelpContentWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpContentWidget * obj = qobject_cast<QHelpContentWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QHelpContentWidgetSlots * s = QCoreApplication::instance()->findChild<QHelpContentWidgetSlots *>();
 

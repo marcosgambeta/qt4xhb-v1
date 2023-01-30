@@ -22,7 +22,7 @@ QHelpIndexWidgetSlots::~QHelpIndexWidgetSlots()
 
 void QHelpIndexWidgetSlots::linkActivated( const QUrl & link, const QString & keyword )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "linkActivated(QUrl,QString)" );
 
@@ -42,9 +42,9 @@ void QHelpIndexWidgetSlots::linkActivated( const QUrl & link, const QString & ke
 
 void QHelpIndexWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpIndexWidget * obj = qobject_cast< QHelpIndexWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpIndexWidget * obj = qobject_cast<QHelpIndexWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QHelpIndexWidgetSlots * s = QCoreApplication::instance()->findChild<QHelpIndexWidgetSlots *>();
 

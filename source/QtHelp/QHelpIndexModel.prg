@@ -50,25 +50,25 @@ void createIndex( const QString & customFilterName )
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_CREATEINDEX )
 {
-  QHelpIndexModel * obj = qobject_cast< QHelpIndexModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpIndexModel * obj = qobject_cast<QHelpIndexModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      obj->createIndex( PQSTRING( 1 ) );
+      obj->createIndex( PQSTRING(1) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -76,21 +76,21 @@ QModelIndex filter( const QString & filter, const QString & wildcard = QString()
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_FILTER )
 {
-  QHelpIndexModel * obj = qobject_cast< QHelpIndexModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpIndexModel * obj = qobject_cast<QHelpIndexModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->filter( PQSTRING( 1 ), OPQSTRING( 2, QString() ) ) );
+      QModelIndex * ptr = new QModelIndex( obj->filter( PQSTRING(1), OPQSTRING( 2, QString() ) ) );
       Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -101,12 +101,12 @@ bool isCreatingIndex() const
 */
 HB_FUNC_STATIC( QHELPINDEXMODEL_ISCREATINGINDEX )
 {
-  QHelpIndexModel * obj = qobject_cast< QHelpIndexModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpIndexModel * obj = qobject_cast<QHelpIndexModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isCreatingIndex() );
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ISCREATINGINDEX )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }

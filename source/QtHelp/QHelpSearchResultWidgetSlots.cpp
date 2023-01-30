@@ -22,7 +22,7 @@ QHelpSearchResultWidgetSlots::~QHelpSearchResultWidgetSlots()
 
 void QHelpSearchResultWidgetSlots::requestShowLink( const QUrl & link )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "requestShowLink(QUrl)" );
 
@@ -40,9 +40,9 @@ void QHelpSearchResultWidgetSlots::requestShowLink( const QUrl & link )
 
 void QHelpSearchResultWidgetSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpSearchResultWidget * obj = qobject_cast< QHelpSearchResultWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpSearchResultWidget * obj = qobject_cast<QHelpSearchResultWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QHelpSearchResultWidgetSlots * s = QCoreApplication::instance()->findChild<QHelpSearchResultWidgetSlots *>();
 

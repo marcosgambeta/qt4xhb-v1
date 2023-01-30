@@ -22,7 +22,7 @@ QHelpSearchEngineSlots::~QHelpSearchEngineSlots()
 
 void QHelpSearchEngineSlots::indexingFinished()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "indexingFinished()" );
 
@@ -38,7 +38,7 @@ void QHelpSearchEngineSlots::indexingFinished()
 
 void QHelpSearchEngineSlots::indexingStarted()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "indexingStarted()" );
 
@@ -54,7 +54,7 @@ void QHelpSearchEngineSlots::indexingStarted()
 
 void QHelpSearchEngineSlots::searchingFinished( int hits )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "searchingFinished(int)" );
 
@@ -72,7 +72,7 @@ void QHelpSearchEngineSlots::searchingFinished( int hits )
 
 void QHelpSearchEngineSlots::searchingStarted()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "searchingStarted()" );
 
@@ -88,9 +88,9 @@ void QHelpSearchEngineSlots::searchingStarted()
 
 void QHelpSearchEngineSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpSearchEngine * obj = qobject_cast< QHelpSearchEngine * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpSearchEngine * obj = qobject_cast<QHelpSearchEngine*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QHelpSearchEngineSlots * s = QCoreApplication::instance()->findChild<QHelpSearchEngineSlots *>();
 

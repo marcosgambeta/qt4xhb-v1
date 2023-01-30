@@ -22,7 +22,7 @@ QHelpContentModelSlots::~QHelpContentModelSlots()
 
 void QHelpContentModelSlots::contentsCreated()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "contentsCreated()" );
 
@@ -38,7 +38,7 @@ void QHelpContentModelSlots::contentsCreated()
 
 void QHelpContentModelSlots::contentsCreationStarted()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "contentsCreationStarted()" );
 
@@ -54,9 +54,9 @@ void QHelpContentModelSlots::contentsCreationStarted()
 
 void QHelpContentModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpContentModel * obj = qobject_cast< QHelpContentModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpContentModel * obj = qobject_cast<QHelpContentModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QHelpContentModelSlots * s = QCoreApplication::instance()->findChild<QHelpContentModelSlots *>();
 

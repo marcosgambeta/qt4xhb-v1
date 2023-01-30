@@ -22,7 +22,7 @@ QHelpIndexModelSlots::~QHelpIndexModelSlots()
 
 void QHelpIndexModelSlots::indexCreated()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "indexCreated()" );
 
@@ -38,7 +38,7 @@ void QHelpIndexModelSlots::indexCreated()
 
 void QHelpIndexModelSlots::indexCreationStarted()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "indexCreationStarted()" );
 
@@ -54,9 +54,9 @@ void QHelpIndexModelSlots::indexCreationStarted()
 
 void QHelpIndexModelSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpIndexModel * obj = qobject_cast< QHelpIndexModel * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpIndexModel * obj = qobject_cast<QHelpIndexModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QHelpIndexModelSlots * s = QCoreApplication::instance()->findChild<QHelpIndexModelSlots *>();
 

@@ -47,12 +47,12 @@ void activateCurrentItem()
 */
 HB_FUNC_STATIC( QHELPINDEXWIDGET_ACTIVATECURRENTITEM )
 {
-  QHelpIndexWidget * obj = qobject_cast< QHelpIndexWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpIndexWidget * obj = qobject_cast<QHelpIndexWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->activateCurrentItem();
@@ -60,12 +60,12 @@ HB_FUNC_STATIC( QHELPINDEXWIDGET_ACTIVATECURRENTITEM )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -73,25 +73,25 @@ void filterIndices( const QString & filter, const QString & wildcard = QString()
 */
 HB_FUNC_STATIC( QHELPINDEXWIDGET_FILTERINDICES )
 {
-  QHelpIndexWidget * obj = qobject_cast< QHelpIndexWidget * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpIndexWidget * obj = qobject_cast<QHelpIndexWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 1, 2 ) && HB_ISCHAR( 1 ) && ( HB_ISCHAR( 2 ) || HB_ISNIL( 2 ) ) )
+    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
     {
 #endif
-      obj->filterIndices( PQSTRING( 1 ), OPQSTRING( 2, QString() ) );
+      obj->filterIndices( PQSTRING(1), OPQSTRING( 2, QString() ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 void QHelpIndexWidgetSlots_connect_signal( const QString & signal, const QString & slot );

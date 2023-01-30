@@ -22,7 +22,7 @@ QHelpEngineCoreSlots::~QHelpEngineCoreSlots()
 
 void QHelpEngineCoreSlots::currentFilterChanged( const QString & newFilter )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentFilterChanged(QString)" );
 
@@ -40,7 +40,7 @@ void QHelpEngineCoreSlots::currentFilterChanged( const QString & newFilter )
 
 void QHelpEngineCoreSlots::setupFinished()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "setupFinished()" );
 
@@ -56,7 +56,7 @@ void QHelpEngineCoreSlots::setupFinished()
 
 void QHelpEngineCoreSlots::setupStarted()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "setupStarted()" );
 
@@ -72,7 +72,7 @@ void QHelpEngineCoreSlots::setupStarted()
 
 void QHelpEngineCoreSlots::warning( const QString & msg )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "warning(QString)" );
 
@@ -90,9 +90,9 @@ void QHelpEngineCoreSlots::warning( const QString & msg )
 
 void QHelpEngineCoreSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QHelpEngineCore * obj = qobject_cast< QHelpEngineCore * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QHelpEngineCore * obj = qobject_cast<QHelpEngineCore*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QHelpEngineCoreSlots * s = QCoreApplication::instance()->findChild<QHelpEngineCoreSlots *>();
 
