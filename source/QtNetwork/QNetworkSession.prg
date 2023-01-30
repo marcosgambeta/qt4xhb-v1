@@ -74,34 +74,33 @@ QNetworkSession( const QNetworkConfiguration & connectionConfig, QObject * paren
 */
 HB_FUNC_STATIC( QNETWORKSESSION_NEW )
 {
-  if( ISBETWEEN( 1, 2 ) && ISQNETWORKCONFIGURATION( 1 ) && ( ISQOBJECT( 2 ) || HB_ISNIL( 2 ) ) )
+  if( ISBETWEEN(1, 2) && ISQNETWORKCONFIGURATION(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
   {
-    QNetworkSession * obj = new QNetworkSession( *PQNETWORKCONFIGURATION( 1 ), OPQOBJECT( 2, 0 ) );
+    QNetworkSession * obj = new QNetworkSession( *PQNETWORKCONFIGURATION(1), OPQOBJECT( 2, 0 ) );
     Qt4xHb::returnNewObject( obj, false );
   }
   else
   {
-    hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
 
 HB_FUNC_STATIC( QNETWORKSESSION_DELETE )
 {
-  QNetworkSession * obj = qobject_cast< QNetworkSession * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QNetworkSession * obj = qobject_cast<QNetworkSession*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
-    Qt4xHb::Events_disconnect_all_events( obj, true );
-    Qt4xHb::Signals_disconnect_all_signals( obj, true );
+    Qt4xHb::Events_disconnect_all_events(obj, true);
+    Qt4xHb::Signals_disconnect_all_signals(obj, true);
     delete obj;
     obj = NULL;
-    PHB_ITEM self = hb_stackSelfItem();
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, NULL );
-    hb_objSendMsg( self, "_pointer", 1, ptr );
-    hb_itemRelease( ptr );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, NULL);
+    hb_objSendMsg(hb_stackSelfItem(), "_pointer", 1, ptr);
+    hb_itemRelease(ptr);
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -109,12 +108,12 @@ quint64 activeTime() const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ACTIVETIME )
 {
-  QNetworkSession * obj = qobject_cast< QNetworkSession * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QNetworkSession * obj = qobject_cast<QNetworkSession*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQUINT64( obj->activeTime() );
@@ -122,7 +121,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ACTIVETIME )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -133,12 +132,12 @@ quint64 bytesReceived() const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_BYTESRECEIVED )
 {
-  QNetworkSession * obj = qobject_cast< QNetworkSession * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QNetworkSession * obj = qobject_cast<QNetworkSession*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQUINT64( obj->bytesReceived() );
@@ -146,7 +145,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_BYTESRECEIVED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -157,12 +156,12 @@ quint64 bytesWritten() const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_BYTESWRITTEN )
 {
-  QNetworkSession * obj = qobject_cast< QNetworkSession * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QNetworkSession * obj = qobject_cast<QNetworkSession*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQUINT64( obj->bytesWritten() );
@@ -170,7 +169,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_BYTESWRITTEN )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -181,12 +180,12 @@ QNetworkConfiguration configuration() const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_CONFIGURATION )
 {
-  QNetworkSession * obj = qobject_cast< QNetworkSession * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QNetworkSession * obj = qobject_cast<QNetworkSession*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->configuration() );
@@ -195,7 +194,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_CONFIGURATION )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -206,12 +205,12 @@ QNetworkSession::SessionError error() const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ERROR )
 {
-  QNetworkSession * obj = qobject_cast< QNetworkSession * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QNetworkSession * obj = qobject_cast<QNetworkSession*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->error() );
@@ -219,7 +218,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ERROR )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -230,12 +229,12 @@ QString errorString() const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ERRORSTRING )
 {
-  QNetworkSession * obj = qobject_cast< QNetworkSession * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QNetworkSession * obj = qobject_cast<QNetworkSession*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RQSTRING( obj->errorString() );
@@ -243,7 +242,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ERRORSTRING )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -254,12 +253,12 @@ QNetworkInterface interface() const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_INTERFACE )
 {
-  QNetworkSession * obj = qobject_cast< QNetworkSession * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QNetworkSession * obj = qobject_cast<QNetworkSession*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       QNetworkInterface * ptr = new QNetworkInterface( obj->interface() );
@@ -268,7 +267,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_INTERFACE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -279,12 +278,12 @@ bool isOpen() const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ISOPEN )
 {
-  QNetworkSession * obj = qobject_cast< QNetworkSession * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QNetworkSession * obj = qobject_cast<QNetworkSession*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RBOOL( obj->isOpen() );
@@ -292,7 +291,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_ISOPEN )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -303,21 +302,21 @@ QVariant sessionProperty( const QString & key ) const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_SESSIONPROPERTY )
 {
-  QNetworkSession * obj = qobject_cast< QNetworkSession * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QNetworkSession * obj = qobject_cast<QNetworkSession*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 1 ) && HB_ISCHAR( 1 ) )
+    if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->sessionProperty( PQSTRING( 1 ) ) );
+      QVariant * ptr = new QVariant( obj->sessionProperty( PQSTRING(1) ) );
       Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -328,25 +327,25 @@ void setSessionProperty( const QString & key, const QVariant & value )
 */
 HB_FUNC_STATIC( QNETWORKSESSION_SETSESSIONPROPERTY )
 {
-  QNetworkSession * obj = qobject_cast< QNetworkSession * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QNetworkSession * obj = qobject_cast<QNetworkSession*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 2 ) && HB_ISCHAR( 1 ) && ISQVARIANT( 2 ) )
+    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2) )
     {
 #endif
-      obj->setSessionProperty( PQSTRING( 1 ), *PQVARIANT( 2 ) );
+      obj->setSessionProperty( PQSTRING(1), *PQVARIANT(2) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -354,12 +353,12 @@ QNetworkSession::State state() const
 */
 HB_FUNC_STATIC( QNETWORKSESSION_STATE )
 {
-  QNetworkSession * obj = qobject_cast< QNetworkSession * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QNetworkSession * obj = qobject_cast<QNetworkSession*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       RENUM( obj->state() );
@@ -367,7 +366,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_STATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -378,12 +377,12 @@ bool waitForOpened( int msecs = 30000 )
 */
 HB_FUNC_STATIC( QNETWORKSESSION_WAITFOROPENED )
 {
-  QNetworkSession * obj = qobject_cast< QNetworkSession * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QNetworkSession * obj = qobject_cast<QNetworkSession*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN( 0, 1 ) && ( HB_ISNUM( 1 ) || HB_ISNIL( 1 ) ) )
+    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
     {
 #endif
       RBOOL( obj->waitForOpened( OPINT( 1, 30000 ) ) );
@@ -391,7 +390,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_WAITFOROPENED )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
@@ -402,12 +401,12 @@ void accept()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_ACCEPT )
 {
-  QNetworkSession * obj = qobject_cast< QNetworkSession * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QNetworkSession * obj = qobject_cast<QNetworkSession*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->accept();
@@ -415,12 +414,12 @@ HB_FUNC_STATIC( QNETWORKSESSION_ACCEPT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -428,12 +427,12 @@ void close()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_CLOSE )
 {
-  QNetworkSession * obj = qobject_cast< QNetworkSession * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QNetworkSession * obj = qobject_cast<QNetworkSession*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->close();
@@ -441,12 +440,12 @@ HB_FUNC_STATIC( QNETWORKSESSION_CLOSE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -454,12 +453,12 @@ void ignore()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_IGNORE )
 {
-  QNetworkSession * obj = qobject_cast< QNetworkSession * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QNetworkSession * obj = qobject_cast<QNetworkSession*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->ignore();
@@ -467,12 +466,12 @@ HB_FUNC_STATIC( QNETWORKSESSION_IGNORE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -480,12 +479,12 @@ void migrate()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_MIGRATE )
 {
-  QNetworkSession * obj = qobject_cast< QNetworkSession * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QNetworkSession * obj = qobject_cast<QNetworkSession*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->migrate();
@@ -493,12 +492,12 @@ HB_FUNC_STATIC( QNETWORKSESSION_MIGRATE )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -506,12 +505,12 @@ void open()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_OPEN )
 {
-  QNetworkSession * obj = qobject_cast< QNetworkSession * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QNetworkSession * obj = qobject_cast<QNetworkSession*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->open();
@@ -519,12 +518,12 @@ HB_FUNC_STATIC( QNETWORKSESSION_OPEN )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -532,12 +531,12 @@ void reject()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_REJECT )
 {
-  QNetworkSession * obj = qobject_cast< QNetworkSession * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QNetworkSession * obj = qobject_cast<QNetworkSession*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->reject();
@@ -545,12 +544,12 @@ HB_FUNC_STATIC( QNETWORKSESSION_REJECT )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 /*
@@ -558,12 +557,12 @@ void stop()
 */
 HB_FUNC_STATIC( QNETWORKSESSION_STOP )
 {
-  QNetworkSession * obj = qobject_cast< QNetworkSession * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QNetworkSession * obj = qobject_cast<QNetworkSession*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR( 0 ) )
+    if( ISNUMPAR(0) )
     {
 #endif
       obj->stop();
@@ -571,12 +570,12 @@ HB_FUNC_STATIC( QNETWORKSESSION_STOP )
     }
     else
     {
-      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
     }
 #endif
   }
 
-  hb_itemReturn( hb_stackSelfItem() );
+  hb_itemReturn(hb_stackSelfItem());
 }
 
 void QNetworkSessionSlots_connect_signal( const QString & signal, const QString & slot );

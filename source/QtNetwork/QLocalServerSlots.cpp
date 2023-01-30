@@ -22,7 +22,7 @@ QLocalServerSlots::~QLocalServerSlots()
 
 void QLocalServerSlots::newConnection()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "newConnection()" );
 
@@ -38,9 +38,9 @@ void QLocalServerSlots::newConnection()
 
 void QLocalServerSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QLocalServer * obj = qobject_cast< QLocalServer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QLocalServer * obj = qobject_cast<QLocalServer*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QLocalServerSlots * s = QCoreApplication::instance()->findChild<QLocalServerSlots *>();
 

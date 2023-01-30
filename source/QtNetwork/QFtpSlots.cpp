@@ -22,7 +22,7 @@ QFtpSlots::~QFtpSlots()
 
 void QFtpSlots::commandFinished( int id, bool error )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "commandFinished(int,bool)" );
 
@@ -42,7 +42,7 @@ void QFtpSlots::commandFinished( int id, bool error )
 
 void QFtpSlots::commandStarted( int id )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "commandStarted(int)" );
 
@@ -60,7 +60,7 @@ void QFtpSlots::commandStarted( int id )
 
 void QFtpSlots::dataTransferProgress( qint64 done, qint64 total )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "dataTransferProgress(qint64,qint64)" );
 
@@ -80,7 +80,7 @@ void QFtpSlots::dataTransferProgress( qint64 done, qint64 total )
 
 void QFtpSlots::done( bool error )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "done(bool)" );
 
@@ -98,7 +98,7 @@ void QFtpSlots::done( bool error )
 
 void QFtpSlots::listInfo( const QUrlInfo & i )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "listInfo(QUrlInfo)" );
 
@@ -116,7 +116,7 @@ void QFtpSlots::listInfo( const QUrlInfo & i )
 
 void QFtpSlots::rawCommandReply( int replyCode, const QString & detail )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "rawCommandReply(int,QString)" );
 
@@ -136,7 +136,7 @@ void QFtpSlots::rawCommandReply( int replyCode, const QString & detail )
 
 void QFtpSlots::readyRead()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "readyRead()" );
 
@@ -152,7 +152,7 @@ void QFtpSlots::readyRead()
 
 void QFtpSlots::stateChanged( int state )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "stateChanged(int)" );
 
@@ -170,9 +170,9 @@ void QFtpSlots::stateChanged( int state )
 
 void QFtpSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QFtp * obj = qobject_cast< QFtp * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QFtpSlots * s = QCoreApplication::instance()->findChild<QFtpSlots *>();
 

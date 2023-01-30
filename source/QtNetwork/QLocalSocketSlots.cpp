@@ -22,7 +22,7 @@ QLocalSocketSlots::~QLocalSocketSlots()
 
 void QLocalSocketSlots::connected()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "connected()" );
 
@@ -38,7 +38,7 @@ void QLocalSocketSlots::connected()
 
 void QLocalSocketSlots::disconnected()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "disconnected()" );
 
@@ -54,14 +54,14 @@ void QLocalSocketSlots::disconnected()
 
 void QLocalSocketSlots::error( QLocalSocket::LocalSocketError socketError )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "error(QLocalSocket::LocalSocketError)" );
 
   if( cb )
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QLOCALSOCKET" );
-    PHB_ITEM pSocketError = hb_itemPutNI( NULL, static_cast< int >( socketError ) );
+    PHB_ITEM pSocketError = hb_itemPutNI( NULL, static_cast<int >( socketError ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pSocketError );
 
@@ -72,14 +72,14 @@ void QLocalSocketSlots::error( QLocalSocket::LocalSocketError socketError )
 
 void QLocalSocketSlots::stateChanged( QLocalSocket::LocalSocketState socketState )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "stateChanged(QLocalSocket::LocalSocketState)" );
 
   if( cb )
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QLOCALSOCKET" );
-    PHB_ITEM pSocketState = hb_itemPutNI( NULL, static_cast< int >( socketState ) );
+    PHB_ITEM pSocketState = hb_itemPutNI( NULL, static_cast<int >( socketState ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pSocketState );
 
@@ -90,9 +90,9 @@ void QLocalSocketSlots::stateChanged( QLocalSocket::LocalSocketState socketState
 
 void QLocalSocketSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QLocalSocket * obj = qobject_cast< QLocalSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QLocalSocket * obj = qobject_cast<QLocalSocket*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QLocalSocketSlots * s = QCoreApplication::instance()->findChild<QLocalSocketSlots *>();
 

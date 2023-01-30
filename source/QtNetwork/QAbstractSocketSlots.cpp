@@ -22,7 +22,7 @@ QAbstractSocketSlots::~QAbstractSocketSlots()
 
 void QAbstractSocketSlots::connected()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "connected()" );
 
@@ -38,7 +38,7 @@ void QAbstractSocketSlots::connected()
 
 void QAbstractSocketSlots::disconnected()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "disconnected()" );
 
@@ -54,14 +54,14 @@ void QAbstractSocketSlots::disconnected()
 
 void QAbstractSocketSlots::error( QAbstractSocket::SocketError socketError )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "error(QAbstractSocket::SocketError)" );
 
   if( cb )
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTSOCKET" );
-    PHB_ITEM pSocketError = hb_itemPutNI( NULL, static_cast< int >( socketError ) );
+    PHB_ITEM pSocketError = hb_itemPutNI( NULL, static_cast<int >( socketError ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pSocketError );
 
@@ -72,7 +72,7 @@ void QAbstractSocketSlots::error( QAbstractSocket::SocketError socketError )
 
 void QAbstractSocketSlots::hostFound()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "hostFound()" );
 
@@ -88,7 +88,7 @@ void QAbstractSocketSlots::hostFound()
 
 void QAbstractSocketSlots::proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
 
@@ -108,14 +108,14 @@ void QAbstractSocketSlots::proxyAuthenticationRequired( const QNetworkProxy & pr
 
 void QAbstractSocketSlots::stateChanged( QAbstractSocket::SocketState socketState )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "stateChanged(QAbstractSocket::SocketState)" );
 
   if( cb )
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTSOCKET" );
-    PHB_ITEM pSocketState = hb_itemPutNI( NULL, static_cast< int >( socketState ) );
+    PHB_ITEM pSocketState = hb_itemPutNI( NULL, static_cast<int >( socketState ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pSocketState );
 
@@ -126,9 +126,9 @@ void QAbstractSocketSlots::stateChanged( QAbstractSocket::SocketState socketStat
 
 void QAbstractSocketSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QAbstractSocket * obj = qobject_cast< QAbstractSocket * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QAbstractSocket * obj = qobject_cast<QAbstractSocket*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QAbstractSocketSlots * s = QCoreApplication::instance()->findChild<QAbstractSocketSlots *>();
 

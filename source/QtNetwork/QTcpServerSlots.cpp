@@ -22,7 +22,7 @@ QTcpServerSlots::~QTcpServerSlots()
 
 void QTcpServerSlots::newConnection()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "newConnection()" );
 
@@ -38,9 +38,9 @@ void QTcpServerSlots::newConnection()
 
 void QTcpServerSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QTcpServer * obj = qobject_cast< QTcpServer * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QTcpServer * obj = qobject_cast<QTcpServer*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QTcpServerSlots * s = QCoreApplication::instance()->findChild<QTcpServerSlots *>();
 

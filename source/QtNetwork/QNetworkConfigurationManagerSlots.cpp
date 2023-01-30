@@ -22,7 +22,7 @@ QNetworkConfigurationManagerSlots::~QNetworkConfigurationManagerSlots()
 
 void QNetworkConfigurationManagerSlots::configurationAdded( const QNetworkConfiguration & config )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "configurationAdded(QNetworkConfiguration)" );
 
@@ -40,7 +40,7 @@ void QNetworkConfigurationManagerSlots::configurationAdded( const QNetworkConfig
 
 void QNetworkConfigurationManagerSlots::configurationChanged( const QNetworkConfiguration & config )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "configurationChanged(QNetworkConfiguration)" );
 
@@ -58,7 +58,7 @@ void QNetworkConfigurationManagerSlots::configurationChanged( const QNetworkConf
 
 void QNetworkConfigurationManagerSlots::configurationRemoved( const QNetworkConfiguration & config )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "configurationRemoved(QNetworkConfiguration)" );
 
@@ -76,7 +76,7 @@ void QNetworkConfigurationManagerSlots::configurationRemoved( const QNetworkConf
 
 void QNetworkConfigurationManagerSlots::onlineStateChanged( bool isOnline )
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "onlineStateChanged(bool)" );
 
@@ -94,7 +94,7 @@ void QNetworkConfigurationManagerSlots::onlineStateChanged( bool isOnline )
 
 void QNetworkConfigurationManagerSlots::updateCompleted()
 {
-  QObject * object = qobject_cast< QObject * >( sender() );
+  QObject * object = qobject_cast<QObject*>( sender() );
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "updateCompleted()" );
 
@@ -110,9 +110,9 @@ void QNetworkConfigurationManagerSlots::updateCompleted()
 
 void QNetworkConfigurationManagerSlots_connect_signal( const QString & signal, const QString & slot )
 {
-  QNetworkConfigurationManager * obj = qobject_cast< QNetworkConfigurationManager * >( Qt4xHb::getQObjectPointerFromSelfItem() );
+  QNetworkConfigurationManager * obj = qobject_cast<QNetworkConfigurationManager*>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj )
+  if( obj != NULL )
   {
     QNetworkConfigurationManagerSlots * s = QCoreApplication::instance()->findChild<QNetworkConfigurationManagerSlots *>();
 
