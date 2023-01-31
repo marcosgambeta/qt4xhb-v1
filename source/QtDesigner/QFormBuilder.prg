@@ -52,7 +52,7 @@ HB_FUNC_STATIC( QFORMBUILDER_NEW )
   if( ISNUMPAR(0) )
   {
     QFormBuilder * obj = new QFormBuilder();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QFORMBUILDER_CUSTOMWIDGETS )
     {
 #endif
       QList<QDesignerCustomWidgetInterface *> list = obj->customWidgets();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QDESIGNERCUSTOMWIDGETINTERFACE" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QDESIGNERCUSTOMWIDGETINTERFACE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {

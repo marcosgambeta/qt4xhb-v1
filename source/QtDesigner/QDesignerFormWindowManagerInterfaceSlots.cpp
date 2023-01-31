@@ -12,7 +12,7 @@
 
 #include "QDesignerFormWindowManagerInterfaceSlots.h"
 
-QDesignerFormWindowManagerInterfaceSlots::QDesignerFormWindowManagerInterfaceSlots( QObject * parent ) : QObject( parent )
+QDesignerFormWindowManagerInterfaceSlots::QDesignerFormWindowManagerInterfaceSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,14 +22,14 @@ QDesignerFormWindowManagerInterfaceSlots::~QDesignerFormWindowManagerInterfaceSl
 
 void QDesignerFormWindowManagerInterfaceSlots::activeFormWindowChanged( QDesignerFormWindowInterface * formWindow )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activeFormWindowChanged(QDesignerFormWindowInterface*)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "activeFormWindowChanged(QDesignerFormWindowInterface*)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
-    PHB_ITEM pFormWindow = Qt4xHb::Signals_return_qobject( formWindow, "QDESIGNERFORMWINDOWINTERFACE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDESIGNERFORMWINDOWMANAGERINTERFACE");
+    PHB_ITEM pFormWindow = Qt4xHb::Signals_return_qobject( formWindow, "QDESIGNERFORMWINDOWINTERFACE");
 
     hb_vmEvalBlockV( cb, 2, pSender, pFormWindow );
 
@@ -40,14 +40,14 @@ void QDesignerFormWindowManagerInterfaceSlots::activeFormWindowChanged( QDesigne
 
 void QDesignerFormWindowManagerInterfaceSlots::formWindowAdded( QDesignerFormWindowInterface * formWindow )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "formWindowAdded(QDesignerFormWindowInterface*)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "formWindowAdded(QDesignerFormWindowInterface*)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
-    PHB_ITEM pFormWindow = Qt4xHb::Signals_return_qobject( formWindow, "QDESIGNERFORMWINDOWINTERFACE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDESIGNERFORMWINDOWMANAGERINTERFACE");
+    PHB_ITEM pFormWindow = Qt4xHb::Signals_return_qobject( formWindow, "QDESIGNERFORMWINDOWINTERFACE");
 
     hb_vmEvalBlockV( cb, 2, pSender, pFormWindow );
 
@@ -58,14 +58,14 @@ void QDesignerFormWindowManagerInterfaceSlots::formWindowAdded( QDesignerFormWin
 
 void QDesignerFormWindowManagerInterfaceSlots::formWindowRemoved( QDesignerFormWindowInterface * formWindow )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "formWindowRemoved(QDesignerFormWindowInterface*)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "formWindowRemoved(QDesignerFormWindowInterface*)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDESIGNERFORMWINDOWMANAGERINTERFACE" );
-    PHB_ITEM pFormWindow = Qt4xHb::Signals_return_qobject( formWindow, "QDESIGNERFORMWINDOWINTERFACE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDESIGNERFORMWINDOWMANAGERINTERFACE");
+    PHB_ITEM pFormWindow = Qt4xHb::Signals_return_qobject( formWindow, "QDESIGNERFORMWINDOWINTERFACE");
 
     hb_vmEvalBlockV( cb, 2, pSender, pFormWindow );
 
@@ -80,19 +80,19 @@ void QDesignerFormWindowManagerInterfaceSlots_connect_signal( const QString & si
 
   if( obj != NULL )
   {
-    QDesignerFormWindowManagerInterfaceSlots * s = QCoreApplication::instance()->findChild<QDesignerFormWindowManagerInterfaceSlots *>();
+    QDesignerFormWindowManagerInterfaceSlots * s = QCoreApplication::instance()->findChild<QDesignerFormWindowManagerInterfaceSlots*>();
 
     if( s == NULL )
     {
       s = new QDesignerFormWindowManagerInterfaceSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

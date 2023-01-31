@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONADJUSTSIZE )
     {
 #endif
       QAction * ptr = obj->actionAdjustSize();
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONBREAKLAYOUT )
     {
 #endif
       QAction * ptr = obj->actionBreakLayout();
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONCOPY )
     {
 #endif
       QAction * ptr = obj->actionCopy();
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONCUT )
     {
 #endif
       QAction * ptr = obj->actionCut();
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONDELETE )
     {
 #endif
       QAction * ptr = obj->actionDelete();
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONFORMLAYOUT )
     {
 #endif
       QAction * ptr = obj->actionFormLayout();
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONGRIDLAYOUT )
     {
 #endif
       QAction * ptr = obj->actionGridLayout();
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONHORIZONTALLAYOUT )
     {
 #endif
       QAction * ptr = obj->actionHorizontalLayout();
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONLOWER )
     {
 #endif
       QAction * ptr = obj->actionLower();
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONPASTE )
     {
 #endif
       QAction * ptr = obj->actionPaste();
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONRAISE )
     {
 #endif
       QAction * ptr = obj->actionRaise();
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONREDO )
     {
 #endif
       QAction * ptr = obj->actionRedo();
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSELECTALL )
     {
 #endif
       QAction * ptr = obj->actionSelectAll();
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSIMPLIFYLAYOUT )
     {
 #endif
       QAction * ptr = obj->actionSimplifyLayout();
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -457,7 +457,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSPLITHORIZONTAL )
     {
 #endif
       QAction * ptr = obj->actionSplitHorizontal();
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -482,7 +482,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONSPLITVERTICAL )
     {
 #endif
       QAction * ptr = obj->actionSplitVertical();
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -507,7 +507,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONUNDO )
     {
 #endif
       QAction * ptr = obj->actionUndo();
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -532,7 +532,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIONVERTICALLAYOUT )
     {
 #endif
       QAction * ptr = obj->actionVerticalLayout();
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ACTIVEFORMWINDOW )
     {
 #endif
       QDesignerFormWindowInterface * ptr = obj->activeFormWindow();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -582,7 +582,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_CORE )
     {
 #endif
       QDesignerFormEditorInterface * ptr = obj->core();
-      Qt4xHb::createReturnQObjectClass( ptr, "QDESIGNERFORMEDITORINTERFACE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QDESIGNERFORMEDITORINTERFACE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -607,7 +607,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_CREATEFORMWINDOW )
     {
 #endif
       QDesignerFormWindowInterface * ptr = obj->createFormWindow( OPQWIDGET( 1, 0 ), HB_ISNIL(2) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(2) );
-      Qt4xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -632,7 +632,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_FORMWINDOW )
     {
 #endif
       QDesignerFormWindowInterface * ptr = obj->formWindow( PINT(1) );
-      Qt4xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QDESIGNERFORMWINDOWINTERFACE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -745,21 +745,21 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_SETACTIVEFORMWINDOW )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QDesignerFormWindowManagerInterfaceSlots_connect_signal( const QString & signal, const QString & slot );
+void QDesignerFormWindowManagerInterfaceSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONACTIVEFORMWINDOWCHANGED )
 {
-  QDesignerFormWindowManagerInterfaceSlots_connect_signal( "activeFormWindowChanged(QDesignerFormWindowInterface*)", "activeFormWindowChanged(QDesignerFormWindowInterface*)" );
+  QDesignerFormWindowManagerInterfaceSlots_connect_signal("activeFormWindowChanged(QDesignerFormWindowInterface*)", "activeFormWindowChanged(QDesignerFormWindowInterface*)");
 }
 
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWADDED )
 {
-  QDesignerFormWindowManagerInterfaceSlots_connect_signal( "formWindowAdded(QDesignerFormWindowInterface*)", "formWindowAdded(QDesignerFormWindowInterface*)" );
+  QDesignerFormWindowManagerInterfaceSlots_connect_signal("formWindowAdded(QDesignerFormWindowInterface*)", "formWindowAdded(QDesignerFormWindowInterface*)");
 }
 
 HB_FUNC_STATIC( QDESIGNERFORMWINDOWMANAGERINTERFACE_ONFORMWINDOWREMOVED )
 {
-  QDesignerFormWindowManagerInterfaceSlots_connect_signal( "formWindowRemoved(QDesignerFormWindowInterface*)", "formWindowRemoved(QDesignerFormWindowInterface*)" );
+  QDesignerFormWindowManagerInterfaceSlots_connect_signal("formWindowRemoved(QDesignerFormWindowInterface*)", "formWindowRemoved(QDesignerFormWindowInterface*)");
 }
 
 #pragma ENDDUMP
