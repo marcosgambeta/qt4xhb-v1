@@ -12,7 +12,7 @@
 
 #include "QHelpIndexModelSlots.h"
 
-QHelpIndexModelSlots::QHelpIndexModelSlots( QObject * parent ) : QObject( parent )
+QHelpIndexModelSlots::QHelpIndexModelSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QHelpIndexModelSlots::~QHelpIndexModelSlots()
 
 void QHelpIndexModelSlots::indexCreated()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "indexCreated()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "indexCreated()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QHELPINDEXMODEL" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QHELPINDEXMODEL");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -38,13 +38,13 @@ void QHelpIndexModelSlots::indexCreated()
 
 void QHelpIndexModelSlots::indexCreationStarted()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "indexCreationStarted()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "indexCreationStarted()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QHELPINDEXMODEL" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QHELPINDEXMODEL");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -58,19 +58,19 @@ void QHelpIndexModelSlots_connect_signal( const QString & signal, const QString 
 
   if( obj != NULL )
   {
-    QHelpIndexModelSlots * s = QCoreApplication::instance()->findChild<QHelpIndexModelSlots *>();
+    QHelpIndexModelSlots * s = QCoreApplication::instance()->findChild<QHelpIndexModelSlots*>();
 
     if( s == NULL )
     {
       s = new QHelpIndexModelSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

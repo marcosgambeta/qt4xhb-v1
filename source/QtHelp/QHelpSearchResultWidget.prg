@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_LINKAT )
     {
 #endif
       QUrl * ptr = new QUrl( obj->linkAt( *PQPOINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QURL", true );
+      Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -86,11 +86,11 @@ HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_LINKAT )
   }
 }
 
-void QHelpSearchResultWidgetSlots_connect_signal( const QString & signal, const QString & slot );
+void QHelpSearchResultWidgetSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QHELPSEARCHRESULTWIDGET_ONREQUESTSHOWLINK )
 {
-  QHelpSearchResultWidgetSlots_connect_signal( "requestShowLink(QUrl)", "requestShowLink(QUrl)" );
+  QHelpSearchResultWidgetSlots_connect_signal("requestShowLink(QUrl)", "requestShowLink(QUrl)");
 }
 
 #pragma ENDDUMP

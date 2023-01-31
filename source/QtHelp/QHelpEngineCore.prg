@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_NEW )
   if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
   {
     QHelpEngineCore * obj = new QHelpEngineCore( PQSTRING(1), OPQOBJECT( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMVALUE )
     {
 #endif
       QVariant * ptr = new QVariant( obj->customValue( PQSTRING(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(2) ) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILEDATA )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->fileData( *PQURL(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILES )
     {
 #endif
       QList<QUrl> list = obj->files( PQSTRING(1), PQSTRINGLIST(2), OPQSTRING( 3, QString() ) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QURL");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_FINDFILE )
     {
 #endif
       QUrl * ptr = new QUrl( obj->findFile( *PQURL(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QURL", true );
+      Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -716,7 +716,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_METADATA )
   {
 #endif
     QVariant * ptr = new QVariant( QHelpEngineCore::metaData( PQSTRING(1), PQSTRING(2) ) );
-    Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+    Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -745,26 +745,26 @@ HB_FUNC_STATIC( QHELPENGINECORE_NAMESPACENAME )
 #endif
 }
 
-void QHelpEngineCoreSlots_connect_signal( const QString & signal, const QString & slot );
+void QHelpEngineCoreSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QHELPENGINECORE_ONCURRENTFILTERCHANGED )
 {
-  QHelpEngineCoreSlots_connect_signal( "currentFilterChanged(QString)", "currentFilterChanged(QString)" );
+  QHelpEngineCoreSlots_connect_signal("currentFilterChanged(QString)", "currentFilterChanged(QString)");
 }
 
 HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPFINISHED )
 {
-  QHelpEngineCoreSlots_connect_signal( "setupFinished()", "setupFinished()" );
+  QHelpEngineCoreSlots_connect_signal("setupFinished()", "setupFinished()");
 }
 
 HB_FUNC_STATIC( QHELPENGINECORE_ONSETUPSTARTED )
 {
-  QHelpEngineCoreSlots_connect_signal( "setupStarted()", "setupStarted()" );
+  QHelpEngineCoreSlots_connect_signal("setupStarted()", "setupStarted()");
 }
 
 HB_FUNC_STATIC( QHELPENGINECORE_ONWARNING )
 {
-  QHelpEngineCoreSlots_connect_signal( "warning(QString)", "warning(QString)" );
+  QHelpEngineCoreSlots_connect_signal("warning(QString)", "warning(QString)");
 }
 
 #pragma ENDDUMP

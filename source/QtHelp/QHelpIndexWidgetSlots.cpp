@@ -12,7 +12,7 @@
 
 #include "QHelpIndexWidgetSlots.h"
 
-QHelpIndexWidgetSlots::QHelpIndexWidgetSlots( QObject * parent ) : QObject( parent )
+QHelpIndexWidgetSlots::QHelpIndexWidgetSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,14 +22,14 @@ QHelpIndexWidgetSlots::~QHelpIndexWidgetSlots()
 
 void QHelpIndexWidgetSlots::linkActivated( const QUrl & link, const QString & keyword )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "linkActivated(QUrl,QString)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "linkActivated(QUrl,QString)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QHELPINDEXWIDGET" );
-    PHB_ITEM pLink = Qt4xHb::Signals_return_object( ( void * ) &link, "QURL" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QHELPINDEXWIDGET");
+    PHB_ITEM pLink = Qt4xHb::Signals_return_object( ( void * ) &link, "QURL");
     PHB_ITEM pKeyword = hb_itemPutC( NULL, QSTRINGTOSTRING( keyword ) );
 
     hb_vmEvalBlockV( cb, 3, pSender, pLink, pKeyword );
@@ -46,19 +46,19 @@ void QHelpIndexWidgetSlots_connect_signal( const QString & signal, const QString
 
   if( obj != NULL )
   {
-    QHelpIndexWidgetSlots * s = QCoreApplication::instance()->findChild<QHelpIndexWidgetSlots *>();
+    QHelpIndexWidgetSlots * s = QCoreApplication::instance()->findChild<QHelpIndexWidgetSlots*>();
 
     if( s == NULL )
     {
       s = new QHelpIndexWidgetSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

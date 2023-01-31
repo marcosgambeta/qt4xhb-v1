@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_CONTENTITEMAT )
     {
 #endif
       QHelpContentItem * ptr = obj->contentItemAt( *PQMODELINDEX(1) );
-      Qt4xHb::createReturnClass( ptr, "QHELPCONTENTITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QHELPCONTENTITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_DATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX(1), PINT(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_INDEX )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->index( PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(3) ) ) );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_PARENT )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->parent( *PQMODELINDEX(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -269,16 +269,16 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ROWCOUNT )
   }
 }
 
-void QHelpContentModelSlots_connect_signal( const QString & signal, const QString & slot );
+void QHelpContentModelSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QHELPCONTENTMODEL_ONCONTENTSCREATED )
 {
-  QHelpContentModelSlots_connect_signal( "contentsCreated()", "contentsCreated()" );
+  QHelpContentModelSlots_connect_signal("contentsCreated()", "contentsCreated()");
 }
 
 HB_FUNC_STATIC( QHELPCONTENTMODEL_ONCONTENTSCREATIONSTARTED )
 {
-  QHelpContentModelSlots_connect_signal( "contentsCreationStarted()", "contentsCreationStarted()" );
+  QHelpContentModelSlots_connect_signal("contentsCreationStarted()", "contentsCreationStarted()");
 }
 
 #pragma ENDDUMP

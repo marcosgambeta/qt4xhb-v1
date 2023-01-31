@@ -12,7 +12,7 @@
 
 #include "QHelpSearchResultWidgetSlots.h"
 
-QHelpSearchResultWidgetSlots::QHelpSearchResultWidgetSlots( QObject * parent ) : QObject( parent )
+QHelpSearchResultWidgetSlots::QHelpSearchResultWidgetSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,14 +22,14 @@ QHelpSearchResultWidgetSlots::~QHelpSearchResultWidgetSlots()
 
 void QHelpSearchResultWidgetSlots::requestShowLink( const QUrl & link )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "requestShowLink(QUrl)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "requestShowLink(QUrl)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QHELPSEARCHRESULTWIDGET" );
-    PHB_ITEM pLink = Qt4xHb::Signals_return_object( ( void * ) &link, "QURL" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QHELPSEARCHRESULTWIDGET");
+    PHB_ITEM pLink = Qt4xHb::Signals_return_object( ( void * ) &link, "QURL");
 
     hb_vmEvalBlockV( cb, 2, pSender, pLink );
 
@@ -44,19 +44,19 @@ void QHelpSearchResultWidgetSlots_connect_signal( const QString & signal, const 
 
   if( obj != NULL )
   {
-    QHelpSearchResultWidgetSlots * s = QCoreApplication::instance()->findChild<QHelpSearchResultWidgetSlots *>();
+    QHelpSearchResultWidgetSlots * s = QCoreApplication::instance()->findChild<QHelpSearchResultWidgetSlots*>();
 
     if( s == NULL )
     {
       s = new QHelpSearchResultWidgetSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

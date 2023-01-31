@@ -12,7 +12,7 @@
 
 #include "QHelpEngineCoreSlots.h"
 
-QHelpEngineCoreSlots::QHelpEngineCoreSlots( QObject * parent ) : QObject( parent )
+QHelpEngineCoreSlots::QHelpEngineCoreSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QHelpEngineCoreSlots::~QHelpEngineCoreSlots()
 
 void QHelpEngineCoreSlots::currentFilterChanged( const QString & newFilter )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentFilterChanged(QString)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "currentFilterChanged(QString)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QHELPENGINECORE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QHELPENGINECORE");
     PHB_ITEM pNewFilter = hb_itemPutC( NULL, QSTRINGTOSTRING( newFilter ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pNewFilter );
@@ -40,13 +40,13 @@ void QHelpEngineCoreSlots::currentFilterChanged( const QString & newFilter )
 
 void QHelpEngineCoreSlots::setupFinished()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "setupFinished()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "setupFinished()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QHELPENGINECORE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QHELPENGINECORE");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -56,13 +56,13 @@ void QHelpEngineCoreSlots::setupFinished()
 
 void QHelpEngineCoreSlots::setupStarted()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "setupStarted()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "setupStarted()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QHELPENGINECORE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QHELPENGINECORE");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -72,13 +72,13 @@ void QHelpEngineCoreSlots::setupStarted()
 
 void QHelpEngineCoreSlots::warning( const QString & msg )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "warning(QString)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "warning(QString)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QHELPENGINECORE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QHELPENGINECORE");
     PHB_ITEM pMsg = hb_itemPutC( NULL, QSTRINGTOSTRING( msg ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pMsg );
@@ -94,19 +94,19 @@ void QHelpEngineCoreSlots_connect_signal( const QString & signal, const QString 
 
   if( obj != NULL )
   {
-    QHelpEngineCoreSlots * s = QCoreApplication::instance()->findChild<QHelpEngineCoreSlots *>();
+    QHelpEngineCoreSlots * s = QCoreApplication::instance()->findChild<QHelpEngineCoreSlots*>();
 
     if( s == NULL )
     {
       s = new QHelpEngineCoreSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

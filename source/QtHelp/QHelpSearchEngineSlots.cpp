@@ -12,7 +12,7 @@
 
 #include "QHelpSearchEngineSlots.h"
 
-QHelpSearchEngineSlots::QHelpSearchEngineSlots( QObject * parent ) : QObject( parent )
+QHelpSearchEngineSlots::QHelpSearchEngineSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QHelpSearchEngineSlots::~QHelpSearchEngineSlots()
 
 void QHelpSearchEngineSlots::indexingFinished()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "indexingFinished()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "indexingFinished()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QHELPSEARCHENGINE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QHELPSEARCHENGINE");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -38,13 +38,13 @@ void QHelpSearchEngineSlots::indexingFinished()
 
 void QHelpSearchEngineSlots::indexingStarted()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "indexingStarted()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "indexingStarted()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QHELPSEARCHENGINE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QHELPSEARCHENGINE");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -54,13 +54,13 @@ void QHelpSearchEngineSlots::indexingStarted()
 
 void QHelpSearchEngineSlots::searchingFinished( int hits )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "searchingFinished(int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "searchingFinished(int)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QHELPSEARCHENGINE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QHELPSEARCHENGINE");
     PHB_ITEM pHits = hb_itemPutNI( NULL, hits );
 
     hb_vmEvalBlockV( cb, 2, pSender, pHits );
@@ -72,13 +72,13 @@ void QHelpSearchEngineSlots::searchingFinished( int hits )
 
 void QHelpSearchEngineSlots::searchingStarted()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "searchingStarted()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "searchingStarted()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QHELPSEARCHENGINE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QHELPSEARCHENGINE");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -92,19 +92,19 @@ void QHelpSearchEngineSlots_connect_signal( const QString & signal, const QStrin
 
   if( obj != NULL )
   {
-    QHelpSearchEngineSlots * s = QCoreApplication::instance()->findChild<QHelpSearchEngineSlots *>();
+    QHelpSearchEngineSlots * s = QCoreApplication::instance()->findChild<QHelpSearchEngineSlots*>();
 
     if( s == NULL )
     {
       s = new QHelpSearchEngineSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

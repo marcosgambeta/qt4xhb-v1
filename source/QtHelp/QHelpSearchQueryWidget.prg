@@ -52,7 +52,7 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_NEW )
   if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QHelpSearchQueryWidget * obj = new QHelpSearchQueryWidget( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_QUERY )
     {
 #endif
       QList<QHelpSearchQuery> list = obj->query();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QHELPSEARCHQUERY" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QHELPSEARCHQUERY");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -130,11 +130,11 @@ HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_QUERY )
   }
 }
 
-void QHelpSearchQueryWidgetSlots_connect_signal( const QString & signal, const QString & slot );
+void QHelpSearchQueryWidgetSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QHELPSEARCHQUERYWIDGET_ONSEARCH )
 {
-  QHelpSearchQueryWidgetSlots_connect_signal( "search()", "search()" );
+  QHelpSearchQueryWidgetSlots_connect_signal("search()", "search()");
 }
 
 #pragma ENDDUMP

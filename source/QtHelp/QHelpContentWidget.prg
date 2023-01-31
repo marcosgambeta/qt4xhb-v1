@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QHELPCONTENTWIDGET_INDEXOF )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->indexOf( *PQURL(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -67,11 +67,11 @@ HB_FUNC_STATIC( QHELPCONTENTWIDGET_INDEXOF )
   }
 }
 
-void QHelpContentWidgetSlots_connect_signal( const QString & signal, const QString & slot );
+void QHelpContentWidgetSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QHELPCONTENTWIDGET_ONLINKACTIVATED )
 {
-  QHelpContentWidgetSlots_connect_signal( "linkActivated(QUrl)", "linkActivated(QUrl)" );
+  QHelpContentWidgetSlots_connect_signal("linkActivated(QUrl)", "linkActivated(QUrl)");
 }
 
 #pragma ENDDUMP

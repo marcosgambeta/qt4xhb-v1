@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_NEW )
   if( ISBETWEEN(1, 2) && ISQHELPENGINECORE(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
   {
     QHelpSearchEngine * obj = new QHelpSearchEngine( PQHELPENGINECORE(1), OPQOBJECT( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERY )
     {
 #endif
       QList<QHelpSearchQuery> list = obj->query();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QHELPSEARCHQUERY" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QHELPSEARCHQUERY");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_QUERYWIDGET )
     {
 #endif
       QHelpSearchQueryWidget * ptr = obj->queryWidget();
-      Qt4xHb::createReturnQObjectClass( ptr, "QHELPSEARCHQUERYWIDGET" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QHELPSEARCHQUERYWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_RESULTWIDGET )
     {
 #endif
       QHelpSearchResultWidget * ptr = obj->resultWidget();
-      Qt4xHb::createReturnQObjectClass( ptr, "QHELPSEARCHRESULTWIDGET" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QHELPSEARCHRESULTWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -330,26 +330,26 @@ HB_FUNC_STATIC( QHELPSEARCHENGINE_SEARCH )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QHelpSearchEngineSlots_connect_signal( const QString & signal, const QString & slot );
+void QHelpSearchEngineSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QHELPSEARCHENGINE_ONINDEXINGFINISHED )
 {
-  QHelpSearchEngineSlots_connect_signal( "indexingFinished()", "indexingFinished()" );
+  QHelpSearchEngineSlots_connect_signal("indexingFinished()", "indexingFinished()");
 }
 
 HB_FUNC_STATIC( QHELPSEARCHENGINE_ONINDEXINGSTARTED )
 {
-  QHelpSearchEngineSlots_connect_signal( "indexingStarted()", "indexingStarted()" );
+  QHelpSearchEngineSlots_connect_signal("indexingStarted()", "indexingStarted()");
 }
 
 HB_FUNC_STATIC( QHELPSEARCHENGINE_ONSEARCHINGFINISHED )
 {
-  QHelpSearchEngineSlots_connect_signal( "searchingFinished(int)", "searchingFinished(int)" );
+  QHelpSearchEngineSlots_connect_signal("searchingFinished(int)", "searchingFinished(int)");
 }
 
 HB_FUNC_STATIC( QHELPSEARCHENGINE_ONSEARCHINGSTARTED )
 {
-  QHelpSearchEngineSlots_connect_signal( "searchingStarted()", "searchingStarted()" );
+  QHelpSearchEngineSlots_connect_signal("searchingStarted()", "searchingStarted()");
 }
 
 #pragma ENDDUMP

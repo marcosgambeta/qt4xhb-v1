@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_FILTER )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->filter( PQSTRING(1), OPQSTRING( 2, QString() ) ) );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,16 +120,16 @@ HB_FUNC_STATIC( QHELPINDEXMODEL_ISCREATINGINDEX )
   }
 }
 
-void QHelpIndexModelSlots_connect_signal( const QString & signal, const QString & slot );
+void QHelpIndexModelSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATED )
 {
-  QHelpIndexModelSlots_connect_signal( "indexCreated()", "indexCreated()" );
+  QHelpIndexModelSlots_connect_signal("indexCreated()", "indexCreated()");
 }
 
 HB_FUNC_STATIC( QHELPINDEXMODEL_ONINDEXCREATIONSTARTED )
 {
-  QHelpIndexModelSlots_connect_signal( "indexCreationStarted()", "indexCreationStarted()" );
+  QHelpIndexModelSlots_connect_signal("indexCreationStarted()", "indexCreationStarted()");
 }
 
 #pragma ENDDUMP
