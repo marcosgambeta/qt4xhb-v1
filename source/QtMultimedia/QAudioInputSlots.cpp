@@ -12,7 +12,7 @@
 
 #include "QAudioInputSlots.h"
 
-QAudioInputSlots::QAudioInputSlots( QObject * parent ) : QObject( parent )
+QAudioInputSlots::QAudioInputSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QAudioInputSlots::~QAudioInputSlots()
 
 void QAudioInputSlots::stateChanged( QAudio::State state )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "stateChanged(QAudio::State)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "stateChanged(QAudio::State)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QAUDIOINPUT" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QAUDIOINPUT");
     PHB_ITEM pState = hb_itemPutNI( NULL, static_cast<int >( state ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pState );
@@ -40,13 +40,13 @@ void QAudioInputSlots::stateChanged( QAudio::State state )
 
 void QAudioInputSlots::notify()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "notify()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "notify()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QAUDIOINPUT" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QAUDIOINPUT");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -60,19 +60,19 @@ void QAudioInputSlots_connect_signal( const QString & signal, const QString & sl
 
   if( obj != NULL )
   {
-    QAudioInputSlots * s = QCoreApplication::instance()->findChild<QAudioInputSlots *>();
+    QAudioInputSlots * s = QCoreApplication::instance()->findChild<QAudioInputSlots*>();
 
     if( s == NULL )
     {
       s = new QAudioInputSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

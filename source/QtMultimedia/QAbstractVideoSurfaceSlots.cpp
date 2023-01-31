@@ -12,7 +12,7 @@
 
 #include "QAbstractVideoSurfaceSlots.h"
 
-QAbstractVideoSurfaceSlots::QAbstractVideoSurfaceSlots( QObject * parent ) : QObject( parent )
+QAbstractVideoSurfaceSlots::QAbstractVideoSurfaceSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QAbstractVideoSurfaceSlots::~QAbstractVideoSurfaceSlots()
 
 void QAbstractVideoSurfaceSlots::activeChanged( bool active )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activeChanged(bool)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "activeChanged(bool)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTVIDEOSURFACE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTVIDEOSURFACE");
     PHB_ITEM pActive = hb_itemPutL( NULL, active );
 
     hb_vmEvalBlockV( cb, 2, pSender, pActive );
@@ -40,14 +40,14 @@ void QAbstractVideoSurfaceSlots::activeChanged( bool active )
 
 void QAbstractVideoSurfaceSlots::surfaceFormatChanged( const QVideoSurfaceFormat & format )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "surfaceFormatChanged(QVideoSurfaceFormat)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "surfaceFormatChanged(QVideoSurfaceFormat)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTVIDEOSURFACE" );
-    PHB_ITEM pFormat = Qt4xHb::Signals_return_object( ( void * ) &format, "QVIDEOSURFACEFORMAT" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTVIDEOSURFACE");
+    PHB_ITEM pFormat = Qt4xHb::Signals_return_object( ( void * ) &format, "QVIDEOSURFACEFORMAT");
 
     hb_vmEvalBlockV( cb, 2, pSender, pFormat );
 
@@ -58,13 +58,13 @@ void QAbstractVideoSurfaceSlots::surfaceFormatChanged( const QVideoSurfaceFormat
 
 void QAbstractVideoSurfaceSlots::supportedFormatsChanged()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "supportedFormatsChanged()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "supportedFormatsChanged()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTVIDEOSURFACE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTVIDEOSURFACE");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -78,19 +78,19 @@ void QAbstractVideoSurfaceSlots_connect_signal( const QString & signal, const QS
 
   if( obj != NULL )
   {
-    QAbstractVideoSurfaceSlots * s = QCoreApplication::instance()->findChild<QAbstractVideoSurfaceSlots *>();
+    QAbstractVideoSurfaceSlots * s = QCoreApplication::instance()->findChild<QAbstractVideoSurfaceSlots*>();
 
     if( s == NULL )
     {
       s = new QAbstractVideoSurfaceSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

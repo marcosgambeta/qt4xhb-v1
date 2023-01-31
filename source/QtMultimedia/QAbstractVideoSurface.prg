@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_NEARESTFORMAT )
     {
 #endif
       QVideoSurfaceFormat * ptr = new QVideoSurfaceFormat( obj->nearestFormat( *PQVIDEOSURFACEFORMAT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QVIDEOSURFACEFORMAT", true );
+      Qt4xHb::createReturnClass(ptr, "QVIDEOSURFACEFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SURFACEFORMAT )
     {
 #endif
       QVideoSurfaceFormat * ptr = new QVideoSurfaceFormat( obj->surfaceFormat() );
-      Qt4xHb::createReturnClass( ptr, "QVIDEOSURFACEFORMAT", true );
+      Qt4xHb::createReturnClass(ptr, "QVIDEOSURFACEFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -301,21 +301,21 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SURFACEFORMAT )
   }
 }
 
-void QAbstractVideoSurfaceSlots_connect_signal( const QString & signal, const QString & slot );
+void QAbstractVideoSurfaceSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONACTIVECHANGED )
 {
-  QAbstractVideoSurfaceSlots_connect_signal( "activeChanged(bool)", "activeChanged(bool)" );
+  QAbstractVideoSurfaceSlots_connect_signal("activeChanged(bool)", "activeChanged(bool)");
 }
 
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONSURFACEFORMATCHANGED )
 {
-  QAbstractVideoSurfaceSlots_connect_signal( "surfaceFormatChanged(QVideoSurfaceFormat)", "surfaceFormatChanged(QVideoSurfaceFormat)" );
+  QAbstractVideoSurfaceSlots_connect_signal("surfaceFormatChanged(QVideoSurfaceFormat)", "surfaceFormatChanged(QVideoSurfaceFormat)");
 }
 
 HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ONSUPPORTEDFORMATSCHANGED )
 {
-  QAbstractVideoSurfaceSlots_connect_signal( "supportedFormatsChanged()", "supportedFormatsChanged()" );
+  QAbstractVideoSurfaceSlots_connect_signal("supportedFormatsChanged()", "supportedFormatsChanged()");
 }
 
 #pragma ENDDUMP

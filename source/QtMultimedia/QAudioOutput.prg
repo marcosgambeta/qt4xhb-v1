@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_NEW )
     QAudioOutput( const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
     */
     QAudioOutput * obj = new QAudioOutput( HB_ISNIL(1) ? QAudioFormat() : *static_cast<QAudioFormat*>( Qt4xHb::itemGetPtr(1) ), OPQOBJECT( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 3) && ISQAUDIODEVICEINFO(1) && ( ISQAUDIOFORMAT(2) || HB_ISNIL(2) ) && ( ISQOBJECT(3) || HB_ISNIL(3) ) )
   {
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_NEW )
     QAudioOutput( const QAudioDeviceInfo & audioDevice, const QAudioFormat & format = QAudioFormat(), QObject * parent = 0 )
     */
     QAudioOutput * obj = new QAudioOutput( *PQAUDIODEVICEINFO(1), HB_ISNIL(2) ? QAudioFormat() : *static_cast<QAudioFormat*>( Qt4xHb::itemGetPtr(2) ), OPQOBJECT( 3, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_FORMAT )
     {
 #endif
       QAudioFormat * ptr = new QAudioFormat( obj->format() );
-      Qt4xHb::createReturnClass( ptr, "QAUDIOFORMAT", true );
+      Qt4xHb::createReturnClass(ptr, "QAUDIOFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -426,7 +426,7 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_START )
     if( obj != NULL )
     {
       QIODevice * ptr = obj->start();
-      Qt4xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QIODEVICE");
     }
   }
   else
@@ -511,16 +511,16 @@ HB_FUNC_STATIC( QAUDIOOUTPUT_SUSPEND )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QAudioOutputSlots_connect_signal( const QString & signal, const QString & slot );
+void QAudioOutputSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QAUDIOOUTPUT_ONNOTIFY )
 {
-  QAudioOutputSlots_connect_signal( "notify()", "notify()" );
+  QAudioOutputSlots_connect_signal("notify()", "notify()");
 }
 
 HB_FUNC_STATIC( QAUDIOOUTPUT_ONSTATECHANGED )
 {
-  QAudioOutputSlots_connect_signal( "stateChanged(QAudio::State)", "stateChanged(QAudio::State)" );
+  QAudioOutputSlots_connect_signal("stateChanged(QAudio::State)", "stateChanged(QAudio::State)");
 }
 
 #pragma ENDDUMP
