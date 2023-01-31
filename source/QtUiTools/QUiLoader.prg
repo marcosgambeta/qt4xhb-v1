@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QUILOADER_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QUiLoader * obj = new QUiLoader( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTION )
     {
 #endif
       QAction * ptr = obj->createAction( OPQOBJECT( 1, 0 ), OPQSTRING( 2, QString() ) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
     {
 #endif
       QActionGroup * ptr = obj->createActionGroup( OPQOBJECT( 1, 0 ), OPQSTRING( 2, QString() ) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTIONGROUP" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTIONGROUP");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
     {
 #endif
       QLayout * ptr = obj->createLayout( PQSTRING(1), OPQOBJECT( 2, 0 ), OPQSTRING( 3, QString() ) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QLAYOUT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QLAYOUT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
     {
 #endif
       QWidget * ptr = obj->createWidget( PQSTRING(1), OPQWIDGET( 2, 0 ), OPQSTRING( 3, QString() ) );
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QUILOADER_LOAD )
     {
 #endif
       QWidget * ptr = obj->load( PQIODEVICE(1), OPQWIDGET( 2, 0 ) );
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QUILOADER_WORKINGDIRECTORY )
     {
 #endif
       QDir * ptr = new QDir( obj->workingDirectory() );
-      Qt4xHb::createReturnClass( ptr, "QDIR", true );
+      Qt4xHb::createReturnClass(ptr, "QDIR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
