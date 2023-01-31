@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEW )
     QScriptEngine()
     */
     QScriptEngine * obj = new QScriptEngine();
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEW )
     QScriptEngine( QObject * parent )
     */
     QScriptEngine * obj = new QScriptEngine( PQOBJECT(1) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_AGENT )
     {
 #endif
       QScriptEngineAgent * ptr = obj->agent();
-      Qt4xHb::createReturnClass( ptr, "QSCRIPTENGINEAGENT", false );
+      Qt4xHb::createReturnClass(ptr, "QSCRIPTENGINEAGENT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_CURRENTCONTEXT )
     {
 #endif
       QScriptContext * ptr = obj->currentContext();
-      Qt4xHb::createReturnClass( ptr, "QSCRIPTCONTEXT", false );
+      Qt4xHb::createReturnClass(ptr, "QSCRIPTCONTEXT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_DEFAULTPROTOTYPE )
     {
 #endif
       QScriptValue * ptr = new QScriptValue( obj->defaultPrototype( PINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+      Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE )
     if( obj != NULL )
     {
       QScriptValue * ptr = new QScriptValue( obj->evaluate( PQSTRING(1), OPQSTRING( 2, QString() ), OPINT( 3, 1 ) ) );
-      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+      Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
   }
   else if( ISNUMPAR(1) && ISQSCRIPTPROGRAM(1) )
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_EVALUATE )
     if( obj != NULL )
     {
       QScriptValue * ptr = new QScriptValue( obj->evaluate( *PQSCRIPTPROGRAM(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+      Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
   }
   else
@@ -349,7 +349,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_GLOBALOBJECT )
     {
 #endif
       QScriptValue * ptr = new QScriptValue( obj->globalObject() );
-      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+      Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_IMPORTEXTENSION )
     {
 #endif
       QScriptValue * ptr = new QScriptValue( obj->importExtension( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+      Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -497,7 +497,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWARRAY )
     {
 #endif
       QScriptValue * ptr = new QScriptValue( obj->newArray( OPUINT( 1, 0 ) ) );
-      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+      Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP )
     if( obj != NULL )
     {
       QScriptValue * ptr = new QScriptValue( obj->newRegExp( *PQREGEXP(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+      Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWREGEXP )
     if( obj != NULL )
     {
       QScriptValue * ptr = new QScriptValue( obj->newRegExp( PQSTRING(1), PQSTRING(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+      Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
   }
   else
@@ -554,7 +554,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT )
     if( obj != NULL )
     {
       QScriptValue * ptr = new QScriptValue( obj->newVariant( *PQVARIANT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+      Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
   }
   else if( ISNUMPAR(2) && ISQSCRIPTVALUE(1) && ISQVARIANT(2) )
@@ -567,7 +567,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NEWVARIANT )
     if( obj != NULL )
     {
       QScriptValue * ptr = new QScriptValue( obj->newVariant( *PQSCRIPTVALUE(1), *PQVARIANT(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+      Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
     }
   }
   else
@@ -590,7 +590,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_NULLVALUE )
     {
 #endif
       QScriptValue * ptr = new QScriptValue( obj->nullValue() );
-      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+      Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -665,7 +665,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_PUSHCONTEXT )
     {
 #endif
       QScriptContext * ptr = obj->pushContext();
-      Qt4xHb::createReturnClass( ptr, "QSCRIPTCONTEXT", false );
+      Qt4xHb::createReturnClass(ptr, "QSCRIPTCONTEXT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -820,7 +820,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_TOOBJECT )
     {
 #endif
       QScriptValue * ptr = new QScriptValue( obj->toObject( *PQSCRIPTVALUE(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+      Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -845,7 +845,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_TOSTRINGHANDLE )
     {
 #endif
       QScriptString * ptr = new QScriptString( obj->toStringHandle( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QSCRIPTSTRING", true );
+      Qt4xHb::createReturnClass(ptr, "QSCRIPTSTRING", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -870,7 +870,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_UNCAUGHTEXCEPTION )
     {
 #endif
       QScriptValue * ptr = new QScriptValue( obj->uncaughtException() );
-      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+      Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -943,7 +943,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_UNDEFINEDVALUE )
     {
 #endif
       QScriptValue * ptr = new QScriptValue( obj->undefinedValue() );
-      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+      Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -964,7 +964,7 @@ HB_FUNC_STATIC( QSCRIPTENGINE_CHECKSYNTAX )
   {
 #endif
     QScriptSyntaxCheckResult * ptr = new QScriptSyntaxCheckResult( QScriptEngine::checkSyntax( PQSTRING(1) ) );
-    Qt4xHb::createReturnClass( ptr, "QSCRIPTSYNTAXCHECKRESULT", true );
+    Qt4xHb::createReturnClass(ptr, "QSCRIPTSYNTAXCHECKRESULT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -974,11 +974,11 @@ HB_FUNC_STATIC( QSCRIPTENGINE_CHECKSYNTAX )
 #endif
 }
 
-void QScriptEngineSlots_connect_signal( const QString & signal, const QString & slot );
+void QScriptEngineSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSCRIPTENGINE_ONSIGNALHANDLEREXCEPTION )
 {
-  QScriptEngineSlots_connect_signal( "signalHandlerException(QScriptValue)", "signalHandlerException(QScriptValue)" );
+  QScriptEngineSlots_connect_signal("signalHandlerException(QScriptValue)", "signalHandlerException(QScriptValue)");
 }
 
 #pragma ENDDUMP

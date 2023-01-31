@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE )
     {
 #endif
       QScriptValue * ptr = new QScriptValue( obj->setupPackage( PQSTRING(1), PQSCRIPTENGINE(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+      Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

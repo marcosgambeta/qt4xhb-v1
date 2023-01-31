@@ -106,7 +106,7 @@ QScriptValue( QScriptValue::SpecialValue value )
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW3 )
 {
   QScriptValue * obj = new QScriptValue( ( QScriptValue::SpecialValue ) hb_parni(1) );
-  Qt4xHb::returnNewObject( obj, true );
+  Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -115,7 +115,7 @@ QScriptValue( int value )
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW5 )
 {
   QScriptValue * obj = new QScriptValue( PINT(1) );
-  Qt4xHb::returnNewObject( obj, true );
+  Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -124,7 +124,7 @@ QScriptValue( uint value )
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW6 )
 {
   QScriptValue * obj = new QScriptValue( PUINT(1) );
-  Qt4xHb::returnNewObject( obj, true );
+  Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -133,7 +133,7 @@ QScriptValue( const char * value )
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW10 )
 {
   QScriptValue * obj = new QScriptValue( PCONSTCHAR(1) );
-  Qt4xHb::returnNewObject( obj, true );
+  Qt4xHb::returnNewObject(obj, true);
 }
 
 HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
     QScriptValue()
     */
     QScriptValue * obj = new QScriptValue();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
   {
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
     QScriptValue( const QScriptValue & other )
     */
     QScriptValue * obj = new QScriptValue( *PQSCRIPTVALUE(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
     QScriptValue( bool value )
     */
     QScriptValue * obj = new QScriptValue( PBOOL(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEW )
     QScriptValue( const QString & value )
     */
     QScriptValue * obj = new QScriptValue( PQSTRING(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
     //HB_FUNC_EXEC( QSCRIPTVALUE_NEW10 );
   }
   else
@@ -219,7 +219,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CALL1 )
       par2 << *(QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) );
     }
     QScriptValue * ptr = new QScriptValue( obj->call ( par1, par2 ) );
-    Qt4xHb::createReturnClass ( ptr, "QSCRIPTVALUE" );
+    Qt4xHb::createReturnClass ( ptr, "QSCRIPTVALUE");
   }
 }
 
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CALL2 )
     {
 #endif
       QScriptValue * ptr = new QScriptValue( obj->call( *PQSCRIPTVALUE(1), *PQSCRIPTVALUE(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+      Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT1 )
       par1 << *(QScriptValue *) hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) );
     }
     QScriptValue * ptr = new QScriptValue( obj->construct ( par1 ) );
-    Qt4xHb::createReturnClass ( ptr, "QSCRIPTVALUE" );
+    Qt4xHb::createReturnClass ( ptr, "QSCRIPTVALUE");
   }
 }
 
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT2 )
     {
 #endif
       QScriptValue * ptr = new QScriptValue( obj->construct( *PQSCRIPTVALUE(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+      Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_DATA )
     {
 #endif
       QScriptValue * ptr = new QScriptValue( obj->data() );
-      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+      Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -798,7 +798,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_PROTOTYPE )
     {
 #endif
       QScriptValue * ptr = new QScriptValue( obj->prototype() );
-      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+      Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -823,7 +823,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_SCRIPTCLASS )
     {
 #endif
       QScriptClass * ptr = obj->scriptClass();
-      Qt4xHb::createReturnClass( ptr, "QSCRIPTCLASS", false );
+      Qt4xHb::createReturnClass(ptr, "QSCRIPTCLASS", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -974,7 +974,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TODATETIME )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->toDateTime() );
-      Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
+      Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1023,7 +1023,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOQOBJECT )
     {
 #endif
       QObject * ptr = obj->toQObject();
-      Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1048,7 +1048,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOREGEXP )
     {
 #endif
       QRegExp * ptr = new QRegExp( obj->toRegExp() );
-      Qt4xHb::createReturnClass( ptr, "QREGEXP", true );
+      Qt4xHb::createReturnClass(ptr, "QREGEXP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1145,7 +1145,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_TOVARIANT )
     {
 #endif
       QVariant * ptr = new QVariant( obj->toVariant() );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1162,28 +1162,28 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QSCRIPTVALUE_NEWFROMOBJECT )
@@ -1198,7 +1198,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QSCRIPTVALUE_SELFDESTRUCTION )
 {
-  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QSCRIPTVALUE_SETSELFDESTRUCTION )
@@ -1207,16 +1207,16 @@ HB_FUNC_STATIC( QSCRIPTVALUE_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP
