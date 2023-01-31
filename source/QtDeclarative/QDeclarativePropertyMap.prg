@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QDeclarativePropertyMap * obj = new QDeclarativePropertyMap( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_VALUE )
     {
 #endif
       QVariant * ptr = new QVariant( obj->value( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,11 +282,11 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_VALUE )
   }
 }
 
-void QDeclarativePropertyMapSlots_connect_signal( const QString & signal, const QString & slot );
+void QDeclarativePropertyMapSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_ONVALUECHANGED )
 {
-  QDeclarativePropertyMapSlots_connect_signal( "valueChanged(QString,QVariant)", "valueChanged(QString,QVariant)" );
+  QDeclarativePropertyMapSlots_connect_signal("valueChanged(QString,QVariant)", "valueChanged(QString,QVariant)");
 }
 
 #pragma ENDDUMP

@@ -12,7 +12,7 @@
 
 #include "QDeclarativeEngineSlots.h"
 
-QDeclarativeEngineSlots::QDeclarativeEngineSlots( QObject * parent ) : QObject( parent )
+QDeclarativeEngineSlots::QDeclarativeEngineSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QDeclarativeEngineSlots::~QDeclarativeEngineSlots()
 
 void QDeclarativeEngineSlots::quit()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "quit()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "quit()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDECLARATIVEENGINE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDECLARATIVEENGINE");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -38,14 +38,14 @@ void QDeclarativeEngineSlots::quit()
 
 void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warnings )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "warnings(QList<QDeclarativeError>)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "warnings(QList<QDeclarativeError>)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDECLARATIVEENGINE" );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDECLARATIVEENGINE");
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR");
     PHB_ITEM pWarnings = hb_itemArrayNew(0);
     if( pDynSym )
     {
@@ -82,19 +82,19 @@ void QDeclarativeEngineSlots_connect_signal( const QString & signal, const QStri
 
   if( obj != NULL )
   {
-    QDeclarativeEngineSlots * s = QCoreApplication::instance()->findChild<QDeclarativeEngineSlots *>();
+    QDeclarativeEngineSlots * s = QCoreApplication::instance()->findChild<QDeclarativeEngineSlots*>();
 
     if( s == NULL )
     {
       s = new QDeclarativeEngineSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

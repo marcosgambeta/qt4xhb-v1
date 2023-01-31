@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_NEW )
   if( ISBETWEEN(0, 1) && ( ISQDECLARATIVEITEM(1) || HB_ISNIL(1) ) )
   {
     QDeclarativeItem * obj = new QDeclarativeItem( OPQDECLARATIVEITEM( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDAT )
     {
 #endif
       QDeclarativeItem * ptr = obj->childAt( PQREAL(1), PQREAL(2) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QDECLARATIVEITEM" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QDECLARATIVEITEM");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_CHILDRENRECT )
     {
 #endif
       QRectF * ptr = new QRectF( obj->childrenRect() );
-      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
+      Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_MAPFROMITEM )
     {
 #endif
       QScriptValue * ptr = new QScriptValue( obj->mapFromItem( *PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3) ) );
-      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+      Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_MAPTOITEM )
     {
 #endif
       QScriptValue * ptr = new QScriptValue( obj->mapToItem( *PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3) ) );
-      Qt4xHb::createReturnClass( ptr, "QSCRIPTVALUE", true );
+      Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_PARENTITEM )
     {
 #endif
       QDeclarativeItem * ptr = obj->parentItem();
-      Qt4xHb::createReturnQObjectClass( ptr, "QDECLARATIVEITEM" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QDECLARATIVEITEM");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

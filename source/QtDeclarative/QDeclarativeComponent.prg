@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
     QDeclarativeComponent( QObject * parent = 0 )
     */
     QDeclarativeComponent * obj = new QDeclarativeComponent( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && ISQDECLARATIVEENGINE(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
   {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
     QDeclarativeComponent( QDeclarativeEngine *, QObject * parent = 0 )
     */
     QDeclarativeComponent * obj = new QDeclarativeComponent( PQDECLARATIVEENGINE(1), OPQOBJECT( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(2, 3) && ISQDECLARATIVEENGINE(1) && HB_ISCHAR(2) && ( ISQOBJECT(3) || HB_ISNIL(3) ) )
   {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
     QDeclarativeComponent( QDeclarativeEngine *, const QString & fileName, QObject * parent = 0 )
     */
     QDeclarativeComponent * obj = new QDeclarativeComponent( PQDECLARATIVEENGINE(1), PQSTRING(2), OPQOBJECT( 3, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(2, 3) && ISQDECLARATIVEENGINE(1) && ISQURL(2) && ( ISQOBJECT(3) || HB_ISNIL(3) ) )
   {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
     QDeclarativeComponent( QDeclarativeEngine *, const QUrl & url, QObject * parent = 0 )
     */
     QDeclarativeComponent * obj = new QDeclarativeComponent( PQDECLARATIVEENGINE(1), *PQURL(2), OPQOBJECT( 3, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_BEGINCREATE )
     {
 #endif
       QObject * ptr = obj->beginCreate( PQDECLARATIVECONTEXT(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATE )
     {
 #endif
       QObject * ptr = obj->create( OPQDECLARATIVECONTEXT( 1, 0 ) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATIONCONTEXT )
     {
 #endif
       QDeclarativeContext * ptr = obj->creationContext();
-      Qt4xHb::createReturnQObjectClass( ptr, "QDECLARATIVECONTEXT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QDECLARATIVECONTEXT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
     {
 #endif
       QList<QDeclarativeError> list = obj->errors();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_URL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->url() );
-      Qt4xHb::createReturnClass( ptr, "QURL", true );
+      Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -520,16 +520,16 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORSTRING )
   }
 }
 
-void QDeclarativeComponentSlots_connect_signal( const QString & signal, const QString & slot );
+void QDeclarativeComponentSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONPROGRESSCHANGED )
 {
-  QDeclarativeComponentSlots_connect_signal( "progressChanged(qreal)", "progressChanged(qreal)" );
+  QDeclarativeComponentSlots_connect_signal("progressChanged(qreal)", "progressChanged(qreal)");
 }
 
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ONSTATUSCHANGED )
 {
-  QDeclarativeComponentSlots_connect_signal( "statusChanged(QDeclarativeComponent::Status)", "statusChanged(QDeclarativeComponent::Status)" );
+  QDeclarativeComponentSlots_connect_signal("statusChanged(QDeclarativeComponent::Status)", "statusChanged(QDeclarativeComponent::Status)");
 }
 
 #pragma ENDDUMP

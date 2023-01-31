@@ -12,7 +12,7 @@
 
 #include "QDeclarativeComponentSlots.h"
 
-QDeclarativeComponentSlots::QDeclarativeComponentSlots( QObject * parent ) : QObject( parent )
+QDeclarativeComponentSlots::QDeclarativeComponentSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QDeclarativeComponentSlots::~QDeclarativeComponentSlots()
 
 void QDeclarativeComponentSlots::progressChanged( qreal progress )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "progressChanged(qreal)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "progressChanged(qreal)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDECLARATIVECOMPONENT" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDECLARATIVECOMPONENT");
     PHB_ITEM pProgress = hb_itemPutND( NULL, progress );
 
     hb_vmEvalBlockV( cb, 2, pSender, pProgress );
@@ -40,13 +40,13 @@ void QDeclarativeComponentSlots::progressChanged( qreal progress )
 
 void QDeclarativeComponentSlots::statusChanged( QDeclarativeComponent::Status status )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "statusChanged(QDeclarativeComponent::Status)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "statusChanged(QDeclarativeComponent::Status)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDECLARATIVECOMPONENT" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDECLARATIVECOMPONENT");
     PHB_ITEM pStatus = hb_itemPutNI( NULL, static_cast<int >( status ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pStatus );
@@ -62,19 +62,19 @@ void QDeclarativeComponentSlots_connect_signal( const QString & signal, const QS
 
   if( obj != NULL )
   {
-    QDeclarativeComponentSlots * s = QCoreApplication::instance()->findChild<QDeclarativeComponentSlots *>();
+    QDeclarativeComponentSlots * s = QCoreApplication::instance()->findChild<QDeclarativeComponentSlots*>();
 
     if( s == NULL )
     {
       s = new QDeclarativeComponentSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

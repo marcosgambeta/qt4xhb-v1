@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QDeclarativeEngine * obj = new QDeclarativeEngine( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_BASEURL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->baseUrl() );
-      Qt4xHb::createReturnClass( ptr, "QURL", true );
+      Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_IMAGEPROVIDER )
     {
 #endif
       QDeclarativeImageProvider * ptr = obj->imageProvider( PQSTRING(1) );
-      Qt4xHb::createReturnClass( ptr, "QDECLARATIVEIMAGEPROVIDER", false );
+      Qt4xHb::createReturnClass(ptr, "QDECLARATIVEIMAGEPROVIDER", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -327,7 +327,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGER )
     {
 #endif
       QNetworkAccessManager * ptr = obj->networkAccessManager();
-      Qt4xHb::createReturnQObjectClass( ptr, "QNETWORKACCESSMANAGER" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QNETWORKACCESSMANAGER");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_NETWORKACCESSMANAGERFACTORY )
     {
 #endif
       QDeclarativeNetworkAccessManagerFactory * ptr = obj->networkAccessManagerFactory();
-      Qt4xHb::createReturnClass( ptr, "QDECLARATIVENETWORKACCESSMANAGERFACTORY", false );
+      Qt4xHb::createReturnClass(ptr, "QDECLARATIVENETWORKACCESSMANAGERFACTORY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_ROOTCONTEXT )
     {
 #endif
       QDeclarativeContext * ptr = obj->rootContext();
-      Qt4xHb::createReturnQObjectClass( ptr, "QDECLARATIVECONTEXT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QDECLARATIVECONTEXT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -652,7 +652,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_CONTEXTFOROBJECT )
   {
 #endif
     QDeclarativeContext * ptr = QDeclarativeEngine::contextForObject( PQOBJECT(1) );
-    Qt4xHb::createReturnQObjectClass( ptr, "QDECLARATIVECONTEXT" );
+    Qt4xHb::createReturnQObjectClass(ptr, "QDECLARATIVECONTEXT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -723,16 +723,16 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_SETOBJECTOWNERSHIP )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QDeclarativeEngineSlots_connect_signal( const QString & signal, const QString & slot );
+void QDeclarativeEngineSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ONQUIT )
 {
-  QDeclarativeEngineSlots_connect_signal( "quit()", "quit()" );
+  QDeclarativeEngineSlots_connect_signal("quit()", "quit()");
 }
 
 HB_FUNC_STATIC( QDECLARATIVEENGINE_ONWARNINGS )
 {
-  QDeclarativeEngineSlots_connect_signal( "warnings(QList<QDeclarativeError>)", "warnings(QList<QDeclarativeError>)" );
+  QDeclarativeEngineSlots_connect_signal("warnings(QList<QDeclarativeError>)", "warnings(QList<QDeclarativeError>)");
 }
 
 #pragma ENDDUMP

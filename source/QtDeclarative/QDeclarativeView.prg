@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
     QDeclarativeView( QWidget * parent = 0 )
     */
     QDeclarativeView * obj = new QDeclarativeView( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && ISQURL(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
   {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
     QDeclarativeView( const QUrl & source, QWidget * parent = 0 )
     */
     QDeclarativeView * obj = new QDeclarativeView( *PQURL(1), OPQWIDGET( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ENGINE )
     {
 #endif
       QDeclarativeEngine * ptr = obj->engine();
-      Qt4xHb::createReturnQObjectClass( ptr, "QDECLARATIVEENGINE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QDECLARATIVEENGINE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
     {
 #endif
       QList<QDeclarativeError> list = obj->errors();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_INITIALSIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->initialSize() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTCONTEXT )
     {
 #endif
       QDeclarativeContext * ptr = obj->rootContext();
-      Qt4xHb::createReturnQObjectClass( ptr, "QDECLARATIVECONTEXT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QDECLARATIVECONTEXT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ROOTOBJECT )
     {
 #endif
       QGraphicsObject * ptr = obj->rootObject();
-      Qt4xHb::createReturnQObjectClass( ptr, "QGRAPHICSOBJECT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QGRAPHICSOBJECT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_SOURCE )
     {
 #endif
       QUrl * ptr = new QUrl( obj->source() );
-      Qt4xHb::createReturnClass( ptr, "QURL", true );
+      Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -383,16 +383,16 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_STATUS )
   }
 }
 
-void QDeclarativeViewSlots_connect_signal( const QString & signal, const QString & slot );
+void QDeclarativeViewSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSCENERESIZED )
 {
-  QDeclarativeViewSlots_connect_signal( "sceneResized(QSize)", "sceneResized(QSize)" );
+  QDeclarativeViewSlots_connect_signal("sceneResized(QSize)", "sceneResized(QSize)");
 }
 
 HB_FUNC_STATIC( QDECLARATIVEVIEW_ONSTATUSCHANGED )
 {
-  QDeclarativeViewSlots_connect_signal( "statusChanged(QDeclarativeView::Status)", "statusChanged(QDeclarativeView::Status)" );
+  QDeclarativeViewSlots_connect_signal("statusChanged(QDeclarativeView::Status)", "statusChanged(QDeclarativeView::Status)");
 }
 
 #pragma ENDDUMP

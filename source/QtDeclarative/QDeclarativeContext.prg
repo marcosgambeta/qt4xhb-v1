@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_NEW )
     QDeclarativeContext( QDeclarativeEngine * engine, QObject * parent = 0 )
     */
     QDeclarativeContext * obj = new QDeclarativeContext( PQDECLARATIVEENGINE(1), OPQOBJECT( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && ISQDECLARATIVECONTEXT(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
   {
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_NEW )
     QDeclarativeContext( QDeclarativeContext * parentContext, QObject * parent = 0 )
     */
     QDeclarativeContext * obj = new QDeclarativeContext( PQDECLARATIVECONTEXT(1), OPQOBJECT( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_BASEURL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->baseUrl() );
-      Qt4xHb::createReturnClass( ptr, "QURL", true );
+      Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_CONTEXTOBJECT )
     {
 #endif
       QObject * ptr = obj->contextObject();
-      Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_CONTEXTPROPERTY )
     {
 #endif
       QVariant * ptr = new QVariant( obj->contextProperty( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_ENGINE )
     {
 #endif
       QDeclarativeEngine * ptr = obj->engine();
-      Qt4xHb::createReturnQObjectClass( ptr, "QDECLARATIVEENGINE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QDECLARATIVEENGINE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_PARENTCONTEXT )
     {
 #endif
       QDeclarativeContext * ptr = obj->parentContext();
-      Qt4xHb::createReturnQObjectClass( ptr, "QDECLARATIVECONTEXT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QDECLARATIVECONTEXT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QDECLARATIVECONTEXT_RESOLVEDURL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->resolvedUrl( *PQURL(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QURL", true );
+      Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

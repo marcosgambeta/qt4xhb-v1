@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW )
     QDeclarativeExpression()
     */
     QDeclarativeExpression * obj = new QDeclarativeExpression();
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(3, 4) && ISQDECLARATIVECONTEXT(1) && ISQOBJECT(2) && HB_ISCHAR(3) && ( ISQOBJECT(4) || HB_ISNIL(4) ) )
   {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_NEW )
     QDeclarativeExpression( QDeclarativeContext * ctxt, QObject * scope, const QString & expression, QObject * parent = 0 )
     */
     QDeclarativeExpression * obj = new QDeclarativeExpression( PQDECLARATIVECONTEXT(1), PQOBJECT(2), PQSTRING(3), OPQOBJECT( 4, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_CONTEXT )
     {
 #endif
       QDeclarativeContext * ptr = obj->context();
-      Qt4xHb::createReturnQObjectClass( ptr, "QDECLARATIVECONTEXT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QDECLARATIVECONTEXT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ENGINE )
     {
 #endif
       QDeclarativeEngine * ptr = obj->engine();
-      Qt4xHb::createReturnQObjectClass( ptr, "QDECLARATIVEENGINE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QDECLARATIVEENGINE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ERROR )
     {
 #endif
       QDeclarativeError * ptr = new QDeclarativeError( obj->error() );
-      Qt4xHb::createReturnClass( ptr, "QDECLARATIVEERROR", true );
+      Qt4xHb::createReturnClass(ptr, "QDECLARATIVEERROR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_EVALUATE )
 #endif
       bool par1;
       QVariant * ptr = new QVariant( obj->evaluate( &par1 ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
       hb_storl( par1, 1 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SCOPEOBJECT )
     {
 #endif
       QObject * ptr = obj->scopeObject();
-      Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -457,11 +457,11 @@ HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_SOURCEFILE )
   }
 }
 
-void QDeclarativeExpressionSlots_connect_signal( const QString & signal, const QString & slot );
+void QDeclarativeExpressionSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QDECLARATIVEEXPRESSION_ONVALUECHANGED )
 {
-  QDeclarativeExpressionSlots_connect_signal( "valueChanged()", "valueChanged()" );
+  QDeclarativeExpressionSlots_connect_signal("valueChanged()", "valueChanged()");
 }
 
 #pragma ENDDUMP
