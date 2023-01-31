@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_NEW )
     QGLShaderProgram( QObject * parent = 0 )
     */
     QGLShaderProgram * obj = new QGLShaderProgram( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && ISQGLCONTEXT(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
   {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_NEW )
     QGLShaderProgram( const QGLContext * context, QObject * parent = 0 )
     */
     QGLShaderProgram * obj = new QGLShaderProgram( PQGLCONTEXT(1), OPQOBJECT( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -1929,7 +1929,7 @@ HB_FUNC_STATIC( QGLSHADERPROGRAM_SHADERS )
     {
 #endif
       QList<QGLShader *> list = obj->shaders();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QGLSHADER" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QGLSHADER");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {

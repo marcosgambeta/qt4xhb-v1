@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QGLCONTEXT_NEW )
   if( ISNUMPAR(1) && ISQGLFORMAT(1) )
   {
     QGLContext * obj = new QGLContext( *PQGLFORMAT(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QGLCONTEXT_DEVICE )
     {
 #endif
       QPaintDevice * ptr = obj->device();
-      Qt4xHb::createReturnClass( ptr, "QPAINTDEVICE", false );
+      Qt4xHb::createReturnClass(ptr, "QPAINTDEVICE", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QGLCONTEXT_FORMAT )
     {
 #endif
       QGLFormat * ptr = new QGLFormat( obj->format() );
-      Qt4xHb::createReturnClass( ptr, "QGLFORMAT", true );
+      Qt4xHb::createReturnClass(ptr, "QGLFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QGLCONTEXT_OVERLAYTRANSPARENTCOLOR )
     {
 #endif
       QColor * ptr = new QColor( obj->overlayTransparentColor() );
-      Qt4xHb::createReturnClass( ptr, "QCOLOR", true );
+      Qt4xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QGLCONTEXT_REQUESTEDFORMAT )
     {
 #endif
       QGLFormat * ptr = new QGLFormat( obj->requestedFormat() );
-      Qt4xHb::createReturnClass( ptr, "QGLFORMAT", true );
+      Qt4xHb::createReturnClass(ptr, "QGLFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -587,7 +587,7 @@ HB_FUNC_STATIC( QGLCONTEXT_CURRENTCONTEXT )
   {
 #endif
     const QGLContext * ptr = QGLContext::currentContext();
-    Qt4xHb::createReturnClass( ptr, "QGLCONTEXT", false );
+    Qt4xHb::createReturnClass(ptr, "QGLCONTEXT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -643,28 +643,28 @@ HB_FUNC_STATIC( QGLCONTEXT_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QGLCONTEXT_NEWFROMOBJECT )
@@ -679,7 +679,7 @@ HB_FUNC_STATIC( QGLCONTEXT_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QGLCONTEXT_SELFDESTRUCTION )
 {
-  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QGLCONTEXT_SETSELFDESTRUCTION )
@@ -688,16 +688,16 @@ HB_FUNC_STATIC( QGLCONTEXT_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

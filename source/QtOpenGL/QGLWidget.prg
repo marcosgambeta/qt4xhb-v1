@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QGLWIDGET_NEW )
     QGLWidget( QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
     */
     QGLWidget * obj = new QGLWidget( OPQWIDGET( 1, 0 ), OPQGLWIDGET( 2, 0 ), HB_ISNIL(3) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(3) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 4) && ISQGLCONTEXT(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) && ( ISQGLWIDGET(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
   {
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QGLWIDGET_NEW )
     QGLWidget( QGLContext * context, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
     */
     QGLWidget * obj = new QGLWidget( PQGLCONTEXT(1), OPQWIDGET( 2, 0 ), OPQGLWIDGET( 3, 0 ), HB_ISNIL(4) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(4) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 4) && ISQGLFORMAT(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) && ( ISQGLWIDGET(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
   {
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QGLWIDGET_NEW )
     QGLWidget( const QGLFormat & format, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 )
     */
     QGLWidget * obj = new QGLWidget( *PQGLFORMAT(1), OPQWIDGET( 2, 0 ), OPQGLWIDGET( 3, 0 ), HB_ISNIL(4) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(4) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QGLWIDGET_COLORMAP )
     {
 #endif
       const QGLColormap * ptr = &obj->colormap();
-      Qt4xHb::createReturnClass( ptr, "QGLCOLORMAP", false );
+      Qt4xHb::createReturnClass(ptr, "QGLCOLORMAP", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,7 +226,7 @@ HB_FUNC_STATIC( QGLWIDGET_CONTEXT )
     {
 #endif
       const QGLContext * ptr = obj->context();
-      Qt4xHb::createReturnClass( ptr, "QGLCONTEXT", false );
+      Qt4xHb::createReturnClass(ptr, "QGLCONTEXT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QGLWIDGET_FORMAT )
     {
 #endif
       QGLFormat * ptr = new QGLFormat( obj->format() );
-      Qt4xHb::createReturnClass( ptr, "QGLFORMAT", true );
+      Qt4xHb::createReturnClass(ptr, "QGLFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QGLWIDGET_GRABFRAMEBUFFER )
     {
 #endif
       QImage * ptr = new QImage( obj->grabFrameBuffer( OPBOOL( 1, false ) ) );
-      Qt4xHb::createReturnClass( ptr, "QIMAGE", true );
+      Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -513,7 +513,7 @@ HB_FUNC_STATIC( QGLWIDGET_OVERLAYCONTEXT )
     {
 #endif
       const QGLContext * ptr = obj->overlayContext();
-      Qt4xHb::createReturnClass( ptr, "QGLCONTEXT", false );
+      Qt4xHb::createReturnClass(ptr, "QGLCONTEXT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -590,7 +590,7 @@ HB_FUNC_STATIC( QGLWIDGET_RENDERPIXMAP )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->renderPixmap( OPINT( 1, 0 ), OPINT( 2, 0 ), OPBOOL( 3, false ) ) );
-      Qt4xHb::createReturnClass( ptr, "QPIXMAP", true );
+      Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -777,7 +777,7 @@ HB_FUNC_STATIC( QGLWIDGET_CONVERTTOGLFORMAT )
   {
 #endif
     QImage * ptr = new QImage( QGLWidget::convertToGLFormat( *PQIMAGE(1) ) );
-    Qt4xHb::createReturnClass( ptr, "QIMAGE", true );
+    Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

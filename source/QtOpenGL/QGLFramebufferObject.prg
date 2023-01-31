@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW )
     QGLFramebufferObject( const QSize & size, GLenum target = GL_TEXTURE_2D )
     */
     QGLFramebufferObject * obj = new QGLFramebufferObject( *PQSIZE(1), OPGLENUM( 2, GL_TEXTURE_2D ) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
   {
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW )
     QGLFramebufferObject( int width, int height, GLenum target = GL_TEXTURE_2D )
     */
     QGLFramebufferObject * obj = new QGLFramebufferObject( PINT(1), PINT(2), OPGLENUM( 3, GL_TEXTURE_2D ) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && ISQSIZE(1) && ISQGLFRAMEBUFFEROBJECTFORMAT(2) )
   {
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW )
     QGLFramebufferObject( const QSize & size, const QGLFramebufferObjectFormat & format )
     */
     QGLFramebufferObject * obj = new QGLFramebufferObject( *PQSIZE(1), *PQGLFRAMEBUFFEROBJECTFORMAT(2) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQGLFRAMEBUFFEROBJECTFORMAT(3) )
   {
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW )
     QGLFramebufferObject( int width, int height, const QGLFramebufferObjectFormat & format )
     */
     QGLFramebufferObject * obj = new QGLFramebufferObject( PINT(1), PINT(2), *PQGLFRAMEBUFFEROBJECTFORMAT(3) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ( HB_ISNUM(4) || HB_ISNIL(4) ) && ( HB_ISNUM(5) || HB_ISNIL(5) ) )
   {
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW )
     QGLFramebufferObject( int width, int height, QGLFramebufferObject::Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
     */
     QGLFramebufferObject * obj = new QGLFramebufferObject( PINT(1), PINT(2), ( QGLFramebufferObject::Attachment ) hb_parni(3), OPGLENUM( 4, GL_TEXTURE_2D ), OPGLENUM( 5, GL_RGBA8 ) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(3, 4) && ISQSIZE(1) && HB_ISNUM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
   {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_NEW )
     QGLFramebufferObject( const QSize & size, QGLFramebufferObject::Attachment attachment, GLenum target = GL_TEXTURE_2D, GLenum internal_format = GL_RGBA8 )
     */
     QGLFramebufferObject * obj = new QGLFramebufferObject( *PQSIZE(1), ( QGLFramebufferObject::Attachment ) hb_parni(2), OPGLENUM( 3, GL_TEXTURE_2D ), OPGLENUM( 4, GL_RGBA8 ) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_FORMAT )
     {
 #endif
       QGLFramebufferObjectFormat * ptr = new QGLFramebufferObjectFormat( obj->format() );
-      Qt4xHb::createReturnClass( ptr, "QGLFRAMEBUFFEROBJECTFORMAT", true );
+      Qt4xHb::createReturnClass(ptr, "QGLFRAMEBUFFEROBJECTFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -348,7 +348,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_SIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->size() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_TOIMAGE )
     {
 #endif
       QImage * ptr = new QImage( obj->toImage() );
-      Qt4xHb::createReturnClass( ptr, "QIMAGE", true );
+      Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QGLFRAMEBUFFEROBJECT_PAINTENGINE )
     {
 #endif
       QPaintEngine * ptr = obj->paintEngine();
-      Qt4xHb::createReturnClass( ptr, "QPAINTENGINE", false );
+      Qt4xHb::createReturnClass(ptr, "QPAINTENGINE", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

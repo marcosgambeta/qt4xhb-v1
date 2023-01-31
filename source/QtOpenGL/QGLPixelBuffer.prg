@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_NEW )
     QGLPixelBuffer( const QSize & size, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
     */
     QGLPixelBuffer * obj = new QGLPixelBuffer( *PQSIZE(1), HB_ISNIL(2) ? QGLFormat::defaultFormat() : *static_cast<QGLFormat*>( Qt4xHb::itemGetPtr(2) ), OPQGLWIDGET( 3, 0 ) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ( ISQGLFORMAT(3) || HB_ISNIL(3) ) && ( ISQGLWIDGET(4) || HB_ISNIL(4) ) )
   {
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_NEW )
     QGLPixelBuffer( int width, int height, const QGLFormat & format = QGLFormat::defaultFormat(), QGLWidget * shareWidget = 0 )
     */
     QGLPixelBuffer * obj = new QGLPixelBuffer( PINT(1), PINT(2), HB_ISNIL(3) ? QGLFormat::defaultFormat() : *static_cast<QGLFormat*>( Qt4xHb::itemGetPtr(3) ), OPQGLWIDGET( 4, 0 ) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_FORMAT )
     {
 #endif
       QGLFormat * ptr = new QGLFormat( obj->format() );
-      Qt4xHb::createReturnClass( ptr, "QGLFORMAT", true );
+      Qt4xHb::createReturnClass(ptr, "QGLFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_SIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->size() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_TOIMAGE )
     {
 #endif
       QImage * ptr = new QImage( obj->toImage() );
-      Qt4xHb::createReturnClass( ptr, "QIMAGE", true );
+      Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QGLPIXELBUFFER_PAINTENGINE )
     {
 #endif
       QPaintEngine * ptr = obj->paintEngine();
-      Qt4xHb::createReturnClass( ptr, "QPAINTENGINE", false );
+      Qt4xHb::createReturnClass(ptr, "QPAINTENGINE", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

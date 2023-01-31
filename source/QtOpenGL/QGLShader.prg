@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QGLSHADER_NEW )
     QGLShader( QGLShader::ShaderType type, QObject * parent = 0 )
     */
     QGLShader * obj = new QGLShader( ( QGLShader::ShaderType ) hb_parni(1), OPQOBJECT( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQGLCONTEXT(2) && ( ISQOBJECT(3) || HB_ISNIL(3) ) )
   {
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QGLSHADER_NEW )
     QGLShader( QGLShader::ShaderType type, const QGLContext * context, QObject * parent = 0 )
     */
     QGLShader * obj = new QGLShader( ( QGLShader::ShaderType ) hb_parni(1), PQGLCONTEXT(2), OPQOBJECT( 3, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QGLSHADER_SOURCECODE )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->sourceCode() );
-      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
