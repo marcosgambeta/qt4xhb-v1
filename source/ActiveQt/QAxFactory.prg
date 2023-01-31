@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QAXFACTORY_APPID )
     {
 #endif
       QUuid * ptr = new QUuid( obj->appID() );
-      Qt4xHb::createReturnClass( ptr, "QUUID", true );
+      Qt4xHb::createReturnClass(ptr, "QUUID", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QAXFACTORY_CLASSID )
     {
 #endif
       QUuid * ptr = new QUuid( obj->classID( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QUUID", true );
+      Qt4xHb::createReturnClass(ptr, "QUUID", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QAXFACTORY_CREATEOBJECT )
     {
 #endif
       QObject * ptr = obj->createObject( PQSTRING(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QAXFACTORY_EVENTSID )
     {
 #endif
       QUuid * ptr = new QUuid( obj->eventsID( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QUUID", true );
+      Qt4xHb::createReturnClass(ptr, "QUUID", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QAXFACTORY_INTERFACEID )
     {
 #endif
       QUuid * ptr = new QUuid( obj->interfaceID( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QUUID", true );
+      Qt4xHb::createReturnClass(ptr, "QUUID", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QAXFACTORY_METAOBJECT )
     {
 #endif
       const QMetaObject * ptr = obj->metaObject( PQSTRING(1) );
-      Qt4xHb::createReturnClass( ptr, "QMETAOBJECT", false );
+      Qt4xHb::createReturnClass(ptr, "QMETAOBJECT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QAXFACTORY_TYPELIBID )
     {
 #endif
       QUuid * ptr = new QUuid( obj->typeLibID() );
-      Qt4xHb::createReturnClass( ptr, "QUUID", true );
+      Qt4xHb::createReturnClass(ptr, "QUUID", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

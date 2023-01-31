@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_NEW )
   if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQAXSCRIPT(2) )
   {
     QAxScriptEngine * obj = new QAxScriptEngine( PQSTRING(1), PQAXSCRIPT(2) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {

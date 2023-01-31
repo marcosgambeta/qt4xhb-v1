@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QAXSCRIPT_NEW )
   if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQAXSCRIPTMANAGER(2) )
   {
     QAxScript * obj = new QAxScript( PQSTRING(1), PQAXSCRIPTMANAGER(2) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QAXSCRIPT_CALL )
     if( obj != NULL )
     {
       QVariant * ptr = new QVariant( obj->call( PQSTRING(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(2) ), HB_ISNIL(3) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(3) ), HB_ISNIL(4) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(4) ), HB_ISNIL(5) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(5) ), HB_ISNIL(6) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(6) ), HB_ISNIL(7) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(7) ), HB_ISNIL(8) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(8) ), HB_ISNIL(9) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(9) ) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
     }
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2) )
@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QAXSCRIPT_CALL )
     if( obj != NULL )
     {
       QVariant * ptr = new QVariant( obj->call( PQSTRING(1), PQVARIANTLIST(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
     }
   }
   else
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTENGINE )
     {
 #endif
       QAxScriptEngine * ptr = obj->scriptEngine();
-      Qt4xHb::createReturnQObjectClass( ptr, "QAXSCRIPTENGINE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QAXSCRIPTENGINE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,36 +246,36 @@ HB_FUNC_STATIC( QAXSCRIPT_SCRIPTNAME )
   }
 }
 
-void QAxScriptSlots_connect_signal( const QString & signal, const QString & slot );
+void QAxScriptSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QAXSCRIPT_ONENTERED )
 {
-  QAxScriptSlots_connect_signal( "entered()", "entered()" );
+  QAxScriptSlots_connect_signal("entered()", "entered()");
 }
 
 HB_FUNC_STATIC( QAXSCRIPT_ONERROR )
 {
-  QAxScriptSlots_connect_signal( "error(int,QString,int,QString)", "error(int,QString,int,QString)" );
+  QAxScriptSlots_connect_signal("error(int,QString,int,QString)", "error(int,QString,int,QString)");
 }
 
 HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED1 )
 {
-  QAxScriptSlots_connect_signal( "finished()", "finished()" );
+  QAxScriptSlots_connect_signal("finished()", "finished()");
 }
 
 HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED2 )
 {
-  QAxScriptSlots_connect_signal( "finished(QVariant)", "finished(QVariant)" );
+  QAxScriptSlots_connect_signal("finished(QVariant)", "finished(QVariant)");
 }
 
 HB_FUNC_STATIC( QAXSCRIPT_ONFINISHED3 )
 {
-  QAxScriptSlots_connect_signal( "finished(int,QString,QString,QString)", "finished(int,QString,QString,QString)" );
+  QAxScriptSlots_connect_signal("finished(int,QString,QString,QString)", "finished(int,QString,QString,QString)");
 }
 
 HB_FUNC_STATIC( QAXSCRIPT_ONSTATECHANGED )
 {
-  QAxScriptSlots_connect_signal( "stateChanged(int)", "stateChanged(int)" );
+  QAxScriptSlots_connect_signal("stateChanged(int)", "stateChanged(int)");
 }
 
 #pragma ENDDUMP

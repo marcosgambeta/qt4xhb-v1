@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QAXWIDGET_NEW )
     QAxWidget( QWidget * parent = 0, Qt::WindowFlags f = 0 )
     */
     QAxWidget * obj = new QAxWidget( OPQWIDGET( 1, 0 ), HB_ISNIL(2) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(2) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
   {
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QAXWIDGET_NEW )
     QAxWidget( const QString & c, QWidget * parent = 0, Qt::WindowFlags f = 0 )
     */
     QAxWidget * obj = new QAxWidget( PQSTRING(1), OPQWIDGET( 2, 0 ), HB_ISNIL(3) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(3) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 3) && HB_ISPOINTER(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
   {
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QAXWIDGET_NEW )
     QAxWidget( IUnknown * iface, QWidget * parent = 0, Qt::WindowFlags f = 0 )
     */
     QAxWidget * obj = new QAxWidget( static_cast<IUnknown*>( hb_parptr(1) ), OPQWIDGET( 2, 0 ), HB_ISNIL(3) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(3) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QAXWIDGET_CREATEAGGREGATE )
     {
 #endif
       QAxAggregated * ptr = obj->createAggregate();
-      Qt4xHb::createReturnClass( ptr, "QAXAGGREGATED", false );
+      Qt4xHb::createReturnClass(ptr, "QAXAGGREGATED", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QAXWIDGET_MINIMUMSIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QAXWIDGET_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QAXWIDGET_ASVARIANT )
     {
 #endif
       QVariant * ptr = new QVariant( obj->asVariant() );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QAXWIDGET_DYNAMICCALL )
     if( obj != NULL )
     {
       QVariant * ptr = new QVariant( obj->dynamicCall( PCONSTCHAR(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(2) ), HB_ISNIL(3) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(3) ), HB_ISNIL(4) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(4) ), HB_ISNIL(5) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(5) ), HB_ISNIL(6) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(6) ), HB_ISNIL(7) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(7) ), HB_ISNIL(8) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(8) ), HB_ISNIL(9) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(9) ) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
     }
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2) )
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QAXWIDGET_DYNAMICCALL )
     if( obj != NULL )
     {
       QVariant * ptr = new QVariant( obj->dynamicCall( PCONSTCHAR(1), PQVARIANTLIST(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
     }
   }
   else
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QAXWIDGET_QUERYSUBOBJECT )
     if( obj != NULL )
     {
       QAxObject * ptr = obj->querySubObject( PCONSTCHAR(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(2) ), HB_ISNIL(3) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(3) ), HB_ISNIL(4) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(4) ), HB_ISNIL(5) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(5) ), HB_ISNIL(6) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(6) ), HB_ISNIL(7) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(7) ), HB_ISNIL(8) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(8) ), HB_ISNIL(9) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(9) ) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QAXOBJECT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QAXOBJECT");
     }
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2) )
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QAXWIDGET_QUERYSUBOBJECT )
     if( obj != NULL )
     {
       QAxObject * ptr = obj->querySubObject( PCONSTCHAR(1), PQVARIANTLIST(2) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QAXOBJECT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QAXOBJECT");
     }
   }
   else
@@ -584,21 +584,21 @@ HB_FUNC_STATIC( QAXWIDGET_VERBS )
   }
 }
 
-void QAxWidgetSlots_connect_signal( const QString & signal, const QString & slot );
+void QAxWidgetSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QAXWIDGET_ONEXCEPTION )
 {
-  QAxWidgetSlots_connect_signal( "exception(int,QString,QString,QString)", "exception(int,QString,QString,QString)" );
+  QAxWidgetSlots_connect_signal("exception(int,QString,QString,QString)", "exception(int,QString,QString,QString)");
 }
 
 HB_FUNC_STATIC( QAXWIDGET_ONPROPERTYCHANGED )
 {
-  QAxWidgetSlots_connect_signal( "propertyChanged(QString)", "propertyChanged(QString)" );
+  QAxWidgetSlots_connect_signal("propertyChanged(QString)", "propertyChanged(QString)");
 }
 
 HB_FUNC_STATIC( QAXWIDGET_ONSIGNAL )
 {
-  QAxWidgetSlots_connect_signal( "signal(QString,int,void*)", "signal(QString,int,void*)" );
+  QAxWidgetSlots_connect_signal("signal(QString,int,void*)", "signal(QString,int,void*)");
 }
 
 #pragma ENDDUMP

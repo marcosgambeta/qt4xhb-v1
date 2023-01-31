@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QAXOBJECT_NEW )
     QAxObject( QObject * parent = 0 )
     */
     QAxObject * obj = new QAxObject( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
   {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QAXOBJECT_NEW )
     QAxObject( const QString & c, QObject * parent = 0 )
     */
     QAxObject * obj = new QAxObject( PQSTRING(1), OPQOBJECT( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && HB_ISPOINTER(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
   {
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QAXOBJECT_NEW )
     QAxObject( IUnknown * iface, QObject * parent = 0 )
     */
     QAxObject * obj = new QAxObject( static_cast<IUnknown*>( hb_parptr(1) ), OPQOBJECT( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QAXOBJECT_ASVARIANT )
     {
 #endif
       QVariant * ptr = new QVariant( obj->asVariant() );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QAXOBJECT_DYNAMICCALL )
     if( obj != NULL )
     {
       QVariant * ptr = new QVariant( obj->dynamicCall( PCONSTCHAR(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(2) ), HB_ISNIL(3) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(3) ), HB_ISNIL(4) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(4) ), HB_ISNIL(5) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(5) ), HB_ISNIL(6) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(6) ), HB_ISNIL(7) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(7) ), HB_ISNIL(8) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(8) ), HB_ISNIL(9) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(9) ) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
     }
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2) )
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QAXOBJECT_DYNAMICCALL )
     if( obj != NULL )
     {
       QVariant * ptr = new QVariant( obj->dynamicCall( PCONSTCHAR(1), PQVARIANTLIST(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
     }
   }
   else
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QAXOBJECT_QUERYSUBOBJECT )
     if( obj != NULL )
     {
       QAxObject * ptr = obj->querySubObject( PCONSTCHAR(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(2) ), HB_ISNIL(3) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(3) ), HB_ISNIL(4) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(4) ), HB_ISNIL(5) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(5) ), HB_ISNIL(6) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(6) ), HB_ISNIL(7) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(7) ), HB_ISNIL(8) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(8) ), HB_ISNIL(9) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(9) ) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QAXOBJECT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QAXOBJECT");
     }
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2) )
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QAXOBJECT_QUERYSUBOBJECT )
     if( obj != NULL )
     {
       QAxObject * ptr = obj->querySubObject( PCONSTCHAR(1), PQVARIANTLIST(2) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QAXOBJECT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QAXOBJECT");
     }
   }
   else
@@ -503,21 +503,21 @@ HB_FUNC_STATIC( QAXOBJECT_VERBS )
   }
 }
 
-void QAxObjectSlots_connect_signal( const QString & signal, const QString & slot );
+void QAxObjectSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QAXOBJECT_ONEXCEPTION )
 {
-  QAxObjectSlots_connect_signal( "exception(int,QString,QString,QString)", "exception(int,QString,QString,QString)" );
+  QAxObjectSlots_connect_signal("exception(int,QString,QString,QString)", "exception(int,QString,QString,QString)");
 }
 
 HB_FUNC_STATIC( QAXOBJECT_ONPROPERTYCHANGED )
 {
-  QAxObjectSlots_connect_signal( "propertyChanged(QString)", "propertyChanged(QString)" );
+  QAxObjectSlots_connect_signal("propertyChanged(QString)", "propertyChanged(QString)");
 }
 
 HB_FUNC_STATIC( QAXOBJECT_ONSIGNAL )
 {
-  QAxObjectSlots_connect_signal( "signal(QString,int,void*)", "signal(QString,int,void*)" );
+  QAxObjectSlots_connect_signal("signal(QString,int,void*)", "signal(QString,int,void*)");
 }
 
 #pragma ENDDUMP

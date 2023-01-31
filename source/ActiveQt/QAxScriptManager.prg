@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QAxScriptManager * obj = new QAxScriptManager( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_CALL )
     if( obj != NULL )
     {
       QVariant * ptr = new QVariant( obj->call( PQSTRING(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(2) ), HB_ISNIL(3) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(3) ), HB_ISNIL(4) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(4) ), HB_ISNIL(5) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(5) ), HB_ISNIL(6) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(6) ), HB_ISNIL(7) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(7) ), HB_ISNIL(8) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(8) ), HB_ISNIL(9) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(9) ) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
     }
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2) )
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_CALL )
     if( obj != NULL )
     {
       QVariant * ptr = new QVariant( obj->call( PQSTRING(1), PQVARIANTLIST(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
     }
   }
   else
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_LOAD )
     if( obj != NULL )
     {
       QAxScript * ptr = obj->load( PQSTRING(1), PQSTRING(2), PQSTRING(3) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QAXSCRIPT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QAXSCRIPT");
     }
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_LOAD )
     if( obj != NULL )
     {
       QAxScript * ptr = obj->load( PQSTRING(1), PQSTRING(2) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QAXSCRIPT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QAXSCRIPT");
     }
   }
   else
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPT )
     {
 #endif
       QAxScript * ptr = obj->script( PQSTRING(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QAXSCRIPT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QAXSCRIPT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -303,11 +303,11 @@ HB_FUNC_STATIC( QAXSCRIPTMANAGER_SCRIPTFILEFILTER )
 #endif
 }
 
-void QAxScriptManagerSlots_connect_signal( const QString & signal, const QString & slot );
+void QAxScriptManagerSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QAXSCRIPTMANAGER_ONERROR )
 {
-  QAxScriptManagerSlots_connect_signal( "error(QAxScript*,int,QString,int,QString)", "error(QAxScript*,int,QString,int,QString)" );
+  QAxScriptManagerSlots_connect_signal("error(QAxScript*,int,QString,int,QString)", "error(QAxScript*,int,QString,int,QString)");
 }
 
 #pragma ENDDUMP

@@ -12,7 +12,7 @@
 
 #include "QAxWidgetSlots.h"
 
-QAxWidgetSlots::QAxWidgetSlots( QObject * parent ) : QObject( parent )
+QAxWidgetSlots::QAxWidgetSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QAxWidgetSlots::~QAxWidgetSlots()
 
 void QAxWidgetSlots::exception( int code, const QString & source, const QString & desc, const QString & help )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "exception(int,QString,QString,QString)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "exception(int,QString,QString,QString)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QAXWIDGET" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QAXWIDGET");
     PHB_ITEM pCode = hb_itemPutNI( NULL, code );
     PHB_ITEM pSource = hb_itemPutC( NULL, QSTRINGTOSTRING( source ) );
     PHB_ITEM pDesc = hb_itemPutC( NULL, QSTRINGTOSTRING( desc ) );
@@ -46,13 +46,13 @@ void QAxWidgetSlots::exception( int code, const QString & source, const QString 
 
 void QAxWidgetSlots::propertyChanged( const QString & name )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "propertyChanged(QString)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "propertyChanged(QString)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QAXWIDGET" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QAXWIDGET");
     PHB_ITEM pName = hb_itemPutC( NULL, QSTRINGTOSTRING( name ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pName );
@@ -64,13 +64,13 @@ void QAxWidgetSlots::propertyChanged( const QString & name )
 
 void QAxWidgetSlots::signal( const QString & name, int argc, void * argv )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "signal(QString,int,void*)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "signal(QString,int,void*)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QAXWIDGET" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QAXWIDGET");
     PHB_ITEM pName = hb_itemPutC( NULL, QSTRINGTOSTRING( name ) );
     PHB_ITEM pArgc = hb_itemPutNI( NULL, argc );
     PHB_ITEM pArgv = hb_itemPutPtr( NULL, static_cast<void*>( argv ) );
@@ -90,19 +90,19 @@ void QAxWidgetSlots_connect_signal( const QString & signal, const QString & slot
 
   if( obj != NULL )
   {
-    QAxWidgetSlots * s = QCoreApplication::instance()->findChild<QAxWidgetSlots *>();
+    QAxWidgetSlots * s = QCoreApplication::instance()->findChild<QAxWidgetSlots*>();
 
     if( s == NULL )
     {
       s = new QAxWidgetSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }
