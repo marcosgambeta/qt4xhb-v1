@@ -4,11 +4,11 @@
 # Copyright (c) 2023 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
 
-$(QT4XHB_OBJ_DIR)/QGraphicsWebViewSlotsMoc.cpp : $(QT4XHB_SRC_DIR)/QtWebKit/QGraphicsWebViewSlots.h
+$(QT4XHB_OBJ_DIR)/QGraphicsWebViewSlotsMoc.cpp : $(QT4XHB_SRC_DIR)/QtWebKit/QGraphicsWebViewSlots.hpp
 	$(MOC) $^ -o $@
-$(QT4XHB_OBJ_DIR)/QWebFrameSlotsMoc.cpp        : $(QT4XHB_SRC_DIR)/QtWebKit/QWebFrameSlots.h
+$(QT4XHB_OBJ_DIR)/QWebFrameSlotsMoc.cpp        : $(QT4XHB_SRC_DIR)/QtWebKit/QWebFrameSlots.hpp
 	$(MOC) $^ -o $@
-$(QT4XHB_OBJ_DIR)/QWebPageSlotsMoc.cpp         : $(QT4XHB_SRC_DIR)/QtWebKit/QWebPageSlots.h
+$(QT4XHB_OBJ_DIR)/QWebPageSlotsMoc.cpp         : $(QT4XHB_SRC_DIR)/QtWebKit/QWebPageSlots.hpp
 	$(MOC) $^ -o $@
-$(QT4XHB_OBJ_DIR)/QWebViewSlotsMoc.cpp         : $(QT4XHB_SRC_DIR)/QtWebKit/QWebViewSlots.h
+$(QT4XHB_OBJ_DIR)/QWebViewSlotsMoc.cpp         : $(QT4XHB_SRC_DIR)/QtWebKit/QWebViewSlots.hpp
 	$(MOC) $^ -o $@
