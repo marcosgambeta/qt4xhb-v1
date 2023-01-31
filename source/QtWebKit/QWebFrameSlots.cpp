@@ -12,7 +12,7 @@
 
 #include "QWebFrameSlots.h"
 
-QWebFrameSlots::QWebFrameSlots( QObject * parent ) : QObject( parent )
+QWebFrameSlots::QWebFrameSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,14 +22,14 @@ QWebFrameSlots::~QWebFrameSlots()
 
 void QWebFrameSlots::contentsSizeChanged( const QSize & size )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "contentsSizeChanged(QSize)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "contentsSizeChanged(QSize)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QWEBFRAME" );
-    PHB_ITEM pSize = Qt4xHb::Signals_return_object( ( void * ) &size, "QSIZE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWEBFRAME");
+    PHB_ITEM pSize = Qt4xHb::Signals_return_object( ( void * ) &size, "QSIZE");
 
     hb_vmEvalBlockV( cb, 2, pSender, pSize );
 
@@ -40,13 +40,13 @@ void QWebFrameSlots::contentsSizeChanged( const QSize & size )
 
 void QWebFrameSlots::iconChanged()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "iconChanged()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "iconChanged()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QWEBFRAME" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWEBFRAME");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -56,13 +56,13 @@ void QWebFrameSlots::iconChanged()
 
 void QWebFrameSlots::initialLayoutCompleted()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "initialLayoutCompleted()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "initialLayoutCompleted()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QWEBFRAME" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWEBFRAME");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -72,13 +72,13 @@ void QWebFrameSlots::initialLayoutCompleted()
 
 void QWebFrameSlots::javaScriptWindowObjectCleared()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "javaScriptWindowObjectCleared()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "javaScriptWindowObjectCleared()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QWEBFRAME" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWEBFRAME");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -88,13 +88,13 @@ void QWebFrameSlots::javaScriptWindowObjectCleared()
 
 void QWebFrameSlots::loadFinished( bool ok )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "loadFinished(bool)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "loadFinished(bool)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QWEBFRAME" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWEBFRAME");
     PHB_ITEM pOk = hb_itemPutL( NULL, ok );
 
     hb_vmEvalBlockV( cb, 2, pSender, pOk );
@@ -106,13 +106,13 @@ void QWebFrameSlots::loadFinished( bool ok )
 
 void QWebFrameSlots::loadStarted()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "loadStarted()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "loadStarted()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QWEBFRAME" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWEBFRAME");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -122,13 +122,13 @@ void QWebFrameSlots::loadStarted()
 
 void QWebFrameSlots::pageChanged()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "pageChanged()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "pageChanged()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QWEBFRAME" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWEBFRAME");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -138,13 +138,13 @@ void QWebFrameSlots::pageChanged()
 
 void QWebFrameSlots::titleChanged( const QString & title )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "titleChanged(QString)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "titleChanged(QString)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QWEBFRAME" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWEBFRAME");
     PHB_ITEM pTitle = hb_itemPutC( NULL, QSTRINGTOSTRING( title ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pTitle );
@@ -156,14 +156,14 @@ void QWebFrameSlots::titleChanged( const QString & title )
 
 void QWebFrameSlots::urlChanged( const QUrl & url )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "urlChanged(QUrl)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "urlChanged(QUrl)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QWEBFRAME" );
-    PHB_ITEM pUrl = Qt4xHb::Signals_return_object( ( void * ) &url, "QURL" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWEBFRAME");
+    PHB_ITEM pUrl = Qt4xHb::Signals_return_object( ( void * ) &url, "QURL");
 
     hb_vmEvalBlockV( cb, 2, pSender, pUrl );
 
@@ -178,19 +178,19 @@ void QWebFrameSlots_connect_signal( const QString & signal, const QString & slot
 
   if( obj != NULL )
   {
-    QWebFrameSlots * s = QCoreApplication::instance()->findChild<QWebFrameSlots *>();
+    QWebFrameSlots * s = QCoreApplication::instance()->findChild<QWebFrameSlots*>();
 
     if( s == NULL )
     {
       s = new QWebFrameSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QWEBHISTORYINTERFACE_DEFAULTINTERFACE )
   {
 #endif
     QWebHistoryInterface * ptr = QWebHistoryInterface::defaultInterface();
-    Qt4xHb::createReturnQObjectClass( ptr, "QWEBHISTORYINTERFACE" );
+    Qt4xHb::createReturnQObjectClass(ptr, "QWEBHISTORYINTERFACE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QWEBPLUGINFACTORY_CREATE )
     {
 #endif
       QObject * ptr = obj->create( PQSTRING(1), *PQURL(2), PQSTRINGLIST(3), PQSTRINGLIST(4) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

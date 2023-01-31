@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_NEW )
   if( ISNUMPAR(1) && ISQWEBHISTORYITEM(1) )
   {
     QWebHistoryItem * obj = new QWebHistoryItem( *PQWEBHISTORYITEM(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_ICON )
     {
 #endif
       QIcon * ptr = new QIcon( obj->icon() );
-      Qt4xHb::createReturnClass( ptr, "QICON", true );
+      Qt4xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_LASTVISITED )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->lastVisited() );
-      Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
+      Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_ORIGINALURL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->originalUrl() );
-      Qt4xHb::createReturnClass( ptr, "QURL", true );
+      Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_URL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->url() );
-      Qt4xHb::createReturnClass( ptr, "QURL", true );
+      Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_USERDATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->userData() );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -298,28 +298,28 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QWEBHISTORYITEM_NEWFROMOBJECT )
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QWEBHISTORYITEM_SELFDESTRUCTION )
 {
-  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QWEBHISTORYITEM_SETSELFDESTRUCTION )
@@ -343,16 +343,16 @@ HB_FUNC_STATIC( QWEBHISTORYITEM_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

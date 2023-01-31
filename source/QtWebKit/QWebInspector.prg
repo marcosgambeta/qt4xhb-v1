@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_NEW )
   if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QWebInspector * obj = new QWebInspector( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_PAGE )
     {
 #endif
       QWebPage * ptr = obj->page();
-      Qt4xHb::createReturnQObjectClass( ptr, "QWEBPAGE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QWEBPAGE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QWEBELEMENT_NEW )
     QWebElement()
     */
     QWebElement * obj = new QWebElement();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQWEBELEMENT(1) )
   {
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QWEBELEMENT_NEW )
     QWebElement( const QWebElement & other )
     */
     QWebElement * obj = new QWebElement( *PQWEBELEMENT(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QWEBELEMENT_CLONE )
     {
 #endif
       QWebElement * ptr = new QWebElement( obj->clone() );
-      Qt4xHb::createReturnClass( ptr, "QWEBELEMENT", true );
+      Qt4xHb::createReturnClass(ptr, "QWEBELEMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QWEBELEMENT_DOCUMENT )
     {
 #endif
       QWebElement * ptr = new QWebElement( obj->document() );
-      Qt4xHb::createReturnClass( ptr, "QWEBELEMENT", true );
+      Qt4xHb::createReturnClass(ptr, "QWEBELEMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -476,7 +476,7 @@ HB_FUNC_STATIC( QWEBELEMENT_EVALUATEJAVASCRIPT )
     {
 #endif
       QVariant * ptr = new QVariant( obj->evaluateJavaScript( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -501,7 +501,7 @@ HB_FUNC_STATIC( QWEBELEMENT_FINDALL )
     {
 #endif
       QWebElementCollection * ptr = new QWebElementCollection( obj->findAll( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QWEBELEMENTCOLLECTION", true );
+      Qt4xHb::createReturnClass(ptr, "QWEBELEMENTCOLLECTION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -526,7 +526,7 @@ HB_FUNC_STATIC( QWEBELEMENT_FINDFIRST )
     {
 #endif
       QWebElement * ptr = new QWebElement( obj->findFirst( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QWEBELEMENT", true );
+      Qt4xHb::createReturnClass(ptr, "QWEBELEMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QWEBELEMENT_FIRSTCHILD )
     {
 #endif
       QWebElement * ptr = new QWebElement( obj->firstChild() );
-      Qt4xHb::createReturnClass( ptr, "QWEBELEMENT", true );
+      Qt4xHb::createReturnClass(ptr, "QWEBELEMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QWEBELEMENT_GEOMETRY )
     {
 #endif
       QRect * ptr = new QRect( obj->geometry() );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -745,7 +745,7 @@ HB_FUNC_STATIC( QWEBELEMENT_LASTCHILD )
     {
 #endif
       QWebElement * ptr = new QWebElement( obj->lastChild() );
-      Qt4xHb::createReturnClass( ptr, "QWEBELEMENT", true );
+      Qt4xHb::createReturnClass(ptr, "QWEBELEMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -818,7 +818,7 @@ HB_FUNC_STATIC( QWEBELEMENT_NEXTSIBLING )
     {
 #endif
       QWebElement * ptr = new QWebElement( obj->nextSibling() );
-      Qt4xHb::createReturnClass( ptr, "QWEBELEMENT", true );
+      Qt4xHb::createReturnClass(ptr, "QWEBELEMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -843,7 +843,7 @@ HB_FUNC_STATIC( QWEBELEMENT_PARENT )
     {
 #endif
       QWebElement * ptr = new QWebElement( obj->parent() );
-      Qt4xHb::createReturnClass( ptr, "QWEBELEMENT", true );
+      Qt4xHb::createReturnClass(ptr, "QWEBELEMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -964,7 +964,7 @@ HB_FUNC_STATIC( QWEBELEMENT_PREVIOUSSIBLING )
     {
 #endif
       QWebElement * ptr = new QWebElement( obj->previousSibling() );
-      Qt4xHb::createReturnClass( ptr, "QWEBELEMENT", true );
+      Qt4xHb::createReturnClass(ptr, "QWEBELEMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1421,7 +1421,7 @@ HB_FUNC_STATIC( QWEBELEMENT_TAKEFROMDOCUMENT )
     {
 #endif
       QWebElement * ptr = &obj->takeFromDocument();
-      Qt4xHb::createReturnClass( ptr, "QWEBELEMENT", false );
+      Qt4xHb::createReturnClass(ptr, "QWEBELEMENT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1544,7 +1544,7 @@ HB_FUNC_STATIC( QWEBELEMENT_WEBFRAME )
     {
 #endif
       QWebFrame * ptr = obj->webFrame();
-      Qt4xHb::createReturnQObjectClass( ptr, "QWEBFRAME" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QWEBFRAME");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1561,28 +1561,28 @@ HB_FUNC_STATIC( QWEBELEMENT_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QWEBELEMENT_NEWFROMOBJECT )
@@ -1597,7 +1597,7 @@ HB_FUNC_STATIC( QWEBELEMENT_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QWEBELEMENT_SELFDESTRUCTION )
 {
-  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QWEBELEMENT_SETSELFDESTRUCTION )
@@ -1606,16 +1606,16 @@ HB_FUNC_STATIC( QWEBELEMENT_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

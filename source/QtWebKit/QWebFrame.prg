@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QWEBFRAME_BASEURL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->baseUrl() );
-      Qt4xHb::createReturnClass( ptr, "QURL", true );
+      Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QWEBFRAME_CHILDFRAMES )
     {
 #endif
       QList<QWebFrame *> list = obj->childFrames();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QWEBFRAME" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QWEBFRAME");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QWEBFRAME_CONTENTSSIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->contentsSize() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QWEBFRAME_DOCUMENTELEMENT )
     {
 #endif
       QWebElement * ptr = new QWebElement( obj->documentElement() );
-      Qt4xHb::createReturnClass( ptr, "QWEBELEMENT", true );
+      Qt4xHb::createReturnClass(ptr, "QWEBELEMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QWEBFRAME_FINDALLELEMENTS )
     {
 #endif
       QWebElementCollection * ptr = new QWebElementCollection( obj->findAllElements( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QWEBELEMENTCOLLECTION", true );
+      Qt4xHb::createReturnClass(ptr, "QWEBELEMENTCOLLECTION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QWEBFRAME_FINDFIRSTELEMENT )
     {
 #endif
       QWebElement * ptr = new QWebElement( obj->findFirstElement( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QWEBELEMENT", true );
+      Qt4xHb::createReturnClass(ptr, "QWEBELEMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QWEBFRAME_GEOMETRY )
     {
 #endif
       QRect * ptr = new QRect( obj->geometry() );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QWEBFRAME_HITTESTCONTENT )
     {
 #endif
       QWebHitTestResult * ptr = new QWebHitTestResult( obj->hitTestContent( *PQPOINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QWEBHITTESTRESULT", true );
+      Qt4xHb::createReturnClass(ptr, "QWEBHITTESTRESULT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -429,7 +429,7 @@ HB_FUNC_STATIC( QWEBFRAME_ICON )
     {
 #endif
       QIcon * ptr = new QIcon( obj->icon() );
-      Qt4xHb::createReturnClass( ptr, "QICON", true );
+      Qt4xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -490,7 +490,7 @@ HB_FUNC_STATIC( QWEBFRAME_PAGE )
     {
 #endif
       QWebPage * ptr = obj->page();
-      Qt4xHb::createReturnQObjectClass( ptr, "QWEBPAGE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QWEBPAGE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QWEBFRAME_PARENTFRAME )
     {
 #endif
       QWebFrame * ptr = obj->parentFrame();
-      Qt4xHb::createReturnQObjectClass( ptr, "QWEBFRAME" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QWEBFRAME");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -540,7 +540,7 @@ HB_FUNC_STATIC( QWEBFRAME_POS )
     {
 #endif
       QPoint * ptr = new QPoint( obj->pos() );
-      Qt4xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -639,7 +639,7 @@ HB_FUNC_STATIC( QWEBFRAME_REQUESTEDURL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->requestedUrl() );
-      Qt4xHb::createReturnClass( ptr, "QURL", true );
+      Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -690,7 +690,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLBARGEOMETRY )
     {
 #endif
       QRect * ptr = new QRect( obj->scrollBarGeometry( ( Qt::Orientation ) hb_parni(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -811,7 +811,7 @@ HB_FUNC_STATIC( QWEBFRAME_SCROLLPOSITION )
     {
 #endif
       QPoint * ptr = new QPoint( obj->scrollPosition() );
-      Qt4xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -862,7 +862,7 @@ HB_FUNC_STATIC( QWEBFRAME_SECURITYORIGIN )
     {
 #endif
       QWebSecurityOrigin * ptr = new QWebSecurityOrigin( obj->securityOrigin() );
-      Qt4xHb::createReturnClass( ptr, "QWEBSECURITYORIGIN", true );
+      Qt4xHb::createReturnClass(ptr, "QWEBSECURITYORIGIN", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1217,7 +1217,7 @@ HB_FUNC_STATIC( QWEBFRAME_URL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->url() );
-      Qt4xHb::createReturnClass( ptr, "QURL", true );
+      Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1266,7 +1266,7 @@ HB_FUNC_STATIC( QWEBFRAME_EVALUATEJAVASCRIPT )
     {
 #endif
       QVariant * ptr = new QVariant( obj->evaluateJavaScript( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1303,51 +1303,51 @@ HB_FUNC_STATIC( QWEBFRAME_PRINT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QWebFrameSlots_connect_signal( const QString & signal, const QString & slot );
+void QWebFrameSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QWEBFRAME_ONCONTENTSSIZECHANGED )
 {
-  QWebFrameSlots_connect_signal( "contentsSizeChanged(QSize)", "contentsSizeChanged(QSize)" );
+  QWebFrameSlots_connect_signal("contentsSizeChanged(QSize)", "contentsSizeChanged(QSize)");
 }
 
 HB_FUNC_STATIC( QWEBFRAME_ONICONCHANGED )
 {
-  QWebFrameSlots_connect_signal( "iconChanged()", "iconChanged()" );
+  QWebFrameSlots_connect_signal("iconChanged()", "iconChanged()");
 }
 
 HB_FUNC_STATIC( QWEBFRAME_ONINITIALLAYOUTCOMPLETED )
 {
-  QWebFrameSlots_connect_signal( "initialLayoutCompleted()", "initialLayoutCompleted()" );
+  QWebFrameSlots_connect_signal("initialLayoutCompleted()", "initialLayoutCompleted()");
 }
 
 HB_FUNC_STATIC( QWEBFRAME_ONJAVASCRIPTWINDOWOBJECTCLEARED )
 {
-  QWebFrameSlots_connect_signal( "javaScriptWindowObjectCleared()", "javaScriptWindowObjectCleared()" );
+  QWebFrameSlots_connect_signal("javaScriptWindowObjectCleared()", "javaScriptWindowObjectCleared()");
 }
 
 HB_FUNC_STATIC( QWEBFRAME_ONLOADFINISHED )
 {
-  QWebFrameSlots_connect_signal( "loadFinished(bool)", "loadFinished(bool)" );
+  QWebFrameSlots_connect_signal("loadFinished(bool)", "loadFinished(bool)");
 }
 
 HB_FUNC_STATIC( QWEBFRAME_ONLOADSTARTED )
 {
-  QWebFrameSlots_connect_signal( "loadStarted()", "loadStarted()" );
+  QWebFrameSlots_connect_signal("loadStarted()", "loadStarted()");
 }
 
 HB_FUNC_STATIC( QWEBFRAME_ONPAGECHANGED )
 {
-  QWebFrameSlots_connect_signal( "pageChanged()", "pageChanged()" );
+  QWebFrameSlots_connect_signal("pageChanged()", "pageChanged()");
 }
 
 HB_FUNC_STATIC( QWEBFRAME_ONTITLECHANGED )
 {
-  QWebFrameSlots_connect_signal( "titleChanged(QString)", "titleChanged(QString)" );
+  QWebFrameSlots_connect_signal("titleChanged(QString)", "titleChanged(QString)");
 }
 
 HB_FUNC_STATIC( QWEBFRAME_ONURLCHANGED )
 {
-  QWebFrameSlots_connect_signal( "urlChanged(QUrl)", "urlChanged(QUrl)" );
+  QWebFrameSlots_connect_signal("urlChanged(QUrl)", "urlChanged(QUrl)");
 }
 
 #pragma ENDDUMP

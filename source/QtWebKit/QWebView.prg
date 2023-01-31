@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QWEBVIEW_NEW )
   if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QWebView * obj = new QWebView( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QWEBVIEW_HISTORY )
     {
 #endif
       QWebHistory * ptr = obj->history();
-      Qt4xHb::createReturnClass( ptr, "QWEBHISTORY", false );
+      Qt4xHb::createReturnClass(ptr, "QWEBHISTORY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QWEBVIEW_ICON )
     {
 #endif
       QIcon * ptr = new QIcon( obj->icon() );
-      Qt4xHb::createReturnClass( ptr, "QICON", true );
+      Qt4xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QWEBVIEW_PAGE )
     {
 #endif
       QWebPage * ptr = obj->page();
-      Qt4xHb::createReturnQObjectClass( ptr, "QWEBPAGE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QWEBPAGE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QWEBVIEW_PAGEACTION )
     {
 #endif
       QAction * ptr = obj->pageAction( ( QWebPage::WebAction ) hb_parni(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QWEBVIEW_SETTINGS )
     {
 #endif
       QWebSettings * ptr = obj->settings();
-      Qt4xHb::createReturnClass( ptr, "QWEBSETTINGS", false );
+      Qt4xHb::createReturnClass(ptr, "QWEBSETTINGS", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -675,7 +675,7 @@ HB_FUNC_STATIC( QWEBVIEW_URL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->url() );
-      Qt4xHb::createReturnClass( ptr, "QURL", true );
+      Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -840,51 +840,51 @@ HB_FUNC_STATIC( QWEBVIEW_STOP )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QWebViewSlots_connect_signal( const QString & signal, const QString & slot );
+void QWebViewSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QWEBVIEW_ONICONCHANGED )
 {
-  QWebViewSlots_connect_signal( "iconChanged()", "iconChanged()" );
+  QWebViewSlots_connect_signal("iconChanged()", "iconChanged()");
 }
 
 HB_FUNC_STATIC( QWEBVIEW_ONLINKCLICKED )
 {
-  QWebViewSlots_connect_signal( "linkClicked(QUrl)", "linkClicked(QUrl)" );
+  QWebViewSlots_connect_signal("linkClicked(QUrl)", "linkClicked(QUrl)");
 }
 
 HB_FUNC_STATIC( QWEBVIEW_ONLOADFINISHED )
 {
-  QWebViewSlots_connect_signal( "loadFinished(bool)", "loadFinished(bool)" );
+  QWebViewSlots_connect_signal("loadFinished(bool)", "loadFinished(bool)");
 }
 
 HB_FUNC_STATIC( QWEBVIEW_ONLOADPROGRESS )
 {
-  QWebViewSlots_connect_signal( "loadProgress(int)", "loadProgress(int)" );
+  QWebViewSlots_connect_signal("loadProgress(int)", "loadProgress(int)");
 }
 
 HB_FUNC_STATIC( QWEBVIEW_ONLOADSTARTED )
 {
-  QWebViewSlots_connect_signal( "loadStarted()", "loadStarted()" );
+  QWebViewSlots_connect_signal("loadStarted()", "loadStarted()");
 }
 
 HB_FUNC_STATIC( QWEBVIEW_ONSELECTIONCHANGED )
 {
-  QWebViewSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
+  QWebViewSlots_connect_signal("selectionChanged()", "selectionChanged()");
 }
 
 HB_FUNC_STATIC( QWEBVIEW_ONSTATUSBARMESSAGE )
 {
-  QWebViewSlots_connect_signal( "statusBarMessage(QString)", "statusBarMessage(QString)" );
+  QWebViewSlots_connect_signal("statusBarMessage(QString)", "statusBarMessage(QString)");
 }
 
 HB_FUNC_STATIC( QWEBVIEW_ONTITLECHANGED )
 {
-  QWebViewSlots_connect_signal( "titleChanged(QString)", "titleChanged(QString)" );
+  QWebViewSlots_connect_signal("titleChanged(QString)", "titleChanged(QString)");
 }
 
 HB_FUNC_STATIC( QWEBVIEW_ONURLCHANGED )
 {
-  QWebViewSlots_connect_signal( "urlChanged(QUrl)", "urlChanged(QUrl)" );
+  QWebViewSlots_connect_signal("urlChanged(QUrl)", "urlChanged(QUrl)");
 }
 
 #pragma ENDDUMP
