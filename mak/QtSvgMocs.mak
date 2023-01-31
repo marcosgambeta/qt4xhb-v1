@@ -4,5 +4,5 @@
 # Copyright (c) 2023 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
 
-$(QT4XHB_OBJ_DIR)/QSvgRendererSlotsMoc.cpp : $(QT4XHB_SRC_DIR)/QtSvg/QSvgRendererSlots.h
+$(QT4XHB_OBJ_DIR)/QSvgRendererSlotsMoc.cpp : $(QT4XHB_SRC_DIR)/QtSvg/QSvgRendererSlots.hpp
 	$(MOC) $^ -o $@
