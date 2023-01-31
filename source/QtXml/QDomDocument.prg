@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NEW )
     QDomDocument()
     */
     QDomDocument * obj = new QDomDocument();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NEW )
     QDomDocument( const QString & name )
     */
     QDomDocument * obj = new QDomDocument( PQSTRING(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDOMDOCUMENTTYPE(1) )
   {
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NEW )
     QDomDocument( const QDomDocumentType & doctype )
     */
     QDomDocument * obj = new QDomDocument( *PQDOMDOCUMENTTYPE(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDOMDOCUMENT(1) )
   {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_NEW )
     QDomDocument( const QDomDocument & x )
     */
     QDomDocument * obj = new QDomDocument( *PQDOMDOCUMENT(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEATTRIBUTE )
     {
 #endif
       QDomAttr * ptr = new QDomAttr( obj->createAttribute( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QDOMATTR", true );
+      Qt4xHb::createReturnClass(ptr, "QDOMATTR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEATTRIBUTENS )
     {
 #endif
       QDomAttr * ptr = new QDomAttr( obj->createAttributeNS( PQSTRING(1), PQSTRING(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QDOMATTR", true );
+      Qt4xHb::createReturnClass(ptr, "QDOMATTR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATECDATASECTION )
     {
 #endif
       QDomCDATASection * ptr = new QDomCDATASection( obj->createCDATASection( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QDOMCDATASECTION", true );
+      Qt4xHb::createReturnClass(ptr, "QDOMCDATASECTION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -218,7 +218,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATECOMMENT )
     {
 #endif
       QDomComment * ptr = new QDomComment( obj->createComment( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QDOMCOMMENT", true );
+      Qt4xHb::createReturnClass(ptr, "QDOMCOMMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEDOCUMENTFRAGMENT )
     {
 #endif
       QDomDocumentFragment * ptr = new QDomDocumentFragment( obj->createDocumentFragment() );
-      Qt4xHb::createReturnClass( ptr, "QDOMDOCUMENTFRAGMENT", true );
+      Qt4xHb::createReturnClass(ptr, "QDOMDOCUMENTFRAGMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEELEMENT )
     {
 #endif
       QDomElement * ptr = new QDomElement( obj->createElement( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QDOMELEMENT", true );
+      Qt4xHb::createReturnClass(ptr, "QDOMELEMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEELEMENTNS )
     {
 #endif
       QDomElement * ptr = new QDomElement( obj->createElementNS( PQSTRING(1), PQSTRING(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QDOMELEMENT", true );
+      Qt4xHb::createReturnClass(ptr, "QDOMELEMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -318,7 +318,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEENTITYREFERENCE )
     {
 #endif
       QDomEntityReference * ptr = new QDomEntityReference( obj->createEntityReference( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QDOMENTITYREFERENCE", true );
+      Qt4xHb::createReturnClass(ptr, "QDOMENTITYREFERENCE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATEPROCESSINGINSTRUCTION )
     {
 #endif
       QDomProcessingInstruction * ptr = new QDomProcessingInstruction( obj->createProcessingInstruction( PQSTRING(1), PQSTRING(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QDOMPROCESSINGINSTRUCTION", true );
+      Qt4xHb::createReturnClass(ptr, "QDOMPROCESSINGINSTRUCTION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_CREATETEXTNODE )
     {
 #endif
       QDomText * ptr = new QDomText( obj->createTextNode( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QDOMTEXT", true );
+      Qt4xHb::createReturnClass(ptr, "QDOMTEXT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -393,7 +393,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_DOCTYPE )
     {
 #endif
       QDomDocumentType * ptr = new QDomDocumentType( obj->doctype() );
-      Qt4xHb::createReturnClass( ptr, "QDOMDOCUMENTTYPE", true );
+      Qt4xHb::createReturnClass(ptr, "QDOMDOCUMENTTYPE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_DOCUMENTELEMENT )
     {
 #endif
       QDomElement * ptr = new QDomElement( obj->documentElement() );
-      Qt4xHb::createReturnClass( ptr, "QDOMELEMENT", true );
+      Qt4xHb::createReturnClass(ptr, "QDOMELEMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTBYID )
     {
 #endif
       QDomElement * ptr = new QDomElement( obj->elementById( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QDOMELEMENT", true );
+      Qt4xHb::createReturnClass(ptr, "QDOMELEMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTSBYTAGNAME )
     {
 #endif
       QDomNodeList * ptr = new QDomNodeList( obj->elementsByTagName( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QDOMNODELIST", true );
+      Qt4xHb::createReturnClass(ptr, "QDOMNODELIST", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_ELEMENTSBYTAGNAMENS )
     {
 #endif
       QDomNodeList * ptr = new QDomNodeList( obj->elementsByTagNameNS( PQSTRING(1), PQSTRING(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QDOMNODELIST", true );
+      Qt4xHb::createReturnClass(ptr, "QDOMNODELIST", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -518,7 +518,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_IMPLEMENTATION )
     {
 #endif
       QDomImplementation * ptr = new QDomImplementation( obj->implementation() );
-      Qt4xHb::createReturnClass( ptr, "QDOMIMPLEMENTATION", true );
+      Qt4xHb::createReturnClass(ptr, "QDOMIMPLEMENTATION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_IMPORTNODE )
     {
 #endif
       QDomNode * ptr = new QDomNode( obj->importNode( *PQDOMNODE(1), PBOOL(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QDOMNODE", true );
+      Qt4xHb::createReturnClass(ptr, "QDOMNODE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -728,7 +728,7 @@ HB_FUNC_STATIC( QDOMDOCUMENT_TOBYTEARRAY )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->toByteArray( OPINT( 1, 1 ) ) );
-      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

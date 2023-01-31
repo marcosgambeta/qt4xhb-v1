@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW )
     QDomCharacterData()
     */
     QDomCharacterData * obj = new QDomCharacterData();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDOMCHARACTERDATA(1) )
   {
@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QDOMCHARACTERDATA_NEW )
     QDomCharacterData( const QDomCharacterData & x )
     */
     QDomCharacterData * obj = new QDomCharacterData( *PQDOMCHARACTERDATA(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {

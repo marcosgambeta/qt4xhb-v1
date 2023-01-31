@@ -47,7 +47,7 @@ HB_FUNC_STATIC( QDOMTEXT_NEW )
     QDomText()
     */
     QDomText * obj = new QDomText();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDOMTEXT(1) )
   {
@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QDOMTEXT_NEW )
     QDomText( const QDomText & x )
     */
     QDomText * obj = new QDomText( *PQDOMTEXT(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QDOMTEXT_SPLITTEXT )
     {
 #endif
       QDomText * ptr = new QDomText( obj->splitText( PINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QDOMTEXT", true );
+      Qt4xHb::createReturnClass(ptr, "QDOMTEXT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

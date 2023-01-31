@@ -48,7 +48,7 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_NEW )
   if( ISNUMPAR(0) )
   {
     QXmlSimpleReader * obj = new QXmlSimpleReader();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {

@@ -52,7 +52,7 @@ HB_FUNC_STATIC( QDOMATTR_NEW )
     QDomAttr()
     */
     QDomAttr * obj = new QDomAttr();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDOMATTR(1) )
   {
@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QDOMATTR_NEW )
     QDomAttr( const QDomAttr & x )
     */
     QDomAttr * obj = new QDomAttr( *PQDOMATTR(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QDOMATTR_OWNERELEMENT )
     {
 #endif
       QDomElement * ptr = new QDomElement( obj->ownerElement() );
-      Qt4xHb::createReturnClass( ptr, "QDOMELEMENT", true );
+      Qt4xHb::createReturnClass(ptr, "QDOMELEMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

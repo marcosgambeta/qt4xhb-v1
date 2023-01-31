@@ -53,7 +53,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
     QDomDocumentType()
     */
     QDomDocumentType * obj = new QDomDocumentType();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDOMDOCUMENTTYPE(1) )
   {
@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NEW )
     QDomDocumentType( const QDomDocumentType & n )
     */
     QDomDocumentType * obj = new QDomDocumentType( *PQDOMDOCUMENTTYPE(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_ENTITIES )
     {
 #endif
       QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->entities() );
-      Qt4xHb::createReturnClass( ptr, "QDOMNAMEDNODEMAP", true );
+      Qt4xHb::createReturnClass(ptr, "QDOMNAMEDNODEMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QDOMDOCUMENTTYPE_NOTATIONS )
     {
 #endif
       QDomNamedNodeMap * ptr = new QDomNamedNodeMap( obj->notations() );
-      Qt4xHb::createReturnClass( ptr, "QDOMNAMEDNODEMAP", true );
+      Qt4xHb::createReturnClass(ptr, "QDOMNAMEDNODEMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
