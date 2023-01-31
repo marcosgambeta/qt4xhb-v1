@@ -48,7 +48,7 @@ Signals::~Signals()
   Parâmetro 3: codeblock
 */
 
-void Signals::connectSignal( QObject * object, QString signal, PHB_ITEM codeblock )
+void Signals::connectSignal( QObject * object, const QString & signal, PHB_ITEM codeblock )
 {
   // procura por posição livre
   int index = m_list1->indexOf( NULL );
@@ -75,7 +75,7 @@ void Signals::connectSignal( QObject * object, QString signal, PHB_ITEM codebloc
   Parâmetro 2: assinatura do sinal
 */
 
-void Signals::disconnectSignal( QObject * object, QString signal )
+void Signals::disconnectSignal( QObject * object, const QString & signal )
 {
   // remove sinal da lista de sinais
   const int listsize = m_list1->size();
@@ -98,7 +98,7 @@ void Signals::disconnectSignal( QObject * object, QString signal )
   Retorna true se existe uma conexão ativa ou false caso não exista
 */
 
-bool Signals::isSignalConnected( QObject * object, QString signal )
+bool Signals::isSignalConnected( QObject * object, const QString & signal )
 {
   bool result = false;
 
@@ -116,7 +116,7 @@ bool Signals::isSignalConnected( QObject * object, QString signal )
   return result;
 }
 
-PHB_ITEM Signals::returnCodeblock( QObject * object, QString signal )
+PHB_ITEM Signals::returnCodeblock( QObject * object, const QString & signal )
 {
   PHB_ITEM result = NULL;
 
@@ -180,7 +180,7 @@ void Signals::disconnectAllSignals( QObject * obj, bool children )
   }
 }
 
-bool Signals::connectionDisconnection( QObject * receiver, QString signal, QString slot )
+bool Signals::connectionDisconnection( QObject * receiver, const QString & signal, const QString & slot )
 {
   QObject * sender = qobject_cast< QObject * >( Qt4xHb::getQObjectPointerFromSelfItem() );
 
@@ -267,7 +267,7 @@ namespace Qt4xHb
   Função de uso interno, não deve ser usada nas aplicações do usuário
 */
 
-void Signals_disconnect_signal( QObject * object, QString signal )
+void Signals_disconnect_signal( QObject * object, const QString & signal )
 {
   s_signals->disconnectSignal( object, signal );
 }
@@ -276,7 +276,7 @@ void Signals_disconnect_signal( QObject * object, QString signal )
   Retorna o codeblock de um determinado objeto e sinal
 */
 
-PHB_ITEM Signals_return_codeblock( QObject * object, QString signal )
+PHB_ITEM Signals_return_codeblock( QObject * object, const QString & signal )
 {
   return s_signals->returnCodeblock( object, signal );
 }
@@ -299,7 +299,7 @@ void Signals_disconnect_all_signals( QObject * obj, bool children )
 */
 
 
-bool Signals_connection_disconnection( QObject * receiver, QString signal, QString slot )
+bool Signals_connection_disconnection( QObject * receiver, const QString & signal, const QString & slot )
 {
   return s_signals->connectionDisconnection( receiver, signal, slot );
 }

@@ -12,11 +12,11 @@
 namespace Qt4xHb
 {
   //void Signals_connect_signal ( QObject * object, QString signal, PHB_ITEM codeblock );
-  void Signals_disconnect_signal ( QObject * object, QString signal );
+  void Signals_disconnect_signal ( QObject * object, const QString & signal );
   //bool Signals_is_signal_connected ( QObject * object, QString signal );
-  PHB_ITEM Signals_return_codeblock ( QObject * object, QString signal );
+  PHB_ITEM Signals_return_codeblock ( QObject * object, const QString & signal );
   void Signals_disconnect_all_signals (QObject * obj, bool children);
-  bool Signals_connection_disconnection ( QObject * s, QString signal, QString slot );
+  bool Signals_connection_disconnection ( QObject * s, const QString & signal, const QString & slot );
   PHB_ITEM Signals_return_object ( void * ptr, const char * classname );
   PHB_ITEM Signals_return_qobject ( QObject * ptr, const char * classname );
 }
