@@ -4,9 +4,9 @@
 # Copyright (c) 2023 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
 
-$(QT4XHB_OBJ_DIR)/QDesignerFormWindowInterfaceSlotsMoc.cpp        : $(QT4XHB_SRC_DIR)/QtDesigner/QDesignerFormWindowInterfaceSlots.h
+$(QT4XHB_OBJ_DIR)/QDesignerFormWindowInterfaceSlotsMoc.cpp        : $(QT4XHB_SRC_DIR)/QtDesigner/QDesignerFormWindowInterfaceSlots.hpp
 	$(MOC) $^ -o $@
-$(QT4XHB_OBJ_DIR)/QDesignerFormWindowManagerInterfaceSlotsMoc.cpp : $(QT4XHB_SRC_DIR)/QtDesigner/QDesignerFormWindowManagerInterfaceSlots.h
+$(QT4XHB_OBJ_DIR)/QDesignerFormWindowManagerInterfaceSlotsMoc.cpp : $(QT4XHB_SRC_DIR)/QtDesigner/QDesignerFormWindowManagerInterfaceSlots.hpp
 	$(MOC) $^ -o $@
-$(QT4XHB_OBJ_DIR)/QDesignerPropertyEditorInterfaceSlotsMoc.cpp    : $(QT4XHB_SRC_DIR)/QtDesigner/QDesignerPropertyEditorInterfaceSlots.h
+$(QT4XHB_OBJ_DIR)/QDesignerPropertyEditorInterfaceSlotsMoc.cpp    : $(QT4XHB_SRC_DIR)/QtDesigner/QDesignerPropertyEditorInterfaceSlots.hpp
 	$(MOC) $^ -o $@
