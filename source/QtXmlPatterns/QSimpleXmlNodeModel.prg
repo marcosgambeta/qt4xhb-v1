@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMEPOOL )
     {
 #endif
       QXmlNamePool * ptr = &obj->namePool();
-      Qt4xHb::createReturnClass( ptr, "QXMLNAMEPOOL", false );
+      Qt4xHb::createReturnClass(ptr, "QXMLNAMEPOOL", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_BASEURI )
     {
 #endif
       QUrl * ptr = new QUrl( obj->baseUri( *PQXMLNODEMODELINDEX(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QURL", true );
+      Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_ELEMENTBYID )
     {
 #endif
       QXmlNodeModelIndex * ptr = new QXmlNodeModelIndex( obj->elementById( *PQXMLNAME(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QXMLNODEMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QXMLNODEMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NAMESPACEBINDINGS )
     {
 #endif
       QVector<QXmlName> list = obj->namespaceBindings( *PQXMLNODEMODELINDEX(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QXMLNAME" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QXMLNAME");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QSIMPLEXMLNODEMODEL_NODESBYIDREF )
     {
 #endif
       QVector<QXmlNodeModelIndex> list = obj->nodesByIdref( *PQXMLNAME(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QXMLNODEMODELINDEX" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QXMLNODEMODELINDEX");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {

@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QABSTRACTURIRESOLVER_RESOLVE )
     {
 #endif
       QUrl * ptr = new QUrl( obj->resolve( *PQURL(1), *PQURL(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QURL", true );
+      Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

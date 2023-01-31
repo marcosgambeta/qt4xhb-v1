@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_NEW )
   if( ISNUMPAR(2) && ISQXMLQUERY(1) && ISQIODEVICE(2) )
   {
     QXmlSerializer * obj = new QXmlSerializer( *PQXMLQUERY(1), PQIODEVICE(2) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_CODEC )
     {
 #endif
       const QTextCodec * ptr = obj->codec();
-      Qt4xHb::createReturnClass( ptr, "QTEXTCODEC", false );
+      Qt4xHb::createReturnClass(ptr, "QTEXTCODEC", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QXMLSERIALIZER_OUTPUTDEVICE )
     {
 #endif
       QIODevice * ptr = obj->outputDevice();
-      Qt4xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

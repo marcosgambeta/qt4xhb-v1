@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QXMLFORMATTER_NEW )
   if( ISNUMPAR(2) && ISQXMLQUERY(1) && ISQIODEVICE(2) )
   {
     QXmlFormatter * obj = new QXmlFormatter( *PQXMLQUERY(1), PQIODEVICE(2) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {

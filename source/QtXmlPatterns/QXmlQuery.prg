@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QXMLQUERY_NEW )
     QXmlQuery()
     */
     QXmlQuery * obj = new QXmlQuery();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQXMLQUERY(1) )
   {
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QXMLQUERY_NEW )
     QXmlQuery( const QXmlQuery & other )
     */
     QXmlQuery * obj = new QXmlQuery( *PQXMLQUERY(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQXMLNAMEPOOL(1) )
   {
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QXMLQUERY_NEW )
     QXmlQuery( const QXmlNamePool & np )
     */
     QXmlQuery * obj = new QXmlQuery( *PQXMLNAMEPOOL(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQXMLNAMEPOOL(2) || HB_ISNIL(2) ) )
   {
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QXMLQUERY_NEW )
     QXmlQuery( QXmlQuery::QueryLanguage, QXmlNamePool & np = QXmlNamePool() )
     */
     QXmlQuery * obj = new QXmlQuery( ( QXmlQuery::QueryLanguage ) hb_parni(1), HB_ISNIL(2) ? QXmlNamePool() : *static_cast<QXmlNamePool*>( Qt4xHb::itemGetPtr(2) ) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QXMLQUERY_INITIALTEMPLATENAME )
     {
 #endif
       QXmlName * ptr = new QXmlName( obj->initialTemplateName() );
-      Qt4xHb::createReturnClass( ptr, "QXMLNAME", true );
+      Qt4xHb::createReturnClass(ptr, "QXMLNAME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QXMLQUERY_MESSAGEHANDLER )
     {
 #endif
       QAbstractMessageHandler * ptr = obj->messageHandler();
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTMESSAGEHANDLER" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTMESSAGEHANDLER");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QXMLQUERY_NAMEPOOL )
     {
 #endif
       QXmlNamePool * ptr = new QXmlNamePool( obj->namePool() );
-      Qt4xHb::createReturnClass( ptr, "QXMLNAMEPOOL", true );
+      Qt4xHb::createReturnClass(ptr, "QXMLNAMEPOOL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QXMLQUERY_NETWORKACCESSMANAGER )
     {
 #endif
       QNetworkAccessManager * ptr = obj->networkAccessManager();
-      Qt4xHb::createReturnQObjectClass( ptr, "QNETWORKACCESSMANAGER" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QNETWORKACCESSMANAGER");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -649,7 +649,7 @@ HB_FUNC_STATIC( QXMLQUERY_URIRESOLVER )
     {
 #endif
       const QAbstractUriResolver * ptr = obj->uriResolver();
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTURIRESOLVER" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTURIRESOLVER");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -666,28 +666,28 @@ HB_FUNC_STATIC( QXMLQUERY_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QXMLQUERY_NEWFROMOBJECT )
@@ -702,7 +702,7 @@ HB_FUNC_STATIC( QXMLQUERY_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QXMLQUERY_SELFDESTRUCTION )
 {
-  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QXMLQUERY_SETSELFDESTRUCTION )
@@ -711,16 +711,16 @@ HB_FUNC_STATIC( QXMLQUERY_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP
