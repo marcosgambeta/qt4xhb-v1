@@ -4,13 +4,13 @@
 # Copyright (c) 2023 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
 
-#$(QT4XHB_OBJ_DIR)/QAxBaseSlotsMoc.cpp          : $(QT4XHB_SRC_DIR)/ActiveQt/QAxBaseSlots.h
+#$(QT4XHB_OBJ_DIR)/QAxBaseSlotsMoc.cpp          : $(QT4XHB_SRC_DIR)/ActiveQt/QAxBaseSlots.hpp
 #	$(MOC) $^ -o $@
-$(QT4XHB_OBJ_DIR)/QAxObjectSlotsMoc.cpp        : $(QT4XHB_SRC_DIR)/ActiveQt/QAxObjectSlots.h
+$(QT4XHB_OBJ_DIR)/QAxObjectSlotsMoc.cpp        : $(QT4XHB_SRC_DIR)/ActiveQt/QAxObjectSlots.hpp
 	$(MOC) $^ -o $@
-$(QT4XHB_OBJ_DIR)/QAxScriptSlotsMoc.cpp        : $(QT4XHB_SRC_DIR)/ActiveQt/QAxScriptSlots.h
+$(QT4XHB_OBJ_DIR)/QAxScriptSlotsMoc.cpp        : $(QT4XHB_SRC_DIR)/ActiveQt/QAxScriptSlots.hpp
 	$(MOC) $^ -o $@
-$(QT4XHB_OBJ_DIR)/QAxScriptManagerSlotsMoc.cpp : $(QT4XHB_SRC_DIR)/ActiveQt/QAxScriptManagerSlots.h
+$(QT4XHB_OBJ_DIR)/QAxScriptManagerSlotsMoc.cpp : $(QT4XHB_SRC_DIR)/ActiveQt/QAxScriptManagerSlots.hpp
 	$(MOC) $^ -o $@
-$(QT4XHB_OBJ_DIR)/QAxWidgetSlotsMoc.cpp        : $(QT4XHB_SRC_DIR)/ActiveQt/QAxWidgetSlots.h
+$(QT4XHB_OBJ_DIR)/QAxWidgetSlotsMoc.cpp        : $(QT4XHB_SRC_DIR)/ActiveQt/QAxWidgetSlots.hpp
 	$(MOC) $^ -o $@
