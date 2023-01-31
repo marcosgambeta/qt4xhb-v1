@@ -4,5 +4,5 @@
 # Copyright (c) 2023 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
 #
 
-$(QT4XHB_OBJ_DIR)/HUiLoaderMoc.cpp : $(QT4XHB_SRC_DIR)/QtUiTools/HUiLoader.h
+$(QT4XHB_OBJ_DIR)/HUiLoaderMoc.cpp : $(QT4XHB_SRC_DIR)/QtUiTools/HUiLoader.hpp
 	$(MOC) $^ -o $@
