@@ -12,7 +12,7 @@
 
 #include "QSvgRendererSlots.h"
 
-QSvgRendererSlots::QSvgRendererSlots( QObject * parent ) : QObject( parent )
+QSvgRendererSlots::QSvgRendererSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QSvgRendererSlots::~QSvgRendererSlots()
 
 void QSvgRendererSlots::repaintNeeded()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "repaintNeeded()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "repaintNeeded()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSVGRENDERER" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSVGRENDERER");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -42,19 +42,19 @@ void QSvgRendererSlots_connect_signal( const QString & signal, const QString & s
 
   if( obj != NULL )
   {
-    QSvgRendererSlots * s = QCoreApplication::instance()->findChild<QSvgRendererSlots *>();
+    QSvgRendererSlots * s = QCoreApplication::instance()->findChild<QSvgRendererSlots*>();
 
     if( s == NULL )
     {
       s = new QSvgRendererSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

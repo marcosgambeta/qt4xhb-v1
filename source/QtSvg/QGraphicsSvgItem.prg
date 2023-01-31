@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_NEW )
     QGraphicsSvgItem( QGraphicsItem * parent = 0 )
     */
     QGraphicsSvgItem * obj = new QGraphicsSvgItem( HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem*>( Qt4xHb::itemGetPtr(1) ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQGRAPHICSITEM(2) || HB_ISNIL(2) ) )
   {
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_NEW )
     QGraphicsSvgItem( const QString & fileName, QGraphicsItem * parent = 0 )
     */
     QGraphicsSvgItem * obj = new QGraphicsSvgItem( PQSTRING(1), HB_ISNIL(2) ? 0 : static_cast<QGraphicsItem*>( Qt4xHb::itemGetPtr(2) ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_MAXIMUMCACHESIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->maximumCacheSize() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_RENDERER )
     {
 #endif
       QSvgRenderer * ptr = obj->renderer();
-      Qt4xHb::createReturnQObjectClass( ptr, "QSVGRENDERER" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QSVGRENDERER");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QGRAPHICSSVGITEM_BOUNDINGRECT )
     {
 #endif
       QRectF * ptr = new QRectF( obj->boundingRect() );
-      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
+      Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

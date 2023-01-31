@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_NEW )
   if( ISNUMPAR(0) )
   {
     QSvgGenerator * obj = new QSvgGenerator();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_OUTPUTDEVICE )
     {
 #endif
       QIODevice * ptr = obj->outputDevice();
-      Qt4xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_SIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->size() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_VIEWBOX )
     {
 #endif
       QRect * ptr = new QRect( obj->viewBox() );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -466,7 +466,7 @@ HB_FUNC_STATIC( QSVGGENERATOR_VIEWBOXF )
     {
 #endif
       QRectF * ptr = new QRectF( obj->viewBoxF() );
-      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
+      Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
