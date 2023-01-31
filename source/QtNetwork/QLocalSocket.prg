@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QLOCALSOCKET_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QLocalSocket * obj = new QLocalSocket( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -589,26 +589,26 @@ HB_FUNC_STATIC( QLOCALSOCKET_WAITFORREADYREAD )
   }
 }
 
-void QLocalSocketSlots_connect_signal( const QString & signal, const QString & slot );
+void QLocalSocketSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QLOCALSOCKET_ONCONNECTED )
 {
-  QLocalSocketSlots_connect_signal( "connected()", "connected()" );
+  QLocalSocketSlots_connect_signal("connected()", "connected()");
 }
 
 HB_FUNC_STATIC( QLOCALSOCKET_ONDISCONNECTED )
 {
-  QLocalSocketSlots_connect_signal( "disconnected()", "disconnected()" );
+  QLocalSocketSlots_connect_signal("disconnected()", "disconnected()");
 }
 
 HB_FUNC_STATIC( QLOCALSOCKET_ONERROR )
 {
-  QLocalSocketSlots_connect_signal( "error(QLocalSocket::LocalSocketError)", "error(QLocalSocket::LocalSocketError)" );
+  QLocalSocketSlots_connect_signal("error(QLocalSocket::LocalSocketError)", "error(QLocalSocket::LocalSocketError)");
 }
 
 HB_FUNC_STATIC( QLOCALSOCKET_ONSTATECHANGED )
 {
-  QLocalSocketSlots_connect_signal( "stateChanged(QLocalSocket::LocalSocketState)", "stateChanged(QLocalSocket::LocalSocketState)" );
+  QLocalSocketSlots_connect_signal("stateChanged(QLocalSocket::LocalSocketState)", "stateChanged(QLocalSocket::LocalSocketState)");
 }
 
 #pragma ENDDUMP

@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_ATTRIBUTE )
     {
 #endif
       QVariant * ptr = new QVariant( obj->attribute( ( QNetworkRequest::Attribute ) hb_parni(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -204,7 +204,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_HEADER )
     {
 #endif
       QVariant * ptr = new QVariant( obj->header( ( QNetworkRequest::KnownHeaders ) hb_parni(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_MANAGER )
     {
 #endif
       QNetworkAccessManager * ptr = obj->manager();
-      Qt4xHb::createReturnQObjectClass( ptr, "QNETWORKACCESSMANAGER" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QNETWORKACCESSMANAGER");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADER )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->rawHeader( *PQBYTEARRAY(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_RAWHEADERLIST )
     {
 #endif
       QList<QByteArray> list = obj->rawHeaderList();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_REQUEST )
     {
 #endif
       QNetworkRequest * ptr = new QNetworkRequest( obj->request() );
-      Qt4xHb::createReturnClass( ptr, "QNETWORKREQUEST", true );
+      Qt4xHb::createReturnClass(ptr, "QNETWORKREQUEST", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -547,7 +547,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_SSLCONFIGURATION )
     {
 #endif
       QSslConfiguration * ptr = new QSslConfiguration( obj->sslConfiguration() );
-      Qt4xHb::createReturnClass( ptr, "QSSLCONFIGURATION", true );
+      Qt4xHb::createReturnClass(ptr, "QSSLCONFIGURATION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QNETWORKREPLY_URL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->url() );
-      Qt4xHb::createReturnClass( ptr, "QURL", true );
+      Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -609,36 +609,36 @@ HB_FUNC_STATIC( QNETWORKREPLY_CLOSE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QNetworkReplySlots_connect_signal( const QString & signal, const QString & slot );
+void QNetworkReplySlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QNETWORKREPLY_ONDOWNLOADPROGRESS )
 {
-  QNetworkReplySlots_connect_signal( "downloadProgress(qint64,qint64)", "downloadProgress(qint64,qint64)" );
+  QNetworkReplySlots_connect_signal("downloadProgress(qint64,qint64)", "downloadProgress(qint64,qint64)");
 }
 
 HB_FUNC_STATIC( QNETWORKREPLY_ONERROR )
 {
-  QNetworkReplySlots_connect_signal( "error(QNetworkReply::NetworkError)", "error(QNetworkReply::NetworkError)" );
+  QNetworkReplySlots_connect_signal("error(QNetworkReply::NetworkError)", "error(QNetworkReply::NetworkError)");
 }
 
 HB_FUNC_STATIC( QNETWORKREPLY_ONFINISHED )
 {
-  QNetworkReplySlots_connect_signal( "finished()", "finished()" );
+  QNetworkReplySlots_connect_signal("finished()", "finished()");
 }
 
 HB_FUNC_STATIC( QNETWORKREPLY_ONMETADATACHANGED )
 {
-  QNetworkReplySlots_connect_signal( "metaDataChanged()", "metaDataChanged()" );
+  QNetworkReplySlots_connect_signal("metaDataChanged()", "metaDataChanged()");
 }
 
 HB_FUNC_STATIC( QNETWORKREPLY_ONSSLERRORS )
 {
-  QNetworkReplySlots_connect_signal( "sslErrors(QList<QSslError>)", "sslErrors(QList<QSslError>)" );
+  QNetworkReplySlots_connect_signal("sslErrors(QList<QSslError>)", "sslErrors(QList<QSslError>)");
 }
 
 HB_FUNC_STATIC( QNETWORKREPLY_ONUPLOADPROGRESS )
 {
-  QNetworkReplySlots_connect_signal( "uploadProgress(qint64,qint64)", "uploadProgress(qint64,qint64)" );
+  QNetworkReplySlots_connect_signal("uploadProgress(qint64,qint64)", "uploadProgress(qint64,qint64)");
 }
 
 #pragma ENDDUMP

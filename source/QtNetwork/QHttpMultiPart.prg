@@ -53,7 +53,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_NEW )
     QHttpMultiPart( QObject * parent = 0 )
     */
     QHttpMultiPart * obj = new QHttpMultiPart( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
   {
@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_NEW )
     QHttpMultiPart( QHttpMultiPart::ContentType contentType, QObject * parent = 0 )
     */
     QHttpMultiPart * obj = new QHttpMultiPart( ( QHttpMultiPart::ContentType ) hb_parni(1), OPQOBJECT( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QHTTPMULTIPART_BOUNDARY )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->boundary() );
-      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

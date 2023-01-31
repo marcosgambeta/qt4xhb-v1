@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QTCPSERVER_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QTcpServer * obj = new QTcpServer( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QTCPSERVER_NEXTPENDINGCONNECTION )
     {
 #endif
       QTcpSocket * ptr = obj->nextPendingConnection();
-      Qt4xHb::createReturnQObjectClass( ptr, "QTCPSOCKET" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QTCPSOCKET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QTCPSERVER_PROXY )
     {
 #endif
       QNetworkProxy * ptr = new QNetworkProxy( obj->proxy() );
-      Qt4xHb::createReturnClass( ptr, "QNETWORKPROXY", true );
+      Qt4xHb::createReturnClass(ptr, "QNETWORKPROXY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QTCPSERVER_SERVERADDRESS )
     {
 #endif
       QHostAddress * ptr = new QHostAddress( obj->serverAddress() );
-      Qt4xHb::createReturnClass( ptr, "QHOSTADDRESS", true );
+      Qt4xHb::createReturnClass(ptr, "QHOSTADDRESS", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -493,11 +493,11 @@ HB_FUNC_STATIC( QTCPSERVER_WAITFORNEWCONNECTION )
   }
 }
 
-void QTcpServerSlots_connect_signal( const QString & signal, const QString & slot );
+void QTcpServerSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QTCPSERVER_ONNEWCONNECTION )
 {
-  QTcpServerSlots_connect_signal( "newConnection()", "newConnection()" );
+  QTcpServerSlots_connect_signal("newConnection()", "newConnection()");
 }
 
 #pragma ENDDUMP

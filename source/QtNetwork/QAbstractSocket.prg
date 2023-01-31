@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_NEW )
   if( ISNUMPAR(2) && HB_ISNUM(1) && ISQOBJECT(2) )
   {
     QAbstractSocket * obj = new QAbstractSocket( ( QAbstractSocket::SocketType ) hb_parni(1), PQOBJECT(2) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_LOCALADDRESS )
     {
 #endif
       QHostAddress * ptr = new QHostAddress( obj->localAddress() );
-      Qt4xHb::createReturnClass( ptr, "QHOSTADDRESS", true );
+      Qt4xHb::createReturnClass(ptr, "QHOSTADDRESS", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PEERADDRESS )
     {
 #endif
       QHostAddress * ptr = new QHostAddress( obj->peerAddress() );
-      Qt4xHb::createReturnClass( ptr, "QHOSTADDRESS", true );
+      Qt4xHb::createReturnClass(ptr, "QHOSTADDRESS", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_PROXY )
     {
 #endif
       QNetworkProxy * ptr = new QNetworkProxy( obj->proxy() );
-      Qt4xHb::createReturnClass( ptr, "QNETWORKPROXY", true );
+      Qt4xHb::createReturnClass(ptr, "QNETWORKPROXY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_SOCKETOPTION )
     {
 #endif
       QVariant * ptr = new QVariant( obj->socketOption( ( QAbstractSocket::SocketOption ) hb_parni(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -890,36 +890,36 @@ HB_FUNC_STATIC( QABSTRACTSOCKET_WAITFORREADYREAD )
   }
 }
 
-void QAbstractSocketSlots_connect_signal( const QString & signal, const QString & slot );
+void QAbstractSocketSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QABSTRACTSOCKET_ONCONNECTED )
 {
-  QAbstractSocketSlots_connect_signal( "connected()", "connected()" );
+  QAbstractSocketSlots_connect_signal("connected()", "connected()");
 }
 
 HB_FUNC_STATIC( QABSTRACTSOCKET_ONDISCONNECTED )
 {
-  QAbstractSocketSlots_connect_signal( "disconnected()", "disconnected()" );
+  QAbstractSocketSlots_connect_signal("disconnected()", "disconnected()");
 }
 
 HB_FUNC_STATIC( QABSTRACTSOCKET_ONERROR )
 {
-  QAbstractSocketSlots_connect_signal( "error(QAbstractSocket::SocketError)", "error(QAbstractSocket::SocketError)" );
+  QAbstractSocketSlots_connect_signal("error(QAbstractSocket::SocketError)", "error(QAbstractSocket::SocketError)");
 }
 
 HB_FUNC_STATIC( QABSTRACTSOCKET_ONHOSTFOUND )
 {
-  QAbstractSocketSlots_connect_signal( "hostFound()", "hostFound()" );
+  QAbstractSocketSlots_connect_signal("hostFound()", "hostFound()");
 }
 
 HB_FUNC_STATIC( QABSTRACTSOCKET_ONPROXYAUTHENTICATIONREQUIRED )
 {
-  QAbstractSocketSlots_connect_signal( "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)", "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)" );
+  QAbstractSocketSlots_connect_signal("proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)", "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)");
 }
 
 HB_FUNC_STATIC( QABSTRACTSOCKET_ONSTATECHANGED )
 {
-  QAbstractSocketSlots_connect_signal( "stateChanged(QAbstractSocket::SocketState)", "stateChanged(QAbstractSocket::SocketState)" );
+  QAbstractSocketSlots_connect_signal("stateChanged(QAbstractSocket::SocketState)", "stateChanged(QAbstractSocket::SocketState)");
 }
 
 #pragma ENDDUMP

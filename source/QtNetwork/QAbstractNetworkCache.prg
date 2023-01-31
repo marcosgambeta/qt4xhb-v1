@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_DATA )
     {
 #endif
       QIODevice * ptr = obj->data( *PQURL(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_METADATA )
     {
 #endif
       QNetworkCacheMetaData * ptr = new QNetworkCacheMetaData( obj->metaData( *PQURL(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QNETWORKCACHEMETADATA", true );
+      Qt4xHb::createReturnClass(ptr, "QNETWORKCACHEMETADATA", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_PREPARE )
     {
 #endif
       QIODevice * ptr = obj->prepare( *PQNETWORKCACHEMETADATA(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

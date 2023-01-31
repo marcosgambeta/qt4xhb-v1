@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_NEW )
   if( ISBETWEEN(1, 2) && ISQNETWORKCONFIGURATION(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
   {
     QNetworkSession * obj = new QNetworkSession( *PQNETWORKCONFIGURATION(1), OPQOBJECT( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_CONFIGURATION )
     {
 #endif
       QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->configuration() );
-      Qt4xHb::createReturnClass( ptr, "QNETWORKCONFIGURATION", true );
+      Qt4xHb::createReturnClass(ptr, "QNETWORKCONFIGURATION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_INTERFACE )
     {
 #endif
       QNetworkInterface * ptr = new QNetworkInterface( obj->interface() );
-      Qt4xHb::createReturnClass( ptr, "QNETWORKINTERFACE", true );
+      Qt4xHb::createReturnClass(ptr, "QNETWORKINTERFACE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QNETWORKSESSION_SESSIONPROPERTY )
     {
 #endif
       QVariant * ptr = new QVariant( obj->sessionProperty( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -578,36 +578,36 @@ HB_FUNC_STATIC( QNETWORKSESSION_STOP )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QNetworkSessionSlots_connect_signal( const QString & signal, const QString & slot );
+void QNetworkSessionSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QNETWORKSESSION_ONCLOSED )
 {
-  QNetworkSessionSlots_connect_signal( "closed()", "closed()" );
+  QNetworkSessionSlots_connect_signal("closed()", "closed()");
 }
 
 HB_FUNC_STATIC( QNETWORKSESSION_ONERROR )
 {
-  QNetworkSessionSlots_connect_signal( "error(QNetworkSession::SessionError)", "error(QNetworkSession::SessionError)" );
+  QNetworkSessionSlots_connect_signal("error(QNetworkSession::SessionError)", "error(QNetworkSession::SessionError)");
 }
 
 HB_FUNC_STATIC( QNETWORKSESSION_ONNEWCONFIGURATIONACTIVATED )
 {
-  QNetworkSessionSlots_connect_signal( "newConfigurationActivated()", "newConfigurationActivated()" );
+  QNetworkSessionSlots_connect_signal("newConfigurationActivated()", "newConfigurationActivated()");
 }
 
 HB_FUNC_STATIC( QNETWORKSESSION_ONOPENED )
 {
-  QNetworkSessionSlots_connect_signal( "opened()", "opened()" );
+  QNetworkSessionSlots_connect_signal("opened()", "opened()");
 }
 
 HB_FUNC_STATIC( QNETWORKSESSION_ONPREFERREDCONFIGURATIONCHANGED )
 {
-  QNetworkSessionSlots_connect_signal( "preferredConfigurationChanged(QNetworkConfiguration,bool)", "preferredConfigurationChanged(QNetworkConfiguration,bool)" );
+  QNetworkSessionSlots_connect_signal("preferredConfigurationChanged(QNetworkConfiguration,bool)", "preferredConfigurationChanged(QNetworkConfiguration,bool)");
 }
 
 HB_FUNC_STATIC( QNETWORKSESSION_ONSTATECHANGED )
 {
-  QNetworkSessionSlots_connect_signal( "stateChanged(QNetworkSession::State)", "stateChanged(QNetworkSession::State)" );
+  QNetworkSessionSlots_connect_signal("stateChanged(QNetworkSession::State)", "stateChanged(QNetworkSession::State)");
 }
 
 #pragma ENDDUMP

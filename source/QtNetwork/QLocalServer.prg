@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QLOCALSERVER_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QLocalServer * obj = new QLocalServer( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QLOCALSERVER_NEXTPENDINGCONNECTION )
     {
 #endif
       QLocalSocket * ptr = obj->nextPendingConnection();
-      Qt4xHb::createReturnQObjectClass( ptr, "QLOCALSOCKET" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QLOCALSOCKET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -406,11 +406,11 @@ HB_FUNC_STATIC( QLOCALSERVER_REMOVESERVER )
 #endif
 }
 
-void QLocalServerSlots_connect_signal( const QString & signal, const QString & slot );
+void QLocalServerSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QLOCALSERVER_ONNEWCONNECTION )
 {
-  QLocalServerSlots_connect_signal( "newConnection()", "newConnection()" );
+  QLocalServerSlots_connect_signal("newConnection()", "newConnection()");
 }
 
 #pragma ENDDUMP

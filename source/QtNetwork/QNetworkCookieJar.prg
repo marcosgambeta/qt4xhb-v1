@@ -51,7 +51,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QNetworkCookieJar * obj = new QNetworkCookieJar( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QNETWORKCOOKIEJAR_COOKIESFORURL )
     {
 #endif
       QList<QNetworkCookie> list = obj->cookiesForUrl( *PQURL(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKCOOKIE" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKCOOKIE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {

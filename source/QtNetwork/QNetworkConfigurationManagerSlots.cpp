@@ -12,7 +12,7 @@
 
 #include "QNetworkConfigurationManagerSlots.h"
 
-QNetworkConfigurationManagerSlots::QNetworkConfigurationManagerSlots( QObject * parent ) : QObject( parent )
+QNetworkConfigurationManagerSlots::QNetworkConfigurationManagerSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,14 +22,14 @@ QNetworkConfigurationManagerSlots::~QNetworkConfigurationManagerSlots()
 
 void QNetworkConfigurationManagerSlots::configurationAdded( const QNetworkConfiguration & config )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "configurationAdded(QNetworkConfiguration)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "configurationAdded(QNetworkConfiguration)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QNETWORKCONFIGURATIONMANAGER" );
-    PHB_ITEM pConfig = Qt4xHb::Signals_return_object( ( void * ) &config, "QNETWORKCONFIGURATION" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QNETWORKCONFIGURATIONMANAGER");
+    PHB_ITEM pConfig = Qt4xHb::Signals_return_object( ( void * ) &config, "QNETWORKCONFIGURATION");
 
     hb_vmEvalBlockV( cb, 2, pSender, pConfig );
 
@@ -40,14 +40,14 @@ void QNetworkConfigurationManagerSlots::configurationAdded( const QNetworkConfig
 
 void QNetworkConfigurationManagerSlots::configurationChanged( const QNetworkConfiguration & config )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "configurationChanged(QNetworkConfiguration)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "configurationChanged(QNetworkConfiguration)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QNETWORKCONFIGURATIONMANAGER" );
-    PHB_ITEM pConfig = Qt4xHb::Signals_return_object( ( void * ) &config, "QNETWORKCONFIGURATION" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QNETWORKCONFIGURATIONMANAGER");
+    PHB_ITEM pConfig = Qt4xHb::Signals_return_object( ( void * ) &config, "QNETWORKCONFIGURATION");
 
     hb_vmEvalBlockV( cb, 2, pSender, pConfig );
 
@@ -58,14 +58,14 @@ void QNetworkConfigurationManagerSlots::configurationChanged( const QNetworkConf
 
 void QNetworkConfigurationManagerSlots::configurationRemoved( const QNetworkConfiguration & config )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "configurationRemoved(QNetworkConfiguration)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "configurationRemoved(QNetworkConfiguration)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QNETWORKCONFIGURATIONMANAGER" );
-    PHB_ITEM pConfig = Qt4xHb::Signals_return_object( ( void * ) &config, "QNETWORKCONFIGURATION" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QNETWORKCONFIGURATIONMANAGER");
+    PHB_ITEM pConfig = Qt4xHb::Signals_return_object( ( void * ) &config, "QNETWORKCONFIGURATION");
 
     hb_vmEvalBlockV( cb, 2, pSender, pConfig );
 
@@ -76,13 +76,13 @@ void QNetworkConfigurationManagerSlots::configurationRemoved( const QNetworkConf
 
 void QNetworkConfigurationManagerSlots::onlineStateChanged( bool isOnline )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "onlineStateChanged(bool)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "onlineStateChanged(bool)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QNETWORKCONFIGURATIONMANAGER" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QNETWORKCONFIGURATIONMANAGER");
     PHB_ITEM pIsOnline = hb_itemPutL( NULL, isOnline );
 
     hb_vmEvalBlockV( cb, 2, pSender, pIsOnline );
@@ -94,13 +94,13 @@ void QNetworkConfigurationManagerSlots::onlineStateChanged( bool isOnline )
 
 void QNetworkConfigurationManagerSlots::updateCompleted()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "updateCompleted()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "updateCompleted()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QNETWORKCONFIGURATIONMANAGER" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QNETWORKCONFIGURATIONMANAGER");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -114,19 +114,19 @@ void QNetworkConfigurationManagerSlots_connect_signal( const QString & signal, c
 
   if( obj != NULL )
   {
-    QNetworkConfigurationManagerSlots * s = QCoreApplication::instance()->findChild<QNetworkConfigurationManagerSlots *>();
+    QNetworkConfigurationManagerSlots * s = QCoreApplication::instance()->findChild<QNetworkConfigurationManagerSlots*>();
 
     if( s == NULL )
     {
       s = new QNetworkConfigurationManagerSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

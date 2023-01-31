@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QNetworkConfigurationManager * obj = new QNetworkConfigurationManager( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ALLCONFIGURATIONS )
     {
 #endif
       QList<QNetworkConfiguration> list = obj->allConfigurations( HB_ISNIL(1) ? ( QNetworkConfiguration::StateFlags ) 0 : ( QNetworkConfiguration::StateFlags ) hb_parni(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKCONFIGURATION" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QNETWORKCONFIGURATION");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_CONFIGURATIONFROMIDENTIFIER )
     {
 #endif
       QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->configurationFromIdentifier( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QNETWORKCONFIGURATION", true );
+      Qt4xHb::createReturnClass(ptr, "QNETWORKCONFIGURATION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_DEFAULTCONFIGURATION )
     {
 #endif
       QNetworkConfiguration * ptr = new QNetworkConfiguration( obj->defaultConfiguration() );
-      Qt4xHb::createReturnClass( ptr, "QNETWORKCONFIGURATION", true );
+      Qt4xHb::createReturnClass(ptr, "QNETWORKCONFIGURATION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,31 +263,31 @@ HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_UPDATECONFIGURATIONS )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QNetworkConfigurationManagerSlots_connect_signal( const QString & signal, const QString & slot );
+void QNetworkConfigurationManagerSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONADDED )
 {
-  QNetworkConfigurationManagerSlots_connect_signal( "configurationAdded(QNetworkConfiguration)", "configurationAdded(QNetworkConfiguration)" );
+  QNetworkConfigurationManagerSlots_connect_signal("configurationAdded(QNetworkConfiguration)", "configurationAdded(QNetworkConfiguration)");
 }
 
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONCHANGED )
 {
-  QNetworkConfigurationManagerSlots_connect_signal( "configurationChanged(QNetworkConfiguration)", "configurationChanged(QNetworkConfiguration)" );
+  QNetworkConfigurationManagerSlots_connect_signal("configurationChanged(QNetworkConfiguration)", "configurationChanged(QNetworkConfiguration)");
 }
 
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONCONFIGURATIONREMOVED )
 {
-  QNetworkConfigurationManagerSlots_connect_signal( "configurationRemoved(QNetworkConfiguration)", "configurationRemoved(QNetworkConfiguration)" );
+  QNetworkConfigurationManagerSlots_connect_signal("configurationRemoved(QNetworkConfiguration)", "configurationRemoved(QNetworkConfiguration)");
 }
 
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONONLINESTATECHANGED )
 {
-  QNetworkConfigurationManagerSlots_connect_signal( "onlineStateChanged(bool)", "onlineStateChanged(bool)" );
+  QNetworkConfigurationManagerSlots_connect_signal("onlineStateChanged(bool)", "onlineStateChanged(bool)");
 }
 
 HB_FUNC_STATIC( QNETWORKCONFIGURATIONMANAGER_ONUPDATECOMPLETED )
 {
-  QNetworkConfigurationManagerSlots_connect_signal( "updateCompleted()", "updateCompleted()" );
+  QNetworkConfigurationManagerSlots_connect_signal("updateCompleted()", "updateCompleted()");
 }
 
 #pragma ENDDUMP

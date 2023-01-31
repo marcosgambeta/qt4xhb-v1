@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QSSLSOCKET_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QSslSocket * obj = new QSslSocket( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -252,7 +252,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CACERTIFICATES )
     {
 #endif
       QList<QSslCertificate> list = obj->caCertificates();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QSSLSOCKET_CIPHERS )
     {
 #endif
       QList<QSslCipher> list = obj->ciphers();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCIPHER" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCIPHER");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -531,7 +531,7 @@ HB_FUNC_STATIC( QSSLSOCKET_LOCALCERTIFICATE )
     {
 #endif
       QSslCertificate * ptr = new QSslCertificate( obj->localCertificate() );
-      Qt4xHb::createReturnClass( ptr, "QSSLCERTIFICATE", true );
+      Qt4xHb::createReturnClass(ptr, "QSSLCERTIFICATE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -580,7 +580,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PEERCERTIFICATE )
     {
 #endif
       QSslCertificate * ptr = new QSslCertificate( obj->peerCertificate() );
-      Qt4xHb::createReturnClass( ptr, "QSSLCERTIFICATE", true );
+      Qt4xHb::createReturnClass(ptr, "QSSLCERTIFICATE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -605,7 +605,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PEERCERTIFICATECHAIN )
     {
 #endif
       QList<QSslCertificate> list = obj->peerCertificateChain();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -705,7 +705,7 @@ HB_FUNC_STATIC( QSSLSOCKET_PRIVATEKEY )
     {
 #endif
       QSslKey * ptr = new QSslKey( obj->privateKey() );
-      Qt4xHb::createReturnClass( ptr, "QSSLKEY", true );
+      Qt4xHb::createReturnClass(ptr, "QSSLKEY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -754,7 +754,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SESSIONCIPHER )
     {
 #endif
       QSslCipher * ptr = new QSslCipher( obj->sessionCipher() );
-      Qt4xHb::createReturnClass( ptr, "QSSLCIPHER", true );
+      Qt4xHb::createReturnClass(ptr, "QSSLCIPHER", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1107,7 +1107,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SOCKETOPTION )
     {
 #endif
       QVariant * ptr = new QVariant( obj->socketOption( ( QAbstractSocket::SocketOption ) hb_parni(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1132,7 +1132,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SSLCONFIGURATION )
     {
 #endif
       QSslConfiguration * ptr = new QSslConfiguration( obj->sslConfiguration() );
-      Qt4xHb::createReturnClass( ptr, "QSSLCONFIGURATION", true );
+      Qt4xHb::createReturnClass(ptr, "QSSLCONFIGURATION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1157,7 +1157,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SSLERRORS )
     {
 #endif
       QList<QSslError> list = obj->sslErrors();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -1561,7 +1561,7 @@ HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCACERTIFICATES )
     {
 #endif
       QList<QSslCertificate> list = obj->defaultCaCertificates();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -1613,7 +1613,7 @@ HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCIPHERS )
     {
 #endif
       QList<QSslCipher> list = obj->defaultCiphers();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCIPHER" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCIPHER");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -1731,7 +1731,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SUPPORTEDCIPHERS )
     {
 #endif
       QList<QSslCipher> list = obj->supportedCiphers();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCIPHER" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCIPHER");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -1802,7 +1802,7 @@ HB_FUNC_STATIC( QSSLSOCKET_SYSTEMCACERTIFICATES )
     {
 #endif
       QList<QSslCertificate> list = obj->systemCaCertificates();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLCERTIFICATE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -1840,31 +1840,31 @@ HB_FUNC_STATIC( QSSLSOCKET_SYSTEMCACERTIFICATES )
   }
 }
 
-void QSslSocketSlots_connect_signal( const QString & signal, const QString & slot );
+void QSslSocketSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTED )
 {
-  QSslSocketSlots_connect_signal( "encrypted()", "encrypted()" );
+  QSslSocketSlots_connect_signal("encrypted()", "encrypted()");
 }
 
 HB_FUNC_STATIC( QSSLSOCKET_ONENCRYPTEDBYTESWRITTEN )
 {
-  QSslSocketSlots_connect_signal( "encryptedBytesWritten(qint64)", "encryptedBytesWritten(qint64)" );
+  QSslSocketSlots_connect_signal("encryptedBytesWritten(qint64)", "encryptedBytesWritten(qint64)");
 }
 
 HB_FUNC_STATIC( QSSLSOCKET_ONMODECHANGED )
 {
-  QSslSocketSlots_connect_signal( "modeChanged(QSslSocket::SslMode)", "modeChanged(QSslSocket::SslMode)" );
+  QSslSocketSlots_connect_signal("modeChanged(QSslSocket::SslMode)", "modeChanged(QSslSocket::SslMode)");
 }
 
 HB_FUNC_STATIC( QSSLSOCKET_ONPEERVERIFYERROR )
 {
-  QSslSocketSlots_connect_signal( "peerVerifyError(QSslError)", "peerVerifyError(QSslError)" );
+  QSslSocketSlots_connect_signal("peerVerifyError(QSslError)", "peerVerifyError(QSslError)");
 }
 
 HB_FUNC_STATIC( QSSLSOCKET_ONSSLERRORS )
 {
-  QSslSocketSlots_connect_signal( "sslErrors(QList<QSslError>)", "sslErrors(QList<QSslError>)" );
+  QSslSocketSlots_connect_signal("sslErrors(QList<QSslError>)", "sslErrors(QList<QSslError>)");
 }
 
 #pragma ENDDUMP

@@ -12,7 +12,7 @@
 
 #include "QLocalServerSlots.h"
 
-QLocalServerSlots::QLocalServerSlots( QObject * parent ) : QObject( parent )
+QLocalServerSlots::QLocalServerSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QLocalServerSlots::~QLocalServerSlots()
 
 void QLocalServerSlots::newConnection()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "newConnection()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "newConnection()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QLOCALSERVER" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QLOCALSERVER");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -42,19 +42,19 @@ void QLocalServerSlots_connect_signal( const QString & signal, const QString & s
 
   if( obj != NULL )
   {
-    QLocalServerSlots * s = QCoreApplication::instance()->findChild<QLocalServerSlots *>();
+    QLocalServerSlots * s = QCoreApplication::instance()->findChild<QLocalServerSlots*>();
 
     if( s == NULL )
     {
       s = new QLocalServerSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

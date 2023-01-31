@@ -64,7 +64,7 @@ QHostAddress( quint32 ip4Addr )
 HB_FUNC_STATIC( QHOSTADDRESS_NEW2 )
 {
   QHostAddress * obj = new QHostAddress( PQUINT32(1) );
-  Qt4xHb::returnNewObject( obj, true );
+  Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -73,7 +73,7 @@ QHostAddress( QHostAddress::SpecialAddress address )
 HB_FUNC_STATIC( QHOSTADDRESS_NEW8 )
 {
   QHostAddress * obj = new QHostAddress( ( QHostAddress::SpecialAddress ) hb_parni(1) );
-  Qt4xHb::returnNewObject( obj, true );
+  Qt4xHb::returnNewObject(obj, true);
 }
 
 HB_FUNC_STATIC( QHOSTADDRESS_NEW )
@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW )
     QHostAddress()
     */
     QHostAddress * obj = new QHostAddress();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW )
     QHostAddress( const QString & address )
     */
     QHostAddress * obj = new QHostAddress( PQSTRING(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQHOSTADDRESS(1) )
   {
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEW )
     QHostAddress( const QHostAddress & address )
     */
     QHostAddress * obj = new QHostAddress( *PQHOSTADDRESS(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
@@ -368,28 +368,28 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QHOSTADDRESS_NEWFROMOBJECT )
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QHOSTADDRESS_SELFDESTRUCTION )
 {
-  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QHOSTADDRESS_SETSELFDESTRUCTION )
@@ -413,16 +413,16 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

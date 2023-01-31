@@ -12,7 +12,7 @@
 
 #include "QNetworkReplySlots.h"
 
-QNetworkReplySlots::QNetworkReplySlots( QObject * parent ) : QObject( parent )
+QNetworkReplySlots::QNetworkReplySlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QNetworkReplySlots::~QNetworkReplySlots()
 
 void QNetworkReplySlots::downloadProgress( qint64 bytesReceived, qint64 bytesTotal )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "downloadProgress(qint64,qint64)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "downloadProgress(qint64,qint64)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QNETWORKREPLY" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QNETWORKREPLY");
     PHB_ITEM pBytesReceived = hb_itemPutNLL( NULL, bytesReceived );
     PHB_ITEM pBytesTotal = hb_itemPutNLL( NULL, bytesTotal );
 
@@ -42,13 +42,13 @@ void QNetworkReplySlots::downloadProgress( qint64 bytesReceived, qint64 bytesTot
 
 void QNetworkReplySlots::error( QNetworkReply::NetworkError code )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "error(QNetworkReply::NetworkError)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "error(QNetworkReply::NetworkError)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QNETWORKREPLY" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QNETWORKREPLY");
     PHB_ITEM pCode = hb_itemPutNI( NULL, static_cast<int >( code ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pCode );
@@ -60,13 +60,13 @@ void QNetworkReplySlots::error( QNetworkReply::NetworkError code )
 
 void QNetworkReplySlots::finished()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "finished()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "finished()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QNETWORKREPLY" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QNETWORKREPLY");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -76,13 +76,13 @@ void QNetworkReplySlots::finished()
 
 void QNetworkReplySlots::metaDataChanged()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "metaDataChanged()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "metaDataChanged()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QNETWORKREPLY" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QNETWORKREPLY");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -92,14 +92,14 @@ void QNetworkReplySlots::metaDataChanged()
 
 void QNetworkReplySlots::sslErrors( const QList<QSslError> & errors )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "sslErrors(QList<QSslError>)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "sslErrors(QList<QSslError>)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QNETWORKREPLY" );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QNETWORKREPLY");
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR");
     PHB_ITEM pErrors = hb_itemArrayNew(0);
     if( pDynSym )
     {
@@ -132,13 +132,13 @@ void QNetworkReplySlots::sslErrors( const QList<QSslError> & errors )
 
 void QNetworkReplySlots::uploadProgress( qint64 bytesSent, qint64 bytesTotal )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "uploadProgress(qint64,qint64)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "uploadProgress(qint64,qint64)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QNETWORKREPLY" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QNETWORKREPLY");
     PHB_ITEM pBytesSent = hb_itemPutNLL( NULL, bytesSent );
     PHB_ITEM pBytesTotal = hb_itemPutNLL( NULL, bytesTotal );
 
@@ -156,19 +156,19 @@ void QNetworkReplySlots_connect_signal( const QString & signal, const QString & 
 
   if( obj != NULL )
   {
-    QNetworkReplySlots * s = QCoreApplication::instance()->findChild<QNetworkReplySlots *>();
+    QNetworkReplySlots * s = QCoreApplication::instance()->findChild<QNetworkReplySlots*>();
 
     if( s == NULL )
     {
       s = new QNetworkReplySlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }
