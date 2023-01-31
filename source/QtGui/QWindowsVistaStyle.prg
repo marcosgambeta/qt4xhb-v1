@@ -48,7 +48,7 @@ HB_FUNC_STATIC( QWINDOWSVISTASTYLE_NEW )
   if( ISNUMPAR(0) )
   {
     QWindowsVistaStyle * obj = new QWindowsVistaStyle();
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {

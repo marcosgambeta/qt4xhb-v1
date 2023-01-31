@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUT_ITEMAT )
     {
 #endif
       QGraphicsLayoutItem * ptr = obj->itemAt( PINT(1) );
-      Qt4xHb::createReturnClass( ptr, "QGRAPHICSLAYOUTITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QGRAPHICSLAYOUTITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

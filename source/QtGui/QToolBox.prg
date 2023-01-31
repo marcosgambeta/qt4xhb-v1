@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QTOOLBOX_NEW )
   if( ISBETWEEN(0, 2) && ( ISQWIDGET(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
   {
     QToolBox * obj = new QToolBox( OPQWIDGET( 1, 0 ), HB_ISNIL(2) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(2) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QTOOLBOX_CURRENTWIDGET )
     {
 #endif
       QWidget * ptr = obj->currentWidget();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMICON )
     {
 #endif
       QIcon * ptr = new QIcon( obj->itemIcon( PINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QICON", true );
+      Qt4xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QTOOLBOX_WIDGET )
     {
 #endif
       QWidget * ptr = obj->widget( PINT(1) );
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -561,11 +561,11 @@ HB_FUNC_STATIC( QTOOLBOX_SETCURRENTWIDGET )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QToolBoxSlots_connect_signal( const QString & signal, const QString & slot );
+void QToolBoxSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QTOOLBOX_ONCURRENTCHANGED )
 {
-  QToolBoxSlots_connect_signal( "currentChanged(int)", "currentChanged(int)" );
+  QToolBoxSlots_connect_signal("currentChanged(int)", "currentChanged(int)");
 }
 
 #pragma ENDDUMP

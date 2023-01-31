@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_NEW )
     QGraphicsPixmapItem( QGraphicsItem * parent = 0 )
     */
     QGraphicsPixmapItem * obj = new QGraphicsPixmapItem( HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem*>( Qt4xHb::itemGetPtr(1) ) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(1, 2) && ISQPIXMAP(1) && ( ISQGRAPHICSITEM(2) || HB_ISNIL(2) ) )
   {
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_NEW )
     QGraphicsPixmapItem( const QPixmap & pixmap, QGraphicsItem * parent = 0 )
     */
     QGraphicsPixmapItem * obj = new QGraphicsPixmapItem( *PQPIXMAP(1), HB_ISNIL(2) ? 0 : static_cast<QGraphicsItem*>( Qt4xHb::itemGetPtr(2) ) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_OFFSET )
     {
 #endif
       QPointF * ptr = new QPointF( obj->offset() );
-      Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_PIXMAP )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->pixmap() );
-      Qt4xHb::createReturnClass( ptr, "QPIXMAP", true );
+      Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_BOUNDINGRECT )
     {
 #endif
       QRectF * ptr = new QRectF( obj->boundingRect() );
-      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
+      Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_OPAQUEAREA )
     {
 #endif
       QPainterPath * ptr = new QPainterPath( obj->opaqueArea() );
-      Qt4xHb::createReturnClass( ptr, "QPAINTERPATH", true );
+      Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QGRAPHICSPIXMAPITEM_SHAPE )
     {
 #endif
       QPainterPath * ptr = new QPainterPath( obj->shape() );
-      Qt4xHb::createReturnClass( ptr, "QPAINTERPATH", true );
+      Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

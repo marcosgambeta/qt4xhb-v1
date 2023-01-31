@@ -46,7 +46,7 @@ HB_FUNC_STATIC( QICONDRAGEVENT_NEW )
   if( ISNUMPAR(0) )
   {
     QIconDragEvent * obj = new QIconDragEvent();
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {

@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QGraphicsRotation * obj = new QGraphicsRotation( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_AXIS )
     {
 #endif
       QVector3D * ptr = new QVector3D( obj->axis() );
-      Qt4xHb::createReturnClass( ptr, "QVECTOR3D", true );
+      Qt4xHb::createReturnClass(ptr, "QVECTOR3D", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_ORIGIN )
     {
 #endif
       QVector3D * ptr = new QVector3D( obj->origin() );
-      Qt4xHb::createReturnClass( ptr, "QVECTOR3D", true );
+      Qt4xHb::createReturnClass(ptr, "QVECTOR3D", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -274,21 +274,21 @@ HB_FUNC_STATIC( QGRAPHICSROTATION_APPLYTO )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QGraphicsRotationSlots_connect_signal( const QString & signal, const QString & slot );
+void QGraphicsRotationSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QGRAPHICSROTATION_ONANGLECHANGED )
 {
-  QGraphicsRotationSlots_connect_signal( "angleChanged()", "angleChanged()" );
+  QGraphicsRotationSlots_connect_signal("angleChanged()", "angleChanged()");
 }
 
 HB_FUNC_STATIC( QGRAPHICSROTATION_ONAXISCHANGED )
 {
-  QGraphicsRotationSlots_connect_signal( "axisChanged()", "axisChanged()" );
+  QGraphicsRotationSlots_connect_signal("axisChanged()", "axisChanged()");
 }
 
 HB_FUNC_STATIC( QGRAPHICSROTATION_ONORIGINCHANGED )
 {
-  QGraphicsRotationSlots_connect_signal( "originChanged()", "originChanged()" );
+  QGraphicsRotationSlots_connect_signal("originChanged()", "originChanged()");
 }
 
 #pragma ENDDUMP

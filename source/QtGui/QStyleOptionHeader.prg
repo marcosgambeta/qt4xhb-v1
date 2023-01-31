@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_NEW )
     QStyleOptionHeader()
     */
     QStyleOptionHeader * obj = new QStyleOptionHeader();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONHEADER(1) )
   {
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_NEW )
     QStyleOptionHeader( const QStyleOptionHeader & other )
     */
     QStyleOptionHeader * obj = new QStyleOptionHeader( *PQSTYLEOPTIONHEADER(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONHEADER_ICON )
     if( ISNUMPAR(0) )
     {
       QIcon * ptr = new QIcon( obj->icon );
-      Qt4xHb::createReturnClass( ptr, "QICON", true );
+      Qt4xHb::createReturnClass(ptr, "QICON", true);
     }
     else
     {

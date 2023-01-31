@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_NEW )
   if( ISBETWEEN(0, 1) && ( ISQGRAPHICSLAYOUTITEM(1) || HB_ISNIL(1) ) )
   {
     QGraphicsGridLayout * obj = new QGraphicsGridLayout( HB_ISNIL(1) ? 0 : static_cast<QGraphicsLayoutItem*>( Qt4xHb::itemGetPtr(1) ) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ITEMAT )
     if( obj != NULL )
     {
       QGraphicsLayoutItem * ptr = obj->itemAt( PINT(1), PINT(2) );
-      Qt4xHb::createReturnClass( ptr, "QGRAPHICSLAYOUTITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QGRAPHICSLAYOUTITEM", false);
     }
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_ITEMAT )
     if( obj != NULL )
     {
       QGraphicsLayoutItem * ptr = obj->itemAt( PINT(1) );
-      Qt4xHb::createReturnClass( ptr, "QGRAPHICSLAYOUTITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QGRAPHICSLAYOUTITEM", false);
     }
   }
   else
@@ -1203,7 +1203,7 @@ HB_FUNC_STATIC( QGRAPHICSGRIDLAYOUT_SIZEHINT )
     {
 #endif
       QSizeF * ptr = new QSizeF( obj->sizeHint( ( Qt::SizeHint ) hb_parni(1), HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF*>( Qt4xHb::itemGetPtr(2) ) ) );
-      Qt4xHb::createReturnClass( ptr, "QSIZEF", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

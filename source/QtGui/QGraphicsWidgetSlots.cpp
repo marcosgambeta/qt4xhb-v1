@@ -12,7 +12,7 @@
 
 #include "QGraphicsWidgetSlots.h"
 
-QGraphicsWidgetSlots::QGraphicsWidgetSlots( QObject * parent ) : QObject( parent )
+QGraphicsWidgetSlots::QGraphicsWidgetSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QGraphicsWidgetSlots::~QGraphicsWidgetSlots()
 
 void QGraphicsWidgetSlots::geometryChanged()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "geometryChanged()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "geometryChanged()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QGRAPHICSWIDGET" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QGRAPHICSWIDGET");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -42,19 +42,19 @@ void QGraphicsWidgetSlots_connect_signal( const QString & signal, const QString 
 
   if( obj != NULL )
   {
-    QGraphicsWidgetSlots * s = QCoreApplication::instance()->findChild<QGraphicsWidgetSlots *>();
+    QGraphicsWidgetSlots * s = QCoreApplication::instance()->findChild<QGraphicsWidgetSlots*>();
 
     if( s == NULL )
     {
       s = new QGraphicsWidgetSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

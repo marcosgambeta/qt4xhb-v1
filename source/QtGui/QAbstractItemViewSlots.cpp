@@ -12,7 +12,7 @@
 
 #include "QAbstractItemViewSlots.h"
 
-QAbstractItemViewSlots::QAbstractItemViewSlots( QObject * parent ) : QObject( parent )
+QAbstractItemViewSlots::QAbstractItemViewSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,14 +22,14 @@ QAbstractItemViewSlots::~QAbstractItemViewSlots()
 
 void QAbstractItemViewSlots::activated( const QModelIndex & index )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activated(QModelIndex)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "activated(QModelIndex)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTITEMVIEW" );
-    PHB_ITEM pIndex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTITEMVIEW");
+    PHB_ITEM pIndex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX");
 
     hb_vmEvalBlockV( cb, 2, pSender, pIndex );
 
@@ -40,14 +40,14 @@ void QAbstractItemViewSlots::activated( const QModelIndex & index )
 
 void QAbstractItemViewSlots::clicked( const QModelIndex & index )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "clicked(QModelIndex)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "clicked(QModelIndex)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTITEMVIEW" );
-    PHB_ITEM pIndex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTITEMVIEW");
+    PHB_ITEM pIndex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX");
 
     hb_vmEvalBlockV( cb, 2, pSender, pIndex );
 
@@ -58,14 +58,14 @@ void QAbstractItemViewSlots::clicked( const QModelIndex & index )
 
 void QAbstractItemViewSlots::doubleClicked( const QModelIndex & index )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "doubleClicked(QModelIndex)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "doubleClicked(QModelIndex)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTITEMVIEW" );
-    PHB_ITEM pIndex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTITEMVIEW");
+    PHB_ITEM pIndex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX");
 
     hb_vmEvalBlockV( cb, 2, pSender, pIndex );
 
@@ -76,14 +76,14 @@ void QAbstractItemViewSlots::doubleClicked( const QModelIndex & index )
 
 void QAbstractItemViewSlots::entered( const QModelIndex & index )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "entered(QModelIndex)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "entered(QModelIndex)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTITEMVIEW" );
-    PHB_ITEM pIndex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTITEMVIEW");
+    PHB_ITEM pIndex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX");
 
     hb_vmEvalBlockV( cb, 2, pSender, pIndex );
 
@@ -94,14 +94,14 @@ void QAbstractItemViewSlots::entered( const QModelIndex & index )
 
 void QAbstractItemViewSlots::pressed( const QModelIndex & index )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "pressed(QModelIndex)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "pressed(QModelIndex)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTITEMVIEW" );
-    PHB_ITEM pIndex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTITEMVIEW");
+    PHB_ITEM pIndex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX");
 
     hb_vmEvalBlockV( cb, 2, pSender, pIndex );
 
@@ -112,13 +112,13 @@ void QAbstractItemViewSlots::pressed( const QModelIndex & index )
 
 void QAbstractItemViewSlots::viewportEntered()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "viewportEntered()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "viewportEntered()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTITEMVIEW" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTITEMVIEW");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -132,19 +132,19 @@ void QAbstractItemViewSlots_connect_signal( const QString & signal, const QStrin
 
   if( obj != NULL )
   {
-    QAbstractItemViewSlots * s = QCoreApplication::instance()->findChild<QAbstractItemViewSlots *>();
+    QAbstractItemViewSlots * s = QCoreApplication::instance()->findChild<QAbstractItemViewSlots*>();
 
     if( s == NULL )
     {
       s = new QAbstractItemViewSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

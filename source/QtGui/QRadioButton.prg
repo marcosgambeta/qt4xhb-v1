@@ -50,7 +50,7 @@ HB_FUNC_STATIC( QRADIOBUTTON_NEW )
     QRadioButton( QWidget * parent = 0 )
     */
     QRadioButton * obj = new QRadioButton( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
   {
@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QRADIOBUTTON_NEW )
     QRadioButton( const QString & text, QWidget * parent = 0 )
     */
     QRadioButton * obj = new QRadioButton( PQSTRING(1), OPQWIDGET( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QRADIOBUTTON_MINIMUMSIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QRADIOBUTTON_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

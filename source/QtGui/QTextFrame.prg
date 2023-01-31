@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QTEXTFRAME_NEW )
   if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
   {
     QTextFrame * obj = new QTextFrame( PQTEXTDOCUMENT(1) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QTEXTFRAME_CHILDFRAMES )
     {
 #endif
       QList<QTextFrame *> list = obj->childFrames();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QTEXTFRAME" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QTEXTFRAME");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QTEXTFRAME_FIRSTCURSORPOSITION )
     {
 #endif
       QTextCursor * ptr = new QTextCursor( obj->firstCursorPosition() );
-      Qt4xHb::createReturnClass( ptr, "QTEXTCURSOR", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QTEXTFRAME_FRAMEFORMAT )
     {
 #endif
       QTextFrameFormat * ptr = new QTextFrameFormat( obj->frameFormat() );
-      Qt4xHb::createReturnClass( ptr, "QTEXTFRAMEFORMAT", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTFRAMEFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QTEXTFRAME_LASTCURSORPOSITION )
     {
 #endif
       QTextCursor * ptr = new QTextCursor( obj->lastCursorPosition() );
-      Qt4xHb::createReturnClass( ptr, "QTEXTCURSOR", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QTEXTFRAME_PARENTFRAME )
     {
 #endif
       QTextFrame * ptr = obj->parentFrame();
-      Qt4xHb::createReturnQObjectClass( ptr, "QTEXTFRAME" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QTEXTFRAME");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

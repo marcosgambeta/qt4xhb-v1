@@ -12,7 +12,7 @@
 
 #include "QStandardItemModelSlots.h"
 
-QStandardItemModelSlots::QStandardItemModelSlots( QObject * parent ) : QObject( parent )
+QStandardItemModelSlots::QStandardItemModelSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,14 +22,14 @@ QStandardItemModelSlots::~QStandardItemModelSlots()
 
 void QStandardItemModelSlots::itemChanged( QStandardItem * item )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "itemChanged(QStandardItem*)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "itemChanged(QStandardItem*)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSTANDARDITEMMODEL" );
-    PHB_ITEM pItem = Qt4xHb::Signals_return_object( ( void * ) item, "QSTANDARDITEM" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSTANDARDITEMMODEL");
+    PHB_ITEM pItem = Qt4xHb::Signals_return_object( ( void * ) item, "QSTANDARDITEM");
 
     hb_vmEvalBlockV( cb, 2, pSender, pItem );
 
@@ -44,19 +44,19 @@ void QStandardItemModelSlots_connect_signal( const QString & signal, const QStri
 
   if( obj != NULL )
   {
-    QStandardItemModelSlots * s = QCoreApplication::instance()->findChild<QStandardItemModelSlots *>();
+    QStandardItemModelSlots * s = QCoreApplication::instance()->findChild<QStandardItemModelSlots*>();
 
     if( s == NULL )
     {
       s = new QStandardItemModelSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

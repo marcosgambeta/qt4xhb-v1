@@ -49,7 +49,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEW )
   if( ISNUMPAR(0) )
   {
     QGraphicsSceneResizeEvent * obj = new QGraphicsSceneResizeEvent();
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_NEWSIZE )
     {
 #endif
       QSizeF * ptr = new QSizeF( obj->newSize() );
-      Qt4xHb::createReturnClass( ptr, "QSIZEF", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENERESIZEEVENT_OLDSIZE )
     {
 #endif
       QSizeF * ptr = new QSizeF( obj->oldSize() );
-      Qt4xHb::createReturnClass( ptr, "QSIZEF", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

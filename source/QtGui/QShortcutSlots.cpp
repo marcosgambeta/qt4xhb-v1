@@ -12,7 +12,7 @@
 
 #include "QShortcutSlots.h"
 
-QShortcutSlots::QShortcutSlots( QObject * parent ) : QObject( parent )
+QShortcutSlots::QShortcutSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QShortcutSlots::~QShortcutSlots()
 
 void QShortcutSlots::activated()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activated()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "activated()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSHORTCUT" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSHORTCUT");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -38,13 +38,13 @@ void QShortcutSlots::activated()
 
 void QShortcutSlots::activatedAmbiguously()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activatedAmbiguously()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "activatedAmbiguously()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSHORTCUT" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSHORTCUT");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -58,19 +58,19 @@ void QShortcutSlots_connect_signal( const QString & signal, const QString & slot
 
   if( obj != NULL )
   {
-    QShortcutSlots * s = QCoreApplication::instance()->findChild<QShortcutSlots *>();
+    QShortcutSlots * s = QCoreApplication::instance()->findChild<QShortcutSlots*>();
 
     if( s == NULL )
     {
       s = new QShortcutSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

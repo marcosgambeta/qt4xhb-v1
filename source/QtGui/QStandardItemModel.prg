@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_NEW )
     QStandardItemModel( QObject * parent = 0 )
     */
     QStandardItemModel * obj = new QStandardItemModel( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ( ISQOBJECT(3) || HB_ISNIL(3) ) )
   {
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_NEW )
     QStandardItemModel( int rows, int columns, QObject * parent = 0 )
     */
     QStandardItemModel * obj = new QStandardItemModel( PINT(1), PINT(2), OPQOBJECT( 3, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INDEX )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->index( PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(3) ) ) );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_PARENT )
     if( obj != NULL )
     {
       QModelIndex * ptr = new QModelIndex( obj->parent( *PQMODELINDEX(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
     }
   }
   else if( ISNUMPAR(0) )
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_PARENT )
     if( obj != NULL )
     {
       QObject * ptr = obj->parent();
-      Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
     }
   }
   else
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_DATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT( 2, Qt::DisplayRole ) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_HEADERDATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->headerData( PINT(1), ( Qt::Orientation ) hb_parni(2), OPINT( 3, Qt::DisplayRole ) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -577,7 +577,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_ITEMFROMINDEX )
     {
 #endif
       QStandardItem * ptr = obj->itemFromIndex( *PQMODELINDEX(1) );
-      Qt4xHb::createReturnClass( ptr, "QSTANDARDITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QSTANDARDITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INDEXFROMITEM )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->indexFromItem( PQSTANDARDITEM(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -627,7 +627,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_ITEM )
     {
 #endif
       QStandardItem * ptr = obj->item( PINT(1), OPINT( 2, 0 ) );
-      Qt4xHb::createReturnClass( ptr, "QSTANDARDITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QSTANDARDITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -688,7 +688,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_INVISIBLEROOTITEM )
     {
 #endif
       QStandardItem * ptr = obj->invisibleRootItem();
-      Qt4xHb::createReturnClass( ptr, "QSTANDARDITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QSTANDARDITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -713,7 +713,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_HORIZONTALHEADERITEM )
     {
 #endif
       QStandardItem * ptr = obj->horizontalHeaderItem( PINT(1) );
-      Qt4xHb::createReturnClass( ptr, "QSTANDARDITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QSTANDARDITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -764,7 +764,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_VERTICALHEADERITEM )
     {
 #endif
       QStandardItem * ptr = obj->verticalHeaderItem( PINT(1) );
-      Qt4xHb::createReturnClass( ptr, "QSTANDARDITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QSTANDARDITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1091,7 +1091,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEITEM )
     {
 #endif
       QStandardItem * ptr = obj->takeItem( PINT(1), OPINT( 2, 0 ) );
-      Qt4xHb::createReturnClass( ptr, "QSTANDARDITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QSTANDARDITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1116,7 +1116,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEROW )
     {
 #endif
       QList<QStandardItem *> list = obj->takeRow( PINT(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSTANDARDITEM" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QSTANDARDITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -1164,7 +1164,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKECOLUMN )
     {
 #endif
       QList<QStandardItem *> list = obj->takeColumn( PINT(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSTANDARDITEM" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QSTANDARDITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -1212,7 +1212,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEHORIZONTALHEADERITEM )
     {
 #endif
       QStandardItem * ptr = obj->takeHorizontalHeaderItem( PINT(1) );
-      Qt4xHb::createReturnClass( ptr, "QSTANDARDITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QSTANDARDITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1237,7 +1237,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_TAKEVERTICALHEADERITEM )
     {
 #endif
       QStandardItem * ptr = obj->takeVerticalHeaderItem( PINT(1) );
-      Qt4xHb::createReturnClass( ptr, "QSTANDARDITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QSTANDARDITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1262,7 +1262,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_ITEMPROTOTYPE )
     {
 #endif
       const QStandardItem * ptr = obj->itemPrototype();
-      Qt4xHb::createReturnClass( ptr, "QSTANDARDITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QSTANDARDITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1313,7 +1313,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_FINDITEMS )
     {
 #endif
       QList<QStandardItem *> list = obj->findItems( PQSTRING(1), HB_ISNIL(2) ? ( Qt::MatchFlags ) Qt::MatchExactly : ( Qt::MatchFlags ) hb_parni(2), OPINT( 3, 0 ) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSTANDARDITEM" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QSTANDARDITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -1442,7 +1442,7 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_MIMEDATA )
         par1 << *static_cast<QModelIndex*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
       }
       QMimeData * ptr = obj->mimeData( par1 );
-      Qt4xHb::createReturnQObjectClass( ptr, "QMIMEDATA" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QMIMEDATA");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1477,11 +1477,11 @@ HB_FUNC_STATIC( QSTANDARDITEMMODEL_DROPMIMEDATA )
   }
 }
 
-void QStandardItemModelSlots_connect_signal( const QString & signal, const QString & slot );
+void QStandardItemModelSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSTANDARDITEMMODEL_ONITEMCHANGED )
 {
-  QStandardItemModelSlots_connect_signal( "itemChanged(QStandardItem*)", "itemChanged(QStandardItem*)" );
+  QStandardItemModelSlots_connect_signal("itemChanged(QStandardItem*)", "itemChanged(QStandardItem*)");
 }
 
 #pragma ENDDUMP

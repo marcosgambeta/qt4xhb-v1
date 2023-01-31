@@ -12,7 +12,7 @@
 
 #include "QMdiSubWindowSlots.h"
 
-QMdiSubWindowSlots::QMdiSubWindowSlots( QObject * parent ) : QObject( parent )
+QMdiSubWindowSlots::QMdiSubWindowSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QMdiSubWindowSlots::~QMdiSubWindowSlots()
 
 void QMdiSubWindowSlots::aboutToActivate()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "aboutToActivate()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "aboutToActivate()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QMDISUBWINDOW" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QMDISUBWINDOW");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -38,13 +38,13 @@ void QMdiSubWindowSlots::aboutToActivate()
 
 void QMdiSubWindowSlots::windowStateChanged( Qt::WindowStates oldState, Qt::WindowStates newState )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "windowStateChanged(Qt::WindowStates,Qt::WindowStates)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QMDISUBWINDOW" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QMDISUBWINDOW");
     PHB_ITEM pOldState = hb_itemPutNI( NULL, static_cast<int >( oldState ) );
     PHB_ITEM pNewState = hb_itemPutNI( NULL, static_cast<int >( newState ) );
 
@@ -62,19 +62,19 @@ void QMdiSubWindowSlots_connect_signal( const QString & signal, const QString & 
 
   if( obj != NULL )
   {
-    QMdiSubWindowSlots * s = QCoreApplication::instance()->findChild<QMdiSubWindowSlots *>();
+    QMdiSubWindowSlots * s = QCoreApplication::instance()->findChild<QMdiSubWindowSlots*>();
 
     if( s == NULL )
     {
       s = new QMdiSubWindowSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_NEW )
     QGraphicsPathItem( QGraphicsItem * parent = 0 )
     */
     QGraphicsPathItem * obj = new QGraphicsPathItem( HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem*>( Qt4xHb::itemGetPtr(1) ) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(1, 2) && ISQPAINTERPATH(1) && ( ISQGRAPHICSITEM(2) || HB_ISNIL(2) ) )
   {
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_NEW )
     QGraphicsPathItem( const QPainterPath & path, QGraphicsItem * parent = 0 )
     */
     QGraphicsPathItem * obj = new QGraphicsPathItem( *PQPAINTERPATH(1), HB_ISNIL(2) ? 0 : static_cast<QGraphicsItem*>( Qt4xHb::itemGetPtr(2) ) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_PATH )
     {
 #endif
       QPainterPath * ptr = new QPainterPath( obj->path() );
-      Qt4xHb::createReturnClass( ptr, "QPAINTERPATH", true );
+      Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_BOUNDINGRECT )
     {
 #endif
       QRectF * ptr = new QRectF( obj->boundingRect() );
-      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
+      Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_OPAQUEAREA )
     {
 #endif
       QPainterPath * ptr = new QPainterPath( obj->opaqueArea() );
-      Qt4xHb::createReturnClass( ptr, "QPAINTERPATH", true );
+      Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QGRAPHICSPATHITEM_SHAPE )
     {
 #endif
       QPainterPath * ptr = new QPainterPath( obj->shape() );
-      Qt4xHb::createReturnClass( ptr, "QPAINTERPATH", true );
+      Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

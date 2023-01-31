@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_NEW )
     QStyleOptionGroupBox()
     */
     QStyleOptionGroupBox * obj = new QStyleOptionGroupBox();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONGROUPBOX(1) )
   {
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_NEW )
     QStyleOptionGroupBox( const QStyleOptionGroupBox & other )
     */
     QStyleOptionGroupBox * obj = new QStyleOptionGroupBox( *PQSTYLEOPTIONGROUPBOX(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGROUPBOX_TEXTCOLOR )
     if( ISNUMPAR(0) )
     {
       QColor * ptr = new QColor( obj->textColor );
-      Qt4xHb::createReturnClass( ptr, "QCOLOR", true );
+      Qt4xHb::createReturnClass(ptr, "QCOLOR", true);
     }
     else
     {

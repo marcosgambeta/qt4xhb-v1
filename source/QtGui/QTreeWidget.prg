@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QTREEWIDGET_NEW )
   if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QTreeWidget * obj = new QTreeWidget( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QTREEWIDGET_CURRENTITEM )
     {
 #endif
       QTreeWidgetItem * ptr = obj->currentItem();
-      Qt4xHb::createReturnClass( ptr, "QTREEWIDGETITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QTREEWIDGET_FINDITEMS )
     {
 #endif
       QList<QTreeWidgetItem *> list = obj->findItems( PQSTRING(1), ( Qt::MatchFlags ) hb_parni(2), OPINT( 3, 0 ) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QTREEWIDGETITEM" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QTREEWIDGETITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QTREEWIDGET_HEADERITEM )
     {
 #endif
       QTreeWidgetItem * ptr = obj->headerItem();
-      Qt4xHb::createReturnClass( ptr, "QTREEWIDGETITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QTREEWIDGET_INVISIBLEROOTITEM )
     {
 #endif
       QTreeWidgetItem * ptr = obj->invisibleRootItem();
-      Qt4xHb::createReturnClass( ptr, "QTREEWIDGETITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMABOVE )
     {
 #endif
       QTreeWidgetItem * ptr = obj->itemAbove( PQTREEWIDGETITEM(1) );
-      Qt4xHb::createReturnClass( ptr, "QTREEWIDGETITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -553,7 +553,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMAT )
     if( obj != NULL )
     {
       QTreeWidgetItem * ptr = obj->itemAt( *PQPOINT(1) );
-      Qt4xHb::createReturnClass( ptr, "QTREEWIDGETITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
     }
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -566,7 +566,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMAT )
     if( obj != NULL )
     {
       QTreeWidgetItem * ptr = obj->itemAt( PINT(1), PINT(2) );
-      Qt4xHb::createReturnClass( ptr, "QTREEWIDGETITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
     }
   }
   else
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMBELOW )
     {
 #endif
       QTreeWidgetItem * ptr = obj->itemBelow( PQTREEWIDGETITEM(1) );
-      Qt4xHb::createReturnClass( ptr, "QTREEWIDGETITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -614,7 +614,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ITEMWIDGET )
     {
 #endif
       QWidget * ptr = obj->itemWidget( PQTREEWIDGETITEM(1), PINT(2) );
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -691,7 +691,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SELECTEDITEMS )
     {
 #endif
       QList<QTreeWidgetItem *> list = obj->selectedItems();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QTREEWIDGETITEM" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QTREEWIDGETITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -995,7 +995,7 @@ HB_FUNC_STATIC( QTREEWIDGET_TAKETOPLEVELITEM )
     {
 #endif
       QTreeWidgetItem * ptr = obj->takeTopLevelItem( PINT(1) );
-      Qt4xHb::createReturnClass( ptr, "QTREEWIDGETITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1020,7 +1020,7 @@ HB_FUNC_STATIC( QTREEWIDGET_TOPLEVELITEM )
     {
 #endif
       QTreeWidgetItem * ptr = obj->topLevelItem( PINT(1) );
-      Qt4xHb::createReturnClass( ptr, "QTREEWIDGETITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QTREEWIDGETITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1069,7 +1069,7 @@ HB_FUNC_STATIC( QTREEWIDGET_VISUALITEMRECT )
     {
 #endif
       QRect * ptr = new QRect( obj->visualItemRect( PQTREEWIDGETITEM(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1210,56 +1210,56 @@ HB_FUNC_STATIC( QTREEWIDGET_SCROLLTOITEM )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QTreeWidgetSlots_connect_signal( const QString & signal, const QString & slot );
+void QTreeWidgetSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QTREEWIDGET_ONCURRENTITEMCHANGED )
 {
-  QTreeWidgetSlots_connect_signal( "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)", "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)" );
+  QTreeWidgetSlots_connect_signal("currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)", "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)");
 }
 
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMACTIVATED )
 {
-  QTreeWidgetSlots_connect_signal( "itemActivated(QTreeWidgetItem*,int)", "itemActivated(QTreeWidgetItem*,int)" );
+  QTreeWidgetSlots_connect_signal("itemActivated(QTreeWidgetItem*,int)", "itemActivated(QTreeWidgetItem*,int)");
 }
 
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMCHANGED )
 {
-  QTreeWidgetSlots_connect_signal( "itemChanged(QTreeWidgetItem*,int)", "itemChanged(QTreeWidgetItem*,int)" );
+  QTreeWidgetSlots_connect_signal("itemChanged(QTreeWidgetItem*,int)", "itemChanged(QTreeWidgetItem*,int)");
 }
 
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMCLICKED )
 {
-  QTreeWidgetSlots_connect_signal( "itemClicked(QTreeWidgetItem*,int)", "itemClicked(QTreeWidgetItem*,int)" );
+  QTreeWidgetSlots_connect_signal("itemClicked(QTreeWidgetItem*,int)", "itemClicked(QTreeWidgetItem*,int)");
 }
 
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMCOLLAPSED )
 {
-  QTreeWidgetSlots_connect_signal( "itemCollapsed(QTreeWidgetItem*)", "itemCollapsed(QTreeWidgetItem*)" );
+  QTreeWidgetSlots_connect_signal("itemCollapsed(QTreeWidgetItem*)", "itemCollapsed(QTreeWidgetItem*)");
 }
 
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMDOUBLECLICKED )
 {
-  QTreeWidgetSlots_connect_signal( "itemDoubleClicked(QTreeWidgetItem*,int)", "itemDoubleClicked(QTreeWidgetItem*,int)" );
+  QTreeWidgetSlots_connect_signal("itemDoubleClicked(QTreeWidgetItem*,int)", "itemDoubleClicked(QTreeWidgetItem*,int)");
 }
 
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMENTERED )
 {
-  QTreeWidgetSlots_connect_signal( "itemEntered(QTreeWidgetItem*,int)", "itemEntered(QTreeWidgetItem*,int)" );
+  QTreeWidgetSlots_connect_signal("itemEntered(QTreeWidgetItem*,int)", "itemEntered(QTreeWidgetItem*,int)");
 }
 
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMEXPANDED )
 {
-  QTreeWidgetSlots_connect_signal( "itemExpanded(QTreeWidgetItem*)", "itemExpanded(QTreeWidgetItem*)" );
+  QTreeWidgetSlots_connect_signal("itemExpanded(QTreeWidgetItem*)", "itemExpanded(QTreeWidgetItem*)");
 }
 
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMPRESSED )
 {
-  QTreeWidgetSlots_connect_signal( "itemPressed(QTreeWidgetItem*,int)", "itemPressed(QTreeWidgetItem*,int)" );
+  QTreeWidgetSlots_connect_signal("itemPressed(QTreeWidgetItem*,int)", "itemPressed(QTreeWidgetItem*,int)");
 }
 
 HB_FUNC_STATIC( QTREEWIDGET_ONITEMSELECTIONCHANGED )
 {
-  QTreeWidgetSlots_connect_signal( "itemSelectionChanged()", "itemSelectionChanged()" );
+  QTreeWidgetSlots_connect_signal("itemSelectionChanged()", "itemSelectionChanged()");
 }
 
 #pragma ENDDUMP

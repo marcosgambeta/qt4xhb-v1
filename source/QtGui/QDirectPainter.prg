@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_NEW )
   if( ISBETWEEN(0, 2) && ( ISQOBJECT(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
   {
     QDirectPainter * obj = new QDirectPainter( OPQOBJECT( 1, 0 ), HB_ISNIL(2) ? ( QDirectPainter::SurfaceFlag ) QDirectPainter::NonReserved : ( QDirectPainter::SurfaceFlag ) hb_parni(2) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_ALLOCATEDREGION )
     {
 #endif
       QRegion * ptr = new QRegion( obj->allocatedRegion() );
-      Qt4xHb::createReturnClass( ptr, "QREGION", true );
+      Qt4xHb::createReturnClass(ptr, "QREGION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_GEOMETRY )
     {
 #endif
       QRect * ptr = new QRect( obj->geometry() );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_REQUESTEDREGION )
     {
 #endif
       QRegion * ptr = new QRegion( obj->requestedRegion() );
-      Qt4xHb::createReturnClass( ptr, "QREGION", true );
+      Qt4xHb::createReturnClass(ptr, "QREGION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

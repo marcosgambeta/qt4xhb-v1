@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_NEW )
     QListWidgetItem( QListWidget * parent = 0, int type = QListWidgetItem::Type )
     */
     QListWidgetItem * obj = new QListWidgetItem( OPQLISTWIDGET( 1, 0 ), OPINT( 2, QListWidgetItem::Type ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && ( ISQLISTWIDGET(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
   {
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_NEW )
     QListWidgetItem( const QString & text, QListWidget * parent = 0, int type = QListWidgetItem::Type )
     */
     QListWidgetItem * obj = new QListWidgetItem( PQSTRING(1), OPQLISTWIDGET( 2, 0 ), OPINT( 3, QListWidgetItem::Type ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(2, 4) && ( ISQICON(1) || HB_ISCHAR(1) ) && HB_ISCHAR(2) && ( ISQLISTWIDGET(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
   {
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_NEW )
     QListWidgetItem( const QIcon & icon, const QString & text, QListWidget * parent = 0, int type = QListWidgetItem::Type )
     */
     QListWidgetItem * obj = new QListWidgetItem( HB_ISOBJECT(1) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(1) ) : QIcon( hb_parc(1) ), PQSTRING(2), OPQLISTWIDGET( 3, 0 ), OPINT( 4, QListWidgetItem::Type ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISNUMPAR(1) && ISQLISTWIDGETITEM(1) )
   {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_NEW )
     QListWidgetItem( const QListWidgetItem & other )
     */
     QListWidgetItem * obj = new QListWidgetItem( *PQLISTWIDGETITEM(1) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_BACKGROUND )
     {
 #endif
       QBrush * ptr = new QBrush( obj->background() );
-      Qt4xHb::createReturnClass( ptr, "QBRUSH", true );
+      Qt4xHb::createReturnClass(ptr, "QBRUSH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_CLONE )
     {
 #endif
       QListWidgetItem * ptr = obj->clone();
-      Qt4xHb::createReturnClass( ptr, "QLISTWIDGETITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_DATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->data( PINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_FONT )
     {
 #endif
       QFont * ptr = new QFont( obj->font() );
-      Qt4xHb::createReturnClass( ptr, "QFONT", true );
+      Qt4xHb::createReturnClass(ptr, "QFONT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_FOREGROUND )
     {
 #endif
       QBrush * ptr = new QBrush( obj->foreground() );
-      Qt4xHb::createReturnClass( ptr, "QBRUSH", true );
+      Qt4xHb::createReturnClass(ptr, "QBRUSH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_ICON )
     {
 #endif
       QIcon * ptr = new QIcon( obj->icon() );
-      Qt4xHb::createReturnClass( ptr, "QICON", true );
+      Qt4xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_LISTWIDGET )
     {
 #endif
       QListWidget * ptr = obj->listWidget();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QLISTWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QLISTWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -845,7 +845,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1032,28 +1032,28 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QLISTWIDGETITEM_NEWFROMOBJECT )
@@ -1068,7 +1068,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QLISTWIDGETITEM_SELFDESTRUCTION )
 {
-  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QLISTWIDGETITEM_SETSELFDESTRUCTION )
@@ -1077,16 +1077,16 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

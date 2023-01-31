@@ -12,7 +12,7 @@
 
 #include "QFileDialogSlots.h"
 
-QFileDialogSlots::QFileDialogSlots( QObject * parent ) : QObject( parent )
+QFileDialogSlots::QFileDialogSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QFileDialogSlots::~QFileDialogSlots()
 
 void QFileDialogSlots::currentChanged( const QString & path )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentChanged(QString)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "currentChanged(QString)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFILEDIALOG" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFILEDIALOG");
     PHB_ITEM pPath = hb_itemPutC( NULL, QSTRINGTOSTRING( path ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pPath );
@@ -40,13 +40,13 @@ void QFileDialogSlots::currentChanged( const QString & path )
 
 void QFileDialogSlots::directoryEntered( const QString & directory )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "directoryEntered(QString)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "directoryEntered(QString)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFILEDIALOG" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFILEDIALOG");
     PHB_ITEM pDirectory = hb_itemPutC( NULL, QSTRINGTOSTRING( directory ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pDirectory );
@@ -58,13 +58,13 @@ void QFileDialogSlots::directoryEntered( const QString & directory )
 
 void QFileDialogSlots::fileSelected( const QString & file )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "fileSelected(QString)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "fileSelected(QString)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFILEDIALOG" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFILEDIALOG");
     PHB_ITEM pFile = hb_itemPutC( NULL, QSTRINGTOSTRING( file ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pFile );
@@ -76,13 +76,13 @@ void QFileDialogSlots::fileSelected( const QString & file )
 
 void QFileDialogSlots::filesSelected( const QStringList & selected )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "filesSelected(QStringList)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "filesSelected(QStringList)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFILEDIALOG" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFILEDIALOG");
     PHB_ITEM pSelected = hb_itemArrayNew(0);
     for( int i = 0; i < selected.count(); i++ )
     {
@@ -100,13 +100,13 @@ void QFileDialogSlots::filesSelected( const QStringList & selected )
 
 void QFileDialogSlots::filterSelected( const QString & filter )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "filterSelected(QString)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "filterSelected(QString)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFILEDIALOG" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFILEDIALOG");
     PHB_ITEM pFilter = hb_itemPutC( NULL, QSTRINGTOSTRING( filter ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pFilter );
@@ -122,19 +122,19 @@ void QFileDialogSlots_connect_signal( const QString & signal, const QString & sl
 
   if( obj != NULL )
   {
-    QFileDialogSlots * s = QCoreApplication::instance()->findChild<QFileDialogSlots *>();
+    QFileDialogSlots * s = QCoreApplication::instance()->findChild<QFileDialogSlots*>();
 
     if( s == NULL )
     {
       s = new QFileDialogSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

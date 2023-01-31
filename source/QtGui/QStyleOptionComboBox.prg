@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_NEW )
     QStyleOptionComboBox()
     */
     QStyleOptionComboBox * obj = new QStyleOptionComboBox();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONCOMBOBOX(1) )
   {
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_NEW )
     QStyleOptionComboBox( const QStyleOptionComboBox & other )
     */
     QStyleOptionComboBox * obj = new QStyleOptionComboBox( *PQSTYLEOPTIONCOMBOBOX(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_POPUPRECT )
     if( ISNUMPAR(0) )
     {
       QRect * ptr = new QRect( obj->popupRect );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
     else
     {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_CURRENTICON )
     if( ISNUMPAR(0) )
     {
       QIcon * ptr = new QIcon( obj->currentIcon );
-      Qt4xHb::createReturnClass( ptr, "QICON", true );
+      Qt4xHb::createReturnClass(ptr, "QICON", true);
     }
     else
     {
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMBOBOX_ICONSIZE )
     if( ISNUMPAR(0) )
     {
       QSize * ptr = new QSize( obj->iconSize );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
     }
     else
     {

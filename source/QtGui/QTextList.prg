@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QTEXTLIST_FORMAT )
     {
 #endif
       QTextListFormat * ptr = new QTextListFormat( obj->format() );
-      Qt4xHb::createReturnClass( ptr, "QTEXTLISTFORMAT", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTLISTFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QTEXTLIST_ITEM )
     {
 #endif
       QTextBlock * ptr = new QTextBlock( obj->item( PINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QTEXTBLOCK", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTBLOCK", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

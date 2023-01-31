@@ -12,7 +12,7 @@
 
 #include "QSystemTrayIconSlots.h"
 
-QSystemTrayIconSlots::QSystemTrayIconSlots( QObject * parent ) : QObject( parent )
+QSystemTrayIconSlots::QSystemTrayIconSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QSystemTrayIconSlots::~QSystemTrayIconSlots()
 
 void QSystemTrayIconSlots::activated( QSystemTrayIcon::ActivationReason reason )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activated(QSystemTrayIcon::ActivationReason)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "activated(QSystemTrayIcon::ActivationReason)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSYSTEMTRAYICON" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSYSTEMTRAYICON");
     PHB_ITEM pReason = hb_itemPutNI( NULL, static_cast<int >( reason ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pReason );
@@ -40,13 +40,13 @@ void QSystemTrayIconSlots::activated( QSystemTrayIcon::ActivationReason reason )
 
 void QSystemTrayIconSlots::messageClicked()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "messageClicked()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "messageClicked()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSYSTEMTRAYICON" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSYSTEMTRAYICON");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -60,19 +60,19 @@ void QSystemTrayIconSlots_connect_signal( const QString & signal, const QString 
 
   if( obj != NULL )
   {
-    QSystemTrayIconSlots * s = QCoreApplication::instance()->findChild<QSystemTrayIconSlots *>();
+    QSystemTrayIconSlots * s = QCoreApplication::instance()->findChild<QSystemTrayIconSlots*>();
 
     if( s == NULL )
     {
       s = new QSystemTrayIconSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

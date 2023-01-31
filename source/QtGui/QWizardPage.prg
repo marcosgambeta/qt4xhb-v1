@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_NEW )
   if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QWizardPage * obj = new QWizardPage( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -261,7 +261,7 @@ HB_FUNC_STATIC( QWIZARDPAGE_PIXMAP )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->pixmap( ( QWizard::WizardPixmap ) hb_parni(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QPIXMAP", true );
+      Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -500,11 +500,11 @@ HB_FUNC_STATIC( QWIZARDPAGE_VALIDATEPAGE )
   }
 }
 
-void QWizardPageSlots_connect_signal( const QString & signal, const QString & slot );
+void QWizardPageSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QWIZARDPAGE_ONCOMPLETECHANGED )
 {
-  QWizardPageSlots_connect_signal( "completeChanged()", "completeChanged()" );
+  QWizardPageSlots_connect_signal("completeChanged()", "completeChanged()");
 }
 
 #pragma ENDDUMP

@@ -49,7 +49,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_NEW )
     QStyleOptionFrame()
     */
     QStyleOptionFrame * obj = new QStyleOptionFrame();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONFRAME(1) )
   {
@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONFRAME_NEW )
     QStyleOptionFrame( const QStyleOptionFrame & other )
     */
     QStyleOptionFrame * obj = new QStyleOptionFrame( *PQSTYLEOPTIONFRAME(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {

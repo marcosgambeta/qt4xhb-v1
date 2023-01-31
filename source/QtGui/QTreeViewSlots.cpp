@@ -12,7 +12,7 @@
 
 #include "QTreeViewSlots.h"
 
-QTreeViewSlots::QTreeViewSlots( QObject * parent ) : QObject( parent )
+QTreeViewSlots::QTreeViewSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,14 +22,14 @@ QTreeViewSlots::~QTreeViewSlots()
 
 void QTreeViewSlots::collapsed( const QModelIndex & index )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "collapsed(QModelIndex)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "collapsed(QModelIndex)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTREEVIEW" );
-    PHB_ITEM pIndex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTREEVIEW");
+    PHB_ITEM pIndex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX");
 
     hb_vmEvalBlockV( cb, 2, pSender, pIndex );
 
@@ -40,14 +40,14 @@ void QTreeViewSlots::collapsed( const QModelIndex & index )
 
 void QTreeViewSlots::expanded( const QModelIndex & index )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "expanded(QModelIndex)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "expanded(QModelIndex)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTREEVIEW" );
-    PHB_ITEM pIndex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTREEVIEW");
+    PHB_ITEM pIndex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX");
 
     hb_vmEvalBlockV( cb, 2, pSender, pIndex );
 
@@ -62,19 +62,19 @@ void QTreeViewSlots_connect_signal( const QString & signal, const QString & slot
 
   if( obj != NULL )
   {
-    QTreeViewSlots * s = QCoreApplication::instance()->findChild<QTreeViewSlots *>();
+    QTreeViewSlots * s = QCoreApplication::instance()->findChild<QTreeViewSlots*>();
 
     if( s == NULL )
     {
       s = new QTreeViewSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QSTYLE_GENERATEDICONPIXMAP )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->generatedIconPixmap( ( QIcon::Mode ) hb_parni(1), *PQPIXMAP(2), PQSTYLEOPTION(3) ) );
-      Qt4xHb::createReturnClass( ptr, "QPIXMAP", true );
+      Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QSTYLE_ITEMPIXMAPRECT )
     {
 #endif
       QRect * ptr = new QRect( obj->itemPixmapRect( *PQRECT(1), PINT(2), *PQPIXMAP(3) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QSTYLE_ITEMTEXTRECT )
     {
 #endif
       QRect * ptr = new QRect( obj->itemTextRect( *PQFONTMETRICS(1), *PQRECT(2), PINT(3), PBOOL(4), PQSTRING(5) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QSTYLE_PROXY )
     {
 #endif
       const QStyle * ptr = obj->proxy();
-      Qt4xHb::createReturnQObjectClass( ptr, "QSTYLE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QSTYLE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QSTYLE_SIZEFROMCONTENTS )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeFromContents( ( QStyle::ContentsType ) hb_parni(1), PQSTYLEOPTION(2), *PQSIZE(3), OPQWIDGET( 4, 0 ) ) );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QSTYLE_STANDARDICON )
     {
 #endif
       QIcon * ptr = new QIcon( obj->standardIcon( ( QStyle::StandardPixmap ) hb_parni(1), HB_ISNIL(2) ? 0 : static_cast<QStyleOption*>( Qt4xHb::itemGetPtr(2) ), OPQWIDGET( 3, 0 ) ) );
-      Qt4xHb::createReturnClass( ptr, "QICON", true );
+      Qt4xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QSTYLE_STANDARDPALETTE )
     {
 #endif
       QPalette * ptr = new QPalette( obj->standardPalette() );
-      Qt4xHb::createReturnClass( ptr, "QPALETTE", true );
+      Qt4xHb::createReturnClass(ptr, "QPALETTE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QSTYLE_SUBCONTROLRECT )
     {
 #endif
       QRect * ptr = new QRect( obj->subControlRect( ( QStyle::ComplexControl ) hb_parni(1), PQSTYLEOPTIONCOMPLEX(2), ( QStyle::SubControl ) hb_parni(3), OPQWIDGET( 4, 0 ) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -608,7 +608,7 @@ HB_FUNC_STATIC( QSTYLE_SUBELEMENTRECT )
     {
 #endif
       QRect * ptr = new QRect( obj->subElementRect( ( QStyle::SubElement ) hb_parni(1), PQSTYLEOPTION(2), OPQWIDGET( 3, 0 ) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -669,7 +669,7 @@ HB_FUNC_STATIC( QSTYLE_ALIGNEDRECT )
     {
 #endif
       QRect * ptr = new QRect( obj->alignedRect( ( Qt::LayoutDirection ) hb_parni(1), ( Qt::Alignment ) hb_parni(2), *PQSIZE(3), *PQRECT(4) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -747,7 +747,7 @@ HB_FUNC_STATIC( QSTYLE_VISUALPOS )
   {
 #endif
     QPoint * ptr = new QPoint( QStyle::visualPos( ( Qt::LayoutDirection ) hb_parni(1), *PQRECT(2), *PQPOINT(3) ) );
-    Qt4xHb::createReturnClass( ptr, "QPOINT", true );
+    Qt4xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -767,7 +767,7 @@ HB_FUNC_STATIC( QSTYLE_VISUALRECT )
   {
 #endif
     QRect * ptr = new QRect( QStyle::visualRect( ( Qt::LayoutDirection ) hb_parni(1), *PQRECT(2), *PQRECT(3) ) );
-    Qt4xHb::createReturnClass( ptr, "QRECT", true );
+    Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -777,21 +777,21 @@ HB_FUNC_STATIC( QSTYLE_VISUALRECT )
 #endif
 }
 
-void QStyleSlots_connect_signal( const QString & signal, const QString & slot );
+void QStyleSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSTYLE_ONCURRENTCHANGED )
 {
-  QStyleSlots_connect_signal( "currentChanged(int)", "currentChanged(int)" );
+  QStyleSlots_connect_signal("currentChanged(int)", "currentChanged(int)");
 }
 
 HB_FUNC_STATIC( QSTYLE_ONTABCLOSEREQUESTED )
 {
-  QStyleSlots_connect_signal( "tabCloseRequested(int)", "tabCloseRequested(int)" );
+  QStyleSlots_connect_signal("tabCloseRequested(int)", "tabCloseRequested(int)");
 }
 
 HB_FUNC_STATIC( QSTYLE_ONTABMOVED )
 {
-  QStyleSlots_connect_signal( "tabMoved(int,int)", "tabMoved(int,int)" );
+  QStyleSlots_connect_signal("tabMoved(int,int)", "tabMoved(int,int)");
 }
 
 #pragma ENDDUMP

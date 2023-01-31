@@ -51,7 +51,7 @@ explicit HStyledItemDelegate( QObject *parent = 0 )
 void HStyledItemDelegate_new1()
 {
   HStyledItemDelegate * obj = new HStyledItemDelegate( OPQOBJECT( 1, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
+  Qt4xHb::returnNewObject(obj, false);
 }
 
 /*
@@ -60,7 +60,7 @@ HStyledItemDelegate( PHB_ITEM paintBlock, QObject *parent = 0 )
 void HStyledItemDelegate_new2()
 {
   HStyledItemDelegate * obj = new HStyledItemDelegate( PBLOCKORSYMBOL(1), OPQOBJECT( 2, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
+  Qt4xHb::returnNewObject(obj, false);
 }
 
 /*
@@ -69,7 +69,7 @@ HStyledItemDelegate( PHB_ITEM paintBlock, PHB_ITEM sizeHintBlock, QObject *paren
 void HStyledItemDelegate_new3()
 {
   HStyledItemDelegate * obj = new HStyledItemDelegate( PBLOCKORSYMBOL(1), PBLOCKORSYMBOL(2), OPQOBJECT( 3, 0 ) );
-  Qt4xHb::returnNewObject( obj, false );
+  Qt4xHb::returnNewObject(obj, false);
 }
 
 /*

@@ -51,7 +51,7 @@ HB_FUNC_STATIC( QSIZEGRIP_NEW )
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
     QSizeGrip * obj = new QSizeGrip( PQWIDGET(1) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QSIZEGRIP_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

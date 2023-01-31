@@ -12,7 +12,7 @@
 
 #include "QTreeWidgetSlots.h"
 
-QTreeWidgetSlots::QTreeWidgetSlots( QObject * parent ) : QObject( parent )
+QTreeWidgetSlots::QTreeWidgetSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,15 +22,15 @@ QTreeWidgetSlots::~QTreeWidgetSlots()
 
 void QTreeWidgetSlots::currentItemChanged( QTreeWidgetItem * current, QTreeWidgetItem * previous )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTREEWIDGET" );
-    PHB_ITEM pCurrent = Qt4xHb::Signals_return_object( ( void * ) current, "QTREEWIDGETITEM" );
-    PHB_ITEM pPrevious = Qt4xHb::Signals_return_object( ( void * ) previous, "QTREEWIDGETITEM" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTREEWIDGET");
+    PHB_ITEM pCurrent = Qt4xHb::Signals_return_object( ( void * ) current, "QTREEWIDGETITEM");
+    PHB_ITEM pPrevious = Qt4xHb::Signals_return_object( ( void * ) previous, "QTREEWIDGETITEM");
 
     hb_vmEvalBlockV( cb, 3, pSender, pCurrent, pPrevious );
 
@@ -42,14 +42,14 @@ void QTreeWidgetSlots::currentItemChanged( QTreeWidgetItem * current, QTreeWidge
 
 void QTreeWidgetSlots::itemActivated( QTreeWidgetItem * item, int column )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "itemActivated(QTreeWidgetItem*,int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "itemActivated(QTreeWidgetItem*,int)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTREEWIDGET" );
-    PHB_ITEM pItem = Qt4xHb::Signals_return_object( ( void * ) item, "QTREEWIDGETITEM" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTREEWIDGET");
+    PHB_ITEM pItem = Qt4xHb::Signals_return_object( ( void * ) item, "QTREEWIDGETITEM");
     PHB_ITEM pColumn = hb_itemPutNI( NULL, column );
 
     hb_vmEvalBlockV( cb, 3, pSender, pItem, pColumn );
@@ -62,14 +62,14 @@ void QTreeWidgetSlots::itemActivated( QTreeWidgetItem * item, int column )
 
 void QTreeWidgetSlots::itemChanged( QTreeWidgetItem * item, int column )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "itemChanged(QTreeWidgetItem*,int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "itemChanged(QTreeWidgetItem*,int)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTREEWIDGET" );
-    PHB_ITEM pItem = Qt4xHb::Signals_return_object( ( void * ) item, "QTREEWIDGETITEM" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTREEWIDGET");
+    PHB_ITEM pItem = Qt4xHb::Signals_return_object( ( void * ) item, "QTREEWIDGETITEM");
     PHB_ITEM pColumn = hb_itemPutNI( NULL, column );
 
     hb_vmEvalBlockV( cb, 3, pSender, pItem, pColumn );
@@ -82,14 +82,14 @@ void QTreeWidgetSlots::itemChanged( QTreeWidgetItem * item, int column )
 
 void QTreeWidgetSlots::itemClicked( QTreeWidgetItem * item, int column )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "itemClicked(QTreeWidgetItem*,int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "itemClicked(QTreeWidgetItem*,int)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTREEWIDGET" );
-    PHB_ITEM pItem = Qt4xHb::Signals_return_object( ( void * ) item, "QTREEWIDGETITEM" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTREEWIDGET");
+    PHB_ITEM pItem = Qt4xHb::Signals_return_object( ( void * ) item, "QTREEWIDGETITEM");
     PHB_ITEM pColumn = hb_itemPutNI( NULL, column );
 
     hb_vmEvalBlockV( cb, 3, pSender, pItem, pColumn );
@@ -102,14 +102,14 @@ void QTreeWidgetSlots::itemClicked( QTreeWidgetItem * item, int column )
 
 void QTreeWidgetSlots::itemCollapsed( QTreeWidgetItem * item )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "itemCollapsed(QTreeWidgetItem*)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "itemCollapsed(QTreeWidgetItem*)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTREEWIDGET" );
-    PHB_ITEM pItem = Qt4xHb::Signals_return_object( ( void * ) item, "QTREEWIDGETITEM" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTREEWIDGET");
+    PHB_ITEM pItem = Qt4xHb::Signals_return_object( ( void * ) item, "QTREEWIDGETITEM");
 
     hb_vmEvalBlockV( cb, 2, pSender, pItem );
 
@@ -120,14 +120,14 @@ void QTreeWidgetSlots::itemCollapsed( QTreeWidgetItem * item )
 
 void QTreeWidgetSlots::itemDoubleClicked( QTreeWidgetItem * item, int column )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "itemDoubleClicked(QTreeWidgetItem*,int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "itemDoubleClicked(QTreeWidgetItem*,int)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTREEWIDGET" );
-    PHB_ITEM pItem = Qt4xHb::Signals_return_object( ( void * ) item, "QTREEWIDGETITEM" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTREEWIDGET");
+    PHB_ITEM pItem = Qt4xHb::Signals_return_object( ( void * ) item, "QTREEWIDGETITEM");
     PHB_ITEM pColumn = hb_itemPutNI( NULL, column );
 
     hb_vmEvalBlockV( cb, 3, pSender, pItem, pColumn );
@@ -140,14 +140,14 @@ void QTreeWidgetSlots::itemDoubleClicked( QTreeWidgetItem * item, int column )
 
 void QTreeWidgetSlots::itemEntered( QTreeWidgetItem * item, int column )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "itemEntered(QTreeWidgetItem*,int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "itemEntered(QTreeWidgetItem*,int)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTREEWIDGET" );
-    PHB_ITEM pItem = Qt4xHb::Signals_return_object( ( void * ) item, "QTREEWIDGETITEM" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTREEWIDGET");
+    PHB_ITEM pItem = Qt4xHb::Signals_return_object( ( void * ) item, "QTREEWIDGETITEM");
     PHB_ITEM pColumn = hb_itemPutNI( NULL, column );
 
     hb_vmEvalBlockV( cb, 3, pSender, pItem, pColumn );
@@ -160,14 +160,14 @@ void QTreeWidgetSlots::itemEntered( QTreeWidgetItem * item, int column )
 
 void QTreeWidgetSlots::itemExpanded( QTreeWidgetItem * item )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "itemExpanded(QTreeWidgetItem*)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "itemExpanded(QTreeWidgetItem*)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTREEWIDGET" );
-    PHB_ITEM pItem = Qt4xHb::Signals_return_object( ( void * ) item, "QTREEWIDGETITEM" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTREEWIDGET");
+    PHB_ITEM pItem = Qt4xHb::Signals_return_object( ( void * ) item, "QTREEWIDGETITEM");
 
     hb_vmEvalBlockV( cb, 2, pSender, pItem );
 
@@ -178,14 +178,14 @@ void QTreeWidgetSlots::itemExpanded( QTreeWidgetItem * item )
 
 void QTreeWidgetSlots::itemPressed( QTreeWidgetItem * item, int column )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "itemPressed(QTreeWidgetItem*,int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "itemPressed(QTreeWidgetItem*,int)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTREEWIDGET" );
-    PHB_ITEM pItem = Qt4xHb::Signals_return_object( ( void * ) item, "QTREEWIDGETITEM" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTREEWIDGET");
+    PHB_ITEM pItem = Qt4xHb::Signals_return_object( ( void * ) item, "QTREEWIDGETITEM");
     PHB_ITEM pColumn = hb_itemPutNI( NULL, column );
 
     hb_vmEvalBlockV( cb, 3, pSender, pItem, pColumn );
@@ -198,13 +198,13 @@ void QTreeWidgetSlots::itemPressed( QTreeWidgetItem * item, int column )
 
 void QTreeWidgetSlots::itemSelectionChanged()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "itemSelectionChanged()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "itemSelectionChanged()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTREEWIDGET" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTREEWIDGET");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -218,19 +218,19 @@ void QTreeWidgetSlots_connect_signal( const QString & signal, const QString & sl
 
   if( obj != NULL )
   {
-    QTreeWidgetSlots * s = QCoreApplication::instance()->findChild<QTreeWidgetSlots *>();
+    QTreeWidgetSlots * s = QCoreApplication::instance()->findChild<QTreeWidgetSlots*>();
 
     if( s == NULL )
     {
       s = new QTreeWidgetSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

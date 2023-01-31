@@ -50,7 +50,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_NEW )
     QStyleOptionComplex( int version = QStyleOptionComplex::Version, int type = QStyleOptionComplex::SO_Complex )
     */
     QStyleOptionComplex * obj = new QStyleOptionComplex( OPINT( 1, QStyleOptionComplex::Version ), OPINT( 2, QStyleOptionComplex::SO_Complex ) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONCOMPLEX(1) )
   {
@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONCOMPLEX_NEW )
     QStyleOptionComplex( const QStyleOptionComplex & other )
     */
     QStyleOptionComplex * obj = new QStyleOptionComplex( *PQSTYLEOPTIONCOMPLEX(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {

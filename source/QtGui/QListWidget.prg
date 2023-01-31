@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QLISTWIDGET_NEW )
   if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QListWidget * obj = new QListWidget( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QLISTWIDGET_CURRENTITEM )
     {
 #endif
       QListWidgetItem * ptr = obj->currentItem();
-      Qt4xHb::createReturnClass( ptr, "QLISTWIDGETITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,7 +317,7 @@ HB_FUNC_STATIC( QLISTWIDGET_FINDITEMS )
     {
 #endif
       QList<QListWidgetItem *> list = obj->findItems( PQSTRING(1), ( Qt::MatchFlags ) hb_parni(2) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QLISTWIDGETITEM" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QLISTWIDGETITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEM )
     {
 #endif
       QListWidgetItem * ptr = obj->item( PINT(1) );
-      Qt4xHb::createReturnClass( ptr, "QLISTWIDGETITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -474,7 +474,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMAT )
     if( obj != NULL )
     {
       QListWidgetItem * ptr = obj->itemAt( *PQPOINT(1) );
-      Qt4xHb::createReturnClass( ptr, "QLISTWIDGETITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
     }
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMAT )
     if( obj != NULL )
     {
       QListWidgetItem * ptr = obj->itemAt( PINT(1), PINT(2) );
-      Qt4xHb::createReturnClass( ptr, "QLISTWIDGETITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
     }
   }
   else
@@ -510,7 +510,7 @@ HB_FUNC_STATIC( QLISTWIDGET_ITEMWIDGET )
     {
 #endif
       QWidget * ptr = obj->itemWidget( PQLISTWIDGETITEM(1) );
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -611,7 +611,7 @@ HB_FUNC_STATIC( QLISTWIDGET_SELECTEDITEMS )
     {
 #endif
       QList<QListWidgetItem *> list = obj->selectedItems();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QLISTWIDGETITEM" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QLISTWIDGETITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -809,7 +809,7 @@ HB_FUNC_STATIC( QLISTWIDGET_TAKEITEM )
     {
 #endif
       QListWidgetItem * ptr = obj->takeItem( PINT(1) );
-      Qt4xHb::createReturnClass( ptr, "QLISTWIDGETITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QLISTWIDGETITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -834,7 +834,7 @@ HB_FUNC_STATIC( QLISTWIDGET_VISUALITEMRECT )
     {
 #endif
       QRect * ptr = new QRect( obj->visualItemRect( PQLISTWIDGETITEM(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -923,56 +923,56 @@ HB_FUNC_STATIC( QLISTWIDGET_SCROLLTOITEM )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QListWidgetSlots_connect_signal( const QString & signal, const QString & slot );
+void QListWidgetSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTITEMCHANGED )
 {
-  QListWidgetSlots_connect_signal( "currentItemChanged(QListWidgetItem*,QListWidgetItem*)", "currentItemChanged(QListWidgetItem*,QListWidgetItem*)" );
+  QListWidgetSlots_connect_signal("currentItemChanged(QListWidgetItem*,QListWidgetItem*)", "currentItemChanged(QListWidgetItem*,QListWidgetItem*)");
 }
 
 HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTROWCHANGED )
 {
-  QListWidgetSlots_connect_signal( "currentRowChanged(int)", "currentRowChanged(int)" );
+  QListWidgetSlots_connect_signal("currentRowChanged(int)", "currentRowChanged(int)");
 }
 
 HB_FUNC_STATIC( QLISTWIDGET_ONCURRENTTEXTCHANGED )
 {
-  QListWidgetSlots_connect_signal( "currentTextChanged(QString)", "currentTextChanged(QString)" );
+  QListWidgetSlots_connect_signal("currentTextChanged(QString)", "currentTextChanged(QString)");
 }
 
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMACTIVATED )
 {
-  QListWidgetSlots_connect_signal( "itemActivated(QListWidgetItem*)", "itemActivated(QListWidgetItem*)" );
+  QListWidgetSlots_connect_signal("itemActivated(QListWidgetItem*)", "itemActivated(QListWidgetItem*)");
 }
 
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMCHANGED )
 {
-  QListWidgetSlots_connect_signal( "itemChanged(QListWidgetItem*)", "itemChanged(QListWidgetItem*)" );
+  QListWidgetSlots_connect_signal("itemChanged(QListWidgetItem*)", "itemChanged(QListWidgetItem*)");
 }
 
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMCLICKED )
 {
-  QListWidgetSlots_connect_signal( "itemClicked(QListWidgetItem*)", "itemClicked(QListWidgetItem*)" );
+  QListWidgetSlots_connect_signal("itemClicked(QListWidgetItem*)", "itemClicked(QListWidgetItem*)");
 }
 
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMDOUBLECLICKED )
 {
-  QListWidgetSlots_connect_signal( "itemDoubleClicked(QListWidgetItem*)", "itemDoubleClicked(QListWidgetItem*)" );
+  QListWidgetSlots_connect_signal("itemDoubleClicked(QListWidgetItem*)", "itemDoubleClicked(QListWidgetItem*)");
 }
 
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMENTERED )
 {
-  QListWidgetSlots_connect_signal( "itemEntered(QListWidgetItem*)", "itemEntered(QListWidgetItem*)" );
+  QListWidgetSlots_connect_signal("itemEntered(QListWidgetItem*)", "itemEntered(QListWidgetItem*)");
 }
 
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMPRESSED )
 {
-  QListWidgetSlots_connect_signal( "itemPressed(QListWidgetItem*)", "itemPressed(QListWidgetItem*)" );
+  QListWidgetSlots_connect_signal("itemPressed(QListWidgetItem*)", "itemPressed(QListWidgetItem*)");
 }
 
 HB_FUNC_STATIC( QLISTWIDGET_ONITEMSELECTIONCHANGED )
 {
-  QListWidgetSlots_connect_signal( "itemSelectionChanged()", "itemSelectionChanged()" );
+  QListWidgetSlots_connect_signal("itemSelectionChanged()", "itemSelectionChanged()");
 }
 
 #pragma ENDDUMP

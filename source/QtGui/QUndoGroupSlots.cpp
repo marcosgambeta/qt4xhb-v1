@@ -12,7 +12,7 @@
 
 #include "QUndoGroupSlots.h"
 
-QUndoGroupSlots::QUndoGroupSlots( QObject * parent ) : QObject( parent )
+QUndoGroupSlots::QUndoGroupSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,14 +22,14 @@ QUndoGroupSlots::~QUndoGroupSlots()
 
 void QUndoGroupSlots::activeStackChanged( QUndoStack * stack )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activeStackChanged(QUndoStack*)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "activeStackChanged(QUndoStack*)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QUNDOGROUP" );
-    PHB_ITEM pStack = Qt4xHb::Signals_return_qobject( stack, "QUNDOSTACK" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QUNDOGROUP");
+    PHB_ITEM pStack = Qt4xHb::Signals_return_qobject( stack, "QUNDOSTACK");
 
     hb_vmEvalBlockV( cb, 2, pSender, pStack );
 
@@ -40,13 +40,13 @@ void QUndoGroupSlots::activeStackChanged( QUndoStack * stack )
 
 void QUndoGroupSlots::canRedoChanged( bool canRedo )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "canRedoChanged(bool)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "canRedoChanged(bool)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QUNDOGROUP" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QUNDOGROUP");
     PHB_ITEM pCanRedo = hb_itemPutL( NULL, canRedo );
 
     hb_vmEvalBlockV( cb, 2, pSender, pCanRedo );
@@ -58,13 +58,13 @@ void QUndoGroupSlots::canRedoChanged( bool canRedo )
 
 void QUndoGroupSlots::canUndoChanged( bool canUndo )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "canUndoChanged(bool)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "canUndoChanged(bool)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QUNDOGROUP" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QUNDOGROUP");
     PHB_ITEM pCanUndo = hb_itemPutL( NULL, canUndo );
 
     hb_vmEvalBlockV( cb, 2, pSender, pCanUndo );
@@ -76,13 +76,13 @@ void QUndoGroupSlots::canUndoChanged( bool canUndo )
 
 void QUndoGroupSlots::cleanChanged( bool clean )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "cleanChanged(bool)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "cleanChanged(bool)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QUNDOGROUP" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QUNDOGROUP");
     PHB_ITEM pClean = hb_itemPutL( NULL, clean );
 
     hb_vmEvalBlockV( cb, 2, pSender, pClean );
@@ -94,13 +94,13 @@ void QUndoGroupSlots::cleanChanged( bool clean )
 
 void QUndoGroupSlots::indexChanged( int idx )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "indexChanged(int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "indexChanged(int)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QUNDOGROUP" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QUNDOGROUP");
     PHB_ITEM pIdx = hb_itemPutNI( NULL, idx );
 
     hb_vmEvalBlockV( cb, 2, pSender, pIdx );
@@ -112,13 +112,13 @@ void QUndoGroupSlots::indexChanged( int idx )
 
 void QUndoGroupSlots::redoTextChanged( const QString & redoText )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "redoTextChanged(QString)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "redoTextChanged(QString)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QUNDOGROUP" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QUNDOGROUP");
     PHB_ITEM pRedoText = hb_itemPutC( NULL, QSTRINGTOSTRING( redoText ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pRedoText );
@@ -130,13 +130,13 @@ void QUndoGroupSlots::redoTextChanged( const QString & redoText )
 
 void QUndoGroupSlots::undoTextChanged( const QString & undoText )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "undoTextChanged(QString)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "undoTextChanged(QString)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QUNDOGROUP" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QUNDOGROUP");
     PHB_ITEM pUndoText = hb_itemPutC( NULL, QSTRINGTOSTRING( undoText ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pUndoText );
@@ -152,19 +152,19 @@ void QUndoGroupSlots_connect_signal( const QString & signal, const QString & slo
 
   if( obj != NULL )
   {
-    QUndoGroupSlots * s = QCoreApplication::instance()->findChild<QUndoGroupSlots *>();
+    QUndoGroupSlots * s = QCoreApplication::instance()->findChild<QUndoGroupSlots*>();
 
     if( s == NULL )
     {
       s = new QUndoGroupSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_NEW )
     QGraphicsView( QWidget * parent = 0 )
     */
     QGraphicsView * obj = new QGraphicsView( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && ISQGRAPHICSSCENE(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
   {
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_NEW )
     QGraphicsView( QGraphicsScene * scene, QWidget * parent = 0 )
     */
     QGraphicsView * obj = new QGraphicsView( PQGRAPHICSSCENE(1), OPQWIDGET( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_BACKGROUNDBRUSH )
     {
 #endif
       QBrush * ptr = new QBrush( obj->backgroundBrush() );
-      Qt4xHb::createReturnClass( ptr, "QBRUSH", true );
+      Qt4xHb::createReturnClass(ptr, "QBRUSH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_FOREGROUNDBRUSH )
     {
 #endif
       QBrush * ptr = new QBrush( obj->foregroundBrush() );
-      Qt4xHb::createReturnClass( ptr, "QBRUSH", true );
+      Qt4xHb::createReturnClass(ptr, "QBRUSH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -485,7 +485,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMAT )
     if( obj != NULL )
     {
       QGraphicsItem * ptr = obj->itemAt( *PQPOINT(1) );
-      Qt4xHb::createReturnClass( ptr, "QGRAPHICSITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
     }
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMAT )
     if( obj != NULL )
     {
       QGraphicsItem * ptr = obj->itemAt( PINT(1), PINT(2) );
-      Qt4xHb::createReturnClass( ptr, "QGRAPHICSITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
     }
   }
   else
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS )
     if( obj != NULL )
     {
       QList<QGraphicsItem *> list = obj->items();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS )
     if( obj != NULL )
     {
       QList<QGraphicsItem *> list = obj->items( *PQPOINT(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS )
     if( obj != NULL )
     {
       QList<QGraphicsItem *> list = obj->items( PINT(1), PINT(2) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -627,7 +627,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS )
     if( obj != NULL )
     {
       QList<QGraphicsItem *> list = obj->items( PINT(1), PINT(2), PINT(3), PINT(4), HB_ISNIL(5) ? ( Qt::ItemSelectionMode ) Qt::IntersectsItemShape : ( Qt::ItemSelectionMode ) hb_parni(5) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS )
     if( obj != NULL )
     {
       QList<QGraphicsItem *> list = obj->items( *PQRECT(1), HB_ISNIL(2) ? ( Qt::ItemSelectionMode ) Qt::IntersectsItemShape : ( Qt::ItemSelectionMode ) hb_parni(2) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -699,7 +699,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS )
     if( obj != NULL )
     {
       QList<QGraphicsItem *> list = obj->items( *PQPOLYGON(1), HB_ISNIL(2) ? ( Qt::ItemSelectionMode ) Qt::IntersectsItemShape : ( Qt::ItemSelectionMode ) hb_parni(2) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -735,7 +735,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_ITEMS )
     if( obj != NULL )
     {
       QList<QGraphicsItem *> list = obj->items( *PQPAINTERPATH(1), HB_ISNIL(2) ? ( Qt::ItemSelectionMode ) Qt::IntersectsItemShape : ( Qt::ItemSelectionMode ) hb_parni(2) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -779,7 +779,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MAPFROMSCENE )
     if( obj != NULL )
     {
       QPoint * ptr = new QPoint( obj->mapFromScene( *PQPOINTF(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
     }
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
@@ -792,7 +792,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MAPFROMSCENE )
     if( obj != NULL )
     {
       QPolygon * ptr = new QPolygon( obj->mapFromScene( *PQRECTF(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QPOLYGON", true );
+      Qt4xHb::createReturnClass(ptr, "QPOLYGON", true);
     }
   }
   else if( ISNUMPAR(1) && ISQPOLYGONF(1) )
@@ -805,7 +805,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MAPFROMSCENE )
     if( obj != NULL )
     {
       QPolygon * ptr = new QPolygon( obj->mapFromScene( *PQPOLYGONF(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QPOLYGON", true );
+      Qt4xHb::createReturnClass(ptr, "QPOLYGON", true);
     }
   }
   else if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
@@ -818,7 +818,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MAPFROMSCENE )
     if( obj != NULL )
     {
       QPainterPath * ptr = new QPainterPath( obj->mapFromScene( *PQPAINTERPATH(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QPAINTERPATH", true );
+      Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -831,7 +831,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MAPFROMSCENE )
     if( obj != NULL )
     {
       QPoint * ptr = new QPoint( obj->mapFromScene( PQREAL(1), PQREAL(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
     }
   }
   else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
@@ -844,7 +844,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MAPFROMSCENE )
     if( obj != NULL )
     {
       QPolygon * ptr = new QPolygon( obj->mapFromScene( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
-      Qt4xHb::createReturnClass( ptr, "QPOLYGON", true );
+      Qt4xHb::createReturnClass(ptr, "QPOLYGON", true);
     }
   }
   else
@@ -865,7 +865,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MAPTOSCENE )
     if( obj != NULL )
     {
       QPointF * ptr = new QPointF( obj->mapToScene( *PQPOINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
     }
   }
   else if( ISNUMPAR(1) && ISQRECT(1) )
@@ -878,7 +878,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MAPTOSCENE )
     if( obj != NULL )
     {
       QPolygonF * ptr = new QPolygonF( obj->mapToScene( *PQRECT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QPOLYGONF", true );
+      Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
   }
   else if( ISNUMPAR(1) && ISQPOLYGON(1) )
@@ -891,7 +891,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MAPTOSCENE )
     if( obj != NULL )
     {
       QPolygonF * ptr = new QPolygonF( obj->mapToScene( *PQPOLYGON(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QPOLYGONF", true );
+      Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
   }
   else if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
@@ -904,7 +904,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MAPTOSCENE )
     if( obj != NULL )
     {
       QPainterPath * ptr = new QPainterPath( obj->mapToScene( *PQPAINTERPATH(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QPAINTERPATH", true );
+      Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -917,7 +917,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MAPTOSCENE )
     if( obj != NULL )
     {
       QPointF * ptr = new QPointF( obj->mapToScene( PINT(1), PINT(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
     }
   }
   else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
@@ -930,7 +930,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MAPTOSCENE )
     if( obj != NULL )
     {
       QPolygonF * ptr = new QPolygonF( obj->mapToScene( PINT(1), PINT(2), PINT(3), PINT(4) ) );
-      Qt4xHb::createReturnClass( ptr, "QPOLYGONF", true );
+      Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
   }
   else
@@ -953,7 +953,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_MATRIX )
     {
 #endif
       QMatrix * ptr = new QMatrix( obj->matrix() );
-      Qt4xHb::createReturnClass( ptr, "QMATRIX", true );
+      Qt4xHb::createReturnClass(ptr, "QMATRIX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1230,7 +1230,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SCENE )
     {
 #endif
       QGraphicsScene * ptr = obj->scene();
-      Qt4xHb::createReturnQObjectClass( ptr, "QGRAPHICSSCENE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QGRAPHICSSCENE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1255,7 +1255,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SCENERECT )
     {
 #endif
       QRectF * ptr = new QRectF( obj->sceneRect() );
-      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
+      Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1784,7 +1784,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_TRANSFORM )
     {
 #endif
       QTransform * ptr = new QTransform( obj->transform() );
-      Qt4xHb::createReturnClass( ptr, "QTRANSFORM", true );
+      Qt4xHb::createReturnClass(ptr, "QTRANSFORM", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1859,7 +1859,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_VIEWPORTTRANSFORM )
     {
 #endif
       QTransform * ptr = new QTransform( obj->viewportTransform() );
-      Qt4xHb::createReturnClass( ptr, "QTRANSFORM", true );
+      Qt4xHb::createReturnClass(ptr, "QTRANSFORM", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1908,7 +1908,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_INPUTMETHODQUERY )
     {
 #endif
       QVariant * ptr = new QVariant( obj->inputMethodQuery( ( Qt::InputMethodQuery ) hb_parni(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1933,7 +1933,7 @@ HB_FUNC_STATIC( QGRAPHICSVIEW_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

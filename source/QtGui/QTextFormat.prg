@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_NEW )
     QTextFormat()
     */
     QTextFormat * obj = new QTextFormat();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_NEW )
     QTextFormat( int type )
     */
     QTextFormat * obj = new QTextFormat( PINT(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQTEXTFORMAT(1) )
   {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_NEW )
     QTextFormat( const QTextFormat & other )
     */
     QTextFormat * obj = new QTextFormat( *PQTEXTFORMAT(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_BACKGROUND )
     {
 #endif
       QBrush * ptr = new QBrush( obj->background() );
-      Qt4xHb::createReturnClass( ptr, "QBRUSH", true );
+      Qt4xHb::createReturnClass(ptr, "QBRUSH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_BRUSHPROPERTY )
     {
 #endif
       QBrush * ptr = new QBrush( obj->brushProperty( PINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QBRUSH", true );
+      Qt4xHb::createReturnClass(ptr, "QBRUSH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_COLORPROPERTY )
     {
 #endif
       QColor * ptr = new QColor( obj->colorProperty( PINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QCOLOR", true );
+      Qt4xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_FOREGROUND )
     {
 #endif
       QBrush * ptr = new QBrush( obj->foreground() );
-      Qt4xHb::createReturnClass( ptr, "QBRUSH", true );
+      Qt4xHb::createReturnClass(ptr, "QBRUSH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -654,7 +654,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_LENGTHPROPERTY )
     {
 #endif
       QTextLength * ptr = new QTextLength( obj->lengthProperty( PINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QTEXTLENGTH", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTLENGTH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -679,7 +679,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_LENGTHVECTORPROPERTY )
     {
 #endif
       QVector<QTextLength> list = obj->lengthVectorProperty( PINT(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QTEXTLENGTH" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QTEXTLENGTH");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -805,7 +805,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_PENPROPERTY )
     {
 #endif
       QPen * ptr = new QPen( obj->penProperty( PINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QPEN", true );
+      Qt4xHb::createReturnClass(ptr, "QPEN", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -830,7 +830,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_PROPERTY )
     {
 #endif
       QVariant * ptr = new QVariant( obj->property( PINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1076,7 +1076,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOBLOCKFORMAT )
     {
 #endif
       QTextBlockFormat * ptr = new QTextBlockFormat( obj->toBlockFormat() );
-      Qt4xHb::createReturnClass( ptr, "QTEXTBLOCKFORMAT", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTBLOCKFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1101,7 +1101,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOCHARFORMAT )
     {
 #endif
       QTextCharFormat * ptr = new QTextCharFormat( obj->toCharFormat() );
-      Qt4xHb::createReturnClass( ptr, "QTEXTCHARFORMAT", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1126,7 +1126,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOFRAMEFORMAT )
     {
 #endif
       QTextFrameFormat * ptr = new QTextFrameFormat( obj->toFrameFormat() );
-      Qt4xHb::createReturnClass( ptr, "QTEXTFRAMEFORMAT", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTFRAMEFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1151,7 +1151,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOIMAGEFORMAT )
     {
 #endif
       QTextImageFormat * ptr = new QTextImageFormat( obj->toImageFormat() );
-      Qt4xHb::createReturnClass( ptr, "QTEXTIMAGEFORMAT", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTIMAGEFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1176,7 +1176,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOLISTFORMAT )
     {
 #endif
       QTextListFormat * ptr = new QTextListFormat( obj->toListFormat() );
-      Qt4xHb::createReturnClass( ptr, "QTEXTLISTFORMAT", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTLISTFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1201,7 +1201,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOTABLECELLFORMAT )
     {
 #endif
       QTextTableCellFormat * ptr = new QTextTableCellFormat( obj->toTableCellFormat() );
-      Qt4xHb::createReturnClass( ptr, "QTEXTTABLECELLFORMAT", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTTABLECELLFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1226,7 +1226,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_TOTABLEFORMAT )
     {
 #endif
       QTextTableFormat * ptr = new QTextTableFormat( obj->toTableFormat() );
-      Qt4xHb::createReturnClass( ptr, "QTEXTTABLEFORMAT", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTTABLEFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1267,28 +1267,28 @@ HB_FUNC_STATIC( QTEXTFORMAT_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QTEXTFORMAT_NEWFROMOBJECT )
@@ -1303,7 +1303,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QTEXTFORMAT_SELFDESTRUCTION )
 {
-  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QTEXTFORMAT_SETSELFDESTRUCTION )
@@ -1312,16 +1312,16 @@ HB_FUNC_STATIC( QTEXTFORMAT_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

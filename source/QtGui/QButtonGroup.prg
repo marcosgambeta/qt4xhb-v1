@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QButtonGroup * obj = new QButtonGroup( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTON )
     {
 #endif
       QAbstractButton * ptr = obj->button( PINT(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTBUTTON" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTBUTTON");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_BUTTONS )
     {
 #endif
       QList<QAbstractButton *> list = obj->buttons();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTBUTTON" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTBUTTON");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QBUTTONGROUP_CHECKEDBUTTON )
     {
 #endif
       QAbstractButton * ptr = obj->checkedButton();
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTBUTTON" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTBUTTON");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -378,36 +378,36 @@ HB_FUNC_STATIC( QBUTTONGROUP_SETID )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QButtonGroupSlots_connect_signal( const QString & signal, const QString & slot );
+void QButtonGroupSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED1 )
 {
-  QButtonGroupSlots_connect_signal( "buttonClicked(QAbstractButton*)", "buttonClicked(QAbstractButton*)" );
+  QButtonGroupSlots_connect_signal("buttonClicked(QAbstractButton*)", "buttonClicked(QAbstractButton*)");
 }
 
 HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONCLICKED2 )
 {
-  QButtonGroupSlots_connect_signal( "buttonClicked(int)", "buttonClicked(int)" );
+  QButtonGroupSlots_connect_signal("buttonClicked(int)", "buttonClicked(int)");
 }
 
 HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED1 )
 {
-  QButtonGroupSlots_connect_signal( "buttonPressed(QAbstractButton*)", "buttonPressed(QAbstractButton*)" );
+  QButtonGroupSlots_connect_signal("buttonPressed(QAbstractButton*)", "buttonPressed(QAbstractButton*)");
 }
 
 HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONPRESSED2 )
 {
-  QButtonGroupSlots_connect_signal( "buttonPressed(int)", "buttonPressed(int)" );
+  QButtonGroupSlots_connect_signal("buttonPressed(int)", "buttonPressed(int)");
 }
 
 HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED1 )
 {
-  QButtonGroupSlots_connect_signal( "buttonReleased(QAbstractButton*)", "buttonReleased(QAbstractButton*)" );
+  QButtonGroupSlots_connect_signal("buttonReleased(QAbstractButton*)", "buttonReleased(QAbstractButton*)");
 }
 
 HB_FUNC_STATIC( QBUTTONGROUP_ONBUTTONRELEASED2 )
 {
-  QButtonGroupSlots_connect_signal( "buttonReleased(int)", "buttonReleased(int)" );
+  QButtonGroupSlots_connect_signal("buttonReleased(int)", "buttonReleased(int)");
 }
 
 #pragma ENDDUMP

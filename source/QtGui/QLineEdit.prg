@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QLINEEDIT_NEW )
     QLineEdit( QWidget * parent = 0 )
     */
     QLineEdit * obj = new QLineEdit( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
   {
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QLINEEDIT_NEW )
     QLineEdit( const QString & contents, QWidget * parent = 0 )
     */
     QLineEdit * obj = new QLineEdit( PQSTRING(1), OPQWIDGET( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QLINEEDIT_COMPLETER )
     {
 #endif
       QCompleter * ptr = obj->completer();
-      Qt4xHb::createReturnQObjectClass( ptr, "QCOMPLETER" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QCOMPLETER");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QLINEEDIT_CREATESTANDARDCONTEXTMENU )
     {
 #endif
       QMenu * ptr = obj->createStandardContextMenu();
-      Qt4xHb::createReturnQObjectClass( ptr, "QMENU" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QMENU");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -901,7 +901,7 @@ HB_FUNC_STATIC( QLINEEDIT_MINIMUMSIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1348,7 +1348,7 @@ HB_FUNC_STATIC( QLINEEDIT_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1397,7 +1397,7 @@ HB_FUNC_STATIC( QLINEEDIT_TEXTMARGINS )
     {
 #endif
       QMargins * ptr = new QMargins( obj->textMargins() );
-      Qt4xHb::createReturnClass( ptr, "QMARGINS", true );
+      Qt4xHb::createReturnClass(ptr, "QMARGINS", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1422,7 +1422,7 @@ HB_FUNC_STATIC( QLINEEDIT_VALIDATOR )
     {
 #endif
       const QValidator * ptr = obj->validator();
-      Qt4xHb::createReturnQObjectClass( ptr, "QVALIDATOR" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QVALIDATOR");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1471,7 +1471,7 @@ HB_FUNC_STATIC( QLINEEDIT_INPUTMETHODQUERY )
     {
 #endif
       QVariant * ptr = new QVariant( obj->inputMethodQuery( ( Qt::InputMethodQuery ) hb_parni(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1664,36 +1664,36 @@ HB_FUNC_STATIC( QLINEEDIT_UNDO )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QLineEditSlots_connect_signal( const QString & signal, const QString & slot );
+void QLineEditSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QLINEEDIT_ONCURSORPOSITIONCHANGED )
 {
-  QLineEditSlots_connect_signal( "cursorPositionChanged(int,int)", "cursorPositionChanged(int,int)" );
+  QLineEditSlots_connect_signal("cursorPositionChanged(int,int)", "cursorPositionChanged(int,int)");
 }
 
 HB_FUNC_STATIC( QLINEEDIT_ONEDITINGFINISHED )
 {
-  QLineEditSlots_connect_signal( "editingFinished()", "editingFinished()" );
+  QLineEditSlots_connect_signal("editingFinished()", "editingFinished()");
 }
 
 HB_FUNC_STATIC( QLINEEDIT_ONRETURNPRESSED )
 {
-  QLineEditSlots_connect_signal( "returnPressed()", "returnPressed()" );
+  QLineEditSlots_connect_signal("returnPressed()", "returnPressed()");
 }
 
 HB_FUNC_STATIC( QLINEEDIT_ONSELECTIONCHANGED )
 {
-  QLineEditSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
+  QLineEditSlots_connect_signal("selectionChanged()", "selectionChanged()");
 }
 
 HB_FUNC_STATIC( QLINEEDIT_ONTEXTCHANGED )
 {
-  QLineEditSlots_connect_signal( "textChanged(QString)", "textChanged(QString)" );
+  QLineEditSlots_connect_signal("textChanged(QString)", "textChanged(QString)");
 }
 
 HB_FUNC_STATIC( QLINEEDIT_ONTEXTEDITED )
 {
-  QLineEditSlots_connect_signal( "textEdited(QString)", "textEdited(QString)" );
+  QLineEditSlots_connect_signal("textEdited(QString)", "textEdited(QString)");
 }
 
 #pragma ENDDUMP

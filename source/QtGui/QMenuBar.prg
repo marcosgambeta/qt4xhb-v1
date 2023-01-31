@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QMENUBAR_NEW )
   if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QMenuBar * obj = new QMenuBar( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QMENUBAR_ACTIVEACTION )
     {
 #endif
       QAction * ptr = obj->activeAction();
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDACTION )
     if( obj != NULL )
     {
       QAction * ptr = obj->addAction( PQSTRING(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
     }
   }
   else if( ISNUMPAR(3) && HB_ISCHAR(1) && ISQOBJECT(2) && HB_ISCHAR(3) )
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDACTION )
     if( obj != NULL )
     {
       QAction * ptr = obj->addAction( PQSTRING(1), PQOBJECT(2), PCONSTCHAR(3) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
     }
   }
   else if( ISNUMPAR(1) && ISQACTION(1) )
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDMENU )
     if( obj != NULL )
     {
       QAction * ptr = obj->addMenu( PQMENU(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
     }
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDMENU )
     if( obj != NULL )
     {
       QMenu * ptr = obj->addMenu( PQSTRING(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QMENU" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QMENU");
     }
   }
   else if( ISNUMPAR(2) && ( ISQICON(1) || HB_ISCHAR(1) ) && HB_ISCHAR(2) )
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDMENU )
     if( obj != NULL )
     {
       QMenu * ptr = obj->addMenu( HB_ISOBJECT(1) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(1) ) : QIcon( hb_parc(1) ), PQSTRING(2) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QMENU" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QMENU");
     }
   }
   else
@@ -230,7 +230,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDSEPARATOR )
     {
 #endif
       QAction * ptr = obj->addSeparator();
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QMENUBAR_INSERTMENU )
     {
 #endif
       QAction * ptr = obj->insertMenu( PQACTION(1), PQMENU(2) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QMENUBAR_INSERTSEPARATOR )
     {
 #endif
       QAction * ptr = obj->insertSeparator( PQACTION(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QMENUBAR_MINIMUMSIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QMENUBAR_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -543,16 +543,16 @@ HB_FUNC_STATIC( QMENUBAR_SETVISIBLE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QMenuBarSlots_connect_signal( const QString & signal, const QString & slot );
+void QMenuBarSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QMENUBAR_ONHOVERED )
 {
-  QMenuBarSlots_connect_signal( "hovered(QAction*)", "hovered(QAction*)" );
+  QMenuBarSlots_connect_signal("hovered(QAction*)", "hovered(QAction*)");
 }
 
 HB_FUNC_STATIC( QMENUBAR_ONTRIGGERED )
 {
-  QMenuBarSlots_connect_signal( "triggered(QAction*)", "triggered(QAction*)" );
+  QMenuBarSlots_connect_signal("triggered(QAction*)", "triggered(QAction*)");
 }
 
 #pragma ENDDUMP

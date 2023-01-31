@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QUNDOGROUP_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QUndoGroup * obj = new QUndoGroup( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QUNDOGROUP_ACTIVESTACK )
     {
 #endif
       QUndoStack * ptr = obj->activeStack();
-      Qt4xHb::createReturnQObjectClass( ptr, "QUNDOSTACK" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QUNDOSTACK");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CREATEREDOACTION )
     {
 #endif
       QAction * ptr = obj->createRedoAction( PQOBJECT(1), OPQSTRING( 2, QString() ) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QUNDOGROUP_CREATEUNDOACTION )
     {
 #endif
       QAction * ptr = obj->createUndoAction( PQOBJECT(1), OPQSTRING( 2, QString() ) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QUNDOGROUP_STACKS )
     {
 #endif
       QList<QUndoStack *> list = obj->stacks();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QUNDOSTACK" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QUNDOSTACK");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -474,41 +474,41 @@ HB_FUNC_STATIC( QUNDOGROUP_UNDO )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QUndoGroupSlots_connect_signal( const QString & signal, const QString & slot );
+void QUndoGroupSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QUNDOGROUP_ONACTIVESTACKCHANGED )
 {
-  QUndoGroupSlots_connect_signal( "activeStackChanged(QUndoStack*)", "activeStackChanged(QUndoStack*)" );
+  QUndoGroupSlots_connect_signal("activeStackChanged(QUndoStack*)", "activeStackChanged(QUndoStack*)");
 }
 
 HB_FUNC_STATIC( QUNDOGROUP_ONCANREDOCHANGED )
 {
-  QUndoGroupSlots_connect_signal( "canRedoChanged(bool)", "canRedoChanged(bool)" );
+  QUndoGroupSlots_connect_signal("canRedoChanged(bool)", "canRedoChanged(bool)");
 }
 
 HB_FUNC_STATIC( QUNDOGROUP_ONCANUNDOCHANGED )
 {
-  QUndoGroupSlots_connect_signal( "canUndoChanged(bool)", "canUndoChanged(bool)" );
+  QUndoGroupSlots_connect_signal("canUndoChanged(bool)", "canUndoChanged(bool)");
 }
 
 HB_FUNC_STATIC( QUNDOGROUP_ONCLEANCHANGED )
 {
-  QUndoGroupSlots_connect_signal( "cleanChanged(bool)", "cleanChanged(bool)" );
+  QUndoGroupSlots_connect_signal("cleanChanged(bool)", "cleanChanged(bool)");
 }
 
 HB_FUNC_STATIC( QUNDOGROUP_ONINDEXCHANGED )
 {
-  QUndoGroupSlots_connect_signal( "indexChanged(int)", "indexChanged(int)" );
+  QUndoGroupSlots_connect_signal("indexChanged(int)", "indexChanged(int)");
 }
 
 HB_FUNC_STATIC( QUNDOGROUP_ONREDOTEXTCHANGED )
 {
-  QUndoGroupSlots_connect_signal( "redoTextChanged(QString)", "redoTextChanged(QString)" );
+  QUndoGroupSlots_connect_signal("redoTextChanged(QString)", "redoTextChanged(QString)");
 }
 
 HB_FUNC_STATIC( QUNDOGROUP_ONUNDOTEXTCHANGED )
 {
-  QUndoGroupSlots_connect_signal( "undoTextChanged(QString)", "undoTextChanged(QString)" );
+  QUndoGroupSlots_connect_signal("undoTextChanged(QString)", "undoTextChanged(QString)");
 }
 
 #pragma ENDDUMP

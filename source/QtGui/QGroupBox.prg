@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QGROUPBOX_NEW )
     QGroupBox( QWidget * parent = 0 )
     */
     QGroupBox * obj = new QGroupBox( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
   {
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QGROUPBOX_NEW )
     QGroupBox( const QString & title, QWidget * parent = 0 )
     */
     QGroupBox * obj = new QGroupBox( PQSTRING(1), OPQWIDGET( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QGROUPBOX_MINIMUMSIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,16 +353,16 @@ HB_FUNC_STATIC( QGROUPBOX_SETCHECKED )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QGroupBoxSlots_connect_signal( const QString & signal, const QString & slot );
+void QGroupBoxSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QGROUPBOX_ONCLICKED )
 {
-  QGroupBoxSlots_connect_signal( "clicked(bool)", "clicked(bool)" );
+  QGroupBoxSlots_connect_signal("clicked(bool)", "clicked(bool)");
 }
 
 HB_FUNC_STATIC( QGROUPBOX_ONTOGGLED )
 {
-  QGroupBoxSlots_connect_signal( "toggled(bool)", "toggled(bool)" );
+  QGroupBoxSlots_connect_signal("toggled(bool)", "toggled(bool)");
 }
 
 #pragma ENDDUMP

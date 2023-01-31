@@ -12,7 +12,7 @@
 
 #include "QGraphicsRotationSlots.h"
 
-QGraphicsRotationSlots::QGraphicsRotationSlots( QObject * parent ) : QObject( parent )
+QGraphicsRotationSlots::QGraphicsRotationSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QGraphicsRotationSlots::~QGraphicsRotationSlots()
 
 void QGraphicsRotationSlots::angleChanged()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "angleChanged()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "angleChanged()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QGRAPHICSROTATION" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QGRAPHICSROTATION");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -38,13 +38,13 @@ void QGraphicsRotationSlots::angleChanged()
 
 void QGraphicsRotationSlots::axisChanged()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "axisChanged()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "axisChanged()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QGRAPHICSROTATION" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QGRAPHICSROTATION");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -54,13 +54,13 @@ void QGraphicsRotationSlots::axisChanged()
 
 void QGraphicsRotationSlots::originChanged()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "originChanged()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "originChanged()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QGRAPHICSROTATION" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QGRAPHICSROTATION");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -74,19 +74,19 @@ void QGraphicsRotationSlots_connect_signal( const QString & signal, const QStrin
 
   if( obj != NULL )
   {
-    QGraphicsRotationSlots * s = QCoreApplication::instance()->findChild<QGraphicsRotationSlots *>();
+    QGraphicsRotationSlots * s = QCoreApplication::instance()->findChild<QGraphicsRotationSlots*>();
 
     if( s == NULL )
     {
       s = new QGraphicsRotationSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

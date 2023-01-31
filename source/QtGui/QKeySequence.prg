@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW )
     QKeySequence()
     */
     QKeySequence * obj = new QKeySequence();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW )
     QKeySequence( const QString & key )
     */
     QKeySequence * obj = new QKeySequence( PQSTRING(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
   {
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW )
     QKeySequence( const QString & key, QKeySequence::SequenceFormat format )
     */
     QKeySequence * obj = new QKeySequence( PQSTRING(1), ( QKeySequence::SequenceFormat ) hb_parni(2) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW )
     QKeySequence( QKeySequence::StandardKey key )
     */
     QKeySequence * obj = new QKeySequence( ( QKeySequence::StandardKey ) hb_parni(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(1, 4) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
   {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW )
     QKeySequence( int k1, int k2 = 0, int k3 = 0, int k4 = 0 )
     */
     QKeySequence * obj = new QKeySequence( PINT(1), OPINT( 2, 0 ), OPINT( 3, 0 ), OPINT( 4, 0 ) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQKEYSEQUENCE(1) )
   {
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEW )
     QKeySequence( const QKeySequence & keysequence )
     */
     QKeySequence * obj = new QKeySequence( *PQKEYSEQUENCE(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_FROMSTRING )
   {
 #endif
     QKeySequence * ptr = new QKeySequence( QKeySequence::fromString( PQSTRING(1), HB_ISNIL(2) ? ( QKeySequence::SequenceFormat ) QKeySequence::PortableText : ( QKeySequence::SequenceFormat ) hb_parni(2) ) );
-    Qt4xHb::createReturnClass( ptr, "QKEYSEQUENCE", true );
+    Qt4xHb::createReturnClass(ptr, "QKEYSEQUENCE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_KEYBINDINGS )
   {
 #endif
     QList<QKeySequence> list = QKeySequence::keyBindings( ( QKeySequence::StandardKey ) hb_parni(1) );
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QKEYSEQUENCE" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QKEYSEQUENCE");
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_MNEMONIC )
   {
 #endif
     QKeySequence * ptr = new QKeySequence( QKeySequence::mnemonic( PQSTRING(1) ) );
-    Qt4xHb::createReturnClass( ptr, "QKEYSEQUENCE", true );
+    Qt4xHb::createReturnClass(ptr, "QKEYSEQUENCE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -317,28 +317,28 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QKEYSEQUENCE_NEWFROMOBJECT )
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QKEYSEQUENCE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QKEYSEQUENCE_SELFDESTRUCTION )
 {
-  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QKEYSEQUENCE_SETSELFDESTRUCTION )
@@ -362,16 +362,16 @@ HB_FUNC_STATIC( QKEYSEQUENCE_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

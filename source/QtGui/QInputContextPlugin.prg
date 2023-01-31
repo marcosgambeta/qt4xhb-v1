@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_CREATE )
     {
 #endif
       QInputContext * ptr = obj->create( PQSTRING(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QINPUTCONTEXT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QINPUTCONTEXT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

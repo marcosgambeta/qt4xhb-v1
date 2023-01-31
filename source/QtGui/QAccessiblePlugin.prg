@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QACCESSIBLEPLUGIN_CREATE )
     {
 #endif
       QAccessibleInterface * ptr = obj->create( PQSTRING(1), PQOBJECT(2) );
-      Qt4xHb::createReturnClass( ptr, "QACCESSIBLEINTERFACE", false );
+      Qt4xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

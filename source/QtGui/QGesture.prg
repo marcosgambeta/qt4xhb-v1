@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QGESTURE_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QGesture * obj = new QGesture( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QGESTURE_HOTSPOT )
     {
 #endif
       QPointF * ptr = new QPointF( obj->hotSpot() );
-      Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

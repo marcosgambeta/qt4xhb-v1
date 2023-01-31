@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_NEW )
   if( ISBETWEEN(0, 1) && ( ISQGRAPHICSLAYOUTITEM(1) || HB_ISNIL(1) ) )
   {
     QGraphicsAnchorLayout * obj = new QGraphicsAnchorLayout( HB_ISNIL(1) ? 0 : static_cast<QGraphicsLayoutItem*>( Qt4xHb::itemGetPtr(1) ) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDANCHOR )
     {
 #endif
       QGraphicsAnchor * ptr = obj->addAnchor( PQGRAPHICSLAYOUTITEM(1), ( Qt::AnchorPoint ) hb_parni(2), PQGRAPHICSLAYOUTITEM(3), ( Qt::AnchorPoint ) hb_parni(4) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QGRAPHICSANCHOR" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QGRAPHICSANCHOR");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ANCHOR )
     {
 #endif
       QGraphicsAnchor * ptr = obj->anchor( PQGRAPHICSLAYOUTITEM(1), ( Qt::AnchorPoint ) hb_parni(2), PQGRAPHICSLAYOUTITEM(3), ( Qt::AnchorPoint ) hb_parni(4) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QGRAPHICSANCHOR" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QGRAPHICSANCHOR");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -378,7 +378,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ITEMAT )
     {
 #endif
       QGraphicsLayoutItem * ptr = obj->itemAt( PINT(1) );
-      Qt4xHb::createReturnClass( ptr, "QGRAPHICSLAYOUTITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QGRAPHICSLAYOUTITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

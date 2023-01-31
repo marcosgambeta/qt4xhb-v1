@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_ACTIONS )
     {
 #endif
       QList<QAction *> list = obj->actions();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QACTION" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QACTION");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_FOCUSWIDGET )
     {
 #endif
       QWidget * ptr = obj->focusWidget();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_FONT )
     {
 #endif
       QFont * ptr = new QFont( obj->font() );
-      Qt4xHb::createReturnClass( ptr, "QFONT", true );
+      Qt4xHb::createReturnClass(ptr, "QFONT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QINPUTCONTEXT_STANDARDFORMAT )
     {
 #endif
       QTextFormat * ptr = new QTextFormat( obj->standardFormat( ( QInputContext::StandardFormat ) hb_parni(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QTEXTFORMAT", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

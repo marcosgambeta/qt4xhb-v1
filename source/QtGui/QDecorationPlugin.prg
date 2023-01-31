@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QDECORATIONPLUGIN_CREATE )
     {
 #endif
       QDecoration * ptr = obj->create( PQSTRING(1) );
-      Qt4xHb::createReturnClass( ptr, "QDECORATION", false );
+      Qt4xHb::createReturnClass(ptr, "QDECORATION", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

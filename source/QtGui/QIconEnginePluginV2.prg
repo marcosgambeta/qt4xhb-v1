@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QICONENGINEPLUGINV2_CREATE )
     {
 #endif
       QIconEngineV2 * ptr = obj->create( OPQSTRING( 1, QString() ) );
-      Qt4xHb::createReturnClass( ptr, "QICONENGINEV2", false );
+      Qt4xHb::createReturnClass(ptr, "QICONENGINEV2", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

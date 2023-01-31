@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QDRAG_NEW )
   if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
     QDrag * obj = new QDrag( PQWIDGET(1) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QDRAG_HOTSPOT )
     {
 #endif
       QPoint * ptr = new QPoint( obj->hotSpot() );
-      Qt4xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QDRAG_MIMEDATA )
     {
 #endif
       QMimeData * ptr = obj->mimeData();
-      Qt4xHb::createReturnQObjectClass( ptr, "QMIMEDATA" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QMIMEDATA");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QDRAG_PIXMAP )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->pixmap() );
-      Qt4xHb::createReturnClass( ptr, "QPIXMAP", true );
+      Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -320,7 +320,7 @@ HB_FUNC_STATIC( QDRAG_SOURCE )
     {
 #endif
       QWidget * ptr = obj->source();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QDRAG_TARGET )
     {
 #endif
       QWidget * ptr = obj->target();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -356,16 +356,16 @@ HB_FUNC_STATIC( QDRAG_TARGET )
   }
 }
 
-void QDragSlots_connect_signal( const QString & signal, const QString & slot );
+void QDragSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QDRAG_ONACTIONCHANGED )
 {
-  QDragSlots_connect_signal( "actionChanged(Qt::DropAction)", "actionChanged(Qt::DropAction)" );
+  QDragSlots_connect_signal("actionChanged(Qt::DropAction)", "actionChanged(Qt::DropAction)");
 }
 
 HB_FUNC_STATIC( QDRAG_ONTARGETCHANGED )
 {
-  QDragSlots_connect_signal( "targetChanged(QWidget*)", "targetChanged(QWidget*)" );
+  QDragSlots_connect_signal("targetChanged(QWidget*)", "targetChanged(QWidget*)");
 }
 
 #pragma ENDDUMP

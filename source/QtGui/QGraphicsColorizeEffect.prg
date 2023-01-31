@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QGraphicsColorizeEffect * obj = new QGraphicsColorizeEffect( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_COLOR )
     {
 #endif
       QColor * ptr = new QColor( obj->color() );
-      Qt4xHb::createReturnClass( ptr, "QCOLOR", true );
+      Qt4xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,16 +183,16 @@ HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_SETSTRENGTH )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QGraphicsColorizeEffectSlots_connect_signal( const QString & signal, const QString & slot );
+void QGraphicsColorizeEffectSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_ONCOLORCHANGED )
 {
-  QGraphicsColorizeEffectSlots_connect_signal( "colorChanged(QColor)", "colorChanged(QColor)" );
+  QGraphicsColorizeEffectSlots_connect_signal("colorChanged(QColor)", "colorChanged(QColor)");
 }
 
 HB_FUNC_STATIC( QGRAPHICSCOLORIZEEFFECT_ONSTRENGTHCHANGED )
 {
-  QGraphicsColorizeEffectSlots_connect_signal( "strengthChanged(qreal)", "strengthChanged(qreal)" );
+  QGraphicsColorizeEffectSlots_connect_signal("strengthChanged(qreal)", "strengthChanged(qreal)");
 }
 
 #pragma ENDDUMP

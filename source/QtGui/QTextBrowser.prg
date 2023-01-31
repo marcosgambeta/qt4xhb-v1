@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_NEW )
   if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QTextBrowser * obj = new QTextBrowser( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_HISTORYURL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->historyUrl( PINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QURL", true );
+      Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_SOURCE )
     {
 #endif
       QUrl * ptr = new QUrl( obj->source() );
-      Qt4xHb::createReturnClass( ptr, "QURL", true );
+      Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -445,7 +445,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_LOADRESOURCE )
     {
 #endif
       QVariant * ptr = new QVariant( obj->loadResource( PINT(1), *PQURL(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -586,41 +586,41 @@ HB_FUNC_STATIC( QTEXTBROWSER_SETSOURCE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QTextBrowserSlots_connect_signal( const QString & signal, const QString & slot );
+void QTextBrowserSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QTEXTBROWSER_ONANCHORCLICKED )
 {
-  QTextBrowserSlots_connect_signal( "anchorClicked(QUrl)", "anchorClicked(QUrl)" );
+  QTextBrowserSlots_connect_signal("anchorClicked(QUrl)", "anchorClicked(QUrl)");
 }
 
 HB_FUNC_STATIC( QTEXTBROWSER_ONBACKWARDAVAILABLE )
 {
-  QTextBrowserSlots_connect_signal( "backwardAvailable(bool)", "backwardAvailable(bool)" );
+  QTextBrowserSlots_connect_signal("backwardAvailable(bool)", "backwardAvailable(bool)");
 }
 
 HB_FUNC_STATIC( QTEXTBROWSER_ONFORWARDAVAILABLE )
 {
-  QTextBrowserSlots_connect_signal( "forwardAvailable(bool)", "forwardAvailable(bool)" );
+  QTextBrowserSlots_connect_signal("forwardAvailable(bool)", "forwardAvailable(bool)");
 }
 
 HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED1 )
 {
-  QTextBrowserSlots_connect_signal( "highlighted(QUrl)", "highlighted(QUrl)" );
+  QTextBrowserSlots_connect_signal("highlighted(QUrl)", "highlighted(QUrl)");
 }
 
 HB_FUNC_STATIC( QTEXTBROWSER_ONHIGHLIGHTED2 )
 {
-  QTextBrowserSlots_connect_signal( "highlighted(QString)", "highlighted(QString)" );
+  QTextBrowserSlots_connect_signal("highlighted(QString)", "highlighted(QString)");
 }
 
 HB_FUNC_STATIC( QTEXTBROWSER_ONHISTORYCHANGED )
 {
-  QTextBrowserSlots_connect_signal( "historyChanged()", "historyChanged()" );
+  QTextBrowserSlots_connect_signal("historyChanged()", "historyChanged()");
 }
 
 HB_FUNC_STATIC( QTEXTBROWSER_ONSOURCECHANGED )
 {
-  QTextBrowserSlots_connect_signal( "sourceChanged(QUrl)", "sourceChanged(QUrl)" );
+  QTextBrowserSlots_connect_signal("sourceChanged(QUrl)", "sourceChanged(QUrl)");
 }
 
 #pragma ENDDUMP

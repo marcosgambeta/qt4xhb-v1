@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_NEW )
     QStyleOptionGraphicsItem()
     */
     QStyleOptionGraphicsItem * obj = new QStyleOptionGraphicsItem();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONGRAPHICSITEM(1) )
   {
@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_NEW )
     QStyleOptionGraphicsItem( const QStyleOptionGraphicsItem & other )
     */
     QStyleOptionGraphicsItem * obj = new QStyleOptionGraphicsItem( *PQSTYLEOPTIONGRAPHICSITEM(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_EXPOSEDRECT )
     if( ISNUMPAR(0) )
     {
       QRectF * ptr = new QRectF( obj->exposedRect );
-      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
+      Qt4xHb::createReturnClass(ptr, "QRECTF", true);
     }
     else
     {
@@ -140,7 +140,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_MATRIX )
     if( ISNUMPAR(0) )
     {
       QMatrix * ptr = new QMatrix( obj->matrix );
-      Qt4xHb::createReturnClass( ptr, "QMATRIX", true );
+      Qt4xHb::createReturnClass(ptr, "QMATRIX", true);
     }
     else
     {

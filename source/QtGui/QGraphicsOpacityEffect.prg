@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QGraphicsOpacityEffect * obj = new QGraphicsOpacityEffect( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_OPACITYMASK )
     {
 #endif
       QBrush * ptr = new QBrush( obj->opacityMask() );
-      Qt4xHb::createReturnClass( ptr, "QBRUSH", true );
+      Qt4xHb::createReturnClass(ptr, "QBRUSH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,16 +183,16 @@ HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_SETOPACITYMASK )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QGraphicsOpacityEffectSlots_connect_signal( const QString & signal, const QString & slot );
+void QGraphicsOpacityEffectSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_ONOPACITYCHANGED )
 {
-  QGraphicsOpacityEffectSlots_connect_signal( "opacityChanged(qreal)", "opacityChanged(qreal)" );
+  QGraphicsOpacityEffectSlots_connect_signal("opacityChanged(qreal)", "opacityChanged(qreal)");
 }
 
 HB_FUNC_STATIC( QGRAPHICSOPACITYEFFECT_ONOPACITYMASKCHANGED )
 {
-  QGraphicsOpacityEffectSlots_connect_signal( "opacityMaskChanged(QBrush)", "opacityMaskChanged(QBrush)" );
+  QGraphicsOpacityEffectSlots_connect_signal("opacityMaskChanged(QBrush)", "opacityMaskChanged(QBrush)");
 }
 
 #pragma ENDDUMP

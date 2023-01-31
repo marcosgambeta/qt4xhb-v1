@@ -47,7 +47,7 @@ HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_NEW )
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
     QWhatsThisClickedEvent * obj = new QWhatsThisClickedEvent( PQSTRING(1) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {

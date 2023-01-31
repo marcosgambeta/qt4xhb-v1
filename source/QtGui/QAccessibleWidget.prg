@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_NEW )
   if( ISBETWEEN(1, 3) && ISQWIDGET(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( HB_ISCHAR(3) || HB_ISNIL(3) ) )
   {
     QAccessibleWidget * obj = new QAccessibleWidget( PQWIDGET(1), HB_ISNIL(2) ? ( QAccessible::Role ) QAccessible::Client : ( QAccessible::Role ) hb_parni(2), OPQSTRING( 3, QString() ) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QACCESSIBLEWIDGET_RECT )
     {
 #endif
       QRect * ptr = new QRect( obj->rect( PINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

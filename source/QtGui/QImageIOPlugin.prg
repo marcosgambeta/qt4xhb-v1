@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QIMAGEIOPLUGIN_CREATE )
     {
 #endif
       QImageIOHandler * ptr = obj->create( PQIODEVICE(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray*>( Qt4xHb::itemGetPtr(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QIMAGEIOHANDLER", false );
+      Qt4xHb::createReturnClass(ptr, "QIMAGEIOHANDLER", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

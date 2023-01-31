@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_NEW )
     QTableWidget( QWidget * parent = 0 )
     */
     QTableWidget * obj = new QTableWidget( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ( ISQWIDGET(3) || HB_ISNIL(3) ) )
   {
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_NEW )
     QTableWidget( int rows, int columns, QWidget * parent = 0 )
     */
     QTableWidget * obj = new QTableWidget( PINT(1), PINT(2), OPQWIDGET( 3, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_CELLWIDGET )
     {
 #endif
       QWidget * ptr = obj->cellWidget( PINT(1), PINT(2) );
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -284,7 +284,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_CURRENTITEM )
     {
 #endif
       QTableWidgetItem * ptr = obj->currentItem();
-      Qt4xHb::createReturnClass( ptr, "QTABLEWIDGETITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QTABLEWIDGETITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_FINDITEMS )
     {
 #endif
       QList<QTableWidgetItem *> list = obj->findItems( PQSTRING(1), ( Qt::MatchFlags ) hb_parni(2) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QTABLEWIDGETITEM" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QTABLEWIDGETITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -407,7 +407,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_HORIZONTALHEADERITEM )
     {
 #endif
       QTableWidgetItem * ptr = obj->horizontalHeaderItem( PINT(1) );
-      Qt4xHb::createReturnClass( ptr, "QTABLEWIDGETITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QTABLEWIDGETITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -432,7 +432,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ITEM )
     {
 #endif
       QTableWidgetItem * ptr = obj->item( PINT(1), PINT(2) );
-      Qt4xHb::createReturnClass( ptr, "QTABLEWIDGETITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QTABLEWIDGETITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -455,7 +455,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ITEMAT )
     if( obj != NULL )
     {
       QTableWidgetItem * ptr = obj->itemAt( *PQPOINT(1) );
-      Qt4xHb::createReturnClass( ptr, "QTABLEWIDGETITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QTABLEWIDGETITEM", false);
     }
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ITEMAT )
     if( obj != NULL )
     {
       QTableWidgetItem * ptr = obj->itemAt( PINT(1), PINT(2) );
-      Qt4xHb::createReturnClass( ptr, "QTABLEWIDGETITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QTABLEWIDGETITEM", false);
     }
   }
   else
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SELECTEDITEMS )
     {
 #endif
       QList<QTableWidgetItem *> list = obj->selectedItems();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QTABLEWIDGETITEM" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QTABLEWIDGETITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -639,7 +639,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SELECTEDRANGES )
     {
 #endif
       QList<QTableWidgetSelectionRange> list = obj->selectedRanges();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QTABLEWIDGETSELECTIONRANGE" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QTABLEWIDGETSELECTIONRANGE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -1049,7 +1049,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_TAKEHORIZONTALHEADERITEM )
     {
 #endif
       QTableWidgetItem * ptr = obj->takeHorizontalHeaderItem( PINT(1) );
-      Qt4xHb::createReturnClass( ptr, "QTABLEWIDGETITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QTABLEWIDGETITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1074,7 +1074,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_TAKEITEM )
     {
 #endif
       QTableWidgetItem * ptr = obj->takeItem( PINT(1), PINT(2) );
-      Qt4xHb::createReturnClass( ptr, "QTABLEWIDGETITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QTABLEWIDGETITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1099,7 +1099,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_TAKEVERTICALHEADERITEM )
     {
 #endif
       QTableWidgetItem * ptr = obj->takeVerticalHeaderItem( PINT(1) );
-      Qt4xHb::createReturnClass( ptr, "QTABLEWIDGETITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QTABLEWIDGETITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1124,7 +1124,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_VERTICALHEADERITEM )
     {
 #endif
       QTableWidgetItem * ptr = obj->verticalHeaderItem( PINT(1) );
-      Qt4xHb::createReturnClass( ptr, "QTABLEWIDGETITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QTABLEWIDGETITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1173,7 +1173,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_VISUALITEMRECT )
     {
 #endif
       QRect * ptr = new QRect( obj->visualItemRect( PQTABLEWIDGETITEM(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1390,81 +1390,81 @@ HB_FUNC_STATIC( QTABLEWIDGET_SCROLLTOITEM )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QTableWidgetSlots_connect_signal( const QString & signal, const QString & slot );
+void QTableWidgetSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLACTIVATED )
 {
-  QTableWidgetSlots_connect_signal( "cellActivated(int,int)", "cellActivated(int,int)" );
+  QTableWidgetSlots_connect_signal("cellActivated(int,int)", "cellActivated(int,int)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCHANGED )
 {
-  QTableWidgetSlots_connect_signal( "cellChanged(int,int)", "cellChanged(int,int)" );
+  QTableWidgetSlots_connect_signal("cellChanged(int,int)", "cellChanged(int,int)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLCLICKED )
 {
-  QTableWidgetSlots_connect_signal( "cellClicked(int,int)", "cellClicked(int,int)" );
+  QTableWidgetSlots_connect_signal("cellClicked(int,int)", "cellClicked(int,int)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLDOUBLECLICKED )
 {
-  QTableWidgetSlots_connect_signal( "cellDoubleClicked(int,int)", "cellDoubleClicked(int,int)" );
+  QTableWidgetSlots_connect_signal("cellDoubleClicked(int,int)", "cellDoubleClicked(int,int)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLENTERED )
 {
-  QTableWidgetSlots_connect_signal( "cellEntered(int,int)", "cellEntered(int,int)" );
+  QTableWidgetSlots_connect_signal("cellEntered(int,int)", "cellEntered(int,int)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONCELLPRESSED )
 {
-  QTableWidgetSlots_connect_signal( "cellPressed(int,int)", "cellPressed(int,int)" );
+  QTableWidgetSlots_connect_signal("cellPressed(int,int)", "cellPressed(int,int)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTCELLCHANGED )
 {
-  QTableWidgetSlots_connect_signal( "currentCellChanged(int,int,int,int)", "currentCellChanged(int,int,int,int)" );
+  QTableWidgetSlots_connect_signal("currentCellChanged(int,int,int,int)", "currentCellChanged(int,int,int,int)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONCURRENTITEMCHANGED )
 {
-  QTableWidgetSlots_connect_signal( "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)", "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)" );
+  QTableWidgetSlots_connect_signal("currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)", "currentItemChanged(QTableWidgetItem*,QTableWidgetItem*)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMACTIVATED )
 {
-  QTableWidgetSlots_connect_signal( "itemActivated(QTableWidgetItem*)", "itemActivated(QTableWidgetItem*)" );
+  QTableWidgetSlots_connect_signal("itemActivated(QTableWidgetItem*)", "itemActivated(QTableWidgetItem*)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCHANGED )
 {
-  QTableWidgetSlots_connect_signal( "itemChanged(QTableWidgetItem*)", "itemChanged(QTableWidgetItem*)" );
+  QTableWidgetSlots_connect_signal("itemChanged(QTableWidgetItem*)", "itemChanged(QTableWidgetItem*)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMCLICKED )
 {
-  QTableWidgetSlots_connect_signal( "itemClicked(QTableWidgetItem*)", "itemClicked(QTableWidgetItem*)" );
+  QTableWidgetSlots_connect_signal("itemClicked(QTableWidgetItem*)", "itemClicked(QTableWidgetItem*)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMDOUBLECLICKED )
 {
-  QTableWidgetSlots_connect_signal( "itemDoubleClicked(QTableWidgetItem*)", "itemDoubleClicked(QTableWidgetItem*)" );
+  QTableWidgetSlots_connect_signal("itemDoubleClicked(QTableWidgetItem*)", "itemDoubleClicked(QTableWidgetItem*)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMENTERED )
 {
-  QTableWidgetSlots_connect_signal( "itemEntered(QTableWidgetItem*)", "itemEntered(QTableWidgetItem*)" );
+  QTableWidgetSlots_connect_signal("itemEntered(QTableWidgetItem*)", "itemEntered(QTableWidgetItem*)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMPRESSED )
 {
-  QTableWidgetSlots_connect_signal( "itemPressed(QTableWidgetItem*)", "itemPressed(QTableWidgetItem*)" );
+  QTableWidgetSlots_connect_signal("itemPressed(QTableWidgetItem*)", "itemPressed(QTableWidgetItem*)");
 }
 
 HB_FUNC_STATIC( QTABLEWIDGET_ONITEMSELECTIONCHANGED )
 {
-  QTableWidgetSlots_connect_signal( "itemSelectionChanged()", "itemSelectionChanged()" );
+  QTableWidgetSlots_connect_signal("itemSelectionChanged()", "itemSelectionChanged()");
 }
 
 #pragma ENDDUMP

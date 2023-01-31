@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
   if( ISBETWEEN(1, 2) && ISQPRINTER(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
   {
     QPageSetupDialog * obj = new QPageSetupDialog( PQPRINTER(1), OPQWIDGET( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
     {
 #endif
       QPrinter * ptr = obj->printer();
-      Qt4xHb::createReturnClass( ptr, "QPRINTER", false );
+      Qt4xHb::createReturnClass(ptr, "QPRINTER", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

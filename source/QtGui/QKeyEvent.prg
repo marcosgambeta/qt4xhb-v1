@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QKEYEVENT_NEW )
   if( ISBETWEEN(3, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ( HB_ISCHAR(4) || HB_ISNIL(4) ) && ( HB_ISLOG(5) || HB_ISNIL(5) ) && ( HB_ISNUM(6) || HB_ISNIL(6) ) )
   {
     QKeyEvent * obj = new QKeyEvent( ( QEvent::Type ) hb_parni(1), PINT(2), ( Qt::KeyboardModifiers ) hb_parni(3), OPQSTRING( 4, QString() ), OPBOOL( 5, false ), OPUSHORT( 6, 1 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QKEYEVENT_CREATEEXTENDEDKEYEVENT )
   {
 #endif
     QKeyEvent * ptr = QKeyEvent::createExtendedKeyEvent( ( QEvent::Type ) hb_parni(1), PINT(2), ( Qt::KeyboardModifiers ) hb_parni(3), PQUINT32(4), PQUINT32(5), PQUINT32(6), OPQSTRING( 7, QString() ), OPBOOL( 8, false ), OPUSHORT( 9, 1 ) );
-    Qt4xHb::createReturnClass( ptr, "QKEYEVENT" );
+    Qt4xHb::createReturnClass(ptr, "QKEYEVENT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

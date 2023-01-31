@@ -53,7 +53,7 @@ HB_FUNC_STATIC( QCDESTYLE_NEW )
   if( ISBETWEEN(0, 1) && ( HB_ISLOG(1) || HB_ISNIL(1) ) )
   {
     QCDEStyle * obj = new QCDEStyle( OPBOOL( 1, false ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QCDESTYLE_STANDARDPALETTE )
     {
 #endif
       QPalette * ptr = new QPalette( obj->standardPalette() );
-      Qt4xHb::createReturnClass( ptr, "QPALETTE", true );
+      Qt4xHb::createReturnClass(ptr, "QPALETTE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

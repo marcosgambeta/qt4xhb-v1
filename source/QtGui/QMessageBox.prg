@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_NEW )
     QMessageBox( QWidget * parent = 0 )
     */
     QMessageBox * obj = new QMessageBox( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(3, 6) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ( HB_ISNUM(4) || HB_ISNIL(4) ) && ( ISQWIDGET(5) || HB_ISNIL(5) ) && ( HB_ISNUM(6) || HB_ISNIL(6) ) )
   {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_NEW )
     QMessageBox( QMessageBox::Icon icon, const QString & title, const QString & text, QMessageBox::StandardButtons buttons = QMessageBox::NoButton, QWidget * parent = 0, Qt::WindowFlags f = Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint )
     */
     QMessageBox * obj = new QMessageBox( ( QMessageBox::Icon ) hb_parni(1), PQSTRING(2), PQSTRING(3), HB_ISNIL(4) ? ( QMessageBox::StandardButtons ) QMessageBox::NoButton : ( QMessageBox::StandardButtons ) hb_parni(4), OPQWIDGET( 5, 0 ), HB_ISNIL(6) ? ( Qt::WindowFlags ) Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint : ( Qt::WindowFlags ) hb_parni(6) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON )
     if( obj != NULL )
     {
       QPushButton * ptr = obj->addButton( PQSTRING(1), ( QMessageBox::ButtonRole ) hb_parni(2) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QPUSHBUTTON" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QPUSHBUTTON");
     }
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ADDBUTTON )
     if( obj != NULL )
     {
       QPushButton * ptr = obj->addButton( ( QMessageBox::StandardButton ) hb_parni(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QPUSHBUTTON" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QPUSHBUTTON");
     }
   }
   else
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTON )
     {
 #endif
       QAbstractButton * ptr = obj->button( ( QMessageBox::StandardButton ) hb_parni(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTBUTTON" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTBUTTON");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_BUTTONS )
     {
 #endif
       QList<QAbstractButton *> list = obj->buttons();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTBUTTON" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTBUTTON");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_CLICKEDBUTTON )
     {
 #endif
       QAbstractButton * ptr = obj->clickedButton();
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTBUTTON" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTBUTTON");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_DEFAULTBUTTON )
     {
 #endif
       QPushButton * ptr = obj->defaultButton();
-      Qt4xHb::createReturnQObjectClass( ptr, "QPUSHBUTTON" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QPUSHBUTTON");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ESCAPEBUTTON )
     {
 #endif
       QAbstractButton * ptr = obj->escapeButton();
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTBUTTON" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTBUTTON");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -408,7 +408,7 @@ HB_FUNC_STATIC( QMESSAGEBOX_ICONPIXMAP )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->iconPixmap() );
-      Qt4xHb::createReturnClass( ptr, "QPIXMAP", true );
+      Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1065,11 +1065,11 @@ HB_FUNC_STATIC( QMESSAGEBOX_WARNING )
 #endif
 }
 
-void QMessageBoxSlots_connect_signal( const QString & signal, const QString & slot );
+void QMessageBoxSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QMESSAGEBOX_ONBUTTONCLICKED )
 {
-  QMessageBoxSlots_connect_signal( "buttonClicked(QAbstractButton*)", "buttonClicked(QAbstractButton*)" );
+  QMessageBoxSlots_connect_signal("buttonClicked(QAbstractButton*)", "buttonClicked(QAbstractButton*)");
 }
 
 #pragma ENDDUMP

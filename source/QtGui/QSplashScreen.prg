@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_NEW )
     QSplashScreen( const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
     */
     QSplashScreen * obj = new QSplashScreen( HB_ISNIL(1) ? QPixmap() : *static_cast<QPixmap*>( Qt4xHb::itemGetPtr(1) ), HB_ISNIL(2) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(2) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 3) && ISQWIDGET(1) && ( ISQPIXMAP(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
   {
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_NEW )
     QSplashScreen( QWidget * parent, const QPixmap & pixmap = QPixmap(), Qt::WindowFlags f = 0 )
     */
     QSplashScreen * obj = new QSplashScreen( PQWIDGET(1), HB_ISNIL(2) ? QPixmap() : *static_cast<QPixmap*>( Qt4xHb::itemGetPtr(2) ), HB_ISNIL(3) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(3) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QSPLASHSCREEN_PIXMAP )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->pixmap() );
-      Qt4xHb::createReturnClass( ptr, "QPIXMAP", true );
+      Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -246,11 +246,11 @@ HB_FUNC_STATIC( QSPLASHSCREEN_SHOWMESSAGE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QSplashScreenSlots_connect_signal( const QString & signal, const QString & slot );
+void QSplashScreenSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSPLASHSCREEN_ONMESSAGECHANGED )
 {
-  QSplashScreenSlots_connect_signal( "messageChanged(QString)", "messageChanged(QString)" );
+  QSplashScreenSlots_connect_signal("messageChanged(QString)", "messageChanged(QString)");
 }
 
 #pragma ENDDUMP

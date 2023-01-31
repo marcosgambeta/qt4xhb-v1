@@ -12,7 +12,7 @@
 
 #include "QStackedWidgetSlots.h"
 
-QStackedWidgetSlots::QStackedWidgetSlots( QObject * parent ) : QObject( parent )
+QStackedWidgetSlots::QStackedWidgetSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QStackedWidgetSlots::~QStackedWidgetSlots()
 
 void QStackedWidgetSlots::currentChanged( int index )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentChanged(int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "currentChanged(int)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSTACKEDWIDGET" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSTACKEDWIDGET");
     PHB_ITEM pIndex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, pSender, pIndex );
@@ -40,13 +40,13 @@ void QStackedWidgetSlots::currentChanged( int index )
 
 void QStackedWidgetSlots::widgetRemoved( int index )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "widgetRemoved(int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "widgetRemoved(int)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSTACKEDWIDGET" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSTACKEDWIDGET");
     PHB_ITEM pIndex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, pSender, pIndex );
@@ -62,19 +62,19 @@ void QStackedWidgetSlots_connect_signal( const QString & signal, const QString &
 
   if( obj != NULL )
   {
-    QStackedWidgetSlots * s = QCoreApplication::instance()->findChild<QStackedWidgetSlots *>();
+    QStackedWidgetSlots * s = QCoreApplication::instance()->findChild<QStackedWidgetSlots*>();
 
     if( s == NULL )
     {
       s = new QStackedWidgetSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

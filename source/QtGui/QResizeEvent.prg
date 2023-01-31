@@ -49,7 +49,7 @@ HB_FUNC_STATIC( QRESIZEEVENT_NEW )
   if( ISNUMPAR(2) && ISQSIZE(1) && ISQSIZE(2) )
   {
     QResizeEvent * obj = new QResizeEvent( *PQSIZE(1), *PQSIZE(2) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QRESIZEEVENT_SIZE )
     {
 #endif
       const QSize * ptr = &obj->size();
-      Qt4xHb::createReturnClass( ptr, "QSIZE", false );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QRESIZEEVENT_OLDSIZE )
     {
 #endif
       const QSize * ptr = &obj->oldSize();
-      Qt4xHb::createReturnClass( ptr, "QSIZE", false );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

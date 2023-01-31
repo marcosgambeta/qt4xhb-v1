@@ -47,7 +47,7 @@ HB_FUNC_STATIC( QDATEEDIT_NEW )
     QDateEdit( QWidget * parent = 0 )
     */
     QDateEdit * obj = new QDateEdit( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && ISQDATE(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
   {
@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QDATEEDIT_NEW )
     QDateEdit( const QDate & date, QWidget * parent = 0 )
     */
     QDateEdit * obj = new QDateEdit( *PQDATE(1), OPQWIDGET( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {

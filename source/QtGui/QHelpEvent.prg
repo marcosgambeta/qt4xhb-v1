@@ -53,7 +53,7 @@ HB_FUNC_STATIC( QHELPEVENT_NEW )
   if( ISNUMPAR(3) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) )
   {
     QHelpEvent * obj = new QHelpEvent( ( QEvent::Type ) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QHELPEVENT_GLOBALPOS )
     {
 #endif
       const QPoint * ptr = &obj->globalPos();
-      Qt4xHb::createReturnClass( ptr, "QPOINT", false );
+      Qt4xHb::createReturnClass(ptr, "QPOINT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QHELPEVENT_POS )
     {
 #endif
       const QPoint * ptr = &obj->pos();
-      Qt4xHb::createReturnClass( ptr, "QPOINT", false );
+      Qt4xHb::createReturnClass(ptr, "QPOINT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

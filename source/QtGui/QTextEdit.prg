@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QTEXTEDIT_NEW )
     QTextEdit( QWidget * parent = 0 )
     */
     QTextEdit * obj = new QTextEdit( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
   {
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QTEXTEDIT_NEW )
     QTextEdit( const QString & text, QWidget * parent = 0 )
     */
     QTextEdit * obj = new QTextEdit( PQSTRING(1), OPQWIDGET( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -311,7 +311,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU )
     if( obj != NULL )
     {
       QMenu * ptr = obj->createStandardContextMenu();
-      Qt4xHb::createReturnQObjectClass( ptr, "QMENU" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QMENU");
     }
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU )
     if( obj != NULL )
     {
       QMenu * ptr = obj->createStandardContextMenu( *PQPOINT(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QMENU" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QMENU");
     }
   }
   else
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURRENTCHARFORMAT )
     {
 #endif
       QTextCharFormat * ptr = new QTextCharFormat( obj->currentCharFormat() );
-      Qt4xHb::createReturnClass( ptr, "QTEXTCHARFORMAT", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURRENTFONT )
     {
 #endif
       QFont * ptr = new QFont( obj->currentFont() );
-      Qt4xHb::createReturnClass( ptr, "QFONT", true );
+      Qt4xHb::createReturnClass(ptr, "QFONT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -397,7 +397,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORFORPOSITION )
     {
 #endif
       QTextCursor * ptr = new QTextCursor( obj->cursorForPosition( *PQPOINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QTEXTCURSOR", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORRECT )
     if( obj != NULL )
     {
       QRect * ptr = new QRect( obj->cursorRect( *PQTEXTCURSOR(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
   else if( ISNUMPAR(0) )
@@ -433,7 +433,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORRECT )
     if( obj != NULL )
     {
       QRect * ptr = new QRect( obj->cursorRect() );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
   else
@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QTEXTEDIT_DOCUMENT )
     {
 #endif
       QTextDocument * ptr = obj->document();
-      Qt4xHb::createReturnQObjectClass( ptr, "QTEXTDOCUMENT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -795,7 +795,7 @@ HB_FUNC_STATIC( QTEXTEDIT_LOADRESOURCE )
     {
 #endif
       QVariant * ptr = new QVariant( obj->loadResource( PINT(1), *PQURL(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1386,7 +1386,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TEXTBACKGROUNDCOLOR )
     {
 #endif
       QColor * ptr = new QColor( obj->textBackgroundColor() );
-      Qt4xHb::createReturnClass( ptr, "QCOLOR", true );
+      Qt4xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1411,7 +1411,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TEXTCOLOR )
     {
 #endif
       QColor * ptr = new QColor( obj->textColor() );
-      Qt4xHb::createReturnClass( ptr, "QCOLOR", true );
+      Qt4xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1436,7 +1436,7 @@ HB_FUNC_STATIC( QTEXTEDIT_TEXTCURSOR )
     {
 #endif
       QTextCursor * ptr = new QTextCursor( obj->textCursor() );
-      Qt4xHb::createReturnClass( ptr, "QTEXTCURSOR", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2193,41 +2193,41 @@ HB_FUNC_STATIC( QTEXTEDIT_ZOOMOUT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QTextEditSlots_connect_signal( const QString & signal, const QString & slot );
+void QTextEditSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QTEXTEDIT_ONCOPYAVAILABLE )
 {
-  QTextEditSlots_connect_signal( "copyAvailable(bool)", "copyAvailable(bool)" );
+  QTextEditSlots_connect_signal("copyAvailable(bool)", "copyAvailable(bool)");
 }
 
 HB_FUNC_STATIC( QTEXTEDIT_ONCURRENTCHARFORMATCHANGED )
 {
-  QTextEditSlots_connect_signal( "currentCharFormatChanged(QTextCharFormat)", "currentCharFormatChanged(QTextCharFormat)" );
+  QTextEditSlots_connect_signal("currentCharFormatChanged(QTextCharFormat)", "currentCharFormatChanged(QTextCharFormat)");
 }
 
 HB_FUNC_STATIC( QTEXTEDIT_ONCURSORPOSITIONCHANGED )
 {
-  QTextEditSlots_connect_signal( "cursorPositionChanged()", "cursorPositionChanged()" );
+  QTextEditSlots_connect_signal("cursorPositionChanged()", "cursorPositionChanged()");
 }
 
 HB_FUNC_STATIC( QTEXTEDIT_ONREDOAVAILABLE )
 {
-  QTextEditSlots_connect_signal( "redoAvailable(bool)", "redoAvailable(bool)" );
+  QTextEditSlots_connect_signal("redoAvailable(bool)", "redoAvailable(bool)");
 }
 
 HB_FUNC_STATIC( QTEXTEDIT_ONSELECTIONCHANGED )
 {
-  QTextEditSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
+  QTextEditSlots_connect_signal("selectionChanged()", "selectionChanged()");
 }
 
 HB_FUNC_STATIC( QTEXTEDIT_ONTEXTCHANGED )
 {
-  QTextEditSlots_connect_signal( "textChanged()", "textChanged()" );
+  QTextEditSlots_connect_signal("textChanged()", "textChanged()");
 }
 
 HB_FUNC_STATIC( QTEXTEDIT_ONUNDOAVAILABLE )
 {
-  QTextEditSlots_connect_signal( "undoAvailable(bool)", "undoAvailable(bool)" );
+  QTextEditSlots_connect_signal("undoAvailable(bool)", "undoAvailable(bool)");
 }
 
 #pragma ENDDUMP

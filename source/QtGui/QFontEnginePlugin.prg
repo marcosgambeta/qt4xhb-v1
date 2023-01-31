@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QFONTENGINEPLUGIN_AVAILABLEFONTENGINES )
     {
 #endif
       QList<QFontEngineInfo> list = obj->availableFontEngines();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QFONTENGINEINFO" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QFONTENGINEINFO");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QFONTENGINEPLUGIN_CREATE )
     {
 #endif
       QAbstractFontEngine * ptr = obj->create( *PQFONTENGINEINFO(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTFONTENGINE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTFONTENGINE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

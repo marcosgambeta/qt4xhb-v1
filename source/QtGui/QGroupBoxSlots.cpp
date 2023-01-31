@@ -12,7 +12,7 @@
 
 #include "QGroupBoxSlots.h"
 
-QGroupBoxSlots::QGroupBoxSlots( QObject * parent ) : QObject( parent )
+QGroupBoxSlots::QGroupBoxSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QGroupBoxSlots::~QGroupBoxSlots()
 
 void QGroupBoxSlots::clicked( bool checked )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "clicked(bool)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "clicked(bool)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QGROUPBOX" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QGROUPBOX");
     PHB_ITEM pChecked = hb_itemPutL( NULL, checked );
 
     hb_vmEvalBlockV( cb, 2, pSender, pChecked );
@@ -40,13 +40,13 @@ void QGroupBoxSlots::clicked( bool checked )
 
 void QGroupBoxSlots::toggled( bool on )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "toggled(bool)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "toggled(bool)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QGROUPBOX" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QGROUPBOX");
     PHB_ITEM pOn = hb_itemPutL( NULL, on );
 
     hb_vmEvalBlockV( cb, 2, pSender, pOn );
@@ -62,19 +62,19 @@ void QGroupBoxSlots_connect_signal( const QString & signal, const QString & slot
 
   if( obj != NULL )
   {
-    QGroupBoxSlots * s = QCoreApplication::instance()->findChild<QGroupBoxSlots *>();
+    QGroupBoxSlots * s = QCoreApplication::instance()->findChild<QGroupBoxSlots*>();
 
     if( s == NULL )
     {
       s = new QGroupBoxSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

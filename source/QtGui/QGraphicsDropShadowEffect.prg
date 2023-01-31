@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QGraphicsDropShadowEffect * obj = new QGraphicsDropShadowEffect( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_COLOR )
     {
 #endif
       QColor * ptr = new QColor( obj->color() );
-      Qt4xHb::createReturnClass( ptr, "QCOLOR", true );
+      Qt4xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_OFFSET )
     {
 #endif
       QPointF * ptr = new QPointF( obj->offset() );
-      Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,7 +228,7 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_BOUNDINGRECTFOR )
     {
 #endif
       QRectF * ptr = new QRectF( obj->boundingRectFor( *PQRECTF(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
+      Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -393,21 +393,21 @@ HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_SETYOFFSET )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QGraphicsDropShadowEffectSlots_connect_signal( const QString & signal, const QString & slot );
+void QGraphicsDropShadowEffectSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONBLURRADIUSCHANGED )
 {
-  QGraphicsDropShadowEffectSlots_connect_signal( "blurRadiusChanged(qreal)", "blurRadiusChanged(qreal)" );
+  QGraphicsDropShadowEffectSlots_connect_signal("blurRadiusChanged(qreal)", "blurRadiusChanged(qreal)");
 }
 
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONCOLORCHANGED )
 {
-  QGraphicsDropShadowEffectSlots_connect_signal( "colorChanged(QColor)", "colorChanged(QColor)" );
+  QGraphicsDropShadowEffectSlots_connect_signal("colorChanged(QColor)", "colorChanged(QColor)");
 }
 
 HB_FUNC_STATIC( QGRAPHICSDROPSHADOWEFFECT_ONOFFSETCHANGED )
 {
-  QGraphicsDropShadowEffectSlots_connect_signal( "offsetChanged(QPointF)", "offsetChanged(QPointF)" );
+  QGraphicsDropShadowEffectSlots_connect_signal("offsetChanged(QPointF)", "offsetChanged(QPointF)");
 }
 
 #pragma ENDDUMP

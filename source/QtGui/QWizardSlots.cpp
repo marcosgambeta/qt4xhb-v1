@@ -12,7 +12,7 @@
 
 #include "QWizardSlots.h"
 
-QWizardSlots::QWizardSlots( QObject * parent ) : QObject( parent )
+QWizardSlots::QWizardSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QWizardSlots::~QWizardSlots()
 
 void QWizardSlots::currentIdChanged( int id )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentIdChanged(int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "currentIdChanged(int)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QWIZARD" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWIZARD");
     PHB_ITEM pId = hb_itemPutNI( NULL, id );
 
     hb_vmEvalBlockV( cb, 2, pSender, pId );
@@ -40,13 +40,13 @@ void QWizardSlots::currentIdChanged( int id )
 
 void QWizardSlots::customButtonClicked( int which )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "customButtonClicked(int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "customButtonClicked(int)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QWIZARD" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWIZARD");
     PHB_ITEM pWhich = hb_itemPutNI( NULL, which );
 
     hb_vmEvalBlockV( cb, 2, pSender, pWhich );
@@ -58,13 +58,13 @@ void QWizardSlots::customButtonClicked( int which )
 
 void QWizardSlots::helpRequested()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "helpRequested()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "helpRequested()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QWIZARD" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWIZARD");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -74,13 +74,13 @@ void QWizardSlots::helpRequested()
 
 void QWizardSlots::pageAdded( int id )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "pageAdded(int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "pageAdded(int)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QWIZARD" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWIZARD");
     PHB_ITEM pId = hb_itemPutNI( NULL, id );
 
     hb_vmEvalBlockV( cb, 2, pSender, pId );
@@ -92,13 +92,13 @@ void QWizardSlots::pageAdded( int id )
 
 void QWizardSlots::pageRemoved( int id )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "pageRemoved(int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "pageRemoved(int)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QWIZARD" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWIZARD");
     PHB_ITEM pId = hb_itemPutNI( NULL, id );
 
     hb_vmEvalBlockV( cb, 2, pSender, pId );
@@ -114,19 +114,19 @@ void QWizardSlots_connect_signal( const QString & signal, const QString & slot )
 
   if( obj != NULL )
   {
-    QWizardSlots * s = QCoreApplication::instance()->findChild<QWizardSlots *>();
+    QWizardSlots * s = QCoreApplication::instance()->findChild<QWizardSlots*>();
 
     if( s == NULL )
     {
       s = new QWizardSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

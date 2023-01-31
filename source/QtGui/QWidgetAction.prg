@@ -53,7 +53,7 @@ HB_FUNC_STATIC( QWIDGETACTION_NEW )
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
     QWidgetAction * obj = new QWidgetAction( PQOBJECT(1) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QWIDGETACTION_DEFAULTWIDGET )
     {
 #endif
       QWidget * ptr = obj->defaultWidget();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QWIDGETACTION_REQUESTWIDGET )
     {
 #endif
       QWidget * ptr = obj->requestWidget( PQWIDGET(1) );
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

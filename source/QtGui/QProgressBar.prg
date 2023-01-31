@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_NEW )
   if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QProgressBar * obj = new QProgressBar( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_MINIMUMSIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -509,7 +509,7 @@ HB_FUNC_STATIC( QPROGRESSBAR_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -676,11 +676,11 @@ HB_FUNC_STATIC( QPROGRESSBAR_SETVALUE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QProgressBarSlots_connect_signal( const QString & signal, const QString & slot );
+void QProgressBarSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QPROGRESSBAR_ONVALUECHANGED )
 {
-  QProgressBarSlots_connect_signal( "valueChanged(int)", "valueChanged(int)" );
+  QProgressBarSlots_connect_signal("valueChanged(int)", "valueChanged(int)");
 }
 
 #pragma ENDDUMP

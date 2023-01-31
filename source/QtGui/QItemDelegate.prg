@@ -53,7 +53,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QItemDelegate * obj = new QItemDelegate( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QITEMDELEGATE_ITEMEDITORFACTORY )
     {
 #endif
       QItemEditorFactory * ptr = obj->itemEditorFactory();
-      Qt4xHb::createReturnClass( ptr, "QITEMEDITORFACTORY", false );
+      Qt4xHb::createReturnClass(ptr, "QITEMEDITORFACTORY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

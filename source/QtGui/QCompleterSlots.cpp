@@ -12,7 +12,7 @@
 
 #include "QCompleterSlots.h"
 
-QCompleterSlots::QCompleterSlots( QObject * parent ) : QObject( parent )
+QCompleterSlots::QCompleterSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QCompleterSlots::~QCompleterSlots()
 
 void QCompleterSlots::activated( const QString & text )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activated(QString)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "activated(QString)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QCOMPLETER" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QCOMPLETER");
     PHB_ITEM pText = hb_itemPutC( NULL, QSTRINGTOSTRING( text ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pText );
@@ -40,14 +40,14 @@ void QCompleterSlots::activated( const QString & text )
 
 void QCompleterSlots::activated( const QModelIndex & index )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activated(QModelIndex)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "activated(QModelIndex)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QCOMPLETER" );
-    PHB_ITEM pIndex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QCOMPLETER");
+    PHB_ITEM pIndex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX");
 
     hb_vmEvalBlockV( cb, 2, pSender, pIndex );
 
@@ -58,13 +58,13 @@ void QCompleterSlots::activated( const QModelIndex & index )
 
 void QCompleterSlots::highlighted( const QString & text )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "highlighted(QString)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "highlighted(QString)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QCOMPLETER" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QCOMPLETER");
     PHB_ITEM pText = hb_itemPutC( NULL, QSTRINGTOSTRING( text ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pText );
@@ -76,14 +76,14 @@ void QCompleterSlots::highlighted( const QString & text )
 
 void QCompleterSlots::highlighted( const QModelIndex & index )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "highlighted(QModelIndex)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "highlighted(QModelIndex)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QCOMPLETER" );
-    PHB_ITEM pIndex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QCOMPLETER");
+    PHB_ITEM pIndex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX");
 
     hb_vmEvalBlockV( cb, 2, pSender, pIndex );
 
@@ -98,19 +98,19 @@ void QCompleterSlots_connect_signal( const QString & signal, const QString & slo
 
   if( obj != NULL )
   {
-    QCompleterSlots * s = QCoreApplication::instance()->findChild<QCompleterSlots *>();
+    QCompleterSlots * s = QCoreApplication::instance()->findChild<QCompleterSlots*>();
 
     if( s == NULL )
     {
       s = new QCompleterSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

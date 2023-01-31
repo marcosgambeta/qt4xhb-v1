@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QSTATUSBAR_NEW )
   if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QStatusBar * obj = new QStatusBar( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -338,11 +338,11 @@ HB_FUNC_STATIC( QSTATUSBAR_SHOWMESSAGE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QStatusBarSlots_connect_signal( const QString & signal, const QString & slot );
+void QStatusBarSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSTATUSBAR_ONMESSAGECHANGED )
 {
-  QStatusBarSlots_connect_signal( "messageChanged(QString)", "messageChanged(QString)" );
+  QStatusBarSlots_connect_signal("messageChanged(QString)", "messageChanged(QString)");
 }
 
 #pragma ENDDUMP

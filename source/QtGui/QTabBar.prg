@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QTABBAR_NEW )
   if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QTabBar * obj = new QTabBar( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QTABBAR_ICONSIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->iconSize() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1022,7 +1022,7 @@ HB_FUNC_STATIC( QTABBAR_TABBUTTON )
     {
 #endif
       QWidget * ptr = obj->tabButton( PINT(1), ( QTabBar::ButtonPosition ) hb_parni(2) );
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1047,7 +1047,7 @@ HB_FUNC_STATIC( QTABBAR_TABDATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->tabData( PINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1072,7 +1072,7 @@ HB_FUNC_STATIC( QTABBAR_TABICON )
     {
 #endif
       QIcon * ptr = new QIcon( obj->tabIcon( PINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QICON", true );
+      Qt4xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1097,7 +1097,7 @@ HB_FUNC_STATIC( QTABBAR_TABRECT )
     {
 #endif
       QRect * ptr = new QRect( obj->tabRect( PINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1146,7 +1146,7 @@ HB_FUNC_STATIC( QTABBAR_TABTEXTCOLOR )
     {
 #endif
       QColor * ptr = new QColor( obj->tabTextColor( PINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QCOLOR", true );
+      Qt4xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1267,7 +1267,7 @@ HB_FUNC_STATIC( QTABBAR_MINIMUMSIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1292,7 +1292,7 @@ HB_FUNC_STATIC( QTABBAR_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1329,21 +1329,21 @@ HB_FUNC_STATIC( QTABBAR_SETCURRENTINDEX )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QTabBarSlots_connect_signal( const QString & signal, const QString & slot );
+void QTabBarSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QTABBAR_ONCURRENTCHANGED )
 {
-  QTabBarSlots_connect_signal( "currentChanged(int)", "currentChanged(int)" );
+  QTabBarSlots_connect_signal("currentChanged(int)", "currentChanged(int)");
 }
 
 HB_FUNC_STATIC( QTABBAR_ONTABCLOSEREQUESTED )
 {
-  QTabBarSlots_connect_signal( "tabCloseRequested(int)", "tabCloseRequested(int)" );
+  QTabBarSlots_connect_signal("tabCloseRequested(int)", "tabCloseRequested(int)");
 }
 
 HB_FUNC_STATIC( QTABBAR_ONTABMOVED )
 {
-  QTabBarSlots_connect_signal( "tabMoved(int,int)", "tabMoved(int,int)" );
+  QTabBarSlots_connect_signal("tabMoved(int,int)", "tabMoved(int,int)");
 }
 
 #pragma ENDDUMP

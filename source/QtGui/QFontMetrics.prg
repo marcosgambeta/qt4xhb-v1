@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QFONTMETRICS_NEW )
     QFontMetrics( const QFont & font )
     */
     QFontMetrics * obj = new QFontMetrics( *PQFONT(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && ISQFONT(1) && HB_ISOBJECT(2) )
   {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QFONTMETRICS_NEW )
     QFontMetrics( const QFont & font, QPaintDevice * paintdevice )
     */
     QFontMetrics * obj = new QFontMetrics( *PQFONT(1), PQPAINTDEVICE(2) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQFONTMETRICS(1) )
   {
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QFONTMETRICS_NEW )
     QFontMetrics( const QFontMetrics & fm )
     */
     QFontMetrics * obj = new QFontMetrics( *PQFONTMETRICS(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QFONTMETRICS_BOUNDINGRECT )
     if( obj != NULL )
     {
       QRect * ptr = new QRect( obj->boundingRect( *PQCHAR(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QFONTMETRICS_BOUNDINGRECT )
     if( obj != NULL )
     {
       QRect * ptr = new QRect( obj->boundingRect( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
   else if( ISBETWEEN(6, 8) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISCHAR(6) && ( HB_ISNUM(7) || HB_ISNIL(7) ) && ( HB_ISARRAY(8) || HB_ISNIL(8) ) )
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QFONTMETRICS_BOUNDINGRECT )
     {
       int par8;
       QRect * ptr = new QRect( obj->boundingRect( PINT(1), PINT(2), PINT(3), PINT(4), PINT(5), PQSTRING(6), OPINT( 7, 0 ), &par8 ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
       hb_storni( par8, 8 );
     }
   }
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QFONTMETRICS_BOUNDINGRECT )
     {
       int par5;
       QRect * ptr = new QRect( obj->boundingRect( *PQRECT(1), PINT(2), PQSTRING(3), OPINT( 4, 0 ), &par5 ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
       hb_storni( par5, 5 );
     }
   }
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QFONTMETRICS_SIZE )
 #endif
       int par4;
       QSize * ptr = new QSize( obj->size( PINT(1), PQSTRING(2), OPINT( 3, 0 ), &par4 ) );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
       hb_storni( par4, 4 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -633,7 +633,7 @@ HB_FUNC_STATIC( QFONTMETRICS_TIGHTBOUNDINGRECT )
     {
 #endif
       QRect * ptr = new QRect( obj->tightBoundingRect( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -730,28 +730,28 @@ HB_FUNC_STATIC( QFONTMETRICS_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QFONTMETRICS_NEWFROMOBJECT )
@@ -766,7 +766,7 @@ HB_FUNC_STATIC( QFONTMETRICS_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QFONTMETRICS_SELFDESTRUCTION )
 {
-  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QFONTMETRICS_SETSELFDESTRUCTION )
@@ -775,16 +775,16 @@ HB_FUNC_STATIC( QFONTMETRICS_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

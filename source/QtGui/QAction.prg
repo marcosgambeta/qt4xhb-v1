@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QACTION_NEW )
     QAction( QObject * parent )
     */
     QAction * obj = new QAction( PQOBJECT(1) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2) )
   {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QACTION_NEW )
     QAction( const QString & text, QObject * parent )
     */
     QAction * obj = new QAction( PQSTRING(1), PQOBJECT(2) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISNUMPAR(3) && ( ISQICON(1) || HB_ISCHAR(1) ) && HB_ISCHAR(2) && ISQOBJECT(3) )
   {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QACTION_NEW )
     QAction( const QIcon & icon, const QString & text, QObject * parent )
     */
     QAction * obj = new QAction( HB_ISOBJECT(1) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(1) ) : QIcon( hb_parc(1) ), PQSTRING(2), PQOBJECT(3) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QACTION_ACTIONGROUP )
     {
 #endif
       QActionGroup * ptr = obj->actionGroup();
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTIONGROUP" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTIONGROUP");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDGRAPHICSWIDGETS )
     {
 #endif
       QList<QGraphicsWidget *> list = obj->associatedGraphicsWidgets();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSWIDGET" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSWIDGET");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -273,7 +273,7 @@ HB_FUNC_STATIC( QACTION_ASSOCIATEDWIDGETS )
     {
 #endif
       QList<QWidget *> list = obj->associatedWidgets();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QACTION_DATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->data() );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QACTION_FONT )
     {
 #endif
       QFont * ptr = new QFont( obj->font() );
-      Qt4xHb::createReturnClass( ptr, "QFONT", true );
+      Qt4xHb::createReturnClass(ptr, "QFONT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QACTION_ICON )
     {
 #endif
       QIcon * ptr = new QIcon( obj->icon() );
-      Qt4xHb::createReturnClass( ptr, "QICON", true );
+      Qt4xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -588,7 +588,7 @@ HB_FUNC_STATIC( QACTION_MENU )
     {
 #endif
       QMenu * ptr = obj->menu();
-      Qt4xHb::createReturnQObjectClass( ptr, "QMENU" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QMENU");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -637,7 +637,7 @@ HB_FUNC_STATIC( QACTION_PARENTWIDGET )
     {
 #endif
       QWidget * ptr = obj->parentWidget();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1223,7 +1223,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUT )
     {
 #endif
       QKeySequence * ptr = new QKeySequence( obj->shortcut() );
-      Qt4xHb::createReturnClass( ptr, "QKEYSEQUENCE", true );
+      Qt4xHb::createReturnClass(ptr, "QKEYSEQUENCE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1272,7 +1272,7 @@ HB_FUNC_STATIC( QACTION_SHORTCUTS )
     {
 #endif
       QList<QKeySequence> list = obj->shortcuts();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QKEYSEQUENCE" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QKEYSEQUENCE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -1636,26 +1636,26 @@ HB_FUNC_STATIC( QACTION_TRIGGER )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QActionSlots_connect_signal( const QString & signal, const QString & slot );
+void QActionSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QACTION_ONCHANGED )
 {
-  QActionSlots_connect_signal( "changed()", "changed()" );
+  QActionSlots_connect_signal("changed()", "changed()");
 }
 
 HB_FUNC_STATIC( QACTION_ONHOVERED )
 {
-  QActionSlots_connect_signal( "hovered()", "hovered()" );
+  QActionSlots_connect_signal("hovered()", "hovered()");
 }
 
 HB_FUNC_STATIC( QACTION_ONTOGGLED )
 {
-  QActionSlots_connect_signal( "toggled(bool)", "toggled(bool)" );
+  QActionSlots_connect_signal("toggled(bool)", "toggled(bool)");
 }
 
 HB_FUNC_STATIC( QACTION_ONTRIGGERED )
 {
-  QActionSlots_connect_signal( "triggered(bool)", "triggered(bool)" );
+  QActionSlots_connect_signal("triggered(bool)", "triggered(bool)");
 }
 
 #pragma ENDDUMP

@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_DOCUMENT )
     {
 #endif
       QTextDocument * ptr = obj->document();
-      Qt4xHb::createReturnQObjectClass( ptr, "QTEXTDOCUMENT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QTEXTOBJECT_FORMAT )
     {
 #endif
       QTextFormat * ptr = new QTextFormat( obj->format() );
-      Qt4xHb::createReturnClass( ptr, "QTEXTFORMAT", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

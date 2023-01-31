@@ -50,7 +50,7 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_NEW )
   if( ISBETWEEN(2, 3) && ISQKEYSEQUENCE(1) && HB_ISNUM(2) && ( HB_ISLOG(3) || HB_ISNIL(3) ) )
   {
     QShortcutEvent * obj = new QShortcutEvent( *PQKEYSEQUENCE(1), PINT(2), OPBOOL( 3, false ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_KEY )
     {
 #endif
       const QKeySequence * ptr = &obj->key();
-      Qt4xHb::createReturnClass( ptr, "QKEYSEQUENCE", false );
+      Qt4xHb::createReturnClass(ptr, "QKEYSEQUENCE", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

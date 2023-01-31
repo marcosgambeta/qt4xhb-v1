@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_NEW )
     QStyleOptionTitleBar()
     */
     QStyleOptionTitleBar * obj = new QStyleOptionTitleBar();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONTITLEBAR(1) )
   {
@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_NEW )
     QStyleOptionTitleBar( const QStyleOptionTitleBar & other )
     */
     QStyleOptionTitleBar * obj = new QStyleOptionTitleBar( *PQSTYLEOPTIONTITLEBAR(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTITLEBAR_ICON )
     if( ISNUMPAR(0) )
     {
       QIcon * ptr = new QIcon( obj->icon );
-      Qt4xHb::createReturnClass( ptr, "QICON", true );
+      Qt4xHb::createReturnClass(ptr, "QICON", true);
     }
     else
     {

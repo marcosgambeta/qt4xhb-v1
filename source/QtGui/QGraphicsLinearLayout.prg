@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_NEW )
     QGraphicsLinearLayout( QGraphicsLayoutItem * parent = 0 )
     */
     QGraphicsLinearLayout * obj = new QGraphicsLinearLayout( HB_ISNIL(1) ? 0 : static_cast<QGraphicsLayoutItem*>( Qt4xHb::itemGetPtr(1) ) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQGRAPHICSLAYOUTITEM(2) || HB_ISNIL(2) ) )
   {
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_NEW )
     QGraphicsLinearLayout( Qt::Orientation orientation, QGraphicsLayoutItem * parent = 0 )
     */
     QGraphicsLinearLayout * obj = new QGraphicsLinearLayout( ( Qt::Orientation ) hb_parni(1), HB_ISNIL(2) ? 0 : static_cast<QGraphicsLayoutItem*>( Qt4xHb::itemGetPtr(2) ) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -545,7 +545,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ITEMAT )
     {
 #endif
       QGraphicsLayoutItem * ptr = obj->itemAt( PINT(1) );
-      Qt4xHb::createReturnClass( ptr, "QGRAPHICSLAYOUTITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QGRAPHICSLAYOUTITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -622,7 +622,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SIZEHINT )
     {
 #endif
       QSizeF * ptr = new QSizeF( obj->sizeHint( ( Qt::SizeHint ) hb_parni(1), HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF*>( Qt4xHb::itemGetPtr(2) ) ) );
-      Qt4xHb::createReturnClass( ptr, "QSIZEF", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

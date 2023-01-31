@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_NEW )
     QProgressDialog( QWidget * parent = 0, Qt::WindowFlags f = 0 )
     */
     QProgressDialog * obj = new QProgressDialog( OPQWIDGET( 1, 0 ), HB_ISNIL(2) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(2) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(4, 6) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) && HB_ISNUM(4) && ( ISQWIDGET(5) || HB_ISNIL(5) ) && ( HB_ISNUM(6) || HB_ISNIL(6) ) )
   {
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_NEW )
     QProgressDialog( const QString & labelText, const QString & cancelButtonText, int minimum, int maximum, QWidget * parent = 0, Qt::WindowFlags f = 0 )
     */
     QProgressDialog * obj = new QProgressDialog( PQSTRING(1), PQSTRING(2), PINT(3), PINT(4), OPQWIDGET( 5, 0 ), HB_ISNIL(6) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(6) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -716,11 +716,11 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETVALUE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QProgressDialogSlots_connect_signal( const QString & signal, const QString & slot );
+void QProgressDialogSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QPROGRESSDIALOG_ONCANCELED )
 {
-  QProgressDialogSlots_connect_signal( "canceled()", "canceled()" );
+  QProgressDialogSlots_connect_signal("canceled()", "canceled()");
 }
 
 #pragma ENDDUMP

@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_NEW )
     QPrintPreviewWidget( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
     */
     QPrintPreviewWidget * obj = new QPrintPreviewWidget( PQPRINTER(1), OPQWIDGET( 2, 0 ), HB_ISNIL(3) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(3) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(0, 2) && ( ISQWIDGET(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
   {
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_NEW )
     QPrintPreviewWidget( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
     */
     QPrintPreviewWidget * obj = new QPrintPreviewWidget( OPQWIDGET( 1, 0 ), HB_ISNIL(2) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(2) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -694,16 +694,16 @@ HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ZOOMOUT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QPrintPreviewWidgetSlots_connect_signal( const QString & signal, const QString & slot );
+void QPrintPreviewWidgetSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ONPAINTREQUESTED )
 {
-  QPrintPreviewWidgetSlots_connect_signal( "paintRequested(QPrinter*)", "paintRequested(QPrinter*)" );
+  QPrintPreviewWidgetSlots_connect_signal("paintRequested(QPrinter*)", "paintRequested(QPrinter*)");
 }
 
 HB_FUNC_STATIC( QPRINTPREVIEWWIDGET_ONPREVIEWCHANGED )
 {
-  QPrintPreviewWidgetSlots_connect_signal( "previewChanged()", "previewChanged()" );
+  QPrintPreviewWidgetSlots_connect_signal("previewChanged()", "previewChanged()");
 }
 
 #pragma ENDDUMP

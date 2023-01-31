@@ -12,7 +12,7 @@
 
 #include "QColumnViewSlots.h"
 
-QColumnViewSlots::QColumnViewSlots( QObject * parent ) : QObject( parent )
+QColumnViewSlots::QColumnViewSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,14 +22,14 @@ QColumnViewSlots::~QColumnViewSlots()
 
 void QColumnViewSlots::updatePreviewWidget( const QModelIndex & index )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "updatePreviewWidget(QModelIndex)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "updatePreviewWidget(QModelIndex)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QCOLUMNVIEW" );
-    PHB_ITEM pIndex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QCOLUMNVIEW");
+    PHB_ITEM pIndex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX");
 
     hb_vmEvalBlockV( cb, 2, pSender, pIndex );
 
@@ -44,19 +44,19 @@ void QColumnViewSlots_connect_signal( const QString & signal, const QString & sl
 
   if( obj != NULL )
   {
-    QColumnViewSlots * s = QCoreApplication::instance()->findChild<QColumnViewSlots *>();
+    QColumnViewSlots * s = QCoreApplication::instance()->findChild<QColumnViewSlots*>();
 
     if( s == NULL )
     {
       s = new QColumnViewSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

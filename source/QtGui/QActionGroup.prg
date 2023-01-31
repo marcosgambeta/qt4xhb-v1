@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QACTIONGROUP_NEW )
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
     QActionGroup * obj = new QActionGroup( PQOBJECT(1) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ACTIONS )
     {
 #endif
       QList<QAction *> list = obj->actions();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QACTION" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QACTION");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
     if( obj != NULL )
     {
       QAction * ptr = obj->addAction( PQACTION(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
     }
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
     if( obj != NULL )
     {
       QAction * ptr = obj->addAction( PQSTRING(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
     }
   }
   else if( ISNUMPAR(2) && ( ISQICON(1) || HB_ISCHAR(1) ) && HB_ISCHAR(2) )
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QACTIONGROUP_ADDACTION )
     if( obj != NULL )
     {
       QAction * ptr = obj->addAction( HB_ISOBJECT(1) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(1) ) : QIcon( hb_parc(1) ), PQSTRING(2) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
     }
   }
   else
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QACTIONGROUP_CHECKEDACTION )
     {
 #endif
       QAction * ptr = obj->checkedAction();
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -411,16 +411,16 @@ HB_FUNC_STATIC( QACTIONGROUP_SETVISIBLE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QActionGroupSlots_connect_signal( const QString & signal, const QString & slot );
+void QActionGroupSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QACTIONGROUP_ONHOVERED )
 {
-  QActionGroupSlots_connect_signal( "hovered(QAction*)", "hovered(QAction*)" );
+  QActionGroupSlots_connect_signal("hovered(QAction*)", "hovered(QAction*)");
 }
 
 HB_FUNC_STATIC( QACTIONGROUP_ONTRIGGERED )
 {
-  QActionGroupSlots_connect_signal( "triggered(QAction*)", "triggered(QAction*)" );
+  QActionGroupSlots_connect_signal("triggered(QAction*)", "triggered(QAction*)");
 }
 
 #pragma ENDDUMP

@@ -12,7 +12,7 @@
 
 #include "QDragSlots.h"
 
-QDragSlots::QDragSlots( QObject * parent ) : QObject( parent )
+QDragSlots::QDragSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QDragSlots::~QDragSlots()
 
 void QDragSlots::actionChanged( Qt::DropAction action )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "actionChanged(Qt::DropAction)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "actionChanged(Qt::DropAction)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDRAG" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDRAG");
     PHB_ITEM pAction = hb_itemPutNI( NULL, static_cast<int >( action ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pAction );
@@ -40,14 +40,14 @@ void QDragSlots::actionChanged( Qt::DropAction action )
 
 void QDragSlots::targetChanged( QWidget * newTarget )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "targetChanged(QWidget*)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "targetChanged(QWidget*)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDRAG" );
-    PHB_ITEM pNewTarget = Qt4xHb::Signals_return_qobject( newTarget, "QWIDGET" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDRAG");
+    PHB_ITEM pNewTarget = Qt4xHb::Signals_return_qobject( newTarget, "QWIDGET");
 
     hb_vmEvalBlockV( cb, 2, pSender, pNewTarget );
 
@@ -62,19 +62,19 @@ void QDragSlots_connect_signal( const QString & signal, const QString & slot )
 
   if( obj != NULL )
   {
-    QDragSlots * s = QCoreApplication::instance()->findChild<QDragSlots *>();
+    QDragSlots * s = QCoreApplication::instance()->findChild<QDragSlots*>();
 
     if( s == NULL )
     {
       s = new QDragSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

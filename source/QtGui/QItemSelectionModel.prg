@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_NEW )
     QItemSelectionModel( QAbstractItemModel * model )
     */
     QItemSelectionModel * obj = new QItemSelectionModel( PQABSTRACTITEMMODEL(1) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISNUMPAR(2) && ISQABSTRACTITEMMODEL(1) && ISQOBJECT(2) )
   {
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_NEW )
     QItemSelectionModel( QAbstractItemModel * model, QObject * parent )
     */
     QItemSelectionModel * obj = new QItemSelectionModel( PQABSTRACTITEMMODEL(1), PQOBJECT(2) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_CURRENTINDEX )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->currentIndex() );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -266,7 +266,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_MODEL )
     {
 #endif
       const QAbstractItemModel * ptr = obj->model();
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDCOLUMNS )
     {
 #endif
       QModelIndexList list = obj->selectedColumns( OPINT( 1, 0 ) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDINDEXES )
     {
 #endif
       QModelIndexList list = obj->selectedIndexes();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDROWS )
     {
 #endif
       QModelIndexList list = obj->selectedRows( OPINT( 1, 0 ) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTION )
     {
 #endif
       QItemSelection * ptr = new QItemSelection( obj->selection() );
-      Qt4xHb::createReturnClass( ptr, "QITEMSELECTION", true );
+      Qt4xHb::createReturnClass(ptr, "QITEMSELECTION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -622,26 +622,26 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SETCURRENTINDEX )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QItemSelectionModelSlots_connect_signal( const QString & signal, const QString & slot );
+void QItemSelectionModelSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCHANGED )
 {
-  QItemSelectionModelSlots_connect_signal( "currentChanged(QModelIndex,QModelIndex)", "currentChanged(QModelIndex,QModelIndex)" );
+  QItemSelectionModelSlots_connect_signal("currentChanged(QModelIndex,QModelIndex)", "currentChanged(QModelIndex,QModelIndex)");
 }
 
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTCOLUMNCHANGED )
 {
-  QItemSelectionModelSlots_connect_signal( "currentColumnChanged(QModelIndex,QModelIndex)", "currentColumnChanged(QModelIndex,QModelIndex)" );
+  QItemSelectionModelSlots_connect_signal("currentColumnChanged(QModelIndex,QModelIndex)", "currentColumnChanged(QModelIndex,QModelIndex)");
 }
 
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONCURRENTROWCHANGED )
 {
-  QItemSelectionModelSlots_connect_signal( "currentRowChanged(QModelIndex,QModelIndex)", "currentRowChanged(QModelIndex,QModelIndex)" );
+  QItemSelectionModelSlots_connect_signal("currentRowChanged(QModelIndex,QModelIndex)", "currentRowChanged(QModelIndex,QModelIndex)");
 }
 
 HB_FUNC_STATIC( QITEMSELECTIONMODEL_ONSELECTIONCHANGED )
 {
-  QItemSelectionModelSlots_connect_signal( "selectionChanged(QItemSelection,QItemSelection)", "selectionChanged(QItemSelection,QItemSelection)" );
+  QItemSelectionModelSlots_connect_signal("selectionChanged(QItemSelection,QItemSelection)", "selectionChanged(QItemSelection,QItemSelection)");
 }
 
 #pragma ENDDUMP

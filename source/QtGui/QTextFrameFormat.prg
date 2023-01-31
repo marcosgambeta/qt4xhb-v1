@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_NEW )
   if( ISNUMPAR(0) )
   {
     QTextFrameFormat * obj = new QTextFrameFormat();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_BORDERBRUSH )
     {
 #endif
       QBrush * ptr = new QBrush( obj->borderBrush() );
-      Qt4xHb::createReturnClass( ptr, "QBRUSH", true );
+      Qt4xHb::createReturnClass(ptr, "QBRUSH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_HEIGHT )
     {
 #endif
       QTextLength * ptr = new QTextLength( obj->height() );
-      Qt4xHb::createReturnClass( ptr, "QTEXTLENGTH", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTLENGTH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -785,7 +785,7 @@ HB_FUNC_STATIC( QTEXTFRAMEFORMAT_WIDTH )
     {
 #endif
       QTextLength * ptr = new QTextLength( obj->width() );
-      Qt4xHb::createReturnClass( ptr, "QTEXTLENGTH", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTLENGTH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

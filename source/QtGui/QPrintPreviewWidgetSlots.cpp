@@ -12,7 +12,7 @@
 
 #include "QPrintPreviewWidgetSlots.h"
 
-QPrintPreviewWidgetSlots::QPrintPreviewWidgetSlots( QObject * parent ) : QObject( parent )
+QPrintPreviewWidgetSlots::QPrintPreviewWidgetSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,14 +22,14 @@ QPrintPreviewWidgetSlots::~QPrintPreviewWidgetSlots()
 
 void QPrintPreviewWidgetSlots::paintRequested( QPrinter * printer )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "paintRequested(QPrinter*)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "paintRequested(QPrinter*)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QPRINTPREVIEWWIDGET" );
-    PHB_ITEM pPrinter = Qt4xHb::Signals_return_object( ( void * ) printer, "QPRINTER" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QPRINTPREVIEWWIDGET");
+    PHB_ITEM pPrinter = Qt4xHb::Signals_return_object( ( void * ) printer, "QPRINTER");
 
     hb_vmEvalBlockV( cb, 2, pSender, pPrinter );
 
@@ -40,13 +40,13 @@ void QPrintPreviewWidgetSlots::paintRequested( QPrinter * printer )
 
 void QPrintPreviewWidgetSlots::previewChanged()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "previewChanged()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "previewChanged()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QPRINTPREVIEWWIDGET" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QPRINTPREVIEWWIDGET");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -60,19 +60,19 @@ void QPrintPreviewWidgetSlots_connect_signal( const QString & signal, const QStr
 
   if( obj != NULL )
   {
-    QPrintPreviewWidgetSlots * s = QCoreApplication::instance()->findChild<QPrintPreviewWidgetSlots *>();
+    QPrintPreviewWidgetSlots * s = QCoreApplication::instance()->findChild<QPrintPreviewWidgetSlots*>();
 
     if( s == NULL )
     {
       s = new QPrintPreviewWidgetSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

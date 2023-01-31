@@ -52,7 +52,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
     QRegExpValidator( QObject * parent = 0 )
     */
     QRegExpValidator * obj = new QRegExpValidator( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISNUMPAR(2) && ISQREGEXP(1) && ISQOBJECT(2) )
   {
@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
     QRegExpValidator( const QRegExp & rx, QObject * parent )
     */
     QRegExpValidator * obj = new QRegExpValidator( *PQREGEXP(1), PQOBJECT(2) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
     {
 #endif
       const QRegExp * ptr = &obj->regExp();
-      Qt4xHb::createReturnClass( ptr, "QREGEXP", false );
+      Qt4xHb::createReturnClass(ptr, "QREGEXP", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

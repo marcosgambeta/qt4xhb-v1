@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QFILEDIALOG_NEW )
     QFileDialog( QWidget * parent, Qt::WindowFlags flags )
     */
     QFileDialog * obj = new QFileDialog( PQWIDGET(1), ( Qt::WindowFlags ) hb_parni(2) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(0, 4) && ( ISQWIDGET(1) || HB_ISNIL(1) ) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) && ( HB_ISCHAR(3) || HB_ISNIL(3) ) && ( HB_ISCHAR(4) || HB_ISNIL(4) ) )
   {
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QFILEDIALOG_NEW )
     QFileDialog( QWidget * parent = 0, const QString & caption = QString(), const QString & directory = QString(), const QString & filter = QString() )
     */
     QFileDialog * obj = new QFileDialog( OPQWIDGET( 1, 0 ), OPQSTRING( 2, QString() ), OPQSTRING( 3, QString() ), OPQSTRING( 4, QString() ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QFILEDIALOG_DIRECTORY )
     {
 #endif
       QDir * ptr = new QDir( obj->directory() );
-      Qt4xHb::createReturnClass( ptr, "QDIR", true );
+      Qt4xHb::createReturnClass(ptr, "QDIR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ICONPROVIDER )
     {
 #endif
       QFileIconProvider * ptr = obj->iconProvider();
-      Qt4xHb::createReturnClass( ptr, "QFILEICONPROVIDER", false );
+      Qt4xHb::createReturnClass(ptr, "QFILEICONPROVIDER", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QFILEDIALOG_ITEMDELEGATE )
     {
 #endif
       QAbstractItemDelegate * ptr = obj->itemDelegate();
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMDELEGATE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QFILEDIALOG_PROXYMODEL )
     {
 #endif
       QAbstractProxyModel * ptr = obj->proxyModel();
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTPROXYMODEL" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTPROXYMODEL");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -601,7 +601,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SAVESTATE )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->saveState() );
-      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1263,7 +1263,7 @@ HB_FUNC_STATIC( QFILEDIALOG_SIDEBARURLS )
     {
 #endif
       QList<QUrl> list = obj->sidebarUrls();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QURL");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -1451,31 +1451,31 @@ HB_FUNC_STATIC( QFILEDIALOG_GETSAVEFILENAME )
 #endif
 }
 
-void QFileDialogSlots_connect_signal( const QString & signal, const QString & slot );
+void QFileDialogSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QFILEDIALOG_ONCURRENTCHANGED )
 {
-  QFileDialogSlots_connect_signal( "currentChanged(QString)", "currentChanged(QString)" );
+  QFileDialogSlots_connect_signal("currentChanged(QString)", "currentChanged(QString)");
 }
 
 HB_FUNC_STATIC( QFILEDIALOG_ONDIRECTORYENTERED )
 {
-  QFileDialogSlots_connect_signal( "directoryEntered(QString)", "directoryEntered(QString)" );
+  QFileDialogSlots_connect_signal("directoryEntered(QString)", "directoryEntered(QString)");
 }
 
 HB_FUNC_STATIC( QFILEDIALOG_ONFILESELECTED )
 {
-  QFileDialogSlots_connect_signal( "fileSelected(QString)", "fileSelected(QString)" );
+  QFileDialogSlots_connect_signal("fileSelected(QString)", "fileSelected(QString)");
 }
 
 HB_FUNC_STATIC( QFILEDIALOG_ONFILESSELECTED )
 {
-  QFileDialogSlots_connect_signal( "filesSelected(QStringList)", "filesSelected(QStringList)" );
+  QFileDialogSlots_connect_signal("filesSelected(QStringList)", "filesSelected(QStringList)");
 }
 
 HB_FUNC_STATIC( QFILEDIALOG_ONFILTERSELECTED )
 {
-  QFileDialogSlots_connect_signal( "filterSelected(QString)", "filterSelected(QString)" );
+  QFileDialogSlots_connect_signal("filterSelected(QString)", "filterSelected(QString)");
 }
 
 #pragma ENDDUMP

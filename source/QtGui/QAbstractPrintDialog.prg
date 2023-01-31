@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QABSTRACTPRINTDIALOG_PRINTER )
     {
 #endif
       QPrinter * ptr = obj->printer();
-      Qt4xHb::createReturnClass( ptr, "QPRINTER", false );
+      Qt4xHb::createReturnClass(ptr, "QPRINTER", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

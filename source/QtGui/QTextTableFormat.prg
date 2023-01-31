@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_NEW )
   if( ISNUMPAR(0) )
   {
     QTextTableFormat * obj = new QTextTableFormat();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNWIDTHCONSTRAINTS )
     {
 #endif
       QVector<QTextLength> list = obj->columnWidthConstraints();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QTEXTLENGTH" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QTEXTLENGTH");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {

@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_NEW )
     QStyleOptionMenuItem()
     */
     QStyleOptionMenuItem * obj = new QStyleOptionMenuItem();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONMENUITEM(1) )
   {
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_NEW )
     QStyleOptionMenuItem( const QStyleOptionMenuItem & other )
     */
     QStyleOptionMenuItem * obj = new QStyleOptionMenuItem( *PQSTYLEOPTIONMENUITEM(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_MENURECT )
     if( ISNUMPAR(0) )
     {
       QRect * ptr = new QRect( obj->menuRect );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
     else
     {
@@ -325,7 +325,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_ICON )
     if( ISNUMPAR(0) )
     {
       QIcon * ptr = new QIcon( obj->icon );
-      Qt4xHb::createReturnClass( ptr, "QICON", true );
+      Qt4xHb::createReturnClass(ptr, "QICON", true);
     }
     else
     {
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONMENUITEM_FONT )
     if( ISNUMPAR(0) )
     {
       QFont * ptr = new QFont( obj->font );
-      Qt4xHb::createReturnClass( ptr, "QFONT", true );
+      Qt4xHb::createReturnClass(ptr, "QFONT", true);
     }
     else
     {

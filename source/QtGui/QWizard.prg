@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QWIZARD_NEW )
   if( ISBETWEEN(0, 2) && ( ISQWIDGET(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
   {
     QWizard * obj = new QWizard( OPQWIDGET( 1, 0 ), HB_ISNIL(2) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(2) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QWIZARD_BUTTON )
     {
 #endif
       QAbstractButton * ptr = obj->button( ( QWizard::WizardButton ) hb_parni(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTBUTTON" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTBUTTON");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QWIZARD_CURRENTPAGE )
     {
 #endif
       QWizardPage * ptr = obj->currentPage();
-      Qt4xHb::createReturnQObjectClass( ptr, "QWIZARDPAGE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QWIZARDPAGE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QWIZARD_FIELD )
     {
 #endif
       QVariant * ptr = new QVariant( obj->field( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QWIZARD_PAGE )
     {
 #endif
       QWizardPage * ptr = obj->page( PINT(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QWIZARDPAGE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QWIZARDPAGE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -412,7 +412,7 @@ HB_FUNC_STATIC( QWIZARD_PIXMAP )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->pixmap( ( QWizard::WizardPixmap ) hb_parni(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QPIXMAP", true );
+      Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -834,7 +834,7 @@ HB_FUNC_STATIC( QWIZARD_SIDEWIDGET )
     {
 #endif
       QWidget * ptr = obj->sideWidget();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1054,7 +1054,7 @@ HB_FUNC_STATIC( QWIZARD_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1143,31 +1143,31 @@ HB_FUNC_STATIC( QWIZARD_RESTART )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QWizardSlots_connect_signal( const QString & signal, const QString & slot );
+void QWizardSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QWIZARD_ONCURRENTIDCHANGED )
 {
-  QWizardSlots_connect_signal( "currentIdChanged(int)", "currentIdChanged(int)" );
+  QWizardSlots_connect_signal("currentIdChanged(int)", "currentIdChanged(int)");
 }
 
 HB_FUNC_STATIC( QWIZARD_ONCUSTOMBUTTONCLICKED )
 {
-  QWizardSlots_connect_signal( "customButtonClicked(int)", "customButtonClicked(int)" );
+  QWizardSlots_connect_signal("customButtonClicked(int)", "customButtonClicked(int)");
 }
 
 HB_FUNC_STATIC( QWIZARD_ONHELPREQUESTED )
 {
-  QWizardSlots_connect_signal( "helpRequested()", "helpRequested()" );
+  QWizardSlots_connect_signal("helpRequested()", "helpRequested()");
 }
 
 HB_FUNC_STATIC( QWIZARD_ONPAGEADDED )
 {
-  QWizardSlots_connect_signal( "pageAdded(int)", "pageAdded(int)" );
+  QWizardSlots_connect_signal("pageAdded(int)", "pageAdded(int)");
 }
 
 HB_FUNC_STATIC( QWIZARD_ONPAGEREMOVED )
 {
-  QWizardSlots_connect_signal( "pageRemoved(int)", "pageRemoved(int)" );
+  QWizardSlots_connect_signal("pageRemoved(int)", "pageRemoved(int)");
 }
 
 #pragma ENDDUMP

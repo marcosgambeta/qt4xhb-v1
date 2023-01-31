@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_NEW )
   if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QCalendarWidget * obj = new QCalendarWidget( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_DATETEXTFORMAT )
     {
 #endif
       QTextCharFormat * ptr = new QTextCharFormat( obj->dateTextFormat( *PQDATE(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QTEXTCHARFORMAT", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_HEADERTEXTFORMAT )
     {
 #endif
       QTextCharFormat * ptr = new QTextCharFormat( obj->headerTextFormat() );
-      Qt4xHb::createReturnClass( ptr, "QTEXTCHARFORMAT", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MAXIMUMDATE )
     {
 #endif
       QDate * ptr = new QDate( obj->maximumDate() );
-      Qt4xHb::createReturnClass( ptr, "QDATE", true );
+      Qt4xHb::createReturnClass(ptr, "QDATE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MINIMUMDATE )
     {
 #endif
       QDate * ptr = new QDate( obj->minimumDate() );
-      Qt4xHb::createReturnClass( ptr, "QDATE", true );
+      Qt4xHb::createReturnClass(ptr, "QDATE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SELECTEDDATE )
     {
 #endif
       QDate * ptr = new QDate( obj->selectedDate() );
-      Qt4xHb::createReturnClass( ptr, "QDATE", true );
+      Qt4xHb::createReturnClass(ptr, "QDATE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -765,7 +765,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_WEEKDAYTEXTFORMAT )
     {
 #endif
       QTextCharFormat * ptr = new QTextCharFormat( obj->weekdayTextFormat( ( Qt::DayOfWeek ) hb_parni(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QTEXTCHARFORMAT", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -814,7 +814,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_MINIMUMSIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -839,7 +839,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1136,26 +1136,26 @@ HB_FUNC_STATIC( QCALENDARWIDGET_SHOWTODAY )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QCalendarWidgetSlots_connect_signal( const QString & signal, const QString & slot );
+void QCalendarWidgetSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QCALENDARWIDGET_ONACTIVATED )
 {
-  QCalendarWidgetSlots_connect_signal( "activated(QDate)", "activated(QDate)" );
+  QCalendarWidgetSlots_connect_signal("activated(QDate)", "activated(QDate)");
 }
 
 HB_FUNC_STATIC( QCALENDARWIDGET_ONCLICKED )
 {
-  QCalendarWidgetSlots_connect_signal( "clicked(QDate)", "clicked(QDate)" );
+  QCalendarWidgetSlots_connect_signal("clicked(QDate)", "clicked(QDate)");
 }
 
 HB_FUNC_STATIC( QCALENDARWIDGET_ONCURRENTPAGECHANGED )
 {
-  QCalendarWidgetSlots_connect_signal( "currentPageChanged(int,int)", "currentPageChanged(int,int)" );
+  QCalendarWidgetSlots_connect_signal("currentPageChanged(int,int)", "currentPageChanged(int,int)");
 }
 
 HB_FUNC_STATIC( QCALENDARWIDGET_ONSELECTIONCHANGED )
 {
-  QCalendarWidgetSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
+  QCalendarWidgetSlots_connect_signal("selectionChanged()", "selectionChanged()");
 }
 
 #pragma ENDDUMP

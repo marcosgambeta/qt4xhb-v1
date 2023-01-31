@@ -12,7 +12,7 @@
 
 #include "QActionSlots.h"
 
-QActionSlots::QActionSlots( QObject * parent ) : QObject( parent )
+QActionSlots::QActionSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QActionSlots::~QActionSlots()
 
 void QActionSlots::changed()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "changed()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "changed()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QACTION" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QACTION");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -38,13 +38,13 @@ void QActionSlots::changed()
 
 void QActionSlots::hovered()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "hovered()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "hovered()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QACTION" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QACTION");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -54,13 +54,13 @@ void QActionSlots::hovered()
 
 void QActionSlots::toggled( bool checked )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "toggled(bool)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "toggled(bool)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QACTION" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QACTION");
     PHB_ITEM pChecked = hb_itemPutL( NULL, checked );
 
     hb_vmEvalBlockV( cb, 2, pSender, pChecked );
@@ -72,13 +72,13 @@ void QActionSlots::toggled( bool checked )
 
 void QActionSlots::triggered( bool checked )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "triggered(bool)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "triggered(bool)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QACTION" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QACTION");
     PHB_ITEM pChecked = hb_itemPutL( NULL, checked );
 
     hb_vmEvalBlockV( cb, 2, pSender, pChecked );
@@ -94,19 +94,19 @@ void QActionSlots_connect_signal( const QString & signal, const QString & slot )
 
   if( obj != NULL )
   {
-    QActionSlots * s = QCoreApplication::instance()->findChild<QActionSlots *>();
+    QActionSlots * s = QCoreApplication::instance()->findChild<QActionSlots*>();
 
     if( s == NULL )
     {
       s = new QActionSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

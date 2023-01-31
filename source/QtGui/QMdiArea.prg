@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QMDIAREA_NEW )
   if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QMdiArea * obj = new QMdiArea( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QMDIAREA_ACTIVESUBWINDOW )
     {
 #endif
       QMdiSubWindow * ptr = obj->activeSubWindow();
-      Qt4xHb::createReturnQObjectClass( ptr, "QMDISUBWINDOW" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QMDISUBWINDOW");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QMDIAREA_ADDSUBWINDOW )
     {
 #endif
       QMdiSubWindow * ptr = obj->addSubWindow( PQWIDGET(1), HB_ISNIL(2) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(2) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QMDISUBWINDOW" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QMDISUBWINDOW");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QMDIAREA_BACKGROUND )
     {
 #endif
       QBrush * ptr = new QBrush( obj->background() );
-      Qt4xHb::createReturnClass( ptr, "QBRUSH", true );
+      Qt4xHb::createReturnClass(ptr, "QBRUSH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QMDIAREA_CURRENTSUBWINDOW )
     {
 #endif
       QMdiSubWindow * ptr = obj->currentSubWindow();
-      Qt4xHb::createReturnQObjectClass( ptr, "QMDISUBWINDOW" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QMDISUBWINDOW");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -479,7 +479,7 @@ HB_FUNC_STATIC( QMDIAREA_SUBWINDOWLIST )
     {
 #endif
       QList<QMdiSubWindow *> list = obj->subWindowList( HB_ISNIL(1) ? ( QMdiArea::WindowOrder ) QMdiArea::CreationOrder : ( QMdiArea::WindowOrder ) hb_parni(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QMDISUBWINDOW" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QMDISUBWINDOW");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -623,7 +623,7 @@ HB_FUNC_STATIC( QMDIAREA_MINIMUMSIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -648,7 +648,7 @@ HB_FUNC_STATIC( QMDIAREA_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -841,11 +841,11 @@ HB_FUNC_STATIC( QMDIAREA_TILESUBWINDOWS )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QMdiAreaSlots_connect_signal( const QString & signal, const QString & slot );
+void QMdiAreaSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QMDIAREA_ONSUBWINDOWACTIVATED )
 {
-  QMdiAreaSlots_connect_signal( "subWindowActivated(QMdiSubWindow*)", "subWindowActivated(QMdiSubWindow*)" );
+  QMdiAreaSlots_connect_signal("subWindowActivated(QMdiSubWindow*)", "subWindowActivated(QMdiSubWindow*)");
 }
 
 #pragma ENDDUMP

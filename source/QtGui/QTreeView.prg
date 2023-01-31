@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QTREEVIEW_NEW )
   if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QTreeView * obj = new QTreeView( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QTREEVIEW_HEADER )
     {
 #endif
       QHeaderView * ptr = obj->header();
-      Qt4xHb::createReturnQObjectClass( ptr, "QHEADERVIEW" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QHEADERVIEW");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,7 +346,7 @@ HB_FUNC_STATIC( QTREEVIEW_INDEXABOVE )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->indexAbove( *PQMODELINDEX(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QTREEVIEW_INDEXBELOW )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->indexBelow( *PQMODELINDEX(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1154,7 +1154,7 @@ HB_FUNC_STATIC( QTREEVIEW_INDEXAT )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->indexAt( *PQPOINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1361,7 +1361,7 @@ HB_FUNC_STATIC( QTREEVIEW_VISUALRECT )
     {
 #endif
       QRect * ptr = new QRect( obj->visualRect( *PQMODELINDEX(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1580,16 +1580,16 @@ HB_FUNC_STATIC( QTREEVIEW_SHOWCOLUMN )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QTreeViewSlots_connect_signal( const QString & signal, const QString & slot );
+void QTreeViewSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QTREEVIEW_ONCOLLAPSED )
 {
-  QTreeViewSlots_connect_signal( "collapsed(QModelIndex)", "collapsed(QModelIndex)" );
+  QTreeViewSlots_connect_signal("collapsed(QModelIndex)", "collapsed(QModelIndex)");
 }
 
 HB_FUNC_STATIC( QTREEVIEW_ONEXPANDED )
 {
-  QTreeViewSlots_connect_signal( "expanded(QModelIndex)", "expanded(QModelIndex)" );
+  QTreeViewSlots_connect_signal("expanded(QModelIndex)", "expanded(QModelIndex)");
 }
 
 #pragma ENDDUMP

@@ -12,7 +12,7 @@
 
 #include "QCalendarWidgetSlots.h"
 
-QCalendarWidgetSlots::QCalendarWidgetSlots( QObject * parent ) : QObject( parent )
+QCalendarWidgetSlots::QCalendarWidgetSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,14 +22,14 @@ QCalendarWidgetSlots::~QCalendarWidgetSlots()
 
 void QCalendarWidgetSlots::activated( const QDate & date )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activated(QDate)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "activated(QDate)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QCALENDARWIDGET" );
-    PHB_ITEM pDate = Qt4xHb::Signals_return_object( ( void * ) &date, "QDATE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QCALENDARWIDGET");
+    PHB_ITEM pDate = Qt4xHb::Signals_return_object( ( void * ) &date, "QDATE");
 
     hb_vmEvalBlockV( cb, 2, pSender, pDate );
 
@@ -40,14 +40,14 @@ void QCalendarWidgetSlots::activated( const QDate & date )
 
 void QCalendarWidgetSlots::clicked( const QDate & date )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "clicked(QDate)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "clicked(QDate)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QCALENDARWIDGET" );
-    PHB_ITEM pDate = Qt4xHb::Signals_return_object( ( void * ) &date, "QDATE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QCALENDARWIDGET");
+    PHB_ITEM pDate = Qt4xHb::Signals_return_object( ( void * ) &date, "QDATE");
 
     hb_vmEvalBlockV( cb, 2, pSender, pDate );
 
@@ -58,13 +58,13 @@ void QCalendarWidgetSlots::clicked( const QDate & date )
 
 void QCalendarWidgetSlots::currentPageChanged( int year, int month )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentPageChanged(int,int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "currentPageChanged(int,int)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QCALENDARWIDGET" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QCALENDARWIDGET");
     PHB_ITEM pYear = hb_itemPutNI( NULL, year );
     PHB_ITEM pMonth = hb_itemPutNI( NULL, month );
 
@@ -78,13 +78,13 @@ void QCalendarWidgetSlots::currentPageChanged( int year, int month )
 
 void QCalendarWidgetSlots::selectionChanged()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "selectionChanged()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "selectionChanged()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QCALENDARWIDGET" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QCALENDARWIDGET");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -98,19 +98,19 @@ void QCalendarWidgetSlots_connect_signal( const QString & signal, const QString 
 
   if( obj != NULL )
   {
-    QCalendarWidgetSlots * s = QCoreApplication::instance()->findChild<QCalendarWidgetSlots *>();
+    QCalendarWidgetSlots * s = QCoreApplication::instance()->findChild<QCalendarWidgetSlots*>();
 
     if( s == NULL )
     {
       s = new QCalendarWidgetSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

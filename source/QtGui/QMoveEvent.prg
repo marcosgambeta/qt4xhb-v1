@@ -49,7 +49,7 @@ HB_FUNC_STATIC( QMOVEEVENT_NEW )
   if( ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2) )
   {
     QMoveEvent * obj = new QMoveEvent( *PQPOINT(1), *PQPOINT(2) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QMOVEEVENT_OLDPOS )
     {
 #endif
       const QPoint * ptr = &obj->oldPos();
-      Qt4xHb::createReturnClass( ptr, "QPOINT", false );
+      Qt4xHb::createReturnClass(ptr, "QPOINT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QMOVEEVENT_POS )
     {
 #endif
       const QPoint * ptr = &obj->pos();
-      Qt4xHb::createReturnClass( ptr, "QPOINT", false );
+      Qt4xHb::createReturnClass(ptr, "QPOINT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

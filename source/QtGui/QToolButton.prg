@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_NEW )
   if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QToolButton * obj = new QToolButton( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_DEFAULTACTION )
     {
 #endif
       QAction * ptr = obj->defaultAction();
-      Qt4xHb::createReturnQObjectClass( ptr, "QACTION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_MENU )
     {
 #endif
       QMenu * ptr = obj->menu();
-      Qt4xHb::createReturnQObjectClass( ptr, "QMENU" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QMENU");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_MINIMUMSIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -386,7 +386,7 @@ HB_FUNC_STATIC( QTOOLBUTTON_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -475,11 +475,11 @@ HB_FUNC_STATIC( QTOOLBUTTON_SHOWMENU )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QToolButtonSlots_connect_signal( const QString & signal, const QString & slot );
+void QToolButtonSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QTOOLBUTTON_ONTRIGGERED )
 {
-  QToolButtonSlots_connect_signal( "triggered(QAction*)", "triggered(QAction*)" );
+  QToolButtonSlots_connect_signal("triggered(QAction*)", "triggered(QAction*)");
 }
 
 #pragma ENDDUMP

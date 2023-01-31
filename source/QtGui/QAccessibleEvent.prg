@@ -48,7 +48,7 @@ HB_FUNC_STATIC( QACCESSIBLEEVENT_NEW )
   if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
     QAccessibleEvent * obj = new QAccessibleEvent( ( QAccessibleEvent::Type ) hb_parni(1), PINT(2) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {

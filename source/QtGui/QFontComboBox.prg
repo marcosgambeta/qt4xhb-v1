@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_NEW )
   if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QFontComboBox * obj = new QFontComboBox( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_CURRENTFONT )
     {
 #endif
       QFont * ptr = new QFont( obj->currentFont() );
-      Qt4xHb::createReturnClass( ptr, "QFONT", true );
+      Qt4xHb::createReturnClass(ptr, "QFONT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -261,11 +261,11 @@ HB_FUNC_STATIC( QFONTCOMBOBOX_SETCURRENTFONT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QFontComboBoxSlots_connect_signal( const QString & signal, const QString & slot );
+void QFontComboBoxSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QFONTCOMBOBOX_ONCURRENTFONTCHANGED )
 {
-  QFontComboBoxSlots_connect_signal( "currentFontChanged(QFont)", "currentFontChanged(QFont)" );
+  QFontComboBoxSlots_connect_signal("currentFontChanged(QFont)", "currentFontChanged(QFont)");
 }
 
 #pragma ENDDUMP

@@ -12,7 +12,7 @@
 
 #include "QDoubleSpinBoxSlots.h"
 
-QDoubleSpinBoxSlots::QDoubleSpinBoxSlots( QObject * parent ) : QObject( parent )
+QDoubleSpinBoxSlots::QDoubleSpinBoxSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QDoubleSpinBoxSlots::~QDoubleSpinBoxSlots()
 
 void QDoubleSpinBoxSlots::valueChanged( double d )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "valueChanged(double)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "valueChanged(double)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDOUBLESPINBOX" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDOUBLESPINBOX");
     PHB_ITEM pD = hb_itemPutND( NULL, d );
 
     hb_vmEvalBlockV( cb, 2, pSender, pD );
@@ -40,13 +40,13 @@ void QDoubleSpinBoxSlots::valueChanged( double d )
 
 void QDoubleSpinBoxSlots::valueChanged( const QString & text )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "valueChanged(QString)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "valueChanged(QString)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QDOUBLESPINBOX" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDOUBLESPINBOX");
     PHB_ITEM pText = hb_itemPutC( NULL, QSTRINGTOSTRING( text ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pText );
@@ -62,19 +62,19 @@ void QDoubleSpinBoxSlots_connect_signal( const QString & signal, const QString &
 
   if( obj != NULL )
   {
-    QDoubleSpinBoxSlots * s = QCoreApplication::instance()->findChild<QDoubleSpinBoxSlots *>();
+    QDoubleSpinBoxSlots * s = QCoreApplication::instance()->findChild<QDoubleSpinBoxSlots*>();
 
     if( s == NULL )
     {
       s = new QDoubleSpinBoxSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

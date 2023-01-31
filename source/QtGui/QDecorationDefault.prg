@@ -49,7 +49,7 @@ HB_FUNC_STATIC( QDECORATIONDEFAULT_NEW )
   if( ISNUMPAR(0) )
   {
     QDecorationDefault * obj = new QDecorationDefault();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QDECORATIONDEFAULT_REGION )
     {
 #endif
       QRegion * ptr = new QRegion( obj->region( PQWIDGET(1), *PQRECT(2), OPINT( 3, QDecoration::All ) ) );
-      Qt4xHb::createReturnClass( ptr, "QREGION", true );
+      Qt4xHb::createReturnClass(ptr, "QREGION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

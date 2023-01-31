@@ -94,7 +94,7 @@ HB_FUNC_STATIC( QLABEL_NEW )
     QLabel( QWidget * parent = 0, Qt::WindowFlags f = 0 )
     */
     QLabel * obj = new QLabel( OPQWIDGET( 1, 0 ), HB_ISNIL(2) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(2) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
   {
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QLABEL_NEW )
     QLabel( const QString & text, QWidget * parent = 0, Qt::WindowFlags f = 0 )
     */
     QLabel * obj = new QLabel( PQSTRING(1), OPQWIDGET( 2, 0 ), HB_ISNIL(3) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(3) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QLABEL_BUDDY )
     {
 #endif
       QWidget * ptr = obj->buddy();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QLABEL_MOVIE )
     {
 #endif
       QMovie * ptr = obj->movie();
-      Qt4xHb::createReturnQObjectClass( ptr, "QMOVIE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QMOVIE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QLABEL_PICTURE )
     {
 #endif
       const QPicture * ptr = obj->picture();
-      Qt4xHb::createReturnClass( ptr, "QPICTURE", false );
+      Qt4xHb::createReturnClass(ptr, "QPICTURE", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QLABEL_PIXMAP )
     {
 #endif
       const QPixmap * ptr = obj->pixmap();
-      Qt4xHb::createReturnClass( ptr, "QPIXMAP", false );
+      Qt4xHb::createReturnClass(ptr, "QPIXMAP", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -790,7 +790,7 @@ HB_FUNC_STATIC( QLABEL_MINIMUMSIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -815,7 +815,7 @@ HB_FUNC_STATIC( QLABEL_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1020,16 +1020,16 @@ HB_FUNC_STATIC( QLABEL_SETTEXT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QLabelSlots_connect_signal( const QString & signal, const QString & slot );
+void QLabelSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QLABEL_ONLINKACTIVATED )
 {
-  QLabelSlots_connect_signal( "linkActivated(QString)", "linkActivated(QString)" );
+  QLabelSlots_connect_signal("linkActivated(QString)", "linkActivated(QString)");
 }
 
 HB_FUNC_STATIC( QLABEL_ONLINKHOVERED )
 {
-  QLabelSlots_connect_signal( "linkHovered(QString)", "linkHovered(QString)" );
+  QLabelSlots_connect_signal("linkHovered(QString)", "linkHovered(QString)");
 }
 
 #pragma ENDDUMP

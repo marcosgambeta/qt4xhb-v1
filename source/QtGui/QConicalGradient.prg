@@ -50,7 +50,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_NEW )
     QConicalGradient()
     */
     QConicalGradient * obj = new QConicalGradient();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2) )
   {
@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_NEW )
     QConicalGradient( const QPointF & center, qreal startAngle )
     */
     QConicalGradient * obj = new QConicalGradient( *PQPOINTF(1), PQREAL(2) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
   {
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_NEW )
     QConicalGradient( qreal cx, qreal cy, qreal startAngle )
     */
     QConicalGradient * obj = new QConicalGradient( PQREAL(1), PQREAL(2), PQREAL(3) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -112,7 +112,7 @@ HB_FUNC_STATIC( QCONICALGRADIENT_CENTER )
     {
 #endif
       QPointF * ptr = new QPointF( obj->center() );
-      Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

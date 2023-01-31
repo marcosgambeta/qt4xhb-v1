@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_NEW )
     QStyleOptionViewItem()
     */
     QStyleOptionViewItem * obj = new QStyleOptionViewItem();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONVIEWITEM(1) )
   {
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_NEW )
     QStyleOptionViewItem( const QStyleOptionViewItem & other )
     */
     QStyleOptionViewItem * obj = new QStyleOptionViewItem( *PQSTYLEOPTIONVIEWITEM(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_DECORATIONSIZE )
     if( ISNUMPAR(0) )
     {
       QSize * ptr = new QSize( obj->decorationSize );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
     }
     else
     {
@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONVIEWITEM_FONT )
     if( ISNUMPAR(0) )
     {
       QFont * ptr = new QFont( obj->font );
-      Qt4xHb::createReturnClass( ptr, "QFONT", true );
+      Qt4xHb::createReturnClass(ptr, "QFONT", true);
     }
     else
     {

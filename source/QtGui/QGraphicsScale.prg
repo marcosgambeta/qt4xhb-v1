@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QGraphicsScale * obj = new QGraphicsScale( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_ORIGIN )
     {
 #endif
       QVector3D * ptr = new QVector3D( obj->origin() );
-      Qt4xHb::createReturnClass( ptr, "QVECTOR3D", true );
+      Qt4xHb::createReturnClass(ptr, "QVECTOR3D", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,31 +317,31 @@ HB_FUNC_STATIC( QGRAPHICSSCALE_APPLYTO )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QGraphicsScaleSlots_connect_signal( const QString & signal, const QString & slot );
+void QGraphicsScaleSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QGRAPHICSSCALE_ONORIGINCHANGED )
 {
-  QGraphicsScaleSlots_connect_signal( "originChanged()", "originChanged()" );
+  QGraphicsScaleSlots_connect_signal("originChanged()", "originChanged()");
 }
 
 HB_FUNC_STATIC( QGRAPHICSSCALE_ONSCALECHANGED )
 {
-  QGraphicsScaleSlots_connect_signal( "scaleChanged()", "scaleChanged()" );
+  QGraphicsScaleSlots_connect_signal("scaleChanged()", "scaleChanged()");
 }
 
 HB_FUNC_STATIC( QGRAPHICSSCALE_ONXSCALECHANGED )
 {
-  QGraphicsScaleSlots_connect_signal( "xScaleChanged()", "xScaleChanged()" );
+  QGraphicsScaleSlots_connect_signal("xScaleChanged()", "xScaleChanged()");
 }
 
 HB_FUNC_STATIC( QGRAPHICSSCALE_ONYSCALECHANGED )
 {
-  QGraphicsScaleSlots_connect_signal( "yScaleChanged()", "yScaleChanged()" );
+  QGraphicsScaleSlots_connect_signal("yScaleChanged()", "yScaleChanged()");
 }
 
 HB_FUNC_STATIC( QGRAPHICSSCALE_ONZSCALECHANGED )
 {
-  QGraphicsScaleSlots_connect_signal( "zScaleChanged()", "zScaleChanged()" );
+  QGraphicsScaleSlots_connect_signal("zScaleChanged()", "zScaleChanged()");
 }
 
 #pragma ENDDUMP

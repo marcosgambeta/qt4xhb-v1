@@ -52,7 +52,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_NEW )
     QFileOpenEvent( const QString & file )
     */
     QFileOpenEvent * obj = new QFileOpenEvent( PQSTRING(1) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISNUMPAR(1) && ISQURL(1) )
   {
@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_NEW )
     QFileOpenEvent( const QUrl & url )
     */
     QFileOpenEvent * obj = new QFileOpenEvent( *PQURL(1) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_URL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->url() );
-      Qt4xHb::createReturnClass( ptr, "QURL", true );
+      Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

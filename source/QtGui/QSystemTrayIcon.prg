@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW )
     QSystemTrayIcon( QObject * parent = 0 )
     */
     QSystemTrayIcon * obj = new QSystemTrayIcon( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && ( ISQICON(1) || HB_ISCHAR(1) ) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
   {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW )
     QSystemTrayIcon( const QIcon & icon, QObject * parent = 0 )
     */
     QSystemTrayIcon * obj = new QSystemTrayIcon( HB_ISOBJECT(1) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(1) ) : QIcon( hb_parc(1) ), OPQOBJECT( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_CONTEXTMENU )
     {
 #endif
       QMenu * ptr = obj->contextMenu();
-      Qt4xHb::createReturnQObjectClass( ptr, "QMENU" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QMENU");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_GEOMETRY )
     {
 #endif
       QRect * ptr = new QRect( obj->geometry() );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_ICON )
     {
 #endif
       QIcon * ptr = new QIcon( obj->icon() );
-      Qt4xHb::createReturnClass( ptr, "QICON", true );
+      Qt4xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -447,16 +447,16 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SUPPORTSMESSAGES )
 #endif
 }
 
-void QSystemTrayIconSlots_connect_signal( const QString & signal, const QString & slot );
+void QSystemTrayIconSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ONACTIVATED )
 {
-  QSystemTrayIconSlots_connect_signal( "activated(QSystemTrayIcon::ActivationReason)", "activated(QSystemTrayIcon::ActivationReason)" );
+  QSystemTrayIconSlots_connect_signal("activated(QSystemTrayIcon::ActivationReason)", "activated(QSystemTrayIcon::ActivationReason)");
 }
 
 HB_FUNC_STATIC( QSYSTEMTRAYICON_ONMESSAGECLICKED )
 {
-  QSystemTrayIconSlots_connect_signal( "messageClicked()", "messageClicked()" );
+  QSystemTrayIconSlots_connect_signal("messageClicked()", "messageClicked()");
 }
 
 #pragma ENDDUMP

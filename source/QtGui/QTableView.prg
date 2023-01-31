@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QTABLEVIEW_NEW )
   if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QTableView * obj = new QTableView( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QTABLEVIEW_HORIZONTALHEADER )
     {
 #endif
       QHeaderView * ptr = obj->horizontalHeader();
-      Qt4xHb::createReturnQObjectClass( ptr, "QHEADERVIEW" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QHEADERVIEW");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -836,7 +836,7 @@ HB_FUNC_STATIC( QTABLEVIEW_VERTICALHEADER )
     {
 #endif
       QHeaderView * ptr = obj->verticalHeader();
-      Qt4xHb::createReturnQObjectClass( ptr, "QHEADERVIEW" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QHEADERVIEW");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -885,7 +885,7 @@ HB_FUNC_STATIC( QTABLEVIEW_INDEXAT )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->indexAt( *PQPOINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

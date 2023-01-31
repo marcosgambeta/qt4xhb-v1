@@ -53,7 +53,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_NEW )
     QStyleOptionDockWidget()
     */
     QStyleOptionDockWidget * obj = new QStyleOptionDockWidget();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONDOCKWIDGET(1) )
   {
@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONDOCKWIDGET_NEW )
     QStyleOptionDockWidget( const QStyleOptionDockWidget & other )
     */
     QStyleOptionDockWidget * obj = new QStyleOptionDockWidget( *PQSTYLEOPTIONDOCKWIDGET(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {

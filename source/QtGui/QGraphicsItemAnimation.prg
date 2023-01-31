@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QGraphicsItemAnimation * obj = new QGraphicsItemAnimation( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_ITEM )
     {
 #endif
       QGraphicsItem * ptr = obj->item();
-      Qt4xHb::createReturnClass( ptr, "QGRAPHICSITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_MATRIXAT )
     {
 #endif
       QMatrix * ptr = new QMatrix( obj->matrixAt( PQREAL(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QMATRIX", true );
+      Qt4xHb::createReturnClass(ptr, "QMATRIX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_POSAT )
     {
 #endif
       QPointF * ptr = new QPointF( obj->posAt( PQREAL(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_TIMELINE )
     {
 #endif
       QTimeLine * ptr = obj->timeLine();
-      Qt4xHb::createReturnQObjectClass( ptr, "QTIMELINE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QTIMELINE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_NEW )
     QMouseEvent( QEvent::Type type, const QPoint & pos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
     */
     QMouseEvent * obj = new QMouseEvent( ( QEvent::Type ) hb_parni(1), *PQPOINT(2), ( Qt::MouseButton ) hb_parni(3), ( Qt::MouseButtons ) hb_parni(4), ( Qt::KeyboardModifiers ) hb_parni(5) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISNUMPAR(6) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) )
   {
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_NEW )
     QMouseEvent( QEvent::Type type, const QPoint & pos, const QPoint & globalPos, Qt::MouseButton button, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
     */
     QMouseEvent * obj = new QMouseEvent( ( QEvent::Type ) hb_parni(1), *PQPOINT(2), *PQPOINT(3), ( Qt::MouseButton ) hb_parni(4), ( Qt::MouseButtons ) hb_parni(5), ( Qt::KeyboardModifiers ) hb_parni(6) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_POS )
     {
 #endif
       const QPoint * ptr = &obj->pos();
-      Qt4xHb::createReturnClass( ptr, "QPOINT", false );
+      Qt4xHb::createReturnClass(ptr, "QPOINT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_GLOBALPOS )
     {
 #endif
       const QPoint * ptr = &obj->globalPos();
-      Qt4xHb::createReturnClass( ptr, "QPOINT", false );
+      Qt4xHb::createReturnClass(ptr, "QPOINT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_POSF )
     {
 #endif
       QPointF * ptr = new QPointF( obj->posF() );
-      Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -344,7 +344,7 @@ HB_FUNC_STATIC( QMOUSEEVENT_CREATEEXTENDEDMOUSEEVENT )
   {
 #endif
     QMouseEvent * ptr = QMouseEvent::createExtendedMouseEvent( ( QEvent::Type ) hb_parni(1), *PQPOINTF(2), *PQPOINT(3), ( Qt::MouseButton ) hb_parni(4), ( Qt::MouseButtons ) hb_parni(5), ( Qt::KeyboardModifiers ) hb_parni(6) );
-    Qt4xHb::createReturnClass( ptr, "QMOUSEEVENT" );
+    Qt4xHb::createReturnClass(ptr, "QMOUSEEVENT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

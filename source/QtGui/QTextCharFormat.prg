@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_NEW )
   if( ISNUMPAR(0) )
   {
     QTextCharFormat * obj = new QTextCharFormat();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_FONT )
     {
 #endif
       QFont * ptr = new QFont( obj->font() );
-      Qt4xHb::createReturnClass( ptr, "QFONT", true );
+      Qt4xHb::createReturnClass(ptr, "QFONT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1241,7 +1241,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_TEXTOUTLINE )
     {
 #endif
       QPen * ptr = new QPen( obj->textOutline() );
-      Qt4xHb::createReturnClass( ptr, "QPEN", true );
+      Qt4xHb::createReturnClass(ptr, "QPEN", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1290,7 +1290,7 @@ HB_FUNC_STATIC( QTEXTCHARFORMAT_UNDERLINECOLOR )
     {
 #endif
       QColor * ptr = new QColor( obj->underlineColor() );
-      Qt4xHb::createReturnClass( ptr, "QCOLOR", true );
+      Qt4xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

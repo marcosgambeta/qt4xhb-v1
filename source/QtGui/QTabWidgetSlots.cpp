@@ -12,7 +12,7 @@
 
 #include "QTabWidgetSlots.h"
 
-QTabWidgetSlots::QTabWidgetSlots( QObject * parent ) : QObject( parent )
+QTabWidgetSlots::QTabWidgetSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QTabWidgetSlots::~QTabWidgetSlots()
 
 void QTabWidgetSlots::currentChanged( int index )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentChanged(int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "currentChanged(int)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTABWIDGET" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTABWIDGET");
     PHB_ITEM pIndex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, pSender, pIndex );
@@ -40,13 +40,13 @@ void QTabWidgetSlots::currentChanged( int index )
 
 void QTabWidgetSlots::tabCloseRequested( int index )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "tabCloseRequested(int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "tabCloseRequested(int)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTABWIDGET" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTABWIDGET");
     PHB_ITEM pIndex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, pSender, pIndex );
@@ -62,19 +62,19 @@ void QTabWidgetSlots_connect_signal( const QString & signal, const QString & slo
 
   if( obj != NULL )
   {
-    QTabWidgetSlots * s = QCoreApplication::instance()->findChild<QTabWidgetSlots *>();
+    QTabWidgetSlots * s = QCoreApplication::instance()->findChild<QTabWidgetSlots*>();
 
     if( s == NULL )
     {
       s = new QTabWidgetSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

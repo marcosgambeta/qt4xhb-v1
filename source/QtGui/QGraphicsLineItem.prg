@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW )
     QGraphicsLineItem( QGraphicsItem * parent = 0 )
     */
     QGraphicsLineItem * obj = new QGraphicsLineItem( HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem*>( Qt4xHb::itemGetPtr(1) ) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(1, 2) && ISQLINEF(1) && ( ISQGRAPHICSITEM(2) || HB_ISNIL(2) ) )
   {
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW )
     QGraphicsLineItem( const QLineF & line, QGraphicsItem * parent = 0 )
     */
     QGraphicsLineItem * obj = new QGraphicsLineItem( *PQLINEF(1), HB_ISNIL(2) ? 0 : static_cast<QGraphicsItem*>( Qt4xHb::itemGetPtr(2) ) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ( ISQGRAPHICSITEM(5) || HB_ISNIL(5) ) )
   {
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_NEW )
     QGraphicsLineItem( qreal x1, qreal y1, qreal x2, qreal y2, QGraphicsItem * parent = 0 )
     */
     QGraphicsLineItem * obj = new QGraphicsLineItem( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), HB_ISNIL(5) ? 0 : static_cast<QGraphicsItem*>( Qt4xHb::itemGetPtr(5) ) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_LINE )
     {
 #endif
       QLineF * ptr = new QLineF( obj->line() );
-      Qt4xHb::createReturnClass( ptr, "QLINEF", true );
+      Qt4xHb::createReturnClass(ptr, "QLINEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_PEN )
     {
 #endif
       QPen * ptr = new QPen( obj->pen() );
-      Qt4xHb::createReturnClass( ptr, "QPEN", true );
+      Qt4xHb::createReturnClass(ptr, "QPEN", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_BOUNDINGRECT )
     {
 #endif
       QRectF * ptr = new QRectF( obj->boundingRect() );
-      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
+      Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_OPAQUEAREA )
     {
 #endif
       QPainterPath * ptr = new QPainterPath( obj->opaqueArea() );
-      Qt4xHb::createReturnClass( ptr, "QPAINTERPATH", true );
+      Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,7 +353,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEITEM_SHAPE )
     {
 #endif
       QPainterPath * ptr = new QPainterPath( obj->shape() );
-      Qt4xHb::createReturnClass( ptr, "QPAINTERPATH", true );
+      Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QTOUCHEVENT_WIDGET )
     {
 #endif
       QWidget * ptr = obj->widget();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

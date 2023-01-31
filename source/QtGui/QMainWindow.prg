@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QMAINWINDOW_NEW )
   if( ISBETWEEN(0, 2) && ( ISQWIDGET(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
   {
     QMainWindow * obj = new QMainWindow( OPQWIDGET( 1, 0 ), HB_ISNIL(2) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(2) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ADDTOOLBAR )
     if( obj != NULL )
     {
       QToolBar * ptr = obj->addToolBar( PQSTRING(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QTOOLBAR" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QTOOLBAR");
     }
   }
   else
@@ -259,7 +259,7 @@ HB_FUNC_STATIC( QMAINWINDOW_CENTRALWIDGET )
     {
 #endif
       QWidget * ptr = obj->centralWidget();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -308,7 +308,7 @@ HB_FUNC_STATIC( QMAINWINDOW_CREATEPOPUPMENU )
     {
 #endif
       QMenu * ptr = obj->createPopupMenu();
-      Qt4xHb::createReturnQObjectClass( ptr, "QMENU" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QMENU");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QMAINWINDOW_ICONSIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->iconSize() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -530,7 +530,7 @@ HB_FUNC_STATIC( QMAINWINDOW_MENUBAR )
     {
 #endif
       QMenuBar * ptr = obj->menuBar();
-      Qt4xHb::createReturnQObjectClass( ptr, "QMENUBAR" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QMENUBAR");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -555,7 +555,7 @@ HB_FUNC_STATIC( QMAINWINDOW_MENUWIDGET )
     {
 #endif
       QWidget * ptr = obj->menuWidget();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -706,7 +706,7 @@ HB_FUNC_STATIC( QMAINWINDOW_SAVESTATE )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->saveState( OPINT( 1, 0 ) ) );
-      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1043,7 +1043,7 @@ HB_FUNC_STATIC( QMAINWINDOW_STATUSBAR )
     {
 #endif
       QStatusBar * ptr = obj->statusBar();
-      Qt4xHb::createReturnQObjectClass( ptr, "QSTATUSBAR" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QSTATUSBAR");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1116,7 +1116,7 @@ HB_FUNC_STATIC( QMAINWINDOW_TABIFIEDDOCKWIDGETS )
     {
 #endif
       QList<QDockWidget *> list = obj->tabifiedDockWidgets( PQDOCKWIDGET(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QDOCKWIDGET" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QDOCKWIDGET");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -1300,16 +1300,16 @@ HB_FUNC_STATIC( QMAINWINDOW_SETDOCKNESTINGENABLED )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QMainWindowSlots_connect_signal( const QString & signal, const QString & slot );
+void QMainWindowSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QMAINWINDOW_ONICONSIZECHANGED )
 {
-  QMainWindowSlots_connect_signal( "iconSizeChanged(QSize)", "iconSizeChanged(QSize)" );
+  QMainWindowSlots_connect_signal("iconSizeChanged(QSize)", "iconSizeChanged(QSize)");
 }
 
 HB_FUNC_STATIC( QMAINWINDOW_ONTOOLBUTTONSTYLECHANGED )
 {
-  QMainWindowSlots_connect_signal( "toolButtonStyleChanged(Qt::ToolButtonStyle)", "toolButtonStyleChanged(Qt::ToolButtonStyle)" );
+  QMainWindowSlots_connect_signal("toolButtonStyleChanged(Qt::ToolButtonStyle)", "toolButtonStyleChanged(Qt::ToolButtonStyle)");
 }
 
 #pragma ENDDUMP

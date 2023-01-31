@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_NEW )
     QPrintDialog( QPrinter * printer, QWidget * parent = 0 )
     */
     QPrintDialog * obj = new QPrintDialog( PQPRINTER(1), OPQWIDGET( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_NEW )
     QPrintDialog( QWidget * parent = 0 )
     */
     QPrintDialog * obj = new QPrintDialog( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QPRINTDIALOG_PRINTER )
     {
 #endif
       QPrinter * ptr = obj->printer();
-      Qt4xHb::createReturnClass( ptr, "QPRINTER", false );
+      Qt4xHb::createReturnClass(ptr, "QPRINTER", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -321,11 +321,11 @@ HB_FUNC_STATIC( QPRINTDIALOG_SETVISIBLE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QPrintDialogSlots_connect_signal( const QString & signal, const QString & slot );
+void QPrintDialogSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QPRINTDIALOG_ONACCEPTED )
 {
-  QPrintDialogSlots_connect_signal( "accepted(QPrinter*)", "accepted(QPrinter*)" );
+  QPrintDialogSlots_connect_signal("accepted(QPrinter*)", "accepted(QPrinter*)");
 }
 
 #pragma ENDDUMP

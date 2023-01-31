@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QFileSystemModel * obj = new QFileSystemModel( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEICON )
     {
 #endif
       QIcon * ptr = new QIcon( obj->fileIcon( *PQMODELINDEX(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QICON", true );
+      Qt4xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEINFO )
     {
 #endif
       QFileInfo * ptr = new QFileInfo( obj->fileInfo( *PQMODELINDEX(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QFILEINFO", true );
+      Qt4xHb::createReturnClass(ptr, "QFILEINFO", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -269,7 +269,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ICONPROVIDER )
     {
 #endif
       QFileIconProvider * ptr = obj->iconProvider();
-      Qt4xHb::createReturnClass( ptr, "QFILEICONPROVIDER", false );
+      Qt4xHb::createReturnClass(ptr, "QFILEICONPROVIDER", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_LASTMODIFIED )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->lastModified( *PQMODELINDEX(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
+      Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MKDIR )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->mkdir( *PQMODELINDEX(1), PQSTRING(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MYCOMPUTER )
     {
 #endif
       QVariant * ptr = new QVariant( obj->myComputer( OPINT( 1, Qt::DisplayRole ) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ROOTDIRECTORY )
     {
 #endif
       QDir * ptr = new QDir( obj->rootDirectory() );
-      Qt4xHb::createReturnClass( ptr, "QDIR", true );
+      Qt4xHb::createReturnClass(ptr, "QDIR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -766,7 +766,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETROOTPATH )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->setRootPath( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -887,7 +887,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_DATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT( 2, Qt::DisplayRole ) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1010,7 +1010,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_HEADERDATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->headerData( PINT(1), ( Qt::Orientation ) hb_parni(2), OPINT( 3, Qt::DisplayRole ) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1033,7 +1033,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX )
     if( obj != NULL )
     {
       QModelIndex * ptr = new QModelIndex( obj->index( PQSTRING(1), OPINT( 2, 0 ) ) );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
     }
   }
   else if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ( ISQMODELINDEX(3) || HB_ISNIL(3) ) )
@@ -1046,7 +1046,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX )
     if( obj != NULL )
     {
       QModelIndex * ptr = new QModelIndex( obj->index( PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(3) ) ) );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
     }
   }
   else
@@ -1076,7 +1076,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMEDATA )
         par1 << *static_cast<QModelIndex*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
       }
       QMimeData * ptr = obj->mimeData( par1 );
-      Qt4xHb::createReturnQObjectClass( ptr, "QMIMEDATA" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QMIMEDATA");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1125,7 +1125,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_PARENT )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->parent( *PQMODELINDEX(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1234,21 +1234,21 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SUPPORTEDDROPACTIONS )
   }
 }
 
-void QFileSystemModelSlots_connect_signal( const QString & signal, const QString & slot );
+void QFileSystemModelSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ONDIRECTORYLOADED )
 {
-  QFileSystemModelSlots_connect_signal( "directoryLoaded(QString)", "directoryLoaded(QString)" );
+  QFileSystemModelSlots_connect_signal("directoryLoaded(QString)", "directoryLoaded(QString)");
 }
 
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ONFILERENAMED )
 {
-  QFileSystemModelSlots_connect_signal( "fileRenamed(QString,QString,QString)", "fileRenamed(QString,QString,QString)" );
+  QFileSystemModelSlots_connect_signal("fileRenamed(QString,QString,QString)", "fileRenamed(QString,QString,QString)");
 }
 
 HB_FUNC_STATIC( QFILESYSTEMMODEL_ONROOTPATHCHANGED )
 {
-  QFileSystemModelSlots_connect_signal( "rootPathChanged(QString)", "rootPathChanged(QString)" );
+  QFileSystemModelSlots_connect_signal("rootPathChanged(QString)", "rootPathChanged(QString)");
 }
 
 #pragma ENDDUMP

@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW )
     QDialogButtonBox( QWidget * parent = 0 )
     */
     QDialogButtonBox * obj = new QDialogButtonBox( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
   {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW )
     QDialogButtonBox( Qt::Orientation orientation, QWidget * parent = 0 )
     */
     QDialogButtonBox * obj = new QDialogButtonBox( ( Qt::Orientation ) hb_parni(1), OPQWIDGET( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 3) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( ISQWIDGET(3) || HB_ISNIL(3) ) )
   {
@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW )
     QDialogButtonBox( QDialogButtonBox::StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = 0 )
     */
     QDialogButtonBox * obj = new QDialogButtonBox( ( QDialogButtonBox::StandardButtons ) hb_parni(1), HB_ISNIL(2) ? ( Qt::Orientation ) Qt::Horizontal : ( Qt::Orientation ) hb_parni(2), OPQWIDGET( 3, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON )
     if( obj != NULL )
     {
       QPushButton * ptr = obj->addButton( PQSTRING(1), ( QDialogButtonBox::ButtonRole ) hb_parni(2) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QPUSHBUTTON" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QPUSHBUTTON");
     }
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_ADDBUTTON )
     if( obj != NULL )
     {
       QPushButton * ptr = obj->addButton( ( QDialogButtonBox::StandardButton ) hb_parni(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QPUSHBUTTON" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QPUSHBUTTON");
     }
   }
   else
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTON )
     {
 #endif
       QPushButton * ptr = obj->button( ( QDialogButtonBox::StandardButton ) hb_parni(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QPUSHBUTTON" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QPUSHBUTTON");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTONS )
     {
 #endif
       QList<QAbstractButton *> list = obj->buttons();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTBUTTON" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTBUTTON");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -483,26 +483,26 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTONS )
   }
 }
 
-void QDialogButtonBoxSlots_connect_signal( const QString & signal, const QString & slot );
+void QDialogButtonBoxSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONACCEPTED )
 {
-  QDialogButtonBoxSlots_connect_signal( "accepted()", "accepted()" );
+  QDialogButtonBoxSlots_connect_signal("accepted()", "accepted()");
 }
 
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONCLICKED )
 {
-  QDialogButtonBoxSlots_connect_signal( "clicked(QAbstractButton*)", "clicked(QAbstractButton*)" );
+  QDialogButtonBoxSlots_connect_signal("clicked(QAbstractButton*)", "clicked(QAbstractButton*)");
 }
 
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONHELPREQUESTED )
 {
-  QDialogButtonBoxSlots_connect_signal( "helpRequested()", "helpRequested()" );
+  QDialogButtonBoxSlots_connect_signal("helpRequested()", "helpRequested()");
 }
 
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_ONREJECTED )
 {
-  QDialogButtonBoxSlots_connect_signal( "rejected()", "rejected()" );
+  QDialogButtonBoxSlots_connect_signal("rejected()", "rejected()");
 }
 
 #pragma ENDDUMP

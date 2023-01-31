@@ -52,7 +52,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_NEW )
     QStyleOptionTabBarBase()
     */
     QStyleOptionTabBarBase * obj = new QStyleOptionTabBarBase();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONTABBARBASE(1) )
   {
@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_NEW )
     QStyleOptionTabBarBase( const QStyleOptionTabBarBase & other )
     */
     QStyleOptionTabBarBase * obj = new QStyleOptionTabBarBase( *PQSTYLEOPTIONTABBARBASE(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_TABBARRECT )
     if( ISNUMPAR(0) )
     {
       QRect * ptr = new QRect( obj->tabBarRect );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
     else
     {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABBARBASE_SELECTEDTABRECT )
     if( ISNUMPAR(0) )
     {
       QRect * ptr = new QRect( obj->selectedTabRect );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
     else
     {

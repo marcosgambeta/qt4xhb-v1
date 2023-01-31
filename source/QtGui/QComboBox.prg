@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QCOMBOBOX_NEW )
   if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QComboBox * obj = new QComboBox( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QCOMBOBOX_COMPLETER )
     {
 #endif
       QCompleter * ptr = obj->completer();
-      Qt4xHb::createReturnQObjectClass( ptr, "QCOMPLETER" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QCOMPLETER");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ICONSIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->iconSize() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -619,7 +619,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMDATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->itemData( PINT(1), OPINT( 2, Qt::UserRole ) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -644,7 +644,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMDELEGATE )
     {
 #endif
       QAbstractItemDelegate * ptr = obj->itemDelegate();
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMDELEGATE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -669,7 +669,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ITEMICON )
     {
 #endif
       QIcon * ptr = new QIcon( obj->itemIcon( PINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QICON", true );
+      Qt4xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -718,7 +718,7 @@ HB_FUNC_STATIC( QCOMBOBOX_LINEEDIT )
     {
 #endif
       QLineEdit * ptr = obj->lineEdit();
-      Qt4xHb::createReturnQObjectClass( ptr, "QLINEEDIT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QLINEEDIT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -815,7 +815,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MODEL )
     {
 #endif
       QAbstractItemModel * ptr = obj->model();
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -890,7 +890,7 @@ HB_FUNC_STATIC( QCOMBOBOX_ROOTMODELINDEX )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->rootModelIndex() );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1485,7 +1485,7 @@ HB_FUNC_STATIC( QCOMBOBOX_VALIDATOR )
     {
 #endif
       const QValidator * ptr = obj->validator();
-      Qt4xHb::createReturnQObjectClass( ptr, "QVALIDATOR" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QVALIDATOR");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1510,7 +1510,7 @@ HB_FUNC_STATIC( QCOMBOBOX_VIEW )
     {
 #endif
       QAbstractItemView * ptr = obj->view();
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMVIEW" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMVIEW");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1559,7 +1559,7 @@ HB_FUNC_STATIC( QCOMBOBOX_MINIMUMSIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1584,7 +1584,7 @@ HB_FUNC_STATIC( QCOMBOBOX_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1699,41 +1699,41 @@ HB_FUNC_STATIC( QCOMBOBOX_SETEDITTEXT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QComboBoxSlots_connect_signal( const QString & signal, const QString & slot );
+void QComboBoxSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED1 )
 {
-  QComboBoxSlots_connect_signal( "activated(int)", "activated(int)" );
+  QComboBoxSlots_connect_signal("activated(int)", "activated(int)");
 }
 
 HB_FUNC_STATIC( QCOMBOBOX_ONACTIVATED2 )
 {
-  QComboBoxSlots_connect_signal( "activated(QString)", "activated(QString)" );
+  QComboBoxSlots_connect_signal("activated(QString)", "activated(QString)");
 }
 
 HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED1 )
 {
-  QComboBoxSlots_connect_signal( "currentIndexChanged(int)", "currentIndexChanged(int)" );
+  QComboBoxSlots_connect_signal("currentIndexChanged(int)", "currentIndexChanged(int)");
 }
 
 HB_FUNC_STATIC( QCOMBOBOX_ONCURRENTINDEXCHANGED2 )
 {
-  QComboBoxSlots_connect_signal( "currentIndexChanged(QString)", "currentIndexChanged(QString)" );
+  QComboBoxSlots_connect_signal("currentIndexChanged(QString)", "currentIndexChanged(QString)");
 }
 
 HB_FUNC_STATIC( QCOMBOBOX_ONEDITTEXTCHANGED )
 {
-  QComboBoxSlots_connect_signal( "editTextChanged(QString)", "editTextChanged(QString)" );
+  QComboBoxSlots_connect_signal("editTextChanged(QString)", "editTextChanged(QString)");
 }
 
 HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED1 )
 {
-  QComboBoxSlots_connect_signal( "highlighted(int)", "highlighted(int)" );
+  QComboBoxSlots_connect_signal("highlighted(int)", "highlighted(int)");
 }
 
 HB_FUNC_STATIC( QCOMBOBOX_ONHIGHLIGHTED2 )
 {
-  QComboBoxSlots_connect_signal( "highlighted(QString)", "highlighted(QString)" );
+  QComboBoxSlots_connect_signal("highlighted(QString)", "highlighted(QString)");
 }
 
 // for compatibility

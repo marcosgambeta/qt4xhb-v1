@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
     QBrush()
     */
     QBrush * obj = new QBrush();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
     QBrush( Qt::BrushStyle style )
     */
     QBrush * obj = new QBrush( ( Qt::BrushStyle ) hb_parni(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(1, 2) && ( ISQCOLOR(1) || HB_ISCHAR(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
   {
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
     QBrush( const QColor & color, Qt::BrushStyle style = Qt::SolidPattern )
     */
     QBrush * obj = new QBrush( HB_ISOBJECT(1) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(1) ) : QColor( hb_parc(1) ), HB_ISNIL(2) ? ( Qt::BrushStyle ) Qt::SolidPattern : ( Qt::BrushStyle ) hb_parni(2) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
   {
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
     QBrush( Qt::GlobalColor color, Qt::BrushStyle style = Qt::SolidPattern )
     */
     QBrush * obj = new QBrush( ( Qt::GlobalColor ) hb_parni(1), HB_ISNIL(2) ? ( Qt::BrushStyle ) Qt::SolidPattern : ( Qt::BrushStyle ) hb_parni(2) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && ( ISQCOLOR(1) || HB_ISCHAR(1) ) && ISQPIXMAP(2) )
   {
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
     QBrush( const QColor & color, const QPixmap & pixmap )
     */
     QBrush * obj = new QBrush( HB_ISOBJECT(1) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(1) ) : QColor( hb_parc(1) ), *PQPIXMAP(2) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && ISQPIXMAP(2) )
   {
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
     QBrush( Qt::GlobalColor color, const QPixmap & pixmap )
     */
     QBrush * obj = new QBrush( ( Qt::GlobalColor ) hb_parni(1), *PQPIXMAP(2) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQPIXMAP(1) )
   {
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
     QBrush( const QPixmap & pixmap )
     */
     QBrush * obj = new QBrush( *PQPIXMAP(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQIMAGE(1) )
   {
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
     QBrush( const QImage & image )
     */
     QBrush * obj = new QBrush( *PQIMAGE(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQBRUSH(1) )
   {
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
     QBrush( const QBrush & other )
     */
     QBrush * obj = new QBrush( *PQBRUSH(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQGRADIENT(1) )
   {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
     QBrush( const QGradient & gradient )
     */
     QBrush * obj = new QBrush( *PQGRADIENT(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QBRUSH_COLOR )
     {
 #endif
       const QColor * ptr = &obj->color();
-      Qt4xHb::createReturnClass( ptr, "QCOLOR", false );
+      Qt4xHb::createReturnClass(ptr, "QCOLOR", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QBRUSH_GRADIENT )
     {
 #endif
       const QGradient * ptr = obj->gradient();
-      Qt4xHb::createReturnClass( ptr, "QGRADIENT", false );
+      Qt4xHb::createReturnClass(ptr, "QGRADIENT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QBRUSH_MATRIX )
     {
 #endif
       const QMatrix * ptr = &obj->matrix();
-      Qt4xHb::createReturnClass( ptr, "QMATRIX", false );
+      Qt4xHb::createReturnClass(ptr, "QMATRIX", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -478,7 +478,7 @@ HB_FUNC_STATIC( QBRUSH_TEXTURE )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->texture() );
-      Qt4xHb::createReturnClass( ptr, "QPIXMAP", true );
+      Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QBRUSH_TEXTUREIMAGE )
     {
 #endif
       QImage * ptr = new QImage( obj->textureImage() );
-      Qt4xHb::createReturnClass( ptr, "QIMAGE", true );
+      Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -528,7 +528,7 @@ HB_FUNC_STATIC( QBRUSH_TRANSFORM )
     {
 #endif
       QTransform * ptr = new QTransform( obj->transform() );
-      Qt4xHb::createReturnClass( ptr, "QTRANSFORM", true );
+      Qt4xHb::createReturnClass(ptr, "QTRANSFORM", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -550,7 +550,7 @@ void QBrush_toVariant1()
   {
     QVariant * variant = new QVariant();
     variant->setValue<QBrush>( *obj );
-    Qt4xHb::createReturnClass( variant, "QVARIANT", true );
+    Qt4xHb::createReturnClass( variant, "QVARIANT", true);
   }
 }
 
@@ -562,7 +562,7 @@ void QBrush_toVariant2()
   QBrush * brush = static_cast<QBrush*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
   QVariant * variant = new QVariant();
   variant->setValue<QBrush>( *brush );
-  Qt4xHb::createReturnClass( variant, "QVARIANT", true );
+  Qt4xHb::createReturnClass( variant, "QVARIANT", true);
 }
 
 //[1]QVariant toVariant()
@@ -593,7 +593,7 @@ HB_FUNC_STATIC( QBRUSH_FROMVARIANT )
   {
     QVariant * variant = static_cast<QVariant*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
     QBrush * brush = new QBrush( variant->value<QBrush>() );
-    Qt4xHb::createReturnClass( brush, "QBRUSH", true );
+    Qt4xHb::createReturnClass( brush, "QBRUSH", true);
   }
   else
   {
@@ -607,28 +607,28 @@ HB_FUNC_STATIC( QBRUSH_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QBRUSH_NEWFROMOBJECT )
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( QBRUSH_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QBRUSH_SELFDESTRUCTION )
 {
-  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QBRUSH_SETSELFDESTRUCTION )
@@ -652,16 +652,16 @@ HB_FUNC_STATIC( QBRUSH_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

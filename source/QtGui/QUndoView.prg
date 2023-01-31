@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QUNDOVIEW_NEW )
     QUndoView( QWidget * parent = 0 )
     */
     QUndoView * obj = new QUndoView( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && ISQUNDOSTACK(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
   {
@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QUNDOVIEW_NEW )
     QUndoView( QUndoStack * stack, QWidget * parent = 0 )
     */
     QUndoView * obj = new QUndoView( PQUNDOSTACK(1), OPQWIDGET( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && ISQUNDOGROUP(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
   {
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QUNDOVIEW_NEW )
     QUndoView( QUndoGroup * group, QWidget * parent = 0 )
     */
     QUndoView * obj = new QUndoView( PQUNDOGROUP(1), OPQWIDGET( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QUNDOVIEW_CLEANICON )
     {
 #endif
       QIcon * ptr = new QIcon( obj->cleanIcon() );
-      Qt4xHb::createReturnClass( ptr, "QICON", true );
+      Qt4xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QUNDOVIEW_GROUP )
     {
 #endif
       QUndoGroup * ptr = obj->group();
-      Qt4xHb::createReturnQObjectClass( ptr, "QUNDOGROUP" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QUNDOGROUP");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QUNDOVIEW_STACK )
     {
 #endif
       QUndoStack * ptr = obj->stack();
-      Qt4xHb::createReturnQObjectClass( ptr, "QUNDOSTACK" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QUNDOSTACK");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

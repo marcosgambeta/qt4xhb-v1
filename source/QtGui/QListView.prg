@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QLISTVIEW_NEW )
   if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QListView * obj = new QListView( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QLISTVIEW_GRIDSIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->gridSize() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -852,7 +852,7 @@ HB_FUNC_STATIC( QLISTVIEW_INDEXAT )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->indexAt( *PQPOINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -903,7 +903,7 @@ HB_FUNC_STATIC( QLISTVIEW_VISUALRECT )
     {
 #endif
       QRect * ptr = new QRect( obj->visualRect( *PQMODELINDEX(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -914,11 +914,11 @@ HB_FUNC_STATIC( QLISTVIEW_VISUALRECT )
   }
 }
 
-void QListViewSlots_connect_signal( const QString & signal, const QString & slot );
+void QListViewSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QLISTVIEW_ONINDEXESMOVED )
 {
-  QListViewSlots_connect_signal( "indexesMoved(QModelIndexList)", "indexesMoved(QModelIndexList)" );
+  QListViewSlots_connect_signal("indexesMoved(QModelIndexList)", "indexesMoved(QModelIndexList)");
 }
 
 #pragma ENDDUMP

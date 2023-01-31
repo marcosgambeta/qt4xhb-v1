@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW )
     QStackedLayout()
     */
     QStackedLayout * obj = new QStackedLayout();
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISNUMPAR(1) && ISQWIDGET(1) )
   {
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW )
     QStackedLayout( QWidget * parent )
     */
     QStackedLayout * obj = new QStackedLayout( PQWIDGET(1) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISNUMPAR(1) && ISQLAYOUT(1) )
   {
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_NEW )
     QStackedLayout( QLayout * parentLayout )
     */
     QStackedLayout * obj = new QStackedLayout( PQLAYOUT(1) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_CURRENTWIDGET )
     {
 #endif
       QWidget * ptr = obj->currentWidget();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_WIDGET )
     {
 #endif
       QWidget * ptr = obj->widget( PINT(1) );
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -327,16 +327,16 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_SETCURRENTWIDGET )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QStackedLayoutSlots_connect_signal( const QString & signal, const QString & slot );
+void QStackedLayoutSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSTACKEDLAYOUT_ONSETCURRENTINDEX )
 {
-  QStackedLayoutSlots_connect_signal( "setCurrentIndex(int)", "setCurrentIndex(int)" );
+  QStackedLayoutSlots_connect_signal("setCurrentIndex(int)", "setCurrentIndex(int)");
 }
 
 HB_FUNC_STATIC( QSTACKEDLAYOUT_ONSETCURRENTWIDGET )
 {
-  QStackedLayoutSlots_connect_signal( "setCurrentWidget(QWidget*)", "setCurrentWidget(QWidget*)" );
+  QStackedLayoutSlots_connect_signal("setCurrentWidget(QWidget*)", "setCurrentWidget(QWidget*)");
 }
 
 #pragma ENDDUMP

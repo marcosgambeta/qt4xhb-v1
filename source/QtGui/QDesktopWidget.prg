@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
     if( obj != NULL )
     {
       QRect * ptr = new QRect( obj->availableGeometry( OPINT( 1, -1 ) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
   else if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
     if( obj != NULL )
     {
       QRect * ptr = new QRect( obj->availableGeometry( PQWIDGET(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_AVAILABLEGEOMETRY )
     if( obj != NULL )
     {
       QRect * ptr = new QRect( obj->availableGeometry( *PQPOINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
   else
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREEN )
     {
 #endif
       QWidget * ptr = obj->screen( OPINT( 1, -1 ) );
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
     if( obj != NULL )
     {
       QRect * ptr = new QRect( obj->screenGeometry( OPINT( 1, -1 ) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
   else if( ISNUMPAR(1) && ISQWIDGET(1) )
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
     if( obj != NULL )
     {
       QRect * ptr = new QRect( obj->screenGeometry( PQWIDGET(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENGEOMETRY )
     if( obj != NULL )
     {
       QRect * ptr = new QRect( obj->screenGeometry( *PQPOINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
   else
@@ -274,21 +274,21 @@ HB_FUNC_STATIC( QDESKTOPWIDGET_SCREENNUMBER )
   }
 }
 
-void QDesktopWidgetSlots_connect_signal( const QString & signal, const QString & slot );
+void QDesktopWidgetSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QDESKTOPWIDGET_ONRESIZED )
 {
-  QDesktopWidgetSlots_connect_signal( "resized(int)", "resized(int)" );
+  QDesktopWidgetSlots_connect_signal("resized(int)", "resized(int)");
 }
 
 HB_FUNC_STATIC( QDESKTOPWIDGET_ONSCREENCOUNTCHANGED )
 {
-  QDesktopWidgetSlots_connect_signal( "screenCountChanged(int)", "screenCountChanged(int)" );
+  QDesktopWidgetSlots_connect_signal("screenCountChanged(int)", "screenCountChanged(int)");
 }
 
 HB_FUNC_STATIC( QDESKTOPWIDGET_ONWORKAREARESIZED )
 {
-  QDesktopWidgetSlots_connect_signal( "workAreaResized(int)", "workAreaResized(int)" );
+  QDesktopWidgetSlots_connect_signal("workAreaResized(int)", "workAreaResized(int)");
 }
 
 #pragma ENDDUMP

@@ -225,7 +225,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_CURRENTINDEX )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->currentIndex() );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ICONSIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->iconSize() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_INDEXAT )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->indexAt( *PQPOINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_INDEXWIDGET )
     {
 #endif
       QWidget * ptr = obj->indexWidget( *PQMODELINDEX(1) );
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -491,7 +491,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATE )
     if( obj != NULL )
     {
       QAbstractItemDelegate * ptr = obj->itemDelegate();
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMDELEGATE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
     }
   }
   else if( ISNUMPAR(1) && ISQMODELINDEX(1) )
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATE )
     if( obj != NULL )
     {
       QAbstractItemDelegate * ptr = obj->itemDelegate( *PQMODELINDEX(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMDELEGATE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
     }
   }
   else
@@ -527,7 +527,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATEFORCOLUMN )
     {
 #endif
       QAbstractItemDelegate * ptr = obj->itemDelegateForColumn( PINT(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMDELEGATE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -552,7 +552,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ITEMDELEGATEFORROW )
     {
 #endif
       QAbstractItemDelegate * ptr = obj->itemDelegateForRow( PINT(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMDELEGATE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMDELEGATE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -603,7 +603,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_MODEL )
     {
 #endif
       QAbstractItemModel * ptr = obj->model();
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -654,7 +654,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_ROOTINDEX )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->rootIndex() );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -753,7 +753,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SELECTIONMODEL )
     {
 #endif
       QItemSelectionModel * ptr = obj->selectionModel();
-      Qt4xHb::createReturnQObjectClass( ptr, "QITEMSELECTIONMODEL" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QITEMSELECTIONMODEL");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1398,7 +1398,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_SIZEHINTFORINDEX )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHintForIndex( *PQMODELINDEX(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1519,7 +1519,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_VISUALRECT )
     {
 #endif
       QRect * ptr = new QRect( obj->visualRect( *PQMODELINDEX(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1544,7 +1544,7 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_INPUTMETHODQUERY )
     {
 #endif
       QVariant * ptr = new QVariant( obj->inputMethodQuery( ( Qt::InputMethodQuery ) hb_parni(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1789,36 +1789,36 @@ HB_FUNC_STATIC( QABSTRACTITEMVIEW_UPDATE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QAbstractItemViewSlots_connect_signal( const QString & signal, const QString & slot );
+void QAbstractItemViewSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONACTIVATED )
 {
-  QAbstractItemViewSlots_connect_signal( "activated(QModelIndex)", "activated(QModelIndex)" );
+  QAbstractItemViewSlots_connect_signal("activated(QModelIndex)", "activated(QModelIndex)");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONCLICKED )
 {
-  QAbstractItemViewSlots_connect_signal( "clicked(QModelIndex)", "clicked(QModelIndex)" );
+  QAbstractItemViewSlots_connect_signal("clicked(QModelIndex)", "clicked(QModelIndex)");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONDOUBLECLICKED )
 {
-  QAbstractItemViewSlots_connect_signal( "doubleClicked(QModelIndex)", "doubleClicked(QModelIndex)" );
+  QAbstractItemViewSlots_connect_signal("doubleClicked(QModelIndex)", "doubleClicked(QModelIndex)");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONENTERED )
 {
-  QAbstractItemViewSlots_connect_signal( "entered(QModelIndex)", "entered(QModelIndex)" );
+  QAbstractItemViewSlots_connect_signal("entered(QModelIndex)", "entered(QModelIndex)");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONPRESSED )
 {
-  QAbstractItemViewSlots_connect_signal( "pressed(QModelIndex)", "pressed(QModelIndex)" );
+  QAbstractItemViewSlots_connect_signal("pressed(QModelIndex)", "pressed(QModelIndex)");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMVIEW_ONVIEWPORTENTERED )
 {
-  QAbstractItemViewSlots_connect_signal( "viewportEntered()", "viewportEntered()" );
+  QAbstractItemViewSlots_connect_signal("viewportEntered()", "viewportEntered()");
 }
 
 #pragma ENDDUMP

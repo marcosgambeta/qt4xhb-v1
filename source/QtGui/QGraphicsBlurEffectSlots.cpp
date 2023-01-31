@@ -12,7 +12,7 @@
 
 #include "QGraphicsBlurEffectSlots.h"
 
-QGraphicsBlurEffectSlots::QGraphicsBlurEffectSlots( QObject * parent ) : QObject( parent )
+QGraphicsBlurEffectSlots::QGraphicsBlurEffectSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QGraphicsBlurEffectSlots::~QGraphicsBlurEffectSlots()
 
 void QGraphicsBlurEffectSlots::blurHintsChanged( QGraphicsBlurEffect::BlurHints hints )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "blurHintsChanged(QGraphicsBlurEffect::BlurHints)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QGRAPHICSBLUREFFECT" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QGRAPHICSBLUREFFECT");
     PHB_ITEM pHints = hb_itemPutNI( NULL, static_cast<int >( hints ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pHints );
@@ -40,13 +40,13 @@ void QGraphicsBlurEffectSlots::blurHintsChanged( QGraphicsBlurEffect::BlurHints 
 
 void QGraphicsBlurEffectSlots::blurRadiusChanged( qreal radius )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "blurRadiusChanged(qreal)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "blurRadiusChanged(qreal)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QGRAPHICSBLUREFFECT" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QGRAPHICSBLUREFFECT");
     PHB_ITEM pRadius = hb_itemPutND( NULL, radius );
 
     hb_vmEvalBlockV( cb, 2, pSender, pRadius );
@@ -62,19 +62,19 @@ void QGraphicsBlurEffectSlots_connect_signal( const QString & signal, const QStr
 
   if( obj != NULL )
   {
-    QGraphicsBlurEffectSlots * s = QCoreApplication::instance()->findChild<QGraphicsBlurEffectSlots *>();
+    QGraphicsBlurEffectSlots * s = QCoreApplication::instance()->findChild<QGraphicsBlurEffectSlots*>();
 
     if( s == NULL )
     {
       s = new QGraphicsBlurEffectSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

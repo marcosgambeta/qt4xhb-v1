@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QPOLYGONF_NEW )
     QPolygonF()
     */
     QPolygonF * obj = new QPolygonF();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QPOLYGONF_NEW )
     QPolygonF( int size )
     */
     QPolygonF * obj = new QPolygonF( PINT(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQPOLYGONF(1) )
   {
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QPOLYGONF_NEW )
     QPolygonF( const QPolygonF & polygon )
     */
     QPolygonF * obj = new QPolygonF( *PQPOLYGONF(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QPOLYGONF_NEW )
       par1 << *static_cast<QPointF*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
     }
     QPolygonF * obj = new QPolygonF( par1 );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
   {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QPOLYGONF_NEW )
     QPolygonF( const QRectF & rectangle )
     */
     QPolygonF * obj = new QPolygonF( *PQRECTF(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQPOLYGON(1) )
   {
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QPOLYGONF_NEW )
     QPolygonF( const QPolygon & polygon )
     */
     QPolygonF * obj = new QPolygonF( *PQPOLYGON(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QPOLYGONF_BOUNDINGRECT )
     {
 #endif
       QRectF * ptr = new QRectF( obj->boundingRect() );
-      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
+      Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QPOLYGONF_INTERSECTED )
     {
 #endif
       QPolygonF * ptr = new QPolygonF( obj->intersected( *PQPOLYGONF(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QPOLYGONF", true );
+      Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QPOLYGONF_SUBTRACTED )
     {
 #endif
       QPolygonF * ptr = new QPolygonF( obj->subtracted( *PQPOLYGONF(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QPOLYGONF", true );
+      Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -301,7 +301,7 @@ HB_FUNC_STATIC( QPOLYGONF_TOPOLYGON )
     {
 #endif
       QPolygon * ptr = new QPolygon( obj->toPolygon() );
-      Qt4xHb::createReturnClass( ptr, "QPOLYGON", true );
+      Qt4xHb::createReturnClass(ptr, "QPOLYGON", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QPOLYGONF_TRANSLATED )
     if( obj != NULL )
     {
       QPolygonF * ptr = new QPolygonF( obj->translated( *PQPOINTF(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QPOLYGONF", true );
+      Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -373,7 +373,7 @@ HB_FUNC_STATIC( QPOLYGONF_TRANSLATED )
     if( obj != NULL )
     {
       QPolygonF * ptr = new QPolygonF( obj->translated( PQREAL(1), PQREAL(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QPOLYGONF", true );
+      Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
   }
   else
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QPOLYGONF_UNITED )
     {
 #endif
       QPolygonF * ptr = new QPolygonF( obj->united( *PQPOLYGONF(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QPOLYGONF", true );
+      Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -413,28 +413,28 @@ HB_FUNC_STATIC( QPOLYGONF_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QPOLYGONF_NEWFROMOBJECT )
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QPOLYGONF_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QPOLYGONF_SELFDESTRUCTION )
 {
-  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QPOLYGONF_SETSELFDESTRUCTION )
@@ -458,16 +458,16 @@ HB_FUNC_STATIC( QPOLYGONF_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

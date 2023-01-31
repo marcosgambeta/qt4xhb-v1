@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QTAPGESTURE_POSITION )
     {
 #endif
       QPointF * ptr = new QPointF( obj->position() );
-      Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

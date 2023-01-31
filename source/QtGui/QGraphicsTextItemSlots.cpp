@@ -12,7 +12,7 @@
 
 #include "QGraphicsTextItemSlots.h"
 
-QGraphicsTextItemSlots::QGraphicsTextItemSlots( QObject * parent ) : QObject( parent )
+QGraphicsTextItemSlots::QGraphicsTextItemSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QGraphicsTextItemSlots::~QGraphicsTextItemSlots()
 
 void QGraphicsTextItemSlots::linkActivated( const QString & link )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "linkActivated(QString)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "linkActivated(QString)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QGRAPHICSTEXTITEM" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QGRAPHICSTEXTITEM");
     PHB_ITEM pLink = hb_itemPutC( NULL, QSTRINGTOSTRING( link ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pLink );
@@ -40,13 +40,13 @@ void QGraphicsTextItemSlots::linkActivated( const QString & link )
 
 void QGraphicsTextItemSlots::linkHovered( const QString & link )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "linkHovered(QString)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "linkHovered(QString)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QGRAPHICSTEXTITEM" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QGRAPHICSTEXTITEM");
     PHB_ITEM pLink = hb_itemPutC( NULL, QSTRINGTOSTRING( link ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pLink );
@@ -62,19 +62,19 @@ void QGraphicsTextItemSlots_connect_signal( const QString & signal, const QStrin
 
   if( obj != NULL )
   {
-    QGraphicsTextItemSlots * s = QCoreApplication::instance()->findChild<QGraphicsTextItemSlots *>();
+    QGraphicsTextItemSlots * s = QCoreApplication::instance()->findChild<QGraphicsTextItemSlots*>();
 
     if( s == NULL )
     {
       s = new QGraphicsTextItemSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

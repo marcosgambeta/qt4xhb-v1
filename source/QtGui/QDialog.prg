@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QDIALOG_NEW )
   if( ISBETWEEN(0, 2) && ( ISQWIDGET(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
   {
     QDialog * obj = new QDialog( OPQWIDGET( 1, 0 ), HB_ISNIL(2) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(2) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QDIALOG_MINIMUMSIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QDIALOG_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -422,21 +422,21 @@ HB_FUNC_STATIC( QDIALOG_REJECT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QDialogSlots_connect_signal( const QString & signal, const QString & slot );
+void QDialogSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QDIALOG_ONACCEPTED )
 {
-  QDialogSlots_connect_signal( "accepted()", "accepted()" );
+  QDialogSlots_connect_signal("accepted()", "accepted()");
 }
 
 HB_FUNC_STATIC( QDIALOG_ONFINISHED )
 {
-  QDialogSlots_connect_signal( "finished(int)", "finished(int)" );
+  QDialogSlots_connect_signal("finished(int)", "finished(int)");
 }
 
 HB_FUNC_STATIC( QDIALOG_ONREJECTED )
 {
-  QDialogSlots_connect_signal( "rejected()", "rejected()" );
+  QDialogSlots_connect_signal("rejected()", "rejected()");
 }
 
 #pragma ENDDUMP

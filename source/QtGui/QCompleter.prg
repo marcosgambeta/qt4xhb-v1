@@ -91,7 +91,7 @@ HB_FUNC_STATIC( QCOMPLETER_NEW )
     QCompleter( QObject * parent = 0 )
     */
     QCompleter * obj = new QCompleter( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && ISQABSTRACTITEMMODEL(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
   {
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QCOMPLETER_NEW )
     QCompleter( QAbstractItemModel * model, QObject * parent = 0 )
     */
     QCompleter * obj = new QCompleter( PQABSTRACTITEMMODEL(1), OPQOBJECT( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && HB_ISARRAY(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
   {
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QCOMPLETER_NEW )
     QCompleter( const QStringList & list, QObject * parent = 0 )
     */
     QCompleter * obj = new QCompleter( PQSTRINGLIST(1), OPQOBJECT( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETIONMODEL )
     {
 #endif
       QAbstractItemModel * ptr = obj->completionModel();
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QCOMPLETER_CURRENTINDEX )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->currentIndex() );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QCOMPLETER_MODEL )
     {
 #endif
       QAbstractItemModel * ptr = obj->model();
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMMODEL" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMMODEL");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -486,7 +486,7 @@ HB_FUNC_STATIC( QCOMPLETER_POPUP )
     {
 #endif
       QAbstractItemView * ptr = obj->popup();
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTITEMVIEW" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTITEMVIEW");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -793,7 +793,7 @@ HB_FUNC_STATIC( QCOMPLETER_WIDGET )
     {
 #endif
       QWidget * ptr = obj->widget();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -906,26 +906,26 @@ HB_FUNC_STATIC( QCOMPLETER_SETWRAPAROUND )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QCompleterSlots_connect_signal( const QString & signal, const QString & slot );
+void QCompleterSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED1 )
 {
-  QCompleterSlots_connect_signal( "activated(QString)", "activated(QString)" );
+  QCompleterSlots_connect_signal("activated(QString)", "activated(QString)");
 }
 
 HB_FUNC_STATIC( QCOMPLETER_ONACTIVATED2 )
 {
-  QCompleterSlots_connect_signal( "activated(QModelIndex)", "activated(QModelIndex)" );
+  QCompleterSlots_connect_signal("activated(QModelIndex)", "activated(QModelIndex)");
 }
 
 HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED1 )
 {
-  QCompleterSlots_connect_signal( "highlighted(QString)", "highlighted(QString)" );
+  QCompleterSlots_connect_signal("highlighted(QString)", "highlighted(QString)");
 }
 
 HB_FUNC_STATIC( QCOMPLETER_ONHIGHLIGHTED2 )
 {
-  QCompleterSlots_connect_signal( "highlighted(QModelIndex)", "highlighted(QModelIndex)" );
+  QCompleterSlots_connect_signal("highlighted(QModelIndex)", "highlighted(QModelIndex)");
 }
 
 #pragma ENDDUMP

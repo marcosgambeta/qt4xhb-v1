@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_NEW )
     QStyleOptionToolButton()
     */
     QStyleOptionToolButton * obj = new QStyleOptionToolButton();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONTOOLBUTTON(1) )
   {
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_NEW )
     QStyleOptionToolButton( const QStyleOptionToolButton & other )
     */
     QStyleOptionToolButton * obj = new QStyleOptionToolButton( *PQSTYLEOPTIONTOOLBUTTON(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_ICON )
     if( ISNUMPAR(0) )
     {
       QIcon * ptr = new QIcon( obj->icon );
-      Qt4xHb::createReturnClass( ptr, "QICON", true );
+      Qt4xHb::createReturnClass(ptr, "QICON", true);
     }
     else
     {
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_ICONSIZE )
     if( ISNUMPAR(0) )
     {
       QSize * ptr = new QSize( obj->iconSize );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
     }
     else
     {
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_POS )
     if( ISNUMPAR(0) )
     {
       QPoint * ptr = new QPoint( obj->pos );
-      Qt4xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
     }
     else
     {
@@ -362,7 +362,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBUTTON_FONT )
     if( ISNUMPAR(0) )
     {
       QFont * ptr = new QFont( obj->font );
-      Qt4xHb::createReturnClass( ptr, "QFONT", true );
+      Qt4xHb::createReturnClass(ptr, "QFONT", true);
     }
     else
     {

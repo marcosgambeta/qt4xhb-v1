@@ -12,7 +12,7 @@
 
 #include "QStackedLayoutSlots.h"
 
-QStackedLayoutSlots::QStackedLayoutSlots( QObject * parent ) : QObject( parent )
+QStackedLayoutSlots::QStackedLayoutSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QStackedLayoutSlots::~QStackedLayoutSlots()
 
 void QStackedLayoutSlots::setCurrentIndex( int index )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "setCurrentIndex(int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "setCurrentIndex(int)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSTACKEDLAYOUT" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSTACKEDLAYOUT");
     PHB_ITEM pIndex = hb_itemPutNI( NULL, index );
 
     hb_vmEvalBlockV( cb, 2, pSender, pIndex );
@@ -40,14 +40,14 @@ void QStackedLayoutSlots::setCurrentIndex( int index )
 
 void QStackedLayoutSlots::setCurrentWidget( QWidget * widget )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "setCurrentWidget(QWidget*)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "setCurrentWidget(QWidget*)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSTACKEDLAYOUT" );
-    PHB_ITEM pWidget = Qt4xHb::Signals_return_qobject( widget, "QWIDGET" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSTACKEDLAYOUT");
+    PHB_ITEM pWidget = Qt4xHb::Signals_return_qobject( widget, "QWIDGET");
 
     hb_vmEvalBlockV( cb, 2, pSender, pWidget );
 
@@ -62,19 +62,19 @@ void QStackedLayoutSlots_connect_signal( const QString & signal, const QString &
 
   if( obj != NULL )
   {
-    QStackedLayoutSlots * s = QCoreApplication::instance()->findChild<QStackedLayoutSlots *>();
+    QStackedLayoutSlots * s = QCoreApplication::instance()->findChild<QStackedLayoutSlots*>();
 
     if( s == NULL )
     {
       s = new QStackedLayoutSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

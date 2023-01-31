@@ -48,7 +48,7 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW )
     QWindowStateChangeEvent( Qt::WindowStates aOldState )
     */
     QWindowStateChangeEvent * obj = new QWindowStateChangeEvent( ( Qt::WindowStates ) hb_parni(1) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2) )
   {
@@ -56,7 +56,7 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW )
     QWindowStateChangeEvent( Qt::WindowStates aOldState, bool isOverride )
     */
     QWindowStateChangeEvent * obj = new QWindowStateChangeEvent( ( Qt::WindowStates ) hb_parni(1), PBOOL(2) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {

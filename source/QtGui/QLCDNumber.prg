@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QLCDNUMBER_NEW )
     QLCDNumber( QWidget * parent = 0 )
     */
     QLCDNumber * obj = new QLCDNumber( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
   {
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QLCDNUMBER_NEW )
     QLCDNumber( uint numDigits, QWidget * parent = 0 )
     */
     QLCDNumber * obj = new QLCDNumber( PUINT(1), OPQWIDGET( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QLCDNUMBER_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -638,11 +638,11 @@ HB_FUNC_STATIC( QLCDNUMBER_SETSMALLDECIMALPOINT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QLCDNumberSlots_connect_signal( const QString & signal, const QString & slot );
+void QLCDNumberSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QLCDNUMBER_ONOVERFLOW )
 {
-  QLCDNumberSlots_connect_signal( "overflow()", "overflow()" );
+  QLCDNumberSlots_connect_signal("overflow()", "overflow()");
 }
 
 #pragma ENDDUMP

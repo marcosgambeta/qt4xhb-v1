@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_NEW )
       par1 << static_cast<QGesture*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
     }
     QGestureEvent * obj = new QGestureEvent( par1 );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACTIVEGESTURES )
     {
 #endif
       QList<QGesture *> list = obj->activeGestures();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QGESTURE" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QGESTURE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_CANCELEDGESTURES )
     {
 #endif
       QList<QGesture *> list = obj->canceledGestures();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QGESTURE" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QGESTURE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURE )
     {
 #endif
       QGesture * ptr = obj->gesture( ( Qt::GestureType ) hb_parni(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QGESTURE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QGESTURE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
     {
 #endif
       QList<QGesture *> list = obj->gestures();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QGESTURE" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QGESTURE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_MAPTOGRAPHICSSCENE )
     {
 #endif
       QPointF * ptr = new QPointF( obj->mapToGraphicsScene( *PQPOINTF(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_WIDGET )
     {
 #endif
       QWidget * ptr = obj->widget();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

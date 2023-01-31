@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_NEW )
   if( ISNUMPAR(2) && HB_ISNUM(1) && ISQSPLITTER(2) )
   {
     QSplitterHandle * obj = new QSplitterHandle( ( Qt::Orientation ) hb_parni(1), PQSPLITTER(2) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_SPLITTER )
     {
 #endif
       QSplitter * ptr = obj->splitter();
-      Qt4xHb::createReturnQObjectClass( ptr, "QSPLITTER" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QSPLITTER");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QSPLITTERHANDLE_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

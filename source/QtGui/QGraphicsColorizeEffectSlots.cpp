@@ -12,7 +12,7 @@
 
 #include "QGraphicsColorizeEffectSlots.h"
 
-QGraphicsColorizeEffectSlots::QGraphicsColorizeEffectSlots( QObject * parent ) : QObject( parent )
+QGraphicsColorizeEffectSlots::QGraphicsColorizeEffectSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,14 +22,14 @@ QGraphicsColorizeEffectSlots::~QGraphicsColorizeEffectSlots()
 
 void QGraphicsColorizeEffectSlots::colorChanged( const QColor & color )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "colorChanged(QColor)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "colorChanged(QColor)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QGRAPHICSCOLORIZEEFFECT" );
-    PHB_ITEM pColor = Qt4xHb::Signals_return_object( ( void * ) &color, "QCOLOR" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QGRAPHICSCOLORIZEEFFECT");
+    PHB_ITEM pColor = Qt4xHb::Signals_return_object( ( void * ) &color, "QCOLOR");
 
     hb_vmEvalBlockV( cb, 2, pSender, pColor );
 
@@ -40,13 +40,13 @@ void QGraphicsColorizeEffectSlots::colorChanged( const QColor & color )
 
 void QGraphicsColorizeEffectSlots::strengthChanged( qreal strength )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "strengthChanged(qreal)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "strengthChanged(qreal)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QGRAPHICSCOLORIZEEFFECT" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QGRAPHICSCOLORIZEEFFECT");
     PHB_ITEM pStrength = hb_itemPutND( NULL, strength );
 
     hb_vmEvalBlockV( cb, 2, pSender, pStrength );
@@ -62,19 +62,19 @@ void QGraphicsColorizeEffectSlots_connect_signal( const QString & signal, const 
 
   if( obj != NULL )
   {
-    QGraphicsColorizeEffectSlots * s = QCoreApplication::instance()->findChild<QGraphicsColorizeEffectSlots *>();
+    QGraphicsColorizeEffectSlots * s = QCoreApplication::instance()->findChild<QGraphicsColorizeEffectSlots*>();
 
     if( s == NULL )
     {
       s = new QGraphicsColorizeEffectSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

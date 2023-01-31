@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QICONENGINEV2_AVAILABLESIZES )
     {
 #endif
       QList<QSize> list = obj->availableSizes( HB_ISNIL(1) ? ( QIcon::Mode ) QIcon::Normal : ( QIcon::Mode ) hb_parni(1), HB_ISNIL(2) ? ( QIcon::State ) QIcon::Off : ( QIcon::State ) hb_parni(2) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSIZE" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QSIZE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QICONENGINEV2_CLONE )
     {
 #endif
       QIconEngineV2 * ptr = obj->clone();
-      Qt4xHb::createReturnClass( ptr, "QICONENGINEV2", false );
+      Qt4xHb::createReturnClass(ptr, "QICONENGINEV2", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

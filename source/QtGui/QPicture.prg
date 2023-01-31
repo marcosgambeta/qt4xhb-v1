@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QPICTURE_NEW )
     QPicture( int formatVersion = -1 )
     */
     QPicture * obj = new QPicture( OPINT( 1, -1 ) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQPICTURE(1) )
   {
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QPICTURE_NEW )
     QPicture( const QPicture & pic )
     */
     QPicture * obj = new QPicture( *PQPICTURE(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QPICTURE_BOUNDINGRECT )
     {
 #endif
       QRect * ptr = new QRect( obj->boundingRect() );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

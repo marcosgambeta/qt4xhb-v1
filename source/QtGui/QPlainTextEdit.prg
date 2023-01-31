@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_NEW )
     QPlainTextEdit( QWidget * parent = 0 )
     */
     QPlainTextEdit * obj = new QPlainTextEdit( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
   {
@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_NEW )
     QPlainTextEdit( const QString & text, QWidget * parent = 0 )
     */
     QPlainTextEdit * obj = new QPlainTextEdit( PQSTRING(1), OPQWIDGET( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CREATESTANDARDCONTEXTMENU )
     {
 #endif
       QMenu * ptr = obj->createStandardContextMenu();
-      Qt4xHb::createReturnQObjectClass( ptr, "QMENU" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QMENU");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CURRENTCHARFORMAT )
     {
 #endif
       QTextCharFormat * ptr = new QTextCharFormat( obj->currentCharFormat() );
-      Qt4xHb::createReturnClass( ptr, "QTEXTCHARFORMAT", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORFORPOSITION )
     {
 #endif
       QTextCursor * ptr = new QTextCursor( obj->cursorForPosition( *PQPOINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QTEXTCURSOR", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -364,7 +364,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORRECT )
     if( obj != NULL )
     {
       QRect * ptr = new QRect( obj->cursorRect( *PQTEXTCURSOR(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
   else if( ISNUMPAR(0) )
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORRECT )
     if( obj != NULL )
     {
       QRect * ptr = new QRect( obj->cursorRect() );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
   else
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_DOCUMENT )
     {
 #endif
       QTextDocument * ptr = obj->document();
-      Qt4xHb::createReturnQObjectClass( ptr, "QTEXTDOCUMENT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -595,7 +595,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_LOADRESOURCE )
     {
 #endif
       QVariant * ptr = new QVariant( obj->loadResource( PINT(1), *PQURL(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1210,7 +1210,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_TEXTCURSOR )
     {
 #endif
       QTextCursor * ptr = new QTextCursor( obj->textCursor() );
-      Qt4xHb::createReturnClass( ptr, "QTEXTCURSOR", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1605,51 +1605,51 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_UNDO )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QPlainTextEditSlots_connect_signal( const QString & signal, const QString & slot );
+void QPlainTextEditSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONBLOCKCOUNTCHANGED )
 {
-  QPlainTextEditSlots_connect_signal( "blockCountChanged(int)", "blockCountChanged(int)" );
+  QPlainTextEditSlots_connect_signal("blockCountChanged(int)", "blockCountChanged(int)");
 }
 
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONCOPYAVAILABLE )
 {
-  QPlainTextEditSlots_connect_signal( "copyAvailable(bool)", "copyAvailable(bool)" );
+  QPlainTextEditSlots_connect_signal("copyAvailable(bool)", "copyAvailable(bool)");
 }
 
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONCURSORPOSITIONCHANGED )
 {
-  QPlainTextEditSlots_connect_signal( "cursorPositionChanged()", "cursorPositionChanged()" );
+  QPlainTextEditSlots_connect_signal("cursorPositionChanged()", "cursorPositionChanged()");
 }
 
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONMODIFICATIONCHANGED )
 {
-  QPlainTextEditSlots_connect_signal( "modificationChanged(bool)", "modificationChanged(bool)" );
+  QPlainTextEditSlots_connect_signal("modificationChanged(bool)", "modificationChanged(bool)");
 }
 
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONREDOAVAILABLE )
 {
-  QPlainTextEditSlots_connect_signal( "redoAvailable(bool)", "redoAvailable(bool)" );
+  QPlainTextEditSlots_connect_signal("redoAvailable(bool)", "redoAvailable(bool)");
 }
 
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONSELECTIONCHANGED )
 {
-  QPlainTextEditSlots_connect_signal( "selectionChanged()", "selectionChanged()" );
+  QPlainTextEditSlots_connect_signal("selectionChanged()", "selectionChanged()");
 }
 
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONTEXTCHANGED )
 {
-  QPlainTextEditSlots_connect_signal( "textChanged()", "textChanged()" );
+  QPlainTextEditSlots_connect_signal("textChanged()", "textChanged()");
 }
 
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONUNDOAVAILABLE )
 {
-  QPlainTextEditSlots_connect_signal( "undoAvailable(bool)", "undoAvailable(bool)" );
+  QPlainTextEditSlots_connect_signal("undoAvailable(bool)", "undoAvailable(bool)");
 }
 
 HB_FUNC_STATIC( QPLAINTEXTEDIT_ONUPDATEREQUEST )
 {
-  QPlainTextEditSlots_connect_signal( "updateRequest(QRect,int)", "updateRequest(QRect,int)" );
+  QPlainTextEditSlots_connect_signal("updateRequest(QRect,int)", "updateRequest(QRect,int)");
 }
 
 #pragma ENDDUMP

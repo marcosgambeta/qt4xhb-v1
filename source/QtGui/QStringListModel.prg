@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW )
     QStringListModel( QObject * parent = 0 )
     */
     QStringListModel * obj = new QStringListModel( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && HB_ISARRAY(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
   {
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_NEW )
     QStringListModel( const QStringList & strings, QObject * parent = 0 )
     */
     QStringListModel * obj = new QStringListModel( PQSTRINGLIST(1), OPQOBJECT( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -138,7 +138,7 @@ HB_FUNC_STATIC( QSTRINGLISTMODEL_DATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX(1), PINT(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

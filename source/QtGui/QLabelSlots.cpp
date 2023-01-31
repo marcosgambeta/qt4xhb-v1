@@ -12,7 +12,7 @@
 
 #include "QLabelSlots.h"
 
-QLabelSlots::QLabelSlots( QObject * parent ) : QObject( parent )
+QLabelSlots::QLabelSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QLabelSlots::~QLabelSlots()
 
 void QLabelSlots::linkActivated( const QString & link )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "linkActivated(QString)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "linkActivated(QString)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QLABEL" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QLABEL");
     PHB_ITEM pLink = hb_itemPutC( NULL, QSTRINGTOSTRING( link ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pLink );
@@ -40,13 +40,13 @@ void QLabelSlots::linkActivated( const QString & link )
 
 void QLabelSlots::linkHovered( const QString & link )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "linkHovered(QString)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "linkHovered(QString)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QLABEL" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QLABEL");
     PHB_ITEM pLink = hb_itemPutC( NULL, QSTRINGTOSTRING( link ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pLink );
@@ -62,19 +62,19 @@ void QLabelSlots_connect_signal( const QString & signal, const QString & slot )
 
   if( obj != NULL )
   {
-    QLabelSlots * s = QCoreApplication::instance()->findChild<QLabelSlots *>();
+    QLabelSlots * s = QCoreApplication::instance()->findChild<QLabelSlots*>();
 
     if( s == NULL )
     {
       s = new QLabelSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

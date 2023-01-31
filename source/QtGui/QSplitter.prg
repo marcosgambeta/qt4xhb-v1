@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QSPLITTER_NEW )
     QSplitter( QWidget * parent = 0 )
     */
     QSplitter * obj = new QSplitter( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
   {
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QSPLITTER_NEW )
     QSplitter( Qt::Orientation orientation, QWidget * parent = 0 )
     */
     QSplitter * obj = new QSplitter( ( Qt::Orientation ) hb_parni(1), OPQWIDGET( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QSPLITTER_HANDLE )
     {
 #endif
       QSplitterHandle * ptr = obj->handle( PINT(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QSPLITTERHANDLE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QSPLITTERHANDLE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QSPLITTER_SAVESTATE )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->saveState() );
-      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QSPLITTER_WIDGET )
     {
 #endif
       QWidget * ptr = obj->widget( PINT(1) );
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -718,7 +718,7 @@ HB_FUNC_STATIC( QSPLITTER_MINIMUMSIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -743,7 +743,7 @@ HB_FUNC_STATIC( QSPLITTER_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -754,11 +754,11 @@ HB_FUNC_STATIC( QSPLITTER_SIZEHINT )
   }
 }
 
-void QSplitterSlots_connect_signal( const QString & signal, const QString & slot );
+void QSplitterSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSPLITTER_ONSPLITTERMOVED )
 {
-  QSplitterSlots_connect_signal( "splitterMoved(int,int)", "splitterMoved(int,int)" );
+  QSplitterSlots_connect_signal("splitterMoved(int,int)", "splitterMoved(int,int)");
 }
 
 #pragma ENDDUMP

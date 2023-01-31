@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_FONTPROPERTY )
     {
 #endif
       QVariant * ptr = new QVariant( obj->fontProperty( ( QAbstractFontEngine::FontProperty ) hb_parni(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

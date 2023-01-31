@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABWIDGETFRAME_NEW )
     QStyleOptionTabWidgetFrame()
     */
     QStyleOptionTabWidgetFrame * obj = new QStyleOptionTabWidgetFrame();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSTYLEOPTIONTABWIDGETFRAME(1) )
   {
@@ -66,7 +66,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABWIDGETFRAME_NEW )
     QStyleOptionTabWidgetFrame( const QStyleOptionTabWidgetFrame & other )
     */
     QStyleOptionTabWidgetFrame * obj = new QStyleOptionTabWidgetFrame( *PQSTYLEOPTIONTABWIDGETFRAME(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABWIDGETFRAME_TABBARSIZE )
     if( ISNUMPAR(0) )
     {
       QSize * ptr = new QSize( obj->tabBarSize );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
     }
     else
     {
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABWIDGETFRAME_RIGHTCORNERWIDGETSIZE )
     if( ISNUMPAR(0) )
     {
       QSize * ptr = new QSize( obj->rightCornerWidgetSize );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
     }
     else
     {
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONTABWIDGETFRAME_LEFTCORNERWIDGETSIZE )
     if( ISNUMPAR(0) )
     {
       QSize * ptr = new QSize( obj->leftCornerWidgetSize );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
     }
     else
     {

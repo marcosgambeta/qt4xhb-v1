@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_NEW )
   if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QDoubleSpinBox * obj = new QDoubleSpinBox( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -582,16 +582,16 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_SETVALUE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QDoubleSpinBoxSlots_connect_signal( const QString & signal, const QString & slot );
+void QDoubleSpinBoxSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QDOUBLESPINBOX_ONVALUECHANGED1 )
 {
-  QDoubleSpinBoxSlots_connect_signal( "valueChanged(double)", "valueChanged(double)" );
+  QDoubleSpinBoxSlots_connect_signal("valueChanged(double)", "valueChanged(double)");
 }
 
 HB_FUNC_STATIC( QDOUBLESPINBOX_ONVALUECHANGED2 )
 {
-  QDoubleSpinBoxSlots_connect_signal( "valueChanged(QString)", "valueChanged(QString)" );
+  QDoubleSpinBoxSlots_connect_signal("valueChanged(QString)", "valueChanged(QString)");
 }
 
 #pragma ENDDUMP

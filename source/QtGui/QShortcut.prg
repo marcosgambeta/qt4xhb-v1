@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QSHORTCUT_NEW )
     QShortcut( QWidget * parent )
     */
     QShortcut * obj = new QShortcut( PQWIDGET(1) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(2, 5) && ISQKEYSEQUENCE(1) && ISQWIDGET(2) && ( HB_ISCHAR(3) || HB_ISNIL(3) ) && ( HB_ISCHAR(4) || HB_ISNIL(4) ) && ( HB_ISNUM(5) || HB_ISNIL(5) ) )
   {
@@ -73,7 +73,7 @@ HB_FUNC_STATIC( QSHORTCUT_NEW )
     QShortcut( const QKeySequence & key, QWidget * parent, const char * member = 0, const char * ambiguousMember = 0, Qt::ShortcutContext context = Qt::WindowShortcut )
     */
     QShortcut * obj = new QShortcut( *PQKEYSEQUENCE(1), PQWIDGET(2), OPCONSTCHAR( 3, 0 ), OPCONSTCHAR( 4, 0 ), HB_ISNIL(5) ? ( Qt::ShortcutContext ) Qt::WindowShortcut : ( Qt::ShortcutContext ) hb_parni(5) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QSHORTCUT_KEY )
     {
 #endif
       QKeySequence * ptr = new QKeySequence( obj->key() );
-      Qt4xHb::createReturnClass( ptr, "QKEYSEQUENCE", true );
+      Qt4xHb::createReturnClass(ptr, "QKEYSEQUENCE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -234,7 +234,7 @@ HB_FUNC_STATIC( QSHORTCUT_PARENTWIDGET )
     {
 #endif
       QWidget * ptr = obj->parentWidget();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -399,16 +399,16 @@ HB_FUNC_STATIC( QSHORTCUT_WHATSTHIS )
   }
 }
 
-void QShortcutSlots_connect_signal( const QString & signal, const QString & slot );
+void QShortcutSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSHORTCUT_ONACTIVATED )
 {
-  QShortcutSlots_connect_signal( "activated()", "activated()" );
+  QShortcutSlots_connect_signal("activated()", "activated()");
 }
 
 HB_FUNC_STATIC( QSHORTCUT_ONACTIVATEDAMBIGUOUSLY )
 {
-  QShortcutSlots_connect_signal( "activatedAmbiguously()", "activatedAmbiguously()" );
+  QShortcutSlots_connect_signal("activatedAmbiguously()", "activatedAmbiguously()");
 }
 
 #pragma ENDDUMP

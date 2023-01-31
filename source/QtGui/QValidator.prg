@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QVALIDATOR_LOCALE )
     {
 #endif
       QLocale * ptr = new QLocale( obj->locale() );
-      Qt4xHb::createReturnClass( ptr, "QLOCALE", true );
+      Qt4xHb::createReturnClass(ptr, "QLOCALE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

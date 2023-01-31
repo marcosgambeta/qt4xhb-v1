@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEW )
   if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
   {
     QTextBlock * obj = new QTextBlock( *PQTEXTBLOCK(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -130,7 +130,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_BLOCKFORMAT )
     {
 #endif
       QTextBlockFormat * ptr = new QTextBlockFormat( obj->blockFormat() );
-      Qt4xHb::createReturnClass( ptr, "QTEXTBLOCKFORMAT", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTBLOCKFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -203,7 +203,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_CHARFORMAT )
     {
 #endif
       QTextCharFormat * ptr = new QTextCharFormat( obj->charFormat() );
-      Qt4xHb::createReturnClass( ptr, "QTEXTCHARFORMAT", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_DOCUMENT )
     {
 #endif
       const QTextDocument * ptr = obj->document();
-      Qt4xHb::createReturnQObjectClass( ptr, "QTEXTDOCUMENT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -399,7 +399,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_LAYOUT )
     {
 #endif
       QTextLayout * ptr = obj->layout();
-      Qt4xHb::createReturnClass( ptr, "QTEXTLAYOUT", false );
+      Qt4xHb::createReturnClass(ptr, "QTEXTLAYOUT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -472,7 +472,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEXT )
     {
 #endif
       QTextBlock * ptr = new QTextBlock( obj->next() );
-      Qt4xHb::createReturnClass( ptr, "QTEXTBLOCK", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTBLOCK", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_PREVIOUS )
     {
 #endif
       QTextBlock * ptr = new QTextBlock( obj->previous() );
-      Qt4xHb::createReturnClass( ptr, "QTEXTBLOCK", true );
+      Qt4xHb::createReturnClass(ptr, "QTEXTBLOCK", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -748,7 +748,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_TEXTLIST )
     {
 #endif
       QTextList * ptr = obj->textList();
-      Qt4xHb::createReturnQObjectClass( ptr, "QTEXTLIST" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QTEXTLIST");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -773,7 +773,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_USERDATA )
     {
 #endif
       QTextBlockUserData * ptr = obj->userData();
-      Qt4xHb::createReturnClass( ptr, "QTEXTBLOCKUSERDATA", false );
+      Qt4xHb::createReturnClass(ptr, "QTEXTBLOCKUSERDATA", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -814,28 +814,28 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QTEXTBLOCK_NEWFROMOBJECT )
@@ -850,7 +850,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QTEXTBLOCK_SELFDESTRUCTION )
 {
-  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QTEXTBLOCK_SETSELFDESTRUCTION )
@@ -859,16 +859,16 @@ HB_FUNC_STATIC( QTEXTBLOCK_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

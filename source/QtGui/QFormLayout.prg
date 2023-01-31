@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_NEW )
   if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QFormLayout * obj = new QFormLayout( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -401,7 +401,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD )
     if( obj != NULL )
     {
       QWidget * ptr = obj->labelForField( PQWIDGET(1) );
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
     }
   }
   else if( ISNUMPAR(1) && ISQLAYOUT(1) )
@@ -414,7 +414,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_LABELFORFIELD )
     if( obj != NULL )
     {
       QWidget * ptr = obj->labelForField( PQLAYOUT(1) );
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
     }
   }
   else
@@ -939,7 +939,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ITEMAT )
     if( obj != NULL )
     {
       QLayoutItem * ptr = obj->itemAt( PINT(1), ( QFormLayout::ItemRole ) hb_parni(2) );
-      Qt4xHb::createReturnClass( ptr, "QLAYOUTITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QLAYOUTITEM", false);
     }
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -952,7 +952,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_ITEMAT )
     if( obj != NULL )
     {
       QLayoutItem * ptr = obj->itemAt( PINT(1) );
-      Qt4xHb::createReturnClass( ptr, "QLAYOUTITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QLAYOUTITEM", false);
     }
   }
   else
@@ -975,7 +975,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_MINIMUMSIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSize() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1026,7 +1026,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1051,7 +1051,7 @@ HB_FUNC_STATIC( QFORMLAYOUT_TAKEAT )
     {
 #endif
       QLayoutItem * ptr = obj->takeAt( PINT(1) );
-      Qt4xHb::createReturnClass( ptr, "QLAYOUTITEM", false );
+      Qt4xHb::createReturnClass(ptr, "QLAYOUTITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

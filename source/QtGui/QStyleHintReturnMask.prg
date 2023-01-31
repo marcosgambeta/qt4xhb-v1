@@ -46,7 +46,7 @@ HB_FUNC_STATIC( QSTYLEHINTRETURNMASK_NEW )
   if( ISNUMPAR(0) )
   {
     QStyleHintReturnMask * obj = new QStyleHintReturnMask();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {

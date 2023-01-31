@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QMOVIE_NEW )
     QMovie( QObject * parent = 0 )
     */
     QMovie * obj = new QMovie( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 3) && ISQIODEVICE(1) && ( ISQBYTEARRAY(2) || HB_ISNIL(2) ) && ( ISQOBJECT(3) || HB_ISNIL(3) ) )
   {
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QMOVIE_NEW )
     QMovie( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = 0 )
     */
     QMovie * obj = new QMovie( PQIODEVICE(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray*>( Qt4xHb::itemGetPtr(2) ), OPQOBJECT( 3, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && ( ISQBYTEARRAY(2) || HB_ISNIL(2) ) && ( ISQOBJECT(3) || HB_ISNIL(3) ) )
   {
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QMOVIE_NEW )
     QMovie( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = 0 )
     */
     QMovie * obj = new QMovie( PQSTRING(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray*>( Qt4xHb::itemGetPtr(2) ), OPQOBJECT( 3, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QMOVIE_BACKGROUNDCOLOR )
     {
 #endif
       QColor * ptr = new QColor( obj->backgroundColor() );
-      Qt4xHb::createReturnClass( ptr, "QCOLOR", true );
+      Qt4xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QMOVIE_CURRENTIMAGE )
     {
 #endif
       QImage * ptr = new QImage( obj->currentImage() );
-      Qt4xHb::createReturnClass( ptr, "QIMAGE", true );
+      Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QMOVIE_CURRENTPIXMAP )
     {
 #endif
       QPixmap * ptr = new QPixmap( obj->currentPixmap() );
-      Qt4xHb::createReturnClass( ptr, "QPIXMAP", true );
+      Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QMOVIE_DEVICE )
     {
 #endif
       QIODevice * ptr = obj->device();
-      Qt4xHb::createReturnQObjectClass( ptr, "QIODEVICE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QMOVIE_FORMAT )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->format() );
-      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QMOVIE_FRAMERECT )
     {
 #endif
       QRect * ptr = new QRect( obj->frameRect() );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QMOVIE_SCALEDSIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->scaledSize() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -846,7 +846,7 @@ HB_FUNC_STATIC( QMOVIE_SUPPORTEDFORMATS )
   {
 #endif
     QList<QByteArray> list = QMovie::supportedFormats();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY");
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
@@ -883,41 +883,41 @@ HB_FUNC_STATIC( QMOVIE_SUPPORTEDFORMATS )
 #endif
 }
 
-void QMovieSlots_connect_signal( const QString & signal, const QString & slot );
+void QMovieSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QMOVIE_ONERROR )
 {
-  QMovieSlots_connect_signal( "error(QImageReader::ImageReaderError)", "error(QImageReader::ImageReaderError)" );
+  QMovieSlots_connect_signal("error(QImageReader::ImageReaderError)", "error(QImageReader::ImageReaderError)");
 }
 
 HB_FUNC_STATIC( QMOVIE_ONFINISHED )
 {
-  QMovieSlots_connect_signal( "finished()", "finished()" );
+  QMovieSlots_connect_signal("finished()", "finished()");
 }
 
 HB_FUNC_STATIC( QMOVIE_ONFRAMECHANGED )
 {
-  QMovieSlots_connect_signal( "frameChanged(int)", "frameChanged(int)" );
+  QMovieSlots_connect_signal("frameChanged(int)", "frameChanged(int)");
 }
 
 HB_FUNC_STATIC( QMOVIE_ONRESIZED )
 {
-  QMovieSlots_connect_signal( "resized(QSize)", "resized(QSize)" );
+  QMovieSlots_connect_signal("resized(QSize)", "resized(QSize)");
 }
 
 HB_FUNC_STATIC( QMOVIE_ONSTARTED )
 {
-  QMovieSlots_connect_signal( "started()", "started()" );
+  QMovieSlots_connect_signal("started()", "started()");
 }
 
 HB_FUNC_STATIC( QMOVIE_ONSTATECHANGED )
 {
-  QMovieSlots_connect_signal( "stateChanged(QMovie::MovieState)", "stateChanged(QMovie::MovieState)" );
+  QMovieSlots_connect_signal("stateChanged(QMovie::MovieState)", "stateChanged(QMovie::MovieState)");
 }
 
 HB_FUNC_STATIC( QMOVIE_ONUPDATED )
 {
-  QMovieSlots_connect_signal( "updated(QRect)", "updated(QRect)" );
+  QMovieSlots_connect_signal("updated(QRect)", "updated(QRect)");
 }
 
 #pragma ENDDUMP

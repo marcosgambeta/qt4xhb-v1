@@ -12,7 +12,7 @@
 
 #include "QMessageBoxSlots.h"
 
-QMessageBoxSlots::QMessageBoxSlots( QObject * parent ) : QObject( parent )
+QMessageBoxSlots::QMessageBoxSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,14 +22,14 @@ QMessageBoxSlots::~QMessageBoxSlots()
 
 void QMessageBoxSlots::buttonClicked( QAbstractButton * button )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "buttonClicked(QAbstractButton*)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "buttonClicked(QAbstractButton*)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QMESSAGEBOX" );
-    PHB_ITEM pButton = Qt4xHb::Signals_return_qobject( button, "QABSTRACTBUTTON" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QMESSAGEBOX");
+    PHB_ITEM pButton = Qt4xHb::Signals_return_qobject( button, "QABSTRACTBUTTON");
 
     hb_vmEvalBlockV( cb, 2, pSender, pButton );
 
@@ -44,19 +44,19 @@ void QMessageBoxSlots_connect_signal( const QString & signal, const QString & sl
 
   if( obj != NULL )
   {
-    QMessageBoxSlots * s = QCoreApplication::instance()->findChild<QMessageBoxSlots *>();
+    QMessageBoxSlots * s = QCoreApplication::instance()->findChild<QMessageBoxSlots*>();
 
     if( s == NULL )
     {
       s = new QMessageBoxSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

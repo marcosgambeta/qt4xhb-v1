@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QWIDGET_NEW )
   if( ISBETWEEN(0, 2) && ( ISQWIDGET(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
   {
     QWidget * obj = new QWidget( OPQWIDGET( 1, 0 ), HB_ISNIL(2) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(2) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QWIDGET_ACTIONS )
     {
 #endif
       QList<QAction *> list = obj->actions();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QACTION" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QACTION");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -657,7 +657,7 @@ HB_FUNC_STATIC( QWIDGET_BASESIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->baseSize() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -680,7 +680,7 @@ HB_FUNC_STATIC( QWIDGET_CHILDAT )
     if( obj != NULL )
     {
       QWidget * ptr = obj->childAt( PINT(1), PINT(2) );
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
     }
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QWIDGET_CHILDAT )
     if( obj != NULL )
     {
       QWidget * ptr = obj->childAt( *PQPOINT(1) );
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
     }
   }
   else
@@ -716,7 +716,7 @@ HB_FUNC_STATIC( QWIDGET_CHILDRENRECT )
     {
 #endif
       QRect * ptr = new QRect( obj->childrenRect() );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -741,7 +741,7 @@ HB_FUNC_STATIC( QWIDGET_CHILDRENREGION )
     {
 #endif
       QRegion * ptr = new QRegion( obj->childrenRegion() );
-      Qt4xHb::createReturnClass( ptr, "QREGION", true );
+      Qt4xHb::createReturnClass(ptr, "QREGION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -818,7 +818,7 @@ HB_FUNC_STATIC( QWIDGET_CONTENTSMARGINS )
     {
 #endif
       QMargins * ptr = new QMargins( obj->contentsMargins() );
-      Qt4xHb::createReturnClass( ptr, "QMARGINS", true );
+      Qt4xHb::createReturnClass(ptr, "QMARGINS", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -843,7 +843,7 @@ HB_FUNC_STATIC( QWIDGET_CONTENTSRECT )
     {
 #endif
       QRect * ptr = new QRect( obj->contentsRect() );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -892,7 +892,7 @@ HB_FUNC_STATIC( QWIDGET_CURSOR )
     {
 #endif
       QCursor * ptr = new QCursor( obj->cursor() );
-      Qt4xHb::createReturnClass( ptr, "QCURSOR", true );
+      Qt4xHb::createReturnClass(ptr, "QCURSOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -992,7 +992,7 @@ HB_FUNC_STATIC( QWIDGET_FOCUSPROXY )
     {
 #endif
       QWidget * ptr = obj->focusProxy();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1017,7 +1017,7 @@ HB_FUNC_STATIC( QWIDGET_FOCUSWIDGET )
     {
 #endif
       QWidget * ptr = obj->focusWidget();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1042,7 +1042,7 @@ HB_FUNC_STATIC( QWIDGET_FONT )
     {
 #endif
       const QFont * ptr = &obj->font();
-      Qt4xHb::createReturnClass( ptr, "QFONT", false );
+      Qt4xHb::createReturnClass(ptr, "QFONT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1067,7 +1067,7 @@ HB_FUNC_STATIC( QWIDGET_FONTINFO )
     {
 #endif
       QFontInfo * ptr = new QFontInfo( obj->fontInfo() );
-      Qt4xHb::createReturnClass( ptr, "QFONTINFO", true );
+      Qt4xHb::createReturnClass(ptr, "QFONTINFO", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1092,7 +1092,7 @@ HB_FUNC_STATIC( QWIDGET_FONTMETRICS )
     {
 #endif
       QFontMetrics * ptr = new QFontMetrics( obj->fontMetrics() );
-      Qt4xHb::createReturnClass( ptr, "QFONTMETRICS", true );
+      Qt4xHb::createReturnClass(ptr, "QFONTMETRICS", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1141,7 +1141,7 @@ HB_FUNC_STATIC( QWIDGET_FRAMEGEOMETRY )
     {
 #endif
       QRect * ptr = new QRect( obj->frameGeometry() );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1166,7 +1166,7 @@ HB_FUNC_STATIC( QWIDGET_FRAMESIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->frameSize() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1191,7 +1191,7 @@ HB_FUNC_STATIC( QWIDGET_GEOMETRY )
     {
 #endif
       const QRect * ptr = &obj->geometry();
-      Qt4xHb::createReturnClass( ptr, "QRECT", false );
+      Qt4xHb::createReturnClass(ptr, "QRECT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1362,7 +1362,7 @@ HB_FUNC_STATIC( QWIDGET_GRAPHICSEFFECT )
     {
 #endif
       QGraphicsEffect * ptr = obj->graphicsEffect();
-      Qt4xHb::createReturnQObjectClass( ptr, "QGRAPHICSEFFECT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QGRAPHICSEFFECT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1387,7 +1387,7 @@ HB_FUNC_STATIC( QWIDGET_GRAPHICSPROXYWIDGET )
     {
 #endif
       QGraphicsProxyWidget * ptr = obj->graphicsProxyWidget();
-      Qt4xHb::createReturnQObjectClass( ptr, "QGRAPHICSPROXYWIDGET" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QGRAPHICSPROXYWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1508,7 +1508,7 @@ HB_FUNC_STATIC( QWIDGET_INPUTCONTEXT )
     {
 #endif
       QInputContext * ptr = obj->inputContext();
-      Qt4xHb::createReturnQObjectClass( ptr, "QINPUTCONTEXT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QINPUTCONTEXT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1557,7 +1557,7 @@ HB_FUNC_STATIC( QWIDGET_INPUTMETHODQUERY )
     {
 #endif
       QVariant * ptr = new QVariant( obj->inputMethodQuery( ( Qt::InputMethodQuery ) hb_parni(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1953,7 +1953,7 @@ HB_FUNC_STATIC( QWIDGET_LAYOUT )
     {
 #endif
       QLayout * ptr = obj->layout();
-      Qt4xHb::createReturnQObjectClass( ptr, "QLAYOUT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QLAYOUT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2002,7 +2002,7 @@ HB_FUNC_STATIC( QWIDGET_LOCALE )
     {
 #endif
       QLocale * ptr = new QLocale( obj->locale() );
-      Qt4xHb::createReturnClass( ptr, "QLOCALE", true );
+      Qt4xHb::createReturnClass(ptr, "QLOCALE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2027,7 +2027,7 @@ HB_FUNC_STATIC( QWIDGET_MAPFROM )
     {
 #endif
       QPoint * ptr = new QPoint( obj->mapFrom( PQWIDGET(1), *PQPOINT(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2052,7 +2052,7 @@ HB_FUNC_STATIC( QWIDGET_MAPFROMGLOBAL )
     {
 #endif
       QPoint * ptr = new QPoint( obj->mapFromGlobal( *PQPOINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2077,7 +2077,7 @@ HB_FUNC_STATIC( QWIDGET_MAPFROMPARENT )
     {
 #endif
       QPoint * ptr = new QPoint( obj->mapFromParent( *PQPOINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2102,7 +2102,7 @@ HB_FUNC_STATIC( QWIDGET_MAPTO )
     {
 #endif
       QPoint * ptr = new QPoint( obj->mapTo( PQWIDGET(1), *PQPOINT(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2127,7 +2127,7 @@ HB_FUNC_STATIC( QWIDGET_MAPTOGLOBAL )
     {
 #endif
       QPoint * ptr = new QPoint( obj->mapToGlobal( *PQPOINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2152,7 +2152,7 @@ HB_FUNC_STATIC( QWIDGET_MAPTOPARENT )
     {
 #endif
       QPoint * ptr = new QPoint( obj->mapToParent( *PQPOINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2177,7 +2177,7 @@ HB_FUNC_STATIC( QWIDGET_MASK )
     {
 #endif
       QRegion * ptr = new QRegion( obj->mask() );
-      Qt4xHb::createReturnClass( ptr, "QREGION", true );
+      Qt4xHb::createReturnClass(ptr, "QREGION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2226,7 +2226,7 @@ HB_FUNC_STATIC( QWIDGET_MAXIMUMSIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->maximumSize() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2299,7 +2299,7 @@ HB_FUNC_STATIC( QWIDGET_MINIMUMSIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSize() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2324,7 +2324,7 @@ HB_FUNC_STATIC( QWIDGET_MINIMUMSIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->minimumSizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2409,7 +2409,7 @@ HB_FUNC_STATIC( QWIDGET_NATIVEPARENTWIDGET )
     {
 #endif
       QWidget * ptr = obj->nativeParentWidget();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2434,7 +2434,7 @@ HB_FUNC_STATIC( QWIDGET_NEXTINFOCUSCHAIN )
     {
 #endif
       QWidget * ptr = obj->nextInFocusChain();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2459,7 +2459,7 @@ HB_FUNC_STATIC( QWIDGET_NORMALGEOMETRY )
     {
 #endif
       QRect * ptr = new QRect( obj->normalGeometry() );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2510,7 +2510,7 @@ HB_FUNC_STATIC( QWIDGET_PALETTE )
     {
 #endif
       const QPalette * ptr = &obj->palette();
-      Qt4xHb::createReturnClass( ptr, "QPALETTE", false );
+      Qt4xHb::createReturnClass(ptr, "QPALETTE", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2535,7 +2535,7 @@ HB_FUNC_STATIC( QWIDGET_PARENTWIDGET )
     {
 #endif
       QWidget * ptr = obj->parentWidget();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2560,7 +2560,7 @@ HB_FUNC_STATIC( QWIDGET_POS )
     {
 #endif
       QPoint * ptr = new QPoint( obj->pos() );
-      Qt4xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2585,7 +2585,7 @@ HB_FUNC_STATIC( QWIDGET_PREVIOUSINFOCUSCHAIN )
     {
 #endif
       QWidget * ptr = obj->previousInFocusChain();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2610,7 +2610,7 @@ HB_FUNC_STATIC( QWIDGET_RECT )
     {
 #endif
       QRect * ptr = new QRect( obj->rect() );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2885,7 +2885,7 @@ HB_FUNC_STATIC( QWIDGET_SAVEGEOMETRY )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->saveGeometry() );
-      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -4408,7 +4408,7 @@ HB_FUNC_STATIC( QWIDGET_SIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->size() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -4433,7 +4433,7 @@ HB_FUNC_STATIC( QWIDGET_SIZEHINT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeHint() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -4458,7 +4458,7 @@ HB_FUNC_STATIC( QWIDGET_SIZEINCREMENT )
     {
 #endif
       QSize * ptr = new QSize( obj->sizeIncrement() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -4483,7 +4483,7 @@ HB_FUNC_STATIC( QWIDGET_SIZEPOLICY )
     {
 #endif
       QSizePolicy * ptr = new QSizePolicy( obj->sizePolicy() );
-      Qt4xHb::createReturnClass( ptr, "QSIZEPOLICY", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZEPOLICY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -4558,7 +4558,7 @@ HB_FUNC_STATIC( QWIDGET_STYLE )
     {
 #endif
       QStyle * ptr = obj->style();
-      Qt4xHb::createReturnQObjectClass( ptr, "QSTYLE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QSTYLE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -4897,7 +4897,7 @@ HB_FUNC_STATIC( QWIDGET_VISIBLEREGION )
     {
 #endif
       QRegion * ptr = new QRegion( obj->visibleRegion() );
-      Qt4xHb::createReturnClass( ptr, "QREGION", true );
+      Qt4xHb::createReturnClass(ptr, "QREGION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -4995,7 +4995,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOW )
     {
 #endif
       QWidget * ptr = obj->window();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -5068,7 +5068,7 @@ HB_FUNC_STATIC( QWIDGET_WINDOWICON )
     {
 #endif
       QIcon * ptr = new QIcon( obj->windowIcon() );
-      Qt4xHb::createReturnClass( ptr, "QICON", true );
+      Qt4xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -5309,7 +5309,7 @@ HB_FUNC_STATIC( QWIDGET_PAINTENGINE )
     {
 #endif
       QPaintEngine * ptr = obj->paintEngine();
-      Qt4xHb::createReturnClass( ptr, "QPAINTENGINE", false );
+      Qt4xHb::createReturnClass(ptr, "QPAINTENGINE", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -5993,7 +5993,7 @@ HB_FUNC_STATIC( QWIDGET_FIND )
   {
 #endif
     QWidget * ptr = QWidget::find( ( WId ) hb_parptr(1) );
-    Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+    Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -6013,7 +6013,7 @@ HB_FUNC_STATIC( QWIDGET_KEYBOARDGRABBER )
   {
 #endif
     QWidget * ptr = QWidget::keyboardGrabber();
-    Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+    Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -6033,7 +6033,7 @@ HB_FUNC_STATIC( QWIDGET_MOUSEGRABBER )
   {
 #endif
     QWidget * ptr = QWidget::mouseGrabber();
-    Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+    Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -6064,11 +6064,11 @@ HB_FUNC_STATIC( QWIDGET_SETTABORDER )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QWidgetSlots_connect_signal( const QString & signal, const QString & slot );
+void QWidgetSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QWIDGET_ONCUSTOMCONTEXTMENUREQUESTED )
 {
-  QWidgetSlots_connect_signal( "customContextMenuRequested(QPoint)", "customContextMenuRequested(QPoint)" );
+  QWidgetSlots_connect_signal("customContextMenuRequested(QPoint)", "customContextMenuRequested(QPoint)");
 }
 
 #pragma ENDDUMP

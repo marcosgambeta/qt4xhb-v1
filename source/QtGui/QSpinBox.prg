@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QSPINBOX_NEW )
   if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
   {
     QSpinBox * obj = new QSpinBox( OPQWIDGET( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -441,16 +441,16 @@ HB_FUNC_STATIC( QSPINBOX_SETVALUE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QSpinBoxSlots_connect_signal( const QString & signal, const QString & slot );
+void QSpinBoxSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSPINBOX_ONVALUECHANGED1 )
 {
-  QSpinBoxSlots_connect_signal( "valueChanged(int)", "valueChanged(int)" );
+  QSpinBoxSlots_connect_signal("valueChanged(int)", "valueChanged(int)");
 }
 
 HB_FUNC_STATIC( QSPINBOX_ONVALUECHANGED2 )
 {
-  QSpinBoxSlots_connect_signal( "valueChanged(QString)", "valueChanged(QString)" );
+  QSpinBoxSlots_connect_signal("valueChanged(QString)", "valueChanged(QString)");
 }
 
 #pragma ENDDUMP
