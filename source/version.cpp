@@ -6,9 +6,9 @@
 
 */
 
-#include "hbapi.h"
+#include <hbapi.h>
 
 HB_FUNC( QT4XHB_VERSION )
 {
-  hb_retc( (const char *) "2021.01" );
+  hb_retc( (const char *) "2023.01" );
 }
