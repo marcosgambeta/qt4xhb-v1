@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QSQLDATABASE_NEW )
     QSqlDatabase()
     */
     QSqlDatabase * obj = new QSqlDatabase();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSQLDATABASE(1) )
   {
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QSQLDATABASE_NEW )
     QSqlDatabase( const QSqlDatabase & other )
     */
     QSqlDatabase * obj = new QSqlDatabase( *PQSQLDATABASE(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DRIVER )
     {
 #endif
       QSqlDriver * ptr = obj->driver();
-      Qt4xHb::createReturnQObjectClass( ptr, "QSQLDRIVER" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QSQLDRIVER");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QSQLDATABASE_EXEC )
     {
 #endif
       QSqlQuery * ptr = new QSqlQuery( obj->exec( OPQSTRING( 1, QString() ) ) );
-      Qt4xHb::createReturnClass( ptr, "QSQLQUERY", true );
+      Qt4xHb::createReturnClass(ptr, "QSQLQUERY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QSQLDATABASE_LASTERROR )
     {
 #endif
       QSqlError * ptr = new QSqlError( obj->lastError() );
-      Qt4xHb::createReturnClass( ptr, "QSQLERROR", true );
+      Qt4xHb::createReturnClass(ptr, "QSQLERROR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -573,7 +573,7 @@ HB_FUNC_STATIC( QSQLDATABASE_PRIMARYINDEX )
     {
 #endif
       QSqlIndex * ptr = new QSqlIndex( obj->primaryIndex( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QSQLINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QSQLINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QSQLDATABASE_RECORD )
     {
 #endif
       QSqlRecord * ptr = new QSqlRecord( obj->record( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QSQLRECORD", true );
+      Qt4xHb::createReturnClass(ptr, "QSQLRECORD", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -896,7 +896,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ADDDATABASE )
     */
 
     QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::addDatabase( PQSTRING(1), OPQSTRING( 2, QLatin1String( QSqlDatabase::defaultConnection ) ) ) );
-    Qt4xHb::createReturnClass( ptr, "QSQLDATABASE", true );
+    Qt4xHb::createReturnClass(ptr, "QSQLDATABASE", true);
   }
   else if( ISBETWEEN(1, 2) && ISQSQLDRIVER(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
   {
@@ -905,7 +905,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ADDDATABASE )
     */
 
     QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::addDatabase( PQSQLDRIVER(1), OPQSTRING( 2, QLatin1String( QSqlDatabase::defaultConnection ) ) ) );
-    Qt4xHb::createReturnClass( ptr, "QSQLDATABASE", true );
+    Qt4xHb::createReturnClass(ptr, "QSQLDATABASE", true);
   }
   else
   {
@@ -923,7 +923,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CLONEDATABASE )
   {
 #endif
     QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::cloneDatabase( *PQSQLDATABASE(1), PQSTRING(2) ) );
-    Qt4xHb::createReturnClass( ptr, "QSQLDATABASE", true );
+    Qt4xHb::createReturnClass(ptr, "QSQLDATABASE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -981,7 +981,7 @@ HB_FUNC_STATIC( QSQLDATABASE_DATABASE )
   {
 #endif
     QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::database( OPQSTRING( 1, QLatin1String( QSqlDatabase::defaultConnection ) ), OPBOOL( 2, true ) ) );
-    Qt4xHb::createReturnClass( ptr, "QSQLDATABASE", true );
+    Qt4xHb::createReturnClass(ptr, "QSQLDATABASE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1077,28 +1077,28 @@ HB_FUNC_STATIC( QSQLDATABASE_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QSQLDATABASE_NEWFROMOBJECT )
@@ -1113,7 +1113,7 @@ HB_FUNC_STATIC( QSQLDATABASE_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QSQLDATABASE_SELFDESTRUCTION )
 {
-  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QSQLDATABASE_SETSELFDESTRUCTION )
@@ -1122,16 +1122,16 @@ HB_FUNC_STATIC( QSQLDATABASE_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

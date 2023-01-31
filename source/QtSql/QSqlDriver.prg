@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QSQLDRIVER_CREATERESULT )
     {
 #endif
       QSqlResult * ptr = obj->createResult();
-      Qt4xHb::createReturnClass( ptr, "QSQLRESULT", false );
+      Qt4xHb::createReturnClass(ptr, "QSQLRESULT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QSQLDRIVER_HANDLE )
     {
 #endif
       QVariant * ptr = new QVariant( obj->handle() );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -375,7 +375,7 @@ HB_FUNC_STATIC( QSQLDRIVER_LASTERROR )
     {
 #endif
       QSqlError * ptr = new QSqlError( obj->lastError() );
-      Qt4xHb::createReturnClass( ptr, "QSQLERROR", true );
+      Qt4xHb::createReturnClass(ptr, "QSQLERROR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QSQLDRIVER_PRIMARYINDEX )
     {
 #endif
       QSqlIndex * ptr = new QSqlIndex( obj->primaryIndex( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QSQLINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QSQLINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -473,7 +473,7 @@ HB_FUNC_STATIC( QSQLDRIVER_RECORD )
     {
 #endif
       QSqlRecord * ptr = new QSqlRecord( obj->record( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QSQLRECORD", true );
+      Qt4xHb::createReturnClass(ptr, "QSQLRECORD", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -678,11 +678,11 @@ HB_FUNC_STATIC( QSQLDRIVER_UNSUBSCRIBEFROMNOTIFICATION )
   }
 }
 
-void QSqlDriverSlots_connect_signal( const QString & signal, const QString & slot );
+void QSqlDriverSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSQLDRIVER_ONNOTIFICATION )
 {
-  QSqlDriverSlots_connect_signal( "notification(QString)", "notification(QString)" );
+  QSqlDriverSlots_connect_signal("notification(QString)", "notification(QString)");
 }
 
 #pragma ENDDUMP

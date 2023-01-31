@@ -70,7 +70,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QSqlQueryModel * obj = new QSqlQueryModel( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -136,7 +136,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_LASTERROR )
     {
 #endif
       QSqlError * ptr = new QSqlError( obj->lastError() );
-      Qt4xHb::createReturnClass( ptr, "QSQLERROR", true );
+      Qt4xHb::createReturnClass(ptr, "QSQLERROR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_QUERY )
     {
 #endif
       QSqlQuery * ptr = new QSqlQuery( obj->query() );
-      Qt4xHb::createReturnClass( ptr, "QSQLQUERY", true );
+      Qt4xHb::createReturnClass(ptr, "QSQLQUERY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,7 +184,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_RECORD )
     if( obj != NULL )
     {
       QSqlRecord * ptr = new QSqlRecord( obj->record( PINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QSQLRECORD", true );
+      Qt4xHb::createReturnClass(ptr, "QSQLRECORD", true);
     }
   }
   else if( ISNUMPAR(0) )
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_RECORD )
     if( obj != NULL )
     {
       QSqlRecord * ptr = new QSqlRecord( obj->record() );
-      Qt4xHb::createReturnClass( ptr, "QSQLRECORD", true );
+      Qt4xHb::createReturnClass(ptr, "QSQLRECORD", true);
     }
   }
   else
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_DATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT( 2, Qt::DisplayRole ) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QSQLQUERYMODEL_HEADERDATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->headerData( PINT(1), ( Qt::Orientation ) hb_parni(2), OPINT( 3, Qt::DisplayRole ) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

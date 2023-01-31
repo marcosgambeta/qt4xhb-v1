@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_NEW )
   if( ISBETWEEN(0, 2) && ( ISQOBJECT(1) || HB_ISNIL(1) ) && ( ISQSQLDATABASE(2) || HB_ISNIL(2) ) )
   {
     QSqlTableModel * obj = new QSqlTableModel( OPQOBJECT( 1, 0 ), HB_ISNIL(2) ? QSqlDatabase() : *static_cast<QSqlDatabase*>( Qt4xHb::itemGetPtr(2) ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_DATABASE )
     {
 #endif
       QSqlDatabase * ptr = new QSqlDatabase( obj->database() );
-      Qt4xHb::createReturnClass( ptr, "QSQLDATABASE", true );
+      Qt4xHb::createReturnClass(ptr, "QSQLDATABASE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_PRIMARYKEY )
     {
 #endif
       QSqlIndex * ptr = new QSqlIndex( obj->primaryKey() );
-      Qt4xHb::createReturnClass( ptr, "QSQLINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QSQLINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_DATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT( 2, Qt::DisplayRole ) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -574,7 +574,7 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_HEADERDATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->headerData( PINT(1), ( Qt::Orientation ) hb_parni(2), OPINT( 3, Qt::DisplayRole ) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -831,26 +831,26 @@ HB_FUNC_STATIC( QSQLTABLEMODEL_SUBMITALL )
   }
 }
 
-void QSqlTableModelSlots_connect_signal( const QString & signal, const QString & slot );
+void QSqlTableModelSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREDELETE )
 {
-  QSqlTableModelSlots_connect_signal( "beforeDelete(int)", "beforeDelete(int)" );
+  QSqlTableModelSlots_connect_signal("beforeDelete(int)", "beforeDelete(int)");
 }
 
 HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREINSERT )
 {
-  QSqlTableModelSlots_connect_signal( "beforeInsert(QSqlRecord)", "beforeInsert(QSqlRecord)" );
+  QSqlTableModelSlots_connect_signal("beforeInsert(QSqlRecord)", "beforeInsert(QSqlRecord)");
 }
 
 HB_FUNC_STATIC( QSQLTABLEMODEL_ONBEFOREUPDATE )
 {
-  QSqlTableModelSlots_connect_signal( "beforeUpdate(int,QSqlRecord)", "beforeUpdate(int,QSqlRecord)" );
+  QSqlTableModelSlots_connect_signal("beforeUpdate(int,QSqlRecord)", "beforeUpdate(int,QSqlRecord)");
 }
 
 HB_FUNC_STATIC( QSQLTABLEMODEL_ONPRIMEINSERT )
 {
-  QSqlTableModelSlots_connect_signal( "primeInsert(int,QSqlRecord)", "primeInsert(int,QSqlRecord)" );
+  QSqlTableModelSlots_connect_signal("primeInsert(int,QSqlRecord)", "primeInsert(int,QSqlRecord)");
 }
 
 #pragma ENDDUMP

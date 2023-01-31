@@ -52,7 +52,7 @@ HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QSqlRelationalDelegate * obj = new QSqlRelationalDelegate( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QSQLRELATIONALDELEGATE_CREATEEDITOR )
     {
 #endif
       QWidget * ptr = obj->createEditor( PQWIDGET(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET" );
+      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

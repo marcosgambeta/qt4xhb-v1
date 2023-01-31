@@ -12,7 +12,7 @@
 
 #include "QSqlTableModelSlots.h"
 
-QSqlTableModelSlots::QSqlTableModelSlots( QObject * parent ) : QObject( parent )
+QSqlTableModelSlots::QSqlTableModelSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QSqlTableModelSlots::~QSqlTableModelSlots()
 
 void QSqlTableModelSlots::beforeDelete( int row )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "beforeDelete(int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "beforeDelete(int)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSQLTABLEMODEL" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSQLTABLEMODEL");
     PHB_ITEM pRow = hb_itemPutNI( NULL, row );
 
     hb_vmEvalBlockV( cb, 2, pSender, pRow );
@@ -40,14 +40,14 @@ void QSqlTableModelSlots::beforeDelete( int row )
 
 void QSqlTableModelSlots::beforeInsert( QSqlRecord & record )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "beforeInsert(QSqlRecord)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "beforeInsert(QSqlRecord)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSQLTABLEMODEL" );
-    PHB_ITEM pRecord = Qt4xHb::Signals_return_object( ( void * ) &record, "QSQLRECORD" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSQLTABLEMODEL");
+    PHB_ITEM pRecord = Qt4xHb::Signals_return_object( ( void * ) &record, "QSQLRECORD");
 
     hb_vmEvalBlockV( cb, 2, pSender, pRecord );
 
@@ -58,15 +58,15 @@ void QSqlTableModelSlots::beforeInsert( QSqlRecord & record )
 
 void QSqlTableModelSlots::beforeUpdate( int row, QSqlRecord & record )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "beforeUpdate(int,QSqlRecord)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "beforeUpdate(int,QSqlRecord)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSQLTABLEMODEL" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSQLTABLEMODEL");
     PHB_ITEM pRow = hb_itemPutNI( NULL, row );
-    PHB_ITEM pRecord = Qt4xHb::Signals_return_object( ( void * ) &record, "QSQLRECORD" );
+    PHB_ITEM pRecord = Qt4xHb::Signals_return_object( ( void * ) &record, "QSQLRECORD");
 
     hb_vmEvalBlockV( cb, 3, pSender, pRow, pRecord );
 
@@ -78,15 +78,15 @@ void QSqlTableModelSlots::beforeUpdate( int row, QSqlRecord & record )
 
 void QSqlTableModelSlots::primeInsert( int row, QSqlRecord & record )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "primeInsert(int,QSqlRecord)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "primeInsert(int,QSqlRecord)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSQLTABLEMODEL" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSQLTABLEMODEL");
     PHB_ITEM pRow = hb_itemPutNI( NULL, row );
-    PHB_ITEM pRecord = Qt4xHb::Signals_return_object( ( void * ) &record, "QSQLRECORD" );
+    PHB_ITEM pRecord = Qt4xHb::Signals_return_object( ( void * ) &record, "QSQLRECORD");
 
     hb_vmEvalBlockV( cb, 3, pSender, pRow, pRecord );
 
@@ -102,19 +102,19 @@ void QSqlTableModelSlots_connect_signal( const QString & signal, const QString &
 
   if( obj != NULL )
   {
-    QSqlTableModelSlots * s = QCoreApplication::instance()->findChild<QSqlTableModelSlots *>();
+    QSqlTableModelSlots * s = QCoreApplication::instance()->findChild<QSqlTableModelSlots*>();
 
     if( s == NULL )
     {
       s = new QSqlTableModelSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }
