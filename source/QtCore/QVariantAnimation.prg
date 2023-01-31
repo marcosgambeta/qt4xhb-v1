@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_CURRENTVALUE )
     {
 #endif
       QVariant * ptr = new QVariant( obj->currentValue() );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_EASINGCURVE )
     {
 #endif
       QEasingCurve * ptr = new QEasingCurve( obj->easingCurve() );
-      Qt4xHb::createReturnClass( ptr, "QEASINGCURVE", true );
+      Qt4xHb::createReturnClass(ptr, "QEASINGCURVE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -135,7 +135,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_ENDVALUE )
     {
 #endif
       QVariant * ptr = new QVariant( obj->endValue() );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,7 +160,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_KEYVALUEAT )
     {
 #endif
       QVariant * ptr = new QVariant( obj->keyValueAt( PQREAL(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_STARTVALUE )
     {
 #endif
       QVariant * ptr = new QVariant( obj->startValue() );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -326,11 +326,11 @@ HB_FUNC_STATIC( QVARIANTANIMATION_STARTVALUE )
   }
 }
 
-void QVariantAnimationSlots_connect_signal( const QString & signal, const QString & slot );
+void QVariantAnimationSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QVARIANTANIMATION_ONVALUECHANGED )
 {
-  QVariantAnimationSlots_connect_signal( "valueChanged(QVariant)", "valueChanged(QVariant)" );
+  QVariantAnimationSlots_connect_signal("valueChanged(QVariant)", "valueChanged(QVariant)");
 }
 
 #pragma ENDDUMP

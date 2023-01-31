@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW )
     QFileSystemWatcher( QObject * parent = 0 )
     */
     QFileSystemWatcher * obj = new QFileSystemWatcher( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && HB_ISARRAY(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
   {
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_NEW )
     QFileSystemWatcher( const QStringList & paths, QObject * parent = 0 )
     */
     QFileSystemWatcher * obj = new QFileSystemWatcher( PQSTRINGLIST(1), OPQOBJECT( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -245,16 +245,16 @@ HB_FUNC_STATIC( QFILESYSTEMWATCHER_REMOVEPATHS )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QFileSystemWatcherSlots_connect_signal( const QString & signal, const QString & slot );
+void QFileSystemWatcherSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_ONDIRECTORYCHANGED )
 {
-  QFileSystemWatcherSlots_connect_signal( "directoryChanged(QString)", "directoryChanged(QString)" );
+  QFileSystemWatcherSlots_connect_signal("directoryChanged(QString)", "directoryChanged(QString)");
 }
 
 HB_FUNC_STATIC( QFILESYSTEMWATCHER_ONFILECHANGED )
 {
-  QFileSystemWatcherSlots_connect_signal( "fileChanged(QString)", "fileChanged(QString)" );
+  QFileSystemWatcherSlots_connect_signal("fileChanged(QString)", "fileChanged(QString)");
 }
 
 #pragma ENDDUMP

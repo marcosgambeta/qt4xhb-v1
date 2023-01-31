@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QLIBRARY_NEW )
     QLibrary( QObject * parent = 0 )
     */
     QLibrary * obj = new QLibrary( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
   {
@@ -67,7 +67,7 @@ HB_FUNC_STATIC( QLIBRARY_NEW )
     QLibrary( const QString & fileName, QObject * parent = 0 )
     */
     QLibrary * obj = new QLibrary( PQSTRING(1), OPQOBJECT( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ( ISQOBJECT(3) || HB_ISNIL(3) ) )
   {
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QLIBRARY_NEW )
     QLibrary( const QString & fileName, int verNum, QObject * parent = 0 )
     */
     QLibrary * obj = new QLibrary( PQSTRING(1), PINT(2), OPQOBJECT( 3, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ( ISQOBJECT(3) || HB_ISNIL(3) ) )
   {
@@ -83,7 +83,7 @@ HB_FUNC_STATIC( QLIBRARY_NEW )
     QLibrary( const QString & fileName, const QString & version, QObject * parent = 0 )
     */
     QLibrary * obj = new QLibrary( PQSTRING(1), PQSTRING(2), OPQOBJECT( 3, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {

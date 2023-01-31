@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_MACHINE )
     {
 #endif
       QStateMachine * ptr = obj->machine();
-      Qt4xHb::createReturnQObjectClass( ptr, "QSTATEMACHINE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QSTATEMACHINE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QABSTRACTSTATE_PARENTSTATE )
     {
 #endif
       QState * ptr = obj->parentState();
-      Qt4xHb::createReturnQObjectClass( ptr, "QSTATE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QSTATE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -117,16 +117,16 @@ HB_FUNC_STATIC( QABSTRACTSTATE_PARENTSTATE )
   }
 }
 
-void QAbstractStateSlots_connect_signal( const QString & signal, const QString & slot );
+void QAbstractStateSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QABSTRACTSTATE_ONENTERED )
 {
-  QAbstractStateSlots_connect_signal( "entered()", "entered()" );
+  QAbstractStateSlots_connect_signal("entered()", "entered()");
 }
 
 HB_FUNC_STATIC( QABSTRACTSTATE_ONEXITED )
 {
-  QAbstractStateSlots_connect_signal( "exited()", "exited()" );
+  QAbstractStateSlots_connect_signal("exited()", "exited()");
 }
 
 #pragma ENDDUMP

@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTANCE )
   {
 #endif
     QAbstractEventDispatcher * ptr = QAbstractEventDispatcher::instance( OPQTHREAD( 1, 0 ) );
-    Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTEVENTDISPATCHER" );
+    Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTEVENTDISPATCHER");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -376,16 +376,16 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTANCE )
 #endif
 }
 
-void QAbstractEventDispatcherSlots_connect_signal( const QString & signal, const QString & slot );
+void QAbstractEventDispatcherSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_ONABOUTTOBLOCK )
 {
-  QAbstractEventDispatcherSlots_connect_signal( "aboutToBlock()", "aboutToBlock()" );
+  QAbstractEventDispatcherSlots_connect_signal("aboutToBlock()", "aboutToBlock()");
 }
 
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_ONAWAKE )
 {
-  QAbstractEventDispatcherSlots_connect_signal( "awake()", "awake()" );
+  QAbstractEventDispatcherSlots_connect_signal("awake()", "awake()");
 }
 
 #pragma ENDDUMP

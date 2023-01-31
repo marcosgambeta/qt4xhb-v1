@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_BUDDY )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->buddy( *PQMODELINDEX(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_DATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT( 2, Qt::DisplayRole ) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_HEADERDATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->headerData( PINT(1), ( Qt::Orientation ) hb_parni(2), OPINT( 3, Qt::DisplayRole ) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_INDEX )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->index( PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(3) ) ) );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MATCH )
     {
 #endif
       QModelIndexList list = obj->match( *PQMODELINDEX(1), PINT(2), *PQVARIANT(3), OPINT( 4, 1 ), HB_ISNIL(5) ? ( Qt::MatchFlags ) Qt::MatchFlags( Qt::MatchStartsWith | Qt::MatchWrap ) : ( Qt::MatchFlags ) hb_parni(5) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_MIMEDATA )
         par1 << *static_cast<QModelIndex*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
       }
       QMimeData * ptr = obj->mimeData( par1 );
-      Qt4xHb::createReturnQObjectClass( ptr, "QMIMEDATA" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QMIMEDATA");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -606,7 +606,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_PARENT )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->parent( *PQMODELINDEX(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -825,7 +825,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SIBLING )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->sibling( PINT(1), PINT(2), *PQMODELINDEX(3) ) );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -876,7 +876,7 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SPAN )
     {
 #endif
       QSize * ptr = new QSize( obj->span( *PQMODELINDEX(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -985,96 +985,96 @@ HB_FUNC_STATIC( QABSTRACTITEMMODEL_SUBMIT )
   }
 }
 
-void QAbstractItemModelSlots_connect_signal( const QString & signal, const QString & slot );
+void QAbstractItemModelSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEINSERTED )
 {
-  QAbstractItemModelSlots_connect_signal( "columnsAboutToBeInserted(QModelIndex,int,int)", "columnsAboutToBeInserted(QModelIndex,int,int)" );
+  QAbstractItemModelSlots_connect_signal("columnsAboutToBeInserted(QModelIndex,int,int)", "columnsAboutToBeInserted(QModelIndex,int,int)");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEMOVED )
 {
-  QAbstractItemModelSlots_connect_signal( "columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)", "columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" );
+  QAbstractItemModelSlots_connect_signal("columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)", "columnsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSABOUTTOBEREMOVED )
 {
-  QAbstractItemModelSlots_connect_signal( "columnsAboutToBeRemoved(QModelIndex,int,int)", "columnsAboutToBeRemoved(QModelIndex,int,int)" );
+  QAbstractItemModelSlots_connect_signal("columnsAboutToBeRemoved(QModelIndex,int,int)", "columnsAboutToBeRemoved(QModelIndex,int,int)");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSINSERTED )
 {
-  QAbstractItemModelSlots_connect_signal( "columnsInserted(QModelIndex,int,int)", "columnsInserted(QModelIndex,int,int)" );
+  QAbstractItemModelSlots_connect_signal("columnsInserted(QModelIndex,int,int)", "columnsInserted(QModelIndex,int,int)");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSMOVED )
 {
-  QAbstractItemModelSlots_connect_signal( "columnsMoved(QModelIndex,int,int,QModelIndex,int)", "columnsMoved(QModelIndex,int,int,QModelIndex,int)" );
+  QAbstractItemModelSlots_connect_signal("columnsMoved(QModelIndex,int,int,QModelIndex,int)", "columnsMoved(QModelIndex,int,int,QModelIndex,int)");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONCOLUMNSREMOVED )
 {
-  QAbstractItemModelSlots_connect_signal( "columnsRemoved(QModelIndex,int,int)", "columnsRemoved(QModelIndex,int,int)" );
+  QAbstractItemModelSlots_connect_signal("columnsRemoved(QModelIndex,int,int)", "columnsRemoved(QModelIndex,int,int)");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONDATACHANGED )
 {
-  QAbstractItemModelSlots_connect_signal( "dataChanged(QModelIndex,QModelIndex)", "dataChanged(QModelIndex,QModelIndex)" );
+  QAbstractItemModelSlots_connect_signal("dataChanged(QModelIndex,QModelIndex)", "dataChanged(QModelIndex,QModelIndex)");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONHEADERDATACHANGED )
 {
-  QAbstractItemModelSlots_connect_signal( "headerDataChanged(Qt::Orientation,int,int)", "headerDataChanged(Qt::Orientation,int,int)" );
+  QAbstractItemModelSlots_connect_signal("headerDataChanged(Qt::Orientation,int,int)", "headerDataChanged(Qt::Orientation,int,int)");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTABOUTTOBECHANGED )
 {
-  QAbstractItemModelSlots_connect_signal( "layoutAboutToBeChanged()", "layoutAboutToBeChanged()" );
+  QAbstractItemModelSlots_connect_signal("layoutAboutToBeChanged()", "layoutAboutToBeChanged()");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONLAYOUTCHANGED )
 {
-  QAbstractItemModelSlots_connect_signal( "layoutChanged()", "layoutChanged()" );
+  QAbstractItemModelSlots_connect_signal("layoutChanged()", "layoutChanged()");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELABOUTTOBERESET )
 {
-  QAbstractItemModelSlots_connect_signal( "modelAboutToBeReset()", "modelAboutToBeReset()" );
+  QAbstractItemModelSlots_connect_signal("modelAboutToBeReset()", "modelAboutToBeReset()");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONMODELRESET )
 {
-  QAbstractItemModelSlots_connect_signal( "modelReset()", "modelReset()" );
+  QAbstractItemModelSlots_connect_signal("modelReset()", "modelReset()");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEINSERTED )
 {
-  QAbstractItemModelSlots_connect_signal( "rowsAboutToBeInserted(QModelIndex,int,int)", "rowsAboutToBeInserted(QModelIndex,int,int)" );
+  QAbstractItemModelSlots_connect_signal("rowsAboutToBeInserted(QModelIndex,int,int)", "rowsAboutToBeInserted(QModelIndex,int,int)");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEMOVED )
 {
-  QAbstractItemModelSlots_connect_signal( "rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)", "rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)" );
+  QAbstractItemModelSlots_connect_signal("rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)", "rowsAboutToBeMoved(QModelIndex,int,int,QModelIndex,int)");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSABOUTTOBEREMOVED )
 {
-  QAbstractItemModelSlots_connect_signal( "rowsAboutToBeRemoved(QModelIndex,int,int)", "rowsAboutToBeRemoved(QModelIndex,int,int)" );
+  QAbstractItemModelSlots_connect_signal("rowsAboutToBeRemoved(QModelIndex,int,int)", "rowsAboutToBeRemoved(QModelIndex,int,int)");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSINSERTED )
 {
-  QAbstractItemModelSlots_connect_signal( "rowsInserted(QModelIndex,int,int)", "rowsInserted(QModelIndex,int,int)" );
+  QAbstractItemModelSlots_connect_signal("rowsInserted(QModelIndex,int,int)", "rowsInserted(QModelIndex,int,int)");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSMOVED )
 {
-  QAbstractItemModelSlots_connect_signal( "rowsMoved(QModelIndex,int,int,QModelIndex,int)", "rowsMoved(QModelIndex,int,int,QModelIndex,int)" );
+  QAbstractItemModelSlots_connect_signal("rowsMoved(QModelIndex,int,int,QModelIndex,int)", "rowsMoved(QModelIndex,int,int,QModelIndex,int)");
 }
 
 HB_FUNC_STATIC( QABSTRACTITEMMODEL_ONROWSREMOVED )
 {
-  QAbstractItemModelSlots_connect_signal( "rowsRemoved(QModelIndex,int,int)", "rowsRemoved(QModelIndex,int,int)" );
+  QAbstractItemModelSlots_connect_signal("rowsRemoved(QModelIndex,int,int)", "rowsRemoved(QModelIndex,int,int)");
 }
 
 #pragma ENDDUMP

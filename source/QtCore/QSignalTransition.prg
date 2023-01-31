@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_NEW )
     QSignalTransition( QState * sourceState = 0 )
     */
     QSignalTransition * obj = new QSignalTransition( OPQSTATE( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISCHAR(2) && ( ISQSTATE(3) || HB_ISNIL(3) ) )
   {
@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_NEW )
     QSignalTransition( QObject * sender, const char * signal, QState * sourceState = 0 )
     */
     QSignalTransition * obj = new QSignalTransition( PQOBJECT(1), PCONSTCHAR(2), OPQSTATE( 3, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SENDEROBJECT )
     {
 #endif
       QObject * ptr = obj->senderObject();
-      Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QSIGNALTRANSITION_SIGNAL )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->signal() );
-      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

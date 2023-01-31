@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_ANIMATIONAT )
     {
 #endif
       QAbstractAnimation * ptr = obj->animationAt( PINT(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTANIMATION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTANIMATION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -257,7 +257,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_TAKEANIMATION )
     {
 #endif
       QAbstractAnimation * ptr = obj->takeAnimation( PINT(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTANIMATION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTANIMATION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

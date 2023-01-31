@@ -12,7 +12,7 @@
 
 #include "QTimerSlots.h"
 
-QTimerSlots::QTimerSlots( QObject * parent ) : QObject( parent )
+QTimerSlots::QTimerSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QTimerSlots::~QTimerSlots()
 
 void QTimerSlots::timeout()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "timeout()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "timeout()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QTIMER" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTIMER");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -42,19 +42,19 @@ void QTimerSlots_connect_signal( const QString & signal, const QString & slot )
 
   if( obj != NULL )
   {
-    QTimerSlots * s = QCoreApplication::instance()->findChild<QTimerSlots *>();
+    QTimerSlots * s = QCoreApplication::instance()->findChild<QTimerSlots*>();
 
     if( s == NULL )
     {
       s = new QTimerSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

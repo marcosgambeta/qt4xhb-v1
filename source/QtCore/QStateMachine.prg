@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QStateMachine * obj = new QStateMachine( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QSTATEMACHINE_DEFAULTANIMATIONS )
     {
 #endif
       QList<QAbstractAnimation *> list = obj->defaultAnimations();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTANIMATION" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTANIMATION");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -597,16 +597,16 @@ HB_FUNC_STATIC( QSTATEMACHINE_STOP )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QStateMachineSlots_connect_signal( const QString & signal, const QString & slot );
+void QStateMachineSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSTATEMACHINE_ONSTARTED )
 {
-  QStateMachineSlots_connect_signal( "started()", "started()" );
+  QStateMachineSlots_connect_signal("started()", "started()");
 }
 
 HB_FUNC_STATIC( QSTATEMACHINE_ONSTOPPED )
 {
-  QStateMachineSlots_connect_signal( "stopped()", "stopped()" );
+  QStateMachineSlots_connect_signal("stopped()", "stopped()");
 }
 
 #pragma ENDDUMP

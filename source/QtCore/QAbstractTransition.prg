@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_ANIMATIONS )
     {
 #endif
       QList<QAbstractAnimation *> list = obj->animations();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTANIMATION" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTANIMATION");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_MACHINE )
     {
 #endif
       QStateMachine * ptr = obj->machine();
-      Qt4xHb::createReturnQObjectClass( ptr, "QSTATEMACHINE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QSTATEMACHINE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_SOURCESTATE )
     {
 #endif
       QState * ptr = obj->sourceState();
-      Qt4xHb::createReturnQObjectClass( ptr, "QSTATE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QSTATE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATE )
     {
 #endif
       QAbstractState * ptr = obj->targetState();
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTSTATE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTSTATE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATES )
     {
 #endif
       QList<QAbstractState *> list = obj->targetStates();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTSTATE" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTSTATE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -358,11 +358,11 @@ HB_FUNC_STATIC( QABSTRACTTRANSITION_TARGETSTATES )
   }
 }
 
-void QAbstractTransitionSlots_connect_signal( const QString & signal, const QString & slot );
+void QAbstractTransitionSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QABSTRACTTRANSITION_ONTRIGGERED )
 {
-  QAbstractTransitionSlots_connect_signal( "triggered()", "triggered()" );
+  QAbstractTransitionSlots_connect_signal("triggered()", "triggered()");
 }
 
 #pragma ENDDUMP

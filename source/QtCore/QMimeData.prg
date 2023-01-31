@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QMIMEDATA_NEW )
   if( ISNUMPAR(0) )
   {
     QMimeData * obj = new QMimeData();
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QMIMEDATA_COLORDATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->colorData() );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QMIMEDATA_DATA )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->data( PQSTRING(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -383,7 +383,7 @@ HB_FUNC_STATIC( QMIMEDATA_IMAGEDATA )
     {
 #endif
       QVariant * ptr = new QVariant( obj->imageData() );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QMIMEDATA_URLS )
     {
 #endif
       QList<QUrl> list = obj->urls();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QURL" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QURL");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {

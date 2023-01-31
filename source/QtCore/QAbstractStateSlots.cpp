@@ -12,7 +12,7 @@
 
 #include "QAbstractStateSlots.h"
 
-QAbstractStateSlots::QAbstractStateSlots( QObject * parent ) : QObject( parent )
+QAbstractStateSlots::QAbstractStateSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QAbstractStateSlots::~QAbstractStateSlots()
 
 void QAbstractStateSlots::entered()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "entered()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "entered()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTSTATE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTSTATE");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -38,13 +38,13 @@ void QAbstractStateSlots::entered()
 
 void QAbstractStateSlots::exited()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "exited()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "exited()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTSTATE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTSTATE");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -58,19 +58,19 @@ void QAbstractStateSlots_connect_signal( const QString & signal, const QString &
 
   if( obj != NULL )
   {
-    QAbstractStateSlots * s = QCoreApplication::instance()->findChild<QAbstractStateSlots *>();
+    QAbstractStateSlots * s = QCoreApplication::instance()->findChild<QAbstractStateSlots*>();
 
     if( s == NULL )
     {
       s = new QAbstractStateSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

@@ -55,7 +55,7 @@ HB_FUNC_STATIC( HABSTRACTTABLEMODELV2_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     HAbstractTableModelV2 * obj = new HAbstractTableModelV2( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {

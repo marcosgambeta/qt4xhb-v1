@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CLASSINFO )
     {
 #endif
       QMetaClassInfo * ptr = new QMetaClassInfo( obj->classInfo( PINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QMETACLASSINFO", true );
+      Qt4xHb::createReturnClass(ptr, "QMETACLASSINFO", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QMETAOBJECT_CONSTRUCTOR )
     {
 #endif
       QMetaMethod * ptr = new QMetaMethod( obj->constructor( PINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QMETAMETHOD", true );
+      Qt4xHb::createReturnClass(ptr, "QMETAMETHOD", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QMETAOBJECT_ENUMERATOR )
     {
 #endif
       QMetaEnum * ptr = new QMetaEnum( obj->enumerator( PINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QMETAENUM", true );
+      Qt4xHb::createReturnClass(ptr, "QMETAENUM", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -503,7 +503,7 @@ HB_FUNC_STATIC( QMETAOBJECT_METHOD )
     {
 #endif
       QMetaMethod * ptr = new QMetaMethod( obj->method( PINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QMETAMETHOD", true );
+      Qt4xHb::createReturnClass(ptr, "QMETAMETHOD", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -576,7 +576,7 @@ HB_FUNC_STATIC( QMETAOBJECT_PROPERTY )
     {
 #endif
       QMetaProperty * ptr = new QMetaProperty( obj->property( PINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QMETAPROPERTY", true );
+      Qt4xHb::createReturnClass(ptr, "QMETAPROPERTY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -649,7 +649,7 @@ HB_FUNC_STATIC( QMETAOBJECT_SUPERCLASS )
     {
 #endif
       const QMetaObject * ptr = obj->superClass();
-      Qt4xHb::createReturnClass( ptr, "QMETAOBJECT", false );
+      Qt4xHb::createReturnClass(ptr, "QMETAOBJECT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -674,7 +674,7 @@ HB_FUNC_STATIC( QMETAOBJECT_USERPROPERTY )
     {
 #endif
       QMetaProperty * ptr = new QMetaProperty( obj->userProperty() );
-      Qt4xHb::createReturnClass( ptr, "QMETAPROPERTY", true );
+      Qt4xHb::createReturnClass(ptr, "QMETAPROPERTY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -740,7 +740,7 @@ HB_FUNC_STATIC( QMETAOBJECT_NORMALIZEDSIGNATURE )
   {
 #endif
     QByteArray * ptr = new QByteArray( QMetaObject::normalizedSignature( PCONSTCHAR(1) ) );
-    Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+    Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -760,7 +760,7 @@ HB_FUNC_STATIC( QMETAOBJECT_NORMALIZEDTYPE )
   {
 #endif
     QByteArray * ptr = new QByteArray( QMetaObject::normalizedType( PCONSTCHAR(1) ) );
-    Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+    Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -776,28 +776,28 @@ HB_FUNC_STATIC( QMETAOBJECT_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QMETAOBJECT_NEWFROMOBJECT )
@@ -812,7 +812,7 @@ HB_FUNC_STATIC( QMETAOBJECT_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QMETAOBJECT_SELFDESTRUCTION )
 {
-  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QMETAOBJECT_SETSELFDESTRUCTION )
@@ -821,16 +821,16 @@ HB_FUNC_STATIC( QMETAOBJECT_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

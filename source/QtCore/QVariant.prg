@@ -135,7 +135,7 @@ QVariant( Qt::GlobalColor color )
 HB_FUNC_STATIC( QVARIANT_NEW5 )
 {
   QVariant * obj = new QVariant( ( Qt::GlobalColor ) hb_parni(1) );
-  Qt4xHb::returnNewObject( obj, true );
+  Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -144,7 +144,7 @@ QVariant( QVariant::Type type )
 HB_FUNC_STATIC( QVARIANT_NEW6 )
 {
   QVariant * obj = new QVariant( ( QVariant::Type ) hb_parni(1) );
-  Qt4xHb::returnNewObject( obj, true );
+  Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -153,7 +153,7 @@ QVariant( int typeOrUserType, const void * copy )
 HB_FUNC_STATIC( QVARIANT_NEW7 )
 {
   QVariant * obj = new QVariant( PINT(1), static_cast<const void*>( hb_parptr(2) ) );
-  Qt4xHb::returnNewObject( obj, true );
+  Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -162,7 +162,7 @@ QVariant( uint val )
 HB_FUNC_STATIC( QVARIANT_NEW11 )
 {
   QVariant * obj = new QVariant( PUINT(1) );
-  Qt4xHb::returnNewObject( obj, true );
+  Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -171,7 +171,7 @@ QVariant( qulonglong val )
 HB_FUNC_STATIC( QVARIANT_NEW13 )
 {
   QVariant * obj = new QVariant( PQULONGLONG(1) );
-  Qt4xHb::returnNewObject( obj, true );
+  Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -180,7 +180,7 @@ QVariant( float val )
 HB_FUNC_STATIC( QVARIANT_NEW16 )
 {
   QVariant * obj = new QVariant( PFLOAT(1) );
-  Qt4xHb::returnNewObject( obj, true );
+  Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -189,7 +189,7 @@ QVariant( const char * val )
 HB_FUNC_STATIC( QVARIANT_NEW17 )
 {
   QVariant * obj = new QVariant( PCONSTCHAR(1) );
-  Qt4xHb::returnNewObject( obj, true );
+  Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QVARIANT_NEW27 )
     par1 << *static_cast<QVariant*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
   }
   QVariant * obj = new QVariant( par1 );
-  Qt4xHb::returnNewObject( obj, true );
+  Qt4xHb::returnNewObject(obj, true);
 }
 
 HB_FUNC_STATIC( QVARIANT_NEW )
@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
     QVariant()
     */
     QVariant * obj = new QVariant();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
     QVariant( const QString & val )
     */
     QVariant * obj = new QVariant( PQSTRING(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && HB_ISLOG(1) )
   {
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
     QVariant( bool val )
     */
     QVariant * obj = new QVariant( PBOOL(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
       QVariant( double val )
       */
       QVariant * obj = new QVariant( PDOUBLE(1) );
-      Qt4xHb::returnNewObject( obj, true );
+      Qt4xHb::returnNewObject(obj, true);
     }
     else if( hb_param( 1, HB_IT_LONG ) != NULL )
     {
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
       QVariant( qlonglong val )
       */
       QVariant * obj = new QVariant( PQLONGLONG(1) );
-      Qt4xHb::returnNewObject( obj, true );
+      Qt4xHb::returnNewObject(obj, true);
     }
     else
     {
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
       QVariant( int val )
       */
       QVariant * obj = new QVariant( PINT(1) );
-      Qt4xHb::returnNewObject( obj, true );
+      Qt4xHb::returnNewObject(obj, true);
     }
   }
   else if( ISNUMPAR(1) && ISQLOCALE(1) )
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
     QVariant( const QLocale & l )
     */
     QVariant * obj = new QVariant( *PQLOCALE(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQREGEXP(1) )
   {
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
     QVariant( const QRegExp & regExp )
     */
     QVariant * obj = new QVariant( *PQREGEXP(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQEASINGCURVE(1) )
   {
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
     QVariant( const QEasingCurve & val )
     */
     QVariant * obj = new QVariant( *PQEASINGCURVE(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQVARIANT(1) )
   {
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
     QVariant( const QVariant & p )
     */
     QVariant * obj = new QVariant( *PQVARIANT(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDATASTREAM(1) )
   {
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
     QVariant( QDataStream & s )
     */
     QVariant * obj = new QVariant( *PQDATASTREAM(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
     QVariant( const QByteArray & val )
     */
     QVariant * obj = new QVariant( *PQBYTEARRAY(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQBITARRAY(1) )
   {
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
     QVariant( const QBitArray & val )
     */
     QVariant * obj = new QVariant( *PQBITARRAY(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQCHAR(1) )
   {
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
     QVariant( const QChar & c )
     */
     QVariant * obj = new QVariant( *PQCHAR(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQLATIN1STRING(1) )
   {
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
     QVariant( const QLatin1String & val )
     */
     QVariant * obj = new QVariant( *PQLATIN1STRING(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDATE(1) )
   {
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
     QVariant( const QDate & val )
     */
     QVariant * obj = new QVariant( *PQDATE(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQTIME(1) )
   {
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
     QVariant( const QTime & val )
     */
     QVariant * obj = new QVariant( *PQTIME(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDATETIME(1) )
   {
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
     QVariant( const QDateTime & val )
     */
     QVariant * obj = new QVariant( *PQDATETIME(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSIZE(1) )
   {
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
     QVariant( const QSize & val )
     */
     QVariant * obj = new QVariant( *PQSIZE(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSIZEF(1) )
   {
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
     QVariant( const QSizeF & val )
     */
     QVariant * obj = new QVariant( *PQSIZEF(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
   {
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
     QVariant( const QPoint & val )
     */
     QVariant * obj = new QVariant( *PQPOINT(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQPOINTF(1) )
   {
@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
     QVariant( const QPointF & val )
     */
     QVariant * obj = new QVariant( *PQPOINTF(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQLINE(1) )
   {
@@ -395,7 +395,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
     QVariant( const QLine & val )
     */
     QVariant * obj = new QVariant( *PQLINE(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQLINEF(1) )
   {
@@ -403,7 +403,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
     QVariant( const QLineF & val )
     */
     QVariant * obj = new QVariant( *PQLINEF(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQRECT(1) )
   {
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
     QVariant( const QRect & val )
     */
     QVariant * obj = new QVariant( *PQRECT(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
   {
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
     QVariant( const QRectF & val )
     */
     QVariant * obj = new QVariant( *PQRECTF(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQURL(1) )
   {
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
     QVariant( const QUrl & val )
     */
     QVariant * obj = new QVariant( *PQURL(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   // TODO: identificar se é array de strings ou objetos
   else if( ISNUMPAR(1) && HB_ISARRAY(1) )
@@ -436,7 +436,7 @@ HB_FUNC_STATIC( QVARIANT_NEW )
     QVariant( const QStringList & val )
     */
     QVariant * obj = new QVariant( PQSTRINGLIST(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
     //HB_FUNC_EXEC( QVARIANT_NEW27 );
   }
   else
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QVARIANT_TOBITARRAY )
     {
 #endif
       QBitArray * ptr = new QBitArray( obj->toBitArray() );
-      Qt4xHb::createReturnClass( ptr, "QBITARRAY", true );
+      Qt4xHb::createReturnClass(ptr, "QBITARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -646,7 +646,7 @@ HB_FUNC_STATIC( QVARIANT_TOBYTEARRAY )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->toByteArray() );
-      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QVARIANT_TOCHAR )
     {
 #endif
       QChar * ptr = new QChar( obj->toChar() );
-      Qt4xHb::createReturnClass( ptr, "QCHAR", true );
+      Qt4xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -696,7 +696,7 @@ HB_FUNC_STATIC( QVARIANT_TODATE )
     {
 #endif
       QDate * ptr = new QDate( obj->toDate() );
-      Qt4xHb::createReturnClass( ptr, "QDATE", true );
+      Qt4xHb::createReturnClass(ptr, "QDATE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -721,7 +721,7 @@ HB_FUNC_STATIC( QVARIANT_TODATETIME )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->toDateTime() );
-      Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
+      Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -746,7 +746,7 @@ HB_FUNC_STATIC( QVARIANT_TOEASINGCURVE )
     {
 #endif
       QEasingCurve * ptr = new QEasingCurve( obj->toEasingCurve() );
-      Qt4xHb::createReturnClass( ptr, "QEASINGCURVE", true );
+      Qt4xHb::createReturnClass(ptr, "QEASINGCURVE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -771,7 +771,7 @@ HB_FUNC_STATIC( QVARIANT_TOLINE )
     {
 #endif
       QLine * ptr = new QLine( obj->toLine() );
-      Qt4xHb::createReturnClass( ptr, "QLINE", true );
+      Qt4xHb::createReturnClass(ptr, "QLINE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QVARIANT_TOLINEF )
     {
 #endif
       QLineF * ptr = new QLineF( obj->toLineF() );
-      Qt4xHb::createReturnClass( ptr, "QLINEF", true );
+      Qt4xHb::createReturnClass(ptr, "QLINEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -845,7 +845,7 @@ HB_FUNC_STATIC( QVARIANT_TOLOCALE )
     {
 #endif
       QLocale * ptr = new QLocale( obj->toLocale() );
-      Qt4xHb::createReturnClass( ptr, "QLOCALE", true );
+      Qt4xHb::createReturnClass(ptr, "QLOCALE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -870,7 +870,7 @@ HB_FUNC_STATIC( QVARIANT_TOPOINT )
     {
 #endif
       QPoint * ptr = new QPoint( obj->toPoint() );
-      Qt4xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -895,7 +895,7 @@ HB_FUNC_STATIC( QVARIANT_TOPOINTF )
     {
 #endif
       QPointF * ptr = new QPointF( obj->toPointF() );
-      Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -946,7 +946,7 @@ HB_FUNC_STATIC( QVARIANT_TORECT )
     {
 #endif
       QRect * ptr = new QRect( obj->toRect() );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -971,7 +971,7 @@ HB_FUNC_STATIC( QVARIANT_TORECTF )
     {
 #endif
       QRectF * ptr = new QRectF( obj->toRectF() );
-      Qt4xHb::createReturnClass( ptr, "QRECTF", true );
+      Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -996,7 +996,7 @@ HB_FUNC_STATIC( QVARIANT_TOREGEXP )
     {
 #endif
       QRegExp * ptr = new QRegExp( obj->toRegExp() );
-      Qt4xHb::createReturnClass( ptr, "QREGEXP", true );
+      Qt4xHb::createReturnClass(ptr, "QREGEXP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1021,7 +1021,7 @@ HB_FUNC_STATIC( QVARIANT_TOSIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->toSize() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1046,7 +1046,7 @@ HB_FUNC_STATIC( QVARIANT_TOSIZEF )
     {
 #endif
       QSizeF * ptr = new QSizeF( obj->toSizeF() );
-      Qt4xHb::createReturnClass( ptr, "QSIZEF", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1119,7 +1119,7 @@ HB_FUNC_STATIC( QVARIANT_TOTIME )
     {
 #endif
       QTime * ptr = new QTime( obj->toTime() );
-      Qt4xHb::createReturnClass( ptr, "QTIME", true );
+      Qt4xHb::createReturnClass(ptr, "QTIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1144,7 +1144,7 @@ HB_FUNC_STATIC( QVARIANT_TOURL )
     {
 #endif
       QUrl * ptr = new QUrl( obj->toUrl() );
-      Qt4xHb::createReturnClass( ptr, "QURL", true );
+      Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1271,28 +1271,28 @@ HB_FUNC_STATIC( QVARIANT_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QVARIANT_NEWFROMOBJECT )
@@ -1307,7 +1307,7 @@ HB_FUNC_STATIC( QVARIANT_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QVARIANT_SELFDESTRUCTION )
 {
-  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QVARIANT_SETSELFDESTRUCTION )
@@ -1316,16 +1316,16 @@ HB_FUNC_STATIC( QVARIANT_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

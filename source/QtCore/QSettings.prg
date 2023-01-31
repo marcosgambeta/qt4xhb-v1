@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QSETTINGS_NEW )
     QSettings( const QString & organization, const QString & application = QString(), QObject * parent = 0 )
     */
     QSettings * obj = new QSettings( PQSTRING(1), OPQSTRING( 2, QString() ), OPQOBJECT( 3, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && ( HB_ISCHAR(3) || HB_ISNIL(3) ) && ( ISQOBJECT(4) || HB_ISNIL(4) ) )
   {
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QSETTINGS_NEW )
     QSettings( QSettings::Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
     */
     QSettings * obj = new QSettings( ( QSettings::Scope ) hb_parni(1), PQSTRING(2), OPQSTRING( 3, QString() ), OPQOBJECT( 4, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(3, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ( HB_ISCHAR(4) || HB_ISNIL(4) ) && ( ISQOBJECT(5) || HB_ISNIL(5) ) )
   {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QSETTINGS_NEW )
     QSettings( QSettings::Format format, QSettings::Scope scope, const QString & organization, const QString & application = QString(), QObject * parent = 0 )
     */
     QSettings * obj = new QSettings( ( QSettings::Format ) hb_parni(1), ( QSettings::Scope ) hb_parni(2), PQSTRING(3), OPQSTRING( 4, QString() ), OPQOBJECT( 5, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ( ISQOBJECT(3) || HB_ISNIL(3) ) )
   {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QSETTINGS_NEW )
     QSettings( const QString & fileName, QSettings::Format format, QObject * parent = 0 )
     */
     QSettings * obj = new QSettings( PQSTRING(1), ( QSettings::Format ) hb_parni(2), OPQOBJECT( 3, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
@@ -114,7 +114,7 @@ HB_FUNC_STATIC( QSETTINGS_NEW )
     QSettings( QObject * parent = 0 )
     */
     QSettings * obj = new QSettings( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -524,7 +524,7 @@ HB_FUNC_STATIC( QSETTINGS_INICODEC )
     {
 #endif
       QTextCodec * ptr = obj->iniCodec();
-      Qt4xHb::createReturnClass( ptr, "QTEXTCODEC", false );
+      Qt4xHb::createReturnClass(ptr, "QTEXTCODEC", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -811,7 +811,7 @@ HB_FUNC_STATIC( QSETTINGS_VALUE )
     {
 #endif
       QVariant * ptr = new QVariant( obj->value( PQSTRING(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(2) ) ) );
-      Qt4xHb::createReturnClass( ptr, "QVARIANT", true );
+      Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

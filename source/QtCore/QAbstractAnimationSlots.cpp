@@ -12,7 +12,7 @@
 
 #include "QAbstractAnimationSlots.h"
 
-QAbstractAnimationSlots::QAbstractAnimationSlots( QObject * parent ) : QObject( parent )
+QAbstractAnimationSlots::QAbstractAnimationSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QAbstractAnimationSlots::~QAbstractAnimationSlots()
 
 void QAbstractAnimationSlots::currentLoopChanged( int currentLoop )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentLoopChanged(int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "currentLoopChanged(int)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTANIMATION" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTANIMATION");
     PHB_ITEM pCurrentLoop = hb_itemPutNI( NULL, currentLoop );
 
     hb_vmEvalBlockV( cb, 2, pSender, pCurrentLoop );
@@ -40,13 +40,13 @@ void QAbstractAnimationSlots::currentLoopChanged( int currentLoop )
 
 void QAbstractAnimationSlots::directionChanged( QAbstractAnimation::Direction newDirection )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "directionChanged(QAbstractAnimation::Direction)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "directionChanged(QAbstractAnimation::Direction)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTANIMATION" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTANIMATION");
     PHB_ITEM pNewDirection = hb_itemPutNI( NULL, static_cast<int >( newDirection ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pNewDirection );
@@ -58,13 +58,13 @@ void QAbstractAnimationSlots::directionChanged( QAbstractAnimation::Direction ne
 
 void QAbstractAnimationSlots::finished()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "finished()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "finished()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTANIMATION" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTANIMATION");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -74,13 +74,13 @@ void QAbstractAnimationSlots::finished()
 
 void QAbstractAnimationSlots::stateChanged( QAbstractAnimation::State newState, QAbstractAnimation::State oldState )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QABSTRACTANIMATION" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTANIMATION");
     PHB_ITEM pNewState = hb_itemPutNI( NULL, static_cast<int >( newState ) );
     PHB_ITEM pOldState = hb_itemPutNI( NULL, static_cast<int >( oldState ) );
 
@@ -98,19 +98,19 @@ void QAbstractAnimationSlots_connect_signal( const QString & signal, const QStri
 
   if( obj != NULL )
   {
-    QAbstractAnimationSlots * s = QCoreApplication::instance()->findChild<QAbstractAnimationSlots *>();
+    QAbstractAnimationSlots * s = QCoreApplication::instance()->findChild<QAbstractAnimationSlots*>();
 
     if( s == NULL )
     {
       s = new QAbstractAnimationSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

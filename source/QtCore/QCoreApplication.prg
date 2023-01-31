@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_INSTANCE )
   {
 #endif
     QCoreApplication * ptr = QCoreApplication::instance();
-    Qt4xHb::createReturnQObjectClass( ptr, "QCOREAPPLICATION" );
+    Qt4xHb::createReturnQObjectClass(ptr, "QCOREAPPLICATION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -880,11 +880,11 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
   }
 }
 
-void QCoreApplicationSlots_connect_signal( const QString & signal, const QString & slot );
+void QCoreApplicationSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QCOREAPPLICATION_ONABOUTTOQUIT )
 {
-  QCoreApplicationSlots_connect_signal( "aboutToQuit()", "aboutToQuit()" );
+  QCoreApplicationSlots_connect_signal("aboutToQuit()", "aboutToQuit()");
 }
 
 #pragma ENDDUMP

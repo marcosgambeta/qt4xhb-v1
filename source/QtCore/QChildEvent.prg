@@ -51,7 +51,7 @@ HB_FUNC_STATIC( QCHILDEVENT_NEW )
   if( ISNUMPAR(2) && HB_ISNUM(1) && ISQOBJECT(2) )
   {
     QChildEvent * obj = new QChildEvent( ( QEvent::Type ) hb_parni(1), PQOBJECT(2) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QCHILDEVENT_CHILD )
     {
 #endif
       QObject * ptr = obj->child();
-      Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

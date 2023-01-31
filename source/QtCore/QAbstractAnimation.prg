@@ -216,7 +216,7 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_GROUP )
     {
 #endif
       QAnimationGroup * ptr = obj->group();
-      Qt4xHb::createReturnQObjectClass( ptr, "QANIMATIONGROUP" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QANIMATIONGROUP");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -507,26 +507,26 @@ HB_FUNC_STATIC( QABSTRACTANIMATION_STOP )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QAbstractAnimationSlots_connect_signal( const QString & signal, const QString & slot );
+void QAbstractAnimationSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QABSTRACTANIMATION_ONCURRENTLOOPCHANGED )
 {
-  QAbstractAnimationSlots_connect_signal( "currentLoopChanged(int)", "currentLoopChanged(int)" );
+  QAbstractAnimationSlots_connect_signal("currentLoopChanged(int)", "currentLoopChanged(int)");
 }
 
 HB_FUNC_STATIC( QABSTRACTANIMATION_ONDIRECTIONCHANGED )
 {
-  QAbstractAnimationSlots_connect_signal( "directionChanged(QAbstractAnimation::Direction)", "directionChanged(QAbstractAnimation::Direction)" );
+  QAbstractAnimationSlots_connect_signal("directionChanged(QAbstractAnimation::Direction)", "directionChanged(QAbstractAnimation::Direction)");
 }
 
 HB_FUNC_STATIC( QABSTRACTANIMATION_ONFINISHED )
 {
-  QAbstractAnimationSlots_connect_signal( "finished()", "finished()" );
+  QAbstractAnimationSlots_connect_signal("finished()", "finished()");
 }
 
 HB_FUNC_STATIC( QABSTRACTANIMATION_ONSTATECHANGED )
 {
-  QAbstractAnimationSlots_connect_signal( "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)", "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)" );
+  QAbstractAnimationSlots_connect_signal("stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)", "stateChanged(QAbstractAnimation::State,QAbstractAnimation::State)");
 }
 
 #pragma ENDDUMP

@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QSTATE_NEW )
     QState( QState * parent = 0 )
     */
     QState * obj = new QState( OPQSTATE( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQSTATE(2) || HB_ISNIL(2) ) )
   {
@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QSTATE_NEW )
     QState( QState::ChildMode childMode, QState * parent = 0 )
     */
     QState * obj = new QState( ( QState::ChildMode ) hb_parni(1), OPQSTATE( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QSTATE_ADDTRANSITION )
     if( obj != NULL )
     {
       QSignalTransition * ptr = obj->addTransition( PQOBJECT(1), PCONSTCHAR(2), PQABSTRACTSTATE(3) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QSIGNALTRANSITION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QSIGNALTRANSITION");
     }
   }
   else if( ISNUMPAR(1) && ISQABSTRACTSTATE(1) )
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QSTATE_ADDTRANSITION )
     if( obj != NULL )
     {
       QAbstractTransition * ptr = obj->addTransition( PQABSTRACTSTATE(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTTRANSITION" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTTRANSITION");
     }
   }
   else
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QSTATE_ERRORSTATE )
     {
 #endif
       QAbstractState * ptr = obj->errorState();
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTSTATE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTSTATE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QSTATE_INITIALSTATE )
     {
 #endif
       QAbstractState * ptr = obj->initialState();
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTSTATE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTSTATE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -368,7 +368,7 @@ HB_FUNC_STATIC( QSTATE_TRANSITIONS )
     {
 #endif
       QList<QAbstractTransition *> list = obj->transitions();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTTRANSITION" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTTRANSITION");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -402,16 +402,16 @@ HB_FUNC_STATIC( QSTATE_TRANSITIONS )
   }
 }
 
-void QStateSlots_connect_signal( const QString & signal, const QString & slot );
+void QStateSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSTATE_ONFINISHED )
 {
-  QStateSlots_connect_signal( "finished()", "finished()" );
+  QStateSlots_connect_signal("finished()", "finished()");
 }
 
 HB_FUNC_STATIC( QSTATE_ONPROPERTIESASSIGNED )
 {
-  QStateSlots_connect_signal( "propertiesAssigned()", "propertiesAssigned()" );
+  QStateSlots_connect_signal("propertiesAssigned()", "propertiesAssigned()");
 }
 
 #pragma ENDDUMP

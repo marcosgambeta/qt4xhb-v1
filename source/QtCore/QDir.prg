@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QDIR_NEW )
     QDir( const QDir & dir )
     */
     QDir * obj = new QDir( *PQDIR(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(0, 1) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) )
   {
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QDIR_NEW )
     QDir( const QString & path = QString() )
     */
     QDir * obj = new QDir( OPQSTRING( 1, QString() ) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISCHAR(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
   {
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QDIR_NEW )
     QDir( const QString & path, const QString & nameFilter, QDir::SortFlags sort = QDir::SortFlags( QDir::Name | QDir::IgnoreCase ), QDir::Filters filters = QDir::AllEntries )
     */
     QDir * obj = new QDir( PQSTRING(1), PQSTRING(2), HB_ISNIL(3) ? ( QDir::SortFlags ) QDir::SortFlags( QDir::Name | QDir::IgnoreCase ) : ( QDir::SortFlags ) hb_parni(3), HB_ISNIL(4) ? ( QDir::Filters ) QDir::AllEntries : ( QDir::Filters ) hb_parni(4) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QDIR_ENTRYINFOLIST )
     if( obj != NULL )
     {
       QFileInfoList list = obj->entryInfoList( PQSTRINGLIST(1), HB_ISNIL(2) ? ( QDir::Filters ) QDir::NoFilter : ( QDir::Filters ) hb_parni(2), HB_ISNIL(3) ? ( QDir::SortFlags ) QDir::NoSort : ( QDir::SortFlags ) hb_parni(3) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QDIR_ENTRYINFOLIST )
     if( obj != NULL )
     {
       QFileInfoList list = obj->entryInfoList( HB_ISNIL(1) ? ( QDir::Filters ) QDir::NoFilter : ( QDir::Filters ) hb_parni(1), HB_ISNIL(2) ? ( QDir::SortFlags ) QDir::NoSort : ( QDir::SortFlags ) hb_parni(2) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {
@@ -1057,7 +1057,7 @@ HB_FUNC_STATIC( QDIR_CURRENT )
   {
 #endif
     QDir * ptr = new QDir( QDir::current() );
-    Qt4xHb::createReturnClass( ptr, "QDIR", true );
+    Qt4xHb::createReturnClass(ptr, "QDIR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1096,7 +1096,7 @@ HB_FUNC_STATIC( QDIR_DRIVES )
   {
 #endif
     QFileInfoList list = QDir::drives();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
+    PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO");
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym )
     {
@@ -1162,7 +1162,7 @@ HB_FUNC_STATIC( QDIR_HOME )
   {
 #endif
     QDir * ptr = new QDir( QDir::home() );
-    Qt4xHb::createReturnClass( ptr, "QDIR", true );
+    Qt4xHb::createReturnClass(ptr, "QDIR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1263,7 +1263,7 @@ HB_FUNC_STATIC( QDIR_ROOT )
   {
 #endif
     QDir * ptr = new QDir( QDir::root() );
-    Qt4xHb::createReturnClass( ptr, "QDIR", true );
+    Qt4xHb::createReturnClass(ptr, "QDIR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1321,7 +1321,7 @@ HB_FUNC_STATIC( QDIR_SEPARATOR )
   {
 #endif
     QChar * ptr = new QChar( QDir::separator() );
-    Qt4xHb::createReturnClass( ptr, "QCHAR", true );
+    Qt4xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1381,7 +1381,7 @@ HB_FUNC_STATIC( QDIR_TEMP )
   {
 #endif
     QDir * ptr = new QDir( QDir::temp() );
-    Qt4xHb::createReturnClass( ptr, "QDIR", true );
+    Qt4xHb::createReturnClass(ptr, "QDIR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1435,28 +1435,28 @@ HB_FUNC_STATIC( QDIR_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QDIR_NEWFROMOBJECT )
@@ -1471,7 +1471,7 @@ HB_FUNC_STATIC( QDIR_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QDIR_SELFDESTRUCTION )
 {
-  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QDIR_SETSELFDESTRUCTION )
@@ -1480,16 +1480,16 @@ HB_FUNC_STATIC( QDIR_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_NEW )
   if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ( ISQOBJECT(3) || HB_ISNIL(3) ) )
   {
     QSocketNotifier * obj = new QSocketNotifier( PINT(1), ( QSocketNotifier::Type ) hb_parni(2), OPQOBJECT( 3, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -178,11 +178,11 @@ HB_FUNC_STATIC( QSOCKETNOTIFIER_SETENABLED )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QSocketNotifierSlots_connect_signal( const QString & signal, const QString & slot );
+void QSocketNotifierSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QSOCKETNOTIFIER_ONACTIVATED )
 {
-  QSocketNotifierSlots_connect_signal( "activated(int)", "activated(int)" );
+  QSocketNotifierSlots_connect_signal("activated(int)", "activated(int)");
 }
 
 #pragma ENDDUMP

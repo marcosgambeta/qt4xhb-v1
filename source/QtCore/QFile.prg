@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QFILE_NEW )
     QFile( const QString & name )
     */
     QFile * obj = new QFile( PQSTRING(1) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QFILE_NEW )
     QFile( QObject * parent )
     */
     QFile * obj = new QFile( PQOBJECT(1) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2) )
   {
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QFILE_NEW )
     QFile( const QString & name, QObject * parent )
     */
     QFile * obj = new QFile( PQSTRING(1), PQOBJECT(2) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -564,7 +564,7 @@ HB_FUNC_STATIC( QFILE_ENCODENAME )
   {
 #endif
     QByteArray * ptr = new QByteArray( QFile::encodeName( PQSTRING(1) ) );
-    Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+    Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QABSTRACTLISTMODEL_INDEX )
     {
 #endif
       QModelIndex * ptr = new QModelIndex( obj->index( PINT(1), OPINT( 2, 0 ), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(3) ) ) );
-      Qt4xHb::createReturnClass( ptr, "QMODELINDEX", true );
+      Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

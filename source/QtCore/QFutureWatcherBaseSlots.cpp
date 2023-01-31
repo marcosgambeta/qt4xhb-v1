@@ -12,7 +12,7 @@
 
 #include "QFutureWatcherBaseSlots.h"
 
-QFutureWatcherBaseSlots::QFutureWatcherBaseSlots( QObject * parent ) : QObject( parent )
+QFutureWatcherBaseSlots::QFutureWatcherBaseSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QFutureWatcherBaseSlots::~QFutureWatcherBaseSlots()
 
 void QFutureWatcherBaseSlots::started()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "started()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "started()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFUTUREWATCHERBASE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFUTUREWATCHERBASE");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -38,13 +38,13 @@ void QFutureWatcherBaseSlots::started()
 
 void QFutureWatcherBaseSlots::finished()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "finished()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "finished()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFUTUREWATCHERBASE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFUTUREWATCHERBASE");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -54,13 +54,13 @@ void QFutureWatcherBaseSlots::finished()
 
 void QFutureWatcherBaseSlots::canceled()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "canceled()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "canceled()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFUTUREWATCHERBASE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFUTUREWATCHERBASE");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -70,13 +70,13 @@ void QFutureWatcherBaseSlots::canceled()
 
 void QFutureWatcherBaseSlots::paused()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "paused()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "paused()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFUTUREWATCHERBASE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFUTUREWATCHERBASE");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -86,13 +86,13 @@ void QFutureWatcherBaseSlots::paused()
 
 void QFutureWatcherBaseSlots::resumed()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "resumed()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "resumed()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFUTUREWATCHERBASE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFUTUREWATCHERBASE");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -102,13 +102,13 @@ void QFutureWatcherBaseSlots::resumed()
 
 void QFutureWatcherBaseSlots::resultReadyAt( int resultIndex )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "resultReadyAt(int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "resultReadyAt(int)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFUTUREWATCHERBASE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFUTUREWATCHERBASE");
     PHB_ITEM pResultIndex = hb_itemPutNI( NULL, resultIndex );
 
     hb_vmEvalBlockV( cb, 2, pSender, pResultIndex );
@@ -120,13 +120,13 @@ void QFutureWatcherBaseSlots::resultReadyAt( int resultIndex )
 
 void QFutureWatcherBaseSlots::resultsReadyAt( int beginIndex, int endIndex )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "resultsReadyAt(int,int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "resultsReadyAt(int,int)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFUTUREWATCHERBASE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFUTUREWATCHERBASE");
     PHB_ITEM pBeginIndex = hb_itemPutNI( NULL, beginIndex );
     PHB_ITEM pEndIndex = hb_itemPutNI( NULL, endIndex );
 
@@ -140,13 +140,13 @@ void QFutureWatcherBaseSlots::resultsReadyAt( int beginIndex, int endIndex )
 
 void QFutureWatcherBaseSlots::progressRangeChanged( int minimum, int maximum )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "progressRangeChanged(int,int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "progressRangeChanged(int,int)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFUTUREWATCHERBASE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFUTUREWATCHERBASE");
     PHB_ITEM pMinimum = hb_itemPutNI( NULL, minimum );
     PHB_ITEM pMaximum = hb_itemPutNI( NULL, maximum );
 
@@ -160,13 +160,13 @@ void QFutureWatcherBaseSlots::progressRangeChanged( int minimum, int maximum )
 
 void QFutureWatcherBaseSlots::progressValueChanged( int progressValue )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "progressValueChanged(int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "progressValueChanged(int)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFUTUREWATCHERBASE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFUTUREWATCHERBASE");
     PHB_ITEM pProgressValue = hb_itemPutNI( NULL, progressValue );
 
     hb_vmEvalBlockV( cb, 2, pSender, pProgressValue );
@@ -178,13 +178,13 @@ void QFutureWatcherBaseSlots::progressValueChanged( int progressValue )
 
 void QFutureWatcherBaseSlots::progressTextChanged( const QString & progressText )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "progressTextChanged(QString)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "progressTextChanged(QString)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFUTUREWATCHERBASE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFUTUREWATCHERBASE");
     PHB_ITEM pProgressText = hb_itemPutC( NULL, QSTRINGTOSTRING( progressText ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pProgressText );
@@ -200,19 +200,19 @@ void QFutureWatcherBaseSlots_connect_signal( const QString & signal, const QStri
 
   if( obj != NULL )
   {
-    QFutureWatcherBaseSlots * s = QCoreApplication::instance()->findChild<QFutureWatcherBaseSlots *>();
+    QFutureWatcherBaseSlots * s = QCoreApplication::instance()->findChild<QFutureWatcherBaseSlots*>();
 
     if( s == NULL )
     {
       s = new QFutureWatcherBaseSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

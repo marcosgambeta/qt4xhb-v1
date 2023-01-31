@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QDATETIME_NEW )
     QDateTime()
     */
     QDateTime * obj = new QDateTime();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDATE(1) )
   {
@@ -95,7 +95,7 @@ HB_FUNC_STATIC( QDATETIME_NEW )
     QDateTime( const QDate & date )
     */
     QDateTime * obj = new QDateTime( *PQDATE(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISBETWEEN(2, 3) && ISQDATE(1) && ISQTIME(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
   {
@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QDATETIME_NEW )
     QDateTime( const QDate & date, const QTime & time, Qt::TimeSpec spec = Qt::LocalTime )
     */
     QDateTime * obj = new QDateTime( *PQDATE(1), *PQTIME(2), HB_ISNIL(3) ? ( Qt::TimeSpec ) Qt::LocalTime : ( Qt::TimeSpec ) hb_parni(3) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQDATETIME(1) )
   {
@@ -111,7 +111,7 @@ HB_FUNC_STATIC( QDATETIME_NEW )
     QDateTime( const QDateTime & other )
     */
     QDateTime * obj = new QDateTime( *PQDATETIME(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QDATETIME_ADDDAYS )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->addDays( PINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
+      Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -174,7 +174,7 @@ HB_FUNC_STATIC( QDATETIME_ADDMSECS )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->addMSecs( PQINT64(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
+      Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QDATETIME_ADDMONTHS )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->addMonths( PINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
+      Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QDATETIME_ADDSECS )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->addSecs( PINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
+      Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -249,7 +249,7 @@ HB_FUNC_STATIC( QDATETIME_ADDYEARS )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->addYears( PINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
+      Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QDATETIME_DATE )
     {
 #endif
       QDate * ptr = new QDate( obj->date() );
-      Qt4xHb::createReturnClass( ptr, "QDATE", true );
+      Qt4xHb::createReturnClass(ptr, "QDATE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QDATETIME_TIME )
     {
 #endif
       QTime * ptr = new QTime( obj->time() );
-      Qt4xHb::createReturnClass( ptr, "QTIME", true );
+      Qt4xHb::createReturnClass(ptr, "QTIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QDATETIME_TOLOCALTIME )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->toLocalTime() );
-      Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
+      Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -679,7 +679,7 @@ HB_FUNC_STATIC( QDATETIME_TOTIMESPEC )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->toTimeSpec( ( Qt::TimeSpec ) hb_parni(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
+      Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -728,7 +728,7 @@ HB_FUNC_STATIC( QDATETIME_TOUTC )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->toUTC() );
-      Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
+      Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -749,7 +749,7 @@ HB_FUNC_STATIC( QDATETIME_CURRENTDATETIME )
   {
 #endif
     QDateTime * ptr = new QDateTime( QDateTime::currentDateTime() );
-    Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
+    Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -769,7 +769,7 @@ HB_FUNC_STATIC( QDATETIME_CURRENTDATETIMEUTC )
   {
 #endif
     QDateTime * ptr = new QDateTime( QDateTime::currentDateTimeUtc() );
-    Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
+    Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -808,7 +808,7 @@ HB_FUNC_STATIC( QDATETIME_FROMMSECSSINCEEPOCH )
   {
 #endif
     QDateTime * ptr = new QDateTime( QDateTime::fromMSecsSinceEpoch( PQINT64(1) ) );
-    Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
+    Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -827,7 +827,7 @@ HB_FUNC_STATIC( QDATETIME_FROMSTRING )
     */
 
     QDateTime * ptr = new QDateTime( QDateTime::fromString( PQSTRING(1), HB_ISNIL(2) ? ( Qt::DateFormat ) Qt::TextDate : ( Qt::DateFormat ) hb_parni(2) ) );
-    Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
+    Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
   {
@@ -836,7 +836,7 @@ HB_FUNC_STATIC( QDATETIME_FROMSTRING )
     */
 
     QDateTime * ptr = new QDateTime( QDateTime::fromString( PQSTRING(1), PQSTRING(2) ) );
-    Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
+    Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
   }
   else
   {
@@ -854,7 +854,7 @@ HB_FUNC_STATIC( QDATETIME_FROMTIME_T )
   {
 #endif
     QDateTime * ptr = new QDateTime( QDateTime::fromTime_t( PUINT(1) ) );
-    Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
+    Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -870,28 +870,28 @@ HB_FUNC_STATIC( QDATETIME_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QDATETIME_NEWFROMOBJECT )
@@ -906,7 +906,7 @@ HB_FUNC_STATIC( QDATETIME_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QDATETIME_SELFDESTRUCTION )
 {
-  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QDATETIME_SETSELFDESTRUCTION )
@@ -915,16 +915,16 @@ HB_FUNC_STATIC( QDATETIME_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

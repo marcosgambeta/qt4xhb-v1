@@ -12,7 +12,7 @@
 
 #include "QIODeviceSlots.h"
 
-QIODeviceSlots::QIODeviceSlots( QObject * parent ) : QObject( parent )
+QIODeviceSlots::QIODeviceSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QIODeviceSlots::~QIODeviceSlots()
 
 void QIODeviceSlots::aboutToClose()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "aboutToClose()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "aboutToClose()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QIODEVICE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QIODEVICE");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -38,13 +38,13 @@ void QIODeviceSlots::aboutToClose()
 
 void QIODeviceSlots::bytesWritten( qint64 bytes )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "bytesWritten(qint64)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "bytesWritten(qint64)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QIODEVICE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QIODEVICE");
     PHB_ITEM pBytes = hb_itemPutNLL( NULL, bytes );
 
     hb_vmEvalBlockV( cb, 2, pSender, pBytes );
@@ -56,13 +56,13 @@ void QIODeviceSlots::bytesWritten( qint64 bytes )
 
 void QIODeviceSlots::readChannelFinished()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "readChannelFinished()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "readChannelFinished()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QIODEVICE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QIODEVICE");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -72,13 +72,13 @@ void QIODeviceSlots::readChannelFinished()
 
 void QIODeviceSlots::readyRead()
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "readyRead()" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "readyRead()");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QIODEVICE" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QIODEVICE");
 
     hb_vmEvalBlockV( cb, 1, pSender );
 
@@ -92,19 +92,19 @@ void QIODeviceSlots_connect_signal( const QString & signal, const QString & slot
 
   if( obj != NULL )
   {
-    QIODeviceSlots * s = QCoreApplication::instance()->findChild<QIODeviceSlots *>();
+    QIODeviceSlots * s = QCoreApplication::instance()->findChild<QIODeviceSlots*>();
 
     if( s == NULL )
     {
       s = new QIODeviceSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

@@ -53,7 +53,7 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_NEW )
   if( ISNUMPAR(0) )
   {
     QObjectCleanupHandler * obj = new QObjectCleanupHandler();
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QOBJECTCLEANUPHANDLER_ADD )
     {
 #endif
       QObject * ptr = obj->add( PQOBJECT(1) );
-      Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

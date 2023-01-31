@@ -80,7 +80,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     HAbstractTableModel * obj = new HAbstractTableModel( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -819,7 +819,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_RELOADDATA )
 //   if( obj != NULL )
 //   {
 //     QModelIndex * ptr = new QModelIndex( obj->createIndex ( hb_parni(1), hb_parni(2) ) );
-//     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX" );  }
+//     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX");  }
 // }
 
 #pragma ENDDUMP

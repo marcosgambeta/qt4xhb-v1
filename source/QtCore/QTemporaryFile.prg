@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW )
     QTemporaryFile()
     */
     QTemporaryFile * obj = new QTemporaryFile();
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
@@ -63,7 +63,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW )
     QTemporaryFile( const QString & templateName )
     */
     QTemporaryFile * obj = new QTemporaryFile( PQSTRING(1) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
@@ -71,7 +71,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW )
     QTemporaryFile( QObject * parent )
     */
     QTemporaryFile * obj = new QTemporaryFile( PQOBJECT(1) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2) )
   {
@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_NEW )
     QTemporaryFile( const QString & templateName, QObject * parent )
     */
     QTemporaryFile * obj = new QTemporaryFile( PQSTRING(1), PQOBJECT(2) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_CREATELOCALFILE )
     */
 
     QTemporaryFile * ptr = QTemporaryFile::createLocalFile( *PQFILE(1) );
-    Qt4xHb::createReturnQObjectClass( ptr, "QTEMPORARYFILE" );
+    Qt4xHb::createReturnQObjectClass(ptr, "QTEMPORARYFILE");
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QTEMPORARYFILE_CREATELOCALFILE )
     */
 
     QTemporaryFile * ptr = QTemporaryFile::createLocalFile( PQSTRING(1) );
-    Qt4xHb::createReturnQObjectClass( ptr, "QTEMPORARYFILE" );
+    Qt4xHb::createReturnQObjectClass(ptr, "QTEMPORARYFILE");
   }
   else
   {

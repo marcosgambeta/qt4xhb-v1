@@ -12,7 +12,7 @@
 
 #include "QSocketNotifierSlots.h"
 
-QSocketNotifierSlots::QSocketNotifierSlots( QObject * parent ) : QObject( parent )
+QSocketNotifierSlots::QSocketNotifierSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QSocketNotifierSlots::~QSocketNotifierSlots()
 
 void QSocketNotifierSlots::activated( int socket )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "activated(int)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "activated(int)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSOCKETNOTIFIER" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSOCKETNOTIFIER");
     PHB_ITEM pSocket = hb_itemPutNI( NULL, socket );
 
     hb_vmEvalBlockV( cb, 2, pSender, pSocket );
@@ -44,19 +44,19 @@ void QSocketNotifierSlots_connect_signal( const QString & signal, const QString 
 
   if( obj != NULL )
   {
-    QSocketNotifierSlots * s = QCoreApplication::instance()->findChild<QSocketNotifierSlots *>();
+    QSocketNotifierSlots * s = QCoreApplication::instance()->findChild<QSocketNotifierSlots*>();
 
     if( s == NULL )
     {
       s = new QSocketNotifierSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

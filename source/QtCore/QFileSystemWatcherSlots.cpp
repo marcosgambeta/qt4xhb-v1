@@ -12,7 +12,7 @@
 
 #include "QFileSystemWatcherSlots.h"
 
-QFileSystemWatcherSlots::QFileSystemWatcherSlots( QObject * parent ) : QObject( parent )
+QFileSystemWatcherSlots::QFileSystemWatcherSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,13 +22,13 @@ QFileSystemWatcherSlots::~QFileSystemWatcherSlots()
 
 void QFileSystemWatcherSlots::directoryChanged( const QString & path )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "directoryChanged(QString)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "directoryChanged(QString)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFILESYSTEMWATCHER" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFILESYSTEMWATCHER");
     PHB_ITEM pPath = hb_itemPutC( NULL, QSTRINGTOSTRING( path ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pPath );
@@ -40,13 +40,13 @@ void QFileSystemWatcherSlots::directoryChanged( const QString & path )
 
 void QFileSystemWatcherSlots::fileChanged( const QString & path )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "fileChanged(QString)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "fileChanged(QString)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QFILESYSTEMWATCHER" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFILESYSTEMWATCHER");
     PHB_ITEM pPath = hb_itemPutC( NULL, QSTRINGTOSTRING( path ) );
 
     hb_vmEvalBlockV( cb, 2, pSender, pPath );
@@ -62,19 +62,19 @@ void QFileSystemWatcherSlots_connect_signal( const QString & signal, const QStri
 
   if( obj != NULL )
   {
-    QFileSystemWatcherSlots * s = QCoreApplication::instance()->findChild<QFileSystemWatcherSlots *>();
+    QFileSystemWatcherSlots * s = QCoreApplication::instance()->findChild<QFileSystemWatcherSlots*>();
 
     if( s == NULL )
     {
       s = new QFileSystemWatcherSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

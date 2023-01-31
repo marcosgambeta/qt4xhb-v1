@@ -84,7 +84,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_NEW )
     QFSFileEngine()
     */
     QFSFileEngine * obj = new QFSFileEngine();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_NEW )
     QFSFileEngine( const QString & file )
     */
     QFSFileEngine * obj = new QFSFileEngine( PQSTRING(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -306,7 +306,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_FILETIME )
     {
 #endif
       QDateTime * ptr = new QDateTime( obj->fileTime( ( QAbstractFileEngine::FileTime ) hb_parni(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QDATETIME", true );
+      Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -856,7 +856,7 @@ HB_FUNC_STATIC( QFSFILEENGINE_DRIVES )
     {
 #endif
       QFileInfoList list = obj->drives();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO" );
+      PHB_DYNS pDynSym = hb_dynsymFindName( "QFILEINFO");
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym )
       {

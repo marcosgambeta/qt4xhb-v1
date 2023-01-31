@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QTHREADPOOL_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QThreadPool * obj = new QThreadPool( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QTHREADPOOL_GLOBALINSTANCE )
   {
 #endif
     QThreadPool * ptr = QThreadPool::globalInstance();
-    Qt4xHb::createReturnQObjectClass( ptr, "QTHREADPOOL" );
+    Qt4xHb::createReturnQObjectClass(ptr, "QTHREADPOOL");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

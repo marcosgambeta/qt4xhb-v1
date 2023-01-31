@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QRECT_NEW )
     QRect()
     */
     QRect * obj = new QRect();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && ISQPOINT(1) && ISQPOINT(2) )
   {
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QRECT_NEW )
     QRect( const QPoint & topLeft, const QPoint & bottomRight )
     */
     QRect * obj = new QRect( *PQPOINT(1), *PQPOINT(2) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && ISQPOINT(1) && ISQSIZE(2) )
   {
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QRECT_NEW )
     QRect( const QPoint & topLeft, const QSize & size )
     */
     QRect * obj = new QRect( *PQPOINT(1), *PQSIZE(2) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QRECT_NEW )
     QRect( int x, int y, int width, int height )
     */
     QRect * obj = new QRect( PINT(1), PINT(2), PINT(3), PINT(4) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QRECT_ADJUSTED )
     {
 #endif
       QRect * ptr = new QRect( obj->adjusted( PINT(1), PINT(2), PINT(3), PINT(4) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QRECT_BOTTOMLEFT )
     {
 #endif
       QPoint * ptr = new QPoint( obj->bottomLeft() );
-      Qt4xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,7 +272,7 @@ HB_FUNC_STATIC( QRECT_BOTTOMRIGHT )
     {
 #endif
       QPoint * ptr = new QPoint( obj->bottomRight() );
-      Qt4xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QRECT_CENTER )
     {
 #endif
       QPoint * ptr = new QPoint( obj->center() );
-      Qt4xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QRECT_INTERSECTED )
     {
 #endif
       QRect * ptr = new QRect( obj->intersected( *PQRECT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -885,7 +885,7 @@ HB_FUNC_STATIC( QRECT_NORMALIZED )
     {
 #endif
       QRect * ptr = new QRect( obj->normalized() );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1324,7 +1324,7 @@ HB_FUNC_STATIC( QRECT_SIZE )
     {
 #endif
       QSize * ptr = new QSize( obj->size() );
-      Qt4xHb::createReturnClass( ptr, "QSIZE", true );
+      Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1373,7 +1373,7 @@ HB_FUNC_STATIC( QRECT_TOPLEFT )
     {
 #endif
       QPoint * ptr = new QPoint( obj->topLeft() );
-      Qt4xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1398,7 +1398,7 @@ HB_FUNC_STATIC( QRECT_TOPRIGHT )
     {
 #endif
       QPoint * ptr = new QPoint( obj->topRight() );
-      Qt4xHb::createReturnClass( ptr, "QPOINT", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1457,7 +1457,7 @@ HB_FUNC_STATIC( QRECT_TRANSLATED )
     if( obj != NULL )
     {
       QRect * ptr = new QRect( obj->translated( PINT(1), PINT(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
   else if( ISNUMPAR(1) && ISQPOINT(1) )
@@ -1470,7 +1470,7 @@ HB_FUNC_STATIC( QRECT_TRANSLATED )
     if( obj != NULL )
     {
       QRect * ptr = new QRect( obj->translated( *PQPOINT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
   else
@@ -1493,7 +1493,7 @@ HB_FUNC_STATIC( QRECT_UNITED )
     {
 #endif
       QRect * ptr = new QRect( obj->united( *PQRECT(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QRECT", true );
+      Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1582,28 +1582,28 @@ HB_FUNC_STATIC( QRECT_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QRECT_NEWFROMOBJECT )
@@ -1618,7 +1618,7 @@ HB_FUNC_STATIC( QRECT_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QRECT_SELFDESTRUCTION )
 {
-  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QRECT_SETSELFDESTRUCTION )
@@ -1627,16 +1627,16 @@ HB_FUNC_STATIC( QRECT_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

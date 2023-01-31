@@ -53,7 +53,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_NEW )
     QHistoryState( QState * parent = 0 )
     */
     QHistoryState * obj = new QHistoryState( OPQSTATE( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQSTATE(2) || HB_ISNIL(2) ) )
   {
@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_NEW )
     QHistoryState( QHistoryState::HistoryType type, QState * parent = 0 )
     */
     QHistoryState * obj = new QHistoryState( ( QHistoryState::HistoryType ) hb_parni(1), OPQSTATE( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_DEFAULTSTATE )
     {
 #endif
       QAbstractState * ptr = obj->defaultState();
-      Qt4xHb::createReturnQObjectClass( ptr, "QABSTRACTSTATE" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QABSTRACTSTATE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

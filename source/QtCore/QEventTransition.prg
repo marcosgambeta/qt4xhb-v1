@@ -53,7 +53,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_NEW )
     QEventTransition( QState * sourceState = 0 )
     */
     QEventTransition * obj = new QEventTransition( OPQSTATE( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISNUM(2) && ( ISQSTATE(3) || HB_ISNIL(3) ) )
   {
@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_NEW )
     QEventTransition( QObject * object, QEvent::Type type, QState * sourceState = 0 )
     */
     QEventTransition * obj = new QEventTransition( PQOBJECT(1), ( QEvent::Type ) hb_parni(2), OPQSTATE( 3, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QEVENTTRANSITION_EVENTSOURCE )
     {
 #endif
       QObject * ptr = obj->eventSource();
-      Qt4xHb::createReturnQObjectClass( ptr, "QOBJECT" );
+      Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

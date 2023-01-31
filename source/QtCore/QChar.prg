@@ -90,7 +90,7 @@ QChar()
 HB_FUNC_STATIC( QCHAR_NEW1 )
 {
   QChar * obj = new QChar();
-  Qt4xHb::returnNewObject( obj, true );
+  Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -99,7 +99,7 @@ QChar( char ch )
 HB_FUNC_STATIC( QCHAR_NEW2 )
 {
   QChar * obj = new QChar( PCHAR(1) );
-  Qt4xHb::returnNewObject( obj, true );
+  Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -108,7 +108,7 @@ QChar( uchar ch )
 HB_FUNC_STATIC( QCHAR_NEW3 )
 {
   QChar * obj = new QChar( PUCHAR(1) );
-  Qt4xHb::returnNewObject( obj, true );
+  Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -117,7 +117,7 @@ QChar( QLatin1Char ch )
 HB_FUNC_STATIC( QCHAR_NEW4 )
 {
   QChar * obj = new QChar( *PQLATIN1CHAR(1) );
-  Qt4xHb::returnNewObject( obj, true );
+  Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -126,7 +126,7 @@ QChar( uchar cell, uchar row )
 HB_FUNC_STATIC( QCHAR_NEW5 )
 {
   QChar * obj = new QChar( PUCHAR(1), PUCHAR(2) );
-  Qt4xHb::returnNewObject( obj, true );
+  Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -135,7 +135,7 @@ QChar( ushort code )
 HB_FUNC_STATIC( QCHAR_NEW6 )
 {
   QChar * obj = new QChar( PUSHORT(1) );
-  Qt4xHb::returnNewObject( obj, true );
+  Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -144,7 +144,7 @@ QChar( short code )
 HB_FUNC_STATIC( QCHAR_NEW7 )
 {
   QChar * obj = new QChar( PSHORT(1) );
-  Qt4xHb::returnNewObject( obj, true );
+  Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -153,7 +153,7 @@ QChar( uint code )
 HB_FUNC_STATIC( QCHAR_NEW8 )
 {
   QChar * obj = new QChar( PUINT(1) );
-  Qt4xHb::returnNewObject( obj, true );
+  Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -162,7 +162,7 @@ QChar( int code )
 HB_FUNC_STATIC( QCHAR_NEW9 )
 {
   QChar * obj = new QChar( PINT(1) );
-  Qt4xHb::returnNewObject( obj, true );
+  Qt4xHb::returnNewObject(obj, true);
 }
 
 /*
@@ -171,7 +171,7 @@ QChar( QChar::SpecialCharacter ch )
 HB_FUNC_STATIC( QCHAR_NEW10 )
 {
   QChar * obj = new QChar( ( QChar::SpecialCharacter ) hb_parni(1) );
-  Qt4xHb::returnNewObject( obj, true );
+  Qt4xHb::returnNewObject(obj, true);
 }
 
 HB_FUNC_STATIC( QCHAR_NEW )
@@ -720,7 +720,7 @@ HB_FUNC_STATIC( QCHAR_MIRROREDCHAR )
     {
 #endif
       QChar * ptr = new QChar( obj->mirroredChar() );
-      Qt4xHb::createReturnClass( ptr, "QCHAR", true );
+      Qt4xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -745,7 +745,7 @@ HB_FUNC_STATIC( QCHAR_TOCASEFOLDED )
     {
 #endif
       QChar * ptr = new QChar( obj->toCaseFolded() );
-      Qt4xHb::createReturnClass( ptr, "QCHAR", true );
+      Qt4xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -770,7 +770,7 @@ HB_FUNC_STATIC( QCHAR_TOLOWER )
     {
 #endif
       QChar * ptr = new QChar( obj->toLower() );
-      Qt4xHb::createReturnClass( ptr, "QCHAR", true );
+      Qt4xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -795,7 +795,7 @@ HB_FUNC_STATIC( QCHAR_TOTITLECASE )
     {
 #endif
       QChar * ptr = new QChar( obj->toTitleCase() );
-      Qt4xHb::createReturnClass( ptr, "QCHAR", true );
+      Qt4xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -820,7 +820,7 @@ HB_FUNC_STATIC( QCHAR_TOUPPER )
     {
 #endif
       QChar * ptr = new QChar( obj->toUpper() );
-      Qt4xHb::createReturnClass( ptr, "QCHAR", true );
+      Qt4xHb::createReturnClass(ptr, "QCHAR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -861,28 +861,28 @@ HB_FUNC_STATIC( QCHAR_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QCHAR_NEWFROMOBJECT )
@@ -897,7 +897,7 @@ HB_FUNC_STATIC( QCHAR_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QCHAR_SELFDESTRUCTION )
 {
-  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QCHAR_SETSELFDESTRUCTION )
@@ -906,16 +906,16 @@ HB_FUNC_STATIC( QCHAR_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

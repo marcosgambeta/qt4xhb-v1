@@ -12,7 +12,7 @@
 
 #include "QVariantAnimationSlots.h"
 
-QVariantAnimationSlots::QVariantAnimationSlots( QObject * parent ) : QObject( parent )
+QVariantAnimationSlots::QVariantAnimationSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,14 +22,14 @@ QVariantAnimationSlots::~QVariantAnimationSlots()
 
 void QVariantAnimationSlots::valueChanged( const QVariant & value )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "valueChanged(QVariant)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "valueChanged(QVariant)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QVARIANTANIMATION" );
-    PHB_ITEM pValue = Qt4xHb::Signals_return_object( ( void * ) &value, "QVARIANT" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QVARIANTANIMATION");
+    PHB_ITEM pValue = Qt4xHb::Signals_return_object( ( void * ) &value, "QVARIANT");
 
     hb_vmEvalBlockV( cb, 2, pSender, pValue );
 
@@ -44,19 +44,19 @@ void QVariantAnimationSlots_connect_signal( const QString & signal, const QStrin
 
   if( obj != NULL )
   {
-    QVariantAnimationSlots * s = QCoreApplication::instance()->findChild<QVariantAnimationSlots *>();
+    QVariantAnimationSlots * s = QCoreApplication::instance()->findChild<QVariantAnimationSlots*>();
 
     if( s == NULL )
     {
       s = new QVariantAnimationSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

@@ -453,7 +453,7 @@ HB_FUNC_STATIC( QIODEVICE_PEEK )
     if( obj != NULL )
     {
       QByteArray * ptr = new QByteArray( obj->peek( PQINT64(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
     }
   }
   else
@@ -534,7 +534,7 @@ HB_FUNC_STATIC( QIODEVICE_READ )
     if( obj != NULL )
     {
       QByteArray * ptr = new QByteArray( obj->read( PQINT64(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
     }
   }
   else
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QIODEVICE_READALL )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->readAll() );
-      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -592,7 +592,7 @@ HB_FUNC_STATIC( QIODEVICE_READLINE )
     if( obj != NULL )
     {
       QByteArray * ptr = new QByteArray( obj->readLine( OPQINT64( 1, 0 ) ) );
-      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
     }
   }
   else
@@ -817,26 +817,26 @@ HB_FUNC_STATIC( QIODEVICE_WRITE )
   }
 }
 
-void QIODeviceSlots_connect_signal( const QString & signal, const QString & slot );
+void QIODeviceSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QIODEVICE_ONABOUTTOCLOSE )
 {
-  QIODeviceSlots_connect_signal( "aboutToClose()", "aboutToClose()" );
+  QIODeviceSlots_connect_signal("aboutToClose()", "aboutToClose()");
 }
 
 HB_FUNC_STATIC( QIODEVICE_ONBYTESWRITTEN )
 {
-  QIODeviceSlots_connect_signal( "bytesWritten(qint64)", "bytesWritten(qint64)" );
+  QIODeviceSlots_connect_signal("bytesWritten(qint64)", "bytesWritten(qint64)");
 }
 
 HB_FUNC_STATIC( QIODEVICE_ONREADCHANNELFINISHED )
 {
-  QIODeviceSlots_connect_signal( "readChannelFinished()", "readChannelFinished()" );
+  QIODeviceSlots_connect_signal("readChannelFinished()", "readChannelFinished()");
 }
 
 HB_FUNC_STATIC( QIODEVICE_ONREADYREAD )
 {
-  QIODeviceSlots_connect_signal( "readyRead()", "readyRead()" );
+  QIODeviceSlots_connect_signal("readyRead()", "readyRead()");
 }
 
 #pragma ENDDUMP

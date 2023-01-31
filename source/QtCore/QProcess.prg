@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QPROCESS_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     QProcess * obj = new QProcess( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QPROCESS_PROCESSENVIRONMENT )
     {
 #endif
       QProcessEnvironment * ptr = new QProcessEnvironment( obj->processEnvironment() );
-      Qt4xHb::createReturnClass( ptr, "QPROCESSENVIRONMENT", true );
+      Qt4xHb::createReturnClass(ptr, "QPROCESSENVIRONMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QPROCESS_READALLSTANDARDERROR )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->readAllStandardError() );
-      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QPROCESS_READALLSTANDARDOUTPUT )
     {
 #endif
       QByteArray * ptr = new QByteArray( obj->readAllStandardOutput() );
-      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", true );
+      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1133,36 +1133,36 @@ HB_FUNC_STATIC( QPROCESS_SYSTEMENVIRONMENT )
 #endif
 }
 
-void QProcessSlots_connect_signal( const QString & signal, const QString & slot );
+void QProcessSlots_connect_signal(const QString & signal, const QString & slot);
 
 HB_FUNC_STATIC( QPROCESS_ONERROR )
 {
-  QProcessSlots_connect_signal( "error(QProcess::ProcessError)", "error(QProcess::ProcessError)" );
+  QProcessSlots_connect_signal("error(QProcess::ProcessError)", "error(QProcess::ProcessError)");
 }
 
 HB_FUNC_STATIC( QPROCESS_ONFINISHED )
 {
-  QProcessSlots_connect_signal( "finished(int,QProcess::ExitStatus)", "finished(int,QProcess::ExitStatus)" );
+  QProcessSlots_connect_signal("finished(int,QProcess::ExitStatus)", "finished(int,QProcess::ExitStatus)");
 }
 
 HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDERROR )
 {
-  QProcessSlots_connect_signal( "readyReadStandardError()", "readyReadStandardError()" );
+  QProcessSlots_connect_signal("readyReadStandardError()", "readyReadStandardError()");
 }
 
 HB_FUNC_STATIC( QPROCESS_ONREADYREADSTANDARDOUTPUT )
 {
-  QProcessSlots_connect_signal( "readyReadStandardOutput()", "readyReadStandardOutput()" );
+  QProcessSlots_connect_signal("readyReadStandardOutput()", "readyReadStandardOutput()");
 }
 
 HB_FUNC_STATIC( QPROCESS_ONSTARTED )
 {
-  QProcessSlots_connect_signal( "started()", "started()" );
+  QProcessSlots_connect_signal("started()", "started()");
 }
 
 HB_FUNC_STATIC( QPROCESS_ONSTATECHANGED )
 {
-  QProcessSlots_connect_signal( "stateChanged(QProcess::ProcessState)", "stateChanged(QProcess::ProcessState)" );
+  QProcessSlots_connect_signal("stateChanged(QProcess::ProcessState)", "stateChanged(QProcess::ProcessState)");
 }
 
 #pragma ENDDUMP

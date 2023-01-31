@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QLINEF_NEW )
     QLineF()
     */
     QLineF * obj = new QLineF();
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(2) && ISQPOINTF(1) && ISQPOINTF(2) )
   {
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QLINEF_NEW )
     QLineF( const QPointF & p1, const QPointF & p2 )
     */
     QLineF * obj = new QLineF( *PQPOINTF(1), *PQPOINTF(2) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
   {
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QLINEF_NEW )
     QLineF( qreal x1, qreal y1, qreal x2, qreal y2 )
     */
     QLineF * obj = new QLineF( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQLINE(1) )
   {
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QLINEF_NEW )
     QLineF( const QLine & line )
     */
     QLineF * obj = new QLineF( *PQLINE(1) );
-    Qt4xHb::returnNewObject( obj, true );
+    Qt4xHb::returnNewObject(obj, true);
   }
   else
   {
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QLINEF_P1 )
     {
 #endif
       QPointF * ptr = new QPointF( obj->p1() );
-      Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QLINEF_P2 )
     {
 #endif
       QPointF * ptr = new QPointF( obj->p2() );
-      Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -434,7 +434,7 @@ HB_FUNC_STATIC( QLINEF_NORMALVECTOR )
     {
 #endif
       QLineF * ptr = new QLineF( obj->normalVector() );
-      Qt4xHb::createReturnClass( ptr, "QLINEF", true );
+      Qt4xHb::createReturnClass(ptr, "QLINEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -459,7 +459,7 @@ HB_FUNC_STATIC( QLINEF_POINTAT )
     {
 #endif
       QPointF * ptr = new QPointF( obj->pointAt( PQREAL(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QPOINTF", true );
+      Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -640,7 +640,7 @@ HB_FUNC_STATIC( QLINEF_TOLINE )
     {
 #endif
       QLine * ptr = new QLine( obj->toLine() );
-      Qt4xHb::createReturnClass( ptr, "QLINE", true );
+      Qt4xHb::createReturnClass(ptr, "QLINE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -699,7 +699,7 @@ HB_FUNC_STATIC( QLINEF_TRANSLATED )
     if( obj != NULL )
     {
       QLineF * ptr = new QLineF( obj->translated( *PQPOINTF(1) ) );
-      Qt4xHb::createReturnClass( ptr, "QLINEF", true );
+      Qt4xHb::createReturnClass(ptr, "QLINEF", true);
     }
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QLINEF_TRANSLATED )
     if( obj != NULL )
     {
       QLineF * ptr = new QLineF( obj->translated( PQREAL(1), PQREAL(2) ) );
-      Qt4xHb::createReturnClass( ptr, "QLINEF", true );
+      Qt4xHb::createReturnClass(ptr, "QLINEF", true);
     }
   }
   else
@@ -735,7 +735,7 @@ HB_FUNC_STATIC( QLINEF_UNITVECTOR )
     {
 #endif
       QLineF * ptr = new QLineF( obj->unitVector() );
-      Qt4xHb::createReturnClass( ptr, "QLINEF", true );
+      Qt4xHb::createReturnClass(ptr, "QLINEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -756,7 +756,7 @@ HB_FUNC_STATIC( QLINEF_FROMPOLAR )
   {
 #endif
     QLineF * ptr = new QLineF( QLineF::fromPolar( PQREAL(1), PQREAL(2) ) );
-    Qt4xHb::createReturnClass( ptr, "QLINEF", true );
+    Qt4xHb::createReturnClass(ptr, "QLINEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -772,28 +772,28 @@ HB_FUNC_STATIC( QLINEF_NEWFROM )
 
   if( hb_pcount() == 1 && HB_ISOBJECT(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
   {
-    PHB_ITEM ptr = hb_itemPutPtr( NULL, static_cast<void*>( hb_itemGetPtr( hb_param( 1, HB_IT_POINTER ) ) ) );
+    PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_pointer", 1, ptr);
     hb_itemRelease(ptr);
-    PHB_ITEM des = hb_itemPutL( NULL, false );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, false);
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 HB_FUNC_STATIC( QLINEF_NEWFROMOBJECT )
@@ -808,7 +808,7 @@ HB_FUNC_STATIC( QLINEF_NEWFROMPOINTER )
 
 HB_FUNC_STATIC( QLINEF_SELFDESTRUCTION )
 {
-  hb_retl( ( bool ) hb_itemGetL( hb_objSendMsg( hb_stackSelfItem(), "SELF_DESTRUCTION", 0 ) ) );
+  hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
 HB_FUNC_STATIC( QLINEF_SETSELFDESTRUCTION )
@@ -817,16 +817,16 @@ HB_FUNC_STATIC( QLINEF_SETSELFDESTRUCTION )
 
   if( hb_pcount() == 1 && HB_ISLOG(1) )
   {
-    PHB_ITEM des = hb_itemPutL( NULL, hb_parl(1) );
-    hb_objSendMsg( self, "_self_destruction", 1, des );
-    hb_itemRelease( des );
+    PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
+    hb_objSendMsg(self, "_self_destruction", 1, des);
+    hb_itemRelease(des);
   }
   else
   {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 
-  hb_itemReturn( self );
+  hb_itemReturn(self);
 }
 
 #pragma ENDDUMP

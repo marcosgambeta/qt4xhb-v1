@@ -60,7 +60,7 @@ HB_FUNC_STATIC( QBUFFER_NEW )
     QBuffer( QObject * parent = 0 )
     */
     QBuffer * obj = new QBuffer( OPQOBJECT( 1, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else if( ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
   {
@@ -68,7 +68,7 @@ HB_FUNC_STATIC( QBUFFER_NEW )
     QBuffer( QByteArray * byteArray, QObject * parent = 0 )
     */
     QBuffer * obj = new QBuffer( PQBYTEARRAY(1), OPQOBJECT( 2, 0 ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QBUFFER_BUFFER )
     {
 #endif
       QByteArray * ptr = &obj->buffer();
-      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", false );
+      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QBUFFER_DATA )
     {
 #endif
       const QByteArray * ptr = &obj->data();
-      Qt4xHb::createReturnClass( ptr, "QBYTEARRAY", false );
+      Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

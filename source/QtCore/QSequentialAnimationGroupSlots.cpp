@@ -12,7 +12,7 @@
 
 #include "QSequentialAnimationGroupSlots.h"
 
-QSequentialAnimationGroupSlots::QSequentialAnimationGroupSlots( QObject * parent ) : QObject( parent )
+QSequentialAnimationGroupSlots::QSequentialAnimationGroupSlots(QObject * parent) : QObject(parent)
 {
 }
 
@@ -22,14 +22,14 @@ QSequentialAnimationGroupSlots::~QSequentialAnimationGroupSlots()
 
 void QSequentialAnimationGroupSlots::currentAnimationChanged( QAbstractAnimation * current )
 {
-  QObject * object = qobject_cast<QObject*>( sender() );
+  QObject * object = qobject_cast<QObject*>(sender());
 
-  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock( object, "currentAnimationChanged(QAbstractAnimation*)" );
+  PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "currentAnimationChanged(QAbstractAnimation*)");
 
-  if( cb )
+  if( cb != NULL )
   {
-    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject( object, "QSEQUENTIALANIMATIONGROUP" );
-    PHB_ITEM pCurrent = Qt4xHb::Signals_return_qobject( current, "QABSTRACTANIMATION" );
+    PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSEQUENTIALANIMATIONGROUP");
+    PHB_ITEM pCurrent = Qt4xHb::Signals_return_qobject( current, "QABSTRACTANIMATION");
 
     hb_vmEvalBlockV( cb, 2, pSender, pCurrent );
 
@@ -44,19 +44,19 @@ void QSequentialAnimationGroupSlots_connect_signal( const QString & signal, cons
 
   if( obj != NULL )
   {
-    QSequentialAnimationGroupSlots * s = QCoreApplication::instance()->findChild<QSequentialAnimationGroupSlots *>();
+    QSequentialAnimationGroupSlots * s = QCoreApplication::instance()->findChild<QSequentialAnimationGroupSlots*>();
 
     if( s == NULL )
     {
       s = new QSequentialAnimationGroupSlots();
-      s->moveToThread( QCoreApplication::instance()->thread() );
-      s->setParent( QCoreApplication::instance() );
+      s->moveToThread(QCoreApplication::instance()->thread());
+      s->setParent(QCoreApplication::instance());
     }
 
-    hb_retl( Qt4xHb::Signals_connection_disconnection( s, signal, slot ) );
+    hb_retl(Qt4xHb::Signals_connection_disconnection(s, signal, slot));
   }
   else
   {
-    hb_retl( false );
+    hb_retl(false);
   }
 }

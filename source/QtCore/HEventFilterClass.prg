@@ -46,7 +46,7 @@ HB_FUNC_STATIC( HEVENTFILTER_NEW )
   if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
   {
     HEventFilter * obj = new HEventFilter( OPQOBJECT( 1, NULL ) );
-    Qt4xHb::returnNewObject( obj, false );
+    Qt4xHb::returnNewObject(obj, false);
   }
   else
   {
