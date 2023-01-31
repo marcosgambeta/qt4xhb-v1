@@ -30,7 +30,7 @@ class QMessageBoxSlots: public QObject
 {
   Q_OBJECT
   public:
-  QMessageBoxSlots( QObject * parent = 0 );
+  QMessageBoxSlots(QObject * parent = 0);
   ~QMessageBoxSlots();
   public slots:
   void buttonClicked( QAbstractButton * button );

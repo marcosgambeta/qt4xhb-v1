@@ -28,7 +28,7 @@ class QSocketNotifierSlots: public QObject
 {
   Q_OBJECT
   public:
-  QSocketNotifierSlots( QObject * parent = 0 );
+  QSocketNotifierSlots(QObject * parent = 0);
   ~QSocketNotifierSlots();
   public slots:
   void activated( int socket );

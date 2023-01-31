@@ -28,7 +28,7 @@ class QWorkspaceSlots: public QObject
 {
   Q_OBJECT
   public:
-  QWorkspaceSlots( QObject * parent = 0 );
+  QWorkspaceSlots(QObject * parent = 0);
   ~QWorkspaceSlots();
   public slots:
   void windowActivated( QWidget * w );

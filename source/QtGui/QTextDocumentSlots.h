@@ -28,7 +28,7 @@ class QTextDocumentSlots: public QObject
 {
   Q_OBJECT
   public:
-  QTextDocumentSlots( QObject * parent = 0 );
+  QTextDocumentSlots(QObject * parent = 0);
   ~QTextDocumentSlots();
   public slots:
   void blockCountChanged( int newBlockCount );

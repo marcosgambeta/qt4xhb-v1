@@ -28,7 +28,7 @@ class QAbstractVideoSurfaceSlots: public QObject
 {
   Q_OBJECT
   public:
-  QAbstractVideoSurfaceSlots( QObject * parent = 0 );
+  QAbstractVideoSurfaceSlots(QObject * parent = 0);
   ~QAbstractVideoSurfaceSlots();
   public slots:
   void activeChanged( bool active );

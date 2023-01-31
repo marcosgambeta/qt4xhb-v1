@@ -28,7 +28,7 @@ class QStyleSlots: public QObject
 {
   Q_OBJECT
   public:
-  QStyleSlots( QObject * parent = 0 );
+  QStyleSlots(QObject * parent = 0);
   ~QStyleSlots();
   public slots:
   void currentChanged( int index );
