@@ -54,7 +54,7 @@ namespace Qt4xHb
   void createReturnQWidgetClass ( const QWidget * ptr, const char * classname );
 
   bool isClassDerivedFrom ( const char * className1, const char * className2 );
-  bool isObjectDerivedFrom ( int numpar, const QString className );
+  bool isObjectDerivedFrom ( int numpar, const QString & className );
   QStringList convert_array_parameter_to_qstringlist ( int numpar );
   //QString convert_string_parameter_to_qstring ( int numpar );
   QVariantList convert_array_parameter_to_qvariantlist ( int numpar );
