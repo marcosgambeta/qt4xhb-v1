@@ -17,54 +17,54 @@
 
 namespace Qt4xHb
 {
-  void createReturnClass ( void * ptr, const char * classname );
-  void createReturnClass ( const void * ptr, const char * classname );
-  void createReturnClass ( void * ptr, const char * classname, bool destroy );
-  void createReturnClass ( const void * ptr, const char * classname, bool destroy );
+  void createReturnClass(void * ptr, const char * classname);
+  void createReturnClass(const void * ptr, const char * classname);
+  void createReturnClass(void * ptr, const char * classname, bool destroy);
+  void createReturnClass(const void * ptr, const char * classname, bool destroy);
 
-  //bool _qt4xhb_checkclsid ( int par, int clsid );
-  bool inherits ( int par, const char * classname );
+  //bool _qt4xhb_checkclsid(int par, int clsid);
+  bool inherits(int par, const char * classname);
 
-  void convert_qlist_int_to_array ( const QList<int> & list );
-  void convert_qlist_qint8_to_array ( const QList<qint8> & list );
-  void convert_qlist_qint16_to_array ( const QList<qint16> & list );
-  void convert_qlist_qint32_to_array ( const QList<qint32> & list );
-  void convert_qlist_qint64_to_array ( const QList<qint64> & list );
+  void convert_qlist_int_to_array(const QList<int> & list);
+  void convert_qlist_qint8_to_array(const QList<qint8> & list);
+  void convert_qlist_qint16_to_array(const QList<qint16> & list);
+  void convert_qlist_qint32_to_array(const QList<qint32> & list);
+  void convert_qlist_qint64_to_array(const QList<qint64> & list);
 
-  void convert_qlist_quint8_to_array ( const QList<quint8> & list );
-  void convert_qlist_quint16_to_array ( const QList<quint16> & list );
-  void convert_qlist_quint32_to_array ( const QList<quint32> & list );
-  void convert_qlist_quint64_to_array ( const QList<quint64> & list );
+  void convert_qlist_quint8_to_array(const QList<quint8> & list);
+  void convert_qlist_quint16_to_array(const QList<quint16> & list);
+  void convert_qlist_quint32_to_array(const QList<quint32> & list);
+  void convert_qlist_quint64_to_array(const QList<quint64> & list);
 
-  void convert_qlist_qreal_to_array ( const QList<qreal> & list );
-  void convert_qlist_double_to_array ( const QList<double> & list );
+  void convert_qlist_qreal_to_array(const QList<qreal> & list);
+  void convert_qlist_double_to_array(const QList<double> & list);
 
-  void convert_qstringlist_to_array ( const QStringList & list );
+  void convert_qstringlist_to_array(const QStringList & list);
 
-  void * itemGetPtr ( int numpar );
+  void * itemGetPtr(int numpar);
   void * itemGetPtrStackSelfItem ();
   QObject * getQObjectPointerFromSelfItem();
-  void storePointerAndFlag (void * pointer, bool flag);
-  void returnNewObject (void * pointer, bool flag);
+  void storePointerAndFlag(void * pointer, bool flag);
+  void returnNewObject(void * pointer, bool flag);
 
-  void createReturnQObjectClass ( QObject * ptr, const char * classname );
-  void createReturnQObjectClass ( const QObject * ptr, const char * classname );
+  void createReturnQObjectClass(QObject * ptr, const char * classname);
+  void createReturnQObjectClass(const QObject * ptr, const char * classname);
 
-  void createReturnQWidgetClass ( QWidget * ptr, const char * classname );
-  void createReturnQWidgetClass ( const QWidget * ptr, const char * classname );
+  void createReturnQWidgetClass(QWidget * ptr, const char * classname);
+  void createReturnQWidgetClass(const QWidget * ptr, const char * classname);
 
-  bool isClassDerivedFrom ( const char * className1, const char * className2 );
-  bool isObjectDerivedFrom ( int numpar, const QString & className );
-  QStringList convert_array_parameter_to_qstringlist ( int numpar );
-  //QString convert_string_parameter_to_qstring ( int numpar );
-  QVariantList convert_array_parameter_to_qvariantlist ( int numpar );
-  void convert_qvariantlist_to_array ( const QVariantList & list );
-  //void convert_qlist_qbluetoothuuid_to_array ( const QList<QBluetoothUuid> list );
+  bool isClassDerivedFrom(const char * className1, const char * className2);
+  bool isObjectDerivedFrom(int numpar, const QString & className);
+  QStringList convert_array_parameter_to_qstringlist(int numpar);
+  //QString convert_string_parameter_to_qstring(int numpar);
+  QVariantList convert_array_parameter_to_qvariantlist(int numpar);
+  void convert_qvariantlist_to_array(const QVariantList & list);
+  //void convert_qlist_qbluetoothuuid_to_array(const QList<QBluetoothUuid> list);
 
-  PHB_ITEM returnQModelIndexObject( void * ptr );
-  PHB_ITEM returnQVariantObject( void * ptr );
-  PHB_ITEM returnQWidgetObject( QWidget * ptr );
-  PHB_ITEM returnQObjectObject( QObject * ptr );
+  PHB_ITEM returnQModelIndexObject(void * ptr);
+  PHB_ITEM returnQVariantObject(void * ptr);
+  PHB_ITEM returnQWidgetObject(QWidget * ptr);
+  PHB_ITEM returnQObjectObject(QObject * ptr);
 }
 
 #endif /* QT4XHB_UTILS_H */

@@ -11,9 +11,9 @@
 
 namespace Qt4xHb
 {
-  bool Events_connect_event( QObject * object, int type, PHB_ITEM codeblock );
-  bool Events_disconnect_event( QObject * object, int type );
-  void Events_disconnect_all_events( QObject * obj, bool children );
+  bool Events_connect_event(QObject * object, int type, PHB_ITEM codeblock);
+  bool Events_disconnect_event(QObject * object, int type);
+  void Events_disconnect_all_events(QObject * obj, bool children);
 }
 
 #endif /* QT4XHB_EVENTS_H */
