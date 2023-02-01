@@ -80,7 +80,7 @@ QHelpEngineCore( const QString & collectionFile, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QHELPENGINECORE_NEW )
 {
-  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)) )
   {
     QHelpEngineCore * obj = new QHelpEngineCore( PQSTRING(1), OPQOBJECT( 2, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_ADDCUSTOMFILTER )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2) )
     {
 #endif
-      RBOOL( obj->addCustomFilter( PQSTRING(1), PQSTRINGLIST(2) ) );
+      RBOOL( obj->addCustomFilter( PQSTRING(1), PQSTRINGLIST(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,7 +194,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_COPYCOLLECTIONFILE )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->copyCollectionFile( PQSTRING(1) ) );
+      RBOOL( obj->copyCollectionFile( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,10 +263,10 @@ HB_FUNC_STATIC( QHELPENGINECORE_CUSTOMVALUE )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQVARIANT(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQVARIANT(2) || HB_ISNIL(2)) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->customValue( PQSTRING(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(2) ) ) );
+      QVariant * ptr = new QVariant( obj->customValue( PQSTRING(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(2)) ) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_DOCUMENTATIONFILENAME )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->documentationFileName( PQSTRING(1) ) );
+      RQSTRING( obj->documentationFileName( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -339,7 +339,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILEDATA )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->fileData( *PQURL(1) ) );
+      QByteArray * ptr = new QByteArray( obj->fileData( *PQURL(1)) );
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -361,34 +361,34 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILES )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISARRAY(2) && ( HB_ISCHAR(3) || HB_ISNIL(3) ) )
+    if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISARRAY(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) )
     {
 #endif
-      QList<QUrl> list = obj->files( PQSTRING(1), PQSTRINGLIST(2), OPQSTRING( 3, QString() ) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QURL");
+      QList<QUrl> list = obj->files( PQSTRING(1), PQSTRINGLIST(2), OPQSTRING( 3, QString()) );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QURL");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QUrl( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QUrl(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QURL", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QURL", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -424,7 +424,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_FILTERATTRIBUTES )
 
     if( obj != NULL )
     {
-      RQSTRINGLIST( obj->filterAttributes( PQSTRING(1) ) );
+      RQSTRINGLIST( obj->filterAttributes( PQSTRING(1)) );
     }
   }
   else
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_FINDFILE )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->findFile( *PQURL(1) ) );
+      QUrl * ptr = new QUrl( obj->findFile( *PQURL(1)) );
       Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_REGISTERDOCUMENTATION )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->registerDocumentation( PQSTRING(1) ) );
+      RBOOL( obj->registerDocumentation( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_REMOVECUSTOMFILTER )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->removeCustomFilter( PQSTRING(1) ) );
+      RBOOL( obj->removeCustomFilter( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_REMOVECUSTOMVALUE )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->removeCustomValue( PQSTRING(1) ) );
+      RBOOL( obj->removeCustomValue( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -645,7 +645,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_SETCUSTOMVALUE )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2) )
     {
 #endif
-      RBOOL( obj->setCustomValue( PQSTRING(1), *PQVARIANT(2) ) );
+      RBOOL( obj->setCustomValue( PQSTRING(1), *PQVARIANT(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -693,7 +693,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_UNREGISTERDOCUMENTATION )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->unregisterDocumentation( PQSTRING(1) ) );
+      RBOOL( obj->unregisterDocumentation( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -713,7 +713,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_METADATA )
   if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
   {
 #endif
-    QVariant * ptr = new QVariant( QHelpEngineCore::metaData( PQSTRING(1), PQSTRING(2) ) );
+    QVariant * ptr = new QVariant( QHelpEngineCore::metaData( PQSTRING(1), PQSTRING(2)) );
     Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
@@ -733,7 +733,7 @@ HB_FUNC_STATIC( QHELPENGINECORE_NAMESPACENAME )
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
 #endif
-    RQSTRING( QHelpEngineCore::namespaceName( PQSTRING(1) ) );
+    RQSTRING( QHelpEngineCore::namespaceName( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

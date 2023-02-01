@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QHELPCONTENTITEM_CHILDPOSITION )
     if( ISNUMPAR(1) && ISQHELPCONTENTITEM(1) )
     {
 #endif
-      RINT( obj->childPosition( PQHELPCONTENTITEM(1) ) );
+      RINT( obj->childPosition( PQHELPCONTENTITEM(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

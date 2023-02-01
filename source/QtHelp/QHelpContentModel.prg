@@ -156,10 +156,10 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_COLUMNCOUNT )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( ISQMODELINDEX(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)) )
     {
 #endif
-      RINT( obj->columnCount( HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(1) ) ) );
+      RINT( obj->columnCount( HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(1)) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_DATA )
     if( ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISNUM(2) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX(1), PINT(2) ) );
+      QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX(1), PINT(2)) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -205,10 +205,10 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_INDEX )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ( ISQMODELINDEX(3) || HB_ISNIL(3) ) )
+    if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->index( PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(3) ) ) );
+      QModelIndex * ptr = new QModelIndex( obj->index( PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(3)) ) );
       Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_PARENT )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->parent( *PQMODELINDEX(1) ) );
+      QModelIndex * ptr = new QModelIndex( obj->parent( *PQMODELINDEX(1)) );
       Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -255,10 +255,10 @@ HB_FUNC_STATIC( QHELPCONTENTMODEL_ROWCOUNT )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( ISQMODELINDEX(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)) )
     {
 #endif
-      RINT( obj->rowCount( HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(1) ) ) );
+      RINT( obj->rowCount( HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(1)) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
