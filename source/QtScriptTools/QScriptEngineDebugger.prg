@@ -68,7 +68,7 @@ QScriptEngineDebugger( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
   {
     QScriptEngineDebugger * obj = new QScriptEngineDebugger( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDMENU )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
     {
 #endif
       QMenu * ptr = obj->createStandardMenu( OPQWIDGET( 1, 0 ) );
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEDEBUGGER_CREATESTANDARDTOOLBAR )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
     {
 #endif
       QToolBar * ptr = obj->createStandardToolBar( OPQWIDGET( 1, 0 ) );
