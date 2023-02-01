@@ -24,18 +24,18 @@ void createReturnClass ( void * ptr, const char * classname )
 {
   PHB_DYNS pDynSym = hb_dynsymFindName( classname );
 
-  if( pDynSym )
+  if( pDynSym != NULL )
   {
-    hb_vmPushDynSym( pDynSym );
+    hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
-    hb_vmDo( 0 );
-    PHB_ITEM pObject = hb_itemNew( NULL );
-    hb_itemCopy( pObject, hb_stackReturnItem() );
-    PHB_ITEM pItem = hb_itemPutPtr( NULL, ptr );
-    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-    hb_itemReturn( pObject );
-    hb_itemRelease( pObject );
-    hb_itemRelease( pItem );
+    hb_vmDo(0);
+    PHB_ITEM pObject = hb_itemNew(NULL);
+    hb_itemCopy(pObject, hb_stackReturnItem());
+    PHB_ITEM pItem = hb_itemPutPtr(NULL, ptr);
+    hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+    hb_itemReturn(pObject);
+    hb_itemRelease(pObject);
+    hb_itemRelease(pItem);
   }
   else
   {
@@ -50,18 +50,18 @@ void createReturnClass ( const void * ptr, const char * classname )
 {
   PHB_DYNS pDynSym = hb_dynsymFindName( classname );
 
-  if( pDynSym )
+  if( pDynSym != NULL )
   {
-    hb_vmPushDynSym( pDynSym );
+    hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
-    hb_vmDo( 0 );
-    PHB_ITEM pObject = hb_itemNew( NULL );
-    hb_itemCopy( pObject, hb_stackReturnItem() );
-    PHB_ITEM pItem = hb_itemPutPtr( NULL, const_cast<void*>(ptr) );
-    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-    hb_itemReturn( pObject );
-    hb_itemRelease( pObject );
-    hb_itemRelease( pItem );
+    hb_vmDo(0);
+    PHB_ITEM pObject = hb_itemNew(NULL);
+    hb_itemCopy(pObject, hb_stackReturnItem());
+    PHB_ITEM pItem = hb_itemPutPtr(NULL, const_cast<void*>(ptr));
+    hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+    hb_itemReturn(pObject);
+    hb_itemRelease(pObject);
+    hb_itemRelease(pItem);
   }
   else
   {
@@ -76,24 +76,24 @@ void createReturnClass ( void * ptr, const char * classname, bool destroy )
 {
   PHB_DYNS pDynSym = hb_dynsymFindName( classname );
 
-  if( pDynSym )
+  if( pDynSym != NULL )
   {
-    hb_vmPushDynSym( pDynSym );
+    hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
-    hb_vmDo( 0 );
-    PHB_ITEM pObject = hb_itemNew( NULL );
-    hb_itemCopy( pObject, hb_stackReturnItem() );
+    hb_vmDo(0);
+    PHB_ITEM pObject = hb_itemNew(NULL);
+    hb_itemCopy(pObject, hb_stackReturnItem());
 
-    PHB_ITEM pItem = hb_itemPutPtr( NULL, ptr );
-    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-    hb_itemRelease( pItem );
+    PHB_ITEM pItem = hb_itemPutPtr(NULL, ptr);
+    hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+    hb_itemRelease(pItem);
 
-    PHB_ITEM pDestroy = hb_itemPutL( NULL, destroy );
-    hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-    hb_itemRelease( pDestroy );
+    PHB_ITEM pDestroy = hb_itemPutL(NULL, destroy);
+    hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+    hb_itemRelease(pDestroy);
 
-    hb_itemReturn( pObject );
-    hb_itemRelease( pObject );
+    hb_itemReturn(pObject);
+    hb_itemRelease(pObject);
   }
   else
   {
@@ -108,24 +108,24 @@ void createReturnClass ( const void * ptr, const char * classname, bool destroy 
 {
   PHB_DYNS pDynSym = hb_dynsymFindName( classname );
 
-  if( pDynSym )
+  if( pDynSym != NULL )
   {
-    hb_vmPushDynSym( pDynSym );
+    hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
-    hb_vmDo( 0 );
-    PHB_ITEM pObject = hb_itemNew( NULL );
-    hb_itemCopy( pObject, hb_stackReturnItem() );
+    hb_vmDo(0);
+    PHB_ITEM pObject = hb_itemNew(NULL);
+    hb_itemCopy(pObject, hb_stackReturnItem());
 
-    PHB_ITEM pItem = hb_itemPutPtr( NULL, const_cast<void*>(ptr) );
-    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-    hb_itemRelease( pItem );
+    PHB_ITEM pItem = hb_itemPutPtr(NULL, const_cast<void*>(ptr));
+    hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+    hb_itemRelease(pItem);
 
-    PHB_ITEM pDestroy = hb_itemPutL( NULL, destroy );
-    hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-    hb_itemRelease( pDestroy );
+    PHB_ITEM pDestroy = hb_itemPutL(NULL, destroy);
+    hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+    hb_itemRelease(pDestroy);
 
-    hb_itemReturn( pObject );
-    hb_itemRelease( pObject );
+    hb_itemReturn(pObject);
+    hb_itemRelease(pObject);
   }
   else
   {
@@ -399,18 +399,18 @@ void createReturnQObjectClass ( QObject * ptr, const char * classname )
     pDynSym = hb_dynsymFindName( classname );
   }
 
-  if( pDynSym )
+  if( pDynSym != NULL )
   {
-    hb_vmPushDynSym( pDynSym );
+    hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
-    hb_vmDo( 0 );
-    PHB_ITEM pObject = hb_itemNew( NULL );
-    hb_itemCopy( pObject, hb_stackReturnItem() );
-    PHB_ITEM pItem = hb_itemPutPtr( NULL, ptr );
-    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-    hb_itemReturn( pObject );
-    hb_itemRelease( pObject );
-    hb_itemRelease( pItem );
+    hb_vmDo(0);
+    PHB_ITEM pObject = hb_itemNew(NULL);
+    hb_itemCopy(pObject, hb_stackReturnItem());
+    PHB_ITEM pItem = hb_itemPutPtr(NULL, ptr);
+    hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+    hb_itemReturn(pObject);
+    hb_itemRelease(pObject);
+    hb_itemRelease(pItem);
   }
   else
   {
@@ -435,18 +435,18 @@ void createReturnQObjectClass ( const QObject * ptr, const char * classname )
     pDynSym = hb_dynsymFindName( classname );
   }
 
-  if( pDynSym )
+  if( pDynSym != NULL )
   {
-    hb_vmPushDynSym( pDynSym );
+    hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
-    hb_vmDo( 0 );
-    PHB_ITEM pObject = hb_itemNew( NULL );
-    hb_itemCopy( pObject, hb_stackReturnItem() );
-    PHB_ITEM pItem = hb_itemPutPtr( NULL, const_cast<QObject*>(ptr) );
-    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-    hb_itemReturn( pObject );
-    hb_itemRelease( pObject );
-    hb_itemRelease( pItem );
+    hb_vmDo(0);
+    PHB_ITEM pObject = hb_itemNew(NULL);
+    hb_itemCopy(pObject, hb_stackReturnItem());
+    PHB_ITEM pItem = hb_itemPutPtr(NULL, const_cast<QObject*>(ptr));
+    hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+    hb_itemReturn(pObject);
+    hb_itemRelease(pObject);
+    hb_itemRelease(pItem);
   }
   else
   {
@@ -471,18 +471,18 @@ void createReturnQWidgetClass ( QWidget * ptr, const char * classname )
     pDynSym = hb_dynsymFindName( classname );
   }
 
-  if( pDynSym )
+  if( pDynSym != NULL )
   {
-    hb_vmPushDynSym( pDynSym );
+    hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
-    hb_vmDo( 0 );
-    PHB_ITEM pObject = hb_itemNew( NULL );
-    hb_itemCopy( pObject, hb_stackReturnItem() );
-    PHB_ITEM pItem = hb_itemPutPtr( NULL, ptr );
-    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-    hb_itemReturn( pObject );
-    hb_itemRelease( pObject );
-    hb_itemRelease( pItem );
+    hb_vmDo(0);
+    PHB_ITEM pObject = hb_itemNew(NULL);
+    hb_itemCopy(pObject, hb_stackReturnItem());
+    PHB_ITEM pItem = hb_itemPutPtr(NULL, ptr);
+    hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+    hb_itemReturn(pObject);
+    hb_itemRelease(pObject);
+    hb_itemRelease(pItem);
   }
   else
   {
@@ -506,18 +506,18 @@ void createReturnQWidgetClass ( const QWidget * ptr, const char * classname )
     pDynSym = hb_dynsymFindName( classname );
   }
 
-  if( pDynSym )
+  if( pDynSym != NULL )
   {
-    hb_vmPushDynSym( pDynSym );
+    hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
-    hb_vmDo( 0 );
-    PHB_ITEM pObject = hb_itemNew( NULL );
-    hb_itemCopy( pObject, hb_stackReturnItem() );
-    PHB_ITEM pItem = hb_itemPutPtr( NULL, const_cast<QWidget*>(ptr) );
-    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-    hb_itemReturn( pObject );
-    hb_itemRelease( pObject );
-    hb_itemRelease( pItem );
+    hb_vmDo(0);
+    PHB_ITEM pObject = hb_itemNew(NULL);
+    hb_itemCopy(pObject, hb_stackReturnItem());
+    PHB_ITEM pItem = hb_itemPutPtr(NULL, const_cast<QWidget*>(ptr));
+    hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+    hb_itemReturn(pObject);
+    hb_itemRelease(pObject);
+    hb_itemRelease(pItem);
   }
   else
   {
@@ -615,7 +615,7 @@ QVariantList convert_array_parameter_to_qvariantlist ( int numpar )
 */
 void convert_qvariantlist_to_array ( const QVariantList & list )
 {
-  PHB_DYNS pDynSym = hb_dynsymFindName( "QVARIANT" );
+  PHB_DYNS pDynSym = hb_dynsymFindName("QVARIANT");
 
   PHB_ITEM pArray = hb_itemArrayNew(0);
 
@@ -623,25 +623,25 @@ void convert_qvariantlist_to_array ( const QVariantList & list )
 
   for(i=0; i<list.count(); i++)
   {
-    if( pDynSym )
+    if( pDynSym != NULL )
     {
-      hb_vmPushDynSym( pDynSym );
+      hb_vmPushDynSym(pDynSym);
       hb_vmPushNil();
-      hb_vmDo( 0 );
-      PHB_ITEM pObject = hb_itemNew( NULL );
-      hb_itemCopy( pObject, hb_stackReturnItem() );
-      PHB_ITEM pItem = hb_itemPutPtr( NULL, new QVariant ( list[i] ) );
-      hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-      hb_itemRelease( pItem );
-      PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-      hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-      hb_itemRelease( pDestroy );
-      hb_arrayAddForward( pArray, pObject );
-      hb_itemRelease( pObject );
+      hb_vmDo(0);
+      PHB_ITEM pObject = hb_itemNew(NULL);
+      hb_itemCopy(pObject, hb_stackReturnItem());
+      PHB_ITEM pItem = hb_itemPutPtr(NULL, new QVariant(list[i]));
+      hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+      hb_itemRelease(pItem);
+      PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+      hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+      hb_itemRelease(pDestroy);
+      hb_arrayAddForward(pArray, pObject);
+      hb_itemRelease(pObject);
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QVARIANT", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QVARIANT", HB_ERR_ARGS_BASEPARAMS);
     }
   }
 
@@ -658,24 +658,24 @@ PHB_ITEM returnQModelIndexObject( void * ptr )
 
   if( pDynSym == NULL )
   {
-    pDynSym = hb_dynsymFindName( "QMODELINDEX" );
+    pDynSym = hb_dynsymFindName("QMODELINDEX");
   }
 
-  PHB_ITEM pObject = hb_itemNew( NULL );
+  PHB_ITEM pObject = hb_itemNew(NULL);
 
   if( pDynSym != NULL )
   {
-    hb_vmPushDynSym( pDynSym );
+    hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
-    hb_vmDo( 0 );
-    hb_itemCopy( pObject, hb_stackReturnItem() );
-    PHB_ITEM pItem = hb_itemPutPtr( NULL, ptr );
-    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-    hb_itemRelease( pItem );
+    hb_vmDo(0);
+    hb_itemCopy(pObject, hb_stackReturnItem());
+    PHB_ITEM pItem = hb_itemPutPtr(NULL, ptr);
+    hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+    hb_itemRelease(pItem);
   }
   else
   {
-    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS);
   }
 
   return pObject;
@@ -691,24 +691,24 @@ PHB_ITEM returnQVariantObject( void * ptr )
 
   if( pDynSym == NULL )
   {
-    pDynSym = hb_dynsymFindName( "QVARIANT" );
+    pDynSym = hb_dynsymFindName("QVARIANT");
   }
 
-  PHB_ITEM pObject = hb_itemNew( NULL );
+  PHB_ITEM pObject = hb_itemNew(NULL);
 
   if( pDynSym != NULL )
   {
-    hb_vmPushDynSym( pDynSym );
+    hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
-    hb_vmDo( 0 );
-    hb_itemCopy( pObject, hb_stackReturnItem() );
-    PHB_ITEM pItem = hb_itemPutPtr( NULL, ptr );
-    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-    hb_itemRelease( pItem );
+    hb_vmDo(0);
+    hb_itemCopy(pObject, hb_stackReturnItem());
+    PHB_ITEM pItem = hb_itemPutPtr(NULL, ptr);
+    hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+    hb_itemRelease(pItem);
   }
   else
   {
-    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QVARIANT", HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QVARIANT", HB_ERR_ARGS_BASEPARAMS);
   }
 
   return pObject;
@@ -729,24 +729,24 @@ PHB_ITEM returnQWidgetObject( QWidget * ptr )
 
   if( pDynSym == NULL )
   {
-    pDynSym = hb_dynsymFindName( "QWIDGET" );
+    pDynSym = hb_dynsymFindName("QWIDGET");
   }
 
-  PHB_ITEM pObject = hb_itemNew( NULL );
+  PHB_ITEM pObject = hb_itemNew(NULL);
 
   if( pDynSym != NULL )
   {
-    hb_vmPushDynSym( pDynSym );
+    hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
-    hb_vmDo( 0 );
-    hb_itemCopy( pObject, hb_stackReturnItem() );
-    PHB_ITEM pItem = hb_itemPutPtr( NULL, ptr );
-    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-    hb_itemRelease( pItem );
+    hb_vmDo(0);
+    hb_itemCopy(pObject, hb_stackReturnItem());
+    PHB_ITEM pItem = hb_itemPutPtr(NULL, ptr);
+    hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+    hb_itemRelease(pItem);
   }
   else
   {
-    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QWIDGET", HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QWIDGET", HB_ERR_ARGS_BASEPARAMS);
   }
 
   return pObject;
@@ -767,24 +767,24 @@ PHB_ITEM returnQObjectObject( QObject * ptr )
 
   if( pDynSym == NULL )
   {
-    pDynSym = hb_dynsymFindName( "QOBJECT" );
+    pDynSym = hb_dynsymFindName("QOBJECT");
   }
 
-  PHB_ITEM pObject = hb_itemNew( NULL );
+  PHB_ITEM pObject = hb_itemNew(NULL);
 
   if( pDynSym != NULL )
   {
-    hb_vmPushDynSym( pDynSym );
+    hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
-    hb_vmDo( 0 );
-    hb_itemCopy( pObject, hb_stackReturnItem() );
-    PHB_ITEM pItem = hb_itemPutPtr( NULL, ptr );
-    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-    hb_itemRelease( pItem );
+    hb_vmDo(0);
+    hb_itemCopy(pObject, hb_stackReturnItem());
+    PHB_ITEM pItem = hb_itemPutPtr(NULL, ptr);
+    hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+    hb_itemRelease(pItem);
   }
   else
   {
-    hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QOBJECT", HB_ERR_ARGS_BASEPARAMS );
+    hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QOBJECT", HB_ERR_ARGS_BASEPARAMS);
   }
 
   return pObject;
