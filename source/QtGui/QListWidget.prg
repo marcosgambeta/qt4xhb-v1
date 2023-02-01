@@ -328,8 +328,7 @@ HB_FUNC_STATIC( QLISTWIDGET_FINDITEMS )
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, static_cast<QListWidgetItem*>( list[i] ) );
+          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -622,8 +621,7 @@ HB_FUNC_STATIC( QLISTWIDGET_SELECTEDITEMS )
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, static_cast<QListWidgetItem*>( list[i] ) );
+          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );

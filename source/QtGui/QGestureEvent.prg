@@ -168,8 +168,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACTIVEGESTURES )
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, static_cast<QGesture*>( list[i] ) );
+          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -216,8 +215,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_CANCELEDGESTURES )
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, static_cast<QGesture*>( list[i] ) );
+          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
@@ -289,8 +287,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew( NULL );
           hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemNew( NULL );
-          hb_itemPutPtr( pItem, static_cast<QGesture*>( list[i] ) );
+          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
           hb_objSendMsg( pObject, "_POINTER", 1, pItem );
           hb_itemRelease( pItem );
           hb_arrayAddForward( pArray, pObject );
