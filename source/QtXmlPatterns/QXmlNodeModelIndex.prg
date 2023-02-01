@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QXMLNODEMODELINDEX_INTERNALPOINTER )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retptr( static_cast<void*>( obj->internalPointer() ) );
+      hb_retptr( static_cast<void*>( obj->internalPointer()) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

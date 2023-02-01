@@ -97,12 +97,12 @@ HB_FUNC_STATIC( QXMLQUERY_NEW )
     QXmlQuery * obj = new QXmlQuery( *PQXMLNAMEPOOL(1) );
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQXMLNAMEPOOL(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQXMLNAMEPOOL(2) || HB_ISNIL(2)) )
   {
     /*
     QXmlQuery( QXmlQuery::QueryLanguage, QXmlNamePool & np = QXmlNamePool() )
     */
-    QXmlQuery * obj = new QXmlQuery( ( QXmlQuery::QueryLanguage ) hb_parni(1), HB_ISNIL(2) ? QXmlNamePool() : *static_cast<QXmlNamePool*>( Qt4xHb::itemGetPtr(2) ) );
+    QXmlQuery * obj = new QXmlQuery( ( QXmlQuery::QueryLanguage ) hb_parni(1), HB_ISNIL(2) ? QXmlNamePool() : *static_cast<QXmlNamePool*>( Qt4xHb::itemGetPtr(2)) );
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -244,7 +244,7 @@ HB_FUNC_STATIC( QXMLQUERY_EVALUATETO )
 
     if( obj != NULL )
     {
-      RBOOL( obj->evaluateTo( PQABSTRACTXMLRECEIVER(1) ) );
+      RBOOL( obj->evaluateTo( PQABSTRACTXMLRECEIVER(1)) );
     }
   }
   else if( ISNUMPAR(1) && ISQIODEVICE(1) )
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QXMLQUERY_EVALUATETO )
 
     if( obj != NULL )
     {
-      RBOOL( obj->evaluateTo( PQIODEVICE(1) ) );
+      RBOOL( obj->evaluateTo( PQIODEVICE(1)) );
     }
   }
   else
@@ -438,7 +438,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETFOCUS )
 
     if( obj != NULL )
     {
-      RBOOL( obj->setFocus( *PQURL(1) ) );
+      RBOOL( obj->setFocus( *PQURL(1)) );
     }
   }
   else if( ISNUMPAR(1) && ISQIODEVICE(1) )
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETFOCUS )
 
     if( obj != NULL )
     {
-      RBOOL( obj->setFocus( PQIODEVICE(1) ) );
+      RBOOL( obj->setFocus( PQIODEVICE(1)) );
     }
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -462,7 +462,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETFOCUS )
 
     if( obj != NULL )
     {
-      RBOOL( obj->setFocus( PQSTRING(1) ) );
+      RBOOL( obj->setFocus( PQSTRING(1)) );
     }
   }
   else
@@ -561,7 +561,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETNETWORKACCESSMANAGER )
 
 HB_FUNC_STATIC( QXMLQUERY_SETQUERY )
 {
-  if( ISBETWEEN(1, 2) && ISQIODEVICE(1) && ( ISQURL(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQURL(2) || HB_ISNIL(2)) )
   {
     /*
     void setQuery( QIODevice * sourceCode, const QUrl & documentURI = QUrl() )
@@ -570,12 +570,12 @@ HB_FUNC_STATIC( QXMLQUERY_SETQUERY )
 
     if( obj != NULL )
     {
-      obj->setQuery( PQIODEVICE(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>( Qt4xHb::itemGetPtr(2) ) );
+      obj->setQuery( PQIODEVICE(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>( Qt4xHb::itemGetPtr(2)) );
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISBETWEEN(1, 2) && ISQURL(1) && ( ISQURL(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && ISQURL(1) && (ISQURL(2) || HB_ISNIL(2)) )
   {
     /*
     void setQuery( const QUrl & queryURI, const QUrl & baseURI = QUrl() )
@@ -584,12 +584,12 @@ HB_FUNC_STATIC( QXMLQUERY_SETQUERY )
 
     if( obj != NULL )
     {
-      obj->setQuery( *PQURL(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>( Qt4xHb::itemGetPtr(2) ) );
+      obj->setQuery( *PQURL(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>( Qt4xHb::itemGetPtr(2)) );
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQURL(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQURL(2) || HB_ISNIL(2)) )
   {
     /*
     void setQuery( const QString & sourceCode, const QUrl & documentURI = QUrl() )
@@ -598,7 +598,7 @@ HB_FUNC_STATIC( QXMLQUERY_SETQUERY )
 
     if( obj != NULL )
     {
-      obj->setQuery( PQSTRING(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>( Qt4xHb::itemGetPtr(2) ) );
+      obj->setQuery( PQSTRING(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>( Qt4xHb::itemGetPtr(2)) );
     }
 
     hb_itemReturn(hb_stackSelfItem());

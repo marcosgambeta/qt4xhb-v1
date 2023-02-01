@@ -347,10 +347,10 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE )
 
     if( obj != NULL )
     {
-      RBOOL( obj->validate( *PQURL(1) ) );
+      RBOOL( obj->validate( *PQURL(1)) );
     }
   }
-  else if( ISBETWEEN(1, 2) && ISQIODEVICE(1) && ( ISQURL(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQURL(2) || HB_ISNIL(2)) )
   {
     /*
     bool validate( QIODevice * source, const QUrl & documentUri = QUrl() ) const
@@ -359,10 +359,10 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE )
 
     if( obj != NULL )
     {
-      RBOOL( obj->validate( PQIODEVICE(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>( Qt4xHb::itemGetPtr(2) ) ) );
+      RBOOL( obj->validate( PQIODEVICE(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>( Qt4xHb::itemGetPtr(2)) ) );
     }
   }
-  else if( ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ( ISQURL(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (ISQURL(2) || HB_ISNIL(2)) )
   {
     /*
     bool validate( const QByteArray & data, const QUrl & documentUri = QUrl() ) const
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QXMLSCHEMAVALIDATOR_VALIDATE )
 
     if( obj != NULL )
     {
-      RBOOL( obj->validate( *PQBYTEARRAY(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>( Qt4xHb::itemGetPtr(2) ) ) );
+      RBOOL( obj->validate( *PQBYTEARRAY(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>( Qt4xHb::itemGetPtr(2)) ) );
     }
   }
   else

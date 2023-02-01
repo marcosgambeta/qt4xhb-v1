@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QABSTRACTURIRESOLVER_RESOLVE )
     if( ISNUMPAR(2) && ISQURL(1) && ISQURL(2) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->resolve( *PQURL(1), *PQURL(2) ) );
+      QUrl * ptr = new QUrl( obj->resolve( *PQURL(1), *PQURL(2)) );
       Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
