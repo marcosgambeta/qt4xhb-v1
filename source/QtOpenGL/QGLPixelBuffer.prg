@@ -53,9 +53,9 @@ RETURN
 
 #include <QtOpenGL/QGLPixelBuffer>
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+#include "qt4xhb_common.hpp"
+#include "qt4xhb_macros.hpp"
+#include "qt4xhb_utils.hpp"
 
 HB_FUNC_STATIC( QGLPIXELBUFFER_NEW )
 {
