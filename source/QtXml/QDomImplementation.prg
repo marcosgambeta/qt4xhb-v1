@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENT )
     if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ISQDOMDOCUMENTTYPE(3) )
     {
 #endif
-      QDomDocument * ptr = new QDomDocument( obj->createDocument( PQSTRING(1), PQSTRING(2), *PQDOMDOCUMENTTYPE(3) ) );
+      QDomDocument * ptr = new QDomDocument( obj->createDocument( PQSTRING(1), PQSTRING(2), *PQDOMDOCUMENTTYPE(3)) );
       Qt4xHb::createReturnClass(ptr, "QDOMDOCUMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_CREATEDOCUMENTTYPE )
     if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
     {
 #endif
-      QDomDocumentType * ptr = new QDomDocumentType( obj->createDocumentType( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+      QDomDocumentType * ptr = new QDomDocumentType( obj->createDocumentType( PQSTRING(1), PQSTRING(2), PQSTRING(3)) );
       Qt4xHb::createReturnClass(ptr, "QDOMDOCUMENTTYPE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QDOMIMPLEMENTATION_HASFEATURE )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
-      RBOOL( obj->hasFeature( PQSTRING(1), PQSTRING(2) ) );
+      RBOOL( obj->hasFeature( PQSTRING(1), PQSTRING(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

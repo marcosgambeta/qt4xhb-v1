@@ -222,7 +222,7 @@ HB_FUNC_STATIC( QXMLREADER_FEATURE )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISLOG(2) || HB_ISNIL(2)) )
     {
 #endif
       bool par2;
@@ -251,7 +251,7 @@ HB_FUNC_STATIC( QXMLREADER_HASFEATURE )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->hasFeature( PQSTRING(1) ) );
+      RBOOL( obj->hasFeature( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -275,7 +275,7 @@ HB_FUNC_STATIC( QXMLREADER_HASPROPERTY )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->hasProperty( PQSTRING(1) ) );
+      RBOOL( obj->hasProperty( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QXMLREADER_PARSE )
     if( ISNUMPAR(1) && ISQXMLINPUTSOURCE(1) )
     {
 #endif
-      RBOOL( obj->parse( PQXMLINPUTSOURCE(1) ) );
+      RBOOL( obj->parse( PQXMLINPUTSOURCE(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -345,11 +345,11 @@ HB_FUNC_STATIC( QXMLREADER_PROPERTY )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISLOG(2) || HB_ISNIL(2)) )
     {
 #endif
       bool par2;
-      hb_retptr( static_cast<void*>( obj->property( PQSTRING(1), &par2 ) ) );
+      hb_retptr( static_cast<void*>( obj->property( PQSTRING(1), &par2 )) );
       hb_storl( par2, 2 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -556,7 +556,7 @@ HB_FUNC_STATIC( QXMLREADER_SETPROPERTY )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISPOINTER(2) )
     {
 #endif
-      obj->setProperty( PQSTRING(1), static_cast<void*>( hb_parptr(2) ) );
+      obj->setProperty( PQSTRING(1), static_cast<void*>( hb_parptr(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

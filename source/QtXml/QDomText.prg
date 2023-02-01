@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QDOMTEXT_SPLITTEXT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QDomText * ptr = new QDomText( obj->splitText( PINT(1) ) );
+      QDomText * ptr = new QDomText( obj->splitText( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QDOMTEXT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

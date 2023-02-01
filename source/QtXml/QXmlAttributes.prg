@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX )
 
     if( obj != NULL )
     {
-      RINT( obj->index( PQSTRING(1) ) );
+      RINT( obj->index( PQSTRING(1)) );
     }
   }
   else if( ISNUMPAR(1) && ISQLATIN1STRING(1) )
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX )
 
     if( obj != NULL )
     {
-      RINT( obj->index( *PQLATIN1STRING(1) ) );
+      RINT( obj->index( *PQLATIN1STRING(1)) );
     }
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_INDEX )
 
     if( obj != NULL )
     {
-      RINT( obj->index( PQSTRING(1), PQSTRING(2) ) );
+      RINT( obj->index( PQSTRING(1), PQSTRING(2)) );
     }
   }
   else
@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_LOCALNAME )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->localName( PINT(1) ) );
+      RQSTRING( obj->localName( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_QNAME )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->qName( PINT(1) ) );
+      RQSTRING( obj->qName( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,7 +292,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE )
 
     if( obj != NULL )
     {
-      RQSTRING( obj->type( PINT(1) ) );
+      RQSTRING( obj->type( PINT(1)) );
     }
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE )
 
     if( obj != NULL )
     {
-      RQSTRING( obj->type( PQSTRING(1) ) );
+      RQSTRING( obj->type( PQSTRING(1)) );
     }
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
@@ -316,7 +316,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_TYPE )
 
     if( obj != NULL )
     {
-      RQSTRING( obj->type( PQSTRING(1), PQSTRING(2) ) );
+      RQSTRING( obj->type( PQSTRING(1), PQSTRING(2)) );
     }
   }
   else
@@ -338,7 +338,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_URI )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->uri( PINT(1) ) );
+      RQSTRING( obj->uri( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -360,7 +360,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE )
 
     if( obj != NULL )
     {
-      RQSTRING( obj->value( PINT(1) ) );
+      RQSTRING( obj->value( PINT(1)) );
     }
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -372,7 +372,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE )
 
     if( obj != NULL )
     {
-      RQSTRING( obj->value( PQSTRING(1) ) );
+      RQSTRING( obj->value( PQSTRING(1)) );
     }
   }
   else if( ISNUMPAR(1) && ISQLATIN1STRING(1) )
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE )
 
     if( obj != NULL )
     {
-      RQSTRING( obj->value( *PQLATIN1STRING(1) ) );
+      RQSTRING( obj->value( *PQLATIN1STRING(1)) );
     }
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QXMLATTRIBUTES_VALUE )
 
     if( obj != NULL )
     {
-      RQSTRING( obj->value( PQSTRING(1), PQSTRING(2) ) );
+      RQSTRING( obj->value( PQSTRING(1), PQSTRING(2)) );
     }
   }
   else

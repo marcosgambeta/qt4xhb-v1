@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIX )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->prefix( PQSTRING(1) ) );
+      RQSTRING( obj->prefix( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_PREFIXES )
 
     if( obj != NULL )
     {
-      RQSTRINGLIST( obj->prefixes( PQSTRING(1) ) );
+      RQSTRINGLIST( obj->prefixes( PQSTRING(1)) );
     }
   }
   else
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QXMLNAMESPACESUPPORT_URI )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->uri( PQSTRING(1) ) );
+      RQSTRING( obj->uri( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -177,7 +177,7 @@ HB_FUNC_STATIC( QDOMNODE_APPENDCHILD )
     if( ISNUMPAR(1) && ISQDOMNODE(1) )
     {
 #endif
-      QDomNode * ptr = new QDomNode( obj->appendChild( *PQDOMNODE(1) ) );
+      QDomNode * ptr = new QDomNode( obj->appendChild( *PQDOMNODE(1)) );
       Qt4xHb::createReturnClass(ptr, "QDOMNODE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -275,10 +275,10 @@ HB_FUNC_STATIC( QDOMNODE_CLONENODE )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISLOG(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)) )
     {
 #endif
-      QDomNode * ptr = new QDomNode( obj->cloneNode( OPBOOL( 1, true ) ) );
+      QDomNode * ptr = new QDomNode( obj->cloneNode( OPBOOL( 1, true )) );
       Qt4xHb::createReturnClass(ptr, "QDOMNODE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -349,10 +349,10 @@ HB_FUNC_STATIC( QDOMNODE_FIRSTCHILDELEMENT )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)) )
     {
 #endif
-      QDomElement * ptr = new QDomElement( obj->firstChildElement( OPQSTRING( 1, QString() ) ) );
+      QDomElement * ptr = new QDomElement( obj->firstChildElement( OPQSTRING( 1, QString()) ) );
       Qt4xHb::createReturnClass(ptr, "QDOMELEMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QDOMNODE_INSERTAFTER )
     if( ISNUMPAR(2) && ISQDOMNODE(1) && ISQDOMNODE(2) )
     {
 #endif
-      QDomNode * ptr = new QDomNode( obj->insertAfter( *PQDOMNODE(1), *PQDOMNODE(2) ) );
+      QDomNode * ptr = new QDomNode( obj->insertAfter( *PQDOMNODE(1), *PQDOMNODE(2)) );
       Qt4xHb::createReturnClass(ptr, "QDOMNODE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -450,7 +450,7 @@ HB_FUNC_STATIC( QDOMNODE_INSERTBEFORE )
     if( ISNUMPAR(2) && ISQDOMNODE(1) && ISQDOMNODE(2) )
     {
 #endif
-      QDomNode * ptr = new QDomNode( obj->insertBefore( *PQDOMNODE(1), *PQDOMNODE(2) ) );
+      QDomNode * ptr = new QDomNode( obj->insertBefore( *PQDOMNODE(1), *PQDOMNODE(2)) );
       Qt4xHb::createReturnClass(ptr, "QDOMNODE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -787,7 +787,7 @@ HB_FUNC_STATIC( QDOMNODE_ISSUPPORTED )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
-      RBOOL( obj->isSupported( PQSTRING(1), PQSTRING(2) ) );
+      RBOOL( obj->isSupported( PQSTRING(1), PQSTRING(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -857,10 +857,10 @@ HB_FUNC_STATIC( QDOMNODE_LASTCHILDELEMENT )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)) )
     {
 #endif
-      QDomElement * ptr = new QDomElement( obj->lastChildElement( OPQSTRING( 1, QString() ) ) );
+      QDomElement * ptr = new QDomElement( obj->lastChildElement( OPQSTRING( 1, QString()) ) );
       Qt4xHb::createReturnClass(ptr, "QDOMELEMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -933,7 +933,7 @@ HB_FUNC_STATIC( QDOMNODE_NAMEDITEM )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QDomNode * ptr = new QDomNode( obj->namedItem( PQSTRING(1) ) );
+      QDomNode * ptr = new QDomNode( obj->namedItem( PQSTRING(1)) );
       Qt4xHb::createReturnClass(ptr, "QDOMNODE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1004,10 +1004,10 @@ HB_FUNC_STATIC( QDOMNODE_NEXTSIBLINGELEMENT )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)) )
     {
 #endif
-      QDomElement * ptr = new QDomElement( obj->nextSiblingElement( OPQSTRING( 1, QString() ) ) );
+      QDomElement * ptr = new QDomElement( obj->nextSiblingElement( OPQSTRING( 1, QString()) ) );
       Qt4xHb::createReturnClass(ptr, "QDOMELEMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1226,10 +1226,10 @@ HB_FUNC_STATIC( QDOMNODE_PREVIOUSSIBLINGELEMENT )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)) )
     {
 #endif
-      QDomElement * ptr = new QDomElement( obj->previousSiblingElement( OPQSTRING( 1, QString() ) ) );
+      QDomElement * ptr = new QDomElement( obj->previousSiblingElement( OPQSTRING( 1, QString()) ) );
       Qt4xHb::createReturnClass(ptr, "QDOMELEMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1254,7 +1254,7 @@ HB_FUNC_STATIC( QDOMNODE_REMOVECHILD )
     if( ISNUMPAR(1) && ISQDOMNODE(1) )
     {
 #endif
-      QDomNode * ptr = new QDomNode( obj->removeChild( *PQDOMNODE(1) ) );
+      QDomNode * ptr = new QDomNode( obj->removeChild( *PQDOMNODE(1)) );
       Qt4xHb::createReturnClass(ptr, "QDOMNODE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1279,7 +1279,7 @@ HB_FUNC_STATIC( QDOMNODE_REPLACECHILD )
     if( ISNUMPAR(2) && ISQDOMNODE(1) && ISQDOMNODE(2) )
     {
 #endif
-      QDomNode * ptr = new QDomNode( obj->replaceChild( *PQDOMNODE(1), *PQDOMNODE(2) ) );
+      QDomNode * ptr = new QDomNode( obj->replaceChild( *PQDOMNODE(1), *PQDOMNODE(2)) );
       Qt4xHb::createReturnClass(ptr, "QDOMNODE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

@@ -102,7 +102,7 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_NOTATIONDECL )
     if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
     {
 #endif
-      RBOOL( obj->notationDecl( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+      RBOOL( obj->notationDecl( PQSTRING(1), PQSTRING(2), PQSTRING(3)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QXMLDTDHANDLER_UNPARSEDENTITYDECL )
     if( ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) )
     {
 #endif
-      RBOOL( obj->unparsedEntityDecl( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4) ) );
+      RBOOL( obj->unparsedEntityDecl( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QXMLSIMPLEREADER_PARSE )
     if( ISNUMPAR(2) && ISQXMLINPUTSOURCE(1) && HB_ISLOG(2) )
     {
 #endif
-      RBOOL( obj->parse( PQXMLINPUTSOURCE(1), PBOOL(2) ) );
+      RBOOL( obj->parse( PQXMLINPUTSOURCE(1), PBOOL(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

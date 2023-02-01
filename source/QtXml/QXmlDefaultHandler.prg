@@ -110,7 +110,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ATTRIBUTEDECL )
     if( ISNUMPAR(5) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && HB_ISCHAR(5) )
     {
 #endif
-      RBOOL( obj->attributeDecl( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5) ) );
+      RBOOL( obj->attributeDecl( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_CHARACTERS )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->characters( PQSTRING(1) ) );
+      RBOOL( obj->characters( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_COMMENT )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->comment( PQSTRING(1) ) );
+      RBOOL( obj->comment( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDELEMENT )
     if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
     {
 #endif
-      RBOOL( obj->endElement( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+      RBOOL( obj->endElement( PQSTRING(1), PQSTRING(2), PQSTRING(3)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -278,7 +278,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDENTITY )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->endEntity( PQSTRING(1) ) );
+      RBOOL( obj->endEntity( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ENDPREFIXMAPPING )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->endPrefixMapping( PQSTRING(1) ) );
+      RBOOL( obj->endPrefixMapping( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_ERROR )
     if( ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1) )
     {
 #endif
-      RBOOL( obj->error( *PQXMLPARSEEXCEPTION(1) ) );
+      RBOOL( obj->error( *PQXMLPARSEEXCEPTION(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_EXTERNALENTITYDECL )
     if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
     {
 #endif
-      RBOOL( obj->externalEntityDecl( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+      RBOOL( obj->externalEntityDecl( PQSTRING(1), PQSTRING(2), PQSTRING(3)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -398,7 +398,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_FATALERROR )
     if( ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1) )
     {
 #endif
-      RBOOL( obj->fatalError( *PQXMLPARSEEXCEPTION(1) ) );
+      RBOOL( obj->fatalError( *PQXMLPARSEEXCEPTION(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -422,7 +422,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_IGNORABLEWHITESPACE )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->ignorableWhitespace( PQSTRING(1) ) );
+      RBOOL( obj->ignorableWhitespace( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -446,7 +446,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_INTERNALENTITYDECL )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
-      RBOOL( obj->internalEntityDecl( PQSTRING(1), PQSTRING(2) ) );
+      RBOOL( obj->internalEntityDecl( PQSTRING(1), PQSTRING(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_NOTATIONDECL )
     if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
     {
 #endif
-      RBOOL( obj->notationDecl( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+      RBOOL( obj->notationDecl( PQSTRING(1), PQSTRING(2), PQSTRING(3)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_PROCESSINGINSTRUCTION )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
-      RBOOL( obj->processingInstruction( PQSTRING(1), PQSTRING(2) ) );
+      RBOOL( obj->processingInstruction( PQSTRING(1), PQSTRING(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_SKIPPEDENTITY )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->skippedEntity( PQSTRING(1) ) );
+      RBOOL( obj->skippedEntity( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -592,7 +592,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTDTD )
     if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
     {
 #endif
-      RBOOL( obj->startDTD( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+      RBOOL( obj->startDTD( PQSTRING(1), PQSTRING(2), PQSTRING(3)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -640,7 +640,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTELEMENT )
     if( ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ISQXMLATTRIBUTES(4) )
     {
 #endif
-      RBOOL( obj->startElement( PQSTRING(1), PQSTRING(2), PQSTRING(3), *PQXMLATTRIBUTES(4) ) );
+      RBOOL( obj->startElement( PQSTRING(1), PQSTRING(2), PQSTRING(3), *PQXMLATTRIBUTES(4)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -664,7 +664,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTENTITY )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->startEntity( PQSTRING(1) ) );
+      RBOOL( obj->startEntity( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -688,7 +688,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_STARTPREFIXMAPPING )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
-      RBOOL( obj->startPrefixMapping( PQSTRING(1), PQSTRING(2) ) );
+      RBOOL( obj->startPrefixMapping( PQSTRING(1), PQSTRING(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -712,7 +712,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_UNPARSEDENTITYDECL )
     if( ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) )
     {
 #endif
-      RBOOL( obj->unparsedEntityDecl( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4) ) );
+      RBOOL( obj->unparsedEntityDecl( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -736,7 +736,7 @@ HB_FUNC_STATIC( QXMLDEFAULTHANDLER_WARNING )
     if( ISNUMPAR(1) && ISQXMLPARSEEXCEPTION(1) )
     {
 #endif
-      RBOOL( obj->warning( *PQXMLPARSEEXCEPTION(1) ) );
+      RBOOL( obj->warning( *PQXMLPARSEEXCEPTION(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

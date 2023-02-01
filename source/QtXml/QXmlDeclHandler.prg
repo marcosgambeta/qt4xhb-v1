@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QXMLDECLHANDLER_ATTRIBUTEDECL )
     if( ISNUMPAR(5) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4) && HB_ISCHAR(5) )
     {
 #endif
-      RBOOL( obj->attributeDecl( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5) ) );
+      RBOOL( obj->attributeDecl( PQSTRING(1), PQSTRING(2), PQSTRING(3), PQSTRING(4), PQSTRING(5)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QXMLDECLHANDLER_EXTERNALENTITYDECL )
     if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
     {
 #endif
-      RBOOL( obj->externalEntityDecl( PQSTRING(1), PQSTRING(2), PQSTRING(3) ) );
+      RBOOL( obj->externalEntityDecl( PQSTRING(1), PQSTRING(2), PQSTRING(3)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QXMLDECLHANDLER_INTERNALENTITYDECL )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
-      RBOOL( obj->internalEntityDecl( PQSTRING(1), PQSTRING(2) ) );
+      RBOOL( obj->internalEntityDecl( PQSTRING(1), PQSTRING(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
