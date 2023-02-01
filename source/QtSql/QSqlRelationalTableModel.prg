@@ -58,9 +58,9 @@ QSqlRelationalTableModel( QObject * parent = 0, QSqlDatabase db = QSqlDatabase()
 */
 HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_NEW )
 {
-  if( ISBETWEEN(0, 2) && ( ISQOBJECT(1) || HB_ISNIL(1) ) && ( ISQSQLDATABASE(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(0, 2) && (ISQOBJECT(1) || HB_ISNIL(1)) && (ISQSQLDATABASE(2) || HB_ISNIL(2)) )
   {
-    QSqlRelationalTableModel * obj = new QSqlRelationalTableModel( OPQOBJECT( 1, 0 ), HB_ISNIL(2) ? QSqlDatabase() : *static_cast<QSqlDatabase*>( Qt4xHb::itemGetPtr(2) ) );
+    QSqlRelationalTableModel * obj = new QSqlRelationalTableModel( OPQOBJECT( 1, 0 ), HB_ISNIL(2) ? QSqlDatabase() : *static_cast<QSqlDatabase*>( Qt4xHb::itemGetPtr(2)) );
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_RELATION )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QSqlRelation * ptr = new QSqlRelation( obj->relation( PINT(1) ) );
+      QSqlRelation * ptr = new QSqlRelation( obj->relation( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QSQLRELATION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -199,10 +199,10 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_DATA )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && ISQMODELINDEX(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT( 2, Qt::DisplayRole ) ) );
+      QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT( 2, Qt::DisplayRole )) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -224,10 +224,10 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_REMOVECOLUMNS )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ( ISQMODELINDEX(3) || HB_ISNIL(3) ) )
+    if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)) )
     {
 #endif
-      RBOOL( obj->removeColumns( PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(3) ) ) );
+      RBOOL( obj->removeColumns( PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(3)) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -272,10 +272,10 @@ HB_FUNC_STATIC( QSQLRELATIONALTABLEMODEL_SETDATA )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+    if( ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && (HB_ISNUM(3) || HB_ISNIL(3)) )
     {
 #endif
-      RBOOL( obj->setData( *PQMODELINDEX(1), *PQVARIANT(2), OPINT( 3, Qt::EditRole ) ) );
+      RBOOL( obj->setData( *PQMODELINDEX(1), *PQVARIANT(2), OPINT( 3, Qt::EditRole )) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

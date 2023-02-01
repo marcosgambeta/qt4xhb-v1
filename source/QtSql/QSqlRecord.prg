@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QSQLRECORD_CONTAINS )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->contains( PQSTRING(1) ) );
+      RBOOL( obj->contains( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QSQLRECORD_FIELD )
 
     if( obj != NULL )
     {
-      QSqlField * ptr = new QSqlField( obj->field( PINT(1) ) );
+      QSqlField * ptr = new QSqlField( obj->field( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QSQLFIELD", true);
     }
   }
@@ -260,7 +260,7 @@ HB_FUNC_STATIC( QSQLRECORD_FIELD )
 
     if( obj != NULL )
     {
-      QSqlField * ptr = new QSqlField( obj->field( PQSTRING(1) ) );
+      QSqlField * ptr = new QSqlField( obj->field( PQSTRING(1)) );
       Qt4xHb::createReturnClass(ptr, "QSQLFIELD", true);
     }
   }
@@ -283,7 +283,7 @@ HB_FUNC_STATIC( QSQLRECORD_FIELDNAME )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->fieldName( PINT(1) ) );
+      RQSTRING( obj->fieldName( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -307,7 +307,7 @@ HB_FUNC_STATIC( QSQLRECORD_INDEXOF )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RINT( obj->indexOf( PQSTRING(1) ) );
+      RINT( obj->indexOf( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -379,7 +379,7 @@ HB_FUNC_STATIC( QSQLRECORD_ISGENERATED )
 
     if( obj != NULL )
     {
-      RBOOL( obj->isGenerated( PQSTRING(1) ) );
+      RBOOL( obj->isGenerated( PQSTRING(1)) );
     }
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QSQLRECORD_ISGENERATED )
 
     if( obj != NULL )
     {
-      RBOOL( obj->isGenerated( PINT(1) ) );
+      RBOOL( obj->isGenerated( PINT(1)) );
     }
   }
   else
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QSQLRECORD_ISNULL )
 
     if( obj != NULL )
     {
-      RBOOL( obj->isNull( PQSTRING(1) ) );
+      RBOOL( obj->isNull( PQSTRING(1)) );
     }
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -423,7 +423,7 @@ HB_FUNC_STATIC( QSQLRECORD_ISNULL )
 
     if( obj != NULL )
     {
-      RBOOL( obj->isNull( PINT(1) ) );
+      RBOOL( obj->isNull( PINT(1)) );
     }
   }
   else
@@ -603,7 +603,7 @@ HB_FUNC_STATIC( QSQLRECORD_VALUE )
 
     if( obj != NULL )
     {
-      QVariant * ptr = new QVariant( obj->value( PINT(1) ) );
+      QVariant * ptr = new QVariant( obj->value( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
     }
   }
@@ -616,7 +616,7 @@ HB_FUNC_STATIC( QSQLRECORD_VALUE )
 
     if( obj != NULL )
     {
-      QVariant * ptr = new QVariant( obj->value( PQSTRING(1) ) );
+      QVariant * ptr = new QVariant( obj->value( PQSTRING(1)) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
     }
   }

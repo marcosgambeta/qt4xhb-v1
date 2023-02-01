@@ -47,12 +47,12 @@ RETURN
 
 HB_FUNC_STATIC( QSQLINDEX_NEW )
 {
-  if( ISBETWEEN(0, 2) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (HB_ISCHAR(1) || HB_ISNIL(1)) )
   {
     /*
     QSqlIndex( const QString & cursorname = QString(), const QString & name = QString() )
     */
-    QSqlIndex * obj = new QSqlIndex( OPQSTRING( 1, QString() ), OPQSTRING( 2, QString() ) );
+    QSqlIndex * obj = new QSqlIndex( OPQSTRING( 1, QString() ), OPQSTRING( 2, QString()) );
     Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSQLINDEX(1) )
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QSQLINDEX_ISDESCENDING )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isDescending( PINT(1) ) );
+      RBOOL( obj->isDescending( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

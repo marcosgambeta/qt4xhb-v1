@@ -100,12 +100,12 @@ HB_FUNC_STATIC( QSQLQUERY_NEW )
     QSqlQuery * obj = new QSqlQuery( PQSQLRESULT(1) );
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(0, 2) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) && ( ISQSQLDATABASE(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (ISQSQLDATABASE(2) || HB_ISNIL(2)) )
   {
     /*
     QSqlQuery( const QString & query = QString(), QSqlDatabase db = QSqlDatabase() )
     */
-    QSqlQuery * obj = new QSqlQuery( OPQSTRING( 1, QString() ), HB_ISNIL(2) ? QSqlDatabase() : *static_cast<QSqlDatabase*>( Qt4xHb::itemGetPtr(2) ) );
+    QSqlQuery * obj = new QSqlQuery( OPQSTRING( 1, QString() ), HB_ISNIL(2) ? QSqlDatabase() : *static_cast<QSqlDatabase*>( Qt4xHb::itemGetPtr(2)) );
     Qt4xHb::returnNewObject(obj, true);
   }
   else if( ISNUMPAR(1) && ISQSQLDATABASE(1) )
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QSQLQUERY_ADDBINDVALUE )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQVARIANT(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && ISQVARIANT(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->addBindValue( *PQVARIANT(1), HB_ISNIL(2) ? ( QSql::ParamType ) QSql::In : ( QSql::ParamType ) hb_parni(2) );
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QSQLQUERY_AT )
 
 HB_FUNC_STATIC( QSQLQUERY_BINDVALUE )
 {
-  if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQVARIANT(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+  if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQVARIANT(2) && (HB_ISNUM(3) || HB_ISNIL(3)) )
   {
     /*
     void bindValue( const QString & placeholder, const QVariant & val, QSql::ParamType paramType = QSql::In )
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QSQLQUERY_BINDVALUE )
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQVARIANT(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+  else if( ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQVARIANT(2) && (HB_ISNUM(3) || HB_ISNIL(3)) )
   {
     /*
     void bindValue( int pos, const QVariant & val, QSql::ParamType paramType = QSql::In )
@@ -243,7 +243,7 @@ HB_FUNC_STATIC( QSQLQUERY_BOUNDVALUE )
 
     if( obj != NULL )
     {
-      QVariant * ptr = new QVariant( obj->boundValue( PQSTRING(1) ) );
+      QVariant * ptr = new QVariant( obj->boundValue( PQSTRING(1)) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
     }
   }
@@ -256,7 +256,7 @@ HB_FUNC_STATIC( QSQLQUERY_BOUNDVALUE )
 
     if( obj != NULL )
     {
-      QVariant * ptr = new QVariant( obj->boundValue( PINT(1) ) );
+      QVariant * ptr = new QVariant( obj->boundValue( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
     }
   }
@@ -328,7 +328,7 @@ HB_FUNC_STATIC( QSQLQUERY_EXEC )
 
     if( obj != NULL )
     {
-      RBOOL( obj->exec( PQSTRING(1) ) );
+      RBOOL( obj->exec( PQSTRING(1)) );
     }
   }
   else if( ISNUMPAR(0) )
@@ -359,10 +359,10 @@ HB_FUNC_STATIC( QSQLQUERY_EXECBATCH )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->execBatch( HB_ISNIL(1) ? ( QSqlQuery::BatchExecutionMode ) QSqlQuery::ValuesAsRows : ( QSqlQuery::BatchExecutionMode ) hb_parni(1) ) );
+      RBOOL( obj->execBatch( HB_ISNIL(1) ? ( QSqlQuery::BatchExecutionMode ) QSqlQuery::ValuesAsRows : ( QSqlQuery::BatchExecutionMode ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QSQLQUERY_ISNULL )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isNull( PINT(1) ) );
+      RBOOL( obj->isNull( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -774,7 +774,7 @@ HB_FUNC_STATIC( QSQLQUERY_PREPARE )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->prepare( PQSTRING(1) ) );
+      RBOOL( obj->prepare( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -869,10 +869,10 @@ HB_FUNC_STATIC( QSQLQUERY_SEEK )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)) )
     {
 #endif
-      RBOOL( obj->seek( PINT(1), OPBOOL( 2, false ) ) );
+      RBOOL( obj->seek( PINT(1), OPBOOL( 2, false )) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -972,7 +972,7 @@ HB_FUNC_STATIC( QSQLQUERY_VALUE )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->value( PINT(1) ) );
+      QVariant * ptr = new QVariant( obj->value( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

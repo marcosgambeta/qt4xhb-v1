@@ -319,10 +319,10 @@ HB_FUNC_STATIC( QSQLDATABASE_EXEC )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)) )
     {
 #endif
-      QSqlQuery * ptr = new QSqlQuery( obj->exec( OPQSTRING( 1, QString() ) ) );
+      QSqlQuery * ptr = new QSqlQuery( obj->exec( OPQSTRING( 1, QString()) ) );
       Qt4xHb::createReturnClass(ptr, "QSQLQUERY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QSQLDATABASE_OPEN )
 
     if( obj != NULL )
     {
-      RBOOL( obj->open( PQSTRING(1), PQSTRING(2) ) );
+      RBOOL( obj->open( PQSTRING(1), PQSTRING(2)) );
     }
   }
   else
@@ -572,7 +572,7 @@ HB_FUNC_STATIC( QSQLDATABASE_PRIMARYINDEX )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QSqlIndex * ptr = new QSqlIndex( obj->primaryIndex( PQSTRING(1) ) );
+      QSqlIndex * ptr = new QSqlIndex( obj->primaryIndex( PQSTRING(1)) );
       Qt4xHb::createReturnClass(ptr, "QSQLINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -597,7 +597,7 @@ HB_FUNC_STATIC( QSQLDATABASE_RECORD )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QSqlRecord * ptr = new QSqlRecord( obj->record( PQSTRING(1) ) );
+      QSqlRecord * ptr = new QSqlRecord( obj->record( PQSTRING(1)) );
       Qt4xHb::createReturnClass(ptr, "QSQLRECORD", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -643,10 +643,10 @@ HB_FUNC_STATIC( QSQLDATABASE_SETCONNECTOPTIONS )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)) )
     {
 #endif
-      obj->setConnectOptions( OPQSTRING( 1, QString() ) );
+      obj->setConnectOptions( OPQSTRING( 1, QString()) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -825,10 +825,10 @@ HB_FUNC_STATIC( QSQLDATABASE_TABLES )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
     {
 #endif
-      RQSTRINGLIST( obj->tables( HB_ISNIL(1) ? ( QSql::TableType ) QSql::Tables : ( QSql::TableType ) hb_parni(1) ) );
+      RQSTRINGLIST( obj->tables( HB_ISNIL(1) ? ( QSql::TableType ) QSql::Tables : ( QSql::TableType ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -889,22 +889,22 @@ HB_FUNC_STATIC( QSQLDATABASE_USERNAME )
 
 HB_FUNC_STATIC( QSQLDATABASE_ADDDATABASE )
 {
-  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
   {
     /*
     static QSqlDatabase addDatabase( const QString & type, const QString & connectionName = QLatin1String( QSqlDatabase::defaultConnection ) )
     */
 
-    QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::addDatabase( PQSTRING(1), OPQSTRING( 2, QLatin1String( QSqlDatabase::defaultConnection ) ) ) );
+    QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::addDatabase( PQSTRING(1), OPQSTRING( 2, QLatin1String( QSqlDatabase::defaultConnection )) ) );
     Qt4xHb::createReturnClass(ptr, "QSQLDATABASE", true);
   }
-  else if( ISBETWEEN(1, 2) && ISQSQLDRIVER(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && ISQSQLDRIVER(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
   {
     /*
     static QSqlDatabase addDatabase( QSqlDriver * driver, const QString & connectionName = QLatin1String( QSqlDatabase::defaultConnection ) )
     */
 
-    QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::addDatabase( PQSQLDRIVER(1), OPQSTRING( 2, QLatin1String( QSqlDatabase::defaultConnection ) ) ) );
+    QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::addDatabase( PQSQLDRIVER(1), OPQSTRING( 2, QLatin1String( QSqlDatabase::defaultConnection )) ) );
     Qt4xHb::createReturnClass(ptr, "QSQLDATABASE", true);
   }
   else
@@ -922,7 +922,7 @@ HB_FUNC_STATIC( QSQLDATABASE_CLONEDATABASE )
   if( ISNUMPAR(2) && ISQSQLDATABASE(1) && HB_ISCHAR(2) )
   {
 #endif
-    QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::cloneDatabase( *PQSQLDATABASE(1), PQSTRING(2) ) );
+    QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::cloneDatabase( *PQSQLDATABASE(1), PQSTRING(2)) );
     Qt4xHb::createReturnClass(ptr, "QSQLDATABASE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
@@ -958,10 +958,10 @@ static bool contains( const QString & connectionName = QLatin1String( QSqlDataba
 HB_FUNC_STATIC( QSQLDATABASE_CONTAINS )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0, 1) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)) )
   {
 #endif
-    RBOOL( QSqlDatabase::contains( OPQSTRING( 1, QLatin1String( QSqlDatabase::defaultConnection ) ) ) );
+    RBOOL( QSqlDatabase::contains( OPQSTRING( 1, QLatin1String( QSqlDatabase::defaultConnection )) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -977,10 +977,10 @@ static QSqlDatabase database( const QString & connectionName = QLatin1String( QS
 HB_FUNC_STATIC( QSQLDATABASE_DATABASE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0, 2) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(0, 2) && (HB_ISCHAR(1) || HB_ISNIL(1)) && (HB_ISLOG(2) || HB_ISNIL(2)) )
   {
 #endif
-    QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::database( OPQSTRING( 1, QLatin1String( QSqlDatabase::defaultConnection ) ), OPBOOL( 2, true ) ) );
+    QSqlDatabase * ptr = new QSqlDatabase( QSqlDatabase::database( OPQSTRING( 1, QLatin1String( QSqlDatabase::defaultConnection ) ), OPBOOL( 2, true )) );
     Qt4xHb::createReturnClass(ptr, "QSQLDATABASE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
@@ -1019,7 +1019,7 @@ HB_FUNC_STATIC( QSQLDATABASE_ISDRIVERAVAILABLE )
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
 #endif
-    RBOOL( QSqlDatabase::isDriverAvailable( PQSTRING(1) ) );
+    RBOOL( QSqlDatabase::isDriverAvailable( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
