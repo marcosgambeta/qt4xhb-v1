@@ -98,11 +98,11 @@ RETURN
 
 #include <QtWebKit/QWebFrame>
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
-#include "qt4xhb_events.h"
-#include "qt4xhb_signals.h"
+#include "qt4xhb_common.hpp"
+#include "qt4xhb_macros.hpp"
+#include "qt4xhb_utils.hpp"
+#include "qt4xhb_events.hpp"
+#include "qt4xhb_signals.hpp"
 
 #include <QtWebKit/QWebElement>
 #include <QtWebKit/QWebSecurityOrigin>
