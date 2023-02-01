@@ -86,7 +86,7 @@ HB_FUNC_STATIC( QSCRIPTABLE_ARGUMENT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->argument( PINT(1) ) );
+      QScriptValue * ptr = new QScriptValue( obj->argument( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

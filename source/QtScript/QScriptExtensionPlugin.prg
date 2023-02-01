@@ -76,7 +76,7 @@ HB_FUNC_STATIC( QSCRIPTEXTENSIONPLUGIN_SETUPPACKAGE )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQSCRIPTENGINE(2) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->setupPackage( PQSTRING(1), PQSCRIPTENGINE(2) ) );
+      QScriptValue * ptr = new QScriptValue( obj->setupPackage( PQSTRING(1), PQSCRIPTENGINE(2)) );
       Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

@@ -234,10 +234,10 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_EXTENSION )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQVARIANT(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQVARIANT(2) || HB_ISNIL(2)) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->extension( ( QScriptEngineAgent::Extension ) hb_parni(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(2) ) ) );
+      QVariant * ptr = new QVariant( obj->extension( ( QScriptEngineAgent::Extension ) hb_parni(1), HB_ISNIL(2) ? QVariant() : *static_cast<QVariant*>( Qt4xHb::itemGetPtr(2)) ) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QSCRIPTENGINEAGENT_SUPPORTSEXTENSION )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->supportsExtension( ( QScriptEngineAgent::Extension ) hb_parni(1) ) );
+      RBOOL( obj->supportsExtension( ( QScriptEngineAgent::Extension ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

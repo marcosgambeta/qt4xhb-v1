@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CALL2 )
     if( ISNUMPAR(2) && ISQSCRIPTVALUE(1) && ISQSCRIPTVALUE(2) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->call( *PQSCRIPTVALUE(1), *PQSCRIPTVALUE(2) ) );
+      QScriptValue * ptr = new QScriptValue( obj->call( *PQSCRIPTVALUE(1), *PQSCRIPTVALUE(2)) );
       Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CALL2 )
 
 HB_FUNC_STATIC( QSCRIPTVALUE_CALL )
 {
-  if( ISBETWEEN(0, 2) && ( ISQSCRIPTVALUE(1) || HB_ISNIL(1) ) && ( HB_ISOBJECT(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(0, 2) && (ISQSCRIPTVALUE(1) || HB_ISNIL(1)) && (HB_ISOBJECT(2) || HB_ISNIL(2)) )
   {
     HB_FUNC_EXEC( QSCRIPTVALUE_CALL1 );
   }
@@ -299,7 +299,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT2 )
     if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->construct( *PQSCRIPTVALUE(1) ) );
+      QScriptValue * ptr = new QScriptValue( obj->construct( *PQSCRIPTVALUE(1)) );
       Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT2 )
 
 HB_FUNC_STATIC( QSCRIPTVALUE_CONSTRUCT )
 {
-  if( ISBETWEEN(0, 1) && ( HB_ISOBJECT(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (HB_ISOBJECT(1) || HB_ISNIL(1)) )
   {
     HB_FUNC_EXEC( QSCRIPTVALUE_CONSTRUCT1 );
   }
@@ -365,7 +365,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_EQUALS )
     if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
     {
 #endif
-      RBOOL( obj->equals( *PQSCRIPTVALUE(1) ) );
+      RBOOL( obj->equals( *PQSCRIPTVALUE(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_INSTANCEOF )
     if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
     {
 #endif
-      RBOOL( obj->instanceOf( *PQSCRIPTVALUE(1) ) );
+      RBOOL( obj->instanceOf( *PQSCRIPTVALUE(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -773,7 +773,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_LESSTHAN )
     if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
     {
 #endif
-      RBOOL( obj->lessThan( *PQSCRIPTVALUE(1) ) );
+      RBOOL( obj->lessThan( *PQSCRIPTVALUE(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -925,7 +925,7 @@ HB_FUNC_STATIC( QSCRIPTVALUE_STRICTLYEQUALS )
     if( ISNUMPAR(1) && ISQSCRIPTVALUE(1) )
     {
 #endif
-      RBOOL( obj->strictlyEquals( *PQSCRIPTVALUE(1) ) );
+      RBOOL( obj->strictlyEquals( *PQSCRIPTVALUE(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
