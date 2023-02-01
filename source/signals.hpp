@@ -27,7 +27,7 @@
 #include <hbapicls.h>
 #endif
 
-#include "qt4xhb_utils.h"
+#include "qt4xhb_utils.hpp"
 
 namespace Qt4xHb
 {
