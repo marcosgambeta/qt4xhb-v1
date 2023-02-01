@@ -366,7 +366,8 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDBYTEORDERS )
 #endif
       QList<QAudioFormat::Endian> list = obj->supportedByteOrders();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( int i = 0; i < list.count(); i++ )
+      const int count = list.count();
+      for( int i = 0; i < count; i++ )
       {
         PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
         hb_arrayAddForward( pArray, pItem );
@@ -398,7 +399,8 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_SUPPORTEDSAMPLETYPES )
 #endif
       QList<QAudioFormat::SampleType> list = obj->supportedSampleTypes();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( int i = 0; i < list.count(); i++ )
+      const int count = list.count();
+      for( int i = 0; i < count; i++ )
       {
         PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
         hb_arrayAddForward( pArray, pItem );
@@ -453,7 +455,8 @@ HB_FUNC_STATIC( QAUDIODEVICEINFO_AVAILABLEDEVICES )
     PHB_ITEM pArray = hb_itemArrayNew(0);
     if( pDynSym != NULL )
     {
-      for( int i = 0; i < list.count(); i++ )
+      const int count = list.count();
+      for( int i = 0; i < count; i++ )
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
