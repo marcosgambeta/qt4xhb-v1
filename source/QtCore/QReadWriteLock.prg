@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORREAD )
 
     if( obj != NULL )
     {
-      RBOOL( obj->tryLockForRead( PINT(1) ) );
+      RBOOL( obj->tryLockForRead( PINT(1)) );
     }
   }
   else
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QREADWRITELOCK_TRYLOCKFORWRITE )
 
     if( obj != NULL )
     {
-      RBOOL( obj->tryLockForWrite( PINT(1) ) );
+      RBOOL( obj->tryLockForWrite( PINT(1)) );
     }
   }
   else

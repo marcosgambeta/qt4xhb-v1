@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QDATE_ADDDAYS )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QDate * ptr = new QDate( obj->addDays( PINT(1) ) );
+      QDate * ptr = new QDate( obj->addDays( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QDATE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QDATE_ADDMONTHS )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QDate * ptr = new QDate( obj->addMonths( PINT(1) ) );
+      QDate * ptr = new QDate( obj->addMonths( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QDATE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QDATE_ADDYEARS )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QDate * ptr = new QDate( obj->addYears( PINT(1) ) );
+      QDate * ptr = new QDate( obj->addYears( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QDATE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -321,7 +321,7 @@ HB_FUNC_STATIC( QDATE_DAYSTO )
     if( ISNUMPAR(1) && ISQDATE(1) )
     {
 #endif
-      RINT( obj->daysTo( *PQDATE(1) ) );
+      RINT( obj->daysTo( *PQDATE(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -425,7 +425,7 @@ HB_FUNC_STATIC( QDATE_SETDATE )
     if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
     {
 #endif
-      RBOOL( obj->setDate( PINT(1), PINT(2), PINT(3) ) );
+      RBOOL( obj->setDate( PINT(1), PINT(2), PINT(3)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -471,10 +471,10 @@ HB_FUNC_STATIC( QDATE_TOSTRING )
 
     if( obj != NULL )
     {
-      RQSTRING( obj->toString( PQSTRING(1) ) );
+      RQSTRING( obj->toString( PQSTRING(1)) );
     }
   }
-  else if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+  else if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
   {
     /*
     QString toString( Qt::DateFormat format = Qt::TextDate ) const
@@ -483,7 +483,7 @@ HB_FUNC_STATIC( QDATE_TOSTRING )
 
     if( obj != NULL )
     {
-      RQSTRING( obj->toString( HB_ISNIL(1) ? ( Qt::DateFormat ) Qt::TextDate : ( Qt::DateFormat ) hb_parni(1) ) );
+      RQSTRING( obj->toString( HB_ISNIL(1) ? ( Qt::DateFormat ) Qt::TextDate : ( Qt::DateFormat ) hb_parni(1)) );
     }
   }
   else
@@ -502,7 +502,7 @@ HB_FUNC_STATIC( QDATE_WEEKNUMBER )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
     {
 #endif
       int par1;
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QDATE_FROMJULIANDAY )
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
-    QDate * ptr = new QDate( QDate::fromJulianDay( PINT(1) ) );
+    QDate * ptr = new QDate( QDate::fromJulianDay( PINT(1)) );
     Qt4xHb::createReturnClass(ptr, "QDATE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
@@ -584,13 +584,13 @@ HB_FUNC_STATIC( QDATE_FROMJULIANDAY )
 
 HB_FUNC_STATIC( QDATE_FROMSTRING )
 {
-  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
   {
     /*
     static QDate fromString( const QString & string, Qt::DateFormat format = Qt::TextDate )
     */
 
-    QDate * ptr = new QDate( QDate::fromString( PQSTRING(1), HB_ISNIL(2) ? ( Qt::DateFormat ) Qt::TextDate : ( Qt::DateFormat ) hb_parni(2) ) );
+    QDate * ptr = new QDate( QDate::fromString( PQSTRING(1), HB_ISNIL(2) ? ( Qt::DateFormat ) Qt::TextDate : ( Qt::DateFormat ) hb_parni(2)) );
     Qt4xHb::createReturnClass(ptr, "QDATE", true);
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
@@ -599,7 +599,7 @@ HB_FUNC_STATIC( QDATE_FROMSTRING )
     static QDate fromString( const QString & string, const QString & format )
     */
 
-    QDate * ptr = new QDate( QDate::fromString( PQSTRING(1), PQSTRING(2) ) );
+    QDate * ptr = new QDate( QDate::fromString( PQSTRING(1), PQSTRING(2)) );
     Qt4xHb::createReturnClass(ptr, "QDATE", true);
   }
   else
@@ -617,7 +617,7 @@ HB_FUNC_STATIC( QDATE_ISLEAPYEAR )
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
-    RBOOL( QDate::isLeapYear( PINT(1) ) );
+    RBOOL( QDate::isLeapYear( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -647,7 +647,7 @@ HB_FUNC_STATIC( QDATE_ISVALID )
     static bool isValid( int year, int month, int day )
     */
 
-    RBOOL( QDate::isValid( PINT(1), PINT(2), PINT(3) ) );
+    RBOOL( QDate::isValid( PINT(1), PINT(2), PINT(3)) );
   }
   else
   {
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QDATE_LONGDAYNAME )
     static QString longDayName( int weekday )
     */
 
-    RQSTRING( QDate::longDayName( PINT(1) ) );
+    RQSTRING( QDate::longDayName( PINT(1)) );
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QDATE_LONGDAYNAME )
     static QString longDayName( int weekday, QDate::MonthNameType type )
     */
 
-    RQSTRING( QDate::longDayName( PINT(1), ( QDate::MonthNameType ) hb_parni(2) ) );
+    RQSTRING( QDate::longDayName( PINT(1), ( QDate::MonthNameType ) hb_parni(2)) );
   }
   else
   {
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QDATE_LONGMONTHNAME )
     static QString longMonthName( int month )
     */
 
-    RQSTRING( QDate::longMonthName( PINT(1) ) );
+    RQSTRING( QDate::longMonthName( PINT(1)) );
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
@@ -695,7 +695,7 @@ HB_FUNC_STATIC( QDATE_LONGMONTHNAME )
     static QString longMonthName( int month, QDate::MonthNameType type )
     */
 
-    RQSTRING( QDate::longMonthName( PINT(1), ( QDate::MonthNameType ) hb_parni(2) ) );
+    RQSTRING( QDate::longMonthName( PINT(1), ( QDate::MonthNameType ) hb_parni(2)) );
   }
   else
   {
@@ -711,7 +711,7 @@ HB_FUNC_STATIC( QDATE_SHORTDAYNAME )
     static QString shortDayName( int weekday )
     */
 
-    RQSTRING( QDate::shortDayName( PINT(1) ) );
+    RQSTRING( QDate::shortDayName( PINT(1)) );
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
@@ -719,7 +719,7 @@ HB_FUNC_STATIC( QDATE_SHORTDAYNAME )
     static QString shortDayName( int weekday, QDate::MonthNameType type )
     */
 
-    RQSTRING( QDate::shortDayName( PINT(1), ( QDate::MonthNameType ) hb_parni(2) ) );
+    RQSTRING( QDate::shortDayName( PINT(1), ( QDate::MonthNameType ) hb_parni(2)) );
   }
   else
   {
@@ -735,7 +735,7 @@ HB_FUNC_STATIC( QDATE_SHORTMONTHNAME )
     static QString shortMonthName( int month )
     */
 
-    RQSTRING( QDate::shortMonthName( PINT(1) ) );
+    RQSTRING( QDate::shortMonthName( PINT(1)) );
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
@@ -743,7 +743,7 @@ HB_FUNC_STATIC( QDATE_SHORTMONTHNAME )
     static QString shortMonthName( int month, QDate::MonthNameType type )
     */
 
-    RQSTRING( QDate::shortMonthName( PINT(1), ( QDate::MonthNameType ) hb_parni(2) ) );
+    RQSTRING( QDate::shortMonthName( PINT(1), ( QDate::MonthNameType ) hb_parni(2)) );
   }
   else
   {

@@ -56,7 +56,7 @@ QThreadPool( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QTHREADPOOL_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
   {
     QThreadPool * obj = new QThreadPool( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -271,7 +271,7 @@ HB_FUNC_STATIC( QTHREADPOOL_START )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQRUNNABLE(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && ISQRUNNABLE(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->start( PQRUNNABLE(1), OPINT( 2, 0 ) );
@@ -300,7 +300,7 @@ HB_FUNC_STATIC( QTHREADPOOL_TRYSTART )
     if( ISNUMPAR(1) && ISQRUNNABLE(1) )
     {
 #endif
-      RBOOL( obj->tryStart( PQRUNNABLE(1) ) );
+      RBOOL( obj->tryStart( PQRUNNABLE(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QTHREADPOOL_WAITFORDONE )
 
     if( obj != NULL )
     {
-      RBOOL( obj->waitForDone( PINT(1) ) );
+      RBOOL( obj->waitForDone( PINT(1)) );
     }
   }
   else

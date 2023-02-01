@@ -145,7 +145,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETRELAXED )
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      RBOOL( obj->testAndSetRelaxed( PINT(1), PINT(2) ) );
+      RBOOL( obj->testAndSetRelaxed( PINT(1), PINT(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETACQUIRE )
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      RBOOL( obj->testAndSetAcquire( PINT(1), PINT(2) ) );
+      RBOOL( obj->testAndSetAcquire( PINT(1), PINT(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETRELEASE )
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      RBOOL( obj->testAndSetRelease( PINT(1), PINT(2) ) );
+      RBOOL( obj->testAndSetRelease( PINT(1), PINT(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,7 +217,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_TESTANDSETORDERED )
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      RBOOL( obj->testAndSetOrdered( PINT(1), PINT(2) ) );
+      RBOOL( obj->testAndSetOrdered( PINT(1), PINT(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTORERELAXED )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->fetchAndStoreRelaxed( PINT(1) ) );
+      RINT( obj->fetchAndStoreRelaxed( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -265,7 +265,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTOREACQUIRE )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->fetchAndStoreAcquire( PINT(1) ) );
+      RINT( obj->fetchAndStoreAcquire( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTORERELEASE )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->fetchAndStoreRelease( PINT(1) ) );
+      RINT( obj->fetchAndStoreRelease( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDSTOREORDERED )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->fetchAndStoreOrdered( PINT(1) ) );
+      RINT( obj->fetchAndStoreOrdered( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDRELAXED )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->fetchAndAddRelaxed( PINT(1) ) );
+      RINT( obj->fetchAndAddRelaxed( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDACQUIRE )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->fetchAndAddAcquire( PINT(1) ) );
+      RINT( obj->fetchAndAddAcquire( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -385,7 +385,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDRELEASE )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->fetchAndAddRelease( PINT(1) ) );
+      RINT( obj->fetchAndAddRelease( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QBASICATOMICINT_FETCHANDADDORDERED )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->fetchAndAddOrdered( PINT(1) ) );
+      RINT( obj->fetchAndAddOrdered( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

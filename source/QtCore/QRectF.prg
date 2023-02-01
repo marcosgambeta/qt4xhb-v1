@@ -208,7 +208,7 @@ HB_FUNC_STATIC( QRECTF_ADJUSTED )
     if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->adjusted( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
+      QRectF * ptr = new QRectF( obj->adjusted( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)) );
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -330,7 +330,7 @@ HB_FUNC_STATIC( QRECTF_CONTAINS )
 
     if( obj != NULL )
     {
-      RBOOL( obj->contains( *PQPOINTF(1) ) );
+      RBOOL( obj->contains( *PQPOINTF(1)) );
     }
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QRECTF_CONTAINS )
 
     if( obj != NULL )
     {
-      RBOOL( obj->contains( PQREAL(1), PQREAL(2) ) );
+      RBOOL( obj->contains( PQREAL(1), PQREAL(2)) );
     }
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QRECTF_CONTAINS )
 
     if( obj != NULL )
     {
-      RBOOL( obj->contains( *PQRECTF(1) ) );
+      RBOOL( obj->contains( *PQRECTF(1)) );
     }
   }
   else
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QRECTF_INTERSECTED )
     if( ISNUMPAR(1) && ISQRECTF(1) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->intersected( *PQRECTF(1) ) );
+      QRectF * ptr = new QRectF( obj->intersected( *PQRECTF(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QRECTF_INTERSECTS )
     if( ISNUMPAR(1) && ISQRECTF(1) )
     {
 #endif
-      RBOOL( obj->intersects( *PQRECTF(1) ) );
+      RBOOL( obj->intersects( *PQRECTF(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1505,7 +1505,7 @@ HB_FUNC_STATIC( QRECTF_TRANSLATED )
 
     if( obj != NULL )
     {
-      QRectF * ptr = new QRectF( obj->translated( PQREAL(1), PQREAL(2) ) );
+      QRectF * ptr = new QRectF( obj->translated( PQREAL(1), PQREAL(2)) );
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
     }
   }
@@ -1518,7 +1518,7 @@ HB_FUNC_STATIC( QRECTF_TRANSLATED )
 
     if( obj != NULL )
     {
-      QRectF * ptr = new QRectF( obj->translated( *PQPOINTF(1) ) );
+      QRectF * ptr = new QRectF( obj->translated( *PQPOINTF(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
     }
   }
@@ -1541,7 +1541,7 @@ HB_FUNC_STATIC( QRECTF_UNITED )
     if( ISNUMPAR(1) && ISQRECTF(1) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->united( *PQRECTF(1) ) );
+      QRectF * ptr = new QRectF( obj->united( *PQRECTF(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

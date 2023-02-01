@@ -992,7 +992,7 @@ HB_FUNC_STATIC( QFILEINFO_PERMISSION )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->permission( ( QFile::Permissions ) hb_parni(1) ) );
+      RBOOL( obj->permission( ( QFile::Permissions ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

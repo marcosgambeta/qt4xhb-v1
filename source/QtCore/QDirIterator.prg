@@ -56,7 +56,7 @@ RETURN
 
 HB_FUNC_STATIC( QDIRITERATOR_NEW )
 {
-  if( ISBETWEEN(1, 2) && ISQDIR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(1, 2) && ISQDIR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
   {
     /*
     QDirIterator( const QDir & dir, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW )
     QDirIterator * obj = new QDirIterator( *PQDIR(1), HB_ISNIL(2) ? ( QDirIterator::IteratorFlags ) QDirIterator::NoIteratorFlags : ( QDirIterator::IteratorFlags ) hb_parni(2) );
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
   {
     /*
     QDirIterator( const QString & path, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW )
     QDirIterator * obj = new QDirIterator( PQSTRING(1), HB_ISNIL(2) ? ( QDirIterator::IteratorFlags ) QDirIterator::NoIteratorFlags : ( QDirIterator::IteratorFlags ) hb_parni(2) );
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+  else if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) )
   {
     /*
     QDirIterator( const QString & path, QDir::Filters filters, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QDIRITERATOR_NEW )
     QDirIterator * obj = new QDirIterator( PQSTRING(1), ( QDir::Filters ) hb_parni(2), HB_ISNIL(3) ? ( QDirIterator::IteratorFlags ) QDirIterator::NoIteratorFlags : ( QDirIterator::IteratorFlags ) hb_parni(3) );
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISARRAY(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
+  else if( ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISARRAY(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)) )
   {
     /*
     QDirIterator( const QString & path, const QStringList & nameFilters, QDir::Filters filters = QDir::NoFilter, QDirIterator::IteratorFlags flags = QDirIterator::NoIteratorFlags )

@@ -480,7 +480,7 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldDecorationCB, 1, pRow ) );
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
-       void * ptr = static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) ) );
+       void * ptr = static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 )) );
        if( hb_clsIsParent( hb_objGetClass( pRet ), "QICON" ) )
        {
          data = *( static_cast<QIcon*>( ptr ) );
@@ -547,7 +547,7 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldSizeHintCB, 1, pRow ) );
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
-       void * ptr = static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) ) );
+       void * ptr = static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 )) );
        data = *( static_cast<QSize*>( ptr ) );
      }
      hb_itemRelease( pRow );
@@ -559,7 +559,7 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldFontCB, 1, pRow ) );
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
-       void * ptr = static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) ) );
+       void * ptr = static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 )) );
        data = *( static_cast<QFont*>( ptr ) );
      }
      hb_itemRelease( pRow );
@@ -582,7 +582,7 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldBGColorCB, 1, pRow ) );
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
-       void * ptr = static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) ) );
+       void * ptr = static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 )) );
        if( hb_clsIsParent( hb_objGetClass( pRet ), "QCOLOR" ) )
        {
          data = *( static_cast<QColor*>( ptr ) );
@@ -605,7 +605,7 @@ QVariant HAbstractListModel::data( const QModelIndex & index, int role ) const
      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getFieldFGColorCB, 1, pRow ) );
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
-       void * ptr = static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) ) );
+       void * ptr = static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 )) );
        data = *( static_cast<QColor*>( ptr ) );
      }
      else if( hb_itemType( pRet ) & HB_IT_STRING )
@@ -654,7 +654,7 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
       PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getHHDecorationCB, 1, pCol ) );
       if( hb_itemType( pRet ) & HB_IT_OBJECT )
       {
-        void * ptr = static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) ) );
+        void * ptr = static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 )) );
         if( hb_clsIsParent( hb_objGetClass( pRet ), "QICON" ) )
         {
           data = *( static_cast<QIcon*>( ptr ) );
@@ -677,7 +677,7 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getHHFontCB, 1, pCol ) );
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
-       void * ptr = static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) ) );
+       void * ptr = static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 )) );
        data = *( static_cast<QFont*>( ptr ) );
      }
      hb_itemRelease( pCol );
@@ -700,7 +700,7 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getHHBGColorCB, 1, pCol ) );
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
-       void * ptr = static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) ) );
+       void * ptr = static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 )) );
        if( hb_clsIsParent( hb_objGetClass( pRet ), "QCOLOR" ) )
        {
          data = *( static_cast<QColor*>( ptr ) );
@@ -723,7 +723,7 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getHHFGColorCB, 1, pCol ) );
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
-       void * ptr = static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) ) );
+       void * ptr = static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 )) );
        data = *( static_cast<QColor*>( ptr ) );
      }
      else if( hb_itemType( pRet ) & HB_IT_STRING )
@@ -765,7 +765,7 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
       PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getVHDecorationCB, 1, pRow ) );
       if( hb_itemType( pRet ) & HB_IT_OBJECT )
       {
-        void * ptr = static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) ) );
+        void * ptr = static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 )) );
         if( hb_clsIsParent( hb_objGetClass( pRet ), "QICON" ) )
         {
           data = *( static_cast<QIcon*>( ptr ) );
@@ -788,7 +788,7 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getVHFontCB, 1, pRow ) );
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
-       void * ptr = static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) ) );
+       void * ptr = static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 )) );
        data = *( static_cast<QFont*>( ptr ) );
      }
      hb_itemRelease( pRow );
@@ -811,7 +811,7 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getVHBGColorCB, 1, pRow ) );
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
-       void * ptr = static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) ) );
+       void * ptr = static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 )) );
        if( hb_clsIsParent( hb_objGetClass( pRet ), "QCOLOR" ) )
        {
          data = *( static_cast<QColor*>( ptr ) );
@@ -834,7 +834,7 @@ QVariant HAbstractListModel::headerData( int section, Qt::Orientation orientatio
      PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_getVHFGColorCB, 1, pRow ) );
      if( hb_itemType( pRet ) & HB_IT_OBJECT )
      {
-       void * ptr = static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) ) );
+       void * ptr = static_cast<void*>( hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 )) );
        data = *( static_cast<QColor*>( ptr ) );
      }
      else if( hb_itemType( pRet ) & HB_IT_STRING )
@@ -859,7 +859,7 @@ int HAbstractListModel::rowCount( const QModelIndex & parent ) const
   {
     if( m_rowCountCB )
     {
-      return static_cast<int >( hb_itemGetNI( hb_vmEvalBlockV( m_rowCountCB, 0 ) ) );
+      return static_cast<int >( hb_itemGetNI( hb_vmEvalBlockV( m_rowCountCB, 0 )) );
     }
     else
     {

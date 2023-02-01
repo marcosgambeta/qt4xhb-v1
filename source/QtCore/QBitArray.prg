@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QBITARRAY_NEW )
     QBitArray * obj = new QBitArray();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)) )
   {
     /*
     QBitArray( int size, bool value = false )
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QBITARRAY_AT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->at( PINT(1) ) );
+      RBOOL( obj->at( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -190,7 +190,7 @@ HB_FUNC_STATIC( QBITARRAY_COUNT )
 
     if( obj != NULL )
     {
-      RINT( obj->count( PBOOL(1) ) );
+      RINT( obj->count( PBOOL(1)) );
     }
   }
   else
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QBITARRAY_COUNT )
 
 HB_FUNC_STATIC( QBITARRAY_FILL )
 {
-  if( ISBETWEEN(1, 2) && HB_ISLOG(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(1, 2) && HB_ISLOG(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
   {
     /*
     bool fill( bool value, int size = -1 )
@@ -210,7 +210,7 @@ HB_FUNC_STATIC( QBITARRAY_FILL )
 
     if( obj != NULL )
     {
-      RBOOL( obj->fill( PBOOL(1), OPINT( 2, -1 ) ) );
+      RBOOL( obj->fill( PBOOL(1), OPINT( 2, -1 )) );
     }
   }
   else if( ISNUMPAR(3) && HB_ISLOG(1) && HB_ISNUM(2) && HB_ISNUM(3) )
@@ -380,7 +380,7 @@ HB_FUNC_STATIC( QBITARRAY_TESTBIT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->testBit( PINT(1) ) );
+      RBOOL( obj->testBit( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -404,7 +404,7 @@ HB_FUNC_STATIC( QBITARRAY_TOGGLEBIT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->toggleBit( PINT(1) ) );
+      RBOOL( obj->toggleBit( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

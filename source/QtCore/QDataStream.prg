@@ -229,7 +229,7 @@ HB_FUNC_STATIC( QDATASTREAM_READRAWDATA )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
     {
 #endif
-      RINT( obj->readRawData( ( char * ) hb_parc(1), PINT(2) ) );
+      RINT( obj->readRawData( ( char * ) hb_parc(1), PINT(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -409,7 +409,7 @@ HB_FUNC_STATIC( QDATASTREAM_SKIPRAWDATA )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->skipRawData( PINT(1) ) );
+      RINT( obj->skipRawData( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -481,7 +481,7 @@ HB_FUNC_STATIC( QDATASTREAM_WRITERAWDATA )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
     {
 #endif
-      RINT( obj->writeRawData( PCONSTCHAR(1), PINT(2) ) );
+      RINT( obj->writeRawData( PCONSTCHAR(1), PINT(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

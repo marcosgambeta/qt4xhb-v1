@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QANIMATIONGROUP_INDEXOFANIMATION )
     if( ISNUMPAR(1) && ISQABSTRACTANIMATION(1) )
     {
 #endif
-      RINT( obj->indexOfAnimation( PQABSTRACTANIMATION(1) ) );
+      RINT( obj->indexOfAnimation( PQABSTRACTANIMATION(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

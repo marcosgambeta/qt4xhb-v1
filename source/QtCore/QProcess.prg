@@ -94,7 +94,7 @@ QProcess( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QPROCESS_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
   {
     QProcess * obj = new QProcess( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -560,7 +560,7 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDERRORFILE )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->setStandardErrorFile( PQSTRING(1), HB_ISNIL(2) ? ( QIODevice::OpenMode ) QIODevice::Truncate : ( QIODevice::OpenMode ) hb_parni(2) );
@@ -612,7 +612,7 @@ HB_FUNC_STATIC( QPROCESS_SETSTANDARDOUTPUTFILE )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->setStandardOutputFile( PQSTRING(1), HB_ISNIL(2) ? ( QIODevice::OpenMode ) QIODevice::Truncate : ( QIODevice::OpenMode ) hb_parni(2) );
@@ -682,7 +682,7 @@ HB_FUNC_STATIC( QPROCESS_SETWORKINGDIRECTORY )
 
 HB_FUNC_STATIC( QPROCESS_START )
 {
-  if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISARRAY(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+  if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISARRAY(2) && (HB_ISNUM(3) || HB_ISNIL(3)) )
   {
     /*
     void start( const QString & program, const QStringList & arguments, QIODevice::OpenMode mode = QIODevice::ReadWrite )
@@ -696,7 +696,7 @@ HB_FUNC_STATIC( QPROCESS_START )
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
   {
     /*
     void start( const QString & program, QIODevice::OpenMode mode = QIODevice::ReadWrite )
@@ -750,10 +750,10 @@ HB_FUNC_STATIC( QPROCESS_WAITFORFINISHED )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->waitForFinished( OPINT( 1, 30000 ) ) );
+      RBOOL( obj->waitForFinished( OPINT( 1, 30000 )) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -774,10 +774,10 @@ HB_FUNC_STATIC( QPROCESS_WAITFORSTARTED )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->waitForStarted( OPINT( 1, 30000 ) ) );
+      RBOOL( obj->waitForStarted( OPINT( 1, 30000 )) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -968,10 +968,10 @@ HB_FUNC_STATIC( QPROCESS_WAITFORBYTESWRITTEN )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->waitForBytesWritten( OPINT( 1, 30000 ) ) );
+      RBOOL( obj->waitForBytesWritten( OPINT( 1, 30000 )) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -992,10 +992,10 @@ HB_FUNC_STATIC( QPROCESS_WAITFORREADYREAD )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->waitForReadyRead( OPINT( 1, 30000 ) ) );
+      RBOOL( obj->waitForReadyRead( OPINT( 1, 30000 )) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1066,7 +1066,7 @@ HB_FUNC_STATIC( QPROCESS_EXECUTE )
     static int execute( const QString & program, const QStringList & arguments )
     */
 
-    RINT( QProcess::execute( PQSTRING(1), PQSTRINGLIST(2) ) );
+    RINT( QProcess::execute( PQSTRING(1), PQSTRINGLIST(2)) );
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
@@ -1074,7 +1074,7 @@ HB_FUNC_STATIC( QPROCESS_EXECUTE )
     static int execute( const QString & program )
     */
 
-    RINT( QProcess::execute( PQSTRING(1) ) );
+    RINT( QProcess::execute( PQSTRING(1)) );
   }
   else
   {
@@ -1098,7 +1098,7 @@ HB_FUNC_STATIC( QPROCESS_STARTDETACHED )
     static bool startDetached( const QString & program, const QStringList & arguments )
     */
 
-    RBOOL( QProcess::startDetached( PQSTRING(1), PQSTRINGLIST(2) ) );
+    RBOOL( QProcess::startDetached( PQSTRING(1), PQSTRINGLIST(2)) );
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
@@ -1106,7 +1106,7 @@ HB_FUNC_STATIC( QPROCESS_STARTDETACHED )
     static bool startDetached( const QString & program )
     */
 
-    RBOOL( QProcess::startDetached( PQSTRING(1) ) );
+    RBOOL( QProcess::startDetached( PQSTRING(1)) );
   }
   else
   {

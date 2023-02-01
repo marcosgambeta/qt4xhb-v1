@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QRECT_ADJUSTED )
     if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
     {
 #endif
-      QRect * ptr = new QRect( obj->adjusted( PINT(1), PINT(2), PINT(3), PINT(4) ) );
+      QRect * ptr = new QRect( obj->adjusted( PINT(1), PINT(2), PINT(3), PINT(4)) );
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QRECT_CENTER )
 
 HB_FUNC_STATIC( QRECT_CONTAINS )
 {
-  if( ISBETWEEN(1, 2) && ISQPOINT(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(1, 2) && ISQPOINT(1) && (HB_ISLOG(2) || HB_ISNIL(2)) )
   {
     /*
     bool contains( const QPoint & point, bool proper = false ) const
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QRECT_CONTAINS )
 
     if( obj != NULL )
     {
-      RBOOL( obj->contains( *PQPOINT(1), OPBOOL( 2, false ) ) );
+      RBOOL( obj->contains( *PQPOINT(1), OPBOOL( 2, false )) );
     }
   }
   else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISLOG(3) )
@@ -331,7 +331,7 @@ HB_FUNC_STATIC( QRECT_CONTAINS )
 
     if( obj != NULL )
     {
-      RBOOL( obj->contains( PINT(1), PINT(2), PBOOL(3) ) );
+      RBOOL( obj->contains( PINT(1), PINT(2), PBOOL(3)) );
     }
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -343,10 +343,10 @@ HB_FUNC_STATIC( QRECT_CONTAINS )
 
     if( obj != NULL )
     {
-      RBOOL( obj->contains( PINT(1), PINT(2) ) );
+      RBOOL( obj->contains( PINT(1), PINT(2)) );
     }
   }
-  else if( ISBETWEEN(1, 2) && ISQRECT(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && ISQRECT(1) && (HB_ISLOG(2) || HB_ISNIL(2)) )
   {
     /*
     bool contains( const QRect & rectangle, bool proper = false ) const
@@ -355,7 +355,7 @@ HB_FUNC_STATIC( QRECT_CONTAINS )
 
     if( obj != NULL )
     {
-      RBOOL( obj->contains( *PQRECT(1), OPBOOL( 2, false ) ) );
+      RBOOL( obj->contains( *PQRECT(1), OPBOOL( 2, false )) );
     }
   }
   else
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QRECT_INTERSECTED )
     if( ISNUMPAR(1) && ISQRECT(1) )
     {
 #endif
-      QRect * ptr = new QRect( obj->intersected( *PQRECT(1) ) );
+      QRect * ptr = new QRect( obj->intersected( *PQRECT(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QRECT_INTERSECTS )
     if( ISNUMPAR(1) && ISQRECT(1) )
     {
 #endif
-      RBOOL( obj->intersects( *PQRECT(1) ) );
+      RBOOL( obj->intersects( *PQRECT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1456,7 +1456,7 @@ HB_FUNC_STATIC( QRECT_TRANSLATED )
 
     if( obj != NULL )
     {
-      QRect * ptr = new QRect( obj->translated( PINT(1), PINT(2) ) );
+      QRect * ptr = new QRect( obj->translated( PINT(1), PINT(2)) );
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
@@ -1469,7 +1469,7 @@ HB_FUNC_STATIC( QRECT_TRANSLATED )
 
     if( obj != NULL )
     {
-      QRect * ptr = new QRect( obj->translated( *PQPOINT(1) ) );
+      QRect * ptr = new QRect( obj->translated( *PQPOINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
@@ -1492,7 +1492,7 @@ HB_FUNC_STATIC( QRECT_UNITED )
     if( ISNUMPAR(1) && ISQRECT(1) )
     {
 #endif
-      QRect * ptr = new QRect( obj->united( *PQRECT(1) ) );
+      QRect * ptr = new QRect( obj->united( *PQRECT(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

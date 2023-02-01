@@ -159,7 +159,7 @@ HB_FUNC_STATIC( QVARIANTANIMATION_KEYVALUEAT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->keyValueAt( PQREAL(1) ) );
+      QVariant * ptr = new QVariant( obj->keyValueAt( PQREAL(1)) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

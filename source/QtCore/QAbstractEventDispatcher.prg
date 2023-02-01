@@ -85,7 +85,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_FILTEREVENT )
     if( ISNUMPAR(1) && HB_ISPOINTER(1) )
     {
 #endif
-      RBOOL( obj->filterEvent( static_cast<void*>( hb_parptr(1) ) ) );
+      RBOOL( obj->filterEvent( static_cast<void*>( hb_parptr(1)) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_PROCESSEVENTS )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->processEvents( ( QEventLoop::ProcessEventsFlags ) hb_parni(1) ) );
+      RBOOL( obj->processEvents( ( QEventLoop::ProcessEventsFlags ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_REGISTERTIMER )
 
     if( obj != NULL )
     {
-      RINT( obj->registerTimer( PINT(1), PQOBJECT(2) ) );
+      RINT( obj->registerTimer( PINT(1), PQOBJECT(2)) );
     }
   }
   else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQOBJECT(3) )
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMER )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->unregisterTimer( PINT(1) ) );
+      RBOOL( obj->unregisterTimer( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_UNREGISTERTIMERS )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      RBOOL( obj->unregisterTimers( PQOBJECT(1) ) );
+      RBOOL( obj->unregisterTimers( PQOBJECT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -362,7 +362,7 @@ static QAbstractEventDispatcher * instance( QThread * thread = 0 )
 HB_FUNC_STATIC( QABSTRACTEVENTDISPATCHER_INSTANCE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0, 1) && ( ISQTHREAD(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQTHREAD(1) || HB_ISNIL(1)) )
   {
 #endif
     QAbstractEventDispatcher * ptr = QAbstractEventDispatcher::instance( OPQTHREAD( 1, 0 ) );

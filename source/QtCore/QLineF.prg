@@ -313,7 +313,7 @@ HB_FUNC_STATIC( QLINEF_ANGLETO )
     if( ISNUMPAR(1) && ISQLINEF(1) )
     {
 #endif
-      RQREAL( obj->angleTo( *PQLINEF(1) ) );
+      RQREAL( obj->angleTo( *PQLINEF(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QLINEF_POINTAT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->pointAt( PQREAL(1) ) );
+      QPointF * ptr = new QPointF( obj->pointAt( PQREAL(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -698,7 +698,7 @@ HB_FUNC_STATIC( QLINEF_TRANSLATED )
 
     if( obj != NULL )
     {
-      QLineF * ptr = new QLineF( obj->translated( *PQPOINTF(1) ) );
+      QLineF * ptr = new QLineF( obj->translated( *PQPOINTF(1)) );
       Qt4xHb::createReturnClass(ptr, "QLINEF", true);
     }
   }
@@ -711,7 +711,7 @@ HB_FUNC_STATIC( QLINEF_TRANSLATED )
 
     if( obj != NULL )
     {
-      QLineF * ptr = new QLineF( obj->translated( PQREAL(1), PQREAL(2) ) );
+      QLineF * ptr = new QLineF( obj->translated( PQREAL(1), PQREAL(2)) );
       Qt4xHb::createReturnClass(ptr, "QLINEF", true);
     }
   }
@@ -755,7 +755,7 @@ HB_FUNC_STATIC( QLINEF_FROMPOLAR )
   if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
 #endif
-    QLineF * ptr = new QLineF( QLineF::fromPolar( PQREAL(1), PQREAL(2) ) );
+    QLineF * ptr = new QLineF( QLineF::fromPolar( PQREAL(1), PQREAL(2)) );
     Qt4xHb::createReturnClass(ptr, "QLINEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }

@@ -77,7 +77,7 @@ HAbstractTableModel( QObject * parent = 0 )
 */
 HB_FUNC( HABSTRACTTABLEMODEL_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
   {
     HAbstractTableModel * obj = new HAbstractTableModel( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -818,7 +818,7 @@ HB_FUNC( HABSTRACTTABLEMODEL_RELOADDATA )
 //   HAbstractTableModel * obj = (HAbstractTableModel *) hb_itemGetPtr( hb_objSendMsg( hb_stackSelfItem(), "POINTER", 0 ) );
 //   if( obj != NULL )
 //   {
-//     QModelIndex * ptr = new QModelIndex( obj->createIndex ( hb_parni(1), hb_parni(2) ) );
+//     QModelIndex * ptr = new QModelIndex( obj->createIndex ( hb_parni(1), hb_parni(2)) );
 //     _qt4xhb_createReturnClass ( ptr, "QMODELINDEX");  }
 // }
 

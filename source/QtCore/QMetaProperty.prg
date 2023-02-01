@@ -313,10 +313,10 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISDESIGNABLE )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->isDesignable( OPQOBJECT( 1, 0 ) ) );
+      RBOOL( obj->isDesignable( OPQOBJECT( 1, 0 )) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -337,10 +337,10 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISSCRIPTABLE )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->isScriptable( OPQOBJECT( 1, 0 ) ) );
+      RBOOL( obj->isScriptable( OPQOBJECT( 1, 0 )) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -361,10 +361,10 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISSTORED )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->isStored( OPQOBJECT( 1, 0 ) ) );
+      RBOOL( obj->isStored( OPQOBJECT( 1, 0 )) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -385,10 +385,10 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISEDITABLE )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->isEditable( OPQOBJECT( 1, 0 ) ) );
+      RBOOL( obj->isEditable( OPQOBJECT( 1, 0 )) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -409,10 +409,10 @@ HB_FUNC_STATIC( QMETAPROPERTY_ISUSER )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->isUser( OPQOBJECT( 1, 0 ) ) );
+      RBOOL( obj->isUser( OPQOBJECT( 1, 0 )) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -654,7 +654,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_READ )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->read( PQOBJECT(1) ) );
+      QVariant * ptr = new QVariant( obj->read( PQOBJECT(1)) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -679,7 +679,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_WRITE )
     if( ISNUMPAR(2) && ISQOBJECT(1) && ISQVARIANT(2) )
     {
 #endif
-      RBOOL( obj->write( PQOBJECT(1), *PQVARIANT(2) ) );
+      RBOOL( obj->write( PQOBJECT(1), *PQVARIANT(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -703,7 +703,7 @@ HB_FUNC_STATIC( QMETAPROPERTY_RESET )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      RBOOL( obj->reset( PQOBJECT(1) ) );
+      RBOOL( obj->reset( PQOBJECT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

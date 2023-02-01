@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QFUTUREWATCHERBASE_EVENT )
     if( ISNUMPAR(1) && ISQEVENT(1) )
     {
 #endif
-      RBOOL( obj->event( PQEVENT(1) ) );
+      RBOOL( obj->event( PQEVENT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

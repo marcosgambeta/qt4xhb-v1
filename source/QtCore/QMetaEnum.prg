@@ -178,7 +178,7 @@ HB_FUNC_STATIC( QMETAENUM_KEY )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      hb_retc( ( const char * ) obj->key( PINT(1) ) );
+      hb_retc( ( const char * ) obj->key( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -202,7 +202,7 @@ HB_FUNC_STATIC( QMETAENUM_VALUE )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->value( PINT(1) ) );
+      RINT( obj->value( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QMETAENUM_KEYTOVALUE )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RINT( obj->keyToValue( PCONSTCHAR(1) ) );
+      RINT( obj->keyToValue( PCONSTCHAR(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -274,7 +274,7 @@ HB_FUNC_STATIC( QMETAENUM_VALUETOKEY )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      hb_retc( ( const char * ) obj->valueToKey( PINT(1) ) );
+      hb_retc( ( const char * ) obj->valueToKey( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QMETAENUM_KEYSTOVALUE )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RINT( obj->keysToValue( PCONSTCHAR(1) ) );
+      RINT( obj->keysToValue( PCONSTCHAR(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -322,7 +322,7 @@ HB_FUNC_STATIC( QMETAENUM_VALUETOKEYS )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->valueToKeys( PINT(1) ) );
+      QByteArray * ptr = new QByteArray( obj->valueToKeys( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

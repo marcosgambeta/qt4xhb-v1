@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QTIME_NEW )
     QTime * obj = new QTime();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
+  else if( ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)) )
   {
     /*
     QTime( int h, int m, int s = 0, int ms = 0 )
@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QTIME_ADDMSECS )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QTime * ptr = new QTime( obj->addMSecs( PINT(1) ) );
+      QTime * ptr = new QTime( obj->addMSecs( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QTIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QTIME_ADDSECS )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QTime * ptr = new QTime( obj->addSecs( PINT(1) ) );
+      QTime * ptr = new QTime( obj->addSecs( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QTIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -287,7 +287,7 @@ HB_FUNC_STATIC( QTIME_MSECSTO )
     if( ISNUMPAR(1) && ISQTIME(1) )
     {
 #endif
-      RINT( obj->msecsTo( *PQTIME(1) ) );
+      RINT( obj->msecsTo( *PQTIME(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QTIME_SECSTO )
     if( ISNUMPAR(1) && ISQTIME(1) )
     {
 #endif
-      RINT( obj->secsTo( *PQTIME(1) ) );
+      RINT( obj->secsTo( *PQTIME(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -380,10 +380,10 @@ HB_FUNC_STATIC( QTIME_SETHMS )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
+    if( ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)) )
     {
 #endif
-      RBOOL( obj->setHMS( PINT(1), PINT(2), PINT(3), OPINT( 4, 0 ) ) );
+      RBOOL( obj->setHMS( PINT(1), PINT(2), PINT(3), OPINT( 4, 0 )) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -431,10 +431,10 @@ HB_FUNC_STATIC( QTIME_TOSTRING )
 
     if( obj != NULL )
     {
-      RQSTRING( obj->toString( PQSTRING(1) ) );
+      RQSTRING( obj->toString( PQSTRING(1)) );
     }
   }
-  else if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+  else if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
   {
     /*
     QString toString( Qt::DateFormat format = Qt::TextDate ) const
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QTIME_TOSTRING )
 
     if( obj != NULL )
     {
-      RQSTRING( obj->toString( HB_ISNIL(1) ? ( Qt::DateFormat ) Qt::TextDate : ( Qt::DateFormat ) hb_parni(1) ) );
+      RQSTRING( obj->toString( HB_ISNIL(1) ? ( Qt::DateFormat ) Qt::TextDate : ( Qt::DateFormat ) hb_parni(1)) );
     }
   }
   else
@@ -474,13 +474,13 @@ HB_FUNC_STATIC( QTIME_CURRENTTIME )
 
 HB_FUNC_STATIC( QTIME_FROMSTRING )
 {
-  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
   {
     /*
     static QTime fromString( const QString & string, Qt::DateFormat format = Qt::TextDate )
     */
 
-    QTime * ptr = new QTime( QTime::fromString( PQSTRING(1), HB_ISNIL(2) ? ( Qt::DateFormat ) Qt::TextDate : ( Qt::DateFormat ) hb_parni(2) ) );
+    QTime * ptr = new QTime( QTime::fromString( PQSTRING(1), HB_ISNIL(2) ? ( Qt::DateFormat ) Qt::TextDate : ( Qt::DateFormat ) hb_parni(2)) );
     Qt4xHb::createReturnClass(ptr, "QTIME", true);
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
@@ -492,7 +492,7 @@ HB_FUNC_STATIC( QTIME_FROMSTRING )
 
     if( obj != NULL )
     {
-      QTime * ptr = new QTime( obj->fromString( PQSTRING(1), PQSTRING(2) ) );
+      QTime * ptr = new QTime( obj->fromString( PQSTRING(1), PQSTRING(2)) );
       Qt4xHb::createReturnClass(ptr, "QTIME", true);
     }
   }
@@ -516,13 +516,13 @@ HB_FUNC_STATIC( QTIME_ISVALID )
       RBOOL( obj->isValid() );
     }
   }
-  else if( ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
+  else if( ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)) )
   {
     /*
     static bool isValid( int h, int m, int s, int ms = 0 )
     */
 
-    RBOOL( QTime::isValid( PINT(1), PINT(2), PINT(3), OPINT( 4, 0 ) ) );
+    RBOOL( QTime::isValid( PINT(1), PINT(2), PINT(3), OPINT( 4, 0 )) );
   }
   else
   {

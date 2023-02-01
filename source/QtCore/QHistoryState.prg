@@ -47,7 +47,7 @@ RETURN
 
 HB_FUNC_STATIC( QHISTORYSTATE_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQSTATE(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1)) )
   {
     /*
     QHistoryState( QState * parent = 0 )
@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QHISTORYSTATE_NEW )
     QHistoryState * obj = new QHistoryState( OPQSTATE( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQSTATE(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQSTATE(2) || HB_ISNIL(2)) )
   {
     /*
     QHistoryState( QHistoryState::HistoryType type, QState * parent = 0 )

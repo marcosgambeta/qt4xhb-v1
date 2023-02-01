@@ -108,7 +108,7 @@ bool HEventFilter::eventFilter( QObject *object, QEvent *event )
 
     result = hb_itemGetL( hb_vmEvalBlockV( m_eventFilterBlock, 2, pObject, pEvent ) );
 
-    hb_itemRelease( pObject );
+    hb_itemRelease(pObject);
     hb_itemRelease( pEvent );
   }
 
@@ -140,17 +140,17 @@ PHB_ITEM HEventFilter::returnQEvent( QEvent * event, const char * classname )
     pDynSym = hb_dynsymFindName( classname );
   }
 
-  PHB_ITEM pObject = hb_itemNew( NULL );
+  PHB_ITEM pObject = hb_itemNew(NULL);
 
   if( pDynSym != NULL )
   {
-    hb_vmPushDynSym( pDynSym );
+    hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
     hb_vmDo(0);
-    hb_itemCopy( pObject, hb_stackReturnItem() );
+    hb_itemCopy(pObject, hb_stackReturnItem());
     PHB_ITEM pItem = hb_itemPutPtr( NULL, static_cast<QEvent*>( event ) );
-    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-    hb_itemRelease( pItem );
+    hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+    hb_itemRelease(pItem);
   }
   else
   {
@@ -174,17 +174,17 @@ PHB_ITEM HEventFilter::returnQObject( QObject * object, const char * classname )
     pDynSym = hb_dynsymFindName( classname );
   }
 
-  PHB_ITEM pObject = hb_itemNew( NULL );
+  PHB_ITEM pObject = hb_itemNew(NULL);
 
   if( pDynSym != NULL )
   {
-    hb_vmPushDynSym( pDynSym );
+    hb_vmPushDynSym(pDynSym);
     hb_vmPushNil();
     hb_vmDo(0);
-    hb_itemCopy( pObject, hb_stackReturnItem() );
+    hb_itemCopy(pObject, hb_stackReturnItem());
     PHB_ITEM pItem = hb_itemPutPtr( NULL, static_cast<void*>( object ) );
-    hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-    hb_itemRelease( pItem );
+    hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+    hb_itemRelease(pItem);
   }
   else
   {

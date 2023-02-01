@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QMODELINDEX_CHILD )
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->child( PINT(1), PINT(2) ) );
+      QModelIndex * ptr = new QModelIndex( obj->child( PINT(1), PINT(2)) );
       Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -159,10 +159,10 @@ HB_FUNC_STATIC( QMODELINDEX_DATA )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->data( OPINT( 1, Qt::DisplayRole ) ) );
+      QVariant * ptr = new QVariant( obj->data( OPINT( 1, Qt::DisplayRole )) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -235,7 +235,7 @@ HB_FUNC_STATIC( QMODELINDEX_INTERNALPOINTER )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retptr( static_cast<void*>( obj->internalPointer() ) );
+      hb_retptr( static_cast<void*>( obj->internalPointer()) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -357,7 +357,7 @@ HB_FUNC_STATIC( QMODELINDEX_SIBLING )
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->sibling( PINT(1), PINT(2) ) );
+      QModelIndex * ptr = new QModelIndex( obj->sibling( PINT(1), PINT(2)) );
       Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

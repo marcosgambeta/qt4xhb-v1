@@ -100,7 +100,7 @@ HB_FUNC_STATIC( QTEXTENCODER_FROMUNICODE )
 
     if( obj != NULL )
     {
-      QByteArray * ptr = new QByteArray( obj->fromUnicode( PQSTRING(1) ) );
+      QByteArray * ptr = new QByteArray( obj->fromUnicode( PQSTRING(1)) );
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
     }
   }
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QTEXTENCODER_FROMUNICODE )
 
     if( obj != NULL )
     {
-      QByteArray * ptr = new QByteArray( obj->fromUnicode( PQCHAR(1), PINT(2) ) );
+      QByteArray * ptr = new QByteArray( obj->fromUnicode( PQCHAR(1), PINT(2)) );
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
     }
   }

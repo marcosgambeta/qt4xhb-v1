@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_NEW )
     QTextStream * obj = new QTextStream( PQIODEVICE(1) );
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISPOINTER(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISPOINTER(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
   {
     /*
     QTextStream( FILE * fileHandle, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_NEW )
     QTextStream * obj = new QTextStream( static_cast<FILE*>( hb_parptr(1) ), HB_ISNIL(2) ? ( QIODevice::OpenMode ) QIODevice::ReadWrite : ( QIODevice::OpenMode ) hb_parni(2) );
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
   {
     /*
     QTextStream( QByteArray * array, QIODevice::OpenMode openMode = QIODevice::ReadWrite )
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_NEW )
     QTextStream * obj = new QTextStream( PQBYTEARRAY(1), HB_ISNIL(2) ? ( QIODevice::OpenMode ) QIODevice::ReadWrite : ( QIODevice::OpenMode ) hb_parni(2) );
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
   {
     /*
     QTextStream( const QByteArray & array, QIODevice::OpenMode openMode = QIODevice::ReadOnly )
@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_SEEK )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->seek( PQINT64(1) ) );
+      RBOOL( obj->seek( PQINT64(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -650,10 +650,10 @@ HB_FUNC_STATIC( QTEXTSTREAM_READLINE )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
     {
 #endif
-      RQSTRING( obj->readLine( OPQINT64( 1, 0 ) ) );
+      RQSTRING( obj->readLine( OPQINT64( 1, 0 )) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -701,7 +701,7 @@ HB_FUNC_STATIC( QTEXTSTREAM_READ )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->read( PQINT64(1) ) );
+      RQSTRING( obj->read( PQINT64(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

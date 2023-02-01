@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QREGEXP_NEW )
     QRegExp * obj = new QRegExp();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+  else if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) )
   {
     /*
     QRegExp( const QString & pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive, QRegExp::PatternSyntax syntax = QRegExp::RegExp )
@@ -127,10 +127,10 @@ HB_FUNC_STATIC( QREGEXP_CAP )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
     {
 #endif
-      RQSTRING( obj->cap( OPINT( 1, 0 ) ) );
+      RQSTRING( obj->cap( OPINT( 1, 0 )) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QREGEXP_EXACTMATCH )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->exactMatch( PQSTRING(1) ) );
+      RBOOL( obj->exactMatch( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,10 +271,10 @@ HB_FUNC_STATIC( QREGEXP_INDEXIN )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+    if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) )
     {
 #endif
-      RINT( obj->indexIn( PQSTRING(1), OPINT( 2, 0 ), HB_ISNIL(3) ? ( QRegExp::CaretMode ) QRegExp::CaretAtZero : ( QRegExp::CaretMode ) hb_parni(3) ) );
+      RINT( obj->indexIn( PQSTRING(1), OPINT( 2, 0 ), HB_ISNIL(3) ? ( QRegExp::CaretMode ) QRegExp::CaretAtZero : ( QRegExp::CaretMode ) hb_parni(3)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -367,10 +367,10 @@ HB_FUNC_STATIC( QREGEXP_LASTINDEXIN )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+    if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) )
     {
 #endif
-      RINT( obj->lastIndexIn( PQSTRING(1), OPINT( 2, -1 ), HB_ISNIL(3) ? ( QRegExp::CaretMode ) QRegExp::CaretAtZero : ( QRegExp::CaretMode ) hb_parni(3) ) );
+      RINT( obj->lastIndexIn( PQSTRING(1), OPINT( 2, -1 ), HB_ISNIL(3) ? ( QRegExp::CaretMode ) QRegExp::CaretAtZero : ( QRegExp::CaretMode ) hb_parni(3)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -463,10 +463,10 @@ HB_FUNC_STATIC( QREGEXP_POS )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
     {
 #endif
-      RINT( obj->pos( OPINT( 1, 0 ) ) );
+      RINT( obj->pos( OPINT( 1, 0 )) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -590,7 +590,7 @@ HB_FUNC_STATIC( QREGEXP_ESCAPE )
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
 #endif
-    RQSTRING( QRegExp::escape( PQSTRING(1) ) );
+    RQSTRING( QRegExp::escape( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

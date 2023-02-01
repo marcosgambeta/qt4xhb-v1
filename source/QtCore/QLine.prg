@@ -480,7 +480,7 @@ HB_FUNC_STATIC( QLINE_TRANSLATED )
 
     if( obj != NULL )
     {
-      QLine * ptr = new QLine( obj->translated( *PQPOINT(1) ) );
+      QLine * ptr = new QLine( obj->translated( *PQPOINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QLINE", true);
     }
   }
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QLINE_TRANSLATED )
 
     if( obj != NULL )
     {
-      QLine * ptr = new QLine( obj->translated( PINT(1), PINT(2) ) );
+      QLine * ptr = new QLine( obj->translated( PINT(1), PINT(2)) );
       Qt4xHb::createReturnClass(ptr, "QLINE", true);
     }
   }

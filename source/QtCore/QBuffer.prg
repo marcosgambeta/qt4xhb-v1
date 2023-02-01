@@ -54,7 +54,7 @@ RETURN
 
 HB_FUNC_STATIC( QBUFFER_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
   {
     /*
     QBuffer( QObject * parent = 0 )
@@ -62,7 +62,7 @@ HB_FUNC_STATIC( QBUFFER_NEW )
     QBuffer * obj = new QBuffer( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2)) )
   {
     /*
     QBuffer( QByteArray * byteArray, QObject * parent = 0 )
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QBUFFER_OPEN )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->open( ( QBuffer::OpenMode ) hb_parni(1) ) );
+      RBOOL( obj->open( ( QBuffer::OpenMode ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QBUFFER_SEEK )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->seek( PQINT64(1) ) );
+      RBOOL( obj->seek( PQINT64(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

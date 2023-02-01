@@ -180,7 +180,7 @@ HB_FUNC_STATIC( QCRYPTOGRAPHICHASH_HASH )
   if( ISNUMPAR(2) && ISQBYTEARRAY(1) && HB_ISNUM(2) )
   {
 #endif
-    QByteArray * ptr = new QByteArray( QCryptographicHash::hash( *PQBYTEARRAY(1), ( QCryptographicHash::Algorithm ) hb_parni(2) ) );
+    QByteArray * ptr = new QByteArray( QCryptographicHash::hash( *PQBYTEARRAY(1), ( QCryptographicHash::Algorithm ) hb_parni(2)) );
     Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }

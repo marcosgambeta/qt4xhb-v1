@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QUUID_FROMRFC4122 )
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
 #endif
-    QUuid * ptr = new QUuid( QUuid::fromRfc4122( *PQBYTEARRAY(1) ) );
+    QUuid * ptr = new QUuid( QUuid::fromRfc4122( *PQBYTEARRAY(1)) );
     Qt4xHb::createReturnClass(ptr, "QUUID", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }

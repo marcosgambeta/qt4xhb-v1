@@ -250,7 +250,7 @@ HB_FUNC_STATIC( QIODEVICE_GETCHAR )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->getChar( ( char * ) hb_parc(1) ) );
+      RBOOL( obj->getChar( ( char * ) hb_parc(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QIODEVICE_OPEN )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->open( ( QIODevice::OpenMode ) hb_parni(1) ) );
+      RBOOL( obj->open( ( QIODevice::OpenMode ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -440,7 +440,7 @@ HB_FUNC_STATIC( QIODEVICE_PEEK )
 
     if( obj != NULL )
     {
-      RQINT64( obj->peek( ( char * ) hb_parc(1), PQINT64(2) ) );
+      RQINT64( obj->peek( ( char * ) hb_parc(1), PQINT64(2)) );
     }
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -452,7 +452,7 @@ HB_FUNC_STATIC( QIODEVICE_PEEK )
 
     if( obj != NULL )
     {
-      QByteArray * ptr = new QByteArray( obj->peek( PQINT64(1) ) );
+      QByteArray * ptr = new QByteArray( obj->peek( PQINT64(1)) );
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
     }
   }
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QIODEVICE_PUTCHAR )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->putChar( PCHAR(1) ) );
+      RBOOL( obj->putChar( PCHAR(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QIODEVICE_READ )
 
     if( obj != NULL )
     {
-      RQINT64( obj->read( ( char * ) hb_parc(1), PQINT64(2) ) );
+      RQINT64( obj->read( ( char * ) hb_parc(1), PQINT64(2)) );
     }
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -533,7 +533,7 @@ HB_FUNC_STATIC( QIODEVICE_READ )
 
     if( obj != NULL )
     {
-      QByteArray * ptr = new QByteArray( obj->read( PQINT64(1) ) );
+      QByteArray * ptr = new QByteArray( obj->read( PQINT64(1)) );
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
     }
   }
@@ -579,7 +579,7 @@ HB_FUNC_STATIC( QIODEVICE_READLINE )
 
     if( obj != NULL )
     {
-      RQINT64( obj->readLine( ( char * ) hb_parc(1), PQINT64(2) ) );
+      RQINT64( obj->readLine( ( char * ) hb_parc(1), PQINT64(2)) );
     }
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QIODEVICE_READLINE )
 
     if( obj != NULL )
     {
-      QByteArray * ptr = new QByteArray( obj->readLine( OPQINT64( 1, 0 ) ) );
+      QByteArray * ptr = new QByteArray( obj->readLine( OPQINT64( 1, 0 )) );
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
     }
   }
@@ -638,7 +638,7 @@ HB_FUNC_STATIC( QIODEVICE_SEEK )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->seek( PQINT64(1) ) );
+      RBOOL( obj->seek( PQINT64(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -738,7 +738,7 @@ HB_FUNC_STATIC( QIODEVICE_WAITFORBYTESWRITTEN )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->waitForBytesWritten( PINT(1) ) );
+      RBOOL( obj->waitForBytesWritten( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -762,7 +762,7 @@ HB_FUNC_STATIC( QIODEVICE_WAITFORREADYREAD )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->waitForReadyRead( PINT(1) ) );
+      RBOOL( obj->waitForReadyRead( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -784,7 +784,7 @@ HB_FUNC_STATIC( QIODEVICE_WRITE )
 
     if( obj != NULL )
     {
-      RQINT64( obj->write( PCONSTCHAR(1), PQINT64(2) ) );
+      RQINT64( obj->write( PCONSTCHAR(1), PQINT64(2)) );
     }
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -796,7 +796,7 @@ HB_FUNC_STATIC( QIODEVICE_WRITE )
 
     if( obj != NULL )
     {
-      RQINT64( obj->write( PCONSTCHAR(1) ) );
+      RQINT64( obj->write( PCONSTCHAR(1)) );
     }
   }
   else if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
@@ -808,7 +808,7 @@ HB_FUNC_STATIC( QIODEVICE_WRITE )
 
     if( obj != NULL )
     {
-      RQINT64( obj->write( *PQBYTEARRAY(1) ) );
+      RQINT64( obj->write( *PQBYTEARRAY(1)) );
     }
   }
   else

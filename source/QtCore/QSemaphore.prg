@@ -56,7 +56,7 @@ QSemaphore( int n = 0 )
 */
 HB_FUNC_STATIC( QSEMAPHORE_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
   {
     QSemaphore * obj = new QSemaphore( OPINT( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, true);
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QSEMAPHORE_ACQUIRE )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
     {
 #endif
       obj->acquire( OPINT( 1, 1 ) );
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QSEMAPHORE_RELEASE )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
     {
 #endif
       obj->release( OPINT( 1, 1 ) );
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QSEMAPHORE_RELEASE )
 
 HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE )
 {
-  if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
   {
     /*
     bool tryAcquire( int n = 1 )
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE )
 
     if( obj != NULL )
     {
-      RBOOL( obj->tryAcquire( OPINT( 1, 1 ) ) );
+      RBOOL( obj->tryAcquire( OPINT( 1, 1 )) );
     }
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QSEMAPHORE_TRYACQUIRE )
 
     if( obj != NULL )
     {
-      RBOOL( obj->tryAcquire( PINT(1), PINT(2) ) );
+      RBOOL( obj->tryAcquire( PINT(1), PINT(2)) );
     }
   }
   else

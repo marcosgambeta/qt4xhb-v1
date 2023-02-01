@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_NOTIFY )
     if( ISNUMPAR(2) && ISQOBJECT(1) && ISQEVENT(2) )
     {
 #endif
-      RBOOL( obj->notify( PQOBJECT(1), PQEVENT(2) ) );
+      RBOOL( obj->notify( PQOBJECT(1), PQEVENT(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -366,7 +366,7 @@ static void exit( int returnCode = 0 )
 HB_FUNC_STATIC( QCOREAPPLICATION_EXIT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
   {
 #endif
     QCoreApplication::exit( OPINT( 1, 0 ) );
@@ -549,7 +549,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_POSTEVENT )
 
 HB_FUNC_STATIC( QCOREAPPLICATION_PROCESSEVENTS )
 {
-  if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
   {
     /*
     static void processEvents( QEventLoop::ProcessEventsFlags flags = QEventLoop::AllEvents )
@@ -654,7 +654,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_SENDEVENT )
   if( ISNUMPAR(2) && ISQOBJECT(1) && ISQEVENT(2) )
   {
 #endif
-    RBOOL( QCoreApplication::sendEvent( PQOBJECT(1), PQEVENT(2) ) );
+    RBOOL( QCoreApplication::sendEvent( PQOBJECT(1), PQEVENT(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -740,7 +740,7 @@ static void setAttribute( Qt::ApplicationAttribute attribute, bool on = true )
 HB_FUNC_STATIC( QCOREAPPLICATION_SETATTRIBUTE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)) )
   {
 #endif
     QCoreApplication::setAttribute( ( Qt::ApplicationAttribute ) hb_parni(1), OPBOOL( 2, true ) );
@@ -846,7 +846,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TESTATTRIBUTE )
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
-    RBOOL( QCoreApplication::testAttribute( ( Qt::ApplicationAttribute ) hb_parni(1) ) );
+    RBOOL( QCoreApplication::testAttribute( ( Qt::ApplicationAttribute ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -864,7 +864,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
     static QString translate( const char * context, const char * sourceText, const char * disambiguation, QCoreApplication::Encoding encoding, int n )
     */
 
-    RQSTRING( QCoreApplication::translate( PCONSTCHAR(1), PCONSTCHAR(2), PCONSTCHAR(3), ( QCoreApplication::Encoding ) hb_parni(4), PINT(5) ) );
+    RQSTRING( QCoreApplication::translate( PCONSTCHAR(1), PCONSTCHAR(2), PCONSTCHAR(3), ( QCoreApplication::Encoding ) hb_parni(4), PINT(5)) );
   }
   else if( ISNUMPAR(4) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISNUM(4) )
   {
@@ -872,7 +872,7 @@ HB_FUNC_STATIC( QCOREAPPLICATION_TRANSLATE )
     static QString translate( const char * context, const char * sourceText, const char * disambiguation = 0, QCoreApplication::Encoding encoding = QCoreApplication::CodecForTr )
     */
 
-    RQSTRING( QCoreApplication::translate( PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR( 3, 0 ), HB_ISNIL(4) ? ( QCoreApplication::Encoding ) QCoreApplication::CodecForTr : ( QCoreApplication::Encoding ) hb_parni(4) ) );
+    RQSTRING( QCoreApplication::translate( PCONSTCHAR(1), PCONSTCHAR(2), OPCONSTCHAR( 3, 0 ), HB_ISNIL(4) ? ( QCoreApplication::Encoding ) QCoreApplication::CodecForTr : ( QCoreApplication::Encoding ) hb_parni(4)) );
   }
   else
   {

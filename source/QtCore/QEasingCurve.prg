@@ -57,7 +57,7 @@ RETURN
 
 HB_FUNC_STATIC( QEASINGCURVE_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
   {
     /*
     QEasingCurve( QEasingCurve::Type type = QEasingCurve::Linear )

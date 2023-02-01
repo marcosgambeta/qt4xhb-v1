@@ -56,7 +56,7 @@ RETURN
 
 HB_FUNC_STATIC( QSHAREDMEMORY_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
   {
     /*
     QSharedMemory( QObject * parent = 0 )
@@ -64,7 +64,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_NEW )
     QSharedMemory * obj = new QSharedMemory( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)) )
   {
     /*
     QSharedMemory( const QString & key, QObject * parent = 0 )
@@ -206,10 +206,10 @@ HB_FUNC_STATIC( QSHAREDMEMORY_CREATE )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
-      RBOOL( obj->create( PINT(1), HB_ISNIL(2) ? ( QSharedMemory::AccessMode ) QSharedMemory::ReadWrite : ( QSharedMemory::AccessMode ) hb_parni(2) ) );
+      RBOOL( obj->create( PINT(1), HB_ISNIL(2) ? ( QSharedMemory::AccessMode ) QSharedMemory::ReadWrite : ( QSharedMemory::AccessMode ) hb_parni(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,10 +254,10 @@ HB_FUNC_STATIC( QSHAREDMEMORY_ATTACH )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->attach( HB_ISNIL(1) ? ( QSharedMemory::AccessMode ) QSharedMemory::ReadWrite : ( QSharedMemory::AccessMode ) hb_parni(1) ) );
+      RBOOL( obj->attach( HB_ISNIL(1) ? ( QSharedMemory::AccessMode ) QSharedMemory::ReadWrite : ( QSharedMemory::AccessMode ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QSHAREDMEMORY_DATA )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retptr( static_cast<void*>( obj->data() ) );
+      hb_retptr( static_cast<void*>( obj->data()) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

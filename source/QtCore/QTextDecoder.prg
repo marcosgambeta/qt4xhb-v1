@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE )
 
     if( obj != NULL )
     {
-      RQSTRING( obj->toUnicode( PCONSTCHAR(1), PINT(2) ) );
+      RQSTRING( obj->toUnicode( PCONSTCHAR(1), PINT(2)) );
     }
   }
   else if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) )
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QTEXTDECODER_TOUNICODE )
 
     if( obj != NULL )
     {
-      RQSTRING( obj->toUnicode( *PQBYTEARRAY(1) ) );
+      RQSTRING( obj->toUnicode( *PQBYTEARRAY(1)) );
     }
   }
   else

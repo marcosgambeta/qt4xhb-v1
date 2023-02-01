@@ -53,7 +53,7 @@ RETURN
 
 HB_FUNC_STATIC( QLIBRARY_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
   {
     /*
     QLibrary( QObject * parent = 0 )
@@ -61,7 +61,7 @@ HB_FUNC_STATIC( QLIBRARY_NEW )
     QLibrary * obj = new QLibrary( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)) )
   {
     /*
     QLibrary( const QString & fileName, QObject * parent = 0 )
@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QLIBRARY_NEW )
     QLibrary * obj = new QLibrary( PQSTRING(1), OPQOBJECT( 2, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ( ISQOBJECT(3) || HB_ISNIL(3) ) )
+  else if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (ISQOBJECT(3) || HB_ISNIL(3)) )
   {
     /*
     QLibrary( const QString & fileName, int verNum, QObject * parent = 0 )
@@ -77,7 +77,7 @@ HB_FUNC_STATIC( QLIBRARY_NEW )
     QLibrary * obj = new QLibrary( PQSTRING(1), PINT(2), OPQOBJECT( 3, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ( ISQOBJECT(3) || HB_ISNIL(3) ) )
+  else if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && (ISQOBJECT(3) || HB_ISNIL(3)) )
   {
     /*
     QLibrary( const QString & fileName, const QString & version, QObject * parent = 0 )
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QLIBRARY_RESOLVE )
 
     if( obj != NULL )
     {
-      hb_retptr( static_cast<void*>( obj->resolve( PCONSTCHAR(1) ) ) );
+      hb_retptr( static_cast<void*>( obj->resolve( PCONSTCHAR(1)) ) );
     }
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
@@ -361,7 +361,7 @@ HB_FUNC_STATIC( QLIBRARY_RESOLVE )
     static void * resolve( const QString & fileName, const char * symbol )
     */
 
-    hb_retptr( static_cast<void*>( QLibrary::resolve( PQSTRING(1), PCONSTCHAR(2) ) ) );
+    hb_retptr( static_cast<void*>( QLibrary::resolve( PQSTRING(1), PCONSTCHAR(2)) ) );
   }
   else if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISCHAR(3) )
   {
@@ -369,7 +369,7 @@ HB_FUNC_STATIC( QLIBRARY_RESOLVE )
     static void * resolve( const QString & fileName, int verNum, const char * symbol )
     */
 
-    hb_retptr( static_cast<void*>( QLibrary::resolve( PQSTRING(1), PINT(2), PCONSTCHAR(3) ) ) );
+    hb_retptr( static_cast<void*>( QLibrary::resolve( PQSTRING(1), PINT(2), PCONSTCHAR(3)) ) );
   }
   else if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISCHAR(3) )
   {
@@ -377,7 +377,7 @@ HB_FUNC_STATIC( QLIBRARY_RESOLVE )
     static void * resolve( const QString & fileName, const QString & version, const char * symbol )
     */
 
-    hb_retptr( static_cast<void*>( QLibrary::resolve( PQSTRING(1), PQSTRING(2), PCONSTCHAR(3) ) ) );
+    hb_retptr( static_cast<void*>( QLibrary::resolve( PQSTRING(1), PQSTRING(2), PCONSTCHAR(3)) ) );
   }
   else
   {
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QLIBRARY_ISLIBRARY )
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
 #endif
-    RBOOL( QLibrary::isLibrary( PQSTRING(1) ) );
+    RBOOL( QLibrary::isLibrary( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

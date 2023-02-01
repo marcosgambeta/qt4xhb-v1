@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE )
 
     if( obj != NULL )
     {
-      RBOOL( obj->hasAttribute( PQSTRING(1) ) );
+      RBOOL( obj->hasAttribute( PQSTRING(1)) );
     }
   }
   else if( ISNUMPAR(1) && ISQLATIN1STRING(1) )
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE )
 
     if( obj != NULL )
     {
-      RBOOL( obj->hasAttribute( *PQLATIN1STRING(1) ) );
+      RBOOL( obj->hasAttribute( *PQLATIN1STRING(1)) );
     }
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
@@ -168,7 +168,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_HASATTRIBUTE )
 
     if( obj != NULL )
     {
-      RBOOL( obj->hasAttribute( PQSTRING(1), PQSTRING(2) ) );
+      RBOOL( obj->hasAttribute( PQSTRING(1), PQSTRING(2)) );
     }
   }
   else
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE )
 
     if( obj != NULL )
     {
-      QStringRef * ptr = new QStringRef( obj->value( PQSTRING(1), PQSTRING(2) ) );
+      QStringRef * ptr = new QStringRef( obj->value( PQSTRING(1), PQSTRING(2)) );
       Qt4xHb::createReturnClass(ptr, "QSTRINGREF", true);
     }
   }
@@ -201,7 +201,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE )
 
     if( obj != NULL )
     {
-      QStringRef * ptr = new QStringRef( obj->value( PQSTRING(1), *PQLATIN1STRING(2) ) );
+      QStringRef * ptr = new QStringRef( obj->value( PQSTRING(1), *PQLATIN1STRING(2)) );
       Qt4xHb::createReturnClass(ptr, "QSTRINGREF", true);
     }
   }
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE )
 
     if( obj != NULL )
     {
-      QStringRef * ptr = new QStringRef( obj->value( *PQLATIN1STRING(1), *PQLATIN1STRING(2) ) );
+      QStringRef * ptr = new QStringRef( obj->value( *PQLATIN1STRING(1), *PQLATIN1STRING(2)) );
       Qt4xHb::createReturnClass(ptr, "QSTRINGREF", true);
     }
   }
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE )
 
     if( obj != NULL )
     {
-      QStringRef * ptr = new QStringRef( obj->value( PQSTRING(1) ) );
+      QStringRef * ptr = new QStringRef( obj->value( PQSTRING(1)) );
       Qt4xHb::createReturnClass(ptr, "QSTRINGREF", true);
     }
   }
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QXMLSTREAMATTRIBUTES_VALUE )
 
     if( obj != NULL )
     {
-      QStringRef * ptr = new QStringRef( obj->value( *PQLATIN1STRING(1) ) );
+      QStringRef * ptr = new QStringRef( obj->value( *PQLATIN1STRING(1)) );
       Qt4xHb::createReturnClass(ptr, "QSTRINGREF", true);
     }
   }

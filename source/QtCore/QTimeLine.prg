@@ -78,7 +78,7 @@ QTimeLine( int duration = 1000, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QTIMELINE_NEW )
 {
-  if( ISBETWEEN(0, 2) && ( HB_ISNUM(1) || HB_ISNIL(1) ) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (ISQOBJECT(2) || HB_ISNIL(2)) )
   {
     QTimeLine * obj = new QTimeLine( OPINT( 1, 1000 ), OPQOBJECT( 2, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -288,7 +288,7 @@ HB_FUNC_STATIC( QTIMELINE_FRAMEFORTIME )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->frameForTime( PINT(1) ) );
+      RINT( obj->frameForTime( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -642,7 +642,7 @@ HB_FUNC_STATIC( QTIMELINE_VALUEFORTIME )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQREAL( obj->valueForTime( PINT(1) ) );
+      RQREAL( obj->valueForTime( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

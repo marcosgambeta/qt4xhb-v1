@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QSIZEF_BOUNDEDTO )
     if( ISNUMPAR(1) && ISQSIZEF(1) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->boundedTo( *PQSIZEF(1) ) );
+      QSizeF * ptr = new QSizeF( obj->boundedTo( *PQSIZEF(1)) );
       Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QSIZEF_EXPANDEDTO )
     if( ISNUMPAR(1) && ISQSIZEF(1) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->expandedTo( *PQSIZEF(1) ) );
+      QSizeF * ptr = new QSizeF( obj->expandedTo( *PQSIZEF(1)) );
       Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

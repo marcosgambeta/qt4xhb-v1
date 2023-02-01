@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QLIBRARYINFO_LOCATION )
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
-    RQSTRING( QLibraryInfo::location( ( QLibraryInfo::LibraryLocation ) hb_parni(1) ) );
+    RQSTRING( QLibraryInfo::location( ( QLibraryInfo::LibraryLocation ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

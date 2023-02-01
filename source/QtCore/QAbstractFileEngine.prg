@@ -182,7 +182,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_COPY )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->copy( PQSTRING(1) ) );
+      RBOOL( obj->copy( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -206,7 +206,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_ENTRYLIST )
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISARRAY(2) )
     {
 #endif
-      RQSTRINGLIST( obj->entryList( ( QDir::Filters ) hb_parni(1), PQSTRINGLIST(2) ) );
+      RQSTRINGLIST( obj->entryList( ( QDir::Filters ) hb_parni(1), PQSTRINGLIST(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -275,10 +275,10 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_FILEFLAGS )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
     {
 #endif
-      RENUM( obj->fileFlags( HB_ISNIL(1) ? ( QAbstractFileEngine::FileFlags ) QAbstractFileEngine::FileInfoAll : ( QAbstractFileEngine::FileFlags ) hb_parni(1) ) );
+      RENUM( obj->fileFlags( HB_ISNIL(1) ? ( QAbstractFileEngine::FileFlags ) QAbstractFileEngine::FileInfoAll : ( QAbstractFileEngine::FileFlags ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -299,10 +299,10 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_FILENAME )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
     {
 #endif
-      RQSTRING( obj->fileName( HB_ISNIL(1) ? ( QAbstractFileEngine::FileName ) QAbstractFileEngine::DefaultName : ( QAbstractFileEngine::FileName ) hb_parni(1) ) );
+      RQSTRING( obj->fileName( HB_ISNIL(1) ? ( QAbstractFileEngine::FileName ) QAbstractFileEngine::DefaultName : ( QAbstractFileEngine::FileName ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_FILETIME )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->fileTime( ( QAbstractFileEngine::FileTime ) hb_parni(1) ) );
+      QDateTime * ptr = new QDateTime( obj->fileTime( ( QAbstractFileEngine::FileTime ) hb_parni(1)) );
       Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_LINK )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->link( PQSTRING(1) ) );
+      RBOOL( obj->link( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_MKDIR )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISLOG(2) )
     {
 #endif
-      RBOOL( obj->mkdir( PQSTRING(1), PBOOL(2) ) );
+      RBOOL( obj->mkdir( PQSTRING(1), PBOOL(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_OPEN )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->open( ( QIODevice::OpenMode ) hb_parni(1) ) );
+      RBOOL( obj->open( ( QIODevice::OpenMode ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_OWNER )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->owner( ( QAbstractFileEngine::FileOwner ) hb_parni(1) ) );
+      RQSTRING( obj->owner( ( QAbstractFileEngine::FileOwner ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_OWNERID )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RUINT( obj->ownerId( ( QAbstractFileEngine::FileOwner ) hb_parni(1) ) );
+      RUINT( obj->ownerId( ( QAbstractFileEngine::FileOwner ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_READLINE )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
     {
 #endif
-      RQINT64( obj->readLine( ( char * ) hb_parc(1), PQINT64(2) ) );
+      RQINT64( obj->readLine( ( char * ) hb_parc(1), PQINT64(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -639,7 +639,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_RENAME )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->rename( PQSTRING(1) ) );
+      RBOOL( obj->rename( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -663,7 +663,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_RMDIR )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISLOG(2) )
     {
 #endif
-      RBOOL( obj->rmdir( PQSTRING(1), PBOOL(2) ) );
+      RBOOL( obj->rmdir( PQSTRING(1), PBOOL(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -687,7 +687,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_SEEK )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->seek( PQINT64(1) ) );
+      RBOOL( obj->seek( PQINT64(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -737,7 +737,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_SETPERMISSIONS )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->setPermissions( PUINT(1) ) );
+      RBOOL( obj->setPermissions( PUINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -761,7 +761,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_SETSIZE )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->setSize( PQINT64(1) ) );
+      RBOOL( obj->setSize( PQINT64(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -809,7 +809,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_SUPPORTSEXTENSION )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->supportsExtension( ( QAbstractFileEngine::Extension ) hb_parni(1) ) );
+      RBOOL( obj->supportsExtension( ( QAbstractFileEngine::Extension ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -833,7 +833,7 @@ HB_FUNC_STATIC( QABSTRACTFILEENGINE_WRITE )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
     {
 #endif
-      RQINT64( obj->write( PCONSTCHAR(1), PQINT64(2) ) );
+      RQINT64( obj->write( PCONSTCHAR(1), PQINT64(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

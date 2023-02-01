@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QDATETIME_NEW )
     QDateTime * obj = new QDateTime( *PQDATE(1) );
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(2, 3) && ISQDATE(1) && ISQTIME(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+  else if( ISBETWEEN(2, 3) && ISQDATE(1) && ISQTIME(2) && (HB_ISNUM(3) || HB_ISNIL(3)) )
   {
     /*
     QDateTime( const QDate & date, const QTime & time, Qt::TimeSpec spec = Qt::LocalTime )
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QDATETIME_ADDDAYS )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->addDays( PINT(1) ) );
+      QDateTime * ptr = new QDateTime( obj->addDays( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -173,7 +173,7 @@ HB_FUNC_STATIC( QDATETIME_ADDMSECS )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->addMSecs( PQINT64(1) ) );
+      QDateTime * ptr = new QDateTime( obj->addMSecs( PQINT64(1)) );
       Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QDATETIME_ADDMONTHS )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->addMonths( PINT(1) ) );
+      QDateTime * ptr = new QDateTime( obj->addMonths( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QDATETIME_ADDSECS )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->addSecs( PINT(1) ) );
+      QDateTime * ptr = new QDateTime( obj->addSecs( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QDATETIME_ADDYEARS )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->addYears( PINT(1) ) );
+      QDateTime * ptr = new QDateTime( obj->addYears( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -298,7 +298,7 @@ HB_FUNC_STATIC( QDATETIME_DAYSTO )
     if( ISNUMPAR(1) && ISQDATETIME(1) )
     {
 #endif
-      RINT( obj->daysTo( *PQDATETIME(1) ) );
+      RINT( obj->daysTo( *PQDATETIME(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QDATETIME_MSECSTO )
     if( ISNUMPAR(1) && ISQDATETIME(1) )
     {
 #endif
-      RQINT64( obj->msecsTo( *PQDATETIME(1) ) );
+      RQINT64( obj->msecsTo( *PQDATETIME(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QDATETIME_SECSTO )
     if( ISNUMPAR(1) && ISQDATETIME(1) )
     {
 #endif
-      RINT( obj->secsTo( *PQDATETIME(1) ) );
+      RINT( obj->secsTo( *PQDATETIME(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -644,10 +644,10 @@ HB_FUNC_STATIC( QDATETIME_TOSTRING )
 
     if( obj != NULL )
     {
-      RQSTRING( obj->toString( PQSTRING(1) ) );
+      RQSTRING( obj->toString( PQSTRING(1)) );
     }
   }
-  else if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+  else if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
   {
     /*
     QString toString( Qt::DateFormat format = Qt::TextDate ) const
@@ -656,7 +656,7 @@ HB_FUNC_STATIC( QDATETIME_TOSTRING )
 
     if( obj != NULL )
     {
-      RQSTRING( obj->toString( HB_ISNIL(1) ? ( Qt::DateFormat ) Qt::TextDate : ( Qt::DateFormat ) hb_parni(1) ) );
+      RQSTRING( obj->toString( HB_ISNIL(1) ? ( Qt::DateFormat ) Qt::TextDate : ( Qt::DateFormat ) hb_parni(1)) );
     }
   }
   else
@@ -678,7 +678,7 @@ HB_FUNC_STATIC( QDATETIME_TOTIMESPEC )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->toTimeSpec( ( Qt::TimeSpec ) hb_parni(1) ) );
+      QDateTime * ptr = new QDateTime( obj->toTimeSpec( ( Qt::TimeSpec ) hb_parni(1)) );
       Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -807,7 +807,7 @@ HB_FUNC_STATIC( QDATETIME_FROMMSECSSINCEEPOCH )
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
-    QDateTime * ptr = new QDateTime( QDateTime::fromMSecsSinceEpoch( PQINT64(1) ) );
+    QDateTime * ptr = new QDateTime( QDateTime::fromMSecsSinceEpoch( PQINT64(1)) );
     Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
@@ -820,13 +820,13 @@ HB_FUNC_STATIC( QDATETIME_FROMMSECSSINCEEPOCH )
 
 HB_FUNC_STATIC( QDATETIME_FROMSTRING )
 {
-  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
   {
     /*
     static QDateTime fromString( const QString & string, Qt::DateFormat format = Qt::TextDate )
     */
 
-    QDateTime * ptr = new QDateTime( QDateTime::fromString( PQSTRING(1), HB_ISNIL(2) ? ( Qt::DateFormat ) Qt::TextDate : ( Qt::DateFormat ) hb_parni(2) ) );
+    QDateTime * ptr = new QDateTime( QDateTime::fromString( PQSTRING(1), HB_ISNIL(2) ? ( Qt::DateFormat ) Qt::TextDate : ( Qt::DateFormat ) hb_parni(2)) );
     Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
   }
   else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
@@ -835,7 +835,7 @@ HB_FUNC_STATIC( QDATETIME_FROMSTRING )
     static QDateTime fromString( const QString & string, const QString & format )
     */
 
-    QDateTime * ptr = new QDateTime( QDateTime::fromString( PQSTRING(1), PQSTRING(2) ) );
+    QDateTime * ptr = new QDateTime( QDateTime::fromString( PQSTRING(1), PQSTRING(2)) );
     Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
   }
   else
@@ -853,7 +853,7 @@ HB_FUNC_STATIC( QDATETIME_FROMTIME_T )
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
-    QDateTime * ptr = new QDateTime( QDateTime::fromTime_t( PUINT(1) ) );
+    QDateTime * ptr = new QDateTime( QDateTime::fromTime_t( PUINT(1)) );
     Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
