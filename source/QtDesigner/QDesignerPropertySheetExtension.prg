@@ -117,7 +117,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_HASRESET )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->hasReset( PINT(1) ) );
+      RBOOL( obj->hasReset( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_INDEXOF )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RINT( obj->indexOf( PQSTRING(1) ) );
+      RINT( obj->indexOf( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISATTRIBUTE )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isAttribute( PINT(1) ) );
+      RBOOL( obj->isAttribute( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISCHANGED )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isChanged( PINT(1) ) );
+      RBOOL( obj->isChanged( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_ISVISIBLE )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isVisible( PINT(1) ) );
+      RBOOL( obj->isVisible( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -237,7 +237,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTY )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->property( PINT(1) ) );
+      QVariant * ptr = new QVariant( obj->property( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -262,7 +262,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYGROUP )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->propertyGroup( PINT(1) ) );
+      RQSTRING( obj->propertyGroup( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -286,7 +286,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_PROPERTYNAME )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->propertyName( PINT(1) ) );
+      RQSTRING( obj->propertyName( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QDESIGNERPROPERTYSHEETEXTENSION_RESET )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->reset( PINT(1) ) );
+      RBOOL( obj->reset( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

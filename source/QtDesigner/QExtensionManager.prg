@@ -49,7 +49,7 @@ QExtensionManager( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QEXTENSIONMANAGER_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
   {
     QExtensionManager * obj = new QExtensionManager( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -113,10 +113,10 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_REGISTEREXTENSIONS )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQABSTRACTEXTENSIONFACTORY(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && ISQABSTRACTEXTENSIONFACTORY(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
     {
 #endif
-      obj->registerExtensions( PQABSTRACTEXTENSIONFACTORY(1), OPQSTRING( 2, QString() ) );
+      obj->registerExtensions( PQABSTRACTEXTENSIONFACTORY(1), OPQSTRING( 2, QString()) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -139,10 +139,10 @@ HB_FUNC_STATIC( QEXTENSIONMANAGER_UNREGISTEREXTENSIONS )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQABSTRACTEXTENSIONFACTORY(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && ISQABSTRACTEXTENSIONFACTORY(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
     {
 #endif
-      obj->unregisterExtensions( PQABSTRACTEXTENSIONFACTORY(1), OPQSTRING( 2, QString() ) );
+      obj->unregisterExtensions( PQABSTRACTEXTENSIONFACTORY(1), OPQSTRING( 2, QString()) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

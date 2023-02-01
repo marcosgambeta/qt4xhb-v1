@@ -164,7 +164,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_ISWIDGETSELECTED )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      RBOOL( obj->isWidgetSelected( PQWIDGET(1) ) );
+      RBOOL( obj->isWidgetSelected( PQWIDGET(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,10 +185,10 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_MOVEPOSITION )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
-      RBOOL( obj->movePosition( ( QDesignerFormWindowCursorInterface::MoveOperation ) hb_parni(1), HB_ISNIL(2) ? ( QDesignerFormWindowCursorInterface::MoveMode ) QDesignerFormWindowCursorInterface::MoveAnchor : ( QDesignerFormWindowCursorInterface::MoveMode ) hb_parni(2) ) );
+      RBOOL( obj->movePosition( ( QDesignerFormWindowCursorInterface::MoveOperation ) hb_parni(1), HB_ISNIL(2) ? ( QDesignerFormWindowCursorInterface::MoveMode ) QDesignerFormWindowCursorInterface::MoveAnchor : ( QDesignerFormWindowCursorInterface::MoveMode ) hb_parni(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,7 +282,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWCURSORINTERFACE_SETPOSITION )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->setPosition( PINT(1), HB_ISNIL(2) ? ( QDesignerFormWindowCursorInterface::MoveMode ) QDesignerFormWindowCursorInterface::MoveAnchor : ( QDesignerFormWindowCursorInterface::MoveMode ) hb_parni(2) );

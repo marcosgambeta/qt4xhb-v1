@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ADDDYNAMICPROPERTY )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQVARIANT(2) )
     {
 #endif
-      RINT( obj->addDynamicProperty( PQSTRING(1), *PQVARIANT(2) ) );
+      RINT( obj->addDynamicProperty( PQSTRING(1), *PQVARIANT(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_CANADDDYNAMICPROPERTY )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->canAddDynamicProperty( PQSTRING(1) ) );
+      RBOOL( obj->canAddDynamicProperty( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,7 +152,7 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_ISDYNAMICPROPERTY )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isDynamicProperty( PINT(1) ) );
+      RBOOL( obj->isDynamicProperty( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,7 +176,7 @@ HB_FUNC_STATIC( QDESIGNERDYNAMICPROPERTYSHEETEXTENSION_REMOVEDYNAMICPROPERTY )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->removeDynamicProperty( PINT(1) ) );
+      RBOOL( obj->removeDynamicProperty( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

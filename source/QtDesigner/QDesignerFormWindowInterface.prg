@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_HASFEATURE )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->hasFeature( ( QDesignerFormWindowInterface::Feature ) hb_parni(1) ) );
+      RBOOL( obj->hasFeature( ( QDesignerFormWindowInterface::Feature ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -499,7 +499,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_ISMANAGED )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      RBOOL( obj->isManaged( PQWIDGET(1) ) );
+      RBOOL( obj->isManaged( PQWIDGET(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -857,7 +857,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_CLEARSELECTION )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISLOG(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)) )
     {
 #endif
       obj->clearSelection( OPBOOL( 1, true ) );
@@ -909,7 +909,7 @@ HB_FUNC_STATIC( QDESIGNERFORMWINDOWINTERFACE_SELECTWIDGET )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQWIDGET(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && ISQWIDGET(1) && (HB_ISLOG(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->selectWidget( PQWIDGET(1), OPBOOL( 2, true ) );
