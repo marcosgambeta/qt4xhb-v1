@@ -306,7 +306,7 @@ void QWebPageSlots::saveFrameStateRequested( QWebFrame * frame, QWebHistoryItem 
 
     hb_itemRelease( pSender );
     hb_itemRelease( pFrame );
-    hb_itemRelease( pItem );
+    hb_itemRelease(pItem);
   }
 }
 

@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_FONTFAMILY )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->fontFamily( ( QWebSettings::FontFamily ) hb_parni(1) ) );
+      RQSTRING( obj->fontFamily( ( QWebSettings::FontFamily ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_FONTSIZE )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->fontSize( ( QWebSettings::FontSize ) hb_parni(1) ) );
+      RINT( obj->fontSize( ( QWebSettings::FontSize ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_TESTATTRIBUTE )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->testAttribute( ( QWebSettings::WebAttribute ) hb_parni(1) ) );
+      RBOOL( obj->testAttribute( ( QWebSettings::WebAttribute ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -512,10 +512,10 @@ static void enablePersistentStorage( const QString & path = QString() )
 HB_FUNC_STATIC( QWEBSETTINGS_ENABLEPERSISTENTSTORAGE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0, 1) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)) )
   {
 #endif
-    QWebSettings::enablePersistentStorage( OPQSTRING( 1, QString() ) );
+    QWebSettings::enablePersistentStorage( OPQSTRING( 1, QString()) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -575,7 +575,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_ICONFORURL )
   if( ISNUMPAR(1) && ISQURL(1) )
   {
 #endif
-    QIcon * ptr = new QIcon( QWebSettings::iconForUrl( *PQURL(1) ) );
+    QIcon * ptr = new QIcon( QWebSettings::iconForUrl( *PQURL(1)) );
     Qt4xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
@@ -858,7 +858,7 @@ HB_FUNC_STATIC( QWEBSETTINGS_WEBGRAPHIC )
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
-    QPixmap * ptr = new QPixmap( QWebSettings::webGraphic( ( QWebSettings::WebGraphic ) hb_parni(1) ) );
+    QPixmap * ptr = new QPixmap( QWebSettings::webGraphic( ( QWebSettings::WebGraphic ) hb_parni(1)) );
     Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }

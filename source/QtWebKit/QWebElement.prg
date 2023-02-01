@@ -254,10 +254,10 @@ HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTE )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
     {
 #endif
-      RQSTRING( obj->attribute( PQSTRING(1), OPQSTRING( 2, QString() ) ) );
+      RQSTRING( obj->attribute( PQSTRING(1), OPQSTRING( 2, QString()) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -278,10 +278,10 @@ HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENS )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && ( HB_ISCHAR(3) || HB_ISNIL(3) ) )
+    if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISCHAR(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) )
     {
 #endif
-      RQSTRING( obj->attributeNS( PQSTRING(1), PQSTRING(2), OPQSTRING( 3, QString() ) ) );
+      RQSTRING( obj->attributeNS( PQSTRING(1), PQSTRING(2), OPQSTRING( 3, QString()) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -302,10 +302,10 @@ HB_FUNC_STATIC( QWEBELEMENT_ATTRIBUTENAMES )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)) )
     {
 #endif
-      RQSTRINGLIST( obj->attributeNames( OPQSTRING( 1, QString() ) ) );
+      RQSTRINGLIST( obj->attributeNames( OPQSTRING( 1, QString()) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -475,7 +475,7 @@ HB_FUNC_STATIC( QWEBELEMENT_EVALUATEJAVASCRIPT )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->evaluateJavaScript( PQSTRING(1) ) );
+      QVariant * ptr = new QVariant( obj->evaluateJavaScript( PQSTRING(1)) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -500,7 +500,7 @@ HB_FUNC_STATIC( QWEBELEMENT_FINDALL )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QWebElementCollection * ptr = new QWebElementCollection( obj->findAll( PQSTRING(1) ) );
+      QWebElementCollection * ptr = new QWebElementCollection( obj->findAll( PQSTRING(1)) );
       Qt4xHb::createReturnClass(ptr, "QWEBELEMENTCOLLECTION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -525,7 +525,7 @@ HB_FUNC_STATIC( QWEBELEMENT_FINDFIRST )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QWebElement * ptr = new QWebElement( obj->findFirst( PQSTRING(1) ) );
+      QWebElement * ptr = new QWebElement( obj->findFirst( PQSTRING(1)) );
       Qt4xHb::createReturnClass(ptr, "QWEBELEMENT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -600,7 +600,7 @@ HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTE )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->hasAttribute( PQSTRING(1) ) );
+      RBOOL( obj->hasAttribute( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -624,7 +624,7 @@ HB_FUNC_STATIC( QWEBELEMENT_HASATTRIBUTENS )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
-      RBOOL( obj->hasAttributeNS( PQSTRING(1), PQSTRING(2) ) );
+      RBOOL( obj->hasAttributeNS( PQSTRING(1), PQSTRING(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QWEBELEMENT_HASCLASS )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->hasClass( PQSTRING(1) ) );
+      RBOOL( obj->hasClass( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1372,7 +1372,7 @@ HB_FUNC_STATIC( QWEBELEMENT_STYLEPROPERTY )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
     {
 #endif
-      RQSTRING( obj->styleProperty( PQSTRING(1), ( QWebElement::StyleResolveStrategy ) hb_parni(2) ) );
+      RQSTRING( obj->styleProperty( PQSTRING(1), ( QWebElement::StyleResolveStrategy ) hb_parni(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

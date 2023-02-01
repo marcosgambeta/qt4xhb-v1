@@ -87,9 +87,9 @@ QGraphicsWebView( QGraphicsItem * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSWEBVIEW_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQGRAPHICSITEM(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)) )
   {
-    QGraphicsWebView * obj = new QGraphicsWebView( HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem*>( Qt4xHb::itemGetPtr(1) ) );
+    QGraphicsWebView * obj = new QGraphicsWebView( HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem*>( Qt4xHb::itemGetPtr(1)) );
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -126,10 +126,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_FINDTEXT )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
-      RBOOL( obj->findText( PQSTRING(1), HB_ISNIL(2) ? ( QWebPage::FindFlags ) 0 : ( QWebPage::FindFlags ) hb_parni(2) ) );
+      RBOOL( obj->findText( PQSTRING(1), HB_ISNIL(2) ? ( QWebPage::FindFlags ) 0 : ( QWebPage::FindFlags ) hb_parni(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_LOAD )
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISBETWEEN(1, 3) && ISQNETWORKREQUEST(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( ISQBYTEARRAY(3) || HB_ISNIL(3) ) )
+  else if( ISBETWEEN(1, 3) && ISQNETWORKREQUEST(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (ISQBYTEARRAY(3) || HB_ISNIL(3)) )
   {
     /*
     void load( const QNetworkRequest & request, QNetworkAccessManager::Operation operation = QNetworkAccessManager::GetOperation, const QByteArray & body = QByteArray() )
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_LOAD )
 
     if( obj != NULL )
     {
-      obj->load( *PQNETWORKREQUEST(1), HB_ISNIL(2) ? ( QNetworkAccessManager::Operation ) QNetworkAccessManager::GetOperation : ( QNetworkAccessManager::Operation ) hb_parni(2), HB_ISNIL(3) ? QByteArray() : *static_cast<QByteArray*>( Qt4xHb::itemGetPtr(3) ) );
+      obj->load( *PQNETWORKREQUEST(1), HB_ISNIL(2) ? ( QNetworkAccessManager::Operation ) QNetworkAccessManager::GetOperation : ( QNetworkAccessManager::Operation ) hb_parni(2), HB_ISNIL(3) ? QByteArray() : *static_cast<QByteArray*>( Qt4xHb::itemGetPtr(3)) );
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -358,10 +358,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETCONTENT )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 3) && ISQBYTEARRAY(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) && ( ISQURL(3) || HB_ISNIL(3) ) )
+    if( ISBETWEEN(1, 3) && ISQBYTEARRAY(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (ISQURL(3) || HB_ISNIL(3)) )
     {
 #endif
-      obj->setContent( *PQBYTEARRAY(1), OPQSTRING( 2, QString() ), HB_ISNIL(3) ? QUrl() : *static_cast<QUrl*>( Qt4xHb::itemGetPtr(3) ) );
+      obj->setContent( *PQBYTEARRAY(1), OPQSTRING( 2, QString() ), HB_ISNIL(3) ? QUrl() : *static_cast<QUrl*>( Qt4xHb::itemGetPtr(3)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -384,10 +384,10 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_SETHTML )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQURL(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQURL(2) || HB_ISNIL(2)) )
     {
 #endif
-      obj->setHtml( PQSTRING(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>( Qt4xHb::itemGetPtr(2) ) );
+      obj->setHtml( PQSTRING(1), HB_ISNIL(2) ? QUrl() : *static_cast<QUrl*>( Qt4xHb::itemGetPtr(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -589,7 +589,7 @@ HB_FUNC_STATIC( QGRAPHICSWEBVIEW_TRIGGERPAGEACTION )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->triggerPageAction( ( QWebPage::WebAction ) hb_parni(1), OPBOOL( 2, false ) );

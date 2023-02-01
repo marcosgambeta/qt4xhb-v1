@@ -51,7 +51,7 @@ QWebInspector( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QWEBINSPECTOR_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
   {
     QWebInspector * obj = new QWebInspector( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QWEBINSPECTOR_EVENT )
     if( ISNUMPAR(1) && ISQEVENT(1) )
     {
 #endif
-      RBOOL( obj->event( PQEVENT(1) ) );
+      RBOOL( obj->event( PQEVENT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
