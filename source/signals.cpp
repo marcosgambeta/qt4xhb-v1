@@ -316,8 +316,7 @@ PHB_ITEM Signals_return_object( void * ptr, const char * classname )
     hb_vmPushNil();
     hb_vmDo( 0 );
     hb_itemCopy( pObject, hb_stackReturnItem() );
-    PHB_ITEM pItem = hb_itemNew( NULL );
-    hb_itemPutPtr( pItem, ptr );
+    PHB_ITEM pItem = hb_itemPutPtr( NULL, ptr );
     hb_objSendMsg( pObject, "_POINTER", 1, pItem );
     hb_itemRelease( pItem );
   }
@@ -351,8 +350,7 @@ PHB_ITEM Signals_return_qobject( QObject * ptr, const char * classname )
     hb_vmPushNil();
     hb_vmDo( 0 );
     hb_itemCopy( pObject, hb_stackReturnItem() );
-    PHB_ITEM pItem = hb_itemNew( NULL );
-    hb_itemPutPtr( pItem, ptr );
+    PHB_ITEM pItem = hb_itemPutPtr( NULL, ptr );
     hb_objSendMsg( pObject, "_POINTER", 1, pItem );
     hb_itemRelease( pItem );
   }
