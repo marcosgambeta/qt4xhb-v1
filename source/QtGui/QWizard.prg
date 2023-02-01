@@ -100,7 +100,7 @@ QWizard( QWidget * parent = 0, Qt::WindowFlags flags = 0 )
 */
 HB_FUNC_STATIC( QWIZARD_NEW )
 {
-  if( ISBETWEEN(0, 2) && ( ISQWIDGET(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)) )
   {
     QWizard * obj = new QWizard( OPQWIDGET( 1, 0 ), HB_ISNIL(2) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(2) );
     Qt4xHb::returnNewObject(obj, false);
@@ -142,7 +142,7 @@ HB_FUNC_STATIC( QWIZARD_ADDPAGE )
     if( ISNUMPAR(1) && ISQWIZARDPAGE(1) )
     {
 #endif
-      RINT( obj->addPage( PQWIZARDPAGE(1) ) );
+      RINT( obj->addPage( PQWIZARDPAGE(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,7 +191,7 @@ HB_FUNC_STATIC( QWIZARD_BUTTONTEXT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->buttonText( ( QWizard::WizardButton ) hb_parni(1) ) );
+      RQSTRING( obj->buttonText( ( QWizard::WizardButton ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QWIZARD_FIELD )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->field( PQSTRING(1) ) );
+      QVariant * ptr = new QVariant( obj->field( PQSTRING(1)) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QWIZARD_HASVISITEDPAGE )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->hasVisitedPage( PINT(1) ) );
+      RBOOL( obj->hasVisitedPage( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -411,7 +411,7 @@ HB_FUNC_STATIC( QWIZARD_PIXMAP )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QPixmap * ptr = new QPixmap( obj->pixmap( ( QWizard::WizardPixmap ) hb_parni(1) ) );
+      QPixmap * ptr = new QPixmap( obj->pixmap( ( QWizard::WizardPixmap ) hb_parni(1)) );
       Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -489,8 +489,8 @@ HB_FUNC_STATIC( QWIZARD_SETBUTTONLAYOUT )
     {
 #endif
       QList<QWizard::WizardButton> par1;
-      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
-      int nLen1 = hb_arrayLen( aList1 );
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      const int nLen1 = hb_arrayLen(aList1);
       for( int i1 = 0; i1 < nLen1; i1++ )
       {
         par1 << (QWizard::WizardButton) hb_arrayGetNI(aList1, i1+1);
@@ -596,7 +596,7 @@ HB_FUNC_STATIC( QWIZARD_SETOPTION )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->setOption( ( QWizard::WizardOption ) hb_parni(1), OPBOOL( 2, true ) );
@@ -906,7 +906,7 @@ HB_FUNC_STATIC( QWIZARD_TESTOPTION )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->testOption( ( QWizard::WizardOption ) hb_parni(1) ) );
+      RBOOL( obj->testOption( ( QWizard::WizardOption ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

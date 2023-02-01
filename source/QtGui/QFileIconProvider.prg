@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_ICON )
 
     if( obj != NULL )
     {
-      QIcon * ptr = new QIcon( obj->icon( ( QFileIconProvider::IconType ) hb_parni(1) ) );
+      QIcon * ptr = new QIcon( obj->icon( ( QFileIconProvider::IconType ) hb_parni(1)) );
       Qt4xHb::createReturnClass(ptr, "QICON", true);
     }
   }
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_ICON )
 
     if( obj != NULL )
     {
-      QIcon * ptr = new QIcon( obj->icon( *PQFILEINFO(1) ) );
+      QIcon * ptr = new QIcon( obj->icon( *PQFILEINFO(1)) );
       Qt4xHb::createReturnClass(ptr, "QICON", true);
     }
   }
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QFILEICONPROVIDER_TYPE )
     if( ISNUMPAR(1) && ISQFILEINFO(1) )
     {
 #endif
-      RQSTRING( obj->type( *PQFILEINFO(1) ) );
+      RQSTRING( obj->type( *PQFILEINFO(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

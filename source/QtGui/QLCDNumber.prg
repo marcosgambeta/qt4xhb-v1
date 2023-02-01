@@ -67,7 +67,7 @@ RETURN
 
 HB_FUNC_STATIC( QLCDNUMBER_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
   {
     /*
     QLCDNumber( QWidget * parent = 0 )
@@ -75,7 +75,7 @@ HB_FUNC_STATIC( QLCDNUMBER_NEW )
     QLCDNumber * obj = new QLCDNumber( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2)) )
   {
     /*
     QLCDNumber( uint numDigits, QWidget * parent = 0 )
@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW1 )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->checkOverflow( PDOUBLE(1) ) );
+      RBOOL( obj->checkOverflow( PDOUBLE(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QLCDNUMBER_CHECKOVERFLOW2 )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->checkOverflow( PINT(1) ) );
+      RBOOL( obj->checkOverflow( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

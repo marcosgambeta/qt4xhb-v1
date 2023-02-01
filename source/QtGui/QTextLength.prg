@@ -151,7 +151,7 @@ HB_FUNC_STATIC( QTEXTLENGTH_VALUE )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQREAL( obj->value( PQREAL(1) ) );
+      RQREAL( obj->value( PQREAL(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

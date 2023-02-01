@@ -52,9 +52,9 @@ QGraphicsItemGroup( QGraphicsItem * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMGROUP_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQGRAPHICSITEM(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)) )
   {
-    QGraphicsItemGroup * obj = new QGraphicsItemGroup( HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem*>( Qt4xHb::itemGetPtr(1) ) );
+    QGraphicsItemGroup * obj = new QGraphicsItemGroup( HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem*>( Qt4xHb::itemGetPtr(1)) );
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -169,7 +169,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_ISOBSCUREDBY )
     if( ISNUMPAR(1) && ISQGRAPHICSITEM(1) )
     {
 #endif
-      RBOOL( obj->isObscuredBy( PQGRAPHICSITEM(1) ) );
+      RBOOL( obj->isObscuredBy( PQGRAPHICSITEM(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -215,7 +215,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMGROUP_PAINT )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ( ISQWIDGET(3) || HB_ISNIL(3) ) )
+    if( ISBETWEEN(2, 3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3) || HB_ISNIL(3)) )
     {
 #endif
       obj->paint( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET( 3, 0 ) );

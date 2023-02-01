@@ -29,18 +29,18 @@ void QGraphicsSceneSlots::changed( const QList<QRectF> & region )
   if( cb != NULL )
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QGRAPHICSSCENE");
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QRECTF");
+    PHB_DYNS pDynSym = hb_dynsymFindName("QRECTF");
     PHB_ITEM pRegion = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != NULL )
     {
       for( int i = 0; i < region.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
-        PHB_ITEM pTempObject = hb_itemNew( NULL );
+        PHB_ITEM pTempObject = hb_itemNew(NULL);
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
-        PHB_ITEM pTempItem = hb_itemPutPtr( NULL, new QRectF( region [i] ) );
+        PHB_ITEM pTempItem = hb_itemPutPtr(NULL, new QRectF( region [i] ) );
         hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
         hb_arrayAddForward( pRegion, pTempObject );
         hb_itemRelease( pTempObject );
@@ -49,7 +49,7 @@ void QGraphicsSceneSlots::changed( const QList<QRectF> & region )
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QRECTF", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QRECTF", HB_ERR_ARGS_BASEPARAMS);
     }
 
     hb_vmEvalBlockV( cb, 2, pSender, pRegion );

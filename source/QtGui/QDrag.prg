@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QDRAG_DELETE )
 
 HB_FUNC_STATIC( QDRAG_EXEC )
 {
-  if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
   {
     /*
     Qt::DropAction exec( Qt::DropActions supportedActions = Qt::MoveAction )
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QDRAG_EXEC )
 
     if( obj != NULL )
     {
-      RENUM( obj->exec( HB_ISNIL(1) ? ( Qt::DropActions ) Qt::MoveAction : ( Qt::DropActions ) hb_parni(1) ) );
+      RENUM( obj->exec( HB_ISNIL(1) ? ( Qt::DropActions ) Qt::MoveAction : ( Qt::DropActions ) hb_parni(1)) );
     }
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QDRAG_EXEC )
 
     if( obj != NULL )
     {
-      RENUM( obj->exec( ( Qt::DropActions ) hb_parni(1), ( Qt::DropAction ) hb_parni(2) ) );
+      RENUM( obj->exec( ( Qt::DropActions ) hb_parni(1), ( Qt::DropAction ) hb_parni(2)) );
     }
   }
   else

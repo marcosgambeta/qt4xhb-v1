@@ -57,7 +57,7 @@ QGraphicsRotation( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSROTATION_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
   {
     QGraphicsRotation * obj = new QGraphicsRotation( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);

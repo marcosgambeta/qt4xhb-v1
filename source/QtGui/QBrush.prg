@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
     QBrush * obj = new QBrush( ( Qt::BrushStyle ) hb_parni(1) );
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(1, 2) && ( ISQCOLOR(1) || HB_ISCHAR(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && (ISQCOLOR(1) || HB_ISCHAR(1)) && (HB_ISNUM(2) || HB_ISNIL(2)) )
   {
     /*
     QBrush( const QColor & color, Qt::BrushStyle style = Qt::SolidPattern )
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
     QBrush * obj = new QBrush( HB_ISOBJECT(1) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(1) ) : QColor( hb_parc(1) ), HB_ISNIL(2) ? ( Qt::BrushStyle ) Qt::SolidPattern : ( Qt::BrushStyle ) hb_parni(2) );
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
   {
     /*
     QBrush( Qt::GlobalColor color, Qt::BrushStyle style = Qt::SolidPattern )
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QBRUSH_NEW )
     QBrush * obj = new QBrush( ( Qt::GlobalColor ) hb_parni(1), HB_ISNIL(2) ? ( Qt::BrushStyle ) Qt::SolidPattern : ( Qt::BrushStyle ) hb_parni(2) );
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(2) && ( ISQCOLOR(1) || HB_ISCHAR(1) ) && ISQPIXMAP(2) )
+  else if( ISNUMPAR(2) && (ISQCOLOR(1) || HB_ISCHAR(1)) && ISQPIXMAP(2) )
   {
     /*
     QBrush( const QColor & color, const QPixmap & pixmap )
@@ -276,7 +276,7 @@ HB_FUNC_STATIC( QBRUSH_MATRIX )
 
 HB_FUNC_STATIC( QBRUSH_SETCOLOR )
 {
-  if( ISNUMPAR(1) && ( ISQCOLOR(1) || HB_ISCHAR(1) ) )
+  if( ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)) )
   {
     /*
     void setColor( const QColor & color )
@@ -285,7 +285,7 @@ HB_FUNC_STATIC( QBRUSH_SETCOLOR )
 
     if( obj != NULL )
     {
-      obj->setColor( HB_ISOBJECT(1) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(1) ) : QColor( hb_parc(1) ) );
+      obj->setColor( HB_ISOBJECT(1) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(1) ) : QColor( hb_parc(1)) );
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -559,7 +559,7 @@ static QVariant toVariant( const QBrush & )
 */
 void QBrush_toVariant2()
 {
-  QBrush * brush = static_cast<QBrush*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+  QBrush * brush = static_cast<QBrush*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 )) );
   QVariant * variant = new QVariant();
   variant->setValue<QBrush>( *brush );
   Qt4xHb::createReturnClass( variant, "QVARIANT", true);
@@ -591,7 +591,7 @@ HB_FUNC_STATIC( QBRUSH_FROMVARIANT )
 {
   if( ISNUMPAR(1) && ISQVARIANT(1) )
   {
-    QVariant * variant = static_cast<QVariant*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    QVariant * variant = static_cast<QVariant*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 )) );
     QBrush * brush = new QBrush( variant->value<QBrush>() );
     Qt4xHb::createReturnClass( brush, "QBRUSH", true);
   }

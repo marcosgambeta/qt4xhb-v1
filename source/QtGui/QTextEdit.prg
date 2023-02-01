@@ -139,7 +139,7 @@ RETURN
 
 HB_FUNC_STATIC( QTEXTEDIT_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
   {
     /*
     QTextEdit( QWidget * parent = 0 )
@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QTEXTEDIT_NEW )
     QTextEdit * obj = new QTextEdit( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) )
   {
     /*
     QTextEdit( const QString & text, QWidget * parent = 0 )
@@ -240,7 +240,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ANCHORAT )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      RQSTRING( obj->anchorAt( *PQPOINT(1) ) );
+      RQSTRING( obj->anchorAt( *PQPOINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORFORPOSITION )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      QTextCursor * ptr = new QTextCursor( obj->cursorForPosition( *PQPOINT(1) ) );
+      QTextCursor * ptr = new QTextCursor( obj->cursorForPosition( *PQPOINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORRECT )
 
     if( obj != NULL )
     {
-      QRect * ptr = new QRect( obj->cursorRect( *PQTEXTCURSOR(1) ) );
+      QRect * ptr = new QRect( obj->cursorRect( *PQTEXTCURSOR(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
@@ -551,10 +551,10 @@ HB_FUNC_STATIC( QTEXTEDIT_FIND )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
-      RBOOL( obj->find( PQSTRING(1), HB_ISNIL(2) ? ( QTextDocument::FindFlags ) 0 : ( QTextDocument::FindFlags ) hb_parni(2) ) );
+      RBOOL( obj->find( PQSTRING(1), HB_ISNIL(2) ? ( QTextDocument::FindFlags ) 0 : ( QTextDocument::FindFlags ) hb_parni(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -794,7 +794,7 @@ HB_FUNC_STATIC( QTEXTEDIT_LOADRESOURCE )
     if( ISNUMPAR(2) && HB_ISNUM(1) && ISQURL(2) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->loadResource( PINT(1), *PQURL(2) ) );
+      QVariant * ptr = new QVariant( obj->loadResource( PINT(1), *PQURL(2)) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -842,7 +842,7 @@ HB_FUNC_STATIC( QTEXTEDIT_MOVECURSOR )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->moveCursor( ( QTextCursor::MoveOperation ) hb_parni(1), HB_ISNIL(2) ? ( QTextCursor::MoveMode ) QTextCursor::MoveAnchor : ( QTextCursor::MoveMode ) hb_parni(2) );
@@ -2073,10 +2073,10 @@ HB_FUNC_STATIC( QTEXTEDIT_SETTEXTBACKGROUNDCOLOR )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( ISQCOLOR(1) || HB_ISCHAR(1) ) )
+    if( ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)) )
     {
 #endif
-      obj->setTextBackgroundColor( HB_ISOBJECT(1) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(1) ) : QColor( hb_parc(1) ) );
+      obj->setTextBackgroundColor( HB_ISOBJECT(1) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(1) ) : QColor( hb_parc(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2099,10 +2099,10 @@ HB_FUNC_STATIC( QTEXTEDIT_SETTEXTCOLOR )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( ISQCOLOR(1) || HB_ISCHAR(1) ) )
+    if( ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)) )
     {
 #endif
-      obj->setTextColor( HB_ISOBJECT(1) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(1) ) : QColor( hb_parc(1) ) );
+      obj->setTextColor( HB_ISOBJECT(1) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(1) ) : QColor( hb_parc(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2151,7 +2151,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ZOOMIN )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
     {
 #endif
       obj->zoomIn( OPINT( 1, 1 ) );
@@ -2177,7 +2177,7 @@ HB_FUNC_STATIC( QTEXTEDIT_ZOOMOUT )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
     {
 #endif
       obj->zoomOut( OPINT( 1, 1 ) );

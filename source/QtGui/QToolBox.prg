@@ -67,7 +67,7 @@ QToolBox( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QTOOLBOX_NEW )
 {
-  if( ISBETWEEN(0, 2) && ( ISQWIDGET(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)) )
   {
     QToolBox * obj = new QToolBox( OPQWIDGET( 1, 0 ), HB_ISNIL(2) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(2) );
     Qt4xHb::returnNewObject(obj, false);
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QTOOLBOX_DELETE )
 
 HB_FUNC_STATIC( QTOOLBOX_ADDITEM )
 {
-  if( ISNUMPAR(3) && ISQWIDGET(1) && ( ISQICON(2) || HB_ISCHAR(2) ) && HB_ISCHAR(3) )
+  if( ISNUMPAR(3) && ISQWIDGET(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3) )
   {
     /*
     int addItem( QWidget * widget, const QIcon & iconSet, const QString & text )
@@ -107,7 +107,7 @@ HB_FUNC_STATIC( QTOOLBOX_ADDITEM )
 
     if( obj != NULL )
     {
-      RINT( obj->addItem( PQWIDGET(1), HB_ISOBJECT(2) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(2) ) : QIcon( hb_parc(2) ), PQSTRING(3) ) );
+      RINT( obj->addItem( PQWIDGET(1), HB_ISOBJECT(2) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(2) ) : QIcon( hb_parc(2) ), PQSTRING(3)) );
     }
   }
   else if( ISNUMPAR(2) && ISQWIDGET(1) && HB_ISCHAR(2) )
@@ -119,7 +119,7 @@ HB_FUNC_STATIC( QTOOLBOX_ADDITEM )
 
     if( obj != NULL )
     {
-      RINT( obj->addItem( PQWIDGET(1), PQSTRING(2) ) );
+      RINT( obj->addItem( PQWIDGET(1), PQSTRING(2)) );
     }
   }
   else
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QTOOLBOX_INDEXOF )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      RINT( obj->indexOf( PQWIDGET(1) ) );
+      RINT( obj->indexOf( PQWIDGET(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,7 +227,7 @@ HB_FUNC_STATIC( QTOOLBOX_INDEXOF )
 
 HB_FUNC_STATIC( QTOOLBOX_INSERTITEM )
 {
-  if( ISNUMPAR(4) && HB_ISNUM(1) && ISQWIDGET(2) && ( ISQICON(3) || HB_ISCHAR(3) ) && HB_ISCHAR(4) )
+  if( ISNUMPAR(4) && HB_ISNUM(1) && ISQWIDGET(2) && (ISQICON(3) || HB_ISCHAR(3)) && HB_ISCHAR(4) )
   {
     /*
     int insertItem( int index, QWidget * widget, const QIcon & icon, const QString & text )
@@ -236,7 +236,7 @@ HB_FUNC_STATIC( QTOOLBOX_INSERTITEM )
 
     if( obj != NULL )
     {
-      RINT( obj->insertItem( PINT(1), PQWIDGET(2), HB_ISOBJECT(3) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(3) ) : QIcon( hb_parc(3) ), PQSTRING(4) ) );
+      RINT( obj->insertItem( PINT(1), PQWIDGET(2), HB_ISOBJECT(3) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(3) ) : QIcon( hb_parc(3) ), PQSTRING(4)) );
     }
   }
   else if( ISNUMPAR(3) && HB_ISNUM(1) && ISQWIDGET(2) && HB_ISCHAR(3) )
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QTOOLBOX_INSERTITEM )
 
     if( obj != NULL )
     {
-      RINT( obj->insertItem( PINT(1), PQWIDGET(2), PQSTRING(3) ) );
+      RINT( obj->insertItem( PINT(1), PQWIDGET(2), PQSTRING(3)) );
     }
   }
   else
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QTOOLBOX_ISITEMENABLED )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isItemEnabled( PINT(1) ) );
+      RBOOL( obj->isItemEnabled( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -294,7 +294,7 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMICON )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->itemIcon( PINT(1) ) );
+      QIcon * ptr = new QIcon( obj->itemIcon( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMTEXT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->itemText( PINT(1) ) );
+      RQSTRING( obj->itemText( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -343,7 +343,7 @@ HB_FUNC_STATIC( QTOOLBOX_ITEMTOOLTIP )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->itemToolTip( PINT(1) ) );
+      RQSTRING( obj->itemToolTip( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -416,10 +416,10 @@ HB_FUNC_STATIC( QTOOLBOX_SETITEMICON )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ( ISQICON( 2) || HB_ISCHAR(2) ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON( 2) || HB_ISCHAR(2)) )
     {
 #endif
-      obj->setItemIcon( PINT(1), HB_ISOBJECT(2) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(2) ) : QIcon( hb_parc(2) ) );
+      obj->setItemIcon( PINT(1), HB_ISOBJECT(2) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(2) ) : QIcon( hb_parc(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

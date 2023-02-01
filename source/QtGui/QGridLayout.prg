@@ -131,7 +131,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDITEM )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3, 6) && ISQLAYOUTITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ( HB_ISNUM(4) || HB_ISNIL(4) ) && ( HB_ISNUM(5) || HB_ISNIL(5) ) && ( HB_ISNUM(6) || HB_ISNIL(6) ) )
+    if( ISBETWEEN(3, 6) && ISQLAYOUTITEM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)) && (HB_ISNUM(6) || HB_ISNIL(6)) )
     {
 #endif
       obj->addItem( PQLAYOUTITEM(1), PINT(2), PINT(3), OPINT( 4, 1 ), OPINT( 5, 1 ), HB_ISNIL(6) ? ( Qt::Alignment ) 0 : ( Qt::Alignment ) hb_parni(6) );
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDITEM )
 
 HB_FUNC_STATIC( QGRIDLAYOUT_ADDLAYOUT )
 {
-  if( ISBETWEEN(3, 4) && ISQLAYOUT(1) && HB_ISNUM(2) && HB_ISNUM(3) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
+  if( ISBETWEEN(3, 4) && ISQLAYOUT(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)) )
   {
     /*
     void addLayout( QLayout * layout, int row, int column, Qt::Alignment alignment = 0 )
@@ -163,7 +163,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDLAYOUT )
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISBETWEEN(5, 6) && ISQLAYOUT(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && ( HB_ISNUM(6) || HB_ISNIL(6) ) )
+  else if( ISBETWEEN(5, 6) && ISQLAYOUT(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && (HB_ISNUM(6) || HB_ISNIL(6)) )
   {
     /*
     void addLayout( QLayout * layout, int row, int column, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
@@ -185,7 +185,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDLAYOUT )
 
 HB_FUNC_STATIC( QGRIDLAYOUT_ADDWIDGET )
 {
-  if( ISBETWEEN(3, 4) && ISQWIDGET(1) && HB_ISNUM(2) && HB_ISNUM(3) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
+  if( ISBETWEEN(3, 4) && ISQWIDGET(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)) )
   {
     /*
     void addWidget( QWidget * widget, int row, int column, Qt::Alignment alignment = 0 )
@@ -199,7 +199,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ADDWIDGET )
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISBETWEEN(5, 6) && ISQWIDGET(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && ( HB_ISNUM(6) || HB_ISNIL(6) ) )
+  else if( ISBETWEEN(5, 6) && ISQWIDGET(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && (HB_ISNUM(6) || HB_ISNIL(6)) )
   {
     /*
     void addWidget( QWidget * widget, int fromRow, int fromColumn, int rowSpan, int columnSpan, Qt::Alignment alignment = 0 )
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_CELLRECT )
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
     {
 #endif
-      QRect * ptr = new QRect( obj->cellRect( PINT(1), PINT(2) ) );
+      QRect * ptr = new QRect( obj->cellRect( PINT(1), PINT(2)) );
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -281,7 +281,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNMINIMUMWIDTH )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->columnMinimumWidth( PINT(1) ) );
+      RINT( obj->columnMinimumWidth( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_COLUMNSTRETCH )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->columnStretch( PINT(1) ) );
+      RINT( obj->columnStretch( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ROWMINIMUMHEIGHT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->rowMinimumHeight( PINT(1) ) );
+      RINT( obj->rowMinimumHeight( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_ROWSTRETCH )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->rowStretch( PINT(1) ) );
+      RINT( obj->rowStretch( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -836,7 +836,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_HEIGHTFORWIDTH )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->heightForWidth( PINT(1) ) );
+      RINT( obj->heightForWidth( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -936,7 +936,7 @@ HB_FUNC_STATIC( QGRIDLAYOUT_MINIMUMHEIGHTFORWIDTH )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->minimumHeightForWidth( PINT(1) ) );
+      RINT( obj->minimumHeightForWidth( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

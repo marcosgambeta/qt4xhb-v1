@@ -67,7 +67,7 @@ QMenuBar( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QMENUBAR_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
   {
     QMenuBar * obj = new QMenuBar( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QMENUBAR_ADDMENU )
       Qt4xHb::createReturnQObjectClass(ptr, "QMENU");
     }
   }
-  else if( ISNUMPAR(2) && ( ISQICON(1) || HB_ISCHAR(1) ) && HB_ISCHAR(2) )
+  else if( ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) )
   {
     /*
     QMenu * addMenu( const QIcon & icon, const QString & title )
@@ -456,7 +456,7 @@ HB_FUNC_STATIC( QMENUBAR_HEIGHTFORWIDTH )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->heightForWidth( PINT(1) ) );
+      RINT( obj->heightForWidth( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

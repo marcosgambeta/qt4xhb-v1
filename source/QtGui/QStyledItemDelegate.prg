@@ -57,7 +57,7 @@ QStyledItemDelegate( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
   {
     QStyledItemDelegate * obj = new QStyledItemDelegate( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_DISPLAYTEXT )
     if( ISNUMPAR(2) && ISQVARIANT(1) && ISQLOCALE(2) )
     {
 #endif
-      RQSTRING( obj->displayText( *PQVARIANT(1), *PQLOCALE(2) ) );
+      RQSTRING( obj->displayText( *PQVARIANT(1), *PQLOCALE(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QSTYLEDITEMDELEGATE_SIZEHINT )
     if( ISNUMPAR(2) && ISQSTYLEOPTIONVIEWITEM(1) && ISQMODELINDEX(2) )
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint( *PQSTYLEOPTIONVIEWITEM(1), *PQMODELINDEX(2) ) );
+      QSize * ptr = new QSize( obj->sizeHint( *PQSTYLEOPTIONVIEWITEM(1), *PQMODELINDEX(2)) );
       Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

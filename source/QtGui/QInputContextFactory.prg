@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_DESCRIPTION )
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
 #endif
-    RQSTRING( QInputContextFactory::description( PQSTRING(1) ) );
+    RQSTRING( QInputContextFactory::description( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -123,7 +123,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_DISPLAYNAME )
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
 #endif
-    RQSTRING( QInputContextFactory::displayName( PQSTRING(1) ) );
+    RQSTRING( QInputContextFactory::displayName( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_LANGUAGES )
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
 #endif
-    RQSTRINGLIST( QInputContextFactory::languages( PQSTRING(1) ) );
+    RQSTRINGLIST( QInputContextFactory::languages( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

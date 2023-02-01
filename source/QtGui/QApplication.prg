@@ -387,7 +387,7 @@ HB_FUNC_STATIC( QAPPLICATION_NOTIFY )
     if( ISNUMPAR(2) && ISQOBJECT(1) && ISQEVENT(2) )
     {
 #endif
-      RBOOL( obj->notify( PQOBJECT(1), PQEVENT(2) ) );
+      RBOOL( obj->notify( PQOBJECT(1), PQEVENT(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -542,7 +542,7 @@ static void alert( QWidget * widget, int msec = 0 )
 HB_FUNC_STATIC( QAPPLICATION_ALERT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1, 2) && ISQWIDGET(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(1, 2) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
   {
 #endif
     QApplication::alert( PQWIDGET(1), OPINT( 2, 0 ) );
@@ -567,27 +567,27 @@ HB_FUNC_STATIC( QAPPLICATION_ALLWIDGETS )
   {
 #endif
     QWidgetList list = QApplication::allWidgets();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET");
+    PHB_DYNS pDynSym = hb_dynsymFindName("QWIDGET");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != NULL )
     {
       for( int i = 0; i < list.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
+        PHB_ITEM pObject = hb_itemNew(NULL);
+        hb_itemCopy(pObject, hb_stackReturnItem());
         PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+        hb_itemRelease(pItem);
+        hb_arrayAddForward(pArray, pObject);
+        hb_itemRelease(pObject);
       }
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QWIDGET", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QWIDGET", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -813,7 +813,7 @@ HB_FUNC_STATIC( QAPPLICATION_FONT )
     static QFont font( const QWidget * widget )
     */
 
-    QFont * ptr = new QFont( QApplication::font( PQWIDGET(1) ) );
+    QFont * ptr = new QFont( QApplication::font( PQWIDGET(1)) );
     Qt4xHb::createReturnClass(ptr, "QFONT", true);
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -822,7 +822,7 @@ HB_FUNC_STATIC( QAPPLICATION_FONT )
     static QFont font( const char * className )
     */
 
-    QFont * ptr = new QFont( QApplication::font( PCONSTCHAR(1) ) );
+    QFont * ptr = new QFont( QApplication::font( PCONSTCHAR(1)) );
     Qt4xHb::createReturnClass(ptr, "QFONT", true);
   }
   else
@@ -880,7 +880,7 @@ HB_FUNC_STATIC( QAPPLICATION_ISEFFECTENABLED )
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
-    RBOOL( QApplication::isEffectEnabled( ( Qt::UIEffect ) hb_parni(1) ) );
+    RBOOL( QApplication::isEffectEnabled( ( Qt::UIEffect ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1080,7 +1080,7 @@ HB_FUNC_STATIC( QAPPLICATION_PALETTE )
     static QPalette palette( const QWidget * widget )
     */
 
-    QPalette * ptr = new QPalette( QApplication::palette( PQWIDGET(1) ) );
+    QPalette * ptr = new QPalette( QApplication::palette( PQWIDGET(1)) );
     Qt4xHb::createReturnClass(ptr, "QPALETTE", true);
   }
   else if( ISNUMPAR(1) && HB_ISCHAR(1) )
@@ -1089,7 +1089,7 @@ HB_FUNC_STATIC( QAPPLICATION_PALETTE )
     static QPalette palette( const char * className )
     */
 
-    QPalette * ptr = new QPalette( QApplication::palette( PCONSTCHAR(1) ) );
+    QPalette * ptr = new QPalette( QApplication::palette( PCONSTCHAR(1)) );
     Qt4xHb::createReturnClass(ptr, "QPALETTE", true);
   }
   else
@@ -1268,7 +1268,7 @@ static void setEffectEnabled( Qt::UIEffect effect, bool enable = true )
 HB_FUNC_STATIC( QAPPLICATION_SETEFFECTENABLED )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)) )
   {
 #endif
     QApplication::setEffectEnabled( ( Qt::UIEffect ) hb_parni(1), OPBOOL( 2, true ) );
@@ -1289,7 +1289,7 @@ static void setFont( const QFont & font, const char * className = 0 )
 HB_FUNC_STATIC( QAPPLICATION_SETFONT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1, 2) && ISQFONT(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(1, 2) && ISQFONT(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
   {
 #endif
     QApplication::setFont( *PQFONT(1), OPCONSTCHAR( 2, 0 ) );
@@ -1415,7 +1415,7 @@ static void setPalette( const QPalette & palette, const char * className = 0 )
 HB_FUNC_STATIC( QAPPLICATION_SETPALETTE )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(1, 2) && ISQPALETTE(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(1, 2) && ISQPALETTE(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
   {
 #endif
     QApplication::setPalette( *PQPALETTE(1), OPCONSTCHAR( 2, 0 ) );
@@ -1547,10 +1547,10 @@ static void setWindowIcon( const QIcon & icon )
 HB_FUNC_STATIC( QAPPLICATION_SETWINDOWICON )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ( ISQICON( 1) || HB_ISCHAR(1) ) )
+  if( ISNUMPAR(1) && (ISQICON( 1) || HB_ISCHAR(1)) )
   {
 #endif
-    QApplication::setWindowIcon( HB_ISOBJECT(1) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(1) ) : QIcon( hb_parc(1) ) );
+    QApplication::setWindowIcon( HB_ISOBJECT(1) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(1) ) : QIcon( hb_parc(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1677,27 +1677,27 @@ HB_FUNC_STATIC( QAPPLICATION_TOPLEVELWIDGETS )
   {
 #endif
     QWidgetList list = QApplication::topLevelWidgets();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QWIDGET");
+    PHB_DYNS pDynSym = hb_dynsymFindName("QWIDGET");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != NULL )
     {
       for( int i = 0; i < list.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
+        PHB_ITEM pObject = hb_itemNew(NULL);
+        hb_itemCopy(pObject, hb_stackReturnItem());
         PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+        hb_itemRelease(pItem);
+        hb_arrayAddForward(pArray, pObject);
+        hb_itemRelease(pObject);
       }
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QWIDGET", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QWIDGET", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

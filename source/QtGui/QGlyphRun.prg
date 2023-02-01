@@ -147,7 +147,7 @@ HB_FUNC_STATIC( QGLYPHRUN_GLYPHINDEXES )
       {
         PHB_ITEM pItem = hb_itemPutNI( NULL, (quint32) list[i] );
         hb_arrayAddForward( pArray, pItem );
-        hb_itemRelease( pItem );
+        hb_itemRelease(pItem);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -198,30 +198,30 @@ HB_FUNC_STATIC( QGLYPHRUN_POSITIONS )
     {
 #endif
       QVector<QPointF> list = obj->positions();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QPOINTF");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QPOINTF");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QPointF( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QPointF(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QPOINTF", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QPOINTF", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -273,8 +273,8 @@ HB_FUNC_STATIC( QGLYPHRUN_SETGLYPHINDEXES )
     {
 #endif
       QVector<quint32> par1;
-      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
-      int nLen1 = hb_arrayLen( aList1 );
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      const int nLen1 = hb_arrayLen(aList1);
       quint32 temp1;
       for( int i1 = 0; i1 < nLen1; i1++ )
       {
@@ -334,11 +334,11 @@ HB_FUNC_STATIC( QGLYPHRUN_SETPOSITIONS )
     {
 #endif
       QVector<QPointF> par1;
-      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
-      int nLen1 = hb_arrayLen( aList1 );
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      const int nLen1 = hb_arrayLen(aList1);
       for( int i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << *static_cast<QPointF*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+        par1 << *static_cast<QPointF*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
       obj->setPositions( par1 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

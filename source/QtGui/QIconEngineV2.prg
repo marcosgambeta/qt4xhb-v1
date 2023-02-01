@@ -71,34 +71,34 @@ HB_FUNC_STATIC( QICONENGINEV2_AVAILABLESIZES )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 2) && ( HB_ISNUM(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(0, 2) && (HB_ISNUM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
       QList<QSize> list = obj->availableSizes( HB_ISNIL(1) ? ( QIcon::Mode ) QIcon::Normal : ( QIcon::Mode ) hb_parni(1), HB_ISNIL(2) ? ( QIcon::State ) QIcon::Off : ( QIcon::State ) hb_parni(2) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QSIZE");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QSIZE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QSize( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QSize(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSIZE", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QSIZE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -197,7 +197,7 @@ HB_FUNC_STATIC( QICONENGINEV2_READ )
     if( ISNUMPAR(1) && ISQDATASTREAM(1) )
     {
 #endif
-      RBOOL( obj->read( *PQDATASTREAM(1) ) );
+      RBOOL( obj->read( *PQDATASTREAM(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QICONENGINEV2_VIRTUAL_HOOK )
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISPOINTER(2) )
     {
 #endif
-      obj->virtual_hook( PINT(1), static_cast<void*>( hb_parptr(2) ) );
+      obj->virtual_hook( PINT(1), static_cast<void*>( hb_parptr(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,7 +247,7 @@ HB_FUNC_STATIC( QICONENGINEV2_WRITE )
     if( ISNUMPAR(1) && ISQDATASTREAM(1) )
     {
 #endif
-      RBOOL( obj->write( *PQDATASTREAM(1) ) );
+      RBOOL( obj->write( *PQDATASTREAM(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

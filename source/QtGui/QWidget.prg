@@ -335,7 +335,7 @@ QWidget( QWidget * parent = 0, Qt::WindowFlags f = 0 )
 */
 HB_FUNC_STATIC( QWIDGET_NEW )
 {
-  if( ISBETWEEN(0, 2) && ( ISQWIDGET(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)) )
   {
     QWidget * obj = new QWidget( OPQWIDGET( 1, 0 ), HB_ISNIL(2) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(2) );
     Qt4xHb::returnNewObject(obj, false);
@@ -450,27 +450,27 @@ HB_FUNC_STATIC( QWIDGET_ACTIONS )
     {
 #endif
       QList<QAction *> list = obj->actions();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QACTION");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QACTION");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
           PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QACTION", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QACTION", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -549,11 +549,11 @@ HB_FUNC_STATIC( QWIDGET_ADDACTIONS )
     {
 #endif
       QList<QAction *> par1;
-      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
-      int nLen1 = hb_arrayLen( aList1 );
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      const int nLen1 = hb_arrayLen(aList1);
       for( int i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << static_cast<QAction*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+        par1 << static_cast<QAction*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
       obj->addActions( par1 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -916,7 +916,7 @@ HB_FUNC_STATIC( QWIDGET_EFFECTIVEWINID )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retptr( static_cast<void*>( obj->effectiveWinId() ) );
+      hb_retptr( static_cast<void*>( obj->effectiveWinId()) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1245,7 +1245,7 @@ HB_FUNC_STATIC( QWIDGET_GRABGESTURE )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->grabGesture( ( Qt::GestureType ) hb_parni(1), HB_ISNIL(2) ? ( Qt::GestureFlags ) Qt::GestureFlags() : ( Qt::GestureFlags ) hb_parni(2) );
@@ -1333,10 +1333,10 @@ HB_FUNC_STATIC( QWIDGET_GRABSHORTCUT )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQKEYSEQUENCE(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && ISQKEYSEQUENCE(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
-      RINT( obj->grabShortcut( *PQKEYSEQUENCE(1), HB_ISNIL(2) ? ( Qt::ShortcutContext ) Qt::WindowShortcut : ( Qt::ShortcutContext ) hb_parni(2) ) );
+      RINT( obj->grabShortcut( *PQKEYSEQUENCE(1), HB_ISNIL(2) ? ( Qt::ShortcutContext ) Qt::WindowShortcut : ( Qt::ShortcutContext ) hb_parni(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1482,7 +1482,7 @@ HB_FUNC_STATIC( QWIDGET_HEIGHTFORWIDTH )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->heightForWidth( PINT(1) ) );
+      RINT( obj->heightForWidth( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1555,7 +1555,7 @@ HB_FUNC_STATIC( QWIDGET_INPUTMETHODQUERY )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->inputMethodQuery( ( Qt::InputMethodQuery ) hb_parni(1) ) );
+      QVariant * ptr = new QVariant( obj->inputMethodQuery( ( Qt::InputMethodQuery ) hb_parni(1)) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1611,7 +1611,7 @@ HB_FUNC_STATIC( QWIDGET_INSERTACTIONS )
       int nLen2 = hb_arrayLen( aList2 );
       for( int i2 = 0; i2 < nLen2; i2++ )
       {
-        par2 << static_cast<QAction*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
+        par2 << static_cast<QAction*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 )) );
       }
       obj->insertActions( PQACTION(1), par2 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1663,7 +1663,7 @@ HB_FUNC_STATIC( QWIDGET_ISANCESTOROF )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      RBOOL( obj->isAncestorOf( PQWIDGET(1) ) );
+      RBOOL( obj->isAncestorOf( PQWIDGET(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1711,7 +1711,7 @@ HB_FUNC_STATIC( QWIDGET_ISENABLEDTO )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      RBOOL( obj->isEnabledTo( PQWIDGET(1) ) );
+      RBOOL( obj->isEnabledTo( PQWIDGET(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1879,7 +1879,7 @@ HB_FUNC_STATIC( QWIDGET_ISVISIBLETO )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      RBOOL( obj->isVisibleTo( PQWIDGET(1) ) );
+      RBOOL( obj->isVisibleTo( PQWIDGET(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2025,7 +2025,7 @@ HB_FUNC_STATIC( QWIDGET_MAPFROM )
     if( ISNUMPAR(2) && ISQWIDGET(1) && ISQPOINT(2) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->mapFrom( PQWIDGET(1), *PQPOINT(2) ) );
+      QPoint * ptr = new QPoint( obj->mapFrom( PQWIDGET(1), *PQPOINT(2)) );
       Qt4xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -2050,7 +2050,7 @@ HB_FUNC_STATIC( QWIDGET_MAPFROMGLOBAL )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->mapFromGlobal( *PQPOINT(1) ) );
+      QPoint * ptr = new QPoint( obj->mapFromGlobal( *PQPOINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -2075,7 +2075,7 @@ HB_FUNC_STATIC( QWIDGET_MAPFROMPARENT )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->mapFromParent( *PQPOINT(1) ) );
+      QPoint * ptr = new QPoint( obj->mapFromParent( *PQPOINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -2100,7 +2100,7 @@ HB_FUNC_STATIC( QWIDGET_MAPTO )
     if( ISNUMPAR(2) && ISQWIDGET(1) && ISQPOINT(2) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->mapTo( PQWIDGET(1), *PQPOINT(2) ) );
+      QPoint * ptr = new QPoint( obj->mapTo( PQWIDGET(1), *PQPOINT(2)) );
       Qt4xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -2125,7 +2125,7 @@ HB_FUNC_STATIC( QWIDGET_MAPTOGLOBAL )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->mapToGlobal( *PQPOINT(1) ) );
+      QPoint * ptr = new QPoint( obj->mapToGlobal( *PQPOINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -2150,7 +2150,7 @@ HB_FUNC_STATIC( QWIDGET_MAPTOPARENT )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->mapToParent( *PQPOINT(1) ) );
+      QPoint * ptr = new QPoint( obj->mapToParent( *PQPOINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -2726,7 +2726,7 @@ HB_FUNC_STATIC( QWIDGET_REMOVEACTION )
 
 HB_FUNC_STATIC( QWIDGET_RENDER )
 {
-  if( ISBETWEEN(1, 4) && ISQPAINTDEVICE(1) && ( ISQPOINT(2) || HB_ISNIL(2) ) && ( ISQREGION(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
+  if( ISBETWEEN(1, 4) && ISQPAINTDEVICE(1) && (ISQPOINT(2) || HB_ISNIL(2)) && (ISQREGION(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)) )
   {
     /*
     void render( QPaintDevice * target, const QPoint & targetOffset = QPoint(), const QRegion & sourceRegion = QRegion(), QWidget::RenderFlags renderFlags = QWidget::RenderFlags( QWidget::DrawWindowBackground | QWidget::DrawChildren ) )
@@ -2740,7 +2740,7 @@ HB_FUNC_STATIC( QWIDGET_RENDER )
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISBETWEEN(1, 4) && ISQPAINTER(1) && ( ISQPOINT(2) || HB_ISNIL(2) ) && ( ISQREGION(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
+  else if( ISBETWEEN(1, 4) && ISQPAINTER(1) && (ISQPOINT(2) || HB_ISNIL(2)) && (ISQREGION(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)) )
   {
     /*
     void render( QPainter * painter, const QPoint & targetOffset = QPoint(), const QRegion & sourceRegion = QRegion(), QWidget::RenderFlags renderFlags = QWidget::RenderFlags( QWidget::DrawWindowBackground | QWidget::DrawChildren ) )
@@ -2859,7 +2859,7 @@ HB_FUNC_STATIC( QWIDGET_RESTOREGEOMETRY )
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      RBOOL( obj->restoreGeometry( *PQBYTEARRAY(1) ) );
+      RBOOL( obj->restoreGeometry( *PQBYTEARRAY(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -3019,7 +3019,7 @@ HB_FUNC_STATIC( QWIDGET_SETATTRIBUTE )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->setAttribute( ( Qt::WidgetAttribute ) hb_parni(1), OPBOOL( 2, true ) );
@@ -3941,7 +3941,7 @@ HB_FUNC_STATIC( QWIDGET_SETSHORTCUTAUTOREPEAT )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->setShortcutAutoRepeat( PINT(1), OPBOOL( 2, true ) );
@@ -3967,7 +3967,7 @@ HB_FUNC_STATIC( QWIDGET_SETSHORTCUTENABLED )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->setShortcutEnabled( PINT(1), OPBOOL( 2, true ) );
@@ -4247,10 +4247,10 @@ HB_FUNC_STATIC( QWIDGET_SETWINDOWICON )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( ISQICON( 1) || HB_ISCHAR(1) ) )
+    if( ISNUMPAR(1) && (ISQICON( 1) || HB_ISCHAR(1)) )
     {
 #endif
-      obj->setWindowIcon( HB_ISOBJECT(1) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(1) ) : QIcon( hb_parc(1) ) );
+      obj->setWindowIcon( HB_ISOBJECT(1) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(1) ) : QIcon( hb_parc(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -4605,7 +4605,7 @@ HB_FUNC_STATIC( QWIDGET_TESTATTRIBUTE )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->testAttribute( ( Qt::WidgetAttribute ) hb_parni(1) ) );
+      RBOOL( obj->testAttribute( ( Qt::WidgetAttribute ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -4969,7 +4969,7 @@ HB_FUNC_STATIC( QWIDGET_WINID )
     if( ISNUMPAR(0) )
     {
 #endif
-      hb_retptr( static_cast<void*>( obj->winId() ) );
+      hb_retptr( static_cast<void*>( obj->winId()) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

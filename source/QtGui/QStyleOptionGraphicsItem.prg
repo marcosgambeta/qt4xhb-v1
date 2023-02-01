@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAILFROMTRANSFORM )
   if( ISNUMPAR(1) && ISQTRANSFORM(1) )
   {
 #endif
-    RQREAL( QStyleOptionGraphicsItem::levelOfDetailFromTransform( *PQTRANSFORM(1) ) );
+    RQREAL( QStyleOptionGraphicsItem::levelOfDetailFromTransform( *PQTRANSFORM(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

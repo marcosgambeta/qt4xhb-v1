@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QIMAGE_NEW )
     QImage * obj = new QImage( PCONSTUCHAR(1), PINT(2), PINT(3), PINT(4), ( QImage::Format ) hb_parni(5) );
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
   {
     /*
     QImage( const QString & fileName, const char * format = 0 )
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QIMAGE_NEW )
     QImage * obj = new QImage( PQSTRING(1), OPCONSTCHAR( 2, 0 ) );
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
   {
     /*
     QImage( const char * fileName, const char * format = 0 )
@@ -337,7 +337,7 @@ HB_FUNC_STATIC( QIMAGE_COLOR )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQRGB( obj->color( PINT(1) ) );
+      RQRGB( obj->color( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -391,7 +391,7 @@ HB_FUNC_STATIC( QIMAGE_COLORTABLE )
       {
         PHB_ITEM pItem = hb_itemPutNI( NULL, (QRgb) list[i] );
         hb_arrayAddForward( pArray, pItem );
-        hb_itemRelease( pItem );
+        hb_itemRelease(pItem);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -406,7 +406,7 @@ HB_FUNC_STATIC( QIMAGE_COLORTABLE )
 
 HB_FUNC_STATIC( QIMAGE_CONVERTTOFORMAT )
 {
-  if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
   {
     /*
     QImage convertToFormat( QImage::Format format, Qt::ImageConversionFlags flags = Qt::AutoColor ) const
@@ -415,11 +415,11 @@ HB_FUNC_STATIC( QIMAGE_CONVERTTOFORMAT )
 
     if( obj != NULL )
     {
-      QImage * ptr = new QImage( obj->convertToFormat( ( QImage::Format ) hb_parni(1), HB_ISNIL(2) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni(2) ) );
+      QImage * ptr = new QImage( obj->convertToFormat( ( QImage::Format ) hb_parni(1), HB_ISNIL(2) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni(2)) );
       Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
     }
   }
-  else if( ISBETWEEN(1, 3) && HB_ISNUM(1) && HB_ISARRAY(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+  else if( ISBETWEEN(1, 3) && HB_ISNUM(1) && HB_ISARRAY(2) && (HB_ISNUM(3) || HB_ISNIL(3)) )
   {
     /*
     QImage convertToFormat( QImage::Format format, const QVector<QRgb> & colorTable, Qt::ImageConversionFlags flags = Qt::AutoColor ) const
@@ -437,7 +437,7 @@ HB_FUNC_STATIC( QIMAGE_CONVERTTOFORMAT )
         temp2 = (QRgb) hb_arrayGetNI(aList2, i2+1);
         par2 << temp2;
       }
-      QImage * ptr = new QImage( obj->convertToFormat( ( QImage::Format ) hb_parni(1), par2, HB_ISNIL(3) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni(3) ) );
+      QImage * ptr = new QImage( obj->convertToFormat( ( QImage::Format ) hb_parni(1), par2, HB_ISNIL(3) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni(3)) );
       Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
     }
   }
@@ -449,7 +449,7 @@ HB_FUNC_STATIC( QIMAGE_CONVERTTOFORMAT )
 
 HB_FUNC_STATIC( QIMAGE_COPY )
 {
-  if( ISBETWEEN(0, 1) && ( ISQRECT(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQRECT(1) || HB_ISNIL(1)) )
   {
     /*
     QImage copy( const QRect & rectangle = QRect() ) const
@@ -458,7 +458,7 @@ HB_FUNC_STATIC( QIMAGE_COPY )
 
     if( obj != NULL )
     {
-      QImage * ptr = new QImage( obj->copy( HB_ISNIL(1) ? QRect() : *static_cast<QRect*>( Qt4xHb::itemGetPtr(1) ) ) );
+      QImage * ptr = new QImage( obj->copy( HB_ISNIL(1) ? QRect() : *static_cast<QRect*>( Qt4xHb::itemGetPtr(1)) ) );
       Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
     }
   }
@@ -471,7 +471,7 @@ HB_FUNC_STATIC( QIMAGE_COPY )
 
     if( obj != NULL )
     {
-      QImage * ptr = new QImage( obj->copy( PINT(1), PINT(2), PINT(3), PINT(4) ) );
+      QImage * ptr = new QImage( obj->copy( PINT(1), PINT(2), PINT(3), PINT(4)) );
       Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
     }
   }
@@ -491,10 +491,10 @@ HB_FUNC_STATIC( QIMAGE_CREATEALPHAMASK )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
     {
 #endif
-      QImage * ptr = new QImage( obj->createAlphaMask( HB_ISNIL(1) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni(1) ) );
+      QImage * ptr = new QImage( obj->createAlphaMask( HB_ISNIL(1) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni(1)) );
       Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -516,10 +516,10 @@ HB_FUNC_STATIC( QIMAGE_CREATEHEURISTICMASK )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISLOG(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)) )
     {
 #endif
-      QImage * ptr = new QImage( obj->createHeuristicMask( OPBOOL( 1, true ) ) );
+      QImage * ptr = new QImage( obj->createHeuristicMask( OPBOOL( 1, true )) );
       Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -541,10 +541,10 @@ HB_FUNC_STATIC( QIMAGE_CREATEMASKFROMCOLOR )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
-      QImage * ptr = new QImage( obj->createMaskFromColor( PQRGB(1), HB_ISNIL(2) ? ( Qt::MaskMode ) Qt::MaskInColor : ( Qt::MaskMode ) hb_parni(2) ) );
+      QImage * ptr = new QImage( obj->createMaskFromColor( PQRGB(1), HB_ISNIL(2) ? ( Qt::MaskMode ) Qt::MaskInColor : ( Qt::MaskMode ) hb_parni(2)) );
       Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -658,7 +658,7 @@ HB_FUNC_STATIC( QIMAGE_FILL )
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR(1) && ( ISQCOLOR(1) || HB_ISCHAR(1) ) )
+  else if( ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)) )
   {
     /*
     void fill( const QColor & color )
@@ -667,7 +667,7 @@ HB_FUNC_STATIC( QIMAGE_FILL )
 
     if( obj != NULL )
     {
-      obj->fill( HB_ISOBJECT(1) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(1) ) : QColor( hb_parc(1) ) );
+      obj->fill( HB_ISOBJECT(1) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(1) ) : QColor( hb_parc(1)) );
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -760,7 +760,7 @@ HB_FUNC_STATIC( QIMAGE_INVERTPIXELS )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
     {
 #endif
       obj->invertPixels( HB_ISNIL(1) ? ( QImage::InvertMode ) QImage::InvertRgb : ( QImage::InvertMode ) hb_parni(1) );
@@ -826,7 +826,7 @@ HB_FUNC_STATIC( QIMAGE_ISNULL )
 
 HB_FUNC_STATIC( QIMAGE_LOAD )
 {
-  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
   {
     /*
     bool load( const QString & fileName, const char * format = 0 )
@@ -835,7 +835,7 @@ HB_FUNC_STATIC( QIMAGE_LOAD )
 
     if( obj != NULL )
     {
-      RBOOL( obj->load( PQSTRING(1), OPCONSTCHAR( 2, 0 ) ) );
+      RBOOL( obj->load( PQSTRING(1), OPCONSTCHAR( 2, 0 )) );
     }
   }
   else if( ISNUMPAR(2) && ISQIODEVICE(1) && HB_ISCHAR(2) )
@@ -847,7 +847,7 @@ HB_FUNC_STATIC( QIMAGE_LOAD )
 
     if( obj != NULL )
     {
-      RBOOL( obj->load( PQIODEVICE(1), PCONSTCHAR(2) ) );
+      RBOOL( obj->load( PQIODEVICE(1), PCONSTCHAR(2)) );
     }
   }
   else
@@ -858,7 +858,7 @@ HB_FUNC_STATIC( QIMAGE_LOAD )
 
 HB_FUNC_STATIC( QIMAGE_LOADFROMDATA )
 {
-  if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ( HB_ISCHAR(3) || HB_ISNIL(3) ) )
+  if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) )
   {
     /*
     bool loadFromData( const uchar * data, int len, const char * format = 0 )
@@ -867,10 +867,10 @@ HB_FUNC_STATIC( QIMAGE_LOADFROMDATA )
 
     if( obj != NULL )
     {
-      RBOOL( obj->loadFromData( PCONSTUCHAR(1), PINT(2), OPCONSTCHAR( 3, 0 ) ) );
+      RBOOL( obj->loadFromData( PCONSTUCHAR(1), PINT(2), OPCONSTCHAR( 3, 0 )) );
     }
   }
-  else if( ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
   {
     /*
     bool loadFromData( const QByteArray & data, const char * format = 0 )
@@ -879,7 +879,7 @@ HB_FUNC_STATIC( QIMAGE_LOADFROMDATA )
 
     if( obj != NULL )
     {
-      RBOOL( obj->loadFromData( *PQBYTEARRAY(1), OPCONSTCHAR( 2, 0 ) ) );
+      RBOOL( obj->loadFromData( *PQBYTEARRAY(1), OPCONSTCHAR( 2, 0 )) );
     }
   }
   else
@@ -898,10 +898,10 @@ HB_FUNC_STATIC( QIMAGE_MIRRORED )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 2) && ( HB_ISLOG(1) || HB_ISNIL(1) ) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(0, 2) && (HB_ISLOG(1) || HB_ISNIL(1)) && (HB_ISLOG(2) || HB_ISNIL(2)) )
     {
 #endif
-      QImage * ptr = new QImage( obj->mirrored( OPBOOL( 1, false ), OPBOOL( 2, true ) ) );
+      QImage * ptr = new QImage( obj->mirrored( OPBOOL( 1, false ), OPBOOL( 2, true )) );
       Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -949,7 +949,7 @@ HB_FUNC_STATIC( QIMAGE_PIXEL )
 
     if( obj != NULL )
     {
-      RQRGB( obj->pixel( *PQPOINT(1) ) );
+      RQRGB( obj->pixel( *PQPOINT(1)) );
     }
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -961,7 +961,7 @@ HB_FUNC_STATIC( QIMAGE_PIXEL )
 
     if( obj != NULL )
     {
-      RQRGB( obj->pixel( PINT(1), PINT(2) ) );
+      RQRGB( obj->pixel( PINT(1), PINT(2)) );
     }
   }
   else
@@ -981,7 +981,7 @@ HB_FUNC_STATIC( QIMAGE_PIXELINDEX )
 
     if( obj != NULL )
     {
-      RINT( obj->pixelIndex( *PQPOINT(1) ) );
+      RINT( obj->pixelIndex( *PQPOINT(1)) );
     }
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -993,7 +993,7 @@ HB_FUNC_STATIC( QIMAGE_PIXELINDEX )
 
     if( obj != NULL )
     {
-      RINT( obj->pixelIndex( PINT(1), PINT(2) ) );
+      RINT( obj->pixelIndex( PINT(1), PINT(2)) );
     }
   }
   else
@@ -1054,7 +1054,7 @@ HB_FUNC_STATIC( QIMAGE_RGBSWAPPED )
 
 HB_FUNC_STATIC( QIMAGE_SAVE )
 {
-  if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+  if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) )
   {
     /*
     bool save( const QString & fileName, const char * format = 0, int quality = -1 ) const
@@ -1063,10 +1063,10 @@ HB_FUNC_STATIC( QIMAGE_SAVE )
 
     if( obj != NULL )
     {
-      RBOOL( obj->save( PQSTRING(1), OPCONSTCHAR( 2, 0 ), OPINT( 3, -1 ) ) );
+      RBOOL( obj->save( PQSTRING(1), OPCONSTCHAR( 2, 0 ), OPINT( 3, -1 )) );
     }
   }
-  else if( ISBETWEEN(1, 3) && ISQIODEVICE(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+  else if( ISBETWEEN(1, 3) && ISQIODEVICE(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) )
   {
     /*
     bool save( QIODevice * device, const char * format = 0, int quality = -1 ) const
@@ -1075,7 +1075,7 @@ HB_FUNC_STATIC( QIMAGE_SAVE )
 
     if( obj != NULL )
     {
-      RBOOL( obj->save( PQIODEVICE(1), OPCONSTCHAR( 2, 0 ), OPINT( 3, -1 ) ) );
+      RBOOL( obj->save( PQIODEVICE(1), OPCONSTCHAR( 2, 0 ), OPINT( 3, -1 )) );
     }
   }
   else
@@ -1086,7 +1086,7 @@ HB_FUNC_STATIC( QIMAGE_SAVE )
 
 HB_FUNC_STATIC( QIMAGE_SCALED )
 {
-  if( ISBETWEEN(1, 3) && ISQSIZE(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+  if( ISBETWEEN(1, 3) && ISQSIZE(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) )
   {
     /*
     QImage scaled( const QSize & size, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
@@ -1095,11 +1095,11 @@ HB_FUNC_STATIC( QIMAGE_SCALED )
 
     if( obj != NULL )
     {
-      QImage * ptr = new QImage( obj->scaled( *PQSIZE(1), HB_ISNIL(2) ? ( Qt::AspectRatioMode ) Qt::IgnoreAspectRatio : ( Qt::AspectRatioMode ) hb_parni(2), HB_ISNIL(3) ? ( Qt::TransformationMode ) Qt::FastTransformation : ( Qt::TransformationMode ) hb_parni(3) ) );
+      QImage * ptr = new QImage( obj->scaled( *PQSIZE(1), HB_ISNIL(2) ? ( Qt::AspectRatioMode ) Qt::IgnoreAspectRatio : ( Qt::AspectRatioMode ) hb_parni(2), HB_ISNIL(3) ? ( Qt::TransformationMode ) Qt::FastTransformation : ( Qt::TransformationMode ) hb_parni(3)) );
       Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
     }
   }
-  else if( ISBETWEEN(1, 4) && HB_ISNUM(1) && HB_ISNUM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
+  else if( ISBETWEEN(1, 4) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)) )
   {
     /*
     QImage scaled( int width, int height, Qt::AspectRatioMode aspectRatioMode = Qt::IgnoreAspectRatio, Qt::TransformationMode transformMode = Qt::FastTransformation ) const
@@ -1108,7 +1108,7 @@ HB_FUNC_STATIC( QIMAGE_SCALED )
 
     if( obj != NULL )
     {
-      QImage * ptr = new QImage( obj->scaled( PINT(1), PINT(2), HB_ISNIL(3) ? ( Qt::AspectRatioMode ) Qt::IgnoreAspectRatio : ( Qt::AspectRatioMode ) hb_parni(3), HB_ISNIL(4) ? ( Qt::TransformationMode ) Qt::FastTransformation : ( Qt::TransformationMode ) hb_parni(4) ) );
+      QImage * ptr = new QImage( obj->scaled( PINT(1), PINT(2), HB_ISNIL(3) ? ( Qt::AspectRatioMode ) Qt::IgnoreAspectRatio : ( Qt::AspectRatioMode ) hb_parni(3), HB_ISNIL(4) ? ( Qt::TransformationMode ) Qt::FastTransformation : ( Qt::TransformationMode ) hb_parni(4)) );
       Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
     }
   }
@@ -1128,10 +1128,10 @@ HB_FUNC_STATIC( QIMAGE_SCALEDTOHEIGHT )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
-      QImage * ptr = new QImage( obj->scaledToHeight( PINT(1), HB_ISNIL(2) ? ( Qt::TransformationMode ) Qt::FastTransformation : ( Qt::TransformationMode ) hb_parni(2) ) );
+      QImage * ptr = new QImage( obj->scaledToHeight( PINT(1), HB_ISNIL(2) ? ( Qt::TransformationMode ) Qt::FastTransformation : ( Qt::TransformationMode ) hb_parni(2)) );
       Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1153,10 +1153,10 @@ HB_FUNC_STATIC( QIMAGE_SCALEDTOWIDTH )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
-      QImage * ptr = new QImage( obj->scaledToWidth( PINT(1), HB_ISNIL(2) ? ( Qt::TransformationMode ) Qt::FastTransformation : ( Qt::TransformationMode ) hb_parni(2) ) );
+      QImage * ptr = new QImage( obj->scaledToWidth( PINT(1), HB_ISNIL(2) ? ( Qt::TransformationMode ) Qt::FastTransformation : ( Qt::TransformationMode ) hb_parni(2)) );
       Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1234,8 +1234,8 @@ HB_FUNC_STATIC( QIMAGE_SETCOLORTABLE )
     {
 #endif
       QVector<QRgb> par1;
-      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
-      int nLen1 = hb_arrayLen( aList1 );
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      const int nLen1 = hb_arrayLen(aList1);
       QRgb temp1;
       for( int i1 = 0; i1 < nLen1; i1++ )
       {
@@ -1456,10 +1456,10 @@ HB_FUNC_STATIC( QIMAGE_TEXT )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISCHAR(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)) )
     {
 #endif
-      RQSTRING( obj->text( OPQSTRING( 1, QString() ) ) );
+      RQSTRING( obj->text( OPQSTRING( 1, QString()) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1496,7 +1496,7 @@ HB_FUNC_STATIC( QIMAGE_TEXTKEYS )
 
 HB_FUNC_STATIC( QIMAGE_TRANSFORMED )
 {
-  if( ISBETWEEN(1, 2) && ISQMATRIX(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(1, 2) && ISQMATRIX(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
   {
     /*
     QImage transformed( const QMatrix & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
@@ -1505,11 +1505,11 @@ HB_FUNC_STATIC( QIMAGE_TRANSFORMED )
 
     if( obj != NULL )
     {
-      QImage * ptr = new QImage( obj->transformed( *PQMATRIX(1), HB_ISNIL(2) ? ( Qt::TransformationMode ) Qt::FastTransformation : ( Qt::TransformationMode ) hb_parni(2) ) );
+      QImage * ptr = new QImage( obj->transformed( *PQMATRIX(1), HB_ISNIL(2) ? ( Qt::TransformationMode ) Qt::FastTransformation : ( Qt::TransformationMode ) hb_parni(2)) );
       Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
     }
   }
-  else if( ISBETWEEN(1, 2) && ISQTRANSFORM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && ISQTRANSFORM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
   {
     /*
     QImage transformed( const QTransform & matrix, Qt::TransformationMode mode = Qt::FastTransformation ) const
@@ -1518,7 +1518,7 @@ HB_FUNC_STATIC( QIMAGE_TRANSFORMED )
 
     if( obj != NULL )
     {
-      QImage * ptr = new QImage( obj->transformed( *PQTRANSFORM(1), HB_ISNIL(2) ? ( Qt::TransformationMode ) Qt::FastTransformation : ( Qt::TransformationMode ) hb_parni(2) ) );
+      QImage * ptr = new QImage( obj->transformed( *PQTRANSFORM(1), HB_ISNIL(2) ? ( Qt::TransformationMode ) Qt::FastTransformation : ( Qt::TransformationMode ) hb_parni(2)) );
       Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
     }
   }
@@ -1539,7 +1539,7 @@ HB_FUNC_STATIC( QIMAGE_VALID )
 
     if( obj != NULL )
     {
-      RBOOL( obj->valid( *PQPOINT(1) ) );
+      RBOOL( obj->valid( *PQPOINT(1)) );
     }
   }
   else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -1551,7 +1551,7 @@ HB_FUNC_STATIC( QIMAGE_VALID )
 
     if( obj != NULL )
     {
-      RBOOL( obj->valid( PINT(1), PINT(2) ) );
+      RBOOL( obj->valid( PINT(1), PINT(2)) );
     }
   }
   else
@@ -1586,22 +1586,22 @@ HB_FUNC_STATIC( QIMAGE_WIDTH )
 
 HB_FUNC_STATIC( QIMAGE_FROMDATA )
 {
-  if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ( HB_ISCHAR(3) || HB_ISNIL(3) ) )
+  if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISCHAR(3) || HB_ISNIL(3)) )
   {
     /*
     static QImage fromData( const uchar * data, int size, const char * format = 0 )
     */
 
-    QImage * ptr = new QImage( QImage::fromData( PCONSTUCHAR(1), PINT(2), OPCONSTCHAR( 3, 0 ) ) );
+    QImage * ptr = new QImage( QImage::fromData( PCONSTUCHAR(1), PINT(2), OPCONSTCHAR( 3, 0 )) );
     Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
   }
-  else if( ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && ISQBYTEARRAY(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
   {
     /*
     static QImage fromData( const QByteArray & data, const char * format = 0 )
     */
 
-    QImage * ptr = new QImage( QImage::fromData( *PQBYTEARRAY(1), OPCONSTCHAR( 2, 0 ) ) );
+    QImage * ptr = new QImage( QImage::fromData( *PQBYTEARRAY(1), OPCONSTCHAR( 2, 0 )) );
     Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
   }
   else
@@ -1618,7 +1618,7 @@ HB_FUNC_STATIC( QIMAGE_TRUEMATRIX )
     static QMatrix trueMatrix( const QMatrix & matrix, int width, int height )
     */
 
-    QMatrix * ptr = new QMatrix( QImage::trueMatrix( *PQMATRIX(1), PINT(2), PINT(3) ) );
+    QMatrix * ptr = new QMatrix( QImage::trueMatrix( *PQMATRIX(1), PINT(2), PINT(3)) );
     Qt4xHb::createReturnClass(ptr, "QMATRIX", true);
   }
   else if( ISNUMPAR(3) && ISQTRANSFORM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
@@ -1627,7 +1627,7 @@ HB_FUNC_STATIC( QIMAGE_TRUEMATRIX )
     static QTransform trueMatrix( const QTransform & matrix, int width, int height )
     */
 
-    QTransform * ptr = new QTransform( QImage::trueMatrix( *PQTRANSFORM(1), PINT(2), PINT(3) ) );
+    QTransform * ptr = new QTransform( QImage::trueMatrix( *PQTRANSFORM(1), PINT(2), PINT(3)) );
     Qt4xHb::createReturnClass(ptr, "QTRANSFORM", true);
   }
   else
@@ -1656,7 +1656,7 @@ static QVariant toVariant( const QImage & )
 */
 void QImage_toVariant2()
 {
-  QImage * image = static_cast<QImage*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+  QImage * image = static_cast<QImage*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 )) );
   QVariant * variant = new QVariant();
   variant->setValue<QImage>( *image );
   Qt4xHb::createReturnClass( variant, "QVARIANT", true);
@@ -1688,7 +1688,7 @@ HB_FUNC_STATIC( QIMAGE_FROMVARIANT )
 {
   if( ISNUMPAR(1) && ISQVARIANT(1) )
   {
-    QVariant * variant = static_cast<QVariant*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    QVariant * variant = static_cast<QVariant*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 )) );
     QImage * image = new QImage( variant->value<QImage>() );
     Qt4xHb::createReturnClass( image, "QIMAGE", true);
   }

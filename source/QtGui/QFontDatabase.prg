@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QFONTDATABASE_BOLD )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
-      RBOOL( obj->bold( PQSTRING(1), PQSTRING(2) ) );
+      RBOOL( obj->bold( PQSTRING(1), PQSTRING(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -122,10 +122,10 @@ HB_FUNC_STATIC( QFONTDATABASE_FAMILIES )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
     {
 #endif
-      RQSTRINGLIST( obj->families( HB_ISNIL(1) ? ( QFontDatabase::WritingSystem ) QFontDatabase::Any : ( QFontDatabase::WritingSystem ) hb_parni(1) ) );
+      RQSTRINGLIST( obj->families( HB_ISNIL(1) ? ( QFontDatabase::WritingSystem ) QFontDatabase::Any : ( QFontDatabase::WritingSystem ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -149,7 +149,7 @@ HB_FUNC_STATIC( QFONTDATABASE_FONT )
     if( ISNUMPAR(3) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) )
     {
 #endif
-      QFont * ptr = new QFont( obj->font( PQSTRING(1), PQSTRING(2), PINT(3) ) );
+      QFont * ptr = new QFont( obj->font( PQSTRING(1), PQSTRING(2), PINT(3)) );
       Qt4xHb::createReturnClass(ptr, "QFONT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -171,10 +171,10 @@ HB_FUNC_STATIC( QFONTDATABASE_ISBITMAPSCALABLE )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
     {
 #endif
-      RBOOL( obj->isBitmapScalable( PQSTRING(1), OPQSTRING( 2, QString() ) ) );
+      RBOOL( obj->isBitmapScalable( PQSTRING(1), OPQSTRING( 2, QString()) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -195,10 +195,10 @@ HB_FUNC_STATIC( QFONTDATABASE_ISFIXEDPITCH )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
     {
 #endif
-      RBOOL( obj->isFixedPitch( PQSTRING(1), OPQSTRING( 2, QString() ) ) );
+      RBOOL( obj->isFixedPitch( PQSTRING(1), OPQSTRING( 2, QString()) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -219,10 +219,10 @@ HB_FUNC_STATIC( QFONTDATABASE_ISSCALABLE )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
     {
 #endif
-      RBOOL( obj->isScalable( PQSTRING(1), OPQSTRING( 2, QString() ) ) );
+      RBOOL( obj->isScalable( PQSTRING(1), OPQSTRING( 2, QString()) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,10 +243,10 @@ HB_FUNC_STATIC( QFONTDATABASE_ISSMOOTHLYSCALABLE )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
     {
 #endif
-      RBOOL( obj->isSmoothlyScalable( PQSTRING(1), OPQSTRING( 2, QString() ) ) );
+      RBOOL( obj->isSmoothlyScalable( PQSTRING(1), OPQSTRING( 2, QString()) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ITALIC )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
-      RBOOL( obj->italic( PQSTRING(1), PQSTRING(2) ) );
+      RBOOL( obj->italic( PQSTRING(1), PQSTRING(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,10 +291,10 @@ HB_FUNC_STATIC( QFONTDATABASE_POINTSIZES )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
     {
 #endif
-      QList<int> list = obj->pointSizes( PQSTRING(1), OPQSTRING( 2, QString() ) );
+      QList<int> list = obj->pointSizes( PQSTRING(1), OPQSTRING( 2, QString()) );
       Qt4xHb::convert_qlist_int_to_array( list );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING )
 
     if( obj != NULL )
     {
-      RQSTRING( obj->styleString( *PQFONT(1) ) );
+      RQSTRING( obj->styleString( *PQFONT(1)) );
     }
   }
   else if( ISNUMPAR(1) && ISQFONTINFO(1) )
@@ -354,7 +354,7 @@ HB_FUNC_STATIC( QFONTDATABASE_STYLESTRING )
 
     if( obj != NULL )
     {
-      RQSTRING( obj->styleString( *PQFONTINFO(1) ) );
+      RQSTRING( obj->styleString( *PQFONTINFO(1)) );
     }
   }
   else
@@ -376,7 +376,7 @@ HB_FUNC_STATIC( QFONTDATABASE_STYLES )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RQSTRINGLIST( obj->styles( PQSTRING(1) ) );
+      RQSTRINGLIST( obj->styles( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -400,7 +400,7 @@ HB_FUNC_STATIC( QFONTDATABASE_WEIGHT )
     if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
     {
 #endif
-      RINT( obj->weight( PQSTRING(1), PQSTRING(2) ) );
+      RINT( obj->weight( PQSTRING(1), PQSTRING(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -428,7 +428,7 @@ HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMS )
       {
         PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
         hb_arrayAddForward( pArray, pItem );
-        hb_itemRelease( pItem );
+        hb_itemRelease(pItem);
       }
       hb_itemReturnRelease(pArray);
     }
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMS )
       {
         PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
         hb_arrayAddForward( pArray, pItem );
-        hb_itemRelease( pItem );
+        hb_itemRelease(pItem);
       }
       hb_itemReturnRelease(pArray);
     }
@@ -468,7 +468,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ADDAPPLICATIONFONT )
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
 #endif
-    RINT( QFontDatabase::addApplicationFont( PQSTRING(1) ) );
+    RINT( QFontDatabase::addApplicationFont( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -487,7 +487,7 @@ HB_FUNC_STATIC( QFONTDATABASE_ADDAPPLICATIONFONTFROMDATA )
   if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
   {
 #endif
-    RINT( QFontDatabase::addApplicationFontFromData( *PQBYTEARRAY(1) ) );
+    RINT( QFontDatabase::addApplicationFontFromData( *PQBYTEARRAY(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -506,7 +506,7 @@ HB_FUNC_STATIC( QFONTDATABASE_APPLICATIONFONTFAMILIES )
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
-    RQSTRINGLIST( QFontDatabase::applicationFontFamilies( PINT(1) ) );
+    RQSTRINGLIST( QFontDatabase::applicationFontFamilies( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -544,7 +544,7 @@ HB_FUNC_STATIC( QFONTDATABASE_REMOVEAPPLICATIONFONT )
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
-    RBOOL( QFontDatabase::removeApplicationFont( PINT(1) ) );
+    RBOOL( QFontDatabase::removeApplicationFont( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -602,7 +602,7 @@ HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMNAME )
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
-    RQSTRING( QFontDatabase::writingSystemName( ( QFontDatabase::WritingSystem ) hb_parni(1) ) );
+    RQSTRING( QFontDatabase::writingSystemName( ( QFontDatabase::WritingSystem ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -621,7 +621,7 @@ HB_FUNC_STATIC( QFONTDATABASE_WRITINGSYSTEMSAMPLE )
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
-    RQSTRING( QFontDatabase::writingSystemSample( ( QFontDatabase::WritingSystem ) hb_parni(1) ) );
+    RQSTRING( QFontDatabase::writingSystemSample( ( QFontDatabase::WritingSystem ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

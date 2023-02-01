@@ -49,7 +49,7 @@ RETURN
 
 HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_NEW )
 {
-  if( ISBETWEEN(1, 3) && ISQPRINTER(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+  if( ISBETWEEN(1, 3) && ISQPRINTER(1) && (ISQWIDGET(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) )
   {
     /*
     QPrintPreviewDialog( QPrinter * printer, QWidget * parent = 0, Qt::WindowFlags flags = 0 )
@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QPRINTPREVIEWDIALOG_NEW )
     QPrintPreviewDialog * obj = new QPrintPreviewDialog( PQPRINTER(1), OPQWIDGET( 2, 0 ), HB_ISNIL(3) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(3) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(0, 2) && ( ISQWIDGET(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)) )
   {
     /*
     QPrintPreviewDialog( QWidget * parent = 0, Qt::WindowFlags flags = 0 )

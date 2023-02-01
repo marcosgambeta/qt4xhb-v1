@@ -54,7 +54,7 @@ QGraphicsBlurEffect( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
   {
     QGraphicsBlurEffect * obj = new QGraphicsBlurEffect( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -144,7 +144,7 @@ HB_FUNC_STATIC( QGRAPHICSBLUREFFECT_BOUNDINGRECTFOR )
     if( ISNUMPAR(1) && ISQRECTF(1) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->boundingRectFor( *PQRECTF(1) ) );
+      QRectF * ptr = new QRectF( obj->boundingRectFor( *PQRECTF(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_BOOLPROPERTY )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->boolProperty( PINT(1) ) );
+      RBOOL( obj->boolProperty( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,7 +212,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_BRUSHPROPERTY )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QBrush * ptr = new QBrush( obj->brushProperty( PINT(1) ) );
+      QBrush * ptr = new QBrush( obj->brushProperty( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QBRUSH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -315,7 +315,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_COLORPROPERTY )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QColor * ptr = new QColor( obj->colorProperty( PINT(1) ) );
+      QColor * ptr = new QColor( obj->colorProperty( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_DOUBLEPROPERTY )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQREAL( obj->doubleProperty( PINT(1) ) );
+      RQREAL( obj->doubleProperty( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -389,7 +389,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_HASPROPERTY )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->hasProperty( PINT(1) ) );
+      RBOOL( obj->hasProperty( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -413,7 +413,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_INTPROPERTY )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->intProperty( PINT(1) ) );
+      RINT( obj->intProperty( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -653,7 +653,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_LENGTHPROPERTY )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QTextLength * ptr = new QTextLength( obj->lengthProperty( PINT(1) ) );
+      QTextLength * ptr = new QTextLength( obj->lengthProperty( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QTEXTLENGTH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -679,30 +679,30 @@ HB_FUNC_STATIC( QTEXTFORMAT_LENGTHVECTORPROPERTY )
     {
 #endif
       QVector<QTextLength> list = obj->lengthVectorProperty( PINT(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QTEXTLENGTH");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QTEXTLENGTH");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QTextLength( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QTextLength(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QTEXTLENGTH", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QTEXTLENGTH", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -802,7 +802,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_PENPROPERTY )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QPen * ptr = new QPen( obj->penProperty( PINT(1) ) );
+      QPen * ptr = new QPen( obj->penProperty( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QPEN", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -827,7 +827,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_PROPERTY )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->property( PINT(1) ) );
+      QVariant * ptr = new QVariant( obj->property( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1023,7 +1023,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_SETPROPERTY )
       int nLen2 = hb_arrayLen( aList2 );
       for( int i2 = 0; i2 < nLen2; i2++ )
       {
-        par2 << *static_cast<QTextLength*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
+        par2 << *static_cast<QTextLength*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 )) );
       }
       obj->setProperty( PINT(1), par2 );
     }
@@ -1049,7 +1049,7 @@ HB_FUNC_STATIC( QTEXTFORMAT_STRINGPROPERTY )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->stringProperty( PINT(1) ) );
+      RQSTRING( obj->stringProperty( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

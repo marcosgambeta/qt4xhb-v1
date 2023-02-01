@@ -85,10 +85,10 @@ HB_FUNC_STATIC( QGRADIENT_SETCOLORAT )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ( ISQCOLOR(2) || HB_ISCHAR(2) ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2) || HB_ISCHAR(2)) )
     {
 #endif
-      obj->setColorAt( PQREAL(1), HB_ISOBJECT(2) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(2) ) : QColor( hb_parc(2) ) );
+      obj->setColorAt( PQREAL(1), HB_ISOBJECT(2) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(2) ) : QColor( hb_parc(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

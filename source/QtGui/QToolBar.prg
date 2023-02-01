@@ -80,7 +80,7 @@ RETURN
 
 HB_FUNC_STATIC( QTOOLBAR_NEW )
 {
-  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) )
   {
     /*
     QToolBar( const QString & title, QWidget * parent = 0 )
@@ -88,7 +88,7 @@ HB_FUNC_STATIC( QTOOLBAR_NEW )
     QToolBar * obj = new QToolBar( PQSTRING(1), OPQWIDGET( 2, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  else if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
   {
     /*
     QToolBar( QWidget * parent = 0 )
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
     }
   }
-  else if( ISNUMPAR(2) && ( ISQICON(1) || HB_ISCHAR(1) ) && HB_ISCHAR(2) )
+  else if( ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) )
   {
     /*
     QAction * addAction( const QIcon & icon, const QString & text )
@@ -209,7 +209,7 @@ HB_FUNC_STATIC( QTOOLBAR_ADDACTION )
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
     }
   }
-  else if( ISNUMPAR(4) && ( ISQICON(1) || HB_ISCHAR(1) ) && HB_ISCHAR(2) && ISQOBJECT(3) && HB_ISCHAR(4) )
+  else if( ISNUMPAR(4) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && ISQOBJECT(3) && HB_ISCHAR(4) )
   {
     /*
     QAction * addAction( const QIcon & icon, const QString & text, const QObject * receiver, const char * member )
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QTOOLBAR_ISAREAALLOWED )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isAreaAllowed( ( Qt::ToolBarArea ) hb_parni(1) ) );
+      RBOOL( obj->isAreaAllowed( ( Qt::ToolBarArea ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

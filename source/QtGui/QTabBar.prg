@@ -106,7 +106,7 @@ QTabBar( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QTABBAR_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
   {
     QTabBar * obj = new QTabBar( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -146,10 +146,10 @@ HB_FUNC_STATIC( QTABBAR_ADDTAB )
 
     if( obj != NULL )
     {
-      RINT( obj->addTab( PQSTRING(1) ) );
+      RINT( obj->addTab( PQSTRING(1)) );
     }
   }
-  else if( ISNUMPAR(2) && ( ISQICON(1) || HB_ISCHAR(1) ) && HB_ISCHAR(2) )
+  else if( ISNUMPAR(2) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) )
   {
     /*
     int addTab( const QIcon & icon, const QString & text )
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QTABBAR_ADDTAB )
 
     if( obj != NULL )
     {
-      RINT( obj->addTab( HB_ISOBJECT(1) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(1) ) : QIcon( hb_parc(1) ), PQSTRING(2) ) );
+      RINT( obj->addTab( HB_ISOBJECT(1) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(1) ) : QIcon( hb_parc(1) ), PQSTRING(2)) );
     }
   }
   else
@@ -347,10 +347,10 @@ HB_FUNC_STATIC( QTABBAR_INSERTTAB )
 
     if( obj != NULL )
     {
-      RINT( obj->insertTab( PINT(1), PQSTRING(2) ) );
+      RINT( obj->insertTab( PINT(1), PQSTRING(2)) );
     }
   }
-  else if( ISNUMPAR(3) && HB_ISNUM(1) && ( ISQICON(2) || HB_ISCHAR(2) ) && HB_ISCHAR(3) )
+  else if( ISNUMPAR(3) && HB_ISNUM(1) && (ISQICON(2) || HB_ISCHAR(2)) && HB_ISCHAR(3) )
   {
     /*
     int insertTab( int index, const QIcon & icon, const QString & text )
@@ -359,7 +359,7 @@ HB_FUNC_STATIC( QTABBAR_INSERTTAB )
 
     if( obj != NULL )
     {
-      RINT( obj->insertTab( PINT(1), HB_ISOBJECT(2) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(2) ) : QIcon( hb_parc(2) ), PQSTRING(3) ) );
+      RINT( obj->insertTab( PINT(1), HB_ISOBJECT(2) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(2) ) : QIcon( hb_parc(2) ), PQSTRING(3)) );
     }
   }
   else
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QTABBAR_ISTABENABLED )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isTabEnabled( PINT(1) ) );
+      RBOOL( obj->isTabEnabled( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -788,10 +788,10 @@ HB_FUNC_STATIC( QTABBAR_SETTABICON )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ( ISQICON( 2) || HB_ISCHAR(2) ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQICON( 2) || HB_ISCHAR(2)) )
     {
 #endif
-      obj->setTabIcon( PINT(1), HB_ISOBJECT(2) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(2) ) : QIcon( hb_parc(2) ) );
+      obj->setTabIcon( PINT(1), HB_ISOBJECT(2) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(2) ) : QIcon( hb_parc(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -840,10 +840,10 @@ HB_FUNC_STATIC( QTABBAR_SETTABTEXTCOLOR )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ( ISQCOLOR(2) || HB_ISCHAR(2) ) )
+    if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2) || HB_ISCHAR(2)) )
     {
 #endif
-      obj->setTabTextColor( PINT(1), HB_ISOBJECT(2) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(2) ) : QColor( hb_parc(2) ) );
+      obj->setTabTextColor( PINT(1), HB_ISOBJECT(2) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(2) ) : QColor( hb_parc(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -997,7 +997,7 @@ HB_FUNC_STATIC( QTABBAR_TABAT )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      RINT( obj->tabAt( *PQPOINT(1) ) );
+      RINT( obj->tabAt( *PQPOINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1046,7 +1046,7 @@ HB_FUNC_STATIC( QTABBAR_TABDATA )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->tabData( PINT(1) ) );
+      QVariant * ptr = new QVariant( obj->tabData( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1071,7 +1071,7 @@ HB_FUNC_STATIC( QTABBAR_TABICON )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->tabIcon( PINT(1) ) );
+      QIcon * ptr = new QIcon( obj->tabIcon( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1096,7 +1096,7 @@ HB_FUNC_STATIC( QTABBAR_TABRECT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QRect * ptr = new QRect( obj->tabRect( PINT(1) ) );
+      QRect * ptr = new QRect( obj->tabRect( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1121,7 +1121,7 @@ HB_FUNC_STATIC( QTABBAR_TABTEXT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->tabText( PINT(1) ) );
+      RQSTRING( obj->tabText( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1145,7 +1145,7 @@ HB_FUNC_STATIC( QTABBAR_TABTEXTCOLOR )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QColor * ptr = new QColor( obj->tabTextColor( PINT(1) ) );
+      QColor * ptr = new QColor( obj->tabTextColor( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1170,7 +1170,7 @@ HB_FUNC_STATIC( QTABBAR_TABTOOLTIP )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->tabToolTip( PINT(1) ) );
+      RQSTRING( obj->tabToolTip( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1194,7 +1194,7 @@ HB_FUNC_STATIC( QTABBAR_TABWHATSTHIS )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->tabWhatsThis( PINT(1) ) );
+      RQSTRING( obj->tabWhatsThis( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

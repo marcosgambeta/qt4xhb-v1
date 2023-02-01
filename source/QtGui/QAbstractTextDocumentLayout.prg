@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT )
     if( ISNUMPAR(1) && ISQPOINTF(1) )
     {
 #endif
-      RQSTRING( obj->anchorAt( *PQPOINTF(1) ) );
+      RQSTRING( obj->anchorAt( *PQPOINTF(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT )
     if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->blockBoundingRect( *PQTEXTBLOCK(1) ) );
+      QRectF * ptr = new QRectF( obj->blockBoundingRect( *PQTEXTBLOCK(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT )
     if( ISNUMPAR(1) && ISQTEXTFRAME(1) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->frameBoundingRect( PQTEXTFRAME(1) ) );
+      QRectF * ptr = new QRectF( obj->frameBoundingRect( PQTEXTFRAME(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -221,7 +221,7 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HITTEST )
     if( ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2) )
     {
 #endif
-      RINT( obj->hitTest( *PQPOINTF(1), ( Qt::HitTestAccuracy ) hb_parni(2) ) );
+      RINT( obj->hitTest( *PQPOINTF(1), ( Qt::HitTestAccuracy ) hb_parni(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

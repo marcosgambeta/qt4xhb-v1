@@ -277,7 +277,7 @@ HB_FUNC_STATIC( QTEXTBLOCK_CONTAINS )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->contains( PINT(1) ) );
+      RBOOL( obj->contains( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

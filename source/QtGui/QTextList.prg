@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QTEXTLIST_ITEM )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QTextBlock * ptr = new QTextBlock( obj->item( PINT(1) ) );
+      QTextBlock * ptr = new QTextBlock( obj->item( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QTEXTBLOCK", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QTEXTLIST_ITEMNUMBER )
     if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
     {
 #endif
-      RINT( obj->itemNumber( *PQTEXTBLOCK(1) ) );
+      RINT( obj->itemNumber( *PQTEXTBLOCK(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QTEXTLIST_ITEMTEXT )
     if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
     {
 #endif
-      RQSTRING( obj->itemText( *PQTEXTBLOCK(1) ) );
+      RQSTRING( obj->itemText( *PQTEXTBLOCK(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

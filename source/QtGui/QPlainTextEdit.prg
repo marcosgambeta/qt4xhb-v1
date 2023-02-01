@@ -117,7 +117,7 @@ RETURN
 
 HB_FUNC_STATIC( QPLAINTEXTEDIT_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
   {
     /*
     QPlainTextEdit( QWidget * parent = 0 )
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_NEW )
     QPlainTextEdit * obj = new QPlainTextEdit( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) )
   {
     /*
     QPlainTextEdit( const QString & text, QWidget * parent = 0 )
@@ -170,7 +170,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_ANCHORAT )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      RQSTRING( obj->anchorAt( *PQPOINT(1) ) );
+      RQSTRING( obj->anchorAt( *PQPOINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -340,7 +340,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORFORPOSITION )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      QTextCursor * ptr = new QTextCursor( obj->cursorForPosition( *PQPOINT(1) ) );
+      QTextCursor * ptr = new QTextCursor( obj->cursorForPosition( *PQPOINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -363,7 +363,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_CURSORRECT )
 
     if( obj != NULL )
     {
-      QRect * ptr = new QRect( obj->cursorRect( *PQTEXTCURSOR(1) ) );
+      QRect * ptr = new QRect( obj->cursorRect( *PQTEXTCURSOR(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
@@ -495,10 +495,10 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_FIND )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
-      RBOOL( obj->find( PQSTRING(1), HB_ISNIL(2) ? ( QTextDocument::FindFlags ) 0 : ( QTextDocument::FindFlags ) hb_parni(2) ) );
+      RBOOL( obj->find( PQSTRING(1), HB_ISNIL(2) ? ( QTextDocument::FindFlags ) 0 : ( QTextDocument::FindFlags ) hb_parni(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -594,7 +594,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_LOADRESOURCE )
     if( ISNUMPAR(2) && HB_ISNUM(1) && ISQURL(2) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->loadResource( PINT(1), *PQURL(2) ) );
+      QVariant * ptr = new QVariant( obj->loadResource( PINT(1), *PQURL(2)) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -666,7 +666,7 @@ HB_FUNC_STATIC( QPLAINTEXTEDIT_MOVECURSOR )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->moveCursor( ( QTextCursor::MoveOperation ) hb_parni(1), HB_ISNIL(2) ? ( QTextCursor::MoveMode ) QTextCursor::MoveAnchor : ( QTextCursor::MoveMode ) hb_parni(2) );

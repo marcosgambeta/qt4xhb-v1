@@ -104,7 +104,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNPOS )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->buttonDownPos( ( Qt::MouseButton ) hb_parni(1) ) );
+      QPointF * ptr = new QPointF( obj->buttonDownPos( ( Qt::MouseButton ) hb_parni(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -129,7 +129,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCENEPOS )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->buttonDownScenePos( ( Qt::MouseButton ) hb_parni(1) ) );
+      QPointF * ptr = new QPointF( obj->buttonDownScenePos( ( Qt::MouseButton ) hb_parni(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOUSEEVENT_BUTTONDOWNSCREENPOS )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QPoint * ptr = new QPoint( obj->buttonDownScreenPos( ( Qt::MouseButton ) hb_parni(1) ) );
+      QPoint * ptr = new QPoint( obj->buttonDownScreenPos( ( Qt::MouseButton ) hb_parni(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

@@ -90,7 +90,7 @@ void QListWidgetSlots::itemActivated( QListWidgetItem * item )
     hb_vmEvalBlockV( cb, 2, pSender, pItem );
 
     hb_itemRelease( pSender );
-    hb_itemRelease( pItem );
+    hb_itemRelease(pItem);
   }
 }
 
@@ -108,7 +108,7 @@ void QListWidgetSlots::itemChanged( QListWidgetItem * item )
     hb_vmEvalBlockV( cb, 2, pSender, pItem );
 
     hb_itemRelease( pSender );
-    hb_itemRelease( pItem );
+    hb_itemRelease(pItem);
   }
 }
 
@@ -126,7 +126,7 @@ void QListWidgetSlots::itemClicked( QListWidgetItem * item )
     hb_vmEvalBlockV( cb, 2, pSender, pItem );
 
     hb_itemRelease( pSender );
-    hb_itemRelease( pItem );
+    hb_itemRelease(pItem);
   }
 }
 
@@ -144,7 +144,7 @@ void QListWidgetSlots::itemDoubleClicked( QListWidgetItem * item )
     hb_vmEvalBlockV( cb, 2, pSender, pItem );
 
     hb_itemRelease( pSender );
-    hb_itemRelease( pItem );
+    hb_itemRelease(pItem);
   }
 }
 
@@ -162,7 +162,7 @@ void QListWidgetSlots::itemEntered( QListWidgetItem * item )
     hb_vmEvalBlockV( cb, 2, pSender, pItem );
 
     hb_itemRelease( pSender );
-    hb_itemRelease( pItem );
+    hb_itemRelease(pItem);
   }
 }
 
@@ -180,7 +180,7 @@ void QListWidgetSlots::itemPressed( QListWidgetItem * item )
     hb_vmEvalBlockV( cb, 2, pSender, pItem );
 
     hb_itemRelease( pSender );
-    hb_itemRelease( pItem );
+    hb_itemRelease(pItem);
   }
 }
 

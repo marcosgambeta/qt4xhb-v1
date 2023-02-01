@@ -85,7 +85,7 @@ RETURN
 
 HB_FUNC_STATIC( QCOMPLETER_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
   {
     /*
     QCompleter( QObject * parent = 0 )
@@ -93,7 +93,7 @@ HB_FUNC_STATIC( QCOMPLETER_NEW )
     QCompleter * obj = new QCompleter( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 2) && ISQABSTRACTITEMMODEL(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && ISQABSTRACTITEMMODEL(1) && (ISQOBJECT(2) || HB_ISNIL(2)) )
   {
     /*
     QCompleter( QAbstractItemModel * model, QObject * parent = 0 )
@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QCOMPLETER_NEW )
     QCompleter * obj = new QCompleter( PQABSTRACTITEMMODEL(1), OPQOBJECT( 2, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISARRAY(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISARRAY(1) && (ISQOBJECT(2) || HB_ISNIL(2)) )
   {
     /*
     QCompleter( const QStringList & list, QObject * parent = 0 )
@@ -461,7 +461,7 @@ HB_FUNC_STATIC( QCOMPLETER_PATHFROMINDEX )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      RQSTRING( obj->pathFromIndex( *PQMODELINDEX(1) ) );
+      RQSTRING( obj->pathFromIndex( *PQMODELINDEX(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -614,7 +614,7 @@ HB_FUNC_STATIC( QCOMPLETER_SETCURRENTROW )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->setCurrentRow( PINT(1) ) );
+      RBOOL( obj->setCurrentRow( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -768,7 +768,7 @@ HB_FUNC_STATIC( QCOMPLETER_SPLITPATH )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RQSTRINGLIST( obj->splitPath( PQSTRING(1) ) );
+      RQSTRINGLIST( obj->splitPath( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -838,10 +838,10 @@ HB_FUNC_STATIC( QCOMPLETER_COMPLETE )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( ISQRECT(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (ISQRECT(1) || HB_ISNIL(1)) )
     {
 #endif
-      obj->complete( HB_ISNIL(1) ? QRect() : *static_cast<QRect*>( Qt4xHb::itemGetPtr(1) ) );
+      obj->complete( HB_ISNIL(1) ? QRect() : *static_cast<QRect*>( Qt4xHb::itemGetPtr(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

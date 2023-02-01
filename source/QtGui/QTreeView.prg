@@ -110,7 +110,7 @@ QTreeView( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QTREEVIEW_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
   {
     QTreeView * obj = new QTreeView( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -200,7 +200,7 @@ HB_FUNC_STATIC( QTREEVIEW_COLUMNAT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->columnAt( PINT(1) ) );
+      RINT( obj->columnAt( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,7 +224,7 @@ HB_FUNC_STATIC( QTREEVIEW_COLUMNVIEWPORTPOSITION )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->columnViewportPosition( PINT(1) ) );
+      RINT( obj->columnViewportPosition( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -248,7 +248,7 @@ HB_FUNC_STATIC( QTREEVIEW_COLUMNWIDTH )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->columnWidth( PINT(1) ) );
+      RINT( obj->columnWidth( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QTREEVIEW_INDEXABOVE )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->indexAbove( *PQMODELINDEX(1) ) );
+      QModelIndex * ptr = new QModelIndex( obj->indexAbove( *PQMODELINDEX(1)) );
       Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QTREEVIEW_INDEXBELOW )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->indexBelow( *PQMODELINDEX(1) ) );
+      QModelIndex * ptr = new QModelIndex( obj->indexBelow( *PQMODELINDEX(1)) );
       Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -419,7 +419,7 @@ HB_FUNC_STATIC( QTREEVIEW_ISCOLUMNHIDDEN )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isColumnHidden( PINT(1) ) );
+      RBOOL( obj->isColumnHidden( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -443,7 +443,7 @@ HB_FUNC_STATIC( QTREEVIEW_ISEXPANDED )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      RBOOL( obj->isExpanded( *PQMODELINDEX(1) ) );
+      RBOOL( obj->isExpanded( *PQMODELINDEX(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -467,7 +467,7 @@ HB_FUNC_STATIC( QTREEVIEW_ISFIRSTCOLUMNSPANNED )
     if( ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2) )
     {
 #endif
-      RBOOL( obj->isFirstColumnSpanned( PINT(1), *PQMODELINDEX(2) ) );
+      RBOOL( obj->isFirstColumnSpanned( PINT(1), *PQMODELINDEX(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -515,7 +515,7 @@ HB_FUNC_STATIC( QTREEVIEW_ISROWHIDDEN )
     if( ISNUMPAR(2) && HB_ISNUM(1) && ISQMODELINDEX(2) )
     {
 #endif
-      RBOOL( obj->isRowHidden( PINT(1), *PQMODELINDEX(2) ) );
+      RBOOL( obj->isRowHidden( PINT(1), *PQMODELINDEX(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1153,7 +1153,7 @@ HB_FUNC_STATIC( QTREEVIEW_INDEXAT )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->indexAt( *PQPOINT(1) ) );
+      QModelIndex * ptr = new QModelIndex( obj->indexAt( *PQPOINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1227,7 +1227,7 @@ HB_FUNC_STATIC( QTREEVIEW_SCROLLTO )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && ISQMODELINDEX(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->scrollTo( *PQMODELINDEX(1), HB_ISNIL(2) ? ( QTreeView::ScrollHint ) QTreeView::EnsureVisible : ( QTreeView::ScrollHint ) hb_parni(2) );
@@ -1360,7 +1360,7 @@ HB_FUNC_STATIC( QTREEVIEW_VISUALRECT )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QRect * ptr = new QRect( obj->visualRect( *PQMODELINDEX(1) ) );
+      QRect * ptr = new QRect( obj->visualRect( *PQMODELINDEX(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

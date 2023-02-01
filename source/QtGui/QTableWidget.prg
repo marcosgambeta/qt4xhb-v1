@@ -107,7 +107,7 @@ RETURN
 
 HB_FUNC_STATIC( QTABLEWIDGET_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
   {
     /*
     QTableWidget( QWidget * parent = 0 )
@@ -115,7 +115,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_NEW )
     QTableWidget * obj = new QTableWidget( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ( ISQWIDGET(3) || HB_ISNIL(3) ) )
+  else if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQWIDGET(3) || HB_ISNIL(3)) )
   {
     /*
     QTableWidget( int rows, int columns, QWidget * parent = 0 )
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_COLUMN )
     if( ISNUMPAR(1) && ISQTABLEWIDGETITEM(1) )
     {
 #endif
-      RINT( obj->column( PQTABLEWIDGETITEM(1) ) );
+      RINT( obj->column( PQTABLEWIDGETITEM(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -359,27 +359,27 @@ HB_FUNC_STATIC( QTABLEWIDGET_FINDITEMS )
     {
 #endif
       QList<QTableWidgetItem *> list = obj->findItems( PQSTRING(1), ( Qt::MatchFlags ) hb_parni(2) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QTABLEWIDGETITEM");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QTABLEWIDGETITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
           PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QTABLEWIDGETITEM", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QTABLEWIDGETITEM", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -541,7 +541,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_ROW )
     if( ISNUMPAR(1) && ISQTABLEWIDGETITEM(1) )
     {
 #endif
-      RINT( obj->row( PQTABLEWIDGETITEM(1) ) );
+      RINT( obj->row( PQTABLEWIDGETITEM(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -590,27 +590,27 @@ HB_FUNC_STATIC( QTABLEWIDGET_SELECTEDITEMS )
     {
 #endif
       QList<QTableWidgetItem *> list = obj->selectedItems();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QTABLEWIDGETITEM");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QTABLEWIDGETITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
           PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QTABLEWIDGETITEM", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QTABLEWIDGETITEM", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -637,30 +637,30 @@ HB_FUNC_STATIC( QTABLEWIDGET_SELECTEDRANGES )
     {
 #endif
       QList<QTableWidgetSelectionRange> list = obj->selectedRanges();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QTABLEWIDGETSELECTIONRANGE");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QTABLEWIDGETSELECTIONRANGE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QTableWidgetSelectionRange( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QTableWidgetSelectionRange(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QTABLEWIDGETSELECTIONRANGE", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QTABLEWIDGETSELECTIONRANGE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1015,7 +1015,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SORTITEMS )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->sortItems( PINT(1), HB_ISNIL(2) ? ( Qt::SortOrder ) Qt::AscendingOrder : ( Qt::SortOrder ) hb_parni(2) );
@@ -1144,7 +1144,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_VISUALCOLUMN )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->visualColumn( PINT(1) ) );
+      RINT( obj->visualColumn( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1168,7 +1168,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_VISUALITEMRECT )
     if( ISNUMPAR(1) && ISQTABLEWIDGETITEM(1) )
     {
 #endif
-      QRect * ptr = new QRect( obj->visualItemRect( PQTABLEWIDGETITEM(1) ) );
+      QRect * ptr = new QRect( obj->visualItemRect( PQTABLEWIDGETITEM(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1193,7 +1193,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_VISUALROW )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->visualRow( PINT(1) ) );
+      RINT( obj->visualRow( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1370,7 +1370,7 @@ HB_FUNC_STATIC( QTABLEWIDGET_SCROLLTOITEM )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQTABLEWIDGETITEM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && ISQTABLEWIDGETITEM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->scrollToItem( PQTABLEWIDGETITEM(1), HB_ISNIL(2) ? ( QAbstractItemView::ScrollHint ) QAbstractItemView::EnsureVisible : ( QAbstractItemView::ScrollHint ) hb_parni(2) );

@@ -63,20 +63,20 @@ RETURN
 
 HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQGRAPHICSLAYOUTITEM(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQGRAPHICSLAYOUTITEM(1) || HB_ISNIL(1)) )
   {
     /*
     QGraphicsLinearLayout( QGraphicsLayoutItem * parent = 0 )
     */
-    QGraphicsLinearLayout * obj = new QGraphicsLinearLayout( HB_ISNIL(1) ? 0 : static_cast<QGraphicsLayoutItem*>( Qt4xHb::itemGetPtr(1) ) );
+    QGraphicsLinearLayout * obj = new QGraphicsLinearLayout( HB_ISNIL(1) ? 0 : static_cast<QGraphicsLayoutItem*>( Qt4xHb::itemGetPtr(1)) );
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQGRAPHICSLAYOUTITEM(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQGRAPHICSLAYOUTITEM(2) || HB_ISNIL(2)) )
   {
     /*
     QGraphicsLinearLayout( Qt::Orientation orientation, QGraphicsLayoutItem * parent = 0 )
     */
-    QGraphicsLinearLayout * obj = new QGraphicsLinearLayout( ( Qt::Orientation ) hb_parni(1), HB_ISNIL(2) ? 0 : static_cast<QGraphicsLayoutItem*>( Qt4xHb::itemGetPtr(2) ) );
+    QGraphicsLinearLayout * obj = new QGraphicsLinearLayout( ( Qt::Orientation ) hb_parni(1), HB_ISNIL(2) ? 0 : static_cast<QGraphicsLayoutItem*>( Qt4xHb::itemGetPtr(2)) );
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -137,7 +137,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ADDSTRETCH )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
     {
 #endif
       obj->addStretch( OPINT( 1, 1 ) );
@@ -166,7 +166,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ALIGNMENT )
     if( ISNUMPAR(1) && ISQGRAPHICSLAYOUTITEM(1) )
     {
 #endif
-      RENUM( obj->alignment( PQGRAPHICSLAYOUTITEM(1) ) );
+      RENUM( obj->alignment( PQGRAPHICSLAYOUTITEM(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_INSERTSTRETCH )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->insertStretch( PINT(1), OPINT( 2, 1 ) );
@@ -242,7 +242,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_ITEMSPACING )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQREAL( obj->itemSpacing( PINT(1) ) );
+      RQREAL( obj->itemSpacing( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_STRETCHFACTOR )
     if( ISNUMPAR(1) && ISQGRAPHICSLAYOUTITEM(1) )
     {
 #endif
-      RINT( obj->stretchFactor( PQGRAPHICSLAYOUTITEM(1) ) );
+      RINT( obj->stretchFactor( PQGRAPHICSLAYOUTITEM(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -618,10 +618,10 @@ HB_FUNC_STATIC( QGRAPHICSLINEARLAYOUT_SIZEHINT )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQSIZEF(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQSIZEF(2) || HB_ISNIL(2)) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->sizeHint( ( Qt::SizeHint ) hb_parni(1), HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF*>( Qt4xHb::itemGetPtr(2) ) ) );
+      QSizeF * ptr = new QSizeF( obj->sizeHint( ( Qt::SizeHint ) hb_parni(1), HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF*>( Qt4xHb::itemGetPtr(2)) ) );
       Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

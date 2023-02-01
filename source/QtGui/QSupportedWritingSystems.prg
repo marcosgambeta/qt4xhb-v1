@@ -99,7 +99,7 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SETSUPPORTED )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->setSupported( ( QFontDatabase::WritingSystem ) hb_parni(1), OPBOOL( 2, true ) );
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SUPPORTED )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->supported( ( QFontDatabase::WritingSystem ) hb_parni(1) ) );
+      RBOOL( obj->supported( ( QFontDatabase::WritingSystem ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

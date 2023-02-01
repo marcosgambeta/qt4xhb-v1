@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_RECOGNIZE )
     if( ISNUMPAR(3) && ISQGESTURE(1) && ISQOBJECT(2) && ISQEVENT(3) )
     {
 #endif
-      RENUM( obj->recognize( PQGESTURE(1), PQOBJECT(2), PQEVENT(3) ) );
+      RENUM( obj->recognize( PQGESTURE(1), PQOBJECT(2), PQEVENT(3)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QGESTURERECOGNIZER_REGISTERRECOGNIZER )
   if( ISNUMPAR(1) && ISQGESTURERECOGNIZER(1) )
   {
 #endif
-    RENUM( QGestureRecognizer::registerRecognizer( PQGESTURERECOGNIZER(1) ) );
+    RENUM( QGestureRecognizer::registerRecognizer( PQGESTURERECOGNIZER(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

@@ -65,7 +65,7 @@ QColumnView( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QCOLUMNVIEW_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
   {
     QColumnView * obj = new QColumnView( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -182,8 +182,8 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SETCOLUMNWIDTHS )
     {
 #endif
       QList<int> par1;
-      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
-      int nLen1 = hb_arrayLen( aList1 );
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      const int nLen1 = hb_arrayLen(aList1);
       int temp1;
       for( int i1 = 0; i1 < nLen1; i1++ )
       {
@@ -268,7 +268,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_INDEXAT )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->indexAt( *PQPOINT(1) ) );
+      QModelIndex * ptr = new QModelIndex( obj->indexAt( *PQPOINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -290,7 +290,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_SCROLLTO )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && ISQMODELINDEX(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->scrollTo( *PQMODELINDEX(1), HB_ISNIL(2) ? ( QColumnView::ScrollHint ) QColumnView::EnsureVisible : ( QColumnView::ScrollHint ) hb_parni(2) );
@@ -448,7 +448,7 @@ HB_FUNC_STATIC( QCOLUMNVIEW_VISUALRECT )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QRect * ptr = new QRect( obj->visualRect( *PQMODELINDEX(1) ) );
+      QRect * ptr = new QRect( obj->visualRect( *PQMODELINDEX(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

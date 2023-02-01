@@ -134,10 +134,10 @@ HB_FUNC_STATIC( QDECORATION_PAINT )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 4) && ISQPAINTER(1) && ISQWIDGET(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
+    if( ISBETWEEN(2, 4) && ISQPAINTER(1) && ISQWIDGET(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)) )
     {
 #endif
-      RBOOL( obj->paint( PQPAINTER(1), PQWIDGET(2), OPINT( 3, QDecoration::All ), HB_ISNIL(4) ? ( QDecoration::DecorationState ) QDecoration::Normal : ( QDecoration::DecorationState ) hb_parni(4) ) );
+      RBOOL( obj->paint( PQPAINTER(1), PQWIDGET(2), OPINT( 3, QDecoration::All ), HB_ISNIL(4) ? ( QDecoration::DecorationState ) QDecoration::Normal : ( QDecoration::DecorationState ) hb_parni(4)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QDECORATION_PAINT )
 
 HB_FUNC_STATIC( QDECORATION_REGION )
 {
-  if( ISBETWEEN(2, 3) && ISQWIDGET(1) && ISQRECT(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+  if( ISBETWEEN(2, 3) && ISQWIDGET(1) && ISQRECT(2) && (HB_ISNUM(3) || HB_ISNIL(3)) )
   {
     /*
     virtual QRegion region( const QWidget * widget, const QRect & rectangle, int decorationRegion = QDecoration::All ) = 0
@@ -159,11 +159,11 @@ HB_FUNC_STATIC( QDECORATION_REGION )
 
     if( obj != NULL )
     {
-      QRegion * ptr = new QRegion( obj->region( PQWIDGET(1), *PQRECT(2), OPINT( 3, QDecoration::All ) ) );
+      QRegion * ptr = new QRegion( obj->region( PQWIDGET(1), *PQRECT(2), OPINT( 3, QDecoration::All )) );
       Qt4xHb::createReturnClass(ptr, "QREGION", true);
     }
   }
-  else if( ISBETWEEN(1, 2) && ISQWIDGET(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
   {
     /*
     QRegion region( const QWidget * widget, int decorationRegion = QDecoration::All )
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QDECORATION_REGION )
 
     if( obj != NULL )
     {
-      QRegion * ptr = new QRegion( obj->region( PQWIDGET(1), OPINT( 2, QDecoration::All ) ) );
+      QRegion * ptr = new QRegion( obj->region( PQWIDGET(1), OPINT( 2, QDecoration::All )) );
       Qt4xHb::createReturnClass(ptr, "QREGION", true);
     }
   }
@@ -195,7 +195,7 @@ HB_FUNC_STATIC( QDECORATION_REGIONAT )
     if( ISNUMPAR(2) && ISQWIDGET(1) && ISQPOINT(2) )
     {
 #endif
-      RINT( obj->regionAt( PQWIDGET(1), *PQPOINT(2) ) );
+      RINT( obj->regionAt( PQWIDGET(1), *PQPOINT(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

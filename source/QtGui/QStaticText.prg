@@ -143,10 +143,10 @@ HB_FUNC_STATIC( QSTATICTEXT_PREPARE )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 2) && ( ISQTRANSFORM(1) || HB_ISNIL(1) ) && ( ISQFONT(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(0, 2) && (ISQTRANSFORM(1) || HB_ISNIL(1)) && (ISQFONT(2) || HB_ISNIL(2)) )
     {
 #endif
-      obj->prepare( HB_ISNIL(1) ? QTransform() : *static_cast<QTransform*>( Qt4xHb::itemGetPtr(1) ), HB_ISNIL(2) ? QFont() : *static_cast<QFont*>( Qt4xHb::itemGetPtr(2) ) );
+      obj->prepare( HB_ISNIL(1) ? QTransform() : *static_cast<QTransform*>( Qt4xHb::itemGetPtr(1) ), HB_ISNIL(2) ? QFont() : *static_cast<QFont*>( Qt4xHb::itemGetPtr(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

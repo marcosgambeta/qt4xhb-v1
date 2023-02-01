@@ -62,11 +62,11 @@ HB_FUNC_STATIC( QGESTUREEVENT_NEW )
   if( ISNUMPAR(1) && HB_ISARRAY(1) )
   {
     QList<QGesture *> par1;
-    PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
-    int nLen1 = hb_arrayLen( aList1 );
+    PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+    const int nLen1 = hb_arrayLen(aList1);
     for( int i1 = 0; i1 < nLen1; i1++ )
     {
-      par1 << static_cast<QGesture*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+      par1 << static_cast<QGesture*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
     }
     QGestureEvent * obj = new QGestureEvent( par1 );
     Qt4xHb::returnNewObject(obj, false);
@@ -157,27 +157,27 @@ HB_FUNC_STATIC( QGESTUREEVENT_ACTIVEGESTURES )
     {
 #endif
       QList<QGesture *> list = obj->activeGestures();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QGESTURE");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QGESTURE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
           PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGESTURE", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QGESTURE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -204,27 +204,27 @@ HB_FUNC_STATIC( QGESTUREEVENT_CANCELEDGESTURES )
     {
 #endif
       QList<QGesture *> list = obj->canceledGestures();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QGESTURE");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QGESTURE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
           PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGESTURE", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QGESTURE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -276,27 +276,27 @@ HB_FUNC_STATIC( QGESTUREEVENT_GESTURES )
     {
 #endif
       QList<QGesture *> list = obj->gestures();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QGESTURE");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QGESTURE");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
           PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGESTURE", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QGESTURE", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED )
 
     if( obj != NULL )
     {
-      RBOOL( obj->isAccepted( PQGESTURE(1) ) );
+      RBOOL( obj->isAccepted( PQGESTURE(1)) );
     }
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -394,7 +394,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_ISACCEPTED )
 
     if( obj != NULL )
     {
-      RBOOL( obj->isAccepted( ( Qt::GestureType ) hb_parni(1) ) );
+      RBOOL( obj->isAccepted( ( Qt::GestureType ) hb_parni(1)) );
     }
   }
   else
@@ -416,7 +416,7 @@ HB_FUNC_STATIC( QGESTUREEVENT_MAPTOGRAPHICSSCENE )
     if( ISNUMPAR(1) && ISQPOINTF(1) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->mapToGraphicsScene( *PQPOINTF(1) ) );
+      QPointF * ptr = new QPointF( obj->mapToGraphicsScene( *PQPOINTF(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

@@ -55,7 +55,7 @@ HB_FUNC_STATIC( QWINDOWSMIME_REGISTERMIMETYPE )
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
 #endif
-    RINT( QWindowsMime::registerMimeType( PQSTRING(1) ) );
+    RINT( QWindowsMime::registerMimeType( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

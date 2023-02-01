@@ -79,7 +79,7 @@ HB_FUNC_STATIC( QMIMESOURCE_ENCODEDDATA )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->encodedData( PCONSTCHAR(1) ) );
+      QByteArray * ptr = new QByteArray( obj->encodedData( PCONSTCHAR(1)) );
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -101,10 +101,10 @@ HB_FUNC_STATIC( QMIMESOURCE_FORMAT )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
     {
 #endif
-      hb_retc( ( const char * ) obj->format( OPINT( 1, 0 ) ) );
+      hb_retc( ( const char * ) obj->format( OPINT( 1, 0 )) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,7 +128,7 @@ HB_FUNC_STATIC( QMIMESOURCE_PROVIDES )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->provides( PCONSTCHAR(1) ) );
+      RBOOL( obj->provides( PCONSTCHAR(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

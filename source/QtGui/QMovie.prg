@@ -89,7 +89,7 @@ RETURN
 
 HB_FUNC_STATIC( QMOVIE_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
   {
     /*
     QMovie( QObject * parent = 0 )
@@ -97,7 +97,7 @@ HB_FUNC_STATIC( QMOVIE_NEW )
     QMovie * obj = new QMovie( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 3) && ISQIODEVICE(1) && ( ISQBYTEARRAY(2) || HB_ISNIL(2) ) && ( ISQOBJECT(3) || HB_ISNIL(3) ) )
+  else if( ISBETWEEN(1, 3) && ISQIODEVICE(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)) && (ISQOBJECT(3) || HB_ISNIL(3)) )
   {
     /*
     QMovie( QIODevice * device, const QByteArray & format = QByteArray(), QObject * parent = 0 )
@@ -105,7 +105,7 @@ HB_FUNC_STATIC( QMOVIE_NEW )
     QMovie * obj = new QMovie( PQIODEVICE(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray*>( Qt4xHb::itemGetPtr(2) ), OPQOBJECT( 3, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && ( ISQBYTEARRAY(2) || HB_ISNIL(2) ) && ( ISQOBJECT(3) || HB_ISNIL(3) ) )
+  else if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)) && (ISQOBJECT(3) || HB_ISNIL(3)) )
   {
     /*
     QMovie( const QString & fileName, const QByteArray & format = QByteArray(), QObject * parent = 0 )
@@ -420,7 +420,7 @@ HB_FUNC_STATIC( QMOVIE_JUMPTOFRAME )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->jumpToFrame( PINT(1) ) );
+      RBOOL( obj->jumpToFrame( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -514,10 +514,10 @@ HB_FUNC_STATIC( QMOVIE_SETBACKGROUNDCOLOR )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( ISQCOLOR(1) || HB_ISCHAR(1) ) )
+    if( ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)) )
     {
 #endif
-      obj->setBackgroundColor( HB_ISOBJECT(1) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(1) ) : QColor( hb_parc(1) ) );
+      obj->setBackgroundColor( HB_ISOBJECT(1) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(1) ) : QColor( hb_parc(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -846,30 +846,30 @@ HB_FUNC_STATIC( QMOVIE_SUPPORTEDFORMATS )
   {
 #endif
     QList<QByteArray> list = QMovie::supportedFormats();
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY");
+    PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
     PHB_ITEM pArray = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != NULL )
     {
       for( int i = 0; i < list.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
-        PHB_ITEM pObject = hb_itemNew( NULL );
-        hb_itemCopy( pObject, hb_stackReturnItem() );
-        PHB_ITEM pItem = hb_itemPutPtr( NULL, new QByteArray( list[i] ) );
-        hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-        hb_itemRelease( pItem );
-        PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-        hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-        hb_itemRelease( pDestroy );
-        hb_arrayAddForward( pArray, pObject );
-        hb_itemRelease( pObject );
+        PHB_ITEM pObject = hb_itemNew(NULL);
+        hb_itemCopy(pObject, hb_stackReturnItem());
+        PHB_ITEM pItem = hb_itemPutPtr(NULL, new QByteArray(list[i]));
+        hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+        hb_itemRelease(pItem);
+        PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+        hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+        hb_itemRelease(pDestroy);
+        hb_arrayAddForward(pArray, pObject);
+        hb_itemRelease(pObject);
       }
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS);
     }
     hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

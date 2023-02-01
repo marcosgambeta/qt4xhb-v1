@@ -64,7 +64,7 @@ RETURN
 
 HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
   {
     /*
     QSystemTrayIcon( QObject * parent = 0 )
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_NEW )
     QSystemTrayIcon * obj = new QSystemTrayIcon( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 2) && ( ISQICON(1) || HB_ISCHAR(1) ) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && (ISQICON(1) || HB_ISCHAR(1)) && (ISQOBJECT(2) || HB_ISNIL(2)) )
   {
     /*
     QSystemTrayIcon( const QIcon & icon, QObject * parent = 0 )
@@ -239,10 +239,10 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SETICON )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( ISQICON( 1) || HB_ISCHAR(1) ) )
+    if( ISNUMPAR(1) && (ISQICON( 1) || HB_ISCHAR(1)) )
     {
 #endif
-      obj->setIcon( HB_ISOBJECT(1) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(1) ) : QIcon( hb_parc(1) ) );
+      obj->setIcon( HB_ISOBJECT(1) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(1) ) : QIcon( hb_parc(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,7 +291,7 @@ HB_FUNC_STATIC( QSYSTEMTRAYICON_SHOWMESSAGE )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISCHAR(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
+    if( ISBETWEEN(2, 4) && HB_ISCHAR(1) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)) )
     {
 #endif
       obj->showMessage( PQSTRING(1), PQSTRING(2), HB_ISNIL(3) ? ( QSystemTrayIcon::MessageIcon ) QSystemTrayIcon::Information : ( QSystemTrayIcon::MessageIcon ) hb_parni(3), OPINT( 4, 10000 ) );

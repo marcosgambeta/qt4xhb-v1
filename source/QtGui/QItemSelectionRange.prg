@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS )
 
     if( obj != NULL )
     {
-      RBOOL( obj->contains( *PQMODELINDEX(1) ) );
+      RBOOL( obj->contains( *PQMODELINDEX(1)) );
     }
   }
   else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQMODELINDEX(3) )
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_CONTAINS )
 
     if( obj != NULL )
     {
-      RBOOL( obj->contains( PINT(1), PINT(2), *PQMODELINDEX(3) ) );
+      RBOOL( obj->contains( PINT(1), PINT(2), *PQMODELINDEX(3)) );
     }
   }
   else
@@ -240,30 +240,30 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INDEXES )
     {
 #endif
       QModelIndexList list = obj->indexes();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QMODELINDEX");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QMODELINDEX");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QModelIndex( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QModelIndex(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QMODELINDEX", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -289,7 +289,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTED )
     if( ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1) )
     {
 #endif
-      QItemSelectionRange * ptr = new QItemSelectionRange( obj->intersected( *PQITEMSELECTIONRANGE(1) ) );
+      QItemSelectionRange * ptr = new QItemSelectionRange( obj->intersected( *PQITEMSELECTIONRANGE(1)) );
       Qt4xHb::createReturnClass(ptr, "QITEMSELECTIONRANGE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -314,7 +314,7 @@ HB_FUNC_STATIC( QITEMSELECTIONRANGE_INTERSECTS )
     if( ISNUMPAR(1) && ISQITEMSELECTIONRANGE(1) )
     {
 #endif
-      RBOOL( obj->intersects( *PQITEMSELECTIONRANGE(1) ) );
+      RBOOL( obj->intersects( *PQITEMSELECTIONRANGE(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

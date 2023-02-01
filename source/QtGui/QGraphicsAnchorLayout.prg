@@ -59,9 +59,9 @@ QGraphicsAnchorLayout( QGraphicsLayoutItem * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQGRAPHICSLAYOUTITEM(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQGRAPHICSLAYOUTITEM(1) || HB_ISNIL(1)) )
   {
-    QGraphicsAnchorLayout * obj = new QGraphicsAnchorLayout( HB_ISNIL(1) ? 0 : static_cast<QGraphicsLayoutItem*>( Qt4xHb::itemGetPtr(1) ) );
+    QGraphicsAnchorLayout * obj = new QGraphicsAnchorLayout( HB_ISNIL(1) ? 0 : static_cast<QGraphicsLayoutItem*>( Qt4xHb::itemGetPtr(1)) );
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QGRAPHICSANCHORLAYOUT_ADDANCHORS )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 3) && ISQGRAPHICSLAYOUTITEM(1) && ISQGRAPHICSLAYOUTITEM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+    if( ISBETWEEN(2, 3) && ISQGRAPHICSLAYOUTITEM(1) && ISQGRAPHICSLAYOUTITEM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) )
     {
 #endif
       obj->addAnchors( PQGRAPHICSLAYOUTITEM(1), PQGRAPHICSLAYOUTITEM(2), HB_ISNIL(3) ? ( Qt::Orientations ) Qt::Horizontal | Qt::Vertical : ( Qt::Orientations ) hb_parni(3) );

@@ -187,7 +187,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT )
 
     if( obj != NULL )
     {
-      QRectF * ptr = new QRectF( obj->boundingRect( PQSTRING(1) ) );
+      QRectF * ptr = new QRectF( obj->boundingRect( PQSTRING(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
     }
   }
@@ -200,11 +200,11 @@ HB_FUNC_STATIC( QFONTMETRICSF_BOUNDINGRECT )
 
     if( obj != NULL )
     {
-      QRectF * ptr = new QRectF( obj->boundingRect( *PQCHAR(1) ) );
+      QRectF * ptr = new QRectF( obj->boundingRect( *PQCHAR(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
     }
   }
-  else if( ISBETWEEN(3, 5) && ISQRECTF(1) && HB_ISNUM(2) && HB_ISCHAR(3) && ( HB_ISNUM(4) || HB_ISNIL(4) ) && ( HB_ISARRAY(5) || HB_ISNIL(5) ) )
+  else if( ISBETWEEN(3, 5) && ISQRECTF(1) && HB_ISNUM(2) && HB_ISCHAR(3) && (HB_ISNUM(4) || HB_ISNIL(4)) && (HB_ISARRAY(5) || HB_ISNIL(5)) )
   {
     /*
     QRectF boundingRect( const QRectF & rect, int flags, const QString & text, int tabStops = 0, int * tabArray = 0 ) const
@@ -259,10 +259,10 @@ HB_FUNC_STATIC( QFONTMETRICSF_ELIDEDTEXT )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3, 4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
+    if( ISBETWEEN(3, 4) && HB_ISCHAR(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)) )
     {
 #endif
-      RQSTRING( obj->elidedText( PQSTRING(1), ( Qt::TextElideMode ) hb_parni(2), PQREAL(3), OPINT( 4, 0 ) ) );
+      RQSTRING( obj->elidedText( PQSTRING(1), ( Qt::TextElideMode ) hb_parni(2), PQREAL(3), OPINT( 4, 0 )) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -310,7 +310,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_INFONT )
     if( ISNUMPAR(1) && ISQCHAR(1) )
     {
 #endif
-      RBOOL( obj->inFont( *PQCHAR(1) ) );
+      RBOOL( obj->inFont( *PQCHAR(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -334,7 +334,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_INFONTUCS4 )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->inFontUcs4( PUINT(1) ) );
+      RBOOL( obj->inFontUcs4( PUINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -382,7 +382,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_LEFTBEARING )
     if( ISNUMPAR(1) && ISQCHAR(1) )
     {
 #endif
-      RQREAL( obj->leftBearing( *PQCHAR(1) ) );
+      RQREAL( obj->leftBearing( *PQCHAR(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -550,7 +550,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_RIGHTBEARING )
     if( ISNUMPAR(1) && ISQCHAR(1) )
     {
 #endif
-      RQREAL( obj->rightBearing( *PQCHAR(1) ) );
+      RQREAL( obj->rightBearing( *PQCHAR(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_SIZE )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
+    if( ISBETWEEN(2, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)) )
     {
 #endif
       int par4;
@@ -625,7 +625,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_TIGHTBOUNDINGRECT )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QRectF * ptr = new QRectF( obj->tightBoundingRect( PQSTRING(1) ) );
+      QRectF * ptr = new QRectF( obj->tightBoundingRect( PQSTRING(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -672,7 +672,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_WIDTH )
 
     if( obj != NULL )
     {
-      RQREAL( obj->width( PQSTRING(1) ) );
+      RQREAL( obj->width( PQSTRING(1)) );
     }
   }
   else if( ISNUMPAR(1) && ISQCHAR(1) )
@@ -684,7 +684,7 @@ HB_FUNC_STATIC( QFONTMETRICSF_WIDTH )
 
     if( obj != NULL )
     {
-      RQREAL( obj->width( *PQCHAR(1) ) );
+      RQREAL( obj->width( *PQCHAR(1)) );
     }
   }
   else

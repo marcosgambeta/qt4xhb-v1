@@ -132,7 +132,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_CREATESTROKE )
     if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->createStroke( *PQPAINTERPATH(1) ) );
+      QPainterPath * ptr = new QPainterPath( obj->createStroke( *PQPAINTERPATH(1)) );
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -211,7 +211,7 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_DASHPATTERN )
       {
         PHB_ITEM pItem = hb_itemPutND( NULL, (qreal) list[i] );
         hb_arrayAddForward( pArray, pItem );
-        hb_itemRelease( pItem );
+        hb_itemRelease(pItem);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -376,8 +376,8 @@ HB_FUNC_STATIC( QPAINTERPATHSTROKER_SETDASHPATTERN )
     if( obj != NULL )
     {
       QVector<qreal> par1;
-      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
-      int nLen1 = hb_arrayLen( aList1 );
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      const int nLen1 = hb_arrayLen(aList1);
       qreal temp1;
       for( int i1 = 0; i1 < nLen1; i1++ )
       {

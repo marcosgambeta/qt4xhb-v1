@@ -933,7 +933,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE )
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISBETWEEN(1, 2) && ISQIMAGE(1) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && ISQIMAGE(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
   {
     /*
     void insertImage( const QImage & image, const QString & name = QString() )
@@ -942,7 +942,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_INSERTIMAGE )
 
     if( obj != NULL )
     {
-      obj->insertImage( *PQIMAGE(1), OPQSTRING( 2, QString() ) );
+      obj->insertImage( *PQIMAGE(1), OPQSTRING( 2, QString()) );
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1070,7 +1070,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_ISCOPYOF )
     if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
     {
 #endif
-      RBOOL( obj->isCopyOf( *PQTEXTCURSOR(1) ) );
+      RBOOL( obj->isCopyOf( *PQTEXTCURSOR(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1243,10 +1243,10 @@ HB_FUNC_STATIC( QTEXTCURSOR_MOVEPOSITION )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 3) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+    if( ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) )
     {
 #endif
-      RBOOL( obj->movePosition( ( QTextCursor::MoveOperation ) hb_parni(1), HB_ISNIL(2) ? ( QTextCursor::MoveMode ) QTextCursor::MoveAnchor : ( QTextCursor::MoveMode ) hb_parni(2), OPINT( 3, 1 ) ) );
+      RBOOL( obj->movePosition( ( QTextCursor::MoveOperation ) hb_parni(1), HB_ISNIL(2) ? ( QTextCursor::MoveMode ) QTextCursor::MoveAnchor : ( QTextCursor::MoveMode ) hb_parni(2), OPINT( 3, 1 )) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1602,7 +1602,7 @@ HB_FUNC_STATIC( QTEXTCURSOR_SETPOSITION )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->setPosition( PINT(1), HB_ISNIL(2) ? ( QTextCursor::MoveMode ) QTextCursor::MoveAnchor : ( QTextCursor::MoveMode ) hb_parni(2) );

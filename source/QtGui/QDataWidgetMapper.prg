@@ -80,7 +80,7 @@ QDataWidgetMapper( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QDATAWIDGETMAPPER_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
   {
     QDataWidgetMapper * obj = new QDataWidgetMapper( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -233,7 +233,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDPROPERTYNAME )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->mappedPropertyName( PQWIDGET(1) ) );
+      QByteArray * ptr = new QByteArray( obj->mappedPropertyName( PQWIDGET(1)) );
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -258,7 +258,7 @@ HB_FUNC_STATIC( QDATAWIDGETMAPPER_MAPPEDSECTION )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      RINT( obj->mappedSection( PQWIDGET(1) ) );
+      RINT( obj->mappedSection( PQWIDGET(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

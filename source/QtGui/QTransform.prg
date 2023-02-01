@@ -101,7 +101,7 @@ HB_FUNC_STATIC( QTRANSFORM_NEW )
     QTransform * obj = new QTransform();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(8, 9) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) && HB_ISNUM(7) && HB_ISNUM(8) && ( HB_ISNUM(9) || HB_ISNIL(9) ) )
+  else if( ISBETWEEN(8, 9) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) && HB_ISNUM(7) && HB_ISNUM(8) && (HB_ISNUM(9) || HB_ISNIL(9)) )
   {
     /*
     QTransform( qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33 = 1.0 )
@@ -470,7 +470,7 @@ HB_FUNC_STATIC( QTRANSFORM_INVERTED )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISLOG(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -706,7 +706,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP )
 
     if( obj != NULL )
     {
-      QPointF * ptr = new QPointF( obj->map( *PQPOINTF(1) ) );
+      QPointF * ptr = new QPointF( obj->map( *PQPOINTF(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
     }
   }
@@ -719,7 +719,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP )
 
     if( obj != NULL )
     {
-      QPoint * ptr = new QPoint( obj->map( *PQPOINT(1) ) );
+      QPoint * ptr = new QPoint( obj->map( *PQPOINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOINT", true);
     }
   }
@@ -732,7 +732,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP )
 
     if( obj != NULL )
     {
-      QLine * ptr = new QLine( obj->map( *PQLINE(1) ) );
+      QLine * ptr = new QLine( obj->map( *PQLINE(1)) );
       Qt4xHb::createReturnClass(ptr, "QLINE", true);
     }
   }
@@ -745,7 +745,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP )
 
     if( obj != NULL )
     {
-      QLineF * ptr = new QLineF( obj->map( *PQLINEF(1) ) );
+      QLineF * ptr = new QLineF( obj->map( *PQLINEF(1)) );
       Qt4xHb::createReturnClass(ptr, "QLINEF", true);
     }
   }
@@ -758,7 +758,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP )
 
     if( obj != NULL )
     {
-      QPolygonF * ptr = new QPolygonF( obj->map( *PQPOLYGONF(1) ) );
+      QPolygonF * ptr = new QPolygonF( obj->map( *PQPOLYGONF(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
   }
@@ -771,7 +771,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP )
 
     if( obj != NULL )
     {
-      QPolygon * ptr = new QPolygon( obj->map( *PQPOLYGON(1) ) );
+      QPolygon * ptr = new QPolygon( obj->map( *PQPOLYGON(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOLYGON", true);
     }
   }
@@ -784,7 +784,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP )
 
     if( obj != NULL )
     {
-      QRegion * ptr = new QRegion( obj->map( *PQREGION(1) ) );
+      QRegion * ptr = new QRegion( obj->map( *PQREGION(1)) );
       Qt4xHb::createReturnClass(ptr, "QREGION", true);
     }
   }
@@ -797,7 +797,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAP )
 
     if( obj != NULL )
     {
-      QPainterPath * ptr = new QPainterPath( obj->map( *PQPAINTERPATH(1) ) );
+      QPainterPath * ptr = new QPainterPath( obj->map( *PQPAINTERPATH(1)) );
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
   }
@@ -822,7 +822,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAPRECT )
 
     if( obj != NULL )
     {
-      QRectF * ptr = new QRectF( obj->mapRect( *PQRECTF(1) ) );
+      QRectF * ptr = new QRectF( obj->mapRect( *PQRECTF(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
     }
   }
@@ -835,7 +835,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAPRECT )
 
     if( obj != NULL )
     {
-      QRect * ptr = new QRect( obj->mapRect( *PQRECT(1) ) );
+      QRect * ptr = new QRect( obj->mapRect( *PQRECT(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
@@ -858,7 +858,7 @@ HB_FUNC_STATIC( QTRANSFORM_MAPTOPOLYGON )
     if( ISNUMPAR(1) && ISQRECT(1) )
     {
 #endif
-      QPolygon * ptr = new QPolygon( obj->mapToPolygon( *PQRECT(1) ) );
+      QPolygon * ptr = new QPolygon( obj->mapToPolygon( *PQRECT(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOLYGON", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -980,7 +980,7 @@ HB_FUNC_STATIC( QTRANSFORM_FROMSCALE )
   if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
 #endif
-    QTransform * ptr = new QTransform( QTransform::fromScale( PQREAL(1), PQREAL(2) ) );
+    QTransform * ptr = new QTransform( QTransform::fromScale( PQREAL(1), PQREAL(2)) );
     Qt4xHb::createReturnClass(ptr, "QTRANSFORM", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
@@ -1000,7 +1000,7 @@ HB_FUNC_STATIC( QTRANSFORM_FROMTRANSLATE )
   if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
   {
 #endif
-    QTransform * ptr = new QTransform( QTransform::fromTranslate( PQREAL(1), PQREAL(2) ) );
+    QTransform * ptr = new QTransform( QTransform::fromTranslate( PQREAL(1), PQREAL(2)) );
     Qt4xHb::createReturnClass(ptr, "QTRANSFORM", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
@@ -1020,7 +1020,7 @@ HB_FUNC_STATIC( QTRANSFORM_QUADTOQUAD )
   if( ISNUMPAR(3) && ISQPOLYGONF(1) && ISQPOLYGONF(2) && ISQTRANSFORM(3) )
   {
 #endif
-    RBOOL( QTransform::quadToQuad( *PQPOLYGONF(1), *PQPOLYGONF(2), *PQTRANSFORM(3) ) );
+    RBOOL( QTransform::quadToQuad( *PQPOLYGONF(1), *PQPOLYGONF(2), *PQTRANSFORM(3)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1039,7 +1039,7 @@ HB_FUNC_STATIC( QTRANSFORM_QUADTOSQUARE )
   if( ISNUMPAR(2) && ISQPOLYGONF(1) && ISQTRANSFORM(2) )
   {
 #endif
-    RBOOL( QTransform::quadToSquare( *PQPOLYGONF(1), *PQTRANSFORM(2) ) );
+    RBOOL( QTransform::quadToSquare( *PQPOLYGONF(1), *PQTRANSFORM(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1058,7 +1058,7 @@ HB_FUNC_STATIC( QTRANSFORM_SQUARETOQUAD )
   if( ISNUMPAR(2) && ISQPOLYGONF(1) && ISQTRANSFORM(2) )
   {
 #endif
-    RBOOL( QTransform::squareToQuad( *PQPOLYGONF(1), *PQTRANSFORM(2) ) );
+    RBOOL( QTransform::squareToQuad( *PQPOLYGONF(1), *PQTRANSFORM(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

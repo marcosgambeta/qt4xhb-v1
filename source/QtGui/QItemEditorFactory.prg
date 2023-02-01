@@ -150,7 +150,7 @@ HB_FUNC_STATIC( QITEMEDITORFACTORY_VALUEPROPERTYNAME )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->valuePropertyName( ( QVariant::Type ) hb_parni(1) ) );
+      QByteArray * ptr = new QByteArray( obj->valuePropertyName( ( QVariant::Type ) hb_parni(1)) );
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

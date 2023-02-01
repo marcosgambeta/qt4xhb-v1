@@ -305,7 +305,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDREGION )
 
 HB_FUNC_STATIC( QPAINTERPATH_ADDROUNDEDRECT )
 {
-  if( ISBETWEEN(3, 4) && ISQRECTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
+  if( ISBETWEEN(3, 4) && ISQRECTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)) )
   {
     /*
     void addRoundedRect( const QRectF & rect, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
@@ -319,7 +319,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ADDROUNDEDRECT )
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISBETWEEN(6, 7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) && ( HB_ISNUM(7) || HB_ISNIL(7) ) )
+  else if( ISBETWEEN(6, 7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) && (HB_ISNUM(7) || HB_ISNIL(7)) )
   {
     /*
     void addRoundedRect( qreal x, qreal y, qreal w, qreal h, qreal xRadius, qreal yRadius, Qt::SizeMode mode = Qt::AbsoluteSize )
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QPAINTERPATH_ANGLEATPERCENT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQREAL( obj->angleAtPercent( PQREAL(1) ) );
+      RQREAL( obj->angleAtPercent( PQREAL(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -559,7 +559,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CONTAINS )
 
     if( obj != NULL )
     {
-      RBOOL( obj->contains( *PQPOINTF(1) ) );
+      RBOOL( obj->contains( *PQPOINTF(1)) );
     }
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
@@ -571,7 +571,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CONTAINS )
 
     if( obj != NULL )
     {
-      RBOOL( obj->contains( *PQRECTF(1) ) );
+      RBOOL( obj->contains( *PQRECTF(1)) );
     }
   }
   else if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
@@ -583,7 +583,7 @@ HB_FUNC_STATIC( QPAINTERPATH_CONTAINS )
 
     if( obj != NULL )
     {
-      RBOOL( obj->contains( *PQPAINTERPATH(1) ) );
+      RBOOL( obj->contains( *PQPAINTERPATH(1)) );
     }
   }
   else
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QPAINTERPATH_INTERSECTED )
     if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->intersected( *PQPAINTERPATH(1) ) );
+      QPainterPath * ptr = new QPainterPath( obj->intersected( *PQPAINTERPATH(1)) );
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -762,7 +762,7 @@ HB_FUNC_STATIC( QPAINTERPATH_INTERSECTS )
 
     if( obj != NULL )
     {
-      RBOOL( obj->intersects( *PQRECTF(1) ) );
+      RBOOL( obj->intersects( *PQRECTF(1)) );
     }
   }
   else if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
@@ -774,7 +774,7 @@ HB_FUNC_STATIC( QPAINTERPATH_INTERSECTS )
 
     if( obj != NULL )
     {
-      RBOOL( obj->intersects( *PQPAINTERPATH(1) ) );
+      RBOOL( obj->intersects( *PQPAINTERPATH(1)) );
     }
   }
   else
@@ -916,7 +916,7 @@ HB_FUNC_STATIC( QPAINTERPATH_PERCENTATLENGTH )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQREAL( obj->percentAtLength( PQREAL(1) ) );
+      RQREAL( obj->percentAtLength( PQREAL(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -940,7 +940,7 @@ HB_FUNC_STATIC( QPAINTERPATH_POINTATPERCENT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->pointAtPercent( PQREAL(1) ) );
+      QPointF * ptr = new QPointF( obj->pointAtPercent( PQREAL(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1078,7 +1078,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SLOPEATPERCENT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQREAL( obj->slopeAtPercent( PQREAL(1) ) );
+      RQREAL( obj->slopeAtPercent( PQREAL(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1102,7 +1102,7 @@ HB_FUNC_STATIC( QPAINTERPATH_SUBTRACTED )
     if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->subtracted( *PQPAINTERPATH(1) ) );
+      QPainterPath * ptr = new QPainterPath( obj->subtracted( *PQPAINTERPATH(1)) );
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1151,11 +1151,11 @@ HB_FUNC_STATIC( QPAINTERPATH_TOFILLPOLYGON )
 
     if( obj != NULL )
     {
-      QPolygonF * ptr = new QPolygonF( obj->toFillPolygon( *PQTRANSFORM(1) ) );
+      QPolygonF * ptr = new QPolygonF( obj->toFillPolygon( *PQTRANSFORM(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
   }
-  else if( ISBETWEEN(0, 1) && ( ISQMATRIX(1) || HB_ISNIL(1) ) )
+  else if( ISBETWEEN(0, 1) && (ISQMATRIX(1) || HB_ISNIL(1)) )
   {
     /*
     QPolygonF toFillPolygon( const QMatrix & matrix = QMatrix() ) const
@@ -1164,7 +1164,7 @@ HB_FUNC_STATIC( QPAINTERPATH_TOFILLPOLYGON )
 
     if( obj != NULL )
     {
-      QPolygonF * ptr = new QPolygonF( obj->toFillPolygon( HB_ISNIL(1) ? QMatrix() : *static_cast<QMatrix*>( Qt4xHb::itemGetPtr(1) ) ) );
+      QPolygonF * ptr = new QPolygonF( obj->toFillPolygon( HB_ISNIL(1) ? QMatrix() : *static_cast<QMatrix*>( Qt4xHb::itemGetPtr(1)) ) );
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
   }
@@ -1186,35 +1186,35 @@ HB_FUNC_STATIC( QPAINTERPATH_TOFILLPOLYGONS )
     if( obj != NULL )
     {
       QList<QPolygonF> list = obj->toFillPolygons( *PQTRANSFORM(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QPOLYGONF");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QPOLYGONF");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QPolygonF( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QPolygonF(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QPOLYGONF", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QPOLYGONF", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
     }
   }
-  else if( ISBETWEEN(0, 1) && ( ISQMATRIX(1) || HB_ISNIL(1) ) )
+  else if( ISBETWEEN(0, 1) && (ISQMATRIX(1) || HB_ISNIL(1)) )
   {
     /*
     QList<QPolygonF> toFillPolygons( const QMatrix & matrix = QMatrix() ) const
@@ -1223,31 +1223,31 @@ HB_FUNC_STATIC( QPAINTERPATH_TOFILLPOLYGONS )
 
     if( obj != NULL )
     {
-      QList<QPolygonF> list = obj->toFillPolygons( HB_ISNIL(1) ? QMatrix() : *static_cast<QMatrix*>( Qt4xHb::itemGetPtr(1) ) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QPOLYGONF");
+      QList<QPolygonF> list = obj->toFillPolygons( HB_ISNIL(1) ? QMatrix() : *static_cast<QMatrix*>( Qt4xHb::itemGetPtr(1)) );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QPOLYGONF");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QPolygonF( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QPolygonF(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QPOLYGONF", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QPOLYGONF", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
     }
@@ -1295,35 +1295,35 @@ HB_FUNC_STATIC( QPAINTERPATH_TOSUBPATHPOLYGONS )
     if( obj != NULL )
     {
       QList<QPolygonF> list = obj->toSubpathPolygons( *PQTRANSFORM(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QPOLYGONF");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QPOLYGONF");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QPolygonF( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QPolygonF(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QPOLYGONF", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QPOLYGONF", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
     }
   }
-  else if( ISBETWEEN(0, 1) && ( ISQMATRIX(1) || HB_ISNIL(1) ) )
+  else if( ISBETWEEN(0, 1) && (ISQMATRIX(1) || HB_ISNIL(1)) )
   {
     /*
     QList<QPolygonF> toSubpathPolygons( const QMatrix & matrix = QMatrix() ) const
@@ -1332,31 +1332,31 @@ HB_FUNC_STATIC( QPAINTERPATH_TOSUBPATHPOLYGONS )
 
     if( obj != NULL )
     {
-      QList<QPolygonF> list = obj->toSubpathPolygons( HB_ISNIL(1) ? QMatrix() : *static_cast<QMatrix*>( Qt4xHb::itemGetPtr(1) ) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QPOLYGONF");
+      QList<QPolygonF> list = obj->toSubpathPolygons( HB_ISNIL(1) ? QMatrix() : *static_cast<QMatrix*>( Qt4xHb::itemGetPtr(1)) );
+      PHB_DYNS pDynSym = hb_dynsymFindName("QPOLYGONF");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QPolygonF( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QPolygonF(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QPOLYGONF", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QPOLYGONF", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
     }
@@ -1414,7 +1414,7 @@ HB_FUNC_STATIC( QPAINTERPATH_TRANSLATED )
 
     if( obj != NULL )
     {
-      QPainterPath * ptr = new QPainterPath( obj->translated( PQREAL(1), PQREAL(2) ) );
+      QPainterPath * ptr = new QPainterPath( obj->translated( PQREAL(1), PQREAL(2)) );
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
   }
@@ -1427,7 +1427,7 @@ HB_FUNC_STATIC( QPAINTERPATH_TRANSLATED )
 
     if( obj != NULL )
     {
-      QPainterPath * ptr = new QPainterPath( obj->translated( *PQPOINTF(1) ) );
+      QPainterPath * ptr = new QPainterPath( obj->translated( *PQPOINTF(1)) );
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
   }
@@ -1450,7 +1450,7 @@ HB_FUNC_STATIC( QPAINTERPATH_UNITED )
     if( ISNUMPAR(1) && ISQPAINTERPATH(1) )
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->united( *PQPAINTERPATH(1) ) );
+      QPainterPath * ptr = new QPainterPath( obj->united( *PQPAINTERPATH(1)) );
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

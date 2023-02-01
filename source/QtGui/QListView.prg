@@ -82,7 +82,7 @@ QListView( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QLISTVIEW_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
   {
     QListView * obj = new QListView( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -223,7 +223,7 @@ HB_FUNC_STATIC( QLISTVIEW_ISROWHIDDEN )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isRowHidden( PINT(1) ) );
+      RBOOL( obj->isRowHidden( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -851,7 +851,7 @@ HB_FUNC_STATIC( QLISTVIEW_INDEXAT )
     if( ISNUMPAR(1) && ISQPOINT(1) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->indexAt( *PQPOINT(1) ) );
+      QModelIndex * ptr = new QModelIndex( obj->indexAt( *PQPOINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -873,7 +873,7 @@ HB_FUNC_STATIC( QLISTVIEW_SCROLLTO )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && ISQMODELINDEX(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->scrollTo( *PQMODELINDEX(1), HB_ISNIL(2) ? ( QListView::ScrollHint ) QListView::EnsureVisible : ( QListView::ScrollHint ) hb_parni(2) );
@@ -902,7 +902,7 @@ HB_FUNC_STATIC( QLISTVIEW_VISUALRECT )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QRect * ptr = new QRect( obj->visualRect( *PQMODELINDEX(1) ) );
+      QRect * ptr = new QRect( obj->visualRect( *PQMODELINDEX(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

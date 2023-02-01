@@ -92,7 +92,7 @@ HB_FUNC_STATIC( QMATRIX4X4_NEW )
     QMatrix4x4 * obj = new QMatrix4x4();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR( 16 ) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) && HB_ISNUM(7) && HB_ISNUM(8) && HB_ISNUM(9) && HB_ISNUM(10) && HB_ISNUM(11) && HB_ISNUM(12) && HB_ISNUM(13) && HB_ISNUM(14) && HB_ISNUM(15) && HB_ISNUM( 16 ) )
+  else if( ISNUMPAR( 16) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) && HB_ISNUM(7) && HB_ISNUM(8) && HB_ISNUM(9) && HB_ISNUM(10) && HB_ISNUM(11) && HB_ISNUM(12) && HB_ISNUM(13) && HB_ISNUM(14) && HB_ISNUM(15) && HB_ISNUM( 16 ) )
   {
     /*
     QMatrix4x4( qreal m11, qreal m12, qreal m13, qreal m14, qreal m21, qreal m22, qreal m23, qreal m24, qreal m31, qreal m32, qreal m33, qreal m34, qreal m41, qreal m42, qreal m43, qreal m44 )
@@ -143,7 +143,7 @@ HB_FUNC_STATIC( QMATRIX4X4_COLUMN )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QVector4D * ptr = new QVector4D( obj->column( PINT(1) ) );
+      QVector4D * ptr = new QVector4D( obj->column( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QVECTOR4D", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -267,7 +267,7 @@ HB_FUNC_STATIC( QMATRIX4X4_INVERTED )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISLOG(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)) )
     {
 #endif
       bool par1;
@@ -345,7 +345,7 @@ HB_FUNC_STATIC( QMATRIX4X4_MAP )
 
     if( obj != NULL )
     {
-      QPoint * ptr = new QPoint( obj->map( *PQPOINT(1) ) );
+      QPoint * ptr = new QPoint( obj->map( *PQPOINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOINT", true);
     }
   }
@@ -358,7 +358,7 @@ HB_FUNC_STATIC( QMATRIX4X4_MAP )
 
     if( obj != NULL )
     {
-      QPointF * ptr = new QPointF( obj->map( *PQPOINTF(1) ) );
+      QPointF * ptr = new QPointF( obj->map( *PQPOINTF(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
     }
   }
@@ -371,7 +371,7 @@ HB_FUNC_STATIC( QMATRIX4X4_MAP )
 
     if( obj != NULL )
     {
-      QVector3D * ptr = new QVector3D( obj->map( *PQVECTOR3D(1) ) );
+      QVector3D * ptr = new QVector3D( obj->map( *PQVECTOR3D(1)) );
       Qt4xHb::createReturnClass(ptr, "QVECTOR3D", true);
     }
   }
@@ -384,7 +384,7 @@ HB_FUNC_STATIC( QMATRIX4X4_MAP )
 
     if( obj != NULL )
     {
-      QVector4D * ptr = new QVector4D( obj->map( *PQVECTOR4D(1) ) );
+      QVector4D * ptr = new QVector4D( obj->map( *PQVECTOR4D(1)) );
       Qt4xHb::createReturnClass(ptr, "QVECTOR4D", true);
     }
   }
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QMATRIX4X4_MAPRECT )
 
     if( obj != NULL )
     {
-      QRect * ptr = new QRect( obj->mapRect( *PQRECT(1) ) );
+      QRect * ptr = new QRect( obj->mapRect( *PQRECT(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QMATRIX4X4_MAPRECT )
 
     if( obj != NULL )
     {
-      QRectF * ptr = new QRectF( obj->mapRect( *PQRECTF(1) ) );
+      QRectF * ptr = new QRectF( obj->mapRect( *PQRECTF(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
     }
   }
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QMATRIX4X4_MAPVECTOR )
     if( ISNUMPAR(1) && ISQVECTOR3D(1) )
     {
 #endif
-      QVector3D * ptr = new QVector3D( obj->mapVector( *PQVECTOR3D(1) ) );
+      QVector3D * ptr = new QVector3D( obj->mapVector( *PQVECTOR3D(1)) );
       Qt4xHb::createReturnClass(ptr, "QVECTOR3D", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -610,7 +610,7 @@ HB_FUNC_STATIC( QMATRIX4X4_ROTATE )
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
+  else if( ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && (HB_ISNUM(4) || HB_ISNIL(4)) )
   {
     /*
     void rotate( qreal angle, qreal x, qreal y, qreal z = 0.0f )
@@ -643,7 +643,7 @@ HB_FUNC_STATIC( QMATRIX4X4_ROW )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QVector4D * ptr = new QVector4D( obj->row( PINT(1) ) );
+      QVector4D * ptr = new QVector4D( obj->row( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QVECTOR4D", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -821,7 +821,7 @@ HB_FUNC_STATIC( QMATRIX4X4_TOTRANSFORM )
 
     if( obj != NULL )
     {
-      QTransform * ptr = new QTransform( obj->toTransform( PQREAL(1) ) );
+      QTransform * ptr = new QTransform( obj->toTransform( PQREAL(1)) );
       Qt4xHb::createReturnClass(ptr, "QTRANSFORM", true);
     }
   }

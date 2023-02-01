@@ -1208,7 +1208,7 @@ HB_FUNC_STATIC( QPLATFORMWINDOWFORMAT_TESTOPTION )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->testOption( ( QPlatformWindowFormat::FormatOptions ) hb_parni(1) ) );
+      RBOOL( obj->testOption( ( QPlatformWindowFormat::FormatOptions ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -55,7 +55,7 @@ void QTreeWidgetSlots::itemActivated( QTreeWidgetItem * item, int column )
     hb_vmEvalBlockV( cb, 3, pSender, pItem, pColumn );
 
     hb_itemRelease( pSender );
-    hb_itemRelease( pItem );
+    hb_itemRelease(pItem);
     hb_itemRelease( pColumn );
   }
 }
@@ -75,7 +75,7 @@ void QTreeWidgetSlots::itemChanged( QTreeWidgetItem * item, int column )
     hb_vmEvalBlockV( cb, 3, pSender, pItem, pColumn );
 
     hb_itemRelease( pSender );
-    hb_itemRelease( pItem );
+    hb_itemRelease(pItem);
     hb_itemRelease( pColumn );
   }
 }
@@ -95,7 +95,7 @@ void QTreeWidgetSlots::itemClicked( QTreeWidgetItem * item, int column )
     hb_vmEvalBlockV( cb, 3, pSender, pItem, pColumn );
 
     hb_itemRelease( pSender );
-    hb_itemRelease( pItem );
+    hb_itemRelease(pItem);
     hb_itemRelease( pColumn );
   }
 }
@@ -114,7 +114,7 @@ void QTreeWidgetSlots::itemCollapsed( QTreeWidgetItem * item )
     hb_vmEvalBlockV( cb, 2, pSender, pItem );
 
     hb_itemRelease( pSender );
-    hb_itemRelease( pItem );
+    hb_itemRelease(pItem);
   }
 }
 
@@ -133,7 +133,7 @@ void QTreeWidgetSlots::itemDoubleClicked( QTreeWidgetItem * item, int column )
     hb_vmEvalBlockV( cb, 3, pSender, pItem, pColumn );
 
     hb_itemRelease( pSender );
-    hb_itemRelease( pItem );
+    hb_itemRelease(pItem);
     hb_itemRelease( pColumn );
   }
 }
@@ -153,7 +153,7 @@ void QTreeWidgetSlots::itemEntered( QTreeWidgetItem * item, int column )
     hb_vmEvalBlockV( cb, 3, pSender, pItem, pColumn );
 
     hb_itemRelease( pSender );
-    hb_itemRelease( pItem );
+    hb_itemRelease(pItem);
     hb_itemRelease( pColumn );
   }
 }
@@ -172,7 +172,7 @@ void QTreeWidgetSlots::itemExpanded( QTreeWidgetItem * item )
     hb_vmEvalBlockV( cb, 2, pSender, pItem );
 
     hb_itemRelease( pSender );
-    hb_itemRelease( pItem );
+    hb_itemRelease(pItem);
   }
 }
 
@@ -191,7 +191,7 @@ void QTreeWidgetSlots::itemPressed( QTreeWidgetItem * item, int column )
     hb_vmEvalBlockV( cb, 3, pSender, pItem, pColumn );
 
     hb_itemRelease( pSender );
-    hb_itemRelease( pItem );
+    hb_itemRelease(pItem);
     hb_itemRelease( pColumn );
   }
 }

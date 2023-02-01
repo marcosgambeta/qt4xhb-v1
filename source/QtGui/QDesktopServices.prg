@@ -59,7 +59,7 @@ HB_FUNC_STATIC( QDESKTOPSERVICES_DISPLAYNAME )
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
-    RQSTRING( QDesktopServices::displayName( ( QDesktopServices::StandardLocation ) hb_parni(1) ) );
+    RQSTRING( QDesktopServices::displayName( ( QDesktopServices::StandardLocation ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -78,7 +78,7 @@ HB_FUNC_STATIC( QDESKTOPSERVICES_OPENURL )
   if( ISNUMPAR(1) && ISQURL(1) )
   {
 #endif
-    RBOOL( QDesktopServices::openUrl( *PQURL(1) ) );
+    RBOOL( QDesktopServices::openUrl( *PQURL(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -118,7 +118,7 @@ HB_FUNC_STATIC( QDESKTOPSERVICES_STORAGELOCATION )
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
-    RQSTRING( QDesktopServices::storageLocation( ( QDesktopServices::StandardLocation ) hb_parni(1) ) );
+    RQSTRING( QDesktopServices::storageLocation( ( QDesktopServices::StandardLocation ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

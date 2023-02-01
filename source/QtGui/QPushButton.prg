@@ -49,7 +49,7 @@ RETURN
 
 HB_FUNC_STATIC( QPUSHBUTTON_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
   {
     /*
     QPushButton( QWidget * parent = 0 )
@@ -57,7 +57,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_NEW )
     QPushButton * obj = new QPushButton( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) )
   {
     /*
     QPushButton( const QString & text, QWidget * parent = 0 )
@@ -65,7 +65,7 @@ HB_FUNC_STATIC( QPUSHBUTTON_NEW )
     QPushButton * obj = new QPushButton( PQSTRING(1), OPQWIDGET( 2, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(2, 3) && ( ISQICON(1) || HB_ISCHAR(1) ) && HB_ISCHAR(2) && ( ISQWIDGET(3) || HB_ISNIL(3) ) )
+  else if( ISBETWEEN(2, 3) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && (ISQWIDGET(3) || HB_ISNIL(3)) )
   {
     /*
     QPushButton( const QIcon & icon, const QString & text, QWidget * parent = 0 )

@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QFILEOPENEVENT_OPENFILE )
     if( ISNUMPAR(2) && ISQFILE(1) && HB_ISNUM(2) )
     {
 #endif
-      RBOOL( obj->openFile( *PQFILE(1), ( QIODevice::OpenMode ) hb_parni(2) ) );
+      RBOOL( obj->openFile( *PQFILE(1), ( QIODevice::OpenMode ) hb_parni(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -198,7 +198,7 @@ void QTableWidgetSlots::itemActivated( QTableWidgetItem * item )
     hb_vmEvalBlockV( cb, 2, pSender, pItem );
 
     hb_itemRelease( pSender );
-    hb_itemRelease( pItem );
+    hb_itemRelease(pItem);
   }
 }
 
@@ -216,7 +216,7 @@ void QTableWidgetSlots::itemChanged( QTableWidgetItem * item )
     hb_vmEvalBlockV( cb, 2, pSender, pItem );
 
     hb_itemRelease( pSender );
-    hb_itemRelease( pItem );
+    hb_itemRelease(pItem);
   }
 }
 
@@ -234,7 +234,7 @@ void QTableWidgetSlots::itemClicked( QTableWidgetItem * item )
     hb_vmEvalBlockV( cb, 2, pSender, pItem );
 
     hb_itemRelease( pSender );
-    hb_itemRelease( pItem );
+    hb_itemRelease(pItem);
   }
 }
 
@@ -252,7 +252,7 @@ void QTableWidgetSlots::itemDoubleClicked( QTableWidgetItem * item )
     hb_vmEvalBlockV( cb, 2, pSender, pItem );
 
     hb_itemRelease( pSender );
-    hb_itemRelease( pItem );
+    hb_itemRelease(pItem);
   }
 }
 
@@ -270,7 +270,7 @@ void QTableWidgetSlots::itemEntered( QTableWidgetItem * item )
     hb_vmEvalBlockV( cb, 2, pSender, pItem );
 
     hb_itemRelease( pSender );
-    hb_itemRelease( pItem );
+    hb_itemRelease(pItem);
   }
 }
 
@@ -288,7 +288,7 @@ void QTableWidgetSlots::itemPressed( QTableWidgetItem * item )
     hb_vmEvalBlockV( cb, 2, pSender, pItem );
 
     hb_itemRelease( pSender );
-    hb_itemRelease( pItem );
+    hb_itemRelease(pItem);
   }
 }
 

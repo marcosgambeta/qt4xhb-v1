@@ -77,7 +77,7 @@ static QAction * createAction( QObject * parent = 0 )
 HB_FUNC_STATIC( QWHATSTHIS_CREATEACTION )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
   {
 #endif
     QAction * ptr = QWhatsThis::createAction( OPQOBJECT( 1, 0 ) );
@@ -179,7 +179,7 @@ static void showText( const QPoint & pos, const QString & text, QWidget * w = 0 
 HB_FUNC_STATIC( QWHATSTHIS_SHOWTEXT )
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISBETWEEN(2, 3) && ISQPOINT(1) && HB_ISCHAR(2) && ( ISQWIDGET(3) || HB_ISNIL(3) ) )
+  if( ISBETWEEN(2, 3) && ISQPOINT(1) && HB_ISCHAR(2) && (ISQWIDGET(3) || HB_ISNIL(3)) )
   {
 #endif
     QWhatsThis::showText( *PQPOINT(1), PQSTRING(2), OPQWIDGET( 3, 0 ) );

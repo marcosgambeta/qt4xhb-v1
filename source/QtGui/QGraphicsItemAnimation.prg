@@ -73,7 +73,7 @@ QGraphicsItemAnimation( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
   {
     QGraphicsItemAnimation * obj = new QGraphicsItemAnimation( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_HORIZONTALSCALEAT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQREAL( obj->horizontalScaleAt( PQREAL(1) ) );
+      RQREAL( obj->horizontalScaleAt( PQREAL(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -165,7 +165,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_HORIZONTALSHEARAT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQREAL( obj->horizontalShearAt( PQREAL(1) ) );
+      RQREAL( obj->horizontalShearAt( PQREAL(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -214,7 +214,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_MATRIXAT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QMatrix * ptr = new QMatrix( obj->matrixAt( PQREAL(1) ) );
+      QMatrix * ptr = new QMatrix( obj->matrixAt( PQREAL(1)) );
       Qt4xHb::createReturnClass(ptr, "QMATRIX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -239,7 +239,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_POSAT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QPointF * ptr = new QPointF( obj->posAt( PQREAL(1) ) );
+      QPointF * ptr = new QPointF( obj->posAt( PQREAL(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -264,7 +264,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_ROTATIONAT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQREAL( obj->rotationAt( PQREAL(1) ) );
+      RQREAL( obj->rotationAt( PQREAL(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -495,7 +495,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_VERTICALSCALEAT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQREAL( obj->verticalScaleAt( PQREAL(1) ) );
+      RQREAL( obj->verticalScaleAt( PQREAL(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -519,7 +519,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_VERTICALSHEARAT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQREAL( obj->verticalShearAt( PQREAL(1) ) );
+      RQREAL( obj->verticalShearAt( PQREAL(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -543,7 +543,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_XTRANSLATIONAT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQREAL( obj->xTranslationAt( PQREAL(1) ) );
+      RQREAL( obj->xTranslationAt( PQREAL(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -567,7 +567,7 @@ HB_FUNC_STATIC( QGRAPHICSITEMANIMATION_YTRANSLATIONAT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQREAL( obj->yTranslationAt( PQREAL(1) ) );
+      RQREAL( obj->yTranslationAt( PQREAL(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

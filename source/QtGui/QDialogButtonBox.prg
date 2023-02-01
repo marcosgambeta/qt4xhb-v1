@@ -64,7 +64,7 @@ RETURN
 
 HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
   {
     /*
     QDialogButtonBox( QWidget * parent = 0 )
@@ -72,7 +72,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW )
     QDialogButtonBox * obj = new QDialogButtonBox( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2)) )
   {
     /*
     QDialogButtonBox( Qt::Orientation orientation, QWidget * parent = 0 )
@@ -80,7 +80,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_NEW )
     QDialogButtonBox * obj = new QDialogButtonBox( ( Qt::Orientation ) hb_parni(1), OPQWIDGET( 2, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 3) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( ISQWIDGET(3) || HB_ISNIL(3) ) )
+  else if( ISBETWEEN(1, 3) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (ISQWIDGET(3) || HB_ISNIL(3)) )
   {
     /*
     QDialogButtonBox( QDialogButtonBox::StandardButtons buttons, Qt::Orientation orientation = Qt::Horizontal, QWidget * parent = 0 )
@@ -198,7 +198,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTONROLE )
     if( ISNUMPAR(1) && ISQABSTRACTBUTTON(1) )
     {
 #endif
-      RENUM( obj->buttonRole( PQABSTRACTBUTTON(1) ) );
+      RENUM( obj->buttonRole( PQABSTRACTBUTTON(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -223,27 +223,27 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_BUTTONS )
     {
 #endif
       QList<QAbstractButton *> list = obj->buttons();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QABSTRACTBUTTON");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QABSTRACTBUTTON");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
           PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QABSTRACTBUTTON", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QABSTRACTBUTTON", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -447,7 +447,7 @@ HB_FUNC_STATIC( QDIALOGBUTTONBOX_STANDARDBUTTON )
     if( ISNUMPAR(1) && ISQABSTRACTBUTTON(1) )
     {
 #endif
-      RENUM( obj->standardButton( PQABSTRACTBUTTON(1) ) );
+      RENUM( obj->standardButton( PQABSTRACTBUTTON(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

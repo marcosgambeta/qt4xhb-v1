@@ -90,15 +90,15 @@ HB_FUNC_STATIC( QPEN_NEW )
     QPen * obj = new QPen( ( Qt::PenStyle ) hb_parni(1) );
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ( ISQCOLOR(1) || HB_ISCHAR(1) ) )
+  else if( ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)) )
   {
     /*
     QPen( const QColor & color )
     */
-    QPen * obj = new QPen( HB_ISOBJECT(1) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(1) ) : QColor( hb_parc(1) ) );
+    QPen * obj = new QPen( HB_ISOBJECT(1) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(1) ) : QColor( hb_parc(1)) );
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(2, 5) && ISQBRUSH(1) && HB_ISNUM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) && ( HB_ISNUM(5) || HB_ISNIL(5) ) )
+  else if( ISBETWEEN(2, 5) && ISQBRUSH(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)) )
   {
     /*
     QPen( const QBrush & brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt::PenCapStyle cap = Qt::SquareCap, Qt::PenJoinStyle join = Qt::BevelJoin )
@@ -253,7 +253,7 @@ HB_FUNC_STATIC( QPEN_DASHPATTERN )
       {
         PHB_ITEM pItem = hb_itemPutND( NULL, (qreal) list[i] );
         hb_arrayAddForward( pArray, pItem );
-        hb_itemRelease( pItem );
+        hb_itemRelease(pItem);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -424,10 +424,10 @@ HB_FUNC_STATIC( QPEN_SETCOLOR )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( ISQCOLOR(1) || HB_ISCHAR(1) ) )
+    if( ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)) )
     {
 #endif
-      obj->setColor( HB_ISOBJECT(1) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(1) ) : QColor( hb_parc(1) ) );
+      obj->setColor( HB_ISOBJECT(1) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(1) ) : QColor( hb_parc(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -506,8 +506,8 @@ HB_FUNC_STATIC( QPEN_SETDASHPATTERN )
     {
 #endif
       QVector<qreal> par1;
-      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
-      int nLen1 = hb_arrayLen( aList1 );
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      const int nLen1 = hb_arrayLen(aList1);
       qreal temp1;
       for( int i1 = 0; i1 < nLen1; i1++ )
       {

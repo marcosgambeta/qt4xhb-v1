@@ -64,7 +64,7 @@ QDirectPainter( QObject * parent = 0, QDirectPainter::SurfaceFlag flag = QDirect
 */
 HB_FUNC_STATIC( QDIRECTPAINTER_NEW )
 {
-  if( ISBETWEEN(0, 2) && ( ISQOBJECT(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(0, 2) && (ISQOBJECT(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)) )
   {
     QDirectPainter * obj = new QDirectPainter( OPQOBJECT( 1, 0 ), HB_ISNIL(2) ? ( QDirectPainter::SurfaceFlag ) QDirectPainter::NonReserved : ( QDirectPainter::SurfaceFlag ) hb_parni(2) );
     Qt4xHb::returnNewObject(obj, false);
@@ -370,7 +370,7 @@ HB_FUNC_STATIC( QDIRECTPAINTER_STARTPAINTING )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISLOG(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)) )
     {
 #endif
       obj->startPainting( OPBOOL( 1, true ) );

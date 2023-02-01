@@ -116,7 +116,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_ADDWIDGET )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      RINT( obj->addWidget( PQWIDGET(1) ) );
+      RINT( obj->addWidget( PQWIDGET(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -189,7 +189,7 @@ HB_FUNC_STATIC( QSTACKEDLAYOUT_INSERTWIDGET )
     if( ISNUMPAR(2) && HB_ISNUM(1) && ISQWIDGET(2) )
     {
 #endif
-      RINT( obj->insertWidget( PINT(1), PQWIDGET(2) ) );
+      RINT( obj->insertWidget( PINT(1), PQWIDGET(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

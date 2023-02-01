@@ -246,7 +246,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTOIMAGE )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->jumpToImage( PINT(1) ) );
+      RBOOL( obj->jumpToImage( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -342,7 +342,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_OPTION )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->option( ( QImageIOHandler::ImageOption ) hb_parni(1) ) );
+      QVariant * ptr = new QVariant( obj->option( ( QImageIOHandler::ImageOption ) hb_parni(1)) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -367,7 +367,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_READ )
     if( ISNUMPAR(1) && ISQIMAGE(1) )
     {
 #endif
-      RBOOL( obj->read( PQIMAGE(1) ) );
+      RBOOL( obj->read( PQIMAGE(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -469,7 +469,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SUPPORTSOPTION )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->supportsOption( ( QImageIOHandler::ImageOption ) hb_parni(1) ) );
+      RBOOL( obj->supportsOption( ( QImageIOHandler::ImageOption ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -493,7 +493,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_WRITE )
     if( ISNUMPAR(1) && ISQIMAGE(1) )
     {
 #endif
-      RBOOL( obj->write( *PQIMAGE(1) ) );
+      RBOOL( obj->write( *PQIMAGE(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -74,7 +74,7 @@ QTextBrowser( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QTEXTBROWSER_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
   {
     QTextBrowser * obj = new QTextBrowser( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_HISTORYTITLE )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->historyTitle( PINT(1) ) );
+      RQSTRING( obj->historyTitle( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_HISTORYURL )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QUrl * ptr = new QUrl( obj->historyUrl( PINT(1) ) );
+      QUrl * ptr = new QUrl( obj->historyUrl( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QURL", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -444,7 +444,7 @@ HB_FUNC_STATIC( QTEXTBROWSER_LOADRESOURCE )
     if( ISNUMPAR(2) && HB_ISNUM(1) && ISQURL(2) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->loadResource( PINT(1), *PQURL(2) ) );
+      QVariant * ptr = new QVariant( obj->loadResource( PINT(1), *PQURL(2)) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

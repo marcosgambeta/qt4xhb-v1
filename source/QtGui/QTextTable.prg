@@ -141,7 +141,7 @@ HB_FUNC_STATIC( QTEXTTABLE_CELLAT )
 
     if( obj != NULL )
     {
-      QTextTableCell * ptr = new QTextTableCell( obj->cellAt( PINT(1), PINT(2) ) );
+      QTextTableCell * ptr = new QTextTableCell( obj->cellAt( PINT(1), PINT(2)) );
       Qt4xHb::createReturnClass(ptr, "QTEXTTABLECELL", true);
     }
   }
@@ -154,7 +154,7 @@ HB_FUNC_STATIC( QTEXTTABLE_CELLAT )
 
     if( obj != NULL )
     {
-      QTextTableCell * ptr = new QTextTableCell( obj->cellAt( PINT(1) ) );
+      QTextTableCell * ptr = new QTextTableCell( obj->cellAt( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QTEXTTABLECELL", true);
     }
   }
@@ -167,7 +167,7 @@ HB_FUNC_STATIC( QTEXTTABLE_CELLAT )
 
     if( obj != NULL )
     {
-      QTextTableCell * ptr = new QTextTableCell( obj->cellAt( *PQTEXTCURSOR(1) ) );
+      QTextTableCell * ptr = new QTextTableCell( obj->cellAt( *PQTEXTCURSOR(1)) );
       Qt4xHb::createReturnClass(ptr, "QTEXTTABLECELL", true);
     }
   }
@@ -405,7 +405,7 @@ HB_FUNC_STATIC( QTEXTTABLE_ROWEND )
     if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
     {
 #endif
-      QTextCursor * ptr = new QTextCursor( obj->rowEnd( *PQTEXTCURSOR(1) ) );
+      QTextCursor * ptr = new QTextCursor( obj->rowEnd( *PQTEXTCURSOR(1)) );
       Qt4xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -430,7 +430,7 @@ HB_FUNC_STATIC( QTEXTTABLE_ROWSTART )
     if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
     {
 #endif
-      QTextCursor * ptr = new QTextCursor( obj->rowStart( *PQTEXTCURSOR(1) ) );
+      QTextCursor * ptr = new QTextCursor( obj->rowStart( *PQTEXTCURSOR(1)) );
       Qt4xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

@@ -104,12 +104,12 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEW )
     QTextLayout * obj = new QTextLayout( PQSTRING(1) );
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQFONT(2) && ( HB_ISOBJECT(3) || HB_ISNIL(3) ) )
+  else if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && ISQFONT(2) && (HB_ISOBJECT(3) || HB_ISNIL(3)) )
   {
     /*
     QTextLayout( const QString & text, const QFont & font, QPaintDevice * paintdevice = 0 )
     */
-    QTextLayout * obj = new QTextLayout( PQSTRING(1), *PQFONT(2), HB_ISNIL(3) ? 0 : static_cast<QPaintDevice*>( Qt4xHb::itemGetPtr(3) ) );
+    QTextLayout * obj = new QTextLayout( PQSTRING(1), *PQFONT(2), HB_ISNIL(3) ? 0 : static_cast<QPaintDevice*>( Qt4xHb::itemGetPtr(3)) );
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -411,30 +411,30 @@ HB_FUNC_STATIC( QTEXTLAYOUT_GLYPHRUNS )
     {
 #endif
       QList<QGlyphRun> list = obj->glyphRuns();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QGLYPHRUN");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QGLYPHRUN");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QGlyphRun( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QGlyphRun(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGLYPHRUN", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QGLYPHRUN", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -460,7 +460,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_ISVALIDCURSORPOSITION )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isValidCursorPosition( PINT(1) ) );
+      RBOOL( obj->isValidCursorPosition( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -484,7 +484,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LEFTCURSORPOSITION )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->leftCursorPosition( PINT(1) ) );
+      RINT( obj->leftCursorPosition( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -508,7 +508,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LINEAT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QTextLine * ptr = new QTextLine( obj->lineAt( PINT(1) ) );
+      QTextLine * ptr = new QTextLine( obj->lineAt( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QTEXTLINE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -557,7 +557,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_LINEFORTEXTPOSITION )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QTextLine * ptr = new QTextLine( obj->lineForTextPosition( PINT(1) ) );
+      QTextLine * ptr = new QTextLine( obj->lineForTextPosition( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QTEXTLINE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -627,10 +627,10 @@ HB_FUNC_STATIC( QTEXTLAYOUT_NEXTCURSORPOSITION )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
-      RINT( obj->nextCursorPosition( PINT(1), HB_ISNIL(2) ? ( QTextLayout::CursorMode ) QTextLayout::SkipCharacters : ( QTextLayout::CursorMode ) hb_parni(2) ) );
+      RINT( obj->nextCursorPosition( PINT(1), HB_ISNIL(2) ? ( QTextLayout::CursorMode ) QTextLayout::SkipCharacters : ( QTextLayout::CursorMode ) hb_parni(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -724,10 +724,10 @@ HB_FUNC_STATIC( QTEXTLAYOUT_PREVIOUSCURSORPOSITION )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
-      RINT( obj->previousCursorPosition( PINT(1), HB_ISNIL(2) ? ( QTextLayout::CursorMode ) QTextLayout::SkipCharacters : ( QTextLayout::CursorMode ) hb_parni(2) ) );
+      RINT( obj->previousCursorPosition( PINT(1), HB_ISNIL(2) ? ( QTextLayout::CursorMode ) QTextLayout::SkipCharacters : ( QTextLayout::CursorMode ) hb_parni(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -751,7 +751,7 @@ HB_FUNC_STATIC( QTEXTLAYOUT_RIGHTCURSORPOSITION )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->rightCursorPosition( PINT(1) ) );
+      RINT( obj->rightCursorPosition( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

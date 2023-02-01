@@ -58,7 +58,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_ACTIONTEXT )
     if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
     {
 #endif
-      RQSTRING( obj->actionText( PINT(1), ( QAccessibleObject::Text ) hb_parni(2), PINT(3) ) );
+      RQSTRING( obj->actionText( PINT(1), ( QAccessibleObject::Text ) hb_parni(2), PINT(3)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -87,7 +87,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_DOACTION )
       int nLen3 = hb_arrayLen( aList3 );
       for( int i3 = 0; i3 < nLen3; i3++ )
       {
-        par3 << *static_cast<QVariant*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 ) ) );
+        par3 << *static_cast<QVariant*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList3, i3+1 ), "POINTER", 0 )) );
       }
       RBOOL( obj->doAction( PINT(1), PINT(2), par3 ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -162,7 +162,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_RECT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QRect * ptr = new QRect( obj->rect( PINT(1) ) );
+      QRect * ptr = new QRect( obj->rect( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -213,7 +213,7 @@ HB_FUNC_STATIC( QACCESSIBLEOBJECT_USERACTIONCOUNT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->userActionCount( PINT(1) ) );
+      RINT( obj->userActionCount( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -53,7 +53,7 @@ QSound( const QString & filename, QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QSOUND_NEW )
 {
-  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)) )
   {
     QSound * obj = new QSound( PQSTRING(1), OPQOBJECT( 2, 0 ) );
     Qt4xHb::returnNewObject(obj, false);

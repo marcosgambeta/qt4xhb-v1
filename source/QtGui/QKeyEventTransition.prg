@@ -46,7 +46,7 @@ RETURN
 
 HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQSTATE(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQSTATE(1) || HB_ISNIL(1)) )
   {
     /*
     QKeyEventTransition( QState * sourceState = 0 )
@@ -54,7 +54,7 @@ HB_FUNC_STATIC( QKEYEVENTTRANSITION_NEW )
     QKeyEventTransition * obj = new QKeyEventTransition( OPQSTATE( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(3, 4) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISNUM(3) && ( ISQSTATE(4) || HB_ISNIL(4) ) )
+  else if( ISBETWEEN(3, 4) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISQSTATE(4) || HB_ISNIL(4)) )
   {
     /*
     QKeyEventTransition( QObject * object, QEvent::Type type, int key, QState * sourceState = 0 )

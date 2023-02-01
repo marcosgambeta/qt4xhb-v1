@@ -374,7 +374,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_BOUNDINGREGION )
     if( ISNUMPAR(1) && ISQTRANSFORM(1) )
     {
 #endif
-      QRegion * ptr = new QRegion( obj->boundingRegion( *PQTRANSFORM(1) ) );
+      QRegion * ptr = new QRegion( obj->boundingRegion( *PQTRANSFORM(1)) );
       Qt4xHb::createReturnClass(ptr, "QREGION", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -448,27 +448,27 @@ HB_FUNC_STATIC( QGRAPHICSITEM_CHILDITEMS )
     {
 #endif
       QList<QGraphicsItem *> list = obj->childItems();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
           PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGRAPHICSITEM", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QGRAPHICSITEM", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -567,10 +567,10 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHITEM )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQGRAPHICSITEM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && ISQGRAPHICSITEM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
-      RBOOL( obj->collidesWithItem( PQGRAPHICSITEM(1), HB_ISNIL(2) ? ( Qt::ItemSelectionMode ) Qt::IntersectsItemShape : ( Qt::ItemSelectionMode ) hb_parni(2) ) );
+      RBOOL( obj->collidesWithItem( PQGRAPHICSITEM(1), HB_ISNIL(2) ? ( Qt::ItemSelectionMode ) Qt::IntersectsItemShape : ( Qt::ItemSelectionMode ) hb_parni(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -591,10 +591,10 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDESWITHPATH )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQPAINTERPATH(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && ISQPAINTERPATH(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
-      RBOOL( obj->collidesWithPath( *PQPAINTERPATH(1), HB_ISNIL(2) ? ( Qt::ItemSelectionMode ) Qt::IntersectsItemShape : ( Qt::ItemSelectionMode ) hb_parni(2) ) );
+      RBOOL( obj->collidesWithPath( *PQPAINTERPATH(1), HB_ISNIL(2) ? ( Qt::ItemSelectionMode ) Qt::IntersectsItemShape : ( Qt::ItemSelectionMode ) hb_parni(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -615,31 +615,31 @@ HB_FUNC_STATIC( QGRAPHICSITEM_COLLIDINGITEMS )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
     {
 #endif
       QList<QGraphicsItem *> list = obj->collidingItems( HB_ISNIL(1) ? ( Qt::ItemSelectionMode ) Qt::IntersectsItemShape : ( Qt::ItemSelectionMode ) hb_parni(1) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSITEM");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
           PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGRAPHICSITEM", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QGRAPHICSITEM", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -690,7 +690,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_CONTAINS )
     if( ISNUMPAR(1) && ISQPOINTF(1) )
     {
 #endif
-      RBOOL( obj->contains( *PQPOINTF(1) ) );
+      RBOOL( obj->contains( *PQPOINTF(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -739,7 +739,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_DATA )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->data( PINT(1) ) );
+      QVariant * ptr = new QVariant( obj->data( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -764,7 +764,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_DEVICETRANSFORM )
     if( ISNUMPAR(1) && ISQTRANSFORM(1) )
     {
 #endif
-      QTransform * ptr = new QTransform( obj->deviceTransform( *PQTRANSFORM(1) ) );
+      QTransform * ptr = new QTransform( obj->deviceTransform( *PQTRANSFORM(1)) );
       Qt4xHb::createReturnClass(ptr, "QTRANSFORM", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -802,7 +802,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_EFFECTIVEOPACITY )
 
 HB_FUNC_STATIC( QGRAPHICSITEM_ENSUREVISIBLE )
 {
-  if( ISBETWEEN(0, 3) && ( ISQRECTF(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+  if( ISBETWEEN(0, 3) && (ISQRECTF(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) )
   {
     /*
     void ensureVisible( const QRectF & rect = QRectF(), int xmargin = 50, int ymargin = 50 )
@@ -816,7 +816,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ENSUREVISIBLE )
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ( HB_ISNUM(5) || HB_ISNIL(5) ) && ( HB_ISNUM(6) || HB_ISNIL(6) ) )
+  else if( ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5) || HB_ISNIL(5)) && (HB_ISNUM(6) || HB_ISNIL(6)) )
   {
     /*
     void ensureVisible( qreal x, qreal y, qreal w, qreal h, int xmargin = 50, int ymargin = 50 )
@@ -1197,7 +1197,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISANCESTOROF )
     if( ISNUMPAR(1) && ISQGRAPHICSITEM(1) )
     {
 #endif
-      RBOOL( obj->isAncestorOf( PQGRAPHICSITEM(1) ) );
+      RBOOL( obj->isAncestorOf( PQGRAPHICSITEM(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1279,7 +1279,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCURED )
 
     if( obj != NULL )
     {
-      RBOOL( obj->isObscured( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
+      RBOOL( obj->isObscured( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)) );
     }
   }
   else if( ISNUMPAR(1) && ISQRECTF(1) )
@@ -1291,7 +1291,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCURED )
 
     if( obj != NULL )
     {
-      RBOOL( obj->isObscured( *PQRECTF(1) ) );
+      RBOOL( obj->isObscured( *PQRECTF(1)) );
     }
   }
   else
@@ -1313,7 +1313,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISOBSCUREDBY )
     if( ISNUMPAR(1) && ISQGRAPHICSITEM(1) )
     {
 #endif
-      RBOOL( obj->isObscuredBy( PQGRAPHICSITEM(1) ) );
+      RBOOL( obj->isObscuredBy( PQGRAPHICSITEM(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1433,7 +1433,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ISVISIBLETO )
     if( ISNUMPAR(1) && ISQGRAPHICSITEM(1) )
     {
 #endif
-      RBOOL( obj->isVisibleTo( PQGRAPHICSITEM(1) ) );
+      RBOOL( obj->isVisibleTo( PQGRAPHICSITEM(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1502,7 +1502,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_ITEMTRANSFORM )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQGRAPHICSITEM(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && ISQGRAPHICSITEM(1) && (HB_ISLOG(2) || HB_ISNIL(2)) )
     {
 #endif
       bool par2;
@@ -1530,7 +1530,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMITEM )
 
     if( obj != NULL )
     {
-      QPointF * ptr = new QPointF( obj->mapFromItem( PQGRAPHICSITEM(1), *PQPOINTF(2) ) );
+      QPointF * ptr = new QPointF( obj->mapFromItem( PQGRAPHICSITEM(1), *PQPOINTF(2)) );
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
     }
   }
@@ -1543,7 +1543,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMITEM )
 
     if( obj != NULL )
     {
-      QPolygonF * ptr = new QPolygonF( obj->mapFromItem( PQGRAPHICSITEM(1), *PQRECTF(2) ) );
+      QPolygonF * ptr = new QPolygonF( obj->mapFromItem( PQGRAPHICSITEM(1), *PQRECTF(2)) );
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
   }
@@ -1556,7 +1556,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMITEM )
 
     if( obj != NULL )
     {
-      QPolygonF * ptr = new QPolygonF( obj->mapFromItem( PQGRAPHICSITEM(1), *PQPOLYGONF(2) ) );
+      QPolygonF * ptr = new QPolygonF( obj->mapFromItem( PQGRAPHICSITEM(1), *PQPOLYGONF(2)) );
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
   }
@@ -1569,7 +1569,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMITEM )
 
     if( obj != NULL )
     {
-      QPainterPath * ptr = new QPainterPath( obj->mapFromItem( PQGRAPHICSITEM(1), *PQPAINTERPATH(2) ) );
+      QPainterPath * ptr = new QPainterPath( obj->mapFromItem( PQGRAPHICSITEM(1), *PQPAINTERPATH(2)) );
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
   }
@@ -1582,7 +1582,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMITEM )
 
     if( obj != NULL )
     {
-      QPolygonF * ptr = new QPolygonF( obj->mapFromItem( PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5) ) );
+      QPolygonF * ptr = new QPolygonF( obj->mapFromItem( PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5)) );
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
   }
@@ -1595,7 +1595,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMITEM )
 
     if( obj != NULL )
     {
-      QPointF * ptr = new QPointF( obj->mapFromItem( PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3) ) );
+      QPointF * ptr = new QPointF( obj->mapFromItem( PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3)) );
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
     }
   }
@@ -1616,7 +1616,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMPARENT )
 
     if( obj != NULL )
     {
-      QPointF * ptr = new QPointF( obj->mapFromParent( *PQPOINTF(1) ) );
+      QPointF * ptr = new QPointF( obj->mapFromParent( *PQPOINTF(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
     }
   }
@@ -1629,7 +1629,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMPARENT )
 
     if( obj != NULL )
     {
-      QPolygonF * ptr = new QPolygonF( obj->mapFromParent( *PQRECTF(1) ) );
+      QPolygonF * ptr = new QPolygonF( obj->mapFromParent( *PQRECTF(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
   }
@@ -1642,7 +1642,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMPARENT )
 
     if( obj != NULL )
     {
-      QPolygonF * ptr = new QPolygonF( obj->mapFromParent( *PQPOLYGONF(1) ) );
+      QPolygonF * ptr = new QPolygonF( obj->mapFromParent( *PQPOLYGONF(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
   }
@@ -1655,7 +1655,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMPARENT )
 
     if( obj != NULL )
     {
-      QPainterPath * ptr = new QPainterPath( obj->mapFromParent( *PQPAINTERPATH(1) ) );
+      QPainterPath * ptr = new QPainterPath( obj->mapFromParent( *PQPAINTERPATH(1)) );
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
   }
@@ -1668,7 +1668,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMPARENT )
 
     if( obj != NULL )
     {
-      QPolygonF * ptr = new QPolygonF( obj->mapFromParent( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
+      QPolygonF * ptr = new QPolygonF( obj->mapFromParent( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)) );
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
   }
@@ -1681,7 +1681,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMPARENT )
 
     if( obj != NULL )
     {
-      QPointF * ptr = new QPointF( obj->mapFromParent( PQREAL(1), PQREAL(2) ) );
+      QPointF * ptr = new QPointF( obj->mapFromParent( PQREAL(1), PQREAL(2)) );
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
     }
   }
@@ -1702,7 +1702,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMSCENE )
 
     if( obj != NULL )
     {
-      QPointF * ptr = new QPointF( obj->mapFromScene( *PQPOINTF(1) ) );
+      QPointF * ptr = new QPointF( obj->mapFromScene( *PQPOINTF(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
     }
   }
@@ -1715,7 +1715,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMSCENE )
 
     if( obj != NULL )
     {
-      QPolygonF * ptr = new QPolygonF( obj->mapFromScene( *PQRECTF(1) ) );
+      QPolygonF * ptr = new QPolygonF( obj->mapFromScene( *PQRECTF(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
   }
@@ -1728,7 +1728,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMSCENE )
 
     if( obj != NULL )
     {
-      QPolygonF * ptr = new QPolygonF( obj->mapFromScene( *PQPOLYGONF(1) ) );
+      QPolygonF * ptr = new QPolygonF( obj->mapFromScene( *PQPOLYGONF(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
   }
@@ -1741,7 +1741,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMSCENE )
 
     if( obj != NULL )
     {
-      QPainterPath * ptr = new QPainterPath( obj->mapFromScene( *PQPAINTERPATH(1) ) );
+      QPainterPath * ptr = new QPainterPath( obj->mapFromScene( *PQPAINTERPATH(1)) );
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
   }
@@ -1754,7 +1754,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMSCENE )
 
     if( obj != NULL )
     {
-      QPolygonF * ptr = new QPolygonF( obj->mapFromScene( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
+      QPolygonF * ptr = new QPolygonF( obj->mapFromScene( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)) );
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
   }
@@ -1767,7 +1767,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPFROMSCENE )
 
     if( obj != NULL )
     {
-      QPointF * ptr = new QPointF( obj->mapFromScene( PQREAL(1), PQREAL(2) ) );
+      QPointF * ptr = new QPointF( obj->mapFromScene( PQREAL(1), PQREAL(2)) );
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
     }
   }
@@ -1788,7 +1788,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMITEM )
 
     if( obj != NULL )
     {
-      QRectF * ptr = new QRectF( obj->mapRectFromItem( PQGRAPHICSITEM(1), *PQRECTF(2) ) );
+      QRectF * ptr = new QRectF( obj->mapRectFromItem( PQGRAPHICSITEM(1), *PQRECTF(2)) );
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
     }
   }
@@ -1801,7 +1801,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMITEM )
 
     if( obj != NULL )
     {
-      QRectF * ptr = new QRectF( obj->mapRectFromItem( PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5) ) );
+      QRectF * ptr = new QRectF( obj->mapRectFromItem( PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5)) );
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
     }
   }
@@ -1822,7 +1822,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMPARENT )
 
     if( obj != NULL )
     {
-      QRectF * ptr = new QRectF( obj->mapRectFromParent( *PQRECTF(1) ) );
+      QRectF * ptr = new QRectF( obj->mapRectFromParent( *PQRECTF(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
     }
   }
@@ -1835,7 +1835,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMPARENT )
 
     if( obj != NULL )
     {
-      QRectF * ptr = new QRectF( obj->mapRectFromParent( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
+      QRectF * ptr = new QRectF( obj->mapRectFromParent( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)) );
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
     }
   }
@@ -1856,7 +1856,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMSCENE )
 
     if( obj != NULL )
     {
-      QRectF * ptr = new QRectF( obj->mapRectFromScene( *PQRECTF(1) ) );
+      QRectF * ptr = new QRectF( obj->mapRectFromScene( *PQRECTF(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
     }
   }
@@ -1869,7 +1869,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTFROMSCENE )
 
     if( obj != NULL )
     {
-      QRectF * ptr = new QRectF( obj->mapRectFromScene( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
+      QRectF * ptr = new QRectF( obj->mapRectFromScene( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)) );
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
     }
   }
@@ -1890,7 +1890,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOITEM )
 
     if( obj != NULL )
     {
-      QRectF * ptr = new QRectF( obj->mapRectToItem( PQGRAPHICSITEM(1), *PQRECTF(2) ) );
+      QRectF * ptr = new QRectF( obj->mapRectToItem( PQGRAPHICSITEM(1), *PQRECTF(2)) );
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
     }
   }
@@ -1903,7 +1903,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOITEM )
 
     if( obj != NULL )
     {
-      QRectF * ptr = new QRectF( obj->mapRectToItem( PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5) ) );
+      QRectF * ptr = new QRectF( obj->mapRectToItem( PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5)) );
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
     }
   }
@@ -1924,7 +1924,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOPARENT )
 
     if( obj != NULL )
     {
-      QRectF * ptr = new QRectF( obj->mapRectToParent( *PQRECTF(1) ) );
+      QRectF * ptr = new QRectF( obj->mapRectToParent( *PQRECTF(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
     }
   }
@@ -1937,7 +1937,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOPARENT )
 
     if( obj != NULL )
     {
-      QRectF * ptr = new QRectF( obj->mapRectToParent( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
+      QRectF * ptr = new QRectF( obj->mapRectToParent( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)) );
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
     }
   }
@@ -1958,7 +1958,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOSCENE )
 
     if( obj != NULL )
     {
-      QRectF * ptr = new QRectF( obj->mapRectToScene( *PQRECTF(1) ) );
+      QRectF * ptr = new QRectF( obj->mapRectToScene( *PQRECTF(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
     }
   }
@@ -1971,7 +1971,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPRECTTOSCENE )
 
     if( obj != NULL )
     {
-      QRectF * ptr = new QRectF( obj->mapRectToScene( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
+      QRectF * ptr = new QRectF( obj->mapRectToScene( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)) );
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
     }
   }
@@ -1992,7 +1992,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOITEM )
 
     if( obj != NULL )
     {
-      QPointF * ptr = new QPointF( obj->mapToItem( PQGRAPHICSITEM(1), *PQPOINTF(2) ) );
+      QPointF * ptr = new QPointF( obj->mapToItem( PQGRAPHICSITEM(1), *PQPOINTF(2)) );
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
     }
   }
@@ -2005,7 +2005,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOITEM )
 
     if( obj != NULL )
     {
-      QPolygonF * ptr = new QPolygonF( obj->mapToItem( PQGRAPHICSITEM(1), *PQRECTF(2) ) );
+      QPolygonF * ptr = new QPolygonF( obj->mapToItem( PQGRAPHICSITEM(1), *PQRECTF(2)) );
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
   }
@@ -2018,7 +2018,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOITEM )
 
     if( obj != NULL )
     {
-      QPolygonF * ptr = new QPolygonF( obj->mapToItem( PQGRAPHICSITEM(1), *PQPOLYGONF(2) ) );
+      QPolygonF * ptr = new QPolygonF( obj->mapToItem( PQGRAPHICSITEM(1), *PQPOLYGONF(2)) );
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
   }
@@ -2031,7 +2031,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOITEM )
 
     if( obj != NULL )
     {
-      QPainterPath * ptr = new QPainterPath( obj->mapToItem( PQGRAPHICSITEM(1), *PQPAINTERPATH(2) ) );
+      QPainterPath * ptr = new QPainterPath( obj->mapToItem( PQGRAPHICSITEM(1), *PQPAINTERPATH(2)) );
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
   }
@@ -2044,7 +2044,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOITEM )
 
     if( obj != NULL )
     {
-      QPolygonF * ptr = new QPolygonF( obj->mapToItem( PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5) ) );
+      QPolygonF * ptr = new QPolygonF( obj->mapToItem( PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3), PQREAL(4), PQREAL(5)) );
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
   }
@@ -2057,7 +2057,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOITEM )
 
     if( obj != NULL )
     {
-      QPointF * ptr = new QPointF( obj->mapToItem( PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3) ) );
+      QPointF * ptr = new QPointF( obj->mapToItem( PQGRAPHICSITEM(1), PQREAL(2), PQREAL(3)) );
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
     }
   }
@@ -2078,7 +2078,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOPARENT )
 
     if( obj != NULL )
     {
-      QPointF * ptr = new QPointF( obj->mapToParent( *PQPOINTF(1) ) );
+      QPointF * ptr = new QPointF( obj->mapToParent( *PQPOINTF(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
     }
   }
@@ -2091,7 +2091,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOPARENT )
 
     if( obj != NULL )
     {
-      QPolygonF * ptr = new QPolygonF( obj->mapToParent( *PQRECTF(1) ) );
+      QPolygonF * ptr = new QPolygonF( obj->mapToParent( *PQRECTF(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
   }
@@ -2104,7 +2104,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOPARENT )
 
     if( obj != NULL )
     {
-      QPolygonF * ptr = new QPolygonF( obj->mapToParent( *PQPOLYGONF(1) ) );
+      QPolygonF * ptr = new QPolygonF( obj->mapToParent( *PQPOLYGONF(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
   }
@@ -2117,7 +2117,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOPARENT )
 
     if( obj != NULL )
     {
-      QPainterPath * ptr = new QPainterPath( obj->mapToParent( *PQPAINTERPATH(1) ) );
+      QPainterPath * ptr = new QPainterPath( obj->mapToParent( *PQPAINTERPATH(1)) );
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
   }
@@ -2130,7 +2130,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOPARENT )
 
     if( obj != NULL )
     {
-      QPolygonF * ptr = new QPolygonF( obj->mapToParent( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
+      QPolygonF * ptr = new QPolygonF( obj->mapToParent( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)) );
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
   }
@@ -2143,7 +2143,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOPARENT )
 
     if( obj != NULL )
     {
-      QPointF * ptr = new QPointF( obj->mapToParent( PQREAL(1), PQREAL(2) ) );
+      QPointF * ptr = new QPointF( obj->mapToParent( PQREAL(1), PQREAL(2)) );
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
     }
   }
@@ -2164,7 +2164,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOSCENE )
 
     if( obj != NULL )
     {
-      QPointF * ptr = new QPointF( obj->mapToScene( *PQPOINTF(1) ) );
+      QPointF * ptr = new QPointF( obj->mapToScene( *PQPOINTF(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
     }
   }
@@ -2177,7 +2177,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOSCENE )
 
     if( obj != NULL )
     {
-      QPolygonF * ptr = new QPolygonF( obj->mapToScene( *PQRECTF(1) ) );
+      QPolygonF * ptr = new QPolygonF( obj->mapToScene( *PQRECTF(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
   }
@@ -2190,7 +2190,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOSCENE )
 
     if( obj != NULL )
     {
-      QPolygonF * ptr = new QPolygonF( obj->mapToScene( *PQPOLYGONF(1) ) );
+      QPolygonF * ptr = new QPolygonF( obj->mapToScene( *PQPOLYGONF(1)) );
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
   }
@@ -2203,7 +2203,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOSCENE )
 
     if( obj != NULL )
     {
-      QPainterPath * ptr = new QPainterPath( obj->mapToScene( *PQPAINTERPATH(1) ) );
+      QPainterPath * ptr = new QPainterPath( obj->mapToScene( *PQPAINTERPATH(1)) );
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
     }
   }
@@ -2216,7 +2216,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOSCENE )
 
     if( obj != NULL )
     {
-      QPolygonF * ptr = new QPolygonF( obj->mapToScene( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) ) );
+      QPolygonF * ptr = new QPolygonF( obj->mapToScene( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4)) );
       Qt4xHb::createReturnClass(ptr, "QPOLYGONF", true);
     }
   }
@@ -2229,7 +2229,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_MAPTOSCENE )
 
     if( obj != NULL )
     {
-      QPointF * ptr = new QPointF( obj->mapToScene( PQREAL(1), PQREAL(2) ) );
+      QPointF * ptr = new QPointF( obj->mapToScene( PQREAL(1), PQREAL(2)) );
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
     }
   }
@@ -2324,7 +2324,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_PAINT )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ( ISQWIDGET(3) || HB_ISNIL(3) ) )
+    if( ISBETWEEN(2, 3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && (ISQWIDGET(3) || HB_ISNIL(3)) )
     {
 #endif
       obj->paint( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), OPQWIDGET( 3, 0 ) );
@@ -2699,10 +2699,10 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SCROLL )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ( ISQRECTF(3) || HB_ISNIL(3) ) )
+    if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQRECTF(3) || HB_ISNIL(3)) )
     {
 #endif
-      obj->scroll( PQREAL(1), PQREAL(2), HB_ISNIL(3) ? QRectF() : *static_cast<QRectF*>( Qt4xHb::itemGetPtr(3) ) );
+      obj->scroll( PQREAL(1), PQREAL(2), HB_ISNIL(3) ? QRectF() : *static_cast<QRectF*>( Qt4xHb::itemGetPtr(3)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2881,10 +2881,10 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETCACHEMODE )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQSIZE(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQSIZE(2) || HB_ISNIL(2)) )
     {
 #endif
-      obj->setCacheMode( ( QGraphicsItem::CacheMode ) hb_parni(1), HB_ISNIL(2) ? QSize() : *static_cast<QSize*>( Qt4xHb::itemGetPtr(2) ) );
+      obj->setCacheMode( ( QGraphicsItem::CacheMode ) hb_parni(1), HB_ISNIL(2) ? QSize() : *static_cast<QSize*>( Qt4xHb::itemGetPtr(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -3011,7 +3011,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFLAG )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->setFlag( ( QGraphicsItem::GraphicsItemFlag ) hb_parni(1), OPBOOL( 2, true ) );
@@ -3063,7 +3063,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETFOCUS )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
     {
 #endif
       obj->setFocus( HB_ISNIL(1) ? ( Qt::FocusReason ) Qt::OtherFocusReason : ( Qt::FocusReason ) hb_parni(1) );
@@ -3411,7 +3411,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORM )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQTRANSFORM(1) && ( HB_ISLOG(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && ISQTRANSFORM(1) && (HB_ISLOG(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->setTransform( *PQTRANSFORM(1), OPBOOL( 2, false ) );
@@ -3477,11 +3477,11 @@ HB_FUNC_STATIC( QGRAPHICSITEM_SETTRANSFORMATIONS )
     {
 #endif
       QList<QGraphicsTransform *> par1;
-      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
-      int nLen1 = hb_arrayLen( aList1 );
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      const int nLen1 = hb_arrayLen(aList1);
       for( int i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << static_cast<QGraphicsTransform*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+        par1 << static_cast<QGraphicsTransform*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
       obj->setTransformations( par1 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3840,27 +3840,27 @@ HB_FUNC_STATIC( QGRAPHICSITEM_TRANSFORMATIONS )
     {
 #endif
       QList<QGraphicsTransform *> list = obj->transformations();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QGRAPHICSTRANSFORM");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSTRANSFORM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
           PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QGRAPHICSTRANSFORM", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QGRAPHICSTRANSFORM", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -3977,7 +3977,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_UNSETCURSOR )
 
 HB_FUNC_STATIC( QGRAPHICSITEM_UPDATE )
 {
-  if( ISBETWEEN(0, 1) && ( ISQRECTF(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQRECTF(1) || HB_ISNIL(1)) )
   {
     /*
     void update( const QRectF & rect = QRectF() )
@@ -3986,7 +3986,7 @@ HB_FUNC_STATIC( QGRAPHICSITEM_UPDATE )
 
     if( obj != NULL )
     {
-      obj->update( HB_ISNIL(1) ? QRectF() : *static_cast<QRectF*>( Qt4xHb::itemGetPtr(1) ) );
+      obj->update( HB_ISNIL(1) ? QRectF() : *static_cast<QRectF*>( Qt4xHb::itemGetPtr(1)) );
     }
 
     hb_itemReturn(hb_stackSelfItem());

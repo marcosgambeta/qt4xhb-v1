@@ -95,7 +95,7 @@ QCalendarWidget( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QCALENDARWIDGET_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
   {
     QCalendarWidget * obj = new QCalendarWidget( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -161,7 +161,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_DATETEXTFORMAT )
     if( ISNUMPAR(1) && ISQDATE(1) )
     {
 #endif
-      QTextCharFormat * ptr = new QTextCharFormat( obj->dateTextFormat( *PQDATE(1) ) );
+      QTextCharFormat * ptr = new QTextCharFormat( obj->dateTextFormat( *PQDATE(1)) );
       Qt4xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -764,7 +764,7 @@ HB_FUNC_STATIC( QCALENDARWIDGET_WEEKDAYTEXTFORMAT )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QTextCharFormat * ptr = new QTextCharFormat( obj->weekdayTextFormat( ( Qt::DayOfWeek ) hb_parni(1) ) );
+      QTextCharFormat * ptr = new QTextCharFormat( obj->weekdayTextFormat( ( Qt::DayOfWeek ) hb_parni(1)) );
       Qt4xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QPAINTENGINE_BEGIN )
     if( ISNUMPAR(1) && ISQPAINTDEVICE(1) )
     {
 #endif
-      RBOOL( obj->begin( PQPAINTDEVICE(1) ) );
+      RBOOL( obj->begin( PQPAINTDEVICE(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -153,7 +153,7 @@ HB_FUNC_STATIC( QPAINTENGINE_DRAWIMAGE )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3, 4) && ISQRECTF(1) && ISQIMAGE(2) && ISQRECTF(3) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
+    if( ISBETWEEN(3, 4) && ISQRECTF(1) && ISQIMAGE(2) && ISQRECTF(3) && (HB_ISNUM(4) || HB_ISNIL(4)) )
     {
 #endif
       obj->drawImage( *PQRECTF(1), *PQIMAGE(2), *PQRECTF(3), HB_ISNIL(4) ? ( Qt::ImageConversionFlags ) Qt::AutoColor : ( Qt::ImageConversionFlags ) hb_parni(4) );
@@ -326,7 +326,7 @@ HB_FUNC_STATIC( QPAINTENGINE_HASFEATURE )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->hasFeature( ( QPaintEngine::PaintEngineFeatures ) hb_parni(1) ) );
+      RBOOL( obj->hasFeature( ( QPaintEngine::PaintEngineFeatures ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

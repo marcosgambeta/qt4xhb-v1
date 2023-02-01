@@ -34,7 +34,7 @@ void QStandardItemModelSlots::itemChanged( QStandardItem * item )
     hb_vmEvalBlockV( cb, 2, pSender, pItem );
 
     hb_itemRelease( pSender );
-    hb_itemRelease( pItem );
+    hb_itemRelease(pItem);
   }
 }
 

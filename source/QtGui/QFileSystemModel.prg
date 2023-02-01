@@ -104,7 +104,7 @@ QFileSystemModel( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QFILESYSTEMMODEL_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
   {
     QFileSystemModel * obj = new QFileSystemModel( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEICON )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QIcon * ptr = new QIcon( obj->fileIcon( *PQMODELINDEX(1) ) );
+      QIcon * ptr = new QIcon( obj->fileIcon( *PQMODELINDEX(1)) );
       Qt4xHb::createReturnClass(ptr, "QICON", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEINFO )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QFileInfo * ptr = new QFileInfo( obj->fileInfo( *PQMODELINDEX(1) ) );
+      QFileInfo * ptr = new QFileInfo( obj->fileInfo( *PQMODELINDEX(1)) );
       Qt4xHb::createReturnClass(ptr, "QFILEINFO", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILENAME )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      RQSTRING( obj->fileName( *PQMODELINDEX(1) ) );
+      RQSTRING( obj->fileName( *PQMODELINDEX(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,7 +220,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FILEPATH )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      RQSTRING( obj->filePath( *PQMODELINDEX(1) ) );
+      RQSTRING( obj->filePath( *PQMODELINDEX(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -293,7 +293,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ISDIR )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      RBOOL( obj->isDir( *PQMODELINDEX(1) ) );
+      RBOOL( obj->isDir( *PQMODELINDEX(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -341,7 +341,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_LASTMODIFIED )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QDateTime * ptr = new QDateTime( obj->lastModified( *PQMODELINDEX(1) ) );
+      QDateTime * ptr = new QDateTime( obj->lastModified( *PQMODELINDEX(1)) );
       Qt4xHb::createReturnClass(ptr, "QDATETIME", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -366,7 +366,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MKDIR )
     if( ISNUMPAR(2) && ISQMODELINDEX(1) && HB_ISCHAR(2) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->mkdir( *PQMODELINDEX(1), PQSTRING(2) ) );
+      QModelIndex * ptr = new QModelIndex( obj->mkdir( *PQMODELINDEX(1), PQSTRING(2)) );
       Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -388,10 +388,10 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MYCOMPUTER )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->myComputer( OPINT( 1, Qt::DisplayRole ) ) );
+      QVariant * ptr = new QVariant( obj->myComputer( OPINT( 1, Qt::DisplayRole )) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -464,7 +464,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_PERMISSIONS )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      RENUM( obj->permissions( *PQMODELINDEX(1) ) );
+      RENUM( obj->permissions( *PQMODELINDEX(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -488,7 +488,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_REMOVE )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      RBOOL( obj->remove( *PQMODELINDEX(1) ) );
+      RBOOL( obj->remove( *PQMODELINDEX(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -536,7 +536,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_RMDIR )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      RBOOL( obj->rmdir( *PQMODELINDEX(1) ) );
+      RBOOL( obj->rmdir( *PQMODELINDEX(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -765,7 +765,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETROOTPATH )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->setRootPath( PQSTRING(1) ) );
+      QModelIndex * ptr = new QModelIndex( obj->setRootPath( PQSTRING(1)) );
       Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -790,7 +790,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SIZE )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      RQINT64( obj->size( *PQMODELINDEX(1) ) );
+      RQINT64( obj->size( *PQMODELINDEX(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -814,7 +814,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_TYPE )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      RQSTRING( obj->type( *PQMODELINDEX(1) ) );
+      RQSTRING( obj->type( *PQMODELINDEX(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -838,7 +838,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_CANFETCHMORE )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      RBOOL( obj->canFetchMore( *PQMODELINDEX(1) ) );
+      RBOOL( obj->canFetchMore( *PQMODELINDEX(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -859,10 +859,10 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_COLUMNCOUNT )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( ISQMODELINDEX(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)) )
     {
 #endif
-      RINT( obj->columnCount( HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(1) ) ) );
+      RINT( obj->columnCount( HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(1)) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -883,10 +883,10 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_DATA )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQMODELINDEX(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && ISQMODELINDEX(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT( 2, Qt::DisplayRole ) ) );
+      QVariant * ptr = new QVariant( obj->data( *PQMODELINDEX(1), OPINT( 2, Qt::DisplayRole )) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -911,7 +911,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_DROPMIMEDATA )
     if( ISNUMPAR(5) && ISQMIMEDATA(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && ISQMODELINDEX(5) )
     {
 #endif
-      RBOOL( obj->dropMimeData( PQMIMEDATA(1), ( Qt::DropAction ) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5) ) );
+      RBOOL( obj->dropMimeData( PQMIMEDATA(1), ( Qt::DropAction ) hb_parni(2), PINT(3), PINT(4), *PQMODELINDEX(5)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -961,7 +961,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_FLAGS )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      RENUM( obj->flags( *PQMODELINDEX(1) ) );
+      RENUM( obj->flags( *PQMODELINDEX(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -982,10 +982,10 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_HASCHILDREN )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( ISQMODELINDEX(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)) )
     {
 #endif
-      RBOOL( obj->hasChildren( HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(1) ) ) );
+      RBOOL( obj->hasChildren( HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(1)) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1006,10 +1006,10 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_HEADERDATA )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+    if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->headerData( PINT(1), ( Qt::Orientation ) hb_parni(2), OPINT( 3, Qt::DisplayRole ) ) );
+      QVariant * ptr = new QVariant( obj->headerData( PINT(1), ( Qt::Orientation ) hb_parni(2), OPINT( 3, Qt::DisplayRole )) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1023,7 +1023,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_HEADERDATA )
 
 HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX )
 {
-  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
   {
     /*
     QModelIndex index( const QString & path, int column = 0 ) const
@@ -1032,11 +1032,11 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX )
 
     if( obj != NULL )
     {
-      QModelIndex * ptr = new QModelIndex( obj->index( PQSTRING(1), OPINT( 2, 0 ) ) );
+      QModelIndex * ptr = new QModelIndex( obj->index( PQSTRING(1), OPINT( 2, 0 )) );
       Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
     }
   }
-  else if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ( ISQMODELINDEX(3) || HB_ISNIL(3) ) )
+  else if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (ISQMODELINDEX(3) || HB_ISNIL(3)) )
   {
     /*
     virtual QModelIndex index( int row, int column, const QModelIndex & parent = QModelIndex() ) const
@@ -1045,7 +1045,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_INDEX )
 
     if( obj != NULL )
     {
-      QModelIndex * ptr = new QModelIndex( obj->index( PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(3) ) ) );
+      QModelIndex * ptr = new QModelIndex( obj->index( PINT(1), PINT(2), HB_ISNIL(3) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(3)) ) );
       Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
     }
   }
@@ -1069,11 +1069,11 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_MIMEDATA )
     {
 #endif
       QModelIndexList par1;
-      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
-      int nLen1 = hb_arrayLen( aList1 );
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      const int nLen1 = hb_arrayLen(aList1);
       for( int i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << *static_cast<QModelIndex*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+        par1 << *static_cast<QModelIndex*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
       QMimeData * ptr = obj->mimeData( par1 );
       Qt4xHb::createReturnQObjectClass(ptr, "QMIMEDATA");
@@ -1124,7 +1124,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_PARENT )
     if( ISNUMPAR(1) && ISQMODELINDEX(1) )
     {
 #endif
-      QModelIndex * ptr = new QModelIndex( obj->parent( *PQMODELINDEX(1) ) );
+      QModelIndex * ptr = new QModelIndex( obj->parent( *PQMODELINDEX(1)) );
       Qt4xHb::createReturnClass(ptr, "QMODELINDEX", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1146,10 +1146,10 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_ROWCOUNT )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( ISQMODELINDEX(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (ISQMODELINDEX(1) || HB_ISNIL(1)) )
     {
 #endif
-      RINT( obj->rowCount( HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(1) ) ) );
+      RINT( obj->rowCount( HB_ISNIL(1) ? QModelIndex() : *static_cast<QModelIndex*>( Qt4xHb::itemGetPtr(1)) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1170,10 +1170,10 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SETDATA )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+    if( ISBETWEEN(2, 3) && ISQMODELINDEX(1) && ISQVARIANT(2) && (HB_ISNUM(3) || HB_ISNIL(3)) )
     {
 #endif
-      RBOOL( obj->setData( *PQMODELINDEX(1), *PQVARIANT(2), OPINT( 3, Qt::EditRole ) ) );
+      RBOOL( obj->setData( *PQMODELINDEX(1), *PQVARIANT(2), OPINT( 3, Qt::EditRole )) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1194,7 +1194,7 @@ HB_FUNC_STATIC( QFILESYSTEMMODEL_SORT )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->sort( PINT(1), HB_ISNIL(2) ? ( Qt::SortOrder ) Qt::AscendingOrder : ( Qt::SortOrder ) hb_parni(2) );

@@ -56,7 +56,7 @@ QFontComboBox( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QFONTCOMBOBOX_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
   {
     QFontComboBox * obj = new QFontComboBox( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);

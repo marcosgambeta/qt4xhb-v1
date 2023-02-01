@@ -67,7 +67,7 @@ QDoubleSpinBox( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QDOUBLESPINBOX_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
   {
     QDoubleSpinBox * obj = new QDoubleSpinBox( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -441,7 +441,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_TEXTFROMVALUE )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQSTRING( obj->textFromValue( PDOUBLE(1) ) );
+      RQSTRING( obj->textFromValue( PDOUBLE(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -489,7 +489,7 @@ HB_FUNC_STATIC( QDOUBLESPINBOX_VALUEFROMTEXT )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RDOUBLE( obj->valueFromText( PQSTRING(1) ) );
+      RDOUBLE( obj->valueFromText( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

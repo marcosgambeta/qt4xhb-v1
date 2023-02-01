@@ -90,7 +90,7 @@ RETURN
 
 HB_FUNC_STATIC( QLISTWIDGETITEM_NEW )
 {
-  if( ISBETWEEN(0, 2) && ( ISQLISTWIDGET(1) || HB_ISNIL(1) ) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+  if( ISBETWEEN(0, 2) && (ISQLISTWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)) )
   {
     /*
     QListWidgetItem( QListWidget * parent = 0, int type = QListWidgetItem::Type )
@@ -98,7 +98,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_NEW )
     QListWidgetItem * obj = new QListWidgetItem( OPQLISTWIDGET( 1, 0 ), OPINT( 2, QListWidgetItem::Type ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && ( ISQLISTWIDGET(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+  else if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQLISTWIDGET(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) )
   {
     /*
     QListWidgetItem( const QString & text, QListWidget * parent = 0, int type = QListWidgetItem::Type )
@@ -106,7 +106,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_NEW )
     QListWidgetItem * obj = new QListWidgetItem( PQSTRING(1), OPQLISTWIDGET( 2, 0 ), OPINT( 3, QListWidgetItem::Type ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(2, 4) && ( ISQICON(1) || HB_ISCHAR(1) ) && HB_ISCHAR(2) && ( ISQLISTWIDGET(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
+  else if( ISBETWEEN(2, 4) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && (ISQLISTWIDGET(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)) )
   {
     /*
     QListWidgetItem( const QIcon & icon, const QString & text, QListWidget * parent = 0, int type = QListWidgetItem::Type )
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_DATA )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->data( PINT(1) ) );
+      QVariant * ptr = new QVariant( obj->data( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -633,10 +633,10 @@ HB_FUNC_STATIC( QLISTWIDGETITEM_SETICON )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ( ISQICON( 1) || HB_ISCHAR(1) ) )
+    if( ISNUMPAR(1) && (ISQICON( 1) || HB_ISCHAR(1)) )
     {
 #endif
-      obj->setIcon( HB_ISOBJECT(1) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(1) ) : QIcon( hb_parc(1) ) );
+      obj->setIcon( HB_ISOBJECT(1) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(1) ) : QIcon( hb_parc(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

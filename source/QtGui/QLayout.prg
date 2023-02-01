@@ -297,7 +297,7 @@ HB_FUNC_STATIC( QLAYOUT_INDEXOF )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      RINT( obj->indexOf( PQWIDGET(1) ) );
+      RINT( obj->indexOf( PQWIDGET(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QLAYOUT_SETALIGNMENT )
 
     if( obj != NULL )
     {
-      RBOOL( obj->setAlignment( PQWIDGET(1), ( Qt::Alignment ) hb_parni(2) ) );
+      RBOOL( obj->setAlignment( PQWIDGET(1), ( Qt::Alignment ) hb_parni(2)) );
     }
   }
   else if( ISNUMPAR(1) && HB_ISNUM(1) )
@@ -546,7 +546,7 @@ HB_FUNC_STATIC( QLAYOUT_SETALIGNMENT )
 
     if( obj != NULL )
     {
-      RBOOL( obj->setAlignment( PQLAYOUT(1), ( Qt::Alignment ) hb_parni(2) ) );
+      RBOOL( obj->setAlignment( PQLAYOUT(1), ( Qt::Alignment ) hb_parni(2)) );
     }
   }
   else
@@ -929,7 +929,7 @@ HB_FUNC_STATIC( QLAYOUT_CLOSESTACCEPTABLESIZE )
   if( ISNUMPAR(2) && ISQWIDGET(1) && ISQSIZE(2) )
   {
 #endif
-    QSize * ptr = new QSize( QLayout::closestAcceptableSize( PQWIDGET(1), *PQSIZE(2) ) );
+    QSize * ptr = new QSize( QLayout::closestAcceptableSize( PQWIDGET(1), *PQSIZE(2)) );
     Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }

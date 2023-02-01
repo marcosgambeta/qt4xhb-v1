@@ -120,7 +120,7 @@ HB_FUNC_STATIC( QFONT_NEW )
     QFont * obj = new QFont();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(1, 4) && HB_ISCHAR(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) && ( HB_ISNUM(3) || HB_ISNIL(3) ) && ( HB_ISNUM(4) || HB_ISNIL(4) ) )
+  else if( ISBETWEEN(1, 4) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)) )
   {
     /*
     QFont( const QString & family, int pointSize = -1, int weight = -1, bool italic = false )
@@ -323,7 +323,7 @@ HB_FUNC_STATIC( QFONT_FROMSTRING )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->fromString( PQSTRING(1) ) );
+      RBOOL( obj->fromString( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -347,7 +347,7 @@ HB_FUNC_STATIC( QFONT_ISCOPYOF )
     if( ISNUMPAR(1) && ISQFONT(1) )
     {
 #endif
-      RBOOL( obj->isCopyOf( *PQFONT(1) ) );
+      RBOOL( obj->isCopyOf( *PQFONT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -683,7 +683,7 @@ HB_FUNC_STATIC( QFONT_RESOLVE )
     if( ISNUMPAR(1) && ISQFONT(1) )
     {
 #endif
-      QFont * ptr = new QFont( obj->resolve( *PQFONT(1) ) );
+      QFont * ptr = new QFont( obj->resolve( *PQFONT(1)) );
       Qt4xHb::createReturnClass(ptr, "QFONT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1121,7 +1121,7 @@ HB_FUNC_STATIC( QFONT_SETSTYLEHINT )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->setStyleHint( ( QFont::StyleHint ) hb_parni(1), HB_ISNIL(2) ? ( QFont::StyleStrategy ) QFont::PreferDefault : ( QFont::StyleStrategy ) hb_parni(2) );
@@ -1529,7 +1529,7 @@ HB_FUNC_STATIC( QFONT_SUBSTITUTE )
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
 #endif
-    RQSTRING( QFont::substitute( PQSTRING(1) ) );
+    RQSTRING( QFont::substitute( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1548,7 +1548,7 @@ HB_FUNC_STATIC( QFONT_SUBSTITUTES )
   if( ISNUMPAR(1) && HB_ISCHAR(1) )
   {
 #endif
-    RQSTRINGLIST( QFont::substitutes( PQSTRING(1) ) );
+    RQSTRINGLIST( QFont::substitutes( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -1597,7 +1597,7 @@ static QVariant toVariant( const QFont & )
 */
 void QFont_toVariant2()
 {
-  QFont * font = static_cast<QFont*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+  QFont * font = static_cast<QFont*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 )) );
   QVariant * variant = new QVariant();
   variant->setValue<QFont>( *font );
   Qt4xHb::createReturnClass( variant, "QVARIANT", true);
@@ -1629,7 +1629,7 @@ HB_FUNC_STATIC( QFONT_FROMVARIANT )
 {
   if( ISNUMPAR(1) && ISQVARIANT(1) )
   {
-    QVariant * variant = static_cast<QVariant*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 ) ) );
+    QVariant * variant = static_cast<QVariant*>( hb_itemGetPtr( hb_objSendMsg( hb_param( 1, HB_IT_OBJECT ), "POINTER", 0 )) );
     QFont * font = new QFont( variant->value<QFont>() );
     Qt4xHb::createReturnClass( font, "QFONT", true);
   }

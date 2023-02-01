@@ -123,10 +123,10 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_EFFECTIVESIZEHINT )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQSIZEF(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQSIZEF(2) || HB_ISNIL(2)) )
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->effectiveSizeHint( ( Qt::SizeHint ) hb_parni(1), HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF*>( Qt4xHb::itemGetPtr(2) ) ) );
+      QSizeF * ptr = new QSizeF( obj->effectiveSizeHint( ( Qt::SizeHint ) hb_parni(1), HB_ISNIL(2) ? QSizeF() : *static_cast<QSizeF*>( Qt4xHb::itemGetPtr(2)) ) );
       Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -846,7 +846,7 @@ HB_FUNC_STATIC( QGRAPHICSLAYOUTITEM_SETSIZEPOLICY )
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+  else if( ISBETWEEN(2, 3) && HB_ISNUM(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) )
   {
     /*
     void setSizePolicy( QSizePolicy::Policy hPolicy, QSizePolicy::Policy vPolicy, QSizePolicy::ControlType controlType = QSizePolicy::DefaultType )

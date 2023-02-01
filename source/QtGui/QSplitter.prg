@@ -73,7 +73,7 @@ RETURN
 
 HB_FUNC_STATIC( QSPLITTER_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
   {
     /*
     QSplitter( QWidget * parent = 0 )
@@ -81,7 +81,7 @@ HB_FUNC_STATIC( QSPLITTER_NEW )
     QSplitter * obj = new QSplitter( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2)) )
   {
     /*
     QSplitter( Qt::Orientation orientation, QWidget * parent = 0 )
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QSPLITTER_INDEXOF )
     if( ISNUMPAR(1) && ISQWIDGET(1) )
     {
 #endif
-      RINT( obj->indexOf( PQWIDGET(1) ) );
+      RINT( obj->indexOf( PQWIDGET(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QSPLITTER_ISCOLLAPSIBLE )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->isCollapsible( PINT(1) ) );
+      RBOOL( obj->isCollapsible( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -427,7 +427,7 @@ HB_FUNC_STATIC( QSPLITTER_RESTORESTATE )
     if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
     {
 #endif
-      RBOOL( obj->restoreState( *PQBYTEARRAY(1) ) );
+      RBOOL( obj->restoreState( *PQBYTEARRAY(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -551,7 +551,7 @@ HB_FUNC_STATIC( QSPLITTER_SETOPAQUERESIZE )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISLOG(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISLOG(1) || HB_ISNIL(1)) )
     {
 #endif
       obj->setOpaqueResize( OPBOOL( 1, true ) );
@@ -607,8 +607,8 @@ HB_FUNC_STATIC( QSPLITTER_SETSIZES )
     {
 #endif
       QList<int> par1;
-      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
-      int nLen1 = hb_arrayLen( aList1 );
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      const int nLen1 = hb_arrayLen(aList1);
       int temp1;
       for( int i1 = 0; i1 < nLen1; i1++ )
       {

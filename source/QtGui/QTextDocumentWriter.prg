@@ -80,12 +80,12 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_NEW )
     QTextDocumentWriter * obj = new QTextDocumentWriter( PQIODEVICE(1), *PQBYTEARRAY(2) );
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && ( ISQBYTEARRAY(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)) )
   {
     /*
     QTextDocumentWriter( const QString & fileName, const QByteArray & format = QByteArray() )
     */
-    QTextDocumentWriter * obj = new QTextDocumentWriter( PQSTRING(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray*>( Qt4xHb::itemGetPtr(2) ) );
+    QTextDocumentWriter * obj = new QTextDocumentWriter( PQSTRING(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray*>( Qt4xHb::itemGetPtr(2)) );
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -324,7 +324,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE )
 
     if( obj != NULL )
     {
-      RBOOL( obj->write( PQTEXTDOCUMENT(1) ) );
+      RBOOL( obj->write( PQTEXTDOCUMENT(1)) );
     }
   }
   else if( ISNUMPAR(1) && ISQTEXTDOCUMENTFRAGMENT(1) )
@@ -336,7 +336,7 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_WRITE )
 
     if( obj != NULL )
     {
-      RBOOL( obj->write( *PQTEXTDOCUMENTFRAGMENT(1) ) );
+      RBOOL( obj->write( *PQTEXTDOCUMENTFRAGMENT(1)) );
     }
   }
   else
@@ -359,30 +359,30 @@ HB_FUNC_STATIC( QTEXTDOCUMENTWRITER_SUPPORTEDDOCUMENTFORMATS )
     {
 #endif
       QList<QByteArray> list = obj->supportedDocumentFormats();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QBYTEARRAY");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QByteArray( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QByteArray(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QBYTEARRAY", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

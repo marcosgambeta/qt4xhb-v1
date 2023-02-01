@@ -103,7 +103,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_DESCRIPTION )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->description( PQSTRING(1) ) );
+      RQSTRING( obj->description( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -127,7 +127,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_DISPLAYNAME )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RQSTRING( obj->displayName( PQSTRING(1) ) );
+      RQSTRING( obj->displayName( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,7 +175,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTPLUGIN_LANGUAGES )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RQSTRINGLIST( obj->languages( PQSTRING(1) ) );
+      RQSTRINGLIST( obj->languages( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -98,7 +98,7 @@ QTreeWidget( QWidget * parent = 0 )
 */
 HB_FUNC_STATIC( QTREEWIDGET_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
   {
     QTreeWidget * obj = new QTreeWidget( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -167,11 +167,11 @@ HB_FUNC_STATIC( QTREEWIDGET_ADDTOPLEVELITEMS )
     {
 #endif
       QList<QTreeWidgetItem *> par1;
-      PHB_ITEM aList1 = hb_param( 1, HB_IT_ARRAY );
-      int nLen1 = hb_arrayLen( aList1 );
+      PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
+      const int nLen1 = hb_arrayLen(aList1);
       for( int i1 = 0; i1 < nLen1; i1++ )
       {
-        par1 << static_cast<QTreeWidgetItem*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList1, i1+1 ), "POINTER", 0 ) ) );
+        par1 << static_cast<QTreeWidgetItem*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
       }
       obj->addTopLevelItems( par1 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -196,7 +196,7 @@ HB_FUNC_STATIC( QTREEWIDGET_CLOSEPERSISTENTEDITOR )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQTREEWIDGETITEM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && ISQTREEWIDGETITEM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->closePersistentEditor( PQTREEWIDGETITEM(1), OPINT( 2, 0 ) );
@@ -295,7 +295,7 @@ HB_FUNC_STATIC( QTREEWIDGET_EDITITEM )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQTREEWIDGETITEM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && ISQTREEWIDGETITEM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->editItem( PQTREEWIDGETITEM(1), OPINT( 2, 0 ) );
@@ -321,31 +321,31 @@ HB_FUNC_STATIC( QTREEWIDGET_FINDITEMS )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && ( HB_ISNUM(3) || HB_ISNIL(3) ) )
+    if( ISBETWEEN(2, 3) && HB_ISCHAR(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) )
     {
 #endif
       QList<QTreeWidgetItem *> list = obj->findItems( PQSTRING(1), ( Qt::MatchFlags ) hb_parni(2), OPINT( 3, 0 ) );
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QTREEWIDGETITEM");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QTREEWIDGETITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
           PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QTREEWIDGETITEM", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QTREEWIDGETITEM", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -396,7 +396,7 @@ HB_FUNC_STATIC( QTREEWIDGET_INDEXOFTOPLEVELITEM )
     if( ISNUMPAR(1) && ISQTREEWIDGETITEM(1) )
     {
 #endif
-      RINT( obj->indexOfTopLevelItem( PQTREEWIDGETITEM(1) ) );
+      RINT( obj->indexOfTopLevelItem( PQTREEWIDGETITEM(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -451,7 +451,7 @@ HB_FUNC_STATIC( QTREEWIDGET_INSERTTOPLEVELITEMS )
       int nLen2 = hb_arrayLen( aList2 );
       for( int i2 = 0; i2 < nLen2; i2++ )
       {
-        par2 << static_cast<QTreeWidgetItem*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 ) ) );
+        par2 << static_cast<QTreeWidgetItem*>( hb_itemGetPtr( hb_objSendMsg( hb_arrayGetItemPtr( aList2, i2+1 ), "POINTER", 0 )) );
       }
       obj->insertTopLevelItems( PINT(1), par2 );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -504,7 +504,7 @@ HB_FUNC_STATIC( QTREEWIDGET_ISFIRSTITEMCOLUMNSPANNED )
     if( ISNUMPAR(1) && ISQTREEWIDGETITEM(1) )
     {
 #endif
-      RBOOL( obj->isFirstItemColumnSpanned( PQTREEWIDGETITEM(1) ) );
+      RBOOL( obj->isFirstItemColumnSpanned( PQTREEWIDGETITEM(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -634,7 +634,7 @@ HB_FUNC_STATIC( QTREEWIDGET_OPENPERSISTENTEDITOR )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQTREEWIDGETITEM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && ISQTREEWIDGETITEM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->openPersistentEditor( PQTREEWIDGETITEM(1), OPINT( 2, 0 ) );
@@ -690,27 +690,27 @@ HB_FUNC_STATIC( QTREEWIDGET_SELECTEDITEMS )
     {
 #endif
       QList<QTreeWidgetItem *> list = obj->selectedItems();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QTREEWIDGETITEM");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QTREEWIDGETITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
           PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QTREEWIDGETITEM", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QTREEWIDGETITEM", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
@@ -1066,7 +1066,7 @@ HB_FUNC_STATIC( QTREEWIDGET_VISUALITEMRECT )
     if( ISNUMPAR(1) && ISQTREEWIDGETITEM(1) )
     {
 #endif
-      QRect * ptr = new QRect( obj->visualItemRect( PQTREEWIDGETITEM(1) ) );
+      QRect * ptr = new QRect( obj->visualItemRect( PQTREEWIDGETITEM(1)) );
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1192,7 +1192,7 @@ HB_FUNC_STATIC( QTREEWIDGET_SCROLLTOITEM )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQTREEWIDGETITEM(1) && ( HB_ISNUM(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && ISQTREEWIDGETITEM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
     {
 #endif
       obj->scrollToItem( PQTREEWIDGETITEM(1), HB_ISNIL(2) ? ( QAbstractItemView::ScrollHint ) QAbstractItemView::EnsureVisible : ( QAbstractItemView::ScrollHint ) hb_parni(2) );

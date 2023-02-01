@@ -125,7 +125,7 @@ QSize HStyledItemDelegate::sizeHint( const QStyleOptionViewItem &option, const Q
 
     if( hb_clsIsParent( hb_objGetClass( pRet ), "QSIZE" ) )
     {
-      size = *( (QSize *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 ) ) );
+      size = *( (QSize *) hb_itemGetPtr( hb_objSendMsg( pRet, "POINTER", 0 )) );
     }
     else
     {
