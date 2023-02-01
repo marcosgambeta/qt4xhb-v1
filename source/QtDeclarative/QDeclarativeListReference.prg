@@ -69,7 +69,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_NEW )
     QDeclarativeListReference * obj = new QDeclarativeListReference();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISCHAR(2) && ( ISQDECLARATIVEENGINE(3) || HB_ISNIL(3) ) )
+  else if( ISBETWEEN(2, 3) && ISQOBJECT(1) && HB_ISCHAR(2) && (ISQDECLARATIVEENGINE(3) || HB_ISNIL(3)) )
   {
     /*
     QDeclarativeListReference( QObject * object, const char * property, QDeclarativeEngine * engine = 0 )
@@ -96,7 +96,7 @@ HB_FUNC_STATIC( QDECLARATIVELISTREFERENCE_APPEND )
     if( ISNUMPAR(1) && ISQOBJECT(1) )
     {
 #endif
-      RBOOL( obj->append( PQOBJECT(1) ) );
+      RBOOL( obj->append( PQOBJECT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

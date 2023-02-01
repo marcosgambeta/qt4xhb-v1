@@ -66,7 +66,7 @@ RETURN
 
 HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQWIDGET(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
   {
     /*
     QDeclarativeView( QWidget * parent = 0 )
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_NEW )
     QDeclarativeView * obj = new QDeclarativeView( OPQWIDGET( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 2) && ISQURL(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && ISQURL(1) && (ISQWIDGET(2) || HB_ISNIL(2)) )
   {
     /*
     QDeclarativeView( const QUrl & source, QWidget * parent = 0 )
@@ -145,30 +145,30 @@ HB_FUNC_STATIC( QDECLARATIVEVIEW_ERRORS )
     {
 #endif
       QList<QDeclarativeError> list = obj->errors();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QDECLARATIVEERROR");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QDeclarativeError( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QDeclarativeError(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QDECLARATIVEERROR", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QDECLARATIVEERROR", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

@@ -66,7 +66,7 @@ RETURN
 
 HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
   {
     /*
     QDeclarativeComponent( QObject * parent = 0 )
@@ -74,7 +74,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
     QDeclarativeComponent * obj = new QDeclarativeComponent( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 2) && ISQDECLARATIVEENGINE(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) )
+  else if( ISBETWEEN(1, 2) && ISQDECLARATIVEENGINE(1) && (ISQOBJECT(2) || HB_ISNIL(2)) )
   {
     /*
     QDeclarativeComponent( QDeclarativeEngine *, QObject * parent = 0 )
@@ -82,7 +82,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
     QDeclarativeComponent * obj = new QDeclarativeComponent( PQDECLARATIVEENGINE(1), OPQOBJECT( 2, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(2, 3) && ISQDECLARATIVEENGINE(1) && HB_ISCHAR(2) && ( ISQOBJECT(3) || HB_ISNIL(3) ) )
+  else if( ISBETWEEN(2, 3) && ISQDECLARATIVEENGINE(1) && HB_ISCHAR(2) && (ISQOBJECT(3) || HB_ISNIL(3)) )
   {
     /*
     QDeclarativeComponent( QDeclarativeEngine *, const QString & fileName, QObject * parent = 0 )
@@ -90,7 +90,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_NEW )
     QDeclarativeComponent * obj = new QDeclarativeComponent( PQDECLARATIVEENGINE(1), PQSTRING(2), OPQOBJECT( 3, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(2, 3) && ISQDECLARATIVEENGINE(1) && ISQURL(2) && ( ISQOBJECT(3) || HB_ISNIL(3) ) )
+  else if( ISBETWEEN(2, 3) && ISQDECLARATIVEENGINE(1) && ISQURL(2) && (ISQOBJECT(3) || HB_ISNIL(3)) )
   {
     /*
     QDeclarativeComponent( QDeclarativeEngine *, const QUrl & url, QObject * parent = 0 )
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_CREATE )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( ISQDECLARATIVECONTEXT(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (ISQDECLARATIVECONTEXT(1) || HB_ISNIL(1)) )
     {
 #endif
       QObject * ptr = obj->create( OPQDECLARATIVECONTEXT( 1, 0 ) );
@@ -237,30 +237,30 @@ HB_FUNC_STATIC( QDECLARATIVECOMPONENT_ERRORS )
     {
 #endif
       QList<QDeclarativeError> list = obj->errors();
-      PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR");
+      PHB_DYNS pDynSym = hb_dynsymFindName("QDECLARATIVEERROR");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym )
+      if( pDynSym != NULL )
       {
         for( int i = 0; i < list.count(); i++ )
         {
-          hb_vmPushDynSym( pDynSym );
+          hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
-          PHB_ITEM pObject = hb_itemNew( NULL );
-          hb_itemCopy( pObject, hb_stackReturnItem() );
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, new QDeclarativeError( list[i] ) );
-          hb_objSendMsg( pObject, "_POINTER", 1, pItem );
-          hb_itemRelease( pItem );
-          PHB_ITEM pDestroy = hb_itemPutL( NULL, true );
-          hb_objSendMsg( pObject, "_SELF_DESTRUCTION", 1, pDestroy );
-          hb_itemRelease( pDestroy );
-          hb_arrayAddForward( pArray, pObject );
-          hb_itemRelease( pObject );
+          PHB_ITEM pObject = hb_itemNew(NULL);
+          hb_itemCopy(pObject, hb_stackReturnItem());
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, new QDeclarativeError(list[i]));
+          hb_objSendMsg(pObject, "_POINTER", 1, pItem);
+          hb_itemRelease(pItem);
+          PHB_ITEM pDestroy = hb_itemPutL(NULL, true);
+          hb_objSendMsg(pObject, "_SELF_DESTRUCTION", 1, pDestroy);
+          hb_itemRelease(pDestroy);
+          hb_arrayAddForward(pArray, pObject);
+          hb_itemRelease(pObject);
         }
       }
       else
       {
-        hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QDECLARATIVEERROR", HB_ERR_ARGS_BASEPARAMS );
+        hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QDECLARATIVEERROR", HB_ERR_ARGS_BASEPARAMS);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

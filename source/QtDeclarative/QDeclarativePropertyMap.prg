@@ -56,7 +56,7 @@ QDeclarativePropertyMap( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
   {
     QDeclarativePropertyMap * obj = new QDeclarativePropertyMap( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -124,7 +124,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_CONTAINS )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      RBOOL( obj->contains( PQSTRING(1) ) );
+      RBOOL( obj->contains( PQSTRING(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -270,7 +270,7 @@ HB_FUNC_STATIC( QDECLARATIVEPROPERTYMAP_VALUE )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->value( PQSTRING(1) ) );
+      QVariant * ptr = new QVariant( obj->value( PQSTRING(1)) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

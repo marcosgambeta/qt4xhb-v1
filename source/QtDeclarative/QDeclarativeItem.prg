@@ -66,7 +66,7 @@ QDeclarativeItem( QDeclarativeItem * parent = 0 )
 */
 HB_FUNC_STATIC( QDECLARATIVEITEM_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQDECLARATIVEITEM(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQDECLARATIVEITEM(1) || HB_ISNIL(1)) )
   {
     QDeclarativeItem * obj = new QDeclarativeItem( OPQDECLARATIVEITEM( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_MAPFROMITEM )
     if( ISNUMPAR(3) && ISQSCRIPTVALUE(1) && HB_ISNUM(2) && HB_ISNUM(3) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->mapFromItem( *PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3) ) );
+      QScriptValue * ptr = new QScriptValue( obj->mapFromItem( *PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3)) );
       Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -329,7 +329,7 @@ HB_FUNC_STATIC( QDECLARATIVEITEM_MAPTOITEM )
     if( ISNUMPAR(3) && ISQSCRIPTVALUE(1) && HB_ISNUM(2) && HB_ISNUM(3) )
     {
 #endif
-      QScriptValue * ptr = new QScriptValue( obj->mapToItem( *PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3) ) );
+      QScriptValue * ptr = new QScriptValue( obj->mapToItem( *PQSCRIPTVALUE(1), PQREAL(2), PQREAL(3)) );
       Qt4xHb::createReturnClass(ptr, "QSCRIPTVALUE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

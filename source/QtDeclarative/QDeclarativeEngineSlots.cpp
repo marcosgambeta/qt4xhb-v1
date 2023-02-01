@@ -45,18 +45,18 @@ void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warning
   if( cb != NULL )
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDECLARATIVEENGINE");
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QDECLARATIVEERROR");
+    PHB_DYNS pDynSym = hb_dynsymFindName("QDECLARATIVEERROR");
     PHB_ITEM pWarnings = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != NULL )
     {
       for( int i = 0; i < warnings.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
-        PHB_ITEM pTempObject = hb_itemNew( NULL );
+        PHB_ITEM pTempObject = hb_itemNew(NULL);
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
-        PHB_ITEM pTempItem = hb_itemPutPtr( NULL, new QDeclarativeError( warnings [i] ) );
+        PHB_ITEM pTempItem = hb_itemPutPtr(NULL, new QDeclarativeError( warnings [i] ) );
         hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
         hb_arrayAddForward( pWarnings, pTempObject );
         hb_itemRelease( pTempObject );
@@ -65,7 +65,7 @@ void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warning
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QDECLARATIVEERROR", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QDECLARATIVEERROR", HB_ERR_ARGS_BASEPARAMS);
     }
 
     hb_vmEvalBlockV( cb, 2, pSender, pWarnings );

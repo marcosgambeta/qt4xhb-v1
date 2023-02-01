@@ -121,7 +121,7 @@ HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_REQUESTIMAGE )
     if( ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3) )
     {
 #endif
-      QImage * ptr = new QImage( obj->requestImage( PQSTRING(1), PQSIZE(2), *PQSIZE(3) ) );
+      QImage * ptr = new QImage( obj->requestImage( PQSTRING(1), PQSIZE(2), *PQSIZE(3)) );
       Qt4xHb::createReturnClass(ptr, "QIMAGE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -146,7 +146,7 @@ HB_FUNC_STATIC( QDECLARATIVEIMAGEPROVIDER_REQUESTPIXMAP )
     if( ISNUMPAR(3) && HB_ISCHAR(1) && ISQSIZE(2) && ISQSIZE(3) )
     {
 #endif
-      QPixmap * ptr = new QPixmap( obj->requestPixmap( PQSTRING(1), PQSIZE(2), *PQSIZE(3) ) );
+      QPixmap * ptr = new QPixmap( obj->requestPixmap( PQSTRING(1), PQSIZE(2), *PQSIZE(3)) );
       Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

@@ -82,7 +82,7 @@ QDeclarativeEngine( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QDECLARATIVEENGINE_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
   {
     QDeclarativeEngine * obj = new QDeclarativeEngine( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -671,7 +671,7 @@ HB_FUNC_STATIC( QDECLARATIVEENGINE_OBJECTOWNERSHIP )
   if( ISNUMPAR(1) && ISQOBJECT(1) )
   {
 #endif
-    RENUM( QDeclarativeEngine::objectOwnership( PQOBJECT(1) ) );
+    RENUM( QDeclarativeEngine::objectOwnership( PQOBJECT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
