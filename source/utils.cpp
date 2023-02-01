@@ -6,8 +6,8 @@
 
 */
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
+#include "qt4xhb_common.hpp"
+#include "qt4xhb_macros.hpp"
 
 #include <QtCore/QObject>
 #include <QtCore/QStringList>
