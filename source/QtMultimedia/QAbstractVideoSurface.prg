@@ -134,7 +134,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_ISFORMATSUPPORTED )
     if( ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1) )
     {
 #endif
-      RBOOL( obj->isFormatSupported( *PQVIDEOSURFACEFORMAT(1) ) );
+      RBOOL( obj->isFormatSupported( *PQVIDEOSURFACEFORMAT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,7 +158,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_NEARESTFORMAT )
     if( ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1) )
     {
 #endif
-      QVideoSurfaceFormat * ptr = new QVideoSurfaceFormat( obj->nearestFormat( *PQVIDEOSURFACEFORMAT(1) ) );
+      QVideoSurfaceFormat * ptr = new QVideoSurfaceFormat( obj->nearestFormat( *PQVIDEOSURFACEFORMAT(1)) );
       Qt4xHb::createReturnClass(ptr, "QVIDEOSURFACEFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -183,7 +183,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_PRESENT )
     if( ISNUMPAR(1) && ISQVIDEOFRAME(1) )
     {
 #endif
-      RBOOL( obj->present( *PQVIDEOFRAME(1) ) );
+      RBOOL( obj->present( *PQVIDEOFRAME(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -207,7 +207,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_START )
     if( ISNUMPAR(1) && ISQVIDEOSURFACEFORMAT(1) )
     {
 #endif
-      RBOOL( obj->start( *PQVIDEOSURFACEFORMAT(1) ) );
+      RBOOL( obj->start( *PQVIDEOSURFACEFORMAT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,7 +254,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SUPPORTEDPIXELFORMATS )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
     {
 #endif
       QList<QVideoFrame::PixelFormat> list = obj->supportedPixelFormats( HB_ISNIL(1) ? ( QAbstractVideoBuffer::HandleType ) QAbstractVideoBuffer::NoHandle : ( QAbstractVideoBuffer::HandleType ) hb_parni(1) );
@@ -263,7 +263,7 @@ HB_FUNC_STATIC( QABSTRACTVIDEOSURFACE_SUPPORTEDPIXELFORMATS )
       {
         PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
         hb_arrayAddForward( pArray, pItem );
-        hb_itemRelease( pItem );
+        hb_itemRelease(pItem);
       }
       hb_itemReturnRelease(pArray);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS

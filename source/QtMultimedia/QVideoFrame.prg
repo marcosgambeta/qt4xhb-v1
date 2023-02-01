@@ -392,7 +392,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_MAP )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->map( ( QAbstractVideoBuffer::MapMode ) hb_parni(1) ) );
+      RBOOL( obj->map( ( QAbstractVideoBuffer::MapMode ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -661,7 +661,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_IMAGEFORMATFROMPIXELFORMAT )
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
-    RENUM( QVideoFrame::imageFormatFromPixelFormat( ( QVideoFrame::PixelFormat ) hb_parni(1) ) );
+    RENUM( QVideoFrame::imageFormatFromPixelFormat( ( QVideoFrame::PixelFormat ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -680,7 +680,7 @@ HB_FUNC_STATIC( QVIDEOFRAME_PIXELFORMATFROMIMAGEFORMAT )
   if( ISNUMPAR(1) && HB_ISNUM(1) )
   {
 #endif
-    RENUM( QVideoFrame::pixelFormatFromImageFormat( ( QImage::Format ) hb_parni(1) ) );
+    RENUM( QVideoFrame::pixelFormatFromImageFormat( ( QImage::Format ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
