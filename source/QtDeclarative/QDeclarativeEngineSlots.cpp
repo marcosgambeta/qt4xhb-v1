@@ -49,7 +49,8 @@ void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warning
     PHB_ITEM pWarnings = hb_itemArrayNew(0);
     if( pDynSym != NULL )
     {
-      for( int i = 0; i < warnings.count(); i++ )
+      const int count = warnings.count();
+      for( int i = 0; i < count; i++ )
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
