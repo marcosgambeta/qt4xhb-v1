@@ -207,7 +207,7 @@ QVariant HAbstractTableModelV2::headerData( int section, Qt::Orientation orienta
   if( m_headerDataBlock )
   {
     PHB_ITEM pSection = hb_itemPutNI( NULL, section );
-    PHB_ITEM pOrientation = hb_itemPutNI( NULL, (int) orientation );
+    PHB_ITEM pOrientation = hb_itemPutNI( NULL, static_cast<int>(orientation) );
     PHB_ITEM pRole = hb_itemPutNI( NULL, role );
 
     PHB_ITEM pRet = hb_itemNew( hb_vmEvalBlockV( m_headerDataBlock, 3, pSection, pOrientation, pRole ) );
