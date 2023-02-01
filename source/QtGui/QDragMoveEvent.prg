@@ -38,9 +38,9 @@ RETURN
 
 #include <QtGui/QDragMoveEvent>
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+#include "qt4xhb_common.hpp"
+#include "qt4xhb_macros.hpp"
+#include "qt4xhb_utils.hpp"
 
 /*
 QDragMoveEvent( const QPoint & pos, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers, QEvent::Type type = QEvent::DragMove )

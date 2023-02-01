@@ -44,9 +44,9 @@ RETURN
 
 #include <QtGui/QKeyEvent>
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+#include "qt4xhb_common.hpp"
+#include "qt4xhb_macros.hpp"
+#include "qt4xhb_utils.hpp"
 
 /*
 QKeyEvent( QEvent::Type type, int key, Qt::KeyboardModifiers modifiers, const QString & text = QString(), bool autorep = false, ushort count = 1 )

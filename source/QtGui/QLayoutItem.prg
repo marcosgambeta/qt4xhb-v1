@@ -64,9 +64,9 @@ RETURN
 
 #include <QtGui/QLayoutItem>
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+#include "qt4xhb_common.hpp"
+#include "qt4xhb_macros.hpp"
+#include "qt4xhb_utils.hpp"
 
 #include <QtGui/QLayout>
 

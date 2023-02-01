@@ -41,9 +41,9 @@ RETURN
 
 #include <QtGui/QHelpEvent>
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+#include "qt4xhb_common.hpp"
+#include "qt4xhb_macros.hpp"
+#include "qt4xhb_utils.hpp"
 
 /*
 QHelpEvent( QEvent::Type type, const QPoint & pos, const QPoint & globalPos )

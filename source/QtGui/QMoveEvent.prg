@@ -37,9 +37,9 @@ RETURN
 
 #include <QtGui/QMoveEvent>
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+#include "qt4xhb_common.hpp"
+#include "qt4xhb_macros.hpp"
+#include "qt4xhb_utils.hpp"
 
 /*
 QMoveEvent( const QPoint & pos, const QPoint & oldPos )

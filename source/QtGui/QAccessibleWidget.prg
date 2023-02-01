@@ -45,9 +45,9 @@ RETURN
 
 #include <QtGui/QAccessibleWidget>
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+#include "qt4xhb_common.hpp"
+#include "qt4xhb_macros.hpp"
+#include "qt4xhb_utils.hpp"
 
 /*
 QAccessibleWidget( QWidget * w, QAccessible::Role role = QAccessible::Client, const QString & name = QString() )

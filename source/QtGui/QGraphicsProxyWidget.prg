@@ -43,11 +43,11 @@ RETURN
 
 #include <QtGui/QGraphicsProxyWidget>
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
-#include "qt4xhb_events.h"
-#include "qt4xhb_signals.h"
+#include "qt4xhb_common.hpp"
+#include "qt4xhb_macros.hpp"
+#include "qt4xhb_utils.hpp"
+#include "qt4xhb_events.hpp"
+#include "qt4xhb_signals.hpp"
 
 /*
 QGraphicsProxyWidget( QGraphicsItem * parent = 0, Qt::WindowFlags wFlags = 0 )
