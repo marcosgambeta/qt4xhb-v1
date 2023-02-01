@@ -1318,7 +1318,7 @@ HB_FUNC_STATIC( QGLFORMAT_TESTOPTION )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->testOption( ( QGL::FormatOptions ) hb_parni(1) ) );
+      RBOOL( obj->testOption( ( QGL::FormatOptions ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1478,7 +1478,7 @@ HB_FUNC_STATIC( QGLFORMAT_FROMPLATFORMWINDOWFORMAT )
   if( ISNUMPAR(1) && ISQPLATFORMWINDOWFORMAT(1) )
   {
 #endif
-    QGLFormat * ptr = new QGLFormat( QGLFormat::fromPlatformWindowFormat( *PQPLATFORMWINDOWFORMAT(1) ) );
+    QGLFormat * ptr = new QGLFormat( QGLFormat::fromPlatformWindowFormat( *PQPLATFORMWINDOWFORMAT(1)) );
     Qt4xHb::createReturnClass(ptr, "QGLFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
@@ -1499,7 +1499,7 @@ HB_FUNC_STATIC( QGLFORMAT_TOPLATFORMWINDOWFORMAT )
   if( ISNUMPAR(1) && ISQGLFORMAT(1) )
   {
 #endif
-    QPlatformWindowFormat * ptr = new QPlatformWindowFormat( QGLFormat::toPlatformWindowFormat( *PQGLFORMAT(1) ) );
+    QPlatformWindowFormat * ptr = new QPlatformWindowFormat( QGLFormat::toPlatformWindowFormat( *PQGLFORMAT(1)) );
     Qt4xHb::createReturnClass(ptr, "QPLATFORMWINDOWFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }

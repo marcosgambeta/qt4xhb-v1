@@ -280,7 +280,7 @@ HB_FUNC_STATIC( QGLBUFFER_MAP )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      hb_retptr( static_cast<void*>( obj->map( ( QGLBuffer::Access ) hb_parni(1) ) ) );
+      hb_retptr( static_cast<void*>( obj->map( ( QGLBuffer::Access ) hb_parni(1)) ) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,7 +304,7 @@ HB_FUNC_STATIC( QGLBUFFER_READ )
     if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISPOINTER(2) && HB_ISNUM(3) )
     {
 #endif
-      RBOOL( obj->read( PINT(1), static_cast<void*>( hb_parptr(2) ), PINT(3) ) );
+      RBOOL( obj->read( PINT(1), static_cast<void*>( hb_parptr(2) ), PINT(3)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

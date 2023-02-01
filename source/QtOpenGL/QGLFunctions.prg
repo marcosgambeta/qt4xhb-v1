@@ -418,7 +418,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLCHECKFRAMEBUFFERSTATUS )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RGLENUM( obj->glCheckFramebufferStatus( PGLENUM(1) ) );
+      RGLENUM( obj->glCheckFramebufferStatus( PGLENUM(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -494,7 +494,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLCOMPRESSEDTEXIMAGE2D )
     if( ISNUMPAR(8) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) && HB_ISNUM(7) && HB_ISPOINTER(8) )
     {
 #endif
-      obj->glCompressedTexImage2D( PGLENUM(1), PGLINT(2), PGLENUM(3), PGLSIZEI(4), PGLSIZEI(5), PGLINT(6), PGLSIZEI(7), static_cast<const void*>( hb_parptr(8) ) );
+      obj->glCompressedTexImage2D( PGLENUM(1), PGLINT(2), PGLENUM(3), PGLSIZEI(4), PGLSIZEI(5), PGLINT(6), PGLSIZEI(7), static_cast<const void*>( hb_parptr(8)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -520,7 +520,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLCOMPRESSEDTEXSUBIMAGE2D )
     if( ISNUMPAR(9) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) && HB_ISNUM(7) && HB_ISNUM(8) && HB_ISPOINTER(9) )
     {
 #endif
-      obj->glCompressedTexSubImage2D( PGLENUM(1), PGLINT(2), PGLINT(3), PGLINT(4), PGLSIZEI(5), PGLSIZEI(6), PGLENUM(7), PGLSIZEI(8), static_cast<const void*>( hb_parptr(9) ) );
+      obj->glCompressedTexSubImage2D( PGLENUM(1), PGLINT(2), PGLINT(3), PGLINT(4), PGLSIZEI(5), PGLSIZEI(6), PGLENUM(7), PGLSIZEI(8), static_cast<const void*>( hb_parptr(9)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -570,7 +570,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLCREATESHADER )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RGLUINT( obj->glCreateShader( PGLENUM(1) ) );
+      RGLUINT( obj->glCreateShader( PGLENUM(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -828,7 +828,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLGETATTRIBLOCATION )
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
     {
 #endif
-      RINT( obj->glGetAttribLocation( PGLUINT(1), PCONSTCHAR(2) ) );
+      RINT( obj->glGetAttribLocation( PGLUINT(1), PCONSTCHAR(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -852,7 +852,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLGETUNIFORMLOCATION )
     if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISCHAR(2) )
     {
 #endif
-      RINT( obj->glGetUniformLocation( PGLUINT(1), PCONSTCHAR(2) ) );
+      RINT( obj->glGetUniformLocation( PGLUINT(1), PCONSTCHAR(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -876,7 +876,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLISBUFFER )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RGLBOOLEAN( obj->glIsBuffer( PGLUINT(1) ) );
+      RGLBOOLEAN( obj->glIsBuffer( PGLUINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -900,7 +900,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLISFRAMEBUFFER )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RGLBOOLEAN( obj->glIsFramebuffer( PGLUINT(1) ) );
+      RGLBOOLEAN( obj->glIsFramebuffer( PGLUINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -924,7 +924,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLISPROGRAM )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RGLBOOLEAN( obj->glIsProgram( PGLUINT(1) ) );
+      RGLBOOLEAN( obj->glIsProgram( PGLUINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -948,7 +948,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLISRENDERBUFFER )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RGLBOOLEAN( obj->glIsRenderbuffer( PGLUINT(1) ) );
+      RGLBOOLEAN( obj->glIsRenderbuffer( PGLUINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -972,7 +972,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLISSHADER )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RGLBOOLEAN( obj->glIsShader( PGLUINT(1) ) );
+      RGLBOOLEAN( obj->glIsShader( PGLUINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1542,7 +1542,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_GLVERTEXATTRIBPOINTER )
     if( ISNUMPAR(6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISLOG(4) && HB_ISNUM(5) && HB_ISPOINTER(6) )
     {
 #endif
-      obj->glVertexAttribPointer( PGLUINT(1), PGLINT(2), PGLENUM(3), PGLBOOLEAN(4), PGLSIZEI(5), static_cast<const void*>( hb_parptr(6) ) );
+      obj->glVertexAttribPointer( PGLUINT(1), PGLINT(2), PGLENUM(3), PGLBOOLEAN(4), PGLSIZEI(5), static_cast<const void*>( hb_parptr(6)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1568,7 +1568,7 @@ HB_FUNC_STATIC( QGLFUNCTIONS_HASOPENGLFEATURE )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RBOOL( obj->hasOpenGLFeature( ( QGLFunctions::OpenGLFeature ) hb_parni(1) ) );
+      RBOOL( obj->hasOpenGLFeature( ( QGLFunctions::OpenGLFeature ) hb_parni(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1589,10 +1589,10 @@ HB_FUNC_STATIC( QGLFUNCTIONS_INITIALIZEGLFUNCTIONS )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && ( ISQGLCONTEXT(1) || HB_ISNIL(1) ) )
+    if( ISBETWEEN(0, 1) && (ISQGLCONTEXT(1) || HB_ISNIL(1)) )
     {
 #endif
-      obj->initializeGLFunctions( HB_ISNIL(1) ? 0 : static_cast<QGLContext*>( Qt4xHb::itemGetPtr(1) ) );
+      obj->initializeGLFunctions( HB_ISNIL(1) ? 0 : static_cast<QGLContext*>( Qt4xHb::itemGetPtr(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

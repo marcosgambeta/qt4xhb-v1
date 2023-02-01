@@ -108,7 +108,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_ENTRYCOLOR )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      QColor * ptr = new QColor( obj->entryColor( PINT(1) ) );
+      QColor * ptr = new QColor( obj->entryColor( PINT(1)) );
       Qt4xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_ENTRYRGB )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RQRGB( obj->entryRgb( PINT(1) ) );
+      RQRGB( obj->entryRgb( PINT(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -157,7 +157,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_FIND )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->find( PQRGB(1) ) );
+      RINT( obj->find( PQRGB(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -181,7 +181,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_FINDNEAREST )
     if( ISNUMPAR(1) && HB_ISNUM(1) )
     {
 #endif
-      RINT( obj->findNearest( PQRGB(1) ) );
+      RINT( obj->findNearest( PQRGB(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -232,7 +232,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY )
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && ( ISQCOLOR(2) || HB_ISCHAR(2) ) )
+  else if( ISNUMPAR(2) && HB_ISNUM(1) && (ISQCOLOR(2) || HB_ISCHAR(2)) )
   {
     /*
     void setEntry( int idx, const QColor & color )
@@ -241,7 +241,7 @@ HB_FUNC_STATIC( QGLCOLORMAP_SETENTRY )
 
     if( obj != NULL )
     {
-      obj->setEntry( PINT(1), HB_ISOBJECT(2) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(2) ) : QColor( hb_parc(2) ) );
+      obj->setEntry( PINT(1), HB_ISOBJECT(2) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(2) ) : QColor( hb_parc(2)) );
     }
 
     hb_itemReturn(hb_stackSelfItem());
