@@ -319,7 +319,8 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDCOLUMNS )
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym != NULL )
       {
-        for( int i = 0; i < list.count(); i++ )
+        const int count = list.count();
+        for( int i = 0; i < count; i++ )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -369,7 +370,8 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDINDEXES )
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym != NULL )
       {
-        for( int i = 0; i < list.count(); i++ )
+        const int count = list.count();
+        for( int i = 0; i < count; i++ )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -419,7 +421,8 @@ HB_FUNC_STATIC( QITEMSELECTIONMODEL_SELECTEDROWS )
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym != NULL )
       {
-        for( int i = 0; i < list.count(); i++ )
+        const int count = list.count();
+        for( int i = 0; i < count; i++ )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();

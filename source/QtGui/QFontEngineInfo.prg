@@ -353,7 +353,8 @@ HB_FUNC_STATIC( QFONTENGINEINFO_WRITINGSYSTEMS )
 #endif
       QList<QFontDatabase::WritingSystem> list = obj->writingSystems();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( int i = 0; i < list.count(); i++ )
+      const int count = list.count();
+      for( int i = 0; i < count; i++ )
       {
         PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
         hb_arrayAddForward( pArray, pItem );

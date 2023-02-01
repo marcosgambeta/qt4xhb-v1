@@ -161,7 +161,8 @@ HB_FUNC_STATIC( QRAWFONT_ADVANCESFORGLYPHINDEXES )
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym != NULL )
       {
-        for( int i = 0; i < list.count(); i++ )
+        const int count = list.count();
+        for( int i = 0; i < count; i++ )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -354,7 +355,8 @@ HB_FUNC_STATIC( QRAWFONT_GLYPHINDEXESFORSTRING )
 #endif
       QVector<quint32> list = obj->glyphIndexesForString( PQSTRING(1) );
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( int i = 0; i < list.count(); i++ )
+      const int count = list.count();
+      for( int i = 0; i < count; i++ )
       {
         PHB_ITEM pItem = hb_itemPutNI( NULL, (quint32) list[i] );
         hb_arrayAddForward( pArray, pItem );
@@ -657,7 +659,8 @@ HB_FUNC_STATIC( QRAWFONT_SUPPORTEDWRITINGSYSTEMS )
 #endif
       QList<QFontDatabase::WritingSystem> list = obj->supportedWritingSystems();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( int i = 0; i < list.count(); i++ )
+      const int count = list.count();
+      for( int i = 0; i < count; i++ )
       {
         PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
         hb_arrayAddForward( pArray, pItem );

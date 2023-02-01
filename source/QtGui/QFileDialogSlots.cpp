@@ -84,7 +84,8 @@ void QFileDialogSlots::filesSelected( const QStringList & selected )
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFILEDIALOG");
     PHB_ITEM pSelected = hb_itemArrayNew(0);
-    for( int i = 0; i < selected.count(); i++ )
+    const int count = selected.count();
+    for( int i = 0; i < count; i++ )
     {
       PHB_ITEM pTempItem = hb_itemPutC( NULL, QSTRINGTOSTRING( selected [i] ) );
       hb_arrayAddForward( pSelected, pTempItem );

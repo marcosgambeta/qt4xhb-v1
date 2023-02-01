@@ -33,7 +33,8 @@ void QListViewSlots::indexesMoved( const QModelIndexList & indexes )
     PHB_ITEM pIndexes = hb_itemArrayNew(0);
     if( pDynSym != NULL )
     {
-      for( int i = 0; i < indexes.count(); i++ )
+      const int count = indexes.count();
+      for( int i = 0; i < count; i++ )
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();

@@ -33,7 +33,8 @@ void QGraphicsSceneSlots::changed( const QList<QRectF> & region )
     PHB_ITEM pRegion = hb_itemArrayNew(0);
     if( pDynSym != NULL )
     {
-      for( int i = 0; i < region.count(); i++ )
+      const int count = region.count();
+      for( int i = 0; i < count; i++ )
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();

@@ -1417,7 +1417,8 @@ HB_FUNC_STATIC( QPRINTER_SUPPORTEDPAPERSOURCES )
 #endif
       QList<QPrinter::PaperSource> list = obj->supportedPaperSources();
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      for( int i = 0; i < list.count(); i++ )
+      const int count = list.count();
+      for( int i = 0; i < count; i++ )
       {
         PHB_ITEM pItem = hb_itemPutNI( NULL, (int) list[i] );
         hb_arrayAddForward( pArray, pItem );
