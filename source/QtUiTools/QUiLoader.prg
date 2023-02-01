@@ -69,7 +69,7 @@ QUiLoader( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QUILOADER_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
   {
     QUiLoader * obj = new QUiLoader( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -208,10 +208,10 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTION )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 2) && ( ISQOBJECT(1) || HB_ISNIL(1) ) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(0, 2) && (ISQOBJECT(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
     {
 #endif
-      QAction * ptr = obj->createAction( OPQOBJECT( 1, 0 ), OPQSTRING( 2, QString() ) );
+      QAction * ptr = obj->createAction( OPQOBJECT( 1, 0 ), OPQSTRING( 2, QString()) );
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -233,10 +233,10 @@ HB_FUNC_STATIC( QUILOADER_CREATEACTIONGROUP )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 2) && ( ISQOBJECT(1) || HB_ISNIL(1) ) && ( HB_ISCHAR(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(0, 2) && (ISQOBJECT(1) || HB_ISNIL(1)) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
     {
 #endif
-      QActionGroup * ptr = obj->createActionGroup( OPQOBJECT( 1, 0 ), OPQSTRING( 2, QString() ) );
+      QActionGroup * ptr = obj->createActionGroup( OPQOBJECT( 1, 0 ), OPQSTRING( 2, QString()) );
       Qt4xHb::createReturnQObjectClass(ptr, "QACTIONGROUP");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -258,10 +258,10 @@ HB_FUNC_STATIC( QUILOADER_CREATELAYOUT )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && ( ISQOBJECT(2) || HB_ISNIL(2) ) && ( HB_ISCHAR(3) || HB_ISNIL(3) ) )
+    if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)) && (HB_ISCHAR(3) || HB_ISNIL(3)) )
     {
 #endif
-      QLayout * ptr = obj->createLayout( PQSTRING(1), OPQOBJECT( 2, 0 ), OPQSTRING( 3, QString() ) );
+      QLayout * ptr = obj->createLayout( PQSTRING(1), OPQOBJECT( 2, 0 ), OPQSTRING( 3, QString()) );
       Qt4xHb::createReturnQObjectClass(ptr, "QLAYOUT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -283,10 +283,10 @@ HB_FUNC_STATIC( QUILOADER_CREATEWIDGET )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) && ( HB_ISCHAR(3) || HB_ISNIL(3) ) )
+    if( ISBETWEEN(1, 3) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) && (HB_ISCHAR(3) || HB_ISNIL(3)) )
     {
 #endif
-      QWidget * ptr = obj->createWidget( PQSTRING(1), OPQWIDGET( 2, 0 ), OPQSTRING( 3, QString() ) );
+      QWidget * ptr = obj->createWidget( PQSTRING(1), OPQWIDGET( 2, 0 ), OPQSTRING( 3, QString()) );
       Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -332,7 +332,7 @@ HB_FUNC_STATIC( QUILOADER_LOAD )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQIODEVICE(1) && ( ISQWIDGET(2) || HB_ISNIL(2) ) )
+    if( ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQWIDGET(2) || HB_ISNIL(2)) )
     {
 #endif
       QWidget * ptr = obj->load( PQIODEVICE(1), OPQWIDGET( 2, 0 ) );
