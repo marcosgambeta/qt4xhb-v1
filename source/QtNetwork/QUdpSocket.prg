@@ -49,7 +49,7 @@ QUdpSocket( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QUDPSOCKET_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
   {
     QUdpSocket * obj = new QUdpSocket( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -89,7 +89,7 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND )
 
     if( obj != NULL )
     {
-      RBOOL( obj->bind( *PQHOSTADDRESS(1), PQUINT16(2) ) );
+      RBOOL( obj->bind( *PQHOSTADDRESS(1), PQUINT16(2)) );
     }
   }
   else if( ISNUMPAR(3) && ISQHOSTADDRESS(1) && HB_ISNUM(2) && HB_ISNUM(3) )
@@ -101,10 +101,10 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND )
 
     if( obj != NULL )
     {
-      RBOOL( obj->bind( *PQHOSTADDRESS(1), PQUINT16(2), ( QUdpSocket::BindMode ) hb_parni(3) ) );
+      RBOOL( obj->bind( *PQHOSTADDRESS(1), PQUINT16(2), ( QUdpSocket::BindMode ) hb_parni(3)) );
     }
   }
-  else if( ISBETWEEN(0, 1) && ( HB_ISNUM(1) || HB_ISNIL(1) ) )
+  else if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
   {
     /*
     bool bind( quint16 port = 0 )
@@ -113,7 +113,7 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND )
 
     if( obj != NULL )
     {
-      RBOOL( obj->bind( OPQUINT16( 1, 0 ) ) );
+      RBOOL( obj->bind( OPQUINT16( 1, 0 )) );
     }
   }
   else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) )
@@ -125,7 +125,7 @@ HB_FUNC_STATIC( QUDPSOCKET_BIND )
 
     if( obj != NULL )
     {
-      RBOOL( obj->bind( PQUINT16(1), ( QUdpSocket::BindMode ) hb_parni(2) ) );
+      RBOOL( obj->bind( PQUINT16(1), ( QUdpSocket::BindMode ) hb_parni(2)) );
     }
   }
   else
@@ -193,7 +193,7 @@ HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM )
 
     if( obj != NULL )
     {
-      RQINT64( obj->writeDatagram( PCONSTCHAR(1), PQINT64(2), *PQHOSTADDRESS(3), PQUINT16(4) ) );
+      RQINT64( obj->writeDatagram( PCONSTCHAR(1), PQINT64(2), *PQHOSTADDRESS(3), PQUINT16(4)) );
     }
   }
   else if( ISNUMPAR(3) && ISQBYTEARRAY(1) && ISQHOSTADDRESS(2) && HB_ISNUM(3) )
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QUDPSOCKET_WRITEDATAGRAM )
 
     if( obj != NULL )
     {
-      RQINT64( obj->writeDatagram( *PQBYTEARRAY(1), *PQHOSTADDRESS(2), PQUINT16(3) ) );
+      RQINT64( obj->writeDatagram( *PQBYTEARRAY(1), *PQHOSTADDRESS(2), PQUINT16(3)) );
     }
   }
   else

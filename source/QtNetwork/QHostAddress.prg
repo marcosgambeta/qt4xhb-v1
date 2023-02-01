@@ -171,7 +171,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_ISINSUBNET )
     if( ISNUMPAR(2) && ISQHOSTADDRESS(1) && HB_ISNUM(2) )
     {
 #endif
-      RBOOL( obj->isInSubnet( *PQHOSTADDRESS(1), PINT(2) ) );
+      RBOOL( obj->isInSubnet( *PQHOSTADDRESS(1), PINT(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -279,7 +279,7 @@ HB_FUNC_STATIC( QHOSTADDRESS_SETADDRESS )
 
     if( obj != NULL )
     {
-      RBOOL( obj->setAddress( PQSTRING(1) ) );
+      RBOOL( obj->setAddress( PQSTRING(1)) );
     }
   }
   else

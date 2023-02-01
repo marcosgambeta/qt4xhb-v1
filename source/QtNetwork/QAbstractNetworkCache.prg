@@ -155,7 +155,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_METADATA )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      QNetworkCacheMetaData * ptr = new QNetworkCacheMetaData( obj->metaData( *PQURL(1) ) );
+      QNetworkCacheMetaData * ptr = new QNetworkCacheMetaData( obj->metaData( *PQURL(1)) );
       Qt4xHb::createReturnClass(ptr, "QNETWORKCACHEMETADATA", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -205,7 +205,7 @@ HB_FUNC_STATIC( QABSTRACTNETWORKCACHE_REMOVE )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      RBOOL( obj->remove( *PQURL(1) ) );
+      RBOOL( obj->remove( *PQURL(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

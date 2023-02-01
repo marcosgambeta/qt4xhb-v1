@@ -792,7 +792,7 @@ HB_FUNC_STATIC( QURLINFO_EQUAL )
   if( ISNUMPAR(3) && ISQURLINFO(1) && ISQURLINFO(2) && HB_ISNUM(3) )
   {
 #endif
-    RBOOL( QUrlInfo::equal( *PQURLINFO(1), *PQURLINFO(2), PINT(3) ) );
+    RBOOL( QUrlInfo::equal( *PQURLINFO(1), *PQURLINFO(2), PINT(3)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -811,7 +811,7 @@ HB_FUNC_STATIC( QURLINFO_GREATERTHAN )
   if( ISNUMPAR(3) && ISQURLINFO(1) && ISQURLINFO(2) && HB_ISNUM(3) )
   {
 #endif
-    RBOOL( QUrlInfo::greaterThan( *PQURLINFO(1), *PQURLINFO(2), PINT(3) ) );
+    RBOOL( QUrlInfo::greaterThan( *PQURLINFO(1), *PQURLINFO(2), PINT(3)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -830,7 +830,7 @@ HB_FUNC_STATIC( QURLINFO_LESSTHAN )
   if( ISNUMPAR(3) && ISQURLINFO(1) && ISQURLINFO(2) && HB_ISNUM(3) )
   {
 #endif
-    RBOOL( QUrlInfo::lessThan( *PQURLINFO(1), *PQURLINFO(2), PINT(3) ) );
+    RBOOL( QUrlInfo::lessThan( *PQURLINFO(1), *PQURLINFO(2), PINT(3)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else

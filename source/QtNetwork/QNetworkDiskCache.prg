@@ -60,7 +60,7 @@ QNetworkDiskCache( QObject * parent = 0 )
 */
 HB_FUNC_STATIC( QNETWORKDISKCACHE_NEW )
 {
-  if( ISBETWEEN(0, 1) && ( ISQOBJECT(1) || HB_ISNIL(1) ) )
+  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
   {
     QNetworkDiskCache * obj = new QNetworkDiskCache( OPQOBJECT( 1, 0 ) );
     Qt4xHb::returnNewObject(obj, false);
@@ -126,7 +126,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_FILEMETADATA )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QNetworkCacheMetaData * ptr = new QNetworkCacheMetaData( obj->fileMetaData( PQSTRING(1) ) );
+      QNetworkCacheMetaData * ptr = new QNetworkCacheMetaData( obj->fileMetaData( PQSTRING(1)) );
       Qt4xHb::createReturnClass(ptr, "QNETWORKCACHEMETADATA", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -302,7 +302,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_METADATA )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      QNetworkCacheMetaData * ptr = new QNetworkCacheMetaData( obj->metaData( *PQURL(1) ) );
+      QNetworkCacheMetaData * ptr = new QNetworkCacheMetaData( obj->metaData( *PQURL(1)) );
       Qt4xHb::createReturnClass(ptr, "QNETWORKCACHEMETADATA", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -352,7 +352,7 @@ HB_FUNC_STATIC( QNETWORKDISKCACHE_REMOVE )
     if( ISNUMPAR(1) && ISQURL(1) )
     {
 #endif
-      RBOOL( obj->remove( *PQURL(1) ) );
+      RBOOL( obj->remove( *PQURL(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

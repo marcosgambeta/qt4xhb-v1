@@ -99,18 +99,18 @@ void QSslSocketSlots::sslErrors( const QList<QSslError> & errors )
   if( cb != NULL )
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSSLSOCKET");
-    PHB_DYNS pDynSym = hb_dynsymFindName( "QSSLERROR");
+    PHB_DYNS pDynSym = hb_dynsymFindName("QSSLERROR");
     PHB_ITEM pErrors = hb_itemArrayNew(0);
-    if( pDynSym )
+    if( pDynSym != NULL )
     {
       for( int i = 0; i < errors.count(); i++ )
       {
-        hb_vmPushDynSym( pDynSym );
+        hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
         hb_vmDo(0);
-        PHB_ITEM pTempObject = hb_itemNew( NULL );
+        PHB_ITEM pTempObject = hb_itemNew(NULL);
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
-        PHB_ITEM pTempItem = hb_itemPutPtr( NULL, new QSslError( errors [i] ) );
+        PHB_ITEM pTempItem = hb_itemPutPtr(NULL, new QSslError( errors [i] ) );
         hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
         hb_arrayAddForward( pErrors, pTempObject );
         hb_itemRelease( pTempObject );
@@ -119,7 +119,7 @@ void QSslSocketSlots::sslErrors( const QList<QSslError> & errors )
     }
     else
     {
-      hb_errRT_BASE( EG_NOFUNC, 1001, NULL, "QSSLERROR", HB_ERR_ARGS_BASEPARAMS );
+      hb_errRT_BASE(EG_NOFUNC, 1001, NULL, "QSSLERROR", HB_ERR_ARGS_BASEPARAMS);
     }
 
     hb_vmEvalBlockV( cb, 2, pSender, pErrors );

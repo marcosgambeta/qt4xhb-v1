@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QAUTHENTICATOR_OPTION )
     if( ISNUMPAR(1) && HB_ISCHAR(1) )
     {
 #endif
-      QVariant * ptr = new QVariant( obj->option( PQSTRING(1) ) );
+      QVariant * ptr = new QVariant( obj->option( PQSTRING(1)) );
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
