@@ -50,9 +50,9 @@ RETURN
 
 #include <QtCore/QMetaType>
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+#include "qt4xhb_common.hpp"
+#include "qt4xhb_macros.hpp"
+#include "qt4xhb_utils.hpp"
 
 /*
 static int registerTypedef( const char * typeName, int aliasId )

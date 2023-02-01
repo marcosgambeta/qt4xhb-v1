@@ -49,9 +49,9 @@ RETURN
 
 #include <QtCore/QSystemSemaphore>
 
-#include "qt4xhb_common.h"
-#include "qt4xhb_macros.h"
-#include "qt4xhb_utils.h"
+#include "qt4xhb_common.hpp"
+#include "qt4xhb_macros.hpp"
+#include "qt4xhb_utils.hpp"
 
 /*
 QSystemSemaphore( const QString & key, int initialValue = 0, QSystemSemaphore::AccessMode mode = QSystemSemaphore::Open )
