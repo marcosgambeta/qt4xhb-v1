@@ -122,7 +122,7 @@ HB_FUNC_STATIC( QAXBINDABLE_READDATA )
     if( ISNUMPAR(2) && ISQIODEVICE(1) && HB_ISCHAR(2) )
     {
 #endif
-      RBOOL( obj->readData( PQIODEVICE(1), PQSTRING(2) ) );
+      RBOOL( obj->readData( PQIODEVICE(1), PQSTRING(2)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,10 +143,10 @@ HB_FUNC_STATIC( QAXBINDABLE_REPORTERROR )
   if( obj != NULL )
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && ( HB_ISCHAR(4) || HB_ISNIL(4) ) )
+    if( ISBETWEEN(3, 4) && HB_ISNUM(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && (HB_ISCHAR(4) || HB_ISNIL(4)) )
     {
 #endif
-      obj->reportError( PINT(1), PQSTRING(2), PQSTRING(3), OPQSTRING( 4, QString() ) );
+      obj->reportError( PINT(1), PQSTRING(2), PQSTRING(3), OPQSTRING( 4, QString()) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,7 +172,7 @@ HB_FUNC_STATIC( QAXBINDABLE_WRITEDATA )
     if( ISNUMPAR(1) && ISQIODEVICE(1) )
     {
 #endif
-      RBOOL( obj->writeData( PQIODEVICE(1) ) );
+      RBOOL( obj->writeData( PQIODEVICE(1)) );
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
