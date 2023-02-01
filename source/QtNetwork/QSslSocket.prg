@@ -256,7 +256,8 @@ HB_FUNC_STATIC( QSSLSOCKET_CACERTIFICATES )
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym != NULL )
       {
-        for( int i = 0; i < list.count(); i++ )
+        const int count = list.count();
+        for( int i = 0; i < count; i++ )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -306,7 +307,8 @@ HB_FUNC_STATIC( QSSLSOCKET_CIPHERS )
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym != NULL )
       {
-        for( int i = 0; i < list.count(); i++ )
+        const int count = list.count();
+        for( int i = 0; i < count; i++ )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -605,7 +607,8 @@ HB_FUNC_STATIC( QSSLSOCKET_PEERCERTIFICATECHAIN )
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym != NULL )
       {
-        for( int i = 0; i < list.count(); i++ )
+        const int count = list.count();
+        for( int i = 0; i < count; i++ )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -1155,7 +1158,8 @@ HB_FUNC_STATIC( QSSLSOCKET_SSLERRORS )
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym != NULL )
       {
-        for( int i = 0; i < list.count(); i++ )
+        const int count = list.count();
+        for( int i = 0; i < count; i++ )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -1557,7 +1561,8 @@ HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCACERTIFICATES )
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym != NULL )
       {
-        for( int i = 0; i < list.count(); i++ )
+        const int count = list.count();
+        for( int i = 0; i < count; i++ )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -1607,7 +1612,8 @@ HB_FUNC_STATIC( QSSLSOCKET_DEFAULTCIPHERS )
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym != NULL )
       {
-        for( int i = 0; i < list.count(); i++ )
+        const int count = list.count();
+        for( int i = 0; i < count; i++ )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -1723,7 +1729,8 @@ HB_FUNC_STATIC( QSSLSOCKET_SUPPORTEDCIPHERS )
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym != NULL )
       {
-        for( int i = 0; i < list.count(); i++ )
+        const int count = list.count();
+        for( int i = 0; i < count; i++ )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -1792,7 +1799,8 @@ HB_FUNC_STATIC( QSSLSOCKET_SYSTEMCACERTIFICATES )
       PHB_ITEM pArray = hb_itemArrayNew(0);
       if( pDynSym != NULL )
       {
-        for( int i = 0; i < list.count(); i++ )
+        const int count = list.count();
+        for( int i = 0; i < count; i++ )
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();

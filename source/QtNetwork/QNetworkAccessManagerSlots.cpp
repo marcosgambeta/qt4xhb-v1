@@ -110,7 +110,8 @@ void QNetworkAccessManagerSlots::sslErrors( QNetworkReply * reply, const QList<Q
     PHB_ITEM pErrors = hb_itemArrayNew(0);
     if( pDynSym != NULL )
     {
-      for( int i = 0; i < errors.count(); i++ )
+      const int count = errors.count();
+      for( int i = 0; i < count; i++ )
       {
         hb_vmPushDynSym(pDynSym);
         hb_vmPushNil();
