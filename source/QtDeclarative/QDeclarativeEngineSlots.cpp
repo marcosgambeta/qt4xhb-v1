@@ -58,7 +58,7 @@ void QDeclarativeEngineSlots::warnings( const QList<QDeclarativeError> & warning
         PHB_ITEM pTempObject = hb_itemNew(NULL);
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
         PHB_ITEM pTempItem = hb_itemPutPtr(NULL, new QDeclarativeError( warnings [i] ) );
-        hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
+        hb_objSendMsg( pTempObject, "_POINTER", 1, pTempItem );
         hb_arrayAddForward( pWarnings, pTempObject );
         hb_itemRelease( pTempObject );
         hb_itemRelease( pTempItem );

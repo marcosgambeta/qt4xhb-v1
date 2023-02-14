@@ -42,7 +42,7 @@ void QListViewSlots::indexesMoved( const QModelIndexList & indexes )
         PHB_ITEM pTempObject = hb_itemNew(NULL);
         hb_itemCopy( pTempObject, hb_stackReturnItem() );
         PHB_ITEM pTempItem = hb_itemPutPtr(NULL, new QModelIndex( indexes [i] ) );
-        hb_objSendMsg( pTempObject, "NEWFROMPOINTER", 1, pTempItem );
+        hb_objSendMsg( pTempObject, "_POINTER", 1, pTempItem );
         hb_arrayAddForward( pIndexes, pTempObject );
         hb_itemRelease( pTempObject );
         hb_itemRelease( pTempItem );
