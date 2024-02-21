@@ -12,7 +12,7 @@
 
 #include "QAbstractSocketSlots.hpp"
 
-QAbstractSocketSlots::QAbstractSocketSlots(QObject * parent) : QObject(parent)
+QAbstractSocketSlots::QAbstractSocketSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,117 +22,117 @@ QAbstractSocketSlots::~QAbstractSocketSlots()
 
 void QAbstractSocketSlots::connected()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "connected()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTSOCKET");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
 void QAbstractSocketSlots::disconnected()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "disconnected()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTSOCKET");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
-void QAbstractSocketSlots::error( QAbstractSocket::SocketError socketError )
+void QAbstractSocketSlots::error(QAbstractSocket::SocketError socketError)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "error(QAbstractSocket::SocketError)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTSOCKET");
-    PHB_ITEM pSocketError = hb_itemPutNI( NULL, static_cast<int >( socketError ) );
+    PHB_ITEM pSocketError = hb_itemPutNI(NULL, static_cast<int>(socketError));
 
-    hb_vmEvalBlockV( cb, 2, pSender, pSocketError );
+    hb_vmEvalBlockV(cb, 2, pSender, pSocketError);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pSocketError );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pSocketError);
   }
 }
 
 void QAbstractSocketSlots::hostFound()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "hostFound()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTSOCKET");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
-void QAbstractSocketSlots::proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator )
+void QAbstractSocketSlots::proxyAuthenticationRequired(const QNetworkProxy &proxy, QAuthenticator *authenticator)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "proxyAuthenticationRequired(QNetworkProxy,QAuthenticator*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTSOCKET");
-    PHB_ITEM pProxy = Qt4xHb::Signals_return_object( ( void * ) &proxy, "QNETWORKPROXY");
-    PHB_ITEM pAuthenticator = Qt4xHb::Signals_return_object( ( void * ) authenticator, "QAUTHENTICATOR");
+    PHB_ITEM pProxy = Qt4xHb::Signals_return_object((void *)&proxy, "QNETWORKPROXY");
+    PHB_ITEM pAuthenticator = Qt4xHb::Signals_return_object((void *)authenticator, "QAUTHENTICATOR");
 
-    hb_vmEvalBlockV( cb, 3, pSender, pProxy, pAuthenticator );
+    hb_vmEvalBlockV(cb, 3, pSender, pProxy, pAuthenticator);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pProxy );
-    hb_itemRelease( pAuthenticator );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pProxy);
+    hb_itemRelease(pAuthenticator);
   }
 }
 
-void QAbstractSocketSlots::stateChanged( QAbstractSocket::SocketState socketState )
+void QAbstractSocketSlots::stateChanged(QAbstractSocket::SocketState socketState)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "stateChanged(QAbstractSocket::SocketState)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTSOCKET");
-    PHB_ITEM pSocketState = hb_itemPutNI( NULL, static_cast<int >( socketState ) );
+    PHB_ITEM pSocketState = hb_itemPutNI(NULL, static_cast<int>(socketState));
 
-    hb_vmEvalBlockV( cb, 2, pSender, pSocketState );
+    hb_vmEvalBlockV(cb, 2, pSender, pSocketState);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pSocketState );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pSocketState);
   }
 }
 
-void QAbstractSocketSlots_connect_signal( const QString & signal, const QString & slot )
+void QAbstractSocketSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QAbstractSocket * obj = qobject_cast<QAbstractSocket*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractSocket *obj = qobject_cast<QAbstractSocket *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QAbstractSocketSlots * s = QCoreApplication::instance()->findChild<QAbstractSocketSlots*>();
+    QAbstractSocketSlots *s = QCoreApplication::instance()->findChild<QAbstractSocketSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QAbstractSocketSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

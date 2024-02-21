@@ -24,19 +24,19 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QNetworkSessionSlots: public QObject
+class QNetworkSessionSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QNetworkSessionSlots(QObject * parent = 0);
+public:
+  QNetworkSessionSlots(QObject *parent = 0);
   ~QNetworkSessionSlots();
-  public slots:
+public slots:
   void closed();
-  void error( QNetworkSession::SessionError error );
+  void error(QNetworkSession::SessionError error);
   void newConfigurationActivated();
   void opened();
-  void preferredConfigurationChanged( const QNetworkConfiguration & config, bool isSeamless );
-  void stateChanged( QNetworkSession::State state );
+  void preferredConfigurationChanged(const QNetworkConfiguration &config, bool isSeamless);
+  void stateChanged(QNetworkSession::State state);
 };
 
 #endif /* QNETWORKSESSIONSLOTS_H */

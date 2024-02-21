@@ -24,21 +24,21 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QFtpSlots: public QObject
+class QFtpSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QFtpSlots(QObject * parent = 0);
+public:
+  QFtpSlots(QObject *parent = 0);
   ~QFtpSlots();
-  public slots:
-  void commandFinished( int id, bool error );
-  void commandStarted( int id );
-  void dataTransferProgress( qint64 done, qint64 total );
-  void done( bool error );
-  void listInfo( const QUrlInfo & i );
-  void rawCommandReply( int replyCode, const QString & detail );
+public slots:
+  void commandFinished(int id, bool error);
+  void commandStarted(int id);
+  void dataTransferProgress(qint64 done, qint64 total);
+  void done(bool error);
+  void listInfo(const QUrlInfo &i);
+  void rawCommandReply(int replyCode, const QString &detail);
   void readyRead();
-  void stateChanged( int state );
+  void stateChanged(int state);
 };
 
 #endif /* QFTPSLOTS_H */

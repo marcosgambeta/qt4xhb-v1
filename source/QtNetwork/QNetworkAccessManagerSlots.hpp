@@ -27,18 +27,18 @@
 #include <QSslError>
 #include <QNetworkReply>
 
-class QNetworkAccessManagerSlots: public QObject
+class QNetworkAccessManagerSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QNetworkAccessManagerSlots(QObject * parent = 0);
+public:
+  QNetworkAccessManagerSlots(QObject *parent = 0);
   ~QNetworkAccessManagerSlots();
-  public slots:
-  void authenticationRequired( QNetworkReply * reply, QAuthenticator * authenticator );
-  void finished( QNetworkReply * reply );
-  void networkAccessibleChanged( QNetworkAccessManager::NetworkAccessibility accessible );
-  void proxyAuthenticationRequired( const QNetworkProxy & proxy, QAuthenticator * authenticator );
-  void sslErrors( QNetworkReply * reply, const QList<QSslError> & errors );
+public slots:
+  void authenticationRequired(QNetworkReply *reply, QAuthenticator *authenticator);
+  void finished(QNetworkReply *reply);
+  void networkAccessibleChanged(QNetworkAccessManager::NetworkAccessibility accessible);
+  void proxyAuthenticationRequired(const QNetworkProxy &proxy, QAuthenticator *authenticator);
+  void sslErrors(QNetworkReply *reply, const QList<QSslError> &errors);
 };
 
 #endif /* QNETWORKACCESSMANAGERSLOTS_H */

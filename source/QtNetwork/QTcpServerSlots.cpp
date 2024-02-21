@@ -12,7 +12,7 @@
 
 #include "QTcpServerSlots.hpp"
 
-QTcpServerSlots::QTcpServerSlots(QObject * parent) : QObject(parent)
+QTcpServerSlots::QTcpServerSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,29 +22,29 @@ QTcpServerSlots::~QTcpServerSlots()
 
 void QTcpServerSlots::newConnection()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "newConnection()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTCPSERVER");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
-void QTcpServerSlots_connect_signal( const QString & signal, const QString & slot )
+void QTcpServerSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QTcpServer * obj = qobject_cast<QTcpServer*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTcpServer *obj = qobject_cast<QTcpServer *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QTcpServerSlots * s = QCoreApplication::instance()->findChild<QTcpServerSlots*>();
+    QTcpServerSlots *s = QCoreApplication::instance()->findChild<QTcpServerSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QTcpServerSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

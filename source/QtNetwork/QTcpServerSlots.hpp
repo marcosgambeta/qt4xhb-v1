@@ -24,13 +24,13 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QTcpServerSlots: public QObject
+class QTcpServerSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QTcpServerSlots(QObject * parent = 0);
+public:
+  QTcpServerSlots(QObject *parent = 0);
   ~QTcpServerSlots();
-  public slots:
+public slots:
   void newConnection();
 };
 

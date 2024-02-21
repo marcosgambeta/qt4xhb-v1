@@ -12,7 +12,7 @@
 
 #include "QFtpSlots.hpp"
 
-QFtpSlots::QFtpSlots(QObject * parent) : QObject(parent)
+QFtpSlots::QFtpSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,163 +20,163 @@ QFtpSlots::~QFtpSlots()
 {
 }
 
-void QFtpSlots::commandFinished( int id, bool error )
+void QFtpSlots::commandFinished(int id, bool error)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "commandFinished(int,bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFTP");
-    PHB_ITEM pId = hb_itemPutNI( NULL, id );
-    PHB_ITEM pError = hb_itemPutL( NULL, error );
+    PHB_ITEM pId = hb_itemPutNI(NULL, id);
+    PHB_ITEM pError = hb_itemPutL(NULL, error);
 
-    hb_vmEvalBlockV( cb, 3, pSender, pId, pError );
+    hb_vmEvalBlockV(cb, 3, pSender, pId, pError);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pId );
-    hb_itemRelease( pError );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pId);
+    hb_itemRelease(pError);
   }
 }
 
-void QFtpSlots::commandStarted( int id )
+void QFtpSlots::commandStarted(int id)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "commandStarted(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFTP");
-    PHB_ITEM pId = hb_itemPutNI( NULL, id );
+    PHB_ITEM pId = hb_itemPutNI(NULL, id);
 
-    hb_vmEvalBlockV( cb, 2, pSender, pId );
+    hb_vmEvalBlockV(cb, 2, pSender, pId);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pId );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pId);
   }
 }
 
-void QFtpSlots::dataTransferProgress( qint64 done, qint64 total )
+void QFtpSlots::dataTransferProgress(qint64 done, qint64 total)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "dataTransferProgress(qint64,qint64)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFTP");
-    PHB_ITEM pDone = hb_itemPutNLL( NULL, done );
-    PHB_ITEM pTotal = hb_itemPutNLL( NULL, total );
+    PHB_ITEM pDone = hb_itemPutNLL(NULL, done);
+    PHB_ITEM pTotal = hb_itemPutNLL(NULL, total);
 
-    hb_vmEvalBlockV( cb, 3, pSender, pDone, pTotal );
+    hb_vmEvalBlockV(cb, 3, pSender, pDone, pTotal);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pDone );
-    hb_itemRelease( pTotal );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pDone);
+    hb_itemRelease(pTotal);
   }
 }
 
-void QFtpSlots::done( bool error )
+void QFtpSlots::done(bool error)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "done(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFTP");
-    PHB_ITEM pError = hb_itemPutL( NULL, error );
+    PHB_ITEM pError = hb_itemPutL(NULL, error);
 
-    hb_vmEvalBlockV( cb, 2, pSender, pError );
+    hb_vmEvalBlockV(cb, 2, pSender, pError);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pError );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pError);
   }
 }
 
-void QFtpSlots::listInfo( const QUrlInfo & i )
+void QFtpSlots::listInfo(const QUrlInfo &i)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "listInfo(QUrlInfo)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFTP");
-    PHB_ITEM pI = Qt4xHb::Signals_return_object( ( void * ) &i, "QURLINFO");
+    PHB_ITEM pI = Qt4xHb::Signals_return_object((void *)&i, "QURLINFO");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pI );
+    hb_vmEvalBlockV(cb, 2, pSender, pI);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pI );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pI);
   }
 }
 
-void QFtpSlots::rawCommandReply( int replyCode, const QString & detail )
+void QFtpSlots::rawCommandReply(int replyCode, const QString &detail)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "rawCommandReply(int,QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFTP");
-    PHB_ITEM pReplyCode = hb_itemPutNI( NULL, replyCode );
-    PHB_ITEM pDetail = hb_itemPutC( NULL, QSTRINGTOSTRING( detail ) );
+    PHB_ITEM pReplyCode = hb_itemPutNI(NULL, replyCode);
+    PHB_ITEM pDetail = hb_itemPutC(NULL, QSTRINGTOSTRING(detail));
 
-    hb_vmEvalBlockV( cb, 3, pSender, pReplyCode, pDetail );
+    hb_vmEvalBlockV(cb, 3, pSender, pReplyCode, pDetail);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pReplyCode );
-    hb_itemRelease( pDetail );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pReplyCode);
+    hb_itemRelease(pDetail);
   }
 }
 
 void QFtpSlots::readyRead()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "readyRead()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFTP");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
-void QFtpSlots::stateChanged( int state )
+void QFtpSlots::stateChanged(int state)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "stateChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFTP");
-    PHB_ITEM pState = hb_itemPutNI( NULL, state );
+    PHB_ITEM pState = hb_itemPutNI(NULL, state);
 
-    hb_vmEvalBlockV( cb, 2, pSender, pState );
+    hb_vmEvalBlockV(cb, 2, pSender, pState);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pState );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pState);
   }
 }
 
-void QFtpSlots_connect_signal( const QString & signal, const QString & slot )
+void QFtpSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QFtp * obj = qobject_cast<QFtp*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFtp *obj = qobject_cast<QFtp *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QFtpSlots * s = QCoreApplication::instance()->findChild<QFtpSlots*>();
+    QFtpSlots *s = QCoreApplication::instance()->findChild<QFtpSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QFtpSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
