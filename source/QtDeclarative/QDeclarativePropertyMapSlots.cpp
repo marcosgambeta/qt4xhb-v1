@@ -12,7 +12,7 @@
 
 #include "QDeclarativePropertyMapSlots.hpp"
 
-QDeclarativePropertyMapSlots::QDeclarativePropertyMapSlots(QObject * parent) : QObject(parent)
+QDeclarativePropertyMapSlots::QDeclarativePropertyMapSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,35 +20,35 @@ QDeclarativePropertyMapSlots::~QDeclarativePropertyMapSlots()
 {
 }
 
-void QDeclarativePropertyMapSlots::valueChanged( const QString & key, const QVariant & value )
+void QDeclarativePropertyMapSlots::valueChanged(const QString &key, const QVariant &value)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "valueChanged(QString,QVariant)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDECLARATIVEPROPERTYMAP");
-    PHB_ITEM pKey = hb_itemPutC( NULL, QSTRINGTOSTRING( key ) );
-    PHB_ITEM pValue = Qt4xHb::Signals_return_object( ( void * ) &value, "QVARIANT");
+    PHB_ITEM pKey = hb_itemPutC(NULL, QSTRINGTOSTRING(key));
+    PHB_ITEM pValue = Qt4xHb::Signals_return_object((void *)&value, "QVARIANT");
 
-    hb_vmEvalBlockV( cb, 3, pSender, pKey, pValue );
+    hb_vmEvalBlockV(cb, 3, pSender, pKey, pValue);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pKey );
-    hb_itemRelease( pValue );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pKey);
+    hb_itemRelease(pValue);
   }
 }
 
-void QDeclarativePropertyMapSlots_connect_signal( const QString & signal, const QString & slot )
+void QDeclarativePropertyMapSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QDeclarativePropertyMap * obj = qobject_cast<QDeclarativePropertyMap*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDeclarativePropertyMap *obj = qobject_cast<QDeclarativePropertyMap *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QDeclarativePropertyMapSlots * s = QCoreApplication::instance()->findChild<QDeclarativePropertyMapSlots*>();
+    QDeclarativePropertyMapSlots *s = QCoreApplication::instance()->findChild<QDeclarativePropertyMapSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QDeclarativePropertyMapSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

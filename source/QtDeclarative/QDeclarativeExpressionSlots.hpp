@@ -24,13 +24,13 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QDeclarativeExpressionSlots: public QObject
+class QDeclarativeExpressionSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QDeclarativeExpressionSlots(QObject * parent = 0);
+public:
+  QDeclarativeExpressionSlots(QObject *parent = 0);
   ~QDeclarativeExpressionSlots();
-  public slots:
+public slots:
   void valueChanged();
 };
 

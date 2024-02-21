@@ -24,15 +24,15 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QDeclarativeComponentSlots: public QObject
+class QDeclarativeComponentSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QDeclarativeComponentSlots(QObject * parent = 0);
+public:
+  QDeclarativeComponentSlots(QObject *parent = 0);
   ~QDeclarativeComponentSlots();
-  public slots:
-  void progressChanged( qreal progress );
-  void statusChanged( QDeclarativeComponent::Status status );
+public slots:
+  void progressChanged(qreal progress);
+  void statusChanged(QDeclarativeComponent::Status status);
 };
 
 #endif /* QDECLARATIVECOMPONENTSLOTS_H */

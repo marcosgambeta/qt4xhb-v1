@@ -12,7 +12,7 @@
 
 #include "QDeclarativeComponentSlots.hpp"
 
-QDeclarativeComponentSlots::QDeclarativeComponentSlots(QObject * parent) : QObject(parent)
+QDeclarativeComponentSlots::QDeclarativeComponentSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,51 +20,51 @@ QDeclarativeComponentSlots::~QDeclarativeComponentSlots()
 {
 }
 
-void QDeclarativeComponentSlots::progressChanged( qreal progress )
+void QDeclarativeComponentSlots::progressChanged(qreal progress)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "progressChanged(qreal)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDECLARATIVECOMPONENT");
-    PHB_ITEM pProgress = hb_itemPutND( NULL, progress );
+    PHB_ITEM pProgress = hb_itemPutND(NULL, progress);
 
-    hb_vmEvalBlockV( cb, 2, pSender, pProgress );
+    hb_vmEvalBlockV(cb, 2, pSender, pProgress);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pProgress );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pProgress);
   }
 }
 
-void QDeclarativeComponentSlots::statusChanged( QDeclarativeComponent::Status status )
+void QDeclarativeComponentSlots::statusChanged(QDeclarativeComponent::Status status)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "statusChanged(QDeclarativeComponent::Status)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDECLARATIVECOMPONENT");
-    PHB_ITEM pStatus = hb_itemPutNI( NULL, static_cast<int >( status ) );
+    PHB_ITEM pStatus = hb_itemPutNI(NULL, static_cast<int>(status));
 
-    hb_vmEvalBlockV( cb, 2, pSender, pStatus );
+    hb_vmEvalBlockV(cb, 2, pSender, pStatus);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pStatus );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pStatus);
   }
 }
 
-void QDeclarativeComponentSlots_connect_signal( const QString & signal, const QString & slot )
+void QDeclarativeComponentSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QDeclarativeComponent * obj = qobject_cast<QDeclarativeComponent*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDeclarativeComponent *obj = qobject_cast<QDeclarativeComponent *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QDeclarativeComponentSlots * s = QCoreApplication::instance()->findChild<QDeclarativeComponentSlots*>();
+    QDeclarativeComponentSlots *s = QCoreApplication::instance()->findChild<QDeclarativeComponentSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QDeclarativeComponentSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
