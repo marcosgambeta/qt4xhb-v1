@@ -12,7 +12,7 @@
 
 #include "QHelpIndexModelSlots.hpp"
 
-QHelpIndexModelSlots::QHelpIndexModelSlots(QObject * parent) : QObject(parent)
+QHelpIndexModelSlots::QHelpIndexModelSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,45 +22,45 @@ QHelpIndexModelSlots::~QHelpIndexModelSlots()
 
 void QHelpIndexModelSlots::indexCreated()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "indexCreated()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QHELPINDEXMODEL");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
 void QHelpIndexModelSlots::indexCreationStarted()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "indexCreationStarted()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QHELPINDEXMODEL");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
-void QHelpIndexModelSlots_connect_signal( const QString & signal, const QString & slot )
+void QHelpIndexModelSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QHelpIndexModel * obj = qobject_cast<QHelpIndexModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHelpIndexModel *obj = qobject_cast<QHelpIndexModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QHelpIndexModelSlots * s = QCoreApplication::instance()->findChild<QHelpIndexModelSlots*>();
+    QHelpIndexModelSlots *s = QCoreApplication::instance()->findChild<QHelpIndexModelSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QHelpIndexModelSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

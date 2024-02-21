@@ -12,7 +12,7 @@
 
 #include "QHelpSearchQueryWidgetSlots.hpp"
 
-QHelpSearchQueryWidgetSlots::QHelpSearchQueryWidgetSlots(QObject * parent) : QObject(parent)
+QHelpSearchQueryWidgetSlots::QHelpSearchQueryWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,29 +22,29 @@ QHelpSearchQueryWidgetSlots::~QHelpSearchQueryWidgetSlots()
 
 void QHelpSearchQueryWidgetSlots::search()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "search()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QHELPSEARCHQUERYWIDGET");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
-void QHelpSearchQueryWidgetSlots_connect_signal( const QString & signal, const QString & slot )
+void QHelpSearchQueryWidgetSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QHelpSearchQueryWidget * obj = qobject_cast<QHelpSearchQueryWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHelpSearchQueryWidget *obj = qobject_cast<QHelpSearchQueryWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QHelpSearchQueryWidgetSlots * s = QCoreApplication::instance()->findChild<QHelpSearchQueryWidgetSlots*>();
+    QHelpSearchQueryWidgetSlots *s = QCoreApplication::instance()->findChild<QHelpSearchQueryWidgetSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QHelpSearchQueryWidgetSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

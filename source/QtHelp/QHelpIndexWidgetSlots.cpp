@@ -12,7 +12,7 @@
 
 #include "QHelpIndexWidgetSlots.hpp"
 
-QHelpIndexWidgetSlots::QHelpIndexWidgetSlots(QObject * parent) : QObject(parent)
+QHelpIndexWidgetSlots::QHelpIndexWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,35 +20,35 @@ QHelpIndexWidgetSlots::~QHelpIndexWidgetSlots()
 {
 }
 
-void QHelpIndexWidgetSlots::linkActivated( const QUrl & link, const QString & keyword )
+void QHelpIndexWidgetSlots::linkActivated(const QUrl &link, const QString &keyword)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "linkActivated(QUrl,QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QHELPINDEXWIDGET");
-    PHB_ITEM pLink = Qt4xHb::Signals_return_object( ( void * ) &link, "QURL");
-    PHB_ITEM pKeyword = hb_itemPutC( NULL, QSTRINGTOSTRING( keyword ) );
+    PHB_ITEM pLink = Qt4xHb::Signals_return_object((void *)&link, "QURL");
+    PHB_ITEM pKeyword = hb_itemPutC(NULL, QSTRINGTOSTRING(keyword));
 
-    hb_vmEvalBlockV( cb, 3, pSender, pLink, pKeyword );
+    hb_vmEvalBlockV(cb, 3, pSender, pLink, pKeyword);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pLink );
-    hb_itemRelease( pKeyword );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pLink);
+    hb_itemRelease(pKeyword);
   }
 }
 
-void QHelpIndexWidgetSlots_connect_signal( const QString & signal, const QString & slot )
+void QHelpIndexWidgetSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QHelpIndexWidget * obj = qobject_cast<QHelpIndexWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHelpIndexWidget *obj = qobject_cast<QHelpIndexWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QHelpIndexWidgetSlots * s = QCoreApplication::instance()->findChild<QHelpIndexWidgetSlots*>();
+    QHelpIndexWidgetSlots *s = QCoreApplication::instance()->findChild<QHelpIndexWidgetSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QHelpIndexWidgetSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

@@ -24,16 +24,16 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QHelpSearchEngineSlots: public QObject
+class QHelpSearchEngineSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QHelpSearchEngineSlots(QObject * parent = 0);
+public:
+  QHelpSearchEngineSlots(QObject *parent = 0);
   ~QHelpSearchEngineSlots();
-  public slots:
+public slots:
   void indexingFinished();
   void indexingStarted();
-  void searchingFinished( int hits );
+  void searchingFinished(int hits);
   void searchingStarted();
 };
 
