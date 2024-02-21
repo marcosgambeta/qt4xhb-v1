@@ -24,26 +24,26 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QDesignerFormWindowInterfaceSlots: public QObject
+class QDesignerFormWindowInterfaceSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QDesignerFormWindowInterfaceSlots(QObject * parent = 0);
+public:
+  QDesignerFormWindowInterfaceSlots(QObject *parent = 0);
   ~QDesignerFormWindowInterfaceSlots();
-  public slots:
-  void aboutToUnmanageWidget( QWidget * widget );
-  void activated( QWidget * widget );
+public slots:
+  void aboutToUnmanageWidget(QWidget *widget);
+  void activated(QWidget *widget);
   void changed();
-  void featureChanged( QDesignerFormWindowInterface::Feature feature );
-  void fileNameChanged( const QString & fileName );
+  void featureChanged(QDesignerFormWindowInterface::Feature feature);
+  void fileNameChanged(const QString &fileName);
   void geometryChanged();
-  void mainContainerChanged( QWidget * mainContainer );
-  void objectRemoved( QObject * object2 );
+  void mainContainerChanged(QWidget *mainContainer);
+  void objectRemoved(QObject *object2);
   void resourceFilesChanged();
   void selectionChanged();
-  void widgetManaged( QWidget * widget );
-  void widgetRemoved( QWidget * widget );
-  void widgetUnmanaged( QWidget * widget );
+  void widgetManaged(QWidget *widget);
+  void widgetRemoved(QWidget *widget);
+  void widgetUnmanaged(QWidget *widget);
 };
 
 #endif /* QDESIGNERFORMWINDOWINTERFACESLOTS_H */

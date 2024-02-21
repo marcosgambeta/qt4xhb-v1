@@ -12,7 +12,7 @@
 
 #include "QDesignerPropertyEditorInterfaceSlots.hpp"
 
-QDesignerPropertyEditorInterfaceSlots::QDesignerPropertyEditorInterfaceSlots(QObject * parent) : QObject(parent)
+QDesignerPropertyEditorInterfaceSlots::QDesignerPropertyEditorInterfaceSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,35 +20,37 @@ QDesignerPropertyEditorInterfaceSlots::~QDesignerPropertyEditorInterfaceSlots()
 {
 }
 
-void QDesignerPropertyEditorInterfaceSlots::propertyChanged( const QString & name, const QVariant & value )
+void QDesignerPropertyEditorInterfaceSlots::propertyChanged(const QString &name, const QVariant &value)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "propertyChanged(QString,QVariant)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDESIGNERPROPERTYEDITORINTERFACE");
-    PHB_ITEM pName = hb_itemPutC( NULL, QSTRINGTOSTRING( name ) );
-    PHB_ITEM pValue = Qt4xHb::Signals_return_object( ( void * ) &value, "QVARIANT");
+    PHB_ITEM pName = hb_itemPutC(NULL, QSTRINGTOSTRING(name));
+    PHB_ITEM pValue = Qt4xHb::Signals_return_object((void *)&value, "QVARIANT");
 
-    hb_vmEvalBlockV( cb, 3, pSender, pName, pValue );
+    hb_vmEvalBlockV(cb, 3, pSender, pName, pValue);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pName );
-    hb_itemRelease( pValue );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pName);
+    hb_itemRelease(pValue);
   }
 }
 
-void QDesignerPropertyEditorInterfaceSlots_connect_signal( const QString & signal, const QString & slot )
+void QDesignerPropertyEditorInterfaceSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QDesignerPropertyEditorInterface * obj = qobject_cast<QDesignerPropertyEditorInterface*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDesignerPropertyEditorInterface *obj =
+      qobject_cast<QDesignerPropertyEditorInterface *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QDesignerPropertyEditorInterfaceSlots * s = QCoreApplication::instance()->findChild<QDesignerPropertyEditorInterfaceSlots*>();
+    QDesignerPropertyEditorInterfaceSlots *s =
+        QCoreApplication::instance()->findChild<QDesignerPropertyEditorInterfaceSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QDesignerPropertyEditorInterfaceSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
