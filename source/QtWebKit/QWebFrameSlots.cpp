@@ -12,7 +12,7 @@
 
 #include "QWebFrameSlots.hpp"
 
-QWebFrameSlots::QWebFrameSlots(QObject * parent) : QObject(parent)
+QWebFrameSlots::QWebFrameSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,167 +20,167 @@ QWebFrameSlots::~QWebFrameSlots()
 {
 }
 
-void QWebFrameSlots::contentsSizeChanged( const QSize & size )
+void QWebFrameSlots::contentsSizeChanged(const QSize &size)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "contentsSizeChanged(QSize)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWEBFRAME");
-    PHB_ITEM pSize = Qt4xHb::Signals_return_object( ( void * ) &size, "QSIZE");
+    PHB_ITEM pSize = Qt4xHb::Signals_return_object((void *)&size, "QSIZE");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pSize );
+    hb_vmEvalBlockV(cb, 2, pSender, pSize);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pSize );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pSize);
   }
 }
 
 void QWebFrameSlots::iconChanged()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "iconChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWEBFRAME");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
 void QWebFrameSlots::initialLayoutCompleted()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "initialLayoutCompleted()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWEBFRAME");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
 void QWebFrameSlots::javaScriptWindowObjectCleared()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "javaScriptWindowObjectCleared()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWEBFRAME");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
-void QWebFrameSlots::loadFinished( bool ok )
+void QWebFrameSlots::loadFinished(bool ok)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "loadFinished(bool)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWEBFRAME");
-    PHB_ITEM pOk = hb_itemPutL( NULL, ok );
+    PHB_ITEM pOk = hb_itemPutL(NULL, ok);
 
-    hb_vmEvalBlockV( cb, 2, pSender, pOk );
+    hb_vmEvalBlockV(cb, 2, pSender, pOk);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pOk );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pOk);
   }
 }
 
 void QWebFrameSlots::loadStarted()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "loadStarted()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWEBFRAME");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
 void QWebFrameSlots::pageChanged()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "pageChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWEBFRAME");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
-void QWebFrameSlots::titleChanged( const QString & title )
+void QWebFrameSlots::titleChanged(const QString &title)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "titleChanged(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWEBFRAME");
-    PHB_ITEM pTitle = hb_itemPutC( NULL, QSTRINGTOSTRING( title ) );
+    PHB_ITEM pTitle = hb_itemPutC(NULL, QSTRINGTOSTRING(title));
 
-    hb_vmEvalBlockV( cb, 2, pSender, pTitle );
+    hb_vmEvalBlockV(cb, 2, pSender, pTitle);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pTitle );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pTitle);
   }
 }
 
-void QWebFrameSlots::urlChanged( const QUrl & url )
+void QWebFrameSlots::urlChanged(const QUrl &url)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "urlChanged(QUrl)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWEBFRAME");
-    PHB_ITEM pUrl = Qt4xHb::Signals_return_object( ( void * ) &url, "QURL");
+    PHB_ITEM pUrl = Qt4xHb::Signals_return_object((void *)&url, "QURL");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pUrl );
+    hb_vmEvalBlockV(cb, 2, pSender, pUrl);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pUrl );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pUrl);
   }
 }
 
-void QWebFrameSlots_connect_signal( const QString & signal, const QString & slot )
+void QWebFrameSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QWebFrame * obj = qobject_cast<QWebFrame*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWebFrame *obj = qobject_cast<QWebFrame *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QWebFrameSlots * s = QCoreApplication::instance()->findChild<QWebFrameSlots*>();
+    QWebFrameSlots *s = QCoreApplication::instance()->findChild<QWebFrameSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QWebFrameSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
