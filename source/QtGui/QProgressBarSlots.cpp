@@ -12,7 +12,7 @@
 
 #include "QProgressBarSlots.hpp"
 
-QProgressBarSlots::QProgressBarSlots(QObject * parent) : QObject(parent)
+QProgressBarSlots::QProgressBarSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,33 +20,33 @@ QProgressBarSlots::~QProgressBarSlots()
 {
 }
 
-void QProgressBarSlots::valueChanged( int value )
+void QProgressBarSlots::valueChanged(int value)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "valueChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QPROGRESSBAR");
-    PHB_ITEM pValue = hb_itemPutNI( NULL, value );
+    PHB_ITEM pValue = hb_itemPutNI(NULL, value);
 
-    hb_vmEvalBlockV( cb, 2, pSender, pValue );
+    hb_vmEvalBlockV(cb, 2, pSender, pValue);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pValue );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pValue);
   }
 }
 
-void QProgressBarSlots_connect_signal( const QString & signal, const QString & slot )
+void QProgressBarSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QProgressBar * obj = qobject_cast<QProgressBar*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QProgressBar *obj = qobject_cast<QProgressBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QProgressBarSlots * s = QCoreApplication::instance()->findChild<QProgressBarSlots*>();
+    QProgressBarSlots *s = QCoreApplication::instance()->findChild<QProgressBarSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QProgressBarSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

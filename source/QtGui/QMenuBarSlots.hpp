@@ -24,15 +24,15 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QMenuBarSlots: public QObject
+class QMenuBarSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QMenuBarSlots(QObject * parent = 0);
+public:
+  QMenuBarSlots(QObject *parent = 0);
   ~QMenuBarSlots();
-  public slots:
-  void hovered( QAction * action );
-  void triggered( QAction * action );
+public slots:
+  void hovered(QAction *action);
+  void triggered(QAction *action);
 };
 
 #endif /* QMENUBARSLOTS_H */

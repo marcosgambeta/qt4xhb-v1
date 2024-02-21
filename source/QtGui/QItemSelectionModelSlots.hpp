@@ -24,17 +24,17 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QItemSelectionModelSlots: public QObject
+class QItemSelectionModelSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QItemSelectionModelSlots(QObject * parent = 0);
+public:
+  QItemSelectionModelSlots(QObject *parent = 0);
   ~QItemSelectionModelSlots();
-  public slots:
-  void currentChanged( const QModelIndex & current, const QModelIndex & previous );
-  void currentColumnChanged( const QModelIndex & current, const QModelIndex & previous );
-  void currentRowChanged( const QModelIndex & current, const QModelIndex & previous );
-  void selectionChanged( const QItemSelection & selected, const QItemSelection & deselected );
+public slots:
+  void currentChanged(const QModelIndex &current, const QModelIndex &previous);
+  void currentColumnChanged(const QModelIndex &current, const QModelIndex &previous);
+  void currentRowChanged(const QModelIndex &current, const QModelIndex &previous);
+  void selectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
 };
 
 #endif /* QITEMSELECTIONMODELSLOTS_H */

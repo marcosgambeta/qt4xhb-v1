@@ -26,15 +26,15 @@
 
 #include <QWidget>
 
-class QStackedLayoutSlots: public QObject
+class QStackedLayoutSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QStackedLayoutSlots(QObject * parent = 0);
+public:
+  QStackedLayoutSlots(QObject *parent = 0);
   ~QStackedLayoutSlots();
-  public slots:
-  void setCurrentIndex( int index );
-  void setCurrentWidget( QWidget * widget );
+public slots:
+  void setCurrentIndex(int index);
+  void setCurrentWidget(QWidget *widget);
 };
 
 #endif /* QSTACKEDLAYOUTSLOTS_H */

@@ -24,14 +24,14 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QStatusBarSlots: public QObject
+class QStatusBarSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QStatusBarSlots(QObject * parent = 0);
+public:
+  QStatusBarSlots(QObject *parent = 0);
   ~QStatusBarSlots();
-  public slots:
-  void messageChanged( const QString & message );
+public slots:
+  void messageChanged(const QString &message);
 };
 
 #endif /* QSTATUSBARSLOTS_H */

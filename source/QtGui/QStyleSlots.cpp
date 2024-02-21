@@ -12,7 +12,7 @@
 
 #include "QStyleSlots.hpp"
 
-QStyleSlots::QStyleSlots(QObject * parent) : QObject(parent)
+QStyleSlots::QStyleSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,71 +20,71 @@ QStyleSlots::~QStyleSlots()
 {
 }
 
-void QStyleSlots::currentChanged( int index )
+void QStyleSlots::currentChanged(int index)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "currentChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSTYLE");
-    PHB_ITEM pIndex = hb_itemPutNI( NULL, index );
+    PHB_ITEM pIndex = hb_itemPutNI(NULL, index);
 
-    hb_vmEvalBlockV( cb, 2, pSender, pIndex );
+    hb_vmEvalBlockV(cb, 2, pSender, pIndex);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pIndex );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pIndex);
   }
 }
 
-void QStyleSlots::tabCloseRequested( int index )
+void QStyleSlots::tabCloseRequested(int index)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "tabCloseRequested(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSTYLE");
-    PHB_ITEM pIndex = hb_itemPutNI( NULL, index );
+    PHB_ITEM pIndex = hb_itemPutNI(NULL, index);
 
-    hb_vmEvalBlockV( cb, 2, pSender, pIndex );
+    hb_vmEvalBlockV(cb, 2, pSender, pIndex);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pIndex );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pIndex);
   }
 }
 
-void QStyleSlots::tabMoved( int from, int to )
+void QStyleSlots::tabMoved(int from, int to)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "tabMoved(int,int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSTYLE");
-    PHB_ITEM pFrom = hb_itemPutNI( NULL, from );
-    PHB_ITEM pTo = hb_itemPutNI( NULL, to );
+    PHB_ITEM pFrom = hb_itemPutNI(NULL, from);
+    PHB_ITEM pTo = hb_itemPutNI(NULL, to);
 
-    hb_vmEvalBlockV( cb, 3, pSender, pFrom, pTo );
+    hb_vmEvalBlockV(cb, 3, pSender, pFrom, pTo);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pFrom );
-    hb_itemRelease( pTo );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pFrom);
+    hb_itemRelease(pTo);
   }
 }
 
-void QStyleSlots_connect_signal( const QString & signal, const QString & slot )
+void QStyleSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QStyle * obj = qobject_cast<QStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QStyle *obj = qobject_cast<QStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QStyleSlots * s = QCoreApplication::instance()->findChild<QStyleSlots*>();
+    QStyleSlots *s = QCoreApplication::instance()->findChild<QStyleSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QStyleSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

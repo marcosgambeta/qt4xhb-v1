@@ -12,7 +12,7 @@
 
 #include "QTabWidgetSlots.hpp"
 
-QTabWidgetSlots::QTabWidgetSlots(QObject * parent) : QObject(parent)
+QTabWidgetSlots::QTabWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,51 +20,51 @@ QTabWidgetSlots::~QTabWidgetSlots()
 {
 }
 
-void QTabWidgetSlots::currentChanged( int index )
+void QTabWidgetSlots::currentChanged(int index)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "currentChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTABWIDGET");
-    PHB_ITEM pIndex = hb_itemPutNI( NULL, index );
+    PHB_ITEM pIndex = hb_itemPutNI(NULL, index);
 
-    hb_vmEvalBlockV( cb, 2, pSender, pIndex );
+    hb_vmEvalBlockV(cb, 2, pSender, pIndex);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pIndex );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pIndex);
   }
 }
 
-void QTabWidgetSlots::tabCloseRequested( int index )
+void QTabWidgetSlots::tabCloseRequested(int index)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "tabCloseRequested(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTABWIDGET");
-    PHB_ITEM pIndex = hb_itemPutNI( NULL, index );
+    PHB_ITEM pIndex = hb_itemPutNI(NULL, index);
 
-    hb_vmEvalBlockV( cb, 2, pSender, pIndex );
+    hb_vmEvalBlockV(cb, 2, pSender, pIndex);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pIndex );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pIndex);
   }
 }
 
-void QTabWidgetSlots_connect_signal( const QString & signal, const QString & slot )
+void QTabWidgetSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QTabWidget * obj = qobject_cast<QTabWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTabWidget *obj = qobject_cast<QTabWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QTabWidgetSlots * s = QCoreApplication::instance()->findChild<QTabWidgetSlots*>();
+    QTabWidgetSlots *s = QCoreApplication::instance()->findChild<QTabWidgetSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QTabWidgetSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

@@ -24,14 +24,14 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QCheckBoxSlots: public QObject
+class QCheckBoxSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QCheckBoxSlots(QObject * parent = 0);
+public:
+  QCheckBoxSlots(QObject *parent = 0);
   ~QCheckBoxSlots();
-  public slots:
-  void stateChanged( int state );
+public slots:
+  void stateChanged(int state);
 };
 
 #endif /* QCHECKBOXSLOTS_H */

@@ -24,14 +24,14 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QPrintPreviewDialogSlots: public QObject
+class QPrintPreviewDialogSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QPrintPreviewDialogSlots(QObject * parent = 0);
+public:
+  QPrintPreviewDialogSlots(QObject *parent = 0);
   ~QPrintPreviewDialogSlots();
-  public slots:
-  void paintRequested( QPrinter * printer );
+public slots:
+  void paintRequested(QPrinter *printer);
 };
 
 #endif /* QPRINTPREVIEWDIALOGSLOTS_H */

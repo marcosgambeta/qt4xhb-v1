@@ -26,14 +26,14 @@
 
 #include <QAction>
 
-class QToolButtonSlots: public QObject
+class QToolButtonSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QToolButtonSlots(QObject * parent = 0);
+public:
+  QToolButtonSlots(QObject *parent = 0);
   ~QToolButtonSlots();
-  public slots:
-  void triggered( QAction * action );
+public slots:
+  void triggered(QAction *action);
 };
 
 #endif /* QTOOLBUTTONSLOTS_H */

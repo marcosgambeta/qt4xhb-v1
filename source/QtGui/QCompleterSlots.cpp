@@ -12,7 +12,7 @@
 
 #include "QCompleterSlots.hpp"
 
-QCompleterSlots::QCompleterSlots(QObject * parent) : QObject(parent)
+QCompleterSlots::QCompleterSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,87 +20,87 @@ QCompleterSlots::~QCompleterSlots()
 {
 }
 
-void QCompleterSlots::activated( const QString & text )
+void QCompleterSlots::activated(const QString &text)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "activated(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QCOMPLETER");
-    PHB_ITEM pText = hb_itemPutC( NULL, QSTRINGTOSTRING( text ) );
+    PHB_ITEM pText = hb_itemPutC(NULL, QSTRINGTOSTRING(text));
 
-    hb_vmEvalBlockV( cb, 2, pSender, pText );
+    hb_vmEvalBlockV(cb, 2, pSender, pText);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pText );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pText);
   }
 }
 
-void QCompleterSlots::activated( const QModelIndex & index )
+void QCompleterSlots::activated(const QModelIndex &index)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "activated(QModelIndex)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QCOMPLETER");
-    PHB_ITEM pIndex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX");
+    PHB_ITEM pIndex = Qt4xHb::Signals_return_object((void *)&index, "QMODELINDEX");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pIndex );
+    hb_vmEvalBlockV(cb, 2, pSender, pIndex);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pIndex );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pIndex);
   }
 }
 
-void QCompleterSlots::highlighted( const QString & text )
+void QCompleterSlots::highlighted(const QString &text)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "highlighted(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QCOMPLETER");
-    PHB_ITEM pText = hb_itemPutC( NULL, QSTRINGTOSTRING( text ) );
+    PHB_ITEM pText = hb_itemPutC(NULL, QSTRINGTOSTRING(text));
 
-    hb_vmEvalBlockV( cb, 2, pSender, pText );
+    hb_vmEvalBlockV(cb, 2, pSender, pText);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pText );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pText);
   }
 }
 
-void QCompleterSlots::highlighted( const QModelIndex & index )
+void QCompleterSlots::highlighted(const QModelIndex &index)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "highlighted(QModelIndex)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QCOMPLETER");
-    PHB_ITEM pIndex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX");
+    PHB_ITEM pIndex = Qt4xHb::Signals_return_object((void *)&index, "QMODELINDEX");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pIndex );
+    hb_vmEvalBlockV(cb, 2, pSender, pIndex);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pIndex );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pIndex);
   }
 }
 
-void QCompleterSlots_connect_signal( const QString & signal, const QString & slot )
+void QCompleterSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QCompleter * obj = qobject_cast<QCompleter*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QCompleter *obj = qobject_cast<QCompleter *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QCompleterSlots * s = QCoreApplication::instance()->findChild<QCompleterSlots*>();
+    QCompleterSlots *s = QCoreApplication::instance()->findChild<QCompleterSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QCompleterSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

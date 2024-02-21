@@ -24,15 +24,15 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QTreeViewSlots: public QObject
+class QTreeViewSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QTreeViewSlots(QObject * parent = 0);
+public:
+  QTreeViewSlots(QObject *parent = 0);
   ~QTreeViewSlots();
-  public slots:
-  void collapsed( const QModelIndex & index );
-  void expanded( const QModelIndex & index );
+public slots:
+  void collapsed(const QModelIndex &index);
+  void expanded(const QModelIndex &index);
 };
 
 #endif /* QTREEVIEWSLOTS_H */

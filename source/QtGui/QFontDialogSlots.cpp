@@ -12,7 +12,7 @@
 
 #include "QFontDialogSlots.hpp"
 
-QFontDialogSlots::QFontDialogSlots(QObject * parent) : QObject(parent)
+QFontDialogSlots::QFontDialogSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,51 +20,51 @@ QFontDialogSlots::~QFontDialogSlots()
 {
 }
 
-void QFontDialogSlots::currentFontChanged( const QFont & font )
+void QFontDialogSlots::currentFontChanged(const QFont &font)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "currentFontChanged(QFont)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFONTDIALOG");
-    PHB_ITEM pFont = Qt4xHb::Signals_return_object( ( void * ) &font, "QFONT");
+    PHB_ITEM pFont = Qt4xHb::Signals_return_object((void *)&font, "QFONT");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pFont );
+    hb_vmEvalBlockV(cb, 2, pSender, pFont);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pFont );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pFont);
   }
 }
 
-void QFontDialogSlots::fontSelected( const QFont & font )
+void QFontDialogSlots::fontSelected(const QFont &font)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "fontSelected(QFont)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QFONTDIALOG");
-    PHB_ITEM pFont = Qt4xHb::Signals_return_object( ( void * ) &font, "QFONT");
+    PHB_ITEM pFont = Qt4xHb::Signals_return_object((void *)&font, "QFONT");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pFont );
+    hb_vmEvalBlockV(cb, 2, pSender, pFont);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pFont );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pFont);
   }
 }
 
-void QFontDialogSlots_connect_signal( const QString & signal, const QString & slot )
+void QFontDialogSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QFontDialog * obj = qobject_cast<QFontDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QFontDialog *obj = qobject_cast<QFontDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QFontDialogSlots * s = QCoreApplication::instance()->findChild<QFontDialogSlots*>();
+    QFontDialogSlots *s = QCoreApplication::instance()->findChild<QFontDialogSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QFontDialogSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

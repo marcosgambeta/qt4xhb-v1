@@ -12,7 +12,7 @@
 
 #include "QSplitterSlots.hpp"
 
-QSplitterSlots::QSplitterSlots(QObject * parent) : QObject(parent)
+QSplitterSlots::QSplitterSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,35 +20,35 @@ QSplitterSlots::~QSplitterSlots()
 {
 }
 
-void QSplitterSlots::splitterMoved( int pos, int index )
+void QSplitterSlots::splitterMoved(int pos, int index)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "splitterMoved(int,int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSPLITTER");
-    PHB_ITEM pPos = hb_itemPutNI( NULL, pos );
-    PHB_ITEM pIndex = hb_itemPutNI( NULL, index );
+    PHB_ITEM pPos = hb_itemPutNI(NULL, pos);
+    PHB_ITEM pIndex = hb_itemPutNI(NULL, index);
 
-    hb_vmEvalBlockV( cb, 3, pSender, pPos, pIndex );
+    hb_vmEvalBlockV(cb, 3, pSender, pPos, pIndex);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pPos );
-    hb_itemRelease( pIndex );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pPos);
+    hb_itemRelease(pIndex);
   }
 }
 
-void QSplitterSlots_connect_signal( const QString & signal, const QString & slot )
+void QSplitterSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QSplitter * obj = qobject_cast<QSplitter*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSplitter *obj = qobject_cast<QSplitter *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QSplitterSlots * s = QCoreApplication::instance()->findChild<QSplitterSlots*>();
+    QSplitterSlots *s = QCoreApplication::instance()->findChild<QSplitterSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QSplitterSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

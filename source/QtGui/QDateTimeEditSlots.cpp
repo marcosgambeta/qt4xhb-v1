@@ -12,7 +12,7 @@
 
 #include "QDateTimeEditSlots.hpp"
 
-QDateTimeEditSlots::QDateTimeEditSlots(QObject * parent) : QObject(parent)
+QDateTimeEditSlots::QDateTimeEditSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,69 +20,69 @@ QDateTimeEditSlots::~QDateTimeEditSlots()
 {
 }
 
-void QDateTimeEditSlots::dateChanged( const QDate & date )
+void QDateTimeEditSlots::dateChanged(const QDate &date)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "dateChanged(QDate)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDATETIMEEDIT");
-    PHB_ITEM pDate = Qt4xHb::Signals_return_object( ( void * ) &date, "QDATE");
+    PHB_ITEM pDate = Qt4xHb::Signals_return_object((void *)&date, "QDATE");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pDate );
+    hb_vmEvalBlockV(cb, 2, pSender, pDate);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pDate );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pDate);
   }
 }
 
-void QDateTimeEditSlots::dateTimeChanged( const QDateTime & datetime )
+void QDateTimeEditSlots::dateTimeChanged(const QDateTime &datetime)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "dateTimeChanged(QDateTime)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDATETIMEEDIT");
-    PHB_ITEM pDatetime = Qt4xHb::Signals_return_object( ( void * ) &datetime, "QDATETIME");
+    PHB_ITEM pDatetime = Qt4xHb::Signals_return_object((void *)&datetime, "QDATETIME");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pDatetime );
+    hb_vmEvalBlockV(cb, 2, pSender, pDatetime);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pDatetime );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pDatetime);
   }
 }
 
-void QDateTimeEditSlots::timeChanged( const QTime & time )
+void QDateTimeEditSlots::timeChanged(const QTime &time)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "timeChanged(QTime)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QDATETIMEEDIT");
-    PHB_ITEM pTime = Qt4xHb::Signals_return_object( ( void * ) &time, "QTIME");
+    PHB_ITEM pTime = Qt4xHb::Signals_return_object((void *)&time, "QTIME");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pTime );
+    hb_vmEvalBlockV(cb, 2, pSender, pTime);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pTime );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pTime);
   }
 }
 
-void QDateTimeEditSlots_connect_signal( const QString & signal, const QString & slot )
+void QDateTimeEditSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QDateTimeEdit * obj = qobject_cast<QDateTimeEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDateTimeEdit *obj = qobject_cast<QDateTimeEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QDateTimeEditSlots * s = QCoreApplication::instance()->findChild<QDateTimeEditSlots*>();
+    QDateTimeEditSlots *s = QCoreApplication::instance()->findChild<QDateTimeEditSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QDateTimeEditSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

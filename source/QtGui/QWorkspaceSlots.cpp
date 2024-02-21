@@ -12,7 +12,7 @@
 
 #include "QWorkspaceSlots.hpp"
 
-QWorkspaceSlots::QWorkspaceSlots(QObject * parent) : QObject(parent)
+QWorkspaceSlots::QWorkspaceSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,33 +20,33 @@ QWorkspaceSlots::~QWorkspaceSlots()
 {
 }
 
-void QWorkspaceSlots::windowActivated( QWidget * w )
+void QWorkspaceSlots::windowActivated(QWidget *w)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "windowActivated(QWidget*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWORKSPACE");
-    PHB_ITEM pW = Qt4xHb::Signals_return_qobject( w, "QWIDGET");
+    PHB_ITEM pW = Qt4xHb::Signals_return_qobject(w, "QWIDGET");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pW );
+    hb_vmEvalBlockV(cb, 2, pSender, pW);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pW );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pW);
   }
 }
 
-void QWorkspaceSlots_connect_signal( const QString & signal, const QString & slot )
+void QWorkspaceSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QWorkspace * obj = qobject_cast<QWorkspace*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWorkspace *obj = qobject_cast<QWorkspace *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QWorkspaceSlots * s = QCoreApplication::instance()->findChild<QWorkspaceSlots*>();
+    QWorkspaceSlots *s = QCoreApplication::instance()->findChild<QWorkspaceSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QWorkspaceSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

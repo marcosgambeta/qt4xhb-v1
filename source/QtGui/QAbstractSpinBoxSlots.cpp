@@ -12,7 +12,7 @@
 
 #include "QAbstractSpinBoxSlots.hpp"
 
-QAbstractSpinBoxSlots::QAbstractSpinBoxSlots(QObject * parent) : QObject(parent)
+QAbstractSpinBoxSlots::QAbstractSpinBoxSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,29 +22,29 @@ QAbstractSpinBoxSlots::~QAbstractSpinBoxSlots()
 
 void QAbstractSpinBoxSlots::editingFinished()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "editingFinished()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTSPINBOX");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
-void QAbstractSpinBoxSlots_connect_signal( const QString & signal, const QString & slot )
+void QAbstractSpinBoxSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QAbstractSpinBox * obj = qobject_cast<QAbstractSpinBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractSpinBox *obj = qobject_cast<QAbstractSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QAbstractSpinBoxSlots * s = QCoreApplication::instance()->findChild<QAbstractSpinBoxSlots*>();
+    QAbstractSpinBoxSlots *s = QCoreApplication::instance()->findChild<QAbstractSpinBoxSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QAbstractSpinBoxSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

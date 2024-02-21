@@ -24,14 +24,14 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QListViewSlots: public QObject
+class QListViewSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QListViewSlots(QObject * parent = 0);
+public:
+  QListViewSlots(QObject *parent = 0);
   ~QListViewSlots();
-  public slots:
-  void indexesMoved( const QModelIndexList & indexes );
+public slots:
+  void indexesMoved(const QModelIndexList &indexes);
 };
 
 #endif /* QLISTVIEWSLOTS_H */

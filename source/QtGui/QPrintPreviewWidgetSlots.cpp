@@ -12,7 +12,7 @@
 
 #include "QPrintPreviewWidgetSlots.hpp"
 
-QPrintPreviewWidgetSlots::QPrintPreviewWidgetSlots(QObject * parent) : QObject(parent)
+QPrintPreviewWidgetSlots::QPrintPreviewWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,49 +20,49 @@ QPrintPreviewWidgetSlots::~QPrintPreviewWidgetSlots()
 {
 }
 
-void QPrintPreviewWidgetSlots::paintRequested( QPrinter * printer )
+void QPrintPreviewWidgetSlots::paintRequested(QPrinter *printer)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "paintRequested(QPrinter*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QPRINTPREVIEWWIDGET");
-    PHB_ITEM pPrinter = Qt4xHb::Signals_return_object( ( void * ) printer, "QPRINTER");
+    PHB_ITEM pPrinter = Qt4xHb::Signals_return_object((void *)printer, "QPRINTER");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pPrinter );
+    hb_vmEvalBlockV(cb, 2, pSender, pPrinter);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pPrinter );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pPrinter);
   }
 }
 
 void QPrintPreviewWidgetSlots::previewChanged()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "previewChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QPRINTPREVIEWWIDGET");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
-void QPrintPreviewWidgetSlots_connect_signal( const QString & signal, const QString & slot )
+void QPrintPreviewWidgetSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QPrintPreviewWidget * obj = qobject_cast<QPrintPreviewWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPrintPreviewWidget *obj = qobject_cast<QPrintPreviewWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QPrintPreviewWidgetSlots * s = QCoreApplication::instance()->findChild<QPrintPreviewWidgetSlots*>();
+    QPrintPreviewWidgetSlots *s = QCoreApplication::instance()->findChild<QPrintPreviewWidgetSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QPrintPreviewWidgetSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

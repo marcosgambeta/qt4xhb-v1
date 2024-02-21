@@ -24,21 +24,21 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QTextDocumentSlots: public QObject
+class QTextDocumentSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QTextDocumentSlots(QObject * parent = 0);
+public:
+  QTextDocumentSlots(QObject *parent = 0);
   ~QTextDocumentSlots();
-  public slots:
-  void blockCountChanged( int newBlockCount );
-  void contentsChange( int position, int charsRemoved, int charsAdded );
+public slots:
+  void blockCountChanged(int newBlockCount);
+  void contentsChange(int position, int charsRemoved, int charsAdded);
   void contentsChanged();
-  void cursorPositionChanged( const QTextCursor & cursor );
+  void cursorPositionChanged(const QTextCursor &cursor);
   void documentLayoutChanged();
-  void modificationChanged( bool changed );
-  void redoAvailable( bool available );
-  void undoAvailable( bool available );
+  void modificationChanged(bool changed);
+  void redoAvailable(bool available);
+  void undoAvailable(bool available);
   void undoCommandAdded();
 };
 

@@ -24,16 +24,16 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QStyleSlots: public QObject
+class QStyleSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QStyleSlots(QObject * parent = 0);
+public:
+  QStyleSlots(QObject *parent = 0);
   ~QStyleSlots();
-  public slots:
-  void currentChanged( int index );
-  void tabCloseRequested( int index );
-  void tabMoved( int from, int to );
+public slots:
+  void currentChanged(int index);
+  void tabCloseRequested(int index);
+  void tabMoved(int from, int to);
 };
 
 #endif /* QSTYLESLOTS_H */

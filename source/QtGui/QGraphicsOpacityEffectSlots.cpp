@@ -12,7 +12,7 @@
 
 #include "QGraphicsOpacityEffectSlots.hpp"
 
-QGraphicsOpacityEffectSlots::QGraphicsOpacityEffectSlots(QObject * parent) : QObject(parent)
+QGraphicsOpacityEffectSlots::QGraphicsOpacityEffectSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,51 +20,51 @@ QGraphicsOpacityEffectSlots::~QGraphicsOpacityEffectSlots()
 {
 }
 
-void QGraphicsOpacityEffectSlots::opacityChanged( qreal opacity )
+void QGraphicsOpacityEffectSlots::opacityChanged(qreal opacity)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "opacityChanged(qreal)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QGRAPHICSOPACITYEFFECT");
-    PHB_ITEM pOpacity = hb_itemPutND( NULL, opacity );
+    PHB_ITEM pOpacity = hb_itemPutND(NULL, opacity);
 
-    hb_vmEvalBlockV( cb, 2, pSender, pOpacity );
+    hb_vmEvalBlockV(cb, 2, pSender, pOpacity);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pOpacity );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pOpacity);
   }
 }
 
-void QGraphicsOpacityEffectSlots::opacityMaskChanged( const QBrush & mask )
+void QGraphicsOpacityEffectSlots::opacityMaskChanged(const QBrush &mask)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "opacityMaskChanged(QBrush)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QGRAPHICSOPACITYEFFECT");
-    PHB_ITEM pMask = Qt4xHb::Signals_return_object( ( void * ) &mask, "QBRUSH");
+    PHB_ITEM pMask = Qt4xHb::Signals_return_object((void *)&mask, "QBRUSH");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pMask );
+    hb_vmEvalBlockV(cb, 2, pSender, pMask);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pMask );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pMask);
   }
 }
 
-void QGraphicsOpacityEffectSlots_connect_signal( const QString & signal, const QString & slot )
+void QGraphicsOpacityEffectSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QGraphicsOpacityEffect * obj = qobject_cast<QGraphicsOpacityEffect*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsOpacityEffect *obj = qobject_cast<QGraphicsOpacityEffect *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QGraphicsOpacityEffectSlots * s = QCoreApplication::instance()->findChild<QGraphicsOpacityEffectSlots*>();
+    QGraphicsOpacityEffectSlots *s = QCoreApplication::instance()->findChild<QGraphicsOpacityEffectSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QGraphicsOpacityEffectSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

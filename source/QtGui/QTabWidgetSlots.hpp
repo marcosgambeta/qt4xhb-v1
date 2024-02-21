@@ -24,15 +24,15 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QTabWidgetSlots: public QObject
+class QTabWidgetSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QTabWidgetSlots(QObject * parent = 0);
+public:
+  QTabWidgetSlots(QObject *parent = 0);
   ~QTabWidgetSlots();
-  public slots:
-  void currentChanged( int index );
-  void tabCloseRequested( int index );
+public slots:
+  void currentChanged(int index);
+  void tabCloseRequested(int index);
 };
 
 #endif /* QTABWIDGETSLOTS_H */

@@ -12,7 +12,7 @@
 
 #include "QMenuBarSlots.hpp"
 
-QMenuBarSlots::QMenuBarSlots(QObject * parent) : QObject(parent)
+QMenuBarSlots::QMenuBarSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,51 +20,51 @@ QMenuBarSlots::~QMenuBarSlots()
 {
 }
 
-void QMenuBarSlots::hovered( QAction * action )
+void QMenuBarSlots::hovered(QAction *action)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "hovered(QAction*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QMENUBAR");
-    PHB_ITEM pAction = Qt4xHb::Signals_return_qobject( action, "QACTION");
+    PHB_ITEM pAction = Qt4xHb::Signals_return_qobject(action, "QACTION");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pAction );
+    hb_vmEvalBlockV(cb, 2, pSender, pAction);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pAction );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pAction);
   }
 }
 
-void QMenuBarSlots::triggered( QAction * action )
+void QMenuBarSlots::triggered(QAction *action)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "triggered(QAction*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QMENUBAR");
-    PHB_ITEM pAction = Qt4xHb::Signals_return_qobject( action, "QACTION");
+    PHB_ITEM pAction = Qt4xHb::Signals_return_qobject(action, "QACTION");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pAction );
+    hb_vmEvalBlockV(cb, 2, pSender, pAction);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pAction );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pAction);
   }
 }
 
-void QMenuBarSlots_connect_signal( const QString & signal, const QString & slot )
+void QMenuBarSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QMenuBar * obj = qobject_cast<QMenuBar*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QMenuBar *obj = qobject_cast<QMenuBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QMenuBarSlots * s = QCoreApplication::instance()->findChild<QMenuBarSlots*>();
+    QMenuBarSlots *s = QCoreApplication::instance()->findChild<QMenuBarSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QMenuBarSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

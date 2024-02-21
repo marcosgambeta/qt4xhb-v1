@@ -24,14 +24,14 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QWorkspaceSlots: public QObject
+class QWorkspaceSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QWorkspaceSlots(QObject * parent = 0);
+public:
+  QWorkspaceSlots(QObject *parent = 0);
   ~QWorkspaceSlots();
-  public slots:
-  void windowActivated( QWidget * w );
+public slots:
+  void windowActivated(QWidget *w);
 };
 
 #endif /* QWORKSPACESLOTS_H */

@@ -12,7 +12,7 @@
 
 #include "QTreeViewSlots.hpp"
 
-QTreeViewSlots::QTreeViewSlots(QObject * parent) : QObject(parent)
+QTreeViewSlots::QTreeViewSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,51 +20,51 @@ QTreeViewSlots::~QTreeViewSlots()
 {
 }
 
-void QTreeViewSlots::collapsed( const QModelIndex & index )
+void QTreeViewSlots::collapsed(const QModelIndex &index)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "collapsed(QModelIndex)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTREEVIEW");
-    PHB_ITEM pIndex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX");
+    PHB_ITEM pIndex = Qt4xHb::Signals_return_object((void *)&index, "QMODELINDEX");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pIndex );
+    hb_vmEvalBlockV(cb, 2, pSender, pIndex);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pIndex );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pIndex);
   }
 }
 
-void QTreeViewSlots::expanded( const QModelIndex & index )
+void QTreeViewSlots::expanded(const QModelIndex &index)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "expanded(QModelIndex)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTREEVIEW");
-    PHB_ITEM pIndex = Qt4xHb::Signals_return_object( ( void * ) &index, "QMODELINDEX");
+    PHB_ITEM pIndex = Qt4xHb::Signals_return_object((void *)&index, "QMODELINDEX");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pIndex );
+    hb_vmEvalBlockV(cb, 2, pSender, pIndex);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pIndex );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pIndex);
   }
 }
 
-void QTreeViewSlots_connect_signal( const QString & signal, const QString & slot )
+void QTreeViewSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QTreeView * obj = qobject_cast<QTreeView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTreeView *obj = qobject_cast<QTreeView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QTreeViewSlots * s = QCoreApplication::instance()->findChild<QTreeViewSlots*>();
+    QTreeViewSlots *s = QCoreApplication::instance()->findChild<QTreeViewSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QTreeViewSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

@@ -12,7 +12,7 @@
 
 #include "QItemSelectionModelSlots.hpp"
 
-QItemSelectionModelSlots::QItemSelectionModelSlots(QObject * parent) : QObject(parent)
+QItemSelectionModelSlots::QItemSelectionModelSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,95 +20,95 @@ QItemSelectionModelSlots::~QItemSelectionModelSlots()
 {
 }
 
-void QItemSelectionModelSlots::currentChanged( const QModelIndex & current, const QModelIndex & previous )
+void QItemSelectionModelSlots::currentChanged(const QModelIndex &current, const QModelIndex &previous)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "currentChanged(QModelIndex,QModelIndex)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QITEMSELECTIONMODEL");
-    PHB_ITEM pCurrent = Qt4xHb::Signals_return_object( ( void * ) &current, "QMODELINDEX");
-    PHB_ITEM pPrevious = Qt4xHb::Signals_return_object( ( void * ) &previous, "QMODELINDEX");
+    PHB_ITEM pCurrent = Qt4xHb::Signals_return_object((void *)&current, "QMODELINDEX");
+    PHB_ITEM pPrevious = Qt4xHb::Signals_return_object((void *)&previous, "QMODELINDEX");
 
-    hb_vmEvalBlockV( cb, 3, pSender, pCurrent, pPrevious );
+    hb_vmEvalBlockV(cb, 3, pSender, pCurrent, pPrevious);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pCurrent );
-    hb_itemRelease( pPrevious );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pCurrent);
+    hb_itemRelease(pPrevious);
   }
 }
 
-void QItemSelectionModelSlots::currentColumnChanged( const QModelIndex & current, const QModelIndex & previous )
+void QItemSelectionModelSlots::currentColumnChanged(const QModelIndex &current, const QModelIndex &previous)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "currentColumnChanged(QModelIndex,QModelIndex)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QITEMSELECTIONMODEL");
-    PHB_ITEM pCurrent = Qt4xHb::Signals_return_object( ( void * ) &current, "QMODELINDEX");
-    PHB_ITEM pPrevious = Qt4xHb::Signals_return_object( ( void * ) &previous, "QMODELINDEX");
+    PHB_ITEM pCurrent = Qt4xHb::Signals_return_object((void *)&current, "QMODELINDEX");
+    PHB_ITEM pPrevious = Qt4xHb::Signals_return_object((void *)&previous, "QMODELINDEX");
 
-    hb_vmEvalBlockV( cb, 3, pSender, pCurrent, pPrevious );
+    hb_vmEvalBlockV(cb, 3, pSender, pCurrent, pPrevious);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pCurrent );
-    hb_itemRelease( pPrevious );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pCurrent);
+    hb_itemRelease(pPrevious);
   }
 }
 
-void QItemSelectionModelSlots::currentRowChanged( const QModelIndex & current, const QModelIndex & previous )
+void QItemSelectionModelSlots::currentRowChanged(const QModelIndex &current, const QModelIndex &previous)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "currentRowChanged(QModelIndex,QModelIndex)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QITEMSELECTIONMODEL");
-    PHB_ITEM pCurrent = Qt4xHb::Signals_return_object( ( void * ) &current, "QMODELINDEX");
-    PHB_ITEM pPrevious = Qt4xHb::Signals_return_object( ( void * ) &previous, "QMODELINDEX");
+    PHB_ITEM pCurrent = Qt4xHb::Signals_return_object((void *)&current, "QMODELINDEX");
+    PHB_ITEM pPrevious = Qt4xHb::Signals_return_object((void *)&previous, "QMODELINDEX");
 
-    hb_vmEvalBlockV( cb, 3, pSender, pCurrent, pPrevious );
+    hb_vmEvalBlockV(cb, 3, pSender, pCurrent, pPrevious);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pCurrent );
-    hb_itemRelease( pPrevious );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pCurrent);
+    hb_itemRelease(pPrevious);
   }
 }
 
-void QItemSelectionModelSlots::selectionChanged( const QItemSelection & selected, const QItemSelection & deselected )
+void QItemSelectionModelSlots::selectionChanged(const QItemSelection &selected, const QItemSelection &deselected)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "selectionChanged(QItemSelection,QItemSelection)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QITEMSELECTIONMODEL");
-    PHB_ITEM pSelected = Qt4xHb::Signals_return_object( ( void * ) &selected, "QITEMSELECTION");
-    PHB_ITEM pDeselected = Qt4xHb::Signals_return_object( ( void * ) &deselected, "QITEMSELECTION");
+    PHB_ITEM pSelected = Qt4xHb::Signals_return_object((void *)&selected, "QITEMSELECTION");
+    PHB_ITEM pDeselected = Qt4xHb::Signals_return_object((void *)&deselected, "QITEMSELECTION");
 
-    hb_vmEvalBlockV( cb, 3, pSender, pSelected, pDeselected );
+    hb_vmEvalBlockV(cb, 3, pSender, pSelected, pDeselected);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pSelected );
-    hb_itemRelease( pDeselected );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pSelected);
+    hb_itemRelease(pDeselected);
   }
 }
 
-void QItemSelectionModelSlots_connect_signal( const QString & signal, const QString & slot )
+void QItemSelectionModelSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QItemSelectionModel * obj = qobject_cast<QItemSelectionModel*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QItemSelectionModel *obj = qobject_cast<QItemSelectionModel *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QItemSelectionModelSlots * s = QCoreApplication::instance()->findChild<QItemSelectionModelSlots*>();
+    QItemSelectionModelSlots *s = QCoreApplication::instance()->findChild<QItemSelectionModelSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QItemSelectionModelSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

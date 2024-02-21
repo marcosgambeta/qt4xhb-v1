@@ -24,13 +24,13 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QGraphicsScaleSlots: public QObject
+class QGraphicsScaleSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QGraphicsScaleSlots(QObject * parent = 0);
+public:
+  QGraphicsScaleSlots(QObject *parent = 0);
   ~QGraphicsScaleSlots();
-  public slots:
+public slots:
   void originChanged();
   void scaleChanged();
   void xScaleChanged();

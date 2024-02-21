@@ -26,15 +26,15 @@
 
 #include <QWidget>
 
-class QDragSlots: public QObject
+class QDragSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QDragSlots(QObject * parent = 0);
+public:
+  QDragSlots(QObject *parent = 0);
   ~QDragSlots();
-  public slots:
-  void actionChanged( Qt::DropAction action );
-  void targetChanged( QWidget * newTarget );
+public slots:
+  void actionChanged(Qt::DropAction action);
+  void targetChanged(QWidget *newTarget);
 };
 
 #endif /* QDRAGSLOTS_H */

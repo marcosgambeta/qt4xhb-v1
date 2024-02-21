@@ -12,7 +12,7 @@
 
 #include "QColorDialogSlots.hpp"
 
-QColorDialogSlots::QColorDialogSlots(QObject * parent) : QObject(parent)
+QColorDialogSlots::QColorDialogSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,51 +20,51 @@ QColorDialogSlots::~QColorDialogSlots()
 {
 }
 
-void QColorDialogSlots::colorSelected( const QColor & color )
+void QColorDialogSlots::colorSelected(const QColor &color)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "colorSelected(QColor)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QCOLORDIALOG");
-    PHB_ITEM pColor = Qt4xHb::Signals_return_object( ( void * ) &color, "QCOLOR");
+    PHB_ITEM pColor = Qt4xHb::Signals_return_object((void *)&color, "QCOLOR");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pColor );
+    hb_vmEvalBlockV(cb, 2, pSender, pColor);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pColor );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pColor);
   }
 }
 
-void QColorDialogSlots::currentColorChanged( const QColor & color )
+void QColorDialogSlots::currentColorChanged(const QColor &color)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "currentColorChanged(QColor)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QCOLORDIALOG");
-    PHB_ITEM pColor = Qt4xHb::Signals_return_object( ( void * ) &color, "QCOLOR");
+    PHB_ITEM pColor = Qt4xHb::Signals_return_object((void *)&color, "QCOLOR");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pColor );
+    hb_vmEvalBlockV(cb, 2, pSender, pColor);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pColor );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pColor);
   }
 }
 
-void QColorDialogSlots_connect_signal( const QString & signal, const QString & slot )
+void QColorDialogSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QColorDialog * obj = qobject_cast<QColorDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QColorDialog *obj = qobject_cast<QColorDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QColorDialogSlots * s = QCoreApplication::instance()->findChild<QColorDialogSlots*>();
+    QColorDialogSlots *s = QCoreApplication::instance()->findChild<QColorDialogSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QColorDialogSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

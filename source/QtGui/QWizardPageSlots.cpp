@@ -12,7 +12,7 @@
 
 #include "QWizardPageSlots.hpp"
 
-QWizardPageSlots::QWizardPageSlots(QObject * parent) : QObject(parent)
+QWizardPageSlots::QWizardPageSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,29 +22,29 @@ QWizardPageSlots::~QWizardPageSlots()
 
 void QWizardPageSlots::completeChanged()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "completeChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWIZARDPAGE");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
-void QWizardPageSlots_connect_signal( const QString & signal, const QString & slot )
+void QWizardPageSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QWizardPage * obj = qobject_cast<QWizardPage*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWizardPage *obj = qobject_cast<QWizardPage *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QWizardPageSlots * s = QCoreApplication::instance()->findChild<QWizardPageSlots*>();
+    QWizardPageSlots *s = QCoreApplication::instance()->findChild<QWizardPageSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QWizardPageSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

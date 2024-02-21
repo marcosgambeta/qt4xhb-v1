@@ -24,14 +24,14 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QWidgetSlots: public QObject
+class QWidgetSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QWidgetSlots(QObject * parent = 0);
+public:
+  QWidgetSlots(QObject *parent = 0);
   ~QWidgetSlots();
-  public slots:
-  void customContextMenuRequested( const QPoint & pos );
+public slots:
+  void customContextMenuRequested(const QPoint &pos);
 };
 
 #endif /* QWIDGETSLOTS_H */

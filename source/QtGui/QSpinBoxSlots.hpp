@@ -24,15 +24,15 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QSpinBoxSlots: public QObject
+class QSpinBoxSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QSpinBoxSlots(QObject * parent = 0);
+public:
+  QSpinBoxSlots(QObject *parent = 0);
   ~QSpinBoxSlots();
-  public slots:
-  void valueChanged( int i );
-  void valueChanged( const QString & text );
+public slots:
+  void valueChanged(int i);
+  void valueChanged(const QString &text);
 };
 
 #endif /* QSPINBOXSLOTS_H */

@@ -12,7 +12,7 @@
 
 #include "QMdiAreaSlots.hpp"
 
-QMdiAreaSlots::QMdiAreaSlots(QObject * parent) : QObject(parent)
+QMdiAreaSlots::QMdiAreaSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,33 +20,33 @@ QMdiAreaSlots::~QMdiAreaSlots()
 {
 }
 
-void QMdiAreaSlots::subWindowActivated( QMdiSubWindow * window )
+void QMdiAreaSlots::subWindowActivated(QMdiSubWindow *window)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "subWindowActivated(QMdiSubWindow*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QMDIAREA");
-    PHB_ITEM pWindow = Qt4xHb::Signals_return_qobject( window, "QMDISUBWINDOW");
+    PHB_ITEM pWindow = Qt4xHb::Signals_return_qobject(window, "QMDISUBWINDOW");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pWindow );
+    hb_vmEvalBlockV(cb, 2, pSender, pWindow);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pWindow );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pWindow);
   }
 }
 
-void QMdiAreaSlots_connect_signal( const QString & signal, const QString & slot )
+void QMdiAreaSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QMdiArea * obj = qobject_cast<QMdiArea*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QMdiArea *obj = qobject_cast<QMdiArea *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QMdiAreaSlots * s = QCoreApplication::instance()->findChild<QMdiAreaSlots*>();
+    QMdiAreaSlots *s = QCoreApplication::instance()->findChild<QMdiAreaSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QMdiAreaSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

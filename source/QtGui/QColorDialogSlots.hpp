@@ -24,15 +24,15 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QColorDialogSlots: public QObject
+class QColorDialogSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QColorDialogSlots(QObject * parent = 0);
+public:
+  QColorDialogSlots(QObject *parent = 0);
   ~QColorDialogSlots();
-  public slots:
-  void colorSelected( const QColor & color );
-  void currentColorChanged( const QColor & color );
+public slots:
+  void colorSelected(const QColor &color);
+  void currentColorChanged(const QColor &color);
 };
 
 #endif /* QCOLORDIALOGSLOTS_H */

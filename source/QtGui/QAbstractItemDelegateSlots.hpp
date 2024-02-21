@@ -24,16 +24,16 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QAbstractItemDelegateSlots: public QObject
+class QAbstractItemDelegateSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QAbstractItemDelegateSlots(QObject * parent = 0);
+public:
+  QAbstractItemDelegateSlots(QObject *parent = 0);
   ~QAbstractItemDelegateSlots();
-  public slots:
-  void closeEditor( QWidget * editor, QAbstractItemDelegate::EndEditHint hint = QAbstractItemDelegate::NoHint );
-  void commitData( QWidget * editor );
-  void sizeHintChanged( const QModelIndex & index );
+public slots:
+  void closeEditor(QWidget *editor, QAbstractItemDelegate::EndEditHint hint = QAbstractItemDelegate::NoHint);
+  void commitData(QWidget *editor);
+  void sizeHintChanged(const QModelIndex &index);
 };
 
 #endif /* QABSTRACTITEMDELEGATESLOTS_H */

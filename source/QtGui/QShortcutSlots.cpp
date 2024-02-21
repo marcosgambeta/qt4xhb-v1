@@ -12,7 +12,7 @@
 
 #include "QShortcutSlots.hpp"
 
-QShortcutSlots::QShortcutSlots(QObject * parent) : QObject(parent)
+QShortcutSlots::QShortcutSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,45 +22,45 @@ QShortcutSlots::~QShortcutSlots()
 
 void QShortcutSlots::activated()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "activated()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSHORTCUT");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
 void QShortcutSlots::activatedAmbiguously()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "activatedAmbiguously()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSHORTCUT");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
-void QShortcutSlots_connect_signal( const QString & signal, const QString & slot )
+void QShortcutSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QShortcut * obj = qobject_cast<QShortcut*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QShortcut *obj = qobject_cast<QShortcut *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QShortcutSlots * s = QCoreApplication::instance()->findChild<QShortcutSlots*>();
+    QShortcutSlots *s = QCoreApplication::instance()->findChild<QShortcutSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QShortcutSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

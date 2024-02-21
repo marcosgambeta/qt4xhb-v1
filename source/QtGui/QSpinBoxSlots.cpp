@@ -12,7 +12,7 @@
 
 #include "QSpinBoxSlots.hpp"
 
-QSpinBoxSlots::QSpinBoxSlots(QObject * parent) : QObject(parent)
+QSpinBoxSlots::QSpinBoxSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,51 +20,51 @@ QSpinBoxSlots::~QSpinBoxSlots()
 {
 }
 
-void QSpinBoxSlots::valueChanged( int i )
+void QSpinBoxSlots::valueChanged(int i)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "valueChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSPINBOX");
-    PHB_ITEM pI = hb_itemPutNI( NULL, i );
+    PHB_ITEM pI = hb_itemPutNI(NULL, i);
 
-    hb_vmEvalBlockV( cb, 2, pSender, pI );
+    hb_vmEvalBlockV(cb, 2, pSender, pI);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pI );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pI);
   }
 }
 
-void QSpinBoxSlots::valueChanged( const QString & text )
+void QSpinBoxSlots::valueChanged(const QString &text)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "valueChanged(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSPINBOX");
-    PHB_ITEM pText = hb_itemPutC( NULL, QSTRINGTOSTRING( text ) );
+    PHB_ITEM pText = hb_itemPutC(NULL, QSTRINGTOSTRING(text));
 
-    hb_vmEvalBlockV( cb, 2, pSender, pText );
+    hb_vmEvalBlockV(cb, 2, pSender, pText);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pText );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pText);
   }
 }
 
-void QSpinBoxSlots_connect_signal( const QString & signal, const QString & slot )
+void QSpinBoxSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QSpinBox * obj = qobject_cast<QSpinBox*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSpinBox *obj = qobject_cast<QSpinBox *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QSpinBoxSlots * s = QCoreApplication::instance()->findChild<QSpinBoxSlots*>();
+    QSpinBoxSlots *s = QCoreApplication::instance()->findChild<QSpinBoxSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QSpinBoxSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

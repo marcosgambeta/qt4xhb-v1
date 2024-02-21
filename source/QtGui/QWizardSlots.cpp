@@ -12,7 +12,7 @@
 
 #include "QWizardSlots.hpp"
 
-QWizardSlots::QWizardSlots(QObject * parent) : QObject(parent)
+QWizardSlots::QWizardSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,103 +20,103 @@ QWizardSlots::~QWizardSlots()
 {
 }
 
-void QWizardSlots::currentIdChanged( int id )
+void QWizardSlots::currentIdChanged(int id)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "currentIdChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWIZARD");
-    PHB_ITEM pId = hb_itemPutNI( NULL, id );
+    PHB_ITEM pId = hb_itemPutNI(NULL, id);
 
-    hb_vmEvalBlockV( cb, 2, pSender, pId );
+    hb_vmEvalBlockV(cb, 2, pSender, pId);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pId );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pId);
   }
 }
 
-void QWizardSlots::customButtonClicked( int which )
+void QWizardSlots::customButtonClicked(int which)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "customButtonClicked(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWIZARD");
-    PHB_ITEM pWhich = hb_itemPutNI( NULL, which );
+    PHB_ITEM pWhich = hb_itemPutNI(NULL, which);
 
-    hb_vmEvalBlockV( cb, 2, pSender, pWhich );
+    hb_vmEvalBlockV(cb, 2, pSender, pWhich);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pWhich );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pWhich);
   }
 }
 
 void QWizardSlots::helpRequested()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "helpRequested()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWIZARD");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
-void QWizardSlots::pageAdded( int id )
+void QWizardSlots::pageAdded(int id)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "pageAdded(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWIZARD");
-    PHB_ITEM pId = hb_itemPutNI( NULL, id );
+    PHB_ITEM pId = hb_itemPutNI(NULL, id);
 
-    hb_vmEvalBlockV( cb, 2, pSender, pId );
+    hb_vmEvalBlockV(cb, 2, pSender, pId);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pId );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pId);
   }
 }
 
-void QWizardSlots::pageRemoved( int id )
+void QWizardSlots::pageRemoved(int id)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "pageRemoved(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWIZARD");
-    PHB_ITEM pId = hb_itemPutNI( NULL, id );
+    PHB_ITEM pId = hb_itemPutNI(NULL, id);
 
-    hb_vmEvalBlockV( cb, 2, pSender, pId );
+    hb_vmEvalBlockV(cb, 2, pSender, pId);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pId );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pId);
   }
 }
 
-void QWizardSlots_connect_signal( const QString & signal, const QString & slot )
+void QWizardSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QWizard * obj = qobject_cast<QWizard*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWizard *obj = qobject_cast<QWizard *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QWizardSlots * s = QCoreApplication::instance()->findChild<QWizardSlots*>();
+    QWizardSlots *s = QCoreApplication::instance()->findChild<QWizardSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QWizardSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

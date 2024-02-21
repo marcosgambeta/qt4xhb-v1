@@ -24,15 +24,15 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QGraphicsSceneSlots: public QObject
+class QGraphicsSceneSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QGraphicsSceneSlots(QObject * parent = 0);
+public:
+  QGraphicsSceneSlots(QObject *parent = 0);
   ~QGraphicsSceneSlots();
-  public slots:
-  void changed( const QList<QRectF> & region );
-  void sceneRectChanged( const QRectF & rect );
+public slots:
+  void changed(const QList<QRectF> &region);
+  void sceneRectChanged(const QRectF &rect);
   void selectionChanged();
 };
 

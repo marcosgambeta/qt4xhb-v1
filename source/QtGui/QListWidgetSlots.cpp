@@ -12,7 +12,7 @@
 
 #include "QListWidgetSlots.hpp"
 
-QListWidgetSlots::QListWidgetSlots(QObject * parent) : QObject(parent)
+QListWidgetSlots::QListWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,195 +20,195 @@ QListWidgetSlots::~QListWidgetSlots()
 {
 }
 
-void QListWidgetSlots::currentItemChanged( QListWidgetItem * current, QListWidgetItem * previous )
+void QListWidgetSlots::currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "currentItemChanged(QListWidgetItem*,QListWidgetItem*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QLISTWIDGET");
-    PHB_ITEM pCurrent = Qt4xHb::Signals_return_object( ( void * ) current, "QLISTWIDGETITEM");
-    PHB_ITEM pPrevious = Qt4xHb::Signals_return_object( ( void * ) previous, "QLISTWIDGETITEM");
+    PHB_ITEM pCurrent = Qt4xHb::Signals_return_object((void *)current, "QLISTWIDGETITEM");
+    PHB_ITEM pPrevious = Qt4xHb::Signals_return_object((void *)previous, "QLISTWIDGETITEM");
 
-    hb_vmEvalBlockV( cb, 3, pSender, pCurrent, pPrevious );
+    hb_vmEvalBlockV(cb, 3, pSender, pCurrent, pPrevious);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pCurrent );
-    hb_itemRelease( pPrevious );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pCurrent);
+    hb_itemRelease(pPrevious);
   }
 }
 
-void QListWidgetSlots::currentRowChanged( int currentRow )
+void QListWidgetSlots::currentRowChanged(int currentRow)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "currentRowChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QLISTWIDGET");
-    PHB_ITEM pCurrentRow = hb_itemPutNI( NULL, currentRow );
+    PHB_ITEM pCurrentRow = hb_itemPutNI(NULL, currentRow);
 
-    hb_vmEvalBlockV( cb, 2, pSender, pCurrentRow );
+    hb_vmEvalBlockV(cb, 2, pSender, pCurrentRow);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pCurrentRow );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pCurrentRow);
   }
 }
 
-void QListWidgetSlots::currentTextChanged( const QString & currentText )
+void QListWidgetSlots::currentTextChanged(const QString &currentText)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "currentTextChanged(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QLISTWIDGET");
-    PHB_ITEM pCurrentText = hb_itemPutC( NULL, QSTRINGTOSTRING( currentText ) );
+    PHB_ITEM pCurrentText = hb_itemPutC(NULL, QSTRINGTOSTRING(currentText));
 
-    hb_vmEvalBlockV( cb, 2, pSender, pCurrentText );
+    hb_vmEvalBlockV(cb, 2, pSender, pCurrentText);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pCurrentText );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pCurrentText);
   }
 }
 
-void QListWidgetSlots::itemActivated( QListWidgetItem * item )
+void QListWidgetSlots::itemActivated(QListWidgetItem *item)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "itemActivated(QListWidgetItem*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QLISTWIDGET");
-    PHB_ITEM pItem = Qt4xHb::Signals_return_object( ( void * ) item, "QLISTWIDGETITEM");
+    PHB_ITEM pItem = Qt4xHb::Signals_return_object((void *)item, "QLISTWIDGETITEM");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pItem );
+    hb_vmEvalBlockV(cb, 2, pSender, pItem);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
     hb_itemRelease(pItem);
   }
 }
 
-void QListWidgetSlots::itemChanged( QListWidgetItem * item )
+void QListWidgetSlots::itemChanged(QListWidgetItem *item)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "itemChanged(QListWidgetItem*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QLISTWIDGET");
-    PHB_ITEM pItem = Qt4xHb::Signals_return_object( ( void * ) item, "QLISTWIDGETITEM");
+    PHB_ITEM pItem = Qt4xHb::Signals_return_object((void *)item, "QLISTWIDGETITEM");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pItem );
+    hb_vmEvalBlockV(cb, 2, pSender, pItem);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
     hb_itemRelease(pItem);
   }
 }
 
-void QListWidgetSlots::itemClicked( QListWidgetItem * item )
+void QListWidgetSlots::itemClicked(QListWidgetItem *item)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "itemClicked(QListWidgetItem*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QLISTWIDGET");
-    PHB_ITEM pItem = Qt4xHb::Signals_return_object( ( void * ) item, "QLISTWIDGETITEM");
+    PHB_ITEM pItem = Qt4xHb::Signals_return_object((void *)item, "QLISTWIDGETITEM");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pItem );
+    hb_vmEvalBlockV(cb, 2, pSender, pItem);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
     hb_itemRelease(pItem);
   }
 }
 
-void QListWidgetSlots::itemDoubleClicked( QListWidgetItem * item )
+void QListWidgetSlots::itemDoubleClicked(QListWidgetItem *item)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "itemDoubleClicked(QListWidgetItem*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QLISTWIDGET");
-    PHB_ITEM pItem = Qt4xHb::Signals_return_object( ( void * ) item, "QLISTWIDGETITEM");
+    PHB_ITEM pItem = Qt4xHb::Signals_return_object((void *)item, "QLISTWIDGETITEM");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pItem );
+    hb_vmEvalBlockV(cb, 2, pSender, pItem);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
     hb_itemRelease(pItem);
   }
 }
 
-void QListWidgetSlots::itemEntered( QListWidgetItem * item )
+void QListWidgetSlots::itemEntered(QListWidgetItem *item)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "itemEntered(QListWidgetItem*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QLISTWIDGET");
-    PHB_ITEM pItem = Qt4xHb::Signals_return_object( ( void * ) item, "QLISTWIDGETITEM");
+    PHB_ITEM pItem = Qt4xHb::Signals_return_object((void *)item, "QLISTWIDGETITEM");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pItem );
+    hb_vmEvalBlockV(cb, 2, pSender, pItem);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
     hb_itemRelease(pItem);
   }
 }
 
-void QListWidgetSlots::itemPressed( QListWidgetItem * item )
+void QListWidgetSlots::itemPressed(QListWidgetItem *item)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "itemPressed(QListWidgetItem*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QLISTWIDGET");
-    PHB_ITEM pItem = Qt4xHb::Signals_return_object( ( void * ) item, "QLISTWIDGETITEM");
+    PHB_ITEM pItem = Qt4xHb::Signals_return_object((void *)item, "QLISTWIDGETITEM");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pItem );
+    hb_vmEvalBlockV(cb, 2, pSender, pItem);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
     hb_itemRelease(pItem);
   }
 }
 
 void QListWidgetSlots::itemSelectionChanged()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "itemSelectionChanged()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QLISTWIDGET");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
-void QListWidgetSlots_connect_signal( const QString & signal, const QString & slot )
+void QListWidgetSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QListWidget * obj = qobject_cast<QListWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QListWidget *obj = qobject_cast<QListWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QListWidgetSlots * s = QCoreApplication::instance()->findChild<QListWidgetSlots*>();
+    QListWidgetSlots *s = QCoreApplication::instance()->findChild<QListWidgetSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QListWidgetSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

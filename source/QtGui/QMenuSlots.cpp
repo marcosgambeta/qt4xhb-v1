@@ -12,7 +12,7 @@
 
 #include "QMenuSlots.hpp"
 
-QMenuSlots::QMenuSlots(QObject * parent) : QObject(parent)
+QMenuSlots::QMenuSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,81 +22,81 @@ QMenuSlots::~QMenuSlots()
 
 void QMenuSlots::aboutToHide()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "aboutToHide()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QMENU");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
 void QMenuSlots::aboutToShow()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "aboutToShow()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QMENU");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
-void QMenuSlots::hovered( QAction * action )
+void QMenuSlots::hovered(QAction *action)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "hovered(QAction*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QMENU");
-    PHB_ITEM pAction = Qt4xHb::Signals_return_qobject( action, "QACTION");
+    PHB_ITEM pAction = Qt4xHb::Signals_return_qobject(action, "QACTION");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pAction );
+    hb_vmEvalBlockV(cb, 2, pSender, pAction);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pAction );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pAction);
   }
 }
 
-void QMenuSlots::triggered( QAction * action )
+void QMenuSlots::triggered(QAction *action)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "triggered(QAction*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QMENU");
-    PHB_ITEM pAction = Qt4xHb::Signals_return_qobject( action, "QACTION");
+    PHB_ITEM pAction = Qt4xHb::Signals_return_qobject(action, "QACTION");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pAction );
+    hb_vmEvalBlockV(cb, 2, pSender, pAction);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pAction );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pAction);
   }
 }
 
-void QMenuSlots_connect_signal( const QString & signal, const QString & slot )
+void QMenuSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QMenu * obj = qobject_cast<QMenu*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QMenu *obj = qobject_cast<QMenu *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QMenuSlots * s = QCoreApplication::instance()->findChild<QMenuSlots*>();
+    QMenuSlots *s = QCoreApplication::instance()->findChild<QMenuSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QMenuSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

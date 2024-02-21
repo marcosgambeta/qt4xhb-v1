@@ -24,15 +24,15 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QGroupBoxSlots: public QObject
+class QGroupBoxSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QGroupBoxSlots(QObject * parent = 0);
+public:
+  QGroupBoxSlots(QObject *parent = 0);
   ~QGroupBoxSlots();
-  public slots:
-  void clicked( bool checked = false );
-  void toggled( bool on );
+public slots:
+  void clicked(bool checked = false);
+  void toggled(bool on);
 };
 
 #endif /* QGROUPBOXSLOTS_H */

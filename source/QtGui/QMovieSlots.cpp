@@ -12,7 +12,7 @@
 
 #include "QMovieSlots.hpp"
 
-QMovieSlots::QMovieSlots(QObject * parent) : QObject(parent)
+QMovieSlots::QMovieSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,137 +20,137 @@ QMovieSlots::~QMovieSlots()
 {
 }
 
-void QMovieSlots::error( QImageReader::ImageReaderError error )
+void QMovieSlots::error(QImageReader::ImageReaderError error)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "error(QImageReader::ImageReaderError)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QMOVIE");
-    PHB_ITEM pError = hb_itemPutNI( NULL, static_cast<int >( error ) );
+    PHB_ITEM pError = hb_itemPutNI(NULL, static_cast<int>(error));
 
-    hb_vmEvalBlockV( cb, 2, pSender, pError );
+    hb_vmEvalBlockV(cb, 2, pSender, pError);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pError );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pError);
   }
 }
 
 void QMovieSlots::finished()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "finished()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QMOVIE");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
-void QMovieSlots::frameChanged( int frameNumber )
+void QMovieSlots::frameChanged(int frameNumber)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "frameChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QMOVIE");
-    PHB_ITEM pFrameNumber = hb_itemPutNI( NULL, frameNumber );
+    PHB_ITEM pFrameNumber = hb_itemPutNI(NULL, frameNumber);
 
-    hb_vmEvalBlockV( cb, 2, pSender, pFrameNumber );
+    hb_vmEvalBlockV(cb, 2, pSender, pFrameNumber);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pFrameNumber );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pFrameNumber);
   }
 }
 
-void QMovieSlots::resized( const QSize & size )
+void QMovieSlots::resized(const QSize &size)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "resized(QSize)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QMOVIE");
-    PHB_ITEM pSize = Qt4xHb::Signals_return_object( ( void * ) &size, "QSIZE");
+    PHB_ITEM pSize = Qt4xHb::Signals_return_object((void *)&size, "QSIZE");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pSize );
+    hb_vmEvalBlockV(cb, 2, pSender, pSize);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pSize );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pSize);
   }
 }
 
 void QMovieSlots::started()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "started()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QMOVIE");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
-void QMovieSlots::stateChanged( QMovie::MovieState state )
+void QMovieSlots::stateChanged(QMovie::MovieState state)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "stateChanged(QMovie::MovieState)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QMOVIE");
-    PHB_ITEM pState = hb_itemPutNI( NULL, static_cast<int >( state ) );
+    PHB_ITEM pState = hb_itemPutNI(NULL, static_cast<int>(state));
 
-    hb_vmEvalBlockV( cb, 2, pSender, pState );
+    hb_vmEvalBlockV(cb, 2, pSender, pState);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pState );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pState);
   }
 }
 
-void QMovieSlots::updated( const QRect & rect )
+void QMovieSlots::updated(const QRect &rect)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "updated(QRect)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QMOVIE");
-    PHB_ITEM pRect = Qt4xHb::Signals_return_object( ( void * ) &rect, "QRECT");
+    PHB_ITEM pRect = Qt4xHb::Signals_return_object((void *)&rect, "QRECT");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pRect );
+    hb_vmEvalBlockV(cb, 2, pSender, pRect);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pRect );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pRect);
   }
 }
 
-void QMovieSlots_connect_signal( const QString & signal, const QString & slot )
+void QMovieSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QMovie * obj = qobject_cast<QMovie*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QMovie *obj = qobject_cast<QMovie *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QMovieSlots * s = QCoreApplication::instance()->findChild<QMovieSlots*>();
+    QMovieSlots *s = QCoreApplication::instance()->findChild<QMovieSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QMovieSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

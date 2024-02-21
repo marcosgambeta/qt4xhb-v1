@@ -12,7 +12,7 @@
 
 #include "QStatusBarSlots.hpp"
 
-QStatusBarSlots::QStatusBarSlots(QObject * parent) : QObject(parent)
+QStatusBarSlots::QStatusBarSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,33 +20,33 @@ QStatusBarSlots::~QStatusBarSlots()
 {
 }
 
-void QStatusBarSlots::messageChanged( const QString & message )
+void QStatusBarSlots::messageChanged(const QString &message)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "messageChanged(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSTATUSBAR");
-    PHB_ITEM pMessage = hb_itemPutC( NULL, QSTRINGTOSTRING( message ) );
+    PHB_ITEM pMessage = hb_itemPutC(NULL, QSTRINGTOSTRING(message));
 
-    hb_vmEvalBlockV( cb, 2, pSender, pMessage );
+    hb_vmEvalBlockV(cb, 2, pSender, pMessage);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pMessage );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pMessage);
   }
 }
 
-void QStatusBarSlots_connect_signal( const QString & signal, const QString & slot )
+void QStatusBarSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QStatusBar * obj = qobject_cast<QStatusBar*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QStatusBarSlots * s = QCoreApplication::instance()->findChild<QStatusBarSlots*>();
+    QStatusBarSlots *s = QCoreApplication::instance()->findChild<QStatusBarSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QStatusBarSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

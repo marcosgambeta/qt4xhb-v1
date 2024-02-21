@@ -12,7 +12,7 @@
 
 #include "QToolButtonSlots.hpp"
 
-QToolButtonSlots::QToolButtonSlots(QObject * parent) : QObject(parent)
+QToolButtonSlots::QToolButtonSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,33 +20,33 @@ QToolButtonSlots::~QToolButtonSlots()
 {
 }
 
-void QToolButtonSlots::triggered( QAction * action )
+void QToolButtonSlots::triggered(QAction *action)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "triggered(QAction*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QTOOLBUTTON");
-    PHB_ITEM pAction = Qt4xHb::Signals_return_qobject( action, "QACTION");
+    PHB_ITEM pAction = Qt4xHb::Signals_return_qobject(action, "QACTION");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pAction );
+    hb_vmEvalBlockV(cb, 2, pSender, pAction);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pAction );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pAction);
   }
 }
 
-void QToolButtonSlots_connect_signal( const QString & signal, const QString & slot )
+void QToolButtonSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QToolButton * obj = qobject_cast<QToolButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QToolButtonSlots * s = QCoreApplication::instance()->findChild<QToolButtonSlots*>();
+    QToolButtonSlots *s = QCoreApplication::instance()->findChild<QToolButtonSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QToolButtonSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

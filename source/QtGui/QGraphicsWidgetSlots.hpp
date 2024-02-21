@@ -24,13 +24,13 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QGraphicsWidgetSlots: public QObject
+class QGraphicsWidgetSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QGraphicsWidgetSlots(QObject * parent = 0);
+public:
+  QGraphicsWidgetSlots(QObject *parent = 0);
   ~QGraphicsWidgetSlots();
-  public slots:
+public slots:
   void geometryChanged();
 };
 

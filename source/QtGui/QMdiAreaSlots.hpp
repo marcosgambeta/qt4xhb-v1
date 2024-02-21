@@ -26,14 +26,14 @@
 
 #include <QMdiSubWindow>
 
-class QMdiAreaSlots: public QObject
+class QMdiAreaSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QMdiAreaSlots(QObject * parent = 0);
+public:
+  QMdiAreaSlots(QObject *parent = 0);
   ~QMdiAreaSlots();
-  public slots:
-  void subWindowActivated( QMdiSubWindow * window );
+public slots:
+  void subWindowActivated(QMdiSubWindow *window);
 };
 
 #endif /* QMDIAREASLOTS_H */

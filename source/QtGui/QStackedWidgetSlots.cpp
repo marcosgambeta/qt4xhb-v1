@@ -12,7 +12,7 @@
 
 #include "QStackedWidgetSlots.hpp"
 
-QStackedWidgetSlots::QStackedWidgetSlots(QObject * parent) : QObject(parent)
+QStackedWidgetSlots::QStackedWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,51 +20,51 @@ QStackedWidgetSlots::~QStackedWidgetSlots()
 {
 }
 
-void QStackedWidgetSlots::currentChanged( int index )
+void QStackedWidgetSlots::currentChanged(int index)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "currentChanged(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSTACKEDWIDGET");
-    PHB_ITEM pIndex = hb_itemPutNI( NULL, index );
+    PHB_ITEM pIndex = hb_itemPutNI(NULL, index);
 
-    hb_vmEvalBlockV( cb, 2, pSender, pIndex );
+    hb_vmEvalBlockV(cb, 2, pSender, pIndex);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pIndex );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pIndex);
   }
 }
 
-void QStackedWidgetSlots::widgetRemoved( int index )
+void QStackedWidgetSlots::widgetRemoved(int index)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "widgetRemoved(int)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSTACKEDWIDGET");
-    PHB_ITEM pIndex = hb_itemPutNI( NULL, index );
+    PHB_ITEM pIndex = hb_itemPutNI(NULL, index);
 
-    hb_vmEvalBlockV( cb, 2, pSender, pIndex );
+    hb_vmEvalBlockV(cb, 2, pSender, pIndex);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pIndex );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pIndex);
   }
 }
 
-void QStackedWidgetSlots_connect_signal( const QString & signal, const QString & slot )
+void QStackedWidgetSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QStackedWidget * obj = qobject_cast<QStackedWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QStackedWidget *obj = qobject_cast<QStackedWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QStackedWidgetSlots * s = QCoreApplication::instance()->findChild<QStackedWidgetSlots*>();
+    QStackedWidgetSlots *s = QCoreApplication::instance()->findChild<QStackedWidgetSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QStackedWidgetSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

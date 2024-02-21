@@ -26,14 +26,14 @@
 
 #include <QAbstractButton>
 
-class QMessageBoxSlots: public QObject
+class QMessageBoxSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QMessageBoxSlots(QObject * parent = 0);
+public:
+  QMessageBoxSlots(QObject *parent = 0);
   ~QMessageBoxSlots();
-  public slots:
-  void buttonClicked( QAbstractButton * button );
+public slots:
+  void buttonClicked(QAbstractButton *button);
 };
 
 #endif /* QMESSAGEBOXSLOTS_H */

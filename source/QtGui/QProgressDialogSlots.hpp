@@ -24,13 +24,13 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QProgressDialogSlots: public QObject
+class QProgressDialogSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QProgressDialogSlots(QObject * parent = 0);
+public:
+  QProgressDialogSlots(QObject *parent = 0);
   ~QProgressDialogSlots();
-  public slots:
+public slots:
   void canceled();
 };
 

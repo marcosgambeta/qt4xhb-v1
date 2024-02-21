@@ -12,7 +12,7 @@
 
 #include "QWidgetSlots.hpp"
 
-QWidgetSlots::QWidgetSlots(QObject * parent) : QObject(parent)
+QWidgetSlots::QWidgetSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,33 +20,33 @@ QWidgetSlots::~QWidgetSlots()
 {
 }
 
-void QWidgetSlots::customContextMenuRequested( const QPoint & pos )
+void QWidgetSlots::customContextMenuRequested(const QPoint &pos)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "customContextMenuRequested(QPoint)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QWIDGET");
-    PHB_ITEM pPos = Qt4xHb::Signals_return_object( ( void * ) &pos, "QPOINT");
+    PHB_ITEM pPos = Qt4xHb::Signals_return_object((void *)&pos, "QPOINT");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pPos );
+    hb_vmEvalBlockV(cb, 2, pSender, pPos);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pPos );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pPos);
   }
 }
 
-void QWidgetSlots_connect_signal( const QString & signal, const QString & slot )
+void QWidgetSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QWidget * obj = qobject_cast<QWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWidget *obj = qobject_cast<QWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QWidgetSlots * s = QCoreApplication::instance()->findChild<QWidgetSlots*>();
+    QWidgetSlots *s = QCoreApplication::instance()->findChild<QWidgetSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QWidgetSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
