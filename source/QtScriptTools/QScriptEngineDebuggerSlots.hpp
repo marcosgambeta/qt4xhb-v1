@@ -24,13 +24,13 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QScriptEngineDebuggerSlots: public QObject
+class QScriptEngineDebuggerSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QScriptEngineDebuggerSlots(QObject * parent = 0);
+public:
+  QScriptEngineDebuggerSlots(QObject *parent = 0);
   ~QScriptEngineDebuggerSlots();
-  public slots:
+public slots:
   void evaluationResumed();
   void evaluationSuspended();
 };
