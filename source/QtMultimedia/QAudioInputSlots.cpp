@@ -12,7 +12,7 @@
 
 #include "QAudioInputSlots.hpp"
 
-QAudioInputSlots::QAudioInputSlots(QObject * parent) : QObject(parent)
+QAudioInputSlots::QAudioInputSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,49 +20,49 @@ QAudioInputSlots::~QAudioInputSlots()
 {
 }
 
-void QAudioInputSlots::stateChanged( QAudio::State state )
+void QAudioInputSlots::stateChanged(QAudio::State state)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "stateChanged(QAudio::State)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QAUDIOINPUT");
-    PHB_ITEM pState = hb_itemPutNI( NULL, static_cast<int >( state ) );
+    PHB_ITEM pState = hb_itemPutNI(NULL, static_cast<int>(state));
 
-    hb_vmEvalBlockV( cb, 2, pSender, pState );
+    hb_vmEvalBlockV(cb, 2, pSender, pState);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pState );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pState);
   }
 }
 
 void QAudioInputSlots::notify()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "notify()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QAUDIOINPUT");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
-void QAudioInputSlots_connect_signal( const QString & signal, const QString & slot )
+void QAudioInputSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QAudioInput * obj = qobject_cast<QAudioInput*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAudioInput *obj = qobject_cast<QAudioInput *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QAudioInputSlots * s = QCoreApplication::instance()->findChild<QAudioInputSlots*>();
+    QAudioInputSlots *s = QCoreApplication::instance()->findChild<QAudioInputSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QAudioInputSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

@@ -24,15 +24,15 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QAbstractVideoSurfaceSlots: public QObject
+class QAbstractVideoSurfaceSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QAbstractVideoSurfaceSlots(QObject * parent = 0);
+public:
+  QAbstractVideoSurfaceSlots(QObject *parent = 0);
   ~QAbstractVideoSurfaceSlots();
-  public slots:
-  void activeChanged( bool active );
-  void surfaceFormatChanged( const QVideoSurfaceFormat & format );
+public slots:
+  void activeChanged(bool active);
+  void surfaceFormatChanged(const QVideoSurfaceFormat &format);
   void supportedFormatsChanged();
 };
 

@@ -24,14 +24,14 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QAudioInputSlots: public QObject
+class QAudioInputSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QAudioInputSlots(QObject * parent = 0);
+public:
+  QAudioInputSlots(QObject *parent = 0);
   ~QAudioInputSlots();
-  public slots:
-  void stateChanged( QAudio::State state );
+public slots:
+  void stateChanged(QAudio::State state);
   void notify();
 };
 
