@@ -8,7 +8,7 @@
 
 #include <hbapi.h>
 
-HB_FUNC( QT4XHB_VERSION )
+HB_FUNC(QT4XHB_VERSION)
 {
-  hb_retc(static_cast<const char*>("1.0.0dev"));
+  hb_retc(static_cast<const char *>("1.0.0dev"));
 }
