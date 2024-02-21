@@ -24,14 +24,14 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QAxScriptManagerSlots: public QObject
+class QAxScriptManagerSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QAxScriptManagerSlots(QObject * parent = 0);
+public:
+  QAxScriptManagerSlots(QObject *parent = 0);
   ~QAxScriptManagerSlots();
-  public slots:
-  void error( QAxScript * script, int code, const QString & description, int sourcePosition, const QString & sourceText );
+public slots:
+  void error(QAxScript *script, int code, const QString &description, int sourcePosition, const QString &sourceText);
 };
 
 #endif /* QAXSCRIPTMANAGERSLOTS_H */
