@@ -24,23 +24,23 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QFutureWatcherBaseSlots: public QObject
+class QFutureWatcherBaseSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QFutureWatcherBaseSlots(QObject * parent = 0);
+public:
+  QFutureWatcherBaseSlots(QObject *parent = 0);
   ~QFutureWatcherBaseSlots();
-  public slots:
+public slots:
   void started();
   void finished();
   void canceled();
   void paused();
   void resumed();
-  void resultReadyAt( int resultIndex );
-  void resultsReadyAt( int beginIndex, int endIndex );
-  void progressRangeChanged( int minimum, int maximum );
-  void progressValueChanged( int progressValue );
-  void progressTextChanged( const QString & progressText );
+  void resultReadyAt(int resultIndex);
+  void resultsReadyAt(int beginIndex, int endIndex);
+  void progressRangeChanged(int minimum, int maximum);
+  void progressValueChanged(int progressValue);
+  void progressTextChanged(const QString &progressText);
 };
 
 #endif /* QFUTUREWATCHERBASESLOTS_H */

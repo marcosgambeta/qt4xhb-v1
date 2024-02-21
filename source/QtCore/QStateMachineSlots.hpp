@@ -24,13 +24,13 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QStateMachineSlots: public QObject
+class QStateMachineSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QStateMachineSlots(QObject * parent = 0);
+public:
+  QStateMachineSlots(QObject *parent = 0);
   ~QStateMachineSlots();
-  public slots:
+public slots:
   void started();
   void stopped();
 };

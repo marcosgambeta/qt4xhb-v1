@@ -24,19 +24,19 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QProcessSlots: public QObject
+class QProcessSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QProcessSlots(QObject * parent = 0);
+public:
+  QProcessSlots(QObject *parent = 0);
   ~QProcessSlots();
-  public slots:
-  void error( QProcess::ProcessError error );
-  void finished( int exitCode, QProcess::ExitStatus exitStatus );
+public slots:
+  void error(QProcess::ProcessError error);
+  void finished(int exitCode, QProcess::ExitStatus exitStatus);
   void readyReadStandardError();
   void readyReadStandardOutput();
   void started();
-  void stateChanged( QProcess::ProcessState newState );
+  void stateChanged(QProcess::ProcessState newState);
 };
 
 #endif /* QPROCESSSLOTS_H */

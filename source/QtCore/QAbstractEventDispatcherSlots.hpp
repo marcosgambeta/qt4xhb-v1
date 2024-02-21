@@ -24,13 +24,13 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QAbstractEventDispatcherSlots: public QObject
+class QAbstractEventDispatcherSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QAbstractEventDispatcherSlots(QObject * parent = 0);
+public:
+  QAbstractEventDispatcherSlots(QObject *parent = 0);
   ~QAbstractEventDispatcherSlots();
-  public slots:
+public slots:
   void aboutToBlock();
   void awake();
 };

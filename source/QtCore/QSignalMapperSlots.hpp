@@ -26,17 +26,17 @@
 
 #include <QWidget>
 
-class QSignalMapperSlots: public QObject
+class QSignalMapperSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QSignalMapperSlots(QObject * parent = 0);
+public:
+  QSignalMapperSlots(QObject *parent = 0);
   ~QSignalMapperSlots();
-  public slots:
-  void mapped( int i );
-  void mapped( const QString & s );
-  void mapped( QWidget * w );
-  void mapped( QObject * o );
+public slots:
+  void mapped(int i);
+  void mapped(const QString &s);
+  void mapped(QWidget *w);
+  void mapped(QObject *o);
 };
 
 #endif /* QSIGNALMAPPERSLOTS_H */

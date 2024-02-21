@@ -12,7 +12,7 @@
 
 #include "QAbstractEventDispatcherSlots.hpp"
 
-QAbstractEventDispatcherSlots::QAbstractEventDispatcherSlots(QObject * parent) : QObject(parent)
+QAbstractEventDispatcherSlots::QAbstractEventDispatcherSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,45 +22,45 @@ QAbstractEventDispatcherSlots::~QAbstractEventDispatcherSlots()
 
 void QAbstractEventDispatcherSlots::aboutToBlock()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "aboutToBlock()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTEVENTDISPATCHER");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
 void QAbstractEventDispatcherSlots::awake()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "awake()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTEVENTDISPATCHER");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
-void QAbstractEventDispatcherSlots_connect_signal( const QString & signal, const QString & slot )
+void QAbstractEventDispatcherSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QAbstractEventDispatcher * obj = qobject_cast<QAbstractEventDispatcher*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractEventDispatcher *obj = qobject_cast<QAbstractEventDispatcher *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QAbstractEventDispatcherSlots * s = QCoreApplication::instance()->findChild<QAbstractEventDispatcherSlots*>();
+    QAbstractEventDispatcherSlots *s = QCoreApplication::instance()->findChild<QAbstractEventDispatcherSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QAbstractEventDispatcherSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

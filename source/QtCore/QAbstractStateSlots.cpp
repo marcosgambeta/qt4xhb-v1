@@ -12,7 +12,7 @@
 
 #include "QAbstractStateSlots.hpp"
 
-QAbstractStateSlots::QAbstractStateSlots(QObject * parent) : QObject(parent)
+QAbstractStateSlots::QAbstractStateSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,45 +22,45 @@ QAbstractStateSlots::~QAbstractStateSlots()
 
 void QAbstractStateSlots::entered()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "entered()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTSTATE");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
 void QAbstractStateSlots::exited()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "exited()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QABSTRACTSTATE");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
-void QAbstractStateSlots_connect_signal( const QString & signal, const QString & slot )
+void QAbstractStateSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QAbstractState * obj = qobject_cast<QAbstractState*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractState *obj = qobject_cast<QAbstractState *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QAbstractStateSlots * s = QCoreApplication::instance()->findChild<QAbstractStateSlots*>();
+    QAbstractStateSlots *s = QCoreApplication::instance()->findChild<QAbstractStateSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QAbstractStateSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

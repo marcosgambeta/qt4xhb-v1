@@ -24,14 +24,14 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QSocketNotifierSlots: public QObject
+class QSocketNotifierSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QSocketNotifierSlots(QObject * parent = 0);
+public:
+  QSocketNotifierSlots(QObject *parent = 0);
   ~QSocketNotifierSlots();
-  public slots:
-  void activated( int socket );
+public slots:
+  void activated(int socket);
 };
 
 #endif /* QSOCKETNOTIFIERSLOTS_H */

@@ -24,13 +24,13 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QTimerSlots: public QObject
+class QTimerSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QTimerSlots(QObject * parent = 0);
+public:
+  QTimerSlots(QObject *parent = 0);
   ~QTimerSlots();
-  public slots:
+public slots:
   void timeout();
 };
 

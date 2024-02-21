@@ -12,7 +12,7 @@
 
 #include "QSequentialAnimationGroupSlots.hpp"
 
-QSequentialAnimationGroupSlots::QSequentialAnimationGroupSlots(QObject * parent) : QObject(parent)
+QSequentialAnimationGroupSlots::QSequentialAnimationGroupSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,33 +20,33 @@ QSequentialAnimationGroupSlots::~QSequentialAnimationGroupSlots()
 {
 }
 
-void QSequentialAnimationGroupSlots::currentAnimationChanged( QAbstractAnimation * current )
+void QSequentialAnimationGroupSlots::currentAnimationChanged(QAbstractAnimation *current)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "currentAnimationChanged(QAbstractAnimation*)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSEQUENTIALANIMATIONGROUP");
-    PHB_ITEM pCurrent = Qt4xHb::Signals_return_qobject( current, "QABSTRACTANIMATION");
+    PHB_ITEM pCurrent = Qt4xHb::Signals_return_qobject(current, "QABSTRACTANIMATION");
 
-    hb_vmEvalBlockV( cb, 2, pSender, pCurrent );
+    hb_vmEvalBlockV(cb, 2, pSender, pCurrent);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pCurrent );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pCurrent);
   }
 }
 
-void QSequentialAnimationGroupSlots_connect_signal( const QString & signal, const QString & slot )
+void QSequentialAnimationGroupSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QSequentialAnimationGroup * obj = qobject_cast<QSequentialAnimationGroup*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSequentialAnimationGroup *obj = qobject_cast<QSequentialAnimationGroup *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QSequentialAnimationGroupSlots * s = QCoreApplication::instance()->findChild<QSequentialAnimationGroupSlots*>();
+    QSequentialAnimationGroupSlots *s = QCoreApplication::instance()->findChild<QSequentialAnimationGroupSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QSequentialAnimationGroupSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

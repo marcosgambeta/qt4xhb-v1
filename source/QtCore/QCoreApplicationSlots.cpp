@@ -12,7 +12,7 @@
 
 #include "QCoreApplicationSlots.hpp"
 
-QCoreApplicationSlots::QCoreApplicationSlots(QObject * parent) : QObject(parent)
+QCoreApplicationSlots::QCoreApplicationSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -22,29 +22,29 @@ QCoreApplicationSlots::~QCoreApplicationSlots()
 
 void QCoreApplicationSlots::aboutToQuit()
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "aboutToQuit()");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QCOREAPPLICATION");
 
-    hb_vmEvalBlockV( cb, 1, pSender );
+    hb_vmEvalBlockV(cb, 1, pSender);
 
-    hb_itemRelease( pSender );
+    hb_itemRelease(pSender);
   }
 }
 
-void QCoreApplicationSlots_connect_signal( const QString & signal, const QString & slot )
+void QCoreApplicationSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QCoreApplication * obj = qobject_cast<QCoreApplication*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QCoreApplication *obj = qobject_cast<QCoreApplication *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QCoreApplicationSlots * s = QCoreApplication::instance()->findChild<QCoreApplicationSlots*>();
+    QCoreApplicationSlots *s = QCoreApplication::instance()->findChild<QCoreApplicationSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QCoreApplicationSlots();
       s->moveToThread(QCoreApplication::instance()->thread());
