@@ -24,13 +24,13 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QSvgRendererSlots: public QObject
+class QSvgRendererSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QSvgRendererSlots(QObject * parent = 0);
+public:
+  QSvgRendererSlots(QObject *parent = 0);
   ~QSvgRendererSlots();
-  public slots:
+public slots:
   void repaintNeeded();
 };
 
