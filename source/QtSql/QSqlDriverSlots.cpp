@@ -12,7 +12,7 @@
 
 #include "QSqlDriverSlots.hpp"
 
-QSqlDriverSlots::QSqlDriverSlots(QObject * parent) : QObject(parent)
+QSqlDriverSlots::QSqlDriverSlots(QObject *parent) : QObject(parent)
 {
 }
 
@@ -20,33 +20,33 @@ QSqlDriverSlots::~QSqlDriverSlots()
 {
 }
 
-void QSqlDriverSlots::notification( const QString & name )
+void QSqlDriverSlots::notification(const QString &name)
 {
-  QObject * object = qobject_cast<QObject*>(sender());
+  QObject *object = qobject_cast<QObject *>(sender());
 
   PHB_ITEM cb = Qt4xHb::Signals_return_codeblock(object, "notification(QString)");
 
-  if( cb != NULL )
+  if (cb != NULL)
   {
     PHB_ITEM pSender = Qt4xHb::Signals_return_qobject(object, "QSQLDRIVER");
-    PHB_ITEM pName = hb_itemPutC( NULL, QSTRINGTOSTRING( name ) );
+    PHB_ITEM pName = hb_itemPutC(NULL, QSTRINGTOSTRING(name));
 
-    hb_vmEvalBlockV( cb, 2, pSender, pName );
+    hb_vmEvalBlockV(cb, 2, pSender, pName);
 
-    hb_itemRelease( pSender );
-    hb_itemRelease( pName );
+    hb_itemRelease(pSender);
+    hb_itemRelease(pName);
   }
 }
 
-void QSqlDriverSlots_connect_signal( const QString & signal, const QString & slot )
+void QSqlDriverSlots_connect_signal(const QString &signal, const QString &slot)
 {
-  QSqlDriver * obj = qobject_cast<QSqlDriver*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSqlDriver *obj = qobject_cast<QSqlDriver *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    QSqlDriverSlots * s = QCoreApplication::instance()->findChild<QSqlDriverSlots*>();
+    QSqlDriverSlots *s = QCoreApplication::instance()->findChild<QSqlDriverSlots *>();
 
-    if( s == NULL )
+    if (s == NULL)
     {
       s = new QSqlDriverSlots();
       s->moveToThread(QCoreApplication::instance()->thread());

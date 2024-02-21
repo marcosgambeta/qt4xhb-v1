@@ -24,14 +24,14 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QSqlDriverSlots: public QObject
+class QSqlDriverSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QSqlDriverSlots(QObject * parent = 0);
+public:
+  QSqlDriverSlots(QObject *parent = 0);
   ~QSqlDriverSlots();
-  public slots:
-  void notification( const QString & name );
+public slots:
+  void notification(const QString &name);
 };
 
 #endif /* QSQLDRIVERSLOTS_H */
