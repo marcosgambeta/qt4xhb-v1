@@ -24,14 +24,14 @@
 #include "qt4xhb_utils.hpp"
 #include "qt4xhb_signals.hpp"
 
-class QScriptEngineSlots: public QObject
+class QScriptEngineSlots : public QObject
 {
   Q_OBJECT
-  public:
-  QScriptEngineSlots(QObject * parent = 0);
+public:
+  QScriptEngineSlots(QObject *parent = 0);
   ~QScriptEngineSlots();
-  public slots:
-  void signalHandlerException( const QScriptValue & exception );
+public slots:
+  void signalHandlerException(const QScriptValue &exception);
 };
 
 #endif /* QSCRIPTENGINESLOTS_H */
