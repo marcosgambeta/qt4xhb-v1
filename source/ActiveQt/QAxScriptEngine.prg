@@ -50,14 +50,14 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-/*
-QAxScriptEngine( const QString & language, QAxScript * script )
-*/
-HB_FUNC_STATIC( QAXSCRIPTENGINE_NEW )
+    /*
+    QAxScriptEngine( const QString & language, QAxScript * script )
+    */
+HB_FUNC_STATIC(QAXSCRIPTENGINE_NEW)
 {
-  if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQAXSCRIPT(2) )
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQAXSCRIPT(2))
   {
-    QAxScriptEngine * obj = new QAxScriptEngine( PQSTRING(1), PQAXSCRIPT(2) );
+    QAxScriptEngine *obj = new QAxScriptEngine(PQSTRING(1), PQAXSCRIPT(2));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -66,11 +66,11 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QAXSCRIPTENGINE_DELETE )
+HB_FUNC_STATIC(QAXSCRIPTENGINE_DELETE)
 {
-  QAxScriptEngine * obj = static_cast<QAxScriptEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QAxScriptEngine *obj = static_cast<QAxScriptEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -87,17 +87,17 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_DELETE )
 /*
 void addItem( const QString & name )
 */
-HB_FUNC_STATIC( QAXSCRIPTENGINE_ADDITEM )
+HB_FUNC_STATIC(QAXSCRIPTENGINE_ADDITEM)
 {
-  QAxScriptEngine * obj = static_cast<QAxScriptEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QAxScriptEngine *obj = static_cast<QAxScriptEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->addItem( PQSTRING(1) );
+      obj->addItem(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -113,17 +113,17 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_ADDITEM )
 /*
 bool hasIntrospection() const
 */
-HB_FUNC_STATIC( QAXSCRIPTENGINE_HASINTROSPECTION )
+HB_FUNC_STATIC(QAXSCRIPTENGINE_HASINTROSPECTION)
 {
-  QAxScriptEngine * obj = static_cast<QAxScriptEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QAxScriptEngine *obj = static_cast<QAxScriptEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasIntrospection() );
+      RBOOL(obj->hasIntrospection());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,17 +137,17 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_HASINTROSPECTION )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QAXSCRIPTENGINE_ISVALID )
+HB_FUNC_STATIC(QAXSCRIPTENGINE_ISVALID)
 {
-  QAxScriptEngine * obj = static_cast<QAxScriptEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QAxScriptEngine *obj = static_cast<QAxScriptEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,17 +161,17 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_ISVALID )
 /*
 QString scriptLanguage() const
 */
-HB_FUNC_STATIC( QAXSCRIPTENGINE_SCRIPTLANGUAGE )
+HB_FUNC_STATIC(QAXSCRIPTENGINE_SCRIPTLANGUAGE)
 {
-  QAxScriptEngine * obj = static_cast<QAxScriptEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QAxScriptEngine *obj = static_cast<QAxScriptEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->scriptLanguage() );
+      RQSTRING(obj->scriptLanguage());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,17 +185,17 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_SCRIPTLANGUAGE )
 /*
 void setState( QAxScriptEngine::State st )
 */
-HB_FUNC_STATIC( QAXSCRIPTENGINE_SETSTATE )
+HB_FUNC_STATIC(QAXSCRIPTENGINE_SETSTATE)
 {
-  QAxScriptEngine * obj = static_cast<QAxScriptEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QAxScriptEngine *obj = static_cast<QAxScriptEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setState( ( QAxScriptEngine::State ) hb_parni(1) );
+      obj->setState((QAxScriptEngine::State)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,17 +211,17 @@ HB_FUNC_STATIC( QAXSCRIPTENGINE_SETSTATE )
 /*
 QAxScriptEngine::State state() const
 */
-HB_FUNC_STATIC( QAXSCRIPTENGINE_STATE )
+HB_FUNC_STATIC(QAXSCRIPTENGINE_STATE)
 {
-  QAxScriptEngine * obj = static_cast<QAxScriptEngine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QAxScriptEngine *obj = static_cast<QAxScriptEngine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->state() );
+      RENUM(obj->state());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
