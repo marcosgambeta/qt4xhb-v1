@@ -78,14 +78,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QTextLine()
-*/
-HB_FUNC_STATIC( QTEXTLINE_NEW )
+    /*
+    QTextLine()
+    */
+HB_FUNC_STATIC(QTEXTLINE_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QTextLine * obj = new QTextLine();
+    QTextLine *obj = new QTextLine();
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -94,11 +94,11 @@ HB_FUNC_STATIC( QTEXTLINE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTEXTLINE_DELETE )
+HB_FUNC_STATIC(QTEXTLINE_DELETE)
 {
-  QTextLine * obj = static_cast<QTextLine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -113,17 +113,17 @@ HB_FUNC_STATIC( QTEXTLINE_DELETE )
 /*
 qreal ascent() const
 */
-HB_FUNC_STATIC( QTEXTLINE_ASCENT )
+HB_FUNC_STATIC(QTEXTLINE_ASCENT)
 {
-  QTextLine * obj = static_cast<QTextLine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->ascent() );
+      RQREAL(obj->ascent());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,19 +137,19 @@ HB_FUNC_STATIC( QTEXTLINE_ASCENT )
 /*
 qreal cursorToX( int * cursorPos, QTextLine::Edge edge = QTextLine::Leading ) const
 */
-HB_FUNC_STATIC( QTEXTLINE_CURSORTOX1 )
+HB_FUNC_STATIC(QTEXTLINE_CURSORTOX1)
 {
-  QTextLine * obj = static_cast<QTextLine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
       int par1;
-      RQREAL( obj->cursorToX( &par1, HB_ISNIL(2) ? ( QTextLine::Edge ) QTextLine::Leading : ( QTextLine::Edge ) hb_parni(2)) );
-      hb_storni( par1, 1 );
+      RQREAL(obj->cursorToX(&par1, HB_ISNIL(2) ? (QTextLine::Edge)QTextLine::Leading : (QTextLine::Edge)hb_parni(2)));
+      hb_storni(par1, 1);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,17 +163,17 @@ HB_FUNC_STATIC( QTEXTLINE_CURSORTOX1 )
 /*
 qreal cursorToX( int cursorPos, QTextLine::Edge edge = QTextLine::Leading ) const
 */
-HB_FUNC_STATIC( QTEXTLINE_CURSORTOX2 )
+HB_FUNC_STATIC(QTEXTLINE_CURSORTOX2)
 {
-  QTextLine * obj = static_cast<QTextLine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      RQREAL( obj->cursorToX( PINT(1), HB_ISNIL(2) ? ( QTextLine::Edge ) QTextLine::Leading : ( QTextLine::Edge ) hb_parni(2)) );
+      RQREAL(obj->cursorToX(PINT(1), HB_ISNIL(2) ? (QTextLine::Edge)QTextLine::Leading : (QTextLine::Edge)hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -184,15 +184,15 @@ HB_FUNC_STATIC( QTEXTLINE_CURSORTOX2 )
   }
 }
 
-HB_FUNC_STATIC( QTEXTLINE_CURSORTOX )
+HB_FUNC_STATIC(QTEXTLINE_CURSORTOX)
 {
-  if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    HB_FUNC_EXEC( QTEXTLINE_CURSORTOX1 );
+    HB_FUNC_EXEC(QTEXTLINE_CURSORTOX1);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    HB_FUNC_EXEC( QTEXTLINE_CURSORTOX2 );
+    HB_FUNC_EXEC(QTEXTLINE_CURSORTOX2);
   }
   else
   {
@@ -203,17 +203,17 @@ HB_FUNC_STATIC( QTEXTLINE_CURSORTOX )
 /*
 qreal descent() const
 */
-HB_FUNC_STATIC( QTEXTLINE_DESCENT )
+HB_FUNC_STATIC(QTEXTLINE_DESCENT)
 {
-  QTextLine * obj = static_cast<QTextLine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->descent() );
+      RQREAL(obj->descent());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -227,17 +227,17 @@ HB_FUNC_STATIC( QTEXTLINE_DESCENT )
 /*
 qreal height() const
 */
-HB_FUNC_STATIC( QTEXTLINE_HEIGHT )
+HB_FUNC_STATIC(QTEXTLINE_HEIGHT)
 {
-  QTextLine * obj = static_cast<QTextLine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->height() );
+      RQREAL(obj->height());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -251,17 +251,17 @@ HB_FUNC_STATIC( QTEXTLINE_HEIGHT )
 /*
 qreal horizontalAdvance() const
 */
-HB_FUNC_STATIC( QTEXTLINE_HORIZONTALADVANCE )
+HB_FUNC_STATIC(QTEXTLINE_HORIZONTALADVANCE)
 {
-  QTextLine * obj = static_cast<QTextLine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->horizontalAdvance() );
+      RQREAL(obj->horizontalAdvance());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -275,17 +275,17 @@ HB_FUNC_STATIC( QTEXTLINE_HORIZONTALADVANCE )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QTEXTLINE_ISVALID )
+HB_FUNC_STATIC(QTEXTLINE_ISVALID)
 {
-  QTextLine * obj = static_cast<QTextLine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -299,17 +299,17 @@ HB_FUNC_STATIC( QTEXTLINE_ISVALID )
 /*
 qreal leading() const
 */
-HB_FUNC_STATIC( QTEXTLINE_LEADING )
+HB_FUNC_STATIC(QTEXTLINE_LEADING)
 {
-  QTextLine * obj = static_cast<QTextLine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->leading() );
+      RQREAL(obj->leading());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -323,17 +323,17 @@ HB_FUNC_STATIC( QTEXTLINE_LEADING )
 /*
 bool leadingIncluded() const
 */
-HB_FUNC_STATIC( QTEXTLINE_LEADINGINCLUDED )
+HB_FUNC_STATIC(QTEXTLINE_LEADINGINCLUDED)
 {
-  QTextLine * obj = static_cast<QTextLine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->leadingIncluded() );
+      RBOOL(obj->leadingIncluded());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -347,17 +347,17 @@ HB_FUNC_STATIC( QTEXTLINE_LEADINGINCLUDED )
 /*
 int lineNumber() const
 */
-HB_FUNC_STATIC( QTEXTLINE_LINENUMBER )
+HB_FUNC_STATIC(QTEXTLINE_LINENUMBER)
 {
-  QTextLine * obj = static_cast<QTextLine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->lineNumber() );
+      RINT(obj->lineNumber());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -371,17 +371,17 @@ HB_FUNC_STATIC( QTEXTLINE_LINENUMBER )
 /*
 QRectF naturalTextRect() const
 */
-HB_FUNC_STATIC( QTEXTLINE_NATURALTEXTRECT )
+HB_FUNC_STATIC(QTEXTLINE_NATURALTEXTRECT)
 {
-  QTextLine * obj = static_cast<QTextLine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QRectF * ptr = new QRectF( obj->naturalTextRect() );
+      QRectF *ptr = new QRectF(obj->naturalTextRect());
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -396,17 +396,17 @@ HB_FUNC_STATIC( QTEXTLINE_NATURALTEXTRECT )
 /*
 qreal naturalTextWidth() const
 */
-HB_FUNC_STATIC( QTEXTLINE_NATURALTEXTWIDTH )
+HB_FUNC_STATIC(QTEXTLINE_NATURALTEXTWIDTH)
 {
-  QTextLine * obj = static_cast<QTextLine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->naturalTextWidth() );
+      RQREAL(obj->naturalTextWidth());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -420,17 +420,17 @@ HB_FUNC_STATIC( QTEXTLINE_NATURALTEXTWIDTH )
 /*
 QPointF position() const
 */
-HB_FUNC_STATIC( QTEXTLINE_POSITION )
+HB_FUNC_STATIC(QTEXTLINE_POSITION)
 {
-  QTextLine * obj = static_cast<QTextLine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPointF * ptr = new QPointF( obj->position() );
+      QPointF *ptr = new QPointF(obj->position());
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -445,17 +445,17 @@ HB_FUNC_STATIC( QTEXTLINE_POSITION )
 /*
 QRectF rect() const
 */
-HB_FUNC_STATIC( QTEXTLINE_RECT )
+HB_FUNC_STATIC(QTEXTLINE_RECT)
 {
-  QTextLine * obj = static_cast<QTextLine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QRectF * ptr = new QRectF( obj->rect() );
+      QRectF *ptr = new QRectF(obj->rect());
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -470,17 +470,17 @@ HB_FUNC_STATIC( QTEXTLINE_RECT )
 /*
 void setLeadingIncluded( bool included )
 */
-HB_FUNC_STATIC( QTEXTLINE_SETLEADINGINCLUDED )
+HB_FUNC_STATIC(QTEXTLINE_SETLEADINGINCLUDED)
 {
-  QTextLine * obj = static_cast<QTextLine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setLeadingIncluded( PBOOL(1) );
+      obj->setLeadingIncluded(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -496,17 +496,17 @@ HB_FUNC_STATIC( QTEXTLINE_SETLEADINGINCLUDED )
 /*
 void setLineWidth( qreal width )
 */
-HB_FUNC_STATIC( QTEXTLINE_SETLINEWIDTH )
+HB_FUNC_STATIC(QTEXTLINE_SETLINEWIDTH)
 {
-  QTextLine * obj = static_cast<QTextLine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLineWidth( PQREAL(1) );
+      obj->setLineWidth(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -519,32 +519,32 @@ HB_FUNC_STATIC( QTEXTLINE_SETLINEWIDTH )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS )
+HB_FUNC_STATIC(QTEXTLINE_SETNUMCOLUMNS)
 {
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     void setNumColumns( int numColumns )
     */
-    QTextLine * obj = static_cast<QTextLine*>(Qt4xHb::itemGetPtrStackSelfItem());
+    QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->setNumColumns( PINT(1) );
+      obj->setNumColumns(PINT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     void setNumColumns( int numColumns, qreal alignmentWidth )
     */
-    QTextLine * obj = static_cast<QTextLine*>(Qt4xHb::itemGetPtrStackSelfItem());
+    QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->setNumColumns( PINT(1), PQREAL(2) );
+      obj->setNumColumns(PINT(1), PQREAL(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -558,17 +558,17 @@ HB_FUNC_STATIC( QTEXTLINE_SETNUMCOLUMNS )
 /*
 void setPosition( const QPointF & pos )
 */
-HB_FUNC_STATIC( QTEXTLINE_SETPOSITION )
+HB_FUNC_STATIC(QTEXTLINE_SETPOSITION)
 {
-  QTextLine * obj = static_cast<QTextLine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINTF(1) )
+    if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setPosition( *PQPOINTF(1) );
+      obj->setPosition(*PQPOINTF(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -584,17 +584,17 @@ HB_FUNC_STATIC( QTEXTLINE_SETPOSITION )
 /*
 int textLength() const
 */
-HB_FUNC_STATIC( QTEXTLINE_TEXTLENGTH )
+HB_FUNC_STATIC(QTEXTLINE_TEXTLENGTH)
 {
-  QTextLine * obj = static_cast<QTextLine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->textLength() );
+      RINT(obj->textLength());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -608,17 +608,17 @@ HB_FUNC_STATIC( QTEXTLINE_TEXTLENGTH )
 /*
 int textStart() const
 */
-HB_FUNC_STATIC( QTEXTLINE_TEXTSTART )
+HB_FUNC_STATIC(QTEXTLINE_TEXTSTART)
 {
-  QTextLine * obj = static_cast<QTextLine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->textStart() );
+      RINT(obj->textStart());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -632,17 +632,17 @@ HB_FUNC_STATIC( QTEXTLINE_TEXTSTART )
 /*
 qreal width() const
 */
-HB_FUNC_STATIC( QTEXTLINE_WIDTH )
+HB_FUNC_STATIC(QTEXTLINE_WIDTH)
 {
-  QTextLine * obj = static_cast<QTextLine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->width() );
+      RQREAL(obj->width());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -656,17 +656,17 @@ HB_FUNC_STATIC( QTEXTLINE_WIDTH )
 /*
 qreal x() const
 */
-HB_FUNC_STATIC( QTEXTLINE_X )
+HB_FUNC_STATIC(QTEXTLINE_X)
 {
-  QTextLine * obj = static_cast<QTextLine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->x() );
+      RQREAL(obj->x());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -680,17 +680,18 @@ HB_FUNC_STATIC( QTEXTLINE_X )
 /*
 int xToCursor( qreal x, QTextLine::CursorPosition cpos = QTextLine::CursorBetweenCharacters ) const
 */
-HB_FUNC_STATIC( QTEXTLINE_XTOCURSOR )
+HB_FUNC_STATIC(QTEXTLINE_XTOCURSOR)
 {
-  QTextLine * obj = static_cast<QTextLine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      RINT( obj->xToCursor( PQREAL(1), HB_ISNIL(2) ? ( QTextLine::CursorPosition ) QTextLine::CursorBetweenCharacters : ( QTextLine::CursorPosition ) hb_parni(2)) );
+      RINT(obj->xToCursor(PQREAL(1), HB_ISNIL(2) ? (QTextLine::CursorPosition)QTextLine::CursorBetweenCharacters
+                                                 : (QTextLine::CursorPosition)hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -704,17 +705,17 @@ HB_FUNC_STATIC( QTEXTLINE_XTOCURSOR )
 /*
 qreal y() const
 */
-HB_FUNC_STATIC( QTEXTLINE_Y )
+HB_FUNC_STATIC(QTEXTLINE_Y)
 {
-  QTextLine * obj = static_cast<QTextLine*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextLine *obj = static_cast<QTextLine *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->y() );
+      RQREAL(obj->y());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -725,11 +726,11 @@ HB_FUNC_STATIC( QTEXTLINE_Y )
   }
 }
 
-HB_FUNC_STATIC( QTEXTLINE_NEWFROM )
+HB_FUNC_STATIC(QTEXTLINE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -738,7 +739,7 @@ HB_FUNC_STATIC( QTEXTLINE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -755,26 +756,26 @@ HB_FUNC_STATIC( QTEXTLINE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QTEXTLINE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QTEXTLINE_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QTEXTLINE_NEWFROM );
+  HB_FUNC_EXEC(QTEXTLINE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTEXTLINE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QTEXTLINE_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QTEXTLINE_NEWFROM );
+  HB_FUNC_EXEC(QTEXTLINE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTEXTLINE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QTEXTLINE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QTEXTLINE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QTEXTLINE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

@@ -46,14 +46,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QShortcutEvent( const QKeySequence & key, int id, bool ambiguous = false )
-*/
-HB_FUNC_STATIC( QSHORTCUTEVENT_NEW )
+    /*
+    QShortcutEvent( const QKeySequence & key, int id, bool ambiguous = false )
+    */
+HB_FUNC_STATIC(QSHORTCUTEVENT_NEW)
 {
-  if( ISBETWEEN(2, 3) && ISQKEYSEQUENCE(1) && HB_ISNUM(2) && (HB_ISLOG(3) || HB_ISNIL(3)) )
+  if (ISBETWEEN(2, 3) && ISQKEYSEQUENCE(1) && HB_ISNUM(2) && (HB_ISLOG(3) || HB_ISNIL(3)))
   {
-    QShortcutEvent * obj = new QShortcutEvent( *PQKEYSEQUENCE(1), PINT(2), OPBOOL( 3, false ) );
+    QShortcutEvent *obj = new QShortcutEvent(*PQKEYSEQUENCE(1), PINT(2), OPBOOL(3, false));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -62,11 +62,11 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSHORTCUTEVENT_DELETE )
+HB_FUNC_STATIC(QSHORTCUTEVENT_DELETE)
 {
-  QShortcutEvent * obj = static_cast<QShortcutEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QShortcutEvent *obj = static_cast<QShortcutEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -81,17 +81,17 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_DELETE )
 /*
 const QKeySequence & key()
 */
-HB_FUNC_STATIC( QSHORTCUTEVENT_KEY )
+HB_FUNC_STATIC(QSHORTCUTEVENT_KEY)
 {
-  QShortcutEvent * obj = static_cast<QShortcutEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QShortcutEvent *obj = static_cast<QShortcutEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      const QKeySequence * ptr = &obj->key();
+      const QKeySequence *ptr = &obj->key();
       Qt4xHb::createReturnClass(ptr, "QKEYSEQUENCE", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -106,17 +106,17 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_KEY )
 /*
 int shortcutId()
 */
-HB_FUNC_STATIC( QSHORTCUTEVENT_SHORTCUTID )
+HB_FUNC_STATIC(QSHORTCUTEVENT_SHORTCUTID)
 {
-  QShortcutEvent * obj = static_cast<QShortcutEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QShortcutEvent *obj = static_cast<QShortcutEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->shortcutId() );
+      RINT(obj->shortcutId());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -130,17 +130,17 @@ HB_FUNC_STATIC( QSHORTCUTEVENT_SHORTCUTID )
 /*
 bool isAmbiguous()
 */
-HB_FUNC_STATIC( QSHORTCUTEVENT_ISAMBIGUOUS )
+HB_FUNC_STATIC(QSHORTCUTEVENT_ISAMBIGUOUS)
 {
-  QShortcutEvent * obj = static_cast<QShortcutEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QShortcutEvent *obj = static_cast<QShortcutEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isAmbiguous() );
+      RBOOL(obj->isAmbiguous());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -62,14 +62,14 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-/*
-QDialog( QWidget * parent = 0, Qt::WindowFlags f = 0 )
-*/
-HB_FUNC_STATIC( QDIALOG_NEW )
+    /*
+    QDialog( QWidget * parent = 0, Qt::WindowFlags f = 0 )
+    */
+HB_FUNC_STATIC(QDIALOG_NEW)
 {
-  if( ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)) )
+  if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    QDialog * obj = new QDialog( OPQWIDGET( 1, 0 ), HB_ISNIL(2) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(2) );
+    QDialog *obj = new QDialog(OPQWIDGET(1, 0), HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -78,11 +78,11 @@ HB_FUNC_STATIC( QDIALOG_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDIALOG_DELETE )
+HB_FUNC_STATIC(QDIALOG_DELETE)
 {
-  QDialog * obj = qobject_cast<QDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDialog *obj = qobject_cast<QDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -99,17 +99,17 @@ HB_FUNC_STATIC( QDIALOG_DELETE )
 /*
 bool isSizeGripEnabled() const
 */
-HB_FUNC_STATIC( QDIALOG_ISSIZEGRIPENABLED )
+HB_FUNC_STATIC(QDIALOG_ISSIZEGRIPENABLED)
 {
-  QDialog * obj = qobject_cast<QDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDialog *obj = qobject_cast<QDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isSizeGripEnabled() );
+      RBOOL(obj->isSizeGripEnabled());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -123,17 +123,17 @@ HB_FUNC_STATIC( QDIALOG_ISSIZEGRIPENABLED )
 /*
 int result() const
 */
-HB_FUNC_STATIC( QDIALOG_RESULT )
+HB_FUNC_STATIC(QDIALOG_RESULT)
 {
-  QDialog * obj = qobject_cast<QDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDialog *obj = qobject_cast<QDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->result() );
+      RINT(obj->result());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,17 +147,17 @@ HB_FUNC_STATIC( QDIALOG_RESULT )
 /*
 void setModal( bool modal )
 */
-HB_FUNC_STATIC( QDIALOG_SETMODAL )
+HB_FUNC_STATIC(QDIALOG_SETMODAL)
 {
-  QDialog * obj = qobject_cast<QDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDialog *obj = qobject_cast<QDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setModal( PBOOL(1) );
+      obj->setModal(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,17 +173,17 @@ HB_FUNC_STATIC( QDIALOG_SETMODAL )
 /*
 void setResult( int i )
 */
-HB_FUNC_STATIC( QDIALOG_SETRESULT )
+HB_FUNC_STATIC(QDIALOG_SETRESULT)
 {
-  QDialog * obj = qobject_cast<QDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDialog *obj = qobject_cast<QDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setResult( PINT(1) );
+      obj->setResult(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,17 +199,17 @@ HB_FUNC_STATIC( QDIALOG_SETRESULT )
 /*
 void setSizeGripEnabled( bool )
 */
-HB_FUNC_STATIC( QDIALOG_SETSIZEGRIPENABLED )
+HB_FUNC_STATIC(QDIALOG_SETSIZEGRIPENABLED)
 {
-  QDialog * obj = qobject_cast<QDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDialog *obj = qobject_cast<QDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setSizeGripEnabled( PBOOL(1) );
+      obj->setSizeGripEnabled(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -225,17 +225,17 @@ HB_FUNC_STATIC( QDIALOG_SETSIZEGRIPENABLED )
 /*
 virtual QSize minimumSizeHint() const
 */
-HB_FUNC_STATIC( QDIALOG_MINIMUMSIZEHINT )
+HB_FUNC_STATIC(QDIALOG_MINIMUMSIZEHINT)
 {
-  QDialog * obj = qobject_cast<QDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDialog *obj = qobject_cast<QDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSize * ptr = new QSize( obj->minimumSizeHint() );
+      QSize *ptr = new QSize(obj->minimumSizeHint());
       Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -250,17 +250,17 @@ HB_FUNC_STATIC( QDIALOG_MINIMUMSIZEHINT )
 /*
 virtual void setVisible( bool visible )
 */
-HB_FUNC_STATIC( QDIALOG_SETVISIBLE )
+HB_FUNC_STATIC(QDIALOG_SETVISIBLE)
 {
-  QDialog * obj = qobject_cast<QDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDialog *obj = qobject_cast<QDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setVisible( PBOOL(1) );
+      obj->setVisible(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -276,17 +276,17 @@ HB_FUNC_STATIC( QDIALOG_SETVISIBLE )
 /*
 virtual QSize sizeHint() const
 */
-HB_FUNC_STATIC( QDIALOG_SIZEHINT )
+HB_FUNC_STATIC(QDIALOG_SIZEHINT)
 {
-  QDialog * obj = qobject_cast<QDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDialog *obj = qobject_cast<QDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint() );
+      QSize *ptr = new QSize(obj->sizeHint());
       Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -301,14 +301,14 @@ HB_FUNC_STATIC( QDIALOG_SIZEHINT )
 /*
 virtual void accept()
 */
-HB_FUNC_STATIC( QDIALOG_ACCEPT )
+HB_FUNC_STATIC(QDIALOG_ACCEPT)
 {
-  QDialog * obj = qobject_cast<QDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDialog *obj = qobject_cast<QDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->accept();
@@ -327,17 +327,17 @@ HB_FUNC_STATIC( QDIALOG_ACCEPT )
 /*
 virtual void done( int r )
 */
-HB_FUNC_STATIC( QDIALOG_DONE )
+HB_FUNC_STATIC(QDIALOG_DONE)
 {
-  QDialog * obj = qobject_cast<QDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDialog *obj = qobject_cast<QDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->done( PINT(1) );
+      obj->done(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,17 +353,17 @@ HB_FUNC_STATIC( QDIALOG_DONE )
 /*
 int exec()
 */
-HB_FUNC_STATIC( QDIALOG_EXEC )
+HB_FUNC_STATIC(QDIALOG_EXEC)
 {
-  QDialog * obj = qobject_cast<QDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDialog *obj = qobject_cast<QDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->exec() );
+      RINT(obj->exec());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -377,14 +377,14 @@ HB_FUNC_STATIC( QDIALOG_EXEC )
 /*
 void open()
 */
-HB_FUNC_STATIC( QDIALOG_OPEN )
+HB_FUNC_STATIC(QDIALOG_OPEN)
 {
-  QDialog * obj = qobject_cast<QDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDialog *obj = qobject_cast<QDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->open();
@@ -403,14 +403,14 @@ HB_FUNC_STATIC( QDIALOG_OPEN )
 /*
 virtual void reject()
 */
-HB_FUNC_STATIC( QDIALOG_REJECT )
+HB_FUNC_STATIC(QDIALOG_REJECT)
 {
-  QDialog * obj = qobject_cast<QDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QDialog *obj = qobject_cast<QDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->reject();
@@ -426,19 +426,19 @@ HB_FUNC_STATIC( QDIALOG_REJECT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QDialogSlots_connect_signal(const QString & signal, const QString & slot);
+void QDialogSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QDIALOG_ONACCEPTED )
+HB_FUNC_STATIC(QDIALOG_ONACCEPTED)
 {
   QDialogSlots_connect_signal("accepted()", "accepted()");
 }
 
-HB_FUNC_STATIC( QDIALOG_ONFINISHED )
+HB_FUNC_STATIC(QDIALOG_ONFINISHED)
 {
   QDialogSlots_connect_signal("finished(int)", "finished(int)");
 }
 
-HB_FUNC_STATIC( QDIALOG_ONREJECTED )
+HB_FUNC_STATIC(QDIALOG_ONREJECTED)
 {
   QDialogSlots_connect_signal("rejected()", "rejected()");
 }

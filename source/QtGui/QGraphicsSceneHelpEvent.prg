@@ -45,11 +45,11 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QGRAPHICSSCENEHELPEVENT_DELETE )
+HB_FUNC_STATIC(QGRAPHICSSCENEHELPEVENT_DELETE)
 {
-  QGraphicsSceneHelpEvent * obj = static_cast<QGraphicsSceneHelpEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGraphicsSceneHelpEvent *obj = static_cast<QGraphicsSceneHelpEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -64,17 +64,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHELPEVENT_DELETE )
 /*
 QPointF scenePos() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEHELPEVENT_SCENEPOS )
+HB_FUNC_STATIC(QGRAPHICSSCENEHELPEVENT_SCENEPOS)
 {
-  QGraphicsSceneHelpEvent * obj = static_cast<QGraphicsSceneHelpEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGraphicsSceneHelpEvent *obj = static_cast<QGraphicsSceneHelpEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPointF * ptr = new QPointF( obj->scenePos() );
+      QPointF *ptr = new QPointF(obj->scenePos());
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -89,17 +89,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENEHELPEVENT_SCENEPOS )
 /*
 QPoint screenPos() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEHELPEVENT_SCREENPOS )
+HB_FUNC_STATIC(QGRAPHICSSCENEHELPEVENT_SCREENPOS)
 {
-  QGraphicsSceneHelpEvent * obj = static_cast<QGraphicsSceneHelpEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGraphicsSceneHelpEvent *obj = static_cast<QGraphicsSceneHelpEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPoint * ptr = new QPoint( obj->screenPos() );
+      QPoint *ptr = new QPoint(obj->screenPos());
       Qt4xHb::createReturnClass(ptr, "QPOINT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

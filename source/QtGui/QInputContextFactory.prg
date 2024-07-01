@@ -58,11 +58,11 @@ RETURN
 
 #include <QtGui/QInputContext>
 
-HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_DELETE )
+HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_DELETE)
 {
-  QInputContextFactory * obj = static_cast<QInputContextFactory*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QInputContextFactory *obj = static_cast<QInputContextFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -77,17 +77,17 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_DELETE )
 /*
 QInputContext * create( const QString & key, QObject * parent )
 */
-HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_CREATE )
+HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_CREATE)
 {
-  QInputContextFactory * obj = static_cast<QInputContextFactory*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QInputContextFactory *obj = static_cast<QInputContextFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && ISQOBJECT(2))
     {
 #endif
-      QInputContext * ptr = obj->create( PQSTRING(1), PQOBJECT(2) );
+      QInputContext *ptr = obj->create(PQSTRING(1), PQOBJECT(2));
       Qt4xHb::createReturnQObjectClass(ptr, "QINPUTCONTEXT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -102,13 +102,13 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_CREATE )
 /*
 static QString description( const QString & key )
 */
-HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_DESCRIPTION )
+HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_DESCRIPTION)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
 #endif
-    RQSTRING( QInputContextFactory::description( PQSTRING(1)) );
+    RQSTRING(QInputContextFactory::description(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -121,13 +121,13 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_DESCRIPTION )
 /*
 static QString displayName( const QString & key )
 */
-HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_DISPLAYNAME )
+HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_DISPLAYNAME)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
 #endif
-    RQSTRING( QInputContextFactory::displayName( PQSTRING(1)) );
+    RQSTRING(QInputContextFactory::displayName(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -140,13 +140,13 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_DISPLAYNAME )
 /*
 static QStringList keys()
 */
-HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_KEYS )
+HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_KEYS)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RQSTRINGLIST( QInputContextFactory::keys() );
+    RQSTRINGLIST(QInputContextFactory::keys());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -159,13 +159,13 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_KEYS )
 /*
 static QStringList languages( const QString & key )
 */
-HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_LANGUAGES )
+HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_LANGUAGES)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
 #endif
-    RQSTRINGLIST( QInputContextFactory::languages( PQSTRING(1)) );
+    RQSTRINGLIST(QInputContextFactory::languages(PQSTRING(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -175,11 +175,11 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_LANGUAGES )
 #endif
 }
 
-HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_NEWFROM )
+HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -188,7 +188,7 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -205,26 +205,26 @@ HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_NEWFROMOBJECT )
+HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QINPUTCONTEXTFACTORY_NEWFROM );
+  HB_FUNC_EXEC(QINPUTCONTEXTFACTORY_NEWFROM);
 }
 
-HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_NEWFROMPOINTER )
+HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QINPUTCONTEXTFACTORY_NEWFROM );
+  HB_FUNC_EXEC(QINPUTCONTEXTFACTORY_NEWFROM);
 }
 
-HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_SELFDESTRUCTION )
+HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QINPUTCONTEXTFACTORY_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QINPUTCONTEXTFACTORY_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

@@ -54,11 +54,11 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QMIMESOURCE_DELETE )
+HB_FUNC_STATIC(QMIMESOURCE_DELETE)
 {
-  QMimeSource * obj = static_cast<QMimeSource*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMimeSource *obj = static_cast<QMimeSource *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -73,17 +73,17 @@ HB_FUNC_STATIC( QMIMESOURCE_DELETE )
 /*
 virtual QByteArray encodedData( const char * format ) const = 0
 */
-HB_FUNC_STATIC( QMIMESOURCE_ENCODEDDATA )
+HB_FUNC_STATIC(QMIMESOURCE_ENCODEDDATA)
 {
-  QMimeSource * obj = static_cast<QMimeSource*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMimeSource *obj = static_cast<QMimeSource *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->encodedData( PCONSTCHAR(1)) );
+      QByteArray *ptr = new QByteArray(obj->encodedData(PCONSTCHAR(1)));
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -98,17 +98,17 @@ HB_FUNC_STATIC( QMIMESOURCE_ENCODEDDATA )
 /*
 virtual const char * format( int i = 0 ) const = 0
 */
-HB_FUNC_STATIC( QMIMESOURCE_FORMAT )
+HB_FUNC_STATIC(QMIMESOURCE_FORMAT)
 {
-  QMimeSource * obj = static_cast<QMimeSource*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMimeSource *obj = static_cast<QMimeSource *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      hb_retc( ( const char * ) obj->format( OPINT( 1, 0 )) );
+      hb_retc((const char *)obj->format(OPINT(1, 0)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -122,17 +122,17 @@ HB_FUNC_STATIC( QMIMESOURCE_FORMAT )
 /*
 virtual bool provides( const char * mimeType ) const
 */
-HB_FUNC_STATIC( QMIMESOURCE_PROVIDES )
+HB_FUNC_STATIC(QMIMESOURCE_PROVIDES)
 {
-  QMimeSource * obj = static_cast<QMimeSource*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QMimeSource *obj = static_cast<QMimeSource *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      RBOOL( obj->provides( PCONSTCHAR(1)) );
+      RBOOL(obj->provides(PCONSTCHAR(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,11 +143,11 @@ HB_FUNC_STATIC( QMIMESOURCE_PROVIDES )
   }
 }
 
-HB_FUNC_STATIC( QMIMESOURCE_NEWFROM )
+HB_FUNC_STATIC(QMIMESOURCE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QMIMESOURCE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -173,26 +173,26 @@ HB_FUNC_STATIC( QMIMESOURCE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QMIMESOURCE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QMIMESOURCE_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QMIMESOURCE_NEWFROM );
+  HB_FUNC_EXEC(QMIMESOURCE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMIMESOURCE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QMIMESOURCE_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QMIMESOURCE_NEWFROM );
+  HB_FUNC_EXEC(QMIMESOURCE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QMIMESOURCE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QMIMESOURCE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QMIMESOURCE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QMIMESOURCE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

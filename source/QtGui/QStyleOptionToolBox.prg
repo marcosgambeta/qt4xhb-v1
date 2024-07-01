@@ -46,22 +46,22 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_NEW )
+HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QStyleOptionToolBox()
     */
-    QStyleOptionToolBox * obj = new QStyleOptionToolBox();
+    QStyleOptionToolBox *obj = new QStyleOptionToolBox();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONTOOLBOX(1) )
+  else if (ISNUMPAR(1) && ISQSTYLEOPTIONTOOLBOX(1))
   {
     /*
     QStyleOptionToolBox( const QStyleOptionToolBox & other )
     */
-    QStyleOptionToolBox * obj = new QStyleOptionToolBox( *PQSTYLEOPTIONTOOLBOX(1) );
+    QStyleOptionToolBox *obj = new QStyleOptionToolBox(*PQSTYLEOPTIONTOOLBOX(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -73,15 +73,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_NEW )
 /*
 QString text
 */
-HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_TEXT )
+HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_TEXT)
 {
-  QStyleOptionToolBox * obj = static_cast<QStyleOptionToolBox*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QStyleOptionToolBox *obj = static_cast<QStyleOptionToolBox *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RQSTRING( obj->text );
+      RQSTRING(obj->text);
     }
     else
     {
@@ -89,15 +89,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_TEXT )
     }
   }
 }
-HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETTEXT )
+HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_SETTEXT)
 {
-  QStyleOptionToolBox * obj = static_cast<QStyleOptionToolBox*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QStyleOptionToolBox *obj = static_cast<QStyleOptionToolBox *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
-      obj->text= PQSTRING(1);
+      obj->text = PQSTRING(1);
     }
     else
     {
@@ -111,15 +111,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETTEXT )
 /*
 QIcon icon
 */
-HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_ICON )
+HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_ICON)
 {
-  QStyleOptionToolBox * obj = static_cast<QStyleOptionToolBox*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QStyleOptionToolBox *obj = static_cast<QStyleOptionToolBox *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      QIcon * ptr = new QIcon( obj->icon );
+      QIcon *ptr = new QIcon(obj->icon);
       Qt4xHb::createReturnClass(ptr, "QICON", true);
     }
     else
@@ -128,15 +128,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_ICON )
     }
   }
 }
-HB_FUNC_STATIC( QSTYLEOPTIONTOOLBOX_SETICON )
+HB_FUNC_STATIC(QSTYLEOPTIONTOOLBOX_SETICON)
 {
-  QStyleOptionToolBox * obj = static_cast<QStyleOptionToolBox*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QStyleOptionToolBox *obj = static_cast<QStyleOptionToolBox *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(1) && ISQICON(1) )
+    if (ISNUMPAR(1) && ISQICON(1))
     {
-      obj->icon= *PQICON(1);
+      obj->icon = *PQICON(1);
     }
     else
     {

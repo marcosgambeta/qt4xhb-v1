@@ -76,46 +76,50 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QPEN_NEW )
+HB_FUNC_STATIC(QPEN_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QPen()
     */
-    QPen * obj = new QPen();
+    QPen *obj = new QPen();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     QPen( Qt::PenStyle style )
     */
-    QPen * obj = new QPen( ( Qt::PenStyle ) hb_parni(1) );
+    QPen *obj = new QPen((Qt::PenStyle)hb_parni(1));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)) )
+  else if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
   {
     /*
     QPen( const QColor & color )
     */
-    QPen * obj = new QPen( HB_ISOBJECT(1) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(1) ) : QColor( hb_parc(1)) );
+    QPen *obj = new QPen(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(2, 5) && ISQBRUSH(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)) )
+  else if (ISBETWEEN(2, 5) && ISQBRUSH(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) &&
+           (HB_ISNUM(4) || HB_ISNIL(4)) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
     /*
-    QPen( const QBrush & brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt::PenCapStyle cap = Qt::SquareCap, Qt::PenJoinStyle join = Qt::BevelJoin )
+    QPen( const QBrush & brush, qreal width, Qt::PenStyle style = Qt::SolidLine, Qt::PenCapStyle cap = Qt::SquareCap,
+    Qt::PenJoinStyle join = Qt::BevelJoin )
     */
-    QPen * obj = new QPen( *PQBRUSH(1), PQREAL(2), HB_ISNIL(3) ? ( Qt::PenStyle ) Qt::SolidLine : ( Qt::PenStyle ) hb_parni(3), HB_ISNIL(4) ? ( Qt::PenCapStyle ) Qt::SquareCap : ( Qt::PenCapStyle ) hb_parni(4), HB_ISNIL(5) ? ( Qt::PenJoinStyle ) Qt::BevelJoin : ( Qt::PenJoinStyle ) hb_parni(5) );
+    QPen *obj = new QPen(*PQBRUSH(1), PQREAL(2), HB_ISNIL(3) ? (Qt::PenStyle)Qt::SolidLine : (Qt::PenStyle)hb_parni(3),
+                         HB_ISNIL(4) ? (Qt::PenCapStyle)Qt::SquareCap : (Qt::PenCapStyle)hb_parni(4),
+                         HB_ISNIL(5) ? (Qt::PenJoinStyle)Qt::BevelJoin : (Qt::PenJoinStyle)hb_parni(5));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQPEN(1) )
+  else if (ISNUMPAR(1) && ISQPEN(1))
   {
     /*
     QPen( const QPen & pen )
     */
-    QPen * obj = new QPen( *PQPEN(1) );
+    QPen *obj = new QPen(*PQPEN(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -124,11 +128,11 @@ HB_FUNC_STATIC( QPEN_NEW )
   }
 }
 
-HB_FUNC_STATIC( QPEN_DELETE )
+HB_FUNC_STATIC(QPEN_DELETE)
 {
-  QPen * obj = static_cast<QPen*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -143,17 +147,17 @@ HB_FUNC_STATIC( QPEN_DELETE )
 /*
 QBrush brush() const
 */
-HB_FUNC_STATIC( QPEN_BRUSH )
+HB_FUNC_STATIC(QPEN_BRUSH)
 {
-  QPen * obj = static_cast<QPen*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QBrush * ptr = new QBrush( obj->brush() );
+      QBrush *ptr = new QBrush(obj->brush());
       Qt4xHb::createReturnClass(ptr, "QBRUSH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -168,17 +172,17 @@ HB_FUNC_STATIC( QPEN_BRUSH )
 /*
 Qt::PenCapStyle capStyle() const
 */
-HB_FUNC_STATIC( QPEN_CAPSTYLE )
+HB_FUNC_STATIC(QPEN_CAPSTYLE)
 {
-  QPen * obj = static_cast<QPen*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->capStyle() );
+      RENUM(obj->capStyle());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,17 +196,17 @@ HB_FUNC_STATIC( QPEN_CAPSTYLE )
 /*
 QColor color() const
 */
-HB_FUNC_STATIC( QPEN_COLOR )
+HB_FUNC_STATIC(QPEN_COLOR)
 {
-  QPen * obj = static_cast<QPen*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QColor * ptr = new QColor( obj->color() );
+      QColor *ptr = new QColor(obj->color());
       Qt4xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -217,17 +221,17 @@ HB_FUNC_STATIC( QPEN_COLOR )
 /*
 qreal dashOffset() const
 */
-HB_FUNC_STATIC( QPEN_DASHOFFSET )
+HB_FUNC_STATIC(QPEN_DASHOFFSET)
 {
-  QPen * obj = static_cast<QPen*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->dashOffset() );
+      RQREAL(obj->dashOffset());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -241,23 +245,23 @@ HB_FUNC_STATIC( QPEN_DASHOFFSET )
 /*
 QVector<qreal> dashPattern() const
 */
-HB_FUNC_STATIC( QPEN_DASHPATTERN )
+HB_FUNC_STATIC(QPEN_DASHPATTERN)
 {
-  QPen * obj = static_cast<QPen*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QVector<qreal> list = obj->dashPattern();
       PHB_ITEM pArray = hb_itemArrayNew(0);
       const int count = list.count();
-      for( int i = 0; i < count; i++ )
+      for (int i = 0; i < count; i++)
       {
-        PHB_ITEM pItem = hb_itemPutND( NULL, (qreal) list[i] );
-        hb_arrayAddForward( pArray, pItem );
+        PHB_ITEM pItem = hb_itemPutND(NULL, (qreal)list[i]);
+        hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
       hb_itemReturnRelease(pArray);
@@ -274,17 +278,17 @@ HB_FUNC_STATIC( QPEN_DASHPATTERN )
 /*
 bool isCosmetic() const
 */
-HB_FUNC_STATIC( QPEN_ISCOSMETIC )
+HB_FUNC_STATIC(QPEN_ISCOSMETIC)
 {
-  QPen * obj = static_cast<QPen*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isCosmetic() );
+      RBOOL(obj->isCosmetic());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -298,17 +302,17 @@ HB_FUNC_STATIC( QPEN_ISCOSMETIC )
 /*
 bool isSolid() const
 */
-HB_FUNC_STATIC( QPEN_ISSOLID )
+HB_FUNC_STATIC(QPEN_ISSOLID)
 {
-  QPen * obj = static_cast<QPen*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isSolid() );
+      RBOOL(obj->isSolid());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -322,17 +326,17 @@ HB_FUNC_STATIC( QPEN_ISSOLID )
 /*
 Qt::PenJoinStyle joinStyle() const
 */
-HB_FUNC_STATIC( QPEN_JOINSTYLE )
+HB_FUNC_STATIC(QPEN_JOINSTYLE)
 {
-  QPen * obj = static_cast<QPen*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->joinStyle() );
+      RENUM(obj->joinStyle());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -346,17 +350,17 @@ HB_FUNC_STATIC( QPEN_JOINSTYLE )
 /*
 qreal miterLimit() const
 */
-HB_FUNC_STATIC( QPEN_MITERLIMIT )
+HB_FUNC_STATIC(QPEN_MITERLIMIT)
 {
-  QPen * obj = static_cast<QPen*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->miterLimit() );
+      RQREAL(obj->miterLimit());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -370,17 +374,17 @@ HB_FUNC_STATIC( QPEN_MITERLIMIT )
 /*
 void setBrush( const QBrush & brush )
 */
-HB_FUNC_STATIC( QPEN_SETBRUSH )
+HB_FUNC_STATIC(QPEN_SETBRUSH)
 {
-  QPen * obj = static_cast<QPen*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBRUSH(1) )
+    if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setBrush( *PQBRUSH(1) );
+      obj->setBrush(*PQBRUSH(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -396,17 +400,17 @@ HB_FUNC_STATIC( QPEN_SETBRUSH )
 /*
 void setCapStyle( Qt::PenCapStyle style )
 */
-HB_FUNC_STATIC( QPEN_SETCAPSTYLE )
+HB_FUNC_STATIC(QPEN_SETCAPSTYLE)
 {
-  QPen * obj = static_cast<QPen*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCapStyle( ( Qt::PenCapStyle ) hb_parni(1) );
+      obj->setCapStyle((Qt::PenCapStyle)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -422,17 +426,17 @@ HB_FUNC_STATIC( QPEN_SETCAPSTYLE )
 /*
 void setColor( const QColor & color )
 */
-HB_FUNC_STATIC( QPEN_SETCOLOR )
+HB_FUNC_STATIC(QPEN_SETCOLOR)
 {
-  QPen * obj = static_cast<QPen*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)) )
+    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setColor( HB_ISOBJECT(1) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(1) ) : QColor( hb_parc(1)) );
+      obj->setColor(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -448,17 +452,17 @@ HB_FUNC_STATIC( QPEN_SETCOLOR )
 /*
 void setCosmetic( bool cosmetic )
 */
-HB_FUNC_STATIC( QPEN_SETCOSMETIC )
+HB_FUNC_STATIC(QPEN_SETCOSMETIC)
 {
-  QPen * obj = static_cast<QPen*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setCosmetic( PBOOL(1) );
+      obj->setCosmetic(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -474,17 +478,17 @@ HB_FUNC_STATIC( QPEN_SETCOSMETIC )
 /*
 void setDashOffset( qreal offset )
 */
-HB_FUNC_STATIC( QPEN_SETDASHOFFSET )
+HB_FUNC_STATIC(QPEN_SETDASHOFFSET)
 {
-  QPen * obj = static_cast<QPen*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setDashOffset( PQREAL(1) );
+      obj->setDashOffset(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -500,26 +504,26 @@ HB_FUNC_STATIC( QPEN_SETDASHOFFSET )
 /*
 void setDashPattern( const QVector<qreal> & pattern )
 */
-HB_FUNC_STATIC( QPEN_SETDASHPATTERN )
+HB_FUNC_STATIC(QPEN_SETDASHPATTERN)
 {
-  QPen * obj = static_cast<QPen*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
       QVector<qreal> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       const int nLen1 = hb_arrayLen(aList1);
       qreal temp1;
-      for( int i1 = 0; i1 < nLen1; i1++ )
+      for (int i1 = 0; i1 < nLen1; i1++)
       {
-        temp1 = hb_arrayGetND(aList1, i1+1);
+        temp1 = hb_arrayGetND(aList1, i1 + 1);
         par1 << temp1;
       }
-      obj->setDashPattern( par1 );
+      obj->setDashPattern(par1);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -535,17 +539,17 @@ HB_FUNC_STATIC( QPEN_SETDASHPATTERN )
 /*
 void setJoinStyle( Qt::PenJoinStyle style )
 */
-HB_FUNC_STATIC( QPEN_SETJOINSTYLE )
+HB_FUNC_STATIC(QPEN_SETJOINSTYLE)
 {
-  QPen * obj = static_cast<QPen*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setJoinStyle( ( Qt::PenJoinStyle ) hb_parni(1) );
+      obj->setJoinStyle((Qt::PenJoinStyle)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -561,17 +565,17 @@ HB_FUNC_STATIC( QPEN_SETJOINSTYLE )
 /*
 void setMiterLimit( qreal limit )
 */
-HB_FUNC_STATIC( QPEN_SETMITERLIMIT )
+HB_FUNC_STATIC(QPEN_SETMITERLIMIT)
 {
-  QPen * obj = static_cast<QPen*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMiterLimit( PQREAL(1) );
+      obj->setMiterLimit(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -587,17 +591,17 @@ HB_FUNC_STATIC( QPEN_SETMITERLIMIT )
 /*
 void setStyle( Qt::PenStyle style )
 */
-HB_FUNC_STATIC( QPEN_SETSTYLE )
+HB_FUNC_STATIC(QPEN_SETSTYLE)
 {
-  QPen * obj = static_cast<QPen*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setStyle( ( Qt::PenStyle ) hb_parni(1) );
+      obj->setStyle((Qt::PenStyle)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -613,17 +617,17 @@ HB_FUNC_STATIC( QPEN_SETSTYLE )
 /*
 void setWidth( int width )
 */
-HB_FUNC_STATIC( QPEN_SETWIDTH )
+HB_FUNC_STATIC(QPEN_SETWIDTH)
 {
-  QPen * obj = static_cast<QPen*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setWidth( PINT(1) );
+      obj->setWidth(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -639,17 +643,17 @@ HB_FUNC_STATIC( QPEN_SETWIDTH )
 /*
 void setWidthF( qreal width )
 */
-HB_FUNC_STATIC( QPEN_SETWIDTHF )
+HB_FUNC_STATIC(QPEN_SETWIDTHF)
 {
-  QPen * obj = static_cast<QPen*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setWidthF( PQREAL(1) );
+      obj->setWidthF(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -665,17 +669,17 @@ HB_FUNC_STATIC( QPEN_SETWIDTHF )
 /*
 Qt::PenStyle style() const
 */
-HB_FUNC_STATIC( QPEN_STYLE )
+HB_FUNC_STATIC(QPEN_STYLE)
 {
-  QPen * obj = static_cast<QPen*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->style() );
+      RENUM(obj->style());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -689,17 +693,17 @@ HB_FUNC_STATIC( QPEN_STYLE )
 /*
 int width() const
 */
-HB_FUNC_STATIC( QPEN_WIDTH )
+HB_FUNC_STATIC(QPEN_WIDTH)
 {
-  QPen * obj = static_cast<QPen*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->width() );
+      RINT(obj->width());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -713,17 +717,17 @@ HB_FUNC_STATIC( QPEN_WIDTH )
 /*
 qreal widthF() const
 */
-HB_FUNC_STATIC( QPEN_WIDTHF )
+HB_FUNC_STATIC(QPEN_WIDTHF)
 {
-  QPen * obj = static_cast<QPen*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPen *obj = static_cast<QPen *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->widthF() );
+      RQREAL(obj->widthF());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -734,11 +738,11 @@ HB_FUNC_STATIC( QPEN_WIDTHF )
   }
 }
 
-HB_FUNC_STATIC( QPEN_NEWFROM )
+HB_FUNC_STATIC(QPEN_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -747,7 +751,7 @@ HB_FUNC_STATIC( QPEN_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -764,26 +768,26 @@ HB_FUNC_STATIC( QPEN_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QPEN_NEWFROMOBJECT )
+HB_FUNC_STATIC(QPEN_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QPEN_NEWFROM );
+  HB_FUNC_EXEC(QPEN_NEWFROM);
 }
 
-HB_FUNC_STATIC( QPEN_NEWFROMPOINTER )
+HB_FUNC_STATIC(QPEN_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QPEN_NEWFROM );
+  HB_FUNC_EXEC(QPEN_NEWFROM);
 }
 
-HB_FUNC_STATIC( QPEN_SELFDESTRUCTION )
+HB_FUNC_STATIC(QPEN_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QPEN_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QPEN_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

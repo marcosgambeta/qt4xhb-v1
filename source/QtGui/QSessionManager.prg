@@ -57,20 +57,20 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-/*
-bool allowsErrorInteraction()
-*/
-HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSERRORINTERACTION )
+    /*
+    bool allowsErrorInteraction()
+    */
+HB_FUNC_STATIC(QSESSIONMANAGER_ALLOWSERRORINTERACTION)
 {
-  QSessionManager * obj = qobject_cast<QSessionManager*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSessionManager *obj = qobject_cast<QSessionManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->allowsErrorInteraction() );
+      RBOOL(obj->allowsErrorInteraction());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -84,17 +84,17 @@ HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSERRORINTERACTION )
 /*
 bool allowsInteraction()
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSINTERACTION )
+HB_FUNC_STATIC(QSESSIONMANAGER_ALLOWSINTERACTION)
 {
-  QSessionManager * obj = qobject_cast<QSessionManager*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSessionManager *obj = qobject_cast<QSessionManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->allowsInteraction() );
+      RBOOL(obj->allowsInteraction());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -108,14 +108,14 @@ HB_FUNC_STATIC( QSESSIONMANAGER_ALLOWSINTERACTION )
 /*
 void cancel()
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_CANCEL )
+HB_FUNC_STATIC(QSESSIONMANAGER_CANCEL)
 {
-  QSessionManager * obj = qobject_cast<QSessionManager*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSessionManager *obj = qobject_cast<QSessionManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->cancel();
@@ -134,17 +134,17 @@ HB_FUNC_STATIC( QSESSIONMANAGER_CANCEL )
 /*
 QStringList discardCommand() const
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_DISCARDCOMMAND )
+HB_FUNC_STATIC(QSESSIONMANAGER_DISCARDCOMMAND)
 {
-  QSessionManager * obj = qobject_cast<QSessionManager*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSessionManager *obj = qobject_cast<QSessionManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->discardCommand() );
+      RQSTRINGLIST(obj->discardCommand());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -158,17 +158,17 @@ HB_FUNC_STATIC( QSESSIONMANAGER_DISCARDCOMMAND )
 /*
 bool isPhase2() const
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_ISPHASE2 )
+HB_FUNC_STATIC(QSESSIONMANAGER_ISPHASE2)
 {
-  QSessionManager * obj = qobject_cast<QSessionManager*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSessionManager *obj = qobject_cast<QSessionManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isPhase2() );
+      RBOOL(obj->isPhase2());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,14 +182,14 @@ HB_FUNC_STATIC( QSESSIONMANAGER_ISPHASE2 )
 /*
 void release()
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_RELEASE )
+HB_FUNC_STATIC(QSESSIONMANAGER_RELEASE)
 {
-  QSessionManager * obj = qobject_cast<QSessionManager*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSessionManager *obj = qobject_cast<QSessionManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->release();
@@ -208,14 +208,14 @@ HB_FUNC_STATIC( QSESSIONMANAGER_RELEASE )
 /*
 void requestPhase2()
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_REQUESTPHASE2 )
+HB_FUNC_STATIC(QSESSIONMANAGER_REQUESTPHASE2)
 {
-  QSessionManager * obj = qobject_cast<QSessionManager*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSessionManager *obj = qobject_cast<QSessionManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->requestPhase2();
@@ -234,17 +234,17 @@ HB_FUNC_STATIC( QSESSIONMANAGER_REQUESTPHASE2 )
 /*
 QStringList restartCommand() const
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTCOMMAND )
+HB_FUNC_STATIC(QSESSIONMANAGER_RESTARTCOMMAND)
 {
-  QSessionManager * obj = qobject_cast<QSessionManager*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSessionManager *obj = qobject_cast<QSessionManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->restartCommand() );
+      RQSTRINGLIST(obj->restartCommand());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -258,17 +258,17 @@ HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTCOMMAND )
 /*
 QSessionManager::RestartHint restartHint() const
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTHINT )
+HB_FUNC_STATIC(QSESSIONMANAGER_RESTARTHINT)
 {
-  QSessionManager * obj = qobject_cast<QSessionManager*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSessionManager *obj = qobject_cast<QSessionManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->restartHint() );
+      RENUM(obj->restartHint());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,17 +282,17 @@ HB_FUNC_STATIC( QSESSIONMANAGER_RESTARTHINT )
 /*
 QString sessionId() const
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONID )
+HB_FUNC_STATIC(QSESSIONMANAGER_SESSIONID)
 {
-  QSessionManager * obj = qobject_cast<QSessionManager*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSessionManager *obj = qobject_cast<QSessionManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->sessionId() );
+      RQSTRING(obj->sessionId());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -306,17 +306,17 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONID )
 /*
 QString sessionKey() const
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONKEY )
+HB_FUNC_STATIC(QSESSIONMANAGER_SESSIONKEY)
 {
-  QSessionManager * obj = qobject_cast<QSessionManager*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSessionManager *obj = qobject_cast<QSessionManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->sessionKey() );
+      RQSTRING(obj->sessionKey());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -330,17 +330,17 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SESSIONKEY )
 /*
 void setDiscardCommand( const QStringList & list )
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_SETDISCARDCOMMAND )
+HB_FUNC_STATIC(QSESSIONMANAGER_SETDISCARDCOMMAND)
 {
-  QSessionManager * obj = qobject_cast<QSessionManager*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSessionManager *obj = qobject_cast<QSessionManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
-      obj->setDiscardCommand( PQSTRINGLIST(1) );
+      obj->setDiscardCommand(PQSTRINGLIST(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -353,32 +353,32 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETDISCARDCOMMAND )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY )
+HB_FUNC_STATIC(QSESSIONMANAGER_SETMANAGERPROPERTY)
 {
-  if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2) )
+  if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISARRAY(2))
   {
     /*
     void setManagerProperty( const QString & name, const QStringList & value )
     */
-    QSessionManager * obj = qobject_cast<QSessionManager*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QSessionManager *obj = qobject_cast<QSessionManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->setManagerProperty( PQSTRING(1), PQSTRINGLIST(2) );
+      obj->setManagerProperty(PQSTRING(1), PQSTRINGLIST(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+  else if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
   {
     /*
     void setManagerProperty( const QString & name, const QString & value )
     */
-    QSessionManager * obj = qobject_cast<QSessionManager*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QSessionManager *obj = qobject_cast<QSessionManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->setManagerProperty( PQSTRING(1), PQSTRING(2) );
+      obj->setManagerProperty(PQSTRING(1), PQSTRING(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -392,17 +392,17 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETMANAGERPROPERTY )
 /*
 void setRestartCommand( const QStringList & command )
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTCOMMAND )
+HB_FUNC_STATIC(QSESSIONMANAGER_SETRESTARTCOMMAND)
 {
-  QSessionManager * obj = qobject_cast<QSessionManager*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSessionManager *obj = qobject_cast<QSessionManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
-      obj->setRestartCommand( PQSTRINGLIST(1) );
+      obj->setRestartCommand(PQSTRINGLIST(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -418,17 +418,17 @@ HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTCOMMAND )
 /*
 void setRestartHint( QSessionManager::RestartHint hint )
 */
-HB_FUNC_STATIC( QSESSIONMANAGER_SETRESTARTHINT )
+HB_FUNC_STATIC(QSESSIONMANAGER_SETRESTARTHINT)
 {
-  QSessionManager * obj = qobject_cast<QSessionManager*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSessionManager *obj = qobject_cast<QSessionManager *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setRestartHint( ( QSessionManager::RestartHint ) hb_parni(1) );
+      obj->setRestartHint((QSessionManager::RestartHint)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

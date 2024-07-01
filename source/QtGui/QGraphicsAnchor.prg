@@ -48,11 +48,11 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-HB_FUNC_STATIC( QGRAPHICSANCHOR_DELETE )
+HB_FUNC_STATIC(QGRAPHICSANCHOR_DELETE)
 {
-  QGraphicsAnchor * obj = qobject_cast<QGraphicsAnchor*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsAnchor *obj = qobject_cast<QGraphicsAnchor *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -69,17 +69,17 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_DELETE )
 /*
 void setSizePolicy( QSizePolicy::Policy policy )
 */
-HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSIZEPOLICY )
+HB_FUNC_STATIC(QGRAPHICSANCHOR_SETSIZEPOLICY)
 {
-  QGraphicsAnchor * obj = qobject_cast<QGraphicsAnchor*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsAnchor *obj = qobject_cast<QGraphicsAnchor *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSizePolicy( ( QSizePolicy::Policy ) hb_parni(1) );
+      obj->setSizePolicy((QSizePolicy::Policy)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -95,17 +95,17 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSIZEPOLICY )
 /*
 void setSpacing( qreal spacing )
 */
-HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSPACING )
+HB_FUNC_STATIC(QGRAPHICSANCHOR_SETSPACING)
 {
-  QGraphicsAnchor * obj = qobject_cast<QGraphicsAnchor*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsAnchor *obj = qobject_cast<QGraphicsAnchor *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSpacing( PQREAL(1) );
+      obj->setSpacing(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -121,17 +121,17 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SETSPACING )
 /*
 QSizePolicy::Policy sizePolicy() const
 */
-HB_FUNC_STATIC( QGRAPHICSANCHOR_SIZEPOLICY )
+HB_FUNC_STATIC(QGRAPHICSANCHOR_SIZEPOLICY)
 {
-  QGraphicsAnchor * obj = qobject_cast<QGraphicsAnchor*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsAnchor *obj = qobject_cast<QGraphicsAnchor *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->sizePolicy() );
+      RENUM(obj->sizePolicy());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,17 +145,17 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SIZEPOLICY )
 /*
 qreal spacing() const
 */
-HB_FUNC_STATIC( QGRAPHICSANCHOR_SPACING )
+HB_FUNC_STATIC(QGRAPHICSANCHOR_SPACING)
 {
-  QGraphicsAnchor * obj = qobject_cast<QGraphicsAnchor*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsAnchor *obj = qobject_cast<QGraphicsAnchor *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->spacing() );
+      RQREAL(obj->spacing());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,14 +169,14 @@ HB_FUNC_STATIC( QGRAPHICSANCHOR_SPACING )
 /*
 void unsetSpacing()
 */
-HB_FUNC_STATIC( QGRAPHICSANCHOR_UNSETSPACING )
+HB_FUNC_STATIC(QGRAPHICSANCHOR_UNSETSPACING)
 {
-  QGraphicsAnchor * obj = qobject_cast<QGraphicsAnchor*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsAnchor *obj = qobject_cast<QGraphicsAnchor *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->unsetSpacing();

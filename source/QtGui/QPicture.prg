@@ -53,22 +53,22 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QPICTURE_NEW )
+HB_FUNC_STATIC(QPICTURE_NEW)
 {
-  if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
   {
     /*
     QPicture( int formatVersion = -1 )
     */
-    QPicture * obj = new QPicture( OPINT( 1, -1 ) );
+    QPicture *obj = new QPicture(OPINT(1, -1));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQPICTURE(1) )
+  else if (ISNUMPAR(1) && ISQPICTURE(1))
   {
     /*
     QPicture( const QPicture & pic )
     */
-    QPicture * obj = new QPicture( *PQPICTURE(1) );
+    QPicture *obj = new QPicture(*PQPICTURE(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -77,11 +77,11 @@ HB_FUNC_STATIC( QPICTURE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QPICTURE_DELETE )
+HB_FUNC_STATIC(QPICTURE_DELETE)
 {
-  QPicture * obj = static_cast<QPicture*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -96,17 +96,17 @@ HB_FUNC_STATIC( QPICTURE_DELETE )
 /*
 QRect boundingRect() const
 */
-HB_FUNC_STATIC( QPICTURE_BOUNDINGRECT )
+HB_FUNC_STATIC(QPICTURE_BOUNDINGRECT)
 {
-  QPicture * obj = static_cast<QPicture*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QRect * ptr = new QRect( obj->boundingRect() );
+      QRect *ptr = new QRect(obj->boundingRect());
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -121,17 +121,17 @@ HB_FUNC_STATIC( QPICTURE_BOUNDINGRECT )
 /*
 const char * data() const
 */
-HB_FUNC_STATIC( QPICTURE_DATA )
+HB_FUNC_STATIC(QPICTURE_DATA)
 {
-  QPicture * obj = static_cast<QPicture*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      hb_retc( ( const char * ) obj->data() );
+      hb_retc((const char *)obj->data());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,17 +145,17 @@ HB_FUNC_STATIC( QPICTURE_DATA )
 /*
 bool isNull() const
 */
-HB_FUNC_STATIC( QPICTURE_ISNULL )
+HB_FUNC_STATIC(QPICTURE_ISNULL)
 {
-  QPicture * obj = static_cast<QPicture*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isNull() );
+      RBOOL(obj->isNull());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -166,30 +166,30 @@ HB_FUNC_STATIC( QPICTURE_ISNULL )
   }
 }
 
-HB_FUNC_STATIC( QPICTURE_LOAD )
+HB_FUNC_STATIC(QPICTURE_LOAD)
 {
-  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
     bool load( const QString & fileName, const char * format = 0 )
     */
-    QPicture * obj = static_cast<QPicture*>(Qt4xHb::itemGetPtrStackSelfItem());
+    QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      RBOOL( obj->load( PQSTRING(1), OPCONSTCHAR( 2, 0 )) );
+      RBOOL(obj->load(PQSTRING(1), OPCONSTCHAR(2, 0)));
     }
   }
-  else if( ISBETWEEN(1, 2) && ISQIODEVICE(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
     bool load( QIODevice * dev, const char * format = 0 )
     */
-    QPicture * obj = static_cast<QPicture*>(Qt4xHb::itemGetPtrStackSelfItem());
+    QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      RBOOL( obj->load( PQIODEVICE(1), OPCONSTCHAR( 2, 0 )) );
+      RBOOL(obj->load(PQIODEVICE(1), OPCONSTCHAR(2, 0)));
     }
   }
   else
@@ -201,17 +201,17 @@ HB_FUNC_STATIC( QPICTURE_LOAD )
 /*
 bool play( QPainter * painter )
 */
-HB_FUNC_STATIC( QPICTURE_PLAY )
+HB_FUNC_STATIC(QPICTURE_PLAY)
 {
-  QPicture * obj = static_cast<QPicture*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPAINTER(1) )
+    if (ISNUMPAR(1) && ISQPAINTER(1))
     {
 #endif
-      RBOOL( obj->play( PQPAINTER(1)) );
+      RBOOL(obj->play(PQPAINTER(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,30 +222,30 @@ HB_FUNC_STATIC( QPICTURE_PLAY )
   }
 }
 
-HB_FUNC_STATIC( QPICTURE_SAVE )
+HB_FUNC_STATIC(QPICTURE_SAVE)
 {
-  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
     bool save( const QString & fileName, const char * format = 0 )
     */
-    QPicture * obj = static_cast<QPicture*>(Qt4xHb::itemGetPtrStackSelfItem());
+    QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      RBOOL( obj->save( PQSTRING(1), OPCONSTCHAR( 2, 0 )) );
+      RBOOL(obj->save(PQSTRING(1), OPCONSTCHAR(2, 0)));
     }
   }
-  else if( ISBETWEEN(1, 2) && ISQIODEVICE(1) && (HB_ISCHAR(2) || HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (HB_ISCHAR(2) || HB_ISNIL(2)))
   {
     /*
     bool save( QIODevice * dev, const char * format = 0 )
     */
-    QPicture * obj = static_cast<QPicture*>(Qt4xHb::itemGetPtrStackSelfItem());
+    QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      RBOOL( obj->save( PQIODEVICE(1), OPCONSTCHAR( 2, 0 )) );
+      RBOOL(obj->save(PQIODEVICE(1), OPCONSTCHAR(2, 0)));
     }
   }
   else
@@ -257,17 +257,17 @@ HB_FUNC_STATIC( QPICTURE_SAVE )
 /*
 void setBoundingRect( const QRect & r )
 */
-HB_FUNC_STATIC( QPICTURE_SETBOUNDINGRECT )
+HB_FUNC_STATIC(QPICTURE_SETBOUNDINGRECT)
 {
-  QPicture * obj = static_cast<QPicture*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQRECT(1) )
+    if (ISNUMPAR(1) && ISQRECT(1))
     {
 #endif
-      obj->setBoundingRect( *PQRECT(1) );
+      obj->setBoundingRect(*PQRECT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -283,17 +283,17 @@ HB_FUNC_STATIC( QPICTURE_SETBOUNDINGRECT )
 /*
 virtual void setData( const char * data, uint size )
 */
-HB_FUNC_STATIC( QPICTURE_SETDATA )
+HB_FUNC_STATIC(QPICTURE_SETDATA)
 {
-  QPicture * obj = static_cast<QPicture*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setData( PCONSTCHAR(1), PUINT(2) );
+      obj->setData(PCONSTCHAR(1), PUINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -309,17 +309,17 @@ HB_FUNC_STATIC( QPICTURE_SETDATA )
 /*
 uint size() const
 */
-HB_FUNC_STATIC( QPICTURE_SIZE )
+HB_FUNC_STATIC(QPICTURE_SIZE)
 {
-  QPicture * obj = static_cast<QPicture*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RUINT( obj->size() );
+      RUINT(obj->size());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -333,17 +333,17 @@ HB_FUNC_STATIC( QPICTURE_SIZE )
 /*
 void swap( QPicture & other )
 */
-HB_FUNC_STATIC( QPICTURE_SWAP )
+HB_FUNC_STATIC(QPICTURE_SWAP)
 {
-  QPicture * obj = static_cast<QPicture*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPicture *obj = static_cast<QPicture *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPICTURE(1) )
+    if (ISNUMPAR(1) && ISQPICTURE(1))
     {
 #endif
-      obj->swap( *PQPICTURE(1) );
+      obj->swap(*PQPICTURE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

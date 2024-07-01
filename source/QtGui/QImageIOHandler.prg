@@ -74,11 +74,11 @@ RETURN
 #include <QtCore/QRect>
 #include <QtCore/QVariant>
 
-HB_FUNC_STATIC( QIMAGEIOHANDLER_DELETE )
+HB_FUNC_STATIC(QIMAGEIOHANDLER_DELETE)
 {
-  QImageIOHandler * obj = static_cast<QImageIOHandler*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -93,17 +93,17 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_DELETE )
 /*
 virtual bool canRead() const = 0
 */
-HB_FUNC_STATIC( QIMAGEIOHANDLER_CANREAD )
+HB_FUNC_STATIC(QIMAGEIOHANDLER_CANREAD)
 {
-  QImageIOHandler * obj = static_cast<QImageIOHandler*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->canRead() );
+      RBOOL(obj->canRead());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -117,17 +117,17 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CANREAD )
 /*
 virtual int currentImageNumber() const
 */
-HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGENUMBER )
+HB_FUNC_STATIC(QIMAGEIOHANDLER_CURRENTIMAGENUMBER)
 {
-  QImageIOHandler * obj = static_cast<QImageIOHandler*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->currentImageNumber() );
+      RINT(obj->currentImageNumber());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,17 +141,17 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGENUMBER )
 /*
 virtual QRect currentImageRect() const
 */
-HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGERECT )
+HB_FUNC_STATIC(QIMAGEIOHANDLER_CURRENTIMAGERECT)
 {
-  QImageIOHandler * obj = static_cast<QImageIOHandler*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QRect * ptr = new QRect( obj->currentImageRect() );
+      QRect *ptr = new QRect(obj->currentImageRect());
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -166,17 +166,17 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_CURRENTIMAGERECT )
 /*
 QIODevice * device() const
 */
-HB_FUNC_STATIC( QIMAGEIOHANDLER_DEVICE )
+HB_FUNC_STATIC(QIMAGEIOHANDLER_DEVICE)
 {
-  QImageIOHandler * obj = static_cast<QImageIOHandler*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QIODevice * ptr = obj->device();
+      QIODevice *ptr = obj->device();
       Qt4xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -191,17 +191,17 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_DEVICE )
 /*
 QByteArray format() const
 */
-HB_FUNC_STATIC( QIMAGEIOHANDLER_FORMAT )
+HB_FUNC_STATIC(QIMAGEIOHANDLER_FORMAT)
 {
-  QImageIOHandler * obj = static_cast<QImageIOHandler*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->format() );
+      QByteArray *ptr = new QByteArray(obj->format());
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -216,17 +216,17 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_FORMAT )
 /*
 virtual int imageCount() const
 */
-HB_FUNC_STATIC( QIMAGEIOHANDLER_IMAGECOUNT )
+HB_FUNC_STATIC(QIMAGEIOHANDLER_IMAGECOUNT)
 {
-  QImageIOHandler * obj = static_cast<QImageIOHandler*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->imageCount() );
+      RINT(obj->imageCount());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -240,17 +240,17 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_IMAGECOUNT )
 /*
 virtual bool jumpToImage( int imageNumber )
 */
-HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTOIMAGE )
+HB_FUNC_STATIC(QIMAGEIOHANDLER_JUMPTOIMAGE)
 {
-  QImageIOHandler * obj = static_cast<QImageIOHandler*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->jumpToImage( PINT(1)) );
+      RBOOL(obj->jumpToImage(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -264,17 +264,17 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTOIMAGE )
 /*
 virtual bool jumpToNextImage()
 */
-HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTONEXTIMAGE )
+HB_FUNC_STATIC(QIMAGEIOHANDLER_JUMPTONEXTIMAGE)
 {
-  QImageIOHandler * obj = static_cast<QImageIOHandler*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->jumpToNextImage() );
+      RBOOL(obj->jumpToNextImage());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -288,17 +288,17 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_JUMPTONEXTIMAGE )
 /*
 virtual int loopCount() const
 */
-HB_FUNC_STATIC( QIMAGEIOHANDLER_LOOPCOUNT )
+HB_FUNC_STATIC(QIMAGEIOHANDLER_LOOPCOUNT)
 {
-  QImageIOHandler * obj = static_cast<QImageIOHandler*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->loopCount() );
+      RINT(obj->loopCount());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -312,17 +312,17 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_LOOPCOUNT )
 /*
 virtual int nextImageDelay() const
 */
-HB_FUNC_STATIC( QIMAGEIOHANDLER_NEXTIMAGEDELAY )
+HB_FUNC_STATIC(QIMAGEIOHANDLER_NEXTIMAGEDELAY)
 {
-  QImageIOHandler * obj = static_cast<QImageIOHandler*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->nextImageDelay() );
+      RINT(obj->nextImageDelay());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -336,17 +336,17 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_NEXTIMAGEDELAY )
 /*
 virtual QVariant option( QImageIOHandler::ImageOption option ) const
 */
-HB_FUNC_STATIC( QIMAGEIOHANDLER_OPTION )
+HB_FUNC_STATIC(QIMAGEIOHANDLER_OPTION)
 {
-  QImageIOHandler * obj = static_cast<QImageIOHandler*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QVariant * ptr = new QVariant( obj->option( ( QImageIOHandler::ImageOption ) hb_parni(1)) );
+      QVariant *ptr = new QVariant(obj->option((QImageIOHandler::ImageOption)hb_parni(1)));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -361,17 +361,17 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_OPTION )
 /*
 virtual bool read( QImage * image ) = 0
 */
-HB_FUNC_STATIC( QIMAGEIOHANDLER_READ )
+HB_FUNC_STATIC(QIMAGEIOHANDLER_READ)
 {
-  QImageIOHandler * obj = static_cast<QImageIOHandler*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQIMAGE(1) )
+    if (ISNUMPAR(1) && ISQIMAGE(1))
     {
 #endif
-      RBOOL( obj->read( PQIMAGE(1)) );
+      RBOOL(obj->read(PQIMAGE(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -385,17 +385,17 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_READ )
 /*
 void setDevice( QIODevice * device )
 */
-HB_FUNC_STATIC( QIMAGEIOHANDLER_SETDEVICE )
+HB_FUNC_STATIC(QIMAGEIOHANDLER_SETDEVICE)
 {
-  QImageIOHandler * obj = static_cast<QImageIOHandler*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQIODEVICE(1) )
+    if (ISNUMPAR(1) && ISQIODEVICE(1))
     {
 #endif
-      obj->setDevice( PQIODEVICE(1) );
+      obj->setDevice(PQIODEVICE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -411,17 +411,17 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SETDEVICE )
 /*
 void setFormat( const QByteArray & format )
 */
-HB_FUNC_STATIC( QIMAGEIOHANDLER_SETFORMAT )
+HB_FUNC_STATIC(QIMAGEIOHANDLER_SETFORMAT)
 {
-  QImageIOHandler * obj = static_cast<QImageIOHandler*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      obj->setFormat( *PQBYTEARRAY(1) );
+      obj->setFormat(*PQBYTEARRAY(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -437,17 +437,17 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SETFORMAT )
 /*
 virtual void setOption( QImageIOHandler::ImageOption option, const QVariant & value )
 */
-HB_FUNC_STATIC( QIMAGEIOHANDLER_SETOPTION )
+HB_FUNC_STATIC(QIMAGEIOHANDLER_SETOPTION)
 {
-  QImageIOHandler * obj = static_cast<QImageIOHandler*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQVARIANT(2))
     {
 #endif
-      obj->setOption( ( QImageIOHandler::ImageOption ) hb_parni(1), *PQVARIANT(2) );
+      obj->setOption((QImageIOHandler::ImageOption)hb_parni(1), *PQVARIANT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -463,17 +463,17 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SETOPTION )
 /*
 virtual bool supportsOption( QImageIOHandler::ImageOption option ) const
 */
-HB_FUNC_STATIC( QIMAGEIOHANDLER_SUPPORTSOPTION )
+HB_FUNC_STATIC(QIMAGEIOHANDLER_SUPPORTSOPTION)
 {
-  QImageIOHandler * obj = static_cast<QImageIOHandler*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->supportsOption( ( QImageIOHandler::ImageOption ) hb_parni(1)) );
+      RBOOL(obj->supportsOption((QImageIOHandler::ImageOption)hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -487,17 +487,17 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_SUPPORTSOPTION )
 /*
 virtual bool write( const QImage & image )
 */
-HB_FUNC_STATIC( QIMAGEIOHANDLER_WRITE )
+HB_FUNC_STATIC(QIMAGEIOHANDLER_WRITE)
 {
-  QImageIOHandler * obj = static_cast<QImageIOHandler*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageIOHandler *obj = static_cast<QImageIOHandler *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQIMAGE(1) )
+    if (ISNUMPAR(1) && ISQIMAGE(1))
     {
 #endif
-      RBOOL( obj->write( *PQIMAGE(1)) );
+      RBOOL(obj->write(*PQIMAGE(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -508,11 +508,11 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_WRITE )
   }
 }
 
-HB_FUNC_STATIC( QIMAGEIOHANDLER_NEWFROM )
+HB_FUNC_STATIC(QIMAGEIOHANDLER_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -521,7 +521,7 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -538,26 +538,26 @@ HB_FUNC_STATIC( QIMAGEIOHANDLER_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QIMAGEIOHANDLER_NEWFROMOBJECT )
+HB_FUNC_STATIC(QIMAGEIOHANDLER_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QIMAGEIOHANDLER_NEWFROM );
+  HB_FUNC_EXEC(QIMAGEIOHANDLER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QIMAGEIOHANDLER_NEWFROMPOINTER )
+HB_FUNC_STATIC(QIMAGEIOHANDLER_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QIMAGEIOHANDLER_NEWFROM );
+  HB_FUNC_EXEC(QIMAGEIOHANDLER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QIMAGEIOHANDLER_SELFDESTRUCTION )
+HB_FUNC_STATIC(QIMAGEIOHANDLER_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QIMAGEIOHANDLER_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QIMAGEIOHANDLER_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

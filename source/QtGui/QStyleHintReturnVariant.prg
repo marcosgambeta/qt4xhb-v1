@@ -42,14 +42,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QStyleHintReturnVariant()
-*/
-HB_FUNC_STATIC( QSTYLEHINTRETURNVARIANT_NEW )
+    /*
+    QStyleHintReturnVariant()
+    */
+HB_FUNC_STATIC(QSTYLEHINTRETURNVARIANT_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QStyleHintReturnVariant * obj = new QStyleHintReturnVariant();
+    QStyleHintReturnVariant *obj = new QStyleHintReturnVariant();
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -58,11 +58,11 @@ HB_FUNC_STATIC( QSTYLEHINTRETURNVARIANT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSTYLEHINTRETURNVARIANT_DELETE )
+HB_FUNC_STATIC(QSTYLEHINTRETURNVARIANT_DELETE)
 {
-  QStyleHintReturnVariant * obj = static_cast<QStyleHintReturnVariant*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QStyleHintReturnVariant *obj = static_cast<QStyleHintReturnVariant *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;

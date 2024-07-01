@@ -46,22 +46,22 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QPAINTEVENT_NEW )
+HB_FUNC_STATIC(QPAINTEVENT_NEW)
 {
-  if( ISNUMPAR(1) && ISQREGION(1) )
+  if (ISNUMPAR(1) && ISQREGION(1))
   {
     /*
     QPaintEvent( const QRegion & paintRegion )
     */
-    QPaintEvent * obj = new QPaintEvent( *PQREGION(1) );
+    QPaintEvent *obj = new QPaintEvent(*PQREGION(1));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISNUMPAR(1) && ISQRECT(1) )
+  else if (ISNUMPAR(1) && ISQRECT(1))
   {
     /*
     QPaintEvent( const QRect & paintRect )
     */
-    QPaintEvent * obj = new QPaintEvent( *PQRECT(1) );
+    QPaintEvent *obj = new QPaintEvent(*PQRECT(1));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -70,11 +70,11 @@ HB_FUNC_STATIC( QPAINTEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QPAINTEVENT_DELETE )
+HB_FUNC_STATIC(QPAINTEVENT_DELETE)
 {
-  QPaintEvent * obj = static_cast<QPaintEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPaintEvent *obj = static_cast<QPaintEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -89,17 +89,17 @@ HB_FUNC_STATIC( QPAINTEVENT_DELETE )
 /*
 const QRect & rect() const
 */
-HB_FUNC_STATIC( QPAINTEVENT_RECT )
+HB_FUNC_STATIC(QPAINTEVENT_RECT)
 {
-  QPaintEvent * obj = static_cast<QPaintEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPaintEvent *obj = static_cast<QPaintEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      const QRect * ptr = &obj->rect();
+      const QRect *ptr = &obj->rect();
       Qt4xHb::createReturnClass(ptr, "QRECT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -114,17 +114,17 @@ HB_FUNC_STATIC( QPAINTEVENT_RECT )
 /*
 const QRegion & region() const
 */
-HB_FUNC_STATIC( QPAINTEVENT_REGION )
+HB_FUNC_STATIC(QPAINTEVENT_REGION)
 {
-  QPaintEvent * obj = static_cast<QPaintEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QPaintEvent *obj = static_cast<QPaintEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      const QRegion * ptr = &obj->region();
+      const QRegion *ptr = &obj->region();
       Qt4xHb::createReturnClass(ptr, "QREGION", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

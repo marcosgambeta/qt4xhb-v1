@@ -49,12 +49,12 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-/*
-explicit HStyledItemDelegate( QObject *parent = 0 )
-*/
-void HStyledItemDelegate_new1()
+    /*
+    explicit HStyledItemDelegate( QObject *parent = 0 )
+    */
+    void HStyledItemDelegate_new1()
 {
-  HStyledItemDelegate * obj = new HStyledItemDelegate( OPQOBJECT( 1, 0 ) );
+  HStyledItemDelegate *obj = new HStyledItemDelegate(OPQOBJECT(1, 0));
   Qt4xHb::returnNewObject(obj, false);
 }
 
@@ -63,7 +63,7 @@ HStyledItemDelegate( PHB_ITEM paintBlock, QObject *parent = 0 )
 */
 void HStyledItemDelegate_new2()
 {
-  HStyledItemDelegate * obj = new HStyledItemDelegate( PBLOCKORSYMBOL(1), OPQOBJECT( 2, 0 ) );
+  HStyledItemDelegate *obj = new HStyledItemDelegate(PBLOCKORSYMBOL(1), OPQOBJECT(2, 0));
   Qt4xHb::returnNewObject(obj, false);
 }
 
@@ -72,7 +72,7 @@ HStyledItemDelegate( PHB_ITEM paintBlock, PHB_ITEM sizeHintBlock, QObject *paren
 */
 void HStyledItemDelegate_new3()
 {
-  HStyledItemDelegate * obj = new HStyledItemDelegate( PBLOCKORSYMBOL(1), PBLOCKORSYMBOL(2), OPQOBJECT( 3, 0 ) );
+  HStyledItemDelegate *obj = new HStyledItemDelegate(PBLOCKORSYMBOL(1), PBLOCKORSYMBOL(2), OPQOBJECT(3, 0));
   Qt4xHb::returnNewObject(obj, false);
 }
 
@@ -82,17 +82,17 @@ void HStyledItemDelegate_new3()
 [3]HStyledItemDelegate( PHB_ITEM paintBlock, PHB_ITEM sizeHintBlock, QObject *parent = 0 )
 */
 
-HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_NEW )
+HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_NEW)
 {
-  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     HStyledItemDelegate_new1();
   }
-  else if( ISBETWEEN(1, 2) && (ISQOBJECT(2) || HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     HStyledItemDelegate_new2();
   }
-  else if( ISBETWEEN(2, 3) && (ISQOBJECT(3) || HB_ISNIL(3)) )
+  else if (ISBETWEEN(2, 3) && (ISQOBJECT(3) || HB_ISNIL(3)))
   {
     HStyledItemDelegate_new3();
   }
@@ -105,11 +105,11 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_NEW )
 /*
 ~HStyledItemDelegate()
 */
-HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_DELETE )
+HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_DELETE)
 {
-  HStyledItemDelegate * obj = (HStyledItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  HStyledItemDelegate *obj = (HStyledItemDelegate *)Qt4xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -133,17 +133,17 @@ void paint( QPainter *painter, const QStyleOptionViewItem &option, const QModelI
 /*
 void defaultPaint( QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index ) const
 */
-HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_DEFAULTPAINT )
+HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_DEFAULTPAINT)
 {
-  HStyledItemDelegate * obj = (HStyledItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  HStyledItemDelegate *obj = (HStyledItemDelegate *)Qt4xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3) )
+    if (ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONVIEWITEM(2) && ISQMODELINDEX(3))
     {
 #endif
-      obj->defaultPaint( PQPAINTER(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3) );
+      obj->defaultPaint(PQPAINTER(1), *PQSTYLEOPTIONVIEWITEM(2), *PQMODELINDEX(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -154,7 +154,6 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_DEFAULTPAINT )
   }
 
   hb_itemReturn(hb_stackSelfItem());
-
 }
 
 /*
@@ -187,17 +186,17 @@ void updateEditorGeometry( QWidget *editor, const QStyleOptionViewItem &option, 
 /*
 void setPaintCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETPAINTCB )
+HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETPAINTCB)
 {
-  HStyledItemDelegate * obj = (HStyledItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  HStyledItemDelegate *obj = (HStyledItemDelegate *)Qt4xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if (ISNUMPAR(1))
     {
 #endif
-      obj->setPaintCB( PBLOCKORSYMBOL(1) );
+      obj->setPaintCB(PBLOCKORSYMBOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,17 +212,17 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETPAINTCB )
 /*
 void setSizeHintCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETSIZEHINTCB )
+HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETSIZEHINTCB)
 {
-  HStyledItemDelegate * obj = (HStyledItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  HStyledItemDelegate *obj = (HStyledItemDelegate *)Qt4xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if (ISNUMPAR(1))
     {
 #endif
-      obj->setSizeHintCB( PBLOCKORSYMBOL(2) );
+      obj->setSizeHintCB(PBLOCKORSYMBOL(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,17 +238,17 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETSIZEHINTCB )
 /*
 void setDisplayTextCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETDISPLAYTEXTCB )
+HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETDISPLAYTEXTCB)
 {
-  HStyledItemDelegate * obj = (HStyledItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  HStyledItemDelegate *obj = (HStyledItemDelegate *)Qt4xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if (ISNUMPAR(1))
     {
 #endif
-      obj->setDisplayTextCB( PBLOCKORSYMBOL(3) );
+      obj->setDisplayTextCB(PBLOCKORSYMBOL(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -265,17 +264,17 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETDISPLAYTEXTCB )
 /*
 void setCreateEditorCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETCREATEEDITORCB )
+HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETCREATEEDITORCB)
 {
-  HStyledItemDelegate * obj = (HStyledItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  HStyledItemDelegate *obj = (HStyledItemDelegate *)Qt4xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if (ISNUMPAR(1))
     {
 #endif
-      obj->setCreateEditorCB( PBLOCKORSYMBOL(4) );
+      obj->setCreateEditorCB(PBLOCKORSYMBOL(4));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -291,17 +290,17 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETCREATEEDITORCB )
 /*
 void setEditorDataCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETEDITORDATACB )
+HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETEDITORDATACB)
 {
-  HStyledItemDelegate * obj = (HStyledItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  HStyledItemDelegate *obj = (HStyledItemDelegate *)Qt4xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if (ISNUMPAR(1))
     {
 #endif
-      obj->setEditorDataCB( PBLOCKORSYMBOL(5) );
+      obj->setEditorDataCB(PBLOCKORSYMBOL(5));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,17 +316,17 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETEDITORDATACB )
 /*
 void setModelDataCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETMODELDATACB )
+HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETMODELDATACB)
 {
-  HStyledItemDelegate * obj = (HStyledItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  HStyledItemDelegate *obj = (HStyledItemDelegate *)Qt4xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if (ISNUMPAR(1))
     {
 #endif
-      obj->setModelDataCB( PBLOCKORSYMBOL(6) );
+      obj->setModelDataCB(PBLOCKORSYMBOL(6));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -343,17 +342,17 @@ HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETMODELDATACB )
 /*
 void setUpdateEditorGeometryCB( PHB_ITEM block )
 */
-HB_FUNC_STATIC( HSTYLEDITEMDELEGATE_SETUPDATEEDITORGEOMETRYCB )
+HB_FUNC_STATIC(HSTYLEDITEMDELEGATE_SETUPDATEEDITORGEOMETRYCB)
 {
-  HStyledItemDelegate * obj = (HStyledItemDelegate *) Qt4xHb::itemGetPtrStackSelfItem();
+  HStyledItemDelegate *obj = (HStyledItemDelegate *)Qt4xHb::itemGetPtrStackSelfItem();
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) )
+    if (ISNUMPAR(1))
     {
 #endif
-      obj->setUpdateEditorGeometryCB( PBLOCKORSYMBOL(7) );
+      obj->setUpdateEditorGeometryCB(PBLOCKORSYMBOL(7));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

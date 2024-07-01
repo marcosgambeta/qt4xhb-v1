@@ -62,14 +62,20 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QTabletEvent( QEvent::Type t, const QPoint & pos, const QPoint & globalPos, const QPointF & hiResGlobalPos, int device, int pointerType, qreal pressure, int xTilt, int yTilt, qreal tangentialPressure, qreal rotation, int z, Qt::KeyboardModifiers keyState, qint64 uniqueID )
-*/
-HB_FUNC_STATIC( QTABLETEVENT_NEW )
+    /*
+    QTabletEvent( QEvent::Type t, const QPoint & pos, const QPoint & globalPos, const QPointF & hiResGlobalPos, int
+    device, int pointerType, qreal pressure, int xTilt, int yTilt, qreal tangentialPressure, qreal rotation, int z,
+    Qt::KeyboardModifiers keyState, qint64 uniqueID )
+    */
+HB_FUNC_STATIC(QTABLETEVENT_NEW)
 {
-  if( ISNUMPAR(14) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) && ISQPOINTF(4) && HB_ISNUM(5) && HB_ISNUM(6) && HB_ISNUM(7) && HB_ISNUM(8) && HB_ISNUM(9) && HB_ISNUM(10) && HB_ISNUM(11) && HB_ISNUM(12) && HB_ISNUM(13) && HB_ISNUM(14) )
+  if (ISNUMPAR(14) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) && ISQPOINTF(4) && HB_ISNUM(5) && HB_ISNUM(6) &&
+      HB_ISNUM(7) && HB_ISNUM(8) && HB_ISNUM(9) && HB_ISNUM(10) && HB_ISNUM(11) && HB_ISNUM(12) && HB_ISNUM(13) &&
+      HB_ISNUM(14))
   {
-    QTabletEvent * obj = new QTabletEvent( ( QEvent::Type ) hb_parni(1), *PQPOINT(2), *PQPOINT(3), *PQPOINTF(4), PINT(5), PINT(6), PQREAL(7), PINT(8), PINT(9), PQREAL(10), PQREAL(11), PINT(12), ( Qt::KeyboardModifiers ) hb_parni(13), PQINT64(14) );
+    QTabletEvent *obj = new QTabletEvent((QEvent::Type)hb_parni(1), *PQPOINT(2), *PQPOINT(3), *PQPOINTF(4), PINT(5),
+                                         PINT(6), PQREAL(7), PINT(8), PINT(9), PQREAL(10), PQREAL(11), PINT(12),
+                                         (Qt::KeyboardModifiers)hb_parni(13), PQINT64(14));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -78,11 +84,11 @@ HB_FUNC_STATIC( QTABLETEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTABLETEVENT_DELETE )
+HB_FUNC_STATIC(QTABLETEVENT_DELETE)
 {
-  QTabletEvent * obj = static_cast<QTabletEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTabletEvent *obj = static_cast<QTabletEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -97,17 +103,17 @@ HB_FUNC_STATIC( QTABLETEVENT_DELETE )
 /*
 const QPoint & pos() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_POS )
+HB_FUNC_STATIC(QTABLETEVENT_POS)
 {
-  QTabletEvent * obj = static_cast<QTabletEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTabletEvent *obj = static_cast<QTabletEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      const QPoint * ptr = &obj->pos();
+      const QPoint *ptr = &obj->pos();
       Qt4xHb::createReturnClass(ptr, "QPOINT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -122,17 +128,17 @@ HB_FUNC_STATIC( QTABLETEVENT_POS )
 /*
 const QPoint & globalPos() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_GLOBALPOS )
+HB_FUNC_STATIC(QTABLETEVENT_GLOBALPOS)
 {
-  QTabletEvent * obj = static_cast<QTabletEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTabletEvent *obj = static_cast<QTabletEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      const QPoint * ptr = &obj->globalPos();
+      const QPoint *ptr = &obj->globalPos();
       Qt4xHb::createReturnClass(ptr, "QPOINT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -147,17 +153,17 @@ HB_FUNC_STATIC( QTABLETEVENT_GLOBALPOS )
 /*
 const QPointF & hiResGlobalPos() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_HIRESGLOBALPOS )
+HB_FUNC_STATIC(QTABLETEVENT_HIRESGLOBALPOS)
 {
-  QTabletEvent * obj = static_cast<QTabletEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTabletEvent *obj = static_cast<QTabletEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      const QPointF * ptr = &obj->hiResGlobalPos();
+      const QPointF *ptr = &obj->hiResGlobalPos();
       Qt4xHb::createReturnClass(ptr, "QPOINTF", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -172,17 +178,17 @@ HB_FUNC_STATIC( QTABLETEVENT_HIRESGLOBALPOS )
 /*
 int x() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_X )
+HB_FUNC_STATIC(QTABLETEVENT_X)
 {
-  QTabletEvent * obj = static_cast<QTabletEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTabletEvent *obj = static_cast<QTabletEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->x() );
+      RINT(obj->x());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -196,17 +202,17 @@ HB_FUNC_STATIC( QTABLETEVENT_X )
 /*
 int y() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_Y )
+HB_FUNC_STATIC(QTABLETEVENT_Y)
 {
-  QTabletEvent * obj = static_cast<QTabletEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTabletEvent *obj = static_cast<QTabletEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->y() );
+      RINT(obj->y());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,17 +226,17 @@ HB_FUNC_STATIC( QTABLETEVENT_Y )
 /*
 int globalX() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_GLOBALX )
+HB_FUNC_STATIC(QTABLETEVENT_GLOBALX)
 {
-  QTabletEvent * obj = static_cast<QTabletEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTabletEvent *obj = static_cast<QTabletEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->globalX() );
+      RINT(obj->globalX());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,17 +250,17 @@ HB_FUNC_STATIC( QTABLETEVENT_GLOBALX )
 /*
 int globalY() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_GLOBALY )
+HB_FUNC_STATIC(QTABLETEVENT_GLOBALY)
 {
-  QTabletEvent * obj = static_cast<QTabletEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTabletEvent *obj = static_cast<QTabletEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->globalY() );
+      RINT(obj->globalY());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,17 +274,17 @@ HB_FUNC_STATIC( QTABLETEVENT_GLOBALY )
 /*
 qreal hiResGlobalX() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_HIRESGLOBALX )
+HB_FUNC_STATIC(QTABLETEVENT_HIRESGLOBALX)
 {
-  QTabletEvent * obj = static_cast<QTabletEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTabletEvent *obj = static_cast<QTabletEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->hiResGlobalX() );
+      RQREAL(obj->hiResGlobalX());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -292,17 +298,17 @@ HB_FUNC_STATIC( QTABLETEVENT_HIRESGLOBALX )
 /*
 qreal hiResGlobalY() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_HIRESGLOBALY )
+HB_FUNC_STATIC(QTABLETEVENT_HIRESGLOBALY)
 {
-  QTabletEvent * obj = static_cast<QTabletEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTabletEvent *obj = static_cast<QTabletEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->hiResGlobalY() );
+      RQREAL(obj->hiResGlobalY());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -316,17 +322,17 @@ HB_FUNC_STATIC( QTABLETEVENT_HIRESGLOBALY )
 /*
 QTabletEvent::TabletDevice device() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_DEVICE )
+HB_FUNC_STATIC(QTABLETEVENT_DEVICE)
 {
-  QTabletEvent * obj = static_cast<QTabletEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTabletEvent *obj = static_cast<QTabletEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->device() );
+      RENUM(obj->device());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -340,17 +346,17 @@ HB_FUNC_STATIC( QTABLETEVENT_DEVICE )
 /*
 QTabletEvent::PointerType pointerType() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_POINTERTYPE )
+HB_FUNC_STATIC(QTABLETEVENT_POINTERTYPE)
 {
-  QTabletEvent * obj = static_cast<QTabletEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTabletEvent *obj = static_cast<QTabletEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->pointerType() );
+      RENUM(obj->pointerType());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -364,17 +370,17 @@ HB_FUNC_STATIC( QTABLETEVENT_POINTERTYPE )
 /*
 qint64 uniqueId() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_UNIQUEID )
+HB_FUNC_STATIC(QTABLETEVENT_UNIQUEID)
 {
-  QTabletEvent * obj = static_cast<QTabletEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTabletEvent *obj = static_cast<QTabletEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQINT64( obj->uniqueId() );
+      RQINT64(obj->uniqueId());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -388,17 +394,17 @@ HB_FUNC_STATIC( QTABLETEVENT_UNIQUEID )
 /*
 qreal pressure() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_PRESSURE )
+HB_FUNC_STATIC(QTABLETEVENT_PRESSURE)
 {
-  QTabletEvent * obj = static_cast<QTabletEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTabletEvent *obj = static_cast<QTabletEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->pressure() );
+      RQREAL(obj->pressure());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -412,17 +418,17 @@ HB_FUNC_STATIC( QTABLETEVENT_PRESSURE )
 /*
 int z() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_Z )
+HB_FUNC_STATIC(QTABLETEVENT_Z)
 {
-  QTabletEvent * obj = static_cast<QTabletEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTabletEvent *obj = static_cast<QTabletEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->z() );
+      RINT(obj->z());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -436,17 +442,17 @@ HB_FUNC_STATIC( QTABLETEVENT_Z )
 /*
 qreal tangentialPressure() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_TANGENTIALPRESSURE )
+HB_FUNC_STATIC(QTABLETEVENT_TANGENTIALPRESSURE)
 {
-  QTabletEvent * obj = static_cast<QTabletEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTabletEvent *obj = static_cast<QTabletEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->tangentialPressure() );
+      RQREAL(obj->tangentialPressure());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -460,17 +466,17 @@ HB_FUNC_STATIC( QTABLETEVENT_TANGENTIALPRESSURE )
 /*
 qreal rotation() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_ROTATION )
+HB_FUNC_STATIC(QTABLETEVENT_ROTATION)
 {
-  QTabletEvent * obj = static_cast<QTabletEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTabletEvent *obj = static_cast<QTabletEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->rotation() );
+      RQREAL(obj->rotation());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -484,17 +490,17 @@ HB_FUNC_STATIC( QTABLETEVENT_ROTATION )
 /*
 int xTilt() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_XTILT )
+HB_FUNC_STATIC(QTABLETEVENT_XTILT)
 {
-  QTabletEvent * obj = static_cast<QTabletEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTabletEvent *obj = static_cast<QTabletEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->xTilt() );
+      RINT(obj->xTilt());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -508,17 +514,17 @@ HB_FUNC_STATIC( QTABLETEVENT_XTILT )
 /*
 int yTilt() const
 */
-HB_FUNC_STATIC( QTABLETEVENT_YTILT )
+HB_FUNC_STATIC(QTABLETEVENT_YTILT)
 {
-  QTabletEvent * obj = static_cast<QTabletEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTabletEvent *obj = static_cast<QTabletEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->yTilt() );
+      RINT(obj->yTilt());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

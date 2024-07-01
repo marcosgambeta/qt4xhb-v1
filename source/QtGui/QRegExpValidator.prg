@@ -48,22 +48,22 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
+HB_FUNC_STATIC(QREGEXPVALIDATOR_NEW)
 {
-  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
     QRegExpValidator( QObject * parent = 0 )
     */
-    QRegExpValidator * obj = new QRegExpValidator( OPQOBJECT( 1, 0 ) );
+    QRegExpValidator *obj = new QRegExpValidator(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISNUMPAR(2) && ISQREGEXP(1) && ISQOBJECT(2) )
+  else if (ISNUMPAR(2) && ISQREGEXP(1) && ISQOBJECT(2))
   {
     /*
     QRegExpValidator( const QRegExp & rx, QObject * parent )
     */
-    QRegExpValidator * obj = new QRegExpValidator( *PQREGEXP(1), PQOBJECT(2) );
+    QRegExpValidator *obj = new QRegExpValidator(*PQREGEXP(1), PQOBJECT(2));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -72,11 +72,11 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_NEW )
   }
 }
 
-HB_FUNC_STATIC( QREGEXPVALIDATOR_DELETE )
+HB_FUNC_STATIC(QREGEXPVALIDATOR_DELETE)
 {
-  QRegExpValidator * obj = qobject_cast<QRegExpValidator*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QRegExpValidator *obj = qobject_cast<QRegExpValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -93,17 +93,17 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_DELETE )
 /*
 const QRegExp & regExp() const
 */
-HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
+HB_FUNC_STATIC(QREGEXPVALIDATOR_REGEXP)
 {
-  QRegExpValidator * obj = qobject_cast<QRegExpValidator*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QRegExpValidator *obj = qobject_cast<QRegExpValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      const QRegExp * ptr = &obj->regExp();
+      const QRegExp *ptr = &obj->regExp();
       Qt4xHb::createReturnClass(ptr, "QREGEXP", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -118,17 +118,17 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_REGEXP )
 /*
 void setRegExp( const QRegExp & rx )
 */
-HB_FUNC_STATIC( QREGEXPVALIDATOR_SETREGEXP )
+HB_FUNC_STATIC(QREGEXPVALIDATOR_SETREGEXP)
 {
-  QRegExpValidator * obj = qobject_cast<QRegExpValidator*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QRegExpValidator *obj = qobject_cast<QRegExpValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQREGEXP(1) )
+    if (ISNUMPAR(1) && ISQREGEXP(1))
     {
 #endif
-      obj->setRegExp( *PQREGEXP(1) );
+      obj->setRegExp(*PQREGEXP(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -144,21 +144,21 @@ HB_FUNC_STATIC( QREGEXPVALIDATOR_SETREGEXP )
 /*
 virtual QValidator::State validate( QString & input, int & pos ) const
 */
-HB_FUNC_STATIC( QREGEXPVALIDATOR_VALIDATE )
+HB_FUNC_STATIC(QREGEXPVALIDATOR_VALIDATE)
 {
-  QRegExpValidator * obj = qobject_cast<QRegExpValidator*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QRegExpValidator *obj = qobject_cast<QRegExpValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
 #endif
       QString par1 = hb_parc(1);
       int par2;
-      RENUM( obj->validate( par1, par2 ) );
-      hb_storc( QSTRINGTOSTRING( par1 ), 1 );
-      hb_storni( par2, 2 );
+      RENUM(obj->validate(par1, par2));
+      hb_storc(QSTRINGTOSTRING(par1), 1);
+      hb_storni(par2, 2);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

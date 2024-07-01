@@ -43,14 +43,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QStatusTipEvent( const QString & tip )
-*/
-HB_FUNC_STATIC( QSTATUSTIPEVENT_NEW )
+    /*
+    QStatusTipEvent( const QString & tip )
+    */
+HB_FUNC_STATIC(QSTATUSTIPEVENT_NEW)
 {
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    QStatusTipEvent * obj = new QStatusTipEvent( PQSTRING(1) );
+    QStatusTipEvent *obj = new QStatusTipEvent(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -59,11 +59,11 @@ HB_FUNC_STATIC( QSTATUSTIPEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSTATUSTIPEVENT_DELETE )
+HB_FUNC_STATIC(QSTATUSTIPEVENT_DELETE)
 {
-  QStatusTipEvent * obj = static_cast<QStatusTipEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QStatusTipEvent *obj = static_cast<QStatusTipEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -78,17 +78,17 @@ HB_FUNC_STATIC( QSTATUSTIPEVENT_DELETE )
 /*
 QString tip() const
 */
-HB_FUNC_STATIC( QSTATUSTIPEVENT_TIP )
+HB_FUNC_STATIC(QSTATUSTIPEVENT_TIP)
 {
-  QStatusTipEvent * obj = static_cast<QStatusTipEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QStatusTipEvent *obj = static_cast<QStatusTipEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->tip() );
+      RQSTRING(obj->tip());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

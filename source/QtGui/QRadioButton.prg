@@ -46,22 +46,22 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-HB_FUNC_STATIC( QRADIOBUTTON_NEW )
+HB_FUNC_STATIC(QRADIOBUTTON_NEW)
 {
-  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
     QRadioButton( QWidget * parent = 0 )
     */
-    QRadioButton * obj = new QRadioButton( OPQWIDGET( 1, 0 ) );
+    QRadioButton *obj = new QRadioButton(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
     QRadioButton( const QString & text, QWidget * parent = 0 )
     */
-    QRadioButton * obj = new QRadioButton( PQSTRING(1), OPQWIDGET( 2, 0 ) );
+    QRadioButton *obj = new QRadioButton(PQSTRING(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -73,17 +73,17 @@ HB_FUNC_STATIC( QRADIOBUTTON_NEW )
 /*
 virtual QSize minimumSizeHint() const
 */
-HB_FUNC_STATIC( QRADIOBUTTON_MINIMUMSIZEHINT )
+HB_FUNC_STATIC(QRADIOBUTTON_MINIMUMSIZEHINT)
 {
-  QRadioButton * obj = qobject_cast<QRadioButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QRadioButton *obj = qobject_cast<QRadioButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSize * ptr = new QSize( obj->minimumSizeHint() );
+      QSize *ptr = new QSize(obj->minimumSizeHint());
       Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -98,17 +98,17 @@ HB_FUNC_STATIC( QRADIOBUTTON_MINIMUMSIZEHINT )
 /*
 virtual QSize sizeHint() const
 */
-HB_FUNC_STATIC( QRADIOBUTTON_SIZEHINT )
+HB_FUNC_STATIC(QRADIOBUTTON_SIZEHINT)
 {
-  QRadioButton * obj = qobject_cast<QRadioButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QRadioButton *obj = qobject_cast<QRadioButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint() );
+      QSize *ptr = new QSize(obj->sizeHint());
       Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

@@ -53,22 +53,22 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_NEW )
+HB_FUNC_STATIC(QSUPPORTEDWRITINGSYSTEMS_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QSupportedWritingSystems()
     */
-    QSupportedWritingSystems * obj = new QSupportedWritingSystems();
+    QSupportedWritingSystems *obj = new QSupportedWritingSystems();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQSUPPORTEDWRITINGSYSTEMS(1) )
+  else if (ISNUMPAR(1) && ISQSUPPORTEDWRITINGSYSTEMS(1))
   {
     /*
     QSupportedWritingSystems( const QSupportedWritingSystems & other )
     */
-    QSupportedWritingSystems * obj = new QSupportedWritingSystems( *PQSUPPORTEDWRITINGSYSTEMS(1) );
+    QSupportedWritingSystems *obj = new QSupportedWritingSystems(*PQSUPPORTEDWRITINGSYSTEMS(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -77,11 +77,11 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_DELETE )
+HB_FUNC_STATIC(QSUPPORTEDWRITINGSYSTEMS_DELETE)
 {
-  QSupportedWritingSystems * obj = static_cast<QSupportedWritingSystems*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QSupportedWritingSystems *obj = static_cast<QSupportedWritingSystems *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -96,17 +96,17 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_DELETE )
 /*
 void setSupported( QFontDatabase::WritingSystem writingSystem, bool support = true )
 */
-HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SETSUPPORTED )
+HB_FUNC_STATIC(QSUPPORTEDWRITINGSYSTEMS_SETSUPPORTED)
 {
-  QSupportedWritingSystems * obj = static_cast<QSupportedWritingSystems*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QSupportedWritingSystems *obj = static_cast<QSupportedWritingSystems *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setSupported( ( QFontDatabase::WritingSystem ) hb_parni(1), OPBOOL( 2, true ) );
+      obj->setSupported((QFontDatabase::WritingSystem)hb_parni(1), OPBOOL(2, true));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -122,17 +122,17 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SETSUPPORTED )
 /*
 bool supported( QFontDatabase::WritingSystem writingSystem ) const
 */
-HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SUPPORTED )
+HB_FUNC_STATIC(QSUPPORTEDWRITINGSYSTEMS_SUPPORTED)
 {
-  QSupportedWritingSystems * obj = static_cast<QSupportedWritingSystems*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QSupportedWritingSystems *obj = static_cast<QSupportedWritingSystems *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->supported( ( QFontDatabase::WritingSystem ) hb_parni(1)) );
+      RBOOL(obj->supported((QFontDatabase::WritingSystem)hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -143,11 +143,11 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SUPPORTED )
   }
 }
 
-HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_NEWFROM )
+HB_FUNC_STATIC(QSUPPORTEDWRITINGSYSTEMS_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -156,7 +156,7 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -173,26 +173,26 @@ HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_NEWFROMOBJECT )
+HB_FUNC_STATIC(QSUPPORTEDWRITINGSYSTEMS_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QSUPPORTEDWRITINGSYSTEMS_NEWFROM );
+  HB_FUNC_EXEC(QSUPPORTEDWRITINGSYSTEMS_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_NEWFROMPOINTER )
+HB_FUNC_STATIC(QSUPPORTEDWRITINGSYSTEMS_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QSUPPORTEDWRITINGSYSTEMS_NEWFROM );
+  HB_FUNC_EXEC(QSUPPORTEDWRITINGSYSTEMS_NEWFROM);
 }
 
-HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SELFDESTRUCTION )
+HB_FUNC_STATIC(QSUPPORTEDWRITINGSYSTEMS_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QSUPPORTEDWRITINGSYSTEMS_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QSUPPORTEDWRITINGSYSTEMS_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

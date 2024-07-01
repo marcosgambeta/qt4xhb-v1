@@ -60,14 +60,14 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-/*
-QCommonStyle()
-*/
-HB_FUNC_STATIC( QCOMMONSTYLE_NEW )
+    /*
+    QCommonStyle()
+    */
+HB_FUNC_STATIC(QCOMMONSTYLE_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QCommonStyle * obj = new QCommonStyle();
+    QCommonStyle *obj = new QCommonStyle();
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -76,11 +76,11 @@ HB_FUNC_STATIC( QCOMMONSTYLE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QCOMMONSTYLE_DELETE )
+HB_FUNC_STATIC(QCOMMONSTYLE_DELETE)
 {
-  QCommonStyle * obj = qobject_cast<QCommonStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QCommonStyle *obj = qobject_cast<QCommonStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -95,19 +95,21 @@ HB_FUNC_STATIC( QCOMMONSTYLE_DELETE )
 }
 
 /*
-virtual void drawComplexControl( QStyle::ComplexControl cc, const QStyleOptionComplex * opt, QPainter * p, const QWidget * widget = 0 ) const
+virtual void drawComplexControl( QStyle::ComplexControl cc, const QStyleOptionComplex * opt, QPainter * p, const QWidget
+* widget = 0 ) const
 */
-HB_FUNC_STATIC( QCOMMONSTYLE_DRAWCOMPLEXCONTROL )
+HB_FUNC_STATIC(QCOMMONSTYLE_DRAWCOMPLEXCONTROL)
 {
-  QCommonStyle * obj = qobject_cast<QCommonStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QCommonStyle *obj = qobject_cast<QCommonStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISQPAINTER(3) && (ISQWIDGET(4) || HB_ISNIL(4)) )
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISQPAINTER(3) && (ISQWIDGET(4) || HB_ISNIL(4)))
     {
 #endif
-      obj->drawComplexControl( ( QStyle::ComplexControl ) hb_parni(1), PQSTYLEOPTIONCOMPLEX(2), PQPAINTER(3), OPQWIDGET( 4, 0 ) );
+      obj->drawComplexControl((QStyle::ComplexControl)hb_parni(1), PQSTYLEOPTIONCOMPLEX(2), PQPAINTER(3),
+                              OPQWIDGET(4, 0));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -121,19 +123,20 @@ HB_FUNC_STATIC( QCOMMONSTYLE_DRAWCOMPLEXCONTROL )
 }
 
 /*
-virtual void drawControl( QStyle::ControlElement element, const QStyleOption * opt, QPainter * p, const QWidget * widget = 0 ) const
+virtual void drawControl( QStyle::ControlElement element, const QStyleOption * opt, QPainter * p, const QWidget * widget
+= 0 ) const
 */
-HB_FUNC_STATIC( QCOMMONSTYLE_DRAWCONTROL )
+HB_FUNC_STATIC(QCOMMONSTYLE_DRAWCONTROL)
 {
-  QCommonStyle * obj = qobject_cast<QCommonStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QCommonStyle *obj = qobject_cast<QCommonStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && (ISQWIDGET(4) || HB_ISNIL(4)) )
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && (ISQWIDGET(4) || HB_ISNIL(4)))
     {
 #endif
-      obj->drawControl( ( QStyle::ControlElement ) hb_parni(1), PQSTYLEOPTION(2), PQPAINTER(3), OPQWIDGET( 4, 0 ) );
+      obj->drawControl((QStyle::ControlElement)hb_parni(1), PQSTYLEOPTION(2), PQPAINTER(3), OPQWIDGET(4, 0));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,19 +150,20 @@ HB_FUNC_STATIC( QCOMMONSTYLE_DRAWCONTROL )
 }
 
 /*
-virtual void drawPrimitive( QStyle::PrimitiveElement pe, const QStyleOption * opt, QPainter * p, const QWidget * widget = 0 ) const
+virtual void drawPrimitive( QStyle::PrimitiveElement pe, const QStyleOption * opt, QPainter * p, const QWidget * widget
+= 0 ) const
 */
-HB_FUNC_STATIC( QCOMMONSTYLE_DRAWPRIMITIVE )
+HB_FUNC_STATIC(QCOMMONSTYLE_DRAWPRIMITIVE)
 {
-  QCommonStyle * obj = qobject_cast<QCommonStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QCommonStyle *obj = qobject_cast<QCommonStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && (ISQWIDGET(4) || HB_ISNIL(4)) )
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQPAINTER(3) && (ISQWIDGET(4) || HB_ISNIL(4)))
     {
 #endif
-      obj->drawPrimitive( ( QStyle::PrimitiveElement ) hb_parni(1), PQSTYLEOPTION(2), PQPAINTER(3), OPQWIDGET( 4, 0 ) );
+      obj->drawPrimitive((QStyle::PrimitiveElement)hb_parni(1), PQSTYLEOPTION(2), PQPAINTER(3), OPQWIDGET(4, 0));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,17 +179,17 @@ HB_FUNC_STATIC( QCOMMONSTYLE_DRAWPRIMITIVE )
 /*
 virtual QPixmap generatedIconPixmap( QIcon::Mode iconMode, const QPixmap & pixmap, const QStyleOption * opt ) const
 */
-HB_FUNC_STATIC( QCOMMONSTYLE_GENERATEDICONPIXMAP )
+HB_FUNC_STATIC(QCOMMONSTYLE_GENERATEDICONPIXMAP)
 {
-  QCommonStyle * obj = qobject_cast<QCommonStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QCommonStyle *obj = qobject_cast<QCommonStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISNUM(1) && ISQPIXMAP(2) && ISQSTYLEOPTION(3) )
+    if (ISNUMPAR(3) && HB_ISNUM(1) && ISQPIXMAP(2) && ISQSTYLEOPTION(3))
     {
 #endif
-      QPixmap * ptr = new QPixmap( obj->generatedIconPixmap( ( QIcon::Mode ) hb_parni(1), *PQPIXMAP(2), PQSTYLEOPTION(3)) );
+      QPixmap *ptr = new QPixmap(obj->generatedIconPixmap((QIcon::Mode)hb_parni(1), *PQPIXMAP(2), PQSTYLEOPTION(3)));
       Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -198,19 +202,21 @@ HB_FUNC_STATIC( QCOMMONSTYLE_GENERATEDICONPIXMAP )
 }
 
 /*
-virtual QStyle::SubControl hitTestComplexControl( QStyle::ComplexControl cc, const QStyleOptionComplex * opt, const QPoint & pt, const QWidget * widget = 0 ) const
+virtual QStyle::SubControl hitTestComplexControl( QStyle::ComplexControl cc, const QStyleOptionComplex * opt, const
+QPoint & pt, const QWidget * widget = 0 ) const
 */
-HB_FUNC_STATIC( QCOMMONSTYLE_HITTESTCOMPLEXCONTROL )
+HB_FUNC_STATIC(QCOMMONSTYLE_HITTESTCOMPLEXCONTROL)
 {
-  QCommonStyle * obj = qobject_cast<QCommonStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QCommonStyle *obj = qobject_cast<QCommonStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISQPOINT(3) && (ISQWIDGET(4) || HB_ISNIL(4)) )
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && ISQPOINT(3) && (ISQWIDGET(4) || HB_ISNIL(4)))
     {
 #endif
-      RENUM( obj->hitTestComplexControl( ( QStyle::ComplexControl ) hb_parni(1), PQSTYLEOPTIONCOMPLEX(2), *PQPOINT(3), OPQWIDGET( 4, 0 )) );
+      RENUM(obj->hitTestComplexControl((QStyle::ComplexControl)hb_parni(1), PQSTYLEOPTIONCOMPLEX(2), *PQPOINT(3),
+                                       OPQWIDGET(4, 0)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -224,17 +230,18 @@ HB_FUNC_STATIC( QCOMMONSTYLE_HITTESTCOMPLEXCONTROL )
 /*
 virtual int pixelMetric( QStyle::PixelMetric m, const QStyleOption * opt = 0, const QWidget * widget = 0 ) const
 */
-HB_FUNC_STATIC( QCOMMONSTYLE_PIXELMETRIC )
+HB_FUNC_STATIC(QCOMMONSTYLE_PIXELMETRIC)
 {
-  QCommonStyle * obj = qobject_cast<QCommonStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QCommonStyle *obj = qobject_cast<QCommonStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 3) && HB_ISNUM(1) && (ISQSTYLEOPTION(2) || HB_ISNIL(2)) && (ISQWIDGET(3) || HB_ISNIL(3)) )
+    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (ISQSTYLEOPTION(2) || HB_ISNIL(2)) && (ISQWIDGET(3) || HB_ISNIL(3)))
     {
 #endif
-      RINT( obj->pixelMetric( ( QStyle::PixelMetric ) hb_parni(1), HB_ISNIL(2) ? 0 : static_cast<QStyleOption*>( Qt4xHb::itemGetPtr(2) ), OPQWIDGET( 3, 0 )) );
+      RINT(obj->pixelMetric((QStyle::PixelMetric)hb_parni(1),
+                            HB_ISNIL(2) ? 0 : static_cast<QStyleOption *>(Qt4xHb::itemGetPtr(2)), OPQWIDGET(3, 0)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -245,46 +252,46 @@ HB_FUNC_STATIC( QCOMMONSTYLE_PIXELMETRIC )
   }
 }
 
-HB_FUNC_STATIC( QCOMMONSTYLE_POLISH )
+HB_FUNC_STATIC(QCOMMONSTYLE_POLISH)
 {
-  if( ISNUMPAR(1) && ISQPALETTE(1) )
+  if (ISNUMPAR(1) && ISQPALETTE(1))
   {
     /*
     virtual void polish( QPalette & pal )
     */
-    QCommonStyle * obj = qobject_cast<QCommonStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QCommonStyle *obj = qobject_cast<QCommonStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->polish( *PQPALETTE(1) );
+      obj->polish(*PQPALETTE(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR(1) && ISQAPPLICATION(1) )
+  else if (ISNUMPAR(1) && ISQAPPLICATION(1))
   {
     /*
     virtual void polish( QApplication * app )
     */
-    QCommonStyle * obj = qobject_cast<QCommonStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QCommonStyle *obj = qobject_cast<QCommonStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->polish( PQAPPLICATION(1) );
+      obj->polish(PQAPPLICATION(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR(1) && ISQWIDGET(1) )
+  else if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
     virtual void polish( QWidget * widget )
     */
-    QCommonStyle * obj = qobject_cast<QCommonStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QCommonStyle *obj = qobject_cast<QCommonStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->polish( PQWIDGET(1) );
+      obj->polish(PQWIDGET(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -296,19 +303,21 @@ HB_FUNC_STATIC( QCOMMONSTYLE_POLISH )
 }
 
 /*
-virtual QSize sizeFromContents( QStyle::ContentsType ct, const QStyleOption * opt, const QSize & csz, const QWidget * widget = 0 ) const
+virtual QSize sizeFromContents( QStyle::ContentsType ct, const QStyleOption * opt, const QSize & csz, const QWidget *
+widget = 0 ) const
 */
-HB_FUNC_STATIC( QCOMMONSTYLE_SIZEFROMCONTENTS )
+HB_FUNC_STATIC(QCOMMONSTYLE_SIZEFROMCONTENTS)
 {
-  QCommonStyle * obj = qobject_cast<QCommonStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QCommonStyle *obj = qobject_cast<QCommonStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQSIZE(3) && (ISQWIDGET(4) || HB_ISNIL(4)) )
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && ISQSIZE(3) && (ISQWIDGET(4) || HB_ISNIL(4)))
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeFromContents( ( QStyle::ContentsType ) hb_parni(1), PQSTYLEOPTION(2), *PQSIZE(3), OPQWIDGET( 4, 0 )) );
+      QSize *ptr = new QSize(
+          obj->sizeFromContents((QStyle::ContentsType)hb_parni(1), PQSTYLEOPTION(2), *PQSIZE(3), OPQWIDGET(4, 0)));
       Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -321,19 +330,22 @@ HB_FUNC_STATIC( QCOMMONSTYLE_SIZEFROMCONTENTS )
 }
 
 /*
-virtual QPixmap standardPixmap( QStyle::StandardPixmap sp, const QStyleOption * option = 0, const QWidget * widget = 0 ) const
+virtual QPixmap standardPixmap( QStyle::StandardPixmap sp, const QStyleOption * option = 0, const QWidget * widget = 0 )
+const
 */
-HB_FUNC_STATIC( QCOMMONSTYLE_STANDARDPIXMAP )
+HB_FUNC_STATIC(QCOMMONSTYLE_STANDARDPIXMAP)
 {
-  QCommonStyle * obj = qobject_cast<QCommonStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QCommonStyle *obj = qobject_cast<QCommonStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 3) && HB_ISNUM(1) && (ISQSTYLEOPTION(2) || HB_ISNIL(2)) && (ISQWIDGET(3) || HB_ISNIL(3)) )
+    if (ISBETWEEN(1, 3) && HB_ISNUM(1) && (ISQSTYLEOPTION(2) || HB_ISNIL(2)) && (ISQWIDGET(3) || HB_ISNIL(3)))
     {
 #endif
-      QPixmap * ptr = new QPixmap( obj->standardPixmap( ( QStyle::StandardPixmap ) hb_parni(1), HB_ISNIL(2) ? 0 : static_cast<QStyleOption*>( Qt4xHb::itemGetPtr(2) ), OPQWIDGET( 3, 0 )) );
+      QPixmap *ptr = new QPixmap(
+          obj->standardPixmap((QStyle::StandardPixmap)hb_parni(1),
+                              HB_ISNIL(2) ? 0 : static_cast<QStyleOption *>(Qt4xHb::itemGetPtr(2)), OPQWIDGET(3, 0)));
       Qt4xHb::createReturnClass(ptr, "QPIXMAP", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -346,19 +358,23 @@ HB_FUNC_STATIC( QCOMMONSTYLE_STANDARDPIXMAP )
 }
 
 /*
-virtual int styleHint( QStyle::StyleHint sh, const QStyleOption * opt = 0, const QWidget * widget = 0, QStyleHintReturn * hret = 0 ) const
+virtual int styleHint( QStyle::StyleHint sh, const QStyleOption * opt = 0, const QWidget * widget = 0, QStyleHintReturn
+* hret = 0 ) const
 */
-HB_FUNC_STATIC( QCOMMONSTYLE_STYLEHINT )
+HB_FUNC_STATIC(QCOMMONSTYLE_STYLEHINT)
 {
-  QCommonStyle * obj = qobject_cast<QCommonStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QCommonStyle *obj = qobject_cast<QCommonStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 4) && HB_ISNUM(1) && (ISQSTYLEOPTION(2) || HB_ISNIL(2)) && (ISQWIDGET(3) || HB_ISNIL(3)) && (ISQSTYLEHINTRETURN(4) || HB_ISNIL(4)) )
+    if (ISBETWEEN(1, 4) && HB_ISNUM(1) && (ISQSTYLEOPTION(2) || HB_ISNIL(2)) && (ISQWIDGET(3) || HB_ISNIL(3)) &&
+        (ISQSTYLEHINTRETURN(4) || HB_ISNIL(4)))
     {
 #endif
-      RINT( obj->styleHint( ( QStyle::StyleHint ) hb_parni(1), HB_ISNIL(2) ? 0 : static_cast<QStyleOption*>( Qt4xHb::itemGetPtr(2) ), OPQWIDGET( 3, 0 ), HB_ISNIL(4) ? 0 : static_cast<QStyleHintReturn*>( Qt4xHb::itemGetPtr(4)) ) );
+      RINT(obj->styleHint((QStyle::StyleHint)hb_parni(1),
+                          HB_ISNIL(2) ? 0 : static_cast<QStyleOption *>(Qt4xHb::itemGetPtr(2)), OPQWIDGET(3, 0),
+                          HB_ISNIL(4) ? 0 : static_cast<QStyleHintReturn *>(Qt4xHb::itemGetPtr(4))));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -370,19 +386,21 @@ HB_FUNC_STATIC( QCOMMONSTYLE_STYLEHINT )
 }
 
 /*
-virtual QRect subControlRect( QStyle::ComplexControl cc, const QStyleOptionComplex * opt, QStyle::SubControl sc, const QWidget * widget = 0 ) const
+virtual QRect subControlRect( QStyle::ComplexControl cc, const QStyleOptionComplex * opt, QStyle::SubControl sc, const
+QWidget * widget = 0 ) const
 */
-HB_FUNC_STATIC( QCOMMONSTYLE_SUBCONTROLRECT )
+HB_FUNC_STATIC(QCOMMONSTYLE_SUBCONTROLRECT)
 {
-  QCommonStyle * obj = qobject_cast<QCommonStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QCommonStyle *obj = qobject_cast<QCommonStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && HB_ISNUM(3) && (ISQWIDGET(4) || HB_ISNIL(4)) )
+    if (ISBETWEEN(3, 4) && HB_ISNUM(1) && ISQSTYLEOPTIONCOMPLEX(2) && HB_ISNUM(3) && (ISQWIDGET(4) || HB_ISNIL(4)))
     {
 #endif
-      QRect * ptr = new QRect( obj->subControlRect( ( QStyle::ComplexControl ) hb_parni(1), PQSTYLEOPTIONCOMPLEX(2), ( QStyle::SubControl ) hb_parni(3), OPQWIDGET( 4, 0 )) );
+      QRect *ptr = new QRect(obj->subControlRect((QStyle::ComplexControl)hb_parni(1), PQSTYLEOPTIONCOMPLEX(2),
+                                                 (QStyle::SubControl)hb_parni(3), OPQWIDGET(4, 0)));
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -397,17 +415,17 @@ HB_FUNC_STATIC( QCOMMONSTYLE_SUBCONTROLRECT )
 /*
 virtual QRect subElementRect( QStyle::SubElement sr, const QStyleOption * opt, const QWidget * widget = 0 ) const
 */
-HB_FUNC_STATIC( QCOMMONSTYLE_SUBELEMENTRECT )
+HB_FUNC_STATIC(QCOMMONSTYLE_SUBELEMENTRECT)
 {
-  QCommonStyle * obj = qobject_cast<QCommonStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QCommonStyle *obj = qobject_cast<QCommonStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && (ISQWIDGET(3) || HB_ISNIL(3)) )
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQSTYLEOPTION(2) && (ISQWIDGET(3) || HB_ISNIL(3)))
     {
 #endif
-      QRect * ptr = new QRect( obj->subElementRect( ( QStyle::SubElement ) hb_parni(1), PQSTYLEOPTION(2), OPQWIDGET( 3, 0 )) );
+      QRect *ptr = new QRect(obj->subElementRect((QStyle::SubElement)hb_parni(1), PQSTYLEOPTION(2), OPQWIDGET(3, 0)));
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -419,32 +437,32 @@ HB_FUNC_STATIC( QCOMMONSTYLE_SUBELEMENTRECT )
   }
 }
 
-HB_FUNC_STATIC( QCOMMONSTYLE_UNPOLISH )
+HB_FUNC_STATIC(QCOMMONSTYLE_UNPOLISH)
 {
-  if( ISNUMPAR(1) && ISQWIDGET(1) )
+  if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
     virtual void unpolish( QWidget * widget )
     */
-    QCommonStyle * obj = qobject_cast<QCommonStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QCommonStyle *obj = qobject_cast<QCommonStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->unpolish( PQWIDGET(1) );
+      obj->unpolish(PQWIDGET(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR(1) && ISQAPPLICATION(1) )
+  else if (ISNUMPAR(1) && ISQAPPLICATION(1))
   {
     /*
     virtual void unpolish( QApplication * application )
     */
-    QCommonStyle * obj = qobject_cast<QCommonStyle*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QCommonStyle *obj = qobject_cast<QCommonStyle *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->unpolish( PQAPPLICATION(1) );
+      obj->unpolish(PQAPPLICATION(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());

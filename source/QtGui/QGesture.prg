@@ -53,14 +53,14 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-/*
-QGesture( QObject * parent = 0 )
-*/
-HB_FUNC_STATIC( QGESTURE_NEW )
+    /*
+    QGesture( QObject * parent = 0 )
+    */
+HB_FUNC_STATIC(QGESTURE_NEW)
 {
-  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QGesture * obj = new QGesture( OPQOBJECT( 1, 0 ) );
+    QGesture *obj = new QGesture(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -69,11 +69,11 @@ HB_FUNC_STATIC( QGESTURE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGESTURE_DELETE )
+HB_FUNC_STATIC(QGESTURE_DELETE)
 {
-  QGesture * obj = qobject_cast<QGesture*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGesture *obj = qobject_cast<QGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -90,17 +90,17 @@ HB_FUNC_STATIC( QGESTURE_DELETE )
 /*
 QGesture::GestureCancelPolicy gestureCancelPolicy() const
 */
-HB_FUNC_STATIC( QGESTURE_GESTURECANCELPOLICY )
+HB_FUNC_STATIC(QGESTURE_GESTURECANCELPOLICY)
 {
-  QGesture * obj = qobject_cast<QGesture*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGesture *obj = qobject_cast<QGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->gestureCancelPolicy() );
+      RENUM(obj->gestureCancelPolicy());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -114,17 +114,17 @@ HB_FUNC_STATIC( QGESTURE_GESTURECANCELPOLICY )
 /*
 Qt::GestureType gestureType() const
 */
-HB_FUNC_STATIC( QGESTURE_GESTURETYPE )
+HB_FUNC_STATIC(QGESTURE_GESTURETYPE)
 {
-  QGesture * obj = qobject_cast<QGesture*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGesture *obj = qobject_cast<QGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->gestureType() );
+      RENUM(obj->gestureType());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -138,17 +138,17 @@ HB_FUNC_STATIC( QGESTURE_GESTURETYPE )
 /*
 bool hasHotSpot() const
 */
-HB_FUNC_STATIC( QGESTURE_HASHOTSPOT )
+HB_FUNC_STATIC(QGESTURE_HASHOTSPOT)
 {
-  QGesture * obj = qobject_cast<QGesture*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGesture *obj = qobject_cast<QGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasHotSpot() );
+      RBOOL(obj->hasHotSpot());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,17 +162,17 @@ HB_FUNC_STATIC( QGESTURE_HASHOTSPOT )
 /*
 QPointF hotSpot() const
 */
-HB_FUNC_STATIC( QGESTURE_HOTSPOT )
+HB_FUNC_STATIC(QGESTURE_HOTSPOT)
 {
-  QGesture * obj = qobject_cast<QGesture*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGesture *obj = qobject_cast<QGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPointF * ptr = new QPointF( obj->hotSpot() );
+      QPointF *ptr = new QPointF(obj->hotSpot());
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -187,17 +187,17 @@ HB_FUNC_STATIC( QGESTURE_HOTSPOT )
 /*
 void setGestureCancelPolicy( QGesture::GestureCancelPolicy policy )
 */
-HB_FUNC_STATIC( QGESTURE_SETGESTURECANCELPOLICY )
+HB_FUNC_STATIC(QGESTURE_SETGESTURECANCELPOLICY)
 {
-  QGesture * obj = qobject_cast<QGesture*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGesture *obj = qobject_cast<QGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setGestureCancelPolicy( ( QGesture::GestureCancelPolicy ) hb_parni(1) );
+      obj->setGestureCancelPolicy((QGesture::GestureCancelPolicy)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -213,17 +213,17 @@ HB_FUNC_STATIC( QGESTURE_SETGESTURECANCELPOLICY )
 /*
 void setHotSpot( const QPointF & value )
 */
-HB_FUNC_STATIC( QGESTURE_SETHOTSPOT )
+HB_FUNC_STATIC(QGESTURE_SETHOTSPOT)
 {
-  QGesture * obj = qobject_cast<QGesture*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGesture *obj = qobject_cast<QGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINTF(1) )
+    if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setHotSpot( *PQPOINTF(1) );
+      obj->setHotSpot(*PQPOINTF(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,17 +239,17 @@ HB_FUNC_STATIC( QGESTURE_SETHOTSPOT )
 /*
 Qt::GestureState state() const
 */
-HB_FUNC_STATIC( QGESTURE_STATE )
+HB_FUNC_STATIC(QGESTURE_STATE)
 {
-  QGesture * obj = qobject_cast<QGesture*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGesture *obj = qobject_cast<QGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->state() );
+      RENUM(obj->state());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,14 +263,14 @@ HB_FUNC_STATIC( QGESTURE_STATE )
 /*
 void unsetHotSpot()
 */
-HB_FUNC_STATIC( QGESTURE_UNSETHOTSPOT )
+HB_FUNC_STATIC(QGESTURE_UNSETHOTSPOT)
 {
-  QGesture * obj = qobject_cast<QGesture*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGesture *obj = qobject_cast<QGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->unsetHotSpot();

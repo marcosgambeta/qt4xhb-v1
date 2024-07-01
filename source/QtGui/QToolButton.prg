@@ -67,14 +67,14 @@ RETURN
 #include <QtGui/QAction>
 #include <QtGui/QMenu>
 
-/*
-QToolButton( QWidget * parent = 0 )
-*/
-HB_FUNC_STATIC( QTOOLBUTTON_NEW )
+    /*
+    QToolButton( QWidget * parent = 0 )
+    */
+HB_FUNC_STATIC(QTOOLBUTTON_NEW)
 {
-  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    QToolButton * obj = new QToolButton( OPQWIDGET( 1, 0 ) );
+    QToolButton *obj = new QToolButton(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -83,11 +83,11 @@ HB_FUNC_STATIC( QTOOLBUTTON_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTOOLBUTTON_DELETE )
+HB_FUNC_STATIC(QTOOLBUTTON_DELETE)
 {
-  QToolButton * obj = qobject_cast<QToolButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -104,17 +104,17 @@ HB_FUNC_STATIC( QTOOLBUTTON_DELETE )
 /*
 Qt::ArrowType arrowType() const
 */
-HB_FUNC_STATIC( QTOOLBUTTON_ARROWTYPE )
+HB_FUNC_STATIC(QTOOLBUTTON_ARROWTYPE)
 {
-  QToolButton * obj = qobject_cast<QToolButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->arrowType() );
+      RENUM(obj->arrowType());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,17 +128,17 @@ HB_FUNC_STATIC( QTOOLBUTTON_ARROWTYPE )
 /*
 bool autoRaise() const
 */
-HB_FUNC_STATIC( QTOOLBUTTON_AUTORAISE )
+HB_FUNC_STATIC(QTOOLBUTTON_AUTORAISE)
 {
-  QToolButton * obj = qobject_cast<QToolButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->autoRaise() );
+      RBOOL(obj->autoRaise());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,17 +152,17 @@ HB_FUNC_STATIC( QTOOLBUTTON_AUTORAISE )
 /*
 QAction * defaultAction() const
 */
-HB_FUNC_STATIC( QTOOLBUTTON_DEFAULTACTION )
+HB_FUNC_STATIC(QTOOLBUTTON_DEFAULTACTION)
 {
-  QToolButton * obj = qobject_cast<QToolButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAction * ptr = obj->defaultAction();
+      QAction *ptr = obj->defaultAction();
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -177,17 +177,17 @@ HB_FUNC_STATIC( QTOOLBUTTON_DEFAULTACTION )
 /*
 QMenu * menu() const
 */
-HB_FUNC_STATIC( QTOOLBUTTON_MENU )
+HB_FUNC_STATIC(QTOOLBUTTON_MENU)
 {
-  QToolButton * obj = qobject_cast<QToolButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QMenu * ptr = obj->menu();
+      QMenu *ptr = obj->menu();
       Qt4xHb::createReturnQObjectClass(ptr, "QMENU");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -202,17 +202,17 @@ HB_FUNC_STATIC( QTOOLBUTTON_MENU )
 /*
 QToolButton::ToolButtonPopupMode popupMode() const
 */
-HB_FUNC_STATIC( QTOOLBUTTON_POPUPMODE )
+HB_FUNC_STATIC(QTOOLBUTTON_POPUPMODE)
 {
-  QToolButton * obj = qobject_cast<QToolButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->popupMode() );
+      RENUM(obj->popupMode());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -226,17 +226,17 @@ HB_FUNC_STATIC( QTOOLBUTTON_POPUPMODE )
 /*
 void setArrowType( Qt::ArrowType type )
 */
-HB_FUNC_STATIC( QTOOLBUTTON_SETARROWTYPE )
+HB_FUNC_STATIC(QTOOLBUTTON_SETARROWTYPE)
 {
-  QToolButton * obj = qobject_cast<QToolButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setArrowType( ( Qt::ArrowType ) hb_parni(1) );
+      obj->setArrowType((Qt::ArrowType)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -252,17 +252,17 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETARROWTYPE )
 /*
 void setAutoRaise( bool enable )
 */
-HB_FUNC_STATIC( QTOOLBUTTON_SETAUTORAISE )
+HB_FUNC_STATIC(QTOOLBUTTON_SETAUTORAISE)
 {
-  QToolButton * obj = qobject_cast<QToolButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setAutoRaise( PBOOL(1) );
+      obj->setAutoRaise(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -278,17 +278,17 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETAUTORAISE )
 /*
 void setMenu( QMenu * menu )
 */
-HB_FUNC_STATIC( QTOOLBUTTON_SETMENU )
+HB_FUNC_STATIC(QTOOLBUTTON_SETMENU)
 {
-  QToolButton * obj = qobject_cast<QToolButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQMENU(1) )
+    if (ISNUMPAR(1) && ISQMENU(1))
     {
 #endif
-      obj->setMenu( PQMENU(1) );
+      obj->setMenu(PQMENU(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -304,17 +304,17 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETMENU )
 /*
 void setPopupMode( QToolButton::ToolButtonPopupMode mode )
 */
-HB_FUNC_STATIC( QTOOLBUTTON_SETPOPUPMODE )
+HB_FUNC_STATIC(QTOOLBUTTON_SETPOPUPMODE)
 {
-  QToolButton * obj = qobject_cast<QToolButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPopupMode( ( QToolButton::ToolButtonPopupMode ) hb_parni(1) );
+      obj->setPopupMode((QToolButton::ToolButtonPopupMode)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -330,17 +330,17 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETPOPUPMODE )
 /*
 Qt::ToolButtonStyle toolButtonStyle() const
 */
-HB_FUNC_STATIC( QTOOLBUTTON_TOOLBUTTONSTYLE )
+HB_FUNC_STATIC(QTOOLBUTTON_TOOLBUTTONSTYLE)
 {
-  QToolButton * obj = qobject_cast<QToolButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->toolButtonStyle() );
+      RENUM(obj->toolButtonStyle());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -354,17 +354,17 @@ HB_FUNC_STATIC( QTOOLBUTTON_TOOLBUTTONSTYLE )
 /*
 virtual QSize minimumSizeHint() const
 */
-HB_FUNC_STATIC( QTOOLBUTTON_MINIMUMSIZEHINT )
+HB_FUNC_STATIC(QTOOLBUTTON_MINIMUMSIZEHINT)
 {
-  QToolButton * obj = qobject_cast<QToolButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSize * ptr = new QSize( obj->minimumSizeHint() );
+      QSize *ptr = new QSize(obj->minimumSizeHint());
       Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -379,17 +379,17 @@ HB_FUNC_STATIC( QTOOLBUTTON_MINIMUMSIZEHINT )
 /*
 virtual QSize sizeHint() const
 */
-HB_FUNC_STATIC( QTOOLBUTTON_SIZEHINT )
+HB_FUNC_STATIC(QTOOLBUTTON_SIZEHINT)
 {
-  QToolButton * obj = qobject_cast<QToolButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint() );
+      QSize *ptr = new QSize(obj->sizeHint());
       Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -404,17 +404,17 @@ HB_FUNC_STATIC( QTOOLBUTTON_SIZEHINT )
 /*
 void setDefaultAction( QAction * action )
 */
-HB_FUNC_STATIC( QTOOLBUTTON_SETDEFAULTACTION )
+HB_FUNC_STATIC(QTOOLBUTTON_SETDEFAULTACTION)
 {
-  QToolButton * obj = qobject_cast<QToolButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQACTION(1) )
+    if (ISNUMPAR(1) && ISQACTION(1))
     {
 #endif
-      obj->setDefaultAction( PQACTION(1) );
+      obj->setDefaultAction(PQACTION(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -430,17 +430,17 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETDEFAULTACTION )
 /*
 void setToolButtonStyle( Qt::ToolButtonStyle style )
 */
-HB_FUNC_STATIC( QTOOLBUTTON_SETTOOLBUTTONSTYLE )
+HB_FUNC_STATIC(QTOOLBUTTON_SETTOOLBUTTONSTYLE)
 {
-  QToolButton * obj = qobject_cast<QToolButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setToolButtonStyle( ( Qt::ToolButtonStyle ) hb_parni(1) );
+      obj->setToolButtonStyle((Qt::ToolButtonStyle)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -456,14 +456,14 @@ HB_FUNC_STATIC( QTOOLBUTTON_SETTOOLBUTTONSTYLE )
 /*
 void showMenu()
 */
-HB_FUNC_STATIC( QTOOLBUTTON_SHOWMENU )
+HB_FUNC_STATIC(QTOOLBUTTON_SHOWMENU)
 {
-  QToolButton * obj = qobject_cast<QToolButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QToolButton *obj = qobject_cast<QToolButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->showMenu();
@@ -479,9 +479,9 @@ HB_FUNC_STATIC( QTOOLBUTTON_SHOWMENU )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QToolButtonSlots_connect_signal(const QString & signal, const QString & slot);
+void QToolButtonSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QTOOLBUTTON_ONTRIGGERED )
+HB_FUNC_STATIC(QTOOLBUTTON_ONTRIGGERED)
 {
   QToolButtonSlots_connect_signal("triggered(QAction*)", "triggered(QAction*)");
 }

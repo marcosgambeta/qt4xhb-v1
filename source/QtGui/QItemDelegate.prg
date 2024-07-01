@@ -49,14 +49,14 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-/*
-QItemDelegate( QObject * parent = 0 )
-*/
-HB_FUNC_STATIC( QITEMDELEGATE_NEW )
+    /*
+    QItemDelegate( QObject * parent = 0 )
+    */
+HB_FUNC_STATIC(QITEMDELEGATE_NEW)
 {
-  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
-    QItemDelegate * obj = new QItemDelegate( OPQOBJECT( 1, 0 ) );
+    QItemDelegate *obj = new QItemDelegate(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -65,11 +65,11 @@ HB_FUNC_STATIC( QITEMDELEGATE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QITEMDELEGATE_DELETE )
+HB_FUNC_STATIC(QITEMDELEGATE_DELETE)
 {
-  QItemDelegate * obj = qobject_cast<QItemDelegate*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QItemDelegate *obj = qobject_cast<QItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -86,17 +86,17 @@ HB_FUNC_STATIC( QITEMDELEGATE_DELETE )
 /*
 bool hasClipping() const
 */
-HB_FUNC_STATIC( QITEMDELEGATE_HASCLIPPING )
+HB_FUNC_STATIC(QITEMDELEGATE_HASCLIPPING)
 {
-  QItemDelegate * obj = qobject_cast<QItemDelegate*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QItemDelegate *obj = qobject_cast<QItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasClipping() );
+      RBOOL(obj->hasClipping());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -110,17 +110,17 @@ HB_FUNC_STATIC( QITEMDELEGATE_HASCLIPPING )
 /*
 QItemEditorFactory * itemEditorFactory() const
 */
-HB_FUNC_STATIC( QITEMDELEGATE_ITEMEDITORFACTORY )
+HB_FUNC_STATIC(QITEMDELEGATE_ITEMEDITORFACTORY)
 {
-  QItemDelegate * obj = qobject_cast<QItemDelegate*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QItemDelegate *obj = qobject_cast<QItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QItemEditorFactory * ptr = obj->itemEditorFactory();
+      QItemEditorFactory *ptr = obj->itemEditorFactory();
       Qt4xHb::createReturnClass(ptr, "QITEMEDITORFACTORY", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -135,17 +135,17 @@ HB_FUNC_STATIC( QITEMDELEGATE_ITEMEDITORFACTORY )
 /*
 void setClipping( bool clip )
 */
-HB_FUNC_STATIC( QITEMDELEGATE_SETCLIPPING )
+HB_FUNC_STATIC(QITEMDELEGATE_SETCLIPPING)
 {
-  QItemDelegate * obj = qobject_cast<QItemDelegate*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QItemDelegate *obj = qobject_cast<QItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setClipping( PBOOL(1) );
+      obj->setClipping(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,17 +161,17 @@ HB_FUNC_STATIC( QITEMDELEGATE_SETCLIPPING )
 /*
 void setItemEditorFactory( QItemEditorFactory * factory )
 */
-HB_FUNC_STATIC( QITEMDELEGATE_SETITEMEDITORFACTORY )
+HB_FUNC_STATIC(QITEMDELEGATE_SETITEMEDITORFACTORY)
 {
-  QItemDelegate * obj = qobject_cast<QItemDelegate*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QItemDelegate *obj = qobject_cast<QItemDelegate *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQITEMEDITORFACTORY(1) )
+    if (ISNUMPAR(1) && ISQITEMEDITORFACTORY(1))
     {
 #endif
-      obj->setItemEditorFactory( PQITEMEDITORFACTORY(1) );
+      obj->setItemEditorFactory(PQITEMEDITORFACTORY(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

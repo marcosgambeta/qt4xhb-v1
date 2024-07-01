@@ -42,14 +42,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QDragLeaveEvent()
-*/
-HB_FUNC_STATIC( QDRAGLEAVEEVENT_NEW )
+    /*
+    QDragLeaveEvent()
+    */
+HB_FUNC_STATIC(QDRAGLEAVEEVENT_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QDragLeaveEvent * obj = new QDragLeaveEvent();
+    QDragLeaveEvent *obj = new QDragLeaveEvent();
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -58,11 +58,11 @@ HB_FUNC_STATIC( QDRAGLEAVEEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDRAGLEAVEEVENT_DELETE )
+HB_FUNC_STATIC(QDRAGLEAVEEVENT_DELETE)
 {
-  QDragLeaveEvent * obj = static_cast<QDragLeaveEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDragLeaveEvent *obj = static_cast<QDragLeaveEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;

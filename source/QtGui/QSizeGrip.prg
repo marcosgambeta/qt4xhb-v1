@@ -47,14 +47,14 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-/*
-QSizeGrip( QWidget * parent )
-*/
-HB_FUNC_STATIC( QSIZEGRIP_NEW )
+    /*
+    QSizeGrip( QWidget * parent )
+    */
+HB_FUNC_STATIC(QSIZEGRIP_NEW)
 {
-  if( ISNUMPAR(1) && ISQWIDGET(1) )
+  if (ISNUMPAR(1) && ISQWIDGET(1))
   {
-    QSizeGrip * obj = new QSizeGrip( PQWIDGET(1) );
+    QSizeGrip *obj = new QSizeGrip(PQWIDGET(1));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -63,11 +63,11 @@ HB_FUNC_STATIC( QSIZEGRIP_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSIZEGRIP_DELETE )
+HB_FUNC_STATIC(QSIZEGRIP_DELETE)
 {
-  QSizeGrip * obj = qobject_cast<QSizeGrip*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSizeGrip *obj = qobject_cast<QSizeGrip *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -84,17 +84,17 @@ HB_FUNC_STATIC( QSIZEGRIP_DELETE )
 /*
 virtual void setVisible( bool visible )
 */
-HB_FUNC_STATIC( QSIZEGRIP_SETVISIBLE )
+HB_FUNC_STATIC(QSIZEGRIP_SETVISIBLE)
 {
-  QSizeGrip * obj = qobject_cast<QSizeGrip*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSizeGrip *obj = qobject_cast<QSizeGrip *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setVisible( PBOOL(1) );
+      obj->setVisible(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -110,17 +110,17 @@ HB_FUNC_STATIC( QSIZEGRIP_SETVISIBLE )
 /*
 virtual QSize sizeHint() const
 */
-HB_FUNC_STATIC( QSIZEGRIP_SIZEHINT )
+HB_FUNC_STATIC(QSIZEGRIP_SIZEHINT)
 {
-  QSizeGrip * obj = qobject_cast<QSizeGrip*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSizeGrip *obj = qobject_cast<QSizeGrip *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint() );
+      QSize *ptr = new QSize(obj->sizeHint());
       Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

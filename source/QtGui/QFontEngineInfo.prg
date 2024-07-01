@@ -61,30 +61,30 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QFONTENGINEINFO_NEW )
+HB_FUNC_STATIC(QFONTENGINEINFO_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QFontEngineInfo()
     */
-    QFontEngineInfo * obj = new QFontEngineInfo();
+    QFontEngineInfo *obj = new QFontEngineInfo();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
     QFontEngineInfo( const QString & family )
     */
-    QFontEngineInfo * obj = new QFontEngineInfo( PQSTRING(1) );
+    QFontEngineInfo *obj = new QFontEngineInfo(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQFONTENGINEINFO(1) )
+  else if (ISNUMPAR(1) && ISQFONTENGINEINFO(1))
   {
     /*
     QFontEngineInfo( const QFontEngineInfo & other )
     */
-    QFontEngineInfo * obj = new QFontEngineInfo( *PQFONTENGINEINFO(1) );
+    QFontEngineInfo *obj = new QFontEngineInfo(*PQFONTENGINEINFO(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -93,11 +93,11 @@ HB_FUNC_STATIC( QFONTENGINEINFO_NEW )
   }
 }
 
-HB_FUNC_STATIC( QFONTENGINEINFO_DELETE )
+HB_FUNC_STATIC(QFONTENGINEINFO_DELETE)
 {
-  QFontEngineInfo * obj = static_cast<QFontEngineInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QFontEngineInfo *obj = static_cast<QFontEngineInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -112,17 +112,17 @@ HB_FUNC_STATIC( QFONTENGINEINFO_DELETE )
 /*
 QString family() const
 */
-HB_FUNC_STATIC( QFONTENGINEINFO_FAMILY )
+HB_FUNC_STATIC(QFONTENGINEINFO_FAMILY)
 {
-  QFontEngineInfo * obj = static_cast<QFontEngineInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QFontEngineInfo *obj = static_cast<QFontEngineInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->family() );
+      RQSTRING(obj->family());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -136,17 +136,17 @@ HB_FUNC_STATIC( QFONTENGINEINFO_FAMILY )
 /*
 qreal pixelSize() const
 */
-HB_FUNC_STATIC( QFONTENGINEINFO_PIXELSIZE )
+HB_FUNC_STATIC(QFONTENGINEINFO_PIXELSIZE)
 {
-  QFontEngineInfo * obj = static_cast<QFontEngineInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QFontEngineInfo *obj = static_cast<QFontEngineInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->pixelSize() );
+      RQREAL(obj->pixelSize());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -160,17 +160,17 @@ HB_FUNC_STATIC( QFONTENGINEINFO_PIXELSIZE )
 /*
 void setFamily( const QString & name )
 */
-HB_FUNC_STATIC( QFONTENGINEINFO_SETFAMILY )
+HB_FUNC_STATIC(QFONTENGINEINFO_SETFAMILY)
 {
-  QFontEngineInfo * obj = static_cast<QFontEngineInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QFontEngineInfo *obj = static_cast<QFontEngineInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setFamily( PQSTRING(1) );
+      obj->setFamily(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -186,17 +186,17 @@ HB_FUNC_STATIC( QFONTENGINEINFO_SETFAMILY )
 /*
 void setPixelSize( qreal size )
 */
-HB_FUNC_STATIC( QFONTENGINEINFO_SETPIXELSIZE )
+HB_FUNC_STATIC(QFONTENGINEINFO_SETPIXELSIZE)
 {
-  QFontEngineInfo * obj = static_cast<QFontEngineInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QFontEngineInfo *obj = static_cast<QFontEngineInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setPixelSize( PQREAL(1) );
+      obj->setPixelSize(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,17 +212,17 @@ HB_FUNC_STATIC( QFONTENGINEINFO_SETPIXELSIZE )
 /*
 void setStyle( QFont::Style style )
 */
-HB_FUNC_STATIC( QFONTENGINEINFO_SETSTYLE )
+HB_FUNC_STATIC(QFONTENGINEINFO_SETSTYLE)
 {
-  QFontEngineInfo * obj = static_cast<QFontEngineInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QFontEngineInfo *obj = static_cast<QFontEngineInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setStyle( ( QFont::Style ) hb_parni(1) );
+      obj->setStyle((QFont::Style)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -238,17 +238,17 @@ HB_FUNC_STATIC( QFONTENGINEINFO_SETSTYLE )
 /*
 void setWeight( int weight )
 */
-HB_FUNC_STATIC( QFONTENGINEINFO_SETWEIGHT )
+HB_FUNC_STATIC(QFONTENGINEINFO_SETWEIGHT)
 {
-  QFontEngineInfo * obj = static_cast<QFontEngineInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QFontEngineInfo *obj = static_cast<QFontEngineInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setWeight( PINT(1) );
+      obj->setWeight(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -264,24 +264,24 @@ HB_FUNC_STATIC( QFONTENGINEINFO_SETWEIGHT )
 /*
 void setWritingSystems( const QList<QFontDatabase::WritingSystem> & writingSystems )
 */
-HB_FUNC_STATIC( QFONTENGINEINFO_SETWRITINGSYSTEMS )
+HB_FUNC_STATIC(QFONTENGINEINFO_SETWRITINGSYSTEMS)
 {
-  QFontEngineInfo * obj = static_cast<QFontEngineInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QFontEngineInfo *obj = static_cast<QFontEngineInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
       QList<QFontDatabase::WritingSystem> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       const int nLen1 = hb_arrayLen(aList1);
-      for( int i1 = 0; i1 < nLen1; i1++ )
+      for (int i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << (QFontDatabase::WritingSystem) hb_arrayGetNI(aList1, i1+1);
+        par1 << (QFontDatabase::WritingSystem)hb_arrayGetNI(aList1, i1 + 1);
       }
-      obj->setWritingSystems( par1 );
+      obj->setWritingSystems(par1);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -297,17 +297,17 @@ HB_FUNC_STATIC( QFONTENGINEINFO_SETWRITINGSYSTEMS )
 /*
 QFont::Style style() const
 */
-HB_FUNC_STATIC( QFONTENGINEINFO_STYLE )
+HB_FUNC_STATIC(QFONTENGINEINFO_STYLE)
 {
-  QFontEngineInfo * obj = static_cast<QFontEngineInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QFontEngineInfo *obj = static_cast<QFontEngineInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->style() );
+      RENUM(obj->style());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -321,17 +321,17 @@ HB_FUNC_STATIC( QFONTENGINEINFO_STYLE )
 /*
 int weight() const
 */
-HB_FUNC_STATIC( QFONTENGINEINFO_WEIGHT )
+HB_FUNC_STATIC(QFONTENGINEINFO_WEIGHT)
 {
-  QFontEngineInfo * obj = static_cast<QFontEngineInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QFontEngineInfo *obj = static_cast<QFontEngineInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->weight() );
+      RINT(obj->weight());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -345,23 +345,23 @@ HB_FUNC_STATIC( QFONTENGINEINFO_WEIGHT )
 /*
 QList<QFontDatabase::WritingSystem> writingSystems() const
 */
-HB_FUNC_STATIC( QFONTENGINEINFO_WRITINGSYSTEMS )
+HB_FUNC_STATIC(QFONTENGINEINFO_WRITINGSYSTEMS)
 {
-  QFontEngineInfo * obj = static_cast<QFontEngineInfo*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QFontEngineInfo *obj = static_cast<QFontEngineInfo *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<QFontDatabase::WritingSystem> list = obj->writingSystems();
       PHB_ITEM pArray = hb_itemArrayNew(0);
       const int count = list.count();
-      for( int i = 0; i < count; i++ )
+      for (int i = 0; i < count; i++)
       {
-        PHB_ITEM pItem = hb_itemPutNI( NULL, static_cast<int>(list[i]) );
-        hb_arrayAddForward( pArray, pItem );
+        PHB_ITEM pItem = hb_itemPutNI(NULL, static_cast<int>(list[i]));
+        hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
       hb_itemReturnRelease(pArray);
@@ -375,11 +375,11 @@ HB_FUNC_STATIC( QFONTENGINEINFO_WRITINGSYSTEMS )
   }
 }
 
-HB_FUNC_STATIC( QFONTENGINEINFO_NEWFROM )
+HB_FUNC_STATIC(QFONTENGINEINFO_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -388,7 +388,7 @@ HB_FUNC_STATIC( QFONTENGINEINFO_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -405,26 +405,26 @@ HB_FUNC_STATIC( QFONTENGINEINFO_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QFONTENGINEINFO_NEWFROMOBJECT )
+HB_FUNC_STATIC(QFONTENGINEINFO_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QFONTENGINEINFO_NEWFROM );
+  HB_FUNC_EXEC(QFONTENGINEINFO_NEWFROM);
 }
 
-HB_FUNC_STATIC( QFONTENGINEINFO_NEWFROMPOINTER )
+HB_FUNC_STATIC(QFONTENGINEINFO_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QFONTENGINEINFO_NEWFROM );
+  HB_FUNC_EXEC(QFONTENGINEINFO_NEWFROM);
 }
 
-HB_FUNC_STATIC( QFONTENGINEINFO_SELFDESTRUCTION )
+HB_FUNC_STATIC(QFONTENGINEINFO_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QFONTENGINEINFO_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QFONTENGINEINFO_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

@@ -42,14 +42,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QShowEvent()
-*/
-HB_FUNC_STATIC( QSHOWEVENT_NEW )
+    /*
+    QShowEvent()
+    */
+HB_FUNC_STATIC(QSHOWEVENT_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QShowEvent * obj = new QShowEvent();
+    QShowEvent *obj = new QShowEvent();
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -58,11 +58,11 @@ HB_FUNC_STATIC( QSHOWEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSHOWEVENT_DELETE )
+HB_FUNC_STATIC(QSHOWEVENT_DELETE)
 {
-  QShowEvent * obj = static_cast<QShowEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QShowEvent *obj = static_cast<QShowEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;

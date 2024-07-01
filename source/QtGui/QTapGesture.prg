@@ -46,11 +46,11 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-HB_FUNC_STATIC( QTAPGESTURE_DELETE )
+HB_FUNC_STATIC(QTAPGESTURE_DELETE)
 {
-  QTapGesture * obj = qobject_cast<QTapGesture*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTapGesture *obj = qobject_cast<QTapGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -67,17 +67,17 @@ HB_FUNC_STATIC( QTAPGESTURE_DELETE )
 /*
 QPointF position() const
 */
-HB_FUNC_STATIC( QTAPGESTURE_POSITION )
+HB_FUNC_STATIC(QTAPGESTURE_POSITION)
 {
-  QTapGesture * obj = qobject_cast<QTapGesture*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTapGesture *obj = qobject_cast<QTapGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPointF * ptr = new QPointF( obj->position() );
+      QPointF *ptr = new QPointF(obj->position());
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -92,17 +92,17 @@ HB_FUNC_STATIC( QTAPGESTURE_POSITION )
 /*
 void setPosition( const QPointF & pos )
 */
-HB_FUNC_STATIC( QTAPGESTURE_SETPOSITION )
+HB_FUNC_STATIC(QTAPGESTURE_SETPOSITION)
 {
-  QTapGesture * obj = qobject_cast<QTapGesture*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTapGesture *obj = qobject_cast<QTapGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINTF(1) )
+    if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      obj->setPosition( *PQPOINTF(1) );
+      obj->setPosition(*PQPOINTF(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

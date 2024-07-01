@@ -54,16 +54,16 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-static bool isActive()
-*/
-HB_FUNC_STATIC( QACCESSIBLE_ISACTIVE )
+    /*
+    static bool isActive()
+    */
+HB_FUNC_STATIC(QACCESSIBLE_ISACTIVE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RBOOL( QAccessible::isActive() );
+    RBOOL(QAccessible::isActive());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -76,13 +76,13 @@ HB_FUNC_STATIC( QACCESSIBLE_ISACTIVE )
 /*
 static QAccessibleInterface * queryAccessibleInterface( QObject * object )
 */
-HB_FUNC_STATIC( QACCESSIBLE_QUERYACCESSIBLEINTERFACE )
+HB_FUNC_STATIC(QACCESSIBLE_QUERYACCESSIBLEINTERFACE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQOBJECT(1) )
+  if (ISNUMPAR(1) && ISQOBJECT(1))
   {
 #endif
-    QAccessibleInterface * ptr = QAccessible::queryAccessibleInterface( PQOBJECT(1) );
+    QAccessibleInterface *ptr = QAccessible::queryAccessibleInterface(PQOBJECT(1));
     Qt4xHb::createReturnClass(ptr, "QACCESSIBLEINTERFACE", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
@@ -96,13 +96,13 @@ HB_FUNC_STATIC( QACCESSIBLE_QUERYACCESSIBLEINTERFACE )
 /*
 static void setRootObject( QObject * object )
 */
-HB_FUNC_STATIC( QACCESSIBLE_SETROOTOBJECT )
+HB_FUNC_STATIC(QACCESSIBLE_SETROOTOBJECT)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQOBJECT(1) )
+  if (ISNUMPAR(1) && ISQOBJECT(1))
   {
 #endif
-    QAccessible::setRootObject( PQOBJECT(1) );
+    QAccessible::setRootObject(PQOBJECT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -117,13 +117,13 @@ HB_FUNC_STATIC( QACCESSIBLE_SETROOTOBJECT )
 /*
 static void updateAccessibility( QObject * object, int child, QAccessible::Event reason )
 */
-HB_FUNC_STATIC( QACCESSIBLE_UPDATEACCESSIBILITY )
+HB_FUNC_STATIC(QACCESSIBLE_UPDATEACCESSIBILITY)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(3) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+  if (ISNUMPAR(3) && ISQOBJECT(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
 #endif
-    QAccessible::updateAccessibility( PQOBJECT(1), PINT(2), ( QAccessible::Event ) hb_parni(3) );
+    QAccessible::updateAccessibility(PQOBJECT(1), PINT(2), (QAccessible::Event)hb_parni(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -135,11 +135,11 @@ HB_FUNC_STATIC( QACCESSIBLE_UPDATEACCESSIBILITY )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QACCESSIBLE_NEWFROM )
+HB_FUNC_STATIC(QACCESSIBLE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -148,7 +148,7 @@ HB_FUNC_STATIC( QACCESSIBLE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -165,26 +165,26 @@ HB_FUNC_STATIC( QACCESSIBLE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QACCESSIBLE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QACCESSIBLE_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QACCESSIBLE_NEWFROM );
+  HB_FUNC_EXEC(QACCESSIBLE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QACCESSIBLE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QACCESSIBLE_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QACCESSIBLE_NEWFROM );
+  HB_FUNC_EXEC(QACCESSIBLE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QACCESSIBLE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QACCESSIBLE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QACCESSIBLE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QACCESSIBLE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

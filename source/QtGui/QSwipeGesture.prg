@@ -47,11 +47,11 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-HB_FUNC_STATIC( QSWIPEGESTURE_DELETE )
+HB_FUNC_STATIC(QSWIPEGESTURE_DELETE)
 {
-  QSwipeGesture * obj = qobject_cast<QSwipeGesture*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSwipeGesture *obj = qobject_cast<QSwipeGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -68,17 +68,17 @@ HB_FUNC_STATIC( QSWIPEGESTURE_DELETE )
 /*
 QSwipeGesture::SwipeDirection horizontalDirection() const
 */
-HB_FUNC_STATIC( QSWIPEGESTURE_HORIZONTALDIRECTION )
+HB_FUNC_STATIC(QSWIPEGESTURE_HORIZONTALDIRECTION)
 {
-  QSwipeGesture * obj = qobject_cast<QSwipeGesture*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSwipeGesture *obj = qobject_cast<QSwipeGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->horizontalDirection() );
+      RENUM(obj->horizontalDirection());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -92,17 +92,17 @@ HB_FUNC_STATIC( QSWIPEGESTURE_HORIZONTALDIRECTION )
 /*
 void setSwipeAngle( qreal value )
 */
-HB_FUNC_STATIC( QSWIPEGESTURE_SETSWIPEANGLE )
+HB_FUNC_STATIC(QSWIPEGESTURE_SETSWIPEANGLE)
 {
-  QSwipeGesture * obj = qobject_cast<QSwipeGesture*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSwipeGesture *obj = qobject_cast<QSwipeGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setSwipeAngle( PQREAL(1) );
+      obj->setSwipeAngle(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -118,17 +118,17 @@ HB_FUNC_STATIC( QSWIPEGESTURE_SETSWIPEANGLE )
 /*
 qreal swipeAngle() const
 */
-HB_FUNC_STATIC( QSWIPEGESTURE_SWIPEANGLE )
+HB_FUNC_STATIC(QSWIPEGESTURE_SWIPEANGLE)
 {
-  QSwipeGesture * obj = qobject_cast<QSwipeGesture*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSwipeGesture *obj = qobject_cast<QSwipeGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->swipeAngle() );
+      RQREAL(obj->swipeAngle());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,17 +142,17 @@ HB_FUNC_STATIC( QSWIPEGESTURE_SWIPEANGLE )
 /*
 QSwipeGesture::SwipeDirection verticalDirection() const
 */
-HB_FUNC_STATIC( QSWIPEGESTURE_VERTICALDIRECTION )
+HB_FUNC_STATIC(QSWIPEGESTURE_VERTICALDIRECTION)
 {
-  QSwipeGesture * obj = qobject_cast<QSwipeGesture*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSwipeGesture *obj = qobject_cast<QSwipeGesture *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->verticalDirection() );
+      RENUM(obj->verticalDirection());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

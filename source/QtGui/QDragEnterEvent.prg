@@ -42,14 +42,16 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QDragEnterEvent( const QPoint & point, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons, Qt::KeyboardModifiers modifiers )
-*/
-HB_FUNC_STATIC( QDRAGENTEREVENT_NEW )
+    /*
+    QDragEnterEvent( const QPoint & point, Qt::DropActions actions, const QMimeData * data, Qt::MouseButtons buttons,
+    Qt::KeyboardModifiers modifiers )
+    */
+HB_FUNC_STATIC(QDRAGENTEREVENT_NEW)
 {
-  if( ISNUMPAR(5) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5) )
+  if (ISNUMPAR(5) && ISQPOINT(1) && HB_ISNUM(2) && ISQMIMEDATA(3) && HB_ISNUM(4) && HB_ISNUM(5))
   {
-    QDragEnterEvent * obj = new QDragEnterEvent( *PQPOINT(1), ( Qt::DropActions ) hb_parni(2), PQMIMEDATA(3), ( Qt::MouseButtons ) hb_parni(4), ( Qt::KeyboardModifiers ) hb_parni(5) );
+    QDragEnterEvent *obj = new QDragEnterEvent(*PQPOINT(1), (Qt::DropActions)hb_parni(2), PQMIMEDATA(3),
+                                               (Qt::MouseButtons)hb_parni(4), (Qt::KeyboardModifiers)hb_parni(5));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -58,11 +60,11 @@ HB_FUNC_STATIC( QDRAGENTEREVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QDRAGENTEREVENT_DELETE )
+HB_FUNC_STATIC(QDRAGENTEREVENT_DELETE)
 {
-  QDragEnterEvent * obj = static_cast<QDragEnterEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QDragEnterEvent *obj = static_cast<QDragEnterEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;

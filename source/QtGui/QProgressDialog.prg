@@ -71,22 +71,26 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-HB_FUNC_STATIC( QPROGRESSDIALOG_NEW )
+HB_FUNC_STATIC(QPROGRESSDIALOG_NEW)
 {
-  if( ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)) )
+  if (ISBETWEEN(0, 2) && (ISQWIDGET(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
     QProgressDialog( QWidget * parent = 0, Qt::WindowFlags f = 0 )
     */
-    QProgressDialog * obj = new QProgressDialog( OPQWIDGET( 1, 0 ), HB_ISNIL(2) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(2) );
+    QProgressDialog *obj =
+        new QProgressDialog(OPQWIDGET(1, 0), HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(4, 6) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQWIDGET(5) || HB_ISNIL(5)) && (HB_ISNUM(6) || HB_ISNIL(6)) )
+  else if (ISBETWEEN(4, 6) && HB_ISCHAR(1) && HB_ISCHAR(2) && HB_ISNUM(3) && HB_ISNUM(4) &&
+           (ISQWIDGET(5) || HB_ISNIL(5)) && (HB_ISNUM(6) || HB_ISNIL(6)))
   {
     /*
-    QProgressDialog( const QString & labelText, const QString & cancelButtonText, int minimum, int maximum, QWidget * parent = 0, Qt::WindowFlags f = 0 )
+    QProgressDialog( const QString & labelText, const QString & cancelButtonText, int minimum, int maximum, QWidget *
+    parent = 0, Qt::WindowFlags f = 0 )
     */
-    QProgressDialog * obj = new QProgressDialog( PQSTRING(1), PQSTRING(2), PINT(3), PINT(4), OPQWIDGET( 5, 0 ), HB_ISNIL(6) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(6) );
+    QProgressDialog *obj = new QProgressDialog(PQSTRING(1), PQSTRING(2), PINT(3), PINT(4), OPQWIDGET(5, 0),
+                                               HB_ISNIL(6) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(6));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -95,11 +99,11 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_NEW )
   }
 }
 
-HB_FUNC_STATIC( QPROGRESSDIALOG_DELETE )
+HB_FUNC_STATIC(QPROGRESSDIALOG_DELETE)
 {
-  QProgressDialog * obj = qobject_cast<QProgressDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QProgressDialog *obj = qobject_cast<QProgressDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -116,17 +120,17 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_DELETE )
 /*
 bool autoClose() const
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_AUTOCLOSE )
+HB_FUNC_STATIC(QPROGRESSDIALOG_AUTOCLOSE)
 {
-  QProgressDialog * obj = qobject_cast<QProgressDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QProgressDialog *obj = qobject_cast<QProgressDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->autoClose() );
+      RBOOL(obj->autoClose());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -140,17 +144,17 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_AUTOCLOSE )
 /*
 bool autoReset() const
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_AUTORESET )
+HB_FUNC_STATIC(QPROGRESSDIALOG_AUTORESET)
 {
-  QProgressDialog * obj = qobject_cast<QProgressDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QProgressDialog *obj = qobject_cast<QProgressDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->autoReset() );
+      RBOOL(obj->autoReset());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -164,17 +168,17 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_AUTORESET )
 /*
 QString labelText() const
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_LABELTEXT )
+HB_FUNC_STATIC(QPROGRESSDIALOG_LABELTEXT)
 {
-  QProgressDialog * obj = qobject_cast<QProgressDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QProgressDialog *obj = qobject_cast<QProgressDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->labelText() );
+      RQSTRING(obj->labelText());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -188,17 +192,17 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_LABELTEXT )
 /*
 int maximum() const
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_MAXIMUM )
+HB_FUNC_STATIC(QPROGRESSDIALOG_MAXIMUM)
 {
-  QProgressDialog * obj = qobject_cast<QProgressDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QProgressDialog *obj = qobject_cast<QProgressDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->maximum() );
+      RINT(obj->maximum());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -212,17 +216,17 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_MAXIMUM )
 /*
 int minimum() const
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_MINIMUM )
+HB_FUNC_STATIC(QPROGRESSDIALOG_MINIMUM)
 {
-  QProgressDialog * obj = qobject_cast<QProgressDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QProgressDialog *obj = qobject_cast<QProgressDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->minimum() );
+      RINT(obj->minimum());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -236,17 +240,17 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_MINIMUM )
 /*
 int minimumDuration() const
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_MINIMUMDURATION )
+HB_FUNC_STATIC(QPROGRESSDIALOG_MINIMUMDURATION)
 {
-  QProgressDialog * obj = qobject_cast<QProgressDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QProgressDialog *obj = qobject_cast<QProgressDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->minimumDuration() );
+      RINT(obj->minimumDuration());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -260,17 +264,17 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_MINIMUMDURATION )
 /*
 void open( QObject * receiver, const char * member )
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_OPEN )
+HB_FUNC_STATIC(QPROGRESSDIALOG_OPEN)
 {
-  QProgressDialog * obj = qobject_cast<QProgressDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QProgressDialog *obj = qobject_cast<QProgressDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
     {
 #endif
-      obj->open( PQOBJECT(1), PCONSTCHAR(2) );
+      obj->open(PQOBJECT(1), PCONSTCHAR(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -286,17 +290,17 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_OPEN )
 /*
 void setAutoClose( bool close )
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_SETAUTOCLOSE )
+HB_FUNC_STATIC(QPROGRESSDIALOG_SETAUTOCLOSE)
 {
-  QProgressDialog * obj = qobject_cast<QProgressDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QProgressDialog *obj = qobject_cast<QProgressDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setAutoClose( PBOOL(1) );
+      obj->setAutoClose(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -312,17 +316,17 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETAUTOCLOSE )
 /*
 void setAutoReset( bool reset )
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_SETAUTORESET )
+HB_FUNC_STATIC(QPROGRESSDIALOG_SETAUTORESET)
 {
-  QProgressDialog * obj = qobject_cast<QProgressDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QProgressDialog *obj = qobject_cast<QProgressDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setAutoReset( PBOOL(1) );
+      obj->setAutoReset(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -338,17 +342,17 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETAUTORESET )
 /*
 void setBar( QProgressBar * bar )
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_SETBAR )
+HB_FUNC_STATIC(QPROGRESSDIALOG_SETBAR)
 {
-  QProgressDialog * obj = qobject_cast<QProgressDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QProgressDialog *obj = qobject_cast<QProgressDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPROGRESSBAR(1) )
+    if (ISNUMPAR(1) && ISQPROGRESSBAR(1))
     {
 #endif
-      obj->setBar( PQPROGRESSBAR(1) );
+      obj->setBar(PQPROGRESSBAR(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -364,17 +368,17 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETBAR )
 /*
 void setCancelButton( QPushButton * cancelButton )
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_SETCANCELBUTTON )
+HB_FUNC_STATIC(QPROGRESSDIALOG_SETCANCELBUTTON)
 {
-  QProgressDialog * obj = qobject_cast<QProgressDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QProgressDialog *obj = qobject_cast<QProgressDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPUSHBUTTON(1) )
+    if (ISNUMPAR(1) && ISQPUSHBUTTON(1))
     {
 #endif
-      obj->setCancelButton( PQPUSHBUTTON(1) );
+      obj->setCancelButton(PQPUSHBUTTON(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -390,17 +394,17 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETCANCELBUTTON )
 /*
 void setLabel( QLabel * label )
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_SETLABEL )
+HB_FUNC_STATIC(QPROGRESSDIALOG_SETLABEL)
 {
-  QProgressDialog * obj = qobject_cast<QProgressDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QProgressDialog *obj = qobject_cast<QProgressDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQLABEL(1) )
+    if (ISNUMPAR(1) && ISQLABEL(1))
     {
 #endif
-      obj->setLabel( PQLABEL(1) );
+      obj->setLabel(PQLABEL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -416,17 +420,17 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETLABEL )
 /*
 int value() const
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_VALUE )
+HB_FUNC_STATIC(QPROGRESSDIALOG_VALUE)
 {
-  QProgressDialog * obj = qobject_cast<QProgressDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QProgressDialog *obj = qobject_cast<QProgressDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->value() );
+      RINT(obj->value());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -440,17 +444,17 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_VALUE )
 /*
 bool wasCanceled() const
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_WASCANCELED )
+HB_FUNC_STATIC(QPROGRESSDIALOG_WASCANCELED)
 {
-  QProgressDialog * obj = qobject_cast<QProgressDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QProgressDialog *obj = qobject_cast<QProgressDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->wasCanceled() );
+      RBOOL(obj->wasCanceled());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -464,17 +468,17 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_WASCANCELED )
 /*
 virtual QSize sizeHint() const
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_SIZEHINT )
+HB_FUNC_STATIC(QPROGRESSDIALOG_SIZEHINT)
 {
-  QProgressDialog * obj = qobject_cast<QProgressDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QProgressDialog *obj = qobject_cast<QProgressDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint() );
+      QSize *ptr = new QSize(obj->sizeHint());
       Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -489,14 +493,14 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SIZEHINT )
 /*
 void cancel()
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_CANCEL )
+HB_FUNC_STATIC(QPROGRESSDIALOG_CANCEL)
 {
-  QProgressDialog * obj = qobject_cast<QProgressDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QProgressDialog *obj = qobject_cast<QProgressDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->cancel();
@@ -515,14 +519,14 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_CANCEL )
 /*
 void reset()
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_RESET )
+HB_FUNC_STATIC(QPROGRESSDIALOG_RESET)
 {
-  QProgressDialog * obj = qobject_cast<QProgressDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QProgressDialog *obj = qobject_cast<QProgressDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->reset();
@@ -541,17 +545,17 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_RESET )
 /*
 void setCancelButtonText( const QString & cancelButtonText )
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_SETCANCELBUTTONTEXT )
+HB_FUNC_STATIC(QPROGRESSDIALOG_SETCANCELBUTTONTEXT)
 {
-  QProgressDialog * obj = qobject_cast<QProgressDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QProgressDialog *obj = qobject_cast<QProgressDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setCancelButtonText( PQSTRING(1) );
+      obj->setCancelButtonText(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -567,17 +571,17 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETCANCELBUTTONTEXT )
 /*
 void setLabelText( const QString & text )
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_SETLABELTEXT )
+HB_FUNC_STATIC(QPROGRESSDIALOG_SETLABELTEXT)
 {
-  QProgressDialog * obj = qobject_cast<QProgressDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QProgressDialog *obj = qobject_cast<QProgressDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setLabelText( PQSTRING(1) );
+      obj->setLabelText(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -593,17 +597,17 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETLABELTEXT )
 /*
 void setMaximum( int maximum )
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_SETMAXIMUM )
+HB_FUNC_STATIC(QPROGRESSDIALOG_SETMAXIMUM)
 {
-  QProgressDialog * obj = qobject_cast<QProgressDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QProgressDialog *obj = qobject_cast<QProgressDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMaximum( PINT(1) );
+      obj->setMaximum(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -619,17 +623,17 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETMAXIMUM )
 /*
 void setMinimum( int minimum )
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_SETMINIMUM )
+HB_FUNC_STATIC(QPROGRESSDIALOG_SETMINIMUM)
 {
-  QProgressDialog * obj = qobject_cast<QProgressDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QProgressDialog *obj = qobject_cast<QProgressDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMinimum( PINT(1) );
+      obj->setMinimum(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -645,17 +649,17 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETMINIMUM )
 /*
 void setMinimumDuration( int ms )
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_SETMINIMUMDURATION )
+HB_FUNC_STATIC(QPROGRESSDIALOG_SETMINIMUMDURATION)
 {
-  QProgressDialog * obj = qobject_cast<QProgressDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QProgressDialog *obj = qobject_cast<QProgressDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMinimumDuration( PINT(1) );
+      obj->setMinimumDuration(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -671,17 +675,17 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETMINIMUMDURATION )
 /*
 void setRange( int minimum, int maximum )
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_SETRANGE )
+HB_FUNC_STATIC(QPROGRESSDIALOG_SETRANGE)
 {
-  QProgressDialog * obj = qobject_cast<QProgressDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QProgressDialog *obj = qobject_cast<QProgressDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setRange( PINT(1), PINT(2) );
+      obj->setRange(PINT(1), PINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -697,17 +701,17 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETRANGE )
 /*
 void setValue( int progress )
 */
-HB_FUNC_STATIC( QPROGRESSDIALOG_SETVALUE )
+HB_FUNC_STATIC(QPROGRESSDIALOG_SETVALUE)
 {
-  QProgressDialog * obj = qobject_cast<QProgressDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QProgressDialog *obj = qobject_cast<QProgressDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setValue( PINT(1) );
+      obj->setValue(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -720,9 +724,9 @@ HB_FUNC_STATIC( QPROGRESSDIALOG_SETVALUE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QProgressDialogSlots_connect_signal(const QString & signal, const QString & slot);
+void QProgressDialogSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QPROGRESSDIALOG_ONCANCELED )
+HB_FUNC_STATIC(QPROGRESSDIALOG_ONCANCELED)
 {
   QProgressDialogSlots_connect_signal("canceled()", "canceled()");
 }

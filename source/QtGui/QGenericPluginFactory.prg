@@ -52,20 +52,20 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QObject * create( const QString & key, const QString & specification )
-*/
-HB_FUNC_STATIC( QGENERICPLUGINFACTORY_CREATE )
+    /*
+    QObject * create( const QString & key, const QString & specification )
+    */
+HB_FUNC_STATIC(QGENERICPLUGINFACTORY_CREATE)
 {
-  QGenericPluginFactory * obj = static_cast<QGenericPluginFactory*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGenericPluginFactory *obj = static_cast<QGenericPluginFactory *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
 #endif
-      QObject * ptr = obj->create( PQSTRING(1), PQSTRING(2) );
+      QObject *ptr = obj->create(PQSTRING(1), PQSTRING(2));
       Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -80,13 +80,13 @@ HB_FUNC_STATIC( QGENERICPLUGINFACTORY_CREATE )
 /*
 static QStringList keys()
 */
-HB_FUNC_STATIC( QGENERICPLUGINFACTORY_KEYS )
+HB_FUNC_STATIC(QGENERICPLUGINFACTORY_KEYS)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RQSTRINGLIST( QGenericPluginFactory::keys() );
+    RQSTRINGLIST(QGenericPluginFactory::keys());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -96,11 +96,11 @@ HB_FUNC_STATIC( QGENERICPLUGINFACTORY_KEYS )
 #endif
 }
 
-HB_FUNC_STATIC( QGENERICPLUGINFACTORY_NEWFROM )
+HB_FUNC_STATIC(QGENERICPLUGINFACTORY_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -109,7 +109,7 @@ HB_FUNC_STATIC( QGENERICPLUGINFACTORY_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -126,26 +126,26 @@ HB_FUNC_STATIC( QGENERICPLUGINFACTORY_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QGENERICPLUGINFACTORY_NEWFROMOBJECT )
+HB_FUNC_STATIC(QGENERICPLUGINFACTORY_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QGENERICPLUGINFACTORY_NEWFROM );
+  HB_FUNC_EXEC(QGENERICPLUGINFACTORY_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGENERICPLUGINFACTORY_NEWFROMPOINTER )
+HB_FUNC_STATIC(QGENERICPLUGINFACTORY_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QGENERICPLUGINFACTORY_NEWFROM );
+  HB_FUNC_EXEC(QGENERICPLUGINFACTORY_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGENERICPLUGINFACTORY_SELFDESTRUCTION )
+HB_FUNC_STATIC(QGENERICPLUGINFACTORY_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QGENERICPLUGINFACTORY_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QGENERICPLUGINFACTORY_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

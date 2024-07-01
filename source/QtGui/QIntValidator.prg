@@ -51,22 +51,22 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-HB_FUNC_STATIC( QINTVALIDATOR_NEW )
+HB_FUNC_STATIC(QINTVALIDATOR_NEW)
 {
-  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
     QIntValidator( QObject * parent = 0 )
     */
-    QIntValidator * obj = new QIntValidator( OPQOBJECT( 1, 0 ) );
+    QIntValidator *obj = new QIntValidator(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQOBJECT(3) )
+  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQOBJECT(3))
   {
     /*
     QIntValidator( int minimum, int maximum, QObject * parent )
     */
-    QIntValidator * obj = new QIntValidator( PINT(1), PINT(2), PQOBJECT(3) );
+    QIntValidator *obj = new QIntValidator(PINT(1), PINT(2), PQOBJECT(3));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -75,11 +75,11 @@ HB_FUNC_STATIC( QINTVALIDATOR_NEW )
   }
 }
 
-HB_FUNC_STATIC( QINTVALIDATOR_DELETE )
+HB_FUNC_STATIC(QINTVALIDATOR_DELETE)
 {
-  QIntValidator * obj = qobject_cast<QIntValidator*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QIntValidator *obj = qobject_cast<QIntValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -96,17 +96,17 @@ HB_FUNC_STATIC( QINTVALIDATOR_DELETE )
 /*
 int bottom() const
 */
-HB_FUNC_STATIC( QINTVALIDATOR_BOTTOM )
+HB_FUNC_STATIC(QINTVALIDATOR_BOTTOM)
 {
-  QIntValidator * obj = qobject_cast<QIntValidator*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QIntValidator *obj = qobject_cast<QIntValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->bottom() );
+      RINT(obj->bottom());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,17 +120,17 @@ HB_FUNC_STATIC( QINTVALIDATOR_BOTTOM )
 /*
 void setBottom( int )
 */
-HB_FUNC_STATIC( QINTVALIDATOR_SETBOTTOM )
+HB_FUNC_STATIC(QINTVALIDATOR_SETBOTTOM)
 {
-  QIntValidator * obj = qobject_cast<QIntValidator*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QIntValidator *obj = qobject_cast<QIntValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setBottom( PINT(1) );
+      obj->setBottom(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -146,17 +146,17 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETBOTTOM )
 /*
 virtual void setRange( int bottom, int top )
 */
-HB_FUNC_STATIC( QINTVALIDATOR_SETRANGE )
+HB_FUNC_STATIC(QINTVALIDATOR_SETRANGE)
 {
-  QIntValidator * obj = qobject_cast<QIntValidator*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QIntValidator *obj = qobject_cast<QIntValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setRange( PINT(1), PINT(2) );
+      obj->setRange(PINT(1), PINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -172,17 +172,17 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETRANGE )
 /*
 void setTop( int )
 */
-HB_FUNC_STATIC( QINTVALIDATOR_SETTOP )
+HB_FUNC_STATIC(QINTVALIDATOR_SETTOP)
 {
-  QIntValidator * obj = qobject_cast<QIntValidator*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QIntValidator *obj = qobject_cast<QIntValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTop( PINT(1) );
+      obj->setTop(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -198,17 +198,17 @@ HB_FUNC_STATIC( QINTVALIDATOR_SETTOP )
 /*
 int top() const
 */
-HB_FUNC_STATIC( QINTVALIDATOR_TOP )
+HB_FUNC_STATIC(QINTVALIDATOR_TOP)
 {
-  QIntValidator * obj = qobject_cast<QIntValidator*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QIntValidator *obj = qobject_cast<QIntValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->top() );
+      RINT(obj->top());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -222,19 +222,19 @@ HB_FUNC_STATIC( QINTVALIDATOR_TOP )
 /*
 virtual void fixup( QString & input ) const
 */
-HB_FUNC_STATIC( QINTVALIDATOR_FIXUP )
+HB_FUNC_STATIC(QINTVALIDATOR_FIXUP)
 {
-  QIntValidator * obj = qobject_cast<QIntValidator*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QIntValidator *obj = qobject_cast<QIntValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
       QString par1 = hb_parc(1);
-      obj->fixup( par1 );
-      hb_storc( QSTRINGTOSTRING( par1 ), 1 );
+      obj->fixup(par1);
+      hb_storc(QSTRINGTOSTRING(par1), 1);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -250,21 +250,21 @@ HB_FUNC_STATIC( QINTVALIDATOR_FIXUP )
 /*
 virtual QValidator::State validate( QString & input, int & pos ) const
 */
-HB_FUNC_STATIC( QINTVALIDATOR_VALIDATE )
+HB_FUNC_STATIC(QINTVALIDATOR_VALIDATE)
 {
-  QIntValidator * obj = qobject_cast<QIntValidator*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QIntValidator *obj = qobject_cast<QIntValidator *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISNUM(2))
     {
 #endif
       QString par1 = hb_parc(1);
       int par2;
-      RENUM( obj->validate( par1, par2 ) );
-      hb_storc( QSTRINGTOSTRING( par1 ), 1 );
-      hb_storni( par2, 2 );
+      RENUM(obj->validate(par1, par2));
+      hb_storc(QSTRINGTOSTRING(par1), 1);
+      hb_storni(par2, 2);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

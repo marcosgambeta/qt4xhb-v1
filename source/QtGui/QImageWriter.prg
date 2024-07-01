@@ -72,30 +72,31 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QIMAGEWRITER_NEW )
+HB_FUNC_STATIC(QIMAGEWRITER_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QImageWriter()
     */
-    QImageWriter * obj = new QImageWriter();
+    QImageWriter *obj = new QImageWriter();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && ISQIODEVICE(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)))
   {
     /*
     QImageWriter( QIODevice * device, const QByteArray & format )
     */
-    QImageWriter * obj = new QImageWriter( PQIODEVICE(1), *PQBYTEARRAY(2) );
+    QImageWriter *obj = new QImageWriter(PQIODEVICE(1), *PQBYTEARRAY(2));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQBYTEARRAY(2) || HB_ISNIL(2)))
   {
     /*
     QImageWriter( const QString & fileName, const QByteArray & format = QByteArray() )
     */
-    QImageWriter * obj = new QImageWriter( PQSTRING(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray*>( Qt4xHb::itemGetPtr(2)) );
+    QImageWriter *obj =
+        new QImageWriter(PQSTRING(1), HB_ISNIL(2) ? QByteArray() : *static_cast<QByteArray *>(Qt4xHb::itemGetPtr(2)));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -104,11 +105,11 @@ HB_FUNC_STATIC( QIMAGEWRITER_NEW )
   }
 }
 
-HB_FUNC_STATIC( QIMAGEWRITER_DELETE )
+HB_FUNC_STATIC(QIMAGEWRITER_DELETE)
 {
-  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -123,17 +124,17 @@ HB_FUNC_STATIC( QIMAGEWRITER_DELETE )
 /*
 bool canWrite() const
 */
-HB_FUNC_STATIC( QIMAGEWRITER_CANWRITE )
+HB_FUNC_STATIC(QIMAGEWRITER_CANWRITE)
 {
-  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->canWrite() );
+      RBOOL(obj->canWrite());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -147,17 +148,17 @@ HB_FUNC_STATIC( QIMAGEWRITER_CANWRITE )
 /*
 int compression() const
 */
-HB_FUNC_STATIC( QIMAGEWRITER_COMPRESSION )
+HB_FUNC_STATIC(QIMAGEWRITER_COMPRESSION)
 {
-  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->compression() );
+      RINT(obj->compression());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,17 +172,17 @@ HB_FUNC_STATIC( QIMAGEWRITER_COMPRESSION )
 /*
 QIODevice * device() const
 */
-HB_FUNC_STATIC( QIMAGEWRITER_DEVICE )
+HB_FUNC_STATIC(QIMAGEWRITER_DEVICE)
 {
-  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QIODevice * ptr = obj->device();
+      QIODevice *ptr = obj->device();
       Qt4xHb::createReturnQObjectClass(ptr, "QIODEVICE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -196,17 +197,17 @@ HB_FUNC_STATIC( QIMAGEWRITER_DEVICE )
 /*
 QImageWriterError::ImageWriterError error() const
 */
-HB_FUNC_STATIC( QIMAGEWRITER_ERROR )
+HB_FUNC_STATIC(QIMAGEWRITER_ERROR)
 {
-  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->error() );
+      RENUM(obj->error());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -220,17 +221,17 @@ HB_FUNC_STATIC( QIMAGEWRITER_ERROR )
 /*
 QString errorString() const
 */
-HB_FUNC_STATIC( QIMAGEWRITER_ERRORSTRING )
+HB_FUNC_STATIC(QIMAGEWRITER_ERRORSTRING)
 {
-  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->errorString() );
+      RQSTRING(obj->errorString());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -244,17 +245,17 @@ HB_FUNC_STATIC( QIMAGEWRITER_ERRORSTRING )
 /*
 QString fileName() const
 */
-HB_FUNC_STATIC( QIMAGEWRITER_FILENAME )
+HB_FUNC_STATIC(QIMAGEWRITER_FILENAME)
 {
-  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->fileName() );
+      RQSTRING(obj->fileName());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -268,17 +269,17 @@ HB_FUNC_STATIC( QIMAGEWRITER_FILENAME )
 /*
 QByteArray format() const
 */
-HB_FUNC_STATIC( QIMAGEWRITER_FORMAT )
+HB_FUNC_STATIC(QIMAGEWRITER_FORMAT)
 {
-  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->format() );
+      QByteArray *ptr = new QByteArray(obj->format());
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -293,17 +294,17 @@ HB_FUNC_STATIC( QIMAGEWRITER_FORMAT )
 /*
 float gamma() const
 */
-HB_FUNC_STATIC( QIMAGEWRITER_GAMMA )
+HB_FUNC_STATIC(QIMAGEWRITER_GAMMA)
 {
-  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RFLOAT( obj->gamma() );
+      RFLOAT(obj->gamma());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -317,17 +318,17 @@ HB_FUNC_STATIC( QIMAGEWRITER_GAMMA )
 /*
 int quality() const
 */
-HB_FUNC_STATIC( QIMAGEWRITER_QUALITY )
+HB_FUNC_STATIC(QIMAGEWRITER_QUALITY)
 {
-  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->quality() );
+      RINT(obj->quality());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -341,17 +342,17 @@ HB_FUNC_STATIC( QIMAGEWRITER_QUALITY )
 /*
 void setCompression( int compression )
 */
-HB_FUNC_STATIC( QIMAGEWRITER_SETCOMPRESSION )
+HB_FUNC_STATIC(QIMAGEWRITER_SETCOMPRESSION)
 {
-  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCompression( PINT(1) );
+      obj->setCompression(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -367,17 +368,17 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETCOMPRESSION )
 /*
 void setDevice( QIODevice * device )
 */
-HB_FUNC_STATIC( QIMAGEWRITER_SETDEVICE )
+HB_FUNC_STATIC(QIMAGEWRITER_SETDEVICE)
 {
-  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQIODEVICE(1) )
+    if (ISNUMPAR(1) && ISQIODEVICE(1))
     {
 #endif
-      obj->setDevice( PQIODEVICE(1) );
+      obj->setDevice(PQIODEVICE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -393,17 +394,17 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETDEVICE )
 /*
 void setFileName( const QString & fileName )
 */
-HB_FUNC_STATIC( QIMAGEWRITER_SETFILENAME )
+HB_FUNC_STATIC(QIMAGEWRITER_SETFILENAME)
 {
-  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setFileName( PQSTRING(1) );
+      obj->setFileName(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -419,17 +420,17 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETFILENAME )
 /*
 void setFormat( const QByteArray & format )
 */
-HB_FUNC_STATIC( QIMAGEWRITER_SETFORMAT )
+HB_FUNC_STATIC(QIMAGEWRITER_SETFORMAT)
 {
-  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      obj->setFormat( *PQBYTEARRAY(1) );
+      obj->setFormat(*PQBYTEARRAY(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -445,17 +446,17 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETFORMAT )
 /*
 void setGamma( float gamma )
 */
-HB_FUNC_STATIC( QIMAGEWRITER_SETGAMMA )
+HB_FUNC_STATIC(QIMAGEWRITER_SETGAMMA)
 {
-  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setGamma( PFLOAT(1) );
+      obj->setGamma(PFLOAT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -471,17 +472,17 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETGAMMA )
 /*
 void setQuality( int quality )
 */
-HB_FUNC_STATIC( QIMAGEWRITER_SETQUALITY )
+HB_FUNC_STATIC(QIMAGEWRITER_SETQUALITY)
 {
-  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setQuality( PINT(1) );
+      obj->setQuality(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -497,17 +498,17 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETQUALITY )
 /*
 void setText( const QString & key, const QString & text )
 */
-HB_FUNC_STATIC( QIMAGEWRITER_SETTEXT )
+HB_FUNC_STATIC(QIMAGEWRITER_SETTEXT)
 {
-  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
 #endif
-      obj->setText( PQSTRING(1), PQSTRING(2) );
+      obj->setText(PQSTRING(1), PQSTRING(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -523,17 +524,17 @@ HB_FUNC_STATIC( QIMAGEWRITER_SETTEXT )
 /*
 bool supportsOption( QImageIOHandler::ImageOption option ) const
 */
-HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTSOPTION )
+HB_FUNC_STATIC(QIMAGEWRITER_SUPPORTSOPTION)
 {
-  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->supportsOption( ( QImageIOHandler::ImageOption ) hb_parni(1)) );
+      RBOOL(obj->supportsOption((QImageIOHandler::ImageOption)hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -547,17 +548,17 @@ HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTSOPTION )
 /*
 bool write( const QImage & image )
 */
-HB_FUNC_STATIC( QIMAGEWRITER_WRITE )
+HB_FUNC_STATIC(QIMAGEWRITER_WRITE)
 {
-  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQIMAGE(1) )
+    if (ISNUMPAR(1) && ISQIMAGE(1))
     {
 #endif
-      RBOOL( obj->write( *PQIMAGE(1)) );
+      RBOOL(obj->write(*PQIMAGE(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -571,23 +572,23 @@ HB_FUNC_STATIC( QIMAGEWRITER_WRITE )
 /*
 QList<QByteArray> supportedImageFormats()
 */
-HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTEDIMAGEFORMATS )
+HB_FUNC_STATIC(QIMAGEWRITER_SUPPORTEDIMAGEFORMATS)
 {
-  QImageWriter * obj = static_cast<QImageWriter*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QImageWriter *obj = static_cast<QImageWriter *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<QByteArray> list = obj->supportedImageFormats();
       PHB_DYNS pDynSym = hb_dynsymFindName("QBYTEARRAY");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         const int count = list.count();
-        for( int i = 0; i < count; i++ )
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -619,11 +620,11 @@ HB_FUNC_STATIC( QIMAGEWRITER_SUPPORTEDIMAGEFORMATS )
   }
 }
 
-HB_FUNC_STATIC( QIMAGEWRITER_NEWFROM )
+HB_FUNC_STATIC(QIMAGEWRITER_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -632,7 +633,7 @@ HB_FUNC_STATIC( QIMAGEWRITER_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -649,26 +650,26 @@ HB_FUNC_STATIC( QIMAGEWRITER_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QIMAGEWRITER_NEWFROMOBJECT )
+HB_FUNC_STATIC(QIMAGEWRITER_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QIMAGEWRITER_NEWFROM );
+  HB_FUNC_EXEC(QIMAGEWRITER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QIMAGEWRITER_NEWFROMPOINTER )
+HB_FUNC_STATIC(QIMAGEWRITER_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QIMAGEWRITER_NEWFROM );
+  HB_FUNC_EXEC(QIMAGEWRITER_NEWFROM);
 }
 
-HB_FUNC_STATIC( QIMAGEWRITER_SELFDESTRUCTION )
+HB_FUNC_STATIC(QIMAGEWRITER_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QIMAGEWRITER_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QIMAGEWRITER_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

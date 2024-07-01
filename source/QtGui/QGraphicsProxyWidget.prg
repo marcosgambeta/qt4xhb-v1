@@ -53,14 +53,16 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-/*
-QGraphicsProxyWidget( QGraphicsItem * parent = 0, Qt::WindowFlags wFlags = 0 )
-*/
-HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_NEW )
+    /*
+    QGraphicsProxyWidget( QGraphicsItem * parent = 0, Qt::WindowFlags wFlags = 0 )
+    */
+HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_NEW)
 {
-  if( ISBETWEEN(0, 2) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)) )
+  if (ISBETWEEN(0, 2) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    QGraphicsProxyWidget * obj = new QGraphicsProxyWidget( HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem*>( Qt4xHb::itemGetPtr(1) ), HB_ISNIL(2) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(2) );
+    QGraphicsProxyWidget *obj =
+        new QGraphicsProxyWidget(HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(1)),
+                                 HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -69,11 +71,11 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_DELETE )
+HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_DELETE)
 {
-  QGraphicsProxyWidget * obj = qobject_cast<QGraphicsProxyWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsProxyWidget *obj = qobject_cast<QGraphicsProxyWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -90,17 +92,17 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_DELETE )
 /*
 QGraphicsProxyWidget * createProxyForChildWidget( QWidget * child )
 */
-HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_CREATEPROXYFORCHILDWIDGET )
+HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_CREATEPROXYFORCHILDWIDGET)
 {
-  QGraphicsProxyWidget * obj = qobject_cast<QGraphicsProxyWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsProxyWidget *obj = qobject_cast<QGraphicsProxyWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if (ISNUMPAR(1) && ISQWIDGET(1))
     {
 #endif
-      QGraphicsProxyWidget * ptr = obj->createProxyForChildWidget( PQWIDGET(1) );
+      QGraphicsProxyWidget *ptr = obj->createProxyForChildWidget(PQWIDGET(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QGRAPHICSPROXYWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -115,17 +117,17 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_CREATEPROXYFORCHILDWIDGET )
 /*
 void setWidget( QWidget * widget )
 */
-HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SETWIDGET )
+HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SETWIDGET)
 {
-  QGraphicsProxyWidget * obj = qobject_cast<QGraphicsProxyWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsProxyWidget *obj = qobject_cast<QGraphicsProxyWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if (ISNUMPAR(1) && ISQWIDGET(1))
     {
 #endif
-      obj->setWidget( PQWIDGET(1) );
+      obj->setWidget(PQWIDGET(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -141,17 +143,17 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SETWIDGET )
 /*
 QRectF subWidgetRect( const QWidget * widget ) const
 */
-HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SUBWIDGETRECT )
+HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SUBWIDGETRECT)
 {
-  QGraphicsProxyWidget * obj = qobject_cast<QGraphicsProxyWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsProxyWidget *obj = qobject_cast<QGraphicsProxyWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if (ISNUMPAR(1) && ISQWIDGET(1))
     {
 #endif
-      QRectF * ptr = new QRectF( obj->subWidgetRect( PQWIDGET(1)) );
+      QRectF *ptr = new QRectF(obj->subWidgetRect(PQWIDGET(1)));
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -166,18 +168,18 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SUBWIDGETRECT )
 /*
 QWidget * widget() const
 */
-HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_WIDGET )
+HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_WIDGET)
 {
-  QGraphicsProxyWidget * obj = qobject_cast<QGraphicsProxyWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsProxyWidget *obj = qobject_cast<QGraphicsProxyWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QWidget * ptr = obj->widget();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      QWidget *ptr = obj->widget();
+      Qt4xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -191,17 +193,17 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_WIDGET )
 /*
 virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
 */
-HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_PAINT )
+HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_PAINT)
 {
-  QGraphicsProxyWidget * obj = qobject_cast<QGraphicsProxyWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsProxyWidget *obj = qobject_cast<QGraphicsProxyWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISQWIDGET(3) )
+    if (ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISQWIDGET(3))
     {
 #endif
-      obj->paint( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), PQWIDGET(3) );
+      obj->paint(PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), PQWIDGET(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,17 +219,17 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_PAINT )
 /*
 virtual void setGeometry( const QRectF & rect )
 */
-HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SETGEOMETRY )
+HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_SETGEOMETRY)
 {
-  QGraphicsProxyWidget * obj = qobject_cast<QGraphicsProxyWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsProxyWidget *obj = qobject_cast<QGraphicsProxyWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQRECTF(1) )
+    if (ISNUMPAR(1) && ISQRECTF(1))
     {
 #endif
-      obj->setGeometry( *PQRECTF(1) );
+      obj->setGeometry(*PQRECTF(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -243,17 +245,17 @@ HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_SETGEOMETRY )
 /*
 virtual int type() const
 */
-HB_FUNC_STATIC( QGRAPHICSPROXYWIDGET_TYPE )
+HB_FUNC_STATIC(QGRAPHICSPROXYWIDGET_TYPE)
 {
-  QGraphicsProxyWidget * obj = qobject_cast<QGraphicsProxyWidget*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsProxyWidget *obj = qobject_cast<QGraphicsProxyWidget *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->type() );
+      RINT(obj->type());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

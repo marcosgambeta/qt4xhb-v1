@@ -42,14 +42,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QCloseEvent()
-*/
-HB_FUNC_STATIC( QCLOSEEVENT_NEW )
+    /*
+    QCloseEvent()
+    */
+HB_FUNC_STATIC(QCLOSEEVENT_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QCloseEvent * obj = new QCloseEvent();
+    QCloseEvent *obj = new QCloseEvent();
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -58,11 +58,11 @@ HB_FUNC_STATIC( QCLOSEEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QCLOSEEVENT_DELETE )
+HB_FUNC_STATIC(QCLOSEEVENT_DELETE)
 {
-  QCloseEvent * obj = static_cast<QCloseEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QCloseEvent *obj = static_cast<QCloseEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;

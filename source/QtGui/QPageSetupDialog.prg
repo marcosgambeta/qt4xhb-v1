@@ -51,14 +51,14 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-/*
-QPageSetupDialog( QPrinter * printer, QWidget * parent = 0 )
-*/
-HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
+    /*
+    QPageSetupDialog( QPrinter * printer, QWidget * parent = 0 )
+    */
+HB_FUNC_STATIC(QPAGESETUPDIALOG_NEW)
 {
-  if( ISBETWEEN(1, 2) && ISQPRINTER(1) && (ISQWIDGET(2) || HB_ISNIL(2)) )
+  if (ISBETWEEN(1, 2) && ISQPRINTER(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
-    QPageSetupDialog * obj = new QPageSetupDialog( PQPRINTER(1), OPQWIDGET( 2, 0 ) );
+    QPageSetupDialog *obj = new QPageSetupDialog(PQPRINTER(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -70,17 +70,17 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_NEW )
 /*
 void open( QObject * receiver, const char * member )
 */
-HB_FUNC_STATIC( QPAGESETUPDIALOG_OPEN )
+HB_FUNC_STATIC(QPAGESETUPDIALOG_OPEN)
 {
-  QPageSetupDialog * obj = qobject_cast<QPageSetupDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPageSetupDialog *obj = qobject_cast<QPageSetupDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && ISQOBJECT(1) && HB_ISCHAR(2))
     {
 #endif
-      obj->open( PQOBJECT(1), PCONSTCHAR(2) );
+      obj->open(PQOBJECT(1), PCONSTCHAR(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -96,17 +96,17 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_OPEN )
 /*
 QPageSetupDialog::PageSetupDialogOptions options() const
 */
-HB_FUNC_STATIC( QPAGESETUPDIALOG_OPTIONS )
+HB_FUNC_STATIC(QPAGESETUPDIALOG_OPTIONS)
 {
-  QPageSetupDialog * obj = qobject_cast<QPageSetupDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPageSetupDialog *obj = qobject_cast<QPageSetupDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->options() );
+      RENUM(obj->options());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,17 +120,17 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_OPTIONS )
 /*
 QPrinter * printer()
 */
-HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
+HB_FUNC_STATIC(QPAGESETUPDIALOG_PRINTER)
 {
-  QPageSetupDialog * obj = qobject_cast<QPageSetupDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPageSetupDialog *obj = qobject_cast<QPageSetupDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPrinter * ptr = obj->printer();
+      QPrinter *ptr = obj->printer();
       Qt4xHb::createReturnClass(ptr, "QPRINTER", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -145,17 +145,17 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_PRINTER )
 /*
 void setOption( QPageSetupDialog::PageSetupDialogOption option, bool on = true )
 */
-HB_FUNC_STATIC( QPAGESETUPDIALOG_SETOPTION )
+HB_FUNC_STATIC(QPAGESETUPDIALOG_SETOPTION)
 {
-  QPageSetupDialog * obj = qobject_cast<QPageSetupDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPageSetupDialog *obj = qobject_cast<QPageSetupDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISLOG(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setOption( ( QPageSetupDialog::PageSetupDialogOption ) hb_parni(1), OPBOOL( 2, true ) );
+      obj->setOption((QPageSetupDialog::PageSetupDialogOption)hb_parni(1), OPBOOL(2, true));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -171,17 +171,17 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_SETOPTION )
 /*
 void setOptions( QPageSetupDialog::PageSetupDialogOptions options )
 */
-HB_FUNC_STATIC( QPAGESETUPDIALOG_SETOPTIONS )
+HB_FUNC_STATIC(QPAGESETUPDIALOG_SETOPTIONS)
 {
-  QPageSetupDialog * obj = qobject_cast<QPageSetupDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPageSetupDialog *obj = qobject_cast<QPageSetupDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setOptions( ( QPageSetupDialog::PageSetupDialogOptions ) hb_parni(1) );
+      obj->setOptions((QPageSetupDialog::PageSetupDialogOptions)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -197,17 +197,17 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_SETOPTIONS )
 /*
 bool testOption( QPageSetupDialog::PageSetupDialogOption option ) const
 */
-HB_FUNC_STATIC( QPAGESETUPDIALOG_TESTOPTION )
+HB_FUNC_STATIC(QPAGESETUPDIALOG_TESTOPTION)
 {
-  QPageSetupDialog * obj = qobject_cast<QPageSetupDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPageSetupDialog *obj = qobject_cast<QPageSetupDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->testOption( ( QPageSetupDialog::PageSetupDialogOption ) hb_parni(1)) );
+      RBOOL(obj->testOption((QPageSetupDialog::PageSetupDialogOption)hb_parni(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -221,17 +221,17 @@ HB_FUNC_STATIC( QPAGESETUPDIALOG_TESTOPTION )
 /*
 virtual void setVisible( bool visible )
 */
-HB_FUNC_STATIC( QPAGESETUPDIALOG_SETVISIBLE )
+HB_FUNC_STATIC(QPAGESETUPDIALOG_SETVISIBLE)
 {
-  QPageSetupDialog * obj = qobject_cast<QPageSetupDialog*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPageSetupDialog *obj = qobject_cast<QPageSetupDialog *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setVisible( PBOOL(1) );
+      obj->setVisible(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -46,11 +46,11 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-HB_FUNC_STATIC( QICONENGINEPLUGINV2_DELETE )
+HB_FUNC_STATIC(QICONENGINEPLUGINV2_DELETE)
 {
-  QIconEnginePluginV2 * obj = qobject_cast<QIconEnginePluginV2*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QIconEnginePluginV2 *obj = qobject_cast<QIconEnginePluginV2 *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -67,17 +67,17 @@ HB_FUNC_STATIC( QICONENGINEPLUGINV2_DELETE )
 /*
 virtual QIconEngineV2 * create( const QString & filename = QString() ) = 0
 */
-HB_FUNC_STATIC( QICONENGINEPLUGINV2_CREATE )
+HB_FUNC_STATIC(QICONENGINEPLUGINV2_CREATE)
 {
-  QIconEnginePluginV2 * obj = qobject_cast<QIconEnginePluginV2*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QIconEnginePluginV2 *obj = qobject_cast<QIconEnginePluginV2 *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISCHAR(1) || HB_ISNIL(1)))
     {
 #endif
-      QIconEngineV2 * ptr = obj->create( OPQSTRING( 1, QString()) );
+      QIconEngineV2 *ptr = obj->create(OPQSTRING(1, QString()));
       Qt4xHb::createReturnClass(ptr, "QICONENGINEV2", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -92,17 +92,17 @@ HB_FUNC_STATIC( QICONENGINEPLUGINV2_CREATE )
 /*
 virtual QStringList keys() const = 0
 */
-HB_FUNC_STATIC( QICONENGINEPLUGINV2_KEYS )
+HB_FUNC_STATIC(QICONENGINEPLUGINV2_KEYS)
 {
-  QIconEnginePluginV2 * obj = qobject_cast<QIconEnginePluginV2*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QIconEnginePluginV2 *obj = qobject_cast<QIconEnginePluginV2 *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->keys() );
+      RQSTRINGLIST(obj->keys());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

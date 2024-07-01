@@ -45,14 +45,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QHoverEvent( QEvent::Type type, const QPoint & pos, const QPoint & oldPos )
-*/
-HB_FUNC_STATIC( QHOVEREVENT_NEW )
+    /*
+    QHoverEvent( QEvent::Type type, const QPoint & pos, const QPoint & oldPos )
+    */
+HB_FUNC_STATIC(QHOVEREVENT_NEW)
 {
-  if( ISNUMPAR(3) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3) )
+  if (ISNUMPAR(3) && HB_ISNUM(1) && ISQPOINT(2) && ISQPOINT(3))
   {
-    QHoverEvent * obj = new QHoverEvent( ( QEvent::Type ) hb_parni(1), *PQPOINT(2), *PQPOINT(3) );
+    QHoverEvent *obj = new QHoverEvent((QEvent::Type)hb_parni(1), *PQPOINT(2), *PQPOINT(3));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -61,11 +61,11 @@ HB_FUNC_STATIC( QHOVEREVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QHOVEREVENT_DELETE )
+HB_FUNC_STATIC(QHOVEREVENT_DELETE)
 {
-  QHoverEvent * obj = static_cast<QHoverEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QHoverEvent *obj = static_cast<QHoverEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -80,17 +80,17 @@ HB_FUNC_STATIC( QHOVEREVENT_DELETE )
 /*
 const QPoint & pos() const
 */
-HB_FUNC_STATIC( QHOVEREVENT_POS )
+HB_FUNC_STATIC(QHOVEREVENT_POS)
 {
-  QHoverEvent * obj = static_cast<QHoverEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QHoverEvent *obj = static_cast<QHoverEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      const QPoint * ptr = &obj->pos();
+      const QPoint *ptr = &obj->pos();
       Qt4xHb::createReturnClass(ptr, "QPOINT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -105,17 +105,17 @@ HB_FUNC_STATIC( QHOVEREVENT_POS )
 /*
 const QPoint & oldPos() const
 */
-HB_FUNC_STATIC( QHOVEREVENT_OLDPOS )
+HB_FUNC_STATIC(QHOVEREVENT_OLDPOS)
 {
-  QHoverEvent * obj = static_cast<QHoverEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QHoverEvent *obj = static_cast<QHoverEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      const QPoint * ptr = &obj->oldPos();
+      const QPoint *ptr = &obj->oldPos();
       Qt4xHb::createReturnClass(ptr, "QPOINT", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

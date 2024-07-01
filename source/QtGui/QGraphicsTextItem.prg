@@ -85,22 +85,24 @@ RETURN
 #include <QtGui/QTextCursor>
 #include <QtGui/QTextDocument>
 
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_NEW )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_NEW)
 {
-  if( ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQGRAPHICSITEM(1) || HB_ISNIL(1)))
   {
     /*
     QGraphicsTextItem( QGraphicsItem * parent = 0 )
     */
-    QGraphicsTextItem * obj = new QGraphicsTextItem( HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem*>( Qt4xHb::itemGetPtr(1)) );
+    QGraphicsTextItem *obj =
+        new QGraphicsTextItem(HB_ISNIL(1) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(1)));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQGRAPHICSITEM(2) || HB_ISNIL(2)))
   {
     /*
     QGraphicsTextItem( const QString & text, QGraphicsItem * parent = 0 )
     */
-    QGraphicsTextItem * obj = new QGraphicsTextItem( PQSTRING(1), HB_ISNIL(2) ? 0 : static_cast<QGraphicsItem*>( Qt4xHb::itemGetPtr(2)) );
+    QGraphicsTextItem *obj =
+        new QGraphicsTextItem(PQSTRING(1), HB_ISNIL(2) ? 0 : static_cast<QGraphicsItem *>(Qt4xHb::itemGetPtr(2)));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -109,11 +111,11 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DELETE )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_DELETE)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -130,14 +132,14 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DELETE )
 /*
 void adjustSize()
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ADJUSTSIZE )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_ADJUSTSIZE)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->adjustSize();
@@ -156,17 +158,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ADJUSTSIZE )
 /*
 QColor defaultTextColor() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DEFAULTTEXTCOLOR )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_DEFAULTTEXTCOLOR)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QColor * ptr = new QColor( obj->defaultTextColor() );
+      QColor *ptr = new QColor(obj->defaultTextColor());
       Qt4xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -181,17 +183,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DEFAULTTEXTCOLOR )
 /*
 QTextDocument * document() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DOCUMENT )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_DOCUMENT)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QTextDocument * ptr = obj->document();
+      QTextDocument *ptr = obj->document();
       Qt4xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -206,17 +208,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_DOCUMENT )
 /*
 QFont font() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_FONT )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_FONT)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QFont * ptr = new QFont( obj->font() );
+      QFont *ptr = new QFont(obj->font());
       Qt4xHb::createReturnClass(ptr, "QFONT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -231,17 +233,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_FONT )
 /*
 bool openExternalLinks() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPENEXTERNALLINKS )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_OPENEXTERNALLINKS)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->openExternalLinks() );
+      RBOOL(obj->openExternalLinks());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -255,17 +257,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPENEXTERNALLINKS )
 /*
 void setDefaultTextColor( const QColor & col )
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETDEFAULTTEXTCOLOR )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETDEFAULTTEXTCOLOR)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)) )
+    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setDefaultTextColor( HB_ISOBJECT(1) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(1) ) : QColor( hb_parc(1)) );
+      obj->setDefaultTextColor(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -281,17 +283,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETDEFAULTTEXTCOLOR )
 /*
 void setDocument( QTextDocument * document )
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETDOCUMENT )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETDOCUMENT)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
+    if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1))
     {
 #endif
-      obj->setDocument( PQTEXTDOCUMENT(1) );
+      obj->setDocument(PQTEXTDOCUMENT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -307,17 +309,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETDOCUMENT )
 /*
 void setFont( const QFont & font )
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETFONT )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETFONT)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQFONT(1) )
+    if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
-      obj->setFont( *PQFONT(1) );
+      obj->setFont(*PQFONT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -333,17 +335,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETFONT )
 /*
 void setHtml( const QString & text )
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETHTML )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETHTML)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setHtml( PQSTRING(1) );
+      obj->setHtml(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -359,17 +361,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETHTML )
 /*
 void setOpenExternalLinks( bool open )
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETOPENEXTERNALLINKS )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETOPENEXTERNALLINKS)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setOpenExternalLinks( PBOOL(1) );
+      obj->setOpenExternalLinks(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -385,17 +387,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETOPENEXTERNALLINKS )
 /*
 void setPlainText( const QString & text )
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETPLAINTEXT )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETPLAINTEXT)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setPlainText( PQSTRING(1) );
+      obj->setPlainText(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -411,17 +413,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETPLAINTEXT )
 /*
 void setTabChangesFocus( bool b )
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTABCHANGESFOCUS )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETTABCHANGESFOCUS)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setTabChangesFocus( PBOOL(1) );
+      obj->setTabChangesFocus(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -437,17 +439,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTABCHANGESFOCUS )
 /*
 void setTextCursor( const QTextCursor & cursor )
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTCURSOR )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETTEXTCURSOR)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
+    if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
     {
 #endif
-      obj->setTextCursor( *PQTEXTCURSOR(1) );
+      obj->setTextCursor(*PQTEXTCURSOR(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -463,17 +465,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTCURSOR )
 /*
 void setTextInteractionFlags( Qt::TextInteractionFlags flags )
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTINTERACTIONFLAGS )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETTEXTINTERACTIONFLAGS)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTextInteractionFlags( ( Qt::TextInteractionFlags ) hb_parni(1) );
+      obj->setTextInteractionFlags((Qt::TextInteractionFlags)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -489,17 +491,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTINTERACTIONFLAGS )
 /*
 void setTextWidth( qreal width )
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTWIDTH )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SETTEXTWIDTH)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTextWidth( PQREAL(1) );
+      obj->setTextWidth(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -515,17 +517,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SETTEXTWIDTH )
 /*
 bool tabChangesFocus() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TABCHANGESFOCUS )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_TABCHANGESFOCUS)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->tabChangesFocus() );
+      RBOOL(obj->tabChangesFocus());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -539,17 +541,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TABCHANGESFOCUS )
 /*
 QTextCursor textCursor() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTCURSOR )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_TEXTCURSOR)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QTextCursor * ptr = new QTextCursor( obj->textCursor() );
+      QTextCursor *ptr = new QTextCursor(obj->textCursor());
       Qt4xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -564,17 +566,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTCURSOR )
 /*
 Qt::TextInteractionFlags textInteractionFlags() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTINTERACTIONFLAGS )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_TEXTINTERACTIONFLAGS)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->textInteractionFlags() );
+      RENUM(obj->textInteractionFlags());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -588,17 +590,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTINTERACTIONFLAGS )
 /*
 qreal textWidth() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTWIDTH )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_TEXTWIDTH)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->textWidth() );
+      RQREAL(obj->textWidth());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -612,17 +614,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TEXTWIDTH )
 /*
 QString toHtml() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOHTML )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_TOHTML)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->toHtml() );
+      RQSTRING(obj->toHtml());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -636,17 +638,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOHTML )
 /*
 QString toPlainText() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOPLAINTEXT )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_TOPLAINTEXT)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->toPlainText() );
+      RQSTRING(obj->toPlainText());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -660,17 +662,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TOPLAINTEXT )
 /*
 virtual QRectF boundingRect() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_BOUNDINGRECT )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_BOUNDINGRECT)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QRectF * ptr = new QRectF( obj->boundingRect() );
+      QRectF *ptr = new QRectF(obj->boundingRect());
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -685,17 +687,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_BOUNDINGRECT )
 /*
 virtual bool contains( const QPointF & point ) const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_CONTAINS )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_CONTAINS)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINTF(1) )
+    if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      RBOOL( obj->contains( *PQPOINTF(1)) );
+      RBOOL(obj->contains(*PQPOINTF(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -709,17 +711,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_CONTAINS )
 /*
 virtual bool isObscuredBy( const QGraphicsItem * item ) const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ISOBSCUREDBY )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_ISOBSCUREDBY)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGRAPHICSITEM(1) )
+    if (ISNUMPAR(1) && ISQGRAPHICSITEM(1))
     {
 #endif
-      RBOOL( obj->isObscuredBy( PQGRAPHICSITEM(1)) );
+      RBOOL(obj->isObscuredBy(PQGRAPHICSITEM(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -733,17 +735,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ISOBSCUREDBY )
 /*
 virtual QPainterPath opaqueArea() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPAQUEAREA )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_OPAQUEAREA)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->opaqueArea() );
+      QPainterPath *ptr = new QPainterPath(obj->opaqueArea());
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -758,17 +760,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_OPAQUEAREA )
 /*
 virtual void paint( QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget )
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_PAINT )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_PAINT)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISQWIDGET(3) )
+    if (ISNUMPAR(3) && ISQPAINTER(1) && ISQSTYLEOPTIONGRAPHICSITEM(2) && ISQWIDGET(3))
     {
 #endif
-      obj->paint( PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), PQWIDGET(3) );
+      obj->paint(PQPAINTER(1), PQSTYLEOPTIONGRAPHICSITEM(2), PQWIDGET(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -784,17 +786,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_PAINT )
 /*
 virtual QPainterPath shape() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SHAPE )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_SHAPE)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->shape() );
+      QPainterPath *ptr = new QPainterPath(obj->shape());
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -809,17 +811,17 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_SHAPE )
 /*
 virtual int type() const
 */
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TYPE )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_TYPE)
 {
-  QGraphicsTextItem * obj = qobject_cast<QGraphicsTextItem*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsTextItem *obj = qobject_cast<QGraphicsTextItem *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->type() );
+      RINT(obj->type());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -830,14 +832,14 @@ HB_FUNC_STATIC( QGRAPHICSTEXTITEM_TYPE )
   }
 }
 
-void QGraphicsTextItemSlots_connect_signal(const QString & signal, const QString & slot);
+void QGraphicsTextItemSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ONLINKACTIVATED )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_ONLINKACTIVATED)
 {
   QGraphicsTextItemSlots_connect_signal("linkActivated(QString)", "linkActivated(QString)");
 }
 
-HB_FUNC_STATIC( QGRAPHICSTEXTITEM_ONLINKHOVERED )
+HB_FUNC_STATIC(QGRAPHICSTEXTITEM_ONLINKHOVERED)
 {
   QGraphicsTextItemSlots_connect_signal("linkHovered(QString)", "linkHovered(QString)");
 }

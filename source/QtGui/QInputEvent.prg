@@ -44,14 +44,15 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QInputEvent( QEvent::Type type, Qt::KeyboardModifiers modifiers = Qt::NoModifier )
-*/
-HB_FUNC_STATIC( QINPUTEVENT_NEW )
+    /*
+    QInputEvent( QEvent::Type type, Qt::KeyboardModifiers modifiers = Qt::NoModifier )
+    */
+HB_FUNC_STATIC(QINPUTEVENT_NEW)
 {
-  if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
-    QInputEvent * obj = new QInputEvent( ( QEvent::Type ) hb_parni(1), HB_ISNIL(2) ? ( Qt::KeyboardModifiers ) Qt::NoModifier : ( Qt::KeyboardModifiers ) hb_parni(2) );
+    QInputEvent *obj = new QInputEvent((QEvent::Type)hb_parni(1), HB_ISNIL(2) ? (Qt::KeyboardModifiers)Qt::NoModifier
+                                                                              : (Qt::KeyboardModifiers)hb_parni(2));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -60,11 +61,11 @@ HB_FUNC_STATIC( QINPUTEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QINPUTEVENT_DELETE )
+HB_FUNC_STATIC(QINPUTEVENT_DELETE)
 {
-  QInputEvent * obj = static_cast<QInputEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QInputEvent *obj = static_cast<QInputEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -79,17 +80,17 @@ HB_FUNC_STATIC( QINPUTEVENT_DELETE )
 /*
 Qt::KeyboardModifiers modifiers() const
 */
-HB_FUNC_STATIC( QINPUTEVENT_MODIFIERS )
+HB_FUNC_STATIC(QINPUTEVENT_MODIFIERS)
 {
-  QInputEvent * obj = static_cast<QInputEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QInputEvent *obj = static_cast<QInputEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->modifiers() );
+      RENUM(obj->modifiers());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -103,17 +104,17 @@ HB_FUNC_STATIC( QINPUTEVENT_MODIFIERS )
 /*
 void setModifiers( Qt::KeyboardModifiers amodifiers )
 */
-HB_FUNC_STATIC( QINPUTEVENT_SETMODIFIERS )
+HB_FUNC_STATIC(QINPUTEVENT_SETMODIFIERS)
 {
-  QInputEvent * obj = static_cast<QInputEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QInputEvent *obj = static_cast<QInputEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setModifiers( ( Qt::KeyboardModifiers ) hb_parni(1) );
+      obj->setModifiers((Qt::KeyboardModifiers)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

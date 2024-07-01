@@ -46,11 +46,11 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-HB_FUNC_STATIC( QGENERICPLUGIN_DELETE )
+HB_FUNC_STATIC(QGENERICPLUGIN_DELETE)
 {
-  QGenericPlugin * obj = qobject_cast<QGenericPlugin*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGenericPlugin *obj = qobject_cast<QGenericPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -67,17 +67,17 @@ HB_FUNC_STATIC( QGENERICPLUGIN_DELETE )
 /*
 virtual QObject * create( const QString & key, const QString & specification ) = 0
 */
-HB_FUNC_STATIC( QGENERICPLUGIN_CREATE )
+HB_FUNC_STATIC(QGENERICPLUGIN_CREATE)
 {
-  QGenericPlugin * obj = qobject_cast<QGenericPlugin*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGenericPlugin *obj = qobject_cast<QGenericPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2) )
+    if (ISNUMPAR(2) && HB_ISCHAR(1) && HB_ISCHAR(2))
     {
 #endif
-      QObject * ptr = obj->create( PQSTRING(1), PQSTRING(2) );
+      QObject *ptr = obj->create(PQSTRING(1), PQSTRING(2));
       Qt4xHb::createReturnQObjectClass(ptr, "QOBJECT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -92,17 +92,17 @@ HB_FUNC_STATIC( QGENERICPLUGIN_CREATE )
 /*
 virtual QStringList keys() const = 0
 */
-HB_FUNC_STATIC( QGENERICPLUGIN_KEYS )
+HB_FUNC_STATIC(QGENERICPLUGIN_KEYS)
 {
-  QGenericPlugin * obj = qobject_cast<QGenericPlugin*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGenericPlugin *obj = qobject_cast<QGenericPlugin *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRINGLIST( obj->keys() );
+      RQSTRINGLIST(obj->keys());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

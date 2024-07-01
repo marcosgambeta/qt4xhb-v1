@@ -50,11 +50,11 @@ RETURN
 
 #include <QtGui/QTextDocument>
 
-HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_DELETE )
+HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_DELETE)
 {
-  QSyntaxHighlighter * obj = qobject_cast<QSyntaxHighlighter*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSyntaxHighlighter *obj = qobject_cast<QSyntaxHighlighter *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -71,17 +71,17 @@ HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_DELETE )
 /*
 QTextDocument * document() const
 */
-HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_DOCUMENT )
+HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_DOCUMENT)
 {
-  QSyntaxHighlighter * obj = qobject_cast<QSyntaxHighlighter*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSyntaxHighlighter *obj = qobject_cast<QSyntaxHighlighter *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QTextDocument * ptr = obj->document();
+      QTextDocument *ptr = obj->document();
       Qt4xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -96,17 +96,17 @@ HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_DOCUMENT )
 /*
 void setDocument( QTextDocument * doc )
 */
-HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_SETDOCUMENT )
+HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_SETDOCUMENT)
 {
-  QSyntaxHighlighter * obj = qobject_cast<QSyntaxHighlighter*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSyntaxHighlighter *obj = qobject_cast<QSyntaxHighlighter *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
+    if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1))
     {
 #endif
-      obj->setDocument( PQTEXTDOCUMENT(1) );
+      obj->setDocument(PQTEXTDOCUMENT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -122,14 +122,14 @@ HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_SETDOCUMENT )
 /*
 void rehighlight()
 */
-HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHT )
+HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_REHIGHLIGHT)
 {
-  QSyntaxHighlighter * obj = qobject_cast<QSyntaxHighlighter*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSyntaxHighlighter *obj = qobject_cast<QSyntaxHighlighter *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->rehighlight();
@@ -148,17 +148,17 @@ HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHT )
 /*
 void rehighlightBlock( const QTextBlock & block )
 */
-HB_FUNC_STATIC( QSYNTAXHIGHLIGHTER_REHIGHLIGHTBLOCK )
+HB_FUNC_STATIC(QSYNTAXHIGHLIGHTER_REHIGHLIGHTBLOCK)
 {
-  QSyntaxHighlighter * obj = qobject_cast<QSyntaxHighlighter*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSyntaxHighlighter *obj = qobject_cast<QSyntaxHighlighter *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
+    if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
     {
 #endif
-      obj->rehighlightBlock( *PQTEXTBLOCK(1) );
+      obj->rehighlightBlock(*PQTEXTBLOCK(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

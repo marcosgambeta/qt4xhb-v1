@@ -48,14 +48,14 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-/*
-QRubberBand( QRubberBand::Shape s, QWidget * p = 0 )
-*/
-HB_FUNC_STATIC( QRUBBERBAND_NEW )
+    /*
+    QRubberBand( QRubberBand::Shape s, QWidget * p = 0 )
+    */
+HB_FUNC_STATIC(QRUBBERBAND_NEW)
 {
-  if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2)) )
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
-    QRubberBand * obj = new QRubberBand( ( QRubberBand::Shape ) hb_parni(1), OPQWIDGET( 2, 0 ) );
+    QRubberBand *obj = new QRubberBand((QRubberBand::Shape)hb_parni(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -64,11 +64,11 @@ HB_FUNC_STATIC( QRUBBERBAND_NEW )
   }
 }
 
-HB_FUNC_STATIC( QRUBBERBAND_DELETE )
+HB_FUNC_STATIC(QRUBBERBAND_DELETE)
 {
-  QRubberBand * obj = qobject_cast<QRubberBand*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QRubberBand *obj = qobject_cast<QRubberBand *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -82,32 +82,32 @@ HB_FUNC_STATIC( QRUBBERBAND_DELETE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QRUBBERBAND_MOVE )
+HB_FUNC_STATIC(QRUBBERBAND_MOVE)
 {
-  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     void move( int x, int y )
     */
-    QRubberBand * obj = qobject_cast<QRubberBand*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QRubberBand *obj = qobject_cast<QRubberBand *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->move( PINT(1), PINT(2) );
+      obj->move(PINT(1), PINT(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR(1) && ISQPOINT(1) )
+  else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
     void move( const QPoint & p )
     */
-    QRubberBand * obj = qobject_cast<QRubberBand*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QRubberBand *obj = qobject_cast<QRubberBand *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->move( *PQPOINT(1) );
+      obj->move(*PQPOINT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -118,32 +118,32 @@ HB_FUNC_STATIC( QRUBBERBAND_MOVE )
   }
 }
 
-HB_FUNC_STATIC( QRUBBERBAND_RESIZE )
+HB_FUNC_STATIC(QRUBBERBAND_RESIZE)
 {
-  if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     void resize( int width, int height )
     */
-    QRubberBand * obj = qobject_cast<QRubberBand*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QRubberBand *obj = qobject_cast<QRubberBand *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->resize( PINT(1), PINT(2) );
+      obj->resize(PINT(1), PINT(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR(1) && ISQSIZE(1) )
+  else if (ISNUMPAR(1) && ISQSIZE(1))
   {
     /*
     void resize( const QSize & size )
     */
-    QRubberBand * obj = qobject_cast<QRubberBand*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QRubberBand *obj = qobject_cast<QRubberBand *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->resize( *PQSIZE(1) );
+      obj->resize(*PQSIZE(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -154,32 +154,32 @@ HB_FUNC_STATIC( QRUBBERBAND_RESIZE )
   }
 }
 
-HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY )
+HB_FUNC_STATIC(QRUBBERBAND_SETGEOMETRY)
 {
-  if( ISNUMPAR(1) && ISQRECT(1) )
+  if (ISNUMPAR(1) && ISQRECT(1))
   {
     /*
     void setGeometry( const QRect & rect )
     */
-    QRubberBand * obj = qobject_cast<QRubberBand*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QRubberBand *obj = qobject_cast<QRubberBand *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->setGeometry( *PQRECT(1) );
+      obj->setGeometry(*PQRECT(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
+  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
     void setGeometry( int x, int y, int width, int height )
     */
-    QRubberBand * obj = qobject_cast<QRubberBand*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QRubberBand *obj = qobject_cast<QRubberBand *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->setGeometry( PINT(1), PINT(2), PINT(3), PINT(4) );
+      obj->setGeometry(PINT(1), PINT(2), PINT(3), PINT(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -193,17 +193,17 @@ HB_FUNC_STATIC( QRUBBERBAND_SETGEOMETRY )
 /*
 QRubberBand::Shape shape() const
 */
-HB_FUNC_STATIC( QRUBBERBAND_SHAPE )
+HB_FUNC_STATIC(QRUBBERBAND_SHAPE)
 {
-  QRubberBand * obj = qobject_cast<QRubberBand*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QRubberBand *obj = qobject_cast<QRubberBand *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->shape() );
+      RENUM(obj->shape());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

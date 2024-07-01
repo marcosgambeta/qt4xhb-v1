@@ -50,22 +50,22 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_NEW )
+HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QStyleOptionGraphicsItem()
     */
-    QStyleOptionGraphicsItem * obj = new QStyleOptionGraphicsItem();
+    QStyleOptionGraphicsItem *obj = new QStyleOptionGraphicsItem();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONGRAPHICSITEM(1) )
+  else if (ISNUMPAR(1) && ISQSTYLEOPTIONGRAPHICSITEM(1))
   {
     /*
     QStyleOptionGraphicsItem( const QStyleOptionGraphicsItem & other )
     */
-    QStyleOptionGraphicsItem * obj = new QStyleOptionGraphicsItem( *PQSTYLEOPTIONGRAPHICSITEM(1) );
+    QStyleOptionGraphicsItem *obj = new QStyleOptionGraphicsItem(*PQSTYLEOPTIONGRAPHICSITEM(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -77,13 +77,13 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_NEW )
 /*
 static qreal levelOfDetailFromTransform( const QTransform & worldTransform )
 */
-HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAILFROMTRANSFORM )
+HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAILFROMTRANSFORM)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(1) && ISQTRANSFORM(1) )
+  if (ISNUMPAR(1) && ISQTRANSFORM(1))
   {
 #endif
-    RQREAL( QStyleOptionGraphicsItem::levelOfDetailFromTransform( *PQTRANSFORM(1)) );
+    RQREAL(QStyleOptionGraphicsItem::levelOfDetailFromTransform(*PQTRANSFORM(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -96,15 +96,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAILFROMTRANSFORM )
 /*
 QRectF exposedRect
 */
-HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_EXPOSEDRECT )
+HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_EXPOSEDRECT)
 {
-  QStyleOptionGraphicsItem * obj = static_cast<QStyleOptionGraphicsItem*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QStyleOptionGraphicsItem *obj = static_cast<QStyleOptionGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      QRectF * ptr = new QRectF( obj->exposedRect );
+      QRectF *ptr = new QRectF(obj->exposedRect);
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
     }
     else
@@ -113,15 +113,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_EXPOSEDRECT )
     }
   }
 }
-HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_SETEXPOSEDRECT )
+HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_SETEXPOSEDRECT)
 {
-  QStyleOptionGraphicsItem * obj = static_cast<QStyleOptionGraphicsItem*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QStyleOptionGraphicsItem *obj = static_cast<QStyleOptionGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(1) && ISQRECTF(1) )
+    if (ISNUMPAR(1) && ISQRECTF(1))
     {
-      obj->exposedRect= *PQRECTF(1);
+      obj->exposedRect = *PQRECTF(1);
     }
     else
     {
@@ -135,15 +135,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_SETEXPOSEDRECT )
 /*
 QMatrix matrix
 */
-HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_MATRIX )
+HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_MATRIX)
 {
-  QStyleOptionGraphicsItem * obj = static_cast<QStyleOptionGraphicsItem*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QStyleOptionGraphicsItem *obj = static_cast<QStyleOptionGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      QMatrix * ptr = new QMatrix( obj->matrix );
+      QMatrix *ptr = new QMatrix(obj->matrix);
       Qt4xHb::createReturnClass(ptr, "QMATRIX", true);
     }
     else
@@ -152,15 +152,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_MATRIX )
     }
   }
 }
-HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_SETMATRIX )
+HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_SETMATRIX)
 {
-  QStyleOptionGraphicsItem * obj = static_cast<QStyleOptionGraphicsItem*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QStyleOptionGraphicsItem *obj = static_cast<QStyleOptionGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(1) && ISQMATRIX(1) )
+    if (ISNUMPAR(1) && ISQMATRIX(1))
     {
-      obj->matrix= *PQMATRIX(1);
+      obj->matrix = *PQMATRIX(1);
     }
     else
     {
@@ -174,15 +174,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_SETMATRIX )
 /*
 qreal levelOfDetail
 */
-HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAIL )
+HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAIL)
 {
-  QStyleOptionGraphicsItem * obj = static_cast<QStyleOptionGraphicsItem*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QStyleOptionGraphicsItem *obj = static_cast<QStyleOptionGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      RQREAL( obj->levelOfDetail );
+      RQREAL(obj->levelOfDetail);
     }
     else
     {
@@ -190,15 +190,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_LEVELOFDETAIL )
     }
   }
 }
-HB_FUNC_STATIC( QSTYLEOPTIONGRAPHICSITEM_SETLEVELOFDETAIL )
+HB_FUNC_STATIC(QSTYLEOPTIONGRAPHICSITEM_SETLEVELOFDETAIL)
 {
-  QStyleOptionGraphicsItem * obj = static_cast<QStyleOptionGraphicsItem*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QStyleOptionGraphicsItem *obj = static_cast<QStyleOptionGraphicsItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
-      obj->levelOfDetail= PQREAL(1);
+      obj->levelOfDetail = PQREAL(1);
     }
     else
     {

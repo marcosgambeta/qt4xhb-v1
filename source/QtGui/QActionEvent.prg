@@ -47,14 +47,14 @@ RETURN
 
 #include <QtGui/QAction>
 
-/*
-QActionEvent( int type, QAction * action, QAction * before = 0 )
-*/
-HB_FUNC_STATIC( QACTIONEVENT_NEW )
+    /*
+    QActionEvent( int type, QAction * action, QAction * before = 0 )
+    */
+HB_FUNC_STATIC(QACTIONEVENT_NEW)
 {
-  if( ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQACTION(2) && (ISQACTION(3) || HB_ISNIL(3)) )
+  if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQACTION(2) && (ISQACTION(3) || HB_ISNIL(3)))
   {
-    QActionEvent * obj = new QActionEvent( PINT(1), PQACTION(2), OPQACTION( 3, 0 ) );
+    QActionEvent *obj = new QActionEvent(PINT(1), PQACTION(2), OPQACTION(3, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -63,11 +63,11 @@ HB_FUNC_STATIC( QACTIONEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QACTIONEVENT_DELETE )
+HB_FUNC_STATIC(QACTIONEVENT_DELETE)
 {
-  QActionEvent * obj = static_cast<QActionEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QActionEvent *obj = static_cast<QActionEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -82,17 +82,17 @@ HB_FUNC_STATIC( QACTIONEVENT_DELETE )
 /*
 QAction * action() const
 */
-HB_FUNC_STATIC( QACTIONEVENT_ACTION )
+HB_FUNC_STATIC(QACTIONEVENT_ACTION)
 {
-  QActionEvent * obj = static_cast<QActionEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QActionEvent *obj = static_cast<QActionEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAction * ptr = obj->action();
+      QAction *ptr = obj->action();
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -107,17 +107,17 @@ HB_FUNC_STATIC( QACTIONEVENT_ACTION )
 /*
 QAction * before() const
 */
-HB_FUNC_STATIC( QACTIONEVENT_BEFORE )
+HB_FUNC_STATIC(QACTIONEVENT_BEFORE)
 {
-  QActionEvent * obj = static_cast<QActionEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QActionEvent *obj = static_cast<QActionEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QAction * ptr = obj->before();
+      QAction *ptr = obj->before();
       Qt4xHb::createReturnQObjectClass(ptr, "QACTION");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

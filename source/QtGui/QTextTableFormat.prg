@@ -56,14 +56,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QTextTableFormat()
-*/
-HB_FUNC_STATIC( QTEXTTABLEFORMAT_NEW )
+    /*
+    QTextTableFormat()
+    */
+HB_FUNC_STATIC(QTEXTTABLEFORMAT_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QTextTableFormat * obj = new QTextTableFormat();
+    QTextTableFormat *obj = new QTextTableFormat();
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -72,11 +72,11 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTEXTTABLEFORMAT_DELETE )
+HB_FUNC_STATIC(QTEXTTABLEFORMAT_DELETE)
 {
-  QTextTableFormat * obj = static_cast<QTextTableFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextTableFormat *obj = static_cast<QTextTableFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -91,17 +91,17 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_DELETE )
 /*
 Qt::Alignment alignment() const
 */
-HB_FUNC_STATIC( QTEXTTABLEFORMAT_ALIGNMENT )
+HB_FUNC_STATIC(QTEXTTABLEFORMAT_ALIGNMENT)
 {
-  QTextTableFormat * obj = static_cast<QTextTableFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextTableFormat *obj = static_cast<QTextTableFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->alignment() );
+      RENUM(obj->alignment());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -115,17 +115,17 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_ALIGNMENT )
 /*
 qreal cellPadding() const
 */
-HB_FUNC_STATIC( QTEXTTABLEFORMAT_CELLPADDING )
+HB_FUNC_STATIC(QTEXTTABLEFORMAT_CELLPADDING)
 {
-  QTextTableFormat * obj = static_cast<QTextTableFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextTableFormat *obj = static_cast<QTextTableFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->cellPadding() );
+      RQREAL(obj->cellPadding());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -139,17 +139,17 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_CELLPADDING )
 /*
 qreal cellSpacing() const
 */
-HB_FUNC_STATIC( QTEXTTABLEFORMAT_CELLSPACING )
+HB_FUNC_STATIC(QTEXTTABLEFORMAT_CELLSPACING)
 {
-  QTextTableFormat * obj = static_cast<QTextTableFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextTableFormat *obj = static_cast<QTextTableFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->cellSpacing() );
+      RQREAL(obj->cellSpacing());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -163,14 +163,14 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_CELLSPACING )
 /*
 void clearColumnWidthConstraints()
 */
-HB_FUNC_STATIC( QTEXTTABLEFORMAT_CLEARCOLUMNWIDTHCONSTRAINTS )
+HB_FUNC_STATIC(QTEXTTABLEFORMAT_CLEARCOLUMNWIDTHCONSTRAINTS)
 {
-  QTextTableFormat * obj = static_cast<QTextTableFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextTableFormat *obj = static_cast<QTextTableFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clearColumnWidthConstraints();
@@ -189,23 +189,23 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_CLEARCOLUMNWIDTHCONSTRAINTS )
 /*
 QVector<QTextLength> columnWidthConstraints() const
 */
-HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNWIDTHCONSTRAINTS )
+HB_FUNC_STATIC(QTEXTTABLEFORMAT_COLUMNWIDTHCONSTRAINTS)
 {
-  QTextTableFormat * obj = static_cast<QTextTableFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextTableFormat *obj = static_cast<QTextTableFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QVector<QTextLength> list = obj->columnWidthConstraints();
       PHB_DYNS pDynSym = hb_dynsymFindName("QTEXTLENGTH");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         const int count = list.count();
-        for( int i = 0; i < count; i++ )
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -240,17 +240,17 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNWIDTHCONSTRAINTS )
 /*
 int columns() const
 */
-HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNS )
+HB_FUNC_STATIC(QTEXTTABLEFORMAT_COLUMNS)
 {
-  QTextTableFormat * obj = static_cast<QTextTableFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextTableFormat *obj = static_cast<QTextTableFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->columns() );
+      RINT(obj->columns());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -264,17 +264,17 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_COLUMNS )
 /*
 int headerRowCount() const
 */
-HB_FUNC_STATIC( QTEXTTABLEFORMAT_HEADERROWCOUNT )
+HB_FUNC_STATIC(QTEXTTABLEFORMAT_HEADERROWCOUNT)
 {
-  QTextTableFormat * obj = static_cast<QTextTableFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextTableFormat *obj = static_cast<QTextTableFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->headerRowCount() );
+      RINT(obj->headerRowCount());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -288,17 +288,17 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_HEADERROWCOUNT )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QTEXTTABLEFORMAT_ISVALID )
+HB_FUNC_STATIC(QTEXTTABLEFORMAT_ISVALID)
 {
-  QTextTableFormat * obj = static_cast<QTextTableFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextTableFormat *obj = static_cast<QTextTableFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -312,17 +312,17 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_ISVALID )
 /*
 void setAlignment( Qt::Alignment alignment )
 */
-HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETALIGNMENT )
+HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETALIGNMENT)
 {
-  QTextTableFormat * obj = static_cast<QTextTableFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextTableFormat *obj = static_cast<QTextTableFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAlignment( ( Qt::Alignment ) hb_parni(1) );
+      obj->setAlignment((Qt::Alignment)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -338,17 +338,17 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETALIGNMENT )
 /*
 void setCellPadding( qreal padding )
 */
-HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCELLPADDING )
+HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETCELLPADDING)
 {
-  QTextTableFormat * obj = static_cast<QTextTableFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextTableFormat *obj = static_cast<QTextTableFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCellPadding( PQREAL(1) );
+      obj->setCellPadding(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -364,17 +364,17 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCELLPADDING )
 /*
 void setCellSpacing( qreal spacing )
 */
-HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCELLSPACING )
+HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETCELLSPACING)
 {
-  QTextTableFormat * obj = static_cast<QTextTableFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextTableFormat *obj = static_cast<QTextTableFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCellSpacing( PQREAL(1) );
+      obj->setCellSpacing(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -390,24 +390,25 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCELLSPACING )
 /*
 void setColumnWidthConstraints( const QVector<QTextLength> & constraints )
 */
-HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCOLUMNWIDTHCONSTRAINTS )
+HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETCOLUMNWIDTHCONSTRAINTS)
 {
-  QTextTableFormat * obj = static_cast<QTextTableFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextTableFormat *obj = static_cast<QTextTableFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
       QVector<QTextLength> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       const int nLen1 = hb_arrayLen(aList1);
-      for( int i1 = 0; i1 < nLen1; i1++ )
+      for (int i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << *static_cast<QTextLength*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
+        par1 << *static_cast<QTextLength *>(
+            hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0)));
       }
-      obj->setColumnWidthConstraints( par1 );
+      obj->setColumnWidthConstraints(par1);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -423,17 +424,17 @@ HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETCOLUMNWIDTHCONSTRAINTS )
 /*
 void setHeaderRowCount( int count )
 */
-HB_FUNC_STATIC( QTEXTTABLEFORMAT_SETHEADERROWCOUNT )
+HB_FUNC_STATIC(QTEXTTABLEFORMAT_SETHEADERROWCOUNT)
 {
-  QTextTableFormat * obj = static_cast<QTextTableFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextTableFormat *obj = static_cast<QTextTableFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setHeaderRowCount( PINT(1) );
+      obj->setHeaderRowCount(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -52,11 +52,11 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QACCESSIBLEBRIDGE_DELETE )
+HB_FUNC_STATIC(QACCESSIBLEBRIDGE_DELETE)
 {
-  QAccessibleBridge * obj = static_cast<QAccessibleBridge*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QAccessibleBridge *obj = static_cast<QAccessibleBridge *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -71,17 +71,17 @@ HB_FUNC_STATIC( QACCESSIBLEBRIDGE_DELETE )
 /*
 virtual void notifyAccessibilityUpdate( int reason, QAccessibleInterface * interface, int child ) = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEBRIDGE_NOTIFYACCESSIBILITYUPDATE )
+HB_FUNC_STATIC(QACCESSIBLEBRIDGE_NOTIFYACCESSIBILITYUPDATE)
 {
-  QAccessibleBridge * obj = static_cast<QAccessibleBridge*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QAccessibleBridge *obj = static_cast<QAccessibleBridge *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISNUM(1) && ISQACCESSIBLEINTERFACE(2) && HB_ISNUM(3) )
+    if (ISNUMPAR(3) && HB_ISNUM(1) && ISQACCESSIBLEINTERFACE(2) && HB_ISNUM(3))
     {
 #endif
-      obj->notifyAccessibilityUpdate( PINT(1), PQACCESSIBLEINTERFACE(2), PINT(3) );
+      obj->notifyAccessibilityUpdate(PINT(1), PQACCESSIBLEINTERFACE(2), PINT(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -97,17 +97,17 @@ HB_FUNC_STATIC( QACCESSIBLEBRIDGE_NOTIFYACCESSIBILITYUPDATE )
 /*
 virtual void setRootObject( QAccessibleInterface * object ) = 0
 */
-HB_FUNC_STATIC( QACCESSIBLEBRIDGE_SETROOTOBJECT )
+HB_FUNC_STATIC(QACCESSIBLEBRIDGE_SETROOTOBJECT)
 {
-  QAccessibleBridge * obj = static_cast<QAccessibleBridge*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QAccessibleBridge *obj = static_cast<QAccessibleBridge *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQACCESSIBLEINTERFACE(1) )
+    if (ISNUMPAR(1) && ISQACCESSIBLEINTERFACE(1))
     {
 #endif
-      obj->setRootObject( PQACCESSIBLEINTERFACE(1) );
+      obj->setRootObject(PQACCESSIBLEINTERFACE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -120,11 +120,11 @@ HB_FUNC_STATIC( QACCESSIBLEBRIDGE_SETROOTOBJECT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QACCESSIBLEBRIDGE_NEWFROM )
+HB_FUNC_STATIC(QACCESSIBLEBRIDGE_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -133,7 +133,7 @@ HB_FUNC_STATIC( QACCESSIBLEBRIDGE_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -150,26 +150,26 @@ HB_FUNC_STATIC( QACCESSIBLEBRIDGE_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QACCESSIBLEBRIDGE_NEWFROMOBJECT )
+HB_FUNC_STATIC(QACCESSIBLEBRIDGE_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QACCESSIBLEBRIDGE_NEWFROM );
+  HB_FUNC_EXEC(QACCESSIBLEBRIDGE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QACCESSIBLEBRIDGE_NEWFROMPOINTER )
+HB_FUNC_STATIC(QACCESSIBLEBRIDGE_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QACCESSIBLEBRIDGE_NEWFROM );
+  HB_FUNC_EXEC(QACCESSIBLEBRIDGE_NEWFROM);
 }
 
-HB_FUNC_STATIC( QACCESSIBLEBRIDGE_SELFDESTRUCTION )
+HB_FUNC_STATIC(QACCESSIBLEBRIDGE_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QACCESSIBLEBRIDGE_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QACCESSIBLEBRIDGE_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

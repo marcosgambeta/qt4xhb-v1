@@ -114,14 +114,14 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-/*
-QHeaderView( Qt::Orientation orientation, QWidget * parent = 0 )
-*/
-HB_FUNC_STATIC( QHEADERVIEW_NEW )
+    /*
+    QHeaderView( Qt::Orientation orientation, QWidget * parent = 0 )
+    */
+HB_FUNC_STATIC(QHEADERVIEW_NEW)
 {
-  if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2)) )
+  if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
-    QHeaderView * obj = new QHeaderView( ( Qt::Orientation ) hb_parni(1), OPQWIDGET( 2, 0 ) );
+    QHeaderView *obj = new QHeaderView((Qt::Orientation)hb_parni(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -130,11 +130,11 @@ HB_FUNC_STATIC( QHEADERVIEW_NEW )
   }
 }
 
-HB_FUNC_STATIC( QHEADERVIEW_DELETE )
+HB_FUNC_STATIC(QHEADERVIEW_DELETE)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -151,17 +151,17 @@ HB_FUNC_STATIC( QHEADERVIEW_DELETE )
 /*
 bool cascadingSectionResizes() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_CASCADINGSECTIONRESIZES )
+HB_FUNC_STATIC(QHEADERVIEW_CASCADINGSECTIONRESIZES)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->cascadingSectionResizes() );
+      RBOOL(obj->cascadingSectionResizes());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,17 +175,17 @@ HB_FUNC_STATIC( QHEADERVIEW_CASCADINGSECTIONRESIZES )
 /*
 int count() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_COUNT )
+HB_FUNC_STATIC(QHEADERVIEW_COUNT)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->count() );
+      RINT(obj->count());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,17 +199,17 @@ HB_FUNC_STATIC( QHEADERVIEW_COUNT )
 /*
 Qt::Alignment defaultAlignment() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_DEFAULTALIGNMENT )
+HB_FUNC_STATIC(QHEADERVIEW_DEFAULTALIGNMENT)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->defaultAlignment() );
+      RENUM(obj->defaultAlignment());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -223,17 +223,17 @@ HB_FUNC_STATIC( QHEADERVIEW_DEFAULTALIGNMENT )
 /*
 int defaultSectionSize() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_DEFAULTSECTIONSIZE )
+HB_FUNC_STATIC(QHEADERVIEW_DEFAULTSECTIONSIZE)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->defaultSectionSize() );
+      RINT(obj->defaultSectionSize());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -247,17 +247,17 @@ HB_FUNC_STATIC( QHEADERVIEW_DEFAULTSECTIONSIZE )
 /*
 int hiddenSectionCount() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_HIDDENSECTIONCOUNT )
+HB_FUNC_STATIC(QHEADERVIEW_HIDDENSECTIONCOUNT)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->hiddenSectionCount() );
+      RINT(obj->hiddenSectionCount());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -271,17 +271,17 @@ HB_FUNC_STATIC( QHEADERVIEW_HIDDENSECTIONCOUNT )
 /*
 void hideSection( int logicalIndex )
 */
-HB_FUNC_STATIC( QHEADERVIEW_HIDESECTION )
+HB_FUNC_STATIC(QHEADERVIEW_HIDESECTION)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->hideSection( PINT(1) );
+      obj->hideSection(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -297,17 +297,17 @@ HB_FUNC_STATIC( QHEADERVIEW_HIDESECTION )
 /*
 bool highlightSections() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_HIGHLIGHTSECTIONS )
+HB_FUNC_STATIC(QHEADERVIEW_HIGHLIGHTSECTIONS)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->highlightSections() );
+      RBOOL(obj->highlightSections());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -321,17 +321,17 @@ HB_FUNC_STATIC( QHEADERVIEW_HIGHLIGHTSECTIONS )
 /*
 bool isClickable() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_ISCLICKABLE )
+HB_FUNC_STATIC(QHEADERVIEW_ISCLICKABLE)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isClickable() );
+      RBOOL(obj->isClickable());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -345,17 +345,17 @@ HB_FUNC_STATIC( QHEADERVIEW_ISCLICKABLE )
 /*
 bool isMovable() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_ISMOVABLE )
+HB_FUNC_STATIC(QHEADERVIEW_ISMOVABLE)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isMovable() );
+      RBOOL(obj->isMovable());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -369,17 +369,17 @@ HB_FUNC_STATIC( QHEADERVIEW_ISMOVABLE )
 /*
 bool isSectionHidden( int logicalIndex ) const
 */
-HB_FUNC_STATIC( QHEADERVIEW_ISSECTIONHIDDEN )
+HB_FUNC_STATIC(QHEADERVIEW_ISSECTIONHIDDEN)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RBOOL( obj->isSectionHidden( PINT(1)) );
+      RBOOL(obj->isSectionHidden(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -393,17 +393,17 @@ HB_FUNC_STATIC( QHEADERVIEW_ISSECTIONHIDDEN )
 /*
 bool isSortIndicatorShown() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_ISSORTINDICATORSHOWN )
+HB_FUNC_STATIC(QHEADERVIEW_ISSORTINDICATORSHOWN)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isSortIndicatorShown() );
+      RBOOL(obj->isSortIndicatorShown());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -417,17 +417,17 @@ HB_FUNC_STATIC( QHEADERVIEW_ISSORTINDICATORSHOWN )
 /*
 int length() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_LENGTH )
+HB_FUNC_STATIC(QHEADERVIEW_LENGTH)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->length() );
+      RINT(obj->length());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -441,17 +441,17 @@ HB_FUNC_STATIC( QHEADERVIEW_LENGTH )
 /*
 int logicalIndex( int visualIndex ) const
 */
-HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEX )
+HB_FUNC_STATIC(QHEADERVIEW_LOGICALINDEX)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->logicalIndex( PINT(1)) );
+      RINT(obj->logicalIndex(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -462,42 +462,42 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEX )
   }
 }
 
-HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT )
+HB_FUNC_STATIC(QHEADERVIEW_LOGICALINDEXAT)
 {
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     int logicalIndexAt( int position ) const
     */
-    QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      RINT( obj->logicalIndexAt( PINT(1)) );
+      RINT(obj->logicalIndexAt(PINT(1)));
     }
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     int logicalIndexAt( int x, int y ) const
     */
-    QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      RINT( obj->logicalIndexAt( PINT(1), PINT(2)) );
+      RINT(obj->logicalIndexAt(PINT(1), PINT(2)));
     }
   }
-  else if( ISNUMPAR(1) && ISQPOINT(1) )
+  else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
     int logicalIndexAt( const QPoint & pos ) const
     */
-    QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      RINT( obj->logicalIndexAt( *PQPOINT(1)) );
+      RINT(obj->logicalIndexAt(*PQPOINT(1)));
     }
   }
   else
@@ -509,17 +509,17 @@ HB_FUNC_STATIC( QHEADERVIEW_LOGICALINDEXAT )
 /*
 int minimumSectionSize() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_MINIMUMSECTIONSIZE )
+HB_FUNC_STATIC(QHEADERVIEW_MINIMUMSECTIONSIZE)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->minimumSectionSize() );
+      RINT(obj->minimumSectionSize());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -533,17 +533,17 @@ HB_FUNC_STATIC( QHEADERVIEW_MINIMUMSECTIONSIZE )
 /*
 void moveSection( int from, int to )
 */
-HB_FUNC_STATIC( QHEADERVIEW_MOVESECTION )
+HB_FUNC_STATIC(QHEADERVIEW_MOVESECTION)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->moveSection( PINT(1), PINT(2) );
+      obj->moveSection(PINT(1), PINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -559,17 +559,17 @@ HB_FUNC_STATIC( QHEADERVIEW_MOVESECTION )
 /*
 int offset() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_OFFSET )
+HB_FUNC_STATIC(QHEADERVIEW_OFFSET)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->offset() );
+      RINT(obj->offset());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -583,17 +583,17 @@ HB_FUNC_STATIC( QHEADERVIEW_OFFSET )
 /*
 Qt::Orientation orientation() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_ORIENTATION )
+HB_FUNC_STATIC(QHEADERVIEW_ORIENTATION)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->orientation() );
+      RENUM(obj->orientation());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -607,17 +607,17 @@ HB_FUNC_STATIC( QHEADERVIEW_ORIENTATION )
 /*
 QHeaderView::ResizeMode resizeMode( int logicalIndex ) const
 */
-HB_FUNC_STATIC( QHEADERVIEW_RESIZEMODE )
+HB_FUNC_STATIC(QHEADERVIEW_RESIZEMODE)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RENUM( obj->resizeMode( PINT(1)) );
+      RENUM(obj->resizeMode(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -631,17 +631,17 @@ HB_FUNC_STATIC( QHEADERVIEW_RESIZEMODE )
 /*
 void resizeSection( int logicalIndex, int size )
 */
-HB_FUNC_STATIC( QHEADERVIEW_RESIZESECTION )
+HB_FUNC_STATIC(QHEADERVIEW_RESIZESECTION)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->resizeSection( PINT(1), PINT(2) );
+      obj->resizeSection(PINT(1), PINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -657,17 +657,17 @@ HB_FUNC_STATIC( QHEADERVIEW_RESIZESECTION )
 /*
 void resizeSections( QHeaderView::ResizeMode mode )
 */
-HB_FUNC_STATIC( QHEADERVIEW_RESIZESECTIONS )
+HB_FUNC_STATIC(QHEADERVIEW_RESIZESECTIONS)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->resizeSections( ( QHeaderView::ResizeMode ) hb_parni(1) );
+      obj->resizeSections((QHeaderView::ResizeMode)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -683,17 +683,17 @@ HB_FUNC_STATIC( QHEADERVIEW_RESIZESECTIONS )
 /*
 bool restoreState( const QByteArray & state )
 */
-HB_FUNC_STATIC( QHEADERVIEW_RESTORESTATE )
+HB_FUNC_STATIC(QHEADERVIEW_RESTORESTATE)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBYTEARRAY(1) )
+    if (ISNUMPAR(1) && ISQBYTEARRAY(1))
     {
 #endif
-      RBOOL( obj->restoreState( *PQBYTEARRAY(1)) );
+      RBOOL(obj->restoreState(*PQBYTEARRAY(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -707,17 +707,17 @@ HB_FUNC_STATIC( QHEADERVIEW_RESTORESTATE )
 /*
 QByteArray saveState() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_SAVESTATE )
+HB_FUNC_STATIC(QHEADERVIEW_SAVESTATE)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QByteArray * ptr = new QByteArray( obj->saveState() );
+      QByteArray *ptr = new QByteArray(obj->saveState());
       Qt4xHb::createReturnClass(ptr, "QBYTEARRAY", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -732,17 +732,17 @@ HB_FUNC_STATIC( QHEADERVIEW_SAVESTATE )
 /*
 int sectionPosition( int logicalIndex ) const
 */
-HB_FUNC_STATIC( QHEADERVIEW_SECTIONPOSITION )
+HB_FUNC_STATIC(QHEADERVIEW_SECTIONPOSITION)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->sectionPosition( PINT(1)) );
+      RINT(obj->sectionPosition(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -756,17 +756,17 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONPOSITION )
 /*
 int sectionSize( int logicalIndex ) const
 */
-HB_FUNC_STATIC( QHEADERVIEW_SECTIONSIZE )
+HB_FUNC_STATIC(QHEADERVIEW_SECTIONSIZE)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->sectionSize( PINT(1)) );
+      RINT(obj->sectionSize(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -780,17 +780,17 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSIZE )
 /*
 int sectionSizeHint( int logicalIndex ) const
 */
-HB_FUNC_STATIC( QHEADERVIEW_SECTIONSIZEHINT )
+HB_FUNC_STATIC(QHEADERVIEW_SECTIONSIZEHINT)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->sectionSizeHint( PINT(1)) );
+      RINT(obj->sectionSizeHint(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -804,17 +804,17 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSIZEHINT )
 /*
 int sectionViewportPosition( int logicalIndex ) const
 */
-HB_FUNC_STATIC( QHEADERVIEW_SECTIONVIEWPORTPOSITION )
+HB_FUNC_STATIC(QHEADERVIEW_SECTIONVIEWPORTPOSITION)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->sectionViewportPosition( PINT(1)) );
+      RINT(obj->sectionViewportPosition(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -828,17 +828,17 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONVIEWPORTPOSITION )
 /*
 bool sectionsHidden() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_SECTIONSHIDDEN )
+HB_FUNC_STATIC(QHEADERVIEW_SECTIONSHIDDEN)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->sectionsHidden() );
+      RBOOL(obj->sectionsHidden());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -852,17 +852,17 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSHIDDEN )
 /*
 bool sectionsMoved() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_SECTIONSMOVED )
+HB_FUNC_STATIC(QHEADERVIEW_SECTIONSMOVED)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->sectionsMoved() );
+      RBOOL(obj->sectionsMoved());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -876,17 +876,17 @@ HB_FUNC_STATIC( QHEADERVIEW_SECTIONSMOVED )
 /*
 void setCascadingSectionResizes( bool enable )
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETCASCADINGSECTIONRESIZES )
+HB_FUNC_STATIC(QHEADERVIEW_SETCASCADINGSECTIONRESIZES)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setCascadingSectionResizes( PBOOL(1) );
+      obj->setCascadingSectionResizes(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -902,17 +902,17 @@ HB_FUNC_STATIC( QHEADERVIEW_SETCASCADINGSECTIONRESIZES )
 /*
 void setClickable( bool clickable )
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETCLICKABLE )
+HB_FUNC_STATIC(QHEADERVIEW_SETCLICKABLE)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setClickable( PBOOL(1) );
+      obj->setClickable(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -928,17 +928,17 @@ HB_FUNC_STATIC( QHEADERVIEW_SETCLICKABLE )
 /*
 void setDefaultAlignment( Qt::Alignment alignment )
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETDEFAULTALIGNMENT )
+HB_FUNC_STATIC(QHEADERVIEW_SETDEFAULTALIGNMENT)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setDefaultAlignment( ( Qt::Alignment ) hb_parni(1) );
+      obj->setDefaultAlignment((Qt::Alignment)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -954,17 +954,17 @@ HB_FUNC_STATIC( QHEADERVIEW_SETDEFAULTALIGNMENT )
 /*
 void setDefaultSectionSize( int size )
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETDEFAULTSECTIONSIZE )
+HB_FUNC_STATIC(QHEADERVIEW_SETDEFAULTSECTIONSIZE)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setDefaultSectionSize( PINT(1) );
+      obj->setDefaultSectionSize(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -980,17 +980,17 @@ HB_FUNC_STATIC( QHEADERVIEW_SETDEFAULTSECTIONSIZE )
 /*
 void setHighlightSections( bool highlight )
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETHIGHLIGHTSECTIONS )
+HB_FUNC_STATIC(QHEADERVIEW_SETHIGHLIGHTSECTIONS)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setHighlightSections( PBOOL(1) );
+      obj->setHighlightSections(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1006,17 +1006,17 @@ HB_FUNC_STATIC( QHEADERVIEW_SETHIGHLIGHTSECTIONS )
 /*
 void setMinimumSectionSize( int size )
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETMINIMUMSECTIONSIZE )
+HB_FUNC_STATIC(QHEADERVIEW_SETMINIMUMSECTIONSIZE)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setMinimumSectionSize( PINT(1) );
+      obj->setMinimumSectionSize(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1032,17 +1032,17 @@ HB_FUNC_STATIC( QHEADERVIEW_SETMINIMUMSECTIONSIZE )
 /*
 void setMovable( bool movable )
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETMOVABLE )
+HB_FUNC_STATIC(QHEADERVIEW_SETMOVABLE)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setMovable( PBOOL(1) );
+      obj->setMovable(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1055,32 +1055,32 @@ HB_FUNC_STATIC( QHEADERVIEW_SETMOVABLE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QHEADERVIEW_SETRESIZEMODE )
+HB_FUNC_STATIC(QHEADERVIEW_SETRESIZEMODE)
 {
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     void setResizeMode( QHeaderView::ResizeMode mode )
     */
-    QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->setResizeMode( ( QHeaderView::ResizeMode ) hb_parni(1) );
+      obj->setResizeMode((QHeaderView::ResizeMode)hb_parni(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
   {
     /*
     void setResizeMode( int logicalIndex, QHeaderView::ResizeMode mode )
     */
-    QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->setResizeMode( PINT(1), ( QHeaderView::ResizeMode ) hb_parni(2) );
+      obj->setResizeMode(PINT(1), (QHeaderView::ResizeMode)hb_parni(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1094,17 +1094,17 @@ HB_FUNC_STATIC( QHEADERVIEW_SETRESIZEMODE )
 /*
 void setSectionHidden( int logicalIndex, bool hide )
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONHIDDEN )
+HB_FUNC_STATIC(QHEADERVIEW_SETSECTIONHIDDEN)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
     {
 #endif
-      obj->setSectionHidden( PINT(1), PBOOL(2) );
+      obj->setSectionHidden(PINT(1), PBOOL(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1120,17 +1120,17 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSECTIONHIDDEN )
 /*
 void setSortIndicator( int logicalIndex, Qt::SortOrder order )
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETSORTINDICATOR )
+HB_FUNC_STATIC(QHEADERVIEW_SETSORTINDICATOR)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->setSortIndicator( PINT(1), ( Qt::SortOrder ) hb_parni(2) );
+      obj->setSortIndicator(PINT(1), (Qt::SortOrder)hb_parni(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1146,17 +1146,17 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSORTINDICATOR )
 /*
 void setSortIndicatorShown( bool show )
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETSORTINDICATORSHOWN )
+HB_FUNC_STATIC(QHEADERVIEW_SETSORTINDICATORSHOWN)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setSortIndicatorShown( PBOOL(1) );
+      obj->setSortIndicatorShown(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1172,17 +1172,17 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSORTINDICATORSHOWN )
 /*
 void setStretchLastSection( bool stretch )
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETSTRETCHLASTSECTION )
+HB_FUNC_STATIC(QHEADERVIEW_SETSTRETCHLASTSECTION)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setStretchLastSection( PBOOL(1) );
+      obj->setStretchLastSection(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1198,17 +1198,17 @@ HB_FUNC_STATIC( QHEADERVIEW_SETSTRETCHLASTSECTION )
 /*
 void showSection( int logicalIndex )
 */
-HB_FUNC_STATIC( QHEADERVIEW_SHOWSECTION )
+HB_FUNC_STATIC(QHEADERVIEW_SHOWSECTION)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->showSection( PINT(1) );
+      obj->showSection(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1224,17 +1224,17 @@ HB_FUNC_STATIC( QHEADERVIEW_SHOWSECTION )
 /*
 Qt::SortOrder sortIndicatorOrder() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_SORTINDICATORORDER )
+HB_FUNC_STATIC(QHEADERVIEW_SORTINDICATORORDER)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->sortIndicatorOrder() );
+      RENUM(obj->sortIndicatorOrder());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1248,17 +1248,17 @@ HB_FUNC_STATIC( QHEADERVIEW_SORTINDICATORORDER )
 /*
 int sortIndicatorSection() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_SORTINDICATORSECTION )
+HB_FUNC_STATIC(QHEADERVIEW_SORTINDICATORSECTION)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->sortIndicatorSection() );
+      RINT(obj->sortIndicatorSection());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1272,17 +1272,17 @@ HB_FUNC_STATIC( QHEADERVIEW_SORTINDICATORSECTION )
 /*
 bool stretchLastSection() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_STRETCHLASTSECTION )
+HB_FUNC_STATIC(QHEADERVIEW_STRETCHLASTSECTION)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->stretchLastSection() );
+      RBOOL(obj->stretchLastSection());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1296,17 +1296,17 @@ HB_FUNC_STATIC( QHEADERVIEW_STRETCHLASTSECTION )
 /*
 int stretchSectionCount() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_STRETCHSECTIONCOUNT )
+HB_FUNC_STATIC(QHEADERVIEW_STRETCHSECTIONCOUNT)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->stretchSectionCount() );
+      RINT(obj->stretchSectionCount());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1320,17 +1320,17 @@ HB_FUNC_STATIC( QHEADERVIEW_STRETCHSECTIONCOUNT )
 /*
 void swapSections( int first, int second )
 */
-HB_FUNC_STATIC( QHEADERVIEW_SWAPSECTIONS )
+HB_FUNC_STATIC(QHEADERVIEW_SWAPSECTIONS)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISNUM(2))
     {
 #endif
-      obj->swapSections( PINT(1), PINT(2) );
+      obj->swapSections(PINT(1), PINT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1346,17 +1346,17 @@ HB_FUNC_STATIC( QHEADERVIEW_SWAPSECTIONS )
 /*
 int visualIndex( int logicalIndex ) const
 */
-HB_FUNC_STATIC( QHEADERVIEW_VISUALINDEX )
+HB_FUNC_STATIC(QHEADERVIEW_VISUALINDEX)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->visualIndex( PINT(1)) );
+      RINT(obj->visualIndex(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1370,17 +1370,17 @@ HB_FUNC_STATIC( QHEADERVIEW_VISUALINDEX )
 /*
 int visualIndexAt( int position ) const
 */
-HB_FUNC_STATIC( QHEADERVIEW_VISUALINDEXAT )
+HB_FUNC_STATIC(QHEADERVIEW_VISUALINDEXAT)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      RINT( obj->visualIndexAt( PINT(1)) );
+      RINT(obj->visualIndexAt(PINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1394,14 +1394,14 @@ HB_FUNC_STATIC( QHEADERVIEW_VISUALINDEXAT )
 /*
 virtual void reset()
 */
-HB_FUNC_STATIC( QHEADERVIEW_RESET )
+HB_FUNC_STATIC(QHEADERVIEW_RESET)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->reset();
@@ -1420,17 +1420,17 @@ HB_FUNC_STATIC( QHEADERVIEW_RESET )
 /*
 virtual void setModel( QAbstractItemModel * model )
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETMODEL )
+HB_FUNC_STATIC(QHEADERVIEW_SETMODEL)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1) )
+    if (ISNUMPAR(1) && ISQABSTRACTITEMMODEL(1))
     {
 #endif
-      obj->setModel( PQABSTRACTITEMMODEL(1) );
+      obj->setModel(PQABSTRACTITEMMODEL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1446,17 +1446,17 @@ HB_FUNC_STATIC( QHEADERVIEW_SETMODEL )
 /*
 virtual QSize sizeHint() const
 */
-HB_FUNC_STATIC( QHEADERVIEW_SIZEHINT )
+HB_FUNC_STATIC(QHEADERVIEW_SIZEHINT)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSize * ptr = new QSize( obj->sizeHint() );
+      QSize *ptr = new QSize(obj->sizeHint());
       Qt4xHb::createReturnClass(ptr, "QSIZE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1471,17 +1471,17 @@ HB_FUNC_STATIC( QHEADERVIEW_SIZEHINT )
 /*
 void headerDataChanged( Qt::Orientation orientation, int logicalFirst, int logicalLast )
 */
-HB_FUNC_STATIC( QHEADERVIEW_HEADERDATACHANGED )
+HB_FUNC_STATIC(QHEADERVIEW_HEADERDATACHANGED)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) )
+    if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3))
     {
 #endif
-      obj->headerDataChanged( ( Qt::Orientation ) hb_parni(1), PINT(2), PINT(3) );
+      obj->headerDataChanged((Qt::Orientation)hb_parni(1), PINT(2), PINT(3));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1497,17 +1497,17 @@ HB_FUNC_STATIC( QHEADERVIEW_HEADERDATACHANGED )
 /*
 void setOffset( int offset )
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETOFFSET )
+HB_FUNC_STATIC(QHEADERVIEW_SETOFFSET)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setOffset( PINT(1) );
+      obj->setOffset(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1523,14 +1523,14 @@ HB_FUNC_STATIC( QHEADERVIEW_SETOFFSET )
 /*
 void setOffsetToLastSection()
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETOFFSETTOLASTSECTION )
+HB_FUNC_STATIC(QHEADERVIEW_SETOFFSETTOLASTSECTION)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->setOffsetToLastSection();
@@ -1549,17 +1549,17 @@ HB_FUNC_STATIC( QHEADERVIEW_SETOFFSETTOLASTSECTION )
 /*
 void setOffsetToSectionPosition( int visualIndex )
 */
-HB_FUNC_STATIC( QHEADERVIEW_SETOFFSETTOSECTIONPOSITION )
+HB_FUNC_STATIC(QHEADERVIEW_SETOFFSETTOSECTIONPOSITION)
 {
-  QHeaderView * obj = qobject_cast<QHeaderView*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QHeaderView *obj = qobject_cast<QHeaderView *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setOffsetToSectionPosition( PINT(1) );
+      obj->setOffsetToSectionPosition(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1572,59 +1572,60 @@ HB_FUNC_STATIC( QHEADERVIEW_SETOFFSETTOSECTIONPOSITION )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QHeaderViewSlots_connect_signal(const QString & signal, const QString & slot);
+void QHeaderViewSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QHEADERVIEW_ONGEOMETRIESCHANGED )
+HB_FUNC_STATIC(QHEADERVIEW_ONGEOMETRIESCHANGED)
 {
   QHeaderViewSlots_connect_signal("geometriesChanged()", "geometriesChanged()");
 }
 
-HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONAUTORESIZE )
+HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONAUTORESIZE)
 {
-  QHeaderViewSlots_connect_signal("sectionAutoResize(int,QHeaderView::ResizeMode)", "sectionAutoResize(int,QHeaderView::ResizeMode)");
+  QHeaderViewSlots_connect_signal("sectionAutoResize(int,QHeaderView::ResizeMode)",
+                                  "sectionAutoResize(int,QHeaderView::ResizeMode)");
 }
 
-HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCLICKED )
+HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONCLICKED)
 {
   QHeaderViewSlots_connect_signal("sectionClicked(int)", "sectionClicked(int)");
 }
 
-HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONCOUNTCHANGED )
+HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONCOUNTCHANGED)
 {
   QHeaderViewSlots_connect_signal("sectionCountChanged(int,int)", "sectionCountChanged(int,int)");
 }
 
-HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONDOUBLECLICKED )
+HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONDOUBLECLICKED)
 {
   QHeaderViewSlots_connect_signal("sectionDoubleClicked(int)", "sectionDoubleClicked(int)");
 }
 
-HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONENTERED )
+HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONENTERED)
 {
   QHeaderViewSlots_connect_signal("sectionEntered(int)", "sectionEntered(int)");
 }
 
-HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONHANDLEDOUBLECLICKED )
+HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONHANDLEDOUBLECLICKED)
 {
   QHeaderViewSlots_connect_signal("sectionHandleDoubleClicked(int)", "sectionHandleDoubleClicked(int)");
 }
 
-HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONMOVED )
+HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONMOVED)
 {
   QHeaderViewSlots_connect_signal("sectionMoved(int,int,int)", "sectionMoved(int,int,int)");
 }
 
-HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONPRESSED )
+HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONPRESSED)
 {
   QHeaderViewSlots_connect_signal("sectionPressed(int)", "sectionPressed(int)");
 }
 
-HB_FUNC_STATIC( QHEADERVIEW_ONSECTIONRESIZED )
+HB_FUNC_STATIC(QHEADERVIEW_ONSECTIONRESIZED)
 {
   QHeaderViewSlots_connect_signal("sectionResized(int,int,int)", "sectionResized(int,int,int)");
 }
 
-HB_FUNC_STATIC( QHEADERVIEW_ONSORTINDICATORCHANGED )
+HB_FUNC_STATIC(QHEADERVIEW_ONSORTINDICATORCHANGED)
 {
   QHeaderViewSlots_connect_signal("sortIndicatorChanged(int,Qt::SortOrder)", "sortIndicatorChanged(int,Qt::SortOrder)");
 }

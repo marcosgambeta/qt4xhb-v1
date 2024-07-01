@@ -56,14 +56,14 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-/*
-QStatusBar( QWidget * parent = 0 )
-*/
-HB_FUNC_STATIC( QSTATUSBAR_NEW )
+    /*
+    QStatusBar( QWidget * parent = 0 )
+    */
+HB_FUNC_STATIC(QSTATUSBAR_NEW)
 {
-  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
-    QStatusBar * obj = new QStatusBar( OPQWIDGET( 1, 0 ) );
+    QStatusBar *obj = new QStatusBar(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -72,11 +72,11 @@ HB_FUNC_STATIC( QSTATUSBAR_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSTATUSBAR_DELETE )
+HB_FUNC_STATIC(QSTATUSBAR_DELETE)
 {
-  QStatusBar * obj = qobject_cast<QStatusBar*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -93,17 +93,17 @@ HB_FUNC_STATIC( QSTATUSBAR_DELETE )
 /*
 void addPermanentWidget( QWidget * widget, int stretch = 0 )
 */
-HB_FUNC_STATIC( QSTATUSBAR_ADDPERMANENTWIDGET )
+HB_FUNC_STATIC(QSTATUSBAR_ADDPERMANENTWIDGET)
 {
-  QStatusBar * obj = qobject_cast<QStatusBar*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->addPermanentWidget( PQWIDGET(1), OPINT( 2, 0 ) );
+      obj->addPermanentWidget(PQWIDGET(1), OPINT(2, 0));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -119,17 +119,17 @@ HB_FUNC_STATIC( QSTATUSBAR_ADDPERMANENTWIDGET )
 /*
 void addWidget( QWidget * widget, int stretch = 0 )
 */
-HB_FUNC_STATIC( QSTATUSBAR_ADDWIDGET )
+HB_FUNC_STATIC(QSTATUSBAR_ADDWIDGET)
 {
-  QStatusBar * obj = qobject_cast<QStatusBar*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->addWidget( PQWIDGET(1), OPINT( 2, 0 ) );
+      obj->addWidget(PQWIDGET(1), OPINT(2, 0));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -145,17 +145,17 @@ HB_FUNC_STATIC( QSTATUSBAR_ADDWIDGET )
 /*
 QString currentMessage() const
 */
-HB_FUNC_STATIC( QSTATUSBAR_CURRENTMESSAGE )
+HB_FUNC_STATIC(QSTATUSBAR_CURRENTMESSAGE)
 {
-  QStatusBar * obj = qobject_cast<QStatusBar*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->currentMessage() );
+      RQSTRING(obj->currentMessage());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -169,17 +169,17 @@ HB_FUNC_STATIC( QSTATUSBAR_CURRENTMESSAGE )
 /*
 int insertPermanentWidget( int index, QWidget * widget, int stretch = 0 )
 */
-HB_FUNC_STATIC( QSTATUSBAR_INSERTPERMANENTWIDGET )
+HB_FUNC_STATIC(QSTATUSBAR_INSERTPERMANENTWIDGET)
 {
-  QStatusBar * obj = qobject_cast<QStatusBar*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQWIDGET(2) && (HB_ISNUM(3) || HB_ISNIL(3)) )
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQWIDGET(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RINT( obj->insertPermanentWidget( PINT(1), PQWIDGET(2), OPINT( 3, 0 )) );
+      RINT(obj->insertPermanentWidget(PINT(1), PQWIDGET(2), OPINT(3, 0)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -193,17 +193,17 @@ HB_FUNC_STATIC( QSTATUSBAR_INSERTPERMANENTWIDGET )
 /*
 int insertWidget( int index, QWidget * widget, int stretch = 0 )
 */
-HB_FUNC_STATIC( QSTATUSBAR_INSERTWIDGET )
+HB_FUNC_STATIC(QSTATUSBAR_INSERTWIDGET)
 {
-  QStatusBar * obj = qobject_cast<QStatusBar*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQWIDGET(2) && (HB_ISNUM(3) || HB_ISNIL(3)) )
+    if (ISBETWEEN(2, 3) && HB_ISNUM(1) && ISQWIDGET(2) && (HB_ISNUM(3) || HB_ISNIL(3)))
     {
 #endif
-      RINT( obj->insertWidget( PINT(1), PQWIDGET(2), OPINT( 3, 0 )) );
+      RINT(obj->insertWidget(PINT(1), PQWIDGET(2), OPINT(3, 0)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -217,17 +217,17 @@ HB_FUNC_STATIC( QSTATUSBAR_INSERTWIDGET )
 /*
 bool isSizeGripEnabled() const
 */
-HB_FUNC_STATIC( QSTATUSBAR_ISSIZEGRIPENABLED )
+HB_FUNC_STATIC(QSTATUSBAR_ISSIZEGRIPENABLED)
 {
-  QStatusBar * obj = qobject_cast<QStatusBar*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isSizeGripEnabled() );
+      RBOOL(obj->isSizeGripEnabled());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -241,17 +241,17 @@ HB_FUNC_STATIC( QSTATUSBAR_ISSIZEGRIPENABLED )
 /*
 void removeWidget( QWidget * widget )
 */
-HB_FUNC_STATIC( QSTATUSBAR_REMOVEWIDGET )
+HB_FUNC_STATIC(QSTATUSBAR_REMOVEWIDGET)
 {
-  QStatusBar * obj = qobject_cast<QStatusBar*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if (ISNUMPAR(1) && ISQWIDGET(1))
     {
 #endif
-      obj->removeWidget( PQWIDGET(1) );
+      obj->removeWidget(PQWIDGET(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -267,17 +267,17 @@ HB_FUNC_STATIC( QSTATUSBAR_REMOVEWIDGET )
 /*
 void setSizeGripEnabled( bool )
 */
-HB_FUNC_STATIC( QSTATUSBAR_SETSIZEGRIPENABLED )
+HB_FUNC_STATIC(QSTATUSBAR_SETSIZEGRIPENABLED)
 {
-  QStatusBar * obj = qobject_cast<QStatusBar*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setSizeGripEnabled( PBOOL(1) );
+      obj->setSizeGripEnabled(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -293,14 +293,14 @@ HB_FUNC_STATIC( QSTATUSBAR_SETSIZEGRIPENABLED )
 /*
 void clearMessage()
 */
-HB_FUNC_STATIC( QSTATUSBAR_CLEARMESSAGE )
+HB_FUNC_STATIC(QSTATUSBAR_CLEARMESSAGE)
 {
-  QStatusBar * obj = qobject_cast<QStatusBar*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clearMessage();
@@ -319,17 +319,17 @@ HB_FUNC_STATIC( QSTATUSBAR_CLEARMESSAGE )
 /*
 void showMessage( const QString & message, int timeout = 0 )
 */
-HB_FUNC_STATIC( QSTATUSBAR_SHOWMESSAGE )
+HB_FUNC_STATIC(QSTATUSBAR_SHOWMESSAGE)
 {
-  QStatusBar * obj = qobject_cast<QStatusBar*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QStatusBar *obj = qobject_cast<QStatusBar *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->showMessage( PQSTRING(1), OPINT( 2, 0 ) );
+      obj->showMessage(PQSTRING(1), OPINT(2, 0));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -342,9 +342,9 @@ HB_FUNC_STATIC( QSTATUSBAR_SHOWMESSAGE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QStatusBarSlots_connect_signal(const QString & signal, const QString & slot);
+void QStatusBarSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QSTATUSBAR_ONMESSAGECHANGED )
+HB_FUNC_STATIC(QSTATUSBAR_ONMESSAGECHANGED)
 {
   QStatusBarSlots_connect_signal("messageChanged(QString)", "messageChanged(QString)");
 }

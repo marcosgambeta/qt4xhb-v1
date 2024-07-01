@@ -66,22 +66,22 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QGLYPHRUN_NEW )
+HB_FUNC_STATIC(QGLYPHRUN_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QGlyphRun()
     */
-    QGlyphRun * obj = new QGlyphRun();
+    QGlyphRun *obj = new QGlyphRun();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQGLYPHRUN(1) )
+  else if (ISNUMPAR(1) && ISQGLYPHRUN(1))
   {
     /*
     QGlyphRun( const QGlyphRun & other )
     */
-    QGlyphRun * obj = new QGlyphRun( *PQGLYPHRUN(1) );
+    QGlyphRun *obj = new QGlyphRun(*PQGLYPHRUN(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -90,11 +90,11 @@ HB_FUNC_STATIC( QGLYPHRUN_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGLYPHRUN_DELETE )
+HB_FUNC_STATIC(QGLYPHRUN_DELETE)
 {
-  QGlyphRun * obj = static_cast<QGlyphRun*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGlyphRun *obj = static_cast<QGlyphRun *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -109,14 +109,14 @@ HB_FUNC_STATIC( QGLYPHRUN_DELETE )
 /*
 void clear()
 */
-HB_FUNC_STATIC( QGLYPHRUN_CLEAR )
+HB_FUNC_STATIC(QGLYPHRUN_CLEAR)
 {
-  QGlyphRun * obj = static_cast<QGlyphRun*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGlyphRun *obj = static_cast<QGlyphRun *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clear();
@@ -135,23 +135,23 @@ HB_FUNC_STATIC( QGLYPHRUN_CLEAR )
 /*
 QVector<quint32> glyphIndexes() const
 */
-HB_FUNC_STATIC( QGLYPHRUN_GLYPHINDEXES )
+HB_FUNC_STATIC(QGLYPHRUN_GLYPHINDEXES)
 {
-  QGlyphRun * obj = static_cast<QGlyphRun*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGlyphRun *obj = static_cast<QGlyphRun *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QVector<quint32> list = obj->glyphIndexes();
       PHB_ITEM pArray = hb_itemArrayNew(0);
       const int count = list.count();
-      for( int i = 0; i < count; i++ )
+      for (int i = 0; i < count; i++)
       {
-        PHB_ITEM pItem = hb_itemPutNI( NULL, (quint32) list[i] );
-        hb_arrayAddForward( pArray, pItem );
+        PHB_ITEM pItem = hb_itemPutNI(NULL, (quint32)list[i]);
+        hb_arrayAddForward(pArray, pItem);
         hb_itemRelease(pItem);
       }
       hb_itemReturnRelease(pArray);
@@ -168,17 +168,17 @@ HB_FUNC_STATIC( QGLYPHRUN_GLYPHINDEXES )
 /*
 bool overline() const
 */
-HB_FUNC_STATIC( QGLYPHRUN_OVERLINE )
+HB_FUNC_STATIC(QGLYPHRUN_OVERLINE)
 {
-  QGlyphRun * obj = static_cast<QGlyphRun*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGlyphRun *obj = static_cast<QGlyphRun *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->overline() );
+      RBOOL(obj->overline());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -192,23 +192,23 @@ HB_FUNC_STATIC( QGLYPHRUN_OVERLINE )
 /*
 QVector<QPointF> positions() const
 */
-HB_FUNC_STATIC( QGLYPHRUN_POSITIONS )
+HB_FUNC_STATIC(QGLYPHRUN_POSITIONS)
 {
-  QGlyphRun * obj = static_cast<QGlyphRun*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGlyphRun *obj = static_cast<QGlyphRun *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QVector<QPointF> list = obj->positions();
       PHB_DYNS pDynSym = hb_dynsymFindName("QPOINTF");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         const int count = list.count();
-        for( int i = 0; i < count; i++ )
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
@@ -243,17 +243,17 @@ HB_FUNC_STATIC( QGLYPHRUN_POSITIONS )
 /*
 QRawFont rawFont() const
 */
-HB_FUNC_STATIC( QGLYPHRUN_RAWFONT )
+HB_FUNC_STATIC(QGLYPHRUN_RAWFONT)
 {
-  QGlyphRun * obj = static_cast<QGlyphRun*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGlyphRun *obj = static_cast<QGlyphRun *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QRawFont * ptr = new QRawFont( obj->rawFont() );
+      QRawFont *ptr = new QRawFont(obj->rawFont());
       Qt4xHb::createReturnClass(ptr, "QRAWFONT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -268,26 +268,26 @@ HB_FUNC_STATIC( QGLYPHRUN_RAWFONT )
 /*
 void setGlyphIndexes( const QVector<quint32> & glyphIndexes )
 */
-HB_FUNC_STATIC( QGLYPHRUN_SETGLYPHINDEXES )
+HB_FUNC_STATIC(QGLYPHRUN_SETGLYPHINDEXES)
 {
-  QGlyphRun * obj = static_cast<QGlyphRun*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGlyphRun *obj = static_cast<QGlyphRun *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
       QVector<quint32> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       const int nLen1 = hb_arrayLen(aList1);
       quint32 temp1;
-      for( int i1 = 0; i1 < nLen1; i1++ )
+      for (int i1 = 0; i1 < nLen1; i1++)
       {
-        temp1 = (quint32) hb_arrayGetNI(aList1, i1+1);
+        temp1 = (quint32)hb_arrayGetNI(aList1, i1 + 1);
         par1 << temp1;
       }
-      obj->setGlyphIndexes( par1 );
+      obj->setGlyphIndexes(par1);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -303,17 +303,17 @@ HB_FUNC_STATIC( QGLYPHRUN_SETGLYPHINDEXES )
 /*
 void setOverline( bool overline )
 */
-HB_FUNC_STATIC( QGLYPHRUN_SETOVERLINE )
+HB_FUNC_STATIC(QGLYPHRUN_SETOVERLINE)
 {
-  QGlyphRun * obj = static_cast<QGlyphRun*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGlyphRun *obj = static_cast<QGlyphRun *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setOverline( PBOOL(1) );
+      obj->setOverline(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -329,24 +329,24 @@ HB_FUNC_STATIC( QGLYPHRUN_SETOVERLINE )
 /*
 void setPositions( const QVector<QPointF> & positions )
 */
-HB_FUNC_STATIC( QGLYPHRUN_SETPOSITIONS )
+HB_FUNC_STATIC(QGLYPHRUN_SETPOSITIONS)
 {
-  QGlyphRun * obj = static_cast<QGlyphRun*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGlyphRun *obj = static_cast<QGlyphRun *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
       QVector<QPointF> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       const int nLen1 = hb_arrayLen(aList1);
-      for( int i1 = 0; i1 < nLen1; i1++ )
+      for (int i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << *static_cast<QPointF*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
+        par1 << *static_cast<QPointF *>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0)));
       }
-      obj->setPositions( par1 );
+      obj->setPositions(par1);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -362,17 +362,17 @@ HB_FUNC_STATIC( QGLYPHRUN_SETPOSITIONS )
 /*
 void setRawFont( const QRawFont & rawFont )
 */
-HB_FUNC_STATIC( QGLYPHRUN_SETRAWFONT )
+HB_FUNC_STATIC(QGLYPHRUN_SETRAWFONT)
 {
-  QGlyphRun * obj = static_cast<QGlyphRun*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGlyphRun *obj = static_cast<QGlyphRun *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQRAWFONT(1) )
+    if (ISNUMPAR(1) && ISQRAWFONT(1))
     {
 #endif
-      obj->setRawFont( *PQRAWFONT(1) );
+      obj->setRawFont(*PQRAWFONT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -388,17 +388,17 @@ HB_FUNC_STATIC( QGLYPHRUN_SETRAWFONT )
 /*
 void setStrikeOut( bool strikeOut )
 */
-HB_FUNC_STATIC( QGLYPHRUN_SETSTRIKEOUT )
+HB_FUNC_STATIC(QGLYPHRUN_SETSTRIKEOUT)
 {
-  QGlyphRun * obj = static_cast<QGlyphRun*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGlyphRun *obj = static_cast<QGlyphRun *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setStrikeOut( PBOOL(1) );
+      obj->setStrikeOut(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -414,17 +414,17 @@ HB_FUNC_STATIC( QGLYPHRUN_SETSTRIKEOUT )
 /*
 void setUnderline( bool underline )
 */
-HB_FUNC_STATIC( QGLYPHRUN_SETUNDERLINE )
+HB_FUNC_STATIC(QGLYPHRUN_SETUNDERLINE)
 {
-  QGlyphRun * obj = static_cast<QGlyphRun*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGlyphRun *obj = static_cast<QGlyphRun *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setUnderline( PBOOL(1) );
+      obj->setUnderline(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -440,17 +440,17 @@ HB_FUNC_STATIC( QGLYPHRUN_SETUNDERLINE )
 /*
 bool strikeOut() const
 */
-HB_FUNC_STATIC( QGLYPHRUN_STRIKEOUT )
+HB_FUNC_STATIC(QGLYPHRUN_STRIKEOUT)
 {
-  QGlyphRun * obj = static_cast<QGlyphRun*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGlyphRun *obj = static_cast<QGlyphRun *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->strikeOut() );
+      RBOOL(obj->strikeOut());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -464,17 +464,17 @@ HB_FUNC_STATIC( QGLYPHRUN_STRIKEOUT )
 /*
 bool underline() const
 */
-HB_FUNC_STATIC( QGLYPHRUN_UNDERLINE )
+HB_FUNC_STATIC(QGLYPHRUN_UNDERLINE)
 {
-  QGlyphRun * obj = static_cast<QGlyphRun*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGlyphRun *obj = static_cast<QGlyphRun *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->underline() );
+      RBOOL(obj->underline());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -485,11 +485,11 @@ HB_FUNC_STATIC( QGLYPHRUN_UNDERLINE )
   }
 }
 
-HB_FUNC_STATIC( QGLYPHRUN_NEWFROM )
+HB_FUNC_STATIC(QGLYPHRUN_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -498,7 +498,7 @@ HB_FUNC_STATIC( QGLYPHRUN_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -515,26 +515,26 @@ HB_FUNC_STATIC( QGLYPHRUN_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QGLYPHRUN_NEWFROMOBJECT )
+HB_FUNC_STATIC(QGLYPHRUN_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QGLYPHRUN_NEWFROM );
+  HB_FUNC_EXEC(QGLYPHRUN_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGLYPHRUN_NEWFROMPOINTER )
+HB_FUNC_STATIC(QGLYPHRUN_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QGLYPHRUN_NEWFROM );
+  HB_FUNC_EXEC(QGLYPHRUN_NEWFROM);
 }
 
-HB_FUNC_STATIC( QGLYPHRUN_SELFDESTRUCTION )
+HB_FUNC_STATIC(QGLYPHRUN_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QGLYPHRUN_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QGLYPHRUN_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

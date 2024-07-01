@@ -54,11 +54,11 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-HB_FUNC_STATIC( QTEXTLIST_DELETE )
+HB_FUNC_STATIC(QTEXTLIST_DELETE)
 {
-  QTextList * obj = qobject_cast<QTextList*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -75,17 +75,17 @@ HB_FUNC_STATIC( QTEXTLIST_DELETE )
 /*
 void add( const QTextBlock & block )
 */
-HB_FUNC_STATIC( QTEXTLIST_ADD )
+HB_FUNC_STATIC(QTEXTLIST_ADD)
 {
-  QTextList * obj = qobject_cast<QTextList*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
+    if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
     {
 #endif
-      obj->add( *PQTEXTBLOCK(1) );
+      obj->add(*PQTEXTBLOCK(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -101,17 +101,17 @@ HB_FUNC_STATIC( QTEXTLIST_ADD )
 /*
 int count() const
 */
-HB_FUNC_STATIC( QTEXTLIST_COUNT )
+HB_FUNC_STATIC(QTEXTLIST_COUNT)
 {
-  QTextList * obj = qobject_cast<QTextList*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->count() );
+      RINT(obj->count());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -125,17 +125,17 @@ HB_FUNC_STATIC( QTEXTLIST_COUNT )
 /*
 QTextListFormat format() const
 */
-HB_FUNC_STATIC( QTEXTLIST_FORMAT )
+HB_FUNC_STATIC(QTEXTLIST_FORMAT)
 {
-  QTextList * obj = qobject_cast<QTextList*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QTextListFormat * ptr = new QTextListFormat( obj->format() );
+      QTextListFormat *ptr = new QTextListFormat(obj->format());
       Qt4xHb::createReturnClass(ptr, "QTEXTLISTFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -150,17 +150,17 @@ HB_FUNC_STATIC( QTEXTLIST_FORMAT )
 /*
 QTextBlock item( int i ) const
 */
-HB_FUNC_STATIC( QTEXTLIST_ITEM )
+HB_FUNC_STATIC(QTEXTLIST_ITEM)
 {
-  QTextList * obj = qobject_cast<QTextList*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QTextBlock * ptr = new QTextBlock( obj->item( PINT(1)) );
+      QTextBlock *ptr = new QTextBlock(obj->item(PINT(1)));
       Qt4xHb::createReturnClass(ptr, "QTEXTBLOCK", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -175,17 +175,17 @@ HB_FUNC_STATIC( QTEXTLIST_ITEM )
 /*
 int itemNumber( const QTextBlock & block ) const
 */
-HB_FUNC_STATIC( QTEXTLIST_ITEMNUMBER )
+HB_FUNC_STATIC(QTEXTLIST_ITEMNUMBER)
 {
-  QTextList * obj = qobject_cast<QTextList*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
+    if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
     {
 #endif
-      RINT( obj->itemNumber( *PQTEXTBLOCK(1)) );
+      RINT(obj->itemNumber(*PQTEXTBLOCK(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,17 +199,17 @@ HB_FUNC_STATIC( QTEXTLIST_ITEMNUMBER )
 /*
 QString itemText( const QTextBlock & block ) const
 */
-HB_FUNC_STATIC( QTEXTLIST_ITEMTEXT )
+HB_FUNC_STATIC(QTEXTLIST_ITEMTEXT)
 {
-  QTextList * obj = qobject_cast<QTextList*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
+    if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
     {
 #endif
-      RQSTRING( obj->itemText( *PQTEXTBLOCK(1)) );
+      RQSTRING(obj->itemText(*PQTEXTBLOCK(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -223,17 +223,17 @@ HB_FUNC_STATIC( QTEXTLIST_ITEMTEXT )
 /*
 void remove( const QTextBlock & block )
 */
-HB_FUNC_STATIC( QTEXTLIST_REMOVE )
+HB_FUNC_STATIC(QTEXTLIST_REMOVE)
 {
-  QTextList * obj = qobject_cast<QTextList*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
+    if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
     {
 #endif
-      obj->remove( *PQTEXTBLOCK(1) );
+      obj->remove(*PQTEXTBLOCK(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -249,17 +249,17 @@ HB_FUNC_STATIC( QTEXTLIST_REMOVE )
 /*
 void removeItem( int i )
 */
-HB_FUNC_STATIC( QTEXTLIST_REMOVEITEM )
+HB_FUNC_STATIC(QTEXTLIST_REMOVEITEM)
 {
-  QTextList * obj = qobject_cast<QTextList*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->removeItem( PINT(1) );
+      obj->removeItem(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -275,17 +275,17 @@ HB_FUNC_STATIC( QTEXTLIST_REMOVEITEM )
 /*
 void setFormat( const QTextListFormat & format )
 */
-HB_FUNC_STATIC( QTEXTLIST_SETFORMAT )
+HB_FUNC_STATIC(QTEXTLIST_SETFORMAT)
 {
-  QTextList * obj = qobject_cast<QTextList*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextList *obj = qobject_cast<QTextList *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTLISTFORMAT(1) )
+    if (ISNUMPAR(1) && ISQTEXTLISTFORMAT(1))
     {
 #endif
-      obj->setFormat( *PQTEXTLISTFORMAT(1) );
+      obj->setFormat(*PQTEXTLISTFORMAT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

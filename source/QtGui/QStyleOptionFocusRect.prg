@@ -44,22 +44,22 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_NEW )
+HB_FUNC_STATIC(QSTYLEOPTIONFOCUSRECT_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QStyleOptionFocusRect()
     */
-    QStyleOptionFocusRect * obj = new QStyleOptionFocusRect();
+    QStyleOptionFocusRect *obj = new QStyleOptionFocusRect();
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISNUMPAR(1) && ISQSTYLEOPTIONFOCUSRECT(1) )
+  else if (ISNUMPAR(1) && ISQSTYLEOPTIONFOCUSRECT(1))
   {
     /*
     QStyleOptionFocusRect( const QStyleOptionFocusRect & other )
     */
-    QStyleOptionFocusRect * obj = new QStyleOptionFocusRect( *PQSTYLEOPTIONFOCUSRECT(1) );
+    QStyleOptionFocusRect *obj = new QStyleOptionFocusRect(*PQSTYLEOPTIONFOCUSRECT(1));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -71,15 +71,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_NEW )
 /*
 QColor backgroundColor
 */
-HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_BACKGROUNDCOLOR )
+HB_FUNC_STATIC(QSTYLEOPTIONFOCUSRECT_BACKGROUNDCOLOR)
 {
-  QStyleOptionFocusRect * obj = static_cast<QStyleOptionFocusRect*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QStyleOptionFocusRect *obj = static_cast<QStyleOptionFocusRect *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
-      QColor * ptr = new QColor( obj->backgroundColor );
+      QColor *ptr = new QColor(obj->backgroundColor);
       Qt4xHb::createReturnClass(ptr, "QCOLOR", true);
     }
     else
@@ -88,15 +88,15 @@ HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_BACKGROUNDCOLOR )
     }
   }
 }
-HB_FUNC_STATIC( QSTYLEOPTIONFOCUSRECT_SETBACKGROUNDCOLOR )
+HB_FUNC_STATIC(QSTYLEOPTIONFOCUSRECT_SETBACKGROUNDCOLOR)
 {
-  QStyleOptionFocusRect * obj = static_cast<QStyleOptionFocusRect*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QStyleOptionFocusRect *obj = static_cast<QStyleOptionFocusRect *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
-    if( ISNUMPAR(1) && ISQCOLOR(1) )
+    if (ISNUMPAR(1) && ISQCOLOR(1))
     {
-      obj->backgroundColor= *PQCOLOR(1);
+      obj->backgroundColor = *PQCOLOR(1);
     }
     else
     {

@@ -137,30 +137,30 @@ RETURN
 #include <QtGui/QGraphicsProxyWidget>
 #include <QtGui/QStyle>
 
-HB_FUNC_STATIC( QGRAPHICSSCENE_NEW )
+HB_FUNC_STATIC(QGRAPHICSSCENE_NEW)
 {
-  if( ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQOBJECT(1) || HB_ISNIL(1)))
   {
     /*
     QGraphicsScene( QObject * parent = 0 )
     */
-    QGraphicsScene * obj = new QGraphicsScene( OPQOBJECT( 1, 0 ) );
+    QGraphicsScene *obj = new QGraphicsScene(OPQOBJECT(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 2) && ISQRECTF(1) && (ISQOBJECT(2) || HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && ISQRECTF(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
     /*
     QGraphicsScene( const QRectF & sceneRect, QObject * parent = 0 )
     */
-    QGraphicsScene * obj = new QGraphicsScene( *PQRECTF(1), OPQOBJECT( 2, 0 ) );
+    QGraphicsScene *obj = new QGraphicsScene(*PQRECTF(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQOBJECT(5) || HB_ISNIL(5)) )
+  else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQOBJECT(5) || HB_ISNIL(5)))
   {
     /*
     QGraphicsScene( qreal x, qreal y, qreal width, qreal height, QObject * parent = 0 )
     */
-    QGraphicsScene * obj = new QGraphicsScene( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQOBJECT( 5, 0 ) );
+    QGraphicsScene *obj = new QGraphicsScene(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), OPQOBJECT(5, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -169,11 +169,11 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSSCENE_DELETE )
+HB_FUNC_STATIC(QGRAPHICSSCENE_DELETE)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -190,17 +190,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_DELETE )
 /*
 QGraphicsItem * activePanel() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_ACTIVEPANEL )
+HB_FUNC_STATIC(QGRAPHICSSCENE_ACTIVEPANEL)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QGraphicsItem * ptr = obj->activePanel();
+      QGraphicsItem *ptr = obj->activePanel();
       Qt4xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -215,17 +215,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ACTIVEPANEL )
 /*
 QGraphicsWidget * activeWindow() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_ACTIVEWINDOW )
+HB_FUNC_STATIC(QGRAPHICSSCENE_ACTIVEWINDOW)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QGraphicsWidget * ptr = obj->activeWindow();
+      QGraphicsWidget *ptr = obj->activeWindow();
       Qt4xHb::createReturnQObjectClass(ptr, "QGRAPHICSWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -237,31 +237,38 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ACTIVEWINDOW )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSSCENE_ADDELLIPSE )
+HB_FUNC_STATIC(QGRAPHICSSCENE_ADDELLIPSE)
 {
-  if( ISBETWEEN(1, 3) && ISQRECTF(1) && (ISQPEN(2) || HB_ISNIL(2)) && (ISQBRUSH(3) || HB_ISNIL(3)) )
+  if (ISBETWEEN(1, 3) && ISQRECTF(1) && (ISQPEN(2) || HB_ISNIL(2)) && (ISQBRUSH(3) || HB_ISNIL(3)))
   {
     /*
     QGraphicsEllipseItem * addEllipse( const QRectF & rect, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
     */
-    QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QGraphicsEllipseItem * ptr = obj->addEllipse( *PQRECTF(1), HB_ISNIL(2) ? QPen() : *static_cast<QPen*>( Qt4xHb::itemGetPtr(2) ), HB_ISNIL(3) ? QBrush() : *static_cast<QBrush*>( Qt4xHb::itemGetPtr(3)) );
+      QGraphicsEllipseItem *ptr =
+          obj->addEllipse(*PQRECTF(1), HB_ISNIL(2) ? QPen() : *static_cast<QPen *>(Qt4xHb::itemGetPtr(2)),
+                          HB_ISNIL(3) ? QBrush() : *static_cast<QBrush *>(Qt4xHb::itemGetPtr(3)));
       Qt4xHb::createReturnClass(ptr, "QGRAPHICSELLIPSEITEM", false);
     }
   }
-  else if( ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQPEN(5) || HB_ISNIL(5)) && (ISQBRUSH(6) || HB_ISNIL(6)) )
+  else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQPEN(5) || HB_ISNIL(5)) &&
+           (ISQBRUSH(6) || HB_ISNIL(6)))
   {
     /*
-    QGraphicsEllipseItem * addEllipse( qreal x, qreal y, qreal w, qreal h, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
+    QGraphicsEllipseItem * addEllipse( qreal x, qreal y, qreal w, qreal h, const QPen & pen = QPen(), const QBrush &
+    brush = QBrush() )
     */
-    QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QGraphicsEllipseItem * ptr = obj->addEllipse( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), HB_ISNIL(5) ? QPen() : *static_cast<QPen*>( Qt4xHb::itemGetPtr(5) ), HB_ISNIL(6) ? QBrush() : *static_cast<QBrush*>( Qt4xHb::itemGetPtr(6)) );
+      QGraphicsEllipseItem *ptr =
+          obj->addEllipse(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),
+                          HB_ISNIL(5) ? QPen() : *static_cast<QPen *>(Qt4xHb::itemGetPtr(5)),
+                          HB_ISNIL(6) ? QBrush() : *static_cast<QBrush *>(Qt4xHb::itemGetPtr(6)));
       Qt4xHb::createReturnClass(ptr, "QGRAPHICSELLIPSEITEM", false);
     }
   }
@@ -274,17 +281,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDELLIPSE )
 /*
 void addItem( QGraphicsItem * item )
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_ADDITEM )
+HB_FUNC_STATIC(QGRAPHICSSCENE_ADDITEM)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGRAPHICSITEM(1) )
+    if (ISNUMPAR(1) && ISQGRAPHICSITEM(1))
     {
 #endif
-      obj->addItem( PQGRAPHICSITEM(1) );
+      obj->addItem(PQGRAPHICSITEM(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -297,31 +304,33 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDITEM )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QGRAPHICSSCENE_ADDLINE )
+HB_FUNC_STATIC(QGRAPHICSSCENE_ADDLINE)
 {
-  if( ISBETWEEN(1, 2) && ISQLINEF(1) && (ISQPEN(2) || HB_ISNIL(2)) )
+  if (ISBETWEEN(1, 2) && ISQLINEF(1) && (ISQPEN(2) || HB_ISNIL(2)))
   {
     /*
     QGraphicsLineItem * addLine( const QLineF & line, const QPen & pen = QPen() )
     */
-    QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QGraphicsLineItem * ptr = obj->addLine( *PQLINEF(1), HB_ISNIL(2) ? QPen() : *static_cast<QPen*>( Qt4xHb::itemGetPtr(2)) );
+      QGraphicsLineItem *ptr =
+          obj->addLine(*PQLINEF(1), HB_ISNIL(2) ? QPen() : *static_cast<QPen *>(Qt4xHb::itemGetPtr(2)));
       Qt4xHb::createReturnClass(ptr, "QGRAPHICSLINEITEM", false);
     }
   }
-  else if( ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQPEN(5) || HB_ISNIL(5)) )
+  else if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQPEN(5) || HB_ISNIL(5)))
   {
     /*
     QGraphicsLineItem * addLine( qreal x1, qreal y1, qreal x2, qreal y2, const QPen & pen = QPen() )
     */
-    QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QGraphicsLineItem * ptr = obj->addLine( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), HB_ISNIL(5) ? QPen() : *static_cast<QPen*>( Qt4xHb::itemGetPtr(5)) );
+      QGraphicsLineItem *ptr = obj->addLine(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),
+                                            HB_ISNIL(5) ? QPen() : *static_cast<QPen *>(Qt4xHb::itemGetPtr(5)));
       Qt4xHb::createReturnClass(ptr, "QGRAPHICSLINEITEM", false);
     }
   }
@@ -334,17 +343,19 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDLINE )
 /*
 QGraphicsPathItem * addPath( const QPainterPath & path, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_ADDPATH )
+HB_FUNC_STATIC(QGRAPHICSSCENE_ADDPATH)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 3) && ISQPAINTERPATH(1) && (ISQPEN(2) || HB_ISNIL(2)) && (ISQBRUSH(3) || HB_ISNIL(3)) )
+    if (ISBETWEEN(1, 3) && ISQPAINTERPATH(1) && (ISQPEN(2) || HB_ISNIL(2)) && (ISQBRUSH(3) || HB_ISNIL(3)))
     {
 #endif
-      QGraphicsPathItem * ptr = obj->addPath( *PQPAINTERPATH(1), HB_ISNIL(2) ? QPen() : *static_cast<QPen*>( Qt4xHb::itemGetPtr(2) ), HB_ISNIL(3) ? QBrush() : *static_cast<QBrush*>( Qt4xHb::itemGetPtr(3)) );
+      QGraphicsPathItem *ptr =
+          obj->addPath(*PQPAINTERPATH(1), HB_ISNIL(2) ? QPen() : *static_cast<QPen *>(Qt4xHb::itemGetPtr(2)),
+                       HB_ISNIL(3) ? QBrush() : *static_cast<QBrush *>(Qt4xHb::itemGetPtr(3)));
       Qt4xHb::createReturnClass(ptr, "QGRAPHICSPATHITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -359,17 +370,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDPATH )
 /*
 QGraphicsPixmapItem * addPixmap( const QPixmap & pixmap )
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_ADDPIXMAP )
+HB_FUNC_STATIC(QGRAPHICSSCENE_ADDPIXMAP)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPIXMAP(1) )
+    if (ISNUMPAR(1) && ISQPIXMAP(1))
     {
 #endif
-      QGraphicsPixmapItem * ptr = obj->addPixmap( *PQPIXMAP(1) );
+      QGraphicsPixmapItem *ptr = obj->addPixmap(*PQPIXMAP(1));
       Qt4xHb::createReturnClass(ptr, "QGRAPHICSPIXMAPITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -382,19 +393,22 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDPIXMAP )
 }
 
 /*
-QGraphicsPolygonItem * addPolygon( const QPolygonF & polygon, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
+QGraphicsPolygonItem * addPolygon( const QPolygonF & polygon, const QPen & pen = QPen(), const QBrush & brush = QBrush()
+)
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_ADDPOLYGON )
+HB_FUNC_STATIC(QGRAPHICSSCENE_ADDPOLYGON)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 3) && ISQPOLYGONF(1) && (ISQPEN(2) || HB_ISNIL(2)) && (ISQBRUSH(3) || HB_ISNIL(3)) )
+    if (ISBETWEEN(1, 3) && ISQPOLYGONF(1) && (ISQPEN(2) || HB_ISNIL(2)) && (ISQBRUSH(3) || HB_ISNIL(3)))
     {
 #endif
-      QGraphicsPolygonItem * ptr = obj->addPolygon( *PQPOLYGONF(1), HB_ISNIL(2) ? QPen() : *static_cast<QPen*>( Qt4xHb::itemGetPtr(2) ), HB_ISNIL(3) ? QBrush() : *static_cast<QBrush*>( Qt4xHb::itemGetPtr(3)) );
+      QGraphicsPolygonItem *ptr =
+          obj->addPolygon(*PQPOLYGONF(1), HB_ISNIL(2) ? QPen() : *static_cast<QPen *>(Qt4xHb::itemGetPtr(2)),
+                          HB_ISNIL(3) ? QBrush() : *static_cast<QBrush *>(Qt4xHb::itemGetPtr(3)));
       Qt4xHb::createReturnClass(ptr, "QGRAPHICSPOLYGONITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -406,31 +420,37 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDPOLYGON )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSSCENE_ADDRECT )
+HB_FUNC_STATIC(QGRAPHICSSCENE_ADDRECT)
 {
-  if( ISBETWEEN(1, 3) && ISQRECTF(1) && (ISQPEN(2) || HB_ISNIL(2)) && (ISQBRUSH(3) || HB_ISNIL(3)) )
+  if (ISBETWEEN(1, 3) && ISQRECTF(1) && (ISQPEN(2) || HB_ISNIL(2)) && (ISQBRUSH(3) || HB_ISNIL(3)))
   {
     /*
     QGraphicsRectItem * addRect( const QRectF & rect, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
     */
-    QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QGraphicsRectItem * ptr = obj->addRect( *PQRECTF(1), HB_ISNIL(2) ? QPen() : *static_cast<QPen*>( Qt4xHb::itemGetPtr(2) ), HB_ISNIL(3) ? QBrush() : *static_cast<QBrush*>( Qt4xHb::itemGetPtr(3)) );
+      QGraphicsRectItem *ptr =
+          obj->addRect(*PQRECTF(1), HB_ISNIL(2) ? QPen() : *static_cast<QPen *>(Qt4xHb::itemGetPtr(2)),
+                       HB_ISNIL(3) ? QBrush() : *static_cast<QBrush *>(Qt4xHb::itemGetPtr(3)));
       Qt4xHb::createReturnClass(ptr, "QGRAPHICSRECTITEM", false);
     }
   }
-  else if( ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQPEN(5) || HB_ISNIL(5)) && (ISQBRUSH(6) || HB_ISNIL(6)) )
+  else if (ISBETWEEN(4, 6) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (ISQPEN(5) || HB_ISNIL(5)) &&
+           (ISQBRUSH(6) || HB_ISNIL(6)))
   {
     /*
-    QGraphicsRectItem * addRect( qreal x, qreal y, qreal w, qreal h, const QPen & pen = QPen(), const QBrush & brush = QBrush() )
+    QGraphicsRectItem * addRect( qreal x, qreal y, qreal w, qreal h, const QPen & pen = QPen(), const QBrush & brush =
+    QBrush() )
     */
-    QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QGraphicsRectItem * ptr = obj->addRect( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), HB_ISNIL(5) ? QPen() : *static_cast<QPen*>( Qt4xHb::itemGetPtr(5) ), HB_ISNIL(6) ? QBrush() : *static_cast<QBrush*>( Qt4xHb::itemGetPtr(6)) );
+      QGraphicsRectItem *ptr = obj->addRect(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),
+                                            HB_ISNIL(5) ? QPen() : *static_cast<QPen *>(Qt4xHb::itemGetPtr(5)),
+                                            HB_ISNIL(6) ? QBrush() : *static_cast<QBrush *>(Qt4xHb::itemGetPtr(6)));
       Qt4xHb::createReturnClass(ptr, "QGRAPHICSRECTITEM", false);
     }
   }
@@ -443,17 +463,18 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDRECT )
 /*
 QGraphicsSimpleTextItem * addSimpleText( const QString & text, const QFont & font = QFont() )
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_ADDSIMPLETEXT )
+HB_FUNC_STATIC(QGRAPHICSSCENE_ADDSIMPLETEXT)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQFONT(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQFONT(2) || HB_ISNIL(2)))
     {
 #endif
-      QGraphicsSimpleTextItem * ptr = obj->addSimpleText( PQSTRING(1), HB_ISNIL(2) ? QFont() : *static_cast<QFont*>( Qt4xHb::itemGetPtr(2)) );
+      QGraphicsSimpleTextItem *ptr =
+          obj->addSimpleText(PQSTRING(1), HB_ISNIL(2) ? QFont() : *static_cast<QFont *>(Qt4xHb::itemGetPtr(2)));
       Qt4xHb::createReturnClass(ptr, "QGRAPHICSSIMPLETEXTITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -468,17 +489,18 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDSIMPLETEXT )
 /*
 QGraphicsTextItem * addText( const QString & text, const QFont & font = QFont() )
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_ADDTEXT )
+HB_FUNC_STATIC(QGRAPHICSSCENE_ADDTEXT)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQFONT(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQFONT(2) || HB_ISNIL(2)))
     {
 #endif
-      QGraphicsTextItem * ptr = obj->addText( PQSTRING(1), HB_ISNIL(2) ? QFont() : *static_cast<QFont*>( Qt4xHb::itemGetPtr(2)) );
+      QGraphicsTextItem *ptr =
+          obj->addText(PQSTRING(1), HB_ISNIL(2) ? QFont() : *static_cast<QFont *>(Qt4xHb::itemGetPtr(2)));
       Qt4xHb::createReturnQObjectClass(ptr, "QGRAPHICSTEXTITEM");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -493,17 +515,18 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDTEXT )
 /*
 QGraphicsProxyWidget * addWidget( QWidget * widget, Qt::WindowFlags wFlags = 0 )
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_ADDWIDGET )
+HB_FUNC_STATIC(QGRAPHICSSCENE_ADDWIDGET)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && ISQWIDGET(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      QGraphicsProxyWidget * ptr = obj->addWidget( PQWIDGET(1), HB_ISNIL(2) ? ( Qt::WindowFlags ) 0 : ( Qt::WindowFlags ) hb_parni(2) );
+      QGraphicsProxyWidget *ptr =
+          obj->addWidget(PQWIDGET(1), HB_ISNIL(2) ? (Qt::WindowFlags)0 : (Qt::WindowFlags)hb_parni(2));
       Qt4xHb::createReturnQObjectClass(ptr, "QGRAPHICSPROXYWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -518,17 +541,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADDWIDGET )
 /*
 QBrush backgroundBrush() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_BACKGROUNDBRUSH )
+HB_FUNC_STATIC(QGRAPHICSSCENE_BACKGROUNDBRUSH)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QBrush * ptr = new QBrush( obj->backgroundBrush() );
+      QBrush *ptr = new QBrush(obj->backgroundBrush());
       Qt4xHb::createReturnClass(ptr, "QBRUSH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -543,17 +566,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_BACKGROUNDBRUSH )
 /*
 int bspTreeDepth() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_BSPTREEDEPTH )
+HB_FUNC_STATIC(QGRAPHICSSCENE_BSPTREEDEPTH)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->bspTreeDepth() );
+      RINT(obj->bspTreeDepth());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -567,14 +590,14 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_BSPTREEDEPTH )
 /*
 void clearFocus()
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_CLEARFOCUS )
+HB_FUNC_STATIC(QGRAPHICSSCENE_CLEARFOCUS)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clearFocus();
@@ -591,32 +614,35 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_CLEARFOCUS )
 }
 
 /*
-QList<QGraphicsItem *> collidingItems( const QGraphicsItem * item, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape ) const
+QList<QGraphicsItem *> collidingItems( const QGraphicsItem * item, Qt::ItemSelectionMode mode = Qt::IntersectsItemShape
+) const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_COLLIDINGITEMS )
+HB_FUNC_STATIC(QGRAPHICSSCENE_COLLIDINGITEMS)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQGRAPHICSITEM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && ISQGRAPHICSITEM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      QList<QGraphicsItem *> list = obj->collidingItems( PQGRAPHICSITEM(1), HB_ISNIL(2) ? ( Qt::ItemSelectionMode ) Qt::IntersectsItemShape : ( Qt::ItemSelectionMode ) hb_parni(2) );
+      QList<QGraphicsItem *> list =
+          obj->collidingItems(PQGRAPHICSITEM(1), HB_ISNIL(2) ? (Qt::ItemSelectionMode)Qt::IntersectsItemShape
+                                                             : (Qt::ItemSelectionMode)hb_parni(2));
       PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         const int count = list.count();
-        for( int i = 0; i < count; i++ )
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -641,24 +667,25 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_COLLIDINGITEMS )
 /*
 QGraphicsItemGroup * createItemGroup( const QList<QGraphicsItem *> & items )
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_CREATEITEMGROUP )
+HB_FUNC_STATIC(QGRAPHICSSCENE_CREATEITEMGROUP)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISARRAY(1) )
+    if (ISNUMPAR(1) && HB_ISARRAY(1))
     {
 #endif
       QList<QGraphicsItem *> par1;
       PHB_ITEM aList1 = hb_param(1, HB_IT_ARRAY);
       const int nLen1 = hb_arrayLen(aList1);
-      for( int i1 = 0; i1 < nLen1; i1++ )
+      for (int i1 = 0; i1 < nLen1; i1++)
       {
-        par1 << static_cast<QGraphicsItem*>(hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1+1), "POINTER", 0)));
+        par1 << static_cast<QGraphicsItem *>(
+            hb_itemGetPtr(hb_objSendMsg(hb_arrayGetItemPtr(aList1, i1 + 1), "POINTER", 0)));
       }
-      QGraphicsItemGroup * ptr = obj->createItemGroup( par1 );
+      QGraphicsItemGroup *ptr = obj->createItemGroup(par1);
       Qt4xHb::createReturnClass(ptr, "QGRAPHICSITEMGROUP", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -673,17 +700,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_CREATEITEMGROUP )
 /*
 void destroyItemGroup( QGraphicsItemGroup * group )
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_DESTROYITEMGROUP )
+HB_FUNC_STATIC(QGRAPHICSSCENE_DESTROYITEMGROUP)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGRAPHICSITEMGROUP(1) )
+    if (ISNUMPAR(1) && ISQGRAPHICSITEMGROUP(1))
     {
 #endif
-      obj->destroyItemGroup( PQGRAPHICSITEMGROUP(1) );
+      obj->destroyItemGroup(PQGRAPHICSITEMGROUP(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -699,17 +726,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_DESTROYITEMGROUP )
 /*
 QGraphicsItem * focusItem() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_FOCUSITEM )
+HB_FUNC_STATIC(QGRAPHICSSCENE_FOCUSITEM)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QGraphicsItem * ptr = obj->focusItem();
+      QGraphicsItem *ptr = obj->focusItem();
       Qt4xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -724,17 +751,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_FOCUSITEM )
 /*
 QFont font() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_FONT )
+HB_FUNC_STATIC(QGRAPHICSSCENE_FONT)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QFont * ptr = new QFont( obj->font() );
+      QFont *ptr = new QFont(obj->font());
       Qt4xHb::createReturnClass(ptr, "QFONT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -749,17 +776,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_FONT )
 /*
 QBrush foregroundBrush() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_FOREGROUNDBRUSH )
+HB_FUNC_STATIC(QGRAPHICSSCENE_FOREGROUNDBRUSH)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QBrush * ptr = new QBrush( obj->foregroundBrush() );
+      QBrush *ptr = new QBrush(obj->foregroundBrush());
       Qt4xHb::createReturnClass(ptr, "QBRUSH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -774,17 +801,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_FOREGROUNDBRUSH )
 /*
 bool hasFocus() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_HASFOCUS )
+HB_FUNC_STATIC(QGRAPHICSSCENE_HASFOCUS)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->hasFocus() );
+      RBOOL(obj->hasFocus());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -798,17 +825,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_HASFOCUS )
 /*
 qreal height() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_HEIGHT )
+HB_FUNC_STATIC(QGRAPHICSSCENE_HEIGHT)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->height() );
+      RQREAL(obj->height());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -822,17 +849,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_HEIGHT )
 /*
 virtual QVariant inputMethodQuery( Qt::InputMethodQuery query ) const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_INPUTMETHODQUERY )
+HB_FUNC_STATIC(QGRAPHICSSCENE_INPUTMETHODQUERY)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QVariant * ptr = new QVariant( obj->inputMethodQuery( ( Qt::InputMethodQuery ) hb_parni(1)) );
+      QVariant *ptr = new QVariant(obj->inputMethodQuery((Qt::InputMethodQuery)hb_parni(1)));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -844,32 +871,37 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_INPUTMETHODQUERY )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSSCENE_INVALIDATE )
+HB_FUNC_STATIC(QGRAPHICSSCENE_INVALIDATE)
 {
-  if( ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5) || HB_ISNIL(5)) )
+  if (ISBETWEEN(4, 5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && (HB_ISNUM(5) || HB_ISNIL(5)))
   {
     /*
-    void invalidate( qreal x, qreal y, qreal w, qreal h, QGraphicsScene::SceneLayers layers = QGraphicsScene::AllLayers )
+    void invalidate( qreal x, qreal y, qreal w, qreal h, QGraphicsScene::SceneLayers layers = QGraphicsScene::AllLayers
+    )
     */
-    QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->invalidate( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), HB_ISNIL(5) ? ( QGraphicsScene::SceneLayers ) QGraphicsScene::AllLayers : ( QGraphicsScene::SceneLayers ) hb_parni(5) );
+      obj->invalidate(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4),
+                      HB_ISNIL(5) ? (QGraphicsScene::SceneLayers)QGraphicsScene::AllLayers
+                                  : (QGraphicsScene::SceneLayers)hb_parni(5));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISBETWEEN(0, 2) && (ISQRECTF(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)) )
+  else if (ISBETWEEN(0, 2) && (ISQRECTF(1) || HB_ISNIL(1)) && (HB_ISNUM(2) || HB_ISNIL(2)))
   {
     /*
     void invalidate( const QRectF & rect = QRectF(), QGraphicsScene::SceneLayers layers = QGraphicsScene::AllLayers )
     */
-    QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->invalidate( HB_ISNIL(1) ? QRectF() : *static_cast<QRectF*>( Qt4xHb::itemGetPtr(1) ), HB_ISNIL(2) ? ( QGraphicsScene::SceneLayers ) QGraphicsScene::AllLayers : ( QGraphicsScene::SceneLayers ) hb_parni(2) );
+      obj->invalidate(HB_ISNIL(1) ? QRectF() : *static_cast<QRectF *>(Qt4xHb::itemGetPtr(1)),
+                      HB_ISNIL(2) ? (QGraphicsScene::SceneLayers)QGraphicsScene::AllLayers
+                                  : (QGraphicsScene::SceneLayers)hb_parni(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -883,17 +915,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_INVALIDATE )
 /*
 bool isActive() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_ISACTIVE )
+HB_FUNC_STATIC(QGRAPHICSSCENE_ISACTIVE)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isActive() );
+      RBOOL(obj->isActive());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -907,17 +939,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ISACTIVE )
 /*
 bool isSortCacheEnabled() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_ISSORTCACHEENABLED )
+HB_FUNC_STATIC(QGRAPHICSSCENE_ISSORTCACHEENABLED)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isSortCacheEnabled() );
+      RBOOL(obj->isSortCacheEnabled());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -928,31 +960,31 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ISSORTCACHEENABLED )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMAT )
+HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMAT)
 {
-  if( ISNUMPAR(2) && ISQPOINTF(1) && ISQTRANSFORM(2) )
+  if (ISNUMPAR(2) && ISQPOINTF(1) && ISQTRANSFORM(2))
   {
     /*
     QGraphicsItem * itemAt( const QPointF & position, const QTransform & deviceTransform ) const
     */
-    QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QGraphicsItem * ptr = obj->itemAt( *PQPOINTF(1), *PQTRANSFORM(2) );
+      QGraphicsItem *ptr = obj->itemAt(*PQPOINTF(1), *PQTRANSFORM(2));
       Qt4xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
     }
   }
-  else if( ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQTRANSFORM(3) )
+  else if (ISNUMPAR(3) && HB_ISNUM(1) && HB_ISNUM(2) && ISQTRANSFORM(3))
   {
     /*
     QGraphicsItem * itemAt( qreal x, qreal y, const QTransform & deviceTransform ) const
     */
-    QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QGraphicsItem * ptr = obj->itemAt( PQREAL(1), PQREAL(2), *PQTRANSFORM(3) );
+      QGraphicsItem *ptr = obj->itemAt(PQREAL(1), PQREAL(2), *PQTRANSFORM(3));
       Qt4xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
     }
   }
@@ -965,17 +997,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMAT )
 /*
 QGraphicsScene::ItemIndexMethod itemIndexMethod() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMINDEXMETHOD )
+HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMINDEXMETHOD)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->itemIndexMethod() );
+      RENUM(obj->itemIndexMethod());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -986,31 +1018,31 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMINDEXMETHOD )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS )
+HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMS)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QList<QGraphicsItem *> items() const
     */
-    QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
       QList<QGraphicsItem *> list = obj->items();
       PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         const int count = list.count();
-        for( int i = 0; i < count; i++ )
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -1024,29 +1056,29 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS )
       hb_itemReturnRelease(pArray);
     }
   }
-  else if( ISNUMPAR(1) && HB_ISNUM(1) )
+  else if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     QList<QGraphicsItem *> items( Qt::SortOrder order ) const
     */
-    QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QList<QGraphicsItem *> list = obj->items( ( Qt::SortOrder ) hb_parni(1) );
+      QList<QGraphicsItem *> list = obj->items((Qt::SortOrder)hb_parni(1));
       PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         const int count = list.count();
-        for( int i = 0; i < count; i++ )
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -1060,29 +1092,32 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS )
       hb_itemReturnRelease(pArray);
     }
   }
-  else if( ISBETWEEN(3, 4) && ISQPOINTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISQTRANSFORM(4) || HB_ISNIL(4)) )
+  else if (ISBETWEEN(3, 4) && ISQPOINTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISQTRANSFORM(4) || HB_ISNIL(4)))
   {
     /*
-    QList<QGraphicsItem *> items( const QPointF & pos, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
+    QList<QGraphicsItem *> items( const QPointF & pos, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform
+    & deviceTransform = QTransform() ) const
     */
-    QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QList<QGraphicsItem *> list = obj->items( *PQPOINTF(1), ( Qt::ItemSelectionMode ) hb_parni(2), ( Qt::SortOrder ) hb_parni(3), HB_ISNIL(4) ? QTransform() : *static_cast<QTransform*>( Qt4xHb::itemGetPtr(4)) );
+      QList<QGraphicsItem *> list =
+          obj->items(*PQPOINTF(1), (Qt::ItemSelectionMode)hb_parni(2), (Qt::SortOrder)hb_parni(3),
+                     HB_ISNIL(4) ? QTransform() : *static_cast<QTransform *>(Qt4xHb::itemGetPtr(4)));
       PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         const int count = list.count();
-        for( int i = 0; i < count; i++ )
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -1096,29 +1131,33 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS )
       hb_itemReturnRelease(pArray);
     }
   }
-  else if( ISBETWEEN(6, 7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) && (ISQTRANSFORM(7) || HB_ISNIL(7)) )
+  else if (ISBETWEEN(6, 7) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5) && HB_ISNUM(6) &&
+           (ISQTRANSFORM(7) || HB_ISNIL(7)))
   {
     /*
-    QList<QGraphicsItem *> items( qreal x, qreal y, qreal w, qreal h, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
+    QList<QGraphicsItem *> items( qreal x, qreal y, qreal w, qreal h, Qt::ItemSelectionMode mode, Qt::SortOrder order,
+    const QTransform & deviceTransform = QTransform() ) const
     */
-    QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QList<QGraphicsItem *> list = obj->items( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), ( Qt::ItemSelectionMode ) hb_parni(5), ( Qt::SortOrder ) hb_parni(6), HB_ISNIL(7) ? QTransform() : *static_cast<QTransform*>( Qt4xHb::itemGetPtr(7)) );
+      QList<QGraphicsItem *> list = obj->items(
+          PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4), (Qt::ItemSelectionMode)hb_parni(5), (Qt::SortOrder)hb_parni(6),
+          HB_ISNIL(7) ? QTransform() : *static_cast<QTransform *>(Qt4xHb::itemGetPtr(7)));
       PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         const int count = list.count();
-        for( int i = 0; i < count; i++ )
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -1132,29 +1171,32 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS )
       hb_itemReturnRelease(pArray);
     }
   }
-  else if( ISBETWEEN(3, 4) && ISQRECTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISQTRANSFORM(4) || HB_ISNIL(4)) )
+  else if (ISBETWEEN(3, 4) && ISQRECTF(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISQTRANSFORM(4) || HB_ISNIL(4)))
   {
     /*
-    QList<QGraphicsItem *> items( const QRectF & rect, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
+    QList<QGraphicsItem *> items( const QRectF & rect, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform
+    & deviceTransform = QTransform() ) const
     */
-    QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QList<QGraphicsItem *> list = obj->items( *PQRECTF(1), ( Qt::ItemSelectionMode ) hb_parni(2), ( Qt::SortOrder ) hb_parni(3), HB_ISNIL(4) ? QTransform() : *static_cast<QTransform*>( Qt4xHb::itemGetPtr(4)) );
+      QList<QGraphicsItem *> list =
+          obj->items(*PQRECTF(1), (Qt::ItemSelectionMode)hb_parni(2), (Qt::SortOrder)hb_parni(3),
+                     HB_ISNIL(4) ? QTransform() : *static_cast<QTransform *>(Qt4xHb::itemGetPtr(4)));
       PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         const int count = list.count();
-        for( int i = 0; i < count; i++ )
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -1168,29 +1210,32 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS )
       hb_itemReturnRelease(pArray);
     }
   }
-  else if( ISBETWEEN(3, 4) && ISQPOLYGONF(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISQTRANSFORM(4) || HB_ISNIL(4)) )
+  else if (ISBETWEEN(3, 4) && ISQPOLYGONF(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISQTRANSFORM(4) || HB_ISNIL(4)))
   {
     /*
-    QList<QGraphicsItem *> items( const QPolygonF & polygon, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
+    QList<QGraphicsItem *> items( const QPolygonF & polygon, Qt::ItemSelectionMode mode, Qt::SortOrder order, const
+    QTransform & deviceTransform = QTransform() ) const
     */
-    QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QList<QGraphicsItem *> list = obj->items( *PQPOLYGONF(1), ( Qt::ItemSelectionMode ) hb_parni(2), ( Qt::SortOrder ) hb_parni(3), HB_ISNIL(4) ? QTransform() : *static_cast<QTransform*>( Qt4xHb::itemGetPtr(4)) );
+      QList<QGraphicsItem *> list =
+          obj->items(*PQPOLYGONF(1), (Qt::ItemSelectionMode)hb_parni(2), (Qt::SortOrder)hb_parni(3),
+                     HB_ISNIL(4) ? QTransform() : *static_cast<QTransform *>(Qt4xHb::itemGetPtr(4)));
       PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         const int count = list.count();
-        for( int i = 0; i < count; i++ )
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -1204,29 +1249,32 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS )
       hb_itemReturnRelease(pArray);
     }
   }
-  else if( ISBETWEEN(3, 4) && ISQPAINTERPATH(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISQTRANSFORM(4) || HB_ISNIL(4)) )
+  else if (ISBETWEEN(3, 4) && ISQPAINTERPATH(1) && HB_ISNUM(2) && HB_ISNUM(3) && (ISQTRANSFORM(4) || HB_ISNIL(4)))
   {
     /*
-    QList<QGraphicsItem *> items( const QPainterPath & path, Qt::ItemSelectionMode mode, Qt::SortOrder order, const QTransform & deviceTransform = QTransform() ) const
+    QList<QGraphicsItem *> items( const QPainterPath & path, Qt::ItemSelectionMode mode, Qt::SortOrder order, const
+    QTransform & deviceTransform = QTransform() ) const
     */
-    QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QList<QGraphicsItem *> list = obj->items( *PQPAINTERPATH(1), ( Qt::ItemSelectionMode ) hb_parni(2), ( Qt::SortOrder ) hb_parni(3), HB_ISNIL(4) ? QTransform() : *static_cast<QTransform*>( Qt4xHb::itemGetPtr(4)) );
+      QList<QGraphicsItem *> list =
+          obj->items(*PQPAINTERPATH(1), (Qt::ItemSelectionMode)hb_parni(2), (Qt::SortOrder)hb_parni(3),
+                     HB_ISNIL(4) ? QTransform() : *static_cast<QTransform *>(Qt4xHb::itemGetPtr(4)));
       PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         const int count = list.count();
-        for( int i = 0; i < count; i++ )
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -1249,17 +1297,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMS )
 /*
 QRectF itemsBoundingRect() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMSBOUNDINGRECT )
+HB_FUNC_STATIC(QGRAPHICSSCENE_ITEMSBOUNDINGRECT)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QRectF * ptr = new QRectF( obj->itemsBoundingRect() );
+      QRectF *ptr = new QRectF(obj->itemsBoundingRect());
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1274,17 +1322,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ITEMSBOUNDINGRECT )
 /*
 QGraphicsItem * mouseGrabberItem() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_MOUSEGRABBERITEM )
+HB_FUNC_STATIC(QGRAPHICSSCENE_MOUSEGRABBERITEM)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QGraphicsItem * ptr = obj->mouseGrabberItem();
+      QGraphicsItem *ptr = obj->mouseGrabberItem();
       Qt4xHb::createReturnClass(ptr, "QGRAPHICSITEM", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1299,17 +1347,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_MOUSEGRABBERITEM )
 /*
 QPalette palette() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_PALETTE )
+HB_FUNC_STATIC(QGRAPHICSSCENE_PALETTE)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPalette * ptr = new QPalette( obj->palette() );
+      QPalette *ptr = new QPalette(obj->palette());
       Qt4xHb::createReturnClass(ptr, "QPALETTE", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1324,17 +1372,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_PALETTE )
 /*
 void removeItem( QGraphicsItem * item )
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_REMOVEITEM )
+HB_FUNC_STATIC(QGRAPHICSSCENE_REMOVEITEM)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGRAPHICSITEM(1) )
+    if (ISNUMPAR(1) && ISQGRAPHICSITEM(1))
     {
 #endif
-      obj->removeItem( PQGRAPHICSITEM(1) );
+      obj->removeItem(PQGRAPHICSITEM(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1348,19 +1396,23 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_REMOVEITEM )
 }
 
 /*
-void render( QPainter * painter, const QRectF & target = QRectF(), const QRectF & source = QRectF(), Qt::AspectRatioMode aspectRatioMode = Qt::KeepAspectRatio )
+void render( QPainter * painter, const QRectF & target = QRectF(), const QRectF & source = QRectF(), Qt::AspectRatioMode
+aspectRatioMode = Qt::KeepAspectRatio )
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_RENDER )
+HB_FUNC_STATIC(QGRAPHICSSCENE_RENDER)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 4) && ISQPAINTER(1) && (ISQRECTF(2) || HB_ISNIL(2)) && (ISQRECTF(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)) )
+    if (ISBETWEEN(1, 4) && ISQPAINTER(1) && (ISQRECTF(2) || HB_ISNIL(2)) && (ISQRECTF(3) || HB_ISNIL(3)) &&
+        (HB_ISNUM(4) || HB_ISNIL(4)))
     {
 #endif
-      obj->render( PQPAINTER(1), HB_ISNIL(2) ? QRectF() : *static_cast<QRectF*>( Qt4xHb::itemGetPtr(2) ), HB_ISNIL(3) ? QRectF() : *static_cast<QRectF*>( Qt4xHb::itemGetPtr(3) ), HB_ISNIL(4) ? ( Qt::AspectRatioMode ) Qt::KeepAspectRatio : ( Qt::AspectRatioMode ) hb_parni(4) );
+      obj->render(PQPAINTER(1), HB_ISNIL(2) ? QRectF() : *static_cast<QRectF *>(Qt4xHb::itemGetPtr(2)),
+                  HB_ISNIL(3) ? QRectF() : *static_cast<QRectF *>(Qt4xHb::itemGetPtr(3)),
+                  HB_ISNIL(4) ? (Qt::AspectRatioMode)Qt::KeepAspectRatio : (Qt::AspectRatioMode)hb_parni(4));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1376,17 +1428,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_RENDER )
 /*
 QRectF sceneRect() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_SCENERECT )
+HB_FUNC_STATIC(QGRAPHICSSCENE_SCENERECT)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QRectF * ptr = new QRectF( obj->sceneRect() );
+      QRectF *ptr = new QRectF(obj->sceneRect());
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1401,30 +1453,30 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SCENERECT )
 /*
 QList<QGraphicsItem *> selectedItems() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_SELECTEDITEMS )
+HB_FUNC_STATIC(QGRAPHICSSCENE_SELECTEDITEMS)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<QGraphicsItem *> list = obj->selectedItems();
       PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSITEM");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         const int count = list.count();
-        for( int i = 0; i < count; i++ )
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -1449,17 +1501,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SELECTEDITEMS )
 /*
 QPainterPath selectionArea() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_SELECTIONAREA )
+HB_FUNC_STATIC(QGRAPHICSSCENE_SELECTIONAREA)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPainterPath * ptr = new QPainterPath( obj->selectionArea() );
+      QPainterPath *ptr = new QPainterPath(obj->selectionArea());
       Qt4xHb::createReturnClass(ptr, "QPAINTERPATH", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1474,17 +1526,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SELECTIONAREA )
 /*
 bool sendEvent( QGraphicsItem * item, QEvent * event )
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_SENDEVENT )
+HB_FUNC_STATIC(QGRAPHICSSCENE_SENDEVENT)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQEVENT(2) )
+    if (ISNUMPAR(2) && ISQGRAPHICSITEM(1) && ISQEVENT(2))
     {
 #endif
-      RBOOL( obj->sendEvent( PQGRAPHICSITEM(1), PQEVENT(2)) );
+      RBOOL(obj->sendEvent(PQGRAPHICSITEM(1), PQEVENT(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1498,17 +1550,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SENDEVENT )
 /*
 void setActivePanel( QGraphicsItem * item )
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_SETACTIVEPANEL )
+HB_FUNC_STATIC(QGRAPHICSSCENE_SETACTIVEPANEL)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGRAPHICSITEM(1) )
+    if (ISNUMPAR(1) && ISQGRAPHICSITEM(1))
     {
 #endif
-      obj->setActivePanel( PQGRAPHICSITEM(1) );
+      obj->setActivePanel(PQGRAPHICSITEM(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1524,17 +1576,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETACTIVEPANEL )
 /*
 void setActiveWindow( QGraphicsWidget * widget )
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_SETACTIVEWINDOW )
+HB_FUNC_STATIC(QGRAPHICSSCENE_SETACTIVEWINDOW)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQGRAPHICSWIDGET(1) )
+    if (ISNUMPAR(1) && ISQGRAPHICSWIDGET(1))
     {
 #endif
-      obj->setActiveWindow( PQGRAPHICSWIDGET(1) );
+      obj->setActiveWindow(PQGRAPHICSWIDGET(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1550,17 +1602,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETACTIVEWINDOW )
 /*
 void setBackgroundBrush( const QBrush & brush )
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_SETBACKGROUNDBRUSH )
+HB_FUNC_STATIC(QGRAPHICSSCENE_SETBACKGROUNDBRUSH)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBRUSH(1) )
+    if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setBackgroundBrush( *PQBRUSH(1) );
+      obj->setBackgroundBrush(*PQBRUSH(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1576,17 +1628,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETBACKGROUNDBRUSH )
 /*
 void setBspTreeDepth( int depth )
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_SETBSPTREEDEPTH )
+HB_FUNC_STATIC(QGRAPHICSSCENE_SETBSPTREEDEPTH)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setBspTreeDepth( PINT(1) );
+      obj->setBspTreeDepth(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1602,17 +1654,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETBSPTREEDEPTH )
 /*
 void setFocus( Qt::FocusReason focusReason = Qt::OtherFocusReason )
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_SETFOCUS )
+HB_FUNC_STATIC(QGRAPHICSSCENE_SETFOCUS)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->setFocus( HB_ISNIL(1) ? ( Qt::FocusReason ) Qt::OtherFocusReason : ( Qt::FocusReason ) hb_parni(1) );
+      obj->setFocus(HB_ISNIL(1) ? (Qt::FocusReason)Qt::OtherFocusReason : (Qt::FocusReason)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1628,17 +1680,18 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETFOCUS )
 /*
 void setFocusItem( QGraphicsItem * item, Qt::FocusReason focusReason = Qt::OtherFocusReason )
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_SETFOCUSITEM )
+HB_FUNC_STATIC(QGRAPHICSSCENE_SETFOCUSITEM)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && ISQGRAPHICSITEM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && ISQGRAPHICSITEM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->setFocusItem( PQGRAPHICSITEM(1), HB_ISNIL(2) ? ( Qt::FocusReason ) Qt::OtherFocusReason : ( Qt::FocusReason ) hb_parni(2) );
+      obj->setFocusItem(PQGRAPHICSITEM(1),
+                        HB_ISNIL(2) ? (Qt::FocusReason)Qt::OtherFocusReason : (Qt::FocusReason)hb_parni(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1654,17 +1707,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETFOCUSITEM )
 /*
 void setFont( const QFont & font )
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_SETFONT )
+HB_FUNC_STATIC(QGRAPHICSSCENE_SETFONT)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQFONT(1) )
+    if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
-      obj->setFont( *PQFONT(1) );
+      obj->setFont(*PQFONT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1680,17 +1733,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETFONT )
 /*
 void setForegroundBrush( const QBrush & brush )
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_SETFOREGROUNDBRUSH )
+HB_FUNC_STATIC(QGRAPHICSSCENE_SETFOREGROUNDBRUSH)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQBRUSH(1) )
+    if (ISNUMPAR(1) && ISQBRUSH(1))
     {
 #endif
-      obj->setForegroundBrush( *PQBRUSH(1) );
+      obj->setForegroundBrush(*PQBRUSH(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1706,17 +1759,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETFOREGROUNDBRUSH )
 /*
 void setItemIndexMethod( QGraphicsScene::ItemIndexMethod method )
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_SETITEMINDEXMETHOD )
+HB_FUNC_STATIC(QGRAPHICSSCENE_SETITEMINDEXMETHOD)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setItemIndexMethod( ( QGraphicsScene::ItemIndexMethod ) hb_parni(1) );
+      obj->setItemIndexMethod((QGraphicsScene::ItemIndexMethod)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1732,17 +1785,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETITEMINDEXMETHOD )
 /*
 void setPalette( const QPalette & palette )
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_SETPALETTE )
+HB_FUNC_STATIC(QGRAPHICSSCENE_SETPALETTE)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPALETTE(1) )
+    if (ISNUMPAR(1) && ISQPALETTE(1))
     {
 #endif
-      obj->setPalette( *PQPALETTE(1) );
+      obj->setPalette(*PQPALETTE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1755,32 +1808,32 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETPALETTE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QGRAPHICSSCENE_SETSCENERECT )
+HB_FUNC_STATIC(QGRAPHICSSCENE_SETSCENERECT)
 {
-  if( ISNUMPAR(1) && ISQRECTF(1) )
+  if (ISNUMPAR(1) && ISQRECTF(1))
   {
     /*
     void setSceneRect( const QRectF & rect )
     */
-    QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->setSceneRect( *PQRECTF(1) );
+      obj->setSceneRect(*PQRECTF(1));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
+  else if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
     void setSceneRect( qreal x, qreal y, qreal w, qreal h )
     */
-    QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->setSceneRect( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+      obj->setSceneRect(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1791,32 +1844,32 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETSCENERECT )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSSCENE_SETSELECTIONAREA )
+HB_FUNC_STATIC(QGRAPHICSSCENE_SETSELECTIONAREA)
 {
-  if( ISNUMPAR(2) && ISQPAINTERPATH(1) && ISQTRANSFORM(2) )
+  if (ISNUMPAR(2) && ISQPAINTERPATH(1) && ISQTRANSFORM(2))
   {
     /*
     void setSelectionArea( const QPainterPath & path, const QTransform & deviceTransform )
     */
-    QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->setSelectionArea( *PQPAINTERPATH(1), *PQTRANSFORM(2) );
+      obj->setSelectionArea(*PQPAINTERPATH(1), *PQTRANSFORM(2));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR(3) && ISQPAINTERPATH(1) && HB_ISNUM(2) && ISQTRANSFORM(3) )
+  else if (ISNUMPAR(3) && ISQPAINTERPATH(1) && HB_ISNUM(2) && ISQTRANSFORM(3))
   {
     /*
     void setSelectionArea( const QPainterPath & path, Qt::ItemSelectionMode mode, const QTransform & deviceTransform )
     */
-    QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->setSelectionArea( *PQPAINTERPATH(1), ( Qt::ItemSelectionMode ) hb_parni(2), *PQTRANSFORM(3) );
+      obj->setSelectionArea(*PQPAINTERPATH(1), (Qt::ItemSelectionMode)hb_parni(2), *PQTRANSFORM(3));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1830,17 +1883,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETSELECTIONAREA )
 /*
 void setSortCacheEnabled( bool enabled )
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_SETSORTCACHEENABLED )
+HB_FUNC_STATIC(QGRAPHICSSCENE_SETSORTCACHEENABLED)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setSortCacheEnabled( PBOOL(1) );
+      obj->setSortCacheEnabled(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1856,17 +1909,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETSORTCACHEENABLED )
 /*
 void setStickyFocus( bool enabled )
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_SETSTICKYFOCUS )
+HB_FUNC_STATIC(QGRAPHICSSCENE_SETSTICKYFOCUS)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setStickyFocus( PBOOL(1) );
+      obj->setStickyFocus(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1882,17 +1935,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETSTICKYFOCUS )
 /*
 void setStyle( QStyle * style )
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_SETSTYLE )
+HB_FUNC_STATIC(QGRAPHICSSCENE_SETSTYLE)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQSTYLE(1) )
+    if (ISNUMPAR(1) && ISQSTYLE(1))
     {
 #endif
-      obj->setStyle( PQSTYLE(1) );
+      obj->setStyle(PQSTYLE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1908,17 +1961,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_SETSTYLE )
 /*
 bool stickyFocus() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_STICKYFOCUS )
+HB_FUNC_STATIC(QGRAPHICSSCENE_STICKYFOCUS)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->stickyFocus() );
+      RBOOL(obj->stickyFocus());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1932,17 +1985,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_STICKYFOCUS )
 /*
 QStyle * style() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_STYLE )
+HB_FUNC_STATIC(QGRAPHICSSCENE_STYLE)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QStyle * ptr = obj->style();
+      QStyle *ptr = obj->style();
       Qt4xHb::createReturnQObjectClass(ptr, "QSTYLE");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1954,32 +2007,32 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_STYLE )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSSCENE_UPDATE )
+HB_FUNC_STATIC(QGRAPHICSSCENE_UPDATE)
 {
-  if( ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) )
+  if (ISNUMPAR(4) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     /*
     void update( qreal x, qreal y, qreal w, qreal h )
     */
-    QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->update( PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4) );
+      obj->update(PQREAL(1), PQREAL(2), PQREAL(3), PQREAL(4));
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISBETWEEN(0, 1) && (ISQRECTF(1) || HB_ISNIL(1)) )
+  else if (ISBETWEEN(0, 1) && (ISQRECTF(1) || HB_ISNIL(1)))
   {
     /*
     void update( const QRectF & rect = QRectF() )
     */
-    QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      obj->update( HB_ISNIL(1) ? QRectF() : *static_cast<QRectF*>( Qt4xHb::itemGetPtr(1)) );
+      obj->update(HB_ISNIL(1) ? QRectF() : *static_cast<QRectF *>(Qt4xHb::itemGetPtr(1)));
     }
 
     hb_itemReturn(hb_stackSelfItem());
@@ -1993,30 +2046,30 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_UPDATE )
 /*
 QList<QGraphicsView *> views() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_VIEWS )
+HB_FUNC_STATIC(QGRAPHICSSCENE_VIEWS)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       QList<QGraphicsView *> list = obj->views();
       PHB_DYNS pDynSym = hb_dynsymFindName("QGRAPHICSVIEW");
       PHB_ITEM pArray = hb_itemArrayNew(0);
-      if( pDynSym != NULL )
+      if (pDynSym != NULL)
       {
         const int count = list.count();
-        for( int i = 0; i < count; i++ )
+        for (int i = 0; i < count; i++)
         {
           hb_vmPushDynSym(pDynSym);
           hb_vmPushNil();
           hb_vmDo(0);
           PHB_ITEM pObject = hb_itemNew(NULL);
           hb_itemCopy(pObject, hb_stackReturnItem());
-          PHB_ITEM pItem = hb_itemPutPtr( NULL, list[i] );
+          PHB_ITEM pItem = hb_itemPutPtr(NULL, list[i]);
           hb_objSendMsg(pObject, "_POINTER", 1, pItem);
           hb_itemRelease(pItem);
           hb_arrayAddForward(pArray, pObject);
@@ -2041,17 +2094,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_VIEWS )
 /*
 qreal width() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_WIDTH )
+HB_FUNC_STATIC(QGRAPHICSSCENE_WIDTH)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->width() );
+      RQREAL(obj->width());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2065,14 +2118,14 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_WIDTH )
 /*
 void advance()
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_ADVANCE )
+HB_FUNC_STATIC(QGRAPHICSSCENE_ADVANCE)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->advance();
@@ -2091,14 +2144,14 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_ADVANCE )
 /*
 void clear()
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_CLEAR )
+HB_FUNC_STATIC(QGRAPHICSSCENE_CLEAR)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clear();
@@ -2117,14 +2170,14 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_CLEAR )
 /*
 void clearSelection()
 */
-HB_FUNC_STATIC( QGRAPHICSSCENE_CLEARSELECTION )
+HB_FUNC_STATIC(QGRAPHICSSCENE_CLEARSELECTION)
 {
-  QGraphicsScene * obj = qobject_cast<QGraphicsScene*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QGraphicsScene *obj = qobject_cast<QGraphicsScene *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clearSelection();
@@ -2140,19 +2193,19 @@ HB_FUNC_STATIC( QGRAPHICSSCENE_CLEARSELECTION )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QGraphicsSceneSlots_connect_signal(const QString & signal, const QString & slot);
+void QGraphicsSceneSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QGRAPHICSSCENE_ONCHANGED )
+HB_FUNC_STATIC(QGRAPHICSSCENE_ONCHANGED)
 {
   QGraphicsSceneSlots_connect_signal("changed(QList<QRectF>)", "changed(QList<QRectF>)");
 }
 
-HB_FUNC_STATIC( QGRAPHICSSCENE_ONSCENERECTCHANGED )
+HB_FUNC_STATIC(QGRAPHICSSCENE_ONSCENERECTCHANGED)
 {
   QGraphicsSceneSlots_connect_signal("sceneRectChanged(QRectF)", "sceneRectChanged(QRectF)");
 }
 
-HB_FUNC_STATIC( QGRAPHICSSCENE_ONSELECTIONCHANGED )
+HB_FUNC_STATIC(QGRAPHICSSCENE_ONSELECTIONCHANGED)
 {
   QGraphicsSceneSlots_connect_signal("selectionChanged()", "selectionChanged()");
 }

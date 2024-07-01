@@ -57,11 +57,11 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QTEXTITEM_DELETE )
+HB_FUNC_STATIC(QTEXTITEM_DELETE)
 {
-  QTextItem * obj = static_cast<QTextItem*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextItem *obj = static_cast<QTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -76,17 +76,17 @@ HB_FUNC_STATIC( QTEXTITEM_DELETE )
 /*
 qreal ascent() const
 */
-HB_FUNC_STATIC( QTEXTITEM_ASCENT )
+HB_FUNC_STATIC(QTEXTITEM_ASCENT)
 {
-  QTextItem * obj = static_cast<QTextItem*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextItem *obj = static_cast<QTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->ascent() );
+      RQREAL(obj->ascent());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -100,17 +100,17 @@ HB_FUNC_STATIC( QTEXTITEM_ASCENT )
 /*
 qreal descent() const
 */
-HB_FUNC_STATIC( QTEXTITEM_DESCENT )
+HB_FUNC_STATIC(QTEXTITEM_DESCENT)
 {
-  QTextItem * obj = static_cast<QTextItem*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextItem *obj = static_cast<QTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->descent() );
+      RQREAL(obj->descent());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -124,17 +124,17 @@ HB_FUNC_STATIC( QTEXTITEM_DESCENT )
 /*
 QFont font() const
 */
-HB_FUNC_STATIC( QTEXTITEM_FONT )
+HB_FUNC_STATIC(QTEXTITEM_FONT)
 {
-  QTextItem * obj = static_cast<QTextItem*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextItem *obj = static_cast<QTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QFont * ptr = new QFont( obj->font() );
+      QFont *ptr = new QFont(obj->font());
       Qt4xHb::createReturnClass(ptr, "QFONT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -149,17 +149,17 @@ HB_FUNC_STATIC( QTEXTITEM_FONT )
 /*
 QTextItem::RenderFlags renderFlags() const
 */
-HB_FUNC_STATIC( QTEXTITEM_RENDERFLAGS )
+HB_FUNC_STATIC(QTEXTITEM_RENDERFLAGS)
 {
-  QTextItem * obj = static_cast<QTextItem*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextItem *obj = static_cast<QTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->renderFlags() );
+      RENUM(obj->renderFlags());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -173,17 +173,17 @@ HB_FUNC_STATIC( QTEXTITEM_RENDERFLAGS )
 /*
 QString text() const
 */
-HB_FUNC_STATIC( QTEXTITEM_TEXT )
+HB_FUNC_STATIC(QTEXTITEM_TEXT)
 {
-  QTextItem * obj = static_cast<QTextItem*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextItem *obj = static_cast<QTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->text() );
+      RQSTRING(obj->text());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -197,17 +197,17 @@ HB_FUNC_STATIC( QTEXTITEM_TEXT )
 /*
 qreal width() const
 */
-HB_FUNC_STATIC( QTEXTITEM_WIDTH )
+HB_FUNC_STATIC(QTEXTITEM_WIDTH)
 {
-  QTextItem * obj = static_cast<QTextItem*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextItem *obj = static_cast<QTextItem *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->width() );
+      RQREAL(obj->width());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -218,11 +218,11 @@ HB_FUNC_STATIC( QTEXTITEM_WIDTH )
   }
 }
 
-HB_FUNC_STATIC( QTEXTITEM_NEWFROM )
+HB_FUNC_STATIC(QTEXTITEM_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -231,7 +231,7 @@ HB_FUNC_STATIC( QTEXTITEM_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -248,26 +248,26 @@ HB_FUNC_STATIC( QTEXTITEM_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QTEXTITEM_NEWFROMOBJECT )
+HB_FUNC_STATIC(QTEXTITEM_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QTEXTITEM_NEWFROM );
+  HB_FUNC_EXEC(QTEXTITEM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTEXTITEM_NEWFROMPOINTER )
+HB_FUNC_STATIC(QTEXTITEM_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QTEXTITEM_NEWFROM );
+  HB_FUNC_EXEC(QTEXTITEM_NEWFROM);
 }
 
-HB_FUNC_STATIC( QTEXTITEM_SELFDESTRUCTION )
+HB_FUNC_STATIC(QTEXTITEM_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QTEXTITEM_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QTEXTITEM_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);

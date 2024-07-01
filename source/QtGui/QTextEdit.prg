@@ -141,22 +141,22 @@ RETURN
 
 #include <QtGui/QMenu>
 
-HB_FUNC_STATIC( QTEXTEDIT_NEW )
+HB_FUNC_STATIC(QTEXTEDIT_NEW)
 {
-  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
     QTextEdit( QWidget * parent = 0 )
     */
-    QTextEdit * obj = new QTextEdit( OPQWIDGET( 1, 0 ) );
+    QTextEdit *obj = new QTextEdit(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
     QTextEdit( const QString & text, QWidget * parent = 0 )
     */
-    QTextEdit * obj = new QTextEdit( PQSTRING(1), OPQWIDGET( 2, 0 ) );
+    QTextEdit *obj = new QTextEdit(PQSTRING(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -165,11 +165,11 @@ HB_FUNC_STATIC( QTEXTEDIT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTEXTEDIT_DELETE )
+HB_FUNC_STATIC(QTEXTEDIT_DELETE)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -186,17 +186,17 @@ HB_FUNC_STATIC( QTEXTEDIT_DELETE )
 /*
 bool acceptRichText() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_ACCEPTRICHTEXT )
+HB_FUNC_STATIC(QTEXTEDIT_ACCEPTRICHTEXT)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->acceptRichText() );
+      RBOOL(obj->acceptRichText());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -210,17 +210,17 @@ HB_FUNC_STATIC( QTEXTEDIT_ACCEPTRICHTEXT )
 /*
 Qt::Alignment alignment() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_ALIGNMENT )
+HB_FUNC_STATIC(QTEXTEDIT_ALIGNMENT)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->alignment() );
+      RENUM(obj->alignment());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -234,17 +234,17 @@ HB_FUNC_STATIC( QTEXTEDIT_ALIGNMENT )
 /*
 QString anchorAt( const QPoint & pos ) const
 */
-HB_FUNC_STATIC( QTEXTEDIT_ANCHORAT )
+HB_FUNC_STATIC(QTEXTEDIT_ANCHORAT)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINT(1) )
+    if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      RQSTRING( obj->anchorAt( *PQPOINT(1)) );
+      RQSTRING(obj->anchorAt(*PQPOINT(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -258,17 +258,17 @@ HB_FUNC_STATIC( QTEXTEDIT_ANCHORAT )
 /*
 QTextEdit::AutoFormatting autoFormatting() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_AUTOFORMATTING )
+HB_FUNC_STATIC(QTEXTEDIT_AUTOFORMATTING)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->autoFormatting() );
+      RENUM(obj->autoFormatting());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -282,17 +282,17 @@ HB_FUNC_STATIC( QTEXTEDIT_AUTOFORMATTING )
 /*
 bool canPaste() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_CANPASTE )
+HB_FUNC_STATIC(QTEXTEDIT_CANPASTE)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->canPaste() );
+      RBOOL(obj->canPaste());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -303,31 +303,31 @@ HB_FUNC_STATIC( QTEXTEDIT_CANPASTE )
   }
 }
 
-HB_FUNC_STATIC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU )
+HB_FUNC_STATIC(QTEXTEDIT_CREATESTANDARDCONTEXTMENU)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QMenu * createStandardContextMenu()
     */
-    QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QMenu * ptr = obj->createStandardContextMenu();
+      QMenu *ptr = obj->createStandardContextMenu();
       Qt4xHb::createReturnQObjectClass(ptr, "QMENU");
     }
   }
-  else if( ISNUMPAR(1) && ISQPOINT(1) )
+  else if (ISNUMPAR(1) && ISQPOINT(1))
   {
     /*
     QMenu * createStandardContextMenu( const QPoint & position )
     */
-    QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QMenu * ptr = obj->createStandardContextMenu( *PQPOINT(1) );
+      QMenu *ptr = obj->createStandardContextMenu(*PQPOINT(1));
       Qt4xHb::createReturnQObjectClass(ptr, "QMENU");
     }
   }
@@ -340,17 +340,17 @@ HB_FUNC_STATIC( QTEXTEDIT_CREATESTANDARDCONTEXTMENU )
 /*
 QTextCharFormat currentCharFormat() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_CURRENTCHARFORMAT )
+HB_FUNC_STATIC(QTEXTEDIT_CURRENTCHARFORMAT)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QTextCharFormat * ptr = new QTextCharFormat( obj->currentCharFormat() );
+      QTextCharFormat *ptr = new QTextCharFormat(obj->currentCharFormat());
       Qt4xHb::createReturnClass(ptr, "QTEXTCHARFORMAT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -365,17 +365,17 @@ HB_FUNC_STATIC( QTEXTEDIT_CURRENTCHARFORMAT )
 /*
 QFont currentFont() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_CURRENTFONT )
+HB_FUNC_STATIC(QTEXTEDIT_CURRENTFONT)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QFont * ptr = new QFont( obj->currentFont() );
+      QFont *ptr = new QFont(obj->currentFont());
       Qt4xHb::createReturnClass(ptr, "QFONT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -390,17 +390,17 @@ HB_FUNC_STATIC( QTEXTEDIT_CURRENTFONT )
 /*
 QTextCursor cursorForPosition( const QPoint & pos ) const
 */
-HB_FUNC_STATIC( QTEXTEDIT_CURSORFORPOSITION )
+HB_FUNC_STATIC(QTEXTEDIT_CURSORFORPOSITION)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINT(1) )
+    if (ISNUMPAR(1) && ISQPOINT(1))
     {
 #endif
-      QTextCursor * ptr = new QTextCursor( obj->cursorForPosition( *PQPOINT(1)) );
+      QTextCursor *ptr = new QTextCursor(obj->cursorForPosition(*PQPOINT(1)));
       Qt4xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -412,31 +412,31 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORFORPOSITION )
   }
 }
 
-HB_FUNC_STATIC( QTEXTEDIT_CURSORRECT )
+HB_FUNC_STATIC(QTEXTEDIT_CURSORRECT)
 {
-  if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
+  if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
   {
     /*
     QRect cursorRect( const QTextCursor & cursor ) const
     */
-    QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QRect * ptr = new QRect( obj->cursorRect( *PQTEXTCURSOR(1)) );
+      QRect *ptr = new QRect(obj->cursorRect(*PQTEXTCURSOR(1)));
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
-  else if( ISNUMPAR(0) )
+  else if (ISNUMPAR(0))
   {
     /*
     QRect cursorRect() const
     */
-    QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
-      QRect * ptr = new QRect( obj->cursorRect() );
+      QRect *ptr = new QRect(obj->cursorRect());
       Qt4xHb::createReturnClass(ptr, "QRECT", true);
     }
   }
@@ -449,17 +449,17 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORRECT )
 /*
 int cursorWidth() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_CURSORWIDTH )
+HB_FUNC_STATIC(QTEXTEDIT_CURSORWIDTH)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->cursorWidth() );
+      RINT(obj->cursorWidth());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -473,17 +473,17 @@ HB_FUNC_STATIC( QTEXTEDIT_CURSORWIDTH )
 /*
 QTextDocument * document() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_DOCUMENT )
+HB_FUNC_STATIC(QTEXTEDIT_DOCUMENT)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QTextDocument * ptr = obj->document();
+      QTextDocument *ptr = obj->document();
       Qt4xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -498,17 +498,17 @@ HB_FUNC_STATIC( QTEXTEDIT_DOCUMENT )
 /*
 QString documentTitle() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_DOCUMENTTITLE )
+HB_FUNC_STATIC(QTEXTEDIT_DOCUMENTTITLE)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->documentTitle() );
+      RQSTRING(obj->documentTitle());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -522,14 +522,14 @@ HB_FUNC_STATIC( QTEXTEDIT_DOCUMENTTITLE )
 /*
 void ensureCursorVisible()
 */
-HB_FUNC_STATIC( QTEXTEDIT_ENSURECURSORVISIBLE )
+HB_FUNC_STATIC(QTEXTEDIT_ENSURECURSORVISIBLE)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->ensureCursorVisible();
@@ -548,17 +548,17 @@ HB_FUNC_STATIC( QTEXTEDIT_ENSURECURSORVISIBLE )
 /*
 bool find( const QString & exp, QTextDocument::FindFlags options = 0 )
 */
-HB_FUNC_STATIC( QTEXTEDIT_FIND )
+HB_FUNC_STATIC(QTEXTEDIT_FIND)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      RBOOL( obj->find( PQSTRING(1), HB_ISNIL(2) ? ( QTextDocument::FindFlags ) 0 : ( QTextDocument::FindFlags ) hb_parni(2)) );
+      RBOOL(obj->find(PQSTRING(1), HB_ISNIL(2) ? (QTextDocument::FindFlags)0 : (QTextDocument::FindFlags)hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -572,17 +572,17 @@ HB_FUNC_STATIC( QTEXTEDIT_FIND )
 /*
 QString fontFamily() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_FONTFAMILY )
+HB_FUNC_STATIC(QTEXTEDIT_FONTFAMILY)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->fontFamily() );
+      RQSTRING(obj->fontFamily());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -596,17 +596,17 @@ HB_FUNC_STATIC( QTEXTEDIT_FONTFAMILY )
 /*
 bool fontItalic() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_FONTITALIC )
+HB_FUNC_STATIC(QTEXTEDIT_FONTITALIC)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->fontItalic() );
+      RBOOL(obj->fontItalic());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -620,17 +620,17 @@ HB_FUNC_STATIC( QTEXTEDIT_FONTITALIC )
 /*
 qreal fontPointSize() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_FONTPOINTSIZE )
+HB_FUNC_STATIC(QTEXTEDIT_FONTPOINTSIZE)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->fontPointSize() );
+      RQREAL(obj->fontPointSize());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -644,17 +644,17 @@ HB_FUNC_STATIC( QTEXTEDIT_FONTPOINTSIZE )
 /*
 bool fontUnderline() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_FONTUNDERLINE )
+HB_FUNC_STATIC(QTEXTEDIT_FONTUNDERLINE)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->fontUnderline() );
+      RBOOL(obj->fontUnderline());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -668,17 +668,17 @@ HB_FUNC_STATIC( QTEXTEDIT_FONTUNDERLINE )
 /*
 int fontWeight() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_FONTWEIGHT )
+HB_FUNC_STATIC(QTEXTEDIT_FONTWEIGHT)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->fontWeight() );
+      RINT(obj->fontWeight());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -692,17 +692,17 @@ HB_FUNC_STATIC( QTEXTEDIT_FONTWEIGHT )
 /*
 bool isReadOnly() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_ISREADONLY )
+HB_FUNC_STATIC(QTEXTEDIT_ISREADONLY)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isReadOnly() );
+      RBOOL(obj->isReadOnly());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -716,17 +716,17 @@ HB_FUNC_STATIC( QTEXTEDIT_ISREADONLY )
 /*
 bool isUndoRedoEnabled() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_ISUNDOREDOENABLED )
+HB_FUNC_STATIC(QTEXTEDIT_ISUNDOREDOENABLED)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isUndoRedoEnabled() );
+      RBOOL(obj->isUndoRedoEnabled());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -740,17 +740,17 @@ HB_FUNC_STATIC( QTEXTEDIT_ISUNDOREDOENABLED )
 /*
 int lineWrapColumnOrWidth() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_LINEWRAPCOLUMNORWIDTH )
+HB_FUNC_STATIC(QTEXTEDIT_LINEWRAPCOLUMNORWIDTH)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->lineWrapColumnOrWidth() );
+      RINT(obj->lineWrapColumnOrWidth());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -764,17 +764,17 @@ HB_FUNC_STATIC( QTEXTEDIT_LINEWRAPCOLUMNORWIDTH )
 /*
 QTextEdit::LineWrapMode lineWrapMode() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_LINEWRAPMODE )
+HB_FUNC_STATIC(QTEXTEDIT_LINEWRAPMODE)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->lineWrapMode() );
+      RENUM(obj->lineWrapMode());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -788,17 +788,17 @@ HB_FUNC_STATIC( QTEXTEDIT_LINEWRAPMODE )
 /*
 virtual QVariant loadResource( int type, const QUrl & name )
 */
-HB_FUNC_STATIC( QTEXTEDIT_LOADRESOURCE )
+HB_FUNC_STATIC(QTEXTEDIT_LOADRESOURCE)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQURL(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQURL(2))
     {
 #endif
-      QVariant * ptr = new QVariant( obj->loadResource( PINT(1), *PQURL(2)) );
+      QVariant *ptr = new QVariant(obj->loadResource(PINT(1), *PQURL(2)));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -813,17 +813,17 @@ HB_FUNC_STATIC( QTEXTEDIT_LOADRESOURCE )
 /*
 void mergeCurrentCharFormat( const QTextCharFormat & modifier )
 */
-HB_FUNC_STATIC( QTEXTEDIT_MERGECURRENTCHARFORMAT )
+HB_FUNC_STATIC(QTEXTEDIT_MERGECURRENTCHARFORMAT)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTCHARFORMAT(1) )
+    if (ISNUMPAR(1) && ISQTEXTCHARFORMAT(1))
     {
 #endif
-      obj->mergeCurrentCharFormat( *PQTEXTCHARFORMAT(1) );
+      obj->mergeCurrentCharFormat(*PQTEXTCHARFORMAT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -839,17 +839,19 @@ HB_FUNC_STATIC( QTEXTEDIT_MERGECURRENTCHARFORMAT )
 /*
 void moveCursor( QTextCursor::MoveOperation operation, QTextCursor::MoveMode mode = QTextCursor::MoveAnchor )
 */
-HB_FUNC_STATIC( QTEXTEDIT_MOVECURSOR )
+HB_FUNC_STATIC(QTEXTEDIT_MOVECURSOR)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)) )
+    if (ISBETWEEN(1, 2) && HB_ISNUM(1) && (HB_ISNUM(2) || HB_ISNIL(2)))
     {
 #endif
-      obj->moveCursor( ( QTextCursor::MoveOperation ) hb_parni(1), HB_ISNIL(2) ? ( QTextCursor::MoveMode ) QTextCursor::MoveAnchor : ( QTextCursor::MoveMode ) hb_parni(2) );
+      obj->moveCursor((QTextCursor::MoveOperation)hb_parni(1), HB_ISNIL(2)
+                                                                   ? (QTextCursor::MoveMode)QTextCursor::MoveAnchor
+                                                                   : (QTextCursor::MoveMode)hb_parni(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -865,17 +867,17 @@ HB_FUNC_STATIC( QTEXTEDIT_MOVECURSOR )
 /*
 bool overwriteMode() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_OVERWRITEMODE )
+HB_FUNC_STATIC(QTEXTEDIT_OVERWRITEMODE)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->overwriteMode() );
+      RBOOL(obj->overwriteMode());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -889,17 +891,17 @@ HB_FUNC_STATIC( QTEXTEDIT_OVERWRITEMODE )
 /*
 void print( QPrinter * printer ) const
 */
-HB_FUNC_STATIC( QTEXTEDIT_PRINT )
+HB_FUNC_STATIC(QTEXTEDIT_PRINT)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPRINTER(1) )
+    if (ISNUMPAR(1) && ISQPRINTER(1))
     {
 #endif
-      obj->print( PQPRINTER(1) );
+      obj->print(PQPRINTER(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -915,17 +917,17 @@ HB_FUNC_STATIC( QTEXTEDIT_PRINT )
 /*
 void setAcceptRichText( bool accept )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETACCEPTRICHTEXT )
+HB_FUNC_STATIC(QTEXTEDIT_SETACCEPTRICHTEXT)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setAcceptRichText( PBOOL(1) );
+      obj->setAcceptRichText(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -941,17 +943,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETACCEPTRICHTEXT )
 /*
 void setAutoFormatting( QTextEdit::AutoFormatting features )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETAUTOFORMATTING )
+HB_FUNC_STATIC(QTEXTEDIT_SETAUTOFORMATTING)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAutoFormatting( ( QTextEdit::AutoFormatting ) hb_parni(1) );
+      obj->setAutoFormatting((QTextEdit::AutoFormatting)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -967,17 +969,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETAUTOFORMATTING )
 /*
 void setCurrentCharFormat( const QTextCharFormat & format )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETCURRENTCHARFORMAT )
+HB_FUNC_STATIC(QTEXTEDIT_SETCURRENTCHARFORMAT)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTCHARFORMAT(1) )
+    if (ISNUMPAR(1) && ISQTEXTCHARFORMAT(1))
     {
 #endif
-      obj->setCurrentCharFormat( *PQTEXTCHARFORMAT(1) );
+      obj->setCurrentCharFormat(*PQTEXTCHARFORMAT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -993,17 +995,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETCURRENTCHARFORMAT )
 /*
 void setCursorWidth( int width )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETCURSORWIDTH )
+HB_FUNC_STATIC(QTEXTEDIT_SETCURSORWIDTH)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCursorWidth( PINT(1) );
+      obj->setCursorWidth(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1019,17 +1021,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETCURSORWIDTH )
 /*
 void setDocument( QTextDocument * document )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETDOCUMENT )
+HB_FUNC_STATIC(QTEXTEDIT_SETDOCUMENT)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
+    if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1))
     {
 #endif
-      obj->setDocument( PQTEXTDOCUMENT(1) );
+      obj->setDocument(PQTEXTDOCUMENT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1045,17 +1047,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETDOCUMENT )
 /*
 void setDocumentTitle( const QString & title )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETDOCUMENTTITLE )
+HB_FUNC_STATIC(QTEXTEDIT_SETDOCUMENTTITLE)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setDocumentTitle( PQSTRING(1) );
+      obj->setDocumentTitle(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1071,17 +1073,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETDOCUMENTTITLE )
 /*
 void setLineWrapColumnOrWidth( int w )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETLINEWRAPCOLUMNORWIDTH )
+HB_FUNC_STATIC(QTEXTEDIT_SETLINEWRAPCOLUMNORWIDTH)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLineWrapColumnOrWidth( PINT(1) );
+      obj->setLineWrapColumnOrWidth(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1097,17 +1099,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETLINEWRAPCOLUMNORWIDTH )
 /*
 void setLineWrapMode( QTextEdit::LineWrapMode mode )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETLINEWRAPMODE )
+HB_FUNC_STATIC(QTEXTEDIT_SETLINEWRAPMODE)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLineWrapMode( ( QTextEdit::LineWrapMode ) hb_parni(1) );
+      obj->setLineWrapMode((QTextEdit::LineWrapMode)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1123,17 +1125,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETLINEWRAPMODE )
 /*
 void setOverwriteMode( bool overwrite )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETOVERWRITEMODE )
+HB_FUNC_STATIC(QTEXTEDIT_SETOVERWRITEMODE)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setOverwriteMode( PBOOL(1) );
+      obj->setOverwriteMode(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1149,17 +1151,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETOVERWRITEMODE )
 /*
 void setReadOnly( bool ro )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETREADONLY )
+HB_FUNC_STATIC(QTEXTEDIT_SETREADONLY)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setReadOnly( PBOOL(1) );
+      obj->setReadOnly(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1175,17 +1177,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETREADONLY )
 /*
 void setTabChangesFocus( bool b )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETTABCHANGESFOCUS )
+HB_FUNC_STATIC(QTEXTEDIT_SETTABCHANGESFOCUS)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setTabChangesFocus( PBOOL(1) );
+      obj->setTabChangesFocus(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1201,17 +1203,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETTABCHANGESFOCUS )
 /*
 void setTabStopWidth( int width )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETTABSTOPWIDTH )
+HB_FUNC_STATIC(QTEXTEDIT_SETTABSTOPWIDTH)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTabStopWidth( PINT(1) );
+      obj->setTabStopWidth(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1227,17 +1229,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETTABSTOPWIDTH )
 /*
 void setTextCursor( const QTextCursor & cursor )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETTEXTCURSOR )
+HB_FUNC_STATIC(QTEXTEDIT_SETTEXTCURSOR)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTCURSOR(1) )
+    if (ISNUMPAR(1) && ISQTEXTCURSOR(1))
     {
 #endif
-      obj->setTextCursor( *PQTEXTCURSOR(1) );
+      obj->setTextCursor(*PQTEXTCURSOR(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1253,17 +1255,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETTEXTCURSOR )
 /*
 void setTextInteractionFlags( Qt::TextInteractionFlags flags )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETTEXTINTERACTIONFLAGS )
+HB_FUNC_STATIC(QTEXTEDIT_SETTEXTINTERACTIONFLAGS)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setTextInteractionFlags( ( Qt::TextInteractionFlags ) hb_parni(1) );
+      obj->setTextInteractionFlags((Qt::TextInteractionFlags)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1279,17 +1281,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETTEXTINTERACTIONFLAGS )
 /*
 void setUndoRedoEnabled( bool enable )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETUNDOREDOENABLED )
+HB_FUNC_STATIC(QTEXTEDIT_SETUNDOREDOENABLED)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setUndoRedoEnabled( PBOOL(1) );
+      obj->setUndoRedoEnabled(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1305,17 +1307,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETUNDOREDOENABLED )
 /*
 void setWordWrapMode( QTextOption::WrapMode policy )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETWORDWRAPMODE )
+HB_FUNC_STATIC(QTEXTEDIT_SETWORDWRAPMODE)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setWordWrapMode( ( QTextOption::WrapMode ) hb_parni(1) );
+      obj->setWordWrapMode((QTextOption::WrapMode)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1331,17 +1333,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETWORDWRAPMODE )
 /*
 bool tabChangesFocus() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_TABCHANGESFOCUS )
+HB_FUNC_STATIC(QTEXTEDIT_TABCHANGESFOCUS)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->tabChangesFocus() );
+      RBOOL(obj->tabChangesFocus());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1355,17 +1357,17 @@ HB_FUNC_STATIC( QTEXTEDIT_TABCHANGESFOCUS )
 /*
 int tabStopWidth() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_TABSTOPWIDTH )
+HB_FUNC_STATIC(QTEXTEDIT_TABSTOPWIDTH)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->tabStopWidth() );
+      RINT(obj->tabStopWidth());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1379,17 +1381,17 @@ HB_FUNC_STATIC( QTEXTEDIT_TABSTOPWIDTH )
 /*
 QColor textBackgroundColor() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_TEXTBACKGROUNDCOLOR )
+HB_FUNC_STATIC(QTEXTEDIT_TEXTBACKGROUNDCOLOR)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QColor * ptr = new QColor( obj->textBackgroundColor() );
+      QColor *ptr = new QColor(obj->textBackgroundColor());
       Qt4xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1404,17 +1406,17 @@ HB_FUNC_STATIC( QTEXTEDIT_TEXTBACKGROUNDCOLOR )
 /*
 QColor textColor() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_TEXTCOLOR )
+HB_FUNC_STATIC(QTEXTEDIT_TEXTCOLOR)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QColor * ptr = new QColor( obj->textColor() );
+      QColor *ptr = new QColor(obj->textColor());
       Qt4xHb::createReturnClass(ptr, "QCOLOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1429,17 +1431,17 @@ HB_FUNC_STATIC( QTEXTEDIT_TEXTCOLOR )
 /*
 QTextCursor textCursor() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_TEXTCURSOR )
+HB_FUNC_STATIC(QTEXTEDIT_TEXTCURSOR)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QTextCursor * ptr = new QTextCursor( obj->textCursor() );
+      QTextCursor *ptr = new QTextCursor(obj->textCursor());
       Qt4xHb::createReturnClass(ptr, "QTEXTCURSOR", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -1454,17 +1456,17 @@ HB_FUNC_STATIC( QTEXTEDIT_TEXTCURSOR )
 /*
 Qt::TextInteractionFlags textInteractionFlags() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_TEXTINTERACTIONFLAGS )
+HB_FUNC_STATIC(QTEXTEDIT_TEXTINTERACTIONFLAGS)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->textInteractionFlags() );
+      RENUM(obj->textInteractionFlags());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1478,17 +1480,17 @@ HB_FUNC_STATIC( QTEXTEDIT_TEXTINTERACTIONFLAGS )
 /*
 QString toHtml() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_TOHTML )
+HB_FUNC_STATIC(QTEXTEDIT_TOHTML)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->toHtml() );
+      RQSTRING(obj->toHtml());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1502,17 +1504,17 @@ HB_FUNC_STATIC( QTEXTEDIT_TOHTML )
 /*
 QString toPlainText() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_TOPLAINTEXT )
+HB_FUNC_STATIC(QTEXTEDIT_TOPLAINTEXT)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->toPlainText() );
+      RQSTRING(obj->toPlainText());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1526,17 +1528,17 @@ HB_FUNC_STATIC( QTEXTEDIT_TOPLAINTEXT )
 /*
 QTextOption::WrapMode wordWrapMode() const
 */
-HB_FUNC_STATIC( QTEXTEDIT_WORDWRAPMODE )
+HB_FUNC_STATIC(QTEXTEDIT_WORDWRAPMODE)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->wordWrapMode() );
+      RENUM(obj->wordWrapMode());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1550,17 +1552,17 @@ HB_FUNC_STATIC( QTEXTEDIT_WORDWRAPMODE )
 /*
 void append( const QString & text )
 */
-HB_FUNC_STATIC( QTEXTEDIT_APPEND )
+HB_FUNC_STATIC(QTEXTEDIT_APPEND)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->append( PQSTRING(1) );
+      obj->append(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1576,14 +1578,14 @@ HB_FUNC_STATIC( QTEXTEDIT_APPEND )
 /*
 void clear()
 */
-HB_FUNC_STATIC( QTEXTEDIT_CLEAR )
+HB_FUNC_STATIC(QTEXTEDIT_CLEAR)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->clear();
@@ -1602,14 +1604,14 @@ HB_FUNC_STATIC( QTEXTEDIT_CLEAR )
 /*
 void copy()
 */
-HB_FUNC_STATIC( QTEXTEDIT_COPY )
+HB_FUNC_STATIC(QTEXTEDIT_COPY)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->copy();
@@ -1628,14 +1630,14 @@ HB_FUNC_STATIC( QTEXTEDIT_COPY )
 /*
 void cut()
 */
-HB_FUNC_STATIC( QTEXTEDIT_CUT )
+HB_FUNC_STATIC(QTEXTEDIT_CUT)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->cut();
@@ -1654,17 +1656,17 @@ HB_FUNC_STATIC( QTEXTEDIT_CUT )
 /*
 void insertHtml( const QString & text )
 */
-HB_FUNC_STATIC( QTEXTEDIT_INSERTHTML )
+HB_FUNC_STATIC(QTEXTEDIT_INSERTHTML)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->insertHtml( PQSTRING(1) );
+      obj->insertHtml(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1680,17 +1682,17 @@ HB_FUNC_STATIC( QTEXTEDIT_INSERTHTML )
 /*
 void insertPlainText( const QString & text )
 */
-HB_FUNC_STATIC( QTEXTEDIT_INSERTPLAINTEXT )
+HB_FUNC_STATIC(QTEXTEDIT_INSERTPLAINTEXT)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->insertPlainText( PQSTRING(1) );
+      obj->insertPlainText(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1706,14 +1708,14 @@ HB_FUNC_STATIC( QTEXTEDIT_INSERTPLAINTEXT )
 /*
 void paste()
 */
-HB_FUNC_STATIC( QTEXTEDIT_PASTE )
+HB_FUNC_STATIC(QTEXTEDIT_PASTE)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->paste();
@@ -1732,14 +1734,14 @@ HB_FUNC_STATIC( QTEXTEDIT_PASTE )
 /*
 void redo()
 */
-HB_FUNC_STATIC( QTEXTEDIT_REDO )
+HB_FUNC_STATIC(QTEXTEDIT_REDO)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->redo();
@@ -1758,17 +1760,17 @@ HB_FUNC_STATIC( QTEXTEDIT_REDO )
 /*
 void scrollToAnchor( const QString & name )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SCROLLTOANCHOR )
+HB_FUNC_STATIC(QTEXTEDIT_SCROLLTOANCHOR)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->scrollToAnchor( PQSTRING(1) );
+      obj->scrollToAnchor(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1784,14 +1786,14 @@ HB_FUNC_STATIC( QTEXTEDIT_SCROLLTOANCHOR )
 /*
 void selectAll()
 */
-HB_FUNC_STATIC( QTEXTEDIT_SELECTALL )
+HB_FUNC_STATIC(QTEXTEDIT_SELECTALL)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->selectAll();
@@ -1810,17 +1812,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SELECTALL )
 /*
 void setAlignment( Qt::Alignment a )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETALIGNMENT )
+HB_FUNC_STATIC(QTEXTEDIT_SETALIGNMENT)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setAlignment( ( Qt::Alignment ) hb_parni(1) );
+      obj->setAlignment((Qt::Alignment)hb_parni(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1836,17 +1838,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETALIGNMENT )
 /*
 void setCurrentFont( const QFont & f )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETCURRENTFONT )
+HB_FUNC_STATIC(QTEXTEDIT_SETCURRENTFONT)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQFONT(1) )
+    if (ISNUMPAR(1) && ISQFONT(1))
     {
 #endif
-      obj->setCurrentFont( *PQFONT(1) );
+      obj->setCurrentFont(*PQFONT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1862,17 +1864,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETCURRENTFONT )
 /*
 void setFontFamily( const QString & fontFamily )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETFONTFAMILY )
+HB_FUNC_STATIC(QTEXTEDIT_SETFONTFAMILY)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setFontFamily( PQSTRING(1) );
+      obj->setFontFamily(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1888,17 +1890,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETFONTFAMILY )
 /*
 void setFontItalic( bool italic )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETFONTITALIC )
+HB_FUNC_STATIC(QTEXTEDIT_SETFONTITALIC)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setFontItalic( PBOOL(1) );
+      obj->setFontItalic(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1914,17 +1916,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETFONTITALIC )
 /*
 void setFontPointSize( qreal s )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETFONTPOINTSIZE )
+HB_FUNC_STATIC(QTEXTEDIT_SETFONTPOINTSIZE)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFontPointSize( PQREAL(1) );
+      obj->setFontPointSize(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1940,17 +1942,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETFONTPOINTSIZE )
 /*
 void setFontUnderline( bool underline )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETFONTUNDERLINE )
+HB_FUNC_STATIC(QTEXTEDIT_SETFONTUNDERLINE)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setFontUnderline( PBOOL(1) );
+      obj->setFontUnderline(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1966,17 +1968,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETFONTUNDERLINE )
 /*
 void setFontWeight( int weight )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETFONTWEIGHT )
+HB_FUNC_STATIC(QTEXTEDIT_SETFONTWEIGHT)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setFontWeight( PINT(1) );
+      obj->setFontWeight(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -1992,17 +1994,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETFONTWEIGHT )
 /*
 void setHtml( const QString & text )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETHTML )
+HB_FUNC_STATIC(QTEXTEDIT_SETHTML)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setHtml( PQSTRING(1) );
+      obj->setHtml(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2018,17 +2020,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETHTML )
 /*
 void setPlainText( const QString & text )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETPLAINTEXT )
+HB_FUNC_STATIC(QTEXTEDIT_SETPLAINTEXT)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setPlainText( PQSTRING(1) );
+      obj->setPlainText(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2044,17 +2046,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETPLAINTEXT )
 /*
 void setText( const QString & text )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETTEXT )
+HB_FUNC_STATIC(QTEXTEDIT_SETTEXT)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setText( PQSTRING(1) );
+      obj->setText(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2070,17 +2072,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETTEXT )
 /*
 void setTextBackgroundColor( const QColor & c )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETTEXTBACKGROUNDCOLOR )
+HB_FUNC_STATIC(QTEXTEDIT_SETTEXTBACKGROUNDCOLOR)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)) )
+    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setTextBackgroundColor( HB_ISOBJECT(1) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(1) ) : QColor( hb_parc(1)) );
+      obj->setTextBackgroundColor(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2096,17 +2098,17 @@ HB_FUNC_STATIC( QTEXTEDIT_SETTEXTBACKGROUNDCOLOR )
 /*
 void setTextColor( const QColor & c )
 */
-HB_FUNC_STATIC( QTEXTEDIT_SETTEXTCOLOR )
+HB_FUNC_STATIC(QTEXTEDIT_SETTEXTCOLOR)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)) )
+    if (ISNUMPAR(1) && (ISQCOLOR(1) || HB_ISCHAR(1)))
     {
 #endif
-      obj->setTextColor( HB_ISOBJECT(1) ? *static_cast<QColor*>( Qt4xHb::itemGetPtr(1) ) : QColor( hb_parc(1)) );
+      obj->setTextColor(HB_ISOBJECT(1) ? *static_cast<QColor *>(Qt4xHb::itemGetPtr(1)) : QColor(hb_parc(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2122,14 +2124,14 @@ HB_FUNC_STATIC( QTEXTEDIT_SETTEXTCOLOR )
 /*
 void undo()
 */
-HB_FUNC_STATIC( QTEXTEDIT_UNDO )
+HB_FUNC_STATIC(QTEXTEDIT_UNDO)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->undo();
@@ -2148,17 +2150,17 @@ HB_FUNC_STATIC( QTEXTEDIT_UNDO )
 /*
 void zoomIn( int range = 1 )
 */
-HB_FUNC_STATIC( QTEXTEDIT_ZOOMIN )
+HB_FUNC_STATIC(QTEXTEDIT_ZOOMIN)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->zoomIn( OPINT( 1, 1 ) );
+      obj->zoomIn(OPINT(1, 1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2174,17 +2176,17 @@ HB_FUNC_STATIC( QTEXTEDIT_ZOOMIN )
 /*
 void zoomOut( int range = 1 )
 */
-HB_FUNC_STATIC( QTEXTEDIT_ZOOMOUT )
+HB_FUNC_STATIC(QTEXTEDIT_ZOOMOUT)
 {
-  QTextEdit * obj = qobject_cast<QTextEdit*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QTextEdit *obj = qobject_cast<QTextEdit *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)) )
+    if (ISBETWEEN(0, 1) && (HB_ISNUM(1) || HB_ISNIL(1)))
     {
 #endif
-      obj->zoomOut( OPINT( 1, 1 ) );
+      obj->zoomOut(OPINT(1, 1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -2197,39 +2199,40 @@ HB_FUNC_STATIC( QTEXTEDIT_ZOOMOUT )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QTextEditSlots_connect_signal(const QString & signal, const QString & slot);
+void QTextEditSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QTEXTEDIT_ONCOPYAVAILABLE )
+HB_FUNC_STATIC(QTEXTEDIT_ONCOPYAVAILABLE)
 {
   QTextEditSlots_connect_signal("copyAvailable(bool)", "copyAvailable(bool)");
 }
 
-HB_FUNC_STATIC( QTEXTEDIT_ONCURRENTCHARFORMATCHANGED )
+HB_FUNC_STATIC(QTEXTEDIT_ONCURRENTCHARFORMATCHANGED)
 {
-  QTextEditSlots_connect_signal("currentCharFormatChanged(QTextCharFormat)", "currentCharFormatChanged(QTextCharFormat)");
+  QTextEditSlots_connect_signal("currentCharFormatChanged(QTextCharFormat)",
+                                "currentCharFormatChanged(QTextCharFormat)");
 }
 
-HB_FUNC_STATIC( QTEXTEDIT_ONCURSORPOSITIONCHANGED )
+HB_FUNC_STATIC(QTEXTEDIT_ONCURSORPOSITIONCHANGED)
 {
   QTextEditSlots_connect_signal("cursorPositionChanged()", "cursorPositionChanged()");
 }
 
-HB_FUNC_STATIC( QTEXTEDIT_ONREDOAVAILABLE )
+HB_FUNC_STATIC(QTEXTEDIT_ONREDOAVAILABLE)
 {
   QTextEditSlots_connect_signal("redoAvailable(bool)", "redoAvailable(bool)");
 }
 
-HB_FUNC_STATIC( QTEXTEDIT_ONSELECTIONCHANGED )
+HB_FUNC_STATIC(QTEXTEDIT_ONSELECTIONCHANGED)
 {
   QTextEditSlots_connect_signal("selectionChanged()", "selectionChanged()");
 }
 
-HB_FUNC_STATIC( QTEXTEDIT_ONTEXTCHANGED )
+HB_FUNC_STATIC(QTEXTEDIT_ONTEXTCHANGED)
 {
   QTextEditSlots_connect_signal("textChanged()", "textChanged()");
 }
 
-HB_FUNC_STATIC( QTEXTEDIT_ONUNDOAVAILABLE )
+HB_FUNC_STATIC(QTEXTEDIT_ONUNDOAVAILABLE)
 {
   QTextEditSlots_connect_signal("undoAvailable(bool)", "undoAvailable(bool)");
 }

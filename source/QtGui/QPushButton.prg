@@ -51,30 +51,32 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-HB_FUNC_STATIC( QPUSHBUTTON_NEW )
+HB_FUNC_STATIC(QPUSHBUTTON_NEW)
 {
-  if( ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQWIDGET(1) || HB_ISNIL(1)))
   {
     /*
     QPushButton( QWidget * parent = 0 )
     */
-    QPushButton * obj = new QPushButton( OPQWIDGET( 1, 0 ) );
+    QPushButton *obj = new QPushButton(OPQWIDGET(1, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQWIDGET(2) || HB_ISNIL(2)))
   {
     /*
     QPushButton( const QString & text, QWidget * parent = 0 )
     */
-    QPushButton * obj = new QPushButton( PQSTRING(1), OPQWIDGET( 2, 0 ) );
+    QPushButton *obj = new QPushButton(PQSTRING(1), OPQWIDGET(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISBETWEEN(2, 3) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && (ISQWIDGET(3) || HB_ISNIL(3)) )
+  else if (ISBETWEEN(2, 3) && (ISQICON(1) || HB_ISCHAR(1)) && HB_ISCHAR(2) && (ISQWIDGET(3) || HB_ISNIL(3)))
   {
     /*
     QPushButton( const QIcon & icon, const QString & text, QWidget * parent = 0 )
     */
-    QPushButton * obj = new QPushButton( HB_ISOBJECT(1) ? *static_cast<QIcon*>( Qt4xHb::itemGetPtr(1) ) : QIcon( hb_parc(1) ), PQSTRING(2), OPQWIDGET( 3, 0 ) );
+    QPushButton *obj =
+        new QPushButton(HB_ISOBJECT(1) ? *static_cast<QIcon *>(Qt4xHb::itemGetPtr(1)) : QIcon(hb_parc(1)), PQSTRING(2),
+                        OPQWIDGET(3, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -83,11 +85,11 @@ HB_FUNC_STATIC( QPUSHBUTTON_NEW )
   }
 }
 
-HB_FUNC_STATIC( QPUSHBUTTON_DELETE )
+HB_FUNC_STATIC(QPUSHBUTTON_DELETE)
 {
-  QPushButton * obj = qobject_cast<QPushButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPushButton *obj = qobject_cast<QPushButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -104,17 +106,17 @@ HB_FUNC_STATIC( QPUSHBUTTON_DELETE )
 /*
 bool autoDefault() const
 */
-HB_FUNC_STATIC( QPUSHBUTTON_AUTODEFAULT )
+HB_FUNC_STATIC(QPUSHBUTTON_AUTODEFAULT)
 {
-  QPushButton * obj = qobject_cast<QPushButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPushButton *obj = qobject_cast<QPushButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->autoDefault() );
+      RBOOL(obj->autoDefault());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -128,17 +130,17 @@ HB_FUNC_STATIC( QPUSHBUTTON_AUTODEFAULT )
 /*
 bool isDefault() const
 */
-HB_FUNC_STATIC( QPUSHBUTTON_ISDEFAULT )
+HB_FUNC_STATIC(QPUSHBUTTON_ISDEFAULT)
 {
-  QPushButton * obj = qobject_cast<QPushButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPushButton *obj = qobject_cast<QPushButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isDefault() );
+      RBOOL(obj->isDefault());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -152,17 +154,17 @@ HB_FUNC_STATIC( QPUSHBUTTON_ISDEFAULT )
 /*
 bool isFlat() const
 */
-HB_FUNC_STATIC( QPUSHBUTTON_ISFLAT )
+HB_FUNC_STATIC(QPUSHBUTTON_ISFLAT)
 {
-  QPushButton * obj = qobject_cast<QPushButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPushButton *obj = qobject_cast<QPushButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isFlat() );
+      RBOOL(obj->isFlat());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -176,17 +178,17 @@ HB_FUNC_STATIC( QPUSHBUTTON_ISFLAT )
 /*
 void setAutoDefault( bool )
 */
-HB_FUNC_STATIC( QPUSHBUTTON_SETAUTODEFAULT )
+HB_FUNC_STATIC(QPUSHBUTTON_SETAUTODEFAULT)
 {
-  QPushButton * obj = qobject_cast<QPushButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPushButton *obj = qobject_cast<QPushButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setAutoDefault( PBOOL(1) );
+      obj->setAutoDefault(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -202,17 +204,17 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETAUTODEFAULT )
 /*
 void setDefault( bool )
 */
-HB_FUNC_STATIC( QPUSHBUTTON_SETDEFAULT )
+HB_FUNC_STATIC(QPUSHBUTTON_SETDEFAULT)
 {
-  QPushButton * obj = qobject_cast<QPushButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPushButton *obj = qobject_cast<QPushButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setDefault( PBOOL(1) );
+      obj->setDefault(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -228,17 +230,17 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETDEFAULT )
 /*
 void setFlat( bool )
 */
-HB_FUNC_STATIC( QPUSHBUTTON_SETFLAT )
+HB_FUNC_STATIC(QPUSHBUTTON_SETFLAT)
 {
-  QPushButton * obj = qobject_cast<QPushButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPushButton *obj = qobject_cast<QPushButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISLOG(1) )
+    if (ISNUMPAR(1) && HB_ISLOG(1))
     {
 #endif
-      obj->setFlat( PBOOL(1) );
+      obj->setFlat(PBOOL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -254,14 +256,14 @@ HB_FUNC_STATIC( QPUSHBUTTON_SETFLAT )
 /*
 void showMenu()
 */
-HB_FUNC_STATIC( QPUSHBUTTON_SHOWMENU )
+HB_FUNC_STATIC(QPUSHBUTTON_SHOWMENU)
 {
-  QPushButton * obj = qobject_cast<QPushButton*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPushButton *obj = qobject_cast<QPushButton *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->showMenu();

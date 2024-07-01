@@ -44,22 +44,22 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-HB_FUNC_STATIC( QVBOXLAYOUT_NEW )
+HB_FUNC_STATIC(QVBOXLAYOUT_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     QVBoxLayout()
     */
-    QVBoxLayout * obj = new QVBoxLayout();
+    QVBoxLayout *obj = new QVBoxLayout();
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISNUMPAR(1) && ISQWIDGET(1) )
+  else if (ISNUMPAR(1) && ISQWIDGET(1))
   {
     /*
     QVBoxLayout( QWidget * parent )
     */
-    QVBoxLayout * obj = new QVBoxLayout( PQWIDGET(1) );
+    QVBoxLayout *obj = new QVBoxLayout(PQWIDGET(1));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -68,11 +68,11 @@ HB_FUNC_STATIC( QVBOXLAYOUT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QVBOXLAYOUT_DELETE )
+HB_FUNC_STATIC(QVBOXLAYOUT_DELETE)
 {
-  QVBoxLayout * obj = qobject_cast<QVBoxLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QVBoxLayout *obj = qobject_cast<QVBoxLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);

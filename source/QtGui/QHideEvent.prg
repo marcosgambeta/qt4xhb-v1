@@ -42,14 +42,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QHideEvent()
-*/
-HB_FUNC_STATIC( QHIDEEVENT_NEW )
+    /*
+    QHideEvent()
+    */
+HB_FUNC_STATIC(QHIDEEVENT_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QHideEvent * obj = new QHideEvent();
+    QHideEvent *obj = new QHideEvent();
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -58,11 +58,11 @@ HB_FUNC_STATIC( QHIDEEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QHIDEEVENT_DELETE )
+HB_FUNC_STATIC(QHIDEEVENT_DELETE)
 {
-  QHideEvent * obj = static_cast<QHideEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QHideEvent *obj = static_cast<QHideEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;

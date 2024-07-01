@@ -49,14 +49,14 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-/*
-QWidgetAction( QObject * parent )
-*/
-HB_FUNC_STATIC( QWIDGETACTION_NEW )
+    /*
+    QWidgetAction( QObject * parent )
+    */
+HB_FUNC_STATIC(QWIDGETACTION_NEW)
 {
-  if( ISNUMPAR(1) && ISQOBJECT(1) )
+  if (ISNUMPAR(1) && ISQOBJECT(1))
   {
-    QWidgetAction * obj = new QWidgetAction( PQOBJECT(1) );
+    QWidgetAction *obj = new QWidgetAction(PQOBJECT(1));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -65,11 +65,11 @@ HB_FUNC_STATIC( QWIDGETACTION_NEW )
   }
 }
 
-HB_FUNC_STATIC( QWIDGETACTION_DELETE )
+HB_FUNC_STATIC(QWIDGETACTION_DELETE)
 {
-  QWidgetAction * obj = qobject_cast<QWidgetAction*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWidgetAction *obj = qobject_cast<QWidgetAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -86,18 +86,18 @@ HB_FUNC_STATIC( QWIDGETACTION_DELETE )
 /*
 QWidget * defaultWidget() const
 */
-HB_FUNC_STATIC( QWIDGETACTION_DEFAULTWIDGET )
+HB_FUNC_STATIC(QWIDGETACTION_DEFAULTWIDGET)
 {
-  QWidgetAction * obj = qobject_cast<QWidgetAction*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWidgetAction *obj = qobject_cast<QWidgetAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QWidget * ptr = obj->defaultWidget();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      QWidget *ptr = obj->defaultWidget();
+      Qt4xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -111,17 +111,17 @@ HB_FUNC_STATIC( QWIDGETACTION_DEFAULTWIDGET )
 /*
 void releaseWidget( QWidget * widget )
 */
-HB_FUNC_STATIC( QWIDGETACTION_RELEASEWIDGET )
+HB_FUNC_STATIC(QWIDGETACTION_RELEASEWIDGET)
 {
-  QWidgetAction * obj = qobject_cast<QWidgetAction*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWidgetAction *obj = qobject_cast<QWidgetAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if (ISNUMPAR(1) && ISQWIDGET(1))
     {
 #endif
-      obj->releaseWidget( PQWIDGET(1) );
+      obj->releaseWidget(PQWIDGET(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,18 +137,18 @@ HB_FUNC_STATIC( QWIDGETACTION_RELEASEWIDGET )
 /*
 QWidget * requestWidget( QWidget * parent )
 */
-HB_FUNC_STATIC( QWIDGETACTION_REQUESTWIDGET )
+HB_FUNC_STATIC(QWIDGETACTION_REQUESTWIDGET)
 {
-  QWidgetAction * obj = qobject_cast<QWidgetAction*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWidgetAction *obj = qobject_cast<QWidgetAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if (ISNUMPAR(1) && ISQWIDGET(1))
     {
 #endif
-      QWidget * ptr = obj->requestWidget( PQWIDGET(1) );
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      QWidget *ptr = obj->requestWidget(PQWIDGET(1));
+      Qt4xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -162,17 +162,17 @@ HB_FUNC_STATIC( QWIDGETACTION_REQUESTWIDGET )
 /*
 void setDefaultWidget( QWidget * widget )
 */
-HB_FUNC_STATIC( QWIDGETACTION_SETDEFAULTWIDGET )
+HB_FUNC_STATIC(QWIDGETACTION_SETDEFAULTWIDGET)
 {
-  QWidgetAction * obj = qobject_cast<QWidgetAction*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QWidgetAction *obj = qobject_cast<QWidgetAction *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQWIDGET(1) )
+    if (ISNUMPAR(1) && ISQWIDGET(1))
     {
 #endif
-      obj->setDefaultWidget( PQWIDGET(1) );
+      obj->setDefaultWidget(PQWIDGET(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

@@ -63,20 +63,21 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-/*
-QString anchorAt( const QPointF & position ) const
-*/
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT )
+    /*
+    QString anchorAt( const QPointF & position ) const
+    */
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT)
 {
-  QAbstractTextDocumentLayout * obj = qobject_cast<QAbstractTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractTextDocumentLayout *obj =
+      qobject_cast<QAbstractTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPOINTF(1) )
+    if (ISNUMPAR(1) && ISQPOINTF(1))
     {
 #endif
-      RQSTRING( obj->anchorAt( *PQPOINTF(1)) );
+      RQSTRING(obj->anchorAt(*PQPOINTF(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -90,17 +91,18 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ANCHORAT )
 /*
 virtual QRectF blockBoundingRect( const QTextBlock & block ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT)
 {
-  QAbstractTextDocumentLayout * obj = qobject_cast<QAbstractTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractTextDocumentLayout *obj =
+      qobject_cast<QAbstractTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
+    if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
     {
 #endif
-      QRectF * ptr = new QRectF( obj->blockBoundingRect( *PQTEXTBLOCK(1)) );
+      QRectF *ptr = new QRectF(obj->blockBoundingRect(*PQTEXTBLOCK(1)));
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -115,17 +117,18 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT )
 /*
 QTextDocument * document() const
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENT )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENT)
 {
-  QAbstractTextDocumentLayout * obj = qobject_cast<QAbstractTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractTextDocumentLayout *obj =
+      qobject_cast<QAbstractTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QTextDocument * ptr = obj->document();
+      QTextDocument *ptr = obj->document();
       Qt4xHb::createReturnQObjectClass(ptr, "QTEXTDOCUMENT");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -140,17 +143,18 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENT )
 /*
 virtual QSizeF documentSize() const = 0
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENTSIZE )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENTSIZE)
 {
-  QAbstractTextDocumentLayout * obj = qobject_cast<QAbstractTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractTextDocumentLayout *obj =
+      qobject_cast<QAbstractTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->documentSize() );
+      QSizeF *ptr = new QSizeF(obj->documentSize());
       Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -165,17 +169,18 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_DOCUMENTSIZE )
 /*
 virtual QRectF frameBoundingRect( QTextFrame * frame ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT)
 {
-  QAbstractTextDocumentLayout * obj = qobject_cast<QAbstractTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractTextDocumentLayout *obj =
+      qobject_cast<QAbstractTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTFRAME(1) )
+    if (ISNUMPAR(1) && ISQTEXTFRAME(1))
     {
 #endif
-      QRectF * ptr = new QRectF( obj->frameBoundingRect( PQTEXTFRAME(1)) );
+      QRectF *ptr = new QRectF(obj->frameBoundingRect(PQTEXTFRAME(1)));
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -190,17 +195,18 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT )
 /*
 QTextObjectInterface * handlerForObject( int objectType ) const
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT)
 {
-  QAbstractTextDocumentLayout * obj = qobject_cast<QAbstractTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractTextDocumentLayout *obj =
+      qobject_cast<QAbstractTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QTextObjectInterface * ptr = obj->handlerForObject( PINT(1) );
+      QTextObjectInterface *ptr = obj->handlerForObject(PINT(1));
       Qt4xHb::createReturnClass(ptr, "QTEXTOBJECTINTERFACE", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -215,17 +221,18 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HANDLERFOROBJECT )
 /*
 virtual int hitTest( const QPointF & point, Qt::HitTestAccuracy accuracy ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HITTEST )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_HITTEST)
 {
-  QAbstractTextDocumentLayout * obj = qobject_cast<QAbstractTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractTextDocumentLayout *obj =
+      qobject_cast<QAbstractTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2))
     {
 #endif
-      RINT( obj->hitTest( *PQPOINTF(1), ( Qt::HitTestAccuracy ) hb_parni(2)) );
+      RINT(obj->hitTest(*PQPOINTF(1), (Qt::HitTestAccuracy)hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -239,17 +246,18 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_HITTEST )
 /*
 virtual int pageCount() const = 0
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_PAGECOUNT )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_PAGECOUNT)
 {
-  QAbstractTextDocumentLayout * obj = qobject_cast<QAbstractTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractTextDocumentLayout *obj =
+      qobject_cast<QAbstractTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->pageCount() );
+      RINT(obj->pageCount());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -263,17 +271,18 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_PAGECOUNT )
 /*
 QPaintDevice * paintDevice() const
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_PAINTDEVICE )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_PAINTDEVICE)
 {
-  QAbstractTextDocumentLayout * obj = qobject_cast<QAbstractTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractTextDocumentLayout *obj =
+      qobject_cast<QAbstractTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPaintDevice * ptr = obj->paintDevice();
+      QPaintDevice *ptr = obj->paintDevice();
       Qt4xHb::createReturnClass(ptr, "QPAINTDEVICE", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -288,17 +297,18 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_PAINTDEVICE )
 /*
 void registerHandler( int objectType, QObject * component )
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_REGISTERHANDLER )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_REGISTERHANDLER)
 {
-  QAbstractTextDocumentLayout * obj = qobject_cast<QAbstractTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractTextDocumentLayout *obj =
+      qobject_cast<QAbstractTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && HB_ISNUM(1) && ISQOBJECT(2) )
+    if (ISNUMPAR(2) && HB_ISNUM(1) && ISQOBJECT(2))
     {
 #endif
-      obj->registerHandler( PINT(1), PQOBJECT(2) );
+      obj->registerHandler(PINT(1), PQOBJECT(2));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -314,17 +324,18 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_REGISTERHANDLER )
 /*
 void setPaintDevice( QPaintDevice * device )
 */
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_SETPAINTDEVICE )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_SETPAINTDEVICE)
 {
-  QAbstractTextDocumentLayout * obj = qobject_cast<QAbstractTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractTextDocumentLayout *obj =
+      qobject_cast<QAbstractTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQPAINTDEVICE(1) )
+    if (ISNUMPAR(1) && ISQPAINTDEVICE(1))
     {
 #endif
-      obj->setPaintDevice( PQPAINTDEVICE(1) );
+      obj->setPaintDevice(PQPAINTDEVICE(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -337,24 +348,24 @@ HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_SETPAINTDEVICE )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-void QAbstractTextDocumentLayoutSlots_connect_signal(const QString & signal, const QString & slot);
+void QAbstractTextDocumentLayoutSlots_connect_signal(const QString &signal, const QString &slot);
 
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ONDOCUMENTSIZECHANGED)
 {
   QAbstractTextDocumentLayoutSlots_connect_signal("documentSizeChanged(QSizeF)", "documentSizeChanged(QSizeF)");
 }
 
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONPAGECOUNTCHANGED )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ONPAGECOUNTCHANGED)
 {
   QAbstractTextDocumentLayoutSlots_connect_signal("pageCountChanged(int)", "pageCountChanged(int)");
 }
 
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATE )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATE)
 {
   QAbstractTextDocumentLayoutSlots_connect_signal("update(QRectF)", "update(QRectF)");
 }
 
-HB_FUNC_STATIC( QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK )
+HB_FUNC_STATIC(QABSTRACTTEXTDOCUMENTLAYOUT_ONUPDATEBLOCK)
 {
   QAbstractTextDocumentLayoutSlots_connect_signal("updateBlock(QTextBlock)", "updateBlock(QTextBlock)");
 }

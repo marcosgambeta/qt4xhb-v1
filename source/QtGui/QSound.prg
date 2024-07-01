@@ -52,14 +52,14 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-/*
-QSound( const QString & filename, QObject * parent = 0 )
-*/
-HB_FUNC_STATIC( QSOUND_NEW )
+    /*
+    QSound( const QString & filename, QObject * parent = 0 )
+    */
+HB_FUNC_STATIC(QSOUND_NEW)
 {
-  if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)) )
+  if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQOBJECT(2) || HB_ISNIL(2)))
   {
-    QSound * obj = new QSound( PQSTRING(1), OPQOBJECT( 2, 0 ) );
+    QSound *obj = new QSound(PQSTRING(1), OPQOBJECT(2, 0));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -68,11 +68,11 @@ HB_FUNC_STATIC( QSOUND_NEW )
   }
 }
 
-HB_FUNC_STATIC( QSOUND_DELETE )
+HB_FUNC_STATIC(QSOUND_DELETE)
 {
-  QSound * obj = qobject_cast<QSound*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSound *obj = qobject_cast<QSound *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -89,17 +89,17 @@ HB_FUNC_STATIC( QSOUND_DELETE )
 /*
 QString fileName() const
 */
-HB_FUNC_STATIC( QSOUND_FILENAME )
+HB_FUNC_STATIC(QSOUND_FILENAME)
 {
-  QSound * obj = qobject_cast<QSound*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSound *obj = qobject_cast<QSound *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->fileName() );
+      RQSTRING(obj->fileName());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -113,17 +113,17 @@ HB_FUNC_STATIC( QSOUND_FILENAME )
 /*
 bool isFinished() const
 */
-HB_FUNC_STATIC( QSOUND_ISFINISHED )
+HB_FUNC_STATIC(QSOUND_ISFINISHED)
 {
-  QSound * obj = qobject_cast<QSound*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSound *obj = qobject_cast<QSound *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isFinished() );
+      RBOOL(obj->isFinished());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -137,17 +137,17 @@ HB_FUNC_STATIC( QSOUND_ISFINISHED )
 /*
 int loops() const
 */
-HB_FUNC_STATIC( QSOUND_LOOPS )
+HB_FUNC_STATIC(QSOUND_LOOPS)
 {
-  QSound * obj = qobject_cast<QSound*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSound *obj = qobject_cast<QSound *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->loops() );
+      RINT(obj->loops());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -161,17 +161,17 @@ HB_FUNC_STATIC( QSOUND_LOOPS )
 /*
 int loopsRemaining() const
 */
-HB_FUNC_STATIC( QSOUND_LOOPSREMAINING )
+HB_FUNC_STATIC(QSOUND_LOOPSREMAINING)
 {
-  QSound * obj = qobject_cast<QSound*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSound *obj = qobject_cast<QSound *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->loopsRemaining() );
+      RINT(obj->loopsRemaining());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -185,17 +185,17 @@ HB_FUNC_STATIC( QSOUND_LOOPSREMAINING )
 /*
 void setLoops( int number )
 */
-HB_FUNC_STATIC( QSOUND_SETLOOPS )
+HB_FUNC_STATIC(QSOUND_SETLOOPS)
 {
-  QSound * obj = qobject_cast<QSound*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSound *obj = qobject_cast<QSound *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setLoops( PINT(1) );
+      obj->setLoops(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -211,14 +211,14 @@ HB_FUNC_STATIC( QSOUND_SETLOOPS )
 /*
 void stop()
 */
-HB_FUNC_STATIC( QSOUND_STOP )
+HB_FUNC_STATIC(QSOUND_STOP)
 {
-  QSound * obj = qobject_cast<QSound*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QSound *obj = qobject_cast<QSound *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->stop();
@@ -237,13 +237,13 @@ HB_FUNC_STATIC( QSOUND_STOP )
 /*
 static bool isAvailable()
 */
-HB_FUNC_STATIC( QSOUND_ISAVAILABLE )
+HB_FUNC_STATIC(QSOUND_ISAVAILABLE)
 {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
 #endif
-    RBOOL( QSound::isAvailable() );
+    RBOOL(QSound::isAvailable());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
   }
   else
@@ -253,29 +253,29 @@ HB_FUNC_STATIC( QSOUND_ISAVAILABLE )
 #endif
 }
 
-HB_FUNC_STATIC( QSOUND_PLAY )
+HB_FUNC_STATIC(QSOUND_PLAY)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
     /*
     void play()
     */
-    QSound * obj = qobject_cast<QSound*>(Qt4xHb::getQObjectPointerFromSelfItem());
+    QSound *obj = qobject_cast<QSound *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-    if( obj != NULL )
+    if (obj != NULL)
     {
       obj->play();
     }
 
     hb_itemReturn(hb_stackSelfItem());
   }
-  else if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  else if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
     /*
     static void play( const QString & filename )
     */
 
-    QSound::play( PQSTRING(1) );
+    QSound::play(PQSTRING(1));
 
     hb_itemReturn(hb_stackSelfItem());
   }

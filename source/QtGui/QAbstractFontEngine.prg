@@ -47,11 +47,11 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-HB_FUNC_STATIC( QABSTRACTFONTENGINE_DELETE )
+HB_FUNC_STATIC(QABSTRACTFONTENGINE_DELETE)
 {
-  QAbstractFontEngine * obj = qobject_cast<QAbstractFontEngine*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractFontEngine *obj = qobject_cast<QAbstractFontEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -68,17 +68,17 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_DELETE )
 /*
 virtual QAbstractFontEngine::Capabilities capabilities() const = 0
 */
-HB_FUNC_STATIC( QABSTRACTFONTENGINE_CAPABILITIES )
+HB_FUNC_STATIC(QABSTRACTFONTENGINE_CAPABILITIES)
 {
-  QAbstractFontEngine * obj = qobject_cast<QAbstractFontEngine*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractFontEngine *obj = qobject_cast<QAbstractFontEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->capabilities() );
+      RENUM(obj->capabilities());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -92,17 +92,17 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_CAPABILITIES )
 /*
 virtual QVariant fontProperty( QAbstractFontEngine::FontProperty property ) const = 0
 */
-HB_FUNC_STATIC( QABSTRACTFONTENGINE_FONTPROPERTY )
+HB_FUNC_STATIC(QABSTRACTFONTENGINE_FONTPROPERTY)
 {
-  QAbstractFontEngine * obj = qobject_cast<QAbstractFontEngine*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractFontEngine *obj = qobject_cast<QAbstractFontEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      QVariant * ptr = new QVariant( obj->fontProperty( ( QAbstractFontEngine::FontProperty ) hb_parni(1)) );
+      QVariant *ptr = new QVariant(obj->fontProperty((QAbstractFontEngine::FontProperty)hb_parni(1)));
       Qt4xHb::createReturnClass(ptr, "QVARIANT", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -117,17 +117,17 @@ HB_FUNC_STATIC( QABSTRACTFONTENGINE_FONTPROPERTY )
 /*
 virtual bool renderGlyph( uint glyph, int depth, int bytesPerLine, int height, uchar * buffer )
 */
-HB_FUNC_STATIC( QABSTRACTFONTENGINE_RENDERGLYPH )
+HB_FUNC_STATIC(QABSTRACTFONTENGINE_RENDERGLYPH)
 {
-  QAbstractFontEngine * obj = qobject_cast<QAbstractFontEngine*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QAbstractFontEngine *obj = qobject_cast<QAbstractFontEngine *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISCHAR(5) )
+    if (ISNUMPAR(5) && HB_ISNUM(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISCHAR(5))
     {
 #endif
-      RBOOL( obj->renderGlyph( PUINT(1), PINT(2), PINT(3), PINT(4), ( uchar * ) hb_parc(5)) );
+      RBOOL(obj->renderGlyph(PUINT(1), PINT(2), PINT(3), PINT(4), (uchar *)hb_parc(5)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

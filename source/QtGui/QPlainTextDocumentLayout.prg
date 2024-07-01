@@ -55,14 +55,14 @@ RETURN
 #include "qt4xhb_events.hpp"
 #include "qt4xhb_signals.hpp"
 
-/*
-QPlainTextDocumentLayout( QTextDocument * document )
-*/
-HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_NEW )
+    /*
+    QPlainTextDocumentLayout( QTextDocument * document )
+    */
+HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_NEW)
 {
-  if( ISNUMPAR(1) && ISQTEXTDOCUMENT(1) )
+  if (ISNUMPAR(1) && ISQTEXTDOCUMENT(1))
   {
-    QPlainTextDocumentLayout * obj = new QPlainTextDocumentLayout( PQTEXTDOCUMENT(1) );
+    QPlainTextDocumentLayout *obj = new QPlainTextDocumentLayout(PQTEXTDOCUMENT(1));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -71,11 +71,11 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_DELETE )
+HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_DELETE)
 {
-  QPlainTextDocumentLayout * obj = qobject_cast<QPlainTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     Qt4xHb::Events_disconnect_all_events(obj, true);
     Qt4xHb::Signals_disconnect_all_signals(obj, true);
@@ -92,17 +92,17 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_DELETE )
 /*
 int cursorWidth() const
 */
-HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_CURSORWIDTH )
+HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_CURSORWIDTH)
 {
-  QPlainTextDocumentLayout * obj = qobject_cast<QPlainTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->cursorWidth() );
+      RINT(obj->cursorWidth());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -116,17 +116,17 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_CURSORWIDTH )
 /*
 void ensureBlockLayout( const QTextBlock & block ) const
 */
-HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_ENSUREBLOCKLAYOUT )
+HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_ENSUREBLOCKLAYOUT)
 {
-  QPlainTextDocumentLayout * obj = qobject_cast<QPlainTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
+    if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
     {
 #endif
-      obj->ensureBlockLayout( *PQTEXTBLOCK(1) );
+      obj->ensureBlockLayout(*PQTEXTBLOCK(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -142,14 +142,14 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_ENSUREBLOCKLAYOUT )
 /*
 void requestUpdate()
 */
-HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_REQUESTUPDATE )
+HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_REQUESTUPDATE)
 {
-  QPlainTextDocumentLayout * obj = qobject_cast<QPlainTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->requestUpdate();
@@ -168,17 +168,17 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_REQUESTUPDATE )
 /*
 void setCursorWidth( int width )
 */
-HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_SETCURSORWIDTH )
+HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_SETCURSORWIDTH)
 {
-  QPlainTextDocumentLayout * obj = qobject_cast<QPlainTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setCursorWidth( PINT(1) );
+      obj->setCursorWidth(PINT(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -194,17 +194,17 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_SETCURSORWIDTH )
 /*
 virtual QRectF blockBoundingRect( const QTextBlock & block ) const
 */
-HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT )
+HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT)
 {
-  QPlainTextDocumentLayout * obj = qobject_cast<QPlainTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTBLOCK(1) )
+    if (ISNUMPAR(1) && ISQTEXTBLOCK(1))
     {
 #endif
-      QRectF * ptr = new QRectF( obj->blockBoundingRect( *PQTEXTBLOCK(1)) );
+      QRectF *ptr = new QRectF(obj->blockBoundingRect(*PQTEXTBLOCK(1)));
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -219,17 +219,17 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_BLOCKBOUNDINGRECT )
 /*
 virtual QSizeF documentSize() const
 */
-HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_DOCUMENTSIZE )
+HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_DOCUMENTSIZE)
 {
-  QPlainTextDocumentLayout * obj = qobject_cast<QPlainTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QSizeF * ptr = new QSizeF( obj->documentSize() );
+      QSizeF *ptr = new QSizeF(obj->documentSize());
       Qt4xHb::createReturnClass(ptr, "QSIZEF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -244,17 +244,17 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_DOCUMENTSIZE )
 /*
 virtual QRectF frameBoundingRect( QTextFrame * ) const
 */
-HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT )
+HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT)
 {
-  QPlainTextDocumentLayout * obj = qobject_cast<QPlainTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQTEXTFRAME(1) )
+    if (ISNUMPAR(1) && ISQTEXTFRAME(1))
     {
 #endif
-      QRectF * ptr = new QRectF( obj->frameBoundingRect( PQTEXTFRAME(1)) );
+      QRectF *ptr = new QRectF(obj->frameBoundingRect(PQTEXTFRAME(1)));
       Qt4xHb::createReturnClass(ptr, "QRECTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -269,17 +269,17 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_FRAMEBOUNDINGRECT )
 /*
 virtual int hitTest( const QPointF &, Qt::HitTestAccuracy ) const
 */
-HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_HITTEST )
+HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_HITTEST)
 {
-  QPlainTextDocumentLayout * obj = qobject_cast<QPlainTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2) )
+    if (ISNUMPAR(2) && ISQPOINTF(1) && HB_ISNUM(2))
     {
 #endif
-      RINT( obj->hitTest( *PQPOINTF(1), ( Qt::HitTestAccuracy ) hb_parni(2)) );
+      RINT(obj->hitTest(*PQPOINTF(1), (Qt::HitTestAccuracy)hb_parni(2)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -293,17 +293,17 @@ HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_HITTEST )
 /*
 virtual int pageCount() const
 */
-HB_FUNC_STATIC( QPLAINTEXTDOCUMENTLAYOUT_PAGECOUNT )
+HB_FUNC_STATIC(QPLAINTEXTDOCUMENTLAYOUT_PAGECOUNT)
 {
-  QPlainTextDocumentLayout * obj = qobject_cast<QPlainTextDocumentLayout*>(Qt4xHb::getQObjectPointerFromSelfItem());
+  QPlainTextDocumentLayout *obj = qobject_cast<QPlainTextDocumentLayout *>(Qt4xHb::getQObjectPointerFromSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->pageCount() );
+      RINT(obj->pageCount());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

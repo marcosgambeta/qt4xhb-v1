@@ -43,11 +43,11 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QGRAPHICSSCENEEVENT_DELETE )
+HB_FUNC_STATIC(QGRAPHICSSCENEEVENT_DELETE)
 {
-  QGraphicsSceneEvent * obj = static_cast<QGraphicsSceneEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGraphicsSceneEvent *obj = static_cast<QGraphicsSceneEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -62,18 +62,18 @@ HB_FUNC_STATIC( QGRAPHICSSCENEEVENT_DELETE )
 /*
 QWidget * widget() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEEVENT_WIDGET )
+HB_FUNC_STATIC(QGRAPHICSSCENEEVENT_WIDGET)
 {
-  QGraphicsSceneEvent * obj = static_cast<QGraphicsSceneEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGraphicsSceneEvent *obj = static_cast<QGraphicsSceneEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QWidget * ptr = obj->widget();
-      Qt4xHb::createReturnQWidgetClass( ptr, "QWIDGET");
+      QWidget *ptr = obj->widget();
+      Qt4xHb::createReturnQWidgetClass(ptr, "QWIDGET");
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

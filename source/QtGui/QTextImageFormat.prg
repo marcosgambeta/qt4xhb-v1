@@ -49,14 +49,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QTextImageFormat()
-*/
-HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NEW )
+    /*
+    QTextImageFormat()
+    */
+HB_FUNC_STATIC(QTEXTIMAGEFORMAT_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QTextImageFormat * obj = new QTextImageFormat();
+    QTextImageFormat *obj = new QTextImageFormat();
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -65,11 +65,11 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QTEXTIMAGEFORMAT_DELETE )
+HB_FUNC_STATIC(QTEXTIMAGEFORMAT_DELETE)
 {
-  QTextImageFormat * obj = static_cast<QTextImageFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextImageFormat *obj = static_cast<QTextImageFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -84,17 +84,17 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_DELETE )
 /*
 qreal height() const
 */
-HB_FUNC_STATIC( QTEXTIMAGEFORMAT_HEIGHT )
+HB_FUNC_STATIC(QTEXTIMAGEFORMAT_HEIGHT)
 {
-  QTextImageFormat * obj = static_cast<QTextImageFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextImageFormat *obj = static_cast<QTextImageFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->height() );
+      RQREAL(obj->height());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -108,17 +108,17 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_HEIGHT )
 /*
 bool isValid() const
 */
-HB_FUNC_STATIC( QTEXTIMAGEFORMAT_ISVALID )
+HB_FUNC_STATIC(QTEXTIMAGEFORMAT_ISVALID)
 {
-  QTextImageFormat * obj = static_cast<QTextImageFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextImageFormat *obj = static_cast<QTextImageFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isValid() );
+      RBOOL(obj->isValid());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -132,17 +132,17 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_ISVALID )
 /*
 QString name() const
 */
-HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NAME )
+HB_FUNC_STATIC(QTEXTIMAGEFORMAT_NAME)
 {
-  QTextImageFormat * obj = static_cast<QTextImageFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextImageFormat *obj = static_cast<QTextImageFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->name() );
+      RQSTRING(obj->name());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -156,17 +156,17 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_NAME )
 /*
 void setHeight( qreal height )
 */
-HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETHEIGHT )
+HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETHEIGHT)
 {
-  QTextImageFormat * obj = static_cast<QTextImageFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextImageFormat *obj = static_cast<QTextImageFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setHeight( PQREAL(1) );
+      obj->setHeight(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -182,17 +182,17 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETHEIGHT )
 /*
 void setName( const QString & name )
 */
-HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETNAME )
+HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETNAME)
 {
-  QTextImageFormat * obj = static_cast<QTextImageFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextImageFormat *obj = static_cast<QTextImageFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setName( PQSTRING(1) );
+      obj->setName(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -208,17 +208,17 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETNAME )
 /*
 void setWidth( qreal width )
 */
-HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETWIDTH )
+HB_FUNC_STATIC(QTEXTIMAGEFORMAT_SETWIDTH)
 {
-  QTextImageFormat * obj = static_cast<QTextImageFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextImageFormat *obj = static_cast<QTextImageFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      obj->setWidth( PQREAL(1) );
+      obj->setWidth(PQREAL(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -234,17 +234,17 @@ HB_FUNC_STATIC( QTEXTIMAGEFORMAT_SETWIDTH )
 /*
 qreal width() const
 */
-HB_FUNC_STATIC( QTEXTIMAGEFORMAT_WIDTH )
+HB_FUNC_STATIC(QTEXTIMAGEFORMAT_WIDTH)
 {
-  QTextImageFormat * obj = static_cast<QTextImageFormat*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QTextImageFormat *obj = static_cast<QTextImageFormat *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQREAL( obj->width() );
+      RQREAL(obj->width());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

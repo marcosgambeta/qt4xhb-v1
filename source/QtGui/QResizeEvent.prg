@@ -45,14 +45,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QResizeEvent( const QSize & size, const QSize & oldSize )
-*/
-HB_FUNC_STATIC( QRESIZEEVENT_NEW )
+    /*
+    QResizeEvent( const QSize & size, const QSize & oldSize )
+    */
+HB_FUNC_STATIC(QRESIZEEVENT_NEW)
 {
-  if( ISNUMPAR(2) && ISQSIZE(1) && ISQSIZE(2) )
+  if (ISNUMPAR(2) && ISQSIZE(1) && ISQSIZE(2))
   {
-    QResizeEvent * obj = new QResizeEvent( *PQSIZE(1), *PQSIZE(2) );
+    QResizeEvent *obj = new QResizeEvent(*PQSIZE(1), *PQSIZE(2));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -61,11 +61,11 @@ HB_FUNC_STATIC( QRESIZEEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QRESIZEEVENT_DELETE )
+HB_FUNC_STATIC(QRESIZEEVENT_DELETE)
 {
-  QResizeEvent * obj = static_cast<QResizeEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QResizeEvent *obj = static_cast<QResizeEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -80,17 +80,17 @@ HB_FUNC_STATIC( QRESIZEEVENT_DELETE )
 /*
 const QSize & size() const
 */
-HB_FUNC_STATIC( QRESIZEEVENT_SIZE )
+HB_FUNC_STATIC(QRESIZEEVENT_SIZE)
 {
-  QResizeEvent * obj = static_cast<QResizeEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QResizeEvent *obj = static_cast<QResizeEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      const QSize * ptr = &obj->size();
+      const QSize *ptr = &obj->size();
       Qt4xHb::createReturnClass(ptr, "QSIZE", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -105,17 +105,17 @@ HB_FUNC_STATIC( QRESIZEEVENT_SIZE )
 /*
 const QSize & oldSize() const
 */
-HB_FUNC_STATIC( QRESIZEEVENT_OLDSIZE )
+HB_FUNC_STATIC(QRESIZEEVENT_OLDSIZE)
 {
-  QResizeEvent * obj = static_cast<QResizeEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QResizeEvent *obj = static_cast<QResizeEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      const QSize * ptr = &obj->oldSize();
+      const QSize *ptr = &obj->oldSize();
       Qt4xHb::createReturnClass(ptr, "QSIZE", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

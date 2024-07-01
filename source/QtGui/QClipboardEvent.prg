@@ -41,11 +41,11 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QCLIPBOARDEVENT_DELETE )
+HB_FUNC_STATIC(QCLIPBOARDEVENT_DELETE)
 {
-  QClipboardEvent * obj = static_cast<QClipboardEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QClipboardEvent *obj = static_cast<QClipboardEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;

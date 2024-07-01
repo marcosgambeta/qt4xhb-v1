@@ -43,14 +43,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QWhatsThisClickedEvent( const QString & href )
-*/
-HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_NEW )
+    /*
+    QWhatsThisClickedEvent( const QString & href )
+    */
+HB_FUNC_STATIC(QWHATSTHISCLICKEDEVENT_NEW)
 {
-  if( ISNUMPAR(1) && HB_ISCHAR(1) )
+  if (ISNUMPAR(1) && HB_ISCHAR(1))
   {
-    QWhatsThisClickedEvent * obj = new QWhatsThisClickedEvent( PQSTRING(1) );
+    QWhatsThisClickedEvent *obj = new QWhatsThisClickedEvent(PQSTRING(1));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -59,11 +59,11 @@ HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_DELETE )
+HB_FUNC_STATIC(QWHATSTHISCLICKEDEVENT_DELETE)
 {
-  QWhatsThisClickedEvent * obj = static_cast<QWhatsThisClickedEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWhatsThisClickedEvent *obj = static_cast<QWhatsThisClickedEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -78,17 +78,17 @@ HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_DELETE )
 /*
 QString href() const
 */
-HB_FUNC_STATIC( QWHATSTHISCLICKEDEVENT_HREF )
+HB_FUNC_STATIC(QWHATSTHISCLICKEDEVENT_HREF)
 {
-  QWhatsThisClickedEvent * obj = static_cast<QWhatsThisClickedEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWhatsThisClickedEvent *obj = static_cast<QWhatsThisClickedEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->href() );
+      RQSTRING(obj->href());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

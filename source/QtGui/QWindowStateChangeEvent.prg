@@ -44,22 +44,22 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW )
+HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_NEW)
 {
-  if( ISNUMPAR(1) && HB_ISNUM(1) )
+  if (ISNUMPAR(1) && HB_ISNUM(1))
   {
     /*
     QWindowStateChangeEvent( Qt::WindowStates aOldState )
     */
-    QWindowStateChangeEvent * obj = new QWindowStateChangeEvent( ( Qt::WindowStates ) hb_parni(1) );
+    QWindowStateChangeEvent *obj = new QWindowStateChangeEvent((Qt::WindowStates)hb_parni(1));
     Qt4xHb::returnNewObject(obj, false);
   }
-  else if( ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2) )
+  else if (ISNUMPAR(2) && HB_ISNUM(1) && HB_ISLOG(2))
   {
     /*
     QWindowStateChangeEvent( Qt::WindowStates aOldState, bool isOverride )
     */
-    QWindowStateChangeEvent * obj = new QWindowStateChangeEvent( ( Qt::WindowStates ) hb_parni(1), PBOOL(2) );
+    QWindowStateChangeEvent *obj = new QWindowStateChangeEvent((Qt::WindowStates)hb_parni(1), PBOOL(2));
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -68,11 +68,11 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_DELETE )
+HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_DELETE)
 {
-  QWindowStateChangeEvent * obj = static_cast<QWindowStateChangeEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWindowStateChangeEvent *obj = static_cast<QWindowStateChangeEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -87,17 +87,17 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_DELETE )
 /*
 Qt::WindowStates oldState() const
 */
-HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_OLDSTATE )
+HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_OLDSTATE)
 {
-  QWindowStateChangeEvent * obj = static_cast<QWindowStateChangeEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWindowStateChangeEvent *obj = static_cast<QWindowStateChangeEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RENUM( obj->oldState() );
+      RENUM(obj->oldState());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -111,17 +111,17 @@ HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_OLDSTATE )
 /*
 bool isOverride() const
 */
-HB_FUNC_STATIC( QWINDOWSTATECHANGEEVENT_ISOVERRIDE )
+HB_FUNC_STATIC(QWINDOWSTATECHANGEEVENT_ISOVERRIDE)
 {
-  QWindowStateChangeEvent * obj = static_cast<QWindowStateChangeEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QWindowStateChangeEvent *obj = static_cast<QWindowStateChangeEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RBOOL( obj->isOverride() );
+      RBOOL(obj->isOverride());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else

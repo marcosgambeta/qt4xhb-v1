@@ -42,14 +42,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QIconDragEvent()
-*/
-HB_FUNC_STATIC( QICONDRAGEVENT_NEW )
+    /*
+    QIconDragEvent()
+    */
+HB_FUNC_STATIC(QICONDRAGEVENT_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QIconDragEvent * obj = new QIconDragEvent();
+    QIconDragEvent *obj = new QIconDragEvent();
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -58,11 +58,11 @@ HB_FUNC_STATIC( QICONDRAGEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QICONDRAGEVENT_DELETE )
+HB_FUNC_STATIC(QICONDRAGEVENT_DELETE)
 {
-  QIconDragEvent * obj = static_cast<QIconDragEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QIconDragEvent *obj = static_cast<QIconDragEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;

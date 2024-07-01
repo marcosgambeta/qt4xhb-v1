@@ -45,14 +45,14 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-/*
-QGraphicsSceneMoveEvent()
-*/
-HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEW )
+    /*
+    QGraphicsSceneMoveEvent()
+    */
+HB_FUNC_STATIC(QGRAPHICSSCENEMOVEEVENT_NEW)
 {
-  if( ISNUMPAR(0) )
+  if (ISNUMPAR(0))
   {
-    QGraphicsSceneMoveEvent * obj = new QGraphicsSceneMoveEvent();
+    QGraphicsSceneMoveEvent *obj = new QGraphicsSceneMoveEvent();
     Qt4xHb::returnNewObject(obj, false);
   }
   else
@@ -61,11 +61,11 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEW )
   }
 }
 
-HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_DELETE )
+HB_FUNC_STATIC(QGRAPHICSSCENEMOVEEVENT_DELETE)
 {
-  QGraphicsSceneMoveEvent * obj = static_cast<QGraphicsSceneMoveEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGraphicsSceneMoveEvent *obj = static_cast<QGraphicsSceneMoveEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -80,17 +80,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_DELETE )
 /*
 QPointF newPos() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEWPOS )
+HB_FUNC_STATIC(QGRAPHICSSCENEMOVEEVENT_NEWPOS)
 {
-  QGraphicsSceneMoveEvent * obj = static_cast<QGraphicsSceneMoveEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGraphicsSceneMoveEvent *obj = static_cast<QGraphicsSceneMoveEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPointF * ptr = new QPointF( obj->newPos() );
+      QPointF *ptr = new QPointF(obj->newPos());
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -105,17 +105,17 @@ HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_NEWPOS )
 /*
 QPointF oldPos() const
 */
-HB_FUNC_STATIC( QGRAPHICSSCENEMOVEEVENT_OLDPOS )
+HB_FUNC_STATIC(QGRAPHICSSCENEMOVEEVENT_OLDPOS)
 {
-  QGraphicsSceneMoveEvent * obj = static_cast<QGraphicsSceneMoveEvent*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QGraphicsSceneMoveEvent *obj = static_cast<QGraphicsSceneMoveEvent *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      QPointF * ptr = new QPointF( obj->oldPos() );
+      QPointF *ptr = new QPointF(obj->oldPos());
       Qt4xHb::createReturnClass(ptr, "QPOINTF", true);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }

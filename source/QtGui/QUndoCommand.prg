@@ -59,22 +59,23 @@ RETURN
 #include "qt4xhb_macros.hpp"
 #include "qt4xhb_utils.hpp"
 
-HB_FUNC_STATIC( QUNDOCOMMAND_NEW )
+HB_FUNC_STATIC(QUNDOCOMMAND_NEW)
 {
-  if( ISBETWEEN(0, 1) && (ISQUNDOCOMMAND(1) || HB_ISNIL(1)) )
+  if (ISBETWEEN(0, 1) && (ISQUNDOCOMMAND(1) || HB_ISNIL(1)))
   {
     /*
     QUndoCommand( QUndoCommand * parent = 0 )
     */
-    QUndoCommand * obj = new QUndoCommand( HB_ISNIL(1) ? 0 : static_cast<QUndoCommand*>( Qt4xHb::itemGetPtr(1)) );
+    QUndoCommand *obj = new QUndoCommand(HB_ISNIL(1) ? 0 : static_cast<QUndoCommand *>(Qt4xHb::itemGetPtr(1)));
     Qt4xHb::returnNewObject(obj, true);
   }
-  else if( ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQUNDOCOMMAND(2) || HB_ISNIL(2)) )
+  else if (ISBETWEEN(1, 2) && HB_ISCHAR(1) && (ISQUNDOCOMMAND(2) || HB_ISNIL(2)))
   {
     /*
     QUndoCommand( const QString & text, QUndoCommand * parent = 0 )
     */
-    QUndoCommand * obj = new QUndoCommand( PQSTRING(1), HB_ISNIL(2) ? 0 : static_cast<QUndoCommand*>( Qt4xHb::itemGetPtr(2)) );
+    QUndoCommand *obj =
+        new QUndoCommand(PQSTRING(1), HB_ISNIL(2) ? 0 : static_cast<QUndoCommand *>(Qt4xHb::itemGetPtr(2)));
     Qt4xHb::returnNewObject(obj, true);
   }
   else
@@ -83,11 +84,11 @@ HB_FUNC_STATIC( QUNDOCOMMAND_NEW )
   }
 }
 
-HB_FUNC_STATIC( QUNDOCOMMAND_DELETE )
+HB_FUNC_STATIC(QUNDOCOMMAND_DELETE)
 {
-  QUndoCommand * obj = static_cast<QUndoCommand*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUndoCommand *obj = static_cast<QUndoCommand *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
     delete obj;
     obj = NULL;
@@ -102,17 +103,17 @@ HB_FUNC_STATIC( QUNDOCOMMAND_DELETE )
 /*
 const QUndoCommand * child( int index ) const
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_CHILD )
+HB_FUNC_STATIC(QUNDOCOMMAND_CHILD)
 {
-  QUndoCommand * obj = static_cast<QUndoCommand*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUndoCommand *obj = static_cast<QUndoCommand *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISNUM(1) )
+    if (ISNUMPAR(1) && HB_ISNUM(1))
     {
 #endif
-      const QUndoCommand * ptr = obj->child( PINT(1) );
+      const QUndoCommand *ptr = obj->child(PINT(1));
       Qt4xHb::createReturnClass(ptr, "QUNDOCOMMAND", false);
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
@@ -127,17 +128,17 @@ HB_FUNC_STATIC( QUNDOCOMMAND_CHILD )
 /*
 int childCount() const
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_CHILDCOUNT )
+HB_FUNC_STATIC(QUNDOCOMMAND_CHILDCOUNT)
 {
-  QUndoCommand * obj = static_cast<QUndoCommand*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUndoCommand *obj = static_cast<QUndoCommand *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->childCount() );
+      RINT(obj->childCount());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -151,17 +152,17 @@ HB_FUNC_STATIC( QUNDOCOMMAND_CHILDCOUNT )
 /*
 virtual int id() const
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_ID )
+HB_FUNC_STATIC(QUNDOCOMMAND_ID)
 {
-  QUndoCommand * obj = static_cast<QUndoCommand*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUndoCommand *obj = static_cast<QUndoCommand *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RINT( obj->id() );
+      RINT(obj->id());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -175,17 +176,17 @@ HB_FUNC_STATIC( QUNDOCOMMAND_ID )
 /*
 virtual bool mergeWith( const QUndoCommand * command )
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_MERGEWITH )
+HB_FUNC_STATIC(QUNDOCOMMAND_MERGEWITH)
 {
-  QUndoCommand * obj = static_cast<QUndoCommand*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUndoCommand *obj = static_cast<QUndoCommand *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && ISQUNDOCOMMAND(1) )
+    if (ISNUMPAR(1) && ISQUNDOCOMMAND(1))
     {
 #endif
-      RBOOL( obj->mergeWith( PQUNDOCOMMAND(1)) );
+      RBOOL(obj->mergeWith(PQUNDOCOMMAND(1)));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -199,14 +200,14 @@ HB_FUNC_STATIC( QUNDOCOMMAND_MERGEWITH )
 /*
 virtual void redo()
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_REDO )
+HB_FUNC_STATIC(QUNDOCOMMAND_REDO)
 {
-  QUndoCommand * obj = static_cast<QUndoCommand*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUndoCommand *obj = static_cast<QUndoCommand *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->redo();
@@ -225,17 +226,17 @@ HB_FUNC_STATIC( QUNDOCOMMAND_REDO )
 /*
 void setText( const QString & text )
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_SETTEXT )
+HB_FUNC_STATIC(QUNDOCOMMAND_SETTEXT)
 {
-  QUndoCommand * obj = static_cast<QUndoCommand*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUndoCommand *obj = static_cast<QUndoCommand *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(1) && HB_ISCHAR(1) )
+    if (ISNUMPAR(1) && HB_ISCHAR(1))
     {
 #endif
-      obj->setText( PQSTRING(1) );
+      obj->setText(PQSTRING(1));
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -251,17 +252,17 @@ HB_FUNC_STATIC( QUNDOCOMMAND_SETTEXT )
 /*
 QString text() const
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_TEXT )
+HB_FUNC_STATIC(QUNDOCOMMAND_TEXT)
 {
-  QUndoCommand * obj = static_cast<QUndoCommand*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUndoCommand *obj = static_cast<QUndoCommand *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
-      RQSTRING( obj->text() );
+      RQSTRING(obj->text());
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
     }
     else
@@ -275,14 +276,14 @@ HB_FUNC_STATIC( QUNDOCOMMAND_TEXT )
 /*
 virtual void undo()
 */
-HB_FUNC_STATIC( QUNDOCOMMAND_UNDO )
+HB_FUNC_STATIC(QUNDOCOMMAND_UNDO)
 {
-  QUndoCommand * obj = static_cast<QUndoCommand*>(Qt4xHb::itemGetPtrStackSelfItem());
+  QUndoCommand *obj = static_cast<QUndoCommand *>(Qt4xHb::itemGetPtrStackSelfItem());
 
-  if( obj != NULL )
+  if (obj != NULL)
   {
 #ifndef QT4XHB_DONT_CHECK_PARAMETERS
-    if( ISNUMPAR(0) )
+    if (ISNUMPAR(0))
     {
 #endif
       obj->undo();
@@ -298,11 +299,11 @@ HB_FUNC_STATIC( QUNDOCOMMAND_UNDO )
   hb_itemReturn(hb_stackSelfItem());
 }
 
-HB_FUNC_STATIC( QUNDOCOMMAND_NEWFROM )
+HB_FUNC_STATIC(QUNDOCOMMAND_NEWFROM)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISOBJECT(1) )
+  if (hb_pcount() == 1 && HB_ISOBJECT(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_objSendMsg(hb_param(1, HB_IT_OBJECT), "POINTER", 0)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -311,7 +312,7 @@ HB_FUNC_STATIC( QUNDOCOMMAND_NEWFROM )
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
     hb_itemRelease(des);
   }
-  else if( hb_pcount() == 1 && HB_ISPOINTER(1) )
+  else if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     PHB_ITEM ptr = hb_itemPutPtr(NULL, hb_itemGetPtr(hb_param(1, HB_IT_POINTER)));
     hb_objSendMsg(self, "_POINTER", 1, ptr);
@@ -328,26 +329,26 @@ HB_FUNC_STATIC( QUNDOCOMMAND_NEWFROM )
   hb_itemReturn(self);
 }
 
-HB_FUNC_STATIC( QUNDOCOMMAND_NEWFROMOBJECT )
+HB_FUNC_STATIC(QUNDOCOMMAND_NEWFROMOBJECT)
 {
-  HB_FUNC_EXEC( QUNDOCOMMAND_NEWFROM );
+  HB_FUNC_EXEC(QUNDOCOMMAND_NEWFROM);
 }
 
-HB_FUNC_STATIC( QUNDOCOMMAND_NEWFROMPOINTER )
+HB_FUNC_STATIC(QUNDOCOMMAND_NEWFROMPOINTER)
 {
-  HB_FUNC_EXEC( QUNDOCOMMAND_NEWFROM );
+  HB_FUNC_EXEC(QUNDOCOMMAND_NEWFROM);
 }
 
-HB_FUNC_STATIC( QUNDOCOMMAND_SELFDESTRUCTION )
+HB_FUNC_STATIC(QUNDOCOMMAND_SELFDESTRUCTION)
 {
   hb_retl(hb_itemGetL(hb_objSendMsg(hb_stackSelfItem(), "SELF_DESTRUCTION", 0)));
 }
 
-HB_FUNC_STATIC( QUNDOCOMMAND_SETSELFDESTRUCTION )
+HB_FUNC_STATIC(QUNDOCOMMAND_SETSELFDESTRUCTION)
 {
   PHB_ITEM self = hb_stackSelfItem();
 
-  if( hb_pcount() == 1 && HB_ISLOG(1) )
+  if (hb_pcount() == 1 && HB_ISLOG(1))
   {
     PHB_ITEM des = hb_itemPutL(NULL, hb_parl(1));
     hb_objSendMsg(self, "_SELF_DESTRUCTION", 1, des);
